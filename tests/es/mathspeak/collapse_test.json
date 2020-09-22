@@ -1,0 +1,382 @@
+{
+  "name": "CollapseSpanishTest",
+  "base": "json/mathspeak/collapse_test.json",
+  "information": "Collapse Spanish tests.",
+  "locale": "es",
+  "active": "CollapseSpanish",
+  "exclude": [],
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "suma con 2 sumandos plegado"
+    },
+    "CollapsedAddition_brief": {
+      "expected": "suma plegado"
+    },
+    "CollapsedAddition_sbrief": {
+      "expected": "suma plegado"
+    },
+    "CollapsedBigop_default": {
+      "expected": "sumatorio plegado"
+    },
+    "CollapsedBigop_brief": {
+      "expected": "sumatorio plegado"
+    },
+    "CollapsedBigop_sbrief": {
+      "expected": "sumatorio plegado"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "binomio plegado"
+    },
+    "CollapsedBinomial_brief": {
+      "expected": "binomio plegado"
+    },
+    "CollapsedBinomial_sbrief": {
+      "expected": "binomio plegado"
+    },
+    "CollapsedCases_default": {
+      "expected": "declaración de caso con 2 casos plegado"
+    },
+    "CollapsedCases_brief": {
+      "expected": "declaración de caso plegado"
+    },
+    "CollapsedCases_sbrief": {
+      "expected": "declaración de caso plegado"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "fracción continua plegado"
+    },
+    "CollapsedContinuedFraction_brief": {
+      "expected": "frac continua plegado"
+    },
+    "CollapsedContinuedFraction_sbrief": {
+      "expected": "frac continua plegado"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "determinante de dimensión 2 plegado"
+    },
+    "CollapsedDeterminant_brief": {
+      "expected": "determinante plegado"
+    },
+    "CollapsedDeterminant_sbrief": {
+      "expected": "determinante plegado"
+    },
+    "CollapsedFraction_default": {
+      "expected": "fracción plegado"
+    },
+    "CollapsedFraction_brief": {
+      "expected": "frac plegado"
+    },
+    "CollapsedFraction_sbrief": {
+      "expected": "frac plegado"
+    },
+    "CollapsedFunction_default": {
+      "_comment0_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "expresión funcional plegado"
+    },
+    "CollapsedFunction_brief": {
+      "_comment0_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "función plegado"
+    },
+    "CollapsedFunction_sbrief": {
+      "_comment0_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "función plegado"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "identificador largo plegado"
+    },
+    "CollapsedIdentifier_brief": {
+      "expected": "identificador largo plegado"
+    },
+    "CollapsedIdentifier_sbrief": {
+      "expected": "identificador largo plegado"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "división con 2 elementos plegado"
+    },
+    "CollapsedInfixop_brief": {
+      "expected": "división plegado"
+    },
+    "CollapsedInfixop_sbrief": {
+      "expected": "división plegado"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "integral plegado"
+    },
+    "CollapsedIntegral_brief": {
+      "expected": "integral plegado"
+    },
+    "CollapsedIntegral_sbrief": {
+      "expected": "integral plegado"
+    },
+    "CollapsedLim_default": {
+      "expected": "función de límite plegado"
+    },
+    "CollapsedLim_brief": {
+      "expected": "límite plegado"
+    },
+    "CollapsedLim_sbrief": {
+      "expected": "límite plegado"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "3 por 2 matriz plegado"
+    },
+    "CollapsedMatrix_brief": {
+      "expected": "matriz plegado"
+    },
+    "CollapsedMatrix_sbrief": {
+      "expected": "matriz plegado"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "número largo mixto plegado"
+    },
+    "CollapsedMixedNumber_brief": {
+      "expected": "número largo mixto plegado"
+    },
+    "CollapsedMixedNumber_sbrief": {
+      "expected": "número largo mixto plegado"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "producto con 2 factores plegado"
+    },
+    "CollapsedMultiplication_brief": {
+      "expected": "producto plegado"
+    },
+    "CollapsedMultiplication_sbrief": {
+      "expected": "producto plegado"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "secuencia de relación con 3 elementos plegado"
+    },
+    "CollapsedMultirel_brief": {
+      "expected": "secuencia de relación plegado"
+    },
+    "CollapsedMultirel_sbrief": {
+      "expected": "secuencia de relación plegado"
+    },
+    "CollapsedNumber_default": {
+      "expected": "número largo plegado"
+    },
+    "CollapsedNumber_brief": {
+      "expected": "número largo plegado"
+    },
+    "CollapsedNumber_sbrief": {
+      "expected": "número largo plegado"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "lista separada por coma de longitud 3 plegado"
+    },
+    "CollapsedPunctuated_brief": {
+      "expected": "lista separada por coma plegado"
+    },
+    "CollapsedPunctuated_sbrief": {
+      "expected": "lista separada por coma plegado"
+    },
+    "CollapsedRelation_default": {
+      "expected": "igualdad plegado"
+    },
+    "CollapsedRelation_brief": {
+      "expected": "igualdad plegado"
+    },
+    "CollapsedRelation_sbrief": {
+      "expected": "igualdad plegado"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "secuencia de igualdad con 3 elementos plegado"
+    },
+    "CollapsedRelationSeq_brief": {
+      "expected": "secuencia de igualdad plegado"
+    },
+    "CollapsedRelationSeq_sbrief": {
+      "expected": "secuencia de igualdad plegado"
+    },
+    "CollapsedRoot_default": {
+      "expected": "raíz del índice 3 plegado"
+    },
+    "CollapsedRoot_brief": {
+      "expected": "raíz plegado"
+    },
+    "CollapsedRoot_sbrief": {
+      "expected": "raíz plegado"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "raíz anidada del índice 3 plegado"
+    },
+    "CollapsedRootNested_brief": {
+      "expected": "raíz anidada plegado"
+    },
+    "CollapsedRootNested_sbrief": {
+      "expected": "raíz anidada plegado"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "vector fila de dimensión 2 plegado"
+    },
+    "CollapsedRowvector_brief": {
+      "expected": "vector fila plegado"
+    },
+    "CollapsedRowvector_sbrief": {
+      "expected": "vector fila plegado"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "raíz cuadrada plegado"
+    },
+    "CollapsedSqrt_brief": {
+      "expected": "raíz cuadrada plegado"
+    },
+    "CollapsedSqrt_sbrief": {
+      "expected": "raíz cuadrada plegado"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "raíz cuadrada anidada plegado"
+    },
+    "CollapsedSqrtNested_brief": {
+      "expected": "raíz cuadrada anidada plegado"
+    },
+    "CollapsedSqrtNested_sbrief": {
+      "expected": "raíz cuadrada anidada plegado"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "matriz cuadrada de dimensión 2 plegado"
+    },
+    "CollapsedSquarematrix_brief": {
+      "expected": "matriz cuadrada plegado"
+    },
+    "CollapsedSquarematrix_sbrief": {
+      "expected": "matriz cuadrada plegado"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "subíndice plegado"
+    },
+    "CollapsedSubscript_brief": {
+      "expected": "subíndice plegado"
+    },
+    "CollapsedSubscript_sbrief": {
+      "expected": "subíndice plegado"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "potencia con subíndice plegado"
+    },
+    "CollapsedSubsup_brief": {
+      "expected": "potencia con subíndice plegado"
+    },
+    "CollapsedSubsup_sbrief": {
+      "expected": "potencia con subíndice plegado"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "potencia plegado"
+    },
+    "CollapsedSuperscript_brief": {
+      "expected": "potencia plegado"
+    },
+    "CollapsedSuperscript_sbrief": {
+      "expected": "potencia plegado"
+    },
+    "CollapsedTable_default": {
+      "expected": "mesa con 2 filas y 2 columnas plegado"
+    },
+    "CollapsedTable_brief": {
+      "expected": "mesa con 2 filas y 2 columnas plegado"
+    },
+    "CollapsedTable_sbrief": {
+      "expected": "mesa con 2 filas y 2 columnas plegado"
+    },
+    "CollapsedText_default": {
+      "expected": "texto plegado"
+    },
+    "CollapsedText_brief": {
+      "expected": "texto plegado"
+    },
+    "CollapsedText_sbrief": {
+      "expected": "texto plegado"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "suma con número variable de sumandos plegado"
+    },
+    "CollapsedVarAddition_brief": {
+      "expected": "suma plegado"
+    },
+    "CollapsedVarAddition_sbrief": {
+      "expected": "suma plegado"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "declaración de caso con número variable de casos plegado"
+    },
+    "CollapsedVarCases_brief": {
+      "expected": "declaración de caso plegado"
+    },
+    "CollapsedVarCases_sbrief": {
+      "expected": "declaración de caso plegado"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "determinante de dimensión n plegado"
+    },
+    "CollapsedVarDeterminant_brief": {
+      "expected": "determinante plegado"
+    },
+    "CollapsedVarDeterminant_sbrief": {
+      "expected": "determinante plegado"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "matriz de dimensión n por m plegado"
+    },
+    "CollapsedVarMatrix_brief": {
+      "expected": "matriz cuadrada plegado"
+    },
+    "CollapsedVarMatrix_sbrief": {
+      "expected": "matriz cuadrada plegado"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "producto con una cantidad variable de factores plegado"
+    },
+    "CollapsedVarMultiplication_brief": {
+      "expected": "producto plegado"
+    },
+    "CollapsedVarMultiplication_sbrief": {
+      "expected": "producto plegado"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "secuencia de relación con número variable de elementos plegado"
+    },
+    "CollapsedVarMultirel_brief": {
+      "expected": "secuencia de relación plegado"
+    },
+    "CollapsedVarMultirel_sbrief": {
+      "expected": "secuencia de relación plegado"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "lista separada por coma de longitud 3 plegado"
+    },
+    "CollapsedVarPunctuated_brief": {
+      "expected": "lista separada por coma plegado"
+    },
+    "CollapsedVarPunctuated_sbrief": {
+      "expected": "lista separada por coma plegado"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "secuencia de igualdad con una cantidad variable de elementos plegado"
+    },
+    "CollapsedVarRelation_brief": {
+      "expected": "secuencia de igualdad plegado"
+    },
+    "CollapsedVarRelation_sbrief": {
+      "expected": "secuencia de igualdad plegado"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "vector de dimensión n plegado"
+    },
+    "CollapsedVarVector_brief": {
+      "expected": "vector plegado"
+    },
+    "CollapsedVarVector_sbrief": {
+      "expected": "vector plegado"
+    },
+    "CollapsedVector_default": {
+      "expected": "vector de dimensión 3 plegado"
+    },
+    "CollapsedVector_brief": {
+      "expected": "vector plegado"
+    },
+    "CollapsedVector_sbrief": {
+      "expected": "vector plegado"
+    }
+  }
+}

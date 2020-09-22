@@ -15,7 +15,6 @@
 
 goog.provide('sre.SpeechSpanishTest');
 
-goog.require('sre.CollapseSpanishTest');
 goog.require('sre.MathspeakSpanishFontTest');
 goog.require('sre.MmlcloudSpanishTest');
 goog.require('sre.PrefixSpanishTest');
@@ -27,7 +26,6 @@ goog.require('sre.SummarySpanishTest');
  * @type {Array}
  */
 sre.SpeechSpanishTest.testList = [
-  sre.CollapseSpanishTest,
   sre.MathspeakSpanishFontTest,
   sre.MmlcloudSpanishTest,
   sre.PrefixSpanishTest,

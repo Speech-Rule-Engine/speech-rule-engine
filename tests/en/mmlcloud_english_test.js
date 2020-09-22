@@ -189,14 +189,14 @@ sre.MmlcloudEnglishTest.prototype.testGermanFonts = function() {
  * Testing other fonts.
  */
 sre.MmlcloudEnglishTest.prototype.testOtherFonts = function() {
-  this.executeRuleTest('<mi>m</mi>', 'm');
-  this.executeRuleTest('<mi mathvariant="normal">m</mi>', 'normal m');
-  this.executeRuleTest('<mi>mi</mi>', 'm i');
-  this.executeRuleTest('<mi mathvariant="italic">mi</mi>', 'italic m i');
-  this.executeRuleTest('<mi>30</mi>', '30');
-  this.executeRuleTest('<mi>3</mi>', 'italic 3');
-  this.executeRuleTest('<mi>30°</mi>', '30 degree');
-  this.executeRuleTest('<mi>30mA</mi>', '3 0 m upper A');
+  this.executeRuleTest('<mi>m</mi>', 'm', 'default');
+  this.executeRuleTest('<mi mathvariant="normal">m</mi>', 'normal m', 'default');
+  this.executeRuleTest('<mi>mi</mi>', 'm i', 'default');
+  this.executeRuleTest('<mi mathvariant="italic">mi</mi>', 'italic m i', 'default');
+  this.executeRuleTest('<mi>30</mi>', '30', 'default');
+  this.executeRuleTest('<mi>3</mi>', 'italic 3', 'default');
+  this.executeRuleTest('<mi>30°</mi>', '30 degree', 'default');
+  this.executeRuleTest('<mi>30mA</mi>', '3 0 m upper A', 'default');
 };
 
 
@@ -238,9 +238,6 @@ sre.MmlcloudEnglishTest.prototype.testMixedIdentifier = function() {
 };
 
 
-// TODO (sorge) Test currently fails as the parenthesis is seen to be
-//     embellished! Should work again once embellished parenthesis are fully
-//     rewritten.
 /**
  * Testing Parenthesis with Superscript.
  * Simplified test case for expression 95.
@@ -489,18 +486,18 @@ sre.MmlcloudEnglishTest.prototype.testMultiline = function() {
 sre.MmlcloudEnglishTest.prototype.testRelationsWithEmpty = function() {
   this.executeRuleTest(
       '<mo>&#x2264;</mo><mn>2</mn>',
-      'less than or equals 2');
+      'less than or equals 2', 'default');
   this.executeRuleTest(
       '<mo>=</mo><mn>2</mn><mo>=</mo>',
-      'equals 2 equals');
+      'equals 2 equals', 'default');
   this.executeRuleTest(
       '<mo>&#x2264;</mo><mn>2</mn><mo>=</mo>',
-      'less than or equals 2 equals');
+      'less than or equals 2 equals', 'default');
   this.executeRuleTest(
       '<mtable><mtr><mtd><mn>1</mn></mtd><mtd><mi></mi><mo>&#x2264;</mo><mn>2' +
       '</mn></mtd></mtr></mtable>',
       'StartLayout 1st Row 1st Column 1 2nd Column less than or equals 2' +
-      ' EndLayout');
+      ' EndLayout', 'default');
 };
 
 
@@ -633,20 +630,19 @@ sre.MmlcloudEnglishTest.prototype.testEncloseRightbar = function() {
 };
 
 
-// Not localised from here!
 /**
  * Tests for issue #279.
  */
 sre.MmlcloudEnglishTest.prototype.testIssue279 = function() {
   // mglyph is ignored!
-  this.executeRuleTest('<mtext>&#xA0;</mtext><mtext>&#xA0;</mtext>', '');
+  this.executeRuleTest('<mtext>&#xA0;</mtext><mtext>&#xA0;</mtext>', '', 'default');
   this.executeRuleTest(
       '<mtable><mlabeledtr><mtd><mtext>(3.1.10)</mtext></mtd><mtd>' +
       '<mrow><mglyph src="Images/img2354b563c08bcdd40777a6bbee95ac36.svg"' +
       ' width="148pt" height="16pt"></mglyph></mrow>' +
       '<mrow id="texmlid28" /></mtd></mlabeledtr></mtable>',
       'StartLayout 1st Row  with Label left parenthesis 3.1 .10' +
-      ' right parenthesis EndLabel EndLayout');
+      ' right parenthesis EndLabel EndLayout', 'default');
 };
 
 
@@ -654,20 +650,19 @@ sre.MmlcloudEnglishTest.prototype.testIssue279 = function() {
  * Tests for issue #320 and related expressions.
  */
 sre.MmlcloudEnglishTest.prototype.testIssue320 = function() {
-  // mglyph is ignored!
   this.executeRuleTest(
-      '<mo>∂</mo>', 'partial differential');
+      '<mo>∂</mo>', 'partial differential', 'default');
   this.executeRuleTest(
-      '<mi>x</mi><mo>!</mo>', 'x factorial');
+      '<mi>x</mi><mo>!</mo>', 'x factorial', 'default');
   this.executeRuleTest(
-      '<mo>-</mo><mo>-</mo><mi>x</mi>', 'minus negative x');
+      '<mo>-</mo><mo>-</mo><mi>x</mi>', 'minus negative x', 'default');
   this.executeRuleTest(
-      '<mo>+</mo><mo>+</mo><mi>x</mi>', 'plus plus x');
+      '<mo>+</mo><mo>+</mo><mi>x</mi>', 'plus plus x', 'default');
   this.executeRuleTest(
-      '<mi>sin</mi><mi>sin</mi><mi>x</mi>', 'sine sine x');
+      '<mi>sin</mi><mi>sin</mi><mi>x</mi>', 'sine sine x', 'default');
   this.executeRuleTest(
       '<mo>∂</mo><mo>∂</mo><mi>x</mi>',
-      'partial differential partial differential x');
+      'partial differential partial differential x', 'default');
   this.executeRuleTest(
       '<mrow><mrow><mo>(</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup>' +
       '<mrow><mo>∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac>' +
@@ -682,5 +677,5 @@ sre.MmlcloudEnglishTest.prototype.testIssue320 = function() {
       ' partial differential x squared EndFraction plus StartFraction' +
       ' partial differential squared Over partial differential y squared' +
       ' EndFraction right parenthesis StartAbsoluteValue phi left parenthesis' +
-      ' x plus normal i y right parenthesis EndAbsoluteValue squared equals 0');
+      ' x plus normal i y right parenthesis EndAbsoluteValue squared equals 0', 'default');
 };

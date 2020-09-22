@@ -30,6 +30,7 @@ goog.require('sre.TestRunner');
 
 goog.require('sre.AbstractCharacterTest');
 goog.require('sre.ClearspeakRuleTest');
+goog.require('sre.CollapseRuleTest');
 goog.require('sre.MathspeakRuleTest');
 goog.require('sre.SemanticTest');
 goog.require('sre.TestRegister');
@@ -131,6 +132,7 @@ if (sre.Tests.environment['JSON']) {
   sre.ClearspeakRuleTest.tests();
   sre.MathspeakRuleTest.tests();
   sre.AbstractCharacterTest.tests();
+  sre.CollapseRuleTest.tests();
   let files = sre.Tests.environment['FILES'] || Object.keys(sre.TestRegister.map);
   for (var key of files) {
     // let [locale, block, file] = key;

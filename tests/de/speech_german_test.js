@@ -20,7 +20,6 @@
 goog.provide('sre.SpeechGermanTest');
 
 goog.require('sre.ClearspeakGermanFontTest');
-goog.require('sre.CollapseGermanTest');
 goog.require('sre.MathspeakGermanFontTest');
 goog.require('sre.MmlcloudGermanTest');
 goog.require('sre.PrefixGermanTest');
@@ -32,7 +31,6 @@ goog.require('sre.SummaryGermanTest');
  * @type {Array}
  */
 sre.SpeechGermanTest.testList = [
-  sre.CollapseGermanTest,
   sre.ClearspeakGermanFontTest,
   sre.MathspeakGermanFontTest,
   sre.MmlcloudGermanTest,

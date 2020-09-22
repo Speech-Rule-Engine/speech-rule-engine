@@ -15,7 +15,6 @@
 
 goog.provide('sre.SpeechFrenchTest');
 
-goog.require('sre.CollapseFrenchTest');
 goog.require('sre.MathspeakFrenchFontTest');
 goog.require('sre.MmlcloudFrenchTest');
 goog.require('sre.PrefixFrenchTest');
@@ -27,7 +26,6 @@ goog.require('sre.SummaryFrenchTest');
  * @type {Array}
  */
 sre.SpeechFrenchTest.testList = [
-  sre.CollapseFrenchTest,
   sre.MathspeakFrenchFontTest,
   sre.MmlcloudFrenchTest,
   sre.PrefixFrenchTest,
