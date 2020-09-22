@@ -62,7 +62,7 @@ goog.inherits(sre.ApiTest, sre.AbstractTest);
 sre.ApiTest.prototype.setUpTest = function() {
   this.system.setupEngine(
       {locale: 'en', domain: 'mathspeak', style: 'default',
-        speech: sre.Engine.Speech.NONE});
+       modality: 'speech', speech: sre.Engine.Speech.NONE});
   this.annotations = sre.SemanticAnnotations.getInstance().annotators;
   this.visitors = sre.SemanticAnnotations.getInstance().visitors;
   sre.SemanticAnnotations.getInstance().annotators = {};
