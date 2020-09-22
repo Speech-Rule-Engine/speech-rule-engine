@@ -1,0 +1,218 @@
+{
+  "name": "MathspeakIssues1English",
+  "locale": "en",
+  "base": "json/mathspeak/mathspeak_issues1.json",
+  "information": "Mathspeak issues 1 English tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssues1English",
+  "exclude": [],
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "AbsoluteValue a EndAbsoluteValue"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "StartAbsoluteValue a EndAbsoluteValue"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "AbsoluteValue a EndAbsoluteValue"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "negative five eighteenths"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "negative five eighteenths"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "negative five eighteenths"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "30 degree"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "30 degree"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "30 degree"
+    },
+    "MixedIdentifier_default": {
+      "expected": "upper S i normal upper O 2 plus 6 normal upper H normal upper F right arrow normal upper H 2 upper S i normal upper F 6 plus 2 normal upper H 2 normal upper O"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "upper S i normal upper O 2 plus 6 normal upper H normal upper F right arrow normal upper H 2 upper S i normal upper F 6 plus 2 normal upper H 2 normal upper O"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "upper S i normal upper O 2 plus 6 normal upper H normal upper F R arrow normal upper H 2 upper S i normal upper F 6 plus 2 normal upper H 2 normal upper O"
+    },
+    "ParenSuper_default": {
+      "expected": "left parenthesis a right parenthesis squared"
+    },
+    "ParenSuper_brief": {
+      "expected": "left p'ren a right p'ren squared"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "L p'ren a R p'ren squared"
+    },
+    "ParenConvoluted_default": {
+      "expected": "left parenthesis minus x squared slash 2 right parenthesis"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "left p'ren minus x squared slash 2 right p'ren"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "L p'ren minus x squared slash 2 R p'ren"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "c 1 h Superscript 4 minus 2 s Baseline less than or equals StartFraction 1 Over 2 upper T EndFraction less than or equals c 2 h Superscript 4 minus 2 s"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "c 1 h Sup 4 minus 2 s Base less than or equals StartFrac 1 Over 2 upper T EndFrac less than or equals c 2 h Sup 4 minus 2 s"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "c 1 h Sup 4 minus 2 s Base less than or equals Frac 1 Over 2 upper T EndFrac less than or equals c 2 h Sup 4 minus 2 s"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "c 1 h Superscript 4 minus 2 s Baseline less than or equals StartFraction 1 Over 2 upper T EndFraction equals c 2 h Superscript 4 minus 2 s"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "c 1 h Sup 4 minus 2 s Base less than or equals StartFrac 1 Over 2 upper T EndFrac equals c 2 h Sup 4 minus 2 s"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "c 1 h Sup 4 minus 2 s Base less than or equals Frac 1 Over 2 upper T EndFrac equals c 2 h Sup 4 minus 2 s"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "h Subscript s Baseline less than or equals StartFraction 1 Over 2 upper T EndFraction less than or equals h Subscript s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "h Sub s Base less than or equals StartFrac 1 Over 2 upper T EndFrac less than or equals h Sub s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "h Sub s Base less than or equals Frac 1 Over 2 upper T EndFrac less than or equals h Sub s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "h Subscript s Baseline less than or equals StartFraction 1 Over 2 upper T EndFraction equals h Subscript s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "h Sub s Base less than or equals StartFrac 1 Over 2 upper T EndFrac equals h Sub s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "h Sub s Base less than or equals Frac 1 Over 2 upper T EndFrac equals h Sub s"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "h Subscript s Superscript t Baseline less than or equals StartFraction 1 Over 2 upper T EndFraction less than or equals h Subscript s Superscript t"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "h Sub s Sup t Base less than or equals StartFrac 1 Over 2 upper T EndFrac less than or equals h Sub s Sup t"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "h Sub s Sup t Base less than or equals Frac 1 Over 2 upper T EndFrac less than or equals h Sub s Sup t"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "h Subscript s Superscript t Baseline less than or equals StartFraction 1 Over 2 upper T EndFraction equals h Subscript s Superscript t"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "h Sub s Sup t Base less than or equals StartFrac 1 Over 2 upper T EndFrac equals h Sub s Sup t"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "h Sub s Sup t Base less than or equals Frac 1 Over 2 upper T EndFrac equals h Sub s Sup t"
+    },
+    "SquareWithText_default": {
+      "expected": "StartFraction area of triangle Over area of square EndFraction equals StartFraction 1 unit squared Over 16 units cubed EndFraction"
+    },
+    "SquareWithText_brief": {
+      "expected": "StartFrac area of triangle Over area of square EndFrac equals StartFrac 1 unit squared Over 16 units cubed EndFrac"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "Frac area of triangle Over area of square EndFrac equals Frac 1 unit squared Over 16 units cubed EndFrac"
+    },
+    "FootnoteWithText_default": {
+      "expected": "area of triangle area of square Superscript 1 Baseline 1 unit Superscript 2 Baseline 16 units Superscript 3"
+    },
+    "FootnoteWithText_brief": {
+      "expected": "area of triangle area of square Sup 1 Base 1 unit Sup 2 Base 16 units Sup 3"
+    },
+    "FootnoteWithText_sbrief": {
+      "expected": "area of triangle area of square Sup 1 Base 1 unit Sup 2 Base 16 units Sup 3"
+    },
+    "FootnoteWithSimpleText_default": {
+      "expected": "area of triangle Superscript 2"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "expected": "area of triangle Sup 2"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "expected": "area of triangle Sup 2"
+    },
+    "LabelledRow_default": {
+      "expected": "StartLayout 1st Row  with Label left parenthesis 1 right parenthesis EndLabel 1st Column a 2nd Column b EndLayout"
+    },
+    "LabelledRow_brief": {
+      "expected": "StartLayout 1st Row  Label left p'ren 1 right p'ren 1st Column a 2nd Column b EndLayout"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "Layout 1st Row  Label L p'ren 1 R p'ren 1st Column a 2nd Column b EndLayout"
+    },
+    "LabelledLine_default": {
+      "expected": "StartLayout 1st Row  with Label left parenthesis 1 right parenthesis EndLabel a EndLayout"
+    },
+    "LabelledLine_brief": {
+      "expected": "StartLayout 1st Row  Label left p'ren 1 right p'ren a EndLayout"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "Layout 1st Row  Label L p'ren 1 R p'ren a EndLayout"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "StartLayout 1st Row  with Label left parenthesis 1 right parenthesis EndLabel Blank EndLayout"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "StartLayout 1st Row  Label left p'ren 1 right p'ren Blank EndLayout"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "Layout 1st Row  Label L p'ren 1 R p'ren Blank EndLayout"
+    },
+    "EmptyLine_default": {
+      "expected": "StartLayout 1st Row  Blank EndLayout"
+    },
+    "EmptyLine_brief": {
+      "expected": "StartLayout 1st Row  Blank EndLayout"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "Layout 1st Row  Blank EndLayout"
+    },
+    "TextLabelledLine_default": {
+      "expected": "StartLayout 1st Row  with Label left parenthesis 1 right parenthesis EndLabel a EndLayout"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "StartLayout 1st Row  Label left p'ren 1 right p'ren a EndLayout"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "Layout 1st Row  Label 1 a EndLayout"
+    },
+    "EncloseOverbar_default": {
+      "expected": "a overbar"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "a overBar"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "a overBar"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "a underbar"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "a underBar"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "a underBar"
+    }
+  }
+}

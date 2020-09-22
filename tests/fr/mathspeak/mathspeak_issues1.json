@@ -1,0 +1,229 @@
+{
+  "name": "MathspeakIssues1French",
+  "base": "json/mathspeak/mathspeak_issues1.json",
+  "information": "Mathspeak issues 1 French tests.",
+  "domain": "mathspeak",
+  "locale": "fr",
+  "active": "MathspeakIssues1French",
+  "exclude": [],
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "début valeur absolue a fin valeur absolue"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "début valeur absolue a fin valeur absolue"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "valeur absolue a fin valeur absolue"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "début valeur absolue a fin valeur absolue"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "début valeur absolue a fin valeur absolue"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "valeur absolue a fin valeur absolue"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "négatif cinq-dix-huitièmes"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "négatif cinq-dix-huitièmes"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "négatif cinq-dix-huitièmes"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "30 degrés"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "30 degrés"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "30 degrés"
+    },
+    "MixedIdentifier_default": {
+      "expected": "S majuscule i O majuscule en normal indice 2 position de base plus 6 H majuscule en normal F majuscule en normal flèche droite H majuscule en normal indice 2 position de base S majuscule i F majuscule en normal indice 6 position de base plus 2 H majuscule en normal indice 2 position de base O majuscule en normal"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "S majuscule i O majuscule en normal 2 plus 6 H majuscule en normal F majuscule en normal flèche droite H majuscule en normal 2 S majuscule i F majuscule en normal 6 plus 2 H majuscule en normal 2 O majuscule en normal"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "S majuscule i O majuscule en normal 2 plus 6 H majuscule en normal F majuscule en normal flèche droite H majuscule en normal 2 S majuscule i F majuscule en normal 6 plus 2 H majuscule en normal 2 O majuscule en normal"
+    },
+    "_comment0_": " TODO (sorge) Test currently fails as the parenthesis is seen to be",
+    "_comment1_": "     embellished! Should work again once embellished parenthesis are fully",
+    "_comment2_": "     rewritten.",
+    "ParenSuper_default": {
+      "expected": "parenthèse gauche a parenthèse droite au carré"
+    },
+    "ParenSuper_brief": {
+      "expected": "parenthèse gauche a parenthèse droite au carré"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "parenthèse gauche a parenthèse droite au carré"
+    },
+    "ParenConvoluted_default": {
+      "expected": "parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "parenthèse gauche négatif x au carré barre oblique 2 parenthèse droite"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "c indice 1 position de base h exposant 4 moins 2 s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction plus petit ou égal à c indice 2 position de base h exposant 4 moins 2 s"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "c 1 h sup 4 moins 2 s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac plus petit ou égal à c 2 h sup 4 moins 2 s"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "c 1 h sup 4 moins 2 s position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac plus petit ou égal à c 2 h sup 4 moins 2 s"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "c indice 1 position de base h exposant 4 moins 2 s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction égale c indice 2 position de base h exposant 4 moins 2 s"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "c 1 h sup 4 moins 2 s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac égale c 2 h sup 4 moins 2 s"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "c 1 h sup 4 moins 2 s position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac égale c 2 h sup 4 moins 2 s"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "h indice s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction plus petit ou égal à h indice s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "h sub s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac plus petit ou égal à h sub s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "h sub s position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac plus petit ou égal à h sub s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "h indice s position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction égale h indice s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "h sub s position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac égale h sub s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "h sub s position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac égale h sub s"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "h indice s exposant t position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction plus petit ou égal à h indice s exposant t"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "h sub s sup t position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac plus petit ou égal à h sub s sup t"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "h sub s sup t position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac plus petit ou égal à h sub s sup t"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "h indice s exposant t position de base plus petit ou égal à début fraction 1 sur 2 T majuscule fin fraction égale h indice s exposant t"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "h sub s sup t position de base plus petit ou égal à début frac 1 sur 2 T majuscule fin frac égale h sub s sup t"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "h sub s sup t position de base plus petit ou égal à frac 1 sur 2 T majuscule fin frac égale h sub s sup t"
+    },
+    "SquareWithText_default": {
+      "expected": "début fraction area of triangle sur area of square fin fraction égale début fraction 1 unit au carré sur 16 units cubique fin fraction"
+    },
+    "SquareWithText_brief": {
+      "expected": "début frac area of triangle sur area of square fin frac égale début frac 1 unit au carré sur 16 units cubique fin frac"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "frac area of triangle sur area of square fin frac égale frac 1 unit au carré sur 16 units cubique fin frac"
+    },
+    "_comment3_": " TODO: (v2.3.0) Remove the personality lookup error.",
+    "FootnoteWithText_default": {
+      "test": false,
+      "expected": ""
+    },
+    "FootnoteWithText_brief": {
+      "test": false,
+      "expected": ""
+    },
+    "FootnoteWithText_sbrief": {
+      "test": false,
+      "expected": ""
+    },
+    "_comment4_": " TODO: (v2.3.0) Fix this error.",
+    "FootnoteWithSimpleText_default": {
+      "test": false,
+      "expected": ""
+    },
+    "FootnoteWithSimpleText_brief": {
+      "test": false,
+      "expected": ""
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "test": false,
+      "expected": ""
+    },
+    "LabelledRow_default": {
+      "expected": "début tableau 1re rangée  avec étiquette parenthèse gauche 1 parenthèse droite fin étiquette 1re colonne a 2e colonne b fin tableau"
+    },
+    "LabelledRow_brief": {
+      "expected": "début tableau 1re rangée  étiquette parenthèse gauche 1 parenthèse droite 1re colonne a 2e colonne b fin tableau"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "tableau 1re rangée  étiquette parenthèse gauche 1 parenthèse droite 1re colonne a 2e colonne b fin tableau"
+    },
+    "LabelledLine_default": {
+      "expected": "début tableau 1re rangée  avec etiquette parenthèse gauche 1 parenthèse droite fin etiquette a fin tableau"
+    },
+    "LabelledLine_brief": {
+      "expected": "début tableau 1re rangée  etiquette parenthèse gauche 1 parenthèse droite a fin tableau"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "tableau 1re rangée  etiquette parenthèse gauche 1 parenthèse droite a fin tableau"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "début tableau 1re rangée  avec etiquette parenthèse gauche 1 parenthèse droite fin etiquette vide fin tableau"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "début tableau 1re rangée  etiquette parenthèse gauche 1 parenthèse droite vide fin tableau"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "tableau 1re rangée  etiquette parenthèse gauche 1 parenthèse droite vide fin tableau"
+    },
+    "EmptyLine_default": {
+      "expected": "début tableau 1re rangée  vide fin tableau"
+    },
+    "EmptyLine_brief": {
+      "expected": "début tableau 1re rangée  vide fin tableau"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "tableau 1re rangée  vide fin tableau"
+    },
+    "TextLabelledLine_default": {
+      "expected": "début tableau 1re rangée  avec etiquette parenthèse gauche 1 parenthèse droite fin etiquette a fin tableau"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "début tableau 1re rangée  etiquette parenthèse gauche 1 parenthèse droite a fin tableau"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "tableau 1re rangée  etiquette 1 a fin tableau"
+    },
+    "EncloseOverbar_default": {
+      "expected": "début trait suscrit a fin trait suscrit"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "début trait suscrit a fin trait suscrit"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "début trait suscrit a fin trait suscrit"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "début trait souscrit a fin trait souscrit"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "début trait souscrit a fin trait souscrit"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "début trait souscrit a fin trait souscrit"
+    }
+  }
+}
