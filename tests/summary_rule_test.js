@@ -23,6 +23,7 @@
 goog.provide('sre.SummaryRuleTest');
 
 goog.require('sre.AbstractRuleTest');
+goog.require('sre.TestRegister');
 
 
 
@@ -53,6 +54,9 @@ sre.SummaryRuleTest = function() {
    * @type {Array.<string>}
    */
   this.steps = null;
+
+  this.pickFields.push('steps');
+  
 };
 goog.inherits(sre.SummaryRuleTest, sre.AbstractRuleTest);
 
@@ -72,3 +76,24 @@ sre.SummaryRuleTest.prototype.getSpeech = function(mathMl) {
 };
 
 
+sre.SummaryRuleTest.prototype.method = function(var_args) {
+  let args = Array.prototype.slice.call(arguments, 0);
+  this.steps = args[3];
+  sre.SummaryRuleTest.base(this, 'method', args[0], args[1], args[2]);
+  this.steps = null; 
+};
+
+
+sre.SummaryRuleTest.tests = function() {
+  let files = [
+    'summary_test.json'
+  ];
+  for (var locale of sre.Variables.LOCALES) {
+    for (var file of files) {
+      var test = new sre.SummaryRuleTest();
+      test.jsonFile = locale + '/mathspeak/' + file;
+      test.locale = locale;
+      sre.TestRegister.add(test);
+    }
+  }
+};

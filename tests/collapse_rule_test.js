@@ -23,7 +23,7 @@
 goog.provide('sre.CollapseRuleTest');
 
 goog.require('sre.AbstractRuleTest');
-goog.require('sre.CollapseRuleTest');
+goog.require('sre.TestRegister');
 
 
 

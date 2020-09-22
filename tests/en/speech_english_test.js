@@ -18,7 +18,6 @@ goog.provide('sre.SpeechEnglishTest');
 goog.require('sre.MathspeakEnglishFontTest');
 goog.require('sre.MmlcloudEnglishTest');
 goog.require('sre.PrefixEnglishTest');
-goog.require('sre.SummaryEnglishTest');
 
 
 /**
@@ -28,6 +27,5 @@ goog.require('sre.SummaryEnglishTest');
 sre.SpeechEnglishTest.testList = [
   sre.MathspeakEnglishFontTest,
   sre.MmlcloudEnglishTest,
-  sre.PrefixEnglishTest,
-  sre.SummaryEnglishTest
+  sre.PrefixEnglishTest
 ];

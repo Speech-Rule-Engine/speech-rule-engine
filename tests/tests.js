@@ -33,6 +33,7 @@ goog.require('sre.ClearspeakRuleTest');
 goog.require('sre.CollapseRuleTest');
 goog.require('sre.MathspeakRuleTest');
 goog.require('sre.SemanticTest');
+goog.require('sre.SummaryRuleTest');
 goog.require('sre.TestRegister');
 
 
@@ -83,7 +84,6 @@ sre.Tests.getEnvironment = function(variable) {
 };
 sre.Tests.environmentVars.forEach(sre.Tests.getEnvironment);
 
-console.log(sre.Tests.environment);
 
 /**
  * @type {Array}
@@ -103,7 +103,6 @@ if (file) {
 }
 if (locale) {
   locale = locale[0];
-  // console.log(locale);
   if (locale === 'Base') {
     sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
   } else {
@@ -133,6 +132,7 @@ if (sre.Tests.environment['JSON']) {
   sre.MathspeakRuleTest.tests();
   sre.AbstractCharacterTest.tests();
   sre.CollapseRuleTest.tests();
+  sre.SummaryRuleTest.tests();
   let files = sre.Tests.environment['FILES'] || Object.keys(sre.TestRegister.map);
   for (var key of files) {
     // let [locale, block, file] = key;
