@@ -21,7 +21,6 @@ goog.provide('sre.SpeechGermanTest');
 
 goog.require('sre.ClearspeakGermanFontTest');
 goog.require('sre.MathspeakGermanFontTest');
-goog.require('sre.MmlcloudGermanTest');
 goog.require('sre.PrefixGermanTest');
 
 
@@ -32,6 +31,5 @@ goog.require('sre.PrefixGermanTest');
 sre.SpeechGermanTest.testList = [
   sre.ClearspeakGermanFontTest,
   sre.MathspeakGermanFontTest,
-  sre.MmlcloudGermanTest,
   sre.PrefixGermanTest
 ];

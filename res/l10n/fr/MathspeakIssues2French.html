@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN"><html> <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<title>Mathml Cloud French tests.</title>
+
+<style>
+ table, th, td {
+  border: 1px solid black; }
+</style>
+
+</head>
+<body>
+<h2>Mathml Cloud French tests. Locale: fr, Style: <td>Verbose</td>.</h2>
+<table>
+<tr><td>0</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&lt;</mo></math></td><td>inférieur à</td></tr>
+<tr><td>1</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&gt;</mo></math></td><td>supérieur à</td></tr>
+<tr><td>2</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n&nbsp;</mi></math></td><td>n</td></tr>
+<tr><td>3</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&nbsp;m</mi></math></td><td>m</td></tr>
+<tr><td>4</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>n&nbsp;m</mi></math></td><td>n m</td></tr>
+<tr><td>5</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&nbsp;&nbsp;n&nbsp;&nbsp;m&nbsp;&nbsp;</mi></math></td><td>n m</td></tr>
+<tr><td>6</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced><mfrac linethickness="0pt"><mi>n</mi><mi>k</mi></mfrac></mfenced></math></td><td>début binomiale k parmi n fin binomiale</td></tr>
+<tr><td>7</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced><mfrac linethickness="0.0em"><mi>n</mi><mi>k</mi></mfrac></mfenced></math></td><td>début binomiale k parmi n fin binomiale</td></tr>
+<tr><td>8</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced><mfrac linethickness="negativeverythinmathspace"><mi>n</mi><mi>k</mi></mfrac></mfenced></math></td><td>début binomiale k parmi n fin binomiale</td></tr>
+<tr><td>9</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced><mfrac linethickness="verythinmathspace"><mi>n</mi><mi>k</mi></mfrac></mfenced></math></td><td>parenthèse gauche début fraction n sur k fin fraction parenthèse droite</td></tr>
+<tr><td>10</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced><mfrac linethickness="1pt"><mi>n</mi><mi>k</mi></mfrac></mfenced></math></td><td>parenthèse gauche début fraction n sur k fin fraction parenthèse droite</td></tr>
+<tr><td>11</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mfenced><mfrac linethickness="0.5pt"><mi>n</mi><mi>k</mi></mfrac></mfenced></math></td><td>parenthèse gauche début fraction n sur k fin fraction parenthèse droite</td></tr>
+<tr><td>12</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mn> 5 </mn></math></td><td>5</td></tr>
+<tr><td>13</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mn> &nbsp; 5 &nbsp; </mn></math></td><td>5</td></tr>
+<tr><td>14</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>｜</mo><mi>a</mi><mo>‖</mo></math></td><td>barre verticale a double ligne verticale</td></tr>
+<tr><td>15</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>‖</mo><mi>a</mi><mo>‖</mo></math></td><td>double ligne verticale a double ligne verticale</td></tr>
+<tr><td>16</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>¦</mo><mi>a</mi><mo>¦</mo></math></td><td>barre déjointe a barre déjointe</td></tr>
+<tr><td>17</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac></math></td><td>un-demi moins cinq-dix-huitièmes</td></tr>
+<tr><td>18</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>-</mo><mfrac><mn>5.2</mn><mi>a</mi></mfrac></math></td><td>négatif début fraction 5,2 sur a fin fraction</td></tr>
+<tr><td>19</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>-</mo><mfrac><mn>5.2</mn><mn>18</mn></mfrac></math></td><td>négatif début fraction 5,2 sur 18 fin fraction</td></tr>
+<tr><td>20</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mtext>a</mtext><mo>=</mo><mi>b</mi></math></td><td>a égale b</td></tr>
+<tr><td>21</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>"</mo></math></td><td>petit guillemet</td></tr>
+<tr><td>22</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>"</mo><mi>x</mi><mo>"</mo></math></td><td>petit guillemet x petit guillemet</td></tr>
+<tr><td>23</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>'</mo></math></td><td>prime</td></tr>
+<tr><td>24</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="fraktur">A</mi></math></td><td>A majuscule en gothique</td></tr>
+<tr><td>25</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold-fraktur">A</mi></math></td><td>A majuscule en gothique gras</td></tr>
+<tr><td>26</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x1D504;</mi></math></td><td>A majuscule en gothique</td></tr>
+<tr><td>27</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>&#x1D56C;</mi></math></td><td>A majuscule en gothique gras</td></tr>
+<tr><td>28</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mtext mathvariant="bold-fraktur">abc</mtext></math></td><td>abc en gothique gras</td></tr>
+<tr><td>29</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mtext mathvariant="bold-fraktur">ABC</mtext></math></td><td>ABC en gothique gras</td></tr>
+<tr><td>30</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="bold-fraktur">ABC</mi></math></td><td>A majuscule B majuscule C majuscule en gothique gras</td></tr>
+<tr><td>31</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>m</mi></math></td><td>m</td></tr>
+<tr><td>32</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="normal">m</mi></math></td><td>m en normal</td></tr>
+<tr><td>33</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>mi</mi></math></td><td>m i</td></tr>
+<tr><td>34</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi mathvariant="italic">mi</mi></math></td><td>m i en italique</td></tr>
+<tr><td>35</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>30</mi></math></td><td>30</td></tr>
+<tr><td>36</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>3</mi></math></td><td>3 en italique</td></tr>
+<tr><td>37</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>30°</mi></math></td><td>30 degrés</td></tr>
+<tr><td>38</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>30mA</mi></math></td><td>3 0 m A majuscule</td></tr>
+<tr><td>39</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable></math></td><td>début tableau 1re rangée  a 2e rangée  b fin tableau</td></tr>
+<tr><td>40</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></math></td><td>début tableau 1re rangée 1re colonne a 2e colonne c 2e rangée 1re colonne b 2e colonne d fin tableau</td></tr>
+<tr><td>41</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#x2264;</mo><mn>2</mn></math></td><td>plus petit ou égal à 2</td></tr>
+<tr><td>42</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>=</mo><mn>2</mn><mo>=</mo></math></td><td>égale 2 égale</td></tr>
+<tr><td>43</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#x2264;</mo><mn>2</mn><mo>=</mo></math></td><td>plus petit ou égal à 2 égale</td></tr>
+<tr><td>44</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mi></mi><mo>&#x2264;</mo><mn>2</mn></mtd></mtr></mtable></math></td><td>début tableau 1re rangée 1re colonne 1 2e colonne plus petit ou égal à 2 fin tableau</td></tr>
+<tr><td>45</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><menclose notation="circle"><mi>a</mi></menclose></math></td><td></td></tr>
+<tr><td>46</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><menclose notation="left"><mi>a</mi></menclose></math></td><td>barre verticale a</td></tr>
+<tr><td>47</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><menclose notation="right"><mi>a</mi></menclose></math></td><td>a barre verticale</td></tr>
+</table>
+
+</body>
+</html>
