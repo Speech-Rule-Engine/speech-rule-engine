@@ -7,6 +7,48 @@
   "active": "MathspeakIssues2English",
   "exclude": [],
   "tests": {
+    "MathspeakRoots_0": {
+      "expected": "StartRoot a EndRoot"
+    },
+    "MathspeakRoots_1": {
+      "expected": "RootIndex 2 StartRoot a EndRoot"
+    },
+    "MathspeakRoots_2": {
+      "expected": "RootIndex 3 StartRoot a EndRoot"
+    },
+    "MathspeakRoots_3": {
+      "expected": "RootIndex 4 StartRoot a EndRoot"
+    },
+    "MathspeakRoots_4": {
+      "expected": "NestedStartRoot StartRoot a EndRoot NestedEndRoot"
+    },
+    "MathspeakRoots_5": {
+      "expected": "NestedTwiceStartRoot NestedStartRoot StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "MathspeakRoots_6": {
+      "expected": "NestedRootIndex 2 NestedStartRoot RootIndex 2 StartRoot a EndRoot NestedEndRoot"
+    },
+    "MathspeakRoots_7": {
+      "expected": "NestedTwiceRootIndex 2 NestedTwiceStartRoot NestedRootIndex 2 NestedStartRoot RootIndex 2 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "MathspeakRoots_8": {
+      "expected": "NestedRootIndex 3 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "MathspeakRoots_9": {
+      "expected": "NestedTwiceRootIndex 3 NestedTwiceStartRoot NestedRootIndex 3 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "MathspeakRoots_10": {
+      "expected": "NestedRootIndex 4 NestedStartRoot RootIndex 4 StartRoot a EndRoot NestedEndRoot"
+    },
+    "MathspeakRoots_11": {
+      "expected": "NestedTwiceRootIndex 4 NestedTwiceStartRoot NestedRootIndex 4 NestedStartRoot RootIndex 4 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "MathspeakRoots_12": {
+      "expected": "NestedTwiceRootIndex 2 NestedTwiceStartRoot NestedRootIndex 3 NestedStartRoot RootIndex 4 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "MathspeakRoots_13": {
+      "expected": "NestedTwiceRootIndex 4 NestedTwiceStartRoot NestedRootIndex 3 NestedStartRoot RootIndex 2 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
     "HtmlEntities_0": {
       "expected": "less than"
     },
@@ -178,6 +220,60 @@
     },
     "Issue320_6": {
       "expected": "left parenthesis StartFraction partial differential squared Over partial differential x squared EndFraction plus StartFraction partial differential squared Over partial differential y squared EndFraction right parenthesis StartAbsoluteValue phi left parenthesis x plus normal i y right parenthesis EndAbsoluteValue squared equals 0"
+    },
+    "LatinMathfonts_0": {
+      "expected": "German upper A"
+    },
+    "LatinMathfonts_1": {
+      "expected": "bold German upper A"
+    },
+    "LatinMathfonts_2": {
+      "expected": "bold script upper A"
+    },
+    "LatinMathfonts_3": {
+      "expected": "bold italic upper A"
+    },
+    "LatinMathfonts_4": {
+      "expected": "bold upper A"
+    },
+    "LatinMathfonts_5": {
+      "expected": "double struck upper A"
+    },
+    "LatinMathfonts_6": {
+      "expected": "italic upper A"
+    },
+    "LatinMathfonts_7": {
+      "expected": "monospace upper A"
+    },
+    "LatinMathfonts_8": {
+      "expected": "sans serif bold upper A"
+    },
+    "LatinMathfonts_9": {
+      "expected": "sans serif italic upper A"
+    },
+    "LatinMathfonts_10": {
+      "expected": "sans serif bold italic upper A"
+    },
+    "LatinMathfonts_11": {
+      "expected": "sans serif upper A"
+    },
+    "LatinMathfonts_12": {
+      "expected": "script upper A"
+    },
+    "GreekMathfonts_0": {
+      "expected": "bold upper Alpha"
+    },
+    "GreekMathfonts_1": {
+      "expected": "italic upper Alpha"
+    },
+    "GreekMathfonts_2": {
+      "expected": "bold italic upper Alpha"
+    },
+    "GreekMathfonts_3": {
+      "expected": "sans serif bold upper Alpha"
+    },
+    "GreekMathfonts_4": {
+      "expected": "sans serif bold italic upper Alpha"
     }
   }
 }

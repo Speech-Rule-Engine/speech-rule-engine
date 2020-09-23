@@ -7,6 +7,48 @@
   "active": "MathspeakIssues2Spanish",
   "exclude": [],
   "tests": {
+  "MathspeakRoots_0": {
+    "expected": "empezar raíz cuadrada a finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_1": {
+    "expected": "empezar raíz cuadrada a finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_2": {
+    "expected": "empezar raíz cúbica a finalizar raíz cúbica"
+  },
+  "MathspeakRoots_3": {
+    "expected": "empezar raíz a la cuarta a finalizar raíz a la cuarta"
+  },
+  "MathspeakRoots_4": {
+    "expected": "empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_5": {
+    "expected": "empezar raíz cuadrada empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_6": {
+    "expected": "empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_7": {
+    "expected": "empezar raíz cuadrada empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_8": {
+    "expected": "empezar raíz cúbica empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cúbica"
+  },
+  "MathspeakRoots_9": {
+    "expected": "empezar raíz cúbica empezar raíz cúbica empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cúbica finalizar raíz cúbica"
+  },
+  "MathspeakRoots_10": {
+    "expected": "empezar raíz a la cuarta empezar raíz a la cuarta a finalizar raíz a la cuarta finalizar raíz a la cuarta"
+  },
+  "MathspeakRoots_11": {
+    "expected": "empezar raíz a la cuarta empezar raíz a la cuarta empezar raíz a la cuarta a finalizar raíz a la cuarta finalizar raíz a la cuarta finalizar raíz a la cuarta"
+  },
+  "MathspeakRoots_12": {
+    "expected": "empezar raíz cuadrada empezar raíz cúbica empezar raíz a la cuarta a finalizar raíz a la cuarta finalizar raíz cúbica finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_13": {
+    "expected": "empezar raíz a la cuarta empezar raíz cúbica empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz a la cuarta"
+  },
     "HtmlEntities_0": {
       "expected": "menor que"
     },
@@ -204,6 +246,27 @@
     },
     "GreekMathfonts_4": {
       "expected": "sans serif negrita cursiva mayúscula Alfa"
-    }
+    },
+      "Issue320_0": {
+    "expected": "diferencial parcial"
+  },
+  "Issue320_1": {
+    "expected": "x factorial"
+  },
+  "Issue320_2": {
+    "expected": "menos menos x"
+  },
+  "Issue320_3": {
+    "expected": "más más x"
+  },
+  "Issue320_4": {
+    "expected": "seno seno x"
+  },
+  "Issue320_5": {
+    "expected": "diferencial parcial diferencial parcial x"
+  },
+  "Issue320_6": {
+    "expected": "paréntesis izquierdo empezar fracción diferencial parcial al cuadrado entre diferencial parcial x al cuadrado finalizar fracción más empezar fracción diferencial parcial al cuadrado entre diferencial parcial y al cuadrado finalizar fracción paréntesis derecho empezar valor absoluto phi paréntesis izquierdo x más normal i y paréntesis derecho finalizar valor absoluto al cuadrado igual 0"
+  }
   }
 }

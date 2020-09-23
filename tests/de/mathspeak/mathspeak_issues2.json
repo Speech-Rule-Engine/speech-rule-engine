@@ -193,6 +193,81 @@
     },
     "EncloseRightbar": {
       "expected": "a senkrechter Strich"
-    }
+    },
+   "LatinMathfonts_0": {
+    "expected": "Fraktur großes A"
+  },
+  "LatinMathfonts_1": {
+    "expected": "fettes Fraktur großes A"
+  },
+  "LatinMathfonts_2": {
+    "expected": "fettes Schreibschrift großes A"
+  },
+  "LatinMathfonts_3": {
+    "expected": "fettkursives großes A"
+  },
+  "LatinMathfonts_4": {
+    "expected": "fettes großes A"
+  },
+  "LatinMathfonts_5": {
+    "expected": "großes A mit Doppelstrich"
+  },
+  "LatinMathfonts_6": {
+    "expected": "großes A"
+  },
+  "LatinMathfonts_7": {
+    "expected": "nichtproportionales großes A"
+  },
+  "LatinMathfonts_8": {
+    "expected": "serifenloses fettes großes A"
+  },
+  "LatinMathfonts_9": {
+    "expected": "serifenloses kursives großes A"
+  },
+  "LatinMathfonts_10": {
+    "expected": "serifenloses fettkursives großes A"
+  },
+  "LatinMathfonts_11": {
+    "expected": "serifenloses großes A"
+  },
+  "LatinMathfonts_12": {
+    "expected": "Schreibschrift großes A"
+  },
+  "GreekMathfonts_0": {
+    "expected": "fettes großes Alpha"
+  },
+  "GreekMathfonts_1": {
+    "expected": "großes Alpha"
+  },
+  "GreekMathfonts_2": {
+    "expected": "fettkursives großes Alpha"
+  },
+  "GreekMathfonts_3": {
+    "expected": "serifenloses fettes großes Alpha"
+  },
+  "GreekMathfonts_4": {
+    "expected": "serifenloses fettkursives großes Alpha"
+  },
+  "Issue320_0": {
+    "expected": "partielle Ableitung"
+  },
+  "Issue320_1": {
+    "expected": "x Fakultät"
+  },
+  "Issue320_2": {
+    "expected": "minus minus x"
+  },
+  "Issue320_3": {
+    "expected": "plus plus x"
+  },
+  "Issue320_4": {
+    "expected": "Sinus Sinus x"
+  },
+  "Issue320_5": {
+    "expected": "partielle Ableitung partielle Ableitung x"
+  },
+  "Issue320_6": {
+    "expected": "Klammer auf Anfang Bruch partielle Ableitung Quadrat durch partielle Ableitung x Quadrat Ende Bruch plus Anfang Bruch partielle Ableitung Quadrat durch partielle Ableitung y Quadrat Ende Bruch Klammer zu Anfang Betrag phi Klammer auf x plus normales i y Klammer zu Ende Betrag Quadrat ist gleich 0"
   }
+ }
 }
