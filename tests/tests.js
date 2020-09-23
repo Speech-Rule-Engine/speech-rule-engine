@@ -70,7 +70,10 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [];
 
-sre.Tests.environment = {};
+sre.Tests.environment = {
+  JSON: true,
+  VERBOSE: true
+};
 sre.Tests.environmentVars = ['FILE', 'FILES', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE'];
 sre.Tests.getEnvironment = function(variable) {
   var env = sre.SystemExternal.process.env[variable];

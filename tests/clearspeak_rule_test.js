@@ -68,7 +68,7 @@ sre.ClearspeakRuleTest.locales = {
 
 
 sre.ClearspeakRuleTest.tests = function() {
-  let files = [
+  let coreTests = [
     'clearspeak_absolute_value.json',
     'clearspeak_capital_letters.json',
     'clearspeak_exponents.json',
@@ -87,14 +87,25 @@ sre.ClearspeakRuleTest.tests = function() {
     'clearspeak_sets_enclosed_in_set_brackets.json',
     'clearspeak_trigometry.json'
   ];
+  let otherTests = [
+    'fonts.json',
+    'clearspeak_font_caps.json'
+  ];
   for (var locale of Object.keys(sre.ClearspeakRuleTest.locales)) {
-    for (var file of files) {
+    for (var file of coreTests) {
       var test = new sre.ClearspeakRuleTest();
       test.jsonFile = locale + '/clearspeak/' + file;
       test.locale = locale;
       test.compare = locale === 'de';  // tmp!
       test.setActive(sre.ClearspeakRuleTest.locales[locale]);
       test.startExamples();
+      sre.TestRegister.add(test);
+    }
+    for (file of otherTests) {
+      test = new sre.AbstractRuleTest();
+      test.jsonFile = locale + '/clearspeak/' + file;
+      test.locale = locale;
+      test.compare = locale === 'de';  // tmp!
       sre.TestRegister.add(test);
     }
   }

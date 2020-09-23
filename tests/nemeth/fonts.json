@@ -1,0 +1,399 @@
+{
+  "name": "NemethFontTest",
+  "base": "json/common/fonts.json",
+  "information": "Nemeth Font tests.",
+  "domain": "default",
+  "locale": "nemeth",
+  "modality": "braille",
+  "active": "NemethFont",
+  "exclude": [],
+  "tests": {
+    "LatinMathfontsUpper_0": {
+      "expected": "⠠⠁"
+    },
+    "LatinMathfontsUpper_1": {
+      "expected": "⠠⠁"
+    },
+    "LatinMathfontsUpper_2": {
+      "expected": "⠸⠠⠁"
+    },
+    "LatinMathfontsUpper_3": {
+      "expected": "⠨⠠⠁"
+    },
+    "LatinMathfontsUpper_4": {
+      "expected": "⠸⠨⠠⠁"
+    },
+    "LatinMathfontsUpper_5": {
+      "expected": "⠈⠠⠁"
+    },
+    "LatinMathfontsUpper_6": {
+      "expected": "⠸⠈⠠⠁"
+    },
+    "LatinMathfontsUpper_7": {
+      "expected": "⠸⠠⠁"
+    },
+    "LatinMathfontsUpper_8": {
+      "expected": "⠸⠠⠁"
+    },
+    "LatinMathfontsUpper_9": {
+      "expected": "⠸⠀⠸⠠⠁"
+    },
+    "LatinMathfontsUpper_10": {
+      "expected": "⠠⠨⠠⠁"
+    },
+    "LatinMathfontsUpper_11": {
+      "expected": "⠠⠨⠸⠠⠁"
+    },
+    "LatinMathfontsUpper_12": {
+      "expected": "⠠⠨⠨⠠⠁"
+    },
+    "LatinMathfontsUpper_13": {
+      "expected": "⠠⠨⠸⠨⠠⠁"
+    },
+    "LatinMathfontsUpper_14": {
+      "expected": "⠠⠁"
+    },
+    "GreekMathfontsUpper_0": {
+      "expected": "⠨⠠⠁"
+    },
+    "GreekMathfontsUpper_1": {
+      "expected": "⠸⠨⠠⠁"
+    },
+    "GreekMathfontsUpper_2": {
+      "expected": "⠨⠨⠠⠁"
+    },
+    "GreekMathfontsUpper_3": {
+      "expected": "⠸⠨⠨⠠⠁"
+    },
+    "GreekMathfontsUpper_4": {
+      "expected": "⠠⠨⠸⠨⠠⠁"
+    },
+    "GreekMathfontsUpper_5": {
+      "expected": "⠠⠨⠸⠨⠨⠠⠁"
+    },
+    "LatinMathfontsSmall_0": {
+      "expected": "⠁"
+    },
+    "LatinMathfontsSmall_1": {
+      "expected": "⠁"
+    },
+    "LatinMathfontsSmall_2": {
+      "expected": "⠸⠁"
+    },
+    "LatinMathfontsSmall_3": {
+      "expected": "⠨⠁"
+    },
+    "LatinMathfontsSmall_4": {
+      "expected": "⠸⠨⠁"
+    },
+    "LatinMathfontsSmall_5": {
+      "expected": "⠈⠁"
+    },
+    "LatinMathfontsSmall_6": {
+      "expected": "⠸⠈⠁"
+    },
+    "LatinMathfontsSmall_7": {
+      "expected": "⠸⠁"
+    },
+    "LatinMathfontsSmall_8": {
+      "expected": "⠸⠁"
+    },
+    "LatinMathfontsSmall_9": {
+      "expected": "⠸⠀⠸⠁"
+    },
+    "LatinMathfontsSmall_10": {
+      "expected": "⠠⠨⠁"
+    },
+    "LatinMathfontsSmall_11": {
+      "expected": "⠠⠨⠸⠁"
+    },
+    "LatinMathfontsSmall_12": {
+      "expected": "⠠⠨⠨⠁"
+    },
+    "LatinMathfontsSmall_13": {
+      "expected": "⠠⠨⠸⠨⠁"
+    },
+    "LatinMathfontsSmall_14": {
+      "expected": "⠁"
+    },
+    "GreekMathfontsSmall_0": {
+      "expected": "⠨⠁"
+    },
+    "GreekMathfontsSmall_1": {
+      "expected": "⠸⠨⠁"
+    },
+    "GreekMathfontsSmall_2": {
+      "expected": "⠨⠨⠁"
+    },
+    "GreekMathfontsSmall_3": {
+      "expected": "⠸⠨⠨⠁"
+    },
+    "GreekMathfontsSmall_4": {
+      "expected": "⠠⠨⠸⠨⠁"
+    },
+    "GreekMathfontsSmall_5": {
+      "expected": "⠠⠨⠸⠨⠨⠁"
+    },
+    "LatinMathvariantUpper_0": {
+      "expected": "⠠⠁"
+    },
+    "LatinMathvariantUpper_1": {
+      "expected": "⠸⠠⠁"
+    },
+    "LatinMathvariantUpper_2": {
+      "expected": "⠠⠁"
+    },
+    "LatinMathvariantUpper_3": {
+      "expected": "⠸⠨⠠⠁"
+    },
+    "LatinMathvariantUpper_4": {
+      "expected": "⠈⠠⠁"
+    },
+    "LatinMathvariantUpper_5": {
+      "expected": "⠸⠈⠠⠁"
+    },
+    "LatinMathvariantUpper_6": {
+      "expected": "⠸⠠⠁"
+    },
+    "LatinMathvariantUpper_7": {
+      "expected": "⠸⠠⠁"
+    },
+    "LatinMathvariantUpper_8": {
+      "expected": "⠸⠀⠸⠠⠁"
+    },
+    "LatinMathvariantUpper_9": {
+      "expected": "⠠⠨⠠⠁"
+    },
+    "LatinMathvariantUpper_10": {
+      "expected": "⠠⠨⠸⠠⠁"
+    },
+    "LatinMathvariantUpper_11": {
+      "expected": "⠠⠨⠨⠠⠁"
+    },
+    "LatinMathvariantUpper_12": {
+      "expected": "⠠⠨⠸⠨⠠⠁"
+    },
+    "LatinMathvariantUpper_13": {
+      "expected": "⠠⠁"
+    },
+    "LatinMathvariantMathJax_0": {
+      "expected": "⠈⠠⠁"
+    },
+    "LatinMathvariantMathJax_1": {
+      "expected": "⠈⠸⠠⠁"
+    },
+    "LatinMathvariantMathJax_2": {
+      "expected": "⠈⠠⠁"
+    },
+    "LatinMathvariantMathJax_3": {
+      "expected": "⠈⠸⠠⠁"
+    },
+    "LatinMathvariantMathJax_4": {
+      "expected": "⠠⠁"
+    },
+    "GreekMathvariantUpper_0": {
+      "expected": "⠨⠠⠁"
+    },
+    "GreekMathvariantUpper_1": {
+      "expected": "⠸⠨⠠⠁"
+    },
+    "GreekMathvariantUpper_2": {
+      "expected": "⠨⠠⠁"
+    },
+    "GreekMathvariantUpper_3": {
+      "expected": "⠸⠨⠨⠠⠁"
+    },
+    "GreekMathvariantUpper_4": {
+      "expected": "⠠⠨⠸⠨⠠⠁"
+    },
+    "GreekMathvariantUpper_5": {
+      "expected": "⠠⠨⠸⠨⠨⠠⠁"
+    },
+    "LatinMathvariantSmall_0": {
+      "expected": "⠁"
+    },
+    "LatinMathvariantSmall_1": {
+      "expected": "⠸⠁"
+    },
+    "LatinMathvariantSmall_2": {
+      "expected": "⠁"
+    },
+    "LatinMathvariantSmall_3": {
+      "expected": "⠸⠨⠁"
+    },
+    "LatinMathvariantSmall_4": {
+      "expected": "⠈⠁"
+    },
+    "LatinMathvariantSmall_5": {
+      "expected": "⠸⠈⠁"
+    },
+    "LatinMathvariantSmall_6": {
+      "expected": "⠸⠁"
+    },
+    "LatinMathvariantSmall_7": {
+      "expected": "⠸⠁"
+    },
+    "LatinMathvariantSmall_8": {
+      "expected": "⠸⠀⠸⠁"
+    },
+    "LatinMathvariantSmall_9": {
+      "expected": "⠠⠨⠁"
+    },
+    "LatinMathvariantSmall_10": {
+      "expected": "⠠⠨⠸⠁"
+    },
+    "LatinMathvariantSmall_11": {
+      "expected": "⠠⠨⠨⠁"
+    },
+    "LatinMathvariantSmall_12": {
+      "expected": "⠠⠨⠸⠨⠁"
+    },
+    "LatinMathvariantSmall_13": {
+      "expected": "⠁"
+    },
+    "GreekMathvariantSmall_0": {
+      "expected": "⠨⠁"
+    },
+    "GreekMathvariantSmall_1": {
+      "expected": "⠸⠨⠁"
+    },
+    "GreekMathvariantSmall_2": {
+      "expected": "⠨⠁"
+    },
+    "GreekMathvariantSmall_3": {
+      "expected": "⠸⠨⠨⠁"
+    },
+    "GreekMathvariantSmall_4": {
+      "expected": "⠠⠨⠸⠨⠁"
+    },
+    "GreekMathvariantSmall_5": {
+      "expected": "⠠⠨⠸⠨⠨⠁"
+    },
+    "LatinFontVariantsUpper_0": {
+      "expected": "⠠⠁"
+    },
+    "LatinFontVariantsUpper_1": {
+      "expected": "⠠⠁"
+    },
+    "LatinFontVariantsUpper_2": {
+      "expected": "⠸⠠⠁"
+    },
+    "LatinFontVariantsUpper_3": {
+      "expected": "⠨⠠⠁"
+    },
+    "LatinFontVariantsUpper_4": {
+      "expected": "⠸⠨⠠⠁"
+    },
+    "LatinFontVariantsUpper_5": {
+      "expected": "⠈⠠⠁"
+    },
+    "LatinFontVariantsUpper_6": {
+      "expected": "⠸⠈⠠⠁"
+    },
+    "LatinFontVariantsUpper_7": {
+      "expected": "⠸⠠⠁"
+    },
+    "LatinFontVariantsUpper_8": {
+      "expected": "⠸⠠⠁"
+    },
+    "LatinFontVariantsUpper_9": {
+      "expected": "⠸⠀⠸⠠⠁"
+    },
+    "LatinFontVariantsUpper_10": {
+      "expected": "⠠⠨⠠⠁"
+    },
+    "LatinFontVariantsUpper_11": {
+      "expected": "⠠⠨⠸⠠⠁"
+    },
+    "LatinFontVariantsUpper_12": {
+      "expected": "⠠⠨⠨⠠⠁"
+    },
+    "LatinFontVariantsUpper_13": {
+      "expected": "⠠⠨⠸⠨⠠⠁"
+    },
+    "LatinFontVariantsUpper_14": {
+      "expected": "⠠⠁"
+    },
+    "GreekFontVariantsUpper_0": {
+      "expected": "⠨⠠⠁"
+    },
+    "GreekFontVariantsUpper_1": {
+      "expected": "⠸⠨⠠⠁"
+    },
+    "GreekFontVariantsUpper_2": {
+      "expected": "⠨⠨⠠⠁"
+    },
+    "GreekFontVariantsUpper_3": {
+      "expected": "⠸⠨⠨⠠⠁"
+    },
+    "GreekFontVariantsUpper_4": {
+      "expected": "⠠⠨⠸⠨⠠⠁"
+    },
+    "GreekFontVariantsUpper_5": {
+      "expected": "⠠⠨⠸⠨⠨⠠⠁"
+    },
+    "LatinFontVariantsSmall_0": {
+      "expected": "⠁"
+    },
+    "LatinFontVariantsSmall_1": {
+      "expected": "⠁"
+    },
+    "LatinFontVariantsSmall_2": {
+      "expected": "⠸⠁"
+    },
+    "LatinFontVariantsSmall_3": {
+      "expected": "⠨⠁"
+    },
+    "LatinFontVariantsSmall_4": {
+      "expected": "⠸⠨⠁"
+    },
+    "LatinFontVariantsSmall_5": {
+      "expected": "⠈⠁"
+    },
+    "LatinFontVariantsSmall_6": {
+      "expected": "⠸⠈⠁"
+    },
+    "LatinFontVariantsSmall_7": {
+      "expected": "⠸⠁"
+    },
+    "LatinFontVariantsSmall_8": {
+      "expected": "⠸⠁"
+    },
+    "LatinFontVariantsSmall_9": {
+      "expected": "⠸⠀⠸⠁"
+    },
+    "LatinFontVariantsSmall_10": {
+      "expected": "⠠⠨⠁"
+    },
+    "LatinFontVariantsSmall_11": {
+      "expected": "⠠⠨⠸⠁"
+    },
+    "LatinFontVariantsSmall_12": {
+      "expected": "⠠⠨⠨⠁"
+    },
+    "LatinFontVariantsSmall_13": {
+      "expected": "⠠⠨⠸⠨⠁"
+    },
+    "LatinFontVariantsSmall_14": {
+      "expected": "⠁"
+    },
+    "GreekFontVariantsSmall_0": {
+      "expected": "⠨⠁"
+    },
+    "GreekFontVariantsSmall_1": {
+      "expected": "⠸⠨⠁"
+    },
+    "GreekFontVariantsSmall_2": {
+      "expected": "⠨⠨⠁"
+    },
+    "GreekFontVariantsSmall_3": {
+      "expected": "⠸⠨⠨⠁"
+    },
+    "GreekFontVariantsSmall_4": {
+      "expected": "⠠⠨⠸⠨⠁"
+    },
+    "GreekFontVariantsSmall_5": {
+      "expected": "⠠⠨⠸⠨⠨⠁"
+    }
+  }
+}

@@ -15,7 +15,6 @@
 
 goog.provide('sre.SpeechEnglishTest');
 
-goog.require('sre.MathspeakEnglishFontTest');
 goog.require('sre.PrefixEnglishTest');
 
 
@@ -24,6 +23,5 @@ goog.require('sre.PrefixEnglishTest');
  * @type {Array}
  */
 sre.SpeechEnglishTest.testList = [
-  sre.MathspeakEnglishFontTest,
   sre.PrefixEnglishTest
 ];

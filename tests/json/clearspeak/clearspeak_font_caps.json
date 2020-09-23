@@ -1,0 +1,235 @@
+{
+  "domain": "clearspeak",
+  "tests": {
+    "LatinMathfontsUpperCaps_0": {
+      "test": true,
+      "input": "<mi>&#x0041;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_1": {
+      "test": true,
+      "input": "<mi>&#xFF21;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_2": {
+      "test": true,
+      "input": "<mi>&#x1D400;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_3": {
+      "test": true,
+      "input": "<mi>&#x1D434;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_4": {
+      "test": true,
+      "input": "<mi>&#x1D468;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_5": {
+      "test": true,
+      "input": "<mi>&#x1D49C;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_6": {
+      "test": true,
+      "input": "<mi>&#x1D4D0;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_7": {
+      "test": true,
+      "input": "<mi>&#x1D504;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_8": {
+      "test": true,
+      "input": "<mi>&#x1D538;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_9": {
+      "test": true,
+      "input": "<mi>&#x1D56C;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_10": {
+      "test": true,
+      "input": "<mi>&#x1D5A0;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_11": {
+      "test": true,
+      "input": "<mi>&#x1D5D4;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_12": {
+      "test": true,
+      "input": "<mi>&#x1D608;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_13": {
+      "test": true,
+      "input": "<mi>&#x1D63C;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathfontsUpperCaps_14": {
+      "test": true,
+      "input": "<mi>&#x1D670;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathfontsUpperCaps_0": {
+      "test": true,
+      "input": "<mi>&#x0391;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathfontsUpperCaps_1": {
+      "test": true,
+      "input": "<mi>&#x1D6A8;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathfontsUpperCaps_2": {
+      "test": true,
+      "input": "<mi>&#x1D6E2;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathfontsUpperCaps_3": {
+      "test": true,
+      "input": "<mi>&#x1D71C;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathfontsUpperCaps_4": {
+      "test": true,
+      "input": "<mi>&#x1D756;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathfontsUpperCaps_5": {
+      "test": true,
+      "input": "<mi>&#x1D790;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-italic\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"script\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_5": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-script\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_6": {
+      "test": true,
+      "input": "<mi mathvariant=\"fraktur\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_7": {
+      "test": true,
+      "input": "<mi mathvariant=\"double-struck\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_8": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-fraktur\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_9": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_10": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_11": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-italic\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_12": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold-italic\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantUpperCaps_13": {
+      "test": true,
+      "input": "<mi mathvariant=\"monospace\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantMathJaxCaps_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"-tex-caligraphic\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantMathJaxCaps_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"-tex-caligraphic-bold\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantMathJaxCaps_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"-tex-calligraphic\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantMathJaxCaps_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"-tex-calligraphic-bold\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "LatinMathvariantMathJaxCaps_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"-tex-mathit\">A</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathvariantUpperCaps_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">&#x0391;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathvariantUpperCaps_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold\">&#x0391;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathvariantUpperCaps_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">&#x0391;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathvariantUpperCaps_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-italic\">&#x0391;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathvariantUpperCaps_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold\">&#x0391;</mi>",
+      "preference": "Caps_SayCaps"
+    },
+    "GreekMathvariantUpperCaps_5": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold-italic\">&#x0391;</mi>",
+      "preference": "Caps_SayCaps"
+    }
+  }
+}
