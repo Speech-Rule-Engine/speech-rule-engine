@@ -25,7 +25,6 @@ goog.require('sre.MathAlphabetsTest');
 goog.require('sre.SemanticApiTest');
 goog.require('sre.SemanticRuleTest');
 goog.require('sre.SpeechRuleTest');
-goog.require('sre.WalkerMarkupTest');
 goog.require('sre.WalkerTest');
 
 
@@ -44,6 +43,5 @@ sre.BaseTests.testList = [
   sre.SemanticApiTest,
   sre.SemanticRuleTest,
   sre.SpeechRuleTest,
-  sre.WalkerMarkupTest,
   sre.WalkerTest
 ];
