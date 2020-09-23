@@ -284,5 +284,13 @@ sre.MathspeakRuleTest.tests = function() {
       sre.TestRegister.add(test);
     }
   }
-  sre.TestRegister.add(new sre.AbstractRuleTest('nemeth/fonts.json'));
+  let nemeth = [
+    'fonts.json',
+    'aata.json',
+    'nemeth72.json',
+    'nemeth_base.json'
+  ];
+  nemeth.forEach(function(x) {
+    sre.TestRegister.add(new sre.AbstractRuleTest('nemeth/' + x));
+  });
 };
