@@ -394,6 +394,87 @@
     },
     "GreekFontVariantsSmall_5": {
       "expected": "⠠⠨⠸⠨⠨⠁"
+    },
+    "DigitsMathfonts_0": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathfonts_1": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathfonts_2": {
+      "expected": "⠼⠸⠴"
+    },
+    "DigitsMathfonts_3": {
+      "expected": "⠼⠸⠴"
+    },
+    "DigitsMathfonts_4": {
+      "expected": "⠼⠠⠨⠴"
+    },
+    "DigitsMathfonts_5": {
+      "expected": "⠼⠠⠨⠸⠴"
+    },
+    "DigitsMathfonts_6": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_0": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_1": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_2": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_3": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_4": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_5": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_6": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_7": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_8": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_9": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_10": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_11": {
+      "expected": "⠼⠴"
+    },
+    "DigitsMathvariant_12": {
+      "expected": "⠼⠴"
+    },
+    "DigitsFontVariants_0": {
+      "expected": "⠼⠴"
+    },
+    "DigitsFontVariants_1": {
+      "expected": "⠼⠴"
+    },
+    "DigitsFontVariants_2": {
+      "expected": "⠼⠸⠴"
+    },
+    "DigitsFontVariants_3": {
+      "expected": "⠼⠸⠴"
+    },
+    "DigitsFontVariants_4": {
+      "expected": "⠼⠠⠨⠴"
+    },
+    "DigitsFontVariants_5": {
+      "expected": "⠼⠠⠨⠸⠴"
+    },
+    "DigitsFontVariants_6": {
+      "expected": "⠼⠴"
     }
   }
 }

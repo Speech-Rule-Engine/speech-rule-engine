@@ -393,6 +393,87 @@
     },
     "GreekFontVariantsSmall_5": {
       "expected": "alpha en italique gras sans empattement"
+    },
+    "DigitsMathfonts_0": {
+      "expected": "0"
+    },
+    "DigitsMathfonts_1": {
+      "expected": "0"
+    },
+    "DigitsMathfonts_2": {
+      "expected": "0 en gras"
+    },
+    "DigitsMathfonts_3": {
+      "expected": "0 ajouré"
+    },
+    "DigitsMathfonts_4": {
+      "expected": "0 sans empattement"
+    },
+    "DigitsMathfonts_5": {
+      "expected": "0 en gras sans empattement"
+    },
+    "DigitsMathfonts_6": {
+      "expected": "0 en chasse fixe"
+    },
+    "DigitsMathvariant_0": {
+      "expected": "0"
+    },
+    "DigitsMathvariant_1": {
+      "expected": "0 en gras"
+    },
+    "DigitsMathvariant_2": {
+      "expected": "0 en italique"
+    },
+    "DigitsMathvariant_3": {
+      "expected": "0 en italique gras"
+    },
+    "DigitsMathvariant_4": {
+      "expected": "0 de ronde"
+    },
+    "DigitsMathvariant_5": {
+      "expected": "0 de ronde en gras"
+    },
+    "DigitsMathvariant_6": {
+      "expected": "0 en gothique"
+    },
+    "DigitsMathvariant_7": {
+      "expected": "0 ajouré"
+    },
+    "DigitsMathvariant_8": {
+      "expected": "0 en gothique gras"
+    },
+    "DigitsMathvariant_9": {
+      "expected": "0 sans empattement"
+    },
+    "DigitsMathvariant_10": {
+      "expected": "0 en italique sans empattement"
+    },
+    "DigitsMathvariant_11": {
+      "expected": "0 en italique gras sans empattement"
+    },
+    "DigitsMathvariant_12": {
+      "expected": "0 en chasse fixe"
+    },
+    "DigitsFontVariants_0": {
+      "expected": "0"
+    },
+    "DigitsFontVariants_1": {
+      "expected": "0 en pleine largeur"
+    },
+    "DigitsFontVariants_2": {
+      "expected": "0 en gras"
+    },
+    "DigitsFontVariants_3": {
+      "expected": "0 ajouré"
+    },
+    "DigitsFontVariants_4": {
+      "expected": "0 sans empattement"
+    },
+    "DigitsFontVariants_5": {
+      "expected": "0 en gras sans empattement"
+    },
+    "DigitsFontVariants_6": {
+      "expected": "0 en chasse fixe"
     }
   }
 }

@@ -393,6 +393,87 @@
     },
     "GreekFontVariantsSmall_5": {
       "expected": "sans serif negrita cursiva alfa"
+    },
+    "DigitsMathfonts_0": {
+      "expected": "0"
+    },
+    "DigitsMathfonts_1": {
+      "expected": "0"
+    },
+    "DigitsMathfonts_2": {
+      "expected": "negrita 0"
+    },
+    "DigitsMathfonts_3": {
+      "expected": "negrita de pizarra 0"
+    },
+    "DigitsMathfonts_4": {
+      "expected": "sans serif 0"
+    },
+    "DigitsMathfonts_5": {
+      "expected": "sans serif negrita 0"
+    },
+    "DigitsMathfonts_6": {
+      "expected": "monoespacio 0"
+    },
+    "DigitsMathvariant_0": {
+      "expected": "0"
+    },
+    "DigitsMathvariant_1": {
+      "expected": "negrita 0"
+    },
+    "DigitsMathvariant_2": {
+      "expected": "cursiva 0"
+    },
+    "DigitsMathvariant_3": {
+      "expected": "negrita cursiva 0"
+    },
+    "DigitsMathvariant_4": {
+      "expected": "script 0"
+    },
+    "DigitsMathvariant_5": {
+      "expected": "negrita script 0"
+    },
+    "DigitsMathvariant_6": {
+      "expected": "Fraktur 0"
+    },
+    "DigitsMathvariant_7": {
+      "expected": "negrita de pizarra 0"
+    },
+    "DigitsMathvariant_8": {
+      "expected": "negrita Fraktur 0"
+    },
+    "DigitsMathvariant_9": {
+      "expected": "sans serif 0"
+    },
+    "DigitsMathvariant_10": {
+      "expected": "sans serif cursiva 0"
+    },
+    "DigitsMathvariant_11": {
+      "expected": "sans serif negrita cursiva 0"
+    },
+    "DigitsMathvariant_12": {
+      "expected": "monoespacio 0"
+    },
+    "DigitsFontVariants_0": {
+      "expected": "0"
+    },
+    "DigitsFontVariants_1": {
+      "expected": "ancho completo 0"
+    },
+    "DigitsFontVariants_2": {
+      "expected": "negrita 0"
+    },
+    "DigitsFontVariants_3": {
+      "expected": "negrita de pizarra 0"
+    },
+    "DigitsFontVariants_4": {
+      "expected": "sans serif 0"
+    },
+    "DigitsFontVariants_5": {
+      "expected": "sans serif negrita 0"
+    },
+    "DigitsFontVariants_6": {
+      "expected": "monoespacio 0"
     }
   }
 }
