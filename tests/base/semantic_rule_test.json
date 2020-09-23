@@ -1,0 +1,118 @@
+{
+  "name": "SemanticRuleTest",
+  "locale": "en",
+  "base": "json/base/semantic_rule_test.json",
+  "information": "Semantic rule tests.",
+  "active": "SemanticTreeRules",
+  "exclude": [],
+  "tests": {
+    "UnitsSingle_0": {
+      "expected": "kilometers"
+    },
+    "UnitsSingle_1": {
+      "expected": "amperes"
+    },
+    "UnitsSingle_2": {
+      "expected": "ohms"
+    },
+    "UnitsSingle_3": {
+      "expected": "kilohms"
+    },
+    "UnitsSingle_4": {
+      "expected": "Celsius"
+    },
+    "_comment0_": " In the following default is the verbose version of MathSpeak.",
+    "UnitsSimple_0": {
+      "expected": "minimum of minutes"
+    },
+    "UnitsSimple_1": {
+      "expected": "three kilometers"
+    },
+    "UnitsSimple_2": {
+      "expected": "kilometers plus seconds"
+    },
+    "UnitsSuperscript_0": {
+      "expected": "square kilometers"
+    },
+    "UnitsSuperscript_1": {
+      "expected": "cubic meters"
+    },
+    "UnitsSuperscript_2": {
+      "expected": "kilometers super four"
+    },
+    "UnitsSuperscript_3": {
+      "expected": "reciprocal meters"
+    },
+    "UnitsSuperscript_4": {
+      "expected": "seconds per meters"
+    },
+    "UnitsSuperscript_5": {
+      "expected": "seconds per meters super negative one"
+    },
+    "UnitsSuperscript_6": {
+      "expected": "seconds per meters super negative one"
+    },
+    "UnitsSuperscript_7": {
+      "expected": "three reciprocal meters"
+    },
+    "UnitsSuperscript_8": {
+      "expected": "kilometers per hours"
+    },
+    "UnitsSuperscript_9": {
+      "expected": "Newtons kilometers per hours"
+    },
+    "UnitsSuperscript_10": {
+      "expected": "m divided by kilometers"
+    },
+    "UnitsSuperscript_11": {
+      "expected": "three kilometers hours"
+    },
+    "UnitsExpressions_0": {
+      "expected": "seconds times three times m times kilometers hours"
+    },
+    "UnitsExpressions_1": {
+      "expected": "kilometers square seconds times three times m times kilometers hours"
+    },
+    "UnitsExpressions_2": {
+      "expected": "three times m times kilometers hours times cap N divided by square seconds"
+    },
+    "UnitsExpressions_3": {
+      "expected": "three times m times kilometers hours Newtons per square seconds"
+    },
+    "Fonts_0": {
+      "expected": "m"
+    },
+    "Fonts_1": {
+      "expected": "normal m"
+    },
+    "Fonts_2": {
+      "expected": "mi"
+    },
+    "Fonts_3": {
+      "expected": "italic mi"
+    },
+    "Fonts_4": {
+      "expected": "italic three"
+    },
+    "Fonts_5": {
+      "expected": "30"
+    },
+    "Multiline_0": {
+      "expected": "multiline equation line 1 a line 2 b"
+    },
+    "Multiline_1": {
+      "expected": "multiline equation row 1 a c row 2 b d"
+    },
+    "MixedNumbers": {
+      "expected": "four and one divided by three"
+    },
+    "Quadratic_0": {
+      "expected": "x equals negative b plus or minus Square root of b squared minus four times a times c divided by two times a"
+    },
+    "Quadratic_1": {
+      "test": false,
+      "locale": "es",
+      "expected": "x igual negative b más menos Square root of b squared menos cuatro por a por c divided by dos por a"
+    }
+  }
+}
