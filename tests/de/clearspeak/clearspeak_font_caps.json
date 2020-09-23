@@ -2,7 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "ClearspeakGermanFontTest",
   "base": "json/clearspeak/clearspeak_font_caps.json",
-  "information": "Clearspeak German Font tests.",
+  "information": "Clearspeak German Font tests with Caps preference.",
   "domain": "clearspeak",
   "locale": "de",
   "active": "ClearspeakGermanFont",
