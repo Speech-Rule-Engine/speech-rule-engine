@@ -31,9 +31,10 @@ goog.require('sre.TestRegister');
 /**
  * @constructor
  * @extends {sre.AbstractExamples}
+ * @param {string=} opt_tests The JSON file if necessary for testing.
  */
-sre.AbstractRuleTest = function() {
-  sre.AbstractRuleTest.base(this, 'constructor');
+sre.AbstractRuleTest = function(opt_tests) {
+  sre.AbstractRuleTest.base(this, 'constructor', opt_tests ? opt_tests: '');
 
   /**
    * @type {string}
@@ -283,4 +284,5 @@ sre.MathspeakRuleTest.tests = function() {
       sre.TestRegister.add(test);
     }
   }
+  sre.TestRegister.add(new sre.AbstractRuleTest('nemeth/fonts.json'));
 };
