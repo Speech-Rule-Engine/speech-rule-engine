@@ -1,0 +1,176 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "PrefixGermanTest",
+  "base": "json/common/prefix.json",
+  "information": "Prefix German rule tests.",
+  "locale": "de",
+  "active": "PrefixGerman",
+  "exclude": [],
+  "tests": {
+    "Sub_0": {
+      "expected": "Basis"
+    },
+    "Sub_1": {
+      "expected": "Index"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "Basis"
+    },
+    "Super_1": {
+      "expected": "Exponent"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "Basis"
+    },
+    "Over_1": {
+      "expected": "Oberer Grenzwert"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "Basis"
+    },
+    "Under_1": {
+      "expected": "Unterer Grenzwert"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "Zähler"
+    },
+    "Fractions_1": {
+      "expected": "Nenner"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "Radikand"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "Radikand"
+    },
+    "Root_1": {
+      "expected": "Wurzelexponent"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "Basis"
+    },
+    "SimpleTensors_1": {
+      "expected": "linker unterer Index"
+    },
+    "SimpleTensors_2": {
+      "expected": "linker oberer Index"
+    },
+    "SimpleTensors_3": {
+      "expected": "rechter unterer Index"
+    },
+    "SimpleTensors_4": {
+      "expected": "rechter oberer Index"
+    },
+    "ComplexTensors_0": {
+      "expected": "Basis"
+    },
+    "ComplexTensors_1": {
+      "expected": "1. linker unterer Index"
+    },
+    "ComplexTensors_2": {
+      "expected": "2. linker unterer Index"
+    },
+    "ComplexTensors_3": {
+      "expected": "1. linker oberer Index"
+    },
+    "ComplexTensors_4": {
+      "expected": "2. linker oberer Index"
+    },
+    "ComplexTensors_5": {
+      "expected": "1. rechter unterer Index"
+    },
+    "ComplexTensors_6": {
+      "expected": "2. rechter unterer Index"
+    },
+    "ComplexTensors_7": {
+      "expected": "1. rechter oberer Index"
+    },
+    "ComplexTensors_8": {
+      "expected": "2. rechter oberer Index"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "Binomials_0": {
+      "expected": "Grundgesamtheit"
+    },
+    "Binomials_1": {
+      "expected": "Stichprobengröße"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Vectors_0": {
+      "expected": "1. Zeile"
+    },
+    "Vectors_1": {
+      "expected": "2. Zeile"
+    },
+    "Vectors_2": {
+      "expected": "3. Zeile"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1. Zeile"
+    },
+    "Matrices_1": {
+      "expected": "1. Spalte"
+    },
+    "Matrices_2": {
+      "expected": "2. Spalte"
+    },
+    "Matrices_3": {
+      "expected": "2. Zeile"
+    },
+    "Matrices_4": {
+      "expected": "1. Spalte"
+    },
+    "Matrices_5": {
+      "expected": "2. Spalte"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    }
+  }
+}

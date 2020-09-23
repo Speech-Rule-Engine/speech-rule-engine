@@ -30,9 +30,10 @@ goog.require('sre.SpeechGeneratorUtil');
 /**
  * @constructor
  * @extends {sre.AbstractRuleTest}
+ * @param {string=} opt_tests The JSON file if necessary for testing.
  */
-sre.PrefixRuleTest = function() {
-  sre.PrefixRuleTest.base(this, 'constructor');
+sre.PrefixRuleTest = function(opt_tests) {
+  sre.PrefixRuleTest.base(this, 'constructor', opt_tests ? opt_tests: '');
 
   /**
    * @override
@@ -53,19 +54,19 @@ sre.PrefixRuleTest = function() {
    * @type {Element}
    */
   this.subExpr = null;
+
+  this.pickFields[2] = 'id';
 };
 goog.inherits(sre.PrefixRuleTest, sre.AbstractRuleTest);
 
 
 /**
- * Executes the prefix rule tests.
- * @param {string} expr The semantic tree as an XML string.
- * @param {number} id The id of the node to be considered.
- * @param {string} result The expected result.
+ * @override
  */
-sre.PrefixRuleTest.prototype.executeTest = function(expr, id, result) {
-  this.id = id;
-  this.executeRuleTest(expr, result);
+sre.PrefixRuleTest.prototype.method = function(var_args) {
+  let args = Array.prototype.slice.call(arguments, 0);
+  this.id = args[2];
+  sre.PrefixRuleTest.base(this, 'method', args[0], args[1]);
 };
 
 
@@ -95,4 +96,11 @@ sre.PrefixRuleTest.prototype.appendRuleExample = function(
       this, 'appendRuleExample', input, output, style, [sub]);
 };
 
+
+sre.PrefixRuleTest.tests = function() {
+  for (var locale of sre.Variables.LOCALES) {
+    sre.TestRegister.add(
+      new sre.PrefixRuleTest(locale + '/others/prefix.json'));
+  }
+};
 

@@ -76,6 +76,9 @@ sre.SummaryRuleTest.prototype.getSpeech = function(mathMl) {
 };
 
 
+/**
+ * @override
+ */
 sre.SummaryRuleTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.steps = args[3];

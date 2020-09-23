@@ -21,16 +21,13 @@ goog.provide('sre.Tests');
 
 goog.require('sre.BaseTests');
 goog.require('sre.ClearspeakRuleTest');
-goog.require('sre.SpeechEnglishTest');
-goog.require('sre.SpeechFrenchTest');
-goog.require('sre.SpeechGermanTest');
-goog.require('sre.SpeechSpanishTest');
 goog.require('sre.TestRunner');
 
 goog.require('sre.AbstractCharacterTest');
 goog.require('sre.ClearspeakRuleTest');
 goog.require('sre.CollapseRuleTest');
 goog.require('sre.MathspeakRuleTest');
+goog.require('sre.PrefixRuleTest');
 goog.require('sre.SemanticTest');
 goog.require('sre.SummaryRuleTest');
 goog.require('sre.TestRegister');
@@ -92,10 +89,6 @@ sre.Tests.environmentVars.forEach(sre.Tests.getEnvironment);
  */
 sre.Tests.allTests = [];
 sre.Tests.allTests = sre.Tests.allTests.concat(sre.BaseTests.testList);
-sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechEnglishTest.testList);
-sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechFrenchTest.testList);
-sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechGermanTest.testList);
-sre.Tests.allTests = sre.Tests.allTests.concat(sre.SpeechSpanishTest.testList);
 
 var file = sre.Tests.environment['FILE'];
 var locale = sre.Tests.environment['LOCALE'];
@@ -134,6 +127,7 @@ if (sre.Tests.environment['JSON']) {
   sre.AbstractCharacterTest.tests();
   sre.CollapseRuleTest.tests();
   sre.SummaryRuleTest.tests();
+  sre.PrefixRuleTest.tests();
   let files = sre.Tests.environment['FILES'] || Object.keys(sre.TestRegister.map);
   for (var key of files) {
     // let [locale, block, file] = key;
