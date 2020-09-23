@@ -59,9 +59,12 @@
       "expected": "barra vertical partida a barra vertical partida"
     },
     "NegativeVulgarFraction_0": {
-      "expected": "menos empezar fracción 5,2 entre a finalizar fracción"
+      "expected": "empezar fracción 1 entre 2 finalizar fracción menos empezar fracción 5 entre 18 finalizar fracción"
     },
     "NegativeVulgarFraction_1": {
+      "expected": "menos empezar fracción 5,2 entre a finalizar fracción"
+    },
+    "NegativeVulgarFraction_2": {
       "expected": "menos empezar fracción 5,2 entre 18 finalizar fracción"
     },
     "TrivialStuff_0": {
@@ -140,7 +143,7 @@
       "expected": "empezar esquema primera fila primera columna 1 segunda columna menor o igual que 2 finalizar esquema"
     },
     "EncloseGeneral": {
-      "expected": "StartEnclose circle a EndEnclose"
+      "expected": "empezar rodear círculo a finalizar rodear"
     },
     "EncloseLeftbar": {
       "expected": "barra vertical a"
