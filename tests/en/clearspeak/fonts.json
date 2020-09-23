@@ -1,0 +1,479 @@
+{
+  "name": "ClearspeakEnglishFontTest",
+  "locale": "en",
+  "base": "json/common/fonts.json",
+  "information": "Clearspeak English Font tests.",
+  "domain": "clearspeak",
+  "active": "ClearspeakEnglishFont",
+  "exclude": [],
+  "tests": {
+    "LatinMathfontsUpper_0": {
+      "expected": "A"
+    },
+    "LatinMathfontsUpper_1": {
+      "expected": "A"
+    },
+    "LatinMathfontsUpper_2": {
+      "expected": "bold A"
+    },
+    "LatinMathfontsUpper_3": {
+      "expected": "italic A"
+    },
+    "LatinMathfontsUpper_4": {
+      "expected": "bold italic A"
+    },
+    "LatinMathfontsUpper_5": {
+      "expected": "script A"
+    },
+    "LatinMathfontsUpper_6": {
+      "expected": "bold script A"
+    },
+    "LatinMathfontsUpper_7": {
+      "expected": "German A"
+    },
+    "LatinMathfontsUpper_8": {
+      "expected": "double struck A"
+    },
+    "LatinMathfontsUpper_9": {
+      "expected": "bold German A"
+    },
+    "LatinMathfontsUpper_10": {
+      "expected": "sans serif A"
+    },
+    "LatinMathfontsUpper_11": {
+      "expected": "sans serif bold A"
+    },
+    "LatinMathfontsUpper_12": {
+      "expected": "sans serif italic A"
+    },
+    "LatinMathfontsUpper_13": {
+      "expected": "sans serif bold italic A"
+    },
+    "LatinMathfontsUpper_14": {
+      "expected": "monospace A"
+    },
+    "GreekMathfontsUpper_0": {
+      "expected": "Alpha"
+    },
+    "GreekMathfontsUpper_1": {
+      "expected": "bold Alpha"
+    },
+    "GreekMathfontsUpper_2": {
+      "expected": "italic Alpha"
+    },
+    "GreekMathfontsUpper_3": {
+      "expected": "bold italic Alpha"
+    },
+    "GreekMathfontsUpper_4": {
+      "expected": "sans serif bold Alpha"
+    },
+    "GreekMathfontsUpper_5": {
+      "expected": "sans serif bold italic Alpha"
+    },
+    "LatinMathfontsSmall_0": {
+      "expected": "a"
+    },
+    "LatinMathfontsSmall_1": {
+      "expected": "a"
+    },
+    "LatinMathfontsSmall_2": {
+      "expected": "bold a"
+    },
+    "LatinMathfontsSmall_3": {
+      "expected": "italic a"
+    },
+    "LatinMathfontsSmall_4": {
+      "expected": "bold italic a"
+    },
+    "LatinMathfontsSmall_5": {
+      "expected": "script a"
+    },
+    "LatinMathfontsSmall_6": {
+      "expected": "bold script a"
+    },
+    "LatinMathfontsSmall_7": {
+      "expected": "German a"
+    },
+    "LatinMathfontsSmall_8": {
+      "expected": "double struck a"
+    },
+    "LatinMathfontsSmall_9": {
+      "expected": "bold German a"
+    },
+    "LatinMathfontsSmall_10": {
+      "expected": "sans serif a"
+    },
+    "LatinMathfontsSmall_11": {
+      "expected": "sans serif bold a"
+    },
+    "LatinMathfontsSmall_12": {
+      "expected": "sans serif italic a"
+    },
+    "LatinMathfontsSmall_13": {
+      "expected": "sans serif bold italic a"
+    },
+    "LatinMathfontsSmall_14": {
+      "expected": "monospace a"
+    },
+    "GreekMathfontsSmall_0": {
+      "expected": "alpha"
+    },
+    "GreekMathfontsSmall_1": {
+      "expected": "bold alpha"
+    },
+    "GreekMathfontsSmall_2": {
+      "expected": "italic alpha"
+    },
+    "GreekMathfontsSmall_3": {
+      "expected": "bold italic alpha"
+    },
+    "GreekMathfontsSmall_4": {
+      "expected": "sans serif bold alpha"
+    },
+    "GreekMathfontsSmall_5": {
+      "expected": "sans serif bold italic alpha"
+    },
+    "LatinMathvariantUpper_0": {
+      "expected": "normal A"
+    },
+    "LatinMathvariantUpper_1": {
+      "expected": "bold A"
+    },
+    "LatinMathvariantUpper_2": {
+      "expected": "A"
+    },
+    "LatinMathvariantUpper_3": {
+      "expected": "bold italic A"
+    },
+    "LatinMathvariantUpper_4": {
+      "expected": "script A"
+    },
+    "LatinMathvariantUpper_5": {
+      "expected": "bold script A"
+    },
+    "LatinMathvariantUpper_6": {
+      "expected": "German A"
+    },
+    "LatinMathvariantUpper_7": {
+      "expected": "double struck A"
+    },
+    "LatinMathvariantUpper_8": {
+      "expected": "bold German A"
+    },
+    "LatinMathvariantUpper_9": {
+      "expected": "sans serif A"
+    },
+    "LatinMathvariantUpper_10": {
+      "expected": "sans serif bold A"
+    },
+    "LatinMathvariantUpper_11": {
+      "expected": "sans serif italic A"
+    },
+    "LatinMathvariantUpper_12": {
+      "expected": "sans serif bold italic A"
+    },
+    "LatinMathvariantUpper_13": {
+      "expected": "monospace A"
+    },
+    "LatinMathvariantMathJax_0": {
+      "expected": "calligraphic A"
+    },
+    "LatinMathvariantMathJax_1": {
+      "expected": "calligraphic bold A"
+    },
+    "LatinMathvariantMathJax_2": {
+      "expected": "calligraphic A"
+    },
+    "LatinMathvariantMathJax_3": {
+      "expected": "calligraphic bold A"
+    },
+    "LatinMathvariantMathJax_4": {
+      "expected": "A"
+    },
+    "GreekMathvariantUpper_0": {
+      "expected": "normal Alpha"
+    },
+    "GreekMathvariantUpper_1": {
+      "expected": "bold Alpha"
+    },
+    "GreekMathvariantUpper_2": {
+      "expected": "Alpha"
+    },
+    "GreekMathvariantUpper_3": {
+      "expected": "bold italic Alpha"
+    },
+    "GreekMathvariantUpper_4": {
+      "expected": "sans serif bold Alpha"
+    },
+    "GreekMathvariantUpper_5": {
+      "expected": "sans serif bold italic Alpha"
+    },
+    "LatinMathvariantSmall_0": {
+      "expected": "normal a"
+    },
+    "LatinMathvariantSmall_1": {
+      "expected": "bold a"
+    },
+    "LatinMathvariantSmall_2": {
+      "expected": "a"
+    },
+    "LatinMathvariantSmall_3": {
+      "expected": "bold italic a"
+    },
+    "LatinMathvariantSmall_4": {
+      "expected": "script a"
+    },
+    "LatinMathvariantSmall_5": {
+      "expected": "bold script a"
+    },
+    "LatinMathvariantSmall_6": {
+      "expected": "German a"
+    },
+    "LatinMathvariantSmall_7": {
+      "expected": "double struck a"
+    },
+    "LatinMathvariantSmall_8": {
+      "expected": "bold German a"
+    },
+    "LatinMathvariantSmall_9": {
+      "expected": "sans serif a"
+    },
+    "LatinMathvariantSmall_10": {
+      "expected": "sans serif bold a"
+    },
+    "LatinMathvariantSmall_11": {
+      "expected": "sans serif italic a"
+    },
+    "LatinMathvariantSmall_12": {
+      "expected": "sans serif bold italic a"
+    },
+    "LatinMathvariantSmall_13": {
+      "expected": "monospace a"
+    },
+    "GreekMathvariantSmall_0": {
+      "expected": "normal alpha"
+    },
+    "GreekMathvariantSmall_1": {
+      "expected": "bold alpha"
+    },
+    "GreekMathvariantSmall_2": {
+      "expected": "alpha"
+    },
+    "GreekMathvariantSmall_3": {
+      "expected": "bold italic alpha"
+    },
+    "GreekMathvariantSmall_4": {
+      "expected": "sans serif bold alpha"
+    },
+    "GreekMathvariantSmall_5": {
+      "expected": "sans serif bold italic alpha"
+    },
+    "LatinFontVariantsUpper_0": {
+      "expected": "normal A"
+    },
+    "LatinFontVariantsUpper_1": {
+      "expected": "normal A"
+    },
+    "LatinFontVariantsUpper_2": {
+      "expected": "bold A"
+    },
+    "LatinFontVariantsUpper_3": {
+      "expected": "italic A"
+    },
+    "LatinFontVariantsUpper_4": {
+      "expected": "bold italic A"
+    },
+    "LatinFontVariantsUpper_5": {
+      "expected": "script A"
+    },
+    "LatinFontVariantsUpper_6": {
+      "expected": "bold script A"
+    },
+    "LatinFontVariantsUpper_7": {
+      "expected": "German A"
+    },
+    "LatinFontVariantsUpper_8": {
+      "expected": "double struck A"
+    },
+    "LatinFontVariantsUpper_9": {
+      "expected": "bold German A"
+    },
+    "LatinFontVariantsUpper_10": {
+      "expected": "sans serif A"
+    },
+    "LatinFontVariantsUpper_11": {
+      "expected": "sans serif bold A"
+    },
+    "LatinFontVariantsUpper_12": {
+      "expected": "sans serif italic A"
+    },
+    "LatinFontVariantsUpper_13": {
+      "expected": "sans serif bold italic A"
+    },
+    "LatinFontVariantsUpper_14": {
+      "expected": "monospace A"
+    },
+    "GreekFontVariantsUpper_0": {
+      "expected": "normal Alpha"
+    },
+    "GreekFontVariantsUpper_1": {
+      "expected": "bold Alpha"
+    },
+    "GreekFontVariantsUpper_2": {
+      "expected": "italic Alpha"
+    },
+    "GreekFontVariantsUpper_3": {
+      "expected": "bold italic Alpha"
+    },
+    "GreekFontVariantsUpper_4": {
+      "expected": "sans serif bold Alpha"
+    },
+    "GreekFontVariantsUpper_5": {
+      "expected": "sans serif bold italic Alpha"
+    },
+    "LatinFontVariantsSmall_0": {
+      "expected": "normal a"
+    },
+    "LatinFontVariantsSmall_1": {
+      "expected": "normal a"
+    },
+    "LatinFontVariantsSmall_2": {
+      "expected": "bold a"
+    },
+    "LatinFontVariantsSmall_3": {
+      "expected": "italic a"
+    },
+    "LatinFontVariantsSmall_4": {
+      "expected": "bold italic a"
+    },
+    "LatinFontVariantsSmall_5": {
+      "expected": "script a"
+    },
+    "LatinFontVariantsSmall_6": {
+      "expected": "bold script a"
+    },
+    "LatinFontVariantsSmall_7": {
+      "expected": "German a"
+    },
+    "LatinFontVariantsSmall_8": {
+      "expected": "double struck a"
+    },
+    "LatinFontVariantsSmall_9": {
+      "expected": "bold German a"
+    },
+    "LatinFontVariantsSmall_10": {
+      "expected": "sans serif a"
+    },
+    "LatinFontVariantsSmall_11": {
+      "expected": "sans serif bold a"
+    },
+    "LatinFontVariantsSmall_12": {
+      "expected": "sans serif italic a"
+    },
+    "LatinFontVariantsSmall_13": {
+      "expected": "sans serif bold italic a"
+    },
+    "LatinFontVariantsSmall_14": {
+      "expected": "monospace a"
+    },
+    "GreekFontVariantsSmall_0": {
+      "expected": "normal alpha"
+    },
+    "GreekFontVariantsSmall_1": {
+      "expected": "bold alpha"
+    },
+    "GreekFontVariantsSmall_2": {
+      "expected": "italic alpha"
+    },
+    "GreekFontVariantsSmall_3": {
+      "expected": "bold italic alpha"
+    },
+    "GreekFontVariantsSmall_4": {
+      "expected": "sans serif bold alpha"
+    },
+    "GreekFontVariantsSmall_5": {
+      "expected": "sans serif bold italic alpha"
+    },
+    "DigitsMathfonts_0": {
+      "expected": "0"
+    },
+    "DigitsMathfonts_1": {
+      "expected": "0"
+    },
+    "DigitsMathfonts_2": {
+      "expected": "bold 0"
+    },
+    "DigitsMathfonts_3": {
+      "expected": "double struck 0"
+    },
+    "DigitsMathfonts_4": {
+      "expected": "sans serif 0"
+    },
+    "DigitsMathfonts_5": {
+      "expected": "sans serif bold 0"
+    },
+    "DigitsMathfonts_6": {
+      "expected": "monospace 0"
+    },
+    "DigitsMathvariant_0": {
+      "expected": "0"
+    },
+    "DigitsMathvariant_1": {
+      "expected": "bold 0"
+    },
+    "DigitsMathvariant_2": {
+      "expected": "italic 0"
+    },
+    "DigitsMathvariant_3": {
+      "expected": "bold italic 0"
+    },
+    "DigitsMathvariant_4": {
+      "expected": "script 0"
+    },
+    "DigitsMathvariant_5": {
+      "expected": "bold script 0"
+    },
+    "DigitsMathvariant_6": {
+      "expected": "German 0"
+    },
+    "DigitsMathvariant_7": {
+      "expected": "double struck 0"
+    },
+    "DigitsMathvariant_8": {
+      "expected": "bold German 0"
+    },
+    "DigitsMathvariant_9": {
+      "expected": "sans serif 0"
+    },
+    "DigitsMathvariant_10": {
+      "expected": "sans serif italic 0"
+    },
+    "DigitsMathvariant_11": {
+      "expected": "sans serif bold italic 0"
+    },
+    "DigitsMathvariant_12": {
+      "expected": "monospace 0"
+    },
+    "DigitsFontVariants_0": {
+      "expected": "0"
+    },
+    "DigitsFontVariants_1": {
+      "expected": "fullwidth 0"
+    },
+    "DigitsFontVariants_2": {
+      "expected": "bold 0"
+    },
+    "DigitsFontVariants_3": {
+      "expected": "double struck 0"
+    },
+    "DigitsFontVariants_4": {
+      "expected": "sans serif 0"
+    },
+    "DigitsFontVariants_5": {
+      "expected": "sans serif bold 0"
+    },
+    "DigitsFontVariants_6": {
+      "expected": "monospace 0"
+    }
+  }
+}

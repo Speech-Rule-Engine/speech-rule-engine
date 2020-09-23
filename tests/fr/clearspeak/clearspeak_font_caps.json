@@ -1,0 +1,149 @@
+{
+  "name": "ClearspeakFrenchFontTest",
+  "base": "json/clearspeak/clearspeak_font_caps.json",
+  "information": "Clearspeak French Font tests.",
+  "domain": "clearspeak",
+  "locale": "fr",
+  "active": "ClearspeakFrenchFont",
+  "exclude": [],
+  "tests": {
+  "LatinMathfontsUpperCaps_0": {
+    "expected": "A majuscule"
+  },
+  "LatinMathfontsUpperCaps_1": {
+    "expected": "A majuscule"
+  },
+  "LatinMathfontsUpperCaps_2": {
+    "expected": "A majuscule en gras"
+  },
+  "LatinMathfontsUpperCaps_3": {
+    "expected": "A majuscule en italique"
+  },
+  "LatinMathfontsUpperCaps_4": {
+    "expected": "A majuscule en italique gras"
+  },
+  "LatinMathfontsUpperCaps_5": {
+    "expected": "A majuscule de ronde"
+  },
+  "LatinMathfontsUpperCaps_6": {
+    "expected": "A majuscule de ronde en gras"
+  },
+  "LatinMathfontsUpperCaps_7": {
+    "expected": "A majuscule en gothique"
+  },
+  "LatinMathfontsUpperCaps_8": {
+    "expected": "A majuscule ajouré"
+  },
+  "LatinMathfontsUpperCaps_9": {
+    "expected": "A majuscule en gothique gras"
+  },
+  "LatinMathfontsUpperCaps_10": {
+    "expected": "A majuscule sans empattement"
+  },
+  "LatinMathfontsUpperCaps_11": {
+    "expected": "A majuscule en gras sans empattement"
+  },
+  "LatinMathfontsUpperCaps_12": {
+    "expected": "A majuscule en italique sans empattement"
+  },
+  "LatinMathfontsUpperCaps_13": {
+    "expected": "A majuscule en italique gras sans empattement"
+  },
+  "LatinMathfontsUpperCaps_14": {
+    "expected": "A majuscule en chasse fixe"
+  },
+  "GreekMathfontsUpperCaps_0": {
+    "expected": "Alpha majuscule"
+  },
+  "GreekMathfontsUpperCaps_1": {
+    "expected": "Alpha majuscule en gras"
+  },
+  "GreekMathfontsUpperCaps_2": {
+    "expected": "Alpha majuscule en italique"
+  },
+  "GreekMathfontsUpperCaps_3": {
+    "expected": "Alpha majuscule en italique gras"
+  },
+  "GreekMathfontsUpperCaps_4": {
+    "expected": "Alpha majuscule en gras sans empattement"
+  },
+  "GreekMathfontsUpperCaps_5": {
+    "expected": "Alpha majuscule en italique gras sans empattement"
+  },
+  "LatinMathvariantUpperCaps_0": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_1": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_2": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_3": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_4": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_5": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_6": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_7": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_8": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_9": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_10": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_11": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_12": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantUpperCaps_13": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantMathJaxCaps_0": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantMathJaxCaps_1": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantMathJaxCaps_2": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantMathJaxCaps_3": {
+    "expected": "A majuscule"
+  },
+  "LatinMathvariantMathJaxCaps_4": {
+    "expected": "A majuscule"
+  },
+  "GreekMathvariantUpperCaps_0": {
+    "expected": "Alpha majuscule"
+  },
+  "GreekMathvariantUpperCaps_1": {
+    "expected": "Alpha majuscule"
+  },
+  "GreekMathvariantUpperCaps_2": {
+    "expected": "Alpha majuscule"
+  },
+  "GreekMathvariantUpperCaps_3": {
+    "expected": "Alpha majuscule"
+  },
+  "GreekMathvariantUpperCaps_4": {
+    "expected": "Alpha majuscule"
+  },
+  "GreekMathvariantUpperCaps_5": {
+    "expected": "Alpha majuscule"
+  }
+}
+}

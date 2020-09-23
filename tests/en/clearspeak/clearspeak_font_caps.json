@@ -1,0 +1,150 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "ClearspeakEnglishFontTest",
+  "base": "json/clearspeak/clearspeak_font_caps.json",
+  "information": "Clearspeak English Font tests.",
+  "domain": "clearspeak",
+  "locale": "en",
+  "active": "ClearspeakEnglishFont",
+  "exclude": [],
+  "tests": {
+  "LatinMathfontsUpperCaps_0": {
+    "expected": "cap A"
+  },
+  "LatinMathfontsUpperCaps_1": {
+    "expected": "cap A"
+  },
+  "LatinMathfontsUpperCaps_2": {
+    "expected": "bold cap A"
+  },
+  "LatinMathfontsUpperCaps_3": {
+    "expected": "italic cap A"
+  },
+  "LatinMathfontsUpperCaps_4": {
+    "expected": "bold italic cap A"
+  },
+  "LatinMathfontsUpperCaps_5": {
+    "expected": "script cap A"
+  },
+  "LatinMathfontsUpperCaps_6": {
+    "expected": "bold script cap A"
+  },
+  "LatinMathfontsUpperCaps_7": {
+    "expected": "fraktur cap A"
+  },
+  "LatinMathfontsUpperCaps_8": {
+    "expected": "double struck cap A"
+  },
+  "LatinMathfontsUpperCaps_9": {
+    "expected": "bold fraktur cap A"
+  },
+  "LatinMathfontsUpperCaps_10": {
+    "expected": "sans serif cap A"
+  },
+  "LatinMathfontsUpperCaps_11": {
+    "expected": "sans serif bold cap A"
+  },
+  "LatinMathfontsUpperCaps_12": {
+    "expected": "sans serif italic cap A"
+  },
+  "LatinMathfontsUpperCaps_13": {
+    "expected": "sans serif bold italic cap A"
+  },
+  "LatinMathfontsUpperCaps_14": {
+    "expected": "monospace cap A"
+  },
+  "GreekMathfontsUpperCaps_0": {
+    "expected": "cap Alpha"
+  },
+  "GreekMathfontsUpperCaps_1": {
+    "expected": "bold cap Alpha"
+  },
+  "GreekMathfontsUpperCaps_2": {
+    "expected": "italic cap Alpha"
+  },
+  "GreekMathfontsUpperCaps_3": {
+    "expected": "bold italic cap Alpha"
+  },
+  "GreekMathfontsUpperCaps_4": {
+    "expected": "sans serif bold cap Alpha"
+  },
+  "GreekMathfontsUpperCaps_5": {
+    "expected": "sans serif bold italic cap Alpha"
+  },
+  "LatinMathvariantUpperCaps_0": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_1": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_2": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_3": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_4": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_5": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_6": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_7": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_8": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_9": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_10": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_11": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_12": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantUpperCaps_13": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantMathJaxCaps_0": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantMathJaxCaps_1": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantMathJaxCaps_2": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantMathJaxCaps_3": {
+    "expected": "cap A"
+  },
+  "LatinMathvariantMathJaxCaps_4": {
+    "expected": "cap A"
+  },
+  "GreekMathvariantUpperCaps_0": {
+    "expected": "cap Alpha"
+  },
+  "GreekMathvariantUpperCaps_1": {
+    "expected": "cap Alpha"
+  },
+  "GreekMathvariantUpperCaps_2": {
+    "expected": "cap Alpha"
+  },
+  "GreekMathvariantUpperCaps_3": {
+    "expected": "cap Alpha"
+  },
+  "GreekMathvariantUpperCaps_4": {
+    "expected": "cap Alpha"
+  },
+  "GreekMathvariantUpperCaps_5": {
+    "expected": "cap Alpha"
+  }
+}
+}
