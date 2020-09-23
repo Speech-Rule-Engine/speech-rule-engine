@@ -68,15 +68,21 @@ sre.Tests.testList = [];
 
 sre.Tests.environment = {
   JSON: true,
-  VERBOSE: true
+  VERBOSE: 1,
+  WARN: 1
 };
-sre.Tests.environmentVars = ['FILE', 'FILES', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE'];
+sre.Tests.environmentVars = ['FILE', 'FILES', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE', 'WARN'];
 sre.Tests.getEnvironment = function(variable) {
   var env = sre.SystemExternal.process.env[variable];
   // Process here.
   if (!env) return;
   if (env === 'true' || env === 'false') {
     sre.Tests.environment[variable] = JSON.parse(env);
+    return;
+  }
+  var number = parseInt(env, 10);
+  if (!isNaN(number)) {
+    sre.Tests.environment[variable] = number;
     return;
   }
   sre.Tests.environment[variable] = env.split(',');
@@ -116,7 +122,7 @@ if (!sre.Tests.testList.length) {
   sre.Tests.testList = sre.Tests.testList.concat(sre.Tests.allTests);
 }
 
-sre.Tests.getInstance().runner.warn = sre.Tests.environment['WARN'] || 1;
+sre.Tests.getInstance().runner.warn = sre.Tests.environment['WARN'];
 
 sre.Tests.getInstance().runner.verbose = sre.Tests.environment['VERBOSE'];
 
