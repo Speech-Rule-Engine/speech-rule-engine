@@ -28,9 +28,10 @@ goog.require('sre.TestRegister');
 /**
  * @constructor
  * @extends {sre.AbstractRuleTest}
+ * @param {string=} opt_tests The JSON file if necessary for testing.
  */
-sre.ClearspeakRuleTest = function() {
-  sre.ClearspeakRuleTest.base(this, 'constructor');
+sre.ClearspeakRuleTest = function(opt_tests) {
+  sre.ClearspeakRuleTest.base(this, 'constructor', opt_tests ? opt_tests: '');
 
   /**
    * @override
@@ -61,9 +62,6 @@ sre.ClearspeakRuleTest.prototype.tearDownTest = function() {
 };
 
 
-sre.ClearspeakRuleTest.locales = ['en', 'de', 'fr'];
-
-
 sre.ClearspeakRuleTest.tests = function() {
   let coreTests = [
     'clearspeak_absolute_value.json',
@@ -88,18 +86,14 @@ sre.ClearspeakRuleTest.tests = function() {
     'fonts.json',
     'clearspeak_font_caps.json'
   ];
-  for (var locale of sre.ClearspeakRuleTest.locales) {
+  for (var locale of sre.Variables.LOCALES) {
     for (var file of coreTests) {
-      var test = new sre.ClearspeakRuleTest();
-      test.jsonFile = locale + '/clearspeak/' + file;
-      test.locale = locale;
+      var test = new sre.ClearspeakRuleTest(locale + '/clearspeak/' + file);
       test.compare = locale === 'de';  // tmp!
       sre.TestRegister.add(test);
     }
     for (file of otherTests) {
-      test = new sre.AbstractRuleTest();
-      test.jsonFile = locale + '/clearspeak/' + file;
-      test.locale = locale;
+      test = new sre.AbstractRuleTest(locale + '/clearspeak/' + file);
       test.compare = locale === 'de';  // tmp!
       sre.TestRegister.add(test);
     }
