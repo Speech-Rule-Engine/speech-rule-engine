@@ -18,6 +18,7 @@
  */
 
 goog.provide('sre.AbstractExamples');
+goog.provide('sre.ExampleFiles');
 
 goog.require('sre.AbstractJsonMultiTest');
 goog.require('sre.TestUtil');
@@ -102,8 +103,7 @@ sre.AbstractExamples.prototype.setActive = function(file, opt_ext) {
 sre.AbstractExamples.prototype.startExamples = function() {
   if (!this.active_) return;
   try {
-    sre.SystemExternal.fs.openSync(this.examplesFile_, 'w+');
-    sre.SystemExternal.fs.appendFileSync(this.examplesFile_, this.header());
+    sre.ExampleFiles.openFile(this.examplesFile_, this);
   } catch (err) {
     this.fileError_ = this.examplesFile_;
   }
@@ -139,7 +139,6 @@ sre.AbstractExamples.prototype.endExamples = function() {
         sre.SystemExternal.fs.appendFileSync(
             this.examplesFile_, this.join(this.examples_[key]));
       }
-      sre.SystemExternal.fs.appendFileSync(this.examplesFile_, this.footer());
     } catch (err) {
       this.fileError_ = 'Could not append to file ' + this.examplesFile_;
     }
@@ -204,3 +203,28 @@ sre.AbstractExamples.prototype.footer = function() {
   return '';
 };
 
+
+sre.ExampleFiles = {};
+
+sre.ExampleFiles.openFiles = {};
+
+sre.ExampleFiles.descriptors = {};
+
+
+sre.ExampleFiles.openFile = function(file, obj) {
+  if (!sre.ExampleFiles.openFiles[file]) {
+    let fd = sre.SystemExternal.fs.openSync(file, 'w+');
+    sre.ExampleFiles.descriptors[file] = fd;
+    sre.SystemExternal.fs.appendFileSync(fd, obj.header());
+  }
+  sre.ExampleFiles.openFiles[file] = obj;
+};
+
+
+sre.ExampleFiles.closeFiles = function() {
+  for (let file of Object.keys(sre.ExampleFiles.openFiles)) {
+    sre.SystemExternal.fs.appendFileSync(
+      file, sre.ExampleFiles.openFiles[file].footer());
+    sre.SystemExternal.fs.closeSync(sre.ExampleFiles.descriptors[file]);
+  }
+};

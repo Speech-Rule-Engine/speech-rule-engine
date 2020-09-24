@@ -45,6 +45,7 @@ goog.inherits(sre.ClearspeakRuleTest, sre.AbstractRuleTest);
  * @override
  */
 sre.ClearspeakRuleTest.prototype.setUpTest = function() {
+  sre.ClearspeakRuleTest.base(this, 'setUpTest');
   sre.System.getInstance().setupEngine(
       {markup: sre.Engine.Markup.PUNCTUATION});
 };
@@ -98,7 +99,6 @@ sre.ClearspeakRuleTest.tests = function() {
       test.locale = locale;
       test.compare = locale === 'de';  // tmp!
       test.setActive(sre.ClearspeakRuleTest.locales[locale]);
-      test.startExamples();
       sre.TestRegister.add(test);
     }
     for (file of otherTests) {

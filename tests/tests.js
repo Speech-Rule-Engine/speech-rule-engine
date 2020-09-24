@@ -32,6 +32,8 @@ goog.require('sre.SemanticTest');
 goog.require('sre.SummaryRuleTest');
 goog.require('sre.TestRegister');
 
+goog.require('sre.ExampleFiles');
+
 
 /**
  * @constructor
@@ -55,7 +57,7 @@ sre.Tests.prototype.run = function() {
   this.runner.summary();
   var timeOut = (new Date()).getTime();
   this.runner.output('Time for tests: ' + (timeOut - timeIn) + 'ms\n');
-  // sre.AbstractCharacterTest.testOutput();
+  sre.ExampleFiles.closeFiles();
   process.exit(this.runner.success() ? 0 : 1);
 };
 
