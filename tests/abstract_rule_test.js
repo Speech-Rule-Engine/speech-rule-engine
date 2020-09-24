@@ -274,15 +274,16 @@ sre.MathspeakRuleTest.tests = function() {
     'mathspeak_embellish_test.json',
     'mathspeak_issues1.json',
     'mathspeak_issues2.json',
-    'fonts.json'
+    'fonts.json',
+    'direct_speech.json'
   ];
   for (var locale of sre.Variables.LOCALES) {
     for (var file of files) {
-      var test = new sre.AbstractRuleTest();
-      test.jsonFile = locale + '/mathspeak/' + file;
+      var test = new sre.AbstractRuleTest(locale + '/mathspeak/' + file);
       test.locale = locale;
       sre.TestRegister.add(test);
     }
+    sre.TestRegister.add(new sre.AbstractRuleTest(locale + '/clearspeak/direct_speech.json'));
   }
   let nemeth = [
     'fonts.json',

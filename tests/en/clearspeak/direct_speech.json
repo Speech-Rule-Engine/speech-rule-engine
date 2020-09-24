@@ -1,0 +1,70 @@
+{
+  "domain": "clearspeak",
+  "name": "DirectSpeechTest",
+  "locale": "en",
+  "base": "json/common/direct_speech.json",
+  "information": "Tests for Direct speech attributes in Clearspeak English.",
+  "active": "DirectSpeechEnglish",
+  "exclude": [],
+  "tests": {
+    "AriaLabels_0": {
+      "expected": "AC line"
+    },
+    "AriaLabels_1": {
+      "expected": "derivative of x is equal to sigma times left parenthesis y minus x right parenthesis"
+    },
+    "AltText_0": {
+      "expected": "A C under line"
+    },
+    "AltText_1": {
+      "expected": "AC line"
+    },
+    "ExactSpeech_0": {
+      "expected": "A C under line"
+    },
+    "ExactSpeech_1": {
+      "expected": "AC line"
+    },
+    "MglyphTokens_0": {
+      "_comment0_": " mi",
+      "expected": "my glyph"
+    },
+    "MglyphTokens_1": {
+      "expected": "your glyph",
+      "_comment1_": " mo"
+    },
+    "MglyphTokens_2": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_3": {
+      "expected": "your glyph",
+      "_comment2_": " mn"
+    },
+    "MglyphTokens_4": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_5": {
+      "expected": "your glyph",
+      "_comment3_": " mtext"
+    },
+    "MglyphTokens_6": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_7": {
+      "expected": "your glyph",
+      "_comment4_": " ms"
+    },
+    "MglyphTokens_8": {
+      "expected": "my glyph"
+    },
+    "MglyphTokens_9": {
+      "expected": "your glyph"
+    },
+    "MglyphGeneral_0": {
+      "expected": "23braid plus 132braid equals 13braid"
+    },
+    "MglyphGeneral_1": {
+      "expected": "N M sub 1 subset of mfin"
+    }
+  }
+}

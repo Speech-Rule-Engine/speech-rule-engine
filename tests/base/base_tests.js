@@ -18,7 +18,6 @@ goog.provide('sre.BaseTests');
 goog.require('sre.ApiTest');
 goog.require('sre.ClearspeakAnnotationTest');
 goog.require('sre.ColorPickerTest');
-goog.require('sre.DirectSpeechTest');
 goog.require('sre.DomTest');
 goog.require('sre.MarkupTest');
 goog.require('sre.SemanticApiTest');
@@ -35,7 +34,6 @@ sre.BaseTests.testList = [
   sre.ApiTest,
   sre.ClearspeakAnnotationTest,
   sre.ColorPickerTest,
-  sre.DirectSpeechTest,
   sre.DomTest,
   sre.MarkupTest,
   sre.SemanticApiTest,
