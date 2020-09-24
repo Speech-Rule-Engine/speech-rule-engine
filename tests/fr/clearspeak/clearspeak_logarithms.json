@@ -4,6 +4,7 @@
   "locale": "fr",
   "base": "json/clearspeak/clearspeak_logarithms.json",
   "information": "ClearspeakFrenchLogarithms rule tests.",
+  "active": "ClearspeakFrench",
   "exclude": [],
   "tests": {
     "_comment1_": " Logarithms",
