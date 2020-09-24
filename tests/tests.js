@@ -101,22 +101,8 @@ var locale = sre.Tests.environment['LOCALE'];
 if (file) {
   sre.Tests.testList = file.map(function(x) {return sre[x];});
 }
-if (locale) {
-  locale = locale[0];
-  if (locale === 'Base') {
-    sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
-  } else {
-    try {
-      if (sre['Speech' + locale + 'Test']) {
-        sre.Tests.testList =
-            sre.Tests.testList.concat(sre['Speech' + locale + 'Test'].testList);
-      }
-      if (sre['Braille' + locale + 'Test']) {
-        sre.Tests.testList =
-            sre.Tests.testList.concat(sre['Braille' + locale + 'Test'].testList);
-      }
-    } catch (e) { }
-  }
+if (locale && locale[0] === 'Base') {
+  sre.Tests.testList = sre.Tests.testList.concat(sre.BaseTests.testList);
 }
 if (!sre.Tests.testList.length) {
   sre.Tests.testList = sre.Tests.testList.concat(sre.Tests.allTests);
@@ -136,7 +122,7 @@ if (sre.Tests.environment['JSON']) {
   sre.PrefixRuleTest.tests();
   let files = sre.Tests.environment['FILES'] || Object.keys(sre.TestRegister.map);
   for (var key of files) {
-    // let [locale, block, file] = key;
+    // let [locale, block, file] = key.split('/');
     // TODO: Filter for file or locale or category
     var test = sre.TestRegister.map[key];
     if (test) {
