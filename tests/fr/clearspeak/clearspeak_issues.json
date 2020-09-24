@@ -4,7 +4,7 @@
   "locale": "fr",
   "base": "json/clearspeak/clearspeak_issues.json",
   "information": "ClearspeakFrench Issues tests.",
-  "active": "ClearspeakFrench",
+  "active": "ClearspeakIssuesFrench",
   "exclude": [],
   "tests": {
     "_comment1_": " Issues",

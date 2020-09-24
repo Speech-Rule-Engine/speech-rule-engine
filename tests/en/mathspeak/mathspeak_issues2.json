@@ -4,7 +4,7 @@
   "base": "json/mathspeak/mathspeak_issues2.json",
   "information": "Mathspeak Issues 2 English tests.",
   "domain": "mathspeak",
-  "active": "MathspeakIssues2English",
+  "active": "MathspeakIssuesEnglish",
   "exclude": [],
   "tests": {
     "MathspeakRoots_0": {

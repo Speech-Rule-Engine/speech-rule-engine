@@ -1,10 +1,10 @@
 {
   "name": "MathspeakIssues2French",
   "base": "json/mathspeak/mathspeak_issues2.json",
-  "information": "Mathml Cloud French tests.",
+  "information": "Mathspeak Issues 2 French tests.",
   "domain": "mathspeak",
   "locale": "fr",
-  "active": "MathspeakIssues2French",
+  "active": "MathspeakIssuesFrench",
   "exclude": [],
   "tests": {
     "MathspeakRoots_0": {

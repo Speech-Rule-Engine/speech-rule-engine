@@ -4,7 +4,7 @@
   "information": "Mathspeak issues 1 French tests.",
   "domain": "mathspeak",
   "locale": "fr",
-  "active": "MathspeakIssues1French",
+  "active": "MathspeakIssuesFrench",
   "exclude": [],
   "tests": {
     "AbsValueVsNeutral_0_default": {

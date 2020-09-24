@@ -5,7 +5,7 @@
   "information": "Mathspeak issues 1 German tests.",
   "domain": "mathspeak",
   "locale": "de",
-  "active": "MathspeakIssues1German",
+  "active": "MathspeakIssuesGerman",
   "exclude": [],
   "tests": {
     "AbsValueVsNeutral_0_default": {

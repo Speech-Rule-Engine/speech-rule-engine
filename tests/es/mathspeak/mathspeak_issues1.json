@@ -4,7 +4,7 @@
   "information": "Mathspeak issues 1 Spanish tests.",
   "domain": "mathspeak",
   "locale": "es",
-  "active": "MathspeakIssues1Spanish",
+  "active": "MathspeakIssuesSpanish",
   "exclude": [],
   "tests": {
     "AbsValueVsNeutral_0_default": {
