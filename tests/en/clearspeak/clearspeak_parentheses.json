@@ -4,6 +4,7 @@
   "locale": "en",
   "base": "json/clearspeak/clearspeak_parentheses.json",
   "information": "ClearspeakEnglishParentheses rule tests.",
+  "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {
     "_comment1_": " Parentheses",

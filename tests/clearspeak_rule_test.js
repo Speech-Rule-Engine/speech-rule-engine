@@ -61,11 +61,7 @@ sre.ClearspeakRuleTest.prototype.tearDownTest = function() {
 };
 
 
-sre.ClearspeakRuleTest.locales = {
-  'en': 'ClearspeakEnglish',
-  'de': 'ClearspeakGerman',
-  'fr': 'ClearspeakFrench'
-};
+sre.ClearspeakRuleTest.locales = ['en', 'de', 'fr'];
 
 
 sre.ClearspeakRuleTest.tests = function() {
@@ -92,13 +88,12 @@ sre.ClearspeakRuleTest.tests = function() {
     'fonts.json',
     'clearspeak_font_caps.json'
   ];
-  for (var locale of Object.keys(sre.ClearspeakRuleTest.locales)) {
+  for (var locale of sre.ClearspeakRuleTest.locales) {
     for (var file of coreTests) {
       var test = new sre.ClearspeakRuleTest();
       test.jsonFile = locale + '/clearspeak/' + file;
       test.locale = locale;
       test.compare = locale === 'de';  // tmp!
-      test.setActive(sre.ClearspeakRuleTest.locales[locale]);
       sre.TestRegister.add(test);
     }
     for (file of otherTests) {

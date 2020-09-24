@@ -4,6 +4,7 @@
   "locale": "en",
   "base": "json/clearspeak/clearspeak_part3_adornments.json",
   "information": "ClearspeakEnglishPart3Adornments rule tests.",
+  "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {
     "_comment1_": " Part 3: Adornments",

@@ -4,6 +4,7 @@
   "locale": "en",
   "base": "json/clearspeak/clearspeak_part2_symbols.json",
   "information": "ClearspeakEnglishPart2Symbols rule tests.",
+  "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {
     "_comment1_": " Part 2: Symbols",

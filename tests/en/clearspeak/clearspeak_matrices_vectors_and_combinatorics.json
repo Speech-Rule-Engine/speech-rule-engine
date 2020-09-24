@@ -4,6 +4,7 @@
   "locale": "en",
   "base": "json/clearspeak/clearspeak_matrices_vectors_and_combinatorics.json",
   "information": "ClearspeakEnglish Matrices, Vectors, and Combinatorics rule tests.",
+  "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {
     "_comment1_": " ClearSpeak Rules and Preferences Examples: Matrices, Vectors, and",

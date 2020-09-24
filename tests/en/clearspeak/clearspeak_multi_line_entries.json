@@ -4,6 +4,7 @@
   "locale": "en",
   "base": "json/clearspeak/clearspeak_multi_line_entries.json",
   "information": "ClearspeakEnglishMultiLineEntries rule tests.",
+  "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {
     "_comment1_": " Multi-Line Entries Examples",
