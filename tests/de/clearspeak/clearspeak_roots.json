@@ -4,6 +4,7 @@
   "locale": "de",
   "base": "json/clearspeak/clearspeak_roots.json",
   "information": "ClearspeakGermanRoots rule tests.",
+  "active": "ClearspeakGerman",
   "exclude": [],
   "tests": {
     "_comment1_": " Roots",

@@ -4,6 +4,7 @@
   "locale": "de",
   "base": "json/clearspeak/clearspeak_named_sets.json",
   "information": "ClearspeakGermanNamedSets rule tests.",
+  "active": "ClearspeakGerman",
   "exclude": [],
   "tests": {
     "_comment1_": " ClearSpeak Rules and Preferences Examples: Named Sets (Number Systems)",
