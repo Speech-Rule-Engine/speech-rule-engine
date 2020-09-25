@@ -189,14 +189,6 @@ sre.AbstractRuleTest.htmlRow = function(entries) {
 /**
  * @override
  */
-sre.AbstractRuleTest.prototype.cleanup = function(example) {
-  return example;
-};
-
-
-/**
- * @override
- */
 sre.AbstractRuleTest.prototype.join = function(examples) {
   for (var i = 0, l = examples.length; i < l; i++) {
     examples[i] = '<tr>' +

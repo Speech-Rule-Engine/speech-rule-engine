@@ -134,6 +134,7 @@ goog.inherits(sre.EnrichSpeechTest, sre.SemanticTest);
  * @override
  */
 sre.EnrichSpeechTest.prototype.setUpTest = function() {
+  sre.EnrichSpeechTest.base(this, 'setUpTest');
   sre.System.getInstance().setupEngine(
       {domain: 'mathspeak',
         style: 'default',
@@ -151,6 +152,7 @@ sre.EnrichSpeechTest.prototype.tearDownTest = function() {
         style: 'default',
         speech: sre.Engine.Speech.NONE
       });
+  sre.EnrichSpeechTest.base(this, 'tearDownTest');
 };
 
 
@@ -201,7 +203,7 @@ goog.inherits(sre.SemanticTreeTest, sre.SemanticTest);
  * @override
  */
 sre.SemanticTreeTest.prototype.setUpTest = function() {
-  // this.xpathBlacklist = [];
+  sre.SemanticTreeTest.base(this, 'setUpTest');
   this.annotations = sre.SemanticAnnotations.getInstance().annotators;
   this.visitors = sre.SemanticAnnotations.getInstance().visitors;
   sre.SemanticAnnotations.getInstance().annotators = {};
@@ -216,6 +218,7 @@ sre.SemanticTreeTest.prototype.setUpTest = function() {
 sre.SemanticTreeTest.prototype.tearDownTest = function() {
   sre.SemanticAnnotations.getInstance().annotators = this.annotations;
   sre.SemanticAnnotations.getInstance().visitors = this.visitors;
+  sre.SemanticTreeTest.base(this, 'tearDownTest');
 };
 
 
@@ -289,7 +292,7 @@ goog.inherits(sre.EnrichMathmlTest, sre.SemanticTest);
  * @override
  */
 sre.EnrichMathmlTest.prototype.setUpTest = function() {
-  // Make sure the engine is in a default mode.
+  sre.EnrichMathmlTest.base(this, 'setUpTest');
   this.attrBlacklist = [
     'data-semantic-annotation',
     'data-semantic-font',
@@ -297,7 +300,6 @@ sre.EnrichMathmlTest.prototype.setUpTest = function() {
     'data-semantic-fencepointer',
     'data-semantic-structure'
   ];
-  sre.EnrichMathmlTest.base(this, 'setUpTest');
 };
 
 

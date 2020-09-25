@@ -40,7 +40,7 @@ sre.AbstractExamples = function(opt_tests) {
    * @type {boolean}
    * @private
    */
-  this.active_ = true;
+  this.active_ = false;
 
   /**
    * Possible file error.
@@ -48,13 +48,6 @@ sre.AbstractExamples = function(opt_tests) {
    * @private
    */
   this.fileError_ = '';
-
-  /**
-   * Name of the example output file and function.
-   * @type {string}
-   * @private
-   */
-  this.fileName_ = 'Examples';
 
   /**
    * File extension. Default html.
@@ -75,7 +68,7 @@ sre.AbstractExamples = function(opt_tests) {
    * @type {string}
    * @private
    */
-  this.examplesFile_ = this.fileDirectory + '/tests.' + this.fileExtension_;
+  this.examplesFile_ = '';
 
   /**
    * The output values.
@@ -92,6 +85,8 @@ goog.inherits(sre.AbstractExamples, sre.AbstractJsonMultiTest);
  * @override
  */
 sre.AbstractExamples.prototype.setActive = function(file, opt_ext) {
+  this.active_ = true;
+  this.fileName_ = file;
   var ext = opt_ext || this.fileExtension_;
   this.examplesFile_ = this.fileDirectory + '/' + file + '.' + ext;
 };
@@ -116,11 +111,10 @@ sre.AbstractExamples.prototype.startExamples = function() {
 sre.AbstractExamples.prototype.appendExamples = function(type, example) {
   if (this.active_ && !this.fileError_) {
     var examples = this.examples_[type];
-    var cleaned = this.cleanup(example);
     if (examples) {
-      examples.push(cleaned);
+      examples.push(example);
     } else {
-      this.examples_[type] = [cleaned];
+      this.examples_[type] = [example];
     }
   }
 };
@@ -168,23 +162,12 @@ sre.AbstractExamples.prototype.tearDownTest = function() {
 
 
 /**
- * Cleans up an example string.
- * @param {string} example The example string.
- * @return {string} The cleaned version of the string.
- */
-sre.AbstractExamples.prototype.cleanup = function(example) {
-  return example.replace(/(['"])/g, '\\\'');
-};
-
-
-/**
  * Joins the accumulated list of examples into a single output string.
  * @param {Array.<string>} examples The list of examples.
  * @return {string} The joined string.
  */
 sre.AbstractExamples.prototype.join = function(examples) {
-  return 'Lab.' + this.fileName_ +
-      ' = [\'' + examples.join('\',\n\'') + '\']';
+  return JSON.stringify(examples, null, 2);
 };
 
 
