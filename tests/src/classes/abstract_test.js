@@ -19,7 +19,6 @@
 
 goog.provide('sre.AbstractTest');
 goog.provide('sre.AbstractJsonTest');
-goog.provide('sre.AbstractJsonMultiTest');
 
 goog.require('sre.TestExternal');
 goog.require('sre.TestUtil');
@@ -57,6 +56,13 @@ sre.AbstractTest.prototype.tearDownTest = function() { };
 
 
 /**
+ * Base class for tests that load their input and expected values from json
+ * input files. If a base file is provided they load their input fom a different
+ * json file than the expected results.
+ *
+ * E.g., if rules need to be tested for all locales they can share the same
+ * basic test input and only differ on the expected output.
+ * 
  * @constructor
  * @param {string} file The JSON file name.
  * @extends {sre.AbstractTest}
@@ -64,12 +70,34 @@ sre.AbstractTest.prototype.tearDownTest = function() { };
 sre.AbstractJsonTest = function(file) {
   sre.AbstractJsonTest.base(this, 'constructor');
 
+  /**
+   * @type {string}
+   */
   this.jsonFile = file;
 
+  /**
+   * @type {Object}
+   */
   this.jsonTests = null;
 
+  /**
+   * @type {string}
+   */
+  this.baseFile = '';
+
+  /**
+   * @type {Object}
+   */
+  this.baseTests = {};
+
+  /**
+   * @type {Array.<Object>}
+   */
   this.inputTests = [];
 
+  /**
+   * @type {Array.<string>}
+   */
   this.pickFields = ['input', 'expected'];
 
 };
@@ -97,49 +125,7 @@ sre.AbstractJsonTest.prototype.prepare = function() {
   this.jsonTests = this.jsonTests ||
     (this.jsonFile ? sre.TestUtil.loadJson(this.jsonFile) : {});
   this.information = this.jsonTests.information || 'Unnamed tests';
-};
-
-
-sre.AbstractJsonTest.prototype.exists = function() {
-  var file = sre.TestUtil.fileExists(
-    this.jsonFile, sre.TestUtil.path.EXPECTED);
-  if (!file) {
-    return false;
-  }
-  this.jsonFile = file;
-  return true;
-};
-
-
-/**
- * Class for tests to share input values. E.g., if rules need to be tested for
- * all locales they can share the same basic tests and only differ on the
- * expected output.
- *
- * @constructor
- * @param {string} tests The JSON file with expected values for the basic tests
- *     and additional tests.
- * @extends {sre.AbstractJsonTest}
- */
-sre.AbstractJsonMultiTest = function(tests) {
-  sre.AbstractJsonMultiTest.base(this, 'constructor', tests);
-
-  this.baseFile = '';
-
-  this.baseTests = {};
-
-};
-goog.inherits(sre.AbstractJsonMultiTest, sre.AbstractJsonTest);
-
-
-sre.AbstractJsonMultiTest.prototype.prepare = function() {
-  sre.AbstractJsonMultiTest.base(this, 'prepare');
-  this.addBase_();
-  this.baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : {};
-};
-
-
-sre.AbstractJsonMultiTest.prototype.addBase_ = function() {
   let file = this.jsonTests['base'];
   this.baseFile = sre.TestUtil.fileExists(file, sre.TestUtil.path.INPUT);
+  this.baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : {};
 };
