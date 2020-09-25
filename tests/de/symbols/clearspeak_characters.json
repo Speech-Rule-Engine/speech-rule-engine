@@ -6,7 +6,7 @@
   "styles": [
     "default"
   ],
-  "active": "ClearspeakCharacterGerman",
+  "active": "ClearspeakSymbolsGerman",
   "type": "character",
   "base": "json/common/characters.json",
   "information": "Clearspeak Character Test for German",

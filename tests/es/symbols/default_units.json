@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "DefaultUnitSpanish",
+  "active": "DefaultSymbolsSpanish",
   "type": "unit",
   "base": "json/common/units.json",
   "information": "Default unit test for Spanish",

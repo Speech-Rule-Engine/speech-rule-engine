@@ -7,7 +7,7 @@
     "default"
   ],
   "compare": true,
-  "active": "DefaultUnitNemeth",
+  "active": "DefaultSymbolsNemeth",
   "type": "unit",
   "base": "json/common/units.json",
   "information": "Default unit test for Nemeth",

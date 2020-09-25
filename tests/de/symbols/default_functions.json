@@ -6,7 +6,7 @@
   "styles": [
     "default"
   ],
-  "active": "DefaultFunctionGerman",
+  "active": "DefaultSymbolsGerman",
   "type": "function",
   "base": "json/common/functions.json",
   "information": "Default function test for German",

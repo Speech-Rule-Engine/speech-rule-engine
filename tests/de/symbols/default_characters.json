@@ -6,7 +6,7 @@
   "styles": [
     "default"
   ],
-  "active": "DefaultCharacterGerman",
+  "active": "DefaultSymbolsGerman",
   "type": "character",
   "base": "json/common/characters.json",
   "information": "Default Character Test for German",

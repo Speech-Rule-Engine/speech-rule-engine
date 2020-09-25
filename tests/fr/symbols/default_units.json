@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "DefaultUnitFrench",
+  "active": "DefaultSymbolsFrench",
   "type": "unit",
   "base": "json/common/units.json",
   "information": "Default unit test for French",

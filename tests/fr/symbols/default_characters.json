@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "DefaultCharacterFrench",
+  "active": "DefaultSymbolsFrench",
   "type": "character",
   "base": "json/common/characters.json",
   "information": "Default Character Test for French",

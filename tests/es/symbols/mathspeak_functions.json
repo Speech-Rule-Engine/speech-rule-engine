@@ -7,7 +7,7 @@
     "brief",
     "sbrief"
   ],
-  "active": "MathspeakFunctionSpanish",
+  "active": "MathspeakSymbolsSpanish",
   "type": "function",
   "base": "json/common/functions.json",
   "information": "Mathspeak Function Test for Spanish",

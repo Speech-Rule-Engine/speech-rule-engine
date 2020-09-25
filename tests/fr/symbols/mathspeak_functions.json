@@ -7,7 +7,7 @@
     "brief",
     "sbrief"
   ],
-  "active": "MathspeakFunctionFrench",
+  "active": "MathspeakSymbolsFrench",
   "type": "function",
   "base": "json/common/functions.json",
   "information": "Mathspeak function test for French",

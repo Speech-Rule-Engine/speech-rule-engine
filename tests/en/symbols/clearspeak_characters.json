@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "ClearspeakCharacterEnglish",
+  "active": "ClearspeakSymbolsEnglish",
   "type": "character",
   "base": "json/common/characters.json",
   "information": "Clearspeak Character Test for English",

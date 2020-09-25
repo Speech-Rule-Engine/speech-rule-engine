@@ -7,7 +7,7 @@
     "default"
   ],
   "compare": true,
-  "active": "DefaultFunctionNemeth",
+  "active": "DefaultSymbolsNemeth",
   "type": "function",
   "base": "json/common/functions.json",
   "information": "Default function test for Nemeth",

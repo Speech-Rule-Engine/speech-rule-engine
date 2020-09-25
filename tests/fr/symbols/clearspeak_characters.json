@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "ClearspeakCharacterFrench",
+  "active": "ClearspeakSymbolsFrench",
   "type": "character",
   "base": "json/common/characters.json",
   "information": "Clearspeak Character Test for French",

@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "ClearspeakFunctionFrench",
+  "active": "ClearspeakSymbolsFrench",
   "type": "function",
   "base": "json/common/functions.json",
   "information": "Clearspeak function test for French",

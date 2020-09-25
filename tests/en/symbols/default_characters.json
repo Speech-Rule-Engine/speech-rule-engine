@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "DefaultCharacterEnglish",
+  "active": "DefaultSymbolsEnglish",
   "type": "character",
   "base": "json/common/characters.json",
   "information": "Default Character Test for English",

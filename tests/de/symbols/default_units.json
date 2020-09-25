@@ -6,7 +6,7 @@
   "styles": [
     "default"
   ],
-  "active": "DefaultUnitGerman",
+  "active": "DefaultSymbolsGerman",
   "type": "unit",
   "base": "json/common/units.json",
   "information": "Default unit test for German",

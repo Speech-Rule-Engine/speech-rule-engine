@@ -6,7 +6,7 @@
   "styles": [
     "default"
   ],
-  "active": "ClearspeakFunctionGerman",
+  "active": "ClearspeakSymbolsGerman",
   "type": "function",
   "base": "json/common/functions.json",
   "information": "Clearspeak function test for German",

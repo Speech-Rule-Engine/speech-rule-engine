@@ -7,7 +7,7 @@
     "brief",
     "sbrief"
   ],
-  "active": "MathspeakCharacterFrench",
+  "active": "MathspeakSymbolsFrench",
   "type": "character",
   "base": "json/common/characters.json",
   "information": "Mathspeak Character Test for French",

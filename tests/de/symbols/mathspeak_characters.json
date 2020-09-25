@@ -8,7 +8,7 @@
     "brief",
     "sbrief"
   ],
-  "active": "MathspeakCharacterGerman",
+  "active": "MathspeakSymbolsGerman",
   "type": "character",
   "base": "json/common/characters.json",
   "information": "Mathspeak Character Test for German",

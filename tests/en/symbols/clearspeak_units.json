@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "ClearspeakUnitEnglish",
+  "active": "ClearspeakSymbolsEnglish",
   "type": "unit",
   "base": "json/common/units.json",
   "information": "Clearspeak unit test for English",

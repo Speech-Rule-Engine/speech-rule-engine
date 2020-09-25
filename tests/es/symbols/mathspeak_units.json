@@ -7,7 +7,7 @@
     "brief",
     "sbrief"
   ],
-  "active": "MathspeakUnitSpanish",
+  "active": "MathspeakSymbolsSpanish",
   "type": "unit",
   "base": "json/common/units.json",
   "information": "Mathspeak Unit Test for Spanish",

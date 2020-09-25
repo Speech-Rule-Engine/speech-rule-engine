@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "ClearspeakUnitFrench",
+  "active": "ClearspeakSymbolsFrench",
   "type": "unit",
   "base": "json/common/units.json",
   "information": "Clearspeak unit test for French",

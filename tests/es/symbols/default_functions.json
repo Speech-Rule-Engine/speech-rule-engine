@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "DefaultFunctionSpanish",
+  "active": "DefaultSymbolsSpanish",
   "type": "function",
   "base": "json/common/functions.json",
   "information": "Default function test for Spanish",

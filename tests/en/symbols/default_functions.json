@@ -5,7 +5,7 @@
   "styles": [
     "default"
   ],
-  "active": "DefaultFunctionEnglish",
+  "active": "DefaultSymbolsEnglish",
   "type": "function",
   "base": "json/common/functions.json",
   "information": "Default function test for English",
