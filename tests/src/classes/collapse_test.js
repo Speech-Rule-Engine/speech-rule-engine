@@ -20,7 +20,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-goog.provide('sre.CollapseRuleTest');
+goog.provide('sre.CollapseTest');
 
 goog.require('sre.SpeechTest');
 
@@ -30,8 +30,8 @@ goog.require('sre.SpeechTest');
  * @constructor
  * @extends {sre.SpeechTest}
  */
-sre.CollapseRuleTest = function() {
-  sre.CollapseRuleTest.base(this, 'constructor');
+sre.CollapseTest = function() {
+  sre.CollapseTest.base(this, 'constructor');
 
   /**
    * @override
@@ -41,25 +41,25 @@ sre.CollapseRuleTest = function() {
   this.domain = 'mathspeak';
 
 };
-goog.inherits(sre.CollapseRuleTest, sre.SpeechTest);
+goog.inherits(sre.CollapseTest, sre.SpeechTest);
 
 
 /**
  * @override
  */
-sre.CollapseRuleTest.prototype.executeRuleTest = function(
+sre.CollapseTest.prototype.executeTest = function(
     mml, answer, opt_style) {
   mml = '<maction><mtext>action</mtext><mrow data-semantic-id="A">' +
       mml + '</mrow></maction>';
-  sre.CollapseRuleTest.base(this, 'executeRuleTest', mml, answer, opt_style);
+  sre.CollapseTest.base(this, 'executeTest', mml, answer, opt_style);
 };
 
 
 /**
  * @override
  */
-sre.CollapseRuleTest.prototype.header = function() {
-  var header = sre.CollapseRuleTest.base(this, 'header');
+sre.CollapseTest.prototype.header = function() {
+  var header = sre.CollapseTest.base(this, 'header');
   var script = 'var toggleAll = function() {' +
       'var actions = document.getElementsByClassName(\'maction\');' +
       ' for (var i = 0, action; action = actions[i]; i++) {' +
@@ -72,7 +72,7 @@ sre.CollapseRuleTest.prototype.header = function() {
 /**
  * @override
  */
-sre.CollapseRuleTest.prototype.getSpeech = function(mathMl) {
+sre.CollapseTest.prototype.getSpeech = function(mathMl) {
   var mml = sre.DomUtil.parseInput(mathMl);
   var stree = sre.Semantic.getTree(mml);
   var xml = stree.xml();

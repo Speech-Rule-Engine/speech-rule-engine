@@ -55,7 +55,7 @@ goog.inherits(sre.SymbolTest, sre.SpeechTest);
 sre.SymbolTest.prototype.executeCharTest = function(char, answers) {
   for (var i = 0; i < answers.length; i++) {
     try {
-      this.executeRuleTest(char, answers[i], this.styles[i]);
+      this.executeTest(char, answers[i], this.styles[i]);
     } catch (err) {
       console.info('\nFailed Character: ' + char + ' (' +
                    this.domain + '.' + this.styles[i] + ')');
@@ -85,7 +85,7 @@ sre.SymbolTest.prototype.executeUnitTest = function(char, answers) {
 /**
  * @override
  */
-sre.SymbolTest.prototype.executeRuleTest = function(text, answer, opt_style) {
+sre.SymbolTest.prototype.executeTest = function(text, answer, opt_style) {
   var style = opt_style || this.style;
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(

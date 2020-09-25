@@ -19,7 +19,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-goog.provide('sre.PrefixRuleTest');
+goog.provide('sre.PrefixTest');
 
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorUtil');
@@ -31,8 +31,8 @@ goog.require('sre.SpeechTest');
  * @constructor
  * @extends {sre.SpeechTest}
  */
-sre.PrefixRuleTest = function() {
-  sre.PrefixRuleTest.base(this, 'constructor');
+sre.PrefixTest = function() {
+  sre.PrefixTest.base(this, 'constructor');
 
   /**
    * @override
@@ -56,23 +56,23 @@ sre.PrefixRuleTest = function() {
 
   this.pickFields[2] = 'id';
 };
-goog.inherits(sre.PrefixRuleTest, sre.SpeechTest);
+goog.inherits(sre.PrefixTest, sre.SpeechTest);
 
 
 /**
  * @override
  */
-sre.PrefixRuleTest.prototype.method = function(var_args) {
+sre.PrefixTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.id = args[2];
-  sre.PrefixRuleTest.base(this, 'method', args[0], args[1]);
+  sre.PrefixTest.base(this, 'method', args[0], args[1]);
 };
 
 
 /**
  * @override
  */
-sre.PrefixRuleTest.prototype.getSpeech = function(mml) {
+sre.PrefixTest.prototype.getSpeech = function(mml) {
   var stree = sre.Semantic.getTreeFromString(mml);
   var node = stree.root.querySelectorAll(
       goog.bind(function(x) {return x.id === this.id;}, this))[0];
@@ -88,9 +88,9 @@ sre.PrefixRuleTest.prototype.getSpeech = function(mml) {
 /**
  * @override
  */
-sre.PrefixRuleTest.prototype.appendRuleExample = function(
+sre.PrefixTest.prototype.appendRuleExample = function(
     input, output, style, rest) {
   var sub = this.subExpr ? '<math>' + this.subExpr.toString() + '</math>' : '';
-  sre.PrefixRuleTest.base(
+  sre.PrefixTest.base(
       this, 'appendRuleExample', input, output, style, [sub]);
 };

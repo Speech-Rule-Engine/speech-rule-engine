@@ -20,7 +20,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-goog.provide('sre.SummaryRuleTest');
+goog.provide('sre.SummaryTest');
 
 goog.require('sre.SpeechTest');
 
@@ -30,8 +30,8 @@ goog.require('sre.SpeechTest');
  * @constructor
  * @extends {sre.SpeechTest}
  */
-sre.SummaryRuleTest = function() {
-  sre.SummaryRuleTest.base(this, 'constructor');
+sre.SummaryTest = function() {
+  sre.SummaryTest.base(this, 'constructor');
 
   /**
    * @override
@@ -57,15 +57,15 @@ sre.SummaryRuleTest = function() {
   this.pickFields.push('steps');
 
 };
-goog.inherits(sre.SummaryRuleTest, sre.SpeechTest);
+goog.inherits(sre.SummaryTest, sre.SpeechTest);
 
 
 /**
  * @override
  */
-sre.SummaryRuleTest.prototype.getSpeech = function(mathMl) {
+sre.SummaryTest.prototype.getSpeech = function(mathMl) {
   if (!this.steps) {
-    return sre.SummaryRuleTest.base(this, 'getSpeech', mathMl);
+    return sre.SummaryTest.base(this, 'getSpeech', mathMl);
   }
   sre.ProcessorFactory.process('walker', mathMl);
   this.steps.forEach(function(step) {
@@ -78,9 +78,9 @@ sre.SummaryRuleTest.prototype.getSpeech = function(mathMl) {
 /**
  * @override
  */
-sre.SummaryRuleTest.prototype.method = function(var_args) {
+sre.SummaryTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.steps = args[3];
-  sre.SummaryRuleTest.base(this, 'method', args[0], args[1], args[2]);
+  sre.SummaryTest.base(this, 'method', args[0], args[1], args[2]);
   this.steps = null;
 };

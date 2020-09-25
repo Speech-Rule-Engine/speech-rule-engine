@@ -19,7 +19,7 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.MathspeakRuleTest');
+goog.provide('sre.MathspeakTest');
 goog.provide('sre.SpeechTest');
 
 goog.require('sre.AbstractExamples');
@@ -97,7 +97,7 @@ sre.SpeechTest.prototype.setActive = function(file, opt_ext) {
  * @param {string} answer Expected speech translation of MathML expression.
  * @param {string=} opt_style Mathspeak style for translation.
  */
-sre.SpeechTest.prototype.executeRuleTest = function(mml, answer,
+sre.SpeechTest.prototype.executeTest = function(mml, answer,
     opt_style) {
   var style = opt_style || this.style;
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
@@ -256,5 +256,5 @@ sre.SpeechTest.prototype.prepare = function() {
  */
 sre.SpeechTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
-  this.executeRuleTest(args[0], args[1], args[2]);
+  this.executeTest(args[0], args[1], args[2]);
 };

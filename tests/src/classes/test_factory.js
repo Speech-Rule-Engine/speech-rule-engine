@@ -22,15 +22,15 @@
 
 goog.provide('sre.TestFactory');
 
-goog.require('sre.ClearspeakRuleTest');
-goog.require('sre.CollapseRuleTest');
+goog.require('sre.ClearspeakTest');
+goog.require('sre.CollapseTest');
 goog.require('sre.EnrichMathmlTest');
 goog.require('sre.EnrichSpeechTest');
-goog.require('sre.PrefixRuleTest');
+goog.require('sre.PrefixTest');
 goog.require('sre.RebuildStreeTest');
 goog.require('sre.SemanticTreeTest');
 goog.require('sre.SpeechTest');
-goog.require('sre.SummaryRuleTest');
+goog.require('sre.SummaryTest');
 goog.require('sre.SymbolTest');
 goog.require('sre.TestUtil');
 
@@ -39,16 +39,16 @@ goog.require('sre.TestUtil');
  * @type {Object.<function(new:sre.AbstractJsonTest)>}
  */
 sre.TestFactory.map = {
-  'clearspeak': sre.ClearspeakRuleTest,
-  'collapse': sre.CollapseRuleTest,
+  'clearspeak': sre.ClearspeakTest,
+  'collapse': sre.CollapseTest,
   'enrichMathml': sre.EnrichMathmlTest,
   'enrichSpeech': sre.EnrichSpeechTest,
-  'prefix': sre.PrefixRuleTest,
+  'prefix': sre.PrefixTest,
   'rebuild': sre.RebuildStreeTest,
   'semantic': sre.SemanticTest,
   'speech': sre.SpeechTest,
   'stree': sre.SemanticTreeTest,
-  'summary': sre.SummaryRuleTest,
+  'summary': sre.SummaryTest,
   'symbol': sre.SymbolTest
 };
 
