@@ -100,7 +100,8 @@ sre.AbstractJsonTest.prototype.prepare = function() {
 
 
 sre.AbstractJsonTest.prototype.exists = function() {
-  var file = sre.TestUtil.fileExists(this.jsonFile);
+  var file = sre.TestUtil.fileExists(
+    this.jsonFile, sre.TestUtil.TEST_EXPECTED_PATH);
   if (!file) {
     return false;
   }
@@ -139,5 +140,5 @@ sre.AbstractJsonMultiTest.prototype.prepare = function() {
 
 sre.AbstractJsonMultiTest.prototype.addBase_ = function() {
   let file = this.jsonTests['base'];
-  this.baseFile = sre.TestUtil.fileExists(file);
+  this.baseFile = sre.TestUtil.fileExists(file, sre.TestUtil.TEST_INPUT_PATH);
 };

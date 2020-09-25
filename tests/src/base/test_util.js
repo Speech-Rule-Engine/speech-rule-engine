@@ -7,6 +7,8 @@ goog.require('sre.BaseUtil');
 sre.TestUtil.TEST_PATH =
     sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) + '../../tests/';
 
+sre.TestUtil.TEST_INPUT_PATH = sre.TestUtil.TEST_PATH + 'input/';
+sre.TestUtil.TEST_EXPECTED_PATH = sre.TestUtil.TEST_PATH + 'expected/';
 
 /**
  * The base error class for signaling Test errors.
@@ -32,9 +34,12 @@ sre.TestUtil.loadJson = function(file) {
 };
 
 
-sre.TestUtil.fileExists = function(file) {
+sre.TestUtil.fileExists = function(file, opt_path) {
   if (sre.SystemExternal.fs.existsSync(file)) {
     return file;
+  }
+  if (opt_path && sre.SystemExternal.fs.existsSync(opt_path + file)) {
+    return opt_path + file;
   }
   let newFile = sre.TestUtil.TEST_PATH + file;
   if (sre.SystemExternal.fs.existsSync(newFile)) {

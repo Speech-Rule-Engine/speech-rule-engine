@@ -292,7 +292,7 @@ sre.MathspeakRuleTest.tests = function() {
     'nemeth_base.json'
   ];
   nemeth.forEach(function(x) {
-    sre.TestRegister.add(new sre.AbstractRuleTest('nemeth/' + x));
+    sre.TestRegister.add(new sre.AbstractRuleTest('nemeth/rules/' + x));
   });
   sre.TestRegister.add(new sre.AbstractRuleTest('base/semantic_rule_test.json'));
   sre.TestRegister.add(new sre.AbstractRuleTest('base/math_alphabets_test.json'));
