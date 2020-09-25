@@ -86,7 +86,7 @@ goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
  * @override
  */
 sre.AbstractRuleTest.prototype.setActive = function(file, opt_ext) {
-  this.fileDirectory = this.fileDirectory + '/' + this.locale;
+  this.fileDirectory = this.fileDirectory + this.locale + '/';
   sre.AbstractRuleTest.base(this, 'setActive', file, opt_ext);
 };
 

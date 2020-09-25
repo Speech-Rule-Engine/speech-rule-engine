@@ -1,28 +1,30 @@
 goog.provide('sre.TestUtil');
 
-goog.require('sre.Engine.Error');
-goog.require('sre.BaseUtil');
+
+/**
+ * @enum {string}
+ */
+sre.TestUtil.path = {
+  INPUT: sre.TestExternal.path + 'input/',
+  OUTPUT: sre.TestExternal.path + 'output/',
+  EXPECTED: sre.TestExternal.path + 'expected/',
+};
 
 
-sre.TestUtil.TEST_PATH =
-    sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) + '../../tests/';
-
-sre.TestUtil.TEST_INPUT_PATH = sre.TestUtil.TEST_PATH + 'input/';
-sre.TestUtil.TEST_EXPECTED_PATH = sre.TestUtil.TEST_PATH + 'expected/';
 
 /**
  * The base error class for signaling Test errors.
  * @param {string} msg The error message.
  * @param {*} value Additional values.
  * @constructor
- * @extends {sre.Engine.Error}
+ * @extends {Error}
  */
 sre.TestUtil.Error = function(msg, value) {
   sre.TestUtil.Error.base(this, 'constructor', msg);
   this.name = 'SRE Test Error';
   this.value = value;
 };
-goog.inherits(sre.TestUtil.Error, sre.Engine.Error);
+goog.inherits(sre.TestUtil.Error, Error);
 
 
 sre.TestUtil.loadJson = function(file) {
@@ -41,7 +43,7 @@ sre.TestUtil.fileExists = function(file, opt_path) {
   if (opt_path && sre.SystemExternal.fs.existsSync(opt_path + file)) {
     return opt_path + file;
   }
-  let newFile = sre.TestUtil.TEST_PATH + file;
+  let newFile = sre.TestExternal.path + file;
   if (sre.SystemExternal.fs.existsSync(newFile)) {
     return newFile;
   };

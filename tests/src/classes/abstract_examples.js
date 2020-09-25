@@ -61,7 +61,7 @@ sre.AbstractExamples = function(opt_tests) {
    * @type {string}
    * @protected
    */
-  this.fileDirectory = 'res/l10n';
+  this.fileDirectory = sre.TestUtil.path.OUTPUT;
 
   /**
    * Sets example output file for tests.
@@ -88,7 +88,7 @@ sre.AbstractExamples.prototype.setActive = function(file, opt_ext) {
   this.active_ = true;
   this.fileName_ = file;
   var ext = opt_ext || this.fileExtension_;
-  this.examplesFile_ = this.fileDirectory + '/' + file + '.' + ext;
+  this.examplesFile_ = this.fileDirectory + file + '.' + ext;
 };
 
 

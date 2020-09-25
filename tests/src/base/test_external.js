@@ -53,3 +53,13 @@ sre.TestExternal.assert = sre.TestExternal.require('assert');
  * @type {Object}
  */
 sre.TestExternal.process = process;
+
+
+/**
+ * Path to JSON files.
+ * @type {string}
+ */
+sre.TestExternal.path = function() {
+  return ((sre.TestExternal.process && typeof global !== 'undefined') ?
+          sre.TestExternal.process.cwd() : '.') + '/tests/';
+}();
