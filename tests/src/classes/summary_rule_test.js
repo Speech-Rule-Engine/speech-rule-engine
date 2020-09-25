@@ -22,13 +22,13 @@
 
 goog.provide('sre.SummaryRuleTest');
 
-goog.require('sre.AbstractRuleTest');
+goog.require('sre.SpeechTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractRuleTest}
+ * @extends {sre.SpeechTest}
  */
 sre.SummaryRuleTest = function() {
   sre.SummaryRuleTest.base(this, 'constructor');
@@ -57,7 +57,7 @@ sre.SummaryRuleTest = function() {
   this.pickFields.push('steps');
   
 };
-goog.inherits(sre.SummaryRuleTest, sre.AbstractRuleTest);
+goog.inherits(sre.SummaryRuleTest, sre.SpeechTest);
 
 
 /**

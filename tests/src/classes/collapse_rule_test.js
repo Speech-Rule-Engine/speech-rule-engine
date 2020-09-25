@@ -22,13 +22,13 @@
 
 goog.provide('sre.CollapseRuleTest');
 
-goog.require('sre.AbstractRuleTest');
+goog.require('sre.SpeechTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractRuleTest}
+ * @extends {sre.SpeechTest}
  */
 sre.CollapseRuleTest = function() {
   sre.CollapseRuleTest.base(this, 'constructor');
@@ -41,7 +41,7 @@ sre.CollapseRuleTest = function() {
   this.domain = 'mathspeak';
 
 };
-goog.inherits(sre.CollapseRuleTest, sre.AbstractRuleTest);
+goog.inherits(sre.CollapseRuleTest, sre.SpeechTest);
 
 
 /**

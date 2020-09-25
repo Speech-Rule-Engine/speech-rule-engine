@@ -20,13 +20,13 @@
 
 goog.provide('sre.ClearspeakRuleTest');
 
-goog.require('sre.AbstractRuleTest');
+goog.require('sre.SpeechTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractRuleTest}
+ * @extends {sre.SpeechTest}
  * @param {string=} opt_tests The JSON file if necessary for testing.
  */
 sre.ClearspeakRuleTest = function(opt_tests) {
@@ -38,7 +38,7 @@ sre.ClearspeakRuleTest = function(opt_tests) {
   this.domain = 'clearspeak';
 
 };
-goog.inherits(sre.ClearspeakRuleTest, sre.AbstractRuleTest);
+goog.inherits(sre.ClearspeakRuleTest, sre.SpeechTest);
 
 
 /**

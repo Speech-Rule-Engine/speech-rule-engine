@@ -19,13 +19,13 @@
 
 goog.provide('sre.SymbolTest');
 
-goog.require('sre.AbstractRuleTest');
+goog.require('sre.SpeechTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractRuleTest}
+ * @extends {sre.SpeechTest}
  */
 sre.SymbolTest = function() {
   sre.SymbolTest.base(this, 'constructor');
@@ -43,7 +43,7 @@ sre.SymbolTest = function() {
   this.pickFields = ['name', 'expected'];
 
 };
-goog.inherits(sre.SymbolTest, sre.AbstractRuleTest);
+goog.inherits(sre.SymbolTest, sre.SpeechTest);
 
 
 /**

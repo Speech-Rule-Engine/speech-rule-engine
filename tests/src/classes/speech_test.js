@@ -19,7 +19,7 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.AbstractRuleTest');
+goog.provide('sre.SpeechTest');
 goog.provide('sre.MathspeakRuleTest');
 
 goog.require('sre.AbstractExamples');
@@ -33,8 +33,8 @@ goog.require('sre.TestUtil');
  * @extends {sre.AbstractExamples}
  * @param {string=} opt_tests The JSON file if necessary for testing.
  */
-sre.AbstractRuleTest = function(opt_tests) {
-  sre.AbstractRuleTest.base(this, 'constructor', opt_tests ? opt_tests: '');
+sre.SpeechTest = function(opt_tests) {
+  sre.SpeechTest.base(this, 'constructor', opt_tests ? opt_tests: '');
 
   /**
    * @type {string}
@@ -79,15 +79,15 @@ sre.AbstractRuleTest = function(opt_tests) {
   this.pickFields.push('preference');
 
 };
-goog.inherits(sre.AbstractRuleTest, sre.AbstractExamples);
+goog.inherits(sre.SpeechTest, sre.AbstractExamples);
 
 
 /**
  * @override
  */
-sre.AbstractRuleTest.prototype.setActive = function(file, opt_ext) {
+sre.SpeechTest.prototype.setActive = function(file, opt_ext) {
   this.fileDirectory = this.fileDirectory + this.locale + '/';
-  sre.AbstractRuleTest.base(this, 'setActive', file, opt_ext);
+  sre.SpeechTest.base(this, 'setActive', file, opt_ext);
 };
 
 
@@ -98,7 +98,7 @@ sre.AbstractRuleTest.prototype.setActive = function(file, opt_ext) {
  * @param {string} answer Expected speech translation of MathML expression.
  * @param {string=} opt_style Mathspeak style for translation.
  */
-sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
+sre.SpeechTest.prototype.executeRuleTest = function(mml, answer,
                                                           opt_style) {
   var style = opt_style || this.style;
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
@@ -119,7 +119,7 @@ sre.AbstractRuleTest.prototype.executeRuleTest = function(mml, answer,
  * @param {string} mathMl The element to transcribe.
  * @return {string} The resulting speech.
  */
-sre.AbstractRuleTest.prototype.getSpeech = function(mathMl) {
+sre.SpeechTest.prototype.getSpeech = function(mathMl) {
   return sre.System.getInstance().toSpeech(mathMl);
 };
 
@@ -131,12 +131,12 @@ sre.AbstractRuleTest.prototype.getSpeech = function(mathMl) {
  * @param {string} style The speech style.
  * @param {Array.<string>=} opt_rest The rest that is to be appended.
  */
-sre.AbstractRuleTest.prototype.appendRuleExample = function(
+sre.SpeechTest.prototype.appendRuleExample = function(
     input, output, style, opt_rest) {
   var rest = opt_rest || [];
   var key = '<h2>' + this.information + ' Locale: ' + this.locale +
       ', Style: ' +
-      sre.AbstractRuleTest.htmlCell_(sre.AbstractRuleTest.styleMap_(style)) +
+      sre.SpeechTest.htmlCell_(sre.SpeechTest.styleMap_(style)) +
       '.</h2>';
   var outList = [input];
   if (this.compare) {
@@ -147,7 +147,7 @@ sre.AbstractRuleTest.prototype.appendRuleExample = function(
   }
   outList.push(output);
   this.appendExamples(
-      key, sre.AbstractRuleTest.htmlRow(outList.concat(rest)));
+      key, sre.SpeechTest.htmlRow(outList.concat(rest)));
 };
 
 
@@ -157,7 +157,7 @@ sre.AbstractRuleTest.prototype.appendRuleExample = function(
  * @return {string} The prettier name.
  * @private
  */
-sre.AbstractRuleTest.styleMap_ = function(style) {
+sre.SpeechTest.styleMap_ = function(style) {
   var map = {'default': 'verbose',
     'sbrief': 'superbrief'};
   var newStyle = map[style] || style;
@@ -171,7 +171,7 @@ sre.AbstractRuleTest.styleMap_ = function(style) {
  * @return {string} The HTML cell.
  * @private
  */
-sre.AbstractRuleTest.htmlCell_ = function(entry) {
+sre.SpeechTest.htmlCell_ = function(entry) {
   return '<td>' + entry + '</td>';
 };
 
@@ -181,18 +181,18 @@ sre.AbstractRuleTest.htmlCell_ = function(entry) {
  * @param {Array.<number|string>} entries A list of entries.
  * @return {string} The HTML cell.
  */
-sre.AbstractRuleTest.htmlRow = function(entries) {
-  return entries.map(sre.AbstractRuleTest.htmlCell_).join('');
+sre.SpeechTest.htmlRow = function(entries) {
+  return entries.map(sre.SpeechTest.htmlCell_).join('');
 };
 
 
 /**
  * @override
  */
-sre.AbstractRuleTest.prototype.join = function(examples) {
+sre.SpeechTest.prototype.join = function(examples) {
   for (var i = 0, l = examples.length; i < l; i++) {
     examples[i] = '<tr>' +
-        sre.AbstractRuleTest.htmlCell_(i) + examples[i] +
+        sre.SpeechTest.htmlCell_(i) + examples[i] +
         '</tr>';
   }
   return '\n<table>\n' + examples.join('\n') + '\n</table>\n';
@@ -202,7 +202,7 @@ sre.AbstractRuleTest.prototype.join = function(examples) {
 /**
  * @override
  */
-sre.AbstractRuleTest.prototype.header = function() {
+sre.SpeechTest.prototype.header = function() {
   var mathjax = '<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>\n' +
       '<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>';
   var style = '\n<style>\n table, th, td {\n' +
@@ -219,7 +219,7 @@ sre.AbstractRuleTest.prototype.header = function() {
 /**
  * @override
  */
-sre.AbstractRuleTest.prototype.footer = function() {
+sre.SpeechTest.prototype.footer = function() {
   return '\n</body>\n</html>';
 };
 
@@ -227,8 +227,8 @@ sre.AbstractRuleTest.prototype.footer = function() {
 /**
  * @override
  */
-sre.AbstractRuleTest.prototype.prepare = function() {
-  sre.AbstractRuleTest.base(this, 'prepare');
+sre.SpeechTest.prototype.prepare = function() {
+  sre.SpeechTest.base(this, 'prepare');
   this.baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : [];
   this.modality = this.jsonTests.modality || this.modality;
   this.locale = this.jsonTests.locale || this.locale;
@@ -253,7 +253,7 @@ sre.AbstractRuleTest.prototype.prepare = function() {
 /**
  * @override
  */
-sre.AbstractRuleTest.prototype.method = function(var_args) {
+sre.SpeechTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.executeRuleTest(args[0], args[1], args[2]);
 };

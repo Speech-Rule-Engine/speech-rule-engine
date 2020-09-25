@@ -21,7 +21,7 @@
 
 goog.provide('sre.PrefixRuleTest');
 
-goog.require('sre.AbstractRuleTest');
+goog.require('sre.SpeechTest');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorUtil');
 
@@ -29,7 +29,7 @@ goog.require('sre.SpeechGeneratorUtil');
 
 /**
  * @constructor
- * @extends {sre.AbstractRuleTest}
+ * @extends {sre.SpeechTest}
  * @param {string=} opt_tests The JSON file if necessary for testing.
  */
 sre.PrefixRuleTest = function(opt_tests) {
@@ -57,7 +57,7 @@ sre.PrefixRuleTest = function(opt_tests) {
 
   this.pickFields[2] = 'id';
 };
-goog.inherits(sre.PrefixRuleTest, sre.AbstractRuleTest);
+goog.inherits(sre.PrefixRuleTest, sre.SpeechTest);
 
 
 /**

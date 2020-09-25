@@ -23,7 +23,7 @@
 goog.provide('sre.TestFactory');
 
 goog.require('sre.SymbolTest');
-goog.require('sre.AbstractRuleTest');
+goog.require('sre.SpeechTest');
 goog.require('sre.ClearspeakRuleTest');
 goog.require('sre.CollapseRuleTest');
 goog.require('sre.EnrichMathmlTest');
@@ -39,7 +39,7 @@ sre.TestFactory.map = {
   'symbol': sre.SymbolTest,
   'clearspeak': sre.ClearspeakRuleTest,
   'collapse': sre.CollapseRuleTest,
-  'speech': sre.AbstractRuleTest,
+  'speech': sre.SpeechTest,
   'prefix': sre.PrefixRuleTest,
   'rebuild': sre.RebuildStreeTest,
   'enrichSpeech': sre.EnrichSpeechTest,
@@ -56,13 +56,10 @@ sre.TestFactory.get = function(file) {
   let factory = json.factory;
   let constructor = sre.TestFactory.map[factory];
   if (!constructor) {
-    // throw new sre.TestUtil.Error('Bad factory name', file);
-    console.log('No factory: ' + file);
-    return null;
+    throw new sre.TestUtil.Error('Bad factory name', file);
   }
   let obj = new constructor();
   obj.jsonFile = file;
   obj.jsonTests = json;
-  // TODO: Currently it will load twice!
   return obj;
 };
