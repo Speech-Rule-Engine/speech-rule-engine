@@ -9,7 +9,7 @@
     "sre": "./bin/sre"
   },
   "scripts": {
-    "test": "make test",
+    "test": "make test VERBOSE=1",
     "prepublishOnly": "make clean; make publish"
   },
   "maintainers": [

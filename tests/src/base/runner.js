@@ -69,7 +69,7 @@ sre.TestRunner = function() {
    */
   this.warn = sre.TestRunner.Warning.WARN;
 
-  this.verbose = 1;
+  this.verbose = 2;
 
   this.outputQueue = [];
 };
@@ -132,18 +132,18 @@ sre.TestRunner.prototype.runTests = function() {
 sre.TestRunner.prototype.executeJsonTests = function(testcase) {
   try {
     testcase.prepare();
-    this.outputLine('Running ' + testcase.information);
+    this.outputLine(1, 'Running ' + testcase.information);
   } catch (e) {
     if (e.message.match(/Bad\ filename/)) {
       this.status_ = sre.TestRunner.Results.FAIL;
       this.failedTests_.push(e.message + ' ' + e.value);
       return;
     }
-    this.outputLine('Running ' + testcase.information);
+    this.outputLine(1, 'Running ' + testcase.information);
     if (this.warn) {
       for (var warn of e.value) {
         this.outputStart('No results specified for test: ' + warn);
-        this.outputEnd('[WARN]', sre.TestRunner.color_.ORANGE);
+        this.outputEnd(2, '[WARN]', sre.TestRunner.color_.ORANGE);
         this.warningTests_.push(warn);
       }
       if (this.warn == sre.TestRunner.Warning.ERROR) {
@@ -168,7 +168,7 @@ sre.TestRunner.prototype.executeJsonTest = function(name, func, args) {
  * @param {sre.AbstractTest} testcase The current test case to run.
  */
 sre.TestRunner.prototype.executeTests = function(testcase) {
-  this.outputLine('Running ' + testcase.information);
+  this.outputLine(1, 'Running ' + testcase.information);
   testcase.setUpTest();
   for (var propertyName in testcase) {
     if (propertyName.search('test') == 0) {
@@ -191,15 +191,14 @@ sre.TestRunner.prototype.executeTest_ = function(name, func) {
   try {
     func.apply();
   } catch (e) {
-    this.outputLine('');
-    this.outputEnd('[FAIL]', sre.TestRunner.color_.RED, true);
-    this.outputLine('Expected: ' + (e.expected || ''));
-    this.outputLine('Actual: ' + (e.actual || ''));
+    this.outputEnd(1, '[FAIL]', sre.TestRunner.color_.RED);
+    this.outputLine(1, 'Expected: ' + (e.expected || ''));
+    this.outputLine(1, 'Actual: ' + (e.actual || ''));
     this.status_ = sre.TestRunner.Results.FAIL;
     this.failedTests_.push(name);
     return;
   }
-  this.outputEnd('[PASS]', sre.TestRunner.color_.GREEN);
+  this.outputEnd(2, '[PASS]', sre.TestRunner.color_.GREEN);
   this.succeededTests_.push(name);
   return;
 };
@@ -209,20 +208,19 @@ sre.TestRunner.prototype.executeTest_ = function(name, func) {
  * Prints a summary of the test runs.
  */
 sre.TestRunner.prototype.summary = function() {
-  this.verbose = 2;
   if (this.warn && this.warningTests_.length) {
-    this.outputLine('WARNING!', sre.TestRunner.color_.ORANGE);
-    this.outputLine('The following tests produced a warning:');
-    this.outputLine(this.warningTests_.join(', '));
+    this.outputLine(0, 'WARNING!', sre.TestRunner.color_.ORANGE);
+    this.outputLine(0, 'The following tests produced a warning:');
+    this.outputLine(0, this.warningTests_.join(', '));
   }
   if (!this.success()) {
-    this.outputLine('FAILURE!', sre.TestRunner.color_.RED);
-    this.outputLine('The following tests failed:');
-    this.outputLine(this.failedTests_.join(', '));
+    this.outputLine(0, 'FAILURE!', sre.TestRunner.color_.RED);
+    this.outputLine(0, 'The following tests failed:');
+    this.outputLine(0, this.failedTests_.join(', '));
   } else {
-    this.outputLine('SUCCESS!', sre.TestRunner.color_.GREEN);
+    this.outputLine(0, 'SUCCESS!', sre.TestRunner.color_.GREEN);
   }
-  this.outputLine(this.succeededTests_.length + ' tests successful.');
+  this.outputLine(0, this.succeededTests_.length + ' tests successful.');
 };
 
 
@@ -240,12 +238,15 @@ sre.TestRunner.color_ = {
 
 
 /**
- * Prints information to the console.
+ * Prints information to the console if it has priority greater or equal to
+ * verbosity mode.
+ * @param {number} priority The output priority.
  * @param {string} output The output string.
  */
-sre.TestRunner.prototype.output = function(output) {
-  if (!this.verbose) return;
-  sre.TestExternal.process.stdout.write(output);
+sre.TestRunner.prototype.output = function(priority, output) {
+  if (priority <= this.verbose) {
+    sre.TestExternal.process.stdout.write(output);
+  }
 };
 
 
@@ -262,14 +263,15 @@ sre.TestRunner.prototype.outputColor = function(output, color) {
 /**
  * Prints information to the console. This always forces a line, unless verbose
  * is 0.
+ * @param {number} priority The output priority.
  * @param {string} output The output string.
  * @param {sre.TestRunner.color_=} opt_color An optional color argument.
  */
-sre.TestRunner.prototype.outputLine = function(output, opt_color) {
+sre.TestRunner.prototype.outputLine = function(priority, output, opt_color) {
   output = this.outputColor(output, opt_color);
   var mid = 80 - output.length;
   output = output + new Array(mid > 0 ? mid + 1 : 1).join(' ');
-  this.output('\r' + output + '\n');
+  this.output(priority, '\r' + output + '\n');
 };
 
 
@@ -286,15 +288,17 @@ sre.TestRunner.prototype.outputStart = function(output, opt_color) {
 /**
  * Prints the queued information on a spanning line. This only forces a line,
  * when verbose is set to 2.
+ * @param {number} priority The output priority.
  * @param {string} output The output string.
  * @param {sre.TestRunner.color_=} opt_color An optional color argument.
- * @param {boolean=} opt_force Force a linebreak.
  */
-sre.TestRunner.prototype.outputEnd = function(output, opt_color, opt_force) {
+sre.TestRunner.prototype.outputEnd = function(priority, output, opt_color) {
   output = this.outputColor(output, opt_color);
   var start = this.outputQueue.join(' ');
   var mid = 80 - (start.length + output.length);
   output = start + new Array(mid > 0 ? mid + 1 : 1).join(' ') + output;
-  this.output((this.verbose === 2 || opt_force) ? output + '\n': '\r' + output);
+  output = (this.verbose === 3) ? output + '\n' :
+    (priority <= 1 ? '\r' + output + '\n' : '\r' + output);
+  this.output(priority, output);
   this.outputQueue = [];
 };
