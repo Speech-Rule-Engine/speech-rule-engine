@@ -20,17 +20,16 @@
 goog.provide('sre.Tests');
 
 goog.require('sre.BaseTests');
-goog.require('sre.ClearspeakRuleTest');
 goog.require('sre.TestRunner');
 
-goog.require('sre.AbstractCharacterTest');
-goog.require('sre.ClearspeakRuleTest');
-goog.require('sre.CollapseRuleTest');
-goog.require('sre.MathspeakRuleTest');
-goog.require('sre.PrefixRuleTest');
-goog.require('sre.SemanticTest');
-goog.require('sre.SummaryRuleTest');
-goog.require('sre.TestRegister');
+// goog.require('sre.AbstractCharacterTest');
+// goog.require('sre.ClearspeakRuleTest');
+// goog.require('sre.CollapseRuleTest');
+// goog.require('sre.MathspeakRuleTest');
+// goog.require('sre.PrefixRuleTest');
+// goog.require('sre.SemanticTest');
+// goog.require('sre.SummaryRuleTest');
+goog.require('sre.TestFactory');
 
 goog.require('sre.ExampleFiles');
 
@@ -114,24 +113,45 @@ sre.Tests.getInstance().runner.warn = sre.Tests.environment['WARN'];
 
 sre.Tests.getInstance().runner.verbose = sre.Tests.environment['VERBOSE'];
 
+// Load all json files from the expected directory
+
+sre.Tests.allJson = function() {
+  let json = [];
+  sre.Tests.readDir_('', json);
+  return json;
+};
+
+
+sre.Tests.readDir_ = function (path, result) {
+  if (typeof path === 'undefined') return;
+  let file = sre.TestUtil.path.EXPECTED + path;
+  if (sre.SystemExternal.fs.lstatSync(file).isDirectory()) {
+    var files = sre.SystemExternal.fs.readdirSync(file);
+    files.forEach(function (x) {
+      sre.Tests.readDir_(path ? path + '/' + x : x, result);
+    });
+    return;
+  }
+  if (path.match(/\.json$/)) {
+    result.push(path);
+  }
+};
+
+
 if (sre.Tests.environment['JSON']) {
-  sre.SemanticTest.tests();
-  sre.ClearspeakRuleTest.tests();
-  sre.MathspeakRuleTest.tests();
-  sre.AbstractCharacterTest.tests();
-  sre.CollapseRuleTest.tests();
-  sre.SummaryRuleTest.tests();
-  sre.PrefixRuleTest.tests();
-  let files = sre.Tests.environment['FILES'] || Object.keys(sre.TestRegister.map);
+  let files = sre.Tests.environment['FILES'] || sre.Tests.allJson();
   for (var key of files) {
-    // let [locale, block, file] = key.split('/');
     // TODO: Filter for file or locale or category
-    var test = sre.TestRegister.map[key];
+    // Maybe apply filter to allJson.
+    // let [locale, block, file] = key.split('/');
+    var test = sre.TestFactory.get(key);
     if (test) {
       sre.Tests.getInstance().runner.registerTest(test);
     }
   }
 }
+
+
 /**
  * Execute tests.
  */

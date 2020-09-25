@@ -9,6 +9,7 @@
   "compare": true,
   "active": "DefaultSymbolsNemeth",
   "type": "character",
+  "factory": "symbol",
   "base": "input/common/characters.json",
   "information": "Default Character Test for Nemeth",
   "tests": {

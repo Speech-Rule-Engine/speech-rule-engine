@@ -10,6 +10,7 @@
   ],
   "active": "MathspeakSymbolsGerman",
   "type": "function",
+  "factory": "symbol",
   "base": "input/common/functions.json",
   "information": "Mathspeak function test for German",
   "tests": {

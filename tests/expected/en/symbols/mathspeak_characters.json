@@ -9,6 +9,7 @@
   ],
   "active": "MathspeakSymbolsEnglish",
   "type": "character",
+  "factory": "symbol",
   "base": "input/common/characters.json",
   "information": "Mathspeak Character Test for English",
   "tests": {

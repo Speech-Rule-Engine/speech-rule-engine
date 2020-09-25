@@ -7,6 +7,7 @@
   ],
   "active": "DefaultSymbolsEnglish",
   "type": "function",
+  "factory": "symbol",
   "base": "input/common/functions.json",
   "information": "Default function test for English",
   "tests": {

@@ -1,6 +1,7 @@
 {
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "NobleGermanTest",
+  "factory": "speech",
   "base": "input/mathspeak/noble_test.json",
   "information": "Steve Noble's samples German tests.",
   "domain": "mathspeak",

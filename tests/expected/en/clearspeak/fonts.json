@@ -1,6 +1,7 @@
 {
   "name": "ClearspeakEnglishFontTest",
   "locale": "en",
+  "factory": "speech",
   "base": "input/common/fonts.json",
   "information": "Clearspeak English Font tests.",
   "domain": "clearspeak",

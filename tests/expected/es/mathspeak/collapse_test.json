@@ -1,5 +1,6 @@
 {
   "name": "CollapseSpanishTest",
+  "factory": "collapse",
   "base": "input/mathspeak/collapse_test.json",
   "information": "Collapse Spanish tests.",
   "locale": "es",

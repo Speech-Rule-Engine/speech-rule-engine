@@ -1,5 +1,6 @@
 {
   "name": "SummaryFrenchTest",
+  "factory": "summary",
   "base": "input/mathspeak/summary_test.json",
   "information": "Summary French tests.",
   "locale": "fr",

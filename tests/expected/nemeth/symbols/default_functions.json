@@ -9,6 +9,7 @@
   "compare": true,
   "active": "DefaultSymbolsNemeth",
   "type": "function",
+  "factory": "symbol",
   "base": "input/common/functions.json",
   "information": "Default function test for Nemeth",
   "tests": {

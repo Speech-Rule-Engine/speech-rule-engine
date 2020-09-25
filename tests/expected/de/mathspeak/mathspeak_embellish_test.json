@@ -1,6 +1,7 @@
 {
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "MathspeakEmbellishGermanTest",
+  "factory": "speech",
   "base": "input/mathspeak/mathspeak_embellish_test.json",
   "information": "Mathspeak Embellished Symbols tests.",
   "domain": "mathspeak",

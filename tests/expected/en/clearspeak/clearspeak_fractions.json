@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishFractions",
   "locale": "en",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_fractions.json",
   "information": "ClearspeakEnglishFractions rule tests.",
   "active": "ClearspeakEnglish",

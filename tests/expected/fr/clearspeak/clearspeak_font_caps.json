@@ -1,5 +1,6 @@
 {
   "name": "ClearspeakFrenchFontTest",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_font_caps.json",
   "information": "Clearspeak French Font tests with Caps preference.",
   "domain": "clearspeak",

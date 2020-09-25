@@ -8,6 +8,7 @@
   ],
   "active": "DefaultSymbolsGerman",
   "type": "character",
+  "factory": "symbol",
   "base": "input/common/characters.json",
   "information": "Default Character Test for German",
   "tests": {

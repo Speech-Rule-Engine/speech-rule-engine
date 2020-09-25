@@ -1,6 +1,7 @@
 {
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "ClearspeakGermanFontTest",
+  "factory": "speech",
   "base": "input/common/fonts.json",
   "information": "Clearspeak German Font tests.",
   "domain": "clearspeak",

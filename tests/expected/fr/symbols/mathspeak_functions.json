@@ -9,6 +9,7 @@
   ],
   "active": "MathspeakSymbolsFrench",
   "type": "function",
+  "factory": "symbol",
   "base": "input/common/functions.json",
   "information": "Mathspeak function test for French",
   "tests": {

@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchLogarithms",
   "locale": "fr",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_logarithms.json",
   "information": "ClearspeakFrenchLogarithms rule tests.",
   "active": "ClearspeakFrench",

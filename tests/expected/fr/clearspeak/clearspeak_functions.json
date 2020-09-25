@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchFunctions",
   "locale": "fr",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_functions.json",
   "information": "ClearspeakFrenchFunctions rule tests.",
   "active": "ClearspeakFrench",

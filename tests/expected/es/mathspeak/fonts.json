@@ -1,5 +1,6 @@
 {
   "name": "MathspeakSpanishFontTest",
+  "factory": "speech",
   "base": "input/common/fonts.json",
   "information": "Mathspeak Spanish Font tests.",
   "domain": "mathspeak",

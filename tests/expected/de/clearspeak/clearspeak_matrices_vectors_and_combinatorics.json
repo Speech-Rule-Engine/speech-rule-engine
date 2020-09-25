@@ -2,6 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "GermanMatricesAndCombinatorics",
   "locale": "de",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_matrices_vectors_and_combinatorics.json",
   "information": "ClearspeakGerman Matrices, Vectors, and Combinatorics rule tests.",
   "active": "ClearspeakGerman",

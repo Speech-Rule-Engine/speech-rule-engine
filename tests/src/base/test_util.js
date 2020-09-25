@@ -20,8 +20,9 @@ sre.TestUtil.path = {
  * @extends {Error}
  */
 sre.TestUtil.Error = function(msg, value) {
-  sre.TestUtil.Error.base(this, 'constructor', msg);
+  sre.TestUtil.Error.base(this, 'constructor');
   this.name = 'SRE Test Error';
+  this.message = msg;
   this.value = value;
 };
 goog.inherits(sre.TestUtil.Error, Error);

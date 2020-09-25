@@ -2,6 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "GermanRoots",
   "locale": "de",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_roots.json",
   "information": "ClearspeakGermanRoots rule tests.",
   "active": "ClearspeakGerman",

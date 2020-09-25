@@ -7,6 +7,7 @@
   ],
   "active": "ClearspeakSymbolsFrench",
   "type": "character",
+  "factory": "symbol",
   "base": "input/common/characters.json",
   "information": "Clearspeak Character Test for French",
   "tests": {

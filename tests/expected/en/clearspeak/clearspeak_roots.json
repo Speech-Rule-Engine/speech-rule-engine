@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishRoots",
   "locale": "en",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_roots.json",
   "information": "ClearspeakEnglishRoots rule tests.",
   "active": "ClearspeakEnglish",

@@ -1,6 +1,7 @@
 {
   "name": "PrefixFrenchTest",
   "locale": "fr",
+  "factory": "prefix",
   "base": "input/common/prefix.json",
   "information": "Prefix French rule tests.",
   "active": "PrefixFrench",

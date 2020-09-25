@@ -7,6 +7,7 @@
   ],
   "active": "DefaultSymbolsSpanish",
   "type": "function",
+  "factory": "symbol",
   "base": "input/common/functions.json",
   "information": "Default function test for Spanish",
   "tests": {

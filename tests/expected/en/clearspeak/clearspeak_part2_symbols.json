@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishPart2Symbols",
   "locale": "en",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_part2_symbols.json",
   "information": "ClearspeakEnglishPart2Symbols rule tests.",
   "active": "ClearspeakEnglish",

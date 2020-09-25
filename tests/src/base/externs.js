@@ -6,3 +6,5 @@ assert.equal;
 assert.fail;
 fs.existsSync = function(name) { };
 fs.closeSync = function(name) { };
+fs.readdirSync = function(name) { };
+fs.lstatSync = function(name) { };

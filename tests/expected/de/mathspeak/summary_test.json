@@ -1,6 +1,7 @@
 {
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "SummaryGermanTest",
+  "factory": "summary",
   "base": "input/mathspeak/summary_test.json",
   "information": "Summary German tests.",
   "locale": "de",

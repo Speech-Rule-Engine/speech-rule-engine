@@ -1,5 +1,6 @@
 {
   "name": "NobleFrenchTest",
+  "factory": "speech",
   "base": "input/mathspeak/noble_test.json",
   "information": "Steve Noble's samples French tests.",
   "domain": "mathspeak",

@@ -1,5 +1,6 @@
 {
   "name": "NemethFontTest",
+  "factory": "speech",
   "base": "input/common/fonts.json",
   "information": "Nemeth Font tests.",
   "domain": "default",

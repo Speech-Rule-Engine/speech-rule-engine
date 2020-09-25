@@ -2,6 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "GermanParentheses",
   "locale": "de",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_parentheses.json",
   "information": "ClearspeakGermanParentheses rule tests.",
   "active": "ClearspeakGerman",

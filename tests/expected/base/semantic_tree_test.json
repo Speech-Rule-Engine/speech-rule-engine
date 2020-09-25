@@ -1,4 +1,5 @@
 {
+  "factory": "stree",
   "base": "input/base/semantic.json",
   "information": "Semantic tree tests.",
   "_comment_0": " Numbers.",

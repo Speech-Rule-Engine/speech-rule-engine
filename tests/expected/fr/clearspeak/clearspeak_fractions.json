@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchFractions",
   "locale": "fr",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_fractions.json",
   "information": "ClearspeakFrenchFractions rule tests.",
   "active": "ClearspeakFrench",

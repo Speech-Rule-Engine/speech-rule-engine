@@ -1,6 +1,7 @@
 {
   "name": "PrefixSpanishTest",
   "locale": "es",
+  "factory": "prefix",
   "base": "input/common/prefix.json",
   "information": "Prefix Spanish rule tests.",
   "active": "PrefixSpanish",

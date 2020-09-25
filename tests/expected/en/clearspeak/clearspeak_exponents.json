@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishExponents",
   "locale": "en",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_exponents.json",
   "information": "ClearspeakEnglishExponents rule tests.",
   "active": "ClearspeakEnglish",

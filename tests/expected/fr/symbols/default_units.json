@@ -7,6 +7,7 @@
   ],
   "active": "DefaultSymbolsFrench",
   "type": "unit",
+  "factory": "symbol",
   "base": "input/common/units.json",
   "information": "Default unit test for French",
   "tests": {

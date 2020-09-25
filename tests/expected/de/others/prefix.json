@@ -1,6 +1,7 @@
 {
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "PrefixGermanTest",
+  "factory": "prefix",
   "base": "input/common/prefix.json",
   "information": "Prefix German rule tests.",
   "locale": "de",

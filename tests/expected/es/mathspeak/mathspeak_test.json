@@ -1,5 +1,6 @@
 {
   "name": "MathspeakSpanishTest",
+  "factory": "speech",
   "base": "input/mathspeak/mathspeak_test.json",
   "information": "Mathspeak Spanish tests.",
   "domain": "mathspeak",

@@ -2,6 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchExponents",
   "locale": "fr",
+  "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_exponents.json",
   "information": "ClearspeakFrenchExponents rule tests.",
   "active": "ClearspeakFrench",

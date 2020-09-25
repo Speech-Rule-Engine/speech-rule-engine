@@ -1,5 +1,6 @@
 {
   "name": "NemethBaseTest",
+  "factory": "speech",
   "base": "input/nemeth/nemeth_base.json",
   "information": "Basic testcases for Nemeth.",
   "domain": "default",

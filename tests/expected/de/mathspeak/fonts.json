@@ -1,6 +1,7 @@
 {
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "MathspeakGermanFontTest",
+  "factory": "speech",
   "base": "input/common/fonts.json",
   "information": "Mathspeak German Font tests.",
   "domain": "mathspeak",

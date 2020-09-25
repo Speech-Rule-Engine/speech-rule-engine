@@ -7,6 +7,7 @@
   ],
   "active": "DefaultSymbolsSpanish",
   "type": "unit",
+  "factory": "symbol",
   "base": "input/common/units.json",
   "information": "Default unit test for Spanish",
   "tests": {
