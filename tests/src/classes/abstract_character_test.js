@@ -191,25 +191,3 @@ sre.AbstractCharacterTest.testOutput = function() {
     }
   }
 };
-
-
-sre.AbstractCharacterTest.tests = function() {
-  let files = [
-    'default_characters.json',
-    'default_functions.json',
-    'default_units.json',
-    'mathspeak_characters.json',
-    'mathspeak_functions.json',
-    'mathspeak_units.json',
-    'clearspeak_characters.json',
-    'clearspeak_functions.json',
-    'clearspeak_units.json'
-  ];
-  for (var locale of sre.Variables.LOCALES) {
-    for (var file of files) {
-      var test = new sre.AbstractCharacterTest();
-      test.jsonFile = locale + '/symbols/' + file;
-      sre.TestRegister.add(test);
-    }
-  }
-};

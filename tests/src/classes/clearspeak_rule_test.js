@@ -21,7 +21,6 @@
 goog.provide('sre.ClearspeakRuleTest');
 
 goog.require('sre.AbstractRuleTest');
-goog.require('sre.TestRegister');
 
 
 
@@ -59,43 +58,4 @@ sre.ClearspeakRuleTest.prototype.tearDownTest = function() {
   sre.System.getInstance().setupEngine(
       {markup: sre.Engine.Markup.NONE});
   sre.ClearspeakRuleTest.base(this, 'tearDownTest');
-};
-
-
-sre.ClearspeakRuleTest.tests = function() {
-  let coreTests = [
-    'clearspeak_absolute_value.json',
-    'clearspeak_capital_letters.json',
-    'clearspeak_exponents.json',
-    'clearspeak_fractions.json',
-    'clearspeak_functions.json',
-    'clearspeak_implied_times.json',
-    'clearspeak_issues.json',
-    'clearspeak_logarithms.json',
-    'clearspeak_matrices_vectors_and_combinatorics.json',
-    'clearspeak_multi_line_entries.json',
-    'clearspeak_named_sets.json',
-    'clearspeak_parentheses.json',
-    'clearspeak_part2_symbols.json',
-    'clearspeak_part3_adornments.json',
-    'clearspeak_roots.json',
-    'clearspeak_sets_enclosed_in_set_brackets.json',
-    'clearspeak_trigometry.json'
-  ];
-  let otherTests = [
-    'fonts.json',
-    'clearspeak_font_caps.json'
-  ];
-  for (var locale of sre.Variables.LOCALES) {
-    for (var file of coreTests) {
-      var test = new sre.ClearspeakRuleTest(locale + '/clearspeak/' + file);
-      test.compare = locale === 'de';  // tmp!
-      sre.TestRegister.add(test);
-    }
-    for (file of otherTests) {
-      test = new sre.AbstractRuleTest(locale + '/clearspeak/' + file);
-      test.compare = locale === 'de';  // tmp!
-      sre.TestRegister.add(test);
-    }
-  }
 };

@@ -20,18 +20,9 @@
 goog.provide('sre.Tests');
 
 goog.require('sre.BaseTests');
-goog.require('sre.TestRunner');
-
-// goog.require('sre.AbstractCharacterTest');
-// goog.require('sre.ClearspeakRuleTest');
-// goog.require('sre.CollapseRuleTest');
-// goog.require('sre.MathspeakRuleTest');
-// goog.require('sre.PrefixRuleTest');
-// goog.require('sre.SemanticTest');
-// goog.require('sre.SummaryRuleTest');
-goog.require('sre.TestFactory');
-
 goog.require('sre.ExampleFiles');
+goog.require('sre.TestFactory');
+goog.require('sre.TestRunner');
 
 
 /**

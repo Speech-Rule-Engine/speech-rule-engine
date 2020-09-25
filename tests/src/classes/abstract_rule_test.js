@@ -25,7 +25,7 @@ goog.provide('sre.MathspeakRuleTest');
 goog.require('sre.AbstractExamples');
 goog.require('sre.DynamicCstr');
 goog.require('sre.TestUtil');
-goog.require('sre.TestRegister');
+
 
 
 /**
@@ -256,35 +256,4 @@ sre.AbstractRuleTest.prototype.prepare = function() {
 sre.AbstractRuleTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.executeRuleTest(args[0], args[1], args[2]);
-};
-
-
-sre.MathspeakRuleTest.tests = function() {
-  let files = [
-    'mathspeak_test.json',
-    'noble_test.json',
-    'mathspeak_embellish_test.json',
-    'mathspeak_issues1.json',
-    'mathspeak_issues2.json',
-    'fonts.json',
-    'direct_speech.json'
-  ];
-  for (var locale of sre.Variables.LOCALES) {
-    for (var file of files) {
-      var test = new sre.AbstractRuleTest(locale + '/mathspeak/' + file);
-      sre.TestRegister.add(test);
-    }
-    sre.TestRegister.add(new sre.AbstractRuleTest(locale + '/clearspeak/direct_speech.json'));
-  }
-  let nemeth = [
-    'fonts.json',
-    'aata.json',
-    'nemeth72.json',
-    'nemeth_base.json'
-  ];
-  nemeth.forEach(function(x) {
-    sre.TestRegister.add(new sre.AbstractRuleTest('nemeth/rules/' + x));
-  });
-  sre.TestRegister.add(new sre.AbstractRuleTest('base/semantic_rule_test.json'));
-  sre.TestRegister.add(new sre.AbstractRuleTest('base/math_alphabets_test.json'));
 };

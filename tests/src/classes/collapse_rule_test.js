@@ -23,7 +23,6 @@
 goog.provide('sre.CollapseRuleTest');
 
 goog.require('sre.AbstractRuleTest');
-goog.require('sre.TestRegister');
 
 
 
@@ -81,18 +80,4 @@ sre.CollapseRuleTest.prototype.getSpeech = function(mathMl) {
   sre.SpeechGeneratorUtil.connectAllMactions(mml, xml);
   var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
   return sre.AuralRendering.getInstance().markup(descrs);
-};
-
-
-sre.CollapseRuleTest.tests = function() {
-  let files = [
-    'collapse_test.json'
-  ];
-  for (var locale of sre.Variables.LOCALES) {
-    for (var file of files) {
-      var test = new sre.CollapseRuleTest();
-      test.jsonFile = locale + '/mathspeak/' + file;
-      sre.TestRegister.add(test);
-    }
-  }
 };

@@ -340,14 +340,3 @@ sre.EnrichMathmlTest.prototype.customizeXml = function(xml) {
             });
       });
 };
-
-
-// Putting it all together! 
-sre.SemanticTest.tests = function() {
-  [
-    new sre.RebuildStreeTest('base/rebuild_stree_test.json'),
-    new sre.EnrichSpeechTest('base/enrich_speech_test.json'),
-    new sre.SemanticTreeTest('base/semantic_tree_test.json'),
-    new sre.EnrichMathmlTest('base/enrich_mathml_test.json')
-  ].forEach(sre.TestRegister.add);
-};

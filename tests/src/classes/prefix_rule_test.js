@@ -95,12 +95,3 @@ sre.PrefixRuleTest.prototype.appendRuleExample = function(
   sre.PrefixRuleTest.base(
       this, 'appendRuleExample', input, output, style, [sub]);
 };
-
-
-sre.PrefixRuleTest.tests = function() {
-  for (var locale of sre.Variables.LOCALES) {
-    sre.TestRegister.add(
-      new sre.PrefixRuleTest(locale + '/others/prefix.json'));
-  }
-};
-
