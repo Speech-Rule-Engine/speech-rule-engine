@@ -2,7 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "GermanPart3Adornments",
   "locale": "de",
-  "base": "json/clearspeak/clearspeak_part3_adornments.json",
+  "base": "input/clearspeak/clearspeak_part3_adornments.json",
   "information": "ClearspeakGermanPart3Adornments rule tests.",
   "active": "ClearspeakGerman",
   "exclude": [],

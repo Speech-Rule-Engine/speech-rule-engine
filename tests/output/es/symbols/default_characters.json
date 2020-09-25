@@ -7,7 +7,7 @@
   ],
   "active": "DefaultSymbolsSpanish",
   "type": "character",
-  "base": "json/common/characters.json",
+  "base": "input/common/characters.json",
   "information": "Default Character Test for Spanish",
   "tests": {
     "0": {

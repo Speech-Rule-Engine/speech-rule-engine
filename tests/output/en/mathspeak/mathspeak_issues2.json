@@ -1,7 +1,7 @@
 {
   "name": "MathspeakIssues2English",
   "locale": "en",
-  "base": "json/mathspeak/mathspeak_issues2.json",
+  "base": "input/mathspeak/mathspeak_issues2.json",
   "information": "Mathspeak Issues 2 English tests.",
   "domain": "mathspeak",
   "active": "MathspeakIssuesEnglish",

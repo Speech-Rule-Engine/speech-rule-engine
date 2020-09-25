@@ -2,7 +2,7 @@
   "_comment0_": " Tests from the issues discovered in ClearspeakFrench rules.",
   "name": "FrenchIssues",
   "locale": "fr",
-  "base": "json/clearspeak/clearspeak_issues.json",
+  "base": "input/clearspeak/clearspeak_issues.json",
   "information": "ClearspeakFrench Issues tests.",
   "active": "ClearspeakIssuesFrench",
   "exclude": [],

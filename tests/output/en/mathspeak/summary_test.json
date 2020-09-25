@@ -1,7 +1,7 @@
 {
   "name": "SummaryEnglishTest",
   "locale": "en",
-  "base": "json/mathspeak/summary_test.json",
+  "base": "input/mathspeak/summary_test.json",
   "information": "Summary English tests.",
   "active": "SummaryEnglish",
   "exclude": [],

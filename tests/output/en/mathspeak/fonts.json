@@ -1,7 +1,7 @@
 {
   "name": "MathspeakEnglishFontTest",
   "locale": "en",
-  "base": "json/common/fonts.json",
+  "base": "input/common/fonts.json",
   "information": "Mathspeak English Font tests.",
   "domain": "mathspeak",
   "active": "MathspeakEnglishFont",

@@ -9,7 +9,7 @@
   ],
   "active": "MathspeakSymbolsSpanish",
   "type": "unit",
-  "base": "json/common/units.json",
+  "base": "input/common/units.json",
   "information": "Mathspeak Unit Test for Spanish",
   "tests": {
     "W": {

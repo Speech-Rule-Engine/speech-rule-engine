@@ -1,6 +1,6 @@
 {
   "name": "AataTest",
-  "base": "json/nemeth/aata.json",
+  "base": "input/nemeth/aata.json",
   "information": "Tests from the PreTeXt/NFB project on Judson's Aata.",
   "domain": "default",
   "locale": "nemeth",

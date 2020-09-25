@@ -1,6 +1,6 @@
 {
   "name": "SummaryFrenchTest",
-  "base": "json/mathspeak/summary_test.json",
+  "base": "input/mathspeak/summary_test.json",
   "information": "Summary French tests.",
   "locale": "fr",
   "active": "SummaryFrench",

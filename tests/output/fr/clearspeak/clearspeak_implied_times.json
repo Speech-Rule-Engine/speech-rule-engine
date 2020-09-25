@@ -2,7 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "FrenchImpliedTimes",
   "locale": "fr",
-  "base": "json/clearspeak/clearspeak_implied_times.json",
+  "base": "input/clearspeak/clearspeak_implied_times.json",
   "information": "ClearspeakFrenchImpliedTimes rule tests.",
   "active": "ClearspeakFrench",
   "exclude": [],

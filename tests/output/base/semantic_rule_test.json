@@ -1,7 +1,7 @@
 {
   "name": "SemanticRuleTest",
   "locale": "en",
-  "base": "json/base/semantic_rule_test.json",
+  "base": "input/base/semantic_rule_test.json",
   "information": "Semantic rule tests.",
   "active": "SemanticTreeRules",
   "exclude": [],

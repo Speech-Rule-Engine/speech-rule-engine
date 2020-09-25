@@ -2,7 +2,7 @@
   "name": "DirectSpeechTest",
   "domain": "mathspeak",
   "locale": "en",
-  "base": "json/common/direct_speech.json",
+  "base": "input/common/direct_speech.json",
   "information": "Tests for Direct speech attributes in Mathspeak English.",
   "active": "DirectSpeechEnglish",
   "exclude": [],

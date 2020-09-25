@@ -7,7 +7,7 @@
   ],
   "active": "DefaultSymbolsSpanish",
   "type": "function",
-  "base": "json/common/functions.json",
+  "base": "input/common/functions.json",
   "information": "Default function test for Spanish",
   "tests": {
     "deg": {

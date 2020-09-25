@@ -7,7 +7,7 @@
   ],
   "active": "DefaultSymbolsEnglish",
   "type": "character",
-  "base": "json/common/characters.json",
+  "base": "input/common/characters.json",
   "information": "Default Character Test for English",
   "tests": {
     "0": {

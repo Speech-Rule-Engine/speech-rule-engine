@@ -7,7 +7,7 @@
   ],
   "active": "DefaultSymbolsFrench",
   "type": "character",
-  "base": "json/common/characters.json",
+  "base": "input/common/characters.json",
   "information": "Default Character Test for French",
   "tests": {
     "0": {

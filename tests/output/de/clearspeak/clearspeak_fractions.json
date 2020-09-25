@@ -2,7 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "GermanFractions",
   "locale": "de",
-  "base": "json/clearspeak/clearspeak_fractions.json",
+  "base": "input/clearspeak/clearspeak_fractions.json",
   "information": "ClearspeakGermanFractions rule tests.",
   "active": "ClearspeakGerman",
   "exclude": [],

@@ -1,6 +1,6 @@
 {
   "name": "MathspeakEmbellishFrenchTest",
-  "base": "json/mathspeak/mathspeak_embellish_test.json",
+  "base": "input/mathspeak/mathspeak_embellish_test.json",
   "information": "Mathspeak Embellished Symbols tests.",
   "domain": "mathspeak",
   "locale": "fr",

@@ -10,7 +10,7 @@
   ],
   "active": "MathspeakSymbolsGerman",
   "type": "function",
-  "base": "json/common/functions.json",
+  "base": "input/common/functions.json",
   "information": "Mathspeak function test for German",
   "tests": {
     "deg": {

@@ -1,5 +1,5 @@
 {
-  "base": "json/base/semantic.json",
+  "base": "input/base/semantic.json",
   "information": "Semantic tree tests.",
   "_comment_0": " Numbers.",
   "_comment_1": " Test number representations.",

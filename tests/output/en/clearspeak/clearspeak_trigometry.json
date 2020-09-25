@@ -2,7 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishTrigometry",
   "locale": "en",
-  "base": "json/clearspeak/clearspeak_trigometry.json",
+  "base": "input/clearspeak/clearspeak_trigometry.json",
   "information": "ClearspeakEnglishTrigometry rule tests.",
   "active": "ClearspeakEnglish",
   "exclude": ["TrigReciprocal001", "TrigReciprocal002", "TrigReciprocal003", "TrigReciprocal004", "TrigReciprocal005", "TrigReciprocal006", "TrigReciprocal007", "TrigReciprocal008", "TrigReciprocal009", "TrigReciprocal010", "TrigReciprocal011", "TrigReciprocal012", "TrigReciprocal013", "TrigReciprocal014", "TrigReciprocal015", "TrigReciprocal016", "TrigReciprocal017", "TrigReciprocal018", "TrigReciprocal019", "TrigReciprocal020", "TrigReciprocal021", "TrigReciprocal022", "TrigReciprocal023", "TrigReciprocal024", "TrigReciprocal025", "TrigReciprocal026", "HypTrigReciprocal001", "HypTrigReciprocal002", "HypTrigReciprocal003", "HypTrigReciprocal004", "HypTrigReciprocal005", "HypTrigReciprocal006", "HypTrigReciprocal007", "HypTrigReciprocal008", "HypTrigReciprocal009", "HypTrigReciprocal010", "HypTrigReciprocal011", "HypTrigReciprocal012", "HypTrigReciprocal013", "HypTrigReciprocal014", "HypTrigReciprocal015", "HypTrigReciprocal016", "HypTrigReciprocal017", "HypTrigReciprocal018", "HypTrigReciprocal019", "HypTrigReciprocal020"],

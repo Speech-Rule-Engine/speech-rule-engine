@@ -2,7 +2,7 @@
   "_comment0_": " This work was sponsored by ETH Zurich",
   "name": "GermanCapitalLetters",
   "locale": "de",
-  "base": "json/clearspeak/clearspeak_capital_letters.json",
+  "base": "input/clearspeak/clearspeak_capital_letters.json",
   "information": "ClearspeakGermanCapitalLetters rule tests.",
   "active": "ClearspeakGerman",
   "exclude": [],

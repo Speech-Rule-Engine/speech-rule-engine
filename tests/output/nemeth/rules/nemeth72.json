@@ -1,6 +1,6 @@
 {
   "name": "Nemeth72Test",
-  "base": "json/nemeth/nemeth72.json",
+  "base": "input/nemeth/nemeth72.json",
   "information": "Testcases from the Nemeth book.",
   "domain": "default",
   "locale": "nemeth",

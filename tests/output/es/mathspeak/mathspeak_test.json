@@ -1,6 +1,6 @@
 {
   "name": "MathspeakSpanishTest",
-  "base": "json/mathspeak/mathspeak_test.json",
+  "base": "input/mathspeak/mathspeak_test.json",
   "information": "Mathspeak Spanish tests.",
   "domain": "mathspeak",
   "locale": "es",

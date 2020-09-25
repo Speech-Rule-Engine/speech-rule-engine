@@ -2,7 +2,7 @@
   "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
   "name": "EnglishPart3Adornments",
   "locale": "en",
-  "base": "json/clearspeak/clearspeak_part3_adornments.json",
+  "base": "input/clearspeak/clearspeak_part3_adornments.json",
   "information": "ClearspeakEnglishPart3Adornments rule tests.",
   "active": "ClearspeakEnglish",
   "exclude": [],

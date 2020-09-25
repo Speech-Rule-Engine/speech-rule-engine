@@ -1,7 +1,7 @@
 {
   "name": "CollapseEnglishTest",
   "locale": "en",
-  "base": "json/mathspeak/collapse_test.json",
+  "base": "input/mathspeak/collapse_test.json",
   "information": "Collapse English tests.",
   "domain": "mathspeak",
   "active": "CollapseEnglish",

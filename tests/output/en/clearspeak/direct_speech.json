@@ -2,7 +2,7 @@
   "domain": "clearspeak",
   "name": "DirectSpeechTest",
   "locale": "en",
-  "base": "json/common/direct_speech.json",
+  "base": "input/common/direct_speech.json",
   "information": "Tests for Direct speech attributes in Clearspeak English.",
   "active": "DirectSpeechEnglish",
   "exclude": [],

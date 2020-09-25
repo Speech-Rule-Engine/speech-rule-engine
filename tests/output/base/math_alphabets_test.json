@@ -1,6 +1,6 @@
 {
   "name": "MathAlphabetsTest",
-  "base": "json/base/math_alphabets_test.json",
+  "base": "input/base/math_alphabets_test.json",
   "information": "Math Alphabets tests.",
   "domain": "default",
   "active": "MathAlphabets",

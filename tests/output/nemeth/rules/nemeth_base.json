@@ -1,6 +1,6 @@
 {
   "name": "NemethBaseTest",
-  "base": "json/nemeth/nemeth_base.json",
+  "base": "input/nemeth/nemeth_base.json",
   "information": "Basic testcases for Nemeth.",
   "domain": "default",
   "locale": "nemeth",

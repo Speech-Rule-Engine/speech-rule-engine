@@ -1,6 +1,6 @@
 {
   "name": "NemethFontTest",
-  "base": "json/common/fonts.json",
+  "base": "input/common/fonts.json",
   "information": "Nemeth Font tests.",
   "domain": "default",
   "locale": "nemeth",

@@ -1,7 +1,7 @@
 {
   "name": "ClearspeakEnglishFontTest",
   "locale": "en",
-  "base": "json/common/fonts.json",
+  "base": "input/common/fonts.json",
   "information": "Clearspeak English Font tests.",
   "domain": "clearspeak",
   "active": "ClearspeakEnglishFont",

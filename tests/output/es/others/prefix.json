@@ -1,7 +1,7 @@
 {
   "name": "PrefixSpanishTest",
   "locale": "es",
-  "base": "json/common/prefix.json",
+  "base": "input/common/prefix.json",
   "information": "Prefix Spanish rule tests.",
   "active": "PrefixSpanish",
   "exclude": [],

@@ -1,6 +1,6 @@
 {
   "name": "MathspeakIssues2French",
-  "base": "json/mathspeak/mathspeak_issues2.json",
+  "base": "input/mathspeak/mathspeak_issues2.json",
   "information": "Mathspeak Issues 2 French tests.",
   "domain": "mathspeak",
   "locale": "fr",

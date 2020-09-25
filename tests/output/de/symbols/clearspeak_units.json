@@ -8,7 +8,7 @@
   ],
   "active": "ClearspeakSymbolsGerman",
   "type": "unit",
-  "base": "json/common/units.json",
+  "base": "input/common/units.json",
   "information": "Clearspeak unit test for German",
   "tests": {
     "sq": {

@@ -1,7 +1,7 @@
 {
   "name": "MathspeakEnglishTest",
   "locale": "en",
-  "base": "json/mathspeak/mathspeak_test.json",
+  "base": "input/mathspeak/mathspeak_test.json",
   "information": "Mathspeak English tests.",
   "domain": "mathspeak",
   "active": "MathspeakEnglish",

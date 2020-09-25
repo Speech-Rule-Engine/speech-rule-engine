@@ -8,7 +8,7 @@
   ],
   "active": "ClearspeakSymbolsGerman",
   "type": "character",
-  "base": "json/common/characters.json",
+  "base": "input/common/characters.json",
   "information": "Clearspeak Character Test for German",
   "tests": {
     "0": {

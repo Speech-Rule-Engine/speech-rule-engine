@@ -9,7 +9,7 @@
   ],
   "active": "MathspeakSymbolsSpanish",
   "type": "character",
-  "base": "json/common/characters.json",
+  "base": "input/common/characters.json",
   "information": "Mathspeak Character Test for Spanish",
   "tests": {
     "0": {

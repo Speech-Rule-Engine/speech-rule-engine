@@ -1,6 +1,6 @@
 {
   "name": "MathspeakFrenchFontTest",
-  "base": "json/common/fonts.json",
+  "base": "input/common/fonts.json",
   "information": "Mathspeak French Font tests.",
   "domain": "mathspeak",
   "locale": "fr",
