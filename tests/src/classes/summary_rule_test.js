@@ -55,7 +55,7 @@ sre.SummaryRuleTest = function() {
   this.steps = null;
 
   this.pickFields.push('steps');
-  
+
 };
 goog.inherits(sre.SummaryRuleTest, sre.SpeechTest);
 
@@ -82,5 +82,5 @@ sre.SummaryRuleTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.steps = args[3];
   sre.SummaryRuleTest.base(this, 'method', args[0], args[1], args[2]);
-  this.steps = null; 
+  this.steps = null;
 };

@@ -21,9 +21,9 @@
 
 goog.provide('sre.PrefixRuleTest');
 
-goog.require('sre.SpeechTest');
 goog.require('sre.Semantic');
 goog.require('sre.SpeechGeneratorUtil');
+goog.require('sre.SpeechTest');
 
 
 

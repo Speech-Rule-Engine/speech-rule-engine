@@ -17,8 +17,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.AbstractTest');
 goog.provide('sre.AbstractJsonTest');
+goog.provide('sre.AbstractTest');
 
 goog.require('sre.TestExternal');
 goog.require('sre.TestUtil');
@@ -55,6 +55,7 @@ sre.AbstractTest.prototype.setUpTest = function() { };
 sre.AbstractTest.prototype.tearDownTest = function() { };
 
 
+
 /**
  * Base class for tests that load their input and expected values from json
  * input files. If a base file is provided they load their input fom a different
@@ -62,7 +63,7 @@ sre.AbstractTest.prototype.tearDownTest = function() { };
  *
  * E.g., if rules need to be tested for all locales they can share the same
  * basic test input and only differ on the expected output.
- * 
+ *
  * @constructor
  * @extends {sre.AbstractTest}
  */
@@ -72,7 +73,7 @@ sre.AbstractJsonTest = function() {
   /**
    * @type {string}
    */
-  this.jsonFile = file;
+  this.jsonFile = '';
 
   /**
    * @type {Object}
@@ -90,7 +91,7 @@ sre.AbstractJsonTest = function() {
   this.baseTests = {};
 
   /**
-   * @type {Array.<Object>}
+   * @type {!Array.<Object>}
    */
   this.inputTests = [];
 
@@ -120,9 +121,13 @@ sre.AbstractJsonTest.prototype.pick = function(json) {
  */
 sre.AbstractJsonTest.prototype.method = goog.abstractMethod;
 
+
+/**
+ * Prepares the individual tests of this object.
+ */
 sre.AbstractJsonTest.prototype.prepare = function() {
   this.jsonTests = this.jsonTests ||
-    (this.jsonFile ? sre.TestUtil.loadJson(this.jsonFile) : {});
+      (this.jsonFile ? sre.TestUtil.loadJson(this.jsonFile) : {});
   this.information = this.jsonTests.information || 'Unnamed tests';
   let file = this.jsonTests['base'];
   this.baseFile = sre.TestUtil.fileExists(file, sre.TestUtil.path.INPUT);

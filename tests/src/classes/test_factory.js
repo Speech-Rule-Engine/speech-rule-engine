@@ -35,6 +35,9 @@ goog.require('sre.SymbolTest');
 goog.require('sre.TestUtil');
 
 
+/**
+ * @type {Object.<function(new:sre.AbstractJsonTest)>}
+ */
 sre.TestFactory.map = {
   'clearspeak': sre.ClearspeakRuleTest,
   'collapse': sre.CollapseRuleTest,
@@ -50,6 +53,11 @@ sre.TestFactory.map = {
 };
 
 
+/**
+ * Retrieves and instantiates a test object for a given input json file.
+ * @param {string} file The input json file.
+ * @return {!sre.AbstractJsonTest} The JSON test.
+ */
 sre.TestFactory.get = function(file) {
   var filename = sre.TestUtil.fileExists(file, sre.TestUtil.path.EXPECTED);
   var json = sre.TestUtil.loadJson(filename);

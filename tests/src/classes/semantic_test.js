@@ -44,22 +44,25 @@ goog.require('sre.WalkerUtil');
  * @constructor
  * @extends {sre.AbstractExamples}
  */
-sre.SemanticTest = function(tests) {
+sre.SemanticTest = function() {
   sre.SemanticTest.base(this, 'constructor');
 };
 goog.inherits(sre.SemanticTest, sre.AbstractExamples);
 
 
+/**
+ * @override
+ */
 sre.SemanticTest.prototype.prepare = function() {
   sre.SemanticTest.base(this, 'prepare');
-  let [tests, warn] = sre.TestUtil.combineTests(
-    this.baseTests.tests || {},
-    this.jsonTests.tests || {},
-    this.jsonTests.exclude || []
-  );
-  this.inputTests = tests;
-  if (warn.length) {
-    throw new sre.TestUtil.Error('Missing Results', warn);
+  var tests = sre.TestUtil.combineTests(
+      this.baseTests.tests || {},
+      this.jsonTests.tests || {},
+      this.jsonTests.exclude || []
+      );
+  this.inputTests = tests[0];
+  if (tests[1].length) {
+    throw new sre.TestUtil.Error('Missing Results', tests[1]);
   }
 };
 
@@ -80,18 +83,19 @@ sre.SemanticTest.prototype.method = function(var_args) {
  */
 sre.SemanticTest.prototype.executeTest = goog.abstractMethod;
 
-//
-// Rebuild Tests
-// 
-// Testcases for reconstructing semantic trees from enriched mathml.
-//
+
 
 /**
+ * Testcases for reconstructing semantic trees from enriched mathml.
  * @constructor
  * @extends {sre.SemanticTest}
  */
-sre.RebuildStreeTest = function(tests) {
-  sre.RebuildStreeTest.base(this, 'constructor', tests);
+sre.RebuildStreeTest = function() {
+  sre.RebuildStreeTest.base(this, 'constructor');
+
+  /**
+   * @override
+   */
   this.pickFields = ['input'];
 };
 goog.inherits(sre.RebuildStreeTest, sre.SemanticTest);
@@ -112,18 +116,13 @@ sre.RebuildStreeTest.prototype.executeTest = function(expr) {
 
 
 
-//
-// Enriched Speech Tests
-// 
-// Testcases for reconstructing semantic trees from enriched mathml.
-//
-
 /**
+ * Enriched Speech Tests
  * @constructor
  * @extends {sre.SemanticTest}
  */
-sre.EnrichSpeechTest = function(tests) {
-  sre.EnrichSpeechTest.base(this, 'constructor', tests);
+sre.EnrichSpeechTest = function() {
+  sre.EnrichSpeechTest.base(this, 'constructor');
   this.pickFields = ['input'];
 };
 goog.inherits(sre.EnrichSpeechTest, sre.SemanticTest);
@@ -155,7 +154,6 @@ sre.EnrichSpeechTest.prototype.tearDownTest = function() {
 };
 
 
-
 /**
  * Tests if speech strings computed directly for a MathML expression are
  * equivalent to those computed for enriched expressions.
@@ -171,16 +169,14 @@ sre.EnrichSpeechTest.prototype.executeTest = function(expr) {
 };
 
 
-//
-// Semantic Tree Tests
-//
 
 /**
+ * Semantic Tree Tests
  * @constructor
  * @extends {sre.SemanticTest}
  */
-sre.SemanticTreeTest = function(tests) {
-  sre.SemanticTreeTest.base(this, 'constructor', tests);
+sre.SemanticTreeTest = function() {
+  sre.SemanticTreeTest.base(this, 'constructor');
 
   /**
    * @type {Object.<sre.SemanticAnnotator>}
@@ -276,11 +272,12 @@ sre.SemanticTreeTest.prototype.executeTest = function(mml, sml, opt_brief) {
 
 
 /**
+ * Tests for enriched MathML expressions.
  * @constructor
  * @extends {sre.SemanticTest}
  */
-sre.EnrichMathmlTest = function(tests) {
-  sre.EnrichMathmlTest.base(this, 'constructor', tests);
+sre.EnrichMathmlTest = function() {
+  sre.EnrichMathmlTest.base(this, 'constructor');
   this.attrBlacklist = [];
   this.setActive('EnrichExamples', 'json');
 };

@@ -69,15 +69,23 @@ sre.TestRunner = function() {
    */
   this.warn = sre.TestRunner.Warning.WARN;
 
+  /**
+   * Verbosity level.
+   * @type {number}
+   */
   this.verbose = 2;
 
+  /**
+   * Strings to be output on a single line once its end is reached.
+   * @type {Array.<string>}
+   */
   this.outputQueue = [];
 };
 goog.addSingletonGetter(sre.TestRunner);
 
 
 /**
- * 
+ *
  * @enum {number}
  */
 sre.TestRunner.Warning = {
@@ -120,7 +128,7 @@ sre.TestRunner.prototype.registerTest = function(test) {
  */
 sre.TestRunner.prototype.runTests = function() {
   for (var i = 0, test; test = this.testQueue_[i]; i++) {
-    if (test.jsonFile) {
+    if (test instanceof sre.AbstractJsonTest) {
       this.executeJsonTests(test);
     } else {
       this.executeTests(test);
@@ -129,6 +137,10 @@ sre.TestRunner.prototype.runTests = function() {
 };
 
 
+/**
+ * Executes all Json tests provided by the test case.
+ * @param {sre.AbstractJsonTest} testcase The Json test object.
+ */
 sre.TestRunner.prototype.executeJsonTests = function(testcase) {
   try {
     testcase.prepare();
@@ -154,14 +166,23 @@ sre.TestRunner.prototype.executeJsonTests = function(testcase) {
   testcase.setUpTest();
   for (var test of testcase.inputTests) {
     if (!test.test) continue;
-    this.executeJsonTest(test.name, goog.bind(testcase.method, testcase), testcase.pick(test));
+    this.executeJsonTest(
+        test.name, goog.bind(testcase.method, testcase), testcase.pick(test));
   }
   testcase.tearDownTest();
 };
 
+
+/**
+ * Executes a single Json test.
+ * @param {string} name The name of the test.
+ * @param {function(...string)} func The actual test function.
+ * @param {Array.<string>} args A list of arguments.
+ */
 sre.TestRunner.prototype.executeJsonTest = function(name, func, args) {
   this.executeTest_(name, function() {func.apply(null, args);});
 };
+
 
 /**
  * Execute single tests.
@@ -254,6 +275,7 @@ sre.TestRunner.prototype.output = function(priority, output) {
  * Colors information for printing.
  * @param {string} output The output string.
  * @param {sre.TestRunner.color_|undefined} color An optional color argument.
+ * @return {string} The colored string.
  */
 sre.TestRunner.prototype.outputColor = function(output, color) {
   return color ? color + output + sre.TestRunner.color_.WHITE : output;
@@ -298,7 +320,7 @@ sre.TestRunner.prototype.outputEnd = function(priority, output, opt_color) {
   var mid = 80 - (start.length + output.length);
   output = start + new Array(mid > 0 ? mid + 1 : 1).join(' ') + output;
   output = (this.verbose === 3) ? output + '\n' :
-    (priority <= 1 ? '\r' + output + '\n' : '\r' + output);
+      (priority <= 1 ? '\r' + output + '\n' : '\r' + output);
   this.output(priority, output);
   this.outputQueue = [];
 };

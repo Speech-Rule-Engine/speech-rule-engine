@@ -28,15 +28,27 @@ sre.TestUtil.Error = function(msg, value) {
 goog.inherits(sre.TestUtil.Error, Error);
 
 
+/**
+ * Loads and parses a JSON file.
+ * @param {string} file The filename.
+ * @return {Object} The parsed JSON object.
+ */
 sre.TestUtil.loadJson = function(file) {
   try {
-    return JSON.parse(sre.SystemExternal.fs.readFileSync(file));
+    return /** @type {Object} */(
+        JSON.parse(sre.SystemExternal.fs.readFileSync(file)));
   } catch (e) {
     throw new sre.TestUtil.Error('Bad filename or content', file);
   }
 };
 
 
+/**
+ * Checks if a file exists. Goes through a number of possible path names.
+ * @param {string} file The filename.
+ * @param {string=} opt_path An optional path name.
+ * @return {string} The actual filename with full path.
+ */
 sre.TestUtil.fileExists = function(file, opt_path) {
   if (sre.SystemExternal.fs.existsSync(file)) {
     return file;
@@ -47,15 +59,29 @@ sre.TestUtil.fileExists = function(file, opt_path) {
   let newFile = sre.TestExternal.path + file;
   if (sre.SystemExternal.fs.existsSync(newFile)) {
     return newFile;
-  };
+  }
   return '';
 };
 
 
-sre.TestUtil.combineTests = function(input, output, exclude) {
+/**
+ * Combines JSON tests from input test specification and expected output
+ * values. For every input test it tries to pick an expected value. If non
+ * exists and the test is not in the exclude list it pushes a warning.
+ * Finaly all left over expected tests are added to the list of tests.
+ *
+ * If expected is 'ALL', all tests are taken directly.
+ * @param {!Object} input An association list of input test specifications.
+ * @param {!Object | string} expected A association list of test specifications
+ *     with expected values.
+ * @param {!Array.<string>} exclude A list of tests to be excluded.
+ * @return {Array} Done.
+ */
+// [Array.<Object>, Array.<string>]
+sre.TestUtil.combineTests = function(input, expected, exclude) {
   var warn = [];
   var results = [];
-  if (output === 'ALL') {
+  if (expected === 'ALL') {
     for (var key of Object.keys(input)) {
       if (key.match(/^_/) || exclude.indexOf(key) !== -1) continue;
       var json = input[key];
@@ -70,21 +96,21 @@ sre.TestUtil.combineTests = function(input, output, exclude) {
   for (var key of Object.keys(input)) {
     if (key.match(/^_/) || exclude.indexOf(key) !== -1) continue;
     var json = input[key];
-    var expected = output[key];
+    var exp = expected[key];
     if (typeof json.test === 'undefined') {
       json.test = true;
     }
     json.name = key;
-    if (json.test && !expected) {
+    if (json.test && !exp) {
       warn.push(key);
       continue;
     }
-    results.push(Object.assign(json, expected));
-    delete output[key];
+    results.push(Object.assign(json, exp));
+    delete expected[key];
   }
-  for (key of Object.keys(output)) {
+  for (key of Object.keys(/** @type {!Object} */(expected))) {
     if (key.match(/^_/)) continue;
-    json = output[key];
+    json = expected[key];
     if (typeof json.test === 'undefined') {
       json.test = true;
     }

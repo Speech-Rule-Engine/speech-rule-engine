@@ -21,8 +21,8 @@ goog.provide('sre.AbstractExamples');
 goog.provide('sre.ExampleFiles');
 
 goog.require('sre.AbstractJsonTest');
-goog.require('sre.TestUtil');
 goog.require('sre.ExamplesOutput');
+goog.require('sre.TestUtil');
 
 
 
@@ -185,13 +185,24 @@ sre.AbstractExamples.prototype.footer = function() {
 };
 
 
-sre.ExampleFiles = {};
-
+/**
+ * @type {!Object.<sre.AbstractExamples>}
+ */
 sre.ExampleFiles.openFiles = {};
 
+
+/**
+ * @type {Object.<string>}
+ * TODO: This is actually a file descriptor type.
+ */
 sre.ExampleFiles.descriptors = {};
 
 
+/**
+ * Opens an output file and registers it.
+ * @param {string} file The name of the output file.
+ * @param {sre.AbstractExamples} obj The test object.
+ */
 sre.ExampleFiles.openFile = function(file, obj) {
   if (!sre.ExampleFiles.openFiles[file]) {
     let fd = sre.SystemExternal.fs.openSync(file, 'w+');
@@ -202,10 +213,13 @@ sre.ExampleFiles.openFile = function(file, obj) {
 };
 
 
+/**
+ * Finalises and closes all open output files.
+ */
 sre.ExampleFiles.closeFiles = function() {
   for (let file of Object.keys(sre.ExampleFiles.openFiles)) {
     sre.SystemExternal.fs.appendFileSync(
-      file, sre.ExampleFiles.openFiles[file].footer());
+        file, sre.ExampleFiles.openFiles[file].footer());
     sre.SystemExternal.fs.closeSync(sre.ExampleFiles.descriptors[file]);
   }
 };

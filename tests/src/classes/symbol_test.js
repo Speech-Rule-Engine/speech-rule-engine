@@ -103,8 +103,8 @@ sre.SymbolTest.prototype.executeRuleTest = function(text, answer, opt_style) {
  */
 sre.SymbolTest.prototype.getSpeech = function(text) {
   var aural = sre.AuralRendering.getInstance();
-  var descrs = [
-    sre.AuditoryDescription.create({text: text}, {adjust: true, translate: true})];
+  var descrs = [sre.AuditoryDescription.create(
+      {text: text}, {adjust: true, translate: true})];
   return aural.finalize(aural.markup(descrs));
 };
 
@@ -130,5 +130,5 @@ sre.SymbolTest.prototype.prepare = function() {
 sre.SymbolTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.type === 'unit' ? this.executeUnitTest(args[0], args[1]) :
-    this.executeCharTest(args[0], args[1]);
+      this.executeCharTest(args[0], args[1]);
 };

@@ -25,6 +25,7 @@ goog.require('sre.TestFactory');
 goog.require('sre.TestRunner');
 
 
+
 /**
  * @constructor
  */
@@ -58,18 +59,34 @@ sre.Tests.prototype.run = function() {
  */
 sre.Tests.testList = [];
 
+
+/**
+ * @type {Object.<number|boolean|Array.<string>>}
+ */
 sre.Tests.environment = {
   JSON: true,
   VERBOSE: 2,
   WARN: 1
 };
-sre.Tests.environmentVars = ['FILE', 'FILES', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE', 'WARN'];
+
+
+/**
+ * @type {Array.<string>}
+ */
+sre.Tests.environmentVars = [
+  'FILE', 'FILES', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE', 'WARN'];
+
+
+/**
+ * Fills the list of environment variables.
+ * @param {string} variable The variable name.
+ */
 sre.Tests.getEnvironment = function(variable) {
   var env = sre.SystemExternal.process.env[variable];
   // Process here.
   if (!env) return;
   if (env === 'true' || env === 'false') {
-    sre.Tests.environment[variable] = JSON.parse(env);
+    sre.Tests.environment[variable] = /** @type {boolean} */(JSON.parse(env));
     return;
   }
   var number = parseInt(env, 10);
@@ -100,12 +117,16 @@ if (!sre.Tests.testList.length) {
   sre.Tests.testList = sre.Tests.testList.concat(sre.Tests.allTests);
 }
 
-sre.Tests.getInstance().runner.warn = sre.Tests.environment['WARN'];
 
-sre.Tests.getInstance().runner.verbose = sre.Tests.environment['VERBOSE'];
+// This is set via string fields to please the linter!
+sre.Tests.getInstance().runner['warn'] = sre.Tests.environment['WARN'];
+sre.Tests.getInstance().runner['verbose'] = sre.Tests.environment['VERBOSE'];
 
-// Load all json files from the expected directory
 
+/**
+ * Load all json files from the expected directory
+ * @return {Array.<string>} A list of all json file path names.
+ */
 sre.Tests.allJson = function() {
   let json = [];
   sre.Tests.readDir_('', json);
@@ -113,12 +134,18 @@ sre.Tests.allJson = function() {
 };
 
 
-sre.Tests.readDir_ = function (path, result) {
+/**
+ * Recursively find all files with .json extension under the given path.
+ * @param {string} path The top pathname.
+ * @param {Array.<string>} result Accumulator for pathnames.
+ * @private
+ */
+sre.Tests.readDir_ = function(path, result) {
   if (typeof path === 'undefined') return;
   let file = sre.TestUtil.path.EXPECTED + path;
   if (sre.SystemExternal.fs.lstatSync(file).isDirectory()) {
     var files = sre.SystemExternal.fs.readdirSync(file);
-    files.forEach(function (x) {
+    files.forEach(function(x) {
       sre.Tests.readDir_(path ? path + '/' + x : x, result);
     });
     return;
@@ -130,7 +157,8 @@ sre.Tests.readDir_ = function (path, result) {
 
 
 if (sre.Tests.environment['JSON']) {
-  let files = sre.Tests.environment['FILES'] || sre.Tests.allJson();
+  let files = /** @type {!Array<string>} */(
+      sre.Tests.environment['FILES'] || sre.Tests.allJson());
   for (var key of files) {
     // TODO: Filter for file or locale or category
     // Maybe apply filter to allJson.

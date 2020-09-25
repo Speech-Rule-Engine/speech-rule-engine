@@ -19,8 +19,8 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SpeechTest');
 goog.provide('sre.MathspeakRuleTest');
+goog.provide('sre.SpeechTest');
 
 goog.require('sre.AbstractExamples');
 goog.require('sre.DynamicCstr');
@@ -98,7 +98,7 @@ sre.SpeechTest.prototype.setActive = function(file, opt_ext) {
  * @param {string=} opt_style Mathspeak style for translation.
  */
 sre.SpeechTest.prototype.executeRuleTest = function(mml, answer,
-                                                          opt_style) {
+    opt_style) {
   var style = opt_style || this.style;
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
@@ -202,8 +202,11 @@ sre.SpeechTest.prototype.join = function(examples) {
  * @override
  */
 sre.SpeechTest.prototype.header = function() {
-  var mathjax = '<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>\n' +
-      '<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>';
+  var mathjax =
+      '<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">' +
+      '</script>\n<script id="MathJax-script" async ' +
+      'src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">' +
+      '</script>';
   var style = '\n<style>\n table, th, td {\n' +
       '  border: 1px solid black; }\n</style>\n';
   return '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">' +
@@ -228,7 +231,6 @@ sre.SpeechTest.prototype.footer = function() {
  */
 sre.SpeechTest.prototype.prepare = function() {
   sre.SpeechTest.base(this, 'prepare');
-  this.baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : [];
   this.modality = this.jsonTests.modality || this.modality;
   this.locale = this.jsonTests.locale || this.locale;
   this.domain = this.jsonTests.domain || this.domain;
@@ -241,10 +243,10 @@ sre.SpeechTest.prototype.prepare = function() {
   var input = this.baseTests.tests || {};
   var output = this.jsonTests.tests || {};
   var exclude = this.jsonTests.exclude || [];
-  let [tests, warn] = sre.TestUtil.combineTests(input, output, exclude);
-  this.inputTests = tests;
-  if (warn.length) {
-    throw new sre.TestUtil.Error('Missing Results', warn);
+  let tests = sre.TestUtil.combineTests(input, output, exclude);
+  this.inputTests = tests[0];
+  if (tests[1].length) {
+    throw new sre.TestUtil.Error('Missing Results', tests[1]);
   }
 };
 
