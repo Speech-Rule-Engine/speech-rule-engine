@@ -283,7 +283,7 @@ sre.SemanticTreeTest.prototype.executeTest = function(mml, sml, opt_brief) {
 sre.EnrichMathmlTest = function(tests) {
   sre.EnrichMathmlTest.base(this, 'constructor', tests);
   this.attrBlacklist = [];
-  this.setActive('EnrichExamples', 'js');
+  this.setActive('EnrichExamples', 'json');
 };
 goog.inherits(sre.EnrichMathmlTest, sre.SemanticTest);
 
