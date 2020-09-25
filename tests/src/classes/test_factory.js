@@ -22,8 +22,6 @@
 
 goog.provide('sre.TestFactory');
 
-goog.require('sre.SymbolTest');
-goog.require('sre.SpeechTest');
 goog.require('sre.ClearspeakRuleTest');
 goog.require('sre.CollapseRuleTest');
 goog.require('sre.EnrichMathmlTest');
@@ -31,22 +29,24 @@ goog.require('sre.EnrichSpeechTest');
 goog.require('sre.PrefixRuleTest');
 goog.require('sre.RebuildStreeTest');
 goog.require('sre.SemanticTreeTest');
+goog.require('sre.SpeechTest');
 goog.require('sre.SummaryRuleTest');
+goog.require('sre.SymbolTest');
 goog.require('sre.TestUtil');
 
 
 sre.TestFactory.map = {
-  'symbol': sre.SymbolTest,
   'clearspeak': sre.ClearspeakRuleTest,
   'collapse': sre.CollapseRuleTest,
-  'speech': sre.SpeechTest,
+  'enrichMathml': sre.EnrichMathmlTest,
+  'enrichSpeech': sre.EnrichSpeechTest,
   'prefix': sre.PrefixRuleTest,
   'rebuild': sre.RebuildStreeTest,
-  'enrichSpeech': sre.EnrichSpeechTest,
-  'stree': sre.SemanticTreeTest,
-  'enrichMathml': sre.EnrichMathmlTest,
   'semantic': sre.SemanticTest,
-  'summary': sre.SummaryRuleTest
+  'speech': sre.SpeechTest,
+  'stree': sre.SemanticTreeTest,
+  'summary': sre.SummaryRuleTest,
+  'symbol': sre.SymbolTest
 };
 
 
