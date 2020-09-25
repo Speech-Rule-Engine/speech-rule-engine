@@ -22,7 +22,7 @@
 
 goog.provide('sre.TestFactory');
 
-goog.require('sre.AbstractCharacterTest');
+goog.require('sre.SymbolTest');
 goog.require('sre.AbstractRuleTest');
 goog.require('sre.ClearspeakRuleTest');
 goog.require('sre.CollapseRuleTest');
@@ -36,7 +36,7 @@ goog.require('sre.TestUtil');
 
 
 sre.TestFactory.map = {
-  'symbol': sre.AbstractCharacterTest,
+  'symbol': sre.SymbolTest,
   'clearspeak': sre.ClearspeakRuleTest,
   'collapse': sre.CollapseRuleTest,
   'speech': sre.AbstractRuleTest,

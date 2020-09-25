@@ -17,7 +17,7 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.AbstractCharacterTest');
+goog.provide('sre.SymbolTest');
 
 goog.require('sre.AbstractRuleTest');
 
@@ -27,8 +27,8 @@ goog.require('sre.AbstractRuleTest');
  * @constructor
  * @extends {sre.AbstractRuleTest}
  */
-sre.AbstractCharacterTest = function() {
-  sre.AbstractCharacterTest.base(this, 'constructor');
+sre.SymbolTest = function() {
+  sre.SymbolTest.base(this, 'constructor');
 
   /**
    * @type {Array.<string>}
@@ -43,7 +43,7 @@ sre.AbstractCharacterTest = function() {
   this.pickFields = ['name', 'expected'];
 
 };
-goog.inherits(sre.AbstractCharacterTest, sre.AbstractRuleTest);
+goog.inherits(sre.SymbolTest, sre.AbstractRuleTest);
 
 
 /**
@@ -52,7 +52,7 @@ goog.inherits(sre.AbstractCharacterTest, sre.AbstractRuleTest);
  * @param {Array.<string>} answers List of expected speech translations for each
  *     available style.
  */
-sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
+sre.SymbolTest.prototype.executeCharTest = function(char, answers) {
   for (var i = 0; i < answers.length; i++) {
     try {
       this.executeRuleTest(char, answers[i], this.styles[i]);
@@ -70,7 +70,7 @@ sre.AbstractCharacterTest.prototype.executeCharTest = function(char, answers) {
  * @param {string} char The character or string representing the unit.
  * @param {Array.<string>} answers A list of answers.
  */
-sre.AbstractCharacterTest.prototype.executeUnitTest = function(char, answers) {
+sre.SymbolTest.prototype.executeUnitTest = function(char, answers) {
   sre.Grammar.getInstance().pushState({annotation: 'unit'});
   try {
     this.executeCharTest(char, answers);
@@ -85,7 +85,7 @@ sre.AbstractCharacterTest.prototype.executeUnitTest = function(char, answers) {
 /**
  * @override
  */
-sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt_style) {
+sre.SymbolTest.prototype.executeRuleTest = function(text, answer, opt_style) {
   var style = opt_style || this.style;
   sre.SpeechRuleEngine.getInstance().clearCache();
   sre.System.getInstance().setupEngine(
@@ -101,7 +101,7 @@ sre.AbstractCharacterTest.prototype.executeRuleTest = function(text, answer, opt
 /**
  * @override
  */
-sre.AbstractCharacterTest.prototype.getSpeech = function(text) {
+sre.SymbolTest.prototype.getSpeech = function(text) {
   var aural = sre.AuralRendering.getInstance();
   var descrs = [
     sre.AuditoryDescription.create({text: text}, {adjust: true, translate: true})];
@@ -112,9 +112,9 @@ sre.AbstractCharacterTest.prototype.getSpeech = function(text) {
 /**
  * @override
  */
-sre.AbstractCharacterTest.prototype.prepare = function() {
+sre.SymbolTest.prototype.prepare = function() {
   try {
-    sre.AbstractCharacterTest.base(this, 'prepare');
+    sre.SymbolTest.base(this, 'prepare');
   } catch (e) {
     throw e;
   } finally {
@@ -127,67 +127,8 @@ sre.AbstractCharacterTest.prototype.prepare = function() {
 /**
  * @override
  */
-sre.AbstractCharacterTest.prototype.method = function(var_args) {
+sre.SymbolTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.type === 'unit' ? this.executeUnitTest(args[0], args[1]) :
     this.executeCharTest(args[0], args[1]);
-};
-
-
-/**
- * Output all the character speech strings.
- * (Temporary Auxiliary Method.)
- */
-sre.AbstractCharacterTest.testOutput = function() {
-
-  var constraints = {
-    en: {
-      default: ['default'],
-      mathspeak: ['default', 'brief', 'sbrief'],
-      clearspeak: ['default']
-    },
-    es: {
-      default: ['default'],
-      mathspeak: ['default', 'brief', 'sbrief']
-    },
-    fr: {
-      default: ['default'],
-      mathspeak: ['default', 'brief', 'sbrief'],
-      clearspeak: ['default']
-    },
-    nemeth: {
-      default: ['default']
-    }
-  };
-  var stores = sre.MathMap.getInstance().store['subStores_'];
-  var allRules = {};
-  sre.Variables.LOCALES.forEach(function(loc) {
-    allRules[loc] = [];
-  });
-  var keys = Object.keys(stores);
-  for (var loc of Object.keys(constraints)) {
-    var modality = loc === 'nemeth' ? 'braille' : 'speech';
-    for (var dom of Object.keys(constraints[loc])) {
-      for (var key of keys) {
-        var aural = sre.AuralRendering.getInstance();
-        var result = [loc, modality, dom, key];
-        for (var style of constraints[loc][dom]) {
-          sre.System.getInstance().setupEngine({
-            domain: dom, modality: modality, locale: loc, style: style});
-          var comps = key.split(':');
-          var grammar = {translate: true};
-          if (comps[1] && comps[1] === 'unit') {
-            grammar.annotation = 'unit';
-          }
-          sre.Grammar.getInstance().pushState(grammar);
-          var descrs = [
-            sre.AuditoryDescription.create({text: comps[0]}, {adjust: true})];
-          result.push(aural.finalize(aural.markup(descrs)));
-          allRules[loc].push(result);
-          sre.Grammar.getInstance().popState();
-        }
-        console.log(`${result[0]}, ${result[2]}, "${result.slice(3).join('", "')}"`);
-      }
-    }
-  }
 };
