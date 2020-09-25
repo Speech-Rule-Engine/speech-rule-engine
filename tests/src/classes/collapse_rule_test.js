@@ -92,7 +92,6 @@ sre.CollapseRuleTest.tests = function() {
     for (var file of files) {
       var test = new sre.CollapseRuleTest();
       test.jsonFile = locale + '/mathspeak/' + file;
-      test.locale = locale;
       sre.TestRegister.add(test);
     }
   }

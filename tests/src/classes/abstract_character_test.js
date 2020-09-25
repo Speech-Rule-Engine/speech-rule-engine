@@ -209,7 +209,6 @@ sre.AbstractCharacterTest.tests = function() {
     for (var file of files) {
       var test = new sre.AbstractCharacterTest();
       test.jsonFile = locale + '/symbols/' + file;
-      test.locale = locale;
       sre.TestRegister.add(test);
     }
   }

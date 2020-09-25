@@ -272,7 +272,6 @@ sre.MathspeakRuleTest.tests = function() {
   for (var locale of sre.Variables.LOCALES) {
     for (var file of files) {
       var test = new sre.AbstractRuleTest(locale + '/mathspeak/' + file);
-      test.locale = locale;
       sre.TestRegister.add(test);
     }
     sre.TestRegister.add(new sre.AbstractRuleTest(locale + '/clearspeak/direct_speech.json'));

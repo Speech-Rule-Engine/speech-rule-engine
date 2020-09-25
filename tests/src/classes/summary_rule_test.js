@@ -95,7 +95,6 @@ sre.SummaryRuleTest.tests = function() {
     for (var file of files) {
       var test = new sre.SummaryRuleTest();
       test.jsonFile = locale + '/mathspeak/' + file;
-      test.locale = locale;
       sre.TestRegister.add(test);
     }
   }
