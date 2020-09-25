@@ -56,7 +56,7 @@ sre.Tests.prototype.run = function() {
   this.runner.runTests();
   this.runner.summary();
   var timeOut = (new Date()).getTime();
-  this.runner.output('Time for tests: ' + (timeOut - timeIn) + 'ms\n');
+  this.runner.outputLine(0, 'Time for tests: ' + (timeOut - timeIn) + 'ms');
   sre.ExampleFiles.closeFiles();
   process.exit(this.runner.success() ? 0 : 1);
 };
@@ -70,7 +70,7 @@ sre.Tests.testList = [];
 
 sre.Tests.environment = {
   JSON: true,
-  VERBOSE: 1,
+  VERBOSE: 2,
   WARN: 1
 };
 sre.Tests.environmentVars = ['FILE', 'FILES', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE', 'WARN'];
