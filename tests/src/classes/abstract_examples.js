@@ -30,11 +30,9 @@ goog.require('sre.ExamplesOutput');
  * @constructor
  * @implements {sre.ExamplesOutput}
  * @extends {sre.AbstractJsonTest}
- * @param {string=} opt_tests The JSON file if necessary for testing.
  */
-sre.AbstractExamples = function(opt_tests) {
-  sre.AbstractExamples.base(
-    this, 'constructor', opt_tests ? opt_tests : '');
+sre.AbstractExamples = function() {
+  sre.AbstractExamples.base(this, 'constructor');
 
   /**
    * @type {boolean}

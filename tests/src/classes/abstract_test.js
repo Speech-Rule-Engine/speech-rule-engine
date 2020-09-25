@@ -64,10 +64,9 @@ sre.AbstractTest.prototype.tearDownTest = function() { };
  * basic test input and only differ on the expected output.
  * 
  * @constructor
- * @param {string} file The JSON file name.
  * @extends {sre.AbstractTest}
  */
-sre.AbstractJsonTest = function(file) {
+sre.AbstractJsonTest = function() {
   sre.AbstractJsonTest.base(this, 'constructor');
 
   /**

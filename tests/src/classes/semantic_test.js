@@ -43,10 +43,9 @@ goog.require('sre.WalkerUtil');
  * Base class for all the semantic tree related tests.
  * @constructor
  * @extends {sre.AbstractExamples}
- * @param {string} tests The json file with expected output and tests.
  */
 sre.SemanticTest = function(tests) {
-  sre.SemanticTest.base(this, 'constructor', tests);
+  sre.SemanticTest.base(this, 'constructor');
 };
 goog.inherits(sre.SemanticTest, sre.AbstractExamples);
 

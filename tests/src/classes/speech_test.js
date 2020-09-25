@@ -31,10 +31,9 @@ goog.require('sre.TestUtil');
 /**
  * @constructor
  * @extends {sre.AbstractExamples}
- * @param {string=} opt_tests The JSON file if necessary for testing.
  */
-sre.SpeechTest = function(opt_tests) {
-  sre.SpeechTest.base(this, 'constructor', opt_tests ? opt_tests: '');
+sre.SpeechTest = function() {
+  sre.SpeechTest.base(this, 'constructor');
 
   /**
    * @type {string}
@@ -249,7 +248,7 @@ sre.SpeechTest.prototype.prepare = function() {
   }
 };
 
-// TODO: Make a non-abstract class.
+
 /**
  * @override
  */

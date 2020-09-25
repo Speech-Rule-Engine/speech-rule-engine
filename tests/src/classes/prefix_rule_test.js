@@ -30,10 +30,9 @@ goog.require('sre.SpeechGeneratorUtil');
 /**
  * @constructor
  * @extends {sre.SpeechTest}
- * @param {string=} opt_tests The JSON file if necessary for testing.
  */
-sre.PrefixRuleTest = function(opt_tests) {
-  sre.PrefixRuleTest.base(this, 'constructor', opt_tests ? opt_tests: '');
+sre.PrefixRuleTest = function() {
+  sre.PrefixRuleTest.base(this, 'constructor');
 
   /**
    * @override

@@ -27,10 +27,9 @@ goog.require('sre.SpeechTest');
 /**
  * @constructor
  * @extends {sre.SpeechTest}
- * @param {string=} opt_tests The JSON file if necessary for testing.
  */
-sre.ClearspeakRuleTest = function(opt_tests) {
-  sre.ClearspeakRuleTest.base(this, 'constructor', opt_tests ? opt_tests: '');
+sre.ClearspeakRuleTest = function() {
+  sre.ClearspeakRuleTest.base(this, 'constructor');
 
   /**
    * @override
