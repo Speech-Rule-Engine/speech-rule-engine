@@ -4,6 +4,7 @@
   "base": "input/mathspeak/summary_test.json",
   "information": "Summary Spanish tests.",
   "locale": "es",
+  "domain": "mathspeak",
   "active": "SummarySpanish",
   "exclude": [],
   "tests": {

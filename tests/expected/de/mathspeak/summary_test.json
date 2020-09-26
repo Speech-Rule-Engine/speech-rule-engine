@@ -5,6 +5,7 @@
   "base": "input/mathspeak/summary_test.json",
   "information": "Summary German tests.",
   "locale": "de",
+  "domain": "mathspeak",
   "active": "SummaryGerman",
   "exclude": [],
   "tests": {

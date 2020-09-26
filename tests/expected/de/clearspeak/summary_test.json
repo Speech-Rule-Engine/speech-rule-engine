@@ -1,0 +1,156 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "SummaryGermanTest",
+  "factory": "summary",
+  "base": "input/mathspeak/summary_test.json",
+  "information": "Summary German tests.",
+  "locale": "de",
+  "domain": "clearspeak",
+  "active": "SummaryGerman",
+  "exclude": ["AbstrAddition_brief", "AbstrAddition_sbrief", "AbstrBigop_brief", "AbstrBigop_sbrief", "AbstrBinomial_brief", "AbstrBinomial_sbrief", "AbstrCases_brief", "AbstrCases_sbrief", "AbstrCell_brief", "AbstrCell_sbrief", "AbstrContinuedFraction_brief", "AbstrContinuedFraction_sbrief", "AbstrDeterminant_brief", "AbstrDeterminant_sbrief", "AbstrFraction_brief", "AbstrFraction_sbrief", "AbstrFunction_brief", "AbstrFunction_sbrief", "AbstrIdentifier_brief", "AbstrIdentifier_sbrief", "AbstrInfixop_brief", "AbstrInfixop_sbrief", "AbstrIntegral_brief", "AbstrIntegral_sbrief", "AbstrLim_brief", "AbstrLim_sbrief", "AbstrLine_brief", "AbstrLine_sbrief", "AbstrMatrix_brief", "AbstrMatrix_sbrief", "AbstrMixedNumber_brief", "AbstrMixedNumber_sbrief", "AbstrMultiplication_brief", "AbstrMultiplication_sbrief", "AbstrMultirel_brief", "AbstrMultirel_sbrief", "AbstrNumber_brief", "AbstrNumber_sbrief", "AbstrPunctuated_brief", "AbstrPunctuated_sbrief", "AbstrRelation_brief", "AbstrRelation_sbrief", "AbstrRelationSeq_brief", "AbstrRelationSeq_sbrief", "AbstrRoot_brief", "AbstrRoot_sbrief", "AbstrRootNested_brief", "AbstrRootNested_sbrief", "AbstrRow_brief", "AbstrRow_sbrief", "AbstrRowvector_brief", "AbstrRowvector_sbrief", "AbstrSqrt_brief", "AbstrSqrt_sbrief", "AbstrSqrtNested_brief", "AbstrSqrtNested_sbrief", "AbstrSquarematrix_brief", "AbstrSquarematrix_sbrief", "AbstrSubscript_brief", "AbstrSubscript_sbrief", "AbstrSubsup_brief", "AbstrSubsup_sbrief", "AbstrSuperscript_brief", "AbstrSuperscript_sbrief", "AbstrTable_brief", "AbstrTable_sbrief", "AbstrText_brief", "AbstrText_sbrief", "AbstrVarAddition_brief", "AbstrVarAddition_sbrief", "AbstrVarCases_brief", "AbstrVarCases_sbrief", "AbstrVarDeterminant_brief", "AbstrVarDeterminant_sbrief", "AbstrVarMatrix_brief", "AbstrVarMatrix_sbrief", "AbstrVarMultiplication_brief", "AbstrVarMultiplication_sbrief", "AbstrVarMultirel_brief", "AbstrVarMultirel_sbrief", "AbstrVarPunctuated_brief", "AbstrVarPunctuated_sbrief", "AbstrVarRelation_brief", "AbstrVarRelation_sbrief", "AbstrVarVector_brief", "AbstrVarVector_sbrief", "AbstrVector_brief", "AbstrVector_sbrief"],
+  "tests": {
+    "AbstrAddition_default": {
+      "expected": "Summe mit 2 Summanden"
+    },
+    "AbstrBigop_default": {
+      "expected": "Summe"
+    },
+    "AbstrBinomial_default": {
+      "expected": "Binomialkoeffizient"
+    },
+    "AbstrCases_default": {
+      "expected": "Fallunterscheidung mit 2 Fällen"
+    },
+    "AbstrCell_default": {
+      "steps": [
+        "DOWN",
+        "DOWN"
+      ],
+      "expected": "1. Spalte in Tabelle"
+    },
+    "AbstrContinuedFraction_default": {
+      "expected": "Kettenbruch"
+    },
+    "AbstrDeterminant_default": {
+      "expected": "2 dimensionale Determinante"
+    },
+    "AbstrFraction_default": {
+      "expected": "Bruch"
+    },
+    "AbstrFunction_default": {
+      "_comment2_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "Funktionsausdruck"
+    },
+    "AbstrIdentifier_default": {
+      "expected": "Bezeichner"
+    },
+    "AbstrInfixop_default": {
+      "expected": "Division mit 2 Elementen"
+    },
+    "AbstrIntegral_default": {
+      "expected": "Integral"
+    },
+    "AbstrLim_default": {
+      "expected": "Grenzwertfunktion"
+    },
+    "AbstrLine_default": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1. Zeile in mehrzeiligem Ausdruck"
+    },
+    "AbstrMatrix_default": {
+      "expected": "3 mal 2 Matrize"
+    },
+    "AbstrMixedNumber_default": {
+      "expected": "gemischter Bruch"
+    },
+    "AbstrMultiplication_default": {
+      "expected": "Produkt mit 2 Faktoren"
+    },
+    "AbstrMultirel_default": {
+      "expected": "Relationsequenz mit 3 Elementen"
+    },
+    "AbstrNumber_default": {
+      "expected": "Zahl"
+    },
+    "AbstrPunctuated_default": {
+      "expected": "mit Komma getrennte Liste der Länge 3"
+    },
+    "AbstrRelation_default": {
+      "expected": "Gleichung"
+    },
+    "AbstrRelationSeq_default": {
+      "expected": "Gleichungssequenz mit 3 Elementen"
+    },
+    "AbstrRoot_default": {
+      "expected": "Wurzel mit Exponent 3"
+    },
+    "AbstrRootNested_default": {
+      "expected": "verschachtelte Wurzel mit Exponent 3"
+    },
+    "AbstrRow_default": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1. Zeile in Tabelle mit 2 Spalten"
+    },
+    "AbstrRowvector_default": {
+      "expected": "2 dimensionaler Zeilenvektor"
+    },
+    "AbstrSqrt_default": {
+      "expected": "Quadratwurzel"
+    },
+    "AbstrSqrtNested_default": {
+      "expected": "verschachtelte Quadratwurzel"
+    },
+    "AbstrSquarematrix_default": {
+      "expected": "2 dimensionale quadratische Matrize"
+    },
+    "AbstrSubscript_default": {
+      "expected": "Index"
+    },
+    "AbstrSubsup_default": {
+      "expected": "Potenz mit Index"
+    },
+    "AbstrSuperscript_default": {
+      "expected": "Potenz"
+    },
+    "AbstrTable_default": {
+      "expected": "Tabelle mit 2 Zeilen und 2 Spalten"
+    },
+    "AbstrText_default": {
+      "expected": "Text"
+    },
+    "AbstrVarAddition_default": {
+      "expected": "Summe mit veränderlicher Anzahl an Summanden"
+    },
+    "AbstrVarCases_default": {
+      "expected": "Fallunterscheidung mit veränderlicher Anzahl an Fällen"
+    },
+    "AbstrVarDeterminant_default": {
+      "expected": "n dimensionale Determinante"
+    },
+    "AbstrVarMatrix_default": {
+      "expected": "n mal m dimensionale Matrize"
+    },
+    "AbstrVarMultiplication_default": {
+      "expected": "Produkt mit veränderlicher Anzahl an Faktoren"
+    },
+    "AbstrVarMultirel_default": {
+      "expected": "Relationsequenz mit veränderlicher Anzahl an Elementen"
+    },
+    "AbstrVarPunctuated_default": {
+      "expected": "mit Komma getrennte Liste veränderlicher Länge"
+    },
+    "AbstrVarRelation_default": {
+      "expected": "Gleichungssequenz mit veränderlicher Anzahl an Elementen"
+    },
+    "AbstrVarVector_default": {
+      "expected": "n dimensionaler Vektor"
+    },
+    "AbstrVector_default": {
+      "expected": "3 dimensionaler Vektor"
+    }
+  }
+}

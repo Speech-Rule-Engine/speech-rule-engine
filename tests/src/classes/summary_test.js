@@ -41,11 +41,6 @@ sre.SummaryTest = function() {
   /**
    * @override
    */
-  this.domain = 'mathspeak';
-
-  /**
-   * @override
-   */
   this.modality = 'summary';
 
   /**
