@@ -144,23 +144,22 @@ sre.TestRunner.prototype.runTests = function() {
 sre.TestRunner.prototype.executeJsonTests = function(testcase) {
   try {
     testcase.prepare();
-    this.outputLine(1, 'Running ' + testcase.information);
   } catch (e) {
     if (e.message.match(/Bad\ filename/)) {
       this.status_ = sre.TestRunner.Results.FAIL;
       this.failedTests_.push(e.message + ' ' + e.value);
       return;
     }
-    this.outputLine(1, 'Running ' + testcase.information);
-    if (this.warn) {
-      for (var warn of e.value) {
-        this.outputStart('No results specified for test: ' + warn);
-        this.outputEnd(2, '[WARN]', sre.TestRunner.color_.ORANGE);
-        this.warningTests_.push(warn);
-      }
-      if (this.warn == sre.TestRunner.Warning.ERROR) {
-        this.status_ = sre.TestRunner.Results.FAIL;
-      }
+  }
+  this.outputLine(1, 'Running ' + testcase.information);
+  if (this.warn && testcase.warn.length) {
+    for (var warn of testcase.warn) {
+      this.outputStart('No results specified for test: ' + warn);
+      this.outputEnd(2, '[WARN]', sre.TestRunner.color_.ORANGE);
+      this.warningTests_.push(warn);
+    }
+    if (this.warn == sre.TestRunner.Warning.ERROR) {
+      this.status_ = sre.TestRunner.Results.FAIL;
     }
   }
   testcase.setUpTest();

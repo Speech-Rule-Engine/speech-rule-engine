@@ -34,7 +34,6 @@ goog.require('sre.SemanticTree');
 goog.require('sre.SemanticUtil');
 goog.require('sre.System');
 goog.require('sre.SystemExternal');
-goog.require('sre.TestUtil');
 goog.require('sre.WalkerUtil');
 
 
@@ -48,23 +47,6 @@ sre.SemanticTest = function() {
   sre.SemanticTest.base(this, 'constructor');
 };
 goog.inherits(sre.SemanticTest, sre.AbstractExamples);
-
-
-/**
- * @override
- */
-sre.SemanticTest.prototype.prepare = function() {
-  sre.SemanticTest.base(this, 'prepare');
-  var tests = sre.TestUtil.combineTests(
-      this.baseTests.tests || {},
-      this.jsonTests.tests || {},
-      this.jsonTests.exclude || []
-      );
-  this.inputTests = tests[0];
-  if (tests[1].length) {
-    throw new sre.TestUtil.Error('Missing Results', tests[1]);
-  }
-};
 
 
 /**

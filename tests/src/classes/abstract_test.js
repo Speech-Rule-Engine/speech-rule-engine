@@ -71,7 +71,7 @@ sre.AbstractJsonTest = function() {
   sre.AbstractJsonTest.base(this, 'constructor');
 
   /**
-   * @type {string}
+   * @type {!string}
    */
   this.jsonFile = '';
 
@@ -81,7 +81,7 @@ sre.AbstractJsonTest = function() {
   this.jsonTests = null;
 
   /**
-   * @type {string}
+   * @type {!string}
    */
   this.baseFile = '';
 
@@ -96,9 +96,14 @@ sre.AbstractJsonTest = function() {
   this.inputTests = [];
 
   /**
-   * @type {Array.<string>}
+   * @type {!Array.<string>}
    */
   this.pickFields = ['input', 'expected'];
+
+  /**
+   * @type {!Array.<string>}
+   */
+  this.warn = [];
 
 };
 goog.inherits(sre.AbstractJsonTest, sre.AbstractTest);
@@ -132,4 +137,10 @@ sre.AbstractJsonTest.prototype.prepare = function() {
   let file = this.jsonTests['base'];
   this.baseFile = sre.TestUtil.fileExists(file, sre.TestUtil.path.INPUT);
   this.baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : {};
+  var input = this.baseTests.tests || {};
+  var output = this.jsonTests.tests || {};
+  var exclude = this.jsonTests.exclude || [];
+  let tests = sre.TestUtil.combineTests(input, output, exclude);
+  this.inputTests = tests[0];
+  this.warn = tests[1];
 };

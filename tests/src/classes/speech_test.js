@@ -24,7 +24,6 @@ goog.provide('sre.SpeechTest');
 
 goog.require('sre.AbstractExamples');
 goog.require('sre.DynamicCstr');
-goog.require('sre.TestUtil');
 
 
 
@@ -239,14 +238,6 @@ sre.SpeechTest.prototype.prepare = function() {
   this.compare = this.jsonTests.compare || this.compare;
   if (this.jsonTests.active) {
     this.setActive(this.jsonTests.active);
-  }
-  var input = this.baseTests.tests || {};
-  var output = this.jsonTests.tests || {};
-  var exclude = this.jsonTests.exclude || [];
-  let tests = sre.TestUtil.combineTests(input, output, exclude);
-  this.inputTests = tests[0];
-  if (tests[1].length) {
-    throw new sre.TestUtil.Error('Missing Results', tests[1]);
   }
 };
 
