@@ -1,0 +1,450 @@
+{
+  "domain": "mathspeak",
+  "tests": {
+    "MathspeakRoots_0": {
+      "test": true,
+      "input": "<msqrt><mi>a</mi></msqrt>",
+      "preference": "default"
+    },
+    "MathspeakRoots_1": {
+      "test": true,
+      "input": "<mroot><mi>a</mi><mn>2</mn></mroot>",
+      "preference": "default"
+    },
+    "MathspeakRoots_2": {
+      "test": true,
+      "input": "<mroot><mi>a</mi><mn>3</mn></mroot>",
+      "preference": "default"
+    },
+    "MathspeakRoots_3": {
+      "test": true,
+      "input": "<mroot><mi>a</mi><mn>4</mn></mroot>",
+      "preference": "default"
+    },
+    "MathspeakRoots_4": {
+      "test": true,
+      "input": "<msqrt><msqrt><mi>a</mi></msqrt></msqrt>",
+      "preference": "default"
+    },
+    "MathspeakRoots_5": {
+      "test": true,
+      "input": "<msqrt><msqrt><msqrt><mi>a</mi></msqrt></msqrt></msqrt>",
+      "preference": "default"
+    },
+    "MathspeakRoots_6": {
+      "test": true,
+      "input": "<mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot>",
+      "preference": "default"
+    },
+    "MathspeakRoots_7": {
+      "test": true,
+      "input": "<mroot><mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>2</mn></mroot><mn>2</mn></mroot>",
+      "preference": "default"
+    },
+    "MathspeakRoots_8": {
+      "test": true,
+      "input": "<mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot>",
+      "preference": "default"
+    },
+    "MathspeakRoots_9": {
+      "test": true,
+      "input": "<mroot><mroot><mroot><mi>a</mi><mn>3</mn></mroot><mn>3</mn></mroot><mn>3</mn></mroot>",
+      "preference": "default"
+    },
+    "MathspeakRoots_10": {
+      "test": true,
+      "input": "<mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot>",
+      "preference": "default"
+    },
+    "MathspeakRoots_11": {
+      "test": true,
+      "input": "<mroot><mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>4</mn></mroot><mn>4</mn></mroot>",
+      "preference": "default"
+    },
+    "MathspeakRoots_12": {
+      "test": true,
+      "input": "<mroot><mroot><mroot><mi>a</mi><mn>4</mn></mroot><mn>3</mn></mroot><mn>2</mn></mroot>",
+      "preference": "default"
+    },
+    "MathspeakRoots_13": {
+      "test": true,
+      "input": "<mroot><mroot><mroot><mi>a</mi><mn>2</mn></mroot><mn>3</mn></mroot><mn>4</mn></mroot>",
+      "preference": "default"
+    },
+    "HtmlEntities_0": {
+      "test": true,
+      "input": "<mo>&lt;</mo>",
+      "preference": "default"
+    },
+    "HtmlEntities_1": {
+      "test": true,
+      "input": "<mo>&gt;</mo>",
+      "preference": "default"
+    },
+    "HtmlEntities_2": {
+      "test": true,
+      "input": "<mi>n&nbsp;</mi>",
+      "preference": "default"
+    },
+    "HtmlEntities_3": {
+      "test": true,
+      "input": "<mi>&nbsp;m</mi>",
+      "preference": "default"
+    },
+    "HtmlEntities_4": {
+      "test": true,
+      "input": "<mi>n&nbsp;m</mi>",
+      "preference": "default"
+    },
+    "HtmlEntities_5": {
+      "test": true,
+      "input": "<mi>&nbsp;&nbsp;n&nbsp;&nbsp;m&nbsp;&nbsp;</mi>",
+      "preference": "default"
+    },
+    "BinomialFromFrac_0": {
+      "test": true,
+      "input": "<mfenced><mfrac linethickness=\"0pt\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "preference": "default"
+    },
+    "BinomialFromFrac_1": {
+      "test": true,
+      "input": "<mfenced><mfrac linethickness=\"0.0em\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "preference": "default"
+    },
+    "BinomialFromFrac_2": {
+      "test": true,
+      "input": "<mfenced><mfrac linethickness=\"negativeverythinmathspace\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "preference": "default"
+    },
+    "BinomialFromFrac_3": {
+      "test": true,
+      "input": "<mfenced><mfrac linethickness=\"verythinmathspace\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "preference": "default"
+    },
+    "BinomialFromFrac_4": {
+      "test": true,
+      "input": "<mfenced><mfrac linethickness=\"1pt\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "preference": "default"
+    },
+    "BinomialFromFrac_5": {
+      "test": true,
+      "input": "<mfenced><mfrac linethickness=\"0.5pt\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "preference": "default"
+    },
+    "UnnecessarySpaces_0": {
+      "test": true,
+      "input": "<mn> 5 </mn>",
+      "preference": "default"
+    },
+    "UnnecessarySpaces_1": {
+      "test": true,
+      "input": "<mn> &nbsp; 5 &nbsp; </mn>",
+      "preference": "default"
+    },
+    "AbsValueVsNeutral_0": {
+      "test": true,
+      "input": "<mo>｜</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "AbsValueVsNeutral_1": {
+      "test": true,
+      "input": "<mo>‖</mo><mi>a</mi><mo>‖</mo>",
+      "preference": "default"
+    },
+    "AbsValueVsNeutral_2": {
+      "test": true,
+      "input": "<mo>¦</mo><mi>a</mi><mo>¦</mo>",
+      "preference": "default"
+    },
+    "NegativeVulgarFraction_0": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>",
+      "preference": "default"
+    },
+    "NegativeVulgarFraction_1": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>5.2</mn><mi>a</mi></mfrac>",
+      "preference": "default"
+    },
+    "NegativeVulgarFraction_2": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>5.2</mn><mn>18</mn></mfrac>",
+      "preference": "default"
+    },
+    "TrivialStuff_0": {
+      "test": true,
+      "input": "<mtext>a</mtext><mo>=</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "TrivialStuff_1": {
+      "test": true,
+      "input": "<mo>\"</mo>",
+      "preference": "default"
+    },
+    "TrivialStuff_2": {
+      "test": true,
+      "input": "<mo>\"</mo><mi>x</mi><mo>\"</mo>",
+      "preference": "default"
+    },
+    "TrivialStuff_3": {
+      "test": true,
+      "input": "<mo>'</mo>",
+      "preference": "default"
+    },
+    "GermanFonts_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"fraktur\">A</mi>",
+      "preference": "default"
+    },
+    "GermanFonts_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-fraktur\">A</mi>",
+      "preference": "default"
+    },
+    "GermanFonts_2": {
+      "test": true,
+      "input": "<mi>&#x1D504;</mi>",
+      "preference": "default"
+    },
+    "GermanFonts_3": {
+      "test": true,
+      "input": "<mi>&#x1D56C;</mi>",
+      "preference": "default"
+    },
+    "GermanFonts_4": {
+      "test": true,
+      "input": "<mtext mathvariant=\"bold-fraktur\">abc</mtext>",
+      "preference": "default"
+    },
+    "GermanFonts_5": {
+      "test": true,
+      "input": "<mtext mathvariant=\"bold-fraktur\">ABC</mtext>",
+      "preference": "default"
+    },
+    "GermanFonts_6": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-fraktur\">ABC</mi>",
+      "preference": "default"
+    },
+    "OtherFonts_0": {
+      "test": true,
+      "input": "<mi>m</mi>",
+      "preference": "default"
+    },
+    "OtherFonts_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">m</mi>",
+      "preference": "default"
+    },
+    "OtherFonts_2": {
+      "test": true,
+      "input": "<mi>mi</mi>",
+      "preference": "default"
+    },
+    "OtherFonts_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">mi</mi>",
+      "preference": "default"
+    },
+    "OtherFonts_4": {
+      "test": true,
+      "input": "<mi>30</mi>",
+      "preference": "default"
+    },
+    "OtherFonts_5": {
+      "test": true,
+      "input": "<mi>3</mi>",
+      "preference": "default"
+    },
+    "OtherFonts_6": {
+      "test": true,
+      "input": "<mi>30°</mi>",
+      "preference": "default"
+    },
+    "OtherFonts_7": {
+      "test": true,
+      "input": "<mi>30mA</mi>",
+      "preference": "default"
+    },
+    "Multiline_0": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "preference": "default"
+    },
+    "Multiline_1": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>",
+      "preference": "default"
+    },
+    "RelationsWithEmpty_0": {
+      "test": true,
+      "input": "<mo>&#x2264;</mo><mn>2</mn>",
+      "preference": "default"
+    },
+    "RelationsWithEmpty_1": {
+      "test": true,
+      "input": "<mo>=</mo><mn>2</mn><mo>=</mo>",
+      "preference": "default"
+    },
+    "RelationsWithEmpty_2": {
+      "test": true,
+      "input": "<mo>&#x2264;</mo><mn>2</mn><mo>=</mo>",
+      "preference": "default"
+    },
+    "RelationsWithEmpty_3": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mn>1</mn></mtd><mtd><mi></mi><mo>&#x2264;</mo><mn>2</mn></mtd></mtr></mtable>",
+      "preference": "default"
+    },
+    "EncloseGeneral": {
+      "test": true,
+      "input": "<menclose notation=\"circle\"><mi>a</mi></menclose>",
+      "preference": "default"
+    },
+    "EncloseLeftbar": {
+      "test": true,
+      "input": "<menclose notation=\"left\"><mi>a</mi></menclose>",
+      "preference": "default"
+    },
+    "EncloseRightbar": {
+      "test": true,
+      "input": "<menclose notation=\"right\"><mi>a</mi></menclose>",
+      "preference": "default"
+    },
+    "LatinMathfonts_0": {
+      "test": true,
+      "input": "<mi>&#x1D504;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_1": {
+      "test": true,
+      "input": "<mi>&#x1D56C;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_2": {
+      "test": true,
+      "input": "<mi>&#x1D4D0;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_3": {
+      "test": true,
+      "input": "<mi>&#x1D468;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_4": {
+      "test": true,
+      "input": "<mi>&#x1D400;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_5": {
+      "test": true,
+      "input": "<mi>&#x1D538;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_6": {
+      "test": true,
+      "input": "<mi>&#x1D434;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_7": {
+      "test": true,
+      "input": "<mi>&#x1D670;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_8": {
+      "test": true,
+      "input": "<mi>&#x1D5D4;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_9": {
+      "test": true,
+      "input": "<mi>&#x1D608;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_10": {
+      "test": true,
+      "input": "<mi>&#x1D63C;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_11": {
+      "test": true,
+      "input": "<mi>&#x1D5A0;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfonts_12": {
+      "test": true,
+      "input": "<mi>&#x1D49C;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfonts_0": {
+      "test": true,
+      "input": "<mi>&#x1D6A8;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfonts_1": {
+      "test": true,
+      "input": "<mi>&#x1D6E2;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfonts_2": {
+      "test": true,
+      "input": "<mi>&#x1D71C;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfonts_3": {
+      "test": true,
+      "input": "<mi>&#x1D756;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfonts_4": {
+      "test": true,
+      "input": "<mi>&#x1D790;</mi>",
+      "preference": "default"
+    },
+    "Issue279_0": {
+      "test": true,
+      "input": "<mtext>&#xA0;</mtext><mtext>&#xA0;</mtext>",
+      "preference": "default"
+    },
+    "Issue279_1": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mtext>(3.1.10)</mtext></mtd><mtd><mrow><mglyph src=\"Images/img2354b563c08bcdd40777a6bbee95ac36.svg\" width=\"148pt\" height=\"16pt\"></mglyph></mrow><mrow id=\"texmlid28\" /></mtd></mlabeledtr></mtable>",
+      "preference": "default"
+    },
+    "Issue320_0": {
+      "test": true,
+      "input": "<mo>∂</mo>",
+      "preference": "default"
+    },
+    "Issue320_1": {
+      "test": true,
+      "input": "<mi>x</mi><mo>!</mo>",
+      "preference": "default"
+    },
+    "Issue320_2": {
+      "test": true,
+      "input": "<mo>-</mo><mo>-</mo><mi>x</mi>",
+      "preference": "default"
+    },
+    "Issue320_3": {
+      "test": true,
+      "input": "<mo>+</mo><mo>+</mo><mi>x</mi>",
+      "preference": "default"
+    },
+    "Issue320_4": {
+      "test": true,
+      "input": "<mi>sin</mi><mi>sin</mi><mi>x</mi>",
+      "preference": "default"
+    },
+    "Issue320_5": {
+      "test": true,
+      "input": "<mo>∂</mo><mo>∂</mo><mi>x</mi>",
+      "preference": "default"
+    },
+    "Issue320_6": {
+      "test": true,
+      "input": "<mrow><mrow><mo>(</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac><mo>)</mo></mrow><msup><mrow><mo minsize=\"150%\">|</mo><mi>φ <!-- \u000barphi --></mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mi mathvariant=\"normal\">i</mi><mi>y</mi><mo stretchy=\"false\">)</mo><mo minsize=\"150%\">|</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>0</mn></mrow>",
+      "preference": "default"
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "name": "MathAlphabetsTest",
+  "factory": "speech",
+  "base": "input/base/math_alphabets_test.json",
+  "information": "Math Alphabets tests.",
+  "domain": "default",
+  "active": "MathAlphabets",
+  "exclude": [],
+  "tests": {
+    "LowerPlaneLatin_0": {
+      "expected": "double struck cap C"
+    },
+    "LowerPlaneLatin_1": {
+      "expected": "script g"
+    },
+    "LowerPlaneLatin_2": {
+      "expected": "script cap H"
+    },
+    "LowerPlaneLatin_3": {
+      "expected": "fraktur cap H"
+    },
+    "LowerPlaneLatin_4": {
+      "expected": "double struck cap H"
+    },
+    "LowerPlaneLatin_5": {
+      "expected": "h"
+    },
+    "LowerPlaneLatin_6": {
+      "expected": "script cap I"
+    },
+    "LowerPlaneLatin_7": {
+      "expected": "fraktur cap I"
+    },
+    "LowerPlaneLatin_8": {
+      "expected": "script cap L"
+    },
+    "LowerPlaneLatin_9": {
+      "expected": "double struck cap N"
+    },
+    "LowerPlaneLatin_10": {
+      "expected": "double struck cap P"
+    },
+    "LowerPlaneLatin_11": {
+      "expected": "double struck cap Q"
+    },
+    "LowerPlaneLatin_12": {
+      "expected": "script cap R"
+    },
+    "LowerPlaneLatin_13": {
+      "expected": "fraktur cap R"
+    },
+    "LowerPlaneLatin_14": {
+      "expected": "double struck cap R"
+    },
+    "LowerPlaneLatin_15": {
+      "expected": "double struck cap Z"
+    },
+    "LowerPlaneLatin_16": {
+      "expected": "fraktur cap Z"
+    },
+    "LowerPlaneLatin_17": {
+      "expected": "script cap B"
+    },
+    "LowerPlaneLatin_18": {
+      "expected": "fraktur cap C"
+    },
+    "LowerPlaneLatin_19": {
+      "expected": "script e"
+    },
+    "LowerPlaneLatin_20": {
+      "expected": "script cap E"
+    },
+    "LowerPlaneLatin_21": {
+      "expected": "script cap F"
+    },
+    "LowerPlaneLatin_22": {
+      "expected": "script cap M"
+    },
+    "LowerPlaneLatin_23": {
+      "expected": "script o"
+    },
+    "OtherCharacters_0": {
+      "expected": "script l"
+    },
+    "OtherCharacters_1": {
+      "expected": "script cap P"
+    },
+    "OtherCharacters_2": {
+      "expected": "double struck pi"
+    },
+    "OtherCharacters_3": {
+      "expected": "double struck gamma"
+    },
+    "OtherCharacters_4": {
+      "expected": "double struck cap Gamma"
+    },
+    "OtherCharacters_5": {
+      "expected": "double struck cap Pi"
+    },
+    "OtherCharacters_6": {
+      "expected": "double struck sum"
+    },
+    "OtherCharacters_7": {
+      "expected": "double struck italic cap D"
+    },
+    "OtherCharacters_8": {
+      "expected": "double struck italic d"
+    },
+    "OtherCharacters_9": {
+      "expected": "double struck italic e"
+    },
+    "OtherCharacters_10": {
+      "expected": "double struck italic i"
+    },
+    "OtherCharacters_11": {
+      "expected": "double struck italic j"
+    },
+    "OtherCharacters_12": {
+      "expected": "italic dotless i"
+    },
+    "OtherCharacters_13": {
+      "expected": "italic dotless j"
+    },
+    "UpperPlaneAlphabetsCaps_0": {
+      "expected": "bold fraktur cap A"
+    },
+    "UpperPlaneAlphabetsCaps_1": {
+      "expected": "bold cap A"
+    },
+    "UpperPlaneAlphabetsCaps_2": {
+      "expected": "bold script cap A"
+    },
+    "UpperPlaneAlphabetsCaps_3": {
+      "expected": "double struck cap A"
+    },
+    "UpperPlaneAlphabetsCaps_4": {
+      "expected": "fraktur cap A"
+    },
+    "UpperPlaneAlphabetsCaps_5": {
+      "expected": "italic cap A"
+    },
+    "UpperPlaneAlphabetsCaps_6": {
+      "expected": "monospace cap A"
+    },
+    "UpperPlaneAlphabetsCaps_7": {
+      "expected": "sans serif bold cap A"
+    },
+    "UpperPlaneAlphabetsCaps_8": {
+      "expected": "sans serif italic cap A"
+    },
+    "UpperPlaneAlphabetsCaps_9": {
+      "expected": "sans serif cap A"
+    },
+    "UpperPlaneAlphabetsCaps_10": {
+      "expected": "script cap A"
+    },
+    "UpperPlaneAlphabetsLower_0": {
+      "expected": "bold fraktur a"
+    },
+    "UpperPlaneAlphabetsLower_1": {
+      "expected": "bold a"
+    },
+    "UpperPlaneAlphabetsLower_2": {
+      "expected": "bold script a"
+    },
+    "UpperPlaneAlphabetsLower_3": {
+      "expected": "double struck a"
+    },
+    "UpperPlaneAlphabetsLower_4": {
+      "expected": "fraktur a"
+    },
+    "UpperPlaneAlphabetsLower_5": {
+      "expected": "italic a"
+    },
+    "UpperPlaneAlphabetsLower_6": {
+      "expected": "monospace a"
+    },
+    "UpperPlaneAlphabetsLower_7": {
+      "expected": "sans serif bold a"
+    },
+    "UpperPlaneAlphabetsLower_8": {
+      "expected": "sans serif italic a"
+    },
+    "UpperPlaneAlphabetsLower_9": {
+      "expected": "sans serif a"
+    },
+    "UpperPlaneAlphabetsLower_10": {
+      "expected": "script a"
+    }
+  }
+}

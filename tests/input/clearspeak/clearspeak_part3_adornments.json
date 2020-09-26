@@ -1,0 +1,468 @@
+{
+  "tests": {
+    "_comment1_": " Part 3: Adornments",
+    "_comment2_": " Prime, Double Prime, and Triple Prime",
+    "Prime001": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><msup><mi>A</mi><mo>′</mo></msup><msup><mi>B</mi><mo>′</mo></msup></mrow></math>"
+    },
+    "Prime002": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><msup><mi>A</mi><mo>″</mo></msup><msup><mi>B</mi><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime003": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><msup><mi>A</mi><mo>‴</mo></msup><msup><mi>B</mi><mo>‴</mo></msup></mrow></math>"
+    },
+    "Prime004": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Prime005": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><msup><mi>f</mi><mo>″</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Prime006": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><msup><mi>f</mi><mo>‴</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Prime007": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><msup><mn>1</mn><mo>′</mo></msup></math>"
+    },
+    "Prime008": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><msup><mn>2</mn><mo>′</mo></msup></math>"
+    },
+    "Prime009": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><msup><mn>1</mn><mo>″</mo></msup></math>"
+    },
+    "Prime010": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><msup><mn>2</mn><mo>″</mo></msup></math>"
+    },
+    "Prime011": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><msup><mn>16</mn><mo>′</mo></msup><msup><mn>10</mn><mo>″</mo></msup></mrow></math>"
+    },
+    "_comment3_": " TODO: (Simons) Better handling of degrees.",
+    "Prime012": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup></mrow></math>"
+    },
+    "Prime013": {
+      "test": true,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><mi>x</mi><mo>°</mo><msup><mi>y</mi><mo>′</mo></msup></mrow></math>"
+    },
+    "Prime014": {
+      "test": false,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>25</mn><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime015": {
+      "test": false,
+      "preference": "Prime_Auto",
+      "input": "<math><mrow><mi>x</mi><mo>°</mo><msup><mi>y</mi><mo>′</mo></msup><msup><mi>z</mi><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime016": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><msup><mn>1</mn><mo>′</mo></msup></math>"
+    },
+    "Prime017": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><msup><mi>x</mi><mo>′</mo></msup></math>"
+    },
+    "Prime018": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><msup><mn>2</mn><mo>′</mo></msup></math>"
+    },
+    "Prime019": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><msup><mn>1</mn><mo>″</mo></msup></math>"
+    },
+    "Prime020": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><msup><mi>x</mi><mo>″</mo></msup></math>"
+    },
+    "Prime021": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><msup><mn>2</mn><mo>″</mo></msup></math>"
+    },
+    "Prime022": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><mrow><msup><mn>16</mn><mo>′</mo></msup><msup><mn>10</mn><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime023": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><mrow><msup><mi>x</mi><mo>′</mo></msup><msup><mi>y</mi><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime024": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup></mrow></math>"
+    },
+    "Prime025": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><mrow><mn>45</mn><mo>°</mo><msup><mn>10</mn><mo>′</mo></msup><msup><mn>25</mn><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime026": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><mrow><msup><mi>A</mi><mo>′</mo></msup><msup><mi>B</mi><mo>′</mo></msup></mrow></math>"
+    },
+    "Prime027": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><mrow><msup><mi>A</mi><mo>″</mo></msup><msup><mi>B</mi><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime028": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><mrow><msup><mi>A</mi><mo>‴</mo></msup><msup><mi>B</mi><mo>‴</mo></msup></mrow></math>"
+    },
+    "Prime029": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Prime030": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><mrow><msup><mi>f</mi><mo>″</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Prime031": {
+      "test": true,
+      "preference": "Prime_Angle",
+      "input": "<math><mrow><msup><mi>f</mi><mo>‴</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Prime032": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><msup><mn>1</mn><mo>′</mo></msup></math>"
+    },
+    "Prime033": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><msup><mi>x</mi><mo>′</mo></msup></math>"
+    },
+    "Prime034": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><msup><mn>2</mn><mo>′</mo></msup></math>"
+    },
+    "Prime035": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><msup><mn>1</mn><mo>″</mo></msup></math>"
+    },
+    "Prime036": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><msup><mi>x</mi><mo>″</mo></msup></math>"
+    },
+    "Prime037": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><msup><mn>2</mn><mo>″</mo></msup></math>"
+    },
+    "_comment4_": " TODO: (Simons) Rewrite prime etc into superscript.",
+    "Prime038": {
+      "test": false,
+      "preference": "Prime_Length",
+      "input": "<math><mrow><mn>16</mn><mo>′</mo></msup><mn>10</mn><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime039": {
+      "test": false,
+      "preference": "Prime_Length",
+      "input": "<math><mrow><msup><mi>x</mi><mo>′</mo></msup><msup><mi>y</mi><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime040": {
+      "test": false,
+      "preference": "Prime_Length",
+      "input": "<math><mrow><mn>45</mn><mo>°</mo><mn>10</mn><mo>′</mo></msup></mrow></math>"
+    },
+    "Prime041": {
+      "test": false,
+      "preference": "Prime_Length",
+      "input": "<math><mrow><mn>45</mn><mo>°</mo><mn>10</mn><mo>′</mo></msup><mn>25</mn><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime042": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><mrow><msup><mi>A</mi><mo>′</mo></msup><msup><mi>B</mi><mo>′</mo></msup></mrow></math>"
+    },
+    "Prime043": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><mrow><msup><mi>A</mi><mo>″</mo></msup><msup><mi>B</mi><mo>″</mo></msup></mrow></math>"
+    },
+    "Prime044": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><mrow><msup><mi>A</mi><mo>‴</mo></msup><msup><mi>B</mi><mo>‴</mo></msup></mrow></math>"
+    },
+    "Prime045": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><mrow><msup><mi>f</mi><mo>′</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Prime046": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><mrow><msup><mi>f</mi><mo>″</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Prime047": {
+      "test": true,
+      "preference": "Prime_Length",
+      "input": "<math><mrow><msup><mi>f</mi><mo>‴</mo></msup><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "_comment5_": " Combinations and Permutations",
+    "_comment6_": " These 8 tests come out of the clearspeak documents from MathType.  The MathML",
+    "_comment7_": " has a redundant use of subscripts leaving the actual correct placing of the",
+    "_comment8_": " right index in the multiscript empty.",
+    "_comment9_": " TODO: (Simons) Have a cleanup heuristic to combine multiscripts with",
+    "_comment10_": "                sub/superscripts.",
+    "CombPerm001": {
+      "test": false,
+      "preference": "CombinationPermutation_Auto",
+      "input": "<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mi>n</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow></math>"
+    },
+    "CombPerm002": {
+      "test": false,
+      "preference": "CombinationPermutation_Auto",
+      "input": "<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mi>n</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow></math>"
+    },
+    "CombPerm003": {
+      "test": false,
+      "preference": "CombinationPermutation_Auto",
+      "input": "<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn></msub></mrow></math>"
+    },
+    "CombPerm004": {
+      "test": false,
+      "preference": "CombinationPermutation_Auto",
+      "input": "<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn></msub></mrow></math>"
+    },
+    "CombPerm005": {
+      "test": false,
+      "preference": "CombinationPermutation_ChoosePermute",
+      "input": "<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mi>n</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow></math>"
+    },
+    "CombPerm006": {
+      "test": false,
+      "preference": "CombinationPermutation_ChoosePermute",
+      "input": "<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mi>n</mi><none/></mmultiscripts><msub><mrow/><mi>r</mi></msub></mrow></math>"
+    },
+    "CombPerm007": {
+      "test": false,
+      "preference": "CombinationPermutation_ChoosePermute",
+      "input": "<math><mrow><mmultiscripts><mi>C</mi><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn></msub></mrow></math>"
+    },
+    "CombPerm008": {
+      "test": false,
+      "preference": "CombinationPermutation_ChoosePermute",
+      "input": "<math><mrow><mmultiscripts><mi>P</mi><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts><msub><mrow/><mn>3</mn></msub></mrow></math>"
+    },
+    "_comment11_": " Cleaned up tests with the correct usage of multiscript elements.",
+    "CombPerm001a": {
+      "test": true,
+      "preference": "CombinationPermutation_Auto",
+      "input": "<math><mrow><mmultiscripts><mi>C</mi><mi>r</mi><mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>"
+    },
+    "CombPerm002a": {
+      "test": true,
+      "preference": "CombinationPermutation_Auto",
+      "input": "<math><mrow><mmultiscripts><mi>P</mi><mi>r</mi><mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>"
+    },
+    "CombPerm003a": {
+      "test": true,
+      "preference": "CombinationPermutation_Auto",
+      "input": "<math><mrow><mmultiscripts><mi>C</mi><mn>3</mn><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow></math>"
+    },
+    "CombPerm004a": {
+      "test": true,
+      "preference": "CombinationPermutation_Auto",
+      "input": "<math><mrow><mmultiscripts><mi>P</mi><mn>3</mn><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow></math>"
+    },
+    "CombPerm005a": {
+      "test": true,
+      "preference": "CombinationPermutation_ChoosePermute",
+      "input": "<math><mrow><mmultiscripts><mi>C</mi><mi>r</mi><mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>"
+    },
+    "CombPerm006a": {
+      "test": true,
+      "preference": "CombinationPermutation_ChoosePermute",
+      "input": "<math><mrow><mmultiscripts><mi>P</mi><mi>r</mi><mprescripts/><mi>n</mi><none/></mmultiscripts></mrow></math>"
+    },
+    "CombPerm007a": {
+      "test": true,
+      "preference": "CombinationPermutation_ChoosePermute",
+      "input": "<math><mrow><mmultiscripts><mi>C</mi><mn>3</mn><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow></math>"
+    },
+    "CombPerm008a": {
+      "test": true,
+      "preference": "CombinationPermutation_ChoosePermute",
+      "input": "<math><mrow><mmultiscripts><mi>P</mi><mn>3</mn><mprescripts/><mrow><mn>10</mn></mrow><none/></mmultiscripts></mrow></math>"
+    },
+    "_comment12_": " Bar",
+    "Bar001": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mover accent=\"true\"><mi>f</mi><mo>¯</mo></mover></math>"
+    },
+    "Bar002": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mover accent=\"true\"><mi>f</mi><mo>¯</mo></mover><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Bar003": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mover accent=\"true\"><mrow><msub><mi>f</mi><mn>1</mn></msub></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar004": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mover accent=\"true\"><mrow><msub><mi>f</mi><mn>1</mn></msub></mrow><mo stretchy=\"true\">¯</mo></mover><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow></math>"
+    },
+    "Bar005": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mover accent=\"true\"><mi>z</mi><mo>¯</mo></mover></math>"
+    },
+    "Bar006": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mn>0</mn><mo>.</mo><mover accent=\"true\"><mn>3</mn><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar007": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mn>0</mn><mo>.</mo><mover accent=\"true\"><mrow><mn>12</mn></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar008": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mn>2</mn><mo>.</mo><mover accent=\"true\"><mrow><mn>134</mn></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar009": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mn>.13</mn><mover accent=\"true\"><mrow><mn>467</mn></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar010": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mn>25.12</mn><mover accent=\"true\"><mrow><mn>632</mn></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar011": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mi>z</mi><mtext></mtext><mover accent=\"true\"><mi>z</mi><mo>¯</mo></mover></mrow></math>"
+    },
+    "Bar012": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mover accent=\"true\"><mrow><mi>C</mi><mi>D</mi></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar013": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mover accent=\"true\"><mrow><msup><mi>C</mi><mo>′</mo></msup><msup><mi>D</mi><mo>′</mo></msup></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar014": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mover accent=\"true\"><mrow><msup><mi>C</mi><mo>″</mo></msup><msup><mi>D</mi><mo>″</mo></msup></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar015": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mover accent=\"true\"><mrow><msup><mi>C</mi><mo>‴</mo></msup><msup><mi>D</mi><mo>‴</mo></msup></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar016": {
+      "test": true,
+      "preference": "Bar_Conjugate",
+      "input": "<math><mover accent=\"true\"><mi>z</mi><mo>¯</mo></mover></math>"
+    },
+    "Bar017": {
+      "test": true,
+      "preference": "Bar_Conjugate",
+      "input": "<math><mrow><mi>z</mi><mtext></mtext><mover accent=\"true\"><mi>z</mi><mo>¯</mo></mover></mrow></math>"
+    },
+    "Bar018": {
+      "test": true,
+      "preference": "Bar_Conjugate",
+      "input": "<math><mrow><mover accent=\"true\"><mrow><mn>3</mn><mo>−</mo><mn>2</mn><mi>i</mi></mrow><mo stretchy=\"true\">¯</mo></mover><mo>=</mo><mn>3</mn><mo>+</mo><mn>2</mn><mi>i</mi></mrow></math>"
+    },
+    "_comment13_": " Added! Test that still decimal period still works.",
+    "Bar006a": {
+      "test": true,
+      "preference": "Bar_Conjugate",
+      "input": "<math><mrow><mn>0</mn><mo>.</mo><mover accent=\"true\"><mn>3</mn><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar007a": {
+      "test": true,
+      "preference": "Bar_Conjugate",
+      "input": "<math><mrow><mn>0</mn><mo>.</mo><mover accent=\"true\"><mrow><mn>12</mn></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar008a": {
+      "test": true,
+      "preference": "Bar_Conjugate",
+      "input": "<math><mrow><mn>2</mn><mo>.</mo><mover accent=\"true\"><mrow><mn>134</mn></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar009a": {
+      "test": true,
+      "preference": "Bar_Conjugate",
+      "input": "<math><mrow><mn>.13</mn><mover accent=\"true\"><mrow><mn>467</mn></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "Bar010a": {
+      "test": true,
+      "preference": "Bar_Conjugate",
+      "input": "<math><mrow><mn>25.12</mn><mover accent=\"true\"><mrow><mn>632</mn></mrow><mo stretchy=\"true\">¯</mo></mover></mrow></math>"
+    },
+    "_comment14_": " Equals Sign with Adornments",
+    "Equal001": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mover><mo>=</mo><mrow><mtext>def</mtext></mrow></mover></mrow></math>"
+    },
+    "Equal002": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mrow><mo>(</mo><mrow><mi>f</mi><mo>∘</mo><mi>g</mi></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mover><mo>=</mo><mrow><mtext>def</mtext></mrow></mover><mi>f</mi><mrow><mo>(</mo><mrow><mi>g</mi><mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mrow><mo>)</mo></mrow></mrow></math>"
+    },
+    "Equal003": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mover><mo>=</mo><mo>?</mo></mover></mrow></math>"
+    },
+    "Equal004": {
+      "test": true,
+      "preference": "Bar_Auto",
+      "input": "<math><mrow><mi>x</mi><mo>+</mo><mn>2</mn><mover><mo>=</mo><mo>?</mo></mover><mn>4</mn></mrow></math>"
+    }
+  }
+}

@@ -1,0 +1,350 @@
+{
+  "domain": "mathspeak",
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "test": true,
+      "input": "<mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "default"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "test": true,
+      "input": "<mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "brief"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "test": true,
+      "input": "<mo>|</mo><mi>a</mi><mo>|</mo>",
+      "preference": "sbrief"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "test": true,
+      "input": "<mo>｜</mo><mi>a</mi><mo>｜</mo>",
+      "preference": "default"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "test": true,
+      "input": "<mo>｜</mo><mi>a</mi><mo>｜</mo>",
+      "preference": "brief"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "test": true,
+      "input": "<mo>｜</mo><mi>a</mi><mo>｜</mo>",
+      "preference": "sbrief"
+    },
+    "NegativeVulgarFraction_default": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>",
+      "preference": "default"
+    },
+    "NegativeVulgarFraction_brief": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>",
+      "preference": "brief"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>5</mn><mn>18</mn></mfrac>",
+      "preference": "sbrief"
+    },
+    "NonalphaIdentifier_default": {
+      "test": true,
+      "input": "<mi>30°</mi>",
+      "preference": "default"
+    },
+    "NonalphaIdentifier_brief": {
+      "test": true,
+      "input": "<mi>30°</mi>",
+      "preference": "brief"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "test": true,
+      "input": "<mi>30°</mi>",
+      "preference": "sbrief"
+    },
+    "MixedIdentifier_default": {
+      "test": true,
+      "input": "<mrow><mi mathvariant=\"normal\">Si</mi><msub><mi mathvariant=\"normal\">O</mi><mn>2</mn></msub><mo>+</mo><mn>6</mn><mi mathvariant=\"normal\">H</mi><mi mathvariant=\"normal\">F</mi><mo>&#x2192;</mo><msub><mi mathvariant=\"normal\">H</mi><mn>2</mn></msub><mi mathvariant=\"normal\">Si</mi><msub><mi mathvariant=\"normal\">F</mi><mn>6</mn></msub><mo>+</mo><mn>2</mn><msub><mi mathvariant=\"normal\">H</mi><mn>2</mn></msub><mi mathvariant=\"normal\">O</mi></mrow>",
+      "preference": "default"
+    },
+    "MixedIdentifier_brief": {
+      "test": true,
+      "input": "<mrow><mi mathvariant=\"normal\">Si</mi><msub><mi mathvariant=\"normal\">O</mi><mn>2</mn></msub><mo>+</mo><mn>6</mn><mi mathvariant=\"normal\">H</mi><mi mathvariant=\"normal\">F</mi><mo>&#x2192;</mo><msub><mi mathvariant=\"normal\">H</mi><mn>2</mn></msub><mi mathvariant=\"normal\">Si</mi><msub><mi mathvariant=\"normal\">F</mi><mn>6</mn></msub><mo>+</mo><mn>2</mn><msub><mi mathvariant=\"normal\">H</mi><mn>2</mn></msub><mi mathvariant=\"normal\">O</mi></mrow>",
+      "preference": "brief"
+    },
+    "MixedIdentifier_sbrief": {
+      "test": true,
+      "input": "<mrow><mi mathvariant=\"normal\">Si</mi><msub><mi mathvariant=\"normal\">O</mi><mn>2</mn></msub><mo>+</mo><mn>6</mn><mi mathvariant=\"normal\">H</mi><mi mathvariant=\"normal\">F</mi><mo>&#x2192;</mo><msub><mi mathvariant=\"normal\">H</mi><mn>2</mn></msub><mi mathvariant=\"normal\">Si</mi><msub><mi mathvariant=\"normal\">F</mi><mn>6</mn></msub><mo>+</mo><mn>2</mn><msub><mi mathvariant=\"normal\">H</mi><mn>2</mn></msub><mi mathvariant=\"normal\">O</mi></mrow>",
+      "preference": "sbrief"
+    },
+    "ParenSuper_default": {
+      "test": true,
+      "input": "<mo>(</mo><mi>a</mi><msup><mo>)</mo><mn>2</mn></msup>",
+      "preference": "default"
+    },
+    "ParenSuper_brief": {
+      "test": true,
+      "input": "<mo>(</mo><mi>a</mi><msup><mo>)</mo><mn>2</mn></msup>",
+      "preference": "brief"
+    },
+    "ParenSuper_sbrief": {
+      "test": true,
+      "input": "<mo>(</mo><mi>a</mi><msup><mo>)</mo><mn>2</mn></msup>",
+      "preference": "sbrief"
+    },
+    "ParenConvoluted_default": {
+      "test": true,
+      "input": "<mo>(</mo><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup><mo>/2)</mo>",
+      "preference": "default"
+    },
+    "ParenConvoluted_brief": {
+      "test": true,
+      "input": "<mo>(</mo><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup><mo>/2)</mo>",
+      "preference": "brief"
+    },
+    "ParenConvoluted_sbrief": {
+      "test": true,
+      "input": "<mo>(</mo><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup><mo>/2)</mo>",
+      "preference": "sbrief"
+    },
+    "SupBaseRelseq_default": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>",
+      "preference": "default"
+    },
+    "SupBaseRelseq_brief": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>",
+      "preference": "brief"
+    },
+    "SupBaseRelseq_sbrief": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>",
+      "preference": "sbrief"
+    },
+    "SupBaseMultirel_default": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>",
+      "preference": "default"
+    },
+    "SupBaseMultirel_brief": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>",
+      "preference": "brief"
+    },
+    "SupBaseMultirel_sbrief": {
+      "test": true,
+      "input": "<mrow><msub><mrow><mi>c</mi></mrow><mrow><mn>1</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup><mo>&#x2264;</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msub><mrow><mi>c</mi></mrow><mrow><mn>2</mn></mrow></msub><msup><mrow><mi>h</mi></mrow><mrow><mn>4</mn><mo>-</mo><mn>2</mn><mi>s</mi></mrow></msup></mrow>",
+      "preference": "sbrief"
+    },
+    "SubBaseRelseq_default": {
+      "test": true,
+      "input": "<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msub><mi>h</mi><mi>s</mi></msub>",
+      "preference": "default"
+    },
+    "SubBaseRelseq_brief": {
+      "test": true,
+      "input": "<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msub><mi>h</mi><mi>s</mi></msub>",
+      "preference": "brief"
+    },
+    "SubBaseRelseq_sbrief": {
+      "test": true,
+      "input": "<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msub><mi>h</mi><mi>s</mi></msub>",
+      "preference": "sbrief"
+    },
+    "SubBaseMultirel_default": {
+      "test": true,
+      "input": "<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msub><mi>h</mi><mi>s</mi></msub>",
+      "preference": "default"
+    },
+    "SubBaseMultirel_brief": {
+      "test": true,
+      "input": "<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msub><mi>h</mi><mi>s</mi></msub>",
+      "preference": "brief"
+    },
+    "SubBaseMultirel_sbrief": {
+      "test": true,
+      "input": "<msub><mi>h</mi><mi>s</mi></msub><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msub><mi>h</mi><mi>s</mi></msub>",
+      "preference": "sbrief"
+    },
+    "SubSuperBaseRelseq_default": {
+      "test": true,
+      "input": "<msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup>",
+      "preference": "default"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "test": true,
+      "input": "<msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup>",
+      "preference": "brief"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "test": true,
+      "input": "<msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>&#x2264;</mo><msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup>",
+      "preference": "sbrief"
+    },
+    "SubSuperBaseMultirel_default": {
+      "test": true,
+      "input": "<msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup>",
+      "preference": "default"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "test": true,
+      "input": "<msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup>",
+      "preference": "brief"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "test": true,
+      "input": "<msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup><mo>&#x2264;</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>T</mi></mrow></mfrac><mo>=</mo><msubsup><mi>h</mi><mi>s</mi><mi>t</mi></msubsup>",
+      "preference": "sbrief"
+    },
+    "SquareWithText_default": {
+      "test": true,
+      "input": "<mrow><mfrac><mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext></mrow><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mrow><mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup></mrow><mrow><msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup></mrow></mfrac></mrow>",
+      "preference": "default"
+    },
+    "SquareWithText_brief": {
+      "test": true,
+      "input": "<mrow><mfrac><mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext></mrow><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mrow><mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup></mrow><mrow><msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup></mrow></mfrac></mrow>",
+      "preference": "brief"
+    },
+    "SquareWithText_sbrief": {
+      "test": true,
+      "input": "<mrow><mfrac><mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext></mrow><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mrow><mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup></mrow><mrow><msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup></mrow></mfrac></mrow>",
+      "preference": "sbrief"
+    },
+    "FootnoteWithText_default": {
+      "test": true,
+      "input": "<mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext><mtext>&#x00A0;</mtext><msup><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext></mrow><mn>1</mn></msup><mtext>&#x00A0;</mtext><msup><mrow><mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup><mtext>&#x00A0;</mtext><msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup></mrow>",
+      "preference": "default"
+    },
+    "FootnoteWithText_brief": {
+      "test": true,
+      "input": "<mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext><mtext>&#x00A0;</mtext><msup><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext></mrow><mn>1</mn></msup><mtext>&#x00A0;</mtext><msup><mrow><mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup><mtext>&#x00A0;</mtext><msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup></mrow>",
+      "preference": "brief"
+    },
+    "FootnoteWithText_sbrief": {
+      "test": true,
+      "input": "<mrow><mtext>area&#x00A0;of&#x00A0;triangle</mtext><mtext>&#x00A0;</mtext><msup><mrow><mtext>area&#x00A0;of&#x00A0;square</mtext></mrow><mn>1</mn></msup><mtext>&#x00A0;</mtext><msup><mrow><mtext>1&#x00A0;unit</mtext></mrow><mn>2</mn></msup><mtext>&#x00A0;</mtext><msup><mrow><mtext>16&#x00A0;units</mtext></mrow><mn>3</mn></msup></mrow>",
+      "preference": "sbrief"
+    },
+    "FootnoteWithSimpleText_default": {
+      "test": true,
+      "input": "<msup><mtext>area&#x00A0;of&#x00A0;triangle</mtext><mn>2</mn></msup>",
+      "preference": "default"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "test": true,
+      "input": "<msup><mtext>area&#x00A0;of&#x00A0;triangle</mtext><mn>2</mn></msup>",
+      "preference": "brief"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "test": true,
+      "input": "<msup><mtext>area&#x00A0;of&#x00A0;triangle</mtext><mn>2</mn></msup>",
+      "preference": "sbrief"
+    },
+    "LabelledRow_default": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>",
+      "preference": "default"
+    },
+    "LabelledRow_brief": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>",
+      "preference": "brief"
+    },
+    "LabelledRow_sbrief": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mlabeledtr></mtable>",
+      "preference": "sbrief"
+    },
+    "LabelledLine_default": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable>",
+      "preference": "default"
+    },
+    "LabelledLine_brief": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable>",
+      "preference": "brief"
+    },
+    "LabelledLine_sbrief": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable>",
+      "preference": "sbrief"
+    },
+    "LabelledEmptyLine_default": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd><mtd></mtd></mlabeledtr></mtable>",
+      "preference": "default"
+    },
+    "LabelledEmptyLine_brief": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd><mtd></mtd></mlabeledtr></mtable>",
+      "preference": "brief"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mi>(1)</mi></mtd><mtd></mtd></mlabeledtr></mtable>",
+      "preference": "sbrief"
+    },
+    "EmptyLine_default": {
+      "test": true,
+      "input": "<mtable><mtr><mtd></mtd></mtr></mtable>",
+      "preference": "default"
+    },
+    "EmptyLine_brief": {
+      "test": true,
+      "input": "<mtable><mtr><mtd></mtd></mtr></mtable>",
+      "preference": "brief"
+    },
+    "EmptyLine_sbrief": {
+      "test": true,
+      "input": "<mtable><mtr><mtd></mtd></mtr></mtable>",
+      "preference": "sbrief"
+    },
+    "TextLabelledLine_default": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable>",
+      "preference": "default"
+    },
+    "TextLabelledLine_brief": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable>",
+      "preference": "brief"
+    },
+    "TextLabelledLine_sbrief": {
+      "test": true,
+      "input": "<mtable><mlabeledtr><mtd><mtext>(1)</mtext></mtd><mtd><mi>a</mi></mtd></mlabeledtr></mtable>",
+      "preference": "sbrief"
+    },
+    "EncloseOverbar_default": {
+      "test": true,
+      "input": "<menclose notation=\"top\"><mi>a</mi></menclose>",
+      "preference": "default"
+    },
+    "EncloseOverbar_brief": {
+      "test": true,
+      "input": "<menclose notation=\"top\"><mi>a</mi></menclose>",
+      "preference": "brief"
+    },
+    "EncloseOverbar_sbrief": {
+      "test": true,
+      "input": "<menclose notation=\"top\"><mi>a</mi></menclose>",
+      "preference": "sbrief"
+    },
+    "EncloseUnderbar_default": {
+      "test": true,
+      "input": "<menclose notation=\"bottom\"><mi>a</mi></menclose>",
+      "preference": "default"
+    },
+    "EncloseUnderbar_brief": {
+      "test": true,
+      "input": "<menclose notation=\"bottom\"><mi>a</mi></menclose>",
+      "preference": "brief"
+    },
+    "EncloseUnderbar_sbrief": {
+      "test": true,
+      "input": "<menclose notation=\"bottom\"><mi>a</mi></menclose>",
+      "preference": "sbrief"
+    }
+  }
+}

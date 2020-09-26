@@ -1,0 +1,305 @@
+{
+  "domain": "default",
+  "tests": {
+    "LowerPlaneLatin_0": {
+      "test": true,
+      "input": "<mi>ℂ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_1": {
+      "test": true,
+      "input": "<mi>ℊ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_2": {
+      "test": true,
+      "input": "<mi>ℋ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_3": {
+      "test": true,
+      "input": "<mi>ℌ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_4": {
+      "test": true,
+      "input": "<mi>ℍ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_5": {
+      "test": true,
+      "input": "<mi>ℎ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_6": {
+      "test": true,
+      "input": "<mi>ℐ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_7": {
+      "test": true,
+      "input": "<mi>ℑ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_8": {
+      "test": true,
+      "input": "<mi>ℒ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_9": {
+      "test": true,
+      "input": "<mi>ℕ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_10": {
+      "test": true,
+      "input": "<mi>ℙ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_11": {
+      "test": true,
+      "input": "<mi>ℚ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_12": {
+      "test": true,
+      "input": "<mi>ℛ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_13": {
+      "test": true,
+      "input": "<mi>ℜ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_14": {
+      "test": true,
+      "input": "<mi>ℝ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_15": {
+      "test": true,
+      "input": "<mi>ℤ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_16": {
+      "test": true,
+      "input": "<mi>ℨ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_17": {
+      "test": true,
+      "input": "<mi>ℬ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_18": {
+      "test": true,
+      "input": "<mi>ℭ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_19": {
+      "test": true,
+      "input": "<mi>ℯ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_20": {
+      "test": true,
+      "input": "<mi>ℰ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_21": {
+      "test": true,
+      "input": "<mi>ℱ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_22": {
+      "test": true,
+      "input": "<mi>ℳ</mi>",
+      "preference": "default"
+    },
+    "LowerPlaneLatin_23": {
+      "test": true,
+      "input": "<mi>ℴ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_0": {
+      "test": true,
+      "input": "<mi>ℓ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_1": {
+      "test": true,
+      "input": "<mi>℘</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_2": {
+      "test": true,
+      "input": "<mi>ℼ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_3": {
+      "test": true,
+      "input": "<mi>ℽ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_4": {
+      "test": true,
+      "input": "<mi>ℾ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_5": {
+      "test": true,
+      "input": "<mi>ℿ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_6": {
+      "test": true,
+      "input": "<mi>⅀</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_7": {
+      "test": true,
+      "input": "<mi>ⅅ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_8": {
+      "test": true,
+      "input": "<mi>ⅆ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_9": {
+      "test": true,
+      "input": "<mi>ⅇ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_10": {
+      "test": true,
+      "input": "<mi>ⅈ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_11": {
+      "test": true,
+      "input": "<mi>ⅉ</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_12": {
+      "test": true,
+      "input": "<mi>𝚤</mi>",
+      "preference": "default"
+    },
+    "OtherCharacters_13": {
+      "test": true,
+      "input": "<mi>𝚥</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_0": {
+      "test": true,
+      "input": "<mi>𝕬</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_1": {
+      "test": true,
+      "input": "<mi>𝐀</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_2": {
+      "test": true,
+      "input": "<mi>𝓐</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_3": {
+      "test": true,
+      "input": "<mi>𝔸</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_4": {
+      "test": true,
+      "input": "<mi>𝔄</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_5": {
+      "test": true,
+      "input": "<mi>𝐴</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_6": {
+      "test": true,
+      "input": "<mi>𝙰</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_7": {
+      "test": true,
+      "input": "<mi>𝗔</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_8": {
+      "test": true,
+      "input": "<mi>𝘈</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_9": {
+      "test": true,
+      "input": "<mi>𝖠</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsCaps_10": {
+      "test": true,
+      "input": "<mi>𝒜</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_0": {
+      "test": true,
+      "input": "<mi>𝖆</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_1": {
+      "test": true,
+      "input": "<mi>𝐚</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_2": {
+      "test": true,
+      "input": "<mi>𝓪</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_3": {
+      "test": true,
+      "input": "<mi>𝕒</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_4": {
+      "test": true,
+      "input": "<mi>𝔞</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_5": {
+      "test": true,
+      "input": "<mi>𝑎</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_6": {
+      "test": true,
+      "input": "<mi>𝚊</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_7": {
+      "test": true,
+      "input": "<mi>𝗮</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_8": {
+      "test": true,
+      "input": "<mi>𝘢</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_9": {
+      "test": true,
+      "input": "<mi>𝖺</mi>",
+      "preference": "default"
+    },
+    "UpperPlaneAlphabetsLower_10": {
+      "test": true,
+      "input": "<mi>𝒶</mi>",
+      "preference": "default"
+    }
+  }
+}

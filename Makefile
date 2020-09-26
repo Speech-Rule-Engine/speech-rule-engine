@@ -40,9 +40,9 @@ LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
 
 TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/test.js
-TEST_DEPS = $(TEST_DIR)/deps.js
+TEST_DEPS = $(TEST_DIR)/src/deps.js
 TEST = $(BIN_DIR)/test_sre
-TEST_SRC = $(TEST_DIR)/**/*.js $(TEST_DIR)/*.js
+TEST_SRC = $(TEST_DIR)/src/*/*.js
 
 JSDOC = $(NODE_MODULES)/.bin/jsdoc
 JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json

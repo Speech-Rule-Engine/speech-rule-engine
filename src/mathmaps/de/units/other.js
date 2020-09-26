@@ -2,6 +2,15 @@
   {
     "locale": "de"
   },
+  {"category": "other",
+   "mappings": {
+     "default": {
+       "default": "Quadrat"
+     }
+   },
+   "key": "sq",
+   "names": ["sq", "sq."]
+  },
   {
     "key": "ha",
     "mappings": {

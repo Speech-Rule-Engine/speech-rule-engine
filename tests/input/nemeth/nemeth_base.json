@@ -1,0 +1,320 @@
+{
+  "domain": "default",
+  "modality": "braille",
+  "actual": true,
+  "tests": {
+    "01_07_000_x_00_002": {
+      "test": true,
+      "input": "<mo>∗<!-- ∗ --></mo>"
+    },
+    "01_07_000_x_00_003": {
+      "test": true,
+      "input": "<mo>†<!-- † --></mo>"
+    },
+    "01_07_000_x_00_004": {
+      "test": true,
+      "input": "<mo>‡<!-- ‡ --></mo>"
+    },
+    "01_07_000_x_00_005": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">§<!-- § --></mi>"
+    },
+    "01_07_000_x_00_007": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">§<!-- § --></mi><mi mathvariant=\"normal\">§<!-- § --></mi>"
+    },
+    "01_07_000_x_00_008": {
+      "test": true,
+      "input": "<mo>☆</mo>"
+    },
+    "01_07_046_x_00_001": {
+      "test": true,
+      "_comment1_": " TODO: Replace US G2 by US G1",
+      "input": "<msup><mtext>A Cantor</mtext><mo>∗<!-- ∗ --></mo></msup><mtext>&nbsp;set is</mtext><mo>…<!-- … --></mo>"
+    },
+    "01_07_046_x_00_002": {
+      "test": true,
+      "input": "<mi>f</mi><mo>∗<!-- ∗ --></mo><mi>g</mi>"
+    },
+    "01_07_047_x_00_001": {
+      "test": true,
+      "input": "<msup><mtext>Find the index</mtext><mn>1</mn></msup><mtext>&nbsp;of the radical.</mtext>"
+    },
+    "01_07_048_a_00_001": {
+      "test": true,
+      "input": "<msup><mi></mi><mo>∗<!-- ∗ --></mo></msup><mtext>Irrational numbers</mtext><mo>…<!-- … --></mo>"
+    },
+    "01_07_048_a_00_002": {
+      "test": true,
+      "input": "<msup><mtext>Irrational</mtext><mo>∗<!-- ∗ --></mo></msup><mtext>&nbsp;numbers</mtext><mo>…<!-- … --></mo>"
+    },
+    "01_07_048_a_00_003": {
+      "test": true,
+      "input": "<msup><mi></mi><mo>∗<!-- ∗ --></mo></msup><mtext>&nbsp;Irrational numbers</mtext><mo>…<!-- … --></mo>"
+    },
+    "01_07_048_a_00_004": {
+      "test": true,
+      "input": "<mo>…<!-- … --></mo><msup><mtext>sets.</mtext><mo>∗<!-- ∗ --></mo></msup>"
+    },
+    "01_07_048_a_00_005": {
+      "test": true,
+      "input": "<mo>…<!-- … --></mo><msup><mtext>sets</mtext><mo>∗<!-- ∗ --></mo></msup><mo>.</mo>"
+    },
+    "01_07_048_b_00_001": {
+      "test": true,
+      "input": "<msup><mtext>A Cantor</mtext><mn>1</mn></msup><mtext>&nbsp;set is</mtext><mo>…<!-- … --></mo>"
+    },
+    "01_07_048_b_00_003": {
+      "test": true,
+      "input": "<msup><mi></mi><mo>∗<!-- ∗ --></mo></msup><mn>10.</mn>"
+    },
+    "01_07_048_b_00_004": {
+      "test": true,
+      "input": "<msup><mn>1</mn><mo>∗<!-- ∗ --></mo></msup><mo>.</mo>"
+    },
+    "01_07_048_b_00_005": {
+      "test": true,
+      "input": "<msup><mn>1.</mn><mo>∗<!-- ∗ --></mo></msup>"
+    },
+    "01_07_048_b_00_006": {
+      "test": true,
+      "input": "<msup><mi></mi><mo>∗<!-- ∗ --></mo></msup><mtext>&nbsp;For extra credit.</mtext>"
+    },
+    "02_02_000_x_00_002": {
+      "test": true,
+      "input": "<mn>0</mn>"
+    },
+    "02_02_000_x_00_003": {
+      "test": true,
+      "input": "<mn>1</mn>"
+    },
+    "02_02_000_x_00_004": {
+      "test": true,
+      "input": "<mn>2</mn>"
+    },
+    "02_02_000_x_00_005": {
+      "test": true,
+      "input": "<mn>3</mn>"
+    },
+    "02_02_000_x_00_006": {
+      "test": true,
+      "input": "<mn>4</mn>"
+    },
+    "02_02_000_x_00_007": {
+      "test": true,
+      "input": "<mn>5</mn>"
+    },
+    "02_02_000_x_00_008": {
+      "test": true,
+      "input": "<mn>6</mn>"
+    },
+    "02_02_000_x_00_009": {
+      "test": true,
+      "input": "<mn>7</mn>"
+    },
+    "02_02_000_x_00_010": {
+      "test": true,
+      "input": "<mn>8</mn>"
+    },
+    "02_02_000_x_00_011": {
+      "test": true,
+      "input": "<mn>9</mn>"
+    },
+    "02_02_000_x_00_012": {
+      "test": true,
+      "input": "<mo>,</mo>"
+    },
+    "02_02_000_x_00_013": {
+      "test": true,
+      "input": "<mo>.</mo>"
+    },
+    "02_02_000_x_00_014": {
+      "test": true,
+      "input": "<mo>.</mo>"
+    },
+    "02_02_000_x_00_015": {
+      "test": true,
+      "input": "<mo>,</mo>"
+    },
+    "02_02_008_a_00_001": {
+      "test": true,
+      "input": "<mn>1</mn><mo>,</mo><mn>378</mn>"
+    },
+    "02_02_008_a_00_002": {
+      "test": true,
+      "input": "<mn>1.378</mn>"
+    },
+    "02_02_008_a_00_003": {
+      "test": true,
+      "input": "<mn>3.76</mn>"
+    },
+    "02_02_008_a_00_004": {
+      "test": true,
+      "input": "<mn>3</mn><mo>,</mo><mn>76</mn>"
+    },
+    "02_02_008_b_00_001": {
+      "test": true,
+      "input": "<mn>1</mn><mo>,</mo><mn>478</mn>"
+    },
+    "02_02_008_b_00_002": {
+      "test": true,
+      "input": "<mn>100</mn><mo>,</mo><mn>200</mn><mo>,</mo><mn>300</mn>"
+    },
+    "02_02_008_c_00_001": {
+      "test": true,
+      "input": "<mn>.35</mn>"
+    },
+    "02_02_008_c_00_002": {
+      "test": true,
+      "input": "<mn>3.14</mn>"
+    },
+    "02_02_008_c_00_003": {
+      "test": true,
+      "input": "<mn>.2</mn><msub><mi>a</mi><mn>1</mn></msub><msub><mi>a</mi><mn>2</mn></msub><msub><mi>a</mi><mn>3</mn></msub>"
+    },
+    "02_02_008_c_00_004": {
+      "test": true,
+      "input": "<mo>.</mo><msub><mi>a</mi><mn>1</mn></msub><msub><mi>a</mi><mn>2</mn></msub><msub><mi>a</mi><mn>3</mn></msub>"
+    },
+    "02_02_008_c_00_005": {
+      "test": true,
+      "input": "<mn>.1</mn><mo>+</mo><mn>.2</mn><mo>=</mo><mo>.</mo><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>---</mtext></mstyle>"
+    },
+    "02_02_009_a_00_001": {
+      "test": true,
+      "input": "<mn>27</mn>"
+    },
+    "02_02_009_a_00_002": {
+      "test": true,
+      "input": "<mtext>There were&nbsp;</mtext><mn>7</mn><mtext>&nbsp;balls</mtext><mo>.</mo>"
+    },
+    "02_02_009_a_00_003": {
+      "test": true,
+      "input": "<mn>1</mn><mo>+</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo>=</mo><mn>0</mn>"
+    },
+    "02_02_009_a_00_004": {
+      "test": true,
+      "input": "<mi>y</mi><mo>=</mo><mn>2</mn><mi>sin</mi><mo>⁡<!-- ⁡ --></mo><mi>x</mi>"
+    },
+    "02_02_009_a_00_005": {
+      "test": true,
+      "input": ""
+    },
+    "02_02_009_a_00_006": {
+      "test": true,
+      "input": "<mi>sin</mi><mo>⁡<!-- ⁡ --></mo><mn>1</mn>"
+    },
+    "02_02_009_a_00_007": {
+      "test": true,
+      "input": "<msup><mi>sin</mi><mn>2</mn></msup><mo>⁡<!-- ⁡ --></mo><mn>2</mn><mi>x</mi>"
+    },
+    "02_02_009_a_00_008": {
+      "test": true,
+      "input": "<mn>0.333</mn><mo>…<!-- … --></mo><mn>3</mn><mo>…<!-- … --></mo>"
+    },
+    "02_02_009_a_00_009": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">∠<!-- ∠ --></mi><mn>1</mn>"
+    },
+    "02_02_009_a_00_010": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>x</mi><mo>=</mo><mn>0</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "02_02_009_a_00_011": {
+      "test": true,
+      "input": "<mfrac><mn>11</mn><mn>5</mn></mfrac>"
+    },
+    "02_02_009_a_00_012": {
+      "test": true,
+      "input": "<mfrac><mfrac><mrow><mn>1</mn><mo>+</mo><mn>3</mn></mrow><mrow><mn>4</mn><mo>+</mo><mn>5</mn></mrow></mfrac><mfrac><mrow><mn>3</mn><mo>+</mo><mn>4</mn></mrow><mrow><mn>5</mn><mo>+</mo><mn>6</mn></mrow></mfrac></mfrac>"
+    },
+    "02_02_009_a_00_013": {
+      "test": true,
+      "input": "<mfrac><mfrac><mrow><mo stretchy=\"false\">(</mo><mn>1</mn><mo>−<!-- − --></mo><mi>x</mi><mo stretchy=\"false\">)</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy=\"false\">(</mo><mn>2</mn><mi>x</mi><mo stretchy=\"false\">)</mo><mo>−<!-- − --></mo><mn>2</mn><mi>x</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mo stretchy=\"false\">(</mo><mn>1</mn><mo>−<!-- − --></mo><mi>x</mi><mo stretchy=\"false\">)</mo></mrow><mrow><mo stretchy=\"false\">(</mo><mn>1</mn><mo>−<!-- − --></mo><mi>x</mi><msup><mo stretchy=\"false\">)</mo><mn>2</mn></msup></mrow></mfrac><mrow><mn>1</mn><mo>+</mo><mo stretchy=\"false\">(</mo><mfrac><mrow><mn>2</mn><mi>x</mi></mrow><mrow><mn>1</mn><mo>−<!-- − --></mo><mi>x</mi></mrow></mfrac><msup><mo stretchy=\"false\">)</mo><mn>2</mn></msup></mrow></mfrac>"
+    },
+    "02_02_009_a_00_014": {
+      "test": true,
+      "input": "<mo>−<!-- − --></mo><mn>1</mn>"
+    },
+    "02_02_009_a_00_015": {
+      "test": true,
+      "input": "<mo>−<!-- − --></mo><mn>.3</mn>"
+    },
+    "02_02_009_b_00_001": {
+      "test": true,
+      "input": "<mo>\"</mo><mn>3</mn><mstyle displaystyle=\"false\" scriptlevel=\"0\"><mtext>&nbsp;dogs</mtext></mstyle><mo>\"</mo>"
+    },
+    "02_02_009_b_00_002": {
+      "test": true,
+      "input": "<mtext>Probability ---</mtext><mn>0</mn>"
+    },
+    "02_02_009_b_00_003": {
+      "test": true,
+      "input": "<mo>\"</mo><mn>.5</mn>"
+    },
+    "02_02_009_b_00_004": {
+      "test": true,
+      "input": "<mo>\"</mo><mo>−<!-- − --></mo><mn>4</mn>"
+    },
+    "02_02_009_c_00_001": {
+      "test": true,
+      "input": "<mrow><mo>|</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mo>−<!-- − --></mo><mn>3</mn></mtd><mtd><mo>−<!-- − --></mo><mn>4</mn></mtd></mtr></mtable><mo>|</mo></mrow>"
+    },
+    "02_02_009_c_00_002": {
+      "test": true,
+      "input": "<mrow><mo>|</mo><mtable rowspacing=\"4pt\" columnspacing=\"1em\"><mtr><mtd><mn>1</mn></mtd><mtd><mfrac><mn>1</mn><mn>2</mn></mfrac></mtd></mtr><mtr><mtd><mfrac><mn>1</mn><mn>2</mn></mfrac></mtd><mtd><mfrac><mn>1</mn><mrow><mn>4</mn><mi>r</mi></mrow></mfrac></mtd></mtr></mtable><mo>|</mo></mrow>"
+    },
+    "02_02_009_d_00_001": {
+      "test": true,
+      "input": "<mn>3</mn><mi mathvariant=\"normal\">§<!-- § --></mi><mn>4</mn>"
+    },
+    "02_02_009_d_00_002": {
+      "test": true,
+      "input": "<mn>3</mn><mi mathvariant=\"normal\">#<!-- # --></mi><mn>4</mn>"
+    },
+    "02_02_009_d_00_003": {
+      "test": true,
+      "input": "<mn>3</mn><mo>∗<!-- ∗ --></mo><mn>4</mn>"
+    },
+    "02_02_009_d_00_004": {
+      "test": true,
+      "input": "<mtext>See page&nbsp;</mtext><msup><mn>15</mn><mn>1</mn></msup><mo>.</mo>"
+    },
+    "02_02_009_d_00_005": {
+      "test": true,
+      "input": "<mo>†<!-- † --></mo><mn>3</mn>"
+    },
+    "02_02_009_e_00_001": {
+      "test": true,
+      "input": "<mn class=\"MJX-tex-mathit\" mathvariant=\"italic\">3</mn>"
+    },
+    "02_02_009_e_00_002": {
+      "test": true,
+      "input": "<mn mathvariant=\"bold\">0</mn>"
+    },
+    "02_02_009_e_00_003": {
+      "test": true,
+      "input": "<mn class=\"MJX-tex-mathit\" mathvariant=\"italic\">.3</mn>"
+    },
+    "02_02_009_e_00_004": {
+      "test": true,
+      "input": "<mn mathvariant=\"script\">2</mn>"
+    },
+    "02_02_009_e_00_005": {
+      "test": true,
+      "input": "<mn mathvariant=\"bold\">43</mn><mn mathvariant=\"bold\">56</mn>"
+    },
+    "02_02_009_e_00_006": {
+      "test": true,
+      "input": ""
+    },
+    "02_02_009_e_00_007": {
+      "test": true,
+      "input": ""
+    },
+    "02_02_009_f_00_001": {
+      "test": true,
+      "input": "<mrow><mrow><mn>1</mn><mo>−<!-- − --></mo></mrow><mtext>to</mtext><mrow><mo>−<!-- − --></mo><mn>1</mn></mrow><mtext>&nbsp;correspondence</mtext></mrow>"
+    }
+  }
+}

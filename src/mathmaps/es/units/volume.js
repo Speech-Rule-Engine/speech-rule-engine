@@ -31,7 +31,8 @@
   {
     "key": "fl. oz.",
     "names": [
-      "fl. oz."
+      "fl. oz.",
+      "fl oz"
     ],
     "mappings": {
       "default": {

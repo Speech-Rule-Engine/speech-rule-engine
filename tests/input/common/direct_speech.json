@@ -1,0 +1,80 @@
+{
+  "tests": {
+    "AriaLabels_0": {
+      "test": true,
+      "input": "<mover> <mi>AC</mi> <mo stretchy=\"true\" aria-label=\"line\">↔</mo> </mover>"
+    },
+    "AriaLabels_1": {
+      "test": true,
+      "input": "<mover aria-label=\"derivative of x\"><mi>x</mi><mo>&#x02D9;<!-- ˙ --></mo></mover><mi></mi><mo aria-label=\"is equal to\">=</mo><mi aria-label=\"sigma\">&#x03C3;<!-- σ --></mi><mrow><mo aria-label=\"left parenthesis\" stretchy=\"false\">(</mo><mi aria-label=\"y\">y</mi><mo aria-label=\"minus\">&#x2212;<!-- − --></mo><mi aria-label=\"x\">x</mi><mo aria-label=\"right parenthesis\" stretchy=\"false\">)</mo></mrow>"
+    },
+    "AltText_0": {
+      "test": true,
+      "input": "<math alt=\"A C under line\"><mover> <mi>AC</mi> <mo stretchy=\"true\">↔</mo> </mover></math>"
+    },
+    "AltText_1": {
+      "test": true,
+      "input": "<mover> <mi>AC</mi> <mo stretchy=\"true\" alt=\"line\">↔</mo> </mover>"
+    },
+    "ExactSpeech_0": {
+      "test": true,
+      "input": "<math exact-speech=\"A C under line\"><mover> <mi>AC</mi> <mo stretchy=\"true\">↔</mo> </mover></math>"
+    },
+    "ExactSpeech_1": {
+      "test": true,
+      "input": "<mover> <mi>AC</mi> <mo stretchy=\"true\" exact-speech=\"line\">↔</mo> </mover>"
+    },
+    "MglyphTokens_0": {
+      "test": true,
+      "input": "<mi><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>"
+    },
+    "MglyphTokens_1": {
+      "test": true,
+      "input": "<mi aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mi>",
+      "_comment1_": " mo"
+    },
+    "MglyphTokens_2": {
+      "test": true,
+      "input": "<mo><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>"
+    },
+    "MglyphTokens_3": {
+      "test": true,
+      "input": "<mo aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mo>",
+      "_comment2_": " mn"
+    },
+    "MglyphTokens_4": {
+      "test": true,
+      "input": "<mn><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>"
+    },
+    "MglyphTokens_5": {
+      "test": true,
+      "input": "<mn aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mn>",
+      "_comment3_": " mtext"
+    },
+    "MglyphTokens_6": {
+      "test": true,
+      "input": "<mtext><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mtext>"
+    },
+    "MglyphTokens_7": {
+      "test": true,
+      "input": "<mtext aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></mtext>",
+      "_comment4_": " ms"
+    },
+    "MglyphTokens_8": {
+      "test": true,
+      "input": "<ms><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></ms>"
+    },
+    "MglyphTokens_9": {
+      "test": true,
+      "input": "<ms aria-label=\"your glyph\"><mglyph src=\"my-glyph.png\" alt=\"my glyph\"/></ms>"
+    },
+    "MglyphGeneral_0": {
+      "test": true,
+      "input": "<mi><mglyph src=\"my-braid-23.png\" alt=\"23braid\"/></mi><mo>+</mo><mi><mglyph src=\"my-braid-132.png\" alt=\"132braid\"/></mi><mo>=</mo><mi><mglyph src=\"my-braid-13.png\" alt=\"13braid\"/></mi>"
+    },
+    "MglyphGeneral_1": {
+      "test": true,
+      "input": "<mrow><mi>N</mi><msub><mi>M</mi><mrow class=\"MJX-TeXAtom-ORD\"><mn>1</mn><mo>⊂</mo><mrow class=\"MJX-TeXAtom-VCENTER\"><mglyph src=\"Images/img64cf9bc6538bb7137dab7b360f92afb4.svg\" width=\"13pt\" height=\"6pt\" alt=\"mfin\"></mglyph></mrow></mrow></msub></mrow>"
+    }
+  }
+}
