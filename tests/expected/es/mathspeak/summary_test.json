@@ -1,7 +1,7 @@
 {
   "name": "SummarySpanishTest",
   "factory": "summary",
-  "base": "input/mathspeak/summary_test.json",
+  "base": "input/common/summary_test.json",
   "information": "Summary Spanish tests.",
   "locale": "es",
   "domain": "mathspeak",
