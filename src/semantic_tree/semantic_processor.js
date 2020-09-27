@@ -1247,6 +1247,9 @@ sre.SemanticProcessor.MML_TO_LIMIT_ = {
 sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
   var center = children[0];
   var type = sre.SemanticAttr.Type.UNKNOWN;
+  if (!children[1]) {
+    return center;
+  }
   if (sre.SemanticPred.isLimitBase(center)) {
     type = sre.SemanticProcessor.MML_TO_LIMIT_[mmlTag];
   } else {
@@ -1258,6 +1261,10 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
         type = sre.SemanticAttr.Type.SUPERSCRIPT;
         break;
       case 'MSUBSUP':
+        if (!children[2]) {
+          type = sre.SemanticAttr.Type.SUBSCRIPT;
+          break;
+        }
         var innerNode = sre.SemanticProcessor.getInstance().factory_.
             makeBranchNode(
             sre.SemanticAttr.Type.SUBSCRIPT, [center, children[1]], []);
@@ -1281,10 +1288,14 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
       case 'MUNDEROVER':
       default:
         var underAccent = sre.SemanticPred.isAccent(children[1]);
-        var overAccent = sre.SemanticPred.isAccent(children[2]);
         if (underAccent) {
           children[1].role = sre.SemanticAttr.Role.UNDERACCENT;
         }
+        if (!children[2]) {
+          type = sre.SemanticAttr.Type.UNDERSCORE;
+          break;
+        }
+        var overAccent = sre.SemanticPred.isAccent(children[2]);
         if (overAccent) {
           children[2].role = sre.SemanticAttr.Role.OVERACCENT;
         }
