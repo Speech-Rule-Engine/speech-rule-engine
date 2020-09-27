@@ -1223,16 +1223,26 @@ sre.SemanticProcessor.prototype.dummyNode_ = function(children) {
 
 
 /**
- * @const {Object.<sre.SemanticAttr.Type>}
+ * @const {Object.<{type: sre.SemanticAttr.Type, length: number}>}
  * @private
  */
 sre.SemanticProcessor.MML_TO_LIMIT_ = {
-  'MSUB': sre.SemanticAttr.Type.LIMLOWER,
-  'MUNDER': sre.SemanticAttr.Type.LIMLOWER,
-  'MSUP': sre.SemanticAttr.Type.LIMUPPER,
-  'MOVER': sre.SemanticAttr.Type.LIMUPPER,
-  'MSUBSUP': sre.SemanticAttr.Type.LIMBOTH,
-  'MUNDEROVER': sre.SemanticAttr.Type.LIMBOTH
+  'MSUB': {type: sre.SemanticAttr.Type.LIMLOWER, length: 1},
+  'MUNDER': {type: sre.SemanticAttr.Type.LIMLOWER, length: 1},
+  'MSUP': {type: sre.SemanticAttr.Type.LIMUPPER, length: 1},
+  'MOVER': {type: sre.SemanticAttr.Type.LIMUPPER, length: 1},
+  'MSUBSUP': {type: sre.SemanticAttr.Type.LIMBOTH, length: 2},
+  'MUNDEROVER': {type: sre.SemanticAttr.Type.LIMBOTH, length: 2}
+};
+
+
+sre.SemanticProcessor.MML_TO_BOUNDS_ = {
+  'MSUB': {type: sre.SemanticAttr.Type.SUBSCRIPT, length: 1},
+  'MUNDER': {type: sre.SemanticAttr.Type.UNDERSCORE, length: 1},
+  'MSUP': {type: sre.SemanticAttr.Type.SUPERSCRIPT, length: 1},
+  'MOVER': {type: sre.SemanticAttr.Type.OVERSCORE, length: 1},
+  'MSUBSUP': {type: sre.SemanticAttr.Type.SUBSCRIPT, length: 2},
+  'MUNDEROVER': {type: sre.SemanticAttr.Type.UNDERSCORE, length: 2}
 };
 
 
@@ -1245,13 +1255,23 @@ sre.SemanticProcessor.MML_TO_LIMIT_ = {
  * @return {!sre.SemanticNode} The newly created limit node.
  */
 sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
+  if (!children.length) {
+    return sre.SemanticProcessor.getInstance().factory_.makeEmptyNode();
+  }
   var center = children[0];
   var type = sre.SemanticAttr.Type.UNKNOWN;
   if (!children[1]) {
     return center;
   }
+  
   if (sre.SemanticPred.isLimitBase(center)) {
-    type = sre.SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+    var result = sre.SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+    type = result.type;
+    children = children.slice(0, result.length + 1);
+    if (result.length === 2 && !children[result.length]) {
+      type = sre.SemanticAttr.Type.LIMLOWER;
+    }
+    console.log(type);
   } else {
     switch (mmlTag) {
       case 'MSUB':
