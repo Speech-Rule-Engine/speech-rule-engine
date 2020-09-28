@@ -180,7 +180,7 @@
     "_comment_8": "Underspecified Fraction",
 
     "Fraction_Underspec": {
-      "expected": ""
+      "expected": "<fraction role=\"division\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><empty role=\"unknown\" id=\"1\"/></children></fraction>"
     },
 
     "_comment_9": "Empty Fraction",
@@ -197,11 +197,11 @@
 
     "_comment_11": "Underspecified Root",
     "Root_Underspec": {
-      "expected": ""
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt>"
     },
     "_comment_12": "Empty Root",
     "Root_Empty": {
-      "expected": ""
+      "expected": "<operator role=\"unknown\" id=\"0\">√</operator>"
     },
     "_comment_13": "Overspecified Root",
     "Root_Overspec": {
