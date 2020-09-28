@@ -201,11 +201,51 @@
     },
     "_comment_12": "Empty Root",
     "Root_Empty": {
-      "expected": "<operator role=\"unknown\" id=\"0\">√</operator>"
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
     },
     "_comment_13": "Overspecified Root",
     "Root_Overspec": {
       "expected": "<root role=\"unknown\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">b</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">a</identifier></children></root>"
+    },
+    "_comment_14": "Empty display expressions that could lead to enrichment issues.",
+    "_comment_15": "Empty square root.",
+    "Sqrt_Display_0": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
+    },
+    "Sqrt_Display_1": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop>"
+    },
+    "Sqrt_Display_2": {
+      "expected": "<infixop role=\"addition\" id=\"7\">+<content><operator role=\"addition\" id=\"3\">+</operator></content><children><infixop role=\"implicit\" id=\"6\">⁢<content><operator role=\"multiplication\" id=\"5\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"4\">b</identifier></children></infixop>"
+    },
+    "Sqrt_Display_3": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">b</identifier></children></infixop>"
+    },
+    "_comment_16": "Empty root.",
+    "Root_Display_0": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop>"
+    },
+    "Root_Display_1": {
+      "expected": "<infixop role=\"addition\" id=\"7\">+<content><operator role=\"addition\" id=\"3\">+</operator></content><children><infixop role=\"implicit\" id=\"6\">⁢<content><operator role=\"multiplication\" id=\"5\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"4\">b</identifier></children></infixop>"
+    },
+    "Root_Display_2": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">b</identifier></children></infixop>"
+    },
+    "_comment_17": "Orphaned glyph.",
+    "Orphaned_Glyph_0": {
+      "expected": "<unknown role=\"mglyph\" id=\"0\" ext-speech=\"some glyph\"/>"
+    },
+    "Orphaned_Glyph_1": {
+      "expected": "<infixop role=\"implicit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><unknown role=\"mglyph\" id=\"0\" ext-speech=\"some glyph\"/><identifier role=\"latinletter\" font=\"italic\" id=\"1\">a</identifier></children></infixop>"
+    },
+    "Orphaned_Glyph_2": {
+      "expected": "<infixop role=\"implicit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"unknown\" id=\"0\" ext-speech=\"some glyph\"/><identifier role=\"latinletter\" font=\"italic\" id=\"1\">a</identifier></children></infixop>"
+    },
+    "Orphaned_Glyph_3": {
+      "expected": "<infixop role=\"addition\" id=\"6\">+<content><operator role=\"addition\" id=\"2\">+</operator></content><children><infixop role=\"implicit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><unknown role=\"mglyph\" id=\"0\" ext-speech=\"some glyph\"/><identifier role=\"latinletter\" font=\"italic\" id=\"1\">a</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"3\">b</identifier></children></infixop>"
+    },
+    "Orphaned_Glyph_4": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><unknown role=\"mglyph\" id=\"0\" ext-speech=\"some glyph\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop>"
     }
   }
 }

@@ -204,6 +204,46 @@
     "_comment_13": "Overspecified Root",
     "Root_Overspec": {
       "input": "<mroot><mi>a</mi><mi>b</mi><mi>c</mi></mroot>"
+    },
+    "_comment_14": "Empty display expressions that could lead to enrichment issues.",
+    "_comment_15": "Empty square root.",
+    "Sqrt_Display_0": {
+      "input": "<msqrt></msqrt>"
+    },
+    "Sqrt_Display_1": {
+      "input": "<msqrt></msqrt><mi>a</mi>"
+    },
+    "Sqrt_Display_2": {
+      "input": "<msqrt></msqrt><mi>a</mi><mo>+</mo><mi>b</mi>"
+    },
+    "Sqrt_Display_3": {
+      "input": "<msqrt><mi>a</mi></msqrt><mi>b</mi>"
+    },
+    "_comment_16": "Empty root.",
+    "Root_Display_0": {
+      "input": "<mroot></mroot><mi>a</mi>"
+    },
+    "Root_Display_1": {
+      "input": "<mroot></mroot><mi>a</mi><mo>+</mo><mi>b</mi>"
+    },
+    "Root_Display_2": {
+      "input": "<mroot><mi>a</mi></mroot><mi>b</mi>"
+    },
+    "_comment_17": "Orphaned glyph.",
+    "Orphaned_Glyph_0": {
+      "input": "<mglyph alt=\"some glyph\"/>"
+    },
+    "Orphaned_Glyph_1": {
+      "input": "<mglyph alt=\"some glyph\"/><mi>a</mi>"
+    },
+    "Orphaned_Glyph_2": {
+      "input": "<mi><mglyph alt=\"some glyph\"/></mi><mi>a</mi>"
+    },
+    "Orphaned_Glyph_3": {
+      "input": "<mglyph alt=\"some glyph\"/><mi>a</mi><mo>+</mo><mi>b</mi>"
+    },
+    "Orphaned_Glyph_4": {
+      "input": "<msqrt><mglyph alt=\"some glyph\"/></msqrt><mi>a</mi>"
     }
   }
 }
