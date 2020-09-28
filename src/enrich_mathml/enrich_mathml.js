@@ -143,16 +143,31 @@ sre.EnrichMathml.walkTree = function(semantic) {
     sre.Debugger.getInstance().output('Walktree Case 0');
     newNode = /**@type{!Element}*/(semantic.mathml[0]);
     sre.EnrichMathml.setAttributes(newNode, semantic);
+    if (semantic.childNodes.length) {
+      // These children should all be empty.
+      sre.Debugger.getInstance().output('Walktree Case 0.1');
+      semantic.childNodes.forEach(function(child) {
+        if (child.type === sre.SemanticAttr.Type.EMPTY) {
+          newNode.appendChild(sre.EnrichMathml.walkTree(child));
+        }
+      });
+    }
     return sre.EnrichMathml.ascendNewNode(newNode);
   }
 
+  // console.log(semantic.toString());
   var newContent = semantic.contentNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.cloneContentNode));
   sre.EnrichMathml.setOperatorAttribute_(semantic, newContent);
+  // semantic.childNodes.forEach(x => console.log(x.toString()));
   var newChildren = semantic.childNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.walkTree));
+  // console.log(newChildren.length);
+  // newChildren.forEach(x => console.log(x.toString()));
   var childrenList = sre.SemanticSkeleton.combineContentChildren(
       semantic, newContent, newChildren);
+  // console.log(childrenList.length);
+  // childrenList.forEach(x => console.log(x.toString()));
   newNode = semantic.mathmlTree;
   if (newNode === null) {
     sre.Debugger.getInstance().output('Walktree Case 1');
@@ -169,8 +184,12 @@ sre.EnrichMathml.walkTree = function(semantic) {
     }
   }
   newNode = sre.EnrichMathml.rewriteMfenced(newNode);
+  // console.log(newNode.toString());
+  // childrenList.forEach(x => console.log(x.toString()));
   sre.EnrichMathml.mergeChildren_(newNode, childrenList);
   sre.EnrichMathml.setAttributes(newNode, semantic);
+  // console.log('HERE?');
+  // console.log(newNode.toString());
   let res = sre.EnrichMathml.ascendNewNode(newNode);
   return res;
 };
@@ -515,6 +534,10 @@ sre.EnrichMathml.validLca_ = function(left, right) {
  * @return {!Element} The parent node.
  */
 sre.EnrichMathml.ascendNewNode = function(newNode) {
+  // console.log('Ascending');
+  // console.log(newNode.toString());
+  // console.log(!sre.SemanticUtil.hasMathTag(newNode));
+  // console.log(sre.EnrichMathml.unitChild_(newNode));
   while (!sre.SemanticUtil.hasMathTag(newNode) &&
          sre.EnrichMathml.unitChild_(newNode)) {
     newNode = sre.EnrichMathml.parentNode_(newNode);
@@ -560,6 +583,12 @@ sre.EnrichMathml.unitChild_ = function(node) {
   if (!parent || !sre.SemanticUtil.hasEmptyTag(parent)) {
     return false;
   }
+  // console.log('Unit child:');
+  sre.DomUtil.toArray(parent.childNodes).forEach(x => {
+    // console.log(x.toString());
+    // console.log('Ignorable:');
+    // console.log(x === node || sre.EnrichMathml.isIgnorable_(x));
+  });
   return sre.DomUtil.toArray(parent.childNodes).every(
       function(child) {
         return child === node || sre.EnrichMathml.isIgnorable_(child);
@@ -576,12 +605,17 @@ sre.EnrichMathml.unitChild_ = function(node) {
  */
 sre.EnrichMathml.isIgnorable_ = function(node) {
   if (!node || sre.SemanticUtil.hasIgnoreTag(node)) {
+    // console.log(0);
     return true;
   }
   var children = sre.DomUtil.toArray(node.childNodes);
-  if (!sre.SemanticUtil.hasEmptyTag(node) && children.length) {
+  if ((!sre.SemanticUtil.hasEmptyTag(node) && children.length) ||
+      sre.SemanticUtil.hasDisplayTag(node) ||
+      sre.SemanticUtil.isOrphanedGlyph(node)) {
+    // console.log(1);
     return false;
   }
+  // console.log(2);
   return sre.DomUtil.toArray(node.childNodes)
       .every(sre.EnrichMathml.isIgnorable_);
 };
@@ -689,7 +723,8 @@ sre.EnrichMathml.rewriteMfenced = function(mml) {
 
 
 /**
- * Makes a new MathML element for an invisible operator or one added by mfenced.
+ * Makes a new MathML element for an invisible operator or one added
+ * by mfenced.
  * @param {!sre.SemanticNode} operator The semantic node with the operator.
  * @return {!Element} The newly created MathML element.
  * @private

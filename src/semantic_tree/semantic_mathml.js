@@ -207,12 +207,6 @@ sre.SemanticMathml.prototype.root_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.sqrt_ = function(node, children) {
-  if (!children.length) {
-    let newNode = this.getFactory().makeLeafNode(
-        '√', sre.SemanticAttr.Font.UNKNOWN);
-    newNode.type = sre.SemanticAttr.Type.OPERATOR;
-    return newNode;
-  }
   var semNodes = this.parseList(sre.SemanticUtil.purgeNodes(children));
   return this.getFactory().makeBranchNode(
       sre.SemanticAttr.Type.SQRT,
