@@ -244,6 +244,43 @@
     },
     "Orphaned_Glyph_4": {
       "input": "<msqrt><mglyph alt=\"some glyph\"/></msqrt><mi>a</mi>"
+    },
+    "_comment_17": "Various interspersed rubbish",
+    "Rubbish_0": {
+      "input": "a"
+    },
+    "Rubbish_1": {
+      "input": "<div>a</div>"
+    },
+    "Rubbish_2": {
+      "input": "<mrow>a</mrow>"
+    },
+    "Rubbish_3": {
+      "input": "<mi>a</mi>b"
+    },
+    "Rubbish_4": {
+      "input": "b<mi>a</mi>"
+    },
+    "Rubbish_5": {
+      "input": "b<mi>a</mi>c"
+    },
+    "Rubbish_6": {
+      "input": "<msqrt>a</msqrt>"
+    },
+    "Rubbish_7": {
+      "input": "a<msqrt></msqrt>"
+    },
+    "Rubbish_8": {
+      "input": "<msqrt></msqrt>b"
+    },
+    "Rubbish_9": {
+      "input": "<msqrt>b<mi>a</mi></msqrt>"
+    },
+    "Rubbish_10": {
+      "input": "<msqrt><mi>a</mi>b</msqrt>"
+    },
+    "Rubbish_11": {
+      "input": "<msqrt>b<mi>a</mi>c</msqrt>"
     }
   }
 }

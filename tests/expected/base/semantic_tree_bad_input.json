@@ -246,6 +246,43 @@
     },
     "Orphaned_Glyph_4": {
       "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><unknown role=\"mglyph\" id=\"0\" ext-speech=\"some glyph\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop>"
+    },
+    "_comment_17": "Various interspersed rubbish",
+    "Rubbish_0": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+    "Rubbish_1": {
+      "expected": "<unknown role=\"div\" id=\"0\">a</unknown>"
+    },
+    "Rubbish_2": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+    "Rubbish_3": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "Rubbish_4": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "Rubbish_5": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "Rubbish_6": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
+    },
+    "Rubbish_7": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
+    },
+    "Rubbish_8": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
+    },
+    "Rubbish_9": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt>"
+    },
+    "Rubbish_10": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt>"
+    },
+    "Rubbish_11": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt>"
     }
   }
 }

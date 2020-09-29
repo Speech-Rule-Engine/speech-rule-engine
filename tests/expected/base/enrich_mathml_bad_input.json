@@ -246,6 +246,44 @@
     },
     "Orphaned_Glyph_4": {
       "expected": "<math type=\"infixop\" role=\"implicit\" id=\"4\" children=\"1,2\" content=\"3\"><msqrt type=\"sqrt\" role=\"unknown\" id=\"1\" children=\"0\" parent=\"4\"><mglyph alt=\"some glyph\" type=\"unknown\" role=\"mglyph\" id=\"0\" parent=\"1\"/></msqrt><mo type=\"operator\" role=\"multiplication\" id=\"3\" parent=\"4\" added=\"true\" operator=\"infixop,⁢\">⁢</mo><mi type=\"identifier\" role=\"latinletter\" id=\"2\" parent=\"4\">a</mi></math>"
+    },
+    "_comment_17": "Various interspersed rubbish",
+    "Rubbish_0": {
+      "expected": "<math type=\"empty\" role=\"unknown\" id=\"0\">a</math>"
+    },
+    "Rubbish_1": {
+      "expected": "<math><div type=\"unknown\" role=\"div\" id=\"0\">a</div></math>"
+    },
+    "Rubbish_2": {
+      "test": false,
+      "expected": ""
+    },
+    "Rubbish_3": {
+      "expected": "<math><mi type=\"identifier\" role=\"latinletter\" id=\"0\">a</mi>b</math>"
+    },
+    "Rubbish_4": {
+      "expected": "<math>b<mi type=\"identifier\" role=\"latinletter\" id=\"0\">a</mi></math>"
+    },
+    "Rubbish_5": {
+      "expected": "<math>b<mi type=\"identifier\" role=\"latinletter\" id=\"0\">a</mi>c</math>"
+    },
+    "Rubbish_6": {
+      "expected": "<math><msqrt type=\"sqrt\" role=\"unknown\" id=\"1\" children=\"0\">a<mrow type=\"empty\" role=\"unknown\" id=\"0\" parent=\"1\"/></msqrt></math>"
+    },
+    "Rubbish_7": {
+      "expected": "<math>a<msqrt type=\"sqrt\" role=\"unknown\" id=\"1\" children=\"0\"><mrow type=\"empty\" role=\"unknown\" id=\"0\" parent=\"1\"/></msqrt></math>"
+    },
+    "Rubbish_8": {
+      "expected": "<math><msqrt type=\"sqrt\" role=\"unknown\" id=\"1\" children=\"0\"><mrow type=\"empty\" role=\"unknown\" id=\"0\" parent=\"1\"/></msqrt>b</math>"
+    },
+    "Rubbish_9": {
+      "expected": "<math><msqrt type=\"sqrt\" role=\"unknown\" id=\"1\" children=\"0\">b<mi type=\"identifier\" role=\"latinletter\" id=\"0\" parent=\"1\">a</mi></msqrt></math>"
+    },
+    "Rubbish_10": {
+      "expected": "<math><msqrt type=\"sqrt\" role=\"unknown\" id=\"1\" children=\"0\"><mi type=\"identifier\" role=\"latinletter\" id=\"0\" parent=\"1\">a</mi>b</msqrt></math>"
+    },
+    "Rubbish_11": {
+      "expected": "<math><msqrt type=\"sqrt\" role=\"unknown\" id=\"1\" children=\"0\">b<mi type=\"identifier\" role=\"latinletter\" id=\"0\" parent=\"1\">a</mi>c</msqrt></math>"
     }
   }
 }

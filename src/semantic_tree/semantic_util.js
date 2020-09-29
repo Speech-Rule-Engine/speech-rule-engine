@@ -236,6 +236,7 @@ sre.SemanticUtil.isOrphanedGlyph = function(node) {
 sre.SemanticUtil.purgeNodes = function(nodes) {
   var nodeArray = [];
   for (var i = 0, node; node = nodes[i]; i++) {
+    if (node.nodeType !== sre.DomUtil.NodeType.ELEMENT_NODE) continue;
     var tagName = sre.DomUtil.tagName(node);
     if (sre.SemanticUtil.IGNORETAGS.indexOf(tagName) != -1) continue;
     if (sre.SemanticUtil.EMPTYTAGS.indexOf(tagName) != -1 &&
