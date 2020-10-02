@@ -292,13 +292,48 @@ sre.SemanticSkeleton.tree_ = function(mml, node) {
       node, node.contentNodes.map(function(x) {return x;}),
       node.childNodes.map(function(x) {return x;}));
   if (mmlChild) {
-    mmlChild.setAttribute(sre.EnrichMathml.Attribute.OWNS,
-                          children.map(x => x.id).join(' '));
+    sre.SemanticSkeleton.addOwns_(mmlChild, children);
   }
   for (var i = 0, child; child = children[i]; i++) {
     skeleton.push(sre.SemanticSkeleton.tree_(mml, child));
   }
   return skeleton;
+};
+
+
+/**
+ * Adds an aria owns attribute to a given node.
+ * @param {Node} node An mml node to add the owns attribute to.
+ * @param {Array.<Node>} children Its semantic children with content nodes
+ *     already interspersed.
+ */
+sre.SemanticSkeleton.addOwns_ = function(node, children) {
+  var collapsed = node.getAttribute(sre.EnrichMathml.Attribute.COLLAPSED);
+  var leafs = collapsed ? sre.SemanticSkeleton.realLeafs_(
+    sre.SemanticSkeleton.fromString(collapsed).array) :
+      children.map(x => x.id);
+  node.setAttribute(
+    sre.EnrichMathml.Attribute.OWNS, leafs.join(' '));
+};
+
+
+/**
+ * Computes the existing leafs from a collapse skeleton structure.
+ * @param {sre.SemanticSkeleton.Sexp} sexp The sexpression.
+ * @return {Array.<number>} The actual leaf ids.
+ */
+sre.SemanticSkeleton.realLeafs_ = function(sexp) {
+  if (sre.SemanticSkeleton.simpleCollapseStructure(sexp)) {
+    return [sexp];
+  }
+  if (sre.SemanticSkeleton.contentCollapseStructure(sexp)) {
+    return [];
+  }
+  let result = [];
+  for (var i = 1; i < sexp.length; i++) {
+    result = result.concat(sre.SemanticSkeleton.realLeafs_(sexp[i]));
+  }
+  return result;
 };
 
 
