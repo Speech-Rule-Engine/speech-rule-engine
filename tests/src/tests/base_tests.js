@@ -15,7 +15,6 @@
 
 goog.provide('sre.BaseTests');
 
-goog.require('sre.ClearspeakAnnotationTest');
 goog.require('sre.ColorPickerTest');
 goog.require('sre.DomTest');
 goog.require('sre.MarkupTest');
@@ -29,7 +28,6 @@ goog.require('sre.WalkerTest');
  * @type {Array}
  */
 sre.BaseTests.testList = [
-  sre.ClearspeakAnnotationTest,
   sre.ColorPickerTest,
   sre.DomTest,
   sre.MarkupTest,
