@@ -150,12 +150,32 @@ sre.SemanticUtil.EMPTYTAGS = [
 
 
 /**
+ * List of MathML Tags that draw something and can therefore not be ignored if
+ * they have no children.
+ * @type {Array.<string>}
+ * @const
+ */
+sre.SemanticUtil.DISPLAYTAGS = ['MROOT', 'MSQRT'];
+
+
+/**
  * Checks if an element is a node with a math tag.
  * @param {Element} node The node to check.
  * @return {boolean} True if element is an math node.
  */
 sre.SemanticUtil.hasMathTag = function(node) {
   return !!node && sre.DomUtil.tagName(node) === 'MATH';
+};
+
+
+/**
+ * Checks if an element is a node with leaf tag.
+ * @param {Element} node The node to check.
+ * @return {boolean} True if element is an leaf node.
+ */
+sre.SemanticUtil.hasLeafTag = function(node) {
+  return !!node &&
+      sre.SemanticUtil.LEAFTAGS.indexOf(sre.DomUtil.tagName(node)) !== -1;
 };
 
 
@@ -183,6 +203,29 @@ sre.SemanticUtil.hasEmptyTag = function(node) {
 
 
 /**
+ * Checks if an element is a node with display tag.
+ * @param {Element} node The node to check.
+ * @return {boolean} True if element is an display node.
+ */
+sre.SemanticUtil.hasDisplayTag = function(node) {
+  return !!node &&
+      sre.SemanticUtil.DISPLAYTAGS.indexOf(sre.DomUtil.tagName(node)) !== -1;
+};
+
+
+/**
+ * Checks if an element is a node a glyph node that is not in a leaf.
+ * @param {Element} node The node to check.
+ * @return {boolean} True if element is an orphaned glyph.
+ */
+sre.SemanticUtil.isOrphanedGlyph = function(node) {
+  return !!node &&
+      (sre.DomUtil.tagName(node) === 'MGLYPH' &&
+       !sre.SemanticUtil.hasLeafTag(/** @type {Element} */(node.parentNode)));
+};
+
+
+/**
  * Removes elements from a list of MathML nodes that are either to be ignored or
  * ignored if they have empty children.
  * Observe that this is currently not recursive, i.e. will not take care of
@@ -193,6 +236,7 @@ sre.SemanticUtil.hasEmptyTag = function(node) {
 sre.SemanticUtil.purgeNodes = function(nodes) {
   var nodeArray = [];
   for (var i = 0, node; node = nodes[i]; i++) {
+    if (node.nodeType !== sre.DomUtil.NodeType.ELEMENT_NODE) continue;
     var tagName = sre.DomUtil.tagName(node);
     if (sre.SemanticUtil.IGNORETAGS.indexOf(tagName) != -1) continue;
     if (sre.SemanticUtil.EMPTYTAGS.indexOf(tagName) != -1 &&

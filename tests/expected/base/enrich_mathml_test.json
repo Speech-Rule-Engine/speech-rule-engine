@@ -2,10 +2,10 @@
   "factory": "enrichMathml",
   "base": "input/base/semantic.json",
   "information": "Semantic enrichment tests.",
-  "_comment_0": " Empty wrappers.",
-  "_comment_1": " Test for empty wrapping elements.",
   "exclude": [],
   "tests": {
+    "_comment_0": " Empty wrappers.",
+    "_comment_1": " Test for empty wrapping elements.",
     "Wrappers_0": {
       "expected": "<math type=\"infixop\" role=\"implicit\" id=\"3\" children=\"0,1\" content=\"2\"><mrow><mrow><mi type=\"identifier\" role=\"latinletter\" id=\"0\" parent=\"3\">a</mi></mrow></mrow><mo type=\"operator\" role=\"multiplication\" id=\"2\" parent=\"3\" added=\"true\" operator=\"infixop,⁢\">⁢</mo><mrow><mi type=\"identifier\" role=\"latinletter\" id=\"1\" parent=\"3\">b</mi></mrow></math>"
     },
