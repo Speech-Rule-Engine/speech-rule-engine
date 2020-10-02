@@ -60,13 +60,8 @@ goog.inherits(sre.ApiTest, sre.AbstractTest);
  * @override
  */
 sre.ApiTest.prototype.setUpTest = function() {
-  this.system.setupEngine(
-      {locale: 'en', domain: 'mathspeak', style: 'default',
-        modality: 'speech', speech: sre.Engine.Speech.NONE});
   this.annotations = sre.SemanticAnnotations.getInstance().annotators;
   this.visitors = sre.SemanticAnnotations.getInstance().visitors;
-  sre.SemanticAnnotations.getInstance().annotators = {};
-  sre.SemanticAnnotations.getInstance().visitors = {};
 };
 
 
@@ -81,8 +76,23 @@ sre.ApiTest.prototype.tearDownTest = function() {
 };
 
 
+
+sre.ApiTest.prototype.setupEngine = function(feature) {
+  sre.System.getInstance().setupEngine(feature || sre.ApiTest.SETUP);
+  sre.SemanticAnnotations.getInstance().annotators = {};
+  sre.SemanticAnnotations.getInstance().visitors = {};
+};
+
+
+sre.ApiTest.SETUP = {
+  locale: 'en', domain: 'mathspeak', style: 'default',
+  modality: 'speech', speech: sre.Engine.Speech.NONE
+};
+
+
 /**
- * The quadratic equation as a MathML string.
+ * The quadratic equation as a MathML string. By default tests are run against
+ * the quadratic equation unless a different input is provided.
  * @type {string}
  */
 sre.ApiTest.QUADRATIC =
@@ -118,11 +128,13 @@ sre.ApiTest.QUADRATIC =
  * @param {string} func The API function to test.
  * @param {string} expr The input expression.
  * @param {?(string)} result The expected result.
- * @param {Function=} opt_post A post processor function for the result of func.
+ * @param {Object=} opt_feature Feature vector for engine setup.
+ * @param {boolean=} opt_json Json output expected?
  */
-sre.ApiTest.prototype.executeTest = function(func, expr, result, opt_post) {
-  var post = opt_post || function(x) {return x;};
-  var output = post(this.system[func](expr));
+sre.ApiTest.prototype.executeTest = function(func, expr, result, opt_feature, opt_json) {
+  this.setupEngine(opt_feature);
+  var output = this.system[func](expr);
+  output = output ? (opt_json ? JSON.stringify(output) : output.toString()) : output;
   this.assert.equal(output, result);
 };
 
@@ -136,13 +148,11 @@ sre.ApiTest.prototype.testSetupEngine = function() {
       sre.ApiTest.QUADRATIC,
       'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.system.setupEngine({domain: 'default', style: 'default'});
   this.executeTest(
       'toSpeech',
       sre.ApiTest.QUADRATIC,
       'x equals negative b plus or minus Square root of b squared minus four' +
-      ' times a times c divided by two times a');
-  this.system.setupEngine({domain: 'mathspeak', style: 'default'});
+      ' times a times c divided by two times a', {domain: 'default', style: 'default'});
 };
 
 
@@ -229,7 +239,7 @@ sre.ApiTest.prototype.testToJson = function() {
       '"font":"italic","id":"20","$t":"a"}],"content":[{"type":"operator",' +
       '"role":"multiplication","id":"21","$t":"⁢"}]}]}],"content":' +
       '[{"type":"relation","role":"equality","id":"1","$t":"="}]}}',
-      JSON.stringify
+    null, true
   );
 };
 
@@ -280,7 +290,7 @@ sre.ApiTest.prototype.testToDescription = function() {
       '"attributes":{},"personality":{}},{"context":"",' +
       '"text":"EndFraction","userValue":"","annotation":"",' +
       '"attributes":{},"personality":{}}]',
-      JSON.stringify
+    null, true
   );
 };
 
@@ -365,7 +375,6 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-font="italic" data-semantic-id="20"' +
       ' data-semantic-parent="22">a</mi></mrow></mfrac></math>'
   );
-  this.system.setupEngine({speech: sre.Engine.Speech.SHALLOW});
   this.executeTest(
       'toEnriched',
       sre.ApiTest.QUADRATIC,
@@ -443,9 +452,9 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-operator="infixop,⁢">⁢</mo><mi' +
       ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
       ' data-semantic-font="italic" data-semantic-id="20"' +
-      ' data-semantic-parent="22">a</mi></mrow></mfrac></math>'
+      ' data-semantic-parent="22">a</mi></mrow></mfrac></math>',
+    {speech: sre.Engine.Speech.SHALLOW}
   );
-  this.system.setupEngine({speech: sre.Engine.Speech.DEEP});
   this.executeTest(
       'toEnriched',
       sre.ApiTest.QUADRATIC,
@@ -542,9 +551,9 @@ sre.ApiTest.prototype.testToEnriched = function() {
       ' data-semantic-type="identifier" data-semantic-role="latinletter"' +
       ' data-semantic-font="italic" data-semantic-id="20"' +
       ' data-semantic-parent="22" data-semantic-speech="a">a</mi></mrow>' +
-      '</mfrac></math>'
+      '</mfrac></math>',
+    {speech: sre.Engine.Speech.DEEP}
   );
-  this.system.setupEngine({speech: sre.Engine.Speech.NONE});
 };
 
 
@@ -560,7 +569,8 @@ sre.ApiTest.prototype.testSyntaxWalker = function() {
       'walk',
       sre.ApiTest.QUADRATIC,
       'x equals StartFraction negative b plus or minus StartRoot' +
-      ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
+      ' b squared minus 4 a c EndRoot Over 2 a EndFraction',
+    {walker: 'Syntax'});
   this.executeTest(
       'move', move('DOWN'),
       'x');
