@@ -23970,16 +23970,16 @@
     },
     "√": {
       "expected": [
-        "Quadratwurzelzeichen",
-        "Quadratwurzelzeichen",
-        "Quadratwurzelzeichen"
+        "Quadratwurzel",
+        "Quadratwurzel",
+        "Quadratwurzel"
       ]
     },
     "∛": {
       "expected": [
-        "Kubikwurzelzeichen",
-        "Kubikwurzelzeichen",
-        "Kubikwurzelzeichen"
+        "Kubikwurzel",
+        "Kubikwurzel",
+        "Kubikwurzel"
       ]
     },
     "∜": {
