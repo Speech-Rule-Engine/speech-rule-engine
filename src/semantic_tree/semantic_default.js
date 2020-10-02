@@ -124,7 +124,7 @@ sre.SemanticCollator_ = function() {
 
 /**
  * Adds a semantic node to the structure by appending it to the already existing
- * one for a particular the symbol.
+ * one for a particular symbol.
  * @param {string} symbol A symbol.
  * @param {T} entry A semantic entry.
  */

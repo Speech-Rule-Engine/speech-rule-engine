@@ -217,13 +217,81 @@ sre.Processor.stringify_ = function(x) {
 };
 
 
+sre.Processor.addSpeechJson_ = function(stree, json) {
+  var xml = stree.xml();
+  sre.Processor.addSpeech_(
+    xml,
+    function(speech) {
+      json.stree.speech = speech;
+    },
+    function(xml) {
+      sre.Processor.addSpeechJsonRec_(json.stree, xml);
+    }
+  );
+};
+
+sre.Processor.addSpeechJsonRec_ = function(json, xml) {
+  var aural = sre.AuralRendering.getInstance();
+  var descrs = sre.SpeechRuleEngine.getInstance().getCache(json.id);
+  if (!descrs) {
+    var node = /** @type {!Node} */(sre.XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0]);
+    descrs = sre.SpeechGeneratorUtil.computeSpeech(node);
+  }
+  json.speech = aural.finalize(aural.markup(descrs));
+  if (json.children && json.children.length) {
+    json.children.forEach(function(child) {
+      sre.Processor.addSpeechJsonRec_(child, xml);
+    });
+  }
+};
+
+
+sre.Processor.addSpeech_ = function(xml, shallow, deep) {
+  var setting = sre.Engine.getInstance().speech;
+  if (setting === sre.Engine.Speech.NONE) {
+    return; 
+  }
+  var oldCache = sre.Engine.getInstance().cache;
+  sre.Engine.getInstance().cache = true;
+  if (setting === sre.Engine.Speech.DEEP) {
+    deep(xml);
+    sre.Engine.getInstance().cache = oldCache;
+    return;
+  }
+  var aural = sre.AuralRendering.getInstance();
+  var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
+  shallow(aural.finalize(aural.markup(descrs)));
+  sre.Engine.getInstance().cache = oldCache;
+};
+
+
+sre.Processor.addSpeechXml_ = function(xml) {
+  sre.Processor.addSpeech_(
+    xml, 
+    function(speech) {
+      xml.setAttribute('speech', speech);
+    },
+    function(xml) {
+      var aural = sre.AuralRendering.getInstance();
+      var nodes = sre.XpathUtil.evalXPath('.//*[@id]', xml);
+      for (var node of nodes) {
+        var descrs = sre.SpeechRuleEngine.getInstance().getCache(node.getAttribute('id')) ||
+            sre.SpeechGeneratorUtil.computeSpeech(node);
+        node.setAttribute('speech', aural.finalize(aural.markup(descrs)));
+      }
+    });
+};
+
+
 //  semantic: XML of semantic tree.
 new sre.Processor(
     'semantic',
     {
       processor: function(expr) {
         var mml = sre.DomUtil.parseInput(expr);
-        return sre.Semantic.xmlTree(mml);
+        var xml = sre.Semantic.xmlTree(mml);
+        sre.Processor.addSpeechXml_(xml);
+        return xml;
       },
       pprint: function(tree) {
         return sre.DomUtil.formatXml(tree.toString());
@@ -260,7 +328,9 @@ new sre.Processor(
       processor: function(expr) {
         var mml = sre.DomUtil.parseInput(expr, sre.Engine.Error);
         var stree = sre.Semantic.getTree(mml);
-        return stree.toJson();
+        var json = stree.toJson();
+        sre.Processor.addSpeechJson_(stree, json);
+        return json;
       },
       print: function(json) {
         return JSON.stringify(json);
