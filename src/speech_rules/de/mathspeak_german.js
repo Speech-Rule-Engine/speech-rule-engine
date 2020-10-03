@@ -1001,7 +1001,7 @@ sre.MathspeakGerman = {
       'self::row', 'content', 'name(content/cell/children/*[1])="text"'],
     ['Rule',
       'empty-row', 'default',
-      '[t] "Blank"', 'self::row', 'count(children/*)=0'],
+      '[t] "leer"', 'self::row', 'count(children/*)=0'],
 
     ['Rule',
       'matrix-cell', 'default',
