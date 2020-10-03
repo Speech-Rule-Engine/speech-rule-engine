@@ -22,7 +22,9 @@
 
 goog.provide('sre.TestFactory');
 
+goog.require('sre.ApiTest');
 goog.require('sre.ClearspeakTest');
+goog.require('sre.ClearspeakAnnotationTest');
 goog.require('sre.CollapseTest');
 goog.require('sre.EnrichMathmlTest');
 goog.require('sre.EnrichSpeechTest');
@@ -39,7 +41,9 @@ goog.require('sre.TestUtil');
  * @type {Object.<function(new:sre.AbstractJsonTest)>}
  */
 sre.TestFactory.map = {
+  'api': sre.ApiTest,
   'clearspeak': sre.ClearspeakTest,
+  'clearspeakAnnotation': sre.ClearspeakAnnotationTest,
   'collapse': sre.CollapseTest,
   'enrichMathml': sre.EnrichMathmlTest,
   'enrichSpeech': sre.EnrichSpeechTest,
