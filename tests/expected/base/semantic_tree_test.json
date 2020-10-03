@@ -2,8 +2,6 @@
   "factory": "stree",
   "base": "input/base/semantic.json",
   "information": "Semantic tree tests.",
-  "_comment_0": " Numbers.",
-  "_comment_1": " Test number representations.",
   "exclude": [],
   "tests": {
     "Wrappers_0": {
@@ -39,6 +37,8 @@
     "Scripts_7": {
       "expected": "<superscript role=\"latinletter\" id=\"7\"><children><subscript role=\"subsup\" id=\"6\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">d</identifier></children></infixop></children></subscript><identifier role=\"latinletter\" font=\"italic\" id=\"5\">c</identifier></children></superscript>"
     },
+    "_comment_0": " Numbers.",
+    "_comment_1": " Test number representations.",
     "Numbers_0": {
       "expected": "<number role=\"integer\" font=\"normal\" id=\"0\">2</number>"
     },

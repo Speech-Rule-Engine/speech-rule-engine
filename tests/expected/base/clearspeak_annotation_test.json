@@ -1,0 +1,399 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "factory": "clearspeakAnnotation",
+  "base": "input/base/clearspeak_annotation_test.json",
+  "information": "Clearspeak Simple Expression tests.",
+  "exclude": [],
+  "tests": {
+    "Numbers_0": {
+      "expected": true
+    },
+    "Numbers_1": {
+      "expected": true
+    },
+    "Numbers_2": {
+      "expected": false
+    },
+    "Numbers_3": {
+      "expected": true
+    },
+    "Numbers_4": {
+      "expected": true
+    },
+    "Numbers_5": {
+      "expected": false
+    },
+    "Numbers_6": {
+      "expected": false
+    },
+    "Letters_0": {
+      "expected": true
+    },
+    "Letters_1": {
+      "expected": true
+    },
+    "Letters_2": {
+      "expected": true
+    },
+    "Letters_3": {
+      "expected": true
+    },
+    "Letters_4": {
+      "expected": false
+    },
+    "Letters_5": {
+      "expected": false
+    },
+    "Letters_6": {
+      "expected": false
+    },
+    "Letters_7": {
+      "expected": true
+    },
+    "Letters_8": {
+      "expected": true
+    },
+    "Letters_9": {
+      "expected": true
+    },
+    "Letters_10": {
+      "expected": false
+    },
+    "Letters_11": {
+      "expected": true
+    },
+    "Letters_12": {
+      "expected": false
+    },
+    "Letters_13": {
+      "expected": false
+    },
+    "Letters_14": {
+      "expected": true
+    },
+    "Letters_15": {
+      "expected": true
+    },
+    "Letters_16": {
+      "expected": true
+    },
+    "Letters_17": {
+      "expected": true
+    },
+    "Letters_18": {
+      "expected": false
+    },
+    "Letters_19": {
+      "expected": false
+    },
+    "Letters_20": {
+      "expected": false
+    },
+    "Letters_21": {
+      "expected": false
+    },
+    "Mixed_0": {
+      "expected": true
+    },
+    "Mixed_1": {
+      "expected": true
+    },
+    "Mixed_2": {
+      "expected": false
+    },
+    "Mixed_3": {
+      "expected": true
+    },
+    "Mixed_4": {
+      "expected": true
+    },
+    "Mixed_5": {
+      "expected": false
+    },
+    "Mixed_6": {
+      "expected": false
+    },
+    "Mixed_7": {
+      "expected": false
+    },
+    "Mixed_8": {
+      "expected": false
+    },
+    "Mixed_9": {
+      "expected": false
+    },
+    "Mixed_10": {
+      "expected": false
+    },
+    "Mixed_11": {
+      "expected": false
+    },
+    "Mixed_12": {
+      "expected": true
+    },
+    "Mixed_13": {
+      "expected": true
+    },
+    "Mixed_14": {
+      "expected": false
+    },
+    "Mixed_15": {
+      "expected": false
+    },
+    "Mixed_16": {
+      "expected": false
+    },
+    "Mixed_17": {
+      "expected": false
+    },
+    "Mixed_18": {
+      "expected": false
+    },
+    "Mixed_19": {
+      "expected": false
+    },
+    "Mixed_20": {
+      "expected": false
+    },
+    "Degree_0": {
+      "expected": true
+    },
+    "Degree_1": {
+      "expected": true
+    },
+    "Degree_2": {
+      "expected": true
+    },
+    "Degree_3": {
+      "expected": true
+    },
+    "Degree_4": {
+      "expected": false
+    },
+    "Degree_5": {
+      "expected": false
+    },
+    "Degree_6": {
+      "expected": false
+    },
+    "Degree_7": {
+      "expected": false
+    },
+    "Degree_8": {
+      "expected": false
+    },
+    "Functions_0": {
+      "expected": true
+    },
+    "Functions_1": {
+      "expected": true
+    },
+    "Functions_2": {
+      "expected": true
+    },
+    "Functions_3": {
+      "expected": true
+    },
+    "Functions_4": {
+      "expected": true
+    },
+    "Functions_5": {
+      "expected": false
+    },
+    "Functions_6": {
+      "expected": true
+    },
+    "Functions_7": {
+      "expected": true
+    },
+    "Functions_8": {
+      "expected": true
+    },
+    "Functions_9": {
+      "expected": false
+    },
+    "Functions_10": {
+      "expected": false
+    },
+    "Functions_11": {
+      "expected": false
+    },
+    "_comment1_": " Not sure if these should be like that!",
+    "Functions_12": {
+      "expected": true
+    },
+    "Functions_13": {
+      "expected": true
+    },
+    "Functions_14": {
+      "expected": false
+    },
+    "NegativeNumbers_0": {
+      "expected": true
+    },
+    "NegativeNumbers_1": {
+      "expected": true
+    },
+    "NegativeNumbers_2": {
+      "expected": false
+    },
+    "NegativeNumbers_3": {
+      "expected": true
+    },
+    "NegativeNumbers_4": {
+      "expected": true
+    },
+    "NegativeNumbers_5": {
+      "expected": false
+    },
+    "NegativeNumbers_6": {
+      "expected": false
+    },
+    "NegativeNumbers_7": {
+      "expected": false
+    },
+    "NegativeNumbers_8": {
+      "expected": false
+    },
+    "NegativeNumbers_9": {
+      "expected": false
+    },
+    "NegativeNumbers_10": {
+      "expected": false
+    },
+    "NegativeLetters_0": {
+      "expected": true
+    },
+    "NegativeLetters_1": {
+      "expected": true
+    },
+    "NegativeLetters_2": {
+      "expected": true
+    },
+    "NegativeLetters_3": {
+      "expected": true
+    },
+    "NegativeLetters_4": {
+      "expected": false
+    },
+    "NegativeLetters_5": {
+      "expected": false
+    },
+    "NegativeLetters_6": {
+      "expected": false
+    },
+    "NegativeLetters_7": {
+      "expected": true
+    },
+    "NegativeLetters_8": {
+      "expected": true
+    },
+    "NegativeLetters_9": {
+      "expected": true
+    },
+    "NegativeLetters_10": {
+      "expected": false
+    },
+    "NegativeLetters_11": {
+      "expected": true
+    },
+    "NegativeLetters_12": {
+      "expected": false
+    },
+    "NegativeLetters_13": {
+      "expected": false
+    },
+    "NegativeLetters_14": {
+      "expected": true
+    },
+    "NegativeLetters_15": {
+      "expected": true
+    },
+    "NegativeLetters_16": {
+      "expected": true
+    },
+    "NegativeLetters_17": {
+      "expected": true
+    },
+    "NegativeLetters_18": {
+      "expected": false
+    },
+    "NegativeLetters_19": {
+      "expected": false
+    },
+    "NegativeLetters_20": {
+      "expected": false
+    },
+    "NegativeLetters_21": {
+      "expected": false
+    },
+    "NegativeMixed_0": {
+      "expected": true
+    },
+    "NegativeMixed_1": {
+      "expected": true
+    },
+    "NegativeMixed_2": {
+      "expected": false
+    },
+    "NegativeMixed_3": {
+      "expected": true
+    },
+    "NegativeMixed_4": {
+      "expected": true
+    },
+    "NegativeMixed_5": {
+      "expected": false
+    },
+    "NegativeMixed_6": {
+      "expected": false
+    },
+    "NegativeMixed_7": {
+      "expected": false
+    },
+    "NegativeMixed_8": {
+      "expected": false
+    },
+    "NegativeMixed_9": {
+      "expected": false
+    },
+    "NegativeMixed_10": {
+      "expected": false
+    },
+    "NegativeMixed_11": {
+      "expected": false
+    },
+    "NegativeMixed_12": {
+      "expected": true
+    },
+    "NegativeMixed_13": {
+      "expected": true
+    },
+    "NegativeMixed_14": {
+      "expected": false
+    },
+    "NegativeMixed_15": {
+      "expected": false
+    },
+    "NegativeMixed_16": {
+      "expected": false
+    },
+    "NegativeMixed_17": {
+      "expected": false
+    },
+    "NegativeMixed_18": {
+      "expected": false
+    },
+    "NegativeMixed_19": {
+      "expected": false
+    },
+    "NegativeMixed_20": {
+      "expected": false
+    },
+    "NegativeMixed_21": {
+      "expected":false
+    },
+    "NegativeMixed_22": {
+      "expected":false}
+  }
+}
