@@ -739,9 +739,8 @@ sre.AbstractWalker.prototype.detail_ = function() {
           this.getRebuilt().xml, 'id', sid)[0];
   var oldAlt = snode.getAttribute('alternative');
   snode.removeAttribute('alternative');
-  var descrs = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
+  var detail = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
       /** @type {!Node} */(snode));
-  var detail = sre.AuralRendering.getInstance().markup(descrs);
   var speech = this.mergePrefix_([detail]);
   snode.setAttribute('alternative', oldAlt);
   return speech;
