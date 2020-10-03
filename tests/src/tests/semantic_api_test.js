@@ -22,7 +22,7 @@ goog.provide('sre.SemanticApiTest');
 
 goog.require('sre.AbstractTest');
 goog.require('sre.DomUtil');
-goog.require('sre.SystemExternal');
+goog.require('sre.TestExternal');
 
 
 
@@ -67,7 +67,7 @@ sre.SemanticApiTest.TEST_CASES = [
 sre.SemanticApiTest.prototype.testTreeVsXml = function() {
   var test = goog.bind(function(expr) {
     var mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
-    var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
+    var xmls = new sre.TestExternal.xmldom.XMLSerializer();
     this.assert.equal(xmls.serializeToString(sre.Semantic.getTree(mml).xml()),
                       xmls.serializeToString(sre.Semantic.xmlTree(mml)));
   }, this);
@@ -82,7 +82,7 @@ sre.SemanticApiTest.prototype.testStringVsXml = function() {
   var test = goog.bind(function(expr) {
     var mstr = '<math>' + expr + '</math>';
     var mml = sre.DomUtil.parseInput(mstr);
-    var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
+    var xmls = new sre.TestExternal.xmldom.XMLSerializer();
     this.assert.equal(xmls.serializeToString(
         sre.Semantic.getTreeFromString(mstr).xml()),
                       xmls.serializeToString(sre.Semantic.xmlTree(mml)));
@@ -98,7 +98,7 @@ sre.SemanticApiTest.prototype.testStringVsTree = function() {
   var test = goog.bind(function(expr) {
     var mstr = '<math>' + expr + '</math>';
     var mml = sre.DomUtil.parseInput(mstr);
-    var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
+    var xmls = new sre.TestExternal.xmldom.XMLSerializer();
     this.assert.equal(xmls.serializeToString(
         sre.Semantic.getTreeFromString(mstr).xml()),
                       xmls.serializeToString(sre.Semantic.getTree(mml).xml()));

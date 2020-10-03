@@ -82,7 +82,7 @@ sre.Tests.environmentVars = [
  * @param {string} variable The variable name.
  */
 sre.Tests.getEnvironment = function(variable) {
-  var env = sre.SystemExternal.process.env[variable];
+  var env = sre.TestExternal.process.env[variable];
   // Process here.
   if (!env) return;
   if (env === 'true' || env === 'false') {
@@ -143,8 +143,8 @@ sre.Tests.allJson = function() {
 sre.Tests.readDir_ = function(path, result) {
   if (typeof path === 'undefined') return;
   let file = sre.TestUtil.path.EXPECTED + path;
-  if (sre.SystemExternal.fs.lstatSync(file).isDirectory()) {
-    var files = sre.SystemExternal.fs.readdirSync(file);
+  if (sre.TestExternal.fs.lstatSync(file).isDirectory()) {
+    var files = sre.TestExternal.fs.readdirSync(file);
     files.forEach(function(x) {
       sre.Tests.readDir_(path ? path + '/' + x : x, result);
     });

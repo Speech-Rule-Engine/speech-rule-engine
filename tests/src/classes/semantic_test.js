@@ -33,7 +33,7 @@ goog.require('sre.SemanticAttr');
 goog.require('sre.SemanticTree');
 goog.require('sre.SemanticUtil');
 goog.require('sre.System');
-goog.require('sre.SystemExternal');
+goog.require('sre.TestExternal');
 goog.require('sre.WalkerUtil');
 
 
@@ -245,9 +245,9 @@ sre.SemanticTreeTest.prototype.executeTest = function(mml, sml, opt_brief) {
           mml + '</math>';
   var node = sre.DomUtil.parseInput(mathMl);
   var sxml = new sre.SemanticTree(node).xml(opt_brief);
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
+  var dp = new sre.TestExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
-  var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
+  var xmls = new sre.TestExternal.xmldom.XMLSerializer();
   this.assert.equal(xmls.serializeToString(sxml), xmls.serializeToString(xml));
 };
 
@@ -289,9 +289,9 @@ sre.EnrichMathmlTest.prototype.setUpTest = function() {
 sre.EnrichMathmlTest.prototype.executeTest = function(mml, smml) {
   var mathMl = sre.Enrich.prepareMmlString(mml);
   var node = sre.Enrich.semanticMathmlSync(mathMl);
-  var dp = new sre.SystemExternal.xmldom.DOMParser();
+  var dp = new sre.TestExternal.xmldom.DOMParser();
   var xml = smml ? dp.parseFromString(smml) : '';
-  var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
+  var xmls = new sre.TestExternal.xmldom.XMLSerializer();
   this.customizeXml(node);
   this.appendExamples('', mml);
   var cleaned = sre.EnrichMathml.removeAttributePrefix(

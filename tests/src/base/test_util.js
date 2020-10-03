@@ -36,7 +36,7 @@ goog.inherits(sre.TestUtil.Error, Error);
 sre.TestUtil.loadJson = function(file) {
   try {
     return /** @type {Object} */(
-        JSON.parse(sre.SystemExternal.fs.readFileSync(file)));
+        JSON.parse(sre.TestExternal.fs.readFileSync(file)));
   } catch (e) {
     throw new sre.TestUtil.Error('Bad filename or content', file);
   }
@@ -50,14 +50,14 @@ sre.TestUtil.loadJson = function(file) {
  * @return {string} The actual filename with full path.
  */
 sre.TestUtil.fileExists = function(file, opt_path) {
-  if (sre.SystemExternal.fs.existsSync(file)) {
+  if (sre.TestExternal.fs.existsSync(file)) {
     return file;
   }
-  if (opt_path && sre.SystemExternal.fs.existsSync(opt_path + file)) {
+  if (opt_path && sre.TestExternal.fs.existsSync(opt_path + file)) {
     return opt_path + file;
   }
   let newFile = sre.TestExternal.path + file;
-  if (sre.SystemExternal.fs.existsSync(newFile)) {
+  if (sre.TestExternal.fs.existsSync(newFile)) {
     return newFile;
   }
   return '';

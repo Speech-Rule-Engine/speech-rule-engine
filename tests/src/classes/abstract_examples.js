@@ -126,9 +126,9 @@ sre.AbstractExamples.prototype.endExamples = function() {
   if (!this.fileError_) {
     try {
       for (var key in this.examples_) {
-        sre.SystemExternal.fs.appendFileSync(
+        sre.TestExternal.fs.appendFileSync(
             this.examplesFile_, key);
-        sre.SystemExternal.fs.appendFileSync(
+        sre.TestExternal.fs.appendFileSync(
             this.examplesFile_, this.join(this.examples_[key]));
       }
     } catch (err) {
@@ -205,9 +205,9 @@ sre.ExampleFiles.descriptors = {};
  */
 sre.ExampleFiles.openFile = function(file, obj) {
   if (!sre.ExampleFiles.openFiles[file]) {
-    let fd = sre.SystemExternal.fs.openSync(file, 'w+');
+    let fd = sre.TestExternal.fs.openSync(file, 'w+');
     sre.ExampleFiles.descriptors[file] = fd;
-    sre.SystemExternal.fs.appendFileSync(fd, obj.header());
+    sre.TestExternal.fs.appendFileSync(fd, obj.header());
   }
   sre.ExampleFiles.openFiles[file] = obj;
 };
@@ -218,8 +218,8 @@ sre.ExampleFiles.openFile = function(file, obj) {
  */
 sre.ExampleFiles.closeFiles = function() {
   for (let file of Object.keys(sre.ExampleFiles.openFiles)) {
-    sre.SystemExternal.fs.appendFileSync(
+    sre.TestExternal.fs.appendFileSync(
         file, sre.ExampleFiles.openFiles[file].footer());
-    sre.SystemExternal.fs.closeSync(sre.ExampleFiles.descriptors[file]);
+    sre.TestExternal.fs.closeSync(sre.ExampleFiles.descriptors[file]);
   }
 };

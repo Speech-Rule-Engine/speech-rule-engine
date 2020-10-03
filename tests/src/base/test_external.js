@@ -42,6 +42,13 @@ sre.TestExternal.require = function(library) {
 
 
 /**
+ * Filesystem library.
+ * @type {Object}
+ */
+sre.TestExternal.fs = sre.TestExternal.require('fs');
+
+
+/**
  * Assert library.
  * @type {Object}
  */
@@ -63,3 +70,10 @@ sre.TestExternal.path = function() {
   return ((sre.TestExternal.process && typeof global !== 'undefined') ?
           sre.TestExternal.process.cwd() : '.') + '/tests/';
 }();
+
+
+/**
+ * Xmldom library.
+ * @type {Object}
+ */
+sre.TestExternal.xmldom = sre.TestExternal.require('xmldom-sre');
