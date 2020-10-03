@@ -212,8 +212,8 @@ sre.TestRunner.prototype.executeTest_ = function(name, func) {
     func.apply();
   } catch (e) {
     this.outputEnd(1, '[FAIL]', sre.TestRunner.color_.RED);
-    this.outputLine(1, 'Expected: ' + (e.expected || ''));
     this.outputLine(1, 'Actual: ' + (e.actual || ''));
+    this.outputLine(1, 'Expected: ' + (e.expected || ''));
     this.status_ = sre.TestRunner.Results.FAIL;
     this.failedTests_.push(name);
     return;
