@@ -2,7 +2,9 @@
  * @fileoverview The module that initializes and runs the tests.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */ 
+//
 // Copyright 2014 Volker Sorge 
+//
 // Licensed under the Apache License, Version 2.0 (the "License"); 
 // you may not use this file except in compliance with the License. 
 // You may obtain a copy of the License at 
