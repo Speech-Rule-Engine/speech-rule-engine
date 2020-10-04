@@ -20,65 +20,60 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.WalkerTest');
+goog.provide('sretest.WalkerTest');
 
-goog.require('sre.AbstractTest');
-goog.require('sre.DomUtil');
-goog.require('sre.Engine');
-goog.require('sre.SpeechGeneratorFactory');
-goog.require('sre.System');
-goog.require('sre.WalkerFactory');
+goog.require('sretest.AbstractTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sretest.AbstractTest}
  */
-sre.WalkerTest = function() {
-  sre.WalkerTest.base(this, 'constructor');
+sretest.WalkerTest = function() {
+  sretest.WalkerTest.base(this, 'constructor');
 
   this.information = 'Walker function test.';
 
   /**
    * @type {!sre.System}
    */
-  this.system = sre.System.getInstance();
+  this.system = sretest.TestExternal.sre.System.getInstance();
 
   this.quadratic = {
-    mml: sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_MML),
-    htmlCss: sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_HTML_CSS),
-    chtml: sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_COMMON_HTML),
-    svg: sre.DomUtil.parseInput(sre.WalkerTest.QUADRATIC_SVG)
+    mml: sretest.TestExternal.sre.DomUtil.parseInput(sretest.WalkerTest.QUADRATIC_MML),
+    htmlCss: sretest.TestExternal.sre.DomUtil.parseInput(sretest.WalkerTest.QUADRATIC_HTML_CSS),
+    chtml: sretest.TestExternal.sre.DomUtil.parseInput(sretest.WalkerTest.QUADRATIC_COMMON_HTML),
+    svg: sretest.TestExternal.sre.DomUtil.parseInput(sretest.WalkerTest.QUADRATIC_SVG)
   };
 
   this.equation = {
-    mml: sre.DomUtil.parseInput(sre.WalkerTest.EQUATION_MML),
-    htmlCss: sre.DomUtil.parseInput(sre.WalkerTest.EQUATION_HTML_CSS),
-    chtml: sre.DomUtil.parseInput(sre.WalkerTest.EQUATION_COMMON_HTML),
-    svg: sre.DomUtil.parseInput(sre.WalkerTest.EQUATION_SVG)
+    mml: sretest.TestExternal.sre.DomUtil.parseInput(sretest.WalkerTest.EQUATION_MML),
+    htmlCss: sretest.TestExternal.sre.DomUtil.parseInput(sretest.WalkerTest.EQUATION_HTML_CSS),
+    chtml: sretest.TestExternal.sre.DomUtil.parseInput(sretest.WalkerTest.EQUATION_COMMON_HTML),
+    svg: sretest.TestExternal.sre.DomUtil.parseInput(sretest.WalkerTest.EQUATION_SVG)
   };
 
 };
-goog.inherits(sre.WalkerTest, sre.AbstractTest);
+goog.inherits(sretest.WalkerTest, sretest.AbstractTest);
 
 
 /**
  * @override
  */
-sre.WalkerTest.prototype.setUpTest = function() {
+sretest.WalkerTest.prototype.setUpTest = function() {
   this.system.setupEngine(
       {modality: 'speech', locale: 'en', domain: 'mathspeak',
-        style: 'default', speech: sre.Engine.Speech.NONE});
+        style: 'default', speech: sretest.TestExternal.sre.Engine.Speech.NONE});
 };
 
 
 /**
  * @override
  */
-sre.WalkerTest.prototype.tearDownTest = function() {
+sretest.WalkerTest.prototype.tearDownTest = function() {
   this.system.setupEngine(
-      {domain: 'default', style: 'short', speech: sre.Engine.Speech.NONE});
+      {domain: 'default', style: 'short', speech: sretest.TestExternal.sre.Engine.Speech.NONE});
 };
 
 
@@ -86,7 +81,7 @@ sre.WalkerTest.prototype.tearDownTest = function() {
  * The quadratic equation as a MathML string.
  * @type {string}
  */
-sre.WalkerTest.QUADRATIC_MML =
+sretest.WalkerTest.QUADRATIC_MML =
     '<math display="block"' +
     ' data-semantic-type="relseq" data-semantic-role="equality"' +
     ' data-semantic-id="24" data-semantic-children="0,23"' +
@@ -197,7 +192,7 @@ sre.WalkerTest.QUADRATIC_MML =
  * The quadratic equation in HTML CSS form.
  * @type {string}
  */
-sre.WalkerTest.QUADRATIC_HTML_CSS =
+sretest.WalkerTest.QUADRATIC_HTML_CSS =
     '<span class="math" id="MathJax-Span-26" data-semantic-type="relseq"' +
     ' data-semantic-role="equality" data-semantic-id="24"' +
     ' data-semantic-children="0,23" data-semantic-content="1"' +
@@ -710,7 +705,7 @@ sre.WalkerTest.QUADRATIC_HTML_CSS =
  * The quadratic equation in COMMON HTML form.
  * @type {string}
  */
-sre.WalkerTest.QUADRATIC_COMMON_HTML =
+sretest.WalkerTest.QUADRATIC_COMMON_HTML =
     '<span id="MJXc-Node-22" class="mjx-math" data-semantic-type="relseq"' +
     ' data-semantic-role="equality" data-semantic-id="24"' +
     ' data-semantic-children="0,23" data-semantic-content="1"' +
@@ -912,7 +907,7 @@ sre.WalkerTest.QUADRATIC_COMMON_HTML =
  * The quadratic equation in SVG HTML form.
  * @type {string}
  */
-sre.WalkerTest.QUADRATIC_SVG =
+sretest.WalkerTest.QUADRATIC_SVG =
     '<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="mjx-svg-math"' +
     ' data-semantic-type="relseq" data-semantic-role="equality"' +
     ' data-semantic-id="24" data-semantic-children="0,23"' +
@@ -1115,9 +1110,9 @@ sre.WalkerTest.QUADRATIC_SVG =
  * @param {?(string)} result The expected result.
  * @private
  */
-sre.WalkerTest.prototype.executeTest_ = function(walker, move, result) {
+sretest.WalkerTest.prototype.executeTest_ = function(walker, move, result) {
   if (move) {
-    walker.move((typeof move === 'string') ? sre.EventUtil.KeyCode[move] : move);
+    walker.move((typeof move === 'string') ? sretest.TestExternal.sre.EventUtil.KeyCode[move] : move);
   }
   this.assert.equal(walker.speech(), result);
 };
@@ -1135,11 +1130,11 @@ sre.WalkerTest.prototype.executeTest_ = function(walker, move, result) {
  * @return {sre.Walker} The newly created walker.
  * @private
  */
-sre.WalkerTest.prototype.createWalker_ = function(type, node, renderer, mml) {
-  return sre.WalkerFactory.walker(
+sretest.WalkerTest.prototype.createWalker_ = function(type, node, renderer, mml) {
+  return sretest.TestExternal.sre.WalkerFactory.walker(
       type, node,
-      sre.SpeechGeneratorFactory.generator('Node'),
-      /** @type {!sre.Highlighter} */(sre.HighlighterFactory.highlighter(
+      sretest.TestExternal.sre.SpeechGeneratorFactory.generator('Node'),
+      /** @type {!sre.Highlighter} */(sretest.TestExternal.sre.HighlighterFactory.highlighter(
       {color: 'black'}, {color: 'white'}, renderer)),
       mml
   );
@@ -1151,7 +1146,7 @@ sre.WalkerTest.prototype.createWalker_ = function(type, node, renderer, mml) {
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runSyntaxQuadraticMoveTests_ = function(walker) {
+sretest.WalkerTest.prototype.runSyntaxQuadraticMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
@@ -1189,34 +1184,34 @@ sre.WalkerTest.prototype.runSyntaxQuadraticMoveTests_ = function(walker) {
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runSyntaxQuadraticKeyTests_ = function(walker) {
+sretest.WalkerTest.prototype.runSyntaxQuadraticKeyTests_ = function(walker) {
   this.executeTest_(walker, null,
       'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.X, 'equality');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.DOWN, 'x');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.RIGHT, 'equals');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.RIGHT,
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.X, 'equality');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.DOWN, 'x');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.RIGHT, 'equals');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.RIGHT,
       'StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.SPACE, 'Level 1 collapsible');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.X, 'fraction');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.DOWN,
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.SPACE, 'Level 1 collapsible');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.X, 'fraction');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.DOWN,
       'Numerator negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.SPACE, 'Level 2 Numerator');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.UP,
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.SPACE, 'Level 2 Numerator');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.UP,
       'StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.LEFT, 'equals');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.LEFT, 'x');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.LEFT, 'x');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.HOME,
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.LEFT, 'equals');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.LEFT, 'x');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.LEFT, 'x');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.HOME,
       'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.DOWN, 'x');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.X, 'identifier');
-  this.executeTest_(walker, sre.EventUtil.KeyCode.UP,
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.DOWN, 'x');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.X, 'identifier');
+  this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.UP,
       'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
 };
@@ -1225,10 +1220,10 @@ sre.WalkerTest.prototype.runSyntaxQuadraticKeyTests_ = function(walker) {
 /**
  * Test for syntax walker on MML elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerQuadraticMml = function() {
+sretest.WalkerTest.prototype.testSyntaxWalkerQuadraticMml = function() {
   var walker = this.createWalker_(
       'Syntax', this.quadratic.mml, {renderer: 'NativeMML'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runSyntaxQuadraticMoveTests_(walker);
   this.runSyntaxQuadraticKeyTests_(walker);
 };
@@ -1237,11 +1232,11 @@ sre.WalkerTest.prototype.testSyntaxWalkerQuadraticMml = function() {
 /**
  * Test for syntax walker on MML elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerQuadraticMmlCss = function() {
+sretest.WalkerTest.prototype.testSyntaxWalkerQuadraticMmlCss = function() {
   var walker = this.createWalker_(
       'Syntax', this.quadratic.mml,
       {renderer: 'NativeMML', browser: 'Safari'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runSyntaxQuadraticMoveTests_(walker);
   this.runSyntaxQuadraticKeyTests_(walker);
 };
@@ -1250,10 +1245,10 @@ sre.WalkerTest.prototype.testSyntaxWalkerQuadraticMmlCss = function() {
 /**
  * Test for syntax walker on HTML CSS elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerQuadraticHtmlCss = function() {
+sretest.WalkerTest.prototype.testSyntaxWalkerQuadraticHtmlCss = function() {
   var walker = this.createWalker_(
       'Syntax', this.quadratic.htmlCss, {renderer: 'HTML-CSS'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runSyntaxQuadraticMoveTests_(walker);
   this.runSyntaxQuadraticKeyTests_(walker);
 };
@@ -1262,11 +1257,11 @@ sre.WalkerTest.prototype.testSyntaxWalkerQuadraticHtmlCss = function() {
 /**
  * Test for syntax walker on Common HTML elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerQuadraticCommonHtml = function() {
+sretest.WalkerTest.prototype.testSyntaxWalkerQuadraticCommonHtml = function() {
   var walker = this.createWalker_(
       'Syntax', this.quadratic.chtml,
       {renderer: 'CommonHTML'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runSyntaxQuadraticMoveTests_(walker);
   this.runSyntaxQuadraticKeyTests_(walker);
 };
@@ -1275,11 +1270,11 @@ sre.WalkerTest.prototype.testSyntaxWalkerQuadraticCommonHtml = function() {
 /**
  * Test for syntax walker on SVG elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerQuadraticSvg = function() {
+sretest.WalkerTest.prototype.testSyntaxWalkerQuadraticSvg = function() {
   var walker = this.createWalker_(
       'Syntax', this.quadratic.svg,
       {renderer: 'SVG'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runSyntaxQuadraticMoveTests_(walker);
   this.runSyntaxQuadraticKeyTests_(walker);
 };
@@ -1290,7 +1285,7 @@ sre.WalkerTest.prototype.testSyntaxWalkerQuadraticSvg = function() {
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runSemanticQuadraticMoveTests_ = function(walker) {
+sretest.WalkerTest.prototype.runSemanticQuadraticMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
@@ -1324,10 +1319,10 @@ sre.WalkerTest.prototype.runSemanticQuadraticMoveTests_ = function(walker) {
 /**
  * Test for semantic walker on MML elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerQuadraticMml = function() {
+sretest.WalkerTest.prototype.testSemanticWalkerQuadraticMml = function() {
   var walker = this.createWalker_(
       'Semantic', this.quadratic.mml, {renderer: 'NativeMML'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runSemanticQuadraticMoveTests_(walker);
 };
 
@@ -1335,11 +1330,11 @@ sre.WalkerTest.prototype.testSemanticWalkerQuadraticMml = function() {
 /**
  * Test for semantic walker on MML elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerQuadraticMmlCss = function() {
+sretest.WalkerTest.prototype.testSemanticWalkerQuadraticMmlCss = function() {
   var walker = this.createWalker_(
       'Semantic', this.quadratic.mml,
       {renderer: 'NativeMML', browser: 'Safari'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runSemanticQuadraticMoveTests_(walker);
 };
 
@@ -1347,10 +1342,10 @@ sre.WalkerTest.prototype.testSemanticWalkerQuadraticMmlCss = function() {
 /**
  * Test for semantic walker on HTML CSS elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerQuadraticHtmlCss = function() {
+sretest.WalkerTest.prototype.testSemanticWalkerQuadraticHtmlCss = function() {
   var walker = this.createWalker_(
       'Semantic', this.quadratic.htmlCss, {renderer: 'HTML-CSS'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runSemanticQuadraticMoveTests_(walker);
 };
 
@@ -1358,11 +1353,11 @@ sre.WalkerTest.prototype.testSemanticWalkerQuadraticHtmlCss = function() {
 /**
  * Test for semantic walker on Common HTML elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerQuadraticCommonHtml = function() {
+sretest.WalkerTest.prototype.testSemanticWalkerQuadraticCommonHtml = function() {
   var walker = this.createWalker_(
       'Semantic', this.quadratic.chtml,
       {renderer: 'CommonHTML'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runSemanticQuadraticMoveTests_(walker);
 };
 
@@ -1370,11 +1365,11 @@ sre.WalkerTest.prototype.testSemanticWalkerQuadraticCommonHtml = function() {
 /**
  * Test for semantic walker on SVG elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerQuadraticSvg = function() {
+sretest.WalkerTest.prototype.testSemanticWalkerQuadraticSvg = function() {
   var walker = this.createWalker_(
       'Semantic', this.quadratic.svg,
       {renderer: 'SVG'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runSemanticQuadraticMoveTests_(walker);
 };
 
@@ -1384,7 +1379,7 @@ sre.WalkerTest.prototype.testSemanticWalkerQuadraticSvg = function() {
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runDummyQuadraticMoveTests_ = function(walker) {
+sretest.WalkerTest.prototype.runDummyQuadraticMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'x equals StartFraction negative b plus or minus StartRoot' +
       ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
@@ -1409,10 +1404,10 @@ sre.WalkerTest.prototype.runDummyQuadraticMoveTests_ = function(walker) {
 /**
  * Test for dummy walker on MML elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerQuadraticMml = function() {
+sretest.WalkerTest.prototype.testDummyWalkerQuadraticMml = function() {
   var walker = this.createWalker_(
       'Dummy', this.quadratic.mml, {renderer: 'NativeMML'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runDummyQuadraticMoveTests_(walker);
 };
 
@@ -1420,11 +1415,11 @@ sre.WalkerTest.prototype.testDummyWalkerQuadraticMml = function() {
 /**
  * Test for dummy walker on MML elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerQuadraticMmlCss = function() {
+sretest.WalkerTest.prototype.testDummyWalkerQuadraticMmlCss = function() {
   var walker = this.createWalker_(
       'Dummy', this.quadratic.mml,
       {renderer: 'NativeMML', browser: 'Safari'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runDummyQuadraticMoveTests_(walker);
 };
 
@@ -1432,10 +1427,10 @@ sre.WalkerTest.prototype.testDummyWalkerQuadraticMmlCss = function() {
 /**
  * Test for dummy walker on HTML CSS elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerQuadraticHtmlCss = function() {
+sretest.WalkerTest.prototype.testDummyWalkerQuadraticHtmlCss = function() {
   var walker = this.createWalker_(
       'Dummy', this.quadratic.htmlCss, {renderer: 'HTML-CSS'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runDummyQuadraticMoveTests_(walker);
 };
 
@@ -1443,11 +1438,11 @@ sre.WalkerTest.prototype.testDummyWalkerQuadraticHtmlCss = function() {
 /**
  * Test for dummy walker on Common HTML elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerQuadraticCommonHtml = function() {
+sretest.WalkerTest.prototype.testDummyWalkerQuadraticCommonHtml = function() {
   var walker = this.createWalker_(
       'Dummy', this.quadratic.chtml,
       {renderer: 'CommonHTML'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runDummyQuadraticMoveTests_(walker);
 };
 
@@ -1455,11 +1450,11 @@ sre.WalkerTest.prototype.testDummyWalkerQuadraticCommonHtml = function() {
 /**
  * Test for dummy walker on SVG elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerQuadraticSvg = function() {
+sretest.WalkerTest.prototype.testDummyWalkerQuadraticSvg = function() {
   var walker = this.createWalker_(
       'Dummy', this.quadratic.svg,
       {renderer: 'SVG'},
-      sre.WalkerTest.QUADRATIC_MML);
+      sretest.WalkerTest.QUADRATIC_MML);
   this.runDummyQuadraticMoveTests_(walker);
 };
 
@@ -1469,13 +1464,13 @@ sre.WalkerTest.prototype.testDummyWalkerQuadraticSvg = function() {
  * @param {!Node} node The node on which to test the summary.
  * @private
  */
-sre.WalkerTest.prototype.executeSummaryQuadraticTest_ = function(node) {
-  var dummy = sre.WalkerFactory.walker(
+sretest.WalkerTest.prototype.executeSummaryQuadraticTest_ = function(node) {
+  var dummy = sretest.TestExternal.sre.WalkerFactory.walker(
       'Dummy', node,
-      sre.SpeechGeneratorFactory.generator('Summary'),
-      /** @type {!sre.Highlighter} */(sre.HighlighterFactory.highlighter(
+      sretest.TestExternal.sre.SpeechGeneratorFactory.generator('Summary'),
+      /** @type {!sre.Highlighter} */(sretest.TestExternal.sre.HighlighterFactory.highlighter(
       {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'})),
-      sre.WalkerTest.QUADRATIC_MML
+      sretest.WalkerTest.QUADRATIC_MML
       );
   this.assert.equal(dummy.speech(), 'x equals collapsed fraction');
 };
@@ -1485,7 +1480,7 @@ sre.WalkerTest.prototype.executeSummaryQuadraticTest_ = function(node) {
  * Tests summary speech generation for different representations of the
  * quadratic formula.
  */
-sre.WalkerTest.prototype.testSummary = function() {
+sretest.WalkerTest.prototype.testSummary = function() {
   [this.quadratic.mml, this.quadratic.htmlCss,
    this.quadratic.chtml, this.quadratic.svg].
       forEach(goog.bind(this.executeSummaryQuadraticTest_, this));
@@ -1496,7 +1491,7 @@ sre.WalkerTest.prototype.testSummary = function() {
  * A simple equation system in enriched MML form.
  * @type {string}
  */
-sre.WalkerTest.EQUATION_MML =
+sretest.WalkerTest.EQUATION_MML =
     '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"' +
     ' data-semantic-complexity="19">' +
     '<mtable columnalign="right center left" rowspacing="3pt"' +
@@ -1564,7 +1559,7 @@ sre.WalkerTest.EQUATION_MML =
  * A simple equation system in HTML CSS format.
  * @type {string}
  */
-sre.WalkerTest.EQUATION_HTML_CSS =
+sretest.WalkerTest.EQUATION_HTML_CSS =
     '<span class="math" id="MathJax-Span-28" data-semantic-complexity="19"' +
     ' style="width: 2.927em; display: inline-block;"><span style="display:' +
     ' inline-block; position: relative; width: 2.738em; height: 0px;' +
@@ -1687,7 +1682,7 @@ sre.WalkerTest.EQUATION_HTML_CSS =
  * A simple equation system in COMMON HTML form.
  * @type {string}
  */
-sre.WalkerTest.EQUATION_COMMON_HTML =
+sretest.WalkerTest.EQUATION_COMMON_HTML =
     '<span id="MJXc-Node-26" class="mjx-math" data-semantic-complexity="19">' +
     '<span id="MJXc-Node-27" class="mjx-mrow"><span id="MJXc-Node-28"' +
     ' class="mjx-mtable" data-semantic-type="table"' +
@@ -1779,7 +1774,7 @@ sre.WalkerTest.EQUATION_COMMON_HTML =
  * A simple equation system as SVG.
  * @type {string}
  */
-sre.WalkerTest.EQUATION_SVG =
+sretest.WalkerTest.EQUATION_SVG =
     '<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="mjx-svg-math"' +
     ' data-semantic-complexity="19" width="6.283ex" height="5.682ex"' +
     ' viewBox="0 -1458.1 2705.1 2446.4" role="img" focusable="false"' +
@@ -1856,7 +1851,7 @@ sre.WalkerTest.EQUATION_SVG =
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runSyntaxEquationMoveTests_ = function(walker) {
+sretest.WalkerTest.prototype.runSyntaxEquationMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'StartLayout 1st Row 1st Column a 2nd Column' +
       ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
@@ -1895,10 +1890,10 @@ sre.WalkerTest.prototype.runSyntaxEquationMoveTests_ = function(walker) {
 /**
  * Test for syntax walker on MML elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerEquationMml = function() {
+sretest.WalkerTest.prototype.testSyntaxWalkerEquationMml = function() {
   var walker = this.createWalker_(
       'Syntax', this.equation.mml, {renderer: 'NativeMML'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runSyntaxEquationMoveTests_(walker);
 };
 
@@ -1906,11 +1901,11 @@ sre.WalkerTest.prototype.testSyntaxWalkerEquationMml = function() {
 /**
  * Test for syntax walker on MML elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerEquationMmlCss = function() {
+sretest.WalkerTest.prototype.testSyntaxWalkerEquationMmlCss = function() {
   var walker = this.createWalker_(
       'Syntax', this.equation.mml,
       {renderer: 'NativeMML', browser: 'Safari'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runSyntaxEquationMoveTests_(walker);
 };
 
@@ -1918,10 +1913,10 @@ sre.WalkerTest.prototype.testSyntaxWalkerEquationMmlCss = function() {
 /**
  * Test for syntax walker on HTML CSS elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerEquationHtmlCss = function() {
+sretest.WalkerTest.prototype.testSyntaxWalkerEquationHtmlCss = function() {
   var walker = this.createWalker_(
       'Syntax', this.equation.htmlCss, {renderer: 'HTML-CSS'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runSyntaxEquationMoveTests_(walker);
 };
 
@@ -1929,11 +1924,11 @@ sre.WalkerTest.prototype.testSyntaxWalkerEquationHtmlCss = function() {
 /**
  * Test for syntax walker on Common HTML elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerEquationCommonHtml = function() {
+sretest.WalkerTest.prototype.testSyntaxWalkerEquationCommonHtml = function() {
   var walker = this.createWalker_(
       'Syntax', this.equation.chtml,
       {renderer: 'CommonHTML'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runSyntaxEquationMoveTests_(walker);
 };
 
@@ -1941,11 +1936,11 @@ sre.WalkerTest.prototype.testSyntaxWalkerEquationCommonHtml = function() {
 /**
  * Test for syntax walker on SVG elements.
  */
-sre.WalkerTest.prototype.testSyntaxWalkerEquationSvg = function() {
+sretest.WalkerTest.prototype.testSyntaxWalkerEquationSvg = function() {
   var walker = this.createWalker_(
       'Syntax', this.equation.svg,
       {renderer: 'SVG'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runSyntaxEquationMoveTests_(walker);
 };
 
@@ -1955,7 +1950,7 @@ sre.WalkerTest.prototype.testSyntaxWalkerEquationSvg = function() {
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runSemanticEquationMoveTests_ = function(walker) {
+sretest.WalkerTest.prototype.runSemanticEquationMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'StartLayout 1st Row 1st Column a 2nd Column' +
       ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
@@ -1994,10 +1989,10 @@ sre.WalkerTest.prototype.runSemanticEquationMoveTests_ = function(walker) {
 /**
  * Test for semantic walker on MML elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerEquationMml = function() {
+sretest.WalkerTest.prototype.testSemanticWalkerEquationMml = function() {
   var walker = this.createWalker_(
       'Semantic', this.equation.mml, {renderer: 'NativeMML'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runSemanticEquationMoveTests_(walker);
 };
 
@@ -2005,11 +2000,11 @@ sre.WalkerTest.prototype.testSemanticWalkerEquationMml = function() {
 /**
  * Test for semantic walker on MML elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerEquationMmlCss = function() {
+sretest.WalkerTest.prototype.testSemanticWalkerEquationMmlCss = function() {
   var walker = this.createWalker_(
       'Semantic', this.equation.mml,
       {renderer: 'NativeMML', browser: 'Safari'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runSemanticEquationMoveTests_(walker);
 };
 
@@ -2017,10 +2012,10 @@ sre.WalkerTest.prototype.testSemanticWalkerEquationMmlCss = function() {
 /**
  * Test for semantic walker on HTML CSS elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerEquationHtmlCss = function() {
+sretest.WalkerTest.prototype.testSemanticWalkerEquationHtmlCss = function() {
   var walker = this.createWalker_(
       'Semantic', this.equation.htmlCss, {renderer: 'HTML-CSS'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runSemanticEquationMoveTests_(walker);
 };
 
@@ -2028,11 +2023,11 @@ sre.WalkerTest.prototype.testSemanticWalkerEquationHtmlCss = function() {
 /**
  * Test for semantic walker on Common HTML elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerEquationCommonHtml = function() {
+sretest.WalkerTest.prototype.testSemanticWalkerEquationCommonHtml = function() {
   var walker = this.createWalker_(
       'Semantic', this.equation.chtml,
       {renderer: 'CommonHTML'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runSemanticEquationMoveTests_(walker);
 };
 
@@ -2040,11 +2035,11 @@ sre.WalkerTest.prototype.testSemanticWalkerEquationCommonHtml = function() {
 /**
  * Test for semantic walker on SVG elements.
  */
-sre.WalkerTest.prototype.testSemanticWalkerEquationSvg = function() {
+sretest.WalkerTest.prototype.testSemanticWalkerEquationSvg = function() {
   var walker = this.createWalker_(
       'Semantic', this.equation.svg,
       {renderer: 'SVG'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runSemanticEquationMoveTests_(walker);
 };
 
@@ -2054,7 +2049,7 @@ sre.WalkerTest.prototype.testSemanticWalkerEquationSvg = function() {
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runDummyEquationMoveTests_ = function(walker) {
+sretest.WalkerTest.prototype.runDummyEquationMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'StartLayout 1st Row 1st Column a 2nd Column' +
       ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
@@ -2079,10 +2074,10 @@ sre.WalkerTest.prototype.runDummyEquationMoveTests_ = function(walker) {
 /**
  * Test for dummy walker on MML elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerEquationMml = function() {
+sretest.WalkerTest.prototype.testDummyWalkerEquationMml = function() {
   var walker = this.createWalker_(
       'Dummy', this.equation.mml, {renderer: 'NativeMML'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runDummyEquationMoveTests_(walker);
 };
 
@@ -2090,11 +2085,11 @@ sre.WalkerTest.prototype.testDummyWalkerEquationMml = function() {
 /**
  * Test for dummy walker on MML elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerEquationMmlCss = function() {
+sretest.WalkerTest.prototype.testDummyWalkerEquationMmlCss = function() {
   var walker = this.createWalker_(
       'Dummy', this.equation.mml,
       {renderer: 'NativeMML', browser: 'Safari'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runDummyEquationMoveTests_(walker);
 };
 
@@ -2102,10 +2097,10 @@ sre.WalkerTest.prototype.testDummyWalkerEquationMmlCss = function() {
 /**
  * Test for dummy walker on HTML CSS elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerEquationHtmlCss = function() {
+sretest.WalkerTest.prototype.testDummyWalkerEquationHtmlCss = function() {
   var walker = this.createWalker_(
       'Dummy', this.equation.htmlCss, {renderer: 'HTML-CSS'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runDummyEquationMoveTests_(walker);
 };
 
@@ -2113,11 +2108,11 @@ sre.WalkerTest.prototype.testDummyWalkerEquationHtmlCss = function() {
 /**
  * Test for dummy walker on Common HTML elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerEquationCommonHtml = function() {
+sretest.WalkerTest.prototype.testDummyWalkerEquationCommonHtml = function() {
   var walker = this.createWalker_(
       'Dummy', this.equation.chtml,
       {renderer: 'CommonHTML'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runDummyEquationMoveTests_(walker);
 };
 
@@ -2125,11 +2120,11 @@ sre.WalkerTest.prototype.testDummyWalkerEquationCommonHtml = function() {
 /**
  * Test for dummy walker on SVG elements.
  */
-sre.WalkerTest.prototype.testDummyWalkerEquationSvg = function() {
+sretest.WalkerTest.prototype.testDummyWalkerEquationSvg = function() {
   var walker = this.createWalker_(
       'Dummy', this.equation.svg,
       {renderer: 'SVG'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runDummyEquationMoveTests_(walker);
 };
 
@@ -2139,7 +2134,7 @@ sre.WalkerTest.prototype.testDummyWalkerEquationSvg = function() {
  * @param {sre.Walker} walker The walker.
  * @private
  */
-sre.WalkerTest.prototype.runTableEquationMoveTests_ = function(walker) {
+sretest.WalkerTest.prototype.runTableEquationMoveTests_ = function(walker) {
   this.executeTest_(walker, null,
       'StartLayout 1st Row 1st Column a 2nd Column' +
       ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
@@ -2192,10 +2187,10 @@ sre.WalkerTest.prototype.runTableEquationMoveTests_ = function(walker) {
 /**
  * Test for table walker on MML elements.
  */
-sre.WalkerTest.prototype.testTableWalkerEquationMml = function() {
+sretest.WalkerTest.prototype.testTableWalkerEquationMml = function() {
   var walker = this.createWalker_(
       'Table', this.equation.mml, {renderer: 'NativeMML'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runTableEquationMoveTests_(walker);
 };
 
@@ -2203,11 +2198,11 @@ sre.WalkerTest.prototype.testTableWalkerEquationMml = function() {
 /**
  * Test for table walker on MML elements.
  */
-sre.WalkerTest.prototype.testTableWalkerEquationMmlCss = function() {
+sretest.WalkerTest.prototype.testTableWalkerEquationMmlCss = function() {
   var walker = this.createWalker_(
       'Table', this.equation.mml,
       {renderer: 'NativeMML', browser: 'Safari'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runTableEquationMoveTests_(walker);
 };
 
@@ -2215,10 +2210,10 @@ sre.WalkerTest.prototype.testTableWalkerEquationMmlCss = function() {
 /**
  * Test for table walker on HTML CSS elements.
  */
-sre.WalkerTest.prototype.testTableWalkerEquationHtmlCss = function() {
+sretest.WalkerTest.prototype.testTableWalkerEquationHtmlCss = function() {
   var walker = this.createWalker_(
       'Table', this.equation.htmlCss, {renderer: 'HTML-CSS'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runTableEquationMoveTests_(walker);
 };
 
@@ -2226,11 +2221,11 @@ sre.WalkerTest.prototype.testTableWalkerEquationHtmlCss = function() {
 /**
  * Test for table walker on Common HTML elements.
  */
-sre.WalkerTest.prototype.testTableWalkerEquationCommonHtml = function() {
+sretest.WalkerTest.prototype.testTableWalkerEquationCommonHtml = function() {
   var walker = this.createWalker_(
       'Table', this.equation.chtml,
       {renderer: 'CommonHTML'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runTableEquationMoveTests_(walker);
 };
 
@@ -2238,10 +2233,10 @@ sre.WalkerTest.prototype.testTableWalkerEquationCommonHtml = function() {
 /**
  * Test for table walker on SVG elements.
  */
-sre.WalkerTest.prototype.testTableWalkerEquationSvg = function() {
+sretest.WalkerTest.prototype.testTableWalkerEquationSvg = function() {
   var walker = this.createWalker_(
       'Table', this.equation.svg,
       {renderer: 'SVG'},
-      sre.WalkerTest.EQUATION_MML);
+      sretest.WalkerTest.EQUATION_MML);
   this.runTableEquationMoveTests_(walker);
 };

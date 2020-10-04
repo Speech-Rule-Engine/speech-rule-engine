@@ -19,20 +19,18 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-goog.provide('sre.PrefixTest');
+goog.provide('sretest.PrefixTest');
 
-goog.require('sre.Semantic');
-goog.require('sre.SpeechGeneratorUtil');
-goog.require('sre.SpeechTest');
+goog.require('sretest.SpeechTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.SpeechTest}
+ * @extends {sretest.SpeechTest}
  */
-sre.PrefixTest = function() {
-  sre.PrefixTest.base(this, 'constructor');
+sretest.PrefixTest = function() {
+  sretest.PrefixTest.base(this, 'constructor');
 
   /**
    * @override
@@ -56,24 +54,24 @@ sre.PrefixTest = function() {
 
   this.pickFields[2] = 'id';
 };
-goog.inherits(sre.PrefixTest, sre.SpeechTest);
+goog.inherits(sretest.PrefixTest, sretest.SpeechTest);
 
 
 /**
  * @override
  */
-sre.PrefixTest.prototype.method = function(var_args) {
+sretest.PrefixTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.id = args[2];
-  sre.PrefixTest.base(this, 'method', args[0], args[1]);
+  sretest.PrefixTest.base(this, 'method', args[0], args[1]);
 };
 
 
 /**
  * @override
  */
-sre.PrefixTest.prototype.getSpeech = function(mml) {
-  var stree = sre.Semantic.getTreeFromString(mml);
+sretest.PrefixTest.prototype.getSpeech = function(mml) {
+  var stree = sretest.TestExternal.sre.Semantic.getTreeFromString(mml);
   var node = stree.root.querySelectorAll(
       goog.bind(function(x) {return x.id === this.id;}, this))[0];
   this.subExpr = node.mathmlTree;
@@ -81,16 +79,16 @@ sre.PrefixTest.prototype.getSpeech = function(mml) {
     this.assert.fail();
     return '';
   }
-  return sre.SpeechGeneratorUtil.retrievePrefix(node);
+  return sretest.TestExternal.sre.SpeechGeneratorUtil.retrievePrefix(node);
 };
 
 
 /**
  * @override
  */
-sre.PrefixTest.prototype.appendRuleExample = function(
+sretest.PrefixTest.prototype.appendRuleExample = function(
     input, output, style, rest) {
   var sub = this.subExpr ? '<math>' + this.subExpr.toString() + '</math>' : '';
-  sre.PrefixTest.base(
+  sretest.PrefixTest.base(
       this, 'appendRuleExample', input, output, style, [sub]);
 };

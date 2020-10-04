@@ -18,41 +18,32 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-goog.provide('sre.EnrichMathmlTest');
-goog.provide('sre.EnrichSpeechTest');
-goog.provide('sre.RebuildStreeTest');
-goog.provide('sre.SemanticTest');
-goog.provide('sre.SemanticTreeTest');
+goog.provide('sretest.EnrichMathmlTest');
+goog.provide('sretest.EnrichSpeechTest');
+goog.provide('sretest.RebuildStreeTest');
+goog.provide('sretest.SemanticTest');
+goog.provide('sretest.SemanticTreeTest');
 
-goog.require('sre.AbstractExamples');
-goog.require('sre.DomUtil');
-goog.require('sre.Engine');
-goog.require('sre.Enrich');
-goog.require('sre.RebuildStree');
-goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticTree');
-goog.require('sre.SemanticUtil');
-goog.require('sre.System');
-goog.require('sre.TestExternal');
-goog.require('sre.WalkerUtil');
+goog.require('sretest.AbstractExamples');
+goog.require('sretest.TestExternal');
 
 
 
 /**
  * Base class for all the semantic tree related tests.
  * @constructor
- * @extends {sre.AbstractExamples}
+ * @extends {sretest.AbstractExamples}
  */
-sre.SemanticTest = function() {
-  sre.SemanticTest.base(this, 'constructor');
+sretest.SemanticTest = function() {
+  sretest.SemanticTest.base(this, 'constructor');
 };
-goog.inherits(sre.SemanticTest, sre.AbstractExamples);
+goog.inherits(sretest.SemanticTest, sretest.AbstractExamples);
 
 
 /**
  * @override
  */
-sre.SemanticTest.prototype.method = function(var_args) {
+sretest.SemanticTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.executeTest(args[0], args[1]);
 };
@@ -63,36 +54,36 @@ sre.SemanticTest.prototype.method = function(var_args) {
  * @param {string} input The input element.
  * @param {string} expected The expected output.
  */
-sre.SemanticTest.prototype.executeTest = goog.abstractMethod;
+sretest.SemanticTest.prototype.executeTest = goog.abstractMethod;
 
 
 
 /**
  * Testcases for reconstructing semantic trees from enriched mathml.
  * @constructor
- * @extends {sre.SemanticTest}
+ * @extends {sretest.SemanticTest}
  */
-sre.RebuildStreeTest = function() {
-  sre.RebuildStreeTest.base(this, 'constructor');
+sretest.RebuildStreeTest = function() {
+  sretest.RebuildStreeTest.base(this, 'constructor');
 
   /**
    * @override
    */
   this.pickFields = ['input'];
 };
-goog.inherits(sre.RebuildStreeTest, sre.SemanticTest);
+goog.inherits(sretest.RebuildStreeTest, sretest.SemanticTest);
 
 
 /**
  * Tests if for a given mathml snippet results in a particular semantic tree.
  * @param {string} expr MathML expression.
  */
-sre.RebuildStreeTest.prototype.executeTest = function(expr) {
-  var mathMl = sre.Enrich.prepareMmlString(expr);
-  var mml = sre.DomUtil.parseInput(mathMl);
-  var stree = new sre.SemanticTree(mml);
-  var emml = sre.EnrichMathml.enrich(mml, stree);
-  var reass = (new sre.RebuildStree(emml)).getTree();
+sretest.RebuildStreeTest.prototype.executeTest = function(expr) {
+  var mathMl = sretest.TestExternal.sre.Enrich.prepareMmlString(expr);
+  var mml = sretest.TestExternal.sre.DomUtil.parseInput(mathMl);
+  var stree = new sretest.TestExternal.sre.SemanticTree(mml);
+  var emml = sretest.TestExternal.sre.EnrichMathml.enrich(mml, stree);
+  var reass = (new sretest.TestExternal.sre.RebuildStree(emml)).getTree();
   this.assert.equal(stree.toString(), reass.toString());
 };
 
@@ -101,24 +92,24 @@ sre.RebuildStreeTest.prototype.executeTest = function(expr) {
 /**
  * Enriched Speech Tests
  * @constructor
- * @extends {sre.SemanticTest}
+ * @extends {sretest.SemanticTest}
  */
-sre.EnrichSpeechTest = function() {
-  sre.EnrichSpeechTest.base(this, 'constructor');
+sretest.EnrichSpeechTest = function() {
+  sretest.EnrichSpeechTest.base(this, 'constructor');
   this.pickFields = ['input'];
 };
-goog.inherits(sre.EnrichSpeechTest, sre.SemanticTest);
+goog.inherits(sretest.EnrichSpeechTest, sretest.SemanticTest);
 
 
 /**
  * @override
  */
-sre.EnrichSpeechTest.prototype.setUpTest = function() {
-  sre.EnrichSpeechTest.base(this, 'setUpTest');
-  sre.System.getInstance().setupEngine(
+sretest.EnrichSpeechTest.prototype.setUpTest = function() {
+  sretest.EnrichSpeechTest.base(this, 'setUpTest');
+  sretest.TestExternal.sre.System.getInstance().setupEngine(
       {domain: 'mathspeak',
         style: 'default',
-        speech: sre.Engine.Speech.SHALLOW
+        speech: sretest.TestExternal.sre.Engine.Speech.SHALLOW
       });
 };
 
@@ -126,13 +117,13 @@ sre.EnrichSpeechTest.prototype.setUpTest = function() {
 /**
  * @override
  */
-sre.EnrichSpeechTest.prototype.tearDownTest = function() {
-  sre.System.getInstance().setupEngine(
+sretest.EnrichSpeechTest.prototype.tearDownTest = function() {
+  sretest.TestExternal.sre.System.getInstance().setupEngine(
       {domain: 'default',
         style: 'default',
-        speech: sre.Engine.Speech.NONE
+        speech: sretest.TestExternal.sre.Engine.Speech.NONE
       });
-  sre.EnrichSpeechTest.base(this, 'tearDownTest');
+  sretest.EnrichSpeechTest.base(this, 'tearDownTest');
 };
 
 
@@ -141,12 +132,12 @@ sre.EnrichSpeechTest.prototype.tearDownTest = function() {
  * equivalent to those computed for enriched expressions.
  * @override
  */
-sre.EnrichSpeechTest.prototype.executeTest = function(expr) {
-  var mml = sre.Enrich.prepareMmlString(expr);
-  var sysSpeech = sre.System.getInstance().toSpeech(mml);
-  var enr = sre.WalkerUtil.getSemanticRoot(
-      sre.System.getInstance().toEnriched(mml));
-  var enrSpeech = enr.getAttribute(sre.EnrichMathml.Attribute.SPEECH);
+sretest.EnrichSpeechTest.prototype.executeTest = function(expr) {
+  var mml = sretest.TestExternal.sre.Enrich.prepareMmlString(expr);
+  var sysSpeech = sretest.TestExternal.sre.System.getInstance().toSpeech(mml);
+  var enr = sretest.TestExternal.sre.WalkerUtil.getSemanticRoot(
+      sretest.TestExternal.sre.System.getInstance().toEnriched(mml));
+  var enrSpeech = enr.getAttribute(sretest.TestExternal.sre.EnrichMathml.Attribute.SPEECH);
   this.assert.equal(sysSpeech, enrSpeech);
 };
 
@@ -155,10 +146,10 @@ sre.EnrichSpeechTest.prototype.executeTest = function(expr) {
 /**
  * Semantic Tree Tests
  * @constructor
- * @extends {sre.SemanticTest}
+ * @extends {sretest.SemanticTest}
  */
-sre.SemanticTreeTest = function() {
-  sre.SemanticTreeTest.base(this, 'constructor');
+sretest.SemanticTreeTest = function() {
+  sretest.SemanticTreeTest.base(this, 'constructor');
 
   /**
    * @type {Object.<sre.SemanticAnnotator>}
@@ -173,29 +164,29 @@ sre.SemanticTreeTest = function() {
   this.pickFields.push('brief');
 
 };
-goog.inherits(sre.SemanticTreeTest, sre.SemanticTest);
+goog.inherits(sretest.SemanticTreeTest, sretest.SemanticTest);
 
 
 /**
  * @override
  */
-sre.SemanticTreeTest.prototype.setUpTest = function() {
-  sre.SemanticTreeTest.base(this, 'setUpTest');
-  this.annotations = sre.SemanticAnnotations.getInstance().annotators;
-  this.visitors = sre.SemanticAnnotations.getInstance().visitors;
-  sre.SemanticAnnotations.getInstance().annotators = {};
-  sre.SemanticAnnotations.getInstance().visitors = {};
-  sre.SemanticTreeTest.setupAttributes();
+sretest.SemanticTreeTest.prototype.setUpTest = function() {
+  sretest.SemanticTreeTest.base(this, 'setUpTest');
+  this.annotations = sretest.TestExternal.sre.SemanticAnnotations.getInstance().annotators;
+  this.visitors = sretest.TestExternal.sre.SemanticAnnotations.getInstance().visitors;
+  sretest.TestExternal.sre.SemanticAnnotations.getInstance().annotators = {};
+  sretest.TestExternal.sre.SemanticAnnotations.getInstance().visitors = {};
+  sretest.SemanticTreeTest.setupAttributes();
 };
 
 
 /**
  * @override
  */
-sre.SemanticTreeTest.prototype.tearDownTest = function() {
-  sre.SemanticAnnotations.getInstance().annotators = this.annotations;
-  sre.SemanticAnnotations.getInstance().visitors = this.visitors;
-  sre.SemanticTreeTest.base(this, 'tearDownTest');
+sretest.SemanticTreeTest.prototype.tearDownTest = function() {
+  sretest.TestExternal.sre.SemanticAnnotations.getInstance().annotators = this.annotations;
+  sretest.TestExternal.sre.SemanticAnnotations.getInstance().visitors = this.visitors;
+  sretest.SemanticTreeTest.base(this, 'tearDownTest');
 };
 
 
@@ -205,20 +196,20 @@ sre.SemanticTreeTest.prototype.tearDownTest = function() {
  * This method is necessary as the test framework can not handle code containing
  * utf-8 encoded characters.
  */
-sre.SemanticTreeTest.setupAttributes = function() {
-  var attr = sre.SemanticAttr.getInstance();
-  attr.neutralFences.unshift(sre.SemanticUtil.numberToUnicode(0x00A6));
-  attr.dashes.unshift(sre.SemanticUtil.numberToUnicode(0x2015));
-  attr.neutralFences.unshift(sre.SemanticUtil.numberToUnicode(0x2016));
-  attr.arrows.unshift(sre.SemanticUtil.numberToUnicode(0x2192));
-  attr.sumOps.unshift(sre.SemanticUtil.numberToUnicode(0x2211));
-  attr.additions.unshift(sre.SemanticUtil.numberToUnicode(0x2213));
-  attr.multiplications.unshift(sre.SemanticUtil.numberToUnicode(0x2218));
-  attr.intOps.unshift(sre.SemanticUtil.numberToUnicode(0x222B));
-  attr.inequalities.unshift(sre.SemanticUtil.numberToUnicode(0x2264));
-  attr.additions.unshift(sre.SemanticUtil.numberToUnicode(0x2295));
-  var open = sre.SemanticUtil.numberToUnicode(0x3008);
-  var close = sre.SemanticUtil.numberToUnicode(0x3009);
+sretest.SemanticTreeTest.setupAttributes = function() {
+  var attr = sretest.TestExternal.sre.SemanticAttr.getInstance();
+  attr.neutralFences.unshift(sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x00A6));
+  attr.dashes.unshift(sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x2015));
+  attr.neutralFences.unshift(sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x2016));
+  attr.arrows.unshift(sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x2192));
+  attr.sumOps.unshift(sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x2211));
+  attr.additions.unshift(sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x2213));
+  attr.multiplications.unshift(sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x2218));
+  attr.intOps.unshift(sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x222B));
+  attr.inequalities.unshift(sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x2264));
+  attr.additions.unshift(sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x2295));
+  var open = sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x3008);
+  var close = sretest.TestExternal.sre.SemanticUtil.numberToUnicode(0x3009);
   attr.openClosePairs[open] = close;
   attr.leftFences.unshift(open);
   attr.rightFences.unshift(close);
@@ -228,7 +219,7 @@ sre.SemanticTreeTest.setupAttributes = function() {
 /**
  * @override
  */
-sre.SemanticTreeTest.prototype.method = function(var_args) {
+sretest.SemanticTreeTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.executeTest(args[0], args[1], args[2]);
 };
@@ -240,14 +231,14 @@ sre.SemanticTreeTest.prototype.method = function(var_args) {
  * @param {string} sml XML snippet for the semantic tree.
  * @param {boolean=} opt_brief Brief XML output.
  */
-sre.SemanticTreeTest.prototype.executeTest = function(mml, sml, opt_brief) {
+sretest.SemanticTreeTest.prototype.executeTest = function(mml, sml, opt_brief) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
-  var node = sre.DomUtil.parseInput(mathMl);
-  var sxml = new sre.SemanticTree(node).xml(opt_brief);
-  var dp = new sre.TestExternal.xmldom.DOMParser();
+  var node = sretest.TestExternal.sre.DomUtil.parseInput(mathMl);
+  var sxml = new sretest.TestExternal.sre.SemanticTree(node).xml(opt_brief);
+  var dp = new sretest.TestExternal.xmldom.DOMParser();
   var xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
-  var xmls = new sre.TestExternal.xmldom.XMLSerializer();
+  var xmls = new sretest.TestExternal.xmldom.XMLSerializer();
   this.assert.equal(xmls.serializeToString(sxml), xmls.serializeToString(xml));
 };
 
@@ -256,21 +247,21 @@ sre.SemanticTreeTest.prototype.executeTest = function(mml, sml, opt_brief) {
 /**
  * Tests for enriched MathML expressions.
  * @constructor
- * @extends {sre.SemanticTest}
+ * @extends {sretest.SemanticTest}
  */
-sre.EnrichMathmlTest = function() {
-  sre.EnrichMathmlTest.base(this, 'constructor');
+sretest.EnrichMathmlTest = function() {
+  sretest.EnrichMathmlTest.base(this, 'constructor');
   this.attrBlacklist = [];
   this.setActive('EnrichExamples', 'json');
 };
-goog.inherits(sre.EnrichMathmlTest, sre.SemanticTest);
+goog.inherits(sretest.EnrichMathmlTest, sretest.SemanticTest);
 
 
 /**
  * @override
  */
-sre.EnrichMathmlTest.prototype.setUpTest = function() {
-  sre.EnrichMathmlTest.base(this, 'setUpTest');
+sretest.EnrichMathmlTest.prototype.setUpTest = function() {
+  sretest.EnrichMathmlTest.base(this, 'setUpTest');
   this.attrBlacklist = [
     'data-semantic-annotation',
     'data-semantic-font',
@@ -286,15 +277,15 @@ sre.EnrichMathmlTest.prototype.setUpTest = function() {
  * @param {string} mml MathML expression.
  * @param {string} smml MathML snippet for the semantic information.
  */
-sre.EnrichMathmlTest.prototype.executeTest = function(mml, smml) {
-  var mathMl = sre.Enrich.prepareMmlString(mml);
-  var node = sre.Enrich.semanticMathmlSync(mathMl);
-  var dp = new sre.TestExternal.xmldom.DOMParser();
+sretest.EnrichMathmlTest.prototype.executeTest = function(mml, smml) {
+  var mathMl = sretest.TestExternal.sre.Enrich.prepareMmlString(mml);
+  var node = sretest.TestExternal.sre.Enrich.semanticMathmlSync(mathMl);
+  var dp = new sretest.TestExternal.xmldom.DOMParser();
   var xml = smml ? dp.parseFromString(smml) : '';
-  var xmls = new sre.TestExternal.xmldom.XMLSerializer();
+  var xmls = new sretest.TestExternal.xmldom.XMLSerializer();
   this.customizeXml(node);
   this.appendExamples('', mml);
-  var cleaned = sre.EnrichMathml.removeAttributePrefix(
+  var cleaned = sretest.TestExternal.sre.EnrichMathml.removeAttributePrefix(
       xmls.serializeToString(node));
   this.assert.equal(cleaned, xmls.serializeToString(xml));
 };
@@ -304,11 +295,11 @@ sre.EnrichMathmlTest.prototype.executeTest = function(mml, smml) {
  * Removes XML nodes according to the XPath elements in the blacklist.
  * @param {!Node} xml Xml representation of the semantic node.
  */
-sre.EnrichMathmlTest.prototype.customizeXml = function(xml) {
+sretest.EnrichMathmlTest.prototype.customizeXml = function(xml) {
   this.attrBlacklist.forEach(
       function(attr) {
         xml.removeAttribute(attr);
-        var removes = sre.DomUtil.querySelectorAllByAttr(xml, attr);
+        var removes = sretest.TestExternal.sre.DomUtil.querySelectorAllByAttr(xml, attr);
         if (xml.hasAttribute(attr)) {
           removes.push(xml);
         }

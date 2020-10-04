@@ -17,18 +17,18 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SymbolTest');
+goog.provide('sretest.SymbolTest');
 
-goog.require('sre.SpeechTest');
+goog.require('sretest.SpeechTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.SpeechTest}
+ * @extends {sretest.SpeechTest}
  */
-sre.SymbolTest = function() {
-  sre.SymbolTest.base(this, 'constructor');
+sretest.SymbolTest = function() {
+  sretest.SymbolTest.base(this, 'constructor');
 
   /**
    * @type {Array.<string>}
@@ -43,7 +43,7 @@ sre.SymbolTest = function() {
   this.pickFields = ['name', 'expected'];
 
 };
-goog.inherits(sre.SymbolTest, sre.SpeechTest);
+goog.inherits(sretest.SymbolTest, sretest.SpeechTest);
 
 
 /**
@@ -52,7 +52,7 @@ goog.inherits(sre.SymbolTest, sre.SpeechTest);
  * @param {Array.<string>} answers List of expected speech translations for each
  *     available style.
  */
-sre.SymbolTest.prototype.executeCharTest = function(char, answers) {
+sretest.SymbolTest.prototype.executeCharTest = function(char, answers) {
   for (var i = 0; i < answers.length; i++) {
     try {
       this.executeTest(char, answers[i], this.styles[i]);
@@ -70,14 +70,14 @@ sre.SymbolTest.prototype.executeCharTest = function(char, answers) {
  * @param {string} char The character or string representing the unit.
  * @param {Array.<string>} answers A list of answers.
  */
-sre.SymbolTest.prototype.executeUnitTest = function(char, answers) {
-  sre.Grammar.getInstance().pushState({annotation: 'unit'});
+sretest.SymbolTest.prototype.executeUnitTest = function(char, answers) {
+  sretest.TestExternal.sre.Grammar.getInstance().pushState({annotation: 'unit'});
   try {
     this.executeCharTest(char, answers);
   } catch (err) {
     throw (err);
   } finally {
-    sre.Grammar.getInstance().popState();
+    sretest.TestExternal.sre.Grammar.getInstance().popState();
   }
 };
 
@@ -85,10 +85,10 @@ sre.SymbolTest.prototype.executeUnitTest = function(char, answers) {
 /**
  * @override
  */
-sre.SymbolTest.prototype.executeTest = function(text, answer, opt_style) {
+sretest.SymbolTest.prototype.executeTest = function(text, answer, opt_style) {
   var style = opt_style || this.style;
-  sre.SpeechRuleEngine.getInstance().clearCache();
-  sre.System.getInstance().setupEngine(
+  sretest.TestExternal.sre.SpeechRuleEngine.getInstance().clearCache();
+  sretest.TestExternal.sre.System.getInstance().setupEngine(
       {domain: this.domain, style: style,
         modality: this.modality, rules: this.rules, locale: this.locale});
   var actual = this.getSpeech(text);
@@ -101,9 +101,9 @@ sre.SymbolTest.prototype.executeTest = function(text, answer, opt_style) {
 /**
  * @override
  */
-sre.SymbolTest.prototype.getSpeech = function(text) {
-  var aural = sre.AuralRendering.getInstance();
-  var descrs = [sre.AuditoryDescription.create(
+sretest.SymbolTest.prototype.getSpeech = function(text) {
+  var aural = sretest.TestExternal.sre.AuralRendering.getInstance();
+  var descrs = [sretest.TestExternal.sre.AuditoryDescription.create(
       {text: text}, {adjust: true, translate: true})];
   return aural.finalize(aural.markup(descrs));
 };
@@ -112,9 +112,9 @@ sre.SymbolTest.prototype.getSpeech = function(text) {
 /**
  * @override
  */
-sre.SymbolTest.prototype.prepare = function() {
+sretest.SymbolTest.prototype.prepare = function() {
   try {
-    sre.SymbolTest.base(this, 'prepare');
+    sretest.SymbolTest.base(this, 'prepare');
   } catch (e) {
     throw e;
   } finally {
@@ -127,7 +127,7 @@ sre.SymbolTest.prototype.prepare = function() {
 /**
  * @override
  */
-sre.SymbolTest.prototype.method = function(var_args) {
+sretest.SymbolTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.type === 'unit' ? this.executeUnitTest(args[0], args[1]) :
       this.executeCharTest(args[0], args[1]);

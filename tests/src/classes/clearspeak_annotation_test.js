@@ -22,30 +22,28 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.ClearspeakAnnotationTest');
+goog.provide('sretest.ClearspeakAnnotationTest');
 
-goog.require('sre.AbstractJsonTest');
-goog.require('sre.ClearspeakUtil');
-goog.require('sre.Semantic');
+goog.require('sretest.AbstractJsonTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractJsonTest}
+ * @extends {sretest.AbstractJsonTest}
  */
-sre.ClearspeakAnnotationTest = function() {
-  sre.ClearspeakAnnotationTest.base(this, 'constructor');
+sretest.ClearspeakAnnotationTest = function() {
+  sretest.ClearspeakAnnotationTest.base(this, 'constructor');
 
   /**
    * @override
    */
   this.information = 'Clearspeak Simple Expression tests.';
 
-  this.annotator = sre.ClearspeakUtil.simpleExpression();
+  this.annotator = sretest.TestExternal.sre.ClearspeakUtil.simpleExpression();
 
 };
-goog.inherits(sre.ClearspeakAnnotationTest, sre.AbstractJsonTest);
+goog.inherits(sretest.ClearspeakAnnotationTest, sretest.AbstractJsonTest);
 
 
 /**
@@ -53,10 +51,10 @@ goog.inherits(sre.ClearspeakAnnotationTest, sre.AbstractJsonTest);
  * @param {string} mml Snippet of a MathML expression.
  * @param {boolean} expected The expression is simple or not.
  */
-sre.ClearspeakAnnotationTest.prototype.executeTest = function(mml, expected) {
+sretest.ClearspeakAnnotationTest.prototype.executeTest = function(mml, expected) {
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
-  var semantic = sre.Semantic.getTreeFromString(mathMl);
+  var semantic = sretest.TestExternal.sre.Semantic.getTreeFromString(mathMl);
   this.annotator.annotate(semantic.root);
   this.assert.equal(semantic.root.hasAnnotation('clearspeak', 'simple'),
                     expected);
@@ -66,7 +64,7 @@ sre.ClearspeakAnnotationTest.prototype.executeTest = function(mml, expected) {
 /**
  * @override
  */
-sre.ClearspeakAnnotationTest.prototype.method = function(var_args) {
+sretest.ClearspeakAnnotationTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.executeTest(args[0], args[1]);
 };

@@ -20,18 +20,18 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-goog.provide('sre.SummaryTest');
+goog.provide('sretest.SummaryTest');
 
-goog.require('sre.SpeechTest');
+goog.require('sretest.SpeechTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.SpeechTest}
+ * @extends {sretest.SpeechTest}
  */
-sre.SummaryTest = function() {
-  sre.SummaryTest.base(this, 'constructor');
+sretest.SummaryTest = function() {
+  sretest.SummaryTest.base(this, 'constructor');
 
   /**
    * @override
@@ -57,30 +57,30 @@ sre.SummaryTest = function() {
   this.pickFields.push('steps');
 
 };
-goog.inherits(sre.SummaryTest, sre.SpeechTest);
+goog.inherits(sretest.SummaryTest, sretest.SpeechTest);
 
 
 /**
  * @override
  */
-sre.SummaryTest.prototype.getSpeech = function(mathMl) {
+sretest.SummaryTest.prototype.getSpeech = function(mathMl) {
   if (!this.steps) {
-    return sre.SummaryTest.base(this, 'getSpeech', mathMl);
+    return sretest.SummaryTest.base(this, 'getSpeech', mathMl);
   }
-  sre.ProcessorFactory.process('walker', mathMl);
+  sretest.TestExternal.sre.ProcessorFactory.process('walker', mathMl);
   this.steps.forEach(function(step) {
-    sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode[step]);
+    sretest.TestExternal.sre.ProcessorFactory.process('move', sretest.TestExternal.sre.EventUtil.KeyCode[step]);
   });
-  return sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode['X']);
+  return sretest.TestExternal.sre.ProcessorFactory.process('move', sretest.TestExternal.sre.EventUtil.KeyCode['X']);
 };
 
 
 /**
  * @override
  */
-sre.SummaryTest.prototype.method = function(var_args) {
+sretest.SummaryTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.steps = args[3];
-  sre.SummaryTest.base(this, 'method', args[0], args[1], args[2]);
+  sretest.SummaryTest.base(this, 'method', args[0], args[1], args[2]);
   this.steps = null;
 };

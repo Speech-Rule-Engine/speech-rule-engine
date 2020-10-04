@@ -21,33 +21,30 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.MarkupTest');
+goog.provide('sretest.MarkupTest');
 
-goog.require('sre.AbstractTest');
-goog.require('sre.AuralRendering');
-goog.require('sre.Engine');
-goog.require('sre.System');
+goog.require('sretest.AbstractTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sretest.AbstractTest}
  */
-sre.MarkupTest = function() {
-  sre.MarkupTest.base(this, 'constructor');
+sretest.MarkupTest = function() {
+  sretest.MarkupTest.base(this, 'constructor');
 
   this.information = 'Markup function test.';
 
 };
-goog.inherits(sre.MarkupTest, sre.AbstractTest);
+goog.inherits(sretest.MarkupTest, sretest.AbstractTest);
 
 
 /**
  * @override
  */
-sre.MarkupTest.prototype.setUpTest = function() {
-  sre.System.getInstance().setupEngine(
+sretest.MarkupTest.prototype.setUpTest = function() {
+  sretest.TestExternal.sre.System.getInstance().setupEngine(
       {modality: 'speech', domain: 'default', style: 'default'});
 };
 
@@ -55,9 +52,9 @@ sre.MarkupTest.prototype.setUpTest = function() {
 /**
  * @override
  */
-sre.MarkupTest.prototype.tearDownTest = function() {
-  sre.System.getInstance().setupEngine(
-      {markup: sre.Engine.Markup.NONE});
+sretest.MarkupTest.prototype.tearDownTest = function() {
+  sretest.TestExternal.sre.System.getInstance().setupEngine(
+      {markup: sretest.TestExternal.sre.Engine.Markup.NONE});
 };
 
 
@@ -65,7 +62,7 @@ sre.MarkupTest.prototype.tearDownTest = function() {
  * The quadratic equation as a MathML string.
  * @type {string}
  */
-sre.MarkupTest.QUADRATIC =
+sretest.MarkupTest.QUADRATIC =
     '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<mi>x</mi>' +
     '<mo>=</mo>' +
@@ -97,7 +94,7 @@ sre.MarkupTest.QUADRATIC =
  * The quadratic equation as a MathML string.
  * @type {string}
  */
-sre.MarkupTest.QUADRATIC_MARKED =
+sretest.MarkupTest.QUADRATIC_MARKED =
     '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<mi>x</mi>' +
     '<mo>=</mo>' +
@@ -131,11 +128,11 @@ sre.MarkupTest.QUADRATIC_MARKED =
  * @param {string} result The expected result.
  * @param {sre.Engine.Markup} markup The markup to test.
  */
-sre.MarkupTest.prototype.executeTest = function(
+sretest.MarkupTest.prototype.executeTest = function(
     expr, result, markup) {
-  sre.Engine.getInstance().markup = markup;
-  var descrs = sre.System.getInstance().toDescription(expr);
-  var output = sre.AuralRendering.getInstance().markup(descrs);
+  sretest.TestExternal.sre.Engine.getInstance().markup = markup;
+  var descrs = sretest.TestExternal.sre.System.getInstance().toDescription(expr);
+  var output = sretest.TestExternal.sre.AuralRendering.getInstance().markup(descrs);
   this.assert.equal(output, result);
 };
 
@@ -143,59 +140,59 @@ sre.MarkupTest.prototype.executeTest = function(
 /**
  * Test for simple speech.
  */
-sre.MarkupTest.prototype.testSimpleString = function() {
+sretest.MarkupTest.prototype.testSimpleString = function() {
   this.executeTest(
-      sre.MarkupTest.QUADRATIC,
+      sretest.MarkupTest.QUADRATIC,
       'x equals negative b plus or minus Square root of b squared minus four' +
       ' times a times c divided by two times a',
-      sre.Engine.Markup.NONE);
+      sretest.TestExternal.sre.Engine.Markup.NONE);
 };
 
 
 /**
  * Test for ACSS markup.
  */
-sre.MarkupTest.prototype.testAcss = function() {
+sretest.MarkupTest.prototype.testAcss = function() {
   this.executeTest(
-      sre.MarkupTest.QUADRATIC,
+      sretest.MarkupTest.QUADRATIC,
       '(exp "x" (pause . 200) "equals" (pause . 450) (text ((richness . 6))' +
       ' "negative b plus or minus Square root of") (text ((richness . 7)) "b")' +
       ' (text ((richness . 7) (average-pitch . 6)) "squared") (pause . 300)' +
       ' (text ((richness . 7)) "minus four times a times c") (pause . 650)' +
       ' "divided by" (text ((richness . 4)) "two times a"))',
-      sre.Engine.Markup.ACSS);
+      sretest.TestExternal.sre.Engine.Markup.ACSS);
 };
 
 
 /**
  * Test for Sable markup.
  */
-sre.MarkupTest.prototype.testSable = function() {
+sretest.MarkupTest.prototype.testSable = function() {
   this.executeTest(
-      sre.MarkupTest.QUADRATIC,
+      sretest.MarkupTest.QUADRATIC,
       'x <BREAK MSEC="200"/> equals <BREAK MSEC="450"/> <RATE SPEED="17.5%">' +
       ' negative b plus or minus Square root of </RATE> <RATE SPEED="35%"> b ' +
       '<PITCH RANGE="17.5%"> squared </PITCH> <BREAK MSEC="300"/> minus four' +
       ' times a times c </RATE> <RATE SPEED="17.5%"> <BREAK MSEC="650"/> ' +
       '</RATE> divided by <RATE SPEED="-17.5%"> two times a </RATE> <BREAK' +
       ' MSEC="400"/>',
-      sre.Engine.Markup.SABLE);
+      sretest.TestExternal.sre.Engine.Markup.SABLE);
 };
 
 
 /**
  * Test for SSML markup.
  */
-sre.MarkupTest.prototype.testSsml = function() {
+sretest.MarkupTest.prototype.testSsml = function() {
   this.executeTest(
-      sre.MarkupTest.QUADRATIC,
+      sretest.MarkupTest.QUADRATIC,
       'x <break time="200ms"/> equals <break time="450ms"/> <prosody' +
       ' rate="+17%"> negative b plus or minus Square root of </prosody> ' +
       '<prosody rate="+35%"> b <prosody pitch="+17%"> squared </prosody> ' +
       '<break time="300ms"/> minus four times a times c </prosody> <prosody' +
       ' rate="+17%"> <break time="650ms"/> </prosody> divided by <prosody' +
       ' rate="-18%"> two times a </prosody> <break time="400ms"/>',
-      sre.Engine.Markup.SSML);
+      sretest.TestExternal.sre.Engine.Markup.SSML);
 };
 
 
@@ -203,26 +200,26 @@ sre.MarkupTest.prototype.testSsml = function() {
  * Test for VoiceXML markup.
  * (Currently that is the same as SSML.)
  */
-sre.MarkupTest.prototype.testVoiceXml = function() {
+sretest.MarkupTest.prototype.testVoiceXml = function() {
   this.executeTest(
-      sre.MarkupTest.QUADRATIC,
+      sretest.MarkupTest.QUADRATIC,
       'x <break time="200ms"/> equals <break time="450ms"/> <prosody' +
       ' rate="+17%"> negative b plus or minus Square root of </prosody> ' +
       '<prosody rate="+35%"> b <prosody pitch="+17%"> squared </prosody> ' +
       '<break time="300ms"/> minus four times a times c </prosody> <prosody' +
       ' rate="+17%"> <break time="650ms"/> </prosody> divided by <prosody' +
       ' rate="-18%"> two times a </prosody> <break time="400ms"/>',
-      sre.Engine.Markup.VOICEXML);
+      sretest.TestExternal.sre.Engine.Markup.VOICEXML);
 };
 
 
 /**
  * Test for SSML Step markup.
  */
-sre.MarkupTest.prototype.testSsmlStep = function() {
-  sre.System.getInstance().setupEngine({domain: 'clearspeak', style: 'default'});
+sretest.MarkupTest.prototype.testSsmlStep = function() {
+  sretest.TestExternal.sre.System.getInstance().setupEngine({domain: 'clearspeak', style: 'default'});
   this.executeTest(
-      sre.MarkupTest.QUADRATIC_MARKED,
+      sretest.MarkupTest.QUADRATIC_MARKED,
       '<say-as interpret-as="character">x</say-as> equals <break' +
       ' time="250ms"/> the fraction with numerator <mark name="0"/>' +
       ' negative <mark name="1"/> <say-as interpret-as="character">b' +
@@ -232,15 +229,15 @@ sre.MarkupTest.prototype.testSsmlStep = function() {
       ' interpret-as="character">c</say-as> </prosody> <break' +
       ' time="250ms"/> and denominator <prosody rate="+25%"> 2 <say-as' +
       ' interpret-as="character">a</say-as> </prosody> <break time="250ms"/>',
-      sre.Engine.Markup.SSML_STEP);
+      sretest.TestExternal.sre.Engine.Markup.SSML_STEP);
   this.executeTest(
-      sre.MarkupTest.QUADRATIC_MARKED,
+      sretest.MarkupTest.QUADRATIC_MARKED,
       'x equals <break time="250ms"/> the fraction with numerator negative' +
       ' b plus or minus the square root of b squared minus <prosody' +
       ' rate="+25%"> 4 a c </prosody> <break time="250ms"/> and denominator ' +
       '<prosody rate="+25%"> 2 a </prosody> <break time="250ms"/>',
-      sre.Engine.Markup.SSML);
-  sre.System.getInstance().setupEngine({domain: 'default', style: 'default'});
+      sretest.TestExternal.sre.Engine.Markup.SSML);
+  sretest.TestExternal.sre.System.getInstance().setupEngine({domain: 'default', style: 'default'});
 };
 
 

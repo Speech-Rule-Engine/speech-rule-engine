@@ -17,18 +17,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.AbstractJsonTest');
-goog.provide('sre.AbstractTest');
+goog.provide('sretest.AbstractJsonTest');
+goog.provide('sretest.AbstractTest');
 
-goog.require('sre.TestExternal');
-goog.require('sre.TestUtil');
+goog.require('sretest.TestExternal');
+goog.require('sretest.TestUtil');
 
 
 
 /**
  * @constructor
  */
-sre.AbstractTest = function() {
+sretest.AbstractTest = function() {
   /**
    * Basic information on the test case.
    * @type {string}
@@ -39,20 +39,20 @@ sre.AbstractTest = function() {
    * Assignment for the external assert module.
    * @type {Object}
    */
-  this.assert = sre.TestExternal.assert;
+  this.assert = sretest.TestExternal.assert;
 };
 
 
 /**
  * Sets up the basic requirements for the test.
  */
-sre.AbstractTest.prototype.setUpTest = function() { };
+sretest.AbstractTest.prototype.setUpTest = function() { };
 
 
 /**
  * Finalises the test.
  */
-sre.AbstractTest.prototype.tearDownTest = function() { };
+sretest.AbstractTest.prototype.tearDownTest = function() { };
 
 
 
@@ -65,10 +65,10 @@ sre.AbstractTest.prototype.tearDownTest = function() { };
  * basic test input and only differ on the expected output.
  *
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sretest.AbstractTest}
  */
-sre.AbstractJsonTest = function() {
-  sre.AbstractJsonTest.base(this, 'constructor');
+sretest.AbstractJsonTest = function() {
+  sretest.AbstractJsonTest.base(this, 'constructor');
 
   /**
    * @type {!string}
@@ -106,7 +106,7 @@ sre.AbstractJsonTest = function() {
   this.warn = [];
 
 };
-goog.inherits(sre.AbstractJsonTest, sre.AbstractTest);
+goog.inherits(sretest.AbstractJsonTest, sretest.AbstractTest);
 
 
 /**
@@ -115,7 +115,7 @@ goog.inherits(sre.AbstractJsonTest, sre.AbstractTest);
  // TODO: Need to specify that further!
  * @return {Array.<string>} The array of arguments for the test method.
  */
-sre.AbstractJsonTest.prototype.pick = function(json) {
+sretest.AbstractJsonTest.prototype.pick = function(json) {
   return this.pickFields.map(function(x) {return json[x];});
 };
 
@@ -124,23 +124,23 @@ sre.AbstractJsonTest.prototype.pick = function(json) {
  * The actual test method.
  * @param {...string} var_args Arguments for the test method.
  */
-sre.AbstractJsonTest.prototype.method = goog.abstractMethod;
+sretest.AbstractJsonTest.prototype.method = goog.abstractMethod;
 
 
 /**
  * Prepares the individual tests of this object.
  */
-sre.AbstractJsonTest.prototype.prepare = function() {
+sretest.AbstractJsonTest.prototype.prepare = function() {
   this.jsonTests = this.jsonTests ||
-      (this.jsonFile ? sre.TestUtil.loadJson(this.jsonFile) : {});
+      (this.jsonFile ? sretest.TestUtil.loadJson(this.jsonFile) : {});
   this.information = this.jsonTests.information || 'Unnamed tests';
   let file = this.jsonTests['base'];
-  this.baseFile = sre.TestUtil.fileExists(file, sre.TestUtil.path.INPUT);
-  this.baseTests = this.baseFile ? sre.TestUtil.loadJson(this.baseFile) : {};
+  this.baseFile = sretest.TestUtil.fileExists(file, sretest.TestUtil.path.INPUT);
+  this.baseTests = this.baseFile ? sretest.TestUtil.loadJson(this.baseFile) : {};
   var input = this.baseTests.tests || {};
   var output = this.jsonTests.tests || {};
   var exclude = this.jsonTests.exclude || [];
-  let tests = sre.TestUtil.combineTests(input, output, exclude);
+  let tests = sretest.TestUtil.combineTests(input, output, exclude);
   this.inputTests = tests[0];
   this.warn = tests[1];
 };
