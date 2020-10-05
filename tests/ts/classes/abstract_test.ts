@@ -1,7 +1,3 @@
-/**
- * @fileoverview Abstract class of test cases.
- * @author volker.sorge@gmail.com (Volker Sorge)
- */ 
 //
 // Copyright 2014 Volker Sorge 
 //
@@ -16,26 +12,24 @@
 // limitations under the License. 
 
 
+/**
+ * @fileoverview Abstract class of test cases.
+ * @author volker.sorge@gmail.com (Volker Sorge)
+ */ 
+
 
 import{TestExternal}from '../base/test_external';
 import*as TestUtil from '../base/test_util';
 
 
 
-export class AbstractTest {
+export abstract class AbstractTest {
   /**
-     * Basic information on the test case.
-     */ 
+   * Basic information on the test case.
+   */ 
   information:string = '';
 
-  assert:Object;
-  constructor() {
-    /**
-       * Assignment for the external assert module.
-       */ 
-    this.assert = TestExternal.assert;
-  }
-
+  assert: any = TestExternal.assert;
 
   /**
    * Sets up the basic requirements for the test.
@@ -62,10 +56,8 @@ export class AbstractTest {
  * basic test input and only differ on the expected output.
  *
  */ 
-export class AbstractJsonTest extends AbstractTest {
+export abstract class AbstractJsonTest extends AbstractTest {
 
-
-  method:any;
 
   jsonFile:string = '';
 
@@ -92,11 +84,11 @@ export class AbstractJsonTest extends AbstractTest {
    // TODO: Need to specify that further!
    * @return The array of arguments for the test method.
    */ 
-  pick(json: Object): string[] {
+  pick(json: {[key: string]: any}): string[] {
     return this.pickFields.map( 
-    function(x) {
-      return json[x];
-    });
+      function(x) {
+        return json[x];
+      });
   }
 
 
@@ -105,22 +97,24 @@ export class AbstractJsonTest extends AbstractTest {
    */ 
   prepare() {
     this.jsonTests = this.jsonTests || (
-    this.jsonFile ? TestUtil.loadJson(this.jsonFile) : {});
+      this.jsonFile ? TestUtil.loadJson(this.jsonFile) : {});
     this.information = this.jsonTests.information || 'Unnamed tests';
     let file = this.jsonTests['base'];
     this.baseFile = TestUtil.fileExists(file, TestUtil.path.INPUT);
     this.baseTests = this.baseFile ? TestUtil.loadJson(this.baseFile) : {};
-    let input = this.baseTests.tests || {};
-    let output = this.jsonTests.tests || {};
-    let exclude = this.jsonTests.exclude || [];
+    let input = this.baseTests['tests'] || {};
+    let output = this.jsonTests['tests'] || {};
+    let exclude = this.jsonTests['exclude'] || [];
     let tests = TestUtil.combineTests(input, output, exclude);
     this.inputTests = tests[0];
     this.warn = tests[1];
   }
+
+  /**
+   * The actual test method.
+   * @param args Arguments for the test method.
+   */ 
+  public abstract method(...args: any[]): void;
+  
 }
 
-/**
- * The actual test method.
- * @param var_args Arguments for the test method.
- */ 
-AbstractJsonTest.prototype.method = goog.abstractMethod;

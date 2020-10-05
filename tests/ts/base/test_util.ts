@@ -1,7 +1,24 @@
-export enum path {
-  INPUT = sretest.TestExternal.path + 'input/',
-  OUTPUT = sretest.TestExternal.path + 'output/',
-  EXPECTED = sretest.TestExternal.path + 'expected/'
+//
+// Copyright 2020 Volker Sorge 
+//
+// Licensed under the Apache License, Version 2.0 (the "License"); 
+// you may not use this file except in compliance with the License. 
+// You may obtain a copy of the License at 
+//      http://www.apache.org/licenses/LICENSE-2.0 
+// Unless required by applicable law or agreed to in writing, software 
+// distributed under the License is distributed on an "AS IS" BASIS, 
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+// See the License for the specific language governing permissions and 
+// limitations under the License. 
+
+
+import {TestExternal} from './test_external';
+import * as fs from 'fs';
+
+export const TestPath: {[key: string]: string} = {
+  INPUT: TestExternal.path + 'input/',
+  OUTPUT: TestExternal.path + 'output/',
+  EXPECTED: TestExternal.path + 'expected/'
 }
 
 
@@ -31,7 +48,7 @@ export class Error extends Error {
 export function loadJson(file: string): Object {
   try {
     return (
-    JSON.parse(sretest.TestExternal.fs.readFileSync(file)) as Object);
+    JSON.parse(fs.readFileSync(file)) as Object);
   } catch (e) {
     throw new Error('Bad filename or content', file);
   }
@@ -45,14 +62,14 @@ export function loadJson(file: string): Object {
  * @return The actual filename with full path.
  */ 
 export function fileExists(file: string, opt_path?: string): string {
-  if (sretest.TestExternal.fs.existsSync(file)) {
+  if (fs.existsSync(file)) {
     return file;
   }
-  if (opt_path && sretest.TestExternal.fs.existsSync(opt_path + file)) {
+  if (opt_path && fs.existsSync(opt_path + file)) {
     return opt_path + file;
   }
-  let newFile = sretest.TestExternal.path + file;
-  if (sretest.TestExternal.fs.existsSync(newFile)) {
+  let newFile = TestExternal.path + file;
+  if (fs.existsSync(newFile)) {
     return newFile;
   }
   return '';
@@ -72,8 +89,9 @@ export function fileExists(file: string, opt_path?: string): string {
  * @param exclude A list of tests to be excluded.
  * @return Done.
  */ 
-// [Array.<Object>, Array.<string>] 
-export function combineTests(input: Object, expected: Object | string, exclude: string[]): any[] {
+export function combineTests(input: {[key: string]: {[key: string]: string | boolean}},
+                             expected: {[key: string]: {[key: string]: string | boolean}} | string,
+                             exclude: string[]): [any[], any[]] {
   let warn = [];
   let results = [];
   if (expected === 'ALL') {
@@ -89,6 +107,9 @@ export function combineTests(input: Object, expected: Object | string, exclude: 
       results.push(json);
     }
     return [results, []];
+  }
+  if (typeof expected === 'string') {
+    return [[], []];
   }
   for (let key of Object.keys(input)) {
     if (key.match(/^_/) || exclude.indexOf(key) !== -1) {
@@ -107,11 +128,11 @@ export function combineTests(input: Object, expected: Object | string, exclude: 
     results.push(Object.assign(json, exp));
     delete expected[key];
   }
-  for (key of Object.keys((expected as Object))) {
+  for (let key of Object.keys((expected as Object))) {
     if (key.match(/^_/)) {
       continue;
     }
-    json = expected[key];
+    let json = expected[key];
     if (typeof json.test === 'undefined') {
       json.test = true;
     }

@@ -21,7 +21,9 @@ import*as BaseTests from '../tests/base_tests';
 import*as ExampleFiles from '../classes/abstract_examples';
 import*as TestFactory from '../classes/test_factory';
 import{TestRunner}from './runner';
-import {process} from 'node/process';
+import * as fs from 'fs';
+import * as process from 'process';
+import {TestPath} from './test_util';
 
 
 export class Tests {
@@ -115,9 +117,9 @@ export class Tests {
     if (typeof path === 'undefined') {
       return;
     }
-    let file = sretest.TestUtil.path.EXPECTED + path;
-    if (sretest.TestExternal.fs.lstatSync(file).isDirectory()) {
-      let files = sretest.TestExternal.fs.readdirSync(file);
+    let file = TestPath.EXPECTED + path;
+    if (fs.lstatSync(file).isDirectory()) {
+      let files = fs.readdirSync(file);
       files.forEach( 
       function(x) {
         Tests.readDir_(path ? path + '/' + x : x, result);
@@ -129,7 +131,7 @@ export class Tests {
     }
   }
 }
-goog.addSingletonGetter(Tests);
+
 Tests.environmentVars.forEach(Tests.getEnvironment);
 Tests.allTests = Tests.allTests.concat(BaseTests.testList);
 

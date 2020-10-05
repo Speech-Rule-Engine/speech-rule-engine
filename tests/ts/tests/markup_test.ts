@@ -21,7 +21,7 @@
 
 
 import{AbstractTest}from '../classes/abstract_test';
-
+import {sre} from '../base/test_external';
 
 
 export class MarkupTest extends AbstractTest {
@@ -42,7 +42,7 @@ export class MarkupTest extends AbstractTest {
    * @override
    */ 
   setUpTest() {
-    sretest.TestExternal.sre.System.getInstance().setupEngine(
+    sre.System.getInstance().setupEngine(
     {modality:'speech', domain:'default', style:'default'});
   }
 
@@ -51,8 +51,8 @@ export class MarkupTest extends AbstractTest {
    * @override
    */ 
   tearDownTest() {
-    sretest.TestExternal.sre.System.getInstance().setupEngine(
-    {markup:sretest.TestExternal.sre.Engine.Markup.NONE});
+    sre.System.getInstance().setupEngine(
+    {markup:sre.Engine.Markup.NONE});
   }
 
 
@@ -62,11 +62,12 @@ export class MarkupTest extends AbstractTest {
    * @param result The expected result.
    * @param markup The markup to test.
    */ 
-  executeTest(
-  expr: string, result: string, markup: sre.Engine.Markup) {
-    sretest.TestExternal.sre.Engine.getInstance().markup = markup;
-    let descrs = sretest.TestExternal.sre.System.getInstance().toDescription(expr);
-    let output = sretest.TestExternal.sre.AuralRendering.getInstance().markup(descrs);
+  // TODO: type
+  // executeTest(expr: string, result: string, markup: sre.Engine.Markup) {
+  executeTest(expr: string, result: string, markup: any) {
+    sre.Engine.getInstance().markup = markup;
+    let descrs = sre.System.getInstance().toDescription(expr);
+    let output = sre.AuralRendering.getInstance().markup(descrs);
     this.assert.equal(output, result);
   }
 
@@ -79,7 +80,7 @@ export class MarkupTest extends AbstractTest {
     MarkupTest.QUADRATIC, 
     'x equals negative b plus or minus Square root of b squared minus four' + 
     ' times a times c divided by two times a', 
-    sretest.TestExternal.sre.Engine.Markup.NONE);
+    sre.Engine.Markup.NONE);
   }
 
 
@@ -94,7 +95,7 @@ export class MarkupTest extends AbstractTest {
     ' (text ((richness . 7) (average-pitch . 6)) "squared") (pause . 300)' + 
     ' (text ((richness . 7)) "minus four times a times c") (pause . 650)' + 
     ' "divided by" (text ((richness . 4)) "two times a"))', 
-    sretest.TestExternal.sre.Engine.Markup.ACSS);
+    sre.Engine.Markup.ACSS);
   }
 
 
@@ -110,7 +111,7 @@ export class MarkupTest extends AbstractTest {
     ' times a times c </RATE> <RATE SPEED="17.5%"> <BREAK MSEC="650"/> ' + 
     '</RATE> divided by <RATE SPEED="-17.5%"> two times a </RATE> <BREAK' + 
     ' MSEC="400"/>', 
-    sretest.TestExternal.sre.Engine.Markup.SABLE);
+    sre.Engine.Markup.SABLE);
   }
 
 
@@ -126,7 +127,7 @@ export class MarkupTest extends AbstractTest {
     '<break time="300ms"/> minus four times a times c </prosody> <prosody' + 
     ' rate="+17%"> <break time="650ms"/> </prosody> divided by <prosody' + 
     ' rate="-18%"> two times a </prosody> <break time="400ms"/>', 
-    sretest.TestExternal.sre.Engine.Markup.SSML);
+    sre.Engine.Markup.SSML);
   }
 
 
@@ -143,7 +144,7 @@ export class MarkupTest extends AbstractTest {
     '<break time="300ms"/> minus four times a times c </prosody> <prosody' + 
     ' rate="+17%"> <break time="650ms"/> </prosody> divided by <prosody' + 
     ' rate="-18%"> two times a </prosody> <break time="400ms"/>', 
-    sretest.TestExternal.sre.Engine.Markup.VOICEXML);
+    sre.Engine.Markup.VOICEXML);
   }
 
 
@@ -151,7 +152,7 @@ export class MarkupTest extends AbstractTest {
    * Test for SSML Step markup.
    */ 
   testSsmlStep() {
-    sretest.TestExternal.sre.System.getInstance().setupEngine({domain:'clearspeak', style:'default'});
+    sre.System.getInstance().setupEngine({domain:'clearspeak', style:'default'});
     this.executeTest(
     MarkupTest.QUADRATIC_MARKED, 
     '<say-as interpret-as="character">x</say-as> equals <break' + 
@@ -163,15 +164,15 @@ export class MarkupTest extends AbstractTest {
     ' interpret-as="character">c</say-as> </prosody> <break' + 
     ' time="250ms"/> and denominator <prosody rate="+25%"> 2 <say-as' + 
     ' interpret-as="character">a</say-as> </prosody> <break time="250ms"/>', 
-    sretest.TestExternal.sre.Engine.Markup.SSML_STEP);
+    sre.Engine.Markup.SSML_STEP);
     this.executeTest(
     MarkupTest.QUADRATIC_MARKED, 
     'x equals <break time="250ms"/> the fraction with numerator negative' + 
     ' b plus or minus the square root of b squared minus <prosody' + 
     ' rate="+25%"> 4 a c </prosody> <break time="250ms"/> and denominator ' + 
     '<prosody rate="+25%"> 2 a </prosody> <break time="250ms"/>', 
-    sretest.TestExternal.sre.Engine.Markup.SSML);
-    sretest.TestExternal.sre.System.getInstance().setupEngine({domain:'default', style:'default'});
+    sre.Engine.Markup.SSML);
+    sre.System.getInstance().setupEngine({domain:'default', style:'default'});
   }
 }
 

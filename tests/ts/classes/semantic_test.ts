@@ -28,30 +28,23 @@ import{TestExternal}from '../base/test_external';
 /**
  * Base class for all the semantic tree related tests.
  */ 
-export class SemanticTest extends AbstractExamples {
-
-
-  executeTest:any;
-  constructor() {
-    super();
-  }
-
+export abstract class SemanticTest extends AbstractExamples {
 
   /**
    * @override
    */ 
-  method(var_args) {
-    let args = Array.prototype.slice.call(arguments, 0);
+  method(...args: any[]) {
     this.executeTest(args[0], args[1]);
   }
-}
-/**
- * Executes a single test. This is called by the method.
- * @param input The input element.
- * @param expected The expected output.
- */ 
-SemanticTest.prototype.executeTest = goog.abstractMethod;
 
+  /**
+   * Executes a single test. This is called by the method.
+   * @param input The input element.
+   * @param expected The expected output.
+   */ 
+  public abstract executeTest(input: string, expected: string): void;
+
+}
 
 
 /**
@@ -140,9 +133,13 @@ export class EnrichSpeechTest extends SemanticTest {
  */ 
 export class SemanticTreeTest extends SemanticTest {
 
-  annotations:{[key:any]:sre.SemanticAnnotator} = null;
+  // TODO: type
+  // annotations:{[key: string]: sre.SemanticAnnotator} = null;
+  annotations:{[key: string]: any} = null;
 
-  visitors:{[key:any]:sre.SemanticVisitor} = null;
+  // visitors:{[key: string]: sre.SemanticVisitor} = null;
+  visitors:{[key: string]: any} = null;
+
   constructor() {
     super();
 
@@ -277,7 +274,7 @@ export class EnrichMathmlTest extends SemanticTest {
    * Removes XML nodes according to the XPath elements in the blacklist.
    * @param xml Xml representation of the semantic node.
    */ 
-  customizeXml(xml: Node) {
+  customizeXml(xml: Element) {
     this.attrBlacklist.forEach(
     function(attr) {
       xml.removeAttribute(attr);
@@ -286,7 +283,7 @@ export class EnrichMathmlTest extends SemanticTest {
         removes.push(xml);
       }
       removes.forEach(
-      function(node) {
+        function(node: Element) {
         node.removeAttribute(attr);
       });
     });

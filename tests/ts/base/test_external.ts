@@ -1,11 +1,3 @@
-/**
- * @fileoverview This is the file that takes care of some of the underlying
- * system dependencies.  In particular, any dependency on NodeJS, like require
- * statements, should go in this file.  Ideally only this file should depend on
- * extern.js.
- *
- * @author volker.sorge@gmail.com (Volker Sorge)
- */ 
 //
 // Copyright 2014 Volker Sorge 
 //
@@ -19,19 +11,19 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License. 
 
-import {process} from 'node';
-
+/**
+ * @fileoverview This is the file that takes care of some of the underlying
+ * system dependencies.  In particular, any dependency on NodeJS, like require
+ * statements, should go in this file.  Ideally only this file should depend on
+ * extern.js.
+ *
+ * @author volker.sorge@gmail.com (Volker Sorge)
+ */ 
 
 export class TestExternal {
 
 
-  static fs:Object;
-
-
   static assert:Object;
-
-
-  static process:Object;
 
 
   static path:string;
@@ -52,18 +44,15 @@ export class TestExternal {
     return require(library);
   }
 }
-/**
- * Filesystem library.
- */ 
-export const fs = require('fs');
+// /**
+//  * Filesystem library.
+//  */ 
+// export const fs = require('fs');
 /**
  * Assert library.
  */ 
 TestExternal.assert = TestExternal.require('assert');
-/**
- * Process library.
- */ 
-TestExternal.process = process;
+
 /**
  * Path to JSON files.
  */ 

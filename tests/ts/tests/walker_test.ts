@@ -23,7 +23,7 @@
 
 
 import{AbstractTest}from '../classes/abstract_test';
-
+import {sre} from '../base/test_external';
 
 
 export class WalkerTest extends AbstractTest {
@@ -54,24 +54,23 @@ export class WalkerTest extends AbstractTest {
 
   information = 'Walker function test.';
 
-  system:sre.System;
+  system = sre.System.getInstance();
 
   quadratic:any;
 
   equation:any;
   constructor() {
     super();
-    this.system = sretest.TestExternal.sre.System.getInstance();
     this.quadratic = {
-    mml:sretest.TestExternal.sre.DomUtil.parseInput(WalkerTest.QUADRATIC_MML), 
-    htmlCss:sretest.TestExternal.sre.DomUtil.parseInput(WalkerTest.QUADRATIC_HTML_CSS), 
-    chtml:sretest.TestExternal.sre.DomUtil.parseInput(WalkerTest.QUADRATIC_COMMON_HTML), 
-    svg:sretest.TestExternal.sre.DomUtil.parseInput(WalkerTest.QUADRATIC_SVG)};
+    mml:sre.DomUtil.parseInput(WalkerTest.QUADRATIC_MML), 
+    htmlCss:sre.DomUtil.parseInput(WalkerTest.QUADRATIC_HTML_CSS), 
+    chtml:sre.DomUtil.parseInput(WalkerTest.QUADRATIC_COMMON_HTML), 
+    svg:sre.DomUtil.parseInput(WalkerTest.QUADRATIC_SVG)};
     this.equation = {
-    mml:sretest.TestExternal.sre.DomUtil.parseInput(WalkerTest.EQUATION_MML), 
-    htmlCss:sretest.TestExternal.sre.DomUtil.parseInput(WalkerTest.EQUATION_HTML_CSS), 
-    chtml:sretest.TestExternal.sre.DomUtil.parseInput(WalkerTest.EQUATION_COMMON_HTML), 
-    svg:sretest.TestExternal.sre.DomUtil.parseInput(WalkerTest.EQUATION_SVG)};
+    mml:sre.DomUtil.parseInput(WalkerTest.EQUATION_MML), 
+    htmlCss:sre.DomUtil.parseInput(WalkerTest.EQUATION_HTML_CSS), 
+    chtml:sre.DomUtil.parseInput(WalkerTest.EQUATION_COMMON_HTML), 
+    svg:sre.DomUtil.parseInput(WalkerTest.EQUATION_SVG)};
   }
 
 
@@ -81,7 +80,7 @@ export class WalkerTest extends AbstractTest {
   setUpTest() {
     this.system.setupEngine(
     {modality:'speech', locale:'en', domain:'mathspeak', 
-    style:'default', speech:sretest.TestExternal.sre.Engine.Speech.NONE});
+    style:'default', speech:sre.Engine.Speech.NONE});
   }
 
 
@@ -90,7 +89,7 @@ export class WalkerTest extends AbstractTest {
    */ 
   tearDownTest() {
     this.system.setupEngine(
-    {domain:'default', style:'short', speech:sretest.TestExternal.sre.Engine.Speech.NONE});
+    {domain:'default', style:'short', speech:sre.Engine.Speech.NONE});
   }
 
 
@@ -102,7 +101,7 @@ export class WalkerTest extends AbstractTest {
    */ 
   private executeTest_(walker: sre.Walker, move: string | sre.EventUtil.KeyCode | null, result: string | null) {
     if (move) {
-      walker.move(typeof move === 'string' ? sretest.TestExternal.sre.EventUtil.KeyCode[move] : move);
+      walker.move(typeof move === 'string' ? sre.EventUtil.KeyCode[move] : move);
     }
     this.assert.equal(walker.speech(), result);
   }
@@ -119,10 +118,10 @@ export class WalkerTest extends AbstractTest {
    * @return The newly created walker.
    */ 
   private createWalker_(type: string, node: Node, renderer: {renderer:string, browser?: string}, mml: string): sre.Walker {
-    return sretest.TestExternal.sre.WalkerFactory.walker(
+    return sre.WalkerFactory.walker(
     type, node, 
-    sretest.TestExternal.sre.SpeechGeneratorFactory.generator('Node'), 
-    (sretest.TestExternal.sre.HighlighterFactory.highlighter(
+    sre.SpeechGeneratorFactory.generator('Node'), 
+    (sre.HighlighterFactory.highlighter(
     {color:'black'}, {color:'white'}, renderer) as sre.Highlighter), 
     mml);
   }
@@ -173,30 +172,30 @@ export class WalkerTest extends AbstractTest {
     this.executeTest_(walker, null, 
     'x equals StartFraction negative b plus or minus StartRoot' + 
     ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.X, 'equality');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.DOWN, 'x');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.RIGHT, 'equals');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.RIGHT, 
+    this.executeTest_(walker, sre.EventUtil.KeyCode.X, 'equality');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.DOWN, 'x');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.RIGHT, 'equals');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.RIGHT, 
     'StartFraction negative b plus or minus StartRoot' + 
     ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.SPACE, 'Level 1 collapsible');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.X, 'fraction');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.DOWN, 
+    this.executeTest_(walker, sre.EventUtil.KeyCode.SPACE, 'Level 1 collapsible');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.X, 'fraction');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.DOWN, 
     'Numerator negative b plus or minus StartRoot' + 
     ' b squared minus 4 a c EndRoot');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.SPACE, 'Level 2 Numerator');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.UP, 
+    this.executeTest_(walker, sre.EventUtil.KeyCode.SPACE, 'Level 2 Numerator');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.UP, 
     'StartFraction negative b plus or minus StartRoot' + 
     ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.LEFT, 'equals');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.LEFT, 'x');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.LEFT, 'x');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.HOME, 
+    this.executeTest_(walker, sre.EventUtil.KeyCode.LEFT, 'equals');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.LEFT, 'x');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.LEFT, 'x');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.HOME, 
     'x equals StartFraction negative b plus or minus StartRoot' + 
     ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.DOWN, 'x');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.X, 'identifier');
-    this.executeTest_(walker, sretest.TestExternal.sre.EventUtil.KeyCode.UP, 
+    this.executeTest_(walker, sre.EventUtil.KeyCode.DOWN, 'x');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.X, 'identifier');
+    this.executeTest_(walker, sre.EventUtil.KeyCode.UP, 
     'x equals StartFraction negative b plus or minus StartRoot' + 
     ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
   }
@@ -447,10 +446,10 @@ export class WalkerTest extends AbstractTest {
    * @param node The node on which to test the summary.
    */ 
   private executeSummaryQuadraticTest_(node: Node) {
-    let dummy = sretest.TestExternal.sre.WalkerFactory.walker(
+    let dummy = sre.WalkerFactory.walker(
     'Dummy', node, 
-    sretest.TestExternal.sre.SpeechGeneratorFactory.generator('Summary'), 
-    (sretest.TestExternal.sre.HighlighterFactory.highlighter(
+    sre.SpeechGeneratorFactory.generator('Summary'), 
+    (sre.HighlighterFactory.highlighter(
     {color:'black'}, {color:'white'}, {renderer:'NativeMML'}) as sre.Highlighter), 
     WalkerTest.QUADRATIC_MML);
     this.assert.equal(dummy.speech(), 'x equals collapsed fraction');

@@ -39,8 +39,10 @@ export class ColorPickerTest extends AbstractTest {
    * run on background colors.
    * @param color The color specification.
    * @param expected The expected rgba string.
-   */ 
-  executeColorTest(color: sre.ColorPicker.Color, expected: string) {
+   */
+  // TODO: type
+  // executeColorTest(color: sre.ColorPicker.Color, expected: string) {
+  executeColorTest(color: any, expected: string) {
     let picker = new TestExternal.sre.ColorPicker(color);
     this.assert.equal(picker.rgba().background, expected);
   }

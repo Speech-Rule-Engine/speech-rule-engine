@@ -1,7 +1,3 @@
-/**
- * @fileoverview An implementation of a test runner.
- * @author volker.sorge@gmail.com (Volker Sorge)
- */ 
 //
 // Copyright 2014 Volker Sorge 
 //
@@ -16,35 +12,35 @@
 // limitations under the License. 
 
 
+/**
+ * @fileoverview An implementation of a test runner.
+ * @author volker.sorge@gmail.com (Volker Sorge)
+ */ 
+
 import{AbstractTest}from '../classes/abstract_test';
 import{AbstractJsonTest}from '../classes/abstract_test';
 
 
+const enum Warning {NONE, WARN, ERROR}
+
+const enum Results {
+  PASS = 'pass', 
+  FAIL = 'fail', 
+  WARN = 'warn'};
+
+
+/**
+ * Console colors.
+ */ 
+const enum Color {
+  RED = '\u001B\u005B\u0033\u0031\u006D', 
+  GREEN = '\u001B\u005B\u0033\u0032\u006D', 
+  ORANGE = '\u001B\u005B\u0033\u0033\u006D', 
+  WHITE = '\u001B\u005B\u0033\u0037\u006D'
+};
+
 
 export class TestRunner {
-
-
-  static Warning = {
-  NONE:0, 
-  WARN:1, 
-  ERROR:2};
-
-
-  static Results = {
-  PASS:'pass', 
-  FAIL:'fail', 
-  WARN:'warn'};
-
-
-  /**
-   * Console colors.
-   */ 
-  private static color_ = {
-    RED:'\u001B\u005B\u0033\u0031\u006D', 
-    GREEN:'\u001B\u005B\u0033\u0032\u006D', 
-    ORANGE:'\u001B\u005B\u0033\u0033\u006D', 
-    WHITE:'\u001B\u005B\u0033\u0037\u006D'
-  };
 
   private status_:string;
 
@@ -68,12 +64,12 @@ export class TestRunner {
      */ 
   private testQueue_:AbstractTest[] = [];
 
-  warn:number;
+  warn: Warning;
 
   /**
      * Verbosity level.
      */ 
-  verbose:number = 2;
+  verbose: number = 2;
 
   /**
      * Strings to be output on a single line once its end is reached.
@@ -83,11 +79,11 @@ export class TestRunner {
     /**
        * Overall test status.
        */ 
-    this.status_ = TestRunner.Results.PASS;
+    this.status_ = Results.PASS;
     /**
        * Warning level.
        */ 
-    this.warn = TestRunner.Warning.WARN;
+    this.warn = Warning.WARN;
   }
 
 
@@ -96,7 +92,7 @@ export class TestRunner {
    * @return True if tests have passed.
    */ 
   success(): boolean {
-    return this.status_ == TestRunner.Results.PASS;
+    return this.status_ == Results.PASS;
   }
 
 
@@ -132,7 +128,7 @@ export class TestRunner {
       testcase.prepare();
     } catch (e) {
       if (e.message.match(/Bad filename/)) {
-        this.status_ = TestRunner.Results.FAIL;
+        this.status_ = Results.FAIL;
         this.failedTests_.push(e.message + ' ' + e.value);
         return;
       }
@@ -141,11 +137,11 @@ export class TestRunner {
     if (this.warn && testcase.warn.length) {
       for (let warn of testcase.warn) {
         this.outputStart('No results specified for test: ' + warn);
-        this.outputEnd(2, '[WARN]', TestRunner.color_.ORANGE);
+        this.outputEnd(2, '[WARN]', Color.ORANGE);
         this.warningTests_.push(warn);
       }
-      if (this.warn == TestRunner.Warning.ERROR) {
-        this.status_ = TestRunner.Results.FAIL;
+      if (this.warn == Warning.ERROR) {
+        this.status_ = Results.FAIL;
       }
     }
     testcase.setUpTest();
@@ -184,7 +180,7 @@ export class TestRunner {
     for (let propertyName in testcase) {
       if (propertyName.search('test') == 0) {
         this.executeTest_(propertyName, 
-        goog.bind(testcase[propertyName], testcase));
+                          (testcase as any)[propertyName].bind(testcase));
       }
     }
     testcase.tearDownTest();
@@ -201,14 +197,14 @@ export class TestRunner {
     try {
       func.apply();
     } catch (e) {
-      this.outputEnd(1, '[FAIL]', TestRunner.color_.RED);
+      this.outputEnd(1, '[FAIL]', Color.RED);
       this.outputLine(1, 'Actual: ' + (e.actual || ''));
       this.outputLine(1, 'Expected: ' + (e.expected || ''));
-      this.status_ = TestRunner.Results.FAIL;
+      this.status_ = Results.FAIL;
       this.failedTests_.push(name);
       return;
     }
-    this.outputEnd(2, '[PASS]', TestRunner.color_.GREEN);
+    this.outputEnd(2, '[PASS]', Color.GREEN);
     this.succeededTests_.push(name);
     return;
   }
@@ -219,16 +215,16 @@ export class TestRunner {
    */ 
   summary() {
     if (this.warn && this.warningTests_.length) {
-      this.outputLine(0, 'WARNING!', TestRunner.color_.ORANGE);
+      this.outputLine(0, 'WARNING!', Color.ORANGE);
       this.outputLine(0, 'The following tests produced a warning:');
       this.outputLine(0, this.warningTests_.join(', '));
     }
     if (!this.success()) {
-      this.outputLine(0, 'FAILURE!', TestRunner.color_.RED);
+      this.outputLine(0, 'FAILURE!', Color.RED);
       this.outputLine(0, 'The following tests failed:');
       this.outputLine(0, this.failedTests_.join(', '));
     } else {
-      this.outputLine(0, 'SUCCESS!', TestRunner.color_.GREEN);
+      this.outputLine(0, 'SUCCESS!', Color.GREEN);
     }
     this.outputLine(0, this.succeededTests_.length + ' tests successful.');
   }
@@ -253,8 +249,8 @@ export class TestRunner {
    * @param color An optional color argument.
    * @return The colored string.
    */ 
-  outputColor(output: string, color: TestRunner.color_ | undefined): string {
-    return color ? color + output + TestRunner.color_.WHITE : output;
+  outputColor(output: string, color: Color | undefined): string {
+    return color ? color + output + Color.WHITE : output;
   }
 
 
@@ -265,7 +261,7 @@ export class TestRunner {
    * @param output The output string.
    * @param opt_color An optional color argument.
    */ 
-  outputLine(priority: number, output: string, opt_color?: TestRunner.color_) {
+  outputLine(priority: number, output: string, opt_color?: Color) {
     output = this.outputColor(output, opt_color);
     let mid = 80 - output.length;
     output = output + (new Array(mid > 0 ? mid + 1 : 1)).join(' ');
@@ -278,7 +274,7 @@ export class TestRunner {
    * @param output The output string.
    * @param opt_color An optional color argument.
    */ 
-  outputStart(output: string, opt_color?: TestRunner.color_) {
+  outputStart(output: string, opt_color?: Color) {
     this.outputQueue.push(this.outputColor(output, opt_color));
   }
 
@@ -290,7 +286,7 @@ export class TestRunner {
    * @param output The output string.
    * @param opt_color An optional color argument.
    */ 
-  outputEnd(priority: number, output: string, opt_color?: TestRunner.color_) {
+  outputEnd(priority: number, output: string, opt_color?: Color) {
     output = this.outputColor(output, opt_color);
     let start = this.outputQueue.join(' ');
     let mid = 80 - (start.length + output.length);
@@ -301,4 +297,3 @@ export class TestRunner {
     this.outputQueue = [];
   }
 }
-goog.addSingletonGetter(TestRunner);

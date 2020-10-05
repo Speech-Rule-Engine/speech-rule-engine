@@ -24,7 +24,7 @@
 
 import{AbstractJsonTest}from './abstract_test';
 
-
+import {sre} from '../base/test_external';
 
 export class ApiTest extends AbstractJsonTest {
 
@@ -36,9 +36,12 @@ export class ApiTest extends AbstractJsonTest {
 
   information = 'API function test.';
 
-  annotations:{[key:any]:sre.SemanticAnnotator} = null;
+  // TODO: type
+  // annotations:{[key: string]: sre.SemanticAnnotator} = null;
+  annotations:{[key: string]: any} = null;
 
-  visitors:{[key:any]:sre.SemanticVisitor} = null;
+  // visitors:{[key: string]: sre.SemanticVisitor} = null;
+  visitors:{[key: string]: any} = null;
 
   pickFields = ['type', 'input', 'expected', 
   'setup', 'json', 'move'];
@@ -51,11 +54,11 @@ export class ApiTest extends AbstractJsonTest {
    * @override
    */ 
   setUpTest() {
-    this.annotations = sretest.TestExternal.sre.SemanticAnnotations.getInstance().annotators;
-    this.visitors = sretest.TestExternal.sre.SemanticAnnotations.getInstance().visitors;
+    this.annotations = sre.SemanticAnnotations.getInstance().annotators;
+    this.visitors = sre.SemanticAnnotations.getInstance().visitors;
     this.setupEngine(null);
-    sretest.TestExternal.sre.SemanticAnnotations.getInstance().annotators = {};
-    sretest.TestExternal.sre.SemanticAnnotations.getInstance().visitors = {};
+    sre.SemanticAnnotations.getInstance().annotators = {};
+    sre.SemanticAnnotations.getInstance().visitors = {};
   }
 
 
@@ -63,14 +66,14 @@ export class ApiTest extends AbstractJsonTest {
    * @override
    */ 
   tearDownTest() {
-    sretest.TestExternal.sre.SemanticAnnotations.getInstance().annotators = this.annotations;
-    sretest.TestExternal.sre.SemanticAnnotations.getInstance().visitors = this.visitors;
+    sre.SemanticAnnotations.getInstance().annotators = this.annotations;
+    sre.SemanticAnnotations.getInstance().visitors = this.visitors;
   }
 
 
 
-  setupEngine(feature) {
-    sretest.TestExternal.sre.System.getInstance().setupEngine(feature || ApiTest.SETUP);
+  setupEngine(feature: any) {
+    sre.System.getInstance().setupEngine(feature || ApiTest.SETUP);
   }
 
 
@@ -85,8 +88,8 @@ export class ApiTest extends AbstractJsonTest {
    */ 
   executeTest(func: string, expr: string, result: string | null, feature: Object, json: boolean, move: boolean) {
     this.setupEngine(feature);
-    expr = move ? sretest.TestExternal.sre.EventUtil.KeyCode[expr] : expr || ApiTest.QUADRATIC;
-    let output = sretest.TestExternal.sre.System.getInstance()[func](expr);
+    expr = move ? sre.EventUtil.KeyCode[expr] : expr || ApiTest.QUADRATIC;
+    let output = sre.System.getInstance()[func](expr);
     output = output ? json ? JSON.stringify(output) : output.toString() : output;
     this.assert.equal(output, result);
   }
@@ -95,15 +98,16 @@ export class ApiTest extends AbstractJsonTest {
   /**
    * @override
    */ 
-  method(var_args) {
-    let args = Array.prototype.slice.call(arguments, 0);
+  method(...args: any[]) {
     this.executeTest(args[0], args[1], args[2], args[3], args[4], args[5]);
   }
+
 }
 
 ApiTest.SETUP = {
 locale:'en', domain:'mathspeak', style:'default', 
-modality:'speech', speech:sretest.TestExternal.sre.Engine.Speech.NONE};
+modality:'speech', speech: sre.Engine.Speech.NONE};
+
 /**
  * The quadratic equation as a MathML string. By default tests are run against
  * the quadratic equation unless a different input is provided.

@@ -17,14 +17,13 @@
     "lib": ["es6", "dom"],
     "typeRoots": [
       "./typings",
-      "./node_modules/@types/node"
+      "./node_modules/@types"
     ],
     "outDir": "js"
   },
   "type": ["node"],
   "include": [
-    "ts/**/*",
-    "@types/**/*.d.ts"
+    "ts/**/*"
   ],
   "exclude": [
     "dist",

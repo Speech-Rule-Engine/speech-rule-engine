@@ -20,10 +20,10 @@
 import{AbstractJsonTest}from './abstract_test';
 import{ExamplesOutput}from './examples_output';
 import*as TestUtil from '../base/test_util';
+import * as fs from 'fs';
 
 
-
-export class AbstractExamples extends AbstractJsonTest implements ExamplesOutput {
+export abstract class AbstractExamples extends AbstractJsonTest implements ExamplesOutput {
 
   private active_:boolean = false;
 
@@ -109,9 +109,9 @@ export class AbstractExamples extends AbstractJsonTest implements ExamplesOutput
     if (!this.fileError_) {
       try {
         for (let key in this.examples_) {
-          sretest.TestExternal.fs.appendFileSync(
+          fs.appendFileSync(
           this.examplesFile_, key);
-          sretest.TestExternal.fs.appendFileSync(
+          fs.appendFileSync(
           this.examplesFile_, this.join(this.examples_[key]));
         }
       } catch (err) {
@@ -177,9 +177,9 @@ export class AbstractExamples extends AbstractJsonTest implements ExamplesOutput
  */ 
 export function openFile(file: string, obj: AbstractExamples) {
   if (!openFiles[file]) {
-    let fd = sretest.TestExternal.fs.openSync(file, 'w+');
+    let fd = fs.openSync(file, 'w+');
     descriptors[file] = fd;
-    sretest.TestExternal.fs.appendFileSync(fd, obj.header());
+    fs.appendFileSync(fd, obj.header());
   }
   openFiles[file] = obj;
 }
@@ -190,8 +190,8 @@ export function openFile(file: string, obj: AbstractExamples) {
  */ 
 export function closeFiles() {
   for (let file of Object.keys(openFiles)) {
-    sretest.TestExternal.fs.appendFileSync(
+    fs.appendFileSync(
     file, openFiles[file].footer());
-    sretest.TestExternal.fs.closeSync(descriptors[file]);
+    fs.closeSync(descriptors[file]);
   }
 }
