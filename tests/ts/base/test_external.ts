@@ -22,34 +22,14 @@
 
 import * as path from 'path';
 
-export class TestExternal {
-
-  public static assert: Object;
-
-  public static path: string;
-
-  public static xmldom: Object;
-
-  public static sre: any;
+export namespace TestExternal {
 
   /**
-   * The local require function for NodeJS.
-   * @param library A library name.
-   * @return The library object that has been loaded.
+   * Path to JSON files.
    */
-  // public static require(library: string): Object {
-  //   return require(library);
-  // }
-}
-// /**
-//  * Filesystem library.
-//  */
-// export const fs = require('fs');
+  export let path =  './';
 
-/**
- * Path to JSON files.
- */
-TestExternal.path =  './tests/';
+}
 
 /**
  * Xmldom library.

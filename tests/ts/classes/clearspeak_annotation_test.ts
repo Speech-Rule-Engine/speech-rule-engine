@@ -40,7 +40,7 @@ export class ClearspeakAnnotationTest extends AbstractJsonTest {
    */
   public executeTest(mml: string, expected: boolean) {
     let mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
-    mml + '</math>';
+      mml + '</math>';
     let semantic = sre.Semantic.getTreeFromString(mathMl);
     this.annotator.annotate(semantic.root);
     this.assert.equal(semantic.root.hasAnnotation('clearspeak', 'simple'),
@@ -50,7 +50,7 @@ export class ClearspeakAnnotationTest extends AbstractJsonTest {
   /**
    * @override
    */
-  public method([arg0, arg1, ..._rest]: [string, boolean, string[]]) {
-    this.executeTest(arg0, arg1);
+  public method(...args: any[]) {
+    this.executeTest(args[0], args[1]);
   }
 }

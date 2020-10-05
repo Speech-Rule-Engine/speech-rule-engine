@@ -21,8 +21,8 @@
  */
 
 import {AbstractTest} from '../classes/abstract_test';
-import * as sre from '../typings/sre';
-import '../base/test_external';
+import {sre} from '../base/test_external';
+import * as sret from '../typings/sre';
 
 export class WalkerTest extends AbstractTest {
 
@@ -472,7 +472,7 @@ export class WalkerTest extends AbstractTest {
    * @param move The move of the walker.
    * @param result The expected result.
    */
-  private executeTest_(walker: sre.Walker, move: string | number | null, result: string | null) {
+  private executeTest_(walker: sret.Walker, move: string | number | null, result: string | null) {
     if (move) {
       walker.move(typeof move === 'string' ? sre.EventUtil.KeyCode[move] : move);
     }
@@ -489,12 +489,12 @@ export class WalkerTest extends AbstractTest {
    * @param mml The MathML string for the node.
    * @return The newly created walker.
    */
-  private createWalker_(type: string, node: Node, renderer: {renderer: string, browser?: string}, mml: string): sre.Walker {
+  private createWalker_(type: string, node: Node, renderer: {renderer: string, browser?: string}, mml: string): sret.Walker {
     return sre.WalkerFactory.walker(
     type, node,
     sre.SpeechGeneratorFactory.generator('Node'),
     (sre.HighlighterFactory.highlighter(
-    {color: 'black'}, {color: 'white'}, renderer) as sre.Highlighter),
+    {color: 'black'}, {color: 'white'}, renderer) as sret.Highlighter),
     mml);
   }
 
@@ -502,7 +502,7 @@ export class WalkerTest extends AbstractTest {
    * Runs a series of walker tests on a quadratic formula.
    * @param walker The walker.
    */
-  private runSyntaxQuadraticMoveTests_(walker: sre.Walker) {
+  private runSyntaxQuadraticMoveTests_(walker: sret.Walker) {
     this.executeTest_(walker, null,
     'x equals StartFraction negative b plus or minus StartRoot' +
     ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
@@ -538,7 +538,7 @@ export class WalkerTest extends AbstractTest {
    * Runs a series of walker tests on a quadratic formula using key codes.
    * @param walker The walker.
    */
-  private runSyntaxQuadraticKeyTests_(walker: sre.Walker) {
+  private runSyntaxQuadraticKeyTests_(walker: sret.Walker) {
     this.executeTest_(walker, null,
     'x equals StartFraction negative b plus or minus StartRoot' +
     ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
@@ -574,7 +574,7 @@ export class WalkerTest extends AbstractTest {
    * Runs a series of walker tests on a quadratic formula.
    * @param walker The walker.
    */
-  private runSemanticQuadraticMoveTests_(walker: sre.Walker) {
+  private runSemanticQuadraticMoveTests_(walker: sret.Walker) {
     this.executeTest_(walker, null,
     'x equals StartFraction negative b plus or minus StartRoot' +
     ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
@@ -608,7 +608,7 @@ export class WalkerTest extends AbstractTest {
    * Runs a series of walker tests on a quadratic formula.
    * @param walker The walker.
    */
-  private runDummyQuadraticMoveTests_(walker: sre.Walker) {
+  private runDummyQuadraticMoveTests_(walker: sret.Walker) {
     this.executeTest_(walker, null,
     'x equals StartFraction negative b plus or minus StartRoot' +
     ' b squared minus 4 a c EndRoot Over 2 a EndFraction');
@@ -638,7 +638,7 @@ export class WalkerTest extends AbstractTest {
     'Dummy', node,
     sre.SpeechGeneratorFactory.generator('Summary'),
     (sre.HighlighterFactory.highlighter(
-    {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'}) as sre.Highlighter),
+    {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'}) as sret.Highlighter),
     WalkerTest.QUADRATIC_MML);
     this.assert.equal(dummy.speech(), 'x equals collapsed fraction');
   }
@@ -647,7 +647,7 @@ export class WalkerTest extends AbstractTest {
    * Runs a series of walker tests on a equation formula.
    * @param walker The walker.
    */
-  private runSyntaxEquationMoveTests_(walker: sre.Walker) {
+  private runSyntaxEquationMoveTests_(walker: sret.Walker) {
     this.executeTest_(walker, null,
     'StartLayout 1st Row 1st Column a 2nd Column' +
     ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
@@ -686,7 +686,7 @@ export class WalkerTest extends AbstractTest {
    * Runs a series of walker tests on a equation formula.
    * @param walker The walker.
    */
-  private runSemanticEquationMoveTests_(walker: sre.Walker) {
+  private runSemanticEquationMoveTests_(walker: sret.Walker) {
     this.executeTest_(walker, null,
     'StartLayout 1st Row 1st Column a 2nd Column' +
     ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
@@ -725,7 +725,7 @@ export class WalkerTest extends AbstractTest {
    * Runs a series of walker tests on a equation formula.
    * @param walker The walker.
    */
-  private runDummyEquationMoveTests_(walker: sre.Walker) {
+  private runDummyEquationMoveTests_(walker: sret.Walker) {
     this.executeTest_(walker, null,
     'StartLayout 1st Row 1st Column a 2nd Column' +
     ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +
@@ -750,7 +750,7 @@ export class WalkerTest extends AbstractTest {
    * Runs a series of walker tests on a equation formula.
    * @param walker The walker.
    */
-  private runTableEquationMoveTests_(walker: sre.Walker) {
+  private runTableEquationMoveTests_(walker: sret.Walker) {
     this.executeTest_(walker, null,
     'StartLayout 1st Row 1st Column a 2nd Column' +
     ' equals 3rd Column b 2nd Row 1st Column c 2nd Column equals 3rd' +

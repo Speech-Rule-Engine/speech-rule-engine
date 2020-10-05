@@ -16,8 +16,8 @@
 // limitations under the License.
 
 import {AbstractTest} from '../classes/abstract_test';
-import * as sre from '../typings/sre';
-import '../base/test_external';
+import {sre} from '../base/test_external';
+import * as sret from '../typings/sre';
 
 export class ColorPickerTest extends AbstractTest {
 
@@ -25,9 +25,6 @@ export class ColorPickerTest extends AbstractTest {
      * @override
      */
   public information = 'Color Picker tests.';
-  constructor() {
-    super();
-  }
 
   /**
    * Tests if a given color object produces the correct rgba value. The test is
@@ -35,7 +32,7 @@ export class ColorPickerTest extends AbstractTest {
    * @param color The color specification.
    * @param expected The expected rgba string.
    */
-  private executeColorTest(color: sre.colorType, expected: string) {
+  public executeColorTest(color: sret.colorType, expected: string) {
     let picker = new sre.ColorPicker(color);
     this.assert.equal(picker.rgba().background, expected);
   }

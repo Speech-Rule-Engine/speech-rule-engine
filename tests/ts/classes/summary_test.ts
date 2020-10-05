@@ -67,10 +67,9 @@ export class SummaryTest extends SpeechTest {
   /**
    * @override
    */
-  public method([arg0, arg1, arg2, arg3, ..._rest]:
-                [string, string, string, string[], string[]]) {
-    this.steps = arg3;
-    super.method(arg0, arg1, arg2);
+  public method(...args: any[]) {
+    this.steps = args[3];
+    super.method(args[0], args[1], args[2]);
     this.steps = null;
   }
 }

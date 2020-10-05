@@ -155,7 +155,7 @@ export class Tests {
 
 }
 
-/**
- * Execute tests.
- */
-new Tests().run();
+// /**
+//  * Execute tests.
+//  */
+// new Tests().run();

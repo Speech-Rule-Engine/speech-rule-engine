@@ -182,8 +182,8 @@ export class SemanticTreeTest extends SemanticTest {
   /**
    * @override
    */
-  public method([arg0, arg1, arg2, ..._rest]: [string, string, boolean, string[]]) {
-    this.executeTest(arg0, arg1, arg2);
+  public method(...args: any[]) {
+    this.executeTest(args[0], args[1], args[2]);
   }
 
   /**

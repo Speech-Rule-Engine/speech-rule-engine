@@ -16,8 +16,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {TestExternal} from '../base/test_external';
 import {TestPath, TestUtil} from '../base/test_util';
+import * as assert from 'assert';
 
 export abstract class AbstractTest {
   /**
@@ -25,7 +25,7 @@ export abstract class AbstractTest {
    */
   public information: string = '';
 
-  public assert: any = TestExternal.assert;
+  public assert: any = assert;
 
   /**
    * Sets up the basic requirements for the test.

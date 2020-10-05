@@ -105,8 +105,8 @@ export class SymbolTest extends SpeechTest {
   /**
    * @override
    */
-  public method([arg0, arg1]: [string, string[]]) {
-    this.type === 'unit' ? this.executeUnitTest(arg0, arg1) :
-    this.executeCharTest(arg0, arg1);
+  public method(...args: any[]) {
+    this.type === 'unit' ? this.executeUnitTest(args[0], args[1]) :
+    this.executeCharTest(args[0], args[1]);
   }
 }
