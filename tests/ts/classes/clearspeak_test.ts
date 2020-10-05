@@ -40,8 +40,8 @@ export class ClearspeakTest extends SpeechTest {
    */ 
   setUpTest() {
     super.setUpTest();
-    sretest.TestExternal.sre.System.getInstance().setupEngine(
-    {markup:sretest.TestExternal.sre.Engine.Markup.PUNCTUATION});
+    sre.System.getInstance().setupEngine(
+    {markup:sre.Engine.Markup.PUNCTUATION});
   }
 
 
@@ -49,8 +49,8 @@ export class ClearspeakTest extends SpeechTest {
    * @override
    */ 
   tearDownTest() {
-    sretest.TestExternal.sre.System.getInstance().setupEngine(
-    {markup:sretest.TestExternal.sre.Engine.Markup.NONE});
+    sre.System.getInstance().setupEngine(
+    {markup:sre.Engine.Markup.NONE});
     super.tearDownTest();
   }
 }

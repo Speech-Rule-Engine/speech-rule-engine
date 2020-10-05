@@ -43,14 +43,13 @@ export class SemanticApiTest extends AbstractTest {
    * Tests Tree generation vs Xml output.
    */ 
   testTreeVsXml() {
-    let test = goog.bind( 
+    let test = 
     function(expr) {
       let mml = TestExternal.sre.DomUtil.parseInput('<math>' + expr + '</math>');
       let xmls = new TestExternal.xmldom.XMLSerializer();
       this.assert.equal(xmls.serializeToString(TestExternal.sre.Semantic.getTree(mml).xml()), 
       xmls.serializeToString(TestExternal.sre.Semantic.xmlTree(mml)));
-    }, 
-    this);
+    }.bind(this);
     SemanticApiTest.TEST_CASES.forEach(test);
   }
 
@@ -59,7 +58,7 @@ export class SemanticApiTest extends AbstractTest {
    * Tests Tree generation vs Xml output.
    */ 
   testStringVsXml() {
-    let test = goog.bind( 
+    let test = 
     function(expr) {
       let mstr = '<math>' + expr + '</math>';
       let mml = TestExternal.sre.DomUtil.parseInput(mstr);
@@ -67,8 +66,7 @@ export class SemanticApiTest extends AbstractTest {
       this.assert.equal(xmls.serializeToString(
       TestExternal.sre.Semantic.getTreeFromString(mstr).xml()), 
       xmls.serializeToString(TestExternal.sre.Semantic.xmlTree(mml)));
-    }, 
-    this);
+    }.bind(this);
     SemanticApiTest.TEST_CASES.forEach(test);
   }
 
@@ -77,7 +75,7 @@ export class SemanticApiTest extends AbstractTest {
    * Tests Tree generation vs Xml output.
    */ 
   testStringVsTree() {
-    let test = goog.bind( 
+    let test =
     function(expr) {
       let mstr = '<math>' + expr + '</math>';
       let mml = TestExternal.sre.DomUtil.parseInput(mstr);
@@ -85,8 +83,7 @@ export class SemanticApiTest extends AbstractTest {
       this.assert.equal(xmls.serializeToString(
       TestExternal.sre.Semantic.getTreeFromString(mstr).xml()), 
       xmls.serializeToString(TestExternal.sre.Semantic.getTree(mml).xml()));
-    }, 
-    this);
+    }.bind(this);
     SemanticApiTest.TEST_CASES.forEach(test);
   }
 }

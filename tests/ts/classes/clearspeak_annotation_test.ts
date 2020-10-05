@@ -34,7 +34,7 @@ export class ClearspeakAnnotationTest extends AbstractJsonTest {
   annotator:any;
   constructor() {
     super();
-    this.annotator = sretest.TestExternal.sre.ClearspeakUtil.simpleExpression();
+    this.annotator = sre.ClearspeakUtil.simpleExpression();
   }
 
 
@@ -46,7 +46,7 @@ export class ClearspeakAnnotationTest extends AbstractJsonTest {
   executeTest(mml: string, expected: boolean) {
     let mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' + 
     mml + '</math>';
-    let semantic = sretest.TestExternal.sre.Semantic.getTreeFromString(mathMl);
+    let semantic = sre.Semantic.getTreeFromString(mathMl);
     this.annotator.annotate(semantic.root);
     this.assert.equal(semantic.root.hasAnnotation('clearspeak', 'simple'), 
     expected);

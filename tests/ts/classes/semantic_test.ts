@@ -133,12 +133,9 @@ export class EnrichSpeechTest extends SemanticTest {
  */ 
 export class SemanticTreeTest extends SemanticTest {
 
-  // TODO: type
-  // annotations:{[key: string]: sre.SemanticAnnotator} = null;
-  annotations:{[key: string]: any} = null;
+  annotations:{[key: string]: sre.SemanticAnnotator} = null;
 
-  // visitors:{[key: string]: sre.SemanticVisitor} = null;
-  visitors:{[key: string]: any} = null;
+  visitors:{[key: string]: sre.SemanticVisitor} = null;
 
   constructor() {
     super();

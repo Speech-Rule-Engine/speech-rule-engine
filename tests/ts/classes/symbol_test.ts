@@ -58,13 +58,13 @@ export class SymbolTest extends SpeechTest {
    * @param answers A list of answers.
    */ 
   executeUnitTest(char: string, answers: string[]) {
-    sretest.TestExternal.sre.Grammar.getInstance().pushState({annotation:'unit'});
+    sre.Grammar.getInstance().pushState({annotation:'unit'});
     try {
       this.executeCharTest(char, answers);
     } catch (err) {
       throw err;
     } finally {
-      sretest.TestExternal.sre.Grammar.getInstance().popState();
+      sre.Grammar.getInstance().popState();
     }
   }
 
@@ -74,8 +74,8 @@ export class SymbolTest extends SpeechTest {
    */ 
   executeTest(text, answer, opt_style) {
     let style = opt_style || this.style;
-    sretest.TestExternal.sre.SpeechRuleEngine.getInstance().clearCache();
-    sretest.TestExternal.sre.System.getInstance().setupEngine(
+    sre.SpeechRuleEngine.getInstance().clearCache();
+    sre.System.getInstance().setupEngine(
     {domain:this.domain, style:style, 
     modality:this.modality, rules:this.rules, locale:this.locale});
     let actual = this.getSpeech(text);
@@ -89,8 +89,8 @@ export class SymbolTest extends SpeechTest {
    * @override
    */ 
   getSpeech(text) {
-    let aural = sretest.TestExternal.sre.AuralRendering.getInstance();
-    let descrs = [sretest.TestExternal.sre.AuditoryDescription.create(
+    let aural = sre.AuralRendering.getInstance();
+    let descrs = [sre.AuditoryDescription.create(
     {text:text}, {adjust:true, translate:true})];
     return aural.finalize(aural.markup(descrs));
   }

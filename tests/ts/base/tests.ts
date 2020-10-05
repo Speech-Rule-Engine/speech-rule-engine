@@ -35,7 +35,7 @@ export class Tests {
   static testList:any[] = [];
 
 
-  static environment:{[key:any]:number | boolean | string[]} = {
+  static environment:{[key: string]:number | boolean | string[]} = {
   JSON:true, 
   VERBOSE:2, 
   WARN:1};
@@ -79,7 +79,7 @@ export class Tests {
    * @param variable The variable name.
    */ 
   static getEnvironment(variable: string) {
-    let env = sretest.TestExternal.process.env[variable];
+    let env = process.env[variable];
     // Process here. 
     if (!env) {
       return;

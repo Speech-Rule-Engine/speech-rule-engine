@@ -62,9 +62,7 @@ export class MarkupTest extends AbstractTest {
    * @param result The expected result.
    * @param markup The markup to test.
    */ 
-  // TODO: type
-  // executeTest(expr: string, result: string, markup: sre.Engine.Markup) {
-  executeTest(expr: string, result: string, markup: any) {
+  executeTest(expr: string, result: string, markup: sre.Engine.Markup) {
     sre.Engine.getInstance().markup = markup;
     let descrs = sre.System.getInstance().toDescription(expr);
     let output = sre.AuralRendering.getInstance().markup(descrs);

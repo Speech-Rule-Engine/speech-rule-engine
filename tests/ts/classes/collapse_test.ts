@@ -68,13 +68,13 @@ export class CollapseTest extends SpeechTest {
    * @override
    */ 
   getSpeech(mathMl) {
-    let mml = sretest.TestExternal.sre.DomUtil.parseInput(mathMl);
-    let stree = sretest.TestExternal.sre.Semantic.getTree(mml);
+    let mml = sre.DomUtil.parseInput(mathMl);
+    let stree = sre.Semantic.getTree(mml);
     let xml = stree.xml();
     xml.childNodes[0].setAttribute('id', 'A');
-    sretest.TestExternal.sre.SpeechGeneratorUtil.connectAllMactions(mml, xml);
-    let descrs = sretest.TestExternal.sre.SpeechGeneratorUtil.computeSpeech(xml);
-    return sretest.TestExternal.sre.AuralRendering.getInstance().markup(descrs);
+    sre.SpeechGeneratorUtil.connectAllMactions(mml, xml);
+    let descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
+    return sre.AuralRendering.getInstance().markup(descrs);
   }
 }
 

@@ -110,7 +110,7 @@ export class TestRunner {
    */ 
   runTests() {
     for (let i = 0, test; test = this.testQueue_[i]; i++) {
-      if (test instanceof sretest.AbstractJsonTest) {
+      if (test instanceof AbstractJsonTest) {
         this.executeJsonTests(test);
       } else {
         this.executeTests(test);
@@ -150,7 +150,7 @@ export class TestRunner {
         continue;
       }
       this.executeJsonTest(
-      test.name, goog.bind(testcase.method, testcase), testcase.pick(test));
+      test.name, testcase.method.bind(testcase), testcase.pick(test));
     }
     testcase.tearDownTest();
   }

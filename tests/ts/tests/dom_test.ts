@@ -38,7 +38,7 @@ export class DomTest extends AbstractTest {
    * @param result The expected output.
    */ 
   entitiesTest(xml: string, result: string) {
-    let parsed = sretest.TestExternal.sre.DomUtil.parseInput(xml);
+    let parsed = sre.DomUtil.parseInput(xml);
     this.assert.equal(parsed.toString(), result);
   }
 
@@ -80,11 +80,11 @@ export class DomTest extends AbstractTest {
    * XPath evaluation test.
    */ 
   testXpathEvaluate() {
-    let xml = sretest.TestExternal.sre.DomUtil.parseInput('<a><b>c</b><d>e</d></a>');
-    this.assert.equal(sretest.TestExternal.sre.XpathUtil.evalXPath('//b', xml).toString(), '<b>c</b>');
-    this.assert.equal(sretest.TestExternal.sre.XpathUtil.evalXPath('//b/text()', xml).toString(), 'c');
+    let xml = sre.DomUtil.parseInput('<a><b>c</b><d>e</d></a>');
+    this.assert.equal(sre.XpathUtil.evalXPath('//b', xml).toString(), '<b>c</b>');
+    this.assert.equal(sre.XpathUtil.evalXPath('//b/text()', xml).toString(), 'c');
     this.assert.equal(
-    sretest.TestExternal.sre.XpathUtil.evalXPath('//b/following-sibling::*', xml).toString(), 
+    sre.XpathUtil.evalXPath('//b/following-sibling::*', xml).toString(), 
     '<d>e</d>');
   }
 
@@ -93,10 +93,10 @@ export class DomTest extends AbstractTest {
    * XPath boolean constraint test.
    */ 
   testXpathBoolean() {
-    let xml = sretest.TestExternal.sre.DomUtil.parseInput('<a><b>c</b><d>e</d></a>');
-    this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateBoolean('//b', xml), true);
-    this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateBoolean('//c', xml), false);
-    this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateBoolean(
+    let xml = sre.DomUtil.parseInput('<a><b>c</b><d>e</d></a>');
+    this.assert.equal(sre.XpathUtil.evaluateBoolean('//b', xml), true);
+    this.assert.equal(sre.XpathUtil.evaluateBoolean('//c', xml), false);
+    this.assert.equal(sre.XpathUtil.evaluateBoolean(
     '//b/following-sibling::*', xml), true);
   }
 
@@ -105,10 +105,10 @@ export class DomTest extends AbstractTest {
    * XPath string computation.
    */ 
   testXpathString() {
-    let xml = sretest.TestExternal.sre.DomUtil.parseInput('<a l="1"><b m="2">c</b><d>e</d></a>');
-    this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateString('@l', xml), '1');
-    this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateString('//*/@m', xml), '2');
-    this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateString(
+    let xml = sre.DomUtil.parseInput('<a l="1"><b m="2">c</b><d>e</d></a>');
+    this.assert.equal(sre.XpathUtil.evaluateString('@l', xml), '1');
+    this.assert.equal(sre.XpathUtil.evaluateString('//*/@m', xml), '2');
+    this.assert.equal(sre.XpathUtil.evaluateString(
     '//b/following-sibling::*', xml), 'e');
   }
 }

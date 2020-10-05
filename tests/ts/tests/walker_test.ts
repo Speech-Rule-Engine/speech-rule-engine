@@ -1,8 +1,3 @@
-/**
- * @fileoverview Tests for walkers.
- *
- * @author volker.sorge@gmail.com (Volker Sorge)
- */ 
 //
 // Copyright 2016 Volker Sorge 
 //
@@ -20,6 +15,11 @@
 // limitations under the License. 
 
 
+/**
+ * @fileoverview Tests for walkers.
+ *
+ * @author volker.sorge@gmail.com (Volker Sorge)
+ */ 
 
 
 import{AbstractTest}from '../classes/abstract_test';
@@ -462,7 +462,7 @@ export class WalkerTest extends AbstractTest {
    */ 
   testSummary() {
     [this.quadratic.mml, this.quadratic.htmlCss, 
-    this.quadratic.chtml, this.quadratic.svg].forEach(goog.bind(this.executeSummaryQuadraticTest_, this));
+     this.quadratic.chtml, this.quadratic.svg].forEach(this.executeSummaryQuadraticTest_.bind(this));
   }
 
 

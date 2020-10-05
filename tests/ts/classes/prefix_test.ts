@@ -61,17 +61,17 @@ export class PrefixTest extends SpeechTest {
    * @override
    */ 
   getSpeech(mml) {
-    let stree = sretest.TestExternal.sre.Semantic.getTreeFromString(mml);
+    let stree = sre.Semantic.getTreeFromString(mml);
     let node = stree.root.querySelectorAll(
-    goog.bind(function(x) {
+    function(x) {
       return x.id === this.id;
-    }, this))[0];
+    }.bind(this))[0];
     this.subExpr = node.mathmlTree;
     if (!node) {
       this.assert.fail();
       return '';
     }
-    return sretest.TestExternal.sre.SpeechGeneratorUtil.retrievePrefix(node);
+    return sre.SpeechGeneratorUtil.retrievePrefix(node);
   }
 
 

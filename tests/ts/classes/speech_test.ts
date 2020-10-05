@@ -51,10 +51,10 @@ export class SpeechTest extends AbstractExamples {
   fileDirectory:any;
   constructor() {
     super();
-    this.style = sretest.TestExternal.sre.DynamicCstr.DEFAULT_VALUES[sretest.TestExternal.sre.DynamicCstr.Axis.STYLE];
-    this.domain = sretest.TestExternal.sre.DynamicCstr.DEFAULT_VALUES[sretest.TestExternal.sre.DynamicCstr.Axis.DOMAIN];
-    this.locale = sretest.TestExternal.sre.DynamicCstr.DEFAULT_VALUES[sretest.TestExternal.sre.DynamicCstr.Axis.LOCALE];
-    this.modality = sretest.TestExternal.sre.DynamicCstr.DEFAULT_VALUES[sretest.TestExternal.sre.DynamicCstr.Axis.MODALITY];
+    this.style = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE];
+    this.domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+    this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+    this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 
     this.pickFields.push('preference');
   }
@@ -81,8 +81,8 @@ export class SpeechTest extends AbstractExamples {
     let style = opt_style || this.style;
     let mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' + 
     mml + '</math>';
-    sretest.TestExternal.sre.SpeechRuleEngine.getInstance().clearCache();
-    sretest.TestExternal.sre.System.getInstance().setupEngine(
+    sre.SpeechRuleEngine.getInstance().clearCache();
+    sre.System.getInstance().setupEngine(
     {domain:this.domain, style:style, 
     modality:this.modality, rules:this.rules, locale:this.locale});
     let actual = this.getSpeech(mathMl);
@@ -98,7 +98,7 @@ export class SpeechTest extends AbstractExamples {
    * @return The resulting speech.
    */ 
   getSpeech(mathMl: string): string {
-    return sretest.TestExternal.sre.System.getInstance().toSpeech(mathMl);
+    return sre.System.getInstance().toSpeech(mathMl);
   }
 
 
@@ -118,7 +118,7 @@ export class SpeechTest extends AbstractExamples {
     '.</h2>';
     let outList = [input];
     if (this.compare) {
-      sretest.TestExternal.sre.System.getInstance().setupEngine(
+      sre.System.getInstance().setupEngine(
       {domain:this.domain, style:style, 
       modality:this.modality, rules:this.rules, locale:'en'});
       outList.push(this.getSpeech(input));

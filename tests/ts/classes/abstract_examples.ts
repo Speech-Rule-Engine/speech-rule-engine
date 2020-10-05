@@ -19,7 +19,7 @@
 
 import{AbstractJsonTest}from './abstract_test';
 import{ExamplesOutput}from './examples_output';
-import*as TestUtil from '../base/test_util';
+import {TestError, TestPath} from '../base/test_util';
 import * as fs from 'fs';
 
 
@@ -54,7 +54,7 @@ export abstract class AbstractExamples extends AbstractJsonTest implements Examp
     /**
        * Base directory for the output file.
        */ 
-    this.fileDirectory = TestUtil.path.OUTPUT;
+    this.fileDirectory = TestPath.OUTPUT;
   }
 
 
@@ -121,7 +121,7 @@ export abstract class AbstractExamples extends AbstractJsonTest implements Examp
     this.examples_ = [];
     this.active_ = false;
     if (this.fileError_) {
-      throw new TestUtil.Error('Bad Filename', this.fileError_);
+      throw new TestError('Bad Filename', this.fileError_);
     }
   }
 

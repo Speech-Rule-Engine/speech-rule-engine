@@ -28,7 +28,7 @@ export const TestPath: {[key: string]: string} = {
  * @param msg The error message.
  * @param value Additional values.
  */ 
-export class Error extends Error {
+export class TestError extends Error {
   name = 'SRE Test Error';
   message:any;
   value:any;
@@ -48,9 +48,9 @@ export class Error extends Error {
 export function loadJson(file: string): Object {
   try {
     return (
-    JSON.parse(fs.readFileSync(file)) as Object);
+      JSON.parse(fs.readFileSync(file).toString()) as Object);
   } catch (e) {
-    throw new Error('Bad filename or content', file);
+    throw new TestError('Bad filename or content', file);
   }
 }
 
