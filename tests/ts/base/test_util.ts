@@ -12,8 +12,9 @@
 // limitations under the License.
 
 import * as fs from 'fs';
+import {baseDir} from './test_external';
 
-let TestDir = './';
+let TestDir = baseDir;
 
 export const TestPath: {[key: string]: string} = {
   INPUT: TestDir + 'input/',

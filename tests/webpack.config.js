@@ -2,7 +2,7 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  entry: './ts/index.ts',
+  entry: path.resolve(__dirname, 'ts/index.ts'),
   mode: 'development',
   target:'node',
   module: {
@@ -22,7 +22,10 @@ module.exports = {
     library: 'sretest',
     libraryTarget: 'umd',
     globalObject: 'this',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.join(__dirname, 'dist'),
+  },
+  node: {
+    __dirname: false
   },
   optimization: {
     minimize: false,
