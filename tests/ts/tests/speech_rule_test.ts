@@ -19,6 +19,7 @@
 // limitations under the License.
 
 import {AbstractTest} from '../classes/abstract_test';
+import {sre} from '../base/test_external';
 
 export class SpeechRuleTest extends AbstractTest {
 

@@ -15,7 +15,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {TestExternal} from '../base/test_external';
+import {sre} from '../base/test_external';
 import {AbstractTest} from '../classes/abstract_test';
 
 export class ColorPickerTest extends AbstractTest {
@@ -35,7 +35,7 @@ export class ColorPickerTest extends AbstractTest {
    * @param expected The expected rgba string.
    */
   public executeColorTest(color: sre.ColorPicker.Color, expected: string) {
-    let picker = new TestExternal.sre.ColorPicker(color);
+    let picker = new sre.ColorPicker(color);
     this.assert.equal(picker.rgba().background, expected);
   }
 

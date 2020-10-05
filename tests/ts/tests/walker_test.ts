@@ -20,8 +20,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {sre} from '../base/test_external';
 import {AbstractTest} from '../classes/abstract_test';
+import {sre} from '../base/test_external';
+// import * as sre from '../base/sre';
 
 export class WalkerTest extends AbstractTest {
 
@@ -48,6 +49,7 @@ export class WalkerTest extends AbstractTest {
   public quadratic: any;
 
   public equation: any;
+
   constructor() {
     super();
     this.quadratic = {

@@ -16,6 +16,7 @@
 // limitations under the License.
 
 import {SpeechTest} from './speech_test';
+import {sre} from '../base/test_external';
 
 export class SymbolTest extends SpeechTest {
 
@@ -65,8 +66,8 @@ export class SymbolTest extends SpeechTest {
   /**
    * @override
    */
-  public executeTest(text, answer, opt_style) {
-    let style = opt_style || this.style;
+  public executeTest(text: string, answer: string, style?: string) {
+    style = style || this.style;
     sre.SpeechRuleEngine.getInstance().clearCache();
     sre.System.getInstance().setupEngine(
     {domain: this.domain, style: style,
@@ -80,7 +81,7 @@ export class SymbolTest extends SpeechTest {
   /**
    * @override
    */
-  public getSpeech(text) {
+  public getSpeech(text: string) {
     let aural = sre.AuralRendering.getInstance();
     let descrs = [sre.AuditoryDescription.create(
     {text: text}, {adjust: true, translate: true})];
@@ -104,9 +105,8 @@ export class SymbolTest extends SpeechTest {
   /**
    * @override
    */
-  public method(var_args) {
-    let args = Array.prototype.slice.call(arguments, 0);
-    this.type === 'unit' ? this.executeUnitTest(args[0], args[1]) :
-    this.executeCharTest(args[0], args[1]);
+  public method([arg0, arg1]: [string, string[]]) {
+    this.type === 'unit' ? this.executeUnitTest(arg0, arg1) :
+    this.executeCharTest(arg0, arg1);
   }
 }

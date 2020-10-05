@@ -1,7 +1,3 @@
-/**
- * @fileoverview Abstract class for test cases that produce example output.
- * @author volker.sorge@gmail.com (Volker Sorge)
- */
 //
 // Copyright 2014 Volker Sorge
 //
@@ -15,52 +11,52 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @fileoverview Abstract class for test cases that produce example output.
+ * @author volker.sorge@gmail.com (Volker Sorge)
+ */
+
 import * as fs from 'fs';
 import {TestError, TestPath} from '../base/test_util';
 import {AbstractJsonTest} from './abstract_test';
 import {ExamplesOutput} from './examples_output';
 
-export abstract class AbstractExamples extends AbstractJsonTest implements ExamplesOutput {
+export abstract class AbstractExamples extends AbstractJsonTest
+implements ExamplesOutput {
 
-  protected fileDirectory: string;
-  public fileName_: any;
+  /**
+   * Base directory for the output file.
+   */
+  protected fileDirectory: string = TestPath.OUTPUT;
+
+  /**
+   * The output filename associated with this example test.
+   */
+  public fileName: string;
 
   private active_: boolean = false;
 
   /**
-     * Possible file error.
-     */
+   * Possible file error.
+   */
   private fileError_: string = '';
 
   /**
-     * File extension. Default html.
-     */
-  private fileExtension_: string = 'html';
-
-  /**
-     * Sets example output file for tests.
-     */
+   * Sets example output file for tests.
+   */
   private examplesFile_: string = '';
 
   /**
-     * The output values.
-     */
-  private examples_: {[key: string]: string[]} = [];
-  constructor() {
-    super();
-    /**
-       * Base directory for the output file.
-       */
-    this.fileDirectory = TestPath.OUTPUT;
-  }
+   * The output values.
+   */
+  private examples_: {[key: string]: string[]} = {};
 
   /**
    * @override
    */
-  public setActive(file, opt_ext) {
+  public setActive(file: string, ext: string = 'html') {
     this.active_ = true;
-    this.fileName_ = file;
-    let ext = opt_ext || this.fileExtension_;
+    this.fileName = file;
     this.examplesFile_ = this.fileDirectory + file + '.' + ext;
   }
 
@@ -72,7 +68,7 @@ export abstract class AbstractExamples extends AbstractJsonTest implements Examp
       return;
     }
     try {
-      openFile(this.examplesFile_, this);
+      ExampleFiles.openFile(this.examplesFile_, this);
     } catch (err) {
       this.fileError_ = this.examplesFile_;
     }
@@ -81,7 +77,7 @@ export abstract class AbstractExamples extends AbstractJsonTest implements Examp
   /**
    * @override
    */
-  public appendExamples(type, example) {
+  public appendExamples(type: string, example: string) {
     if (this.active_ && !this.fileError_) {
       let examples = this.examples_[type];
       if (examples) {
@@ -103,15 +99,15 @@ export abstract class AbstractExamples extends AbstractJsonTest implements Examp
       try {
         for (let key in this.examples_) {
           fs.appendFileSync(
-          this.examplesFile_, key);
+            this.examplesFile_, key);
           fs.appendFileSync(
-          this.examplesFile_, this.join(this.examples_[key]));
+            this.examplesFile_, this.join(this.examples_[key]));
         }
       } catch (err) {
         this.fileError_ = 'Could not append to file ' + this.examplesFile_;
       }
     }
-    this.examples_ = [];
+    this.examples_ = {};
     this.active_ = false;
     if (this.fileError_) {
       throw new TestError('Bad Filename', this.fileError_);
@@ -156,27 +152,35 @@ export abstract class AbstractExamples extends AbstractJsonTest implements Examp
   }
 }
 
-/**
- * Opens an output file and registers it.
- * @param file The name of the output file.
- * @param obj The test object.
- */
-export function openFile(file: string, obj: AbstractExamples) {
-  if (!openFiles[file]) {
-    let fd = fs.openSync(file, 'w+');
-    descriptors[file] = fd;
-    fs.appendFileSync(fd, obj.header());
-  }
-  openFiles[file] = obj;
-}
+export namespace ExampleFiles {
 
-/**
- * Finalises and closes all open output files.
- */
-export function closeFiles() {
-  for (let file of Object.keys(openFiles)) {
-    fs.appendFileSync(
-    file, openFiles[file].footer());
-    fs.closeSync(descriptors[file]);
+  const openFiles: {[key: string]: AbstractExamples} = {};
+
+  const descriptors: {[key: string]: number} = {};
+
+  /**
+   * Opens an output file and registers it.
+   * @param file The name of the output file.
+   * @param obj The test object.
+   */
+  export function openFile(file: string, obj: AbstractExamples) {
+    if (!openFiles[file]) {
+      let fd = fs.openSync(file, 'w+');
+      descriptors[file] = fd;
+      fs.appendFileSync(fd, obj.header());
+    }
+    openFiles[file] = obj;
   }
+
+  /**
+   * Finalises and closes all open output files.
+   */
+  export function closeFiles() {
+    for (let file of Object.keys(openFiles)) {
+      fs.appendFileSync(
+        file, openFiles[file].footer());
+      fs.closeSync(descriptors[file]);
+    }
+  }
+
 }

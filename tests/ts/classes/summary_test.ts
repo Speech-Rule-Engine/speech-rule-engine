@@ -20,6 +20,7 @@
 // limitations under the License.
 
 import {SpeechTest} from './speech_test';
+import {sre} from '../base/test_external';
 
 export class SummaryTest extends SpeechTest {
 
@@ -39,19 +40,19 @@ export class SummaryTest extends SpeechTest {
   public modality = 'summary';
 
   /**
-     * Keyboard steps preceding speech computation.
-     */
+   * Keyboard steps preceding speech computation.
+   */
   public steps: string[] = null;
+
   constructor() {
     super();
-
     this.pickFields.push('steps');
   }
 
   /**
    * @override
    */
-  public getSpeech(mathMl) {
+  public getSpeech(mathMl: string) {
     if (!this.steps) {
       return super.getSpeech(mathMl);
     }
@@ -66,10 +67,10 @@ export class SummaryTest extends SpeechTest {
   /**
    * @override
    */
-  public method(var_args) {
-    let args = Array.prototype.slice.call(arguments, 0);
-    this.steps = args[3];
-    super.method(args[0], args[1], args[2]);
+  public method([arg0, arg1, arg2, arg3, ..._rest]:
+                [string, string, string, string[], string[]]) {
+    this.steps = arg3;
+    super.method(arg0, arg1, arg2);
     this.steps = null;
   }
 }

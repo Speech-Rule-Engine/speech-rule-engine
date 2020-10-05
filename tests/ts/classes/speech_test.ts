@@ -18,6 +18,7 @@
 // limitations under the License.
 
 import {AbstractExamples} from './abstract_examples';
+import {sre} from '../base/test_external';
 
 export class SpeechTest extends AbstractExamples {
 
@@ -62,8 +63,8 @@ export class SpeechTest extends AbstractExamples {
    * @return The prettier name.
    */
   private static styleMap_(style: string): string {
-    let map = {'default': 'verbose',
-    'sbrief': 'superbrief'};
+    let map: {[key: string]: string} = {'default': 'verbose',
+                                        'sbrief': 'superbrief'};
     let newStyle = map[style] || style;
     return newStyle.charAt(0).toUpperCase() + newStyle.slice(1);
   }
@@ -89,9 +90,9 @@ export class SpeechTest extends AbstractExamples {
   /**
    * @override
    */
-  public setActive(file, opt_ext) {
+  public setActive(file: string, ext?: string) {
     this.fileDirectory = this.fileDirectory + this.locale + '/';
-    super.setActive(file, opt_ext);
+    super.setActive(file, ext);
   }
 
   /**
@@ -133,8 +134,7 @@ export class SpeechTest extends AbstractExamples {
    * @param opt_rest The rest that is to be appended.
    */
   public appendRuleExample(
-  input: string, output: string, style: string, opt_rest?: string[]) {
-    let rest = opt_rest || [];
+  input: string, output: string, style: string, ...rest: string[]) {
     let key = '<h2>' + this.information + ' Locale: ' + this.locale +
     ', Style: ' +
     SpeechTest.htmlCell_(SpeechTest.styleMap_(style)) +
@@ -154,7 +154,7 @@ export class SpeechTest extends AbstractExamples {
   /**
    * @override
    */
-  public join(examples) {
+  public join(examples: string[]) {
     for (let i = 0, l = examples.length; i < l; i++) {
       examples[i] = '<tr>' +
       SpeechTest.htmlCell_(i) + examples[i] +
@@ -208,8 +208,7 @@ export class SpeechTest extends AbstractExamples {
   /**
    * @override
    */
-  public method(var_args) {
-    let args = Array.prototype.slice.call(arguments, 0);
+  public method(...args: (string | any)[]) {
     this.executeTest(args[0], args[1], args[2]);
   }
 }

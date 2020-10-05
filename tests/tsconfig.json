@@ -21,14 +21,14 @@
     ],
     "outDir": "js"
   },
-  "type": ["node"],
+  "type": ["node", "sre"],
   "include": [
     "ts/**/*"
   ],
   "exclude": [
     "dist",
     "js",
-    "expected",
+l    "expected",
     "node_modules",
     "input",
     "output",

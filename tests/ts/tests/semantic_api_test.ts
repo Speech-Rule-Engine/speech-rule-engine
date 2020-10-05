@@ -18,7 +18,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {TestExternal} from '../base/test_external';
+import {sre, xmldom} from '../base/test_external';
 import {AbstractTest} from '../classes/abstract_test';
 
 export class SemanticApiTest extends AbstractTest {
@@ -38,11 +38,11 @@ export class SemanticApiTest extends AbstractTest {
    */
   public testTreeVsXml() {
     let test =
-    function(expr) {
-      let mml = TestExternal.sre.DomUtil.parseInput('<math>' + expr + '</math>');
-      let xmls = new TestExternal.xmldom.XMLSerializer();
-      this.assert.equal(xmls.serializeToString(TestExternal.sre.Semantic.getTree(mml).xml()),
-      xmls.serializeToString(TestExternal.sre.Semantic.xmlTree(mml)));
+      function(expr: string) {
+      let mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
+      let xmls = new xmldom.XMLSerializer();
+      this.assert.equal(xmls.serializeToString(sre.Semantic.getTree(mml).xml()),
+      xmls.serializeToString(sre.Semantic.xmlTree(mml)));
     }.bind(this);
     SemanticApiTest.TEST_CASES.forEach(test);
   }
@@ -52,13 +52,13 @@ export class SemanticApiTest extends AbstractTest {
    */
   public testStringVsXml() {
     let test =
-    function(expr) {
+      function(expr: string) {
       let mstr = '<math>' + expr + '</math>';
-      let mml = TestExternal.sre.DomUtil.parseInput(mstr);
-      let xmls = new TestExternal.xmldom.XMLSerializer();
+      let mml = sre.DomUtil.parseInput(mstr);
+      let xmls = new xmldom.XMLSerializer();
       this.assert.equal(xmls.serializeToString(
-      TestExternal.sre.Semantic.getTreeFromString(mstr).xml()),
-      xmls.serializeToString(TestExternal.sre.Semantic.xmlTree(mml)));
+      sre.Semantic.getTreeFromString(mstr).xml()),
+      xmls.serializeToString(sre.Semantic.xmlTree(mml)));
     }.bind(this);
     SemanticApiTest.TEST_CASES.forEach(test);
   }
@@ -68,13 +68,13 @@ export class SemanticApiTest extends AbstractTest {
    */
   public testStringVsTree() {
     let test =
-    function(expr) {
+      function(expr: string) {
       let mstr = '<math>' + expr + '</math>';
-      let mml = TestExternal.sre.DomUtil.parseInput(mstr);
-      let xmls = new TestExternal.xmldom.XMLSerializer();
+      let mml = sre.DomUtil.parseInput(mstr);
+      let xmls = new xmldom.XMLSerializer();
       this.assert.equal(xmls.serializeToString(
-      TestExternal.sre.Semantic.getTreeFromString(mstr).xml()),
-      xmls.serializeToString(TestExternal.sre.Semantic.getTree(mml).xml()));
+      sre.Semantic.getTreeFromString(mstr).xml()),
+      xmls.serializeToString(sre.Semantic.getTree(mml).xml()));
     }.bind(this);
     SemanticApiTest.TEST_CASES.forEach(test);
   }

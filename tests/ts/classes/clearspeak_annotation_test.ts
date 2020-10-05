@@ -18,6 +18,7 @@
 // With support from the Mozilla Foundation under a MOSS grant.
 
 import {AbstractJsonTest} from './abstract_test';
+import {sre} from '../base/test_external';
 
 export class ClearspeakAnnotationTest extends AbstractJsonTest {
 
@@ -49,8 +50,7 @@ export class ClearspeakAnnotationTest extends AbstractJsonTest {
   /**
    * @override
    */
-  public method(var_args) {
-    let args = Array.prototype.slice.call(arguments, 0);
-    this.executeTest(args[0], args[1]);
+  public method([arg0, arg1, ..._rest]: [string, boolean, string[]]) {
+    this.executeTest(arg0, arg1);
   }
 }

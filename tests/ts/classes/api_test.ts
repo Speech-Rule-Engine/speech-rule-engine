@@ -20,8 +20,8 @@
 // limitations under the License.
 
 import {AbstractJsonTest} from './abstract_test';
-
 import {sre} from '../base/test_external';
+
 
 export class ApiTest extends AbstractJsonTest {
 

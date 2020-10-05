@@ -19,9 +19,9 @@
 import {AbstractTest} from '../classes/abstract_test';
 import {AbstractJsonTest} from '../classes/abstract_test';
 
-const enum Warning {NONE, WARN, ERROR}
+enum Warning {NONE, WARN, ERROR}
 
-const enum Results {
+enum Results {
   PASS = 'pass',
   FAIL = 'fail',
   WARN = 'warn'}
@@ -29,7 +29,7 @@ const enum Results {
 /**
  * Console colors.
  */
-const enum Color {
+enum Color {
   RED = '\u001B\u005B\u0033\u0031\u006D',
   GREEN = '\u001B\u005B\u0033\u0032\u006D',
   ORANGE = '\u001B\u005B\u0033\u0033\u006D',
@@ -38,47 +38,50 @@ const enum Color {
 
 export class TestRunner {
 
+  /**
+   * Warning level of the runner.
+   */
   public warn: Warning;
 
   /**
-     * Verbosity level.
-     */
+   * Verbosity level.
+   */
   public verbose: number = 2;
 
   /**
-     * Strings to be output on a single line once its end is reached.
-     */
+   * Strings to be output on a single line once its end is reached.
+   */
   public outputQueue: string[] = [];
 
   private status_: string;
 
   /**
-     * List of failed tests.
-     */
+   * List of failed tests.
+   */
   private failedTests_: string[] = [];
 
   /**
-     * List of failed tests.
-     */
+   * List of failed tests.
+   */
   private succeededTests_: string[] = [];
 
   /**
-     * List of warnings.
-     */
+   * List of warnings.
+   */
   private warningTests_: string[] = [];
 
   /**
-     * Queue of test objects.
-     */
+   * Queue of test objects.
+   */
   private testQueue_: AbstractTest[] = [];
   constructor() {
     /**
-       * Overall test status.
-       */
+     * Overall test status.
+     */
     this.status_ = Results.PASS;
     /**
-       * Warning level.
-       */
+     * Warning level.
+     */
     this.warn = Warning.WARN;
   }
 
@@ -132,7 +135,7 @@ export class TestRunner {
         this.outputEnd(2, '[WARN]', Color.ORANGE);
         this.warningTests_.push(warn);
       }
-      if (this.warn == Warning.ERROR) {
+      if (this.warn === Warning.ERROR) {
         this.status_ = Results.FAIL;
       }
     }
@@ -142,7 +145,7 @@ export class TestRunner {
         continue;
       }
       this.executeJsonTest(
-      test.name, testcase.method.bind(testcase), testcase.pick(test));
+        test.name, testcase.method.bind(testcase), testcase.pick(test));
     }
     testcase.tearDownTest();
   }
@@ -153,11 +156,12 @@ export class TestRunner {
    * @param func The actual test function.
    * @param args A list of arguments.
    */
-  public executeJsonTest(name: string, func: (...p1: string[]) => any, args: string[]) {
-    this.executeTest_(name,
-    function() {
-      func.apply(null, args);
-    });
+  public executeJsonTest(name: string,
+                         func: (...p1: string[]) => any, args: string[]) {
+    this.executeTest(name,
+                      function() {
+                        func.apply(null, args);
+                      });
   }
 
   /**
@@ -169,7 +173,7 @@ export class TestRunner {
     testcase.setUpTest();
     for (let propertyName in testcase) {
       if (propertyName.search('test') == 0) {
-        this.executeTest_(propertyName,
+        this.executeTest(propertyName,
                           (testcase as any)[propertyName].bind(testcase));
       }
     }
@@ -218,8 +222,8 @@ export class TestRunner {
   }
 
   /**
-   * Prints information to the console. This always forces a line, unless verbose
-   * is 0.
+   * Prints information to the console. This always forces a line, unless
+   * verbose is 0.
    * @param priority The output priority.
    * @param output The output string.
    * @param opt_color An optional color argument.
@@ -253,7 +257,7 @@ export class TestRunner {
     let mid = 80 - (start.length + output.length);
     output = start + (new Array(mid > 0 ? mid + 1 : 1)).join(' ') + output;
     output = this.verbose === 3 ? output + '\n' :
-    priority <= 1 ? '\r' + output + '\n' : '\r' + output;
+      priority <= 1 ? '\r' + output + '\n' : '\r' + output;
     this.output(priority, output);
     this.outputQueue = [];
   }
@@ -263,10 +267,10 @@ export class TestRunner {
    * @param name Function name.
    * @param func Function to be executed.
    */
-  private executeTest_(name: string, func: Function) {
+  private executeTest(name: string, func: Function) {
     this.outputStart('Testing ' + name);
     try {
-      func.apply();
+      func.apply(null);
     } catch (e) {
       this.outputEnd(1, '[FAIL]', Color.RED);
       this.outputLine(1, 'Actual: ' + (e.actual || ''));
@@ -279,4 +283,5 @@ export class TestRunner {
     this.succeededTests_.push(name);
     return;
   }
+
 }

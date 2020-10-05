@@ -19,6 +19,7 @@
 // limitations under the License.
 
 import {SpeechTest} from './speech_test';
+import {sre} from '../base/test_external';
 
 export class ClearspeakTest extends SpeechTest {
 

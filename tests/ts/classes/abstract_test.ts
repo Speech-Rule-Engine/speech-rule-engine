@@ -17,7 +17,7 @@
  */
 
 import {TestExternal} from '../base/test_external';
-import * as TestUtil from '../base/test_util';
+import {TestPath, TestUtil} from '../base/test_util';
 
 export abstract class AbstractTest {
   /**
@@ -40,6 +40,23 @@ export abstract class AbstractTest {
   }
 }
 
+export interface JsonTest {
+  test?: boolean,
+  name?: string,
+  input?: string,
+  expected?: string,
+  [propName: string]: any
+}
+
+export interface JsonFile {
+  factory?: string,
+  information?: string,
+  exlcude?: string[],
+  base?: string,
+  tests?: {[name: string]: JsonTest},
+  [propName: string]: any
+}
+
 /**
  * Base class for tests that load their input and expected values from json
  * input files. If a base file is provided they load their input fom a different
@@ -53,13 +70,13 @@ export abstract class AbstractJsonTest extends AbstractTest {
 
   public jsonFile: string = '';
 
-  public jsonTests: Object = null;
+  public jsonTests: JsonFile = null;
 
   public baseFile: string = '';
 
-  public baseTests: Object = {};
+  public baseTests: JsonFile = {};
 
-  public inputTests: Object[] = [];
+  public inputTests: JsonTest[] = [];
 
   public pickFields: string[] = ['input', 'expected'];
 
@@ -90,7 +107,7 @@ export abstract class AbstractJsonTest extends AbstractTest {
       this.jsonFile ? TestUtil.loadJson(this.jsonFile) : {});
     this.information = this.jsonTests.information || 'Unnamed tests';
     let file = this.jsonTests['base'];
-    this.baseFile = TestUtil.fileExists(file, TestUtil.path.INPUT);
+    this.baseFile = TestUtil.fileExists(file, TestPath.INPUT);
     this.baseTests = this.baseFile ? TestUtil.loadJson(this.baseFile) : {};
     let input = this.baseTests['tests'] || {};
     let output = this.jsonTests['tests'] || {};

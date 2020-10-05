@@ -18,8 +18,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {TestExternal} from '../base/test_external';
 import {AbstractExamples} from './abstract_examples';
+import {sre, xmldom} from '../base/test_external';
+
 
 /**
  * Base class for all the semantic tree related tests.
@@ -60,11 +61,11 @@ export class RebuildStreeTest extends SemanticTest {
    * @param expr MathML expression.
    */
   public executeTest(expr: string) {
-    let mathMl = TestExternal.sre.Enrich.prepareMmlString(expr);
-    let mml = TestExternal.sre.DomUtil.parseInput(mathMl);
-    let stree = new TestExternal.sre.SemanticTree(mml);
-    let emml = TestExternal.sre.EnrichMathml.enrich(mml, stree);
-    let reass = (new TestExternal.sre.RebuildStree(emml)).getTree();
+    let mathMl = sre.Enrich.prepareMmlString(expr);
+    let mml = sre.DomUtil.parseInput(mathMl);
+    let stree = new sre.SemanticTree(mml);
+    let emml = sre.EnrichMathml.enrich(mml, stree);
+    let reass = (new sre.RebuildStree(emml)).getTree();
     this.assert.equal(stree.toString(), reass.toString());
   }
 }
@@ -83,20 +84,20 @@ export class EnrichSpeechTest extends SemanticTest {
    */
   public setUpTest() {
     super.setUpTest();
-    TestExternal.sre.System.getInstance().setupEngine(
+    sre.System.getInstance().setupEngine(
     {domain: 'mathspeak',
     style: 'default',
-    speech: TestExternal.sre.Engine.Speech.SHALLOW});
+    speech: sre.Engine.Speech.SHALLOW});
   }
 
   /**
    * @override
    */
   public tearDownTest() {
-    TestExternal.sre.System.getInstance().setupEngine(
+    sre.System.getInstance().setupEngine(
     {domain: 'default',
     style: 'default',
-    speech: TestExternal.sre.Engine.Speech.NONE});
+    speech: sre.Engine.Speech.NONE});
     super.tearDownTest();
   }
 
@@ -105,12 +106,12 @@ export class EnrichSpeechTest extends SemanticTest {
    * equivalent to those computed for enriched expressions.
    * @override
    */
-  public executeTest(expr) {
-    let mml = TestExternal.sre.Enrich.prepareMmlString(expr);
-    let sysSpeech = TestExternal.sre.System.getInstance().toSpeech(mml);
-    let enr = TestExternal.sre.WalkerUtil.getSemanticRoot(
-    TestExternal.sre.System.getInstance().toEnriched(mml));
-    let enrSpeech = enr.getAttribute(TestExternal.sre.EnrichMathml.Attribute.SPEECH);
+  public executeTest(expr: string) {
+    let mml = sre.Enrich.prepareMmlString(expr);
+    let sysSpeech = sre.System.getInstance().toSpeech(mml);
+    let enr = sre.WalkerUtil.getSemanticRoot(
+    sre.System.getInstance().toEnriched(mml));
+    let enrSpeech = enr.getAttribute(sre.EnrichMathml.Attribute.SPEECH);
     this.assert.equal(sysSpeech, enrSpeech);
   }
 }
@@ -131,19 +132,19 @@ export class SemanticTreeTest extends SemanticTest {
    * utf-8 encoded characters.
    */
   public static setupAttributes() {
-    let attr = TestExternal.sre.SemanticAttr.getInstance();
-    attr.neutralFences.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x00A6));
-    attr.dashes.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x2015));
-    attr.neutralFences.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x2016));
-    attr.arrows.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x2192));
-    attr.sumOps.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x2211));
-    attr.additions.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x2213));
-    attr.multiplications.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x2218));
-    attr.intOps.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x222B));
-    attr.inequalities.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x2264));
-    attr.additions.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x2295));
-    let open = TestExternal.sre.SemanticUtil.numberToUnicode(0x3008);
-    let close = TestExternal.sre.SemanticUtil.numberToUnicode(0x3009);
+    let attr = sre.SemanticAttr.getInstance();
+    attr.neutralFences.unshift(sre.SemanticUtil.numberToUnicode(0x00A6));
+    attr.dashes.unshift(sre.SemanticUtil.numberToUnicode(0x2015));
+    attr.neutralFences.unshift(sre.SemanticUtil.numberToUnicode(0x2016));
+    attr.arrows.unshift(sre.SemanticUtil.numberToUnicode(0x2192));
+    attr.sumOps.unshift(sre.SemanticUtil.numberToUnicode(0x2211));
+    attr.additions.unshift(sre.SemanticUtil.numberToUnicode(0x2213));
+    attr.multiplications.unshift(sre.SemanticUtil.numberToUnicode(0x2218));
+    attr.intOps.unshift(sre.SemanticUtil.numberToUnicode(0x222B));
+    attr.inequalities.unshift(sre.SemanticUtil.numberToUnicode(0x2264));
+    attr.additions.unshift(sre.SemanticUtil.numberToUnicode(0x2295));
+    let open = sre.SemanticUtil.numberToUnicode(0x3008);
+    let close = sre.SemanticUtil.numberToUnicode(0x3009);
     attr.openClosePairs[open] = close;
     attr.leftFences.unshift(open);
     attr.rightFences.unshift(close);
@@ -160,10 +161,10 @@ export class SemanticTreeTest extends SemanticTest {
    */
   public setUpTest() {
     super.setUpTest();
-    this.annotations = TestExternal.sre.SemanticAnnotations.getInstance().annotators;
-    this.visitors = TestExternal.sre.SemanticAnnotations.getInstance().visitors;
-    TestExternal.sre.SemanticAnnotations.getInstance().annotators = {};
-    TestExternal.sre.SemanticAnnotations.getInstance().visitors = {};
+    this.annotations = sre.SemanticAnnotations.getInstance().annotators;
+    this.visitors = sre.SemanticAnnotations.getInstance().visitors;
+    sre.SemanticAnnotations.getInstance().annotators = {};
+    sre.SemanticAnnotations.getInstance().visitors = {};
     SemanticTreeTest.setupAttributes();
   }
 
@@ -171,17 +172,16 @@ export class SemanticTreeTest extends SemanticTest {
    * @override
    */
   public tearDownTest() {
-    TestExternal.sre.SemanticAnnotations.getInstance().annotators = this.annotations;
-    TestExternal.sre.SemanticAnnotations.getInstance().visitors = this.visitors;
+    sre.SemanticAnnotations.getInstance().annotators = this.annotations;
+    sre.SemanticAnnotations.getInstance().visitors = this.visitors;
     super.tearDownTest();
   }
 
   /**
    * @override
    */
-  public method(var_args) {
-    let args = Array.prototype.slice.call(arguments, 0);
-    this.executeTest(args[0], args[1], args[2]);
+  public method([arg0, arg1, arg2, ..._rest]: [string, string, boolean, string[]]) {
+    this.executeTest(arg0, arg1, arg2);
   }
 
   /**
@@ -193,11 +193,11 @@ export class SemanticTreeTest extends SemanticTest {
   public executeTest(mml: string, sml: string, opt_brief?: boolean) {
     let mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
     mml + '</math>';
-    let node = TestExternal.sre.DomUtil.parseInput(mathMl);
-    let sxml = (new TestExternal.sre.SemanticTree(node)).xml(opt_brief);
-    let dp = new TestExternal.xmldom.DOMParser();
+    let node = sre.DomUtil.parseInput(mathMl);
+    let sxml = (new sre.SemanticTree(node)).xml(opt_brief);
+    let dp = new xmldom.DOMParser();
     let xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
-    let xmls = new TestExternal.xmldom.XMLSerializer();
+    let xmls = new xmldom.XMLSerializer();
     this.assert.equal(xmls.serializeToString(sxml), xmls.serializeToString(xml));
   }
 }
@@ -206,7 +206,7 @@ export class SemanticTreeTest extends SemanticTest {
  * Tests for enriched MathML expressions.
  */
 export class EnrichMathmlTest extends SemanticTest {
-  public attrBlacklist = [];
+  public attrBlacklist: string[] = [];
   constructor() {
     super();
     this.setActive('EnrichExamples', 'json');
@@ -231,14 +231,14 @@ export class EnrichMathmlTest extends SemanticTest {
    * @param smml MathML snippet for the semantic information.
    */
   public executeTest(mml: string, smml: string) {
-    let mathMl = TestExternal.sre.Enrich.prepareMmlString(mml);
-    let node = TestExternal.sre.Enrich.semanticMathmlSync(mathMl);
-    let dp = new TestExternal.xmldom.DOMParser();
+    let mathMl = sre.Enrich.prepareMmlString(mml);
+    let node = sre.Enrich.semanticMathmlSync(mathMl);
+    let dp = new xmldom.DOMParser();
     let xml = smml ? dp.parseFromString(smml) : '';
-    let xmls = new TestExternal.xmldom.XMLSerializer();
+    let xmls = new xmldom.XMLSerializer();
     this.customizeXml(node);
     this.appendExamples('', mml);
-    let cleaned = TestExternal.sre.EnrichMathml.removeAttributePrefix(
+    let cleaned = sre.EnrichMathml.removeAttributePrefix(
     xmls.serializeToString(node));
     this.assert.equal(cleaned, xmls.serializeToString(xml));
   }
@@ -251,7 +251,7 @@ export class EnrichMathmlTest extends SemanticTest {
     this.attrBlacklist.forEach(
     function(attr) {
       xml.removeAttribute(attr);
-      let removes = TestExternal.sre.DomUtil.querySelectorAllByAttr(xml, attr);
+      let removes = sre.DomUtil.querySelectorAllByAttr(xml, attr);
       if (xml.hasAttribute(attr)) {
         removes.push(xml);
       }

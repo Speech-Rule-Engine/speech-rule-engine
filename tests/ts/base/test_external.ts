@@ -43,10 +43,6 @@ export class TestExternal {
 //  * Filesystem library.
 //  */
 // export const fs = require('fs');
-/**
- * Assert library.
- */
-TestExternal.assert = TestExternal.require('assert');
 
 /**
  * Path to JSON files.
@@ -56,6 +52,6 @@ TestExternal.path =  './tests/';
 /**
  * Xmldom library.
  */
-TestExternal.xmldom = TestExternal.require('xmldom-sre');
+export const xmldom = require('xmldom-sre');
 
 export const sre = require('../lib/sre.js').sre;

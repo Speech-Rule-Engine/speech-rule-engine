@@ -20,6 +20,7 @@
 // limitations under the License.
 
 import {SpeechTest} from './speech_test';
+import {sre} from '../base/test_external';
 
 export class CollapseTest extends SpeechTest {
 
@@ -36,11 +37,10 @@ export class CollapseTest extends SpeechTest {
   /**
    * @override
    */
-  public executeTest(
-  mml, answer, opt_style) {
+  public executeTest(mml: string, answer: string, style?: string) {
     mml = '<maction><mtext>action</mtext><mrow data-semantic-id="A">' +
     mml + '</mrow></maction>';
-    super.executeTest(mml, answer, opt_style);
+    super.executeTest(mml, answer, style);
   }
 
   /**
@@ -59,7 +59,7 @@ export class CollapseTest extends SpeechTest {
   /**
    * @override
    */
-  public getSpeech(mathMl) {
+  public getSpeech(mathMl: string) {
     let mml = sre.DomUtil.parseInput(mathMl);
     let stree = sre.Semantic.getTree(mml);
     let xml = stree.xml();

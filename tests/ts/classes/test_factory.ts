@@ -19,9 +19,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {AbstractJsonTest} from './abstract_test';
+import {AbstractJsonTest, JsonFile} from './abstract_test';
 
-import * as TestUtil from '../base/test_util';
+import {TestPath, TestUtil, TestError} from '../base/test_util';
 import {ApiTest} from './api_test';
 import {ClearspeakAnnotationTest} from './clearspeak_annotation_test';
 import {ClearspeakTest} from './clearspeak_test';
@@ -35,20 +35,20 @@ import {SpeechTest} from './speech_test';
 import {SummaryTest} from './summary_test';
 import {SymbolTest} from './symbol_test';
 
-export const map: {[key: any]: () => any} = {
-'api': ApiTest,
-'clearspeak': ClearspeakTest,
-'clearspeakAnnotation': ClearspeakAnnotationTest,
-'collapse': CollapseTest,
-'enrichMathml': EnrichMathmlTest,
-'enrichSpeech': EnrichSpeechTest,
-'prefix': PrefixTest,
-'rebuild': RebuildStreeTest,
-'semantic': sretest.SemanticTest,
-'speech': SpeechTest,
-'stree': SemanticTreeTest,
-'summary': SummaryTest,
-'symbol': SymbolTest};
+const map = new Map<string, any>([
+  ['api', ApiTest],
+  ['clearspeak', ClearspeakTest],
+  ['clearspeakAnnotation', ClearspeakAnnotationTest],
+  ['collapse', CollapseTest],
+  ['enrichMathml', EnrichMathmlTest],
+  ['enrichSpeech', EnrichSpeechTest],
+  ['prefix', PrefixTest],
+  ['rebuild', RebuildStreeTest],
+  ['speech', SpeechTest],
+  ['stree', SemanticTreeTest],
+  ['summary', SummaryTest],
+  ['symbol', SymbolTest]
+]);
 
 /**
  * Retrieves and instantiates a test object for a given input json file.
@@ -56,12 +56,12 @@ export const map: {[key: any]: () => any} = {
  * @return The JSON test.
  */
 export function get(file: string): AbstractJsonTest {
-  let filename = TestUtil.fileExists(file, TestUtil.path.EXPECTED);
-  let json = TestUtil.loadJson(filename);
-  let factory = json['factory'];
-  let constructor = map[factory];
+  let filename = TestUtil.fileExists(file, TestPath.EXPECTED);
+  let json = TestUtil.loadJson(filename) as JsonFile;
+  let factory = json['factory'] as string;
+  let constructor = map.get(factory);
   if (!constructor) {
-    throw new TestUtil.Error('Bad factory name', file);
+    throw new TestError('Bad factory name', file);
   }
   let obj = new constructor();
   obj.jsonFile = file;

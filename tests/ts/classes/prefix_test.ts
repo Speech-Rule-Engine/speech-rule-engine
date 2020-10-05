@@ -20,6 +20,7 @@
 // limitations under the License.
 
 import {SpeechTest} from './speech_test';
+import {sre} from '../base/test_external';
 
 export class PrefixTest extends SpeechTest {
 
@@ -45,21 +46,20 @@ export class PrefixTest extends SpeechTest {
   /**
    * @override
    */
-  public method(var_args) {
-    let args = Array.prototype.slice.call(arguments, 0);
-    this.id = args[2];
+  public method(...args: string[]) {
+    this.id = parseInt(args[2], 10);
     super.method(args[0], args[1]);
   }
 
   /**
    * @override
    */
-  public getSpeech(mml) {
+  public getSpeech(mml: string) {
     let stree = sre.Semantic.getTreeFromString(mml);
     let node = stree.root.querySelectorAll(
-    function(x) {
-      return x.id === this.id;
-    }.bind(this))[0];
+      function(x: Element) {
+        return x.id === this.id;
+      }.bind(this))[0];
     this.subExpr = node.mathmlTree;
     if (!node) {
       this.assert.fail();
@@ -72,8 +72,8 @@ export class PrefixTest extends SpeechTest {
    * @override
    */
   public appendRuleExample(
-  input, output, style, rest) {
+    input: string, output: string, style: string, ..._rest: string[]) {
     let sub = this.subExpr ? '<math>' + this.subExpr.toString() + '</math>' : '';
-    super.appendRuleExample(input, output, style, [sub]);
+    super.appendRuleExample(input, output, style, sub);
   }
 }

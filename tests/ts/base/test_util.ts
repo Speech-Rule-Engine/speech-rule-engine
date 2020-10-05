@@ -36,6 +36,10 @@ export class TestError extends Error {
   }
 }
 
+
+
+export namespace TestUtil {
+
 /**
  * Loads and parses a JSON file.
  * @param file The filename.
@@ -134,4 +138,6 @@ export function combineTests(input: {[key: string]: {[key: string]: string | boo
     results.push(json);
   }
   return [results, warn];
+}
+
 }
