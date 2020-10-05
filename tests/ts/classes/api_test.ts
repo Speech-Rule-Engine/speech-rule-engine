@@ -19,8 +19,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {AbstractJsonTest} from './abstract_test';
 import {sre} from '../base/test_external';
+import {AbstractJsonTest} from './abstract_test';
 
 export class ApiTest extends AbstractJsonTest {
 

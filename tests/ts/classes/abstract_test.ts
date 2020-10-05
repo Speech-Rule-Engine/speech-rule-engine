@@ -16,8 +16,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {TestPath, TestUtil} from '../base/test_util';
 import * as assert from 'assert';
+import {TestPath, TestUtil} from '../base/test_util';
 
 export abstract class AbstractTest {
   /**
@@ -41,20 +41,20 @@ export abstract class AbstractTest {
 }
 
 export interface JsonTest {
-  test?: boolean,
-  name?: string,
-  input?: string,
-  expected?: string,
-  [propName: string]: any
+  test?: boolean;
+  name?: string;
+  input?: string;
+  expected?: string;
+  [propName: string]: any;
 }
 
 export interface JsonFile {
-  factory?: string,
-  information?: string,
-  exlcude?: string[],
-  base?: string,
-  tests?: {[name: string]: JsonTest},
-  [propName: string]: any
+  factory?: string;
+  information?: string;
+  exlcude?: string[];
+  base?: string;
+  tests?: {[name: string]: JsonTest};
+  [propName: string]: any;
 }
 
 /**

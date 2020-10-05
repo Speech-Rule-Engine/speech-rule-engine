@@ -27,6 +27,11 @@ import {TestPath} from './test_util';
 
 export class Tests {
 
+  public static environmentVars: string[] = [
+    'FILE', 'FILES', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE', 'WARN'];
+
+  public static allTests: any[] = BaseTests.testList;
+
   /**
    * List of tests to run. Initially empty.
    */
@@ -39,11 +44,6 @@ export class Tests {
     JSON: true,
     VERBOSE: 2,
     WARN: 1};
-
-  public static environmentVars: string[] = [
-    'FILE', 'FILES', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE', 'WARN'];
-
-  public static allTests: any[] = BaseTests.testList;
   public runner: TestRunner = new TestRunner();
 
   /**

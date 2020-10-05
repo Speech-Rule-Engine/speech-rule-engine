@@ -17,8 +17,8 @@
 
 // With support from the Mozilla Foundation under a MOSS grant.
 
-import {AbstractJsonTest} from './abstract_test';
 import {sre} from '../base/test_external';
+import {AbstractJsonTest} from './abstract_test';
 
 export class ClearspeakAnnotationTest extends AbstractJsonTest {
 

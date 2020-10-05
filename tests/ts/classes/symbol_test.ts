@@ -15,8 +15,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {SpeechTest} from './speech_test';
 import {sre} from '../base/test_external';
+import {SpeechTest} from './speech_test';
 
 export class SymbolTest extends SpeechTest {
 

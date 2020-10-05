@@ -15,8 +15,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {AbstractTest} from '../classes/abstract_test';
 import {sre} from '../base/test_external';
+import {AbstractTest} from '../classes/abstract_test';
 
 export class DomTest extends AbstractTest {
 

@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {AbstractTest} from '../classes/abstract_test';
 import {sre} from '../base/test_external';
+import {AbstractTest} from '../classes/abstract_test';
 
 export class MarkupTest extends AbstractTest {
 
@@ -46,19 +46,6 @@ export class MarkupTest extends AbstractTest {
   public tearDownTest() {
     sre.System.getInstance().setupEngine(
     {markup: sre.Engine.Markup.NONE});
-  }
-
-  /**
-   * Executes single markup tests.
-   * @param expr The input expression.
-   * @param result The expected result.
-   * @param markup The markup to test.
-   */
-  private executeTest(expr: string, result: string, markup: string) {
-    sre.Engine.getInstance().markup = markup;
-    let descrs = sre.System.getInstance().toDescription(expr);
-    let output = sre.AuralRendering.getInstance().markup(descrs);
-    this.assert.equal(output, result);
   }
 
   /**
@@ -157,6 +144,19 @@ export class MarkupTest extends AbstractTest {
     '<prosody rate="+25%"> 2 a </prosody> <break time="250ms"/>',
     sre.Engine.Markup.SSML);
     sre.System.getInstance().setupEngine({domain: 'default', style: 'default'});
+  }
+
+  /**
+   * Executes single markup tests.
+   * @param expr The input expression.
+   * @param result The expected result.
+   * @param markup The markup to test.
+   */
+  private executeTest(expr: string, result: string, markup: string) {
+    sre.Engine.getInstance().markup = markup;
+    let descrs = sre.System.getInstance().toDescription(expr);
+    let output = sre.AuralRendering.getInstance().markup(descrs);
+    this.assert.equal(output, result);
   }
 }
 

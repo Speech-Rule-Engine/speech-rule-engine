@@ -38,8 +38,6 @@ export class TestError extends Error {
   }
 }
 
-
-
 export namespace TestUtil {
 
 /**

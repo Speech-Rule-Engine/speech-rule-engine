@@ -20,8 +20,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {AbstractTest} from '../classes/abstract_test';
 import {sre} from '../base/test_external';
+import {AbstractTest} from '../classes/abstract_test';
 import * as sret from '../typings/sre';
 
 export class WalkerTest extends AbstractTest {

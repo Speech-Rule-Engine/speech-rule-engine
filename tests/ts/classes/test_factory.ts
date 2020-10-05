@@ -21,7 +21,7 @@
 
 import {AbstractJsonTest, JsonFile} from './abstract_test';
 
-import {TestPath, TestUtil, TestError} from '../base/test_util';
+import {TestError, TestPath, TestUtil} from '../base/test_util';
 import {ApiTest} from './api_test';
 import {ClearspeakAnnotationTest} from './clearspeak_annotation_test';
 import {ClearspeakTest} from './clearspeak_test';
