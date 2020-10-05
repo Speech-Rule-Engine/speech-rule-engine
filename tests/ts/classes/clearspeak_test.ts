@@ -1,7 +1,3 @@
-/**
- * @fileoverview Abstract class for clearspeak rule tests.
- * @author Volker.Sorge@gmail.com (Volker Sorge)
- */
 //
 // Copyright 2019 Volker Sorge
 //
@@ -18,14 +14,19 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @fileoverview Abstract class for clearspeak rule tests.
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
+ */
+
 import {sre} from '../base/test_external';
 import {SpeechTest} from './speech_test';
 
 export class ClearspeakTest extends SpeechTest {
 
   /**
-     * @override
-     */
+   * @override
+   */
   public domain = 'clearspeak';
   constructor() {
     super();
@@ -37,7 +38,7 @@ export class ClearspeakTest extends SpeechTest {
   public setUpTest() {
     super.setUpTest();
     sre.System.getInstance().setupEngine(
-    {markup: sre.Engine.Markup.PUNCTUATION});
+      {markup: sre.Engine.Markup.PUNCTUATION});
   }
 
   /**
@@ -45,7 +46,7 @@ export class ClearspeakTest extends SpeechTest {
    */
   public tearDownTest() {
     sre.System.getInstance().setupEngine(
-    {markup: sre.Engine.Markup.NONE});
+      {markup: sre.Engine.Markup.NONE});
     super.tearDownTest();
   }
 }

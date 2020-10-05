@@ -1,8 +1,3 @@
-/**
- * @fileoverview Testcases for prefix speech generation in MathML enrichment.
- *
- * @author v.sorge@mathjax.org (Volker Sorge)
- */
 //
 // Copyright (c) 2016 Volker Sorge
 //
@@ -19,27 +14,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @fileoverview Testcases for prefix speech generation in MathML enrichment.
+ *
+ * @author v.sorge@mathjax.org (Volker Sorge)
+ */
+
 import {sre} from '../base/test_external';
 import {SpeechTest} from './speech_test';
 
 export class PrefixTest extends SpeechTest {
 
   /**
-     * @override
-     */
+   * @override
+   */
   public information = 'Prefix rule tests.';
 
   /**
-     * @override
-     */
+   * @override
+   */
   public modality = 'prefix';
 
   public id: number = 0;
 
   public subExpr: Element = null;
+
   constructor() {
     super();
-
     this.pickFields[2] = 'id';
   }
 
@@ -73,7 +74,8 @@ export class PrefixTest extends SpeechTest {
    */
   public appendRuleExample(
     input: string, output: string, style: string, ..._rest: string[]) {
-    let sub = this.subExpr ? '<math>' + this.subExpr.toString() + '</math>' : '';
+    let sub = this.subExpr ?
+      '<math>' + this.subExpr.toString() + '</math>' : '';
     super.appendRuleExample(input, output, style, sub);
   }
 }

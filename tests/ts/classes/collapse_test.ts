@@ -1,8 +1,3 @@
-/**
- * @fileoverview Testcases for collapse speech generation.
- *
- * @author v.sorge@mathjax.org (Volker Sorge)
- */
 //
 // Copyright (c) 2019 Volker Sorge
 //
@@ -19,27 +14,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @fileoverview Testcases for collapse speech generation.
+ *
+ * @author v.sorge@mathjax.org (Volker Sorge)
+ */
+
 import {sre} from '../base/test_external';
 import {SpeechTest} from './speech_test';
 
 export class CollapseTest extends SpeechTest {
 
   /**
-     * @override
-     */
+   * @override
+   */
   public information = 'Collapse Rule tests.';
 
+  /**
+   * @override
+   */
   public domain = 'mathspeak';
-  constructor() {
-    super();
-  }
 
   /**
    * @override
    */
   public executeTest(mml: string, answer: string, style?: string) {
     mml = '<maction><mtext>action</mtext><mrow data-semantic-id="A">' +
-    mml + '</mrow></maction>';
+      mml + '</mrow></maction>';
     super.executeTest(mml, answer, style);
   }
 
@@ -49,11 +50,11 @@ export class CollapseTest extends SpeechTest {
   public header() {
     let header = super.header();
     let script = 'var toggleAll = function() {' +
-    'var actions = document.getElementsByClassName(\'maction\');' +
-    ' for (var i = 0, action; action = actions[i]; i++) {' +
-    '  action.onclick(); } }';
+      'var actions = document.getElementsByClassName(\'maction\');' +
+      ' for (var i = 0, action; action = actions[i]; i++) {' +
+      '  action.onclick(); } }';
     return header + '<script type="text/javascript">' + script +
-    '</script><button onclick="toggleAll()">Toggle All</button>\n';
+      '</script><button onclick="toggleAll()">Toggle All</button>\n';
   }
 
   /**

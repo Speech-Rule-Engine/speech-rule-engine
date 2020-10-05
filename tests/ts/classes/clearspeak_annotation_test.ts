@@ -1,7 +1,3 @@
-/**
- * @fileoverview Test simple annotations for Clearspeak.
- * @author Volker.Sorge@gmail.com (Volker Sorge)
- */
 //
 // Copyright 2017 Volker Sorge
 //
@@ -17,21 +13,25 @@
 
 // With support from the Mozilla Foundation under a MOSS grant.
 
+/**
+ * @fileoverview Test simple annotations for Clearspeak.
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
+ */
+
 import {sre} from '../base/test_external';
 import {AbstractJsonTest} from './abstract_test';
 
 export class ClearspeakAnnotationTest extends AbstractJsonTest {
 
   /**
-     * @override
-     */
+   * @override
+   */
   public information = 'Clearspeak Simple Expression tests.';
 
-  public annotator: any;
-  constructor() {
-    super();
-    this.annotator = sre.ClearspeakUtil.simpleExpression();
-  }
+  /**
+   * The clearspeak annotator to test.
+   */
+  public annotator: any = sre.ClearspeakUtil.simpleExpression();
 
   /**
    * Tests simple annotator for Clearspeak.
@@ -44,7 +44,7 @@ export class ClearspeakAnnotationTest extends AbstractJsonTest {
     let semantic = sre.Semantic.getTreeFromString(mathMl);
     this.annotator.annotate(semantic.root);
     this.assert.equal(semantic.root.hasAnnotation('clearspeak', 'simple'),
-    expected);
+                      expected);
   }
 
   /**

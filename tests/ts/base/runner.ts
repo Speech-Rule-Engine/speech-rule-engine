@@ -41,7 +41,7 @@ export class TestRunner {
   /**
    * Warning level of the runner.
    */
-  public warn: Warning;
+  public warn: Warning = Warning.WARN;
 
   /**
    * Verbosity level.
@@ -53,7 +53,10 @@ export class TestRunner {
    */
   public outputQueue: string[] = [];
 
-  private status_: string;
+  /**
+   * Overall test status.
+   */
+  private status_: string = Results.PASS;
 
   /**
    * List of failed tests.
@@ -74,23 +77,13 @@ export class TestRunner {
    * Queue of test objects.
    */
   private testQueue_: AbstractTest[] = [];
-  constructor() {
-    /**
-     * Overall test status.
-     */
-    this.status_ = Results.PASS;
-    /**
-     * Warning level.
-     */
-    this.warn = Warning.WARN;
-  }
 
   /**
    * Success status of the runner.
    * @return True if tests have passed.
    */
   public success(): boolean {
-    return this.status_ == Results.PASS;
+    return this.status_ === Results.PASS;
   }
 
   /**
@@ -158,10 +151,7 @@ export class TestRunner {
    */
   public executeJsonTest(name: string,
                          func: (...p1: string[]) => any, args: string[]) {
-    this.executeTest(name,
-                      function() {
-                        func.apply(null, args);
-                      });
+    this.executeTest(name, () => func.apply(null, args));
   }
 
   /**
@@ -172,7 +162,7 @@ export class TestRunner {
     this.outputLine(1, 'Running ' + testcase.information);
     testcase.setUpTest();
     for (let propertyName in testcase) {
-      if (propertyName.search('test') == 0) {
+      if (propertyName.search('test') === 0) {
         this.executeTest(propertyName,
                           (testcase as any)[propertyName].bind(testcase));
       }

@@ -20,11 +20,15 @@ import * as assert from 'assert';
 import {TestPath, TestUtil} from '../base/test_util';
 
 export abstract class AbstractTest {
+
   /**
    * Basic information on the test case.
    */
   public information: string = '';
 
+  /**
+   * The assertion package.
+   */
   public assert: any = assert;
 
   /**
@@ -68,35 +72,46 @@ export interface JsonFile {
  */
 export abstract class AbstractJsonTest extends AbstractTest {
 
-  public jsonFile: string = '';
-
+  /**
+   * The Json for the input from an expected file.
+   */
   public jsonTests: JsonFile = null;
 
-  public baseFile: string = '';
-
+  /**
+   * The Json for the input from a base file.
+   */
   public baseTests: JsonFile = {};
 
+  /**
+   * The actual tests to run.
+   */
   public inputTests: JsonTest[] = [];
 
+  /**
+   * The elements to be picked from the test JSON.
+   */
   public pickFields: string[] = ['input', 'expected'];
 
+  /**
+   * Tests with warning.
+   */
   public warn: string[] = [];
-  public information: any;
-  constructor() {
-    super();
-  }
+
+  /**
+   * An information string.
+   */
+  public information: string = '';
+
+  private jsonFile: string = '';
+  private baseFile: string = '';
 
   /**
    * Picks arguments from a JSON element.
    * @param json The JSON element.
-   // TODO: Need to specify that further!
    * @return The array of arguments for the test method.
    */
-  public pick(json: {[key: string]: any}): string[] {
-    return this.pickFields.map(
-      function(x) {
-        return json[x];
-      });
+  public pick(json: JsonTest): string[] {
+    return this.pickFields.map(x => json[x]);
   }
 
   /**

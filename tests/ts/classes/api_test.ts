@@ -1,8 +1,3 @@
-/**
- * @fileoverview Tests of API functions.
- *
- * @author volker.sorge@gmail.com (Volker Sorge)
- */
 //
 // Copyright 2016 Volker Sorge
 //
@@ -19,29 +14,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @fileoverview Tests of API functions.
+ *
+ * @author volker.sorge@gmail.com (Volker Sorge)
+ */
+
 import {sre} from '../base/test_external';
+import * as sret from '../typings/sre';
 import {AbstractJsonTest} from './abstract_test';
 
 export class ApiTest extends AbstractJsonTest {
 
-  public static SETUP: any;
+  public static SETUP: {[key: string]: string} = {
+    locale: 'en', domain: 'mathspeak', style: 'default',
+    modality: 'speech', speech: sre.Engine.Speech.NONE
+  };
 
   public static QUADRATIC: string;
 
   public information = 'API function test.';
 
-  // TODO: Type
-  // public annotations: {[key: string]: sre.SemanticAnnotator} = null;
-  public annotations: {[key: string]: any} = null;
+  public annotations: {[key: string]: sret.SemanticAnnotator} = null;
 
-  // public visitors: {[key: string]: sre.SemanticVisitor} = null;
-  public visitors: {[key: string]: any} = null;
+  public visitors: {[key: string]: sret.SemanticVisitor} = null;
 
   public pickFields = ['type', 'input', 'expected',
-  'setup', 'json', 'move'];
-  constructor() {
-    super();
-  }
+                       'setup', 'json', 'move'];
 
   /**
    * @override
@@ -62,7 +61,11 @@ export class ApiTest extends AbstractJsonTest {
     sre.SemanticAnnotations.getInstance().visitors = this.visitors;
   }
 
-  public setupEngine(feature: any) {
+  /**
+   * Sets up SRE.
+   * @param feature The feature vector for the engine.
+   */
+  public setupEngine(feature: {[key: string]: string}) {
     sre.System.getInstance().setupEngine(feature || ApiTest.SETUP);
   }
 
@@ -75,11 +78,14 @@ export class ApiTest extends AbstractJsonTest {
    * @param json Json output expected?
    * @param move Is this a move with some keyboard input?
    */
-  public executeTest(func: string, expr: string, result: string | null, feature: Object, json: boolean, move: boolean) {
+  public executeTest(func: string, expr: string, result: string | null,
+                     feature: {[key: string]: string},
+                     json: boolean, move: boolean) {
     this.setupEngine(feature);
     expr = move ? sre.EventUtil.KeyCode[expr] : expr || ApiTest.QUADRATIC;
     let output = sre.System.getInstance()[func](expr);
-    output = output ? json ? JSON.stringify(output) : output.toString() : output;
+    output = output ?
+      (json ? JSON.stringify(output) : output.toString()) : output;
     this.assert.equal(output, result);
   }
 
@@ -92,37 +98,33 @@ export class ApiTest extends AbstractJsonTest {
 
 }
 
-ApiTest.SETUP = {
-locale: 'en', domain: 'mathspeak', style: 'default',
-modality: 'speech', speech: sre.Engine.Speech.NONE};
-
 /**
  * The quadratic equation as a MathML string. By default tests are run against
  * the quadratic equation unless a different input is provided.
  */
 ApiTest.QUADRATIC =
-'<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
-'<mi>x</mi>' +
-'<mo>=</mo>' +
-'<mfrac>' +
-'<mrow>' +
-'<mo>&#x2212;<!-- − --></mo>' +
-'<mi>b</mi>' +
-'<mo>&#x00B1;<!-- ± --></mo>' +
-'<msqrt>' +
-'<msup>' +
-'<mi>b</mi>' +
-'<mn>2</mn>' +
-'</msup>' +
-'<mo>&#x2212;<!-- − --></mo>' +
-'<mn>4</mn>' +
-'<mi>a</mi>' +
-'<mi>c</mi>' +
-'</msqrt>' +
-'</mrow>' +
-'<mrow>' +
-'<mn>2</mn>' +
-'<mi>a</mi>' +
-'</mrow>' +
-'</mfrac>' +
-'</math>';
+  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+  '<mi>x</mi>' +
+  '<mo>=</mo>' +
+  '<mfrac>' +
+  '<mrow>' +
+  '<mo>&#x2212;<!-- − --></mo>' +
+  '<mi>b</mi>' +
+  '<mo>&#x00B1;<!-- ± --></mo>' +
+  '<msqrt>' +
+  '<msup>' +
+  '<mi>b</mi>' +
+  '<mn>2</mn>' +
+  '</msup>' +
+  '<mo>&#x2212;<!-- − --></mo>' +
+  '<mn>4</mn>' +
+  '<mi>a</mi>' +
+  '<mi>c</mi>' +
+  '</msqrt>' +
+  '</mrow>' +
+  '<mrow>' +
+  '<mn>2</mn>' +
+  '<mi>a</mi>' +
+  '</mrow>' +
+  '</mfrac>' +
+  '</math>';

@@ -141,3 +141,7 @@ export class ColorPicker {
   constructor(color: colorType);
   rgba(): colorString;
 }
+
+export class SemanticAnnotator {}
+
+export class SemanticVisitor {}

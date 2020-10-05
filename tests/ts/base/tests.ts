@@ -27,9 +27,15 @@ import {TestPath} from './test_util';
 
 export class Tests {
 
+  /**
+   * List of all environment variables that can be set.
+   */
   public static environmentVars: string[] = [
     'FILE', 'FILES', 'LOCALE', 'BLOCK', 'JSON', 'VERBOSE', 'WARN'];
 
+  /**
+   * List of all available tests.
+   */
   public static allTests: any[] = BaseTests.testList;
 
   /**
@@ -43,7 +49,12 @@ export class Tests {
   public environment: {[key: string]: number | boolean | string[]} = {
     JSON: true,
     VERBOSE: 2,
-    WARN: 1};
+    WARN: 1
+  };
+
+  /**
+   * The test runner of this test instance.
+   */
   public runner: TestRunner = new TestRunner();
 
   /**
@@ -69,9 +80,7 @@ export class Tests {
     if (fs.lstatSync(file).isDirectory()) {
       let files = fs.readdirSync(file);
       files.forEach(
-        function(x) {
-          Tests.readDir_(path ? path + '/' + x : x, result);
-        });
+        x => Tests.readDir_(path ? path + '/' + x : x, result));
       return;
     }
     if (path.match(/\.json$/)) {
@@ -83,7 +92,7 @@ export class Tests {
    * @constructor
    */
   constructor() {
-    Tests.environmentVars.forEach(this.getEnvironment);
+    Tests.environmentVars.forEach(x => this.getEnvironment(x));
     let file = this.environment['FILE'] as string[];
     let locale = this.environment['LOCALE'] as string[];
     if (file) {

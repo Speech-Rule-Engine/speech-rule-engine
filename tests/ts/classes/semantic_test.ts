@@ -1,7 +1,3 @@
-/**
- * @fileoverview Testcases for the semantic tree.
- * @author sorge@google.com (Volker Sorge)
- */
 //
 // Copyright 2013 Google Inc.
 //
@@ -17,6 +13,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+/**
+ * @fileoverview Testcases for the semantic tree.
+ * @author sorge@google.com (Volker Sorge)
+ */
 
 import {sre, xmldom} from '../base/test_external';
 import {AbstractExamples} from './abstract_examples';
@@ -48,8 +49,8 @@ export abstract class SemanticTest extends AbstractExamples {
 export class RebuildStreeTest extends SemanticTest {
 
   /**
-     * @override
-     */
+   * @override
+   */
   public pickFields = ['input'];
   constructor() {
     super();
@@ -84,9 +85,9 @@ export class EnrichSpeechTest extends SemanticTest {
   public setUpTest() {
     super.setUpTest();
     sre.System.getInstance().setupEngine(
-    {domain: 'mathspeak',
-    style: 'default',
-    speech: sre.Engine.Speech.SHALLOW});
+      {domain: 'mathspeak',
+       style: 'default',
+       speech: sre.Engine.Speech.SHALLOW});
   }
 
   /**
@@ -94,9 +95,9 @@ export class EnrichSpeechTest extends SemanticTest {
    */
   public tearDownTest() {
     sre.System.getInstance().setupEngine(
-    {domain: 'default',
-    style: 'default',
-    speech: sre.Engine.Speech.NONE});
+      {domain: 'default',
+       style: 'default',
+       speech: sre.Engine.Speech.NONE});
     super.tearDownTest();
   }
 
@@ -109,7 +110,7 @@ export class EnrichSpeechTest extends SemanticTest {
     let mml = sre.Enrich.prepareMmlString(expr);
     let sysSpeech = sre.System.getInstance().toSpeech(mml);
     let enr = sre.WalkerUtil.getSemanticRoot(
-    sre.System.getInstance().toEnriched(mml));
+      sre.System.getInstance().toEnriched(mml));
     let enrSpeech = enr.getAttribute(sre.EnrichMathml.Attribute.SPEECH);
     this.assert.equal(sysSpeech, enrSpeech);
   }
@@ -194,7 +195,7 @@ export class SemanticTreeTest extends SemanticTest {
    */
   public executeTest(mml: string, sml: string, opt_brief?: boolean) {
     let mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
-    mml + '</math>';
+      mml + '</math>';
     let node = sre.DomUtil.parseInput(mathMl);
     let sxml = (new sre.SemanticTree(node)).xml(opt_brief);
     let dp = new xmldom.DOMParser();
@@ -208,6 +209,7 @@ export class SemanticTreeTest extends SemanticTest {
  * Tests for enriched MathML expressions.
  */
 export class EnrichMathmlTest extends SemanticTest {
+
   public attrBlacklist: string[] = [];
   constructor() {
     super();
@@ -220,11 +222,11 @@ export class EnrichMathmlTest extends SemanticTest {
   public setUpTest() {
     super.setUpTest();
     this.attrBlacklist = [
-    'data-semantic-annotation',
-    'data-semantic-font',
-    'data-semantic-embellished',
-    'data-semantic-fencepointer',
-    'data-semantic-structure'];
+      'data-semantic-annotation',
+      'data-semantic-font',
+      'data-semantic-embellished',
+      'data-semantic-fencepointer',
+      'data-semantic-structure'];
   }
 
   /**
@@ -241,7 +243,7 @@ export class EnrichMathmlTest extends SemanticTest {
     this.customizeXml(node);
     this.appendExamples('', mml);
     let cleaned = sre.EnrichMathml.removeAttributePrefix(
-    xmls.serializeToString(node));
+      xmls.serializeToString(node));
     this.assert.equal(cleaned, xmls.serializeToString(xml));
   }
 
@@ -251,16 +253,16 @@ export class EnrichMathmlTest extends SemanticTest {
    */
   public customizeXml(xml: Element) {
     this.attrBlacklist.forEach(
-    function(attr) {
-      xml.removeAttribute(attr);
-      let removes = sre.DomUtil.querySelectorAllByAttr(xml, attr);
-      if (xml.hasAttribute(attr)) {
-        removes.push(xml);
-      }
-      removes.forEach(
-        function(node: Element) {
-        node.removeAttribute(attr);
+      function(attr) {
+        xml.removeAttribute(attr);
+        let removes = sre.DomUtil.querySelectorAllByAttr(xml, attr);
+        if (xml.hasAttribute(attr)) {
+          removes.push(xml);
+        }
+        removes.forEach(
+          function(node: Element) {
+            node.removeAttribute(attr);
+          });
       });
-    });
   }
 }
