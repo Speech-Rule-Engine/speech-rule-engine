@@ -21,8 +21,8 @@
  */
 
 import {AbstractTest} from '../classes/abstract_test';
-import {sre} from '../base/test_external';
-// import * as sre from '../base/sre';
+import * as sre from '../typings/sre';
+import '../base/test_external';
 
 export class WalkerTest extends AbstractTest {
 
@@ -472,7 +472,7 @@ export class WalkerTest extends AbstractTest {
    * @param move The move of the walker.
    * @param result The expected result.
    */
-  private executeTest_(walker: sre.Walker, move: string | sre.EventUtil.KeyCode | null, result: string | null) {
+  private executeTest_(walker: sre.Walker, move: string | number | null, result: string | null) {
     if (move) {
       walker.move(typeof move === 'string' ? sre.EventUtil.KeyCode[move] : move);
     }

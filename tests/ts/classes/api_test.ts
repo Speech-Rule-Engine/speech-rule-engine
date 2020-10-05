@@ -22,7 +22,6 @@
 import {AbstractJsonTest} from './abstract_test';
 import {sre} from '../base/test_external';
 
-
 export class ApiTest extends AbstractJsonTest {
 
   public static SETUP: any;
@@ -31,9 +30,12 @@ export class ApiTest extends AbstractJsonTest {
 
   public information = 'API function test.';
 
-  public annotations: {[key: string]: sre.SemanticAnnotator} = null;
+  // TODO: Type
+  // public annotations: {[key: string]: sre.SemanticAnnotator} = null;
+  public annotations: {[key: string]: any} = null;
 
-  public visitors: {[key: string]: sre.SemanticVisitor} = null;
+  // public visitors: {[key: string]: sre.SemanticVisitor} = null;
+  public visitors: {[key: string]: any} = null;
 
   public pickFields = ['type', 'input', 'expected',
   'setup', 'json', 'move'];

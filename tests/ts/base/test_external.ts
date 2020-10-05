@@ -20,6 +20,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import * as path from 'path';
+
 export class TestExternal {
 
   public static assert: Object;
@@ -35,9 +37,9 @@ export class TestExternal {
    * @param library A library name.
    * @return The library object that has been loaded.
    */
-  public static require(library: string): Object {
-    return require(library);
-  }
+  // public static require(library: string): Object {
+  //   return require(library);
+  // }
 }
 // /**
 //  * Filesystem library.
@@ -54,4 +56,5 @@ TestExternal.path =  './tests/';
  */
 export const xmldom = require('xmldom-sre');
 
-export const sre = require('../lib/sre.js').sre;
+const SRE = require(path.resolve('../lib/sre.js'));
+export const sre = SRE.sre;

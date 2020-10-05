@@ -16,19 +16,19 @@
     "sourceMap": true,
     "lib": ["es6", "dom"],
     "typeRoots": [
-      "./typings",
+      "./ts/typings",
       "./node_modules/@types"
     ],
+    "types": ["node", "sre"],
     "outDir": "js"
   },
-  "type": ["node", "sre"],
   "include": [
     "ts/**/*"
   ],
   "exclude": [
     "dist",
     "js",
-l    "expected",
+    "expected",
     "node_modules",
     "input",
     "output",

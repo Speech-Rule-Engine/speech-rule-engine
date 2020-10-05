@@ -1,8 +1,3 @@
-/**
- * @fileoverview Tests of markup output.
- *
- * @author volker.sorge@gmail.com (Volker Sorge)
- */
 //
 // Copyright 2017 Volker Sorge
 //
@@ -17,8 +12,15 @@
 // limitations under the License.
 // Partially funded by the Diagram Project.
 
-import {sre} from '../base/test_external';
+/**
+ * @fileoverview Tests of markup output.
+ *
+ * @author volker.sorge@gmail.com (Volker Sorge)
+ */
+
 import {AbstractTest} from '../classes/abstract_test';
+import * as sre from '../typings/sre';
+import '../base/test_external';
 
 export class MarkupTest extends AbstractTest {
 
@@ -53,7 +55,7 @@ export class MarkupTest extends AbstractTest {
    * @param result The expected result.
    * @param markup The markup to test.
    */
-  public executeTest(expr: string, result: string, markup: sre.Engine.Markup) {
+  private executeTest(expr: string, result: string, markup: string) {
     sre.Engine.getInstance().markup = markup;
     let descrs = sre.System.getInstance().toDescription(expr);
     let output = sre.AuralRendering.getInstance().markup(descrs);

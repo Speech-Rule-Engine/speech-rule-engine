@@ -21,7 +21,6 @@
 import {AbstractExamples} from './abstract_examples';
 import {sre, xmldom} from '../base/test_external';
 
-
 /**
  * Base class for all the semantic tree related tests.
  */
@@ -121,9 +120,12 @@ export class EnrichSpeechTest extends SemanticTest {
  */
 export class SemanticTreeTest extends SemanticTest {
 
-  public annotations: {[key: string]: sre.SemanticAnnotator} = null;
+  // TODO: Type
+  // public annotations: {[key: string]: sre.SemanticAnnotator} = null;
+  public annotations: {[key: string]: any} = null;
 
-  public visitors: {[key: string]: sre.SemanticVisitor} = null;
+  // public visitors: {[key: string]: sre.SemanticVisitor} = null;
+  public visitors: {[key: string]: any} = null;
 
   /**
    * Adds some unicode characters via hex code to the right category.

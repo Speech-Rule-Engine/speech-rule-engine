@@ -4,13 +4,14 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
   entry: './ts/index.ts',
   mode: 'development',
+  target:'node',
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules|src/,
-      },
+      }
     ],
   },
   resolve: {
