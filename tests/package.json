@@ -28,7 +28,8 @@
   ],
   "homepage": "https://github.com/speech-rule-engine/sre-tests",
   "dependencies": {
-    "@types/node": "^14.11.2"
+    "@types/node": "^14.11.2",
+    "xmldom-sre": "^0.1.31"
   },
   "devDependencies": {
     "@tsconfig/node12": "^1.0.7",

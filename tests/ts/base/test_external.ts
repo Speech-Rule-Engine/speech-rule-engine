@@ -20,21 +20,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import * as fs from 'fs';
 import * as path from 'path';
+import * as process from 'process';
+import xmldomLocal = require('xmldom-sre');
 
-export namespace TestExternal {
-
-  /**
-   * Path to JSON files.
-   */
-  export let path =  './';
-
-}
-
-/**
- * Xmldom library.
- */
-export const xmldom = require('xmldom-sre');
-
-const SRE = require(path.resolve('../lib/sre.js'));
-export const sre = SRE.sre;
+export const xmldom = xmldomLocal;
+let env = process.env['SRE_JSON_PATH'];
+let file = path.resolve(env ? env + '/../sre.js' : '../../lib/sre.js');
+let SRE = eval(fs.readFileSync(file) + '');
+export const sre = SRE;

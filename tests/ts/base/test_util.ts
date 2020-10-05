@@ -12,12 +12,13 @@
 // limitations under the License.
 
 import * as fs from 'fs';
-import {TestExternal} from './test_external';
+
+let TestDir = './';
 
 export const TestPath: {[key: string]: string} = {
-  INPUT: TestExternal.path + 'input/',
-  OUTPUT: TestExternal.path + 'output/',
-  EXPECTED: TestExternal.path + 'expected/'
+  INPUT: TestDir + 'input/',
+  OUTPUT: TestDir + 'output/',
+  EXPECTED: TestDir + 'expected/'
 };
 
 /**
@@ -67,7 +68,7 @@ export function fileExists(file: string, opt_path?: string): string {
   if (opt_path && fs.existsSync(opt_path + file)) {
     return opt_path + file;
   }
-  let newFile = TestExternal.path + file;
+  let newFile = TestDir + file;
   if (fs.existsSync(newFile)) {
     return newFile;
   }

@@ -6,3 +6,4 @@ export let Tests = obj0;
 export let sre = obj1;
 export let xmldom = obj2;
 export let runner = new Tests();
+runner.run();
