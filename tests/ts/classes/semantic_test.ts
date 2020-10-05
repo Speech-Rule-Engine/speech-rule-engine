@@ -1,39 +1,35 @@
 /**
  * @fileoverview Testcases for the semantic tree.
  * @author sorge@google.com (Volker Sorge)
- */ 
+ */
 //
-// Copyright 2013 Google Inc. 
+// Copyright 2013 Google Inc.
 //
 //
-// Copyright 2014 Volker Sorge 
+// Copyright 2014 Volker Sorge
 //
-// Licensed under the Apache License, Version 2.0 (the "License"); 
-// you may not use this file except in compliance with the License. 
-// You may obtain a copy of the License at 
-//      http://www.apache.org/licenses/LICENSE-2.0 
-// Unless required by applicable law or agreed to in writing, software 
-// distributed under the License is distributed on an "AS IS" BASIS, 
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-// See the License for the specific language governing permissions and 
-// limitations under the License. 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//      http://www.apache.org/licenses/LICENSE-2.0
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
-
-
-import{AbstractExamples}from './abstract_examples';
-import{TestExternal}from '../base/test_external';
-
-
+import {TestExternal} from '../base/test_external';
+import {AbstractExamples} from './abstract_examples';
 
 /**
  * Base class for all the semantic tree related tests.
- */ 
+ */
 export abstract class SemanticTest extends AbstractExamples {
 
   /**
    * @override
-   */ 
-  method(...args: any[]) {
+   */
+  public method(...args: any[]) {
     this.executeTest(args[0], args[1]);
   }
 
@@ -41,31 +37,29 @@ export abstract class SemanticTest extends AbstractExamples {
    * Executes a single test. This is called by the method.
    * @param input The input element.
    * @param expected The expected output.
-   */ 
+   */
   public abstract executeTest(input: string, expected: string): void;
 
 }
 
-
 /**
  * Testcases for reconstructing semantic trees from enriched mathml.
- */ 
+ */
 export class RebuildStreeTest extends SemanticTest {
 
   /**
      * @override
-     */ 
-  pickFields = ['input'];
+     */
+  public pickFields = ['input'];
   constructor() {
     super();
   }
 
-
   /**
    * Tests if for a given mathml snippet results in a particular semantic tree.
    * @param expr MathML expression.
-   */ 
-  executeTest(expr: string) {
+   */
+  public executeTest(expr: string) {
     let mathMl = TestExternal.sre.Enrich.prepareMmlString(expr);
     let mml = TestExternal.sre.DomUtil.parseInput(mathMl);
     let stree = new TestExternal.sre.SemanticTree(mml);
@@ -75,48 +69,43 @@ export class RebuildStreeTest extends SemanticTest {
   }
 }
 
-
-
 /**
  * Enriched Speech Tests
- */ 
+ */
 export class EnrichSpeechTest extends SemanticTest {
-  pickFields = ['input'];
+  public pickFields = ['input'];
   constructor() {
     super();
   }
 
-
   /**
    * @override
-   */ 
-  setUpTest() {
+   */
+  public setUpTest() {
     super.setUpTest();
     TestExternal.sre.System.getInstance().setupEngine(
-    {domain:'mathspeak', 
-    style:'default', 
-    speech:TestExternal.sre.Engine.Speech.SHALLOW});
+    {domain: 'mathspeak',
+    style: 'default',
+    speech: TestExternal.sre.Engine.Speech.SHALLOW});
   }
-
 
   /**
    * @override
-   */ 
-  tearDownTest() {
+   */
+  public tearDownTest() {
     TestExternal.sre.System.getInstance().setupEngine(
-    {domain:'default', 
-    style:'default', 
-    speech:TestExternal.sre.Engine.Speech.NONE});
+    {domain: 'default',
+    style: 'default',
+    speech: TestExternal.sre.Engine.Speech.NONE});
     super.tearDownTest();
   }
-
 
   /**
    * Tests if speech strings computed directly for a MathML expression are
    * equivalent to those computed for enriched expressions.
    * @override
-   */ 
-  executeTest(expr) {
+   */
+  public executeTest(expr) {
     let mml = TestExternal.sre.Enrich.prepareMmlString(expr);
     let sysSpeech = TestExternal.sre.System.getInstance().toSpeech(mml);
     let enr = TestExternal.sre.WalkerUtil.getSemanticRoot(
@@ -126,54 +115,22 @@ export class EnrichSpeechTest extends SemanticTest {
   }
 }
 
-
-
 /**
  * Semantic Tree Tests
- */ 
+ */
 export class SemanticTreeTest extends SemanticTest {
 
-  annotations:{[key: string]: sre.SemanticAnnotator} = null;
+  public annotations: {[key: string]: sre.SemanticAnnotator} = null;
 
-  visitors:{[key: string]: sre.SemanticVisitor} = null;
-
-  constructor() {
-    super();
-
-    this.pickFields.push('brief');
-  }
-
-
-  /**
-   * @override
-   */ 
-  setUpTest() {
-    super.setUpTest();
-    this.annotations = TestExternal.sre.SemanticAnnotations.getInstance().annotators;
-    this.visitors = TestExternal.sre.SemanticAnnotations.getInstance().visitors;
-    TestExternal.sre.SemanticAnnotations.getInstance().annotators = {};
-    TestExternal.sre.SemanticAnnotations.getInstance().visitors = {};
-    SemanticTreeTest.setupAttributes();
-  }
-
-
-  /**
-   * @override
-   */ 
-  tearDownTest() {
-    TestExternal.sre.SemanticAnnotations.getInstance().annotators = this.annotations;
-    TestExternal.sre.SemanticAnnotations.getInstance().visitors = this.visitors;
-    super.tearDownTest();
-  }
-
+  public visitors: {[key: string]: sre.SemanticVisitor} = null;
 
   /**
    * Adds some unicode characters via hex code to the right category.
    *
    * This method is necessary as the test framework can not handle code containing
    * utf-8 encoded characters.
-   */ 
-  static setupAttributes() {
+   */
+  public static setupAttributes() {
     let attr = TestExternal.sre.SemanticAttr.getInstance();
     attr.neutralFences.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x00A6));
     attr.dashes.unshift(TestExternal.sre.SemanticUtil.numberToUnicode(0x2015));
@@ -192,24 +149,49 @@ export class SemanticTreeTest extends SemanticTest {
     attr.rightFences.unshift(close);
   }
 
+  constructor() {
+    super();
+
+    this.pickFields.push('brief');
+  }
 
   /**
    * @override
-   */ 
-  method(var_args) {
+   */
+  public setUpTest() {
+    super.setUpTest();
+    this.annotations = TestExternal.sre.SemanticAnnotations.getInstance().annotators;
+    this.visitors = TestExternal.sre.SemanticAnnotations.getInstance().visitors;
+    TestExternal.sre.SemanticAnnotations.getInstance().annotators = {};
+    TestExternal.sre.SemanticAnnotations.getInstance().visitors = {};
+    SemanticTreeTest.setupAttributes();
+  }
+
+  /**
+   * @override
+   */
+  public tearDownTest() {
+    TestExternal.sre.SemanticAnnotations.getInstance().annotators = this.annotations;
+    TestExternal.sre.SemanticAnnotations.getInstance().visitors = this.visitors;
+    super.tearDownTest();
+  }
+
+  /**
+   * @override
+   */
+  public method(var_args) {
     let args = Array.prototype.slice.call(arguments, 0);
     this.executeTest(args[0], args[1], args[2]);
   }
-
 
   /**
    * Tests if for a given mathml snippet results in a particular semantic tree.
    * @param mml MathML expression.
    * @param sml XML snippet for the semantic tree.
    * @param opt_brief Brief XML output.
-   */ 
-  executeTest(mml: string, sml: string, opt_brief?: boolean) {
-    let mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' + 
+   */
+  public executeTest(mml: string, sml: string, opt_brief?: boolean) {
+    let mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
     mml + '</math>';
     let node = TestExternal.sre.DomUtil.parseInput(mathMl);
     let sxml = (new TestExternal.sre.SemanticTree(node)).xml(opt_brief);
@@ -220,40 +202,35 @@ export class SemanticTreeTest extends SemanticTest {
   }
 }
 
-
-
-
 /**
  * Tests for enriched MathML expressions.
- */ 
+ */
 export class EnrichMathmlTest extends SemanticTest {
-  attrBlacklist = [];
+  public attrBlacklist = [];
   constructor() {
     super();
     this.setActive('EnrichExamples', 'json');
   }
 
-
   /**
    * @override
-   */ 
-  setUpTest() {
+   */
+  public setUpTest() {
     super.setUpTest();
     this.attrBlacklist = [
-    'data-semantic-annotation', 
-    'data-semantic-font', 
-    'data-semantic-embellished', 
-    'data-semantic-fencepointer', 
+    'data-semantic-annotation',
+    'data-semantic-font',
+    'data-semantic-embellished',
+    'data-semantic-fencepointer',
     'data-semantic-structure'];
   }
-
 
   /**
    * Tests if for a given mathml snippet results in a particular semantic tree.
    * @param mml MathML expression.
    * @param smml MathML snippet for the semantic information.
-   */ 
-  executeTest(mml: string, smml: string) {
+   */
+  public executeTest(mml: string, smml: string) {
     let mathMl = TestExternal.sre.Enrich.prepareMmlString(mml);
     let node = TestExternal.sre.Enrich.semanticMathmlSync(mathMl);
     let dp = new TestExternal.xmldom.DOMParser();
@@ -266,12 +243,11 @@ export class EnrichMathmlTest extends SemanticTest {
     this.assert.equal(cleaned, xmls.serializeToString(xml));
   }
 
-
   /**
    * Removes XML nodes according to the XPath elements in the blacklist.
    * @param xml Xml representation of the semantic node.
-   */ 
-  customizeXml(xml: Element) {
+   */
+  public customizeXml(xml: Element) {
     this.attrBlacklist.forEach(
     function(attr) {
       xml.removeAttribute(attr);

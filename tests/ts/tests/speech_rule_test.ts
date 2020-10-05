@@ -1,212 +1,201 @@
 /**
  * @fileoverview Testcases for math speech rules.
  * @author sorge@google.com (Volker Sorge)
- */ 
+ */
 //
-// Copyright 2013 Google Inc. 
+// Copyright 2013 Google Inc.
 //
 //
-// Copyright 2014 Volker Sorge 
+// Copyright 2014 Volker Sorge
 //
-// Licensed under the Apache License, Version 2.0 (the "License"); 
-// you may not use this file except in compliance with the License. 
-// You may obtain a copy of the License at 
-//      http://www.apache.org/licenses/LICENSE-2.0 
-// Unless required by applicable law or agreed to in writing, software 
-// distributed under the License is distributed on an "AS IS" BASIS, 
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-// See the License for the specific language governing permissions and 
-// limitations under the License. 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//      http://www.apache.org/licenses/LICENSE-2.0
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
-
-
-import{AbstractTest}from '../classes/abstract_test';
-
-
+import {AbstractTest} from '../classes/abstract_test';
 
 export class SpeechRuleTest extends AbstractTest {
 
   /**
      * @override
-     */ 
-  information = 'Speech rule tests.';
+     */
+  public information = 'Speech rule tests.';
   constructor() {
     super();
   }
-
 
   /** Test objects for structural equality using JSON, otherwise use
    * normal equality.
    * @param expected Expected value.
    * @param actual The actual computed value.
-   */ 
-  assertStructEquals(expected: any, actual: any): boolean {
+   */
+  public assertStructEquals(expected: any, actual: any): boolean {
     if (typeof expected == 'object' && typeof actual == 'object') {
-      return this.assert.deepEqual(JSON.stringify(expected), 
+      return this.assert.deepEqual(JSON.stringify(expected),
       JSON.stringify(actual));
     }
     return this.assert.deepEqual(expected, actual);
   }
 
-
   /** Test speech rule grammar annotations.
    * @export
-   */ 
-  testGrammar() {
+   */
+  public testGrammar() {
     this.assertStructEquals(
-    {'font':true, 
-    'annotation':'"unit"'}, 
+    {'font': true,
+    'annotation': '"unit"'},
     sre.SpeechRule.Component.grammarFromString(
     'font:annotation="unit"'));
     this.assertStructEquals(
-    {'font':false, 
-    'annotation':'@unit'}, 
+    {'font': false,
+    'annotation': '@unit'},
     sre.SpeechRule.Component.grammarFromString(
     '!font:annotation=@unit'));
-    // Whitespace test. 
+    // Whitespace test.
     this.assertStructEquals(
-    {'font':false, 
-    'annotation':'@unit'}, 
+    {'font': false,
+    'annotation': '@unit'},
     sre.SpeechRule.Component.grammarFromString(
     ' !font : annotation = @unit '));
   }
 
-
   /** Test speech rule attributes.
    * @export
-   */ 
-  testAttributes() {
+   */
+  public testAttributes() {
     this.assertStructEquals(
-    {'ctxtfunc':'element', 
-    'separator':'"plus"', 
-    'volume':'0.5'}, 
+    {'ctxtfunc': 'element',
+    'separator': '"plus"',
+    'volume': '0.5'},
     sre.SpeechRule.Component.attributesFromString(
     '(ctxtfunc:element,separator:"plus", volume:0.5)'));
     this.assertStructEquals(
-    {'context':'"node"', 
-    'pitch':'0.5', 
-    'difference':'true'}, 
+    {'context': '"node"',
+    'pitch': '0.5',
+    'difference': 'true'},
     sre.SpeechRule.Component.attributesFromString(
     '(context:"node",pitch:0.5,difference)'));
     this.assertStructEquals(
-    {'context':'"node"', 
-    'grammar':{
-    'font':true, 
-    'annotation':'"unit"'}}, 
+    {'context': '"node"',
+    'grammar': {
+    'font': true,
+    'annotation': '"unit"'}},
     sre.SpeechRule.Component.attributesFromString(
     '(context:"node",grammar:font:annotation="unit")'));
     this.assertStructEquals(
-    {'grammar':{
-    'font':true, 
-    'annotation':'"unit"'}}, 
+    {'grammar': {
+    'font': true,
+    'annotation': '"unit"'}},
     sre.SpeechRule.Component.attributesFromString(
     '(grammar:font:annotation="unit")'));
-    // Whitespace test. 
+    // Whitespace test.
     this.assertStructEquals(
-    {'context':'"node"', 
-    'pitch':'0.5', 
-    'difference':'true'}, 
+    {'context': '"node"',
+    'pitch': '0.5',
+    'difference': 'true'},
     sre.SpeechRule.Component.attributesFromString(
     '( context : "node" , pitch : 0.5 , difference )'));
   }
 
-
   /** Test simple speech rule components.
    * @export
-   */ 
-  testSimpleComponents() {
+   */
+  public testSimpleComponents() {
     this.assertStructEquals(
-    {'type':sre.SpeechRule.Type.MULTI, 
-    'content':'./*'}, sre.SpeechRule.Component.fromString('[m] ./*'));
-    this.assertStructEquals({'type':sre.SpeechRule.Type.NODE, 'content':'./*[1]'}, sre.SpeechRule.Component.fromString('[n] ./*[1]'));
-    this.assertStructEquals({'type':sre.SpeechRule.Type.PERSONALITY, 'attributes':{'pause':'200'}}, sre.SpeechRule.Component.fromString('[p] (pause:200)'));
-    this.assertStructEquals({'type':sre.SpeechRule.Type.TEXT, 'content':'"super"'}, sre.SpeechRule.Component.fromString('[t] "super"'));
-    this.assertStructEquals({'type':sre.SpeechRule.Type.TEXT, 'content':'text()'}, sre.SpeechRule.Component.fromString('[t] text()'));
+    {'type': sre.SpeechRule.Type.MULTI,
+    'content': './*'}, sre.SpeechRule.Component.fromString('[m] ./*'));
+    this.assertStructEquals({'type': sre.SpeechRule.Type.NODE, 'content': './*[1]'}, sre.SpeechRule.Component.fromString('[n] ./*[1]'));
+    this.assertStructEquals({'type': sre.SpeechRule.Type.PERSONALITY, 'attributes': {'pause': '200'}}, sre.SpeechRule.Component.fromString('[p] (pause:200)'));
+    this.assertStructEquals({'type': sre.SpeechRule.Type.TEXT, 'content': '"super"'}, sre.SpeechRule.Component.fromString('[t] "super"'));
+    this.assertStructEquals({'type': sre.SpeechRule.Type.TEXT, 'content': 'text()'}, sre.SpeechRule.Component.fromString('[t] text()'));
   }
   /** Test speech rule components with attributes.
    * @export
-   */ 
-  testComplexComponents() {
+   */
+  public testComplexComponents() {
     this.assertStructEquals(
-    {'type':sre.SpeechRule.Type.MULTI, 
-    'content':'./*', 'attributes':{'ctxtfunc':'element', 'separator':'"plus"', 'volume':'0.5'}}, sre.SpeechRule.Component.fromString('[m] ./* (ctxtfunc:element,separator:"plus", volume:0.5)'));
-    this.assertStructEquals({'type':sre.SpeechRule.Type.NODE, 'content':'./*[1]', 'attributes':{'context':'"node"', 'pitch':'0.5'}}, sre.SpeechRule.Component.fromString('[n] ./*[1] (context:"node",pitch:0.5)'));
-    this.assertStructEquals({'type':sre.SpeechRule.Type.NODE, 'content':'./*[1]', 'attributes':{'context':'"node"'}, 'grammar':{'font':true, 'annotation':'"unit"'}}, sre.SpeechRule.Component.fromString('[n] ./*[1] (context:"node",grammar:font:annotation="unit")'));
-    this.assertStructEquals({'type':sre.SpeechRule.Type.NODE, 'content':'./*[1]', 'grammar':{'font':true, 'annotation':'"unit"'}}, sre.SpeechRule.Component.fromString('[n] ./*[1] (grammar:font:annotation="unit")'));
+    {'type': sre.SpeechRule.Type.MULTI,
+    'content': './*', 'attributes': {'ctxtfunc': 'element', 'separator': '"plus"', 'volume': '0.5'}}, sre.SpeechRule.Component.fromString('[m] ./* (ctxtfunc:element,separator:"plus", volume:0.5)'));
+    this.assertStructEquals({'type': sre.SpeechRule.Type.NODE, 'content': './*[1]', 'attributes': {'context': '"node"', 'pitch': '0.5'}}, sre.SpeechRule.Component.fromString('[n] ./*[1] (context:"node",pitch:0.5)'));
+    this.assertStructEquals({'type': sre.SpeechRule.Type.NODE, 'content': './*[1]', 'attributes': {'context': '"node"'}, 'grammar': {'font': true, 'annotation': '"unit"'}}, sre.SpeechRule.Component.fromString('[n] ./*[1] (context:"node",grammar:font:annotation="unit")'));
+    this.assertStructEquals({'type': sre.SpeechRule.Type.NODE, 'content': './*[1]', 'grammar': {'font': true, 'annotation': '"unit"'}}, sre.SpeechRule.Component.fromString('[n] ./*[1] (grammar:font:annotation="unit")'));
   }
   /** Test speech rules.
    * @export
-   */ 
-  testRules() {
+   */
+  public testRules() {
     this.assertStructEquals(
     [
-    {'type':sre.SpeechRule.Type.TEXT, 
-    'content':'"Square root of"'}, 
-    {'type':sre.SpeechRule.Type.NODE, 
-    'content':'./*[1]', 'attributes':{'rate':'0.2'}}, {'type':sre.SpeechRule.Type.PERSONALITY, 'attributes':{'pause':'400'}}], sre.SpeechRule.Action.fromString('[t] "Square root of"; [n] ./*[1] (rate:0.2); [p] (pause:400)').components);
-    this.assertStructEquals([{'type':sre.SpeechRule.Type.NODE, 'content':'./*[1]/*[1]/*[1]'}, {'type':sre.SpeechRule.Type.TEXT, 'content':'"sub"'}, {'type':sre.SpeechRule.Type.NODE, 'content':'./*[1]/*[3]/*[1]', 'attributes':{'pitch':'-0.35'}}, {'type':sre.SpeechRule.Type.PERSONALITY, 'attributes':{'pause':'200'}}, {'type':sre.SpeechRule.Type.TEXT, 'content':'"super"'}, {'type':sre.SpeechRule.Type.NODE, 
-    'content':'./*[1]/*[2]/*[1]', 'attributes':{'pitch':'0.35'}}, {'type':sre.SpeechRule.Type.PERSONALITY, 'attributes':{'pause':'300'}}], sre.SpeechRule.Action.fromString('[n] ./*[1]/*[1]/*[1]; [t] "sub"; [n] ./*[1]/*[3]/*[1] ' + '(pitch:-0.35) ;[p](pause:200); [t] "super";' + '[n] ./*[1]/*[2]/*[1] (pitch:0.35) ;  [p] (pause:300)   ').components);
+    {'type': sre.SpeechRule.Type.TEXT,
+    'content': '"Square root of"'},
+    {'type': sre.SpeechRule.Type.NODE,
+    'content': './*[1]', 'attributes': {'rate': '0.2'}}, {'type': sre.SpeechRule.Type.PERSONALITY, 'attributes': {'pause': '400'}}], sre.SpeechRule.Action.fromString('[t] "Square root of"; [n] ./*[1] (rate:0.2); [p] (pause:400)').components);
+    this.assertStructEquals([{'type': sre.SpeechRule.Type.NODE, 'content': './*[1]/*[1]/*[1]'}, {'type': sre.SpeechRule.Type.TEXT, 'content': '"sub"'}, {'type': sre.SpeechRule.Type.NODE, 'content': './*[1]/*[3]/*[1]', 'attributes': {'pitch': '-0.35'}}, {'type': sre.SpeechRule.Type.PERSONALITY, 'attributes': {'pause': '200'}}, {'type': sre.SpeechRule.Type.TEXT, 'content': '"super"'}, {'type': sre.SpeechRule.Type.NODE,
+    'content': './*[1]/*[2]/*[1]', 'attributes': {'pitch': '0.35'}}, {'type': sre.SpeechRule.Type.PERSONALITY, 'attributes': {'pause': '300'}}], sre.SpeechRule.Action.fromString('[n] ./*[1]/*[1]/*[1]; [t] "sub"; [n] ./*[1]/*[3]/*[1] ' + '(pitch:-0.35) ;[p](pause:200); [t] "super";' + '[n] ./*[1]/*[2]/*[1] (pitch:0.35) ;  [p] (pause:300)   ').components);
   }
   /** Test translation of speech rule attributes.
    * @export
-   */ 
-  testAttributesList() {
+   */
+  public testAttributesList() {
     this.assertStructEquals(
-    ['context:"node"', 'pitch:0.5'], 
+    ['context:"node"', 'pitch:0.5'],
     sre.SpeechRule.Component.fromString(
     '[n] ./ (context:"node", pitch:0.5)').getAttributes());
 
     this.assertStructEquals(
-    ['ctxtfunc:element', 'separator:"plus"', 'volume:0.5'], 
+    ['ctxtfunc:element', 'separator:"plus"', 'volume:0.5'],
     sre.SpeechRule.Component.fromString(
-    '[t] "irrelevant" (ctxtfunc:element,' + 
-    'separator:"plus",' + 
+    '[t] "irrelevant" (ctxtfunc:element,' +
+    'separator:"plus",' +
     'volume:0.5)').getAttributes());
   }
 
-
   /** Test speech rule grammar annotations.
    * @export
-   */ 
-  testGrammarString() {
+   */
+  public testGrammarString() {
     let grammar1 = 'font:annotation="unit"';
     this.assertStructEquals(
-    grammar1, 
+    grammar1,
     sre.SpeechRule.Component.fromString('[p] (grammar:' + grammar1 + ')').grammarToString());
     let grammar2 = '!font:annotation=@unit';
     this.assertStructEquals(
-    grammar2, 
+    grammar2,
     sre.SpeechRule.Component.fromString('[p] (grammar:' + grammar2 + ')').grammarToString());
   }
 
-
   /** Test speech rule attributes.
    * @export
-   */ 
-  testAttributesString() {
+   */
+  public testAttributesString() {
     let attrs1 = '(ctxtfunc:element, separator:"plus", volume:0.5)';
     this.assertStructEquals(
-    attrs1, 
+    attrs1,
     sre.SpeechRule.Component.fromString('[p] ' + attrs1).attributesToString());
     let attrs2 = '(context:"node", pitch:0.5, difference)';
     this.assertStructEquals(
-    attrs2, 
+    attrs2,
     sre.SpeechRule.Component.fromString('[p] ' + attrs2).attributesToString());
     let attrs3 = '(context:"node", grammar:font:annotation="unit")';
     this.assertStructEquals(
-    attrs3, 
+    attrs3,
     sre.SpeechRule.Component.fromString('[p] ' + attrs3).attributesToString());
     let attrs4 = '(grammar:font:annotation="unit")';
     this.assertStructEquals(
-    attrs4, 
+    attrs4,
     sre.SpeechRule.Component.fromString('[p] ' + attrs4).attributesToString());
   }
 
-
   /** Test translation of simple speech rule components.
    * @export
-   */ 
-  testSimpleComponentsString() {
+   */
+  public testSimpleComponentsString() {
     this.assertStructEquals(
     '[m] ./*', sre.SpeechRule.Component.fromString('[m] ./*').toString());
     this.assertStructEquals('[n] ./*[1]', sre.SpeechRule.Component.fromString('[n] ./*[1]').toString());
@@ -216,8 +205,8 @@ export class SpeechRuleTest extends AbstractTest {
   }
   /** Test translation of speech rule components with attributes.
    * @export
-   */ 
-  testComplexComponentsString() {
+   */
+  public testComplexComponentsString() {
     let comp1 = '[m] ./* (ctxtfunc:element, separator:"plus", volume:0.5)';
     this.assertStructEquals(comp1, sre.SpeechRule.Component.fromString(comp1).toString());
     let comp2 = '[n] ./*[1] (context:"node", pitch:0.5)';
@@ -229,8 +218,8 @@ export class SpeechRuleTest extends AbstractTest {
   }
   /** Test translation of speech rules.
    * @export
-   */ 
-  testRulesString() {
+   */
+  public testRulesString() {
     let rule1 = '[t] "Square root of"; [n] ./*[1] (rate:0.2); [p] (pause:400)';
     this.assertStructEquals(rule1, sre.SpeechRule.Action.fromString(rule1).toString());
     let rule2 = '[n] ./*[1]/*[1]/*[1]; [t] "sub"; [n] ./*[1]/*[3]/*[1] ' + '(pitch:-0.35); [p] (pause:200); [t] "super";' + ' [n] ./*[1]/*[2]/*[1] (pitch:0.35); [p] (pause:300)';
@@ -238,8 +227,8 @@ export class SpeechRuleTest extends AbstractTest {
   }
   /** Tests for double quoted string syntax.
    * @export
-   */ 
-  testSeparatorsInStrings() {
+   */
+  public testSeparatorsInStrings() {
     let rule1 = '[t] "matrix; 3 by 3"; [n] ./*[1]';
     this.assertStructEquals(rule1, sre.SpeechRule.Action.fromString(rule1).toString());
     let rule2 = '[t] "matrix; 3;""by 3"; [n] ./*[1]';

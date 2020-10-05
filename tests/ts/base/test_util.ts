@@ -1,37 +1,34 @@
 //
-// Copyright 2020 Volker Sorge 
+// Copyright 2020 Volker Sorge
 //
-// Licensed under the Apache License, Version 2.0 (the "License"); 
-// you may not use this file except in compliance with the License. 
-// You may obtain a copy of the License at 
-//      http://www.apache.org/licenses/LICENSE-2.0 
-// Unless required by applicable law or agreed to in writing, software 
-// distributed under the License is distributed on an "AS IS" BASIS, 
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-// See the License for the specific language governing permissions and 
-// limitations under the License. 
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//      http://www.apache.org/licenses/LICENSE-2.0
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
-
-import {TestExternal} from './test_external';
 import * as fs from 'fs';
+import {TestExternal} from './test_external';
 
 export const TestPath: {[key: string]: string} = {
   INPUT: TestExternal.path + 'input/',
   OUTPUT: TestExternal.path + 'output/',
   EXPECTED: TestExternal.path + 'expected/'
-}
-
-
+};
 
 /**
  * The base error class for signaling Test errors.
  * @param msg The error message.
  * @param value Additional values.
- */ 
+ */
 export class TestError extends Error {
-  name = 'SRE Test Error';
-  message:any;
-  value:any;
+  public name = 'SRE Test Error';
+  public message: any;
+  public value: any;
   constructor(msg: string, value: any) {
     super();
     this.message = msg;
@@ -39,12 +36,11 @@ export class TestError extends Error {
   }
 }
 
-
 /**
  * Loads and parses a JSON file.
  * @param file The filename.
  * @return The parsed JSON object.
- */ 
+ */
 export function loadJson(file: string): Object {
   try {
     return (
@@ -54,13 +50,12 @@ export function loadJson(file: string): Object {
   }
 }
 
-
 /**
  * Checks if a file exists. Goes through a number of possible path names.
  * @param file The filename.
  * @param opt_path An optional path name.
  * @return The actual filename with full path.
- */ 
+ */
 export function fileExists(file: string, opt_path?: string): string {
   if (fs.existsSync(file)) {
     return file;
@@ -75,7 +70,6 @@ export function fileExists(file: string, opt_path?: string): string {
   return '';
 }
 
-
 /**
  * Combines JSON tests from input test specification and expected output
  * values. For every input test it tries to pick an expected value. If non
@@ -88,7 +82,7 @@ export function fileExists(file: string, opt_path?: string): string {
  *     with expected values.
  * @param exclude A list of tests to be excluded.
  * @return Done.
- */ 
+ */
 export function combineTests(input: {[key: string]: {[key: string]: string | boolean}},
                              expected: {[key: string]: {[key: string]: string | boolean}} | string,
                              exclude: string[]): [any[], any[]] {
