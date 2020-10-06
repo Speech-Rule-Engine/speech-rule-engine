@@ -11,7 +11,7 @@
   "type": "character",
   "factory": "symbol",
   "base": "input/common/characters.json",
-  "information": "Mathspeak Character Test for Spanish",
+  "information": "Mathspeak Spanish Character tests.",
   "tests": {
     "0": {
       "expected": [

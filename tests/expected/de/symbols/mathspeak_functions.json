@@ -12,7 +12,7 @@
   "type": "function",
   "factory": "symbol",
   "base": "input/common/functions.json",
-  "information": "Mathspeak function test for German",
+  "information": "Mathspeak German Function tests.",
   "tests": {
     "deg": {
       "expected": [

@@ -9,7 +9,7 @@
   "type": "character",
   "factory": "symbol",
   "base": "input/common/characters.json",
-  "information": "Default Character Test for English",
+  "information": "Default English Character tests.",
   "tests": {
     "0": {
       "expected": [

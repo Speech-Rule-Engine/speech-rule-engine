@@ -10,7 +10,7 @@
   "type": "function",
   "factory": "symbol",
   "base": "input/common/functions.json",
-  "information": "Clearspeak function test for German",
+  "information": "Clearspeak German Function tests.",
   "tests": {
     "deg": {
       "expected": [

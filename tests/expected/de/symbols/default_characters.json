@@ -10,7 +10,7 @@
   "type": "character",
   "factory": "symbol",
   "base": "input/common/characters.json",
-  "information": "Default Character Test for German",
+  "information": "Default German Character tests.",
   "tests": {
     "0": {
       "expected": [

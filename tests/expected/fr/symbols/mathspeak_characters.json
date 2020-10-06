@@ -11,7 +11,7 @@
   "type": "character",
   "factory": "symbol",
   "base": "input/common/characters.json",
-  "information": "Mathspeak Character Test for French",
+  "information": "Mathspeak French Character tests.",
   "tests": {
     "0": {
       "expected": [

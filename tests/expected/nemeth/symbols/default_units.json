@@ -11,7 +11,7 @@
   "type": "unit",
   "factory": "symbol",
   "base": "input/common/units.json",
-  "information": "Default unit test for Nemeth",
+  "information": "Default Nemeth Unit tests.",
   "tests": {
     "W": {
       "expected": [

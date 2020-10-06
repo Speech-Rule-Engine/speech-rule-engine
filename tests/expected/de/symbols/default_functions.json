@@ -10,7 +10,7 @@
   "type": "function",
   "factory": "symbol",
   "base": "input/common/functions.json",
-  "information": "Default function test for German",
+  "information": "Default German Function tests.",
   "tests": {
     "deg": {
       "expected": [

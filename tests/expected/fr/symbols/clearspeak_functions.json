@@ -9,7 +9,7 @@
   "type": "function",
   "factory": "symbol",
   "base": "input/common/functions.json",
-  "information": "Clearspeak function test for French",
+  "information": "Clearspeak French Function tests.",
   "tests": {
     "deg": {
       "expected": [

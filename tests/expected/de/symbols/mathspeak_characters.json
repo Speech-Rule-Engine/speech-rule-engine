@@ -12,7 +12,7 @@
   "type": "character",
   "factory": "symbol",
   "base": "input/common/characters.json",
-  "information": "Mathspeak Character Test for German",
+  "information": "Mathspeak German Character tests.",
   "tests": {
     "0": {
       "expected": [

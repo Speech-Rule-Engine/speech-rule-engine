@@ -9,7 +9,7 @@
   "type": "character",
   "factory": "symbol",
   "base": "input/common/characters.json",
-  "information": "Clearspeak Character Test for English",
+  "information": "Clearspeak English Character tests.",
   "tests": {
     "0": {
       "expected": [
