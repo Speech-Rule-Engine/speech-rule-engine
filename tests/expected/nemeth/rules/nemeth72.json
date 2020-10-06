@@ -2,7 +2,7 @@
   "name": "Nemeth72Test",
   "factory": "speech",
   "base": "input/nemeth/nemeth72.json",
-  "information": "Testcases from the Nemeth book.",
+  "information": "Nemeth Tests from 1972 book.",
   "domain": "default",
   "locale": "nemeth",
   "modality": "braille",

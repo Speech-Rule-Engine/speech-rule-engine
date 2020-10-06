@@ -2,7 +2,7 @@
   "name": "MathspeakSpanishTest",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_test.json",
-  "information": "Mathspeak Spanish tests.",
+  "information": "Spanish Mathspeak tests.",
   "domain": "mathspeak",
   "locale": "es",
   "active": "MathspeakSpanish",

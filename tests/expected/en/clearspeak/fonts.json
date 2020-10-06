@@ -3,7 +3,7 @@
   "locale": "en",
   "factory": "speech",
   "base": "input/common/fonts.json",
-  "information": "Clearspeak English Font tests.",
+  "information": "English Clearspeak Font tests.",
   "domain": "clearspeak",
   "active": "ClearspeakEnglishFont",
   "exclude": [],

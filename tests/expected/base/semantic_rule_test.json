@@ -3,7 +3,7 @@
   "locale": "en",
   "factory": "speech",
   "base": "input/base/semantic_rule_test.json",
-  "information": "Semantic rule tests.",
+  "information": "Semantic Rule tests.",
   "active": "SemanticTreeRules",
   "exclude": [],
   "tests": {

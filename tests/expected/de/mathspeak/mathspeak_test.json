@@ -5,7 +5,7 @@
   "base": "input/mathspeak/mathspeak_test.json",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_test.json",
-  "information": "Mathspeak German tests.",
+  "information": "German Mathspeak tests.",
   "domain": "mathspeak",
   "locale": "de",
   "compare": true,

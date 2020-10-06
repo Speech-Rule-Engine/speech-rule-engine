@@ -1,7 +1,7 @@
 {
   "factory": "stree",
   "base": "input/base/semantic.json",
-  "information": "Semantic tree tests.",
+  "information": "Semantic Tree tests.",
   "exclude": [],
   "tests": {
     "Wrappers_0": {

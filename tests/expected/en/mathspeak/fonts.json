@@ -3,7 +3,7 @@
   "locale": "en",
   "factory": "speech",
   "base": "input/common/fonts.json",
-  "information": "Mathspeak English Font tests.",
+  "information": "English Mathspeak Font tests.",
   "domain": "mathspeak",
   "active": "MathspeakEnglishFont",
   "exclude": [],

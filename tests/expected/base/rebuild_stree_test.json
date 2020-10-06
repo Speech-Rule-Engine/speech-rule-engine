@@ -1,7 +1,7 @@
 {
   "factory": "rebuild",
   "base": "input/base/semantic.json",
-  "information": "Semantic tree rebuilding tests.",
+  "information": "Semantic Tree Rebuilding tests.",
   "exclude": ["Mfenced_14", "Actions_0", "Actions_1", "SemanticsAnnotation_0", "SemanticsAnnotationXml_1"],
   "tests": "ALL"
 }

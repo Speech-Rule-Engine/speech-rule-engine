@@ -3,7 +3,7 @@
   "locale": "fr",
   "factory": "prefix",
   "base": "input/common/prefix.json",
-  "information": "Prefix French rule tests.",
+  "information": "French Prefix rule tests.",
   "active": "PrefixFrench",
   "exclude": [],
   "tests": {

@@ -88,17 +88,39 @@ export class Tests {
   }
 
   /**
+   * Filters the file list wrt. to the string list of an environment variable.
+   * @param files The files list.
+   * @param filter The filtering list of strings from an env variable.
+   * @param start The start of the filtering regular expression.
+   * @param end The end of the filtering regular expression. The idea is that a
+   * filter is generated as `/start + fil + end/` where `fil \in filter`.
+   * @return The filtered list of files.
+   */
+  private static fileFilter(
+    files: string[], filter: string[], start: string, end: string): string[] {
+    if (!filter || !filter.length) {
+      return files;
+    }
+    let result: string[] = [];
+    for (let fil of filter) {
+      result = result.concat(
+        files.filter(x => x.match(RegExp(start + fil + end))));
+    }
+    return result;
+  }
+
+  /**
    * @constructor
    */
   constructor() {
     Tests.environmentVars.forEach(x => this.getEnvironment(x));
     let file = this.environment['FILE'] as string[];
-    let locale = this.environment['LOCALE'] as string[];
     if (file) {
       let names: {[key: string]: Function} = {};
       Tests.allTests.map(x => names[x.name] = x);
       this.testList = file.map((x: string) =>  names[x]);
     }
+    let locale = this.environment['LOCALE'] as string[];
     if (locale && locale[0] === 'Base') {
       this.testList = this.testList.concat(BaseTests.testList);
     }
@@ -111,11 +133,8 @@ export class Tests {
 
     if (this.environment['JSON']) {
       let files = (
-        this.environment['FILES'] || Tests.allJson() as string[]);
+        this.environment['FILES'] || this.getFiles());
       for (let key of files) {
-        // TODO: Filter for file or locale or category
-        // Maybe apply filter to allJson.
-        // let [locale, block, file] = key.split('/');
         let test = TestFactory.get(key);
         if (test) {
           this.runner.registerTest(test);
@@ -125,12 +144,23 @@ export class Tests {
   }
 
   /**
+   * Finds and filter the JSON files wrt. locale or category block
+   */
+  public getFiles(): string[] {
+    let files = Tests.allJson() as string[];
+    let locale = this.environment['LOCALE'] as string[];
+    let block = this.environment['BLOCK'] as string[];
+    files = Tests.fileFilter(files, locale, '^', '/');
+    files = Tests.fileFilter(files, block, '^(\\w+/(?!\\w+/)|\\w+/', '/\\w+)');
+    return files;
+  }
+
+  /**
    * Fills the list of environment variables.
    * @param variable The variable name.
    */
   public getEnvironment(variable: string) {
     let env = process.env[variable];
-    // Process here.
     if (!env) {
       return;
     }
@@ -164,8 +194,3 @@ export class Tests {
   }
 
 }
-
-// /**
-//  * Execute tests.
-//  */
-// new Tests().run();

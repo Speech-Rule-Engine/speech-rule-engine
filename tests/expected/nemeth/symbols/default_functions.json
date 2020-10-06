@@ -11,7 +11,7 @@
   "type": "function",
   "factory": "symbol",
   "base": "input/common/functions.json",
-  "information": "Default function test for Nemeth",
+  "information": "Nemeth Default Function tests.",
   "tests": {
     "deg": {
       "expected": [

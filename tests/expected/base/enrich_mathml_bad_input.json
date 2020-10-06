@@ -1,7 +1,7 @@
 {
   "factory": "enrichMathml",
   "base": "input/base/semantic_bad_input.json",
-  "information": "Semantic enrichment tests for badly formated elements.",
+  "information": "Semantic Enrichment tests for badly formatted elements.",
   "exclude": [],
   "tests": {
     "_comment_2": "Underspecified Layout Elements",

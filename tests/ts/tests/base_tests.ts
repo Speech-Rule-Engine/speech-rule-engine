@@ -22,6 +22,9 @@ import {WalkerTest} from './walker_test';
 
 /**
  * List that collates old style functional and unit tests.
+ *
+ * Deprecated: New tests should always be added in JSON style.
+ * @deprecated
  */
 export const testList: any[] = [ColorPickerTest, DomTest, MarkupTest,
                                 SpeechRuleTest, WalkerTest];

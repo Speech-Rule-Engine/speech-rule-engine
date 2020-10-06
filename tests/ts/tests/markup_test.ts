@@ -37,7 +37,7 @@ export class MarkupTest extends AbstractTest {
    */
   public setUpTest() {
     sre.System.getInstance().setupEngine(
-    {modality: 'speech', domain: 'default', style: 'default'});
+      {locale: 'en', modality: 'speech', domain: 'default', style: 'default'});
   }
 
   /**

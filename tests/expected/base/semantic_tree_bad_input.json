@@ -1,7 +1,7 @@
 {
   "factory": "stree",
   "base": "input/base/semantic_bad_input.json",
-  "information": "Semantic trees for incorrect MathML input.",
+  "information": "Semantic Tree tests for badly formatted input.",
   "exclude": [],
   "tests": {
     "_comment_2": "Underspecified Layout Elements",

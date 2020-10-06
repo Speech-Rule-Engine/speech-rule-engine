@@ -9,7 +9,7 @@
   "type": "unit",
   "factory": "symbol",
   "base": "input/common/units.json",
-  "information": "Clearspeak unit test for English",
+  "information": "English Clearspeak Unit tests.",
   "tests": {
     "W": {
       "expected": [

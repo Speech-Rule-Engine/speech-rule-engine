@@ -2,7 +2,7 @@
   "name": "MathspeakFrenchFontTest",
   "factory": "speech",
   "base": "input/common/fonts.json",
-  "information": "Mathspeak French Font tests.",
+  "information": "French Mathspeak Font tests.",
   "domain": "mathspeak",
   "locale": "fr",
   "active": "MathspeakFrenchFont",
