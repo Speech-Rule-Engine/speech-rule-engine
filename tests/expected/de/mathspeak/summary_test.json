@@ -3,7 +3,7 @@
   "name": "SummaryGermanTest",
   "factory": "summary",
   "base": "input/common/summary_test.json",
-  "information": "Mathspeak German Summary tests.",
+  "information": "German Mathspeak Summary tests.",
   "locale": "de",
   "domain": "mathspeak",
   "active": "SummaryGerman",

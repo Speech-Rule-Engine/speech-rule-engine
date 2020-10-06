@@ -2,7 +2,7 @@
   "name": "MathspeakEmbellishSpanishTest",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_embellish_test.json",
-  "information": "Mathspeak Spanish Embellished Symbols tests.",
+  "information": "Spanish Mathspeak Embellished Symbols tests.",
   "domain": "mathspeak",
   "locale": "es",
   "active": "EmbellishedSymbolsSpanish",

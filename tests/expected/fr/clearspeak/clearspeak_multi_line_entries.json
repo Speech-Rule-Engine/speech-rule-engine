@@ -4,7 +4,7 @@
   "locale": "fr",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_multi_line_entries.json",
-  "information": "Clearspeak French MultiLineEntries rule tests.",
+  "information": "French Clearspeak MultiLineEntries rule tests.",
   "active": "ClearspeakFrench",
   "exclude": [],
   "tests": {

@@ -3,7 +3,7 @@
   "locale": "en",
   "factory": "collapse",
   "base": "input/common/collapse_test.json",
-  "information": "Mathspeak English Collapse tests.",
+  "information": "English Mathspeak Collapse tests.",
   "domain": "mathspeak",
   "active": "CollapseEnglish",
   "exclude": [],

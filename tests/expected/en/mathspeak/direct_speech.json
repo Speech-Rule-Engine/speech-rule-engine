@@ -4,7 +4,7 @@
   "locale": "en",
   "factory": "speech",
   "base": "input/common/direct_speech.json",
-  "information": "Mathspeak English Direct speech attributes.",
+  "information": "English Mathspeak Direct speech attributes.",
   "active": "DirectSpeechEnglish",
   "exclude": [],
   "tests": {

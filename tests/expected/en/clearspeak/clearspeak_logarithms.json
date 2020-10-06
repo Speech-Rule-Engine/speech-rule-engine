@@ -4,7 +4,7 @@
   "locale": "en",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_logarithms.json",
-  "information": "Clearspeak English Logarithms rule tests.",
+  "information": "English Clearspeak Logarithms rule tests.",
   "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {

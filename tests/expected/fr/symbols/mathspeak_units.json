@@ -11,7 +11,7 @@
   "type": "unit",
   "factory": "symbol",
   "base": "input/common/units.json",
-  "information": "Mathspeak French Unit tests.",
+  "information": "French Mathspeak Unit tests.",
   "tests": {
     "W": {
       "expected": [

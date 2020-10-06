@@ -3,7 +3,7 @@
   "name": "ClearspeakEnglishFontTest",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_font_caps.json",
-  "information": "Clearspeak English Font tests with Caps preference.",
+  "information": "English Clearspeak Font tests with Caps preference.",
   "domain": "clearspeak",
   "locale": "en",
   "active": "ClearspeakEnglishFont",

@@ -2,7 +2,7 @@
   "name": "ClearspeakFrenchFontTest",
   "factory": "speech",
   "base": "input/common/fonts.json",
-  "information": "Clearspeak French Font tests.",
+  "information": "French Clearspeak Font tests.",
   "domain": "clearspeak",
   "locale": "fr",
   "active": "ClearspeakFrenchFont",

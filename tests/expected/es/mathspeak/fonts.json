@@ -2,7 +2,7 @@
   "name": "MathspeakSpanishFontTest",
   "factory": "speech",
   "base": "input/common/fonts.json",
-  "information": "Mathspeak Spanish Font tests.",
+  "information": "Spanish Mathspeak Font tests.",
   "domain": "mathspeak",
   "locale": "es",
   "active": "MathspeakSpanishFont",

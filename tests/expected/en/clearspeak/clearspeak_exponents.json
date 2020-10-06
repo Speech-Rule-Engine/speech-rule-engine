@@ -4,7 +4,7 @@
   "locale": "en",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_exponents.json",
-  "information": "Clearspeak English Exponents rule tests.",
+  "information": "English Clearspeak Exponents rule tests.",
   "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {

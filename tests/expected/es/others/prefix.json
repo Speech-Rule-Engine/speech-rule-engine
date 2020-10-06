@@ -3,7 +3,7 @@
   "locale": "es",
   "factory": "prefix",
   "base": "input/common/prefix.json",
-  "information": "Prefix Spanish rule tests.",
+  "information": "Spanish Prefix rule tests.",
   "active": "PrefixSpanish",
   "exclude": [],
   "tests": {

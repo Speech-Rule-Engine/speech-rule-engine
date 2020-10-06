@@ -12,7 +12,7 @@
   "type": "unit",
   "factory": "symbol",
   "base": "input/common/units.json",
-  "information": "Mathspeak German Unit tests.",
+  "information": "German Mathspeak Unit tests.",
   "tests": {
     "sq": {
       "expected": [

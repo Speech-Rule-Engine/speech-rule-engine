@@ -3,7 +3,7 @@
   "name": "MathspeakEmbellishGermanTest",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_embellish_test.json",
-  "information": "Mathspeak German Embellished Symbols tests.",
+  "information": "German Mathspeak Embellished Symbols tests.",
   "domain": "mathspeak",
   "locale": "de",
   "active": "EmbellishedSymbolsGerman",

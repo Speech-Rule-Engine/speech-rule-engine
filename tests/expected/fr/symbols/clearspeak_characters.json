@@ -9,7 +9,7 @@
   "type": "character",
   "factory": "symbol",
   "base": "input/common/characters.json",
-  "information": "Clearspeak French Character tests.",
+  "information": "French Clearspeak Character tests.",
   "tests": {
     "0": {
       "expected": [

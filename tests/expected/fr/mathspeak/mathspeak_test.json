@@ -2,7 +2,7 @@
   "name": "MathspeakFrenchTest",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_test.json",
-  "information": "Mathspeak French tests.",
+  "information": "French Mathspeak tests.",
   "domain": "mathspeak",
   "locale": "fr",
   "active": "MathspeakFrench",

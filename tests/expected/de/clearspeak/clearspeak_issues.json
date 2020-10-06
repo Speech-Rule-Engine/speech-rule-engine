@@ -4,7 +4,7 @@
   "locale": "de",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_issues.json",
-  "information": "Clearspeak German Issues tests.",
+  "information": "German Clearspeak Issues tests.",
   "active": "ClearspeakIssuesGerman",
   "exclude": [],
   "tests": {

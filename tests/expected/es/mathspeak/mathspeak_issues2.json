@@ -2,7 +2,7 @@
   "name": "MathspeakIssues2Spanish",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_issues2.json",
-  "information": "Mathspeak Spanish Issues 2.",
+  "information": "Spanish Mathspeak Issues 2.",
   "domain": "mathspeak",
   "locale": "es",
   "active": "MathspeakIssuesSpanish",

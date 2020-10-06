@@ -4,7 +4,7 @@
   "locale": "de",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_exponents.json",
-  "information": "Clearspeak German Exponents rule tests.",
+  "information": "German Clearspeak Exponents rule tests.",
   "active": "ClearspeakGerman",
   "exclude": ["Exp041", "Exp042", "Exp043", "Exp044", "Exp045", "Exp046", "Exp047", "Exp048", "Exp049", "Exp050", "Exp051", "Exp052", "Exp053", "Exp054", "Exp055", "Exp056", "Exp057", "Exp058", "Exp059", "Exp060", "Exp061", "Exp062", "Exp063", "Exp064", "Exp065", "Exp066", "Exp067", "Exp068", "Exp069", "Exp070", "Exp071", "Exp072", "Exp073", "Exp074", "Exp075", "Exp076", "Exp077", "Exp078", "Exp079", "Exp080", "Exp081", "Exp082", "Exp083", "Exp084"],
   "tests": {

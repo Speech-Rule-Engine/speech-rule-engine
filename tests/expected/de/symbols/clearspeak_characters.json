@@ -10,7 +10,7 @@
   "type": "character",
   "factory": "symbol",
   "base": "input/common/characters.json",
-  "information": "Clearspeak German Character tests.",
+  "information": "German Clearspeak Character tests.",
   "tests": {
     "0": {
       "expected": [

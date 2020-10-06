@@ -4,7 +4,7 @@
   "domain": "mathspeak",
   "factory": "summary",
   "base": "input/common/summary_test.json",
-  "information": "Mathspeak English Summary tests.",
+  "information": "English Mathspeak Summary tests.",
   "active": "SummaryEnglish",
   "exclude": [],
   "tests": {

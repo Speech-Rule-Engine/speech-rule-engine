@@ -9,7 +9,7 @@
   "type": "unit",
   "factory": "symbol",
   "base": "input/common/units.json",
-  "information": "Default English Unit tests.",
+  "information": "English Default Unit tests.",
   "tests": {
     "W": {
       "expected": [

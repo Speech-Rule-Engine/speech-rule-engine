@@ -2,7 +2,7 @@
   "name": "SummarySpanishTest",
   "factory": "summary",
   "base": "input/common/summary_test.json",
-  "information": "Mathspeak Spanish Summary tests.",
+  "information": "Spanish Mathspeak Summary tests.",
   "locale": "es",
   "domain": "mathspeak",
   "active": "SummarySpanish",

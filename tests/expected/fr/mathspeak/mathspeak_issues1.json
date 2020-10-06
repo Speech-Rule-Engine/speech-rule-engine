@@ -2,7 +2,7 @@
   "name": "MathspeakIssues1French",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_issues1.json",
-  "information": "Mathspeak French Issues 1.",
+  "information": "French Mathspeak Issues 1.",
   "domain": "mathspeak",
   "locale": "fr",
   "active": "MathspeakIssuesFrench",

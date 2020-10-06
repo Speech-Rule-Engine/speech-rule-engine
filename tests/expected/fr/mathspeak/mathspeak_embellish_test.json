@@ -2,7 +2,7 @@
   "name": "MathspeakEmbellishFrenchTest",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_embellish_test.json",
-  "information": "Mathspeak French Embellished Symbols tests.",
+  "information": "French Mathspeak Embellished Symbols tests.",
   "domain": "mathspeak",
   "locale": "fr",
   "active": "EmbellishedSymbolsFrench",

@@ -3,7 +3,7 @@
   "locale": "en",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_test.json",
-  "information": "Mathspeak English tests.",
+  "information": "English Mathspeak tests.",
   "domain": "mathspeak",
   "active": "MathspeakEnglish",
   "exclude": [],

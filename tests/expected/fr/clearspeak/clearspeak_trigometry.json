@@ -4,7 +4,7 @@
   "locale": "fr",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_trigometry.json",
-  "information": "Clearspeak French Trigometry rule tests.",
+  "information": "French Clearspeak Trigometry rule tests.",
   "active": "ClearspeakFrench",
   "exclude": [],
   "tests": {

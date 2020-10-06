@@ -3,7 +3,7 @@
   "name": "ClearspeakGermanFontTest",
   "factory": "speech",
   "base": "input/common/fonts.json",
-  "information": "Clearspeak German Font tests.",
+  "information": "German Clearspeak Font tests.",
   "domain": "clearspeak",
   "locale": "de",
   "active": "ClearspeakGermanFont",

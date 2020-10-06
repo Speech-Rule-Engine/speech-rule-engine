@@ -4,7 +4,7 @@
   "locale": "de",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_implied_times.json",
-  "information": "Clearspeak German ImpliedTimes rule tests.",
+  "information": "German Clearspeak ImpliedTimes rule tests.",
   "active": "ClearspeakGerman",
   "exclude": [],
   "tests": {

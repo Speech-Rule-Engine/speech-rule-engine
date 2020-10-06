@@ -9,7 +9,7 @@
   "type": "function",
   "factory": "symbol",
   "base": "input/common/functions.json",
-  "information": "Default French Function tests.",
+  "information": "French Default Function tests.",
   "tests": {
     "deg": {
       "expected": [

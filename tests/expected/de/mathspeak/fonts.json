@@ -3,7 +3,7 @@
   "name": "MathspeakGermanFontTest",
   "factory": "speech",
   "base": "input/common/fonts.json",
-  "information": "Mathspeak German Font tests.",
+  "information": "German Mathspeak Font tests.",
   "domain": "mathspeak",
   "locale": "de",
   "active": "MathspeakGermanFont",

@@ -3,7 +3,7 @@
   "locale": "en",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_issues1.json",
-  "information": "Mathspeak English Issues 1.",
+  "information": "English Mathspeak Issues 1.",
   "domain": "mathspeak",
   "active": "MathspeakIssuesEnglish",
   "exclude": [],

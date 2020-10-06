@@ -9,7 +9,7 @@
   "type": "function",
   "factory": "symbol",
   "base": "input/common/functions.json",
-  "information": "Default Spanish Function tests.",
+  "information": "Spanish Default Function tests.",
   "tests": {
     "deg": {
       "expected": [

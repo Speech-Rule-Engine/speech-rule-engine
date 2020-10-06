@@ -4,7 +4,7 @@
   "locale": "fr",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_functions.json",
-  "information": "Clearspeak French Functions rule tests.",
+  "information": "French Clearspeak Functions rule tests.",
   "active": "ClearspeakFrench",
   "exclude": [],
   "tests": {

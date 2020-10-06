@@ -4,7 +4,7 @@
   "locale": "en",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
-  "information": "Clearspeak English SetsEnclosedInSetBrackets rule tests.",
+  "information": "English Clearspeak SetsEnclosedInSetBrackets rule tests.",
   "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {

@@ -4,7 +4,7 @@
   "locale": "de",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_part3_adornments.json",
-  "information": "Clearspeak German Part3Adornments rule tests.",
+  "information": "German Clearspeak Part3Adornments rule tests.",
   "active": "ClearspeakGerman",
   "exclude": [],
   "tests": {

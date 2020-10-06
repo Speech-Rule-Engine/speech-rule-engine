@@ -4,7 +4,7 @@
   "locale": "en",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_roots.json",
-  "information": "Clearspeak English Roots rule tests.",
+  "information": "English Clearspeak Roots rule tests.",
   "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {

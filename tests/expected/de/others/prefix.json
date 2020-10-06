@@ -3,7 +3,7 @@
   "name": "PrefixGermanTest",
   "factory": "prefix",
   "base": "input/common/prefix.json",
-  "information": "Prefix German rule tests.",
+  "information": "German Prefix rule tests.",
   "locale": "de",
   "active": "PrefixGerman",
   "exclude": [],

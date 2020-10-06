@@ -4,7 +4,7 @@
   "locale": "fr",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_named_sets.json",
-  "information": "Clearspeak French NamedSets rule tests.",
+  "information": "French Clearspeak NamedSets rule tests.",
   "active": "ClearspeakFrench",
   "exclude": [],
   "tests": {

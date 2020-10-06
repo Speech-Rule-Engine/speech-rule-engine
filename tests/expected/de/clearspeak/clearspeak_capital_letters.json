@@ -4,7 +4,7 @@
   "locale": "de",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_capital_letters.json",
-  "information": "Clearspeak German CapitalLetters rule tests.",
+  "information": "German Clearspeak CapitalLetters rule tests.",
   "active": "ClearspeakGerman",
   "exclude": [],
   "tests": {

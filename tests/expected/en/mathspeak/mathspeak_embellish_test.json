@@ -2,7 +2,7 @@
   "name": "MathspeakEmbellishEnglishTest",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_embellish_test.json",
-  "information": "Mathspeak English Embellished Symbols tests.",
+  "information": "English Mathspeak Embellished Symbols tests.",
   "domain": "mathspeak",
   "locale": "en",
   "active": "EmbellishedSymbolsEnglish",

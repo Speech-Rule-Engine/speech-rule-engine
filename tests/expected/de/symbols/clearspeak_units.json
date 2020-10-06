@@ -10,7 +10,7 @@
   "type": "unit",
   "factory": "symbol",
   "base": "input/common/units.json",
-  "information": "Clearspeak German Unit tests.",
+  "information": "German Clearspeak Unit tests.",
   "tests": {
     "sq": {
       "expected": [

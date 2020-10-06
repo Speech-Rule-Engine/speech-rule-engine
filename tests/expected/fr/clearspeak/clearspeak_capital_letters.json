@@ -4,7 +4,7 @@
   "locale": "fr",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_capital_letters.json",
-  "information": "Clearspeak French CapitalLetters rule tests.",
+  "information": "French Clearspeak CapitalLetters rule tests.",
   "active": "ClearspeakFrench",
   "exclude": [],
   "tests": {

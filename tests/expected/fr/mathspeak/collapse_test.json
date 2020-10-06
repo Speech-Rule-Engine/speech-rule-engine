@@ -2,7 +2,7 @@
   "name": "CollapseFrenchTest",
   "factory": "collapse",
   "base": "input/common/collapse_test.json",
-  "information": "Mathspeak French Collapse tests.",
+  "information": "French Mathspeak Collapse tests.",
   "domain": "mathspeak",
   "locale": "fr",
   "active": "CollapseFrench",
