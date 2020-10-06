@@ -20,6 +20,7 @@
  */
 
 import {sre, xmldom} from '../base/test_external';
+import * as sret from '../typings/sre';
 import {AbstractExamples} from './abstract_examples';
 
 /**
@@ -71,10 +72,11 @@ export class RebuildStreeTest extends SemanticTest {
  * Enriched Speech Tests
  */
 export class EnrichSpeechTest extends SemanticTest {
+
+  /**
+   * @override
+   */
   public pickFields = ['input'];
-  constructor() {
-    super();
-  }
 
   /**
    * @override
@@ -118,12 +120,15 @@ export class EnrichSpeechTest extends SemanticTest {
  */
 export class SemanticTreeTest extends SemanticTest {
 
-  // TODO: Type
-  // public annotations: {[key: string]: sre.SemanticAnnotator} = null;
-  public annotations: {[key: string]: any} = null;
+  /**
+   * Stash semantic annotators that are removed for the purpose of this test.
+   */
+  public annotations: {[key: string]: sret.SemanticAnnotator} = null;
 
-  // public visitors: {[key: string]: sre.SemanticVisitor} = null;
-  public visitors: {[key: string]: any} = null;
+  /**
+   * Stash semantic visitors that are removed for the purpose of this test.
+   */
+  public visitors: {[key: string]: sret.SemanticVisitor} = null;
 
   /**
    * Adds some unicode characters via hex code to the right category.
@@ -208,8 +213,11 @@ export class SemanticTreeTest extends SemanticTest {
  */
 export class EnrichMathmlTest extends SemanticTest {
 
-  public attrBlacklist: string[] = [];
-  
+  private attrBlacklist: string[] = [];
+
+  /**
+   * @constructor
+   */
   constructor() {
     super();
     this.setActive('EnrichExamples', 'json');

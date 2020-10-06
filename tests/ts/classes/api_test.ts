@@ -26,19 +26,38 @@ import {AbstractJsonTest} from './abstract_test';
 
 export class ApiTest extends AbstractJsonTest {
 
+  /**
+   * Feature vector for setting up the engine.
+   */
   public static SETUP: {[key: string]: string} = {
     locale: 'en', domain: 'mathspeak', style: 'default',
     modality: 'speech', speech: sre.Engine.Speech.NONE
   };
 
+  /**
+   * The quadratic equation as a MathML string. By default tests are run against
+   * the quadratic equation unless a different input is provided.
+   */
   public static QUADRATIC: string;
 
+  /**
+   * @override
+   */
   public information = 'API function test.';
 
+  /**
+   * Stash semantic annotators that are removed for the purpose of this test.
+   */
   public annotations: {[key: string]: sret.SemanticAnnotator} = null;
 
+  /**
+   * Stash semantic visitors that are removed for the purpose of this test.
+   */
   public visitors: {[key: string]: sret.SemanticVisitor} = null;
 
+  /**
+   * @override
+   */
   public pickFields = ['type', 'input', 'expected',
                        'setup', 'json', 'move'];
 
@@ -98,10 +117,6 @@ export class ApiTest extends AbstractJsonTest {
 
 }
 
-/**
- * The quadratic equation as a MathML string. By default tests are run against
- * the quadratic equation unless a different input is provided.
- */
 ApiTest.QUADRATIC =
   '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
   '<mi>x</mi>' +
