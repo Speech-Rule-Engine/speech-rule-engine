@@ -252,16 +252,13 @@ export class EnrichMathmlTest extends SemanticTest {
    */
   public customizeXml(xml: Element) {
     this.attrBlacklist.forEach(
-      function(attr) {
+      attr => {
         xml.removeAttribute(attr);
         let removes = sre.DomUtil.querySelectorAllByAttr(xml, attr);
         if (xml.hasAttribute(attr)) {
           removes.push(xml);
         }
-        removes.forEach(
-          function(node: Element) {
-            node.removeAttribute(attr);
-          });
+        removes.forEach((node: Element) => node.removeAttribute(attr));
       });
   }
 }

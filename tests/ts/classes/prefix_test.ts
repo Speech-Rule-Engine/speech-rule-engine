@@ -58,9 +58,7 @@ export class PrefixTest extends SpeechTest {
   public getSpeech(mml: string) {
     let stree = sre.Semantic.getTreeFromString(mml);
     let node = stree.root.querySelectorAll(
-      function(x: Element) {
-        return x.id === this.id;
-      }.bind(this))[0];
+      (x: Element) => parseInt(x.id, 10) === this.id)[0];
     this.subExpr = node.mathmlTree;
     if (!node) {
       this.assert.fail();

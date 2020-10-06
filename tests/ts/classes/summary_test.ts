@@ -62,10 +62,8 @@ export class SummaryTest extends SpeechTest {
       return super.getSpeech(mathMl);
     }
     sre.ProcessorFactory.process('walker', mathMl);
-    this.steps.forEach(
-      function(step) {
-        sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode[step]);
-      });
+    this.steps.forEach(step =>
+        sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode[step]));
     return sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode['X']);
   }
 
