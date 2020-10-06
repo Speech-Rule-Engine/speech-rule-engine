@@ -270,3 +270,66 @@ export class EnrichMathmlTest extends SemanticTest {
       });
   }
 }
+
+/**
+ * Tests for the semantic API.
+ */
+export class SemanticApiTest extends SemanticTest {
+
+  /**
+   * @override
+   */
+  public information = 'Semantic API tests.';
+
+  /**
+   * @override
+   */
+  public pickFields = ['input'];
+
+  private xmls = (new xmldom.XMLSerializer()).serializeToString;
+
+  /**
+   * Tests if for a given mathml snippet results in a particular semantic tree.
+   * @param expr MathML expression.
+   */
+  public executeTest(expr: string) {
+    let mathMl = sre.Enrich.prepareMmlString(expr);
+    let mml = sre.DomUtil.parseInput(mathMl);
+    this.treeVsXml(mml);
+    this.stringVsXml(mml, mathMl);
+    this.stringVsTree(mml, mathMl);
+  }
+
+  /**
+   * Tests Tree generation vs Xml output.
+   * @param mml The node.
+   */
+  public treeVsXml(mml: Node) {
+    this.assert.equal(
+      this.xmls(sre.Semantic.getTree(mml).xml()),
+      this.xmls(sre.Semantic.xmlTree(mml)));
+  }
+
+  /**
+   * Tests Tree generation vs Xml output.
+   * @param mml The node.
+   * @param mstr The XML as string.
+   */
+  public stringVsXml(mml: Node, mstr: string) {
+    this.assert.equal(
+      this.xmls(sre.Semantic.getTreeFromString(mstr).xml()),
+      this.xmls(sre.Semantic.xmlTree(mml)));
+  }
+
+  /**
+   * Tests Tree generation vs Xml output.
+   * @param mml The node.
+   * @param mstr The XML as string.
+   */
+  public stringVsTree(mml: Node, mstr: string) {
+    this.assert.equal(
+      this.xmls(sre.Semantic.getTreeFromString(mstr).xml()),
+      this.xmls(sre.Semantic.getTree(mml).xml()));
+  }
+
+}

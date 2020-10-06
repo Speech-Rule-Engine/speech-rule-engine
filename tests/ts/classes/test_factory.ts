@@ -28,10 +28,8 @@ import {ClearspeakAnnotationTest} from './clearspeak_annotation_test';
 import {ClearspeakTest} from './clearspeak_test';
 import {CollapseTest} from './collapse_test';
 import {PrefixTest} from './prefix_test';
-import {EnrichMathmlTest} from './semantic_test';
-import {EnrichSpeechTest} from './semantic_test';
-import {RebuildStreeTest} from './semantic_test';
-import {SemanticTreeTest} from './semantic_test';
+import {EnrichMathmlTest, EnrichSpeechTest, RebuildStreeTest, SemanticApiTest,
+        SemanticTreeTest} from './semantic_test';
 import {SpeechTest} from './speech_test';
 import {SummaryTest} from './summary_test';
 import {SymbolTest} from './symbol_test';
@@ -45,6 +43,7 @@ const map = new Map<string, any>([
   ['enrichSpeech', EnrichSpeechTest],
   ['prefix', PrefixTest],
   ['rebuild', RebuildStreeTest],
+  ['semanticApi', SemanticApiTest],
   ['speech', SpeechTest],
   ['stree', SemanticTreeTest],
   ['summary', SummaryTest],

@@ -17,12 +17,11 @@
 import {ColorPickerTest} from './color_picker_test';
 import {DomTest} from './dom_test';
 import {MarkupTest} from './markup_test';
-import {SemanticApiTest} from './semantic_api_test';
 import {SpeechRuleTest} from './speech_rule_test';
 import {WalkerTest} from './walker_test';
 
 /**
- * List that collates all the basic funcional and unit tests.
+ * List that collates old style functional and unit tests.
  */
 export const testList: any[] = [ColorPickerTest, DomTest, MarkupTest,
-                                SemanticApiTest, SpeechRuleTest, WalkerTest];
+                                SpeechRuleTest, WalkerTest];
