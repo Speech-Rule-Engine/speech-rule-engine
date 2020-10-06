@@ -2,7 +2,7 @@
   "name": "SummaryFrenchTest",
   "factory": "summary",
   "base": "input/common/summary_test.json",
-  "information": "Mathspeak Summary French tests.",
+  "information": "Mathspeak French Summary tests.",
   "locale": "fr",
   "domain": "mathspeak",
   "active": "SummaryFrench",
