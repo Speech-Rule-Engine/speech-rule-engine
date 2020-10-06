@@ -20,18 +20,18 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-goog.provide('sre.CollapseTest');
+goog.provide('sretest.CollapseTest');
 
-goog.require('sre.SpeechTest');
+goog.require('sretest.SpeechTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.SpeechTest}
+ * @extends {sretest.SpeechTest}
  */
-sre.CollapseTest = function() {
-  sre.CollapseTest.base(this, 'constructor');
+sretest.CollapseTest = function() {
+  sretest.CollapseTest.base(this, 'constructor');
 
   /**
    * @override
@@ -41,25 +41,25 @@ sre.CollapseTest = function() {
   this.domain = 'mathspeak';
 
 };
-goog.inherits(sre.CollapseTest, sre.SpeechTest);
+goog.inherits(sretest.CollapseTest, sretest.SpeechTest);
 
 
 /**
  * @override
  */
-sre.CollapseTest.prototype.executeTest = function(
+sretest.CollapseTest.prototype.executeTest = function(
     mml, answer, opt_style) {
   mml = '<maction><mtext>action</mtext><mrow data-semantic-id="A">' +
       mml + '</mrow></maction>';
-  sre.CollapseTest.base(this, 'executeTest', mml, answer, opt_style);
+  sretest.CollapseTest.base(this, 'executeTest', mml, answer, opt_style);
 };
 
 
 /**
  * @override
  */
-sre.CollapseTest.prototype.header = function() {
-  var header = sre.CollapseTest.base(this, 'header');
+sretest.CollapseTest.prototype.header = function() {
+  var header = sretest.CollapseTest.base(this, 'header');
   var script = 'var toggleAll = function() {' +
       'var actions = document.getElementsByTagName(\'mjx-maction\');' +
       ' for (var i = 0, action; action = actions[i]; i++) {' +
@@ -72,14 +72,14 @@ sre.CollapseTest.prototype.header = function() {
 /**
  * @override
  */
-sre.CollapseTest.prototype.getSpeech = function(mathMl) {
-  var mml = sre.DomUtil.parseInput(mathMl);
-  var stree = sre.Semantic.getTree(mml);
+sretest.CollapseTest.prototype.getSpeech = function(mathMl) {
+  var mml = sretest.TestExternal.sre.DomUtil.parseInput(mathMl);
+  var stree = sretest.TestExternal.sre.Semantic.getTree(mml);
   var xml = stree.xml();
   xml.childNodes[0].setAttribute('id', 'A');
-  sre.SpeechGeneratorUtil.connectAllMactions(mml, xml);
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(xml);
-  return sre.AuralRendering.getInstance().markup(descrs);
+  sretest.TestExternal.sre.SpeechGeneratorUtil.connectAllMactions(mml, xml);
+  var descrs = sretest.TestExternal.sre.SpeechGeneratorUtil.computeSpeech(xml);
+  return sretest.TestExternal.sre.AuralRendering.getInstance().markup(descrs);
 };
 
 

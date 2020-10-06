@@ -1,13 +1,13 @@
-goog.provide('sre.TestUtil');
+goog.provide('sretest.TestUtil');
 
 
 /**
  * @enum {string}
  */
-sre.TestUtil.path = {
-  INPUT: sre.TestExternal.path + 'input/',
-  OUTPUT: sre.TestExternal.path + 'output/',
-  EXPECTED: sre.TestExternal.path + 'expected/',
+sretest.TestUtil.path = {
+  INPUT: sretest.TestExternal.path + 'input/',
+  OUTPUT: sretest.TestExternal.path + 'output/',
+  EXPECTED: sretest.TestExternal.path + 'expected/',
 };
 
 
@@ -19,13 +19,13 @@ sre.TestUtil.path = {
  * @constructor
  * @extends {Error}
  */
-sre.TestUtil.Error = function(msg, value) {
-  sre.TestUtil.Error.base(this, 'constructor');
+sretest.TestUtil.Error = function(msg, value) {
+  sretest.TestUtil.Error.base(this, 'constructor');
   this.name = 'SRE Test Error';
   this.message = msg;
   this.value = value;
 };
-goog.inherits(sre.TestUtil.Error, Error);
+goog.inherits(sretest.TestUtil.Error, Error);
 
 
 /**
@@ -33,12 +33,12 @@ goog.inherits(sre.TestUtil.Error, Error);
  * @param {string} file The filename.
  * @return {Object} The parsed JSON object.
  */
-sre.TestUtil.loadJson = function(file) {
+sretest.TestUtil.loadJson = function(file) {
   try {
     return /** @type {Object} */(
-        JSON.parse(sre.SystemExternal.fs.readFileSync(file)));
+        JSON.parse(sretest.TestExternal.fs.readFileSync(file)));
   } catch (e) {
-    throw new sre.TestUtil.Error('Bad filename or content', file);
+    throw new sretest.TestUtil.Error('Bad filename or content', file);
   }
 };
 
@@ -49,15 +49,15 @@ sre.TestUtil.loadJson = function(file) {
  * @param {string=} opt_path An optional path name.
  * @return {string} The actual filename with full path.
  */
-sre.TestUtil.fileExists = function(file, opt_path) {
-  if (sre.SystemExternal.fs.existsSync(file)) {
+sretest.TestUtil.fileExists = function(file, opt_path) {
+  if (sretest.TestExternal.fs.existsSync(file)) {
     return file;
   }
-  if (opt_path && sre.SystemExternal.fs.existsSync(opt_path + file)) {
+  if (opt_path && sretest.TestExternal.fs.existsSync(opt_path + file)) {
     return opt_path + file;
   }
-  let newFile = sre.TestExternal.path + file;
-  if (sre.SystemExternal.fs.existsSync(newFile)) {
+  let newFile = sretest.TestExternal.path + file;
+  if (sretest.TestExternal.fs.existsSync(newFile)) {
     return newFile;
   }
   return '';
@@ -78,7 +78,7 @@ sre.TestUtil.fileExists = function(file, opt_path) {
  * @return {Array} Done.
  */
 // [Array.<Object>, Array.<string>]
-sre.TestUtil.combineTests = function(input, expected, exclude) {
+sretest.TestUtil.combineTests = function(input, expected, exclude) {
   var warn = [];
   var results = [];
   if (expected === 'ALL') {

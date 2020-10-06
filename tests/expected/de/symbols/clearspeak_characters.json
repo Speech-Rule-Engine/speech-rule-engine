@@ -17124,12 +17124,12 @@
     },
     "√": {
       "expected": [
-        "Quadratwurzelzeichen"
+        "Quadratwurzel"
       ]
     },
     "∛": {
       "expected": [
-        "Kubikwurzelzeichen"
+        "Kubikwurzel"
       ]
     },
     "∜": {

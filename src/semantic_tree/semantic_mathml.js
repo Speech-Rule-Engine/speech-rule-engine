@@ -156,9 +156,14 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.fraction_ = function(node, children) {
+  if (!children.length) {
+    return this.getFactory().makeEmptyNode();
+  }
+  var upper = this.parse(children[0]);
+  var lower = children[1] ? this.parse(children[1]) :
+      this.getFactory().makeEmptyNode();
   var sem = sre.SemanticProcessor.getInstance().fractionLikeNode(
-      this.parse(children[0]), this.parse(children[1]),
-      node.getAttribute('linethickness'),
+      upper, lower, node.getAttribute('linethickness'),
       node.getAttribute('bevelled') === 'true');
   return sem;
 };
@@ -185,6 +190,9 @@ sre.SemanticMathml.prototype.limits_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.root_ = function(node, children) {
+  if (!children[1]) {
+    return this.sqrt_(node, children);
+  }
   return this.getFactory().makeBranchNode(
       sre.SemanticAttr.Type.ROOT,
       [this.parse(children[1]), this.parse(children[0])], []);
@@ -494,6 +502,9 @@ sre.SemanticMathml.prototype.action_ = function(node, children) {
 sre.SemanticMathml.prototype.dummy_ = function(node, children) {
   let unknown = this.getFactory().makeUnprocessed(node);
   unknown.role = /** @type {!sre.SemanticAttr.Role} */(node.tagName);
+  unknown.textContent = node.textContent;
+  // unknown.mathml.unshift(node);
+  // unknown.mathmlTree = node;
   return unknown;
 };
 

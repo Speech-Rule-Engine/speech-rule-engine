@@ -19,40 +19,39 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.MathspeakTest');
-goog.provide('sre.SpeechTest');
+goog.provide('sretest.MathspeakTest');
+goog.provide('sretest.SpeechTest');
 
-goog.require('sre.AbstractExamples');
-goog.require('sre.DynamicCstr');
+goog.require('sretest.AbstractExamples');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractExamples}
+ * @extends {sretest.AbstractExamples}
  */
-sre.SpeechTest = function() {
-  sre.SpeechTest.base(this, 'constructor');
+sretest.SpeechTest = function() {
+  sretest.SpeechTest.base(this, 'constructor');
 
   /**
    * @type {string}
    */
-  this.style = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE];
+  this.style = sretest.TestExternal.sre.DynamicCstr.DEFAULT_VALUES[sretest.TestExternal.sre.DynamicCstr.Axis.STYLE];
 
   /**
    * @type {string}
    */
-  this.domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+  this.domain = sretest.TestExternal.sre.DynamicCstr.DEFAULT_VALUES[sretest.TestExternal.sre.DynamicCstr.Axis.DOMAIN];
 
   /**
    * @type {string}
    */
-  this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+  this.locale = sretest.TestExternal.sre.DynamicCstr.DEFAULT_VALUES[sretest.TestExternal.sre.DynamicCstr.Axis.LOCALE];
 
   /**
    * @type {string}
    */
-  this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+  this.modality = sretest.TestExternal.sre.DynamicCstr.DEFAULT_VALUES[sretest.TestExternal.sre.DynamicCstr.Axis.MODALITY];
 
   /**
    * Specify particular rule sets for a test. By default all available rule sets
@@ -77,15 +76,15 @@ sre.SpeechTest = function() {
   this.pickFields.push('preference');
 
 };
-goog.inherits(sre.SpeechTest, sre.AbstractExamples);
+goog.inherits(sretest.SpeechTest, sretest.AbstractExamples);
 
 
 /**
  * @override
  */
-sre.SpeechTest.prototype.setActive = function(file, opt_ext) {
+sretest.SpeechTest.prototype.setActive = function(file, opt_ext) {
   this.fileDirectory = this.fileDirectory + this.locale + '/';
-  sre.SpeechTest.base(this, 'setActive', file, opt_ext);
+  sretest.SpeechTest.base(this, 'setActive', file, opt_ext);
 };
 
 
@@ -96,13 +95,13 @@ sre.SpeechTest.prototype.setActive = function(file, opt_ext) {
  * @param {string} answer Expected speech translation of MathML expression.
  * @param {string=} opt_style Mathspeak style for translation.
  */
-sre.SpeechTest.prototype.executeTest = function(mml, answer,
+sretest.SpeechTest.prototype.executeTest = function(mml, answer,
     opt_style) {
   var style = opt_style || this.style;
   var mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
           mml + '</math>';
-  sre.SpeechRuleEngine.getInstance().clearCache();
-  sre.System.getInstance().setupEngine(
+  sretest.TestExternal.sre.SpeechRuleEngine.getInstance().clearCache();
+  sretest.TestExternal.sre.System.getInstance().setupEngine(
       {domain: this.domain, style: style,
         modality: this.modality, rules: this.rules, locale: this.locale});
   var actual = this.getSpeech(mathMl);
@@ -117,8 +116,8 @@ sre.SpeechTest.prototype.executeTest = function(mml, answer,
  * @param {string} mathMl The element to transcribe.
  * @return {string} The resulting speech.
  */
-sre.SpeechTest.prototype.getSpeech = function(mathMl) {
-  return sre.System.getInstance().toSpeech(mathMl);
+sretest.SpeechTest.prototype.getSpeech = function(mathMl) {
+  return sretest.TestExternal.sre.System.getInstance().toSpeech(mathMl);
 };
 
 
@@ -129,23 +128,23 @@ sre.SpeechTest.prototype.getSpeech = function(mathMl) {
  * @param {string} style The speech style.
  * @param {Array.<string>=} opt_rest The rest that is to be appended.
  */
-sre.SpeechTest.prototype.appendRuleExample = function(
+sretest.SpeechTest.prototype.appendRuleExample = function(
     input, output, style, opt_rest) {
   var rest = opt_rest || [];
   var key = '<h2>' + this.information + ' Locale: ' + this.locale +
       ', Style: ' +
-      sre.SpeechTest.htmlCell_(sre.SpeechTest.styleMap_(style)) +
+      sretest.SpeechTest.htmlCell_(sretest.SpeechTest.styleMap_(style)) +
       '.</h2>';
   var outList = [input];
   if (this.compare) {
-    sre.System.getInstance().setupEngine(
+    sretest.TestExternal.sre.System.getInstance().setupEngine(
         {domain: this.domain, style: style,
           modality: this.modality, rules: this.rules, locale: 'en'});
     outList.push(this.getSpeech(input));
   }
   outList.push(output);
   this.appendExamples(
-      key, sre.SpeechTest.htmlRow(outList.concat(rest)));
+      key, sretest.SpeechTest.htmlRow(outList.concat(rest)));
 };
 
 
@@ -155,7 +154,7 @@ sre.SpeechTest.prototype.appendRuleExample = function(
  * @return {string} The prettier name.
  * @private
  */
-sre.SpeechTest.styleMap_ = function(style) {
+sretest.SpeechTest.styleMap_ = function(style) {
   var map = {'default': 'verbose',
     'sbrief': 'superbrief'};
   var newStyle = map[style] || style;
@@ -169,7 +168,7 @@ sre.SpeechTest.styleMap_ = function(style) {
  * @return {string} The HTML cell.
  * @private
  */
-sre.SpeechTest.htmlCell_ = function(entry) {
+sretest.SpeechTest.htmlCell_ = function(entry) {
   return '<td>' + entry + '</td>';
 };
 
@@ -179,18 +178,18 @@ sre.SpeechTest.htmlCell_ = function(entry) {
  * @param {Array.<number|string>} entries A list of entries.
  * @return {string} The HTML cell.
  */
-sre.SpeechTest.htmlRow = function(entries) {
-  return entries.map(sre.SpeechTest.htmlCell_).join('');
+sretest.SpeechTest.htmlRow = function(entries) {
+  return entries.map(sretest.SpeechTest.htmlCell_).join('');
 };
 
 
 /**
  * @override
  */
-sre.SpeechTest.prototype.join = function(examples) {
+sretest.SpeechTest.prototype.join = function(examples) {
   for (var i = 0, l = examples.length; i < l; i++) {
     examples[i] = '<tr>' +
-        sre.SpeechTest.htmlCell_(i) + examples[i] +
+        sretest.SpeechTest.htmlCell_(i) + examples[i] +
         '</tr>';
   }
   return '\n<table>\n' + examples.join('\n') + '\n</table>\n';
@@ -200,7 +199,7 @@ sre.SpeechTest.prototype.join = function(examples) {
 /**
  * @override
  */
-sre.SpeechTest.prototype.header = function() {
+sretest.SpeechTest.prototype.header = function() {
   var mathjax =
       '<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">' +
       '</script>\n<script id="MathJax-script" async ' +
@@ -220,7 +219,7 @@ sre.SpeechTest.prototype.header = function() {
 /**
  * @override
  */
-sre.SpeechTest.prototype.footer = function() {
+sretest.SpeechTest.prototype.footer = function() {
   return '\n</body>\n</html>';
 };
 
@@ -228,8 +227,8 @@ sre.SpeechTest.prototype.footer = function() {
 /**
  * @override
  */
-sre.SpeechTest.prototype.prepare = function() {
-  sre.SpeechTest.base(this, 'prepare');
+sretest.SpeechTest.prototype.prepare = function() {
+  sretest.SpeechTest.base(this, 'prepare');
   this.modality = this.jsonTests.modality || this.modality;
   this.locale = this.jsonTests.locale || this.locale;
   this.domain = this.jsonTests.domain || this.domain;
@@ -245,7 +244,7 @@ sre.SpeechTest.prototype.prepare = function() {
 /**
  * @override
  */
-sre.SpeechTest.prototype.method = function(var_args) {
+sretest.SpeechTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.executeTest(args[0], args[1], args[2]);
 };

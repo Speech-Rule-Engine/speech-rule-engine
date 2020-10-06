@@ -140,4 +140,3 @@ module.exports.engineSetup = sre.System.getInstance().engineSetup;
 if (global && global.SRE_JSON_PATH) {
   sre.System.setAsync();
 }
-

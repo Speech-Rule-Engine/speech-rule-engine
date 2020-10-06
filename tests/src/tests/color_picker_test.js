@@ -18,26 +18,26 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-goog.provide('sre.ColorPickerTest');
+goog.provide('sretest.ColorPickerTest');
 
-goog.require('sre.AbstractTest');
-goog.require('sre.ColorPicker');
+goog.require('sretest.AbstractTest');
+goog.require('sretest.TestExternal');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sretest.AbstractTest}
  */
-sre.ColorPickerTest = function() {
-  sre.ColorPickerTest.base(this, 'constructor');
+sretest.ColorPickerTest = function() {
+  sretest.ColorPickerTest.base(this, 'constructor');
 
   /**
    * @override
    */
   this.information = 'Color Picker tests.';
 };
-goog.inherits(sre.ColorPickerTest, sre.AbstractTest);
+goog.inherits(sretest.ColorPickerTest, sretest.AbstractTest);
 
 
 /**
@@ -46,8 +46,8 @@ goog.inherits(sre.ColorPickerTest, sre.AbstractTest);
  * @param {sre.ColorPicker.Color} color The color specification.
  * @param {string} expected The expected rgba string.
  */
-sre.ColorPickerTest.prototype.executeColorTest = function(color, expected) {
-  var picker = new sre.ColorPicker(color);
+sretest.ColorPickerTest.prototype.executeColorTest = function(color, expected) {
+  var picker = new sretest.TestExternal.sre.ColorPicker(color);
   this.assert.equal(picker.rgba().background, expected);
 };
 
@@ -55,7 +55,7 @@ sre.ColorPickerTest.prototype.executeColorTest = function(color, expected) {
 /**
  * Test RGB colors.
  */
-sre.ColorPickerTest.prototype.testDefault = function() {
+sretest.ColorPickerTest.prototype.testDefault = function() {
   this.executeColorTest({color: 'deflt'}, 'rgba(0,0,255,1)');
   this.executeColorTest({color: 'deflt', alpha: .5}, 'rgba(0,0,255,0.5)');
 };
@@ -64,7 +64,7 @@ sre.ColorPickerTest.prototype.testDefault = function() {
 /**
  * Test RGB colors.
  */
-sre.ColorPickerTest.prototype.testNamedRgb = function() {
+sretest.ColorPickerTest.prototype.testNamedRgb = function() {
   this.executeColorTest({color: 'red'}, 'rgba(255,0,0,1)');
   this.executeColorTest({color: 'green'}, 'rgba(0,255,0,1)');
   this.executeColorTest({color: 'blue'}, 'rgba(0,0,255,1)');
@@ -74,7 +74,7 @@ sre.ColorPickerTest.prototype.testNamedRgb = function() {
 /**
  * Test RGB colors with alpha
  */
-sre.ColorPickerTest.prototype.testNamedRgbAlpha = function() {
+sretest.ColorPickerTest.prototype.testNamedRgbAlpha = function() {
   this.executeColorTest({color: 'red', alpha: .5}, 'rgba(255,0,0,0.5)');
   this.executeColorTest({color: 'green', alpha: .5}, 'rgba(0,255,0,0.5)');
   this.executeColorTest({color: 'blue', alpha: .5}, 'rgba(0,0,255,0.5)');
@@ -84,7 +84,7 @@ sre.ColorPickerTest.prototype.testNamedRgbAlpha = function() {
 /**
  * Test CMYK colors.
  */
-sre.ColorPickerTest.prototype.testNamedCmyk = function() {
+sretest.ColorPickerTest.prototype.testNamedCmyk = function() {
   this.executeColorTest({color: 'cyan'}, 'rgba(0,255,255,1)');
   this.executeColorTest({color: 'magenta'}, 'rgba(255,0,255,1)');
   this.executeColorTest({color: 'yellow'}, 'rgba(255,255,0,1)');
@@ -95,7 +95,7 @@ sre.ColorPickerTest.prototype.testNamedCmyk = function() {
 /**
  * Test CMYK colors with alpha
  */
-sre.ColorPickerTest.prototype.testNamedCmykAlpha = function() {
+sretest.ColorPickerTest.prototype.testNamedCmykAlpha = function() {
   this.executeColorTest({color: 'cyan', alpha: .5}, 'rgba(0,255,255,0.5)');
   this.executeColorTest({color: 'magenta', alpha: .5}, 'rgba(255,0,255,0.5)');
   this.executeColorTest({color: 'yellow', alpha: .5}, 'rgba(255,255,0,0.5)');
@@ -106,7 +106,7 @@ sre.ColorPickerTest.prototype.testNamedCmykAlpha = function() {
 /**
  * Test colors given in channel style.
  */
-sre.ColorPickerTest.prototype.testChannelColor = function() {
+sretest.ColorPickerTest.prototype.testChannelColor = function() {
   this.executeColorTest({red: 100, green: 0, blue: 0}, 'rgba(100,0,0,1)');
   this.executeColorTest({red: 0, green: 100, blue: 0}, 'rgba(0,100,0,1)');
   this.executeColorTest({red: 0, green: 0, blue: 100}, 'rgba(0,0,100,1)');
@@ -117,7 +117,7 @@ sre.ColorPickerTest.prototype.testChannelColor = function() {
 /**
  * Test colors given in channel style with alpha.
  */
-sre.ColorPickerTest.prototype.testChannelColorAlpha = function() {
+sretest.ColorPickerTest.prototype.testChannelColorAlpha = function() {
   this.executeColorTest({red: 100, green: 0, blue: 0, alpha: .5},
                         'rgba(100,0,0,0.5)');
   this.executeColorTest({red: 0, green: 100, blue: 0, alpha: .5},
@@ -133,7 +133,7 @@ sre.ColorPickerTest.prototype.testChannelColorAlpha = function() {
  * Test colors given with values color channels greater than 255 or alpha
  * channel greater than 1.
  */
-sre.ColorPickerTest.prototype.testChannelMax = function() {
+sretest.ColorPickerTest.prototype.testChannelMax = function() {
   this.executeColorTest({red: 256, green: 0, blue: 0, alpha: 0},
                         'rgba(255,0,0,0)');
   this.executeColorTest({red: 0, green: 256, blue: 0, alpha: 0},
@@ -148,7 +148,7 @@ sre.ColorPickerTest.prototype.testChannelMax = function() {
 /**
  * Test colors given with values color or alpha channels less than 0.
  */
-sre.ColorPickerTest.prototype.testChannelMin = function() {
+sretest.ColorPickerTest.prototype.testChannelMin = function() {
   this.executeColorTest({red: -256, green: 0, blue: 0, alpha: 0},
                         'rgba(0,0,0,0)');
   this.executeColorTest({red: 0, green: -256, blue: 0, alpha: 0},
@@ -163,7 +163,7 @@ sre.ColorPickerTest.prototype.testChannelMin = function() {
 /**
  * Test colors given with color channel values given as floating point numbers.
  */
-sre.ColorPickerTest.prototype.testChannelFloat = function() {
+sretest.ColorPickerTest.prototype.testChannelFloat = function() {
   this.executeColorTest({red: 1.5, green: 0, blue: 0, alpha: 0},
                         'rgba(2,0,0,0)');
   this.executeColorTest({red: 0, green: 1.4, blue: 0, alpha: 0},

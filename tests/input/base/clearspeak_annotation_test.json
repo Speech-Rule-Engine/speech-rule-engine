@@ -1,0 +1,525 @@
+{
+  "tests": {
+    "Numbers_0": {
+      "test": true,
+      "input": "<mn>1</mn>"
+    },
+    "Numbers_1": {
+      "test": true,
+      "input": "<mn>1.5</mn>"
+    },
+    "Numbers_2": {
+      "test": true,
+      "input": "<mn>1.5e+10</mn>"
+    },
+    "Numbers_3": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac>"
+    },
+    "Numbers_4": {
+      "test": true,
+      "input": "<mfrac><mn>5</mn><mn>3</mn></mfrac>"
+    },
+    "Numbers_5": {
+      "test": true,
+      "input": "<mfrac><mi>a</mi><mn>2</mn></mfrac>"
+    },
+    "Numbers_6": {
+      "test": true,
+      "input": "<mfrac><mi>5</mi><mn>3.5</mn></mfrac>"
+    },
+    "Letters_0": {
+      "test": true,
+      "input": "<mi>a</mi>"
+    },
+    "Letters_1": {
+      "test": true,
+      "input": "<mi>A</mi>"
+    },
+    "Letters_2": {
+      "test": true,
+      "input": "<mi>a</mi><mi>b</mi>"
+    },
+    "Letters_3": {
+      "test": true,
+      "input": "<mi>a</mi><mi>B</mi>"
+    },
+    "Letters_4": {
+      "test": true,
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi>"
+    },
+    "Letters_5": {
+      "test": true,
+      "input": "<mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "Letters_6": {
+      "test": true,
+      "input": "<mi>ab</mi>"
+    },
+    "Letters_7": {
+      "test": true,
+      "input": "<mi>α</mi>"
+    },
+    "Letters_8": {
+      "test": true,
+      "input": "<mi>Α</mi>"
+    },
+    "Letters_9": {
+      "test": true,
+      "input": "<mi>α</mi><mi>b</mi>"
+    },
+    "Letters_10": {
+      "test": true,
+      "input": "<mi>α</mi><mo>+</mo><mi>b</mi>"
+    },
+    "Letters_11": {
+      "test": true,
+      "input": "<mi>α</mi><mi>B</mi>"
+    },
+    "Letters_12": {
+      "test": true,
+      "input": "<mi>α</mi><mi>b</mi><mi>c</mi>"
+    },
+    "Letters_13": {
+      "test": true,
+      "input": "<mi>αb</mi>"
+    },
+    "Letters_14": {
+      "test": true,
+      "input": "<mi>ℵ</mi>"
+    },
+    "Letters_15": {
+      "test": true,
+      "input": "<mi>ℶ</mi>"
+    },
+    "Letters_16": {
+      "test": true,
+      "input": "<mi>ℵ</mi><mi>b</mi>"
+    },
+    "Letters_17": {
+      "test": true,
+      "input": "<mi>ℵ</mi><mi>B</mi>"
+    },
+    "Letters_18": {
+      "test": true,
+      "input": "<mi>ℵ</mi><mo>+</mo><mi>B</mi>"
+    },
+    "Letters_19": {
+      "test": true,
+      "input": "<mi>ℵ</mi><mi>b</mi><mi>c</mi>"
+    },
+    "Letters_20": {
+      "test": true,
+      "input": "<mi>ℵb</mi>"
+    },
+    "Letters_21": {
+      "test": true,
+      "input": "<mi>α</mi><mi>b</mi><mi>ℶ</mi>"
+    },
+    "Mixed_0": {
+      "test": true,
+      "input": "<mn>1</mn><mi>a</mi>"
+    },
+    "Mixed_1": {
+      "test": true,
+      "input": "<mn>1</mn><mi>a</mi><mi>b</mi>"
+    },
+    "Mixed_2": {
+      "test": true,
+      "input": "<mn>1</mn><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "Mixed_3": {
+      "test": true,
+      "input": "<mn>1.5</mn><mi>a</mi>"
+    },
+    "Mixed_4": {
+      "test": true,
+      "input": "<mn>1.5</mn><mi>a</mi><mi>b</mi>"
+    },
+    "Mixed_5": {
+      "test": true,
+      "input": "<mn>1.5</mn><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "Mixed_6": {
+      "test": true,
+      "input": "<mn>1.5e+10</mn><mi>a</mi>"
+    },
+    "Mixed_7": {
+      "test": true,
+      "input": "<mn>1.5e+10</mn><mi>a</mi><mi>b</mi>"
+    },
+    "Mixed_8": {
+      "test": true,
+      "input": "<mn>1.5e+10</mn><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "Mixed_9": {
+      "test": true,
+      "input": "<mn>1</mn><mi>2</mi><mi>b</mi>"
+    },
+    "Mixed_10": {
+      "test": true,
+      "input": "<mn>1</mn><mi>a</mi><mi>3</mi>"
+    },
+    "Mixed_11": {
+      "test": true,
+      "input": "<mn>1</mn><mi>2</mi>"
+    },
+    "Mixed_12": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>"
+    },
+    "Mixed_13": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi><mi>b</mi>"
+    },
+    "Mixed_14": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "Mixed_15": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2</mi><mi>b</mi>"
+    },
+    "Mixed_16": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi><mi>3</mi>"
+    },
+    "Mixed_17": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2</mi>"
+    },
+    "Mixed_18": {
+      "test": true,
+      "input": "<mfrac><mn>1.5</mn><mn>2</mn></mfrac><mi>a</mi>"
+    },
+    "Mixed_19": {
+      "test": true,
+      "input": "<mfrac><mn>1.5</mn><mn>2</mn></mfrac><mi>a</mi><mi>b</mi>"
+    },
+    "Mixed_20": {
+      "test": true,
+      "input": "<mfrac><mn>1.5</mn><mn>2</mn></mfrac><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "Degree_0": {
+      "test": true,
+      "input": "<mn>45</mn><mo>°</mo>"
+    },
+    "Degree_1": {
+      "test": true,
+      "input": "<mo>-</mo><mn>32.5</mn><mo>°</mo>"
+    },
+    "Degree_2": {
+      "test": true,
+      "input": "<mi>x</mi><mo>°</mo>"
+    },
+    "Degree_3": {
+      "test": true,
+      "input": "<mo>-</mo><mi>x</mi><mo>°</mo>"
+    },
+    "Degree_4": {
+      "test": true,
+      "input": "<mn>2</mn><mi>x</mi><mo>°</mo>"
+    },
+    "Degree_5": {
+      "test": true,
+      "input": "<mi>xy</mi><mo>°</mo>"
+    },
+    "Degree_6": {
+      "test": true,
+      "input": "<mo>-</mo><mi>xy</mi><mo>°</mo>"
+    },
+    "Degree_7": {
+      "test": true,
+      "input": "<mo>°</mo><mi>x</mi>"
+    },
+    "Degree_8": {
+      "test": true,
+      "input": "<mi>x</mi><mi>y</mi><mo>°</mo>"
+    },
+    "Functions_0": {
+      "test": true,
+      "input": "<mi>sin</mi><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "Functions_1": {
+      "test": true,
+      "input": "<mi>sin</mi><mo>(</mo><mn>45</mn><mo>°</mo><mo>)</mo>"
+    },
+    "Functions_2": {
+      "test": true,
+      "input": "<msup><mi>sin</mi><mn>2</mn></msup><mi>x</mi>"
+    },
+    "Functions_3": {
+      "test": true,
+      "input": "<mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "Functions_4": {
+      "test": true,
+      "input": "<msup><mi>f</mi><mn>2</mn></msup><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "Functions_5": {
+      "test": true,
+      "input": "<mo>-</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo>"
+    },
+    "Functions_6": {
+      "test": true,
+      "input": "<mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mo>)</mo>"
+    },
+    "Functions_7": {
+      "test": true,
+      "input": "<mi>sin</mi><mo>(</mo><mn>3</mn><mi>x</mi><mi>y</mi><mo>)</mo>"
+    },
+    "Functions_8": {
+      "test": true,
+      "input": "<mi>sin</mi><mo>(</mo><mo>-</mo><mi>x</mi><mi>y</mi><mo>)</mo>"
+    },
+    "Functions_9": {
+      "test": true,
+      "input": "<mi>sin</mi><mo>(</mo><mi>x</mi>"
+    },
+    "Functions_10": {
+      "test": true,
+      "input": "<mi>sin</mi><mo>(</mo><mi>x</mi><mi>y</mi><mi>z</mi><mo>)</mo>"
+    },
+    "Functions_11": {
+      "test": true,
+      "input": "<mi>sin</mi><mo>(</mo><mo>-</mo><mi>x</mi><mi>y</mi><mi>z</mi><mo>)</mo>"
+    },
+    "_comment1_": " Not sure if these should be like that!",
+    "Functions_12": {
+      "test": true,
+      "input": "<mi>g</mi><mo>(</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo>"
+    },
+    "Functions_13": {
+      "test": true,
+      "input": "<mi>sin</mi><mi>cos</mi><mi>x</mi>"
+    },
+    "Functions_14": {
+      "test": true,
+      "input": "<mo>-</mo><mi>sin</mi><mi>cos</mi><mi>x</mi>"
+    },
+    "NegativeNumbers_0": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1</mn>"
+    },
+    "NegativeNumbers_1": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1.5</mn>"
+    },
+    "NegativeNumbers_2": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1.5e+10</mn>"
+    },
+    "NegativeNumbers_3": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>"
+    },
+    "NegativeNumbers_4": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>5</mn><mn>3</mn></mfrac>"
+    },
+    "NegativeNumbers_5": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mi>a</mi><mn>2</mn></mfrac>"
+    },
+    "NegativeNumbers_6": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mi>5</mi><mn>3.5</mn></mfrac>"
+    },
+    "NegativeNumbers_7": {
+      "test": true,
+      "input": "<mn>2</mn><mo>-</mo><mn>1</mn>"
+    },
+    "NegativeNumbers_8": {
+      "test": true,
+      "input": "<mo>--</mo><mn>1</mn>"
+    },
+    "NegativeNumbers_9": {
+      "test": true,
+      "input": "<mo>+</mo><mn>1</mn>"
+    },
+    "NegativeNumbers_10": {
+      "test": true,
+      "input": "<mo>-</mo><mo>-</mo><mn>1</mn>"
+    },
+    "NegativeLetters_0": {
+      "test": true,
+      "input": "<mo>-</mo><mi>a</mi>"
+    },
+    "NegativeLetters_1": {
+      "test": true,
+      "input": "<mo>-</mo><mi>A</mi>"
+    },
+    "NegativeLetters_2": {
+      "test": true,
+      "input": "<mo>-</mo><mi>a</mi><mi>b</mi>"
+    },
+    "NegativeLetters_3": {
+      "test": true,
+      "input": "<mo>-</mo><mi>a</mi><mi>B</mi>"
+    },
+    "NegativeLetters_4": {
+      "test": true,
+      "input": "<mo>-</mo><mi>a</mi><mo>+</mo><mi>b</mi>"
+    },
+    "NegativeLetters_5": {
+      "test": true,
+      "input": "<mo>-</mo><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "NegativeLetters_6": {
+      "test": true,
+      "input": "<mo>-</mo><mi>ab</mi>"
+    },
+    "NegativeLetters_7": {
+      "test": true,
+      "input": "<mo>-</mo><mi>α</mi>"
+    },
+    "NegativeLetters_8": {
+      "test": true,
+      "input": "<mo>-</mo><mi>Α</mi>"
+    },
+    "NegativeLetters_9": {
+      "test": true,
+      "input": "<mo>-</mo><mi>α</mi><mi>b</mi>"
+    },
+    "NegativeLetters_10": {
+      "test": true,
+      "input": "<mo>-</mo><mi>α</mi><mo>+</mo><mi>b</mi>"
+    },
+    "NegativeLetters_11": {
+      "test": true,
+      "input": "<mo>-</mo><mi>α</mi><mi>B</mi>"
+    },
+    "NegativeLetters_12": {
+      "test": true,
+      "input": "<mo>-</mo><mi>α</mi><mi>b</mi><mi>c</mi>"
+    },
+    "NegativeLetters_13": {
+      "test": true,
+      "input": "<mo>-</mo><mi>αb</mi>"
+    },
+    "NegativeLetters_14": {
+      "test": true,
+      "input": "<mo>-</mo><mi>ℵ</mi>"
+    },
+    "NegativeLetters_15": {
+      "test": true,
+      "input": "<mo>-</mo><mi>ℶ</mi>"
+    },
+    "NegativeLetters_16": {
+      "test": true,
+      "input": "<mo>-</mo><mi>ℵ</mi><mi>b</mi>"
+    },
+    "NegativeLetters_17": {
+      "test": true,
+      "input": "<mo>-</mo><mi>ℵ</mi><mi>B</mi>"
+    },
+    "NegativeLetters_18": {
+      "test": true,
+      "input": "<mo>-</mo><mi>ℵ</mi><mo>+</mo><mi>B</mi>"
+    },
+    "NegativeLetters_19": {
+      "test": true,
+      "input": "<mo>-</mo><mi>ℵ</mi><mi>b</mi><mi>c</mi>"
+    },
+    "NegativeLetters_20": {
+      "test": true,
+      "input": "<mo>-</mo><mi>ℵb</mi>"
+    },
+    "NegativeLetters_21": {
+      "test": true,
+      "input": "<mo>-</mo><mi>α</mi><mi>b</mi><mi>ℶ</mi>"
+    },
+    "NegativeMixed_0": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1</mn><mi>a</mi>"
+    },
+    "NegativeMixed_1": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1</mn><mi>a</mi><mi>b</mi>"
+    },
+    "NegativeMixed_2": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1</mn><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "NegativeMixed_3": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1.5</mn><mi>a</mi>"
+    },
+    "NegativeMixed_4": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1.5</mn><mi>a</mi><mi>b</mi>"
+    },
+    "NegativeMixed_5": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1.5</mn><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "NegativeMixed_6": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1.5e+10</mn><mi>a</mi>"
+    },
+    "NegativeMixed_7": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1.5e+10</mn><mi>a</mi><mi>b</mi>"
+    },
+    "NegativeMixed_8": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1.5e+10</mn><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "NegativeMixed_9": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1</mn><mi>2</mi><mi>b</mi>"
+    },
+    "NegativeMixed_10": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1</mn><mi>a</mi><mi>3</mi>"
+    },
+    "NegativeMixed_11": {
+      "test": true,
+      "input": "<mo>-</mo><mn>1</mn><mi>2</mi>"
+    },
+    "NegativeMixed_12": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>"
+    },
+    "NegativeMixed_13": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi><mi>b</mi>"
+    },
+    "NegativeMixed_14": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "NegativeMixed_15": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2</mi><mi>b</mi>"
+    },
+    "NegativeMixed_16": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi><mi>3</mi>"
+    },
+    "NegativeMixed_17": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>2</mi>"
+    },
+    "NegativeMixed_18": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>1.5</mn><mn>2</mn></mfrac><mi>a</mi>"
+    },
+    "NegativeMixed_19": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>1.5</mn><mn>2</mn></mfrac><mi>a</mi><mi>b</mi>"
+    },
+    "NegativeMixed_20": {
+      "test": true,
+      "input": "<mo>-</mo><mfrac><mn>1.5</mn><mn>2</mn></mfrac><mi>a</mi><mi>b</mi><mi>c</mi>"
+    },
+    "NegativeMixed_21": {
+      "test": false,
+      "input": "<mo>-</mo><mi>x</mi><mi>y</mi><mo>°</mo>"
+    },
+    "NegativeMixed_22": {
+      "test": false,
+      "input": "<mo>-</mo><mi>sin</mi><mn>x</mn>"
+    }
+  }
+}

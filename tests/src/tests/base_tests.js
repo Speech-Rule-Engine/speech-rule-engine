@@ -13,29 +13,25 @@
 // limitations under the License.
 
 
-goog.provide('sre.BaseTests');
+goog.provide('sretest.BaseTests');
 
-goog.require('sre.ApiTest');
-goog.require('sre.ClearspeakAnnotationTest');
-goog.require('sre.ColorPickerTest');
-goog.require('sre.DomTest');
-goog.require('sre.MarkupTest');
-goog.require('sre.SemanticApiTest');
-goog.require('sre.SpeechRuleTest');
-goog.require('sre.WalkerTest');
+goog.require('sretest.ColorPickerTest');
+goog.require('sretest.DomTest');
+goog.require('sretest.MarkupTest');
+goog.require('sretest.SemanticApiTest');
+goog.require('sretest.SpeechRuleTest');
+goog.require('sretest.WalkerTest');
 
 
 /**
  * List that collates all the basic funcional and unit tests.
  * @type {Array}
  */
-sre.BaseTests.testList = [
-  sre.ApiTest,
-  sre.ClearspeakAnnotationTest,
-  sre.ColorPickerTest,
-  sre.DomTest,
-  sre.MarkupTest,
-  sre.SemanticApiTest,
-  sre.SpeechRuleTest,
-  sre.WalkerTest
+sretest.BaseTests.testList = [
+  sretest.ColorPickerTest,
+  sretest.DomTest,
+  sretest.MarkupTest,
+  sretest.SemanticApiTest,
+  sretest.SpeechRuleTest,
+  sretest.WalkerTest
 ];
