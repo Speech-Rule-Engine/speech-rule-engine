@@ -41,9 +41,7 @@ LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
 TEST_DIR = $(abspath ./tests)
 TEST_TARGET = $(LIB_DIR)/sre_test.js
 TEST_RUNNER = $(TEST_DIR)/dist/sretest.js
-TEST_DEPS = $(TEST_DIR)/src/deps.js
 TEST = $(BIN_DIR)/test_sre
-TEST_SRC = $(TEST_DIR)/src/*/*.js
 
 JSDOC = $(NODE_MODULES)/.bin/jsdoc
 JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
@@ -207,14 +205,6 @@ clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_
 ##################################################################
 # Extern files.
 ##################################################################
-TEST_EXTERN_FILES = $(shell find $(TEST_DIR) -type f -name 'externs.js')
-TEST_FLAGS = $(foreach extern, $(TEST_EXTERN_FILES), $(MAKE_EXTERN_FLAG))
-
-test_deps: $(TEST_DEPS)
-
-$(TEST_DEPS):
-	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
-	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) $(TEST_DIR)" > $(TEST_DEPS)
 
 test: directories deps test_compile test_script maps run_test
 
@@ -252,7 +242,6 @@ $(TEST_DIR)/node_modules:
 
 clean_test:
 	rm -f $(TEST_TARGET)
-	rm -f $(TEST_DEPS)
 	rm -f $(TEST_RUNNER)
 	rm -f $(TEST)
 
