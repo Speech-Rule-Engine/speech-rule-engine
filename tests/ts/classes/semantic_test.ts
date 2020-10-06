@@ -196,8 +196,7 @@ export class SemanticTreeTest extends SemanticTest {
    * @param opt_brief Brief XML output.
    */
   public executeTest(mml: string, sml: string, opt_brief?: boolean) {
-    let mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
-      mml + '</math>';
+    let mathMl = sre.Enrich.prepareMmlString(mml);
     let node = sre.DomUtil.parseInput(mathMl);
     let sxml = (new sre.SemanticTree(node)).xml(opt_brief);
     let dp = new xmldom.DOMParser();

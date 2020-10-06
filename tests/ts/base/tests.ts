@@ -93,12 +93,12 @@ export class Tests {
   constructor() {
     Tests.environmentVars.forEach(x => this.getEnvironment(x));
     let file = this.environment['FILE'] as string[];
-    let locale = this.environment['LOCALE'] as string[];
     if (file) {
       let names: {[key: string]: Function} = {};
       Tests.allTests.map(x => names[x.name] = x);
       this.testList = file.map((x: string) =>  names[x]);
     }
+    let locale = this.environment['LOCALE'] as string[];
     if (locale && locale[0] === 'Base') {
       this.testList = this.testList.concat(BaseTests.testList);
     }
@@ -111,11 +111,8 @@ export class Tests {
 
     if (this.environment['JSON']) {
       let files = (
-        this.environment['FILES'] || Tests.allJson() as string[]);
+        this.environment['FILES'] || this.getFiles());
       for (let key of files) {
-        // TODO: Filter for file or locale or category
-        // Maybe apply filter to allJson.
-        // let [locale, block, file] = key.split('/');
         let test = TestFactory.get(key);
         if (test) {
           this.runner.registerTest(test);
@@ -125,12 +122,38 @@ export class Tests {
   }
 
   /**
+   * Finds and filter the JSON files wrt. locale or category block
+   */
+  public getFiles(): string[] {
+    let files = Tests.allJson() as string[];
+    let locale = this.environment['LOCALE'] as string[];
+    let block = this.environment['BLOCK'] as string[];
+    if (locale && locale.length) {
+      let result: string[] = [];
+      for (let loc of locale) {
+        result = result.concat(
+          files.filter(x => x.match(RegExp(`^${loc}/`))));
+      }
+      files = result;
+    }
+    if (block && block.length) {
+      let result: string[] = [];
+      for (let bl of block) {
+        result = result.concat(
+          files.filter(
+            x => x.match(RegExp(`^(\\w+/(?!\\w+/)|\\w+/${bl}/\\w+)`))));
+      }
+      files = result;
+    }
+    return files;
+  }
+
+  /**
    * Fills the list of environment variables.
    * @param variable The variable name.
    */
   public getEnvironment(variable: string) {
     let env = process.env[variable];
-    // Process here.
     if (!env) {
       return;
     }
@@ -164,8 +187,3 @@ export class Tests {
   }
 
 }
-
-// /**
-//  * Execute tests.
-//  */
-// new Tests().run();
