@@ -441,6 +441,63 @@ sre.SemanticPred.isSetNode = function(node) {
 };
 
 
+// TODO: Rewrite as dictionary or map!
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ * @private
+ */
+sre.SemanticPred.illegalSingleton_ = [
+  sre.SemanticAttr.Type.PUNCTUATION,
+  sre.SemanticAttr.Type.PUNCTUATED,
+  sre.SemanticAttr.Type.RELSEQ,
+  sre.SemanticAttr.Type.MULTIREL,
+  sre.SemanticAttr.Type.TABLE,
+  sre.SemanticAttr.Type.MULTILINE,
+  sre.SemanticAttr.Type.CASES,
+  sre.SemanticAttr.Type.INFERENCE
+];
+
+
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ * @private
+ */
+sre.SemanticPred.scriptedElement_ = [
+  sre.SemanticAttr.Type.LIMUPPER,
+  sre.SemanticAttr.Type.LIMLOWER,
+  sre.SemanticAttr.Type.LIMBOTH,
+  sre.SemanticAttr.Type.SUBSCRIPT,
+  sre.SemanticAttr.Type.SUPERSCRIPT,
+  sre.SemanticAttr.Type.UNDERSCORE,
+  sre.SemanticAttr.Type.OVERSCORE,
+  sre.SemanticAttr.Type.TENSOR
+];
+
+
+/**
+ * Is the node a likely candidate for a singleton set element.
+ * @param {sre.SemanticNode} node The node.
+ * @return {boolean} True if the node is a set.
+ */
+sre.SemanticPred.isSingletonSetContent = function(node) {
+  let type = node.type;
+  if (sre.SemanticPred.illegalSingleton_.indexOf(type) !== -1 ||
+      (type === sre.SemanticAttr.Type.INFIXOP &&
+       node.role !== sre.SemanticAttr.Role.IMPLICIT)) {
+    return false;
+  }
+  if (type === sre.SemanticAttr.Type.FENCED) {
+    return node.role === sre.SemanticAttr.Role.LEFTRIGHT ?
+        sre.SemanticPred.isSingletonSetContent(node.childNodes[0]) :
+        true;
+  }
+  if (sre.SemanticPred.scriptedElement_.indexOf(type) !== -1) {
+    return sre.SemanticPred.isSingletonSetContent(node.childNodes[0]);
+  }
+  return true;
+};
+
+
 /**
  * Tests if a number an integer or a decimal.
  * @param {sre.SemanticNode} node The semantic node.
@@ -463,8 +520,8 @@ sre.SemanticPred.isNumber = function(node) {
  */
 sre.SemanticPred.isUnitCounter = function(node) {
   return sre.SemanticPred.isNumber(node) ||
-    node.role === sre.SemanticAttr.Role.VULGAR ||
-    node.role === sre.SemanticAttr.Role.MIXED;
+      node.role === sre.SemanticAttr.Role.VULGAR ||
+      node.role === sre.SemanticAttr.Role.MIXED;
 };
 
 
@@ -477,7 +534,7 @@ sre.SemanticPred.isUnitCounter = function(node) {
 sre.SemanticPred.isPureUnit = function(node) {
   var children = node.childNodes;
   return node.role === sre.SemanticAttr.Role.UNIT && (
-    !children.length || children[0].role === sre.SemanticAttr.Role.UNIT
+      !children.length || children[0].role === sre.SemanticAttr.Role.UNIT
   );
 };
 
@@ -490,8 +547,8 @@ sre.SemanticPred.isPureUnit = function(node) {
  */
 sre.SemanticPred.isImplicit = function(node) {
   return node.role === sre.SemanticAttr.Role.IMPLICIT ||
-    (node.role === sre.SemanticAttr.Role.UNIT &&
-     !!node.contentNodes.length &&
-     node.contentNodes[0].textContent === sre.SemanticAttr.invisibleTimes()
-    );
+      (node.role === sre.SemanticAttr.Role.UNIT &&
+      !!node.contentNodes.length &&
+      node.contentNodes[0].textContent === sre.SemanticAttr.invisibleTimes()
+      );
 };

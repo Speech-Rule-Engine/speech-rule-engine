@@ -1,0 +1,245 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchMultiLineEntries",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_multi_line_entries.json",
+  "information": "French Clearspeak MultiLineEntries rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Multi-Line Entries Examples",
+    "Multiline001": {
+      "expected": "2 lignes, Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline002": {
+      "expected": "2 lignes, Ligne 1: x plus y; égale; 7. Ligne 2: 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline003": {
+      "expected": "2 lignes, Ligne 1: x; plus; y; égale; 7. Ligne 2: 2 x; plus; 3 y; égale; 17"
+    },
+    "Multiline004": {
+      "expected": "2 lignes, Ligne 1: Equation 1 deux points x plus y égale 7. Ligne 2: Equation 2 deux points 2 x, plus 3 y, égale 17"
+    },
+    "Multiline005": {
+      "expected": "2 lignes, Ligne 1: Equation 1 deux points; x plus y égale 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y, égale 17"
+    },
+    "Multiline006": {
+      "expected": "2 lignes, Ligne 1: Equation 1 deux points; x plus y; égale; 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline007": {
+      "expected": "3 lignes, Ligne 1: 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: 3 x, plus 2 y, plus 5 z, égale 1"
+    },
+    "Multiline008": {
+      "expected": "3 lignes, Ligne 1: 4 x; plus; 3 y; plus; 2 z; égale; 1. Ligne 2: 2 x; plus; 4 y; plus; 6 z; égale; 6. Ligne 3: 3 x; plus; 2 y; plus; 5 z; égale; 1"
+    },
+    "Multiline009": {
+      "expected": "3 lignes, Ligne 1: Equation 1 deux points 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: Equation 2 deux points 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: Equation 3 deux points 3 x, plus 2 y, plus 5 z, égale 1"
+    },
+    "Multiline010": {
+      "expected": "3 lignes, Ligne 1: x plus grand ou égal à 0. Ligne 2: y plus grand ou égal à 0. Ligne 3: 3 x, moins 5 y, plus petit ou égal à 30"
+    },
+    "Multiline011": {
+      "expected": "4 lignes, Ligne 1: 3 x, plus 8 égale 5 x. Ligne 2: 8 égale 5 x, moins 3 x. Ligne 3: 8 égale 2 x. Ligne 4: 4 égale x"
+    },
+    "Multiline012": {
+      "expected": "4 lignes, Ligne 1: 3 x; plus; 8; égale; 5 x; vide; vide. Ligne 2: vide; vide; 8; égale; 5 x; moins; 3 x. Ligne 3: vide; vide; 8; égale; 2 x; vide; vide. Ligne 4: vide; vide; 4; égale; x; vide; vide"
+    },
+    "Multiline013": {
+      "expected": "4 lignes, Ligne 1: Step 1 deux points 3 x, plus 8 égale 5 x. Ligne 2: Step 2 deux points 8 égale 5 x, moins 3 x. Ligne 3: Step 3 deux points 8 égale 2 x. Ligne 4: Step 4 deux points 4 égale x"
+    },
+    "Multiline014": {
+      "expected": "f de x, égale, 2 cas, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0"
+    },
+    "Multiline015": {
+      "expected": "f de x, égale, 2 cas, Cas 1: négatif x; if x inférieur à 0. Cas 2: x; if x plus grand ou égal à 0"
+    },
+    "Multiline016": {
+      "expected": "f de x, égale, 2 cas, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0"
+    },
+    "Multiline017": {
+      "expected": "f de x, égale, 2 cas, Cas 1: négatif x; if x inférieur à 0. Cas 2: x; if x plus grand ou égal à 0"
+    },
+    "Multiline018": {
+      "expected": "2 cas, Cas 1: f de x, égale négatif x; if x inférieur à 0. Cas 2: f de x, égale x; if x plus grand ou égal à 0"
+    },
+    "Multiline019": {
+      "expected": "2 équations, Équation 1: x plus y égale 7. Équation 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline019a": {
+      "expected": "2 équations, Équation 1: x plus y; égale; 7. Équation 2: 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline020": {
+      "expected": "2 lignes, Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline021": {
+      "expected": "2 lignes, Ligne 1: x plus y; égale; 7. Ligne 2: 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline022": {
+      "expected": "2 colonnes, rangée 1: x plus y égale 7. rangée 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline023": {
+      "expected": "2 colonnes, rangée 1: x plus y; égale; 7. rangée 2: 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline024": {
+      "expected": "4  étapes,  Étape 1: 3 x, plus 8 égale 5 x.  Étape 2: 8 égale 5 x, moins 3 x.  Étape 3: 8 égale 2 x.  Étape 4: 4 égale x"
+    },
+    "Multiline025": {
+      "expected": "4  étapes,  Étape 1: 3 x; plus; 8; égale; 5 x; vide; vide.  Étape 2: vide; vide; 8; égale; 5 x; moins; 3 x.  Étape 3: vide; vide; 8; égale; 2 x; vide; vide.  Étape 4: vide; vide; 4; égale; x; vide; vide"
+    },
+    "Multiline026": {
+      "expected": "3 contraintes, Contrainte 1: x plus grand ou égal à 0. Contrainte 2: y plus grand ou égal à 0. Contrainte 3: 3 x, moins 5 y, plus petit ou égal à 30"
+    },
+    "_comment2_": " Added examples for preference Label_None.",
+    "Multiline026a": {
+      "expected": "3 lignes, x plus grand ou égal à 0. y plus grand ou égal à 0. 3 x, moins 5 y, plus petit ou égal à 30"
+    },
+    "Multiline026b": {
+      "expected": "4 lignes, 3 x; plus; 8; égale; 5 x; vide; vide. vide; vide; 8; égale; 5 x; moins; 3 x. vide; vide; 8; égale; 2 x; vide; vide. vide; vide; 4; égale; x; vide; vide"
+    },
+    "Multiline026c": {
+      "expected": "f de x, égale, 2 cas, négatif x if x inférieur à 0. x if x plus grand ou égal à 0"
+    },
+    "Multiline027": {
+      "expected": "2 lignes, Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline028": {
+      "expected": "2 lignes, Ligne 1: x plus y. égale. 7. Ligne 2: 2 x, plus 3 y. égale. 17"
+    },
+    "Multiline029": {
+      "expected": "2 lignes, Ligne 1: x. plus. y. égale. 7. Ligne 2: 2 x. plus. 3 y. égale. 17"
+    },
+    "Multiline030": {
+      "expected": "2 lignes, Ligne 1: Equation 1 deux points. x plus y égale 7. Ligne 2: Equation 2 deux points. 2 x, plus 3 y, égale 17"
+    },
+    "Multiline031": {
+      "expected": "2 lignes, Ligne 1: Equation 1 deux points. x plus y. égale. 7. Ligne 2: Equation 2 deux points. 2 x, plus 3 y. égale. 17"
+    },
+    "Multiline032": {
+      "expected": "3 lignes, Ligne 1: 4 x. plus. 3 y. plus. 2 z. égale. 1. Ligne 2: 2 x. plus. 4 y. plus. 6 z. égale. 6. Ligne 3: 3 x. plus. 2 y. plus. 5 z. égale. 1"
+    },
+    "Multiline033": {
+      "expected": "4 lignes, Ligne 1: 3 x. plus. 8. égale. 5 x. vide. vide. Ligne 2: vide. vide. 8. égale. 5 x. moins. 3 x. Ligne 3: vide. vide. 8. égale. 2 x. vide. vide. Ligne 4: vide. vide. 4. égale. x. vide. vide"
+    },
+    "Multiline034": {
+      "expected": "f de x, égale, 2 cas, Cas 1: négatif x. if x inférieur à 0. Cas 2: x. if x plus grand ou égal à 0"
+    },
+    "Multiline035": {
+      "expected": "f de x, égale, 2 cas, Cas 1: négatif x. if x inférieur à 0. Cas 2: x. if x plus grand ou égal à 0"
+    },
+    "Multiline036": {
+      "expected": "2 cas, Cas 1: f de x, égale négatif x. if x inférieur à 0. Cas 2: f de x, égale x. if x plus grand ou égal à 0"
+    },
+    "Multiline037": {
+      "expected": "2 équations, Équation 1: x plus y. égale. 7. Équation 2: 2 x, plus 3 y. égale. 17"
+    },
+    "Multiline038": {
+      "expected": "2 lignes, Ligne 1: x plus y. égale. 7. Ligne 2: 2 x, plus 3 y. égale. 17"
+    },
+    "Multiline039": {
+      "expected": "2 colonnes, rangée 1: x plus y. égale. 7. rangée 2: 2 x, plus 3 y. égale. 17"
+    },
+    "Multiline040": {
+      "expected": "4  étapes,  Étape 1: 3 x. plus. 8. égale. 5 x. vide. vide.  Étape 2: vide. vide. 8. égale. 5 x. moins. 3 x.  Étape 3: vide. vide. 8. égale. 2 x. vide. vide.  Étape 4: vide. vide. 4. égale. x. vide. vide"
+    },
+    "Multiline041": {
+      "expected": "2 lignes, Ligne 1: x plus y, égale, 7. Ligne 2: 2 x, plus 3 y, égale, 17"
+    },
+    "Multiline042": {
+      "expected": "2 lignes, Ligne 1: x, plus, y, égale, 7. Ligne 2: 2 x, plus, 3 y, égale, 17"
+    },
+    "Multiline043": {
+      "expected": "2 lignes, Ligne 1: Equation 1 deux points, x plus y égale 7. Ligne 2: Equation 2 deux points, 2 x, plus 3 y, égale 17"
+    },
+    "Multiline044": {
+      "expected": "2 lignes, Ligne 1: Equation 1 deux points, x plus y, égale, 7. Ligne 2: Equation 2 deux points, 2 x, plus 3 y, égale, 17"
+    },
+    "Multiline045": {
+      "expected": "3 lignes, Ligne 1: 4 x, plus, 3 y, plus, 2 z, égale, 1. Ligne 2: 2 x, plus, 4 y, plus, 6 z, égale, 6. Ligne 3: 3 x, plus, 2 y, plus, 5 z, égale, 1"
+    },
+    "Multiline046": {
+      "expected": "4 lignes, Ligne 1: 3 x, plus, 8, égale, 5 x, vide, vide. Ligne 2: vide, vide, 8, égale, 5 x, moins, 3 x. Ligne 3: vide, vide, 8, égale, 2 x, vide, vide. Ligne 4: vide, vide, 4, égale, x, vide, vide"
+    },
+    "Multiline047": {
+      "expected": "f de x, égale, 2 cas, Cas 1: négatif x, if x inférieur à 0. Cas 2: x, if x plus grand ou égal à 0"
+    },
+    "Multiline048": {
+      "expected": "f de x, égale, 2 cas, Cas 1: négatif x, if x inférieur à 0. Cas 2: x, if x plus grand ou égal à 0"
+    },
+    "Multiline049": {
+      "expected": "2 cas, Cas 1: f de x, égale négatif x, if x inférieur à 0. Cas 2: f de x, égale x, if x plus grand ou égal à 0"
+    },
+    "Multiline050": {
+      "expected": "2 équations, Équation 1: x plus y, égale, 7. Équation 2: 2 x, plus 3 y, égale, 17"
+    },
+    "Multiline051": {
+      "expected": "2 lignes, Ligne 1: x plus y, égale, 7. Ligne 2: 2 x, plus 3 y, égale, 17"
+    },
+    "Multiline052": {
+      "expected": "2 colonnes, rangée 1: x plus y, égale, 7. rangée 2: 2 x, plus 3 y, égale, 17"
+    },
+    "Multiline053": {
+      "expected": "4  étapes,  Étape 1: 3 x, plus, 8, égale, 5 x, vide, vide.  Étape 2: vide, vide, 8, égale, 5 x, moins, 3 x.  Étape 3: vide, vide, 8, égale, 2 x, vide, vide.  Étape 4: vide, vide, 4, égale, x, vide, vide"
+    },
+    "Multiline054": {
+      "expected": "Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline055": {
+      "expected": "Ligne 1: x plus y; égale; 7. Ligne 2: 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline056": {
+      "expected": "Ligne 1: x; plus; y; égale; 7. Ligne 2: 2 x; plus; 3 y; égale; 17"
+    },
+    "Multiline057": {
+      "expected": "Ligne 1: Equation 1 deux points x plus y égale 7. Ligne 2: Equation 2 deux points 2 x, plus 3 y, égale 17"
+    },
+    "Multiline058": {
+      "expected": "Ligne 1: Equation 1 deux points; x plus y égale 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y, égale 17"
+    },
+    "Multiline059": {
+      "expected": "Ligne 1: Equation 1 deux points; x plus y; égale; 7. Ligne 2: Equation 2 deux points; 2 x, plus 3 y; égale; 17"
+    },
+    "Multiline060": {
+      "expected": "Ligne 1: 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: 3 x, plus 2 y, plus 5 z, égale 1"
+    },
+    "Multiline061": {
+      "expected": "Ligne 1: 4 x; plus; 3 y; plus; 2 z; égale; 1. Ligne 2: 2 x; plus; 4 y; plus; 6 z; égale; 6. Ligne 3: 3 x; plus; 2 y; plus; 5 z; égale; 1"
+    },
+    "Multiline062": {
+      "expected": "Ligne 1: Equation 1 deux points 4 x, plus 3 y, plus 2 z, égale 17. Ligne 2: Equation 2 deux points 2 x, plus 4 y, plus 6 z, égale 6. Ligne 3: Equation 3 deux points 3 x, plus 2 y, plus 5 z, égale 1"
+    },
+    "Multiline063": {
+      "expected": "Ligne 1: Step 1 deux points 3 x, plus 8 égale 5 x. Ligne 2: Step 2 deux points 8 égale 5 x, moins 3 x. Ligne 3: Step 3 deux points 8 égale 2 x. Ligne 4: Step 4 deux points 4 égale x"
+    },
+    "Multiline064": {
+      "expected": "f de x, égale, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0"
+    },
+    "Multiline065": {
+      "expected": "f de x, égale, Cas 1: négatif x; if x inférieur à 0. Cas 2: x; if x plus grand ou égal à 0"
+    },
+    "Multiline066": {
+      "expected": "f de x, égale, Cas 1: négatif x if x inférieur à 0. Cas 2: x if x plus grand ou égal à 0"
+    },
+    "Multiline067": {
+      "expected": "Cas 1: f de x, égale négatif x; if x inférieur à 0. Cas 2: f de x, égale x; if x plus grand ou égal à 0"
+    },
+    "Multiline068": {
+      "expected": "Équation 1: x plus y égale 7. Équation 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline069": {
+      "expected": "Ligne 1: x plus y égale 7. Ligne 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline070": {
+      "expected": "rangée 1: x plus y égale 7. rangée 2: 2 x, plus 3 y, égale 17"
+    },
+    "Multiline071": {
+      "expected": " Étape 1: 3 x, plus 8 égale 5 x.  Étape 2: 8 égale 5 x, moins 3 x.  Étape 3: 8 égale 2 x.  Étape 4: 4 égale x"
+    },
+    "Multiline072": {
+      "expected": " Étape 1: 3 x; plus; 8; égale; 5 x; vide; vide.  Étape 2: vide; vide; 8; égale; 5 x; moins; 3 x.  Étape 3: vide; vide; 8; égale; 2 x; vide; vide.  Étape 4: vide; vide; 4; égale; x; vide; vide"
+    },
+    "Multiline073": {
+      "expected": "Contrainte 1: x plus grand ou égal à 0. Contrainte 2: y plus grand ou égal à 0. Contrainte 3: 3 x, moins 5 y, plus petit ou égal à 30"
+    }
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "EnglishParentheses",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_parentheses.json",
+  "information": "English Clearspeak Parentheses rule tests.",
+  "active": "ClearspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Parentheses",
+    "Paren001": {
+      "expected": "25"
+    },
+    "Paren002": {
+      "expected": "2 x"
+    },
+    "Paren003": {
+      "expected": "2 plus negative 2"
+    },
+    "Paren004": {
+      "expected": "2 minus negative 2"
+    },
+    "Paren004a": {
+      "expected": "2 minus negative 2"
+    },
+    "Paren005": {
+      "expected": "2 minus, open paren, negative 2, close paren, cubed"
+    },
+    "Paren006": {
+      "expected": "open paren, 2 x, close paren, squared"
+    },
+    "Paren007": {
+      "expected": "open paren, 2 x, close paren, raised to the y plus 1 power"
+    },
+    "Paren008": {
+      "expected": "negative 2 x"
+    },
+    "Paren009": {
+      "expected": "open paren, negative 2 x, close paren, squared"
+    },
+    "Paren010": {
+      "expected": "negative, open paren, 2 x, close paren, squared"
+    },
+    "Paren011": {
+      "expected": "one half"
+    },
+    "Paren012": {
+      "_comment2_": " TODO: (QUESTION) This is against the Paren_Auto rules! (page 31)!",
+      "_comment3_": " var speech = 'open paren, three fourths, x, close paren';",
+      "expected": "three fourths x"
+    },
+    "Paren013": {
+      "expected": "open paren, 11 over 22, close paren"
+    },
+    "Paren014": {
+      "expected": "one half to the fourth power"
+    },
+    "Paren015": {
+      "expected": "open paren, 11 over 15, close paren, squared"
+    },
+    "Paren016": {
+      "expected": "open paren, 25, close paren"
+    },
+    "Paren017": {
+      "expected": "open paren, 2 x, close paren"
+    },
+    "Paren018": {
+      "expected": "2 plus, open paren, negative 2, close paren"
+    },
+    "Paren019": {
+      "expected": "2 minus, open paren, negative 2, close paren"
+    },
+    "Paren020": {
+      "expected": "2 minus, open paren, negative 2, close paren, cubed"
+    },
+    "Paren021": {
+      "expected": "open paren, 2 x, close paren, squared"
+    },
+    "Paren022": {
+      "expected": "open paren, 2 x, close paren, raised to the y plus 1 power"
+    },
+    "Paren023": {
+      "expected": "open paren, negative 2 x, close paren"
+    },
+    "Paren024": {
+      "expected": "open paren, negative 2 x, close paren, squared"
+    },
+    "Paren025": {
+      "expected": "negative, open paren, 2 x, close paren, squared"
+    },
+    "Paren026": {
+      "expected": "open paren, one half, close paren"
+    },
+    "Paren027": {
+      "expected": "open paren, three fourths x, close paren"
+    },
+    "Paren028": {
+      "expected": "open paren, 11 over 22, close paren"
+    },
+    "Paren029": {
+      "expected": "open paren, one half, close paren, to the fourth power"
+    },
+    "Paren030": {
+      "expected": "open paren, 11 over 15, close paren, squared"
+    },
+    "Paren031": {
+      "expected": "the point with coordinates 1 comma 2"
+    },
+    "Paren032": {
+      "expected": "the point with coordinates x comma y"
+    },
+    "Paren033": {
+      "expected": "the point with coordinates 1 comma 2 comma 3"
+    },
+    "Paren034": {
+      "expected": "the point with coordinates x comma y comma z"
+    },
+    "Paren035": {
+      "_comment4_": " var speech = 'the point with coordinates 1 comma 2 comma three hundred",
+      "_comment5_": " eighty six';",
+      "expected": "the point with coordinates 1 comma 2 comma 386"
+    },
+    "Paren036": {
+      "expected": "the interval from a to b, not including a or b"
+    },
+    "Paren037": {
+      "expected": "the interval from 0 to 1, not including 0 or 1"
+    },
+    "Paren038": {
+      "expected": "the interval from a to b, including a, but not including b"
+    },
+    "Paren039": {
+      "expected": "the interval from 0 to 1, including 0, but not including 1"
+    },
+    "Paren040": {
+      "expected": "the interval from a to b, not including a, but including b"
+    },
+    "Paren041": {
+      "expected": "the interval from 0 to 1, not including 0, but including 1"
+    },
+    "Paren042": {
+      "expected": "the interval from a to b, including a and b"
+    },
+    "Paren043": {
+      "expected": "the interval from 0 to 1, including 0 and 1"
+    },
+    "Paren044": {
+      "expected": "the interval from negative infinity to b, not including b"
+    },
+    "Paren045": {
+      "expected": "the interval from negative infinity to 1, not including 1"
+    },
+    "Paren046": {
+      "expected": "the interval from negative infinity to b, including b"
+    },
+    "Paren047": {
+      "expected": "the interval from negative infinity to 1, including 1"
+    },
+    "Paren048": {
+      "expected": "the interval from a to infinity, not including a"
+    },
+    "Paren049": {
+      "expected": "the interval from 1 to infinity, not including 1"
+    },
+    "Paren050": {
+      "expected": "the interval from a to infinity, including a"
+    },
+    "Paren051": {
+      "expected": "the interval from 1 to infinity, including 1"
+    },
+    "Paren052": {
+      "expected": "the interval from negative infinity to infinity"
+    },
+    "Paren053": {
+      "expected": "the interval from negative infinity to positive infinity"
+    },
+    "Nest001": {
+      "expected": "f of, g of x"
+    },
+    "Nest002": {
+      "expected": "f of, open paren, g of, open paren, x plus 1, close paren, close paren"
+    },
+    "Nest003": {
+      "expected": "6 minus, open bracket, 2 minus, open paren, 3 plus 5, close paren, close bracket"
+    },
+    "Nest004": {
+      "expected": "6 minus, open paren, 2 minus, open second paren, 3 plus 5, close second paren, close paren"
+    },
+    "Nest005": {
+      "expected": "4 times, open bracket, x plus 3 times, open paren, 2 x, plus 1, close paren, close bracket"
+    },
+    "Nest006": {
+      "expected": "4 times, open paren, x plus 3 times, open second paren, 2 x, plus 1, close second paren, close paren"
+    },
+    "Nest007": {
+      "expected": "1 plus, open paren, 2 plus, open second paren, 3 plus 7, close second paren, minus, open second paren, 2 plus 8, close second paren, close paren"
+    },
+    "Nest008": {
+      "expected": "1 plus, open paren, 2 plus, open second paren, 3 minus, open third paren, 4 minus 5, close third paren, close second paren, close paren"
+    },
+    "Nest009": {
+      "expected": "open paren, open second paren, 2 plus, open third paren, 3 plus 4, close third paren, plus 5, close second paren, plus 6 plus, open second paren, open third paren, 7 plus, open fourth paren, 8 plus 1, close fourth paren, close third paren, plus 2, close second paren, close paren"
+    },
+    "SilParen001": {
+      "expected": "25"
+    },
+    "SilParen002": {
+      "expected": "2 x"
+    },
+    "SilParen003": {
+      "expected": "2 plus, negative 2"
+    },
+    "SilParen004": {
+      "expected": "2 minus, negative 2"
+    },
+    "SilParen005": {
+      "expected": "2 minus, negative 2, cubed"
+    },
+    "SilParen006": {
+      "expected": "2 x, squared"
+    },
+    "SilParen007": {
+      "expected": "2 x, raised to the y plus 1 power"
+    },
+    "SilParen008": {
+      "expected": "negative 2 x"
+    },
+    "SilParen009": {
+      "expected": "negative 2 x, squared"
+    },
+    "SilParen010": {
+      "expected": "negative, 2 x, squared"
+    },
+    "SilParen011": {
+      "expected": "one half"
+    },
+    "SilParen012": {
+      "expected": "three fourths x"
+    },
+    "SilParen013": {
+      "expected": "11 over 22"
+    },
+    "SilParen014": {
+      "expected": "one half, to the fourth power"
+    },
+    "SilParen015": {
+      "expected": "11 over 15, squared"
+    }
+  }
+}

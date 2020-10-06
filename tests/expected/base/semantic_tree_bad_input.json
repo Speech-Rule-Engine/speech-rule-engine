@@ -1,0 +1,288 @@
+{
+  "factory": "stree",
+  "base": "input/base/semantic_bad_input.json",
+  "information": "Semantic Tree tests for badly formatted input.",
+  "exclude": [],
+  "tests": {
+    "_comment_2": "Underspecified Layout Elements",
+    "Layout_Underspec_0": {
+      "_comment_": "Issue #317",
+      "expected": "<punctuation role=\"unknown\" id=\"0\">?</punctuation>"
+    },
+    "Layout_Underspec_1": {
+      "expected": "<punctuation role=\"unknown\" id=\"0\">?</punctuation>"
+    },
+    "Layout_Underspec_2": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "Layout_Underspec_3": {
+      "expected": "<underscore role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><punctuation role=\"underaccent\" id=\"1\">?</punctuation></children></underscore>"
+    },
+    "Layout_Underspec_4": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "Layout_Underspec_5": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "Layout_Underspec_6": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "Layout_Underspec_7": {
+      "expected": "<subscript role=\"latinletter\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><punctuation role=\"unknown\" id=\"1\">?</punctuation></children></subscript>"
+    },
+
+    "_comment_3": "Overspecified Layout Elements",
+
+    "Layout_Overspec_0": {
+      "expected": "<overscore role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></overscore>"
+    },
+    "Layout_Overspec_1": {
+      "expected": "<underscore role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></underscore>"
+    },
+    "Layout_Overspec_2": {
+      "expected": "<overscore role=\"latinletter\" id=\"5\"><children><underscore role=\"underover\" id=\"4\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></underscore><identifier role=\"latinletter\" font=\"italic\" id=\"2\">c</identifier></children></overscore>"
+    },
+    "Layout_Overspec_3": {
+      "expected": "<subscript role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></subscript>"
+    },
+    "Layout_Overspec_4": {
+      "expected": "<superscript role=\"latinletter\" id=\"3\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></superscript>"
+    },
+    "Layout_Overspec_5": {
+      "expected": "<superscript role=\"latinletter\" id=\"5\"><children><subscript role=\"subsup\" id=\"4\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></subscript><identifier role=\"latinletter\" font=\"italic\" id=\"2\">c</identifier></children></superscript>"
+    },
+
+    "_comment_4": "Empty  Layout Elements",
+
+    "Layout_Empty_0": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+    "Layout_Empty_1": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+    "Layout_Empty_2": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+    "Layout_Empty_3": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+    "Layout_Empty_4": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+    "Layout_Empty_5": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+
+    "_comment_5": "Underspecified Layout Elements with Limit functions",
+
+    "Limit_Underspec_0": {
+      "expected": "<function role=\"limit function\" font=\"normal\" id=\"0\">lim</function>"
+    },
+    "Limit_Underspec_1": {
+      "expected": "<function role=\"limit function\" font=\"normal\" id=\"0\">lim</function>"
+    },
+    "Limit_Underspec_2": {
+      "expected": "<function role=\"limit function\" font=\"normal\" id=\"0\">lim</function>"
+    },
+    "Limit_Underspec_3": {
+      "expected": "<limlower role=\"limit function\" id=\"2\"><children><function role=\"limit function\" font=\"normal\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></limlower>"
+    },
+    "Limit_Underspec_4": {
+      "expected": "<function role=\"limit function\" font=\"normal\" id=\"0\">lim</function>"
+    },
+    "Limit_Underspec_5": {
+      "expected": "<function role=\"limit function\" font=\"normal\" id=\"0\">lim</function>"
+    },
+    "Limit_Underspec_6": {
+      "expected": "<function role=\"limit function\" font=\"normal\" id=\"0\">lim</function>"
+    },
+    "Limit_Underspec_7": {
+      "expected": "<limlower role=\"limit function\" id=\"2\"><children><function role=\"limit function\" font=\"normal\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></limlower>"
+    },
+
+    "_comment_5a": "Overspecified Layout Elements",
+
+    "Limit_Overspec_0": {
+      "expected": "<limupper role=\"limit function\" id=\"3\"><children><function role=\"limit function\" font=\"normal\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></limupper>"
+    },
+    "Limit_Overspec_1": {
+      "expected": "<limlower role=\"limit function\" id=\"3\"><children><function role=\"limit function\" font=\"normal\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></limlower>"
+    },
+    "Limit_Overspec_2": {
+      "expected": "<limboth role=\"limit function\" id=\"4\"><children><function role=\"limit function\" font=\"normal\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">c</identifier></children></limboth>"
+    },
+    "Limit_Overspec_3": {
+      "expected": "<limlower role=\"limit function\" id=\"3\"><children><function role=\"limit function\" font=\"normal\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></limlower>"
+    },
+    "Limit_Overspec_4": {
+      "expected": "<limupper role=\"limit function\" id=\"3\"><children><function role=\"limit function\" font=\"normal\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></limupper>"
+    },
+    "Limit_Overspec_5": {
+      "expected": "<limboth role=\"limit function\" id=\"4\"><children><function role=\"limit function\" font=\"normal\" id=\"0\">lim</function><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"2\">c</identifier></children></limboth>"
+    },
+
+    "_comment_6": "Underspecified Layout Elements with Bigop",
+
+    "Bigop_Underspec_0": {
+      "expected": "<largeop role=\"sum\" id=\"0\">∑</largeop>"
+    },
+    "Bigop_Underspec_1": {
+      "expected": "<largeop role=\"sum\" id=\"0\">∑</largeop>"
+    },
+    "Bigop_Underspec_2": {
+      "expected": "<largeop role=\"sum\" id=\"0\">∑</largeop>"
+    },
+    "Bigop_Underspec_3": {
+      "expected": "<limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></limlower>"
+    },
+    "Bigop_Underspec_4": {
+      "expected": "<largeop role=\"sum\" id=\"0\">∑</largeop>"
+    },
+    "Bigop_Underspec_5": {
+      "expected": "<largeop role=\"sum\" id=\"0\">∑</largeop>"
+    },
+    "Bigop_Underspec_6": {
+      "expected": "<largeop role=\"sum\" id=\"0\">∑</largeop>"
+    },
+    "Bigop_Underspec_7": {
+      "expected": "<limlower role=\"sum\" id=\"2\"><children><largeop role=\"sum\" id=\"0\">∑</largeop><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></limlower>"
+    },
+
+    "_comment_7": "Underspecified Layout Elements with Integral",
+
+
+    "Integral_Underspec_0": {
+      "expected": "<largeop role=\"integral\" id=\"0\">∫</largeop>"
+    },
+    "Integral_Underspec_1": {
+      "expected": "<largeop role=\"integral\" id=\"0\">∫</largeop>"
+    },
+    "Integral_Underspec_2": {
+      "expected": "<largeop role=\"integral\" id=\"0\">∫</largeop>"
+    },
+    "Integral_Underspec_3": {
+      "expected": "<limlower role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></limlower>"
+    },
+    "Integral_Underspec_4": {
+      "expected": "<largeop role=\"integral\" id=\"0\">∫</largeop>"
+    },
+    "Integral_Underspec_5": {
+      "expected": "<largeop role=\"integral\" id=\"0\">∫</largeop>"
+    },
+    "Integral_Underspec_6": {
+      "expected": "<largeop role=\"integral\" id=\"0\">∫</largeop>"
+    },
+    "Integral_Underspec_7": {
+      "expected": "<limlower role=\"integral\" id=\"2\"><children><largeop role=\"integral\" id=\"0\">∫</largeop><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></limlower>"
+    },
+
+
+    "_comment_8": "Underspecified Fraction",
+
+    "Fraction_Underspec": {
+      "expected": "<fraction role=\"division\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><empty role=\"unknown\" id=\"1\"/></children></fraction>"
+    },
+
+    "_comment_9": "Empty Fraction",
+    "Fraction_Empty": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+
+
+    "_comment_10": "Overspecified Fraction",
+    "Fraction_Overspec": {
+      "expected": "<fraction role=\"division\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">b</identifier></children></fraction>"
+    },
+
+
+    "_comment_11": "Underspecified Root",
+    "Root_Underspec": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt>"
+    },
+    "_comment_12": "Empty Root",
+    "Root_Empty": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
+    },
+    "_comment_13": "Overspecified Root",
+    "Root_Overspec": {
+      "expected": "<root role=\"unknown\" id=\"2\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">b</identifier><identifier role=\"latinletter\" font=\"italic\" id=\"1\">a</identifier></children></root>"
+    },
+    "_comment_14": "Empty display expressions that could lead to enrichment issues.",
+    "_comment_15": "Empty square root.",
+    "Sqrt_Display_0": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
+    },
+    "Sqrt_Display_1": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop>"
+    },
+    "Sqrt_Display_2": {
+      "expected": "<infixop role=\"addition\" id=\"7\">+<content><operator role=\"addition\" id=\"3\">+</operator></content><children><infixop role=\"implicit\" id=\"6\">⁢<content><operator role=\"multiplication\" id=\"5\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"4\">b</identifier></children></infixop>"
+    },
+    "Sqrt_Display_3": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">b</identifier></children></infixop>"
+    },
+    "_comment_16": "Empty root.",
+    "Root_Display_0": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop>"
+    },
+    "Root_Display_1": {
+      "expected": "<infixop role=\"addition\" id=\"7\">+<content><operator role=\"addition\" id=\"3\">+</operator></content><children><infixop role=\"implicit\" id=\"6\">⁢<content><operator role=\"multiplication\" id=\"5\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"4\">b</identifier></children></infixop>"
+    },
+    "Root_Display_2": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">b</identifier></children></infixop>"
+    },
+    "_comment_17": "Orphaned glyph.",
+    "Orphaned_Glyph_0": {
+      "expected": "<unknown role=\"mglyph\" id=\"0\" ext-speech=\"some glyph\"/>"
+    },
+    "Orphaned_Glyph_1": {
+      "expected": "<infixop role=\"implicit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><unknown role=\"mglyph\" id=\"0\" ext-speech=\"some glyph\"/><identifier role=\"latinletter\" font=\"italic\" id=\"1\">a</identifier></children></infixop>"
+    },
+    "Orphaned_Glyph_2": {
+      "expected": "<infixop role=\"implicit\" id=\"3\">⁢<content><operator role=\"multiplication\" id=\"2\">⁢</operator></content><children><identifier role=\"unknown\" id=\"0\" ext-speech=\"some glyph\"/><identifier role=\"latinletter\" font=\"italic\" id=\"1\">a</identifier></children></infixop>"
+    },
+    "Orphaned_Glyph_3": {
+      "expected": "<infixop role=\"addition\" id=\"6\">+<content><operator role=\"addition\" id=\"2\">+</operator></content><children><infixop role=\"implicit\" id=\"5\">⁢<content><operator role=\"multiplication\" id=\"4\">⁢</operator></content><children><unknown role=\"mglyph\" id=\"0\" ext-speech=\"some glyph\"/><identifier role=\"latinletter\" font=\"italic\" id=\"1\">a</identifier></children></infixop><identifier role=\"latinletter\" font=\"italic\" id=\"3\">b</identifier></children></infixop>"
+    },
+    "Orphaned_Glyph_4": {
+      "expected": "<infixop role=\"implicit\" id=\"4\">⁢<content><operator role=\"multiplication\" id=\"3\">⁢</operator></content><children><sqrt role=\"unknown\" id=\"1\"><children><unknown role=\"mglyph\" id=\"0\" ext-speech=\"some glyph\"/></children></sqrt><identifier role=\"latinletter\" font=\"italic\" id=\"2\">a</identifier></children></infixop>"
+    },
+    "_comment_17": "Various interspersed rubbish",
+    "Rubbish_0": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+    "Rubbish_1": {
+      "expected": "<unknown role=\"div\" id=\"0\">a</unknown>"
+    },
+    "Rubbish_2": {
+      "expected": "<empty role=\"unknown\" id=\"0\"/>"
+    },
+    "Rubbish_3": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "Rubbish_4": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "Rubbish_5": {
+      "expected": "<identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier>"
+    },
+    "Rubbish_6": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
+    },
+    "Rubbish_7": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
+    },
+    "Rubbish_8": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><empty role=\"unknown\" id=\"0\"/></children></sqrt>"
+    },
+    "Rubbish_9": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt>"
+    },
+    "Rubbish_10": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt>"
+    },
+    "Rubbish_11": {
+      "expected": "<sqrt role=\"unknown\" id=\"1\"><children><identifier role=\"latinletter\" font=\"italic\" id=\"0\">a</identifier></children></sqrt>"
+    }
+  }
+}

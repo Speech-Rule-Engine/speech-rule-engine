@@ -1,0 +1,86 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanAbsoluteValue",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_absolute_value.json",
+  "information": "German Clearspeak AbsoluteValue rule tests.",
+  "active": "ClearspeakGerman",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Absolute Value",
+    "Abs01": {
+      "expected": "der Betrag von x"
+    },
+    "Abs02": {
+      "expected": "der Betrag von x plus 1"
+    },
+    "Abs03": {
+      "expected": "der Betrag von x, plus 1"
+    },
+    "Abs04": {
+      "expected": "der Betrag von x, plus, der Betrag von y, größer oder gleich, der Betrag von z"
+    },
+    "AbsEnd01": {
+      "expected": "der Betrag von x, Ende Betrag"
+    },
+    "AbsEnd02": {
+      "expected": "der Betrag von x plus 1, Ende Betrag"
+    },
+    "AbsEnd03": {
+      "expected": "der Betrag von x, Ende Betrag, plus 1"
+    },
+    "AbsEnd04": {
+      "expected": "der Betrag von x, Ende Betrag, plus, der Betrag von y, Ende Betrag, größer oder gleich, der Betrag von z, Ende Betrag"
+    },
+    "Card01": {
+      "expected": "die Mächtigkeit der Menge S"
+    },
+    "Determinant01": {
+      "expected": "die Determinante von M"
+    },
+    "_comment2_": " Absolute Value (Determinants)",
+    "AbsDet01": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5"
+    },
+    "AbsDet02": {
+      "expected": "die Determinante der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7"
+    },
+    "AbsDet03": {
+      "expected": "die Determinante der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0"
+    },
+    "AbsDet04": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x"
+    },
+    "AbsDet05": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5"
+    },
+    "AbsDet06": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel"
+    },
+    "AbsDet07": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel"
+    },
+    "AbsDet08": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5"
+    },
+    "AbsDet09": {
+      "expected": "die Determinante der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7"
+    },
+    "AbsDet10": {
+      "expected": "die Determinante der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0"
+    },
+    "AbsDet11": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x"
+    },
+    "AbsDet12": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5"
+    },
+    "AbsDet13": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel"
+    },
+    "AbsDet14": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel"
+    }
+  }
+}

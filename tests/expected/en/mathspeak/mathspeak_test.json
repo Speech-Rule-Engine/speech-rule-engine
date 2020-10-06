@@ -1,0 +1,1277 @@
+{
+  "name": "MathspeakEnglishTest",
+  "locale": "en",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_test.json",
+  "information": "English Mathspeak tests.",
+  "domain": "mathspeak",
+  "active": "MathspeakEnglish",
+  "exclude": [],
+  "tests": {
+    "Sample_1_1_1_default": {
+      "expected": "pi almost equals 3.14159"
+    },
+    "Sample_1_1_1_brief": {
+      "expected": "pi almost equals 3.14159"
+    },
+    "Sample_1_1_1_sbrief": {
+      "expected": "pi almost equals 3.14159"
+    },
+    "Sample_1_1_2_default": {
+      "expected": "102 plus 2,214 plus 15 equals 2,331"
+    },
+    "Sample_1_1_2_brief": {
+      "expected": "102 plus 2,214 plus 15 equals 2,331"
+    },
+    "Sample_1_1_2_sbrief": {
+      "expected": "102 plus 2,214 plus 15 equals 2,331"
+    },
+    "Sample_1_1_3_default": {
+      "expected": "59 times 0 equals 0"
+    },
+    "Sample_1_1_3_brief": {
+      "expected": "59 times 0 equals 0"
+    },
+    "Sample_1_1_3_sbrief": {
+      "expected": "59 times 0 equals 0"
+    },
+    "Sample_1_2_1_default": {
+      "expected": "3 minus negative 2"
+    },
+    "Sample_1_2_1_brief": {
+      "expected": "3 minus negative 2"
+    },
+    "Sample_1_2_1_sbrief": {
+      "expected": "3 minus negative 2"
+    },
+    "Sample_1_2_2_default": {
+      "expected": "negative y"
+    },
+    "Sample_1_2_2_brief": {
+      "expected": "negative y"
+    },
+    "Sample_1_2_2_sbrief": {
+      "expected": "negative y"
+    },
+    "Sample_1_2_3_default": {
+      "expected": "negative 32"
+    },
+    "Sample_1_2_3_brief": {
+      "expected": "negative 32"
+    },
+    "Sample_1_2_3_sbrief": {
+      "expected": "negative 32"
+    },
+    "Sample_1_4_1_default": {
+      "expected": "Number t 2 e 4"
+    },
+    "Sample_1_4_1_brief": {
+      "expected": "Num t 2 e 4"
+    },
+    "Sample_1_4_1_sbrief": {
+      "expected": "Num t 2 e 4"
+    },
+    "Sample_1_4_2_default": {
+      "expected": "Number number sign F F 0 0 0 0"
+    },
+    "Sample_1_4_2_brief": {
+      "expected": "Num num sign F F 0 0 0 0"
+    },
+    "Sample_1_4_2_sbrief": {
+      "expected": "Num num sign F F 0 0 0 0"
+    },
+    "Sample_1_4_3_default": {
+      "expected": "Number 0 x 1 5 F F plus Number 0 x 2 B 0 1 equals Number 0 x 4 1 0 0"
+    },
+    "Sample_1_4_3_brief": {
+      "expected": "Num 0 x 1 5 F F plus Num 0 x 2 B 0 1 equals Num 0 x 4 1 0 0"
+    },
+    "Sample_1_4_3_sbrief": {
+      "expected": "Num 0 x 1 5 F F plus Num 0 x 2 B 0 1 equals Num 0 x 4 1 0 0"
+    },
+    "Sample_1_5_1_default": {
+      "expected": "upper I comma UpperWord I I comma UpperWord I I I comma UpperWord I V comma upper V period"
+    },
+    "Sample_1_5_1_brief": {
+      "expected": "upper I comma UpperWord I I comma UpperWord I I I comma UpperWord I V comma upper V period"
+    },
+    "Sample_1_5_1_sbrief": {
+      "expected": "upper I comma UpperWord I I comma UpperWord I I I comma UpperWord I V comma upper V period"
+    },
+    "_comment0_": " Not yet possible, as we do not yet handle mstack.",
+    "Sample_1_6_1_default": {
+      "expected": "StartFraction 22 Over 7 EndFraction equals 3 point ModifyingAbove 1 4 2 8 5 7 With bar"
+    },
+    "Sample_1_6_1_brief": {
+      "expected": "StartFrac 22 Over 7 EndFrac equals 3 point ModAbove 1 4 2 8 5 7 With bar"
+    },
+    "Sample_1_6_1_sbrief": {
+      "expected": "Frac 22 Over 7 EndFrac equals 3 point ModAbove 1 4 2 8 5 7 With bar"
+    },
+    "Sample_2_1_1_default": {
+      "expected": "d equals StartRoot left parenthesis upper X minus x right parenthesis squared minus left parenthesis upper Y minus y right parenthesis squared EndRoot"
+    },
+    "Sample_2_1_1_brief": {
+      "expected": "d equals StartRoot left p'ren upper X minus x right p'ren squared minus left p'ren upper Y minus y right p'ren squared EndRoot"
+    },
+    "Sample_2_1_1_sbrief": {
+      "expected": "d equals Root L p'ren upper X minus x R p'ren squared minus L p'ren upper Y minus y R p'ren squared EndRoot"
+    },
+    "Sample_2_3_1_default": {
+      "expected": "If upper A right arrow upper B and upper B right arrow upper C then upper A right arrow upper C period"
+    },
+    "Sample_2_3_1_brief": {
+      "expected": "If upper A right arrow upper B and upper B right arrow upper C then upper A right arrow upper C period"
+    },
+    "Sample_2_3_1_sbrief": {
+      "expected": "If upper A R arrow upper B and upper B R arrow upper C then upper A R arrow upper C period"
+    },
+    "Sample_2_6_1_default": {
+      "expected": "bold left bracket x bold right bracket"
+    },
+    "Sample_2_6_1_brief": {
+      "expected": "bold left brack x bold right brack"
+    },
+    "Sample_2_6_1_sbrief": {
+      "expected": "bold L brack x bold R brack"
+    },
+    "Sample_2_6_2_default": {
+      "expected": "contour integral upper E dot d bold l equals minus StartFraction d upper Phi upper B Over d t EndFraction"
+    },
+    "Sample_2_6_2_brief": {
+      "expected": "contour integral upper E dot d bold l equals minus StartFrac d upper Phi upper B Over d t EndFrac"
+    },
+    "Sample_2_6_2_sbrief": {
+      "expected": "contour integral upper E dot d bold l equals minus Frac d upper Phi upper B Over d t EndFrac"
+    },
+    "NegativeVsMinus_0": {
+      "expected": "minus StartFraction 1 Over b EndFraction"
+    },
+    "NegativeVsMinus_1": {
+      "expected": "minus StartFraction a Over b EndFraction"
+    },
+    "NegativeVsMinus_2": {
+      "expected": "negative 3 and one half"
+    },
+    "Sample_4_2_1_default": {
+      "expected": "Uppercase left parenthesis StartSet alpha comma beta comma gamma comma delta comma epsilon comma phi EndSet right parenthesis equals StartSet upper Alpha comma upper Beta comma upper Gamma comma upper Delta comma upper Epsilon comma upper Phi EndSet"
+    },
+    "Sample_4_2_1_brief": {
+      "expected": "Uppercase left p'ren StartSet alpha comma beta comma gamma comma delta comma epsilon comma phi EndSet right p'ren equals StartSet upper Alpha comma upper Beta comma upper Gamma comma upper Delta comma upper Epsilon comma upper Phi EndSet"
+    },
+    "Sample_4_2_1_sbrief": {
+      "expected": "Uppercase L p'ren Set alpha comma beta comma gamma comma delta comma epsilon comma phi EndSet R p'ren equals Set upper Alpha comma upper Beta comma upper Gamma comma upper Delta comma upper Epsilon comma upper Phi EndSet"
+    },
+    "Sample_5_1_1_default": {
+      "expected": "y minus 1"
+    },
+    "Sample_5_1_1_brief": {
+      "expected": "y minus 1"
+    },
+    "Sample_5_1_1_sbrief": {
+      "expected": "y minus 1"
+    },
+    "Sample_5_1_2_default": {
+      "expected": "left parenthesis 1 hyphen to hyphen 1 right parenthesis"
+    },
+    "Sample_5_1_2_brief": {
+      "expected": "left p'ren 1 hyphen to hyphen 1 right p'ren"
+    },
+    "Sample_5_1_2_sbrief": {
+      "expected": "L p'ren 1 hyphen to hyphen 1 R p'ren"
+    },
+    "Sample_5_1_3_default": {
+      "expected": "negative 1"
+    },
+    "Sample_5_1_3_brief": {
+      "expected": "negative 1"
+    },
+    "Sample_5_1_3_sbrief": {
+      "expected": "negative 1"
+    },
+    "Sample_6_1_1_default": {
+      "expected": "The Fibonacci numbers are colon StartSet 0 comma 1 comma 1 comma 2 comma 3 comma 5 comma 8 comma ellipsis EndSet"
+    },
+    "Sample_6_1_1_brief": {
+      "expected": "The Fibonacci numbers are colon StartSet 0 comma 1 comma 1 comma 2 comma 3 comma 5 comma 8 comma ellipsis EndSet"
+    },
+    "Sample_6_1_1_sbrief": {
+      "expected": "The Fibonacci numbers are colon Set 0 comma 1 comma 1 comma 2 comma 3 comma 5 comma 8 comma ellipsis EndSet"
+    },
+    "Sample_6_2_1_default": {
+      "expected": "StartAbsoluteValue 4 minus 7 EndAbsoluteValue equals 3"
+    },
+    "Sample_6_2_1_brief": {
+      "expected": "StartAbsoluteValue 4 minus 7 EndAbsoluteValue equals 3"
+    },
+    "Sample_6_2_1_sbrief": {
+      "expected": "AbsoluteValue 4 minus 7 EndAbsoluteValue equals 3"
+    },
+    "_comment1_": " This equation does not make sense! We could do it purely syntactically!",
+    "Sample_6_2_2_old_default": {
+      "expected": "StartAbsoluteValue a StartAbsoluteValue plus or minus b EndAbsoluteValue minus 15 EndAbsoluteValue not equals StartAbsoluteValue a EndAbsoluteValue plus or minus b StartAbsoluteValue minus 15 EndAbsoluteValue"
+    },
+    "Sample_6_2_2_old_brief": {
+      "expected": "StartAbsoluteValue a StartAbsoluteValue plus or minus b EndAbsoluteValue minus 15 EndAbsoluteValue not equals StartAbsoluteValue a EndAbsoluteValue plus or minus b StartAbsoluteValue minus 15 EndAbsoluteValue"
+    },
+    "Sample_6_2_2_old_sbrief": {
+      "expected": "AbsoluteValue a AbsoluteValue plus or minus b EndAbsoluteValue minus 15 EndAbsoluteValue not equals AbsoluteValue a EndAbsoluteValue plus or minus b AbsoluteValue minus 15 EndAbsoluteValue"
+    },
+    "Sample_6_2_2_default": {
+      "expected": "StartAbsoluteValue a plus or minus StartAbsoluteValue b minus c EndAbsoluteValue EndAbsoluteValue not equals StartAbsoluteValue a EndAbsoluteValue plus or minus StartAbsoluteValue b minus c EndAbsoluteValue"
+    },
+    "Sample_6_2_2_brief": {
+      "expected": "StartAbsoluteValue a plus or minus StartAbsoluteValue b minus c EndAbsoluteValue EndAbsoluteValue not equals StartAbsoluteValue a EndAbsoluteValue plus or minus StartAbsoluteValue b minus c EndAbsoluteValue"
+    },
+    "Sample_6_2_2_sbrief": {
+      "expected": "AbsoluteValue a plus or minus AbsoluteValue b minus c EndAbsoluteValue EndAbsoluteValue not equals AbsoluteValue a EndAbsoluteValue plus or minus AbsoluteValue b minus c EndAbsoluteValue"
+    },
+    "Sample_7_1_1_default": {
+      "expected": "StartFraction 1 Over x EndFraction"
+    },
+    "Sample_7_1_1_brief": {
+      "expected": "StartFrac 1 Over x EndFrac"
+    },
+    "Sample_7_1_1_sbrief": {
+      "expected": "Frac 1 Over x EndFrac"
+    },
+    "Sample_7_1_2_default": {
+      "expected": "a minus StartFraction b plus c Over d minus e EndFraction times f"
+    },
+    "Sample_7_1_2_brief": {
+      "expected": "a minus StartFrac b plus c Over d minus e EndFrac times f"
+    },
+    "Sample_7_1_2_sbrief": {
+      "expected": "a minus Frac b plus c Over d minus e EndFrac times f"
+    },
+    "Sample_7_2_1_default": {
+      "expected": "StartStartFraction StartFraction x Over y EndFraction OverOver z EndEndFraction not equals StartStartFraction x OverOver StartFraction y Over z EndFraction EndEndFraction"
+    },
+    "Sample_7_2_1_brief": {
+      "expected": "StartStartFrac StartFrac x Over y EndFrac OverOver z EndEndFrac not equals StartStartFrac x OverOver StartFrac y Over z EndFrac EndEndFrac"
+    },
+    "Sample_7_2_1_sbrief": {
+      "expected": "NestFrac Frac x Over y EndFrac NestOver z NestEndFrac not equals NestFrac x NestOver Frac y Over z EndFrac NestEndFrac"
+    },
+    "Sample_7_3_1_default": {
+      "expected": "StartStartStartFraction StartStartFraction left parenthesis 1 minus x right parenthesis StartFraction d Over d x EndFraction left parenthesis 2 x right parenthesis minus 2 x StartFraction d Over d x EndFraction left parenthesis 1 minus x right parenthesis OverOver left parenthesis 1 minus x right parenthesis squared EndEndFraction OverOverOver 1 plus left parenthesis StartFraction 2 x Over 1 minus x EndFraction right parenthesis squared EndEndEndFraction"
+    },
+    "Sample_7_3_1_brief": {
+      "expected": "StartStartStartFrac StartStartFrac left p'ren 1 minus x right p'ren StartFrac d Over d x EndFrac left p'ren 2 x right p'ren minus 2 x StartFrac d Over d x EndFrac left p'ren 1 minus x right p'ren OverOver left p'ren 1 minus x right p'ren squared EndEndFrac OverOverOver 1 plus left p'ren StartFrac 2 x Over 1 minus x EndFrac right p'ren squared EndEndEndFrac"
+    },
+    "Sample_7_3_1_sbrief": {
+      "expected": "NestTwiceFrac NestFrac L p'ren 1 minus x R p'ren Frac d Over d x EndFrac L p'ren 2 x R p'ren minus 2 x Frac d Over d x EndFrac L p'ren 1 minus x R p'ren NestOver L p'ren 1 minus x R p'ren squared NestEndFrac NestTwiceOver 1 plus L p'ren Frac 2 x Over 1 minus x EndFrac R p'ren squared NestTwiceEndFrac"
+    },
+    "Sample_7_3_2_default": {
+      "expected": "a 0 plus StartStartStartStartFraction 1 OverOverOverOver a 1 plus StartStartStartFraction 1 OverOverOver a 2 plus StartStartFraction 1 OverOver ellipsis plus StartFraction 1 Over a Subscript n Baseline EndFraction EndEndFraction EndEndEndFraction EndEndEndEndFraction"
+    },
+    "Sample_7_3_2_brief": {
+      "expected": "a 0 plus StartStartStartStartFrac 1 OverOverOverOver a 1 plus StartStartStartFrac 1 OverOverOver a 2 plus StartStartFrac 1 OverOver ellipsis plus StartFrac 1 Over a Sub n Base EndFrac EndEndFrac EndEndEndFrac EndEndEndEndFrac"
+    },
+    "Sample_7_3_2_sbrief": {
+      "expected": "a 0 plus Nest3Frac 1 Nest3Over a 1 plus NestTwiceFrac 1 NestTwiceOver a 2 plus NestFrac 1 NestOver ellipsis plus Frac 1 Over a Sub n Base EndFrac NestEndFrac NestTwiceEndFrac Nest3EndFrac"
+    },
+    "Sample_7_4_1_default": {
+      "expected": "one half plus two halves plus three halves plus four halves plus ellipsis equals sigma summation Underscript n equals 1 Overscript infinity Endscripts StartFraction n Over 2 EndFraction"
+    },
+    "Sample_7_4_1_brief": {
+      "expected": "one half plus two halves plus three halves plus four halves plus ellipsis equals sigma summation Underscript n equals 1 Overscript infinity Endscripts StartFrac n Over 2 EndFrac"
+    },
+    "Sample_7_4_1_sbrief": {
+      "expected": "one half plus two halves plus three halves plus four halves plus ellipsis equals sigma summation Underscript n equals 1 Overscript infinity Endscripts Frac n Over 2 EndFrac"
+    },
+    "Sample_7_4_2_default": {
+      "expected": "StartFraction 20 Over 5 EndFraction times StartFraction 1 Over 100 EndFraction equals one twenty fifth"
+    },
+    "Sample_7_4_2_brief": {
+      "expected": "StartFrac 20 Over 5 EndFrac times StartFrac 1 Over 100 EndFrac equals one twenty fifth"
+    },
+    "Sample_7_4_2_sbrief": {
+      "expected": "Frac 20 Over 5 EndFrac times Frac 1 Over 100 EndFrac equals one twenty fifth"
+    },
+    "Sample_7_4_3_default": {
+      "expected": "StartFraction three fifths Over 8 EndFraction equals three fifths times one eighth"
+    },
+    "Sample_7_4_3_brief": {
+      "expected": "StartFrac three fifths Over 8 EndFrac equals three fifths times one eighth"
+    },
+    "Sample_7_4_3_sbrief": {
+      "expected": "Frac three fifths Over 8 EndFrac equals three fifths times one eighth"
+    },
+    "Sample_7_5_1_default": {
+      "expected": "3 and five eighths equals StartFraction 29 Over 8 EndFraction"
+    },
+    "Sample_7_5_1_brief": {
+      "expected": "3 and five eighths equals StartFrac 29 Over 8 EndFrac"
+    },
+    "Sample_7_5_1_sbrief": {
+      "expected": "3 and five eighths equals Frac 29 Over 8 EndFrac"
+    },
+    "Sample_7_6_1_default": {
+      "expected": "a 0 plus ContinuedFraction b 1 Over a 1 plus StartFraction b 2 Over a 2 plus StartFraction b 3 Over a 3 plus ellipsis equals a 0 plus StartFraction b 1 Over a 1 EndFraction plus StartFraction b 2 Over a 2 EndFraction plus ellipsis"
+    },
+    "Sample_7_6_1_brief": {
+      "expected": "a 0 plus ContinuedFrac b 1 Over a 1 plus StartFrac b 2 Over a 2 plus StartFrac b 3 Over a 3 plus ellipsis equals a 0 plus StartFrac b 1 Over a 1 EndFrac plus StartFrac b 2 Over a 2 EndFrac plus ellipsis"
+    },
+    "Sample_7_6_1_sbrief": {
+      "expected": "a 0 plus ContinuedFrac b 1 Over a 1 plus Frac b 2 Over a 2 plus Frac b 3 Over a 3 plus ellipsis equals a 0 plus Frac b 1 Over a 1 EndFrac plus Frac b 2 Over a 2 EndFrac plus ellipsis"
+    },
+    "Sample_8_1_1_default": {
+      "expected": "x cubed plus 6 x squared minus x equals 30"
+    },
+    "Sample_8_1_1_brief": {
+      "expected": "x cubed plus 6 x squared minus x equals 30"
+    },
+    "Sample_8_1_1_sbrief": {
+      "expected": "x cubed plus 6 x squared minus x equals 30"
+    },
+    "Sample_8_1_2_default": {
+      "expected": "StartFraction d squared y Over d x squared EndFraction plus left parenthesis a x squared plus b x plus c right parenthesis y equals 0"
+    },
+    "Sample_8_1_2_brief": {
+      "expected": "StartFrac d squared y Over d x squared EndFrac plus left p'ren a x squared plus b x plus c right p'ren y equals 0"
+    },
+    "Sample_8_1_2_sbrief": {
+      "expected": "Frac d squared y Over d x squared EndFrac plus L p'ren a x squared plus b x plus c R p'ren y equals 0"
+    },
+    "Sample_8_2_1_default": {
+      "expected": "x Superscript one half"
+    },
+    "Sample_8_2_1_brief": {
+      "expected": "x Sup one half"
+    },
+    "Sample_8_2_1_sbrief": {
+      "expected": "x Sup one half"
+    },
+    "Sample_8_2_2_default": {
+      "expected": "x Subscript n"
+    },
+    "Sample_8_2_2_brief": {
+      "expected": "x Sub n"
+    },
+    "Sample_8_2_2_sbrief": {
+      "expected": "x Sub n"
+    },
+    "Sample_8_2_3_default": {
+      "expected": "x Superscript a"
+    },
+    "Sample_8_2_3_brief": {
+      "expected": "x Sup a"
+    },
+    "Sample_8_2_3_sbrief": {
+      "expected": "x Sup a"
+    },
+    "Sample_8_3_1_default": {
+      "expected": "x Superscript m plus n"
+    },
+    "Sample_8_3_1_brief": {
+      "expected": "x Sup m plus n"
+    },
+    "Sample_8_3_1_sbrief": {
+      "expected": "x Sup m plus n"
+    },
+    "Sample_8_3_2_default": {
+      "expected": "upper T Subscript n minus 1 Baseline plus 5 equals 0"
+    },
+    "Sample_8_3_2_brief": {
+      "expected": "upper T Sub n minus 1 Base plus 5 equals 0"
+    },
+    "Sample_8_3_2_sbrief": {
+      "expected": "upper T Sub n minus 1 Base plus 5 equals 0"
+    },
+    "Sample_8_3_3_default": {
+      "expected": "x Superscript m plus n Baseline equals x Superscript m Baseline x Superscript n"
+    },
+    "Sample_8_3_3_brief": {
+      "expected": "x Sup m plus n Base equals x Sup m Base x Sup n"
+    },
+    "Sample_8_3_3_sbrief": {
+      "expected": "x Sup m plus n Base equals x Sup m Base x Sup n"
+    },
+    "Sample_8_4_1_default": {
+      "expected": "x Superscript a Super Subscript n Superscript plus a Super Subscript n minus 1"
+    },
+    "Sample_8_4_1_brief": {
+      "expected": "x Sup a Sup Sub n Sup plus a Sup Sub n minus 1"
+    },
+    "Sample_8_4_1_sbrief": {
+      "expected": "x Sup a Sup Sub n Sup plus a Sup Sub n minus 1"
+    },
+    "Sample_8_4_2_default": {
+      "expected": "x Superscript a Super Subscript b"
+    },
+    "Sample_8_4_2_brief": {
+      "expected": "x Sup a Sup Sub b"
+    },
+    "Sample_8_4_2_sbrief": {
+      "expected": "x Sup a Sup Sub b"
+    },
+    "Sample_8_4_3_default": {
+      "expected": "x Subscript a Sub Superscript b"
+    },
+    "Sample_8_4_3_brief": {
+      "expected": "x Sub a Sub Sup b"
+    },
+    "Sample_8_4_3_sbrief": {
+      "expected": "x Sub a Sub Sup b"
+    },
+    "Sample_8_4_4_default": {
+      "expected": "y Superscript a Super Superscript b Super Super Subscript c Baseline not equals y Superscript a Super Superscript b Superscript c"
+    },
+    "Sample_8_4_4_brief": {
+      "expected": "y Sup a Sup Sup b Sup Sup Sub c Base not equals y Sup a Sup Sup b Sup c"
+    },
+    "Sample_8_4_4_sbrief": {
+      "expected": "y Sup a Sup Sup b Sup Sup Sub c Base not equals y Sup a Sup Sup b Sup c"
+    },
+    "Sample_8_4_5_default": {
+      "expected": "y Superscript a Super Super Subscript c Super Superscript b"
+    },
+    "Sample_8_4_5_brief": {
+      "expected": "y Sup a Sup Sup Sub c Sup Sup b"
+    },
+    "Sample_8_4_5_sbrief": {
+      "expected": "y Sup a Sup Sup Sub c Sup Sup b"
+    },
+    "Sample_8_4_5Short_default": {
+      "expected": "y Superscript a Super Super Subscript c"
+    },
+    "Sample_8_4_5Short_brief": {
+      "expected": "y Sup a Sup Sup Sub c"
+    },
+    "Sample_8_4_5Short_sbrief": {
+      "expected": "y Sup a Sup Sup Sub c"
+    },
+    "Sample_8_4_5Inv_default": {
+      "expected": "y Subscript a Sub Sub Superscript c"
+    },
+    "Sample_8_4_5Inv_brief": {
+      "expected": "y Sub a Sub Sub Sup c"
+    },
+    "Sample_8_4_5Inv_sbrief": {
+      "expected": "y Sub a Sub Sub Sup c"
+    },
+    "Sample_8_4_5InvShort_default": {
+      "expected": "y Subscript a Sub Sub Superscript c Sub Subscript b"
+    },
+    "Sample_8_4_5InvShort_brief": {
+      "expected": "y Sub a Sub Sub Sup c Sub Sub b"
+    },
+    "Sample_8_4_5InvShort_sbrief": {
+      "expected": "y Sub a Sub Sub Sup c Sub Sub b"
+    },
+    "Sample_8_4_6_default": {
+      "expected": "x Superscript a Super Superscript b"
+    },
+    "Sample_8_4_6_brief": {
+      "expected": "x Sup a Sup Sup b"
+    },
+    "Sample_8_4_6_sbrief": {
+      "expected": "x Sup a Sup Sup b"
+    },
+    "Sample_8_4_7_default": {
+      "expected": "x Subscript a Sub Subscript b"
+    },
+    "Sample_8_4_7_brief": {
+      "expected": "x Sub a Sub Sub b"
+    },
+    "Sample_8_4_7_sbrief": {
+      "expected": "x Sub a Sub Sub b"
+    },
+    "Sample_8_4_8_default": {
+      "expected": "upper T Superscript left parenthesis x Super Superscript a Superscript plus y Super Superscript b Superscript right parenthesis"
+    },
+    "Sample_8_4_8_brief": {
+      "expected": "upper T Sup left p'ren x Sup Sup a Sup plus y Sup Sup b Sup right p'ren"
+    },
+    "Sample_8_4_8_sbrief": {
+      "expected": "upper T Sup L p'ren x Sup Sup a Sup plus y Sup Sup b Sup R p'ren"
+    },
+    "Sample_8_5_1_default": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_1_brief": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_1_sbrief": {
+      "expected": "x 1"
+    },
+    "Sample_8_5_2_default": {
+      "expected": "x Subscript negative 1"
+    },
+    "Sample_8_5_2_brief": {
+      "expected": "x Sub negative 1"
+    },
+    "Sample_8_5_2_sbrief": {
+      "expected": "x Sub negative 1"
+    },
+    "Sample_8_5_3_default": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_3_brief": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_3_sbrief": {
+      "expected": "x 10,000"
+    },
+    "Sample_8_5_4_default": {
+      "expected": "x 1.3"
+    },
+    "Sample_8_5_4_brief": {
+      "expected": "x 1.3"
+    },
+    "Sample_8_5_4_sbrief": {
+      "expected": "x 1.3"
+    },
+    "Sample_8_5_5_default": {
+      "expected": "4 upper F e plus 3 upper O 2 right arrow 2 upper F e 2 upper O 3"
+    },
+    "Sample_8_5_5_brief": {
+      "expected": "4 upper F e plus 3 upper O 2 right arrow 2 upper F e 2 upper O 3"
+    },
+    "Sample_8_5_5_sbrief": {
+      "expected": "4 upper F e plus 3 upper O 2 R arrow 2 upper F e 2 upper O 3"
+    },
+    "Sample_8_5_6_default": {
+      "expected": "a Subscript 2 comma 3"
+    },
+    "Sample_8_5_6_brief": {
+      "expected": "a Sub 2 comma 3"
+    },
+    "Sample_8_5_6_sbrief": {
+      "expected": "a Sub 2 comma 3"
+    },
+    "Sample_8_5_7_default": {
+      "expected": "upper T Subscript n 1 plus n 0"
+    },
+    "Sample_8_5_7_brief": {
+      "expected": "upper T Sub n 1 plus n 0"
+    },
+    "Sample_8_5_7_sbrief": {
+      "expected": "upper T Sub n 1 plus n 0"
+    },
+    "Sample_8_5_8_default": {
+      "expected": "log Subscript 2 Baseline left parenthesis x right parenthesis equals StartFraction log Subscript 10 Baseline left parenthesis x right parenthesis Over log Subscript 10 Baseline left parenthesis 2 right parenthesis EndFraction"
+    },
+    "Sample_8_5_8_brief": {
+      "expected": "log Sub 2 Base left p'ren x right p'ren equals StartFrac log Sub 10 Base left p'ren x right p'ren Over log Sub 10 Base left p'ren 2 right p'ren EndFrac"
+    },
+    "Sample_8_5_8_sbrief": {
+      "expected": "log Sub 2 Base L p'ren x R p'ren equals Frac log Sub 10 Base L p'ren x R p'ren Over log Sub 10 Base L p'ren 2 R p'ren EndFrac"
+    },
+    "Sample_8_5_9_default": {
+      "expected": "upper Phi 5"
+    },
+    "Sample_8_5_9_brief": {
+      "expected": "upper Phi 5"
+    },
+    "Sample_8_5_9_sbrief": {
+      "expected": "upper Phi 5"
+    },
+    "Sample_8_5_10_default": {
+      "expected": "ln x equals integral Subscript 1 Superscript x Baseline StartFraction d t Over t EndFraction"
+    },
+    "Sample_8_5_10_brief": {
+      "expected": "ln x equals integral Sub 1 Sup x Base StartFrac d t Over t EndFrac"
+    },
+    "Sample_8_5_10_sbrief": {
+      "expected": "ln x equals integral Sub 1 Sup x Base Frac d t Over t EndFrac"
+    },
+    "Sample_8_6_1_default": {
+      "expected": "dollar sign n Baseline 2 equals 2 asterisk dollar sign n plus 1 semicolon"
+    },
+    "Sample_8_6_1_brief": {
+      "expected": "dollar sign n Base 2 equals 2 asterisk dollar sign n plus 1 semicolon"
+    },
+    "Sample_8_6_1_sbrief": {
+      "expected": "dollar sign n Base 2 equals 2 asterisk dollar sign n plus 1 semicolon"
+    },
+    "Sample_8_8_1_naive_default": {
+      "expected": "Subscript c d Superscript a b Baseline x Subscript e f Superscript g h"
+    },
+    "Sample_8_8_1_naive_brief": {
+      "expected": "Sub c d Sup a b Base x Sub e f Sup g h"
+    },
+    "Sample_8_8_1_naive_sbrief": {
+      "expected": "Sub c d Sup a b Base x Sub e f Sup g h"
+    },
+    "Sample_8_8_1_default": {
+      "expected": "Subscript c d Superscript a b Baseline x Subscript e f Superscript g h"
+    },
+    "Sample_8_8_1_brief": {
+      "expected": "Sub c d Sup a b Base x Sub e f Sup g h"
+    },
+    "Sample_8_8_1_sbrief": {
+      "expected": "Sub c d Sup a b Base x Sub e f Sup g h"
+    },
+    "SampleTensorMultiSimpleABC_default": {
+      "expected": "Subscript a Superscript b Baseline x Subscript c Sub Superscript l"
+    },
+    "SampleTensorMultiSimpleABC_brief": {
+      "expected": "Sub a Sup b Base x Sub c Sub Sup l"
+    },
+    "SampleTensorMultiSimpleABC_sbrief": {
+      "expected": "Sub a Sup b Base x Sub c Sub Sup l"
+    },
+    "SampleTensorMultiSub_default": {
+      "expected": "Subscript a Superscript b Baseline x Subscript c Sub Subscript l Superscript d"
+    },
+    "SampleTensorMultiSub_brief": {
+      "expected": "Sub a Sup b Base x Sub c Sub Sub l Sup d"
+    },
+    "SampleTensorMultiSub_sbrief": {
+      "expected": "Sub a Sup b Base x Sub c Sub Sub l Sup d"
+    },
+    "SampleTensorMultiSubSup_default": {
+      "expected": "Subscript a Superscript b Baseline x Subscript c Sub Subscript l Sub Sub Superscript k Subscript e Superscript d"
+    },
+    "SampleTensorMultiSubSup_brief": {
+      "expected": "Sub a Sup b Base x Sub c Sub Sub l Sub Sub Sup k Sub e Sup d"
+    },
+    "SampleTensorMultiSubSup_sbrief": {
+      "expected": "Sub a Sup b Base x Sub c Sub Sub l Sub Sub Sup k Sub e Sup d"
+    },
+    "SampleTensorMultiSimple_default": {
+      "expected": "Subscript a Superscript b Baseline x Subscript c Sub Superscript l Superscript d"
+    },
+    "SampleTensorMultiSimple_brief": {
+      "expected": "Sub a Sup b Base x Sub c Sub Sup l Sup d"
+    },
+    "SampleTensorMultiSimple_sbrief": {
+      "expected": "Sub a Sup b Base x Sub c Sub Sup l Sup d"
+    },
+    "SampleTensorMultiComplex_default": {
+      "expected": "Subscript a Superscript b Baseline x Subscript c k Sub Superscript l Superscript d"
+    },
+    "SampleTensorMultiComplex_brief": {
+      "expected": "Sub a Sup b Base x Sub c k Sub Sup l Sup d"
+    },
+    "SampleTensorMultiComplex_sbrief": {
+      "expected": "Sub a Sup b Base x Sub c k Sub Sup l Sup d"
+    },
+    "SampleTwoTensors_default": {
+      "expected": "Subscript a Superscript b Baseline x Subscript c Superscript d Baseline Subscript a Superscript b Baseline x Subscript c Superscript d"
+    },
+    "SampleTwoTensors_brief": {
+      "expected": "Sub a Sup b Base x Sub c Sup d Base Sub a Sup b Base x Sub c Sup d"
+    },
+    "SampleTwoTensors_sbrief": {
+      "expected": "Sub a Sup b Base x Sub c Sup d Base Sub a Sup b Base x Sub c Sup d"
+    },
+    "_comment2_": " Tensor tests are named with the convention of including the indices that are",
+    "_comment3_": " present:",
+    "_comment4_": "   B      D",
+    "_comment5_": "     Base     R",
+    "_comment6_": "   A      C",
+    "_comment7_": "  Where R is the rest.",
+    "SamplePartialTensorABCD_default": {
+      "expected": "Subscript a Superscript b Baseline x Subscript c Superscript d"
+    },
+    "SamplePartialTensorABCD_brief": {
+      "expected": "Sub a Sup b Base x Sub c Sup d"
+    },
+    "SamplePartialTensorABCD_sbrief": {
+      "expected": "Sub a Sup b Base x Sub c Sup d"
+    },
+    "SamplePartialTensorABC_default": {
+      "expected": "Subscript a Superscript b Baseline x Subscript c"
+    },
+    "SamplePartialTensorABC_brief": {
+      "expected": "Sub a Sup b Base x Sub c"
+    },
+    "SamplePartialTensorABC_sbrief": {
+      "expected": "Sub a Sup b Base x Sub c"
+    },
+    "SamplePartialTensorABD_default": {
+      "expected": "Subscript a Superscript b Baseline x Superscript d"
+    },
+    "SamplePartialTensorABD_brief": {
+      "expected": "Sub a Sup b Base x Sup d"
+    },
+    "SamplePartialTensorABD_sbrief": {
+      "expected": "Sub a Sup b Base x Sup d"
+    },
+    "SamplePartialTensorAB_default": {
+      "expected": "Subscript a Superscript b Baseline x"
+    },
+    "SamplePartialTensorAB_brief": {
+      "expected": "Sub a Sup b Base x"
+    },
+    "SamplePartialTensorAB_sbrief": {
+      "expected": "Sub a Sup b Base x"
+    },
+    "SamplePartialTensorABCR_default": {
+      "expected": "Subscript a Superscript b Baseline x Subscript c Baseline r"
+    },
+    "SamplePartialTensorABCR_brief": {
+      "expected": "Sub a Sup b Base x Sub c Base r"
+    },
+    "SamplePartialTensorABCR_sbrief": {
+      "expected": "Sub a Sup b Base x Sub c Base r"
+    },
+    "SamplePartialTensorABCDR_default": {
+      "expected": "Subscript a Superscript b Baseline x Subscript c Superscript d Baseline r"
+    },
+    "SamplePartialTensorABCDR_brief": {
+      "expected": "Sub a Sup b Base x Sub c Sup d Base r"
+    },
+    "SamplePartialTensorABCDR_sbrief": {
+      "expected": "Sub a Sup b Base x Sub c Sup d Base r"
+    },
+    "SamplePartialTensorABCDRoot_default": {
+      "expected": "StartRoot Subscript a Superscript b Baseline x Subscript c Superscript d Baseline EndRoot"
+    },
+    "SamplePartialTensorABCDRoot_brief": {
+      "expected": "StartRoot Sub a Sup b Base x Sub c Sup d Base EndRoot"
+    },
+    "SamplePartialTensorABCDRoot_sbrief": {
+      "expected": "Root Sub a Sup b Base x Sub c Sup d Base EndRoot"
+    },
+    "SamplePartialTensorABCDRootR_default": {
+      "expected": "StartRoot Subscript a Superscript b Baseline x Subscript c Superscript d Baseline EndRoot r"
+    },
+    "SamplePartialTensorABCDRootR_brief": {
+      "expected": "StartRoot Sub a Sup b Base x Sub c Sup d Base EndRoot r"
+    },
+    "SamplePartialTensorABCDRootR_sbrief": {
+      "expected": "Root Sub a Sup b Base x Sub c Sup d Base EndRoot r"
+    },
+    "SamplePartialTensorABCDFrac_default": {
+      "expected": "StartFraction 1 Over Subscript a Superscript b Baseline x Subscript c Superscript d Baseline EndFraction"
+    },
+    "SamplePartialTensorABCDFrac_brief": {
+      "expected": "StartFrac 1 Over Sub a Sup b Base x Sub c Sup d Base EndFrac"
+    },
+    "SamplePartialTensorABCDFrac_sbrief": {
+      "expected": "Frac 1 Over Sub a Sup b Base x Sub c Sup d Base EndFrac"
+    },
+    "SamplePartialTensorABCDFracR_default": {
+      "expected": "StartFraction 1 Over Subscript a Superscript b Baseline x Subscript c Superscript d Baseline EndFraction r"
+    },
+    "SamplePartialTensorABCDFracR_brief": {
+      "expected": "StartFrac 1 Over Sub a Sup b Base x Sub c Sup d Base EndFrac r"
+    },
+    "SamplePartialTensorABCDFracR_sbrief": {
+      "expected": "Frac 1 Over Sub a Sup b Base x Sub c Sup d Base EndFrac r"
+    },
+    "SampleSimpleSquare_default": {
+      "expected": "upper T 0 squared"
+    },
+    "SampleSimpleSquare_brief": {
+      "expected": "upper T 0 squared"
+    },
+    "SampleSimpleSquare_sbrief": {
+      "expected": "upper T 0 squared"
+    },
+    "SampleSimpleSquare_2_default": {
+      "expected": "upper T 0 squared"
+    },
+    "SampleSimpleSquare_2_brief": {
+      "expected": "upper T 0 squared"
+    },
+    "SampleSimpleSquare_2_sbrief": {
+      "expected": "upper T 0 squared"
+    },
+    "SampleSimpleCube_default": {
+      "expected": "upper T 0 cubed"
+    },
+    "SampleSimpleCube_brief": {
+      "expected": "upper T 0 cubed"
+    },
+    "SampleSimpleCube_sbrief": {
+      "expected": "upper T 0 cubed"
+    },
+    "SampleSimpleCube_2_default": {
+      "expected": "upper T 0 cubed"
+    },
+    "SampleSimpleCube_2_brief": {
+      "expected": "upper T 0 cubed"
+    },
+    "SampleSimpleCube_2_sbrief": {
+      "expected": "upper T 0 cubed"
+    },
+    "Sample_8_8_2_default": {
+      "expected": "upper T Subscript n minus 1 Superscript 2"
+    },
+    "Sample_8_8_2_brief": {
+      "expected": "upper T Sub n minus 1 Sup 2"
+    },
+    "Sample_8_8_2_sbrief": {
+      "expected": "upper T Sub n minus 1 Sup 2"
+    },
+    "Sample_8_9_1_default": {
+      "expected": "x prime"
+    },
+    "Sample_8_9_1_brief": {
+      "expected": "x prime"
+    },
+    "Sample_8_9_1_sbrief": {
+      "expected": "x prime"
+    },
+    "Sample_8_9_2_default": {
+      "expected": "f triple prime left parenthesis y right parenthesis equals StartFraction d f double prime left parenthesis y right parenthesis Over d y EndFraction"
+    },
+    "Sample_8_9_2_brief": {
+      "expected": "f triple prime left p'ren y right p'ren equals StartFrac d f double prime left p'ren y right p'ren Over d y EndFrac"
+    },
+    "Sample_8_9_2_sbrief": {
+      "expected": "f triple prime L p'ren y R p'ren equals Frac d f double prime L p'ren y R p'ren Over d y EndFrac"
+    },
+    "Sample_8_10_1_default": {
+      "expected": "rho prime equals rho prime Subscript plus Baseline plus rho prime Subscript minus"
+    },
+    "Sample_8_10_1_brief": {
+      "expected": "rho prime equals rho prime Sub plus Base plus rho prime Sub minus"
+    },
+    "Sample_8_10_1_sbrief": {
+      "expected": "rho prime equals rho prime Sub plus Base plus rho prime Sub minus"
+    },
+    "Sample_8_10_2_default": {
+      "expected": "x prime 10"
+    },
+    "Sample_8_10_2_brief": {
+      "expected": "x prime 10"
+    },
+    "Sample_8_10_2_sbrief": {
+      "expected": "x prime 10"
+    },
+    "Sample_8_10_3_default": {
+      "expected": "upper T prime Subscript n"
+    },
+    "Sample_8_10_3_brief": {
+      "expected": "upper T prime Sub n"
+    },
+    "Sample_8_10_3_sbrief": {
+      "expected": "upper T prime Sub n"
+    },
+    "Sample_8_11_1_default": {
+      "expected": "Start 2 By 3 Matrix 1st Row 1st Column x Superscript n 2nd Column y Superscript n 3rd Column z Superscript n 2nd Row 1st Column x Superscript n plus 1 2nd Column y Superscript n plus 1 3rd Column z Superscript n plus 1 EndMatrix"
+    },
+    "Sample_8_11_1_brief": {
+      "expected": "Start 2 By 3 Matrix 1st Row 1st Column x Sup n 2nd Column y Sup n 3rd Column z Sup n 2nd Row 1st Column x Sup n plus 1 2nd Column y Sup n plus 1 3rd Column z Sup n plus 1 EndMatrix"
+    },
+    "Sample_8_11_1_sbrief": {
+      "expected": "2 By 3 Matrix 1st Row 1st Column x Sup n 2nd Column y Sup n 3rd Column z Sup n 2nd Row 1st Column x Sup n plus 1 2nd Column y Sup n plus 1 3rd Column z Sup n plus 1 EndMatrix"
+    },
+    "Sample_8_12_1_default": {
+      "expected": "x Subscript a Baseline Superscript b"
+    },
+    "Sample_8_12_1_brief": {
+      "expected": "x Sub a Base Sup b"
+    },
+    "Sample_8_12_1_sbrief": {
+      "expected": "x Sub a Base Sup b"
+    },
+    "Sample_8_12_2_default": {
+      "expected": "x Superscript b Baseline Subscript a"
+    },
+    "Sample_8_12_2_brief": {
+      "expected": "x Sup b Base Sub a"
+    },
+    "Sample_8_12_2_sbrief": {
+      "expected": "x Sup b Base Sub a"
+    },
+    "Sample_8_13_1_default": {
+      "expected": "log Superscript 4 Superscript b Baseline x"
+    },
+    "Sample_8_13_1_brief": {
+      "expected": "log Sup 4 Sup b Base x"
+    },
+    "Sample_8_13_1_sbrief": {
+      "expected": "log Sup 4 Sup b Base x"
+    },
+    "Sample_8_13_2_default": {
+      "expected": "upper T Subscript n Subscript a Baseline y"
+    },
+    "Sample_8_13_2_brief": {
+      "expected": "upper T Sub n Sub a Base y"
+    },
+    "Sample_8_13_2_sbrief": {
+      "expected": "upper T Sub n Sub a Base y"
+    },
+    "Sample_9_1_1_default": {
+      "expected": "StartRoot 2 EndRoot"
+    },
+    "Sample_9_1_1_brief": {
+      "expected": "StartRoot 2 EndRoot"
+    },
+    "Sample_9_1_1_sbrief": {
+      "expected": "Root 2 EndRoot"
+    },
+    "Sample_9_1_2_default": {
+      "expected": "StartRoot m plus n EndRoot"
+    },
+    "Sample_9_1_2_brief": {
+      "expected": "StartRoot m plus n EndRoot"
+    },
+    "Sample_9_1_2_sbrief": {
+      "expected": "Root m plus n EndRoot"
+    },
+    "Sample_9_2_1_default": {
+      "expected": "RootIndex m plus n StartRoot x plus y EndRoot"
+    },
+    "Sample_9_2_1_brief": {
+      "expected": "RootIndex m plus n StartRoot x plus y EndRoot"
+    },
+    "Sample_9_2_1_sbrief": {
+      "expected": "Index m plus n Root x plus y EndRoot"
+    },
+    "Sample_9_2_2_default": {
+      "expected": "RootIndex n StartRoot x Superscript m Baseline EndRoot equals left parenthesis RootIndex n StartRoot x EndRoot right parenthesis Superscript m Baseline equals x Superscript StartFraction m Over n EndFraction Baseline comma x greater than 0"
+    },
+    "Sample_9_2_2_brief": {
+      "expected": "RootIndex n StartRoot x Sup m Base EndRoot equals left p'ren RootIndex n StartRoot x EndRoot right p'ren Sup m Base equals x Sup StartFrac m Over n EndFrac Base comma x greater than 0"
+    },
+    "Sample_9_2_2_sbrief": {
+      "expected": "Index n Root x Sup m Base EndRoot equals L p'ren Index n Root x EndRoot R p'ren Sup m Base equals x Sup Frac m Over n EndFrac Base comma x greater than 0"
+    },
+    "Sample_9_2_3_default": {
+      "expected": "RootIndex 3 StartRoot x EndRoot equals x Superscript one third"
+    },
+    "Sample_9_2_3_brief": {
+      "expected": "RootIndex 3 StartRoot x EndRoot equals x Sup one third"
+    },
+    "Sample_9_2_3_sbrief": {
+      "expected": "Index 3 Root x EndRoot equals x Sup one third"
+    },
+    "Sample_9_3_1_default": {
+      "expected": "NestedStartRoot StartRoot x plus 1 EndRoot plus StartRoot y plus 1 EndRoot NestedEndRoot"
+    },
+    "Sample_9_3_1_brief": {
+      "expected": "NestStartRoot StartRoot x plus 1 EndRoot plus StartRoot y plus 1 EndRoot NestEndRoot"
+    },
+    "Sample_9_3_1_sbrief": {
+      "expected": "NestRoot Root x plus 1 EndRoot plus Root y plus 1 EndRoot NestEndRoot"
+    },
+    "Sample_9_3_2_default": {
+      "expected": "NestedRootIndex n NestedStartRoot RootIndex m StartRoot x EndRoot NestedEndRoot equals NestedRootIndex m NestedStartRoot RootIndex n StartRoot x EndRoot NestedEndRoot"
+    },
+    "Sample_9_3_2_brief": {
+      "expected": "NestRootIndex n NestStartRoot RootIndex m StartRoot x EndRoot NestEndRoot equals NestRootIndex m NestStartRoot RootIndex n StartRoot x EndRoot NestEndRoot"
+    },
+    "Sample_9_3_2_sbrief": {
+      "expected": "NestIndex n NestRoot Index m Root x EndRoot NestEndRoot equals NestIndex m NestRoot Index n Root x EndRoot NestEndRoot"
+    },
+    "Sample_9_3_3_default": {
+      "expected": "x Superscript e minus 2 Baseline equals Nested3StartRoot x NestedTwiceRootIndex 3 NestedTwiceStartRoot x NestedRootIndex 4 NestedStartRoot x RootIndex 5 StartRoot x ellipsis EndRoot NestedEndRoot NestedTwiceEndRoot Nested3EndRoot comma x element of double struck upper R"
+    },
+    "Sample_9_3_3_brief": {
+      "expected": "x Sup e minus 2 Base equals Nest3StartRoot x NestTwiceRootIndex 3 NestTwiceStartRoot x NestRootIndex 4 NestStartRoot x RootIndex 5 StartRoot x ellipsis EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot comma x element of double struck upper R"
+    },
+    "Sample_9_3_3_sbrief": {
+      "expected": "x Sup e minus 2 Base equals Nest3Root x NestTwiceIndex 3 NestTwiceRoot x NestIndex 4 NestRoot x Index 5 Root x ellipsis EndRoot NestEndRoot NestTwiceEndRoot Nest3EndRoot comma x element of double struck upper R"
+    },
+    "Sample_9_3_4_default": {
+      "expected": "StartFraction 2 Over pi EndFraction equals StartFraction StartRoot 2 EndRoot Over 2 EndFraction StartFraction NestedStartRoot 2 plus StartRoot 2 EndRoot NestedEndRoot Over 2 EndFraction StartFraction NestedTwiceStartRoot 2 plus NestedStartRoot 2 plus StartRoot 2 EndRoot NestedEndRoot NestedTwiceEndRoot Over 2 EndFraction ellipsis"
+    },
+    "Sample_9_3_4_brief": {
+      "expected": "StartFrac 2 Over pi EndFrac equals StartFrac StartRoot 2 EndRoot Over 2 EndFrac StartFrac NestStartRoot 2 plus StartRoot 2 EndRoot NestEndRoot Over 2 EndFrac StartFrac NestTwiceStartRoot 2 plus NestStartRoot 2 plus StartRoot 2 EndRoot NestEndRoot NestTwiceEndRoot Over 2 EndFrac ellipsis"
+    },
+    "Sample_9_3_4_sbrief": {
+      "expected": "Frac 2 Over pi EndFrac equals Frac Root 2 EndRoot Over 2 EndFrac Frac NestRoot 2 plus Root 2 EndRoot NestEndRoot Over 2 EndFrac Frac NestTwiceRoot 2 plus NestRoot 2 plus Root 2 EndRoot NestEndRoot NestTwiceEndRoot Over 2 EndFrac ellipsis"
+    },
+    "Sample_10_1_1_default": {
+      "expected": "StartFraction 5 x CrossOut y EndCrossOut Over 2 CrossOut y EndCrossOut EndFraction equals five halves x"
+    },
+    "Sample_10_1_1_brief": {
+      "expected": "StartFrac 5 x CrossOut y EndCrossOut Over 2 CrossOut y EndCrossOut EndFrac equals five halves x"
+    },
+    "Sample_10_1_1_sbrief": {
+      "expected": "Frac 5 x CrossOut y EndCrossOut Over 2 CrossOut y EndCrossOut EndFrac equals five halves x"
+    },
+    "Sample_10_2_1_default": {
+      "expected": "StartFraction 12 Over 18 EndFraction equals StartFraction CrossOut 12 With 2 EndCrossOut Over CrossOut 18 With 3 EndCrossOut EndFraction equals two thirds"
+    },
+    "Sample_10_2_1_brief": {
+      "expected": "StartFrac 12 Over 18 EndFrac equals StartFrac CrossOut 12 With 2 EndCrossOut Over CrossOut 18 With 3 EndCrossOut EndFrac equals two thirds"
+    },
+    "Sample_10_2_1_sbrief": {
+      "expected": "Frac 12 Over 18 EndFrac equals Frac CrossOut 12 With 2 EndCrossOut Over CrossOut 18 With 3 EndCrossOut EndFrac equals two thirds"
+    },
+    "Sample_10_2_2_default": {
+      "expected": "StartFraction 12 Over 18 EndFraction equals StartFraction CrossOut 12 With 2 EndCrossOut Over CrossOut 18 With 3 EndCrossOut EndFraction equals two thirds"
+    },
+    "Sample_10_2_2_brief": {
+      "expected": "StartFrac 12 Over 18 EndFrac equals StartFrac CrossOut 12 With 2 EndCrossOut Over CrossOut 18 With 3 EndCrossOut EndFrac equals two thirds"
+    },
+    "Sample_10_2_2_sbrief": {
+      "expected": "Frac 12 Over 18 EndFrac equals Frac CrossOut 12 With 2 EndCrossOut Over CrossOut 18 With 3 EndCrossOut EndFrac equals two thirds"
+    },
+    "Sample_11_1_1_default": {
+      "expected": "ModifyingAbove x With two dots"
+    },
+    "Sample_11_1_1_brief": {
+      "expected": "ModAbove x With two dots"
+    },
+    "Sample_11_1_1_sbrief": {
+      "expected": "ModAbove x With two dots"
+    },
+    "Sample_11_1_2_default": {
+      "expected": "ModifyingAbove x plus y With right arrow"
+    },
+    "Sample_11_1_2_brief": {
+      "expected": "ModAbove x plus y With right arrow"
+    },
+    "Sample_11_1_2_sbrief": {
+      "expected": "ModAbove x plus y With R arrow"
+    },
+    "Sample_11_1_3_default": {
+      "expected": "ModifyingAbove x With caret"
+    },
+    "Sample_11_1_3_brief": {
+      "expected": "ModAbove x With caret"
+    },
+    "Sample_11_1_3_sbrief": {
+      "expected": "ModAbove x With caret"
+    },
+    "Sample_11_2_1_default": {
+      "expected": "ModifyingBelow x With dot"
+    },
+    "Sample_11_2_1_brief": {
+      "expected": "ModBelow x With dot"
+    },
+    "Sample_11_2_1_sbrief": {
+      "expected": "ModBelow x With dot"
+    },
+    "Sample_11_3_1_default": {
+      "expected": "x overTilde"
+    },
+    "Sample_11_3_1_brief": {
+      "expected": "x overtilde"
+    },
+    "Sample_11_3_1_sbrief": {
+      "expected": "x overtilde"
+    },
+    "Sample_11_3_2_default": {
+      "expected": "x overbar"
+    },
+    "Sample_11_3_2_brief": {
+      "expected": "x overBar"
+    },
+    "Sample_11_3_2_sbrief": {
+      "expected": "x overBar"
+    },
+    "Sample_11_3_3_default": {
+      "expected": "y underTilde"
+    },
+    "Sample_11_3_3_brief": {
+      "expected": "y undertilde"
+    },
+    "Sample_11_3_3_sbrief": {
+      "expected": "y undertilde"
+    },
+    "Sample_11_4_1_default": {
+      "expected": "x overbar overbar"
+    },
+    "Sample_11_4_1_brief": {
+      "expected": "x overBar overBar"
+    },
+    "Sample_11_4_1_sbrief": {
+      "expected": "x overBar overBar"
+    },
+    "Sample_11_4_2_default": {
+      "expected": "y overbar overbar underbar underbar"
+    },
+    "Sample_11_4_2_brief": {
+      "expected": "y overBar overBar underBar underBar"
+    },
+    "Sample_11_4_2_sbrief": {
+      "expected": "y overBar overBar underBar underBar"
+    },
+    "Sample_11_6_1_default": {
+      "expected": "ModifyingBelow Below ModifyingBelow a plus b With bar With asterisk"
+    },
+    "Sample_11_6_1_brief": {
+      "expected": "ModBelow Below ModBelow a plus b With bar With asterisk"
+    },
+    "Sample_11_6_1_sbrief": {
+      "expected": "ModBelow Below ModBelow a plus b With bar With asterisk"
+    },
+    "_comment8_": " This one is odd. This rule example seems to contradict Rule 11.2, where we",
+    "_comment9_": " ModifyAbove/Below with dot.  Here the dot is used as",
+    "_comment10_": " Over/Underscript. However, we express dot as a multi modifier.",
+    "Sample_11_6_2_default": {
+      "expected": "ModifyingAbove ModifyingBelow a plus b With left arrow With right arrow Underscript dot Overscript dot Endscripts"
+    },
+    "Sample_11_6_2_brief": {
+      "expected": "ModAbove ModBelow a plus b With left arrow With right arrow Underscript dot Overscript dot Endscripts"
+    },
+    "Sample_11_6_2_sbrief": {
+      "expected": "ModAbove ModBelow a plus b With l arrow With r arrow Underscript dot Overscript dot Endscripts"
+    },
+    "Sample_11_6_3_default": {
+      "expected": "ModifyingAbove Above ModifyingAbove x plus y With tilde With bar"
+    },
+    "Sample_11_6_3_brief": {
+      "expected": "ModAbove Above ModAbove x plus y With tilde With bar"
+    },
+    "Sample_11_6_3_sbrief": {
+      "expected": "ModAbove Above ModAbove x plus y With tilde With bar"
+    },
+    "Sample_11_7_1_default": {
+      "expected": "sigma summation Underscript n equals 1 Overscript infinity Endscripts a Subscript n"
+    },
+    "Sample_11_7_1_brief": {
+      "expected": "sigma summation Underscript n equals 1 Overscript infinity Endscripts a Sub n"
+    },
+    "Sample_11_7_1_sbrief": {
+      "expected": "sigma summation Underscript n equals 1 Overscript infinity Endscripts a Sub n"
+    },
+    "Sample_11_8_1_default": {
+      "expected": "ModifyingBelow x plus y With bar Underscript a equals 5 UnderUnderscript b equals 3 Endscripts"
+    },
+    "Sample_11_8_1_brief": {
+      "expected": "ModBelow x plus y With bar Underscript a equals 5 UnderUnderscript b equals 3 Endscripts"
+    },
+    "Sample_11_8_1_sbrief": {
+      "expected": "ModBelow x plus y With bar Underscript a equals 5 UnderUnderscript b equals 3 Endscripts"
+    },
+    "Sample_11_8_2_default": {
+      "expected": "ModifyingAbove x plus y With bar Overscript n equals 1 OverOverscript m equals 2 Endscripts"
+    },
+    "Sample_11_8_2_brief": {
+      "expected": "ModAbove x plus y With bar Overscript n equals 1 OverOverscript m equals 2 Endscripts"
+    },
+    "Sample_11_8_2_sbrief": {
+      "expected": "ModAbove x plus y With bar Overscript n equals 1 OverOverscript m equals 2 Endscripts"
+    },
+    "_comment11_": " This rule is currently not possible. It needs an enhanced processing in the",
+    "_comment12_": " semantic tree maybe together with a simultaneous treatment of mstacks.",
+    "Sample_11_9_1_default": {
+      "expected": "seven twelfths equals .58 ModifyingEachAbove 3 3 3 With dot"
+    },
+    "Sample_11_9_1_brief": {
+      "expected": "seven twelfths equals .58 ModEachAbove 3 3 3 With dot"
+    },
+    "Sample_11_9_1_sbrief": {
+      "expected": "seven twelfths equals .58 ModEachAbove 3 3 3 With dot"
+    },
+    "Sample_12_1_1_default": {
+      "expected": "log Subscript b Baseline x"
+    },
+    "Sample_12_1_1_brief": {
+      "expected": "log Sub b Base x"
+    },
+    "Sample_12_1_1_sbrief": {
+      "expected": "log Sub b Base x"
+    },
+    "Sample_12_1_2_default": {
+      "expected": "cosine y"
+    },
+    "Sample_12_1_2_brief": {
+      "expected": "cosine y"
+    },
+    "Sample_12_1_2_sbrief": {
+      "expected": "cosine y"
+    },
+    "Sample_12_1_3_default": {
+      "expected": "sine x"
+    },
+    "Sample_12_1_3_brief": {
+      "expected": "sine x"
+    },
+    "Sample_12_1_3_sbrief": {
+      "expected": "sine x"
+    },
+    "Sample_13_1_1_default": {
+      "expected": "StartFraction 60 CrossOut miles EndCrossOut Over CrossOut hours EndCrossOut EndFraction times StartFraction 5,280 feet Over 1 CrossOut miles EndCrossOut EndFraction times StartFraction 1 CrossOut hours EndCrossOut Over 60 minutes EndFraction equals StartFraction 5,280 feet Over minutes EndFraction"
+    },
+    "Sample_13_1_1_brief": {
+      "expected": "StartFrac 60 CrossOut miles EndCrossOut Over CrossOut hours EndCrossOut EndFrac times StartFrac 5,280 feet Over 1 CrossOut miles EndCrossOut EndFrac times StartFrac 1 CrossOut hours EndCrossOut Over 60 minutes EndFrac equals StartFrac 5,280 feet Over minutes EndFrac"
+    },
+    "Sample_13_1_1_sbrief": {
+      "expected": "Frac 60 CrossOut miles EndCrossOut Over CrossOut hours EndCrossOut EndFrac times Frac 5,280 feet Over 1 CrossOut miles EndCrossOut EndFrac times Frac 1 CrossOut hours EndCrossOut Over 60 minutes EndFrac equals Frac 5,280 feet Over minutes EndFrac"
+    },
+    "_comment13_": " That should be negative 2!",
+    "Sample_13_1_2_default": {
+      "expected": "1 joules equals 1 kilograms dot meters squared dot seconds Superscript negative 2"
+    },
+    "Sample_13_1_2_brief": {
+      "expected": "1 joules equals 1 kilograms dot meters squared dot seconds Sup negative 2"
+    },
+    "Sample_13_1_2_sbrief": {
+      "expected": "1 joules equals 1 kilograms dot meters squared dot seconds Sup negative 2"
+    },
+    "Sample_13_1_3_default": {
+      "expected": "m meters equals 100 m centimeters equals StartFraction m Over 1,000 EndFraction kilometers"
+    },
+    "Sample_13_1_3_brief": {
+      "expected": "m meters equals 100 m centimeters equals StartFrac m Over 1,000 EndFrac kilometers"
+    },
+    "Sample_13_1_3_sbrief": {
+      "expected": "m meters equals 100 m centimeters equals Frac m Over 1,000 EndFrac kilometers"
+    },
+    "Sample_13_1_4_default": {
+      "expected": "1 miles almost equals 1.6 kilometers"
+    },
+    "Sample_13_1_4_brief": {
+      "expected": "1 miles almost equals 1.6 kilometers"
+    },
+    "Sample_13_1_4_sbrief": {
+      "expected": "1 miles almost equals 1.6 kilometers"
+    },
+    "Sample_13_1_5_default": {
+      "expected": "1 inches equals 2.54 centimeters"
+    },
+    "Sample_13_1_5_brief": {
+      "expected": "1 inches equals 2.54 centimeters"
+    },
+    "Sample_13_1_5_sbrief": {
+      "expected": "1 inches equals 2.54 centimeters"
+    },
+    "Sample_14_1_1_default": {
+      "expected": "StartLayout 1st Row 1st Column upper H 2 2nd Column plus 3rd Column upper F 2 4th Column right arrow 5th Column 2 upper H upper F 2nd Row 1st Column hydrogen 2nd Column Blank 3rd Column fluorine 4th Column Blank 5th Column hydrogen fluoride EndLayout"
+    },
+    "Sample_14_1_1_brief": {
+      "expected": "StartLayout 1st Row 1st Column upper H 2 2nd Column plus 3rd Column upper F 2 4th Column right arrow 5th Column 2 upper H upper F 2nd Row 1st Column hydrogen 2nd Column Blank 3rd Column fluorine 4th Column Blank 5th Column hydrogen fluoride EndLayout"
+    },
+    "Sample_14_1_1_sbrief": {
+      "expected": "Layout 1st Row 1st Column upper H 2 2nd Column plus 3rd Column upper F 2 4th Column R arrow 5th Column 2 upper H upper F 2nd Row 1st Column hydrogen 2nd Column Blank 3rd Column fluorine 4th Column Blank 5th Column hydrogen fluoride EndLayout"
+    },
+    "Sample_14_3_1_default": {
+      "expected": "x equals StartLayout Enlarged left brace 1st Row 1st Column y less than 0 2nd Column 0 2nd Row 1st Column y greater than or equals 0 2nd Column 2 y EndLayout"
+    },
+    "Sample_14_3_1_brief": {
+      "expected": "x equals StartLayout Enlarged left brace 1st Row 1st Column y less than 0 2nd Column 0 2nd Row 1st Column y greater than or equals 0 2nd Column 2 y EndLayout"
+    },
+    "Sample_14_3_1_sbrief": {
+      "expected": "x equals Layout Enlarged L brace 1st Row 1st Column y less than 0 2nd Column 0 2nd Row 1st Column y greater than or equals 0 2nd Column 2 y EndLayout"
+    },
+    "Sample_15_1_1_default": {
+      "expected": "Start 3 By 3 Matrix 1st Row 1st Column x plus a 2nd Column x plus b 3rd Column x plus c 2nd Row 1st Column y plus a 2nd Column y plus b 3rd Column y plus c 3rd Row 1st Column z plus a 2nd Column z plus b 3rd Column z plus c EndMatrix"
+    },
+    "Sample_15_1_1_brief": {
+      "expected": "Start 3 By 3 Matrix 1st Row 1st Column x plus a 2nd Column x plus b 3rd Column x plus c 2nd Row 1st Column y plus a 2nd Column y plus b 3rd Column y plus c 3rd Row 1st Column z plus a 2nd Column z plus b 3rd Column z plus c EndMatrix"
+    },
+    "Sample_15_1_1_sbrief": {
+      "expected": "3 By 3 Matrix 1st Row 1st Column x plus a 2nd Column x plus b 3rd Column x plus c 2nd Row 1st Column y plus a 2nd Column y plus b 3rd Column y plus c 3rd Row 1st Column z plus a 2nd Column z plus b 3rd Column z plus c EndMatrix"
+    },
+    "Sample_15_2_1_default": {
+      "expected": "Start 2 By 2 Determinant 1st Row 1st Column a plus 1 2nd Column b 2nd Row 1st Column c 2nd Column d EndDeterminant equals left parenthesis a plus 1 right parenthesis d minus b c"
+    },
+    "Sample_15_2_1_brief": {
+      "expected": "Start 2 By 2 Determinant 1st Row 1st Column a plus 1 2nd Column b 2nd Row 1st Column c 2nd Column d EndDeterminant equals left p'ren a plus 1 right p'ren d minus b c"
+    },
+    "Sample_15_2_1_sbrief": {
+      "expected": "2 By 2 Determinant 1st Row 1st Column a plus 1 2nd Column b 2nd Row 1st Column c 2nd Column d EndDeterminant equals L p'ren a plus 1 R p'ren d minus b c"
+    },
+    "Sample_15_4_1_default": {
+      "expected": "Start 2 By 2 Determinant 1st Row a b 2nd Row c d EndDeterminant equals a d minus b c"
+    },
+    "Sample_15_4_1_brief": {
+      "expected": "Start 2 By 2 Determinant 1st Row a b 2nd Row c d EndDeterminant equals a d minus b c"
+    },
+    "Sample_15_4_1_sbrief": {
+      "expected": "2 By 2 Determinant 1st Row a b 2nd Row c d EndDeterminant equals a d minus b c"
+    },
+    "Sample_15_6_1_default": {
+      "expected": "StartBinomialOrMatrix x Choose y EndBinomialOrMatrix"
+    },
+    "Sample_15_6_1_brief": {
+      "expected": "StartBinomialOrMatrix x Choose y EndBinomialOrMatrix"
+    },
+    "Sample_15_6_1_sbrief": {
+      "expected": "BinomialOrMatrix x Choose y EndBinomialOrMatrix"
+    }
+  }
+}

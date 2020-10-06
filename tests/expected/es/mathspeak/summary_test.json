@@ -1,0 +1,444 @@
+{
+  "name": "SummarySpanishTest",
+  "factory": "summary",
+  "base": "input/common/summary_test.json",
+  "information": "Spanish Mathspeak Summary tests.",
+  "locale": "es",
+  "domain": "mathspeak",
+  "active": "SummarySpanish",
+  "exclude": [],
+  "tests": {
+    "AbstrAddition_default": {
+      "expected": "suma con 2 sumandos"
+    },
+    "AbstrAddition_brief": {
+      "expected": "suma"
+    },
+    "AbstrAddition_sbrief": {
+      "expected": "suma"
+    },
+    "AbstrBigop_default": {
+      "expected": "sumatorio"
+    },
+    "AbstrBigop_brief": {
+      "expected": "sumatorio"
+    },
+    "AbstrBigop_sbrief": {
+      "expected": "sumatorio"
+    },
+    "AbstrBinomial_default": {
+      "expected": "binomio"
+    },
+    "AbstrBinomial_brief": {
+      "expected": "binomio"
+    },
+    "AbstrBinomial_sbrief": {
+      "expected": "binomio"
+    },
+    "AbstrCases_default": {
+      "expected": "declaración de caso con 2 casos"
+    },
+    "AbstrCases_brief": {
+      "expected": "declaración de caso"
+    },
+    "AbstrCases_sbrief": {
+      "expected": "declaración de caso"
+    },
+    "_comment0_": " TODO",
+    "AbstrCell_default": {
+      "steps": [
+        "DOWN",
+        "DOWN"
+      ],
+      "expected": "1a columna en mesa"
+    },
+    "AbstrCell_brief": {
+      "steps": [
+        "DOWN",
+        "DOWN"
+      ],
+      "expected": "1a columna en mesa"
+    },
+    "AbstrCell_sbrief": {
+      "steps": [
+        "DOWN",
+        "DOWN"
+      ],
+      "expected": "1a columna en mesa"
+    },
+    "AbstrContinuedFraction_default": {
+      "expected": "fracción continua"
+    },
+    "AbstrContinuedFraction_brief": {
+      "expected": "frac continua"
+    },
+    "AbstrContinuedFraction_sbrief": {
+      "expected": "frac continua"
+    },
+    "AbstrDeterminant_default": {
+      "expected": "determinante de dimensión 2"
+    },
+    "AbstrDeterminant_brief": {
+      "expected": "determinante"
+    },
+    "AbstrDeterminant_sbrief": {
+      "expected": "determinante"
+    },
+    "AbstrFraction_default": {
+      "expected": "fracción"
+    },
+    "AbstrFraction_brief": {
+      "expected": "frac"
+    },
+    "AbstrFraction_sbrief": {
+      "expected": "frac"
+    },
+    "AbstrFunction_default": {
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "expresión funcional"
+    },
+    "AbstrFunction_brief": {
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "función"
+    },
+    "AbstrFunction_sbrief": {
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "función"
+    },
+    "AbstrIdentifier_default": {
+      "expected": "identificador"
+    },
+    "AbstrIdentifier_brief": {
+      "expected": "identificador"
+    },
+    "AbstrIdentifier_sbrief": {
+      "expected": "identificador"
+    },
+    "AbstrInfixop_default": {
+      "expected": "división con 2 elementos"
+    },
+    "AbstrInfixop_brief": {
+      "expected": "división"
+    },
+    "AbstrInfixop_sbrief": {
+      "expected": "división"
+    },
+    "AbstrIntegral_default": {
+      "expected": "integral"
+    },
+    "AbstrIntegral_brief": {
+      "expected": "integral"
+    },
+    "AbstrIntegral_sbrief": {
+      "expected": "integral"
+    },
+    "AbstrLim_default": {
+      "expected": "función de límite"
+    },
+    "AbstrLim_brief": {
+      "expected": "límite"
+    },
+    "AbstrLim_sbrief": {
+      "expected": "límite"
+    },
+    "_comment2_": " TODO",
+    "AbstrLine_default": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1a fila en líneas múltiples"
+    },
+    "AbstrLine_brief": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1a fila en líneas múltiples"
+    },
+    "AbstrLine_sbrief": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1a fila en líneas múltiples"
+    },
+    "AbstrMatrix_default": {
+      "expected": "3 por 2 matriz"
+    },
+    "AbstrMatrix_brief": {
+      "expected": "matriz"
+    },
+    "AbstrMatrix_sbrief": {
+      "expected": "matriz"
+    },
+    "AbstrMixedNumber_default": {
+      "expected": "número mixto"
+    },
+    "AbstrMixedNumber_brief": {
+      "expected": "número mixto"
+    },
+    "AbstrMixedNumber_sbrief": {
+      "expected": "número mixto"
+    },
+    "AbstrMultiplication_default": {
+      "expected": "producto con 2 factores"
+    },
+    "AbstrMultiplication_brief": {
+      "expected": "producto"
+    },
+    "AbstrMultiplication_sbrief": {
+      "expected": "producto"
+    },
+    "AbstrMultirel_default": {
+      "expected": "secuencia de relación con 3 elementos"
+    },
+    "AbstrMultirel_brief": {
+      "expected": "secuencia de relación"
+    },
+    "AbstrMultirel_sbrief": {
+      "expected": "secuencia de relación"
+    },
+    "AbstrNumber_default": {
+      "expected": "número"
+    },
+    "AbstrNumber_brief": {
+      "expected": "número"
+    },
+    "AbstrNumber_sbrief": {
+      "expected": "número"
+    },
+    "AbstrPunctuated_default": {
+      "expected": "lista separada por coma de longitud 3"
+    },
+    "AbstrPunctuated_brief": {
+      "expected": "lista separada por coma"
+    },
+    "AbstrPunctuated_sbrief": {
+      "expected": "lista separada por coma"
+    },
+    "AbstrRelation_default": {
+      "expected": "igualdad"
+    },
+    "AbstrRelation_brief": {
+      "expected": "igualdad"
+    },
+    "AbstrRelation_sbrief": {
+      "expected": "igualdad"
+    },
+    "AbstrRelationSeq_default": {
+      "expected": "secuencia de igualdad con 3 elementos"
+    },
+    "AbstrRelationSeq_brief": {
+      "expected": "secuencia de igualdad"
+    },
+    "AbstrRelationSeq_sbrief": {
+      "expected": "secuencia de igualdad"
+    },
+    "AbstrRoot_default": {
+      "expected": "raíz del índice 3"
+    },
+    "AbstrRoot_brief": {
+      "expected": "raíz"
+    },
+    "AbstrRoot_sbrief": {
+      "expected": "raíz"
+    },
+    "AbstrRootNested_default": {
+      "expected": "raíz anidada del índice 3"
+    },
+    "AbstrRootNested_brief": {
+      "expected": "raíz anidada"
+    },
+    "AbstrRootNested_sbrief": {
+      "expected": "raíz anidada"
+    },
+    "_comment3_": " TODO",
+    "AbstrRow_default": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1a fila en mesa con 2 columnas"
+    },
+    "AbstrRow_brief": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1a fila en mesa con 2 columnas"
+    },
+    "AbstrRow_sbrief": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1a fila en mesa con 2 columnas"
+    },
+    "AbstrRowvector_default": {
+      "expected": "vector fila de dimensión 2"
+    },
+    "AbstrRowvector_brief": {
+      "expected": "vector fila"
+    },
+    "AbstrRowvector_sbrief": {
+      "expected": "vector fila"
+    },
+    "AbstrSqrt_default": {
+      "expected": "raíz cuadrada"
+    },
+    "AbstrSqrt_brief": {
+      "expected": "raíz cuadrada"
+    },
+    "AbstrSqrt_sbrief": {
+      "expected": "raíz cuadrada"
+    },
+    "AbstrSqrtNested_default": {
+      "expected": "raíz cuadrada anidada"
+    },
+    "AbstrSqrtNested_brief": {
+      "expected": "raíz cuadrada anidada"
+    },
+    "AbstrSqrtNested_sbrief": {
+      "expected": "raíz cuadrada anidada"
+    },
+    "AbstrSquarematrix_default": {
+      "expected": "matriz cuadrada de dimensión 2"
+    },
+    "AbstrSquarematrix_brief": {
+      "expected": "matriz cuadrada"
+    },
+    "AbstrSquarematrix_sbrief": {
+      "expected": "matriz cuadrada"
+    },
+    "AbstrSubscript_default": {
+      "expected": "subíndice"
+    },
+    "AbstrSubscript_brief": {
+      "expected": "subíndice"
+    },
+    "AbstrSubscript_sbrief": {
+      "expected": "subíndice"
+    },
+    "AbstrSubsup_default": {
+      "expected": "potencia con subíndice"
+    },
+    "AbstrSubsup_brief": {
+      "expected": "potencia con subíndice"
+    },
+    "AbstrSubsup_sbrief": {
+      "expected": "potencia con subíndice"
+    },
+    "AbstrSuperscript_default": {
+      "expected": "potencia"
+    },
+    "AbstrSuperscript_brief": {
+      "expected": "potencia"
+    },
+    "AbstrSuperscript_sbrief": {
+      "expected": "potencia"
+    },
+    "AbstrTable_default": {
+      "expected": "mesa con 2 filas y 2 columnas"
+    },
+    "AbstrTable_brief": {
+      "expected": "mesa con 2 filas y 2 columnas"
+    },
+    "AbstrTable_sbrief": {
+      "expected": "mesa con 2 filas y 2 columnas"
+    },
+    "AbstrText_default": {
+      "expected": "texto"
+    },
+    "AbstrText_brief": {
+      "expected": "texto"
+    },
+    "AbstrText_sbrief": {
+      "expected": "texto"
+    },
+    "AbstrVarAddition_default": {
+      "expected": "suma con número variable de sumandos"
+    },
+    "AbstrVarAddition_brief": {
+      "expected": "suma"
+    },
+    "AbstrVarAddition_sbrief": {
+      "expected": "suma"
+    },
+    "AbstrVarCases_default": {
+      "expected": "declaración de caso con número variable de casos"
+    },
+    "AbstrVarCases_brief": {
+      "expected": "declaración de caso"
+    },
+    "AbstrVarCases_sbrief": {
+      "expected": "declaración de caso"
+    },
+    "AbstrVarDeterminant_default": {
+      "expected": "determinante de dimensión n"
+    },
+    "AbstrVarDeterminant_brief": {
+      "expected": "determinante"
+    },
+    "AbstrVarDeterminant_sbrief": {
+      "expected": "determinante"
+    },
+    "AbstrVarMatrix_default": {
+      "expected": "matriz de dimensión n por m"
+    },
+    "AbstrVarMatrix_brief": {
+      "expected": "matriz cuadrada"
+    },
+    "AbstrVarMatrix_sbrief": {
+      "expected": "matriz cuadrada"
+    },
+    "AbstrVarMultiplication_default": {
+      "expected": "producto con una cantidad variable de factores"
+    },
+    "AbstrVarMultiplication_brief": {
+      "expected": "producto"
+    },
+    "AbstrVarMultiplication_sbrief": {
+      "expected": "producto"
+    },
+    "AbstrVarMultirel_default": {
+      "expected": "secuencia de relación con número variable de elementos"
+    },
+    "AbstrVarMultirel_brief": {
+      "expected": "secuencia de relación"
+    },
+    "AbstrVarMultirel_sbrief": {
+      "expected": "secuencia de relación"
+    },
+    "AbstrVarPunctuated_default": {
+      "expected": "lista separada por coma de longitud 3"
+    },
+    "AbstrVarPunctuated_brief": {
+      "expected": "lista separada por coma"
+    },
+    "AbstrVarPunctuated_sbrief": {
+      "expected": "lista separada por coma"
+    },
+    "AbstrVarRelation_default": {
+      "expected": "secuencia de igualdad con una cantidad variable de elementos"
+    },
+    "AbstrVarRelation_brief": {
+      "expected": "secuencia de igualdad"
+    },
+    "AbstrVarRelation_sbrief": {
+      "expected": "secuencia de igualdad"
+    },
+    "AbstrVarVector_default": {
+      "expected": "vector de dimensión n"
+    },
+    "AbstrVarVector_brief": {
+      "expected": "vector"
+    },
+    "AbstrVarVector_sbrief": {
+      "expected": "vector"
+    },
+    "AbstrVector_default": {
+      "expected": "vector de dimensión 3"
+    },
+    "AbstrVector_brief": {
+      "expected": "vector"
+    },
+    "AbstrVector_sbrief": {
+      "expected": "vector"
+    }
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "name": "MathspeakIssues2Spanish",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues2.json",
+  "information": "Spanish Mathspeak Issues 2.",
+  "domain": "mathspeak",
+  "locale": "es",
+  "active": "MathspeakIssuesSpanish",
+  "exclude": [],
+  "tests": {
+  "MathspeakRoots_0": {
+    "expected": "empezar raíz cuadrada a finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_1": {
+    "expected": "empezar raíz cuadrada a finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_2": {
+    "expected": "empezar raíz cúbica a finalizar raíz cúbica"
+  },
+  "MathspeakRoots_3": {
+    "expected": "empezar raíz a la cuarta a finalizar raíz a la cuarta"
+  },
+  "MathspeakRoots_4": {
+    "expected": "empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_5": {
+    "expected": "empezar raíz cuadrada empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_6": {
+    "expected": "empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_7": {
+    "expected": "empezar raíz cuadrada empezar raíz cuadrada empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cuadrada finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_8": {
+    "expected": "empezar raíz cúbica empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cúbica"
+  },
+  "MathspeakRoots_9": {
+    "expected": "empezar raíz cúbica empezar raíz cúbica empezar raíz cúbica a finalizar raíz cúbica finalizar raíz cúbica finalizar raíz cúbica"
+  },
+  "MathspeakRoots_10": {
+    "expected": "empezar raíz a la cuarta empezar raíz a la cuarta a finalizar raíz a la cuarta finalizar raíz a la cuarta"
+  },
+  "MathspeakRoots_11": {
+    "expected": "empezar raíz a la cuarta empezar raíz a la cuarta empezar raíz a la cuarta a finalizar raíz a la cuarta finalizar raíz a la cuarta finalizar raíz a la cuarta"
+  },
+  "MathspeakRoots_12": {
+    "expected": "empezar raíz cuadrada empezar raíz cúbica empezar raíz a la cuarta a finalizar raíz a la cuarta finalizar raíz cúbica finalizar raíz cuadrada"
+  },
+  "MathspeakRoots_13": {
+    "expected": "empezar raíz a la cuarta empezar raíz cúbica empezar raíz cuadrada a finalizar raíz cuadrada finalizar raíz cúbica finalizar raíz a la cuarta"
+  },
+    "HtmlEntities_0": {
+      "expected": "menor que"
+    },
+    "HtmlEntities_1": {
+      "expected": "mayor que"
+    },
+    "HtmlEntities_2": {
+      "expected": "n"
+    },
+    "HtmlEntities_3": {
+      "expected": "m"
+    },
+    "HtmlEntities_4": {
+      "expected": "n m"
+    },
+    "HtmlEntities_5": {
+      "expected": "n m"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "empezar binomial n en k finalizar binomial"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "empezar binomial n en k finalizar binomial"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "empezar binomial n en k finalizar binomial"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "paréntesis izquierdo empezar fracción n entre k finalizar fracción paréntesis derecho"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "paréntesis izquierdo empezar fracción n entre k finalizar fracción paréntesis derecho"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "paréntesis izquierdo empezar fracción n entre k finalizar fracción paréntesis derecho"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "AbsValueVsNeutral_0": {
+      "expected": "barra vertical a doble barra vertical"
+    },
+    "AbsValueVsNeutral_1": {
+      "expected": "doble barra vertical a doble barra vertical"
+    },
+    "AbsValueVsNeutral_2": {
+      "expected": "barra vertical partida a barra vertical partida"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "empezar fracción 1 entre 2 finalizar fracción menos empezar fracción 5 entre 18 finalizar fracción"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "menos empezar fracción 5,2 entre a finalizar fracción"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "menos empezar fracción 5,2 entre 18 finalizar fracción"
+    },
+    "TrivialStuff_0": {
+      "expected": "a igual b"
+    },
+    "TrivialStuff_1": {
+      "expected": "comillas"
+    },
+    "TrivialStuff_2": {
+      "expected": "comillas x comillas"
+    },
+    "TrivialStuff_3": {
+      "expected": "prima"
+    },
+    "GermanFonts_0": {
+      "expected": "Fraktur mayúscula A"
+    },
+    "GermanFonts_1": {
+      "expected": "negrita Fraktur mayúscula A"
+    },
+    "GermanFonts_2": {
+      "expected": "Fraktur mayúscula A"
+    },
+    "GermanFonts_3": {
+      "expected": "negrita Fraktur mayúscula A"
+    },
+    "GermanFonts_4": {
+      "expected": "negrita Fraktur abc"
+    },
+    "GermanFonts_5": {
+      "expected": "negrita Fraktur ABC"
+    },
+    "GermanFonts_6": {
+      "expected": "negrita Fraktur mayúscula A mayúscula B mayúscula C"
+    },
+    "OtherFonts_0": {
+      "expected": "m"
+    },
+    "OtherFonts_1": {
+      "expected": "normal m"
+    },
+    "OtherFonts_2": {
+      "expected": "m i"
+    },
+    "OtherFonts_3": {
+      "expected": "cursiva m i"
+    },
+    "OtherFonts_4": {
+      "expected": "30"
+    },
+    "OtherFonts_5": {
+      "expected": "cursiva 3"
+    },
+    "OtherFonts_6": {
+      "expected": "30 grado"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 m mayúscula A"
+    },
+    "Multiline_0": {
+      "expected": "empezar esquema primera fila  a segunda fila  b finalizar esquema"
+    },
+    "Multiline_1": {
+      "expected": "empezar esquema primera fila primera columna a segunda columna c segunda fila primera columna b segunda columna d finalizar esquema"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "menor o igual que 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "igual 2 igual"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "menor o igual que 2 igual"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "empezar esquema primera fila primera columna 1 segunda columna menor o igual que 2 finalizar esquema"
+    },
+    "EncloseGeneral": {
+      "expected": "empezar rodear círculo a finalizar rodear"
+    },
+    "EncloseLeftbar": {
+      "expected": "barra vertical a"
+    },
+    "EncloseRightbar": {
+      "expected": "a barra vertical"
+    },
+    "LatinMathfonts_0": {
+      "expected": "Fraktur mayúscula A"
+    },
+    "LatinMathfonts_1": {
+      "expected": "negrita Fraktur mayúscula A"
+    },
+    "LatinMathfonts_2": {
+      "expected": "negrita script mayúscula A"
+    },
+    "LatinMathfonts_3": {
+      "expected": "negrita cursiva mayúscula A"
+    },
+    "LatinMathfonts_4": {
+      "expected": "negrita mayúscula A"
+    },
+    "LatinMathfonts_5": {
+      "expected": "negrita de pizarra mayúscula A"
+    },
+    "LatinMathfonts_6": {
+      "expected": "cursiva mayúscula A"
+    },
+    "LatinMathfonts_7": {
+      "expected": "monoespacio mayúscula A"
+    },
+    "LatinMathfonts_8": {
+      "expected": "sans serif negrita mayúscula A"
+    },
+    "LatinMathfonts_9": {
+      "expected": "sans serif cursiva mayúscula A"
+    },
+    "LatinMathfonts_10": {
+      "expected": "sans serif negrita cursiva mayúscula A"
+    },
+    "LatinMathfonts_11": {
+      "expected": "sans serif mayúscula A"
+    },
+    "LatinMathfonts_12": {
+      "expected": "script mayúscula A"
+    },
+    "GreekMathfonts_0": {
+      "expected": "negrita mayúscula Alfa"
+    },
+    "GreekMathfonts_1": {
+      "expected": "cursiva mayúscula Alfa"
+    },
+    "GreekMathfonts_2": {
+      "expected": "negrita cursiva mayúscula Alfa"
+    },
+    "GreekMathfonts_3": {
+      "expected": "sans serif negrita mayúscula Alfa"
+    },
+    "GreekMathfonts_4": {
+      "expected": "sans serif negrita cursiva mayúscula Alfa"
+    },
+      "Issue320_0": {
+    "expected": "diferencial parcial"
+  },
+  "Issue320_1": {
+    "expected": "x factorial"
+  },
+  "Issue320_2": {
+    "expected": "menos menos x"
+  },
+  "Issue320_3": {
+    "expected": "más más x"
+  },
+  "Issue320_4": {
+    "expected": "seno seno x"
+  },
+  "Issue320_5": {
+    "expected": "diferencial parcial diferencial parcial x"
+  },
+  "Issue320_6": {
+    "expected": "paréntesis izquierdo empezar fracción diferencial parcial al cuadrado entre diferencial parcial x al cuadrado finalizar fracción más empezar fracción diferencial parcial al cuadrado entre diferencial parcial y al cuadrado finalizar fracción paréntesis derecho empezar valor absoluto phi paréntesis izquierdo x más normal i y paréntesis derecho finalizar valor absoluto al cuadrado igual 0"
+  }
+  }
+}

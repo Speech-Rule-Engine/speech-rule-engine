@@ -121,6 +121,7 @@ sre.AcssRenderer.prototype.prosodyElement = function(key, value) {
   switch (key) {
     case sre.Engine.personalityProps.RATE:
       return '(richness . ' + value + ')';
+      break;
     case sre.Engine.personalityProps.PITCH:
       return '(average-pitch . ' + value + ')';
       break;

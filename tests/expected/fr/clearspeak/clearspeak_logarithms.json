@@ -1,0 +1,131 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchLogarithms",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_logarithms.json",
+  "information": "French Clearspeak Logarithms rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Logarithms",
+    "Log001": {
+      "expected": "log x"
+    },
+    "Log002": {
+      "expected": "log base 10 de, x"
+    },
+    "Log003": {
+      "expected": "log base b de, a x, égale, log base b de, a, plus, log base b de, x"
+    },
+    "Log004": {
+      "expected": "log base b de, S sur T, égale, log base b de, S, moins, log base b de, T"
+    },
+    "Log005": {
+      "expected": "log base b de, parenthèse gauche, x à la puissance k; parenthèse droite, égale k, log base b de, x"
+    },
+    "Log006": {
+      "expected": "10 à la puissance log base 10 de, x; égale x"
+    },
+    "Log007": {
+      "expected": "log base 10 de, 10 à la puissance x; égale x"
+    },
+    "Log008": {
+      "expected": "10 à la puissance log base 10 de, 5; égale 5"
+    },
+    "Log009": {
+      "expected": "log base 10 de, 10 au cube, égale 3"
+    },
+    "Log010": {
+      "expected": "log base a de, x, égale, log base b de, x, sur, log base b de, a"
+    },
+    "Log011": {
+      "expected": "log base 10 de, 18, sur, log base 10 de, 3, égale, log base 3 de, 18"
+    },
+    "Log012": {
+      "expected": "log x sur log a"
+    },
+    "Log013": {
+      "expected": "log de, parenthèse gauche, x plus 1, parenthèse droite"
+    },
+    "Log014": {
+      "expected": "log de, parenthèse gauche, x plus 1, parenthèse droite, au carré"
+    },
+    "Log015": {
+      "expected": "log x y"
+    },
+    "Log016": {
+      "expected": "fraction avec numérateur, log de, parenthèse gauche, x plus 1, parenthèse droite, et dénominateur, log de, parenthèse gauche, x plus 2, parenthèse droite"
+    },
+    "Log017": {
+      "expected": "fraction avec numérateur, log base 6 de, parenthèse gauche, x plus 1, parenthèse droite, et dénominateur, log base 6 de, parenthèse gauche, x plus 2, parenthèse droite"
+    },
+    "Log018": {
+      "expected": "fraction avec numérateur log 40 plus log 60, et dénominateur log 5"
+    },
+    "Log019": {
+      "expected": "fraction avec numérateur, log base 3 de, 40, plus, log base 3 de, 60, et dénominateur, log base 3 de, 5"
+    },
+    "Log020": {
+      "expected": "log de, parenthèse gauche, 3 à la puissance 4; 12 à la puissance 9; parenthèse droite, égale 4 log 3, plus 9 log 12"
+    },
+    "Log021": {
+      "expected": "log de, parenthèse gauche, x sur y, parenthèse droite"
+    },
+    "_comment2_": " TODO: Fix the vulgar fraction predicate!",
+    "Log022": {
+      "expected": "log de, parenthèse gauche, fraction avec numérateur 3 à la puissance 4; et dénominateur 8 à la puissance 10; parenthèse droite, égale 4 log 3, moins 10 log 8"
+    },
+    "Log023": {
+      "expected": "10 à la puissance log x"
+    },
+    "NatLog001": {
+      "expected": "logarithme népérien x"
+    },
+    "NatLog002": {
+      "expected": "logarithme népérien x, moins logarithme népérien de, parenthèse gauche, x moins 1, parenthèse droite, égale logarithme népérien de, parenthèse gauche, fraction avec numérateur x, et dénominateur x moins 1, parenthèse droite"
+    },
+    "NatLog003": {
+      "expected": "logarithme népérien de, parenthèse gauche, e à la puissance x; parenthèse droite, égale x"
+    },
+    "NatLog004": {
+      "expected": "e à la puissance logarithme népérien x; égale x"
+    },
+    "NatLog005": {
+      "expected": "logarithme népérien de, parenthèse gauche, e à la puissance x; parenthèse droite, égale x"
+    },
+    "NatLog006": {
+      "expected": "e à la puissance logarithme népérien 4; égale 4"
+    },
+    "NatLog007": {
+      "expected": "logarithme népérien 40, sur logarithme népérien 5, égale, log base 5 de, 40"
+    },
+    "NatLog008": {
+      "expected": "fraction avec numérateur logarithme népérien 40, plus logarithme népérien 60, et dénominateur logarithme népérien 5"
+    },
+    "NatLog009": {
+      "expected": "logarithme népérien x"
+    },
+    "NatLog010": {
+      "expected": "logarithme népérien x, moins, logarithme népérien de, parenthèse gauche, x moins 1, parenthèse droite, égale, logarithme népérien de, parenthèse gauche, fraction avec numérateur x, et dénominateur x moins 1, parenthèse droite"
+    },
+    "NatLog011": {
+      "expected": "logarithme népérien de, parenthèse gauche, e à la puissance x; parenthèse droite, égale x"
+    },
+    "NatLog012": {
+      "expected": "e à la puissance logarithme népérien x; égale x"
+    },
+    "NatLog013": {
+      "expected": "logarithme népérien de, parenthèse gauche, e à la puissance x; parenthèse droite, égale x"
+    },
+    "NatLog014": {
+      "expected": "e à la puissance logarithme népérien 4; égale 4"
+    },
+    "NatLog015": {
+      "expected": "logarithme népérien 40, sur logarithme népérien 5, égale, log base 5 de, 40"
+    },
+    "NatLog016": {
+      "expected": "fraction avec numérateur logarithme népérien 40, plus logarithme népérien 60, et dénominateur logarithme népérien 5"
+    }
+  }
+}

@@ -143,6 +143,15 @@ sre.EnrichMathml.walkTree = function(semantic) {
     sre.Debugger.getInstance().output('Walktree Case 0');
     newNode = /**@type{!Element}*/(semantic.mathml[0]);
     sre.EnrichMathml.setAttributes(newNode, semantic);
+    if (semantic.childNodes.length) {
+      // These children should all be empty.
+      sre.Debugger.getInstance().output('Walktree Case 0.1');
+      semantic.childNodes.forEach(function(child) {
+        if (child.type === sre.SemanticAttr.Type.EMPTY) {
+          newNode.appendChild(sre.EnrichMathml.walkTree(child));
+        }
+      });
+    }
     return sre.EnrichMathml.ascendNewNode(newNode);
   }
 
@@ -370,6 +379,11 @@ sre.EnrichMathml.functionApplication_ = function(oldNode, newNode) {
   if (oldNode && newNode && oldNode.textContent && newNode.textContent &&
       oldNode.textContent === appl && newNode.textContent === appl &&
       newNode.getAttribute(sre.EnrichMathml.Attribute.ADDED) === 'true') {
+    for (var i = 0, attr; attr = oldNode.attributes[i]; i++) {
+      if (!newNode.hasAttribute(attr.nodeName)) {
+        newNode.setAttribute(attr.nodeName, attr.nodeValue);
+      }
+    }
     sre.DomUtil.replaceNode(oldNode, newNode);
     return true;
   }
@@ -570,11 +584,16 @@ sre.EnrichMathml.unitChild_ = function(node) {
  * @private
  */
 sre.EnrichMathml.isIgnorable_ = function(node) {
+  if (node.nodeType !== sre.DomUtil.NodeType.ELEMENT_NODE) {
+    return true;
+  }
   if (!node || sre.SemanticUtil.hasIgnoreTag(node)) {
     return true;
   }
   var children = sre.DomUtil.toArray(node.childNodes);
-  if (!sre.SemanticUtil.hasEmptyTag(node) && children.length) {
+  if ((!sre.SemanticUtil.hasEmptyTag(node) && children.length) ||
+      sre.SemanticUtil.hasDisplayTag(node) ||
+      sre.SemanticUtil.isOrphanedGlyph(node)) {
     return false;
   }
   return sre.DomUtil.toArray(node.childNodes)
@@ -684,7 +703,8 @@ sre.EnrichMathml.rewriteMfenced = function(mml) {
 
 
 /**
- * Makes a new MathML element for an invisible operator or one added by mfenced.
+ * Makes a new MathML element for an invisible operator or one added
+ * by mfenced.
  * @param {!sre.SemanticNode} operator The semantic node with the operator.
  * @return {!Element} The newly created MathML element.
  * @private

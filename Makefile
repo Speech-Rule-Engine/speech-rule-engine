@@ -19,7 +19,7 @@ SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
 RES_DIR = $(abspath ./res)
-SRC = $(SRC_DIR)/**/*.js
+SRC = $(SRC_DIR)/**/*.js $(SRC_DIR)/speech_rules/**/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
@@ -39,10 +39,11 @@ LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
 
 TEST_DIR = $(abspath ./tests)
-TEST_TARGET = $(LIB_DIR)/test.js
-TEST_DEPS = $(TEST_DIR)/deps.js
+TEST_TARGET = $(LIB_DIR)/sre_test.js
+TEST_RUNNER = $(TEST_DIR)/dist/sretest.js
+TEST_DEPS = $(TEST_DIR)/src/deps.js
 TEST = $(BIN_DIR)/test_sre
-TEST_SRC = $(TEST_DIR)/**/*.js $(TEST_DIR)/*.js
+TEST_SRC = $(TEST_DIR)/src/*/*.js
 
 JSDOC = $(NODE_MODULES)/.bin/jsdoc
 JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
@@ -195,11 +196,10 @@ $(INTERACTIVE):
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.setAsync()" >> $@
 
-clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps
+clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps clean_json
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(INTERACTIVE)
-	rm -rf $(JSON_DST)
 
 
 ##################################################################
@@ -216,13 +216,14 @@ $(TEST_DEPS):
 	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
 	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) $(TEST_DIR)" > $(TEST_DEPS)
 
-test: directories test_deps deps test_compile test_script maps run_test
+test: directories deps test_compile test_script maps run_test
 
 test_compile: $(TEST_TARGET)
 
-$(TEST_TARGET): $(GOOG_BASE_CLEAN) $(TEST_SRC) $(SRC)
+$(TEST_TARGET): $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling test version of Speech Rule Engine
-	@$(CLOSURE_COMPILER) $(TEST_FLAGS) --entry_point=goog:sre.Tests --js_output_file=$(TEST_TARGET) $^
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Global --js_output_file=$(TEST_TARGET) $^
+
 
 test_script: $(TEST)
 
@@ -233,15 +234,26 @@ $(TEST):
 	@echo "" >> $@
 	@echo "export SRE_JSON_PATH=$(JSON_DST)" >> $@
 	@echo "" >> $@
-	@echo $(NODEJS) $(TEST_TARGET) "\$$@" >> $@
+	@echo $(NODEJS) $(TEST_RUNNER) "\$$@" >> $@
 	@chmod 755 $@
 
-run_test:
+run_test: $(TEST_RUNNER)
 	@$(TEST)
+
+$(TEST_RUNNER): $(TEST_DIR)/node_modules
+	@cd tests; npx webpack
+	@cd ..
+
+
+$(TEST_DIR)/node_modules:
+	@cd tests; npm install
+	@cd ..
+
 
 clean_test:
 	rm -f $(TEST_TARGET)
 	rm -f $(TEST_DEPS)
+	rm -f $(TEST_RUNNER)
 	rm -f $(TEST)
 
 
@@ -351,3 +363,6 @@ clean_docs:
 
 clean_iemaps:
 	rm -f $(IEMAPS_FILE)
+
+clean_json:
+	rm -rf $(JSON_DST)

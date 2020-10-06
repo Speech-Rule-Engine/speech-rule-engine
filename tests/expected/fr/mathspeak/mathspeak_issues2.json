@@ -1,0 +1,273 @@
+{
+  "name": "MathspeakIssues2French",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues2.json",
+  "information": "French Mathspeak Issues 2.",
+  "domain": "mathspeak",
+  "locale": "fr",
+  "active": "MathspeakIssuesFrench",
+  "exclude": [],
+  "tests": {
+    "MathspeakRoots_0": {
+      "expected": "début racine carrée a fin racine carrée"
+    },
+    "MathspeakRoots_1": {
+      "expected": "début racine carrée a fin racine carrée"
+    },
+    "MathspeakRoots_2": {
+      "expected": "début racine cubique a fin racine cubique"
+    },
+    "MathspeakRoots_3": {
+      "expected": "indice du radical 4 début racine a fin racine"
+    },
+    "MathspeakRoots_4": {
+      "expected": "début racine carrée imbriquée début racine carrée a fin racine carrée fin racine carrée imbriquée"
+    },
+    "MathspeakRoots_5": {
+      "expected": "début racine carrée imbriquée début racine carrée imbriquée début racine carrée a fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée"
+    },
+    "MathspeakRoots_6": {
+      "expected": "début racine carrée imbriquée début racine carrée a fin racine carrée fin racine carrée imbriquée"
+    },
+    "MathspeakRoots_7": {
+      "expected": "début racine carrée imbriquée début racine carrée imbriquée début racine carrée a fin racine carrée fin racine carrée imbriquée fin racine carrée imbriquée"
+    },
+    "MathspeakRoots_8": {
+      "expected": "début racine cubique imbriquée début racine cubique a fin racine cubique fin racine cubique imbriquée"
+    },
+    "MathspeakRoots_9": {
+      "expected": "début racine cubique imbriquée début racine cubique imbriquée début racine cubique a fin racine cubique fin racine cubique imbriquée fin racine cubique imbriquée"
+    },
+    "MathspeakRoots_10": {
+      "expected": "indice du radical imbriquée 4 début racine imbriquée indice du radical 4 début racine a fin racine fin racine imbriquée"
+    },
+    "MathspeakRoots_11": {
+      "expected": "indice du radical imbriquée 4 début racine imbriquée indice du radical imbriquée 4 début racine imbriquée indice du radical 4 début racine a fin racine fin racine imbriquée fin racine imbriquée"
+    },
+    "MathspeakRoots_12": {
+      "expected": "début racine carrée imbriquée début racine cubique imbriquée indice du radical 4 début racine a fin racine fin racine cubique imbriquée fin racine carrée imbriquée"
+    },
+    "MathspeakRoots_13": {
+      "expected": "indice du radical imbriquée 4 début racine imbriquée début racine cubique imbriquée début racine carrée a fin racine carrée fin racine cubique imbriquée fin racine imbriquée"
+    },
+    "HtmlEntities_0": {
+      "expected": "inférieur à"
+    },
+    "HtmlEntities_1": {
+      "expected": "supérieur à"
+    },
+    "HtmlEntities_2": {
+      "expected": "n"
+    },
+    "HtmlEntities_3": {
+      "expected": "m"
+    },
+    "HtmlEntities_4": {
+      "expected": "n m"
+    },
+    "HtmlEntities_5": {
+      "expected": "n m"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "début binomiale k parmi n fin binomiale"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "début binomiale k parmi n fin binomiale"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "début binomiale k parmi n fin binomiale"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "parenthèse gauche début fraction n sur k fin fraction parenthèse droite"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "parenthèse gauche début fraction n sur k fin fraction parenthèse droite"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "parenthèse gauche début fraction n sur k fin fraction parenthèse droite"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "AbsValueVsNeutral_0": {
+      "expected": "barre verticale a double ligne verticale"
+    },
+    "AbsValueVsNeutral_1": {
+      "expected": "double ligne verticale a double ligne verticale"
+    },
+    "AbsValueVsNeutral_2": {
+      "expected": "barre déjointe a barre déjointe"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "un-demi moins cinq-dix-huitièmes"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "négatif début fraction 5,2 sur a fin fraction"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "négatif début fraction 5,2 sur 18 fin fraction"
+    },
+    "TrivialStuff_0": {
+      "expected": "a égale b"
+    },
+    "TrivialStuff_1": {
+      "expected": "petit guillemet"
+    },
+    "TrivialStuff_2": {
+      "expected": "petit guillemet x petit guillemet"
+    },
+    "TrivialStuff_3": {
+      "expected": "prime"
+    },
+    "GermanFonts_0": {
+      "expected": "A majuscule en gothique"
+    },
+    "GermanFonts_1": {
+      "expected": "A majuscule en gothique gras"
+    },
+    "GermanFonts_2": {
+      "expected": "A majuscule en gothique"
+    },
+    "GermanFonts_3": {
+      "expected": "A majuscule en gothique gras"
+    },
+    "GermanFonts_4": {
+      "expected": "abc en gothique gras"
+    },
+    "GermanFonts_5": {
+      "expected": "ABC en gothique gras"
+    },
+    "GermanFonts_6": {
+      "expected": "A majuscule B majuscule C majuscule en gothique gras"
+    },
+    "OtherFonts_0": {
+      "expected": "m"
+    },
+    "OtherFonts_1": {
+      "expected": "m en normal"
+    },
+    "OtherFonts_2": {
+      "expected": "m i"
+    },
+    "OtherFonts_3": {
+      "expected": "m i en italique"
+    },
+    "OtherFonts_4": {
+      "expected": "30"
+    },
+    "OtherFonts_5": {
+      "expected": "3 en italique"
+    },
+    "OtherFonts_6": {
+      "expected": "30 degrés"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 m A majuscule"
+    },
+    "Multiline_0": {
+      "expected": "début tableau 1re rangée  a 2e rangée  b fin tableau"
+    },
+    "Multiline_1": {
+      "expected": "début tableau 1re rangée 1re colonne a 2e colonne c 2e rangée 1re colonne b 2e colonne d fin tableau"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "plus petit ou égal à 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "égale 2 égale"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "plus petit ou égal à 2 égale"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "début tableau 1re rangée 1re colonne 1 2e colonne plus petit ou égal à 2 fin tableau"
+    },
+    "EncloseGeneral": {
+      "expected": "début enfermer en cercle a fin enfermer"
+    },
+    "EncloseLeftbar": {
+      "expected": "barre verticale a"
+    },
+    "EncloseRightbar": {
+      "expected": "a barre verticale"
+    },
+    "LatinMathfonts_0": {
+      "expected": "A majuscule en gothique"
+    },
+    "LatinMathfonts_1": {
+      "expected": "A majuscule en gothique gras"
+    },
+    "LatinMathfonts_2": {
+      "expected": "A majuscule de ronde en gras"
+    },
+    "LatinMathfonts_3": {
+      "expected": "A majuscule en italique gras"
+    },
+    "LatinMathfonts_4": {
+      "expected": "A majuscule en gras"
+    },
+    "LatinMathfonts_5": {
+      "expected": "A majuscule ajouré"
+    },
+    "LatinMathfonts_6": {
+      "expected": "A majuscule en italique"
+    },
+    "LatinMathfonts_7": {
+      "expected": "A majuscule en chasse fixe"
+    },
+    "LatinMathfonts_8": {
+      "expected": "A majuscule en gras sans empattement"
+    },
+    "LatinMathfonts_9": {
+      "expected": "A majuscule en italique sans empattement"
+    },
+    "LatinMathfonts_10": {
+      "expected": "A majuscule en italique gras sans empattement"
+    },
+    "LatinMathfonts_11": {
+      "expected": "A majuscule sans empattement"
+    },
+    "LatinMathfonts_12": {
+      "expected": "A majuscule de ronde"
+    },
+    "GreekMathfonts_0": {
+      "expected": "Alpha majuscule en gras"
+    },
+    "GreekMathfonts_1": {
+      "expected": "Alpha majuscule en italique"
+    },
+    "GreekMathfonts_2": {
+      "expected": "Alpha majuscule en italique gras"
+    },
+    "GreekMathfonts_3": {
+      "expected": "Alpha majuscule en gras sans empattement"
+    },
+    "GreekMathfonts_4": {
+      "expected": "Alpha majuscule en italique gras sans empattement"
+    },
+    "Issue320_0": {
+      "expected": "dérivée partielle"
+    },
+    "Issue320_1": {
+      "expected": "x factorielle"
+    },
+    "Issue320_2": {
+      "expected": "négatif négatif x"
+    },
+    "Issue320_3": {
+      "expected": "plus plus x"
+    },
+    "Issue320_4": {
+      "expected": "sinus sinus x"
+    },
+    "Issue320_5": {
+      "expected": "dérivée partielle dérivée partielle x"
+    },
+    "Issue320_6": {
+      "expected": "parenthèse gauche début fraction dérivée partielle au carré sur dérivée partielle x au carré fin fraction plus début fraction dérivée partielle au carré sur dérivée partielle y au carré fin fraction parenthèse droite début valeur absolue phi parenthèse gauche x plus i en normal y parenthèse droite fin valeur absolue au carré égale 0"
+    }
+  }
+}

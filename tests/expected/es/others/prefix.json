@@ -1,0 +1,176 @@
+{
+  "name": "PrefixSpanishTest",
+  "locale": "es",
+  "factory": "prefix",
+  "base": "input/common/prefix.json",
+  "information": "Spanish Prefix rule tests.",
+  "active": "PrefixSpanish",
+  "exclude": [],
+  "tests": {
+    "Sub_0": {
+      "expected": "base"
+    },
+    "Sub_1": {
+      "expected": "subíndice"
+    },
+    "Sub_2": {
+      "expected": ""
+    },
+    "Super_0": {
+      "expected": "base"
+    },
+    "Super_1": {
+      "expected": "exponente"
+    },
+    "Super_2": {
+      "expected": ""
+    },
+    "Over_0": {
+      "expected": "base"
+    },
+    "Over_1": {
+      "expected": "sobreíndice"
+    },
+    "Over_2": {
+      "expected": ""
+    },
+    "Under_0": {
+      "expected": "base"
+    },
+    "Under_1": {
+      "expected": "bajoíndice"
+    },
+    "Under_2": {
+      "expected": ""
+    },
+    "Fractions_0": {
+      "expected": "numerador"
+    },
+    "Fractions_1": {
+      "expected": "denominador"
+    },
+    "Fractions_2": {
+      "expected": ""
+    },
+    "SquareRoot_0": {
+      "expected": "radicand"
+    },
+    "SquareRoot_1": {
+      "expected": ""
+    },
+    "Root_0": {
+      "expected": "radicand"
+    },
+    "Root_1": {
+      "expected": "índice"
+    },
+    "Root_2": {
+      "expected": ""
+    },
+    "SimpleTensors_0": {
+      "expected": "base"
+    },
+    "SimpleTensors_1": {
+      "expected": "subíndice izquierdo"
+    },
+    "SimpleTensors_2": {
+      "expected": "superíndice izquierdo"
+    },
+    "SimpleTensors_3": {
+      "expected": "subíndice derecho"
+    },
+    "SimpleTensors_4": {
+      "expected": "superíndice derecho"
+    },
+    "ComplexTensors_0": {
+      "expected": "base"
+    },
+    "ComplexTensors_1": {
+      "expected": "1o subíndice izquierdo"
+    },
+    "ComplexTensors_2": {
+      "expected": "2o subíndice izquierdo"
+    },
+    "ComplexTensors_3": {
+      "expected": "1o superíndice izquierdo"
+    },
+    "ComplexTensors_4": {
+      "expected": "2o superíndice izquierdo"
+    },
+    "ComplexTensors_5": {
+      "expected": "1o subíndice derecho"
+    },
+    "ComplexTensors_6": {
+      "expected": "2o subíndice derecho"
+    },
+    "ComplexTensors_7": {
+      "expected": "1o superíndice derecho"
+    },
+    "ComplexTensors_8": {
+      "expected": "2o superíndice derecho"
+    },
+    "ComplexTensors_9": {
+      "expected": ""
+    },
+    "Binomials_0": {
+      "expected": "cantidad de elección"
+    },
+    "Binomials_1": {
+      "expected": "cantidad de selección"
+    },
+    "Binomials_2": {
+      "expected": ""
+    },
+    "Binomials_3": {
+      "expected": ""
+    },
+    "Binomials_4": {
+      "expected": ""
+    },
+    "Vectors_0": {
+      "expected": "1a fila"
+    },
+    "Vectors_1": {
+      "expected": "2a fila"
+    },
+    "Vectors_2": {
+      "expected": "3a fila"
+    },
+    "Vectors_3": {
+      "expected": ""
+    },
+    "Vectors_4": {
+      "expected": ""
+    },
+    "Vectors_5": {
+      "expected": ""
+    },
+    "Matrices_0": {
+      "expected": "1a fila"
+    },
+    "Matrices_1": {
+      "expected": "1a columna"
+    },
+    "Matrices_2": {
+      "expected": "2a columna"
+    },
+    "Matrices_3": {
+      "expected": "2a fila"
+    },
+    "Matrices_4": {
+      "expected": "1a columna"
+    },
+    "Matrices_5": {
+      "expected": "2a columna"
+    },
+    "Matrices_6": {
+      "expected": ""
+    },
+    "Matrices_7": {
+      "expected": ""
+    },
+    "Matrices_8": {
+      "expected": ""
+    }
+  }
+}

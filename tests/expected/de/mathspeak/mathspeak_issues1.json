@@ -1,0 +1,225 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "MathspeakIssues1German",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues1.json",
+  "information": "German Mathspeak Issues 1.",
+  "domain": "mathspeak",
+  "locale": "de",
+  "active": "MathspeakIssuesGerman",
+  "exclude": [],
+  "tests": {
+    "AbsValueVsNeutral_0_default": {
+      "expected": "Anfang Betrag a Ende Betrag"
+    },
+    "AbsValueVsNeutral_0_brief": {
+      "expected": "Anfang Betrag a Ende Betrag"
+    },
+    "AbsValueVsNeutral_0_sbrief": {
+      "expected": "Betrag a Ende Betrag"
+    },
+    "AbsValueVsNeutral_1_default": {
+      "expected": "Anfang Betrag a Ende Betrag"
+    },
+    "AbsValueVsNeutral_1_brief": {
+      "expected": "Anfang Betrag a Ende Betrag"
+    },
+    "AbsValueVsNeutral_1_sbrief": {
+      "expected": "Betrag a Ende Betrag"
+    },
+    "NegativeVulgarFraction_default": {
+      "expected": "minus fünf achtzehntel"
+    },
+    "NegativeVulgarFraction_brief": {
+      "expected": "minus fünf achtzehntel"
+    },
+    "NegativeVulgarFraction_sbrief": {
+      "expected": "minus fünf achtzehntel"
+    },
+    "NonalphaIdentifier_default": {
+      "expected": "30 Grad"
+    },
+    "NonalphaIdentifier_brief": {
+      "expected": "30 Grad"
+    },
+    "NonalphaIdentifier_sbrief": {
+      "expected": "30 Grad"
+    },
+    "MixedIdentifier_default": {
+      "expected": "normales großes S i normales großes O 2 plus 6 normales großes H normales großes F Pfeil nach rechts normales großes H 2 normales großes S i normales großes F 6 plus 2 normales großes H 2 normales großes O"
+    },
+    "MixedIdentifier_brief": {
+      "expected": "normales großes S i normales großes O 2 plus 6 normales großes H normales großes F Pfeil nach rechts normales großes H 2 normales großes S i normales großes F 6 plus 2 normales großes H 2 normales großes O"
+    },
+    "MixedIdentifier_sbrief": {
+      "expected": "normales großes S i normales großes O 2 plus 6 normales großes H normales großes F Pfeil nach rechts normales großes H 2 normales großes S i normales großes F 6 plus 2 normales großes H 2 normales großes O"
+    },
+    "_comment1_": " TODO (sorge) Test currently fails as the parenthesis is seen to be",
+    "_comment2_": "     embellished! Should work again once embellished parenthesis are fully",
+    "_comment3_": "     rewritten.",
+    "ParenSuper_default": {
+      "expected": "Klammer auf a Klammer zu Quadrat"
+    },
+    "ParenSuper_brief": {
+      "expected": "Klammer auf a Klammer zu Quadrat"
+    },
+    "ParenSuper_sbrief": {
+      "expected": "Klammer auf a Klammer zu Quadrat"
+    },
+    "ParenConvoluted_default": {
+      "expected": "Klammer auf minus x Quadrat Schrägstrich 2 Klammer zu"
+    },
+    "ParenConvoluted_brief": {
+      "expected": "Klammer auf minus x Quadrat Schrägstrich 2 Klammer zu"
+    },
+    "ParenConvoluted_sbrief": {
+      "expected": "Klammer auf minus x Quadrat Schrägstrich 2 Klammer zu"
+    },
+    "SupBaseRelseq_default": {
+      "expected": "c 1 h hoch 4 minus 2 s Grundlinie kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich c 2 h hoch 4 minus 2 s"
+    },
+    "SupBaseRelseq_brief": {
+      "expected": "c 1 h hoch 4 minus 2 s Grund kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich c 2 h hoch 4 minus 2 s"
+    },
+    "SupBaseRelseq_sbrief": {
+      "expected": "c 1 h hoch 4 minus 2 s Grund kleiner oder gleich Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich c 2 h hoch 4 minus 2 s"
+    },
+    "SupBaseMultirel_default": {
+      "expected": "c 1 h hoch 4 minus 2 s Grundlinie kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch ist gleich c 2 h hoch 4 minus 2 s"
+    },
+    "SupBaseMultirel_brief": {
+      "expected": "c 1 h hoch 4 minus 2 s Grund kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch ist gleich c 2 h hoch 4 minus 2 s"
+    },
+    "SupBaseMultirel_sbrief": {
+      "expected": "c 1 h hoch 4 minus 2 s Grund kleiner oder gleich Bruch 1 durch 2 großes T Ende Bruch ist gleich c 2 h hoch 4 minus 2 s"
+    },
+    "SubBaseRelseq_default": {
+      "expected": "h Index s Grundlinie kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich h Index s"
+    },
+    "SubBaseRelseq_brief": {
+      "expected": "h Index s Grund kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich h Index s"
+    },
+    "SubBaseRelseq_sbrief": {
+      "expected": "h Index s Grund kleiner oder gleich Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich h Index s"
+    },
+    "SubBaseMultirel_default": {
+      "expected": "h Index s Grundlinie kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch ist gleich h Index s"
+    },
+    "SubBaseMultirel_brief": {
+      "expected": "h Index s Grund kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch ist gleich h Index s"
+    },
+    "SubBaseMultirel_sbrief": {
+      "expected": "h Index s Grund kleiner oder gleich Bruch 1 durch 2 großes T Ende Bruch ist gleich h Index s"
+    },
+    "SubSuperBaseRelseq_default": {
+      "expected": "h Index s hoch t Grundlinie kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich h Index s hoch t"
+    },
+    "SubSuperBaseRelseq_brief": {
+      "expected": "h Index s hoch t Grund kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich h Index s hoch t"
+    },
+    "SubSuperBaseRelseq_sbrief": {
+      "expected": "h Index s hoch t Grund kleiner oder gleich Bruch 1 durch 2 großes T Ende Bruch kleiner oder gleich h Index s hoch t"
+    },
+    "SubSuperBaseMultirel_default": {
+      "expected": "h Index s hoch t Grundlinie kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch ist gleich h Index s hoch t"
+    },
+    "SubSuperBaseMultirel_brief": {
+      "expected": "h Index s hoch t Grund kleiner oder gleich Anfang Bruch 1 durch 2 großes T Ende Bruch ist gleich h Index s hoch t"
+    },
+    "SubSuperBaseMultirel_sbrief": {
+      "expected": "h Index s hoch t Grund kleiner oder gleich Bruch 1 durch 2 großes T Ende Bruch ist gleich h Index s hoch t"
+    },
+    "SquareWithText_default": {
+      "expected": "Anfang Bruch area of triangle durch area of square Ende Bruch ist gleich Anfang Bruch 1 unit Quadrat durch 16 units Kubik Ende Bruch"
+    },
+    "SquareWithText_brief": {
+      "expected": "Anfang Bruch area of triangle durch area of square Ende Bruch ist gleich Anfang Bruch 1 unit Quadrat durch 16 units Kubik Ende Bruch"
+    },
+    "SquareWithText_sbrief": {
+      "expected": "Bruch area of triangle durch area of square Ende Bruch ist gleich Bruch 1 unit Quadrat durch 16 units Kubik Ende Bruch"
+    },
+    "_comment4_": " TODO: (v2.3.0) Remove the personality lookup error.",
+    "FootnoteWithText_default": {
+      "expected": "area of triangle area of square hoch 1 Grundlinie 1 unit hoch 2 Grundlinie 16 units hoch 3"
+    },
+    "FootnoteWithText_brief": {
+      "expected": "area of triangle area of square hoch 1 Grund 1 unit hoch 2 Grund 16 units hoch 3"
+    },
+    "FootnoteWithText_sbrief": {
+      "expected": "area of triangle area of square hoch 1 Grund 1 unit hoch 2 Grund 16 units hoch 3"
+    },
+    "_comment5_": " TODO: (v2.3.0) Fix this error.",
+    "FootnoteWithSimpleText_default": {
+      "expected": "area of triangle hoch 2"
+    },
+    "FootnoteWithSimpleText_brief": {
+      "expected": "area of triangle hoch 2"
+    },
+    "FootnoteWithSimpleText_sbrief": {
+      "expected": "area of triangle hoch 2"
+    },
+    "LabelledRow_default": {
+      "expected": "Anfang Anordnung 1. Zeile  mit Bezeichner Klammer auf 1 Klammer zu Ende Bezeichner 1. Spalte a 2. Spalte b Ende Anordnung"
+    },
+    "LabelledRow_brief": {
+      "expected": "Anfang Anordnung 1. Zeile  Bezeichner Klammer auf 1 Klammer zu 1. Spalte a 2. Spalte b Ende Anordnung"
+    },
+    "LabelledRow_sbrief": {
+      "expected": "Anordnung 1. Zeile  Bezeichner Klammer auf 1 Klammer zu 1. Spalte a 2. Spalte b Ende Anordnung"
+    },
+    "LabelledLine_default": {
+      "expected": "Anfang Anordnung 1. Zeile  mit Bezeichner Klammer auf 1 Klammer zu Ende Bezeichner a Ende Anordnung"
+    },
+    "LabelledLine_brief": {
+      "expected": "Anfang Anordnung 1. Zeile  Bezeichner Klammer auf 1 Klammer zu a Ende Anordnung"
+    },
+    "LabelledLine_sbrief": {
+      "expected": "Anordnung 1. Zeile  Bezeichner Klammer auf 1 Klammer zu a Ende Anordnung"
+    },
+    "LabelledEmptyLine_default": {
+      "expected": "Anfang Anordnung 1. Zeile  mit Bezeichner Klammer auf 1 Klammer zu Ende Bezeichner leer Ende Anordnung"
+    },
+    "LabelledEmptyLine_brief": {
+      "expected": "Anfang Anordnung 1. Zeile  Bezeichner Klammer auf 1 Klammer zu leer Ende Anordnung"
+    },
+    "LabelledEmptyLine_sbrief": {
+      "expected": "Anordnung 1. Zeile  Bezeichner Klammer auf 1 Klammer zu leer Ende Anordnung"
+    },
+    "EmptyLine_default": {
+      "expected": "Anfang Anordnung 1. Zeile  leer Ende Anordnung"
+    },
+    "EmptyLine_brief": {
+      "expected": "Anfang Anordnung 1. Zeile  leer Ende Anordnung"
+    },
+    "EmptyLine_sbrief": {
+      "expected": "Anordnung 1. Zeile  leer Ende Anordnung"
+    },
+    "TextLabelledLine_default": {
+      "expected": "Anfang Anordnung 1. Zeile  mit Bezeichner Klammer auf 1 Klammer zu Ende Bezeichner a Ende Anordnung"
+    },
+    "TextLabelledLine_brief": {
+      "expected": "Anfang Anordnung 1. Zeile  Bezeichner Klammer auf 1 Klammer zu a Ende Anordnung"
+    },
+    "TextLabelledLine_sbrief": {
+      "expected": "Anordnung 1. Zeile  Bezeichner 1 a Ende Anordnung"
+    },
+    "EncloseOverbar_default": {
+      "expected": "a Überstrich"
+    },
+    "EncloseOverbar_brief": {
+      "expected": "a Überstrich"
+    },
+    "EncloseOverbar_sbrief": {
+      "expected": "a Überstrich"
+    },
+    "EncloseUnderbar_default": {
+      "expected": "a Unterstrich"
+    },
+    "EncloseUnderbar_brief": {
+      "expected": "a Unterstrich"
+    },
+    "EncloseUnderbar_sbrief": {
+      "expected": "a Unterstrich"
+    }
+  }
+}

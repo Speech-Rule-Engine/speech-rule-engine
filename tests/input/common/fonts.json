@@ -1,0 +1,785 @@
+{
+  "domain": "mathspeak",
+  "tests": {
+    "LatinMathfontsUpper_0": {
+      "test": true,
+      "input": "<mi>&#x0041;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_1": {
+      "test": true,
+      "input": "<mi>&#xFF21;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_2": {
+      "test": true,
+      "input": "<mi>&#x1D400;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_3": {
+      "test": true,
+      "input": "<mi>&#x1D434;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_4": {
+      "test": true,
+      "input": "<mi>&#x1D468;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_5": {
+      "test": true,
+      "input": "<mi>&#x1D49C;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_6": {
+      "test": true,
+      "input": "<mi>&#x1D4D0;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_7": {
+      "test": true,
+      "input": "<mi>&#x1D504;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_8": {
+      "test": true,
+      "input": "<mi>&#x1D538;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_9": {
+      "test": true,
+      "input": "<mi>&#x1D56C;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_10": {
+      "test": true,
+      "input": "<mi>&#x1D5A0;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_11": {
+      "test": true,
+      "input": "<mi>&#x1D5D4;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_12": {
+      "test": true,
+      "input": "<mi>&#x1D608;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_13": {
+      "test": true,
+      "input": "<mi>&#x1D63C;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsUpper_14": {
+      "test": true,
+      "input": "<mi>&#x1D670;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsUpper_0": {
+      "test": true,
+      "input": "<mi>&#x0391;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsUpper_1": {
+      "test": true,
+      "input": "<mi>&#x1D6A8;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsUpper_2": {
+      "test": true,
+      "input": "<mi>&#x1D6E2;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsUpper_3": {
+      "test": true,
+      "input": "<mi>&#x1D71C;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsUpper_4": {
+      "test": true,
+      "input": "<mi>&#x1D756;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsUpper_5": {
+      "test": true,
+      "input": "<mi>&#x1D790;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_0": {
+      "test": true,
+      "input": "<mi>&#x0061;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_1": {
+      "test": true,
+      "input": "<mi>&#xFF41;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_2": {
+      "test": true,
+      "input": "<mi>&#x1D41A;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_3": {
+      "test": true,
+      "input": "<mi>&#x1D44E;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_4": {
+      "test": true,
+      "input": "<mi>&#x1D482;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_5": {
+      "test": true,
+      "input": "<mi>&#x1D4B6;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_6": {
+      "test": true,
+      "input": "<mi>&#x1D4EA;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_7": {
+      "test": true,
+      "input": "<mi>&#x1D51E;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_8": {
+      "test": true,
+      "input": "<mi>&#x1D552;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_9": {
+      "test": true,
+      "input": "<mi>&#x1D586;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_10": {
+      "test": true,
+      "input": "<mi>&#x1D5BA;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_11": {
+      "test": true,
+      "input": "<mi>&#x1D5EE;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_12": {
+      "test": true,
+      "input": "<mi>&#x1D622;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_13": {
+      "test": true,
+      "input": "<mi>&#x1D656;</mi>",
+      "preference": "default"
+    },
+    "LatinMathfontsSmall_14": {
+      "test": true,
+      "input": "<mi>&#x1D68A;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsSmall_0": {
+      "test": true,
+      "input": "<mi>&#x03B1;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsSmall_1": {
+      "test": true,
+      "input": "<mi>&#x1D6C2;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsSmall_2": {
+      "test": true,
+      "input": "<mi>&#x1D6FC;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsSmall_3": {
+      "test": true,
+      "input": "<mi>&#x1D736;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsSmall_4": {
+      "test": true,
+      "input": "<mi>&#x1D770;</mi>",
+      "preference": "default"
+    },
+    "GreekMathfontsSmall_5": {
+      "test": true,
+      "input": "<mi>&#x1D7AA;</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-italic\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"script\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_5": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-script\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_6": {
+      "test": true,
+      "input": "<mi mathvariant=\"fraktur\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_7": {
+      "test": true,
+      "input": "<mi mathvariant=\"double-struck\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_8": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-fraktur\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_9": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_10": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_11": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-italic\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_12": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold-italic\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantUpper_13": {
+      "test": true,
+      "input": "<mi mathvariant=\"monospace\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantMathJax_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"-tex-caligraphic\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantMathJax_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"-tex-caligraphic-bold\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantMathJax_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"-tex-calligraphic\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantMathJax_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"-tex-calligraphic-bold\">A</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantMathJax_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"-tex-mathit\">A</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantUpper_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">&#x0391;</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantUpper_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold\">&#x0391;</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantUpper_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">&#x0391;</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantUpper_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-italic\">&#x0391;</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantUpper_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold\">&#x0391;</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantUpper_5": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold-italic\">&#x0391;</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-italic\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"script\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_5": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-script\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_6": {
+      "test": true,
+      "input": "<mi mathvariant=\"fraktur\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_7": {
+      "test": true,
+      "input": "<mi mathvariant=\"double-struck\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_8": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-fraktur\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_9": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_10": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_11": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-italic\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_12": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold-italic\">a</mi>",
+      "preference": "default"
+    },
+    "LatinMathvariantSmall_13": {
+      "test": true,
+      "input": "<mi mathvariant=\"monospace\">a</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantSmall_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">&#x03B1;</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantSmall_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold\">&#x03B1;</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantSmall_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">&#x03B1;</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantSmall_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-italic\">&#x03B1;</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantSmall_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold\">&#x03B1;</mi>",
+      "preference": "default"
+    },
+    "GreekMathvariantSmall_5": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold-italic\">&#x03B1;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">&#x0041;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">&#xFF21;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold\">&#x1D400;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">&#x1D434;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-italic\">&#x1D468;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_5": {
+      "test": true,
+      "input": "<mi mathvariant=\"script\">&#x1D49C;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_6": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-script\">&#x1D4D0;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_7": {
+      "test": true,
+      "input": "<mi mathvariant=\"fraktur\">&#x1D504;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_8": {
+      "test": true,
+      "input": "<mi mathvariant=\"double-struck\">&#x1D538;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_9": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-fraktur\">&#x1D56C;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_10": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif\">&#x1D5A0;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_11": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold\">&#x1D5D4;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_12": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-italic\">&#x1D608;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_13": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold-italic\">&#x1D63C;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsUpper_14": {
+      "test": true,
+      "input": "<mi mathvariant=\"monospace\">&#x1D670;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsUpper_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">&#x0391;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsUpper_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold\">&#x1D6A8;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsUpper_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">&#x1D6E2;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsUpper_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-italic\">&#x1D71C;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsUpper_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold\">&#x1D756;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsUpper_5": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold-italic\">&#x1D790;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">&#x0061;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">&#xFF41;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold\">&#x1D41A;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">&#x1D44E;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-italic\">&#x1D482;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_5": {
+      "test": true,
+      "input": "<mi mathvariant=\"script\">&#x1D4B6;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_6": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-script\">&#x1D4EA;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_7": {
+      "test": true,
+      "input": "<mi mathvariant=\"fraktur\">&#x1D51E;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_8": {
+      "test": true,
+      "input": "<mi mathvariant=\"double-struck\">&#x1D552;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_9": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-fraktur\">&#x1D586;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_10": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif\">&#x1D5BA;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_11": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold\">&#x1D5EE;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_12": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-italic\">&#x1D622;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_13": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold-italic\">&#x1D656;</mi>",
+      "preference": "default"
+    },
+    "LatinFontVariantsSmall_14": {
+      "test": true,
+      "input": "<mi mathvariant=\"monospace\">&#x1D68A;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsSmall_0": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">&#x03B1;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsSmall_1": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold\">&#x1D6C2;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsSmall_2": {
+      "test": true,
+      "input": "<mi mathvariant=\"italic\">&#x1D6FC;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsSmall_3": {
+      "test": true,
+      "input": "<mi mathvariant=\"bold-italic\">&#x1D736;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsSmall_4": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold\">&#x1D770;</mi>",
+      "preference": "default"
+    },
+    "GreekFontVariantsSmall_5": {
+      "test": true,
+      "input": "<mi mathvariant=\"sans-serif-bold-italic\">&#x1D7AA;</mi>",
+      "preference": "default"
+    },
+    "DigitsMathfonts_0": {
+      "test": true,
+      "input": "<mn>&#x0030;</mn>",
+      "preference": "default"
+    },
+    "DigitsMathfonts_1": {
+      "test": true,
+      "input": "<mn>&#xFF10;</mn>",
+      "preference": "default"
+    },
+    "DigitsMathfonts_2": {
+      "test": true,
+      "input": "<mn>&#x1D7CE;</mn>",
+      "preference": "default"
+    },
+    "DigitsMathfonts_3": {
+      "test": true,
+      "input": "<mn>&#x1D7D8;</mn>",
+      "preference": "default"
+    },
+    "DigitsMathfonts_4": {
+      "test": true,
+      "input": "<mn>&#x1D7E2;</mn>",
+      "preference": "default"
+    },
+    "DigitsMathfonts_5": {
+      "test": true,
+      "input": "<mn>&#x1D7EC;</mn>",
+      "preference": "default"
+    },
+    "DigitsMathfonts_6": {
+      "test": true,
+      "input": "<mn>&#x1D7F6;</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_0": {
+      "test": true,
+      "input": "<mn mathvariant=\"normal\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_1": {
+      "test": true,
+      "input": "<mn mathvariant=\"bold\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_2": {
+      "test": true,
+      "input": "<mn mathvariant=\"italic\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_3": {
+      "test": true,
+      "input": "<mn mathvariant=\"bold-italic\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_4": {
+      "test": true,
+      "input": "<mn mathvariant=\"script\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_5": {
+      "test": true,
+      "input": "<mn mathvariant=\"bold-script\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_6": {
+      "test": true,
+      "input": "<mn mathvariant=\"fraktur\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_7": {
+      "test": true,
+      "input": "<mn mathvariant=\"double-struck\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_8": {
+      "test": true,
+      "input": "<mn mathvariant=\"bold-fraktur\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_9": {
+      "test": true,
+      "input": "<mn mathvariant=\"sans-serif\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_10": {
+      "test": true,
+      "input": "<mn mathvariant=\"sans-serif-italic\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_11": {
+      "test": true,
+      "input": "<mn mathvariant=\"sans-serif-bold-italic\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsMathvariant_12": {
+      "test": true,
+      "input": "<mn mathvariant=\"monospace\">0</mn>",
+      "preference": "default"
+    },
+    "DigitsFontVariants_0": {
+      "test": true,
+      "input": "<mn mathvariant=\"normal\">&#x0030;</mn>",
+      "preference": "default"
+    },
+    "DigitsFontVariants_1": {
+      "test": true,
+      "input": "<mn mathvariant=\"fullwidth\">&#xFF10;</mn>",
+      "preference": "default"
+    },
+    "DigitsFontVariants_2": {
+      "test": true,
+      "input": "<mn mathvariant=\"bold\">&#x1D7CE;</mn>",
+      "preference": "default"
+    },
+    "DigitsFontVariants_3": {
+      "test": true,
+      "input": "<mn mathvariant=\"double-struck\">&#x1D7D8;</mn>",
+      "preference": "default"
+    },
+    "DigitsFontVariants_4": {
+      "test": true,
+      "input": "<mn mathvariant=\"sans-serif\">&#x1D7E2;</mn>",
+      "preference": "default"
+    },
+    "DigitsFontVariants_5": {
+      "test": true,
+      "input": "<mn mathvariant=\"sans-serif-bold\">&#x1D7EC;</mn>",
+      "preference": "default"
+    },
+    "DigitsFontVariants_6": {
+      "test": true,
+      "input": "<mn mathvariant=\"monospace\">&#x1D7F6;</mn>",
+      "preference": "default"
+    }
+  }
+}

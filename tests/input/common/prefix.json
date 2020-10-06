@@ -1,0 +1,279 @@
+{
+  "tests": {
+    "Sub_0": {
+      "test": true,
+      "input": "<msub><mi>a</mi><mi>b</mi></msub>",
+      "id": 0
+    },
+    "Sub_1": {
+      "test": true,
+      "input": "<msub><mi>a</mi><mi>b</mi></msub>",
+      "id": 1
+    },
+    "Sub_2": {
+      "test": true,
+      "input": "<msub><mi>a</mi><mi>b</mi></msub>",
+      "id": 2
+    },
+    "Super_0": {
+      "test": true,
+      "input": "<msup><mi>a</mi><mi>b</mi></msup>",
+      "id": 0
+    },
+    "Super_1": {
+      "test": true,
+      "input": "<msup><mi>a</mi><mi>b</mi></msup>",
+      "id": 1
+    },
+    "Super_2": {
+      "test": true,
+      "input": "<msup><mi>a</mi><mi>b</mi></msup>",
+      "id": 2
+    },
+    "Over_0": {
+      "test": true,
+      "input": "<mover><mi>a</mi><mi>b</mi></mover>",
+      "id": 0
+    },
+    "Over_1": {
+      "test": true,
+      "input": "<mover><mi>a</mi><mi>b</mi></mover>",
+      "id": 1
+    },
+    "Over_2": {
+      "test": true,
+      "input": "<mover><mi>a</mi><mi>b</mi></mover>",
+      "id": 2
+    },
+    "Under_0": {
+      "test": true,
+      "input": "<munder><mi>a</mi><mi>b</mi></munder>",
+      "id": 0
+    },
+    "Under_1": {
+      "test": true,
+      "input": "<munder><mi>a</mi><mi>b</mi></munder>",
+      "id": 1
+    },
+    "Under_2": {
+      "test": true,
+      "input": "<munder><mi>a</mi><mi>b</mi></munder>",
+      "id": 2
+    },
+    "Fractions_0": {
+      "test": true,
+      "input": "<mfrac><mi>a</mi><mi>b</mi></mfrac>",
+      "id": 0
+    },
+    "Fractions_1": {
+      "test": true,
+      "input": "<mfrac><mi>a</mi><mi>b</mi></mfrac>",
+      "id": 1
+    },
+    "Fractions_2": {
+      "test": true,
+      "input": "<mfrac><mi>a</mi><mi>b</mi></mfrac>",
+      "id": 2
+    },
+    "SquareRoot_0": {
+      "test": true,
+      "input": "<msqrt><mi>a</mi></msqrt>",
+      "id": 0
+    },
+    "SquareRoot_1": {
+      "test": true,
+      "input": "<msqrt><mi>a</mi></msqrt>",
+      "id": 1
+    },
+    "Root_0": {
+      "test": true,
+      "input": "<mroot><mi>a</mi><mi>b</mi></mroot>",
+      "id": 1
+    },
+    "Root_1": {
+      "test": true,
+      "input": "<mroot><mi>a</mi><mi>b</mi></mroot>",
+      "id": 0
+    },
+    "Root_2": {
+      "test": true,
+      "input": "<mroot><mi>a</mi><mi>b</mi></mroot>",
+      "id": 2
+    },
+    "SimpleTensors_0": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>",
+      "id": 0
+    },
+    "SimpleTensors_1": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>",
+      "id": 1
+    },
+    "SimpleTensors_2": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>",
+      "id": 2
+    },
+    "SimpleTensors_3": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>",
+      "id": 3
+    },
+    "SimpleTensors_4": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>1</mn><mn>2</mn><mprescripts/><mn>3</mn><mn>4</mn></mmultiscripts>",
+      "id": 4
+    },
+    "ComplexTensors_0": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>",
+      "id": 0
+    },
+    "ComplexTensors_1": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>",
+      "id": 1
+    },
+    "ComplexTensors_2": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>",
+      "id": 2
+    },
+    "ComplexTensors_3": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>",
+      "id": 3
+    },
+    "ComplexTensors_4": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>",
+      "id": 4
+    },
+    "ComplexTensors_5": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>",
+      "id": 5
+    },
+    "ComplexTensors_6": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>",
+      "id": 6
+    },
+    "ComplexTensors_7": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>",
+      "id": 7
+    },
+    "ComplexTensors_8": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>",
+      "id": 8
+    },
+    "ComplexTensors_9": {
+      "test": true,
+      "input": "<mmultiscripts><mi>A</mi><mn>3</mn><mn>4</mn><mi>k</mi><mi>l</mi><mprescripts/><mn>1</mn><mn>2</mn><mi>i</mi><mi>j</mi></mmultiscripts>",
+      "id": 17
+    },
+    "Binomials_0": {
+      "test": true,
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 2
+    },
+    "Binomials_1": {
+      "test": true,
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 3
+    },
+    "Binomials_2": {
+      "test": true,
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 0
+    },
+    "Binomials_3": {
+      "test": true,
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 4
+    },
+    "Binomials_4": {
+      "test": true,
+      "input": "<mfenced open=\"(\" close=\")\"><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac></mfenced>",
+      "id": 5
+    },
+    "Vectors_0": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 2
+    },
+    "Vectors_1": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 5
+    },
+    "Vectors_2": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 8
+    },
+    "Vectors_3": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 0
+    },
+    "Vectors_4": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 6
+    },
+    "Vectors_5": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 10
+    },
+    "Matrices_0": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 4
+    },
+    "Matrices_1": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 1
+    },
+    "Matrices_2": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 3
+    },
+    "Matrices_3": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 9
+    },
+    "Matrices_4": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 6
+    },
+    "Matrices_5": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 8
+    },
+    "Matrices_6": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 2
+    },
+    "Matrices_7": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 7
+    },
+    "Matrices_8": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable></mfenced>",
+      "id": 12
+    }
+  }
+}

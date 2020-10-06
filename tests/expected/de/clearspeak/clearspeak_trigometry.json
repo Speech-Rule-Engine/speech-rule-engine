@@ -1,0 +1,596 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanTrigometry",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_trigometry.json",
+  "information": "German Clearspeak Trigometry rule tests.",
+  "active": "ClearspeakGerman",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Trigonometry",
+    "_comment2_": " Table 1: Basic Trigonometric Functions",
+    "Trig001": {
+      "expected": "Sinus x"
+    },
+    "Trig002": {
+      "expected": "Kosinus x"
+    },
+    "Trig003": {
+      "expected": "Tangens theta"
+    },
+    "Trig004": {
+      "expected": "Sekans theta"
+    },
+    "Trig005": {
+      "expected": "Kosekans x"
+    },
+    "Trig006": {
+      "expected": "Kotangens x"
+    },
+    "Trig007": {
+      "expected": "Sinus Quadrat x"
+    },
+    "Trig008": {
+      "expected": "Kosinus Kubik x"
+    },
+    "Trig009": {
+      "expected": "Tangens Quadrat x"
+    },
+    "Trig010": {
+      "expected": "Sekans Kubik x"
+    },
+    "Trig011": {
+      "expected": "Kosekans Quadrat x"
+    },
+    "Trig012": {
+      "expected": "Kotangens Quadrat x"
+    },
+    "Trig013": {
+      "expected": "Sinus 2 pi"
+    },
+    "Trig014": {
+      "expected": "der Sinus von, Klammer auf, pi k, plus, pi geteilt durch 2, Klammer zu"
+    },
+    "Trig015": {
+      "expected": "der Kosinus von, pi geteilt durch 2"
+    },
+    "Trig016": {
+      "expected": "der Sinus von, pi geteilt durch 2"
+    },
+    "Trig017": {
+      "expected": "Sinus pi geteilt durch 2"
+    },
+    "Trig018": {
+      "expected": "2 geteilt durch Sinus pi"
+    },
+    "Trig019": {
+      "expected": "Bruch mit Zähler, der Sinus von, pi geteilt durch 2, und Nenner 3"
+    },
+    "Trig020": {
+      "expected": "Tangens minus pi"
+    },
+    "Trig021": {
+      "expected": "der Sinus von, Klammer auf, x plus pi, Klammer zu"
+    },
+    "Trig022": {
+      "expected": "der Kosinus von, Klammer auf, x plus, pi geteilt durch 2, Klammer zu"
+    },
+    "Trig023": {
+      "expected": "der Kosinus von, Klammer auf, pi geteilt durch 2, plus x, Klammer zu"
+    },
+    "Trig024": {
+      "expected": "Sinus Quadrat x, plus, Kosinus Quadrat x, ist gleich 1"
+    },
+    "Trig025": {
+      "expected": "die vierte Potenz von Sinus x"
+    },
+    "Trig026": {
+      "expected": "die fünfte Potenz von Kosinus x"
+    },
+    "Trig027": {
+      "expected": "die nte Potenz von Tangens x"
+    },
+    "Trig028": {
+      "expected": "Sinus x geteilt durch Kosinus x"
+    },
+    "Trig029": {
+      "expected": "Tangens 35 Grad"
+    },
+    "_comment3_": " TODO: (Simons) Handles degrees as a postfix function.",
+    "Trig030": {
+      "expected": "XXX"
+    },
+    "Trig031": {
+      "expected": "der Tangens von, Klammer auf, Winkel D E F, Klammer zu"
+    },
+    "Trig032": {
+      "expected": "der Tangens von, Klammer auf, Winkel D, Klammer zu"
+    },
+    "Trig033": {
+      "expected": "der Sinus von, Klammer auf, x plus y, Klammer zu, ist gleich, Sinus x Kosinus y, plus, Kosinus x Sinus y"
+    },
+    "Trig034": {
+      "expected": "der Kosinus von, Klammer auf, x plus y, Klammer zu, ist gleich, Kosinus x Kosinus y, minus, Sinus x Sinus y"
+    },
+    "Trig035": {
+      "expected": "der Tangens von, Klammer auf, x plus y, Klammer zu, ist gleich, Bruch mit Zähler Tangens x minus Tangens y, und Nenner 1 minus, Tangens x Tangens y"
+    },
+    "_comment4_": " TODO: (Simons) Handle degrees as a postfix function.",
+    "Trig036": {
+      "expected": "XXX"
+    },
+    "Trig037": {
+      "expected": "der Tangens von, Klammer auf, pi geteilt durch 6, plus, 2 pi geteilt durch 3, Klammer zu, ist gleich, Bruch mit Zähler, der Tangens von, pi geteilt durch 6, minus, der Tangens von, 2 pi geteilt durch 3, und Nenner 1 minus, der Tangens von, pi geteilt durch 6, der Tangens von, 2 pi geteilt durch 3"
+    },
+    "Trig038": {
+      "expected": "Tangens 2 x, ist gleich, Bruch mit Zähler 2 Tangens x, und Nenner 1 minus, Tangens Quadrat x"
+    },
+    "Trig039": {
+      "expected": "Kosinus 2 x, ist gleich 2, Kosinus Quadrat x, minus 1"
+    },
+    "Trig040": {
+      "expected": "der Sinus von, x geteilt durch 2, ist gleich plus minus Quadratwurzel aus, Bruch mit Zähler 1 minus Kosinus x, und Nenner 2"
+    },
+    "Trig041": {
+      "expected": "der Tangens von, x geteilt durch 2, ist gleich plus minus Quadratwurzel aus, Bruch mit Zähler 1 minus Kosinus x, und Nenner 1 plus Kosinus x"
+    },
+    "Trig042": {
+      "expected": "Kosinus x Kosinus y, ist gleich 2, der Kosinus von, Bruch mit Zähler x plus y, und Nenner 2, der Kosinus von, Bruch mit Zähler x minus y, und Nenner 2"
+    },
+    "Trig043": {
+      "expected": "der Sinus von, Klammer auf, minus, pi geteilt durch 8, Klammer zu, ist gleich minus ein halb Quadratwurzel aus 2 minus Quadratwurzel aus 2, Wurzel Ende, Wurzel Ende"
+    },
+    "Trig044": {
+      "expected": "der Tangens von, 3 pi geteilt durch 8, ist gleich, Bruch mit Zähler Quadratwurzel aus, Quadratwurzel aus 2, Wurzel Ende, plus 1, Wurzel Ende, und Nenner Quadratwurzel aus, Quadratwurzel aus 2, Wurzel Ende, minus 1, Wurzel Ende"
+    },
+    "Trig045": {
+      "expected": "der Tangens von, pi geteilt durch 12, ist gleich ein halb Quadratwurzel aus 2 minus Quadratwurzel aus 3, Wurzel Ende, Wurzel Ende"
+    },
+    "_comment5_": " Table 2: Inverse Trigonometric Functions",
+    "TrigInvAuto001": {
+      "expected": "der inverse Sinus von x"
+    },
+    "TrigInvAuto002": {
+      "expected": "der inverse Kosinus von x"
+    },
+    "TrigInvAuto003": {
+      "expected": "der inverse Tangens von x"
+    },
+    "TrigInvAuto004": {
+      "expected": "der inverse Kotangens von x"
+    },
+    "TrigInvAuto005": {
+      "expected": "der inverse Sekans von x"
+    },
+    "TrigInvAuto006": {
+      "expected": "der inverse Kosekans von x"
+    },
+    "TrigInvAuto007": {
+      "expected": "der inverse Sinus von, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2"
+    },
+    "TrigInvAuto008": {
+      "expected": "der inverse Kosinus von ein halb"
+    },
+    "TrigInvAuto009": {
+      "expected": "der inverse Tangens von 17"
+    },
+    "TrigInvAuto010": {
+      "expected": "der inverse Kotangens von 32"
+    },
+    "TrigInvAuto011": {
+      "expected": "der inverse Sekans von 100"
+    },
+    "TrigInvAuto012": {
+      "expected": "der inverse Kosekans von 85"
+    },
+    "TrigInvAuto013": {
+      "expected": "der inverse Sinus von minus x"
+    },
+    "TrigInvAuto014": {
+      "expected": "der inverse Kosinus von minus x"
+    },
+    "TrigInvAuto015": {
+      "expected": "der inverse Tangens von, Klammer auf, minus x plus 12, Klammer zu"
+    },
+    "TrigInvAuto016": {
+      "expected": "der inverse Kotangens von, Klammer auf, minus x minus 1, Klammer zu"
+    },
+    "TrigInvAuto017": {
+      "expected": "der inverse Sinus von Sinus 0"
+    },
+    "TrigInvAuto018": {
+      "expected": "der inverse Kosekans von Kosekans x"
+    },
+    "TrigInvAuto019": {
+      "expected": "der Kosinus von, Klammer auf, dem inversen Kosinus von, Klammer auf, minus, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu"
+    },
+    "TrigInvAuto020": {
+      "expected": "der Kosinus von, Klammer auf, minus, dem inversen Kosinus von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu"
+    },
+    "TrigInvAuto021": {
+      "expected": "der inverse Sinus von, Klammer auf, dem Kosinus von, pi geteilt durch 4, Klammer zu"
+    },
+    "TrigInvAuto022": {
+      "expected": "Sinus, der inverse Kosinus von ein halb"
+    },
+    "TrigInvAuto023": {
+      "expected": "Sinus, der inverse Tangens von 1"
+    },
+    "TrigInvAuto024": {
+      "expected": "der Sinus von, Klammer auf, minus, dem inversen Tangens von 1, Klammer zu"
+    },
+    "TrigInvAuto025": {
+      "expected": "der Sinus von, Klammer auf, minus, dem inversen Tangens von minus 1, Klammer zu"
+    },
+    "TrigInvAuto026": {
+      "expected": "der inverse Sekans von Sekans x"
+    },
+    "_comment6_": " New: Reciprocal",
+    "TrigReciprocal001": {
+      "expected": "der inverse Sinus von x"
+    },
+    "TrigReciprocal002": {
+      "expected": "der inverse Kosinus von x"
+    },
+    "TrigReciprocal003": {
+      "expected": "der inverse Tangens von x"
+    },
+    "TrigReciprocal004": {
+      "expected": "der inverse Kotangens von x"
+    },
+    "TrigReciprocal005": {
+      "expected": "der inverse Sekans von x"
+    },
+    "TrigReciprocal006": {
+      "expected": "der inverse Kosekans von x"
+    },
+    "TrigReciprocal007": {
+      "expected": "der inverse Sinus von, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2"
+    },
+    "TrigReciprocal008": {
+      "expected": "der inverse Kosinus von ein halb"
+    },
+    "TrigReciprocal009": {
+      "expected": "der inverse Tangens von 17"
+    },
+    "TrigReciprocal010": {
+      "expected": "der inverse Kotangens von 32"
+    },
+    "TrigReciprocal011": {
+      "expected": "der inverse Sekans von 100"
+    },
+    "TrigReciprocal012": {
+      "expected": "der inverse Kosekans von 85"
+    },
+    "TrigReciprocal013": {
+      "expected": "der inverse Sinus von minus x"
+    },
+    "TrigReciprocal014": {
+      "expected": "der inverse Kosinus von minus x"
+    },
+    "TrigReciprocal015": {
+      "expected": "der inverse Tangens von, Klammer auf, minus x plus 12, Klammer zu"
+    },
+    "TrigReciprocal016": {
+      "expected": "der inverse Kotangens von, Klammer auf, minus x minus 1, Klammer zu"
+    },
+    "TrigReciprocal017": {
+      "expected": "der inverse Sinus von Sinus 0"
+    },
+    "TrigReciprocal018": {
+      "expected": "der inverse Kosekans von Kosekans x"
+    },
+    "TrigReciprocal019": {
+      "expected": "der Kosinus von, Klammer auf, dem inversen Kosinus von, Klammer auf, minus, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu"
+    },
+    "TrigReciprocal020": {
+      "expected": "der Kosinus von, Klammer auf, minus, dem inversen Kosinus von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu"
+    },
+    "TrigReciprocal021": {
+      "expected": "der inverse Sinus von, Klammer auf, dem Kosinus von, pi geteilt durch 4, Klammer zu"
+    },
+    "TrigReciprocal022": {
+      "expected": "Sinus, der inverse Kosinus von ein halb"
+    },
+    "TrigReciprocal023": {
+      "expected": "Sinus, der inverse Tangens von 1"
+    },
+    "TrigReciprocal024": {
+      "expected": "der Sinus von, Klammer auf, minus, dem inversen Tangens von 1, Klammer zu"
+    },
+    "TrigReciprocal025": {
+      "expected": "der Sinus von, Klammer auf, minus, dem inversen Tangens von minus 1, Klammer zu"
+    },
+    "TrigReciprocal026": {
+      "expected": "der inverse Sekans von Sekans x"
+    },
+    "TrigInverse001": {
+      "expected": "Sinus invers von x"
+    },
+    "TrigInverse002": {
+      "expected": "Kosinus invers von x"
+    },
+    "TrigInverse003": {
+      "expected": "Tangens invers von x"
+    },
+    "TrigInverse004": {
+      "expected": "Kotangens invers von x"
+    },
+    "TrigInverse005": {
+      "expected": "Sekans invers von x"
+    },
+    "TrigInverse006": {
+      "expected": "Kosekans invers von x"
+    },
+    "TrigInverse007": {
+      "expected": "Sinus invers von, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2"
+    },
+    "TrigInverse008": {
+      "expected": "Kosinus invers von ein halb"
+    },
+    "TrigInverse009": {
+      "expected": "Tangens invers von 17"
+    },
+    "TrigInverse010": {
+      "expected": "Kotangens invers von 32"
+    },
+    "TrigInverse011": {
+      "expected": "Sekans invers von 100"
+    },
+    "TrigInverse012": {
+      "expected": "Kosekans invers von 85"
+    },
+    "TrigInverse013": {
+      "expected": "Sinus invers von minus x"
+    },
+    "TrigInverse014": {
+      "expected": "Kosinus invers von minus x"
+    },
+    "TrigInverse015": {
+      "expected": "Tangens invers von, Klammer auf, minus x plus 12, Klammer zu"
+    },
+    "TrigInverse016": {
+      "expected": "Kotangens invers von, Klammer auf, minus x minus 1, Klammer zu"
+    },
+    "TrigInverse017": {
+      "expected": "Sinus invers von Sinus 0"
+    },
+    "TrigInverse018": {
+      "expected": "Kosekans invers von Kosekans x"
+    },
+    "TrigInverse019": {
+      "expected": "der Kosinus von, Klammer auf, Kosinus invers von, Klammer auf, minus, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu"
+    },
+    "TrigInverse020": {
+      "expected": "der Kosinus von, Klammer auf, minus, Kosinus invers von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu"
+    },
+    "TrigInverse021": {
+      "expected": "Sinus invers von, Klammer auf, dem Kosinus von, pi geteilt durch 4, Klammer zu"
+    },
+    "TrigInverse022": {
+      "expected": "Sinus, Kosinus invers von ein halb"
+    },
+    "TrigInverse023": {
+      "expected": "Sinus, Tangens invers von 1"
+    },
+    "TrigInverse024": {
+      "expected": "der Sinus von, Klammer auf, minus, Tangens invers von 1, Klammer zu"
+    },
+    "TrigInverse025": {
+      "expected": "der Sinus von, Klammer auf, minus, Tangens invers von minus 1, Klammer zu"
+    },
+    "TrigInverse026": {
+      "expected": "Sekans invers von Sekans x"
+    },
+    "ArcTrig001": {
+      "expected": "Arkussinus x"
+    },
+    "ArcTrig002": {
+      "expected": "Arkuskosinus x"
+    },
+    "ArcTrig003": {
+      "expected": "Arkustangens x"
+    },
+    "ArcTrig004": {
+      "expected": "Arkuskotangens x"
+    },
+    "ArcTrig005": {
+      "expected": "Arkussekans x"
+    },
+    "ArcTrig006": {
+      "expected": "Arkuskosekans x"
+    },
+    "ArcTrig007": {
+      "expected": "Arkussinus von, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2"
+    },
+    "ArcTrig008": {
+      "expected": "Arkuskosinus ein halb"
+    },
+    "ArcTrig009": {
+      "expected": "Arkustangens 17"
+    },
+    "ArcTrig010": {
+      "expected": "Arkuskotangens 32"
+    },
+    "ArcTrig011": {
+      "expected": "Arkussekans 100"
+    },
+    "ArcTrig012": {
+      "expected": "Arkuskosekans 85"
+    },
+    "ArcTrig013": {
+      "expected": "Arkussinus minus x"
+    },
+    "ArcTrig014": {
+      "expected": "Arkuskosinus minus x"
+    },
+    "ArcTrig015": {
+      "expected": "Arkustangens von, Klammer auf, minus x plus 12, Klammer zu"
+    },
+    "ArcTrig016": {
+      "expected": "Arkuskotangens von, Klammer auf, minus x minus 1, Klammer zu"
+    },
+    "ArcTrig017": {
+      "expected": "Arkussinus, Sinus 0"
+    },
+    "ArcTrig018": {
+      "expected": "Arkuskosekans, Kosekans x"
+    },
+    "ArcTrig019": {
+      "expected": "der Kosinus von, Klammer auf, Arkuskosinus von, Klammer auf, minus, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu"
+    },
+    "ArcTrig020": {
+      "expected": "der Kosinus von, Klammer auf, minus, Arkuskosinus von, Klammer auf, Bruch mit Zähler Quadratwurzel aus 2, und Nenner 2, Klammer zu, Klammer zu"
+    },
+    "ArcTrig021": {
+      "expected": "Arkussinus von, Klammer auf, dem Kosinus von, pi geteilt durch 4, Klammer zu"
+    },
+    "ArcTrig022": {
+      "expected": "Sinus, Arkuskosinus ein halb"
+    },
+    "ArcTrig023": {
+      "expected": "Sinus, Arkustangens 1"
+    },
+    "ArcTrig024": {
+      "expected": "der Sinus von, Klammer auf, minus, Arkustangens 1, Klammer zu"
+    },
+    "ArcTrig025": {
+      "expected": "der Sinus von, Klammer auf, minus, Arkustangens minus 1, Klammer zu"
+    },
+    "ArcTrig026": {
+      "expected": "Arkussekans, Sekans x"
+    },
+    "AllTrig01": {
+      "expected": "Arkussinus x"
+    },
+    "AllTrig02": {
+      "expected": "Arkuskosinus x"
+    },
+    "AllTrig03": {
+      "expected": "Arkustangens x"
+    },
+    "_comment7_": " Table 3: Hyperbolic Trigonometric Functions",
+    "HypTrig001": {
+      "expected": "Sinus hyperbolicus von x"
+    },
+    "HypTrig002": {
+      "expected": "Kosinus hyperbolicus von x"
+    },
+    "HypTrig003": {
+      "expected": "Tangens hyperbolicus von x"
+    },
+    "HypTrig004": {
+      "expected": "Kotangens hyperbolicus von x"
+    },
+    "HypTrig005": {
+      "expected": "Sekans hyperbolicus von x"
+    },
+    "HypTrig006": {
+      "expected": "Kosekans hyperbolicus von x"
+    },
+    "HypTrig007": {
+      "expected": "der inverse Sinus hyperbolicus von x"
+    },
+    "HypTrig008": {
+      "expected": "der inverse Kosinus hyperbolicus von x"
+    },
+    "HypTrig009": {
+      "expected": "der inverse Tangens hyperbolicus von x"
+    },
+    "HypTrig010": {
+      "expected": "der inverse Kotangens hyperbolicus von x"
+    },
+    "HypTrig011": {
+      "expected": "der inverse Sekans hyperbolicus von x"
+    },
+    "HypTrig012": {
+      "expected": "der inverse Kosekans hyperbolicus von x"
+    },
+    "HypTrig013": {
+      "expected": "Sinus hyperbolicus von, dem inversen Sinus hyperbolicus von x"
+    },
+    "HypTrig014": {
+      "expected": "Kosinus hyperbolicus von, dem inversen Kosinus hyperbolicus von x"
+    },
+    "HypTrig015": {
+      "expected": "Tangens hyperbolicus von, dem inversen Tangens hyperbolicus von x"
+    },
+    "HypTrig016": {
+      "expected": "Kotangens hyperbolicus von, dem inversen Kotangens hyperbolicus von x"
+    },
+    "HypTrig017": {
+      "expected": "der inverse Sinus hyperbolicus von, Sinus hyperbolicus von x"
+    },
+    "HypTrig018": {
+      "expected": "der inverse Kosinus hyperbolicus von, Kosinus hyperbolicus von x"
+    },
+    "HypTrig019": {
+      "expected": "der inverse Tangens hyperbolicus von, Tangens hyperbolicus von x"
+    },
+    "HypTrig020": {
+      "expected": "der inverse Kotangens hyperbolicus von, Kotangens hyperbolicus von x"
+    },
+    "_comment8_": " Reciprocal",
+    "HypTrigReciprocal001": {
+      "expected": "Sinus hyperbolicus von x"
+    },
+    "HypTrigReciprocal002": {
+      "expected": "Kosinus hyperbolicus von x"
+    },
+    "HypTrigReciprocal003": {
+      "expected": "Tangens hyperbolicus von x"
+    },
+    "HypTrigReciprocal004": {
+      "expected": "Kotangens hyperbolicus von x"
+    },
+    "HypTrigReciprocal005": {
+      "expected": "Sekans hyperbolicus von x"
+    },
+    "HypTrigReciprocal006": {
+      "expected": "Kosekans hyperbolicus von x"
+    },
+    "HypTrigReciprocal007": {
+      "expected": "der inverse Sinus hyperbolicus von x"
+    },
+    "HypTrigReciprocal008": {
+      "expected": "der inverse Kosinus hyperbolicus von x"
+    },
+    "HypTrigReciprocal009": {
+      "expected": "der inverse Tangens hyperbolicus von x"
+    },
+    "HypTrigReciprocal010": {
+      "expected": "der inverse Kotangens hyperbolicus von x"
+    },
+    "HypTrigReciprocal011": {
+      "expected": "der inverse Sekans hyperbolicus von x"
+    },
+    "HypTrigReciprocal012": {
+      "expected": "der inverse Kosekans hyperbolicus von x"
+    },
+    "HypTrigReciprocal013": {
+      "expected": "Sinus hyperbolicus von, dem inversen Sinus hyperbolicus von x"
+    },
+    "HypTrigReciprocal014": {
+      "expected": "Kosinus hyperbolicus von, dem inversen Kosinus hyperbolicus von x"
+    },
+    "HypTrigReciprocal015": {
+      "expected": "Tangens hyperbolicus von, dem inversen Tangens hyperbolicus von x"
+    },
+    "HypTrigReciprocal016": {
+      "expected": "Kotangens hyperbolicus von, dem inversen Kotangens hyperbolicus von x"
+    },
+    "HypTrigReciprocal017": {
+      "expected": "der inverse Sinus hyperbolicus von, Sinus hyperbolicus von x"
+    },
+    "HypTrigReciprocal018": {
+      "expected": "der inverse Kosinus hyperbolicus von, Kosinus hyperbolicus von x"
+    },
+    "HypTrigReciprocal019": {
+      "expected": "der inverse Tangens hyperbolicus von, Tangens hyperbolicus von x"
+    },
+    "HypTrigReciprocal020": {
+      "expected": "der inverse Kotangens hyperbolicus von, Kotangens hyperbolicus von x"
+    }
+  }
+}

@@ -1,0 +1,345 @@
+{
+  "name": "DefaultFunctionSpanishTest",
+  "locale": "es",
+  "domain": "default",
+  "styles": [
+    "default"
+  ],
+  "active": "DefaultSymbolsSpanish",
+  "type": "function",
+  "factory": "symbol",
+  "base": "input/common/functions.json",
+  "information": "Spanish Default Function tests.",
+  "tests": {
+    "deg": {
+      "expected": [
+        "grados"
+      ]
+    },
+    "det": {
+      "expected": [
+        "determinante"
+      ]
+    },
+    "dim": {
+      "expected": [
+        "dimensión"
+      ]
+    },
+    "hom": {
+      "expected": [
+        "homomorfismo"
+      ]
+    },
+    "Hom": {
+      "expected": [
+        "homomorfismo"
+      ]
+    },
+    "ker": {
+      "expected": [
+        "kernel"
+      ]
+    },
+    "Tr": {
+      "expected": [
+        "traza"
+      ]
+    },
+    "tr": {
+      "expected": [
+        "traza"
+      ]
+    },
+    "log": {
+      "expected": [
+        "logaritmo"
+      ]
+    },
+    "ln": {
+      "expected": [
+        "logaritmo neperiano"
+      ]
+    },
+    "lg": {
+      "expected": [
+        "logaritmo base 10"
+      ]
+    },
+    "exp": {
+      "expected": [
+        "exponente"
+      ]
+    },
+    "expt": {
+      "expected": [
+        "exponente"
+      ]
+    },
+    "gcd": {
+      "expected": [
+        "MCD"
+      ]
+    },
+    "lcm": {
+      "expected": [
+        "mcm"
+      ]
+    },
+    "arg": {
+      "expected": [
+        "argumento"
+      ]
+    },
+    "im": {
+      "expected": [
+        "parte imaginaria"
+      ]
+    },
+    "re": {
+      "expected": [
+        "residuo"
+      ]
+    },
+    "inf": {
+      "expected": [
+        "extremo inferior"
+      ]
+    },
+    "lim": {
+      "expected": [
+        "límite"
+      ]
+    },
+    "lim inf": {
+      "expected": [
+        "límite inferior"
+      ]
+    },
+    "liminf": {
+      "expected": [
+        "límite inferior"
+      ]
+    },
+    "lim sup": {
+      "expected": [
+        "límite superior"
+      ]
+    },
+    "limsup": {
+      "expected": [
+        "límite superior"
+      ]
+    },
+    "max": {
+      "expected": [
+        "máximo"
+      ]
+    },
+    "min": {
+      "expected": [
+        "mínimo"
+      ]
+    },
+    "sup": {
+      "expected": [
+        "superior"
+      ]
+    },
+    "injlim": {
+      "expected": [
+        "límite directo"
+      ]
+    },
+    "inj lim": {
+      "expected": [
+        "límite directo"
+      ]
+    },
+    "projlim": {
+      "expected": [
+        "límite inverso"
+      ]
+    },
+    "proj lim": {
+      "expected": [
+        "límite inverso"
+      ]
+    },
+    "mod": {
+      "expected": [
+        "módulo"
+      ]
+    },
+    "Pr": {
+      "expected": [
+        "probabilidad"
+      ]
+    },
+    "cosh": {
+      "expected": [
+        "coseno hiperbólico"
+      ]
+    },
+    "coth": {
+      "expected": [
+        "cotangente hiperbólica"
+      ]
+    },
+    "csch": {
+      "expected": [
+        "cosecante hiperbólica"
+      ]
+    },
+    "sech": {
+      "expected": [
+        "secante hiperbólica"
+      ]
+    },
+    "sinh": {
+      "expected": [
+        "seno hiperbólico"
+      ]
+    },
+    "tanh": {
+      "expected": [
+        "tangente hiperbólica"
+      ]
+    },
+    "arcosh": {
+      "expected": [
+        "area coseno hiperbólico"
+      ]
+    },
+    "arccosh": {
+      "expected": [
+        "area coseno hiperbólico"
+      ]
+    },
+    "arcoth": {
+      "expected": [
+        "area cotangente hiperbólica"
+      ]
+    },
+    "arccoth": {
+      "expected": [
+        "area cotangente hiperbólica"
+      ]
+    },
+    "arcsch": {
+      "expected": [
+        "area cosecante hiperbólica"
+      ]
+    },
+    "arccsch": {
+      "expected": [
+        "area cosecante hiperbólica"
+      ]
+    },
+    "arsech": {
+      "expected": [
+        "area secante hiperbólica"
+      ]
+    },
+    "arcsech": {
+      "expected": [
+        "area secante hiperbólica"
+      ]
+    },
+    "arsinh": {
+      "expected": [
+        "area seno hiperbólico"
+      ]
+    },
+    "arcsinh": {
+      "expected": [
+        "area seno hiperbólico"
+      ]
+    },
+    "artanh": {
+      "expected": [
+        "area tangente hiperbólica"
+      ]
+    },
+    "arctanh": {
+      "expected": [
+        "area tangente hiperbólica"
+      ]
+    },
+    "cos": {
+      "expected": [
+        "coseno"
+      ]
+    },
+    "cosine": {
+      "expected": [
+        "coseno"
+      ]
+    },
+    "cot": {
+      "expected": [
+        "cotangente"
+      ]
+    },
+    "csc": {
+      "expected": [
+        "cosecante"
+      ]
+    },
+    "sec": {
+      "expected": [
+        "secant"
+      ]
+    },
+    "sin": {
+      "expected": [
+        "seno"
+      ]
+    },
+    "sine": {
+      "expected": [
+        "seno"
+      ]
+    },
+    "tan": {
+      "expected": [
+        "tangente"
+      ]
+    },
+    "arccos": {
+      "expected": [
+        "arco coseno"
+      ]
+    },
+    "arccot": {
+      "expected": [
+        "arco cotangente"
+      ]
+    },
+    "arccsc": {
+      "expected": [
+        "arco cosecante"
+      ]
+    },
+    "arcsec": {
+      "expected": [
+        "arco secante"
+      ]
+    },
+    "arcsin": {
+      "expected": [
+        "arco seno"
+      ]
+    },
+    "arctan": {
+      "expected": [
+        "arco tangente"
+      ]
+    },
+    "sen": {
+      "expected": [
+        "seno"
+      ]
+    }
+  }
+}

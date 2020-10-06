@@ -1,0 +1,444 @@
+{
+  "name": "SummaryFrenchTest",
+  "factory": "summary",
+  "base": "input/common/summary_test.json",
+  "information": "French Mathspeak Summary tests.",
+  "locale": "fr",
+  "domain": "mathspeak",
+  "active": "SummaryFrench",
+  "exclude": [],
+  "tests": {
+    "AbstrAddition_default": {
+      "expected": "somme avec 2 opérandes"
+    },
+    "AbstrAddition_brief": {
+      "expected": "somme"
+    },
+    "AbstrAddition_sbrief": {
+      "expected": "somme"
+    },
+    "AbstrBigop_default": {
+      "expected": "sommation"
+    },
+    "AbstrBigop_brief": {
+      "expected": "sommation"
+    },
+    "AbstrBigop_sbrief": {
+      "expected": "sommation"
+    },
+    "AbstrBinomial_default": {
+      "expected": "binomial"
+    },
+    "AbstrBinomial_brief": {
+      "expected": "binomial"
+    },
+    "AbstrBinomial_sbrief": {
+      "expected": "binomial"
+    },
+    "AbstrCases_default": {
+      "expected": "déclaration de cas avec 2 cas"
+    },
+    "AbstrCases_brief": {
+      "expected": "déclaration de cas"
+    },
+    "AbstrCases_sbrief": {
+      "expected": "déclaration de cas"
+    },
+    "_comment0_": " TODO",
+    "AbstrCell_default": {
+      "steps": [
+        "DOWN",
+        "DOWN"
+      ],
+      "expected": "1re colonne dans tableau"
+    },
+    "AbstrCell_brief": {
+      "steps": [
+        "DOWN",
+        "DOWN"
+      ],
+      "expected": "1re colonne dans tableau"
+    },
+    "AbstrCell_sbrief": {
+      "steps": [
+        "DOWN",
+        "DOWN"
+      ],
+      "expected": "1re colonne dans tableau"
+    },
+    "AbstrContinuedFraction_default": {
+      "expected": "fraction continue"
+    },
+    "AbstrContinuedFraction_brief": {
+      "expected": "frac continue"
+    },
+    "AbstrContinuedFraction_sbrief": {
+      "expected": "frac continue"
+    },
+    "AbstrDeterminant_default": {
+      "expected": "déterminant de dimension 2"
+    },
+    "AbstrDeterminant_brief": {
+      "expected": "déterminant"
+    },
+    "AbstrDeterminant_sbrief": {
+      "expected": "déterminant"
+    },
+    "AbstrFraction_default": {
+      "expected": "fraction"
+    },
+    "AbstrFraction_brief": {
+      "expected": "frac"
+    },
+    "AbstrFraction_sbrief": {
+      "expected": "frac"
+    },
+    "AbstrFunction_default": {
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "expression fonctionnelle"
+    },
+    "AbstrFunction_brief": {
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "fonction"
+    },
+    "AbstrFunction_sbrief": {
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "fonction"
+    },
+    "AbstrIdentifier_default": {
+      "expected": "identifiant"
+    },
+    "AbstrIdentifier_brief": {
+      "expected": "identifiant"
+    },
+    "AbstrIdentifier_sbrief": {
+      "expected": "identifiant"
+    },
+    "AbstrInfixop_default": {
+      "expected": "division avec 2 éléments"
+    },
+    "AbstrInfixop_brief": {
+      "expected": "division"
+    },
+    "AbstrInfixop_sbrief": {
+      "expected": "division"
+    },
+    "AbstrIntegral_default": {
+      "expected": "intégrale"
+    },
+    "AbstrIntegral_brief": {
+      "expected": "intégrale"
+    },
+    "AbstrIntegral_sbrief": {
+      "expected": "intégrale"
+    },
+    "AbstrLim_default": {
+      "expected": "fonction de limitation"
+    },
+    "AbstrLim_brief": {
+      "expected": "lim"
+    },
+    "AbstrLim_sbrief": {
+      "expected": "lim"
+    },
+    "_comment2_": " TODO",
+    "AbstrLine_default": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1re rangée dans multi-ligne"
+    },
+    "AbstrLine_brief": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1re rangée dans multi-ligne"
+    },
+    "AbstrLine_sbrief": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1re rangée dans multi-ligne"
+    },
+    "AbstrMatrix_default": {
+      "expected": "matrice 3 par 2"
+    },
+    "AbstrMatrix_brief": {
+      "expected": "matrice"
+    },
+    "AbstrMatrix_sbrief": {
+      "expected": "matrice"
+    },
+    "AbstrMixedNumber_default": {
+      "expected": "nombre fractionnaire"
+    },
+    "AbstrMixedNumber_brief": {
+      "expected": "nombre fractionnaire"
+    },
+    "AbstrMixedNumber_sbrief": {
+      "expected": "nombre fractionnaire"
+    },
+    "AbstrMultiplication_default": {
+      "expected": "produit avec 2 facteurs"
+    },
+    "AbstrMultiplication_brief": {
+      "expected": "produit"
+    },
+    "AbstrMultiplication_sbrief": {
+      "expected": "produit"
+    },
+    "AbstrMultirel_default": {
+      "expected": "séquence de relation avec 3 éléments"
+    },
+    "AbstrMultirel_brief": {
+      "expected": "séquence de relation"
+    },
+    "AbstrMultirel_sbrief": {
+      "expected": "séquence de relation"
+    },
+    "AbstrNumber_default": {
+      "expected": "nombre"
+    },
+    "AbstrNumber_brief": {
+      "expected": "nombre"
+    },
+    "AbstrNumber_sbrief": {
+      "expected": "nombre"
+    },
+    "AbstrPunctuated_default": {
+      "expected": "liste de longueur 3 séparée par des virgules"
+    },
+    "AbstrPunctuated_brief": {
+      "expected": "liste séparée par des virgules"
+    },
+    "AbstrPunctuated_sbrief": {
+      "expected": "liste séparée par des virgules"
+    },
+    "AbstrRelation_default": {
+      "expected": "égalité"
+    },
+    "AbstrRelation_brief": {
+      "expected": "égalité"
+    },
+    "AbstrRelation_sbrief": {
+      "expected": "égalité"
+    },
+    "AbstrRelationSeq_default": {
+      "expected": "égalité séquence avec 3 éléments"
+    },
+    "AbstrRelationSeq_brief": {
+      "expected": "égalité séquence"
+    },
+    "AbstrRelationSeq_sbrief": {
+      "expected": "égalité séquence"
+    },
+    "AbstrRoot_default": {
+      "expected": "racine d'indice 3"
+    },
+    "AbstrRoot_brief": {
+      "expected": "racine"
+    },
+    "AbstrRoot_sbrief": {
+      "expected": "racine"
+    },
+    "AbstrRootNested_default": {
+      "expected": "racine imbriquée d'indice 3"
+    },
+    "AbstrRootNested_brief": {
+      "expected": "racine imbriquée"
+    },
+    "AbstrRootNested_sbrief": {
+      "expected": "racine imbriquée"
+    },
+    "_comment3_": " TODO",
+    "AbstrRow_default": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1re rangée dans tableau avec 2 colonnes"
+    },
+    "AbstrRow_brief": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1re rangée dans tableau avec 2 colonnes"
+    },
+    "AbstrRow_sbrief": {
+      "steps": [
+        "DOWN"
+      ],
+      "expected": "1re rangée dans tableau avec 2 colonnes"
+    },
+    "AbstrRowvector_default": {
+      "expected": "vecteur ligne de dimension 2"
+    },
+    "AbstrRowvector_brief": {
+      "expected": "vecteur ligne"
+    },
+    "AbstrRowvector_sbrief": {
+      "expected": "vecteur ligne"
+    },
+    "AbstrSqrt_default": {
+      "expected": "racine carrée"
+    },
+    "AbstrSqrt_brief": {
+      "expected": "racine carrée"
+    },
+    "AbstrSqrt_sbrief": {
+      "expected": "racine carrée"
+    },
+    "AbstrSqrtNested_default": {
+      "expected": "racine carrée imbriquée"
+    },
+    "AbstrSqrtNested_brief": {
+      "expected": "racine carrée imbriquée"
+    },
+    "AbstrSqrtNested_sbrief": {
+      "expected": "racine carrée imbriquée"
+    },
+    "AbstrSquarematrix_default": {
+      "expected": "matrice carrée de dimension 2"
+    },
+    "AbstrSquarematrix_brief": {
+      "expected": "matrice carrée"
+    },
+    "AbstrSquarematrix_sbrief": {
+      "expected": "matrice carrée"
+    },
+    "AbstrSubscript_default": {
+      "expected": "indice"
+    },
+    "AbstrSubscript_brief": {
+      "expected": "indice"
+    },
+    "AbstrSubscript_sbrief": {
+      "expected": "indice"
+    },
+    "AbstrSubsup_default": {
+      "expected": "puissance avec index"
+    },
+    "AbstrSubsup_brief": {
+      "expected": "puissance avec index"
+    },
+    "AbstrSubsup_sbrief": {
+      "expected": "puissance avec index"
+    },
+    "AbstrSuperscript_default": {
+      "expected": "puissance"
+    },
+    "AbstrSuperscript_brief": {
+      "expected": "puissance"
+    },
+    "AbstrSuperscript_sbrief": {
+      "expected": "puissance"
+    },
+    "AbstrTable_default": {
+      "expected": "table avec 2 lignes et 2 colonnes"
+    },
+    "AbstrTable_brief": {
+      "expected": "table avec 2 lignes et 2 colonnes"
+    },
+    "AbstrTable_sbrief": {
+      "expected": "table avec 2 lignes et 2 colonnes"
+    },
+    "AbstrText_default": {
+      "expected": "texte"
+    },
+    "AbstrText_brief": {
+      "expected": "texte"
+    },
+    "AbstrText_sbrief": {
+      "expected": "texte"
+    },
+    "AbstrVarAddition_default": {
+      "expected": "somme avec un nombre variable d'opérandes"
+    },
+    "AbstrVarAddition_brief": {
+      "expected": "somme"
+    },
+    "AbstrVarAddition_sbrief": {
+      "expected": "somme"
+    },
+    "AbstrVarCases_default": {
+      "expected": "déclaration de cas variable"
+    },
+    "AbstrVarCases_brief": {
+      "expected": "déclaration de cas"
+    },
+    "AbstrVarCases_sbrief": {
+      "expected": "déclaration de cas"
+    },
+    "AbstrVarDeterminant_default": {
+      "expected": "déterminant de dimension n"
+    },
+    "AbstrVarDeterminant_brief": {
+      "expected": "déterminant"
+    },
+    "AbstrVarDeterminant_sbrief": {
+      "expected": "déterminant"
+    },
+    "AbstrVarMatrix_default": {
+      "expected": "matrice de dimension n par m"
+    },
+    "AbstrVarMatrix_brief": {
+      "expected": "matrice carrée"
+    },
+    "AbstrVarMatrix_sbrief": {
+      "expected": "matrice carrée"
+    },
+    "AbstrVarMultiplication_default": {
+      "expected": "produit avec un nombre de facteurs variable"
+    },
+    "AbstrVarMultiplication_brief": {
+      "expected": "produit"
+    },
+    "AbstrVarMultiplication_sbrief": {
+      "expected": "produit"
+    },
+    "AbstrVarMultirel_default": {
+      "expected": "séquence de relation avec un nombre de éléments variable"
+    },
+    "AbstrVarMultirel_brief": {
+      "expected": "séquence de relation"
+    },
+    "AbstrVarMultirel_sbrief": {
+      "expected": "séquence de relation"
+    },
+    "AbstrVarPunctuated_default": {
+      "expected": "liste de longueur variable séparée par des virgules"
+    },
+    "AbstrVarPunctuated_brief": {
+      "expected": "liste séparée par des virgules"
+    },
+    "AbstrVarPunctuated_sbrief": {
+      "expected": "liste séparée par des virgules"
+    },
+    "AbstrVarRelation_default": {
+      "expected": "égalité séquence avec un nombre de éléments variable"
+    },
+    "AbstrVarRelation_brief": {
+      "expected": "égalité séquence"
+    },
+    "AbstrVarRelation_sbrief": {
+      "expected": "égalité séquence"
+    },
+    "AbstrVarVector_default": {
+      "expected": "vecteur colonne de dimension n"
+    },
+    "AbstrVarVector_brief": {
+      "expected": "vecteur"
+    },
+    "AbstrVarVector_sbrief": {
+      "expected": "vecteur"
+    },
+    "AbstrVector_default": {
+      "expected": "vecteur de dimension 3"
+    },
+    "AbstrVector_brief": {
+      "expected": "vecteur"
+    },
+    "AbstrVector_sbrief": {
+      "expected": "vecteur"
+    }
+  }
+}

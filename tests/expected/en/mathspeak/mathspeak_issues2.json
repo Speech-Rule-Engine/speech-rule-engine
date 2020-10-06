@@ -1,0 +1,280 @@
+{
+  "name": "MathspeakIssues2English",
+  "locale": "en",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_issues2.json",
+  "information": "English Mathspeak Issues 2.",
+  "domain": "mathspeak",
+  "active": "MathspeakIssuesEnglish",
+  "exclude": [],
+  "tests": {
+    "MathspeakRoots_0": {
+      "expected": "StartRoot a EndRoot"
+    },
+    "MathspeakRoots_1": {
+      "expected": "RootIndex 2 StartRoot a EndRoot"
+    },
+    "MathspeakRoots_2": {
+      "expected": "RootIndex 3 StartRoot a EndRoot"
+    },
+    "MathspeakRoots_3": {
+      "expected": "RootIndex 4 StartRoot a EndRoot"
+    },
+    "MathspeakRoots_4": {
+      "expected": "NestedStartRoot StartRoot a EndRoot NestedEndRoot"
+    },
+    "MathspeakRoots_5": {
+      "expected": "NestedTwiceStartRoot NestedStartRoot StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "MathspeakRoots_6": {
+      "expected": "NestedRootIndex 2 NestedStartRoot RootIndex 2 StartRoot a EndRoot NestedEndRoot"
+    },
+    "MathspeakRoots_7": {
+      "expected": "NestedTwiceRootIndex 2 NestedTwiceStartRoot NestedRootIndex 2 NestedStartRoot RootIndex 2 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "MathspeakRoots_8": {
+      "expected": "NestedRootIndex 3 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot"
+    },
+    "MathspeakRoots_9": {
+      "expected": "NestedTwiceRootIndex 3 NestedTwiceStartRoot NestedRootIndex 3 NestedStartRoot RootIndex 3 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "MathspeakRoots_10": {
+      "expected": "NestedRootIndex 4 NestedStartRoot RootIndex 4 StartRoot a EndRoot NestedEndRoot"
+    },
+    "MathspeakRoots_11": {
+      "expected": "NestedTwiceRootIndex 4 NestedTwiceStartRoot NestedRootIndex 4 NestedStartRoot RootIndex 4 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "MathspeakRoots_12": {
+      "expected": "NestedTwiceRootIndex 2 NestedTwiceStartRoot NestedRootIndex 3 NestedStartRoot RootIndex 4 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "MathspeakRoots_13": {
+      "expected": "NestedTwiceRootIndex 4 NestedTwiceStartRoot NestedRootIndex 3 NestedStartRoot RootIndex 2 StartRoot a EndRoot NestedEndRoot NestedTwiceEndRoot"
+    },
+    "HtmlEntities_0": {
+      "expected": "less than"
+    },
+    "HtmlEntities_1": {
+      "expected": "greater than"
+    },
+    "HtmlEntities_2": {
+      "expected": "n"
+    },
+    "HtmlEntities_3": {
+      "expected": "m"
+    },
+    "HtmlEntities_4": {
+      "expected": "n m"
+    },
+    "HtmlEntities_5": {
+      "expected": "n m"
+    },
+    "BinomialFromFrac_0": {
+      "expected": "StartBinomialOrMatrix n Choose k EndBinomialOrMatrix"
+    },
+    "BinomialFromFrac_1": {
+      "expected": "StartBinomialOrMatrix n Choose k EndBinomialOrMatrix"
+    },
+    "BinomialFromFrac_2": {
+      "expected": "StartBinomialOrMatrix n Choose k EndBinomialOrMatrix"
+    },
+    "BinomialFromFrac_3": {
+      "expected": "left parenthesis StartFraction n Over k EndFraction right parenthesis"
+    },
+    "BinomialFromFrac_4": {
+      "expected": "left parenthesis StartFraction n Over k EndFraction right parenthesis"
+    },
+    "BinomialFromFrac_5": {
+      "expected": "left parenthesis StartFraction n Over k EndFraction right parenthesis"
+    },
+    "UnnecessarySpaces_0": {
+      "expected": "5"
+    },
+    "UnnecessarySpaces_1": {
+      "expected": "5"
+    },
+    "AbsValueVsNeutral_0": {
+      "expected": "vertical bar a double vertical bar"
+    },
+    "AbsValueVsNeutral_1": {
+      "expected": "double vertical bar a double vertical bar"
+    },
+    "AbsValueVsNeutral_2": {
+      "expected": "broken vertical bar a broken vertical bar"
+    },
+    "NegativeVulgarFraction_0": {
+      "expected": "one half minus five eighteenths"
+    },
+    "NegativeVulgarFraction_1": {
+      "expected": "minus StartFraction 5.2 Over a EndFraction"
+    },
+    "NegativeVulgarFraction_2": {
+      "expected": "minus StartFraction 5.2 Over 18 EndFraction"
+    },
+    "TrivialStuff_0": {
+      "expected": "a equals b"
+    },
+    "TrivialStuff_1": {
+      "expected": "quotation mark"
+    },
+    "TrivialStuff_2": {
+      "expected": "quotation mark x quotation mark"
+    },
+    "TrivialStuff_3": {
+      "expected": "prime"
+    },
+    "GermanFonts_0": {
+      "expected": "German upper A"
+    },
+    "GermanFonts_1": {
+      "expected": "bold German upper A"
+    },
+    "GermanFonts_2": {
+      "expected": "German upper A"
+    },
+    "GermanFonts_3": {
+      "expected": "bold German upper A"
+    },
+    "GermanFonts_4": {
+      "expected": "bold German abc"
+    },
+    "GermanFonts_5": {
+      "expected": "bold German ABC"
+    },
+    "GermanFonts_6": {
+      "expected": "bold German upper A upper B upper C"
+    },
+    "OtherFonts_0": {
+      "expected": "m"
+    },
+    "OtherFonts_1": {
+      "expected": "normal m"
+    },
+    "OtherFonts_2": {
+      "expected": "m i"
+    },
+    "OtherFonts_3": {
+      "expected": "italic m i"
+    },
+    "OtherFonts_4": {
+      "expected": "30"
+    },
+    "OtherFonts_5": {
+      "expected": "italic 3"
+    },
+    "OtherFonts_6": {
+      "expected": "30 degree"
+    },
+    "OtherFonts_7": {
+      "expected": "3 0 m upper A"
+    },
+    "Multiline_0": {
+      "expected": "StartLayout 1st Row  a 2nd Row  b EndLayout"
+    },
+    "Multiline_1": {
+      "expected": "StartLayout 1st Row 1st Column a 2nd Column c 2nd Row 1st Column b 2nd Column d EndLayout"
+    },
+    "RelationsWithEmpty_0": {
+      "expected": "less than or equals 2"
+    },
+    "RelationsWithEmpty_1": {
+      "expected": "equals 2 equals"
+    },
+    "RelationsWithEmpty_2": {
+      "expected": "less than or equals 2 equals"
+    },
+    "RelationsWithEmpty_3": {
+      "expected": "StartLayout 1st Row 1st Column 1 2nd Column less than or equals 2 EndLayout"
+    },
+    "EncloseGeneral": {
+      "expected": "StartEnclose circle a EndEnclose"
+    },
+    "EncloseLeftbar": {
+      "expected": "vertical bar a"
+    },
+    "EncloseRightbar": {
+      "expected": "a vertical bar"
+    },
+    "_": " mglyph is ignored!",
+    "Issue279_0": {
+      "expected": ""
+    },
+    "Issue279_1": {
+      "expected": "StartLayout 1st Row  with Label left parenthesis 3.1 .10 right parenthesis EndLabel EndLayout"
+    },
+    "Issue320_0": {
+      "expected": "partial differential"
+    },
+    "Issue320_1": {
+      "expected": "x factorial"
+    },
+    "Issue320_2": {
+      "expected": "minus negative x"
+    },
+    "Issue320_3": {
+      "expected": "plus plus x"
+    },
+    "Issue320_4": {
+      "expected": "sine sine x"
+    },
+    "Issue320_5": {
+      "expected": "partial differential partial differential x"
+    },
+    "Issue320_6": {
+      "expected": "left parenthesis StartFraction partial differential squared Over partial differential x squared EndFraction plus StartFraction partial differential squared Over partial differential y squared EndFraction right parenthesis StartAbsoluteValue phi left parenthesis x plus normal i y right parenthesis EndAbsoluteValue squared equals 0"
+    },
+    "LatinMathfonts_0": {
+      "expected": "German upper A"
+    },
+    "LatinMathfonts_1": {
+      "expected": "bold German upper A"
+    },
+    "LatinMathfonts_2": {
+      "expected": "bold script upper A"
+    },
+    "LatinMathfonts_3": {
+      "expected": "bold italic upper A"
+    },
+    "LatinMathfonts_4": {
+      "expected": "bold upper A"
+    },
+    "LatinMathfonts_5": {
+      "expected": "double struck upper A"
+    },
+    "LatinMathfonts_6": {
+      "expected": "italic upper A"
+    },
+    "LatinMathfonts_7": {
+      "expected": "monospace upper A"
+    },
+    "LatinMathfonts_8": {
+      "expected": "sans serif bold upper A"
+    },
+    "LatinMathfonts_9": {
+      "expected": "sans serif italic upper A"
+    },
+    "LatinMathfonts_10": {
+      "expected": "sans serif bold italic upper A"
+    },
+    "LatinMathfonts_11": {
+      "expected": "sans serif upper A"
+    },
+    "LatinMathfonts_12": {
+      "expected": "script upper A"
+    },
+    "GreekMathfonts_0": {
+      "expected": "bold upper Alpha"
+    },
+    "GreekMathfonts_1": {
+      "expected": "italic upper Alpha"
+    },
+    "GreekMathfonts_2": {
+      "expected": "bold italic upper Alpha"
+    },
+    "GreekMathfonts_3": {
+      "expected": "sans serif bold upper Alpha"
+    },
+    "GreekMathfonts_4": {
+      "expected": "sans serif bold italic upper Alpha"
+    }
+  }
+}

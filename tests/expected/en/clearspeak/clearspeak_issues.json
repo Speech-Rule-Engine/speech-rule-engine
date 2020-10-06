@@ -1,0 +1,49 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakEnglish rules.",
+  "name": "EnglishIssues",
+  "locale": "en",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_issues.json",
+  "information": "English Clearspeak Issues tests.",
+  "active": "ClearspeakIssuesEnglish",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "expected": "5 and, 3 over 224"
+    },
+    "Issue230_2": {
+      "expected": "5 and three fourths"
+    },
+    "IssueNumbers_1": {
+      "expected": "number t 2 e 4"
+    },
+    "IssueNumbers_2": {
+      "expected": "number number sign F F 0 0 0 0"
+    },
+    "IssueNumbers_3": {
+      "expected": "number number sign F F F F"
+    },
+    "Issue320_1": {
+      "expected": "partial differential"
+    },
+    "Issue320_2": {
+      "expected": "x factorial"
+    },
+    "Issue320_3": {
+      "expected": "negative negative x"
+    },
+    "Issue320_4": {
+      "expected": "plus plus x"
+    },
+    "Issue320_5": {
+      "expected": "sine sine x"
+    },
+    "Issue320_6": {
+      "expected": "partial differential partial differential x"
+    },
+    "Issue320_7": {
+      "expected": "open paren, the fraction with numerator partial differential squared, and denominator partial differential x squared, plus, the fraction with numerator partial differential squared, and denominator partial differential y squared, close paren, times, the absolute value of phi times, open paren, x plus normal i, y, close paren, squared equals 0"
+    }
+  }
+}

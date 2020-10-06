@@ -1,0 +1,425 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanRoots",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_roots.json",
+  "information": "German Clearspeak Roots rule tests.",
+  "active": "ClearspeakGerman",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Roots",
+    "Root001": {
+      "expected": "Quadratwurzel aus 2"
+    },
+    "Root002": {
+      "expected": "3 plus Quadratwurzel aus 2"
+    },
+    "Root003": {
+      "expected": "3 plus minus Quadratwurzel aus 2"
+    },
+    "Root004": {
+      "expected": "3 minus plus Quadratwurzel aus 2"
+    },
+    "Root005": {
+      "expected": "negative Quadratwurzel aus 2"
+    },
+    "Root006": {
+      "expected": "3 minus Quadratwurzel aus 2"
+    },
+    "Root007": {
+      "expected": "3 plus negative Quadratwurzel aus 2"
+    },
+    "Root008": {
+      "expected": "3 minus negative Quadratwurzel aus 2"
+    },
+    "Root009": {
+      "expected": "3 plus, Klammer auf, negative Quadratwurzel aus 2, Klammer zu"
+    },
+    "Root010": {
+      "expected": "3 minus, Klammer auf, negative Quadratwurzel aus 2, Klammer zu"
+    },
+    "Root011": {
+      "expected": "Quadratwurzel aus x plus 1"
+    },
+    "Root011a": {
+      "expected": "Quadratwurzel aus x, plus 1"
+    },
+    "Root012": {
+      "expected": "negative Quadratwurzel aus x"
+    },
+    "Root013": {
+      "expected": "Klammer auf, Quadratwurzel aus x, Klammer zu, Quadrat"
+    },
+    "Root014": {
+      "expected": "minus, Klammer auf, Quadratwurzel aus x, Klammer zu, Quadrat"
+    },
+    "Root015": {
+      "expected": "Quadratwurzel aus x, Quadrat"
+    },
+    "Root016": {
+      "expected": "Quadratwurzel aus x Quadrat"
+    },
+    "Root017": {
+      "expected": "Quadratwurzel aus x Quadrat plus y Quadrat"
+    },
+    "Root018": {
+      "expected": "Quadratwurzel aus, x Index 1, Quadrat plus, x Index 2, Quadrat"
+    },
+    "Root019": {
+      "expected": "Quadratwurzel aus, Klammer auf, x Index 2, minus, x Index 1, Klammer zu, Quadrat plus, Klammer auf, y Index 2, minus, y Index 1, Klammer zu, Quadrat"
+    },
+    "Root020": {
+      "expected": "Quadratwurzel aus ein halb"
+    },
+    "Root021": {
+      "expected": "Quadratwurzel aus, 23 geteilt durch 66"
+    },
+    "Root022": {
+      "expected": "Quadratwurzel aus, Bruch mit Zähler x plus 1, und Nenner 2 x, plus 5"
+    },
+    "Root023": {
+      "expected": "Bruch mit Zähler minus b plus minus Quadratwurzel aus b Quadrat minus 4 a c, und Nenner 2 a"
+    },
+    "Root024": {
+      "expected": "positive Quadratwurzel aus 2"
+    },
+    "Root025": {
+      "expected": "3 plus positive Quadratwurzel aus 2"
+    },
+    "Root026": {
+      "expected": "3 plus minus Quadratwurzel aus 2"
+    },
+    "Root027": {
+      "expected": "3 minus plus Quadratwurzel aus 2"
+    },
+    "Root028": {
+      "expected": "negative Quadratwurzel aus 2"
+    },
+    "Root029": {
+      "expected": "3 minus positive Quadratwurzel aus 2"
+    },
+    "Root030": {
+      "expected": "3 plus negative Quadratwurzel aus 2"
+    },
+    "Root031": {
+      "expected": "3 minus negative Quadratwurzel aus 2"
+    },
+    "Root032": {
+      "expected": "3 plus, Klammer auf, negative Quadratwurzel aus 2, Klammer zu"
+    },
+    "Root033": {
+      "expected": "3 minus, Klammer auf, negative Quadratwurzel aus 2, Klammer zu"
+    },
+    "Root034": {
+      "expected": "positive Quadratwurzel aus x plus 1"
+    },
+    "Root034a": {
+      "expected": "positive Quadratwurzel aus x, plus 1"
+    },
+    "Root035": {
+      "expected": "negative Quadratwurzel aus x"
+    },
+    "Root036": {
+      "expected": "Klammer auf, positive Quadratwurzel aus x, Klammer zu, Quadrat"
+    },
+    "Root037": {
+      "expected": "Klammer auf, negative Quadratwurzel aus x, Klammer zu, Quadrat"
+    },
+    "Root038": {
+      "expected": "minus, Klammer auf, positive Quadratwurzel aus x, Klammer zu, Quadrat"
+    },
+    "Root039": {
+      "expected": "positive Quadratwurzel aus x, Quadrat"
+    },
+    "Root040": {
+      "expected": "positive Quadratwurzel aus x Quadrat"
+    },
+    "Root041": {
+      "expected": "positive Quadratwurzel aus x Quadrat plus y Quadrat"
+    },
+    "Root042": {
+      "expected": "positive Quadratwurzel aus, x Index 1, Quadrat plus, x Index 2, Quadrat"
+    },
+    "Root043": {
+      "expected": "positive Quadratwurzel aus, Klammer auf, x Index 2, minus, x Index 1, Klammer zu, Quadrat plus, Klammer auf, y Index 2, minus, y Index 1, Klammer zu, Quadrat"
+    },
+    "Root044": {
+      "expected": "positive Quadratwurzel aus ein halb"
+    },
+    "Root045": {
+      "expected": "positive Quadratwurzel aus, 23 geteilt durch 66"
+    },
+    "Root046": {
+      "expected": "positive Quadratwurzel aus, Bruch mit Zähler x plus 1, und Nenner 2 x, plus 5"
+    },
+    "Root047": {
+      "expected": "Bruch mit Zähler minus b plus minus Quadratwurzel aus b Quadrat minus 4 a c, und Nenner 2 a"
+    },
+    "Root048": {
+      "expected": "Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root049": {
+      "expected": "3 plus Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root050": {
+      "expected": "3 plus minus Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root051": {
+      "expected": "3 minus plus Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root052": {
+      "expected": "negative Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root053": {
+      "expected": "3 minus Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root054": {
+      "expected": "3 plus negative Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root055": {
+      "expected": "3 minus negative Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root056": {
+      "expected": "3 plus, Klammer auf, negative Quadratwurzel aus 2, Wurzel Ende, Klammer zu"
+    },
+    "Root057": {
+      "expected": "3 minus, Klammer auf, negative Quadratwurzel aus 2, Wurzel Ende, Klammer zu"
+    },
+    "Root058": {
+      "expected": "Quadratwurzel aus x plus 1, Wurzel Ende"
+    },
+    "Root058a": {
+      "expected": "Quadratwurzel aus x, Wurzel Ende, plus 1"
+    },
+    "Root059": {
+      "expected": "negative Quadratwurzel aus x, Wurzel Ende"
+    },
+    "Root060": {
+      "expected": "Klammer auf, Quadratwurzel aus x, Wurzel Ende, Klammer zu, Quadrat"
+    },
+    "Root061": {
+      "expected": "minus, Klammer auf, Quadratwurzel aus x, Wurzel Ende, Klammer zu, Quadrat"
+    },
+    "Root062": {
+      "expected": "Quadratwurzel aus x, Wurzel Ende, Quadrat"
+    },
+    "Root063": {
+      "expected": "Quadratwurzel aus x Quadrat, Wurzel Ende"
+    },
+    "Root064": {
+      "expected": "Quadratwurzel aus x Quadrat plus y Quadrat, Wurzel Ende"
+    },
+    "Root065": {
+      "expected": "Quadratwurzel aus, x Index 1, Quadrat plus, x Index 2, Quadrat, Wurzel Ende"
+    },
+    "Root066": {
+      "expected": "Quadratwurzel aus, Klammer auf, x Index 2, minus, x Index 1, Klammer zu, Quadrat plus, Klammer auf, y Index 2, minus, y Index 1, Klammer zu, Quadrat, Wurzel Ende"
+    },
+    "Root067": {
+      "expected": "Quadratwurzel aus ein halb, Wurzel Ende"
+    },
+    "Root068": {
+      "expected": "Quadratwurzel aus, 23 geteilt durch 66, Wurzel Ende"
+    },
+    "Root069": {
+      "expected": "Quadratwurzel aus, Bruch mit Zähler x plus 1, und Nenner 2 x, plus 5, Wurzel Ende"
+    },
+    "Root070": {
+      "expected": "Bruch mit Zähler minus b plus minus Quadratwurzel aus b Quadrat minus 4 a c, Wurzel Ende, und Nenner 2 a"
+    },
+    "Root071": {
+      "expected": "positive Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root072": {
+      "expected": "3 plus positive Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root073": {
+      "expected": "3 plus minus Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root074": {
+      "expected": "3 minus plus Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root075": {
+      "expected": "negative Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root076": {
+      "expected": "3 minus positive Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root077": {
+      "expected": "3 plus negative Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root078": {
+      "expected": "3 minus negative Quadratwurzel aus 2, Wurzel Ende"
+    },
+    "Root079": {
+      "expected": "3 plus, Klammer auf, negative Quadratwurzel aus 2, Wurzel Ende, Klammer zu"
+    },
+    "Root080": {
+      "expected": "3 minus, Klammer auf, negative Quadratwurzel aus 2, Wurzel Ende, Klammer zu"
+    },
+    "Root081": {
+      "expected": "positive Quadratwurzel aus x plus 1, Wurzel Ende"
+    },
+    "Root081a": {
+      "expected": "positive Quadratwurzel aus x, Wurzel Ende, plus 1"
+    },
+    "Root082": {
+      "expected": "negative Quadratwurzel aus x, Wurzel Ende"
+    },
+    "Root083": {
+      "expected": "Klammer auf, positive Quadratwurzel aus x, Wurzel Ende, Klammer zu, Quadrat"
+    },
+    "Root084": {
+      "expected": "Klammer auf, negative Quadratwurzel aus x, Wurzel Ende, Klammer zu, Quadrat"
+    },
+    "Root085": {
+      "expected": "positive Quadratwurzel aus x, Wurzel Ende, Quadrat"
+    },
+    "Root086": {
+      "expected": "positive Quadratwurzel aus x Quadrat, Wurzel Ende"
+    },
+    "Root087": {
+      "expected": "positive Quadratwurzel aus x Quadrat plus y Quadrat, Wurzel Ende"
+    },
+    "Root088": {
+      "expected": "positive Quadratwurzel aus, x Index 1, Quadrat plus, x Index 2, Quadrat, Wurzel Ende"
+    },
+    "Root089": {
+      "expected": "positive Quadratwurzel aus, Klammer auf, x Index 2, minus, x Index 1, Klammer zu, Quadrat plus, Klammer auf, y Index 2, minus, y Index 1, Klammer zu, Quadrat, Wurzel Ende"
+    },
+    "Root090": {
+      "expected": "positive Quadratwurzel aus ein halb, Wurzel Ende"
+    },
+    "Root091": {
+      "expected": "positive Quadratwurzel aus, 23 geteilt durch 66, Wurzel Ende"
+    },
+    "Root092": {
+      "expected": "positive Quadratwurzel aus, Bruch mit Zähler x plus 1, und Nenner 2 x, plus 5, Wurzel Ende"
+    },
+    "Root093": {
+      "expected": "Bruch mit Zähler minus b plus minus Quadratwurzel aus b Quadrat minus 4 a c, Wurzel Ende, und Nenner 2 a"
+    },
+    "_comment2_": " Higher order roots",
+    "HighRoot001": {
+      "expected": "Kubikwurzel aus y"
+    },
+    "HighRoot002": {
+      "expected": "die vierte Wurzel aus n"
+    },
+    "HighRoot003": {
+      "expected": "die fünfte Wurzel aus 35"
+    },
+    "HighRoot004": {
+      "expected": "die neunte Wurzel aus 146"
+    },
+    "HighRoot005": {
+      "expected": "die nte Wurzel aus d"
+    },
+    "HighRoot006": {
+      "expected": "die mte Wurzel aus 243"
+    },
+    "HighRoot007": {
+      "expected": "die ite Wurzel aus 2 hoch i"
+    },
+    "HighRoot008": {
+      "expected": "die jte Wurzel aus 125"
+    },
+    "HighRoot009": {
+      "expected": "minus Kubikwurzel aus y"
+    },
+    "HighRoot010": {
+      "expected": "minus die vierte Wurzel aus n"
+    },
+    "HighRoot011": {
+      "expected": "Kubikwurzel aus y, Wurzel Ende"
+    },
+    "HighRoot012": {
+      "expected": "die vierte Wurzel aus n, Wurzel Ende"
+    },
+    "HighRoot013": {
+      "expected": "die fünfte Wurzel aus 35, Wurzel Ende"
+    },
+    "HighRoot014": {
+      "expected": "die neunte Wurzel aus 146, Wurzel Ende"
+    },
+    "HighRoot015": {
+      "expected": "die nte Wurzel aus d, Wurzel Ende"
+    },
+    "HighRoot016": {
+      "expected": "die mte Wurzel aus 243, Wurzel Ende"
+    },
+    "HighRoot017": {
+      "expected": "die ite Wurzel aus 2 hoch i, Wurzel Ende"
+    },
+    "HighRoot018": {
+      "expected": "die jte Wurzel aus 125, Wurzel Ende"
+    },
+    "HighRoot019": {
+      "expected": "minus Kubikwurzel aus y, Wurzel Ende"
+    },
+    "HighRoot020": {
+      "expected": "minus die vierte Wurzel aus n, Wurzel Ende"
+    },
+    "HighRoot021": {
+      "expected": "Kubikwurzel aus y"
+    },
+    "HighRoot022": {
+      "expected": "die vierte Wurzel aus n"
+    },
+    "HighRoot023": {
+      "expected": "die fünfte Wurzel aus 35"
+    },
+    "HighRoot024": {
+      "expected": "die neunte Wurzel aus 146"
+    },
+    "HighRoot025": {
+      "expected": "die nte Wurzel aus d"
+    },
+    "HighRoot026": {
+      "expected": "die mte Wurzel aus 243"
+    },
+    "HighRoot027": {
+      "expected": "die ite Wurzel aus 2 hoch i"
+    },
+    "HighRoot028": {
+      "expected": "die jte Wurzel aus 125"
+    },
+    "HighRoot029": {
+      "expected": "minus Kubikwurzel aus y"
+    },
+    "HighRoot030": {
+      "expected": "minus die vierte Wurzel aus n"
+    },
+    "HighRoot031": {
+      "expected": "Kubikwurzel aus y, Wurzel Ende"
+    },
+    "HighRoot032": {
+      "expected": "die vierte Wurzel aus n, Wurzel Ende"
+    },
+    "HighRoot033": {
+      "expected": "die fünfte Wurzel aus 35, Wurzel Ende"
+    },
+    "HighRoot034": {
+      "expected": "die neunte Wurzel aus 146, Wurzel Ende"
+    },
+    "HighRoot035": {
+      "expected": "die nte Wurzel aus d, Wurzel Ende"
+    },
+    "HighRoot036": {
+      "expected": "die mte Wurzel aus 243, Wurzel Ende"
+    },
+    "HighRoot037": {
+      "expected": "die ite Wurzel aus 2 hoch i, Wurzel Ende"
+    },
+    "HighRoot038": {
+      "expected": "die jte Wurzel aus 125, Wurzel Ende"
+    },
+    "HighRoot039": {
+      "expected": "minus Kubikwurzel aus y, Wurzel Ende"
+    },
+    "HighRoot040": {
+      "expected": "minus die vierte Wurzel aus n, Wurzel Ende"
+    }
+  }
+}

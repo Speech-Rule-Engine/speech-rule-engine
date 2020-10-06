@@ -1,0 +1,523 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanImpliedTimes",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_implied_times.json",
+  "information": "German Clearspeak ImpliedTimes rule tests.",
+  "active": "ClearspeakGerman",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Implied Times",
+    "ImpTimes001": {
+      "expected": "2   3"
+    },
+    "ImpTimes002": {
+      "expected": "2   3"
+    },
+    "ImpTimes003": {
+      "expected": "2 hoch 4,   3"
+    },
+    "ImpTimes004": {
+      "expected": "2  , Klammer auf, 3 plus 4, Klammer zu"
+    },
+    "ImpTimes005": {
+      "expected": "2  , eckige Klammer auf, 3 plus 4, eckige Klammer zu"
+    },
+    "ImpTimes006": {
+      "expected": "3   2"
+    },
+    "ImpTimes007": {
+      "expected": "2  , Klammer auf, 3 plus 4, Klammer zu, Quadrat"
+    },
+    "ImpTimes008": {
+      "expected": "Klammer auf, 2 plus 7, Klammer zu,  , Klammer auf, 3 minus 6, Klammer zu"
+    },
+    "ImpTimes009": {
+      "expected": "eckige Klammer auf, 2 plus 7, eckige Klammer zu,  , eckige Klammer auf, 3 minus 6, eckige Klammer zu"
+    },
+    "_comment2_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes010": {
+      "expected": "XXX"
+    },
+    "ImpTimes011": {
+      "expected": "x  , Klammer auf, y plus z, Klammer zu"
+    },
+    "ImpTimes012": {
+      "expected": "2  , Klammer auf, y plus 1, Klammer zu"
+    },
+    "ImpTimes013": {
+      "expected": "Klammer auf, 2 minus 1, Klammer zu,   x"
+    },
+    "ImpTimes014": {
+      "expected": "p Index 1,  , Klammer auf, 3 plus 7, Klammer zu"
+    },
+    "ImpTimes015": {
+      "expected": "p Index 1, hoch, a Index 1, p Index 2, hoch, a Index 2"
+    },
+    "ImpTimes016": {
+      "expected": "Klammer auf, x plus y, Klammer zu, hoch minus 4,  , Klammer auf, x minus y, Klammer zu, hoch minus 4"
+    },
+    "ImpTimes017": {
+      "expected": "2 hoch 4  , Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimes018": {
+      "expected": "x y"
+    },
+    "ImpTimes019": {
+      "expected": "x Quadrat, y Kubik"
+    },
+    "ImpTimes020": {
+      "expected": "x hoch y plus 1, x hoch y plus 2"
+    },
+    "ImpTimes021": {
+      "expected": "Quadratwurzel aus a, Quadratwurzel aus b, ist gleich Quadratwurzel aus a b"
+    },
+    "ImpTimes022": {
+      "expected": "Quadratwurzel aus 3, Quadratwurzel aus 10, ist gleich Quadratwurzel aus 30"
+    },
+    "ImpTimes023": {
+      "expected": "2 Quadratwurzel aus 3"
+    },
+    "ImpTimes024": {
+      "expected": "1 plus 2 Quadratwurzel aus 3"
+    },
+    "ImpTimes025": {
+      "expected": "f von x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu"
+    },
+    "ImpTimes026": {
+      "expected": "f mal x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu"
+    },
+    "ImpTimes027": {
+      "expected": "Sinus x Kosinus y, plus, Kosinus x Sinus y"
+    },
+    "ImpTimes027a": {
+      "expected": "der Sinus von, Klammer auf, x plus y, Klammer zu, der Kosinus von, Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimes028": {
+      "expected": "der Logarithmus Basis 10 von, x y"
+    },
+    "ImpTimes029": {
+      "expected": "der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich, Logarithmus x Logarithmus y"
+    },
+    "ImpTimes030": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2.   die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1"
+    },
+    "ImpTimes031": {
+      "expected": "2  , Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu"
+    },
+    "ImpTimes032": {
+      "expected": "2  , Klammer auf, 3  , zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu"
+    },
+    "ImpTimes033": {
+      "expected": "2  , eckige Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes034": {
+      "expected": "2  , eckige Klammer auf, 3  , Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes035": {
+      "expected": "2  , der Betrag von x"
+    },
+    "ImpTimes036": {
+      "expected": "der Betrag von x,  , der Betrag von y"
+    },
+    "ImpTimes037": {
+      "expected": "der Betrag von x plus 1,  , der Betrag von y minus 1"
+    },
+    "ImpTimes037a": {
+      "expected": "der Betrag von x plus 1, Ende Betrag,  , der Betrag von y minus 1, Ende Betrag"
+    },
+    "ImpTimes038": {
+      "expected": "der Betrag von x plus 1,  , der Betrag von y, minus 1"
+    },
+    "ImpTimes0381": {
+      "expected": "der Betrag von x plus 1, Ende Betrag,  , der Betrag von y, Ende Betrag, minus 1"
+    },
+    "ImpTimes039": {
+      "expected": "2   3"
+    },
+    "ImpTimes040": {
+      "expected": "2   3"
+    },
+    "ImpTimes041": {
+      "expected": "2 hoch 4,   3"
+    },
+    "ImpTimes042": {
+      "expected": "2  , Klammer auf, 3 plus 4, Klammer zu"
+    },
+    "ImpTimes043": {
+      "expected": "2  , eckige Klammer auf, 3 plus 4, eckige Klammer zu"
+    },
+    "ImpTimes044": {
+      "expected": "3   2"
+    },
+    "ImpTimes045": {
+      "expected": "2  , Klammer auf, 3 plus 4, Klammer zu, Quadrat"
+    },
+    "ImpTimes046": {
+      "expected": "Klammer auf, 2 plus 7, Klammer zu,  , Klammer auf, 3 minus 6, Klammer zu"
+    },
+    "ImpTimes047": {
+      "expected": "eckige Klammer auf, 2 plus 7, eckige Klammer zu,  , eckige Klammer auf, 3 minus 6, eckige Klammer zu"
+    },
+    "_comment3_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes048": {
+      "expected": "XXX"
+    },
+    "ImpTimes049": {
+      "expected": "x  , Klammer auf, y plus z, Klammer zu"
+    },
+    "ImpTimes050": {
+      "expected": "2  , Klammer auf, y plus 1, Klammer zu"
+    },
+    "ImpTimes051": {
+      "expected": "Klammer auf, 2 minus 1, Klammer zu,   x"
+    },
+    "ImpTimes052": {
+      "expected": "p Index 1,  , Klammer auf, 3 plus 7, Klammer zu"
+    },
+    "ImpTimes053": {
+      "expected": "p Index 1, hoch, a Index 1,  , p Index 2, hoch, a Index 2"
+    },
+    "ImpTimes054": {
+      "expected": "Klammer auf, x plus y, Klammer zu, hoch minus 4,  , Klammer auf, x minus y, Klammer zu, hoch minus 4"
+    },
+    "ImpTimes055": {
+      "expected": "2 hoch 4  , Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimes056": {
+      "expected": "x   y"
+    },
+    "ImpTimes057": {
+      "expected": "x Quadrat   y Kubik"
+    },
+    "ImpTimes058": {
+      "expected": "x hoch y plus 1,   x hoch y plus 2"
+    },
+    "ImpTimes059": {
+      "expected": "Quadratwurzel aus a,   Quadratwurzel aus b, ist gleich Quadratwurzel aus a   b"
+    },
+    "ImpTimes060": {
+      "expected": "Quadratwurzel aus 3,   Quadratwurzel aus 10, ist gleich Quadratwurzel aus 30"
+    },
+    "ImpTimes061": {
+      "expected": "2   Quadratwurzel aus 3"
+    },
+    "ImpTimes062": {
+      "expected": "1 plus 2   Quadratwurzel aus 3"
+    },
+    "ImpTimes063": {
+      "expected": "f von x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu"
+    },
+    "ImpTimes064": {
+      "expected": "f mal x, ist gleich x Quadrat  , Klammer auf, x plus 1, Klammer zu"
+    },
+    "ImpTimes065": {
+      "expected": "Sinus x,   Kosinus y plus Kosinus x,   Sinus y"
+    },
+    "ImpTimes065a": {
+      "expected": "der Sinus von, Klammer auf, x plus y, Klammer zu,  , der Kosinus von, Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimes066": {
+      "expected": "der Logarithmus Basis 10 von, x   y"
+    },
+    "ImpTimes067": {
+      "expected": "der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich Logarithmus x,   Logarithmus y"
+    },
+    "ImpTimes068": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2.   die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1"
+    },
+    "ImpTimes069": {
+      "expected": "2  , Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu"
+    },
+    "ImpTimes070": {
+      "expected": "2  , Klammer auf, 3  , zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu"
+    },
+    "ImpTimes070a": {
+      "expected": "2  , eckige Klammer auf, 3  , Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes071": {
+      "expected": "2  , eckige Klammer auf, 3  , Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes072": {
+      "expected": "2  , der Betrag von x"
+    },
+    "ImpTimes073": {
+      "expected": "der Betrag von x,  , der Betrag von y"
+    },
+    "ImpTimes074": {
+      "expected": "der Betrag von x plus 1,  , der Betrag von y minus 1"
+    },
+    "ImpTimes074a": {
+      "expected": "der Betrag von x plus 1, Ende Betrag,  , der Betrag von y minus 1, Ende Betrag"
+    },
+    "ImpTimes075": {
+      "expected": "der Betrag von x plus 1,  , der Betrag von y, minus 1"
+    },
+    "ImpTimes076": {
+      "expected": "der Betrag von x plus 1, Ende Betrag,  , der Betrag von y, Ende Betrag, minus 1"
+    },
+    "ImpTimes077": {
+      "expected": "2, Klammer auf, 3, Klammer zu"
+    },
+    "ImpTimes078": {
+      "expected": "2, eckige Klammer auf, 3, eckige Klammer zu"
+    },
+    "ImpTimes079": {
+      "expected": "2 hoch 4, Klammer auf, 3, Klammer zu"
+    },
+    "ImpTimes080": {
+      "expected": "2, Klammer auf, 3 plus 4, Klammer zu"
+    },
+    "ImpTimes081": {
+      "expected": "2, eckige Klammer auf, 3 plus 4, eckige Klammer zu"
+    },
+    "ImpTimes082": {
+      "expected": "Klammer auf, 3, Klammer zu, Klammer auf, 2, Klammer zu"
+    },
+    "ImpTimes083": {
+      "expected": "2, Klammer auf, 3 plus 4, Klammer zu, Quadrat"
+    },
+    "ImpTimes084": {
+      "expected": "Klammer auf, 2 plus 7, Klammer zu, Klammer auf, 3 minus 6, Klammer zu"
+    },
+    "ImpTimes085": {
+      "expected": "eckige Klammer auf, 2 plus 7, eckige Klammer zu, eckige Klammer auf, 3 minus 6, eckige Klammer zu"
+    },
+    "_comment4_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimes086": {
+      "expected": "XXX"
+    },
+    "ImpTimes087": {
+      "expected": "x, Klammer auf, y plus z, Klammer zu"
+    },
+    "ImpTimes088": {
+      "expected": "2, Klammer auf, y plus 1, Klammer zu"
+    },
+    "ImpTimes089": {
+      "expected": "Klammer auf, 2 minus 1, Klammer zu, x"
+    },
+    "ImpTimes090": {
+      "expected": "p Index 1, Klammer auf, 3 plus 7, Klammer zu"
+    },
+    "ImpTimes091": {
+      "expected": "p Index 1, hoch, a Index 1, p Index 2, hoch, a Index 2"
+    },
+    "ImpTimes092": {
+      "expected": "Klammer auf, x plus y, Klammer zu, hoch minus 4, Klammer auf, x minus y, Klammer zu, hoch minus 4"
+    },
+    "ImpTimes093": {
+      "expected": "2 hoch 4, Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimes094": {
+      "expected": "x y"
+    },
+    "ImpTimes095": {
+      "expected": "x Quadrat y Kubik"
+    },
+    "ImpTimes096": {
+      "expected": "x hoch y plus 1, x hoch y plus 2"
+    },
+    "ImpTimes097": {
+      "expected": "Quadratwurzel aus a, Quadratwurzel aus b, ist gleich Quadratwurzel aus a b"
+    },
+    "ImpTimes098": {
+      "expected": "Quadratwurzel aus 3, Quadratwurzel aus 10, ist gleich Quadratwurzel aus 30"
+    },
+    "ImpTimes099": {
+      "expected": "2 Quadratwurzel aus 3"
+    },
+    "ImpTimes100": {
+      "expected": "1 plus 2 Quadratwurzel aus 3"
+    },
+    "ImpTimes101": {
+      "expected": "f von x, ist gleich x Quadrat, Klammer auf, x plus 1, Klammer zu"
+    },
+    "_comment5_": " TODO: (Simons) Need to be able to specify excluded preferences.",
+    "ImpTimes102": {
+      "expected": "XXX"
+    },
+    "ImpTimes103": {
+      "expected": "Sinus x Kosinus y, plus, Kosinus x Sinus y"
+    },
+    "ImpTimes104": {
+      "expected": "der Logarithmus Basis 10 von, x y"
+    },
+    "ImpTimes105": {
+      "expected": "der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich, Logarithmus x Logarithmus y"
+    },
+    "ImpTimes106": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2. die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1"
+    },
+    "ImpTimes107": {
+      "expected": "2, Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu"
+    },
+    "ImpTimes108": {
+      "expected": "2, Klammer auf, 3, zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu"
+    },
+    "ImpTimes109": {
+      "expected": "2, eckige Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes110": {
+      "expected": "2, eckige Klammer auf, 3, Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimes111": {
+      "expected": "2, der Betrag von x"
+    },
+    "ImpTimes112": {
+      "expected": "der Betrag von x, der Betrag von y"
+    },
+    "ImpTimes113": {
+      "expected": "der Betrag von x plus 1, der Betrag von y minus 1"
+    },
+    "ImpTimes114": {
+      "expected": "der Betrag von x plus 1, der Betrag von y, minus 1"
+    },
+    "_comment6_": " No Implied Times and Silent Parenthesis Preferences both set",
+    "ImpTimesSilPar001": {
+      "expected": "2, Klammer auf, 3, Klammer zu"
+    },
+    "ImpTimesSilPar002": {
+      "expected": "2, eckige Klammer auf, 3, eckige Klammer zu"
+    },
+    "ImpTimesSilPar003": {
+      "expected": "2 hoch 4, Klammer auf, 3, Klammer zu"
+    },
+    "ImpTimesSilPar004": {
+      "expected": "2, Klammer auf, 3 plus 4, Klammer zu"
+    },
+    "ImpTimesSilPar005": {
+      "expected": "2, eckige Klammer auf, 3 plus 4, eckige Klammer zu"
+    },
+    "ImpTimesSilPar006": {
+      "expected": "Klammer auf, 3, Klammer zu, Klammer auf, 2, Klammer zu"
+    },
+    "ImpTimesSilPar007": {
+      "expected": "2, Klammer auf, 3 plus 4, Klammer zu, Quadrat"
+    },
+    "ImpTimesSilPar008": {
+      "expected": "Klammer auf, 2 plus 7, Klammer zu, Klammer auf, 3 minus 6, Klammer zu"
+    },
+    "ImpTimesSilPar009": {
+      "expected": "eckige Klammer auf, 2 plus 7, eckige Klammer zu, eckige Klammer auf, 3 minus 6, eckige Klammer zu"
+    },
+    "_comment7_": " TODO: (Simons) x is categorised as function!",
+    "ImpTimesSilPar010": {
+      "expected": "XXX"
+    },
+    "ImpTimesSilPar011": {
+      "expected": "x, Klammer auf, y plus z, Klammer zu"
+    },
+    "ImpTimesSilPar012": {
+      "expected": "2, Klammer auf, y plus 1, Klammer zu"
+    },
+    "ImpTimesSilPar013": {
+      "expected": "Klammer auf, 2 minus 1, Klammer zu, x"
+    },
+    "ImpTimesSilPar014": {
+      "expected": "p Index 1, Klammer auf, 3 plus 7, Klammer zu"
+    },
+    "ImpTimesSilPar015": {
+      "expected": "Klammer auf, x plus y, Klammer zu, hoch minus 4, Klammer auf, x minus y, Klammer zu, hoch minus 4"
+    },
+    "ImpTimesSilPar016": {
+      "expected": "2 hoch 4, Klammer auf, x plus y, Klammer zu"
+    },
+    "ImpTimesSilPar017": {
+      "_comment8_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
+      "expected": "f von x, ist gleich x Quadrat, Klammer auf, x plus 1, Klammer zu"
+    },
+    "_comment9_": " TODO: (Simons) Need to be able to specify excluded preferences.",
+    "ImpTimesSilPar018": {
+      "expected": "XXX"
+    },
+    "ImpTimesSilPar019": {
+      "_comment10_": " preference = 'Paren_Silent';  // TODO (sorge): Sort out preferences!",
+      "expected": "der Logarithmus von, Klammer auf, x plus y, Klammer zu, ist gleich, Logarithmus x Logarithmus y"
+    },
+    "ImpTimesSilPar020": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 5, 2. die 2 mal 2 Matrize. Zeile 1: 7, 4 Zeile 2: 0, 1"
+    },
+    "ImpTimesSilPar021": {
+      "expected": "2, Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, Klammer zu"
+    },
+    "ImpTimesSilPar022": {
+      "expected": "2, Klammer auf, 3, zweite Klammer auf, dritte Klammer auf, 4 plus 5, dritte Klammer zu, plus 6, zweite Klammer zu, Klammer zu"
+    },
+    "ImpTimesSilPar023": {
+      "expected": "2, eckige Klammer auf, 3, Klammer auf, Klammer auf, 4 plus 5, Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "ImpTimesSilPar024": {
+      "expected": "2, eckige Klammer auf, 3, Klammer auf, zweite Klammer auf, 4 plus 5, zweite Klammer zu, plus 6, Klammer zu, eckige Klammer zu"
+    },
+    "_comment11_": " Implied Times, Functions, or Something Else",
+    "_comment12_": " TODO: QUESTION What is exact speech? From MathType?",
+    "_comment13_": "       There is no preference ImpliedTimes_Rules. Reverted to Implied",
+    "_comment14_": "       Times_Auto.",
+    "Extra001": {
+      "expected": "A ist gleich h von, Klammer auf, Bruch mit Zähler, b Index 1, plus, b Index 2, und Nenner 2, Klammer zu"
+    },
+    "Extra002": {
+      "expected": "A ist gleich, h mal, Klammer auf, Bruch mit Zähler, b Index 1, plus, b Index 2, und Nenner 2, Klammer zu"
+    },
+    "Extra003": {
+      "expected": "a von 0, ist gleich 0   a ist gleich 0"
+    },
+    "Extra004": {
+      "expected": "a mal 0, ist gleich 0   a ist gleich 0"
+    },
+    "Extra005": {
+      "expected": "a mal minus 1, ist gleich minus a"
+    },
+    "Extra006": {
+      "expected": "a von minus 1, ist gleich minus a"
+    },
+    "_comment15_": " TODO: (Simons) a is categorised as function!",
+    "Extra007": {
+      "expected": "XXX"
+    },
+    "_comment16_": " TODO: (Simons) a is categorised as function!",
+    "Extra008": {
+      "expected": "XXX"
+    },
+    "Extra009": {
+      "test": true,
+      "expected": "minus u von v, ist gleich u von minus v, ist gleich minus u von v"
+    },
+    "Extra010": {
+      "expected": "B von, Klammer auf, 2 Komma 6, Klammer zu"
+    },
+    "Extra012": {
+      "expected": "B mal, Klammer auf, 2 Komma 6, Klammer zu"
+    },
+    "_comment17_": " TODO: (Simons) Explore exact speech.",
+    "Extra013": {
+      "expected": "XXX"
+    },
+    "Extra014": {
+      "expected": "p von w"
+    },
+    "Extra015": {
+      "expected": "x von t, ist gleich 2 t, plus 4"
+    },
+    "Extra016": {
+      "expected": "k von x, ist gleich, Klammer auf, x plus 3, Klammer zu,  , Klammer auf, x minus 5, Klammer zu"
+    },
+    "_comment18_": " TODO: (Simons) a is categorised as function!",
+    "Extra017": {
+      "expected": "XXX"
+    },
+    "Extra018": {
+      "expected": "T von t, ist gleich, T Index s, plus, Klammer auf, T Index 0, minus, T Index s, Klammer zu,   e hoch minus k t"
+    },
+    "Extra019": {
+      "expected": "V ist gleich Schreibschrift l, w von 8",
+      "_comment19_": " w is considered a simple function.",
+      "_comment20_": "var speech = '';"
+    },
+    "_comment21_": " TODO: (Simons) Explore exact speech.",
+    "Extra020": {
+      "expected": "XXX"
+    }
+  }
+}

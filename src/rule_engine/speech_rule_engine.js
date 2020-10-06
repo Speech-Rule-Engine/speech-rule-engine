@@ -32,6 +32,7 @@ goog.provide('sre.SpeechRuleEngine');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
+goog.require('sre.BrailleStore');
 goog.require('sre.ClearspeakPreferences');
 goog.require('sre.Debugger');
 goog.require('sre.DynamicCstr');
@@ -82,6 +83,12 @@ sre.SpeechRuleEngine = function() {
    */
   this.evaluators_ = {};
 
+  /**
+   * @type {Object.<sre.BaseRuleStore>}
+   * @private
+   */
+  this.ruleSets_ = {};
+
   // sre.Debugger.getInstance().init();
 
   sre.Engine.registerTest(
@@ -99,12 +106,37 @@ sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
   var ruleSets = {};
   for (var i = 0, m = ruleSetNames.length; i < m; i++) {
     var name = ruleSetNames[i];
+    if (this.ruleSets_[name]) {
+      ruleSets[name] = this.ruleSets_[name];
+      continue;
+    }
     var set = sre.SpeechRuleStores.getConstructor(name);
     if (set && set.getInstance) {
       ruleSets[name] = set.getInstance();
+      this.ruleSets_[name] = set.getInstance();
+    } else if (set) {
+      let store = this.storeFactory_(set.modality);
+      store.parse(set);
+      this.ruleSets_[name] = store;
+      ruleSets[name] = store;
     }
   }
   this.parameterize_(ruleSets);
+};
+
+
+/**
+ * Factory method for generating rule stores by modality.
+ * @param {string} modality The modality.
+ * @return {sre.BaseRuleStore} The generated rule store.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.storeFactory_ = function(modality) {
+  let constructors = {
+    braille: sre.BrailleStore,
+    speech: sre.MathStore
+  };
+  return new (constructors[modality] || sre.MathStore)();
 };
 
 
@@ -677,11 +709,11 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   var modality = dynamic.getValue(sre.DynamicCstr.Axis.MODALITY);
   var domain = dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN);
   if (!trie.hasSubtrie([locale, modality, domain])) {
-    locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+    domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
     if (!trie.hasSubtrie([locale, modality, domain])) {
       modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
       if (!trie.hasSubtrie([locale, modality, domain])) {
-        domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+        locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
       }
     }
   }

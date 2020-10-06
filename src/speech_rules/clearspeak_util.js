@@ -20,6 +20,7 @@
 goog.provide('sre.ClearspeakUtil');
 
 goog.require('sre.DomUtil');
+goog.require('sre.Grammar');
 goog.require('sre.Messages');
 goog.require('sre.SemanticAnnotator');
 goog.require('sre.StoreUtil');
@@ -697,3 +698,15 @@ sre.ClearspeakUtil.lastCurrency = function(node) {
       lookupCategory(last.textContent + ':unit') === 'currency';
   return result ? [node] : [];
 };
+
+
+/**
+ * Adds the annotators.
+ */
+sre.ClearspeakUtil.addAnnotators = function() {
+  sre.SemanticAnnotations.getInstance().register(
+      sre.ClearspeakUtil.simpleExpression());
+  sre.SemanticAnnotations.getInstance().register(
+      sre.ClearspeakUtil.unitExpression());
+};
+

@@ -1,0 +1,596 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchTrigometry",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_trigometry.json",
+  "information": "French Clearspeak Trigometry rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Trigonometry",
+    "_comment2_": " Table 1: Basic Trigonometric Functions",
+    "Trig001": {
+      "expected": "sinus x"
+    },
+    "Trig002": {
+      "expected": "cosinus x"
+    },
+    "Trig003": {
+      "expected": "tangente thêta"
+    },
+    "Trig004": {
+      "expected": "sécante thêta"
+    },
+    "Trig005": {
+      "expected": "cosécante x"
+    },
+    "Trig006": {
+      "expected": "cotangente x"
+    },
+    "Trig007": {
+      "expected": "sinus au carré x"
+    },
+    "Trig008": {
+      "expected": "cosinus au cube x"
+    },
+    "Trig009": {
+      "expected": "tangente au carré x"
+    },
+    "Trig010": {
+      "expected": "sécante au cube x"
+    },
+    "Trig011": {
+      "expected": "cosécante au carré x"
+    },
+    "Trig012": {
+      "expected": "cotangente au carré x"
+    },
+    "Trig013": {
+      "expected": "sinus 2 pi"
+    },
+    "Trig014": {
+      "expected": "sinus de, parenthèse gauche, pi k, plus, pi sur 2, parenthèse droite"
+    },
+    "Trig015": {
+      "expected": "cosinus de, pi sur 2"
+    },
+    "Trig016": {
+      "expected": "sinus de, pi sur 2"
+    },
+    "Trig017": {
+      "expected": "sinus pi sur 2"
+    },
+    "Trig018": {
+      "expected": "2 sur sinus pi"
+    },
+    "Trig019": {
+      "expected": "fraction avec numérateur, sinus de, pi sur 2, et dénominateur 3"
+    },
+    "Trig020": {
+      "expected": "tangente négatif pi"
+    },
+    "Trig021": {
+      "expected": "sinus de, parenthèse gauche, x plus pi, parenthèse droite"
+    },
+    "Trig022": {
+      "expected": "cosinus de, parenthèse gauche, x plus, pi sur 2, parenthèse droite"
+    },
+    "Trig023": {
+      "expected": "cosinus de, parenthèse gauche, pi sur 2, plus x, parenthèse droite"
+    },
+    "Trig024": {
+      "expected": "sinus au carré x, plus, cosinus au carré x, égale 1"
+    },
+    "Trig025": {
+      "expected": "sinus à la puissance 4; x"
+    },
+    "Trig026": {
+      "expected": "cosinus à la puissance 5; x"
+    },
+    "Trig027": {
+      "expected": "tangente à la puissance n; x"
+    },
+    "Trig028": {
+      "expected": "sinus x sur cosinus x"
+    },
+    "Trig029": {
+      "expected": "tangente 35 degrés"
+    },
+    "_comment3_": " TODO: (Simons) Handles degrees as a postfix function.",
+    "Trig030": {
+      "expected": "XXXX"
+    },
+    "Trig031": {
+      "expected": "tangente de, parenthèse gauche, angle D E F, parenthèse droite"
+    },
+    "Trig032": {
+      "expected": "tangente de, parenthèse gauche, angle D, parenthèse droite"
+    },
+    "Trig033": {
+      "expected": "sinus de, parenthèse gauche, x plus y, parenthèse droite, égale, sinus x cosinus y, plus, cosinus x sinus y"
+    },
+    "Trig034": {
+      "expected": "cosinus de, parenthèse gauche, x plus y, parenthèse droite, égale, cosinus x cosinus y, moins, sinus x sinus y"
+    },
+    "Trig035": {
+      "expected": "tangente de, parenthèse gauche, x plus y, parenthèse droite, égale, fraction avec numérateur tangente x moins tangente y, et dénominateur 1 moins, tangente x tangente y"
+    },
+    "_comment4_": " TODO: (Simons) Handle degrees as a postfix function.",
+    "Trig036": {
+      "expected": "XXXX"
+    },
+    "Trig037": {
+      "expected": "tangente de, parenthèse gauche, pi sur 6, plus, 2 pi sur 3, parenthèse droite, égale, fraction avec numérateur, tangente de, pi sur 6, moins, tangente de, 2 pi sur 3, et dénominateur 1 moins, tangente de, pi sur 6, tangente de, 2 pi sur 3"
+    },
+    "Trig038": {
+      "expected": "tangente 2 x, égale, fraction avec numérateur 2 tangente x, et dénominateur 1 moins, tangente au carré x"
+    },
+    "Trig039": {
+      "expected": "cosinus 2 x, égale 2, cosinus au carré x, moins 1"
+    },
+    "Trig040": {
+      "expected": "sinus de, x sur 2, égale plus ou moins la racine carrée de, fraction avec numérateur 1 moins cosinus x, et dénominateur 2"
+    },
+    "Trig041": {
+      "expected": "tangente de, x sur 2, égale plus ou moins la racine carrée de, fraction avec numérateur 1 moins cosinus x, et dénominateur 1 plus cosinus x"
+    },
+    "Trig042": {
+      "expected": "cosinus x cosinus y, égale 2, cosinus de, fraction avec numérateur x plus y, et dénominateur 2, cosinus de, fraction avec numérateur x moins y, et dénominateur 2"
+    },
+    "Trig043": {
+      "expected": "sinus de, parenthèse gauche, négatif, pi sur 8, parenthèse droite, égale négatif un-demi la racine carrée de 2 moins la racine carrée de 2, fin racine, fin racine"
+    },
+    "Trig044": {
+      "expected": "tangente de, 3 pi sur 8, égale, fraction avec numérateur la racine carrée de, la racine carrée de 2, fin racine, plus 1, fin racine, et dénominateur la racine carrée de, la racine carrée de 2, fin racine, moins 1, fin racine"
+    },
+    "Trig045": {
+      "expected": "tangente de, pi sur 12, égale un-demi la racine carrée de 2 moins la racine carrée de 3, fin racine, fin racine"
+    },
+    "_comment5_": " Table 2: Inverse Trigonometric Functions",
+    "TrigInvAuto001": {
+      "expected": "sinus inverse de x"
+    },
+    "TrigInvAuto002": {
+      "expected": "cosinus inverse de x"
+    },
+    "TrigInvAuto003": {
+      "expected": "tangente inverse de x"
+    },
+    "TrigInvAuto004": {
+      "expected": "cotangente inverse de x"
+    },
+    "TrigInvAuto005": {
+      "expected": "sécante inverse de x"
+    },
+    "TrigInvAuto006": {
+      "expected": "cosécante inverse de x"
+    },
+    "TrigInvAuto007": {
+      "expected": "sinus inverse de, fraction avec numérateur la racine carrée de 2, et dénominateur 2"
+    },
+    "TrigInvAuto008": {
+      "expected": "cosinus inverse de un-demi"
+    },
+    "TrigInvAuto009": {
+      "expected": "tangente inverse de 17"
+    },
+    "TrigInvAuto010": {
+      "expected": "cotangente inverse de 32"
+    },
+    "TrigInvAuto011": {
+      "expected": "sécante inverse de 100"
+    },
+    "TrigInvAuto012": {
+      "expected": "cosécante inverse de 85"
+    },
+    "TrigInvAuto013": {
+      "expected": "sinus inverse de négatif x"
+    },
+    "TrigInvAuto014": {
+      "expected": "cosinus inverse de négatif x"
+    },
+    "TrigInvAuto015": {
+      "expected": "tangente inverse de, parenthèse gauche, négatif x plus 12, parenthèse droite"
+    },
+    "TrigInvAuto016": {
+      "expected": "cotangente inverse de, parenthèse gauche, négatif x moins 1, parenthèse droite"
+    },
+    "TrigInvAuto017": {
+      "expected": "sinus inverse de sinus 0"
+    },
+    "TrigInvAuto018": {
+      "expected": "cosécante inverse de cosécante x"
+    },
+    "TrigInvAuto019": {
+      "expected": "cosinus de, parenthèse gauche, cosinus inverse de, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigInvAuto020": {
+      "expected": "cosinus de, parenthèse gauche, négatif, cosinus inverse de, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigInvAuto021": {
+      "expected": "sinus inverse de, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite"
+    },
+    "TrigInvAuto022": {
+      "expected": "sinus, cosinus inverse de un-demi"
+    },
+    "TrigInvAuto023": {
+      "expected": "sinus, tangente inverse de 1"
+    },
+    "TrigInvAuto024": {
+      "expected": "sinus de, parenthèse gauche, négatif, tangente inverse de 1, parenthèse droite"
+    },
+    "TrigInvAuto025": {
+      "expected": "sinus de, parenthèse gauche, négatif, tangente inverse de négatif 1, parenthèse droite"
+    },
+    "TrigInvAuto026": {
+      "expected": "sécante inverse de sécante x"
+    },
+    "_comment6_": " New: Reciprocal",
+    "TrigReciprocal001": {
+      "expected": "la reciproque de sinus x"
+    },
+    "TrigReciprocal002": {
+      "expected": "la reciproque de cosinus x"
+    },
+    "TrigReciprocal003": {
+      "expected": "la reciproque de tangente x"
+    },
+    "TrigReciprocal004": {
+      "expected": "la reciproque de cotangente x"
+    },
+    "TrigReciprocal005": {
+      "expected": "la reciproque de sécante x"
+    },
+    "TrigReciprocal006": {
+      "expected": "la reciproque de cosécante x"
+    },
+    "TrigReciprocal007": {
+      "expected": "la reciproque de sinus, fraction avec numérateur la racine carrée de 2, et dénominateur 2"
+    },
+    "TrigReciprocal008": {
+      "expected": "la reciproque de cosinus un-demi"
+    },
+    "TrigReciprocal009": {
+      "expected": "la reciproque de tangente 17"
+    },
+    "TrigReciprocal010": {
+      "expected": "la reciproque de cotangente 32"
+    },
+    "TrigReciprocal011": {
+      "expected": "la reciproque de sécante 100"
+    },
+    "TrigReciprocal012": {
+      "expected": "la reciproque de cosécante 85"
+    },
+    "TrigReciprocal013": {
+      "expected": "la reciproque de sinus, négatif x"
+    },
+    "TrigReciprocal014": {
+      "expected": "la reciproque de cosinus, négatif x"
+    },
+    "TrigReciprocal015": {
+      "expected": "la reciproque de tangente, parenthèse gauche, négatif x plus 12, parenthèse droite"
+    },
+    "TrigReciprocal016": {
+      "expected": "la reciproque de cotangente, parenthèse gauche, négatif x moins 1, parenthèse droite"
+    },
+    "TrigReciprocal017": {
+      "expected": "la reciproque de sinus, sinus 0"
+    },
+    "TrigReciprocal018": {
+      "expected": "la reciproque de cosécante, cosécante x"
+    },
+    "TrigReciprocal019": {
+      "expected": "cosinus de, parenthèse gauche, la reciproque de cosinus, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigReciprocal020": {
+      "expected": "cosinus de, parenthèse gauche, négatif, la reciproque de cosinus, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigReciprocal021": {
+      "expected": "la reciproque de sinus, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite"
+    },
+    "TrigReciprocal022": {
+      "expected": "sinus, la reciproque de cosinus un-demi"
+    },
+    "TrigReciprocal023": {
+      "expected": "sinus, la reciproque de tangente 1"
+    },
+    "TrigReciprocal024": {
+      "expected": "sinus de, parenthèse gauche, négatif, la reciproque de tangente 1, parenthèse droite"
+    },
+    "TrigReciprocal025": {
+      "expected": "sinus de, parenthèse gauche, négatif, la reciproque de tangente, négatif 1, parenthèse droite"
+    },
+    "TrigReciprocal026": {
+      "expected": "la reciproque de sécante, sécante x"
+    },
+    "TrigInverse001": {
+      "expected": "sinus inverse de x"
+    },
+    "TrigInverse002": {
+      "expected": "cosinus inverse de x"
+    },
+    "TrigInverse003": {
+      "expected": "tangente inverse de x"
+    },
+    "TrigInverse004": {
+      "expected": "cotangente inverse de x"
+    },
+    "TrigInverse005": {
+      "expected": "sécante inverse de x"
+    },
+    "TrigInverse006": {
+      "expected": "cosécante inverse de x"
+    },
+    "TrigInverse007": {
+      "expected": "sinus inverse de, fraction avec numérateur la racine carrée de 2, et dénominateur 2"
+    },
+    "TrigInverse008": {
+      "expected": "cosinus inverse de un-demi"
+    },
+    "TrigInverse009": {
+      "expected": "tangente inverse de 17"
+    },
+    "TrigInverse010": {
+      "expected": "cotangente inverse de 32"
+    },
+    "TrigInverse011": {
+      "expected": "sécante inverse de 100"
+    },
+    "TrigInverse012": {
+      "expected": "cosécante inverse de 85"
+    },
+    "TrigInverse013": {
+      "expected": "sinus inverse de négatif x"
+    },
+    "TrigInverse014": {
+      "expected": "cosinus inverse de négatif x"
+    },
+    "TrigInverse015": {
+      "expected": "tangente inverse de, parenthèse gauche, négatif x plus 12, parenthèse droite"
+    },
+    "TrigInverse016": {
+      "expected": "cotangente inverse de, parenthèse gauche, négatif x moins 1, parenthèse droite"
+    },
+    "TrigInverse017": {
+      "expected": "sinus inverse de sinus 0"
+    },
+    "TrigInverse018": {
+      "expected": "cosécante inverse de cosécante x"
+    },
+    "TrigInverse019": {
+      "expected": "cosinus de, parenthèse gauche, cosinus inverse de, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigInverse020": {
+      "expected": "cosinus de, parenthèse gauche, négatif, cosinus inverse de, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "TrigInverse021": {
+      "expected": "sinus inverse de, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite"
+    },
+    "TrigInverse022": {
+      "expected": "sinus, cosinus inverse de un-demi"
+    },
+    "TrigInverse023": {
+      "expected": "sinus, tangente inverse de 1"
+    },
+    "TrigInverse024": {
+      "expected": "sinus de, parenthèse gauche, négatif, tangente inverse de 1, parenthèse droite"
+    },
+    "TrigInverse025": {
+      "expected": "sinus de, parenthèse gauche, négatif, tangente inverse de négatif 1, parenthèse droite"
+    },
+    "TrigInverse026": {
+      "expected": "sécante inverse de sécante x"
+    },
+    "ArcTrig001": {
+      "expected": "arc sinus x"
+    },
+    "ArcTrig002": {
+      "expected": "arc cosinus x"
+    },
+    "ArcTrig003": {
+      "expected": "arc tangente x"
+    },
+    "ArcTrig004": {
+      "expected": "arc cotangente x"
+    },
+    "ArcTrig005": {
+      "expected": "arc sécante x"
+    },
+    "ArcTrig006": {
+      "expected": "arc cosécante x"
+    },
+    "ArcTrig007": {
+      "expected": "arc sinus de, fraction avec numérateur la racine carrée de 2, et dénominateur 2"
+    },
+    "ArcTrig008": {
+      "expected": "arc cosinus un-demi"
+    },
+    "ArcTrig009": {
+      "expected": "arc tangente 17"
+    },
+    "ArcTrig010": {
+      "expected": "arc cotangente 32"
+    },
+    "ArcTrig011": {
+      "expected": "arc sécante 100"
+    },
+    "ArcTrig012": {
+      "expected": "arc cosécante 85"
+    },
+    "ArcTrig013": {
+      "expected": "arc sinus négatif x"
+    },
+    "ArcTrig014": {
+      "expected": "arc cosinus négatif x"
+    },
+    "ArcTrig015": {
+      "expected": "arc tangente de, parenthèse gauche, négatif x plus 12, parenthèse droite"
+    },
+    "ArcTrig016": {
+      "expected": "arc cotangente de, parenthèse gauche, négatif x moins 1, parenthèse droite"
+    },
+    "ArcTrig017": {
+      "expected": "arc sinus, sinus 0"
+    },
+    "ArcTrig018": {
+      "expected": "arc cosécante, cosécante x"
+    },
+    "ArcTrig019": {
+      "expected": "cosinus de, parenthèse gauche, arc cosinus de, parenthèse gauche, négatif, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "ArcTrig020": {
+      "expected": "cosinus de, parenthèse gauche, négatif, arc cosinus de, parenthèse gauche, fraction avec numérateur la racine carrée de 2, et dénominateur 2, parenthèse droite, parenthèse droite"
+    },
+    "ArcTrig021": {
+      "expected": "arc sinus de, parenthèse gauche, cosinus de, pi sur 4, parenthèse droite"
+    },
+    "ArcTrig022": {
+      "expected": "sinus, arc cosinus un-demi"
+    },
+    "ArcTrig023": {
+      "expected": "sinus, arc tangente 1"
+    },
+    "ArcTrig024": {
+      "expected": "sinus de, parenthèse gauche, négatif, arc tangente 1, parenthèse droite"
+    },
+    "ArcTrig025": {
+      "expected": "sinus de, parenthèse gauche, négatif, arc tangente négatif 1, parenthèse droite"
+    },
+    "ArcTrig026": {
+      "expected": "arc sécante, sécante x"
+    },
+    "AllTrig01": {
+      "expected": "arc sinus x"
+    },
+    "AllTrig02": {
+      "expected": "arc cosinus x"
+    },
+    "AllTrig03": {
+      "expected": "arc tangente x"
+    },
+    "_comment7_": " Table 3: Hyperbolic Trigonometric Functions",
+    "HypTrig001": {
+      "expected": "sinus hyperbolique de x"
+    },
+    "HypTrig002": {
+      "expected": "cosinus hyperbolique de x"
+    },
+    "HypTrig003": {
+      "expected": "tangente hyperbolique de x"
+    },
+    "HypTrig004": {
+      "expected": "cotangente hyperbolique de x"
+    },
+    "HypTrig005": {
+      "expected": "sécante hyperbolique de x"
+    },
+    "HypTrig006": {
+      "expected": "cosécante hyperbolique de x"
+    },
+    "HypTrig007": {
+      "expected": "sinus hyperbolique inverse de x"
+    },
+    "HypTrig008": {
+      "expected": "cosinus hyperbolique inverse de x"
+    },
+    "HypTrig009": {
+      "expected": "tangente hyperbolique inverse de x"
+    },
+    "HypTrig010": {
+      "expected": "cotangente hyperbolique inverse de x"
+    },
+    "HypTrig011": {
+      "expected": "sécante hyperbolique inverse de x"
+    },
+    "HypTrig012": {
+      "expected": "cosécante hyperbolique inverse de x"
+    },
+    "HypTrig013": {
+      "expected": "sinus hyperbolique de, sinus hyperbolique inverse de x"
+    },
+    "HypTrig014": {
+      "expected": "cosinus hyperbolique de, cosinus hyperbolique inverse de x"
+    },
+    "HypTrig015": {
+      "expected": "tangente hyperbolique de, tangente hyperbolique inverse de x"
+    },
+    "HypTrig016": {
+      "expected": "cotangente hyperbolique de, cotangente hyperbolique inverse de x"
+    },
+    "HypTrig017": {
+      "expected": "sinus hyperbolique inverse de, sinus hyperbolique de x"
+    },
+    "HypTrig018": {
+      "expected": "cosinus hyperbolique inverse de, cosinus hyperbolique de x"
+    },
+    "HypTrig019": {
+      "expected": "tangente hyperbolique inverse de, tangente hyperbolique de x"
+    },
+    "HypTrig020": {
+      "expected": "cotangente hyperbolique inverse de, cotangente hyperbolique de x"
+    },
+    "_comment8_": " Reciprocal",
+    "HypTrigReciprocal001": {
+      "expected": "sinus hyperbolique de x"
+    },
+    "HypTrigReciprocal002": {
+      "expected": "cosinus hyperbolique de x"
+    },
+    "HypTrigReciprocal003": {
+      "expected": "tangente hyperbolique de x"
+    },
+    "HypTrigReciprocal004": {
+      "expected": "cotangente hyperbolique de x"
+    },
+    "HypTrigReciprocal005": {
+      "expected": "sécante hyperbolique de x"
+    },
+    "HypTrigReciprocal006": {
+      "expected": "cosécante hyperbolique de x"
+    },
+    "HypTrigReciprocal007": {
+      "expected": "la reciproque de sinus hyperbolique x"
+    },
+    "HypTrigReciprocal008": {
+      "expected": "la reciproque de cosinus hyperbolique x"
+    },
+    "HypTrigReciprocal009": {
+      "expected": "la reciproque de tangente hyperbolique x"
+    },
+    "HypTrigReciprocal010": {
+      "expected": "la reciproque de cotangente hyperbolique x"
+    },
+    "HypTrigReciprocal011": {
+      "expected": "la reciproque de sécante hyperbolique x"
+    },
+    "HypTrigReciprocal012": {
+      "expected": "la reciproque de cosécante hyperbolique x"
+    },
+    "HypTrigReciprocal013": {
+      "expected": "sinus hyperbolique de, la reciproque de sinus hyperbolique x"
+    },
+    "HypTrigReciprocal014": {
+      "expected": "cosinus hyperbolique de, la reciproque de cosinus hyperbolique x"
+    },
+    "HypTrigReciprocal015": {
+      "expected": "tangente hyperbolique de, la reciproque de tangente hyperbolique x"
+    },
+    "HypTrigReciprocal016": {
+      "expected": "cotangente hyperbolique de, la reciproque de cotangente hyperbolique x"
+    },
+    "HypTrigReciprocal017": {
+      "expected": "la reciproque de sinus hyperbolique, sinus hyperbolique de x"
+    },
+    "HypTrigReciprocal018": {
+      "expected": "la reciproque de cosinus hyperbolique, cosinus hyperbolique de x"
+    },
+    "HypTrigReciprocal019": {
+      "expected": "la reciproque de tangente hyperbolique, tangente hyperbolique de x"
+    },
+    "HypTrigReciprocal020": {
+      "expected": "la reciproque de cotangente hyperbolique, cotangente hyperbolique de x"
+    }
+  }
+}

@@ -1,0 +1,581 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanMatricesAndCombinatorics",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_matrices_vectors_and_combinatorics.json",
+  "information": "German Clearspeak Matrices, Vectors, and Combinatorics rule tests.",
+  "active": "ClearspeakGerman",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " ClearSpeak Rules and Preferences Examples: Matrices, Vectors, and",
+    "_comment2_": " Combinatorics",
+    "_comment3_": " Matrices, Vectors, and Combinatorics",
+    "Matrix001": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5"
+    },
+    "Matrix002": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5"
+    },
+    "Matrix003": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: 3, 1, 4 Zeile 2: 0, 2, 6"
+    },
+    "Matrix004": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: 3, 1, 4 Zeile 2: 0, 2, 6"
+    },
+    "Matrix005": {
+      "expected": "die 3 mal 1 Spaltenmatrize. 1, 2, 3"
+    },
+    "Matrix006": {
+      "expected": "die 3 mal 1 Spaltenmatrize. 1, 2, 3"
+    },
+    "Matrix007": {
+      "expected": "die 1 mal 2 Zeilenmatrize. 3, 5"
+    },
+    "Matrix008": {
+      "expected": "die 1 mal 2 Zeilenmatrize. 3, 5"
+    },
+    "Matrix008a": {
+      "expected": "die 1 mal 1 Matrize mit Element 3"
+    },
+    "Matrix008b": {
+      "expected": "die 1 mal 1 Matrize mit Element 3"
+    },
+    "Matrix009": {
+      "expected": "die 2 mal 1 Spaltenmatrize. Zeile 1: x plus 1 Zeile 2: x minus 1"
+    },
+    "Matrix010": {
+      "expected": "die 4 mal 1 Spaltenmatrize. Zeile 1: 3 Zeile 2: 6 Zeile 3: 1 Zeile 4: 2"
+    },
+    "Matrix011": {
+      "expected": "die 1 mal 2 Zeilenmatrize. Spalte 1: x plus 1 Spalte 2: 2 x"
+    },
+    "Matrix012": {
+      "expected": "die 1 mal 4 Zeilenmatrize. Spalte 1: 3 Spalte 2: 6 Spalte 3: 1 Spalte 4: 2"
+    },
+    "Matrix013": {
+      "expected": "die 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7"
+    },
+    "Matrix014": {
+      "expected": "die 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0"
+    },
+    "Matrix015": {
+      "expected": "die 2 mal 5 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 5; Spalte 5, 3. Zeile 2: Spalte 1, 3; Spalte 2, 4; Spalte 3, 2; Spalte 4, 7; Spalte 5, 0"
+    },
+    "Matrix016": {
+      "expected": "die 4 mal 2 Matrize. Zeile 1: Spalte 1, 1; Spalte 2, 3. Zeile 2: Spalte 1, 4; Spalte 2, 2. Zeile 3: Spalte 1, 2; Spalte 2, 1. Zeile 4: Spalte 1, 0; Spalte 2, 5"
+    },
+    "Matrix017": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x"
+    },
+    "Matrix018": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: Spalte 1, 3; Spalte 2, 1 minus x; Spalte 3, 4. Zeile 2: Spalte 1, 0; Spalte 2, 2; Spalte 3, 6"
+    },
+    "Matrix019": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5"
+    },
+    "Matrix019b": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel"
+    },
+    "Matrix020": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel"
+    },
+    "Matrix021": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: b Index 1 1, b Index 1 2 Zeile 2: b Index 2 1, b Index 2 2"
+    },
+    "Matrix022": {
+      "expected": "3   die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5.   die 2 mal 3 Matrize. Zeile 1: 3, 1, 4 Zeile 2: 0, 2, 6"
+    },
+    "Matrix023": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel.   die 2 mal 3 Matrize. Zeile 1: Spalte 1, 3; Spalte 2, 1 minus x; Spalte 3, 4. Zeile 2: Spalte 1, 0; Spalte 2, 2; Spalte 3, 6"
+    },
+    "Matrix024": {
+      "expected": "die 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0.   die 4 mal 2 Matrize. Zeile 1: Spalte 1, 1; Spalte 2, 3. Zeile 2: Spalte 1, 4; Spalte 2, 2. Zeile 3: Spalte 1, 2; Spalte 2, 1. Zeile 4: Spalte 1, 0; Spalte 2, 5"
+    },
+    "Matrix025": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5"
+    },
+    "Matrix026": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5"
+    },
+    "Matrix027": {
+      "expected": "die Determinante der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7"
+    },
+    "Matrix028": {
+      "expected": "die Determinante von der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7"
+    },
+    "Matrix029": {
+      "expected": "die Determinante der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0"
+    },
+    "Matrix030": {
+      "expected": "die Determinante von der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0"
+    },
+    "Matrix031": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x"
+    },
+    "Matrix032": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x"
+    },
+    "Matrix033": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5"
+    },
+    "Matrix034": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5"
+    },
+    "Matrix035": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel"
+    },
+    "Matrix036": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel"
+    },
+    "Matrix037": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel"
+    },
+    "Matrix038": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel"
+    },
+    "Matrix039": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5"
+    },
+    "Matrix040": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5"
+    },
+    "Matrix041": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: Spalte 1, 3; Spalte 2, 1; Spalte 3, 4. Zeile 2: Spalte 1, 0; Spalte 2, 2; Spalte 3, 6"
+    },
+    "Matrix042": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: Spalte 1, 3; Spalte 2, 1; Spalte 3, 4. Zeile 2: Spalte 1, 0; Spalte 2, 2; Spalte 3, 6"
+    },
+    "Matrix043": {
+      "expected": "die 3 mal 1 Spaltenmatrize. Zeile 1: 1 Zeile 2: 2 Zeile 3: 3"
+    },
+    "Matrix044": {
+      "expected": "die 3 mal 1 Spaltenmatrize. Zeile 1: 1 Zeile 2: 2 Zeile 3: 3"
+    },
+    "Matrix045": {
+      "expected": "die 1 mal 2 Zeilenmatrize. Spalte 1: 3 Spalte 2: 5"
+    },
+    "Matrix046": {
+      "expected": "die 1 mal 2 Zeilenmatrize. Spalte 1: 3 Spalte 2: 5"
+    },
+    "Matrix047": {
+      "expected": "die 1 mal 4 Zeilenmatrize. Spalte 1: 1 Spalte 2: 2 Spalte 3: 3 Spalte 4: 4"
+    },
+    "Matrix048": {
+      "expected": "die 1 mal 4 Zeilenmatrize. Spalte 1: 1 Spalte 2: 2 Spalte 3: 3 Spalte 4: 4"
+    },
+    "Matrix049": {
+      "expected": "die 4 mal 1 Spaltenmatrize. Zeile 1: 1 Zeile 2: 2 Zeile 3: 3 Zeile 4: 4"
+    },
+    "Matrix050": {
+      "expected": "die 4 mal 1 Spaltenmatrize. Zeile 1: 1 Zeile 2: 2 Zeile 3: 3 Zeile 4: 4"
+    },
+    "Matrix051": {
+      "expected": "die 2 mal 1 Spaltenmatrize. Zeile 1: x plus 1 Zeile 2: x minus 1"
+    },
+    "Matrix052": {
+      "expected": "die 4 mal 1 Spaltenmatrize. Zeile 1: 3 Zeile 2: 6 Zeile 3: 1 Zeile 4: 2"
+    },
+    "Matrix053": {
+      "expected": "die 1 mal 2 Zeilenmatrize. Spalte 1: x plus 1 Spalte 2: 2 x"
+    },
+    "Matrix054": {
+      "expected": "die 1 mal 4 Zeilenmatrize. Spalte 1: 3 Spalte 2: 6 Spalte 3: 1 Spalte 4: 2"
+    },
+    "Matrix055": {
+      "expected": "die 3 mal 3 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 4; Spalte 3, 1. Zeile 2: Spalte 1, 3; Spalte 2, 5; Spalte 3, 2. Zeile 3: Spalte 1, 1; Spalte 2, 4; Spalte 3, 7"
+    },
+    "Matrix056": {
+      "expected": "die 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0"
+    },
+    "Matrix057": {
+      "expected": "die 2 mal 5 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 5; Spalte 5, 3. Zeile 2: Spalte 1, 3; Spalte 2, 4; Spalte 3, 2; Spalte 4, 7; Spalte 5, 0"
+    },
+    "Matrix057a": {
+      "expected": "die 4 mal 2 Matrize. Zeile 1: Spalte 1, 1; Spalte 2, 3. Zeile 2: Spalte 1, 4; Spalte 2, 2. Zeile 3: Spalte 1, 2; Spalte 2, 1. Zeile 4: Spalte 1, 0; Spalte 2, 5"
+    },
+    "Matrix058": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x"
+    },
+    "Matrix059": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: Spalte 1, 3; Spalte 2, 1 minus x; Spalte 3, 4. Zeile 2: Spalte 1, 0; Spalte 2, 2; Spalte 3, 6"
+    },
+    "Matrix060": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2 x; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5"
+    },
+    "Matrix061": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2 x; Spalte 2, y. Zeile 2: Spalte 1, ein halb; Spalte 2, zwei drittel"
+    },
+    "Matrix062": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, ein halb; Spalte 2, zwei drittel. Zeile 2: Spalte 1, drei viertel; Spalte 2, ein fünftel"
+    },
+    "Matrix063": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, b Index 1 1; Spalte 2, b Index 1 2. Zeile 2: Spalte 1, b Index 2 1; Spalte 2, b Index 2 2"
+    },
+    "Matrix064": {
+      "expected": "3   die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5.   die 2 mal 3 Matrize. Zeile 1: Spalte 1, 3; Spalte 2, 1; Spalte 3, 4. Zeile 2: Spalte 1, 0; Spalte 2, 2; Spalte 3, 6"
+    },
+    "Matrix065": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, ein halb; Spalte 2, zwei drittel. Zeile 2: Spalte 1, drei viertel; Spalte 2, ein fünftel.   die 2 mal 3 Matrize. Zeile 1: Spalte 1, 3; Spalte 2, 1 minus x; Spalte 3, 4. Zeile 2: Spalte 1, 0; Spalte 2, 2; Spalte 3, 6"
+    },
+    "Matrix066": {
+      "expected": "die 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0.   die 4 mal 2 Matrize. Zeile 1: Spalte 1, 1; Spalte 2, 3. Zeile 2: Spalte 1, 4; Spalte 2, 2. Zeile 3: Spalte 1, 2; Spalte 2, 1. Zeile 4: Spalte 1, 0; Spalte 2, 5"
+    },
+    "Matrix067": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5"
+    },
+    "Matrix068": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5"
+    },
+    "Matrix069": {
+      "expected": "die Determinante der 3 mal 3 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 4; Spalte 3, 1. Zeile 2: Spalte 1, 3; Spalte 2, 5; Spalte 3, 2. Zeile 3: Spalte 1, 1; Spalte 2, 4; Spalte 3, 7"
+    },
+    "Matrix070": {
+      "expected": "die Determinante von der 3 mal 3 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 4; Spalte 3, 1. Zeile 2: Spalte 1, 3; Spalte 2, 5; Spalte 3, 2. Zeile 3: Spalte 1, 1; Spalte 2, 4; Spalte 3, 7"
+    },
+    "Matrix071": {
+      "expected": "die Determinante der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0"
+    },
+    "Matrix072": {
+      "expected": "die Determinante von der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0"
+    },
+    "Matrix073": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x"
+    },
+    "Matrix074": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x"
+    },
+    "Matrix075": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2 x; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5"
+    },
+    "Matrix076": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2 x; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5"
+    },
+    "Matrix077": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2 x; Spalte 2, y. Zeile 2: Spalte 1, ein halb; Spalte 2, zwei drittel"
+    },
+    "Matrix078": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2 x; Spalte 2, y. Zeile 2: Spalte 1, ein halb; Spalte 2, zwei drittel"
+    },
+    "Matrix079": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, ein halb; Spalte 2, zwei drittel. Zeile 2: Spalte 1, drei viertel; Spalte 2, ein fünftel"
+    },
+    "Matrix080": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, ein halb; Spalte 2, zwei drittel. Zeile 2: Spalte 1, drei viertel; Spalte 2, ein fünftel"
+    },
+    "Matrix081": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5"
+    },
+    "Matrix082": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5"
+    },
+    "Matrix083": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: 3, 1, 4 Zeile 2: 0, 2, 6"
+    },
+    "Matrix084": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: 3, 1, 4 Zeile 2: 0, 2, 6"
+    },
+    "Matrix085": {
+      "expected": "die 3 mal 1 Spaltenmatrize. 1, 2, 3"
+    },
+    "Matrix086": {
+      "expected": "die 3 mal 1 Spaltenmatrize. 1, 2, 3"
+    },
+    "Matrix087": {
+      "expected": "die 1 mal 2 Zeilenmatrize. 3, 5"
+    },
+    "Matrix088": {
+      "expected": "die 1 mal 2 Zeilenmatrize. 3, 5"
+    },
+    "Matrix089": {
+      "expected": "die 2 mal 1 Spaltenmatrize. x plus 1, x minus 1"
+    },
+    "Matrix090": {
+      "expected": "die 4 mal 1 Spaltenmatrize. 3, 6, 1, 2"
+    },
+    "Matrix091": {
+      "expected": "die 1 mal 2 Zeilenmatrize. x plus 1, 2 x"
+    },
+    "Matrix092": {
+      "expected": "die 1 mal 4 Zeilenmatrize. 3, 6, 1, 2"
+    },
+    "Matrix092a": {
+      "expected": "die 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7"
+    },
+    "Matrix093": {
+      "expected": "die 4 mal 4 Matrize. Zeile 1: 0, 3, 4, 3 Zeile 2: 2, 1, 0, 9 Zeile 3: 3, 0, 2, 1 Zeile 4: 6, 2, 9, 0"
+    },
+    "Matrix094": {
+      "expected": "die 2 mal 5 Matrize. Zeile 1: 2, 1, 0, 5, 3 Zeile 2: 3, 4, 2, 7, 0"
+    },
+    "Matrix095": {
+      "expected": "die 4 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 4, 2 Zeile 3: 2, 1 Zeile 4: 0, 5"
+    },
+    "Matrix096": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5 plus x"
+    },
+    "Matrix097": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: 3, 1 minus x, 4 Zeile 2: 0, 2, 6"
+    },
+    "Matrix098": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5"
+    },
+    "Matrix099": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel"
+    },
+    "Matrix100": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel"
+    },
+    "Matrix101": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: b Index 1 1, b Index 1 2 Zeile 2: b Index 2 1, b Index 2 2"
+    },
+    "Matrix102": {
+      "expected": "3   die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5.   die 2 mal 3 Matrize. Zeile 1: 3, 1, 4 Zeile 2: 0, 2, 6"
+    },
+    "Matrix103": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel.   die 2 mal 3 Matrize. Zeile 1: 3, 1 minus x, 4 Zeile 2: 0, 2, 6"
+    },
+    "Matrix104": {
+      "expected": "die 4 mal 4 Matrize. Zeile 1: 0, 3, 4, 3 Zeile 2: 2, 1, 0, 9 Zeile 3: 3, 0, 2, 1 Zeile 4: 6, 2, 9, 0.   die 4 mal 2 Matrize. Zeile 1: 1, 3 Zeile 2: 4, 2 Zeile 3: 2, 1 Zeile 4: 0, 5"
+    },
+    "Matrix105": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5"
+    },
+    "Matrix106": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5"
+    },
+    "Matrix107": {
+      "expected": "die Determinante der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7"
+    },
+    "Matrix108": {
+      "expected": "die Determinante von der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7"
+    },
+    "Matrix109": {
+      "expected": "die Determinante der 4 mal 4 Matrize. Zeile 1: 0, 3, 4, 3 Zeile 2: 2, 1, 0, 9 Zeile 3: 3, 0, 2, 1 Zeile 4: 6, 2, 9, 0"
+    },
+    "Matrix110": {
+      "expected": "die Determinante von der 4 mal 4 Matrize. Zeile 1: 0, 3, 4, 3 Zeile 2: 2, 1, 0, 9 Zeile 3: 3, 0, 2, 1 Zeile 4: 6, 2, 9, 0"
+    },
+    "Matrix111": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5 plus x"
+    },
+    "Matrix112": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5 plus x"
+    },
+    "Matrix113": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5"
+    },
+    "Matrix114": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5"
+    },
+    "Matrix115": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel"
+    },
+    "Matrix116": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel"
+    },
+    "Matrix117": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel"
+    },
+    "Matrix118": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel"
+    },
+    "Matrix119": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5. Ende Matrize"
+    },
+    "Matrix120": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5. Ende Matrize"
+    },
+    "Matrix121": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: 3, 1, 4 Zeile 2: 0, 2, 6. Ende Matrize"
+    },
+    "Matrix122": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: 3, 1, 4 Zeile 2: 0, 2, 6. Ende Matrize"
+    },
+    "Matrix123": {
+      "expected": "die 3 mal 1 Spaltenmatrize. 1, 2, 3. Ende Matrize"
+    },
+    "Matrix124": {
+      "expected": "die 3 mal 1 Spaltenmatrize. 1, 2, 3. Ende Matrize"
+    },
+    "Matrix125": {
+      "expected": "die 1 mal 2 Zeilenmatrize. 3, 5. Ende Matrize"
+    },
+    "Matrix126": {
+      "expected": "die 1 mal 2 Zeilenmatrize. 3, 5. Ende Matrize"
+    },
+    "Matrix127": {
+      "expected": "die 2 mal 1 Spaltenmatrize. Zeile 1: x plus 1 Zeile 2: x minus 1. Ende Matrize"
+    },
+    "Matrix128": {
+      "expected": "die 4 mal 1 Spaltenmatrize. Zeile 1: 3 Zeile 2: 6 Zeile 3: 1 Zeile 4: 2. Ende Matrize"
+    },
+    "Matrix129": {
+      "expected": "die 1 mal 2 Zeilenmatrize. Spalte 1: x plus 1 Spalte 2: 2 x. Ende Matrize"
+    },
+    "Matrix130": {
+      "expected": "die 1 mal 4 Zeilenmatrize. Spalte 1: 3 Spalte 2: 6 Spalte 3: 1 Spalte 4: 2. Ende Matrize"
+    },
+    "Matrix131": {
+      "expected": "die 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7. Ende Matrize"
+    },
+    "Matrix132": {
+      "expected": "die 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0. Ende Matrize"
+    },
+    "Matrix133": {
+      "expected": "die 2 mal 5 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 5; Spalte 5, 3. Zeile 2: Spalte 1, 3; Spalte 2, 4; Spalte 3, 2; Spalte 4, 7; Spalte 5, 0. Ende Matrize"
+    },
+    "Matrix134": {
+      "expected": "die 4 mal 2 Matrize. Zeile 1: Spalte 1, 1; Spalte 2, 3. Zeile 2: Spalte 1, 4; Spalte 2, 2. Zeile 3: Spalte 1, 2; Spalte 2, 1. Zeile 4: Spalte 1, 0; Spalte 2, 5. Ende Matrize"
+    },
+    "Matrix135": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x. Ende Matrize"
+    },
+    "Matrix136": {
+      "expected": "die 2 mal 3 Matrize. Zeile 1: Spalte 1, 3; Spalte 2, 1 minus x; Spalte 3, 4. Zeile 2: Spalte 1, 0; Spalte 2, 2; Spalte 3, 6. Ende Matrize"
+    },
+    "Matrix137": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5. Ende Matrize"
+    },
+    "Matrix138": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel. Ende Matrize"
+    },
+    "Matrix139": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel. Ende Matrize"
+    },
+    "_comment4_": " TODO: (Simons) Rewrite certain indices from implicit multiplication to",
+    "_comment5_": " punctuation.",
+    "Matrix140": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: b Index 1 1, b Index 1 2 Zeile 2: b Index 2 1, b Index 2 2. Ende Matrize"
+    },
+    "Matrix141": {
+      "expected": "3   die 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5. Ende Matrize   die 2 mal 3 Matrize. Zeile 1: 3, 1, 4 Zeile 2: 0, 2, 6. Ende Matrize"
+    },
+    "Matrix142": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel. Ende Matrize   die 2 mal 3 Matrize. Zeile 1: Spalte 1, 3; Spalte 2, 1 minus x; Spalte 3, 4. Zeile 2: Spalte 1, 0; Spalte 2, 2; Spalte 3, 6. Ende Matrize"
+    },
+    "Matrix143": {
+      "expected": "die 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0. Ende Matrize   die 4 mal 2 Matrize. Zeile 1: Spalte 1, 1; Spalte 2, 3. Zeile 2: Spalte 1, 4; Spalte 2, 2. Zeile 3: Spalte 1, 2; Spalte 2, 1. Zeile 4: Spalte 1, 0; Spalte 2, 5. Ende Matrize"
+    },
+    "Matrix144": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5. Ende Determinante"
+    },
+    "Matrix145": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: 2, 1 Zeile 2: 7, 5. Ende Matrize"
+    },
+    "Matrix146": {
+      "expected": "die Determinante der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7. Ende Determinante"
+    },
+    "Matrix147": {
+      "expected": "die Determinante von der 3 mal 3 Matrize. Zeile 1: 2, 4, 1 Zeile 2: 3, 5, 2 Zeile 3: 1, 4, 7. Ende Matrize"
+    },
+    "Matrix148": {
+      "expected": "die Determinante der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0. Ende Determinante"
+    },
+    "Matrix149": {
+      "expected": "die Determinante von der 4 mal 4 Matrize. Zeile 1: Spalte 1, 0; Spalte 2, 3; Spalte 3, 4; Spalte 4, 3. Zeile 2: Spalte 1, 2; Spalte 2, 1; Spalte 3, 0; Spalte 4, 9. Zeile 3: Spalte 1, 3; Spalte 2, 0; Spalte 3, 2; Spalte 4, 1. Zeile 4: Spalte 1, 6; Spalte 2, 2; Spalte 3, 9; Spalte 4, 0. Ende Matrize"
+    },
+    "Matrix150": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x. Ende Determinante"
+    },
+    "Matrix151": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: Spalte 1, 2; Spalte 2, 1. Zeile 2: Spalte 1, 7; Spalte 2, 5 plus x. Ende Matrize"
+    },
+    "Matrix152": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5. Ende Determinante"
+    },
+    "Matrix153": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, 1 Zeile 2: 7, 5. Ende Matrize"
+    },
+    "Matrix154": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel. Ende Determinante"
+    },
+    "Matrix155": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: 2 x, y Zeile 2: ein halb, zwei drittel. Ende Matrize"
+    },
+    "Matrix156": {
+      "expected": "die Determinante der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel. Ende Determinante"
+    },
+    "Matrix157": {
+      "expected": "die Determinante von der 2 mal 2 Matrize. Zeile 1: ein halb, zwei drittel Zeile 2: drei viertel, ein fünftel. Ende Matrize"
+    },
+    "Matrix158": {
+      "expected": "der 3 mal 1 Spaltenvektor. 1, 2, 3"
+    },
+    "Matrix159": {
+      "expected": "der 3 mal 1 Spaltenvektor. 1, 2, 3"
+    },
+    "Matrix160": {
+      "expected": "der 1 mal 2 Zeilenvektor. 3, 5"
+    },
+    "Matrix161": {
+      "expected": "der 1 mal 2 Zeilenvektor. 3, 5"
+    },
+    "Matrix162": {
+      "expected": "der 2 mal 1 Spaltenvektor. Zeile 1: x plus 1 Zeile 2: x minus 1"
+    },
+    "Matrix163": {
+      "expected": "der 4 mal 1 Spaltenvektor. Zeile 1: 3 Zeile 2: 6 Zeile 3: 1 Zeile 4: 2"
+    },
+    "Matrix164": {
+      "expected": "der 1 mal 2 Zeilenvektor. Spalte 1: x plus 1 Spalte 2: 2 x"
+    },
+    "Matrix165": {
+      "expected": "der 1 mal 2 Zeilenvektor. 3, 2.   die 2 mal 2 Matrize. Zeile 1: 0, 5 Zeile 2: 9, 4"
+    },
+    "Matrix166": {
+      "expected": "der 1 mal 3 Zeilenvektor. 1, 2, 7.   die 3 mal 3 Matrize. Zeile 1: 3, 5, 4 Zeile 2: 8, 0, 6 Zeile 3: 1, 4, 2"
+    },
+    "Matrix167": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 0, 5 Zeile 2: 9, 4.   der 2 mal 1 Spaltenvektor. 3, 2"
+    },
+    "Matrix168": {
+      "expected": "die 3 mal 3 Matrize. Zeile 1: 3, 5, 4 Zeile 2: 8, 0, 6 Zeile 3: 1, 4, 2.   der 3 mal 1 Spaltenvektor. 1, 2, 7"
+    },
+    "Matrix169": {
+      "expected": "der 3 mal 1 Spaltenvektor. 1, 2, 3. Ende Vektor"
+    },
+    "Matrix170": {
+      "expected": "der 3 mal 1 Spaltenvektor. 1, 2, 3. Ende Vektor"
+    },
+    "Matrix171": {
+      "expected": "der 1 mal 2 Zeilenvektor. 3, 5. Ende Vektor"
+    },
+    "Matrix172": {
+      "expected": "der 1 mal 2 Zeilenvektor. 3, 5. Ende Vektor"
+    },
+    "Matrix173": {
+      "expected": "der 2 mal 1 Spaltenvektor. Zeile 1: x plus 1 Zeile 2: x minus 1. Ende Vektor"
+    },
+    "Matrix174": {
+      "expected": "der 4 mal 1 Spaltenvektor. Zeile 1: 3 Zeile 2: 6 Zeile 3: 1 Zeile 4: 2. Ende Vektor"
+    },
+    "Matrix175": {
+      "expected": "der 1 mal 2 Zeilenvektor. Spalte 1: x plus 1 Spalte 2: 2 x. Ende Vektor"
+    },
+    "Matrix176": {
+      "expected": "der 1 mal 2 Zeilenvektor. 3, 2. Ende Vektor   die 2 mal 2 Matrize. Zeile 1: 0, 5 Zeile 2: 9, 4. Ende Matrize"
+    },
+    "Matrix177": {
+      "expected": "der 1 mal 3 Zeilenvektor. 1, 2, 7. Ende Vektor   die 3 mal 3 Matrize. Zeile 1: 3, 5, 4 Zeile 2: 8, 0, 6 Zeile 3: 1, 4, 2. Ende Matrize"
+    },
+    "Matrix178": {
+      "expected": "die 2 mal 2 Matrize. Zeile 1: 0, 5 Zeile 2: 9, 4. Ende Matrize   der 2 mal 1 Spaltenvektor. 3, 2. Ende Vektor"
+    },
+    "Matrix179": {
+      "expected": "die 3 mal 3 Matrize. Zeile 1: 3, 5, 4 Zeile 2: 8, 0, 6 Zeile 3: 1, 4, 2. Ende Matrize   der 3 mal 1 Spaltenvektor. 1, 2, 7. Ende Vektor"
+    },
+    "Matrix180": {
+      "expected": "n über r"
+    },
+    "Matrix181": {
+      "expected": "10 über 7"
+    },
+    "Matrix182": {
+      "expected": "15 über 0"
+    },
+    "Matrix183": {
+      "expected": "8 über 3"
+    }
+  }
+}

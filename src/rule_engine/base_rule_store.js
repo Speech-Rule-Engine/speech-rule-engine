@@ -92,9 +92,19 @@ sre.BaseRuleStore = function() {
   this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 
   /**
+   * Default domain.
+   * @type {?string}
+   */
+  this.domain = null;
+
+  /**
    * @type {boolean}
    */
   this.initialized = false;
+
+  this.parseMethods = {
+    'Rule': goog.bind(this.defineRule, this)
+  };
 
 };
 
@@ -235,6 +245,37 @@ sre.BaseRuleStore.prototype.removeDuplicates = function(rule) {
 };
 
 
+// TODO: Move that into the rule parsing and give it a strength parameter.
+//       Separate into query and initial pre-condition to keep trie slender.
+/**
+ * Compare two rules by relative strength of the query constraint.
+ * @param {sre.SpeechRule} r1 Rule 1.
+ * @param {sre.SpeechRule} r2 Rule 2.
+ * @return {number} -1, 0, 1 depending on the comparison.
+ * @private
+ */
+sre.BaseRuleStore.strongQuery_ = function(r1, r2) {
+  var query1 = r1.precondition.query;
+  var query2 = r2.precondition.query;
+  var strong1 = query1.match(/^self::\*\[@[\w-]+\]$/);
+  var strong2 = query2.match(/^self::\*\[@[\w-]+\]$/);
+  if (strong1 && strong2) {
+    return 0;
+  }
+  if (strong1) {
+    var stronger2 = query2.match(/^self::[\w-]+\[@[\w-]+\]$/);
+    return stronger2 ? 1 : -1;
+  }
+  if (strong2) {
+    var stronger1 = query1.match(/^self::[\w-]+\[@[\w-]+\]$/);
+    return stronger1 ? -1 : 1;
+  }
+  stronger1 = query1.match(/^self::[\w-]+\[@[\w-]+\]$/);
+  stronger2 = query2.match(/^self::[\w-]+\[@[\w-]+\]$/);
+  return (stronger1 && stronger2) ? 0 : (stronger1 ? -1 : (stronger2 ? 1 : 0));
+};
+
+
 /**
  * Picks the result of the most constraint rule by prefering those:
  * 1) that best match the dynamic constraints.
@@ -251,6 +292,7 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
         return comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
             // When same number of dynamic constraint attributes matches for
             // both rules, compare length of static constraints.
+            sre.BaseRuleStore.strongQuery_(r1, r2) ||
             (r2.precondition.constraints.length -
              r1.precondition.constraints.length);}
   );
@@ -330,5 +372,37 @@ sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
  * @return {!sre.DynamicCstr} The parsed constraint including locale.
  */
 sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
-  return this.parser.parse(this.locale + '.' + this.modality + '.' + cstr);
+  return this.parser.parse(
+      this.locale + '.' + this.modality +
+      (this.domain ? '.' + this.domain : '') +
+      '.' + cstr);
+};
+
+
+/**
+ * Parses a rule set definition.
+ * @param {Object.<string|Array<*>>} ruleSet The
+ *     definition object.
+ */
+sre.BaseRuleStore.prototype.parse = function(ruleSet) {
+  this.modality = ruleSet.modality || this.modality;
+  this.locale = ruleSet.locale || this.locale;
+  this.domain = ruleSet.domain || this.domain;
+  this.context.parse(ruleSet.functions || []);
+  this.parseRules(ruleSet.rules || []);
+};
+
+
+/**
+ * Parse a list of rules, each given as a list of strings.
+ * @param {Array.<Array.<string>>} rules The list of rules.
+ */
+sre.BaseRuleStore.prototype.parseRules = function(rules) {
+  for (var i = 0, rule; rule = rules[i]; i++) {
+    let type = rule[0];
+    let method = this.parseMethods[type];
+    if (type && method) {
+      method.apply(this, rule.slice(1));
+    }
+  }
 };

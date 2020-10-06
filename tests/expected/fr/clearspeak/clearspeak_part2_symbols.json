@@ -1,0 +1,223 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchPart2Symbols",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part2_symbols.json",
+  "information": "French Clearspeak Part2Symbols rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Part 2: Symbols",
+    "_comment2_": " Multiplication Symbol",
+    "X001": {
+      "expected": "6 multiplié par 8"
+    },
+    "X002": {
+      "expected": "m multiplié par n"
+    },
+    "X003": {
+      "expected": "3 multiplié par 3"
+    },
+    "X004": {
+      "expected": "6 multiplié par 8"
+    },
+    "X005": {
+      "expected": "m multiplié par n"
+    },
+    "X006": {
+      "expected": "3 multiplié par 3"
+    },
+    "X007": {
+      "expected": "u multiplié par v"
+    },
+    "_comment3_": " Multiplication Symbol",
+    "Dot001": {
+      "expected": "6 opérateur point 8"
+    },
+    "Dot002": {
+      "expected": "m opérateur point n"
+    },
+    "Dot003": {
+      "expected": "3 opérateur point 3"
+    },
+    "Dot004": {
+      "expected": "6 opérateur point 8"
+    },
+    "Dot005": {
+      "expected": "m opérateur point n"
+    },
+    "Dot006": {
+      "expected": "3 opérateur point 3"
+    },
+    "_comment4_": " Triangle Symbol",
+    "Triangle001": {
+      "expected": "triangle A B C"
+    },
+    "Triangle002": {
+      "expected": "triangle D E F"
+    },
+    "Triangle003": {
+      "expected": "Delta x"
+    },
+    "Triangle004": {
+      "expected": "f de, parenthèse gauche, x plus Delta x, parenthèse droite"
+    },
+    "_comment5_": " Ellipses",
+    "Ellipses001": {
+      "expected": "1 virgule 2 virgule 3 virgule points de suspension"
+    },
+    "Ellipses002": {
+      "expected": "1 virgule 2 virgule 3 virgule points de suspension virgule 20"
+    },
+    "Ellipses003": {
+      "expected": "points de suspension virgule, négatif 2, virgule, négatif 1, virgule 0 virgule 1 virgule 2 virgule points de suspension"
+    },
+    "Ellipses004": {
+      "expected": "1 virgule 2 virgule 3 virgule et ainsi de suite"
+    },
+    "Ellipses005": {
+      "expected": "1 virgule 2 virgule 3 virgule et ainsi de suite jusqu'à virgule 20"
+    },
+    "Ellipses006": {
+      "expected": "points de suspension virgule, négatif 2, virgule, négatif 1, virgule 0 virgule 1 virgule 2 virgule points de suspension"
+    },
+    "_comment6_": " Vertical Line",
+    "VertLine001": {
+      "expected": "3 barre verticale 6"
+    },
+    "VertLine002": {
+      "expected": "ensemble des x tel que x supérieur à 0"
+    },
+    "VertLine003": {
+      "expected": "ensemble des x tel que, la valeur absolue de x, supérieur à 2"
+    },
+    "VertLine004": {
+      "expected": "f de x, évalué à x égale 5"
+    },
+    "VertLine005": {
+      "expected": "x au carré plus 2 x, évalué à x égale 2"
+    },
+    "VertLine006": {
+      "expected": "x au carré plus x, évalué à 1, moins la même expression évaluée à 0"
+    },
+    "VertLine007": {
+      "expected": "ensemble des x tel que x supérieur à 0"
+    },
+    "VertLine008": {
+      "expected": "3 diviseur de 6"
+    },
+    "VertLine009": {
+      "expected": "P de, parenthèse gauche, A sachant B, parenthèse droite"
+    },
+    "_comment7_": " Set Membership Symbols",
+    "MembSym001": {
+      "expected": "If x appartient à les nombres entiers then 2 x, is an even number point"
+    },
+    "MembSym002": {
+      "expected": "ensemble des x est un les nombres entiers tel que x supérieur à 5"
+    },
+    "MembSym003": {
+      "expected": "3 plus 2 i, n'appartient pas à les nombres réels"
+    },
+    "MembSym004": {
+      "expected": "If x appartient à les nombres entiers then 2 x, is an even number point"
+    },
+    "MembSym005": {
+      "expected": "ensemble des x appartient à les nombres entiers tel que x supérieur à 5"
+    },
+    "MembSym006": {
+      "expected": "3 plus 2 i, n'appartient pas à les nombres réels"
+    },
+    "MembSym007": {
+      "expected": "If x appartient à les nombres entiers then 2 x, is an even number point"
+    },
+    "MembSym008": {
+      "expected": "ensemble des x est un élément de les nombres entiers tel que x supérieur à 5"
+    },
+    "MembSym009": {
+      "expected": "3 plus 2 i, n'appartient pas à les nombres réels"
+    },
+    "MembSym010": {
+      "_comment8_": " var mathml = '<math><mrow><mi>x</mi><mo>∈</mo><mi>ℤ</mi></mrow></math>';",
+      "expected": "If x appartient à les nombres entiers then 2 x, is an even number point"
+    },
+    "MembSym011": {
+      "expected": "ensemble des x est dans les nombres entiers tel que x supérieur à 5"
+    },
+    "MembSym012": {
+      "expected": "3 plus 2 i, n'appartient pas à les nombres réels"
+    },
+    "MembSym013": {
+      "expected": "If x appartient à les nombres entiers then 2 x, is an even number point"
+    },
+    "MembSym014": {
+      "expected": "ensemble des x est dans les nombres entiers tel que x supérieur à 5"
+    },
+    "MembSym015": {
+      "expected": "3 plus 2 i, n'appartient pas à les nombres réels"
+    },
+    "_comment9_": " Two preferences set: One for Sets and one for SetMemberSymbol",
+    "SetMemb001": {
+      "expected": "ensemble de x est dans les nombres entiers tel que 2 inférieur à x inférieur à 7"
+    },
+    "SetMemb002": {
+      "expected": "ensemble de x appartient à les nombres entiers tel que x supérieur à 5"
+    },
+    "_comment10_": " Sums, Products, Unions, Intersections, and Integrals",
+    "Sum001": {
+      "expected": "le sommation de n égale 1 à 10 de n"
+    },
+    "Sum002": {
+      "expected": "le sommation de n égale 1 à infini de n"
+    },
+    "Sum003": {
+      "expected": "le sommation sur i appartient à les nombres entiers positif, de i"
+    },
+    "Sum004": {
+      "expected": "le sommation sur S, de i"
+    },
+    "Sum005": {
+      "expected": "le sommation de, a sub i"
+    },
+    "Sum006": {
+      "expected": "le produit de i égale 1 à 10 de i"
+    },
+    "Sum007": {
+      "expected": "le produit sur i appartient à les nombres entiers positif, de, fraction avec numérateur i, et dénominateur i plus 1"
+    },
+    "Sum008": {
+      "expected": "le produit sur les nombres entiers positif, de, fraction avec numérateur i, et dénominateur i plus 1"
+    },
+    "Sum009": {
+      "expected": "le produit de, a sub i"
+    },
+    "Sum010": {
+      "expected": "le intersection de i égale 1 à 10 de, S sub i"
+    },
+    "Sum011": {
+      "expected": "le union de i égale 1 à 10 de, S sub i"
+    },
+    "Sum012": {
+      "expected": "le intersection de, S sub i"
+    },
+    "Sum013": {
+      "expected": "le union de, S sub i"
+    },
+    "Sum014": {
+      "expected": "le intersection sur C, de, S sub i"
+    },
+    "Sum015": {
+      "expected": "le union sur C, de, S sub i"
+    },
+    "Sum016": {
+      "expected": "le intégrale de f de x, d x"
+    },
+    "Sum017": {
+      "expected": "le intégrale de 0 à 1 de f de x, d x"
+    },
+    "Sum018": {
+      "expected": "le intégrale sur les nombres réels, de f de x, d x"
+    }
+  }
+}

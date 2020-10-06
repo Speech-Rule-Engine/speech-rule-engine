@@ -1,0 +1,64 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchSetsEnclosedInSetBrackets",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
+  "information": "French Clearspeak SetsEnclosedInSetBrackets rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Sets Enclosed in Set Brackets",
+    "Set001": {
+      "expected": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+    },
+    "Set002": {
+      "expected": "ensemble des x tel que, la valeur absolue de x, supérieur à 2"
+    },
+    "Set003": {
+      "expected": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+    },
+    "Set004": {
+      "expected": "ensemble des x est un les nombres entier naturel tel que x is an even number"
+    },
+    "Set005": {
+      "expected": "ensemble 1 virgule 2 virgule 3"
+    },
+    "Set006": {
+      "expected": "ensemble 1 virgule 112 virgule 1 virgule 253"
+    },
+    "Set007": {
+      "expected": "ensemble de x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+    },
+    "Set008": {
+      "expected": "ensemble de x tel que, la valeur absolue de x, supérieur à 2"
+    },
+    "Set009": {
+      "expected": "ensemble de x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+    },
+    "Set010": {
+      "expected": "ensemble 1 virgule 2 virgule 3"
+    },
+    "Set011": {
+      "expected": "ensemble 1 virgule 112 virgule 1 virgule 253"
+    },
+    "Set012": {
+      "expected": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+    },
+    "Set013": {
+      "expected": "ensemble des x tel que, la valeur absolue de x, supérieur à 2"
+    },
+    "Set014": {
+      "expected": "ensemble des x est un les nombres entiers tel que 2 inférieur à x inférieur à 7"
+    },
+    "Set015": {
+      "expected": "ensemble des x est un les nombres entier naturel tel que x is an even number"
+    },
+    "Set016": {
+      "expected": "1 virgule 2 virgule 3"
+    },
+    "Set017": {
+      "expected": "1 virgule 112 virgule 1 virgule 253"
+    }
+  }
+}

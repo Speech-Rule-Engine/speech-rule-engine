@@ -1,0 +1,513 @@
+{
+  "name": "MathspeakEmbellishSpanishTest",
+  "factory": "speech",
+  "base": "input/mathspeak/mathspeak_embellish_test.json",
+  "information": "Spanish Mathspeak Embellished Symbols tests.",
+  "domain": "mathspeak",
+  "locale": "es",
+  "active": "EmbellishedSymbolsSpanish",
+  "exclude": [],
+  "tests": {
+    "EmbellOpSubscript_default": {
+      "expected": "a más subíndice 2 línea base b"
+    },
+    "EmbellOpSubscript_brief": {
+      "expected": "a más sub 2 b"
+    },
+    "EmbellOpSubscript_sbrief": {
+      "expected": "a más sub 2 b"
+    },
+    "EmbellOpSuperscript_0_default": {
+      "expected": "a más superíndice 2 línea base b"
+    },
+    "EmbellOpSuperscript_0_brief": {
+      "expected": "a más sup 2 b"
+    },
+    "EmbellOpSuperscript_0_sbrief": {
+      "expected": "a más sup 2 b"
+    },
+    "EmbellOpSuperscript_1_default": {
+      "expected": "a más superíndice 3 línea base b"
+    },
+    "EmbellOpSuperscript_1_brief": {
+      "expected": "a más sup 3 b"
+    },
+    "EmbellOpSuperscript_1_sbrief": {
+      "expected": "a más sup 3 b"
+    },
+    "EmbellOpSuperscript_2_default": {
+      "expected": "a más superíndice n línea base b"
+    },
+    "EmbellOpSuperscript_2_brief": {
+      "expected": "a más sup n b"
+    },
+    "EmbellOpSuperscript_2_sbrief": {
+      "expected": "a más sup n b"
+    },
+    "EmbellOpSuperscript_3_default": {
+      "expected": "a más prima b"
+    },
+    "EmbellOpSuperscript_3_brief": {
+      "expected": "a más prima b"
+    },
+    "EmbellOpSuperscript_3_sbrief": {
+      "expected": "a más prima b"
+    },
+    "EmbellOpSubSuper_0_default": {
+      "expected": "a más subíndice m superíndice 2 línea base b"
+    },
+    "EmbellOpSubSuper_0_brief": {
+      "expected": "a más sub m sup 2 b"
+    },
+    "EmbellOpSubSuper_0_sbrief": {
+      "expected": "a más sub m sup 2 b"
+    },
+    "EmbellOpSubSuper_1_default": {
+      "expected": "a más subíndice m superíndice 3 línea base b"
+    },
+    "EmbellOpSubSuper_1_brief": {
+      "expected": "a más sub m sup 3 b"
+    },
+    "EmbellOpSubSuper_1_sbrief": {
+      "expected": "a más sub m sup 3 b"
+    },
+    "EmbellOpSubSuper_2_default": {
+      "expected": "a más subíndice m superíndice n línea base b"
+    },
+    "EmbellOpSubSuper_2_brief": {
+      "expected": "a más sub m sup n b"
+    },
+    "EmbellOpSubSuper_2_sbrief": {
+      "expected": "a más sub m sup n b"
+    },
+    "EmbellOpSubSuper_3_default": {
+      "expected": "a más prima subíndice m línea base b"
+    },
+    "EmbellOpSubSuper_3_brief": {
+      "expected": "a más prima sub m b"
+    },
+    "EmbellOpSubSuper_3_sbrief": {
+      "expected": "a más prima sub m b"
+    },
+    "EmbellOpTensor_0_default": {
+      "expected": "a más subíndice m superíndice 2 línea base b"
+    },
+    "EmbellOpTensor_0_brief": {
+      "expected": "a más sub m sup 2 b"
+    },
+    "EmbellOpTensor_0_sbrief": {
+      "expected": "a más sub m sup 2 b"
+    },
+    "EmbellOpTensor_1_default": {
+      "expected": "a superíndice 3 línea base más subíndice m superíndice 2 línea base b"
+    },
+    "EmbellOpTensor_1_brief": {
+      "expected": "a sup 3 más sub m sup 2 b"
+    },
+    "EmbellOpTensor_1_sbrief": {
+      "expected": "a sup 3 más sub m sup 2 b"
+    },
+    "EmbellOpTensor_2_default": {
+      "expected": "a subíndice 3 línea base más subíndice m superíndice 2 línea base b"
+    },
+    "EmbellOpTensor_2_brief": {
+      "expected": "a sub 3 más sub m sup 2 b"
+    },
+    "EmbellOpTensor_2_sbrief": {
+      "expected": "a sub 3 más sub m sup 2 b"
+    },
+    "EmbellOpTensor_3_default": {
+      "expected": "a subíndice 3 superíndice n línea base más subíndice m superíndice 2 línea base b"
+    },
+    "EmbellOpTensor_3_brief": {
+      "expected": "a sub 3 sup n más sub m sup 2 b"
+    },
+    "EmbellOpTensor_3_sbrief": {
+      "expected": "a sub 3 sup n más sub m sup 2 b"
+    },
+    "EmbellRelSubscript_default": {
+      "expected": "a igual subíndice 2 línea base b"
+    },
+    "EmbellRelSubscript_brief": {
+      "expected": "a igual sub 2 b"
+    },
+    "EmbellRelSubscript_sbrief": {
+      "expected": "a igual sub 2 b"
+    },
+    "EmbellRelSuperscript_0_default": {
+      "expected": "a igual superíndice 2 línea base b"
+    },
+    "EmbellRelSuperscript_0_brief": {
+      "expected": "a igual sup 2 b"
+    },
+    "EmbellRelSuperscript_0_sbrief": {
+      "expected": "a igual sup 2 b"
+    },
+    "EmbellRelSuperscript_1_default": {
+      "expected": "a igual superíndice 3 línea base b"
+    },
+    "EmbellRelSuperscript_1_brief": {
+      "expected": "a igual sup 3 b"
+    },
+    "EmbellRelSuperscript_1_sbrief": {
+      "expected": "a igual sup 3 b"
+    },
+    "EmbellRelSuperscript_2_default": {
+      "expected": "a igual superíndice n línea base b"
+    },
+    "EmbellRelSuperscript_2_brief": {
+      "expected": "a igual sup n b"
+    },
+    "EmbellRelSuperscript_2_sbrief": {
+      "expected": "a igual sup n b"
+    },
+    "EmbellRelSuperscript_3_default": {
+      "expected": "a igual prima b"
+    },
+    "EmbellRelSuperscript_3_brief": {
+      "expected": "a igual prima b"
+    },
+    "EmbellRelSuperscript_3_sbrief": {
+      "expected": "a igual prima b"
+    },
+    "EmbellRelSubSuper_0_default": {
+      "expected": "a igual subíndice m superíndice 2 línea base b"
+    },
+    "EmbellRelSubSuper_0_brief": {
+      "expected": "a igual sub m sup 2 b"
+    },
+    "EmbellRelSubSuper_0_sbrief": {
+      "expected": "a igual sub m sup 2 b"
+    },
+    "EmbellRelSubSuper_1_default": {
+      "expected": "a igual subíndice m superíndice 3 línea base b"
+    },
+    "EmbellRelSubSuper_1_brief": {
+      "expected": "a igual sub m sup 3 b"
+    },
+    "EmbellRelSubSuper_1_sbrief": {
+      "expected": "a igual sub m sup 3 b"
+    },
+    "EmbellRelSubSuper_2_default": {
+      "expected": "a igual subíndice m superíndice n línea base b"
+    },
+    "EmbellRelSubSuper_2_brief": {
+      "expected": "a igual sub m sup n b"
+    },
+    "EmbellRelSubSuper_2_sbrief": {
+      "expected": "a igual sub m sup n b"
+    },
+    "EmbellRelSubSuper_3_default": {
+      "expected": "a igual prima subíndice m línea base b"
+    },
+    "EmbellRelSubSuper_3_brief": {
+      "expected": "a igual prima sub m b"
+    },
+    "EmbellRelSubSuper_3_sbrief": {
+      "expected": "a igual prima sub m b"
+    },
+    "EmbellRelTensor_0_default": {
+      "expected": "a igual subíndice m superíndice 2 línea base b"
+    },
+    "EmbellRelTensor_0_brief": {
+      "expected": "a igual sub m sup 2 b"
+    },
+    "EmbellRelTensor_0_sbrief": {
+      "expected": "a igual sub m sup 2 b"
+    },
+    "EmbellRelTensor_1_default": {
+      "expected": "a superíndice 3 línea base igual subíndice m superíndice 2 línea base b"
+    },
+    "EmbellRelTensor_1_brief": {
+      "expected": "a sup 3 igual sub m sup 2 b"
+    },
+    "EmbellRelTensor_1_sbrief": {
+      "expected": "a sup 3 igual sub m sup 2 b"
+    },
+    "EmbellRelTensor_2_default": {
+      "expected": "a subíndice 3 línea base igual subíndice m superíndice 2 línea base b"
+    },
+    "EmbellRelTensor_2_brief": {
+      "expected": "a sub 3 igual sub m sup 2 b"
+    },
+    "EmbellRelTensor_2_sbrief": {
+      "expected": "a sub 3 igual sub m sup 2 b"
+    },
+    "EmbellRelTensor_3_default": {
+      "expected": "a subíndice 3 superíndice n línea base igual subíndice m superíndice 2 línea base b"
+    },
+    "EmbellRelTensor_3_brief": {
+      "expected": "a sub 3 sup n igual sub m sup 2 b"
+    },
+    "EmbellRelTensor_3_sbrief": {
+      "expected": "a sub 3 sup n igual sub m sup 2 b"
+    },
+    "EmbellMultRelSubscript_default": {
+      "expected": "a igual subíndice 2 línea base b igual c"
+    },
+    "EmbellMultRelSubscript_brief": {
+      "expected": "a igual sub 2 b igual c"
+    },
+    "EmbellMultRelSubscript_sbrief": {
+      "expected": "a igual sub 2 b igual c"
+    },
+    "EmbellPunctSubscript_default": {
+      "expected": "a dos puntos subíndice 2 línea base b"
+    },
+    "EmbellPunctSubscript_brief": {
+      "expected": "a dos puntos sub 2 b"
+    },
+    "EmbellPunctSubscript_sbrief": {
+      "expected": "a dos puntos sub 2 b"
+    },
+    "EmbellPunctSuperscript_0_default": {
+      "expected": "a dos puntos superíndice 2 línea base b"
+    },
+    "EmbellPunctSuperscript_0_brief": {
+      "expected": "a dos puntos sup 2 b"
+    },
+    "EmbellPunctSuperscript_0_sbrief": {
+      "expected": "a dos puntos sup 2 b"
+    },
+    "EmbellPunctSuperscript_1_default": {
+      "expected": "a dos puntos superíndice 3 línea base b"
+    },
+    "EmbellPunctSuperscript_1_brief": {
+      "expected": "a dos puntos sup 3 b"
+    },
+    "EmbellPunctSuperscript_1_sbrief": {
+      "expected": "a dos puntos sup 3 b"
+    },
+    "EmbellPunctSuperscript_2_default": {
+      "expected": "a dos puntos superíndice n línea base b"
+    },
+    "EmbellPunctSuperscript_2_brief": {
+      "expected": "a dos puntos sup n b"
+    },
+    "EmbellPunctSuperscript_2_sbrief": {
+      "expected": "a dos puntos sup n b"
+    },
+    "EmbellPunctSuperscript_3_default": {
+      "expected": "a dos puntos prima b"
+    },
+    "EmbellPunctSuperscript_3_brief": {
+      "expected": "a dos puntos prima b"
+    },
+    "EmbellPunctSuperscript_3_sbrief": {
+      "expected": "a dos puntos prima b"
+    },
+    "EmbellPunctSubSuper_0_default": {
+      "expected": "a dos puntos subíndice m superíndice 2 línea base b"
+    },
+    "EmbellPunctSubSuper_0_brief": {
+      "expected": "a dos puntos sub m sup 2 b"
+    },
+    "EmbellPunctSubSuper_0_sbrief": {
+      "expected": "a dos puntos sub m sup 2 b"
+    },
+    "EmbellPunctSubSuper_1_default": {
+      "expected": "a dos puntos subíndice m superíndice 3 línea base b"
+    },
+    "EmbellPunctSubSuper_1_brief": {
+      "expected": "a dos puntos sub m sup 3 b"
+    },
+    "EmbellPunctSubSuper_1_sbrief": {
+      "expected": "a dos puntos sub m sup 3 b"
+    },
+    "EmbellPunctSubSuper_2_default": {
+      "expected": "a dos puntos subíndice m superíndice n línea base b"
+    },
+    "EmbellPunctSubSuper_2_brief": {
+      "expected": "a dos puntos sub m sup n b"
+    },
+    "EmbellPunctSubSuper_2_sbrief": {
+      "expected": "a dos puntos sub m sup n b"
+    },
+    "EmbellPunctSubSuper_3_default": {
+      "expected": "a dos puntos prima subíndice m línea base b"
+    },
+    "EmbellPunctSubSuper_3_brief": {
+      "expected": "a dos puntos prima sub m b"
+    },
+    "EmbellPunctSubSuper_3_sbrief": {
+      "expected": "a dos puntos prima sub m b"
+    },
+    "EmbellPunctTensor_0_default": {
+      "expected": "a dos puntos subíndice m superíndice 2 línea base b"
+    },
+    "EmbellPunctTensor_0_brief": {
+      "expected": "a dos puntos sub m sup 2 b"
+    },
+    "EmbellPunctTensor_0_sbrief": {
+      "expected": "a dos puntos sub m sup 2 b"
+    },
+    "EmbellPunctTensor_1_default": {
+      "expected": "a superíndice 3 línea base dos puntos subíndice m superíndice 2 línea base b"
+    },
+    "EmbellPunctTensor_1_brief": {
+      "expected": "a sup 3 dos puntos sub m sup 2 b"
+    },
+    "EmbellPunctTensor_1_sbrief": {
+      "expected": "a sup 3 dos puntos sub m sup 2 b"
+    },
+    "EmbellPunctTensor_2_default": {
+      "expected": "a subíndice 3 línea base dos puntos subíndice m superíndice 2 línea base b"
+    },
+    "EmbellPunctTensor_2_brief": {
+      "expected": "a sub 3 dos puntos sub m sup 2 b"
+    },
+    "EmbellPunctTensor_2_sbrief": {
+      "expected": "a sub 3 dos puntos sub m sup 2 b"
+    },
+    "EmbellPunctTensor_3_default": {
+      "expected": "a subíndice 3 superíndice n línea base dos puntos subíndice m superíndice 2 línea base b"
+    },
+    "EmbellPunctTensor_3_brief": {
+      "expected": "a sub 3 sup n dos puntos sub m sup 2 b"
+    },
+    "EmbellPunctTensor_3_sbrief": {
+      "expected": "a sub 3 sup n dos puntos sub m sup 2 b"
+    },
+    "EmbellMultPunctSubscript_default": {
+      "expected": "a dos puntos subíndice 2 línea base b dos puntos c"
+    },
+    "EmbellMultPunctSubscript_brief": {
+      "expected": "a dos puntos sub 2 b dos puntos c"
+    },
+    "EmbellMultPunctSubscript_sbrief": {
+      "expected": "a dos puntos sub 2 b dos puntos c"
+    },
+    "SemanticsElement_0_default": {
+      "expected": ""
+    },
+    "SemanticsElement_0_brief": {
+      "expected": ""
+    },
+    "SemanticsElement_0_sbrief": {
+      "expected": ""
+    },
+    "SemanticsElement_1_default": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsElement_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsElement_2_default": {
+      "expected": "a más b"
+    },
+    "SemanticsElement_2_brief": {
+      "expected": "a más b"
+    },
+    "SemanticsElement_2_sbrief": {
+      "expected": "a más b"
+    },
+    "SemanticsElement_3_default": {
+      "expected": "a más b"
+    },
+    "SemanticsElement_3_brief": {
+      "expected": "a más b"
+    },
+    "SemanticsElement_3_sbrief": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotation_0_default": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_brief": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_0_sbrief": {
+      "_comment0_": " This is not really legal markup.",
+      "expected": ""
+    },
+    "SemanticsAnnotation_1_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_1_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotation_3_default": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotation_3_brief": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotation_3_sbrief": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotation_4_default": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotation_4_brief": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotation_4_sbrief": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotationXml_0_default": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_brief": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_0_sbrief": {
+      "_comment1_": " This is not really legal markup.",
+      "expected": "something"
+    },
+    "SemanticsAnnotationXml_1_default": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_brief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_1_sbrief": {
+      "expected": "a something"
+    },
+    "SemanticsAnnotationXml_2_default": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_brief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_2_sbrief": {
+      "expected": "a"
+    },
+    "SemanticsAnnotationXml_3_default": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotationXml_3_brief": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotationXml_3_sbrief": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotationXml_4_default": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotationXml_4_brief": {
+      "expected": "a más b"
+    },
+    "SemanticsAnnotationXml_4_sbrief": {
+      "expected": "a más b"
+    }
+  }
+}

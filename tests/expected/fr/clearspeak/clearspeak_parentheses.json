@@ -1,0 +1,248 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchParentheses",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_parentheses.json",
+  "information": "French Clearspeak Parentheses rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Parentheses",
+    "Paren001": {
+      "expected": "25"
+    },
+    "Paren002": {
+      "expected": "2 x"
+    },
+    "Paren003": {
+      "expected": "2 plus négatif 2"
+    },
+    "Paren004": {
+      "expected": "2 moins négatif 2"
+    },
+    "Paren004a": {
+      "expected": "2 moins négatif 2"
+    },
+    "Paren005": {
+      "expected": "2 moins, parenthèse gauche, négatif 2, parenthèse droite, au cube"
+    },
+    "Paren006": {
+      "expected": "parenthèse gauche, 2 x, parenthèse droite, au carré"
+    },
+    "Paren007": {
+      "expected": "parenthèse gauche, 2 x, parenthèse droite, à la puissance y plus 1"
+    },
+    "Paren008": {
+      "expected": "négatif 2 x"
+    },
+    "Paren009": {
+      "expected": "parenthèse gauche, négatif 2 x, parenthèse droite, au carré"
+    },
+    "Paren010": {
+      "expected": "négatif, parenthèse gauche, 2 x, parenthèse droite, au carré"
+    },
+    "Paren011": {
+      "expected": "un-demi"
+    },
+    "Paren012": {
+      "_comment2_": " TODO: (QUESTION) This is against the Paren_Auto rules! (page 31)!",
+      "expected": "trois-quarts x"
+    },
+    "Paren013": {
+      "expected": "parenthèse gauche, 11 sur 22, parenthèse droite"
+    },
+    "Paren014": {
+      "expected": "un-demi à la puissance 4"
+    },
+    "Paren015": {
+      "expected": "parenthèse gauche, 11 sur 15, parenthèse droite, au carré"
+    },
+    "Paren016": {
+      "expected": "parenthèse gauche, 25, parenthèse droite"
+    },
+    "Paren017": {
+      "expected": "parenthèse gauche, 2 x, parenthèse droite"
+    },
+    "Paren018": {
+      "expected": "2 plus, parenthèse gauche, négatif 2, parenthèse droite"
+    },
+    "Paren019": {
+      "expected": "2 moins, parenthèse gauche, négatif 2, parenthèse droite"
+    },
+    "Paren020": {
+      "expected": "2 moins, parenthèse gauche, négatif 2, parenthèse droite, au cube"
+    },
+    "Paren021": {
+      "expected": "parenthèse gauche, 2 x, parenthèse droite, au carré"
+    },
+    "Paren022": {
+      "expected": "parenthèse gauche, 2 x, parenthèse droite, à la puissance y plus 1"
+    },
+    "Paren023": {
+      "expected": "parenthèse gauche, négatif 2 x, parenthèse droite"
+    },
+    "Paren024": {
+      "expected": "parenthèse gauche, négatif 2 x, parenthèse droite, au carré"
+    },
+    "Paren025": {
+      "expected": "négatif, parenthèse gauche, 2 x, parenthèse droite, au carré"
+    },
+    "Paren026": {
+      "expected": "parenthèse gauche, un-demi, parenthèse droite"
+    },
+    "Paren027": {
+      "expected": "parenthèse gauche, trois-quarts x, parenthèse droite"
+    },
+    "Paren028": {
+      "expected": "parenthèse gauche, 11 sur 22, parenthèse droite"
+    },
+    "Paren029": {
+      "expected": "parenthèse gauche, un-demi, parenthèse droite, à la puissance 4"
+    },
+    "Paren030": {
+      "expected": "parenthèse gauche, 11 sur 15, parenthèse droite, au carré"
+    },
+    "Paren031": {
+      "expected": "le point avec coordonées 1 virgule 2"
+    },
+    "Paren032": {
+      "expected": "le point avec coordonées x virgule y"
+    },
+    "Paren033": {
+      "expected": "le point avec coordonées 1 virgule 2 virgule 3"
+    },
+    "Paren034": {
+      "expected": "le point avec coordonées x virgule y virgule z"
+    },
+    "Paren035": {
+      "expected": "le point avec coordonées 1 virgule 2 virgule 386"
+    },
+    "Paren036": {
+      "expected": "un intervalle de a à b, sans inclure a ni b"
+    },
+    "Paren037": {
+      "expected": "un intervalle de 0 à 1, sans inclure 0 ni 1"
+    },
+    "Paren038": {
+      "expected": "un intervalle de a à b, avec a inclus, mais sans inclure b"
+    },
+    "Paren039": {
+      "expected": "un intervalle de 0 à 1, avec 0 inclus, mais sans inclure 1"
+    },
+    "Paren040": {
+      "expected": "un intervalle de a à b, sans inclure a, mais avec b inclus"
+    },
+    "Paren041": {
+      "expected": "un intervalle de 0 à 1, sans inclure 0, mais avec 1 inclus"
+    },
+    "Paren042": {
+      "expected": "un intervalle de a à b, avec a et b inclus"
+    },
+    "Paren043": {
+      "expected": "un intervalle de 0 à 1, avec 0 et 1 inclus"
+    },
+    "Paren044": {
+      "expected": "un intervalle de négatif infini à b, sans inclure b"
+    },
+    "Paren045": {
+      "expected": "un intervalle de négatif infini à 1, sans inclure 1"
+    },
+    "Paren046": {
+      "expected": "un intervalle de négatif infini à b, avec b inclus"
+    },
+    "Paren047": {
+      "expected": "un intervalle de négatif infini à 1, avec 1 inclus"
+    },
+    "Paren048": {
+      "expected": "un intervalle de a à infini, sans inclure a"
+    },
+    "Paren049": {
+      "expected": "un intervalle de 1 à infini, sans inclure 1"
+    },
+    "Paren050": {
+      "expected": "un intervalle de a à infini, avec a inclus"
+    },
+    "Paren051": {
+      "expected": "un intervalle de 1 à infini, avec 1 inclus"
+    },
+    "Paren052": {
+      "expected": "un intervalle de négatif infini à infini"
+    },
+    "Paren053": {
+      "expected": "un intervalle de négatif infini à positif infini"
+    },
+    "Nest001": {
+      "expected": "f de, g de x"
+    },
+    "Nest002": {
+      "expected": "f de, parenthèse gauche, g de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Nest003": {
+      "expected": "6 moins, crochet gauche, 2 moins, parenthèse gauche, 3 plus 5, parenthèse droite, crochet droit"
+    },
+    "Nest004": {
+      "expected": "6 moins, parenthèse gauche, 2 moins, deuxième parenthèse gauche, 3 plus 5, deuxième parenthèse droite, parenthèse droite"
+    },
+    "Nest005": {
+      "expected": "4  , crochet gauche, x plus 3  , parenthèse gauche, 2 x, plus 1, parenthèse droite, crochet droit"
+    },
+    "Nest006": {
+      "expected": "4  , parenthèse gauche, x plus 3  , deuxième parenthèse gauche, 2 x, plus 1, deuxième parenthèse droite, parenthèse droite"
+    },
+    "Nest007": {
+      "expected": "1 plus, parenthèse gauche, 2 plus, deuxième parenthèse gauche, 3 plus 7, deuxième parenthèse droite, moins, deuxième parenthèse gauche, 2 plus 8, deuxième parenthèse droite, parenthèse droite"
+    },
+    "Nest008": {
+      "expected": "1 plus, parenthèse gauche, 2 plus, deuxième parenthèse gauche, 3 moins, troisième parenthèse gauche, 4 moins 5, troisième parenthèse droite, deuxième parenthèse droite, parenthèse droite"
+    },
+    "Nest009": {
+      "expected": "parenthèse gauche, deuxième parenthèse gauche, 2 plus, troisième parenthèse gauche, 3 plus 4, troisième parenthèse droite, plus 5, deuxième parenthèse droite, plus 6 plus, deuxième parenthèse gauche, troisième parenthèse gauche, 7 plus, quatrième parenthèse gauche, 8 plus 1, quatrième parenthèse droite, troisième parenthèse droite, plus 2, deuxième parenthèse droite, parenthèse droite"
+    },
+    "SilParen001": {
+      "expected": "25"
+    },
+    "SilParen002": {
+      "expected": "2 x"
+    },
+    "SilParen003": {
+      "expected": "2 plus, négatif 2"
+    },
+    "SilParen004": {
+      "expected": "2 moins, négatif 2"
+    },
+    "SilParen005": {
+      "expected": "2 moins, négatif 2, au cube"
+    },
+    "SilParen006": {
+      "expected": "2 x, au carré"
+    },
+    "SilParen007": {
+      "expected": "2 x, à la puissance y plus 1"
+    },
+    "SilParen008": {
+      "expected": "négatif 2 x"
+    },
+    "SilParen009": {
+      "expected": "négatif 2 x, au carré"
+    },
+    "SilParen010": {
+      "expected": "négatif, 2 x, au carré"
+    },
+    "SilParen011": {
+      "expected": "un-demi"
+    },
+    "SilParen012": {
+      "expected": "trois-quarts x"
+    },
+    "SilParen013": {
+      "expected": "11 sur 22"
+    },
+    "SilParen014": {
+      "expected": "un-demi, à la puissance 4"
+    },
+    "SilParen015": {
+      "expected": "11 sur 15, au carré"
+    }
+  }
+}

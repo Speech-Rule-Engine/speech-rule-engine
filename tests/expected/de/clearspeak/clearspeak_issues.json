@@ -1,0 +1,49 @@
+{
+  "_comment0_": " Tests from the issues discovered in ClearspeakGerman rules.",
+  "name": "GermanIssues",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_issues.json",
+  "information": "German Clearspeak Issues tests.",
+  "active": "ClearspeakIssuesGerman",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "expected": "5, 3 geteilt durch 224"
+    },
+    "Issue230_2": {
+      "expected": "5 drei viertel"
+    },
+    "IssueNumbers_1": {
+      "expected": "Zahl t 2 e 4"
+    },
+    "IssueNumbers_2": {
+      "expected": "Zahl Nummernzeichen F F 0 0 0 0"
+    },
+    "IssueNumbers_3": {
+      "expected": "Zahl Nummernzeichen F F F F"
+    },
+    "Issue320_1": {
+      "expected": "partielle Ableitung"
+    },
+    "Issue320_2": {
+      "expected": "x Fakultät"
+    },
+    "Issue320_3": {
+      "expected": "minus minus x"
+    },
+    "Issue320_4": {
+      "expected": "plus plus x"
+    },
+    "Issue320_5": {
+      "expected": "Sinus Sinus x"
+    },
+    "Issue320_6": {
+      "expected": "partielle Ableitung partielle Ableitung x"
+    },
+    "Issue320_7": {
+      "expected": "Klammer auf, Bruch mit Zähler partielle Ableitung Quadrat, und Nenner partielle Ableitung x Quadrat, plus, Bruch mit Zähler partielle Ableitung Quadrat, und Nenner partielle Ableitung y Quadrat, Klammer zu,  , der Betrag von phi  , Klammer auf, x plus normales i, y, Klammer zu, Quadrat ist gleich 0"
+    }
+  }
+}

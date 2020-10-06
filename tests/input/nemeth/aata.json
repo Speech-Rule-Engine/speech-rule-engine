@@ -1,0 +1,1371 @@
+{
+  "domain": "default",
+  "modality": "braille",
+  "actual": true,
+  "tests": {
+    "AataExpression_1": {
+      "test": true,
+      "input": "<mi>r</mi><mo>≡<!-- ≡ --></mo><mi>s</mi><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mi>n</mi><mo stretchy=\"false\">)</mo>",
+      "_comment1_": " ⠗⠸⠇⠎⠷⠍⠕⠙⠝⠾"
+    },
+    "AataExpression_2": {
+      "test": true,
+      "input": "<mi>y</mi><mo>=</mo><msup><mi>x</mi><mi>E</mi></msup><mspace width=\"0.667em\"></mspace><mi>mod</mi><mspace width=\"thinmathspace\"></mspace><mspace width=\"thinmathspace\"></mspace><mi>n</mi>",
+      "_comment2_": " ⠽⠀⠨⠅⠀⠭⠘⠠⠑⠐⠍⠕⠙⠝"
+    },
+    "AataExpression_3": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mover><mi>X</mi><mo>~<!-- ~ --></mo></mover></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mo>=</mo><msup><mn>2</mn><mn>4</mn></msup><mo>=</mo><mtext></mtext><mn>16</mn>",
+      "_comment3_": " ⠳⠠⠭overTilde⠳⠀⠨⠅⠀⠆⠘⠲⠐⠀⠨⠅⠀16"
+    },
+    "AataExpression_4": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mi class=\"MJX-tex-caligraphic\" mathvariant=\"script\">S</mi></mrow>",
+      "_comment4_": " caligraphic⠠⠎"
+    },
+    "AataExpression_5": {
+      "test": true,
+      "input": "<mi>a</mi><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>c</mi><mo>=</mo><mn>0</mn>"
+    },
+    "AataExpression_6": {
+      "test": true,
+      "input": "<mi>A</mi><mrow class=\"MJX-TeXAtom-REL\"><mover><mrow class=\"MJX-TeXAtom-OP MJX-fixedlimits\"><mo stretchy=\"false\">→<!-- → --></mo></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mi>f</mi></mrow></mover></mrow><mi>B</mi>"
+    },
+    "AataExpression_7": {
+      "test": true,
+      "input": "<mi>g</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mroot><mi>x</mi><mn>3</mn></mroot>"
+    },
+    "AataExpression_8": {
+      "test": true,
+      "input": "<msubsup><mi>T</mi><mi>A</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msubsup><mo>=</mo><msub><mi>T</mi><mrow class=\"MJX-TeXAtom-ORD\"><msup><mi>A</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup></mrow></msub>"
+    },
+    "AataExpression_9": {
+      "test": true,
+      "input": "<munder><mo>⋃<!-- ⋃ --></mo><mi>k</mi></munder><msub><mi>X</mi><mi>k</mi></msub><mo>=</mo><mi>X</mi>"
+    },
+    "AataExpression_10": {
+      "test": true,
+      "input": "<mstyle displaystyle=\"true\" scriptlevel=\"0\"><mi>f</mi><mo stretchy=\"false\">(</mo><mi>p</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mi>q</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mfrac><mrow><mi>p</mi><mo>+</mo><mn>1</mn></mrow><mrow><mi>p</mi><mo>−<!-- − --></mo><mn>2</mn></mrow></mfrac></mstyle>"
+    },
+    "AataExpression_11": {
+      "test": true,
+      "input": "<mi>X</mi><mo>=</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">N</mi></mrow></mrow><mo>∪<!-- ∪ --></mo><mo fence=\"false\" stretchy=\"false\">{</mo><msqrt><mn>2</mn></msqrt><mspace width=\"thinmathspace\"></mspace><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_12": {
+      "test": true,
+      "input": "<mover><mi>z</mi><mo accent=\"false\">¯<!-- ¯ --></mo></mover><mo>=</mo><mi>a</mi><mo>−<!-- − --></mo><mi>b</mi><mi>i</mi>"
+    },
+    "AataExpression_13": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><msub><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow><mn>8</mn></msub></mrow>"
+    },
+    "AataExpression_14": {
+      "test": true,
+      "input": "<mi>C</mi><mo>=</mo><mrow><mo>{</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>:</mo><mi>G</mi><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mtext>for</mtext><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>∈<!-- ∈ --></mo><msubsup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mn>2</mn><mi>k</mi></msubsup><mo>}</mo></mrow>"
+    },
+    "AataExpression_15": {
+      "test": true,
+      "input": "<msqrt><mn>2</mn><mo>+</mo><msqrt><mn>3</mn></msqrt></msqrt>"
+    },
+    "AataExpression_16": {
+      "test": true,
+      "input": "<msqrt><mroot><mn>2</mn><mn>3</mn></mroot><mo>−<!-- − --></mo><mi>i</mi></msqrt>"
+    },
+    "AataExpression_17": {
+      "test": true,
+      "input": "<msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>3</mn></msup>"
+    },
+    "AataExpression_18": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mover><mi>X</mi><mo>~<!-- ~ --></mo></mover></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">(</mo><mn>1</mn><mo stretchy=\"false\">)</mo></mrow></msub><mo>=</mo><mrow class=\"MJX-TeXAtom-ORD\"><mover><mi>X</mi><mo>~<!-- ~ --></mo></mover></mrow>"
+    },
+    "AataExpression_19": {
+      "test": true,
+      "input": "<msub><mi>G</mi><mn>0</mn></msub><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>A</mi><mo>:</mo><mo stretchy=\"false\">(</mo><mi>A</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">)</mo><mo>∈<!-- ∈ --></mo><mi>G</mi><mtext>for some</mtext><mi>b</mi><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_20": {
+      "test": true,
+      "input": "<mn>300</mn><mo>!</mo>"
+    },
+    "AataExpression_21": {
+      "test": true,
+      "input": "<mi>A</mi><mo>∪<!-- ∪ --></mo><mo stretchy=\"false\">(</mo><mi>B</mi><mo>∪<!-- ∪ --></mo><mi>C</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mi>A</mi><mo>∪<!-- ∪ --></mo><mi>B</mi><mo stretchy=\"false\">)</mo><mo>∪<!-- ∪ --></mo><mi>C</mi>"
+    },
+    "AataExpression_22": {
+      "test": true,
+      "input": "<mrow><mstyle scriptlevel=\"0\"><mrow class=\"MJX-TeXAtom-OPEN\"><mo maxsize=\"1.2em\" minsize=\"1.2em\">(</mo></mrow></mstyle><mfrac linethickness=\"0\"><mi>n</mi><mi>k</mi></mfrac><mstyle scriptlevel=\"0\"><mrow class=\"MJX-TeXAtom-CLOSE\"><mo maxsize=\"1.2em\" minsize=\"1.2em\">)</mo></mrow></mstyle></mrow>"
+    },
+    "AataExpression_23": {
+      "test": true,
+      "input": "<mn>3</mn><mo>+</mo><mn>56</mn><mo>−<!-- − --></mo><mn>13</mn><mo>+</mo><mn>8</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mn>2</mn>"
+    },
+    "AataExpression_24": {
+      "test": true,
+      "input": "<mi>w</mi><mo stretchy=\"false\">(</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo stretchy=\"false\">)</mo><mo>=</mo><mi>d</mi><mo stretchy=\"false\">(</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>,</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mn mathvariant=\"bold\">0</mn></mrow></mrow><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_25": {
+      "test": true,
+      "input": "<mn>6.00000</mn><mo>+</mo><mn>0.00000</mn><mi>i</mi>"
+    },
+    "AataExpression_26": {
+      "test": true,
+      "input": "<mi>p</mi><mo>=</mo><mn>0.0001</mn>"
+    },
+    "AataExpression_27": {
+      "test": true,
+      "input": "<mi>p</mi><mo>=</mo><mn>0.01</mn>"
+    },
+    "AataExpression_28": {
+      "test": true,
+      "input": "<mi>p</mi><mo>=</mo><mn>0.995</mn>"
+    },
+    "AataExpression_29": {
+      "test": true,
+      "input": "<mi>p</mi><mo>=</mo><mn>0.999</mn>"
+    },
+    "AataExpression_30": {
+      "test": true,
+      "input": "<mtext>A</mtext><mo>=</mo><mn>00</mn><mo>,</mo><mtext>B</mtext><mo>=</mo><mn>01</mn><mo>,</mo><mo>…<!-- … --></mo><mo>,</mo><mtext>Z</mtext><mo>=</mo><mn>25</mn>"
+    },
+    "AataExpression_31": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>000</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_32": {
+      "test": true,
+      "input": "<mn>0000</mn>"
+    },
+    "AataExpression_33": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">c</mi></mrow></mrow><mn>1</mn></msub><mo>=</mo><mo stretchy=\"false\">(</mo><mn>00000</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_34": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00001</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>"
+    },
+    "AataExpression_35": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0000101100</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_36": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00010</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>"
+    },
+    "AataExpression_37": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">z</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>00011</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_38": {
+      "test": true,
+      "input": "<mn>001</mn>"
+    },
+    "AataExpression_39": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00100</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>"
+    },
+    "AataExpression_40": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0010000101</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_41": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>001001</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_42": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>01000</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>00101</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11011</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10110</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_43": {
+      "test": true,
+      "input": "<mn>0011</mn>"
+    },
+    "AataExpression_44": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00110</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>"
+    },
+    "AataExpression_45": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">c</mi></mrow></mrow><mn>2</mn></msub><mo>=</mo><mo stretchy=\"false\">(</mo><mn>00111</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_46": {
+      "test": true,
+      "input": "<mn>010</mn>"
+    },
+    "AataExpression_47": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0100</mn><mspace width=\"thickmathspace\"></mspace><mn>0101</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_48": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>01000</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>"
+    },
+    "AataExpression_49": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00100</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01001</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10111</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11010</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_50": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>010011</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>"
+    },
+    "AataExpression_51": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00111</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01010</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10100</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11001</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_52": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>011100</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>011011</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>111011</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>100011</mn><mo stretchy=\"false\">)</mo><mspace linebreak=\"newline\"></mspace><mo stretchy=\"false\">(</mo><mn>000000</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>010101</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110100</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110011</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_53": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>11110101</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>01010100</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_54": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">z</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>010111</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>"
+    },
+    "AataExpression_55": {
+      "test": true,
+      "input": "<mn>011</mn>"
+    },
+    "AataExpression_56": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0110</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_57": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00001</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01100</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10010</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11111</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_58": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>011001</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>"
+    },
+    "AataExpression_59": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>011010</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>011100</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_60": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0110110</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>0111100</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>1110000</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>1111111</mn><mo stretchy=\"false\">)</mo><mspace linebreak=\"newline\"></mspace><mo stretchy=\"false\">(</mo><mn>1001001</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>1000011</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>0001111</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>0000000</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_61": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1001</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>0111</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_62": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>10000</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11101</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>00011</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01110</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_63": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00010</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01111</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10001</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11100</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_64": {
+      "test": true,
+      "input": "<mtext>A</mtext><mo>=</mo><mn>00</mn><mo>,</mo><mtext>B</mtext><mo>=</mo><mn>02</mn><mo>,</mo><mo>…<!-- … --></mo><mo>,</mo><mtext>Z</mtext><mo>=</mo><mn>25</mn>"
+    },
+    "AataExpression_65": {
+      "test": true,
+      "input": "<mi>c</mi><mo>=</mo><mn>4</mn><mspace width=\"thinmathspace\"></mspace><mn>598</mn><mspace width=\"thinmathspace\"></mspace><mn>037</mn><mspace width=\"thinmathspace\"></mspace><mn>234</mn>"
+    },
+    "AataExpression_66": {
+      "test": true,
+      "input": "<mtext>E</mtext><mo>=</mo><mn>04</mn>"
+    },
+    "AataExpression_67": {
+      "test": true,
+      "input": "<mn>10</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mn>5</mn><mo>=</mo><mn>2</mn>"
+    },
+    "AataExpression_68": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1254</mn><msup><mo stretchy=\"false\">)</mo><mrow class=\"MJX-TeXAtom-ORD\"><mn>100</mn></mrow></msup>"
+    },
+    "AataExpression_69": {
+      "test": true,
+      "input": "<mn>1000</mn>"
+    },
+    "AataExpression_70": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>10000</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>"
+    },
+    "AataExpression_71": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1001</mn><mspace width=\"thickmathspace\"></mspace><mn>1000</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_72": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>101</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_73": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>1010</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_74": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>10100</mn><mo stretchy=\"false\">)</mo><mo>+</mo><mi>C</mi>"
+    },
+    "AataExpression_75": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>10101</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_76": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>101011</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_77": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1011</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_78": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>000000</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>010111</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>101101</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>111010</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_79": {
+      "test": true,
+      "input": "<mo movablelimits=\"true\" form=\"prefix\">gcd</mo><mo stretchy=\"false\">(</mo><mn>120</mn><mo>,</mo><mn>102</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mn>6</mn>"
+    },
+    "AataExpression_80": {
+      "test": true,
+      "input": "<mn>108</mn>"
+    },
+    "AataExpression_81": {
+      "test": true,
+      "input": "<mn>110</mn>"
+    },
+    "AataExpression_82": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>1100</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_83": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>00110</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>01011</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>10101</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>11000</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_84": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>011010</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>011100</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110111</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110000</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_85": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>000000</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>011100</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110101</mn><mo stretchy=\"false\">)</mo><mspace width=\"thickmathspace\"></mspace><mo stretchy=\"false\">(</mo><mn>110001</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_86": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>1101</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_87": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>11010</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_88": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>110101</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>"
+    },
+    "AataExpression_89": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">c</mi></mrow></mrow><mn>4</mn></msub><mo>=</mo><mo stretchy=\"false\">(</mo><mn>11011</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_90": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>110110</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_91": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>111</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_92": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>0110</mn><mspace width=\"thickmathspace\"></mspace><mn>1110</mn><mspace width=\"thickmathspace\"></mspace><mn>0110</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_93": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">c</mi></mrow></mrow><mn>3</mn></msub><mo>=</mo><mo stretchy=\"false\">(</mo><mn>11100</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_94": {
+      "test": true,
+      "input": "<mn>1111</mn>"
+    },
+    "AataExpression_95": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>111110</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>"
+    },
+    "AataExpression_96": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>111111</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>"
+    },
+    "AataExpression_97": {
+      "test": true,
+      "input": "<mn>112135</mn><mn>25032</mn><mn>442</mn>"
+    },
+    "AataExpression_98": {
+      "test": true,
+      "input": "<msup><mn>7</mn><mn>6</mn></msup><mo>=</mo><mn>117</mn><mspace width=\"thinmathspace\"></mspace><mn>649</mn>"
+    },
+    "AataExpression_99": {
+      "test": true,
+      "input": "<mo movablelimits=\"true\" form=\"prefix\">gcd</mo><mo stretchy=\"false\">(</mo><mn>24</mn><mo>,</mo><mn>36</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mn>12</mn>"
+    },
+    "AataExpression_100": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>120979</mn><mo>,</mo><mi>E</mi><mo>=</mo><mn>13251</mn><mo>,</mo><mi>x</mi><mo>=</mo><mn>142371</mn>"
+    },
+    "AataExpression_101": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>12345</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>678</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_102": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">[</mo><mo stretchy=\"false\">(</mo><mn>1235</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>467</mn><mo stretchy=\"false\">)</mo><msup><mo stretchy=\"false\">]</mo><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup>"
+    },
+    "AataExpression_103": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>n</mi><mo>,</mo><mi>E</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mn>37986733</mn><mo>,</mo><mn>12371</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_104": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>12453</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_105": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>12</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>1253</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_106": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>12537</mn><msup><mo stretchy=\"false\">)</mo><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup>"
+    },
+    "AataExpression_107": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1254</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>13</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>25</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_108": {
+      "test": true,
+      "input": "<mn>1260</mn>"
+    },
+    "AataExpression_109": {
+      "test": true,
+      "input": "<msup><mn>128</mn><mn>4</mn></msup><mo>=</mo><mn>268</mn><mo>,</mo><mn>435</mn><mo>,</mo><mn>456</mn>"
+    },
+    "AataExpression_110": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>79403</mn><mo>,</mo><mi>D</mi><mo>=</mo><mn>671</mn><mo>,</mo><mi>y</mi><mo>=</mo><mn>129381</mn>"
+    },
+    "AataExpression_111": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1423</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>34</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>56</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>1324</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_112": {
+      "test": true,
+      "input": "<mo fence=\"false\" stretchy=\"false\">{</mo><mo stretchy=\"false\">(</mo><mn>13</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>13</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>24</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>132</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>134</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>1324</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>1342</mn><mo stretchy=\"false\">)</mo><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_113": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1345</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>234</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_114": {
+      "test": true,
+      "input": "<mn>14</mn>"
+    },
+    "AataExpression_115": {
+      "test": true,
+      "input": "<mi>x</mi><mo>=</mo><mn>142528</mn>"
+    },
+    "AataExpression_116": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1426</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>142</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_117": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>142637</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_118": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>14356</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_119": {
+      "test": true,
+      "input": "<mn>191</mn><mi>E</mi><mo>=</mo><mn>1</mn><mo>+</mo><mn>151</mn><mi>m</mi>"
+    },
+    "AataExpression_120": {
+      "test": true,
+      "input": "<mn>1523</mn>"
+    },
+    "AataExpression_121": {
+      "test": true,
+      "input": "<mn>1531</mn>"
+    },
+    "AataExpression_122": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>17254</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>1423</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>154632</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_123": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>156</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>234</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_124": {
+      "test": true,
+      "input": "<mi>s</mi><mo>=</mo><mo>−<!-- − --></mo><mn>16</mn>"
+    },
+    "AataExpression_125": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mn mathvariant=\"bold\">16</mn></mrow>"
+    },
+    "AataExpression_126": {
+      "test": true,
+      "input": "<mn>160</mn>"
+    },
+    "AataExpression_127": {
+      "test": true,
+      "input": "<mi>μ<!-- μ --></mi><mo>=</mo><mo stretchy=\"false\">(</mo><mn>1634</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_128": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>n</mi><mo>,</mo><mi>E</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mn>16394854313</mn><mo>,</mo><mn>34578451</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_129": {
+      "test": true,
+      "input": "<mn>5</mn><mo>⋅<!-- ⋅ --></mo><mn>7</mn><mo>⋅<!-- ⋅ --></mo><mn>47</mn><mo>=</mo><mn>1645</mn>"
+    },
+    "AataExpression_130": {
+      "test": true,
+      "input": "<mn>165</mn>"
+    },
+    "AataExpression_131": {
+      "test": true,
+      "input": "<mn>168</mn>"
+    },
+    "AataExpression_132": {
+      "test": true,
+      "input": "<mn>41</mn><mo>≡<!-- ≡ --></mo><mn>17</mn><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>8</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_133": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>17352</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_134": {
+      "test": true,
+      "input": "<mn>1739</mn>"
+    },
+    "AataExpression_135": {
+      "test": true,
+      "input": "<mn>175</mn>"
+    },
+    "AataExpression_136": {
+      "test": true,
+      "input": "<msup><mn>180</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>∘<!-- ∘ --></mo></mrow></msup>"
+    },
+    "AataExpression_137": {
+      "test": true,
+      "input": "<mn>19</mn>"
+    },
+    "AataExpression_138": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>n</mi><mo>,</mo><mi>E</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mn>3053</mn><mo>,</mo><mn>1921</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_139": {
+      "test": true,
+      "input": "<mn>196,833</mn><mo>×<!-- × --></mo><mn>196,833</mn>"
+    },
+    "AataExpression_140": {
+      "test": true,
+      "input": "<mn>19945</mn>"
+    },
+    "AataExpression_141": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>3551</mn><mo>,</mo><mi>D</mi><mo>=</mo><mn>1997</mn><mo>,</mo><mi>y</mi><mo>=</mo><mn>2791</mn>"
+    },
+    "AataExpression_142": {
+      "test": true,
+      "input": "<mn>200</mn>"
+    },
+    "AataExpression_143": {
+      "test": true,
+      "input": "<mn>2000</mn>"
+    },
+    "AataExpression_144": {
+      "test": true,
+      "input": "<msup><mn>2071</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>9521</mn></mrow></msup><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>4724</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_145": {
+      "test": true,
+      "input": "<mn>2134</mn>"
+    },
+    "AataExpression_146": {
+      "test": true,
+      "input": "<mi>x</mi><mo>≡<!-- ≡ --></mo><mn>214</mn><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>2772</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_147": {
+      "test": true,
+      "input": "<mn>2234</mn><mo>+</mo><mn>4121</mn>"
+    },
+    "AataExpression_148": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>2257</mn><mo>,</mo><mi>E</mi><mo>=</mo><mn>47</mn><mo>,</mo><mi>x</mi><mo>=</mo><mn>23</mn>"
+    },
+    "AataExpression_149": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>n</mi><mo>,</mo><mi>E</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mo stretchy=\"false\">(</mo><mn>451</mn><mo>,</mo><mn>231</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_150": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>45629</mn><mo>,</mo><mi>E</mi><mo>=</mo><mn>781</mn><mo>,</mo><mi>x</mi><mo>=</mo><mn>231561</mn>"
+    },
+    "AataExpression_151": {
+      "test": true,
+      "input": "<mn>234</mn>"
+    },
+    "AataExpression_152": {
+      "test": true,
+      "input": "<mn>23771</mn>"
+    },
+    "AataExpression_153": {
+      "test": true,
+      "input": "<mn>41</mn><mo>−<!-- − --></mo><mn>17</mn><mo>=</mo><mn>24</mn>"
+    },
+    "AataExpression_154": {
+      "test": true,
+      "input": "<mn>72</mn><mo>∈<!-- ∈ --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>240</mn></mrow></msub>"
+    },
+    "AataExpression_155": {
+      "test": true,
+      "input": "<mn>2415</mn>"
+    },
+    "AataExpression_156": {
+      "test": true,
+      "input": "<mi>N</mi><mo>=</mo><mn>250</mn>"
+    },
+    "AataExpression_157": {
+      "test": true,
+      "input": "<mn>255</mn>"
+    },
+    "AataExpression_158": {
+      "test": true,
+      "input": "<msup><mn>2557</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>341</mn></mrow></msup><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>5681</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_159": {
+      "test": true,
+      "input": "<msup><mn>2</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>8</mn></mrow></msup><mo>=</mo><mn>256</mn>"
+    },
+    "AataExpression_160": {
+      "test": true,
+      "input": "<mn>5</mn><mi>x</mi><mo>+</mo><mn>1</mn><mo>≡<!-- ≡ --></mo><mn>13</mn><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>26</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_161": {
+      "test": true,
+      "input": "<mn>2600</mn><mo>=</mo><msup><mn>2</mn><mn>3</mn></msup><mo>×<!-- × --></mo><msup><mn>5</mn><mn>2</mn></msup><mo>×<!-- × --></mo><mn>13</mn>"
+    },
+    "AataExpression_162": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>27</mn></mrow></msub>"
+    },
+    "AataExpression_163": {
+      "test": true,
+      "input": "<msup><mn>271</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>321</mn></mrow></msup><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>481</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_164": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>120979</mn><mo>,</mo><mi>D</mi><mo>=</mo><mn>27331</mn><mo>,</mo><mi>y</mi><mo>=</mo><mn>112135</mn>"
+    },
+    "AataExpression_165": {
+      "test": true,
+      "input": "<mn>2791</mn>"
+    },
+    "AataExpression_166": {
+      "test": true,
+      "input": "<mn>28</mn>"
+    },
+    "AataExpression_167": {
+      "test": true,
+      "input": "<mi>q</mi><mo>=</mo><mn>29</mn>"
+    },
+    "AataExpression_168": {
+      "test": true,
+      "input": "<msup><mn>292</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>3171</mn></mrow></msup><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>582</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_169": {
+      "test": true,
+      "input": "<mn>2134</mn><mo>⋅<!-- ⋅ --></mo><mn>1531</mn><mo>=</mo><mn>3,267,154</mn>"
+    },
+    "AataExpression_170": {
+      "test": true,
+      "input": "<mi>U</mi><mo stretchy=\"false\">(</mo><mn>30</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_171": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>3551</mn><mo>,</mo><mi>E</mi><mo>=</mo><mn>629</mn><mo>,</mo><mi>x</mi><mo>=</mo><mn>31</mn>"
+    },
+    "AataExpression_172": {
+      "test": true,
+      "input": "<mn>312</mn><mo>∈<!-- ∈ --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>471</mn></mrow></msub>"
+    },
+    "AataExpression_173": {
+      "test": true,
+      "input": "<mn>342</mn>"
+    },
+    "AataExpression_174": {
+      "test": true,
+      "input": "<mi>G</mi><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mo stretchy=\"false\">(</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>12</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>345</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>354</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>12</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>345</mn><mo stretchy=\"false\">)</mo><mo>,</mo><mo stretchy=\"false\">(</mo><mn>12</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>354</mn><mo stretchy=\"false\">)</mo><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_175": {
+      "test": true,
+      "input": "<mn>44</mn><mspace width=\"thinmathspace\"></mspace><mn>352</mn><mspace width=\"thinmathspace\"></mspace><mn>000</mn>"
+    },
+    "AataExpression_176": {
+      "test": true,
+      "input": "<msup><mn>360</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>∘<!-- ∘ --></mo></mrow></msup>"
+    },
+    "AataExpression_177": {
+      "test": true,
+      "input": "<mn>37</mn>"
+    },
+    "AataExpression_178": {
+      "test": true,
+      "input": "<mn>3754</mn>"
+    },
+    "AataExpression_179": {
+      "test": true,
+      "input": "<mn>38</mn>"
+    },
+    "AataExpression_180": {
+      "test": true,
+      "input": "<mn>39</mn>"
+    },
+    "AataExpression_181": {
+      "test": true,
+      "input": "<mn>391</mn><mo>=</mo><mn>17</mn><mo>⋅<!-- ⋅ --></mo><mn>23</mn>"
+    },
+    "AataExpression_182": {
+      "test": true,
+      "input": "<mi>x</mi><mo>=</mo><mn>4</mn>"
+    },
+    "AataExpression_183": {
+      "test": true,
+      "input": "<mn>40</mn>"
+    },
+    "AataExpression_184": {
+      "test": true,
+      "input": "<mn>42</mn>"
+    },
+    "AataExpression_185": {
+      "test": true,
+      "input": "<mn>43</mn><mo>−<!-- − --></mo><mn>18</mn><mi>i</mi>"
+    },
+    "AataExpression_186": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>8779</mn><mo>⋅<!-- ⋅ --></mo><mn>4327</mn>"
+    },
+    "AataExpression_187": {
+      "test": true,
+      "input": "<mo>−<!-- − --></mo><mn>4357</mn>"
+    },
+    "AataExpression_188": {
+      "test": true,
+      "input": "<mn>44</mn>"
+    },
+    "AataExpression_189": {
+      "test": true,
+      "input": "<mn>46</mn>"
+    },
+    "AataExpression_190": {
+      "test": true,
+      "input": "<mn>46,388</mn>"
+    },
+    "AataExpression_191": {
+      "test": true,
+      "input": "<msub><mi>D</mi><mrow class=\"MJX-TeXAtom-ORD\"><mn>470448</mn></mrow></msub>"
+    },
+    "AataExpression_192": {
+      "test": true,
+      "input": "<mn>471</mn>"
+    },
+    "AataExpression_193": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>48</mn></mrow></msub>"
+    },
+    "AataExpression_194": {
+      "test": true,
+      "input": "<mi>E</mi><mo>=</mo><mn>487</mn>"
+    },
+    "AataExpression_195": {
+      "test": true,
+      "input": "<mi>U</mi><mo stretchy=\"false\">(</mo><mn>49</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_196": {
+      "test": true,
+      "input": "<mn>2</mn><mo>+</mo><mn>3</mn><mo>=</mo><mn>5</mn>"
+    },
+    "AataExpression_197": {
+      "test": true,
+      "input": "<mn>500</mn>"
+    },
+    "AataExpression_198": {
+      "test": true,
+      "input": "<mn>7</mn><mo>!</mo><mo>=</mo><mn>5040</mn>"
+    },
+    "AataExpression_199": {
+      "test": true,
+      "input": "<mn>51</mn>"
+    },
+    "AataExpression_200": {
+      "test": true,
+      "input": "<msup><mn>2</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>511</mn></mrow></msup><mo>−<!-- − --></mo><mn>1</mn>"
+    },
+    "AataExpression_201": {
+      "test": true,
+      "input": "<mn>52</mn>"
+    },
+    "AataExpression_202": {
+      "test": true,
+      "input": "<mn>53</mn>"
+    },
+    "AataExpression_203": {
+      "test": true,
+      "input": "<mn>54</mn>"
+    },
+    "AataExpression_204": {
+      "test": true,
+      "input": "<mn>540</mn><mo>=</mo><msup><mn>2</mn><mn>2</mn></msup><mo>⋅<!-- ⋅ --></mo><msup><mn>3</mn><mn>3</mn></msup><mo>⋅<!-- ⋅ --></mo><mn>5</mn>"
+    },
+    "AataExpression_205": {
+      "test": true,
+      "input": "<mn>561</mn>"
+    },
+    "AataExpression_206": {
+      "test": true,
+      "input": "<mn>562</mn>"
+    },
+    "AataExpression_207": {
+      "test": true,
+      "input": "<mn>57</mn><mo>=</mo><msup><mn>2</mn><mn>0</mn></msup><mo>+</mo><msup><mn>2</mn><mn>3</mn></msup><mo>+</mo><msup><mn>2</mn><mn>4</mn></msup><mo>+</mo><msup><mn>2</mn><mn>5</mn></msup>"
+    },
+    "AataExpression_208": {
+      "test": true,
+      "input": "<mn>58</mn>"
+    },
+    "AataExpression_209": {
+      "test": true,
+      "input": "<mi>n</mi><mo>=</mo><mn>5893</mn><mo>,</mo><mi>D</mi><mo>=</mo><mn>81</mn><mo>,</mo><mi>y</mi><mo>=</mo><mn>34</mn>"
+    },
+    "AataExpression_210": {
+      "test": true,
+      "input": "<mn>59</mn>"
+    },
+    "AataExpression_211": {
+      "test": true,
+      "input": "<mn>2</mn><mi>x</mi><mo>=</mo><mn>6</mn>"
+    },
+    "AataExpression_212": {
+      "test": true,
+      "input": "<mn>6.00000</mn>"
+    },
+    "AataExpression_213": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>8</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>3</mn><mo>,</mo><mn>6.12</mn><mo>,</mo><mn>9</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>5</mn><mo>,</mo><mn>10</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mn>7</mn><mo>,</mo><mn>14</mn><mo>,</mo><mn>13</mn><mo>,</mo><mn>11</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_214": {
+      "test": true,
+      "input": "<mi>z</mi><mo>=</mo><mn>2</mn><mi>cis</mi><mo>⁡<!-- ⁡ --></mo><msup><mn>60</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>∘<!-- ∘ --></mo></mrow></msup>"
+    },
+    "AataExpression_215": {
+      "test": true,
+      "input": "<msup><mi>x</mi><mn>4</mn></msup><mo>−<!-- − --></mo><mo stretchy=\"false\">(</mo><mn>2</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mn>3</mn><mo stretchy=\"false\">)</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−<!-- − --></mo><mn>62</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mn>9</mn>"
+    },
+    "AataExpression_216": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">[</mo><mi>GF</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mn>625</mn><mo stretchy=\"false\">)</mo><mo>:</mo><mi>GF</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mn>25</mn><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">]</mo>"
+    },
+    "AataExpression_217": {
+      "test": true,
+      "input": "<mn>631</mn>"
+    },
+    "AataExpression_218": {
+      "test": true,
+      "input": "<mn>64</mn>"
+    },
+    "AataExpression_219": {
+      "test": true,
+      "input": "<msup><mn>2</mn><mrow class=\"MJX-TeXAtom-ORD\"><msup><mn>2</mn><mn>4</mn></msup></mrow></msup><mo>=</mo><mn>65,536</mn>"
+    },
+    "AataExpression_220": {
+      "test": true,
+      "input": "<mn>66</mn>"
+    },
+    "AataExpression_221": {
+      "test": true,
+      "input": "<mn>720</mn>"
+    },
+    "AataExpression_222": {
+      "test": true,
+      "input": "<mn>729</mn>"
+    },
+    "AataExpression_223": {
+      "test": true,
+      "input": "<msup><mn>971</mn><mrow class=\"MJX-TeXAtom-ORD\"><mn>321</mn></mrow></msup><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mn>765</mn><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_224": {
+      "test": true,
+      "input": "<mn>771</mn>"
+    },
+    "AataExpression_225": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>10</mn></mrow></msub><mo>×<!-- × --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>24</mn></mrow></msub><mo>×<!-- × --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mn>80</mn></mrow></msub>"
+    },
+    "AataExpression_226": {
+      "test": true,
+      "input": "<msup><mn>7</mn><mn>5</mn></msup><mo>=</mo><mn>16</mn><mspace width=\"thinmathspace\"></mspace><mn>807</mn>"
+    },
+    "AataExpression_227": {
+      "test": true,
+      "input": "<mn>811</mn>"
+    },
+    "AataExpression_228": {
+      "test": true,
+      "input": "<mn>95</mn><mo>⋅<!-- ⋅ --></mo><mn>97</mn><mo>⋅<!-- ⋅ --></mo><mn>98</mn><mo>⋅<!-- ⋅ --></mo><mn>99</mn><mo>=</mo><mn>89,403,930</mn>"
+    },
+    "AataExpression_229": {
+      "test": true,
+      "input": "<msup><mn>90</mn><mrow class=\"MJX-TeXAtom-ORD\"><mo>∘<!-- ∘ --></mo></mrow></msup>"
+    },
+    "AataExpression_230": {
+      "test": true,
+      "input": "<mn>945</mn>"
+    },
+    "AataExpression_231": {
+      "test": true,
+      "input": "<mn>95</mn>"
+    },
+    "AataExpression_232": {
+      "test": true,
+      "input": "<mn>96</mn>"
+    },
+    "AataExpression_233": {
+      "test": true,
+      "input": "<mn>97</mn>"
+    },
+    "AataExpression_234": {
+      "test": true,
+      "input": "<mn>98</mn>"
+    },
+    "AataExpression_235": {
+      "test": true,
+      "input": "<mn>99</mn>"
+    },
+    "AataExpression_236": {
+      "test": true,
+      "input": "<mn>9923</mn>"
+    },
+    "AataExpression_237": {
+      "test": true,
+      "input": "<mi>a</mi><mo>∈<!-- ∈ --></mo><mi>A</mi>"
+    },
+    "AataExpression_238": {
+      "test": true,
+      "input": "<mi>Aut</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_239": {
+      "test": true,
+      "input": "<mi>A</mi><mo>⊂<!-- ⊂ --></mo><mi>B</mi>"
+    },
+    "AataExpression_240": {
+      "test": true,
+      "input": "<mi>h</mi><mo>:</mo><mi>C</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>D</mi>"
+    },
+    "AataExpression_241": {
+      "test": true,
+      "input": "<mi>G</mi><mo>×<!-- × --></mo><mi>G</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>G</mi>"
+    },
+    "AataExpression_242": {
+      "test": true,
+      "input": "<mi>GF</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><msup><mi>p</mi><mi>n</mi></msup><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_243": {
+      "test": true,
+      "input": "<mi>H</mi><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>e</mi><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_244": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">H</mi></mrow></mrow>"
+    },
+    "AataExpression_245": {
+      "test": true,
+      "input": "<mi>Hom</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>V</mi><mo>,</mo><mi>W</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_246": {
+      "test": true,
+      "input": "<mi>Inn</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_247": {
+      "test": true,
+      "input": "<mi>G</mi><msub><mi>L</mi><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_248": {
+      "test": true,
+      "input": "<mi>ϕ<!-- ϕ --></mi><mo>:</mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi class=\"MJX-tex-caligraphic\" mathvariant=\"script\">L</mi></mrow></mrow><mi>H</mi></msub><mo stretchy=\"false\">→<!-- → --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi class=\"MJX-tex-caligraphic\" mathvariant=\"script\">R</mi></mrow></mrow><mi>H</mi></msub>"
+    },
+    "AataExpression_249": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">M</mi></mrow></mrow><mn>2</mn></msub><mo stretchy=\"false\">(</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_250": {
+      "test": true,
+      "input": "<mi>R</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mi>M</mi>"
+    },
+    "AataExpression_251": {
+      "test": true,
+      "input": "<mn>1</mn><mo>&lt;</mo><mi>n</mi><mo>&lt;</mo><mi>N</mi>"
+    },
+    "AataExpression_252": {
+      "test": true,
+      "input": "<mi>Null</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>H</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_253": {
+      "test": true,
+      "input": "<mi>O</mi><mo stretchy=\"false\">(</mo><mi>n</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_254": {
+      "test": true,
+      "input": "<mi>P</mi><mi>A</mi><msup><mi>P</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup><mo>=</mo><mi>B</mi>"
+    },
+    "AataExpression_255": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">P</mi></mrow></mrow><mo stretchy=\"false\">(</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_256": {
+      "test": true,
+      "input": "<mi>Q</mi><mi>B</mi><msup><mi>Q</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup><mo>=</mo><mi>C</mi>"
+    },
+    "AataExpression_257": {
+      "test": true,
+      "input": "<mi>R</mi><mo>⊂<!-- ⊂ --></mo><mi>X</mi><mo>×<!-- × --></mo><mi>X</mi>"
+    },
+    "AataExpression_258": {
+      "test": true,
+      "input": "<mi>S</mi><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_259": {
+      "test": true,
+      "input": "<mtext>S</mtext><mo>=</mo><mn>18</mn>"
+    },
+    "AataExpression_260": {
+      "test": true,
+      "input": "<msub><mi>T</mi><mi>A</mi></msub><mo>:</mo><msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>2</mn></msup><mo stretchy=\"false\">→<!-- → --></mo><msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>2</mn></msup>"
+    },
+    "AataExpression_261": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">T</mi></mrow></mrow><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>z</mi><mo>∈<!-- ∈ --></mo><msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">C</mi></mrow></mrow><mo>∗<!-- ∗ --></mo></msup><mo>:</mo><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mi>z</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mo>=</mo><mn>1</mn><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_262": {
+      "test": true,
+      "input": "<mi>A</mi><mo>⊂<!-- ⊂ --></mo><mi>U</mi>"
+    },
+    "AataExpression_263": {
+      "test": true,
+      "input": "<mi>v</mi><mo>∈<!-- ∈ --></mo><mi>V</mi>"
+    },
+    "AataExpression_264": {
+      "test": true,
+      "input": "<mi>Y</mi><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>B</mi><mo>,</mo><mi>W</mi><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_265": {
+      "test": true,
+      "input": "<mi>f</mi><mo>:</mo><mi>X</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>Y</mi>"
+    },
+    "AataExpression_266": {
+      "test": true,
+      "input": "<msub><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">M</mi></mrow><mrow class=\"MJX-TeXAtom-ORD\"><mi>m</mi><mo>×<!-- × --></mo><mi>n</mi></mrow></msub><mo stretchy=\"false\">(</mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">Z</mi></mrow><mn>2</mn></msub><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_267": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">[</mo><mi>x</mi><mo stretchy=\"false\">]</mo><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>y</mi><mo>∈<!-- ∈ --></mo><mi>X</mi><mo>:</mo><mi>y</mi><mo>∼<!-- ∼ --></mo><mi>x</mi><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_268": {
+      "test": true,
+      "input": "<mi>F</mi><mo fence=\"false\" stretchy=\"false\">[</mo><mi>x</mi><mo fence=\"false\" stretchy=\"false\">]</mo>"
+    },
+    "AataExpression_269": {
+      "test": true,
+      "input": "<mi>char</mi><mo>⁡<!-- ⁡ --></mo><mi>R</mi>"
+    },
+    "AataExpression_270": {
+      "test": true,
+      "input": "<mi>r</mi><mi>cis</mi><mo>⁡<!-- ⁡ --></mo><mi>θ<!-- θ --></mi>"
+    },
+    "AataExpression_271": {
+      "test": true,
+      "input": "<mi>α<!-- α --></mi><mi>β<!-- β --></mi><mo>=</mo><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"normal\">i</mi><mi mathvariant=\"normal\">d</mi></mrow>"
+    },
+    "AataExpression_272": {
+      "test": true,
+      "input": "<mi>deg</mi><mo>⁡<!-- ⁡ --></mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>n</mi>"
+    },
+    "AataExpression_273": {
+      "test": true,
+      "input": "<mo movablelimits=\"true\" form=\"prefix\">det</mo><mi>A</mi><mo>=</mo><mi>a</mi><mi>d</mi><mo>−<!-- − --></mo><mi>b</mi><mi>c</mi><mo>≠<!-- ≠ --></mo><mn>0</mn>"
+    },
+    "AataExpression_274": {
+      "test": true,
+      "input": "<mi>dim</mi><mo>⁡<!-- ⁡ --></mo><mi>V</mi><mo>=</mo><mi>n</mi>"
+    },
+    "AataExpression_275": {
+      "test": true,
+      "input": "<msup><mi>f</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>−<!-- − --></mo><mn>1</mn></mrow></msup><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup>"
+    },
+    "AataExpression_276": {
+      "test": true,
+      "input": "<mi>f</mi><mo>⊂<!-- ⊂ --></mo><mi>A</mi><mo>×<!-- × --></mo><mi>B</mi>"
+    },
+    "AataExpression_277": {
+      "test": true,
+      "input": "<mi>g</mi><mo stretchy=\"false\">(</mo><mn>1</mn><mo stretchy=\"false\">)</mo><mo>=</mo><mi>a</mi>"
+    },
+    "AataExpression_278": {
+      "test": true,
+      "input": "<mi>d</mi><mo>=</mo><mo movablelimits=\"true\" form=\"prefix\">gcd</mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_279": {
+      "test": true,
+      "input": "<msub><mi>X</mi><mi>i</mi></msub><mo>∩<!-- ∩ --></mo><msub><mi>X</mi><mi>j</mi></msub><mo>=</mo><mi mathvariant=\"normal\">∅<!-- ∅ --></mi>"
+    },
+    "AataExpression_280": {
+      "test": true,
+      "input": "<mi>ker</mi><mo>⁡<!-- ⁡ --></mo><mi>ϕ<!-- ϕ --></mi>"
+    },
+    "AataExpression_281": {
+      "test": true,
+      "input": "<mi>s</mi><mo>−<!-- − --></mo><mi>t</mi><mo>=</mo><mi>l</mi><mi>n</mi>"
+    },
+    "AataExpression_282": {
+      "test": true,
+      "input": "<mi>lcm</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_283": {
+      "test": true,
+      "input": "<munder><mo movablelimits=\"true\" form=\"prefix\">lim</mo><mrow class=\"MJX-TeXAtom-ORD\"><mi>n</mi><mo stretchy=\"false\">→<!-- → --></mo><mi mathvariant=\"normal\">∞<!-- ∞ --></mi></mrow></munder><msub><mi>f</mi><mi>n</mi></msub><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><msub><mi>f</mi><mrow class=\"MJX-TeXAtom-ORD\"><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mo stretchy=\"false\">(</mo><msqrt><mn>5</mn></msqrt><mo>−<!-- − --></mo><mn>1</mn><mo stretchy=\"false\">)</mo><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mn>2</mn>"
+    },
+    "AataExpression_284": {
+      "test": true,
+      "input": "<mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>ln</mi><mo>⁡<!-- ⁡ --></mo><mi>x</mi>"
+    },
+    "AataExpression_285": {
+      "test": true,
+      "input": "<msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mi>m</mi></msup>"
+    },
+    "AataExpression_286": {
+      "test": true,
+      "input": "<mi>deg</mi><mo>⁡<!-- ⁡ --></mo><mo stretchy=\"false\">(</mo><mi>p</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>+</mo><mi>q</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">)</mo><mo>≤<!-- ≤ --></mo><mo movablelimits=\"true\" form=\"prefix\">max</mo><mo stretchy=\"false\">(</mo><mi>deg</mi><mo>⁡<!-- ⁡ --></mo><mi>p</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>,</mo><mi>deg</mi><mo>⁡<!-- ⁡ --></mo><mi>q</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_287": {
+      "test": true,
+      "input": "<msub><mi>d</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo movablelimits=\"true\" form=\"prefix\">min</mo></mrow></msub>"
+    },
+    "AataExpression_288": {
+      "test": true,
+      "input": "<mi>r</mi><mo>=</mo><mi>s</mi>"
+    },
+    "AataExpression_289": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">r</mi></mrow></mrow>"
+    },
+    "AataExpression_290": {
+      "test": true,
+      "input": "<mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>sin</mi><mo>⁡<!-- ⁡ --></mo><mi>x</mi>"
+    },
+    "AataExpression_291": {
+      "test": true,
+      "input": "<mi>r</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mi>s</mi><mo>∼<!-- ∼ --></mo><mi>t</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mi>u</mi>"
+    },
+    "AataExpression_292": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">b</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><mn>2</mn><mo>,</mo><mn>2</mn><msup><mo stretchy=\"false\">)</mo><mtext>t</mtext></msup>"
+    },
+    "AataExpression_293": {
+      "test": true,
+      "input": "<mi>v</mi><mo>∈<!-- ∈ --></mo><msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">R</mi></mrow></mrow><mn>2</mn></msup>"
+    },
+    "AataExpression_294": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">w</mi></mrow></mrow>"
+    },
+    "AataExpression_295": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">x</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><mo>…<!-- … --></mo><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_296": {
+      "test": true,
+      "input": "<mi>A</mi><mo>=</mo><mo fence=\"false\" stretchy=\"false\">{</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_297": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">y</mi></mrow></mrow><mo>=</mo><mo stretchy=\"false\">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><mo>…<!-- … --></mo><mo>,</mo><msub><mi>y</mi><mi>n</mi></msub><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_298": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mi>x</mi><mo>−<!-- − --></mo><mi>y</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo stretchy=\"false\">|</mo></mrow><mo>≤<!-- ≤ --></mo><mn>4</mn>"
+    },
+    "AataExpression_299": {
+      "test": true,
+      "input": "<mrow class=\"MJX-TeXAtom-ORD\"><mover><mi>σ<!-- σ --></mi><mo>~<!-- ~ --></mo></mover></mrow>"
+    },
+    "AataExpression_300": {
+      "test": true,
+      "input": "<mi>A</mi><mo>×<!-- × --></mo><mi>B</mi>"
+    },
+    "AataExpression_301": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">Δ<!-- Δ --></mi><mo>=</mo><msup><mi>b</mi><mn>2</mn></msup><mo>−<!-- − --></mo><mn>4</mn><mi>a</mi><mi>c</mi>"
+    },
+    "AataExpression_302": {
+      "test": true,
+      "input": "<mi>α<!-- α --></mi>"
+    },
+    "AataExpression_303": {
+      "test": true,
+      "input": "<mi>β<!-- β --></mi>"
+    },
+    "AataExpression_304": {
+      "test": true,
+      "input": "<mo fence=\"false\" stretchy=\"false\">⟨<!-- ⟨ --></mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">a</mi></mrow></mrow><mi>r</mi></msub><mo>,</mo><msub><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"bold\">a</mi></mrow></mrow><mi>s</mi></msub><mo fence=\"false\" stretchy=\"false\">⟩<!-- ⟩ --></mo><mo>=</mo><msub><mi>δ<!-- δ --></mi><mrow class=\"MJX-TeXAtom-ORD\"><mi>r</mi><mi>s</mi></mrow></msub>"
+    },
+    "AataExpression_305": {
+      "test": true,
+      "input": "<mi>η<!-- η --></mi><mo>:</mo><mi>G</mi><mrow class=\"MJX-TeXAtom-ORD\"><mo>/</mo></mrow><mi>K</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>ψ<!-- ψ --></mi><mo stretchy=\"false\">(</mo><mi>G</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_306": {
+      "test": true,
+      "input": "<mi>λ<!-- λ --></mi>"
+    },
+    "AataExpression_307": {
+      "test": true,
+      "input": "<msub><mi>μ<!-- μ --></mi><mn>1</mn></msub><msub><mi>ρ<!-- ρ --></mi><mn>1</mn></msub>"
+    },
+    "AataExpression_308": {
+      "test": true,
+      "input": "<mi>ν<!-- ν --></mi><mo>:</mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">Z</mi></mrow></mrow><mo stretchy=\"false\">[</mo><msqrt><mn>3</mn></msqrt><mspace width=\"thinmathspace\"></mspace><mi>i</mi><mo stretchy=\"false\">]</mo><mo stretchy=\"false\">→<!-- → --></mo><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">N</mi></mrow></mrow><mo>∪<!-- ∪ --></mo><mo fence=\"false\" stretchy=\"false\">{</mo><mn>0</mn><mo fence=\"false\" stretchy=\"false\">}</mo>"
+    },
+    "AataExpression_309": {
+      "test": true,
+      "input": "<mi>π<!-- π --></mi><mo>:</mo><mi>S</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>S</mi>"
+    },
+    "AataExpression_310": {
+      "test": true,
+      "input": "<mi>ψ<!-- ψ --></mi>"
+    },
+    "AataExpression_311": {
+      "test": true,
+      "input": "<mi>w</mi><mo>=</mo><mi>s</mi><mi>cis</mi><mo>⁡<!-- ⁡ --></mo><mi>ϕ<!-- ϕ --></mi>"
+    },
+    "AataExpression_312": {
+      "test": true,
+      "input": "<msup><mi>A</mi><mo>′</mo></msup>"
+    },
+    "AataExpression_313": {
+      "test": true,
+      "input": "<msup><mi>g</mi><mo>″</mo></msup>"
+    },
+    "AataExpression_314": {
+      "test": true,
+      "input": "<mi>ℓ<!-- ℓ --></mi>"
+    },
+    "AataExpression_315": {
+      "test": true,
+      "input": "<mi>f</mi><mo>:</mo><mi>A</mi><mo stretchy=\"false\">→<!-- → --></mo><mi>B</mi>"
+    },
+    "AataExpression_316": {
+      "test": true,
+      "input": "<mi>f</mi><mo>:</mo><mi>a</mi><mo stretchy=\"false\">↦<!-- ↦ --></mo><mi>b</mi>"
+    },
+    "AataExpression_317": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mo stretchy=\"false\">⇐<!-- ⇐ --></mo><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_318": {
+      "test": true,
+      "input": "<mi mathvariant=\"normal\">∅<!-- ∅ --></mi>"
+    },
+    "AataExpression_319": {
+      "test": true,
+      "input": "<mo>−<!-- − --></mo><mn>3</mn><mo>∉<!-- ∉ --></mo><mi>E</mi>"
+    },
+    "AataExpression_320": {
+      "test": true,
+      "input": "<msup><mrow class=\"MJX-TeXAtom-ORD\"><mrow class=\"MJX-TeXAtom-ORD\"><mi mathvariant=\"double-struck\">C</mi></mrow></mrow><mo>∗<!-- ∗ --></mo></msup>"
+    },
+    "AataExpression_321": {
+      "test": true,
+      "input": "<mo stretchy=\"false\">(</mo><mi>g</mi><mo>∘<!-- ∘ --></mo><mi>f</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo>=</mo><mi>g</mi><mo stretchy=\"false\">(</mo><mi>f</mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo stretchy=\"false\">)</mo><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_322": {
+      "test": true,
+      "input": "<mi>a</mi><mo>∣<!-- ∣ --></mo><mi>b</mi>"
+    },
+    "AataExpression_323": {
+      "test": true,
+      "input": "<mi>p</mi><mo>∤<!-- ∤ --></mo><mi>a</mi>"
+    },
+    "AataExpression_324": {
+      "test": true,
+      "input": "<mi>a</mi><mo>∧<!-- ∧ --></mo><mi>b</mi>"
+    },
+    "AataExpression_325": {
+      "test": true,
+      "input": "<mi>a</mi><mo>∨<!-- ∨ --></mo><mi>b</mi>"
+    },
+    "AataExpression_326": {
+      "test": true,
+      "input": "<mi>A</mi><mo>∪<!-- ∪ --></mo><mi>B</mi>"
+    },
+    "AataExpression_327": {
+      "test": true,
+      "input": "<mi>x</mi><mo>∼<!-- ∼ --></mo><mi>y</mi>"
+    },
+    "AataExpression_328": {
+      "test": true,
+      "input": "<mo>≅<!-- ≅ --></mo>"
+    },
+    "AataExpression_329": {
+      "test": true,
+      "input": "<mi>a</mi><mo>≠<!-- ≠ --></mo><mn>0</mn>"
+    },
+    "AataExpression_330": {
+      "test": true,
+      "input": "<mo>≡<!-- ≡ --></mo>"
+    },
+    "AataExpression_331": {
+      "test": true,
+      "input": "<mi>q</mi><mo>≢</mo><mn>1</mn><mspace width=\"0.444em\"></mspace><mo stretchy=\"false\">(</mo><mi>mod</mi><mspace width=\"0.333em\"></mspace><mi>p</mi><mo stretchy=\"false\">)</mo>"
+    },
+    "AataExpression_332": {
+      "test": true,
+      "input": "<mi>x</mi><mo>≥<!-- ≥ --></mo><mi>y</mi>"
+    },
+    "AataExpression_333": {
+      "test": true,
+      "input": "<mi>B</mi><mo>⊃<!-- ⊃ --></mo><mi>A</mi>"
+    },
+    "AataExpression_334": {
+      "test": true,
+      "input": "<mi>A</mi><mo>⊄</mo><mi>B</mi>"
+    },
+    "AataExpression_335": {
+      "test": true,
+      "input": "<mi>W</mi><mo>=</mo><mi>U</mi><mo>⊕<!-- ⊕ --></mo><mi>V</mi>"
+    },
+    "AataExpression_336": {
+      "test": true,
+      "input": "<mn>2</mn><mo>⋅<!-- ⋅ --></mo><mn>4</mn>"
+    },
+    "AataExpression_337": {
+      "test": true,
+      "input": "<msub><mi>Z</mi><mn>3</mn></msub><mo>⋊<!-- ⋊ --></mo><msub><mi>Z</mi><mn>4</mn></msub>"
+    },
+    "AataExpression_338": {
+      "test": true,
+      "input": "<mo>△<!-- △ --></mo><mi>A</mi><mi>B</mi><mi>C</mi>"
+    },
+    "AataExpression_339": {
+      "test": true,
+      "input": "<mi>a</mi><mo>⪯<!-- ⪯ --></mo><mi>b</mi>"
+    },
+    "AataExpression_340": {
+      "test": true,
+      "input": "<mo>⪰<!-- ⪰ --></mo>"
+    }
+  }
+}

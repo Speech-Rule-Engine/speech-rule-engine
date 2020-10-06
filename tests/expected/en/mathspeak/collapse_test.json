@@ -1,0 +1,384 @@
+{
+  "name": "CollapseEnglishTest",
+  "locale": "en",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "English Mathspeak Collapse tests.",
+  "domain": "mathspeak",
+  "active": "CollapseEnglish",
+  "exclude": [],
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "collapsed sum with 2 summands"
+    },
+    "CollapsedAddition_brief": {
+      "expected": "collapsed sum"
+    },
+    "CollapsedAddition_sbrief": {
+      "expected": "collapsed sum"
+    },
+    "CollapsedBigop_default": {
+      "expected": "collapsed sigma summation"
+    },
+    "CollapsedBigop_brief": {
+      "expected": "collapsed sigma summation"
+    },
+    "CollapsedBigop_sbrief": {
+      "expected": "collapsed sigma summation"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "collapsed binomial"
+    },
+    "CollapsedBinomial_brief": {
+      "expected": "collapsed binomial"
+    },
+    "CollapsedBinomial_sbrief": {
+      "expected": "collapsed binomial"
+    },
+    "CollapsedCases_default": {
+      "expected": "collapsed case statement with 2 cases"
+    },
+    "CollapsedCases_brief": {
+      "expected": "collapsed case statement"
+    },
+    "CollapsedCases_sbrief": {
+      "expected": "collapsed case statement"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "collapsed continued fraction"
+    },
+    "CollapsedContinuedFraction_brief": {
+      "expected": "collapsed continued frac"
+    },
+    "CollapsedContinuedFraction_sbrief": {
+      "expected": "collapsed continued frac"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "collapsed 2 dimensional determinant"
+    },
+    "CollapsedDeterminant_brief": {
+      "expected": "collapsed determinant"
+    },
+    "CollapsedDeterminant_sbrief": {
+      "expected": "collapsed determinant"
+    },
+    "CollapsedFraction_default": {
+      "expected": "collapsed fraction"
+    },
+    "CollapsedFraction_brief": {
+      "expected": "collapsed frac"
+    },
+    "CollapsedFraction_sbrief": {
+      "expected": "collapsed frac"
+    },
+    "CollapsedFunction_default": {
+      "_comment0_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "collapsed functional expression"
+    },
+    "CollapsedFunction_brief": {
+      "_comment0_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "collapsed function"
+    },
+    "CollapsedFunction_sbrief": {
+      "_comment0_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "collapsed function"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "collapsed long identifier"
+    },
+    "CollapsedIdentifier_brief": {
+      "expected": "collapsed long identifier"
+    },
+    "CollapsedIdentifier_sbrief": {
+      "expected": "collapsed long identifier"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "collapsed division with 2 elements"
+    },
+    "CollapsedInfixop_brief": {
+      "expected": "collapsed division"
+    },
+    "CollapsedInfixop_sbrief": {
+      "expected": "collapsed division"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "collapsed integral"
+    },
+    "CollapsedIntegral_brief": {
+      "expected": "collapsed integral"
+    },
+    "CollapsedIntegral_sbrief": {
+      "expected": "collapsed integral"
+    },
+    "CollapsedLim_default": {
+      "expected": "collapsed limit function"
+    },
+    "CollapsedLim_brief": {
+      "expected": "collapsed lim"
+    },
+    "CollapsedLim_sbrief": {
+      "expected": "collapsed lim"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "collapsed 3 by 2 matrix"
+    },
+    "CollapsedMatrix_brief": {
+      "expected": "collapsed matrix"
+    },
+    "CollapsedMatrix_sbrief": {
+      "expected": "collapsed matrix"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "collapsed long mixed number"
+    },
+    "CollapsedMixedNumber_brief": {
+      "expected": "collapsed long mixed number"
+    },
+    "CollapsedMixedNumber_sbrief": {
+      "expected": "collapsed long mixed number"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "collapsed product with 2 factors"
+    },
+    "CollapsedMultiplication_brief": {
+      "expected": "collapsed product"
+    },
+    "CollapsedMultiplication_sbrief": {
+      "expected": "collapsed product"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "collapsed relation sequence with 3 elements"
+    },
+    "CollapsedMultirel_brief": {
+      "expected": "collapsed relation sequence"
+    },
+    "CollapsedMultirel_sbrief": {
+      "expected": "collapsed relation sequence"
+    },
+    "CollapsedNumber_default": {
+      "expected": "collapsed long number"
+    },
+    "CollapsedNumber_brief": {
+      "expected": "collapsed long number"
+    },
+    "CollapsedNumber_sbrief": {
+      "expected": "collapsed long number"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "collapsed comma separated list of length 3"
+    },
+    "CollapsedPunctuated_brief": {
+      "expected": "collapsed comma separated list"
+    },
+    "CollapsedPunctuated_sbrief": {
+      "expected": "collapsed comma separated list"
+    },
+    "CollapsedRelation_default": {
+      "expected": "collapsed equality"
+    },
+    "CollapsedRelation_brief": {
+      "expected": "collapsed equality"
+    },
+    "CollapsedRelation_sbrief": {
+      "expected": "collapsed equality"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "collapsed equality sequence with 3 elements"
+    },
+    "CollapsedRelationSeq_brief": {
+      "expected": "collapsed equality sequence"
+    },
+    "CollapsedRelationSeq_sbrief": {
+      "expected": "collapsed equality sequence"
+    },
+    "CollapsedRoot_default": {
+      "expected": "collapsed root of index 3"
+    },
+    "CollapsedRoot_brief": {
+      "expected": "collapsed root"
+    },
+    "CollapsedRoot_sbrief": {
+      "expected": "collapsed root"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "collapsed nested root of index 3"
+    },
+    "CollapsedRootNested_brief": {
+      "expected": "collapsed nested root"
+    },
+    "CollapsedRootNested_sbrief": {
+      "expected": "collapsed nested root"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "collapsed 2 dimensional row vector"
+    },
+    "CollapsedRowvector_brief": {
+      "expected": "collapsed row vector"
+    },
+    "CollapsedRowvector_sbrief": {
+      "expected": "collapsed row vector"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "collapsed square root"
+    },
+    "CollapsedSqrt_brief": {
+      "expected": "collapsed square root"
+    },
+    "CollapsedSqrt_sbrief": {
+      "expected": "collapsed square root"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "collapsed nested square root"
+    },
+    "CollapsedSqrtNested_brief": {
+      "expected": "collapsed nested square root"
+    },
+    "CollapsedSqrtNested_sbrief": {
+      "expected": "collapsed nested square root"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "collapsed 2 dimensional square matrix"
+    },
+    "CollapsedSquarematrix_brief": {
+      "expected": "collapsed square matrix"
+    },
+    "CollapsedSquarematrix_sbrief": {
+      "expected": "collapsed square matrix"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "collapsed subscript"
+    },
+    "CollapsedSubscript_brief": {
+      "expected": "collapsed subscript"
+    },
+    "CollapsedSubscript_sbrief": {
+      "expected": "collapsed subscript"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "collapsed power with subscript"
+    },
+    "CollapsedSubsup_brief": {
+      "expected": "collapsed power with subscript"
+    },
+    "CollapsedSubsup_sbrief": {
+      "expected": "collapsed power with subscript"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "collapsed power"
+    },
+    "CollapsedSuperscript_brief": {
+      "expected": "collapsed power"
+    },
+    "CollapsedSuperscript_sbrief": {
+      "expected": "collapsed power"
+    },
+    "CollapsedTable_default": {
+      "expected": "collapsed table with 2 rows and 2 columns"
+    },
+    "CollapsedTable_brief": {
+      "expected": "collapsed table with 2 rows and 2 columns"
+    },
+    "CollapsedTable_sbrief": {
+      "expected": "collapsed table with 2 rows and 2 columns"
+    },
+    "CollapsedText_default": {
+      "expected": "collapsed text"
+    },
+    "CollapsedText_brief": {
+      "expected": "collapsed text"
+    },
+    "CollapsedText_sbrief": {
+      "expected": "collapsed text"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "collapsed sum with variable number of summands"
+    },
+    "CollapsedVarAddition_brief": {
+      "expected": "collapsed sum"
+    },
+    "CollapsedVarAddition_sbrief": {
+      "expected": "collapsed sum"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "collapsed case statement with variable number of cases"
+    },
+    "CollapsedVarCases_brief": {
+      "expected": "collapsed case statement"
+    },
+    "CollapsedVarCases_sbrief": {
+      "expected": "collapsed case statement"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "collapsed n dimensional determinant"
+    },
+    "CollapsedVarDeterminant_brief": {
+      "expected": "collapsed determinant"
+    },
+    "CollapsedVarDeterminant_sbrief": {
+      "expected": "collapsed determinant"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "collapsed n by m dimensional matrix"
+    },
+    "CollapsedVarMatrix_brief": {
+      "expected": "collapsed square matrix"
+    },
+    "CollapsedVarMatrix_sbrief": {
+      "expected": "collapsed square matrix"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "collapsed product with variable number of factors"
+    },
+    "CollapsedVarMultiplication_brief": {
+      "expected": "collapsed product"
+    },
+    "CollapsedVarMultiplication_sbrief": {
+      "expected": "collapsed product"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "collapsed relation sequence with variable number of elements"
+    },
+    "CollapsedVarMultirel_brief": {
+      "expected": "collapsed relation sequence"
+    },
+    "CollapsedVarMultirel_sbrief": {
+      "expected": "collapsed relation sequence"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "collapsed comma separated list of variable length"
+    },
+    "CollapsedVarPunctuated_brief": {
+      "expected": "collapsed comma separated list"
+    },
+    "CollapsedVarPunctuated_sbrief": {
+      "expected": "collapsed comma separated list"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "collapsed equality sequence with variable number of elements"
+    },
+    "CollapsedVarRelation_brief": {
+      "expected": "collapsed equality sequence"
+    },
+    "CollapsedVarRelation_sbrief": {
+      "expected": "collapsed equality sequence"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "collapsed n dimensional vector"
+    },
+    "CollapsedVarVector_brief": {
+      "expected": "collapsed vector"
+    },
+    "CollapsedVarVector_sbrief": {
+      "expected": "collapsed vector"
+    },
+    "CollapsedVector_default": {
+      "expected": "collapsed 3 dimensional vector"
+    },
+    "CollapsedVector_brief": {
+      "expected": "collapsed vector"
+    },
+    "CollapsedVector_sbrief": {
+      "expected": "collapsed vector"
+    }
+  }
+}

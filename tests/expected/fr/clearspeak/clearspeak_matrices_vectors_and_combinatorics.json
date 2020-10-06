@@ -1,0 +1,581 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchMatricesAndCombinatorics",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_matrices_vectors_and_combinatorics.json",
+  "information": "French Clearspeak Matrices, Vectors, and Combinatorics rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " ClearSpeak Rules and Preferences Examples: Matrices, Vectors, and",
+    "_comment2_": " Combinatorics",
+    "_comment3_": " Matrices, Vectors, and Combinatorics",
+    "Matrix001": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+    },
+    "Matrix002": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+    },
+    "Matrix003": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+    },
+    "Matrix004": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+    },
+    "Matrix005": {
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
+    },
+    "Matrix006": {
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
+    },
+    "Matrix007": {
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5"
+    },
+    "Matrix008": {
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5"
+    },
+    "Matrix008a": {
+      "expected": "la matrice de dimension 1 par 1 avec élément 3"
+    },
+    "Matrix008b": {
+      "expected": "la matrice de dimension 1 par 1 avec élément 3"
+    },
+    "Matrix009": {
+      "expected": "la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1"
+    },
+    "Matrix010": {
+      "expected": "la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2"
+    },
+    "Matrix011": {
+      "expected": "la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x"
+    },
+    "Matrix012": {
+      "expected": "la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2"
+    },
+    "Matrix013": {
+      "expected": "la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+    },
+    "Matrix014": {
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+    },
+    "Matrix015": {
+      "expected": "la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0"
+    },
+    "Matrix016": {
+      "expected": "la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
+    },
+    "Matrix017": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+    },
+    "Matrix018": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+    },
+    "Matrix019": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+    },
+    "Matrix019b": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+    },
+    "Matrix020": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+    },
+    "Matrix021": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2"
+    },
+    "Matrix022": {
+      "expected": "3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5.   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+    },
+    "Matrix023": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+    },
+    "Matrix024": {
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0.   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
+    },
+    "Matrix025": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+    },
+    "Matrix026": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+    },
+    "Matrix027": {
+      "expected": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+    },
+    "Matrix028": {
+      "expected": "déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+    },
+    "Matrix029": {
+      "expected": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+    },
+    "Matrix030": {
+      "expected": "déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+    },
+    "Matrix031": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+    },
+    "Matrix032": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+    },
+    "Matrix033": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+    },
+    "Matrix034": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+    },
+    "Matrix035": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+    },
+    "Matrix036": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+    },
+    "Matrix037": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+    },
+    "Matrix038": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+    },
+    "Matrix039": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+    },
+    "Matrix040": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+    },
+    "Matrix041": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+    },
+    "Matrix042": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+    },
+    "Matrix043": {
+      "expected": "la matrice colonne de dimension 3 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3"
+    },
+    "Matrix044": {
+      "expected": "la matrice colonne de dimension 3 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3"
+    },
+    "Matrix045": {
+      "expected": "la matrice ligne de dimension 1 par 2. colonne 1: 3 colonne 2: 5"
+    },
+    "Matrix046": {
+      "expected": "la matrice ligne de dimension 1 par 2. colonne 1: 3 colonne 2: 5"
+    },
+    "Matrix047": {
+      "expected": "la matrice ligne de dimension 1 par 4. colonne 1: 1 colonne 2: 2 colonne 3: 3 colonne 4: 4"
+    },
+    "Matrix048": {
+      "expected": "la matrice ligne de dimension 1 par 4. colonne 1: 1 colonne 2: 2 colonne 3: 3 colonne 4: 4"
+    },
+    "Matrix049": {
+      "expected": "la matrice colonne de dimension 4 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3 rangée 4: 4"
+    },
+    "Matrix050": {
+      "expected": "la matrice colonne de dimension 4 par 1. rangée 1: 1 rangée 2: 2 rangée 3: 3 rangée 4: 4"
+    },
+    "Matrix051": {
+      "expected": "la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1"
+    },
+    "Matrix052": {
+      "expected": "la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2"
+    },
+    "Matrix053": {
+      "expected": "la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x"
+    },
+    "Matrix054": {
+      "expected": "la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2"
+    },
+    "Matrix055": {
+      "expected": "la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7"
+    },
+    "Matrix056": {
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+    },
+    "Matrix057": {
+      "expected": "la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0"
+    },
+    "Matrix057a": {
+      "expected": "la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
+    },
+    "Matrix058": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+    },
+    "Matrix059": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+    },
+    "Matrix060": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+    },
+    "Matrix061": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers"
+    },
+    "Matrix062": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième"
+    },
+    "Matrix063": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, b sub 1 1; colonne 2, b sub 1 2. rangée 2: colonne 1, b sub 2 1; colonne 2, b sub 2 2"
+    },
+    "Matrix064": {
+      "expected": "3   la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+    },
+    "Matrix065": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6"
+    },
+    "Matrix066": {
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0.   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5"
+    },
+    "Matrix067": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+    },
+    "Matrix068": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+    },
+    "Matrix069": {
+      "expected": "le déterminant de la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7"
+    },
+    "Matrix070": {
+      "expected": "déterminant de la matrice de dimension 3 par 3. rangée 1: colonne 1, 2; colonne 2, 4; colonne 3, 1. rangée 2: colonne 1, 3; colonne 2, 5; colonne 3, 2. rangée 3: colonne 1, 1; colonne 2, 4; colonne 3, 7"
+    },
+    "Matrix071": {
+      "expected": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+    },
+    "Matrix072": {
+      "expected": "déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0"
+    },
+    "Matrix073": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+    },
+    "Matrix074": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x"
+    },
+    "Matrix075": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+    },
+    "Matrix076": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5"
+    },
+    "Matrix077": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers"
+    },
+    "Matrix078": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2 x; colonne 2, y. rangée 2: colonne 1, un-demi; colonne 2, deux-tiers"
+    },
+    "Matrix079": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième"
+    },
+    "Matrix080": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, un-demi; colonne 2, deux-tiers. rangée 2: colonne 1, trois-quarts; colonne 2, un-cinquième"
+    },
+    "Matrix081": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+    },
+    "Matrix082": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+    },
+    "Matrix083": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+    },
+    "Matrix084": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+    },
+    "Matrix085": {
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
+    },
+    "Matrix086": {
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3"
+    },
+    "Matrix087": {
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5"
+    },
+    "Matrix088": {
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5"
+    },
+    "Matrix089": {
+      "expected": "la matrice colonne de dimension 2 par 1. x plus 1, x moins 1"
+    },
+    "Matrix090": {
+      "expected": "la matrice colonne de dimension 4 par 1. 3, 6, 1, 2"
+    },
+    "Matrix091": {
+      "expected": "la matrice ligne de dimension 1 par 2. x plus 1, 2 x"
+    },
+    "Matrix092": {
+      "expected": "la matrice ligne de dimension 1 par 4. 3, 6, 1, 2"
+    },
+    "Matrix092a": {
+      "expected": "la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+    },
+    "Matrix093": {
+      "expected": "la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0"
+    },
+    "Matrix094": {
+      "expected": "la matrice de dimension 2 par 5. rangée 1: 2, 1, 0, 5, 3 rangée 2: 3, 4, 2, 7, 0"
+    },
+    "Matrix095": {
+      "expected": "la matrice de dimension 4 par 2. rangée 1: 1, 3 rangée 2: 4, 2 rangée 3: 2, 1 rangée 4: 0, 5"
+    },
+    "Matrix096": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x"
+    },
+    "Matrix097": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1 moins x, 4 rangée 2: 0, 2, 6"
+    },
+    "Matrix098": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+    },
+    "Matrix099": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+    },
+    "Matrix100": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+    },
+    "Matrix101": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2"
+    },
+    "Matrix102": {
+      "expected": "3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5.   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6"
+    },
+    "Matrix103": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième.   la matrice de dimension 2 par 3. rangée 1: 3, 1 moins x, 4 rangée 2: 0, 2, 6"
+    },
+    "Matrix104": {
+      "expected": "la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0.   la matrice de dimension 4 par 2. rangée 1: 1, 3 rangée 2: 4, 2 rangée 3: 2, 1 rangée 4: 0, 5"
+    },
+    "Matrix105": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+    },
+    "Matrix106": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5"
+    },
+    "Matrix107": {
+      "expected": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+    },
+    "Matrix108": {
+      "expected": "déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7"
+    },
+    "Matrix109": {
+      "expected": "le déterminant de la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0"
+    },
+    "Matrix110": {
+      "expected": "déterminant de la matrice de dimension 4 par 4. rangée 1: 0, 3, 4, 3 rangée 2: 2, 1, 0, 9 rangée 3: 3, 0, 2, 1 rangée 4: 6, 2, 9, 0"
+    },
+    "Matrix111": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x"
+    },
+    "Matrix112": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5 plus x"
+    },
+    "Matrix113": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+    },
+    "Matrix114": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5"
+    },
+    "Matrix115": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+    },
+    "Matrix116": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers"
+    },
+    "Matrix117": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+    },
+    "Matrix118": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième"
+    },
+    "Matrix119": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice"
+    },
+    "Matrix120": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice"
+    },
+    "Matrix121": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice"
+    },
+    "Matrix122": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice"
+    },
+    "Matrix123": {
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3. fin matrice"
+    },
+    "Matrix124": {
+      "expected": "la matrice colonne de dimension 3 par 1. 1, 2, 3. fin matrice"
+    },
+    "Matrix125": {
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5. fin matrice"
+    },
+    "Matrix126": {
+      "expected": "la matrice ligne de dimension 1 par 2. 3, 5. fin matrice"
+    },
+    "Matrix127": {
+      "expected": "la matrice colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1. fin matrice"
+    },
+    "Matrix128": {
+      "expected": "la matrice colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2. fin matrice"
+    },
+    "Matrix129": {
+      "expected": "la matrice ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x. fin matrice"
+    },
+    "Matrix130": {
+      "expected": "la matrice ligne de dimension 1 par 4. colonne 1: 3 colonne 2: 6 colonne 3: 1 colonne 4: 2. fin matrice"
+    },
+    "Matrix131": {
+      "expected": "la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin matrice"
+    },
+    "Matrix132": {
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice"
+    },
+    "Matrix133": {
+      "expected": "la matrice de dimension 2 par 5. rangée 1: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 5; colonne 5, 3. rangée 2: colonne 1, 3; colonne 2, 4; colonne 3, 2; colonne 4, 7; colonne 5, 0. fin matrice"
+    },
+    "Matrix134": {
+      "expected": "la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5. fin matrice"
+    },
+    "Matrix135": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin matrice"
+    },
+    "Matrix136": {
+      "expected": "la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6. fin matrice"
+    },
+    "Matrix137": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin matrice"
+    },
+    "Matrix138": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin matrice"
+    },
+    "Matrix139": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice"
+    },
+    "_comment4_": " TODO: (Simons) Rewrite certain indices from implicit multiplication to",
+    "_comment5_": " punctuation.",
+    "Matrix140": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: b sub 1 1, b sub 1 2 rangée 2: b sub 2 1, b sub 2 2. fin matrice"
+    },
+    "Matrix141": {
+      "expected": "3   la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice   la matrice de dimension 2 par 3. rangée 1: 3, 1, 4 rangée 2: 0, 2, 6. fin matrice"
+    },
+    "Matrix142": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice   la matrice de dimension 2 par 3. rangée 1: colonne 1, 3; colonne 2, 1 moins x; colonne 3, 4. rangée 2: colonne 1, 0; colonne 2, 2; colonne 3, 6. fin matrice"
+    },
+    "Matrix143": {
+      "expected": "la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice   la matrice de dimension 4 par 2. rangée 1: colonne 1, 1; colonne 2, 3. rangée 2: colonne 1, 4; colonne 2, 2. rangée 3: colonne 1, 2; colonne 2, 1. rangée 4: colonne 1, 0; colonne 2, 5. fin matrice"
+    },
+    "Matrix144": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin déterminant"
+    },
+    "Matrix145": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2, 1 rangée 2: 7, 5. fin matrice"
+    },
+    "Matrix146": {
+      "expected": "le déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin déterminant"
+    },
+    "Matrix147": {
+      "expected": "déterminant de la matrice de dimension 3 par 3. rangée 1: 2, 4, 1 rangée 2: 3, 5, 2 rangée 3: 1, 4, 7. fin matrice"
+    },
+    "Matrix148": {
+      "expected": "le déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin déterminant"
+    },
+    "Matrix149": {
+      "expected": "déterminant de la matrice de dimension 4 par 4. rangée 1: colonne 1, 0; colonne 2, 3; colonne 3, 4; colonne 4, 3. rangée 2: colonne 1, 2; colonne 2, 1; colonne 3, 0; colonne 4, 9. rangée 3: colonne 1, 3; colonne 2, 0; colonne 3, 2; colonne 4, 1. rangée 4: colonne 1, 6; colonne 2, 2; colonne 3, 9; colonne 4, 0. fin matrice"
+    },
+    "Matrix150": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin déterminant"
+    },
+    "Matrix151": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: colonne 1, 2; colonne 2, 1. rangée 2: colonne 1, 7; colonne 2, 5 plus x. fin matrice"
+    },
+    "Matrix152": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin déterminant"
+    },
+    "Matrix153": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, 1 rangée 2: 7, 5. fin matrice"
+    },
+    "Matrix154": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin déterminant"
+    },
+    "Matrix155": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: 2 x, y rangée 2: un-demi, deux-tiers. fin matrice"
+    },
+    "Matrix156": {
+      "expected": "le déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin déterminant"
+    },
+    "Matrix157": {
+      "expected": "déterminant de la matrice de dimension 2 par 2. rangée 1: un-demi, deux-tiers rangée 2: trois-quarts, un-cinquième. fin matrice"
+    },
+    "Matrix158": {
+      "expected": "le vecteur colonne de dimension 3 par 1. 1, 2, 3"
+    },
+    "Matrix159": {
+      "expected": "le vecteur colonne de dimension 3 par 1. 1, 2, 3"
+    },
+    "Matrix160": {
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 5"
+    },
+    "Matrix161": {
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 5"
+    },
+    "Matrix162": {
+      "expected": "le vecteur colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1"
+    },
+    "Matrix163": {
+      "expected": "le vecteur colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2"
+    },
+    "Matrix164": {
+      "expected": "le vecteur ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x"
+    },
+    "Matrix165": {
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 2.   la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4"
+    },
+    "Matrix166": {
+      "expected": "le vecteur ligne de dimension 1 par 3. 1, 2, 7.   la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2"
+    },
+    "Matrix167": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4.   le vecteur colonne de dimension 2 par 1. 3, 2"
+    },
+    "Matrix168": {
+      "expected": "la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2.   le vecteur colonne de dimension 3 par 1. 1, 2, 7"
+    },
+    "Matrix169": {
+      "expected": "le vecteur colonne de dimension 3 par 1. 1, 2, 3. fin vecteur"
+    },
+    "Matrix170": {
+      "expected": "le vecteur colonne de dimension 3 par 1. 1, 2, 3. fin vecteur"
+    },
+    "Matrix171": {
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 5. fin vecteur"
+    },
+    "Matrix172": {
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 5. fin vecteur"
+    },
+    "Matrix173": {
+      "expected": "le vecteur colonne de dimension 2 par 1. rangée 1: x plus 1 rangée 2: x moins 1. fin vecteur"
+    },
+    "Matrix174": {
+      "expected": "le vecteur colonne de dimension 4 par 1. rangée 1: 3 rangée 2: 6 rangée 3: 1 rangée 4: 2. fin vecteur"
+    },
+    "Matrix175": {
+      "expected": "le vecteur ligne de dimension 1 par 2. colonne 1: x plus 1 colonne 2: 2 x. fin vecteur"
+    },
+    "Matrix176": {
+      "expected": "le vecteur ligne de dimension 1 par 2. 3, 2. fin vecteur   la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4. fin matrice"
+    },
+    "Matrix177": {
+      "expected": "le vecteur ligne de dimension 1 par 3. 1, 2, 7. fin vecteur   la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2. fin matrice"
+    },
+    "Matrix178": {
+      "expected": "la matrice de dimension 2 par 2. rangée 1: 0, 5 rangée 2: 9, 4. fin matrice   le vecteur colonne de dimension 2 par 1. 3, 2. fin vecteur"
+    },
+    "Matrix179": {
+      "expected": "la matrice de dimension 3 par 3. rangée 1: 3, 5, 4 rangée 2: 8, 0, 6 rangée 3: 1, 4, 2. fin matrice   le vecteur colonne de dimension 3 par 1. 1, 2, 7. fin vecteur"
+    },
+    "Matrix180": {
+      "expected": "r parmi n"
+    },
+    "Matrix181": {
+      "expected": "7 parmi 10"
+    },
+    "Matrix182": {
+      "expected": "0 parmi 15"
+    },
+    "Matrix183": {
+      "expected": "3 parmi 8"
+    }
+  }
+}

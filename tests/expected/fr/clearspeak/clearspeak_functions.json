@@ -1,0 +1,724 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchFunctions",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_functions.json",
+  "information": "French Clearspeak Functions rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Functions",
+    "Function001": {
+      "expected": "f de x"
+    },
+    "Function002": {
+      "expected": "g de x"
+    },
+    "Function003": {
+      "expected": "h de x"
+    },
+    "Function004": {
+      "expected": "f de 2 x"
+    },
+    "Function005": {
+      "expected": "g de négatif 2 x"
+    },
+    "Function006": {
+      "expected": "h de un-demi"
+    },
+    "Function007": {
+      "_comment2_": " TODO: This throws a test exception.",
+      "_comment3_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h de, parenthèse gauche, 1 sur 2, parenthèse droite"
+    },
+    "Function008": {
+      "expected": "f de, parenthèse gauche, x plus 1, parenthèse droite, égale f de x, plus 1"
+    },
+    "Function009": {
+      "expected": "g de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function010": {
+      "expected": "g de, parenthèse gauche, x au carré, parenthèse droite"
+    },
+    "Function011": {
+      "expected": "f inverse de x"
+    },
+    "Function012": {
+      "expected": "g inverse de x"
+    },
+    "Function013": {
+      "expected": "h inverse de x"
+    },
+    "Function014": {
+      "expected": "f inverse de 2 x"
+    },
+    "Function015": {
+      "expected": "g inverse de négatif 2 x"
+    },
+    "Function016": {
+      "expected": "f inverse de, parenthèse gauche, 3 x, moins 1, parenthèse droite"
+    },
+    "Function017": {
+      "expected": "g inverse de, parenthèse gauche, x au carré, parenthèse droite"
+    },
+    "Function018": {
+      "expected": "h inverse de un-demi"
+    },
+    "Function019": {
+      "_comment4_": " TODO: This throws a test exception.",
+      "_comment5_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h inverse de, parenthèse gauche, 1 sur 2, parenthèse droite"
+    },
+    "Function020": {
+      "expected": "f inverse de, f de x"
+    },
+    "Function021": {
+      "expected": "g inverse de, g de x"
+    },
+    "Function022": {
+      "expected": "h inverse de, h de x"
+    },
+    "Function023": {
+      "expected": "f inverse de, f de 2 x"
+    },
+    "Function024": {
+      "expected": "g inverse de, g de négatif 2 x"
+    },
+    "Function025": {
+      "expected": "h inverse de, h de un-demi"
+    },
+    "Function026": {
+      "_comment6_": " TODO: This throws a test exception.",
+      "_comment7_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h inverse de, parenthèse gauche, h de, parenthèse gauche, 1 sur 2, parenthèse droite, parenthèse droite"
+    },
+    "Function027": {
+      "expected": "f inverse de, parenthèse gauche, f de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite, égale x plus 1"
+    },
+    "Function028": {
+      "expected": "g inverse de, parenthèse gauche, g de, parenthèse gauche, 2 x, plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Function029": {
+      "expected": "g inverse de, parenthèse gauche, g de, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite"
+    },
+    "Function030": {
+      "expected": "f de, f inverse de x"
+    },
+    "Function031": {
+      "expected": "g de, g inverse de x"
+    },
+    "Function032": {
+      "expected": "h de, h inverse de x"
+    },
+    "Function033": {
+      "expected": "f de, f inverse de 2 x"
+    },
+    "Function034": {
+      "expected": "g de, g inverse de négatif 2 x"
+    },
+    "Function035": {
+      "expected": "f de, parenthèse gauche, f inverse de, parenthèse gauche, 3 x, moins 1, parenthèse droite, parenthèse droite"
+    },
+    "Function036": {
+      "expected": "g de, g inverse de, parenthèse gauche, x au carré, parenthèse droite"
+    },
+    "Function037": {
+      "expected": "h de, h inverse de un-demi"
+    },
+    "Function038": {
+      "_comment8_": " TODO: This throws a test exception.",
+      "_comment9_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "expected": "h de, h inverse de, parenthèse gauche, fraction 1 sur 2, parenthèse droite"
+    },
+    "Function039": {
+      "expected": "f de, g de x"
+    },
+    "Function040": {
+      "expected": "f de, parenthèse gauche, g de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Function041": {
+      "expected": "h de, g de x"
+    },
+    "Function042": {
+      "expected": "h de, parenthèse gauche, g de, parenthèse gauche, fraction avec numérateur x, et dénominateur x plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Function043": {
+      "expected": "parenthèse gauche, f plus g, parenthèse droite, de x, égale f de x, plus g de x"
+    },
+    "Function044": {
+      "expected": "parenthèse gauche, f plus g, parenthèse droite, de, parenthèse gauche, x plus 1, parenthèse droite, égale f de, parenthèse gauche, x plus 1, parenthèse droite, plus g de, parenthèse gauche, x plus 1, parenthèse droite"
+    },
+    "Function045": {
+      "expected": "parenthèse gauche, f opérateur point g, parenthèse droite, de x"
+    },
+    "Function046": {
+      "expected": "parenthèse gauche, f opérateur point g, parenthèse droite, de, parenthèse gauche, 2 x, plus 5, parenthèse droite"
+    },
+    "Function047": {
+      "expected": "parenthèse gauche, f sur g, parenthèse droite, de x, égale, f de x, sur g de x"
+    },
+    "Function048": {
+      "expected": "parenthèse gauche, f sur g, parenthèse droite, de, parenthèse gauche, 2 x, plus 5, parenthèse droite, égale, fraction avec numérateur f de, parenthèse gauche, 2 x, plus 5, parenthèse droite, et dénominateur g de, parenthèse gauche, 2 x, plus 5, parenthèse droite"
+    },
+    "Function049": {
+      "expected": "parenthèse gauche, f opérateur rond g, parenthèse droite, de x, égale f de, g de x"
+    },
+    "Function050": {
+      "expected": "2 f de x"
+    },
+    "Function051": {
+      "expected": "c f de x"
+    },
+    "Function052": {
+      "expected": "f au carré de x"
+    },
+    "Function053": {
+      "expected": "f au carré de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function054": {
+      "expected": "f au cube de x"
+    },
+    "Function055": {
+      "expected": "f au cube de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function056": {
+      "expected": "f à la puissance 4; de x"
+    },
+    "Function057": {
+      "expected": "f à la puissance 4; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function058": {
+      "expected": "f à la puissance 5; de x"
+    },
+    "Function059": {
+      "expected": "f à la puissance 5; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function060": {
+      "expected": "f à la puissance n; de x"
+    },
+    "Function061": {
+      "expected": "f à la puissance n; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function062": {
+      "expected": "g au carré de x"
+    },
+    "Function063": {
+      "expected": "g au carré de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function064": {
+      "expected": "h au cube de x"
+    },
+    "Function065": {
+      "expected": "h au cube de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function066": {
+      "expected": "g à la puissance 4; de x"
+    },
+    "Function067": {
+      "expected": "g à la puissance 4; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function068": {
+      "expected": "h à la puissance 5; de x"
+    },
+    "Function069": {
+      "expected": "h à la puissance 5; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function070": {
+      "expected": "g à la puissance n; de x"
+    },
+    "Function071": {
+      "expected": "g à la puissance n; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function072": {
+      "expected": "f sub 1, de x"
+    },
+    "Function073": {
+      "expected": "g sub 2, de, parenthèse gauche, x au cube, parenthèse droite"
+    },
+    "Function074": {
+      "expected": "h sub n, de, parenthèse gauche, 3 x, moins 2, parenthèse droite"
+    },
+    "Function075": {
+      "expected": "f sub 1, inverse de x"
+    },
+    "Function076": {
+      "expected": "g sub 2, inverse de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function077": {
+      "expected": "h sub n, inverse de x"
+    },
+    "Function078": {
+      "expected": "g sub 1, inverse de, g sub 2, de x"
+    },
+    "Function079": {
+      "expected": "f sub 1, de, g sub 2, inverse de x"
+    },
+    "Function080": {
+      "expected": "f de, parenthèse gauche, x virgule y, parenthèse droite"
+    },
+    "Function081": {
+      "expected": "f de, parenthèse gauche, x virgule y virgule z, parenthèse droite"
+    },
+    "Function082": {
+      "expected": "f de, parenthèse gauche, x plus 1, virgule, 2 y, parenthèse droite"
+    },
+    "Function083": {
+      "expected": "f de, parenthèse gauche, 2 x, virgule, x plus 1, virgule, x au carré, parenthèse droite"
+    },
+    "Function084": {
+      "expected": "f fois x"
+    },
+    "Function085": {
+      "expected": "g fois x"
+    },
+    "Function086": {
+      "expected": "h fois x"
+    },
+    "Function087": {
+      "expected": "f fois 2 x"
+    },
+    "Function088": {
+      "expected": "g fois négatif 2 x"
+    },
+    "Function089": {
+      "expected": "h fois un-demi"
+    },
+    "Function090": {
+      "expected": "XXXX"
+    },
+    "Function091": {
+      "expected": "f fois, parenthèse gauche, x plus 1, parenthèse droite, égale, f fois x, plus 1"
+    },
+    "Function092": {
+      "expected": "g fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function093": {
+      "expected": "g fois, parenthèse gauche, x au carré, parenthèse droite"
+    },
+    "Function094": {
+      "expected": "f à la puissance négatif 1; fois x"
+    },
+    "Function095": {
+      "expected": "g à la puissance négatif 1; fois x"
+    },
+    "Function096": {
+      "expected": "h à la puissance négatif 1; fois x"
+    },
+    "Function097": {
+      "expected": "f à la puissance négatif 1; fois 2 x"
+    },
+    "Function098": {
+      "expected": "g à la puissance négatif 1; fois négatif 2 x"
+    },
+    "Function099": {
+      "expected": "f à la puissance négatif 1; fois, parenthèse gauche, 3 x, moins 1, parenthèse droite"
+    },
+    "Function100": {
+      "expected": "g à la puissance négatif 1; fois, parenthèse gauche, x au carré, parenthèse droite"
+    },
+    "Function101": {
+      "expected": "h à la puissance négatif 1; fois un-demi"
+    },
+    "Function102": {
+      "expected": "XXXX"
+    },
+    "Function103": {
+      "expected": "f à la puissance négatif 1; fois, f fois x"
+    },
+    "Function104": {
+      "expected": "g à la puissance négatif 1; fois, g fois x"
+    },
+    "Function105": {
+      "expected": "h à la puissance négatif 1; fois, h fois x"
+    },
+    "Function106": {
+      "expected": "f à la puissance négatif 1; fois, f fois 2 x"
+    },
+    "Function107": {
+      "expected": "g à la puissance négatif 1; fois, g fois négatif 2 x"
+    },
+    "Function108": {
+      "expected": "h à la puissance négatif 1; fois, h fois un-demi"
+    },
+    "Function109": {
+      "expected": "XXXX"
+    },
+    "Function110": {
+      "expected": "f à la puissance négatif 1; fois, parenthèse gauche, f fois, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite, égale x plus 1"
+    },
+    "Function111": {
+      "expected": "g à la puissance négatif 1; fois, parenthèse gauche, g fois, parenthèse gauche, 2 x, plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Function112": {
+      "expected": "g à la puissance négatif 1; fois, parenthèse gauche, g fois, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite"
+    },
+    "Function113": {
+      "expected": "f fois, parenthèse gauche, f à la puissance négatif 1; fois x, parenthèse droite"
+    },
+    "Function114": {
+      "expected": "g fois, parenthèse gauche, g à la puissance négatif 1; fois x, parenthèse droite"
+    },
+    "Function115": {
+      "expected": "h fois, parenthèse gauche, h à la puissance négatif 1; fois x, parenthèse droite"
+    },
+    "Function116": {
+      "expected": "f fois, parenthèse gauche, f à la puissance négatif 1; fois 2 x, parenthèse droite"
+    },
+    "Function117": {
+      "expected": "g fois, parenthèse gauche, g à la puissance négatif 1; fois négatif 2 x, parenthèse droite"
+    },
+    "Function118": {
+      "expected": "f fois, parenthèse gauche, f à la puissance négatif 1; fois, parenthèse gauche, 3 x, moins 1, parenthèse droite, parenthèse droite"
+    },
+    "Function119": {
+      "expected": "g fois, parenthèse gauche, g à la puissance négatif 1; fois, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite"
+    },
+    "Function120": {
+      "expected": "h fois, parenthèse gauche, h à la puissance négatif 1; fois un-demi, parenthèse droite"
+    },
+    "Function121": {
+      "expected": "XXXX"
+    },
+    "Function122": {
+      "expected": "f fois, g fois x"
+    },
+    "Function123": {
+      "expected": "f fois, parenthèse gauche, g fois, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Function124": {
+      "expected": "h fois, g fois x"
+    },
+    "Function125": {
+      "expected": "h fois, parenthèse gauche, g fois, parenthèse gauche, fraction avec numérateur x, et dénominateur x plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Function126": {
+      "expected": "parenthèse gauche, f plus g, parenthèse droite, fois x, égale, f fois x, plus, g fois x"
+    },
+    "Function127": {
+      "expected": "parenthèse gauche, f plus g, parenthèse droite, fois, parenthèse gauche, x plus 1, parenthèse droite, égale, f fois, parenthèse gauche, x plus 1, parenthèse droite, plus, g fois, parenthèse gauche, x plus 1, parenthèse droite"
+    },
+    "Function128": {
+      "expected": "parenthèse gauche, f opérateur point g, parenthèse droite, fois x"
+    },
+    "Function129": {
+      "expected": "parenthèse gauche, f opérateur point g, parenthèse droite, fois, parenthèse gauche, 2 x, plus 5, parenthèse droite"
+    },
+    "Function130": {
+      "expected": "parenthèse gauche, f sur g, parenthèse droite, fois x, égale, fraction avec numérateur, f fois x, et dénominateur, g fois x"
+    },
+    "Function131": {
+      "expected": "parenthèse gauche, f sur g, parenthèse droite, fois, parenthèse gauche, 2 x, plus 5, parenthèse droite, égale, fraction avec numérateur, f fois, parenthèse gauche, 2 x, plus 5, parenthèse droite, et dénominateur, g fois, parenthèse gauche, 2 x, plus 5, parenthèse droite"
+    },
+    "Function132": {
+      "expected": "2, f fois x"
+    },
+    "Function133": {
+      "expected": "c, f fois x"
+    },
+    "Function134": {
+      "expected": "f au carré fois x"
+    },
+    "Function135": {
+      "expected": "f au carré fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function136": {
+      "expected": "f au cube fois x"
+    },
+    "Function137": {
+      "expected": "f au cube fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function138": {
+      "expected": "f à la puissance 4; fois x"
+    },
+    "Function139": {
+      "expected": "f à la puissance 4; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function140": {
+      "expected": "f à la puissance 5; fois x"
+    },
+    "Function141": {
+      "expected": "f à la puissance 5; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function142": {
+      "expected": "f à la puissance n; fois x"
+    },
+    "Function143": {
+      "expected": "f à la puissance n; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function144": {
+      "expected": "g au carré fois x"
+    },
+    "Function145": {
+      "expected": "g au carré fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function146": {
+      "expected": "h au cube fois x"
+    },
+    "Function147": {
+      "expected": "h au cube fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function148": {
+      "expected": "g à la puissance 4; fois x"
+    },
+    "Function149": {
+      "expected": "g à la puissance 4; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function150": {
+      "expected": "h à la puissance 5; fois x"
+    },
+    "Function151": {
+      "expected": "h à la puissance 5; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function152": {
+      "expected": "g à la puissance n; fois x"
+    },
+    "Function153": {
+      "expected": "g à la puissance n; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function154": {
+      "expected": "f sub 1, fois x"
+    },
+    "Function156": {
+      "expected": "g sub 2, fois, parenthèse gauche, x au cube, parenthèse droite"
+    },
+    "Function157": {
+      "expected": "h sub n, fois, parenthèse gauche, 3 x, moins 2, parenthèse droite"
+    },
+    "Function158": {
+      "expected": "f sub 1, à la puissance négatif 1; fois x"
+    },
+    "Function159": {
+      "expected": "g sub 2, à la puissance négatif 1; fois, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function160": {
+      "expected": "h sub n, à la puissance négatif 1; fois x"
+    },
+    "Function161": {
+      "expected": "g sub 1, à la puissance négatif 1; fois, parenthèse gauche, g sub 2, fois x, parenthèse droite"
+    },
+    "Function162": {
+      "expected": "f sub 1, fois, parenthèse gauche, g sub 2, à la puissance négatif 1; fois x, parenthèse droite"
+    },
+    "Function163": {
+      "expected": "f fois, parenthèse gauche, x virgule y, parenthèse droite"
+    },
+    "Function164": {
+      "expected": "f fois, parenthèse gauche, x virgule y virgule z, parenthèse droite"
+    },
+    "Function165": {
+      "expected": "f fois, parenthèse gauche, x plus 1, virgule, 2 y, parenthèse droite"
+    },
+    "Function166": {
+      "expected": "f fois, parenthèse gauche, 2 x, virgule, x plus 1, virgule, x au carré, parenthèse droite"
+    },
+    "_comment10_": " NEW: Reciprocal",
+    "Function011b": {
+      "expected": "la reciproque de f de x"
+    },
+    "Function012b": {
+      "expected": "la reciproque de g de x"
+    },
+    "Function013b": {
+      "expected": "la reciproque de h de x"
+    },
+    "Function014b": {
+      "expected": "la reciproque de f de 2 x"
+    },
+    "Function015b": {
+      "expected": "la reciproque de g de négatif 2 x"
+    },
+    "Function016b": {
+      "expected": "la reciproque de f de, parenthèse gauche, 3 x, moins 1, parenthèse droite"
+    },
+    "Function017b": {
+      "expected": "la reciproque de g de, parenthèse gauche, x au carré, parenthèse droite"
+    },
+    "Function018b": {
+      "expected": "la reciproque de h de un-demi"
+    },
+    "Function019b": {
+      "expected": "la reciproque de h de, 1 sur 2"
+    },
+    "Function020b": {
+      "expected": "la reciproque de f de, f de x"
+    },
+    "Function021b": {
+      "expected": "la reciproque de g de, g de x"
+    },
+    "Function022b": {
+      "expected": "la reciproque de h de, h de x"
+    },
+    "Function023b": {
+      "expected": "la reciproque de f de, f de 2 x"
+    },
+    "Function024b": {
+      "expected": "la reciproque de g de, g de négatif 2 x"
+    },
+    "Function025b": {
+      "expected": "la reciproque de h de, h de un-demi"
+    },
+    "Function026b": {
+      "expected": "la reciproque de h de, h de, 1 sur 2"
+    },
+    "Function027b": {
+      "expected": "la reciproque de f de, parenthèse gauche, f de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite, égale x plus 1"
+    },
+    "Function028b": {
+      "expected": "la reciproque de g de, parenthèse gauche, g de, parenthèse gauche, 2 x, plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Function029b": {
+      "expected": "la reciproque de g de, parenthèse gauche, g de, parenthèse gauche, x au carré, parenthèse droite, parenthèse droite"
+    },
+    "Function030b": {
+      "expected": "f de, la reciproque de f de x"
+    },
+    "Function031b": {
+      "expected": "g de, la reciproque de g de x"
+    },
+    "Function032b": {
+      "expected": "h de, la reciproque de h de x"
+    },
+    "Function033b": {
+      "expected": "f de, la reciproque de f de 2 x"
+    },
+    "Function034b": {
+      "expected": "g de, la reciproque de g de négatif 2 x"
+    },
+    "Function035b": {
+      "expected": "f de, parenthèse gauche, la reciproque de f de, parenthèse gauche, 3 x, moins 1, parenthèse droite, parenthèse droite"
+    },
+    "Function036b": {
+      "expected": "g de, la reciproque de g de, parenthèse gauche, x au carré, parenthèse droite"
+    },
+    "Function037b": {
+      "expected": "h de, la reciproque de h de un-demi"
+    },
+    "Function038b": {
+      "expected": "h de, la reciproque de h de, fraction 1 sur 2"
+    },
+    "Function039b": {
+      "expected": "f de, g de x"
+    },
+    "Function040b": {
+      "expected": "f de, parenthèse gauche, g de, parenthèse gauche, x plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Function041b": {
+      "expected": "h de, g de x"
+    },
+    "Function042b": {
+      "expected": "h de, parenthèse gauche, g de, parenthèse gauche, fraction avec numérateur x, et dénominateur x plus 1, parenthèse droite, parenthèse droite"
+    },
+    "Function043b": {
+      "expected": "parenthèse gauche, f plus g, parenthèse droite, de x, égale f de x, plus g de x"
+    },
+    "Function044b": {
+      "expected": "parenthèse gauche, f plus g, parenthèse droite, de, parenthèse gauche, x plus 1, parenthèse droite, égale f de, parenthèse gauche, x plus 1, parenthèse droite, plus g de, parenthèse gauche, x plus 1, parenthèse droite"
+    },
+    "Function045b": {
+      "expected": "parenthèse gauche, f opérateur point g, parenthèse droite, de x"
+    },
+    "Function046b": {
+      "expected": "parenthèse gauche, f opérateur point g, parenthèse droite, de, parenthèse gauche, 2 x, plus 5, parenthèse droite"
+    },
+    "Function047b": {
+      "expected": "parenthèse gauche, f sur g, parenthèse droite, de x, égale, f de x, sur g de x"
+    },
+    "Function048b": {
+      "expected": "parenthèse gauche, f sur g, parenthèse droite, de, parenthèse gauche, 2 x, plus 5, parenthèse droite, égale, fraction avec numérateur f de, parenthèse gauche, 2 x, plus 5, parenthèse droite, et dénominateur g de, parenthèse gauche, 2 x, plus 5, parenthèse droite"
+    },
+    "Function049b": {
+      "expected": "parenthèse gauche, f opérateur rond g, parenthèse droite, de x, égale f de, g de x"
+    },
+    "Function050b": {
+      "expected": "2 f de x"
+    },
+    "Function051b": {
+      "expected": "c f de x"
+    },
+    "Function052b": {
+      "expected": "f au carré de x"
+    },
+    "Function053b": {
+      "expected": "f au carré de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function054b": {
+      "expected": "f au cube de x"
+    },
+    "Function055b": {
+      "expected": "f au cube de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function056b": {
+      "expected": "f à la puissance 4; de x"
+    },
+    "Function057b": {
+      "expected": "f à la puissance 4; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function058b": {
+      "expected": "f à la puissance 5; de x"
+    },
+    "Function059b": {
+      "expected": "f à la puissance 5; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function060b": {
+      "expected": "f à la puissance n; de x"
+    },
+    "Function061b": {
+      "expected": "f à la puissance n; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function062b": {
+      "expected": "g au carré de x"
+    },
+    "Function063b": {
+      "expected": "g au carré de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function064b": {
+      "expected": "h au cube de x"
+    },
+    "Function065b": {
+      "expected": "h au cube de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function066b": {
+      "expected": "g à la puissance 4; de x"
+    },
+    "Function067b": {
+      "expected": "g à la puissance 4; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function068b": {
+      "expected": "h à la puissance 5; de x"
+    },
+    "Function069b": {
+      "expected": "h à la puissance 5; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function070b": {
+      "expected": "g à la puissance n; de x"
+    },
+    "Function071b": {
+      "expected": "g à la puissance n; de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function072b": {
+      "expected": "f sub 1, de x"
+    },
+    "Function073b": {
+      "expected": "g sub 2, de, parenthèse gauche, x au cube, parenthèse droite"
+    },
+    "Function074b": {
+      "expected": "h sub n, de, parenthèse gauche, 3 x, moins 2, parenthèse droite"
+    },
+    "Function075b": {
+      "expected": "la reciproque de, f sub 1, de x"
+    },
+    "Function076b": {
+      "expected": "la reciproque de, g sub 2, de, parenthèse gauche, 2 x, plus 1, parenthèse droite"
+    },
+    "Function077b": {
+      "expected": "la reciproque de, h sub n, de x"
+    },
+    "Function078b": {
+      "expected": "la reciproque de, g sub 1, de, g sub 2, de x"
+    },
+    "Function079b": {
+      "expected": "f sub 1, de, la reciproque de, g sub 2, de x"
+    }
+  }
+}

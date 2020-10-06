@@ -1,0 +1,427 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchFractions",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_fractions.json",
+  "information": "French Clearspeak Fractions rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Fractions",
+    "Frac001": {
+      "expected": "un-demi"
+    },
+    "Frac002": {
+      "expected": "12 sur 32"
+    },
+    "Frac002a": {
+      "expected": "x sur y"
+    },
+    "Frac002b": {
+      "expected": "2 x sur 3 y"
+    },
+    "Frac002c": {
+      "expected": "x y sur c d"
+    },
+    "Frac002d": {
+      "expected": "un-demi sur un-tiers"
+    },
+    "Frac002e": {
+      "expected": "négatif x sur y"
+    },
+    "Frac002f": {
+      "expected": "négatif 2 x sur 3 y"
+    },
+    "Frac002g": {
+      "expected": "x y sur négatif c d"
+    },
+    "Frac002h": {
+      "expected": "un-demi sur négatif un-tiers"
+    },
+    "Frac003": {
+      "expected": "fraction avec numérateur 2 plus 3, et dénominateur 13"
+    },
+    "Frac004": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur 2"
+    },
+    "Frac005": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur x moins y"
+    },
+    "Frac006": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur x moins y, plus deux-tiers"
+    },
+    "Frac007": {
+      "expected": "miles sur gallon"
+    },
+    "Frac008": {
+      "expected": "2 miles sur 3 gallons"
+    },
+    "Frac009": {
+      "expected": "1 sur 2"
+    },
+    "Frac010": {
+      "expected": "12 sur 32"
+    },
+    "Frac011": {
+      "expected": "2 plus 3 sur 13"
+    },
+    "Frac012": {
+      "expected": "x plus y sur 2"
+    },
+    "Frac013": {
+      "expected": "x plus y sur x moins y"
+    },
+    "Frac014": {
+      "expected": "x plus y sur x moins y, plus, 2 sur 3"
+    },
+    "Frac015": {
+      "expected": "miles sur gallon"
+    },
+    "Frac016": {
+      "expected": "2 miles sur 3 gallons"
+    },
+    "Frac017": {
+      "expected": "1 sur 2, fin fraction"
+    },
+    "Frac018": {
+      "expected": "12 sur 32, fin fraction"
+    },
+    "Frac019": {
+      "expected": "2 plus 3 sur 13, fin fraction"
+    },
+    "Frac020": {
+      "expected": "x plus y sur 2, fin fraction"
+    },
+    "Frac021": {
+      "expected": "x plus y sur x moins y, fin fraction"
+    },
+    "Frac022": {
+      "expected": "x plus y sur x moins y, fin fraction, plus, 2 sur 3, fin fraction"
+    },
+    "Frac023": {
+      "expected": "miles sur gallons, fin fraction"
+    },
+    "Frac024": {
+      "expected": "2 miles sur 3 gallons, fin fraction"
+    },
+    "Frac025": {
+      "expected": "fraction avec numérateur 1, et dénominateur 2, fin fraction"
+    },
+    "Frac026": {
+      "expected": "fraction avec numérateur 12, et dénominateur 32, fin fraction"
+    },
+    "Frac027": {
+      "expected": "fraction avec numérateur 2 plus 3, et dénominateur 13, fin fraction"
+    },
+    "Frac028": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur 2, fin fraction"
+    },
+    "Frac029": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur x moins y, fin fraction"
+    },
+    "Frac030": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur x moins y, fin fraction, plus, fraction avec numérateur 2, et dénominateur 3, fin fraction"
+    },
+    "Frac031": {
+      "expected": "fraction avec numérateur miles, et dénominateur gallon, fin fraction"
+    },
+    "Frac032": {
+      "expected": "fraction avec numérateur 1, et dénominateur 2"
+    },
+    "Frac033": {
+      "expected": "fraction avec numérateur 12, et dénominateur 32"
+    },
+    "Frac034": {
+      "expected": "fraction avec numérateur 2 plus 3, et dénominateur 13"
+    },
+    "Frac035": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur 2"
+    },
+    "Frac036": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur x moins y"
+    },
+    "Frac037": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur x moins y, plus, fraction avec numérateur 2, et dénominateur 3"
+    },
+    "Frac038": {
+      "expected": "fraction avec numérateur miles, et dénominateur gallon"
+    },
+    "Frac039": {
+      "expected": "fraction avec numérateur 2 miles, et dénominateur 3 gallons"
+    },
+    "Frac040": {
+      "expected": "fraction 1 sur 2"
+    },
+    "Frac041": {
+      "expected": "fraction 12 sur 32"
+    },
+    "Frac042": {
+      "expected": "fraction 2 plus 3 sur 13"
+    },
+    "Frac043": {
+      "expected": "fraction x plus y sur 2"
+    },
+    "Frac044": {
+      "expected": "fraction x plus y sur x moins y"
+    },
+    "Frac045": {
+      "expected": "fraction x plus y sur x moins y, plus, fraction 2 sur 3"
+    },
+    "Frac046": {
+      "expected": "fraction miles sur gallon"
+    },
+    "Frac047": {
+      "expected": "fraction 2 miles sur 3 gallons"
+    },
+    "Frac048": {
+      "expected": "1 par 2"
+    },
+    "Frac049": {
+      "expected": "12 par 32"
+    },
+    "Frac050": {
+      "expected": "2 plus 3 par 13"
+    },
+    "Frac051": {
+      "expected": "x plus y par 2"
+    },
+    "Frac052": {
+      "expected": "x plus y par x moins y"
+    },
+    "Frac053": {
+      "expected": "x plus y par x moins y, plus, 2 par 3"
+    },
+    "Frac054": {
+      "expected": "miles par gallon"
+    },
+    "Frac055": {
+      "expected": "2 miles par 3 gallons"
+    },
+    "Frac056": {
+      "expected": "un-demi"
+    },
+    "Frac057": {
+      "expected": "douze-trente-deuxièmes"
+    },
+    "Frac058": {
+      "expected": "fraction avec numérateur 2 plus 3, et dénominateur 13"
+    },
+    "Frac059": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur 2"
+    },
+    "Frac060": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur x moins y"
+    },
+    "Frac061": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur x moins y, plus deux-tiers"
+    },
+    "Frac062": {
+      "expected": "miles sur gallon"
+    },
+    "Frac063": {
+      "expected": "2 miles sur 3 gallons"
+    },
+    "Frac064": {
+      "expected": "un-demi"
+    },
+    "Frac065": {
+      "expected": "12 sur 32, fin fraction"
+    },
+    "Frac066": {
+      "expected": "fraction avec numérateur 2 plus 3, et dénominateur 13, fin fraction"
+    },
+    "Frac067": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur 2, fin fraction"
+    },
+    "Frac068": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur x moins y, fin fraction"
+    },
+    "Frac069": {
+      "expected": "fraction avec numérateur x plus y, et dénominateur x moins y, fin fraction, plus deux-tiers"
+    },
+    "Frac070": {
+      "expected": "miles sur gallons"
+    },
+    "Frac071": {
+      "expected": "2 miles sur 3 gallons"
+    },
+    "_comment2_": " Fraction (with Text in Numerator and/or denominator)",
+    "FrTxt001": {
+      "expected": "2 miles sur 3 gallons"
+    },
+    "FrTxt002": {
+      "expected": "rise sur run"
+    },
+    "FrTxt003": {
+      "expected": "successful outcomes sur total outcomes"
+    },
+    "FrTxt004": {
+      "expected": "6 ways of rolling a 7 sur 36 ways of rolling the pair of dice"
+    },
+    "_comment3_": " Nested Fractions",
+    "NestFrac001": {
+      "expected": "un-demi sur un-tiers"
+    },
+    "NestFrac002": {
+      "expected": "fraction avec numérateur 1, et dénominateur, 2 sur un-tiers"
+    },
+    "NestFrac003": {
+      "expected": "un-demi sur 3"
+    },
+    "NestFrac004": {
+      "expected": "1 sur deux-tiers"
+    },
+    "NestFrac005": {
+      "expected": "fraction avec numérateur, 11 sur 32, et dénominateur, 16 sur 51"
+    },
+    "NestFrac006": {
+      "expected": "fraction avec numérateur 11, et dénominateur, fraction avec numérateur 32, et dénominateur, 16 sur 51"
+    },
+    "NestFrac007": {
+      "expected": "fraction avec numérateur 1 plus, 4 sur x, et dénominateur 2"
+    },
+    "NestFrac008": {
+      "expected": "fraction avec numérateur 3, et dénominateur 2 plus, 4 sur x"
+    },
+    "NestFrac009": {
+      "expected": "fraction avec numérateur, 10 sur 22, et dénominateur un-demi"
+    },
+    "NestFrac010": {
+      "expected": "fraction avec numérateur 1 plus deux-tiers, et dénominateur 1 moins deux-tiers"
+    },
+    "NestFrac011": {
+      "expected": "fraction avec numérateur 1 plus, x sur 2, et dénominateur 1 moins, x sur 2"
+    },
+    "NestFrac012": {
+      "expected": "fraction avec numérateur, fraction avec numérateur x plus 1, et dénominateur x moins 1, plus 1, et dénominateur x plus 1"
+    },
+    "NestFrac013": {
+      "expected": "fraction avec numérateur, fraction avec numérateur x plus 1, et dénominateur x moins 4, plus un-demi, et dénominateur x plus, 1 sur 16"
+    },
+    "NestFrac014": {
+      "expected": "1 plus, fraction avec numérateur x, et dénominateur 1 plus, 2 sur x"
+    },
+    "NestFrac015": {
+      "expected": "1 plus, fraction avec numérateur x plus 3, et dénominateur 1 plus, fraction avec numérateur 2, et dénominateur x plus 3"
+    },
+    "NestFrac016": {
+      "expected": "1 plus, fraction avec numérateur 1, et dénominateur 1 plus, fraction avec numérateur 1, et dénominateur 1 plus, fraction avec numérateur 1, et dénominateur 1 plus 1"
+    },
+    "NestFrac017": {
+      "expected": "1 plus, fraction avec numérateur 1, et dénominateur 1 plus, fraction avec numérateur 1, et dénominateur 1 plus, fraction avec numérateur 1, et dénominateur 1 plus trois points médians"
+    },
+    "NestFrac018": {
+      "expected": "a sub 0, plus, fraction avec numérateur 1, et dénominateur, a sub 1, plus, fraction avec numérateur 1, et dénominateur, a sub 2, plus, fraction avec numérateur 1, et dénominateur, a sub 3, plus trois points médians"
+    },
+    "NestFrac019": {
+      "expected": "un-demi sur un-tiers"
+    },
+    "NestFrac020": {
+      "expected": "fraction avec numérateur 1, et dénominateur, 2 sur un-tiers, fin fraction"
+    },
+    "NestFrac021": {
+      "expected": "un-demi sur 3, fin fraction"
+    },
+    "NestFrac022": {
+      "expected": "1 sur deux-tiers, fin fraction"
+    },
+    "NestFrac023": {
+      "expected": "fraction avec numérateur, 11 sur 32, et dénominateur, 16 sur 51, fin fraction"
+    },
+    "NestFrac024": {
+      "expected": "fraction avec numérateur 11, et dénominateur, fraction avec numérateur 32, et dénominateur, 16 sur 51, fin fraction"
+    },
+    "NestFrac025": {
+      "expected": "fraction avec numérateur 1 plus, 4 sur x, et dénominateur 2, fin fraction"
+    },
+    "NestFrac026": {
+      "expected": "fraction avec numérateur 3, et dénominateur 2 plus, 4 sur x, fin fraction"
+    },
+    "NestFrac027": {
+      "expected": "fraction avec numérateur, 10 sur 22, et dénominateur un-demi, fin fraction"
+    },
+    "NestFrac028": {
+      "expected": "fraction avec numérateur 1 plus deux-tiers, et dénominateur 1 moins deux-tiers, fin fraction"
+    },
+    "NestFrac029": {
+      "expected": "fraction avec numérateur 1 plus, x sur 2, et dénominateur 1 moins, x sur 2, fin fraction"
+    },
+    "NestFrac030": {
+      "expected": "fraction avec numérateur, fraction avec numérateur x plus 1, et dénominateur x moins 1, plus 1, et dénominateur x plus 1, fin fraction"
+    },
+    "NestFrac031": {
+      "expected": "fraction avec numérateur, fraction avec numérateur x plus 1, et dénominateur x moins 4, plus un-demi, et dénominateur x plus, 1 sur 16, fin fraction"
+    },
+    "NestFrac032": {
+      "expected": "1 plus, fraction avec numérateur x, et dénominateur 1 plus, 2 sur x, fin fraction"
+    },
+    "NestFrac033": {
+      "expected": "1 plus, fraction avec numérateur x plus 3, et dénominateur 1 plus, fraction avec numérateur 2, et dénominateur x plus 3, fin fraction"
+    },
+    "NestFrac034": {
+      "expected": "1 plus, fraction avec numérateur 1, et dénominateur 1 plus, fraction avec numérateur 1, et dénominateur 1 plus, fraction avec numérateur 1, et dénominateur 1 plus 1, fin fraction"
+    },
+    "NestFrac035": {
+      "expected": "1 plus, fraction avec numérateur 1, et dénominateur 1 plus, fraction avec numérateur 1, et dénominateur 1 plus, fraction avec numérateur 1, et dénominateur 1 plus trois points médians, fin fraction"
+    },
+    "NestFrac036": {
+      "expected": "a sub 0, plus, fraction avec numérateur 1, et dénominateur, a sub 1, plus, fraction avec numérateur 1, et dénominateur, a sub 2, plus, fraction avec numérateur 1, et dénominateur, a sub 3, plus trois points médians, fin fraction"
+    },
+    "_comment4_": " Fractions with Functions",
+    "Fracfunct001": {
+      "expected": "f de x, sur g de x"
+    },
+    "Fracfunct002": {
+      "expected": "fraction avec numérateur f de x, plus g de x, et dénominateur g de x"
+    },
+    "Fracfunct003": {
+      "expected": "fraction avec numérateur f de, parenthèse gauche, x plus 1, parenthèse droite, et dénominateur g de x"
+    },
+    "Fracfunct004": {
+      "expected": "f de x, sur 2"
+    },
+    "Fracfunct005": {
+      "expected": "2 sur f de x"
+    },
+    "Fracfunct006": {
+      "expected": "fraction avec numérateur 2, et dénominateur g de x, plus g de, parenthèse gauche, x plus 1, parenthèse droite"
+    },
+    "Fracfunct007": {
+      "expected": "sinus x sur cosinus x"
+    },
+    "Fracfunct008": {
+      "expected": "XXXX"
+    },
+    "Fracfunct009": {
+      "expected": "fraction avec numérateur sinus x plus cosinus x, et dénominateur cosinus x"
+    },
+    "Fracfunct010": {
+      "expected": "sinus 2 x sur cosinus 3 x"
+    },
+    "Fracfunct011": {
+      "expected": "fraction avec numérateur, sinus de, parenthèse gauche, x plus y, parenthèse droite, et dénominateur, cosinus de, parenthèse gauche, x plus y, parenthèse droite"
+    },
+    "Fracfunct012": {
+      "expected": "f de 2 x, sur g de 3 x"
+    },
+    "Fracfunct013": {
+      "expected": "log x sur log y"
+    },
+    "Fracfunct014": {
+      "expected": "log 2 x sur log 3 y"
+    },
+    "Fracfunct015": {
+      "expected": "log base 10 de, x, sur, log base 5 de, y"
+    },
+    "Fracfunct016": {
+      "expected": "log base 10 de, 2 x, sur, log base 5 de, 3 y"
+    },
+    "Fracfunct017": {
+      "expected": "fraction avec numérateur, log de, parenthèse gauche, x plus 1, parenthèse droite, et dénominateur log y"
+    },
+    "Fracfunct018": {
+      "expected": "f sub 1, de x, sur, g sub 1, de x"
+    }
+  }
+}

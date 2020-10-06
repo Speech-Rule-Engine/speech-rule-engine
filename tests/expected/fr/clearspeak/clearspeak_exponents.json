@@ -1,0 +1,327 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchExponents",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_exponents.json",
+  "information": "French Clearspeak Exponents rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": ["Exp085", "Exp086", "Exp087", "Exp088", "Exp089", "Exp090", "Exp091", "Exp092", "Exp093", "Exp094", "Exp095", "Exp096", "Exp097", "Exp098", "Exp099", "Exp100", "Exp101", "Exp102", "Exp103", "Exp104", "Exp105", "Exp106", "Exp107", "Exp108", "Exp109", "Exp110", "Exp111", "Exp112", "Exp113", "Exp114", "Exp115", "Exp116", "Exp117", "Exp118", "Exp119", "Exp120", "Exp121", "Exp122", "Exp123", "Exp124", "Exp125", "Exp126", "Exp127", "Exp128", "Exp129", "Exp130", "Exp131", "Exp132b", "Exp133", "Exp134", "Exp135", "Exp136", "Exp137", "Exp138", "Exp139", "Exp140", "Exp141", "Exp142", "Exp143", "Exp144", "Exp145", "Exp146", "Exp147", "Exp148", "Exp149", "Exp150", "Exp151", "Exp152", "Exp153", "Exp154", "Exp155", "Exp156", "Exp157", "Exp158", "Exp159", "Exp160", "Exp161", "Exp162", "Exp163", "Exp164", "Exp165", "Exp166", "Exp167", "Exp168", "Exp169", "Exp170", "Exp171", "Exp172", "Exp173", "Exp174"],
+  "tests": {
+    "_comment1_": " Exponents",
+    "Exp001": {
+      "expected": "3 au carré"
+    },
+    "Exp002a": {
+      "expected": "3 au cube"
+    },
+    "Exp003": {
+      "expected": "3 à la puissance 5"
+    },
+    "Exp004": {
+      "expected": "3 à la puissance 1"
+    },
+    "Exp005": {
+      "expected": "b à la puissance 1"
+    },
+    "Exp006": {
+      "expected": "3 à la puissance 5,0"
+    },
+    "Exp007": {
+      "expected": "3 à la puissance 0"
+    },
+    "Exp008": {
+      "expected": "4 à la puissance 11"
+    },
+    "Exp009": {
+      "expected": "3 à la puissance négatif 2"
+    },
+    "Exp010a": {
+      "expected": "3 à la puissance négatif 2,0"
+    },
+    "Exp011": {
+      "expected": "4 à la puissance x"
+    },
+    "Exp012": {
+      "expected": "3 à la puissance y plus 2"
+    },
+    "Exp013": {
+      "expected": "parenthèse gauche, 2 y, moins 3, parenthèse droite, à la puissance 3 z, plus 8"
+    },
+    "Exp014": {
+      "expected": "p sub 1, au carré"
+    },
+    "Exp015": {
+      "expected": "p sub 1, au cube"
+    },
+    "Exp016": {
+      "expected": "p sub 1, à la puissance 4"
+    },
+    "Exp017": {
+      "expected": "p sub 1, à la puissance 10"
+    },
+    "Exp018": {
+      "expected": "p sub 1, à la puissance x plus 1"
+    },
+    "Exp019": {
+      "expected": "p sub, x sub 1, au carré"
+    },
+    "Exp010b": {
+      "expected": "p sub, x sub 1, au cube"
+    },
+    "Exp011b": {
+      "expected": "p sub, x sub 1, à la puissance 4"
+    },
+    "Exp012b": {
+      "expected": "p sub, x sub 1, à la puissance 10"
+    },
+    "Exp013b": {
+      "expected": "p sub, x sub 1, à la puissance y plus 1"
+    },
+    "Exp014b": {
+      "expected": "3 à la puissance 2 au carré"
+    },
+    "Exp015b": {
+      "expected": "3 à la puissance 2 x au carré"
+    },
+    "Exp016b": {
+      "expected": "5 à la puissance 2 au cube"
+    },
+    "Exp017b": {
+      "expected": "5 à la puissance 2 x au cube"
+    },
+    "Exp018b": {
+      "expected": "3 à l'exposant, 2 au carré plus 1, fin exposant"
+    },
+    "Exp019b": {
+      "expected": "3 à la puissance 2 au carré; plus 1"
+    },
+    "Exp020": {
+      "expected": "2 à l'exposant, x au carré plus 3 x au cube, fin exposant"
+    },
+    "Exp021": {
+      "expected": "3 à l'exposant, 3 à la puissance 4; fin exposant"
+    },
+    "Exp022": {
+      "expected": "3 à l'exposant, 3 à la puissance 4; plus 2, fin exposant"
+    },
+    "Exp023": {
+      "expected": "3 à l'exposant, 3 à la puissance 4; fin exposant, plus 2"
+    },
+    "Exp024": {
+      "expected": "2 à l'exposant, x à la puissance 4; fin exposant"
+    },
+    "Exp025": {
+      "expected": "2 à l'exposant, 10 à la puissance x plus 3; fin exposant"
+    },
+    "Exp026": {
+      "expected": "3 à l'exposant, 3 à la puissance 10; fin exposant"
+    },
+    "Exp027": {
+      "expected": "3 à l'exposant, 3 à la puissance 10; plus 1, fin exposant"
+    },
+    "Exp028": {
+      "expected": "3 à l'exposant, 3 à la puissance 10; fin exposant, plus 1"
+    },
+    "Exp029": {
+      "expected": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, au carré, fin exposant"
+    },
+    "Exp030": {
+      "expected": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance 10; fin exposant"
+    },
+    "Exp031": {
+      "expected": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y plus 2; fin exposant"
+    },
+    "Exp032": {
+      "expected": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y; plus 2, fin exposant"
+    },
+    "Exp033": {
+      "expected": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y; fin exposant, plus 2"
+    },
+    "_comment2_": " TODO: (Simons) This does not work as semantically we have a -(xy) rather than",
+    "_comment3_": "       (-x)(y).",
+    "Exp034": {
+      "expected": "XXXXX"
+    },
+    "Exp035": {
+      "expected": "e à l'exposant, négatif un-demi  , parenthèse gauche, fraction avec numérateur x moins mû, et dénominateur sigma, parenthèse droite, au carré, fin exposant"
+    },
+    "Exp036": {
+      "expected": "2 à la puissance n"
+    },
+    "Exp037": {
+      "expected": "2 à la puissance m"
+    },
+    "Exp038": {
+      "expected": "2 à la puissance i"
+    },
+    "Exp039": {
+      "expected": "2 à la puissance j"
+    },
+    "Exp040": {
+      "expected": "2 à la puissance a"
+    },
+    "Exp041": {
+      "expected": "3 au carré"
+    },
+    "Exp042": {
+      "expected": "3 au cube"
+    },
+    "Exp043": {
+      "expected": "3 à la puissance 0"
+    },
+    "Exp044": {
+      "expected": "3 à la puissance 1"
+    },
+    "Exp045": {
+      "expected": "3 à la puissance 5"
+    },
+    "Exp046": {
+      "expected": "4 à la puissance 3,0"
+    },
+    "Exp047": {
+      "expected": "4 à la puissance 11"
+    },
+    "Exp048": {
+      "expected": "3 à la puissance négatif 2"
+    },
+    "Exp049": {
+      "expected": "3 à la puissance négatif 2,0"
+    },
+    "Exp050": {
+      "expected": "4 à la x-ième puissance"
+    },
+    "Exp051": {
+      "expected": "3 à la puissance y plus 2"
+    },
+    "Exp052": {
+      "expected": "parenthèse gauche, 2 y, moins 3, parenthèse droite, à la puissance 3 z, plus 8"
+    },
+    "Exp053": {
+      "expected": "p sub 1, au carré"
+    },
+    "Exp054": {
+      "expected": "p sub 1, au cube"
+    },
+    "Exp055": {
+      "expected": "p sub 1, à la puissance 4"
+    },
+    "Exp056": {
+      "expected": "p sub 1, à la puissance 10"
+    },
+    "Exp057": {
+      "expected": "p sub 1, à la puissance x plus 1"
+    },
+    "Exp058": {
+      "expected": "p sub, x sub 1, au carré"
+    },
+    "Exp059": {
+      "expected": "p sub, x sub 1, au cube"
+    },
+    "Exp060": {
+      "expected": "p sub, x sub 1, à la puissance 4"
+    },
+    "Exp061": {
+      "expected": "p sub, x sub 1, à la puissance 10"
+    },
+    "Exp062": {
+      "expected": "p sub, x sub 1, à la puissance y plus 1"
+    },
+    "Exp063": {
+      "expected": "3 à la puissance 2 au carré"
+    },
+    "Exp064": {
+      "expected": "3 à la puissance 2 x au carré"
+    },
+    "Exp065": {
+      "expected": "5 à la puissance 2 au cube"
+    },
+    "Exp066": {
+      "expected": "5 à la puissance 2 x au cube"
+    },
+    "Exp067": {
+      "expected": "3 à l'exposant, 2 au carré plus 1, fin exposant"
+    },
+    "Exp068": {
+      "expected": "3 à la puissance 2 au carré; plus 1"
+    },
+    "Exp069": {
+      "expected": "2 à l'exposant, x au carré plus 3 x au cube, fin exposant"
+    },
+    "Exp070": {
+      "expected": "3 à l'exposant, 3 à la puissance 4; fin exposant"
+    },
+    "Exp071": {
+      "expected": "3 à l'exposant, 3 à la puissance 4; plus 2, fin exposant"
+    },
+    "Exp072": {
+      "expected": "3 à l'exposant, 3 à la puissance 4; fin exposant, plus 2"
+    },
+    "Exp073": {
+      "expected": "2 à l'exposant, x à la puissance 4; fin exposant"
+    },
+    "Exp074": {
+      "expected": "2 à l'exposant, 10 à la puissance x plus 3; fin exposant"
+    },
+    "Exp075": {
+      "expected": "3 à l'exposant, 3 à la puissance 10; fin exposant"
+    },
+    "Exp076": {
+      "expected": "3 à l'exposant, 3 à la puissance 10; plus 1, fin exposant"
+    },
+    "Exp077": {
+      "expected": "3 à l'exposant, 3 à la puissance 10; fin exposant, plus 1"
+    },
+    "Exp078": {
+      "expected": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, au carré, fin exposant"
+    },
+    "Exp079": {
+      "expected": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance 10; fin exposant"
+    },
+    "Exp080": {
+      "expected": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la puissance y plus 2; fin exposant"
+    },
+    "Exp081": {
+      "expected": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la y-ième puissance; plus 2, fin exposant"
+    },
+    "Exp082": {
+      "expected": "3 à l'exposant, parenthèse gauche, x plus 1, parenthèse droite, à la y-ième puissance; fin exposant, plus 2"
+    },
+    "Exp083": {
+      "expected": "e à l'exposant, négatif un-demi x au carré, fin exposant"
+    },
+    "Exp084": {
+      "expected": "e à l'exposant, négatif un-demi  , parenthèse gauche, fraction avec numérateur x moins mû, et dénominateur sigma, parenthèse droite, au carré, fin exposant"
+    },
+    "Exp036a": {
+      "test": true,
+      "preference": "Exponent_Ordinal",
+      "input": "<math><mrow><msup><mn>2</mn><mi>n</mi></msup></mrow></math>",
+      "expected": "2 à la n-ième puissance"
+    },
+    "Exp037a": {
+      "test": true,
+      "preference": "Exponent_Ordinal",
+      "input": "<math><mrow><msup><mn>2</mn><mi>m</mi></msup></mrow></math>",
+      "expected": "2 à la m-ième puissance"
+    },
+    "Exp038a": {
+      "test": true,
+      "preference": "Exponent_Ordinal",
+      "input": "<math><mrow><msup><mn>2</mn><mi>i</mi></msup></mrow></math>",
+      "expected": "2 à la i-ième puissance"
+    },
+    "Exp039a": {
+      "test": true,
+      "preference": "Exponent_Ordinal",
+      "input": "<math><mrow><msup><mn>2</mn><mi>j</mi></msup></mrow></math>",
+      "expected": "2 à la j-ième puissance"
+    },
+    "Exp040a": {
+      "test": true,
+      "preference": "Exponent_Ordinal",
+      "input": "<math><mrow><msup><mn>2</mn><mi>a</mi></msup></mrow></math>",
+      "expected": "2 à la a-ième puissance"
+    }
+  }
+}

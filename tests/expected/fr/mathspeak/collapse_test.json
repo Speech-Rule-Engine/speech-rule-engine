@@ -1,0 +1,384 @@
+{
+  "name": "CollapseFrenchTest",
+  "factory": "collapse",
+  "base": "input/common/collapse_test.json",
+  "information": "French Mathspeak Collapse tests.",
+  "domain": "mathspeak",
+  "locale": "fr",
+  "active": "CollapseFrench",
+  "exclude": [],
+  "tests": {
+    "CollapsedAddition_default": {
+      "expected": "somme avec 2 opérandes compressée"
+    },
+    "CollapsedAddition_brief": {
+      "expected": "somme compressée"
+    },
+    "CollapsedAddition_sbrief": {
+      "expected": "somme compressée"
+    },
+    "CollapsedBigop_default": {
+      "expected": "sommation compressé"
+    },
+    "CollapsedBigop_brief": {
+      "expected": "sommation compressé"
+    },
+    "CollapsedBigop_sbrief": {
+      "expected": "sommation compressé"
+    },
+    "CollapsedBinomial_default": {
+      "expected": "binomial compressé"
+    },
+    "CollapsedBinomial_brief": {
+      "expected": "binomial compressé"
+    },
+    "CollapsedBinomial_sbrief": {
+      "expected": "binomial compressé"
+    },
+    "CollapsedCases_default": {
+      "expected": "déclaration de cas avec 2 cas compressée"
+    },
+    "CollapsedCases_brief": {
+      "expected": "déclaration de cas compressée"
+    },
+    "CollapsedCases_sbrief": {
+      "expected": "déclaration de cas compressée"
+    },
+    "CollapsedContinuedFraction_default": {
+      "expected": "fraction continue compressée"
+    },
+    "CollapsedContinuedFraction_brief": {
+      "expected": "frac continue compressée"
+    },
+    "CollapsedContinuedFraction_sbrief": {
+      "expected": "frac continue compressée"
+    },
+    "CollapsedDeterminant_default": {
+      "expected": "déterminant de dimension 2 compressé"
+    },
+    "CollapsedDeterminant_brief": {
+      "expected": "déterminant compressé"
+    },
+    "CollapsedDeterminant_sbrief": {
+      "expected": "déterminant compressé"
+    },
+    "CollapsedFraction_default": {
+      "expected": "fraction compressée"
+    },
+    "CollapsedFraction_brief": {
+      "expected": "frac compressée"
+    },
+    "CollapsedFraction_sbrief": {
+      "expected": "frac compressée"
+    },
+    "CollapsedFunction_default": {
+      "_comment0_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "expression fonctionnelle compressée"
+    },
+    "CollapsedFunction_brief": {
+      "_comment0_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "fonction compressée"
+    },
+    "CollapsedFunction_sbrief": {
+      "_comment0_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "expected": "fonction compressée"
+    },
+    "CollapsedIdentifier_default": {
+      "expected": "identifiant long compressé"
+    },
+    "CollapsedIdentifier_brief": {
+      "expected": "identifiant long compressé"
+    },
+    "CollapsedIdentifier_sbrief": {
+      "expected": "identifiant long compressé"
+    },
+    "CollapsedInfixop_default": {
+      "expected": "division avec 2 éléments compressé"
+    },
+    "CollapsedInfixop_brief": {
+      "expected": "division compressé"
+    },
+    "CollapsedInfixop_sbrief": {
+      "expected": "division compressé"
+    },
+    "CollapsedIntegral_default": {
+      "expected": "intégrale compressée"
+    },
+    "CollapsedIntegral_brief": {
+      "expected": "intégrale compressée"
+    },
+    "CollapsedIntegral_sbrief": {
+      "expected": "intégrale compressée"
+    },
+    "CollapsedLim_default": {
+      "expected": "fonction de limitation compressée"
+    },
+    "CollapsedLim_brief": {
+      "expected": "lim compressée"
+    },
+    "CollapsedLim_sbrief": {
+      "expected": "lim compressée"
+    },
+    "CollapsedMatrix_default": {
+      "expected": "matrice 3 par 2 compressée"
+    },
+    "CollapsedMatrix_brief": {
+      "expected": "matrice compressée"
+    },
+    "CollapsedMatrix_sbrief": {
+      "expected": "matrice compressée"
+    },
+    "CollapsedMixedNumber_default": {
+      "expected": "nombre fractionnaire long compressé"
+    },
+    "CollapsedMixedNumber_brief": {
+      "expected": "nombre fractionnaire long compressé"
+    },
+    "CollapsedMixedNumber_sbrief": {
+      "expected": "nombre fractionnaire long compressé"
+    },
+    "CollapsedMultiplication_default": {
+      "expected": "produit avec 2 facteurs compressé"
+    },
+    "CollapsedMultiplication_brief": {
+      "expected": "produit compressé"
+    },
+    "CollapsedMultiplication_sbrief": {
+      "expected": "produit compressé"
+    },
+    "CollapsedMultirel_default": {
+      "expected": "séquence de relation avec 3 éléments compressée"
+    },
+    "CollapsedMultirel_brief": {
+      "expected": "séquence de relation compressée"
+    },
+    "CollapsedMultirel_sbrief": {
+      "expected": "séquence de relation compressée"
+    },
+    "CollapsedNumber_default": {
+      "expected": "nombre long compressé"
+    },
+    "CollapsedNumber_brief": {
+      "expected": "nombre long compressé"
+    },
+    "CollapsedNumber_sbrief": {
+      "expected": "nombre long compressé"
+    },
+    "CollapsedPunctuated_default": {
+      "expected": "liste de longueur 3 séparée par des virgules compressée"
+    },
+    "CollapsedPunctuated_brief": {
+      "expected": "liste séparée par des virgules compressée"
+    },
+    "CollapsedPunctuated_sbrief": {
+      "expected": "liste séparée par des virgules compressée"
+    },
+    "CollapsedRelation_default": {
+      "expected": "égalité compressé"
+    },
+    "CollapsedRelation_brief": {
+      "expected": "égalité compressé"
+    },
+    "CollapsedRelation_sbrief": {
+      "expected": "égalité compressé"
+    },
+    "CollapsedRelationSeq_default": {
+      "expected": "égalité séquence avec 3 éléments compressée"
+    },
+    "CollapsedRelationSeq_brief": {
+      "expected": "égalité séquence compressée"
+    },
+    "CollapsedRelationSeq_sbrief": {
+      "expected": "égalité séquence compressée"
+    },
+    "CollapsedRoot_default": {
+      "expected": "racine d'indice 3 compressée"
+    },
+    "CollapsedRoot_brief": {
+      "expected": "racine compressée"
+    },
+    "CollapsedRoot_sbrief": {
+      "expected": "racine compressée"
+    },
+    "CollapsedRootNested_default": {
+      "expected": "racine imbriquée d'indice 3 compressée"
+    },
+    "CollapsedRootNested_brief": {
+      "expected": "racine imbriquée compressée"
+    },
+    "CollapsedRootNested_sbrief": {
+      "expected": "racine imbriquée compressée"
+    },
+    "CollapsedRowvector_default": {
+      "expected": "vecteur ligne de dimension 2 compressé"
+    },
+    "CollapsedRowvector_brief": {
+      "expected": "vecteur ligne compressé"
+    },
+    "CollapsedRowvector_sbrief": {
+      "expected": "vecteur ligne compressé"
+    },
+    "CollapsedSqrt_default": {
+      "expected": "racine carrée compressée"
+    },
+    "CollapsedSqrt_brief": {
+      "expected": "racine carrée compressée"
+    },
+    "CollapsedSqrt_sbrief": {
+      "expected": "racine carrée compressée"
+    },
+    "CollapsedSqrtNested_default": {
+      "expected": "racine carrée imbriquée compressée"
+    },
+    "CollapsedSqrtNested_brief": {
+      "expected": "racine carrée imbriquée compressée"
+    },
+    "CollapsedSqrtNested_sbrief": {
+      "expected": "racine carrée imbriquée compressée"
+    },
+    "CollapsedSquarematrix_default": {
+      "expected": "matrice carrée de dimension 2 compressée"
+    },
+    "CollapsedSquarematrix_brief": {
+      "expected": "matrice carrée compressée"
+    },
+    "CollapsedSquarematrix_sbrief": {
+      "expected": "matrice carrée compressée"
+    },
+    "CollapsedSubscript_default": {
+      "expected": "indice compressé"
+    },
+    "CollapsedSubscript_brief": {
+      "expected": "indice compressé"
+    },
+    "CollapsedSubscript_sbrief": {
+      "expected": "indice compressé"
+    },
+    "CollapsedSubsup_default": {
+      "expected": "puissance avec index compressée"
+    },
+    "CollapsedSubsup_brief": {
+      "expected": "puissance avec index compressée"
+    },
+    "CollapsedSubsup_sbrief": {
+      "expected": "puissance avec index compressée"
+    },
+    "CollapsedSuperscript_default": {
+      "expected": "puissance compressée"
+    },
+    "CollapsedSuperscript_brief": {
+      "expected": "puissance compressée"
+    },
+    "CollapsedSuperscript_sbrief": {
+      "expected": "puissance compressée"
+    },
+    "CollapsedTable_default": {
+      "expected": "table avec 2 lignes et 2 colonnes compressée"
+    },
+    "CollapsedTable_brief": {
+      "expected": "table avec 2 lignes et 2 colonnes compressée"
+    },
+    "CollapsedTable_sbrief": {
+      "expected": "table avec 2 lignes et 2 colonnes compressée"
+    },
+    "CollapsedText_default": {
+      "expected": "texte compressé"
+    },
+    "CollapsedText_brief": {
+      "expected": "texte compressé"
+    },
+    "CollapsedText_sbrief": {
+      "expected": "texte compressé"
+    },
+    "CollapsedVarAddition_default": {
+      "expected": "somme avec un nombre variable d'opérandes compressée"
+    },
+    "CollapsedVarAddition_brief": {
+      "expected": "somme compressée"
+    },
+    "CollapsedVarAddition_sbrief": {
+      "expected": "somme compressée"
+    },
+    "CollapsedVarCases_default": {
+      "expected": "déclaration de cas variable compressée"
+    },
+    "CollapsedVarCases_brief": {
+      "expected": "déclaration de cas compressée"
+    },
+    "CollapsedVarCases_sbrief": {
+      "expected": "déclaration de cas compressée"
+    },
+    "CollapsedVarDeterminant_default": {
+      "expected": "déterminant de dimension n compressé"
+    },
+    "CollapsedVarDeterminant_brief": {
+      "expected": "déterminant compressé"
+    },
+    "CollapsedVarDeterminant_sbrief": {
+      "expected": "déterminant compressé"
+    },
+    "CollapsedVarMatrix_default": {
+      "expected": "matrice de dimension n par m compressée"
+    },
+    "CollapsedVarMatrix_brief": {
+      "expected": "matrice carrée compressée"
+    },
+    "CollapsedVarMatrix_sbrief": {
+      "expected": "matrice carrée compressée"
+    },
+    "CollapsedVarMultiplication_default": {
+      "expected": "produit avec un nombre de facteurs variable compressé"
+    },
+    "CollapsedVarMultiplication_brief": {
+      "expected": "produit compressé"
+    },
+    "CollapsedVarMultiplication_sbrief": {
+      "expected": "produit compressé"
+    },
+    "CollapsedVarMultirel_default": {
+      "expected": "séquence de relation avec un nombre de éléments variable compressée"
+    },
+    "CollapsedVarMultirel_brief": {
+      "expected": "séquence de relation compressée"
+    },
+    "CollapsedVarMultirel_sbrief": {
+      "expected": "séquence de relation compressée"
+    },
+    "CollapsedVarPunctuated_default": {
+      "expected": "liste de longueur variable séparée par des virgules compressée"
+    },
+    "CollapsedVarPunctuated_brief": {
+      "expected": "liste séparée par des virgules compressée"
+    },
+    "CollapsedVarPunctuated_sbrief": {
+      "expected": "liste séparée par des virgules compressée"
+    },
+    "CollapsedVarRelation_default": {
+      "expected": "égalité séquence avec un nombre de éléments variable compressée"
+    },
+    "CollapsedVarRelation_brief": {
+      "expected": "égalité séquence compressée"
+    },
+    "CollapsedVarRelation_sbrief": {
+      "expected": "égalité séquence compressée"
+    },
+    "CollapsedVarVector_default": {
+      "expected": "vecteur colonne de dimension n compressé"
+    },
+    "CollapsedVarVector_brief": {
+      "expected": "vecteur compressé"
+    },
+    "CollapsedVarVector_sbrief": {
+      "expected": "vecteur compressé"
+    },
+    "CollapsedVector_default": {
+      "expected": "vecteur de dimension 3 compressé"
+    },
+    "CollapsedVector_brief": {
+      "expected": "vecteur compressé"
+    },
+    "CollapsedVector_sbrief": {
+      "expected": "vecteur compressé"
+    }
+  }
+}

@@ -1,0 +1,730 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanFunctions",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_functions.json",
+  "information": "German Clearspeak Functions rule tests.",
+  "active": "ClearspeakGerman",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Functions",
+    "Function001": {
+      "expected": "f von x"
+    },
+    "Function002": {
+      "expected": "g von x"
+    },
+    "Function003": {
+      "expected": "h von x"
+    },
+    "Function004": {
+      "expected": "f von 2 x"
+    },
+    "Function005": {
+      "expected": "g von minus 2 x"
+    },
+    "Function006": {
+      "expected": "h von ein halb"
+    },
+    "Function007": {
+      "_comment2_": " TODO: This throws a test exception.",
+      "_comment3_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h von, Klammer auf, 1 geteilt durch 2, Klammer zu"
+    },
+    "Function008": {
+      "expected": "f von, Klammer auf, x plus 1, Klammer zu, ist gleich f von x, plus 1"
+    },
+    "Function009": {
+      "expected": "g von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function010": {
+      "expected": "g von, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function011": {
+      "expected": "f invers von x"
+    },
+    "Function012": {
+      "expected": "g invers von x"
+    },
+    "Function013": {
+      "expected": "h invers von x"
+    },
+    "Function014": {
+      "expected": "f invers von 2 x"
+    },
+    "Function015": {
+      "expected": "g invers von minus 2 x"
+    },
+    "Function016": {
+      "expected": "f invers von, Klammer auf, 3 x, minus 1, Klammer zu"
+    },
+    "Function017": {
+      "expected": "g invers von, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function018": {
+      "expected": "h invers von ein halb"
+    },
+    "Function019": {
+      "_comment4_": " TODO: This throws a test exception.",
+      "_comment5_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h invers von, Klammer auf, 1 geteilt durch 2, Klammer zu"
+    },
+    "Function020": {
+      "expected": "f invers von, f von x"
+    },
+    "Function021": {
+      "expected": "g invers von, g von x"
+    },
+    "Function022": {
+      "expected": "h invers von, h von x"
+    },
+    "Function023": {
+      "expected": "f invers von, f von 2 x"
+    },
+    "Function024": {
+      "expected": "g invers von, g von minus 2 x"
+    },
+    "Function025": {
+      "expected": "h invers von, h von ein halb"
+    },
+    "Function026": {
+      "_comment6_": " TODO: This throws a test exception.",
+      "_comment7_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h invers von, Klammer auf, h von, Klammer auf, 1 geteilt durch 2, Klammer zu, Klammer zu"
+    },
+    "Function027": {
+      "expected": "f invers von, Klammer auf, f von, Klammer auf, x plus 1, Klammer zu, Klammer zu, ist gleich x plus 1"
+    },
+    "Function028": {
+      "expected": "g invers von, Klammer auf, g von, Klammer auf, 2 x, plus 1, Klammer zu, Klammer zu"
+    },
+    "Function029": {
+      "expected": "g invers von, Klammer auf, g von, Klammer auf, x Quadrat, Klammer zu, Klammer zu"
+    },
+    "Function030": {
+      "expected": "f von, f invers von x"
+    },
+    "Function031": {
+      "expected": "g von, g invers von x"
+    },
+    "Function032": {
+      "expected": "h von, h invers von x"
+    },
+    "Function033": {
+      "expected": "f von, f invers von 2 x"
+    },
+    "Function034": {
+      "expected": "g von, g invers von minus 2 x"
+    },
+    "Function035": {
+      "expected": "f von, Klammer auf, f invers von, Klammer auf, 3 x, minus 1, Klammer zu, Klammer zu"
+    },
+    "Function036": {
+      "expected": "g von, g invers von, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function037": {
+      "expected": "h von, h invers von ein halb"
+    },
+    "Function038": {
+      "_comment8_": " TODO: This throws a test exception.",
+      "_comment9_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "expected": "h von, h invers von, Klammer auf, Bruch 1 geteilt durch 2, Klammer zu"
+    },
+    "Function039": {
+      "expected": "f von, g von x"
+    },
+    "Function040": {
+      "expected": "f von, Klammer auf, g von, Klammer auf, x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function041": {
+      "expected": "h von, g von x"
+    },
+    "Function042": {
+      "expected": "h von, Klammer auf, g von, Klammer auf, Bruch mit Zähler x, und Nenner x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function043": {
+      "expected": "Klammer auf, f plus g, Klammer zu, von x, ist gleich f von x, plus g von x"
+    },
+    "Function044": {
+      "expected": "Klammer auf, f plus g, Klammer zu, von, Klammer auf, x plus 1, Klammer zu, ist gleich f von, Klammer auf, x plus 1, Klammer zu, plus g von, Klammer auf, x plus 1, Klammer zu"
+    },
+    "Function045": {
+      "expected": "Klammer auf, f mal g, Klammer zu, von x"
+    },
+    "Function046": {
+      "expected": "Klammer auf, f mal g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function047": {
+      "expected": "Klammer auf, f geteilt durch g, Klammer zu, von x, ist gleich, f von x, geteilt durch g von x"
+    },
+    "Function048": {
+      "expected": "Klammer auf, f geteilt durch g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu, ist gleich, Bruch mit Zähler f von, Klammer auf, 2 x, plus 5, Klammer zu, und Nenner g von, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function049": {
+      "expected": "Klammer auf, f verknüpft mit g, Klammer zu, von x, ist gleich f von, g von x"
+    },
+    "Function050": {
+      "expected": "2 f von x"
+    },
+    "Function051": {
+      "expected": "c f von x"
+    },
+    "Function052": {
+      "expected": "f Quadrat von x"
+    },
+    "Function053": {
+      "expected": "f Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function054": {
+      "expected": "f Kubik von x"
+    },
+    "Function055": {
+      "expected": "f Kubik von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function056": {
+      "expected": "f hoch 4, von x"
+    },
+    "Function057": {
+      "expected": "f hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function058": {
+      "expected": "f hoch 5, von x"
+    },
+    "Function059": {
+      "expected": "f hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function060": {
+      "expected": "f hoch n, von x"
+    },
+    "Function061": {
+      "expected": "f hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function062": {
+      "expected": "g Quadrat von x"
+    },
+    "Function063": {
+      "expected": "g Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function064": {
+      "expected": "h Kubik von x"
+    },
+    "Function065": {
+      "expected": "h Kubik von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function066": {
+      "expected": "g hoch 4, von x"
+    },
+    "Function067": {
+      "expected": "g hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function068": {
+      "expected": "h hoch 5, von x"
+    },
+    "Function069": {
+      "expected": "h hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function070": {
+      "expected": "g hoch n, von x"
+    },
+    "Function071": {
+      "expected": "g hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function072": {
+      "expected": "f Index 1, von x"
+    },
+    "Function073": {
+      "expected": "g Index 2, von, Klammer auf, x Kubik, Klammer zu"
+    },
+    "Function074": {
+      "expected": "h Index n, von, Klammer auf, 3 x, minus 2, Klammer zu"
+    },
+    "Function075": {
+      "expected": "f Index 1, invers von x"
+    },
+    "Function076": {
+      "expected": "g Index 2, invers von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function077": {
+      "expected": "h Index n, invers von x"
+    },
+    "Function078": {
+      "expected": "g Index 1, invers von, g Index 2, von x"
+    },
+    "Function079": {
+      "expected": "f Index 1, von, g Index 2, invers von x"
+    },
+    "Function080": {
+      "expected": "f von, Klammer auf, x Komma y, Klammer zu"
+    },
+    "Function081": {
+      "expected": "f von, Klammer auf, x Komma y Komma z, Klammer zu"
+    },
+    "Function082": {
+      "expected": "f von, Klammer auf, x plus 1, Komma, 2 y, Klammer zu"
+    },
+    "Function083": {
+      "expected": "f von, Klammer auf, 2 x, Komma, x plus 1, Komma, x Quadrat, Klammer zu"
+    },
+    "Function084": {
+      "expected": "f mal x"
+    },
+    "Function085": {
+      "expected": "g mal x"
+    },
+    "Function086": {
+      "expected": "h mal x"
+    },
+    "Function087": {
+      "expected": "f mal 2 x"
+    },
+    "Function088": {
+      "expected": "g mal minus 2 x"
+    },
+    "Function089": {
+      "expected": "h mal ein halb"
+    },
+    "Function090": {
+      "expected": "XXX"
+    },
+    "Function091": {
+      "expected": "f mal, Klammer auf, x plus 1, Klammer zu, ist gleich, f mal x, plus 1"
+    },
+    "Function092": {
+      "expected": "g mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function093": {
+      "expected": "g mal, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function094": {
+      "expected": "f hoch minus 1, mal x"
+    },
+    "Function095": {
+      "expected": "g hoch minus 1, mal x"
+    },
+    "Function096": {
+      "expected": "h hoch minus 1, mal x"
+    },
+    "Function097": {
+      "expected": "f hoch minus 1, mal 2 x"
+    },
+    "Function098": {
+      "expected": "g hoch minus 1, mal minus 2 x"
+    },
+    "Function099": {
+      "expected": "f hoch minus 1, mal, Klammer auf, 3 x, minus 1, Klammer zu"
+    },
+    "Function100": {
+      "expected": "g hoch minus 1, mal, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function101": {
+      "expected": "h hoch minus 1, mal ein halb"
+    },
+    "Function102": {
+      "expected": "XXX"
+    },
+    "Function103": {
+      "expected": "f hoch minus 1, mal, f mal x"
+    },
+    "Function104": {
+      "expected": "g hoch minus 1, mal, g mal x"
+    },
+    "Function105": {
+      "expected": "h hoch minus 1, mal, h mal x"
+    },
+    "Function106": {
+      "expected": "f hoch minus 1, mal, f mal 2 x"
+    },
+    "Function107": {
+      "expected": "g hoch minus 1, mal, g mal minus 2 x"
+    },
+    "Function108": {
+      "expected": "h hoch minus 1, mal, h mal ein halb"
+    },
+    "Function109": {
+      "expected": "XXX"
+    },
+    "Function110": {
+      "expected": "f hoch minus 1, mal, Klammer auf, f mal, Klammer auf, x plus 1, Klammer zu, Klammer zu, ist gleich x plus 1"
+    },
+    "Function111": {
+      "expected": "g hoch minus 1, mal, Klammer auf, g mal, Klammer auf, 2 x, plus 1, Klammer zu, Klammer zu"
+    },
+    "Function112": {
+      "expected": "g hoch minus 1, mal, Klammer auf, g mal, Klammer auf, x Quadrat, Klammer zu, Klammer zu"
+    },
+    "Function113": {
+      "expected": "f mal, Klammer auf, f hoch minus 1, mal x, Klammer zu"
+    },
+    "Function114": {
+      "expected": "g mal, Klammer auf, g hoch minus 1, mal x, Klammer zu"
+    },
+    "Function115": {
+      "expected": "h mal, Klammer auf, h hoch minus 1, mal x, Klammer zu"
+    },
+    "Function116": {
+      "expected": "f mal, Klammer auf, f hoch minus 1, mal 2 x, Klammer zu"
+    },
+    "Function117": {
+      "expected": "g mal, Klammer auf, g hoch minus 1, mal minus 2 x, Klammer zu"
+    },
+    "Function118": {
+      "expected": "f mal, Klammer auf, f hoch minus 1, mal, Klammer auf, 3 x, minus 1, Klammer zu, Klammer zu"
+    },
+    "Function119": {
+      "expected": "g mal, Klammer auf, g hoch minus 1, mal, Klammer auf, x Quadrat, Klammer zu, Klammer zu"
+    },
+    "Function120": {
+      "expected": "h mal, Klammer auf, h hoch minus 1, mal ein halb, Klammer zu"
+    },
+    "Function121": {
+      "expected": "XXX"
+    },
+    "Function122": {
+      "expected": "f mal, g mal x"
+    },
+    "Function123": {
+      "expected": "f mal, Klammer auf, g mal, Klammer auf, x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function124": {
+      "expected": "h mal, g mal x"
+    },
+    "Function125": {
+      "expected": "h mal, Klammer auf, g mal, Klammer auf, Bruch mit Zähler x, und Nenner x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function126": {
+      "expected": "Klammer auf, f plus g, Klammer zu, mal x, ist gleich, f mal x, plus, g mal x"
+    },
+    "Function127": {
+      "expected": "Klammer auf, f plus g, Klammer zu, mal, Klammer auf, x plus 1, Klammer zu, ist gleich, f mal, Klammer auf, x plus 1, Klammer zu, plus, g mal, Klammer auf, x plus 1, Klammer zu"
+    },
+    "Function128": {
+      "expected": "Klammer auf, f mal g, Klammer zu, mal x"
+    },
+    "Function129": {
+      "expected": "Klammer auf, f mal g, Klammer zu, mal, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function130": {
+      "expected": "Klammer auf, f geteilt durch g, Klammer zu, mal x, ist gleich, Bruch mit Zähler, f mal x, und Nenner, g mal x"
+    },
+    "Function131": {
+      "expected": "Klammer auf, f geteilt durch g, Klammer zu, mal, Klammer auf, 2 x, plus 5, Klammer zu, ist gleich, Bruch mit Zähler, f mal, Klammer auf, 2 x, plus 5, Klammer zu, und Nenner, g mal, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function132": {
+      "expected": "2, f mal x"
+    },
+    "Function133": {
+      "expected": "c, f mal x"
+    },
+    "Function134": {
+      "expected": "f Quadrat mal x"
+    },
+    "Function135": {
+      "expected": "f Quadrat mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function136": {
+      "expected": "f Kubik mal x"
+    },
+    "Function137": {
+      "expected": "f Kubik mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function138": {
+      "expected": "f hoch 4, mal x"
+    },
+    "Function139": {
+      "expected": "f hoch 4, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function140": {
+      "expected": "f hoch 5, mal x"
+    },
+    "Function141": {
+      "expected": "f hoch 5, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function142": {
+      "expected": "f hoch n, mal x"
+    },
+    "Function143": {
+      "expected": "f hoch n, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function144": {
+      "expected": "g Quadrat mal x"
+    },
+    "Function145": {
+      "expected": "g Quadrat mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function146": {
+      "expected": "h Kubik mal x"
+    },
+    "Function147": {
+      "expected": "h Kubik mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function148": {
+      "expected": "g hoch 4, mal x"
+    },
+    "Function149": {
+      "expected": "g hoch 4, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function150": {
+      "expected": "h hoch 5, mal x"
+    },
+    "Function151": {
+      "expected": "h hoch 5, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function152": {
+      "expected": "g hoch n, mal x"
+    },
+    "Function153": {
+      "expected": "g hoch n, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function154": {
+      "expected": "f Index 1, mal x"
+    },
+    "Function156": {
+      "expected": "g Index 2, mal, Klammer auf, x Kubik, Klammer zu"
+    },
+    "Function157": {
+      "expected": "h Index n, mal, Klammer auf, 3 x, minus 2, Klammer zu"
+    },
+    "Function158": {
+      "expected": "f Index 1, hoch minus 1, mal x"
+    },
+    "Function159": {
+      "expected": "g Index 2, hoch minus 1, mal, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function160": {
+      "expected": "h Index n, hoch minus 1, mal x"
+    },
+    "Function161": {
+      "expected": "g Index 1, hoch minus 1, mal, Klammer auf, g Index 2, mal x, Klammer zu"
+    },
+    "Function162": {
+      "expected": "f Index 1, mal, Klammer auf, g Index 2, hoch minus 1, mal x, Klammer zu"
+    },
+    "Function163": {
+      "expected": "f mal, Klammer auf, x Komma y, Klammer zu"
+    },
+    "Function164": {
+      "expected": "f mal, Klammer auf, x Komma y Komma z, Klammer zu"
+    },
+    "Function165": {
+      "expected": "f mal, Klammer auf, x plus 1, Komma, 2 y, Klammer zu"
+    },
+    "Function166": {
+      "expected": "f mal, Klammer auf, 2 x, Komma, x plus 1, Komma, x Quadrat, Klammer zu"
+    },
+    "_comment10_": " NEW: Reciprocal",
+    "Function011b": {
+      "expected": "f invers von x"
+    },
+    "Function012b": {
+      "expected": "g invers von x"
+    },
+    "Function013b": {
+      "expected": "h invers von x"
+    },
+    "Function014b": {
+      "expected": "f invers von 2 x"
+    },
+    "Function015b": {
+      "expected": "g invers von minus 2 x"
+    },
+    "Function016b": {
+      "expected": "f invers von, Klammer auf, 3 x, minus 1, Klammer zu"
+    },
+    "Function017b": {
+      "expected": "g invers von, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function018b": {
+      "expected": "h invers von ein halb"
+    },
+    "Function019b": {
+      "_comment11_": " TODO: This throws a test exception.",
+      "_comment12_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h invers von, 1 geteilt durch 2"
+    },
+    "Function020b": {
+      "expected": "f invers von, f von x"
+    },
+    "Function021b": {
+      "expected": "g invers von, g von x"
+    },
+    "Function022b": {
+      "expected": "h invers von, h von x"
+    },
+    "Function023b": {
+      "expected": "f invers von, f von 2 x"
+    },
+    "Function024b": {
+      "expected": "g invers von, g von minus 2 x"
+    },
+    "Function025b": {
+      "expected": "h invers von, h von ein halb"
+    },
+    "Function026b": {
+      "_comment13_": " TODO: This throws a test exception.",
+      "_comment14_": " var preference = 'Functions_Auto:Fraction_Over';",
+      "expected": "h invers von, h von, 1 geteilt durch 2"
+    },
+    "Function027b": {
+      "expected": "f invers von, Klammer auf, f von, Klammer auf, x plus 1, Klammer zu, Klammer zu, ist gleich x plus 1"
+    },
+    "Function028b": {
+      "expected": "g invers von, Klammer auf, g von, Klammer auf, 2 x, plus 1, Klammer zu, Klammer zu"
+    },
+    "Function029b": {
+      "expected": "g invers von, Klammer auf, g von, Klammer auf, x Quadrat, Klammer zu, Klammer zu"
+    },
+    "Function030b": {
+      "expected": "f von, f invers von x"
+    },
+    "Function031b": {
+      "expected": "g von, g invers von x"
+    },
+    "Function032b": {
+      "expected": "h von, h invers von x"
+    },
+    "Function033b": {
+      "expected": "f von, f invers von 2 x"
+    },
+    "Function034b": {
+      "expected": "g von, g invers von minus 2 x"
+    },
+    "Function035b": {
+      "expected": "f von, Klammer auf, f invers von, Klammer auf, 3 x, minus 1, Klammer zu, Klammer zu"
+    },
+    "Function036b": {
+      "expected": "g von, g invers von, Klammer auf, x Quadrat, Klammer zu"
+    },
+    "Function037b": {
+      "expected": "h von, h invers von ein halb"
+    },
+    "Function038b": {
+      "_comment15_": " TODO: This throws a test exception.",
+      "_comment16_": " var preference = 'Functions_Auto:Fraction_FracOver';",
+      "expected": "h von, h invers von, Bruch 1 geteilt durch 2"
+    },
+    "Function039b": {
+      "expected": "f von, g von x"
+    },
+    "Function040b": {
+      "expected": "f von, Klammer auf, g von, Klammer auf, x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function041b": {
+      "expected": "h von, g von x"
+    },
+    "Function042b": {
+      "expected": "h von, Klammer auf, g von, Klammer auf, Bruch mit Zähler x, und Nenner x plus 1, Klammer zu, Klammer zu"
+    },
+    "Function043b": {
+      "expected": "Klammer auf, f plus g, Klammer zu, von x, ist gleich f von x, plus g von x"
+    },
+    "Function044b": {
+      "expected": "Klammer auf, f plus g, Klammer zu, von, Klammer auf, x plus 1, Klammer zu, ist gleich f von, Klammer auf, x plus 1, Klammer zu, plus g von, Klammer auf, x plus 1, Klammer zu"
+    },
+    "Function045b": {
+      "expected": "Klammer auf, f mal g, Klammer zu, von x"
+    },
+    "Function046b": {
+      "expected": "Klammer auf, f mal g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function047b": {
+      "expected": "Klammer auf, f geteilt durch g, Klammer zu, von x, ist gleich, f von x, geteilt durch g von x"
+    },
+    "Function048b": {
+      "expected": "Klammer auf, f geteilt durch g, Klammer zu, von, Klammer auf, 2 x, plus 5, Klammer zu, ist gleich, Bruch mit Zähler f von, Klammer auf, 2 x, plus 5, Klammer zu, und Nenner g von, Klammer auf, 2 x, plus 5, Klammer zu"
+    },
+    "Function049b": {
+      "expected": "Klammer auf, f verknüpft mit g, Klammer zu, von x, ist gleich f von, g von x"
+    },
+    "Function050b": {
+      "expected": "2 f von x"
+    },
+    "Function051b": {
+      "expected": "c f von x"
+    },
+    "Function052b": {
+      "expected": "f Quadrat von x"
+    },
+    "Function053b": {
+      "expected": "f Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function054b": {
+      "expected": "f Kubik von x"
+    },
+    "Function055b": {
+      "expected": "f Kubik von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function056b": {
+      "expected": "f hoch 4, von x"
+    },
+    "Function057b": {
+      "expected": "f hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function058b": {
+      "expected": "f hoch 5, von x"
+    },
+    "Function059b": {
+      "expected": "f hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function060b": {
+      "expected": "f hoch n, von x"
+    },
+    "Function061b": {
+      "expected": "f hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function062b": {
+      "expected": "g Quadrat von x"
+    },
+    "Function063b": {
+      "expected": "g Quadrat von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function064b": {
+      "expected": "h Kubik von x"
+    },
+    "Function065b": {
+      "expected": "h Kubik von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function066b": {
+      "expected": "g hoch 4, von x"
+    },
+    "Function067b": {
+      "expected": "g hoch 4, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function068b": {
+      "expected": "h hoch 5, von x"
+    },
+    "Function069b": {
+      "expected": "h hoch 5, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function070b": {
+      "expected": "g hoch n, von x"
+    },
+    "Function071b": {
+      "expected": "g hoch n, von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function072b": {
+      "expected": "f Index 1, von x"
+    },
+    "Function073b": {
+      "expected": "g Index 2, von, Klammer auf, x Kubik, Klammer zu"
+    },
+    "Function074b": {
+      "expected": "h Index n, von, Klammer auf, 3 x, minus 2, Klammer zu"
+    },
+    "Function075b": {
+      "expected": "f Index 1, invers von x"
+    },
+    "Function076b": {
+      "expected": "g Index 2, invers von, Klammer auf, 2 x, plus 1, Klammer zu"
+    },
+    "Function077b": {
+      "expected": "h Index n, invers von x"
+    },
+    "Function078b": {
+      "expected": "g Index 1, invers von, g Index 2, von x"
+    },
+    "Function079b": {
+      "expected": "f Index 1, von, g Index 2, invers von x"
+    }
+  }
+}

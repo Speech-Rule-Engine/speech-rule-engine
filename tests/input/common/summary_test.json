@@ -1,0 +1,699 @@
+{
+  "tests": {
+    "AbstrAddition_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrAddition_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrAddition_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>+</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrBigop_default": {
+      "test": true,
+      "input": "<mo>&#x2211;</mo><mi>x</mi>",
+      "preference": "default"
+    },
+    "AbstrBigop_brief": {
+      "test": true,
+      "input": "<mo>&#x2211;</mo><mi>x</mi>",
+      "preference": "brief"
+    },
+    "AbstrBigop_sbrief": {
+      "test": true,
+      "input": "<mo>&#x2211;</mo><mi>x</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrBinomial_default": {
+      "test": true,
+      "input": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "default"
+    },
+    "AbstrBinomial_brief": {
+      "test": true,
+      "input": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "brief"
+    },
+    "AbstrBinomial_sbrief": {
+      "test": true,
+      "input": "<mfenced open=\"(\" close=\")\"><mtable><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "sbrief"
+    },
+    "AbstrCases_default": {
+      "test": true,
+      "input": "<mfenced separators=\"\" open=\"{\" close=\"\"><mtable><mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mfenced>",
+      "preference": "default"
+    },
+    "AbstrCases_brief": {
+      "test": true,
+      "input": "<mfenced separators=\"\" open=\"{\" close=\"\"><mtable><mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mfenced>",
+      "preference": "brief"
+    },
+    "AbstrCases_sbrief": {
+      "test": true,
+      "input": "<mfenced separators=\"\" open=\"{\" close=\"\"><mtable><mtr><mtd><mi>y</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi>y</mi></mtd><mtd><mn>2</mn></mtd></mtr></mtable></mfenced>",
+      "preference": "sbrief"
+    },
+    "AbstrCell_default": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "steps": [
+        "DOWN",
+        "DOWN"
+      ],
+      "preference": "default"
+    },
+    "AbstrCell_brief": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "steps": [
+        "DOWN",
+        "DOWN"
+      ],
+      "preference": "brief"
+    },
+    "AbstrCell_sbrief": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "steps": [
+        "DOWN",
+        "DOWN"
+      ],
+      "preference": "sbrief"
+    },
+    "AbstrContinuedFraction_default": {
+      "test": true,
+      "input": "<mfrac><msub><mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac>",
+      "preference": "default"
+    },
+    "AbstrContinuedFraction_brief": {
+      "test": true,
+      "input": "<mfrac><msub><mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac>",
+      "preference": "brief"
+    },
+    "AbstrContinuedFraction_sbrief": {
+      "test": true,
+      "input": "<mfrac><msub><mi>b</mi><mn>1</mn></msub><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>2</mn></msub><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>+</mo><mfrac><msub><mi>b</mi><mn>3</mn></msub><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>+</mo><mo>&#x2026;</mo></mrow></mfrac></mrow></mfrac></mrow></mfrac>",
+      "preference": "sbrief"
+    },
+    "AbstrDeterminant_default": {
+      "test": true,
+      "input": "<mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "default"
+    },
+    "AbstrDeterminant_brief": {
+      "test": true,
+      "input": "<mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "brief"
+    },
+    "AbstrDeterminant_sbrief": {
+      "test": true,
+      "input": "<mfenced open=\"|\" close=\"|\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "sbrief"
+    },
+    "AbstrFraction_default": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mi>x</mi></mfrac>",
+      "preference": "default"
+    },
+    "AbstrFraction_brief": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mi>x</mi></mfrac>",
+      "preference": "brief"
+    },
+    "AbstrFraction_sbrief": {
+      "test": true,
+      "input": "<mfrac><mn>1</mn><mi>x</mi></mfrac>",
+      "preference": "sbrief"
+    },
+    "AbstrFunction_default": {
+      "test": true,
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "input": "<mi>sin</mi>",
+      "preference": "default"
+    },
+    "AbstrFunction_brief": {
+      "test": true,
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "input": "<mi>sin</mi>",
+      "preference": "brief"
+    },
+    "AbstrFunction_sbrief": {
+      "test": true,
+      "_comment1_": " var input = '<mi>sin</mi><mi>x</mi>';",
+      "input": "<mi>sin</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrIdentifier_default": {
+      "test": true,
+      "input": "<mi>a</mi>",
+      "preference": "default"
+    },
+    "AbstrIdentifier_brief": {
+      "test": true,
+      "input": "<mi>a</mi>",
+      "preference": "brief"
+    },
+    "AbstrIdentifier_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrInfixop_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>/</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrInfixop_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>/</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrInfixop_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>/</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrIntegral_default": {
+      "test": true,
+      "input": "<mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi><mi mathvariant=\"bold\">l</mi>",
+      "preference": "default"
+    },
+    "AbstrIntegral_brief": {
+      "test": true,
+      "input": "<mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi><mi mathvariant=\"bold\">l</mi>",
+      "preference": "brief"
+    },
+    "AbstrIntegral_sbrief": {
+      "test": true,
+      "input": "<mo>∮</mo><mi>E</mi><mo>·</mo><mi>d</mi><mi mathvariant=\"bold\">l</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrLim_default": {
+      "test": true,
+      "input": "<mi>lim</mi>",
+      "preference": "default"
+    },
+    "AbstrLim_brief": {
+      "test": true,
+      "input": "<mi>lim</mi>",
+      "preference": "brief"
+    },
+    "AbstrLim_sbrief": {
+      "test": true,
+      "input": "<mi>lim</mi>",
+      "preference": "sbrief"
+    },
+    "_comment2_": " TODO",
+    "AbstrLine_default": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
+      "steps": [
+        "DOWN"
+      ],
+      "preference": "default"
+    },
+    "AbstrLine_brief": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
+      "steps": [
+        "DOWN"
+      ],
+      "preference": "brief"
+    },
+    "AbstrLine_sbrief": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd></mtr></mtable>",
+      "steps": [
+        "DOWN"
+      ],
+      "preference": "sbrief"
+    },
+    "AbstrMatrix_default": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr><mtr><mtd><mi>e</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "default"
+    },
+    "AbstrMatrix_brief": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr><mtr><mtd><mi>e</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "brief"
+    },
+    "AbstrMatrix_sbrief": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr><mtr><mtd><mi>e</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "sbrief"
+    },
+    "AbstrMixedNumber_default": {
+      "test": true,
+      "input": "<mn>1</mn><mfrac><mn>2</mn><mn>3</mn></mfrac>",
+      "preference": "default"
+    },
+    "AbstrMixedNumber_brief": {
+      "test": true,
+      "input": "<mn>1</mn><mfrac><mn>2</mn><mn>3</mn></mfrac>",
+      "preference": "brief"
+    },
+    "AbstrMixedNumber_sbrief": {
+      "test": true,
+      "input": "<mn>1</mn><mfrac><mn>2</mn><mn>3</mn></mfrac>",
+      "preference": "sbrief"
+    },
+    "AbstrMultiplication_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>*</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrMultiplication_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>*</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrMultiplication_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>*</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrMultirel_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>&#x2264;</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrMultirel_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>&#x2264;</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrMultirel_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>&#x2264;</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrNumber_default": {
+      "test": true,
+      "input": "<mn>123456</mn>",
+      "preference": "default"
+    },
+    "AbstrNumber_brief": {
+      "test": true,
+      "input": "<mn>123456</mn>",
+      "preference": "brief"
+    },
+    "AbstrNumber_sbrief": {
+      "test": true,
+      "input": "<mn>123456</mn>",
+      "preference": "sbrief"
+    },
+    "AbstrPunctuated_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi>",
+      "preference": "default"
+    },
+    "AbstrPunctuated_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi>",
+      "preference": "brief"
+    },
+    "AbstrPunctuated_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrRelation_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrRelation_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrRelation_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrRelationSeq_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrRelationSeq_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrRelationSeq_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrRoot_default": {
+      "test": true,
+      "input": "<mroot><mi>x</mi><mn>3</mn></mroot>",
+      "preference": "default"
+    },
+    "AbstrRoot_brief": {
+      "test": true,
+      "input": "<mroot><mi>x</mi><mn>3</mn></mroot>",
+      "preference": "brief"
+    },
+    "AbstrRoot_sbrief": {
+      "test": true,
+      "input": "<mroot><mi>x</mi><mn>3</mn></mroot>",
+      "preference": "sbrief"
+    },
+    "AbstrRootNested_default": {
+      "test": true,
+      "input": "<mroot><mrow><mroot><mi>x</mi><mn>4</mn></mroot><mo>+</mo><mi>x</mi></mrow><mn>3</mn></mroot>",
+      "preference": "default"
+    },
+    "AbstrRootNested_brief": {
+      "test": true,
+      "input": "<mroot><mrow><mroot><mi>x</mi><mn>4</mn></mroot><mo>+</mo><mi>x</mi></mrow><mn>3</mn></mroot>",
+      "preference": "brief"
+    },
+    "AbstrRootNested_sbrief": {
+      "test": true,
+      "input": "<mroot><mrow><mroot><mi>x</mi><mn>4</mn></mroot><mo>+</mo><mi>x</mi></mrow><mn>3</mn></mroot>",
+      "preference": "sbrief"
+    },
+    "_comment3_": " TODO",
+    "AbstrRow_default": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "steps": [
+        "DOWN"
+      ],
+      "preference": "default"
+    },
+    "AbstrRow_brief": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "steps": [
+        "DOWN"
+      ],
+      "preference": "brief"
+    },
+    "AbstrRow_sbrief": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "steps": [
+        "DOWN"
+      ],
+      "preference": "sbrief"
+    },
+    "AbstrRowvector_default": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "default"
+    },
+    "AbstrRowvector_brief": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "brief"
+    },
+    "AbstrRowvector_sbrief": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "sbrief"
+    },
+    "AbstrSqrt_default": {
+      "test": true,
+      "input": "<msqrt><mn>2</mn></msqrt>",
+      "preference": "default"
+    },
+    "AbstrSqrt_brief": {
+      "test": true,
+      "input": "<msqrt><mn>2</mn></msqrt>",
+      "preference": "brief"
+    },
+    "AbstrSqrt_sbrief": {
+      "test": true,
+      "input": "<msqrt><mn>2</mn></msqrt>",
+      "preference": "sbrief"
+    },
+    "AbstrSqrtNested_default": {
+      "test": true,
+      "input": "<msqrt><mn>2</mn><msqrt><mn>2</mn></msqrt></msqrt>",
+      "preference": "default"
+    },
+    "AbstrSqrtNested_brief": {
+      "test": true,
+      "input": "<msqrt><mn>2</mn><msqrt><mn>2</mn></msqrt></msqrt>",
+      "preference": "brief"
+    },
+    "AbstrSqrtNested_sbrief": {
+      "test": true,
+      "input": "<msqrt><mn>2</mn><msqrt><mn>2</mn></msqrt></msqrt>",
+      "preference": "sbrief"
+    },
+    "AbstrSquarematrix_default": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "default"
+    },
+    "AbstrSquarematrix_brief": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "brief"
+    },
+    "AbstrSquarematrix_sbrief": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "sbrief"
+    },
+    "AbstrSubscript_default": {
+      "test": true,
+      "input": "<msub><mi>a</mi><mi>b</mi></msub>",
+      "preference": "default"
+    },
+    "AbstrSubscript_brief": {
+      "test": true,
+      "input": "<msub><mi>a</mi><mi>b</mi></msub>",
+      "preference": "brief"
+    },
+    "AbstrSubscript_sbrief": {
+      "test": true,
+      "input": "<msub><mi>a</mi><mi>b</mi></msub>",
+      "preference": "sbrief"
+    },
+    "AbstrSubsup_default": {
+      "test": true,
+      "input": "<msubsup><mi>a</mi><mi>c</mi><mi>b</mi></msubsup>",
+      "preference": "default"
+    },
+    "AbstrSubsup_brief": {
+      "test": true,
+      "input": "<msubsup><mi>a</mi><mi>c</mi><mi>b</mi></msubsup>",
+      "preference": "brief"
+    },
+    "AbstrSubsup_sbrief": {
+      "test": true,
+      "input": "<msubsup><mi>a</mi><mi>c</mi><mi>b</mi></msubsup>",
+      "preference": "sbrief"
+    },
+    "AbstrSuperscript_default": {
+      "test": true,
+      "input": "<msup><mi>a</mi><mi>b</mi></msup>",
+      "preference": "default"
+    },
+    "AbstrSuperscript_brief": {
+      "test": true,
+      "input": "<msup><mi>a</mi><mi>b</mi></msup>",
+      "preference": "brief"
+    },
+    "AbstrSuperscript_sbrief": {
+      "test": true,
+      "input": "<msup><mi>a</mi><mi>b</mi></msup>",
+      "preference": "sbrief"
+    },
+    "AbstrTable_default": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>",
+      "preference": "default"
+    },
+    "AbstrTable_brief": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>",
+      "preference": "brief"
+    },
+    "AbstrTable_sbrief": {
+      "test": true,
+      "input": "<mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable>",
+      "preference": "sbrief"
+    },
+    "AbstrText_default": {
+      "test": true,
+      "input": "<mtext>a b c</mtext>",
+      "preference": "default"
+    },
+    "AbstrText_brief": {
+      "test": true,
+      "input": "<mtext>a b c</mtext>",
+      "preference": "brief"
+    },
+    "AbstrText_sbrief": {
+      "test": true,
+      "input": "<mtext>a b c</mtext>",
+      "preference": "sbrief"
+    },
+    "AbstrVarAddition_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>+</mo><mi>&#x2026;</mi><mo>+</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrVarAddition_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>+</mo><mi>&#x2026;</mi><mo>+</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrVarAddition_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>+</mo><mi>&#x2026;</mi><mo>+</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrVarCases_default": {
+      "test": true,
+      "input": "<mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2026;</mo></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "preference": "default"
+    },
+    "AbstrVarCases_brief": {
+      "test": true,
+      "input": "<mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2026;</mo></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "preference": "brief"
+    },
+    "AbstrVarCases_sbrief": {
+      "test": true,
+      "input": "<mo>{</mo><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x2026;</mo></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable>",
+      "preference": "sbrief"
+    },
+    "AbstrVarDeterminant_default": {
+      "test": true,
+      "input": "<mo>|</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd /><mtd><mo>&#x22EF;</mo></mtd><mtd /></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable><mo>|</mo>",
+      "preference": "default"
+    },
+    "AbstrVarDeterminant_brief": {
+      "test": true,
+      "input": "<mo>|</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd /><mtd><mo>&#x22EF;</mo></mtd><mtd /></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable><mo>|</mo>",
+      "preference": "brief"
+    },
+    "AbstrVarDeterminant_sbrief": {
+      "test": true,
+      "input": "<mo>|</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd /><mtd><mo>&#x22EF;</mo></mtd><mtd /></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable><mo>|</mo>",
+      "preference": "sbrief"
+    },
+    "AbstrVarMatrix_default": {
+      "test": true,
+      "input": "<mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd /><mtd><mo>&#x22EF;</mo></mtd><mtd /></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable><mo>)</mo>",
+      "preference": "default"
+    },
+    "AbstrVarMatrix_brief": {
+      "test": true,
+      "input": "<mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd /><mtd><mo>&#x22EF;</mo></mtd><mtd /></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable><mo>)</mo>",
+      "preference": "brief"
+    },
+    "AbstrVarMatrix_sbrief": {
+      "test": true,
+      "input": "<mo>(</mo><mtable><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd /><mtd><mo>&#x22EF;</mo></mtd><mtd /></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable><mo>)</mo>",
+      "preference": "sbrief"
+    },
+    "AbstrVarMultiplication_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>*</mo><mo>&#x2026;</mo><mo>*</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrVarMultiplication_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>*</mo><mo>&#x2026;</mo><mo>*</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrVarMultiplication_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>*</mo><mo>&#x2026;</mo><mo>*</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrVarMultirel_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>&#x2264;</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrVarMultirel_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>&#x2264;</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrVarMultirel_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>&#x2264;</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrVarPunctuated_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>,</mo><mo>&#x2026;</mo><mo>,</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrVarPunctuated_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>,</mo><mo>&#x2026;</mo><mo>,</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrVarPunctuated_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>,</mo><mo>&#x2026;</mo><mo>,</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrVarRelation_default": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>=</mo><mi>b</mi>",
+      "preference": "default"
+    },
+    "AbstrVarRelation_brief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>=</mo><mi>b</mi>",
+      "preference": "brief"
+    },
+    "AbstrVarRelation_sbrief": {
+      "test": true,
+      "input": "<mi>a</mi><mo>=</mo><mo>&#x2026;</mo><mo>=</mo><mi>b</mi>",
+      "preference": "sbrief"
+    },
+    "AbstrVarVector_default": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x22EE;</mo></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>d</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "default"
+    },
+    "AbstrVarVector_brief": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x22EE;</mo></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>d</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "brief"
+    },
+    "AbstrVarVector_sbrief": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mo>&#x22EE;</mo></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>d</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "sbrief"
+    },
+    "AbstrVector_default": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>e</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "default"
+    },
+    "AbstrVector_brief": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>e</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "brief"
+    },
+    "AbstrVector_sbrief": {
+      "test": true,
+      "input": "<mfenced open=\"[\" close=\"]\"><mtable><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>e</mi></mtd></mtr></mtable></mfenced>",
+      "preference": "sbrief"
+    }
+  }
+}

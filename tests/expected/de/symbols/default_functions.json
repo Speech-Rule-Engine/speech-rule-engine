@@ -1,0 +1,341 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "DefaultFunctionGermanTest",
+  "locale": "de",
+  "domain": "default",
+  "styles": [
+    "default"
+  ],
+  "active": "DefaultSymbolsGerman",
+  "type": "function",
+  "factory": "symbol",
+  "base": "input/common/functions.json",
+  "information": "German Default Function tests.",
+  "tests": {
+    "deg": {
+      "expected": [
+        "Grad"
+      ]
+    },
+    "det": {
+      "expected": [
+        "Determinante"
+      ]
+    },
+    "dim": {
+      "expected": [
+        "Dimension"
+      ]
+    },
+    "hom": {
+      "expected": [
+        "Homomorphismus"
+      ]
+    },
+    "Hom": {
+      "expected": [
+        "Homomorphismus"
+      ]
+    },
+    "ker": {
+      "expected": [
+        "Kern"
+      ]
+    },
+    "Tr": {
+      "expected": [
+        "Spur"
+      ]
+    },
+    "tr": {
+      "expected": [
+        "Spur"
+      ]
+    },
+    "log": {
+      "expected": [
+        "Logarithmus"
+      ]
+    },
+    "ln": {
+      "expected": [
+        "natürlicher Logarithmus"
+      ]
+    },
+    "lg": {
+      "expected": [
+        "Logarithmus zur Basis 10"
+      ]
+    },
+    "exp": {
+      "expected": [
+        "Exponent"
+      ]
+    },
+    "expt": {
+      "expected": [
+        "Exponent"
+      ]
+    },
+    "gcd": {
+      "expected": [
+        "größter gemeinsamer Teiler"
+      ]
+    },
+    "lcm": {
+      "expected": [
+        "kleinstes gemeinsames Vielfaches"
+      ]
+    },
+    "arg": {
+      "expected": [
+        "Argument"
+      ]
+    },
+    "im": {
+      "expected": [
+        "der Imaginärteil der komplexen Zahl"
+      ]
+    },
+    "re": {
+      "expected": [
+        "der Realteil der komplexen Zahl"
+      ]
+    },
+    "inf": {
+      "expected": [
+        "Infimum"
+      ]
+    },
+    "lim": {
+      "expected": [
+        "Limes"
+      ]
+    },
+    "lim inf": {
+      "expected": [
+        "Limes inferior"
+      ]
+    },
+    "liminf": {
+      "expected": [
+        "Limes inferior"
+      ]
+    },
+    "lim sup": {
+      "expected": [
+        "Limes superior"
+      ]
+    },
+    "limsup": {
+      "expected": [
+        "Limes superior"
+      ]
+    },
+    "max": {
+      "expected": [
+        "Maximum"
+      ]
+    },
+    "min": {
+      "expected": [
+        "Minimum"
+      ]
+    },
+    "sup": {
+      "expected": [
+        "Supremum"
+      ]
+    },
+    "inj lim": {
+      "expected": [
+        "Colimes"
+      ]
+    },
+    "injlim": {
+      "expected": [
+        "Colimes"
+      ]
+    },
+    "proj lim": {
+      "expected": [
+        "projektiver Limes"
+      ]
+    },
+    "projlim": {
+      "expected": [
+        "projektiver Limes"
+      ]
+    },
+    "mod": {
+      "expected": [
+        "modulo"
+      ]
+    },
+    "Pr": {
+      "expected": [
+        "Wahrscheinlichkeit"
+      ]
+    },
+    "cosh": {
+      "expected": [
+        "Kosinus hyperbolicus"
+      ]
+    },
+    "coth": {
+      "expected": [
+        "Kotangens hyperbolicus"
+      ]
+    },
+    "csch": {
+      "expected": [
+        "Kosekans hyperbolicus"
+      ]
+    },
+    "sech": {
+      "expected": [
+        "Sekans hyperbolicus"
+      ]
+    },
+    "sinh": {
+      "expected": [
+        "Sinus hyperbolicus"
+      ]
+    },
+    "tanh": {
+      "expected": [
+        "Tangens hyperbolicus"
+      ]
+    },
+    "arcosh": {
+      "expected": [
+        "Areakosinus hyperbolicus"
+      ]
+    },
+    "arccosh": {
+      "expected": [
+        "Areakosinus hyperbolicus"
+      ]
+    },
+    "arcoth": {
+      "expected": [
+        "Areakotangens hyperbolicus"
+      ]
+    },
+    "arccoth": {
+      "expected": [
+        "Areakotangens hyperbolicus"
+      ]
+    },
+    "arcsch": {
+      "expected": [
+        "Areakosekans hyperbolicus"
+      ]
+    },
+    "arccsch": {
+      "expected": [
+        "Areakosekans hyperbolicus"
+      ]
+    },
+    "arsech": {
+      "expected": [
+        "Areasekans hyperbolicus"
+      ]
+    },
+    "arcsech": {
+      "expected": [
+        "Areasekans hyperbolicus"
+      ]
+    },
+    "arsinh": {
+      "expected": [
+        "Areasinus hyperbolicus"
+      ]
+    },
+    "arcsinh": {
+      "expected": [
+        "Areasinus hyperbolicus"
+      ]
+    },
+    "artanh": {
+      "expected": [
+        "Areatangens hyperbolicus "
+      ]
+    },
+    "arctanh": {
+      "expected": [
+        "Areatangens hyperbolicus "
+      ]
+    },
+    "cos": {
+      "expected": [
+        "Kosinus"
+      ]
+    },
+    "cosine": {
+      "expected": [
+        "Kosinus"
+      ]
+    },
+    "cot": {
+      "expected": [
+        "Kotangens"
+      ]
+    },
+    "csc": {
+      "expected": [
+        "Kosekans"
+      ]
+    },
+    "sec": {
+      "expected": [
+        "Sekans"
+      ]
+    },
+    "sin": {
+      "expected": [
+        "Sinus"
+      ]
+    },
+    "sine": {
+      "expected": [
+        "Sinus"
+      ]
+    },
+    "tan": {
+      "expected": [
+        "Tangens"
+      ]
+    },
+    "arccos": {
+      "expected": [
+        "Arkuskosinus"
+      ]
+    },
+    "arccot": {
+      "expected": [
+        "Arkuskotangens"
+      ]
+    },
+    "arccsc": {
+      "expected": [
+        "Arkuskosekans"
+      ]
+    },
+    "arcsec": {
+      "expected": [
+        "Arkussekans"
+      ]
+    },
+    "arcsin": {
+      "expected": [
+        "Arkussinus"
+      ]
+    },
+    "arctan": {
+      "expected": [
+        "Arkustangens"
+      ]
+    }
+  }
+}

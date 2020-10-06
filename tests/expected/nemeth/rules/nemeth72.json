@@ -1,0 +1,191 @@
+{
+  "name": "Nemeth72Test",
+  "factory": "speech",
+  "base": "input/nemeth/nemeth72.json",
+  "information": "Nemeth Tests from 1972 book.",
+  "domain": "default",
+  "locale": "nemeth",
+  "modality": "braille",
+  "active": "Nemeth72Test",
+  "actual": false,
+  "exclude": [],
+  "tests": {
+    "10_14": {
+      "expected": "⠤⠼⠂"
+    },
+    "10_15": {
+      "expected": "⠤⠼⠨⠒"
+    },
+    "156_169_1": {
+      "expected": "⠝⠯"
+    },
+    "_comment0_": " Number indicator",
+    "number_para_8_a_0": {
+      "expected": "⠼⠂⠠⠒⠶⠦",
+      "_comment1_": " Continental"
+    },
+    "number_para_8_a_1": {
+      "expected": ""
+    },
+    "number_para_8_a_2": {
+      "expected": "⠼⠒⠨⠶⠖",
+      "_comment2_": " Continental"
+    },
+    "number_para_8_a_3": {
+      "expected": ""
+    },
+    "number_para_8_b_0": {
+      "expected": "⠼⠂⠠⠲⠶⠦"
+    },
+    "number_para_8_b_1": {
+      "expected": "⠼⠂⠴⠴⠠⠀⠼⠆⠴⠴⠠⠀⠼⠒⠴⠴"
+    },
+    "number_para_8_c_0": {
+      "expected": "⠼⠨⠒⠢"
+    },
+    "number_para_8_c_1": {
+      "expected": "⠼⠒⠨⠂⠲"
+    },
+    "number_para_8_c_2": {
+      "expected": "⠼⠨⠆⠁⠂⠁⠆⠁⠒"
+    },
+    "number_para_8_c_3": {
+      "expected": "⠨⠐⠁⠂⠁⠆⠁⠒"
+    },
+    "number_para_8_c_4": {
+      "expected": "⠼⠨⠂⠬⠨⠆⠀⠨⠅⠀⠨⠐⠤⠤⠤⠤"
+    },
+    "number_para_9_a_0": {
+      "expected": "⠼⠆⠶",
+      "_comment3_": " Ignored (2)"
+    },
+    "number_para_9_a_1": {
+      "expected": "⠼⠂⠬⠭⠬⠽⠀⠨⠅⠀⠼⠴"
+    },
+    "number_para_9_a_2": {
+      "expected": "⠽⠀⠨⠅⠀⠼⠆⠎⠊⠝⠀⠭"
+    },
+    "number_para_9_a_3": {
+      "expected": "⠎⠊⠝⠀⠼⠂"
+    },
+    "number_para_9_a_4": {
+      "expected": "⠎⠊⠝⠘⠆⠀⠼⠆⠭"
+    },
+    "number_para_9_a_5": {
+      "expected": "⠼⠴⠨⠒⠒⠒⠀⠄⠄⠄⠀⠼⠒⠀⠄⠄⠄"
+    },
+    "number_para_9_a_6": {
+      "expected": "⠇⠕⠛⠰⠂⠴⠀⠼⠆",
+      "_comment4_": " Ignored (9) for now"
+    },
+    "number_para_9_a_7": {
+      "expected": "⠷⠭⠀⠨⠅⠀⠼⠴⠾"
+    },
+    "number_para_9_a_8": {
+      "expected": "⠹⠂⠂⠌⠢⠼",
+      "_comment5_": " Note that 11 differs from the book as we linearise fractions.",
+      "_comment6_": " Ignored (12, 13)"
+    },
+    "number_para_9_a_9": {
+      "expected": "⠤⠼⠂"
+    },
+    "number_para_9_a_10": {
+      "expected": "⠤⠼⠨⠒"
+    },
+    "number_para_9_b_0": {
+      "expected": "⠦⠼⠒⠀⠙⠕⠛⠎⠴"
+    },
+    "number_para_9_b_1": {
+      "expected": "⠠⠏⠗⠕⠃⠁⠃⠊⠇⠊⠞⠽⠤⠤⠼⠴",
+      "_comment7_": " (2) Note this is uncontracted Grade 1"
+    },
+    "number_para_9_b_2": {
+      "expected": "⠦⠼⠨⠢"
+    },
+    "number_para_9_b_3": {
+      "expected": "⠦⠤⠼⠲"
+    },
+    "_comment8_": " Rule XII - Fractions (Page 75ff.)",
+    "para_62_a_0": {
+      "expected": "⠹⠂⠌⠒⠼"
+    },
+    "para_62_a_1": {
+      "expected": "⠭⠘⠹⠂⠌⠆⠼"
+    },
+    "para_62_a_2": {
+      "expected": "⠹⠁⠬⠃⠌⠉⠼"
+    },
+    "para_62_a_3": {
+      "expected": "⠹⠭⠘⠹⠂⠌⠆⠼⠐⠌⠆⠼"
+    },
+    "para_62_a_4": {
+      "expected": "⠗⠁⠞⠑⠀⠨⠅⠀⠹⠙⠊⠎⠞⠁⠝⠉⠑⠌⠞⠊⠍⠑⠼"
+    },
+    "para_62_b_0": {
+      "expected": "⠹⠁⠬⠃⠸⠌⠉⠬⠙⠼"
+    },
+    "para_62_b_1": {
+      "expected": "⠼⠒⠹⠭⠸⠌⠽⠼",
+      "_comment9_": " Can't deal with smaller type yet."
+    },
+    "para_66_0": {
+      "expected": "⠠⠹⠹⠒⠌⠦⠼⠠⠌⠢⠠⠼"
+    },
+    "para_66_1": {
+      "expected": "⠠⠹⠂⠸⠌⠆⠠⠌⠆⠸⠹⠆⠌⠒⠸⠼⠠⠼",
+      "_comment10_": " '<mfrac><mfrac bevelled=\"true\"><mn>2</mn><mn>3</mn></mfrac><mfrac bevelled=\"true\"><mn>3</mn><mn>2</mn></mfrac></mfrac>',"
+    },
+    "para_66_2": {
+      "expected": "⠠⠹⠆⠸⠌⠒⠠⠌⠒⠸⠌⠆⠠⠼",
+      "_comment11_": " Need to consider regular division operator for complex (but not hypercomplex!) fraction.",
+      "_comment12_": " Extend to nesting depth computation to work with type/role pairs."
+    },
+    "para_66_3": {
+      "expected": "⠠⠹⠢⠠⠌⠲⠸⠹⠒⠌⠦⠸⠼⠠⠼"
+    },
+    "para_66_4": {
+      "expected": "⠠⠹⠒⠸⠌⠲⠠⠌⠢⠠⠼",
+      "_comment13_": " Need to consider regular division operator for complex (but not hypercomplex!) fraction."
+    },
+    "para_66_5": {
+      "expected": "⠠⠹⠹⠂⠌⠆⠼⠠⠸⠌⠹⠒⠌⠲⠼⠠⠼"
+    },
+    "para_67": {
+      "expected": "⠹⠁⠌⠃⠘⠠⠹⠹⠒⠌⠲⠼⠠⠌⠹⠢⠌⠖⠼⠠⠼⠐⠼"
+    },
+    "para_68_0": {
+      "expected": "⠠⠠⠹⠠⠹⠂⠸⠹⠂⠌⠲⠸⠼⠠⠌⠂⠸⠹⠒⠌⠢⠸⠼⠠⠼⠠⠠⠌⠢⠠⠠⠼",
+      "_comment14_": " (1) linearized",
+      "_comment15_": " (4)"
+    },
+    "para_68_1": {
+      "expected": "⠠⠠⠹⠠⠹⠷⠂⠤⠭⠾⠹⠙⠌⠙⠭⠼⠷⠆⠭⠾⠤⠆⠭⠹⠙⠌⠙⠭⠼⠷⠂⠤⠭⠾⠠⠌⠷⠂⠤⠭⠾⠘⠆⠐⠠⠼⠠⠠⠌⠂⠬⠷⠹⠆⠭⠌⠂⠤⠭⠼⠾⠘⠆⠐⠠⠠⠼"
+    },
+    "para_69": {
+      "expected": "⠜⠆⠻⠀⠨⠅⠀⠼⠂⠬⠠⠠⠠⠹⠂⠠⠠⠠⠌⠆⠬⠠⠠⠹⠂⠠⠠⠌⠆⠬⠠⠹⠂⠠⠌⠆⠬⠹⠂⠌⠆⠬⠄⠄⠄⠼⠠⠼⠠⠠⠼⠠⠠⠠⠼",
+      "_comment16_": " (1) continued Fraction linearized"
+    },
+    "_comment17_": " Rule XV",
+    "para_103_a_0": {
+      "expected": "⠜⠆⠻"
+    },
+    "para_103_a_1": {
+      "expected": "⠜⠭⠬⠽⠻"
+    },
+    "para_103_a_2": {
+      "expected": "⠜⠭⠘⠆⠐⠬⠂⠻"
+    },
+    "para_103_a_3": {
+      "expected": "⠜⠭⠘⠆⠐⠬⠽⠘⠆⠐⠻"
+    },
+    "para_103_a_4": {
+      "expected": "⠜⠹⠭⠌⠽⠼⠻"
+    },
+    "para_103_a_5": {
+      "expected": "⠼⠒⠜⠁⠻"
+    },
+    "para_103_a_6": {
+      "expected": "⠜⠭⠻⠘⠒"
+    }
+  }
+}

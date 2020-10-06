@@ -1,0 +1,86 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchNamedSets",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_named_sets.json",
+  "information": "French Clearspeak NamedSets rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " ClearSpeak Rules and Preferences Examples: Named Sets (Number Systems)",
+    "_comment2_": " Named Sets (Number Systems)",
+    "NumSys001": {
+      "expected": "les nombres réels"
+    },
+    "NumSys001a": {
+      "expected": "les nombres réels"
+    },
+    "NumSys002": {
+      "expected": "les nombres complexes"
+    },
+    "NumSys002a": {
+      "expected": "les nombres complexes"
+    },
+    "NumSys003": {
+      "expected": "les nombres entiers"
+    },
+    "NumSys003a": {
+      "expected": "les nombres entiers"
+    },
+    "NumSys004": {
+      "expected": "les Nombres rationnels"
+    },
+    "NumSys004a": {
+      "expected": "les Nombres rationnels"
+    },
+    "NumSys005": {
+      "expected": "les nombres entier naturel"
+    },
+    "NumSys005a": {
+      "expected": "les nombres entier naturel"
+    },
+    "NumSys005_1": {
+      "expected": "les nombres entiers naturel avec zero"
+    },
+    "NumSys005_1a": {
+      "expected": "les nombres entiers naturel avec zero"
+    },
+    "NumSys006": {
+      "expected": "les nombres entiers positif"
+    },
+    "NumSys006a": {
+      "expected": "les nombres entiers positif"
+    },
+    "NumSys006_1": {
+      "expected": "les nombres entiers négatif"
+    },
+    "NumSys006_1a": {
+      "expected": "les nombres entiers négatif"
+    },
+    "NumSys007": {
+      "expected": "r-deux"
+    },
+    "NumSys007a": {
+      "expected": "r-deux"
+    },
+    "NumSys008": {
+      "expected": "z-trois"
+    },
+    "NumSys008a": {
+      "expected": "z-trois"
+    },
+    "NumSys009": {
+      "expected": "c-n"
+    },
+    "NumSys009a": {
+      "expected": "c-n"
+    },
+    "NumSys010": {
+      "expected": "r-infini"
+    },
+    "NumSys010a": {
+      "expected": "r-infini"
+    }
+  }
+}

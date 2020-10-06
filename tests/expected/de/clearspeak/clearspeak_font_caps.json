@@ -1,0 +1,151 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "ClearspeakGermanFontTest",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_font_caps.json",
+  "information": "German Clearspeak Font tests with Caps preference.",
+  "domain": "clearspeak",
+  "locale": "de",
+  "active": "ClearspeakGermanFont",
+  "exclude": [],
+  "tests": {
+    "LatinMathfontsUpperCaps_0": {
+      "expected": "großes A"
+    },
+    "LatinMathfontsUpperCaps_1": {
+      "expected": "großes A"
+    },
+    "LatinMathfontsUpperCaps_2": {
+      "expected": "fettes großes A"
+    },
+    "LatinMathfontsUpperCaps_3": {
+      "expected": "großes A"
+    },
+    "LatinMathfontsUpperCaps_4": {
+      "expected": "fettkursives großes A"
+    },
+    "LatinMathfontsUpperCaps_5": {
+      "expected": "Schreibschrift großes A"
+    },
+    "LatinMathfontsUpperCaps_6": {
+      "expected": "fettes Schreibschrift großes A"
+    },
+    "LatinMathfontsUpperCaps_7": {
+      "expected": "Fraktur großes A"
+    },
+    "LatinMathfontsUpperCaps_8": {
+      "expected": "großes A mit Doppelstrich"
+    },
+    "LatinMathfontsUpperCaps_9": {
+      "expected": "fettes Fraktur großes A"
+    },
+    "LatinMathfontsUpperCaps_10": {
+      "expected": "serifenloses großes A"
+    },
+    "LatinMathfontsUpperCaps_11": {
+      "expected": "serifenloses fettes großes A"
+    },
+    "LatinMathfontsUpperCaps_12": {
+      "expected": "serifenloses kursives großes A"
+    },
+    "LatinMathfontsUpperCaps_13": {
+      "expected": "serifenloses fettkursives großes A"
+    },
+    "LatinMathfontsUpperCaps_14": {
+      "expected": "nichtproportionales großes A"
+    },
+    "GreekMathfontsUpperCaps_0": {
+      "expected": "großes Alpha"
+    },
+    "GreekMathfontsUpperCaps_1": {
+      "expected": "fettes großes Alpha"
+    },
+    "GreekMathfontsUpperCaps_2": {
+      "expected": "großes Alpha"
+    },
+    "GreekMathfontsUpperCaps_3": {
+      "expected": "fettkursives großes Alpha"
+    },
+    "GreekMathfontsUpperCaps_4": {
+      "expected": "serifenloses fettes großes Alpha"
+    },
+    "GreekMathfontsUpperCaps_5": {
+      "expected": "serifenloses fettkursives großes Alpha"
+    },
+    "LatinMathvariantUpperCaps_0": {
+      "expected": "normales großes A"
+    },
+    "LatinMathvariantUpperCaps_1": {
+      "expected": "fettes großes A"
+    },
+    "LatinMathvariantUpperCaps_2": {
+      "expected": "großes A"
+    },
+    "LatinMathvariantUpperCaps_3": {
+      "expected": "fettkursives großes A"
+    },
+    "LatinMathvariantUpperCaps_4": {
+      "expected": "Schreibschrift großes A"
+    },
+    "LatinMathvariantUpperCaps_5": {
+      "expected": "fettes Schreibschrift großes A"
+    },
+    "LatinMathvariantUpperCaps_6": {
+      "expected": "Fraktur großes A"
+    },
+    "LatinMathvariantUpperCaps_7": {
+      "expected": "großes A mit Doppelstrich"
+    },
+    "LatinMathvariantUpperCaps_8": {
+      "expected": "fettes Fraktur großes A"
+    },
+    "LatinMathvariantUpperCaps_9": {
+      "expected": "serifenloses großes A"
+    },
+    "LatinMathvariantUpperCaps_10": {
+      "expected": "serifenloses fettes großes A"
+    },
+    "LatinMathvariantUpperCaps_11": {
+      "expected": "serifenloses kursives großes A"
+    },
+    "LatinMathvariantUpperCaps_12": {
+      "expected": "serifenloses fettkursives großes A"
+    },
+    "LatinMathvariantUpperCaps_13": {
+      "expected": "nichtproportionales großes A"
+    },
+    "LatinMathvariantMathJaxCaps_0": {
+      "expected": "kalligrafisches großes A"
+    },
+    "LatinMathvariantMathJaxCaps_1": {
+      "expected": "fettes kalligrafisches großes A"
+    },
+    "LatinMathvariantMathJaxCaps_2": {
+      "expected": "kalligrafisches großes A"
+    },
+    "LatinMathvariantMathJaxCaps_3": {
+      "expected": "fettes kalligrafisches großes A"
+    },
+    "LatinMathvariantMathJaxCaps_4": {
+      "expected": "großes A"
+    },
+    "GreekMathvariantUpperCaps_0": {
+      "expected": "normales großes Alpha"
+    },
+    "GreekMathvariantUpperCaps_1": {
+      "expected": "fettes großes Alpha"
+    },
+    "GreekMathvariantUpperCaps_2": {
+      "expected": "großes Alpha"
+    },
+    "GreekMathvariantUpperCaps_3": {
+      "expected": "fettkursives großes Alpha"
+    },
+    "GreekMathvariantUpperCaps_4": {
+      "expected": "serifenloses fettes großes Alpha"
+    },
+    "GreekMathvariantUpperCaps_5": {
+      "expected": "serifenloses fettkursives großes Alpha"
+    }
+  }
+}

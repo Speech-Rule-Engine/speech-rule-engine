@@ -1,0 +1,65 @@
+{
+  "tests": {
+    "_comment1_": " Issues",
+    "Issue230_1": {
+      "test": true,
+      "preference": "default",
+      "input": "<mn>5</mn><mfrac><mn>3</mn><mn>224</mn></mfrac>"
+    },
+    "Issue230_2": {
+      "test": true,
+      "preference": "default",
+      "input": "<mn>5</mn><mfrac><mn>3</mn><mn>4</mn></mfrac>"
+    },
+    "IssueNumbers_1": {
+      "test": true,
+      "preference": "default",
+      "input": "<mrow><mn>t2e4</mn></mrow>"
+    },
+    "IssueNumbers_2": {
+      "test": true,
+      "preference": "default",
+      "input": "<mrow><mn>#FF0000</mn></mrow>"
+    },
+    "IssueNumbers_3": {
+      "test": true,
+      "preference": "default",
+      "input": "<mrow><mn>#FFFF</mn></mrow>"
+    },
+    "Issue320_1": {
+      "test": true,
+      "preference": "default",
+      "input": "<mo>∂</mo>"
+    },
+    "Issue320_2": {
+      "test": true,
+      "preference": "default",
+      "input": "<mi>x</mi><mo>!</mo>"
+    },
+    "Issue320_3": {
+      "test": true,
+      "preference": "default",
+      "input": "<mo>-</mo><mo>-</mo><mi>x</mi>"
+    },
+    "Issue320_4": {
+      "test": true,
+      "preference": "default",
+      "input": "<mo>+</mo><mo>+</mo><mi>x</mi>"
+    },
+    "Issue320_5": {
+      "test": true,
+      "preference": "default",
+      "input": "<mi>sin</mi><mi>sin</mi><mi>x</mi>"
+    },
+    "Issue320_6": {
+      "test": true,
+      "preference": "default",
+      "input": "<mo>∂</mo><mo>∂</mo><mi>x</mi>"
+    },
+    "Issue320_7": {
+      "test": true,
+      "preference": "default",
+      "input": "<mrow><mrow><mo>(</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><msup><mo>∂</mo><mn>2</mn></msup><mrow><mo>∂</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac><mo>)</mo></mrow><msup><mrow><mo minsize=\"150%\">|</mo><mi>φ <!-- \u000barphi --></mi><mo stretchy=\"false\">(</mo><mi>x</mi><mo>+</mo><mi mathvariant=\"normal\">i</mi><mi>y</mi><mo stretchy=\"false\">)</mo><mo minsize=\"150%\">|</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>0</mn></mrow>"
+    }
+  }
+}

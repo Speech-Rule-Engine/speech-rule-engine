@@ -1,0 +1,78 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanCapitalLetters",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_capital_letters.json",
+  "information": "German Clearspeak CapitalLetters rule tests.",
+  "active": "ClearspeakGerman",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Capital Letters",
+    "_comment2_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap001": {
+      "expected": "Sinus A geteilt durch a, ist gleich, Sinus B geteilt durch b"
+    },
+    "Cap002": {
+      "expected": "c Quadrat ist gleich a Quadrat plus b Quadrat minus 2 a b Kosinus C"
+    },
+    "Cap003": {
+      "expected": "Tangens A ist gleich, a geteilt durch b"
+    },
+    "Cap004": {
+      "expected": "A B"
+    },
+    "Cap005": {
+      "expected": "a A"
+    },
+    "Cap006": {
+      "expected": "b A"
+    },
+    "Cap007": {
+      "expected": "B a"
+    },
+    "Cap008": {
+      "expected": "Winkel A B C"
+    },
+    "Cap009": {
+      "expected": "das Maß des Winkels A B C"
+    },
+    "Cap010": {
+      "expected": "das Maß des Winkels A"
+    },
+    "_comment3_": " TODO: (QUESTION) This is does not seem to follow the fraction rules.",
+    "Cap011": {
+      "expected": "Sinus großes A geteilt durch a, ist gleich, Sinus großes B geteilt durch b"
+    },
+    "Cap012": {
+      "expected": "c Quadrat ist gleich a Quadrat plus b Quadrat minus 2 a b Kosinus großes C"
+    },
+    "Cap013": {
+      "expected": "Tangens großes A ist gleich, a geteilt durch b"
+    },
+    "Cap014": {
+      "expected": "großes A, großes B"
+    },
+    "Cap015": {
+      "expected": "a, großes A"
+    },
+    "Cap016": {
+      "expected": "b, großes A"
+    },
+    "Cap017": {
+      "expected": "großes B, a"
+    },
+    "Cap018": {
+      "expected": "Winkel großes A, großes B, großes C"
+    },
+    "Cap019": {
+      "expected": "das Maß des Winkels großes A, großes B, großes C"
+    },
+    "Cap020": {
+      "expected": "das Maß des Winkels großes A"
+    },
+    "Cap020a": {
+      "expected": "Winkel großes A"
+    }
+  }
+}

@@ -33,15 +33,15 @@ sre.Variables = function() {};
  * @const
  * @type {string}
  */
-sre.Variables.VERSION = '3.0.1';
+sre.Variables.VERSION = '3.1.1';
 
 
 /**
  * List of locales to load.
  * @const
- * @type {Array.<string>}
+ * @type {!Array.<string>}
  */
-sre.Variables.LOCALES = ['en', 'es', 'fr', 'nemeth'];
+sre.Variables.LOCALES = ['en', 'de', 'fr', 'es', 'nemeth'];
 
 
 /**

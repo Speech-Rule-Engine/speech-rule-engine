@@ -1,0 +1,296 @@
+{
+  "_comment0_": " With support from the Mozilla Foundation under a MOSS grant.",
+  "name": "FrenchPart3Adornments",
+  "locale": "fr",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_part3_adornments.json",
+  "information": "French Clearspeak Part3Adornments rule tests.",
+  "active": "ClearspeakFrench",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Part 3: Adornments",
+    "_comment2_": " Prime, Double Prime, and Triple Prime",
+    "Prime001": {
+      "expected": "A prime, B prime"
+    },
+    "Prime002": {
+      "expected": "A double prime, B double prime"
+    },
+    "Prime003": {
+      "expected": "A triple prime, B triple prime"
+    },
+    "Prime004": {
+      "expected": "f prime de x"
+    },
+    "Prime005": {
+      "expected": "f double prime de x"
+    },
+    "Prime006": {
+      "expected": "f triple prime de x"
+    },
+    "Prime007": {
+      "expected": "1 foot"
+    },
+    "Prime008": {
+      "expected": "2 feet"
+    },
+    "Prime009": {
+      "expected": "1 inch"
+    },
+    "Prime010": {
+      "expected": "2 inches"
+    },
+    "Prime011": {
+      "expected": "16 feet, 10 inches"
+    },
+    "_comment3_": " TODO: (Simons) Better handling of degrees.",
+    "Prime012": {
+      "expected": "45 degrés, 10 minutes"
+    },
+    "Prime013": {
+      "expected": "x degrés, y minutes"
+    },
+    "Prime014": {
+      "expected": "XXXX"
+    },
+    "Prime015": {
+      "expected": "XXXX"
+    },
+    "Prime016": {
+      "expected": "1 minute"
+    },
+    "Prime017": {
+      "expected": "x minutes"
+    },
+    "Prime018": {
+      "expected": "2 minutes"
+    },
+    "Prime019": {
+      "expected": "1 second"
+    },
+    "Prime020": {
+      "expected": "x seconds"
+    },
+    "Prime021": {
+      "expected": "2 seconds"
+    },
+    "Prime022": {
+      "expected": "16 minutes, 10 seconds"
+    },
+    "Prime023": {
+      "expected": "x minutes, y seconds"
+    },
+    "Prime024": {
+      "expected": "45 degrees, 10 minutes"
+    },
+    "Prime025": {
+      "expected": "45 degrees, 10 minutes, 25 seconds"
+    },
+    "Prime026": {
+      "expected": "A prime, B prime"
+    },
+    "Prime027": {
+      "expected": "A double prime, B double prime"
+    },
+    "Prime028": {
+      "expected": "A triple prime, B triple prime"
+    },
+    "Prime029": {
+      "expected": "f prime de x"
+    },
+    "Prime030": {
+      "expected": "f double prime de x"
+    },
+    "Prime031": {
+      "expected": "f triple prime de x"
+    },
+    "Prime032": {
+      "expected": "1 foot"
+    },
+    "Prime033": {
+      "expected": "x feet"
+    },
+    "Prime034": {
+      "expected": "2 feet"
+    },
+    "Prime035": {
+      "expected": "1 inch"
+    },
+    "Prime036": {
+      "expected": "x inches"
+    },
+    "Prime037": {
+      "expected": "2 inches"
+    },
+    "_comment4_": " TODO: (Simons) Rewrite prime etc into superscript.",
+    "Prime038": {
+      "expected": "XXXX"
+    },
+    "Prime039": {
+      "expected": "XXXX"
+    },
+    "Prime040": {
+      "expected": "XXXX"
+    },
+    "Prime041": {
+      "expected": "XXXX"
+    },
+    "Prime042": {
+      "expected": "A prime, B prime"
+    },
+    "Prime043": {
+      "expected": "A double prime, B double prime"
+    },
+    "Prime044": {
+      "expected": "A triple prime, B triple prime"
+    },
+    "Prime045": {
+      "expected": "f prime de x"
+    },
+    "Prime046": {
+      "expected": "f double prime de x"
+    },
+    "Prime047": {
+      "expected": "f triple prime de x"
+    },
+    "_comment5_": " Combinations and Permutations",
+    "_comment6_": " These 8 tests come out of the clearspeak documents from MathType.  The MathML",
+    "_comment7_": " has a redundant use of subscripts leaving the actual correct placing of the",
+    "_comment8_": " right index in the multiscript empty.",
+    "_comment9_": " TODO: (Simons) Have a cleanup heuristic to combine multiscripts with",
+    "_comment10_": "                sub/superscripts.",
+    "CombPerm001": {
+      "expected": "XXXX"
+    },
+    "CombPerm002": {
+      "expected": "XXXX"
+    },
+    "CombPerm003": {
+      "expected": "XXXX"
+    },
+    "CombPerm004": {
+      "expected": "XXXX"
+    },
+    "CombPerm005": {
+      "expected": "XXXX"
+    },
+    "CombPerm006": {
+      "expected": "XXXX"
+    },
+    "CombPerm007": {
+      "expected": "XXXX"
+    },
+    "CombPerm008": {
+      "expected": "XXXX"
+    },
+    "_comment11_": " Cleaned up tests with the correct usage of multiscript elements.",
+    "CombPerm001a": {
+      "expected": "n C r"
+    },
+    "CombPerm002a": {
+      "expected": "n P r"
+    },
+    "CombPerm003a": {
+      "expected": "10 C 3"
+    },
+    "CombPerm004a": {
+      "expected": "10 P 3"
+    },
+    "CombPerm005a": {
+      "expected": "combinaison de; parmi r"
+    },
+    "CombPerm006a": {
+      "expected": "permutation de n parmi r"
+    },
+    "CombPerm007a": {
+      "expected": "combinaison de; parmi 3"
+    },
+    "CombPerm008a": {
+      "expected": "permutation de 10 parmi 3"
+    },
+    "_comment12_": " Bar",
+    "Bar001": {
+      "expected": "f macron"
+    },
+    "Bar002": {
+      "expected": "f macron de x"
+    },
+    "Bar003": {
+      "expected": "f sub 1, macron"
+    },
+    "Bar004": {
+      "expected": "f sub 1, macron de x"
+    },
+    "Bar005": {
+      "expected": "z macron"
+    },
+    "Bar006": {
+      "expected": "la décimale 0 virgule suivi par le chiffre répété 3"
+    },
+    "Bar007": {
+      "expected": "la décimale 0 virgule suivi par les chiffres répétés 1 2"
+    },
+    "Bar008": {
+      "expected": "la décimale 2 virgule suivi par les chiffres répétés 1 3 4"
+    },
+    "Bar009": {
+      "expected": "la décimale point 1 3 suivi par les chiffres répétés 4 6 7"
+    },
+    "Bar010": {
+      "expected": "la décimale 2 5 point 1 2 suivi par les chiffres répétés 6 3 2"
+    },
+    "Bar011": {
+      "expected": "z, z macron"
+    },
+    "Bar012": {
+      "expected": "le segment C D"
+    },
+    "Bar013": {
+      "expected": "le segment C prime D prime"
+    },
+    "Bar014": {
+      "expected": "le segment C double prime D double prime"
+    },
+    "Bar015": {
+      "expected": "le segment C triple prime D triple prime"
+    },
+    "Bar016": {
+      "expected": "le complexe conjugué de z"
+    },
+    "Bar017": {
+      "expected": "z, le complexe conjugué de z"
+    },
+    "Bar018": {
+      "expected": "le complexe conjugué de 3 moins 2 i, égale 3 plus 2 i"
+    },
+    "_comment13_": " Added! Test that still decimal period still works.",
+    "Bar006a": {
+      "expected": "la décimale 0 virgule suivi par le chiffre répété 3"
+    },
+    "Bar007a": {
+      "expected": "la décimale 0 virgule suivi par les chiffres répétés 1 2"
+    },
+    "Bar008a": {
+      "expected": "la décimale 2 virgule suivi par les chiffres répétés 1 3 4"
+    },
+    "Bar009a": {
+      "expected": "la décimale point 1 3 suivi par les chiffres répétés 4 6 7"
+    },
+    "Bar010a": {
+      "expected": "la décimale 2 5 point 1 2 suivi par les chiffres répétés 6 3 2"
+    },
+    "_comment14_": " Equals Sign with Adornments",
+    "Equal001": {
+      "expected": "est défini par"
+    },
+    "Equal002": {
+      "expected": "parenthèse gauche, f opérateur rond g, parenthèse droite, de x, est défini par, f de, g de x"
+    },
+    "Equal003": {
+      "expected": "signe égale avec point d'interrogation dessus"
+    },
+    "Equal004": {
+      "expected": "x plus 2 signe égale avec point d'interrogation dessus 4"
+    }
+  }
+}

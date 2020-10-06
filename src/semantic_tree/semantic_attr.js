@@ -198,7 +198,7 @@ sre.SemanticAttr = function() {
    */
   this.neutralFences =
       [
-        '|', '¦', '‖', '❘', '⦀', '⫴', '￤', '｜'
+        '|', '¦', '‖', '❘', '⦀', '⫴', '￤', '｜', '∣'
       ];
   /** Array of all fences.
    * @type {Array.<string>}
@@ -275,6 +275,22 @@ sre.SemanticAttr = function() {
        '𝑛', '𝑜', '𝑝', '𝑞', '𝑟', '𝑠', '𝑡', '𝑢', '𝑣', '𝑤', '𝑥', '𝑦', '𝑧',
        // dotless i and j.
        '𝚤', '𝚥'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.capitalLatinBoldItalic =
+      [
+        '𝑨', '𝑩', '𝑪', '𝑫', '𝑬', '𝑭', '𝑮', '𝑯', '𝑰', '𝑱', '𝑲', '𝑳', '𝑴',
+        '𝑵', '𝑶', '𝑷', '𝑸', '𝑹', '𝑺', '𝑻', '𝑼', '𝑽', '𝑾', '𝑿', '𝒀', '𝒁'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.smallLatinBoldItalic =
+      [
+        '𝒂', '𝒃', '𝒄', '𝒅', '𝒆', '𝒇', '𝒈', '𝒉', '𝒊', '𝒋', '𝒌', '𝒍', '𝒎',
+        '𝒏', '𝒐', '𝒑', '𝒒', '𝒓', '𝒔', '𝒕', '𝒖', '𝒗', '𝒘', '𝒙', '𝒚', '𝒛'
       ];
   /**
    * @type {Array.<string>}
@@ -411,6 +427,22 @@ sre.SemanticAttr = function() {
   /**
    * @type {Array.<string>}
    */
+  this.capitalLatinSansSerifBoldItalic =
+      [
+        '𝘼', '𝘽', '𝘾', '𝘿', '𝙀', '𝙁', '𝙂', '𝙃', '𝙄', '𝙅', '𝙆', '𝙇', '𝙈',
+        '𝙉', '𝙊', '𝙋', '𝙌', '𝙍', '𝙎', '𝙏', '𝙐', '𝙑', '𝙒', '𝙓', '𝙔', '𝙕'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.smallLatinSansSerifBoldItalic =
+      [
+        '𝙖', '𝙗', '𝙘', '𝙙', '𝙚', '𝙛', '𝙜', '𝙝', '𝙞', '𝙟', '𝙠', '𝙡', '𝙢',
+        '𝙣', '𝙤', '𝙥', '𝙦', '𝙧', '𝙨', '𝙩', '𝙪', '𝙫', '𝙬', '𝙭', '𝙮', '𝙯'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
   this.capitalLatinMonospace =
       [
         '𝙰', '𝙱', '𝙲', '𝙳', '𝙴', '𝙵', '𝙶', '𝙷', '𝙸', '𝙹', '𝙺', '𝙻', '𝙼',
@@ -484,6 +516,22 @@ sre.SemanticAttr = function() {
   /**
    * @type {Array.<string>}
    */
+  this.capitalGreekBoldItalic =
+      [
+        '𝜜', '𝜝', '𝜞', '𝜟', '𝜠', '𝜡', '𝜢', '𝜣', '𝜤', '𝜥', '𝜦', '𝜧', '𝜨',
+        '𝜩', '𝜪', '𝜫', '𝜬', '𝜮', '𝜯', '𝜰', '𝜱', '𝜲', '𝜳', '𝜴'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.smallGreekBoldItalic =
+      [
+        '𝜶', '𝜷', '𝜸', '𝜹', '𝜺', '𝜻', '𝜼', '𝜽', '𝜾', '𝜿', '𝝀', '𝝁', '𝝂',
+        '𝝃', '𝝄', '𝝅', '𝝆', '𝝇', '𝝈', '𝝉', '𝝊', '𝝋', '𝝌', '𝝍', '𝝎'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
   this.capitalGreekSansSerifBold =
       [
         '𝝖', '𝝗', '𝝘', '𝝙', '𝝚', '𝝛', '𝝜', '𝝝', '𝝞', '𝝟', '𝝠', '𝝡', '𝝢',
@@ -496,6 +544,22 @@ sre.SemanticAttr = function() {
       [
         '𝝰', '𝝱', '𝝲', '𝝳', '𝝴', '𝝵', '𝝶', '𝝷', '𝝸', '𝝹', '𝝺', '𝝻', '𝝼',
        '𝝽', '𝝾', '𝝿', '𝞀', '𝞁', '𝞂', '𝞃', '𝞄', '𝞅', '𝞆', '𝞇', '𝞈'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.capitalGreekSansSerifBoldItalic =
+      [
+        '𝞐', '𝞑', '𝞒', '𝞓', '𝞔', '𝞕', '𝞖', '𝞗', '𝞘', '𝞙', '𝞚', '𝞛', '𝞜',
+        '𝞝', '𝞞', '𝞟', '𝞠', '𝞢', '𝞣', '𝞤', '𝞥', '𝞦', '𝞧', '𝞨'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.smallGreekSansSerifBoldItalic =
+      [
+        '𝞪', '𝞫', '𝞬', '𝞭', '𝞮', '𝞯', '𝞰', '𝞱', '𝞲', '𝞳', '𝞴', '𝞵', '𝞶',
+        '𝞷', '𝞸', '𝞹', '𝞺', '𝞻', '𝞼', '𝞽', '𝞾', '𝞿', '𝟀', '𝟁', '𝟂'
       ];
   /**
    * @type {Array.<string>}
@@ -545,6 +609,7 @@ sre.SemanticAttr = function() {
   this.allLetters = this.capitalLatin.concat(
       this.smallLatin, this.capitalLatinFullWidth, this.smallLatinFullWidth,
       this.capitalLatinBold, this.smallLatinBold, this.capitalLatinItalic,
+      this.capitalLatinBoldItalic, this.smallLatinBoldItalic,
       this.smallLatinItalic, this.capitalLatinScript, this.smallLatinScript,
       this.capitalLatinBoldScript, this.smallLatinBoldScript,
       this.capitalLatinFraktur, this.smallLatinFraktur,
@@ -553,11 +618,14 @@ sre.SemanticAttr = function() {
       this.capitalLatinSansSerif, this.smallLatinSansSerif,
       this.capitalLatinSansSerifBold, this.smallLatinSansSerifBold,
       this.capitalLatinSansSerifItalic, this.smallLatinSansSerifItalic,
+      this.capitalLatinSansSerifBoldItalic, this.smallLatinSansSerifBoldItalic,
       this.capitalLatinMonospace, this.smallLatinMonospace,
       this.latinDoubleStruckItalic, this.capitalGreek, this.smallGreek,
       this.capitalGreekBold, this.smallGreekBold, this.capitalGreekItalic,
-      this.smallGreekItalic, this.capitalGreekSansSerifBold,
+      this.smallGreekItalic, this.capitalGreekBoldItalic,
+      this.smallGreekBoldItalic, this.capitalGreekSansSerifBold,
       this.smallGreekSansSerifBold, this.greekDoubleStruck, this.greekSpecial,
+      this.capitalGreekSansSerifBoldItalic, this.smallGreekSansSerifBoldItalic,
       this.greekSpecialBold, this.greekSpecialItalic,
       this.greekSpecialSansSerifBold,
       this.hebrewLetters);
@@ -1025,6 +1093,16 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.LATINLETTER,
       font: sre.SemanticAttr.Font.ITALIC
     },
+    {set: this.smallLatinBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.LATINLETTER,
+      font: sre.SemanticAttr.Font.BOLDITALIC
+    },
+    {set: this.capitalLatinBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.LATINLETTER,
+      font: sre.SemanticAttr.Font.BOLDITALIC
+    },
     {set: this.smallLatinScript,
       type: sre.SemanticAttr.Type.IDENTIFIER,
       role: sre.SemanticAttr.Role.LATINLETTER,
@@ -1105,6 +1183,16 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.LATINLETTER,
       font: sre.SemanticAttr.Font.SANSSERIFITALIC
     },
+    {set: this.smallLatinSansSerifBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.LATINLETTER,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLDITALIC
+    },
+    {set: this.capitalLatinSansSerifBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.LATINLETTER,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLDITALIC
+    },
     {set: this.smallLatinMonospace,
       type: sre.SemanticAttr.Type.IDENTIFIER,
       role: sre.SemanticAttr.Role.LATINLETTER,
@@ -1151,6 +1239,16 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.GREEKLETTER,
       font: sre.SemanticAttr.Font.ITALIC
     },
+    {set: this.smallGreekBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.BOLDITALIC
+    },
+    {set: this.capitalGreekBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.BOLDITALIC
+    },
     {set: this.smallGreekSansSerifBold,
       type: sre.SemanticAttr.Type.IDENTIFIER,
       role: sre.SemanticAttr.Role.GREEKLETTER,
@@ -1160,6 +1258,16 @@ sre.SemanticAttr = function() {
       type: sre.SemanticAttr.Type.IDENTIFIER,
       role: sre.SemanticAttr.Role.GREEKLETTER,
       font: sre.SemanticAttr.Font.SANSSERIFBOLD
+    },
+    {set: this.capitalGreekSansSerifBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLDITALIC
+    },
+    {set: this.smallGreekSansSerifBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLDITALIC
     },
     {set: this.greekDoubleStruck,
       type: sre.SemanticAttr.Type.IDENTIFIER,
@@ -1442,6 +1550,7 @@ sre.SemanticAttr.Role = {
   LATINLETTER: 'latinletter',
   GREEKLETTER: 'greekletter',
   OTHERLETTER: 'otherletter',
+  NUMBERSET: 'numbersetletter',
 
   // Numbers.
   INTEGER: 'integer',
@@ -1637,6 +1746,15 @@ sre.SemanticAttr.lookupMeaning = function(symbol) {
  */
 sre.SemanticAttr.invisibleTimes = function() {
   return sre.SemanticAttr.getInstance().invisibleTimes_;
+};
+
+
+/**
+ * String representation of the invisible plus unicode character.
+ * @return {string} The invisible plus character.
+ */
+sre.SemanticAttr.invisiblePlus = function() {
+  return sre.SemanticAttr.getInstance().invisiblePlus_;
 };
 
 

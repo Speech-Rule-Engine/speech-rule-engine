@@ -19,10 +19,10 @@
 
 goog.provide('sre.UnitUtil');
 
+goog.require('sre.AuditoryDescription');
 goog.require('sre.Messages');
 goog.require('sre.SemanticAttr');
 goog.require('sre.XpathUtil');
-goog.require('sre.AuditoryDescription');
 
 
 /**
@@ -42,7 +42,7 @@ sre.UnitUtil.unitMultipliers = function(nodes, context) {
     var descr = sre.AuditoryDescription.create({
       text: (sre.UnitUtil.rightMostUnit(children[counter]) &&
              sre.UnitUtil.leftMostUnit(children[counter + 1])) ?
-        sre.Messages.UNIT_TIMES : ''}, {});
+          sre.Messages.UNIT_TIMES : ''}, {});
     counter++;
     return [descr];
   };

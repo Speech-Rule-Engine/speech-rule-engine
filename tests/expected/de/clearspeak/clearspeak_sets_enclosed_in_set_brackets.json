@@ -1,0 +1,64 @@
+{
+  "_comment0_": " This work was sponsored by ETH Zurich",
+  "name": "GermanSetsEnclosedInSetBrackets",
+  "locale": "de",
+  "factory": "clearspeak",
+  "base": "input/clearspeak/clearspeak_sets_enclosed_in_set_brackets.json",
+  "information": "German Clearspeak SetsEnclosedInSetBrackets rule tests.",
+  "active": "ClearspeakGerman",
+  "exclude": [],
+  "tests": {
+    "_comment1_": " Sets Enclosed in Set Brackets",
+    "Set001": {
+      "expected": "die Menge aller x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7"
+    },
+    "Set002": {
+      "expected": "die Menge aller x mit, der Betrag von x, größer als 2"
+    },
+    "Set003": {
+      "expected": "die Menge aller x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7"
+    },
+    "Set004": {
+      "expected": "die Menge aller x in die natürlichen Zahlen mit x is an even number"
+    },
+    "Set005": {
+      "expected": "die Menge 1 Komma 2 Komma 3"
+    },
+    "Set006": {
+      "expected": "die Menge 1 Komma 112 Komma 1 Komma 253"
+    },
+    "Set007": {
+      "expected": "die Menge von x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7"
+    },
+    "Set008": {
+      "expected": "die Menge von x mit, der Betrag von x, größer als 2"
+    },
+    "Set009": {
+      "expected": "die Menge von x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7"
+    },
+    "Set010": {
+      "expected": "die Menge 1 Komma 2 Komma 3"
+    },
+    "Set011": {
+      "expected": "die Menge 1 Komma 112 Komma 1 Komma 253"
+    },
+    "Set012": {
+      "expected": "die Menge aller x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7"
+    },
+    "Set013": {
+      "expected": "die Menge aller x mit, der Betrag von x, größer als 2"
+    },
+    "Set014": {
+      "expected": "die Menge aller x in die ganzen Zahlen mit 2 kleiner als x kleiner als 7"
+    },
+    "Set015": {
+      "expected": "die Menge aller x in die natürlichen Zahlen mit x is an even number"
+    },
+    "Set016": {
+      "expected": "1 Komma 2 Komma 3"
+    },
+    "Set017": {
+      "expected": "1 Komma 112 Komma 1 Komma 253"
+    }
+  }
+}
