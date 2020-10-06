@@ -3,7 +3,7 @@
   "name": "NobleGermanTest",
   "factory": "speech",
   "base": "input/mathspeak/noble_test.json",
-  "information": "Steve Noble's samples German tests.",
+  "information": "Mathspeak German Steve Noble's samples.",
   "domain": "mathspeak",
   "locale": "de",
   "compare": true,

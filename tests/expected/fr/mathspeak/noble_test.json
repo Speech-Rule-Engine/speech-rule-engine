@@ -2,7 +2,7 @@
   "name": "NobleFrenchTest",
   "factory": "speech",
   "base": "input/mathspeak/noble_test.json",
-  "information": "Steve Noble's samples French tests.",
+  "information": "Mathspeak French Steve Noble's samples.",
   "domain": "mathspeak",
   "locale": "fr",
   "active": "NobleSamplesFrench",

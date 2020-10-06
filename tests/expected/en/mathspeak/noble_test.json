@@ -3,7 +3,7 @@
   "locale": "en",
   "factory": "speech",
   "base": "input/mathspeak/noble_test.json",
-  "information": "Steve Noble's samples English tests.",
+  "information": "Mathspeak English Steve Noble's samples.",
   "domain": "mathspeak",
   "active": "NobleSamplesEnglish",
   "exclude": [],
