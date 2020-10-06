@@ -17,27 +17,25 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-goog.provide('sre.DomTest');
+goog.provide('sretest.DomTest');
 
-goog.require('sre.AbstractTest');
-goog.require('sre.DomUtil');
-goog.require('sre.XpathUtil');
+goog.require('sretest.AbstractTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sretest.AbstractTest}
  */
-sre.DomTest = function() {
-  sre.DomTest.base(this, 'constructor');
+sretest.DomTest = function() {
+  sretest.DomTest.base(this, 'constructor');
 
   /**
    * @override
    */
   this.information = 'DOM utility tests.';
 };
-goog.inherits(sre.DomTest, sre.AbstractTest);
+goog.inherits(sretest.DomTest, sretest.AbstractTest);
 
 
 /**
@@ -45,8 +43,8 @@ goog.inherits(sre.DomTest, sre.AbstractTest);
  * @param {string} xml The XML input string.
  * @param {string} result The expected output.
  */
-sre.DomTest.prototype.entitiesTest = function(xml, result) {
-  var parsed = sre.DomUtil.parseInput(xml);
+sretest.DomTest.prototype.entitiesTest = function(xml, result) {
+  var parsed = sretest.TestExternal.sre.DomUtil.parseInput(xml);
   this.assert.equal(parsed.toString(), result);
 };
 
@@ -54,7 +52,7 @@ sre.DomTest.prototype.entitiesTest = function(xml, result) {
 /**
  * XML Entities.
  */
-sre.DomTest.prototype.testXmlEntities = function() {
+sretest.DomTest.prototype.testXmlEntities = function() {
   this.entitiesTest('<a>&lt;</a>', '<a>&lt;</a>');
   this.entitiesTest('<a>&amp;</a>', '<a>&amp;</a>');
 };
@@ -63,7 +61,7 @@ sre.DomTest.prototype.testXmlEntities = function() {
 /**
  * HTML4 Entities.
  */
-sre.DomTest.prototype.testHtml4Entities = function() {
+sretest.DomTest.prototype.testHtml4Entities = function() {
   this.entitiesTest('<a>&Eacute;</a>',
                     '<a xmlns="http://www.w3.org/1999/xhtml">É</a>');
   this.entitiesTest('<a>&Icirc;</a>',
@@ -74,7 +72,7 @@ sre.DomTest.prototype.testHtml4Entities = function() {
 /**
  * HTML5 Entities.
  */
-sre.DomTest.prototype.testHtml5Entities = function() {
+sretest.DomTest.prototype.testHtml5Entities = function() {
   this.entitiesTest('<a>&ncup;</a>',
                     '<a xmlns="http://www.w3.org/1999/xhtml">⩂</a>');
   this.entitiesTest('<a>&varsubsetneq;</a>',
@@ -87,12 +85,12 @@ sre.DomTest.prototype.testHtml5Entities = function() {
 /**
  * XPath evaluation test.
  */
-sre.DomTest.prototype.testXpathEvaluate = function() {
-  var xml = sre.DomUtil.parseInput('<a><b>c</b><d>e</d></a>');
-  this.assert.equal(sre.XpathUtil.evalXPath('//b', xml).toString(), '<b>c</b>');
-  this.assert.equal(sre.XpathUtil.evalXPath('//b/text()', xml).toString(), 'c');
+sretest.DomTest.prototype.testXpathEvaluate = function() {
+  var xml = sretest.TestExternal.sre.DomUtil.parseInput('<a><b>c</b><d>e</d></a>');
+  this.assert.equal(sretest.TestExternal.sre.XpathUtil.evalXPath('//b', xml).toString(), '<b>c</b>');
+  this.assert.equal(sretest.TestExternal.sre.XpathUtil.evalXPath('//b/text()', xml).toString(), 'c');
   this.assert.equal(
-      sre.XpathUtil.evalXPath('//b/following-sibling::*', xml).toString(),
+      sretest.TestExternal.sre.XpathUtil.evalXPath('//b/following-sibling::*', xml).toString(),
       '<d>e</d>');
 };
 
@@ -100,11 +98,11 @@ sre.DomTest.prototype.testXpathEvaluate = function() {
 /**
  * XPath boolean constraint test.
  */
-sre.DomTest.prototype.testXpathBoolean = function() {
-  var xml = sre.DomUtil.parseInput('<a><b>c</b><d>e</d></a>');
-  this.assert.equal(sre.XpathUtil.evaluateBoolean('//b', xml), true);
-  this.assert.equal(sre.XpathUtil.evaluateBoolean('//c', xml), false);
-  this.assert.equal(sre.XpathUtil.evaluateBoolean(
+sretest.DomTest.prototype.testXpathBoolean = function() {
+  var xml = sretest.TestExternal.sre.DomUtil.parseInput('<a><b>c</b><d>e</d></a>');
+  this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateBoolean('//b', xml), true);
+  this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateBoolean('//c', xml), false);
+  this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateBoolean(
       '//b/following-sibling::*', xml), true);
 };
 
@@ -112,10 +110,10 @@ sre.DomTest.prototype.testXpathBoolean = function() {
 /**
  * XPath string computation.
  */
-sre.DomTest.prototype.testXpathString = function() {
-  var xml = sre.DomUtil.parseInput('<a l="1"><b m="2">c</b><d>e</d></a>');
-  this.assert.equal(sre.XpathUtil.evaluateString('@l', xml), '1');
-  this.assert.equal(sre.XpathUtil.evaluateString('//*/@m', xml), '2');
-  this.assert.equal(sre.XpathUtil.evaluateString(
+sretest.DomTest.prototype.testXpathString = function() {
+  var xml = sretest.TestExternal.sre.DomUtil.parseInput('<a l="1"><b m="2">c</b><d>e</d></a>');
+  this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateString('@l', xml), '1');
+  this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateString('//*/@m', xml), '2');
+  this.assert.equal(sretest.TestExternal.sre.XpathUtil.evaluateString(
       '//b/following-sibling::*', xml), 'e');
 };

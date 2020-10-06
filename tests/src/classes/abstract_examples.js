@@ -17,22 +17,22 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.AbstractExamples');
-goog.provide('sre.ExampleFiles');
+goog.provide('sretest.AbstractExamples');
+goog.provide('sretest.ExampleFiles');
 
-goog.require('sre.AbstractJsonTest');
-goog.require('sre.ExamplesOutput');
-goog.require('sre.TestUtil');
+goog.require('sretest.AbstractJsonTest');
+goog.require('sretest.ExamplesOutput');
+goog.require('sretest.TestUtil');
 
 
 
 /**
  * @constructor
- * @implements {sre.ExamplesOutput}
- * @extends {sre.AbstractJsonTest}
+ * @implements {sretest.ExamplesOutput}
+ * @extends {sretest.AbstractJsonTest}
  */
-sre.AbstractExamples = function() {
-  sre.AbstractExamples.base(this, 'constructor');
+sretest.AbstractExamples = function() {
+  sretest.AbstractExamples.base(this, 'constructor');
 
   /**
    * @type {boolean}
@@ -59,7 +59,7 @@ sre.AbstractExamples = function() {
    * @type {string}
    * @protected
    */
-  this.fileDirectory = sre.TestUtil.path.OUTPUT;
+  this.fileDirectory = sretest.TestUtil.path.OUTPUT;
 
   /**
    * Sets example output file for tests.
@@ -76,13 +76,13 @@ sre.AbstractExamples = function() {
   this.examples_ = [];
 
 };
-goog.inherits(sre.AbstractExamples, sre.AbstractJsonTest);
+goog.inherits(sretest.AbstractExamples, sretest.AbstractJsonTest);
 
 
 /**
  * @override
  */
-sre.AbstractExamples.prototype.setActive = function(file, opt_ext) {
+sretest.AbstractExamples.prototype.setActive = function(file, opt_ext) {
   this.active_ = true;
   this.fileName_ = file;
   var ext = opt_ext || this.fileExtension_;
@@ -93,10 +93,10 @@ sre.AbstractExamples.prototype.setActive = function(file, opt_ext) {
 /**
  * @override
  */
-sre.AbstractExamples.prototype.startExamples = function() {
+sretest.AbstractExamples.prototype.startExamples = function() {
   if (!this.active_) return;
   try {
-    sre.ExampleFiles.openFile(this.examplesFile_, this);
+    sretest.ExampleFiles.openFile(this.examplesFile_, this);
   } catch (err) {
     this.fileError_ = this.examplesFile_;
   }
@@ -106,7 +106,7 @@ sre.AbstractExamples.prototype.startExamples = function() {
 /**
  * @override
  */
-sre.AbstractExamples.prototype.appendExamples = function(type, example) {
+sretest.AbstractExamples.prototype.appendExamples = function(type, example) {
   if (this.active_ && !this.fileError_) {
     var examples = this.examples_[type];
     if (examples) {
@@ -121,14 +121,14 @@ sre.AbstractExamples.prototype.appendExamples = function(type, example) {
 /**
  * @override
  */
-sre.AbstractExamples.prototype.endExamples = function() {
+sretest.AbstractExamples.prototype.endExamples = function() {
   if (!this.active_) return;
   if (!this.fileError_) {
     try {
       for (var key in this.examples_) {
-        sre.SystemExternal.fs.appendFileSync(
+        sretest.TestExternal.fs.appendFileSync(
             this.examplesFile_, key);
-        sre.SystemExternal.fs.appendFileSync(
+        sretest.TestExternal.fs.appendFileSync(
             this.examplesFile_, this.join(this.examples_[key]));
       }
     } catch (err) {
@@ -138,7 +138,7 @@ sre.AbstractExamples.prototype.endExamples = function() {
   this.examples_ = [];
   this.active_ = false;
   if (this.fileError_) {
-    throw new sre.TestUtil.Error('Bad Filename', this.fileError_);
+    throw new sretest.TestUtil.Error('Bad Filename', this.fileError_);
   }
 };
 
@@ -146,7 +146,7 @@ sre.AbstractExamples.prototype.endExamples = function() {
 /**
  * @override
  */
-sre.AbstractExamples.prototype.setUpTest = function() {
+sretest.AbstractExamples.prototype.setUpTest = function() {
   this.startExamples();
 };
 
@@ -154,7 +154,7 @@ sre.AbstractExamples.prototype.setUpTest = function() {
 /**
  * @override
  */
-sre.AbstractExamples.prototype.tearDownTest = function() {
+sretest.AbstractExamples.prototype.tearDownTest = function() {
   this.endExamples();
 };
 
@@ -164,7 +164,7 @@ sre.AbstractExamples.prototype.tearDownTest = function() {
  * @param {Array.<string>} examples The list of examples.
  * @return {string} The joined string.
  */
-sre.AbstractExamples.prototype.join = function(examples) {
+sretest.AbstractExamples.prototype.join = function(examples) {
   return JSON.stringify(examples, null, 2);
 };
 
@@ -172,7 +172,7 @@ sre.AbstractExamples.prototype.join = function(examples) {
 /**
  * @return {string} Output file header.
  */
-sre.AbstractExamples.prototype.header = function() {
+sretest.AbstractExamples.prototype.header = function() {
   return '';
 };
 
@@ -180,46 +180,46 @@ sre.AbstractExamples.prototype.header = function() {
 /**
  * @return {string} Output file footer.
  */
-sre.AbstractExamples.prototype.footer = function() {
+sretest.AbstractExamples.prototype.footer = function() {
   return '';
 };
 
 
 /**
- * @type {!Object.<sre.AbstractExamples>}
+ * @type {!Object.<sretest.AbstractExamples>}
  */
-sre.ExampleFiles.openFiles = {};
+sretest.ExampleFiles.openFiles = {};
 
 
 /**
  * @type {Object.<string>}
  * TODO: This is actually a file descriptor type.
  */
-sre.ExampleFiles.descriptors = {};
+sretest.ExampleFiles.descriptors = {};
 
 
 /**
  * Opens an output file and registers it.
  * @param {string} file The name of the output file.
- * @param {sre.AbstractExamples} obj The test object.
+ * @param {sretest.AbstractExamples} obj The test object.
  */
-sre.ExampleFiles.openFile = function(file, obj) {
-  if (!sre.ExampleFiles.openFiles[file]) {
-    let fd = sre.SystemExternal.fs.openSync(file, 'w+');
-    sre.ExampleFiles.descriptors[file] = fd;
-    sre.SystemExternal.fs.appendFileSync(fd, obj.header());
+sretest.ExampleFiles.openFile = function(file, obj) {
+  if (!sretest.ExampleFiles.openFiles[file]) {
+    let fd = sretest.TestExternal.fs.openSync(file, 'w+');
+    sretest.ExampleFiles.descriptors[file] = fd;
+    sretest.TestExternal.fs.appendFileSync(fd, obj.header());
   }
-  sre.ExampleFiles.openFiles[file] = obj;
+  sretest.ExampleFiles.openFiles[file] = obj;
 };
 
 
 /**
  * Finalises and closes all open output files.
  */
-sre.ExampleFiles.closeFiles = function() {
-  for (let file of Object.keys(sre.ExampleFiles.openFiles)) {
-    sre.SystemExternal.fs.appendFileSync(
-        file, sre.ExampleFiles.openFiles[file].footer());
-    sre.SystemExternal.fs.closeSync(sre.ExampleFiles.descriptors[file]);
+sretest.ExampleFiles.closeFiles = function() {
+  for (let file of Object.keys(sretest.ExampleFiles.openFiles)) {
+    sretest.TestExternal.fs.appendFileSync(
+        file, sretest.ExampleFiles.openFiles[file].footer());
+    sretest.TestExternal.fs.closeSync(sretest.ExampleFiles.descriptors[file]);
   }
 };

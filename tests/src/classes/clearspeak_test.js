@@ -18,18 +18,18 @@
  * @author Volker.Sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.ClearspeakTest');
+goog.provide('sretest.ClearspeakTest');
 
-goog.require('sre.SpeechTest');
+goog.require('sretest.SpeechTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.SpeechTest}
+ * @extends {sretest.SpeechTest}
  */
-sre.ClearspeakTest = function() {
-  sre.ClearspeakTest.base(this, 'constructor');
+sretest.ClearspeakTest = function() {
+  sretest.ClearspeakTest.base(this, 'constructor');
 
   /**
    * @override
@@ -37,24 +37,24 @@ sre.ClearspeakTest = function() {
   this.domain = 'clearspeak';
 
 };
-goog.inherits(sre.ClearspeakTest, sre.SpeechTest);
+goog.inherits(sretest.ClearspeakTest, sretest.SpeechTest);
 
 
 /**
  * @override
  */
-sre.ClearspeakTest.prototype.setUpTest = function() {
-  sre.ClearspeakTest.base(this, 'setUpTest');
-  sre.System.getInstance().setupEngine(
-      {markup: sre.Engine.Markup.PUNCTUATION});
+sretest.ClearspeakTest.prototype.setUpTest = function() {
+  sretest.ClearspeakTest.base(this, 'setUpTest');
+  sretest.TestExternal.sre.System.getInstance().setupEngine(
+      {markup: sretest.TestExternal.sre.Engine.Markup.PUNCTUATION});
 };
 
 
 /**
  * @override
  */
-sre.ClearspeakTest.prototype.tearDownTest = function() {
-  sre.System.getInstance().setupEngine(
-      {markup: sre.Engine.Markup.NONE});
-  sre.ClearspeakTest.base(this, 'tearDownTest');
+sretest.ClearspeakTest.prototype.tearDownTest = function() {
+  sretest.TestExternal.sre.System.getInstance().setupEngine(
+      {markup: sretest.TestExternal.sre.Engine.Markup.NONE});
+  sretest.ClearspeakTest.base(this, 'tearDownTest');
 };

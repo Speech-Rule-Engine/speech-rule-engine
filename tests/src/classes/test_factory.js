@@ -20,55 +20,55 @@
  */
 
 
-goog.provide('sre.TestFactory');
+goog.provide('sretest.TestFactory');
 
-goog.require('sre.ApiTest');
-goog.require('sre.ClearspeakTest');
-goog.require('sre.ClearspeakAnnotationTest');
-goog.require('sre.CollapseTest');
-goog.require('sre.EnrichMathmlTest');
-goog.require('sre.EnrichSpeechTest');
-goog.require('sre.PrefixTest');
-goog.require('sre.RebuildStreeTest');
-goog.require('sre.SemanticTreeTest');
-goog.require('sre.SpeechTest');
-goog.require('sre.SummaryTest');
-goog.require('sre.SymbolTest');
-goog.require('sre.TestUtil');
+goog.require('sretest.ApiTest');
+goog.require('sretest.ClearspeakTest');
+goog.require('sretest.ClearspeakAnnotationTest');
+goog.require('sretest.CollapseTest');
+goog.require('sretest.EnrichMathmlTest');
+goog.require('sretest.EnrichSpeechTest');
+goog.require('sretest.PrefixTest');
+goog.require('sretest.RebuildStreeTest');
+goog.require('sretest.SemanticTreeTest');
+goog.require('sretest.SpeechTest');
+goog.require('sretest.SummaryTest');
+goog.require('sretest.SymbolTest');
+goog.require('sretest.TestUtil');
 
 
 /**
- * @type {Object.<function(new:sre.AbstractJsonTest)>}
+ * @type {Object.<function(new:sretest.AbstractJsonTest)>}
  */
-sre.TestFactory.map = {
-  'api': sre.ApiTest,
-  'clearspeak': sre.ClearspeakTest,
-  'clearspeakAnnotation': sre.ClearspeakAnnotationTest,
-  'collapse': sre.CollapseTest,
-  'enrichMathml': sre.EnrichMathmlTest,
-  'enrichSpeech': sre.EnrichSpeechTest,
-  'prefix': sre.PrefixTest,
-  'rebuild': sre.RebuildStreeTest,
-  'semantic': sre.SemanticTest,
-  'speech': sre.SpeechTest,
-  'stree': sre.SemanticTreeTest,
-  'summary': sre.SummaryTest,
-  'symbol': sre.SymbolTest
+sretest.TestFactory.map = {
+  'api': sretest.ApiTest,
+  'clearspeak': sretest.ClearspeakTest,
+  'clearspeakAnnotation': sretest.ClearspeakAnnotationTest,
+  'collapse': sretest.CollapseTest,
+  'enrichMathml': sretest.EnrichMathmlTest,
+  'enrichSpeech': sretest.EnrichSpeechTest,
+  'prefix': sretest.PrefixTest,
+  'rebuild': sretest.RebuildStreeTest,
+  'semantic': sretest.SemanticTest,
+  'speech': sretest.SpeechTest,
+  'stree': sretest.SemanticTreeTest,
+  'summary': sretest.SummaryTest,
+  'symbol': sretest.SymbolTest
 };
 
 
 /**
  * Retrieves and instantiates a test object for a given input json file.
  * @param {string} file The input json file.
- * @return {!sre.AbstractJsonTest} The JSON test.
+ * @return {!sretest.AbstractJsonTest} The JSON test.
  */
-sre.TestFactory.get = function(file) {
-  var filename = sre.TestUtil.fileExists(file, sre.TestUtil.path.EXPECTED);
-  var json = sre.TestUtil.loadJson(filename);
-  let factory = json.factory;
-  let constructor = sre.TestFactory.map[factory];
+sretest.TestFactory.get = function(file) {
+  var filename = sretest.TestUtil.fileExists(file, sretest.TestUtil.path.EXPECTED);
+  var json = sretest.TestUtil.loadJson(filename);
+  let factory = json['factory'];
+  let constructor = sretest.TestFactory.map[factory];
   if (!constructor) {
-    throw new sre.TestUtil.Error('Bad factory name', file);
+    throw new sretest.TestUtil.Error('Bad factory name', file);
   }
   let obj = new constructor();
   obj.jsonFile = file;

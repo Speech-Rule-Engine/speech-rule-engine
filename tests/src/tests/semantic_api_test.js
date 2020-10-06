@@ -18,34 +18,33 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.SemanticApiTest');
+goog.provide('sretest.SemanticApiTest');
 
-goog.require('sre.AbstractTest');
-goog.require('sre.DomUtil');
-goog.require('sre.SystemExternal');
+goog.require('sretest.AbstractTest');
+goog.require('sretest.TestExternal');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractTest}
+ * @extends {sretest.AbstractTest}
  */
-sre.SemanticApiTest = function() {
-  sre.SemanticApiTest.base(this, 'constructor');
+sretest.SemanticApiTest = function() {
+  sretest.SemanticApiTest.base(this, 'constructor');
 
   /**
    * @override
    */
   this.information = 'Semantic API tests.';
 };
-goog.inherits(sre.SemanticApiTest, sre.AbstractTest);
+goog.inherits(sretest.SemanticApiTest, sretest.AbstractTest);
 
 
 /**
  * Some test cases.
  * @type {Array.<string>}
  */
-sre.SemanticApiTest.TEST_CASES = [
+sretest.SemanticApiTest.TEST_CASES = [
   '<mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>',
   '<mi>b</mi><mn>3</mn><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>a</mi>',
   '<mi>a</mi><mo>=</mo><mi>b</mi><mo>=</mo><mi>c</mi>' +
@@ -64,44 +63,44 @@ sre.SemanticApiTest.TEST_CASES = [
 /**
  * Tests Tree generation vs Xml output.
  */
-sre.SemanticApiTest.prototype.testTreeVsXml = function() {
+sretest.SemanticApiTest.prototype.testTreeVsXml = function() {
   var test = goog.bind(function(expr) {
-    var mml = sre.DomUtil.parseInput('<math>' + expr + '</math>');
-    var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
-    this.assert.equal(xmls.serializeToString(sre.Semantic.getTree(mml).xml()),
-                      xmls.serializeToString(sre.Semantic.xmlTree(mml)));
+    var mml = sretest.TestExternal.sre.DomUtil.parseInput('<math>' + expr + '</math>');
+    var xmls = new sretest.TestExternal.xmldom.XMLSerializer();
+    this.assert.equal(xmls.serializeToString(sretest.TestExternal.sre.Semantic.getTree(mml).xml()),
+                      xmls.serializeToString(sretest.TestExternal.sre.Semantic.xmlTree(mml)));
   }, this);
-  sre.SemanticApiTest.TEST_CASES.forEach(test);
+  sretest.SemanticApiTest.TEST_CASES.forEach(test);
 };
 
 
 /**
  * Tests Tree generation vs Xml output.
  */
-sre.SemanticApiTest.prototype.testStringVsXml = function() {
+sretest.SemanticApiTest.prototype.testStringVsXml = function() {
   var test = goog.bind(function(expr) {
     var mstr = '<math>' + expr + '</math>';
-    var mml = sre.DomUtil.parseInput(mstr);
-    var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
+    var mml = sretest.TestExternal.sre.DomUtil.parseInput(mstr);
+    var xmls = new sretest.TestExternal.xmldom.XMLSerializer();
     this.assert.equal(xmls.serializeToString(
-        sre.Semantic.getTreeFromString(mstr).xml()),
-                      xmls.serializeToString(sre.Semantic.xmlTree(mml)));
+        sretest.TestExternal.sre.Semantic.getTreeFromString(mstr).xml()),
+                      xmls.serializeToString(sretest.TestExternal.sre.Semantic.xmlTree(mml)));
   }, this);
-  sre.SemanticApiTest.TEST_CASES.forEach(test);
+  sretest.SemanticApiTest.TEST_CASES.forEach(test);
 };
 
 
 /**
  * Tests Tree generation vs Xml output.
  */
-sre.SemanticApiTest.prototype.testStringVsTree = function() {
+sretest.SemanticApiTest.prototype.testStringVsTree = function() {
   var test = goog.bind(function(expr) {
     var mstr = '<math>' + expr + '</math>';
-    var mml = sre.DomUtil.parseInput(mstr);
-    var xmls = new sre.SystemExternal.xmldom.XMLSerializer();
+    var mml = sretest.TestExternal.sre.DomUtil.parseInput(mstr);
+    var xmls = new sretest.TestExternal.xmldom.XMLSerializer();
     this.assert.equal(xmls.serializeToString(
-        sre.Semantic.getTreeFromString(mstr).xml()),
-                      xmls.serializeToString(sre.Semantic.getTree(mml).xml()));
+        sretest.TestExternal.sre.Semantic.getTreeFromString(mstr).xml()),
+                      xmls.serializeToString(sretest.TestExternal.sre.Semantic.getTree(mml).xml()));
   }, this);
-  sre.SemanticApiTest.TEST_CASES.forEach(test);
+  sretest.SemanticApiTest.TEST_CASES.forEach(test);
 };

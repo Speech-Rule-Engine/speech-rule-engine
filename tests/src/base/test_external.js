@@ -21,14 +21,14 @@
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-goog.provide('sre.TestExternal');
+goog.provide('sretest.TestExternal');
 
 
 
 /**
  * @constructor
  */
-sre.TestExternal = function() { };
+sretest.TestExternal = function() { };
 
 
 /**
@@ -36,30 +36,47 @@ sre.TestExternal = function() { };
  * @param {string} library A library name.
  * @return {Object} The library object that has been loaded.
  */
-sre.TestExternal.require = function(library) {
+sretest.TestExternal.require = function(library) {
   return require(library);
 };
+
+
+/**
+ * Filesystem library.
+ * @type {Object}
+ */
+sretest.TestExternal.fs = sretest.TestExternal.require('fs');
 
 
 /**
  * Assert library.
  * @type {Object}
  */
-sre.TestExternal.assert = sre.TestExternal.require('assert');
+sretest.TestExternal.assert = sretest.TestExternal.require('assert');
 
 
 /**
  * Process library.
  * @type {Object}
  */
-sre.TestExternal.process = process;
+sretest.TestExternal.process = process;
 
 
 /**
  * Path to JSON files.
  * @type {string}
  */
-sre.TestExternal.path = function() {
-  return ((sre.TestExternal.process && typeof global !== 'undefined') ?
-          sre.TestExternal.process.cwd() : '.') + '/tests/';
+sretest.TestExternal.path = function() {
+  return ((sretest.TestExternal.process && typeof global !== 'undefined') ?
+          sretest.TestExternal.process.cwd() : '.') + '/tests/';
 }();
+
+
+/**
+ * Xmldom library.
+ * @type {Object}
+ */
+sretest.TestExternal.xmldom = sretest.TestExternal.require('xmldom-sre');
+
+
+sretest.TestExternal.sre = sretest.TestExternal.require('./sre.js').sre;

@@ -20,20 +20,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.ApiTest');
+goog.provide('sretest.ApiTest');
 
-goog.require('sre.AbstractJsonTest');
-goog.require('sre.Engine');
-goog.require('sre.System');
+goog.require('sretest.AbstractJsonTest');
 
 
 
 /**
  * @constructor
- * @extends {sre.AbstractJsonTest}
+ * @extends {sretest.AbstractJsonTest}
  */
-sre.ApiTest = function() {
-  sre.ApiTest.base(this, 'constructor');
+sretest.ApiTest = function() {
+  sretest.ApiTest.base(this, 'constructor');
 
   this.information = 'API function test.';
 
@@ -51,12 +49,12 @@ sre.ApiTest = function() {
                      'setup', 'json', 'move'];
 
 };
-goog.inherits(sre.ApiTest, sre.AbstractJsonTest);
+goog.inherits(sretest.ApiTest, sretest.AbstractJsonTest);
 
 
-sre.ApiTest.SETUP = {
+sretest.ApiTest.SETUP = {
   locale: 'en', domain: 'mathspeak', style: 'default',
-  modality: 'speech', speech: sre.Engine.Speech.NONE
+  modality: 'speech', speech: sretest.TestExternal.sre.Engine.Speech.NONE
 };
 
 
@@ -65,7 +63,7 @@ sre.ApiTest.SETUP = {
  * the quadratic equation unless a different input is provided.
  * @type {string}
  */
-sre.ApiTest.QUADRATIC =
+sretest.ApiTest.QUADRATIC =
     '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
     '<mi>x</mi>' +
     '<mo>=</mo>' +
@@ -96,27 +94,27 @@ sre.ApiTest.QUADRATIC =
 /**
  * @override
  */
-sre.ApiTest.prototype.setUpTest = function() {
-  this.annotations = sre.SemanticAnnotations.getInstance().annotators;
-  this.visitors = sre.SemanticAnnotations.getInstance().visitors;
+sretest.ApiTest.prototype.setUpTest = function() {
+  this.annotations = sretest.TestExternal.sre.SemanticAnnotations.getInstance().annotators;
+  this.visitors = sretest.TestExternal.sre.SemanticAnnotations.getInstance().visitors;
   this.setupEngine(null);
-  sre.SemanticAnnotations.getInstance().annotators = {};
-  sre.SemanticAnnotations.getInstance().visitors = {};
+  sretest.TestExternal.sre.SemanticAnnotations.getInstance().annotators = {};
+  sretest.TestExternal.sre.SemanticAnnotations.getInstance().visitors = {};
 };
 
 
 /**
  * @override
  */
-sre.ApiTest.prototype.tearDownTest = function() {
-  sre.SemanticAnnotations.getInstance().annotators = this.annotations;
-  sre.SemanticAnnotations.getInstance().visitors = this.visitors;
+sretest.ApiTest.prototype.tearDownTest = function() {
+  sretest.TestExternal.sre.SemanticAnnotations.getInstance().annotators = this.annotations;
+  sretest.TestExternal.sre.SemanticAnnotations.getInstance().visitors = this.visitors;
 };
 
 
 
-sre.ApiTest.prototype.setupEngine = function(feature) {
-  sre.System.getInstance().setupEngine(feature || sre.ApiTest.SETUP);
+sretest.ApiTest.prototype.setupEngine = function(feature) {
+  sretest.TestExternal.sre.System.getInstance().setupEngine(feature || sretest.ApiTest.SETUP);
 };
 
 
@@ -129,10 +127,10 @@ sre.ApiTest.prototype.setupEngine = function(feature) {
  * @param {boolean} json Json output expected?
  * @param {boolean} move Is this a move with some keyboard input?
  */
-sre.ApiTest.prototype.executeTest = function(func, expr, result, feature, json, move) {
+sretest.ApiTest.prototype.executeTest = function(func, expr, result, feature, json, move) {
   this.setupEngine(feature);
-  expr = move ? sre.EventUtil.KeyCode[expr] : (expr || sre.ApiTest.QUADRATIC);
-  var output = sre.System.getInstance()[func](expr);
+  expr = move ? sretest.TestExternal.sre.EventUtil.KeyCode[expr] : (expr || sretest.ApiTest.QUADRATIC);
+  var output = sretest.TestExternal.sre.System.getInstance()[func](expr);
   output = output ? (json ? JSON.stringify(output) : output.toString()) : output;
   this.assert.equal(output, result);
 };
@@ -141,7 +139,7 @@ sre.ApiTest.prototype.executeTest = function(func, expr, result, feature, json, 
 /**
  * @override
  */
-sre.ApiTest.prototype.method = function(var_args) {
+sretest.ApiTest.prototype.method = function(var_args) {
   let args = Array.prototype.slice.call(arguments, 0);
   this.executeTest(args[0], args[1], args[2], args[3], args[4], args[5]);
 };

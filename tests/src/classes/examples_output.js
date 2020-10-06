@@ -17,14 +17,14 @@
  * @author v.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.ExamplesOutput');
+goog.provide('sretest.ExamplesOutput');
 
 
 
 /**
  * @interface
  */
-sre.ExamplesOutput = function() { };
+sretest.ExamplesOutput = function() { };
 
 
 /**
@@ -32,13 +32,13 @@ sre.ExamplesOutput = function() { };
  * @param {string} file The output file.
  * @param {string=} opt_ext A file extension.
  */
-sre.ExamplesOutput.prototype.setActive = function(file, opt_ext) { };
+sretest.ExamplesOutput.prototype.setActive = function(file, opt_ext) { };
 
 
 /**
  * Initialised the examples output but setting up the file.
  */
-sre.ExamplesOutput.prototype.startExamples = function() { };
+sretest.ExamplesOutput.prototype.startExamples = function() { };
 
 
 /**
@@ -46,10 +46,10 @@ sre.ExamplesOutput.prototype.startExamples = function() { };
  * @param {string} type The type of example.
  * @param {string} example The example output.
  */
-sre.ExamplesOutput.prototype.appendExamples = function(type, example) { };
+sretest.ExamplesOutput.prototype.appendExamples = function(type, example) { };
 
 
 /**
  * Finished writing examples and closes the file.
  */
-sre.ExamplesOutput.prototype.endExamples = function() { };
+sretest.ExamplesOutput.prototype.endExamples = function() { };
