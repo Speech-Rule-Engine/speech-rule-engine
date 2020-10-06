@@ -4,7 +4,7 @@
   "locale": "de",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_trigometry.json",
-  "information": "ClearspeakGermanTrigometry rule tests.",
+  "information": "Clearspeak German Trigometry rule tests.",
   "active": "ClearspeakGerman",
   "exclude": [],
   "tests": {

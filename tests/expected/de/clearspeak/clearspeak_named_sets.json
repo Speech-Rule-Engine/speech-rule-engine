@@ -4,7 +4,7 @@
   "locale": "de",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_named_sets.json",
-  "information": "ClearspeakGermanNamedSets rule tests.",
+  "information": "Clearspeak German NamedSets rule tests.",
   "active": "ClearspeakGerman",
   "exclude": [],
   "tests": {

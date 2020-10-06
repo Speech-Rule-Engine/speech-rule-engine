@@ -4,7 +4,7 @@
   "locale": "en",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_fractions.json",
-  "information": "ClearspeakEnglishFractions rule tests.",
+  "information": "Clearspeak English Fractions rule tests.",
   "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {

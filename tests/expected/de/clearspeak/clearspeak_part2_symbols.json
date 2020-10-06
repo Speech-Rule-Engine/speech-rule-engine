@@ -4,7 +4,7 @@
   "locale": "de",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_part2_symbols.json",
-  "information": "ClearspeakGermanPart2Symbols rule tests.",
+  "information": "Clearspeak German Part2Symbols rule tests.",
   "active": "ClearspeakGerman",
   "exclude": [],
   "tests": {

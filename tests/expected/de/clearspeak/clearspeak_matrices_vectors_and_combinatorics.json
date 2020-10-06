@@ -4,7 +4,7 @@
   "locale": "de",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_matrices_vectors_and_combinatorics.json",
-  "information": "ClearspeakGerman Matrices, Vectors, and Combinatorics rule tests.",
+  "information": "Clearspeak German Matrices, Vectors, and Combinatorics rule tests.",
   "active": "ClearspeakGerman",
   "exclude": [],
   "tests": {

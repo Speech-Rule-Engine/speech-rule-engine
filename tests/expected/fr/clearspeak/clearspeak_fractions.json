@@ -4,7 +4,7 @@
   "locale": "fr",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_fractions.json",
-  "information": "ClearspeakFrenchFractions rule tests.",
+  "information": "Clearspeak French Fractions rule tests.",
   "active": "ClearspeakFrench",
   "exclude": [],
   "tests": {

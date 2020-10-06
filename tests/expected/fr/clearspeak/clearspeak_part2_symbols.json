@@ -4,7 +4,7 @@
   "locale": "fr",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_part2_symbols.json",
-  "information": "ClearspeakFrenchPart2Symbols rule tests.",
+  "information": "Clearspeak French Part2Symbols rule tests.",
   "active": "ClearspeakFrench",
   "exclude": [],
   "tests": {

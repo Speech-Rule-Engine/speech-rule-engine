@@ -4,7 +4,7 @@
   "locale": "en",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_parentheses.json",
-  "information": "ClearspeakEnglishParentheses rule tests.",
+  "information": "Clearspeak English Parentheses rule tests.",
   "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {

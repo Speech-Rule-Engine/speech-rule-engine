@@ -4,7 +4,7 @@
   "locale": "fr",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_exponents.json",
-  "information": "ClearspeakFrenchExponents rule tests.",
+  "information": "Clearspeak French Exponents rule tests.",
   "active": "ClearspeakFrench",
   "exclude": ["Exp085", "Exp086", "Exp087", "Exp088", "Exp089", "Exp090", "Exp091", "Exp092", "Exp093", "Exp094", "Exp095", "Exp096", "Exp097", "Exp098", "Exp099", "Exp100", "Exp101", "Exp102", "Exp103", "Exp104", "Exp105", "Exp106", "Exp107", "Exp108", "Exp109", "Exp110", "Exp111", "Exp112", "Exp113", "Exp114", "Exp115", "Exp116", "Exp117", "Exp118", "Exp119", "Exp120", "Exp121", "Exp122", "Exp123", "Exp124", "Exp125", "Exp126", "Exp127", "Exp128", "Exp129", "Exp130", "Exp131", "Exp132b", "Exp133", "Exp134", "Exp135", "Exp136", "Exp137", "Exp138", "Exp139", "Exp140", "Exp141", "Exp142", "Exp143", "Exp144", "Exp145", "Exp146", "Exp147", "Exp148", "Exp149", "Exp150", "Exp151", "Exp152", "Exp153", "Exp154", "Exp155", "Exp156", "Exp157", "Exp158", "Exp159", "Exp160", "Exp161", "Exp162", "Exp163", "Exp164", "Exp165", "Exp166", "Exp167", "Exp168", "Exp169", "Exp170", "Exp171", "Exp172", "Exp173", "Exp174"],
   "tests": {

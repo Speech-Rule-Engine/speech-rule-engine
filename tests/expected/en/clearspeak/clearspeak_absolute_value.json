@@ -4,7 +4,7 @@
   "locale": "en",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_absolute_value.json",
-  "information": "ClearspeakEnglishAbsoluteValue rule tests.",
+  "information": "Clearspeak English AbsoluteValue rule tests.",
   "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {

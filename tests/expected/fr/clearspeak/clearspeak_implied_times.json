@@ -4,7 +4,7 @@
   "locale": "fr",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_implied_times.json",
-  "information": "ClearspeakFrenchImpliedTimes rule tests.",
+  "information": "Clearspeak French ImpliedTimes rule tests.",
   "active": "ClearspeakFrench",
   "exclude": [],
   "tests": {

@@ -4,7 +4,7 @@
   "locale": "en",
   "factory": "clearspeak",
   "base": "input/clearspeak/clearspeak_multi_line_entries.json",
-  "information": "ClearspeakEnglishMultiLineEntries rule tests.",
+  "information": "Clearspeak English MultiLineEntries rule tests.",
   "active": "ClearspeakEnglish",
   "exclude": [],
   "tests": {
