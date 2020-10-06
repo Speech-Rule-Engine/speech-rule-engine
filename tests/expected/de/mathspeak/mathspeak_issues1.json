@@ -3,7 +3,7 @@
   "name": "MathspeakIssues1German",
   "factory": "speech",
   "base": "input/mathspeak/mathspeak_issues1.json",
-  "information": "Mathspeak issues 1 German tests.",
+  "information": "Mathspeak German Issues 1.",
   "domain": "mathspeak",
   "locale": "de",
   "active": "MathspeakIssuesGerman",
