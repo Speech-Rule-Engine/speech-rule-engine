@@ -11,7 +11,7 @@
   "type": "character",
   "factory": "symbol",
   "base": "input/common/characters.json",
-  "information": "Default Nemeth Character tests.",
+  "information": "Nemeth Default Character tests.",
   "tests": {
     "0": {
       "expected": [

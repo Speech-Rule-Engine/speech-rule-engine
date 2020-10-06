@@ -1,7 +1,7 @@
 {
   "factory": "enrichMathml",
   "base": "input/base/semantic.json",
-  "information": "Semantic enrichment tests.",
+  "information": "Semantic Enrichment tests.",
   "exclude": [],
   "tests": {
     "_comment_0": " Empty wrappers.",

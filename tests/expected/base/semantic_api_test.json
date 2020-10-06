@@ -1,6 +1,6 @@
 {
   "factory": "semanticApi",
   "base": "input/base/semantic.json",
-  "information": "Tests consistency of the Semantic API.",
+  "information": "Semantic API consistency tests.",
   "tests": "ALL"
 }

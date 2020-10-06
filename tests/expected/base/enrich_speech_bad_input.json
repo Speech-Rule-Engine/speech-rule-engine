@@ -1,7 +1,7 @@
 {
   "factory": "enrichSpeech",
   "base": "input/base/semantic_bad_input.json",
-  "information": "Tests API consistency for poorly formatted input.",
+  "information": "API consistency tests for badly formatted input.",
   "exclude": ["Rubbish_2"],
   "tests": "ALL"
 }
