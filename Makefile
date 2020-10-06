@@ -38,7 +38,7 @@ LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON
 LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
 
-TEST_DIR = $(abspath ./tests)
+TEST_DIR = $(abspath ./sre-tests)
 TEST_TARGET = $(LIB_DIR)/sre_test.js
 TEST_RUNNER = $(TEST_DIR)/dist/sretest.js
 TEST = $(BIN_DIR)/test_sre
@@ -231,12 +231,12 @@ run_test: $(TEST_RUNNER)
 	@$(TEST)
 
 $(TEST_RUNNER): $(TEST_DIR)/node_modules
-	@cd tests; npx webpack
+	@cd $(TEST_DIR); npx webpack
 	@cd ..
 
 
 $(TEST_DIR)/node_modules:
-	@cd tests; npm install
+	@cd $(TEST_DIR); npm install
 	@cd ..
 
 
