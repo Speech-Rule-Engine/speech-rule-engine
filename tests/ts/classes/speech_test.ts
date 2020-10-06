@@ -1,9 +1,3 @@
-/**
- * @fileoverview Testcases for ChromeVox's speech rules.
- *     Abstract superclass that provides facilities to parameterize the speech
- *     rule engine and to execute rule tests on math expressions.
- * @author Volker.Sorge@gmail.com (Volker Sorge)
- */
 //
 // Copyright 2014 Volker Sorge
 //
@@ -16,6 +10,13 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+/**
+ * @fileoverview Testcases for ChromeVox's speech rules.
+ *     Abstract superclass that provides facilities to parameterize the speech
+ *     rule engine and to execute rule tests on math expressions.
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
+ */
 
 import {sre} from '../base/test_external';
 import {AbstractExamples} from './abstract_examples';
@@ -31,22 +32,23 @@ export class SpeechTest extends AbstractExamples {
   public modality: string;
 
   /**
-     * Specify particular rule sets for a test. By default all available rule sets
-     * are used.
-     */
+   * Specify particular rule sets for a test. By default all available rule sets
+   * are used.
+   */
   public rules: string[] = null;
 
   /**
-     * Flag indicating if the actual output should be written to the HTML example
-     * file, rather than the expected output.
-     */
+   * Flag indicating if the actual output should be written to the HTML example
+   * file, rather than the expected output.
+   */
   public actual: boolean = false;
 
   /**
-     * Flag indicating if English output should be generate for comparison.
-     */
+   * Flag indicating if English output should be generate for comparison.
+   */
   public compare: boolean = false;
-  public fileDirectory: any;
+
+  public fileDirectory: string;
 
   /**
    * Wraps an entry into an HTML cell.
@@ -77,12 +79,14 @@ export class SpeechTest extends AbstractExamples {
   private static htmlCell_(entry: number | string): string {
     return '<td>' + entry + '</td>';
   }
+
   constructor() {
     super();
     this.style = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE];
     this.domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
     this.locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
-    this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+    this.modality = sre.DynamicCstr.DEFAULT_VALUES[
+      sre.DynamicCstr.Axis.MODALITY];
 
     this.pickFields.push('preference');
   }
@@ -103,14 +107,14 @@ export class SpeechTest extends AbstractExamples {
    * @param opt_style Mathspeak style for translation.
    */
   public executeTest(mml: string, answer: string,
-  opt_style?: string) {
+                     opt_style?: string) {
     let style = opt_style || this.style;
     let mathMl = '<math xmlns="http://www.w3.org/1998/Math/MathML">' +
-    mml + '</math>';
+      mml + '</math>';
     sre.SpeechRuleEngine.getInstance().clearCache();
     sre.System.getInstance().setupEngine(
-    {domain: this.domain, style: style,
-    modality: this.modality, rules: this.rules, locale: this.locale});
+      {domain: this.domain, style: style,
+       modality: this.modality, rules: this.rules, locale: this.locale});
     let actual = this.getSpeech(mathMl);
     let expected = this.actual ? actual : answer;
     this.appendRuleExample(mathMl, expected, style);
@@ -134,21 +138,21 @@ export class SpeechTest extends AbstractExamples {
    * @param opt_rest The rest that is to be appended.
    */
   public appendRuleExample(
-  input: string, output: string, style: string, ...rest: string[]) {
+    input: string, output: string, style: string, ...rest: string[]) {
     let key = '<h2>' + this.information + ' Locale: ' + this.locale +
-    ', Style: ' +
-    SpeechTest.htmlCell_(SpeechTest.styleMap_(style)) +
-    '.</h2>';
+      ', Style: ' +
+      SpeechTest.htmlCell_(SpeechTest.styleMap_(style)) +
+      '.</h2>';
     let outList = [input];
     if (this.compare) {
       sre.System.getInstance().setupEngine(
-      {domain: this.domain, style: style,
-      modality: this.modality, rules: this.rules, locale: 'en'});
+        {domain: this.domain, style: style,
+         modality: this.modality, rules: this.rules, locale: 'en'});
       outList.push(this.getSpeech(input));
     }
     outList.push(output);
     this.appendExamples(
-    key, SpeechTest.htmlRow(outList.concat(rest)));
+      key, SpeechTest.htmlRow(outList.concat(rest)));
   }
 
   /**
@@ -157,8 +161,8 @@ export class SpeechTest extends AbstractExamples {
   public join(examples: string[]) {
     for (let i = 0, l = examples.length; i < l; i++) {
       examples[i] = '<tr>' +
-      SpeechTest.htmlCell_(i) + examples[i] +
-      '</tr>';
+        SpeechTest.htmlCell_(i) + examples[i] +
+        '</tr>';
     }
     return '\n<table>\n' + examples.join('\n') + '\n</table>\n';
   }
@@ -168,18 +172,18 @@ export class SpeechTest extends AbstractExamples {
    */
   public header() {
     let mathjax =
-    '<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">' +
-    '</script>\n<script id="MathJax-script" async ' +
-    'src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">' +
-    '</script>';
+      '<script src="https://polyfill.io/v3/polyfill.min.js?features=es6">' +
+      '</script>\n<script id="MathJax-script" async ' +
+      'src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">' +
+      '</script>';
     let style = '\n<style>\n table, th, td {\n' +
-    '  border: 1px solid black; }\n</style>\n';
+      '  border: 1px solid black; }\n</style>\n';
     return '<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">' +
-    '<html> <head>\n' +
-    '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n' +
-    mathjax +
-    '\n<title>' + this.information + '</title>\n' + style +
-    '\n</head>\n<body>\n';
+      '<html> <head>\n' +
+      '<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>\n' +
+      mathjax +
+      '\n<title>' + this.information + '</title>\n' + style +
+      '\n</head>\n<body>\n';
   }
 
   /**

@@ -27,10 +27,10 @@ export class MarkupTest extends AbstractTest {
 
   public static QUADRATIC_MARKED: string;
 
+  /**
+   * @override
+   */
   public information = 'Markup function test.';
-  constructor() {
-    super();
-  }
 
   /**
    * @override
@@ -123,7 +123,8 @@ export class MarkupTest extends AbstractTest {
    * Test for SSML Step markup.
    */
   public testSsmlStep() {
-    sre.System.getInstance().setupEngine({domain: 'clearspeak', style: 'default'});
+    sre.System.getInstance().setupEngine(
+      {domain: 'clearspeak', style: 'default'});
     this.executeTest(
     MarkupTest.QUADRATIC_MARKED,
     '<say-as interpret-as="character">x</say-as> equals <break' +
@@ -164,57 +165,57 @@ export class MarkupTest extends AbstractTest {
  * The quadratic equation as a MathML string.
  */
 MarkupTest.QUADRATIC =
-'<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
-'<mi>x</mi>' +
-'<mo>=</mo>' +
-'<mfrac>' +
-'<mrow>' +
-'<mo>&#x2212;<!-- − --></mo>' +
-'<mi>b</mi>' +
-'<mo>&#x00B1;<!-- ± --></mo>' +
-'<msqrt>' +
-'<msup>' +
-'<mi>b</mi>' +
-'<mn>2</mn>' +
-'</msup>' +
-'<mo>&#x2212;<!-- − --></mo>' +
-'<mn>4</mn>' +
-'<mi>a</mi>' +
-'<mi>c</mi>' +
-'</msqrt>' +
-'</mrow>' +
-'<mrow>' +
-'<mn>2</mn>' +
-'<mi>a</mi>' +
-'</mrow>' +
-'</mfrac>' +
-'</math>';
+  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+  '<mi>x</mi>' +
+  '<mo>=</mo>' +
+  '<mfrac>' +
+  '<mrow>' +
+  '<mo>&#x2212;<!-- − --></mo>' +
+  '<mi>b</mi>' +
+  '<mo>&#x00B1;<!-- ± --></mo>' +
+  '<msqrt>' +
+  '<msup>' +
+  '<mi>b</mi>' +
+  '<mn>2</mn>' +
+  '</msup>' +
+  '<mo>&#x2212;<!-- − --></mo>' +
+  '<mn>4</mn>' +
+  '<mi>a</mi>' +
+  '<mi>c</mi>' +
+  '</msqrt>' +
+  '</mrow>' +
+  '<mrow>' +
+  '<mn>2</mn>' +
+  '<mi>a</mi>' +
+  '</mrow>' +
+  '</mfrac>' +
+  '</math>';
 /**
  * The quadratic equation as a MathML string.
  */
 MarkupTest.QUADRATIC_MARKED =
-'<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
-'<mi>x</mi>' +
-'<mo>=</mo>' +
-'<mfrac>' +
-'<mrow extid="0">' +
-'<mo>&#x2212;<!-- − --></mo>' +
-'<mi extid="1">b</mi>' +
-'<mo extid="2">&#x00B1;<!-- ± --></mo>' +
-'<msqrt>' +
-'<msup>' +
-'<mi>b</mi>' +
-'<mn>2</mn>' +
-'</msup>' +
-'<mo>&#x2212;<!-- − --></mo>' +
-'<mn>4</mn>' +
-'<mi>a</mi>' +
-'<mi>c</mi>' +
-'</msqrt>' +
-'</mrow>' +
-'<mrow>' +
-'<mn>2</mn>' +
-'<mi>a</mi>' +
-'</mrow>' +
-'</mfrac>' +
-'</math>';
+  '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">' +
+  '<mi>x</mi>' +
+  '<mo>=</mo>' +
+  '<mfrac>' +
+  '<mrow extid="0">' +
+  '<mo>&#x2212;<!-- − --></mo>' +
+  '<mi extid="1">b</mi>' +
+  '<mo extid="2">&#x00B1;<!-- ± --></mo>' +
+  '<msqrt>' +
+  '<msup>' +
+  '<mi>b</mi>' +
+  '<mn>2</mn>' +
+  '</msup>' +
+  '<mo>&#x2212;<!-- − --></mo>' +
+  '<mn>4</mn>' +
+  '<mi>a</mi>' +
+  '<mi>c</mi>' +
+  '</msqrt>' +
+  '</mrow>' +
+  '<mrow>' +
+  '<mn>2</mn>' +
+  '<mi>a</mi>' +
+  '</mrow>' +
+  '</mfrac>' +
+  '</math>';

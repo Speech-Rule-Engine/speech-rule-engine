@@ -1,8 +1,3 @@
-/**
- * @fileoverview Factory for testcases form the classes in this directory.
- *
- * @author v.sorge@mathjax.org (Volker Sorge)
- */
 //
 // Copyright (c) 2020 Volker Sorge
 //
@@ -18,6 +13,12 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+/**
+ * @fileoverview Factory for testcases form the classes in this directory.
+ *
+ * @author v.sorge@mathjax.org (Volker Sorge)
+ */
 
 import {AbstractJsonTest, JsonFile} from './abstract_test';
 

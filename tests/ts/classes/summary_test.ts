@@ -1,8 +1,3 @@
-/**
- * @fileoverview Testcases for summary speech generation.
- *
- * @author v.sorge@mathjax.org (Volker Sorge)
- */
 //
 // Copyright (c) 2019 Volker Sorge
 //
@@ -19,24 +14,30 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @fileoverview Testcases for summary speech generation.
+ *
+ * @author v.sorge@mathjax.org (Volker Sorge)
+ */
+
 import {sre} from '../base/test_external';
 import {SpeechTest} from './speech_test';
 
 export class SummaryTest extends SpeechTest {
 
   /**
-     * @override
-     */
+   * @override
+   */
   public information = 'Summary Rule tests.';
 
   /**
-     * @override
-     */
+   * @override
+   */
   public domain = 'mathspeak';
 
   /**
-     * @override
-     */
+   * @override
+   */
   public modality = 'summary';
 
   /**
@@ -44,6 +45,10 @@ export class SummaryTest extends SpeechTest {
    */
   public steps: string[] = null;
 
+  /**
+   * Summary tests class.
+   * @constructor
+   */
   constructor() {
     super();
     this.pickFields.push('steps');
@@ -58,9 +63,9 @@ export class SummaryTest extends SpeechTest {
     }
     sre.ProcessorFactory.process('walker', mathMl);
     this.steps.forEach(
-    function(step) {
-      sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode[step]);
-    });
+      function(step) {
+        sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode[step]);
+      });
     return sre.ProcessorFactory.process('move', sre.EventUtil.KeyCode['X']);
   }
 

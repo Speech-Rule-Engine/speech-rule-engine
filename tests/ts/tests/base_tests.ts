@@ -24,4 +24,5 @@ import {WalkerTest} from './walker_test';
 /**
  * List that collates all the basic funcional and unit tests.
  */
-export const testList: any[] = [ColorPickerTest, DomTest, MarkupTest, SemanticApiTest, SpeechRuleTest, WalkerTest];
+export const testList: any[] = [ColorPickerTest, DomTest, MarkupTest,
+                                SemanticApiTest, SpeechRuleTest, WalkerTest];

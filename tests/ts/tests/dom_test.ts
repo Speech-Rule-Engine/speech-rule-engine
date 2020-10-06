@@ -1,7 +1,4 @@
-/**
- * @fileoverview Testcases for DOM and Xpath functionality.
- * @author sorge@google.com (Volker Sorge)
- */
+
 //
 // Copyright 2018 Volker Sorge
 //
@@ -15,18 +12,20 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @fileoverview Testcases for DOM and Xpath functionality.
+ * @author sorge@google.com (Volker Sorge)
+ */
+
 import {sre} from '../base/test_external';
 import {AbstractTest} from '../classes/abstract_test';
 
 export class DomTest extends AbstractTest {
 
   /**
-     * @override
-     */
+   * @override
+   */
   public information = 'DOM utility tests.';
-  constructor() {
-    super();
-  }
 
   /**
    * Executes entity tests.
@@ -51,9 +50,9 @@ export class DomTest extends AbstractTest {
    */
   public testHtml4Entities() {
     this.entitiesTest('<a>&Eacute;</a>',
-    '<a xmlns="http://www.w3.org/1999/xhtml">É</a>');
+                      '<a xmlns="http://www.w3.org/1999/xhtml">É</a>');
     this.entitiesTest('<a>&Icirc;</a>',
-    '<a xmlns="http://www.w3.org/1999/xhtml">Î</a>');
+                      '<a xmlns="http://www.w3.org/1999/xhtml">Î</a>');
   }
 
   /**
@@ -61,11 +60,11 @@ export class DomTest extends AbstractTest {
    */
   public testHtml5Entities() {
     this.entitiesTest('<a>&ncup;</a>',
-    '<a xmlns="http://www.w3.org/1999/xhtml">⩂</a>');
+                      '<a xmlns="http://www.w3.org/1999/xhtml">⩂</a>');
     this.entitiesTest('<a>&varsubsetneq;</a>',
-    '<a xmlns="http://www.w3.org/1999/xhtml">⊊︀</a>');
+                      '<a xmlns="http://www.w3.org/1999/xhtml">⊊︀</a>');
     this.entitiesTest('<a>&Vfr;</a>',
-    '<a xmlns="http://www.w3.org/1999/xhtml">𝔙</a>');
+                      '<a xmlns="http://www.w3.org/1999/xhtml">𝔙</a>');
   }
 
   /**
@@ -73,11 +72,13 @@ export class DomTest extends AbstractTest {
    */
   public testXpathEvaluate() {
     let xml = sre.DomUtil.parseInput('<a><b>c</b><d>e</d></a>');
-    this.assert.equal(sre.XpathUtil.evalXPath('//b', xml).toString(), '<b>c</b>');
-    this.assert.equal(sre.XpathUtil.evalXPath('//b/text()', xml).toString(), 'c');
+    this.assert.equal(sre.XpathUtil.evalXPath('//b', xml).toString(),
+                      '<b>c</b>');
+    this.assert.equal(sre.XpathUtil.evalXPath('//b/text()', xml).toString(),
+                      'c');
     this.assert.equal(
-    sre.XpathUtil.evalXPath('//b/following-sibling::*', xml).toString(),
-    '<d>e</d>');
+      sre.XpathUtil.evalXPath('//b/following-sibling::*', xml).toString(),
+      '<d>e</d>');
   }
 
   /**
@@ -88,7 +89,7 @@ export class DomTest extends AbstractTest {
     this.assert.equal(sre.XpathUtil.evaluateBoolean('//b', xml), true);
     this.assert.equal(sre.XpathUtil.evaluateBoolean('//c', xml), false);
     this.assert.equal(sre.XpathUtil.evaluateBoolean(
-    '//b/following-sibling::*', xml), true);
+      '//b/following-sibling::*', xml), true);
   }
 
   /**
@@ -99,6 +100,6 @@ export class DomTest extends AbstractTest {
     this.assert.equal(sre.XpathUtil.evaluateString('@l', xml), '1');
     this.assert.equal(sre.XpathUtil.evaluateString('//*/@m', xml), '2');
     this.assert.equal(sre.XpathUtil.evaluateString(
-    '//b/following-sibling::*', xml), 'e');
+      '//b/following-sibling::*', xml), 'e');
   }
 }

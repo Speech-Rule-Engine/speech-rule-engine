@@ -52,9 +52,6 @@ export class RebuildStreeTest extends SemanticTest {
    * @override
    */
   public pickFields = ['input'];
-  constructor() {
-    super();
-  }
 
   /**
    * Tests if for a given mathml snippet results in a particular semantic tree.
@@ -131,8 +128,8 @@ export class SemanticTreeTest extends SemanticTest {
   /**
    * Adds some unicode characters via hex code to the right category.
    *
-   * This method is necessary as the test framework can not handle code containing
-   * utf-8 encoded characters.
+   * This method is necessary as the test framework can not handle code
+   * containing utf-8 encoded characters.
    */
   public static setupAttributes() {
     let attr = sre.SemanticAttr.getInstance();
@@ -201,7 +198,8 @@ export class SemanticTreeTest extends SemanticTest {
     let dp = new xmldom.DOMParser();
     let xml = dp.parseFromString('<stree>' + sml + '</stree>', 'text/xml');
     let xmls = new xmldom.XMLSerializer();
-    this.assert.equal(xmls.serializeToString(sxml), xmls.serializeToString(xml));
+    this.assert.equal(xmls.serializeToString(sxml),
+                      xmls.serializeToString(xml));
   }
 }
 
@@ -211,6 +209,7 @@ export class SemanticTreeTest extends SemanticTest {
 export class EnrichMathmlTest extends SemanticTest {
 
   public attrBlacklist: string[] = [];
+  
   constructor() {
     super();
     this.setActive('EnrichExamples', 'json');

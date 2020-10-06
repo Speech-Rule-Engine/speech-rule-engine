@@ -1,7 +1,3 @@
-/**
- * @fileoverview Testcases for the color picker.
- * @author sorge@google.com (Volker Sorge)
- */
 //
 // Copyright 2015 Volker Sorge
 //
@@ -15,6 +11,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @fileoverview Testcases for the color picker.
+ * @author sorge@google.com (Volker Sorge)
+ */
+
 import {sre} from '../base/test_external';
 import {AbstractTest} from '../classes/abstract_test';
 import * as sret from '../typings/sre';
@@ -22,8 +23,8 @@ import * as sret from '../typings/sre';
 export class ColorPickerTest extends AbstractTest {
 
   /**
-     * @override
-     */
+   * @override
+   */
   public information = 'Color Picker tests.';
 
   /**
@@ -98,13 +99,13 @@ export class ColorPickerTest extends AbstractTest {
    */
   public testChannelColorAlpha() {
     this.executeColorTest({red: 100, green: 0, blue: 0, alpha: .5},
-    'rgba(100,0,0,0.5)');
+                          'rgba(100,0,0,0.5)');
     this.executeColorTest({red: 0, green: 100, blue: 0, alpha: .5},
-    'rgba(0,100,0,0.5)');
+                          'rgba(0,100,0,0.5)');
     this.executeColorTest({red: 0, green: 0, blue: 100, alpha: .5},
-    'rgba(0,0,100,0.5)');
+                          'rgba(0,0,100,0.5)');
     this.executeColorTest({red: 10, green: 10, blue: 10, alpha: .5},
-    'rgba(10,10,10,0.5)');
+                          'rgba(10,10,10,0.5)');
   }
 
   /**
@@ -113,13 +114,13 @@ export class ColorPickerTest extends AbstractTest {
    */
   public testChannelMax() {
     this.executeColorTest({red: 256, green: 0, blue: 0, alpha: 0},
-    'rgba(255,0,0,0)');
+                          'rgba(255,0,0,0)');
     this.executeColorTest({red: 0, green: 256, blue: 0, alpha: 0},
-    'rgba(0,255,0,0)');
+                          'rgba(0,255,0,0)');
     this.executeColorTest({red: 0, green: 0, blue: 256, alpha: 0},
-    'rgba(0,0,255,0)');
+                          'rgba(0,0,255,0)');
     this.executeColorTest({red: 0, green: 0, blue: 0, alpha: 1.5},
-    'rgba(0,0,0,1)');
+                          'rgba(0,0,0,1)');
   }
 
   /**
@@ -127,24 +128,25 @@ export class ColorPickerTest extends AbstractTest {
    */
   public testChannelMin() {
     this.executeColorTest({red: -256, green: 0, blue: 0, alpha: 0},
-    'rgba(0,0,0,0)');
+                          'rgba(0,0,0,0)');
     this.executeColorTest({red: 0, green: -256, blue: 0, alpha: 0},
-    'rgba(0,0,0,0)');
+                          'rgba(0,0,0,0)');
     this.executeColorTest({red: 0, green: 0, blue: -256, alpha: 0},
-    'rgba(0,0,0,0)');
+                          'rgba(0,0,0,0)');
     this.executeColorTest({red: 0, green: 0, blue: 0, alpha: -1},
-    'rgba(0,0,0,0)');
+                          'rgba(0,0,0,0)');
   }
 
   /**
-   * Test colors given with color channel values given as floating point numbers.
+   * Test colors given with color channel values given as floating point
+   * numbers.
    */
   public testChannelFloat() {
     this.executeColorTest({red: 1.5, green: 0, blue: 0, alpha: 0},
-    'rgba(2,0,0,0)');
+                          'rgba(2,0,0,0)');
     this.executeColorTest({red: 0, green: 1.4, blue: 0, alpha: 0},
-    'rgba(0,1,0,0)');
+                          'rgba(0,1,0,0)');
     this.executeColorTest({red: 0, green: 0, blue: 27.6, alpha: 0},
-    'rgba(0,0,28,0)');
+                          'rgba(0,0,28,0)');
   }
 }

@@ -1,7 +1,3 @@
-/**
- * @fileoverview Abstract class for test cases of single characters.
- * @author Volker.Sorge@gmail.com (Volker Sorge)
- */
 //
 // Copyright 2019 Volker Sorge
 //
@@ -14,6 +10,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+/**
+ * @fileoverview Abstract class for test cases of single characters.
+ * @author Volker.Sorge@gmail.com (Volker Sorge)
+ */
 
 import {sre} from '../base/test_external';
 import {SpeechTest} from './speech_test';
@@ -41,7 +42,7 @@ export class SymbolTest extends SpeechTest {
         this.executeTest(char, answers[i], this.styles[i]);
       } catch (err) {
         console.info('\nFailed Character: ' + char + ' (' +
-        this.domain + '.' + this.styles[i] + ')');
+          this.domain + '.' + this.styles[i] + ')');
         throw err;
       }
     }
@@ -70,8 +71,8 @@ export class SymbolTest extends SpeechTest {
     style = style || this.style;
     sre.SpeechRuleEngine.getInstance().clearCache();
     sre.System.getInstance().setupEngine(
-    {domain: this.domain, style: style,
-    modality: this.modality, rules: this.rules, locale: this.locale});
+      {domain: this.domain, style: style,
+       modality: this.modality, rules: this.rules, locale: this.locale});
     let actual = this.getSpeech(text);
     let expected = this.actual ? actual : answer;
     this.appendRuleExample(text, expected, style);
@@ -84,7 +85,7 @@ export class SymbolTest extends SpeechTest {
   public getSpeech(text: string) {
     let aural = sre.AuralRendering.getInstance();
     let descrs = [sre.AuditoryDescription.create(
-    {text: text}, {adjust: true, translate: true})];
+      {text: text}, {adjust: true, translate: true})];
     return aural.finalize(aural.markup(descrs));
   }
 
@@ -107,6 +108,6 @@ export class SymbolTest extends SpeechTest {
    */
   public method(...args: any[]) {
     this.type === 'unit' ? this.executeUnitTest(args[0], args[1]) :
-    this.executeCharTest(args[0], args[1]);
+      this.executeCharTest(args[0], args[1]);
   }
 }
