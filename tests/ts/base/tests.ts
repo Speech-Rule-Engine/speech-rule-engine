@@ -22,7 +22,6 @@ import {ExampleFiles} from '../classes/abstract_examples';
 import * as TestFactory from '../classes/test_factory';
 import * as BaseTests from '../tests/base_tests';
 import {TestRunner} from './runner';
-import {sre} from './test_external';
 import {TestPath} from './test_util';
 
 export class Tests {
@@ -96,7 +95,9 @@ export class Tests {
     let file = this.environment['FILE'] as string[];
     let locale = this.environment['LOCALE'] as string[];
     if (file) {
-      this.testList = file.map((x: string) =>  sre[x]);
+      let names: {[key: string]: Function} = {};
+      Tests.allTests.map(x => names[x.name] = x);
+      this.testList = file.map((x: string) =>  names[x]);
     }
     if (locale && locale[0] === 'Base') {
       this.testList = this.testList.concat(BaseTests.testList);
