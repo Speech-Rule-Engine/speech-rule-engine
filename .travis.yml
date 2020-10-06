@@ -1,20 +1,12 @@
 language: node_js
 node_js:
-  - "stable"
+- stable
 sudo: false
 branches:
   except:
-    - fix_brackeing
+  - fix_brackeing
 install:
-  - npm install
+- npm install
 before_install:
-  - >-
-    openssl aes-256-cbc 
-    -K $encrypted_b139ed3f238d_key 
-    -iv $encrypted_b139ed3f238d_iv 
-    -in sre-tests_deploy_key.enc 
-    -out sre-tests_deploy_key 
-    -d
-  - chmod 600 sre-tests_deploy_key
-  - eval $(ssh-agent -s)
-  - ssh-add sre-tests_deploy_key
+- openssl aes-256-cbc -K $encrypted_b139ed3f238d_key -iv $encrypted_b139ed3f238d_iv
+  -in sre-tests_deploy_key.enc -out sre-tests_deploy_key -d
