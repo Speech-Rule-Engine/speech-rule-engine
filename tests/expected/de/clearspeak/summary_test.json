@@ -3,7 +3,7 @@
   "name": "SummaryGermanTest",
   "factory": "summary",
   "base": "input/common/summary_test.json",
-  "information": "Summary German tests.",
+  "information": "Clearspeak Summary German tests.",
   "locale": "de",
   "domain": "clearspeak",
   "active": "SummaryGerman",

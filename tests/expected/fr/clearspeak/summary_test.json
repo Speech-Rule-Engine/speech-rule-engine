@@ -2,7 +2,7 @@
   "name": "SummaryFrenchTest",
   "factory": "summary",
   "base": "input/common/summary_test.json",
-  "information": "Summary French tests.",
+  "information": "Clearspeak Summary French tests.",
   "locale": "fr",
   "domain": "clearspeak",
   "active": "SummaryFrench",
