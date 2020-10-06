@@ -11,7 +11,7 @@
   "type": "function",
   "factory": "symbol",
   "base": "input/common/functions.json",
-  "information": "Mathspeak Function Test for Spanish",
+  "information": "Mathspeak Spanish Function tests.",
   "tests": {
     "deg": {
       "expected": [

@@ -2,7 +2,7 @@
   "name": "AataTest",
   "factory": "speech",
   "base": "input/nemeth/aata.json",
-  "information": "Tests from the PreTeXt/NFB project on Judson's Aata.",
+  "information": "Nemeth Tests from the PreTeXt/NFB project on Judson's Aata.",
   "domain": "default",
   "locale": "nemeth",
   "modality": "braille",

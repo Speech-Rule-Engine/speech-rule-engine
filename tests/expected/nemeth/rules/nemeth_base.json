@@ -2,7 +2,7 @@
   "name": "NemethBaseTest",
   "factory": "speech",
   "base": "input/nemeth/nemeth_base.json",
-  "information": "Basic testcases for Nemeth.",
+  "information": "Nemeth Basic tests.",
   "domain": "default",
   "locale": "nemeth",
   "modality": "braille",

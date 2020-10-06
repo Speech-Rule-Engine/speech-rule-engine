@@ -11,7 +11,7 @@
   "type": "unit",
   "factory": "symbol",
   "base": "input/common/units.json",
-  "information": "Mathspeak Unit Test for Spanish",
+  "information": "Mathspeak Spanish Unit tests.",
   "tests": {
     "W": {
       "expected": [
