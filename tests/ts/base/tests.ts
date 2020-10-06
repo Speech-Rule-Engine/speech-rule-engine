@@ -88,6 +88,28 @@ export class Tests {
   }
 
   /**
+   * Filters the file list wrt. to the string list of an environment variable.
+   * @param files The files list.
+   * @param filter The filtering list of strings from an env variable.
+   * @param start The start of the filtering regular expression.
+   * @param end The end of the filtering regular expression. The idea is that a
+   * filter is generated as `/start + fil + end/` where `fil \in filter`.
+   * @return The filtered list of files.
+   */
+  private static fileFilter(
+    files: string[], filter: string[], start: string, end: string): string[] {
+    if (!filter || !filter.length) {
+      return files;
+    }
+    let result: string[] = [];
+    for (let fil of filter) {
+      result = result.concat(
+        files.filter(x => x.match(RegExp(start + fil + end))));
+    }
+    return result;
+  }
+
+  /**
    * @constructor
    */
   constructor() {
@@ -128,23 +150,8 @@ export class Tests {
     let files = Tests.allJson() as string[];
     let locale = this.environment['LOCALE'] as string[];
     let block = this.environment['BLOCK'] as string[];
-    if (locale && locale.length) {
-      let result: string[] = [];
-      for (let loc of locale) {
-        result = result.concat(
-          files.filter(x => x.match(RegExp(`^${loc}/`))));
-      }
-      files = result;
-    }
-    if (block && block.length) {
-      let result: string[] = [];
-      for (let bl of block) {
-        result = result.concat(
-          files.filter(
-            x => x.match(RegExp(`^(\\w+/(?!\\w+/)|\\w+/${bl}/\\w+)`))));
-      }
-      files = result;
-    }
+    files = Tests.fileFilter(files, locale, '^', '/');
+    files = Tests.fileFilter(files, block, '^(\\w+/(?!\\w+/)|\\w+/', '/\\w+)');
     return files;
   }
 
