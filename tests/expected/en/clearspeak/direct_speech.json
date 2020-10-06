@@ -4,7 +4,7 @@
   "locale": "en",
   "factory": "speech",
   "base": "input/common/direct_speech.json",
-  "information": "Tests for Direct speech attributes in Clearspeak English.",
+  "information": "Clearspeak English Direct speech attributes.",
   "active": "DirectSpeechEnglish",
   "exclude": [],
   "tests": {
