@@ -3,7 +3,7 @@
   "name": "CollapseGermanTest",
   "factory": "collapse",
   "base": "input/common/collapse_test.json",
-  "information": "Collapse German tests.",
+  "information": "Clearspeak German Collapse tests.",
   "domain": "clearspeak",
   "locale": "de",
   "active": "CollapseGerman",
