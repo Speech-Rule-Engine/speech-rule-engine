@@ -11,7 +11,7 @@
 
 </head>
 <body>
-<script type="text/javascript">var toggleAll = function() {var actions = document.getElementsByClassName('maction'); for (var i = 0, action; action = actions[i]; i++) {  action.onclick(); } }</script><button onclick="toggleAll()">Toggle All</button>
+<script type="text/javascript">var toggleAll = function() {var actions = document.getElementsByTagName('mjx-maction'); for (var i = 0, action; action = actions[i]; i++) {  action.dispatchEvent(new Event("click")); } }</script><button onclick="toggleAll()">Toggle All</button>
 <h2>Collapse English tests. Locale: en, Style: <td>Verbose</td>.</h2>
 <table>
 <tr><td>0</td><td><math xmlns="http://www.w3.org/1998/Math/MathML"><maction><mtext>action</mtext><mrow data-semantic-id="A"><mi>a</mi><mo>+</mo><mi>b</mi></mrow></maction></math></td><td>collapsed sum with 2 summands</td></tr>

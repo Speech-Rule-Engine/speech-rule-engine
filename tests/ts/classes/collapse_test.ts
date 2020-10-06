@@ -50,9 +50,9 @@ export class CollapseTest extends SpeechTest {
   public header() {
     let header = super.header();
     let script = 'var toggleAll = function() {' +
-      'var actions = document.getElementsByClassName(\'maction\');' +
+      'var actions = document.getElementsByTagName(\'mjx-maction\');' +
       ' for (var i = 0, action; action = actions[i]; i++) {' +
-      '  action.onclick(); } }';
+      '  action.dispatchEvent(new Event("click")); } }';
     return header + '<script type="text/javascript">' + script +
       '</script><button onclick="toggleAll()">Toggle All</button>\n';
   }
