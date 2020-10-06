@@ -38,7 +38,6 @@ module.exports = {
       sourceMap: true
     })]
   },
-  watch: true,
   mode: 'production'
 };
 

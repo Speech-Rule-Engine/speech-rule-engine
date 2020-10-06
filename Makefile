@@ -240,8 +240,13 @@ $(TEST):
 run_test: $(TEST_RUNNER)
 	@$(TEST)
 
-$(TEST_RUNNER):
+$(TEST_RUNNER): $(TEST_DIR)/node_modules
 	@cd tests; npx webpack
+	@cd ..
+
+
+$(TEST_DIR)/node_modules:
+	@cd tests; npm install
 	@cd ..
 
 
