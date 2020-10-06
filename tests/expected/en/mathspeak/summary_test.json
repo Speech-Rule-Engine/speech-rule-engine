@@ -1,8 +1,9 @@
 {
   "name": "SummaryEnglishTest",
   "locale": "en",
+  "domain": "mathspeak",
   "factory": "summary",
-  "base": "input/mathspeak/summary_test.json",
+  "base": "input/common/summary_test.json",
   "information": "Summary English tests.",
   "active": "SummaryEnglish",
   "exclude": [],

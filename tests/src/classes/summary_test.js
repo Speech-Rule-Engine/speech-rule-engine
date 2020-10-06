@@ -41,11 +41,6 @@ sretest.SummaryTest = function() {
   /**
    * @override
    */
-  this.domain = 'mathspeak';
-
-  /**
-   * @override
-   */
   this.modality = 'summary';
 
   /**
@@ -83,4 +78,14 @@ sretest.SummaryTest.prototype.method = function(var_args) {
   this.steps = args[3];
   sretest.SummaryTest.base(this, 'method', args[0], args[1], args[2]);
   this.steps = null;
+};
+
+
+/**
+ * @override
+ */
+sre.SummaryTest.prototype.appendRuleExample = function(
+  input, output, style, rest) {
+  sre.SummaryTest.base(
+    this, 'appendRuleExample', input, output, style, [this.domain]);
 };

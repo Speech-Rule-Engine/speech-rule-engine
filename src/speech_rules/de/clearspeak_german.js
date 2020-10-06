@@ -56,9 +56,8 @@ sre.ClearspeakGerman = {
   rules: [
     ['Rule',
       'collapsed', 'default',
-      '[t] "kollapiert"; [n] . (engine:modality=summary,grammar:collapsed)',
-      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
-     'self::*', 'self::*', 'self::*', 'self::*', 'self::*'],
+      '[n] . (engine:modality=summary,grammar:collapsed); [t] "kollabiert"',
+      'self::*[@alternative]', 'not(contains(@grammar, "collapsed"))'],
 
     // Initial rule
     ['Rule',

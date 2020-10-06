@@ -1,9 +1,10 @@
 {
   "name": "SummaryFrenchTest",
   "factory": "summary",
-  "base": "input/mathspeak/summary_test.json",
+  "base": "input/common/summary_test.json",
   "information": "Summary French tests.",
   "locale": "fr",
+  "domain": "mathspeak",
   "active": "SummaryFrench",
   "exclude": [],
   "tests": {

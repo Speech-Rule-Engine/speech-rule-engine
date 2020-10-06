@@ -61,9 +61,9 @@ sretest.CollapseTest.prototype.executeTest = function(
 sretest.CollapseTest.prototype.header = function() {
   var header = sretest.CollapseTest.base(this, 'header');
   var script = 'var toggleAll = function() {' +
-      'var actions = document.getElementsByClassName(\'maction\');' +
+      'var actions = document.getElementsByTagName(\'mjx-maction\');' +
       ' for (var i = 0, action; action = actions[i]; i++) {' +
-      '  action.onclick(); } }';
+      '  action.click(); } }';
   return header + '<script type="text/javascript">' + script +
       '</script><button onclick="toggleAll()">Toggle All</button>\n';
 };
@@ -80,4 +80,14 @@ sretest.CollapseTest.prototype.getSpeech = function(mathMl) {
   sretest.TestExternal.sre.SpeechGeneratorUtil.connectAllMactions(mml, xml);
   var descrs = sretest.TestExternal.sre.SpeechGeneratorUtil.computeSpeech(xml);
   return sretest.TestExternal.sre.AuralRendering.getInstance().markup(descrs);
+};
+
+
+/**
+ * @override
+ */
+sre.CollapseTest.prototype.appendRuleExample = function(
+  input, output, style, rest) {
+  sre.CollapseTest.base(
+    this, 'appendRuleExample', input, output, style, [this.domain]);
 };

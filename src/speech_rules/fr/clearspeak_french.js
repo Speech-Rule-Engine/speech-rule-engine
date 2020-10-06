@@ -53,9 +53,8 @@ sre.ClearspeakFrench = {
   rules: [
     ['Rule',
      'collapsed', 'default',
-     '[t] "compressée"; [n] . (engine:modality=summary,grammar:collapsed)',
-     'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
-     'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+     '[n] . (engine:modality=summary,grammar:collapsed)',
+     'self::*[@alternative]', 'not(contains(@grammar, "collapsed"))'
     ],
 
     // Initial rule
