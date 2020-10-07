@@ -30,19 +30,35 @@ sre.SummaryFrench = {
   rules: [
     // Collapsed output
     ['Rule',
-     'collapsed-masculine', 'default.masculine',
-     '[t] "compressé"',
-     'contains(@grammar, "collapsed")'],
+     'collapsed-masculine', 'default.default',
+     '[t] "compressé"', 'self::*[@grammar]',
+     'contains(@grammar, "gender:male")', 'contains(@grammar, "collapsed")'],
+    ['SpecializedRule',
+     'collapsed-masculine', 'default.default', 'mathspeak.brief'
+    ],
+    ['SpecializedRule',
+     'collapsed-masculine', 'default.default', 'mathspeak.sbrief'
+    ],
     ['Rule',
-     'collapsed-feminine', 'default.feminine',
-     '[t] "compressée"',
-     'contains(@grammar, "collapsed")'],
+     'collapsed-feminine', 'default.default',
+     '[t] "compressée"', 'self::*[@grammar]',
+     'contains(@grammar, "gender:female")', 'contains(@grammar, "collapsed")'],
+    ['SpecializedRule',
+     'collapsed-feminine', 'default.default', 'mathspeak.brief'
+    ],
+    ['SpecializedRule',
+     'collapsed-feminine', 'default.default', 'mathspeak.sbrief'
+    ],
     ['Rule',
-     'no-collapsed', 'default.masculine',
-     '[t] ""', 'not(contains(@grammar, "collapsed"))'],
-    ['Rule',
-     'no-collapsed', 'default.feminine',
-     '[t] ""', 'not(contains(@grammar, "collapsed"))'],
+     'no-collapsed', 'default.default',
+     '[t] ""', 'self::*[@grammar]', 'contains(@grammar, "gender")',
+     'not(contains(@grammar, "collapsed"))'],
+    ['SpecializedRule',
+     'no-collapsed', 'default.default', 'mathspeak.brief'
+    ],
+    ['SpecializedRule',
+     'no-collapsed', 'default.default', 'mathspeak.sbrief'
+    ],
 
     // Initial rule
     ['Rule',
@@ -52,54 +68,54 @@ sre.SummaryFrench = {
     // Identifier
     ['Rule',
      'abstr-identifier', 'default.default',
-     '[t] "identifiant long"; [n] . (engine:style=masculine)',
+     '[t] "identifiant long"; [n] . (grammar:gender="male")',
      'self::identifier', 'contains(@grammar, "collapsed")'
     ],
     ['Rule',
      'abstr-identifier', 'default.default',
-     '[t] "identifiant"; [n] . (engine:style=masculine)',
+     '[t] "identifiant"; [n] . (grammar:gender="male")',
      'self::identifier'
     ],
 
     // Numbers
     ['Rule',
      'abstr-number', 'default.default',
-     '[t] "nombre long"; [n] . (engine:style=masculine)',
+     '[t] "nombre long"; [n] . (grammar:gender="male")',
      'self::number', 'contains(@grammar, "collapsed")'
     ],
     ['Rule',
      'abstr-number', 'default.default',
-     '[t] "nombre"; [n] . (engine:style=masculine)',
+     '[t] "nombre"; [n] . (grammar:gender="male")',
      'self::number',
     ],
 
     ['Rule',
      'abstr-mixed-number', 'default.default',
-     '[t] "nombre fractionnaire long"; [n] . (engine:style=masculine)',
+     '[t] "nombre fractionnaire long"; [n] . (grammar:gender="male")',
      'self::number', '@role="mixed"', 'contains(@grammar, "collapsed")'
     ],
     ['Rule',
      'abstr-mixed-number', 'default.default',
-     '[t] "nombre fractionnaire"; [n] . (engine:style=masculine)',
+     '[t] "nombre fractionnaire"; [n] . (grammar:gender="male")',
      'self::number', '@role="mixed"'
     ],
 
     // Text
     ['Rule',
      'abstr-text', 'default.default',
-     '[t] "texte"; [n] . (engine:style=masculine)',
+     '[t] "texte"; [n] . (grammar:gender="male")',
      'self::text'
     ],
 
     // Functions
     ['Rule',
      'abstr-function', 'default.default',
-     '[t] "expression fonctionnelle"; [n] . (engine:style=feminine)',
+     '[t] "expression fonctionnelle"; [n] . (grammar:gender="female")',
      'self::function'
     ],
     ['Rule',
      'abstr-function', 'mathspeak.brief',
-     '[t] "fonction"; [n] . (engine:style=feminine)',
+     '[t] "fonction"; [n] . (grammar:gender="female")',
      'self::function'
     ],
     ['SpecializedRule',
@@ -108,12 +124,12 @@ sre.SummaryFrench = {
 
     ['Rule',
      'abstr-lim', 'default.default',
-     '[t] "fonction de limitation"; [n] . (engine:style=feminine)',
+     '[t] "fonction de limitation"; [n] . (grammar:gender="female")',
      'self::function', '@role="limit function"'
     ],
     ['Rule',
      'abstr-lim', 'mathspeak.brief',
-     '[t] "lim"; [n] . (engine:style=feminine)',
+     '[t] "lim"; [n] . (grammar:gender="female")',
      'self::function', '@role="limit function"'
     ],
     ['SpecializedRule',
@@ -124,12 +140,12 @@ sre.SummaryFrench = {
     // Fraction
     ['Rule',
      'abstr-fraction', 'default.default',
-     '[t] "fraction"; [n] . (engine:style=feminine)',
+     '[t] "fraction"; [n] . (grammar:gender="female")',
      'self::fraction',
     ],
     ['Rule',
      'abstr-fraction', 'mathspeak.brief',
-     '[t] "frac"; [n] . (engine:style=feminine)',
+     '[t] "frac"; [n] . (grammar:gender="female")',
      'self::fraction'
     ],
     ['SpecializedRule',
@@ -138,13 +154,13 @@ sre.SummaryFrench = {
 
     ['Rule',
      'abstr-continued-fraction', 'default.default',
-     '[t] "fraction continue"; [n] . (engine:style=feminine)',
+     '[t] "fraction continue"; [n] . (grammar:gender="female")',
      'self::fraction',
      'children/*[2]/descendant-or-self::*[@role="ellipsis"]'
     ],
     ['Rule',
      'abstr-continued-fraction', 'mathspeak.brief',
-     '[t] "frac continue"; [n] . (engine:style=feminine)',
+     '[t] "frac continue"; [n] . (grammar:gender="female")',
      'self::fraction',
      'children/*[2]/descendant-or-self::*[@role="ellipsis"]'
     ],
@@ -156,13 +172,13 @@ sre.SummaryFrench = {
     // Roots
     ['Rule',
      'abstr-sqrt', 'default.default',
-     '[t] "racine carrée"; [n] . (engine:style=feminine)',
+     '[t] "racine carrée"; [n] . (grammar:gender="female")',
      'self::sqrt'
     ],
 
     ['Rule',
      'abstr-sqrt-nested', 'default.default',
-     '[t] "racine carrée imbriquée"; [n] . (engine:style=feminine)',
+     '[t] "racine carrée imbriquée"; [n] . (grammar:gender="female")',
      'self::sqrt',
      'children/*/descendant-or-self::sqrt or' +
      ' children/*/descendant-or-self::root'
@@ -173,19 +189,19 @@ sre.SummaryFrench = {
      'abstr-root', 'default.default',
      '[t] "racine d\'indice"; ' +
      '[n] children/*[1] (engine:modality="speech"); [t] "fin indice"; ' +
-     '[n] . (engine:style=feminine);',
+     '[n] . (grammar:gender="female");',
      'self::root', 'contains(@grammar, "collapsed")',
      'following-sibling::* or ancestor::*/following-sibling::*'
     ],
     ['Rule',
      'abstr-root', 'default.default',
      '[t] "racine d\'indice"; [n] children/*[1] (engine:modality=speech); ' +
-     '[n] . (engine:style=feminine)',
+     '[n] . (grammar:gender="female")',
      'self::root'
     ],
     ['Rule',
      'abstr-root', 'mathspeak.brief',
-     '[t] "racine"; [n] . (engine:style=feminine)',
+     '[t] "racine"; [n] . (grammar:gender="female")',
      'self::root'
     ],
     ['SpecializedRule',
@@ -196,7 +212,7 @@ sre.SummaryFrench = {
      'abstr-root-nested', 'default.default',
      '[t] "racine imbriquée d\'indice"; ' +
      '[n] children/*[1] (engine:modality=speech);' +
-     ' [t] "fin indice"; [n] . (engine:style=feminine);',
+     ' [t] "fin indice"; [n] . (grammar:gender="female");',
      'self::root', 'contains(@grammar, "collapsed")',
      'children/*/descendant-or-self::sqrt or' +
      ' children/*/descendant-or-self::root',
@@ -206,13 +222,13 @@ sre.SummaryFrench = {
      'abstr-root-nested', 'default.default',
      '[t] "racine imbriquée d\'indice"; ' +
      '[n] children/*[1] (engine:modality=speech); ' +
-     '[n] . (engine:style=feminine)',
+     '[n] . (grammar:gender="female")',
      'self::root', 'children/*/descendant-or-self::sqrt or' +
      ' children/*/descendant-or-self::root'
     ],
     ['Rule',
      'abstr-root-nested', 'mathspeak.brief',
-     '[t] "racine imbriquée"; [n] . (engine:style=feminine)',
+     '[t] "racine imbriquée"; [n] . (grammar:gender="female")',
      'self::root', 'children/*/descendant-or-self::sqrt or ' +
      'children/*/descendant-or-self::root'
     ],
@@ -223,21 +239,21 @@ sre.SummaryFrench = {
     // Superscript
     ['Rule',
      'abstr-superscript', 'default.default',
-     '[t] "puissance"; [n] . (engine:style=feminine)',
+     '[t] "puissance"; [n] . (grammar:gender="female")',
      'self::superscript'
     ],
 
     // Subscript
     ['Rule',
      'abstr-subscript', 'default.default',
-     '[t] "indice"; [n] . (engine:style=masculine)',
+     '[t] "indice"; [n] . (grammar:gender="male")',
      'self::subscript'
     ],
 
     // Subsuperscript
     ['Rule',
      'abstr-subsup', 'default.default',
-     '[t] "puissance avec index"; [n] . (engine:style=feminine)',
+     '[t] "puissance avec index"; [n] . (grammar:gender="female")',
      'self::superscript',
      'name(children/*[1])="subscript"'
     ],
@@ -246,19 +262,19 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-infixop', 'default.default',
      '[t] @role (grammar:localRole); [t] "avec"; [t] count(./children/*);' +
-     ' [t] "éléments"; [n] . (engine:style=masculine)',
+     ' [t] "éléments"; [n] . (grammar:gender="male")',
      'self::infixop'
     ],
     ['Rule',
      'abstr-infixop', 'default.default',
      '[t] @role (grammar:localRole); [t] "avec un nombre d\'éléments' +
-     ' variable"; [n] . (engine:style=masculine)',
+     ' variable"; [n] . (grammar:gender="male")',
      'self::infixop', 'count(./children/*)>2',
      './children/punctuation[@role="ellipsis"]'
     ],
     ['Rule',
      'abstr-infixop', 'mathspeak.brief',
-     '[t] @role (grammar:localRole); [n] . (engine:style=masculine)',
+     '[t] @role (grammar:localRole); [n] . (grammar:gender="male")',
      'self::infixop'
     ],
     ['SpecializedRule',
@@ -268,12 +284,12 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-addition', 'default.default',
      '[t] "somme avec"; [t] count(./children/*); ' +
-     '[t] "opérandes"; [n] . (engine:style=feminine)',
+     '[t] "opérandes"; [n] . (grammar:gender="female")',
      'self::infixop', '@role="addition"'
     ],
     ['Rule',
      'abstr-addition', 'mathspeak.brief',
-     '[t] "somme"; [n] . (engine:style=feminine)',
+     '[t] "somme"; [n] . (grammar:gender="female")',
      'self::infixop', '@role="addition"'
     ],
     ['SpecializedRule',
@@ -282,7 +298,7 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-var-addition', 'default.default',
      '[t] "somme avec un nombre variable d\'opérandes"; ' +
-     '[n] . (engine:style=feminine)',
+     '[n] . (grammar:gender="female")',
      'self::infixop', '@role="addition"',
      'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
     ],
@@ -290,12 +306,12 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-multiplication', 'default.default',
      '[t] "produit avec"; [t] count(./children/*);' +
-     ' [t] "facteurs"; [n] . (engine:style=masculine);',
+     ' [t] "facteurs"; [n] . (grammar:gender="male");',
      'self::infixop', '@role="multiplication"'
     ],
     ['Rule',
      'abstr-multiplication', 'mathspeak.brief',
-     '[t] "produit"; [n] . (engine:style=masculine)',
+     '[t] "produit"; [n] . (grammar:gender="male")',
      'self::infixop', '@role="multiplication"'
     ],
     ['SpecializedRule',
@@ -308,7 +324,7 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-var-multiplication', 'default.default',
      '[t] "produit avec un nombre de facteurs variable";' +
-     ' [n] . (engine:style=masculine)',
+     ' [n] . (grammar:gender="male")',
      'self::infixop', '@role="multiplication"',
      'count(./children/*)>2', './children/punctuation[@role="ellipsis"]'
     ],
@@ -323,12 +339,12 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-vector', 'default.default',
      '[t] "vecteur de dimension"; [t] count(./children/*);' +
-     ' [n] . (engine:style=masculine)',
+     ' [n] . (grammar:gender="male")',
      'self::vector'
     ],
     ['Rule',
      'abstr-vector', 'mathspeak.brief',
-     '[t] "vecteur"; [n] . (engine:style=masculine)',
+     '[t] "vecteur"; [n] . (grammar:gender="male")',
      'self::vector'
     ],
     ['SpecializedRule',
@@ -336,14 +352,14 @@ sre.SummaryFrench = {
     ],
     ['Rule',
      'abstr-var-vector', 'default.default',
-     '[t] "vecteur colonne de dimension n"; [n] . (engine:style=masculine)',
+     '[t] "vecteur colonne de dimension n"; [n] . (grammar:gender="male")',
      'self::vector',
      './children/*/children/punctuation[@role="ellipsis"]'
     ],
 
     ['Rule',
      'abstr-binomial', 'default.default',
-     '[t] "binomial"; [n] . (engine:style=masculine)',
+     '[t] "binomial"; [n] . (grammar:gender="male")',
      'self::vector', '@role="binomial"'
     ],
     // These two are needed to avoid the vector rule firing.
@@ -357,12 +373,12 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-determinant', 'default.default',
      '[t] "déterminant de dimension"; [t] count(./children/*);' +
-     ' [n] . (engine:style=masculine)',
+     ' [n] . (grammar:gender="male")',
      'self::matrix', '@role="determinant"'
     ],
     ['Rule',
      'abstr-determinant', 'mathspeak.brief',
-     '[t] "déterminant"; [n] . (engine:style=masculine)',
+     '[t] "déterminant"; [n] . (grammar:gender="male")',
      'self::matrix', '@role="determinant"'
     ],
     ['SpecializedRule',
@@ -370,7 +386,7 @@ sre.SummaryFrench = {
     ],
     ['Rule',
      'abstr-var-determinant', 'default.default',
-     '[t] "déterminant de dimension n"; [n] . (engine:style=masculine)',
+     '[t] "déterminant de dimension n"; [n] . (grammar:gender="male")',
      'self::matrix', '@role="determinant"',
      './children/*/children/*/children/punctuation[@role="ellipsis"]'
     ],
@@ -378,12 +394,12 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-squarematrix', 'default.default',
      '[t] "matrice carrée de dimension"; [t] count(./children/*); ' +
-     '[n] . (engine:style=feminine)',
+     '[n] . (grammar:gender="female")',
      'self::matrix', '@role="squarematrix"'
     ],
     ['Rule',
      'abstr-squarematrix', 'mathspeak.brief',
-     '[t] "matrice carrée"; [n] . (engine:style=feminine)',
+     '[t] "matrice carrée"; [n] . (grammar:gender="female")',
      'self::matrix', '@role="squarematrix"'
     ],
     ['SpecializedRule',
@@ -394,12 +410,12 @@ sre.SummaryFrench = {
      'abstr-rowvector', 'default.default',
      '[t] "vecteur ligne de dimension"; ' +
      '[t] count(./children/row/children/*); ' +
-     '[n] . (engine:style=masculine)',
+     '[n] . (grammar:gender="male")',
      'self::matrix', '@role="rowvector"'
     ],
     ['Rule',
      'abstr-rowvector', 'mathspeak.brief',
-     '[t] "vecteur ligne"; [n] . (engine:style=masculine)',
+     '[t] "vecteur ligne"; [n] . (grammar:gender="male")',
      'self::matrix', '@role="rowvector"'
     ],
     ['SpecializedRule',
@@ -415,12 +431,12 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-matrix', 'default.default',
      '[t] "matrice"; [t] count(children/*);  [t] "par";' +
-     '[t] count(children/*[1]/children/*); [n] . (engine:style=feminine)',
+     '[t] count(children/*[1]/children/*); [n] . (grammar:gender="female")',
      'self::matrix'
     ],
     ['Rule',
      'abstr-matrix', 'mathspeak.brief',
-     '[t] "matrice"; [n] . (engine:style=feminine)',
+     '[t] "matrice"; [n] . (grammar:gender="female")',
      'self::matrix'
     ],
     ['SpecializedRule',
@@ -428,7 +444,7 @@ sre.SummaryFrench = {
     ],
     ['Rule',
      'abstr-var-matrix', 'default.default',
-     '[t] "matrice de dimension n par m"; [n] . (engine:style=feminine)',
+     '[t] "matrice de dimension n par m"; [n] . (grammar:gender="female")',
      'self::matrix',
      './children/*/children/*/children/punctuation[@role="ellipsis"]'
     ],
@@ -439,12 +455,12 @@ sre.SummaryFrench = {
      'abstr-cases', 'default.default',
      '[t] "déclaration de cas";' +
      '[t] "avec"; [t] count(children/*); [t] "cas";' +
-     ' [n] . (engine:style=feminine)',
+     ' [n] . (grammar:gender="female")',
      'self::cases'
     ],
     ['Rule',
      'abstr-cases', 'mathspeak.brief',
-     '[t] "déclaration de cas"; [n] . (engine:style=feminine)',
+     '[t] "déclaration de cas"; [n] . (grammar:gender="female")',
      'self::cases'
     ],
     ['SpecializedRule',
@@ -452,7 +468,7 @@ sre.SummaryFrench = {
     ],
     ['Rule',
      'abstr-var-cases', 'default.default',
-     '[t] "déclaration de cas variable"; [n] . (engine:style=feminine)',
+     '[t] "déclaration de cas variable"; [n] . (grammar:gender="female")',
      'self::cases',
      './children/row/children/cell/children/punctuation[@role="ellipsis"]' +
      'or ./children/line/children/punctuation[@role="ellipsis"]'
@@ -464,13 +480,13 @@ sre.SummaryFrench = {
      'abstr-punctuated', 'default.default',
      '[t] "liste de longueur"; [t] count(children/*) - count(content/*);' +
      ' [t] "séparée par des"; [n] content/*[1] (join:""); [t] "s";' +
-     ' [n] . (engine:style=feminine)',
+     ' [n] . (grammar:gender="female")',
      'self::punctuated'
     ],
     ['Rule',
      'abstr-punctuated', 'mathspeak.brief',
      '[t] "liste séparée par des"; [n] content/*[1] (join:""); [t] "s";' +
-     ' [n] . (engine:style=feminine)',
+     ' [n] . (grammar:gender="female")',
      'self::punctuated'
     ],
     ['SpecializedRule',
@@ -479,7 +495,7 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-var-punctuated', 'default.default',
      '[t] "liste de longueur variable séparée par des"; ' +
-     '[n] content/*[1] (join:""); [t] "s"; [n] . (engine:style=feminine)',
+     '[n] content/*[1] (join:""); [t] "s"; [n] . (grammar:gender="female")',
      'self::punctuated',
      './children/punctuation[@role="ellipsis"]'
     ],
@@ -487,19 +503,19 @@ sre.SummaryFrench = {
 
     ['Rule',
      'abstr-bigop', 'default.default',
-     '[n] content/*[1]; [n] . (engine:style=masculine)',
+     '[n] content/*[1]; [n] . (grammar:gender="male")',
      'self::bigop'
     ],
 
     ['Rule',
      'abstr-integral', 'default.default',
-     '[t] "intégrale"; [n] . (engine:style=feminine)',
+     '[t] "intégrale"; [n] . (grammar:gender="female")',
      '@role="integral"'
     ],
 
     ['Rule',
      'abstr-relation', 'default.default',
-     '[t] @role (grammar:localRole); [n] . (engine:style=masculine);',
+     '[t] @role (grammar:localRole); [n] . (grammar:gender="male");',
      'self::relseq', 'count(./children/*)=2'
     ],
 
@@ -507,13 +523,13 @@ sre.SummaryFrench = {
      'abstr-relation-seq', 'default.default',
      '[t] @role (grammar:localRole); [t] "séquence";' +
      ' [t] "avec"; [t] count(./children/*); [t] "éléments";' +
-     ' [n] . (engine:style=feminine)',
+     ' [n] . (grammar:gender="female")',
      'self::relseq', 'count(./children/*)>2'
     ],
     ['Rule',
      'abstr-relation-seq', 'mathspeak.brief',
      '[t] @role (grammar:localRole); [t] "séquence";' +
-     ' [n] . (engine:style=feminine)',
+     ' [n] . (grammar:gender="female")',
      'self::relseq', 'count(./children/*)>2'
     ],
     ['SpecializedRule',
@@ -523,7 +539,7 @@ sre.SummaryFrench = {
      'abstr-var-relation', 'default.default',
      '[t] @role (grammar:localRole); [t] "séquence";' +
      ' [t] "avec un nombre de éléments variable";' +
-     ' [n] . (engine:style=feminine)',
+     ' [n] . (grammar:gender="female")',
      'self::relseq', 'count(./children/*)>2',
      './children/punctuation[@role="ellipsis"]'
     ],
@@ -543,12 +559,12 @@ sre.SummaryFrench = {
      'abstr-multirel', 'default.default',
      '[t] "séquence de relation";' +
      ' [t] "avec"; [t] count(./children/*); [t] "éléments";' +
-     ' [n] . (engine:style=feminine)',
+     ' [n] . (grammar:gender="female")',
      'self::multirel', 'count(./children/*)>2'
     ],
     ['Rule',
      'abstr-multirel', 'mathspeak.brief',
-     '[t] "séquence de relation"; [n] . (engine:style=feminine)',
+     '[t] "séquence de relation"; [n] . (grammar:gender="female")',
      'self::multirel', 'count(./children/*)>2'
     ],
     ['SpecializedRule',
@@ -557,7 +573,7 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-var-multirel', 'default.default',
      '[t] "séquence de relation avec un nombre de éléments variable";' +
-     ' [n] . (engine:style=feminine)',
+     ' [n] . (grammar:gender="female")',
      'self::multirel', 'count(./children/*)>2',
      './children/punctuation[@role="ellipsis"]'
     ],
@@ -567,26 +583,26 @@ sre.SummaryFrench = {
      '[t] "table avec"; ' +
      '[t] count(children/*); [t] "lignes et";' +
      '[t] count(children/*[1]/children/*); ' +
-     '[t] "colonnes"; [n] . (engine:style=feminine);',
+     '[t] "colonnes"; [n] . (grammar:gender="female");',
      'self::table'
     ],
     ['Rule',
      'abstr-line', 'default.default',
      '[t] "dans"; [t] @role (grammar:localRole);' +
-     ' [n] . (engine:style=masculine)',
+     ' [n] . (grammar:gender="male")',
      'self::line'
     ],
     ['Rule',
      'abstr-row', 'default.default',
      '[t] "dans"; [t] @role (grammar:localRole);' +
      '[t] count(preceding-sibling::..); [t] "avec";' +
-     '[t] count(children/*); [t] "colonnes"; [n] . (engine:style=feminine)',
+     '[t] count(children/*); [t] "colonnes"; [n] . (grammar:gender="female")',
      'self::row'
     ],
     ['Rule',
      'abstr-cell', 'default.default',
      '[t] "dans"; [t] @role (grammar:localRole); ' +
-     '[n] . (engine:style=feminine);',
+     '[n] . (grammar:gender="female");',
      'self::cell'
     ]
   ]

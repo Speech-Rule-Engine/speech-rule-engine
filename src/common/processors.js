@@ -69,6 +69,19 @@ sre.ProcessorFactory.process = function(name, expr) {
 
 
 /**
+ * Processes an expression with the given processor.
+ * @param {string} name The name of the processor.
+ * @param {string} expr The expression to process.
+ * @return {T} The data structure resulting from the processing the expression.
+ * @template T
+ */
+sre.ProcessorFactory.processOnly = function(name, expr) {
+  var processor = sre.ProcessorFactory.get_(name);
+  return processor.process(expr);
+};
+
+
+/**
  * Prints a processed expression with given processor.
  * @param {string} name The name of the processor.
  * @param {T} data The data structure that's the result of this processor.
@@ -118,9 +131,11 @@ sre.ProcessorFactory.keypress = function(name, expr) {
  * @template T
  * @param {string} name The name of the processor.
  * @param {{processor: function(string): T,
+ *          postprocessor: (undefined|function(T, string): T),
  *          print: (undefined|function(T): string),
  *          pprint: (undefined|function(T): string)}} methods Has as components:
  *    * processor The actual processing method.
+ *    * postprocessor Optional postprocessing of the result.
  *    * print The printing method. If none is given, defaults to toString().
  *    * pprint The pretty printing method. If none is given, defaults print.
  */
@@ -134,7 +149,19 @@ sre.Processor = function(name, methods) {
   /**
    * @type {function(string): T}
    */
-  this.processor = methods.processor;
+  this.process = methods.processor;
+
+  /**
+   * @type {function(T, string): T}
+   */
+  this.postprocess = methods.postprocessor || function(x, y) {return x;};
+
+  /**
+   * @type {function(string): T}
+   */
+  this.processor = this.postprocess ?
+    function(x) {return this.postprocess(this.process(x), x);} :
+  this.process;
 
   /**
    * @type {function(T): string}
@@ -225,6 +252,30 @@ new sre.Processor(
         var mml = sre.DomUtil.parseInput(expr);
         return sre.Semantic.xmlTree(mml);
       },
+      postprocessor: function(xml, expr) {
+        var setting = sre.Engine.getInstance().speech;
+        if (setting === sre.Engine.Speech.NONE) {
+          return xml;
+        }
+        // This avoids temporary attributes (e.g., for grammar) to bleed into
+        // the tree.
+        var clone = xml.cloneNode(true);
+        var speech = sre.SpeechGeneratorUtil.computeSpeechWithCache(clone);
+        var aural = sre.AuralRendering.getInstance();
+        if (setting === sre.Engine.Speech.SHALLOW) {
+          xml.setAttribute('speech', aural.finalize(speech));
+          return xml;
+        }
+        var nodesXml = sre.XpathUtil.evalXPath('.//*[@id]', xml);
+        var nodesClone = sre.XpathUtil.evalXPath('.//*[@id]', clone);
+        for (var i = 0, orig, node;
+             orig = nodesXml[i], node = nodesClone[i]; i++) {
+          speech = sre.SpeechGeneratorUtil.retrieveSpeechXml(
+              /** @type {!Node} */(node), true);
+          orig.setAttribute('speech', aural.finalize(speech));
+        }
+        return xml;
+      },
       pprint: function(tree) {
         return sre.DomUtil.formatXml(tree.toString());
       }
@@ -262,6 +313,31 @@ new sre.Processor(
         var stree = sre.Semantic.getTree(mml);
         return stree.toJson();
       },
+      postprocessor: function(json, expr) {
+        var setting = sre.Engine.getInstance().speech;
+        if (setting === sre.Engine.Speech.NONE) {
+          return json;
+        }
+        var mml = sre.DomUtil.parseInput(expr);
+        var xml = sre.Semantic.xmlTree(mml);
+        var speech = sre.SpeechGeneratorUtil.computeSpeechWithCache(xml);
+        var aural = sre.AuralRendering.getInstance();
+        if (setting === sre.Engine.Speech.SHALLOW) {
+          json.stree.speech = aural.finalize(speech);
+          return json;
+        }
+        var addRec = function(json) {
+          var node = /** @type {!Node} */(
+            sre.XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0]);
+          var speech = sre.SpeechGeneratorUtil.retrieveSpeechXml(node, true);
+          json.speech = aural.finalize(speech);
+          if (json.children) {
+            json.children.forEach(addRec);
+          }
+        };
+        addRec(json.stree);
+        return json;
+      },
       print: function(json) {
         return JSON.stringify(json);
       },
@@ -297,9 +373,13 @@ new sre.Processor(
     'enriched',
     {
       processor: function(expr) {
-        var enr = sre.Enrich.semanticMathmlSync(expr);
+        return sre.Enrich.semanticMathmlSync(expr);
+      },
+      postprocessor: function(enr, expr) {
         var root = sre.WalkerUtil.getSemanticRoot(enr);
         switch (sre.Engine.getInstance().speech) {
+          case sre.Engine.Speech.NONE:
+            break;
           case sre.Engine.Speech.SHALLOW:
             var generator = sre.SpeechGeneratorFactory.generator('Adhoc');
             generator.getSpeech(root, enr);
@@ -308,7 +388,6 @@ new sre.Processor(
             generator = sre.SpeechGeneratorFactory.generator('Tree');
             generator.getSpeech(root, enr);
             break;
-          case sre.Engine.Speech.NONE:
           default:
             break;
         }

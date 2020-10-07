@@ -307,7 +307,7 @@ sre.NemethUtil.generateTensorRules = function(store) {
     var name = 'tensor' + constel;
     var components = sre.NemethUtil.generateTensorRuleStrings_(constel);
     var verbStr = components.pop();
-    var verbList = [name, 'default.default', verbStr, 'self::tensor'].
+    var verbList = [name, 'default', verbStr, 'self::tensor'].
         concat(components);
     // Rules without neighbour.
     defineRule.apply(null, verbList);
@@ -315,7 +315,7 @@ sre.NemethUtil.generateTensorRules = function(store) {
     var baselineStr = sre.NemethUtil.componentString_[2];
     verbStr += '; [t]' + baselineStr + 'Verbose';
     name = name + '-baseline';
-    verbList = [name, 'default.default', verbStr, 'self::tensor',
+    verbList = [name, 'default', verbStr, 'self::tensor',
                 'following-sibling::*'].
         concat(components);
     defineRule.apply(null, verbList);

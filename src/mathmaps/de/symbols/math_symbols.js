@@ -1493,7 +1493,7 @@
     "key": "221A",
     "mappings": {
       "default": {
-        "default": "Quadratwurzelzeichen"
+        "default": "Quadratwurzel"
       }
     },
     "category": "Sm"
@@ -1502,7 +1502,7 @@
     "key": "221B",
     "mappings": {
       "default": {
-        "default": "Kubikwurzelzeichen"
+        "default": "Kubikwurzel"
       }
     },
     "category": "Sm"

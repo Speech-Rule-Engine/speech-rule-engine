@@ -1,4 +1,4 @@
-// Copyright 2017 Volker Sorge
+// Copyright 2020 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,28 +11,25 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-//
-// Funded by the Mozilla Foundation.
-
-/**
- * @fileoverview Abstract class for English clearspeak rule tests.
- * @author Volker.Sorge@gmail.com (Volker Sorge)
- */
-
-goog.provide('sre.ClearspeakEnglishRuleTest');
-
-goog.require('sre.ClearspeakRuleTest');
-
 
 
 /**
- * @constructor
- * @extends {sre.ClearspeakRuleTest}
+ * @fileoverview Export the whole namespace primiarily for testing.
+ *
+ * @author volker.sorge@gmail.com (Volker Sorge)
  */
-sre.ClearspeakEnglishRuleTest = function() {
-  sre.ClearspeakEnglishRuleTest.base(this, 'constructor');
+goog.provide('sre.Global');
 
-  this.setActive('ClearspeakEnglish');
-  this.startExamples();
-};
-goog.inherits(sre.ClearspeakEnglishRuleTest, sre.ClearspeakRuleTest);
+/** @suppress {extraRequire} */goog.require('sre.Api');
+
+
+/**
+ * Basic structure for api functions (not a constructor!).
+ */
+sre.Global = { };
+
+
+/**
+ * Export all of sre.
+ */
+module.exports.sre = sre;

@@ -488,8 +488,8 @@ sre.SemanticPred.isSingletonSetContent = function(node) {
   }
   if (type === sre.SemanticAttr.Type.FENCED) {
     return node.role === sre.SemanticAttr.Role.LEFTRIGHT ?
-      sre.SemanticPred.isSingletonSetContent(node.childNodes[0]) :
-      true;
+        sre.SemanticPred.isSingletonSetContent(node.childNodes[0]) :
+        true;
   }
   if (sre.SemanticPred.scriptedElement_.indexOf(type) !== -1) {
     return sre.SemanticPred.isSingletonSetContent(node.childNodes[0]);

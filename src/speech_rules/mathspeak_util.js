@@ -58,7 +58,9 @@ sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
   var processor = sre.SemanticProcessor.getInstance();
   var doc = node.ownerDocument;
   for (var i = 0, chr; chr = content[i]; i++) {
-    var sn = processor.identifierNode(chr, sre.Semantic.Font.UNKNOWN, '');
+    var leaf = processor.getNodeFactory().
+        makeLeafNode(chr, sre.Semantic.Font.UNKNOWN);
+    var sn = processor.identifierNode(leaf, sre.Semantic.Font.UNKNOWN, '');
     correction(sn);
     result.push(sn.xml(doc));
   }
