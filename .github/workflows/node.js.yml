@@ -20,6 +20,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Changes cloning method
+      run: sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
     - name: Checkout submodules
       uses: srt32/git-actions@v0.0.3
       with:
