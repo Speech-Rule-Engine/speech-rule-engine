@@ -7,5 +7,7 @@ branches:
   - fix_brackeing
 install:
 - npm install
+git:
+  submodules: false
 before_install:
 - git submodule update --init --recursive
