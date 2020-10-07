@@ -233,7 +233,6 @@ $(TEST_RUNNER): $(TEST_DIR)/node_modules
 	@cd $(TEST_DIR); npx webpack
 	@cd ..
 
-
 $(TEST_DIR)/node_modules:
 	@cd $(TEST_DIR); npm install
 	@cd ..
@@ -243,7 +242,23 @@ clean_test:
 	rm -f $(TEST_TARGET)
 	rm -f $(TEST_RUNNER)
 	rm -f $(TEST)
+	rm -f tests
 
+###
+### This is for local tests, assuming that sre-tests repo is in parallel to the
+### speech-rule-engine directory. This allows easier changes in sre-tests
+### without having to bother with commits from a git submodule.
+###
+### Call with: make test_local TEST_DIR=tests
+###
+test_local: test tests
+	@echo "In Test local"
+	@echo $(TEST_DIR)
+	@echo $(TEST_RUNNER)
+
+tests:
+	@ln -s ../sre-tests tests
+	@echo $(TEST_DIR)
 
 ##################################################################
 # Publish the API via npm.
