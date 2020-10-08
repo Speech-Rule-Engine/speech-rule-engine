@@ -30,7 +30,7 @@ strings.
 
 There are three ways of using SRE:
 
-1. [**Node Module:**](#node-module) Download via npm. This is the easiest way to use the speech
+1. [**Node Module:**](#node-module) Download via npm or yarn. This is the easiest way to use the speech
 rule engine via its Api and is the preferred option if you just want to include
 it in your project.
 
@@ -53,6 +53,10 @@ Node Module
 Install as a node module using npm:
 
      npm install speech-rule-engine
+
+Or add it with yarn:
+
+     yarn add speech-rule-engine
 
 Then import into a running node or a source file using require:
 
