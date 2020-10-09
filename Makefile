@@ -230,7 +230,7 @@ run_test: $(TEST_RUNNER)
 	@$(TEST)
 
 $(TEST_RUNNER): $(TEST_DIR)/node_modules
-	@cd $(TEST_DIR); npm prepare
+	@cd $(TEST_DIR); npm run prepare
 	@cd ..
 
 ## Using webpack instead.
