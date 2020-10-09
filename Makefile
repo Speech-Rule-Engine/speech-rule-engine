@@ -230,8 +230,7 @@ run_test: $(TEST_RUNNER)
 	@$(TEST)
 
 $(TEST_RUNNER): $(TEST_DIR)/node_modules
-	@cd $(TEST_DIR); npx parcel build ts/index.ts --target node --out-file sretest.js
-
+	@cd $(TEST_DIR); npm prepare
 	@cd ..
 
 ## Using webpack instead.
