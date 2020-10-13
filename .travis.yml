@@ -1,9 +1,14 @@
 language: node_js
 node_js:
-  - "stable"
+  - stable
 sudo: false
 branches:
   except:
-    - fix_brackeing
+  - fix_brackeing
 install:
   - npm install
+git:
+  submodules: false
+before_install:
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - git submodule update --init --recursive

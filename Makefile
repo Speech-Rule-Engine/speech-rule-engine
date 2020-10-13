@@ -18,7 +18,6 @@ NODE_MODULES = $(PREFIX)/$(MODULE_NAME)
 SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
-RES_DIR = $(abspath ./res)
 SRC = $(SRC_DIR)/**/*.js $(SRC_DIR)/speech_rules/**/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
@@ -27,7 +26,7 @@ MATHJAX = $(LIB_DIR)/mathjax-sre.js
 SEMANTIC = $(LIB_DIR)/semantic.js
 SEMANTIC_NODE = $(LIB_DIR)/semantic-node.js
 ENRICH = $(LIB_DIR)/enrich.js
-LICENSE = $(RES_DIR)/license-header.txt
+LICENSE = $(SRC_DIR)/license-header.txt
 
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_SRC = $(SRC_DIR)/mathmaps
@@ -38,12 +37,10 @@ LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON
 LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
 
-TEST_DIR = $(abspath ./tests)
+TEST_DIR = $(abspath ./sre-tests)
 TEST_TARGET = $(LIB_DIR)/sre_test.js
 TEST_RUNNER = $(TEST_DIR)/dist/sretest.js
-TEST_DEPS = $(TEST_DIR)/src/deps.js
 TEST = $(BIN_DIR)/test_sre
-TEST_SRC = $(TEST_DIR)/src/*/*.js
 
 JSDOC = $(NODE_MODULES)/.bin/jsdoc
 JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
@@ -207,14 +204,6 @@ clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_
 ##################################################################
 # Extern files.
 ##################################################################
-TEST_EXTERN_FILES = $(shell find $(TEST_DIR) -type f -name 'externs.js')
-TEST_FLAGS = $(foreach extern, $(TEST_EXTERN_FILES), $(MAKE_EXTERN_FLAG))
-
-test_deps: $(TEST_DEPS)
-
-$(TEST_DEPS):
-	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
-	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) $(TEST_DIR)" > $(TEST_DEPS)
 
 test: directories deps test_compile test_script maps run_test
 
@@ -241,21 +230,35 @@ run_test: $(TEST_RUNNER)
 	@$(TEST)
 
 $(TEST_RUNNER): $(TEST_DIR)/node_modules
-	@cd tests; npx webpack
+	@cd $(TEST_DIR); npm run prepare
 	@cd ..
 
+## Using webpack instead.
+## @cd $(TEST_DIR); npx webpack
 
 $(TEST_DIR)/node_modules:
-	@cd tests; npm install
+	@cd $(TEST_DIR); npm install
 	@cd ..
 
 
 clean_test:
 	rm -f $(TEST_TARGET)
-	rm -f $(TEST_DEPS)
 	rm -f $(TEST_RUNNER)
 	rm -f $(TEST)
+	rm -f tests
 
+###
+### This is for local tests, assuming that sre-tests repo is in parallel to the
+### speech-rule-engine directory. This allows easier changes in sre-tests
+### without having to bother with commits from a git submodule.
+###
+### Call with: make test_local TEST_DIR=tests
+###
+test_local: tests test
+
+tests:
+	@ln -s ../sre-tests tests
+	@echo $(TEST_DIR)
 
 ##################################################################
 # Publish the API via npm.
