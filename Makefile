@@ -18,7 +18,6 @@ NODE_MODULES = $(PREFIX)/$(MODULE_NAME)
 SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
-RES_DIR = $(abspath ./res)
 SRC = $(SRC_DIR)/**/*.js $(SRC_DIR)/speech_rules/**/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
@@ -27,7 +26,7 @@ MATHJAX = $(LIB_DIR)/mathjax-sre.js
 SEMANTIC = $(LIB_DIR)/semantic.js
 SEMANTIC_NODE = $(LIB_DIR)/semantic-node.js
 ENRICH = $(LIB_DIR)/enrich.js
-LICENSE = $(RES_DIR)/license-header.txt
+LICENSE = $(SRC_DIR)/license-header.txt
 
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_SRC = $(SRC_DIR)/mathmaps
@@ -231,9 +230,11 @@ run_test: $(TEST_RUNNER)
 	@$(TEST)
 
 $(TEST_RUNNER): $(TEST_DIR)/node_modules
-	@cd $(TEST_DIR); npx webpack
+	@cd $(TEST_DIR); npm run prepare
 	@cd ..
 
+## Using webpack instead.
+## @cd $(TEST_DIR); npx webpack
 
 $(TEST_DIR)/node_modules:
 	@cd $(TEST_DIR); npm install
@@ -244,7 +245,20 @@ clean_test:
 	rm -f $(TEST_TARGET)
 	rm -f $(TEST_RUNNER)
 	rm -f $(TEST)
+	rm -f tests
 
+###
+### This is for local tests, assuming that sre-tests repo is in parallel to the
+### speech-rule-engine directory. This allows easier changes in sre-tests
+### without having to bother with commits from a git submodule.
+###
+### Call with: make test_local TEST_DIR=tests
+###
+test_local: tests test
+
+tests:
+	@ln -s ../sre-tests tests
+	@echo $(TEST_DIR)
 
 ##################################################################
 # Publish the API via npm.
