@@ -100,8 +100,7 @@ sre.MathspeakFrench = {
     ['Rule',
      'collapsed', 'default',
      '[n] . (engine:modality=summary,grammar:collapsed)',
-     'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
-     'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+     'self::*[@alternative]', 'not(contains(@grammar, "collapsed"))'
     ],
     ['SpecializedRule',
      'collapsed', 'default', 'brief'],

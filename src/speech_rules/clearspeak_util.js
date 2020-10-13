@@ -20,6 +20,7 @@
 goog.provide('sre.ClearspeakUtil');
 
 goog.require('sre.DomUtil');
+goog.require('sre.Grammar');
 goog.require('sre.Messages');
 goog.require('sre.SemanticAnnotator');
 goog.require('sre.StoreUtil');

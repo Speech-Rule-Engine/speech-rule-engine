@@ -70,6 +70,7 @@ sre.SvgV3Highlighter.prototype.highlightNode = function(node) {
     rect.setAttribute('transform', transform);
   }
   rect.setAttribute('fill', this.colorString().background);
+  node.setAttribute(sre.AbstractHighlighter.ATTR, true);
   node.parentNode.insertBefore(rect, node);
   info = {node: node, foreground: node.getAttribute('fill')};
   if (node.nodeName === 'rect') {

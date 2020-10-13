@@ -157,7 +157,7 @@ sre.SummaryRules = {
     ],
     ['Rule',
      'abstr-root', 'default.default',
-     '[t] "root of index"; [n] children/*[1] (engine:modality=speech)',
+     '[t] "root of index"; [n] children/*[1] (engine:modality="speech")',
      'self::root'
     ],
     ['Rule',

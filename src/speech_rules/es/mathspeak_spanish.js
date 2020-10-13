@@ -94,8 +94,7 @@ sre.MathspeakSpanish = {
     ['Rule',
      'collapsed', 'default',
      '[n] . (engine:modality=summary,grammar:collapsed); [t] "plegado";',
-     'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
-     'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+     'self::*[@alternative]', 'not(contains(@grammar, "collapsed"))'
     ],
     ['SpecializedRule',
      'collapsed', 'default', 'brief'],

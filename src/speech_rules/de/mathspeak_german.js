@@ -99,8 +99,7 @@ sre.MathspeakGerman = {
     ['Rule',
       'collapsed', 'default',
       '[n] . (engine:modality=summary,grammar:collapsed); [t] "kollabiert"',
-      'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
-      'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+      'self::*[@alternative]', 'not(contains(@grammar, "collapsed"))'
     ],
     ['SpecializedRule',
       'collapsed', 'default', 'brief'],
@@ -1001,7 +1000,7 @@ sre.MathspeakGerman = {
       'self::row', 'content', 'name(content/cell/children/*[1])="text"'],
     ['Rule',
       'empty-row', 'default',
-      '[t] "Blank"', 'self::row', 'count(children/*)=0'],
+      '[t] "leer"', 'self::row', 'count(children/*)=0'],
 
     ['Rule',
       'matrix-cell', 'default',

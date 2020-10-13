@@ -86,17 +86,19 @@ sre.MathspeakRules = {
     ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
   ],
   rules: [
-    // TODO: This needs to be prioritized!
     ['Rule',
      'collapsed', 'default',
      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
-     'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
-     'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+     'self::*[@alternative]', 'not(contains(@grammar, "collapsed"))'
     ],
     ['SpecializedRule',
      'collapsed', 'default', 'brief'],
     ['SpecializedRule',
      'collapsed', 'brief', 'sbrief'],
+    // Direct speech rule
+    ['Rule',
+     'direct-speech', 'default',
+     '[t] @ext-speech', 'self::*[@ext-speech]'],
 
     // Initial rule
     ['Rule',
