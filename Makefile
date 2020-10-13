@@ -254,10 +254,7 @@ clean_test:
 ###
 ### Call with: make test_local TEST_DIR=tests
 ###
-test_local: test tests
-	@echo "In Test local"
-	@echo $(TEST_DIR)
-	@echo $(TEST_RUNNER)
+test_local: tests test
 
 tests:
 	@ln -s ../sre-tests tests
