@@ -27,12 +27,9 @@
 goog.provide('sre.MathCompoundStore');
 goog.provide('sre.MathSimpleStore');
 
-goog.require('sre.BaseUtil');
-goog.require('sre.DomUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.MathStore');
 goog.require('sre.SpeechRule');
-goog.require('sre.XpathUtil');
 
 
 
@@ -65,15 +62,29 @@ sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
   for (var domain in mapping) {
     for (var style in mapping[domain]) {
       var content = mapping[domain][style];
-      if (str === '"') {
-        var cstr = 'self::text() = \'' + str + '\'';
-      } else {
-        cstr = 'self::text() = "' + str + '"';
-      }
-      this.defineRule(name, domain + '.' + style, '[t] "' + content + '"',
-                      'self::text()', cstr);
+      this.defineRuleFromStrings(name, domain, style, str, content);
     }
   }
+};
+
+
+/**
+ * Creates a single rule from strings.
+ * @param {string} name Name of the rule.
+ * @param {string} domain The domain axis.
+ * @param {string} style The style axis.
+ * @param {string} str String for precondition and constraints.
+ * @param {string} content The content for the postcondition.
+ */
+sre.MathSimpleStore.prototype.defineRuleFromStrings = function(
+    name, domain, style, str, content) {
+  if (str === '"') {
+    var cstr = 'self::text() = \'' + str + '\'';
+  } else {
+    cstr = 'self::text() = "' + str + '"';
+  }
+  this.defineRule(name, domain + '.' + style, '[t] "' + content + '"',
+                  'self::text()', cstr);
 };
 
 
@@ -139,6 +150,39 @@ goog.addSingletonGetter(sre.MathCompoundStore);
 
 
 /**
+ * Retrieves a substore for a key. Creates a new one if it does not exist.
+ * @param {string} key The key for the store.
+ * @return {sre.MathStore} The rule store.
+ * @private
+ */
+sre.MathCompoundStore.prototype.getSubStore_ = function(key) {
+  var store = this.subStores_[key];
+  if (store) {
+    sre.Debugger.getInstance().output('Store exists! ' + key);
+    return store;
+  }
+  store = new sre.MathSimpleStore();
+  this.subStores_[key] = store;
+  return store;
+};
+
+
+/**
+ * Transfers parameters of the compound store to a substore.
+ * @param {sre.MathStore} store
+ * @param {string=} opt_cat The category if it exists.
+ * @private
+ */
+sre.MathCompoundStore.prototype.setupStore_ = function(store, opt_cat) {
+  store.locale = this.locale;
+  store.modality = this.modality;
+  if (opt_cat) {
+    store.category = opt_cat;
+  }
+};
+
+
+/**
  * Function creates a rule store in the compound store for a particular string,
  * and populates it with a set of rules.
  * @param {string} name Name of the rule.
@@ -150,19 +194,26 @@ goog.addSingletonGetter(sre.MathCompoundStore);
  */
 sre.MathCompoundStore.prototype.defineRules = function(
     name, str, cat, mappings) {
-  var store = this.subStores_[str];
-  if (store) {
-    sre.Debugger.getInstance().output('Store exists! ' + str);
-  } else {
-    store = new sre.MathSimpleStore();
-    this.subStores_[str] = store;
-  }
-  // TODO: Add modality?
-  store.locale = this.locale;
-  if (cat) {
-    store.category = cat;
-  }
+  var store = this.getSubStore_(str);
+  this.setupStore_(store, cat);
   store.defineRulesFromMappings(name, str, mappings);
+};
+
+
+/**
+ * Creates a single rule from strings.
+ * @param {string} name Name of the rule.
+ * @param {string} domain The domain axis.
+ * @param {string} style The style axis.
+ * @param {string} cat The category if it exists.
+ * @param {string} str String for precondition and constraints.
+ * @param {string} content The content for the postcondition.
+ */
+sre.MathCompoundStore.prototype.defineRule = function(
+    name, domain, style, cat, str, content) {
+  var store = this.getSubStore_(str);
+  this.setupStore_(store, cat);
+  store.defineRuleFromStrings(name, domain, style, str, content);
 };
 
 
@@ -174,11 +225,11 @@ sre.MathCompoundStore.prototype.defineRules = function(
  * @private
  */
 sre.MathCompoundStore.prototype.changeLocale_ = function(json) {
-  // TODO: Add modality check.
-  if (!json['locale']) {
+  if (!json['locale'] && !json['modality']) {
     return false;
   }
-  this.locale = json['locale'];
+  this.locale = json['locale'] || this.locale;
+  this.modality = json['modality'] || this.modality;
   return true;
 };
 

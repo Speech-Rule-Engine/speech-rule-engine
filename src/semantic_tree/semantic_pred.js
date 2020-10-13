@@ -22,7 +22,6 @@
 goog.provide('sre.SemanticPred');
 
 goog.require('sre.SemanticAttr');
-goog.require('sre.SemanticUtil');
 
 
 /**
@@ -433,10 +432,123 @@ sre.SemanticPred.isRightBrace = function(node) {
 
 /**
  * Is the node a set like node, i.e., a fenced node with braces.
- * @param {!sre.SemanticNode} node The node.
+ * @param {sre.SemanticNode} node The node.
  * @return {boolean} True if the node is a set.
  */
 sre.SemanticPred.isSetNode = function(node) {
   return sre.SemanticPred.isLeftBrace(node.contentNodes[0]) &&
       sre.SemanticPred.isRightBrace(node.contentNodes[1]);
+};
+
+
+// TODO: Rewrite as dictionary or map!
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ * @private
+ */
+sre.SemanticPred.illegalSingleton_ = [
+  sre.SemanticAttr.Type.PUNCTUATION,
+  sre.SemanticAttr.Type.PUNCTUATED,
+  sre.SemanticAttr.Type.RELSEQ,
+  sre.SemanticAttr.Type.MULTIREL,
+  sre.SemanticAttr.Type.TABLE,
+  sre.SemanticAttr.Type.MULTILINE,
+  sre.SemanticAttr.Type.CASES,
+  sre.SemanticAttr.Type.INFERENCE
+];
+
+
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ * @private
+ */
+sre.SemanticPred.scriptedElement_ = [
+  sre.SemanticAttr.Type.LIMUPPER,
+  sre.SemanticAttr.Type.LIMLOWER,
+  sre.SemanticAttr.Type.LIMBOTH,
+  sre.SemanticAttr.Type.SUBSCRIPT,
+  sre.SemanticAttr.Type.SUPERSCRIPT,
+  sre.SemanticAttr.Type.UNDERSCORE,
+  sre.SemanticAttr.Type.OVERSCORE,
+  sre.SemanticAttr.Type.TENSOR
+];
+
+
+/**
+ * Is the node a likely candidate for a singleton set element.
+ * @param {sre.SemanticNode} node The node.
+ * @return {boolean} True if the node is a set.
+ */
+sre.SemanticPred.isSingletonSetContent = function(node) {
+  let type = node.type;
+  if (sre.SemanticPred.illegalSingleton_.indexOf(type) !== -1 ||
+      (type === sre.SemanticAttr.Type.INFIXOP &&
+       node.role !== sre.SemanticAttr.Role.IMPLICIT)) {
+    return false;
+  }
+  if (type === sre.SemanticAttr.Type.FENCED) {
+    return node.role === sre.SemanticAttr.Role.LEFTRIGHT ?
+        sre.SemanticPred.isSingletonSetContent(node.childNodes[0]) :
+        true;
+  }
+  if (sre.SemanticPred.scriptedElement_.indexOf(type) !== -1) {
+    return sre.SemanticPred.isSingletonSetContent(node.childNodes[0]);
+  }
+  return true;
+};
+
+
+/**
+ * Tests if a number an integer or a decimal.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the number is an integer or a decimal.
+ */
+sre.SemanticPred.isNumber = function(node) {
+  return node.type === sre.SemanticAttr.Type.NUMBER &&
+      (node.role === sre.SemanticAttr.Role.INTEGER ||
+           node.role === sre.SemanticAttr.Role.FLOAT);
+};
+
+
+/**
+ * Tests if a node is elligible as a unit counter. I.e., an integer or a
+ * decimal, a vulgar fraction or a mixed number.
+ *
+ * Note, that minus prefixes become negative sign of the entire unit expression.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the number is an integer or a decimal.
+ */
+sre.SemanticPred.isUnitCounter = function(node) {
+  return sre.SemanticPred.isNumber(node) ||
+      node.role === sre.SemanticAttr.Role.VULGAR ||
+      node.role === sre.SemanticAttr.Role.MIXED;
+};
+
+
+/**
+ * Tests if a node is pure unit, i.e., a singleton unit or a unit expression
+ * without a counter.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the node is a pure unit expression.
+ */
+sre.SemanticPred.isPureUnit = function(node) {
+  var children = node.childNodes;
+  return node.role === sre.SemanticAttr.Role.UNIT && (
+      !children.length || children[0].role === sre.SemanticAttr.Role.UNIT
+  );
+};
+
+
+/**
+ * Tests if a node is an implicit node or a unit node representing an implicit
+ * node.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the node is considered an implicit node.
+ */
+sre.SemanticPred.isImplicit = function(node) {
+  return node.role === sre.SemanticAttr.Role.IMPLICIT ||
+      (node.role === sre.SemanticAttr.Role.UNIT &&
+      !!node.contentNodes.length &&
+      node.contentNodes[0].textContent === sre.SemanticAttr.invisibleTimes()
+      );
 };

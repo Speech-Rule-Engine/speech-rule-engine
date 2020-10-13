@@ -20,7 +20,6 @@
  */
 goog.provide('sre.Browser');
 
-goog.require('sre.BrowserUtil');
 goog.require('sre.Engine.Mode');
 goog.require('sre.System');
 
@@ -31,8 +30,7 @@ goog.require('sre.System');
 (sre.System.getInstance()).setupEngine(
     {mode: sre.Engine.Mode.HTTP,
       domain: 'mathspeak',
-      style: 'default',
-      semantics: true}
+      style: 'default'}
 );
 
 var SRE = sre.System.getInstance();

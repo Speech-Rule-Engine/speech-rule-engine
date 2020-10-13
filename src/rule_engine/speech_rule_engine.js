@@ -32,7 +32,8 @@ goog.provide('sre.SpeechRuleEngine');
 
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
-goog.require('sre.BaseUtil');
+goog.require('sre.BrailleStore');
+goog.require('sre.ClearspeakPreferences');
 goog.require('sre.Debugger');
 goog.require('sre.DynamicCstr');
 goog.require('sre.Engine');
@@ -78,8 +79,15 @@ sre.SpeechRuleEngine = function() {
   /**
    * Default evaluators collated by locale and modality.
    * @type {Object.<Object.<function(!Node): !Array<sre.AuditoryDescription>>>}
+   * @private
    */
   this.evaluators_ = {};
+
+  /**
+   * @type {Object.<sre.BaseRuleStore>}
+   * @private
+   */
+  this.ruleSets_ = {};
 
   // sre.Debugger.getInstance().init();
 
@@ -98,12 +106,37 @@ sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
   var ruleSets = {};
   for (var i = 0, m = ruleSetNames.length; i < m; i++) {
     var name = ruleSetNames[i];
+    if (this.ruleSets_[name]) {
+      ruleSets[name] = this.ruleSets_[name];
+      continue;
+    }
     var set = sre.SpeechRuleStores.getConstructor(name);
     if (set && set.getInstance) {
       ruleSets[name] = set.getInstance();
+      this.ruleSets_[name] = set.getInstance();
+    } else if (set) {
+      let store = this.storeFactory_(set.modality);
+      store.parse(set);
+      this.ruleSets_[name] = store;
+      ruleSets[name] = store;
     }
   }
   this.parameterize_(ruleSets);
+};
+
+
+/**
+ * Factory method for generating rule stores by modality.
+ * @param {string} modality The modality.
+ * @return {sre.BaseRuleStore} The generated rule store.
+ * @private
+ */
+sre.SpeechRuleEngine.prototype.storeFactory_ = function(modality) {
+  let constructors = {
+    braille: sre.BrailleStore,
+    speech: sre.MathStore
+  };
+  return new (constructors[modality] || sre.MathStore)();
 };
 
 
@@ -267,9 +300,10 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   }
   sre.Debugger.getInstance().generateOutput(
       goog.bind(function() {
-        return ['Apply Rule:',
-                rule.name, rule.dynamicCstr.toString(),
-                engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node];},
+        return [
+          'Apply Rule:',
+          rule.name, rule.dynamicCstr.toString(),
+          engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node];},
       this));
   var context = rule.context || this.activeStore_.context;
   var components = rule.action.components;
@@ -466,6 +500,12 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
 };
 
 
+/**
+ * Adds external attributes if some are in the node
+ * @param {sre.AuditoryDescription} descr An Auditory descriptions.
+ * @param {Node} node The XML node.
+ * @private
+ */
 sre.SpeechRuleEngine.prototype.addExternalAttributes_ = function(descr, node) {
   if (node.hasAttributes()) {
     var attrs = node.attributes;
@@ -667,7 +707,8 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
  * @param {!Node} node The node to which the rule is applied.
  * @param {sre.Grammar.State} grammar The grammar annotations.
  */
-sre.SpeechRuleEngine.prototype.processGrammar = function(context, node, grammar) {
+sre.SpeechRuleEngine.prototype.processGrammar = function(
+    context, node, grammar) {
   var assignment = {};
   for (var key in grammar) {
     var value = grammar[key];
@@ -697,19 +738,19 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   var modality = dynamic.getValue(sre.DynamicCstr.Axis.MODALITY);
   var domain = dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN);
   if (!trie.hasSubtrie([locale, modality, domain])) {
-    locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+    domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
     if (!trie.hasSubtrie([locale, modality, domain])) {
       modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
       if (!trie.hasSubtrie([locale, modality, domain])) {
-        domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+        locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
       }
     }
   }
   props[sre.DynamicCstr.Axis.LOCALE] = [locale];
   props[sre.DynamicCstr.Axis.MODALITY] =
       // TODO: Improve, only summary allows fallback to speech.
-      [modality !== 'summary' ?
-       modality : sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
+      [modality !== 'summary' ? modality :
+       sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
   props[sre.DynamicCstr.Axis.DOMAIN] =
       [modality !== 'speech' ?
        sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];
@@ -774,7 +815,8 @@ sre.SpeechRuleEngine.prototype.addEvaluator = function(store) {
 sre.SpeechRuleEngine.prototype.getEvaluator = function(locale, modality) {
   var loc = this.evaluators_[locale];
   var fun = loc ? loc[modality] : null;
-  return fun ? fun : goog.bind(this.activeStore_.evaluateDefault, this.activeStore_);
+  return fun ? fun :
+      goog.bind(this.activeStore_.evaluateDefault, this.activeStore_);
 };
 
 

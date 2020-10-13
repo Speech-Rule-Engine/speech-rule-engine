@@ -14,7 +14,8 @@
 
 
 /**
- * @fileoverview An abstract class for audio renderer with prosody markup.
+ * @fileoverview An audio CSS renderer with prosody markup mainly aimed at Emacs
+ *     speak.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
@@ -22,15 +23,6 @@ goog.provide('sre.AcssRenderer');
 
 goog.require('sre.AudioUtil');
 goog.require('sre.MarkupRenderer');
-
-
-// /**
-//  * Translates a list of auditory descriptions into a string with SSML markup.
-//  * Currently returns an sexp for emacs speak.
-//  * @param {!Array.<sre.AuditoryDescription>} descrs The list of descriptions.
-//  * @param {string} separator The separator string.
-//  * @return {string} The generated string with ACSS markup.
-//  */
 
 
 
@@ -91,7 +83,8 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
 //   console.log('when');
 //   return '(exp ' +
 //       strs.map(function(str) {
-//         return str.string.replace(/^\(exp /, '').replace(/\)$/, '');}).join(' ') +
+//         return str.string.replace(/^\(exp /, '').
+//             replace(/\)$/, '');}).join(' ') +
 //       ')';
 // };
 
@@ -100,7 +93,7 @@ sre.AcssRenderer.prototype.markup = function(descrs) {
  * @override
  */
 sre.AcssRenderer.prototype.error = function(key) {
-  return '(error "' + key + '")';
+  return '(error "' + sre.EventUtil.Move[key.toString()] + '")';
 };
 
 
@@ -128,6 +121,7 @@ sre.AcssRenderer.prototype.prosodyElement = function(key, value) {
   switch (key) {
     case sre.Engine.personalityProps.RATE:
       return '(richness . ' + value + ')';
+      break;
     case sre.Engine.personalityProps.PITCH:
       return '(average-pitch . ' + value + ')';
       break;

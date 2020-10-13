@@ -21,10 +21,11 @@
 goog.provide('sre.L10n');
 
 goog.require('sre.Engine');
-goog.require('sre.Locale.en');
-goog.require('sre.Locale.es');
-goog.require('sre.Locale.fr');
-goog.require('sre.Locale.nemeth');
+/** @suppress {extraRequire} */goog.require('sre.Locale.de');
+/** @suppress {extraRequire} */goog.require('sre.Locale.en');
+/** @suppress {extraRequire} */goog.require('sre.Locale.es');
+/** @suppress {extraRequire} */goog.require('sre.Locale.fr');
+/** @suppress {extraRequire} */goog.require('sre.Locale.nemeth');
 goog.require('sre.Messages');
 
 
@@ -47,5 +48,10 @@ sre.L10n.setLocale = function() {
  * @return {sre.Locale.Messages} A message object.
  */
 sre.L10n.getLocale = function() {
+  let locale = sre.Engine.getInstance().locale;
+  if (sre.Variables.LOCALES.indexOf(locale) === -1) {
+    console.error('Locale ' + locale + ' does not exist! Using en instead.');
+    sre.Engine.getInstance().locale = 'en';
+  }
   return sre.Locale[sre.Engine.getInstance().locale] || sre.Locale['en'];
 };

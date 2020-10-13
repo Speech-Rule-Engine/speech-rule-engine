@@ -23,12 +23,9 @@ goog.provide('sre.MathStore');
 goog.require('sre.AuditoryDescription');
 goog.require('sre.BaseRuleStore');
 goog.require('sre.BaseUtil');
-goog.require('sre.DynamicCstr');
-goog.require('sre.Engine');
 goog.require('sre.Locale.en');
 goog.require('sre.Messages');
 goog.require('sre.SpeechRule');
-goog.require('sre.Trie');
 
 
 
@@ -41,9 +38,17 @@ sre.MathStore = function() {
   sre.MathStore.base(this, 'constructor');
 
   /**
-   * @type {Array.<function()>}
+   * @type {Array.<function(sre.MathStore)>}
    */
   this.initializer = [];
+
+  this.parseMethods['Alias'] = goog.bind(this.defineRuleAlias, this);
+  this.parseMethods['Aliases'] =
+      goog.bind(this.defineRulesAlias, this);
+  this.parseMethods['UniqueAlias'] =
+      goog.bind(this.defineUniqueRuleAlias, this);
+  this.parseMethods['SpecializedRule'] =
+      goog.bind(this.defineSpecialisedRule, this);
 
 };
 goog.inherits(sre.MathStore, sre.BaseRuleStore);
@@ -55,7 +60,7 @@ goog.inherits(sre.MathStore, sre.BaseRuleStore);
 sre.MathStore.prototype.initialize = function() {
   if (this.initialized) return;
   for (var i = 0, func; func = this.initializer[i]; i++) {
-    func();
+    func(this);
   }
   this.setSpeechRules(this.trie.collectRules());
   this.initialized = true;
@@ -232,7 +237,8 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
       var rest = s;
       while (rest) {
         num = this.matchNumber_(rest);
-        var alpha = rest.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+'));
+        var alpha = rest.match(
+            new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+'));
         if (num) {
           descs.push(this.evaluate_(num.number));
           rest = rest.substring(num.length);
@@ -264,6 +270,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
  * English writing, it will attempt to translate it.
  * @param {string} str The string to match.
  * @return {?{number: string, length: number}} The number and its length.
+ * @private
  */
 sre.MathStore.prototype.matchNumber_ = function(str) {
   var locNum = str.match(new RegExp('^' + sre.Messages.REGEXP.NUMBER));
@@ -280,7 +287,7 @@ sre.MathStore.prototype.matchNumber_ = function(str) {
       replace(new RegExp(sre.Locale.en.REGEXP.DIGIT_GROUP, 'g'), 'X').
       replace(new RegExp(sre.Locale.en.REGEXP.DECIMAL_MARK, 'g'),
               sre.Messages.REGEXP.DECIMAL_MARK).
-      replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP);
+      replace(/X/g, sre.Messages.REGEXP.DIGIT_GROUP.replace(/\\/g, ''));
   return {number: number, length: enNum[0].length};
 };
 
@@ -295,4 +302,14 @@ sre.MathStore.prototype.matchNumber_ = function(str) {
 sre.MathStore.prototype.evaluate_ = function(text) {
   return sre.AuditoryDescription.create(
       {text: text}, {adjust: true, translate: true});
+};
+
+
+/**
+ * @override
+ */
+sre.MathStore.prototype.parse = function(ruleSet) {
+  sre.MathStore.base(this, 'parse', ruleSet);
+  this.initializer = /** @type {Array.<function(sre.MathStore)>} */(
+      ruleSet['initialize'] || []);
 };

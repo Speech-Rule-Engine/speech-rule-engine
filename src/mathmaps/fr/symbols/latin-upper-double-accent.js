@@ -3,6 +3,105 @@
     "locale": "fr"
   },
   {
+    "category": "Lu",
+    "key": "01D5",
+    "mappings": {
+      "default": {
+        "default": "U majuscule trémaa et macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01D7",
+    "mappings": {
+      "default": {
+        "default": "U majuscule trémaa et accent aigu"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01D9",
+    "mappings": {
+      "default": {
+        "default": "U majuscule trémaa et caron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01DB",
+    "mappings": {
+      "default": {
+        "default": "U majuscule trémaa et accent grave"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01DE",
+    "mappings": {
+      "default": {
+        "default": "A majuscule trémaa et macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01E0",
+    "mappings": {
+      "default": {
+        "default": "A majuscule point en chef et macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01EC",
+    "mappings": {
+      "default": {
+        "default": "O majuscule ogonek et macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "01FA",
+    "mappings": {
+      "default": {
+        "default": "A majuscule rond en chef et accent aigu"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "022A",
+    "mappings": {
+      "default": {
+        "default": "O majuscule tréma et macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "022C",
+    "mappings": {
+      "default": {
+        "default": "O majuscule tilde et macron"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "0230",
+    "mappings": {
+      "default": {
+        "default": "O majuscule point en chef et macron"
+      }
+    }
+  },
+  {
     "key": "1E08",
     "mappings": {
       "default": {

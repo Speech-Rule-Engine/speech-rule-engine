@@ -22,6 +22,27 @@
 goog.provide('sre.Locale.nemeth');
 
 goog.require('sre.Locale');
+goog.require('sre.Numbers.nemeth');
+
+
+let postfixCombiner = function(letter, font, cap) {
+  return font ? letter + font : letter;
+};
+
+
+let embellishCombiner = function(letter, font, cap) {
+  return font + (cap ? cap : '⠰') + letter + '⠻';
+};
+
+
+let doubleEmbellishCombiner = function(letter, font, cap) {
+  return font + (cap ? cap : '⠰') + letter + '⠻⠻';
+};
+
+
+let parensCombiner = function(letter, font, cap) {
+  return font + (cap ? cap : '⠰') + letter + '⠾';
+};
 
 
 /**
@@ -92,7 +113,7 @@ sre.Locale.nemeth = {
     'fraktur': '⠸',
     'italic': '⠨',
     'monospace': '',
-    'normal': ' ',
+    'normal': '',
     'oldstyle': '',
     'oldstyle-bold': '⠸',
     'script': '⠈',
@@ -101,6 +122,23 @@ sre.Locale.nemeth = {
     'sans-serif-bold': '⠠⠨⠸',
     'sans-serif-bold-italic': '⠠⠨⠸⠨',
     'unknown': ''
+  },
+
+  EMBELLISH: {
+    // Embellishments
+    // TODO: Here we need specialist combiners!
+    'super': '⠘',
+    'sub': '⠰',
+    'circled': ['⠫⠉⠸⠫', embellishCombiner],
+    'parenthesized': ['⠷', parensCombiner],
+    'period': ['⠸⠲', postfixCombiner],
+    'negative-circled': ['⠫⠸⠉⠸⠫', embellishCombiner],
+    'double-circled': ['⠫⠉⠸⠫⠫⠉⠸⠫', doubleEmbellishCombiner],
+    'circled-sans-serif': ['⠫⠉⠸⠫⠠⠨', embellishCombiner],
+    'negative-circled-sans-serif': ['⠫⠸⠉⠸⠫⠠⠨', embellishCombiner],
+    'comma': ['⠠', postfixCombiner],
+    'squared': ['⠫⠲⠸⠫', embellishCombiner],
+    'negative-squared': ['⠫⠸⠲⠸⠫', embellishCombiner]
   },
 
   ROLE: {
@@ -167,8 +205,51 @@ sre.Locale.nemeth = {
     LEVEL: 'Level'
   },
 
-  NUMBERS: {
-    // TODO: We should not need this!
-    simpleOrdinal: function(x) {return x;}
+  NUMBERS: sre.Numbers.nemeth.NUMBERS,
+
+  ALPHABETS: {
+    latinSmall: [
+      '⠁', '⠃', '⠉', '⠙', '⠑', '⠋', '⠛', '⠓', '⠊', '⠚', '⠅', '⠇', '⠍',
+      '⠝', '⠕', '⠏', '⠟', '⠗', '⠎', '⠞', '⠥', '⠧', '⠺', '⠭', '⠽', '⠵'
+    ],
+    latinCap: [
+      '⠠⠁', '⠠⠃', '⠠⠉', '⠠⠙', '⠠⠑', '⠠⠋', '⠠⠛', '⠠⠓', '⠠⠊', '⠠⠚',
+      '⠠⠅', '⠠⠇', '⠠⠍', '⠠⠝', '⠠⠕', '⠠⠏', '⠠⠟', '⠠⠗', '⠠⠎', '⠠⠞',
+      '⠠⠥', '⠠⠧', '⠠⠺', '⠠⠭', '⠠⠽', '⠠⠵'
+    ],
+    greekSmall: [
+      '⠨⠫',  // This is here as it is small.
+      '⠨⠁', '⠨⠃', '⠨⠛', '⠨⠙', '⠨⠑', '⠨⠱', '⠨⠦', '⠨⠹',
+      '⠨⠊', '⠨⠅', '⠨⠇', '⠨⠍', '⠨⠝', '⠨⠭', '⠨⠕', '⠨⠏', '⠨⠗',
+      '⠨⠒', '⠨⠎', '⠨⠞', '⠨⠥', '⠨⠋', '⠨⠯', '⠨⠓', '⠨⠕',
+      // Symbols below
+      '⠈⠙', '⠨⠑', '⠨⠹', '⠨⠅', '⠨⠋', '⠨⠗', '⠨⠏'
+    ],
+    greekCap: [
+      '⠨⠠⠁', '⠨⠠⠃', '⠨⠠⠛', '⠨⠠⠙', '⠨⠠⠑', '⠨⠠⠱', '⠨⠠⠣', '⠨⠠⠹',
+      '⠨⠠⠊', '⠨⠠⠅', '⠨⠠⠇', '⠨⠠⠍', '⠨⠠⠝', '⠨⠠⠭', '⠨⠠⠕', '⠨⠠⠏', '⠨⠠⠗',
+      '⠨⠠⠹',  // Theta symbol
+      '⠨⠠⠎', '⠨⠠⠥', '⠨⠠⠥', '⠨⠠⠋', '⠨⠠⠯', '⠨⠠⠫', '⠨⠠⠺'
+    ]
+  },
+
+  ALPHABET_TRANSFORMERS: {
+    digit: {
+      default: sre.Numbers.nemeth.numberToWords
+    },
+    letter: {
+      default: function(n) {return n;}
+    }
+  },
+
+  ALPHABET_PREFIXES: {
+    capPrefix: {default: ''},
+    smallPrefix: {default: ''},
+    digitPrefix: {default: '⠼'}
+  },
+
+  ALPHABET_COMBINER: function(letter, font, cap) {
+    return font ? font + letter : letter;
   }
+
 };

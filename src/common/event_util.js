@@ -86,6 +86,19 @@ sre.EventUtil.KeyCode = {
 
 
 /**
+ * Key codes to move names.
+ * @type {Object.<string>}
+ */
+sre.EventUtil.Move = function() {
+  var ret = {};
+  for (var key in sre.EventUtil.KeyCode) {
+    ret[sre.EventUtil.KeyCode[key]] = key;
+  }
+  return ret;
+}();
+
+
+/**
  * Constants for event names.
  * @enum {string}
  */

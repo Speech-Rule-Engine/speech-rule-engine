@@ -79,7 +79,8 @@ sre.AbstractSpeechGenerator.prototype.setRebuilt = function(rebuilt) {
  */
 sre.AbstractSpeechGenerator.prototype.setOptions = function(options) {
   this.options_ = options || {};
-  this.modality = sre.EnrichMathml.addPrefix(this.options_.modality || 'speech');
+  this.modality = sre.EnrichMathml.addPrefix(
+      this.options_.modality || 'speech');
 };
 
 

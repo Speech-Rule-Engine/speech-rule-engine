@@ -20,6 +20,8 @@
  */
 goog.provide('sre.Messages');
 
+goog.require('sre.Numbers');
+
 
 // One (or more) flat message object per rule set.
 /**
@@ -100,7 +102,7 @@ sre.Messages.MS_ROOT_INDEX = { };
 
 /**
  * Localised font names.
- * @type {Object.<sre.SemanticAttr.Font>}
+ * @type {Object.<sre.SemanticAttr.Font|Array.<sre.SemanticAttr.Font, sre.Locale.Combiner>>}
  */
 sre.Messages.FONT = {
   'bold': '',
@@ -123,6 +125,28 @@ sre.Messages.FONT = {
   'sans-serif-bold': '',
   'sans-serif-bold-italic': '',
   'unknown': ''
+};
+
+
+/**
+ * Localised embalishment names. Treated like fonts.
+ * @type {Object.<string|Array.<string, sre.Locale.Combiner>>}
+ */
+sre.Messages.EMBELLISH = {
+  // More embellishments than fonts.
+  'super': '',
+  'sub': '',
+  'circled': '',
+  'parenthesized': '',
+  'period': '',
+  'negative-circled': '',
+  'double-circled': '',
+  'circled-sans-serif': '',
+  'negative-circled-sans-serif': '',
+  'blackboard': '',
+  'comma': '',
+  'squared': '',
+  'negative-squared': ''
 };
 
 
@@ -223,17 +247,77 @@ sre.Messages.PLURAL_UNIT = { };
 
 /**
  * Function to build regular plurals for units.
- * @type {function(string): string}
+ * @param {string} unit A unit expression.
+ * @return {string} The unit in plural.
  */
 sre.Messages.PLURAL = function(unit) {
   return (/.*s$/.test(unit)) ? unit : unit + 's';
 };
 
 
-sre.Messages.NUMBERS = {
-  wordOrdinal: function(n) {return n.toString();},
-  simpleOrdinal: function(n) {return n.toString();},
-  numberToWords: function(n) {return n.toString();},
-  numberToOrdinal: function(n, m) {return n.toString();},
-  vulgarSep: '-'
+/**
+ * The times expression between units, if used.
+ * @type {string}
+ */
+sre.Messages.UNIT_TIMES = '';
+
+
+/**
+ * Localisable number computation.
+ * @type {sre.Numbers}
+ */
+sre.Messages.NUMBERS = sre.Numbers.NUMBERS;
+
+
+/**
+ * Localisable alphabets.
+ * @type {Object.<Array.<string>>}
+ */
+sre.Messages.ALPHABETS = {
+  latinSmall: [],
+  latinCap: [],
+  greekSmall: [],
+  greekCap: []
 };
+
+
+/**
+ * Prefixes for alphabet rules that can be specialised by rule set.
+ * @type {Object.<Object.<string>>}
+ */
+sre.Messages.ALPHABET_PREFIXES = {
+  capPrefix: {default: ''},
+  smallPrefix: {default: ''},
+  digitPrefix: {default: ''}
+};
+
+
+/**
+ * A trivial transformer.
+ * @param {string|number} input A number or string.
+ * @return {string} The input as a string.
+ * @private
+ */
+sre.Messages.identityTransformer_ = function(input) {
+  return input.toString();
+};
+
+
+/**
+ * Transformer functions for alphabet rules that can be specialised by rule set.
+ * @type {Object.<Object.<sre.Locale.Transformer>>}
+ */
+sre.Messages.ALPHABET_TRANSFORMERS = {
+  digit: {default: sre.Messages.identityTransformer_},
+  letter: {default: sre.Messages.identityTransformer_}
+};
+
+
+/**
+ * A default combiner for alphabet.
+ * @param {string} letter The letter.
+ * @param {string} font The font name.
+ * @param {string} cap Capitalisation expression.
+ * @return {string} The speech string as `letter`.
+ */
+sre.Messages.ALPHABET_COMBINER = function(letter, font, cap) {return letter;};

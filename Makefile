@@ -18,8 +18,7 @@ NODE_MODULES = $(PREFIX)/$(MODULE_NAME)
 SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
-RES_DIR = $(abspath ./res)
-SRC = $(SRC_DIR)/**/*.js
+SRC = $(SRC_DIR)/**/*.js $(SRC_DIR)/speech_rules/**/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
@@ -27,20 +26,21 @@ MATHJAX = $(LIB_DIR)/mathjax-sre.js
 SEMANTIC = $(LIB_DIR)/semantic.js
 SEMANTIC_NODE = $(LIB_DIR)/semantic-node.js
 ENRICH = $(LIB_DIR)/enrich.js
-LICENSE = $(RES_DIR)/license-header.txt
+LICENSE = $(SRC_DIR)/license-header.txt
 
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_SRC = $(SRC_DIR)/mathmaps
 JSON_DST = $(LIB_DIR)/mathmaps
 MAPS = functions symbols units
 IEMAPS_FILE = $(JSON_DST)/mathmaps_ie.js
-LOCALES = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
+LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
 
-TEST_DIR = $(abspath ./tests)
-TEST_TARGET = $(LIB_DIR)/test.js
-TEST_DEPS = $(TEST_DIR)/deps.js
+TEST_DIR = $(abspath ./sre-tests)
+TEST_TARGET = $(LIB_DIR)/sre_test.js
+TEST_RUNNER = $(TEST_DIR)/dist/sretest.js
 TEST = $(BIN_DIR)/test_sre
-TEST_SRC = $(TEST_DIR)/**/*.js $(TEST_DIR)/*.js
 
 JSDOC = $(NODE_MODULES)/.bin/jsdoc
 JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
@@ -55,7 +55,49 @@ JSON_MINIFY = npx json-minify
 # Compiling as rigidly as possible.
 # (Currently we use automatically all)
 ##################################################################
-CLOSURE_ERRORS = accessControls ambiguousFunctionDecl checkEventfulObjectDisposal checkRegExp checkTypes checkVars conformanceViolations const constantProperty deprecated deprecatedAnnotations duplicateMessage es3 es5Strict externsValidation fileoverviewTags globalThis internetExplorerChecks invalidCasts misplacedTypeAnnotation missingGetCssName missingProperties missingProvide missingRequire missingReturn msgDescriptions nonStandardJsDocs suspiciousCode strictModuleDepCheck typeInvalidation undefinedNames undefinedVars unknownDefines unusedLocalVariables unusedPrivateMembers uselessCode useOfGoogBase underscore visibility # * reportUnknownTypes newCheckTypes
+CLOSURE_ERRORS = accessControls\
+	checkDebuggerStatement\
+	checkRegExp\
+	checkTypes\
+	checkVars\
+	closureDepMethodUsageChecks\
+	conformanceViolations\
+	constantProperty\
+	const\
+	deprecatedAnnotations\
+	deprecated\
+	duplicateMessage\
+	duplicate\
+	es5Strict\
+	externsValidation\
+        extraRequire\
+	globalThis\
+	invalidCasts\
+	misplacedSuppress\
+	misplacedTypeAnnotation\
+	missingGetCssName\
+	missingProperties\
+	missingProvide\
+	missingRequire\
+	missingReturn\
+	nonStandardJsDocs\
+	strictModuleDepCheck\
+        strictPrimitiveOperators\
+	suspiciousCode\
+	tweakValidation\
+	typeInvalidation\
+	undefinedNames\
+	undefinedVars\
+	unknownDefines\
+	unusedLocalVariables\
+	unusedPrivateMembers\
+	untranspilableFeatures\
+	uselessCode\
+	violatedModuleDep\
+	visibility\
+#	reportUnknownTypes\
+#       strictCheckTypes\
+#       strictMissingProperties
 MAKE_ERROR_FLAG = --jscomp_error=$(error)
 ERROR_FLAGS = $(foreach error, $(CLOSURE_ERRORS), $(MAKE_ERROR_FLAG))
 
@@ -76,8 +118,10 @@ COMPILER_FLAGS = $(EXTERN_FLAGS) $(ERROR_FLAGS)
 CLOSURE_LIB_NAME = google-closure-library
 CLOSURE_LIB = $(NODE_MODULES)/$(CLOSURE_LIB_NAME)
 CLOSURE_ROOT = $(CLOSURE_LIB)/closure/bin/build
+GOOG_BASE = $(CLOSURE_LIB)/closure/goog/base.js
+GOOG_BASE_CLEAN = $(CLOSURE_LIB)/sre_cleaned
 COMPILER_JAR = $(NODE_MODULES)/google-closure-compiler/cli.js
-CLOSURE_COMPILER = $(COMPILER_JAR) --dependency_mode=STRICT $(CLOSURE_LIB)/closure/goog/base.js $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
+CLOSURE_COMPILER = $(COMPILER_JAR) --dependency_mode=PRUNE $(GOOG_BASE) $(ERROR_FLAGS) $(EXTERN_FLAGS) '!**externs.js' --output_wrapper_file $(LICENSE)
 DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 
 space = $(null) #
@@ -86,12 +130,17 @@ LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
 LINT_EXCLUDE_DIRS = $(JSON_SRC)
 
 LINT_ROOT = $(NODE_MODULES)/closure-linter-wrapper/tools/
-GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)' -r
+GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)'
 FIXJSSTYLE = python $(LINT_ROOT)/fixjsstyle.py --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)' -r
 
 #######################################################################3
 
-all: directories deps compile start_files
+all: directories deps compile start_files maps
+
+## This is a hack to get around a closure library problem.
+$(GOOG_BASE_CLEAN):
+	@sed -i s/"^.*@deprecated Use ES6.*"// $(GOOG_BASE)
+	@touch $(GOOG_BASE_CLEAN)
 
 directories: $(BIN_DIR)
 
@@ -99,8 +148,8 @@ $(BIN_DIR):
 	mkdir -p $(BIN_DIR)
 
 lint:
-	$(GJSLINT) $(SRC_DIR)
-	$(GJSLINT) $(TEST_DIR)
+	$(GJSLINT) -r $(SRC_DIR)
+	$(GJSLINT) --disable 0110 -r $(TEST_DIR)
 
 
 fixjsstyle:
@@ -110,9 +159,9 @@ fixjsstyle:
 
 compile: $(TARGET)
 
-$(TARGET): $(SRC)
+$(TARGET): $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling Speech Rule Engine
-	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Cli --js_output_file=$(TARGET) $^
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Cli --entry_point=goog:sre.Api --js_output_file=$(TARGET) $^
 
 deps: $(DEPS)
 
@@ -123,11 +172,12 @@ $(DEPS):
 
 start_files: directories $(INTERACTIVE)
 
-interactive: directories $(INTERACTIVE) deps
+interactive: directories $(INTERACTIVE) deps maps
 
 $(INTERACTIVE): 
 	@echo "Making interactive script."
-	@echo "// This file is automatically generated. Do not edit!\n" > $@
+	@echo "// This file is automatically generated. Do not edit!" > $@
+	@echo "" > $@
 	@echo "require('google-closure-library');" >> $@ 
 	@echo "// Rewrite google closure script for our purposes." >> $@
 	@echo "global.CLOSURE_IMPORT_SCRIPT = function(src, opt_sourceText) {" >> $@
@@ -138,16 +188,15 @@ $(INTERACTIVE):
 	@echo "  }" >> $@
 	@echo "  return true;" >> $@
 	@echo "};" >> $@
-	@echo "process.env.SRE_JSON_PATH = '$(JSON_SRC)';" >> $@
+	@echo "process.env.SRE_JSON_PATH = '$(JSON_DST)';" >> $@
 	@echo "require('$(DEPS)');" >> $@ 
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.setAsync()" >> $@
 
-clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps
+clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps clean_json
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(INTERACTIVE)
-	rm -rf $(JSON_DST)
 
 
 ##################################################################
@@ -155,22 +204,15 @@ clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_
 ##################################################################
 # Extern files.
 ##################################################################
-TEST_EXTERN_FILES = $(shell find $(TEST_DIR) -type f -name 'externs.js')
-TEST_FLAGS = $(foreach extern, $(TEST_EXTERN_FILES), $(MAKE_EXTERN_FLAG))
 
-test_deps: $(TEST_DEPS)
-
-$(TEST_DEPS):
-	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
-	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) $(TEST_DIR)" > $(TEST_DEPS)
-
-test: directories test_deps deps test_compile test_script run_test
+test: directories deps test_compile test_script maps run_test
 
 test_compile: $(TEST_TARGET)
 
-$(TEST_TARGET): $(TEST_SRC) $(SRC)
+$(TEST_TARGET): $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling test version of Speech Rule Engine
-	@$(CLOSURE_COMPILER) $(TEST_FLAGS) --entry_point=goog:sre.Tests --js_output_file=$(TEST_TARGET) $^
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Global --js_output_file=$(TEST_TARGET) $^
+
 
 test_script: $(TEST)
 
@@ -178,18 +220,45 @@ $(TEST):
 	@echo "Making test script."
 	@echo "#!/bin/bash" > $@
 	@echo "## This script is automatically generated. Do not edit!" >> $@
-	@echo "\nexport SRE_JSON_PATH=$(JSON_SRC)\n" >> $@
-	@echo $(NODEJS) $(TEST_TARGET) "\$$@" >> $@
+	@echo "" >> $@
+	@echo "export SRE_JSON_PATH=$(JSON_DST)" >> $@
+	@echo "" >> $@
+	@echo $(NODEJS) $(TEST_RUNNER) "\$$@" >> $@
 	@chmod 755 $@
 
-run_test:
+run_test: $(TEST_RUNNER)
 	@$(TEST)
+
+$(TEST_RUNNER): $(TEST_DIR)/node_modules
+	@cd $(TEST_DIR); npm run prepare
+	@cd ..
+
+## Using webpack instead.
+## @cd $(TEST_DIR); npx webpack
+
+$(TEST_DIR)/node_modules:
+	@cd $(TEST_DIR); npm install
+	@cd ..
+
 
 clean_test:
 	rm -f $(TEST_TARGET)
-	rm -f $(TEST_DEPS)
+	rm -f $(TEST_RUNNER)
 	rm -f $(TEST)
+	rm -f tests
 
+###
+### This is for local tests, assuming that sre-tests repo is in parallel to the
+### speech-rule-engine directory. This allows easier changes in sre-tests
+### without having to bother with commits from a git submodule.
+###
+### Call with: make test_local TEST_DIR=tests
+###
+test_local: tests test
+
+tests:
+	@ln -s ../sre-tests tests
+	@echo $(TEST_DIR)
 
 ##################################################################
 # Publish the API via npm.
@@ -197,33 +266,47 @@ clean_test:
 
 publish: clean compile browser maps iemaps
 
-maps: $(MAPS)
+$(JSON_DST):
+	@echo "Creating JSON destination."
+	@mkdir -p $(JSON_DST)
 
-$(MAPS): 
-	@for j in $(LOCALES); do\
-		dir=$(JSON_DST)/`basename $$j`/$@; \
-		mkdir -p $$dir; \
-		for i in $$j/$@/*.js; do\
-			$(JSON_MINIFY) $$i > $$dir/`basename $$i`; \
+maps: $(JSON_DST) $(LOC_DST)
+
+$(LOC_DST):
+	@echo "Creating mappings for locale `basename $@ .js`."
+	@echo '{' > $@
+	@for dir in $(MAPS); do\
+		for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
+			echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
+			$(JSON_MINIFY) $$i >> $@; \
+			echo ','  >> $@; \
 		done; \
 	done
+	@sed '$$d' $@ > $@.tmp
+	@echo '}' >> $@.tmp
+	@echo '' >> $@.tmp
+	@mv $@.tmp $@
 
-iemaps:
+iemaps: $(JSON_DST) $(IEMAPS_FILE)
+
+$(IEMAPS_FILE):
+	@echo "Creating mappings for IE."
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
-			for i in $(JSON_DST)/`basename $$j`/$$dir/*.js; do\
-				echo '"'`basename $$j`'/'`basename $$i`'": '  >> $(IEMAPS_FILE); \
-				cat $$i >> $(IEMAPS_FILE); \
+			for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
+				echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
+				$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
 				echo ','  >> $(IEMAPS_FILE); \
 			done; \
 		done; \
 	done
-	@head -n -1 $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
-	@echo '}\n' >> $(IEMAPS_FILE).tmp
+	@sed '$$d' $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
+	@echo '}' >> $(IEMAPS_FILE).tmp
+	@echo '' >> $(IEMAPS_FILE).tmp
 	@mv $(IEMAPS_FILE).tmp $(IEMAPS_FILE)
 
-api: $(SRC)
+api: $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling Speech Rule Engine API
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Api --js_output_file=$(TARGET) $^
 
@@ -232,35 +315,39 @@ api: $(SRC)
 # Other useful targets.
 ##################################################################
 
-browser: $(SRC)
+browser: $(BROWSER) maps
+
+$(BROWSER): $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling browser ready Speech Rule Engine
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Browser --js_output_file=$(BROWSER) $^
 
 clean_browser:
 	rm -f $(BROWSER)
 
-mathjax: $(SRC)
+mathjax: $(MATHJAX) maps
+
+$(MATHJAX): $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling MathJax ready Speech Rule Engine
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Mathjax --js_output_file=$(MATHJAX) $^
 
 clean_mathjax:
 	rm -f $(MATHJAX)
 
-semantic: $(SRC)
+semantic: $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling browser ready Semantic Tree API
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Semantic --js_output_file=$(SEMANTIC) $^
 
 clean_semantic:
 	rm -f $(SEMANTIC)
 
-semantic_node: $(SRC)
+semantic_node: $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling Semantic Tree API for Node
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.SemanticApi --js_output_file=$(SEMANTIC_NODE) $^
 
 clean_semantic_node:
 	rm -f $(SEMANTIC_NODE)
 
-enrich: $(SRC)
+enrich: $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling browser ready MathML Enrichment API
 	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Enrich --js_output_file=$(ENRICH) $^
 
@@ -279,3 +366,6 @@ clean_docs:
 
 clean_iemaps:
 	rm -f $(IEMAPS_FILE)
+
+clean_json:
+	rm -rf $(JSON_DST)

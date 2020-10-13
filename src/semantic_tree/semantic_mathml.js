@@ -23,7 +23,6 @@ goog.provide('sre.SemanticMathml');
 goog.require('sre.DomUtil');
 goog.require('sre.SemanticAbstractParser');
 goog.require('sre.SemanticNode');
-goog.require('sre.SemanticNodeFactory');
 goog.require('sre.SemanticParser');
 goog.require('sre.SemanticProcessor');
 
@@ -38,8 +37,7 @@ sre.SemanticMathml = function() {
   sre.SemanticMathml.base(this, 'constructor', 'MathML');
 
   /**
-   * @type {Object.<string,
-   *                function(Element, Array.<Element>): !sre.SemanticNode>}
+   * @type {Object.<function(Element, Array.<Element>): !sre.SemanticNode>}
    * @private
    */
   this.parseMap_ = {
@@ -75,6 +73,16 @@ sre.SemanticMathml = function() {
     'MACTION': goog.bind(this.action_, this)
   };
 
+  let meaning = {
+    type: sre.SemanticAttr.Type.IDENTIFIER,
+    role: sre.SemanticAttr.Role.NUMBERSET,
+    font: sre.SemanticAttr.Font.DOUBLESTRUCK
+  };
+  ['C', 'H', 'N', 'P', 'Q', 'R', 'Z', 'ℂ', 'ℍ', 'ℕ', 'ℙ', 'ℚ', 'ℝ', 'ℤ'].
+      forEach(function(x) {
+        this.getFactory().defaultMap.add(x, meaning);
+      }.bind(this));
+
 };
 goog.inherits(sre.SemanticMathml, sre.SemanticAbstractParser);
 
@@ -88,26 +96,13 @@ sre.SemanticMathml.prototype.parse = function(mml) {
   var tag = sre.DomUtil.tagName(mml);
   var func = this.parseMap_[tag];
   var newNode = (func ? func : goog.bind(this.dummy_, this))(mml, children);
-  this.addAttributes(newNode, mml);
+  sre.SemanticUtil.addAttributes(newNode, mml);
   if (['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS'].indexOf(tag) !== -1) {
     return newNode;
   }
   newNode.mathml.unshift(mml);
   newNode.mathmlTree = mml;
   return newNode;
-};
-
-
-sre.SemanticMathml.prototype.addAttributes = function(to, from) {
-  if (from.hasAttributes()) {
-    var attrs = from.attributes;
-    for (var i = attrs.length - 1; i >= 0; i--) {
-      var key = attrs[i].name;
-      if (key.match(/^ext/)) {
-        to.attributes[key] = attrs[i].value;
-      }
-    }
-  }
 };
 
 
@@ -161,9 +156,16 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.fraction_ = function(node, children) {
-  return sre.SemanticProcessor.getInstance().fractionLikeNode(
-      node.getAttribute('linethickness'), this.parse(children[0]),
-      this.parse(children[1]));
+  if (!children.length) {
+    return this.getFactory().makeEmptyNode();
+  }
+  var upper = this.parse(children[0]);
+  var lower = children[1] ? this.parse(children[1]) :
+      this.getFactory().makeEmptyNode();
+  var sem = sre.SemanticProcessor.getInstance().fractionLikeNode(
+      upper, lower, node.getAttribute('linethickness'),
+      node.getAttribute('bevelled') === 'true');
+  return sem;
 };
 
 
@@ -188,6 +190,9 @@ sre.SemanticMathml.prototype.limits_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.root_ = function(node, children) {
+  if (!children[1]) {
+    return this.sqrt_(node, children);
+  }
   return this.getFactory().makeBranchNode(
       sre.SemanticAttr.Type.ROOT,
       [this.parse(children[1]), this.parse(children[0])], []);
@@ -300,10 +305,13 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.text_ = function(node, children) {
+  var newNode = this.leaf_(node, children);
+  if (!node.textContent) {
+    return newNode;
+  }
+  newNode.updateContent(node.textContent, true);
   return sre.SemanticProcessor.getInstance().text(
-      node.textContent,
-      sre.SemanticProcessor.getInstance().font(
-          node.getAttribute('mathvariant')),
+      newNode,
       sre.DomUtil.tagName(node));
 };
 
@@ -316,8 +324,9 @@ sre.SemanticMathml.prototype.text_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.identifier_ = function(node, children) {
+  var newNode = this.leaf_(node, children);
   var sem = sre.SemanticProcessor.getInstance().identifierNode(
-      node.textContent,
+      newNode,
       sre.SemanticProcessor.getInstance().font(
       node.getAttribute('mathvariant')),
       node.getAttribute('class'));
@@ -341,7 +350,7 @@ sre.SemanticMathml.prototype.identifier_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.number_ = function(node, children) {
-  var newNode = this.leaf_(node);
+  var newNode = this.leaf_(node, children);
   sre.SemanticProcessor.number(newNode);
   return newNode;
 };
@@ -355,7 +364,7 @@ sre.SemanticMathml.prototype.number_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.operator_ = function(node, children) {
-  var newNode = this.leaf_(node);
+  var newNode = this.leaf_(node, children);
   if (newNode.type === sre.SemanticAttr.Type.UNKNOWN) {
     newNode.type = sre.SemanticAttr.Type.OPERATOR;
   }
@@ -491,21 +500,33 @@ sre.SemanticMathml.prototype.action_ = function(node, children) {
  * @private
  */
 sre.SemanticMathml.prototype.dummy_ = function(node, children) {
-  return this.getFactory().makeUnprocessed(node);
+  let unknown = this.getFactory().makeUnprocessed(node);
+  unknown.role = /** @type {!sre.SemanticAttr.Role} */(node.tagName);
+  unknown.textContent = node.textContent;
+  // unknown.mathml.unshift(node);
+  // unknown.mathmlTree = node;
+  return unknown;
 };
 
 
 /**
- * Creates a leaf node fro MathML node.
- * @param {Node} mml The MathML tree.
+ * Creates a leaf node from MathML node.
+ * @param {Node} mml The MathML node.
+ * @param {Array.<Node>} children Its child nodes.
  * @return {!sre.SemanticNode} The new node.
  * @private
  */
-sre.SemanticMathml.prototype.leaf_ = function(mml) {
+sre.SemanticMathml.prototype.leaf_ = function(mml, children) {
+  if (children.length === 1 &&
+      children[0].nodeType !== sre.DomUtil.NodeType.TEXT_NODE) {
+    let node = this.getFactory().makeUnprocessed(mml);
+    sre.SemanticUtil.addAttributes(node, children[0]);
+    return node;
+  }
   return this.getFactory().makeLeafNode(
       mml.textContent,
       sre.SemanticProcessor.getInstance().font(
-          mml.getAttribute('mathvariant')));
+      mml.getAttribute('mathvariant')));
 };
 
 

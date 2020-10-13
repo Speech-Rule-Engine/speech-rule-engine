@@ -24,7 +24,6 @@
 goog.provide('sre.TreeSpeechGenerator');
 
 goog.require('sre.AbstractSpeechGenerator');
-goog.require('sre.EnrichMathml.Attribute');
 goog.require('sre.SpeechGeneratorUtil');
 goog.require('sre.WalkerUtil');
 
@@ -57,7 +56,9 @@ sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
         sre.WalkerUtil.getBySemanticId(node, key));
     if (!innerMml || !innerNode) continue;
     sre.SpeechGeneratorUtil.addSpeech(innerNode, snode, this.modality);
-    sre.SpeechGeneratorUtil.addPrefix(innerNode, snode);
+    if (this.modality === sre.EnrichMathml.Attribute.SPEECH) {
+      sre.SpeechGeneratorUtil.addPrefix(innerNode, snode);
+    }
   }
   return speech;
 };

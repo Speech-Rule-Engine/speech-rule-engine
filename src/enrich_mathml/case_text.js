@@ -21,7 +21,6 @@
 goog.provide('sre.CaseText');
 
 goog.require('sre.AbstractEnrichCase');
-goog.require('sre.DomUtil');
 goog.require('sre.EnrichMathml');
 goog.require('sre.SemanticAttr');
 
@@ -52,7 +51,9 @@ goog.inherits(sre.CaseText, sre.AbstractEnrichCase);
  */
 sre.CaseText.test = function(semantic) {
   return semantic.type === sre.SemanticAttr.Type.PUNCTUATED &&
-      semantic.role === sre.SemanticAttr.Role.TEXT;
+      (semantic.role === sre.SemanticAttr.Role.TEXT ||
+       semantic.contentNodes.every(function(x) {
+         return x.role === sre.SemanticAttr.Role.DUMMY;}));
 };
 
 

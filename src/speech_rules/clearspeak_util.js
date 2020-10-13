@@ -19,10 +19,8 @@
 
 goog.provide('sre.ClearspeakUtil');
 
-goog.require('sre.AuditoryDescription');
-goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
-goog.require('sre.MathspeakUtil');
+goog.require('sre.Grammar');
 goog.require('sre.Messages');
 goog.require('sre.SemanticAnnotator');
 goog.require('sre.StoreUtil');
@@ -262,8 +260,8 @@ sre.ClearspeakUtil.isSimpleFraction_ = function(node) {
   if (sre.ClearspeakUtil.hasPreference('Fraction_Ordinal')) {
     return true;
   }
-  var enumerator = node.childNodes[0].textContent;
-  var denominator = node.childNodes[1].textContent;
+  var enumerator = parseInt(node.childNodes[0].textContent, 10);
+  var denominator = parseInt(node.childNodes[1].textContent, 10);
   return enumerator > 0 && enumerator < 20 &&
       denominator > 0 && denominator < 11;
 };
@@ -675,4 +673,40 @@ sre.ClearspeakUtil.wordOrdinal = function(node) {
   return sre.Messages.NUMBERS.wordOrdinal(parseInt(node.textContent, 10));
 };
 
+
+/**
+ * Tests for currency.
+ * @param {Node} node The XML node.
+ * @return {Array.<Node>} True if the text is a currency.
+ */
+sre.ClearspeakUtil.firstCurrency = function(node) {
+  var first = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
+  var result = first && sre.MathCompoundStore.getInstance().
+      lookupCategory(first.textContent + ':unit') === 'currency';
+  return result ? [node] : [];
+};
+
+
+/**
+ * Tests for currency.
+ * @param {Node} node The XML node.
+ * @return {Array.<Node>} True if the text is a currency.
+ */
+sre.ClearspeakUtil.lastCurrency = function(node) {
+  var last = sre.XpathUtil.evalXPath('children/*[last()]', node)[0];
+  var result = last && sre.MathCompoundStore.getInstance().
+      lookupCategory(last.textContent + ':unit') === 'currency';
+  return result ? [node] : [];
+};
+
+
+/**
+ * Adds the annotators.
+ */
+sre.ClearspeakUtil.addAnnotators = function() {
+  sre.SemanticAnnotations.getInstance().register(
+      sre.ClearspeakUtil.simpleExpression());
+  sre.SemanticAnnotations.getInstance().register(
+      sre.ClearspeakUtil.unitExpression());
+};
 

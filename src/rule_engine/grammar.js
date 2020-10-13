@@ -251,8 +251,40 @@ sre.Grammar.prototype.runProcessors_ = function(text, funcs) {
  * @private
  */
 sre.Grammar.translateString_ = function(text) {
+  text = sre.Grammar.prepareUnit_(text);
   var engine = sre.Engine.getInstance();
-  return engine.evaluator(text, engine.dynamicCstr) || text;
+  var result = engine.evaluator(text, engine.dynamicCstr) || text;
+  return sre.Grammar.cleanUnit_(result);
+};
+
+
+/**
+ * Prepares a unit expression for matching.
+ * @param {string} text The text to test.
+ * @return {string} The cleaned string.
+ * @private
+ */
+sre.Grammar.prepareUnit_ = function(text) {
+  var match = text.match(/:unit$/);
+  return match ?
+      text.slice(0, match.index).replace(/\s+/g, ' ') +
+      text.slice(match.index) :
+      text;
+};
+
+
+/**
+ * Removes unit suffix in case no unit with this name was found.
+ * @param {string} text The text.
+ * @return {string} The cleaned text incase it contained the :unit suffix.
+ * @private
+ */
+sre.Grammar.cleanUnit_ = function(text) {
+  if (text.match(/:unit$/)) {
+    sre.Grammar.getInstance().setParameter('plural', false);
+    return text.replace(/:unit$/, '');
+  }
+  return text;
 };
 
 
@@ -341,10 +373,8 @@ sre.Grammar.correctFont_ = function(text, correction) {
   if (!correction || !text) {
     return text;
   }
-  // TODO: Combine with localFont.
-  correction = sre.Messages.MS_FUNC.FONT_REGEXP(sre.L10n.getLocale().FONT[correction] || correction);
-  // var correctionComp = correction.split(/ |-/);
-  // var regExp = new RegExp('^' + correctionComp.join('( |-)') + '( |-)');
+  correction =
+      sre.Messages.MS_FUNC.FONT_REGEXP(sre.Locale.localFont(correction));
   return text.replace(correction, '');
 };
 
@@ -360,6 +390,15 @@ sre.Grammar.addAnnotation_ = function(text, annotation) {
   return text + ':' + annotation;
 };
 
+
+// TODO: Check if that is still necessary!
+/**
+ * Method switches of translation of text elements if they match the regexp of
+ * locale.
+ * @param {string} text The text.
+ * @return {string} The untranslated text.
+ * @private
+ */
 sre.Grammar.noTranslateText_ = function(text) {
   if (text.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+$'))) {
     sre.Grammar.getInstance().currentFlags['translate'] = false;
@@ -367,9 +406,12 @@ sre.Grammar.noTranslateText_ = function(text) {
   return text;
 };
 
+
 sre.Grammar.getInstance().setCorrection('ignoreFont',
                                         sre.Grammar.correctFont_);
 sre.Grammar.getInstance().setPreprocessor('annotation',
                                           sre.Grammar.addAnnotation_);
 sre.Grammar.getInstance().setPreprocessor('noTranslateText',
                                           sre.Grammar.noTranslateText_);
+sre.Grammar.getInstance().setCorrection('ignoreCaps',
+                                        sre.Grammar.correctFont_);

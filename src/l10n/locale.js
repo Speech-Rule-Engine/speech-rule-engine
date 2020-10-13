@@ -31,12 +31,17 @@ goog.require('sre.Messages');
  *   MS: Object.<string>,
  *   MS_FUNC: Object.<Function>,
  *   MS_ROOT_INDEX: Object.<string>,
- *   FONT: Object.<sre.SemanticAttr.Font>,
+ *   FONT: Object.<sre.SemanticAttr.Font|
+                   Array.<sre.SemanticAttr.Font, Function>>,
  *   ROLE: Object.<sre.SemanticAttr.Role>,
  *   ENCLOSE: Object.<sre.SemanticAttr.Role>,
  *   NAVIGATE: Object.<string>,
  *   REGEXP: Object.<string>,
- *   NUMBERS: Object.<Function|string>
+ *   NUMBERS: Object.<Function|string>,
+ *   ALPHABETS: Object.<Array.<string>>,
+ *   ALPHABET_PREFIXES: Object.<Object.<string>>,
+ *   ALPHABET_TRANSFORMERS: Object.<Object.<sre.Locale.Transformer>>,
+ *   ALPHABET_COMBINER: sre.Locale.Combiner
  * }}
  */
 sre.Locale.Messages;
@@ -89,7 +94,11 @@ sre.Locale.combinePostfixIndex = function(postfix, index) {
  * @return {string} The localized font name.
  */
 sre.Locale.localFont = function(font) {
-  return sre.Messages.FONT[font] || font;
+  let realFont = sre.Messages.FONT[font];
+  if (realFont === undefined) {
+    realFont = font || '';
+  }
+  return (typeof realFont === 'string') ? realFont : realFont[0];
 };
 
 
@@ -143,3 +152,39 @@ sre.Grammar.getInstance().setCorrection(
     'plural', sre.Locale.makePlural);
 
 
+/**
+ * @typedef {function((string|number)): string}
+ */
+sre.Locale.Transformer;
+
+
+/**
+ * @typedef {function(string, string, string): string}
+ */
+sre.Locale.Combiner;
+
+
+/**
+ * A combiner adding the font name before the letter. Empty strings are ignored.
+ * @param {string} letter The letter.
+ * @param {string} font The font name.
+ * @param {string} cap Capitalisation expression.
+ * @return {string} The speech string as `font cap letter`.
+ */
+sre.Locale.prefixCombiner = function(letter, font, cap) {
+  letter = cap ? cap + ' ' + letter : letter;
+  return font ? font + ' ' + letter : letter;
+};
+
+
+/**
+ * A combiner adding the font name after the letter. Empty strings are ignored.
+ * @param {string} letter The letter.
+ * @param {string} font The font name.
+ * @param {string} cap Capitalisation expression.
+ * @return {string} The speech string as `cap letter font`.
+ */
+sre.Locale.postfixCombiner = function(letter, font, cap) {
+  letter = cap ? cap + ' ' + letter : letter;
+  return font ? letter + ' ' + font : letter;
+};

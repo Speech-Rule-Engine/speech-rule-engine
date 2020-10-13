@@ -43,9 +43,10 @@ sre.NumbersUtil.ordinalCounter = function(node, context) {
  * translates enumerator and the denominator.
  * @param {!Node} node Fraction node to be translated.
  * @return {{convertible: boolean,
- *           content: (string|undefined),
- *           denominator: (number|undefined),
- *           enumerator: (number|undefined)}} If convertible denominator and
+ *           content: string} |
+ *          {convertible: boolean,
+ *           denominator: number,
+ *           enumerator: number}} If convertible denominator and
  *     enumerator are set. Otherwise only the text content is given.
  * @private
  */
@@ -134,7 +135,8 @@ sre.NumbersUtil.vulgarFractionSmall = function(node, enumer, denom) {
  */
 sre.NumbersUtil.ordinalPosition = function(node) {
   var children = sre.DomUtil.toArray(node.parentNode.childNodes);
-  return sre.Messages.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
+  return sre.Messages.NUMBERS.simpleOrdinal(
+      children.indexOf(node) + 1).toString();
 };
 
 

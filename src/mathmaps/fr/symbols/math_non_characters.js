@@ -12,6 +12,15 @@
     "category": "Ll"
   },
   {
+    "category": "So",
+    "key": "2114",
+    "mappings": {
+      "default": {
+        "default": "symbole l b barré"
+      }
+    }
+  },
+  {
     "key": "2116",
     "mappings": {
       "default": {
@@ -39,6 +48,33 @@
     "category": "So"
   },
   {
+    "category": "So",
+    "key": "211F",
+    "mappings": {
+      "default": {
+        "default": "répons"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2120",
+    "mappings": {
+      "default": {
+        "default": "symbole anglais marque de service"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2121",
+    "mappings": {
+      "default": {
+        "default": "signe de téléphone"
+      }
+    }
+  },
+  {
     "key": "2122",
     "mappings": {
       "default": {
@@ -46,6 +82,15 @@
       }
     },
     "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2123",
+    "mappings": {
+      "default": {
+        "default": "versicule"
+      }
+    }
   },
   {
     "key": "2125",
@@ -93,6 +138,15 @@
     "category": "Lu"
   },
   {
+    "category": "So",
+    "key": "212E",
+    "mappings": {
+      "default": {
+        "default": "symbole estimé"
+      }
+    }
+  },
+  {
     "key": "2132",
     "mappings": {
       "default": {
@@ -100,5 +154,68 @@
       }
     },
     "category": "Lu"
+  },
+  {
+    "category": "Ll",
+    "key": "2139",
+    "mappings": {
+      "default": {
+        "default": "bureau d'information"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "213A",
+    "mappings": {
+      "default": {
+        "default": "Q majuscule couché"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "213B",
+    "mappings": {
+      "default": {
+        "default": "symbole télécopie"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2141",
+    "mappings": {
+      "default": {
+        "default": "G culbuté majuscule sans empattement"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2142",
+    "mappings": {
+      "default": {
+        "default": "L culbuté majuscule sans empattement"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2143",
+    "mappings": {
+      "default": {
+        "default": "L réfléchi majuscule sans empattement"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2144",
+    "mappings": {
+      "default": {
+        "default": "Y culbuté majuscule sans empattement"
+      }
+    }
   }
 ]
