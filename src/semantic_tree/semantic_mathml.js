@@ -335,7 +335,8 @@ sre.SemanticMathml.prototype.identifier_ = function(node, children) {
     return sem;
   }
   var specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
-  if (specialFunctions.indexOf(sem.textContent) !== -1) {
+  if (sem.role !== sre.SemanticAttr.Role.UNIT &&
+      specialFunctions.indexOf(sem.textContent) !== -1) {
     sem.role = sre.SemanticAttr.Role.SIMPLEFUNC;
   }
   return sem;

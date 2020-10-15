@@ -585,7 +585,22 @@ sre.SemanticProcessor.prototype.combineJuxtaposition_ = function(nodes) {
 };
 
 
-// Implicit is taken into account, if the heuristic is set.
+/**
+ * Heuristic to recursibely combines implicitly and explicitly given
+ * juxtapositions. The heuristic is applied unless the separate implicit
+ * heuristic is selected.
+ * @param {!Array.<!sre.SemanticNode>} acc Elements to the left of the first
+ *     implicit operation or application of an implicit operation. The serves as
+ *     an accumulator during the recursion.
+ * @param {!Array.<!sre.SemanticNode>} ops The list of implicit operators or
+ *     applications. That is, subtres that are infix operations with inivisible
+ *     times.
+ * @param {!Array.<!Array.<!sre.SemanticNode>>} elements The list of elements
+ *     between the operators in ops. These are lists of not yet combined elements.
+ * @return {!Array.<!sre.SemanticNode>} The resulting lists where implicit and
+ *     explicitly given invisible times are combined as much as possible.
+ * @private
+ */
 sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, elements) {
   if (!ops.length) {
     return acc;
@@ -594,17 +609,18 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
   var op = ops.shift();
   var first = elements.shift();
   if (!left) {
-    console.log(3);
+    sre.Debugger.getInstance().output('Case 3');
     return this.recurseJuxtaposition_([op].concat(first), ops, elements);
   }
   var right = first.shift();
   if (!right) {
-    console.log(9);
-    return this.recurseJuxtaposition_(acc.concat([left, op]), ops, elements);
+    sre.Debugger.getInstance().output('Case 9');
+    // Recall: If op is a single implicit node it needs to be omitted!
+    right = sre.SemanticPred.isOperator(op) ? [left] : [left, op];
+    return this.recurseJuxtaposition_(acc.concat(right), ops, elements);
   }
   if (sre.SemanticPred.isOperator(left) || sre.SemanticPred.isOperator(right)) {
-    console.log(4);
-    // WRONG!
+    sre.Debugger.getInstance().output('Case 4');
     return this.recurseJuxtaposition_(
       acc.concat([left, op, right]).concat(first), ops, elements);
   }
@@ -613,7 +629,7 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
   if (left.role === sre.SemanticAttr.Role.IMPLICIT &&
       right.role === sre.SemanticAttr.Role.IMPLICIT) {
     // Merge both left and right.
-    console.log(5);
+    sre.Debugger.getInstance().output('Case 5');
     left.contentNodes.push(op);
     left.contentNodes = left.contentNodes.concat(right.contentNodes);
     left.childNodes.push(right);
@@ -625,7 +641,7 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
     result = left;
   } else if (left.role === sre.SemanticAttr.Role.IMPLICIT) {
     // Add to the left one.
-    console.log(6);
+    sre.Debugger.getInstance().output('Case 6');
     left.contentNodes.push(op);
     left.childNodes.push(right);
     right.parentNode = left;
@@ -635,7 +651,7 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
     result = left;
   } else if (right.role === sre.SemanticAttr.Role.IMPLICIT) {
     // Add to the right one.
-    console.log(7);
+    sre.Debugger.getInstance().output('Case 7');
     right.contentNodes.unshift(op);
     right.childNodes.unshift(left);
     left.parentNode = right;
@@ -645,7 +661,7 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
     result = right;
   } else {
   // Create new implicit node.
-    console.log(8);
+    sre.Debugger.getInstance().output('Case 8');
     result = sre.SemanticProcessor.getInstance().infixNode_([left, right], op);
     result.role = sre.SemanticAttr.Role.IMPLICIT;
   }
