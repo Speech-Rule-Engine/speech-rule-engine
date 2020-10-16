@@ -43,6 +43,8 @@ sre.SemanticProcessor = function() {
   this.heuristics = {
     SeparateInvisibleTimes: false
   };
+  // this.heuristics = sre.SemanticHeuristics.getInstance();
+  // this.heuristics.factory = this.factory_;
 
 };
 goog.addSingletonGetter(sre.SemanticProcessor);
@@ -100,25 +102,12 @@ sre.SemanticProcessor.prototype.identifierNode = function(leaf, font, unit) {
 
 /**
  * Create a branching node for an implicit operation, currently assumed to be of
- * multiplicative type. Determines mixed numbers and unit elements.
- * @param {!Array.<!sre.SemanticNode>} nodes The operands.
- * @return {!sre.SemanticNode} The new branch node.
- * @private
- */
-sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
-  return this.heuristics.SeparateInvisibleTimes ?
-    this.implicitNodePure_(nodes) : this.implicitNodeRec_(nodes);
-};
-
-
-/**
- * Create a branching node for an implicit operation, currently assumed to be of
  * multiplicative type.
  * @param {!Array.<!sre.SemanticNode>} nodes The operands.
  * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
-sre.SemanticProcessor.prototype.implicitNodePure_ = function(nodes) {
+sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
   var operators = sre.SemanticProcessor.getInstance().factory_.
       makeMultipleContentNodes(nodes.length - 1,
                                sre.SemanticAttr.invisibleTimes());
@@ -134,13 +123,13 @@ sre.SemanticProcessor.prototype.implicitNodePure_ = function(nodes) {
 
 /**
  * Create a branching node for an implicit operation, currently assumed to be of
- * multiplicative type. Recursively combines implicit nodes.
- * @param {!Array.<!sre.SemanticNode>} nodes The operands.
+ * multiplicative type. Recursively combines implicit nodes for the given root
+ * node of a subtree.
+ * @param {!sre.SemanticNode} root The root of the subtree.
  * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
-sre.SemanticProcessor.prototype.implicitNodeRec_ = function(nodes) {
-  var root = this.implicitNodePure_(nodes);
+sre.SemanticProcessor.prototype.implicitNodeRec_ = function(root) {
   for (var i = root.childNodes.length - 1, child;
        child = root.childNodes[i]; i--) {
     if (child.role !== sre.SemanticAttr.Role.IMPLICIT) {
@@ -170,7 +159,9 @@ sre.SemanticProcessor.prototype.implicitNode = function(nodes) {
   if (nodes.length === 1) {
     return nodes[0];
   }
-  return sre.SemanticProcessor.getInstance().implicitNode_(nodes);
+  var node = this.implicitNode_(nodes);
+  return this.heuristics.SeparateInvisibleTimes ? node :
+    this.implicitNodeRec_(node);
 };
 
 
@@ -624,7 +615,6 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
     return this.recurseJuxtaposition_(
       acc.concat([left, op, right]).concat(first), ops, elements);
   }
-  // TODO: What about propagateSimpleFunction, combineUnit, mixedNumbers?
   var result = null;
   if (left.role === sre.SemanticAttr.Role.IMPLICIT &&
       right.role === sre.SemanticAttr.Role.IMPLICIT) {
