@@ -100,7 +100,8 @@ sre.SemanticTree.unitVisitor_ = new sre.SemanticVisitor(
     'general',
     function(node, info) {
       if (node.type === sre.SemanticAttr.Type.INFIXOP &&
-          node.role === sre.SemanticAttr.Role.MULTIPLICATION) {
+          (node.role === sre.SemanticAttr.Role.MULTIPLICATION ||
+           node.role === sre.SemanticAttr.Role.IMPLICIT)) {
         var children = node.childNodes;
         if (children.length &&
             (sre.SemanticPred.isPureUnit(children[0]) ||
