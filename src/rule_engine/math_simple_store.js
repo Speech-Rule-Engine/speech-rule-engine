@@ -147,6 +147,9 @@ sre.MathCompoundStore = function() {
    */
   this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 
+  /**
+   * @type {!Object.<string>}
+   */
   this.siPrefixes = {};
 
 };
@@ -269,7 +272,7 @@ sre.MathCompoundStore.prototype.addFunctionRules = function(json) {
 
 
 /**
- * Makes a speech rule for Unit descriptors from its JSON representation.
+ * Makes speech rules for Unit descriptors from its JSON representation.
  * @param {Object} json JSON object of the speech rules.
  */
 sre.MathCompoundStore.prototype.addUnitRules = function(json) {
@@ -284,6 +287,10 @@ sre.MathCompoundStore.prototype.addUnitRules = function(json) {
 };
 
 
+/**
+ * Adds a single speech rule for Unit descriptors from its JSON representation.
+ * @param {Object} json JSON object of the speech rules.
+ */
 sre.MathCompoundStore.prototype.addUnitRules_ = function(json) {
   var names = json['names'];
   if (names) {
@@ -292,6 +299,12 @@ sre.MathCompoundStore.prototype.addUnitRules_ = function(json) {
   this.addFunctionRules(json);
 };
 
+
+/**
+ * Makes speech rules for SI units from the JSON representation of the base
+ * unit.
+ * @param {Object} json JSON object of the base speech rules.
+ */
 sre.MathCompoundStore.prototype.addSiUnitRules = function(json) {
   for (var key of Object.keys(this.siPrefixes)) {
     var newJson = Object.assign({}, json);
@@ -311,6 +324,7 @@ sre.MathCompoundStore.prototype.addSiUnitRules = function(json) {
   }
   this.addUnitRules_(json);
 };
+
 
 /**
  * Retrieves a rule for the given node if one exists.
