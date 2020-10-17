@@ -45,6 +45,7 @@ sre.MathSimpleStore = function() {
    * @type {string}
    */
   this.category = '';
+
 };
 goog.inherits(sre.MathSimpleStore, sre.MathStore);
 
@@ -145,6 +146,9 @@ sre.MathCompoundStore = function() {
    * @type {string}
    */
   this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+
+  this.siPrefixes = {};
+
 };
 goog.addSingletonGetter(sre.MathCompoundStore);
 
@@ -272,6 +276,15 @@ sre.MathCompoundStore.prototype.addUnitRules = function(json) {
   if (this.changeLocale_(json)) {
     return;
   }
+  if (json['si']) {
+    this.addSiUnitRules(json);
+    return;
+  }
+  this.addUnitRules_(json);
+};
+
+
+sre.MathCompoundStore.prototype.addUnitRules_ = function(json) {
   var names = json['names'];
   if (names) {
     json['names'] = names.map(function(name) {return name + ':' + 'unit';});
@@ -279,6 +292,25 @@ sre.MathCompoundStore.prototype.addUnitRules = function(json) {
   this.addFunctionRules(json);
 };
 
+sre.MathCompoundStore.prototype.addSiUnitRules = function(json) {
+  for (var key of Object.keys(this.siPrefixes)) {
+    var newJson = Object.assign({}, json);
+    newJson.mappings = {};
+    var prefix = this.siPrefixes[key];
+    newJson['key'] = key + newJson['key'];
+    newJson['names'] = newJson['names'].map(function(name) { return key + name; });
+    for (var domain of Object.keys(json['mappings'])) {
+      newJson.mappings[domain] = {};
+      for (var style of Object.keys(json['mappings'][domain])) {
+        newJson['mappings'][domain][style] =
+          sre.Locale[this.locale].SI(
+              prefix, json['mappings'][domain][style]);
+      }
+    }
+    this.addUnitRules_(newJson);
+  }
+  this.addUnitRules_(json);
+};
 
 /**
  * Retrieves a rule for the given node if one exists.
