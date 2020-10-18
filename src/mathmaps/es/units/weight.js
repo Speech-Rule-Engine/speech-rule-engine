@@ -42,9 +42,8 @@
     "category": "weight"
   },
   {
-    "key": "µg",
+    "key": "mcg",
     "names": [
-      "µg",
       "mcg"
     ],
     "mappings": {
@@ -57,7 +56,6 @@
   {
     "key": "gr",
     "names": [
-      "g",
       "gr"
     ],
     "mappings": {
@@ -68,25 +66,14 @@
     "category": "weight"
   },
   {
-    "key": "kg",
+    "key": "g",
+    "si": true,
     "names": [
-      "kg"
+      "g"
     ],
     "mappings": {
       "default": {
-        "default": "kilogramo"
-      }
-    },
-    "category": "weight"
-  },
-  {
-    "key": "mg",
-    "names": [
-      "mg"
-    ],
-    "mappings": {
-      "default": {
-        "default": "miligramo"
+        "default": "gramo"
       }
     },
     "category": "weight"

@@ -139,15 +139,7 @@
    "names": ["cc", "ccm"]
   },
   {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "Kiloliter"
-     }
-   },
-   "key": "kl",
-   "names": ["kl"]
-  },
-  {"category": "volume",
+   "si": true,
    "mappings": {
      "default": {
        "default": "Liter"
@@ -155,14 +147,5 @@
    },
    "key": "l",
    "names": ["l"]
-  },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "Milliliter"
-     }
-   },
-   "key": "ml",
-   "names": ["ml"]
   }
 ]

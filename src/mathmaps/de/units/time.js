@@ -3,33 +3,7 @@
     "locale": "de"
   },
   {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "Nanosekunde"
-     }
-   },
-   "key": "ns",
-   "names": ["ns"]
-  },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "Microsekunde"
-     }
-   },
-   "key": "µs",
-   "names": ["µs"]
-  },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "Millisekunde"
-     }
-   },
-   "key": "ms",
-   "names": ["ms"]
-  },
-  {"category": "time",
+   "si": true,
    "mappings": {
      "default": {
        "default": "Sekunde"

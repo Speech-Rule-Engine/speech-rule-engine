@@ -3,49 +3,14 @@
     "locale": "es"
   },
   {
-    "key": "mm",
-    "names": [
-      "mm"
-    ],
-    "mappings": {
-      "default": {
-        "default": "milímetro"
-      }
-    },
-    "category": "length"
-  },
-  {
-    "key": "cm",
-    "names": [
-      "cm"
-    ],
-    "mappings": {
-      "default": {
-        "default": "centímetro"
-      }
-    },
-    "category": "length"
-  },
-  {
     "key": "m",
+    "si": true,
     "names": [
       "m"
     ],
     "mappings": {
       "default": {
         "default": "metro"
-      }
-    },
-    "category": "length"
-  },
-  {
-    "key": "km",
-    "names": [
-      "km"
-    ],
-    "mappings": {
-      "default": {
-        "default": "kilómetro"
       }
     },
     "category": "length"

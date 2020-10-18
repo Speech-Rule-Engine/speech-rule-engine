@@ -3,31 +3,8 @@
     "locale": "de"
   },
   {
-    "key": "mm",
-    "names": [
-      "mm"
-    ],
-    "mappings": {
-      "default": {
-        "default": "Millimeter"
-      }
-    },
-    "category": "length"
-  },
-  {
-    "key": "cm",
-    "names": [
-      "cm"
-    ],
-    "mappings": {
-      "default": {
-        "default": "Zentimeter"
-      }
-    },
-    "category": "length"
-  },
-  {
     "key": "m",
+    "si": true,
     "mappings": {
       "default": {
         "default": "Meter"
@@ -37,15 +14,6 @@
     "names": [
       "m"
     ]
-  },
-  {"category": "length",
-   "mappings": {
-     "default": {
-       "default": "Kilometer"
-     }
-   },
-   "key": "km",
-   "names": ["km"]
   },
   {
     "key": "ft",

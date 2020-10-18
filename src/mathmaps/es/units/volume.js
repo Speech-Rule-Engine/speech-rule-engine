@@ -119,37 +119,14 @@
     "category": "volume"
   },
   {
-    "key": "kl",
-    "names": [
-      "kl"
-    ],
-    "mappings": {
-      "default": {
-        "default": "kilolitro"
-      }
-    },
-    "category": "volume"
-  },
-  {
     "key": "l",
+   "si": true,
     "names": [
       "l"
     ],
     "mappings": {
       "default": {
         "default": "litro"
-      }
-    },
-    "category": "volume"
-  },
-  {
-    "key": "ml",
-    "names": [
-      "ml"
-    ],
-    "mappings": {
-      "default": {
-        "default": "mililitro"
       }
     },
     "category": "volume"
