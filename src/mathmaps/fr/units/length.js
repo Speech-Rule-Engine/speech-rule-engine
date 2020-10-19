@@ -4,11 +4,10 @@
   },
   {
     "key": "m",
+    "si": true,
     "mappings": {
       "default": {
-        "default": "mètres",
-        "singular": "mètre",
-        "dual": ""
+        "default": "mètre"
       }
     },
     "category": "Length",
@@ -20,9 +19,7 @@
     "key": "ft",
     "mappings": {
       "default": {
-        "default": "pieds",
-        "singular": "pied",
-        "dual": ""
+        "default": "pied"
       }
     },
     "category": "Length",
@@ -35,9 +32,7 @@
     "key": "in",
     "mappings": {
       "default": {
-        "default": "pouces",
-        "singular": "pouce",
-        "dual": ""
+        "default": "pouce"
       }
     },
     "category": "Length",
@@ -50,9 +45,7 @@
     "key": "mi",
     "mappings": {
       "default": {
-        "default": "miles",
-        "singular": "mile",
-        "dual": ""
+        "default": "mile"
       }
     },
     "category": "Length",
@@ -65,15 +58,77 @@
     "key": "yd",
     "mappings": {
       "default": {
-        "default": "yards",
-        "singular": "yard",
-        "dual": ""
+        "default": "yard"
       }
     },
     "category": "Length",
     "names": [
       "yd",
       "yd."
+    ]
+  },
+    {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "chaînon"
+      }
+    },
+    "key": "link",
+    "names": [
+      "li",
+      "li."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "rod"
+      }
+    },
+    "key": "rod",
+    "names": [
+      "rd",
+      "rd."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "chaîne"
+      }
+    },
+    "key": "chain",
+    "names": [
+      "ch",
+      "ch."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "furlong"
+      }
+    },
+    "key": "furlong",
+    "names": [
+      "fur",
+      "fur."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "mille marin"
+      }
+    },
+    "key": "n.m.",
+    "names": [
+      "n.m."
     ]
   }
 ]
