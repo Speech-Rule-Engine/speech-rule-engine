@@ -129,6 +129,34 @@
       "tsp."
     ]
   },
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "plural": "Flüssigdrachmen",
+        "default": "Flüssigdrachme"
+      }
+    },
+    "key": "fluid dram",
+    "names": [
+      "fl dr",
+      "fl. dr."
+    ]
+  },
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "plural": "Tassen",
+        "default": "Tasse"
+      }
+    },
+    "key": "cup",
+    "names": [
+      "cp",
+      "cp."
+    ]
+  },
   {"category": "volume",
    "mappings": {
      "default": {

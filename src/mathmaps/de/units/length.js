@@ -80,5 +80,57 @@
       }
     },
     "category": "length"
+  },
+    {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "Kettenglied"
+      }
+    },
+    "key": "link",
+    "names": [
+      "li",
+      "li."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "Rute"
+      }
+    },
+    "key": "rod",
+    "names": [
+      "rd",
+      "rd."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "Kette"
+      }
+    },
+    "key": "chain",
+    "names": [
+      "ch",
+      "ch."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "Furchenlänge"
+      }
+    },
+    "key": "furlong",
+    "names": [
+      "fur",
+      "fur."
+    ]
   }
 ]

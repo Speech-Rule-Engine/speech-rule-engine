@@ -85,5 +85,45 @@
       "t",
       "T"
     ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "plural": "Drachmen",
+        "default": "Drachme"
+      }
+    },
+    "key": "dram",
+    "names": [
+      "dr",
+      "dr."
+    ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "Stone"
+      }
+    },
+    "key": "st",
+    "names": [
+      "st",
+      "st."
+    ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "Viertelzentner"
+      }
+    },
+    "key": "qtr",
+    "names": [
+      "qtr",
+      "qtr."
+    ]
   }
 ]
