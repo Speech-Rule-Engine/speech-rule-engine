@@ -12,7 +12,7 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "Quadratzol"
+       "default": "Quadratzoll"
      }
    },
    "key": "sq inch",
@@ -30,7 +30,7 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "Quadratfuß",
+       "default": "Quadratfuß"
      }
    },
    "key": "sq ft",
@@ -75,6 +75,5 @@
     "names": [
       "ha"
     ]
-  },
-
+  }
 ]

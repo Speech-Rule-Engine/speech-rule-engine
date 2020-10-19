@@ -96,7 +96,7 @@
     },
     "category": "energy",
     "names": [
-      "Ω",
+      "Ω"
     ]
   }
 ]

@@ -34,7 +34,7 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "pie cuadrado",
+       "default": "pie cuadrado"
      }
    },
    "key": "sq ft",
