@@ -124,5 +124,14 @@
     "names": [
       "mcg"
     ]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "quintal"
+     }
+   },
+   "key": "cwt",
+   "names": ["cwt", "cwt.", "qq"]
   }
 ]

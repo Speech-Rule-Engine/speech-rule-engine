@@ -106,18 +106,5 @@
       }
     },
     "category": "energy"
-  },
-  {
-    "key": "KΩ",
-    "si": true,
-    "names": [
-      "KΩ"
-    ],
-    "mappings": {
-      "default": {
-        "default": "kiloohmio"
-      }
-    },
-    "category": "energy"
   }
 ]

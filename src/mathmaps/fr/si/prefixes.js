@@ -9,7 +9,7 @@
     "M": "méga",
     "k": "kilo",
     "h": "hecto",
-    "d": "déca",
+    "da": "déca",
     "d": "déci",
     "c": "centi",
     "m": "milli",

@@ -58,14 +58,14 @@
     "key": "tbsp",
     "mappings": {
       "default": {
-        "plural": "cuillères de table",
-        "default": "cuillèe de table"
+        "plural": "cuillères à soupe",
+        "default": "cuillèe à soupe"
       }
     },
     "category": "volume",
     "names": [
       "tbsp",
-      "tbsp."
+      "tbsp.", "Tbsp", "Tbsp."
     ]
   },
   {
@@ -120,6 +120,24 @@
       "cu in",
       "cu. in."
     ]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "pied cube"
+     }
+   },
+   "key": "cu ft",
+   "names": ["cu ft", "cu. ft."]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "yard cube"
+     }
+   },
+   "key": "cu yd",
+   "names": ["cu yd", "cu. yd."]
   },
   {
     "category": "volume",

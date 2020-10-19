@@ -9,6 +9,6 @@
     }
    },
    "key": "doz",
-   "names": ["douz", "douz.", "dz", "dz."]
+   "names": ["douz", "douz.", "dz", "dz.", "doz", "doz."]
   }
 ]

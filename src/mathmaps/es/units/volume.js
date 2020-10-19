@@ -84,7 +84,9 @@
     "key": "tbsp",
     "names": [
       "tbsp",
-      "tbsp."
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
     ],
     "mappings": {
       "default": {
@@ -109,7 +111,8 @@
   {
     "key": "cc",
     "names": [
-      "cc"
+      "cc",
+      "ccm"
     ],
     "mappings": {
       "default": {
@@ -143,6 +146,24 @@
       "cu in",
       "cu. in."
     ]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "pies cúbico"
+     }
+   },
+   "key": "cu ft",
+   "names": ["cu ft", "cu. ft."]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "yarda cúbica"
+     }
+   },
+   "key": "cu yd",
+   "names": ["cu yd", "cu. yd."]
   },
   {
     "category": "volume",

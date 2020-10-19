@@ -125,5 +125,14 @@
       "qtr",
       "qtr."
     ]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "Zentner"
+     }
+   },
+   "key": "cwt",
+   "names": ["cwt", "cwt.", "Ztr.", "Ctr."]
   }
 ]

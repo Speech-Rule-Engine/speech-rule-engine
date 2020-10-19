@@ -102,18 +102,5 @@
     "names": [
       "Ω"
     ]
-  },
-  {
-    "key": "Ω",
-    "si": true,
-    "mappings": {
-      "default": {
-        "default": "Kiloohm"
-      }
-    },
-    "category": "energy",
-    "names": [
-      "KΩ"
-    ]
   }
 ]
