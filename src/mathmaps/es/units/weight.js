@@ -90,5 +90,44 @@
       }
     },
     "category": "weight"
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "dracma"
+      }
+    },
+    "key": "dram",
+    "names": [
+      "dr",
+      "dr."
+    ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "stone"
+      }
+    },
+    "key": "st",
+    "names": [
+      "st",
+      "st."
+    ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "cuarto corto"
+      }
+    },
+    "key": "qtr",
+    "names": [
+      "qtr",
+      "qtr."
+    ]
   }
 ]

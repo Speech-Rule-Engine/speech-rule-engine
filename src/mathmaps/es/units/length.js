@@ -68,6 +68,58 @@
     "category": "length"
   },
   {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "link"
+      }
+    },
+    "key": "link",
+    "names": [
+      "li",
+      "li."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "rod"
+      }
+    },
+    "key": "rod",
+    "names": [
+      "rd",
+      "rd."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "cadena"
+      }
+    },
+    "key": "chain",
+    "names": [
+      "ch",
+      "ch."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "furlong"
+      }
+    },
+    "key": "furlong",
+    "names": [
+      "fur",
+      "fur."
+    ]
+  },
+  {
     "key": "n.m.",
     "names": [
       "n.m."
@@ -78,5 +130,6 @@
       }
     },
     "category": "length"
-  }
+  },
+  
 ]

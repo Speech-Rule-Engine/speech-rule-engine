@@ -130,5 +130,44 @@
       }
     },
     "category": "volume"
+  },
+    {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "pulgada cúbico"
+      }
+    },
+    "key": "cu inch",
+    "names": [
+      "cu in",
+      "cu. in."
+    ]
+  },
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "dracma líquidas"
+      }
+    },
+    "key": "fluid dram",
+    "names": [
+      "fl dr",
+      "fl. dr."
+    ]
+  },
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "taza"
+      }
+    },
+    "key": "cup",
+    "names": [
+      "cp",
+      "cp."
+    ]
   }
 ]
