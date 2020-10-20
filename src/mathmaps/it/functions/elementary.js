@@ -34,7 +34,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "logaritmo in basi 10",
         "singular": "",
         "dual": ""
       }
@@ -49,7 +49,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "esponenziale",
         "singular": "",
         "dual": ""
       }
@@ -63,7 +63,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "massimo comun divisore",
         "singular": "",
         "dual": ""
       }
@@ -77,7 +77,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "minimo comune multiplo",
         "singular": "",
         "dual": ""
       }
@@ -91,7 +91,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "argomento",
         "singular": "",
         "dual": ""
       }
@@ -129,7 +129,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "estremo inferiore",
         "singular": "",
         "dual": ""
       }
@@ -156,7 +156,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "limite inferiore",
         "singular": "",
         "dual": ""
       }
@@ -171,7 +171,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "limite superiore",
         "singular": "",
         "dual": ""
       }
@@ -185,7 +185,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "massimo",
         "singular": "",
         "dual": ""
       }
@@ -199,7 +199,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "minimo",
         "singular": "",
         "dual": ""
       }
@@ -213,7 +213,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "estremo superiore",
         "singular": "",
         "dual": ""
       }
@@ -228,7 +228,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "colimiti",
         "singular": "",
         "dual": ""
       }
@@ -243,7 +243,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "limite proiettivo",
         "singular": "",
         "dual": ""
       }
@@ -269,7 +269,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "probabilità",
         "singular": "",
         "dual": ""
       }

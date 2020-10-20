@@ -14,8 +14,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "quadrate",
+        "singular": "quadrato",
         "dual": ""
       }
     }
@@ -46,8 +46,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "pertiche quadrate",
+        "singular": "pertica quadrata",
         "dual": ""
       }
     }

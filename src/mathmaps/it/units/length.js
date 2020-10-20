@@ -1,4 +1,4 @@
-[
+
   {
     "locale": "it"
   },
@@ -116,8 +116,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "furlong",
+        "singular": "furlong",
         "dual": ""
       }
     }
@@ -130,8 +130,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "miglia nautiche",
+        "singular": "miglio nautico",
         "dual": ""
       }
     }

@@ -7,12 +7,13 @@
     "category": "speed",
     "names": [
       "kt",
-      "kt."
+      "kt.",
+      "nd"
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "node",
+        "singular": "nodo",
         "dual": ""
       }
     }
@@ -53,7 +54,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "chilometro orario",
         "singular": "",
         "dual": ""
       }

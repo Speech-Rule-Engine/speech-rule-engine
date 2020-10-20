@@ -56,7 +56,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "stone",
         "singular": "",
         "dual": ""
       }
@@ -71,8 +71,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "quarti",
+        "singular": "quarto",
         "dual": ""
       }
     }
@@ -81,7 +81,7 @@
     "key": "cwt",
     "mappings": {
       "default": {
-        "default": "handredweit",
+        "default": "hundredweight",
         "singular": "",
         "dual": ""
       }
@@ -101,7 +101,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "long ton",
         "singular": "",
         "dual": ""
       }
@@ -144,8 +144,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "microgrammi",
+        "singular": "microgrammo",
         "dual": ""
       }
     }

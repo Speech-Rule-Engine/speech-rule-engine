@@ -11,8 +11,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "secondi",
+        "singular": "secondo",
         "dual": ""
       }
     }

@@ -374,5 +374,18 @@
     "names": [
       "元"
     ]
+  },
+  {
+    "category": "currency",
+    "key": "¢",
+    "mappings": {
+      "default": {
+        "default": "centesimi",
+        "singular": "centesimo"
+      }
+    },
+    "names": [
+      "￠", "¢"
+    ]
   }
 ]

@@ -27,8 +27,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "kilowattore",
+        "singular": "kilowattora",
         "dual": ""
       }
     }
@@ -102,7 +102,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "ohm",
         "singular": "",
         "dual": ""
       }

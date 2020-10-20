@@ -10,8 +10,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "bit",
+        "singular": "bit",
         "dual": ""
       }
     }
@@ -39,7 +39,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "chilobyte",
         "singular": "",
         "dual": ""
       }

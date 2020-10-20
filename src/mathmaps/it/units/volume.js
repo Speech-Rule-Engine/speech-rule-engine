@@ -11,8 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "cubici",
+        "singular": "cubico",
         "dual": ""
       }
     }
@@ -208,8 +208,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
+        "default": "centimetri cubi",
+        "singular": "centimetro cubo",
         "dual": ""
       }
     }

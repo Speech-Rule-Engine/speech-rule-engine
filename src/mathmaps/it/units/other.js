@@ -13,7 +13,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "dozzina",
         "singular": "",
         "dual": ""
       }
