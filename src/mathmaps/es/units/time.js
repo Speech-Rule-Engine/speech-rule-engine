@@ -16,9 +16,21 @@
     "category": "time"
   },
   {
+    "key": "″",
+    "names": [
+      "″"
+    ],
+    "mappings": {
+      "default": {
+        "default": "segundos"
+      }
+    },
+    "category": "time"
+  },
+  {
     "key": "min",
     "names": [
-      "min"
+      "min", "′"
     ],
     "mappings": {
       "default": {

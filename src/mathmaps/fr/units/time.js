@@ -17,6 +17,19 @@
     ]
   },
   {
+    "key": "″",
+    "mappings": {
+      "default": {
+        "default": "seconde",
+        "dual": ""
+      }
+    },
+    "category": "time",
+    "names": [
+      "″"
+    ]
+  },
+  {
     "category": "time",
     "mappings": {
       "default": {
@@ -25,7 +38,7 @@
     },
     "key": "min",
     "names": [
-      "min"
+      "min", "′"
     ]
   },
   {

@@ -12,6 +12,15 @@
    "key": "s",
    "names": ["s"]
   },
+    {"category": "time",
+   "mappings": {
+     "default": {
+       "default": "Sekunde"
+     }
+   },
+   "key": "″",
+   "names": ["″"]
+    },
   {"category": "time",
    "mappings": {
      "default": {
@@ -19,7 +28,7 @@
      }
    },
    "key": "min",
-   "names": ["min"]
+   "names": ["min", "′"]
   },
   {"category": "time",
    "mappings": {
