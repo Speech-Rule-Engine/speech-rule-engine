@@ -59,7 +59,9 @@
     "key": "gcd",
     "category": "Elementary",
     "names": [
-      "gcd"
+      "gcd",
+      "mcd",
+      "MCD"
     ],
     "mappings": {
       "default": {
@@ -73,7 +75,9 @@
     "key": "lcm",
     "category": "Elementary",
     "names": [
-      "lcm"
+      "lcm",
+      "mcm",
+      "MCM"
     ],
     "mappings": {
       "default": {
