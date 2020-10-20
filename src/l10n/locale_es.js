@@ -200,6 +200,13 @@ sre.Locale.es = {
     return (/.*s$/.test(unit)) ? unit : unit + 's';
   },
 
+  SI: function(prefix, unit) {
+    if (unit.match(/^metro/)) {
+      prefix = prefix.replace(/a$/, 'á').replace(/o$/, 'ó').replace(/i$/, 'í');
+    }
+    return prefix + unit;
+  },
+
   NUMBERS: sre.Numbers.es.NUMBERS,
 
   ALPHABETS: {

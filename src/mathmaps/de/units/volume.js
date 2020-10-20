@@ -129,6 +129,34 @@
       "tsp."
     ]
   },
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "plural": "Flüssigdrachmen",
+        "default": "Flüssigdrachme"
+      }
+    },
+    "key": "fluid dram",
+    "names": [
+      "fl dr",
+      "fl. dr."
+    ]
+  },
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "plural": "Tassen",
+        "default": "Tasse"
+      }
+    },
+    "key": "cup",
+    "names": [
+      "cp",
+      "cp."
+    ]
+  },
   {"category": "volume",
    "mappings": {
      "default": {
@@ -139,15 +167,7 @@
    "names": ["cc", "ccm"]
   },
   {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "Kiloliter"
-     }
-   },
-   "key": "kl",
-   "names": ["kl"]
-  },
-  {"category": "volume",
+   "si": true,
    "mappings": {
      "default": {
        "default": "Liter"
@@ -155,14 +175,5 @@
    },
    "key": "l",
    "names": ["l"]
-  },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "Milliliter"
-     }
-   },
-   "key": "ml",
-   "names": ["ml"]
   }
 ]

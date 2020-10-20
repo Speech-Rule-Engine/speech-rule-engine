@@ -385,7 +385,7 @@
     "key": "00B4",
     "mappings": {
       "default": {
-        "default": "acute accent"
+        "default": "Acuteakzent"
       }
     },
     "category": "Sk"
@@ -394,7 +394,7 @@
     "key": "00B5",
     "mappings": {
       "default": {
-        "default": "micro sign"
+        "default": "Mikrozeichen"
       }
     },
     "category": "Ll"
