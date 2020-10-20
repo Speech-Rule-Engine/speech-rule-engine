@@ -20,7 +20,7 @@
      }
    },
    "key": "sq inch",
-   "names": ["sq inch", "sq. inch."]
+   "names": ["sq in", "sq. in.", "sq inch", "sq. inch"]
   },
   {"category": "area",
    "mappings": {
