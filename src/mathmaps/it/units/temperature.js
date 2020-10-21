@@ -6,8 +6,8 @@
     "key": "F",
     "mappings": {
       "default": {
-        "default": "farad",
-        "singular": "farad",
+        "default": "gradi fahrenheit",
+        "singular": "grado fahrenheit",
         "dual": ""
       }
     },
@@ -22,8 +22,8 @@
     "key": "C",
     "mappings": {
       "default": {
-        "default": "culomb",
-        "singular": "culomb",
+        "default": "gradi celsius",
+        "singular": "grado celsius",
         "dual": ""
       }
     },
