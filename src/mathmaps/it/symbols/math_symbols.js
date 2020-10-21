@@ -618,7 +618,7 @@
     "key": "201A",
     "mappings": {
       "default": {
-        "default": "segno di citazione singolo basso 9"
+        "default": "segno di citazione singolo"
       }
     },
     "category": "Ps"
@@ -628,7 +628,7 @@
     "key": "201B",
     "mappings": {
       "default": {
-        "default": "virgolette singola High-Reversed-9 :  virgolette singole virgolette"
+        "default": "virgolette singola invertita"
       }
     }
   },
@@ -654,7 +654,7 @@
     "key": "201E",
     "mappings": {
       "default": {
-        "default": "doppio basso 9 segno di citazione"
+        "default": "doppio basso segno di citazione"
       }
     },
     "category": "Ps"
@@ -664,7 +664,7 @@
     "key": "201F",
     "mappings": {
       "default": {
-        "default": "virgolette Double High-Reversed-9 :  virgolette doppie virate invertite"
+        "default": "virgolette doppie virate invertite"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "203B",
     "mappings": {
       "default": {
-        "default": "segno di riferimento :  kome giapponese :  separatore paragrafo urdu"
+        "default": "segno di riferimento"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "203F",
     "mappings": {
       "default": {
-        "default": "undertie :  enotikon greco"
+        "default": "enotikon greco"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "2044",
     "mappings": {
       "default": {
-        "default": "fraction Slash :  solidus (in tipografia)"
+        "default": "barra di frazione"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "2052",
     "mappings": {
       "default": {
-        "default": "segno meno commerciale :  abzüglich (tedesco), med avdrag av (svedese), piska (svedese, \"frusta\")"
+        "default": "segno meno commerciale"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "key": "2223",
     "mappings": {
       "default": {
-        "default": "divide :  così :  apl stile"
+        "default": "divide"
       }
     }
   },
@@ -1807,7 +1807,7 @@
     "key": "223D",
     "mappings": {
       "default": {
-        "default": "tilde invertita :  pigro s"
+        "default": "tilde invertita"
       }
     }
   },
@@ -1816,7 +1816,7 @@
     "key": "223E",
     "mappings": {
       "default": {
-        "default": "inverted Lazy S :  più positivo"
+        "default": "più positivo"
       }
     }
   },
@@ -2599,7 +2599,7 @@
     "key": "2295",
     "mappings": {
       "default": {
-        "default": "cerchiato Plus :  somma diretta :  vettore che punta nella pagina"
+        "default": "cerchiato più :  somma diretta :  vettore che punta nella pagina"
       }
     }
   },
@@ -2626,7 +2626,7 @@
     "key": "2298",
     "mappings": {
       "default": {
-        "default": "cerchia Divisione Cerchiata :  divieto, disabilitare"
+        "default": "cerchia divisione cerchiata"
       }
     }
   },
@@ -3760,7 +3760,7 @@
     "key": "27CB",
     "mappings": {
       "default": {
-        "default": "diagonale ascendente matematica :  \\ diagup"
+        "default": "diagonale ascendente matematica"
       }
     }
   },
@@ -3778,7 +3778,7 @@
     "key": "27CD",
     "mappings": {
       "default": {
-        "default": "diagonale cadente matematica :  \\ diagdown"
+        "default": "diagonale cadente matematica"
       }
     }
   },
