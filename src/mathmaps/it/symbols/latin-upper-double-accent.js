@@ -52,7 +52,7 @@
     "key": "01E0",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina a con Dot Above e Macron"
+        "default": "Lettera maiuscola latina a con Punto Sopra e Macron"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "0230",
     "mappings": {
       "default": {
-        "default": "Capitale latina Lettera O con Dot Above e Macron"
+        "default": "Capitale latina Lettera O con Punto Sopra e Macron"
       }
     }
   },
@@ -429,7 +429,7 @@
     "key": "1EDA",
     "mappings": {
       "default": {
-        "default": "o maiuscola with horn e accento acuto"
+        "default": "o maiuscola con corno e accento acuto"
       }
     },
     "category": "Lu"
@@ -438,7 +438,7 @@
     "key": "1EDC",
     "mappings": {
       "default": {
-        "default": "o maiuscola with horn e accento grave"
+        "default": "o maiuscola con corno e accento grave"
       }
     },
     "category": "Lu"
@@ -447,7 +447,7 @@
     "key": "1EDE",
     "mappings": {
       "default": {
-        "default": "o maiuscola with horn e gancio sopra"
+        "default": "o maiuscola con corno e gancio sopra"
       }
     },
     "category": "Lu"
@@ -456,7 +456,7 @@
     "key": "1EE0",
     "mappings": {
       "default": {
-        "default": "o maiuscola with horn e tilde"
+        "default": "o maiuscola con corno e tilde"
       }
     },
     "category": "Lu"
@@ -465,7 +465,7 @@
     "key": "1EE2",
     "mappings": {
       "default": {
-        "default": "o maiuscola with horn e punto sotto"
+        "default": "o maiuscola con corno e punto sotto"
       }
     },
     "category": "Lu"
@@ -474,7 +474,7 @@
     "key": "1EE8",
     "mappings": {
       "default": {
-        "default": "u maiuscola con horn e accento acuto"
+        "default": "u maiuscola con corno e accento acuto"
       }
     },
     "category": "Lu"
@@ -483,7 +483,7 @@
     "key": "1EEA",
     "mappings": {
       "default": {
-        "default": "u maiuscola con horn e accento grave"
+        "default": "u maiuscola con corno e accento grave"
       }
     },
     "category": "Lu"
@@ -492,7 +492,7 @@
     "key": "1EEC",
     "mappings": {
       "default": {
-        "default": "u maiuscola con horn e gancio sopra"
+        "default": "u maiuscola con corno e gancio sopra"
       }
     },
     "category": "Lu"
@@ -501,7 +501,7 @@
     "key": "1EEE",
     "mappings": {
       "default": {
-        "default": "u maiuscola con horn e tilde"
+        "default": "u maiuscola con corno e tilde"
       }
     },
     "category": "Lu"
@@ -510,7 +510,7 @@
     "key": "1EF0",
     "mappings": {
       "default": {
-        "default": "u maiuscola con horn e punto sotto"
+        "default": "u maiuscola con corno e punto sotto"
       }
     },
     "category": "Lu"

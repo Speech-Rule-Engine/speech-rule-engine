@@ -16,7 +16,7 @@
     "key": "0363",
     "mappings": {
       "default": {
-        "default": "Combinando la piccola lettera latina A"
+        "default": "combinando la piccola A"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "0364",
     "mappings": {
       "default": {
-        "default": "Combinando la piccola lettera latina E"
+        "default": "combinando la piccola E"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "0365",
     "mappings": {
       "default": {
-        "default": "Combinando la piccola lettera latina I"
+        "default": "combinando la piccola I"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "0366",
     "mappings": {
       "default": {
-        "default": "Combinare la piccola lettera latina O"
+        "default": "combinare la piccola O"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "0367",
     "mappings": {
       "default": {
-        "default": "Combinazione di caratteri latini piccoli U"
+        "default": "combinazione di caratteri latini piccoli U"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "0368",
     "mappings": {
       "default": {
-        "default": "Combinare la piccola lettera latina C"
+        "default": "combinare la piccola C"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "0369",
     "mappings": {
       "default": {
-        "default": "Combinare la lettera minuscola latina D"
+        "default": "combinare la lettera minuscola latina D"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "036A",
     "mappings": {
       "default": {
-        "default": "Combinare la lettera minuscola latina H"
+        "default": "combinare la lettera minuscola latina H"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "036B",
     "mappings": {
       "default": {
-        "default": "Combinare la lettera minuscola latina M"
+        "default": "combinare la lettera minuscola latina M"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "036C",
     "mappings": {
       "default": {
-        "default": "Combinare la lettera minuscola latina R"
+        "default": "combinare la lettera minuscola latina R"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "036D",
     "mappings": {
       "default": {
-        "default": "Combinando la piccola lettera latina T"
+        "default": "combinando la piccola T"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "036E",
     "mappings": {
       "default": {
-        "default": "Combinare la lettera minuscola latina V"
+        "default": "combinare la lettera minuscola latina V"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "036F",
     "mappings": {
       "default": {
-        "default": "Combinare la piccola lettera latina X"
+        "default": "combinare la piccola X"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "1D62",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera I"
+        "default": "sottoscrizione latina Piccola lettera I"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "1D63",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera R"
+        "default": "sottoscrizione latina Piccola lettera R"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "1D64",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera U"
+        "default": "sottoscrizione latina Piccola lettera U"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "1D65",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina V lettera minuscola"
+        "default": "sottoscrizione latina V lettera minuscola"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "1DCA",
     "mappings": {
       "default": {
-        "default": "Combinando la piccola lettera latina R sotto"
+        "default": "combinando la piccola R sotto"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "1DD3",
     "mappings": {
       "default": {
-        "default": "Combinare la lettera minuscola latina appiattita Apri sopra"
+        "default": "combinare la lettera minuscola latina appiattita Apri sopra"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "1DD4",
     "mappings": {
       "default": {
-        "default": "Combina la piccola lettera latina Ae"
+        "default": "combina la piccola Ae"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "1DD5",
     "mappings": {
       "default": {
-        "default": "Combinare la piccola lettera latina Ao"
+        "default": "combinare la piccola Ao"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "1DD6",
     "mappings": {
       "default": {
-        "default": "Combinare la lettera minuscola latina Av"
+        "default": "combinare la lettera minuscola latina Av"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "1DD7",
     "mappings": {
       "default": {
-        "default": "Combinando la piccola lettera latina C Cedilla"
+        "default": "combinando la piccola C Cedilla"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "1DD8",
     "mappings": {
       "default": {
-        "default": "Combinando la lettera minuscola latina insulare D"
+        "default": "combinando la lettera minuscola latina insulare D"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "1DD9",
     "mappings": {
       "default": {
-        "default": "Combinazione di caratteri latini piccoli Eth"
+        "default": "combinazione di caratteri latini piccoli Eth"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "1DDA",
     "mappings": {
       "default": {
-        "default": "Combinando la piccola lettera latina G"
+        "default": "combinando la piccola G"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "1DDB",
     "mappings": {
       "default": {
-        "default": "Combinando la lettera latina Small Capital G"
+        "default": "combinando la Small Capital G"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "1DDC",
     "mappings": {
       "default": {
-        "default": "Combinare la piccola lettera latina K"
+        "default": "combinare la piccola K"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "1DDD",
     "mappings": {
       "default": {
-        "default": "Combinare la piccola lettera latina L"
+        "default": "combinare la piccola L"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "1DDE",
     "mappings": {
       "default": {
-        "default": "Combinando la lettera latina Small Capital L"
+        "default": "combinando la Small Capital L"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "1DDF",
     "mappings": {
       "default": {
-        "default": "Combinare la lettera latina Small Capital M"
+        "default": "combinare la Small Capital M"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "1DE0",
     "mappings": {
       "default": {
-        "default": "Combinare la piccola lettera latina N"
+        "default": "combinare la piccola N"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "1DE1",
     "mappings": {
       "default": {
-        "default": "Combinare la lettera latina Small Capital N"
+        "default": "combinare la Small Capital N"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "1DE2",
     "mappings": {
       "default": {
-        "default": "Combinando la lettera latina Small Capital R"
+        "default": "combinando la Small Capital R"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "1DE3",
     "mappings": {
       "default": {
-        "default": "Combinazione di caratteri latini R Rotunda"
+        "default": "combinazione di caratteri latini R Rotunda"
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "1DE4",
     "mappings": {
       "default": {
-        "default": "Combinare la piccola lettera latina S"
+        "default": "combinare la piccola S"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "1DE5",
     "mappings": {
       "default": {
-        "default": "Combinando la piccola lettera latina lunga S"
+        "default": "combinando la piccola lunga S"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "1DE6",
     "mappings": {
       "default": {
-        "default": "Combinando la piccola lettera latina Z"
+        "default": "combinando la piccola Z"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "2071",
     "mappings": {
       "default": {
-        "default": "Apice latina piccola lettera I"
+        "default": "apice latina piccola lettera I"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "207F",
     "mappings": {
       "default": {
-        "default": "Apice latina Piccola lettera N"
+        "default": "apice latina Piccola lettera N"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "2090",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera A"
+        "default": "sottoscrizione latina Piccola lettera A"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "2091",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera E"
+        "default": "sottoscrizione latina Piccola lettera E"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "2092",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera O"
+        "default": "sottoscrizione latina Piccola lettera O"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "2093",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera X"
+        "default": "sottoscrizione latina Piccola lettera X"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "2094",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera Schwa"
+        "default": "sottoscrizione latina Piccola lettera Schwa"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "2095",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera H"
+        "default": "sottoscrizione latina Piccola lettera H"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "2096",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera K"
+        "default": "sottoscrizione latina Piccola lettera K"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "2097",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera L"
+        "default": "sottoscrizione latina Piccola lettera L"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "2098",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera M"
+        "default": "sottoscrizione latina Piccola lettera M"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "2099",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera N"
+        "default": "sottoscrizione latina Piccola lettera N"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "209A",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera P"
+        "default": "sottoscrizione latina Piccola lettera P"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "209B",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera S"
+        "default": "sottoscrizione latina Piccola lettera S"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "209C",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera T"
+        "default": "sottoscrizione latina Piccola lettera T"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "2C7C",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione latina Piccola lettera J"
+        "default": "sottoscrizione latina Piccola lettera J"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "1F12A",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina a caratteri cubitali con guscio di tartaruga s"
+        "default": "lettera maiuscola latina a caratteri cubitali con guscio di tartaruga s"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "1F12B",
     "mappings": {
       "default": {
-        "default": "Circled Italic Latin Capital Lettera C"
+        "default": "registrazione su disco singolo"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "1F12C",
     "mappings": {
       "default": {
-        "default": "Circled Italic Latin Capital Lettera R"
+        "default": "registrazione del disco"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "1F18A",
     "mappings": {
       "default": {
-        "default": "Crossed Negative Squared Latin Capital Lettera P"
+        "default": "Parcheggio chiuso"
       }
     }
   }

@@ -3,38 +3,38 @@
     "locale": "it"
   },
   {
+    "category": "Ll",
     "key": "03D0",
     "mappings": {
       "default": {
-        "default": "greek beta"
+        "default": "beta arricciata"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
+    "category": "Ll",
     "key": "03D7",
     "mappings": {
       "default": {
-        "default": "variant kai"
+        "default": "simbolo greco Kai"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
+    "category": "Sm",
     "key": "03F6",
     "mappings": {
       "default": {
-        "default": "reversed epsilon"
+        "default": "epsilon dritto invertito"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "category": "Lu",
     "key": "1D7CA",
     "mappings": {
       "default": {
-        "default": "Mathematical Bold Capital Digamma"
+        "default": "Digamma maiuscola"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "1D7CB",
     "mappings": {
       "default": {
-        "default": "Mathematical Bold Small Digamma"
+        "default": "digamma"
       }
     }
   }

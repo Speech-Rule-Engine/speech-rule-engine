@@ -52,7 +52,7 @@
     "key": "2150",
     "mappings": {
       "default": {
-        "default": "Volgar Fraction One Seventh"
+        "default": "frazione volgare un settimo"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2151",
     "mappings": {
       "default": {
-        "default": "Vulgar Fraction One Ninth"
+        "default": "frazione volgare un nono"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2152",
     "mappings": {
       "default": {
-        "default": "Frazione volgare un decimo"
+        "default": "frazione volgare un decimo"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "215F",
     "mappings": {
       "default": {
-        "default": "Fraction Numerator One"
+        "default": "frazione numeratore uno"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2189",
     "mappings": {
       "default": {
-        "default": "Vulgar Fraction Zero Thirds"
+        "default": "frazione volgare zero un terzo"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "3248",
     "mappings": {
       "default": {
-        "default": "Cerchiato numero dieci sul quadrato nero"
+        "default": "cerchiato numero dieci sul quadrato nero :  limite di velocità 10 km / h"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "3249",
     "mappings": {
       "default": {
-        "default": "Cerchiato numero venti sul quadrato nero"
+        "default": "cerchiato numero venti sul quadrato nero :  limite di velocità 20 km / h"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "324A",
     "mappings": {
       "default": {
-        "default": "Numero trentasei circondato sul quadrato nero"
+        "default": "numero trentasei circondato sul quadrato nero :  limite di velocità 30 km / h"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "324B",
     "mappings": {
       "default": {
-        "default": "Numero Quaranta Cerchiato sul Quadrato Nero"
+        "default": "numero Quaranta Cerchiato sul Quadrato Nero :  limite di velocità 40 km / h"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "324C",
     "mappings": {
       "default": {
-        "default": "Cerchiato numero cinquanta sul quadrato nero"
+        "default": "cerchiato numero cinquanta sul quadrato nero :  limite di velocità 50 km / h"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "324D",
     "mappings": {
       "default": {
-        "default": "Cerchiato numero sessanta su Black Square"
+        "default": "cerchiato numero sessanta su Black Square :  limite di velocità 60 km / h"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "324E",
     "mappings": {
       "default": {
-        "default": "Cerchiato numero settanta su Black Square"
+        "default": "cerchiato numero settanta su Black Square :  limite di velocità 70 km / h"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "324F",
     "mappings": {
       "default": {
-        "default": "Cerchiato numero ottanta sul quadrato nero"
+        "default": "cerchiato numero ottanta sul quadrato nero :  limite di velocità 80 km / h"
       }
     }
   }

@@ -7,7 +7,7 @@
     "key": "01D6",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "u con diaeresi e macron"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "01D8",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "u con diaeresi e acuto"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "01DA",
     "mappings": {
       "default": {
-        "default": "Carattere latino latina con diaeresi e caronte"
+        "default": "u con diaeresi e caronte"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "01DC",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "u con diaeresi e tomba"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "01DF",
     "mappings": {
       "default": {
-        "default": "Piccola lettera latina a con Diaeresis e Macron"
+        "default": "piccola a con diaeresis e macron"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "01E1",
     "mappings": {
       "default": {
-        "default": "Lettera latina piccola a Dot Dot e Macron"
+        "default": "piccola a punto punto e macron"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "01ED",
     "mappings": {
       "default": {
-        "default": "Latin Small Letter O con Ogonek e Macron"
+        "default": "Latin Small Letter O con Ogonek e macron"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "01FB",
     "mappings": {
       "default": {
-        "default": "Piccola lettera latina a con anello sopra e acuto"
+        "default": "Piccola a con anello sopra e acuto"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "022B",
     "mappings": {
       "default": {
-        "default": "Lettera minuscola latina O con diaeresi e macron"
+        "default": "minuscola o con diaeresi e macron"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "022D",
     "mappings": {
       "default": {
-        "default": "Piccola lettera latina O con Tilde e Macron"
+        "default": "Piccola O con tilde e macron"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "0231",
     "mappings": {
       "default": {
-        "default": "Lettera minuscola latina O con Dot Above e Macron"
+        "default": "Lettera minuscola latina O con punto sopra e macron"
       }
     }
   },
@@ -429,7 +429,7 @@
     "key": "1EDB",
     "mappings": {
       "default": {
-        "default": "o with horn e accento acuto"
+        "default": "o con corno e accento acuto"
       }
     },
     "category": "Ll"
@@ -438,7 +438,7 @@
     "key": "1EDD",
     "mappings": {
       "default": {
-        "default": "o with horn e accento grave"
+        "default": "o con corno e accento grave"
       }
     },
     "category": "Ll"
@@ -447,7 +447,7 @@
     "key": "1EDF",
     "mappings": {
       "default": {
-        "default": "o with horn e gancio sopra"
+        "default": "o con corno e gancio sopra"
       }
     },
     "category": "Ll"
@@ -456,7 +456,7 @@
     "key": "1EE1",
     "mappings": {
       "default": {
-        "default": "o with horn e tilde"
+        "default": "o con corno e tilde"
       }
     },
     "category": "Ll"
@@ -465,7 +465,7 @@
     "key": "1EE3",
     "mappings": {
       "default": {
-        "default": "o with horn e punto sotto"
+        "default": "o con corno e punto sotto"
       }
     },
     "category": "Ll"
@@ -474,7 +474,7 @@
     "key": "1EE9",
     "mappings": {
       "default": {
-        "default": "u con horn e accento acuto"
+        "default": "u con corno e accento acuto"
       }
     },
     "category": "Ll"
@@ -483,7 +483,7 @@
     "key": "1EEB",
     "mappings": {
       "default": {
-        "default": "u con horn e accento grave"
+        "default": "u con corno e accento grave"
       }
     },
     "category": "Ll"
@@ -492,7 +492,7 @@
     "key": "1EED",
     "mappings": {
       "default": {
-        "default": "u with con e gancio sopra"
+        "default": "u con corno e gancio sopra"
       }
     },
     "category": "Ll"
@@ -501,7 +501,7 @@
     "key": "1EEF",
     "mappings": {
       "default": {
-        "default": "u with con e tilde"
+        "default": "u con corno e tilde"
       }
     },
     "category": "Ll"
@@ -510,7 +510,7 @@
     "key": "1EF1",
     "mappings": {
       "default": {
-        "default": "u con horn e punto sotto"
+        "default": "u con corno e punto sotto"
       }
     },
     "category": "Ll"

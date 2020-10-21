@@ -322,7 +322,7 @@
     "key": "0114",
     "mappings": {
       "default": {
-        "default": "Capitale latina Lettera E con Breve"
+        "default": "capitale latina Lettera E con Breve"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "012C",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina I con breve"
+        "default": "lettera maiuscola latina I con breve"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "014E",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina O con Breve"
+        "default": "lettera maiuscola latina O con Breve"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "01CD",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina a con Caron"
+        "default": "lettera maiuscola latina a con Caron"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "01CF",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina I con Caron"
+        "default": "lettera maiuscola latina I con Caron"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "01D1",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina O con Caron"
+        "default": "lettera maiuscola latina O con Caron"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "01D3",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "carattere latino:  lettera U con Caron"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "01E6",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina G con Caron"
+        "default": "lettera maiuscola latina G con Caron"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "01E8",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "carattere latino:  lettera K con Caron"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "01EA",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina O con Ogonek"
+        "default": "lettera maiuscola latina O con Ogonek"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "01F4",
     "mappings": {
       "default": {
-        "default": "Latin Capital Letter G with Acute"
+        "default": "latin Capital Letter G with Acute"
       }
     }
   },
@@ -817,7 +817,7 @@
     "key": "01F8",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina con tomba"
+        "default": "lettera maiuscola latina con tomba"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "0200",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina a con doppia tomba"
+        "default": "lettera maiuscola latina a con doppia tomba"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "0202",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina a con breve invertito"
+        "default": "lettera maiuscola latina a con breve invertito"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "0204",
     "mappings": {
       "default": {
-        "default": "Capitale latina Lettera E con doppia tomba"
+        "default": "capitale latina Lettera E con doppia tomba"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0206",
     "mappings": {
       "default": {
-        "default": "Capitale latina Lettera E con breve invertito"
+        "default": "capitale latina Lettera E con breve invertito"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0208",
     "mappings": {
       "default": {
-        "default": "Capitale latina Lettera I con doppia tomba"
+        "default": "capitale latina Lettera I con doppia tomba"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "020A",
     "mappings": {
       "default": {
-        "default": "Capitale latina Lettera I con Inverted Breve"
+        "default": "capitale latina Lettera I con Inverted Breve"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "020C",
     "mappings": {
       "default": {
-        "default": "Capitale latina Lettera O con doppia tomba"
+        "default": "capitale latina Lettera O con doppia tomba"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "020E",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina O con breve invertito"
+        "default": "lettera maiuscola latina O con breve invertito"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "0210",
     "mappings": {
       "default": {
-        "default": "Latin Capital Letter R with Double Grave"
+        "default": "latin Capital Letter R with Double Grave"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0212",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina R con breve invertito"
+        "default": "lettera maiuscola latina R con breve invertito"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0214",
     "mappings": {
       "default": {
-        "default": "Latin Capital Lettera U con Double Grave"
+        "default": "latin Capital Lettera U con Double Grave"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "0216",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina U con breve invertito"
+        "default": "lettera maiuscola latina U con breve invertito"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "0218",
     "mappings": {
       "default": {
-        "default": "Latin Capital Letter S with Comma Below"
+        "default": "S maiuscola con comma sotto"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "021A",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina T con la virgola sotto"
+        "default": "lettera maiuscola latina T con la virgola sotto"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "021E",
     "mappings": {
       "default": {
-        "default": "Capitale latina Lettera H con Caron"
+        "default": "capitale latina Lettera H con Caron"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "0226",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina a con Dot Above"
+        "default": "lettera maiuscola latina a con Punto Sopra"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0228",
     "mappings": {
       "default": {
-        "default": "Capitale latina Lettera E con Cedilla"
+        "default": "capitale latina Lettera E con Cedilla"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "022E",
     "mappings": {
       "default": {
-        "default": "Lettera maiuscola latina O con Dot Above"
+        "default": "lettera maiuscola latina O con Punto Sopra"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "0232",
     "mappings": {
       "default": {
-        "default": "Capitale latina Lettera Y con Macron"
+        "default": "capitale latina Lettera Y con Macron"
       }
     }
   },
@@ -996,7 +996,7 @@
     "key": "1E00",
     "mappings": {
       "default": {
-        "default": "a maiuscola with ring below"
+        "default": "a maiuscola con anello sotto"
       }
     },
     "category": "Lu"
@@ -1023,7 +1023,7 @@
     "key": "1E06",
     "mappings": {
       "default": {
-        "default": "b maiuscola with line below"
+        "default": "b maiuscola con linea sotto"
       }
     },
     "category": "Lu"
@@ -1050,7 +1050,7 @@
     "key": "1E0E",
     "mappings": {
       "default": {
-        "default": "d maiuscola with line below"
+        "default": "d maiuscola con linea sotto"
       }
     },
     "category": "Lu"
@@ -1068,7 +1068,7 @@
     "key": "1E12",
     "mappings": {
       "default": {
-        "default": "d maiuscola con accento circonflesso below"
+        "default": "d maiuscola con accento circonflesso sotto"
       }
     },
     "category": "Lu"

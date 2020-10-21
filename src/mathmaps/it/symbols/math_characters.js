@@ -3,29 +3,29 @@
     "locale": "it"
   },
   {
+    "category": "Ll",
     "key": "2113",
     "mappings": {
       "default": {
-        "default": "script l"
+        "default": "script piccolo L"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
+    "category": "Sm",
     "key": "2118",
     "mappings": {
       "default": {
-        "default": "weierstrass p"
+        "default": "script P maiuscolo"
       }
-    },
-    "category": "Sm"
+    }
   },
   {
     "category": "Ll",
     "key": "213C",
     "mappings": {
       "default": {
-        "default": "Double-Struck Small Pi"
+        "default": "pi a grassetto da lavagna"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "213D",
     "mappings": {
       "default": {
-        "default": "Gamma a doppia battuta"
+        "default": "gamma a grassetto da lavagna"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "213E",
     "mappings": {
       "default": {
-        "default": "Gamma del capitale a doppia battuta"
+        "default": "gamma del capitale a grassetto da lavagna"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "213F",
     "mappings": {
       "default": {
-        "default": "Double-Struck Capital Pi"
+        "default":  "Pi maiuscolo a grassetto da lavagna"
       }
     }
   },
@@ -61,52 +61,52 @@
     "key": "2140",
     "mappings": {
       "default": {
-        "default": "Sommatoria N-Ary doppia"
+        "default": "sommatoria a grassetto da lavagna"
       }
     }
   },
   {
+    "category": "Lu",
     "key": "2145",
     "mappings": {
       "default": {
-        "default": "cap d"
+        "default": "D maiuscolo italico a grassetto da lavagna"
       }
-    },
-    "category": "Lu"
+    }
   },
   {
+    "category": "Ll",
     "key": "2146",
     "mappings": {
       "default": {
-        "default": "d"
+        "default": "d italico a grassetto da lavagna"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
+    "category": "Ll",
     "key": "2147",
     "mappings": {
       "default": {
-        "default": "e"
+        "default": "e italico a grassetto da lavagna"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
+    "category": "Ll",
     "key": "2148",
     "mappings": {
       "default": {
-        "default": "i"
+        "default": "i italico a grassetto da lavagna"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "category": "Ll",
     "key": "2149",
     "mappings": {
       "default": {
-        "default": "Italico piccolo a doppia punta"
+        "default": "j italico a grassetto da lavagna"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "1D6A4",
     "mappings": {
       "default": {
-        "default": "Matematica italica Small Dotless I"
+        "default": "i sensa punto"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "1D6A5",
     "mappings": {
       "default": {
-        "default": "Matematico Italico Piccolo Dotless J"
+        "default": "j sensa punto"
       }
     }
   }

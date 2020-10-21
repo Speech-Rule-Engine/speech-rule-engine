@@ -7,7 +7,7 @@
     "key": "1D26",
     "mappings": {
       "default": {
-        "default": "Lettera greca Small Capital Gamma"
+        "default": "Gamma maiuscola piccola"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "1D27",
     "mappings": {
       "default": {
-        "default": "Lettera greca Small Capital Lamda"
+        "default": "Lamda maiuscola piccola"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "1D28",
     "mappings": {
       "default": {
-        "default": "Lettera greca Small Capital Pi"
+        "default": "Pi maiuscola piccola"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "1D29",
     "mappings": {
       "default": {
-        "default": "Lettera greca Small Capital Rho"
+        "default": "Rho maiuscola piccola"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "1D2A",
     "mappings": {
       "default": {
-        "default": "Lettera greca Small Capital Psi"
+        "default": "Psi maiuscola piccola"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "1D5E",
     "mappings": {
       "default": {
-        "default": "Modificatore Lettera Piccola gamma greca"
+        "default": "modificatore Lettera Piccola gamma greca"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "1D60",
     "mappings": {
       "default": {
-        "default": "Modificatore Lettera Piccolo greco Phi"
+        "default": "modificatore Lettera Piccolo greco Phi"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "1D66",
     "mappings": {
       "default": {
-        "default": "Abbonamento Greco Lettera Minuta Beta"
+        "default": "abbonamento Greco Lettera Minuta Beta"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "1D67",
     "mappings": {
       "default": {
-        "default": "Sottoscrizione greca Gamma minuscola"
+        "default": "sottoscrizione greca Gamma minuscola"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "1D68",
     "mappings": {
       "default": {
-        "default": "Sottoscritto greco Piccola lettera Rho"
+        "default": "sottoscritto greco Piccola lettera Rho"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "1D69",
     "mappings": {
       "default": {
-        "default": "Sottoscritto greco Lettera Phi"
+        "default": "sottoscritto greco Lettera Phi"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "1D6A",
     "mappings": {
       "default": {
-        "default": "Sottoscritto greco Lettera minuscola"
+        "default": "sottoscritto greco Lettera minuscola"
       }
     }
   }

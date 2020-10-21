@@ -3,20 +3,20 @@
     "locale": "it"
   },
   {
+    "category": "Ll",
     "key": "210F",
     "mappings": {
       "default": {
-        "default": "h bar"
+        "default": "planck Constant Over Two Pi"
       }
-    },
-    "category": "Ll"
+    }
   },
   {
     "category": "So",
     "key": "2114",
     "mappings": {
       "default": {
-        "default": "L B Bar Symbol"
+        "default": "l B Bar Symbol"
       }
     }
   },
@@ -30,29 +30,29 @@
     "category": "So"
   },
   {
+    "category": "So",
     "key": "2117",
     "mappings": {
       "default": {
-        "default": "sound recording copyright"
+        "default": "copyright della registrazione del suono"
       }
-    },
-    "category": "So"
+    }
   },
   {
+    "category": "So",
     "key": "211E",
     "mappings": {
       "default": {
-        "default": "prescription take"
+        "default": "presa di prescrizione"
       }
-    },
-    "category": "So"
+    }
   },
   {
     "category": "So",
     "key": "211F",
     "mappings": {
       "default": {
-        "default": "Risposta"
+        "default": "risposta"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2120",
     "mappings": {
       "default": {
-        "default": "Segno di servizio"
+        "default": "segno di servizio"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2121",
     "mappings": {
       "default": {
-        "default": "Segno del telefono"
+        "default": "segno del telefono"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "212A",
     "mappings": {
       "default": {
-        "default": "Segno Kelvin"
+        "default": "segno Kelvin"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "212E",
     "mappings": {
       "default": {
-        "default": "Simbolo stimato"
+        "default": "simbolo stimato"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "2139",
     "mappings": {
       "default": {
-        "default": "Fonte di informazione"
+        "default": "fonte di informazione"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "213A",
     "mappings": {
       "default": {
-        "default": "Capitale ruotato Q"
+        "default": "capitale ruotato Q"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "213B",
     "mappings": {
       "default": {
-        "default": "Segno di facsimile"
+        "default": "segno di facsimile"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "2141",
     "mappings": {
       "default": {
-        "default": "Trasformato Sans-Serif Capitale G"
+        "default": "trasformato Sans-Serif Capitale G"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2142",
     "mappings": {
       "default": {
-        "default": "Trasformato Sans-Serif Capital L"
+        "default": "trasformato Sans-Serif Capital L"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "2143",
     "mappings": {
       "default": {
-        "default": "Capitale Sans-Serif inversa L"
+        "default": "capitale Sans-Serif inversa L"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "2144",
     "mappings": {
       "default": {
-        "default": "Svolta Sans-Serif Capital Y"
+        "default": "svolta Sans-Serif Capital Y"
       }
     }
   }

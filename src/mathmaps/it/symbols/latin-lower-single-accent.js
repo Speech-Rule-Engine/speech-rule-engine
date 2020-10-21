@@ -331,7 +331,7 @@
     "key": "0115",
     "mappings": {
       "default": {
-        "default": "Piccola lettera latina E con Breve"
+        "default": "piccola lettera latina E con Breve"
       }
     }
   },
@@ -375,7 +375,7 @@
     "key": "011F",
     "mappings": {
       "default": {
-        "default": "g with con segno di vocale corta"
+        "default": "g con segno di vocale corta"
       }
     },
     "category": "Ll"
@@ -394,7 +394,7 @@
     "key": "0123",
     "mappings": {
       "default": {
-        "default": "Latina piccola lettera G con Cedilla"
+        "default": "latina piccola lettera G con Cedilla"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "012D",
     "mappings": {
       "default": {
-        "default": "Piccola lettera latina I con breve"
+        "default": "piccola lettera latina I con breve"
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "014F",
     "mappings": {
       "default": {
-        "default": "Lettera minuscola latina O con Breve"
+        "default": "lettera minuscola latina O con Breve"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "01CE",
     "mappings": {
       "default": {
-        "default": "Piccola lettera latina a con Caron"
+        "default": "piccola lettera latina a con Caron"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "01D0",
     "mappings": {
       "default": {
-        "default": "Lettera latina I con Caron"
+        "default": "lettera latina I con Caron"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "01D2",
     "mappings": {
       "default": {
-        "default": "Lettera minuscola latina O con Caron"
+        "default": "lettera minuscola latina O con Caron"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "01D4",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "carattere latino:  lettera U con Caron"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "01E7",
     "mappings": {
       "default": {
-        "default": "Carattere latino minuscolo con Caron"
+        "default": "carattere latino minuscolo con Caron"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "01E9",
     "mappings": {
       "default": {
-        "default": "Carattere latino minuscolo K con Caron"
+        "default": "carattere latino minuscolo K con Caron"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "01EB",
     "mappings": {
       "default": {
-        "default": "Lettera minuscola latina O con Ogonek"
+        "default": "lettera minuscola latina O con Ogonek"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "01F0",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "carattere latino:  lettera J con Caron"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "01F9",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "carattere latino:  lettera N con tomba"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "0201",
     "mappings": {
       "default": {
-        "default": "Piccola lettera latina a con doppia tomba"
+        "default": "piccola lettera latina a con doppia tomba"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "0203",
     "mappings": {
       "default": {
-        "default": "Piccola lettera latina a con breve invertito"
+        "default": "piccola lettera latina a con breve invertito"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0205",
     "mappings": {
       "default": {
-        "default": "Latina piccola lettera E con doppia tomba"
+        "default": "latina piccola lettera E con doppia tomba"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0207",
     "mappings": {
       "default": {
-        "default": "Latina piccola lettera E con breve invertito"
+        "default": "latina piccola lettera E con breve invertito"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "0209",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "carattere latino:  lettera I con doppia tomba"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "020B",
     "mappings": {
       "default": {
-        "default": "Latina piccola lettera I con breve invertito"
+        "default": "latina piccola lettera I con breve invertito"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "020D",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "carattere latino:  lettera O con doppia tomba"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "020F",
     "mappings": {
       "default": {
-        "default": "Lettera latina piccola O con breve invertito"
+        "default": "lettera latina piccola O con breve invertito"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0211",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "carattere latino:  lettera R con doppia tomba"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0213",
     "mappings": {
       "default": {
-        "default": "Latina piccola lettera R con breve invertito"
+        "default": "latina piccola lettera R con breve invertito"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "0215",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "carattere latino:  lettera U con doppia tomba"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "0217",
     "mappings": {
       "default": {
-        "default": "Latina Piccola lettera U con breve invertito"
+        "default": "latina Piccola lettera U con breve invertito"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "0219",
     "mappings": {
       "default": {
-        "default": "Latina Piccola lettera S con Comma in basso"
+        "default": "latina Piccola lettera S con Comma in basso"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "021B",
     "mappings": {
       "default": {
-        "default": "Latina piccola lettera T con la virgola in basso"
+        "default": "latina piccola lettera T con la virgola in basso"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "021F",
     "mappings": {
       "default": {
-        "default": "Carattere latino"
+        "default": "carattere latino:  lettera H con caronte"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0227",
     "mappings": {
       "default": {
-        "default": "Piccola lettera latina a con punto in alto"
+        "default": "piccola lettera latina a con punto in alto"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "0229",
     "mappings": {
       "default": {
-        "default": "Latina piccola lettera E con Cedilla"
+        "default": "latina piccola lettera E con Cedilla"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "022F",
     "mappings": {
       "default": {
-        "default": "Lettera minuscola latina O con punto in alto"
+        "default": "lettera minuscola latina O con punto in alto"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "0233",
     "mappings": {
       "default": {
-        "default": "Latina piccola lettera Y con Macron"
+        "default": "latina piccola lettera Y con Macron"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "0237",
     "mappings": {
       "default": {
-        "default": "Lettera latina piccola Dotless J"
+        "default": "lettera latina piccola j sans punto"
       }
     }
   },
@@ -1014,7 +1014,7 @@
     "key": "1E01",
     "mappings": {
       "default": {
-        "default": "a with ring below"
+        "default": "a con anello sotto"
       }
     },
     "category": "Ll"
@@ -1041,7 +1041,7 @@
     "key": "1E07",
     "mappings": {
       "default": {
-        "default": "b with line below"
+        "default": "b con linea sotto"
       }
     },
     "category": "Ll"
@@ -1068,7 +1068,7 @@
     "key": "1E0F",
     "mappings": {
       "default": {
-        "default": "d with line below"
+        "default": "d con linea sotto"
       }
     },
     "category": "Ll"
@@ -1581,7 +1581,7 @@
     "key": "1E9A",
     "mappings": {
       "default": {
-        "default": "a with right half ring"
+        "default": "a con metà anello destro"
       }
     },
     "category": "Ll"
