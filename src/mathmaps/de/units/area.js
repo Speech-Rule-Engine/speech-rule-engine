@@ -1,9 +1,9 @@
 [
-  {"locale": "en"},
-  {"category": "other",
+  {"locale": "de"},
+  {"category": "area",
    "mappings": {
      "default": {
-       "default": "square"
+       "default": "Quadrat"
      }
    },
    "key": "sq",
@@ -12,7 +12,7 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square inch"
+       "default": "Quadratzoll"
      }
    },
    "key": "sq inch",
@@ -21,7 +21,7 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square rod"
+       "default": "Quadratrute"
      }
    },
    "key": "sq rd",
@@ -30,8 +30,7 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square foot",
-       "plural": "square feet"
+       "default": "Quadratfuß"
      }
    },
    "key": "sq ft",
@@ -40,7 +39,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square yard"
+       "default": "Quadratyard",
+       "plural": "Quadratyards"
      }
    },
    "key": "sq yd",
@@ -49,7 +49,7 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square mile"
+       "default": "Quadratmeile"
      }
    },
    "key": "sq mi",
@@ -58,20 +58,22 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "acre"
+       "default": "Morgen"
      }
    },
    "key": "acr",
    "names": ["ac", "ac.", "acr", "acr."]
   },
-
-  {"category": "area",
-   "mappings": {
-     "default": {
-       "default": "hectare"
-     }
-   },
-   "key": "ha",
-   "names": ["ha"]
+  {
+    "key": "ha",
+    "mappings": {
+      "default": {
+        "default": "Hektar"
+      }
+    },
+    "category": "area",
+    "names": [
+      "ha"
+    ]
   }
 ]

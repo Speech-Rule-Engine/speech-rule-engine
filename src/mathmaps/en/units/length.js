@@ -84,27 +84,8 @@
    "key": "n.m.",
    "names": ["n.m."]
   },
-
-  
   {"category": "length",
-   "mappings": {
-     "default": {
-       "default": "millimeter"
-     }
-   },
-   "key": "mm",
-   "names": ["mm"]
-  },
-  {"category": "length",
-   "mappings": {
-     "default": {
-       "default": "centimeter"
-     }
-   },
-   "key": "cm",
-   "names": ["cm"]
-  },
-  {"category": "length",
+   "si": true,
    "mappings": {
      "default": {
        "default": "meter"
@@ -112,14 +93,5 @@
    },
    "key": "m",
    "names": ["m"]
-  },
-  {"category": "length",
-   "mappings": {
-     "default": {
-       "default": "kilometer"
-     }
-   },
-   "key": "km",
-   "names": ["km"]
   }
 ]

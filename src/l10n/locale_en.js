@@ -178,6 +178,15 @@ sre.Locale.en = {
     JOINER_FRAC: ''
   },
 
+  SI: function(prefix, unit) {
+    var abbr = {
+      'megaohm': 'megohm',
+      'kiloohm': 'kilohm'
+    };
+    var si = prefix + unit;
+    return abbr[si] || si;
+  },
+
   PLURAL: function(unit) {
     return (/.*s$/.test(unit)) ? unit : unit + 's';
   },

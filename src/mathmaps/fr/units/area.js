@@ -1,9 +1,9 @@
 [
-  {"locale": "en"},
-  {"category": "other",
+  {"locale": "fr"},
+  {"category": "area",
    "mappings": {
      "default": {
-       "default": "square"
+       "default": "carrée"
      }
    },
    "key": "sq",
@@ -12,7 +12,7 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square inch"
+       "default": "pouce carré"
      }
    },
    "key": "sq inch",
@@ -21,7 +21,7 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square rod"
+       "default": "rod carré"
      }
    },
    "key": "sq rd",
@@ -30,8 +30,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square foot",
-       "plural": "square feet"
+       "default": "pied carrés",
+       "plural": "pieds carrés"
      }
    },
    "key": "sq ft",
@@ -49,7 +49,7 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square mile"
+       "default": "mile carré"
      }
    },
    "key": "sq mi",
@@ -64,7 +64,6 @@
    "key": "acr",
    "names": ["ac", "ac.", "acr", "acr."]
   },
-
   {"category": "area",
    "mappings": {
      "default": {
