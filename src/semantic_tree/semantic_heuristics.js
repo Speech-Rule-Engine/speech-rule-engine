@@ -81,7 +81,7 @@ sre.SemanticHeuristics.lookup = function(name) {
 //       or manually via a flag. Currently this is faked.
 //
 //       Heuristic paths have to be included in the tests.
-// 
+//
 /**
  * @constructor
  * @param {{predicate: function(sre.SemanticNode): boolean, method:
@@ -93,7 +93,7 @@ sre.SemanticHeuristic = function({predicate: predicate, method: method}) {
   this.apply = method;
 
   this.applicable = predicate;
-  
+
 };
 
 
@@ -121,7 +121,7 @@ sre.SemanticHeuristics.add(
     return root;
   },
    predicate: function(node) {return true;}
-   
+
   }));
 
 
@@ -166,3 +166,23 @@ sre.SemanticHeuristics.add(
       }
       return node;
     }}));
+
+
+/**
+ * Propagates the role of composed function to surrounding fences.
+ * Currently restricted to Clearspeak!
+ */
+sre.SemanticHeuristics.add(
+  'propagateComposedFunction',
+  new sre.SemanticHeuristic({
+    predicate: function(node) {
+      return sre.Engine.getInstance().domain === 'clearspeak';
+    },
+    method: function(node) {
+      if (node.type === sre.SemanticAttr.Type.FENCED &&
+          node.childNodes[0].role === sre.SemanticAttr.Role.COMPFUNC) {
+        node.role = sre.SemanticAttr.Role.COMPFUNC;
+      }
+      return node;
+    }
+  }));

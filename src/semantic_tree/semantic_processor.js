@@ -1138,7 +1138,7 @@ sre.SemanticProcessor.prototype.horizontalFencedNode_ = function(
   if (ofence.role === sre.SemanticAttr.Role.OPEN) {
     // newNode.role = sre.SemanticAttr.Role.LEFTRIGHT;
     this.classifyHorizontalFence_(newNode);
-    this.propagateComposedFunction(newNode);
+    newNode = sre.SemanticHeuristics.run('propagateComposedFunction', newNode);
   } else {
     newNode.role = ofence.role;
   }
@@ -2755,23 +2755,6 @@ sre.SemanticProcessor.MATHJAX_FONTS = {
 sre.SemanticProcessor.prototype.font = function(font) {
   var mathjaxFont = sre.SemanticProcessor.MATHJAX_FONTS[font];
   return mathjaxFont ? mathjaxFont : /** @type {sre.SemanticAttr.Font} */(font);
-};
-
-
-/**
- * Propagates the role of composed function to surrounding fences.
- * Currently restricted to Clearspeak!
- * @param {!sre.SemanticNode} node The semantic node to test.
- */
-// TODO: (MS2.3|simons): This needs to be a special annotator!
-sre.SemanticProcessor.prototype.propagateComposedFunction = function(node) {
-  if (sre.Engine.getInstance().domain !== 'clearspeak') {
-    return;
-  }
-  if (node.type === sre.SemanticAttr.Type.FENCED &&
-      node.childNodes[0].role === sre.SemanticAttr.Role.COMPFUNC) {
-    node.role = sre.SemanticAttr.Role.COMPFUNC;
-  }
 };
 
 
