@@ -91,13 +91,13 @@ sre.SemanticProcessor.prototype.identifierNode = function(leaf, font, unit) {
     // If single letter or single integer and font normal but no mathvariant
     // then this letter/number should be in italic font.
     leaf.font = sre.SemanticAttr.Font.ITALIC;
-    return leaf;
+    return sre.SemanticHeuristics.run('simpleNamedFunction', leaf);
   }
   if (leaf.type === sre.SemanticAttr.Type.UNKNOWN) {
     leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
   }
   sre.SemanticProcessor.exprFont_(leaf);
-  return leaf;
+  return sre.SemanticHeuristics.run('simpleNamedFunction', leaf);
 };
 
 

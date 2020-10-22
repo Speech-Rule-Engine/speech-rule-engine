@@ -131,7 +131,6 @@ sre.SemanticHeuristics.add(
  * with an infix operation or fraction and rewrites their role accordingly.
  * Currently restricted to Clearspeak!
  */
-// TODO: (MS2.3|simons): This needs to be a special annotator!
 sre.SemanticHeuristics.add(
   'propagateSimpleFunction',
   new sre.SemanticHeuristic({
@@ -149,3 +148,21 @@ sre.SemanticHeuristics.add(
   }));
 
 
+/**
+ * Naive name based heuristic for identifying simple functions. This is used in
+ * clearspeak only.
+ */
+sre.SemanticHeuristics.add(
+  'simpleNamedFunction',
+  new sre.SemanticHeuristic({
+    predicate: function(node) {
+      return sre.Engine.getInstance().domain === 'clearspeak';
+    },
+    method: function(node) {
+      var specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
+      if (node.role !== sre.SemanticAttr.Role.UNIT &&
+          specialFunctions.indexOf(node.textContent) !== -1) {
+        node.role = sre.SemanticAttr.Role.SIMPLEFUNC;
+      }
+      return node;
+    }}));
