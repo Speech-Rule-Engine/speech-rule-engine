@@ -538,9 +538,9 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
  */
 sre.SemanticProcessor.prototype.combineJuxtaposition_ = function(nodes) {
   var partition = sre.SemanticProcessor.partitionNodes_(
-    nodes, function(x) {
-      return x.textContent === sre.SemanticAttr.invisibleTimes();
-    });
+      nodes, function(x) {
+        return x.textContent === sre.SemanticAttr.invisibleTimes();
+      });
   if (!partition.rel.length) {
     return nodes;
   }

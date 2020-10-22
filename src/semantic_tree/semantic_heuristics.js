@@ -57,6 +57,11 @@ sre.SemanticHeuristics = function() {
 goog.addSingletonGetter(sre.SemanticHeuristics);
 
 
+/**
+ * Register a heuristic with the handler.
+ * @param {string} name The name of the heuristic.
+ * @param {sre.SemanticHeuristic} heuristic The heuristic.
+ */
 sre.SemanticHeuristics.add = function(name, heuristic) {
   sre.SemanticHeuristics.getInstance().heuristics[name] = heuristic;
   // Registered switched off, unless it is set by default.
@@ -77,33 +82,39 @@ sre.SemanticHeuristics.add = function(name, heuristic) {
 sre.SemanticHeuristics.run = function(name, root, opt_alternative) {
   var heuristic = sre.SemanticHeuristics.lookup(name);
   return heuristic &&
-    (sre.SemanticHeuristics.getInstance().flags[name] ||
-     heuristic.applicable(root)) ?
-    heuristic.apply(root) :
-    (opt_alternative ? opt_alternative(root) : root);
+      (sre.SemanticHeuristics.getInstance().flags[name] ||
+       heuristic.applicable(root)) ?
+      heuristic.apply(root) :
+      (opt_alternative ? opt_alternative(root) : root);
 };
 
 
+/**
+ * Looks up the named heuristic.
+ * @param {string} name The name of the heuristic.
+ * @return {sre.SemanticHeuristic} The heuristic.
+ */
 sre.SemanticHeuristics.lookup = function(name) {
   return sre.SemanticHeuristics.getInstance().heuristics[name];
 };
 
 
 
-// All heuristic methods get a root of a subtree and have a predicate that
-// either switches them on automatically (e.g., on selection of a domain), or
-// manually via a flag. Currently this is faked.
 //
-//       Heuristic paths have to be included in the tests.
+// TODO: Heuristic paths have to be included in the tests.
 //
 /**
+ * All heuristic methods get a root of a subtree and have a predicate that
+ * either switches them on automatically (e.g., on selection of a domain), or
+ * they can be switched on manually via a flag. Currently these flags are hard
+ * coded.
  * @constructor
  * @param {{predicate: ((function(sre.SemanticNode): boolean)|undefined),
  *          method: function(sre.SemanticNode): sre.SemanticNode} } heuristic
  *          The predicate and method of the heuristic
  */
 sre.SemanticHeuristic = function(
-  {predicate: predicate = function(node) {return false;}, method: method}) {
+    {predicate: predicate = function(node) {return false;}, method: method}) {
 
   this.apply = method;
 
