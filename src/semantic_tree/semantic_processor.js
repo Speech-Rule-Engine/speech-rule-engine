@@ -24,6 +24,7 @@
 goog.provide('sre.SemanticProcessor');
 
 goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticHeuristics');
 goog.require('sre.SemanticNodeFactory');
 goog.require('sre.SemanticPred');
 
@@ -40,9 +41,11 @@ sre.SemanticProcessor = function() {
    */
   this.factory_ = new sre.SemanticNodeFactory();
 
-  this.heuristics = {
-    SeparateInvisibleTimes: false
-  };
+  /**
+   * @type {!sre.SemanticHeuristics}
+   */
+  this.heuristics = sre.SemanticHeuristics.getInstance();
+  this.heuristics.factory = this.factory_;
 
 };
 goog.addSingletonGetter(sre.SemanticProcessor);
@@ -88,26 +91,13 @@ sre.SemanticProcessor.prototype.identifierNode = function(leaf, font, unit) {
     // If single letter or single integer and font normal but no mathvariant
     // then this letter/number should be in italic font.
     leaf.font = sre.SemanticAttr.Font.ITALIC;
-    return leaf;
+    return sre.SemanticHeuristics.run('simpleNamedFunction', leaf);
   }
   if (leaf.type === sre.SemanticAttr.Type.UNKNOWN) {
     leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
   }
   sre.SemanticProcessor.exprFont_(leaf);
-  return leaf;
-};
-
-
-/**
- * Create a branching node for an implicit operation, currently assumed to be of
- * multiplicative type. Determines mixed numbers and unit elements.
- * @param {!Array.<!sre.SemanticNode>} nodes The operands.
- * @return {!sre.SemanticNode} The new branch node.
- * @private
- */
-sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
-  return this.heuristics.SeparateInvisibleTimes ?
-    this.implicitNodePure_(nodes) : this.implicitNodeRec_(nodes);
+  return sre.SemanticHeuristics.run('simpleNamedFunction', leaf);
 };
 
 
@@ -118,7 +108,7 @@ sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
  * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
-sre.SemanticProcessor.prototype.implicitNodePure_ = function(nodes) {
+sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
   var operators = sre.SemanticProcessor.getInstance().factory_.
       makeMultipleContentNodes(nodes.length - 1,
                                sre.SemanticAttr.invisibleTimes());
@@ -129,31 +119,6 @@ sre.SemanticProcessor.prototype.implicitNodePure_ = function(nodes) {
   operators.forEach(function(op) {op.parent = newNode;});
   newNode.contentNodes = operators;
   return newNode;
-};
-
-
-/**
- * Create a branching node for an implicit operation, currently assumed to be of
- * multiplicative type. Recursively combines implicit nodes.
- * @param {!Array.<!sre.SemanticNode>} nodes The operands.
- * @return {!sre.SemanticNode} The new branch node.
- * @private
- */
-sre.SemanticProcessor.prototype.implicitNodeRec_ = function(nodes) {
-  var root = this.implicitNodePure_(nodes);
-  for (var i = root.childNodes.length - 1, child;
-       child = root.childNodes[i]; i--) {
-    if (child.role !== sre.SemanticAttr.Role.IMPLICIT) {
-      continue;
-    }
-    root.childNodes.splice.apply(root.childNodes, [i, 1].concat(child.childNodes));
-    root.contentNodes.splice.apply(root.contentNodes, [i, 1].concat(child.contentNodes));
-    child.childNodes.concat(child.contentNodes).forEach(
-      function(x) {x.parentNode = root;}
-    );
-    root.addMathmlNodes(child.mathml);
-  }
-  return root;
 };
 
 
@@ -170,7 +135,8 @@ sre.SemanticProcessor.prototype.implicitNode = function(nodes) {
   if (nodes.length === 1) {
     return nodes[0];
   }
-  return sre.SemanticProcessor.getInstance().implicitNode_(nodes);
+  var node = this.implicitNode_(nodes);
+  return sre.SemanticHeuristics.run('juxtaposition', node);
 };
 
 
@@ -186,8 +152,7 @@ sre.SemanticProcessor.prototype.infixNode_ = function(children, opNode) {
       sre.SemanticAttr.Type.INFIXOP, children, [opNode],
       sre.SemanticProcessor.getEmbellishedInner_(opNode).textContent);
   node.role = opNode.role;
-  this.propagateSimpleFunction(node);
-  return node;
+  return sre.SemanticHeuristics.run('propagateSimpleFunction', node);
 };
 
 
@@ -573,13 +538,12 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
  */
 sre.SemanticProcessor.prototype.combineJuxtaposition_ = function(nodes) {
   var partition = sre.SemanticProcessor.partitionNodes_(
-    nodes, function(x) {
-      return x.textContent === sre.SemanticAttr.invisibleTimes();
-    });
+      nodes, function(x) {
+        return x.textContent === sre.SemanticAttr.invisibleTimes();
+      });
   if (!partition.rel.length) {
     return nodes;
   }
-  // TODO: Could be the same as before?
   return this.recurseJuxtaposition_(
     partition.comp.shift(), partition.rel, partition.comp);
 };
@@ -624,7 +588,6 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
     return this.recurseJuxtaposition_(
       acc.concat([left, op, right]).concat(first), ops, elements);
   }
-  // TODO: What about propagateSimpleFunction, combineUnit, mixedNumbers?
   var result = null;
   if (left.role === sre.SemanticAttr.Role.IMPLICIT &&
       right.role === sre.SemanticAttr.Role.IMPLICIT) {
@@ -1175,7 +1138,7 @@ sre.SemanticProcessor.prototype.horizontalFencedNode_ = function(
   if (ofence.role === sre.SemanticAttr.Role.OPEN) {
     // newNode.role = sre.SemanticAttr.Role.LEFTRIGHT;
     this.classifyHorizontalFence_(newNode);
-    this.propagateComposedFunction(newNode);
+    newNode = sre.SemanticHeuristics.run('propagateComposedFunction', newNode);
   } else {
     newNode.role = ofence.role;
   }
@@ -2397,8 +2360,7 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
   }) ? sre.SemanticAttr.Role.VULGAR :
       newNode.childNodes.every(sre.SemanticPred.isPureUnit) ?
       sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
-  this.propagateSimpleFunction(newNode);
-  return newNode;
+  return sre.SemanticHeuristics.run('propagateSimpleFunction', newNode);
 };
 
 
@@ -2793,42 +2755,6 @@ sre.SemanticProcessor.MATHJAX_FONTS = {
 sre.SemanticProcessor.prototype.font = function(font) {
   var mathjaxFont = sre.SemanticProcessor.MATHJAX_FONTS[font];
   return mathjaxFont ? mathjaxFont : /** @type {sre.SemanticAttr.Font} */(font);
-};
-
-
-/**
- * Finds composed functions, i.e., simple functions that are either composed
- * with an infix operation or fraction and rewrites their role accordingly.
- * Currently restricted to Clearspeak!
- * @param {!sre.SemanticNode} node The semantic node to test.
- */
-// TODO: (MS2.3|simons): This needs to be a special annotator!
-sre.SemanticProcessor.prototype.propagateSimpleFunction = function(node) {
-  if (sre.Engine.getInstance().domain !== 'clearspeak') {
-    return;
-  }
-  if ((node.type === sre.SemanticAttr.Type.INFIXOP ||
-       node.type === sre.SemanticAttr.Type.FRACTION) &&
-      node.childNodes.every(sre.SemanticPred.isSimpleFunction)) {
-    node.role = sre.SemanticAttr.Role.COMPFUNC;
-  }
-};
-
-
-/**
- * Propagates the role of composed function to surrounding fences.
- * Currently restricted to Clearspeak!
- * @param {!sre.SemanticNode} node The semantic node to test.
- */
-// TODO: (MS2.3|simons): This needs to be a special annotator!
-sre.SemanticProcessor.prototype.propagateComposedFunction = function(node) {
-  if (sre.Engine.getInstance().domain !== 'clearspeak') {
-    return;
-  }
-  if (node.type === sre.SemanticAttr.Type.FENCED &&
-      node.childNodes[0].role === sre.SemanticAttr.Role.COMPFUNC) {
-    node.role = sre.SemanticAttr.Role.COMPFUNC;
-  }
 };
 
 

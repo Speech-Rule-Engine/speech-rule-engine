@@ -325,21 +325,11 @@ sre.SemanticMathml.prototype.text_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.identifier_ = function(node, children) {
   var newNode = this.leaf_(node, children);
-  var sem = sre.SemanticProcessor.getInstance().identifierNode(
+  return sre.SemanticProcessor.getInstance().identifierNode(
       newNode,
       sre.SemanticProcessor.getInstance().font(
       node.getAttribute('mathvariant')),
       node.getAttribute('class'));
-  // TODO: (MS2.3|simons) Handle this separately in an additional parser:
-  if (sre.Engine.getInstance().domain !== 'clearspeak') {
-    return sem;
-  }
-  var specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
-  if (sem.role !== sre.SemanticAttr.Role.UNIT &&
-      specialFunctions.indexOf(sem.textContent) !== -1) {
-    sem.role = sre.SemanticAttr.Role.SIMPLEFUNC;
-  }
-  return sem;
 };
 
 
