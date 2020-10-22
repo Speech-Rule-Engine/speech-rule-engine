@@ -4399,7 +4399,7 @@
     "key": "29DC",
     "mappings": {
       "default": {
-        "default": "infinito incompleto :  isotech entity & iinfin;"
+        "default": "infinito incompleto :  isotech entity"
       }
     }
   },
