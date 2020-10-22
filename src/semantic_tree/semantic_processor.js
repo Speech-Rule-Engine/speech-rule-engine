@@ -24,6 +24,7 @@
 goog.provide('sre.SemanticProcessor');
 
 goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticHeuristics');
 goog.require('sre.SemanticNodeFactory');
 goog.require('sre.SemanticPred');
 
@@ -40,11 +41,11 @@ sre.SemanticProcessor = function() {
    */
   this.factory_ = new sre.SemanticNodeFactory();
 
-  this.heuristics = {
-    SeparateInvisibleTimes: false
-  };
-  // this.heuristics = sre.SemanticHeuristics.getInstance();
-  // this.heuristics.factory = this.factory_;
+  /**
+   * @type {!sre.SemanticHeuristics}
+   */
+  this.heuristics = sre.SemanticHeuristics.getInstance();
+  this.heuristics.factory = this.factory_;
 
 };
 goog.addSingletonGetter(sre.SemanticProcessor);
@@ -122,31 +123,6 @@ sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
 
 
 /**
- * Create a branching node for an implicit operation, currently assumed to be of
- * multiplicative type. Recursively combines implicit nodes for the given root
- * node of a subtree.
- * @param {!sre.SemanticNode} root The root of the subtree.
- * @return {!sre.SemanticNode} The new branch node.
- * @private
- */
-sre.SemanticProcessor.prototype.implicitNodeRec_ = function(root) {
-  for (var i = root.childNodes.length - 1, child;
-       child = root.childNodes[i]; i--) {
-    if (child.role !== sre.SemanticAttr.Role.IMPLICIT) {
-      continue;
-    }
-    root.childNodes.splice.apply(root.childNodes, [i, 1].concat(child.childNodes));
-    root.contentNodes.splice.apply(root.contentNodes, [i, 1].concat(child.contentNodes));
-    child.childNodes.concat(child.contentNodes).forEach(
-      function(x) {x.parentNode = root;}
-    );
-    root.addMathmlNodes(child.mathml);
-  }
-  return root;
-};
-
-
-/**
  * Process a list of nodes and create a node for implicit operations, currently
  * assumed to be of multiplicative type. Determines mixed numbers and unit
  * elements.
@@ -160,8 +136,7 @@ sre.SemanticProcessor.prototype.implicitNode = function(nodes) {
     return nodes[0];
   }
   var node = this.implicitNode_(nodes);
-  return this.heuristics.SeparateInvisibleTimes ? node :
-    this.implicitNodeRec_(node);
+  return sre.SemanticHeuristics.run('juxtaposition', node);
 };
 
 
@@ -177,8 +152,7 @@ sre.SemanticProcessor.prototype.infixNode_ = function(children, opNode) {
       sre.SemanticAttr.Type.INFIXOP, children, [opNode],
       sre.SemanticProcessor.getEmbellishedInner_(opNode).textContent);
   node.role = opNode.role;
-  this.propagateSimpleFunction(node);
-  return node;
+  return sre.SemanticHeuristics.run('propagateSimpleFunction', node);
 };
 
 
@@ -570,7 +544,6 @@ sre.SemanticProcessor.prototype.combineJuxtaposition_ = function(nodes) {
   if (!partition.rel.length) {
     return nodes;
   }
-  // TODO: Could be the same as before?
   return this.recurseJuxtaposition_(
     partition.comp.shift(), partition.rel, partition.comp);
 };
@@ -2387,8 +2360,7 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
   }) ? sre.SemanticAttr.Role.VULGAR :
       newNode.childNodes.every(sre.SemanticPred.isPureUnit) ?
       sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
-  this.propagateSimpleFunction(newNode);
-  return newNode;
+  return sre.SemanticHeuristics.run('propagateSimpleFunction', newNode);
 };
 
 
@@ -2783,25 +2755,6 @@ sre.SemanticProcessor.MATHJAX_FONTS = {
 sre.SemanticProcessor.prototype.font = function(font) {
   var mathjaxFont = sre.SemanticProcessor.MATHJAX_FONTS[font];
   return mathjaxFont ? mathjaxFont : /** @type {sre.SemanticAttr.Font} */(font);
-};
-
-
-/**
- * Finds composed functions, i.e., simple functions that are either composed
- * with an infix operation or fraction and rewrites their role accordingly.
- * Currently restricted to Clearspeak!
- * @param {!sre.SemanticNode} node The semantic node to test.
- */
-// TODO: (MS2.3|simons): This needs to be a special annotator!
-sre.SemanticProcessor.prototype.propagateSimpleFunction = function(node) {
-  if (sre.Engine.getInstance().domain !== 'clearspeak') {
-    return;
-  }
-  if ((node.type === sre.SemanticAttr.Type.INFIXOP ||
-       node.type === sre.SemanticAttr.Type.FRACTION) &&
-      node.childNodes.every(sre.SemanticPred.isSimpleFunction)) {
-    node.role = sre.SemanticAttr.Role.COMPFUNC;
-  }
 };
 
 
