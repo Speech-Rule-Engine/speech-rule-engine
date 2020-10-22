@@ -45,12 +45,24 @@ sre.SemanticHeuristics = function() {
    */
   this.heuristics = { };
 
+
+  /**
+   * @type {Object.<boolean>}
+   */
+  this.flags = {
+    juxtaposition: true
+  };
+
 };
 goog.addSingletonGetter(sre.SemanticHeuristics);
 
 
 sre.SemanticHeuristics.add = function(name, heuristic) {
   sre.SemanticHeuristics.getInstance().heuristics[name] = heuristic;
+  // Registered switched off, unless it is set by default.
+  if (!sre.SemanticHeuristics.getInstance().flags[name]) {
+    sre.SemanticHeuristics.getInstance().flags[name] = false;
+  }
 };
 
 
@@ -64,7 +76,9 @@ sre.SemanticHeuristics.add = function(name, heuristic) {
  */
 sre.SemanticHeuristics.run = function(name, root, opt_alternative) {
   var heuristic = sre.SemanticHeuristics.lookup(name);
-  return heuristic && heuristic.applicable(root) ?
+  return heuristic &&
+    (sre.SemanticHeuristics.getInstance().flags[name] ||
+     heuristic.applicable(root)) ?
     heuristic.apply(root) :
     (opt_alternative ? opt_alternative(root) : root);
 };
@@ -76,19 +90,20 @@ sre.SemanticHeuristics.lookup = function(name) {
 
 
 
-// TODO: All heuristic methods get a root of a subtree and have a predicate that
-//       either switches them on automatically (e.g., on selection of a domain),
-//       or manually via a flag. Currently this is faked.
+// All heuristic methods get a root of a subtree and have a predicate that
+// either switches them on automatically (e.g., on selection of a domain), or
+// manually via a flag. Currently this is faked.
 //
 //       Heuristic paths have to be included in the tests.
 //
 /**
  * @constructor
- * @param {{predicate: function(sre.SemanticNode): boolean, method:
- *          function(sre.SemanticNode): sre.SemanticNode} } heuristic The
- *          predicate and method of the heuristic
+ * @param {{predicate: ((function(sre.SemanticNode): boolean)|undefined),
+ *          method: function(sre.SemanticNode): sre.SemanticNode} } heuristic
+ *          The predicate and method of the heuristic
  */
-sre.SemanticHeuristic = function({predicate: predicate, method: method}) {
+sre.SemanticHeuristic = function(
+  {predicate: predicate = function(node) {return false;}, method: method}) {
 
   this.apply = method;
 
@@ -119,9 +134,7 @@ sre.SemanticHeuristics.add(
       root.addMathmlNodes(child.mathml);
     }
     return root;
-  },
-   predicate: function(node) {return true;}
-
+  }
   }));
 
 
