@@ -184,15 +184,6 @@ sre.SummaryFrench = {
      ' children/*/descendant-or-self::root'
     ],
 
-    // Content following the root expression.
-    ['Rule',
-     'abstr-root', 'default.default',
-     '[t] "racine d\'indice"; ' +
-     '[n] children/*[1] (engine:modality="speech"); [t] "fin indice"; ' +
-     '[n] . (grammar:gender="female");',
-     'self::root', 'contains(@grammar, "collapsed")',
-     'following-sibling::* or ancestor::*/following-sibling::*'
-    ],
     ['Rule',
      'abstr-root', 'default.default',
      '[t] "racine d\'indice"; [n] children/*[1] (engine:modality=speech); ' +
@@ -206,17 +197,6 @@ sre.SummaryFrench = {
     ],
     ['SpecializedRule',
      'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
-    ],
-    // Content following the root expression.
-    ['Rule',
-     'abstr-root-nested', 'default.default',
-     '[t] "racine imbriquée d\'indice"; ' +
-     '[n] children/*[1] (engine:modality=speech);' +
-     ' [t] "fin indice"; [n] . (grammar:gender="female");',
-     'self::root', 'contains(@grammar, "collapsed")',
-     'children/*/descendant-or-self::sqrt or' +
-     ' children/*/descendant-or-self::root',
-     'following-sibling::* or ancestor::*/following-sibling::*'
     ],
     ['Rule',
      'abstr-root-nested', 'default.default',

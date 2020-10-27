@@ -31,7 +31,7 @@ sre.PrefixFrench = {
   modality: 'prefix',
   domain: 'default',
   functions: [
-    ['CSF', 'CSFordinalPosition', sre.NumbersUtil.ordinalPosition],
+    ['CSF', 'CSFordinalPosition', sre.NumbersUtil.ordinalPosition]
   ],
   rules: [
     ['Rule',
