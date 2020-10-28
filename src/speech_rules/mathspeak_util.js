@@ -848,9 +848,9 @@ sre.MathspeakUtil.generateTensorRules = function(store) {
     verbStr += '; [t]' + baselineStr + 'Verbose';
     briefStr += '; [t]' + baselineStr + 'Brief';
     name = name + '-baseline';
-    var cstr = '(.//*[not(*)])[last()]!=((.//ancestor::fraction|' +
+    var cstr = '((.//*[not(*)])[last()]/@id)!=(((.//ancestor::fraction|' +
         'ancestor::root|ancestor::sqrt|ancestor::cell|ancestor::line|' +
-        'ancestor::stree)[1]//*[not(*)])[last()]';
+        'ancestor::stree)[1]//*[not(*)])[last()]/@id)';
     verbList = [name, 'default', verbStr, 'self::tensor', cstr].
         concat(components);
     briefList = [name, 'brief', briefStr, 'self::tensor', cstr].

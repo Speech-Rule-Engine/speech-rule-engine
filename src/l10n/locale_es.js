@@ -53,7 +53,7 @@ sre.Locale.es = {
     SUPERSCRIPT: 'superíndice',
     SUBSCRIPT: 'subíndice',
     BASELINE: 'línea base',
-    BASE: '',
+    BASE: 'base',
     NESTED: '',
     NEST_ROOT: '',
     STARTROOT: 'empezar raíz',
