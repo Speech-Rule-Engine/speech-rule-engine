@@ -473,6 +473,24 @@
     }
   },
   {
+    "key": "02B9",
+    "mappings": {
+      "default": {
+        "default": "Strich"
+      }
+    },
+    "category": "Lm"
+  },
+  {
+    "key": "02BA",
+    "mappings": {
+      "default": {
+        "default": "zwei Strich"
+      }
+    },
+    "category": "Lm"
+  },
+  {
     "key": "02D8",
     "mappings": {
       "default": {
