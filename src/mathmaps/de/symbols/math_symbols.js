@@ -60,7 +60,7 @@
     "key": "0027",
     "mappings": {
       "default": {
-        "default": "Hochkomma"
+        "default": "Strich"
       }
     },
     "category": "Po"
@@ -1088,7 +1088,7 @@
     "key": "2057",
     "mappings": {
       "default": {
-        "default": "quadruple prime"
+        "default": "vier Strich"
       }
     },
     "category": "Po"

@@ -21,7 +21,6 @@
 goog.provide('sre.ClearspeakRules');
 
 goog.require('sre.ClearspeakUtil');
-goog.require('sre.Grammar');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
@@ -2340,7 +2339,3 @@ sre.ClearspeakRules = {
   ],
   initialize: [sre.ClearspeakUtil.addAnnotators]
 };
-
-
-sre.Grammar.getInstance().setPreprocessor('numbers2alpha',
-                                          sre.ClearspeakUtil.numbersToAlpha);
