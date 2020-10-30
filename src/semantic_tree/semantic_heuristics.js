@@ -50,7 +50,8 @@ sre.SemanticHeuristics = function() {
    * @type {Object.<boolean>}
    */
   this.flags = {
-    juxtaposition: true
+    juxtaposition: true,
+    multioperator: true
   };
 
 };
@@ -210,3 +211,34 @@ sre.SemanticHeuristics.add(
       return node;
     }
   }));
+
+
+sre.SemanticHeuristics.add(
+  'multioperator',
+  new sre.SemanticHeuristic({
+    method: function(node) {
+      if (node.role !== sre.SemanticAttr.Role.UNKNOWN ||
+          node.textContent.length <= 1) {
+        return;
+      }
+      // TODO: Combine with lines in numberRole_/exprFont_?
+      var content = sre.SemanticUtil.splitUnicode(node.textContent);
+      var meaning = content.map(sre.SemanticAttr.lookupMeaning);
+      var singleRole = meaning.reduce(
+        function(prev, curr) {
+          if (!prev || !curr.role ||
+              curr.role === sre.SemanticAttr.Role.UNKNOWN ||
+              curr.role === prev) {
+            return prev;
+          }
+          if (prev === sre.SemanticAttr.Role.UNKNOWN) {
+            return curr.role;
+          }
+          return null;
+        },
+        sre.SemanticAttr.Role.UNKNOWN);
+      if (singleRole) {
+        node.role = singleRole;
+      }
+    }})
+);

@@ -3028,3 +3028,11 @@ sre.SemanticProcessor.separateSemantics = function(attr) {
       });
   return result;
 };
+
+
+sre.SemanticProcessor.prototype.operatorNode = function(node) {
+  if (node.type === sre.SemanticAttr.Type.UNKNOWN) {
+    node.type = sre.SemanticAttr.Type.OPERATOR;
+  }
+  return sre.SemanticHeuristics.run('multioperator', node);
+};

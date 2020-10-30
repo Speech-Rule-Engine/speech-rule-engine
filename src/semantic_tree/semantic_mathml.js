@@ -356,9 +356,7 @@ sre.SemanticMathml.prototype.number_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.operator_ = function(node, children) {
   var newNode = this.leaf_(node, children);
-  if (newNode.type === sre.SemanticAttr.Type.UNKNOWN) {
-    newNode.type = sre.SemanticAttr.Type.OPERATOR;
-  }
+  sre.SemanticProcessor.getInstance().operatorNode(newNode);
   return newNode;
 };
 
