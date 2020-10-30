@@ -118,13 +118,24 @@ sre.BaseRuleStore.prototype.lookupRule = function(node, dynamic) {
        node.nodeType != sre.DomUtil.NodeType.TEXT_NODE)) {
     return null;
   }
-  var matchingRules = this.trie.lookupRules(node, dynamic.allProperties());
+  var matchingRules = this.lookupRules(node, dynamic);
   return (matchingRules.length > 0) ?
       this.pickMostConstraint_(dynamic, matchingRules) : null;
 };
 
 
 /**
+ * Retrieves a rule for the given node if one exists.
+ * @param {Node} node A node.
+ * @param {!sre.DynamicCstr} dynamic Additional dynamic
+ *     constraints. These are matched against properties of a rule.
+ * @return {sre.SpeechRule} The actions of the speech rule if it exists.
+ */
+sre.BaseRuleStore.prototype.lookupRules = function(node, dynamic) {
+  return this.trie.lookupRules(node, dynamic.allProperties());
+};
+
+  /**
  * @override
  */
 sre.BaseRuleStore.prototype.defineRule = function(
