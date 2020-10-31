@@ -125,11 +125,11 @@ sre.BaseRuleStore.prototype.lookupRule = function(node, dynamic) {
 
 
 /**
- * Retrieves a rule for the given node if one exists.
- * @param {Node} node A node.
+ * Retrieves a list of applicable rule for the given node.
+ * @param {!Node} node A node.
  * @param {!sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
- * @return {sre.SpeechRule} The actions of the speech rule if it exists.
+ * @return {Array.<sre.SpeechRule>} All applicable speech rules.
  */
 sre.BaseRuleStore.prototype.lookupRules = function(node, dynamic) {
   return this.trie.lookupRules(node, dynamic.allProperties());

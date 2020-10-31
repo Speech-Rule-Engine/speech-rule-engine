@@ -432,7 +432,7 @@ sre.SummarySpanish = {
     ],
     ['Rule',
      'abstr-var-punctuated', 'default.default',
-     '[t] "lista separada por"; [n] content/*[1]',
+     '[t] "lista separada por"; [n] content/*[1];' +
      '[t] "de longitud variable"',
      'self::punctuated',
      './children/punctuation[@role="ellipsis"]'
