@@ -964,11 +964,6 @@ sre.MathspeakGerman = {
 
     // Layout Elements
     ['Rule',
-      'matrix-fence', 'default',
-      '[n] children/*[1];',
-      'self::fenced', 'count(children/*)=1', 'name(children/*[1])="matrix"'],
-
-    ['Rule',
       'matrix', 'default',
       '[t] "Anfang"; [t] count(children/*);  [t] "mal";' +
      '[t] count(children/*[1]/children/*); [t] "Matrize"; ' +

@@ -120,7 +120,7 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'protected', 'default', '[t] text()',
-     'self::*', '@role="protected"'],
+     'self::number', 'contains(@grammar, "protected")'],
 
     ['Rule',
      'omit-empty', 'default',
@@ -176,7 +176,8 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'number-with-chars', 'default',
-     '[t] "nombre"; [m] CQFspaceoutNumber', 'self::number',
+     '[t] "nombre"; [m] CQFspaceoutNumber (grammar:protected)',
+      'self::number', '@role="othernumber"',
      '"" != translate(text(), "0123456789.,", "")',
      'text() != translate(text(), "0123456789.,", "")'],
 
@@ -972,11 +973,6 @@ sre.MathspeakFrench = {
     // ],
 
     // Layout Elements
-    ['Rule',
-     'matrix-fence', 'default',
-     '[n] children/*[1];',
-     'self::fenced', 'count(children/*)=1', 'name(children/*[1])="matrix"'],
-
     ['Rule',
      'matrix', 'default',
      '[t] "début matrice"; [t] count(children/*);  [t] "par";' +

@@ -943,11 +943,6 @@ sre.MathspeakSpanish = {
 
     // Layout Elements
     ['Rule',
-     'matrix-fence', 'default',
-     '[n] children/*[1];',
-     'self::fenced', 'count(children/*)=1', 'name(children/*[1])="matrix"'],
-
-    ['Rule',
      'matrix', 'default',
      '[t] "empezar matriz"; [t] count(children/*);  [t] "por";' +
      '[t] count(children/*[1]/children/*); ' +
