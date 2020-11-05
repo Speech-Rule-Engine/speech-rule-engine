@@ -1400,6 +1400,8 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
   }
   
   if (sre.SemanticPred.isLimitBase(center)) {
+    // TODO: Heuristic for improved accent handling.
+    //
     // Limit nodes only the number of children has to be restricted.
     var result = sre.SemanticProcessor.MML_TO_LIMIT_[mmlTag];
     type = result.type;

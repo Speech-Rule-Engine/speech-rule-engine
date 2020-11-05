@@ -137,6 +137,7 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
   children = sre.SemanticUtil.purgeNodes(children);
   // Single child node, i.e. the row is meaningless.
   if (children.length === 1) {
+    // TODO: Collate external attributes!
     var newNode = this.parse(children[0]);
   } else {
     // Case of a 'meaningful' row, even if they are empty.

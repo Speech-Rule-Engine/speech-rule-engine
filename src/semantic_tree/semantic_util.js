@@ -286,6 +286,7 @@ sre.SemanticUtil.directSpeechKeys = ['aria-label', 'exact-speech', 'alt'];
  * @param {Node} from The source node.
  */
 sre.SemanticUtil.addAttributes = function(to, from) {
+  // TODO: Propagate external attributes from singleton mrow-like elements.
   if (from.hasAttributes()) {
     var attrs = from.attributes;
     for (var i = attrs.length - 1; i >= 0; i--) {
@@ -293,8 +294,12 @@ sre.SemanticUtil.addAttributes = function(to, from) {
       if (key.match(/^ext/)) {
         to.attributes[key] = attrs[i].value;
       }
+      console.log(key);
       if (sre.SemanticUtil.directSpeechKeys.indexOf(key) !== -1) {
         to.attributes['ext-speech'] = attrs[i].value;
+      }
+      if (key.match(/texclass$/)) {
+        to.attributes['texclass'] = attrs[i].value;
       }
     }
   }
