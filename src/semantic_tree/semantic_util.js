@@ -294,7 +294,6 @@ sre.SemanticUtil.addAttributes = function(to, from) {
       if (key.match(/^ext/)) {
         to.attributes[key] = attrs[i].value;
       }
-      console.log(key);
       if (sre.SemanticUtil.directSpeechKeys.indexOf(key) !== -1) {
         to.attributes['ext-speech'] = attrs[i].value;
       }
