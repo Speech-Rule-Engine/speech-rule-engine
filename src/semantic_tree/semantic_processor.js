@@ -1506,6 +1506,20 @@ sre.SemanticProcessor.prototype.accentNode_ = function(
  */
 sre.SemanticProcessor.prototype.makeLimitNode_ = function(
   center, children, innerNode, type) {
+  // These two conditions implement the limitboth heuristic, which works before
+  // a new node is created.
+  if (type === sre.SemanticAttr.Type.LIMUPPER &&
+      center.type === sre.SemanticAttr.Type.LIMLOWER) {
+    center.childNodes.push(children[1]);
+    center.type = sre.SemanticAttr.Type.LIMBOTH;
+    return center;
+  }
+  if (type === sre.SemanticAttr.Type.LIMLOWER &&
+      center.type === sre.SemanticAttr.Type.LIMUPPER) {
+    center.childNodes.splice(1, -1, children[1]);
+    center.type = sre.SemanticAttr.Type.LIMBOTH;
+    return center;
+  }
   var newNode = sre.SemanticProcessor.getInstance().factory_.
       makeBranchNode(type, children, []);
   var embellished = sre.SemanticPred.isEmbellished(center);
