@@ -363,7 +363,11 @@ sre.SemanticPred.isLimitBase = function(node) {
       sre.SemanticPred.isAttribute('type', 'LIMLOWER')(node) ||
       sre.SemanticPred.isAttribute('type', 'LIMUPPER')(node) ||
       (sre.SemanticPred.isAttribute('type', 'FUNCTION')(node) &&
-      sre.SemanticPred.isAttribute('role', 'LIMFUNC')(node));
+       sre.SemanticPred.isAttribute('role', 'LIMFUNC')(node)) ||
+      ((sre.SemanticPred.isAttribute('type', 'OVERSCORE')(node) ||
+        sre.SemanticPred.isAttribute('type', 'UNDERSCORE')(node)) &&
+       sre.SemanticPred.isLimitBase(
+         /** @type {!sre.SemanticNode} */(node.childNodes[0])));
 };
 
 
