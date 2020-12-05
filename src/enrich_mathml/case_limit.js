@@ -52,8 +52,6 @@ goog.inherits(sre.CaseLimit, sre.AbstractEnrichCase);
  * @return {boolean} True if case is applicable.
  */
 sre.CaseLimit.test = function(semantic) {
-  // console.log(semantic.type);
-  // console.log(semantic.mathmlTree);
   if (!semantic.mathmlTree || !semantic.childNodes.length) {
     return false;
   }
@@ -90,7 +88,6 @@ sre.CaseLimit.prototype.getMathml = function() {
  */
 sre.CaseLimit.walkTree_ = function(node) {
   if (node) {
-    console.log(node.parent);
     sre.EnrichMathml.walkTree(/** @type{!sre.SemanticNode} */(node));
   }
 };
