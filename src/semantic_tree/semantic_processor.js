@@ -1511,12 +1511,14 @@ sre.SemanticProcessor.prototype.makeLimitNode_ = function(
   if (type === sre.SemanticAttr.Type.LIMUPPER &&
       center.type === sre.SemanticAttr.Type.LIMLOWER) {
     center.childNodes.push(children[1]);
+    children[1].parent = center;
     center.type = sre.SemanticAttr.Type.LIMBOTH;
     return center;
   }
   if (type === sre.SemanticAttr.Type.LIMLOWER &&
       center.type === sre.SemanticAttr.Type.LIMUPPER) {
     center.childNodes.splice(1, -1, children[1]);
+    children[1].parent = center;
     center.type = sre.SemanticAttr.Type.LIMBOTH;
     return center;
   }
