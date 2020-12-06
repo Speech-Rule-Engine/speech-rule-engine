@@ -57,9 +57,9 @@ sre.CaseLimit.test = function(semantic) {
   }
   var mmlTag = sre.DomUtil.tagName(semantic.mathmlTree);
   var type = semantic.type;
-  return (type === sre.SemanticAttr.Type.LIMUPPER ||
+  return ((type === sre.SemanticAttr.Type.LIMUPPER ||
            type === sre.SemanticAttr.Type.LIMLOWER) &&
-    (mmlTag === 'MSUBSUP' || mmlTag === 'MUNDEROVER') ||
+          (mmlTag === 'MSUBSUP' || mmlTag === 'MUNDEROVER')) ||
     (type === sre.SemanticAttr.Type.LIMBOTH &&
      (mmlTag === 'MSUB' || mmlTag === 'MUNDER' ||
       mmlTag === 'MSUP' || mmlTag === 'MOVER'));
@@ -71,8 +71,10 @@ sre.CaseLimit.test = function(semantic) {
  */
 sre.CaseLimit.prototype.getMathml = function() {
   let children = this.semantic.childNodes;
-  // TODO: This layer is not always necessary!
-  if (this.semantic.type !== sre.SemanticAttr.Type.LIMBOTH) {
+  if (this.semantic.type !== sre.SemanticAttr.Type.LIMBOTH &&
+      this.mml.childNodes.length >= 3) {
+    // Extra layer only necessary if a split upper/lower script. Second
+    // condition excludes incomplete elements.
     this.mml = sre.EnrichMathml.introduceNewLayer([this.mml]);
   }
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
