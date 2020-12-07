@@ -1400,49 +1400,127 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
   }
   
   if (sre.SemanticPred.isLimitBase(center)) {
-    // Limit nodes only the number of children has to be restricted.
     var result = sre.SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+    var length = result.length;
     type = result.type;
     children = children.slice(0, result.length + 1);
-    if (result.length === 2 && !children[result.length]) {
-      type = sre.SemanticAttr.Type.LIMLOWER;
+    // Heuristic to deal with accents around limit functions/operators.
+    if ((length === 1 && sre.SemanticPred.isAccent(children[1])) ||
+        (length === 2 && sre.SemanticPred.isAccent(children[1]) &&
+         sre.SemanticPred.isAccent(children[2]))) {
+      result = sre.SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+      return this.accentNode_(center, children,
+                              result.type, result.length, result.accent);
     }
-  } else {
-    // We either have an indexed, stacked or accented expression.
-    result = sre.SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
-    type = result.type;
-    children = children.slice(0, result.length + 1);
-    if (!result.accent && children[2]) {
-      // For indexed we only have to nest if we have two children.
-      var innerNode = sre.SemanticProcessor.getInstance().factory_.
-          makeBranchNode(sre.SemanticAttr.Type.SUBSCRIPT,
-                         [center, children[1]], []);
-      innerNode.role = sre.SemanticAttr.Role.SUBSUP;
-      children = [innerNode, children[2]];
-      type = sre.SemanticAttr.Type.SUPERSCRIPT;
-    }
-    if (result.accent) {
-      // Check if we have stacked or accented expressions (or mix).
-      let underAccent = this.accentRole_(children[1], type);
-      if (children[2]) {
-        let overAccent = this.accentRole_(children[2],
-                                          sre.SemanticAttr.Type.OVERSCORE);
-        if (overAccent && !underAccent) {
-          innerNode = sre.SemanticProcessor.getInstance().factory_.
-            makeBranchNode(
-              sre.SemanticAttr.Type.OVERSCORE, [center, children[2]], []);
-          children = [innerNode, children[1]];
-          type = sre.SemanticAttr.Type.UNDERSCORE;
-        } else {
-          innerNode = sre.SemanticProcessor.getInstance().factory_.
-            makeBranchNode(
-              sre.SemanticAttr.Type.UNDERSCORE, [center, children[1]], []);
-          children = [innerNode, children[2]];
-          type = sre.SemanticAttr.Type.OVERSCORE;
-        }
-        innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
+    if (length === 2) {
+      if (sre.SemanticPred.isAccent(children[1])) {
+        center = this.accentNode_(
+          center, [center, children[1]],
+          {'MSUBSUP': sre.SemanticAttr.Type.SUBSCRIPT,
+           'MUNDEROVER': sre.SemanticAttr.Type.UNDERSCORE}[mmlTag], 1, true);
+        return !children[2] ? center :
+          this.makeLimitNode_(center, [center, children[2]], null,
+                              sre.SemanticAttr.Type.LIMUPPER);
+      }
+      if (children[2] && sre.SemanticPred.isAccent(children[2])) {
+        center = this.accentNode_(
+          center, [center, children[2]],
+          {'MSUBSUP': sre.SemanticAttr.Type.SUPERSCRIPT,
+           'MUNDEROVER': sre.SemanticAttr.Type.OVERSCORE}[mmlTag], 1, true);
+        return this.makeLimitNode_(center, [center, children[1]], null,
+                                   sre.SemanticAttr.Type.LIMLOWER);
+      }
+      // Limit nodes only the number of children has to be restricted.
+      if (!children[length]) {
+        type = sre.SemanticAttr.Type.LIMLOWER;
       }
     }
+    return this.makeLimitNode_(center, children, null, type);
+  }
+  // We either have an indexed, stacked or accented expression.
+  result = sre.SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+  return this.accentNode_(center, children,
+                          result.type, result.length, result.accent);
+};
+
+
+/**
+ * Creates an accent style node or sub/superscript depending on the given type.
+ * @param {!sre.SemanticNode} center The inner center node.
+ * @param {!Array.<sre.SemanticNode>} children All children, where center is
+ *     first node.
+ * @param {sre.SemanticAttr.Type} type The new node type.
+ * @param {number} length The exact length for the given type. This is important
+ *     in case not enough children exist, then the type has to be changed.
+ * @param {boolean} accent Is this an accent node?
+ * @return {!sre.SemanticNode} The newly created node. 
+ */
+sre.SemanticProcessor.prototype.accentNode_ = function(
+  center, children, type, length, accent) {
+  children = children.slice(0, length + 1);
+  var child1 = /** @type {!sre.SemanticNode} */(children[1]);
+  var child2 = children[2];
+  if (!accent && child2) {
+    // For indexed we only have to nest if we have two children.
+    var innerNode = sre.SemanticProcessor.getInstance().factory_.
+        makeBranchNode(sre.SemanticAttr.Type.SUBSCRIPT,
+                       [center, child1], []);
+    innerNode.role = sre.SemanticAttr.Role.SUBSUP;
+    children = [innerNode, child2];
+    type = sre.SemanticAttr.Type.SUPERSCRIPT;
+  }
+  if (accent) {
+    // Check if we have stacked or accented expressions (or mix).
+    let underAccent = this.accentRole_(child1, type);
+    if (child2) {
+      let overAccent = this.accentRole_(child2,
+                                        sre.SemanticAttr.Type.OVERSCORE);
+      if (overAccent && !underAccent) {
+        innerNode = sre.SemanticProcessor.getInstance().factory_.
+          makeBranchNode(
+            sre.SemanticAttr.Type.OVERSCORE, [center, child2], []);
+        children = [innerNode, child1];
+        type = sre.SemanticAttr.Type.UNDERSCORE;
+      } else {
+        innerNode = sre.SemanticProcessor.getInstance().factory_.
+          makeBranchNode(
+            sre.SemanticAttr.Type.UNDERSCORE, [center, child1], []);
+        children = [innerNode, child2];
+        type = sre.SemanticAttr.Type.OVERSCORE;
+      }
+      innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
+    }
+  }
+  return this.makeLimitNode_(center, children, innerNode, type);
+};
+
+
+/**
+ * Creates the actual limit node.
+ * @param {!sre.SemanticNode} center The inner center node.
+ * @param {!Array.<sre.SemanticNode>} children All children, where center is
+ *     first node.
+ * @param {sre.SemanticNode|undefined} innerNode The innermost node if it exists.
+ * @param {sre.SemanticAttr.Type} type The new node type.
+ * @return {!sre.SemanticNode} The newly created limit node. 
+ */
+sre.SemanticProcessor.prototype.makeLimitNode_ = function(
+  center, children, innerNode, type) {
+  // These two conditions implement the limitboth heuristic, which works before
+  // a new node is created.
+  if (type === sre.SemanticAttr.Type.LIMUPPER &&
+      center.type === sre.SemanticAttr.Type.LIMLOWER) {
+    center.childNodes.push(children[1]);
+    children[1].parent = center;
+    center.type = sre.SemanticAttr.Type.LIMBOTH;
+    return center;
+  }
+  if (type === sre.SemanticAttr.Type.LIMLOWER &&
+      center.type === sre.SemanticAttr.Type.LIMUPPER) {
+    center.childNodes.splice(1, -1, children[1]);
+    children[1].parent = center;
+    center.type = sre.SemanticAttr.Type.LIMBOTH;
+    return center;
   }
   var newNode = sre.SemanticProcessor.getInstance().factory_.
       makeBranchNode(type, children, []);
@@ -1453,6 +1531,7 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
   newNode.embellished = embellished;
   newNode.role = center.role;
   return newNode;
+  
 };
 
 
