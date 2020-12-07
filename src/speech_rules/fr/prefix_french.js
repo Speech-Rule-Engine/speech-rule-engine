@@ -47,15 +47,21 @@ sre.PrefixFrench = {
     ['Rule',
      'base', 'default',
      '[t] "base"; [p] (pause:200)',
-     'self::*', 'name(../..)="superscript" or name(../..)="subscript"' +
-     ' or name(../..)="overscore" or name(../..)="underscore"' +
-     ' or name(../..)="tensor" or name(../..)="limlower"' +
-     ' or name(../..)="limupper"',
-     'count(preceding-sibling::*)=0'],
-    ['Rule', // New Additions
-     'base-limit', 'default',
-     '[t] "base"; [p] (pause:200)',
-     'self::*', 'name(../..)="limboth"'],
+     'self::*', 'count(preceding-sibling::*)=0', 'name(../..)="superscript"'],
+    ['Alias', 'base',
+     'self::*', 'count(preceding-sibling::*)=0', 'name(../..)="subscript"'],
+    ['Alias', 'base',
+     'self::*', 'count(preceding-sibling::*)=0', 'name(../..)="overscore"'],
+    ['Alias', 'base',
+     'self::*', 'count(preceding-sibling::*)=0', 'name(../..)="underscore"'],
+    ['Alias', 'base',
+     'self::*', 'count(preceding-sibling::*)=0', 'name(../..)="tensor"'],
+    ['Alias', 'base',
+     'self::*', 'count(preceding-sibling::*)=0', 'name(../..)="limlower"'],
+    ['Alias', 'base',
+     'self::*', 'count(preceding-sibling::*)=0', 'name(../..)="limupper"'],
+    ['Alias', 'base',
+     'self::*', 'count(preceding-sibling::*)=0', 'name(../..)="limboth"'],
     ['Rule',
      'exponent', 'default',
      '[t] "exposant"; [p] (pause:200)',
@@ -66,19 +72,22 @@ sre.PrefixFrench = {
      '[t] "indice"; [p] (pause:200)',
      'self::*', 'name(../..)="subscript"',
      'count(preceding-sibling::*)=1'],
-    ['Rule', // NEW additions!
+    ['Rule',
      'overscript', 'default',
      '[t] "indice suscrit"; [p] (pause:200)',
-     'self::*', 'name(../..)="overscore" or name(../..)="limupper" or' +
-     ' name(../..)="limboth"',
-     'count(preceding-sibling::*)=1 or count(preceding-sibling::*)=2'],
-    // check this final disjunctive constraint
-    ['Rule', // NEW additions!
+     'self::*', 'count(preceding-sibling::*)=1', 'name(../..)="overscore"'],
+    ['Alias', 'overscript',
+     'self::*', 'count(preceding-sibling::*)=1', 'name(../..)="limupper"'],
+    ['Alias', 'overscript',
+     'self::*', 'count(preceding-sibling::*)=2', 'name(../..)="limboth"'],
+    ['Rule',
      'underscript', 'default',
      '[t] "indice souscrit"; [p] (pause:200)',
-     'self::*', 'name(../..)="underscore" or name(../..)="limlower" or' +
-     ' name(../..)="limboth"',
-     'count(preceding-sibling::*)=1'],
+     'self::*', 'count(preceding-sibling::*)=1', 'name(../..)="underscore"'],
+    ['Alias', 'underscript',
+     'self::*', 'count(preceding-sibling::*)=1', 'name(../..)="limlower"'],
+    ['Alias', 'underscript',
+     'self::*', 'count(preceding-sibling::*)=1', 'name(../..)="limboth"'],
     ['Rule',
      'radicand', 'default',
      '[t] "radicande"; [p] (pause:200)',
@@ -86,13 +95,11 @@ sre.PrefixFrench = {
     ['Rule',
      'radicand', 'default',
      '[t] "radicande"; [p] (pause:200)',
-     'self::*', 'name(../..)="root"',
-     'count(preceding-sibling::*)=1'],
+     'self::*', 'name(../..)="root"', 'count(preceding-sibling::*)=1'],
     ['Rule',
      'index', 'default',
      '[t] "indice"; [p] (pause:200)',
-     'self::*', 'name(../..)="root"',
-     'count(preceding-sibling::*)=0'],
+     'self::*', 'name(../..)="root"', 'count(preceding-sibling::*)=0'],
     ['Rule',
      'leftsub', 'default',
      '[t] "indice inférieur gauche"; [p] (pause:200)',
@@ -169,6 +176,6 @@ sre.PrefixFrench = {
      '[t] CSFordinalPosition (grammar:gender="female"); ' +
      '[t] "colonne"; [p] (pause:200)',
      'self::cell'
-    ],
+    ]
   ]
 };
