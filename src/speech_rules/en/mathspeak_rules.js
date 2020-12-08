@@ -330,14 +330,11 @@ sre.MathspeakRules = {
      '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
      'self::fenced', '@role="neutral"'],
 
-
-    // TODO (sorge) Maybe check for punctuated element and singleton?
+    // Set rules
     ['Rule',
      'fences-set', 'default',
      '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
      'self::fenced', 'contains(@role,"set ")',
-     // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
-     // 'content/*[2][text()]="}"', 'count(children/*)=1',
      'not(name(../..)="appl")'],
     ['SpecializedRule',
      'fences-set', 'default', 'sbrief',

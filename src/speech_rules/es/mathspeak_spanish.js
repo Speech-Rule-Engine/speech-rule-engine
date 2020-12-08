@@ -785,7 +785,6 @@ sre.MathspeakSpanish = {
      '[t] string-length(text()) (grammar:numbers2alpha); [t] "prima"',
      'self::operator', '@role="prime"', 'string-length(text())>4'],
 
-
     ['Rule',
      'prime-subscript', 'default',
      '[n] children/*[1]/children/*[1]; [n] children/*[2];' +
@@ -881,7 +880,7 @@ sre.MathspeakSpanish = {
      'overbar', 'default',
      '[n] children/*[1]; [t] "barra"',
      'self::overscore',
-     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+     'contains(@role,"letter")',
      'children/*[2][@role="overaccent"]',   // redundancy
      'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
      ' or text()="\u005F" or text()="\u203E"]'
@@ -897,7 +896,7 @@ sre.MathspeakSpanish = {
      'underbar', 'default',
      '[n] children/*[1]; [t] "subbarra"',
      'self::underscore',
-     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+     'contains(@role,"letter")',
      'children/*[2][@role="underaccent"]',   // redundancy
      'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
      ' or text()="\u005F" or text()="\u203E"]'
@@ -914,7 +913,7 @@ sre.MathspeakSpanish = {
      '[n] children/*[1]; [t] "tilde"',
      'self::overscore',
      'children/*[2][@role="overaccent"]',   // redundancy
-     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+     'contains(@role,"letter")',
      'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
      ' or text()="\uFF5E"]'
     ],
@@ -929,7 +928,7 @@ sre.MathspeakSpanish = {
      'undertilde', 'default',
      '[n] children/*[1]; [t] "subtilde"',
      'self::underscore',
-     '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+     'contains(@role,"letter")',
      'children/*[2][@role="underaccent"]',   // redundancy
      'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
      ' or text()="\uFF5E"]'
@@ -1243,7 +1242,5 @@ sre.MathspeakSpanish = {
      '[n] children/*[1]; [t] "por"; [n] children/*[2] (grammar:singularUnit)',
      'self::fraction', '@role="unit"'],
   ],
-  initialize: [
-    sre.MathspeakUtil.generateTensorRules
-  ]
+  initialize: [sre.MathspeakUtil.generateTensorRules]
 };

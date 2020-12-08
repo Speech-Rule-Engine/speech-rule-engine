@@ -225,8 +225,7 @@ sre.MathspeakGerman = {
       '[t] "Grundlinie"; [n] . (grammar:baseline)',
       'self::number', 'not(contains(@grammar, "ignoreFont"))',
       'preceding-sibling::identifier', 'not(contains(@grammar, "baseline"))',
-      'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
-     ' @role="otherletter"]',
+      'preceding-sibling::*[1][contains(@role,"letter")]',
       'parent::*/parent::infixop[@role="implicit"]'],
     ['SpecializedRule',
       'number-baseline', 'default', 'brief',
@@ -241,8 +240,7 @@ sre.MathspeakGerman = {
      ' [n] . (grammar:ignoreFont=@font)',
       'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
       '@font!="normal"', 'preceding-sibling::identifier',
-      'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
-     ' @role="otherletter"]',
+      'preceding-sibling::*[contains(@role,"letter")]',
       'parent::*/parent::infixop[@role="implicit"]'],
     ['SpecializedRule',
       'number-baseline-font', 'default', 'brief',
@@ -351,8 +349,6 @@ sre.MathspeakGerman = {
       '[t] "Anfang Menge"; [n] children/*[1]; [t] "Ende Menge"',
       'self::fenced', '@role="set empty" or @role="set extended"' +
      ' or @role="set singleton" or @role="set collection"',
-      // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
-      // 'content/*[2][text()]="}"', 'count(children/*)=1',
       'not(name(../..)="appl")'],
     ['SpecializedRule',
       'fences-set', 'default', 'sbrief',
@@ -926,7 +922,7 @@ sre.MathspeakGerman = {
       'overbar', 'default',
       '[n] children/*[1]; [t] "Überstrich"',
       'self::overscore',
-      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'contains(@role,"letter")',
       'children/*[2][@role="overaccent"]',   // redundancy
       'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
      ' or text()="\u005F" or text()="\u203E"]'
@@ -936,7 +932,7 @@ sre.MathspeakGerman = {
       'underbar', 'default',
       '[n] children/*[1]; [t] "Unterstrich"',
       'self::underscore',
-      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'contains(@role,"letter")',
       'children/*[2][@role="underaccent"]',   // redundancy
       'children/*[2][text()="\u00AF" or text()="\uFFE3" or text()="\uFF3F"' +
      ' or text()="\u005F" or text()="\u203E"]'
@@ -947,7 +943,7 @@ sre.MathspeakGerman = {
       '[n] children/*[1]; [t] "Tilde oben"',
       'self::overscore',
       'children/*[2][@role="overaccent"]',   // redundancy
-      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'contains(@role,"letter")',
       'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
      ' or text()="\uFF5E"]'
     ],
@@ -956,7 +952,7 @@ sre.MathspeakGerman = {
       'undertilde', 'default',
       '[n] children/*[1]; [t] "Tilde unten"',
       'self::underscore',
-      '@role="latinletter" or @role="greekletter" or @role="otherletter"',
+      'contains(@role,"letter")',
       'children/*[2][@role="underaccent"]',   // redundancy
       'children/*[2][text()="\u007E" or text()="\u02DC" or text()="\u223C"' +
      ' or text()="\uFF5E"]'

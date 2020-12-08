@@ -112,7 +112,6 @@ sre.MathspeakFrench = {
      'stree', 'default',
      '[n] ./*[1]', 'self::stree', 'CQFresetNesting'],
 
-
     // Dummy rules
     ['Rule',
      'unknown', 'default', '[n] text()',
@@ -221,8 +220,7 @@ sre.MathspeakFrench = {
      '[t] "position de base"; [n] . (grammar:baseline)',
      'self::number', 'not(contains(@grammar, "ignoreFont"))',
      'preceding-sibling::identifier', 'not(contains(@grammar, "baseline"))',
-     'preceding-sibling::*[1][@role="latinletter" or @role="greekletter" or' +
-     ' @role="otherletter"]',
+     'preceding-sibling::*[1][contains(@role,"letter")]',
      'parent::*/parent::infixop[@role="implicit"]'],
     ['SpecializedRule',
      'number-baseline', 'default', 'brief',
@@ -237,8 +235,7 @@ sre.MathspeakFrench = {
      '[t] @font (grammar:localFont)',
      'self::number', '@font', 'not(contains(@grammar, "ignoreFont"))',
      '@font!="normal"', 'preceding-sibling::identifier',
-     'preceding-sibling::*[@role="latinletter" or @role="greekletter" or' +
-     ' @role="otherletter"]',
+     'preceding-sibling::*[contains(@role,"letter")]',
      'parent::*/parent::infixop[@role="implicit"]'],
     ['SpecializedRule',
      'number-baseline-font', 'default', 'brief',
