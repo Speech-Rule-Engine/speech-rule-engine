@@ -427,7 +427,7 @@ sre.SummaryGerman = {
     ['Rule',
       'abstr-integral', 'default.default',
       '[t] "Integral"',
-      '@role="integral"'
+      'self::*', '@role="integral"'
     ],
 
     ['Rule',

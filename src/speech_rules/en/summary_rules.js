@@ -456,7 +456,7 @@ sre.SummaryRules = {
     ['Rule',
      'abstr-integral', 'default.default',
      '[t] "integral"',
-     '@role="integral"'
+     'self::*', '@role="integral"'
     ],
 
     ['Rule',

@@ -490,7 +490,7 @@ sre.SummaryFrench = {
     ['Rule',
      'abstr-integral', 'default.default',
      '[t] "intégrale"; [n] . (grammar:gender="female")',
-     '@role="integral"'
+     'self::*', '@role="integral"'
     ],
 
     ['Rule',
