@@ -203,10 +203,10 @@ sre.NemethRules = {
      'self::identifier', '@role="protected"'],
 
     // minus sign
-    ['Rule',
-     'negative', 'default',
-     '[t] "⠤"; [n] children/*[1]',
-     'self::prefixop', '@role="negative"'],
+    // ['Rule',
+    //  'negative', 'default',
+    //  '[n] "⠤"; [n] children/*[1]',
+    //  'self::prefixop', '@role="negative"', 'string-length(text())=1'],
 
 
     // Operator rules

@@ -20,7 +20,6 @@
 goog.provide('sre.ClearspeakFrench');
 
 goog.require('sre.ClearspeakUtil');
-goog.require('sre.Grammar');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
@@ -2183,7 +2182,3 @@ sre.ClearspeakFrench = {
     ]
   ]
 };
-
-
-sre.Grammar.getInstance().setPreprocessor('numbers2alpha',
-                                          sre.ClearspeakUtil.numbersToAlpha);

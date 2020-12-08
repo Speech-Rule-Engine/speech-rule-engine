@@ -137,6 +137,7 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
   children = sre.SemanticUtil.purgeNodes(children);
   // Single child node, i.e. the row is meaningless.
   if (children.length === 1) {
+    // TODO: Collate external attributes!
     var newNode = this.parse(children[0]);
   } else {
     // Case of a 'meaningful' row, even if they are empty.
@@ -325,20 +326,11 @@ sre.SemanticMathml.prototype.text_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.identifier_ = function(node, children) {
   var newNode = this.leaf_(node, children);
-  var sem = sre.SemanticProcessor.getInstance().identifierNode(
+  return sre.SemanticProcessor.getInstance().identifierNode(
       newNode,
       sre.SemanticProcessor.getInstance().font(
       node.getAttribute('mathvariant')),
       node.getAttribute('class'));
-  // TODO: (MS2.3|simons) Handle this separately in an additional parser:
-  if (sre.Engine.getInstance().domain !== 'clearspeak') {
-    return sem;
-  }
-  var specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
-  if (specialFunctions.indexOf(sem.textContent) !== -1) {
-    sem.role = sre.SemanticAttr.Role.SIMPLEFUNC;
-  }
-  return sem;
 };
 
 
@@ -365,9 +357,7 @@ sre.SemanticMathml.prototype.number_ = function(node, children) {
  */
 sre.SemanticMathml.prototype.operator_ = function(node, children) {
   var newNode = this.leaf_(node, children);
-  if (newNode.type === sre.SemanticAttr.Type.UNKNOWN) {
-    newNode.type = sre.SemanticAttr.Type.OPERATOR;
-  }
+  sre.SemanticProcessor.getInstance().operatorNode(newNode);
   return newNode;
 };
 

@@ -26,6 +26,7 @@ goog.require('sre.SemanticAnnotator');
 goog.require('sre.StoreUtil');
 
 
+// TODO: remove
 /**
  * Translates a single non-negative integer into a word.
  * @param {string} text The text to translate.
@@ -36,6 +37,10 @@ sre.ClearspeakUtil.numbersToAlpha = function(text) {
       sre.Messages.NUMBERS.numberToWords(parseInt(text, 10)) :
       text;
 };
+
+
+sre.Grammar.getInstance().setPreprocessor('numbers2alpha',
+                                          sre.ClearspeakUtil.numbersToAlpha);
 
 
 /**

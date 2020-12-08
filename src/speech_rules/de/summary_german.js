@@ -135,14 +135,6 @@ sre.SummaryGerman = {
      ' children/*/descendant-or-self::root'
     ],
 
-    // Content following the root expression.
-    ['Rule',
-      'abstr-root', 'default.default',
-      '[t] "Wurzel mit Exponent"; [n] children/*[1] (engine:modality=speech);' +
-     ' [t] "Exponentende"',
-      'self::root', 'contains(@grammar, "collapsed")',
-      'following-sibling::* or ancestor::*/following-sibling::*'
-    ],
     ['Rule',
       'abstr-root', 'default.default',
       '[t] "Wurzel mit Exponent"; [n] children/*[1] (engine:modality=speech)',
@@ -155,16 +147,6 @@ sre.SummaryGerman = {
     ],
     ['SpecializedRule',
       'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
-    ],
-    // Content following the root expression.
-    ['Rule',
-      'abstr-root-nested', 'default.default',
-      '[t] "verschachtelte Wurzel mit Wurzelexponent"; ' +
-     '[n] children/*[1] (engine:modality="speech"); [t] "Ende Wurzelexponent"',
-      'self::root', 'contains(@grammar, "collapsed")',
-      'children/*/descendant-or-self::sqrt or' +
-     ' children/*/descendant-or-self::root',
-      'following-sibling::* or ancestor::*/following-sibling::*'
     ],
     ['Rule',
       'abstr-root-nested', 'default.default',

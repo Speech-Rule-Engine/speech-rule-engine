@@ -120,7 +120,7 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'protected', 'default', '[t] text()',
-     'self::*', '@role="protected"'],
+     'self::number', 'contains(@grammar, "protected")'],
 
     ['Rule',
      'omit-empty', 'default',
@@ -176,7 +176,8 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'number-with-chars', 'default',
-     '[t] "nombre"; [m] CQFspaceoutNumber', 'self::number',
+     '[t] "nombre"; [m] CQFspaceoutNumber (grammar:protected)',
+      'self::number', '@role="othernumber"',
      '"" != translate(text(), "0123456789.,", "")',
      'text() != translate(text(), "0123456789.,", "")'],
 
@@ -368,23 +369,6 @@ sre.MathspeakFrench = {
     ['Rule',
      'minus', 'default', '[t] "moins"',
      'self::operator', 'text()="\u002D"'],
-
-    ['Rule',
-     'single-prime', 'default', '[t] "prime"',
-     'self::punctuated', '@role="prime"', 'count(children/*)=1'],
-    ['Rule',
-     'double-prime', 'default', '[t] "double prime"',
-     'self::punctuated', '@role="prime"', 'count(children/*)=2'],
-    ['Rule',
-     'triple-prime', 'default', '[t] "triple prime"',
-     'self::punctuated', '@role="prime"', 'count(children/*)=3'],
-    ['Rule',
-     'quadruple-prime', 'default', '[t] "quadruple prime"',
-     'self::punctuated', '@role="prime"', 'count(children/*)=4'],
-    ['Rule',
-     'counted-prime', 'default',
-     '[t] count(children/*); [t] "prime"',
-     'self::punctuated', '@role="prime"'],
 
     // Fraction rules
 
@@ -834,6 +818,32 @@ sre.MathspeakFrench = {
      'prime', 'default', 'brief'],
     ['SpecializedRule',
      'prime', 'default', 'sbrief'],
+    ['Rule',
+     'double-prime', 'default', '[t] "double prime"',
+     'self::punctuated', '@role="prime"', 'count(children/*)=2'],
+    ['Aliases',
+     'double-prime',
+     'self::operator', '@role="prime"', 'string-length(text())=2'],
+    ['Rule',
+     'triple-prime', 'default', '[t] "triple prime"',
+     'self::punctuated', '@role="prime"', 'count(children/*)=3'],
+    ['Aliases',
+     'triple-prime',
+     'self::operator', '@role="prime"', 'string-length(text())=3'],
+    ['Rule',
+     'quadruple-prime', 'default', '[t] "quadruple prime"',
+     'self::punctuated', '@role="prime"', 'count(children/*)=4'],
+    ['Aliases',
+     'quadruple-prime',
+     'self::operator', '@role="prime"', 'string-length(text())=4'],
+    ['Rule',
+     'counted-prime', 'default',
+     '[t] count(children/*) (grammar:numbers2alpha); [t] "prime"',
+     'self::punctuated', '@role="prime"'],
+    ['Rule',
+     'counted-prime', 'default',
+     '[t] string-length(text()) (grammar:numbers2alpha); [t] "prime"',
+     'self::operator', '@role="prime"', 'string-length(text())>4'],
 
     ['Rule',
      'prime-subscript', 'default',
@@ -963,11 +973,6 @@ sre.MathspeakFrench = {
     // ],
 
     // Layout Elements
-    ['Rule',
-     'matrix-fence', 'default',
-     '[n] children/*[1];',
-     'self::fenced', 'count(children/*)=1', 'name(children/*[1])="matrix"'],
-
     ['Rule',
      'matrix', 'default',
      '[t] "début matrice"; [t] count(children/*);  [t] "par";' +

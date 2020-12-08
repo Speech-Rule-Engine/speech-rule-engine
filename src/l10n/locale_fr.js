@@ -196,6 +196,10 @@ sre.Locale.fr = {
     'inch': 'inches'
   },
 
+  SI: function(prefix, unit) {
+    return prefix + unit;
+  },
+
   NUMBERS: sre.Numbers.fr.NUMBERS,
 
   ALPHABETS: {
