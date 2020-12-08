@@ -21,7 +21,6 @@
 goog.provide('sre.ClearspeakRules');
 
 goog.require('sre.ClearspeakUtil');
-goog.require('sre.Grammar');
 goog.require('sre.MathspeakUtil');
 goog.require('sre.StoreUtil');
 
@@ -32,33 +31,35 @@ goog.require('sre.StoreUtil');
 sre.ClearspeakRules = {
   domain: 'clearspeak',
   functions: [
-    ['CTXF', 'CTXFpauseSeparator', sre.StoreUtil.pauseSeparator],
-    ['CTXF', 'CTXFnodeCounter', sre.ClearspeakUtil.nodeCounter],
-    ['CTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
-    ['CSF', 'CSFvulgarFraction', sre.NumbersUtil.vulgarFraction],
-    ['CQF', 'CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction],
-    ['CQF', 'CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple],
-    ['CSF', 'CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent],
-    ['CSF', 'CSFwordOrdinal', sre.ClearspeakUtil.wordOrdinal],
-    ['CQF', 'CQFisCapital', sre.ClearspeakUtil.isCapitalLetter],
-    ['CQF', 'CQFmatchingFences', sre.ClearspeakUtil.matchingFences],
-    ['CSF', 'CSFnestingDepth', sre.ClearspeakUtil.nestingDepth],
-    ['CQF', 'CQFfencedArguments', sre.ClearspeakUtil.fencedArguments],
-    ['CQF', 'CQFsimpleArguments', sre.ClearspeakUtil.simpleArguments],
-    ['CQF', 'CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic],
-    ['CQF', 'CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase],
-    ['CQF', 'CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
+    ['CTFpauseSeparator', sre.StoreUtil.pauseSeparator],
+    ['CTFnodeCounter', sre.ClearspeakUtil.nodeCounter],
+    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CSFvulgarFraction', sre.NumbersUtil.vulgarFraction],
+    ['CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction],
+    ['CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple],
+    ['CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent],
+    ['CSFwordOrdinal', sre.ClearspeakUtil.wordOrdinal],
+    ['CQFisCapital', sre.ClearspeakUtil.isCapitalLetter],
+    ['CQFmatchingFences', sre.ClearspeakUtil.matchingFences],
+    ['CSFnestingDepth', sre.ClearspeakUtil.nestingDepth],
+    ['CQFfencedArguments', sre.ClearspeakUtil.fencedArguments],
+    ['CQFsimpleArguments', sre.ClearspeakUtil.simpleArguments],
+    ['CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic],
+    ['CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase],
+    ['CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
     // Currency.
-    ['CQF', 'CQFfirstCurrency', sre.ClearspeakUtil.firstCurrency],
-    ['CQF', 'CQFlastCurrency', sre.ClearspeakUtil.lastCurrency]
+    ['CQFfirstCurrency', sre.ClearspeakUtil.firstCurrency],
+    ['CQFlastCurrency', sre.ClearspeakUtil.lastCurrency]
   ],
   rules: [
     ['Rule',
      'collapsed', 'default',
      '[t] "collapsed"; [n] . (engine:modality=summary,grammar:collapsed)',
-     'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
-     'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+     'self::*[@alternative]', 'not(contains(@grammar, "collapsed"))'
     ],
+    ['Rule',
+     'direct-speech', 'default',
+     '[t] @ext-speech', 'self::*[@ext-speech]'],
 
     // Initial rule
     ['Rule',
@@ -216,12 +217,18 @@ sre.ClearspeakRules = {
      'not(parent::*/parent::*[@embellished="punctuation"])'
     ],
     ['Rule',
-     'vbar-such-that', 'VerticalLine_Divides',
+     'vbar-divides', 'default',
+     '[t] "divides"', 'self::punctuation', '@role="vbar"',
+     'not(parent::*/parent::*[@embellished="punctuation"])',
+     'parent::*/parent::*[@role="sequence"]'
+    ],
+    ['Rule',
+     'vbar-divides', 'VerticalLine_Divides',
      '[t] "divides"', 'self::punctuation', '@role="vbar"',
      'not(parent::*/parent::*[@embellished="punctuation"])'
     ],
     ['Rule',
-     'vbar-such-that', 'VerticalLine_Given',
+     'vbar-given', 'VerticalLine_Given',
      '[t] "given"', 'self::punctuation', '@role="vbar"',
      'not(parent::*/parent::*[@embellished="punctuation"])'
     ],
@@ -1395,22 +1402,22 @@ sre.ClearspeakRules = {
 
     ['Rule',
      'binary-operation', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop'],
+     '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop'],
     ['Rule',
      'binary-operation', 'ImpliedTimes_MoreImpliedTimes',
-     '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop',
+     '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop',
      '@role="implicit"'],
     ['Rule',
      'binary-operation-pause', 'default',
-     '[p] (pause:short); [m] children/* (sepFunc:CTXFcontentIterator);',
+     '[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator);',
      'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"'],
     ['Rule',
      'binary-operation-pause', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator); [p] (pause:short)',
+     '[m] children/* (sepFunc:CTFcontentIterator); [p] (pause:short)',
      'self::infixop', '@role="implicit"', 'name(children/*[last()])="appl"'],
     ['Rule',
      'binary-operation-pause', 'default',
-     '[p] (pause:short); [m] children/* (sepFunc:CTXFcontentIterator);' +
+     '[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator);' +
      ' [p] (pause:short)',
      'self::infixop', '@role="implicit"', 'name(children/*[1])="appl"',
      'name(children/*[last()])="appl"'],
@@ -1465,12 +1472,12 @@ sre.ClearspeakRules = {
     // Relations
     ['Rule',
      'relseq', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq'],
 
     ['Rule',
      'multrel', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::multirel'],
 
     // Named sets (They need additional dummy constraints for ordering!)
@@ -1610,7 +1617,7 @@ sre.ClearspeakRules = {
      'matrix', 'default',
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "matrix"; [p] (pause:long);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Row-:");' +
      ' [p] (pause:long)',
      'self::matrix'],
     ['Rule',
@@ -1618,7 +1625,7 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "matrix";' +
      ' [p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"Row-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', 'count(children/*)<4',
      'count(children/*[1]/children/*)<4', 'CQFcellsSimple'],
@@ -1633,7 +1640,7 @@ sre.ClearspeakRules = {
      '[t] "the determinant of the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "matrix"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"Row-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="determinant"', 'count(children/*)<4',
      'CQFcellsSimple'],
@@ -1642,7 +1649,7 @@ sre.ClearspeakRules = {
      '[t] "the determinant of the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "matrix"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Row-:");' +
+     '(ctxtFunc:CTFnodeCounter,context:"Row-:");' +
      ' [p] (pause:long)',
      'self::matrix', '@role="determinant"'],
     // Vector
@@ -1651,7 +1658,7 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "column matrix"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"Row-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::vector'],
     ['SpecializedRule',
@@ -1661,7 +1668,7 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "column matrix"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::vector', 'count(children/*)<4', 'CQFcellsSimple',
      '@role!="squarematrix"'],
@@ -1670,7 +1677,7 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "column matrix"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::vector'],
 
@@ -1679,7 +1686,7 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "row matrix"; ' +
      '[p] (pause:long); [m] children/*[1]/children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"Column-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="rowvector"'],
     ['SpecializedRule',
@@ -1690,7 +1697,7 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "row matrix"; ' +
      '[p] (pause:long); [m] children/*[1]/children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4',
      'CQFcellsSimple'],
@@ -1699,18 +1706,18 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "row matrix"; ' +
      '[p] (pause:long); [m] children/*[1]/children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="rowvector"'],
 
 
     ['Rule',
      'matrix-row-simple', 'default',
-     '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+     '[m] children/* (sepFunc:CTFpauseSeparator,separator:"short")',
      'self::row', 'contains(@grammar, "simpleDet")'],
     ['Rule',
      'matrix-row-simple', 'Matrix_SilentColNum',
-     '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+     '[m] children/* (sepFunc:CTFpauseSeparator,separator:"short")',
      'self::row'],
     ['Rule',
      'line-simple', 'default',
@@ -1718,8 +1725,8 @@ sre.ClearspeakRules = {
      'self::line', 'contains(@grammar, "simpleDet")'],
     ['Rule',
      'matrix-row', 'default',
-     '[m] children/* (ctxtFunc:CTXFnodeCounter,context:"Column-,- ",' +
-     'sepFunc:CTXFpauseSeparator,separator:"medium"); [p] (pause:long)',
+     '[m] children/* (ctxtFunc:CTFnodeCounter,context:"Column-,- ",' +
+     'sepFunc:CTFpauseSeparator,separator:"medium"); [p] (pause:long)',
      'self::row'],
     ['SpecializedRule',
      'matrix-row', 'default', 'Matrix_SpeakColNum'],
@@ -1746,7 +1753,7 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "column vector"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Row-:",grammar:simpleDet); ' +
+     '(ctxtFunc:CTFnodeCounter,context:"Row-:",grammar:simpleDet); ' +
      '[p] (pause:long)',
      'self::vector'],
     ['SpecializedRule',
@@ -1756,7 +1763,7 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by"; ' +
      '[t] count(children/*[1]/children/*); [t] "column vector"; ' +
      '[p] (pause:long); [m] children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet); ' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet); ' +
      '[p] (pause:long)',
      'self::vector', 'count(children/*)<4', 'CQFcellsSimple'],
     ['SpecializedRule',
@@ -1768,7 +1775,7 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "row vector";' +
      ' [p] (pause:long); [m] children/*[1]/children/* ' +
-     '(ctxtFunc:CTXFnodeCounter,context:"Column-:",grammar:simpleDet);' +
+     '(ctxtFunc:CTFnodeCounter,context:"Column-:",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="rowvector"'],
     ['SpecializedRule',
@@ -1778,7 +1785,7 @@ sre.ClearspeakRules = {
      '[t] "the"; [t] count(children/*);  [t] "by";' +
      '[t] count(children/*[1]/children/*); [t] "row vector";' +
      ' [p] (pause:long); [m] children/*[1]/children/* ' +
-     '(sepFunc:CTXFpauseSeparator,separator:"short",grammar:simpleDet);' +
+     '(sepFunc:CTFpauseSeparator,separator:"short",grammar:simpleDet);' +
      ' [p] (pause:long)',
      'self::matrix', '@role="rowvector"', 'count(children/*[1]/children/*)<4',
      'CQFcellsSimple'],
@@ -1847,8 +1854,8 @@ sre.ClearspeakRules = {
     ['Rule',
      'lines', 'default',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Line-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Line-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines', 'self::multiline'],
@@ -1858,17 +1865,17 @@ sre.ClearspeakRules = {
      '[n] children/*[1]', 'self::line'],
     ['Rule',
      'row-medium', 'default',
-     '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"medium")',
+     '[m] children/* (sepFunc:CTFpauseSeparator,separator:"medium")',
      'self::row', '@role="table"'],
     ['Aliases', 'row-medium', 'self::row', '@role="cases"'],
     ['Rule',
      'row-long', 'MultiLinePausesBetweenColumns_Long',
-     '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"long")',
+     '[m] children/* (sepFunc:CTFpauseSeparator,separator:"long")',
      'self::row', '@role="table"'],
     ['Aliases', 'row-long', 'self::row', '@role="cases"'],
     ['Rule',
      'row-short', 'MultiLinePausesBetweenColumns_Short',
-     '[m] children/* (sepFunc:CTXFpauseSeparator,separator:"short")',
+     '[m] children/* (sepFunc:CTFpauseSeparator,separator:"short")',
      'self::row', '@role="table"'],
     ['Aliases', 'row-short', 'self::row', '@role="cases"'],
     // TODO: Get rid of blank!
@@ -1883,8 +1890,8 @@ sre.ClearspeakRules = {
     ['Rule',
      'cases', 'default',
      '[p] (pause:short); ' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Case-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Case-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::cases'],
 
     // Label Preferences:
@@ -1902,8 +1909,8 @@ sre.ClearspeakRules = {
     ['Rule',
      'lines-cases', 'MultiLineLabel_Case',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Case-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Case-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines-cases', 'self::multiline'],
@@ -1922,8 +1929,8 @@ sre.ClearspeakRules = {
     ['Rule',
      'lines-equations', 'MultiLineLabel_Equation',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Equation-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Equation-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines-equations', 'self::multiline'],
@@ -1942,8 +1949,8 @@ sre.ClearspeakRules = {
     ['Rule',
      'lines-steps', 'MultiLineLabel_Step',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Step-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Step-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines-steps', 'self::multiline'],
@@ -1962,8 +1969,8 @@ sre.ClearspeakRules = {
     ['Rule',
      'lines-rows', 'MultiLineLabel_Row',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Row-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Row-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines-rows', 'self::multiline'],
@@ -1982,8 +1989,8 @@ sre.ClearspeakRules = {
     ['Rule',
      'lines-constraints', 'MultiLineLabel_Constraint',
      '[p] (pause:short);' +
-     ' [m] children/* (ctxtFunc:CTXFnodeCounter,context:"Constraint-:",' +
-     'sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (ctxtFunc:CTFnodeCounter,context:"Constraint-:",' +
+     'sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table'],
     ['Aliases',
      'lines-constraints', 'self::multiline'],
@@ -1992,7 +1999,7 @@ sre.ClearspeakRules = {
     ['Rule',
      'lines-none', 'MultiLineLabel_None',
      '[p] (pause:short);' +
-     ' [m] children/* (sepFunc:CTXFpauseSeparator,separator:"long");' +
+     ' [m] children/* (sepFunc:CTFpauseSeparator,separator:"long");' +
      ' [p] (pause:long)', 'self::table',
      'contains(@grammar, "layoutSummary")'],
     ['Aliases', 'lines-none', 'self::multiline',
@@ -2332,7 +2339,3 @@ sre.ClearspeakRules = {
   ],
   initialize: [sre.ClearspeakUtil.addAnnotators]
 };
-
-
-sre.Grammar.getInstance().setPreprocessor('numbers2alpha',
-                                          sre.ClearspeakUtil.numbersToAlpha);

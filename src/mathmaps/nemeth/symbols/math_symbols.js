@@ -473,6 +473,24 @@
     "key": "00F7"
   },
   {
+    "key": "02B9",
+    "mappings": {
+      "default": {
+        "default": "⠄"
+      }
+    },
+    "category": "Lm"
+  },
+  {
+    "key": "02BA",
+    "mappings": {
+      "default": {
+        "default": "⠄⠄"
+      }
+    },
+    "category": "Lm"
+  },
+  {
     "category": "Sk",
     "mappings": {
       "default": {

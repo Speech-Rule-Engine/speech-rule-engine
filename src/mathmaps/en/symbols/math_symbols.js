@@ -245,9 +245,6 @@
     "mappings": {
       "default": {
         "default": "vertical bar"
-      },
-      "clearspeak": {
-        "default": "divides"
       }
     },
     "key": "007C"
@@ -519,6 +516,24 @@
       }
     },
     "key": "02D8"
+  },
+  {
+    "key": "02B9",
+    "mappings": {
+      "default": {
+        "default": "prime"
+      }
+    },
+    "category": "Lm"
+  },
+  {
+    "key": "02BA",
+    "mappings": {
+      "default": {
+        "default": "double prime"
+      }
+    },
+    "category": "Lm"
   },
   {
     "category": "Sk",
@@ -1652,7 +1667,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "bar",
+        "default": "vertical bar",
         "alternative": "divides"
       }
     },

@@ -32,39 +32,39 @@ sre.NemethRules = {
   modality: 'braille',
   domain: 'default',
   functions: [
-    ['CQF', 'CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
-    ['CQF', 'CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
+    ['CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
+    ['CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
 
-    ['CSF', 'CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
+    ['CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
     // Fraction function.
-    ['CSF', 'CSFopenFraction', sre.NemethUtil.openingFraction],
-    ['CSF', 'CSFcloseFraction', sre.NemethUtil.closingFraction],
-    ['CSF', 'CSFoverFraction', sre.NemethUtil.overFraction],
-    ['CSF', 'CSFoverBevFraction', sre.NemethUtil.overBevelledFraction],
+    ['CSFopenFraction', sre.NemethUtil.openingFraction],
+    ['CSFcloseFraction', sre.NemethUtil.closingFraction],
+    ['CSFoverFraction', sre.NemethUtil.overFraction],
+    ['CSFoverBevFraction', sre.NemethUtil.overBevelledFraction],
 
     // Radical function.
-    ['CSF', 'CSFopenRadicalVerbose', sre.NemethUtil.openingRadical],
-    ['CSF', 'CSFcloseRadicalVerbose', sre.NemethUtil.closingRadical],
-    ['CSF', 'CSFindexRadicalVerbose', sre.NemethUtil.indexRadical],
+    ['CSFopenRadicalVerbose', sre.NemethUtil.openingRadical],
+    ['CSFcloseRadicalVerbose', sre.NemethUtil.closingRadical],
+    ['CSFindexRadicalVerbose', sre.NemethUtil.indexRadical],
 
     // Sub- Superscript.
-    ['CSF', 'CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSF', 'CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSF', 'CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose],
+    ['CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
+    ['CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
+    ['CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose],
 
     // Over- Underscore.
-    ['CSF', 'CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
-    ['CSF', 'CSFoverscript', sre.MathspeakUtil.nestedOverscore],
+    ['CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
+    ['CSFoverscript', sre.MathspeakUtil.nestedOverscore],
 
-    ['CTXF', 'CTXFordinalCounter', sre.NumbersUtil.ordinalCounter],
-    ['CTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTFordinalCounter', sre.NumbersUtil.ordinalCounter],
+    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
 
     // Layout related.
-    ['CQF', 'CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
-    ['CSF', 'CSFRemoveParens', sre.MathspeakUtil.removeParens],
+    ['CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
+    ['CSFRemoveParens', sre.MathspeakUtil.removeParens],
 
     // Dummy.
-    ['CQF', 'CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
+    ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
   ],
   rules: [
     // Initial rule
@@ -203,10 +203,10 @@ sre.NemethRules = {
      'self::identifier', '@role="protected"'],
 
     // minus sign
-    ['Rule',
-     'negative', 'default',
-     '[t] "⠤"; [n] children/*[1]',
-     'self::prefixop', '@role="negative"'],
+    // ['Rule',
+    //  'negative', 'default',
+    //  '[n] "⠤"; [n] children/*[1]',
+    //  'self::prefixop', '@role="negative"', 'string-length(text())=1'],
 
 
     // Operator rules
@@ -221,7 +221,7 @@ sre.NemethRules = {
 
     ['Rule',
      'binary-operation', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop'],
+     '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop'],
 
     // Implicit times is currently ignored!
     ['Rule',
@@ -410,7 +410,7 @@ sre.NemethRules = {
     // Relations
     ['Rule',
      'relseq', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq'],
 
     ['Rule',
@@ -420,12 +420,12 @@ sre.NemethRules = {
 
     ['Rule',
      'multi-equality', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq', '@role="equality"', 'count(./children/*)>2'],
 
     ['Rule',
      'multrel', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::multirel'],
 
     // Subscripts
@@ -653,7 +653,7 @@ sre.NemethRules = {
     ['Rule',
      'row-with-label', 'default',
      '[t] "with Label"; [n] content/*[1]; [t] "EndLabel"(pause: 200); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"Column")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"Column")',
      'self::row', 'content'],
     ['Rule',
      'empty-row', 'default',
@@ -802,7 +802,7 @@ sre.NemethRules = {
     ['Rule',
      'punctuation-comma', 'default', '[n] text(); [t] "⠀"',
      'self::punctuation' , 'parent::*/parent::punctuated',
-     'following-sibling::*', '@role!="fullstop"',
+     'following-sibling::*', '@role!="fullstop"', '@role!="vbar"'
     ],
 
     ['Rule',

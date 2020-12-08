@@ -58,7 +58,9 @@ sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
   var processor = sre.SemanticProcessor.getInstance();
   var doc = node.ownerDocument;
   for (var i = 0, chr; chr = content[i]; i++) {
-    var sn = processor.identifierNode(chr, sre.Semantic.Font.UNKNOWN, '');
+    var leaf = processor.getNodeFactory().
+        makeLeafNode(chr, sre.Semantic.Font.UNKNOWN);
+    var sn = processor.identifierNode(leaf, sre.Semantic.Font.UNKNOWN, '');
     correction(sn);
     result.push(sn.xml(doc));
   }
@@ -823,7 +825,6 @@ sre.MathspeakUtil.generateTensorRules = function(store) {
   //
   //  lsub lsuper base rsub rsuper
   var defineRule = goog.bind(store.defineRule, store);
-  var defineRulesAlias = goog.bind(store.defineRulesAlias, store);
   var defineSpecialisedRule = goog.bind(store.defineSpecialisedRule, store);
   var constellations = ['11111', '11110', '11101', '11100',
                         '10111', '10110', '10101', '10100',
@@ -847,23 +848,16 @@ sre.MathspeakUtil.generateTensorRules = function(store) {
     verbStr += '; [t]' + baselineStr + 'Verbose';
     briefStr += '; [t]' + baselineStr + 'Brief';
     name = name + '-baseline';
-    verbList = [name, 'default', verbStr, 'self::tensor',
-                'following-sibling::*'].
+    var cstr = '((.//*[not(*)])[last()]/@id)!=(((.//ancestor::fraction|' +
+        'ancestor::root|ancestor::sqrt|ancestor::cell|ancestor::line|' +
+        'ancestor::stree)[1]//*[not(*)])[last()]/@id)';
+    verbList = [name, 'default', verbStr, 'self::tensor', cstr].
         concat(components);
-    briefList = [name, 'brief', briefStr, 'self::tensor',
-                 'following-sibling::*'].
+    briefList = [name, 'brief', briefStr, 'self::tensor', cstr].
         concat(components);
     defineRule.apply(null, verbList);
     defineRule.apply(null, briefList);
     defineSpecialisedRule(name, 'brief', 'sbrief');
-    // Rules without neighbour but baseline.
-    var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
-                     'ancestor::fraction|ancestor::punctuated|' +
-                     'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
-                     'ancestor::relseq|ancestor::multirel|' +
-                     '@embellished'].
-        concat(components);
-    defineRulesAlias.apply(null, aliasList);
   }
 };
 

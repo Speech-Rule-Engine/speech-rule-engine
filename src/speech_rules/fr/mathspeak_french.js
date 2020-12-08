@@ -31,77 +31,76 @@ sre.MathspeakFrench = {
   locale: 'fr',
   domain: 'mathspeak',
   functions: [
-    ['CQF', 'CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
-    ['CQF', 'CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
+    ['CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
+    ['CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
 
-    ['CSF', 'CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
+    ['CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
     // Fraction function.
-    ['CSF', 'CSFopenFracVerbose', sre.MathspeakUtil.openingFractionVerbose],
-    ['CSF', 'CSFcloseFracVerbose', sre.MathspeakUtil.closingFractionVerbose],
-    ['CSF', 'CSFoverFracVerbose', sre.MathspeakUtil.overFractionVerbose],
-    ['CSF', 'CSFopenFracBrief', sre.MathspeakUtil.openingFractionBrief],
-    ['CSF', 'CSFcloseFracBrief', sre.MathspeakUtil.closingFractionBrief],
-    ['CSF', 'CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief],
-    ['CSF', 'CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief],
-    ['CSF', 'CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief],
-    ['CSF', 'CSFvulgarFrFraction', sre.NumbersUtil.vulgarFraction],
-    ['CQF', 'CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction],
+    ['CSFopenFracVerbose', sre.MathspeakUtil.openingFractionVerbose],
+    ['CSFcloseFracVerbose', sre.MathspeakUtil.closingFractionVerbose],
+    ['CSFoverFracVerbose', sre.MathspeakUtil.overFractionVerbose],
+    ['CSFopenFracBrief', sre.MathspeakUtil.openingFractionBrief],
+    ['CSFcloseFracBrief', sre.MathspeakUtil.closingFractionBrief],
+    ['CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief],
+    ['CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief],
+    ['CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief],
+    ['CSFvulgarFrFraction', sre.NumbersUtil.vulgarFraction],
+    ['CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction],
 
     // Radical function.
-    ['CSF', 'CSFopenRadicalVerbose', sre.MathspeakUtil.openingRadicalVerbose],
-    ['CSF', 'CSFcloseRadicalVerbose', sre.MathspeakUtil.closingRadicalVerbose],
-    ['CSF', 'CSFindexRadicalVerbose', sre.MathspeakUtil.indexRadicalVerbose],
-    ['CSF', 'CSFopenRadicalBrief', sre.MathspeakUtil.openingRadicalBrief],
-    ['CSF', 'CSFcloseRadicalBrief', sre.MathspeakUtil.closingRadicalBrief],
-    ['CSF', 'CSFindexRadicalBrief', sre.MathspeakUtil.indexRadicalBrief],
-    ['CSF', 'CSFopenRadicalSbrief', sre.MathspeakUtil.openingRadicalSbrief],
-    ['CSF', 'CSFindexRadicalSbrief', sre.MathspeakUtil.indexRadicalSbrief],
-    ['CQF', 'CQFisSmallRoot', sre.MathspeakFrenchUtil.smallRoot],
+    ['CSFopenRadicalVerbose', sre.MathspeakUtil.openingRadicalVerbose],
+    ['CSFcloseRadicalVerbose', sre.MathspeakUtil.closingRadicalVerbose],
+    ['CSFindexRadicalVerbose', sre.MathspeakUtil.indexRadicalVerbose],
+    ['CSFopenRadicalBrief', sre.MathspeakUtil.openingRadicalBrief],
+    ['CSFcloseRadicalBrief', sre.MathspeakUtil.closingRadicalBrief],
+    ['CSFindexRadicalBrief', sre.MathspeakUtil.indexRadicalBrief],
+    ['CSFopenRadicalSbrief', sre.MathspeakUtil.openingRadicalSbrief],
+    ['CSFindexRadicalSbrief', sre.MathspeakUtil.indexRadicalSbrief],
+    ['CQFisSmallRoot', sre.MathspeakFrenchUtil.smallRoot],
 
     // Sub- Superscript.
-    ['CSF', 'CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSF', 'CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
-    ['CSF', 'CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSF', 'CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
-    ['CSF', 'CSFbaselineVerbose', sre.MathspeakFrenchUtil.baselineVerbose],
-    ['CSF', 'CSFbaselineBrief', sre.MathspeakFrenchUtil.baselineBrief],
+    ['CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
+    ['CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
+    ['CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
+    ['CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
+    ['CSFbaselineVerbose', sre.MathspeakFrenchUtil.baselineVerbose],
+    ['CSFbaselineBrief', sre.MathspeakFrenchUtil.baselineBrief],
     // Tensor specific:
-    ['CSF', 'CSFleftsuperscriptVerbose',
+    ['CSFleftsuperscriptVerbose',
      sre.MathspeakFrenchUtil.leftSuperscriptVerbose],
-    ['CSF', 'CSFleftsubscriptVerbose',
+    ['CSFleftsubscriptVerbose',
      sre.MathspeakFrenchUtil.leftSubscriptVerbose],
-    ['CSF', 'CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSF', 'CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSF', 'CSFleftsuperscriptBrief',
+    ['CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
+    ['CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
+    ['CSFleftsuperscriptBrief',
      sre.MathspeakFrenchUtil.leftSuperscriptBrief],
-    ['CSF', 'CSFleftsubscriptBrief',
+    ['CSFleftsubscriptBrief',
      sre.MathspeakFrenchUtil.leftSubscriptBrief],
-    ['CSF', 'CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
-    ['CSF', 'CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
+    ['CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
+    ['CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
 
 
     // Over- Underscore.
-    ['CSF', 'CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
-    ['CSF', 'CSFoverscript', sre.MathspeakUtil.nestedOverscore],
+    ['CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
+    ['CSFoverscript', sre.MathspeakUtil.nestedOverscore],
 
-    ['CTXF', 'CTXFordinalCounter', sre.NumbersUtil.ordinalCounter],
-    ['CTXF', 'CTXFcontentIterator', sre.StoreUtil.contentIterator],
+    ['CTFordinalCounter', sre.NumbersUtil.ordinalCounter],
+    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
 
     // Layout related.
-    ['CQF', 'CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
-    ['CSF', 'CSFRemoveParens', sre.MathspeakUtil.removeParens],
+    ['CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
+    ['CSFRemoveParens', sre.MathspeakUtil.removeParens],
 
     // Dummy.
-    ['CQF', 'CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
+    ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
 
-    ['CQF', 'CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase],
+    ['CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase],
   ],
   rules: [
     ['Rule',
      'collapsed', 'default',
      '[n] . (engine:modality=summary,grammar:collapsed)',
-     'self::*', '@alternative', 'not(contains(@grammar, "collapsed"))',
-     'self::*', 'self::*', 'self::*', 'self::*', 'self::*'
+     'self::*[@alternative]', 'not(contains(@grammar, "collapsed"))'
     ],
     ['SpecializedRule',
      'collapsed', 'default', 'brief'],
@@ -121,7 +120,7 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'protected', 'default', '[t] text()',
-     'self::*', '@role="protected"'],
+     'self::number', 'contains(@grammar, "protected")'],
 
     ['Rule',
      'omit-empty', 'default',
@@ -177,7 +176,8 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'number-with-chars', 'default',
-     '[t] "nombre"; [m] CQFspaceoutNumber', 'self::number',
+     '[t] "nombre"; [m] CQFspaceoutNumber (grammar:protected)',
+      'self::number', '@role="othernumber"',
      '"" != translate(text(), "0123456789.,", "")',
      'text() != translate(text(), "0123456789.,", "")'],
 
@@ -296,7 +296,7 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'binary-operation', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop'],
+     '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop'],
 
     // Implicit times is currently ignored!
     ['Rule',
@@ -369,23 +369,6 @@ sre.MathspeakFrench = {
     ['Rule',
      'minus', 'default', '[t] "moins"',
      'self::operator', 'text()="\u002D"'],
-
-    ['Rule',
-     'single-prime', 'default', '[t] "prime"',
-     'self::punctuated', '@role="prime"', 'count(children/*)=1'],
-    ['Rule',
-     'double-prime', 'default', '[t] "double prime"',
-     'self::punctuated', '@role="prime"', 'count(children/*)=2'],
-    ['Rule',
-     'triple-prime', 'default', '[t] "triple prime"',
-     'self::punctuated', '@role="prime"', 'count(children/*)=3'],
-    ['Rule',
-     'quadruple-prime', 'default', '[t] "quadruple prime"',
-     'self::punctuated', '@role="prime"', 'count(children/*)=4'],
-    ['Rule',
-     'counted-prime', 'default',
-     '[t] count(children/*); [t] "prime"',
-     'self::punctuated', '@role="prime"'],
 
     // Fraction rules
 
@@ -584,7 +567,7 @@ sre.MathspeakFrench = {
     // Relations
     ['Rule',
      'relseq', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq'],
 
     ['Rule',
@@ -594,12 +577,12 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'multi-equality', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::relseq', '@role="equality"', 'count(./children/*)>2'],
 
     ['Rule',
      'multrel', 'default',
-     '[m] children/* (sepFunc:CTXFcontentIterator)',
+     '[m] children/* (sepFunc:CTFcontentIterator)',
      'self::multirel'],
 
     // Subscripts
@@ -835,6 +818,32 @@ sre.MathspeakFrench = {
      'prime', 'default', 'brief'],
     ['SpecializedRule',
      'prime', 'default', 'sbrief'],
+    ['Rule',
+     'double-prime', 'default', '[t] "double prime"',
+     'self::punctuated', '@role="prime"', 'count(children/*)=2'],
+    ['Aliases',
+     'double-prime',
+     'self::operator', '@role="prime"', 'string-length(text())=2'],
+    ['Rule',
+     'triple-prime', 'default', '[t] "triple prime"',
+     'self::punctuated', '@role="prime"', 'count(children/*)=3'],
+    ['Aliases',
+     'triple-prime',
+     'self::operator', '@role="prime"', 'string-length(text())=3'],
+    ['Rule',
+     'quadruple-prime', 'default', '[t] "quadruple prime"',
+     'self::punctuated', '@role="prime"', 'count(children/*)=4'],
+    ['Aliases',
+     'quadruple-prime',
+     'self::operator', '@role="prime"', 'string-length(text())=4'],
+    ['Rule',
+     'counted-prime', 'default',
+     '[t] count(children/*) (grammar:numbers2alpha); [t] "prime"',
+     'self::punctuated', '@role="prime"'],
+    ['Rule',
+     'counted-prime', 'default',
+     '[t] string-length(text()) (grammar:numbers2alpha); [t] "prime"',
+     'self::operator', '@role="prime"', 'string-length(text())>4'],
 
     ['Rule',
      'prime-subscript', 'default',
@@ -965,48 +974,43 @@ sre.MathspeakFrench = {
 
     // Layout Elements
     ['Rule',
-     'matrix-fence', 'default',
-     '[n] children/*[1];',
-     'self::fenced', 'count(children/*)=1', 'name(children/*[1])="matrix"'],
-
-    ['Rule',
      'matrix', 'default',
      '[t] "début matrice"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin matrice"',
      'self::matrix'],
     ['Rule',
      'matrix', 'sbrief',
      '[t] "matrice"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin matrice"', 'self::matrix'],
     ['Aliases',
      'matrix', 'self::vector'],
 
     ['Rule',
      'matrix-row', 'default',
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"colonne");' +
      '[p] (pause: 200)',
      'self::row'],
     ['Rule',
      'row-with-label', 'default',
      '[t] "avec étiquette"; [n] content/*[1]; ' +
      '[t] "fin étiquette"(pause: 200); ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"colonne")',
      'self::row', 'content'],
     ['Rule',
      'row-with-label', 'brief',
      '[t] "étiquette"; [n] content/*[1]; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"colonne")',
      'self::row', 'content'],
     ['SpecializedRule',
      'row-with-label', 'brief', 'sbrief'],
     ['Rule',
      'row-with-text-label', 'sbrief',
      '[t] "étiquette"; [t] CSFRemoveParens;' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"colonne")',
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"colonne")',
      'self::row', 'content', 'name(content/cell/children/*[1])="text"'],
     ['Rule',
      'empty-row', 'default',
@@ -1028,28 +1032,28 @@ sre.MathspeakFrench = {
      'determinant', 'default',
      '[t] "début déterminant"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*); [t] "";' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin déterminant"',
      'self::matrix', '@role="determinant"'],
     ['SpecializedRule',
      'determinant', 'default', 'sbrief',
      '[t] "déterminant"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*);' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin déterminant"'],
 
     ['Rule',
      'determinant-simple', 'default',
      '[t] "début déterminant"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*);' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée",' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée",' +
      'grammar:simpleDet); [t] "fin déterminant"',
      'self::matrix', '@role="determinant"', 'CQFdetIsSimple'],
     ['SpecializedRule',
      'determinant-simple', 'default', 'sbrief',
      '[t] "déterminant"; [t] count(children/*);  [t] "par";' +
      '[t] count(children/*[1]/children/*);' +
-     ' [m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée",' +
+     ' [m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée",' +
      'grammar:simpleDet); [t] "fin déterminant"'],
     ['Rule',
      'row-simple', 'default',
@@ -1058,11 +1062,11 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'layout', 'default', '[t] "début tableau"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin tableau"', 'self::table'],
     ['Rule',
      'layout', 'sbrief', '[t] "tableau"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin tableau"', 'self::table'],
 
     ['Rule',
@@ -1082,12 +1086,12 @@ sre.MathspeakFrench = {
     ['Rule',
      'cases', 'default', '[t] "début tableau"; ' +
      '[n] content/*[1]; [t] "élargie";' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin tableau"', 'self::cases'],
     ['Rule',
      'cases', 'sbrief', '[t] "tableau"; ' +
      '[n] content/*[1]; [t] "élargie"; ' +
-     '[m] children/* (ctxtFunc:CTXFordinalCounter,context:"rangée ");' +
+     '[m] children/* (ctxtFunc:CTFordinalCounter,context:"rangée ");' +
      ' [t] "fin tableau"', 'self::cases'],
 
     // Multiline rules.

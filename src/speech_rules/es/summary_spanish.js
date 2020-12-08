@@ -153,14 +153,9 @@ sre.SummarySpanish = {
      ' children/*/descendant-or-self::root'
     ],
 
-    // Content following the root expression.
-    ['Rule',
-     'abstr-root', 'default.default',
-     '[t] "raíz del índice"; [n] children/*[1] (engine:modality="speech");' +
-     ' [t] "finalizar de índice"',
-     'self::root', 'contains(@grammar, "collapsed")',
-     'following-sibling::* or ancestor::*/following-sibling::*'
-    ],
+    /**
+     * @override
+     */
     ['Rule',
      'abstr-root', 'default.default',
      '[t] "raíz del índice"; [n] children/*[1] (engine:modality=speech)',
@@ -173,16 +168,6 @@ sre.SummarySpanish = {
     ],
     ['SpecializedRule',
      'abstr-root', 'mathspeak.brief', 'mathspeak.sbrief'
-    ],
-    // Content following the root expression.
-    ['Rule',
-     'abstr-root-nested', 'default.default',
-     '[t] "raíz anidada del índice"; ' +
-     '[n] children/*[1] (engine:modality="speech"); [t] "finalizar de índice"',
-     'self::root', 'contains(@grammar, "collapsed")',
-     'children/*/descendant-or-self::sqrt or' +
-     ' children/*/descendant-or-self::root',
-     'following-sibling::* or ancestor::*/following-sibling::*'
     ],
     ['Rule',
      'abstr-root-nested', 'default.default',
@@ -447,7 +432,7 @@ sre.SummarySpanish = {
     ],
     ['Rule',
      'abstr-var-punctuated', 'default.default',
-     '[t] "lista separada por"; [n] content/*[1]',
+     '[t] "lista separada por"; [n] content/*[1];' +
      '[t] "de longitud variable"',
      'self::punctuated',
      './children/punctuation[@role="ellipsis"]'

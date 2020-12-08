@@ -218,13 +218,17 @@ sre.Locale.de = {
   PLURAL_UNIT: {
     'Meile': 'Meilen',
     'Yard': 'Yards',
-    'Joule': 'Joules',
     'Gallone': 'Gallonen',
     'Unze': 'Unzen',
     'Tonne': 'Tonnen',
     'Minute': 'Minuten',
     'Stunde': 'Stunden',
+    'Joule': 'Joules',
     'Sekunde': 'Sekunden'
+  },
+
+  SI: function(prefix, unit) {
+    return prefix + unit.toLowerCase();
   },
 
   PLURAL: function(unit) {

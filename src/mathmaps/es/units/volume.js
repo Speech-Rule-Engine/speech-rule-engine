@@ -31,7 +31,8 @@
   {
     "key": "fl. oz.",
     "names": [
-      "fl. oz."
+      "fl. oz.",
+      "fl oz"
     ],
     "mappings": {
       "default": {
@@ -83,7 +84,9 @@
     "key": "tbsp",
     "names": [
       "tbsp",
-      "tbsp."
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
     ],
     "mappings": {
       "default": {
@@ -108,7 +111,8 @@
   {
     "key": "cc",
     "names": [
-      "cc"
+      "cc",
+      "ccm"
     ],
     "mappings": {
       "default": {
@@ -118,19 +122,8 @@
     "category": "volume"
   },
   {
-    "key": "kl",
-    "names": [
-      "kl"
-    ],
-    "mappings": {
-      "default": {
-        "default": "kilolitro"
-      }
-    },
-    "category": "volume"
-  },
-  {
     "key": "l",
+   "si": true,
     "names": [
       "l"
     ],
@@ -141,16 +134,61 @@
     },
     "category": "volume"
   },
-  {
-    "key": "ml",
-    "names": [
-      "ml"
-    ],
+    {
+    "category": "volume",
     "mappings": {
       "default": {
-        "default": "mililitro"
+        "default": "pulgada cúbico"
       }
     },
-    "category": "volume"
+    "key": "cu inch",
+    "names": [
+      "cu in",
+      "cu. in."
+    ]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "pies cúbico"
+     }
+   },
+   "key": "cu ft",
+   "names": ["cu ft", "cu. ft."]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "yarda cúbica"
+     }
+   },
+   "key": "cu yd",
+   "names": ["cu yd", "cu. yd."]
+  },
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "dracma líquidas"
+      }
+    },
+    "key": "fluid dram",
+    "names": [
+      "fl dr",
+      "fl. dr."
+    ]
+  },
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "taza"
+      }
+    },
+    "key": "cup",
+    "names": [
+      "cp",
+      "cp."
+    ]
   }
 ]

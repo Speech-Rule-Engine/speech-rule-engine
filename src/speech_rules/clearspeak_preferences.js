@@ -214,6 +214,7 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
   var initial = sre.ClearspeakPreferences.Parser.base(this, 'parse', str);
   var style = initial.getValue(sre.DynamicCstr.Axis.STYLE);
   var locale = initial.getValue(sre.DynamicCstr.Axis.LOCALE);
+  var modality = initial.getValue(sre.DynamicCstr.Axis.MODALITY);
   var pref = {};
   if (style !== sre.DynamicCstr.DEFAULT_VALUE) {
     pref = this.fromPreference(style);
@@ -221,7 +222,7 @@ sre.ClearspeakPreferences.Parser.prototype.parse = function(str) {
   }
   return new sre.ClearspeakPreferences({
     'locale': locale,
-    'modality': sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY],
+    'modality': modality,
     'domain': 'clearspeak',
     'style': style}, pref);
 };

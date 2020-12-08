@@ -4,7 +4,7 @@ Speech Rule Engine
 
 ***
 
-**Breaking Change:** Please move to v3.0.2 (master) or v3.1.0-beta.3 (develop). [More info here.](#breaking-change)
+**Breaking Change:** Please move to v3.0.2 or later. [More info here.](#breaking-change)
 
 ***
 
@@ -30,7 +30,7 @@ strings.
 
 There are three ways of using SRE:
 
-1. [**Node Module:**](#node-module) Download via npm. This is the easiest way to use the speech
+1. [**Node Module:**](#node-module) Download via npm or yarn. This is the easiest way to use the speech
 rule engine via its Api and is the preferred option if you just want to include
 it in your project.
 
@@ -53,6 +53,10 @@ Node Module
 Install as a node module using npm:
 
      npm install speech-rule-engine
+
+Or add it with yarn:
+
+     yarn add speech-rule-engine
 
 Then import into a running node or a source file using require:
 
@@ -440,7 +444,7 @@ the [commander library](https://github.com/tj/commander.js/releases/tag/v6.0.0)
 old versions of SRE might break when newly installed from `npm`.  SRE relies on
 commander for running its command line interface.
 
-**Therefore, please move to SRE v3.0.2 (master) or v3.1.0-beta.3 (develop).**
+**Therefore, please move to SRE v3.0.2 or later.**
 
 
 If you want to run older versions of SRE, you need to manually downgrade the

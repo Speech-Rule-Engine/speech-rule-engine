@@ -709,11 +709,11 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
   var modality = dynamic.getValue(sre.DynamicCstr.Axis.MODALITY);
   var domain = dynamic.getValue(sre.DynamicCstr.Axis.DOMAIN);
   if (!trie.hasSubtrie([locale, modality, domain])) {
-    locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
+    domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
     if (!trie.hasSubtrie([locale, modality, domain])) {
       modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
       if (!trie.hasSubtrie([locale, modality, domain])) {
-        domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+        locale = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE];
       }
     }
   }

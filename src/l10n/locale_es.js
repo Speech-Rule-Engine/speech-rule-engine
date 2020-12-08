@@ -53,7 +53,7 @@ sre.Locale.es = {
     SUPERSCRIPT: 'superíndice',
     SUBSCRIPT: 'subíndice',
     BASELINE: 'línea base',
-    BASE: '',
+    BASE: 'base',
     NESTED: '',
     NEST_ROOT: '',
     STARTROOT: 'empezar raíz',
@@ -198,6 +198,13 @@ sre.Locale.es = {
 
   PLURAL: function(unit) {
     return (/.*s$/.test(unit)) ? unit : unit + 's';
+  },
+
+  SI: function(prefix, unit) {
+    if (unit.match(/^metro/)) {
+      prefix = prefix.replace(/a$/, 'á').replace(/o$/, 'ó').replace(/i$/, 'í');
+    }
+    return prefix + unit;
   },
 
   NUMBERS: sre.Numbers.es.NUMBERS,

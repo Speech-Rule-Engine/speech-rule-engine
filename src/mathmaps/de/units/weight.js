@@ -47,18 +47,21 @@
     },
     "category": "weight",
     "names": [
-      "g",
       "gr"
     ]
   },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "Kilogramm"
-     }
-   },
-   "key": "kg",
-   "names": ["kg"]
+  {
+    "key": "g",
+    "si": true,
+    "mappings": {
+      "default": {
+        "default": "Gramm"
+      }
+    },
+    "category": "weight",
+    "names": [
+      "g"
+    ]
   },
   {"category": "weight",
    "mappings": {
@@ -67,16 +70,7 @@
      }
    },
    "key": "mcg",
-   "names": ["mcg", "µg"]
-  },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "Milligramm"
-     }
-   },
-   "key": "mg",
-   "names": ["mg"]
+   "names": ["mcg"]
   },
   {
     "key": "t",
@@ -91,5 +85,54 @@
       "t",
       "T"
     ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "plural": "Drachmen",
+        "default": "Drachme"
+      }
+    },
+    "key": "dram",
+    "names": [
+      "dr",
+      "dr."
+    ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "Stone"
+      }
+    },
+    "key": "st",
+    "names": [
+      "st",
+      "st."
+    ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "Viertelzentner"
+      }
+    },
+    "key": "qtr",
+    "names": [
+      "qtr",
+      "qtr."
+    ]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "Zentner"
+     }
+   },
+   "key": "cwt",
+   "names": ["cwt", "cwt.", "Ztr.", "Ctr."]
   }
 ]

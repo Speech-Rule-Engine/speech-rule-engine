@@ -59,15 +59,28 @@ sre.SpeechGeneratorUtil.recomputeSpeech = function(semantic) {
 /**
  * Computes speech descriptions for a single semantic node without cache.
  * @param {!Node} tree The semantic node as XML.
- * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions
- *     for the node.
+ * @return {string} The speech string.
  */
 sre.SpeechGeneratorUtil.computeSpeechWithoutCache = function(tree) {
   var oldCache = sre.Engine.getInstance().cache;
   sre.Engine.getInstance().cache = false;
   var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(tree);
   sre.Engine.getInstance().cache = oldCache;
-  return descrs;
+  return sre.AuralRendering.getInstance().markup(descrs);
+};
+
+
+/**
+ * Computes speech descriptions for a single semantic node with cache.
+ * @param {!Node} tree The semantic node as XML.
+ * @return {string} The speech string.
+ */
+sre.SpeechGeneratorUtil.computeSpeechWithCache = function(tree) {
+  var oldCache = sre.Engine.getInstance().cache;
+  sre.Engine.getInstance().cache = true;
+  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(tree);
+  sre.Engine.getInstance().cache = oldCache;
+  return sre.AuralRendering.getInstance().markup(descrs);
 };
 
 
@@ -75,16 +88,38 @@ sre.SpeechGeneratorUtil.computeSpeechWithoutCache = function(tree) {
  * Computes speech string for a single semantic node, either by retrieving it
  * from the the cache or by recomputing it.
  * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @param {boolean=} opt_force Forces the use of cache even if globally disabled.
  * @return {string} The speech string.
  */
-sre.SpeechGeneratorUtil.retrieveSpeech = function(semantic) {
+sre.SpeechGeneratorUtil.retrieveSpeech = function(semantic, opt_force) {
   var descrs = null;
-  if (sre.Engine.getInstance().cache) {
+  if (sre.Engine.getInstance().cache || opt_force) {
     descrs = sre.SpeechRuleEngine.getInstance().
         getCache(semantic.id.toString());
   }
   if (!descrs) {
     descrs = sre.SpeechGeneratorUtil.recomputeSpeech(semantic);
+  }
+  return sre.AuralRendering.getInstance().markup(descrs);
+};
+
+
+/**
+ * Computes speech string for a single semantic node, either by retrieving it
+ * from the the cache or by recomputing it.
+ * @param {!Node} xml The semantic tree node as XML.
+ * @param {boolean=} opt_force Forces the use of cache even if globally disabled.
+ * @return {string} The speech string.
+ */
+sre.SpeechGeneratorUtil.retrieveSpeechXml = function(xml, opt_force) {
+  var descrs = null;
+  var id = xml.getAttribute('id');
+  var sreng = sre.SpeechRuleEngine.getInstance();
+  if (sre.Engine.getInstance().cache || opt_force) {
+    descrs = sreng.getCache(id);
+  }
+  if (!descrs) {
+    descrs = sreng.evaluateNode(xml);
   }
   return sre.AuralRendering.getInstance().markup(descrs);
 };
@@ -133,8 +168,16 @@ sre.SpeechGeneratorUtil.retrievePrefix = function(semantic) {
  */
 sre.SpeechGeneratorUtil.computePrefix_ = function(semantic) {
   var tree = sre.SemanticTree.fromRoot(semantic);
-  var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
-                                     tree.xml())[0];
+  var nodes = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
+                                      tree.xml());
+  var node = nodes[0];
+  if (nodes.length > 1) {
+    // Find the node we actually want. Here the problem is that our semantic
+    // tree is actually a DAG: While elements can appear as children only once,
+    // they can appear in multiple content nodes. XML serialization can
+    // therefore not create unique ids.
+    node = sre.SpeechGeneratorUtil.nodeAtPosition_(semantic, nodes) || node;
+  }
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
       {'modality': 'prefix', 'domain': 'default', 'style': 'default',
@@ -142,6 +185,40 @@ sre.SpeechGeneratorUtil.computePrefix_ = function(semantic) {
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];
+};
+
+
+/**
+ * Finds the nodes at the same position as the semantic node in a list of XML
+ * nodes. We define position via the path to root.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @param {!Array.<Element>} nodes The XML nodes.
+ * @return {Element} The node at the exact tree position of the semantic node.
+ * @private
+ */
+sre.SpeechGeneratorUtil.nodeAtPosition_ = function(semantic, nodes) {
+  var node = nodes[0];
+  if (!semantic.parent) {
+    return node;
+  }
+  var path = [];
+  while (semantic) {
+    path.push(semantic.id);
+    semantic = semantic.parent;
+  }
+  var pathEquals = function(xml, path) {
+    while (path.length && path.shift().toString() === xml.getAttribute('id') &&
+           xml.parentNode && xml.parentNode.parentNode) {
+      xml = xml.parentNode.parentNode;
+    }
+    return !path.length;
+  };
+  for (var i = 0, xml; xml = nodes[i]; i++) {
+    if (pathEquals(xml, path.slice())) {
+      return xml;
+    }
+  }
+  return node;
 };
 
 
@@ -231,8 +308,7 @@ sre.SpeechGeneratorUtil.retrieveSummary = function(node) {
 sre.SpeechGeneratorUtil.computeSummary_ = function(node) {
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
-      {'modality': 'summary',
-        'strict': false, 'cache': false, 'speech': true},
+      {'modality': 'summary', 'strict': false, 'cache': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];

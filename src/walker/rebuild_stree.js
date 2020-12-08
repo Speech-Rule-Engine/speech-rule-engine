@@ -88,6 +88,22 @@ sre.RebuildStree.prototype.getTree = function() {
 
 
 /**
+ * Adds external attributes if they exists. Recurses one level if we have a leaf
+ * element with a none-text child.
+ * @param {sre.SemanticNode} snode The semantic node.
+ * @param {Node} node The mml node.
+ * @param {boolean} leaf True if it is a leaf node.
+ */
+sre.RebuildStree.addAttributes = function(snode, node, leaf) {
+  if (leaf && node.childNodes.length === 1 &&
+      node.childNodes[0].nodeType !== sre.DomUtil.NodeType.TEXT_NODE) {
+    sre.SemanticUtil.addAttributes(snode, node.childNodes[0]);
+  }
+  sre.SemanticUtil.addAttributes(snode, node);
+};
+
+
+/**
  * Assembles the semantic tree from the data attributes of the MathML node.
  * @param {!Node} node The MathML node.
  * @return {!sre.SemanticNode} The corresponding semantic tree node.
@@ -98,6 +114,8 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
       sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
       sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CONTENT));
+  sre.RebuildStree.addAttributes(
+      snode, node, !(children.length || content.length));
   if (content.length === 0 && children.length === 0) {
     snode.textContent = node.textContent;
     return snode;

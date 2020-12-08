@@ -124,7 +124,7 @@ sre.SemanticAttr = function() {
    */
   this.primes =
       [
-        '\'', '′', '″', '‴', '‵', '‶', '‷', '⁗'
+        '\'', '′', '″', '‴', '‵', '‶', '‷', '⁗', 'ʹ', 'ʺ'
       ];
   /**
    * @type {Array.<string>}
@@ -198,7 +198,7 @@ sre.SemanticAttr = function() {
    */
   this.neutralFences =
       [
-        '|', '¦', '‖', '❘', '⦀', '⫴', '￤', '｜'
+        '|', '¦', '‖', '❘', '⦀', '⫴', '￤', '｜', '∣'
       ];
   /** Array of all fences.
    * @type {Array.<string>}
@@ -1746,6 +1746,15 @@ sre.SemanticAttr.lookupMeaning = function(symbol) {
  */
 sre.SemanticAttr.invisibleTimes = function() {
   return sre.SemanticAttr.getInstance().invisibleTimes_;
+};
+
+
+/**
+ * String representation of the invisible plus unicode character.
+ * @return {string} The invisible plus character.
+ */
+sre.SemanticAttr.invisiblePlus = function() {
+  return sre.SemanticAttr.getInstance().invisiblePlus_;
 };
 
 
