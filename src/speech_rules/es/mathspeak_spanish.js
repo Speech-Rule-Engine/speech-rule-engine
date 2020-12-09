@@ -100,6 +100,9 @@ sre.MathspeakSpanish = {
      'collapsed', 'default', 'brief'],
     ['SpecializedRule',
      'collapsed', 'brief', 'sbrief'],
+    ['Rule',
+     'direct-speech', 'default',
+     '[t] @ext-speech', 'self::*[@ext-speech]'],
 
     // Initial rule
     ['Rule',

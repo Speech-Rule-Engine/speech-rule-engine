@@ -105,6 +105,10 @@ sre.MathspeakGerman = {
       'collapsed', 'default', 'brief'],
     ['SpecializedRule',
       'collapsed', 'brief', 'sbrief'],
+    // Direct speech rule
+    ['Rule',
+     'direct-speech', 'default',
+     '[t] @ext-speech', 'self::*[@ext-speech]'],
 
     // Initial rule
     ['Rule',

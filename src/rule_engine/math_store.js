@@ -281,7 +281,7 @@ sre.MathStore.prototype.matchNumber_ = function(str) {
   var isEn = enNum && enNum[0] === str;
   var isLoc = (locNum && locNum[0] === str) || !isEn;
   if (isLoc) {
-    return {number: locNum[0], length: locNum[0].length};
+    return locNum ? {number: locNum[0], length: locNum[0].length} : null;
   }
   var number = enNum[0].
       replace(new RegExp(sre.Locale.en.REGEXP.DIGIT_GROUP, 'g'), 'X').
