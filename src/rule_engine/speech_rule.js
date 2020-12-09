@@ -370,6 +370,73 @@ sre.SpeechRule.Precondition = function(query, opt_constraints) {
 
   /** @type {!Array.<string>} */
   this.constraints = opt_constraints || [];
+
+  /** @type {!number} */
+  this.priority = this.calculatePriority_();
+};
+
+
+/**
+ * Computes a default priority for a rule from the query constraint. Currently
+ * we only consider "string queries". That is query constraints that contain a
+ * specialisation of the form "self::something[other]". Priority formula is then:
+ * Query strength * 100 + Specialisation strength * 10.
+ * @return {number} The priority.
+ */
+sre.SpeechRule.Precondition.prototype.calculatePriority_ = function() {
+  var query = sre.SpeechRule.Precondition.constraintValue_(
+    this.query, sre.SpeechRule.Precondition.queryPriorities_);
+  if (!query) {
+    return 0;
+  }
+  var inner = this.query.match(/^self::.+\[(.+)\]/)[1];
+  var attr = sre.SpeechRule.Precondition.constraintValue_(
+    inner, sre.SpeechRule.Precondition.attributePriorities_);
+  return query * 100 + attr * 10;
+};
+
+
+/**
+ * @type {Array.<RegExp>}
+ * 1. Any self
+ * 2. Specific self
+ * 3. Any self with condition
+ * 4. Specific self with condition
+ */
+sre.SpeechRule.Precondition.queryPriorities_ = [
+  // /^self::\*$/, /^self::[\w-]+$/,
+  /^self::\*\[.+\]$/, /^self::[\w-]+\[.+\]$/
+];
+
+
+/**
+ * @type {Array.<RegExp>}
+ * 1: Attribute not equal to
+ * 2: Attribute code not contain
+ * 3: Attribute exists
+ * 4: Attribute contains
+ * 5: Attribute has precise value
+ */
+sre.SpeechRule.Precondition.attributePriorities_ = [
+  /^@[\w-]+$/, /^@[\w-]+!=".+"$/, /^not\(contains\(@[\w-]+,\s*".+"\)\)$/,
+  /^contains\(@[\w-]+,".+"\)$/, /^@[\w-]+=".+"$/
+];
+
+
+/**
+ * Computes a base priority of a constraint by matching against an ordered list
+ * of regular expressions.
+ * @param {string} constr The constraint.
+ * @param {Array.<RegExp>} priorities The list of regular expressions.
+ * @return {number} The computer priority.
+ */
+sre.SpeechRule.Precondition.constraintValue_ = function(constr, priorities) {
+  for (var i = 0, regexp; regexp = priorities[i]; i++) {
+    if (constr.match(regexp)) {
+      return ++i;
+    }
+  }
+  return 0;
 };
 
 
@@ -378,7 +445,7 @@ sre.SpeechRule.Precondition = function(query, opt_constraints) {
  */
 sre.SpeechRule.Precondition.prototype.toString = function() {
   var constrs = this.constraints.join(', ');
-  return this.query + ', ' + constrs;
+  return this.query + ', ' + constrs + ' (' + this.priority + ')';
 };
 
 

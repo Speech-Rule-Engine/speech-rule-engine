@@ -256,37 +256,6 @@ sre.BaseRuleStore.prototype.removeDuplicates = function(rule) {
 };
 
 
-// TODO: Move that into the rule parsing and give it a strength parameter.
-//       Separate into query and initial pre-condition to keep trie slender.
-/**
- * Compare two rules by relative strength of the query constraint.
- * @param {sre.SpeechRule} r1 Rule 1.
- * @param {sre.SpeechRule} r2 Rule 2.
- * @return {number} -1, 0, 1 depending on the comparison.
- * @private
- */
-sre.BaseRuleStore.strongQuery_ = function(r1, r2) {
-  var query1 = r1.precondition.query;
-  var query2 = r2.precondition.query;
-  var strong1 = query1.match(/^self::\*\[@[\w-]+\]$/);
-  var strong2 = query2.match(/^self::\*\[@[\w-]+\]$/);
-  if (strong1 && strong2) {
-    return 0;
-  }
-  if (strong1) {
-    var stronger2 = query2.match(/^self::[\w-]+\[@[\w-]+\]$/);
-    return stronger2 ? 1 : -1;
-  }
-  if (strong2) {
-    var stronger1 = query1.match(/^self::[\w-]+\[@[\w-]+\]$/);
-    return stronger1 ? -1 : 1;
-  }
-  stronger1 = query1.match(/^self::[\w-]+\[@[\w-]+\]$/);
-  stronger2 = query2.match(/^self::[\w-]+\[@[\w-]+\]$/);
-  return (stronger1 && stronger2) ? 0 : (stronger1 ? -1 : (stronger2 ? 1 : 0));
-};
-
-
 /**
  * Picks the result of the most constraint rule by prefering those:
  * 1) that best match the dynamic constraints.
@@ -303,7 +272,8 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
         return comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
             // When same number of dynamic constraint attributes matches for
             // both rules, compare length of static constraints.
-            sre.BaseRuleStore.strongQuery_(r1, r2) ||
+            // sre.BaseRuleStore.strongQuery_(r1, r2) ||
+            sre.BaseRuleStore.priority_(r1, r2) ||
             (r2.precondition.constraints.length -
              r1.precondition.constraints.length);}
   );
@@ -356,6 +326,21 @@ sre.BaseRuleStore.comparePreconditions_ = function(rule1, rule2) {
   }
   return sre.BaseRuleStore.compareStaticConstraints_(
       prec1.constraints, prec2.constraints);
+};
+
+
+/**
+ * Compares priority of two rules.
+ * @param {sre.SpeechRule} rule1 The first speech rule.
+ * @param {sre.SpeechRule} rule2 The second speech rule.
+ * @return {number} -1, 0, 1 depending on the comparison.
+ * @private
+ */
+sre.BaseRuleStore.priority_ = function(rule1, rule2) {
+  var priority1 = rule1.precondition.priority;
+  var priority2 = rule2.precondition.priority;
+  return (priority1 === priority2) ? 0 :
+    ((priority1 > priority2) ? -1 : 1);
 };
 
 
