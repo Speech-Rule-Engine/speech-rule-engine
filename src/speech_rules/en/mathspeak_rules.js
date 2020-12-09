@@ -332,6 +332,11 @@ sre.MathspeakRules = {
 
     // Set rules
     ['Rule',
+     'empty-set', 'default',
+     '[t] "empty set"', 'self::fenced[@role="set empty"]',
+     'not(name(../..)="appl")'],
+    ['SpecializedRule', 'empty-set', 'default', 'sbrief'],
+    ['Rule',
      'fences-set', 'default',
      '[t] "StartSet"; [n] children/*[1]; [t] "EndSet"',
      'self::fenced', 'contains(@role,"set ")',

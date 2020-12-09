@@ -345,6 +345,11 @@ sre.MathspeakGerman = {
 
     // TODO (sorge) Maybe check for punctuated element and singleton?
     ['Rule',
+     'empty-set', 'default',
+     '[t] "leere Menge"', 'self::fenced[@role="set empty"]',
+     'not(name(../..)="appl")'],
+    ['SpecializedRule', 'empty-set', 'default', 'sbrief'],
+    ['Rule',
       'fences-set', 'default',
       '[t] "Anfang Menge"; [n] children/*[1]; [t] "Ende Menge"',
       'self::fenced', '@role="set empty" or @role="set extended"' +

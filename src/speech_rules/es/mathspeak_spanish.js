@@ -327,15 +327,16 @@ sre.MathspeakSpanish = {
      '[n] content/*[1]; [n] children/*[1]; [n] content/*[2]',
      'self::fenced', '@role="neutral"'],
 
-
-    // TODO (sorge) Maybe check for punctuated element and singleton?
+    // Set rules
+    ['Rule',
+     'empty-set', 'default',
+     '[t] "conjunto vacío"', 'self::fenced[@role="set empty"]',
+     'not(name(../..)="appl")'],
+    ['SpecializedRule', 'empty-set', 'default', 'sbrief'],
     ['Rule',
      'fences-set', 'default',
      '[t] "empezar llave"; [n] children/*[1]; [t] "finalizar llave"',
-     'self::fenced', '@role="set empty" or @role="set extended"' +
-     ' or @role="set singleton" or @role="set collection"',
-     // 'self::fenced', '@role="leftright"', 'content/*[1][text()]="{"',
-     // 'content/*[2][text()]="}"', 'count(children/*)=1',
+     'self::fenced', 'contains(@role,"set ")',
      'not(name(../..)="appl")'],
     ['SpecializedRule',
      'fences-set', 'default', 'sbrief',
