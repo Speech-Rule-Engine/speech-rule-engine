@@ -543,3 +543,47 @@ sre.SemanticNode.prototype.parseAnnotation = function(stateStr) {
 sre.SemanticNode.prototype.meaning = function() {
   return {type: this.type, role: this.role, font: this.font};
 };
+
+
+sre.SemanticNode.fromXml = function(xml) {
+  var id = parseInt(xml.getAttribute('id'), 10);
+  var node = new sre.SemanticNode(id);
+  node.type = xml.tagName;
+  sre.SemanticNode.setAttribute(node, xml, 'role');
+  sre.SemanticNode.setAttribute(node, xml, 'font');
+  sre.SemanticNode.setAttribute(node, xml, 'embellished');
+  sre.SemanticNode.setAttribute(node, xml, 'fencepointer');
+  if (xml.getAttribute('annotation')) {
+    node.parseAnnotation(xml.getAttribute('annotation'));
+  }
+  sre.SemanticNode.processChildren(node, xml);
+  return node;
+};
+
+
+sre.SemanticNode.setAttribute = function(node, xml, attribute) {
+  let value = xml.getAttribute(attribute);
+  if (value) {
+    node[attribute] = value;
+  }
+};
+
+
+sre.SemanticNode.processChildren = function(node, xml) {
+  for (var child of sre.DomUtil.toArray(xml.childNodes)) {
+    if (child.nodeType === sre.DomUtil.NodeType.TEXT_NODE) {
+      node.textContent = child.textContent;
+      continue;
+    }
+    var children = sre.DomUtil.toArray(child.childNodes)
+        .map(sre.SemanticNode.fromXml);
+    children.forEach(function(x) {
+      x.parent = node;
+    });
+    if (sre.DomUtil.tagName(child) === 'CONTENT') {
+      node.contentNodes = children;
+    } else {
+      node.childNodes = children;
+    }
+  }
+};

@@ -232,3 +232,9 @@ sre.SemanticTree.prototype.toJson = function() {
   json['stree'] = this.root.toJson();
   return json;
 };
+
+sre.SemanticTree.fromXml = function(xml) {
+  var stree = sre.SemanticTree.empty();
+  stree.root = sre.SemanticNode.fromXml(xml.childNodes[0]);
+  return stree;
+}
