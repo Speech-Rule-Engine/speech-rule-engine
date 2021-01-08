@@ -233,8 +233,17 @@ sre.SemanticTree.prototype.toJson = function() {
   return json;
 };
 
+
+/**
+ * Generates a semantic tree from its XML representation.
+ * @param {Element} xml The XML representation.
+ * @return {sre.SemanticTree} The generated semantic tree.
+ */
 sre.SemanticTree.fromXml = function(xml) {
   var stree = sre.SemanticTree.empty();
-  stree.root = sre.SemanticNode.fromXml(xml.childNodes[0]);
+  if (xml.childNodes[0]) {
+    stree.root = sre.SemanticNode.fromXml(
+      /** @type {!Element} */(xml.childNodes[0]));
+  }
   return stree;
-}
+};

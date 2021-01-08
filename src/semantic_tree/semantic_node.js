@@ -545,31 +545,53 @@ sre.SemanticNode.prototype.meaning = function() {
 };
 
 
+/**
+ * Generates a semantic node from its XML representation.
+ * @param {!Element} xml The XML representation.
+ * @return {!sre.SemanticNode} The generated semantic node.
+ */
 sre.SemanticNode.fromXml = function(xml) {
   var id = parseInt(xml.getAttribute('id'), 10);
   var node = new sre.SemanticNode(id);
-  node.type = xml.tagName;
-  sre.SemanticNode.setAttribute(node, xml, 'role');
-  sre.SemanticNode.setAttribute(node, xml, 'font');
-  sre.SemanticNode.setAttribute(node, xml, 'embellished');
-  sre.SemanticNode.setAttribute(node, xml, 'fencepointer');
+  node.type = /** @type {sre.SemanticAttr.Type} */(xml.tagName);
+  sre.SemanticNode.setAttribute_(node, xml, 'role');
+  sre.SemanticNode.setAttribute_(node, xml, 'font');
+  sre.SemanticNode.setAttribute_(node, xml, 'embellished');
+  sre.SemanticNode.setAttribute_(node, xml, 'fencepointer', 'fencePointer');
   if (xml.getAttribute('annotation')) {
     node.parseAnnotation(xml.getAttribute('annotation'));
   }
-  sre.SemanticNode.processChildren(node, xml);
+  sre.SemanticUtil.addAttributes(node, xml);
+  sre.SemanticNode.processChildren_(node, xml);
   return node;
 };
 
 
-sre.SemanticNode.setAttribute = function(node, xml, attribute) {
+/**
+ * Adds the given attributed to the semantic node if it exists.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @param {Element} xml The XML element representation of the node.
+ * @param {string} attribute The name of the attribute.
+ * @param {string=} opt_name Optionally the field name for the attribute in the
+ *     semantic node if it differs.
+ * @private 
+ */
+sre.SemanticNode.setAttribute_ = function(node, xml, attribute, opt_name) {
+  opt_name = opt_name || attribute;
   let value = xml.getAttribute(attribute);
   if (value) {
-    node[attribute] = value;
+    node[opt_name] = value;
   }
 };
 
 
-sre.SemanticNode.processChildren = function(node, xml) {
+/**
+ * Processes the children of the XML node to set text content, child nodes and
+ * content nodes of the semantic node.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @param {Element} xml The XML element representation of the node.
+ */
+sre.SemanticNode.processChildren_ = function(node, xml) {
   for (var child of sre.DomUtil.toArray(xml.childNodes)) {
     if (child.nodeType === sre.DomUtil.NodeType.TEXT_NODE) {
       node.textContent = child.textContent;
