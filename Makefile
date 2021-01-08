@@ -139,7 +139,7 @@ all: directories deps compile start_files maps
 
 ## This is a hack to get around a closure library problem.
 $(GOOG_BASE_CLEAN):
-	@sed -i s/"^.*@deprecated Use ES6.*"// $(GOOG_BASE)
+	@sed -i.bak s/"^.*@deprecated Use ES6.*"// $(GOOG_BASE)
 	@touch $(GOOG_BASE_CLEAN)
 
 directories: $(BIN_DIR)
