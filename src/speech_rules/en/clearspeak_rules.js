@@ -1404,6 +1404,11 @@ sre.ClearspeakRules = {
     ['Rule',
      'binary-operation', 'default',
      '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop'],
+    // Inline division.
+    ['Rule',
+     'division', 'default',
+     '[n] children/*[1]; [t] "divided by"; [n] children/*[2]',
+     'self::infixop', '@role="division"', 'count(children/*)=2'],
     ['Rule',
      'binary-operation', 'ImpliedTimes_MoreImpliedTimes',
      '[m] children/* (sepFunc:CTXFcontentIterator);', 'self::infixop',
