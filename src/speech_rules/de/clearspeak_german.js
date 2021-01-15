@@ -1435,6 +1435,11 @@ sre.ClearspeakGerman = {
     ['Rule',
       'binary-operation', 'default',
       '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop'],
+    // Inline division.
+    ['Rule',
+     'division', 'default',
+     '[n] children/*[1]; [t] "geteilt durch"; [n] children/*[2]',
+     'self::infixop', '@role="division"', 'count(children/*)=2'],
     ['Rule',
       'binary-operation', 'ImpliedTimes_MoreImpliedTimes',
       '[m] children/* (sepFunc:CTFcontentIterator);', 'self::infixop',
