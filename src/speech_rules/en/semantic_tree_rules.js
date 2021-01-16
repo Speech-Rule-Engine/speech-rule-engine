@@ -345,11 +345,6 @@ sre.SemanticTreeRules = {
       'self::punctuated', '@role="startpunct"'],
 
     ['Rule',
-      'integral-punct', 'default',
-      '[n] children/*[1] (rate:0.2); [n] children/*[3] (rate:0.2)',
-      'self::punctuated', '@role="integral"'],
-
-    ['Rule',
       'punctuated', 'default',
       '[m] children/* (pause:100)',
       'self::punctuated'],

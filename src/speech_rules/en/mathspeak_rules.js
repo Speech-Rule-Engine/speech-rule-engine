@@ -1190,11 +1190,6 @@ sre.MathspeakRules = {
      'self::punctuated', '@role="startpunct"'],
 
     ['Rule',
-     'integral-punct', 'default',
-     '[n] children/*[1]; [n] children/*[3]',
-     'self::punctuated', '@role="integral"'],
-
-    ['Rule',
      'punctuated', 'default',
      '[m] children/*',
      'self::punctuated'],

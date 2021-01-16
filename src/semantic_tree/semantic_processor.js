@@ -1789,6 +1789,7 @@ sre.SemanticProcessor.prototype.getIntegralArgs_ = function(nodes, opt_args) {
     return {integrand: args, intvar: null, rest: nodes};
   }
   if (sre.SemanticPred.isIntegralDxBoundarySingle(firstNode)) {
+    firstNode.role = sre.SemanticAttr.Role.INTEGRAL;
     return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
   }
   if (nodes[1] && sre.SemanticPred.isIntegralDxBoundary(firstNode, nodes[1])) {
