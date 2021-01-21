@@ -78,7 +78,7 @@
     "key": "arcosh",
     "mappings": {
       "default": {
-        "default": "il settore coseno iperbolico"
+        "default": "settore coseno iperbolico"
       }
     },
     "category": "Area",
@@ -91,7 +91,7 @@
     "key": "arcoth",
     "mappings": {
       "default": {
-        "default": "il settore co-tangente iperbolica"
+        "default": "settore co-tangente iperbolica"
       }
     },
     "category": "Area",
@@ -104,7 +104,7 @@
     "key": "arcsch",
     "mappings": {
       "default": {
-        "default": "il settore co-secante iperbolica"
+        "default": "settore co-secante iperbolica"
       }
     },
     "category": "Area",
@@ -117,7 +117,7 @@
     "key": "arsech",
     "mappings": {
       "default": {
-        "default": "il settore secante iperbolica"
+        "default": "settore secante iperbolica"
       }
     },
     "category": "Area",
@@ -130,7 +130,7 @@
     "key": "arsinh",
     "mappings": {
       "default": {
-        "default": "il settore seno iperbolico"
+        "default": "settore seno iperbolico"
       }
     },
     "category": "Area",
@@ -143,7 +143,7 @@
     "key": "artanh",
     "mappings": {
       "default": {
-        "default": "il settore tangente iperbolica"
+        "default": "settore tangente iperbolica"
       }
     },
     "category": "Area",
