@@ -6,7 +6,7 @@
     "key": "0028",
     "mappings": {
       "default": {
-        "default": "aperta parentesi tonda"
+        "default": "parentesi tonda aperta"
       }
     },
     "category": "Ps"
@@ -15,7 +15,7 @@
     "key": "0029",
     "mappings": {
       "default": {
-        "default": "chiusa parentesi tonda"
+        "default": "parentesi tonda chiusa"
       }
     },
     "category": "Pe"
@@ -24,7 +24,7 @@
     "key": "005B",
     "mappings": {
       "default": {
-        "default": "aperta parentesi quadra"
+        "default": "parentesi quadra aperta"
       }
     },
     "category": "Ps"
@@ -33,7 +33,7 @@
     "key": "005D",
     "mappings": {
       "default": {
-        "default": "chiusa parentesi quadra"
+        "default": "parentesi quadra chiusa"
       }
     },
     "category": "Pe"
@@ -42,7 +42,7 @@
     "key": "007B",
     "mappings": {
       "default": {
-        "default": "aperta parentesi graffa"
+        "default": "parentesi graffa aperta"
       }
     },
     "category": "Ps"
@@ -51,7 +51,7 @@
     "key": "007D",
     "mappings": {
       "default": {
-        "default": "chiusa parentesi graffa"
+        "default": "parentesi graffa chiusa"
       }
     },
     "category": "Pe"
@@ -70,7 +70,7 @@
     "key": "2046",
     "mappings": {
       "default": {
-        "default": "staffa quadra destra con penna"
+        "default": "parentesi quadrata destra con penna"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "2308",
     "mappings": {
       "default": {
-        "default": "soffitto a sinistra :  aupiale"
+        "default": "parentesi sinistra di arrotondamento per eccesso"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "2309",
     "mappings": {
       "default": {
-        "default": "soffitto a destra"
+        "default": "parentesi destra di arrotondamento per eccesso"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "230A",
     "mappings": {
       "default": {
-        "default": "piano Sinistro :  apl downstile"
+        "default": "parentesi sinistra di arrotondamento per difetto"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "230B",
     "mappings": {
       "default": {
-        "default": "giusto piano"
+        "default": "parentesi destra di arrotondamento per difetto"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "230C",
     "mappings": {
       "default": {
-        "default": "coltura in basso a destra"
+        "default": "crop in basso a destra"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "230D",
     "mappings": {
       "default": {
-        "default": "coltura in basso a sinistra"
+        "default": "crop in basso a sinistra"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "230E",
     "mappings": {
       "default": {
-        "default": "raccolto in alto a destra"
+        "default": "crop in alto a destra"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "230F",
     "mappings": {
       "default": {
-        "default": "coltura in alto a sinistra"
+        "default": "crop in alto a sinistra"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "2320",
     "mappings": {
       "default": {
-        "default": "mezzo integrale integrale"
+        "default": "mezzo integrale alto"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2321",
     "mappings": {
       "default": {
-        "default": "in basso a metà integrale"
+        "default": "mezzo intgrale basso"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "2329",
     "mappings": {
       "default": {
-        "default": "staffa angolare a sinistra"
+        "default": "parentesi angolare sinistra"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "232A",
     "mappings": {
       "default": {
-        "default": "staffa angolare a destra"
+        "default": "parentesi angolare a destra"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "239B",
     "mappings": {
       "default": {
-        "default": "gancio superiore sinistro Parentesi"
+        "default": "parentesi a gancio superiore sinistro"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "239C",
     "mappings": {
       "default": {
-        "default": "estensione Parenthesis sinistra"
+        "default": "estensione di parentesi sinistra"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "239D",
     "mappings": {
       "default": {
-        "default": "gancio inferiore parentesi sinistra"
+        "default": "parentesi a gancio inferiore sinistro"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "239E",
     "mappings": {
       "default": {
-        "default": "gancio superiore per parentesi tonda"
+        "default": "parentesi a gancio superiore destro"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "23A0",
     "mappings": {
       "default": {
-        "default": "gancio inferiore parentesi"
+        "default": "parentesi a gancio inferiore destro"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "23A1",
     "mappings": {
       "default": {
-        "default": "angolo superiore sinistro della staffa quadrata"
+        "default": "angolo superiore di parentesi quadra sinistra"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "23A3",
     "mappings": {
       "default": {
-        "default": "angolo inferiore della staffa laterale sinistra"
+        "default": "angolo inferiore di parentesi quadra sinistra"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "23A4",
     "mappings": {
       "default": {
-        "default": "angolo superiore destro con staffa quadrata"
+        "default": "angolo superiore di parentesi quadra destra"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "23A5",
     "mappings": {
       "default": {
-        "default": "prolunga per parentesi quadra destra"
+        "default": "estensione per parentesi quadra destra"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "23A6",
     "mappings": {
       "default": {
-        "default": "angolo inferiore destro staffa inferiore"
+        "default": "angolo inferiore di parentesi quadra destra"
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "23A7",
     "mappings": {
       "default": {
-        "default": "gancio superiore con staffa sinistra"
+        "default": "gancio superiore di parentesi sinistra"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "23A9",
     "mappings": {
       "default": {
-        "default": "gancio inferiore con staffa sinistra ricurva"
+        "default": "gancio inferiore di parentesi sinistra"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "23AB",
     "mappings": {
       "default": {
-        "default": "gancio superiore con staffa destra riccia"
+        "default": "gancio superiore di parentesi destra"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "23AC",
     "mappings": {
       "default": {
-        "default": "parte centrale della staffa destra riccia"
+        "default": "parte centrale della parentesi graffa destra"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "23AD",
     "mappings": {
       "default": {
-        "default": "gancio inferiore con staffa destra ricurva"
+        "default": "gancio inferiore di parentesi destra"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "23B0",
     "mappings": {
       "default": {
-        "default": "sezione di parentesi graffa in alto a sinistra o in basso a destra :  baffi lasciati"
+        "default": "sezione di parentesi graffa superiore sinistra e destra inferiore"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "23B1",
     "mappings": {
       "default": {
-        "default": "sezione di parentesi graffa superiore destra o sinistra inferiore :  baffi giusti"
+        "default": "sezione di parentesi graffa superiore destra e sinistra inferiore"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "23B2",
     "mappings": {
       "default": {
-        "default": "summation Top"
+        "default": "sommatoria superiore"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "23B4",
     "mappings": {
       "default": {
-        "default": "top Square Bracket"
+        "default": "parentesi quadra superiore"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "23B5",
     "mappings": {
       "default": {
-        "default": "bottom Square Bracket"
+        "default": "parentesi quadra inferiore"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "23B6",
     "mappings": {
       "default": {
-        "default": "staffa centrale inferiore su staffa quadrata"
+        "default": "parentesi quadra inferiore su parentesi quadrata superiore"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "23B9",
     "mappings": {
       "default": {
-        "default": "right Box Line verticale"
+        "default": "riga verticale destra"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "23DE",
     "mappings": {
       "default": {
-        "default": "staffa riccia superiore"
+        "default": "parentesi graffa superiore"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "23DF",
     "mappings": {
       "default": {
-        "default": "staffa inferiore ricurva"
+        "default": "parentesi graffa inferiore"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "23E0",
     "mappings": {
       "default": {
-        "default": "top staffa per guscio di tartaruga"
+        "default": "parentesi a conchiglia superiore"
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "23E1",
     "mappings": {
       "default": {
-        "default": "staffa inferiore di guscio di tartaruga"
+        "default": "parentesi a conchiglia inferiore"
       }
     }
   },
@@ -556,7 +556,7 @@
     "key": "2768",
     "mappings": {
       "default": {
-        "default": "ornamento di parentesi medio-sinistre"
+        "default": "ornamento di parentesi tonda sinistra medio"
       }
     }
   },
@@ -565,7 +565,7 @@
     "key": "2769",
     "mappings": {
       "default": {
-        "default": "ornamento di parentesi medio-destro"
+        "default": "ornamento di parentesi tonda destra medio"
       }
     }
   },
@@ -574,7 +574,7 @@
     "key": "276A",
     "mappings": {
       "default": {
-        "default": "ornamento sinusoidale sinistro medio appiattito"
+        "default": "ornamento di parentesi sinistra media appiattita"
       }
     }
   },
@@ -583,7 +583,7 @@
     "key": "276B",
     "mappings": {
       "default": {
-        "default": "ornamento di parentesi tondo appiattito medio"
+        "default": "ornamento di parentesi destra media appiattita"
       }
     }
   },
@@ -592,7 +592,7 @@
     "key": "276C",
     "mappings": {
       "default": {
-        "default": "angolo medio con staffa angolare a sinistra"
+        "default": "ornamento di parentesi angolare sinistra media"
       }
     }
   },
@@ -601,7 +601,7 @@
     "key": "276D",
     "mappings": {
       "default": {
-        "default": "angolo medio con staffa per l'angolo a destra"
+        "default": "ornamento di parentesi angolare destra media"
       }
     }
   },
@@ -610,7 +610,7 @@
     "key": "276E",
     "mappings": {
       "default": {
-        "default": "ornamento con virgolette angolare a sinistra"
+        "default": "ornamento di parentesi angolare sinistra grossa"
       }
     }
   },
@@ -619,7 +619,7 @@
     "key": "276F",
     "mappings": {
       "default": {
-        "default": "ornamento con virgolette ad angolo retto a destra"
+        "default": "ornamento di parentesi angolare destra grossa"
       }
     }
   },
@@ -628,7 +628,7 @@
     "key": "2770",
     "mappings": {
       "default": {
-        "default": "ornamento con staffa angolare a sinistra a sinistra"
+        "default": "ornamento di parentesi angolare sinistra grosso"
       }
     }
   },
@@ -637,7 +637,7 @@
     "key": "2771",
     "mappings": {
       "default": {
-        "default": "ornamento con staffa ad angolo a destra"
+        "default": "ornamento di parentesi angolare destra grosso"
       }
     }
   },
@@ -646,7 +646,7 @@
     "key": "2772",
     "mappings": {
       "default": {
-        "default": "ornamento con staffa a guscio di tartaruga sinistro chiaro"
+        "default": "ornamento di parentesi a conchiglia sinistro sottile"
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "2773",
     "mappings": {
       "default": {
-        "default": "ornamento con staffa a guscio di tartaruga destro chiaro"
+        "default": "ornamento di parentesi a conchiglia destro sottile"
       }
     }
   },
@@ -664,7 +664,7 @@
     "key": "2774",
     "mappings": {
       "default": {
-        "default": "ornamento con staffa riccia medio sinistra"
+        "default": "ornamento di parentesi graffa sinistra medio"
       }
     }
   },
@@ -673,7 +673,7 @@
     "key": "2775",
     "mappings": {
       "default": {
-        "default": "ornamento con staffa riccia medio destra"
+        "default": "ornamento di parentesi graffa destra medio"
       }
     }
   },
@@ -682,7 +682,7 @@
     "key": "27C5",
     "mappings": {
       "default": {
-        "default": "delimitatore del sacchetto a S sinistro"
+        "default": "delimitatore bag sinistro a forma di S"
       }
     }
   },
@@ -691,7 +691,7 @@
     "key": "27C6",
     "mappings": {
       "default": {
-        "default": "delimitatore destro del sacchetto a forma di S"
+        "default": "delimitatore bag destro a forma di S"
       }
     }
   },
@@ -700,7 +700,7 @@
     "key": "27E6",
     "mappings": {
       "default": {
-        "default": "supporto quadrato bianco sinistro matematico :  Z notation left bag bracket"
+        "default": "parentesi quadra sinistra bianca"
       }
     }
   },
@@ -709,7 +709,7 @@
     "key": "27E7",
     "mappings": {
       "default": {
-        "default": "staffa quadrata bianca destra matematica :  staffa della borsa destra per notazione z"
+        "default": "parentesi quadra destra bianca"
       }
     }
   },
@@ -718,7 +718,7 @@
     "key": "27E8",
     "mappings": {
       "default": {
-        "default": "staffa angolo sinistro matematico :  reggiseno :  staffa della sequenza sinistra di notazione z"
+        "default": "parentesi angolata sinistra"
       }
     }
   },
@@ -727,7 +727,7 @@
     "key": "27E9",
     "mappings": {
       "default": {
-        "default": "staffa ad angolo retto matematico :  KET :  staffa di sequenza destra di notazione z"
+        "default": "parentesi angolata destra"
       }
     }
   },
@@ -736,7 +736,7 @@
     "key": "27EA",
     "mappings": {
       "default": {
-        "default": "staffa a doppio angolo sinistro matematico :  staffa z zigzagata sinistra"
+        "default": "parentesi angolata sinistra doppia"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "27EB",
     "mappings": {
       "default": {
-        "default": "staffa a doppio angolo di destra matematico :  staffa chevron destra notazione destra"
+        "default": "parentesi angolata destra doppia"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "27EC",
     "mappings": {
       "default": {
-        "default": "staffa di testina di tartaruga bianca sinistra matematica"
+        "default": "parentesi a conchiglia sinistra bianca"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "27ED",
     "mappings": {
       "default": {
-        "default": "staffa a forma di testa di tartaruga bianca destra matematica"
+        "default": "parentesi a conchiglia destra bianca"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "27EE",
     "mappings": {
       "default": {
-        "default": "parentesi sinistra appiattita matematica :  lgroup"
+        "default": "parentesi sinistra appiattita"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "27EF",
     "mappings": {
       "default": {
-        "default": "parentesi matematica appiattita a destra :  rgroup"
+        "default": "parentesi destra appiattita"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "2983",
     "mappings": {
       "default": {
-        "default": "sostegno bianco sinistro riccio"
+        "default": "parentesi graffa bianca sinistra"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "2984",
     "mappings": {
       "default": {
-        "default": "destra staffa bianca riccia"
+        "default": "parentesi graffa bianca destra"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "2985",
     "mappings": {
       "default": {
-        "default": "parentesi bianca sinistra"
+        "default": "parentesi tonda bianca sinistra"
       }
     }
   },
@@ -817,7 +817,7 @@
     "key": "2986",
     "mappings": {
       "default": {
-        "default": "giusta parentesi bianca"
+        "default": "parentesi tonda bianca destra"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "2987",
     "mappings": {
       "default": {
-        "default": "bracket immagine sinistra notazione Z"
+        "default": "parentesi immagine sinistra notazione Z"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "2988",
     "mappings": {
       "default": {
-        "default": "bracket di immagine destra di notazione Z"
+        "default": "parentesi immagine destra di notazione Z"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "2989",
     "mappings": {
       "default": {
-        "default": "staffa di rilegatura sinistra con notazione Z"
+        "default": "parentesi di rilegatura sinistra con notazione Z"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "298A",
     "mappings": {
       "default": {
-        "default": "staffa di rilegatura destra con notazione Z"
+        "default": "parentesi di rilegatura destra a notazione Z"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "298C",
     "mappings": {
       "default": {
-        "default": "staffa quadra destra con barra inferiore"
+        "default": "parentesi quadra destra con sottobarra"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "298E",
     "mappings": {
       "default": {
-        "default": "staffa quadrata destra con segno di spunta nell'angolo inferiore"
+        "default": "parentesi quadrata destra con segno di spunta nell'angolo inferiore"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "298F",
     "mappings": {
       "default": {
-        "default": "left Square Bracket con Tick In Bottom Corner"
+        "default": "parentesi quadrata sinistra con segno di spunta nell'angolo inferiore"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "2990",
     "mappings": {
       "default": {
-        "default": "staffa quadrata a destra con segno di spunta nell'angolo superiore"
+        "default": "parentesi quadrata destra con segno di spunta nell'angolo superiore"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "2991",
     "mappings": {
       "default": {
-        "default": "parentesi angolare sinistra con punto"
+        "default": "parentesi angolata sinistra con punto"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "2992",
     "mappings": {
       "default": {
-        "default": "staffa ad angolo retto con punto"
+        "default": "parentesi angolata destra con punto"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "2993",
     "mappings": {
       "default": {
-        "default": "left Arc Less-Than Bracket"
+        "default": "parentesi sinistra ad arco con segno di minore"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "2994",
     "mappings": {
       "default": {
-        "default": "arco destro maggiore della staffa"
+        "default": "parentesi destra ad arco con segno di maggiore"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "2995",
     "mappings": {
       "default": {
-        "default": "doppio arco di sinistra maggiore della staffa"
+        "default": "parentesi sinistra a doppio arco con segno di minore"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "2996",
     "mappings": {
       "default": {
-        "default": "staffa con doppio arco destro inferiore"
+        "default": "parentesi destra a doppio arco con segno di maggiore"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "2997",
     "mappings": {
       "default": {
-        "default": "staffa di guscio di tartaruga nera sinistra"
+        "default": "parentesi a conchiglia nera sinistra"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "2998",
     "mappings": {
       "default": {
-        "default": "staffa destra per guscio di tartaruga nera"
+        "default": "parentesi a conchiglia nera destra"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "29D8",
     "mappings": {
       "default": {
-        "default": "left Wiggly Fence"
+        "default": "delimitatore a zig-zag sinistro"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "29D9",
     "mappings": {
       "default": {
-        "default": "destra Wiggly Fence"
+        "default": "delimitatore a zig-zag destro"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "29DA",
     "mappings": {
       "default": {
-        "default": "sinistra Double Wiggly Fence"
+        "default": "delimitatore doppio a zig-zag sinistro"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "key": "29DB",
     "mappings": {
       "default": {
-        "default": "destra Doppia Wiggly Fence"
+        "default": "delimitatore doppio a zig-zag destro"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "29FC",
     "mappings": {
       "default": {
-        "default": "staffa angolare curva a sinistra"
+        "default": "parentesi angolare curva a sinistra"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "key": "29FD",
     "mappings": {
       "default": {
-        "default": "staffa angolare curva a destra"
+        "default": "parentesi angolare curva a destra"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "2E22",
     "mappings": {
       "default": {
-        "default": "mezza staffa in alto a sinistra"
+        "default": "mezza parentesi superiore sinistra"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "key": "2E23",
     "mappings": {
       "default": {
-        "default": "metà staffa superiore destra"
+        "default": "mezza parentesi superiore destra"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "2E24",
     "mappings": {
       "default": {
-        "default": "mezza staffa inferiore sinistra"
+        "default": "mezza parentesi inferiore sinistra"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "2E25",
     "mappings": {
       "default": {
-        "default": "mezza staffa inferiore destra"
+        "default": "mezza parentesi inferiore destra"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "2E26",
     "mappings": {
       "default": {
-        "default": "staffa laterale sinistra U."
+        "default": "parentesi a U sdraiata sinistra"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "key": "2E27",
     "mappings": {
       "default": {
-        "default": "staffa U laterale destra"
+        "default": "parentesi a U sdraiata destra"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "key": "2E28",
     "mappings": {
       "default": {
-        "default": "doppia parentesi chiusa"
+        "default": "doppia parentesi aperta"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "2E29",
     "mappings": {
       "default": {
-        "default": "doppia parentesi doppia"
+        "default": "doppia parentesi chiusa"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "3008",
     "mappings": {
       "default": {
-        "default": "staffa angolo sinistro"
+        "default": "parentesi angolata sinistra"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "3009",
     "mappings": {
       "default": {
-        "default": "staffa ad angolo retto"
+        "default": "parentesi angolata destra "
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "key": "300A",
     "mappings": {
       "default": {
-        "default": "staffa a doppio angolo sinistra"
+        "default": "parentesi a doppio angolo sinistra"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "key": "300B",
     "mappings": {
       "default": {
-        "default": "staffa a doppio angolo di destra"
+        "default": "parentesi a doppio angolo destra"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "300C",
     "mappings": {
       "default": {
-        "default": "staffa angolare sinistra"
+        "default": "parentesi angolo superiore sinistro"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "key": "300D",
     "mappings": {
       "default": {
-        "default": "staffa angolare destra"
+        "default": "parentesi angolo superiore destro"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "300E",
     "mappings": {
       "default": {
-        "default": "staffa angolare sinistra bianca"
+        "default": "parentesi angolo superiore sinistro bianca"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "300F",
     "mappings": {
       "default": {
-        "default": "staffa angolare bianca destra"
+        "default": "parentesi angolo superiore destro bianca"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "3010",
     "mappings": {
       "default": {
-        "default": "staffa lenticolare nera sinistra"
+        "default": "parentesi lenticolare nera sinistra"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "3011",
     "mappings": {
       "default": {
-        "default": "staffa lenticolare nera destra"
+        "default": "parentesi lenticolare nera destra"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "3014",
     "mappings": {
       "default": {
-        "default": "staffa sinistra per guscio di tartaruga"
+        "default": "parentesi sinistra a conchiglia"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "key": "3015",
     "mappings": {
       "default": {
-        "default": "staffa destra per guscio di tartaruga"
+        "default": "parentesi destra a conchiglia"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "3016",
     "mappings": {
       "default": {
-        "default": "staffa lenticolare bianca sinistra"
+        "default": "parentesi lenticolare bianca sinistra"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "key": "3017",
     "mappings": {
       "default": {
-        "default": "staffa lenticolare bianca destra"
+        "default": "parentesi lenticolare bianca destra"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "key": "3018",
     "mappings": {
       "default": {
-        "default": "staffa di guscio di tartaruga sinistro bianco"
+        "default": "parentesi sinistra a conchiglia bianca"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "key": "3019",
     "mappings": {
       "default": {
-        "default": "staffa di guscio di tartaruga bianca destra"
+        "default": "parentesi destra a conchiglia bianca "
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "key": "301A",
     "mappings": {
       "default": {
-        "default": "staffa sinistra bianca quadrata :  parentesi di sintassi astratta a sinistra"
+        "default": "parentesi quadrata sinistra bianca"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "key": "301B",
     "mappings": {
       "default": {
-        "default": "staffa destra quadrata bianca :  retta parentesi di sintassi astratta"
+        "default": "parentesi quadrata destra bianca"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "key": "301E",
     "mappings": {
       "default": {
-        "default": "doppia virgoletta Prime"
+        "default": "doppie virgolette"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "301F",
     "mappings": {
       "default": {
-        "default": "segno di virgolette basso doppio"
+        "default": "doppie virgolette basse"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "key": "FE17",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa lenticolare verticale sinistra bianca"
+        "default": "parentesi lenticolare verticale sopra bianca"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "key": "FE18",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa verticale lenticolare verticale destra"
+        "default": "parentesi lenticolare verticale sotto bianca"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "key": "FE39",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa a guscio verticale di tartaruga sinistra"
+        "default": "parentesi a conchiglia sopra"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "key": "FE3A",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa verticale a guscio di tartaruga destro"
+        "default": "parentesi a conchiglia sotto"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "key": "FE3B",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa lenticolare nera sinistra verticale"
+        "default": "parentesi lenticolare verticale sopra nera"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "key": "FE3C",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa lenticolare nera verticale destra"
+        "default": "parentesi lenticolare verticale sotto nera"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "key": "FE3D",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa a doppio angolo verticale sinistra"
+        "default": "parentesi a doppio angolo sopra"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "key": "FE3E",
     "mappings": {
       "default": {
-        "default": "forma di presentazione per staffa a doppio angolo verticale destra"
+        "default": "parentesi a doppio angolo sotto"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "key": "FE41",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa verticale angolo sinistro"
+        "default": "parentesi verticale ad angolo retto destro"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "key": "FE42",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa verticale ad angolo retto"
+        "default": "parentesi verticale ad angolo retto sinistro"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "key": "FE43",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa angolare verticale sinistra bianca"
+        "default": "parentesi verticale ad angolo retto destro bianca"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "key": "FE44",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa angolare verticale destra bianca"
+        "default": "parentesi verticale ad angolo retto sinistro bianca"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "key": "FE47",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa verticale sinistra"
+        "default": "parentesi quadra sopra"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "key": "FE48",
     "mappings": {
       "default": {
-        "default": "modulo di presentazione per staffa verticale destra"
+        "default": "parentesi quadra sotto"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "key": "FE59",
     "mappings": {
       "default": {
-        "default": "piccola parentesi sinistra"
+        "default": "parentesi sinistra piccola"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "FE5A",
     "mappings": {
       "default": {
-        "default": "piccola parentesi a destra"
+        "default": "parentesi destra piccola"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "key": "FE5B",
     "mappings": {
       "default": {
-        "default": "piccola parentesi graffa sinistra"
+        "default": "parentesi graffa sinistra piccola"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "key": "FE5C",
     "mappings": {
       "default": {
-        "default": "piccola staffa destra riccia"
+        "default": "parentesi graffa destra piccola"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "key": "FE5D",
     "mappings": {
       "default": {
-        "default": "staffa a conchiglia sinistra piccola a sinistra"
+        "default": "parentesi a conchiglia sinistra piccola"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "FE5E",
     "mappings": {
       "default": {
-        "default": "staffa piccola a guscio di tartaruga destro"
+        "default": "parentesi a conchiglia destra piccola"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "key": "FF08",
     "mappings": {
       "default": {
-        "default": "parentesi a larghezza intera"
+        "default": "parentesi sinistra a larghezza intera"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "key": "FF09",
     "mappings": {
       "default": {
-        "default": "parentesi a larghezza intera"
+        "default": "parentesi destra a larghezza intera"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "key": "FF3B",
     "mappings": {
       "default": {
-        "default": "staffa quadrata sinistra a larghezza completa"
+        "default": "parentesi quadrata sinistra a larghezza intera"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "key": "FF3D",
     "mappings": {
       "default": {
-        "default": "staffa quadra destra a tutta larghezza"
+        "default": "parentesi quadrata destra a larghezza intera"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "key": "FF5B",
     "mappings": {
       "default": {
-        "default": "staffa ricurva a tutta larghezza"
+        "default": "parentesi graffa sinistra a larghezza intera"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "key": "FF5D",
     "mappings": {
       "default": {
-        "default": "staffa ricurva a tutta larghezza"
+        "default": "parentesi graffa destra a larghezza intera"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "key": "FF5F",
     "mappings": {
       "default": {
-        "default": "parentesi bianca sinistra a larghezza completa"
+        "default": "parentesi bianca sinistra a larghezza intera"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "key": "FF60",
     "mappings": {
       "default": {
-        "default": "parentesi bianca a tutta larghezza"
+        "default": "parentesi bianca destra a larghezza intera"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "key": "FF62",
     "mappings": {
       "default": {
-        "default": "staffa angolare sinistra a mezza larghezza"
+        "default": "parentesi angolo superiore sinistro a mezza larghezza"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "key": "FF63",
     "mappings": {
       "default": {
-        "default": "staffa angolare destra a mezza larghezza"
+        "default": "parentesi angolo superiore destro a mezza larghezza"
       }
     }
   }

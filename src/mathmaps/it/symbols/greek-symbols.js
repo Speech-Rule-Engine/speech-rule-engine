@@ -34,7 +34,7 @@
     "key": "1D7CA",
     "mappings": {
       "default": {
-        "default": "Digamma maiuscola"
+        "default": "Digamma maiuscola in grassetto"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "1D7CB",
     "mappings": {
       "default": {
-        "default": "digamma"
+        "default": "digamma in grassetto"
       }
     }
   }

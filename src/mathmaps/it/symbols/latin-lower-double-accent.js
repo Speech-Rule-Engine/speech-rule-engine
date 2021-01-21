@@ -43,7 +43,7 @@
     "key": "01DF",
     "mappings": {
       "default": {
-        "default": "piccola a con diaeresis e macron"
+        "default": "a con diaeresis e macron"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "01E1",
     "mappings": {
       "default": {
-        "default": "piccola a punto punto e macron"
+        "default": "a con punto e macron"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "01ED",
     "mappings": {
       "default": {
-        "default": "Latin Small Letter O con Ogonek e macron"
+        "default": "o con Ogonek e macron"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "01FB",
     "mappings": {
       "default": {
-        "default": "Piccola a con anello sopra e acuto"
+        "default": "a con anello sopra e accento acuto"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "022B",
     "mappings": {
       "default": {
-        "default": "minuscola o con diaeresi e macron"
+        "default": "o con diaeresi e macron"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "022D",
     "mappings": {
       "default": {
-        "default": "Piccola O con tilde e macron"
+        "default": "o con tilde e macron"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "0231",
     "mappings": {
       "default": {
-        "default": "Lettera minuscola latina O con punto sopra e macron"
+        "default": "o con punto sopra e macron"
       }
     }
   },
@@ -105,7 +105,7 @@
     "key": "1E09",
     "mappings": {
       "default": {
-        "default": "c con cediglia and acute"
+        "default": "c con cediglia e accento acuto"
       }
     },
     "category": "Ll"

@@ -7,7 +7,7 @@
     "key": "2113",
     "mappings": {
       "default": {
-        "default": "script piccolo L"
+        "default": "script l minuscola"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "2118",
     "mappings": {
       "default": {
-        "default": "script P maiuscolo"
+        "default": "script P maiuscola"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "213F",
     "mappings": {
       "default": {
-        "default":  "Pi maiuscolo a grassetto da lavagna"
+        "default": "Pi maiuscolo a grassetto da lavagna"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2145",
     "mappings": {
       "default": {
-        "default": "D maiuscolo italico a grassetto da lavagna"
+        "default": "d maiuscola italico a grassetto da lavagna"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "1D6A4",
     "mappings": {
       "default": {
-        "default": "i sensa punto"
+        "default": "i senza punto"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "1D6A5",
     "mappings": {
       "default": {
-        "default": "j sensa punto"
+        "default": "j senza punto"
       }
     }
   }

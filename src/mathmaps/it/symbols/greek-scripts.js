@@ -25,7 +25,7 @@
     "key": "1D28",
     "mappings": {
       "default": {
-        "default": "Pi maiuscola piccola"
+        "default": "Pi greca maiuscola piccola"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "1D5E",
     "mappings": {
       "default": {
-        "default": "modificatore Lettera Piccola gamma greca"
+        "default": "gamma apice"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "1D60",
     "mappings": {
       "default": {
-        "default": "modificatore Lettera Piccolo greco Phi"
+        "default": "phi apice"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "1D66",
     "mappings": {
       "default": {
-        "default": "abbonamento Greco Lettera Minuta Beta"
+        "default": "beta apice"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "1D67",
     "mappings": {
       "default": {
-        "default": "sottoscrizione greca Gamma minuscola"
+        "default": "gamma pedice"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "1D68",
     "mappings": {
       "default": {
-        "default": "sottoscritto greco Piccola lettera Rho"
+        "default": "rho pedice"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "1D69",
     "mappings": {
       "default": {
-        "default": "sottoscritto greco Lettera Phi"
+        "default": "phi pedice"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "1D6A",
     "mappings": {
       "default": {
-        "default": "sottoscritto greco Lettera minuscola"
+        "default": "chi pedice"
       }
     }
   }

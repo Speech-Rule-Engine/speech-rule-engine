@@ -745,7 +745,7 @@
     "key": "01CE",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina a con Caron"
+        "default": "a con caron"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "01D0",
     "mappings": {
       "default": {
-        "default": "lettera latina I con Caron"
+        "default": "i con caron"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "01D2",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina O con Caron"
+        "default": "o con caron"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "01D4",
     "mappings": {
       "default": {
-        "default": "carattere latino:  lettera U con Caron"
+        "default": "u con caron"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "01E7",
     "mappings": {
       "default": {
-        "default": "carattere latino minuscolo con Caron"
+        "default": "g con caron"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "01E9",
     "mappings": {
       "default": {
-        "default": "carattere latino minuscolo K con Caron"
+        "default": "k con caron"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "01EB",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina O con Ogonek"
+        "default": "o con uncino"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "01F0",
     "mappings": {
       "default": {
-        "default": "carattere latino:  lettera J con Caron"
+        "default": "j con caron"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "01F9",
     "mappings": {
       "default": {
-        "default": "carattere latino:  lettera N con tomba"
+        "default": "n con accento grave"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "0201",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina a con doppia tomba"
+        "default": "a con doppio accento grave"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "0203",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina a con breve invertito"
+        "default": "a con accento breve inverso"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0205",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera E con doppia tomba"
+        "default": "e con doppio accento grave"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0207",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera E con breve invertito"
+        "default": "e con accento breve inverso"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "0209",
     "mappings": {
       "default": {
-        "default": "carattere latino:  lettera I con doppia tomba"
+        "default": "I con doppio accento grave"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "020B",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera I con breve invertito"
+        "default": "i con accento breve inverso"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "020D",
     "mappings": {
       "default": {
-        "default": "carattere latino:  lettera O con doppia tomba"
+        "default": "o con doppio accento grave"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "020F",
     "mappings": {
       "default": {
-        "default": "lettera latina piccola O con breve invertito"
+        "default": "o con accento breve inverso"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0211",
     "mappings": {
       "default": {
-        "default": "carattere latino:  lettera R con doppia tomba"
+        "default": "r con doppio accento grave"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0213",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera R con breve invertito"
+        "default": "r con accento breve"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "0215",
     "mappings": {
       "default": {
-        "default": "carattere latino:  lettera U con doppia tomba"
+        "default": "u con doppio accento grave"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "0217",
     "mappings": {
       "default": {
-        "default": "latina Piccola lettera U con breve invertito"
+        "default": "u con accento breve inverso"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "0219",
     "mappings": {
       "default": {
-        "default": "latina Piccola lettera S con Comma in basso"
+        "default": "s con virgola in basso"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "021B",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera T con la virgola in basso"
+        "default": "t con virgola in basso"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "021F",
     "mappings": {
       "default": {
-        "default": "carattere latino:  lettera H con caronte"
+        "default": "h con caron"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0227",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina a con punto in alto"
+        "default": "a con punto in alto"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "0229",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera E con Cedilla"
+        "default": "e con cediglia"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "022F",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina O con punto in alto"
+        "default": "o con punto in alto"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "0233",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera Y con Macron"
+        "default": "y con macron"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "0237",
     "mappings": {
       "default": {
-        "default": "lettera latina piccola j sans punto"
+        "default": "j senza punto"
       }
     }
   },
@@ -1086,7 +1086,7 @@
     "key": "1E13",
     "mappings": {
       "default": {
-        "default": "d con accento circonflesso below"
+        "default": "d con accento circonflesso sotto"
       }
     },
     "category": "Ll"

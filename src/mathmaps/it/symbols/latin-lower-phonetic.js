@@ -52,7 +52,7 @@
     "key": "0180",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera B con tratto"
+        "default": "b con tratto"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "01BE",
     "mappings": {
       "default": {
-        "default": "lettera latina invertita fermata glottale con ictus"
+        "default": "lettera latina capovolta fermata glottale con tratto"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "01E5",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera G con tratto"
+        "default": "g con tratto"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "01FF",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina O con tratto e acuto"
+        "default": "o con tratto e accento acuto"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "023C",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera C con tratto"
+        "default": "c con tratto"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "0247",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera E con tratto"
+        "default": "e con tratto"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "0249",
     "mappings": {
       "default": {
-        "default": "lettera J con tratto"
+        "default": "j con tratto"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "024D",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera R con tratto"
+        "default": "r con tratto"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "024F",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera Y con tratto"
+        "default": "y con tratto"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "025F",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina Dotless J con tratto"
+        "default": "j senza punto con tratto"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "0268",
     "mappings": {
       "default": {
-        "default": "lettera latina piccola I con tratto"
+        "default": "i con tratto"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "02A1",
     "mappings": {
       "default": {
-        "default": "latin Letter Glottal Stop with Stroke"
+        "default": "lettera latina fermata glottale con tratto"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "1D13",
     "mappings": {
       "default": {
-        "default": "lettera latina latina lateralmente O con tratto"
+        "default": "o di traverso con tratto"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "1D7C",
     "mappings": {
       "default": {
-        "default": "lettera Iota con tratto"
+        "default": "iota con tratto"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "1D7D",
     "mappings": {
       "default": {
-        "default": "latina Piccola lettera P con tratto"
+        "default": "p con tratto"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "1D7F",
     "mappings": {
       "default": {
-        "default": "lettera alfabetica latina Upsilon con tratto"
+        "default": "upsilon con tratto"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "1E9C",
     "mappings": {
       "default": {
-        "default": "lettera latina piccola S lunga con tratto diagonale"
+        "default": "s lunga con tratto diagonale"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "1E9D",
     "mappings": {
       "default": {
-        "default": "lettera latina piccola S lunga con tratto alto"
+        "default": "s lunga con tratto alto"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "018D",
     "mappings": {
       "default": {
-        "default": "delta di lettere minuscole latine"
+        "default": "delta capovolta"
       }
     }
   },
@@ -258,7 +258,7 @@
     "key": "1E9B",
     "mappings": {
       "default": {
-        "default": "long s con punto sopra"
+        "default": "s lunga con punto sopra"
       }
     },
     "category": "Ll"
@@ -268,7 +268,7 @@
     "key": "1E9F",
     "mappings": {
       "default": {
-        "default": "latino latino lettera minuscola"
+        "default": "delta"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "017F",
     "mappings": {
       "default": {
-        "default": "lettera lunga S"
+        "default": "s lunga"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "0183",
     "mappings": {
       "default": {
-        "default": "latina Piccola lettera B con Topbar"
+        "default": "b con tratto in alto"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "0185",
     "mappings": {
       "default": {
-        "default": "latino piccolo lettera tono sei"
+        "default": "lettera tono sei"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "0188",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera C con gancio"
+        "default": "c con gancio"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "018C",
     "mappings": {
       "default": {
-        "default": "latin Small Letter D con Topbar"
+        "default": "d con tratto in alto"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "0199",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina K con gancio"
+        "default": "k con gancio"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "019E",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera N con lunga gamba destra"
+        "default": "n con lunga gamba destra"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "01A1",
     "mappings": {
       "default": {
-        "default": "lettera O con corno"
+        "default": "o con corno"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "01A8",
     "mappings": {
       "default": {
-        "default": "latin Small Letter Tone Two"
+        "default": "lettera tono due"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "01AA",
     "mappings": {
       "default": {
-        "default": "lettera latina invertita Esh Loop"
+        "default": "Esh Loop invertita"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "01AB",
     "mappings": {
       "default": {
-        "default": "latina Piccola lettera T con gancio Palatal"
+        "default": "t con gancio palatale"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "01AD",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera T con gancio"
+        "default": "t con gancio"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "01B0",
     "mappings": {
       "default": {
-        "default": "lettera U con corno"
+        "default": "u con corno"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "01B4",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina Y con gancio"
+        "default": "y con gancio"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "01B9",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina Ezh rovesciata"
+        "default": "ezh capovolta"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "01BA",
     "mappings": {
       "default": {
-        "default": "lettera Ezh con coda"
+        "default": "ezh con coda"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "01BD",
     "mappings": {
       "default": {
-        "default": "latin Small Letter Tone Five"
+        "default": "lettera tono cinque"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "01BF",
     "mappings": {
       "default": {
-        "default": "lettera latina Wynn"
+        "default": "wynn"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "01C6",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina Dz con Caron"
+        "default": "dz con Caron"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "01C9",
     "mappings": {
       "default": {
-        "default": "lettera Lj"
+        "default": "lj"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "01CC",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina n"
+        "default": "nj"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "01E3",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina Ae con Macron"
+        "default": "ae con macron"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "01EF",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina Ezh con Caron"
+        "default": "ezh con caron"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "01F3",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina Dz"
+        "default": "dz"
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "021D",
     "mappings": {
       "default": {
-        "default": "carattere latino Yogh"
+        "default": "yogh"
       }
     }
   },
@@ -556,7 +556,7 @@
     "key": "026E",
     "mappings": {
       "default": {
-        "default": "carattere latino Lezh"
+        "default": "lezh"
       }
     }
   },
@@ -565,7 +565,7 @@
     "key": "0292",
     "mappings": {
       "default": {
-        "default": "lettera Ezh"
+        "default": "ezh"
       }
     }
   },
@@ -574,7 +574,7 @@
     "key": "0293",
     "mappings": {
       "default": {
-        "default": "lettera Ezh con ricciolo"
+        "default": "ezh con ricciolo"
       }
     }
   },
@@ -583,7 +583,7 @@
     "key": "02A4",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina Dezh Digraph"
+        "default": "dezh digrafo"
       }
     }
   },
@@ -592,7 +592,7 @@
     "key": "01DD",
     "mappings": {
       "default": {
-        "default": "lettera latina latina trasformata E"
+        "default": "e capovolta"
       }
     }
   },
@@ -601,7 +601,7 @@
     "key": "01FD",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina Ae con acuta"
+        "default": "ae con accento acuto"
       }
     }
   },
@@ -610,7 +610,7 @@
     "key": "0221",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera D con arricciatura"
+        "default": "d con arricciatura"
       }
     }
   },
@@ -619,7 +619,7 @@
     "key": "0223",
     "mappings": {
       "default": {
-        "default": "lettera"
+        "default": "ou"
       }
     }
   },
@@ -628,7 +628,7 @@
     "key": "0225",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera Z con gancio"
+        "default": "z con gancio"
       }
     }
   },
@@ -637,7 +637,7 @@
     "key": "0234",
     "mappings": {
       "default": {
-        "default": "lettera L con ricciolo"
+        "default": "l con ricciolo"
       }
     }
   },
@@ -646,7 +646,7 @@
     "key": "0235",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera N con arricciatura"
+        "default": "n con arricciatura"
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "0236",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera T con ricciolo"
+        "default": "t con ricciolo"
       }
     }
   },
@@ -664,7 +664,7 @@
     "key": "0238",
     "mappings": {
       "default": {
-        "default": "digrafo latino a caratteri minuscoli"
+        "default": "db digrafo"
       }
     }
   },
@@ -673,7 +673,7 @@
     "key": "0239",
     "mappings": {
       "default": {
-        "default": "lettera a caratteri cubitali latini Qp Digraph"
+        "default": "qp digrafo"
       }
     }
   },
@@ -682,7 +682,7 @@
     "key": "023F",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera S con Swash Tail"
+        "default": "s con svolazzo alto"
       }
     }
   },
@@ -691,7 +691,7 @@
     "key": "0240",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera Z con Swash Tail"
+        "default": "z con svolazzo alto"
       }
     }
   },
@@ -700,7 +700,7 @@
     "key": "0242",
     "mappings": {
       "default": {
-        "default": "fermata glottale in caratteri latini latini"
+        "default": "fermata glottale"
       }
     }
   },
@@ -709,7 +709,7 @@
     "key": "024B",
     "mappings": {
       "default": {
-        "default": "lettera Q con coda a uncino"
+        "default": "q con coda a uncino"
       }
     }
   },
@@ -718,7 +718,7 @@
     "key": "0250",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine a"
+        "default": "a capovolta"
       }
     }
   },
@@ -727,7 +727,7 @@
     "key": "0251",
     "mappings": {
       "default": {
-        "default": "script in caratteri latini a"
+        "default": "alfa latina"
       }
     }
   },
@@ -736,7 +736,7 @@
     "key": "0252",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina trasformata in alfa"
+        "default": "alfa latina capovolta"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "0253",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera B con gancio"
+        "default": "b con gancio"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "0254",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina Open O"
+        "default": "o aperta"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "0255",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera C con arricciatura"
+        "default": "c con arricciatura"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "0256",
     "mappings": {
       "default": {
-        "default": "d gancio retroflesso"
+        "default": "d con gancio retroflesso"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "0257",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera D con gancio"
+        "default": "d con gancio"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "0258",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine invertite E"
+        "default": "e invertita"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "0259",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina Schwa"
+        "default": "schwa"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "025A",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina Schwa con gancio"
+        "default": "schwa con gancio"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "025C",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine invertite aperte E"
+        "default": "e aperta invertita"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "025D",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine invertite E aperto con gancio"
+        "default": "e aperta invertita con gancio"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "025E",
     "mappings": {
       "default": {
-        "default": "epsilon invertito chiuso"
+        "default": "epsilon invertita chiusa"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0260",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera G con gancio"
+        "default": "e con gancio"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0261",
     "mappings": {
       "default": {
-        "default": "script in caratteri latini G"
+        "default": "script g"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "0263",
     "mappings": {
       "default": {
-        "default": "latin Small Letter Gamma"
+        "default": "gamma"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "0264",
     "mappings": {
       "default": {
-        "default": "piccola lettera latino baby gamma"
+        "default": "baby gamma"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "0265",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine H"
+        "default": "h capovolta"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "0266",
     "mappings": {
       "default": {
-        "default": "lettera H con gancio"
+        "default": "h con gancio"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0267",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina Heng con gancio"
+        "default": "heng con gancio"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0269",
     "mappings": {
       "default": {
-        "default": "lettera Iota"
+        "default": "iota"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "026B",
     "mappings": {
       "default": {
-        "default": "lettera L con tilde centrale"
+        "default": "l con tilde centrale"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "026C",
     "mappings": {
       "default": {
-        "default": "lettera L con cintura"
+        "default": "l con cintura"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "026D",
     "mappings": {
       "default": {
-        "default": "lettera latina L con gancio retroflesso"
+        "default": "l con gancio retroflesso"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "026F",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina trasformata M"
+        "default": "m capovolta"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "0270",
     "mappings": {
       "default": {
-        "default": "lettera latina minuscola trasformata con gamba lunga"
+        "default": "m capovolta con gamba lunga"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0271",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera M con gancio"
+        "default": "m con gancio"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "0272",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina N con gancio sinistro"
+        "default": "n con gancio sinistro"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "0273",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina N con gancio retroflesso"
+        "default": "n con gancio retroflesso"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "0275",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina barrata O"
+        "default": "o barrata"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "0277",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina chiusa Omega"
+        "default": "omega chiusa"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "key": "0278",
     "mappings": {
       "default": {
-        "default": "lettera Phi"
+        "default": "phi"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "0279",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine R"
+        "default": "r capovolta"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "key": "027A",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine R con gamba lunga"
+        "default": "r con gamba lunga"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "027B",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine R con gancio"
+        "default": "r con gancio"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "key": "027C",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera R con gamba lunga"
+        "default": "r con gamba lunga"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "027D",
     "mappings": {
       "default": {
-        "default": "lettera R con coda"
+        "default": "r con coda"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "027E",
     "mappings": {
       "default": {
-        "default": "r amo da pesca"
+        "default": "r con amo da pesca"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "027F",
     "mappings": {
       "default": {
-        "default": "lettera latina latina rovesciata R con amo"
+        "default": "r capovolta con amo"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "key": "0282",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera S con gancio"
+        "default": "s con gancio"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "0285",
     "mappings": {
       "default": {
-        "default": "lingua latina minuscola squat rovesciato Esh"
+        "default": "esc invertita"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "0286",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina Esh con ricciolo"
+        "default": "esh con ricciolo"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "0287",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine T"
+        "default": "t capovolta"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "key": "0288",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera T con gancio retroflesso"
+        "default": "t con gancio retroflesso"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "key": "0289",
     "mappings": {
       "default": {
-        "default": "carattere latino di caratteri cubitali"
+        "default": "u barrata"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "028A",
     "mappings": {
       "default": {
-        "default": "lettera Upsilon"
+        "default": "upsilon"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "028C",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine V"
+        "default": "v capovolta"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "028D",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina trasformata W"
+        "default": "w capovolta"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "028E",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine Y"
+        "default": "y capovolta"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "0290",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera Z con gancio Retroflex"
+        "default": "z con gancio retroflesso"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "0291",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera Z con arricciatura"
+        "default": "z con arricciatura"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "0296",
     "mappings": {
       "default": {
-        "default": "lettera latina invertita fermata glottale"
+        "default": "stop glottale invertito capovolto"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "key": "0297",
     "mappings": {
       "default": {
-        "default": "lettera latina allungata C"
+        "default": "c allungata"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "key": "029E",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina trasformata K"
+        "default": "k capovolta"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "key": "02A0",
     "mappings": {
       "default": {
-        "default": "lettera Q con gancio"
+        "default": "q con gancio"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "key": "02A3",
     "mappings": {
       "default": {
-        "default": "lettera latina Dz Digraph"
+        "default": "digrafo dz"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "key": "02A5",
     "mappings": {
       "default": {
-        "default": "latin Small Letter Dz Digraph with Curl"
+        "default": "digrafo dz con arricciatura"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "02A6",
     "mappings": {
       "default": {
-        "default": "latino piccolo lettera Ts Digraph"
+        "default": "digrafo ts"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "key": "02A7",
     "mappings": {
       "default": {
-        "default": "latino piccolo lettera Tesh Digraph"
+        "default": "digrafo tesh"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "key": "02A8",
     "mappings": {
       "default": {
-        "default": "digraph latino lettera minuscola con ricciolo"
+        "default": "digrafo tc con ricciolo"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "key": "02A9",
     "mappings": {
       "default": {
-        "default": "lettera latina Feng digraph"
+        "default": "digrafo feng"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "key": "02AA",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine Ls Digraph"
+        "default": "digrafo ls"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "key": "02AB",
     "mappings": {
       "default": {
-        "default": "lettera latina Lz Digraph"
+        "default": "digrafo lz"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "key": "02AC",
     "mappings": {
       "default": {
-        "default": "latin Letter Bilabial Percussive"
+        "default": "percussivo bilabiale"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "key": "02AD",
     "mappings": {
       "default": {
-        "default": "latin Letter Bidental Percussive"
+        "default": "percussivo bidentale"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "key": "02AE",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine H con amo"
+        "default": "h capovolta con amo"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "key": "02AF",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine girate con amo e coda"
+        "default": "h capovolta con amo e coda"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "key": "1D02",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina trasformata Ae"
+        "default": "ae capovolta"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "key": "1D08",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine aperte E"
+        "default": "e aperta invertita"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "key": "1D09",
     "mappings": {
       "default": {
-        "default": "lettere minuscole latine"
+        "default": "i capovolta"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "key": "1D11",
     "mappings": {
       "default": {
-        "default": "lettera latina latina obliqua O"
+        "default": "o di traverso"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "key": "1D12",
     "mappings": {
       "default": {
-        "default": "lettera latina latina obliqua aperta O"
+        "default": "o aperta di traverso"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "key": "1D14",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina trasformata Oe"
+        "default": "oe invertita"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "key": "1D16",
     "mappings": {
       "default": {
-        "default": "lettera latina latina in alto a metà O."
+        "default": "metà alta di o"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "key": "1D17",
     "mappings": {
       "default": {
-        "default": "lettera latina in basso a metà lettera O."
+        "default": "metà bassa di o"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "key": "1D1D",
     "mappings": {
       "default": {
-        "default": "lettera latina latina lateralmente U"
+        "default": "u di traverso"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "key": "1D1E",
     "mappings": {
       "default": {
-        "default": "lettera latina latina lateralmente diaeresized U"
+        "default": "u con dieresi di traverso"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "key": "1D1F",
     "mappings": {
       "default": {
-        "default": "lettera latina latina girata m"
+        "default": "m di traverso"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "key": "1D24",
     "mappings": {
       "default": {
-        "default": "spirale laringeo a carattere latino"
+        "default": "spirale laringeo"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "key": "1D25",
     "mappings": {
       "default": {
-        "default": "lettera latina Ain"
+        "default": "ain"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "key": "1D6B",
     "mappings": {
       "default": {
-        "default": "lettera Ue"
+        "default": "ue"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "1D6C",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina B con tilde centrale"
+        "default": "b con tilde centrale"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "key": "1D6D",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera D con tilde medio"
+        "default": "d con tilde centrale"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "key": "1D6E",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina F con tilde medio"
+        "default": "f con tilde centrale"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "key": "1D6F",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina M con tilde centrale"
+        "default": "m con tilde centrale"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "1D70",
     "mappings": {
       "default": {
-        "default": "lettera N con tilde centrale"
+        "default": "n con tilde centrale"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "key": "1D71",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera P con tilde medio"
+        "default": "p con tilde centrale"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "key": "1D72",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina R con tilde centrale"
+        "default": "r con tilde centrale"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "key": "1D73",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera R con ami e tilde medio"
+        "default": "r con amo e tilde centrale"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "key": "1D74",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera S con tilde medio"
+        "default": "s con tilde centrale"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "key": "1D75",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera T con tilde medio"
+        "default": "t con tilde centrale"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "key": "1D76",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera Z con tilde medio"
+        "default": "z con tilde centrale"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "key": "1D77",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina trasformata G"
+        "default": "g capovolta"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "key": "1D79",
     "mappings": {
       "default": {
-        "default": "lettera insulare"
+        "default": "g insulare"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "key": "1D7A",
     "mappings": {
       "default": {
-        "default": "lettera latina piccola con barrato"
+        "default": "th barrata"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "key": "1D80",
     "mappings": {
       "default": {
-        "default": "latina Piccola lettera B con gancio Palatal"
+        "default": "b con gancio palatale"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "key": "1D81",
     "mappings": {
       "default": {
-        "default": "latina Piccola lettera D con gancio Palatal"
+        "default": "d con gancio palatale"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "key": "1D82",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina F con gancio palatale"
+        "default": "f con gancio palatale"
       }
     }
   },
@@ -1663,7 +1663,7 @@
     "key": "1D83",
     "mappings": {
       "default": {
-        "default": "latina Piccola lettera G con gancio Palatal"
+        "default": "g con gancio palatale"
       }
     }
   },
@@ -1672,7 +1672,7 @@
     "key": "1D84",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina K con gancio palatale"
+        "default": "k con gancio palatale"
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "key": "1D85",
     "mappings": {
       "default": {
-        "default": "latina Lettere minuscole con gancio palatale"
+        "default": "l con gancio palatale"
       }
     }
   },
@@ -1690,7 +1690,7 @@
     "key": "1D86",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina M con gancio palatale"
+        "default": "m con gancio palatale"
       }
     }
   },
@@ -1699,7 +1699,7 @@
     "key": "1D87",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina N con gancio palatale"
+        "default": "n con gancio palatale"
       }
     }
   },
@@ -1708,7 +1708,7 @@
     "key": "1D88",
     "mappings": {
       "default": {
-        "default": "latina Piccola lettera P con gancio Palatal"
+        "default": "p con gancio palatale"
       }
     }
   },
@@ -1717,7 +1717,7 @@
     "key": "1D89",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera R con gancio Palatal"
+        "default": "r con gancio palatale"
       }
     }
   },
@@ -1726,7 +1726,7 @@
     "key": "1D8A",
     "mappings": {
       "default": {
-        "default": "latina Piccola lettera S con gancio Palatal"
+        "default": "s con gancio palatale"
       }
     }
   },
@@ -1735,7 +1735,7 @@
     "key": "1D8B",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina Esh con gancio palatale"
+        "default": "esh con gancio palatale"
       }
     }
   },
@@ -1744,7 +1744,7 @@
     "key": "1D8C",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina V con gancio palatale"
+        "default": "v con gancio palatale"
       }
     }
   },
@@ -1753,7 +1753,7 @@
     "key": "1D8D",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina X con gancio palatale"
+        "default": "x con gancio palatale"
       }
     }
   },
@@ -1762,7 +1762,7 @@
     "key": "1D8E",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera Z con gancio Palatal"
+        "default": "z con gancio palatale"
       }
     }
   },
@@ -1771,7 +1771,7 @@
     "key": "1D8F",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina a con gancio retroflesso"
+        "default": "a con gancio retroflesso"
       }
     }
   },
@@ -1780,7 +1780,7 @@
     "key": "1D90",
     "mappings": {
       "default": {
-        "default": "lettera alfabetica latina alfa con gancio retroflesso"
+        "default": "alfa con gancio retroflesso"
       }
     }
   },
@@ -1789,7 +1789,7 @@
     "key": "1D91",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera D con gancio e coda"
+        "default": "d con gancio e coda"
       }
     }
   },
@@ -1798,7 +1798,7 @@
     "key": "1D92",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera E con gancio retroflesso"
+        "default": "e con gancio retroflesso"
       }
     }
   },
@@ -1807,7 +1807,7 @@
     "key": "1D93",
     "mappings": {
       "default": {
-        "default": "lettera latina latina E aperta con gancio retroflesso"
+        "default": "e aperta con gancio retroflesso"
       }
     }
   },
@@ -1816,7 +1816,7 @@
     "key": "1D94",
     "mappings": {
       "default": {
-        "default": "lettera piccola latina invertita E aperta con gancio retroflesso"
+        "default": "e aperta con gancio retroflesso invertita"
       }
     }
   },
@@ -1825,7 +1825,7 @@
     "key": "1D95",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina Schwa con gancio retroflesso"
+        "default": "schwa con gancio retroflesso"
       }
     }
   },
@@ -1834,7 +1834,7 @@
     "key": "1D96",
     "mappings": {
       "default": {
-        "default": "lettera latina I con gancio Retroflex"
+        "default": "I con gancio Retroflex"
       }
     }
   },
@@ -1843,7 +1843,7 @@
     "key": "1D97",
     "mappings": {
       "default": {
-        "default": "lettera minuscola latina Open O con gancio retroflesso"
+        "default": "o aperta con gancio retroflesso"
       }
     }
   },
@@ -1852,7 +1852,7 @@
     "key": "1D98",
     "mappings": {
       "default": {
-        "default": "latin Small Letter Esh with gancio retroflesso"
+        "default": "esh with gancio retroflesso"
       }
     }
   },
@@ -1861,7 +1861,7 @@
     "key": "1D99",
     "mappings": {
       "default": {
-        "default": "latina piccola lettera U con gancio retroflesso"
+        "default": "u con gancio retroflesso"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "key": "1D9A",
     "mappings": {
       "default": {
-        "default": "piccola lettera latina Ezh con gancio retroflesso"
+        "default": "ezh con gancio retroflesso"
       }
     }
   },
