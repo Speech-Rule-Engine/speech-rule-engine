@@ -129,9 +129,11 @@ sre.MathspeakFrench = {
      '[p] (pause:100)', // Pause necessary to voice separators between empty.
      'self::empty'],
     ['Rule',
-     'blank-empty', 'default',
-     '[t] "vide"', 'self::empty', 'count(../*)=1',
-     'name(../..)="cell" or name(../..)="line"'],
+     'blank-cell-empty', 'default',
+     '[t] "vide"', 'self::empty', 'count(../*)=1', 'name(../..)="cell"'],
+    ['Rule',
+     'blank-line-empty', 'default',
+     '[t] "vide"', 'self::empty', 'count(../*)=1', 'name(../..)="line"'],
 
     // Font rules
     ['Rule',

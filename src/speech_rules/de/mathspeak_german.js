@@ -129,9 +129,11 @@ sre.MathspeakGerman = {
       '[p] (pause:100)', // Pause necessary to voice separators between empty.
       'self::empty'],
     ['Rule',
-      'blank-empty', 'default',
-      '[t] "leer"', 'self::empty', 'count(../*)=1',
-      'name(../..)="cell" or name(../..)="line"'],
+     'blank-cell-empty', 'default',
+     '[t] "leer"', 'self::empty', 'count(../*)=1', 'name(../..)="cell"'],
+    ['Rule',
+     'blank-line-empty', 'default',
+     '[t] "leer"', 'self::empty', 'count(../*)=1', 'name(../..)="line"'],
 
     // Font rules
     ['Rule',

@@ -123,9 +123,11 @@ sre.MathspeakSpanish = {
      '[p] (pause:100)', // Pause necessary to voice separators between empty.
      'self::empty'],
     ['Rule',
-     'blank-empty', 'default',
-     '[t] "espacio"', 'self::empty', 'count(../*)=1',
-     'name(../..)="cell" or name(../..)="line"'],
+     'blank-cell-empty', 'default',
+     '[t] "espacio"', 'self::empty', 'count(../*)=1', 'name(../..)="cell"'],
+    ['Rule',
+     'blank-line-empty', 'default',
+     '[t] "espacio"', 'self::empty', 'count(../*)=1', 'name(../..)="line"'],
 
     // Font rules
     ['Rule',
