@@ -86,7 +86,8 @@ sre.MathspeakRules = {
     ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
 
     // Generators.
-    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint]
+    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint],
+    ['CGFtensorRules', sre.MathspeakUtil.generateTensorRules]
   ],
   rules: [
     ['Rule',
@@ -1242,7 +1243,7 @@ sre.MathspeakRules = {
     ['Rule',
      'axiom', 'default',
      '[t] "empty axiom";',
-     'self::empty', '@role="axiom"']
-  ],
-  initialize: [sre.MathspeakUtil.generateTensorRules]
+     'self::empty', '@role="axiom"'],
+    ['Generator', 'CGFtensorRules']
+  ]
 };

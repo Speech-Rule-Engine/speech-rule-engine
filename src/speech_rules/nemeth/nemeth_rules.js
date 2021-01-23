@@ -67,7 +67,8 @@ sre.NemethRules = {
     ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
 
     // Generators.
-    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint]
+    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint],
+    ['CGFtensorRules', sre.NemethUtil.generateTensorRules]
   ],
   rules: [
     // Initial rule
@@ -868,10 +869,10 @@ sre.NemethRules = {
      'self::superscript', 'name(children/*[1])="text" or ' +
      '(name(children/*[1])="punctuated" and children/*[1][@role="text"])',
      'name(children/*[2])="number"', 'children/*[2][@role="integer"]'
-    ]
+    ],
+    ['Generator', 'CGFtensorRules']
   ],
   initialize: [
-    sre.NemethUtil.generateTensorRules,
     sre.NemethUtil.addAnnotators
   ]
 };

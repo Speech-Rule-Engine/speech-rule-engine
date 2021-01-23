@@ -91,7 +91,8 @@ sre.MathspeakSpanish = {
     ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
 
     // Generators.
-    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint]
+    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint],
+    ['CGFtensorRules', sre.MathspeakUtil.generateTensorRules]
   ],
   rules: [
     ['Rule',
@@ -1249,6 +1250,6 @@ sre.MathspeakSpanish = {
      'unit-divide', 'default',
      '[n] children/*[1]; [t] "por"; [n] children/*[2] (grammar:singularUnit)',
      'self::fraction', '@role="unit"'],
-  ],
-  initialize: [sre.MathspeakUtil.generateTensorRules]
+    ['Generator', 'CGFtensorRules']
+  ]
 };

@@ -97,7 +97,8 @@ sre.MathspeakFrench = {
     ['CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase],
 
     // Generators.
-    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint]
+    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint],
+    ['CGFtensorRules', sre.MathspeakUtil.generateTensorRules]
   ],
   rules: [
     ['Rule',
@@ -1251,7 +1252,7 @@ sre.MathspeakFrench = {
     ['Rule',
      'unit-divide', 'default',
      '[n] children/*[1]; [t] "par"; [n] children/*[2]',
-     'self::fraction', '@role="unit"']
-  ],
-  initialize: [sre.MathspeakUtil.generateTensorRules]
+     'self::fraction', '@role="unit"'],
+    ['Generator', 'CGFtensorRules']
+  ]
 };
