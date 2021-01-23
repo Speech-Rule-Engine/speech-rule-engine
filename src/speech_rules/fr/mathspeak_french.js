@@ -95,6 +95,9 @@ sre.MathspeakFrench = {
     ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
 
     ['CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase],
+
+    // Generators.
+    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint]
   ],
   rules: [
     ['Rule',
@@ -669,8 +672,7 @@ sre.MathspeakFrench = {
     ['Aliases',
      'subscript-baseline',
      'self::subscript', 'not(following-sibling::*)',
-     'ancestor::relseq|ancestor::multirel',
-     sre.MathspeakUtil.generateBaselineConstraint()],
+     'ancestor::relseq|ancestor::multirel', 'CGFbaselineConstraint'],
     ['Aliases',
      'subscript-baseline',
      'self::subscript', 'not(following-sibling::*)',
@@ -737,8 +739,7 @@ sre.MathspeakFrench = {
      'superscript-baseline',
      'self::superscript', 'not(following-sibling::*)',
      'ancestor::relseq|ancestor::multirel',
-     'not(@embellished)',
-     sre.MathspeakUtil.generateBaselineConstraint()],
+     'not(@embellished)', 'CGFbaselineConstraint'],
     ['Aliases',
      'superscript-baseline',
      'self::superscript', 'not(following-sibling::*)',

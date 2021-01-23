@@ -708,7 +708,7 @@ sre.MathspeakUtil.determinantIsSimple = function(node) {
 /**
  * Generate constraints for the specialised baseline rules of relation
  * sequences.
- * @return {string} The constraint string.
+ * @return {Array.<string>} The constraint strings.
  */
 sre.MathspeakUtil.generateBaselineConstraint = function() {
   var ignoreElems = ['subscript', 'superscript', 'tensor'];
@@ -733,10 +733,10 @@ sre.MathspeakUtil.generateBaselineConstraint = function() {
         mainList.map(function(elem) {return brk + '/' + elem;}));
   }
   var postfix = notify(breakCstrs.join(' | '));
-  return [prefix, middle, postfix].join(' and ');
+  return [[prefix, middle, postfix].join(' and ')];
 };
 
-
+  
 /**
  * Removes parentheses around a label.
  * @param {!Node} node The label to be processed.

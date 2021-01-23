@@ -146,6 +146,28 @@ goog.inherits(sre.SpeechRuleFunctions.ContextFunctions,
 
 
 /**
+ * Context function for use in speech rules.
+ * @typedef {function(): Array.<string>}
+ */
+sre.SpeechRuleFunctions.CustomGenerator;
+
+
+
+/**
+ * @constructor
+ * @extends {sre.SpeechRuleFunctions.Store_}
+ */
+sre.SpeechRuleFunctions.CustomGenerators = function() {
+  var store =
+      /** @type {!Object.<sre.SpeechRuleFunctions.CustomGenerator>} */
+      ({});
+  sre.SpeechRuleFunctions.CustomGenerators.base(this, 'constructor', 'CGF', store);
+};
+goog.inherits(sre.SpeechRuleFunctions.CustomGenerators,
+              sre.SpeechRuleFunctions.Store_);
+
+
+/**
  * Checks validity for a custom function name.
  * @param {string} name The name of the custom function.
  * @return {boolean} True if the name is valid.

@@ -153,11 +153,11 @@ sre.MathStore.prototype.defineRulesAlias = function(name, query, var_args) {
  * Adds a new speech rule as alias of the given rule.
  * @param {sre.SpeechRule} rule The existing rule.
  * @param {string} query Precondition query of the rule.
- * @param {Array.<string>} cstrList List of additional constraints.
+ * @param {!Array.<string>} cstrList List of additional constraints.
  * @private
  */
 sre.MathStore.prototype.addAlias_ = function(rule, query, cstrList) {
-  var prec = new sre.SpeechRule.Precondition(query, cstrList);
+  var prec = this.parsePrecondition(query, cstrList);
   var newRule = new sre.SpeechRule(
       rule.name, rule.dynamicCstr, prec, rule.action);
   newRule.name = rule.name;

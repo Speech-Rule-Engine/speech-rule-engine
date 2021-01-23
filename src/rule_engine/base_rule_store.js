@@ -49,11 +49,6 @@ sre.BaseRuleStore = function() {
    */
   this.context = new sre.SpeechRuleContext();
 
-  // TODO: Temporary shortcuts for ease of goog.bind in store definitions.
-  this.customQueries = this.context.customQueries;
-  this.customStrings = this.context.customStrings;
-  this.contextFunctions = this.context.contextFunctions;
-
   /**
    * Set of speech rules in the store.
    * @type {!Array.<sre.SpeechRule>}
@@ -135,16 +130,17 @@ sre.BaseRuleStore.prototype.lookupRules = function(node, dynamic) {
   return this.trie.lookupRules(node, dynamic.allProperties());
 };
 
-  /**
+/**
  * @override
  */
 sre.BaseRuleStore.prototype.defineRule = function(
     name, dynamic, action, prec, cstr) {
   var rule;
   try {
+    // TODO: Have a parser that respects generators.
     var postc = sre.SpeechRule.Action.fromString(action);
     var cstrList = Array.prototype.slice.call(arguments, 4);
-    var fullPrec = new sre.SpeechRule.Precondition(prec, cstrList);
+    var fullPrec = this.parsePrecondition(prec, cstrList);
     var dynamicCstr = this.parseCstr(dynamic);
     rule = new sre.SpeechRule(name, dynamicCstr, fullPrec, postc);
   } catch (err) {
@@ -372,6 +368,34 @@ sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
       this.locale + '.' + this.modality +
       (this.domain ? '.' + this.domain : '') +
       '.' + cstr);
+};
+
+
+/**
+ * Parses precondition by resolving generator rules.
+ * @param {string} query The query constraint.
+ * @param {!Array.<string>} rest The rest constraints.
+ * @return {sre.SpeechRule.Precondition} The new precondition.
+ */
+sre.BaseRuleStore.prototype.parsePrecondition = function(query, rest) {
+  var queryCstr = this.parsePrecondition_(query);
+  query = queryCstr[0];
+  var restCstr = queryCstr.slice(1);
+  for (var cstr of rest) {
+    restCstr = restCstr.concat(this.parsePrecondition_(cstr));
+  }
+  return new sre.SpeechRule.Precondition(query, restCstr);
+};
+
+
+/**
+ * Resolves a single precondition constraint.
+ * @param {string} cstr The precondition constraint.
+ * @return {Array.<string>} Array of constraints, possibly generated.
+ */
+sre.BaseRuleStore.prototype.parsePrecondition_ = function(cstr) {
+  var generator = this.context.customGenerators.lookup(cstr);
+  return generator ? generator() : [cstr];
 };
 
 

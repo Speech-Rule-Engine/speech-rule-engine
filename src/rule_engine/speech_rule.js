@@ -365,6 +365,7 @@ sre.SpeechRule.Action.prototype.toString = function() {
  * @constructor
  */
 sre.SpeechRule.Precondition = function(query, opt_constraints) {
+
   /** @type {string} */
   this.query = query;
 

@@ -48,6 +48,12 @@ sre.SpeechRuleContext = function() {
    */
   this.contextFunctions = new sre.SpeechRuleFunctions.ContextFunctions();
 
+  /**
+   * Set of custom generators for the store.
+   * @type {sre.SpeechRuleFunctions.CustomGenerators}
+   */
+  this.customGenerators = new sre.SpeechRuleFunctions.CustomGenerators();
+
 };
 
 
@@ -143,9 +149,12 @@ sre.SpeechRuleContext.prototype.constructString = function(node, expr) {
 sre.SpeechRuleContext.prototype.parse = function(functions) {
   for (var i = 0, func; func = functions[i]; i++) {
     let kind = func[0].slice(0, 3);
-    let map = {CQF: this.customQueries,
+    let map = {
+      CQF: this.customQueries,
       CSF: this.customStrings,
-      CTF: this.contextFunctions};
+      CTF: this.contextFunctions,
+      CGF: this.customGenerators
+    };
     let call = map[kind];
     if (call) {
       call.add(func[0], func[1]);

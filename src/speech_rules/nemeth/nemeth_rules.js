@@ -64,7 +64,10 @@ sre.NemethRules = {
     ['CSFRemoveParens', sre.MathspeakUtil.removeParens],
 
     // Dummy.
-    ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth]
+    ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
+
+    // Generators.
+    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint]
   ],
   rules: [
     // Initial rule
@@ -470,8 +473,7 @@ sre.NemethRules = {
     ['Aliases',
      'subscript-baseline',
      'self::subscript', 'not(following-sibling::*)',
-     'ancestor::relseq|ancestor::multirel',
-     sre.MathspeakUtil.generateBaselineConstraint()],
+     'ancestor::relseq|ancestor::multirel', 'CGFbaselineConstraint'],
     ['Aliases',
      'subscript-baseline',
      'self::subscript', 'not(following-sibling::*)',
@@ -524,8 +526,7 @@ sre.NemethRules = {
      'superscript-baseline',
      'self::superscript', 'not(following-sibling::*)',
      'ancestor::relseq|ancestor::multirel',
-     'not(@embellished)',
-     sre.MathspeakUtil.generateBaselineConstraint()],
+     'not(@embellished)', 'CGFbaselineConstraint'],
     ['Aliases',
      'superscript-baseline',
      'self::superscript', 'not(following-sibling::*)',
