@@ -24,8 +24,6 @@
 
 goog.provide('sre.PrefixGerman');
 
-goog.require('sre.NumbersUtil');
-
 
 /**
  * German Prefix rules.
@@ -34,9 +32,6 @@ sre.PrefixGerman = {
   modality: 'prefix',
   locale: 'de',
   domain: 'default',
-  functions: [
-    ['CSFordinalPosition', sre.NumbersUtil.ordinalPosition]
-  ],
   rules: [
     ['Rule',
       'numerator', 'default',

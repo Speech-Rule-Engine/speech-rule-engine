@@ -42,5 +42,7 @@ sre.SpeechRules.prototype.addStore = function(constr, inherit, store) {
 
 // Make this robust with dynamic constraints and defaults.
 sre.SpeechRules.prototype.getStore = function(locale, modality, domain) {
-  return this.store[[locale, modality, domain].join('.')] || {};
+  return this.store[[locale, modality, domain].join('.')] ||
+    this.store[[sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE],
+                modality, domain].join('.')] || {};
 };

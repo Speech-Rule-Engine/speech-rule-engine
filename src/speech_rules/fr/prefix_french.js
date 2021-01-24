@@ -20,8 +20,6 @@
 
 goog.provide('sre.PrefixFrench');
 
-goog.require('sre.NumbersUtil');
-
 
 /**
  * French prefix rules.
@@ -30,9 +28,6 @@ sre.PrefixFrench = {
   locale: 'fr',
   modality: 'prefix',
   domain: 'default',
-  functions: [
-    ['CSFordinalPosition', sre.NumbersUtil.ordinalPosition],
-  ],
   rules: [
     ['Rule',
      'numerator', 'default',

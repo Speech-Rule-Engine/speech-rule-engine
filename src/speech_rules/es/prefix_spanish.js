@@ -20,8 +20,6 @@
 
 goog.provide('sre.PrefixSpanish');
 
-goog.require('sre.NumbersUtil');
-
 
 /**
  * Spanish prefix rules.
@@ -30,9 +28,6 @@ sre.PrefixSpanish = {
   locale: 'es',
   modality: 'prefix',
   domain: 'default',
-  functions: [
-    ['CSFordinalPosition', sre.NumbersUtil.ordinalPosition]
-  ],
   rules: [
     ['Rule',
      'numerator', 'default',
