@@ -24,10 +24,12 @@ goog.require('sre.BaseRuleStore');
 goog.require('sre.ClearspeakEnglish');
 goog.require('sre.ClearspeakFrench');
 goog.require('sre.ClearspeakGerman');
+goog.require('sre.ClearspeakItalian');
 goog.require('sre.ClearspeakRules');
 goog.require('sre.EmacspeakRules');
 goog.require('sre.MathspeakFrench');
 goog.require('sre.MathspeakGerman');
+goog.require('sre.MathspeakItalian');
 goog.require('sre.MathspeakEnglish');
 goog.require('sre.MathspeakRules');
 goog.require('sre.MathspeakSpanish');
@@ -36,12 +38,14 @@ goog.require('sre.OtherRules');
 goog.require('sre.PrefixEnglish');
 goog.require('sre.PrefixFrench');
 goog.require('sre.PrefixGerman');
+goog.require('sre.PrefixItalian');
 goog.require('sre.PrefixRules');
 goog.require('sre.PrefixSpanish');
 goog.require('sre.SemanticTreeRules');
 goog.require('sre.SummaryEnglish');
 goog.require('sre.SummaryFrench');
 goog.require('sre.SummaryGerman');
+goog.require('sre.SummaryItalian');
 goog.require('sre.SummarySpanish');
 
 
@@ -53,20 +57,24 @@ sre.SpeechRuleStores.RULE_SETS_ = {
   'SemanticTreeRules': sre.SemanticTreeRules,
   'MathspeakFrench': sre.MathspeakFrench,
   'MathspeakGerman': sre.MathspeakGerman,
+  'MathspeakItalian': sre.MathspeakItalian,
   'MathspeakEnglish': sre.MathspeakEnglish,
   'MathspeakSpanish': sre.MathspeakSpanish,
   'NemethRules': sre.NemethRules,
   'ClearspeakFrench': sre.ClearspeakFrench,
   'ClearspeakGerman': sre.ClearspeakGerman,
+  'ClearspeakItalian': sre.ClearspeakItalian,
   'ClearspeakEnglish': sre.ClearspeakEnglish,
   'EmacspeakRules': sre.EmacspeakRules,
   'SummaryEnglish': sre.SummaryEnglish,
   'SummaryFrench': sre.SummaryFrench,
   'SummaryGerman': sre.SummaryGerman,
+  'SummaryItalian': sre.SummaryItalian,
   'SummarySpanish': sre.SummarySpanish,
   'PrefixEnglish': sre.PrefixEnglish,
   'PrefixFrench': sre.PrefixFrench,
   'PrefixGerman': sre.PrefixGerman,
+  'PrefixItalian': sre.PrefixItalian,
   'PrefixSpanish': sre.PrefixSpanish
 };
 

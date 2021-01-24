@@ -166,9 +166,9 @@ sre.Numbers.it.wordOrdinal = function(number) {
  * @return {string} The ordinal string.
  */
 sre.Numbers.it.simpleOrdinal = function(number) {
-  var tens = number % 100;
-  var numStr = number.toString();
-  return numStr + 'o';
+  var gender = /** @type {string} */(
+      sre.Grammar.getInstance().getParameter('gender'));
+  return number.toString() + (gender === 'male' ? 'o' : 'a');
 };
 
 
