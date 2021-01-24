@@ -20,7 +20,6 @@
 
 goog.provide('sre.NemethRules');
 
-goog.require('sre.MathspeakUtil');
 goog.require('sre.NemethUtil');
 
 
@@ -31,45 +30,6 @@ sre.NemethRules = {
   locale: 'nemeth',
   modality: 'braille',
   domain: 'default',
-  functions: [
-    ['CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
-    ['CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
-
-    ['CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
-    // Fraction function.
-    ['CSFopenFraction', sre.NemethUtil.openingFraction],
-    ['CSFcloseFraction', sre.NemethUtil.closingFraction],
-    ['CSFoverFraction', sre.NemethUtil.overFraction],
-    ['CSFoverBevFraction', sre.NemethUtil.overBevelledFraction],
-
-    // Radical function.
-    ['CSFopenRadicalVerbose', sre.NemethUtil.openingRadical],
-    ['CSFcloseRadicalVerbose', sre.NemethUtil.closingRadical],
-    ['CSFindexRadicalVerbose', sre.NemethUtil.indexRadical],
-
-    // Sub- Superscript.
-    ['CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose],
-
-    // Over- Underscore.
-    ['CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
-    ['CSFoverscript', sre.MathspeakUtil.nestedOverscore],
-
-    ['CTFordinalCounter', sre.NumbersUtil.ordinalCounter],
-    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
-
-    // Layout related.
-    ['CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
-    ['CSFRemoveParens', sre.MathspeakUtil.removeParens],
-
-    // Dummy.
-    ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
-
-    // Generators.
-    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint],
-    ['CGFtensorRules', sre.NemethUtil.generateTensorRules]
-  ],
   rules: [
     // Initial rule
     ['Rule',
@@ -872,7 +832,5 @@ sre.NemethRules = {
     ],
     ['Generator', 'CGFtensorRules']
   ],
-  initialize: [
-    sre.NemethUtil.addAnnotators
-  ]
+  initialize: [sre.NemethUtil.addAnnotators]
 };

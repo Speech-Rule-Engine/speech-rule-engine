@@ -98,3 +98,4 @@ sre.MathspeakRules();
 sre.ClearspeakRules();
 sre.PrefixRules();
 sre.OtherRules();
+sre.BrailleRules();

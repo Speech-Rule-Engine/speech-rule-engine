@@ -20,19 +20,14 @@
 
 goog.provide('sre.SemanticTreeRules');
 
-goog.require('sre.StoreUtil');
-
 
 /**
  * ChromeVox rule set.
  */
 sre.SemanticTreeRules = {
+  locale: 'en',
   domain: 'default',
-  functions: [
-    // Context functions
-    ['CTFnodeCounter', sre.StoreUtil.nodeCounter],
-    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
-  ],
+  modality: 'speech',
   rules: [
     //
     // Rules

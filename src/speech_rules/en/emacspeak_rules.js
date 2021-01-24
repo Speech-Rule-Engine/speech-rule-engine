@@ -20,21 +20,14 @@
 
 goog.provide('sre.EmacspeakRules');
 
-goog.require('sre.MathspeakUtil');
-goog.require('sre.StoreUtil');
-
 
 /**
  * Emacspeak rules.
  */
 sre.EmacspeakRules = {
   domain: 'emacspeak',
-  functions: [
-    ['CTFnodeCounter', sre.StoreUtil.nodeCounter],
-    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
-    ['CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction],
-    ['CSFvulgarFraction', sre.NumbersUtil.vulgarFraction]
-  ],
+  locale: 'en',
+  modality: 'speech',
   rules: [
     // Initial rule
     ['Rule',
