@@ -32,9 +32,9 @@ goog.require('sre.Numbers');
  * @private
  */
 sre.Numbers.it.onesNumbers_ = [
-  '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
-  'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen',
-  'seventeen', 'eighteen', 'nineteen'
+  '', 'uno', 'due', 'tre', 'quattro', 'cinque', 'sei', 'sette', 'otto', 'nove',
+  'dieci', 'undici', 'dodici', 'tredici', 'quattordici', 'quindici', 'sedici',
+  'diciassette', 'diciotto', 'diciannove'
 ];
 
 
@@ -44,8 +44,8 @@ sre.Numbers.it.onesNumbers_ = [
  * @private
  */
 sre.Numbers.it.tensNumbers_ = [
-  '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
-  'ninety'
+  '', '', 'venti', 'trenta', 'quaranta', 'cinquanta', 'sessanta', 'settanta',
+  'ottanta', 'novanta'
 ];
 
 
@@ -55,9 +55,8 @@ sre.Numbers.it.tensNumbers_ = [
  * @private
  */
 sre.Numbers.it.largeNumbers_ = [
-  '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
-  'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
-  'decillion'
+  '', 'mille', 'milione', 'miliardo', 'bilione', 'biliardo', 'trilione',
+  'triliardo', 'quadrilione', 'quadriliardo', 'quntilione', 'quintiliardo'
 ];
 
 
@@ -72,7 +71,7 @@ sre.Numbers.it.hundredsToWords_ = function(number) {
   var str = '';
   str += sre.Numbers.it.onesNumbers_[Math.floor(n / 100)] ?
       sre.Numbers.it.onesNumbers_[Math.floor(n / 100)] +
-      sre.Numbers.it.NUMBERS.numSep + 'hundred' : '';
+      sre.Numbers.it.NUMBERS.numSep + 'cento' : '';
   n = n % 100;
   if (n) {
     str += str ? sre.Numbers.it.NUMBERS.numSep : '';
@@ -169,19 +168,7 @@ sre.Numbers.it.wordOrdinal = function(number) {
 sre.Numbers.it.simpleOrdinal = function(number) {
   var tens = number % 100;
   var numStr = number.toString();
-  if (tens > 10 && tens < 20) {
-    return numStr + 'th';
-  }
-  switch (number % 10) {
-    case 1:
-      return numStr + 'st';
-    case 2:
-      return numStr + 'nd';
-    case 3:
-      return numStr + 'rd';
-    default:
-      return numStr + 'th';
-  }
+  return numStr + 'o';
 };
 
 

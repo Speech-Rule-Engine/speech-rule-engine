@@ -33,35 +33,34 @@ goog.require('sre.Numbers.it');
 sre.Locale.it = {
 
   MS: {
-    START: '',
-    FRAC_V: '',
-    FRAC_B: '',
-    FRAC_S: '',
-    END: '',
-    FRAC_OVER: '',
-    ONCE: '',
-    TWICE: '',
-    NEST_FRAC: '',
-    ENDFRAC: '',
-    SUPER: '',
-    SUB: '',
-    // SUB: '', // Short
-    SUP: '',
-    SUPERSCRIPT: '',
-    SUBSCRIPT: '',
-    BASELINE: '',
-    BASE: '',
-    NESTED: '',
-    NEST_ROOT: '',
-    STARTROOT: '',
-    ENDROOT: '',
-    ROOTINDEX: '',
-    ROOT: '',
-    INDEX: '',
-    UNDER: '',
-    UNDERSCRIPT: '',
-    OVER: '',
-    OVERSCRIPT: ''
+    START: 'Inizio',
+    FRAC_V: 'Frazione',
+    FRAC_B: 'Frazione',
+    FRAC_S: 'Frazione',
+    END: 'Fine',
+    FRAC_OVER: 'Sopra',
+    ONCE: 'Una volta',
+    TWICE: 'Due volte',
+    NEST_FRAC: 'Annidamento',
+    ENDFRAC: 'Fine Frazione',
+    SUPER: 'Super',
+    SUB: 'Sub',
+    SUP: 'Sup',
+    SUPERSCRIPT: 'Apice',
+    SUBSCRIPT: 'Pedice',
+    BASELINE: 'Linea di base',
+    BASE: 'Base',
+    NESTED: 'Annidato',
+    NEST_ROOT: 'Annidamento',
+    STARTROOT: 'Inizio Radice',
+    ENDROOT: 'Fine Radice',
+    ROOTINDEX: 'Indice Radice',
+    ROOT: 'Radice',
+    INDEX: 'Indice Radice',
+    UNDER: 'Sotto',
+    UNDERSCRIPT: 'Sottoscritto',
+    OVER: 'Sopra',
+    OVERSCRIPT: 'Soprascritto'
   },
 
   MS_FUNC: {
@@ -81,115 +80,115 @@ sre.Locale.it = {
   },
 
   FONT: {
-    'bold': '',
-    'bold-fraktur': '',
-    'bold-italic': '',
-    'bold-script': '',
-    'caligraphic': '',
-    'caligraphic-bold': '',
-    'double-struck': '',
-    'double-struck-italic': '',
-    'fraktur': '',
-    'fullwidth': '',
-    'italic': '',
-    'monospace': '',
-    'normal': '',
-    'oldstyle': '',
-    'oldstyle-bold': '',
-    'script': '',
-    'sans-serif': '',
-    'sans-serif-italic': '',
-    'sans-serif-bold': '',
-    'sans-serif-bold-italic': '',
-    'unknown': ''
+    'bold': 'grassetto',
+    'bold-fraktur': 'grassetto gotico',
+    'bold-italic': 'grassetto italico',
+    'bold-script': 'grassetto script',
+    'caligraphic': 'calligrafico',
+    'caligraphic-bold': 'grassetto calligrafico',
+    'double-struck': 'grassetto da lavagna',
+    'double-struck-italic': 'grassetto da lavagna italico',
+    'fraktur': 'gotico',
+    'fullwidth': 'fullwidth',
+    'italic': 'italico',
+    'monospace': 'monospazio',
+    'normal': 'normale',
+    'oldstyle': 'vecchio stile',
+    'oldstyle-bold': 'vecchio stile grassetto',
+    'script': 'script',
+    'sans-serif': 'senza grazie',
+    'sans-serif-italic': 'senza grazie grassetto',
+    'sans-serif-bold': 'senza grazie italico',
+    'sans-serif-bold-italic': 'senza grazie grassetto italico',
+    'unknown': 'sconosciuto'
   },
 
 
   EMBELLISH: {
     // Embellishments
     // TODO: Here we need specialist combiners!
-    'super': ['', sre.Locale.prefixCombiner],
-    'sub': ['', sre.Locale.prefixCombiner],
-    'circled': '',
-    'parenthesized': '',
-    'period': '',
-    'negative-circled': '',
-    'double-circled': '',
-    'circled-sans-serif': '',
-    'negative-circled-sans-serif': '',
-    'comma': '',
-    'squared': '',
-    'negative-squared': ''
+    'super': ['apice', sre.Locale.prefixCombiner],
+    'sub': ['pedice', sre.Locale.prefixCombiner],
+    'circled': 'cerchiato',
+    'parenthesized': 'tra parentesi',
+    'period': 'punto',
+    'negative-circled': 'cerchiato nero',
+    'double-circled': 'doppio cerchiato',
+    'circled-sans-serif': 'cerchiato senza grazie',
+    'negative-circled-sans-serif': 'cerchiato nero senza grazie',
+    'comma': 'virgola',
+    'squared': 'squadrato',
+    'negative-squared': 'squadrato nero'
   },
 
   ROLE: {
     // Infixoperators
-    'addition': '',
-    'multiplication': '',
-    'subtraction': '',
-    'division': '',
+    'addition': 'addizione',
+    'multiplication': 'moltiplicazione',
+    'subtraction': 'sottrazione',
+    'division': 'divisione',
     // Relations.
-    'equality': '',
-    'inequality': '',
-    'element': '',
-    'arrow': '',
+    'equality': 'uguaglianza',
+    'inequality': 'disuguaglianza',
+    'element': 'elemento',
+    'arrow': 'freccia',
     // Roles of matrices or vectors.
-    'determinant': '',
-    'rowvector': '',
-    'binomial': '',
-    'squarematrix': '',
+    'determinant': 'determinante',
+    'rowvector': 'vettore riga',
+    'binomial': 'binomiale',
+    'squarematrix': 'matrice quadrata',
     // Sets
-    'set empty': '',
-    'set extended': '',
-    'set singleton': '',
-    'set collection': '',
+    'set empty': 'insieme vuoto',
+    'set extended': 'estensione di insieme',
+    'set singleton': 'singoletto',
+    'set collection': 'collezione',
     // Roles of rows, lines, cells.
-    'label': '',
-    'multiline': '',
-    'matrix': '',
-    'vector': '',
-    'cases': '',
-    'table': '',
+    'label': 'eitchetta',
+    'multiline': 'linee multiple',
+    'matrix': 'matrice',
+    'vector': 'vettore',
+    'cases': 'comando switch',
+    'table': 'tavola',
     // Unknown
-    'unknown': ''
+    'unknown': 'sconosciuto'
   },
 
 
   ENCLOSE: {
-    'longdiv': '',
-    'actuarial': '',
-    'radical': '',
-    'box': '',
-    'roundedbox': '',
-    'circle': '',
-    'left': '',
-    'right': '',
-    'top': '',
-    'bottom': '',
-    'updiagonalstrike': '',
-    'downdiagonalstrike': '',
-    'verticalstrike': '',
-    'horizontalstrike': '',
-    'madruwb': '',
-    'updiagonalarrow': '',
-    'phasorangle': '',
+    'longdiv': 'divisione lunga',
+    'actuarial': 'simbolo attuario',
+    'radical': 'radice quadrata',
+    'box': 'riquadro',
+    'roundedbox': 'riquadro arrotondato',
+    'circle': 'cerchio',
+    'left': 'linea verticale sinistra',
+    'right': 'linea verticale destra',
+    'top': 'barra sopra',
+    'bottom': 'barra sotto',
+    'updiagonalstrike': 'cancellatura',
+    'downdiagonalstrike': 'cancellatura',
+    'verticalstrike': 'cancellatura verticale',
+    'horizontalstrike': 'cancellatura',
+    'madruwb': 'simbolo fattoriale arabo',
+    'updiagonalarrow': 'freccia diagonale',
+    'phasorangle': 'angolo fasore',
     // Unknown
-    'unknown': ''
+    'unknown': 'divisione lunga'
   },
 
 
   NAVIGATE: {
-    COLLAPSIBLE: '',
-    EXPANDABLE: '',
-    LEVEL: ''
+    COLLAPSIBLE: 'collassabile',
+    EXPANDABLE: 'espandibile',
+    LEVEL: 'livello'
   },
 
   REGEXP: {
     TEXT: 'a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ',
-    NUMBER: '((\\d{1,3})(?=( ))(( )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
+    NUMBER: '((\\d{1,3})(?=(.| ))((.| )\\d{3})*(\\,\\d+)?)|^\\d*\\,\\d+|^\\d+',
     DECIMAL_MARK: ',',
-    DIGIT_GROUP: '',
-    JOINER_SUBSUPER: '-',
+    DIGIT_GROUP: '\\.',
+    JOINER_SUBSUPER: ' ',
     JOINER_FRAC: ' '
   },
 
@@ -216,17 +215,17 @@ sre.Locale.it = {
     ],
     greekSmall: [
       'nabla',  // This is here as it is small.
-      'alpha', 'bêta', 'gamma', 'delta', 'epsilon', 'zêta', 'êta', 'thêta',
-      'iota', 'kappa', 'lambda', 'mû', 'nû', 'xi', 'omicron', 'pi', 'rhô',
-      'sigma final', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'oméga',
+      'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta greca', 'eta', 'theta',
+      'iota', 'kappa greca', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi greco', 'rho',
+      'sigma final', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
       // Symbols below
-      'dérivée partielle', 'epsilon', 'thêta', 'kappa', 'phi', 'rhô', 'pi'
+      'derivata parziale', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
     ],
     greekCap: [
-      'Alpha', 'Bêta', 'Gamma', 'Delta', 'Epsilon', 'Zêta', 'Êta', 'Thêta',
-      'Iota', 'Kappa', 'Lambda', 'Mû', 'Nû', 'Xi', 'Omicron', 'Pi', 'Rhô',
-      'Thêta', // Theta symbol
-      'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Oméga'
+      'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta greca', 'Eta', 'Theta',
+      'Iota', 'Kappa greca', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi greco', 'Rho',
+      'Theta', // Theta symbol
+      'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
     ]
   },
 
@@ -242,8 +241,8 @@ sre.Locale.it = {
   },
 
   ALPHABET_PREFIXES: {
-    capPrefix: {default: 'maiuscola'},
-    smallPrefix: {default: ''},
+    capPrefix: {default: 'maiuscolo'},
+    smallPrefix: {default: ''}, // minuscolo
     digitPrefix: {default: ''}
   },
 
