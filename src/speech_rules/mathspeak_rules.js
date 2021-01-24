@@ -121,9 +121,5 @@ sre.MathspeakRules = function() {
       'CSFleftsubscriptBrief': sre.MathspeakFrenchUtil.leftSubscriptBrief,
       'CQFisLogarithm': sre.ClearspeakUtil.isLogarithmWithBase,
     });
-
-  // German
-  sre.SpeechRules.getInstance().addStore(
-    'de.speech.mathspeak', 'en.speech.mathspeak', {});
   
 };

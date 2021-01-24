@@ -27,7 +27,6 @@ goog.provide('sre.SummaryEnglish');
 sre.SummaryEnglish = {
   locale: 'en',
   modality: 'summary',
-  domain: 'default',
   rules: [
     // Identifier
     ['Rule',
