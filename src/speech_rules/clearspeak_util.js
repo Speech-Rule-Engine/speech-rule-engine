@@ -282,15 +282,11 @@ sre.ClearspeakUtil.hasPreference = function(pref) {
 };
 
 
-/**
- * @return {sre.SemanticAnnotator} A semantic annotator for simple expressions.
- */
-sre.ClearspeakUtil.simpleExpression = function() {
-  return new sre.SemanticAnnotator(
-      'clearspeak',
-      function(node) {
-        return sre.ClearspeakUtil.isSimpleExpression(node) ? 'simple' : ''; });
-};
+sre.SemanticAnnotations.getInstance().register(
+  new sre.SemanticAnnotator(
+    'clearspeak', 'simple',
+    function(node) {
+      return sre.ClearspeakUtil.isSimpleExpression(node) ? 'simple' : ''; }));
 
 
 /**
@@ -427,15 +423,11 @@ sre.ClearspeakUtil.allTextLastContent_ = function(nodes) {
 };
 
 
-/**
- * @return {sre.SemanticAnnotator} A semantic annotator for unit expressions.
- */
-sre.ClearspeakUtil.unitExpression = function() {
-  return new sre.SemanticAnnotator(
-      'clearspeak',
+sre.SemanticAnnotations.getInstance().register(
+  new sre.SemanticAnnotator(
+      'clearspeak', 'unit',
       function(node) {
-        return sre.ClearspeakUtil.isUnitExpression(node) ? 'unit' : ''; });
-};
+        return sre.ClearspeakUtil.isUnitExpression(node) ? 'unit' : ''; }));
 
 
 /**
@@ -702,16 +694,5 @@ sre.ClearspeakUtil.lastCurrency = function(node) {
   var result = last && sre.MathCompoundStore.getInstance().
       lookupCategory(last.textContent + ':unit') === 'currency';
   return result ? [node] : [];
-};
-
-
-/**
- * Adds the annotators.
- */
-sre.ClearspeakUtil.addAnnotators = function() {
-  sre.SemanticAnnotations.getInstance().register(
-      sre.ClearspeakUtil.simpleExpression());
-  sre.SemanticAnnotations.getInstance().register(
-      sre.ClearspeakUtil.unitExpression());
 };
 

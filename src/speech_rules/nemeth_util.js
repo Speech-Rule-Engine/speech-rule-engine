@@ -216,22 +216,9 @@ sre.NemethUtil.propagateNumber = function(node, info) {
 };
 
 
-/**
- * @return {sre.SemanticVisitor} A semantic annotator for numbered expressions.
- */
-sre.NemethUtil.numberIndicator = function() {
-  return new sre.SemanticVisitor(
-      'nemeth', sre.NemethUtil.propagateNumber, {number: true});
-};
-
-
-/**
- * Adds the annotators.
- */
-sre.NemethUtil.addAnnotators = function() {
-  sre.SemanticAnnotations.getInstance().register(
-      sre.NemethUtil.numberIndicator());
-};
+sre.SemanticAnnotations.getInstance().register(
+  new sre.SemanticVisitor(
+    'nemeth', 'number', sre.NemethUtil.propagateNumber, {number: true}));
 
 
 /**

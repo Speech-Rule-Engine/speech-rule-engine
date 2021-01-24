@@ -64,3 +64,13 @@ sre.BrailleStore.prototype.evaluateDefault = function(node) {
   }
   return descs;
 };
+
+
+/**
+ * @override
+ */
+sre.BrailleStore.prototype.annotations = function() {
+  for (var i = 0, annotator; annotator = this.annotators[i]; i++) {
+    sre.SemanticAnnotations.getInstance().activate(this.locale, annotator);
+  }
+};

@@ -88,9 +88,9 @@ sre.BaseRuleStore = function() {
 
   /**
    * Default domain.
-   * @type {?string}
+   * @type {string}
    */
-  this.domain = null;
+  this.domain = '';
 
   /**
    * @type {boolean}

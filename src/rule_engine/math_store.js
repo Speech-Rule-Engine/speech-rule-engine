@@ -38,9 +38,9 @@ sre.MathStore = function() {
   sre.MathStore.base(this, 'constructor');
 
   /**
-   * @type {Array.<function(sre.MathStore)>}
+   * @type {Array.<string>}
    */
-  this.initializer = [];
+  this.annotators = [];
 
   this.parseMethods['Alias'] = goog.bind(this.defineRuleAlias, this);
   this.parseMethods['Aliases'] =
@@ -59,11 +59,19 @@ goog.inherits(sre.MathStore, sre.BaseRuleStore);
  */
 sre.MathStore.prototype.initialize = function() {
   if (this.initialized) return;
-  for (var i = 0, func; func = this.initializer[i]; i++) {
-    func(this);
-  }
+  this.annotations();
   this.setSpeechRules(this.trie.collectRules());
   this.initialized = true;
+};
+
+
+/**
+ * Activates annotators.
+ */
+sre.MathStore.prototype.annotations = function() {
+  for (var i = 0, annotator; annotator = this.annotators[i]; i++) {
+    sre.SemanticAnnotations.getInstance().activate(this.domain, annotator);
+  }
 };
 
 
@@ -310,6 +318,5 @@ sre.MathStore.prototype.evaluate_ = function(text) {
  */
 sre.MathStore.prototype.parse = function(ruleSet) {
   sre.MathStore.base(this, 'parse', ruleSet);
-  this.initializer = /** @type {Array.<function(sre.MathStore)>} */(
-      ruleSet['initialize'] || []);
+  this.annotators = /** @type {Array.<string>} */(ruleSet['annotators'] || []);
 };

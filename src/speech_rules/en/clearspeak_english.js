@@ -20,8 +20,6 @@
 
 goog.provide('sre.ClearspeakEnglish');
 
-goog.require('sre.ClearspeakUtil');
-
 
 /**
  * Clearspeak rules.
@@ -2326,5 +2324,5 @@ sre.ClearspeakEnglish = {
      'children/*[last()][@role="unit"]', 'CQFlastCurrency'
     ]
   ],
-  initialize: [sre.ClearspeakUtil.addAnnotators]
+  annotators: ['simple', 'unit']
 };

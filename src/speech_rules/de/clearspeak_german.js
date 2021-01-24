@@ -2287,5 +2287,6 @@ sre.ClearspeakGerman = {
       'name(children/*[5])="empty"',
       'children/*[1][text()="P"]'
     ]
-  ]
+  ],
+  annotators: ['simple', 'unit']
 };

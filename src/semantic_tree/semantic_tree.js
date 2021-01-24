@@ -77,7 +77,7 @@ sre.SemanticTree = function(mml) {
  * @private
  */
 sre.SemanticTree.unitVisitor_ = new sre.SemanticVisitor(
-    'general',
+    'general', 'unit',
     function(node, info) {
       if (node.type === sre.SemanticAttr.Type.INFIXOP &&
           (node.role === sre.SemanticAttr.Role.MULTIPLICATION ||

@@ -20,8 +20,6 @@
 
 goog.provide('sre.NemethRules');
 
-goog.require('sre.NemethUtil');
-
 
 /**
  * Nemeth Rules.
@@ -832,5 +830,5 @@ sre.NemethRules = {
     ],
     ['Generator', 'CGFtensorRules']
   ],
-  initialize: [sre.NemethUtil.addAnnotators]
+  annotators: ['number']
 };
