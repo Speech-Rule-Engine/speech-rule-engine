@@ -18,39 +18,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-goog.provide('sre.ClearspeakRules');
+goog.provide('sre.ClearspeakEnglish');
 
 goog.require('sre.ClearspeakUtil');
-goog.require('sre.MathspeakUtil');
-goog.require('sre.StoreUtil');
 
 
 /**
  * Clearspeak rules.
  */
-sre.ClearspeakRules = {
+sre.ClearspeakEnglish = {
   domain: 'clearspeak',
-  functions: [
-    ['CTFpauseSeparator', sre.StoreUtil.pauseSeparator],
-    ['CTFnodeCounter', sre.ClearspeakUtil.nodeCounter],
-    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
-    ['CSFvulgarFraction', sre.NumbersUtil.vulgarFraction],
-    ['CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction],
-    ['CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple],
-    ['CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent],
-    ['CSFwordOrdinal', sre.ClearspeakUtil.wordOrdinal],
-    ['CQFisCapital', sre.ClearspeakUtil.isCapitalLetter],
-    ['CQFmatchingFences', sre.ClearspeakUtil.matchingFences],
-    ['CSFnestingDepth', sre.ClearspeakUtil.nestingDepth],
-    ['CQFfencedArguments', sre.ClearspeakUtil.fencedArguments],
-    ['CQFsimpleArguments', sre.ClearspeakUtil.simpleArguments],
-    ['CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic],
-    ['CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase],
-    ['CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
-    // Currency.
-    ['CQFfirstCurrency', sre.ClearspeakUtil.firstCurrency],
-    ['CQFlastCurrency', sre.ClearspeakUtil.lastCurrency]
-  ],
+  locale: 'en',
+  modality: 'speech',
   rules: [
     ['Rule',
      'collapsed', 'default',

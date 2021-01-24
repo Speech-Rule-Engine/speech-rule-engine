@@ -19,10 +19,6 @@
 
 goog.provide('sre.ClearspeakFrench');
 
-goog.require('sre.ClearspeakUtil');
-goog.require('sre.MathspeakUtil');
-goog.require('sre.StoreUtil');
-
 
 /**
  * French clearspeak rules.
@@ -30,25 +26,7 @@ goog.require('sre.StoreUtil');
 sre.ClearspeakFrench = {
   locale: 'fr',
   domain: 'clearspeak',
-  functions: [
-    ['CTFpauseSeparator', sre.StoreUtil.pauseSeparator],
-    ['CTFnodeCounter', sre.ClearspeakUtil.nodeCounter],
-    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
-    ['CSFvulgarFraction', sre.NumbersUtil.vulgarFraction],
-    ['CQFvulgarFractionSmall', sre.ClearspeakUtil.isSmallVulgarFraction],
-    ['CQFcellsSimple', sre.ClearspeakUtil.allCellsSimple],
-    // TODO: Fix ordinals.
-    ['CSFordinalExponent', sre.ClearspeakUtil.ordinalExponent],
-    ['CSFwordOrdinal', sre.Messages.NUMBERS.wordOrdinal],
-    ['CQFisCapital', sre.ClearspeakUtil.isCapitalLetter],
-    ['CQFmatchingFences', sre.ClearspeakUtil.matchingFences],
-    ['CSFnestingDepth', sre.ClearspeakUtil.nestingDepth],
-    ['CQFfencedArguments', sre.ClearspeakUtil.fencedArguments],
-    ['CQFsimpleArguments', sre.ClearspeakUtil.simpleArguments],
-    ['CQFisHyperbolic', sre.ClearspeakUtil.isHyperbolic],
-    ['CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase],
-    ['CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber]
-  ],
+  modality: 'speech',
   rules: [
     ['Rule',
      'collapsed', 'default',

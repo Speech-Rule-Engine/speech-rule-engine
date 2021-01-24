@@ -14,24 +14,20 @@
 // limitations under the License.
 
 /**
- * @fileoverview Prefix rules.
+ * @fileoverview English prefix rules.
  * @author v.sorge@mathjax.com (Volker Sorge)
  */
 
-goog.provide('sre.PrefixRules');
-
-goog.require('sre.NumbersUtil');
+goog.provide('sre.PrefixEnglish');
 
 
 /**
  * Prefix rules.
  */
-sre.PrefixRules = {
+sre.PrefixEnglish = {
   modality: 'prefix',
   domain: 'default',
-  functions: [
-    ['CSFordinalPosition', sre.NumbersUtil.ordinalPosition],
-  ],
+  locale: 'en',
   rules: [
     ['Rule',
      'numerator', 'default',

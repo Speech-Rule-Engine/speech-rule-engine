@@ -19,87 +19,14 @@
 
 goog.provide('sre.MathspeakFrench');
 
-goog.require('sre.ClearspeakUtil');
-goog.require('sre.MathspeakFrenchUtil');
-goog.require('sre.MathspeakUtil');
-
 
 /**
  * French Mathspeak rules.
  */
 sre.MathspeakFrench = {
   locale: 'fr',
+  modality: 'speech',
   domain: 'mathspeak',
-  functions: [
-    ['CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
-    ['CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
-
-    ['CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
-    // Fraction function.
-    ['CSFopenFracVerbose', sre.MathspeakUtil.openingFractionVerbose],
-    ['CSFcloseFracVerbose', sre.MathspeakUtil.closingFractionVerbose],
-    ['CSFoverFracVerbose', sre.MathspeakUtil.overFractionVerbose],
-    ['CSFopenFracBrief', sre.MathspeakUtil.openingFractionBrief],
-    ['CSFcloseFracBrief', sre.MathspeakUtil.closingFractionBrief],
-    ['CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief],
-    ['CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief],
-    ['CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief],
-    ['CSFvulgarFrFraction', sre.NumbersUtil.vulgarFraction],
-    ['CQFvulgarFractionSmall', sre.MathspeakUtil.isSmallVulgarFraction],
-
-    // Radical function.
-    ['CSFopenRadicalVerbose', sre.MathspeakUtil.openingRadicalVerbose],
-    ['CSFcloseRadicalVerbose', sre.MathspeakUtil.closingRadicalVerbose],
-    ['CSFindexRadicalVerbose', sre.MathspeakUtil.indexRadicalVerbose],
-    ['CSFopenRadicalBrief', sre.MathspeakUtil.openingRadicalBrief],
-    ['CSFcloseRadicalBrief', sre.MathspeakUtil.closingRadicalBrief],
-    ['CSFindexRadicalBrief', sre.MathspeakUtil.indexRadicalBrief],
-    ['CSFopenRadicalSbrief', sre.MathspeakUtil.openingRadicalSbrief],
-    ['CSFindexRadicalSbrief', sre.MathspeakUtil.indexRadicalSbrief],
-    ['CQFisSmallRoot', sre.MathspeakFrenchUtil.smallRoot],
-
-    // Sub- Superscript.
-    ['CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
-    ['CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
-    ['CSFbaselineVerbose', sre.MathspeakFrenchUtil.baselineVerbose],
-    ['CSFbaselineBrief', sre.MathspeakFrenchUtil.baselineBrief],
-    // Tensor specific:
-    ['CSFleftsuperscriptVerbose',
-     sre.MathspeakFrenchUtil.leftSuperscriptVerbose],
-    ['CSFleftsubscriptVerbose',
-     sre.MathspeakFrenchUtil.leftSubscriptVerbose],
-    ['CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSFleftsuperscriptBrief',
-     sre.MathspeakFrenchUtil.leftSuperscriptBrief],
-    ['CSFleftsubscriptBrief',
-     sre.MathspeakFrenchUtil.leftSubscriptBrief],
-    ['CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
-    ['CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
-
-
-    // Over- Underscore.
-    ['CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
-    ['CSFoverscript', sre.MathspeakUtil.nestedOverscore],
-
-    ['CTFordinalCounter', sre.NumbersUtil.ordinalCounter],
-    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
-
-    // Layout related.
-    ['CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
-    ['CSFRemoveParens', sre.MathspeakUtil.removeParens],
-
-    // Dummy.
-    ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
-
-    ['CQFisLogarithm', sre.ClearspeakUtil.isLogarithmWithBase],
-
-    // Generators.
-    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint],
-    ['CGFtensorRules', sre.MathspeakUtil.generateTensorRules]
-  ],
   rules: [
     ['Rule',
      'collapsed', 'default',
@@ -405,7 +332,7 @@ sre.MathspeakFrench = {
 
     ['Rule',
      'vulgar-fraction', 'default',
-     '[t] CSFvulgarFrFraction',
+     '[t] CSFvulgarFraction',
      'self::fraction', '@role="vulgar"', 'CQFvulgarFractionSmall'],
     ['SpecializedRule',
      'vulgar-fraction', 'default', 'brief'],

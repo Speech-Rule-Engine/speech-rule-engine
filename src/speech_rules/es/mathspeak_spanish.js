@@ -19,10 +19,6 @@
 
 goog.provide('sre.MathspeakSpanish');
 
-goog.require('sre.MathspeakSpanishUtil');
-goog.require('sre.MathspeakUtil');
-goog.require('sre.UnitUtil');
-
 
 /**
  * Spansih Mathspeak rules.
@@ -30,70 +26,7 @@ goog.require('sre.UnitUtil');
 sre.MathspeakSpanish = {
   locale: 'es',
   domain: 'mathspeak',
-  functions: [
-    ['CQFspaceoutNumber', sre.MathspeakUtil.spaceoutNumber],
-    ['CQFspaceoutIdentifier', sre.MathspeakUtil.spaceoutIdentifier],
-
-    ['CSFspaceoutText', sre.MathspeakUtil.spaceoutText],
-    // Fraction function.
-    ['CSFopenFracVerbose', sre.MathspeakUtil.openingFractionVerbose],
-    ['CSFcloseFracVerbose', sre.MathspeakUtil.closingFractionVerbose],
-    ['CSFoverFracVerbose', sre.MathspeakUtil.overFractionVerbose],
-    ['CSFopenFracBrief', sre.MathspeakUtil.openingFractionBrief],
-    ['CSFcloseFracBrief', sre.MathspeakUtil.closingFractionBrief],
-    ['CSFopenFracSbrief', sre.MathspeakUtil.openingFractionSbrief],
-    ['CSFcloseFracSbrief', sre.MathspeakUtil.closingFractionSbrief],
-    ['CSFoverFracSbrief', sre.MathspeakUtil.overFractionSbrief],
-
-    // Radical function.
-    ['CSFopenRadicalVerbose', sre.MathspeakUtil.openingRadicalVerbose],
-    ['CSFcloseRadicalVerbose', sre.MathspeakUtil.closingRadicalVerbose],
-    ['CSFindexRadicalVerbose', sre.MathspeakUtil.indexRadicalVerbose],
-    ['CSFopenRadicalBrief', sre.MathspeakUtil.openingRadicalBrief],
-    ['CSFcloseRadicalBrief', sre.MathspeakUtil.closingRadicalBrief],
-    ['CSFindexRadicalBrief', sre.MathspeakUtil.indexRadicalBrief],
-    ['CSFopenRadicalSbrief', sre.MathspeakUtil.openingRadicalSbrief],
-    ['CSFindexRadicalSbrief', sre.MathspeakUtil.indexRadicalSbrief],
-    ['CQFisSmallRoot', sre.MathspeakSpanishUtil.smallRoot],
-
-    // Sub- Superscript.
-    ['CSFsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSFsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
-    ['CSFsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSFsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
-    ['CSFbaselineVerbose', sre.MathspeakUtil.baselineVerbose],
-    ['CSFbaselineBrief', sre.MathspeakUtil.baselineBrief],
-    // Tensor specific.
-    ['CSFleftsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSFleftsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSFrightsuperscriptVerbose', sre.MathspeakUtil.superscriptVerbose],
-    ['CSFrightsubscriptVerbose', sre.MathspeakUtil.subscriptVerbose],
-    ['CSFleftsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
-    ['CSFleftsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
-    ['CSFrightsuperscriptBrief', sre.MathspeakUtil.superscriptBrief],
-    ['CSFrightsubscriptBrief', sre.MathspeakUtil.subscriptBrief],
-
-    // Over- Underscore.
-    ['CSFunderscript', sre.MathspeakUtil.nestedUnderscore],
-    ['CSFoverscript', sre.MathspeakUtil.nestedOverscore],
-
-    ['CTFordinalCounter', sre.MathspeakSpanishUtil.ordinalCounter],
-    ['CTFcontentIterator', sre.StoreUtil.contentIterator],
-    ['CTFunitMultipliers', sre.UnitUtil.unitMultipliers],
-
-    // Layout related.
-    ['CQFdetIsSimple', sre.MathspeakUtil.determinantIsSimple],
-    ['CSFRemoveParens', sre.MathspeakUtil.removeParens],
-
-    ['CQFoneLeft', sre.UnitUtil.oneLeft],
-
-    // Dummy.
-    ['CQFresetNesting', sre.MathspeakUtil.resetNestingDepth],
-
-    // Generators.
-    ['CGFbaselineConstraint', sre.MathspeakUtil.generateBaselineConstraint],
-    ['CGFtensorRules', sre.MathspeakUtil.generateTensorRules]
-  ],
+  modality: 'speech',
   rules: [
     ['Rule',
      'collapsed', 'default',

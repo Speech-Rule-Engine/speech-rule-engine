@@ -111,10 +111,7 @@ sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
       continue;
     }
     var set = sre.SpeechRuleStores.getConstructor(name);
-    if (set && set.getInstance) {
-      ruleSets[name] = set.getInstance();
-      this.ruleSets_[name] = set.getInstance();
-    } else if (set) {
+    if (set) {
       let store = this.storeFactory_(set.modality);
       store.parse(set);
       this.ruleSets_[name] = store;

@@ -18,14 +18,16 @@
  * @author v.sorge@mathjax.com (Volker Sorge)
  */
 
-goog.provide('sre.SummaryRules');
+goog.provide('sre.SummaryEnglish');
 
 
 /**
  * Summary rules.
  */
-sre.SummaryRules = {
+sre.SummaryEnglish = {
+  locale: 'en',
   modality: 'summary',
+  domain: 'default',
   rules: [
     // Identifier
     ['Rule',
