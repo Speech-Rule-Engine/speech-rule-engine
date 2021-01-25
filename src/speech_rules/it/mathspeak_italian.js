@@ -151,26 +151,6 @@ sre.MathspeakItalian = {
     ],
     [
       "Rule",
-      "german-font",
-      "default",
-      "[n] . (grammar:ignoreFont=@font); [t] \"Tedesco\";",
-      "self::*",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"fraktur\""
-    ],
-    [
-      "Rule",
-      "german-font",
-      "default",
-      "[n] . (grammar:ignoreFont=@font); [t] \"Tedesco in grassetto\";",
-      "self::*",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"bold-fraktur\""
-    ],
-    [
-      "Rule",
       "number",
       "default",
       "[n] text()",
@@ -303,7 +283,7 @@ sre.MathspeakItalian = {
       "Rule",
       "negative",
       "default",
-      "[t] \"negativo\"; [n] children/*[1]",
+      "[t] \"meno\"; [n] children/*[1]",
       "self::prefixop",
       "@role=\"negative\"",
       "children/identifier"
@@ -529,7 +509,7 @@ sre.MathspeakItalian = {
       "Rule",
       "continued-fraction-outer",
       "default",
-      "[t] \"ContinuoFrazione\"; [n] children/*[1]; [t] \"Sopra\"; [n] children/*[2]",
+      "[t] \"ContinuoFrazione\"; [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]",
       "self::fraction",
       "not(ancestor::fraction)",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\" and not(following-sibling::*)]"
@@ -539,7 +519,7 @@ sre.MathspeakItalian = {
       "continued-fraction-outer",
       "default",
       "brief",
-      "[t] \"ContinuoFrazione\"; [n] children/*[1];[t] \"Sopra\"; [n] children/*[2]"
+      "[t] \"ContinuoFrazione\"; [n] children/*[1];[t] \"fratto\"; [n] children/*[2]"
     ],
     [
       "SpecializedRule",
@@ -551,7 +531,7 @@ sre.MathspeakItalian = {
       "Rule",
       "continued-fraction-inner",
       "default",
-      "[t] \"Inizio Frazione\"; [n] children/*[1]; [t] \"Sopra\"; [n] children/*[2]",
+      "[t] \"Inizio Frazione\"; [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]",
       "self::fraction",
       "ancestor::fraction",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\" and not(following-sibling::*)]"
@@ -561,14 +541,14 @@ sre.MathspeakItalian = {
       "continued-fraction-inner",
       "default",
       "brief",
-      "[t] \"Inizio Frazione\"; [n] children/*[1];[t] \"Sopra\"; [n] children/*[2]"
+      "[t] \"Inizio Frazione\"; [n] children/*[1];[t] \"fratto\"; [n] children/*[2]"
     ],
     [
       "SpecializedRule",
       "continued-fraction-inner",
       "brief",
       "sbrief",
-      "[t] \"Frazione\"; [n] children/*[1];[t] \"Sopra\"; [n] children/*[2]"
+      "[t] \"Frazione\"; [n] children/*[1];[t] \"fratto\"; [n] children/*[2]"
     ],
     [
       "Rule",

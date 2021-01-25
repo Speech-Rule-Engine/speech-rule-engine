@@ -38,7 +38,7 @@ sre.Locale.it = {
     FRAC_B: 'Frazione',
     FRAC_S: 'Frazione',
     END: 'Fine',
-    FRAC_OVER: 'Sopra',
+    FRAC_OVER: 'fratto',
     ONCE: 'Una volta',
     TWICE: 'Due volte',
     NEST_FRAC: 'Annidamento',
@@ -96,9 +96,9 @@ sre.Locale.it = {
     'oldstyle': 'vecchio stile',
     'oldstyle-bold': 'vecchio stile grassetto',
     'script': 'script',
-    'sans-serif': 'senza grazie',
-    'sans-serif-italic': 'senza grazie grassetto',
-    'sans-serif-bold': 'senza grazie italico',
+    'sans-serif': 'senza grazie',   // Sans serif could just be sans serif
+    'sans-serif-italic': 'senza grazie italico',
+    'sans-serif-bold': 'senza grazie grassetto',
     'sans-serif-bold-italic': 'senza grazie grassetto italico',
     'unknown': 'sconosciuto'
   },
@@ -112,13 +112,13 @@ sre.Locale.it = {
     'circled': 'cerchiato',
     'parenthesized': 'tra parentesi',
     'period': 'punto',
-    'negative-circled': 'cerchiato nero',
+    'negative-circled': 'cerchiato in negativo',
     'double-circled': 'doppio cerchiato',
     'circled-sans-serif': 'cerchiato senza grazie',
-    'negative-circled-sans-serif': 'cerchiato nero senza grazie',
+    'negative-circled-sans-serif': 'cerchiato in negativo senza grazie',
     'comma': 'virgola',
-    'squared': 'squadrato',
-    'negative-squared': 'squadrato nero'
+    'squared': 'dentro quadrato',
+    'negative-squared': 'dentro quadrato in negativo'
   },
 
   ROLE: {
@@ -214,16 +214,16 @@ sre.Locale.it = {
       'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
     ],
     greekSmall: [
-      'nabla',  // This is here as it is small.
-      'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta greca', 'eta', 'theta',
-      'iota', 'kappa greca', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi greco', 'rho',
+      'nabla',  // This is here as it is small. pi greco is 3.14 o/w pi greca.
+      'alfa', 'beta', 'gamma', 'delta', 'epsilon', 'zeta greca', 'eta', 'theta',
+      'iota', 'kappa greca', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi greco', 'rho',
       'sigma final', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
       // Symbols below
       'derivata parziale', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
     ],
     greekCap: [
-      'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta greca', 'Eta', 'Theta',
-      'Iota', 'Kappa greca', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi greco', 'Rho',
+      'Alfa', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta greca', 'Eta', 'Theta',
+      'Iota', 'Kappa greca', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi greca', 'Rho',
       'Theta', // Theta symbol
       'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
     ]
@@ -241,7 +241,7 @@ sre.Locale.it = {
   },
 
   ALPHABET_PREFIXES: {
-    capPrefix: {default: 'maiuscolo'},
+    capPrefix: {default: 'maiuscola'},
     smallPrefix: {default: ''}, // minuscolo
     digitPrefix: {default: ''}
   },

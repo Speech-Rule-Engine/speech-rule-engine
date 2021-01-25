@@ -456,7 +456,8 @@
     "key": "00D7",
     "mappings": {
       "default": {
-        "default": "moltiplicato"
+        "default": "per",
+        "alternative": "moltiplicato"
       }
     },
     "category": "Sm"

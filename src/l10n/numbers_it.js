@@ -127,6 +127,7 @@ sre.Numbers.it.numberToOrdinal = function(num, plural) {
   }
   var ordinal = sre.Numbers.it.wordOrdinal(num);
   return plural ? ordinal + 's' : ordinal;
+  // TODO: Change plural to mask 'i', fem 'e';
 };
 
 
@@ -181,5 +182,5 @@ sre.Numbers.it.NUMBERS = {
   numberToWords: sre.Numbers.it.numberToWords,
   numberToOrdinal: sre.Numbers.it.numberToOrdinal,
   vulgarSep: ' ',
-  numSep: ' '  // TODO: For simple speech output this should be different.
+  numSep: ''  // TODO: For simple speech output this should be different.
 };
