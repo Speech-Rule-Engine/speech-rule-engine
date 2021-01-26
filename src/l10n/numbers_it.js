@@ -75,11 +75,20 @@ sre.Numbers.it.hundredsToWords_ = function(number) {
   n = n % 100;
   if (n) {
     str += str ? sre.Numbers.it.NUMBERS.numSep : '';
-    str += sre.Numbers.it.onesNumbers_[n] ||
-        (sre.Numbers.it.tensNumbers_[Math.floor(n / 10)] +
-         (n % 10 ?
-          sre.Numbers.it.NUMBERS.numSep + sre.Numbers.it.onesNumbers_[n % 10] :
-          ''));
+    var ones = sre.Numbers.it.onesNumbers_[n];
+    if (ones) {
+      str += ones;
+    } else {
+      var tens = sre.Numbers.it.tensNumbers_[Math.floor(n / 10)];
+      var rest = n % 10;
+      if (rest === 1 || rest === 8) {
+        tens = tens.slice(0, -1);
+      }
+      str += tens;
+      str += rest ?
+        sre.Numbers.it.NUMBERS.numSep + sre.Numbers.it.onesNumbers_[n % 10] :
+        '';
+    }
   }
   return str;
 };
