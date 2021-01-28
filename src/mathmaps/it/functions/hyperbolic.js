@@ -84,7 +84,8 @@
     "category": "Area",
     "names": [
       "arcosh",
-      "arccosh"
+      "arccosh",
+      "settcosh"
     ]
   },
   {
@@ -97,7 +98,8 @@
     "category": "Area",
     "names": [
       "arcoth",
-      "arccoth"
+      "arccoth",
+      "settcoth"
     ]
   },
   {
@@ -110,7 +112,8 @@
     "category": "Area",
     "names": [
       "arcsch",
-      "arccsch"
+      "arccsch",
+      "settcsch"
     ]
   },
   {
@@ -123,7 +126,8 @@
     "category": "Area",
     "names": [
       "arsech",
-      "arcsech"
+      "arcsech",
+      "settsech"
     ]
   },
   {
@@ -136,7 +140,8 @@
     "category": "Area",
     "names": [
       "arsinh",
-      "arcsinh"
+      "arcsinh",
+      "settsinh"
     ]
   },
   {
@@ -149,7 +154,8 @@
     "category": "Area",
     "names": [
       "artanh",
-      "arctanh"
+      "arctanh",
+      "settanh"
     ]
   }
 ]

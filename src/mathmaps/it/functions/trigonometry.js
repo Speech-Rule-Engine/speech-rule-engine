@@ -11,8 +11,7 @@
     },
     "category": "Trigonometric",
     "names": [
-      "cos",
-      "cosine"
+      "cos"
     ]
   },
   {
@@ -61,7 +60,7 @@
     "category": "Trigonometric",
     "names": [
       "sin",
-      "sine"
+      "sen"
     ]
   },
   {
@@ -85,7 +84,8 @@
     },
     "category": "Cyclometric",
     "names": [
-      "arccos"
+      "arccos",
+      "acos"
     ]
   },
   {
@@ -97,7 +97,8 @@
     },
     "category": "Cyclometric",
     "names": [
-      "arccot"
+      "arccot",
+      "acot"
     ]
   },
   {
@@ -109,7 +110,8 @@
     },
     "category": "Cyclometric",
     "names": [
-      "arccsc"
+      "arccsc",
+      "acsc"
     ]
   },
   {
@@ -121,7 +123,8 @@
     },
     "category": "Cyclometric",
     "names": [
-      "arcsec"
+      "arcsec",
+      "asec"
     ]
   },
   {
@@ -133,7 +136,11 @@
     },
     "category": "Cyclometric",
     "names": [
-      "arcsin"
+      "arcsin",
+      "arcsen",
+      "asin",
+      "asen",
+      "asn"
     ]
   },
   {
@@ -145,7 +152,8 @@
     },
     "category": "Cyclometric",
     "names": [
-      "arctan"
+      "arctan",
+      "atan"
     ]
   }
 ]
