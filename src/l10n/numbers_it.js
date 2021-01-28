@@ -128,16 +128,27 @@ sre.Numbers.it.numberToWords = function(number) {
  * @return {string} The ordinal of the number as string.
  */
 sre.Numbers.it.numberToOrdinal = function(num, plural) {
-  if (num === 1) {
-    return plural ? 'oneths' : 'oneth';
-  }
   if (num === 2) {
-    return plural ? 'halves' : 'half';
+    return plural ? 'mezzi' : 'mezzo';
   }
   var ordinal = sre.Numbers.it.wordOrdinal(num);
-  return plural ? ordinal + 's' : ordinal;
-  // TODO: Change plural to mask 'i', fem 'e';
+  if (!plural) {
+    return ordinal;
+  }
+  var gender = ordinal.match(/o$/) ? 'i' : 'e';
+  return ordinal.slice(0, -1) + gender;
 };
+
+
+/**
+ * String representation of ordinals from zero to ten.
+ * @type {Array.<string>}
+ * @private
+ */
+sre.Numbers.it.onesOrdinals_ = [
+  'zero', 'primo', 'secondo', 'terzo', 'quarto', 'quinto', 'sesto',
+  'settimo', 'ottavo', 'nono', 'decimo'
+];
 
 
 /**
@@ -146,27 +157,15 @@ sre.Numbers.it.numberToOrdinal = function(num, plural) {
  * @return {string} The ordinal string.
  */
 sre.Numbers.it.wordOrdinal = function(number) {
-  var ordinal = sre.Numbers.it.numberToWords(number);
-  if (ordinal.match(/one$/)) {
-    ordinal = ordinal.slice(0, -3) + 'first';
-  } else if (ordinal.match(/two$/)) {
-    ordinal = ordinal.slice(0, -3) + 'second';
-  } else if (ordinal.match(/three$/)) {
-    ordinal = ordinal.slice(0, -5) + 'third';
-  } else if (ordinal.match(/five$/)) {
-    ordinal = ordinal.slice(0, -4) + 'fifth';
-  } else if (ordinal.match(/eight$/)) {
-    ordinal = ordinal.slice(0, -5) + 'eighth';
-  } else if (ordinal.match(/nine$/)) {
-    ordinal = ordinal.slice(0, -4) + 'ninth';
-  } else if (ordinal.match(/twelve$/)) {
-    ordinal = ordinal.slice(0, -6) + 'twelfth';
-  } else if (ordinal.match(/ty$/)) {
-    ordinal = ordinal.slice(0, -2) + 'tieth';
-  } else {
-    ordinal = ordinal + 'th';
+  var gender = /** @type {string} */(
+    sre.Grammar.getInstance().getParameter('gender'));
+  var postfix = (gender === 'male' ? 'o' : 'a');
+  var ordinal = sre.Numbers.it.onesOrdinals_[number];
+  if (ordinal) {
+    return ordinal.slice(0, -1) + postfix;
   }
-  return ordinal;
+  ordinal = sre.Numbers.it.numberToWords(number);
+  return ordinal.slice(0, -1) + 'esim' + postfix;
 };
 
 
@@ -191,5 +190,5 @@ sre.Numbers.it.NUMBERS = {
   numberToWords: sre.Numbers.it.numberToWords,
   numberToOrdinal: sre.Numbers.it.numberToOrdinal,
   vulgarSep: ' ',
-  numSep: ''  // TODO: For simple speech output this should be different.
+  numSep: ''
 };

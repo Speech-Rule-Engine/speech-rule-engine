@@ -27,6 +27,15 @@ goog.require('sre.Locale');
 goog.require('sre.Numbers.it');
 
 
+var italianPostfixCombiner = function(letter, font, cap) {
+  if (letter.match(/^[a-zA-Z]$/)) {
+    font = font.replace('cerchiato', 'cerchiata');
+  }
+  letter = cap ? letter + ' ' + cap : letter;
+  return font ? letter + ' ' + font : letter;
+};
+
+
 /**
  * @type {sre.Locale.Messages}
  */
@@ -108,10 +117,10 @@ sre.Locale.it = {
     // Embellishments
     'super': ['apice', sre.Locale.prefixCombiner],
     'sub': ['pedice', sre.Locale.prefixCombiner],
-    'circled': 'cerchiato',
+    'circled': ['cerchiato', italianPostfixCombiner],
     'parenthesized': 'tra parentesi',
     'period': 'punto',
-    'negative-circled': 'cerchiato in negativo',
+    'negative-circled': ['cerchiato in negativo', italianPostfixCombiner],
     'double-circled': 'doppio cerchiato',
     'circled-sans-serif': 'cerchiato senza grazie',
     'negative-circled-sans-serif': 'cerchiato in negativo senza grazie',
