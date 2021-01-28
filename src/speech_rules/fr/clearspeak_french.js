@@ -255,7 +255,17 @@ sre.ClearspeakFrench = {
     ],
     [
       "Rule",
-      "vbar-such-that",
+      "vbar-divides",
+      "default",
+      "[t] \"diviseur de\"",
+      "self::punctuation",
+      "@role=\"vbar\"",
+      "not(parent::*/parent::*[@embellished=\"punctuation\"])",
+      "parent::*/parent::*[@role=\"sequence\"]"
+    ],
+    [
+      "Rule",
+      "vbar-divides",
       "VerticalLine_Divides",
       "[t] \"diviseur de\"",
       "self::punctuation",
@@ -264,7 +274,7 @@ sre.ClearspeakFrench = {
     ],
     [
       "Rule",
-      "vbar-such-that",
+      "vbar-given",
       "VerticalLine_Given",
       "[t] \"sachant\"",
       "self::punctuation",

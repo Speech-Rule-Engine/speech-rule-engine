@@ -318,7 +318,17 @@ sre.ClearspeakGerman = {
     ],
     [
       "Rule",
-      "vbar-such-that",
+      "vbar-divides",
+      "default",
+      "[t] \"teilt\"",
+      "self::punctuation",
+      "@role=\"vbar\"",
+      "not(parent::*/parent::*[@embellished=\"punctuation\"])",
+      "parent::*/parent::*[@role=\"sequence\"]"
+    ],
+    [
+      "Rule",
+      "vbar-divides",
       "VerticalLine_Divides",
       "[t] \"teilt\"",
       "self::punctuation",
@@ -327,7 +337,7 @@ sre.ClearspeakGerman = {
     ],
     [
       "Rule",
-      "vbar-such-that",
+      "vbar-given",
       "VerticalLine_Given",
       "[t] \"für die gilt\"",
       "self::punctuation",
