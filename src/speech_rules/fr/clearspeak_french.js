@@ -876,9 +876,9 @@ sre.ClearspeakFrench = {
     ],
     [
       "Rule",
-      "superscript-simple-exponent",
+      "superscript-simple-exponent-end",
       "default",
-      "[n] children/*[1]; [t] \"à la puissance\"; [n] children/*[2]; [p] (pause:\"medium\") ",
+      "[n] children/*[1]; [t] \"à la puissance\"; [n] children/*[2]; [p] (pause:\"medium\")",
       "self::superscript",
       "not(descendant::superscript)",
       "not(following-sibling::*)"
@@ -2943,7 +2943,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "choose",
       "CombinationPermutation_ChoosePermute",
-      "[t] \"combinaison de\"; [n] children/*[3] (grammar:combinatorics); [t] \"parmi\"; [n] children/*[4] (grammar:combinatorics)",
+      "[t] \"combinaison de\"; [n] children/*[2] (grammar:combinatorics); [t] \"parmi\"; [n] children/*[4] (grammar:combinatorics)",
       "self::tensor",
       "name(children/*[3])=\"empty\"",
       "name(children/*[5])=\"empty\"",
