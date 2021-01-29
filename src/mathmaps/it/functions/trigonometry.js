@@ -11,7 +11,8 @@
     },
     "category": "Trigonometric",
     "names": [
-      "cos"
+      "cos",
+      "cosine"
     ]
   },
   {
@@ -60,6 +61,7 @@
     "category": "Trigonometric",
     "names": [
       "sin",
+      "sine",
       "sen"
     ]
   },
