@@ -2183,14 +2183,14 @@ sre.ClearspeakItalian = {
       "Rule",
       "matrix",
       "default",
-      "[t] \"la matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"riga-:\"); [p] (pause:long)",
+      "[t] \"la matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\"); [p] (pause:long)",
       "self::matrix"
     ],
     [
       "Rule",
       "matrix-simple",
       "default",
-      "[t] \"la matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"riga-:\", grammar:simpleDet); [p] (pause:long)",
+      "[t] \"la matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "count(children/*)<4",
       "count(children/*[1]/children/*)<4",
@@ -2208,7 +2208,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "determinant",
       "default",
-      "[t] \"il determinante della matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"riga-:\", grammar:simpleDet); [p] (pause:long)",
+      "[t] \"il determinante della matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"determinant\"",
       "count(children/*)<4",
@@ -2218,7 +2218,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "determinant-simple",
       "default",
-      "[t] \"il determinante della matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"riga-:\"); [p] (pause:long)",
+      "[t] \"il determinante della matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\"); [p] (pause:long)",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -2226,7 +2226,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "matrix-vector",
       "default",
-      "[t] \"la matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"riga-:\", grammar:simpleDet); [p] (pause:long)",
+      "[t] \"la matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet); [p] (pause:long)",
       "self::vector"
     ],
     [
@@ -2256,7 +2256,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "matrix-row-vector",
       "default",
-      "[t] \"la matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"colonna-:\", grammar:simpleDet); [p] (pause:long)",
+      "[t] \"la matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2311,7 +2311,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "matrix-row",
       "default",
-      "[m] children/* (ctxtFunc:CTFnodeCounter, context:\"colonna-,- \", sepFunc:CTFpauseSeparator, separator:\"medium\"); [p] (pause:long)",
+      "[m] children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-,- \", sepFunc:CTFpauseSeparator, separator:\"medium\"); [p] (pause:long)",
       "self::row"
     ],
     [
@@ -2356,7 +2356,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "vector",
       "Matrix_Vector",
-      "[t] \"la vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"riga-:\", grammar:simpleDet); [p] (pause:long)",
+      "[t] \"la vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet); [p] (pause:long)",
       "self::vector"
     ],
     [
@@ -2384,7 +2384,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "row-vector",
       "Matrix_Vector",
-      "[t] \"la vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"colonna-:\", grammar:simpleDet); [p] (pause:long)",
+      "[t] \"la vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2501,7 +2501,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "lines",
       "default",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"riga-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2596,7 +2596,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "cases",
       "default",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"caso-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Caso-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::cases"
     ],
     [
@@ -2617,7 +2617,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "lines-cases",
       "MultiLineLabel_Case",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"caso-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Caso-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2643,7 +2643,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "lines-equations",
       "MultiLineLabel_Equation",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"equazioni-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Equazioni-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2669,7 +2669,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "lines-steps",
       "MultiLineLabel_Step",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"passo-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Passo-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2695,7 +2695,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "lines-rows",
       "MultiLineLabel_Row",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"riga-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2721,7 +2721,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "lines-constraints",
       "MultiLineLabel_Constraint",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"vincoli-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Vincoli-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [

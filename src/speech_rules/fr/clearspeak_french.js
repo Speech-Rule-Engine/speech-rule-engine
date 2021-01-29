@@ -2048,14 +2048,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix",
       "default",
-      "[t] \"la matrice de dimension\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"rangée-:\"); [p] (pause:long)",
+      "[t] \"la matrice de dimension\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\"); [p] (pause:long)",
       "self::matrix"
     ],
     [
       "Rule",
       "matrix-simple",
       "default",
-      "[t] \"la matrice de dimension\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*);  [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"rangée-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"la matrice de dimension\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*);  [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\",grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "count(children/*)<4",
       "count(children/*[1]/children/*)<4",
@@ -2073,7 +2073,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "determinant",
       "default",
-      "[t] \"le déterminant de la matrice de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"rangée-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"le déterminant de la matrice de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\",grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"determinant\"",
       "count(children/*)<4",
@@ -2083,7 +2083,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "determinant-simple",
       "default",
-      "[t] \"le déterminant de la matrice de dimension\"; [t] count(children/*);  [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"rangée-:\"); [p] (pause:long)",
+      "[t] \"le déterminant de la matrice de dimension\"; [t] count(children/*);  [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\"); [p] (pause:long)",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -2091,7 +2091,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-vector",
       "default",
-      "[t] \"la matrice colonne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"rangée-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"la matrice colonne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\",grammar:simpleDet); [p] (pause:long)",
       "self::vector"
     ],
     [
@@ -2121,7 +2121,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-row-vector",
       "default",
-      "[t] \"la matrice ligne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter,context:\"colonne-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"la matrice ligne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter,context:\"Colonne-:\",grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2176,7 +2176,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-row",
       "default",
-      "[m] children/* (ctxtFunc:CTFnodeCounter,context:\"colonne-,- \",sepFunc:CTFpauseSeparator,separator:\"medium\"); [p] (pause:long)",
+      "[m] children/* (ctxtFunc:CTFnodeCounter,context:\"Colonne-,- \",sepFunc:CTFpauseSeparator,separator:\"medium\"); [p] (pause:long)",
       "self::row"
     ],
     [
@@ -2221,7 +2221,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vector",
       "Matrix_Vector",
-      "[t] \"le vecteur colonne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"rangée-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"le vecteur colonne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\",grammar:simpleDet); [p] (pause:long)",
       "self::vector"
     ],
     [
@@ -2249,7 +2249,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "row-vector",
       "Matrix_Vector",
-      "[t] \"le vecteur ligne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter,context:\"colonne-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"le vecteur ligne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter,context:\"Colonne-:\",grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2560,7 +2560,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-rows",
       "MultiLineLabel_Row",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"rangée-:\",sepFunc:CTFpauseSeparator,separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\",sepFunc:CTFpauseSeparator,separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
