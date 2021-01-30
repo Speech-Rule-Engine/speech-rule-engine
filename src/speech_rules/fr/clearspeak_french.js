@@ -2958,6 +2958,129 @@ sre.ClearspeakFrench = {
       "name(children/*[3])=\"empty\"",
       "name(children/*[5])=\"empty\"",
       "children/*[1][text()=\"P\"]"
+    ],
+    [
+      "Rule",
+      "unit-singular",
+      "default",
+      "[t] text() (grammar:annotation=\"unit\":translate)",
+      "self::identifier",
+      "@role=\"unit\""
+    ],
+    [
+      "Rule",
+      "unit-plural",
+      "default",
+      "[t] text() (grammar:annotation=\"unit\":translate:plural)",
+      "self::identifier",
+      "@role=\"unit\"",
+      "not(contains(@grammar, \"singularUnit\"))"
+    ],
+    [
+      "Rule",
+      "unit-square",
+      "default",
+      "[t] \"square\"; [n] children/*[1]",
+      "self::superscript",
+      "@role=\"unit\"",
+      "children/*[2][text()=2]",
+      "name(children/*[1])=\"identifier\""
+    ],
+    [
+      "Rule",
+      "unit-cubic",
+      "default",
+      "[t] \"cubic\"; [n] children/*[1]",
+      "self::superscript",
+      "@role=\"unit\"",
+      "children/*[2][text()=3]",
+      "name(children/*[1])=\"identifier\""
+    ],
+    [
+      "Rule",
+      "unit-reciprocal",
+      "default",
+      "[t] \"reciprocal\"; [n] children/*[1]",
+      "self::superscript",
+      "@role=\"unit\"",
+      "name(children/*[1])=\"identifier\"",
+      "name(children/*[2])=\"prefixop\"",
+      "children/*[2][@role=\"negative\"]",
+      "children/*[2]/children/*[1][text()=1]",
+      "count(preceding-sibling::*)=0 or preceding-sibling::*[@role!=\"unit\"]"
+    ],
+    [
+      "Rule",
+      "unit-reciprocal",
+      "default",
+      "[t] \"per\"; [n] children/*[1] (grammar:singularUnit)",
+      "self::superscript",
+      "@role=\"unit\"",
+      "name(children/*[1])=\"identifier\"",
+      "name(children/*[2])=\"prefixop\"",
+      "children/*[2][@role=\"negative\"]",
+      "children/*[2]/children/*[1][text()=1]",
+      "preceding-sibling::*[@role=\"unit\"]"
+    ],
+    [
+      "Rule",
+      "unit-combine",
+      "default",
+      "[m] children/*",
+      "self::infixop",
+      "@role=\"unit\""
+    ],
+    [
+      "Rule",
+      "unit-combine-singular",
+      "default",
+      "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); [m] children/*[position()>2]",
+      "self::infixop",
+      "@role=\"unit\"",
+      "name(children/*[1])=\"number\"",
+      "children/*[1][text()=1]"
+    ],
+    [
+      "Rule",
+      "unit-divide",
+      "default",
+      "[n] children/*[1]; [t] \"per\"; [n] children/*[2] (grammar:singularUnit)",
+      "self::fraction",
+      "@role=\"unit\""
+    ],
+    [
+      "Rule",
+      "currency",
+      "default",
+      "[m] children/*[position()>1]; [n] children/*[1];",
+      "self::infixop",
+      "contains(@annotation, \"clearspeak:unit\")",
+      "children/*[1][@role=\"unit\"]",
+      "CQFfirstCurrency"
+    ],
+    [
+      "Rule",
+      "currency",
+      "Currency_Position",
+      "[m] children/*",
+      "self::infixop",
+      "contains(@annotation, \"clearspeak:unit\")"
+    ],
+    [
+      "SpecializedRule",
+      "currency",
+      "Currency_Position",
+      "Currency_Prefix"
+    ],
+    [
+      "Rule",
+      "currency",
+      "Currency_Prefix",
+      "[n] children/*[last()]; [m] children/*[position()<last()]; ",
+      "self::infixop",
+      "contains(@annotation, \"clearspeak:unit\")",
+      "children/*[last()][@role=\"unit\"]",
+      "CQFlastCurrency"
     ]
   ],
   "annotators": [

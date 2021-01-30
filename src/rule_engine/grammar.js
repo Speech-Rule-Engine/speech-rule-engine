@@ -276,7 +276,7 @@ sre.Grammar.prepareUnit_ = function(text) {
 /**
  * Removes unit suffix in case no unit with this name was found.
  * @param {string} text The text.
- * @return {string} The cleaned text incase it contained the :unit suffix.
+ * @return {string} The cleaned text in case it contained the :unit suffix.
  * @private
  */
 sre.Grammar.cleanUnit_ = function(text) {

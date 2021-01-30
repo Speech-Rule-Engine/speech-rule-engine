@@ -1623,7 +1623,7 @@ sre.MathspeakFrench = {
       "Rule",
       "unit",
       "default",
-      "[t] text() (grammar:annotation=\"unit\":translate)",
+      "[t] text() (grammar:annotation=\"unit\":translate:plural)",
       "self::identifier",
       "@role=\"unit\""
     ],
@@ -1632,28 +1632,37 @@ sre.MathspeakFrench = {
       "unit-square",
       "default",
       "[n] children/*[1]; [t] \"carré\"",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=2]",
       "name(children/*[1])=\"identifier\""
+    ],
+    [
+      "SpecializedRule",
+      "unit-square",
+      "default",
+      "brief"
+    ],
+    [
+      "SpecializedRule",
+      "unit-square",
+      "brief",
+      "sbrief"
     ],
     [
       "Rule",
       "unit-cubic",
       "default",
       "[n] children/*[1]; [t] \"cubique\"",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\""
     ],
     [
       "Rule",
-      "reciprocal",
+      "unit-reciprocal",
       "default",
       "[t] \"réciproque\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
       "name(children/*[1])=\"identifier\"",
       "name(children/*[2])=\"prefixop\"",
       "children/*[2][@role=\"negative\"]",
@@ -1661,12 +1670,23 @@ sre.MathspeakFrench = {
       "count(preceding-sibling::*)=0 or preceding-sibling::*[@role!=\"unit\"]"
     ],
     [
+      "SpecializedRule",
+      "unit-reciprocal",
+      "default",
+      "brief"
+    ],
+    [
+      "SpecializedRule",
+      "unit-reciprocal",
+      "brief",
+      "sbrief"
+    ],
+    [
       "Rule",
-      "reciprocal",
+      "unit-reciprocal-multi",
       "default",
       "[t] \"par\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
       "name(children/*[1])=\"identifier\"",
       "name(children/*[2])=\"prefixop\"",
       "children/*[2][@role=\"negative\"]",
@@ -1674,20 +1694,42 @@ sre.MathspeakFrench = {
       "preceding-sibling::*[@role=\"unit\"]"
     ],
     [
+      "SpecializedRule",
+      "unit-reciprocal-multi",
+      "default",
+      "brief"
+    ],
+    [
+      "SpecializedRule",
+      "unit-reciprocal-multi",
+      "brief",
+      "sbrief"
+    ],
+    [
       "Rule",
       "unit-combine",
       "default",
       "[m] children/*",
-      "self::infixop",
-      "@role=\"unit\""
+      "self::infixop[@role=\"unit\"]",
     ],
     [
       "Rule",
       "unit-divide",
       "default",
       "[n] children/*[1]; [t] \"par\"; [n] children/*[2]",
-      "self::fraction",
-      "@role=\"unit\""
+      "self::fraction[@role=\"unit\"]"
+    ],
+    [
+      "SpecializedRule",
+      "unit-divide",
+      "default",
+      "brief"
+    ],
+    [
+      "SpecializedRule",
+      "unit-divide",
+      "brief",
+      "sbrief"
     ],
     [
       "Generator",

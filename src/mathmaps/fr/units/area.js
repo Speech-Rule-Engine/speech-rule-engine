@@ -12,7 +12,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "pouce carré"
+       "default": "pouce carré",
+       "plural": "pouces carré"
      }
    },
    "key": "sq inch",
@@ -21,7 +22,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "rod carré"
+       "default": "rod carré",
+       "plural": "rods carré"
      }
    },
    "key": "sq rd",
@@ -30,8 +32,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "pied carrés",
-       "plural": "pieds carrés"
+       "default": "pied carré",
+       "plural": "pieds carré"
      }
    },
    "key": "sq ft",
@@ -40,7 +42,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square yard"
+       "default": "verge carrée",
+       "plural": "verges carrée"
      }
    },
    "key": "sq yd",
@@ -49,7 +52,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "mile carré"
+       "default": "mile carré",
+       "plural": "miles carré"
      }
    },
    "key": "sq mi",
