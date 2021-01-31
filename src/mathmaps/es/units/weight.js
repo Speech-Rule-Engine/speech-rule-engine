@@ -23,7 +23,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "libras imperiales"
+        "default": "libra imperiale",
+        "plural": "libras imperiales"
       }
     },
     "category": "weight"
@@ -108,7 +109,8 @@
     "category": "weight",
     "mappings": {
       "default": {
-        "default": "stone"
+        "default": "stone",
+        "plural": "stones"
       }
     },
     "key": "st",
@@ -133,7 +135,7 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "Zentner"
+       "default": "centena"
      }
    },
    "key": "cwt",

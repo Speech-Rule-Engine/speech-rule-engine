@@ -10,7 +10,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "segundos"
+        "default": "segundo"
       }
     },
     "category": "time"
@@ -22,7 +22,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "segundos"
+        "default": "segundo"
       }
     },
     "category": "time"
@@ -34,7 +34,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "minutos"
+        "default": "minuto"
       }
     },
     "category": "time"

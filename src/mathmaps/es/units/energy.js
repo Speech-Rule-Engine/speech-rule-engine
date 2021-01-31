@@ -11,7 +11,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "watt"
+        "default": "vatio"
       }
     },
     "category": "energy"
@@ -24,7 +24,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "kilowatt hora"
+        "default": "kilovatio hora"
       }
     },
     "category": "energy"

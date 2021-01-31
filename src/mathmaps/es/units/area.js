@@ -8,7 +8,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "al cuadrado"
+        "default": "cuadrado"
       }
     },
     "category": "area"
@@ -16,7 +16,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "pulgada cuadrada"
+       "default": "pulgada cuadrada",
+       "plural": "pulgadas cuadrada"
      }
    },
    "key": "sq inch",
@@ -25,7 +26,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "rod cuadrado"
+       "default": "rod cuadrado",
+       "plural": "rods cuadrado"
      }
    },
    "key": "sq rd",
@@ -34,7 +36,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "pie cuadrado"
+       "default": "pie cuadrado",
+       "plural": "pies cuadrado"
      }
    },
    "key": "sq ft",
@@ -43,7 +46,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "yarda cuadrada"
+       "default": "yarda cuadrada",
+       "plural": "yardas cuadrada"
      }
    },
    "key": "sq yd",

@@ -36,7 +36,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "onzas líquidas"
+        "default": "onza líquida",
+        "plural": "onzas líquidas"
       }
     },
     "category": "volume"
@@ -116,7 +117,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "centímetros cúbicos"
+        "default": "centímetro cúbico",
+        "plural": "centímetros cúbicos"
       }
     },
     "category": "volume"
@@ -138,7 +140,8 @@
     "category": "volume",
     "mappings": {
       "default": {
-        "default": "pulgada cúbico"
+        "default": "pulgada cúbica",
+        "plural": "pulgadas cúbicas"
       }
     },
     "key": "cu inch",
@@ -169,7 +172,8 @@
     "category": "volume",
     "mappings": {
       "default": {
-        "default": "dracma líquidas"
+        "default": "dracma líquida",
+        "plural": "dracma líquidas"
       }
     },
     "key": "fluid dram",

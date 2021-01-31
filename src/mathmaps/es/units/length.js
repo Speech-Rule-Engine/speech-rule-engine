@@ -126,7 +126,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "millas náuticas"
+        "default": "milla náutica",
+        "plural": "millas náuticas"
       }
     },
     "category": "length"

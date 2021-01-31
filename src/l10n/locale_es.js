@@ -197,7 +197,22 @@ sre.Locale.es = {
   PLURAL_UNIT: { },
 
   PLURAL: function(unit) {
-    return (/.*s$/.test(unit)) ? unit : unit + 's';
+    if (/.*(a|e|i|o|u)$/.test(unit)) {
+      return unit + 's';
+    }
+    if (/.*z$/.test(unit)) {
+      return unit.slice(0, -1) + 'ces';
+    }
+    if (/.*c$/.test(unit)) {
+      return unit.slice(0, -1) + 'ques';
+    }
+    if (/.*g$/.test(unit)) {
+      return unit + 'ues';
+    }
+    if (/.*ón$/.test(unit)) {
+      return unit.slice(0, -2) + 'ones';
+    }
+    return unit + 'es';
   },
 
   SI: function(prefix, unit) {
