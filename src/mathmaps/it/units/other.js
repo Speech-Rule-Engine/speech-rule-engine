@@ -13,9 +13,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "dozzina",
-        "singular": "",
-        "dual": ""
+        "plural": "dozzine",
+        "default": "dozzina"
       }
     }
   }

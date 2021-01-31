@@ -11,9 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "cubici",
-        "singular": "cubico",
-        "dual": ""
+        "plural": "cubici",
+        "default": "cubico"
       }
     }
   },
@@ -21,9 +20,8 @@
     "key": "cu in",
     "mappings": {
       "default": {
-        "default": "pollici cubici",
-        "singular": "pollice cubico",
-        "dual": ""
+        "plural": "pollici cubici",
+        "default": "pollice cubico"
       }
     },
     "category": "volume",
@@ -36,9 +34,8 @@
     "key": "cu ft",
     "mappings": {
       "default": {
-        "default": "piedi cubici",
-        "singular": "piede cubico",
-        "dual": ""
+        "plural": "piedi cubici",
+        "default": "piede cubico"
       }
     },
     "category": "volume",
@@ -51,9 +48,8 @@
     "key": "cu yd",
     "mappings": {
       "default": {
-        "default": "iarde cubiche",
-        "singular": "iarda cubica",
-        "dual": ""
+        "plural": "iarde cubiche",
+        "default": "iarda cubica"
       }
     },
     "category": "volume",
@@ -66,9 +62,8 @@
     "key": "bbl",
     "mappings": {
       "default": {
-        "default": "barili",
-        "singular": "barile",
-        "dual": ""
+        "plural": "barili",
+        "default": "barile"
       }
     },
     "category": "volume",
@@ -81,9 +76,8 @@
     "key": "fl oz",
     "mappings": {
       "default": {
-        "default": "once liquide",
-        "singular": "oncia liquida",
-        "dual": ""
+        "plural": "once liquide",
+        "default": "oncia liquida"
       }
     },
     "category": "volume",
@@ -96,9 +90,8 @@
     "key": "gal",
     "mappings": {
       "default": {
-        "default": "galloni",
-        "singular": "gallone",
-        "dual": ""
+        "plural": "galloni",
+        "default": "gallone"
       }
     },
     "category": "volume",
@@ -111,9 +104,8 @@
     "key": "pt",
     "mappings": {
       "default": {
-        "default": "pinte",
-        "singular": "pinta",
-        "dual": ""
+        "plural": "pinte",
+        "default": "pinta"
       }
     },
     "category": "volume",
@@ -126,9 +118,8 @@
     "key": "qt",
     "mappings": {
       "default": {
-        "default": "quarti",
-        "singular": "quarto",
-        "dual": ""
+        "plural": "quarti",
+        "default": "quarto"
       }
     },
     "category": "volume",
@@ -141,9 +132,8 @@
     "key": "fl dr",
     "mappings": {
       "default": {
-        "default": "dracme liquide",
-        "singular": "dracma liquida",
-        "dual": ""
+        "plural": "dramme liquide",
+        "default": "dramma liquida"
       }
     },
     "category": "volume",
@@ -156,9 +146,8 @@
     "key": "tbsp",
     "mappings": {
       "default": {
-        "default": "cucchiai da tavola",
-        "singular": "cucchiaio da tavola",
-        "dual": ""
+        "plural": "cucchiai da tavola",
+        "default": "cucchiaio da tavola"
       }
     },
     "category": "volume",
@@ -173,9 +162,8 @@
     "key": "tsp",
     "mappings": {
       "default": {
-        "default": "cucchiai da te",
-        "singular": "cucchiaio da te",
-        "dual": ""
+        "plural": "cucchiai da te",
+        "default": "cucchiaio da te"
       }
     },
     "category": "volume",
@@ -188,9 +176,8 @@
     "key": "cp",
     "mappings": {
       "default": {
-        "default": "tazze",
-        "singular": "tazza",
-        "dual": ""
+        "plural": "tazze",
+        "default": "tazza"
       }
     },
     "category": "volume",
@@ -208,9 +195,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "centimetri cubi",
-        "singular": "centimetro cubo",
-        "dual": ""
+        "plural": "centimetri cubi",
+        "default": "centimetro cubo"
       }
     }
   },
@@ -218,9 +204,8 @@
     "key": "l",
     "mappings": {
       "default": {
-        "default": "litri",
-        "singular": "litro",
-        "dual": ""
+        "plural": "litri",
+        "default": "litro"
       }
     },
     "category": "volume",

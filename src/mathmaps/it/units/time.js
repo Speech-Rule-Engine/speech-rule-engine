@@ -11,9 +11,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "secondi",
-        "singular": "secondo",
-        "dual": ""
+        "plural": "secondi",
+        "default": "secondo"
       }
     }
   },
@@ -21,9 +20,8 @@
     "key": "″",
     "mappings": {
       "default": {
-        "default": "secondi",
-        "singular": "secondo",
-        "dual": ""
+        "plural": "secondi",
+        "default": "secondo"
       }
     },
     "category": "time",
@@ -35,9 +33,8 @@
     "key": "′",
     "mappings": {
       "default": {
-        "default": "minuti",
-        "singular": "minuto",
-        "dual": ""
+        "plural": "minuti",
+        "default": "minuto"
       }
     },
     "category": "time",
@@ -50,9 +47,8 @@
     "key": "hr",
     "mappings": {
       "default": {
-        "default": "ore",
-        "singular": "ora",
-        "dual": ""
+        "plural": "ore",
+        "default": "ora"
       }
     },
     "category": "time",

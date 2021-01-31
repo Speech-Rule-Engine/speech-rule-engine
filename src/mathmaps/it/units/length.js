@@ -7,8 +7,7 @@
     "mappings": {
       "default": {
         "default": "piedi",
-        "singular": "piede",
-        "dual": ""
+        "singular": "piede"
       }
     },
     "category": "length",
@@ -22,8 +21,7 @@
     "mappings": {
       "default": {
         "default": "pollici",
-        "singular": "pollice",
-        "dual": ""
+        "singular": "pollice"
       }
     },
     "category": "length",
@@ -37,8 +35,7 @@
     "mappings": {
       "default": {
         "default": "miglia",
-        "singular": "miglio",
-        "dual": ""
+        "singular": "miglio"
       }
     },
     "category": "length",
@@ -51,9 +48,8 @@
     "key": "yd",
     "mappings": {
       "default": {
-        "default": "yarde",
-        "singular": "yarda",
-        "dual": ""
+        "default": "iarde",
+        "singular": "iarda"
       }
     },
     "category": "length",
@@ -67,8 +63,7 @@
     "mappings": {
       "default": {
         "default": "links",
-        "singular": "link",
-        "dual": ""
+        "singular": "link"
       }
     },
     "category": "length",
@@ -82,8 +77,7 @@
     "mappings": {
       "default": {
         "default": "pertiche",
-        "singular": "pertica",
-        "dual": ""
+        "singular": "pertica"
       }
     },
     "category": "length",
@@ -97,8 +91,7 @@
     "mappings": {
       "default": {
         "default": "catene",
-        "singular": "catena",
-        "dual": ""
+        "singular": "catena"
       }
     },
     "category": "length",
@@ -117,8 +110,7 @@
     "mappings": {
       "default": {
         "default": "furlong",
-        "singular": "furlong",
-        "dual": ""
+        "singular": "furlong"
       }
     }
   },
@@ -131,8 +123,7 @@
     "mappings": {
       "default": {
         "default": "miglia nautiche",
-        "singular": "miglio nautico",
-        "dual": ""
+        "singular": "miglio nautico"
       }
     }
   },
@@ -141,8 +132,7 @@
     "mappings": {
       "default": {
         "default": "metri",
-        "singular": "metro",
-        "dual": ""
+        "singular": "metro"
       }
     },
     "category": "length",

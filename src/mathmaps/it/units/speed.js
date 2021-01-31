@@ -12,9 +12,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "node",
-        "singular": "nodo",
-        "dual": ""
+        "plural": "nodi",
+        "default": "nodo"
       }
     }
   },
@@ -22,9 +21,8 @@
     "key": "mph",
     "mappings": {
       "default": {
-        "default": "miglia orarie",
-        "singular": "miglio orario",
-        "dual": ""
+        "plural": "miglia orarie",
+        "default": "miglio orario"
       }
     },
     "category": "speed",
@@ -36,9 +34,8 @@
     "key": "rpm",
     "mappings": {
       "default": {
-        "default": "giri al minuto",
-        "singular": "giro al minuto",
-        "dual": ""
+        "plural": "giri al minuto",
+        "default": "giro al minuto"
       }
     },
     "category": "speed",
@@ -54,9 +51,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "chilometro orario",
-        "singular": "",
-        "dual": ""
+        "plural": "chilometri orari",
+        "default": "chilometro orario"
       }
     }
   }

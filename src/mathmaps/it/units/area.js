@@ -14,9 +14,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "quadrate",
-        "singular": "quadrato",
-        "dual": ""
+        "plural": "quadrati",
+        "default": "quadrato"
       }
     }
   },
@@ -24,9 +23,8 @@
     "key": "sq in",
     "mappings": {
       "default": {
-        "default": "pollici quadrati",
-        "singular": "pollice quadrato",
-        "dual": ""
+        "plural": "pollici quadrati",
+        "default": "pollice quadrato"
       }
     },
     "category": "area",
@@ -46,9 +44,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "pertiche quadrate",
-        "singular": "pertica quadrata",
-        "dual": ""
+        "plural": "pertiche quadrati",
+        "default": "pertica quadrata"
       }
     }
   },
@@ -56,9 +53,8 @@
     "key": "sq ft",
     "mappings": {
       "default": {
-        "default": "piedi quadrati",
-        "singular": "piede quadrato",
-        "dual": ""
+        "plural": "piedi quadrati",
+        "default": "piede quadrato"
       }
     },
     "category": "area",
@@ -71,9 +67,8 @@
     "key": "sq yd",
     "mappings": {
       "default": {
-        "default": "iarde quadrate",
-        "singular": "iarda quadrata",
-        "dual": ""
+        "plural": "iarde quadrate",
+        "default": "iarda quadrata"
       }
     },
     "category": "area",
@@ -86,9 +81,8 @@
     "key": "sq mi",
     "mappings": {
       "default": {
-        "default": "miglia quadrate",
-        "singular": "miglio quadrato",
-        "dual": ""
+        "plural": "miglia quadrate",
+        "default": "miglio quadrato"
       }
     },
     "category": "area",
@@ -101,9 +95,8 @@
     "key": "ac",
     "mappings": {
       "default": {
-        "default": "acri",
-        "singular": "acro",
-        "dual": ""
+        "plural": "acri",
+        "default": "acro"
       }
     },
     "category": "area",
@@ -118,9 +111,8 @@
     "key": "ha",
     "mappings": {
       "default": {
-        "default": "ettari",
-        "singular": "ettaro",
-        "dual": ""
+        "plural": "ettari",
+        "default": "ettaro"
       }
     },
     "category": "area",

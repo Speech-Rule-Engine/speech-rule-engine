@@ -10,9 +10,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "bit",
-        "singular": "bit",
-        "dual": ""
+        "plural": "bit",
+        "default": "bit"
       }
     }
   },
@@ -20,9 +19,8 @@
     "key": "B",
     "mappings": {
       "default": {
-        "default": "byte",
-        "singular": "byte",
-        "dual": ""
+        "plural": "byte",
+        "default": "byte"
       }
     },
     "category": "memory",
@@ -39,9 +37,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "chilobyte",
-        "singular": "",
-        "dual": ""
+        "plural": "chilobyte",
+        "default": "chilobyte"
       }
     }
   }

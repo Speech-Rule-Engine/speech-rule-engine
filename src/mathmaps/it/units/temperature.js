@@ -6,9 +6,8 @@
     "key": "F",
     "mappings": {
       "default": {
-        "default": "gradi fahrenheit",
-        "singular": "grado fahrenheit",
-        "dual": ""
+        "plural": "gradi fahrenheit",
+        "default": "grado fahrenheit"
       }
     },
     "category": "temperature",
@@ -22,9 +21,8 @@
     "key": "C",
     "mappings": {
       "default": {
-        "default": "gradi celsius",
-        "singular": "grado celsius",
-        "dual": ""
+        "plural": "gradi celsius",
+        "default": "grado celsius"
       }
     },
     "category": "temperature",
@@ -37,9 +35,8 @@
     "key": "K",
     "mappings": {
       "default": {
-        "default": "kelvin",
-        "singular": "kelvin",
-        "dual": ""
+        "plural": "kelvin",
+        "default": "kelvin"
       }
     },
     "category": "temperature",

@@ -6,9 +6,8 @@
     "key": "dr",
     "mappings": {
       "default": {
-        "default": "dracme",
-        "singular": "dracma",
-        "dual": ""
+        "plural": "dramme",
+        "default": "dramma"
       }
     },
     "category": "weight",
@@ -21,9 +20,8 @@
     "key": "oz",
     "mappings": {
       "default": {
-        "default": "once",
-        "singular": "oncia",
-        "dual": ""
+        "plural": "once",
+        "default": "oncia"
       }
     },
     "category": "weight",
@@ -36,9 +34,8 @@
     "key": "lb",
     "mappings": {
       "default": {
-        "default": "libbre",
-        "singular": "libbra",
-        "dual": ""
+        "plural": "libbre",
+        "default": "libbra"
       }
     },
     "category": "weight",
@@ -56,9 +53,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "stone",
-        "singular": "",
-        "dual": ""
+        "plural": "stone",
+        "default": "stone"
       }
     }
   },
@@ -71,9 +67,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "quarti",
-        "singular": "quarto",
-        "dual": ""
+        "plural": "quarti",
+        "default": "quarto"
       }
     }
   },
@@ -81,9 +76,8 @@
     "key": "cwt",
     "mappings": {
       "default": {
-        "default": "hundredweight",
-        "singular": "",
-        "dual": ""
+        "plural": "hundredweight",
+        "default": "hundredweight"
       }
     },
     "category": "weight",
@@ -101,9 +95,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "long ton",
-        "singular": "",
-        "dual": ""
+        "plural": "long ton",
+        "default": "long ton"
       }
     }
   },
@@ -111,9 +104,8 @@
     "key": "gr",
     "mappings": {
       "default": {
-        "default": "grani",
-        "singular": "grano",
-        "dual": ""
+        "plural": "grani",
+        "default": "grano"
       }
     },
     "category": "weight",
@@ -125,9 +117,8 @@
     "key": "g",
     "mappings": {
       "default": {
-        "default": "grammi",
-        "singular": "grammo",
-        "dual": ""
+        "plural": "grammi",
+        "default": "grammo"
       }
     },
     "category": "weight",
@@ -144,9 +135,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "microgrammi",
-        "singular": "microgrammo",
-        "dual": ""
+        "plural": "microgrammi",
+        "default": "microgrammo"
       }
     }
   },
@@ -154,9 +144,8 @@
     "key": "t",
     "mappings": {
       "default": {
-        "default": "tonnellate",
-        "singular": "tonnellata",
-        "dual": ""
+        "plural": "tonnellate",
+        "default": "tonnellata"
       }
     },
     "category": "weight",
