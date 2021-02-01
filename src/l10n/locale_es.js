@@ -194,8 +194,6 @@ sre.Locale.es = {
     JOINER_FRAC: ' '
   },
 
-  PLURAL_UNIT: { },
-
   PLURAL: function(unit) {
     if (/.*(a|e|i|o|u)$/.test(unit)) {
       return unit + 's';

@@ -153,7 +153,8 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "pies cúbico"
+       "default": "pie cúbico",
+       "plural": "pies cúbicos"
      }
    },
    "key": "cu ft",
@@ -162,7 +163,8 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "yarda cúbica"
+       "default": "yarda cúbica",
+       "plural": "yardas cúbicas"
      }
    },
    "key": "cu yd",

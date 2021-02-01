@@ -47,8 +47,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "kilómetros por hora",
-        "plural": "kilómetro por hora"
+        "plural": "kilómetros por hora",
+        "default": "kilómetro por hora"
       }
     },
     "category": "speed"

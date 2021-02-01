@@ -228,8 +228,8 @@
     "key": "₯",
     "mappings": {
       "default": {
-        "default": "dracmas",
-        "singular": "dracma"
+        "plural": "dracmas",
+        "default": "dracma"
       }
     },
     "category": "currency",
@@ -241,8 +241,8 @@
     "key": "₰",
     "mappings": {
       "default": {
-        "default": "peniques alemanes",
-        "singular": "penique alemán"
+        "plural": "peniques alemanes",
+        "default": "penique alemán"
       }
     },
     "category": "currency",
