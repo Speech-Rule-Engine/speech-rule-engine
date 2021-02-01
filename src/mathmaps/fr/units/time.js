@@ -7,8 +7,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "seconde",
-        "dual": ""
+        "default": "seconde"
       }
     },
     "category": "time",
@@ -20,8 +19,7 @@
     "key": "″",
     "mappings": {
       "default": {
-        "default": "seconde",
-        "dual": ""
+        "default": "seconde"
       }
     },
     "category": "time",
@@ -38,7 +36,8 @@
     },
     "key": "min",
     "names": [
-      "min", "′"
+      "min",
+      "′"
     ]
   },
   {

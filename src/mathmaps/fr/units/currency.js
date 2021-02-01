@@ -10,8 +10,7 @@
     "mappings": {
       "default": {
         "default": "dollars",
-        "singular": "dollar",
-        "dual": ""
+        "singular": "dollar"
       }
     },
     "category": "currency",
@@ -28,8 +27,7 @@
     "mappings": {
       "default": {
         "default": "pee",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -44,8 +42,7 @@
     "mappings": {
       "default": {
         "default": "yen",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -60,8 +57,7 @@
     "mappings": {
       "default": {
         "default": "euros",
-        "singular": "euro",
-        "dual": ""
+        "singular": "euro"
       }
     },
     "category": "currency",
@@ -75,8 +71,7 @@
     "mappings": {
       "default": {
         "default": "colon",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -90,8 +85,7 @@
     "mappings": {
       "default": {
         "default": "cruzeiro",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -104,8 +98,7 @@
     "mappings": {
       "default": {
         "default": "francs",
-        "singular": "franc",
-        "dual": ""
+        "singular": "franc"
       }
     },
     "category": "currency",
@@ -118,8 +111,7 @@
     "mappings": {
       "default": {
         "default": "lires",
-        "singular": "lire",
-        "dual": ""
+        "singular": "lire"
       }
     },
     "category": "currency",
@@ -132,8 +124,7 @@
     "mappings": {
       "default": {
         "default": "millième",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -146,8 +137,7 @@
     "mappings": {
       "default": {
         "default": "naira",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -161,8 +151,7 @@
     "mappings": {
       "default": {
         "default": "peseta",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -175,8 +164,7 @@
     "mappings": {
       "default": {
         "default": "roupies",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -194,8 +182,7 @@
     "mappings": {
       "default": {
         "default": "won",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -210,8 +197,7 @@
     "mappings": {
       "default": {
         "default": "chékel",
-        "singular": "chékel",
-        "dual": ""
+        "singular": "chékel"
       }
     },
     "category": "currency",
@@ -224,8 +210,7 @@
     "mappings": {
       "default": {
         "default": "dong",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -238,8 +223,7 @@
     "mappings": {
       "default": {
         "default": "kip",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -252,8 +236,7 @@
     "mappings": {
       "default": {
         "default": "tugrik",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -266,8 +249,7 @@
     "mappings": {
       "default": {
         "default": "drachme",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -280,8 +262,7 @@
     "mappings": {
       "default": {
         "default": "pfennig",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -294,8 +275,7 @@
     "mappings": {
       "default": {
         "default": "pesos",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -308,8 +288,7 @@
     "mappings": {
       "default": {
         "default": "guaranis",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -322,8 +301,7 @@
     "mappings": {
       "default": {
         "default": "australs",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -336,8 +314,7 @@
     "mappings": {
       "default": {
         "default": "hryvnias",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -351,8 +328,7 @@
     "mappings": {
       "default": {
         "default": "cedis",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -366,8 +342,7 @@
     "mappings": {
       "default": {
         "default": "yuan",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     },
     "category": "currency",
@@ -384,7 +359,8 @@
       }
     },
     "names": [
-      "￠", "¢"
+      "￠",
+      "¢"
     ]
   }
 ]
