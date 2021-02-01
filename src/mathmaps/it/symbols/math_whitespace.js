@@ -276,7 +276,7 @@
     "key": "2062",
     "mappings": {
       "default": {
-        "default": " "
+        "default": "per"
       }
     },
     "category": "Cf"

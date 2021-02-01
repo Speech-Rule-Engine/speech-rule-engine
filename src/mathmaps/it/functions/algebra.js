@@ -23,7 +23,7 @@
     "key": "det",
     "mappings": {
       "default": {
-        "default": "determinante di"
+        "default": "determinante"
       }
     },
     "category": "Algebra",

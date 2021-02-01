@@ -1411,7 +1411,7 @@
     "key": "220F",
     "mappings": {
       "default": {
-        "default": "prodotto"
+        "default": "produttoria"
       }
     },
     "category": "Sm"
@@ -1429,7 +1429,7 @@
     "key": "2211",
     "mappings": {
       "default": {
-        "default": "somma"
+        "default": "sommatoria"
       }
     },
     "category": "Sm"

@@ -192,7 +192,7 @@ sre.Locale.it = {
   },
 
   REGEXP: {
-    TEXT: 'a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ',
+    TEXT: 'a-zA-ZàèìòùéóÀ',
     NUMBER: '((\\d{1,3})(?=(.| ))((.| )\\d{3})*(\\,\\d+)?)|^\\d*\\,\\d+|^\\d+',
     DECIMAL_MARK: ',',
     DIGIT_GROUP: '\\.',
