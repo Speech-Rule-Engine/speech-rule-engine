@@ -9,8 +9,7 @@
     "key": "$",
     "mappings": {
       "default": {
-        "default": "dollars",
-        "singular": "dollar"
+        "default": "dollar"
       }
     },
     "category": "currency",
@@ -26,8 +25,7 @@
     "key": "£",
     "mappings": {
       "default": {
-        "default": "pee",
-        "singular": ""
+        "default": "livre"
       }
     },
     "category": "currency",
@@ -41,8 +39,7 @@
     "key": "¥",
     "mappings": {
       "default": {
-        "default": "yen",
-        "singular": ""
+        "default": "yen"
       }
     },
     "category": "currency",
@@ -56,8 +53,7 @@
     "key": "€",
     "mappings": {
       "default": {
-        "default": "euros",
-        "singular": "euro"
+        "default": "euro"
       }
     },
     "category": "currency",
@@ -70,8 +66,7 @@
     "key": "₡",
     "mappings": {
       "default": {
-        "default": "colon",
-        "singular": ""
+        "default": "colon"
       }
     },
     "category": "currency",
@@ -84,8 +79,7 @@
     "key": "₢",
     "mappings": {
       "default": {
-        "default": "cruzeiro",
-        "singular": ""
+        "default": "cruzeiro"
       }
     },
     "category": "currency",
@@ -97,8 +91,7 @@
     "key": "₣",
     "mappings": {
       "default": {
-        "default": "francs",
-        "singular": "franc"
+        "default": "franc"
       }
     },
     "category": "currency",
@@ -110,8 +103,7 @@
     "key": "₤",
     "mappings": {
       "default": {
-        "default": "lires",
-        "singular": "lire"
+        "default": "lire"
       }
     },
     "category": "currency",
@@ -123,8 +115,7 @@
     "key": "₥",
     "mappings": {
       "default": {
-        "default": "millième",
-        "singular": ""
+        "default": "millième"
       }
     },
     "category": "currency",
@@ -136,8 +127,7 @@
     "key": "₦",
     "mappings": {
       "default": {
-        "default": "naira",
-        "singular": ""
+        "default": "naira"
       }
     },
     "category": "currency",
@@ -150,8 +140,7 @@
     "key": "₧",
     "mappings": {
       "default": {
-        "default": "peseta",
-        "singular": ""
+        "default": "peseta"
       }
     },
     "category": "currency",
@@ -163,8 +152,7 @@
     "key": "₨",
     "mappings": {
       "default": {
-        "default": "roupies",
-        "singular": ""
+        "default": "roupie"
       }
     },
     "category": "currency",
@@ -181,8 +169,7 @@
     "key": "₩",
     "mappings": {
       "default": {
-        "default": "won",
-        "singular": ""
+        "default": "won"
       }
     },
     "category": "currency",
@@ -196,8 +183,7 @@
     "key": "₪",
     "mappings": {
       "default": {
-        "default": "chékel",
-        "singular": "chékel"
+        "default": "shekel"
       }
     },
     "category": "currency",
@@ -209,8 +195,7 @@
     "key": "₫",
     "mappings": {
       "default": {
-        "default": "dong",
-        "singular": ""
+        "default": "dong"
       }
     },
     "category": "currency",
@@ -222,8 +207,7 @@
     "key": "₭",
     "mappings": {
       "default": {
-        "default": "kip",
-        "singular": ""
+        "default": "kip"
       }
     },
     "category": "currency",
@@ -235,8 +219,7 @@
     "key": "₮",
     "mappings": {
       "default": {
-        "default": "tugrik",
-        "singular": ""
+        "default": "tugrik"
       }
     },
     "category": "currency",
@@ -248,8 +231,7 @@
     "key": "₯",
     "mappings": {
       "default": {
-        "default": "drachme",
-        "singular": ""
+        "default": "drachme"
       }
     },
     "category": "currency",
@@ -262,7 +244,7 @@
     "mappings": {
       "default": {
         "default": "pfennig",
-        "singular": ""
+        "plural": "pfennig"
       }
     },
     "category": "currency",
@@ -274,8 +256,7 @@
     "key": "₱",
     "mappings": {
       "default": {
-        "default": "pesos",
-        "singular": ""
+        "default": "peso"
       }
     },
     "category": "currency",
@@ -287,8 +268,7 @@
     "key": "₲",
     "mappings": {
       "default": {
-        "default": "guaranis",
-        "singular": ""
+        "default": "guarani"
       }
     },
     "category": "currency",
@@ -300,8 +280,7 @@
     "key": "₳",
     "mappings": {
       "default": {
-        "default": "australs",
-        "singular": ""
+        "default": "austral"
       }
     },
     "category": "currency",
@@ -313,8 +292,7 @@
     "key": "₴",
     "mappings": {
       "default": {
-        "default": "hryvnias",
-        "singular": ""
+        "default": "hryvnia"
       }
     },
     "category": "currency",
@@ -327,8 +305,7 @@
     "key": "₵",
     "mappings": {
       "default": {
-        "default": "cedis",
-        "singular": ""
+        "default": "cedi"
       }
     },
     "category": "currency",
@@ -341,8 +318,7 @@
     "key": "元",
     "mappings": {
       "default": {
-        "default": "yuan",
-        "singular": ""
+        "default": "yuan"
       }
     },
     "category": "currency",
