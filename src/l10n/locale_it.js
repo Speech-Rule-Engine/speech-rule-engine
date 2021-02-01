@@ -206,6 +206,11 @@ sre.Locale.it = {
     'inch': ''
   },
 
+  PLURAL: function(unit) {
+    console.log('Italian plural!');
+    return unit; // (/.*s$/.test(unit)) ? unit : unit + 's';
+  },
+
   SI: function(prefix, unit) {
     return prefix + unit;
   },
