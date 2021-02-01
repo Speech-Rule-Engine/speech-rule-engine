@@ -35,8 +35,7 @@
     "mappings": {
       "default": {
         "default": "logaritmo in basi 10",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -50,8 +49,7 @@
     "mappings": {
       "default": {
         "default": "esponenziale",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -66,8 +64,7 @@
     "mappings": {
       "default": {
         "default": "massimo comun divisore",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -82,8 +79,7 @@
     "mappings": {
       "default": {
         "default": "minimo comune multiplo",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -96,8 +92,7 @@
     "mappings": {
       "default": {
         "default": "argomento",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -134,8 +129,7 @@
     "mappings": {
       "default": {
         "default": "estremo inferiore",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -161,8 +155,7 @@
     "mappings": {
       "default": {
         "default": "limite inferiore",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -176,8 +169,7 @@
     "mappings": {
       "default": {
         "default": "limite superiore",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -190,8 +182,7 @@
     "mappings": {
       "default": {
         "default": "massimo",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -204,8 +195,7 @@
     "mappings": {
       "default": {
         "default": "minimo",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -218,8 +208,7 @@
     "mappings": {
       "default": {
         "default": "estremo superiore",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -233,8 +222,7 @@
     "mappings": {
       "default": {
         "default": "colimiti",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -248,8 +236,7 @@
     "mappings": {
       "default": {
         "default": "limite proiettivo",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   },
@@ -274,8 +261,7 @@
     "mappings": {
       "default": {
         "default": "probabilità",
-        "singular": "",
-        "dual": ""
+        "singular": ""
       }
     }
   }
