@@ -12,7 +12,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "square inch"
+       "default": "square inch",
+       "plural": "square inches"
      }
    },
    "key": "sq inch",

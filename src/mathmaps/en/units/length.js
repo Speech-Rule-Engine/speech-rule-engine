@@ -3,7 +3,8 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "foot"
+       "default": "foot",
+       "plural": "feet"
      }
    },
    "key": "ft",
@@ -12,7 +13,8 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "inch"
+       "default": "inch",
+       "plural": "inches"
      }
    },
    "key": "in",

@@ -191,15 +191,6 @@ sre.Locale.en = {
     return (/.*s$/.test(unit)) ? unit : unit + 's';
   },
 
-  PLURAL_UNIT: {
-    'foot': 'feet',
-    'inch': 'inches',
-    'square foot': 'square feet',
-    'square inch': 'square inches',
-    'cubic foot': 'cubic feet',
-    'cubic inch': 'cubic inches'
-  },
-
   NUMBERS: sre.Numbers.en.NUMBERS,
 
   ALPHABETS: {

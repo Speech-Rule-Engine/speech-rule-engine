@@ -12,7 +12,8 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "cubic inch"
+       "default": "cubic inch",
+       "plural": "cubic inches"
      }
    },
    "key": "cu inch",
