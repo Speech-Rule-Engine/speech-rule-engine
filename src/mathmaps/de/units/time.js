@@ -6,7 +6,8 @@
    "si": true,
    "mappings": {
      "default": {
-       "default": "Sekunde"
+       "default": "Sekunde",
+       "plural": "Sekunden"
      }
    },
    "key": "s",
@@ -15,7 +16,8 @@
     {"category": "time",
    "mappings": {
      "default": {
-       "default": "Sekunde"
+       "default": "Sekunde",
+       "plural": "Sekunden"
      }
    },
    "key": "″",
@@ -24,7 +26,8 @@
   {"category": "time",
    "mappings": {
      "default": {
-       "default": "Minute"
+       "default": "Minute",
+       "plural": "Minuten"
      }
    },
    "key": "min",
@@ -33,7 +36,8 @@
   {"category": "time",
    "mappings": {
      "default": {
-       "default": "Stunde"
+       "default": "Stunde",
+       "plural": "Stunden"
      }
    },
    "key": "h",

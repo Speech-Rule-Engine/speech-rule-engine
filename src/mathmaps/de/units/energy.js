@@ -19,7 +19,8 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "Kilowattstunde"
+       "default": "Kilowattstunde",
+       "plural": "Kilowattstunden"
      }
    },
    "key": "kwh",
@@ -30,8 +31,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "Joule",
-        "plural": "Joules"
+        "default": "Joule"
       }
     },
     "category": "energy",

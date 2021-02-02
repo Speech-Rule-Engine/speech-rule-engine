@@ -238,4 +238,3 @@ sre.Locale.en = {
   ALPHABET_COMBINER: sre.Locale.prefixCombiner
 
 };
-

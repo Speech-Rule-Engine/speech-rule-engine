@@ -32,7 +32,8 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "Kubikyard"
+       "default": "Kubikyard",
+       "plural": "Kubikyards"
      }
    },
    "key": "cu yd",
@@ -54,7 +55,8 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "Fluid ounce"
+       "default": "Fluid ounce",
+       "plural": "Fluid ounces"
      }
    },
    "key": "fl. oz.",

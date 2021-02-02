@@ -76,7 +76,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "nautische Meile"
+        "default": "nautische Meile",
+        "plural": "nautische Meilen"
       }
     },
     "category": "length"
@@ -85,7 +86,8 @@
     "category": "length",
     "mappings": {
       "default": {
-        "default": "Kettenglied"
+        "default": "Kettenglied",
+        "plural": "Kettenglieder"
       }
     },
     "key": "link",
@@ -98,7 +100,8 @@
     "category": "length",
     "mappings": {
       "default": {
-        "default": "Rute"
+        "default": "Rute",
+        "plural": "Ruten"
       }
     },
     "key": "rod",
@@ -111,7 +114,8 @@
     "category": "length",
     "mappings": {
       "default": {
-        "default": "Kette"
+        "default": "Kette",
+        "plural": "Ketten"
       }
     },
     "key": "chain",
@@ -124,7 +128,8 @@
     "category": "length",
     "mappings": {
       "default": {
-        "default": "Furchenlänge"
+        "default": "Furchenlänge",
+        "plural": "Furchenlängen"
       }
     },
     "key": "furlong",

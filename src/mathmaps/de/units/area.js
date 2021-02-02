@@ -21,7 +21,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "Quadratrute"
+       "default": "Quadratrute",
+       "plural": "Quadratruten"
      }
    },
    "key": "sq rd",
@@ -49,7 +50,8 @@
   {"category": "area",
    "mappings": {
      "default": {
-       "default": "Quadratmeile"
+       "default": "Quadratmeile",
+       "plural": "Quadratmeilen"
      }
    },
    "key": "sq mi",

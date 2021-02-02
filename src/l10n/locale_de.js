@@ -215,26 +215,11 @@ sre.Locale.de = {
     JOINER_FRAC: ' '
   },
 
-  PLURAL_UNIT: {
-    'Meile': 'Meilen',
-    'Yard': 'Yards',
-    'Gallone': 'Gallonen',
-    'Unze': 'Unzen',
-    'Tonne': 'Tonnen',
-    'Minute': 'Minuten',
-    'Stunde': 'Stunden',
-    'Joule': 'Joules',
-    'Sekunde': 'Sekunden'
-  },
-
   SI: function(prefix, unit) {
     return prefix + unit.toLowerCase();
   },
 
   PLURAL: function(unit) {
-    if (unit.match(/(B|b)yte$/)) {
-      return unit.replace(/yte$/, 'ytes');
-    }
     return unit;
   },
 

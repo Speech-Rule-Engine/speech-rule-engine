@@ -154,7 +154,7 @@
     "key": "₨",
     "mappings": {
       "default": {
-        "plural": "Rupien",
+        "plural": "Rupies",
         "default": "Rupie"
       }
     },
