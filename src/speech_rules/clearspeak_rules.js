@@ -48,6 +48,8 @@ sre.ClearspeakRules = function() {
       'CQFisHyperbolic': sre.ClearspeakUtil.isHyperbolic,
       'CQFisLogarithm': sre.ClearspeakUtil.isLogarithmWithBase,
       'CQFspaceoutNumber': sre.MathspeakUtil.spaceoutNumber,
+      // Units.
+      'CQFisLengthUnit': sre.ClearspeakUtil.isLengthUnit,
       // Currency.
       'CQFfirstCurrency': sre.ClearspeakUtil.firstCurrency,
       'CQFlastCurrency': sre.ClearspeakUtil.lastCurrency

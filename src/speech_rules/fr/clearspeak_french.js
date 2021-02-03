@@ -2964,25 +2964,22 @@ sre.ClearspeakFrench = {
       "unit-singular",
       "default",
       "[t] text() (grammar:annotation=\"unit\":translate)",
-      "self::identifier",
-      "@role=\"unit\""
+      "self::identifier[@role=\"unit\"]"
     ],
     [
       "Rule",
       "unit-plural",
       "default",
       "[t] text() (grammar:annotation=\"unit\":translate:plural)",
-      "self::identifier",
-      "@role=\"unit\"",
+      "self::identifier[@role=\"unit\"]",
       "not(contains(@grammar, \"singularUnit\"))"
     ],
     [
       "Rule",
       "unit-square",
       "default",
-      "[t] \"square\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
+      "[n] children/*[1]; [t] \"carré\"",
+      "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=2]",
       "name(children/*[1])=\"identifier\""
     ],
@@ -2990,9 +2987,8 @@ sre.ClearspeakFrench = {
       "Rule",
       "unit-cubic",
       "default",
-      "[t] \"cubic\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
+      "[n] children/*[1]; [t] \"cube\"",
+      "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\""
     ],
@@ -3001,8 +2997,7 @@ sre.ClearspeakFrench = {
       "unit-reciprocal",
       "default",
       "[t] \"reciprocal\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
       "name(children/*[1])=\"identifier\"",
       "name(children/*[2])=\"prefixop\"",
       "children/*[2][@role=\"negative\"]",
@@ -3014,8 +3009,19 @@ sre.ClearspeakFrench = {
       "unit-reciprocal",
       "default",
       "[t] \"per\"; [n] children/*[1] (grammar:singularUnit)",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
+      "name(children/*[1])=\"identifier\"",
+      "name(children/*[2])=\"prefixop\"",
+      "children/*[2][@role=\"negative\"]",
+      "children/*[2]/children/*[1][text()=1]",
+      "preceding-sibling::*[@role=\"unit\"]"
+    ],
+    [
+      "Rule",
+      "unit-reciprocal-multi",
+      "default",
+      "[t] \"par\"; [n] children/*[1]",
+      "self::superscript[@role=\"unit\"]",
       "name(children/*[1])=\"identifier\"",
       "name(children/*[2])=\"prefixop\"",
       "children/*[2][@role=\"negative\"]",
@@ -3027,16 +3033,14 @@ sre.ClearspeakFrench = {
       "unit-combine",
       "default",
       "[m] children/*",
-      "self::infixop",
-      "@role=\"unit\""
+      "self::infixop[@role=\"unit\"]"
     ],
     [
       "Rule",
       "unit-combine-singular",
       "default",
       "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); [m] children/*[position()>2]",
-      "self::infixop",
-      "@role=\"unit\"",
+      "self::infixop[@role=\"unit\"]",
       "name(children/*[1])=\"number\"",
       "children/*[1][text()=1]"
     ],
@@ -3045,8 +3049,7 @@ sre.ClearspeakFrench = {
       "unit-divide",
       "default",
       "[n] children/*[1]; [t] \"per\"; [n] children/*[2] (grammar:singularUnit)",
-      "self::fraction",
-      "@role=\"unit\""
+      "self::fraction[@role=\"unit\"]"
     ],
     [
       "Rule",

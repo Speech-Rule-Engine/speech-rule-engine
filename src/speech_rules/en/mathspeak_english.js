@@ -1787,14 +1787,6 @@ sre.MathspeakEnglish = {
     ],
     [
       "Rule",
-      "unit-divide",
-      "default",
-      "[n] children/*[1]; [t] \"per\"; [n] children/*[2]",
-      "self::fraction",
-      "@role=\"unit\""
-    ],
-    [
-      "Rule",
       "inference",
       "default",
       "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premises\"",

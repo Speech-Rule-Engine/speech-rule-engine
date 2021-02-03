@@ -696,3 +696,15 @@ sre.ClearspeakUtil.lastCurrency = function(node) {
   return result ? [node] : [];
 };
 
+
+/**
+ * Tests for unit to be of category length.
+ * @param {Node} node The XML node.
+ * @return {Array.<Node>} True if the text is a length unit.
+ */
+sre.ClearspeakUtil.isLengthUnit = function(node) {
+  var first = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
+  var result = first && sre.MathCompoundStore.getInstance().
+      lookupCategory(first.textContent.trim() + ':unit') === 'length';
+  return result ? [node] : [];
+};
