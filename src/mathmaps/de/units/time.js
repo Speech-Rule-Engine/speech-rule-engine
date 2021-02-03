@@ -36,6 +36,15 @@
   {"category": "time",
    "mappings": {
      "default": {
+       "default": "Grad"
+     }
+   },
+   "key": "°",
+   "names": ["°"]
+  },
+  {"category": "time",
+   "mappings": {
+     "default": {
        "default": "Stunde",
        "plural": "Stunden"
      }

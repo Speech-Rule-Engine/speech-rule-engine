@@ -39,6 +39,15 @@
     },
     "category": "time"
   },
+  {"category": "time",
+   "mappings": {
+     "default": {
+       "default": "grado"
+     }
+   },
+   "key": "°",
+   "names": ["°"]
+  },
   {
     "key": "h",
     "names": [

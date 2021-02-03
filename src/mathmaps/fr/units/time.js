@@ -40,6 +40,15 @@
       "′"
     ]
   },
+  {"category": "time",
+   "mappings": {
+     "default": {
+       "default": "degré"
+     }
+   },
+   "key": "°",
+   "names": ["°"]
+  },
   {
     "category": "time",
     "mappings": {
