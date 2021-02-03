@@ -1708,16 +1708,14 @@ sre.MathspeakSpanish = {
       "unit-singular",
       "default",
       "[t] text() (grammar:annotation=\"unit\":translate)",
-      "self::identifier",
-      "@role=\"unit\""
+      "self::identifier[@role=\"unit\"]"
     ],
     [
       "Rule",
       "unit-plural",
       "default",
       "[t] text() (grammar:annotation=\"unit\":translate:plural)",
-      "self::identifier",
-      "@role=\"unit\"",
+      "self::identifier[@role=\"unit\"]",
       "not(contains(@grammar, \"singularUnit\"))"
     ],
     [
@@ -1725,28 +1723,49 @@ sre.MathspeakSpanish = {
       "unit-square",
       "default",
       "[n] children/*[1]; [t] \"cuadrado\"",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=2]",
       "name(children/*[1])=\"identifier\""
+    ],
+    [
+      "SpecializedRule",
+      "unit-square",
+      "default",
+      "brief"
+    ],
+    [
+      "SpecializedRule",
+      "unit-square",
+      "brief",
+      "sbrief"
     ],
     [
       "Rule",
       "unit-cubic",
       "default",
       "[n] children/*[1]; [t] \"cúbico\"",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\""
+    ],
+    [
+      "SpecializedRule",
+      "unit-cubic",
+      "default",
+      "brief"
+    ],
+    [
+      "SpecializedRule",
+      "unit-cubic",
+      "brief",
+      "sbrief"
     ],
     [
       "Rule",
       "reciprocal",
       "default",
       "[t] \"recíproco\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
       "name(children/*[1])=\"identifier\"",
       "name(children/*[2])=\"prefixop\"",
       "children/*[2][@role=\"negative\"]",
@@ -1758,8 +1777,7 @@ sre.MathspeakSpanish = {
       "reciprocal",
       "default",
       "[t] \"por\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
       "name(children/*[1])=\"identifier\"",
       "name(children/*[2])=\"prefixop\"",
       "children/*[2][@role=\"negative\"]",
@@ -1771,8 +1789,7 @@ sre.MathspeakSpanish = {
       "unit-combine",
       "default",
       "[m] children/* (sepFunc:CTFunitMultipliers)",
-      "self::infixop",
-      "@role=\"unit\""
+      "self::infixop[@role=\"unit\"]"
     ],
     [
       "Rule",
@@ -1785,11 +1802,10 @@ sre.MathspeakSpanish = {
     ],
     [
       "Rule",
-      "unit-combiner-singular",
+      "unit-combine-singular",
       "default",
       "[n] children/*[1]; [t] \"por\"; [m] children/*[position()>1] (grammar:!singularUnit, sepFunc:CTFunitMultipliers)",
-      "self::infixop",
-      "@role=\"unit\"",
+      "self::infixop[@role=\"unit\"]",
       "name(children/*[1])!=\"number\"",
       "contains(@grammar, \"singularUnit\")",
       "count(children/*)>1"
@@ -1799,8 +1815,7 @@ sre.MathspeakSpanish = {
       "unit-combine-singular-first",
       "default",
       "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); [t] \"por\"; [m] children/*[position()>2] (sepFunc:CTFunitMultipliers)",
-      "self::infixop",
-      "@role=\"unit\"",
+      "self::infixop[@role=\"unit\"]",
       "name(children/*[1])=\"number\"",
       "children/*[1][text()=1]"
     ],
@@ -1809,8 +1824,7 @@ sre.MathspeakSpanish = {
       "unit-combine-singular-first",
       "default",
       "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); ",
-      "self::infixop",
-      "@role=\"unit\"",
+      "self::infixop[@role=\"unit\"]",
       "name(children/*[1])=\"number\"",
       "children/*[1][text()=1]",
       "count(children/*)=2"
@@ -1820,8 +1834,7 @@ sre.MathspeakSpanish = {
       "unit-divide",
       "default",
       "[n] children/*[1]; [t] \"por\"; [n] children/*[2] (grammar:singularUnit)",
-      "self::fraction",
-      "@role=\"unit\""
+      "self::fraction[@role=\"unit\"]"
     ],
     [
       "Generator",
