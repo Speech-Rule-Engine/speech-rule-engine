@@ -27,7 +27,16 @@
    "key": "min",
    "names": ["min", "′"]
   },
-  {"category": "time",
+ {"category": "time",
+   "mappings": {
+     "default": {
+       "default": "degree"
+     }
+   },
+  "key": "°",
+  "names": ["°"]
+ },
+ {"category": "time",
    "mappings": {
      "default": {
        "default": "hour"
