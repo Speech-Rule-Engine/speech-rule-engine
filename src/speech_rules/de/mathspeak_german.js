@@ -1746,70 +1746,14 @@ sre.MathspeakGerman = {
       "unit",
       "default",
       "[t] text() (grammar:annotation=\"unit\":translate:plural)",
-      "self::identifier",
-      "@role=\"unit\""
-    ],
-    [
-      "Rule",
-      "unit-square",
-      "default",
-      "[t] \"Quadrat\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
-      "children/*[2][text()=2]",
-      "name(children/*[1])=\"identifier\""
-    ],
-    [
-      "Rule",
-      "unit-cubic",
-      "default",
-      "[t] \"Kubik\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
-      "children/*[2][text()=3]",
-      "name(children/*[1])=\"identifier\""
-    ],
-    [
-      "Rule",
-      "reciprocal",
-      "default",
-      "[n] children/*[1]; [t] \"invers\"",
-      "self::superscript",
-      "@role=\"unit\"",
-      "name(children/*[1])=\"identifier\"",
-      "name(children/*[2])=\"prefixop\"",
-      "children/*[2][@role=\"negative\"]",
-      "children/*[2]/children/*[1][text()=1]",
-      "count(preceding-sibling::*)=0 or preceding-sibling::*[@role!=\"unit\"]"
-    ],
-    [
-      "Rule",
-      "reciprocal",
-      "default",
-      "[t] \"pro\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
-      "name(children/*[1])=\"identifier\"",
-      "name(children/*[2])=\"prefixop\"",
-      "children/*[2][@role=\"negative\"]",
-      "children/*[2]/children/*[1][text()=1]",
-      "preceding-sibling::*[@role=\"unit\"]"
+      "self::identifier[@role=\"unit\"]"
     ],
     [
       "Rule",
       "unit-combine",
       "default",
       "[m] children/*",
-      "self::infixop",
-      "@role=\"unit\""
-    ],
-    [
-      "Rule",
-      "unit-divide",
-      "default",
-      "[n] children/*[1]; [t] \"pro\"; [n] children/*[2]",
-      "self::fraction",
-      "@role=\"unit\""
+      "self::infixop[@role=\"unit\"]"
     ],
     [
       "Rule",

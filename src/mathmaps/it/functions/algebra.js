@@ -13,8 +13,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "grado",
-        "singular": ""
+        "default": "grado"
       }
     }
   },
@@ -38,8 +37,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "dimensione",
-        "singular": ""
+        "default": "dimensione"
       }
     }
   },
@@ -52,8 +50,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "omomorfismo",
-        "singular": ""
+        "default": "omomorfismo"
       }
     }
   },
@@ -65,8 +62,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "nucleo",
-        "singular": ""
+        "default": "nucleo"
       }
     }
   },
@@ -79,8 +75,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "traccia",
-        "singular": ""
+        "default": "traccia"
       }
     }
   }

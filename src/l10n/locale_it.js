@@ -200,15 +200,9 @@ sre.Locale.it = {
     JOINER_FRAC: ' '
   },
 
-  // TODO: These!
-  PLURAL_UNIT: {
-    'foot': '',
-    'inch': ''
-  },
-
   PLURAL: function(unit) {
-    console.log('Italian plural!');
-    return unit; // (/.*s$/.test(unit)) ? unit : unit + 's';
+    // TODO: Make as programmatical as possible!
+    return unit;
   },
 
   SI: function(prefix, unit) {

@@ -6,8 +6,8 @@
     "key": "ft",
     "mappings": {
       "default": {
-        "default": "piedi",
-        "singular": "piede"
+        "plural": "piedi",
+        "default": "piede"
       }
     },
     "category": "length",
@@ -20,8 +20,8 @@
     "key": "in",
     "mappings": {
       "default": {
-        "default": "pollici",
-        "singular": "pollice"
+        "plural": "pollici",
+        "default": "pollice"
       }
     },
     "category": "length",
@@ -34,8 +34,8 @@
     "key": "mi",
     "mappings": {
       "default": {
-        "default": "miglia",
-        "singular": "miglio"
+        "plural": "miglia",
+        "default": "miglio"
       }
     },
     "category": "length",
@@ -48,8 +48,8 @@
     "key": "yd",
     "mappings": {
       "default": {
-        "default": "iarde",
-        "singular": "iarda"
+        "plural": "iarde",
+        "default": "iarda"
       }
     },
     "category": "length",
@@ -62,8 +62,8 @@
     "key": "li",
     "mappings": {
       "default": {
-        "default": "links",
-        "singular": "link"
+        "plural": "links",
+        "default": "link"
       }
     },
     "category": "length",
@@ -76,8 +76,8 @@
     "key": "rd",
     "mappings": {
       "default": {
-        "default": "pertiche",
-        "singular": "pertica"
+        "plural": "pertiche",
+        "default": "pertica"
       }
     },
     "category": "length",
@@ -90,8 +90,8 @@
     "key": "ch",
     "mappings": {
       "default": {
-        "default": "catene",
-        "singular": "catena"
+        "plural": "catene",
+        "default": "catena"
       }
     },
     "category": "length",
@@ -109,8 +109,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "furlong",
-        "singular": "furlong"
+        "plural": "furlong",
+        "default": "furlong"
       }
     }
   },
@@ -122,8 +122,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "miglia nautiche",
-        "singular": "miglio nautico"
+        "plural": "miglia nautiche",
+        "default": "miglio nautico"
       }
     }
   },
@@ -131,8 +131,8 @@
     "key": "m",
     "mappings": {
       "default": {
-        "default": "metri",
-        "singular": "metro"
+        "plural": "metri",
+        "default": "metro"
       }
     },
     "category": "length",

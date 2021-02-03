@@ -1777,24 +1777,14 @@ sre.MathspeakItalian = {
       "unit",
       "default",
       "[t] text() (grammar:annotation=\"unit\":translate:plural)",
-      "self::identifier",
-      "@role=\"unit\""
+      "self::identifier[@role=\"unit\"]"
     ],
     [
       "Rule",
       "unit-combine",
       "default",
       "[m] children/*",
-      "self::infixop",
-      "@role=\"unit\""
-    ],
-    [
-      "Rule",
-      "unit-divide",
-      "default",
-      "[n] children/*[1]; [t] \"per\"; [n] children/*[2]",
-      "self::fraction",
-      "@role=\"unit\""
+      "self::infixop[@role=\"unit\"]"
     ],
     [
       "Rule",

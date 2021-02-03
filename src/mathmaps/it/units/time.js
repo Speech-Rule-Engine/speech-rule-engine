@@ -46,6 +46,7 @@
   {"category": "time",
    "mappings": {
      "default": {
+       "default": "gradi",
        "default": "grado"
      }
    },

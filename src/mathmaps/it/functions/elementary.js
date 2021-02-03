@@ -34,8 +34,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "logaritmo in basi 10",
-        "singular": ""
+        "default": "logaritmo in basi 10"
       }
     }
   },
@@ -48,8 +47,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "esponenziale",
-        "singular": ""
+        "default": "esponenziale"
       }
     }
   },
@@ -63,8 +61,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "massimo comun divisore",
-        "singular": ""
+        "default": "massimo comun divisore"
       }
     }
   },
@@ -78,8 +75,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "minimo comune multiplo",
-        "singular": ""
+        "default": "minimo comune multiplo"
       }
     }
   },
@@ -91,8 +87,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "argomento",
-        "singular": ""
+        "default": "argomento"
       }
     }
   },
@@ -128,8 +123,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "estremo inferiore",
-        "singular": ""
+        "default": "estremo inferiore"
       }
     }
   },
@@ -154,8 +148,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "limite inferiore",
-        "singular": ""
+        "default": "limite inferiore"
       }
     }
   },
@@ -168,8 +161,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "limite superiore",
-        "singular": ""
+        "default": "limite superiore"
       }
     }
   },
@@ -181,8 +173,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "massimo",
-        "singular": ""
+        "default": "massimo"
       }
     }
   },
@@ -194,8 +185,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "minimo",
-        "singular": ""
+        "default": "minimo"
       }
     }
   },
@@ -207,8 +197,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "estremo superiore",
-        "singular": ""
+        "default": "estremo superiore"
       }
     }
   },
@@ -221,8 +210,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "colimiti",
-        "singular": ""
+        "default": "colimiti"
       }
     }
   },
@@ -235,8 +223,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "limite proiettivo",
-        "singular": ""
+        "default": "limite proiettivo"
       }
     }
   },
@@ -260,8 +247,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "probabilità",
-        "singular": ""
+        "default": "probabilità"
       }
     }
   }
