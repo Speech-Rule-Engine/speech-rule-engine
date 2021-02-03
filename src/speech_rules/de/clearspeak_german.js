@@ -402,135 +402,204 @@ sre.ClearspeakGerman = {
     ],
     [
       "Rule",
+      "degrees",
+      "default",
+      "[m] children/* (grammar:degree)",
+      "self::punctuated[@role=\"sequence\"]",
+      "content/*[1][@role=\"degree\"]"
+    ],
+    [
+      "Rule",
       "feet",
       "default",
-      "[n] children/*[1]; [t] \"Fuß\"",
+      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate:plural)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
       "name(children/*[1])=\"number\"",
       "children/*[2][text()=\"′\"]",
-      "not(preceding-sibling::*[@role=\"degree\"])"
+      "not(contains(@grammar, \"degree\"))"
+    ],
+    [
+      "Rule",
+      "foot",
+      "default",
+      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate)",
+      "self::superscript",
+      "children/*[2][@role=\"prime\"]",
+      "name(children/*[1])=\"number\"",
+      "children/*[2][text()=\"′\"]",
+      "children/*[1][text()=\"1\"]",
+      "not(contains(@grammar, \"degree\"))"
     ],
     [
       "Rule",
       "inches",
       "default",
-      "[n] children/*[1]; [t] \"Zoll\"",
+      "[n] children/*[1]; [t] \"in\" (grammar:annotation=\"unit\":translate:plural)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
       "name(children/*[1])=\"number\"",
       "children/*[2][text()=\"″\"]",
-      "not(preceding-sibling::*[@role=\"degree\"])"
+      "not(contains(@grammar, \"degree\"))"
+    ],
+    [
+      "Rule",
+      "inch",
+      "default",
+      "[n] children/*[1]; [t] \"in\" (grammar:annotation=\"unit\":translate)",
+      "self::superscript",
+      "children/*[2][@role=\"prime\"]",
+      "name(children/*[1])=\"number\"",
+      "children/*[2][text()=\"″\"]",
+      "children/*[1][text()=\"1\"]",
+      "not(contains(@grammar, \"degree\"))"
     ],
     [
       "Rule",
       "minutes",
       "default",
-      "[p] (pause:short); [n] children/*[1]; [t] \"Minuten\"",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
-      "preceding-sibling::*[@role=\"degree\"]",
-      "children/*[2][text()=\"′\"]"
+      "children/*[2][text()=\"′\"]",
+      "contains(@grammar, \"degree\")"
     ],
     [
       "Rule",
       "minute",
       "default",
-      "[p] (pause:short); [n] children/*[1]; [t] \"Minute\"",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
-      "preceding-sibling::*[@role=\"degree\"]",
       "children/*[2][text()=\"′\"]",
+      "contains(@grammar, \"degree\")",
       "children/*[1][text()=\"1\"]"
     ],
     [
       "Rule",
       "seconds",
       "default",
-      "[p] (pause:short); [n] children/*[1]; [t] \"Sekunden\"",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
-      "preceding-sibling::*[@role=\"degree\"]",
-      "children/*[2][text()=\"″\"]"
+      "children/*[2][text()=\"″\"]",
+      "contains(@grammar, \"degree\")"
     ],
     [
       "Rule",
       "second",
       "default",
-      "[p] (pause:short); [n] children/*[1]; [t] \"Sekunde\"",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
-      "preceding-sibling::*[@role=\"degree\"]",
       "children/*[2][text()=\"″\"]",
+      "contains(@grammar, \"degree\")",
       "children/*[1][text()=\"1\"]"
     ],
     [
       "Rule",
       "degrees-angle",
-      "Prime_Angle",
-      "[n] children/*[1]; [t] \"Grad\"; [p] (pause:short)",
+      "default",
+      "[t] text() (grammar:annotation=\"unit\":translate:plural, pause:short)",
       "self::punctuation",
       "@role=\"degree\""
     ],
     [
       "Rule",
+      "degree-angle",
+      "default",
+      "[t] text() (grammar:annotation=\"unit\":translate, pause:short)",
+      "self::punctuation",
+      "@role=\"degree\"",
+      "preceding-sibling::*[text()=\"1\"]"
+    ],
+    [
+      "Rule",
       "minutes-angle",
       "Prime_Angle",
-      "[n] children/*[1]; [t] \"Minuten\"; [p] (pause:short)",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
-      "name(children/*[1])=\"number\" or (children/*[1][@role=\"latinletter\"] and \"\"=translate(children/*[1]/text(),\"abcdefghijklmnopqrstuvwxyz\", \"\"))",
-      "children/*[2][text()=\"′\"]"
+      "children/*[2][text()=\"′\"]",
+      "not(contains(@grammar, \"degree\"))",
+      "name(children/*[1])=\"number\" or (children/*[1][@role=\"latinletter\"] and \"\"=translate(children/*[1]/text(),\"abcdefghijklmnopqrstuvwxyz\", \"\"))"
     ],
     [
       "Rule",
       "minute-angle",
       "Prime_Angle",
-      "[n] children/*[1]; [t] \"Minute\"; [p] (pause:short)",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
       "children/*[2][text()=\"′\"]",
+      "not(contains(@grammar, \"degree\"))",
       "children/*[1][text()=\"1\"]"
     ],
     [
       "Rule",
       "seconds-angle",
       "Prime_Angle",
-      "[n] children/*[1]; [t] \"Sekunden\"; [p] (pause:short)",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
-      "name(children/*[1])=\"number\" or (children/*[1][@role=\"latinletter\"] and \"\"=translate(children/*[1]/text(),\"abcdefghijklmnopqrstuvwxyz\", \"\"))",
-      "children/*[2][text()=\"″\"]"
+      "children/*[2][text()=\"″\"]",
+      "not(contains(@grammar, \"degree\"))",
+      "name(children/*[1])=\"number\" or (children/*[1][@role=\"latinletter\"] and \"\"=translate(children/*[1]/text(),\"abcdefghijklmnopqrstuvwxyz\", \"\"))"
     ],
     [
       "Rule",
       "second-angle",
       "Prime_Angle",
-      "[n] children/*[1]; [t] \"Sekunde\"; [p] (pause:short)",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
       "children/*[2][text()=\"″\"]",
+      "not(contains(@grammar, \"degree\"))",
       "children/*[1][text()=\"1\"]"
     ],
     [
       "Rule",
       "feet-length",
       "Prime_Length",
-      "[n] children/*[1]; [t] \"Fuß\"; [p] (pause:short)",
+      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate:plural, pause:short)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
-      "name(children/*[1])=\"number\" or (children/*[1][@role=\"latinletter\"] and \"\"=translate(children/*[1]/text(),\"abcdefghijklmnopqrstuvwxyz\", \"\"))",
-      "children/*[2][text()=\"′\"]"
+      "children/*[2][text()=\"′\"]",
+      "not(contains(@grammar, \"degree\"))",
+      "name(children/*[1])=\"number\" or (children/*[1][@role=\"latinletter\"] and \"\"=translate(children/*[1]/text(),\"abcdefghijklmnopqrstuvwxyz\", \"\"))"
+    ],
+    [
+      "Rule",
+      "foot-length",
+      "Prime_Length",
+      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate, pause:short)",
+      "self::superscript",
+      "children/*[2][@role=\"prime\"]",
+      "children/*[2][text()=\"′\"]",
+      "not(contains(@grammar, \"degree\"))",
+      "children/*[1][text()=\"1\"]"
     ],
     [
       "Rule",
       "inches-length",
       "Prime_Length",
-      "[n] children/*[1]; [t] \"Zoll\"; [p] (pause:short)",
+      "[n] children/*[1]; ; [t] \"in\" (grammar:annotation=\"unit\":translate:plural, pause:short)",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
-      "name(children/*[1])=\"number\" or (children/*[1][@role=\"latinletter\"] and \"\"=translate(children/*[1]/text(),\"abcdefghijklmnopqrstuvwxyz\", \"\"))",
-      "children/*[2][text()=\"″\"]"
+      "children/*[2][text()=\"″\"]",
+      "not(contains(@grammar, \"degree\"))",
+      "name(children/*[1])=\"number\" or (children/*[1][@role=\"latinletter\"] and \"\"=translate(children/*[1]/text(),\"abcdefghijklmnopqrstuvwxyz\", \"\"))"
+    ],
+    [
+      "Rule",
+      "inch-length",
+      "Prime_Length",
+      "[n] children/*[1]; ; [t] \"in\" (grammar:annotation=\"unit\":translate, pause:short)",
+      "self::superscript",
+      "children/*[2][@role=\"prime\"]",
+      "children/*[2][text()=\"″\"]",
+      "not(contains(@grammar, \"degree\"))",
+      "children/*[1][text()=\"1\"]"
     ],
     [
       "Rule",
