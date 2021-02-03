@@ -1774,16 +1774,14 @@ sre.MathspeakEnglish = {
       "unit",
       "default",
       "[t] text() (grammar:annotation=\"unit\":translate:plural)",
-      "self::identifier",
-      "@role=\"unit\""
+      "self::identifier[@role=\"unit\"]"
     ],
     [
       "Rule",
       "unit-combine",
       "default",
       "[m] children/*",
-      "self::infixop",
-      "@role=\"unit\""
+      "self::infixop[@role=\"unit\"]"
     ],
     [
       "Rule",
