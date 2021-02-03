@@ -1624,8 +1624,7 @@ sre.MathspeakFrench = {
       "unit",
       "default",
       "[t] text() (grammar:annotation=\"unit\":translate:plural)",
-      "self::identifier",
-      "@role=\"unit\""
+      "self::identifier[@role=\"unit\"]"
     ],
     [
       "Rule",
@@ -1653,8 +1652,7 @@ sre.MathspeakFrench = {
       "unit-cubic",
       "default",
       "[n] children/*[1]; [t] \"cube\"",
-      "self::superscript",
-      "@role=\"unit\"",
+      "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\""
     ],
