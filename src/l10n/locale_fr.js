@@ -194,6 +194,10 @@ sre.Locale.fr = {
     return prefix + unit;
   },
 
+  PLURAL: function(unit) {
+    return (/.*s$/.test(unit)) ? unit : unit + 's';
+  },
+
   NUMBERS: sre.Numbers.fr.NUMBERS,
 
   ALPHABETS: {
