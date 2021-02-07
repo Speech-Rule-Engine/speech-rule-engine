@@ -864,7 +864,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "superscript-prefix-function",
       "default",
-      "[t] \"la potenza\"; [n] children/*[2] (grammar:ordinal); [t] \"di\"; [n] children/*[1]",
+      "[t] \"potenza\"; [n] children/*[2] (grammar:ordinal); [t] \"di\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"prefix function\"",
       "name(children/*[2])=\"number\"",
@@ -874,7 +874,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "superscript-prefix-function",
       "default",
-      "[t] \"la potenza\"; [n] children/*[2] (grammar:ordinal); [t] \"di\"; [n] children/*[1]",
+      "[t] \"potenza\"; [n] children/*[2] (grammar:ordinal); [t] \"di\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"prefix function\"",
       "name(children/*[2])=\"identifier\""
@@ -1146,9 +1146,26 @@ sre.ClearspeakItalian = {
     ],
     [
       "Rule",
+      "squared-male",
+      "default",
+      "[t] \"quadrato\"",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")"
+    ],
+    [
+      "Rule",
+      "squared-female",
+      "default",
+      "[t] \"quadrate\"",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")",
+      "parent::*/parent::*[@role=\"simple function\"]"
+    ],
+    [
+      "Rule",
       "square",
       "default",
-      "[n] children/*[1]; [t] \"quadrato\"",
+      "[n] children/*[1]; [n] children/*[2] (grammar:squared)",
       "self::superscript",
       "@role!=\"unit\"",
       "children/*[2][text()=\"2\"]",
@@ -1806,7 +1823,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "angle-measure",
       "default",
-      "[t] \"la misura di\"; [n] content/*[1]; [n] children/*[2] (grammar:angle)",
+      "[t] \"misura di\"; [n] content/*[1]; [n] children/*[2] (grammar:angle)",
       "self::infixop",
       "content/*[1]/text()=\"∠\"",
       "children/*[1][text()=\"m\"]"

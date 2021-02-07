@@ -993,9 +993,26 @@ sre.MathspeakItalian = {
     ],
     [
       "Rule",
+      "squared-male",
+      "default",
+      "[t] \"quadrato\"",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")"
+    ],
+    [
+      "Rule",
+      "squared-female",
+      "default",
+      "[t] \"quadrate\"",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")",
+      "parent::*/parent::*[@role=\"simple function\"]"
+    ],
+    [
+      "Rule",
       "square",
       "default",
-      "[n] children/*[1]; [t] \"quadrato\"",
+      "[n] children/*[1]; [n] children/*[2] (grammar:squared)",
       "self::superscript",
       "children/*[2]",
       "children/*[2][text()=2]",
