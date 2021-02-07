@@ -93,6 +93,18 @@ sre.NemethRules = {
     ],
     [
       "Rule",
+      "font-identifier-english",
+      "default",
+      "[t] @font (grammar:localFont); [t] \"⠰\"; [n] . (grammar:ignoreFont=@font)",
+      "self::identifier",
+      "string-length(text())=1",
+      "@font",
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")",
+      "@role!=\"unit\""
+    ],
+    [
+      "Rule",
       "font-identifier",
       "default",
       "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)",
@@ -108,12 +120,10 @@ sre.NemethRules = {
       "omit-font",
       "default",
       "[n] . (grammar:ignoreFont=@font)",
-      "self::identifier",
+      "self::identifier[@font=\"italic\"]",
       "string-length(text())=1",
-      "@font",
       "@role!=\"greekletter\"",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"italic\""
+      "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
       "Rule",
@@ -124,7 +134,8 @@ sre.NemethRules = {
       "contains(@annotation, \"nemeth:number\")",
       "not(ancestor::sqrt)",
       "not(ancestor::root)",
-      "not(ancestor::fraction)"
+      "not(ancestor::fraction)",
+      "@role!=\"othernumber\""
     ],
     [
       "Rule",
@@ -149,16 +160,6 @@ sre.NemethRules = {
       "self::number",
       "\"\" != translate(text(), \"0123456789.,\", \"\")",
       "text() != translate(text(), \"0123456789.,\", \"\")"
-    ],
-    [
-      "Rule",
-      "number-as-upper-word",
-      "default",
-      "[t] \"UpperWord\"; [t] CSFspaceoutText",
-      "self::number",
-      "string-length(text())>1",
-      "text()=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψω\", \"ABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\")",
-      "\"\"=translate(text(), \"ABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\",\"\")"
     ],
     [
       "Rule",

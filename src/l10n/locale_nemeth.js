@@ -25,23 +25,48 @@ goog.require('sre.Locale');
 goog.require('sre.Numbers.nemeth');
 
 
-let postfixCombiner = function(letter, font, cap) {
+/**
+ * Removes English indicator from a simple letter.
+ * @param {string} letter The letter with indicator.
+ * @return {string} The cleaned letter if it was English without font.
+ */
+let simpleEnglish = function(letter) {
+  return letter.match(RegExp(
+    '^' + sre.Locale.nemeth.ALPHABET_PREFIXES.languagePrefix.english)) ?
+    letter.slice(1) : letter;
+};
+
+
+// Note that the cap here is a number indicator as caps are already included in
+// the alphabets. All we need to do is remove the English indicator in case
+// there is no font indicator. For the parenthesised fonts we don't need number
+// indicator either.
+let postfixCombiner = function(letter, font, number) {
+  letter = simpleEnglish(letter);
   return font ? letter + font : letter;
 };
 
 
-let embellishCombiner = function(letter, font, cap) {
-  return font + (cap ? cap : '⠰') + letter + '⠻';
+let germanCombiner = function(letter, font, cap) {
+  return font + simpleEnglish(letter);
 };
 
 
-let doubleEmbellishCombiner = function(letter, font, cap) {
-  return font + (cap ? cap : '⠰') + letter + '⠻⠻';
+let embellishCombiner = function(letter, font, number) {
+  letter = simpleEnglish(letter);
+  return font + (number ? number : '') + letter + '⠻';
 };
 
 
-let parensCombiner = function(letter, font, cap) {
-  return font + (cap ? cap : '⠰') + letter + '⠾';
+let doubleEmbellishCombiner = function(letter, font, number) {
+  letter = simpleEnglish(letter);
+  return font + (number ? number : '') + letter + '⠻⠻';
+};
+
+
+let parensCombiner = function(letter, font, number) {
+  letter = simpleEnglish(letter);
+  return font + (number ? number : '') + letter + '⠾';
 };
 
 
@@ -103,14 +128,14 @@ sre.Locale.nemeth = {
     // Oldstyle and Monospace: Currently ignored.
     // Normal: is currently just empty.
     'bold': '⠸',
-    'bold-fraktur': '⠸⠀⠸',
+    'bold-fraktur': ['⠸⠀⠸', germanCombiner],
     'bold-italic': '⠸⠨',
     'bold-script': '⠸⠈',
     'caligraphic': '⠈',
     'caligraphic-bold': '⠈⠸',
     'double-struck': '⠸',
     'double-struck-italic': '⠸⠨',
-    'fraktur': '⠸',
+    'fraktur': ['⠸', germanCombiner],
     'italic': '⠨',
     'monospace': '',
     'normal': '',
@@ -209,13 +234,13 @@ sre.Locale.nemeth = {
 
   ALPHABETS: {
     latinSmall: [
-      '⠁', '⠃', '⠉', '⠙', '⠑', '⠋', '⠛', '⠓', '⠊', '⠚', '⠅', '⠇', '⠍',
-      '⠝', '⠕', '⠏', '⠟', '⠗', '⠎', '⠞', '⠥', '⠧', '⠺', '⠭', '⠽', '⠵'
+      '⠰⠁', '⠰⠃', '⠰⠉', '⠰⠙', '⠰⠑', '⠰⠋', '⠰⠛', '⠰⠓', '⠰⠊', '⠰⠚', '⠰⠅', '⠰⠇', '⠰⠍',
+      '⠰⠝', '⠰⠕', '⠰⠏', '⠰⠟', '⠰⠗', '⠰⠎', '⠰⠞', '⠰⠥', '⠰⠧', '⠰⠺', '⠰⠭', '⠰⠽', '⠰⠵'
     ],
     latinCap: [
-      '⠠⠁', '⠠⠃', '⠠⠉', '⠠⠙', '⠠⠑', '⠠⠋', '⠠⠛', '⠠⠓', '⠠⠊', '⠠⠚',
-      '⠠⠅', '⠠⠇', '⠠⠍', '⠠⠝', '⠠⠕', '⠠⠏', '⠠⠟', '⠠⠗', '⠠⠎', '⠠⠞',
-      '⠠⠥', '⠠⠧', '⠠⠺', '⠠⠭', '⠠⠽', '⠠⠵'
+      '⠰⠠⠁', '⠰⠠⠃', '⠰⠠⠉', '⠰⠠⠙', '⠰⠠⠑', '⠰⠠⠋', '⠰⠠⠛', '⠰⠠⠓', '⠰⠠⠊', '⠰⠠⠚',
+      '⠰⠠⠅', '⠰⠠⠇', '⠰⠠⠍', '⠰⠠⠝', '⠰⠠⠕', '⠰⠠⠏', '⠰⠠⠟', '⠰⠠⠗', '⠰⠠⠎', '⠰⠠⠞',
+      '⠰⠠⠥', '⠰⠠⠧', '⠰⠠⠺', '⠰⠠⠭', '⠰⠠⠽', '⠰⠠⠵'
     ],
     greekSmall: [
       '⠨⠫',  // This is here as it is small.
@@ -245,11 +270,18 @@ sre.Locale.nemeth = {
   ALPHABET_PREFIXES: {
     capPrefix: {default: ''},
     smallPrefix: {default: ''},
-    digitPrefix: {default: '⠼'}
+    digitPrefix: {default: '⠼'},
+    languagePrefix: {
+      greek: '⠨',
+      english: '⠰',
+      german: '⠸',
+      hebrew: '⠠⠠',
+      number: '⠼'
+    },
   },
 
   ALPHABET_COMBINER: function(letter, font, cap) {
-    return font ? font + letter : letter;
+    return font ? (font + letter) : simpleEnglish(letter);
   }
 
 };

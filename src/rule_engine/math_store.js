@@ -220,7 +220,7 @@ sre.MathStore.prototype.evaluateDefault = function(node) {
  * numbers, etc. and creates the appropriate auditory descriptions.
  * @param {string} str A string.
  * @return {!Array.<sre.AuditoryDescription>} Messages for the math expression.
- * @private
+ * @protected
  */
 sre.MathStore.prototype.evaluateString_ = function(str) {
   var descs = new Array();
