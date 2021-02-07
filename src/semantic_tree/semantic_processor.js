@@ -412,7 +412,7 @@ sre.SemanticProcessor.prototype.getMixedNumbers_ = function(nodes) {
 
 
 /**
- * Seperates text from math content and combines them into a punctuated node,
+ * Separates text from math content and combines them into a punctuated node,
  * with dummy punctuation invisible comma.
  * @param {!Array.<sre.SemanticNode>} nodes The list of nodes.
  * @return {!Array.<sre.SemanticNode>} The new list of nodes.

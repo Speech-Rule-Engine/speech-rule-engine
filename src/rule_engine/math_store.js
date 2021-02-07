@@ -228,7 +228,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     // Nothing but whitespace: Ignore.
     return descs;
   }
-  // Case of numbers with whitespace for seperation.
+  // Case of numbers with whitespace for separation.
   var num = this.matchNumber_(str);
   if (num && num.length === str.length) {
     descs.push(this.evaluate_(num.number));

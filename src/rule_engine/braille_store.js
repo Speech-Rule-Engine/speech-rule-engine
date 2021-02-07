@@ -80,7 +80,7 @@ sre.BrailleStore.prototype.evaluateString_ = function(text) {
  *
  * Numbers, Large English, small English, anything else character by character.
  * @param {string} text The text string to translate.
- * @return {Array.<sre.AuditoryDescription>} The list of auditory descriptions.
+ * @return {!Array.<sre.AuditoryDescription>} The list of auditory descriptions.
  */
 sre.BrailleStore.prototype.evaluateNemeth_ = function(text) {
   return this.evaluateString_(text);
