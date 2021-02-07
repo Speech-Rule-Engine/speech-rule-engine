@@ -6,7 +6,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠆⠃⠑⠄"
+        "default": ""
       }
     },
     "key": "22BE"
@@ -15,7 +15,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠒⠶⠉⠄"
+        "default": ""
       }
     },
     "key": "237C"
@@ -24,7 +24,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠶⠉⠴⠄"
+        "default": ""
       }
     },
     "key": "27C0"
@@ -33,7 +33,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠔⠃⠄"
+        "default": ""
       }
     },
     "key": "299B"
@@ -42,7 +42,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠔⠉⠄"
+        "default": ""
       }
     },
     "key": "299C"
@@ -51,7 +51,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠔⠙⠄"
+        "default": ""
       }
     },
     "key": "299D"
@@ -60,7 +60,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠔⠑⠄"
+        "default": ""
       }
     },
     "key": "299E"
@@ -69,7 +69,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠔⠋⠄"
+        "default": ""
       }
     },
     "key": "299F"
@@ -78,7 +78,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠴⠄"
+        "default": ""
       }
     },
     "key": "29A0"
@@ -87,7 +87,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠂⠄"
+        "default": ""
       }
     },
     "key": "29A1"
@@ -96,7 +96,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠆⠄"
+        "default": ""
       }
     },
     "key": "29A2"
@@ -105,7 +105,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠒⠄"
+        "default": ""
       }
     },
     "key": "29A3"
@@ -114,7 +114,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠲⠄"
+        "default": ""
       }
     },
     "key": "29A4"
@@ -123,7 +123,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠢⠄"
+        "default": ""
       }
     },
     "key": "29A5"
@@ -132,7 +132,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠖⠄"
+        "default": ""
       }
     },
     "key": "29A6"
@@ -141,7 +141,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠶⠄"
+        "default": ""
       }
     },
     "key": "29A7"
@@ -150,7 +150,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠦⠄"
+        "default": ""
       }
     },
     "key": "29A8"
@@ -159,7 +159,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠔⠄"
+        "default": ""
       }
     },
     "key": "29A9"
@@ -168,7 +168,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠁⠄"
+        "default": ""
       }
     },
     "key": "29AA"
@@ -177,7 +177,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠃⠄"
+        "default": ""
       }
     },
     "key": "29AB"
@@ -186,7 +186,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠉⠄"
+        "default": ""
       }
     },
     "key": "29AC"
@@ -195,7 +195,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠙⠄"
+        "default": ""
       }
     },
     "key": "29AD"
@@ -204,7 +204,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠑⠄"
+        "default": ""
       }
     },
     "key": "29AE"
@@ -213,7 +213,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠔⠁⠋⠄"
+        "default": ""
       }
     },
     "key": "29AF"

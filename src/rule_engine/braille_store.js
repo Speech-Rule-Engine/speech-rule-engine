@@ -43,27 +43,49 @@ goog.inherits(sre.BrailleStore, sre.MathStore);
  */
 sre.BrailleStore.prototype.evaluateDefault = function(node) {
   var rest = node.textContent.slice(0);
-  var descs = new Array();
   if (rest.match(/^\s+$/)) {
     // Nothing but whitespace: Ignore.
-    return descs;
+    return [];
   }
-  while (rest) {
-    var chr = rest[0];
+  return this.locale === 'nemeth' ?
+    this.evaluateNemeth_(rest) : this.evaluateString_(rest);
+};
+
+
+/**
+ * @override
+ */
+sre.BrailleStore.prototype.evaluateString_ = function(text) {
+  let descs = [];
+  while (text) {
+    var chr = text[0];
     var code = chr.charCodeAt(0);
     if (0xD800 <= code && code <= 0xDBFF &&
-        rest.length > 1 && !isNaN(rest.charCodeAt(1))) {
+        text.length > 1 && !isNaN(text.charCodeAt(1))) {
       descs.push(sre.AuditoryDescription.create(
-          {text: rest.slice(0, 2)}, {adjust: true, translate: true}));
-      rest = rest.substring(2);
+          {text: text.slice(0, 2)}, {adjust: true, translate: true}));
+      text = text.substring(2);
     } else {
       descs.push(sre.AuditoryDescription.create(
           {text: chr}, {adjust: true, translate: true}));
-      rest = rest.substring(1);
+      text = text.substring(1);
     }
   }
   return descs;
 };
+
+
+/**
+ * Translates a string wrt. to Nemeth conventions in the order of:
+ *
+ * Numbers, Large English, small English, anything else character by character.
+ * @param {string} text The text string to translate.
+ * @return {!Array.<sre.AuditoryDescription>} The list of auditory descriptions.
+ */
+sre.BrailleStore.prototype.evaluateNemeth_ = function(text) {
+  return this.evaluateString_(text);
+};
+
 
 
 /**

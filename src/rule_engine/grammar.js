@@ -255,9 +255,16 @@ sre.Grammar.translateString_ = function(text) {
     return sre.Grammar.translateUnit_(text);
   }
   var engine = sre.Engine.getInstance();
-  return engine.evaluator(text, engine.dynamicCstr) || text;
+  var result = engine.evaluator(text, engine.dynamicCstr);
+  return result === null ? text : result;
 };
 
+
+/**
+ * Unit translation using grammatical numbering from mappings directly.
+ * @param {string} text The text to translate.
+ * @return {string} The translated result.
+ */
 sre.Grammar.translateUnit_ = function(text) {
   text = sre.Grammar.prepareUnit_(text);
   var engine = sre.Engine.getInstance();
