@@ -1540,7 +1540,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "vulgar-fraction",
       "default",
-      "[t] CSFvulgarFraction",
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")",
       "self::fraction",
       "@role=\"vulgar\"",
       "CQFvulgarFractionSmall"
@@ -1593,7 +1593,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "simple-vulgar-fraction",
       "Fraction_Ordinal",
-      "[t] CSFvulgarFraction",
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")",
       "self::fraction",
       "@role=\"vulgar\""
     ],
@@ -1622,7 +1622,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "simple-vulgar-fraction",
       "Fraction_EndFrac",
-      "[t] CSFvulgarFraction",
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")",
       "self::fraction",
       "@role=\"vulgar\"",
       "contains(@annotation, \"clearspeak:simple\")",

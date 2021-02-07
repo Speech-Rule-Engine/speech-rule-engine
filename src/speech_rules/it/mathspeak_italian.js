@@ -488,7 +488,7 @@ sre.MathspeakItalian = {
       "Rule",
       "vulgar-fraction",
       "default",
-      "[t] CSFvulgarFraction",
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")",
       "self::fraction",
       "@role=\"vulgar\"",
       "CQFvulgarFractionSmall"
