@@ -4,7 +4,7 @@ node_js:
 sudo: false
 branches:
   except:
-  - fix_brackeing
+  - fix_bracketting
 install:
   - npm install
 git:
