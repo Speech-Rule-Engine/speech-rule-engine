@@ -568,15 +568,6 @@ sre.ClearspeakItalian = {
     ],
     [
       "Rule",
-      "function-article",
-      "default",
-      "[t] \"la\"; [n] text()",
-      "self::function",
-      "@role=\"prefix function\"",
-      "contains(@grammar, \"addArticle\")"
-    ],
-    [
-      "Rule",
       "appl",
       "default",
       "[n] children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
@@ -615,6 +606,15 @@ sre.ClearspeakItalian = {
       "[n] children/*[1]; [t] \"di\"; [n] children/*[2]",
       "self::appl",
       "@role=\"prefix function\""
+    ],
+    [
+      "Rule",
+      "function-prefix-det",
+      "default",
+      "[n] children/*[1]; [t] \"della\"; [n] children/*[2]",
+      "self::appl",
+      "@role=\"prefix function\"",
+      "children/*[1][text()=\"det\"]"
     ],
     [
       "Rule",
@@ -783,7 +783,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "function-prefix-inverse",
       "Trig_Reciprocal",
-      "[p] (pause:\"short\"); [t] \"il reciproco del\"; [n] children/*[1]/children/*[1];[n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [t] \"il reciproco del\"; [n] children/*[1]/children/*[1]; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[1])=\"superscript\"",
@@ -2878,7 +2878,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "decimal-period",
       "default",
-      "[t] \"decimale periodico\"; [n] children/*[1] (grammar:spaceout); [t] \"virgola\"; [n] children/*[3]/children/*[1] (grammar:spaceout); [t] \"peridico\"",
+      "[t] \"decimale periodico\"; [n] children/*[1] (grammar:spaceout); [t] \"virgola\"; [n] children/*[3]/children/*[1] (grammar:spaceout); [t] \"periodico\"",
       "self::punctuated",
       "@role=\"sequence\"",
       "count(./content/*)=1",
@@ -2894,7 +2894,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "decimal-period",
       "default",
-      "[t] \"il decimale che si ripete\"; [n] children/*[1] (grammar:spaceout); [t] \"seguito di cifre ripetute\"; [n] children/*[2]/children/*[1] (grammar:spaceout)",
+      "[t] \"decimale periodico\"; [n] children/*[1] (grammar:spaceout); [t] \"seguito da\"; [n] children/*[2]/children/*[1] (grammar:spaceout); [t] \"periodico\"",
       "self::infixop",
       "@role=\"implicit\"",
       "count(./children/*)=2",
@@ -2904,39 +2904,6 @@ sre.ClearspeakItalian = {
       "children/*[2][@role=\"integer\"]",
       "children/*[2]/children/*[2][@role=\"overaccent\"]",
       "children/*[2]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
-    ],
-    [
-      "Rule",
-      "decimal-period-singular",
-      "default",
-      "[t] \"il decimale che si ripete\"; [n] children/*[1] (grammar:spaceout); [t] \"punto seguito da cifra ripetuta\"; [n] children/*[3]/children/*[1] (grammar:spaceout)",
-      "self::punctuated",
-      "@role=\"sequence\"",
-      "count(./content/*)=1",
-      "./content/*[1][@role=\"fullstop\"]",
-      "name(children/*[1])=\"number\"",
-      "children/*[1][@role=\"integer\"]",
-      "name(children/*[3])=\"overscore\"",
-      "children/*[3][@role=\"integer\"]",
-      "children/*[3]/children/*[2][@role=\"overaccent\"]",
-      "children/*[3]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]",
-      "string-length(./children/*[3]/children/*[1]/text())=1"
-    ],
-    [
-      "Rule",
-      "decimal-period-singular",
-      "default",
-      "[t] \"il decimale che si ripete\"; [n] children/*[1] (grammar:spaceout); [t] \"seguito da cifra ripetuta\"; [n] children/*[2]/children/*[1] (grammar:spaceout)",
-      "self::infixop",
-      "@role=\"implicit\"",
-      "count(./children/*)=2",
-      "name(children/*[1])=\"number\"",
-      "children/*[1][@role=\"float\"]",
-      "name(children/*[2])=\"overscore\"",
-      "children/*[2][@role=\"integer\"]",
-      "children/*[2]/children/*[2][@role=\"overaccent\"]",
-      "children/*[2]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]",
-      "string-length(./children/*[2]/children/*[1]/text())=1"
     ],
     [
       "Rule",
