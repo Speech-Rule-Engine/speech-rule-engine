@@ -204,7 +204,7 @@
     "key": "005F",
     "mappings": {
       "default": {
-        "default": "linea bassa"
+        "default": "barra sotto"
       }
     },
     "category": "Pc"
@@ -357,7 +357,7 @@
     "key": "00AF",
     "mappings": {
       "default": {
-        "default": "segno di vocale lunga"
+        "default": "barra sopra"
       }
     },
     "category": "Sk"
@@ -493,7 +493,7 @@
     "key": "02D8",
     "mappings": {
       "default": {
-        "default": "segno di vocale corta"
+        "default": "breve"
       }
     },
     "category": "Sk"
@@ -7154,7 +7154,7 @@
     "key": "FE4D",
     "mappings": {
       "default": {
-        "default": "linea bassa tratteggiata"
+        "default": "barra sottra tratteggiata"
       }
     }
   },

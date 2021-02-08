@@ -249,7 +249,7 @@
     "key": "0101",
     "mappings": {
       "default": {
-        "default": "a con segno di vocale lunga"
+        "default": "a con barra sopra"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "0113",
     "mappings": {
       "default": {
-        "default": "e con segno di vocale lunga"
+        "default": "e con barra sopra"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "012B",
     "mappings": {
       "default": {
-        "default": "i con segno di vocale lunga"
+        "default": "i con barra sopra"
       }
     },
     "category": "Ll"
@@ -537,7 +537,7 @@
     "key": "014D",
     "mappings": {
       "default": {
-        "default": "o con segno di vocale lunga"
+        "default": "o con barra sopra"
       }
     },
     "category": "Ll"
@@ -654,7 +654,7 @@
     "key": "016B",
     "mappings": {
       "default": {
-        "default": "u con segno di vocale lunga"
+        "default": "u con barra sopra"
       }
     },
     "category": "Ll"
@@ -1122,7 +1122,7 @@
     "key": "1E21",
     "mappings": {
       "default": {
-        "default": "g con segno di vocale lunga"
+        "default": "g con barra sopra"
       }
     },
     "category": "Ll"

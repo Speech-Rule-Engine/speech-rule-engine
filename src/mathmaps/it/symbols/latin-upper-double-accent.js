@@ -114,7 +114,7 @@
     "key": "1E14",
     "mappings": {
       "default": {
-        "default": "e maiuscola con segno di vocale lunga e accento grave"
+        "default": "e maiuscola con barra sopra e accento grave"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "1E16",
     "mappings": {
       "default": {
-        "default": "e maiuscola con segno di vocale lunga e accento acuto"
+        "default": "e maiuscola con barra sopra e accento acuto"
       }
     },
     "category": "Lu"
@@ -150,7 +150,7 @@
     "key": "1E38",
     "mappings": {
       "default": {
-        "default": "l maiuscola con punto sotto e con segno di vocale lunga"
+        "default": "l maiuscola con punto sotto e con barra sopra"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "1E50",
     "mappings": {
       "default": {
-        "default": "o maiuscola con segno di vocale lunga ed accento grave"
+        "default": "o maiuscola con barra sopra ed accento grave"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "1E52",
     "mappings": {
       "default": {
-        "default": "o maiuscola con segno di vocale lunga ed accento acuto"
+        "default": "o maiuscola con barra sopra ed accento acuto"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "1E5C",
     "mappings": {
       "default": {
-        "default": "r maiuscola con punto sotto e con segno di vocale lunga"
+        "default": "r maiuscola con punto sotto e con barra sopra"
       }
     },
     "category": "Lu"
@@ -240,7 +240,7 @@
     "key": "1E7A",
     "mappings": {
       "default": {
-        "default": "u maiuscola con segno di vocale lunga e dieresi"
+        "default": "u maiuscola con barra sopra e dieresi"
       }
     },
     "category": "Lu"

@@ -103,6 +103,9 @@ sre.Numbers.it.numberToWords = function(number) {
   if (number >= Math.pow(10, 36)) {
     return number.toString();
   }
+  if (number === 1 && sre.Grammar.getInstance().getParameter('fraction')) {
+    return 'un';
+  }
   var pos = 0;
   var str = '';
   while (number > 0) {

@@ -488,7 +488,7 @@ sre.MathspeakItalian = {
       "Rule",
       "vulgar-fraction",
       "default",
-      "[t] CSFvulgarFraction",
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")",
       "self::fraction",
       "@role=\"vulgar\"",
       "CQFvulgarFractionSmall"
@@ -993,9 +993,26 @@ sre.MathspeakItalian = {
     ],
     [
       "Rule",
+      "squared-male",
+      "default",
+      "[t] \"quadrato\"",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")"
+    ],
+    [
+      "Rule",
+      "squared-female",
+      "default",
+      "[t] \"quadrata\"",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")",
+      "parent::*/parent::*[@role=\"simple function\"]"
+    ],
+    [
+      "Rule",
       "square",
       "default",
-      "[n] children/*[1]; [t] \"quadrato\"",
+      "[n] children/*[1]; [n] children/*[2] (grammar:squared)",
       "self::superscript",
       "children/*[2]",
       "children/*[2][text()=2]",
@@ -1028,7 +1045,7 @@ sre.MathspeakItalian = {
       "Rule",
       "cube",
       "default",
-      "[n] children/*[1]; [t] \"cubico\"",
+      "[n] children/*[1]; [t] \"cubo\"",
       "self::superscript",
       "children/*[2]",
       "children/*[2][text()=3]",
@@ -1315,7 +1332,7 @@ sre.MathspeakItalian = {
       "Rule",
       "overbar",
       "default",
-      "[n] children/*[1]; [t] \"barra sopra\"",
+      "[n] children/*[1]; [t] \"con barra sopra\"",
       "self::overscore",
       "contains(@role,\"letter\")",
       "children/*[2][@role=\"overaccent\"]",
@@ -1326,7 +1343,7 @@ sre.MathspeakItalian = {
       "overbar",
       "default",
       "brief",
-      "[n] children/*[1]; [t] \"barra sopra\""
+      "[n] children/*[1]; [t] \"con barra sopra\""
     ],
     [
       "SpecializedRule",
@@ -1338,7 +1355,7 @@ sre.MathspeakItalian = {
       "Rule",
       "underbar",
       "default",
-      "[n] children/*[1]; [t] \"sottobarra\"",
+      "[n] children/*[1]; [t] \"con barra sotto\"",
       "self::underscore",
       "contains(@role,\"letter\")",
       "children/*[2][@role=\"underaccent\"]",
@@ -1349,7 +1366,7 @@ sre.MathspeakItalian = {
       "underbar",
       "default",
       "brief",
-      "[n] children/*[1]; [t] \"sottobarra\""
+      "[n] children/*[1]; [t] \"con barra sotto\""
     ],
     [
       "SpecializedRule",
@@ -1361,7 +1378,7 @@ sre.MathspeakItalian = {
       "Rule",
       "overtilde",
       "default",
-      "[n] children/*[1]; [t] \"tilde sopra\"",
+      "[n] children/*[1]; [t] \"con tilde sopra\"",
       "self::overscore",
       "children/*[2][@role=\"overaccent\"]",
       "contains(@role,\"letter\")",
@@ -1372,7 +1389,7 @@ sre.MathspeakItalian = {
       "overtilde",
       "default",
       "brief",
-      "[n] children/*[1]; [t] \"tilde sopra\""
+      "[n] children/*[1]; [t] \"con tilde sopra\""
     ],
     [
       "SpecializedRule",
@@ -1384,7 +1401,7 @@ sre.MathspeakItalian = {
       "Rule",
       "undertilde",
       "default",
-      "[n] children/*[1]; [t] \"tilde sotto\"",
+      "[n] children/*[1]; [t] \"con tilde sotto\"",
       "self::underscore",
       "contains(@role,\"letter\")",
       "children/*[2][@role=\"underaccent\"]",
@@ -1395,7 +1412,7 @@ sre.MathspeakItalian = {
       "undertilde",
       "default",
       "brief",
-      "[n] children/*[1]; [t] \"tilde sotto\""
+      "[n] children/*[1]; [t] \"con tilde sotto\""
     ],
     [
       "SpecializedRule",
