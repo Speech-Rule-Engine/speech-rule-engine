@@ -38,9 +38,9 @@ sre.MathStore = function() {
   sre.MathStore.base(this, 'constructor');
 
   /**
-   * @type {Array.<function(sre.MathStore)>}
+   * @type {Array.<string>}
    */
-  this.initializer = [];
+  this.annotators = [];
 
   this.parseMethods['Alias'] = goog.bind(this.defineRuleAlias, this);
   this.parseMethods['Aliases'] =
@@ -59,11 +59,19 @@ goog.inherits(sre.MathStore, sre.BaseRuleStore);
  */
 sre.MathStore.prototype.initialize = function() {
   if (this.initialized) return;
-  for (var i = 0, func; func = this.initializer[i]; i++) {
-    func(this);
-  }
+  this.annotations();
   this.setSpeechRules(this.trie.collectRules());
   this.initialized = true;
+};
+
+
+/**
+ * Activates annotators.
+ */
+sre.MathStore.prototype.annotations = function() {
+  for (var i = 0, annotator; annotator = this.annotators[i]; i++) {
+    sre.SemanticAnnotations.getInstance().activate(this.domain, annotator);
+  }
 };
 
 
@@ -153,11 +161,11 @@ sre.MathStore.prototype.defineRulesAlias = function(name, query, var_args) {
  * Adds a new speech rule as alias of the given rule.
  * @param {sre.SpeechRule} rule The existing rule.
  * @param {string} query Precondition query of the rule.
- * @param {Array.<string>} cstrList List of additional constraints.
+ * @param {!Array.<string>} cstrList List of additional constraints.
  * @private
  */
 sre.MathStore.prototype.addAlias_ = function(rule, query, cstrList) {
-  var prec = new sre.SpeechRule.Precondition(query, cstrList);
+  var prec = this.parsePrecondition(query, cstrList);
   var newRule = new sre.SpeechRule(
       rule.name, rule.dynamicCstr, prec, rule.action);
   newRule.name = rule.name;
@@ -212,7 +220,7 @@ sre.MathStore.prototype.evaluateDefault = function(node) {
  * numbers, etc. and creates the appropriate auditory descriptions.
  * @param {string} str A string.
  * @return {!Array.<sre.AuditoryDescription>} Messages for the math expression.
- * @private
+ * @protected
  */
 sre.MathStore.prototype.evaluateString_ = function(str) {
   var descs = new Array();
@@ -220,7 +228,7 @@ sre.MathStore.prototype.evaluateString_ = function(str) {
     // Nothing but whitespace: Ignore.
     return descs;
   }
-  // Case of numbers with whitespace for seperation.
+  // Case of numbers with whitespace for separation.
   var num = this.matchNumber_(str);
   if (num && num.length === str.length) {
     descs.push(this.evaluate_(num.number));
@@ -281,7 +289,7 @@ sre.MathStore.prototype.matchNumber_ = function(str) {
   var isEn = enNum && enNum[0] === str;
   var isLoc = (locNum && locNum[0] === str) || !isEn;
   if (isLoc) {
-    return {number: locNum[0], length: locNum[0].length};
+    return locNum ? {number: locNum[0], length: locNum[0].length} : null;
   }
   var number = enNum[0].
       replace(new RegExp(sre.Locale.en.REGEXP.DIGIT_GROUP, 'g'), 'X').
@@ -310,6 +318,5 @@ sre.MathStore.prototype.evaluate_ = function(text) {
  */
 sre.MathStore.prototype.parse = function(ruleSet) {
   sre.MathStore.base(this, 'parse', ruleSet);
-  this.initializer = /** @type {Array.<function(sre.MathStore)>} */(
-      ruleSet['initialize'] || []);
+  this.annotators = /** @type {Array.<string>} */(ruleSet['annotators'] || []);
 };

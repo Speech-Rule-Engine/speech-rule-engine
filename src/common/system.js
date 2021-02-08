@@ -54,7 +54,7 @@ goog.addSingletonGetter(sre.System);
 // These are all API interface functions. Therefore, avoid any usage of "this"
 // in the code.
 /**
- * Method to setup and intialize the speech rule engine. Currently the feature
+ * Method to setup and initialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
  * @param {Object.<boolean|string>} feature An object describing some
  *     setup features.

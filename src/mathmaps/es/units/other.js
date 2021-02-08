@@ -16,30 +16,5 @@
       }
     },
     "category": "other"
-  },
-  {
-    "key": "sq",
-    "names": [
-      "sq",
-      "sq."
-    ],
-    "mappings": {
-      "default": {
-        "default": "al cuadrado"
-      }
-    },
-    "category": "other"
-  },
-  {
-    "key": "ha",
-    "names": [
-      "ha"
-    ],
-    "mappings": {
-      "default": {
-        "default": "hectarea"
-      }
-    },
-    "category": "other"
   }
 ]

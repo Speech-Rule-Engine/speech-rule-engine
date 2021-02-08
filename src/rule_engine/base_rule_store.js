@@ -49,11 +49,6 @@ sre.BaseRuleStore = function() {
    */
   this.context = new sre.SpeechRuleContext();
 
-  // TODO: Temporary shortcuts for ease of goog.bind in store definitions.
-  this.customQueries = this.context.customQueries;
-  this.customStrings = this.context.customStrings;
-  this.contextFunctions = this.context.contextFunctions;
-
   /**
    * Set of speech rules in the store.
    * @type {!Array.<sre.SpeechRule>}
@@ -93,9 +88,9 @@ sre.BaseRuleStore = function() {
 
   /**
    * Default domain.
-   * @type {?string}
+   * @type {string}
    */
-  this.domain = null;
+  this.domain = '';
 
   /**
    * @type {boolean}
@@ -103,7 +98,8 @@ sre.BaseRuleStore = function() {
   this.initialized = false;
 
   this.parseMethods = {
-    'Rule': goog.bind(this.defineRule, this)
+    'Rule': goog.bind(this.defineRule, this),
+    'Generator': goog.bind(this.generateRules, this)
   };
 
 };
@@ -118,9 +114,21 @@ sre.BaseRuleStore.prototype.lookupRule = function(node, dynamic) {
        node.nodeType != sre.DomUtil.NodeType.TEXT_NODE)) {
     return null;
   }
-  var matchingRules = this.trie.lookupRules(node, dynamic.allProperties());
+  var matchingRules = this.lookupRules(node, dynamic);
   return (matchingRules.length > 0) ?
       this.pickMostConstraint_(dynamic, matchingRules) : null;
+};
+
+
+/**
+ * Retrieves a list of applicable rule for the given node.
+ * @param {!Node} node A node.
+ * @param {!sre.DynamicCstr} dynamic Additional dynamic
+ *     constraints. These are matched against properties of a rule.
+ * @return {Array.<sre.SpeechRule>} All applicable speech rules.
+ */
+sre.BaseRuleStore.prototype.lookupRules = function(node, dynamic) {
+  return this.trie.lookupRules(node, dynamic.allProperties());
 };
 
 
@@ -131,9 +139,10 @@ sre.BaseRuleStore.prototype.defineRule = function(
     name, dynamic, action, prec, cstr) {
   var rule;
   try {
+    // TODO: Have a parser that respects generators.
     var postc = sre.SpeechRule.Action.fromString(action);
     var cstrList = Array.prototype.slice.call(arguments, 4);
-    var fullPrec = new sre.SpeechRule.Precondition(prec, cstrList);
+    var fullPrec = this.parsePrecondition(prec, cstrList);
     var dynamicCstr = this.parseCstr(dynamic);
     rule = new sre.SpeechRule(name, dynamicCstr, fullPrec, postc);
   } catch (err) {
@@ -245,37 +254,6 @@ sre.BaseRuleStore.prototype.removeDuplicates = function(rule) {
 };
 
 
-// TODO: Move that into the rule parsing and give it a strength parameter.
-//       Separate into query and initial pre-condition to keep trie slender.
-/**
- * Compare two rules by relative strength of the query constraint.
- * @param {sre.SpeechRule} r1 Rule 1.
- * @param {sre.SpeechRule} r2 Rule 2.
- * @return {number} -1, 0, 1 depending on the comparison.
- * @private
- */
-sre.BaseRuleStore.strongQuery_ = function(r1, r2) {
-  var query1 = r1.precondition.query;
-  var query2 = r2.precondition.query;
-  var strong1 = query1.match(/^self::\*\[@[\w-]+\]$/);
-  var strong2 = query2.match(/^self::\*\[@[\w-]+\]$/);
-  if (strong1 && strong2) {
-    return 0;
-  }
-  if (strong1) {
-    var stronger2 = query2.match(/^self::[\w-]+\[@[\w-]+\]$/);
-    return stronger2 ? 1 : -1;
-  }
-  if (strong2) {
-    var stronger1 = query1.match(/^self::[\w-]+\[@[\w-]+\]$/);
-    return stronger1 ? -1 : 1;
-  }
-  stronger1 = query1.match(/^self::[\w-]+\[@[\w-]+\]$/);
-  stronger2 = query2.match(/^self::[\w-]+\[@[\w-]+\]$/);
-  return (stronger1 && stronger2) ? 0 : (stronger1 ? -1 : (stronger2 ? 1 : 0));
-};
-
-
 /**
  * Picks the result of the most constraint rule by prefering those:
  * 1) that best match the dynamic constraints.
@@ -292,7 +270,8 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
         return comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
             // When same number of dynamic constraint attributes matches for
             // both rules, compare length of static constraints.
-            sre.BaseRuleStore.strongQuery_(r1, r2) ||
+            // sre.BaseRuleStore.strongQuery_(r1, r2) ||
+            sre.BaseRuleStore.priority_(r1, r2) ||
             (r2.precondition.constraints.length -
              r1.precondition.constraints.length);}
   );
@@ -349,6 +328,21 @@ sre.BaseRuleStore.comparePreconditions_ = function(rule1, rule2) {
 
 
 /**
+ * Compares priority of two rules.
+ * @param {sre.SpeechRule} rule1 The first speech rule.
+ * @param {sre.SpeechRule} rule2 The second speech rule.
+ * @return {number} -1, 0, 1 depending on the comparison.
+ * @private
+ */
+sre.BaseRuleStore.priority_ = function(rule1, rule2) {
+  var priority1 = rule1.precondition.priority;
+  var priority2 = rule2.precondition.priority;
+  return (priority1 === priority2) ? 0 :
+    ((priority1 > priority2) ? -1 : 1);
+};
+
+
+/**
  * @return {!Array.<sre.SpeechRule>} Set of all speech rules in the store.
  */
 sre.BaseRuleStore.prototype.getSpeechRules = function() {
@@ -380,6 +374,34 @@ sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
 
 
 /**
+ * Parses precondition by resolving generator rules.
+ * @param {string} query The query constraint.
+ * @param {!Array.<string>} rest The rest constraints.
+ * @return {sre.SpeechRule.Precondition} The new precondition.
+ */
+sre.BaseRuleStore.prototype.parsePrecondition = function(query, rest) {
+  var queryCstr = this.parsePrecondition_(query);
+  query = queryCstr[0];
+  var restCstr = queryCstr.slice(1);
+  for (var cstr of rest) {
+    restCstr = restCstr.concat(this.parsePrecondition_(cstr));
+  }
+  return new sre.SpeechRule.Precondition(query, restCstr);
+};
+
+
+/**
+ * Resolves a single precondition constraint.
+ * @param {string} cstr The precondition constraint.
+ * @return {Array.<string>} Array of constraints, possibly generated.
+ */
+sre.BaseRuleStore.prototype.parsePrecondition_ = function(cstr) {
+  var generator = this.context.customGenerators.lookup(cstr);
+  return generator ? generator() : [cstr];
+};
+
+
+/**
  * Parses a rule set definition.
  * @param {Object.<string|Array<*>>} ruleSet The
  *     definition object.
@@ -406,3 +428,17 @@ sre.BaseRuleStore.prototype.parseRules = function(rules) {
     }
   }
 };
+
+
+/**
+ * Parses rules generated by the given generator function.
+ * @param {string} generator Name of the generator function.
+ */
+sre.BaseRuleStore.prototype.generateRules = function(generator) {
+  var method = this.context.customGenerators.lookup(generator);
+  if (method) {
+    method(this);
+  }
+};
+
+

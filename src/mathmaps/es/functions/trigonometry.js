@@ -128,7 +128,8 @@
   {
     "key": "arcsin",
     "names": [
-      "arcsin"
+      "arcsin",
+      "arcsen"
     ],
     "mappings": {
       "default": {

@@ -3,54 +3,50 @@
     "locale": "de"
   },
   {"category": "time",
+   "si": true,
    "mappings": {
      "default": {
-       "default": "Nanosekunde"
-     }
-   },
-   "key": "ns",
-   "names": ["ns"]
-  },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "Microsekunde"
-     }
-   },
-   "key": "µs",
-   "names": ["µs"]
-  },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "Millisekunde"
-     }
-   },
-   "key": "ms",
-   "names": ["ms"]
-  },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "Sekunde"
+       "default": "Sekunde",
+       "plural": "Sekunden"
      }
    },
    "key": "s",
    "names": ["s"]
   },
+    {"category": "time",
+   "mappings": {
+     "default": {
+       "default": "Sekunde",
+       "plural": "Sekunden"
+     }
+   },
+   "key": "″",
+   "names": ["″"]
+    },
   {"category": "time",
    "mappings": {
      "default": {
-       "default": "Minute"
+       "default": "Minute",
+       "plural": "Minuten"
      }
    },
    "key": "min",
-   "names": ["min"]
+   "names": ["min", "′"]
   },
   {"category": "time",
    "mappings": {
      "default": {
-       "default": "Stunde"
+       "default": "Grad"
+     }
+   },
+   "key": "°",
+   "names": ["°"]
+  },
+  {"category": "time",
+   "mappings": {
+     "default": {
+       "default": "Stunde",
+       "plural": "Stunden"
      }
    },
    "key": "h",

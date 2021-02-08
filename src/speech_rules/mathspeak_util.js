@@ -708,7 +708,7 @@ sre.MathspeakUtil.determinantIsSimple = function(node) {
 /**
  * Generate constraints for the specialised baseline rules of relation
  * sequences.
- * @return {string} The constraint string.
+ * @return {Array.<string>} The constraint strings.
  */
 sre.MathspeakUtil.generateBaselineConstraint = function() {
   var ignoreElems = ['subscript', 'superscript', 'tensor'];
@@ -733,10 +733,10 @@ sre.MathspeakUtil.generateBaselineConstraint = function() {
         mainList.map(function(elem) {return brk + '/' + elem;}));
   }
   var postfix = notify(breakCstrs.join(' | '));
-  return [prefix, middle, postfix].join(' and ');
+  return [[prefix, middle, postfix].join(' and ')];
 };
 
-
+  
 /**
  * Removes parentheses around a label.
  * @param {!Node} node The label to be processed.
@@ -825,7 +825,6 @@ sre.MathspeakUtil.generateTensorRules = function(store) {
   //
   //  lsub lsuper base rsub rsuper
   var defineRule = goog.bind(store.defineRule, store);
-  var defineRulesAlias = goog.bind(store.defineRulesAlias, store);
   var defineSpecialisedRule = goog.bind(store.defineSpecialisedRule, store);
   var constellations = ['11111', '11110', '11101', '11100',
                         '10111', '10110', '10101', '10100',
@@ -849,23 +848,16 @@ sre.MathspeakUtil.generateTensorRules = function(store) {
     verbStr += '; [t]' + baselineStr + 'Verbose';
     briefStr += '; [t]' + baselineStr + 'Brief';
     name = name + '-baseline';
-    verbList = [name, 'default', verbStr, 'self::tensor',
-                'following-sibling::*'].
+    var cstr = '((.//*[not(*)])[last()]/@id)!=(((.//ancestor::fraction|' +
+        'ancestor::root|ancestor::sqrt|ancestor::cell|ancestor::line|' +
+        'ancestor::stree)[1]//*[not(*)])[last()]/@id)';
+    verbList = [name, 'default', verbStr, 'self::tensor', cstr].
         concat(components);
-    briefList = [name, 'brief', briefStr, 'self::tensor',
-                 'following-sibling::*'].
+    briefList = [name, 'brief', briefStr, 'self::tensor', cstr].
         concat(components);
     defineRule.apply(null, verbList);
     defineRule.apply(null, briefList);
     defineSpecialisedRule(name, 'brief', 'sbrief');
-    // Rules without neighbour but baseline.
-    var aliasList = [name, 'self::tensor', 'not(following-sibling::*)',
-                     'ancestor::fraction|ancestor::punctuated|' +
-                     'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
-                     'ancestor::relseq|ancestor::multirel|' +
-                     '@embellished'].
-        concat(components);
-    defineRulesAlias.apply(null, aliasList);
   }
 };
 

@@ -1,10 +1,10 @@
 language: node_js
 node_js:
-  - stable
+  - node
 sudo: false
 branches:
   except:
-  - fix_brackeing
+  - fix_bracketting
 install:
   - npm install
 git:

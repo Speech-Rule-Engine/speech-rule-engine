@@ -21,23 +21,31 @@
 goog.provide('sre.SpeechRuleStores');
 
 goog.require('sre.BaseRuleStore');
+goog.require('sre.ClearspeakEnglish');
 goog.require('sre.ClearspeakFrench');
 goog.require('sre.ClearspeakGerman');
+goog.require('sre.ClearspeakItalian');
 goog.require('sre.ClearspeakRules');
 goog.require('sre.EmacspeakRules');
 goog.require('sre.MathspeakFrench');
 goog.require('sre.MathspeakGerman');
+goog.require('sre.MathspeakItalian');
+goog.require('sre.MathspeakEnglish');
 goog.require('sre.MathspeakRules');
 goog.require('sre.MathspeakSpanish');
 goog.require('sre.NemethRules');
+goog.require('sre.OtherRules');
+goog.require('sre.PrefixEnglish');
 goog.require('sre.PrefixFrench');
 goog.require('sre.PrefixGerman');
+goog.require('sre.PrefixItalian');
 goog.require('sre.PrefixRules');
 goog.require('sre.PrefixSpanish');
 goog.require('sre.SemanticTreeRules');
+goog.require('sre.SummaryEnglish');
 goog.require('sre.SummaryFrench');
 goog.require('sre.SummaryGerman');
-goog.require('sre.SummaryRules');
+goog.require('sre.SummaryItalian');
 goog.require('sre.SummarySpanish');
 
 
@@ -49,20 +57,24 @@ sre.SpeechRuleStores.RULE_SETS_ = {
   'SemanticTreeRules': sre.SemanticTreeRules,
   'MathspeakFrench': sre.MathspeakFrench,
   'MathspeakGerman': sre.MathspeakGerman,
-  'MathspeakRules': sre.MathspeakRules,
+  'MathspeakItalian': sre.MathspeakItalian,
+  'MathspeakEnglish': sre.MathspeakEnglish,
   'MathspeakSpanish': sre.MathspeakSpanish,
   'NemethRules': sre.NemethRules,
   'ClearspeakFrench': sre.ClearspeakFrench,
   'ClearspeakGerman': sre.ClearspeakGerman,
-  'ClearspeakRules': sre.ClearspeakRules,
+  'ClearspeakItalian': sre.ClearspeakItalian,
+  'ClearspeakEnglish': sre.ClearspeakEnglish,
   'EmacspeakRules': sre.EmacspeakRules,
+  'SummaryEnglish': sre.SummaryEnglish,
   'SummaryFrench': sre.SummaryFrench,
   'SummaryGerman': sre.SummaryGerman,
-  'SummaryRules': sre.SummaryRules,
+  'SummaryItalian': sre.SummaryItalian,
   'SummarySpanish': sre.SummarySpanish,
+  'PrefixEnglish': sre.PrefixEnglish,
   'PrefixFrench': sre.PrefixFrench,
   'PrefixGerman': sre.PrefixGerman,
-  'PrefixRules': sre.PrefixRules,
+  'PrefixItalian': sre.PrefixItalian,
   'PrefixSpanish': sre.PrefixSpanish
 };
 
@@ -82,5 +94,16 @@ sre.SpeechRuleStores.availableSets = function() {
  */
 sre.SpeechRuleStores.getConstructor = function(name) {
   var set = sre.SpeechRuleStores.RULE_SETS_[name];
+  if (set && !set.functions) {
+    set.functions = sre.SpeechRules.getInstance().getStore(
+      set.locale, set.modality, set.domain);
+  }
   return set ? set : null;
 };
+
+
+sre.MathspeakRules();
+sre.ClearspeakRules();
+sre.PrefixRules();
+sre.OtherRules();
+sre.BrailleRules();

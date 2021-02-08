@@ -60,7 +60,7 @@
     "key": "0027",
     "mappings": {
       "default": {
-        "default": "Hochkomma"
+        "default": "Strich"
       }
     },
     "category": "Po"
@@ -385,7 +385,7 @@
     "key": "00B4",
     "mappings": {
       "default": {
-        "default": "acute accent"
+        "default": "Acuteakzent"
       }
     },
     "category": "Sk"
@@ -394,7 +394,7 @@
     "key": "00B5",
     "mappings": {
       "default": {
-        "default": "micro sign"
+        "default": "Mikrozeichen"
       }
     },
     "category": "Ll"
@@ -471,6 +471,24 @@
         "default": "geteilt durch"
       }
     }
+  },
+  {
+    "key": "02B9",
+    "mappings": {
+      "default": {
+        "default": "Strich"
+      }
+    },
+    "category": "Lm"
+  },
+  {
+    "key": "02BA",
+    "mappings": {
+      "default": {
+        "default": "zwei Strich"
+      }
+    },
+    "category": "Lm"
   },
   {
     "key": "02D8",
@@ -1070,7 +1088,7 @@
     "key": "2057",
     "mappings": {
       "default": {
-        "default": "quadruple prime"
+        "default": "vier Strich"
       }
     },
     "category": "Po"

@@ -17,6 +17,7 @@
   },
   {
     "key": "B",
+    "si": true,
     "mappings": {
       "default": {
         "plural": "Bytes",
@@ -39,45 +40,6 @@
     "category": "memory",
     "names": [
       "KB"
-    ]
-  },
-  {
-    "key": "MB",
-    "mappings": {
-      "default": {
-        "plural": "Megabytes",
-        "default": "Megabyte"
-      }
-    },
-    "category": "memory",
-    "names": [
-      "MB"
-    ]
-  },
-  {
-    "key": "GB",
-    "mappings": {
-      "default": {
-        "plural": "Gigabytes",
-        "default": "Gigabyte"
-      }
-    },
-    "category": "memory",
-    "names": [
-      "GB"
-    ]
-  },
-  {
-    "key": "TB",
-    "mappings": {
-      "default": {
-        "plural": "Terabytes",
-        "default": "Terabyte"
-      }
-    },
-    "category": "memory",
-    "names": [
-      "TB"
     ]
   }
 ]

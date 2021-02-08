@@ -251,10 +251,45 @@ sre.Grammar.prototype.runProcessors_ = function(text, funcs) {
  * @private
  */
 sre.Grammar.translateString_ = function(text) {
+  if (text.match(/:unit$/)) {
+    return sre.Grammar.translateUnit_(text);
+  }
+  var engine = sre.Engine.getInstance();
+  var result = engine.evaluator(text, engine.dynamicCstr);
+  return result === null ? text : result;
+};
+
+
+/**
+ * Unit translation using grammatical numbering from mappings directly.
+ * @param {string} text The text to translate.
+ * @return {string} The translated result.
+ */
+sre.Grammar.translateUnit_ = function(text) {
   text = sre.Grammar.prepareUnit_(text);
   var engine = sre.Engine.getInstance();
-  var result = engine.evaluator(text, engine.dynamicCstr) || text;
-  return sre.Grammar.cleanUnit_(result);
+  var plural = sre.Grammar.getInstance().getParameter('plural');
+  var strict = engine.strict;
+  var baseCstr = engine.locale + '.' + engine.modality + '.default';
+  engine.strict = true;
+  if (plural) {
+    var cstr = engine.defaultParser.parse(baseCstr + '.plural');
+    var result = engine.evaluator(text, cstr);
+  }
+  if (result) {
+    engine.strict = strict;
+    return result;
+  }
+  cstr = engine.defaultParser.parse(baseCstr + '.default');
+  result = engine.evaluator(text, cstr);
+  engine.strict = strict;
+  if (!result) {
+    return sre.Grammar.cleanUnit_(text);
+  }
+  if (plural) {
+    result = sre.Messages.PLURAL(result);
+  }
+  return result;
 };
 
 
@@ -276,12 +311,11 @@ sre.Grammar.prepareUnit_ = function(text) {
 /**
  * Removes unit suffix in case no unit with this name was found.
  * @param {string} text The text.
- * @return {string} The cleaned text incase it contained the :unit suffix.
+ * @return {string} The cleaned text in case it contained the :unit suffix.
  * @private
  */
 sre.Grammar.cleanUnit_ = function(text) {
   if (text.match(/:unit$/)) {
-    sre.Grammar.getInstance().setParameter('plural', false);
     return text.replace(/:unit$/, '');
   }
   return text;

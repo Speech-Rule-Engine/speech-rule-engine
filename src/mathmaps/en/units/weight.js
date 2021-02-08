@@ -63,7 +63,6 @@
    "key": "LT",
    "names": ["LT", "L.T."]
   },
- 
   {"category": "weight",
    "mappings": {
      "default": {
@@ -71,16 +70,17 @@
      }
    },
    "key": "gr",
-   "names": ["g", "gr"]
+   "names": ["gr"]
   },
   {"category": "weight",
+   "si": true,
    "mappings": {
      "default": {
-       "default": "kilogram"
+       "default": "gram"
      }
    },
-   "key": "kg",
-   "names": ["kg"]
+   "key": "g",
+   "names": ["g"]
   },
   {"category": "weight",
    "mappings": {
@@ -89,16 +89,7 @@
      }
    },
    "key": "mcg",
-   "names": ["mcg", "µg"]
-  },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "milligram"
-     }
-   },
-   "key": "mg",
-   "names": ["mg"]
+   "names": ["mcg"]
   },
   {"category": "weight",
    "mappings": {

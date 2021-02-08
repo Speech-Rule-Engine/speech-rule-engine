@@ -24,6 +24,7 @@
 goog.provide('sre.SemanticProcessor');
 
 goog.require('sre.SemanticAttr');
+goog.require('sre.SemanticHeuristics');
 goog.require('sre.SemanticNodeFactory');
 goog.require('sre.SemanticPred');
 
@@ -40,9 +41,11 @@ sre.SemanticProcessor = function() {
    */
   this.factory_ = new sre.SemanticNodeFactory();
 
-  this.heuristics = {
-    SeparateInvisibleTimes: false
-  };
+  /**
+   * @type {!sre.SemanticHeuristics}
+   */
+  this.heuristics = sre.SemanticHeuristics.getInstance();
+  this.heuristics.factory = this.factory_;
 
 };
 goog.addSingletonGetter(sre.SemanticProcessor);
@@ -88,26 +91,13 @@ sre.SemanticProcessor.prototype.identifierNode = function(leaf, font, unit) {
     // If single letter or single integer and font normal but no mathvariant
     // then this letter/number should be in italic font.
     leaf.font = sre.SemanticAttr.Font.ITALIC;
-    return leaf;
+    return sre.SemanticHeuristics.run('simpleNamedFunction', leaf);
   }
   if (leaf.type === sre.SemanticAttr.Type.UNKNOWN) {
     leaf.type = sre.SemanticAttr.Type.IDENTIFIER;
   }
   sre.SemanticProcessor.exprFont_(leaf);
-  return leaf;
-};
-
-
-/**
- * Create a branching node for an implicit operation, currently assumed to be of
- * multiplicative type. Determines mixed numbers and unit elements.
- * @param {!Array.<!sre.SemanticNode>} nodes The operands.
- * @return {!sre.SemanticNode} The new branch node.
- * @private
- */
-sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
-  return this.heuristics.SeparateInvisibleTimes ?
-    this.implicitNodePure_(nodes) : this.implicitNodeRec_(nodes);
+  return sre.SemanticHeuristics.run('simpleNamedFunction', leaf);
 };
 
 
@@ -118,7 +108,7 @@ sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
  * @return {!sre.SemanticNode} The new branch node.
  * @private
  */
-sre.SemanticProcessor.prototype.implicitNodePure_ = function(nodes) {
+sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
   var operators = sre.SemanticProcessor.getInstance().factory_.
       makeMultipleContentNodes(nodes.length - 1,
                                sre.SemanticAttr.invisibleTimes());
@@ -129,31 +119,6 @@ sre.SemanticProcessor.prototype.implicitNodePure_ = function(nodes) {
   operators.forEach(function(op) {op.parent = newNode;});
   newNode.contentNodes = operators;
   return newNode;
-};
-
-
-/**
- * Create a branching node for an implicit operation, currently assumed to be of
- * multiplicative type. Recursively combines implicit nodes.
- * @param {!Array.<!sre.SemanticNode>} nodes The operands.
- * @return {!sre.SemanticNode} The new branch node.
- * @private
- */
-sre.SemanticProcessor.prototype.implicitNodeRec_ = function(nodes) {
-  var root = this.implicitNodePure_(nodes);
-  for (var i = root.childNodes.length - 1, child;
-       child = root.childNodes[i]; i--) {
-    if (child.role !== sre.SemanticAttr.Role.IMPLICIT) {
-      continue;
-    }
-    root.childNodes.splice.apply(root.childNodes, [i, 1].concat(child.childNodes));
-    root.contentNodes.splice.apply(root.contentNodes, [i, 1].concat(child.contentNodes));
-    child.childNodes.concat(child.contentNodes).forEach(
-      function(x) {x.parentNode = root;}
-    );
-    root.addMathmlNodes(child.mathml);
-  }
-  return root;
 };
 
 
@@ -170,7 +135,8 @@ sre.SemanticProcessor.prototype.implicitNode = function(nodes) {
   if (nodes.length === 1) {
     return nodes[0];
   }
-  return sre.SemanticProcessor.getInstance().implicitNode_(nodes);
+  var node = this.implicitNode_(nodes);
+  return sre.SemanticHeuristics.run('juxtaposition', node);
 };
 
 
@@ -186,8 +152,7 @@ sre.SemanticProcessor.prototype.infixNode_ = function(children, opNode) {
       sre.SemanticAttr.Type.INFIXOP, children, [opNode],
       sre.SemanticProcessor.getEmbellishedInner_(opNode).textContent);
   node.role = opNode.role;
-  this.propagateSimpleFunction(node);
-  return node;
+  return sre.SemanticHeuristics.run('propagateSimpleFunction', node);
 };
 
 
@@ -447,7 +412,7 @@ sre.SemanticProcessor.prototype.getMixedNumbers_ = function(nodes) {
 
 
 /**
- * Seperates text from math content and combines them into a punctuated node,
+ * Separates text from math content and combines them into a punctuated node,
  * with dummy punctuation invisible comma.
  * @param {!Array.<sre.SemanticNode>} nodes The list of nodes.
  * @return {!Array.<sre.SemanticNode>} The new list of nodes.
@@ -573,13 +538,12 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
  */
 sre.SemanticProcessor.prototype.combineJuxtaposition_ = function(nodes) {
   var partition = sre.SemanticProcessor.partitionNodes_(
-    nodes, function(x) {
-      return x.textContent === sre.SemanticAttr.invisibleTimes();
-    });
+      nodes, function(x) {
+        return x.textContent === sre.SemanticAttr.invisibleTimes();
+      });
   if (!partition.rel.length) {
     return nodes;
   }
-  // TODO: Could be the same as before?
   return this.recurseJuxtaposition_(
     partition.comp.shift(), partition.rel, partition.comp);
 };
@@ -624,7 +588,6 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
     return this.recurseJuxtaposition_(
       acc.concat([left, op, right]).concat(first), ops, elements);
   }
-  // TODO: What about propagateSimpleFunction, combineUnit, mixedNumbers?
   var result = null;
   if (left.role === sre.SemanticAttr.Role.IMPLICIT &&
       right.role === sre.SemanticAttr.Role.IMPLICIT) {
@@ -1175,7 +1138,7 @@ sre.SemanticProcessor.prototype.horizontalFencedNode_ = function(
   if (ofence.role === sre.SemanticAttr.Role.OPEN) {
     // newNode.role = sre.SemanticAttr.Role.LEFTRIGHT;
     this.classifyHorizontalFence_(newNode);
-    this.propagateComposedFunction(newNode);
+    newNode = sre.SemanticHeuristics.run('propagateComposedFunction', newNode);
   } else {
     newNode.role = ofence.role;
   }
@@ -1437,49 +1400,127 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
   }
   
   if (sre.SemanticPred.isLimitBase(center)) {
-    // Limit nodes only the number of children has to be restricted.
     var result = sre.SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+    var length = result.length;
     type = result.type;
     children = children.slice(0, result.length + 1);
-    if (result.length === 2 && !children[result.length]) {
-      type = sre.SemanticAttr.Type.LIMLOWER;
+    // Heuristic to deal with accents around limit functions/operators.
+    if ((length === 1 && sre.SemanticPred.isAccent(children[1])) ||
+        (length === 2 && sre.SemanticPred.isAccent(children[1]) &&
+         sre.SemanticPred.isAccent(children[2]))) {
+      result = sre.SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+      return this.accentNode_(center, children,
+                              result.type, result.length, result.accent);
     }
-  } else {
-    // We either have an indexed, stacked or accented expression.
-    result = sre.SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
-    type = result.type;
-    children = children.slice(0, result.length + 1);
-    if (!result.accent && children[2]) {
-      // For indexed we only have to nest if we have two children.
-      var innerNode = sre.SemanticProcessor.getInstance().factory_.
-          makeBranchNode(sre.SemanticAttr.Type.SUBSCRIPT,
-                         [center, children[1]], []);
-      innerNode.role = sre.SemanticAttr.Role.SUBSUP;
-      children = [innerNode, children[2]];
-      type = sre.SemanticAttr.Type.SUPERSCRIPT;
-    }
-    if (result.accent) {
-      // Check if we have stacked or accented expressions (or mix).
-      let underAccent = this.accentRole_(children[1], type);
-      if (children[2]) {
-        let overAccent = this.accentRole_(children[2],
-                                          sre.SemanticAttr.Type.OVERSCORE);
-        if (overAccent && !underAccent) {
-          innerNode = sre.SemanticProcessor.getInstance().factory_.
-            makeBranchNode(
-              sre.SemanticAttr.Type.OVERSCORE, [center, children[2]], []);
-          children = [innerNode, children[1]];
-          type = sre.SemanticAttr.Type.UNDERSCORE;
-        } else {
-          innerNode = sre.SemanticProcessor.getInstance().factory_.
-            makeBranchNode(
-              sre.SemanticAttr.Type.UNDERSCORE, [center, children[1]], []);
-          children = [innerNode, children[2]];
-          type = sre.SemanticAttr.Type.OVERSCORE;
-        }
-        innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
+    if (length === 2) {
+      if (sre.SemanticPred.isAccent(children[1])) {
+        center = this.accentNode_(
+          center, [center, children[1]],
+          {'MSUBSUP': sre.SemanticAttr.Type.SUBSCRIPT,
+           'MUNDEROVER': sre.SemanticAttr.Type.UNDERSCORE}[mmlTag], 1, true);
+        return !children[2] ? center :
+          this.makeLimitNode_(center, [center, children[2]], null,
+                              sre.SemanticAttr.Type.LIMUPPER);
+      }
+      if (children[2] && sre.SemanticPred.isAccent(children[2])) {
+        center = this.accentNode_(
+          center, [center, children[2]],
+          {'MSUBSUP': sre.SemanticAttr.Type.SUPERSCRIPT,
+           'MUNDEROVER': sre.SemanticAttr.Type.OVERSCORE}[mmlTag], 1, true);
+        return this.makeLimitNode_(center, [center, children[1]], null,
+                                   sre.SemanticAttr.Type.LIMLOWER);
+      }
+      // Limit nodes only the number of children has to be restricted.
+      if (!children[length]) {
+        type = sre.SemanticAttr.Type.LIMLOWER;
       }
     }
+    return this.makeLimitNode_(center, children, null, type);
+  }
+  // We either have an indexed, stacked or accented expression.
+  result = sre.SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+  return this.accentNode_(center, children,
+                          result.type, result.length, result.accent);
+};
+
+
+/**
+ * Creates an accent style node or sub/superscript depending on the given type.
+ * @param {!sre.SemanticNode} center The inner center node.
+ * @param {!Array.<sre.SemanticNode>} children All children, where center is
+ *     first node.
+ * @param {sre.SemanticAttr.Type} type The new node type.
+ * @param {number} length The exact length for the given type. This is important
+ *     in case not enough children exist, then the type has to be changed.
+ * @param {boolean} accent Is this an accent node?
+ * @return {!sre.SemanticNode} The newly created node. 
+ */
+sre.SemanticProcessor.prototype.accentNode_ = function(
+  center, children, type, length, accent) {
+  children = children.slice(0, length + 1);
+  var child1 = /** @type {!sre.SemanticNode} */(children[1]);
+  var child2 = children[2];
+  if (!accent && child2) {
+    // For indexed we only have to nest if we have two children.
+    var innerNode = sre.SemanticProcessor.getInstance().factory_.
+        makeBranchNode(sre.SemanticAttr.Type.SUBSCRIPT,
+                       [center, child1], []);
+    innerNode.role = sre.SemanticAttr.Role.SUBSUP;
+    children = [innerNode, child2];
+    type = sre.SemanticAttr.Type.SUPERSCRIPT;
+  }
+  if (accent) {
+    // Check if we have stacked or accented expressions (or mix).
+    let underAccent = this.accentRole_(child1, type);
+    if (child2) {
+      let overAccent = this.accentRole_(child2,
+                                        sre.SemanticAttr.Type.OVERSCORE);
+      if (overAccent && !underAccent) {
+        innerNode = sre.SemanticProcessor.getInstance().factory_.
+          makeBranchNode(
+            sre.SemanticAttr.Type.OVERSCORE, [center, child2], []);
+        children = [innerNode, child1];
+        type = sre.SemanticAttr.Type.UNDERSCORE;
+      } else {
+        innerNode = sre.SemanticProcessor.getInstance().factory_.
+          makeBranchNode(
+            sre.SemanticAttr.Type.UNDERSCORE, [center, child1], []);
+        children = [innerNode, child2];
+        type = sre.SemanticAttr.Type.OVERSCORE;
+      }
+      innerNode.role = sre.SemanticAttr.Role.UNDEROVER;
+    }
+  }
+  return this.makeLimitNode_(center, children, innerNode, type);
+};
+
+
+/**
+ * Creates the actual limit node.
+ * @param {!sre.SemanticNode} center The inner center node.
+ * @param {!Array.<sre.SemanticNode>} children All children, where center is
+ *     first node.
+ * @param {sre.SemanticNode|undefined} innerNode The innermost node if it exists.
+ * @param {sre.SemanticAttr.Type} type The new node type.
+ * @return {!sre.SemanticNode} The newly created limit node. 
+ */
+sre.SemanticProcessor.prototype.makeLimitNode_ = function(
+  center, children, innerNode, type) {
+  // These two conditions implement the limitboth heuristic, which works before
+  // a new node is created.
+  if (type === sre.SemanticAttr.Type.LIMUPPER &&
+      center.type === sre.SemanticAttr.Type.LIMLOWER) {
+    center.childNodes.push(children[1]);
+    children[1].parent = center;
+    center.type = sre.SemanticAttr.Type.LIMBOTH;
+    return center;
+  }
+  if (type === sre.SemanticAttr.Type.LIMLOWER &&
+      center.type === sre.SemanticAttr.Type.LIMUPPER) {
+    center.childNodes.splice(1, -1, children[1]);
+    children[1].parent = center;
+    center.type = sre.SemanticAttr.Type.LIMBOTH;
+    return center;
   }
   var newNode = sre.SemanticProcessor.getInstance().factory_.
       makeBranchNode(type, children, []);
@@ -1490,6 +1531,7 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
   newNode.embellished = embellished;
   newNode.role = center.role;
   return newNode;
+  
 };
 
 
@@ -1747,6 +1789,7 @@ sre.SemanticProcessor.prototype.getIntegralArgs_ = function(nodes, opt_args) {
     return {integrand: args, intvar: null, rest: nodes};
   }
   if (sre.SemanticPred.isIntegralDxBoundarySingle(firstNode)) {
+    firstNode.role = sre.SemanticAttr.Role.INTEGRAL;
     return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
   }
   if (nodes[1] && sre.SemanticPred.isIntegralDxBoundary(firstNode, nodes[1])) {
@@ -2397,8 +2440,7 @@ sre.SemanticProcessor.prototype.fractionNode_ = function(denom, enume) {
   }) ? sre.SemanticAttr.Role.VULGAR :
       newNode.childNodes.every(sre.SemanticPred.isPureUnit) ?
       sre.SemanticAttr.Role.UNIT : sre.SemanticAttr.Role.DIVISION;
-  this.propagateSimpleFunction(newNode);
-  return newNode;
+  return sre.SemanticHeuristics.run('propagateSimpleFunction', newNode);
 };
 
 
@@ -2796,42 +2838,6 @@ sre.SemanticProcessor.prototype.font = function(font) {
 };
 
 
-/**
- * Finds composed functions, i.e., simple functions that are either composed
- * with an infix operation or fraction and rewrites their role accordingly.
- * Currently restricted to Clearspeak!
- * @param {!sre.SemanticNode} node The semantic node to test.
- */
-// TODO: (MS2.3|simons): This needs to be a special annotator!
-sre.SemanticProcessor.prototype.propagateSimpleFunction = function(node) {
-  if (sre.Engine.getInstance().domain !== 'clearspeak') {
-    return;
-  }
-  if ((node.type === sre.SemanticAttr.Type.INFIXOP ||
-       node.type === sre.SemanticAttr.Type.FRACTION) &&
-      node.childNodes.every(sre.SemanticPred.isSimpleFunction)) {
-    node.role = sre.SemanticAttr.Role.COMPFUNC;
-  }
-};
-
-
-/**
- * Propagates the role of composed function to surrounding fences.
- * Currently restricted to Clearspeak!
- * @param {!sre.SemanticNode} node The semantic node to test.
- */
-// TODO: (MS2.3|simons): This needs to be a special annotator!
-sre.SemanticProcessor.prototype.propagateComposedFunction = function(node) {
-  if (sre.Engine.getInstance().domain !== 'clearspeak') {
-    return;
-  }
-  if (node.type === sre.SemanticAttr.Type.FENCED &&
-      node.childNodes[0].role === sre.SemanticAttr.Role.COMPFUNC) {
-    node.role = sre.SemanticAttr.Role.COMPFUNC;
-  }
-};
-
-
 //
 // Inference rules (Simons)
 //
@@ -3101,4 +3107,12 @@ sre.SemanticProcessor.separateSemantics = function(attr) {
         result[sre.SemanticProcessor.removePrefix(name)] = value;
       });
   return result;
+};
+
+
+sre.SemanticProcessor.prototype.operatorNode = function(node) {
+  if (node.type === sre.SemanticAttr.Type.UNKNOWN) {
+    node.type = sre.SemanticAttr.Type.OPERATOR;
+  }
+  return sre.SemanticHeuristics.run('multioperator', node);
 };

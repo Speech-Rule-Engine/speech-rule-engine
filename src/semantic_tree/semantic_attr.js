@@ -124,7 +124,7 @@ sre.SemanticAttr = function() {
    */
   this.primes =
       [
-        '\'', '′', '″', '‴', '‵', '‶', '‷', '⁗'
+        '\'', '′', '″', '‴', '‵', '‶', '‷', '⁗', 'ʹ', 'ʺ'
       ];
   /**
    * @type {Array.<string>}
@@ -924,13 +924,15 @@ sre.SemanticAttr = function() {
   /** Array of all non-digit number symbols.
    * @type {Array.<string>}
    */
-  this.numbers = this.fractions.concat(
-      this.digitsSuperscript, this.digitsSubscript,
-      this.enclosedNumbers, this.fencedNumbers, this.punctuatedNumbers);
+  this.numbers = this.fractions;
+
+  this.otherNumbers = this.digitsSuperscript.concat(
+    this.digitsSubscript, this.enclosedNumbers,
+    this.fencedNumbers, this.punctuatedNumbers);
   /** Array of all number symbols.
    * @type {Array.<string>}
    */
-  this.allNumbers = this.digits.concat(this.numbers);
+  this.allNumbers = this.digits.concat(this.numbers, this.otherNumbers);
 
   // Functions.
   /**
@@ -939,7 +941,8 @@ sre.SemanticAttr = function() {
   this.trigonometricFunctions =
       [
         'cos', 'cot', 'csc', 'sec', 'sin', 'tan', 'arccos', 'arccot',
-        'arccsc', 'arcsec', 'arcsin', 'arctan'
+        'arccsc', 'arcsec', 'arcsin', 'arctan', 'arc cos', 'arc cot',
+        'arc csc', 'arc sec', 'arc sin', 'arc tan'
       ];
   /**
    * @type {Array.<string>}
@@ -979,7 +982,7 @@ sre.SemanticAttr = function() {
   this.limitFunctions =
       [
         'inf', 'lim', 'liminf', 'limsup', 'max', 'min', 'sup', 'injlim',
-        'projlim'
+        'projlim', 'inj lim', 'proj lim'
       ];
   /**
    * @type {Array.<string>}
@@ -1339,6 +1342,10 @@ sre.SemanticAttr = function() {
     {set: this.numbers,
       type: sre.SemanticAttr.Type.NUMBER,
       role: sre.SemanticAttr.Role.FLOAT
+    },
+    {set: this.otherNumbers,
+      type: sre.SemanticAttr.Type.NUMBER,
+      role: sre.SemanticAttr.Role.OTHERNUMBER
     },
     // Operators.
     {set: this.additions,

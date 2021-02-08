@@ -53,7 +53,8 @@ sre.MathMap = function() {
   this.addRules = {
     functions: goog.bind(this.store.addFunctionRules, this.store),
     symbols: goog.bind(this.store.addSymbolRules, this.store),
-    units: goog.bind(this.store.addUnitRules, this.store)
+    units: goog.bind(this.store.addUnitRules, this.store),
+    si: goog.bind(this.addSiPrefixes, this)
   };
 
 };
@@ -65,6 +66,11 @@ goog.addSingletonGetter(sre.MathMap);
  * @private
  */
 sre.MathMap.oldInst_ = sre.MathMap.getInstance;
+
+
+sre.MathMap.prototype.addSiPrefixes = function(json) {
+  this.store.siPrefixes = json;
+};
 
 
 /**

@@ -53,7 +53,7 @@ sre.Locale.es = {
     SUPERSCRIPT: 'superíndice',
     SUBSCRIPT: 'subíndice',
     BASELINE: 'línea base',
-    BASE: '',
+    BASE: 'base',
     NESTED: '',
     NEST_ROOT: '',
     STARTROOT: 'empezar raíz',
@@ -194,10 +194,30 @@ sre.Locale.es = {
     JOINER_FRAC: ' '
   },
 
-  PLURAL_UNIT: { },
-
   PLURAL: function(unit) {
-    return (/.*s$/.test(unit)) ? unit : unit + 's';
+    if (/.*(a|e|i|o|u)$/.test(unit)) {
+      return unit + 's';
+    }
+    if (/.*z$/.test(unit)) {
+      return unit.slice(0, -1) + 'ces';
+    }
+    if (/.*c$/.test(unit)) {
+      return unit.slice(0, -1) + 'ques';
+    }
+    if (/.*g$/.test(unit)) {
+      return unit + 'ues';
+    }
+    if (/.*ón$/.test(unit)) {
+      return unit.slice(0, -2) + 'ones';
+    }
+    return unit + 'es';
+  },
+
+  SI: function(prefix, unit) {
+    if (unit.match(/^metro/)) {
+      prefix = prefix.replace(/a$/, 'á').replace(/o$/, 'ó').replace(/i$/, 'í');
+    }
+    return prefix + unit;
   },
 
   NUMBERS: sre.Numbers.es.NUMBERS,

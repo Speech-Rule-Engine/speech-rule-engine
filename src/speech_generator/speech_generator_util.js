@@ -168,8 +168,16 @@ sre.SpeechGeneratorUtil.retrievePrefix = function(semantic) {
  */
 sre.SpeechGeneratorUtil.computePrefix_ = function(semantic) {
   var tree = sre.SemanticTree.fromRoot(semantic);
-  var node = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
-                                     tree.xml())[0];
+  var nodes = sre.XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]',
+                                      tree.xml());
+  var node = nodes[0];
+  if (nodes.length > 1) {
+    // Find the node we actually want. Here the problem is that our semantic
+    // tree is actually a DAG: While elements can appear as children only once,
+    // they can appear in multiple content nodes. XML serialization can
+    // therefore not create unique ids.
+    node = sre.SpeechGeneratorUtil.nodeAtPosition_(semantic, nodes) || node;
+  }
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
       {'modality': 'prefix', 'domain': 'default', 'style': 'default',
@@ -177,6 +185,40 @@ sre.SpeechGeneratorUtil.computePrefix_ = function(semantic) {
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];
+};
+
+
+/**
+ * Finds the nodes at the same position as the semantic node in a list of XML
+ * nodes. We define position via the path to root.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @param {!Array.<Element>} nodes The XML nodes.
+ * @return {Element} The node at the exact tree position of the semantic node.
+ * @private
+ */
+sre.SpeechGeneratorUtil.nodeAtPosition_ = function(semantic, nodes) {
+  var node = nodes[0];
+  if (!semantic.parent) {
+    return node;
+  }
+  var path = [];
+  while (semantic) {
+    path.push(semantic.id);
+    semantic = semantic.parent;
+  }
+  var pathEquals = function(xml, path) {
+    while (path.length && path.shift().toString() === xml.getAttribute('id') &&
+           xml.parentNode && xml.parentNode.parentNode) {
+      xml = xml.parentNode.parentNode;
+    }
+    return !path.length;
+  };
+  for (var i = 0, xml; xml = nodes[i]; i++) {
+    if (pathEquals(xml, path.slice())) {
+      return xml;
+    }
+  }
+  return node;
 };
 
 
