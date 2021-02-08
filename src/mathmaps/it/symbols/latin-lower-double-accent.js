@@ -114,7 +114,7 @@
     "key": "1E15",
     "mappings": {
       "default": {
-        "default": "e con segno di vocale lunga e accento grave"
+        "default": "e con barra sopra e accento grave"
       }
     },
     "category": "Ll"
@@ -123,7 +123,7 @@
     "key": "1E17",
     "mappings": {
       "default": {
-        "default": "e con segno di vocale lunga e accento acuto"
+        "default": "e con barra sopra e accento acuto"
       }
     },
     "category": "Ll"
@@ -150,7 +150,7 @@
     "key": "1E39",
     "mappings": {
       "default": {
-        "default": "l con punto sotto e con segno di vocale lunga"
+        "default": "l con punto sotto e con barra sopra"
       }
     },
     "category": "Ll"
@@ -177,7 +177,7 @@
     "key": "1E51",
     "mappings": {
       "default": {
-        "default": "o con segno di vocale lunga ed accento grave"
+        "default": "o con barra sopra ed accento grave"
       }
     },
     "category": "Ll"
@@ -186,7 +186,7 @@
     "key": "1E53",
     "mappings": {
       "default": {
-        "default": "o con segno di vocale lunga ed accento acuto"
+        "default": "o con barra sopra ed accento acuto"
       }
     },
     "category": "Ll"
@@ -195,7 +195,7 @@
     "key": "1E5D",
     "mappings": {
       "default": {
-        "default": "r con punto sotto e con segno di vocale lunga"
+        "default": "r con punto sotto e con barra sopra"
       }
     },
     "category": "Ll"
@@ -240,7 +240,7 @@
     "key": "1E7B",
     "mappings": {
       "default": {
-        "default": "u con segno di vocale lunga e dieresi"
+        "default": "u con barra sopra e dieresi"
       }
     },
     "category": "Ll"

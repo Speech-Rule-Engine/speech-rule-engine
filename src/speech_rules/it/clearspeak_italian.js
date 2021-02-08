@@ -1156,7 +1156,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "squared-female",
       "default",
-      "[t] \"quadrate\"",
+      "[t] \"quadrata\"",
       "self::number[text()=2]",
       "contains(@grammar, \"squared\")",
       "parent::*/parent::*[@role=\"simple function\"]"
@@ -1309,7 +1309,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "fences-points",
       "Paren_CoordPoint",
-      "[t] \"il punto con coordinate\"; [n] children/*[1]",
+      "[t] \"punto con coordinate\"; [n] children/*[1]",
       "self::fenced",
       "name(children/*[1])=\"punctuated\"",
       "children/*[1][@role=\"sequence\"]"
@@ -1665,7 +1665,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "negative-sqrt",
       "default",
-      "[t] \"radice quadrata negativa di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::prefixop",
       "@role=\"negative\"",
       "name(children/*[1])=\"sqrt\""
@@ -1674,7 +1674,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "negative-sqrt",
       "default",
-      "[p] (pause:\"short\"); [t] \"radice quadrata negativa di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[p] (pause:\"short\"); [t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::prefixop",
       "@role=\"negative\"",
       "name(children/*[1])=\"sqrt\"",
@@ -1685,7 +1685,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "sqrt-plus-minus",
       "Roots_PosNegSqRoot",
-      "[t] \"radice quadrata positiva di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::sqrt",
       "parent::stree or not(parent::*/parent::infixop[@role=\"addition\"]) or (parent::*/parent::*[1]/text()!=\"±\" and parent::*/parent::*/text()!=\"∓\")"
     ],
@@ -1693,7 +1693,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "sqrt-nested-plus-minus",
       "Roots_PosNegSqRoot",
-      "[p] (pause:\"short\"); [t] \"radice quadrata positiva di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[p] (pause:\"short\"); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::sqrt",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root",
@@ -1703,7 +1703,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "sqrt-plus-minus",
       "Roots_PosNegSqRootEnd",
-      "[t] \"radice quadrata positiva di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::sqrt",
       "parent::stree or not(parent::*/parent::infixop[@role=\"addition\"]) or (parent::*/parent::*[1]/text()!=\"±\" and parent::*/parent::*/text()!=\"∓\")"
     ],
@@ -1711,7 +1711,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "sqrt-nested-plus-minus",
       "Roots_PosNegSqRootEnd",
-      "[p] (pause:\"short\"); [t] \"radice quadrata positiva di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[p] (pause:\"short\"); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::sqrt",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root",
@@ -1775,14 +1775,14 @@ sre.ClearspeakItalian = {
       "Rule",
       "root",
       "default",
-      "[t] \"il\"; [n] children/*[1] (grammar:ordinal); [t] \"radice di\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
+      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"female\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
       "self::root"
     ],
     [
       "Rule",
       "root-nested",
       "default",
-      "[p] (pause:short); [t] \"il\"; [n] children/*[1] (grammar:ordinal); [t] \"radice di\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
+      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"female\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
       "self::root",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root"
@@ -2171,7 +2171,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "fences-neutral",
       "default",
-      "[p] (pause:short); [t] \"il valore assoluto di\"; [n] children/*[1]; [p] (pause:short)",
+      "[p] (pause:short); [t] \"valore assoluto di\"; [n] children/*[1]; [p] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
       "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
@@ -2180,7 +2180,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "fences-neutral",
       "AbsoluteValue_AbsEnd",
-      "[p] (pause:short); [t] \"il valore assoluto di\"; [n] children/*[1]; [p] (pause:short); [t] \"fine valore assoluto\"; [p] (pause:short)",
+      "[p] (pause:short); [t] \"valore assoluto di\"; [n] children/*[1]; [p] (pause:short); [t] \"fine valore assoluto\"; [p] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
       "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
@@ -2189,7 +2189,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "fences-neutral",
       "AbsoluteValue_Cardinality",
-      "[p] (pause:short); [t] \"la cardinalità di\"; [n] children/*[1]; [p] (pause:short)",
+      "[p] (pause:short); [t] \"cardinalità di\"; [n] children/*[1]; [p] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
       "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
@@ -2198,7 +2198,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "fences-neutral",
       "AbsoluteValue_Determinant",
-      "[p] (pause:short); [t] \"determinante di\"; [n] children/*[1]; [p] (pause:short)",
+      "[p] (pause:short); [t] \"determinante della\"; [n] children/*[1]; [p] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
       "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
@@ -2476,7 +2476,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "binomial",
       "Matrix_Combinatoric",
-      "[n] children/*[1]/children/*[1]; [t] \"su\"; [n] children/*[2]/children/*[1]",
+      "[t] \"coefficiente binomiale\"; [n] children/*[1]/children/*[1]; [t] \"su\"; [n] children/*[2]/children/*[1]",
       "self::vector",
       "@role=\"binomial\""
     ],
@@ -2878,7 +2878,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "decimal-period",
       "default",
-      "[t] \"il decimale che si ripete\"; [n] children/*[1] (grammar:spaceout); [t] \"punto seguito da cifre ripetute\"; [n] children/*[3]/children/*[1] (grammar:spaceout)",
+      "[t] \"decimale periodico\"; [n] children/*[1] (grammar:spaceout); [t] \"virgola\"; [n] children/*[3]/children/*[1] (grammar:spaceout); [t] \"peridico\"",
       "self::punctuated",
       "@role=\"sequence\"",
       "count(./content/*)=1",
@@ -2894,7 +2894,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "decimal-period",
       "default",
-      "[t] \"il decimale che si ripete\"; [n] children/*[1] (grammar:spaceout); [t] \"seguiro di cifre ripetute\"; [n] children/*[2]/children/*[1] (grammar:spaceout)",
+      "[t] \"il decimale che si ripete\"; [n] children/*[1] (grammar:spaceout); [t] \"seguito di cifre ripetute\"; [n] children/*[2]/children/*[1] (grammar:spaceout)",
       "self::infixop",
       "@role=\"implicit\"",
       "count(./children/*)=2",
@@ -2959,7 +2959,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "line-segment",
       "default",
-      "[t] \"la linea segmento\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2]; [p] (pause:short)",
+      "[t] \"linea segmento\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2]; [p] (pause:short)",
       "self::overscore",
       "@role=\"implicit\"",
       "children/*[2][@role=\"overaccent\"]",
@@ -2971,7 +2971,7 @@ sre.ClearspeakItalian = {
       "Rule",
       "conjugate",
       "Bar_Conjugate",
-      "[t] \"il coniugato complesso di\"; [n] children/*[1]",
+      "[t] \"coniugato complesso di\"; [n] children/*[1]",
       "self::overscore",
       "children/*[2][@role=\"overaccent\"]",
       "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
@@ -3098,17 +3098,17 @@ sre.ClearspeakItalian = {
       "name(children/*[5])=\"empty\"",
       "children/*[1][text()=\"P\" or text()=\"C\"]"
     ],
-    [
+    [// TODO: C_{n,r}, possibily plural
       "Rule",
       "choose",
       "CombinationPermutation_ChoosePermute",
-      "[t] \"composizione di\"; [n] children/*[2] (grammar:combinatorics); [t] \"per\"; [n] children/*[4] (grammar:combinatorics)",
+      "[t] \"combinazione di\"; [n] children/*[2] (grammar:combinatorics); [t] \"per\"; [n] children/*[4] (grammar:combinatorics)",
       "self::tensor",
       "name(children/*[3])=\"empty\"",
       "name(children/*[5])=\"empty\"",
       "children/*[1][text()=\"C\"]"
     ],
-    [
+    [// TODO: P_{n,r}, possibily plural
       "Rule",
       "permute",
       "CombinationPermutation_ChoosePermute",
@@ -3135,52 +3135,52 @@ sre.ClearspeakItalian = {
       "@role=\"unit\"",
       "not(contains(@grammar, \"singularUnit\"))"
     ],
-    [
+    [// TODO: Plural!
       "Rule",
       "unit-square",
       "default",
-      "[t] \"quadrato\"; [n] children/*[1]",
+      "[n] children/*[1]; [t] \"quadrato\"",
       "self::superscript",
       "@role=\"unit\"",
       "children/*[2][text()=2]",
       "name(children/*[1])=\"identifier\""
     ],
-    [
+    [// TODO: Plural!
       "Rule",
       "unit-cubic",
       "default",
-      "[t] \"cubico\"; [n] children/*[1]",
+      "[n] children/*[1]; [t] \"cubico\"",
       "self::superscript",
       "@role=\"unit\"",
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\""
     ],
-    [
-      "Rule",
-      "unit-reciprocal",
-      "default",
-      "[t] \"riciproco\"; [n] children/*[1]",
-      "self::superscript",
-      "@role=\"unit\"",
-      "name(children/*[1])=\"identifier\"",
-      "name(children/*[2])=\"prefixop\"",
-      "children/*[2][@role=\"negative\"]",
-      "children/*[2]/children/*[1][text()=1]",
-      "count(preceding-sibling::*)=0 or preceding-sibling::*[@role!=\"unit\"]"
-    ],
-    [
-      "Rule",
-      "unit-reciprocal",
-      "default",
-      "[t] \"per\"; [n] children/*[1] (grammar:singularUnit)",
-      "self::superscript",
-      "@role=\"unit\"",
-      "name(children/*[1])=\"identifier\"",
-      "name(children/*[2])=\"prefixop\"",
-      "children/*[2][@role=\"negative\"]",
-      "children/*[2]/children/*[1][text()=1]",
-      "preceding-sibling::*[@role=\"unit\"]"
-    ],
+    // [
+    //   "Rule",
+    //   "unit-reciprocal",
+    //   "default",
+    //   "[t] \"riciproco\"; [n] children/*[1]",
+    //   "self::superscript",
+    //   "@role=\"unit\"",
+    //   "name(children/*[1])=\"identifier\"",
+    //   "name(children/*[2])=\"prefixop\"",
+    //   "children/*[2][@role=\"negative\"]",
+    //   "children/*[2]/children/*[1][text()=1]",
+    //   "count(preceding-sibling::*)=0 or preceding-sibling::*[@role!=\"unit\"]"
+    // ],
+    // [
+    //   "Rule",
+    //   "unit-reciprocal",
+    //   "default",
+    //   "[t] \"per\"; [n] children/*[1] (grammar:singularUnit)",
+    //   "self::superscript",
+    //   "@role=\"unit\"",
+    //   "name(children/*[1])=\"identifier\"",
+    //   "name(children/*[2])=\"prefixop\"",
+    //   "children/*[2][@role=\"negative\"]",
+    //   "children/*[2]/children/*[1][text()=1]",
+    //   "preceding-sibling::*[@role=\"unit\"]"
+    // ],
     [
       "Rule",
       "unit-combine",
@@ -3199,13 +3199,12 @@ sre.ClearspeakItalian = {
       "name(children/*[1])=\"number\"",
       "children/*[1][text()=1]"
     ],
-    [
+    [//TODO: Gender of the denominator needs to propagate back to al/alla (possibly per)
       "Rule",
       "unit-divide",
       "default",
-      "[n] children/*[1]; [t] \"per\"; [n] children/*[2] (grammar:singularUnit)",
-      "self::fraction",
-      "@role=\"unit\""
+      "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singularUnit)",
+      "self::fraction[@role=\"unit\"]"
     ],
     [
       "Rule",

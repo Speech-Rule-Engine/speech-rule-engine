@@ -240,7 +240,7 @@
     "key": "0100",
     "mappings": {
       "default": {
-        "default": "a maiuscolo con segno di vocale lunga"
+        "default": "a maiuscolo con barra sopra"
       }
     },
     "category": "Lu"
@@ -312,7 +312,7 @@
     "key": "0112",
     "mappings": {
       "default": {
-        "default": "e maiuscola con segno di vocale lunga"
+        "default": "e maiuscola con barra sopra"
       }
     },
     "category": "Lu"
@@ -411,7 +411,7 @@
     "key": "012A",
     "mappings": {
       "default": {
-        "default": "i maiuscola con segno di vocale lunga"
+        "default": "i maiuscola con barra sopra"
       }
     },
     "category": "Lu"
@@ -528,7 +528,7 @@
     "key": "014C",
     "mappings": {
       "default": {
-        "default": "o maiuscola con segno di vocale lunga"
+        "default": "o maiuscola con barra sopra"
       }
     },
     "category": "Lu"
@@ -645,7 +645,7 @@
     "key": "016A",
     "mappings": {
       "default": {
-        "default": "u maiuscola con segno di vocale lunga"
+        "default": "u maiuscola con barra sopra"
       }
     },
     "category": "Lu"
@@ -1104,7 +1104,7 @@
     "key": "1E20",
     "mappings": {
       "default": {
-        "default": "g maiuscola con segno di vocale lunga"
+        "default": "g maiuscola con barra sopra"
       }
     },
     "category": "Lu"
