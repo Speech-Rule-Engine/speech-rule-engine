@@ -82,9 +82,11 @@ sre.System.prototype.setupEngine = function(feature) {
   engine.setupBrowsers();
   engine.ruleSets = feature.rules ? feature.rules :
       sre.SpeechRuleStores.availableSets();
-  sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
+  // sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
+  // sre.SpeechRuleEngine.getInstance().updateEngine();
   engine.setDynamicCstr();
   sre.L10n.setLocale();
+  sre.SpeechRuleEngine.getInstance().updateEngine();
 };
 
 
