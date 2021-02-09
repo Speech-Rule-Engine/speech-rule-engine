@@ -64,9 +64,12 @@ let doubleEmbellishCombiner = function(letter, font, number) {
 };
 
 
+// Font is the start parenthesis.
+// Number is the number indicator which is ignored.
+// English characters have language indicator removed.
 let parensCombiner = function(letter, font, number) {
   letter = simpleEnglish(letter);
-  return font + (number ? number : '') + letter + '⠾';
+  return font + letter + '⠾';
 };
 
 
