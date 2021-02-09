@@ -1,0 +1,296 @@
+{
+  "locale": "es",
+  "modality": "prefix",
+  "domain": "default",
+  "rules": [
+    [
+      "Rule",
+      "numerator",
+      "default",
+      "[t] \"numerador\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"fraction\"",
+      "count(preceding-sibling::*)=0"
+    ],
+    [
+      "Rule",
+      "denominator",
+      "default",
+      "[t] \"denominador\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"fraction\"",
+      "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Rule",
+      "base",
+      "default",
+      "[t] \"base\"; [p] (pause:200)",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"superscript\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"subscript\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"overscore\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"underscore\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"tensor\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"limlower\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"limupper\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"limboth\""
+    ],
+    [
+      "Rule",
+      "exponent",
+      "default",
+      "[t] \"exponente\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"superscript\"",
+      "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Rule",
+      "subscript",
+      "default",
+      "[t] \"subíndice\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"subscript\"",
+      "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Rule",
+      "overscript",
+      "default",
+      "[t] \"sobreíndice\"; [p] (pause:200)",
+      "self::*",
+      "count(preceding-sibling::*)=1",
+      "name(../..)=\"overscore\""
+    ],
+    [
+      "Alias",
+      "overscript",
+      "self::*",
+      "count(preceding-sibling::*)=1",
+      "name(../..)=\"limupper\""
+    ],
+    [
+      "Alias",
+      "overscript",
+      "self::*",
+      "count(preceding-sibling::*)=2",
+      "name(../..)=\"limboth\""
+    ],
+    [
+      "Rule",
+      "underscript",
+      "default",
+      "[t] \"bajoíndice\"; [p] (pause:200)",
+      "self::*",
+      "count(preceding-sibling::*)=1",
+      "name(../..)=\"underscore\""
+    ],
+    [
+      "Alias",
+      "underscript",
+      "self::*",
+      "count(preceding-sibling::*)=1",
+      "name(../..)=\"limlower\""
+    ],
+    [
+      "Alias",
+      "underscript",
+      "self::*",
+      "count(preceding-sibling::*)=1",
+      "name(../..)=\"limboth\""
+    ],
+    [
+      "Rule",
+      "radicand",
+      "default",
+      "[t] \"radicand\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"sqrt\""
+    ],
+    [
+      "Rule",
+      "radicand",
+      "default",
+      "[t] \"radicand\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"root\"",
+      "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Rule",
+      "index",
+      "default",
+      "[t] \"índice\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"root\"",
+      "count(preceding-sibling::*)=0"
+    ],
+    [
+      "Rule",
+      "leftsub",
+      "default",
+      "[t] \"subíndice izquierdo\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"tensor\"",
+      "@role=\"leftsub\""
+    ],
+    [
+      "Rule",
+      "leftsub",
+      "default",
+      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"subíndice izquierdo\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"punctuated\"",
+      "name(../../../..)=\"tensor\"",
+      "../../@role=\"leftsub\""
+    ],
+    [
+      "Rule",
+      "leftsuper",
+      "default",
+      "[t] \"superíndice izquierdo\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"tensor\"",
+      "@role=\"leftsuper\""
+    ],
+    [
+      "Rule",
+      "leftsuper",
+      "default",
+      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"superíndice izquierdo\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"punctuated\"",
+      "name(../../../..)=\"tensor\"",
+      "../../@role=\"leftsuper\""
+    ],
+    [
+      "Rule",
+      "rightsub",
+      "default",
+      "[t] \"subíndice derecho\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"tensor\"",
+      "@role=\"rightsub\""
+    ],
+    [
+      "Rule",
+      "rightsub",
+      "default",
+      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"subíndice derecho\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"punctuated\"",
+      "name(../../../..)=\"tensor\"",
+      "../../@role=\"rightsub\""
+    ],
+    [
+      "Rule",
+      "rightsuper",
+      "default",
+      "[t] \"superíndice derecho\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"tensor\"",
+      "@role=\"rightsuper\""
+    ],
+    [
+      "Rule",
+      "rightsuper",
+      "default",
+      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"superíndice derecho\"; [p] (pause:200)",
+      "self::*",
+      "name(../..)=\"punctuated\"",
+      "name(../../../..)=\"tensor\"",
+      "../../@role=\"rightsuper\""
+    ],
+    [
+      "Rule",
+      "choice",
+      "default",
+      "[t] \"cantidad de elección\"; [p] (pause:200)",
+      "self::line",
+      "@role=\"binomial\"",
+      "parent::*/parent::vector",
+      "count(preceding-sibling::*)=0"
+    ],
+    [
+      "Rule",
+      "select",
+      "default",
+      "[t] \"cantidad de selección\"; [p] (pause:200)",
+      "self::line",
+      "@role=\"binomial\"",
+      "parent::*/parent::vector",
+      "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Rule",
+      "row",
+      "default",
+      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"fila\"; [p] (pause:200)",
+      "self::row"
+    ],
+    [
+      "Aliases",
+      "row",
+      "self::line"
+    ],
+    [
+      "Rule",
+      "cell",
+      "default",
+      "[n] ../..; [t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"columna\"; [p] (pause:200)",
+      "self::cell",
+      "contains(@grammar,\"depth\")"
+    ],
+    [
+      "Rule",
+      "cell",
+      "default",
+      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"columna\"; [p] (pause:200)",
+      "self::cell"
+    ]
+  ]
+}
