@@ -80,10 +80,7 @@ sre.System.prototype.setupEngine = function(feature) {
     sre.SystemExternal.WGXpath = feature.xpath;
   }
   engine.setupBrowsers();
-  engine.ruleSets = feature.rules ? feature.rules :
-      sre.SpeechRuleStores.availableSets();
-  // sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
-  // sre.SpeechRuleEngine.getInstance().updateEngine();
+  sre.SpeechRuleStores.init();
   engine.setDynamicCstr();
   sre.L10n.setLocale();
   sre.SpeechRuleEngine.getInstance().updateEngine();

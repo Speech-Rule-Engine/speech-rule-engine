@@ -20,90 +20,31 @@
 
 goog.provide('sre.SpeechRuleStores');
 
-goog.require('sre.BaseRuleStore');
-goog.require('sre.ClearspeakEnglish');
-goog.require('sre.ClearspeakFrench');
-goog.require('sre.ClearspeakGerman');
-goog.require('sre.ClearspeakItalian');
+goog.require('sre.BrailleRules');
 goog.require('sre.ClearspeakRules');
-goog.require('sre.EmacspeakRules');
-goog.require('sre.MathspeakFrench');
-goog.require('sre.MathspeakGerman');
-goog.require('sre.MathspeakItalian');
-// goog.require('sre.MathspeakEnglish');
 goog.require('sre.MathspeakRules');
-goog.require('sre.MathspeakSpanish');
-goog.require('sre.NemethRules');
 goog.require('sre.OtherRules');
-goog.require('sre.PrefixEnglish');
-goog.require('sre.PrefixFrench');
-goog.require('sre.PrefixGerman');
-goog.require('sre.PrefixItalian');
 goog.require('sre.PrefixRules');
-goog.require('sre.PrefixSpanish');
-goog.require('sre.SemanticTreeRules');
-goog.require('sre.SummaryEnglish');
-goog.require('sre.SummaryFrench');
-goog.require('sre.SummaryGerman');
-goog.require('sre.SummaryItalian');
-goog.require('sre.SummarySpanish');
 
 
 /**
- * @type {!Object.<sre.BaseRuleStore>}
+ * @type {boolean}
  * @private
  */
-sre.SpeechRuleStores.RULE_SETS_ = {
-  'SemanticTreeRules': sre.SemanticTreeRules,
-  'MathspeakFrench': sre.MathspeakFrench,
-  'MathspeakGerman': sre.MathspeakGerman,
-  'MathspeakItalian': sre.MathspeakItalian,
-  // 'MathspeakEnglish': sre.MathspeakEnglish,
-  'MathspeakSpanish': sre.MathspeakSpanish,
-  'NemethRules': sre.NemethRules,
-  'ClearspeakFrench': sre.ClearspeakFrench,
-  'ClearspeakGerman': sre.ClearspeakGerman,
-  'ClearspeakItalian': sre.ClearspeakItalian,
-  'ClearspeakEnglish': sre.ClearspeakEnglish,
-  'EmacspeakRules': sre.EmacspeakRules,
-  'SummaryEnglish': sre.SummaryEnglish,
-  'SummaryFrench': sre.SummaryFrench,
-  'SummaryGerman': sre.SummaryGerman,
-  'SummaryItalian': sre.SummaryItalian,
-  'SummarySpanish': sre.SummarySpanish,
-  'PrefixEnglish': sre.PrefixEnglish,
-  'PrefixFrench': sre.PrefixFrench,
-  'PrefixGerman': sre.PrefixGerman,
-  'PrefixItalian': sre.PrefixItalian,
-  'PrefixSpanish': sre.PrefixSpanish
-};
+sre.SpeechRuleStores.INIT_ = false;
 
 
 /**
- * @return {Array.<string>} A list of all rule set names.
+ * Initializes the context function mappings for speech rule stores.
  */
-sre.SpeechRuleStores.availableSets = function() {
-  return Object.keys(sre.SpeechRuleStores.RULE_SETS_);
-};
-
-
-/**
- * Retrieves a constructor of a valid rule set.
- * @param {string} name The name of the rule set.
- * @return {sre.BaseRuleStore} The constructor of the rule store.
- */
-sre.SpeechRuleStores.getConstructor = function(name) {
-  var set = sre.SpeechRuleStores.RULE_SETS_[name];
-  if (set && !set.functions) {
-    set.functions = sre.SpeechRules.getInstance().getStore(
-      set.locale, set.modality, set.domain);
+sre.SpeechRuleStores.init = function() {
+  if (sre.SpeechRuleStores.INIT_) {
+    return;
   }
-  return set ? set : null;
+  sre.MathspeakRules();
+  sre.ClearspeakRules();
+  sre.PrefixRules();
+  sre.OtherRules();
+  sre.BrailleRules();
+  sre.SpeechRuleStores.INIT_ = true;
 };
-
-
-sre.MathspeakRules();
-sre.ClearspeakRules();
-sre.PrefixRules();
-sre.OtherRules();
-sre.BrailleRules();

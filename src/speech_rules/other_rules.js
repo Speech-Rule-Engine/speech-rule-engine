@@ -18,6 +18,7 @@
  */
 
 
+goog.provide('sre.BrailleRules');
 goog.provide('sre.OtherRules');
 goog.provide('sre.PrefixRules');
 
