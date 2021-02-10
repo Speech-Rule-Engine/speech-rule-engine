@@ -40,7 +40,6 @@ goog.require('sre.Engine');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.SpeechRule');
-// goog.require('sre.SpeechRuleStores');
 
 
 
@@ -69,13 +68,6 @@ sre.SpeechRuleEngine = function() {
    */
   this.ready_ = true;
 
-  // /**
-  //  * Caches combined stores that have already been constructed.
-  //  * @type {Object.<sre.BaseRuleStore>}
-  //  * @private
-  //  */
-  // this.combinedStores_ = {};
-
   /**
    * Default evaluators collated by locale and modality.
    * @type {Object.<Object.<function(!Node): !Array<sre.AuditoryDescription>>>}
@@ -83,43 +75,11 @@ sre.SpeechRuleEngine = function() {
    */
   this.evaluators_ = {};
 
-  // /**
-  //  * @type {Object.<sre.BaseRuleStore>}
-  //  * @private
-  //  */
-  // this.ruleSets_ = {};
-
-  // sre.Debugger.getInstance().init();
-
   sre.Engine.registerTest(
       goog.bind(function(x) {return this.ready_;}, this));
 
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);
-
-
-// /**
-//  * Parameterizes the speech rule engine.
-//  * @param {!Array.<string>} ruleSetNames The name of rule sets to use.
-//  */
-// sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
-//   var ruleSets = {};
-//   for (var i = 0, m = ruleSetNames.length; i < m; i++) {
-//     var name = ruleSetNames[i];
-//     if (this.ruleSets_[name]) {
-//       ruleSets[name] = this.ruleSets_[name];
-//       continue;
-//     }
-//     var set = sre.SpeechRuleStores.getConstructor(name);
-//     if (set) {
-//       let store = this.storeFactory_(set.modality);
-//       store.parse(set);
-//       this.ruleSets_[name] = store; 
-//      ruleSets[name] = store;
-//     }
-//   }
-//   this.parameterize_(ruleSets);
-// };
 
 
 /**
@@ -135,28 +95,6 @@ sre.SpeechRuleEngine.prototype.storeFactory_ = function(modality) {
   };
   return new (constructors[modality] || sre.MathStore)();
 };
-
-
-// /**
-//  * Parameterizes the speech rule engine.
-//  * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
-//  *     name to constructor mapping.
-//  * @private
-//  */
-// sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
-//   try {
-//     console.log(7);
-//     this.combineStores_(ruleSets);
-//   } catch (err) {
-//     if (err.name == 'StoreError') {
-//       console.error('Store Error:', err.message);
-//     }
-//     else {
-//       throw err;
-//     }
-//   }
-//   this.updateEngine();
-// };
 
 
 /**
@@ -573,14 +511,7 @@ sre.SpeechRuleEngine.debugNamedSpeechRule = function(name, node) {
 sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   var engine = sre.Engine.getInstance();
   var save = {};
-  // var store = null;
   for (var key in settings) {
-    // if (key === 'rules') {
-    //   store = this.activeStore_;
-    //   engine.ruleSets = settings[key];
-    //   this.parameterize(engine.ruleSets);
-    //   continue;
-    // }
     save[key] = engine[key];
     engine[key] = settings[key];
   }
@@ -589,31 +520,9 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   for (key in save) {
     engine[key] = save[key];
   }
-  // if (store) {
-  //   this.activeStore_ = store;
-  // }
   engine.setDynamicCstr();
   return result;
 };
-
-
-// /**
-//  * Initializes the combined rule store
-//  * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
-//  *     name to constructor mapping.
-//  // * @return {!sre.BaseRuleStore} The combined math store.
-//  * @private
-//  */
-// sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
-//   for (var name in ruleSets) {
-//     var store = ruleSets[name];
-//     store.initialize();
-//     store.getSpeechRules().forEach(
-//       goog.bind(function(x) {this.activeStore_.trie.addRule(x);}, this));
-//     this.addEvaluator(store);
-//   }
-//   this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
-// };
 
 
 sre.SpeechRuleEngine.prototype.addStore = function(set) {
