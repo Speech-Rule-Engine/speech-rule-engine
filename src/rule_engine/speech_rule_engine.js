@@ -40,7 +40,7 @@ goog.require('sre.Engine');
 goog.require('sre.MathMap');
 goog.require('sre.MathStore');
 goog.require('sre.SpeechRule');
-
+goog.require('sre.SpeechRuleStores');
 
 
 /**
@@ -525,7 +525,15 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
 };
 
 
+/**
+ * Adds a speech rule store to the speech rule engine. This method is called
+ * when loading a rule set.
+ * @param {Object.<string|Array>} set The definition of a speech rule set.
+ */
 sre.SpeechRuleEngine.prototype.addStore = function(set) {
+  // This line is important to setup the context functions for stores.
+  // It has to run __before__ the first speech rule store is added.
+  sre.SpeechRuleStores.init();
   if (set && !set.functions) {
     set.functions = sre.SpeechRules.getInstance().getStore(
       set.locale, set.modality, set.domain);
