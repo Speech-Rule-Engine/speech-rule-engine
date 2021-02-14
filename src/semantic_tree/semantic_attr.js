@@ -198,7 +198,7 @@ sre.SemanticAttr = function() {
    */
   this.neutralFences =
       [
-        '|', '¦', '‖', '❘', '⦀', '⫴', '￤', '｜', '∣'
+        '|', '¦', '‖', '❘', '⦀', '⫴', '￤', '｜', '∣', '∥'
       ];
   /** Array of all fences.
    * @type {Array.<string>}
