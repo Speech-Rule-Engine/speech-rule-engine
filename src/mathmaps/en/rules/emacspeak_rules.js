@@ -1,63 +1,14 @@
-// Copyright 2013 Google Inc.
-// Copyright 2014 Volker Sorge
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * @fileoverview Speech rules for semantic tree.
- * @author sorge@google.com (Volker Sorge)
- */
-
-goog.provide('sre.SemanticTreeRules');
-
-
-/**
- * ChromeVox rule set.
- */
-sre.SemanticTreeRules = {
+{
+  "domain": "emacspeak",
   "locale": "en",
-  "domain": "default",
   "modality": "speech",
   "rules": [
-    [
-      "Rule",
-      "collapsed",
-      "default",
-      "[t] \"collapsed\"; [n] . (engine:modality=summary,grammar:collapsed)",
-      "self::*",
-      "@alternative",
-      "not(contains(@grammar, \"collapsed\"))",
-      "self::*",
-      "self::*",
-      "self::*",
-      "self::*",
-      "self::*"
-    ],
     [
       "Rule",
       "stree",
       "default",
       "[n] ./*[1]",
       "self::stree"
-    ],
-    [
-      "Rule",
-      "factorial",
-      "default",
-      "[t] \"factorial\"",
-      "self::punctuation",
-      "text()=\"!\"",
-      "name(preceding-sibling::*[1])!=\"text\""
     ],
     [
       "Rule",
@@ -87,7 +38,7 @@ sre.SemanticTreeRules = {
       "Rule",
       "equality",
       "default",
-      "[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);[n] children/*[2]",
+      "[t] \"equation\"; [t] \"left hand side\"; [n] children/*[1];[p] (pause:200); [n] content/*[1] (pause:200);[t] \"right hand side\"; [n] children/*[2]",
       "self::relseq[@role=\"equality\"]",
       "count(./children/*)=2"
     ],
@@ -118,9 +69,19 @@ sre.SemanticTreeRules = {
     ],
     [
       "Rule",
+      "implicit",
+      "default",
+      "[m] children/*",
+      "self::infixop",
+      "@role=\"implicit\"",
+      "children/*[1][@role=\"latinletter\"] or children/*[1][@role=\"greekletter\"] or children/*[1][@role=\"otherletter\"] or name(children/*[1])=\"number\"",
+      "children/*[2][@role=\"latinletter\"] or children/*[2][@role=\"greekletter\"] or children/*[2][@role=\"otherletter\"] or name(children/*[2])=\"number\""
+    ],
+    [
+      "Rule",
       "binary-operation",
       "default",
-      "[m] children/* (sepFunc:CTFcontentIterator);",
+      "[p] (pause:100); [m] children/* (sepFunc:CTFcontentIterator); [p] (pause:100);",
       "self::infixop"
     ],
     [
@@ -134,17 +95,9 @@ sre.SemanticTreeRules = {
     ],
     [
       "Rule",
-      "multi-addition",
-      "default",
-      "[t] \"sum with\"; [t] count(./children/*); [t] \"summands\";[p] (pause:400); [m] children/* (sepFunc:CTFcontentIterator)",
-      "self::infixop[@role=\"addition\"]",
-      "count(./children/*)>2"
-    ],
-    [
-      "Rule",
       "prefix",
       "default",
-      "[t] \"prefix\"; [m] content/* (pause 150);[n] children/*[1]",
+      "[t] \"prefix\"; [n] text(); [t] \"of\" (pause 150);[n] children/*[1]",
       "self::prefixop"
     ],
     [
@@ -159,7 +112,7 @@ sre.SemanticTreeRules = {
       "Rule",
       "postfix",
       "default",
-      "[n] children/*[1]; [t] \"postfix\"; [m] content/* (pause 300)",
+      "[n] children/*[1]; [t] \"postfix\"; [n] text() (pause 300)",
       "self::postfixop"
     ],
     [
@@ -178,17 +131,9 @@ sre.SemanticTreeRules = {
     ],
     [
       "Rule",
-      "mixed-number",
-      "default",
-      "[n] children/*[1]; [t] \"and\"; [n] children/*[2]; ",
-      "self::number",
-      "@role=\"mixed\""
-    ],
-    [
-      "Rule",
       "font",
       "default",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)",
+      "[t] @font; [n] . (grammar:ignoreFont=@font)",
       "self::*",
       "@font",
       "not(contains(@grammar, \"ignoreFont\"))",
@@ -198,11 +143,10 @@ sre.SemanticTreeRules = {
       "Rule",
       "font-identifier-short",
       "default",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)",
+      "[t] @font; [n] CQFhideFont; [t] CSFshowFont",
       "self::identifier",
       "string-length(text())=1",
       "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
       "@font=\"normal\"",
       "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψωABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")",
       "@role!=\"unit\""
@@ -211,7 +155,7 @@ sre.SemanticTreeRules = {
       "Rule",
       "font-identifier",
       "default",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)",
+      "[t] @font; [n] . (grammar:ignoreFont=@font)",
       "self::identifier",
       "string-length(text())=1",
       "@font",
@@ -232,9 +176,27 @@ sre.SemanticTreeRules = {
     ],
     [
       "Rule",
+      "simple-fraction",
+      "default",
+      "[p] (pause:100); [n] children/*[1] (rate:0.35); [t] \"over\";  [n] children/*[2] (rate:0.35); [p] (pause:100)",
+      "self::fraction",
+      "name(children/*[1])=\"number\" or name(children/*[1])=\"identifier\"",
+      "name(children/*[2])=\"number\" or name(children/*[2])=\"identifier\""
+    ],
+    [
+      "Rule",
+      "vulgar-fraction",
+      "default",
+      "[t] CSFvulgarFraction",
+      "self::fraction",
+      "@role=\"vulgar\"",
+      "CQFvulgarFractionSmall"
+    ],
+    [
+      "Rule",
       "fraction",
       "default",
-      "[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250); [t] \"divided by\"; [n] children/*[2] (rate:-0.35); [p] (pause:400)",
+      "[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250); [t] \"divided by\"; [p] (pause:250);  [n] children/*[2] (rate:0.35); [p] (pause:250)",
       "self::fraction"
     ],
     [
@@ -268,19 +230,19 @@ sre.SemanticTreeRules = {
       "self::punctuation[@role=\"openfence\"]"
     ],
     [
-      "Aliases",
+      "Alias",
       "fence-single",
       "self::punctuation",
       "self::punctuation[@role=\"closefence\"]"
     ],
     [
-      "Aliases",
+      "Alias",
       "fence-single",
       "self::punctuation",
       "self::punctuation[@role=\"vbar\"]"
     ],
     [
-      "Aliases",
+      "Alias",
       "fence-single",
       "self::punctuation",
       "self::punctuation[@role=\"application\"]"
@@ -296,7 +258,7 @@ sre.SemanticTreeRules = {
       "Rule",
       "fences-open-close",
       "default",
-      "[p] (pause:100); [n] content/*[1]; [n] children/*[1]; [n] content/*[2]; [p] (pause:100)",
+      "[p] (pause:200); [n] children/*[1] (rate:0.35); [p] (pause:200)",
       "self::fenced",
       "@role=\"leftright\""
     ],
@@ -396,14 +358,6 @@ sre.SemanticTreeRules = {
     ],
     [
       "Rule",
-      "multiline-ineq",
-      "default",
-      "[t] \"multiline inequality\";[m] children/* (ctxtFunc:CTFnodeCounter,context:\"row\",pause:100)",
-      "self::multiline",
-      "@role=\"inequality\""
-    ],
-    [
-      "Rule",
       "line",
       "default",
       "[m] children/*",
@@ -418,31 +372,15 @@ sre.SemanticTreeRules = {
     ],
     [
       "Rule",
-      "table-ineq",
-      "default",
-      "[t] \"multiline inequality\";[m] children/* (ctxtFunc:CTFnodeCounter,context:\"row\",pause:200)",
-      "self::table",
-      "@role=\"inequality\""
-    ],
-    [
-      "Rule",
       "table-row",
       "default",
       "[m] children/* (pause:100)",
       "self::row[@role=\"table\"]"
     ],
     [
-      "Aliases",
+      "Alias",
       "cases-cell",
       "self::cell[@role=\"table\"]"
-    ],
-    [
-      "Rule",
-      "empty-cell",
-      "default",
-      "[t] \"Blank\"",
-      "self::cell",
-      "count(children/*)=0"
     ],
     [
       "Rule",
@@ -487,7 +425,7 @@ sre.SemanticTreeRules = {
       "default",
       "[n] children/*[1]; [t] \"from\"; [n] children/*[2]; [t] \"to\";[n] children/*[3]",
       "self::limboth",
-      "self::limboth[@role=\"sum\"]"
+      "@role=\"sum\" or @role=\"integral\""
     ],
     [
       "Rule",
@@ -542,7 +480,7 @@ sre.SemanticTreeRules = {
       "Rule",
       "square",
       "default",
-      "[n] children/*[1]; [t] \"squared\" (pitch:0.35); [p] (pause:300)",
+      "[n] children/*[1]; [t] \"squared\" (pitch:0.35); [p] (pause:200)",
       "self::superscript",
       "children/*[2][text()=2]",
       "name(./children/*[1])!=\"text\""
@@ -551,7 +489,7 @@ sre.SemanticTreeRules = {
       "Rule",
       "cube",
       "default",
-      "[n] children/*[1]; [t] \"cubed\" (pitch:0.35); [p] (pause:300)",
+      "[n] children/*[1]; [t] \"cubed\" (pitch:0.35); [p] (pause:200)",
       "self::superscript",
       "children/*[2][text()=3]",
       "name(./children/*[1])!=\"text\""
@@ -560,8 +498,16 @@ sre.SemanticTreeRules = {
       "Rule",
       "root",
       "default",
-      "[t] \"root of order\"; [n] children/*[1];[t] \"over\"; [n] children/*[2] (rate:0.35); [p] (pause:400)",
+      "[t] \"root of order\"; [n] children/*[1];[t] \"over\"; [n] children/*[1] (rate:0.35); [p] (pause:400)",
       "self::root"
+    ],
+    [
+      "Rule",
+      "text-no-mult",
+      "default",
+      "[n] children/*[1]; [p] (pause:200); [n] children/*[2]",
+      "self::infixop",
+      "children/text"
     ],
     [
       "Rule",
@@ -574,7 +520,7 @@ sre.SemanticTreeRules = {
       "Rule",
       "unit",
       "default",
-      "[t] text() (grammar:annotation=\"unit\":translate:plural)",
+      "[t] text() (annotation:unit, preprocess)",
       "self::identifier",
       "@role=\"unit\""
     ],
@@ -641,4 +587,4 @@ sre.SemanticTreeRules = {
       "@role=\"unit\""
     ]
   ]
-};
+}

@@ -1,38 +1,19 @@
-// Copyright 2016 Volker Sorge
-// Copyright (c) 2016 The MathJax Consortium
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * @fileoverview Summary rules for collapsed elements.
- * @author v.sorge@mathjax.com (Volker Sorge)
- */
-
-goog.provide('sre.SummaryEnglish');
-
-
-/**
- * Summary rules.
- */
-sre.SummaryEnglish = {
-  "locale": "en",
+{
+  "locale": "es",
   "modality": "summary",
   "rules": [
     [
       "Rule",
+      "stree",
+      "default.default",
+      "[n] ./*[1]",
+      "self::stree"
+    ],
+    [
+      "Rule",
       "abstr-identifier",
       "default.default",
-      "[t] \"long identifier\"",
+      "[t] \"identificador largo\"",
       "self::identifier",
       "contains(@grammar, \"collapsed\")"
     ],
@@ -40,14 +21,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-identifier",
       "default.default",
-      "[t] \"identifier\"",
+      "[t] \"identificador\"",
       "self::identifier"
     ],
     [
       "Rule",
       "abstr-number",
       "default.default",
-      "[t] \"long number\"",
+      "[t] \"número largo\"",
       "self::number",
       "contains(@grammar, \"collapsed\")"
     ],
@@ -55,14 +36,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-number",
       "default.default",
-      "[t] \"number\"",
+      "[t] \"número\"",
       "self::number"
     ],
     [
       "Rule",
       "abstr-mixed-number",
       "default.default",
-      "[t] \"long mixed number\"",
+      "[t] \"número largo mixto\"",
       "self::number",
       "@role=\"mixed\"",
       "contains(@grammar, \"collapsed\")"
@@ -71,7 +52,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-mixed-number",
       "default.default",
-      "[t] \"mixed number\"",
+      "[t] \"número mixto\"",
       "self::number",
       "@role=\"mixed\""
     ],
@@ -79,21 +60,21 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-text",
       "default.default",
-      "[t] \"text\"",
+      "[t] \"texto\"",
       "self::text"
     ],
     [
       "Rule",
       "abstr-function",
       "default.default",
-      "[t] \"functional expression\"",
+      "[t] \"expresión funcional\"",
       "self::function"
     ],
     [
       "Rule",
       "abstr-function",
       "mathspeak.brief",
-      "[t] \"function\"",
+      "[t] \"función\"",
       "self::function"
     ],
     [
@@ -106,7 +87,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-lim",
       "default.default",
-      "[t] \"limit function\"",
+      "[t] \"función de límite\"",
       "self::function",
       "@role=\"limit function\""
     ],
@@ -114,7 +95,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-lim",
       "mathspeak.brief",
-      "[t] \"lim\"",
+      "[t] \"límite\"",
       "self::function",
       "@role=\"limit function\""
     ],
@@ -128,7 +109,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-fraction",
       "default.default",
-      "[t] \"fraction\"",
+      "[t] \"fracción\"",
       "self::fraction"
     ],
     [
@@ -148,7 +129,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-continued-fraction",
       "default.default",
-      "[t] \"continued fraction\"",
+      "[t] \"fracción continua\"",
       "self::fraction",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\"]"
     ],
@@ -156,7 +137,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-continued-fraction",
       "mathspeak.brief",
-      "[t] \"continued frac\"",
+      "[t] \"frac continua\"",
       "self::fraction",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\"]"
     ],
@@ -170,14 +151,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-sqrt",
       "default.default",
-      "[t] \"square root\"",
+      "[t] \"raíz cuadrada\"",
       "self::sqrt"
     ],
     [
       "Rule",
       "abstr-sqrt-nested",
       "default.default",
-      "[t] \"nested square root\"",
+      "[t] \"raíz cuadrada anidada\"",
       "self::sqrt",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -185,23 +166,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"root of index\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"endindex\"",
-      "self::root",
-      "contains(@grammar, \"collapsed\")",
-      "following-sibling::* or ancestor::*/following-sibling::*"
-    ],
-    [
-      "Rule",
-      "abstr-root",
-      "default.default",
-      "[t] \"root of index\"; [n] children/*[1] (engine:modality=\"speech\")",
+      "[t] \"raíz del índice\"; [n] children/*[1] (engine:modality=speech)",
       "self::root"
     ],
     [
       "Rule",
       "abstr-root",
       "mathspeak.brief",
-      "[t] \"root\"",
+      "[t] \"raíz\"",
       "self::root"
     ],
     [
@@ -214,17 +186,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-root-nested",
       "default.default",
-      "[t] \"nested root of index\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"endindex\"",
-      "self::root",
-      "contains(@grammar, \"collapsed\")",
-      "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
-      "following-sibling::* or ancestor::*/following-sibling::*"
-    ],
-    [
-      "Rule",
-      "abstr-root-nested",
-      "default.default",
-      "[t] \"nested root of index\"; [n] children/*[1] (engine:modality=\"speech\")",
+      "[t] \"raíz anidada del índice\"; [n] children/*[1] (engine:modality=\"speech\")",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -232,7 +194,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-root-nested",
       "mathspeak.brief",
-      "[t] \"nested root\"",
+      "[t] \"raíz anidada\"",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -246,21 +208,21 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-superscript",
       "default.default",
-      "[t] \"power\"",
+      "[t] \"potencia\"",
       "self::superscript"
     ],
     [
       "Rule",
       "abstr-subscript",
       "default.default",
-      "[t] \"subscript\"",
+      "[t] \"subíndice\"",
       "self::subscript"
     ],
     [
       "Rule",
       "abstr-subsup",
       "default.default",
-      "[t] \"power with subscript\"",
+      "[t] \"potencia con subíndice\"",
       "self::superscript",
       "name(children/*[1])=\"subscript\""
     ],
@@ -268,14 +230,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-infixop",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"with\"; [t] count(./children/*); [t] \"elements\"",
+      "[t] @role (grammar:localRole); [t] \"con\"; [t] count(./children/*); [t] \"elementos\"",
       "self::infixop"
     ],
     [
       "Rule",
       "abstr-infixop",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"with variable number of elements\"",
+      "[t] @role (grammar:localRole); [t] \"con una cantidad variable de elementos\"",
       "self::infixop",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -297,7 +259,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-addition",
       "default.default",
-      "[t] \"sum with\"; [t] count(./children/*); [t] \"summands\"",
+      "[t] \"suma con\"; [t] count(./children/*); [t] \"sumandos\"",
       "self::infixop",
       "@role=\"addition\""
     ],
@@ -305,7 +267,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-addition",
       "mathspeak.brief",
-      "[t] \"sum\"",
+      "[t] \"suma\"",
       "self::infixop",
       "@role=\"addition\""
     ],
@@ -319,7 +281,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-addition",
       "default.default",
-      "[t] \"sum with variable number of summands\"",
+      "[t] \"suma con número variable de sumandos\"",
       "self::infixop",
       "@role=\"addition\"",
       "count(./children/*)>2",
@@ -329,7 +291,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-multiplication",
       "default.default",
-      "[t] \"product with\"; [t] count(./children/*); [t] \"factors\"",
+      "[t] \"producto con\"; [t] count(./children/*); [t] \"factores\"",
       "self::infixop",
       "@role=\"multiplication\""
     ],
@@ -337,7 +299,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-multiplication",
       "mathspeak.brief",
-      "[t] \"product\"",
+      "[t] \"producto\"",
       "self::infixop",
       "@role=\"multiplication\""
     ],
@@ -357,7 +319,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-multiplication",
       "default.default",
-      "[t] \"product with variable number of factors\"",
+      "[t] \"producto con una cantidad variable de factores\"",
       "self::infixop",
       "@role=\"multiplication\"",
       "count(./children/*)>2",
@@ -375,7 +337,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-vector",
       "default.default",
-      "[t] count(./children/*) ; [t] \"dimensional vector\"",
+      "[t] \"vector de dimensión\"; [t] count(./children/*)",
       "self::vector"
     ],
     [
@@ -395,7 +357,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-vector",
       "default.default",
-      "[t] \"n dimensional vector\"",
+      "[t] \"vector de dimensión n\"",
       "self::vector",
       "./children/*/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -403,7 +365,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-binomial",
       "default.default",
-      "[t] \"binomial\"",
+      "[t] \"binomio\"",
       "self::vector",
       "@role=\"binomial\""
     ],
@@ -423,7 +385,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-determinant",
       "default.default",
-      "[t] count(./children/*); [t] \"dimensional determinant\"",
+      "[t] \"determinante de dimensión\"; [t] count(./children/*)",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -431,7 +393,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-determinant",
       "mathspeak.brief",
-      "[t] \"determinant\"",
+      "[t] \"determinante\"",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -445,7 +407,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-determinant",
       "default.default",
-      "[t] \"n dimensional determinant\"",
+      "[t] \"determinante de dimensión n\"",
       "self::matrix",
       "@role=\"determinant\"",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
@@ -454,7 +416,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-squarematrix",
       "default.default",
-      "[t] count(./children/*); [t] \"dimensional square matrix\"",
+      "[t] \"matriz cuadrada de dimensión\"; [t] count(./children/*)",
       "self::matrix",
       "@role=\"squarematrix\""
     ],
@@ -462,7 +424,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-squarematrix",
       "mathspeak.brief",
-      "[t] \"square matrix\"",
+      "[t] \"matriz cuadrada\"",
       "self::matrix",
       "@role=\"squarematrix\""
     ],
@@ -476,7 +438,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-rowvector",
       "default.default",
-      "[t] count(./children/row/children/*); [t] \"dimensional row vector\"",
+      "[t] \"vector fila de dimensión\"; [t] count(./children/row/children/*)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -484,7 +446,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-rowvector",
       "mathspeak.brief",
-      "[t] \"row vector\"",
+      "[t] \"vector fila\"",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -498,7 +460,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-matrix",
       "default.default",
-      "[t] \"n dimensional row vector\"",
+      "[t] \"vector fila de dimensión n\"",
       "self::matrix",
       "@role=\"rowvector\"",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
@@ -507,14 +469,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-matrix",
       "default.default",
-      "[t] count(children/*);  [t] \"by\";[t] count(children/*[1]/children/*); [t] \"matrix\"",
+      "[t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [t] \"matriz\"",
       "self::matrix"
     ],
     [
       "Rule",
       "abstr-matrix",
       "mathspeak.brief",
-      "[t] \"matrix\"",
+      "[t] \"matriz\"",
       "self::matrix"
     ],
     [
@@ -527,7 +489,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-matrix",
       "default.default",
-      "[t] \"n by m dimensional matrix\"",
+      "[t] \"matriz de dimensión n por m\"",
       "self::matrix",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -535,14 +497,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-cases",
       "default.default",
-      "[t] \"case statement\";[t] \"with\"; [t] count(children/*); [t] \"cases\"",
+      "[t] \"declaración de caso\";[t] \"con\"; [t] count(children/*); [t] \"casos\"",
       "self::cases"
     ],
     [
       "Rule",
       "abstr-cases",
       "mathspeak.brief",
-      "[t] \"case statement\"",
+      "[t] \"declaración de caso\"",
       "self::cases"
     ],
     [
@@ -555,7 +517,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-cases",
       "default.default",
-      "[t] \"case statement with variable number of cases\"",
+      "[t] \"declaración de caso con número variable de casos\"",
       "self::cases",
       "./children/row/children/cell/children/punctuation[@role=\"ellipsis\"]or ./children/line/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -563,14 +525,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-punctuated",
       "default.default",
-      "[n] content/*[1]; [t] \"separated list\"; [t] \"of length\"; [t] count(children/*) - count(content/*)",
+      "[t] \"lista separada por\"; [n] content/*[1]; [t] \"de longitud\"; [t] count(children/*) - count(content/*)",
       "self::punctuated"
     ],
     [
       "Rule",
       "abstr-punctuated",
       "mathspeak.brief",
-      "[n] content/*[1]; [t] \"separated list\"",
+      "[t] \"lista separada por\"; [n] content/*[1]",
       "self::punctuated"
     ],
     [
@@ -583,7 +545,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-punctuated",
       "default.default",
-      "[n] content/*[1]; [t] \"separated list\";[t] \"of variable length\"",
+      "[t] \"lista separada por\"; [n] content/*[1];[t] \"de longitud variable\"",
       "self::punctuated",
       "./children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -614,7 +576,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-relation-seq",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"sequence\"; [t] \"with\"; [t] count(./children/*); [t] \"elements\"",
+      "[t] \"secuencia de\"; [t] @role (grammar:localRole); [t] \"con\"; [t] count(./children/*); [t] \"elementos\"",
       "self::relseq",
       "count(./children/*)>2"
     ],
@@ -622,7 +584,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-relation-seq",
       "mathspeak.brief",
-      "[t] @role (grammar:localRole); [t] \"sequence\"",
+      "[t] \"secuencia de\"; [t] @role (grammar:localRole)",
       "self::relseq",
       "count(./children/*)>2"
     ],
@@ -636,7 +598,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-relation",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"sequence\"; [t] \"with variable number of elements\"",
+      "[t] \"secuencia de\"; [t] @role (grammar:localRole); [t] \"con una cantidad variable de elementos\"",
       "self::relseq",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -661,7 +623,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-multirel",
       "default.default",
-      "[t] \"relation sequence\"; [t] \"with\"; [t] count(./children/*); [t] \"elements\"",
+      "[t] \"secuencia de relación\"; [t] \"con\"; [t] count(./children/*); [t] \"elementos\"",
       "self::multirel",
       "count(./children/*)>2"
     ],
@@ -669,7 +631,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-multirel",
       "mathspeak.brief",
-      "[t] \"relation sequence\"",
+      "[t] \"secuencia de relación\"",
       "self::multirel",
       "count(./children/*)>2"
     ],
@@ -683,7 +645,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-multirel",
       "default.default",
-      "[t] \"relation sequence with variable number of elements\"",
+      "[t] \"secuencia de relación con número variable de elementos\"",
       "self::multirel",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -692,29 +654,30 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-table",
       "default.default",
-      "[t] \"table with\"; [t] count(children/*); [t] \"rows and\";[t] count(children/*[1]/children/*); [t] \"columns\"",
+      "[t] \"mesa con\"; [t] count(children/*); [t] \"filas y\";[t] count(children/*[1]/children/*); [t] \"columnas\"",
       "self::table"
     ],
     [
       "Rule",
       "abstr-line",
       "default.default",
-      "[t] \"in\"; [t] @role (grammar:localRole);",
+      "[t] \"en\"; [t] @role (grammar:localRole);",
       "self::line"
     ],
     [
       "Rule",
       "abstr-row",
       "default.default",
-      "[t] \"in\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"with\";[t] count(children/*); [t] \"columns\"",
+      "[t] \"en\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"con\";[t] count(children/*); [t] \"columnas\"",
       "self::row"
     ],
     [
       "Rule",
       "abstr-cell",
       "default.default",
-      "[t] \"in\"; [t] @role (grammar:localRole);",
+      "[t] \"en\"; [t] @role (grammar:localRole);",
       "self::cell"
     ]
   ]
-};
+}
+

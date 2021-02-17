@@ -27,7 +27,6 @@ goog.require('sre.Engine.Error');
 goog.require('sre.L10n');
 goog.require('sre.ProcessorFactory');
 goog.require('sre.SpeechRuleEngine');
-goog.require('sre.SpeechRuleStores');
 goog.require('sre.SystemExternal');
 goog.require('sre.Variables');
 
@@ -80,11 +79,9 @@ sre.System.prototype.setupEngine = function(feature) {
     sre.SystemExternal.WGXpath = feature.xpath;
   }
   engine.setupBrowsers();
-  engine.ruleSets = feature.rules ? feature.rules :
-      sre.SpeechRuleStores.availableSets();
-  sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
   engine.setDynamicCstr();
   sre.L10n.setLocale();
+  sre.SpeechRuleEngine.getInstance().updateEngine();
 };
 
 

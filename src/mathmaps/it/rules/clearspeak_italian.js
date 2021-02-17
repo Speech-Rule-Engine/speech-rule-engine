@@ -1,30 +1,5 @@
-// Copyright 2017 Volker Sorge
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * @fileoverview French Clearspeak rules.
- * @author volker.sorge@gmail.com (Volker Sorge)
- */
-
-goog.provide('sre.ClearspeakFrench');
-
-
-/**
- * French clearspeak rules.
- */
-sre.ClearspeakFrench = {
-  "locale": "fr",
+{
+  "locale": "it",
   "domain": "clearspeak",
   "modality": "speech",
   "rules": [
@@ -116,7 +91,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "capital",
       "default",
-      "[n] text() (pitch:0.6,grammar:ignoreCaps=\"majuscule\")",
+      "[n] text() (pitch:0.6, grammar:ignoreCaps=\"maiuscola\")",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\" or @role=\"simple function\"",
       "CQFisCapital"
@@ -205,7 +180,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "ellipsis",
       "Ellipses_AndSoOn",
-      "[t] \"et ainsi de suite\"",
+      "[t] \"e così via\"",
       "self::punctuation",
       "@role=\"ellipsis\"",
       "not(following-sibling::*[1])",
@@ -215,7 +190,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "ellipsis",
       "Ellipses_AndSoOn",
-      "[t] \"et ainsi de suite jusqu'à\"",
+      "[t] \"e così via fino a\"",
       "self::punctuation",
       "@role=\"ellipsis\"",
       "preceding-sibling::*[1]",
@@ -225,7 +200,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vbar-evaluated",
       "default",
-      "[n] children/*[1]; [p] (pause:\"short\"); [t] \"évalué à\"; [n] content/*[1]/children/*[2]; [p] (pause:\"short\")",
+      "[n] children/*[1]; [p] (pause:\"short\"); [t] \"valutato a\"; [n] content/*[1]/children/*[2]; [p] (pause:\"short\")",
       "self::punctuated",
       "@role=\"endpunct\"",
       "content/*[1][@role=\"vbar\"]",
@@ -236,7 +211,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vbar-evaluated",
       "default",
-      "[n] children/*[1]; [p] (pause:\"short\"); [t] \"évalué à\"; [n] content/*[1]/children/*[2]; [p] (pause:\"short\"); [t] \"moins la même expression évaluée à\"; [n] content/*[1]/children/*[1]/children/*[2]; [p] (pause:\"short\")",
+      "[n] children/*[1]; [p] (pause:\"short\"); [t] \"valutato a\"; [n] content/*[1]/children/*[2]; [p] (pause:\"short\"); [t] \"meno la stessa espressione valutata a\"; [n] content/*[1]/children/*[1]/children/*[2]; [p] (pause:\"short\")",
       "self::punctuated",
       "@role=\"endpunct\"",
       "content/*[1][@role=\"vbar\"]",
@@ -248,7 +223,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vbar-such-that",
       "VerticalLine_SuchThat",
-      "[t] \"tel que\"",
+      "[t] \"tale che\"",
       "self::punctuation",
       "@role=\"vbar\"",
       "not(parent::*/parent::*[@embellished=\"punctuation\"])"
@@ -257,7 +232,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vbar-divides",
       "default",
-      "[t] \"diviseur de\"",
+      "[t] \"divide\"",
       "self::punctuation",
       "@role=\"vbar\"",
       "not(parent::*/parent::*[@embellished=\"punctuation\"])",
@@ -267,7 +242,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vbar-divides",
       "VerticalLine_Divides",
-      "[t] \"diviseur de\"",
+      "[t] \"divide\"",
       "self::punctuation",
       "@role=\"vbar\"",
       "not(parent::*/parent::*[@embellished=\"punctuation\"])"
@@ -276,7 +251,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vbar-given",
       "VerticalLine_Given",
-      "[t] \"sachant\"",
+      "[t] \"dato\"",
       "self::punctuation",
       "@role=\"vbar\"",
       "not(parent::*/parent::*[@embellished=\"punctuation\"])"
@@ -285,7 +260,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "set-member",
       "default",
-      "[t] \"est un\"",
+      "[t] \"in\"",
       "self::operator",
       "@role=\"set extended\"",
       "text()=\"∈\" or text()=\"∊\""
@@ -295,27 +270,27 @@ sre.ClearspeakFrench = {
       "set-member",
       "default",
       "SetMemberSymbol_Member",
-      "[t] \"appartient à\""
+      "[t] \"membro di\""
     ],
     [
       "SpecializedRule",
       "set-member",
       "default",
       "SetMemberSymbol_Element",
-      "[t] \"est un élément de\""
+      "[t] \"elemento di\""
     ],
     [
       "SpecializedRule",
       "set-member",
       "default",
       "SetMemberSymbol_Belongs",
-      "[t] \"est dans\""
+      "[t] \"appartenente a\""
     ],
     [
       "Rule",
       "set-not-member",
       "default",
-      "[t] \"n'est pas un\"",
+      "[t] \"non in\"",
       "self::operator",
       "@role=\"set extended\"",
       "text()=\"∉\""
@@ -325,21 +300,21 @@ sre.ClearspeakFrench = {
       "set-not-member",
       "default",
       "SetMemberSymbol_Member",
-      "[t] \"n'appartient pas à\""
+      "[t] \"non membro di\""
     ],
     [
       "SpecializedRule",
       "set-not-member",
       "default",
       "SetMemberSymbol_Element",
-      "[t] \"n'est pas un élément de\""
+      "[t] \"non elemento di\""
     ],
     [
       "SpecializedRule",
       "set-not-member",
       "default",
       "SetMemberSymbol_Belongs",
-      "[t] \"n'est pas dans\""
+      "[t] \"non appartiene a \""
     ],
     [
       "Rule",
@@ -570,14 +545,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "appl",
       "default",
-      "[n] children/*[1]; [t] \"de\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "[n] children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl"
     ],
     [
       "Rule",
       "appl-simple",
       "default",
-      "[n] children/*[1]; [t] \"de\"; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
+      "[n] children/*[1]; [t] \"di\"; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"simple function\"",
       "name(children/*[2])=\"appl\""
@@ -586,7 +561,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "appl-simple",
       "default",
-      "[n] children/*[1]; [t] \"de\"; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
+      "[n] children/*[1]; [t] \"di\"; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"simple function\"",
       "name(children/*[2])=\"fenced\"",
@@ -596,16 +571,25 @@ sre.ClearspeakFrench = {
       "Rule",
       "appl",
       "Functions_None",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"fois\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"per\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl"
     ],
     [
       "Rule",
       "function-prefix",
       "default",
-      "[n] children/*[1]; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"di\"; [n] children/*[2]",
       "self::appl",
       "@role=\"prefix function\""
+    ],
+    [
+      "Rule",
+      "function-prefix-det",
+      "default",
+      "[n] children/*[1]; [t] \"della\"; [n] children/*[2]",
+      "self::appl",
+      "@role=\"prefix function\"",
+      "children/*[1][text()=\"det\"]"
     ],
     [
       "Rule",
@@ -622,7 +606,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-simple-arg",
       "default",
-      "[n] children/*[1]; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"di\"; [n] children/*[2]",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[2])=\"fenced\"",
@@ -635,7 +619,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-embell",
       "default",
-      "[p] (pause:\"short\"); [n] children/*[1]; [n] children/*[2]; [p] (pause:\"short\"); ",
+      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[1])!=\"function\""
@@ -644,7 +628,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-fenced-or-frac-arg",
       "default",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"de\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "(name(children/*[2])=\"fenced\" and not(contains(children/*[2]/children/*[1]/@annotation, \"clearspeak:simple\"))) or name(children/*[2])=\"fraction\" or (name(children/*[2])!=\"fenced\" and not(contains(children/*[2]/@annotation, \"clearspeak:simple\")))",
@@ -654,7 +638,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-subscript",
       "default",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"de\"; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"di\"; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[1])=\"subscript\"",
@@ -664,7 +648,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-ln",
       "default",
-      "[n] children/*[1]; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"di\"; [n] children/*[2]",
       "self::appl",
       "@role=\"prefix function\"",
       "content/*[2][text()=\"ln\"]",
@@ -675,7 +659,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-ln",
       "default",
-      "[n] children/*[1]; [n] children/*[2]; [p] (pause:\"short\")",
+      "[n] children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "content/*[2][text()=\"ln\"]",
@@ -685,7 +669,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-ln",
       "default",
-      "[n] children/*[1]; [t] \"de\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "[n] children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "content/*[2][text()=\"ln\"]",
@@ -717,7 +701,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-as-exp",
       "default",
-      "[n] children/*[1]; [t] \"de\"; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
+      "[n] children/*[1]; [t] \"di\"; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(parent::*/parent::*)=\"superscript\"",
@@ -728,7 +712,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-subscript-as-exp",
       "default",
-      "[n] children/*[1]; [t] \"de\"; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
+      "[n] children/*[1]; [t] \"di\"; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(parent::*/parent::*)=\"superscript\"",
@@ -739,7 +723,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-hyper",
       "default",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"de\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "CQFisHyperbolic"
@@ -748,7 +732,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-inverse",
       "default",
-      "[p] (pause:\"short\");  [n] children/*[1]/children/*[1]; [t] \"inverse de\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [t] \"inverso del\";  [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[1])=\"superscript\"",
@@ -761,7 +745,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-inverse",
       "Trig_Reciprocal",
-      "[p] (pause:\"short\"); [t] \"la reciproque de\"; [n] children/*[1]/children/*[1]; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [t] \"il reciproco del\"; [n] children/*[1]/children/*[1]; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[1])=\"superscript\"",
@@ -774,7 +758,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-inverse",
       "Trig_Reciprocal",
-      "[p] (pause:\"short\"); [t] \"la reciproque de\"; [n] children/*[1]/children/*[1];[n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [t] \"il reciproco del\"; [n] children/*[1]/children/*[1]; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[1])=\"superscript\"",
@@ -788,7 +772,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "appl-triginverse",
       "Trig_TrigInverse",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"de\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[1])=\"superscript\"",
@@ -800,7 +784,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-arc-simple",
       "Trig_ArcTrig",
-      "[p] (pause:\"short\"); [t] \"arc\"; [n] children/*[1]/children/*[1]; [n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [t] \"arco\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[1])=\"superscript\"",
@@ -813,7 +797,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-arc-simple",
       "Trig_ArcTrig",
-      "[p] (pause:\"short\"); [t] \"arc\"; [n] children/*[1]/children/*[1]; [p] (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [t] \"arco\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[1])=\"superscript\"",
@@ -829,7 +813,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-prefix-arc",
       "Trig_ArcTrig",
-      "[p] (pause:\"short\"); [t] \"arc\"; [n] children/*[1]/children/*[1]; [t] \"de\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "[p] (pause:\"short\"); [t] \"arco\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
       "name(children/*[1])=\"superscript\"",
@@ -843,7 +827,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "function-inverse",
       "default",
-      "[n] children/*[1]; [t] \"inverse\"",
+      "[n] children/*[1]; [t] \"inversa\"",
       "self::superscript",
       "@role=\"prefix function\" or @role=\"simple function\"",
       "name(children/*[2])=\"prefixop\"",
@@ -853,9 +837,28 @@ sre.ClearspeakFrench = {
     ],
     [
       "Rule",
+      "superscript-prefix-function",
+      "default",
+      "[t] \"potenza\"; [n] children/*[2] (grammar:ordinal); [t] \"di\"; [n] children/*[1]",
+      "self::superscript",
+      "@role=\"prefix function\"",
+      "name(children/*[2])=\"number\"",
+      "children/*[2][@role=\"integer\"]"
+    ],
+    [
+      "Rule",
+      "superscript-prefix-function",
+      "default",
+      "[t] \"potenza\"; [n] children/*[2] (grammar:ordinal); [t] \"di\"; [n] children/*[1]",
+      "self::superscript",
+      "@role=\"prefix function\"",
+      "name(children/*[2])=\"identifier\""
+    ],
+    [
+      "Rule",
       "function-inverse",
       "Functions_Reciprocal",
-      "[t] \"la reciproque de\"; [n] children/*[1]",
+      "[t] \"riciproco di\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"prefix function\" or @role=\"simple function\"",
       "name(children/*[2])=\"prefixop\"",
@@ -879,14 +882,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "superscript",
       "default",
-      "[n] children/*[1]; [t] \"à l'exposant\" (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\"); [t] \"fin exposant\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\"); [t] \"fine esponente\" (pause:\"short\")",
       "self::superscript"
     ],
     [
       "Rule",
       "superscript-simple-exponent",
       "default",
-      "[n] children/*[1]; [t] \"à la puissance\"; [n] children/*[2]; [p] (pause:\"medium\")",
+      "[n] children/*[1]; [t] \"elevato alla\"; [n] children/*[2]; [p] (pause:\"medium\")",
       "self::superscript",
       "not(descendant::superscript)"
     ],
@@ -894,7 +897,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "superscript-simple-exponent-end",
       "default",
-      "[n] children/*[1]; [t] \"à la puissance\"; [n] children/*[2]; [p] (pause:\"medium\")",
+      "[n] children/*[1]; [t] \"elevato alla\"; [n] children/*[2]; [p] (pause:\"medium\")",
       "self::superscript",
       "not(descendant::superscript)",
       "not(following-sibling::*)"
@@ -935,6 +938,32 @@ sre.ClearspeakFrench = {
     ],
     [
       "Rule",
+      "superscript-ordinal",
+      "default",
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\" (pause:\"short\")",
+      "self::superscript",
+      "name(children/*[2])=\"number\"",
+      "children/*[2][@role=\"integer\"]"
+    ],
+    [
+      "Aliases",
+      "superscript-ordinal",
+      "self::superscript",
+      "name(children/*[2])=\"identifier\"",
+      "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
+    ],
+    [
+      "Rule",
+      "superscript-non-ordinal",
+      "default",
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "self::superscript",
+      "children/*[2][@role=\"negative\"]",
+      "name(children/*[2]/children/*[1])=\"number\"",
+      "children/*[2]/children/*[1][@role=\"integer\"]"
+    ],
+    [
+      "Rule",
       "superscript-simple-function",
       "Functions_None",
       "[n] . (grammar:functions_none)",
@@ -947,26 +976,96 @@ sre.ClearspeakFrench = {
       "Rule",
       "superscript-ordinal",
       "Exponent_Ordinal",
-      "[n] children/*[1]; [t] \"à la\"; [n] children/*[2] (grammar:ordinal); [t] \"puissance\" (pause:\"medium\")",
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [p] (pause:\"short\")",
       "self::superscript",
-      "name(children/*[2])=\"identifier\"",
-      "children/*[2][@role=\"latinletter\"]"
+      "name(children/*[2])=\"number\"",
+      "children/*[2][@role=\"integer\"]"
     ],
     [
       "Rule",
       "superscript-ordinal",
       "Exponent_Ordinal",
-      "[n] children/*[1]; [t] \"à la puissance\"; [n] children/*[2]; [p] (pause:\"medium\")",
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "self::superscript",
+      "name(children/*[2])=\"prefixop\"",
+      "children/*[2][@role=\"negative\"]",
+      "name(children/*[2]/children/*[1])=\"number\"",
+      "children/*[2]/children/*[1][@role=\"integer\"]"
+    ],
+    [
+      "Rule",
+      "superscript-ordinal",
+      "Exponent_Ordinal",
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [p] (pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
-      "children/*[2][@role=\"latinletter\"]",
-      "CQFisCaptial"
+      "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
+    ],
+    [
+      "Rule",
+      "superscript-ordinal-default",
+      "Exponent_Ordinal",
+      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\"); [t] \"fine esponente\" (pause:\"short\")",
+      "self::superscript",
+      "children//superscript"
+    ],
+    [
+      "Rule",
+      "superscript-ordinal",
+      "Exponent_OrdinalPower",
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\"; [p] (pause:\"short\")",
+      "self::superscript",
+      "name(children/*[2])=\"number\"",
+      "children/*[2][@role=\"integer\"]"
+    ],
+    [
+      "Rule",
+      "superscript-ordinal",
+      "Exponent_OrdinalPower",
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2]; [p] (pause:\"short\")",
+      "self::superscript",
+      "name(children/*[2])=\"prefixop\"",
+      "children/*[2][@role=\"negative\"]",
+      "name(children/*[2]/children/*[1])=\"number\"",
+      "children/*[2]/children/*[1][@role=\"integer\"]"
+    ],
+    [
+      "Rule",
+      "superscript-ordinal",
+      "Exponent_OrdinalPower",
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\"; [p] (pause:\"short\")",
+      "self::superscript",
+      "name(children/*[2])=\"identifier\"",
+      "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
+    ],
+    [
+      "Rule",
+      "superscript-ordinal-default",
+      "Exponent_OrdinalPower",
+      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\"); [t] \"fine esponente\" (pause:\"short\")",
+      "self::superscript",
+      "children//superscript"
+    ],
+    [
+      "Rule",
+      "superscript-power",
+      "Exponent_AfterPower",
+      "[n] children/*[1]; [t] \"elevato all'esponente\"; [n] children/*[2] (grammar:afterPower); [p] (pause:\"short\")",
+      "self::superscript"
+    ],
+    [
+      "Rule",
+      "superscript-power-default",
+      "Exponent_AfterPower",
+      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:\"short\"); [n] children/*[2]; [p] (pause:\"short\"); [t] \"fine esponente\" (pause:\"short\")",
+      "self::superscript",
+      "children//superscript"
     ],
     [
       "Rule",
       "exponent",
       "default",
-      "[n] text() (join:\"-\"); [t] \"ième\"",
+      "[n] text() (join:\"-\"); [t] \"esima\"",
       "self::identifier",
       "contains(@grammar, \"ordinal\")"
     ],
@@ -1022,24 +1121,41 @@ sre.ClearspeakFrench = {
     ],
     [
       "Rule",
+      "squared-male",
+      "default",
+      "[t] \"quadrato\"",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")"
+    ],
+    [
+      "Rule",
+      "squared-female",
+      "default",
+      "[t] \"quadrata\"",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")",
+      "parent::*/parent::*[@role=\"simple function\"]"
+    ],
+    [
+      "Rule",
       "square",
       "default",
-      "[n] children/*[1]; [t] \"au carré\"",
+      "[n] children/*[1]; [n] children/*[2] (grammar:squared)",
       "self::superscript",
+      "@role!=\"unit\"",
       "children/*[2][text()=\"2\"]",
       "name(children/*[1])!=\"text\" or not(name(children/*[1])=\"text\" and (name(../../../punctuated[@role=\"text\"]/..)=\"stree\" or name(..)=\"stree\"))",
-      "self::*",
       "self::*"
     ],
     [
       "Rule",
       "cube",
       "default",
-      "[n] children/*[1]; [t] \"au cube\"",
+      "[n] children/*[1]; [t] \"cubo\"",
       "self::superscript",
+      "@role!=\"unit\"",
       "children/*[2][text()=\"3\"]",
       "name(children/*[1])!=\"text\" or not(name(children/*[1])=\"text\" and (name(../../../punctuated[@role=\"text\"]/..)=\"stree\" or name(..)=\"stree\"))",
-      "self::*",
       "self::*"
     ],
     [
@@ -1078,7 +1194,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "paren-simple-nested-func-no-bracket",
       "Functions_None",
-      "[n] children/*[1];",
+      "[n] children/*[1]",
       "self::fenced",
       "@role=\"leftright\"",
       "name(../*[1])=\"identifier\" or name(../*[1])=\"function\"",
@@ -1168,7 +1284,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "fences-points",
       "Paren_CoordPoint",
-      "[t] \"le point avec coordonées\"; [n] children/*[1]",
+      "[t] \"punto con coordinate\"; [n] children/*[1]",
       "self::fenced",
       "name(children/*[1])=\"punctuated\"",
       "children/*[1][@role=\"sequence\"]"
@@ -1177,7 +1293,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "fences-interval",
       "Paren_Interval",
-      "[t] \"un intervalle de\"; [n] children/*[1]/children/*[1]; [t] \"à\"; [n] children/*[1]/children/*[3]; [p] (pause:\"short\"); [n] . (grammar:interval)",
+      "[t] \"l'intervallo da\"; [n] children/*[1]/children/*[1]; [t] \"a\"; [n] children/*[1]/children/*[3]; [p] (pause:\"short\"); [n] . (grammar:interval)",
       "self::fenced",
       "not(contains(@grammar, \"interval\"))",
       "name(children/*[1])=\"punctuated\"",
@@ -1189,7 +1305,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "interval-open",
       "Paren_Interval",
-      "[t] \"sans inclure\"; [n] children/*[1]/children/*[1]; [t] \"ni\"; [n] children/*[1]/children/*[3]",
+      "[t] \"che non include\"; [n] children/*[1]/children/*[1]; [t] \"o\"; [n] children/*[1]/children/*[3]",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1199,7 +1315,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "interval-closed-open",
       "Paren_Interval",
-      "[t] \"avec\"; [n] children/*[1]/children/*[1]; [t] \"inclus\"; [p] (pause:\"short\"); [t] \"mais sans inclure\"; [n] children/*[1]/children/*[3]",
+      "[t] \"che include\"; [n] children/*[1]/children/*[1]; [p] (pause:\"short\"); [t] \"ma che non include\"; [n] children/*[1]/children/*[3]",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"[\"",
@@ -1209,7 +1325,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "interval-open-closed",
       "Paren_Interval",
-      "[t] \"sans inclure\"; [n] children/*[1]/children/*[1]; [p] (pause:\"short\"); [t] \"mais avec\"; [n] children/*[1]/children/*[3]; [t] \"inclus\"",
+      "[t] \"che non include\"; [n] children/*[1]/children/*[1]; [p] (pause:\"short\"); [t] \"ma che comprende\"; [n] children/*[1]/children/*[3]",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1219,7 +1335,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "interval-closed",
       "Paren_Interval",
-      "[t] \"avec\"; [n] children/*[1]/children/*[1]; [t] \"et\"; [n] children/*[1]/children/*[3]; [t] \"inclus\"",
+      "[t] \"che include\"; [n] children/*[1]/children/*[1]; [t] \"e\"; [n] children/*[1]/children/*[3]",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"[\"",
@@ -1229,7 +1345,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "interval-open-inf-r",
       "Paren_Interval",
-      "[t] \"sans inclure\"; [n] children/*[1]/children/*[1]",
+      "[t] \"che non include\"; [n] children/*[1]/children/*[1]",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1240,7 +1356,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "interval-open-inf-l",
       "Paren_Interval",
-      "[t] \"sans inclure\"; [n] children/*[1]/children/*[3]",
+      "[t] \"che non include\"; [n] children/*[1]/children/*[3]",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1263,7 +1379,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "interval-closed-open-inf",
       "Paren_Interval",
-      "[t] \"avec\"; [n] children/*[1]/children/*[1]; [t] \"inclus\"",
+      "[t] \"che include\"; [n] children/*[1]/children/*[1]",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"[\"",
@@ -1274,7 +1390,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "interval-open-closed-inf",
       "Paren_Interval",
-      "[t] \"avec\"; [n] children/*[1]/children/*[3]; [t] \"inclus\"",
+      "[t] \"che include\"; [n] children/*[1]/children/*[3]",
       "self::fenced",
       "contains(@grammar, \"interval\")",
       "content/*[1]/text()=\"(\"",
@@ -1296,7 +1412,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "set-empty",
       "default",
-      "[t] \"ensemble vide\"",
+      "[t] \"l'insieme vuoto\"",
       "self::fenced",
       "@role=\"set empty\""
     ],
@@ -1304,7 +1420,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "set-extended",
       "default",
-      "[t] \"ensemble des\"; [n] children/*[1]/children/*[1]; [t] \"tel que\"; [n] children/*[1]/children/*[3]",
+      "[t] \"l'insieme di tutti\"; [n] children/*[1]/children/*[1]; [t] \"tale che\"; [n] children/*[1]/children/*[3]",
       "self::fenced",
       "@role=\"set extended\""
     ],
@@ -1312,7 +1428,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "set-collection",
       "default",
-      "[t] \"ensemble\"; [n] children/*[1]",
+      "[t] \"l'insieme\"; [n] children/*[1]",
       "self::fenced",
       "@role=\"set collection\""
     ],
@@ -1326,7 +1442,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "set-extended",
       "Sets_woAll",
-      "[t] \"ensemble de\"; [n] children/*[1]/children/*[1]; [t] \"tel que\"; [n] children/*[1]/children/*[3]",
+      "[t] \"l'insieme di\"; [n] children/*[1]/children/*[1]; [t] \"tale che\"; [n] children/*[1]/children/*[3]",
       "self::fenced",
       "@role=\"set extended\""
     ],
@@ -1342,7 +1458,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "subscript",
       "default",
-      "[p] (pause:short); [n] children/*[1]; [t] \"sub\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [n] children/*[1]; [t] \"pedice\"; [n] children/*[2]; [p] (pause:short)",
       "self::subscript"
     ],
     [
@@ -1357,7 +1473,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "subscript-index",
       "default",
-      "[n] children/*[1]; [t] \"sub\"; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"pedice\"; [n] children/*[2]",
       "self::subscript",
       "contains(@grammar, \"simpleDet\")"
     ],
@@ -1365,14 +1481,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "fraction",
       "default",
-      "[p] (pause:short); [t] \"fraction avec numérateur\"; [n] children/*[1]; [p] (pause:short); [t] \"et dénominateur\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [t] \"frazione con numeratore\"; [n] children/*[1]; [p] (pause:short); [t] \"e denominatore\"; [n] children/*[2]; [p] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
       "fraction",
       "Functions_None",
-      "[p] (pause:short); [t] \"fraction avec numérateur\"; [n] children/*[1]; [p] (pause:short); [t] \"et dénominateur\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [t] \"frazione con numeratore\"; [n] children/*[1]; [p] (pause:short); [t] \"e denominatore\"; [n] children/*[2]; [p] (pause:short)",
       "self::fraction",
       "name(children/*[1])=\"appl\" or name(children/*[2])=\"appl\""
     ],
@@ -1380,7 +1496,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "simple-fraction",
       "default",
-      "[p] (pause:short); [n] children/*[1]; [t] \"sur\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]; [p] (pause:short)",
       "self::fraction",
       "contains(children/*[1]/@annotation, \"clearspeak:simple\") or contains(children/*[1]/@annotation, \"clearspeak:unit\")",
       "contains(children/*[2]/@annotation, \"clearspeak:simple\") or contains(children/*[2]/@annotation, \"clearspeak:unit\")"
@@ -1389,7 +1505,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "simple-vulgar-fraction",
       "default",
-      "[p] (pause:short); [n] children/*[1]; [t] \"sur\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]; [p] (pause:short)",
       "self::fraction",
       "@role=\"vulgar\""
     ],
@@ -1397,7 +1513,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "simple-text-fraction",
       "default",
-      "[p] (pause:short); [n] children/*[1]; [t] \"sur\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]; [p] (pause:short)",
       "self::fraction",
       "name(children/*[1])=\"text\"",
       "name(children/*[2])=\"text\""
@@ -1406,7 +1522,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "simple-text-fraction",
       "default",
-      "[p] (pause:short); [n] children/*[1]; [t] \"sur\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]; [p] (pause:short)",
       "self::fraction",
       "name(children/*[1])=\"infixop\"",
       "children/*[1][@role=\"unit\"]",
@@ -1416,7 +1532,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vulgar-fraction",
       "default",
-      "[t] CSFvulgarFraction",
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")",
       "self::fraction",
       "@role=\"vulgar\"",
       "CQFvulgarFractionSmall"
@@ -1425,49 +1541,51 @@ sre.ClearspeakFrench = {
       "Rule",
       "fraction",
       "Fraction_Over",
-      "[p] (pause:short); [n] children/*[1]; [t] \"sur\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]; [p] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
       "fraction",
       "Fraction_OverEndFrac",
-      "[p] (pause:short); [n] children/*[1]; [t] \"sur\"; [n] children/*[2]; [p] (pause:short); [t] \"fin fraction\"; [p] (pause:short)",
+      "[p] (pause:short); [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]; [p] (pause:short); [t] \"fine frazione\"; [p] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
       "fraction",
       "Fraction_FracOver",
-      "[p] (pause:short); [t] \"fraction\"; [n] children/*[1]; [t] \"sur\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [t] \"frazione\"; [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]; [p] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
       "fraction",
       "Fraction_Per",
-      "[p] (pause:short); [n] children/*[1]; [t] \"par\"; [n] children/*[2]; [p] (pause:short)",
-      "self::fraction"
+      "[p] (pause:short); [n] children/*[1]; [t] \"per\"; [n] children/*[2]; [p] (pause:short)",
+      "self::fraction",
+      "contains(children/*[1]/@annotation, \"clearspeak:unit\")",
+      "contains(children/*[2]/@annotation, \"clearspeak:unit\")"
     ],
     [
       "Rule",
       "fraction",
       "Fraction_GeneralEndFrac",
-      "[p] (pause:short); [t] \"fraction avec numérateur\"; [n] children/*[1]; [p] (pause:short); [t] \"et dénominateur\"; [n] children/*[2]; [p] (pause:short); [t] \"fin fraction\"; [p] (pause:short)",
+      "[p] (pause:short); [t] \"frazione con numeratore\"; [n] children/*[1]; [p] (pause:short); [t] \"e denominatore\"; [n] children/*[2]; [p] (pause:short); [t] \"fine frazione\"; [p] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
       "fraction",
       "Fraction_General",
-      "[p] (pause:short); [t] \"fraction avec numérateur\"; [n] children/*[1]; [p] (pause:short); [t] \"et dénominateur\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [t] \"frazione con numeratore\"; [n] children/*[1]; [p] (pause:short); [t] \"e denominatore\"; [n] children/*[2]; [p] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
       "simple-vulgar-fraction",
       "Fraction_Ordinal",
-      "[t] CSFvulgarFraction",
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")",
       "self::fraction",
       "@role=\"vulgar\""
     ],
@@ -1475,7 +1593,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "fraction",
       "Fraction_EndFrac",
-      "[p] (pause:short); [n] . (grammar:endfrac); [t] \"fin fraction\"; [p] (pause:short)",
+      "[p] (pause:short); [n] . (grammar:endfrac); [t] \"fine frazione\"; [p] (pause:short)",
       "self::fraction",
       "not(contains(@grammar, \"endfrac\"))",
       "not(contains(children/*[1]/@annotation, \"clearspeak:unit\"))",
@@ -1485,7 +1603,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vulgar-fraction",
       "Fraction_EndFrac",
-      "[p] (pause:short); [n] children/*[1]; [t] \"sur\"; [n] children/*[2]; [p] (pause:short)",
+      "[p] (pause:short); [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]; [p] (pause:short)",
       "self::fraction",
       "name(children/*[1])=\"fraction\"",
       "name(children/*[2])=\"fraction\"",
@@ -1496,7 +1614,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "simple-vulgar-fraction",
       "Fraction_EndFrac",
-      "[t] CSFvulgarFraction",
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")",
       "self::fraction",
       "@role=\"vulgar\"",
       "contains(@annotation, \"clearspeak:simple\")",
@@ -1506,14 +1624,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "sqrt",
       "default",
-      "[t] \"la racine carrée de\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[t] \"radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::sqrt"
     ],
     [
       "Rule",
       "sqrt-nested",
       "default",
-      "[p] (pause: \"short\"); [t] \"la racine carrée de\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[p] (pause:\"short\"); [t] \"radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::sqrt",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root"
@@ -1522,7 +1640,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "negative-sqrt",
       "default",
-      "[t] \"la racine carrée négative de\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::prefixop",
       "@role=\"negative\"",
       "name(children/*[1])=\"sqrt\""
@@ -1531,7 +1649,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "negative-sqrt",
       "default",
-      "[p] (pause: \"short\"); [t] \"la racine carrée négative de\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[p] (pause:\"short\"); [t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::prefixop",
       "@role=\"negative\"",
       "name(children/*[1])=\"sqrt\"",
@@ -1542,7 +1660,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "sqrt-plus-minus",
       "Roots_PosNegSqRoot",
-      "[t] \"la racine carrée positive de\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::sqrt",
       "parent::stree or not(parent::*/parent::infixop[@role=\"addition\"]) or (parent::*/parent::*[1]/text()!=\"±\" and parent::*/parent::*/text()!=\"∓\")"
     ],
@@ -1550,7 +1668,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "sqrt-nested-plus-minus",
       "Roots_PosNegSqRoot",
-      "[p] (pause: \"short\"); [t] \"la racine carrée positive de\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[p] (pause:\"short\"); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::sqrt",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root",
@@ -1560,7 +1678,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "sqrt-plus-minus",
       "Roots_PosNegSqRootEnd",
-      "[t] \"la racine carrée positive de\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::sqrt",
       "parent::stree or not(parent::*/parent::infixop[@role=\"addition\"]) or (parent::*/parent::*[1]/text()!=\"±\" and parent::*/parent::*/text()!=\"∓\")"
     ],
@@ -1568,7 +1686,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "sqrt-nested-plus-minus",
       "Roots_PosNegSqRootEnd",
-      "[p] (pause: \"short\"); [t] \"la racine carrée positive de\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
+      "[p] (pause:\"short\"); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false); [p] (pause:short)",
       "self::sqrt",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root",
@@ -1578,7 +1696,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "sqrt-endroot",
       "Roots_RootEnd",
-      "[n] . (grammar:EndRoot); [t] \"fin racine\"; [p] (pause:short)",
+      "[n] . (grammar:EndRoot); [t] \"fine radice\"; [p] (pause:short)",
       "self::sqrt",
       "not(contains(@grammar, \"EndRoot\"))"
     ],
@@ -1586,7 +1704,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "negative-sqrt-endroot",
       "Roots_RootEnd",
-      "[n] . (grammar:EndRoot); [t] \"fin racine\"; [p] (pause:short)",
+      "[n] . (grammar:EndRoot); [t] \"fine radice\"; [p] (pause:short)",
       "self::prefixop",
       "@role=\"negative\"",
       "name(children/*[1])=\"sqrt\"",
@@ -1596,7 +1714,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "sqrt-endroot",
       "Roots_PosNegSqRootEnd",
-      "[n] . (grammar:EndRoot); [t] \"fin racine\"; [p] (pause:short)",
+      "[n] . (grammar:EndRoot); [t] \"fine radice\"; [p] (pause:short)",
       "self::sqrt",
       "not(contains(@grammar, \"EndRoot\"))"
     ],
@@ -1604,7 +1722,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "negative-sqrt-endroot",
       "Roots_PosNegSqRootEnd",
-      "[n] . (grammar:EndRoot); [t] \"fin racine\"; [p] (pause:short)",
+      "[n] . (grammar:EndRoot); [t] \"fine radice\"; [p] (pause:short)",
       "self::prefixop",
       "@role=\"negative\"",
       "name(children/*[1])=\"sqrt\"",
@@ -1614,7 +1732,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "cube",
       "default",
-      "[t] \"la racine cubique de\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
+      "[t] \"radice cubica di\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
       "self::root",
       "children/*[1][text()=\"3\"]"
     ],
@@ -1622,7 +1740,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "cube-nested",
       "default",
-      "[p] (pause:short); [t] \"la racine cubique de\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
+      "[p] (pause:short); [t] \"radice cubica di\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
       "self::root",
       "children/*[1][text()=\"3\"]",
       "not(preceding-sibling::*)",
@@ -1632,14 +1750,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "root",
       "default",
-      "[t] \"la\"; [n] children/*[1] (grammar:ordinal); [t] \"racine de\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
+      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"female\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
       "self::root"
     ],
     [
       "Rule",
       "root-nested",
       "default",
-      "[p] (pause:short); [t] \"la\"; [n] children/*[1] (grammar:ordinal); [t] \"racine de\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
+      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"female\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false); [p] (pause:short)",
       "self::root",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root"
@@ -1648,7 +1766,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "root-endroot",
       "Roots_RootEnd",
-      "[n] . (grammar:EndRoot); [t] \"fin racine\"; [p] (pause:short)",
+      "[n] . (grammar:EndRoot); [t] \"fine radice\"; [p] (pause:short)",
       "self::root",
       "not(contains(@grammar, \"EndRoot\"))"
     ],
@@ -1656,7 +1774,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "root-endroot",
       "Roots_PosNegSqRootEnd",
-      "[n] . (grammar:EndRoot); [t] \"fin racine\"; [p] (pause:short)",
+      "[n] . (grammar:EndRoot); [t] \"fine radice\"; [p] (pause:short)",
       "self::root",
       "not(contains(@grammar, \"EndRoot\"))"
     ],
@@ -1664,7 +1782,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "negative",
       "default",
-      "[t] \"négatif\"; [n] children/*[1]",
+      "[t] \"meno\"; [n] children/*[1]",
       "self::prefixop",
       "@role=\"negative\""
     ],
@@ -1672,7 +1790,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "positive",
       "default",
-      "[t] \"positif\"; [n] children/*[1]",
+      "[t] \"più\"; [n] children/*[1]",
       "self::prefixop",
       "@role=\"positive\""
     ],
@@ -1680,7 +1798,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "angle-measure",
       "default",
-      "[t] \"la mesure de l'\" (join:\"\"); [n] content/*[1]; [n] children/*[2] (grammar:angle)",
+      "[t] \"misura di\"; [n] content/*[1]; [n] children/*[2] (grammar:angle)",
       "self::infixop",
       "content/*[1]/text()=\"∠\"",
       "children/*[1][text()=\"m\"]"
@@ -1703,7 +1821,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "set-prefix-operators",
       "default",
-      "[t] \"le\"; [n] self::* (grammar:!prefix); [t] \"de\"",
+      "[t] \"il\"; [n] self::* (grammar:!prefix); [t] \"di\"",
       "self::*",
       "contains(@grammar,\"prefix\")",
       "descendant-or-self::*/text()=\"∩\" or descendant-or-self::*/text()=\"∪\"",
@@ -1715,14 +1833,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "binary-operation",
       "default",
-      "[m] children/* (sepFunc:CTFcontentIterator);",
+      "[m] children/* (sepFunc:CTFcontentIterator)",
       "self::infixop"
     ],
     [
       "Rule",
       "division",
       "default",
-      "[n] children/*[1]; [t] \"divisé par\"; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"diviso per\"; [n] children/*[2]",
       "self::infixop",
       "@role=\"division\"",
       "count(children/*)=2"
@@ -1731,7 +1849,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "binary-operation",
       "ImpliedTimes_MoreImpliedTimes",
-      "[m] children/* (sepFunc:CTFcontentIterator);",
+      "[m] children/* (sepFunc:CTFcontentIterator)",
       "self::infixop",
       "@role=\"implicit\""
     ],
@@ -1739,7 +1857,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "binary-operation-pause",
       "default",
-      "[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator);",
+      "[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator)",
       "self::infixop",
       "@role=\"implicit\"",
       "name(children/*[1])=\"appl\""
@@ -1824,7 +1942,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "simple-in-fraction",
       "default",
-      "[n] . (rate:\"0.5\",grammar:inFrac)",
+      "[n] . (rate:\"0.5\", grammar:inFrac)",
       "self::*",
       "contains(@annotation, \"clearspeak:simple\")",
       "not(contains(@grammar, \"inFrac\"))",
@@ -1861,7 +1979,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "natural-numbers",
       "default",
-      "[t] \"les nombres entier naturel\"",
+      "[t] \"i numeri naturali\"",
       "self::identifier",
       "text()=\"ℕ\" or (text()=\"N\" and @font=\"double-struck\")",
       "self::*",
@@ -1872,7 +1990,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "integers",
       "default",
-      "[t] \"les nombres entiers\"",
+      "[t] \"gli interi\"",
       "self::identifier",
       "text()=\"ℤ\" or (text()=\"Z\" and @font=\"double-struck\")",
       "self::*",
@@ -1883,7 +2001,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "rational-numbers",
       "default",
-      "[t] \"les Nombres rationnels\"",
+      "[t] \"i numeri razionali\"",
       "self::identifier",
       "text()=\"ℚ\" or (text()=\"Q\" and @font=\"double-struck\")",
       "self::*",
@@ -1894,7 +2012,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "real-numbers",
       "default",
-      "[t] \"les nombres réels\"",
+      "[t] \"i numeri reali\"",
       "self::identifier",
       "text()=\"ℝ\" or (text()=\"R\" and @font=\"double-struck\")",
       "self::*",
@@ -1905,7 +2023,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "complex-numbers",
       "default",
-      "[t] \"les nombres complexes\"",
+      "[t] \"i numeri complessi\"",
       "self::identifier",
       "text()=\"ℂ\" or (text()=\"C\" and @font=\"double-struck\")",
       "self::*",
@@ -1916,7 +2034,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "natural-numbers-super",
       "default",
-      "[t] \"n\" (join: \"-\"); [n] children/*[2] (grammar:numbers2alpha)",
+      "[t] \"n\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)",
       "self::superscript",
       "children/*[1]/text()=\"ℕ\" or (children/*[1]/text()=\"N\" and children/*[1]/@font=\"double-struck\")",
       "self::*",
@@ -1927,7 +2045,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "integers-super",
       "default",
-      "[t] \"z\" (join: \"-\"); [n] children/*[2] (grammar:numbers2alpha)",
+      "[t] \"z\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)",
       "self::superscript",
       "children/*[1]/text()=\"ℤ\" or (children/*[1]/text()=\"Z\" and children/*[1]/@font=\"double-struck\")",
       "self::*",
@@ -1938,7 +2056,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "rational-numbers-super",
       "default",
-      "[t] \"q\" (join: \"-\"); [n] children/*[2] (grammar:numbers2alpha)",
+      "[t] \"q\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)",
       "self::superscript",
       "children/*[1]/text()=\"ℚ\" or (children/*[1]/text()=\"Q\" and children/*[1]/@font=\"double-struck\")",
       "self::*",
@@ -1971,7 +2089,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "natural-numbers-with-zero",
       "default",
-      "[t] \"les nombres entiers naturel avec zero\"",
+      "[t] \"i numeri naturali con lo zero\"",
       "self::subscript",
       "children/*[1]/text()=\"ℕ\" or (children/*[1]/text()=\"N\" and children/*[1]/@font=\"double-struck\")",
       "children/*[2]/text()=\"0\""
@@ -1980,7 +2098,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "positive-integers",
       "default",
-      "[t] \"les nombres entiers positif\"",
+      "[t] \"gli interi positivi\"",
       "self::superscript",
       "children/*[1]/text()=\"ℤ\" or (children/*[1]/text()=\"Z\" and children/*[1]/@font=\"double-struck\")",
       "children/*[2]/text()=\"+\"",
@@ -1992,7 +2110,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "positive-integers",
       "default",
-      "[t] \"les nombres entiers négatif\"",
+      "[t] \"gli interi negativi\"",
       "self::superscript",
       "children/*[1]/text()=\"ℤ\" or (children/*[1]/text()=\"Z\" and children/*[1]/@font=\"double-struck\")",
       "children/*[2]/text()=\"-\"",
@@ -2004,7 +2122,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "positive-rational-numbers",
       "default",
-      "[t] \"les nombres rationnels positif\"",
+      "[t] \"i numeri razionali positivi\"",
       "self::superscript",
       "children/*[1]/text()=\"ℚ\" or (children/*[1]/text()=\"Q\" and children/*[1]/@font=\"double-struck\")",
       "children/*[2]/text()=\"+\"",
@@ -2016,7 +2134,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "negative-rational-numbers",
       "default",
-      "[t] \"les nombres rationnels négatif\"",
+      "[t] \"i numeri razionali negativi\"",
       "self::superscript",
       "children/*[1]/text()=\"ℚ\" or (children/*[1]/text()=\"Q\" and children/*[1]/@font=\"double-struck\")",
       "children/*[2]/text()=\"-\"",
@@ -2028,7 +2146,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "fences-neutral",
       "default",
-      "[p] (pause:short); [t] \"la valeur absolue de\"; [n] children/*[1]; [p] (pause: short)",
+      "[p] (pause:short); [t] \"valore assoluto di\"; [n] children/*[1]; [p] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
       "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
@@ -2037,7 +2155,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "fences-neutral",
       "AbsoluteValue_AbsEnd",
-      "[p] (pause:short); [t] \"la valeur absolue de\"; [n] children/*[1]; [p] (pause: short); [t] \"fin de valeur absolue\"; [p] (pause: short)",
+      "[p] (pause:short); [t] \"valore assoluto di\"; [n] children/*[1]; [p] (pause:short); [t] \"fine valore assoluto\"; [p] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
       "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
@@ -2046,7 +2164,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "fences-neutral",
       "AbsoluteValue_Cardinality",
-      "[p] (pause:short); [t] \"la cardinalité de\"; [n] children/*[1]; [p] (pause: short)",
+      "[p] (pause:short); [t] \"cardinalità di\"; [n] children/*[1]; [p] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
       "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
@@ -2055,7 +2173,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "fences-neutral",
       "AbsoluteValue_Determinant",
-      "[p] (pause:short); [t] \"le déterminant de\"; [n] children/*[1]; [p] (pause: short)",
+      "[p] (pause:short); [t] \"determinante della\"; [n] children/*[1]; [p] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
       "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
@@ -2064,14 +2182,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix",
       "default",
-      "[t] \"la matrice de dimension\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\"); [p] (pause:long)",
+      "[t] \"matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\"); [p] (pause:long)",
       "self::matrix"
     ],
     [
       "Rule",
       "matrix-simple",
       "default",
-      "[t] \"la matrice de dimension\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*);  [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "count(children/*)<4",
       "count(children/*[1]/children/*)<4",
@@ -2081,7 +2199,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-trivial",
       "default",
-      "[t] \"la matrice de dimension 1 par 1 avec élément\"; [n] children/*[1]; [p] (pause:long)",
+      "[t] \"matrice 1 per 1 con valore\"; [n] children/*[1]; [p] (pause:long)",
       "self::vector",
       "@role=\"squarematrix\""
     ],
@@ -2089,7 +2207,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "determinant",
       "default",
-      "[t] \"le déterminant de la matrice de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"determinante della matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"determinant\"",
       "count(children/*)<4",
@@ -2099,7 +2217,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "determinant-simple",
       "default",
-      "[t] \"le déterminant de la matrice de dimension\"; [t] count(children/*);  [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\"); [p] (pause:long)",
+      "[t] \"determinante della matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\"); [p] (pause:long)",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -2107,7 +2225,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-vector",
       "default",
-      "[t] \"la matrice colonne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet); [p] (pause:long)",
       "self::vector"
     ],
     [
@@ -2120,7 +2238,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-vector-simple",
       "default",
-      "[t] \"la matrice colonne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet); [p] (pause:long)",
       "self::vector",
       "count(children/*)<4",
       "CQFcellsSimple",
@@ -2130,14 +2248,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-vector-simple",
       "Matrix_SilentColNum",
-      "[t] \"la matrice colonne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet); [p] (pause:long)",
       "self::vector"
     ],
     [
       "Rule",
       "matrix-row-vector",
       "default",
-      "[t] \"la matrice ligne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter,context:\"Colonne-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2151,7 +2269,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-row-vector-simple",
       "default",
-      "[t] \"la matrice ligne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"rowvector\"",
       "count(children/*[1]/children/*)<4",
@@ -2161,7 +2279,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-row-vector-simple",
       "Matrix_SilentColNum",
-      "[t] \"la matrice ligne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2169,7 +2287,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-row-simple",
       "default",
-      "[m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\")",
+      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")",
       "self::row",
       "contains(@grammar, \"simpleDet\")"
     ],
@@ -2177,7 +2295,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-row-simple",
       "Matrix_SilentColNum",
-      "[m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\")",
+      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")",
       "self::row"
     ],
     [
@@ -2192,7 +2310,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-row",
       "default",
-      "[m] children/* (ctxtFunc:CTFnodeCounter,context:\"Colonne-,- \",sepFunc:CTFpauseSeparator,separator:\"medium\"); [p] (pause:long)",
+      "[m] children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-,- \", sepFunc:CTFpauseSeparator, separator:\"medium\"); [p] (pause:long)",
       "self::row"
     ],
     [
@@ -2212,7 +2330,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-end-matrix",
       "Matrix_EndMatrix",
-      "[n] . (grammar:EndMatrix); [t] \"fin matrice\"",
+      "[n] . (grammar:EndMatrix); [t] \"fine matrice\"",
       "self::matrix",
       "not(contains(@grammar, \"EndMatrix\"))"
     ],
@@ -2220,7 +2338,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-end-vector",
       "Matrix_EndMatrix",
-      "[n] . (grammar:EndMatrix); [t] \"fin matrice\"",
+      "[n] . (grammar:EndMatrix); [t] \"fine matrice\"",
       "self::vector",
       "not(contains(@grammar, \"EndMatrix\"))"
     ],
@@ -2228,7 +2346,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "matrix-end-determinant",
       "Matrix_EndMatrix",
-      "[n] . (grammar:EndMatrix); [t] \"fin déterminant\"",
+      "[n] . (grammar:EndMatrix); [t] \"fine determinante\"",
       "self::matrix",
       "@role=\"determinant\"",
       "not(contains(@grammar, \"EndMatrix\"))"
@@ -2237,7 +2355,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vector",
       "Matrix_Vector",
-      "[t] \"le vecteur colonne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet); [p] (pause:long)",
       "self::vector"
     ],
     [
@@ -2250,7 +2368,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vector-simple",
       "Matrix_Vector",
-      "[t] \"le vecteur colonne de dimension\"; [t] count(children/*); [t] \"par\";  [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet); [p] (pause:long)",
       "self::vector",
       "count(children/*)<4",
       "CQFcellsSimple"
@@ -2265,7 +2383,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "row-vector",
       "Matrix_Vector",
-      "[t] \"le vecteur ligne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter,context:\"Colonne-:\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2279,7 +2397,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "row-vector-simple",
       "Matrix_Vector",
-      "[t] \"le vecteur ligne de dimension\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet); [p] (pause:long)",
+      "[t] \"vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [p] (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet); [p] (pause:long)",
       "self::matrix",
       "@role=\"rowvector\"",
       "count(children/*[1]/children/*)<4",
@@ -2295,7 +2413,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vector-end-matrix",
       "Matrix_EndVector",
-      "[n] . (grammar:EndMatrix); [t] \"fin matrice\"",
+      "[n] . (grammar:EndMatrix); [t] \"fine matrice\"",
       "self::matrix",
       "not(contains(@grammar, \"EndMatrix\"))",
       "self::*"
@@ -2304,7 +2422,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vector-end-vector",
       "Matrix_EndVector",
-      "[n] . (grammar:EndMatrix); [t] \"fin vecteur\"",
+      "[n] . (grammar:EndMatrix); [t] \"fine vettore\"",
       "self::vector",
       "not(contains(@grammar, \"EndMatrix\"))",
       "self::*"
@@ -2313,7 +2431,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vector-end-vector",
       "Matrix_EndVector",
-      "[n] . (grammar:EndMatrix); [t] \"fin vecteur\"",
+      "[n] . (grammar:EndMatrix); [t] \"fine vettore\"",
       "self::matrix",
       "@role=\"rowvector\"",
       "not(contains(@grammar, \"EndMatrix\"))",
@@ -2323,7 +2441,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "vector-end-determinant",
       "Matrix_EndVector",
-      "[n] . (grammar:EndMatrix); [t] \"fin déterminant\"",
+      "[n] . (grammar:EndMatrix); [t] \"fine determinante\"",
       "self::matrix",
       "@role=\"determinant\"",
       "not(contains(@grammar, \"EndMatrix\"))",
@@ -2333,7 +2451,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "binomial",
       "Matrix_Combinatoric",
-      "[n] children/*[2]/children/*[1]; [t] \"parmi\"; [n] children/*[1]/children/*[1]; ",
+      "[t] \"coefficiente binomiale\"; [n] children/*[1]/children/*[1]; [t] \"su\"; [n] children/*[2]/children/*[1]",
       "self::vector",
       "@role=\"binomial\""
     ],
@@ -2341,7 +2459,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-summary",
       "default",
-      "[p] (pause:short); [t] count(children/*); [t] \"lignes\";  [n] . (grammar:layoutSummary)",
+      "[p] (pause:short); [t] count(children/*); [t] \"linee\"; [n] . (grammar:layoutSummary)",
       "self::multiline",
       "not(contains(@grammar, \"layoutSummary\"))",
       "self::*"
@@ -2365,7 +2483,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "cases-summary",
       "default",
-      "[p] (pause:short); [t] count(children/*); [t] \"cas\";  [n] . (grammar:layoutSummary)",
+      "[p] (pause:short); [t] count(children/*); [t] \"casi\"; [n] . (grammar:layoutSummary)",
       "self::cases",
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
@@ -2382,7 +2500,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines",
       "default",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Ligne-:\",sepFunc:CTFpauseSeparator,separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2401,7 +2519,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "row-medium",
       "default",
-      "[m] children/* (sepFunc:CTFpauseSeparator,separator:\"medium\")",
+      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"medium\")",
       "self::row",
       "@role=\"table\""
     ],
@@ -2415,7 +2533,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "row-long",
       "MultiLinePausesBetweenColumns_Long",
-      "[m] children/* (sepFunc:CTFpauseSeparator,separator:\"long\")",
+      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"long\")",
       "self::row",
       "@role=\"table\""
     ],
@@ -2429,7 +2547,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "row-short",
       "MultiLinePausesBetweenColumns_Short",
-      "[m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\")",
+      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")",
       "self::row",
       "@role=\"table\""
     ],
@@ -2443,7 +2561,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "blank-cell",
       "default",
-      "[t] \"vide\"",
+      "[t] \"vuoto\"",
       "self::cell",
       "count(children/*)=0"
     ],
@@ -2451,7 +2569,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "blank-line",
       "default",
-      "[t] \"vide\"",
+      "[t] \"vuota\"",
       "self::line",
       "count(children/*)=0"
     ],
@@ -2459,7 +2577,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "blank-cell-empty",
       "default",
-      "[t] \"vide\"",
+      "[t] \"vuota\"",
       "self::empty",
       "count(../*)=1",
       "name(../..)=\"cell\""
@@ -2468,7 +2586,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "blank-line-empty",
       "default",
-      "[t] \"vide\"",
+      "[t] \"vuota\"",
       "self::empty",
       "count(../*)=1",
       "name(../..)=\"line\""
@@ -2477,14 +2595,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "cases",
       "default",
-      "[p] (pause:short);  [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Cas-:\",sepFunc:CTFpauseSeparator,separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Caso-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::cases"
     ],
     [
       "Rule",
       "lines-cases-summary",
       "MultiLineLabel_Case",
-      "[p] (pause:short); [t] count(children/*); [t] \"cas\";  [n] . (grammar:layoutSummary)",
+      "[p] (pause:short); [t] count(children/*); [t] \"caso\"; [n] . (grammar:layoutSummary)",
       "self::multiline",
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
@@ -2498,7 +2616,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-cases",
       "MultiLineLabel_Case",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Cas-:\",sepFunc:CTFpauseSeparator,separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Caso-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2510,7 +2628,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-equations-summary",
       "MultiLineLabel_Equation",
-      "[p] (pause:short); [t] count(children/*); [t] \"équations\";  [n] . (grammar:layoutSummary)",
+      "[p] (pause:short); [t] count(children/*); [t] \"equazioni\"; [n] . (grammar:layoutSummary)",
       "self::multiline",
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
@@ -2524,7 +2642,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-equations",
       "MultiLineLabel_Equation",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Équation-:\",sepFunc:CTFpauseSeparator,separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Equazioni-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2536,7 +2654,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-steps-summary",
       "MultiLineLabel_Step",
-      "[p] (pause:short); [t] count(children/*); [t] \" étapes\";  [n] . (grammar:layoutSummary)",
+      "[p] (pause:short); [t] count(children/*); [t] \"passi\"; [n] . (grammar:layoutSummary)",
       "self::multiline",
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
@@ -2550,7 +2668,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-steps",
       "MultiLineLabel_Step",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\" Étape-:\",sepFunc:CTFpauseSeparator,separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Passo-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2562,7 +2680,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-rows-summary",
       "MultiLineLabel_Row",
-      "[p] (pause:short); [t] count(children/*); [t] \"colonnes\";  [n] . (grammar:layoutSummary)",
+      "[p] (pause:short); [t] count(children/*); [t] \"riga\"; [n] . (grammar:layoutSummary)",
       "self::multiline",
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
@@ -2576,7 +2694,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-rows",
       "MultiLineLabel_Row",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Rangée-:\",sepFunc:CTFpauseSeparator,separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2588,7 +2706,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-constraints-summary",
       "MultiLineLabel_Constraint",
-      "[p] (pause:short); [t] count(children/*); [t] \"contraintes\";  [n] . (grammar:layoutSummary)",
+      "[p] (pause:short); [t] count(children/*); [t] \"vincoli\"; [n] . (grammar:layoutSummary)",
       "self::multiline",
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
@@ -2602,7 +2720,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-constraints",
       "MultiLineLabel_Constraint",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Contrainte-:\",sepFunc:CTFpauseSeparator,separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Vincoli-:\", sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table"
     ],
     [
@@ -2614,7 +2732,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "lines-none",
       "MultiLineLabel_None",
-      "[p] (pause:short); [m] children/* (sepFunc:CTFpauseSeparator,separator:\"long\"); [p] (pause:long)",
+      "[p] (pause:short); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"long\"); [p] (pause:long)",
       "self::table",
       "contains(@grammar, \"layoutSummary\")"
     ],
@@ -2634,49 +2752,49 @@ sre.ClearspeakFrench = {
       "Rule",
       "bigop",
       "default",
-      "[t] \"le\"; [n] children/*[1]; [t] \"de\"; [n] children/*[2]; [p] (pause:short)",
+      "[t] \"il\"; [n] children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:short)",
       "self::bigop"
     ],
     [
       "Rule",
       "limboth",
       "default",
-      "[n] children/*[1]; [t] \"de\"; [n] children/*[2];[t] \"à\"; [n] children/*[3];",
+      "[n] children/*[1]; [t] \"da\"; [n] children/*[2]; [t] \"a\"; [n] children/*[3]",
       "self::limboth"
     ],
     [
       "Rule",
       "limlower",
       "default",
-      "[n] children/*[1]; [t] \"sur\"; [n] children/*[2]; [p] (pause:short)",
+      "[n] children/*[1]; [t] \"sopra\"; [n] children/*[2]; [p] (pause:short)",
       "self::limlower"
     ],
     [
       "Rule",
       "limupper",
       "default",
-      "[n] children/*[1]; [t] \"sous\"; [n] children/*[2]; [p] (pause:short)",
+      "[n] children/*[1]; [t] \"sotto\"; [n] children/*[2]; [p] (pause:short)",
       "self::limupper"
     ],
     [
       "Rule",
       "integral",
       "default",
-      "[t] \"le\"; [n] children/*[1]; [t] \"de\"; [n] children/*[2]; [p] (pause:short)",
+      "[t] \"il\"; [n] children/*[1]; [t] \"di\"; [n] children/*[2]; [p] (pause:short)",
       "self::integral"
     ],
     [
       "Rule",
       "overscript",
       "default",
-      "[n] children/*[1]; [t] \"sous\"; [n] children/*[2]; [p] (pause:short)",
+      "[n] children/*[1]; [t] \"sotto\"; [n] children/*[2]; [p] (pause:short)",
       "self::overscore"
     ],
     [
       "Rule",
       "overscript",
       "default",
-      "[n] children/*[1]; [n] children/*[2];",
+      "[n] children/*[1]; [n] children/*[2]",
       "self::overscore",
       "children/*[2][@role=\"overaccent\"]"
     ],
@@ -2684,7 +2802,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "overscript-limits",
       "default",
-      "[n] children/*[1]; [t] \"à\"; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"a\"; [n] children/*[2]",
       "self::overscore",
       "children/*[2][@role!=\"overaccent\"]",
       "name(children/*[1])=\"underscore\"",
@@ -2694,14 +2812,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "underscript",
       "default",
-      "[n] children/*[1]; [t] \"sur\"; [n] children/*[2]; [p] (pause:short)",
+      "[n] children/*[1]; [t] \"sopra\"; [n] children/*[2]; [p] (pause:short)",
       "self::underscore"
     ],
     [
       "Rule",
       "underscript-limits",
       "default",
-      "[n] children/*[1]; [t] \"de\"; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"da\"; [n] children/*[2]",
       "self::underscore",
       "@role=\"underover\"",
       "children/*[2][@role!=\"underaccent\"]"
@@ -2717,7 +2835,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "mixed-number",
       "default",
-      "[n] children/*[1]; [t] \"et\"; [n] children/*[2]; ",
+      "[n] children/*[1]; [t] \"e\"; [n] children/*[2]",
       "self::number",
       "@role=\"mixed\""
     ],
@@ -2725,7 +2843,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "number-with-chars",
       "default",
-      "[t] \"nombre\"; [m] CQFspaceoutNumber (grammar:protected)",
+      "[t] \"numero\"; [m] CQFspaceoutNumber (grammar:protected)",
       "self::number",
       "@role=\"othernumber\"",
       "\"\" != translate(text(), \"0123456789.,\", \"\")",
@@ -2735,7 +2853,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "decimal-period",
       "default",
-      "[t] \"la décimale\"; [n] children/*[1] (grammar:spaceout); [t] \"virgule suivi par les chiffres répétés\";  [n] children/*[3]/children/*[1] (grammar:spaceout)",
+      "[t] \"decimale periodico\"; [n] children/*[1] (grammar:spaceout); [t] \"virgola\"; [n] children/*[3]/children/*[1] (grammar:spaceout); [t] \"periodico\"",
       "self::punctuated",
       "@role=\"sequence\"",
       "count(./content/*)=1",
@@ -2751,7 +2869,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "decimal-period",
       "default",
-      "[t] \"la décimale\"; [n] children/*[1] (grammar:spaceout); [t] \"suivi par les chiffres répétés\";  [n] children/*[2]/children/*[1] (grammar:spaceout);",
+      "[t] \"decimale periodico\"; [n] children/*[1] (grammar:spaceout); [t] \"seguito da\"; [n] children/*[2]/children/*[1] (grammar:spaceout); [t] \"periodico\"",
       "self::infixop",
       "@role=\"implicit\"",
       "count(./children/*)=2",
@@ -2761,39 +2879,6 @@ sre.ClearspeakFrench = {
       "children/*[2][@role=\"integer\"]",
       "children/*[2]/children/*[2][@role=\"overaccent\"]",
       "children/*[2]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
-    ],
-    [
-      "Rule",
-      "decimal-period-singular",
-      "default",
-      "[t] \"la décimale\"; [n] children/*[1] (grammar:spaceout); [t] \"virgule suivi par le chiffre répété\";  [n] children/*[3]/children/*[1] (grammar:spaceout)",
-      "self::punctuated",
-      "@role=\"sequence\"",
-      "count(./content/*)=1",
-      "./content/*[1][@role=\"fullstop\"]",
-      "name(children/*[1])=\"number\"",
-      "children/*[1][@role=\"integer\"]",
-      "name(children/*[3])=\"overscore\"",
-      "children/*[3][@role=\"integer\"]",
-      "children/*[3]/children/*[2][@role=\"overaccent\"]",
-      "children/*[3]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]",
-      "string-length(./children/*[3]/children/*[1]/text())=1"
-    ],
-    [
-      "Rule",
-      "decimal-period-singular",
-      "default",
-      "[t] \"la décimale\"; [n] children/*[1] (grammar:spaceout); [t] \"suivi par le chiffre répété\";  [n] children/*[2]/children/*[1] (grammar:spaceout);",
-      "self::infixop",
-      "@role=\"implicit\"",
-      "count(./children/*)=2",
-      "name(children/*[1])=\"number\"",
-      "children/*[1][@role=\"float\"]",
-      "name(children/*[2])=\"overscore\"",
-      "children/*[2][@role=\"integer\"]",
-      "children/*[2]/children/*[2][@role=\"overaccent\"]",
-      "children/*[2]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]",
-      "string-length(./children/*[2]/children/*[1]/text())=1"
     ],
     [
       "Rule",
@@ -2807,7 +2892,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "decimal-point",
       "default",
-      "[t] \"point\"",
+      "[t] \"punto\"",
       "self::punctuation",
       "@role=\"fullstop\"",
       "contains(@grammar,\"number\")"
@@ -2816,7 +2901,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "line-segment",
       "default",
-      "[t] \"le segment\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2]; [p] (pause:short)",
+      "[t] \"linea segmento\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2]; [p] (pause:short)",
       "self::overscore",
       "@role=\"implicit\"",
       "children/*[2][@role=\"overaccent\"]",
@@ -2828,7 +2913,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "conjugate",
       "Bar_Conjugate",
-      "[t] \"le complexe conjugué de\"; [n] children/*[1]",
+      "[t] \"coniugato complesso di\"; [n] children/*[1]",
       "self::overscore",
       "children/*[2][@role=\"overaccent\"]",
       "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
@@ -2837,7 +2922,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "defined-by",
       "default",
-      "[t] \"est défini par\" (pause:short)",
+      "[t] \"è definito essere\" (pause:short)",
       "self::overscore",
       "@role=\"equality\"",
       "@embellished=\"relation\"",
@@ -2848,7 +2933,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "adorned-sign",
       "default",
-      "[t] \"signe\"; [n] children/*[1] ; [t] \"avec\"; [n] children/*[2]; [t] \"dessus\"",
+      "[t] \"segno\"; [n] children/*[1] ; [t] \"con\"; [n] children/*[2]; [t] \"sopra esso\"",
       "self::overscore",
       "@embellished",
       "name(children/*[1])=\"operator\" or name(children/*[1])=\"relation\""
@@ -2857,7 +2942,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "factorial",
       "default",
-      "[t] \"factorielle\"",
+      "[t] \"fattoriale\"",
       "self::punctuation",
       "text()=\"!\"",
       "name(preceding-sibling::*[1])!=\"text\""
@@ -2873,7 +2958,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "left-super",
       "default",
-      "[t] \"exposant gauche\"; [n] text()",
+      "[t] \"sub sinistro\"; [n] text()",
       "self::*[@role=\"leftsuper\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
@@ -2881,7 +2966,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "left-super",
       "default",
-      "[t] \"exposant gauche\"; [m] children/*",
+      "[t] \"sub sinistro\"; [m] children/*",
       "self::punctuated",
       "@role=\"leftsuper\"",
       "not(contains(@grammar,\"combinatorics\"))"
@@ -2890,7 +2975,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "left-sub",
       "default",
-      "[t] \"indice gauche\"; [n] text()",
+      "[t] \"sub sotto\"; [n] text()",
       "self::*[@role=\"leftsub\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
@@ -2898,7 +2983,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "left-sub",
       "default",
-      "[t] \"indice gauche\"; [m] children/*",
+      "[t] \"sub sotto\"; [m] children/*",
       "self::punctuated",
       "@role=\"leftsub\"",
       "not(contains(@grammar,\"combinatorics\"))"
@@ -2907,7 +2992,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "right-super",
       "default",
-      "[t] \"exposant droite\"; [n] text()",
+      "[t] \"sub sopra\"; [n] text()",
       "self::*[@role=\"rightsuper\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
@@ -2915,7 +3000,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "right-super",
       "default",
-      "[t] \"exposant droite\"; [m] children/*",
+      "[t] \"sub sopra\"; [m] children/*",
       "self::punctuated",
       "@role=\"rightsuper\"",
       "not(contains(@grammar,\"combinatorics\"))"
@@ -2924,7 +3009,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "right-sub",
       "default",
-      "[t] \"indice droite\"; [n] text()",
+      "[t] \"sub destro\"; [n] text()",
       "self::*[@role=\"rightsub\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
@@ -2932,7 +3017,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "right-sub",
       "default",
-      "[t] \"indice droite\"; [m] children/*",
+      "[t] \"sub destro\"; [m] children/*",
       "self::punctuated",
       "@role=\"rightsub\"",
       "not(contains(@grammar,\"combinatorics\"))"
@@ -2959,7 +3044,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "choose",
       "CombinationPermutation_ChoosePermute",
-      "[t] \"combinaison de\"; [n] children/*[2] (grammar:combinatorics); [t] \"parmi\"; [n] children/*[4] (grammar:combinatorics)",
+      "[t] \"combinazione di\"; [n] children/*[2] (grammar:combinatorics); [t] \"per\"; [n] children/*[4] (grammar:combinatorics)",
       "self::tensor",
       "name(children/*[3])=\"empty\"",
       "name(children/*[5])=\"empty\"",
@@ -2969,7 +3054,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "permute",
       "CombinationPermutation_ChoosePermute",
-      "[t] \"permutation de\"; [n] children/*[2] (grammar:combinatorics); [t] \"parmi\"; [n] children/*[4] (grammar:combinatorics)",
+      "[t] \"permutazione di\"; [n] children/*[2] (grammar:combinatorics); [t] \"per\"; [n] children/*[4] (grammar:combinatorics)",
       "self::tensor",
       "name(children/*[3])=\"empty\"",
       "name(children/*[5])=\"empty\"",
@@ -2980,22 +3065,25 @@ sre.ClearspeakFrench = {
       "unit-singular",
       "default",
       "[t] text() (grammar:annotation=\"unit\":translate)",
-      "self::identifier[@role=\"unit\"]"
+      "self::identifier",
+      "@role=\"unit\""
     ],
     [
       "Rule",
       "unit-plural",
       "default",
       "[t] text() (grammar:annotation=\"unit\":translate:plural)",
-      "self::identifier[@role=\"unit\"]",
+      "self::identifier",
+      "@role=\"unit\"",
       "not(contains(@grammar, \"singularUnit\"))"
     ],
     [
       "Rule",
       "unit-square",
       "default",
-      "[n] children/*[1]; [t] \"carré\"",
-      "self::superscript[@role=\"unit\"]",
+      "[n] children/*[1]; [t] \"quadrato\"",
+      "self::superscript",
+      "@role=\"unit\"",
       "children/*[2][text()=2]",
       "name(children/*[1])=\"identifier\""
     ],
@@ -3003,60 +3091,27 @@ sre.ClearspeakFrench = {
       "Rule",
       "unit-cubic",
       "default",
-      "[n] children/*[1]; [t] \"cube\"",
-      "self::superscript[@role=\"unit\"]",
+      "[n] children/*[1]; [t] \"cubico\"",
+      "self::superscript",
+      "@role=\"unit\"",
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\""
-    ],
-    [
-      "Rule",
-      "unit-reciprocal",
-      "default",
-      "[t] \"réciproque\"; [n] children/*[1]",
-      "self::superscript[@role=\"unit\"]",
-      "name(children/*[1])=\"identifier\"",
-      "name(children/*[2])=\"prefixop\"",
-      "children/*[2][@role=\"negative\"]",
-      "children/*[2]/children/*[1][text()=1]",
-      "count(preceding-sibling::*)=0 or preceding-sibling::*[@role!=\"unit\"]"
-    ],
-    [
-      "Rule",
-      "unit-reciprocal",
-      "default",
-      "[t] \"par\"; [n] children/*[1] (grammar:singularUnit)",
-      "self::superscript[@role=\"unit\"]",
-      "name(children/*[1])=\"identifier\"",
-      "name(children/*[2])=\"prefixop\"",
-      "children/*[2][@role=\"negative\"]",
-      "children/*[2]/children/*[1][text()=1]",
-      "preceding-sibling::*[@role=\"unit\"]"
-    ],
-    [
-      "Rule",
-      "unit-reciprocal-multi",
-      "default",
-      "[t] \"par\"; [n] children/*[1] (grammar:singularUnit)",
-      "self::superscript[@role=\"unit\"]",
-      "name(children/*[1])=\"identifier\"",
-      "name(children/*[2])=\"prefixop\"",
-      "children/*[2][@role=\"negative\"]",
-      "children/*[2]/children/*[1][text()=1]",
-      "preceding-sibling::*[@role=\"unit\"]"
     ],
     [
       "Rule",
       "unit-combine",
       "default",
       "[m] children/*",
-      "self::infixop[@role=\"unit\"]"
+      "self::infixop",
+      "@role=\"unit\""
     ],
     [
       "Rule",
       "unit-combine-singular",
       "default",
       "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); [m] children/*[position()>2]",
-      "self::infixop[@role=\"unit\"]",
+      "self::infixop",
+      "@role=\"unit\"",
       "name(children/*[1])=\"number\"",
       "children/*[1][text()=1]"
     ],
@@ -3064,14 +3119,14 @@ sre.ClearspeakFrench = {
       "Rule",
       "unit-divide",
       "default",
-      "[n] children/*[1]; [t] \"par\"; [n] children/*[2] (grammar:singularUnit)",
+      "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singularUnit)",
       "self::fraction[@role=\"unit\"]"
     ],
     [
       "Rule",
       "currency",
       "default",
-      "[m] children/*[position()>1]; [n] children/*[1];",
+      "[m] children/*[position()>1]; [n] children/*[1]",
       "self::infixop",
       "contains(@annotation, \"clearspeak:unit\")",
       "children/*[1][@role=\"unit\"]",
@@ -3095,7 +3150,7 @@ sre.ClearspeakFrench = {
       "Rule",
       "currency",
       "Currency_Prefix",
-      "[n] children/*[last()]; [m] children/*[position()<last()]; ",
+      "[n] children/*[last()]; [m] children/*[position()<last()]",
       "self::infixop",
       "contains(@annotation, \"clearspeak:unit\")",
       "children/*[last()][@role=\"unit\"]",
@@ -3106,4 +3161,4 @@ sre.ClearspeakFrench = {
     "simple",
     "unit"
   ]
-};
+}

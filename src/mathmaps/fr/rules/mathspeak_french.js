@@ -1,38 +1,13 @@
-// Copyright 2014 Volker Sorge
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * @fileoverview Italian Mathspeak rules.
- * @author volker.sorge@gmail.com (Volker Sorge)
- */
-
-goog.provide('sre.MathspeakItalian');
-
-
-/**
- * Italian Mathspeak rules.
- */
-sre.MathspeakItalian = {
-  "domain": "mathspeak",
-  "locale": "it",
+{
+  "locale": "fr",
   "modality": "speech",
+  "domain": "mathspeak",
   "rules": [
     [
       "Rule",
       "collapsed",
       "default",
-      "[n] . (engine:modality=summary, grammar:collapsed)",
+      "[n] . (engine:modality=summary,grammar:collapsed)",
       "self::*[@alternative]",
       "not(contains(@grammar, \"collapsed\"))"
     ],
@@ -89,7 +64,7 @@ sre.MathspeakItalian = {
       "Rule",
       "blank-cell-empty",
       "default",
-      "[t] \"vuoto\"",
+      "[t] \"vide\"",
       "self::empty",
       "count(../*)=1",
       "name(../..)=\"cell\""
@@ -98,7 +73,7 @@ sre.MathspeakItalian = {
       "Rule",
       "blank-line-empty",
       "default",
-      "[t] \"vuoto\"",
+      "[t] \"vide\"",
       "self::empty",
       "count(../*)=1",
       "name(../..)=\"line\""
@@ -160,7 +135,7 @@ sre.MathspeakItalian = {
       "Rule",
       "mixed-number",
       "default",
-      "[n] children/*[1]; [t] \"e\"; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"et\"; [n] children/*[2]; ",
       "self::number",
       "@role=\"mixed\""
     ],
@@ -168,52 +143,27 @@ sre.MathspeakItalian = {
       "Rule",
       "number-with-chars",
       "default",
-      "[t] \"numero\"; [m] CQFspaceoutNumber (grammar:protected)",
+      "[t] \"nombre\"; [m] CQFspaceoutNumber (grammar:protected)",
       "self::number",
       "@role=\"othernumber\"",
       "\"\" != translate(text(), \"0123456789.,\", \"\")",
-      "not(contains(@grammar, \"protected\"))"
-    ],
-    [
-      "SpecializedRule",
-      "number-with-chars",
-      "default",
-      "brief",
-      "[t] \"num\"; [m] CQFspaceoutNumber (grammar:protected)"
-    ],
-    [
-      "SpecializedRule",
-      "number-with-chars",
-      "brief",
-      "sbrief"
+      "text() != translate(text(), \"0123456789.,\", \"\")"
     ],
     [
       "Rule",
       "number-as-upper-word",
       "default",
-      "[t] \"parolaMaiuscolo\"; [t] CSFspaceoutText",
+      "[t] \"MotMajuscule\"; [t] CSFspaceoutText",
       "self::number",
       "string-length(text())>1",
       "text()=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψω\", \"ABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\")",
       "\"\"=translate(text(), \"ABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\",\"\")"
     ],
     [
-      "SpecializedRule",
-      "number-as-upper-word",
-      "default",
-      "brief"
-    ],
-    [
-      "SpecializedRule",
-      "number-as-upper-word",
-      "default",
-      "sbrief"
-    ],
-    [
       "Rule",
       "number-baseline",
       "default",
-      "[t] \"linea di base\"; [n] . (grammar:baseline)",
+      "[t] \"position de base\"; [n] . (grammar:baseline)",
       "self::number",
       "not(contains(@grammar, \"ignoreFont\"))",
       "preceding-sibling::identifier",
@@ -238,7 +188,7 @@ sre.MathspeakItalian = {
       "Rule",
       "number-baseline-font",
       "default",
-      "[t] \"linea di base\"; [n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont);",
+      "[t] \"position de base\"; [n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)",
       "self::number",
       "@font",
       "not(contains(@grammar, \"ignoreFont\"))",
@@ -283,7 +233,7 @@ sre.MathspeakItalian = {
       "Rule",
       "negative",
       "default",
-      "[t] \"meno\"; [n] children/*[1]",
+      "[t] \"négatif\"; [n] children/*[1]",
       "self::prefixop",
       "@role=\"negative\"",
       "children/identifier"
@@ -306,7 +256,7 @@ sre.MathspeakItalian = {
       "Rule",
       "negative",
       "default",
-      "[t] \"meno\"; [n] children/*[1]",
+      "[t] \"négatif\"; [n] children/*[1]",
       "self::prefixop",
       "@role=\"negative\""
     ],
@@ -328,14 +278,14 @@ sre.MathspeakItalian = {
       "Rule",
       "binary-operation",
       "default",
-      "[m] children/* (sepFunc:CTFcontentIterator)",
+      "[m] children/* (sepFunc:CTFcontentIterator);",
       "self::infixop"
     ],
     [
       "Rule",
       "division",
       "default",
-      "[n] children/*[1]; [t] \"diviso per\"; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"divisé par\"; [n] children/*[2]",
       "self::infixop",
       "@role=\"division\"",
       "count(children/*)=2"
@@ -358,7 +308,7 @@ sre.MathspeakItalian = {
       "Rule",
       "subtraction",
       "default",
-      "[m] children/* (separator:\"meno\")",
+      "[m] children/* (separator:\"moins\");",
       "self::infixop",
       "@role=\"subtraction\""
     ],
@@ -389,7 +339,7 @@ sre.MathspeakItalian = {
       "Rule",
       "fences-neutral",
       "default",
-      "[t] \"inizio valore assoluto\"; [n] children/*[1]; [t] \"fine valore assoluto\"",
+      "[t] \"début valeur absolue\"; [n] children/*[1]; [t] \"fin valeur absolue\"",
       "self::fenced",
       "@role=\"neutral\"",
       "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
@@ -399,7 +349,7 @@ sre.MathspeakItalian = {
       "fences-neutral",
       "default",
       "sbrief",
-      "[t] \"valore assoluto\"; [n] children/*[1]; [t] \"fine valore assoluto\""
+      "[t] \"valeur absolue\"; [n] children/*[1]; [t] \"fin valeur absolue\""
     ],
     [
       "Rule",
@@ -413,7 +363,7 @@ sre.MathspeakItalian = {
       "Rule",
       "empty-set",
       "default",
-      "[t] \"insieme vuoto\"",
+      "[t] \"ensemble vide\"",
       "self::fenced[@role=\"set empty\"]",
       "not(name(../..)=\"appl\")"
     ],
@@ -427,7 +377,7 @@ sre.MathspeakItalian = {
       "Rule",
       "fences-set",
       "default",
-      "[t] \"inizio insieme\"; [n] children/*[1]; [t] \"fine insieme\"",
+      "[t] \"début ensemble\"; [n] children/*[1]; [t] \"fin ensemble\"",
       "self::fenced",
       "contains(@role,\"set \")",
       "not(name(../..)=\"appl\")"
@@ -437,7 +387,7 @@ sre.MathspeakItalian = {
       "fences-set",
       "default",
       "sbrief",
-      "[t] \"insieme\"; [n] children/*[1]; [t] \"fine insieme\""
+      "[t] \"ensemble\"; [n] children/*[1]; [t] \"fin ensemble\""
     ],
     [
       "Rule",
@@ -450,7 +400,7 @@ sre.MathspeakItalian = {
       "Rule",
       "factorial",
       "default",
-      "[t] \"fattoriale\"",
+      "[t] \"factorielle\"",
       "self::punctuation",
       "text()=\"!\"",
       "name(preceding-sibling::*[1])!=\"text\""
@@ -459,7 +409,7 @@ sre.MathspeakItalian = {
       "Rule",
       "minus",
       "default",
-      "[t] \"meno\"",
+      "[t] \"moins\"",
       "self::operator",
       "text()=\"-\""
     ],
@@ -488,7 +438,7 @@ sre.MathspeakItalian = {
       "Rule",
       "vulgar-fraction",
       "default",
-      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")",
+      "[t] CSFvulgarFraction",
       "self::fraction",
       "@role=\"vulgar\"",
       "CQFvulgarFractionSmall"
@@ -509,7 +459,7 @@ sre.MathspeakItalian = {
       "Rule",
       "continued-fraction-outer",
       "default",
-      "[t] \"continuo frazione\"; [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]",
+      "[t] \"fraction continue\"; [n] children/*[1];[t] \"sur\"; [n] children/*[2]",
       "self::fraction",
       "not(ancestor::fraction)",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\" and not(following-sibling::*)]"
@@ -519,7 +469,7 @@ sre.MathspeakItalian = {
       "continued-fraction-outer",
       "default",
       "brief",
-      "[t] \"continuo frazione\"; [n] children/*[1];[t] \"fratto\"; [n] children/*[2]"
+      "[t] \"frac continue\"; [n] children/*[1];[t] \"sur\"; [n] children/*[2]"
     ],
     [
       "SpecializedRule",
@@ -531,7 +481,7 @@ sre.MathspeakItalian = {
       "Rule",
       "continued-fraction-inner",
       "default",
-      "[t] \"inizio frazione\"; [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]",
+      "[t] \"début fraction\"; [n] children/*[1];[t] \"sur\"; [n] children/*[2]",
       "self::fraction",
       "ancestor::fraction",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\" and not(following-sibling::*)]"
@@ -541,14 +491,14 @@ sre.MathspeakItalian = {
       "continued-fraction-inner",
       "default",
       "brief",
-      "[t] \"inizio frazione\"; [n] children/*[1];[t] \"fratto\"; [n] children/*[2]"
+      "[t] \"début frac\"; [n] children/*[1];[t] \"sur\"; [n] children/*[2]"
     ],
     [
       "SpecializedRule",
       "continued-fraction-inner",
       "brief",
       "sbrief",
-      "[t] \"frazione\"; [n] children/*[1];[t] \"fratto\"; [n] children/*[2]"
+      "[t] \"frac\"; [n] children/*[1];[t] \"sur\"; [n] children/*[2]"
     ],
     [
       "Rule",
@@ -573,30 +523,54 @@ sre.MathspeakItalian = {
     ],
     [
       "Rule",
+      "root-small",
+      "default",
+      "[t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose",
+      "self::root",
+      "CQFisSmallRoot"
+    ],
+    [
+      "Rule",
+      "root-small",
+      "brief",
+      "[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
+      "self::root",
+      "CQFisSmallRoot"
+    ],
+    [
+      "Rule",
+      "root-small",
+      "sbrief",
+      "[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
+      "self::root",
+      "CQFisSmallRoot"
+    ],
+    [
+      "Rule",
       "root",
       "default",
-      "[t] CSFindexRadicalVerbose; [n] children/*[1]; [t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose",
+      "[t] CSFindexRadicalVerbose; [n] children/*[1];[t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose",
       "self::root"
     ],
     [
       "Rule",
       "root",
       "brief",
-      "[t] CSFindexRadicalBrief; [n] children/*[1]; [t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
+      "[t] CSFindexRadicalBrief; [n] children/*[1];[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root"
     ],
     [
       "Rule",
       "root",
       "sbrief",
-      "[t] CSFindexRadicalSbrief; [n] children/*[1]; [t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
+      "[t] CSFindexRadicalSbrief; [n] children/*[1];[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root"
     ],
     [
       "Rule",
       "limboth",
       "default",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]",
+      "[n] children/*[1]; [t] \"début\"; [t] CSFunderscript; [n] children/*[2];[t] \"début\"; [t] CSFoverscript; [n] children/*[3]",
       "self::limboth",
       "name(../..)=\"underscore\" or name(../..)=\"overscore\"",
       "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
@@ -605,7 +579,7 @@ sre.MathspeakItalian = {
       "Rule",
       "limlower",
       "default",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"début\"; [t] CSFunderscript; [n] children/*[2];",
       "self::limlower",
       "name(../..)=\"underscore\" or name(../..)=\"overscore\"",
       "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
@@ -614,7 +588,7 @@ sre.MathspeakItalian = {
       "Rule",
       "limupper",
       "default",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"début\"; [t] CSFoverscript; [n] children/*[2];",
       "self::limupper",
       "name(../..)=\"underscore\" or name(../..)=\"overscore\"",
       "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
@@ -647,21 +621,21 @@ sre.MathspeakItalian = {
       "Rule",
       "limboth-end",
       "default",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]; [t] \"fine script\"",
+      "[n] children/*[1]; [t] \"début\"; [t] CSFunderscript; [n] children/*[2];[t] \"début\"; [t] CSFoverscript; [n] children/*[3]; [t] \"fin scripts\"",
       "self::limboth"
     ],
     [
       "Rule",
       "limlower-end",
       "default",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] \"fine script\"",
+      "[n] children/*[1]; [t] \"début\"; [t] CSFunderscript; [n] children/*[2]; [t] \"fin scripts\"",
       "self::limlower"
     ],
     [
       "Rule",
       "limupper-end",
       "default",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]; [t] \"fine script\"",
+      "[n] children/*[1]; [t] \"début\"; [t] CSFoverscript; [n] children/*[2]; [t] \"fin scripts\"",
       "self::limupper"
     ],
     [
@@ -684,14 +658,14 @@ sre.MathspeakItalian = {
       "Rule",
       "integral",
       "default",
-      "[n] children/*[1]; [n] children/*[2]; [n] children/*[3]",
+      "[n] children/*[1]; [n] children/*[2]; [n] children/*[3];",
       "self::integral"
     ],
     [
       "Rule",
       "integral",
       "default",
-      "[n] children/*[1]; [t] \"pedice\"; [n] children/*[2]; [t] \"apice\"; [n] children/*[3]; [t] \"linea di base\"",
+      "[n] children/*[1]; [t] \"indice inférieur\"; [n] children/*[2];[t] \"indice supérieur\"; [n] children/*[3]; [t] \"position de base\";",
       "self::limboth",
       "@role=\"integral\""
     ],
@@ -700,7 +674,7 @@ sre.MathspeakItalian = {
       "integral",
       "default",
       "brief",
-      "[n] children/*[1]; [t] \"sub\"; [n] children/*[2];[t] \"sup\"; [n] children/*[3]; [t] \"base\";"
+      "[n] children/*[1]; [t] \"inf\"; [n] children/*[2];[t] \"sup\"; [n] children/*[3]; [t] \"position de base\";"
     ],
     [
       "SpecializedRule",
@@ -712,7 +686,7 @@ sre.MathspeakItalian = {
       "Rule",
       "bigop",
       "default",
-      "[n] children/*[1]; [n] children/*[2]",
+      "[n] children/*[1]; [n] children/*[2];",
       "self::bigop"
     ],
     [
@@ -793,7 +767,7 @@ sre.MathspeakItalian = {
     [
       "Rule",
       "subscript-simple",
-      "default",
+      "brief",
       "[n] children/*[1]; [n] children/*[2]",
       "self::subscript",
       "name(./children/*[1])=\"identifier\"",
@@ -804,13 +778,7 @@ sre.MathspeakItalian = {
     [
       "SpecializedRule",
       "subscript-simple",
-      "default",
-      "brief"
-    ],
-    [
-      "SpecializedRule",
-      "subscript-simple",
-      "default",
+      "brief",
       "sbrief"
     ],
     [
@@ -912,7 +880,7 @@ sre.MathspeakItalian = {
       "Rule",
       "superscript-baseline",
       "default",
-      "[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2]; [t] CSFbaselineVerbose",
+      "[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2];[t] CSFbaselineVerbose",
       "self::superscript",
       "following-sibling::*",
       "not(name(following-sibling::superscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"superscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\")) and not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
@@ -993,26 +961,9 @@ sre.MathspeakItalian = {
     ],
     [
       "Rule",
-      "squared-male",
-      "default",
-      "[t] \"quadrato\"",
-      "self::number[text()=2]",
-      "contains(@grammar, \"squared\")"
-    ],
-    [
-      "Rule",
-      "squared-female",
-      "default",
-      "[t] \"quadrata\"",
-      "self::number[text()=2]",
-      "contains(@grammar, \"squared\")",
-      "parent::*/parent::*[@role=\"simple function\"]"
-    ],
-    [
-      "Rule",
       "square",
       "default",
-      "[n] children/*[1]; [n] children/*[2] (grammar:squared)",
+      "[n] children/*[1]; [t] \"au carré\"",
       "self::superscript",
       "children/*[2]",
       "children/*[2][text()=2]",
@@ -1045,7 +996,7 @@ sre.MathspeakItalian = {
       "Rule",
       "cube",
       "default",
-      "[n] children/*[1]; [t] \"cubo\"",
+      "[n] children/*[1]; [t] \"cubique\"",
       "self::superscript",
       "children/*[2]",
       "children/*[2][text()=3]",
@@ -1099,7 +1050,7 @@ sre.MathspeakItalian = {
       "Rule",
       "double-prime",
       "default",
-      "[t] \"doppio primo\"",
+      "[t] \"double prime\"",
       "self::punctuated",
       "@role=\"prime\"",
       "count(children/*)=2"
@@ -1115,7 +1066,7 @@ sre.MathspeakItalian = {
       "Rule",
       "triple-prime",
       "default",
-      "[t] \"triplo primo\"",
+      "[t] \"triple prime\"",
       "self::punctuated",
       "@role=\"prime\"",
       "count(children/*)=3"
@@ -1131,7 +1082,7 @@ sre.MathspeakItalian = {
       "Rule",
       "quadruple-prime",
       "default",
-      "[t] \"quattro volte primo\"",
+      "[t] \"quadruple prime\"",
       "self::punctuated",
       "@role=\"prime\"",
       "count(children/*)=4"
@@ -1147,7 +1098,7 @@ sre.MathspeakItalian = {
       "Rule",
       "counted-prime",
       "default",
-      "[t] count(children/*) (grammar:numbers2alpha); [t] \"primo\"",
+      "[t] count(children/*) (grammar:numbers2alpha); [t] \"prime\"",
       "self::punctuated",
       "@role=\"prime\""
     ],
@@ -1155,7 +1106,7 @@ sre.MathspeakItalian = {
       "Rule",
       "counted-prime",
       "default",
-      "[t] string-length(text()) (grammar:numbers2alpha); [t] \"primo\"",
+      "[t] string-length(text()) (grammar:numbers2alpha); [t] \"prime\"",
       "self::operator",
       "@role=\"prime\"",
       "string-length(text())>4"
@@ -1218,8 +1169,8 @@ sre.MathspeakItalian = {
     [
       "Rule",
       "prime-subscript-simple",
-      "default",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [n] children/*[1]/children/*[2]",
+      "brief",
+      "[n] children/*[1]/children/*[1]; [n] children/*[2];[n] children/*[1]/children/*[2]",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
       "name(children/*[1])=\"subscript\"",
@@ -1231,207 +1182,57 @@ sre.MathspeakItalian = {
     [
       "SpecializedRule",
       "prime-subscript-simple",
-      "default",
-      "brief"
-    ],
-    [
-      "SpecializedRule",
-      "prime-subscript-simple",
-      "default",
+      "brief",
       "sbrief"
     ],
     [
       "Rule",
       "overscore",
       "default",
-      "[t] \"modificante sopra\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]",
+      "[t] \"suscrire\"; [n] children/*[1]; [t] \"avec\"; [n] children/*[2]",
       "self::overscore",
       "children/*[2][@role=\"overaccent\"]"
-    ],
-    [
-      "SpecializedRule",
-      "overscore",
-      "default",
-      "brief",
-      "[t] \"mod sopra\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
-    ],
-    [
-      "SpecializedRule",
-      "overscore",
-      "brief",
-      "sbrief"
     ],
     [
       "Rule",
       "double-overscore",
       "default",
-      "[t] \"modificante sopra sopra\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]",
+      "[t] \"sus-suscrire\"; [n] children/*[1]; [t] \"avec\"; [n] children/*[2]",
       "self::overscore",
       "children/*[2][@role=\"overaccent\"]",
       "name(children/*[1])=\"overscore\"",
       "children/*[1]/children/*[2][@role=\"overaccent\"]"
     ],
     [
-      "SpecializedRule",
-      "double-overscore",
-      "default",
-      "brief",
-      "[t] \"mod sopra sopra\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
-    ],
-    [
-      "SpecializedRule",
-      "double-overscore",
-      "brief",
-      "sbrief"
-    ],
-    [
       "Rule",
       "underscore",
       "default",
-      "[t] \"modificanteSotto\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]",
+      "[t] \"souscrire\"; [n] children/*[1]; [t] \"avec\"; [n] children/*[2]",
       "self::underscore",
       "children/*[2][@role=\"underaccent\"]"
-    ],
-    [
-      "SpecializedRule",
-      "underscore",
-      "default",
-      "brief",
-      "[t] \"modSotto\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
-    ],
-    [
-      "SpecializedRule",
-      "underscore",
-      "brief",
-      "sbrief"
     ],
     [
       "Rule",
       "double-underscore",
       "default",
-      "[t] \"modificanteSotto sotto\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]",
+      "[t] \"sous-souscrire\"; [n] children/*[1]; [t] \"avec\"; [n] children/*[2]",
       "self::underscore",
       "children/*[2][@role=\"underaccent\"]",
       "name(children/*[1])=\"underscore\"",
       "children/*[1]/children/*[2][@role=\"underaccent\"]"
     ],
     [
-      "SpecializedRule",
-      "double-underscore",
-      "default",
-      "brief",
-      "[t] \"modSotto sotto\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
-    ],
-    [
-      "SpecializedRule",
-      "double-underscore",
-      "brief",
-      "sbrief"
-    ],
-    [
-      "Rule",
-      "overbar",
-      "default",
-      "[n] children/*[1]; [t] \"con barra sopra\"",
-      "self::overscore",
-      "contains(@role,\"letter\")",
-      "children/*[2][@role=\"overaccent\"]",
-      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
-    ],
-    [
-      "SpecializedRule",
-      "overbar",
-      "default",
-      "brief",
-      "[n] children/*[1]; [t] \"con barra sopra\""
-    ],
-    [
-      "SpecializedRule",
-      "overbar",
-      "brief",
-      "sbrief"
-    ],
-    [
-      "Rule",
-      "underbar",
-      "default",
-      "[n] children/*[1]; [t] \"con barra sotto\"",
-      "self::underscore",
-      "contains(@role,\"letter\")",
-      "children/*[2][@role=\"underaccent\"]",
-      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
-    ],
-    [
-      "SpecializedRule",
-      "underbar",
-      "default",
-      "brief",
-      "[n] children/*[1]; [t] \"con barra sotto\""
-    ],
-    [
-      "SpecializedRule",
-      "underbar",
-      "brief",
-      "sbrief"
-    ],
-    [
-      "Rule",
-      "overtilde",
-      "default",
-      "[n] children/*[1]; [t] \"con tilde sopra\"",
-      "self::overscore",
-      "children/*[2][@role=\"overaccent\"]",
-      "contains(@role,\"letter\")",
-      "children/*[2][text()=\"~\" or text()=\"˜\" or text()=\"∼\" or text()=\"～\"]"
-    ],
-    [
-      "SpecializedRule",
-      "overtilde",
-      "default",
-      "brief",
-      "[n] children/*[1]; [t] \"con tilde sopra\""
-    ],
-    [
-      "SpecializedRule",
-      "overtilde",
-      "brief",
-      "sbrief"
-    ],
-    [
-      "Rule",
-      "undertilde",
-      "default",
-      "[n] children/*[1]; [t] \"con tilde sotto\"",
-      "self::underscore",
-      "contains(@role,\"letter\")",
-      "children/*[2][@role=\"underaccent\"]",
-      "children/*[2][text()=\"~\" or text()=\"˜\" or text()=\"∼\" or text()=\"～\"]"
-    ],
-    [
-      "SpecializedRule",
-      "undertilde",
-      "default",
-      "brief",
-      "[n] children/*[1]; [t] \"con tilde sotto\""
-    ],
-    [
-      "SpecializedRule",
-      "undertilde",
-      "brief",
-      "sbrief"
-    ],
-    [
       "Rule",
       "matrix",
       "default",
-      "[t] \"inizio\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [t] \"matrice\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"riga \"); [t] \"fine matrice\"",
+      "[t] \"début matrice\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin matrice\"",
       "self::matrix"
     ],
     [
       "Rule",
       "matrix",
       "sbrief",
-      "[t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [t] \"matrice\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"riga \"); [t] \"fine matrice\"",
+      "[t] \"matrice\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin matrice\"",
       "self::matrix"
     ],
     [
@@ -1443,14 +1244,14 @@ sre.MathspeakItalian = {
       "Rule",
       "matrix-row",
       "default",
-      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonna\"); [p] (pause:200)",
+      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\");[p] (pause: 200)",
       "self::row"
     ],
     [
       "Rule",
       "row-with-label",
       "default",
-      "[t] \"con etichetta\"; [n] content/*[1]; [t] \"fine etichetta\" (pause:200); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonna\")",
+      "[t] \"avec étiquette\"; [n] content/*[1]; [t] \"fin étiquette\"(pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\")",
       "self::row",
       "content"
     ],
@@ -1458,7 +1259,7 @@ sre.MathspeakItalian = {
       "Rule",
       "row-with-label",
       "brief",
-      "[t] \"etichetta\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonna\")",
+      "[t] \"étiquette\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\")",
       "self::row",
       "content"
     ],
@@ -1472,7 +1273,7 @@ sre.MathspeakItalian = {
       "Rule",
       "row-with-text-label",
       "sbrief",
-      "[t] \"etichetta\"; [t] CSFRemoveParens; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonna\")",
+      "[t] \"étiquette\"; [t] CSFRemoveParens;[m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\")",
       "self::row",
       "content",
       "name(content/cell/children/*[1])=\"text\""
@@ -1481,7 +1282,7 @@ sre.MathspeakItalian = {
       "Rule",
       "empty-row",
       "default",
-      "[t] \"vuoto\"",
+      "[t] \"vide\"",
       "self::row",
       "count(children/*)=0"
     ],
@@ -1489,14 +1290,14 @@ sre.MathspeakItalian = {
       "Rule",
       "matrix-cell",
       "default",
-      "[n] children/*[1]; [p] (pause:300)",
+      "[n] children/*[1]; [p] (pause: 300)",
       "self::cell"
     ],
     [
       "Rule",
       "empty-cell",
       "default",
-      "[t] \"vuoto\"; [p] (pause:300)",
+      "[t] \"vide\"; [p] (pause: 300)",
       "self::cell",
       "count(children/*)=0"
     ],
@@ -1504,7 +1305,7 @@ sre.MathspeakItalian = {
       "Rule",
       "determinant",
       "default",
-      "[t] \"inizio\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [t] \"determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"riga \"); [t] \"fine determinante\"",
+      "[t] \"début déterminant\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [t] \"\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin déterminant\"",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -1513,13 +1314,13 @@ sre.MathspeakItalian = {
       "determinant",
       "default",
       "sbrief",
-      "[t] count(children/*);  [t] \"per\";[t] count(children/*[1]/children/*); [t] \"determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"riga \"); [t] \"fine determinante\""
+      "[t] \"déterminant\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin déterminant\""
     ],
     [
       "Rule",
       "determinant-simple",
       "default",
-      "[t] \"inizio\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [t] \"determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"riga\", grammar:simpleDet); [t] \"fine determinante\"",
+      "[t] \"début déterminant\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée\",grammar:simpleDet); [t] \"fin déterminant\"",
       "self::matrix",
       "@role=\"determinant\"",
       "CQFdetIsSimple"
@@ -1529,13 +1330,13 @@ sre.MathspeakItalian = {
       "determinant-simple",
       "default",
       "sbrief",
-      "[t] count(children/*);  [t] \"per\";[t] count(children/*[1]/children/*); [t] \"determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"riga\",grammar:simpleDet); [t] \"fine determinante\""
+      "[t] \"déterminant\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée\",grammar:simpleDet); [t] \"fin déterminant\""
     ],
     [
       "Rule",
       "row-simple",
       "default",
-      "[m] children/*",
+      "[m] children/*;",
       "self::row",
       "@role=\"determinant\"",
       "contains(@grammar, \"simpleDet\")"
@@ -1544,21 +1345,21 @@ sre.MathspeakItalian = {
       "Rule",
       "layout",
       "default",
-      "[t] \"inizio layout\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"row \"); [t] \"fine layout\"",
+      "[t] \"début tableau\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\"",
       "self::table"
     ],
     [
       "Rule",
       "layout",
       "sbrief",
-      "[t] \"layout\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"row \"); [t] \"fine layout\"",
+      "[t] \"tableau\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\"",
       "self::table"
     ],
     [
       "Rule",
       "binomial",
       "default",
-      "[t] \"inizio binomiale o matrice\"; [n] children/*[1]/children/*[1]; [t] \"scelta\"; [n] children/*[2]/children/*[1]; [t] \"fine binomiale o matrice\"",
+      "[t] \"début binomiale\"; [n] children/*[2]/children/*[1]; [t] \"parmi\"; [n] children/*[1]/children/*[1];  [t] \"fin binomiale\"",
       "self::vector",
       "@role=\"binomial\""
     ],
@@ -1566,7 +1367,7 @@ sre.MathspeakItalian = {
       "Rule",
       "binomial",
       "sbrief",
-      "[t] \"bInomiale o matrice\"; [n] children/*[1]/children/*[1]; [t] \"scelta\"; [n] children/*[2]/children/*[1]; [t] \"fine binomiale o matrice\"",
+      "[t] \"binomiale\"; [n] children/*[1]/children/*[1]; [t] \"parmi\"; [n] children/*[2]/children/*[1];  [t] \"fin binomiale\"",
       "self::vector",
       "@role=\"binomial\""
     ],
@@ -1574,14 +1375,14 @@ sre.MathspeakItalian = {
       "Rule",
       "cases",
       "default",
-      "[t] \"inizio layout\"; [t] \"allargato\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"row \"); [t] \"fine layout\"",
+      "[t] \"début tableau\"; [n] content/*[1]; [t] \"élargie\";[m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\"",
       "self::cases"
     ],
     [
       "Rule",
       "cases",
       "sbrief",
-      "[t] \"layout\"; [t] \"allargato\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"row \"); [t] \"fine layout\"",
+      "[t] \"tableau\"; [n] content/*[1]; [t] \"élargie\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\"",
       "self::cases"
     ],
     [
@@ -1600,7 +1401,7 @@ sre.MathspeakItalian = {
       "Rule",
       "line-with-label",
       "default",
-      "[t] \"con etichetta\"; [n] content/*[1]; [t] \"fine etichetta\" (pause:200); [m] children/*",
+      "[t] \"avec etiquette\"; [n] content/*[1]; [t] \"fin etiquette\" (pause: 200); [m] children/*",
       "self::line",
       "content"
     ],
@@ -1609,7 +1410,7 @@ sre.MathspeakItalian = {
       "line-with-label",
       "default",
       "brief",
-      "[t] \"etichetta\"; [n] content/*[1] (pause: 200); [m] children/*"
+      "[t] \"etiquette\"; [n] content/*[1] (pause: 200); [m] children/*"
     ],
     [
       "SpecializedRule",
@@ -1621,7 +1422,7 @@ sre.MathspeakItalian = {
       "Rule",
       "line-with-text-label",
       "sbrief",
-      "[t] \"etichetta\"; [t] CSFRemoveParens; [m] children/*",
+      "[t] \"etiquette\"; [t] CSFRemoveParens; [m] children/*",
       "self::line",
       "content",
       "name(content/cell/children/*[1])=\"text\""
@@ -1630,7 +1431,7 @@ sre.MathspeakItalian = {
       "Rule",
       "empty-line",
       "default",
-      "[t] \"vuoto\"",
+      "[t] \"vide\"",
       "self::line",
       "count(children/*)=0",
       "not(content)"
@@ -1651,7 +1452,7 @@ sre.MathspeakItalian = {
       "Rule",
       "empty-line-with-label",
       "default",
-      "[t] \"con etichetta\"; [n] content/*[1]; [t] \"fine etichetta\" (pause:200); [t] \"vuoto\"",
+      "[t] \"avec etiquette\"; [n] content/*[1]; [t] \"fin etiquette\" (pause: 200); [t] \"vide\"",
       "self::line",
       "count(children/*)=0",
       "content"
@@ -1661,7 +1462,7 @@ sre.MathspeakItalian = {
       "empty-line-with-label",
       "default",
       "brief",
-      "[t] \"etichetta\"; [n] content/*[1] (pause: 200); [t] \"vuoto\""
+      "[t] \"etiquette\"; [n] content/*[1] (pause: 200); [t] \"vide\""
     ],
     [
       "SpecializedRule",
@@ -1673,18 +1474,22 @@ sre.MathspeakItalian = {
       "Rule",
       "enclose",
       "default",
-      "[t] \"inizio chiuso\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"fine chiuso\"",
+      "[t] \"début enfermer en\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"fin enfermer\"",
       "self::enclose"
     ],
     [
-      "Aliases",
+      "Rule",
       "overbar",
+      "default",
+      "[t] \"début trait suscrit\"; [n] children/*[1]; [t] \"fin trait suscrit\"",
       "self::enclose",
       "@role=\"top\""
     ],
     [
-      "Aliases",
+      "Rule",
       "underbar",
+      "default",
+      "[t] \"début trait souscrit\"; [n] children/*[1]; [t] \"fin trait souscrit\"",
       "self::enclose",
       "@role=\"bottom\""
     ],
@@ -1692,7 +1497,7 @@ sre.MathspeakItalian = {
       "Rule",
       "leftbar",
       "default",
-      "[t] \"barra vericale\"; [n] children/*[1]",
+      "[t] \"barre verticale\"; [n] children/*[1]",
       "self::enclose",
       "@role=\"left\""
     ],
@@ -1700,7 +1505,7 @@ sre.MathspeakItalian = {
       "Rule",
       "rightbar",
       "default",
-      "[n] children/*[1]; [t] \"barra vericale\"",
+      "[n] children/*[1]; [t] \"barre verticale\"",
       "self::enclose",
       "@role=\"right\""
     ],
@@ -1708,7 +1513,7 @@ sre.MathspeakItalian = {
       "Rule",
       "crossout",
       "default",
-      "[t] \"cancellato\"; [n] children/*[1]; [t] \"fine cancellato\"",
+      "[t] \"début biffé\"; [n] children/*[1]; [t] \"fin biffé\"",
       "self::enclose",
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
     ],
@@ -1716,7 +1521,7 @@ sre.MathspeakItalian = {
       "Rule",
       "cancel",
       "default",
-      "[t] \"cancellato\"; [n] children/*[1]/children/*[1]; [t] \"con\"; [n] children/*[2]; [t] \"fine cancellato\"",
+      "[t] \"début biffé\"; [n] children/*[1]/children/*[1]; [t] \"avec\"; [n] children/*[2]; [t] \"fin biffé\"",
       "self::overscore",
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
     ],
@@ -1742,7 +1547,7 @@ sre.MathspeakItalian = {
       "Rule",
       "cancel-reverse",
       "default",
-      "[t] \"cancellato\"; [n] children/*[2]/children/*[1]; [t] \"con\"; [n] children/*[1]; [t] \"fine cancellato\"",
+      "[t] \"début biffé\"; [n] children/*[2]/children/*[1]; [t] \"avec\"; [n] children/*[1]; [t] \"fin biffé\"",
       "self::overscore",
       "name(children/*[2])=\"enclose\"",
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
@@ -1798,66 +1603,56 @@ sre.MathspeakItalian = {
     ],
     [
       "Rule",
+      "unit-square",
+      "default",
+      "[n] children/*[1]; [t] \"carré\"",
+      "self::superscript[@role=\"unit\"]",
+      "children/*[2][text()=2]",
+      "name(children/*[1])=\"identifier\""
+    ],
+    [
+      "SpecializedRule",
+      "unit-square",
+      "default",
+      "brief"
+    ],
+    [
+      "SpecializedRule",
+      "unit-square",
+      "brief",
+      "sbrief"
+    ],
+    [
+      "Rule",
+      "unit-cubic",
+      "default",
+      "[n] children/*[1]; [t] \"cube\"",
+      "self::superscript[@role=\"unit\"]",
+      "children/*[2][text()=3]",
+      "name(children/*[1])=\"identifier\""
+    ],
+    [
+      "SpecializedRule",
+      "unit-cubic",
+      "default",
+      "brief"
+    ],
+    [
+      "SpecializedRule",
+      "unit-cubic",
+      "brief",
+      "sbrief"
+    ],
+    [
+      "Rule",
       "unit-combine",
       "default",
       "[m] children/*",
       "self::infixop[@role=\"unit\"]"
     ],
     [
-      "Rule",
-      "inference",
-      "default",
-      "[t] \"regola di inferenza\"; [m] content/*; [t] \"con conclusione\"; [n] children/*[1]; [t] \"e\"; [t] count(children/*[2]/children/*); [t] \"premesse\"",
-      "self::inference"
-    ],
-    [
-      "Rule",
-      "inference",
-      "default",
-      "[t] \"regola di inferenza\"; [m] content/*; [t] \"con conclusione\"; [n] children/*[1]; [t] \"e\"; [t] count(children/*[2]/children/*); [t] \"premessa\"",
-      "self::inference",
-      "count(children/*[2]/children/*)<2"
-    ],
-    [
-      "Rule",
-      "premise",
-      "default",
-      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise \")",
-      "self::premises"
-    ],
-    [
-      "Rule",
-      "conclusion",
-      "default",
-      "[n] children/*[1]",
-      "self::conclusion"
-    ],
-    [
-      "Rule",
-      "label",
-      "default",
-      "[t] \"etichetta\"; [n] children/*[1]",
-      "self::rulelabel"
-    ],
-    [
-      "Rule",
-      "axiom",
-      "default",
-      "[t] \"assioma\"; [m] children/*[1]",
-      "self::inference",
-      "@role=\"axiom\""
-    ],
-    [
-      "Rule",
-      "axiom",
-      "default",
-      "[t] \"assioma vuoto\"",
-      "self::empty",
-      "@role=\"axiom\""
-    ],
-    [
       "Generator",
       "CGFtensorRules"
     ]
   ]
-};
+}

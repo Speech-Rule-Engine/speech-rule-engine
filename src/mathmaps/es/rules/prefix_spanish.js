@@ -1,39 +1,13 @@
-// Copyright 2016 Volker Sorge
-// Copyright (c) 2016 The MathJax Consortium
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * @fileoverview Italian prefix rules.
- * @author v.sorge@mathjax.com (Volker Sorge)
- */
-
-goog.provide('sre.PrefixItalian');
-
-
-/**
- * Italian prefix rules.
- */
-sre.PrefixItalian = {
+{
+  "locale": "es",
   "modality": "prefix",
   "domain": "default",
-  "locale": "it",
   "rules": [
     [
       "Rule",
       "numerator",
       "default",
-      "[t] \"numeratore\"; [p] (pause:200)",
+      "[t] \"numerador\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"fraction\"",
       "count(preceding-sibling::*)=0"
@@ -42,7 +16,7 @@ sre.PrefixItalian = {
       "Rule",
       "denominator",
       "default",
-      "[t] \"denominatore\"; [p] (pause:200)",
+      "[t] \"denominador\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"fraction\"",
       "count(preceding-sibling::*)=1"
@@ -109,7 +83,7 @@ sre.PrefixItalian = {
       "Rule",
       "exponent",
       "default",
-      "[t] \"esponente\"; [p] (pause:200)",
+      "[t] \"exponente\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"superscript\"",
       "count(preceding-sibling::*)=1"
@@ -118,7 +92,7 @@ sre.PrefixItalian = {
       "Rule",
       "subscript",
       "default",
-      "[t] \"pedice\"; [p] (pause:200)",
+      "[t] \"subíndice\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"subscript\"",
       "count(preceding-sibling::*)=1"
@@ -127,7 +101,7 @@ sre.PrefixItalian = {
       "Rule",
       "overscript",
       "default",
-      "[t] \"apice\"; [p] (pause:200)",
+      "[t] \"sobreíndice\"; [p] (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"overscore\""
@@ -150,7 +124,7 @@ sre.PrefixItalian = {
       "Rule",
       "underscript",
       "default",
-      "[t] \"sottoscritto\"; [p] (pause:200)",
+      "[t] \"bajoíndice\"; [p] (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"underscore\""
@@ -173,7 +147,7 @@ sre.PrefixItalian = {
       "Rule",
       "radicand",
       "default",
-      "[t] \"radicando\"; [p] (pause:200)",
+      "[t] \"radicand\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"sqrt\""
     ],
@@ -181,7 +155,7 @@ sre.PrefixItalian = {
       "Rule",
       "radicand",
       "default",
-      "[t] \"radicando\"; [p] (pause:200)",
+      "[t] \"radicand\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=1"
@@ -190,7 +164,7 @@ sre.PrefixItalian = {
       "Rule",
       "index",
       "default",
-      "[t] \"indice\"; [p] (pause:200)",
+      "[t] \"índice\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=0"
@@ -199,7 +173,7 @@ sre.PrefixItalian = {
       "Rule",
       "leftsub",
       "default",
-      "[t] \"pedice sinistro\"; [p] (pause:200)",
+      "[t] \"subíndice izquierdo\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"leftsub\""
@@ -208,7 +182,7 @@ sre.PrefixItalian = {
       "Rule",
       "leftsub",
       "default",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"pedice sinistro\"; [p] (pause:200)",
+      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"subíndice izquierdo\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -218,7 +192,7 @@ sre.PrefixItalian = {
       "Rule",
       "leftsuper",
       "default",
-      "[t] \"apice sinistro\"; [p] (pause:200)",
+      "[t] \"superíndice izquierdo\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"leftsuper\""
@@ -227,7 +201,7 @@ sre.PrefixItalian = {
       "Rule",
       "leftsuper",
       "default",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"apice sinistro\"; [p] (pause:200)",
+      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"superíndice izquierdo\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -237,7 +211,7 @@ sre.PrefixItalian = {
       "Rule",
       "rightsub",
       "default",
-      "[t] \"pedice destro\"; [p] (pause:200)",
+      "[t] \"subíndice derecho\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"rightsub\""
@@ -246,7 +220,7 @@ sre.PrefixItalian = {
       "Rule",
       "rightsub",
       "default",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"pedice destro\"; [p] (pause:200)",
+      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"subíndice derecho\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -256,7 +230,7 @@ sre.PrefixItalian = {
       "Rule",
       "rightsuper",
       "default",
-      "[t] \"apice destro\"; [p] (pause:200)",
+      "[t] \"superíndice derecho\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"rightsuper\""
@@ -265,7 +239,7 @@ sre.PrefixItalian = {
       "Rule",
       "rightsuper",
       "default",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"apice destro\"; [p] (pause:200)",
+      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"superíndice derecho\"; [p] (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -275,7 +249,7 @@ sre.PrefixItalian = {
       "Rule",
       "choice",
       "default",
-      "[t] \"quantità scelta\"; [p] (pause:200)",
+      "[t] \"cantidad de elección\"; [p] (pause:200)",
       "self::line",
       "@role=\"binomial\"",
       "parent::*/parent::vector",
@@ -285,7 +259,7 @@ sre.PrefixItalian = {
       "Rule",
       "select",
       "default",
-      "[t] \"quantità selezione\"; [p] (pause:200)",
+      "[t] \"cantidad de selección\"; [p] (pause:200)",
       "self::line",
       "@role=\"binomial\"",
       "parent::*/parent::vector",
@@ -295,7 +269,7 @@ sre.PrefixItalian = {
       "Rule",
       "row",
       "default",
-      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"riga\"; [p] (pause:200)",
+      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"fila\"; [p] (pause:200)",
       "self::row"
     ],
     [
@@ -307,7 +281,7 @@ sre.PrefixItalian = {
       "Rule",
       "cell",
       "default",
-      "[n] ../..; [t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"colonna\"; [p] (pause:200)",
+      "[n] ../..; [t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"columna\"; [p] (pause:200)",
       "self::cell",
       "contains(@grammar,\"depth\")"
     ],
@@ -315,8 +289,8 @@ sre.PrefixItalian = {
       "Rule",
       "cell",
       "default",
-      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"colonna\"; [p] (pause:200)",
+      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"columna\"; [p] (pause:200)",
       "self::cell"
     ]
   ]
-};
+}

@@ -1,42 +1,12 @@
-// Copyright 2020 Volker Sorge
-// Copyright (c) 2020 The MathJax Consortium
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-//
-// This work was sponsored by ETH Zurich
-//
-
-/**
- * @fileoverview Summary rules for collapsed elements in German.
- * @author v.sorge@mathjax.com (Volker Sorge)
- */
-
-goog.provide('sre.SummaryGerman');
-
-
-/**
- * German Summary rules.
- */
-sre.SummaryGerman = {
+{
+  "locale": "en",
   "modality": "summary",
-  "locale": "de",
   "rules": [
     [
       "Rule",
       "abstr-identifier",
       "default.default",
-      "[t] \"langer Bezeichner\"",
+      "[t] \"long identifier\"",
       "self::identifier",
       "contains(@grammar, \"collapsed\")"
     ],
@@ -44,14 +14,14 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-identifier",
       "default.default",
-      "[t] \"Bezeichner\"",
+      "[t] \"identifier\"",
       "self::identifier"
     ],
     [
       "Rule",
       "abstr-number",
       "default.default",
-      "[t] \"lange Zahl\"",
+      "[t] \"long number\"",
       "self::number",
       "contains(@grammar, \"collapsed\")"
     ],
@@ -59,14 +29,14 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-number",
       "default.default",
-      "[t] \"Zahl\"",
+      "[t] \"number\"",
       "self::number"
     ],
     [
       "Rule",
       "abstr-mixed-number",
       "default.default",
-      "[t] \"langer gemischter Bruch\"",
+      "[t] \"long mixed number\"",
       "self::number",
       "@role=\"mixed\"",
       "contains(@grammar, \"collapsed\")"
@@ -75,7 +45,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-mixed-number",
       "default.default",
-      "[t] \"gemischter Bruch\"",
+      "[t] \"mixed number\"",
       "self::number",
       "@role=\"mixed\""
     ],
@@ -83,21 +53,21 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-text",
       "default.default",
-      "[t] \"Text\"",
+      "[t] \"text\"",
       "self::text"
     ],
     [
       "Rule",
       "abstr-function",
       "default.default",
-      "[t] \"Funktionsausdruck\"",
+      "[t] \"functional expression\"",
       "self::function"
     ],
     [
       "Rule",
       "abstr-function",
       "mathspeak.brief",
-      "[t] \"Funktion\"",
+      "[t] \"function\"",
       "self::function"
     ],
     [
@@ -110,7 +80,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-lim",
       "default.default",
-      "[t] \"Grenzwertfunktion\"",
+      "[t] \"limit function\"",
       "self::function",
       "@role=\"limit function\""
     ],
@@ -118,7 +88,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-lim",
       "mathspeak.brief",
-      "[t] \"Grenzwert\"",
+      "[t] \"lim\"",
       "self::function",
       "@role=\"limit function\""
     ],
@@ -132,29 +102,56 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-fraction",
       "default.default",
-      "[t] \"Bruch\"",
+      "[t] \"fraction\"",
       "self::fraction"
+    ],
+    [
+      "Rule",
+      "abstr-fraction",
+      "mathspeak.brief",
+      "[t] \"frac\"",
+      "self::fraction"
+    ],
+    [
+      "SpecializedRule",
+      "abstr-fraction",
+      "mathspeak.brief",
+      "mathspeak.sbrief"
     ],
     [
       "Rule",
       "abstr-continued-fraction",
       "default.default",
-      "[t] \"Kettenbruch\"",
+      "[t] \"continued fraction\"",
       "self::fraction",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\"]"
     ],
     [
       "Rule",
+      "abstr-continued-fraction",
+      "mathspeak.brief",
+      "[t] \"continued frac\"",
+      "self::fraction",
+      "children/*[2]/descendant-or-self::*[@role=\"ellipsis\"]"
+    ],
+    [
+      "SpecializedRule",
+      "abstr-continued-fraction",
+      "mathspeak.brief",
+      "mathspeak.sbrief"
+    ],
+    [
+      "Rule",
       "abstr-sqrt",
       "default.default",
-      "[t] \"Quadratwurzel\"",
+      "[t] \"square root\"",
       "self::sqrt"
     ],
     [
       "Rule",
       "abstr-sqrt-nested",
       "default.default",
-      "[t] \"verschachtelte Quadratwurzel\"",
+      "[t] \"nested square root\"",
       "self::sqrt",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -162,14 +159,23 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=speech)",
+      "[t] \"root of index\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"endindex\"",
+      "self::root",
+      "contains(@grammar, \"collapsed\")",
+      "following-sibling::* or ancestor::*/following-sibling::*"
+    ],
+    [
+      "Rule",
+      "abstr-root",
+      "default.default",
+      "[t] \"root of index\"; [n] children/*[1] (engine:modality=\"speech\")",
       "self::root"
     ],
     [
       "Rule",
       "abstr-root",
       "mathspeak.brief",
-      "[t] \"Wurzel\"",
+      "[t] \"root\"",
       "self::root"
     ],
     [
@@ -182,7 +188,17 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-root-nested",
       "default.default",
-      "[t] \"verschachtelte Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=\"speech\")",
+      "[t] \"nested root of index\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"endindex\"",
+      "self::root",
+      "contains(@grammar, \"collapsed\")",
+      "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
+      "following-sibling::* or ancestor::*/following-sibling::*"
+    ],
+    [
+      "Rule",
+      "abstr-root-nested",
+      "default.default",
+      "[t] \"nested root of index\"; [n] children/*[1] (engine:modality=\"speech\")",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -190,7 +206,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-root-nested",
       "mathspeak.brief",
-      "[t] \"verschachtelte Wurzel\"",
+      "[t] \"nested root\"",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -204,21 +220,21 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-superscript",
       "default.default",
-      "[t] \"Potenz\"",
+      "[t] \"power\"",
       "self::superscript"
     ],
     [
       "Rule",
       "abstr-subscript",
       "default.default",
-      "[t] \"Index\"",
+      "[t] \"subscript\"",
       "self::subscript"
     ],
     [
       "Rule",
       "abstr-subsup",
       "default.default",
-      "[t] \"Potenz mit Index\"",
+      "[t] \"power with subscript\"",
       "self::superscript",
       "name(children/*[1])=\"subscript\""
     ],
@@ -226,14 +242,14 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-infixop",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\"",
+      "[t] @role (grammar:localRole); [t] \"with\"; [t] count(./children/*); [t] \"elements\"",
       "self::infixop"
     ],
     [
       "Rule",
       "abstr-infixop",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"mit veränderlicher Anzahl an Elementen\"",
+      "[t] @role (grammar:localRole); [t] \"with variable number of elements\"",
       "self::infixop",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -255,7 +271,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-addition",
       "default.default",
-      "[t] \"Summe mit\"; [t] count(./children/*); [t] \"Summanden\"",
+      "[t] \"sum with\"; [t] count(./children/*); [t] \"summands\"",
       "self::infixop",
       "@role=\"addition\""
     ],
@@ -263,7 +279,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-addition",
       "mathspeak.brief",
-      "[t] \"Summe\"",
+      "[t] \"sum\"",
       "self::infixop",
       "@role=\"addition\""
     ],
@@ -277,7 +293,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-var-addition",
       "default.default",
-      "[t] \"Summe mit veränderlicher Anzahl an Summanden\"",
+      "[t] \"sum with variable number of summands\"",
       "self::infixop",
       "@role=\"addition\"",
       "count(./children/*)>2",
@@ -287,7 +303,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-multiplication",
       "default.default",
-      "[t] \"Produkt mit\"; [t] count(./children/*); [t] \"Faktoren\"",
+      "[t] \"product with\"; [t] count(./children/*); [t] \"factors\"",
       "self::infixop",
       "@role=\"multiplication\""
     ],
@@ -295,7 +311,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-multiplication",
       "mathspeak.brief",
-      "[t] \"Produkt\"",
+      "[t] \"product\"",
       "self::infixop",
       "@role=\"multiplication\""
     ],
@@ -315,7 +331,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-var-multiplication",
       "default.default",
-      "[t] \"Produkt mit veränderlicher Anzahl an Faktoren\"",
+      "[t] \"product with variable number of factors\"",
       "self::infixop",
       "@role=\"multiplication\"",
       "count(./children/*)>2",
@@ -333,14 +349,14 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-vector",
       "default.default",
-      "[t] count(./children/*) ; [t] \"dimensionaler Vektor\"",
+      "[t] count(./children/*) ; [t] \"dimensional vector\"",
       "self::vector"
     ],
     [
       "Rule",
       "abstr-vector",
       "mathspeak.brief",
-      "[t] \"Vektor\"",
+      "[t] \"vector\"",
       "self::vector"
     ],
     [
@@ -353,7 +369,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-var-vector",
       "default.default",
-      "[t] \"n dimensionaler Vektor\"",
+      "[t] \"n dimensional vector\"",
       "self::vector",
       "./children/*/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -361,7 +377,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-binomial",
       "default.default",
-      "[t] \"Binomialkoeffizient\"",
+      "[t] \"binomial\"",
       "self::vector",
       "@role=\"binomial\""
     ],
@@ -381,7 +397,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-determinant",
       "default.default",
-      "[t] count(./children/*); [t] \"dimensionale Determinante\"",
+      "[t] count(./children/*); [t] \"dimensional determinant\"",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -389,7 +405,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-determinant",
       "mathspeak.brief",
-      "[t] \"Determinante\"",
+      "[t] \"determinant\"",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -403,7 +419,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-var-determinant",
       "default.default",
-      "[t] \"n dimensionale Determinante\"",
+      "[t] \"n dimensional determinant\"",
       "self::matrix",
       "@role=\"determinant\"",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
@@ -412,7 +428,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-squarematrix",
       "default.default",
-      "[t] count(./children/*); [t] \"dimensionale quadratische Matrize\"",
+      "[t] count(./children/*); [t] \"dimensional square matrix\"",
       "self::matrix",
       "@role=\"squarematrix\""
     ],
@@ -420,7 +436,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-squarematrix",
       "mathspeak.brief",
-      "[t] \"quadratische Matrize\"",
+      "[t] \"square matrix\"",
       "self::matrix",
       "@role=\"squarematrix\""
     ],
@@ -434,7 +450,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-rowvector",
       "default.default",
-      "[t] count(./children/row/children/*); [t] \"dimensionaler Zeilenvektor\"",
+      "[t] count(./children/row/children/*); [t] \"dimensional row vector\"",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -442,7 +458,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-rowvector",
       "mathspeak.brief",
-      "[t] \"Zeilenvektor\"",
+      "[t] \"row vector\"",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -456,7 +472,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-var-matrix",
       "default.default",
-      "[t] \"n dimensionaler Zeilenvektor\"",
+      "[t] \"n dimensional row vector\"",
       "self::matrix",
       "@role=\"rowvector\"",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
@@ -465,14 +481,14 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-matrix",
       "default.default",
-      "[t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Matrize\"",
+      "[t] count(children/*);  [t] \"by\";[t] count(children/*[1]/children/*); [t] \"matrix\"",
       "self::matrix"
     ],
     [
       "Rule",
       "abstr-matrix",
       "mathspeak.brief",
-      "[t] \"Matrize\"",
+      "[t] \"matrix\"",
       "self::matrix"
     ],
     [
@@ -485,7 +501,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-var-matrix",
       "default.default",
-      "[t] \"n mal m dimensionale Matrize\"",
+      "[t] \"n by m dimensional matrix\"",
       "self::matrix",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -493,14 +509,14 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-cases",
       "default.default",
-      "[t] \"Fallunterscheidung\";[t] \"mit\"; [t] count(children/*); [t] \"Fällen\"",
+      "[t] \"case statement\";[t] \"with\"; [t] count(children/*); [t] \"cases\"",
       "self::cases"
     ],
     [
       "Rule",
       "abstr-cases",
       "mathspeak.brief",
-      "[t] \"Fallunterscheidung\"",
+      "[t] \"case statement\"",
       "self::cases"
     ],
     [
@@ -513,7 +529,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-var-cases",
       "default.default",
-      "[t] \"Fallunterscheidung mit veränderlicher Anzahl an Fällen\"",
+      "[t] \"case statement with variable number of cases\"",
       "self::cases",
       "./children/row/children/cell/children/punctuation[@role=\"ellipsis\"]or ./children/line/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -521,14 +537,14 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-punctuated",
       "default.default",
-      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste der Länge\"; [t] count(children/*) - count(content/*)",
+      "[n] content/*[1]; [t] \"separated list\"; [t] \"of length\"; [t] count(children/*) - count(content/*)",
       "self::punctuated"
     ],
     [
       "Rule",
       "abstr-punctuated",
       "mathspeak.brief",
-      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste\";",
+      "[n] content/*[1]; [t] \"separated list\"",
       "self::punctuated"
     ],
     [
@@ -541,7 +557,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-var-punctuated",
       "default.default",
-      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste\";[t] \"veränderlicher Länge\"",
+      "[n] content/*[1]; [t] \"separated list\";[t] \"of variable length\"",
       "self::punctuated",
       "./children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -556,7 +572,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-integral",
       "default.default",
-      "[t] \"Integral\"",
+      "[t] \"integral\"",
       "self::*",
       "@role=\"integral\""
     ],
@@ -572,7 +588,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-relation-seq",
       "default.default",
-      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\"; [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\"",
+      "[t] @role (grammar:localRole); [t] \"sequence\"; [t] \"with\"; [t] count(./children/*); [t] \"elements\"",
       "self::relseq",
       "count(./children/*)>2"
     ],
@@ -580,7 +596,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-relation-seq",
       "mathspeak.brief",
-      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\"",
+      "[t] @role (grammar:localRole); [t] \"sequence\"",
       "self::relseq",
       "count(./children/*)>2"
     ],
@@ -594,7 +610,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-var-relation",
       "default.default",
-      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\";[t] \"mit veränderlicher Anzahl an Elementen\"",
+      "[t] @role (grammar:localRole); [t] \"sequence\"; [t] \"with variable number of elements\"",
       "self::relseq",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -619,7 +635,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-multirel",
       "default.default",
-      "[t] \"Relationsequenz\"; [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\"",
+      "[t] \"relation sequence\"; [t] \"with\"; [t] count(./children/*); [t] \"elements\"",
       "self::multirel",
       "count(./children/*)>2"
     ],
@@ -627,7 +643,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-multirel",
       "mathspeak.brief",
-      "[t] \"Relationsequenz\"",
+      "[t] \"relation sequence\"",
       "self::multirel",
       "count(./children/*)>2"
     ],
@@ -641,7 +657,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-var-multirel",
       "default.default",
-      "[t] \"Relationsequenz mit veränderlicher Anzahl an Elementen\"",
+      "[t] \"relation sequence with variable number of elements\"",
       "self::multirel",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -650,7 +666,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-table",
       "default.default",
-      "[t] \"Tabelle mit\"; [t] count(children/*); [t] \"Zeilen und\";[t] count(children/*[1]/children/*); [t] \"Spalten\"",
+      "[t] \"table with\"; [t] count(children/*); [t] \"rows and\";[t] count(children/*[1]/children/*); [t] \"columns\"",
       "self::table"
     ],
     [
@@ -664,7 +680,7 @@ sre.SummaryGerman = {
       "Rule",
       "abstr-row",
       "default.default",
-      "[t] \"in\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"mit\";[t] count(children/*); [t] \"Spalten\"",
+      "[t] \"in\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"with\";[t] count(children/*); [t] \"columns\"",
       "self::row"
     ],
     [
@@ -675,4 +691,4 @@ sre.SummaryGerman = {
       "self::cell"
     ]
   ]
-};
+}

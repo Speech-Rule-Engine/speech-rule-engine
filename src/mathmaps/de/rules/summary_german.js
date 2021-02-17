@@ -1,108 +1,12 @@
-// Copyright 2016 Volker Sorge
-// Copyright (c) 2016 The MathJax Consortium
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * @fileoverview French summary rules for collapsed elements.
- * @author v.sorge@mathjax.com (Volker Sorge)
- */
-
-goog.provide('sre.SummaryFrench');
-
-
-/**
- * French summary rules.
- */
-sre.SummaryFrench = {
-  "locale": "fr",
+{
   "modality": "summary",
+  "locale": "de",
   "rules": [
-    [
-      "Rule",
-      "collapsed-masculine",
-      "default.default",
-      "[t] \"compressé\"",
-      "self::*[@grammar]",
-      "contains(@grammar, \"gender:male\")",
-      "contains(@grammar, \"collapsed\")"
-    ],
-    [
-      "SpecializedRule",
-      "collapsed-masculine",
-      "default.default",
-      "mathspeak.brief"
-    ],
-    [
-      "SpecializedRule",
-      "collapsed-masculine",
-      "default.default",
-      "mathspeak.sbrief"
-    ],
-    [
-      "Rule",
-      "collapsed-feminine",
-      "default.default",
-      "[t] \"compressée\"",
-      "self::*[@grammar]",
-      "contains(@grammar, \"gender:female\")",
-      "contains(@grammar, \"collapsed\")"
-    ],
-    [
-      "SpecializedRule",
-      "collapsed-feminine",
-      "default.default",
-      "mathspeak.brief"
-    ],
-    [
-      "SpecializedRule",
-      "collapsed-feminine",
-      "default.default",
-      "mathspeak.sbrief"
-    ],
-    [
-      "Rule",
-      "no-collapsed",
-      "default.default",
-      "[t] \"\"",
-      "self::*[@grammar]",
-      "contains(@grammar, \"gender\")",
-      "not(contains(@grammar, \"collapsed\"))"
-    ],
-    [
-      "SpecializedRule",
-      "no-collapsed",
-      "default.default",
-      "mathspeak.brief"
-    ],
-    [
-      "SpecializedRule",
-      "no-collapsed",
-      "default.default",
-      "mathspeak.sbrief"
-    ],
-    [
-      "Rule",
-      "stree",
-      "default.default",
-      "[n] ./*[1]",
-      "self::stree"
-    ],
     [
       "Rule",
       "abstr-identifier",
       "default.default",
-      "[t] \"identifiant long\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"langer Bezeichner\"",
       "self::identifier",
       "contains(@grammar, \"collapsed\")"
     ],
@@ -110,14 +14,14 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-identifier",
       "default.default",
-      "[t] \"identifiant\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"Bezeichner\"",
       "self::identifier"
     ],
     [
       "Rule",
       "abstr-number",
       "default.default",
-      "[t] \"nombre long\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"lange Zahl\"",
       "self::number",
       "contains(@grammar, \"collapsed\")"
     ],
@@ -125,14 +29,14 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-number",
       "default.default",
-      "[t] \"nombre\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"Zahl\"",
       "self::number"
     ],
     [
       "Rule",
       "abstr-mixed-number",
       "default.default",
-      "[t] \"nombre fractionnaire long\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"langer gemischter Bruch\"",
       "self::number",
       "@role=\"mixed\"",
       "contains(@grammar, \"collapsed\")"
@@ -141,7 +45,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-mixed-number",
       "default.default",
-      "[t] \"nombre fractionnaire\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"gemischter Bruch\"",
       "self::number",
       "@role=\"mixed\""
     ],
@@ -149,21 +53,21 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-text",
       "default.default",
-      "[t] \"texte\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"Text\"",
       "self::text"
     ],
     [
       "Rule",
       "abstr-function",
       "default.default",
-      "[t] \"expression fonctionnelle\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Funktionsausdruck\"",
       "self::function"
     ],
     [
       "Rule",
       "abstr-function",
       "mathspeak.brief",
-      "[t] \"fonction\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Funktion\"",
       "self::function"
     ],
     [
@@ -176,7 +80,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-lim",
       "default.default",
-      "[t] \"fonction de limitation\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Grenzwertfunktion\"",
       "self::function",
       "@role=\"limit function\""
     ],
@@ -184,7 +88,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-lim",
       "mathspeak.brief",
-      "[t] \"lim\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Grenzwert\"",
       "self::function",
       "@role=\"limit function\""
     ],
@@ -198,56 +102,29 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-fraction",
       "default.default",
-      "[t] \"fraction\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Bruch\"",
       "self::fraction"
-    ],
-    [
-      "Rule",
-      "abstr-fraction",
-      "mathspeak.brief",
-      "[t] \"frac\"; [n] . (grammar:gender=\"female\")",
-      "self::fraction"
-    ],
-    [
-      "SpecializedRule",
-      "abstr-fraction",
-      "mathspeak.brief",
-      "mathspeak.sbrief"
     ],
     [
       "Rule",
       "abstr-continued-fraction",
       "default.default",
-      "[t] \"fraction continue\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Kettenbruch\"",
       "self::fraction",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\"]"
-    ],
-    [
-      "Rule",
-      "abstr-continued-fraction",
-      "mathspeak.brief",
-      "[t] \"frac continue\"; [n] . (grammar:gender=\"female\")",
-      "self::fraction",
-      "children/*[2]/descendant-or-self::*[@role=\"ellipsis\"]"
-    ],
-    [
-      "SpecializedRule",
-      "abstr-continued-fraction",
-      "mathspeak.brief",
-      "mathspeak.sbrief"
     ],
     [
       "Rule",
       "abstr-sqrt",
       "default.default",
-      "[t] \"racine carrée\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Quadratwurzel\"",
       "self::sqrt"
     ],
     [
       "Rule",
       "abstr-sqrt-nested",
       "default.default",
-      "[t] \"racine carrée imbriquée\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"verschachtelte Quadratwurzel\"",
       "self::sqrt",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -255,14 +132,14 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"racine d'indice\"; [n] children/*[1] (engine:modality=speech); [n] . (grammar:gender=\"female\")",
+      "[t] \"Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=speech)",
       "self::root"
     ],
     [
       "Rule",
       "abstr-root",
       "mathspeak.brief",
-      "[t] \"racine\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Wurzel\"",
       "self::root"
     ],
     [
@@ -275,7 +152,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-root-nested",
       "default.default",
-      "[t] \"racine imbriquée d'indice\"; [n] children/*[1] (engine:modality=speech); [n] . (grammar:gender=\"female\")",
+      "[t] \"verschachtelte Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=\"speech\")",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -283,7 +160,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-root-nested",
       "mathspeak.brief",
-      "[t] \"racine imbriquée\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"verschachtelte Wurzel\"",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -297,21 +174,21 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-superscript",
       "default.default",
-      "[t] \"puissance\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Potenz\"",
       "self::superscript"
     ],
     [
       "Rule",
       "abstr-subscript",
       "default.default",
-      "[t] \"indice\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"Index\"",
       "self::subscript"
     ],
     [
       "Rule",
       "abstr-subsup",
       "default.default",
-      "[t] \"puissance avec index\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Potenz mit Index\"",
       "self::superscript",
       "name(children/*[1])=\"subscript\""
     ],
@@ -319,14 +196,14 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-infixop",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"avec\"; [t] count(./children/*); [t] \"éléments\"; [n] . (grammar:gender=\"male\")",
+      "[t] @role (grammar:localRole); [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\"",
       "self::infixop"
     ],
     [
       "Rule",
       "abstr-infixop",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"avec un nombre d'éléments variable\"; [n] . (grammar:gender=\"male\")",
+      "[t] @role (grammar:localRole); [t] \"mit veränderlicher Anzahl an Elementen\"",
       "self::infixop",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -335,7 +212,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-infixop",
       "mathspeak.brief",
-      "[t] @role (grammar:localRole); [n] . (grammar:gender=\"male\")",
+      "[t] @role (grammar:localRole)",
       "self::infixop"
     ],
     [
@@ -348,7 +225,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-addition",
       "default.default",
-      "[t] \"somme avec\"; [t] count(./children/*); [t] \"opérandes\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Summe mit\"; [t] count(./children/*); [t] \"Summanden\"",
       "self::infixop",
       "@role=\"addition\""
     ],
@@ -356,7 +233,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-addition",
       "mathspeak.brief",
-      "[t] \"somme\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Summe\"",
       "self::infixop",
       "@role=\"addition\""
     ],
@@ -370,7 +247,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-var-addition",
       "default.default",
-      "[t] \"somme avec un nombre variable d'opérandes\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Summe mit veränderlicher Anzahl an Summanden\"",
       "self::infixop",
       "@role=\"addition\"",
       "count(./children/*)>2",
@@ -380,7 +257,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-multiplication",
       "default.default",
-      "[t] \"produit avec\"; [t] count(./children/*); [t] \"facteurs\"; [n] . (grammar:gender=\"male\");",
+      "[t] \"Produkt mit\"; [t] count(./children/*); [t] \"Faktoren\"",
       "self::infixop",
       "@role=\"multiplication\""
     ],
@@ -388,7 +265,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-multiplication",
       "mathspeak.brief",
-      "[t] \"produit\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"Produkt\"",
       "self::infixop",
       "@role=\"multiplication\""
     ],
@@ -408,7 +285,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-var-multiplication",
       "default.default",
-      "[t] \"produit avec un nombre de facteurs variable\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"Produkt mit veränderlicher Anzahl an Faktoren\"",
       "self::infixop",
       "@role=\"multiplication\"",
       "count(./children/*)>2",
@@ -426,14 +303,14 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-vector",
       "default.default",
-      "[t] \"vecteur de dimension\"; [t] count(./children/*); [n] . (grammar:gender=\"male\")",
+      "[t] count(./children/*) ; [t] \"dimensionaler Vektor\"",
       "self::vector"
     ],
     [
       "Rule",
       "abstr-vector",
       "mathspeak.brief",
-      "[t] \"vecteur\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"Vektor\"",
       "self::vector"
     ],
     [
@@ -446,7 +323,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-var-vector",
       "default.default",
-      "[t] \"vecteur colonne de dimension n\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"n dimensionaler Vektor\"",
       "self::vector",
       "./children/*/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -454,7 +331,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-binomial",
       "default.default",
-      "[t] \"binomial\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"Binomialkoeffizient\"",
       "self::vector",
       "@role=\"binomial\""
     ],
@@ -474,7 +351,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-determinant",
       "default.default",
-      "[t] \"déterminant de dimension\"; [t] count(./children/*); [n] . (grammar:gender=\"male\")",
+      "[t] count(./children/*); [t] \"dimensionale Determinante\"",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -482,7 +359,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-determinant",
       "mathspeak.brief",
-      "[t] \"déterminant\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"Determinante\"",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -496,7 +373,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-var-determinant",
       "default.default",
-      "[t] \"déterminant de dimension n\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"n dimensionale Determinante\"",
       "self::matrix",
       "@role=\"determinant\"",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
@@ -505,7 +382,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-squarematrix",
       "default.default",
-      "[t] \"matrice carrée de dimension\"; [t] count(./children/*); [n] . (grammar:gender=\"female\")",
+      "[t] count(./children/*); [t] \"dimensionale quadratische Matrize\"",
       "self::matrix",
       "@role=\"squarematrix\""
     ],
@@ -513,7 +390,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-squarematrix",
       "mathspeak.brief",
-      "[t] \"matrice carrée\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"quadratische Matrize\"",
       "self::matrix",
       "@role=\"squarematrix\""
     ],
@@ -527,7 +404,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-rowvector",
       "default.default",
-      "[t] \"vecteur ligne de dimension\"; [t] count(./children/row/children/*); [n] . (grammar:gender=\"male\")",
+      "[t] count(./children/row/children/*); [t] \"dimensionaler Zeilenvektor\"",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -535,7 +412,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-rowvector",
       "mathspeak.brief",
-      "[t] \"vecteur ligne\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"Zeilenvektor\"",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -549,7 +426,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-var-matrix",
       "default.default",
-      "[t] \"vecteur ligne de dimension n\"",
+      "[t] \"n dimensionaler Zeilenvektor\"",
       "self::matrix",
       "@role=\"rowvector\"",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
@@ -558,14 +435,14 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-matrix",
       "default.default",
-      "[t] \"matrice\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [n] . (grammar:gender=\"female\")",
+      "[t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Matrize\"",
       "self::matrix"
     ],
     [
       "Rule",
       "abstr-matrix",
       "mathspeak.brief",
-      "[t] \"matrice\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Matrize\"",
       "self::matrix"
     ],
     [
@@ -578,7 +455,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-var-matrix",
       "default.default",
-      "[t] \"matrice de dimension n par m\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"n mal m dimensionale Matrize\"",
       "self::matrix",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -586,14 +463,14 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-cases",
       "default.default",
-      "[t] \"déclaration de cas\";[t] \"avec\"; [t] count(children/*); [t] \"cas\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Fallunterscheidung\";[t] \"mit\"; [t] count(children/*); [t] \"Fällen\"",
       "self::cases"
     ],
     [
       "Rule",
       "abstr-cases",
       "mathspeak.brief",
-      "[t] \"déclaration de cas\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Fallunterscheidung\"",
       "self::cases"
     ],
     [
@@ -606,7 +483,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-var-cases",
       "default.default",
-      "[t] \"déclaration de cas variable\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Fallunterscheidung mit veränderlicher Anzahl an Fällen\"",
       "self::cases",
       "./children/row/children/cell/children/punctuation[@role=\"ellipsis\"]or ./children/line/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -614,14 +491,14 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-punctuated",
       "default.default",
-      "[t] \"liste de longueur\"; [t] count(children/*) - count(content/*); [t] \"séparée par des\"; [n] content/*[1] (join:\"\"); [t] \"s\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste der Länge\"; [t] count(children/*) - count(content/*)",
       "self::punctuated"
     ],
     [
       "Rule",
       "abstr-punctuated",
       "mathspeak.brief",
-      "[t] \"liste séparée par des\"; [n] content/*[1] (join:\"\"); [t] \"s\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste\";",
       "self::punctuated"
     ],
     [
@@ -634,7 +511,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-var-punctuated",
       "default.default",
-      "[t] \"liste de longueur variable séparée par des\"; [n] content/*[1] (join:\"\"); [t] \"s\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste\";[t] \"veränderlicher Länge\"",
       "self::punctuated",
       "./children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -642,14 +519,14 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-bigop",
       "default.default",
-      "[n] content/*[1]; [n] . (grammar:gender=\"male\")",
+      "[n] content/*[1]",
       "self::bigop"
     ],
     [
       "Rule",
       "abstr-integral",
       "default.default",
-      "[t] \"intégrale\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Integral\"",
       "self::*",
       "@role=\"integral\""
     ],
@@ -657,7 +534,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-relation",
       "default.default",
-      "[t] @role (grammar:localRole); [n] . (grammar:gender=\"male\");",
+      "[t] @role (grammar:localRole);",
       "self::relseq",
       "count(./children/*)=2"
     ],
@@ -665,7 +542,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-relation-seq",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"séquence\"; [t] \"avec\"; [t] count(./children/*); [t] \"éléments\"; [n] . (grammar:gender=\"female\")",
+      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\"; [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\"",
       "self::relseq",
       "count(./children/*)>2"
     ],
@@ -673,7 +550,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-relation-seq",
       "mathspeak.brief",
-      "[t] @role (grammar:localRole); [t] \"séquence\"; [n] . (grammar:gender=\"female\")",
+      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\"",
       "self::relseq",
       "count(./children/*)>2"
     ],
@@ -687,7 +564,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-var-relation",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"séquence\"; [t] \"avec un nombre de éléments variable\"; [n] . (grammar:gender=\"female\")",
+      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\";[t] \"mit veränderlicher Anzahl an Elementen\"",
       "self::relseq",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -712,7 +589,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-multirel",
       "default.default",
-      "[t] \"séquence de relation\"; [t] \"avec\"; [t] count(./children/*); [t] \"éléments\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Relationsequenz\"; [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\"",
       "self::multirel",
       "count(./children/*)>2"
     ],
@@ -720,7 +597,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-multirel",
       "mathspeak.brief",
-      "[t] \"séquence de relation\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Relationsequenz\"",
       "self::multirel",
       "count(./children/*)>2"
     ],
@@ -734,7 +611,7 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-var-multirel",
       "default.default",
-      "[t] \"séquence de relation avec un nombre de éléments variable\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"Relationsequenz mit veränderlicher Anzahl an Elementen\"",
       "self::multirel",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -743,29 +620,29 @@ sre.SummaryFrench = {
       "Rule",
       "abstr-table",
       "default.default",
-      "[t] \"table avec\"; [t] count(children/*); [t] \"lignes et\";[t] count(children/*[1]/children/*); [t] \"colonnes\"; [n] . (grammar:gender=\"female\");",
+      "[t] \"Tabelle mit\"; [t] count(children/*); [t] \"Zeilen und\";[t] count(children/*[1]/children/*); [t] \"Spalten\"",
       "self::table"
     ],
     [
       "Rule",
       "abstr-line",
       "default.default",
-      "[t] \"dans\"; [t] @role (grammar:localRole); [n] . (grammar:gender=\"male\")",
+      "[t] \"in\"; [t] @role (grammar:localRole);",
       "self::line"
     ],
     [
       "Rule",
       "abstr-row",
       "default.default",
-      "[t] \"dans\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"avec\";[t] count(children/*); [t] \"colonnes\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"in\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"mit\";[t] count(children/*); [t] \"Spalten\"",
       "self::row"
     ],
     [
       "Rule",
       "abstr-cell",
       "default.default",
-      "[t] \"dans\"; [t] @role (grammar:localRole); [n] . (grammar:gender=\"female\");",
+      "[t] \"in\"; [t] @role (grammar:localRole);",
       "self::cell"
     ]
   ]
-};
+}
