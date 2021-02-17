@@ -2350,7 +2350,8 @@ sre.SemanticProcessor.numberRole_ = function(node) {
             x.role === sre.SemanticAttr.Role.INTEGER) ||
         (x.type === sre.SemanticAttr.Type.PUNCTUATION &&
         x.role === sre.SemanticAttr.Role.COMMA);})) {
-    node.role = sre.SemanticAttr.Role.INTEGER;
+    node.role = content[0] === '0' ? sre.SemanticAttr.Role.OTHERNUMBER :
+      sre.SemanticAttr.Role.INTEGER;
     return; }
   if (meaning.every(function(x) {
     return (x.type === sre.SemanticAttr.Type.NUMBER &&
