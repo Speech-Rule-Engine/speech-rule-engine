@@ -589,8 +589,8 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
       acc.concat([left, op, right]).concat(first), ops, elements);
   }
   var result = null;
-  if (left.role === sre.SemanticAttr.Role.IMPLICIT &&
-      right.role === sre.SemanticAttr.Role.IMPLICIT) {
+  if (sre.SemanticPred.isImplicitOp(left) &&
+      sre.SemanticPred.isImplicitOp(right)) {
     // Merge both left and right.
     sre.Debugger.getInstance().output('Case 5');
     left.contentNodes.push(op);
@@ -602,7 +602,7 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
     left.addMathmlNodes(op.mathml);
     left.addMathmlNodes(right.mathml);
     result = left;
-  } else if (left.role === sre.SemanticAttr.Role.IMPLICIT) {
+  } else if (sre.SemanticPred.isImplicitOp(left)) {
     // Add to the left one.
     sre.Debugger.getInstance().output('Case 6');
     left.contentNodes.push(op);
@@ -612,7 +612,7 @@ sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, eleme
     left.addMathmlNodes(op.mathml);
     left.addMathmlNodes(right.mathml);
     result = left;
-  } else if (right.role === sre.SemanticAttr.Role.IMPLICIT) {
+  } else if (sre.SemanticPred.isImplicitOp(right)) {
     // Add to the right one.
     sre.Debugger.getInstance().output('Case 7');
     right.contentNodes.unshift(op);

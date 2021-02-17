@@ -135,8 +135,7 @@ sre.SemanticHeuristics.add(
   {method: function(root) {
     for (var i = root.childNodes.length - 1, child;
          child = root.childNodes[i]; i--) {
-      if (child.type !== sre.SemanticAttr.Type.INFIXOP ||
-          child.role !== sre.SemanticAttr.Role.IMPLICIT) {
+      if (!sre.SemanticPred.isImplicitOp(child)) {
         continue;
       }
       root.childNodes.splice.apply(root.childNodes, [i, 1].concat(child.childNodes));
