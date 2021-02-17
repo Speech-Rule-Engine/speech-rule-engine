@@ -270,7 +270,13 @@ $(JSON_DST):
 	@echo "Creating JSON destination."
 	@mkdir -p $(JSON_DST)
 
-maps: $(JSON_DST) $(LOC_DST)
+maps: $(JSON_DST) clean_loc $(LOC_DST)
+
+clean_loc:
+	@if ! [ -z $(LOC) ]; then \
+		echo "Deleteing $(LOC).js"; \
+		rm -f $(JSON_DST)/$(LOC).js; \
+	fi
 
 $(LOC_DST):
 	@echo "Creating mappings for locale `basename $@ .js`."
