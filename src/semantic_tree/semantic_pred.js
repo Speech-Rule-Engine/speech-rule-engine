@@ -557,3 +557,14 @@ sre.SemanticPred.isImplicit = function(node) {
       node.contentNodes[0].textContent === sre.SemanticAttr.invisibleTimes()
       );
 };
+
+
+/**
+ * Tests if a node is an implicit operator node only.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the node is a true implicit operator node.
+ */
+sre.SemanticPred.isImplicitOp = function(node) {
+  return node.type === sre.SemanticAttr.Type.INFIXOP &&
+    node.role === sre.SemanticAttr.Role.IMPLICIT;
+};
