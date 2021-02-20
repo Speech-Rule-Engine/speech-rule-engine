@@ -60,6 +60,16 @@ goog.addSingletonGetter(sre.System);
  */
 sre.System.prototype.setupEngine = function(feature) {
   var engine = sre.Engine.getInstance();
+  // This preserves the possibility to specify default as domain.
+  //
+  // < 3.2  this lead to the use of chromevox rules in English.
+  // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales we
+  //        get a meaningful output.
+  if (feature.domain === 'default' &&
+      (feature.modality === 'speech' ||
+       (!feature.modality || engine.modality === 'speech'))) {
+    feature.domain = 'mathspeak';
+  }
   var setIf = function(feat) {
     if (typeof feature[feat] !== 'undefined') {
       engine[feat] = !!feature[feat];
