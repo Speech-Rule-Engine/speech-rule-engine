@@ -568,3 +568,10 @@ sre.SemanticPred.isImplicitOp = function(node) {
   return node.type === sre.SemanticAttr.Type.INFIXOP &&
     node.role === sre.SemanticAttr.Role.IMPLICIT;
 };
+
+
+// COMPARISON (neutral fences)
+sre.SemanticPred.compareNeutralFences = function(fence1, fence2) {
+  return sre.SemanticUtil.getEmbellishedInner(fence1).textContent ==
+    sre.SemanticUtil.getEmbellishedInner(fence2).textContent;
+};
