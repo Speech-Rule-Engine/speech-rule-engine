@@ -1,6 +1,6 @@
 {
   "locale": "en",
-  "domain": "default",
+  "domain": "chromevox",
   "modality": "speech",
   "rules": [
     [

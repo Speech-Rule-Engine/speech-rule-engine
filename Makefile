@@ -274,7 +274,7 @@ maps: $(JSON_DST) clean_loc $(LOC_DST)
 
 clean_loc:
 	@if ! [ -z $(LOC) ]; then \
-		echo "Deleteing $(LOC).js"; \
+		echo "Deleting $(LOC).js"; \
 		rm -f $(JSON_DST)/$(LOC).js; \
 	fi
 
@@ -282,11 +282,13 @@ $(LOC_DST):
 	@echo "Creating mappings for locale `basename $@ .js`."
 	@echo '{' > $@
 	@for dir in $(MAPS); do\
-		for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
-			echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
-			$(JSON_MINIFY) $$i >> $@; \
-			echo ','  >> $@; \
-		done; \
+		if [ -d $(JSON_SRC)/`basename $@ .js`/$$dir ]; then \
+			for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
+				echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
+				$(JSON_MINIFY) $$i >> $@; \
+				echo ','  >> $@; \
+			done; \
+		fi; \
 	done
 	@sed '$$d' $@ > $@.tmp
 	@echo '}' >> $@.tmp
@@ -300,11 +302,13 @@ $(IEMAPS_FILE):
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
-			for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
-				echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
-				$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
-				echo ','  >> $(IEMAPS_FILE); \
-			done; \
+			if [ -d $(JSON_SRC)/`basename $@ .js`/$$dir ]; then \
+				for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
+					echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
+					$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
+					echo ','  >> $(IEMAPS_FILE); \
+				done; \
+			fi; \
 		done; \
 	done
 	@sed '$$d' $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
