@@ -1618,9 +1618,6 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
   // Find and remove explicit function applications.
   // We now treat funcNode as a prefix function, regardless of what its actual
   // content is.
-  //
-  // TODO: ISSUE #451: If the funcNode here is not a single element but, e.g.,
-  //       an infix operator, then we must not simply propagate!
   if (restNodes[0] &&
       restNodes[0].textContent === sre.SemanticAttr.functionApplication()) {
     // Remove explicit function application. This is destructive on the
@@ -1632,7 +1629,11 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
         funcNode.role === sre.SemanticAttr.Role.LIMFUNC) {
       role = funcNode.role;
     }
-    sre.SemanticProcessor.propagateFunctionRole_(funcNode, role);
+    if (!funcNode.type === sre.Semantic.Type.INFIXOP) {
+      sre.SemanticProcessor.propagateFunctionRole_(funcNode, role);
+    } else {
+      funcNode.role = role;
+    }
     return 'prefix';
   }
   var kind = sre.SemanticProcessor.CLASSIFY_FUNCTION_[funcNode.role];
