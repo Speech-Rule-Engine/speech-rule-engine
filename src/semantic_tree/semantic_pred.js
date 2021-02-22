@@ -577,3 +577,26 @@ sre.SemanticPred.compareNeutralFences = function(fence1, fence2) {
     sre.SemanticUtil.getEmbellishedInner(fence1).textContent ==
     sre.SemanticUtil.getEmbellishedInner(fence2).textContent;
 };
+
+
+// TODO: Simplify
+sre.SemanticPred.elligibleLeftNeutral = function(fence) {
+  if (fence.role !== sre.SemanticAttr.Role.NEUTRAL) return false;
+  if (!fence.embellished) return true;
+  if (fence.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+      fence.type === sre.SemanticAttr.Type.SUBSCRIPT) return false;
+  if (fence.type === sre.SemanticAttr.Type.TENSOR &&
+      (fence.childNodes[3].type !== sre.SemanticAttr.Type.EMPTY ||
+       fence.childNodes[4].type !== sre.SemanticAttr.Type.EMPTY)) return false;
+  return true;
+};
+
+
+sre.SemanticPred.elligibleRightNeutral = function(fence) {
+  if (fence.role === sre.SemanticAttr.Role.NEUTRAL) return false;
+  if (!fence.embellished) return true;
+  if (fence.type === sre.SemanticAttr.Type.TENSOR &&
+      (fence.childNodes[1].type !== sre.SemanticAttr.Type.EMPTY ||
+       fence.childNodes[2].type !== sre.SemanticAttr.Type.EMPTY)) return false;
+  return true;
+};

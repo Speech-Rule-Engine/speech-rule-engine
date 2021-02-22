@@ -940,12 +940,32 @@ sre.SemanticProcessor.prototype.fences_ = function(
         fences, content, openStack, contentStack);
   }
   // General closing case.
-  if (lastOpen && (
-      // Closing fence for some opening fence.
-      (firstRole === sre.SemanticAttr.Role.CLOSE &&
-          lastOpen.role === sre.SemanticAttr.Role.OPEN) ||
+  if (lastOpen &&
+    // Closing fence for some opening fence.
+      firstRole === sre.SemanticAttr.Role.CLOSE &&
+      lastOpen.role === sre.SemanticAttr.Role.OPEN) {
+    var fenced = sre.SemanticProcessor.getInstance().horizontalFencedNode_(
+        openStack.pop(), fences.shift(), contentStack.pop());
+    contentStack.push(contentStack.pop().concat([fenced], content.shift()));
+    return sre.SemanticProcessor.getInstance().fences_(
+        fences, content, openStack, contentStack);
+  }
+  if (lastOpen &&
       // Neutral fence with exact counter part.
-    sre.SemanticPred.compareNeutralFences(fences[0], lastOpen))) {
+      sre.SemanticPred.compareNeutralFences(fences[0], lastOpen)) {
+    console.log(6);
+    if (!sre.SemanticPred.elligibleLeftNeutral(lastOpen) ||
+        !sre.SemanticPred.elligibleRightNeutral(fences[0])) {
+      console.log(7);
+      openStack.push(fences.shift());
+      var cont = content.shift();
+      if (cont) {
+        contentStack.push(cont);
+      }
+      return sre.SemanticProcessor.getInstance().fences_(
+        fences, content, openStack, contentStack);
+    }
+    console.log(8);
     var fenced = sre.SemanticProcessor.getInstance().horizontalFencedNode_(
         openStack.pop(), fences.shift(), contentStack.pop());
     contentStack.push(contentStack.pop().concat([fenced], content.shift()));
@@ -953,9 +973,9 @@ sre.SemanticProcessor.prototype.fences_ = function(
         fences, content, openStack, contentStack);
   }
   // Closing with a neutral fence on the stack.
-  if (lastOpen && firstRole === sre.SemanticAttr.Role.CLOSE &&
-      lastOpen.role === sre.SemanticAttr.Role.NEUTRAL &&
-          openStack.some(openPred)) {
+  if (lastOpen && firstRole === sre.SemanticAttr.Role.CLOSE
+      && lastOpen.role === sre.SemanticAttr.Role.NEUTRAL &&
+      openStack.some(openPred)) {
     // Steps of the algorithm:
     // 1. Split list at right most opening bracket.
     // 2. Cut content list at corresponding length.
@@ -1011,6 +1031,15 @@ sre.SemanticProcessor.prototype.neutralFences_ = function(fences, content) {
     return fences;
   }
   var firstFence = fences.shift();
+  console.log(4);
+  if (!sre.SemanticPred.elligibleLeftNeutral(firstFence)) {
+    console.log(5);
+    sre.SemanticProcessor.fenceToPunct_(firstFence);
+    var restContent = content.shift();
+    restContent.unshift(firstFence);
+    return restContent.concat(
+        sre.SemanticProcessor.getInstance().neutralFences_(fences, content));
+  }
   var split = sre.SemanticProcessor.sliceNodes_(
       fences, function(x) {
         return sre.SemanticPred.compareNeutralFences(x, firstFence);
@@ -1393,7 +1422,7 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
   if (!children[1]) {
     return center;
   }
-  
+
   if (sre.SemanticPred.isLimitBase(center)) {
     var result = sre.SemanticProcessor.MML_TO_LIMIT_[mmlTag];
     var length = result.length;
@@ -1448,7 +1477,7 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
  * @param {number} length The exact length for the given type. This is important
  *     in case not enough children exist, then the type has to be changed.
  * @param {boolean} accent Is this an accent node?
- * @return {!sre.SemanticNode} The newly created node. 
+ * @return {!sre.SemanticNode} The newly created node.
  */
 sre.SemanticProcessor.prototype.accentNode_ = function(
   center, children, type, length, accent) {
@@ -1497,7 +1526,7 @@ sre.SemanticProcessor.prototype.accentNode_ = function(
  *     first node.
  * @param {sre.SemanticNode|undefined} innerNode The innermost node if it exists.
  * @param {sre.SemanticAttr.Type} type The new node type.
- * @return {!sre.SemanticNode} The newly created limit node. 
+ * @return {!sre.SemanticNode} The newly created limit node.
  */
 sre.SemanticProcessor.prototype.makeLimitNode_ = function(
   center, children, innerNode, type) {
@@ -1526,7 +1555,6 @@ sre.SemanticProcessor.prototype.makeLimitNode_ = function(
   newNode.embellished = embellished;
   newNode.role = center.role;
   return newNode;
-  
 };
 
 
