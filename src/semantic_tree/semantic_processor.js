@@ -953,10 +953,8 @@ sre.SemanticProcessor.prototype.fences_ = function(
   if (lastOpen &&
       // Neutral fence with exact counter part.
       sre.SemanticPred.compareNeutralFences(fences[0], lastOpen)) {
-    console.log(6);
     if (!sre.SemanticPred.elligibleLeftNeutral(lastOpen) ||
         !sre.SemanticPred.elligibleRightNeutral(fences[0])) {
-      console.log(7);
       openStack.push(fences.shift());
       var cont = content.shift();
       if (cont) {
@@ -965,7 +963,6 @@ sre.SemanticProcessor.prototype.fences_ = function(
       return sre.SemanticProcessor.getInstance().fences_(
         fences, content, openStack, contentStack);
     }
-    console.log(8);
     var fenced = sre.SemanticProcessor.getInstance().horizontalFencedNode_(
         openStack.pop(), fences.shift(), contentStack.pop());
     contentStack.push(contentStack.pop().concat([fenced], content.shift()));
@@ -1031,9 +1028,7 @@ sre.SemanticProcessor.prototype.neutralFences_ = function(fences, content) {
     return fences;
   }
   var firstFence = fences.shift();
-  console.log(4);
   if (!sre.SemanticPred.elligibleLeftNeutral(firstFence)) {
-    console.log(5);
     sre.SemanticProcessor.fenceToPunct_(firstFence);
     var restContent = content.shift();
     restContent.unshift(firstFence);
@@ -1051,6 +1046,13 @@ sre.SemanticProcessor.prototype.neutralFences_ = function(fences, content) {
     return restContent.concat(
         sre.SemanticProcessor.getInstance().neutralFences_(fences, content));
   }
+  // If the first right neutral is not elligible we ignore it.
+  if (!sre.SemanticPred.elligibleRightNeutral(split.div)) {
+    sre.SemanticProcessor.fenceToPunct_(split.div);
+    fences.unshift(firstFence);
+    return sre.SemanticProcessor.getInstance().neutralFences_(fences, content);
+  }
+
   var newContent = sre.SemanticProcessor.getInstance().combineFencedContent_(
       firstFence, split.div, split.head, content);
   if (split.tail.length > 0) {
