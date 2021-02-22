@@ -1629,7 +1629,7 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
         funcNode.role === sre.SemanticAttr.Role.LIMFUNC) {
       role = funcNode.role;
     }
-    if (!funcNode.type === sre.Semantic.Type.INFIXOP) {
+    if (funcNode.type !== sre.Semantic.Type.INFIXOP) {
       sre.SemanticProcessor.propagateFunctionRole_(funcNode, role);
     } else {
       funcNode.role = role;
