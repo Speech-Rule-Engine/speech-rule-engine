@@ -1622,18 +1622,16 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
       restNodes[0].textContent === sre.SemanticAttr.functionApplication()) {
     // Remove explicit function application. This is destructive on the
     // underlying list.
-    // TODO (sorge) This should not be destructive!
+    //
+    // TODO (sorge) This should not be destructive! This in particular destroys
+    // any information we get on the element. Eg., texclass=NONE.
     restNodes.shift();
     var role = sre.SemanticAttr.Role.SIMPLEFUNC;
     if (funcNode.role === sre.SemanticAttr.Role.PREFIXFUNC ||
         funcNode.role === sre.SemanticAttr.Role.LIMFUNC) {
       role = funcNode.role;
     }
-    if (funcNode.type !== sre.Semantic.Type.INFIXOP) {
-      sre.SemanticProcessor.propagateFunctionRole_(funcNode, role);
-    } else {
-      funcNode.role = role;
-    }
+    sre.SemanticProcessor.propagateFunctionRole_(funcNode, role);
     return 'prefix';
   }
   var kind = sre.SemanticProcessor.CLASSIFY_FUNCTION_[funcNode.role];
@@ -1652,6 +1650,9 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
  */
 sre.SemanticProcessor.propagateFunctionRole_ = function(funcNode, tag) {
   if (funcNode) {
+    if (funcNode.type === sre.Semantic.Type.INFIXOP) {
+      return;
+    }
     if (!(sre.SemanticPred.isAttribute('role', 'SUBSUP')(funcNode) ||
           sre.SemanticPred.isAttribute('role', 'UNDEROVER')(funcNode))) {
       funcNode.role = tag;
