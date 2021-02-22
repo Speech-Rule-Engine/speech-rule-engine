@@ -1657,11 +1657,7 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
         funcNode.role === sre.SemanticAttr.Role.LIMFUNC) {
       role = funcNode.role;
     }
-    if (funcNode.type !== sre.Semantic.Type.INFIXOP) {
-      sre.SemanticProcessor.propagateFunctionRole_(funcNode, role);
-    } else {
-      funcNode.role = role;
-    }
+    sre.SemanticProcessor.propagateFunctionRole_(funcNode, role);
     return 'prefix';
   }
   var kind = sre.SemanticProcessor.CLASSIFY_FUNCTION_[funcNode.role];
@@ -1680,6 +1676,9 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
  */
 sre.SemanticProcessor.propagateFunctionRole_ = function(funcNode, tag) {
   if (funcNode) {
+    if (funcNode.type === sre.Semantic.Type.INFIXOP) {
+      return;
+    }
     if (!(sre.SemanticPred.isAttribute('role', 'SUBSUP')(funcNode) ||
           sre.SemanticPred.isAttribute('role', 'UNDEROVER')(funcNode))) {
       funcNode.role = tag;
