@@ -1137,7 +1137,10 @@ sre.SemanticProcessor.fenceToPunct_ = function(fence) {
   if (!newRole) return;
   while (fence.embellished) {
     fence.embellished = sre.SemanticAttr.Type.PUNCTUATION;
-    fence.role = newRole;
+    if (!(sre.SemanticPred.isAttribute('role', 'SUBSUP')(fence) ||
+          sre.SemanticPred.isAttribute('role', 'UNDEROVER')(fence))) {
+      fence.role = newRole;
+    }
     fence = fence.childNodes[0];
   }
   fence.type = sre.SemanticAttr.Type.PUNCTUATION;
