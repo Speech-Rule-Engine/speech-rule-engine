@@ -1616,7 +1616,6 @@ sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.PREFIXFUNC] =
     'prefix';
 sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.LIMFUNC] =
     'prefix';
-// TODO (WS2.3): Should go into clearspeak specific parser/processor?
 sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.SIMPLEFUNC] =
     'prefix';
 sre.SemanticProcessor.CLASSIFY_FUNCTION_[sre.SemanticAttr.Role.COMPFUNC] =
@@ -1653,7 +1652,11 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
         funcNode.role === sre.SemanticAttr.Role.LIMFUNC) {
       role = funcNode.role;
     }
-    sre.SemanticProcessor.propagateFunctionRole_(funcNode, role);
+    if (funcNode.type !== sre.Semantic.Type.INFIXOP) {
+      sre.SemanticProcessor.propagateFunctionRole_(funcNode, role);
+    } else {
+      funcNode.role = role;
+    }
     return 'prefix';
   }
   var kind = sre.SemanticProcessor.CLASSIFY_FUNCTION_[funcNode.role];
@@ -1672,7 +1675,8 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
  */
 sre.SemanticProcessor.propagateFunctionRole_ = function(funcNode, tag) {
   if (funcNode) {
-    if (!sre.SemanticPred.isAttribute('role', 'SUBSUP')(funcNode)) {
+    if (!(sre.SemanticPred.isAttribute('role', 'SUBSUP')(funcNode) ||
+          sre.SemanticPred.isAttribute('role', 'UNDEROVER')(funcNode))) {
       funcNode.role = tag;
     }
     sre.SemanticProcessor.propagateFunctionRole_(funcNode.childNodes[0], tag);
@@ -1844,7 +1848,7 @@ sre.SemanticProcessor.prototype.functionNode_ = function(func, arg) {
             (sre.SemanticPred.isAttribute('type', 'IDENTIFIER')(node) &&
              sre.SemanticPred.isAttribute('role', 'SIMPLEFUNC')(node));
       }
-      );
+  );
   return sre.SemanticProcessor.getInstance().functionalNode_(
       sre.SemanticAttr.Type.APPL, [func, arg], funcop, [applNode]);
 };
