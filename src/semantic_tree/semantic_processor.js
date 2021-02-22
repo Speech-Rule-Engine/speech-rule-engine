@@ -150,7 +150,7 @@ sre.SemanticProcessor.prototype.implicitNode = function(nodes) {
 sre.SemanticProcessor.prototype.infixNode_ = function(children, opNode) {
   var node = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
       sre.SemanticAttr.Type.INFIXOP, children, [opNode],
-      sre.SemanticProcessor.getEmbellishedInner_(opNode).textContent);
+      sre.SemanticUtil.getEmbellishedInner(opNode).textContent);
   node.role = opNode.role;
   return sre.SemanticHeuristics.run('propagateSimpleFunction', node);
 };
@@ -216,7 +216,7 @@ sre.SemanticProcessor.prototype.concatNode_ = function(inner, nodeList, type) {
     return inner;
   }
   var content = nodeList.map(function(x) {
-    return sre.SemanticProcessor.getEmbellishedInner_(x).textContent;
+    return sre.SemanticUtil.getEmbellishedInner(x).textContent;
   }).join(' ');
   var newNode = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
       type, [inner], nodeList, content);
@@ -475,7 +475,7 @@ sre.SemanticProcessor.prototype.relationsInRow_ = function(nodes) {
   }
   node = sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
       sre.SemanticAttr.Type.RELSEQ, children, partition.rel,
-      sre.SemanticProcessor.getEmbellishedInner_(firstRel).textContent);
+      sre.SemanticUtil.getEmbellishedInner(firstRel).textContent);
   node.role = firstRel.role;
   return node;
 };
@@ -927,10 +927,9 @@ sre.SemanticProcessor.prototype.fences_ = function(
   // Either we have an open fence.
   if (firstRole === sre.SemanticAttr.Role.OPEN ||
       // Or we have a neutral fence that does not have a counter part.
-          (firstRole === sre.SemanticAttr.Role.NEUTRAL &&
-              (!lastOpen ||
-               // COMPARISON (neutral fences)
-                  fences[0].textContent !== lastOpen.textContent))) {
+      (firstRole === sre.SemanticAttr.Role.NEUTRAL &&
+       !(lastOpen &&
+         sre.SemanticPred.compareNeutralFences(fences[0], lastOpen)))) {
     openStack.push(fences.shift());
     var cont = content.shift();
     if (cont) {
@@ -946,9 +945,7 @@ sre.SemanticProcessor.prototype.fences_ = function(
       (firstRole === sre.SemanticAttr.Role.CLOSE &&
           lastOpen.role === sre.SemanticAttr.Role.OPEN) ||
       // Neutral fence with exact counter part.
-      (firstRole === sre.SemanticAttr.Role.NEUTRAL &&
-       // COMPARISON (neutral fences)
-          fences[0].textContent === lastOpen.textContent))) {
+    sre.SemanticPred.compareNeutralFences(fences[0], lastOpen))) {
     var fenced = sre.SemanticProcessor.getInstance().horizontalFencedNode_(
         openStack.pop(), fences.shift(), contentStack.pop());
     contentStack.push(contentStack.pop().concat([fenced], content.shift()));
@@ -1015,10 +1012,8 @@ sre.SemanticProcessor.prototype.neutralFences_ = function(fences, content) {
   }
   var firstFence = fences.shift();
   var split = sre.SemanticProcessor.sliceNodes_(
-      // COMPARISON (neutral fences)
       fences, function(x) {
-        return sre.SemanticProcessor.getEmbellishedInner_(x).textContent ==
-            sre.SemanticProcessor.getEmbellishedInner_(firstFence).textContent;
+        return sre.SemanticPred.compareNeutralFences(x, firstFence);
       });
   if (!split.div) {
     sre.SemanticProcessor.fenceToPunct_(firstFence);
@@ -2534,20 +2529,6 @@ sre.SemanticProcessor.prototype.scriptNode_ = function(
   }
   newNode.role = role;
   return newNode;
-};
-
-
-/**
- * Finds the innermost element of an embellished operator node.
- * @param {sre.SemanticNode} node The embellished node.
- * @return {sre.SemanticNode} The innermost node.
- * @private
- */
-sre.SemanticProcessor.getEmbellishedInner_ = function(node) {
-  if (node && node.embellished && node.childNodes.length > 0) {
-    return sre.SemanticProcessor.getEmbellishedInner_(node.childNodes[0]);
-  }
-  return node;
 };
 
 

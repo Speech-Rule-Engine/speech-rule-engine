@@ -572,6 +572,8 @@ sre.SemanticPred.isImplicitOp = function(node) {
 
 // COMPARISON (neutral fences)
 sre.SemanticPred.compareNeutralFences = function(fence1, fence2) {
-  return sre.SemanticUtil.getEmbellishedInner(fence1).textContent ==
+  return fence1.role === sre.SemanticAttr.Role.NEUTRAL &&
+    fence2.role === sre.SemanticAttr.Role.NEUTRAL &&
+    sre.SemanticUtil.getEmbellishedInner(fence1).textContent ==
     sre.SemanticUtil.getEmbellishedInner(fence2).textContent;
 };
