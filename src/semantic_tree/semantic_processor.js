@@ -3119,6 +3119,11 @@ sre.SemanticProcessor.separateSemantics = function(attr) {
 };
 
 
+/**
+ * Switches unknown to operator node and runs multioperator heuristics.
+ * @param {sre.SemanticNode} node The node to retype.
+ * @return {!sre.SemanticNode} The node resulting from applying the heuristic.
+ */
 sre.SemanticProcessor.prototype.operatorNode = function(node) {
   if (node.type === sre.SemanticAttr.Type.UNKNOWN) {
     node.type = sre.SemanticAttr.Type.OPERATOR;

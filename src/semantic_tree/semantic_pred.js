@@ -570,7 +570,13 @@ sre.SemanticPred.isImplicitOp = function(node) {
 };
 
 
-// COMPARISON (neutral fences)
+/**
+ * Comparison operation for neutral fences depending on textual equality of the
+ * (innermost for embellished) fences.
+ * @param {sre.SemanticNode} fence1 First fence to compare.
+ * @param {sre.SemanticNode} fence2 Second fence to compare.
+ * @return {boolean} True if both fences are neutral and have same textual content.
+ */
 sre.SemanticPred.compareNeutralFences = function(fence1, fence2) {
   return fence1.role === sre.SemanticAttr.Role.NEUTRAL &&
     fence2.role === sre.SemanticAttr.Role.NEUTRAL &&
@@ -579,7 +585,13 @@ sre.SemanticPred.compareNeutralFences = function(fence1, fence2) {
 };
 
 
-// TODO: Simplify
+
+/**
+ * Fence is ellibigle as a left neutral fence, if it is either not embellished
+ * or all its embellishments are to the left.
+ * @param {sre.SemanticNode} fence The neutral fence to check.
+ * @return {boolean} True if fence is elligible.
+ */
 sre.SemanticPred.elligibleLeftNeutral = function(fence) {
   if (fence.role !== sre.SemanticAttr.Role.NEUTRAL) return false;
   if (!fence.embellished) return true;
@@ -592,6 +604,12 @@ sre.SemanticPred.elligibleLeftNeutral = function(fence) {
 };
 
 
+/**
+ * Fence is ellibigle as a right neutral fence, if it is either not embellished
+ * or all its embellishments are to the right.
+ * @param {sre.SemanticNode} fence The neutral fence to check.
+ * @return {boolean} True if fence is elligible.
+ */
 sre.SemanticPred.elligibleRightNeutral = function(fence) {
   if (fence.role === sre.SemanticAttr.Role.NEUTRAL) return false;
   if (!fence.embellished) return true;
