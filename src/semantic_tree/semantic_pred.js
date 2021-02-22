@@ -611,7 +611,7 @@ sre.SemanticPred.elligibleLeftNeutral = function(fence) {
  * @return {boolean} True if fence is elligible.
  */
 sre.SemanticPred.elligibleRightNeutral = function(fence) {
-  if (fence.role === sre.SemanticAttr.Role.NEUTRAL) return false;
+  if (fence.role !== sre.SemanticAttr.Role.NEUTRAL) return false;
   if (!fence.embellished) return true;
   if (fence.type === sre.SemanticAttr.Type.TENSOR &&
       (fence.childNodes[1].type !== sre.SemanticAttr.Type.EMPTY ||
