@@ -7,7 +7,7 @@
       "Rule",
       "numerator",
       "default",
-      "[t] \"Zähler\"; [p] (pause:200)",
+      "[t] \"Zähler\" (pause:200)",
       "self::*",
       "name(../..)=\"fraction\"",
       "count(preceding-sibling::*)=0"
@@ -16,7 +16,7 @@
       "Rule",
       "denominator",
       "default",
-      "[t] \"Nenner\"; [p] (pause:200)",
+      "[t] \"Nenner\" (pause:200)",
       "self::*",
       "name(../..)=\"fraction\"",
       "count(preceding-sibling::*)=1"
@@ -25,7 +25,7 @@
       "Rule",
       "base",
       "default",
-      "[t] \"Basis\"; [p] (pause:200)",
+      "[t] \"Basis\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"superscript\""
@@ -83,7 +83,7 @@
       "Rule",
       "exponent",
       "default",
-      "[t] \"Exponent\"; [p] (pause:200)",
+      "[t] \"Exponent\" (pause:200)",
       "self::*",
       "name(../..)=\"superscript\"",
       "count(preceding-sibling::*)=1"
@@ -92,7 +92,7 @@
       "Rule",
       "subscript",
       "default",
-      "[t] \"Index\"; [p] (pause:200)",
+      "[t] \"Index\" (pause:200)",
       "self::*",
       "name(../..)=\"subscript\"",
       "count(preceding-sibling::*)=1"
@@ -101,7 +101,7 @@
       "Rule",
       "overscript",
       "default",
-      "[t] \"Oberer Grenzwert\"; [p] (pause:200)",
+      "[t] \"Oberer Grenzwert\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"overscore\""
@@ -124,7 +124,7 @@
       "Rule",
       "underscript",
       "default",
-      "[t] \"Unterer Grenzwert\"; [p] (pause:200)",
+      "[t] \"Unterer Grenzwert\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"underscore\""
@@ -147,7 +147,7 @@
       "Rule",
       "radicand",
       "default",
-      "[t] \"Radikand\"; [p] (pause:200)",
+      "[t] \"Radikand\" (pause:200)",
       "self::*",
       "name(../..)=\"sqrt\""
     ],
@@ -155,7 +155,7 @@
       "Rule",
       "radicand",
       "default",
-      "[t] \"Radikand\"; [p] (pause:200)",
+      "[t] \"Radikand\" (pause:200)",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=1"
@@ -164,7 +164,7 @@
       "Rule",
       "index",
       "default",
-      "[t] \"Wurzelexponent\"; [p] (pause:200)",
+      "[t] \"Wurzelexponent\" (pause:200)",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=0"
@@ -173,7 +173,7 @@
       "Rule",
       "leftsub",
       "default",
-      "[t] \"linker unterer Index\"; [p] (pause:200)",
+      "[t] \"linker unterer Index\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"leftsub\""
@@ -182,7 +182,7 @@
       "Rule",
       "leftsub",
       "default",
-      "[t] CSFordinalPosition; [t] \"linker unterer Index\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"linker unterer Index\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -192,7 +192,7 @@
       "Rule",
       "leftsuper",
       "default",
-      "[t] \"linker oberer Index\"; [p] (pause:200)",
+      "[t] \"linker oberer Index\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"leftsuper\""
@@ -201,7 +201,7 @@
       "Rule",
       "leftsuper",
       "default",
-      "[t] CSFordinalPosition; [t] \"linker oberer Index\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"linker oberer Index\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -211,7 +211,7 @@
       "Rule",
       "rightsub",
       "default",
-      "[t] \"rechter unterer Index\"; [p] (pause:200)",
+      "[t] \"rechter unterer Index\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"rightsub\""
@@ -220,7 +220,7 @@
       "Rule",
       "rightsub",
       "default",
-      "[t] CSFordinalPosition; [t] \"rechter unterer Index\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"rechter unterer Index\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -230,7 +230,7 @@
       "Rule",
       "rightsuper",
       "default",
-      "[t] \"rechter oberer Index\"; [p] (pause:200)",
+      "[t] \"rechter oberer Index\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"rightsuper\""
@@ -239,7 +239,7 @@
       "Rule",
       "rightsuper",
       "default",
-      "[t] CSFordinalPosition; [t] \"rechter oberer Index\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"rechter oberer Index\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -249,7 +249,7 @@
       "Rule",
       "choice",
       "default",
-      "[t] \"Grundgesamtheit\"; [p] (pause:200)",
+      "[t] \"Grundgesamtheit\" (pause:200)",
       "self::line",
       "@role=\"binomial\"",
       "parent::*/parent::vector",
@@ -259,7 +259,7 @@
       "Rule",
       "select",
       "default",
-      "[t] \"Stichprobengröße\"; [p] (pause:200)",
+      "[t] \"Stichprobengröße\" (pause:200)",
       "self::line",
       "@role=\"binomial\"",
       "parent::*/parent::vector",
@@ -269,7 +269,7 @@
       "Rule",
       "row",
       "default",
-      "[t] CSFordinalPosition; [t] \"Zeile\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"Zeile\" (pause:200)",
       "self::row"
     ],
     [
@@ -281,7 +281,7 @@
       "Rule",
       "cell",
       "default",
-      "[n] ../..; [t] CSFordinalPosition; [t] \"Spalte\"; [p] (pause:200)",
+      "[n] ../..; [t] CSFordinalPosition; [t] \"Spalte\" (pause:200)",
       "self::cell",
       "contains(@grammar,\"depth\")"
     ],
@@ -289,7 +289,7 @@
       "Rule",
       "cell",
       "default",
-      "[t] CSFordinalPosition; [t] \"Spalte\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"Spalte\" (pause:200)",
       "self::cell"
     ]
   ]
