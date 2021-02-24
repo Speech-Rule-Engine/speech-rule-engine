@@ -1397,14 +1397,14 @@
       "Rule",
       "matrix-row",
       "default",
-      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Column\");[p] (pause: 200)",
+      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Column\", pause: 200)",
       "self::row"
     ],
     [
       "Rule",
       "row-with-label",
       "default",
-      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\"(pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Column\")",
+      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\" (pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Column\")",
       "self::row",
       "content"
     ],
@@ -1443,14 +1443,14 @@
       "Rule",
       "matrix-cell",
       "default",
-      "[n] children/*[1]; [p] (pause: 300)",
+      "[n] children/*[1] (pause: 300)",
       "self::cell"
     ],
     [
       "Rule",
       "empty-cell",
       "default",
-      "[t] \"Blank\"; [p] (pause: 300)",
+      "[t] \"Blank\" (pause: 300)",
       "self::cell",
       "count(children/*)=0"
     ],
@@ -1605,7 +1605,7 @@
       "Rule",
       "empty-line-with-label",
       "default",
-      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\"(pause: 200); [t] \"Blank\"",
+      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\" (pause: 200); [t] \"Blank\"",
       "self::line",
       "count(children/*)=0",
       "content"
