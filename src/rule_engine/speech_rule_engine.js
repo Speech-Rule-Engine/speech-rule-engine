@@ -55,13 +55,6 @@ sre.SpeechRuleEngine = function() {
   this.activeStore_ = new sre.MathStore();
 
   /**
-   * Caches speech strings by node id.
-   * @type {Object.<!Array.<sre.AuditoryDescription>>}
-   * @private
-   */
-  this.cache_ = {};
-
-  /**
    * Flag indicating if the engine is ready. Not ready while it is updating!
    * @type {boolean}
    * @private
@@ -94,77 +87,6 @@ sre.SpeechRuleEngine.prototype.storeFactory_ = function(modality) {
     speech: sre.MathStore
   };
   return new (constructors[modality] || sre.MathStore)();
-};
-
-
-/**
- * Clears the cache.
- */
-sre.SpeechRuleEngine.prototype.clearCache = function() {
-  this.cache_ = {};
-};
-
-
-/**
- * An iterator over the cache elements.
- * @param {function(string, !Array.<sre.AuditoryDescription>)} iter
- *     The iterator function.
- */
-sre.SpeechRuleEngine.prototype.forCache = function(iter) {
-  for (var key in this.cache_) {
-    iter(key, this.cache_[key]);
-  }
-};
-
-
-/**
- * Retrieves a cached value for a particular element.
- * @param {Node} node The element to lookup.
- * @return {Array.<sre.AuditoryDescription>} The cached value if it exists.
- * @private
- */
-sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
-  if (!node || !node.getAttribute) return null;
-  var key = node.getAttribute('id');
-  if (key === 'undefined' || key === '') return null;
-  return this.getCache(key);
-};
-
-
-/**
- * Retrieves a cached value by key.
- * @param {string} key The node id.
- * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions.
- */
-sre.SpeechRuleEngine.prototype.getCache = function(key) {
-  var descr = this.cache_[key];
-  return descr ? this.cloneCache(descr) : descr;
-};
-
-
-/**
- * Clones a list of auditory descriptions to insulate cache from changes.
- * @param {!Array.<sre.AuditoryDescription>} descrs List of descriptions.
- * @return {!Array.<sre.AuditoryDescription>} The cloned list.
- */
-sre.SpeechRuleEngine.prototype.cloneCache = function(descrs) {
-  return descrs.map(function(x) {return x.clone();});
-};
-
-
-/**
- * Caches speech for a particular node.
- * @param {!Node} node The node to cache speech for.
- * @param {!Array.<sre.AuditoryDescription>} speech A list of auditory
- *     descriptions.
- * @private
- */
-sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
-  if (!sre.Engine.getInstance().cache || !node.getAttribute) return;
-  var id = node.getAttribute('id');
-  if (id) {
-    this.cache_[id] = this.cloneCache(speech);
-  }
 };
 
 
@@ -214,24 +136,14 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   var engine = sre.Engine.getInstance();
   sre.Debugger.getInstance().output(
       engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node);
-  if (engine.cache) {
-    var result = this.getCacheForNode_(node);
-    if (result) {
-      if (node.attributes) {
-        this.addPersonality_(result, {}, false, node);
-      }
-      return result;
-    }
-  }
   sre.Grammar.getInstance().setAttribute(node);
   var rule = this.activeStore_.lookupRule(node, engine.dynamicCstr);
   if (!rule) {
     if (engine.strict) return [];
-    result = this.getEvaluator(engine.locale, engine.modality)(node);
+    var result = this.getEvaluator(engine.locale, engine.modality)(node);
     if (node.attributes) {
       this.addPersonality_(result, {}, false, node);
     }
-    this.pushCache_(node, result);
     return result;
   }
   sre.Debugger.getInstance().generateOutput(
@@ -253,13 +165,10 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       this.processGrammar(context, node, component.grammar);
     }
     var saveEngine = null;
-    var oldCache = null;
     // Retooling the engine
     if (attributes.engine) {
       saveEngine = sre.Engine.getInstance().dynamicCstr.getComponents();
       var features = sre.Grammar.parseInput(attributes.engine);
-      oldCache = this.cache_;
-      this.clearCache();
       sre.Engine.getInstance().setDynamicCstr(features);
     }
     switch (component.type) {
@@ -311,11 +220,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     result = result.concat(this.addPersonality_(descrs, attributes, multi,
                                                 node));
     if (saveEngine) {
-      this.cache_ = oldCache;
       sre.Engine.getInstance().setDynamicCstr(saveEngine);
     }
   }
-  this.pushCache_(node, result);
   return result;
 };
 

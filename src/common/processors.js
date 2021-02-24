@@ -260,7 +260,7 @@ new sre.Processor(
         // This avoids temporary attributes (e.g., for grammar) to bleed into
         // the tree.
         var clone = xml.cloneNode(true);
-        var speech = sre.SpeechGeneratorUtil.computeSpeechWithCache(clone);
+        var speech = sre.SpeechGeneratorUtil.computeMarkup(clone);
         var aural = sre.AuralRendering.getInstance();
         if (setting === sre.Engine.Speech.SHALLOW) {
           xml.setAttribute('speech', aural.finalize(speech));
@@ -270,8 +270,8 @@ new sre.Processor(
         var nodesClone = sre.XpathUtil.evalXPath('.//*[@id]', clone);
         for (var i = 0, orig, node;
              orig = nodesXml[i], node = nodesClone[i]; i++) {
-          speech = sre.SpeechGeneratorUtil.retrieveSpeechXml(
-              /** @type {!Node} */(node), true);
+          speech = sre.SpeechGeneratorUtil.computeMarkup(
+              /** @type {!Node} */(node));
           orig.setAttribute('speech', aural.finalize(speech));
         }
         return xml;
@@ -320,7 +320,7 @@ new sre.Processor(
         }
         var mml = sre.DomUtil.parseInput(expr);
         var xml = sre.Semantic.xmlTree(mml);
-        var speech = sre.SpeechGeneratorUtil.computeSpeechWithCache(xml);
+        var speech = sre.SpeechGeneratorUtil.computeMarkup(xml);
         var aural = sre.AuralRendering.getInstance();
         if (setting === sre.Engine.Speech.SHALLOW) {
           json.stree.speech = aural.finalize(speech);
@@ -329,7 +329,7 @@ new sre.Processor(
         var addRec = function(json) {
           var node = /** @type {!Node} */(
             sre.XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0]);
-          var speech = sre.SpeechGeneratorUtil.retrieveSpeechXml(node, true);
+          var speech = sre.SpeechGeneratorUtil.computeMarkup(node);
           json.speech = aural.finalize(speech);
           if (json.children) {
             json.children.forEach(addRec);
