@@ -38,7 +38,7 @@
       "Rule",
       "equality",
       "default",
-      "[t] \"equation\"; [t] \"left hand side\"; [n] children/*[1];[p] (pause:200); [n] content/*[1] (pause:200);[t] \"right hand side\"; [n] children/*[2]",
+      "[t] \"equation\"; [t] \"left hand side\"; [n] children/*[1] (pause:200); [n] content/*[1] (pause:200);[t] \"right hand side\"; [n] children/*[2]",
       "self::relseq[@role=\"equality\"]",
       "count(./children/*)=2"
     ],
@@ -46,7 +46,7 @@
       "Rule",
       "simple-equality",
       "default",
-      "[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);[n] children/*[2]",
+      "[n] children/*[1] (pause:200); [n] content/*[1] (pause:200);[n] children/*[2]",
       "self::relseq[@role=\"equality\"]",
       "count(./children/*)=2",
       "./children/identifier or ./children/number"
@@ -55,7 +55,7 @@
       "Rule",
       "simple-equality2",
       "default",
-      "[n] children/*[1]; [p] (pause:200); [n] content/*[1] (pause:200);[n] children/*[2]",
+      "[n] children/*[1] (pause:200); [n] content/*[1] (pause:200);[n] children/*[2]",
       "self::relseq[@role=\"equality\"]",
       "count(./children/*)=2",
       "./children/function or ./children/appl"
@@ -81,14 +81,14 @@
       "Rule",
       "binary-operation",
       "default",
-      "[p] (pause:100); [m] children/* (sepFunc:CTFcontentIterator); [p] (pause:100);",
+      "[p] (pause:100); [m] children/* (sepFunc:CTFcontentIterator, pause:100);",
       "self::infixop"
     ],
     [
       "Rule",
       "variable-addition",
       "default",
-      "[t] \"sum with variable number of summands\";[p] (pause:400); [m] children/* (sepFunc:CTFcontentIterator)",
+      "[t] \"sum with variable number of summands\" (pause:400); [m] children/* (sepFunc:CTFcontentIterator)",
       "self::infixop[@role=\"addition\"]",
       "count(children/*)>2",
       "children/punctuation[@role=\"ellipsis\"]"
@@ -178,7 +178,7 @@
       "Rule",
       "simple-fraction",
       "default",
-      "[p] (pause:100); [n] children/*[1] (rate:0.35); [t] \"over\";  [n] children/*[2] (rate:0.35); [p] (pause:100)",
+      "[p] (pause:100); [n] children/*[1] (rate:0.35); [t] \"over\";  [n] children/*[2] (rate:0.35, pause:100)",
       "self::fraction",
       "name(children/*[1])=\"number\" or name(children/*[1])=\"identifier\"",
       "name(children/*[2])=\"number\" or name(children/*[2])=\"identifier\""
@@ -196,28 +196,28 @@
       "Rule",
       "fraction",
       "default",
-      "[p] (pause:250); [n] children/*[1] (rate:0.35); [p] (pause:250); [t] \"divided by\"; [p] (pause:250);  [n] children/*[2] (rate:0.35); [p] (pause:250)",
+      "[p] (pause:250); [n] children/*[1] (rate:0.35, pause:250); [t] \"divided by\" (pause:250);  [n] children/*[2] (rate:0.35, pause:250)",
       "self::fraction"
     ],
     [
       "Rule",
       "superscript",
       "default",
-      "[n] children/*[1]; [t] \"super\"; [n] children/*[2] (pitch:0.35);[p] (pause:300)",
+      "[n] children/*[1]; [t] \"super\"; [n] children/*[2] (pitch:0.35, pause:300)",
       "self::superscript"
     ],
     [
       "Rule",
       "subscript",
       "default",
-      "[n] children/*[1]; [t] \"sub\"; [n] children/*[2] (pitch:-0.35);[p] (pause:300)",
+      "[n] children/*[1]; [t] \"sub\"; [n] children/*[2] (pitch:-0.35, pause:300)",
       "self::subscript"
     ],
     [
       "Rule",
       "ellipsis",
       "default",
-      "[p] (pause:200); [t] \"ellipsis\"; [p] (pause:300)",
+      "[p] (pause:200); [t] \"ellipsis\" (pause:300)",
       "self::punctuation",
       "self::punctuation[@role=\"ellipsis\"]"
     ],
@@ -258,7 +258,7 @@
       "Rule",
       "fences-open-close",
       "default",
-      "[p] (pause:200); [n] children/*[1] (rate:0.35); [p] (pause:200)",
+      "[p] (pause:200); [n] children/*[1] (rate:0.35, pause:200)",
       "self::fenced",
       "@role=\"leftright\""
     ],
@@ -266,7 +266,7 @@
       "Rule",
       "fences-open-close-in-appl",
       "default",
-      "[p] (pause:200); [n] children/*[1]; [p] (pause:200);",
+      "[p] (pause:200); [n] children/*[1] (pause:200);",
       "self::fenced[@role=\"leftright\"]",
       "./parent::children/parent::appl"
     ],
@@ -274,7 +274,7 @@
       "Rule",
       "fences-neutral",
       "default",
-      "[p] (pause:100); [t] \"absolute value of\"; [n] children/*[1];[p] (pause:350);",
+      "[p] (pause:100); [t] \"absolute value of\"; [n] children/*[1] (pause:350);",
       "self::fenced",
       "self::fenced[@role=\"neutral\"]"
     ],
@@ -282,7 +282,7 @@
       "Rule",
       "omit-fences",
       "default",
-      "[p] (pause:500); [n] children/*[1]; [p] (pause:200);",
+      "[p] (pause:500); [n] children/*[1] (pause:200);",
       "self::fenced"
     ],
     [
@@ -386,7 +386,7 @@
       "Rule",
       "end-punct",
       "default",
-      "[m] children/*; [p] (pause:300)",
+      "[m] children/* (pause:300)",
       "self::punctuated",
       "@role=\"endpunct\""
     ],
@@ -394,7 +394,7 @@
       "Rule",
       "start-punct",
       "default",
-      "[n] content/*[1]; [p] (pause:200); [m] children/*[position()>1]",
+      "[n] content/*[1] (pause:200); [m] children/*[position()>1]",
       "self::punctuated",
       "@role=\"startpunct\""
     ],
@@ -431,7 +431,7 @@
       "Rule",
       "limboth",
       "default",
-      "[n] children/*[1]; [p] (pause 100); [t] \"over\"; [n] children/*[2];[t] \"under\"; [n] children/*[3]; [p] (pause 250);",
+      "[n] children/*[1] (pause 100); [t] \"over\"; [n] children/*[2];[t] \"under\"; [n] children/*[3] (pause 250);",
       "self::limboth"
     ],
     [
@@ -459,28 +459,28 @@
       "Rule",
       "bigop",
       "default",
-      "[n] children/*[1]; [p] (pause 100); [t] \"over\"; [n] children/*[2];[p] (pause 250);",
+      "[n] children/*[1] (pause 100); [t] \"over\"; [n] children/*[2] (pause 250);",
       "self::bigop"
     ],
     [
       "Rule",
       "integral",
       "default",
-      "[n] children/*[1]; [p] (pause 100); [n] children/*[2];[p] (pause 200); [n] children/*[3] (rate:0.35);",
+      "[n] children/*[1] (pause 100); [n] children/*[2] (pause 200); [n] children/*[3] (rate:0.35);",
       "self::integral"
     ],
     [
       "Rule",
       "sqrt",
       "default",
-      "[t] \"Square root of\"; [n] children/*[1] (rate:0.35); [p] (pause:400)",
+      "[t] \"Square root of\"; [n] children/*[1] (rate:0.35, pause:400)",
       "self::sqrt"
     ],
     [
       "Rule",
       "square",
       "default",
-      "[n] children/*[1]; [t] \"squared\" (pitch:0.35); [p] (pause:200)",
+      "[n] children/*[1]; [t] \"squared\" (pitch:0.35, pause:200)",
       "self::superscript",
       "children/*[2][text()=2]",
       "name(./children/*[1])!=\"text\""
@@ -489,7 +489,7 @@
       "Rule",
       "cube",
       "default",
-      "[n] children/*[1]; [t] \"cubed\" (pitch:0.35); [p] (pause:200)",
+      "[n] children/*[1]; [t] \"cubed\" (pitch:0.35, pause:200)",
       "self::superscript",
       "children/*[2][text()=3]",
       "name(./children/*[1])!=\"text\""
@@ -498,14 +498,14 @@
       "Rule",
       "root",
       "default",
-      "[t] \"root of order\"; [n] children/*[1];[t] \"over\"; [n] children/*[1] (rate:0.35); [p] (pause:400)",
+      "[t] \"root of order\"; [n] children/*[1];[t] \"over\"; [n] children/*[1] (rate:0.35, pause:400)",
       "self::root"
     ],
     [
       "Rule",
       "text-no-mult",
       "default",
-      "[n] children/*[1]; [p] (pause:200); [n] children/*[2]",
+      "[n] children/*[1] (pause:200); [n] children/*[2]",
       "self::infixop",
       "children/text"
     ],
@@ -513,7 +513,7 @@
       "Rule",
       "text",
       "default",
-      "[n] text(); [p] (pause:200)",
+      "[n] text() (pause:200)",
       "self::text"
     ],
     [
