@@ -557,3 +557,64 @@ sre.SemanticPred.isImplicit = function(node) {
       node.contentNodes[0].textContent === sre.SemanticAttr.invisibleTimes()
       );
 };
+
+
+/**
+ * Tests if a node is an implicit operator node only.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the node is a true implicit operator node.
+ */
+sre.SemanticPred.isImplicitOp = function(node) {
+  return node.type === sre.SemanticAttr.Type.INFIXOP &&
+    node.role === sre.SemanticAttr.Role.IMPLICIT;
+};
+
+
+/**
+ * Comparison operation for neutral fences depending on textual equality of the
+ * (innermost for embellished) fences.
+ * @param {sre.SemanticNode} fence1 First fence to compare.
+ * @param {sre.SemanticNode} fence2 Second fence to compare.
+ * @return {boolean} True if both fences are neutral and have same textual content.
+ */
+sre.SemanticPred.compareNeutralFences = function(fence1, fence2) {
+  return fence1.role === sre.SemanticAttr.Role.NEUTRAL &&
+    fence2.role === sre.SemanticAttr.Role.NEUTRAL &&
+    sre.SemanticUtil.getEmbellishedInner(fence1).textContent ==
+    sre.SemanticUtil.getEmbellishedInner(fence2).textContent;
+};
+
+
+
+/**
+ * Fence is ellibigle as a left neutral fence, if it is either not embellished
+ * or all its embellishments are to the left.
+ * @param {sre.SemanticNode} fence The neutral fence to check.
+ * @return {boolean} True if fence is elligible.
+ */
+sre.SemanticPred.elligibleLeftNeutral = function(fence) {
+  if (fence.role !== sre.SemanticAttr.Role.NEUTRAL) return false;
+  if (!fence.embellished) return true;
+  if (fence.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+      fence.type === sre.SemanticAttr.Type.SUBSCRIPT) return false;
+  if (fence.type === sre.SemanticAttr.Type.TENSOR &&
+      (fence.childNodes[3].type !== sre.SemanticAttr.Type.EMPTY ||
+       fence.childNodes[4].type !== sre.SemanticAttr.Type.EMPTY)) return false;
+  return true;
+};
+
+
+/**
+ * Fence is ellibigle as a right neutral fence, if it is either not embellished
+ * or all its embellishments are to the right.
+ * @param {sre.SemanticNode} fence The neutral fence to check.
+ * @return {boolean} True if fence is elligible.
+ */
+sre.SemanticPred.elligibleRightNeutral = function(fence) {
+  if (fence.role !== sre.SemanticAttr.Role.NEUTRAL) return false;
+  if (!fence.embellished) return true;
+  if (fence.type === sre.SemanticAttr.Type.TENSOR &&
+      (fence.childNodes[1].type !== sre.SemanticAttr.Type.EMPTY ||
+       fence.childNodes[2].type !== sre.SemanticAttr.Type.EMPTY)) return false;
+  return true;
+};

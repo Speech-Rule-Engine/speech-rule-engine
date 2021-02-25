@@ -612,10 +612,12 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
     }
   }
   props[sre.DynamicCstr.Axis.LOCALE] = [locale];
+  // Normally modality cannot be mixed. But summary allows fallback to speech if
+  // an expression can not be summarised.
   props[sre.DynamicCstr.Axis.MODALITY] =
-      // TODO: Improve, only summary allows fallback to speech.
       [modality !== 'summary' ? modality :
        sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
+  // For speech we do not want rule leaking across rule sets.
   props[sre.DynamicCstr.Axis.DOMAIN] =
       [modality !== 'speech' ?
        sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];

@@ -68,7 +68,7 @@ sre.Engine = function() {
    * Current domain.
    * @type {string}
    */
-  this.domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+  this.domain = 'mathspeak';
 
   /**
    * Current style.

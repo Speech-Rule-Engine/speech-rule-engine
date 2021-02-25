@@ -40,14 +40,14 @@ sre.PrefixRules = function() {
 
 sre.OtherRules = function() {
   sre.SpeechRules.getInstance().addStore(
-    'en.speech.default', '', 
+    'en.speech.chromevox', '',
     {
       'CTFnodeCounter': sre.StoreUtil.nodeCounter,
       'CTFcontentIterator': sre.StoreUtil.contentIterator
     });
 
   sre.SpeechRules.getInstance().addStore(
-    'en.speech.emacspeak', 'en.speech.default', 
+    'en.speech.emacspeak', 'en.speech.chromevox',
     {
       'CQFvulgarFractionSmall': sre.MathspeakUtil.isSmallVulgarFraction,
       'CSFvulgarFraction': sre.NumbersUtil.vulgarFraction
@@ -74,5 +74,5 @@ sre.BrailleRules = function() {
 
       'CGFtensorRules': sre.NemethUtil.generateTensorRules
     });
-  
+
 };
