@@ -195,20 +195,55 @@ sre.Locale.hi = {
 
   ALPHABETS: {
     latinSmall: [
-      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+      'ए', 'बी', 'सी', 'डी', 'ई', 'एफ', 'जी', 'एच', 'आय', 'जे', 'के', 'एल',
+      'एम', 'एन', 'ओ', 'पी', 'क्यू', 'आर', 'एस', 'टी', 'यू', 'वी', 'डब्ल्यू', 'एक्स',
+      'वाई', 'जेड'
     ],
     latinCap: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+      'ए', 'बी', 'सी', 'डी', 'ई', 'एफ', 'जी', 'एच', 'आय', 'जे', 'के', 'एल',
+      'एम', 'एन', 'ओ', 'पी', 'क्यू', 'आर', 'एस', 'टी', 'यू', 'वी', 'डब्ल्यू', 'एक्स',
+      'वाई', 'जेड'
     ],
     greekSmall: [
-      'nabla',  // This is here as it is small.
-      'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
-      'iota', 'kappa', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho',
-      'final sigma', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
-      // Symbols below
-      'partial differential', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
+      'नाबला',
+      'आल्फा',
+      'बीटा',
+      'गामा',
+      'डेल्टा',
+      'एप्सिलॉन',
+      'ज़ेटा',
+      'एटा',
+      'थीटा',
+      'आयोटा',
+      'कप्पा',
+      'लैम्ब्डा',
+      'मु',
+      'नू',
+      'ग्जाए',
+      'ओमिक्रॉन',
+      'पाइ',
+      'रो',
+      'अंतिम सिग्मा ',
+      'सिग्मा',
+      'टाउ',
+      'अपसिलं',
+      'फाई',
+      'काई',
+      'साई',
+      'ओमेगा',
+      'आंशिक अवकलन',
+      'ल्यूनेट एप्सिलॉन ',
+      'थीटा ',
+      'कप्पा ',
+      'फाई',
+      'रो ',
+      'पोमेगा'
+      // ,nabla',  // This is here as it is small.
+      // 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
+      // 'iota', 'kappa', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho',
+      // 'final sigma', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
+      // // Symbols below
+      // 'partial differential', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
     ],
     greekCap: [
       'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
@@ -230,7 +265,7 @@ sre.Locale.hi = {
   },
 
   ALPHABET_PREFIXES: {
-    capPrefix: {default: 'cap', mathspeak: 'upper'},
+    capPrefix: {default: 'कैपिटल'},
     smallPrefix: {default: ''},
     digitPrefix: {default: ''}
   },
