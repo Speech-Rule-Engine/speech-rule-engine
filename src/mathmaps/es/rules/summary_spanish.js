@@ -166,7 +166,16 @@
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"raíz del índice\"; [n] children/*[1] (engine:modality=speech)",
+      "[t] \"raíz del índice\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"finalizar índice\"",
+      "self::root",
+      "contains(@grammar, \"collapsed\")",
+      "following-sibling::* or ancestor::*/following-sibling::*"
+    ],
+    [
+      "Rule",
+      "abstr-root",
+      "default.default",
+      "[t] \"raíz del índice\"; [n] children/*[1] (engine:modality=\"speech\")",
       "self::root"
     ],
     [
@@ -181,6 +190,16 @@
       "abstr-root",
       "mathspeak.brief",
       "mathspeak.sbrief"
+    ],
+    [
+      "Rule",
+      "abstr-root-nested",
+      "default.default",
+      "[t] \"raíz anidada del índice\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"finalizar índice\"",
+      "self::root",
+      "contains(@grammar, \"collapsed\")",
+      "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
+      "following-sibling::* or ancestor::*/following-sibling::*"
     ],
     [
       "Rule",

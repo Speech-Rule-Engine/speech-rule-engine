@@ -229,7 +229,16 @@
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"racine d'indice\"; [n] children/*[1] (engine:modality=speech); [n] . (grammar:gender=\"female\")",
+      "[t] \"racine d'indice\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"fin indice\"; [n] . (grammar:gender=\"female\")",
+      "self::root",
+      "contains(@grammar, \"collapsed\")",
+      "following-sibling::* or ancestor::*/following-sibling::*"
+    ],
+    [
+      "Rule",
+      "abstr-root",
+      "default.default",
+      "[t] \"racine d'indice\"; [n] children/*[1] (engine:modality=\"speech\"); [n] . (grammar:gender=\"female\")",
       "self::root"
     ],
     [
@@ -249,7 +258,17 @@
       "Rule",
       "abstr-root-nested",
       "default.default",
-      "[t] \"racine imbriquée d'indice\"; [n] children/*[1] (engine:modality=speech); [n] . (grammar:gender=\"female\")",
+      "[t] \"racine imbriquée d'indice\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"fin indice\"; [n] . (grammar:gender=\"female\")",
+      "self::root",
+      "contains(@grammar, \"collapsed\")",
+      "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
+      "following-sibling::* or ancestor::*/following-sibling::*"
+    ],
+    [
+      "Rule",
+      "abstr-root-nested",
+      "default.default",
+      "[t] \"racine imbriquée d'indice\"; [n] children/*[1] (engine:modality=\"speech\"); [n] . (grammar:gender=\"female\")",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -631,7 +650,7 @@
       "Rule",
       "abstr-relation",
       "default.default",
-      "[t] @role (grammar:localRole); [n] . (grammar:gender=\"male\");",
+      "[t] @role (grammar:localRole); [n] . (grammar:gender=\"male\")",
       "self::relseq",
       "count(./children/*)=2"
     ],
@@ -717,7 +736,7 @@
       "Rule",
       "abstr-table",
       "default.default",
-      "[t] \"table avec\"; [t] count(children/*); [t] \"lignes et\";[t] count(children/*[1]/children/*); [t] \"colonnes\"; [n] . (grammar:gender=\"female\");",
+      "[t] \"table avec\"; [t] count(children/*); [t] \"lignes et\";[t] count(children/*[1]/children/*); [t] \"colonnes\"; [n] . (grammar:gender=\"female\")",
       "self::table"
     ],
     [
@@ -738,7 +757,7 @@
       "Rule",
       "abstr-cell",
       "default.default",
-      "[t] \"dans\"; [t] @role (grammar:localRole); [n] . (grammar:gender=\"female\");",
+      "[t] \"dans\"; [t] @role (grammar:localRole); [n] . (grammar:gender=\"female\")",
       "self::cell"
     ]
   ]
