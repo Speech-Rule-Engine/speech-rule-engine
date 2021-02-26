@@ -118,6 +118,8 @@ sre.Cli.prototype.enumerate = function() {
                         compStr(clear2 ? ax2 : '', length[1]),
                         compStr(clear3 ? ax3 : '', length[2]),
                         prefs[ax4].join(', ')]);
+            clear1 = false;
+            clear2 = false;
             clear3 = false;
           }
         } else {

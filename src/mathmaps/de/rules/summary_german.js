@@ -107,11 +107,38 @@
     ],
     [
       "Rule",
+      "abstr-fraction",
+      "mathspeak.brief",
+      "[t] \"Bruch\"",
+      "self::fraction"
+    ],
+    [
+      "SpecializedRule",
+      "abstr-fraction",
+      "mathspeak.brief",
+      "mathspeak.sbrief"
+    ],
+    [
+      "Rule",
       "abstr-continued-fraction",
       "default.default",
       "[t] \"Kettenbruch\"",
       "self::fraction",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\"]"
+    ],
+    [
+      "Rule",
+      "abstr-continued-fraction",
+      "mathspeak.brief",
+      "[t] \"Kettenbruch\"",
+      "self::fraction",
+      "children/*[2]/descendant-or-self::*[@role=\"ellipsis\"]"
+    ],
+    [
+      "SpecializedRule",
+      "abstr-continued-fraction",
+      "mathspeak.brief",
+      "mathspeak.sbrief"
     ],
     [
       "Rule",
@@ -132,7 +159,16 @@
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=speech)",
+      "[t] \"Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"Ende Exponent\"",
+      "self::root",
+      "contains(@grammar, \"collapsed\")",
+      "following-sibling::* or ancestor::*/following-sibling::*"
+    ],
+    [
+      "Rule",
+      "abstr-root",
+      "default.default",
+      "[t] \"Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=\"speech\")",
       "self::root"
     ],
     [
@@ -147,6 +183,16 @@
       "abstr-root",
       "mathspeak.brief",
       "mathspeak.sbrief"
+    ],
+    [
+      "Rule",
+      "abstr-root-nested",
+      "default.default",
+      "[t] \"verschachtelte Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"Ende Exponent\"",
+      "self::root",
+      "contains(@grammar, \"collapsed\")",
+      "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
+      "following-sibling::* or ancestor::*/following-sibling::*"
     ],
     [
       "Rule",
