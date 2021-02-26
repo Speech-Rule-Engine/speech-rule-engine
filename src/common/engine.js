@@ -121,12 +121,6 @@ sre.Engine = function() {
 
   /**
    * Caching during speech generation.
-   * @type {boolean}
-   */
-  this.cache = true;
-
-  /**
-   * Caching during speech generation.
    * @type {sre.Engine.Markup}
    */
   this.markup = sre.Engine.Markup.NONE;
@@ -313,7 +307,7 @@ goog.inherits(sre.Engine.Error, Error);
  * @type {Array.<string>}
  */
 sre.Engine.BINARY_FEATURES = [
-  'strict', 'cache', 'structure', 'pprint'
+  'strict', 'structure', 'pprint'
 ];
 
 
