@@ -1244,14 +1244,14 @@
       "Rule",
       "matrix-row",
       "default",
-      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\");[p] (pause: 200)",
+      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\", pause: 200)",
       "self::row"
     ],
     [
       "Rule",
       "row-with-label",
       "default",
-      "[t] \"avec étiquette\"; [n] content/*[1]; [t] \"fin étiquette\"(pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\")",
+      "[t] \"avec étiquette\"; [n] content/*[1]; [t] \"fin étiquette\" (pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\")",
       "self::row",
       "content"
     ],
@@ -1290,14 +1290,14 @@
       "Rule",
       "matrix-cell",
       "default",
-      "[n] children/*[1]; [p] (pause: 300)",
+      "[n] children/*[1] (pause: 300)",
       "self::cell"
     ],
     [
       "Rule",
       "empty-cell",
       "default",
-      "[t] \"vide\"; [p] (pause: 300)",
+      "[t] \"vide\" (pause: 300)",
       "self::cell",
       "count(children/*)=0"
     ],

@@ -285,6 +285,7 @@ sre.SpeechRuleEngine.prototype.evaluateNodeList_ = function(
 sre.SpeechRuleEngine.prototype.addPersonality_ = function(
     descrs, props, multi, node) {
   var personality = {};
+  var pause = null;
   for (var key in sre.Engine.personalityProps) {
     var value = props[sre.Engine.personalityProps[key]];
     if (typeof value === 'undefined') {
@@ -294,10 +295,15 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
     // if (!isNaN(numeral)) {
     //   personality[sre.Engine.personalityProps[key]] = numeral;
     // }
-    personality[sre.Engine.personalityProps[key]] =
-        isNaN(numeral) ?
+    var realValue = isNaN(numeral) ?
         ((value.charAt(0) == '"') ? value.slice(1, -1) : value) :
         numeral;
+    if (sre.Engine.personalityProps[key] ===
+        sre.Engine.personalityProps.PAUSE) {
+      pause = realValue;
+    } else {
+      personality[sre.Engine.personalityProps[key]] = realValue;
+    }
   }
   // TODO: Deal with non-numeric values for personalities here.
   //       Possibly use simply an overwrite mechanism without adding.
@@ -309,6 +315,16 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
   if (multi && descrs.length) {
     delete descrs[descrs.length - 1].
         personality[sre.Engine.personalityProps.JOIN];
+  }
+  // Adds pause if there was one.
+  if (pause && descrs.length) {
+    var last = descrs[descrs.length - 1];
+    if (last.text || Object.keys(last.personality).length) {
+      descrs.push(sre.AuditoryDescription.create(
+        {text: '', personality: {pause: pause}}));
+    } else {
+      last.personality[sre.Engine.personalityProps.PAUSE] = pause;
+    }
   }
   return descrs;
 };
