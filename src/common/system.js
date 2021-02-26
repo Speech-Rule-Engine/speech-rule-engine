@@ -27,7 +27,6 @@ goog.require('sre.Engine.Error');
 goog.require('sre.L10n');
 goog.require('sre.ProcessorFactory');
 goog.require('sre.SpeechRuleEngine');
-goog.require('sre.SpeechRuleStores');
 goog.require('sre.SystemExternal');
 goog.require('sre.Variables');
 
@@ -61,6 +60,16 @@ goog.addSingletonGetter(sre.System);
  */
 sre.System.prototype.setupEngine = function(feature) {
   var engine = sre.Engine.getInstance();
+  // This preserves the possibility to specify default as domain.
+  //
+  // < 3.2  this lead to the use of chromevox rules in English.
+  // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales we
+  //        get a meaningful output.
+  if (feature.domain === 'default' &&
+      (feature.modality === 'speech' ||
+       (!feature.modality || engine.modality === 'speech'))) {
+    feature.domain = 'mathspeak';
+  }
   var setIf = function(feat) {
     if (typeof feature[feat] !== 'undefined') {
       engine[feat] = !!feature[feat];
@@ -80,11 +89,9 @@ sre.System.prototype.setupEngine = function(feature) {
     sre.SystemExternal.WGXpath = feature.xpath;
   }
   engine.setupBrowsers();
-  engine.ruleSets = feature.rules ? feature.rules :
-      sre.SpeechRuleStores.availableSets();
-  sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
   engine.setDynamicCstr();
   sre.L10n.setLocale();
+  sre.SpeechRuleEngine.getInstance().updateEngine();
 };
 
 

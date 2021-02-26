@@ -43,7 +43,6 @@ goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleStores');
 
 
-
 /**
  * @constructor
  */
@@ -53,14 +52,7 @@ sre.SpeechRuleEngine = function() {
    * @type {sre.BaseRuleStore}
    * @private
    */
-  this.activeStore_ = null;
-
-  /**
-   * Caches speech strings by node id.
-   * @type {Object.<!Array.<sre.AuditoryDescription>>}
-   * @private
-   */
-  this.cache_ = {};
+  this.activeStore_ = new sre.MathStore();
 
   /**
    * Flag indicating if the engine is ready. Not ready while it is updating!
@@ -70,56 +62,17 @@ sre.SpeechRuleEngine = function() {
   this.ready_ = true;
 
   /**
-   * Caches combined stores that have already been constructed.
-   * @type {Object.<sre.BaseRuleStore>}
-   * @private
-   */
-  this.combinedStores_ = {};
-
-  /**
    * Default evaluators collated by locale and modality.
    * @type {Object.<Object.<function(!Node): !Array<sre.AuditoryDescription>>>}
    * @private
    */
   this.evaluators_ = {};
 
-  /**
-   * @type {Object.<sre.BaseRuleStore>}
-   * @private
-   */
-  this.ruleSets_ = {};
-
-  // sre.Debugger.getInstance().init();
-
   sre.Engine.registerTest(
       goog.bind(function(x) {return this.ready_;}, this));
 
 };
 goog.addSingletonGetter(sre.SpeechRuleEngine);
-
-
-/**
- * Parameterizes the speech rule engine.
- * @param {!Array.<string>} ruleSetNames The name of rule sets to use.
- */
-sre.SpeechRuleEngine.prototype.parameterize = function(ruleSetNames) {
-  var ruleSets = {};
-  for (var i = 0, m = ruleSetNames.length; i < m; i++) {
-    var name = ruleSetNames[i];
-    if (this.ruleSets_[name]) {
-      ruleSets[name] = this.ruleSets_[name];
-      continue;
-    }
-    var set = sre.SpeechRuleStores.getConstructor(name);
-    if (set) {
-      let store = this.storeFactory_(set.modality);
-      store.parse(set);
-      this.ruleSets_[name] = store;
-      ruleSets[name] = store;
-    }
-  }
-  this.parameterize_(ruleSets);
-};
 
 
 /**
@@ -134,98 +87,6 @@ sre.SpeechRuleEngine.prototype.storeFactory_ = function(modality) {
     speech: sre.MathStore
   };
   return new (constructors[modality] || sre.MathStore)();
-};
-
-
-/**
- * Parameterizes the speech rule engine.
- * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
- *     name to constructor mapping.
- * @private
- */
-sre.SpeechRuleEngine.prototype.parameterize_ = function(ruleSets) {
-  try {
-    this.activeStore_ = this.combineStores_(ruleSets);
-  } catch (err) {
-    if (err.name == 'StoreError') {
-      console.error('Store Error:', err.message);
-    }
-    else {
-      throw err;
-    }
-  }
-  this.updateEngine();
-};
-
-
-/**
- * Clears the cache.
- */
-sre.SpeechRuleEngine.prototype.clearCache = function() {
-  this.cache_ = {};
-};
-
-
-/**
- * An iterator over the cache elements.
- * @param {function(string, !Array.<sre.AuditoryDescription>)} iter
- *     The iterator function.
- */
-sre.SpeechRuleEngine.prototype.forCache = function(iter) {
-  for (var key in this.cache_) {
-    iter(key, this.cache_[key]);
-  }
-};
-
-
-/**
- * Retrieves a cached value for a particular element.
- * @param {Node} node The element to lookup.
- * @return {Array.<sre.AuditoryDescription>} The cached value if it exists.
- * @private
- */
-sre.SpeechRuleEngine.prototype.getCacheForNode_ = function(node) {
-  if (!node || !node.getAttribute) return null;
-  var key = node.getAttribute('id');
-  if (key === 'undefined' || key === '') return null;
-  return this.getCache(key);
-};
-
-
-/**
- * Retrieves a cached value by key.
- * @param {string} key The node id.
- * @return {!Array.<sre.AuditoryDescription>} A list of auditory descriptions.
- */
-sre.SpeechRuleEngine.prototype.getCache = function(key) {
-  var descr = this.cache_[key];
-  return descr ? this.cloneCache(descr) : descr;
-};
-
-
-/**
- * Clones a list of auditory descriptions to insulate cache from changes.
- * @param {!Array.<sre.AuditoryDescription>} descrs List of descriptions.
- * @return {!Array.<sre.AuditoryDescription>} The cloned list.
- */
-sre.SpeechRuleEngine.prototype.cloneCache = function(descrs) {
-  return descrs.map(function(x) {return x.clone();});
-};
-
-
-/**
- * Caches speech for a particular node.
- * @param {!Node} node The node to cache speech for.
- * @param {!Array.<sre.AuditoryDescription>} speech A list of auditory
- *     descriptions.
- * @private
- */
-sre.SpeechRuleEngine.prototype.pushCache_ = function(node, speech) {
-  if (!sre.Engine.getInstance().cache || !node.getAttribute) return;
-  var id = node.getAttribute('id');
-  if (id) {
-    this.cache_[id] = this.cloneCache(speech);
-  }
 };
 
 
@@ -275,24 +136,14 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
   var engine = sre.Engine.getInstance();
   sre.Debugger.getInstance().output(
       engine.mode !== sre.Engine.Mode.HTTP ? node.toString() : node);
-  if (engine.cache) {
-    var result = this.getCacheForNode_(node);
-    if (result) {
-      if (node.attributes) {
-        this.addPersonality_(result, {}, false, node);
-      }
-      return result;
-    }
-  }
   sre.Grammar.getInstance().setAttribute(node);
   var rule = this.activeStore_.lookupRule(node, engine.dynamicCstr);
   if (!rule) {
     if (engine.strict) return [];
-    result = this.getEvaluator(engine.locale, engine.modality)(node);
+    var result = this.getEvaluator(engine.locale, engine.modality)(node);
     if (node.attributes) {
       this.addPersonality_(result, {}, false, node);
     }
-    this.pushCache_(node, result);
     return result;
   }
   sre.Debugger.getInstance().generateOutput(
@@ -314,13 +165,10 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
       this.processGrammar(context, node, component.grammar);
     }
     var saveEngine = null;
-    var oldCache = null;
     // Retooling the engine
     if (attributes.engine) {
       saveEngine = sre.Engine.getInstance().dynamicCstr.getComponents();
       var features = sre.Grammar.parseInput(attributes.engine);
-      oldCache = this.cache_;
-      this.clearCache();
       sre.Engine.getInstance().setDynamicCstr(features);
     }
     switch (component.type) {
@@ -372,11 +220,9 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
     result = result.concat(this.addPersonality_(descrs, attributes, multi,
                                                 node));
     if (saveEngine) {
-      this.cache_ = oldCache;
       sre.Engine.getInstance().setDynamicCstr(saveEngine);
     }
   }
-  this.pushCache_(node, result);
   return result;
 };
 
@@ -572,14 +418,7 @@ sre.SpeechRuleEngine.debugNamedSpeechRule = function(name, node) {
 sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   var engine = sre.Engine.getInstance();
   var save = {};
-  var store = null;
   for (var key in settings) {
-    if (key === 'rules') {
-      store = this.activeStore_;
-      engine.ruleSets = settings[key];
-      this.parameterize(engine.ruleSets);
-      continue;
-    }
     save[key] = engine[key];
     engine[key] = settings[key];
   }
@@ -588,66 +427,31 @@ sre.SpeechRuleEngine.prototype.runInSetting = function(settings, callback) {
   for (key in save) {
     engine[key] = save[key];
   }
-  if (store) {
-    this.activeStore_ = store;
-  }
   engine.setDynamicCstr();
   return result;
 };
 
 
 /**
- * Initializes the combined rule store
- * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
- *     name to constructor mapping.
- * @return {!sre.BaseRuleStore} The combined math store.
- * @private
+ * Adds a speech rule store to the speech rule engine. This method is called
+ * when loading a rule set.
+ * @param {Object.<string|Array>} set The definition of a speech rule set.
  */
-sre.SpeechRuleEngine.prototype.combineStores_ = function(ruleSets) {
-  var combined = this.cachedStore_(ruleSets);
-  if (combined) {
-    return combined;
+sre.SpeechRuleEngine.prototype.addStore = function(set) {
+  // This line is important to setup the context functions for stores.
+  // It has to run __before__ the first speech rule store is added.
+  sre.SpeechRuleStores.init();
+  if (set && !set.functions) {
+    set.functions = sre.SpeechRules.getInstance().getStore(
+      set.locale, set.modality, set.domain);
   }
-  combined = new sre.MathStore();
-  for (var name in ruleSets) {
-    var store = ruleSets[name];
-    store.initialize();
-    store.getSpeechRules().forEach(function(x) {combined.trie.addRule(x);});
-    this.addEvaluator(store);
-  }
-  combined.setSpeechRules(combined.trie.collectRules());
-  this.combinedStores_[this.combinedStoreName_(Object.keys(ruleSets))] =
-      combined;
-  return combined;
-};
-
-
-/**
- * Compute a standardized name for combined stores.
- * @param {!Array.<string>} names A list of individual store names.
- * @return {string} The combined name.
- * @private
- */
-sre.SpeechRuleEngine.prototype.combinedStoreName_ = function(names) {
-  return names.sort().join('-');
-};
-
-
-/**
- * Retrieves a cached combined store if it exists. If one of the individual
- * stores is not yet initialized or needs reinitialization, it also returns
- * null.
- * @param {!Object.<sre.BaseRuleStore>} ruleSets A list of rule sets to use as
- *     name to constructor mapping.
- * @return {?sre.BaseRuleStore} The combined store if it exists.
- * @private
- */
-sre.SpeechRuleEngine.prototype.cachedStore_ = function(ruleSets) {
-  var names = Object.keys(ruleSets);
-  if (names.some(function(name) {return !ruleSets[name].initialized;})) {
-    return null;
-  }
-  return this.combinedStores_[this.combinedStoreName_(names)];
+  let store = this.storeFactory_(set.modality);
+  store.parse(set);
+  store.initialize();
+  store.getSpeechRules().forEach(
+    goog.bind(function(x) {this.activeStore_.trie.addRule(x);}, this));
+  this.addEvaluator(store);
+  this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
 };
 
 
@@ -715,10 +519,12 @@ sre.SpeechRuleEngine.prototype.updateConstraint_ = function() {
     }
   }
   props[sre.DynamicCstr.Axis.LOCALE] = [locale];
+  // Normally modality cannot be mixed. But summary allows fallback to speech if
+  // an expression can not be summarised.
   props[sre.DynamicCstr.Axis.MODALITY] =
-      // TODO: Improve, only summary allows fallback to speech.
       [modality !== 'summary' ? modality :
        sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]];
+  // For speech we do not want rule leaking across rule sets.
   props[sre.DynamicCstr.Axis.DOMAIN] =
       [modality !== 'speech' ?
        sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN] : domain];

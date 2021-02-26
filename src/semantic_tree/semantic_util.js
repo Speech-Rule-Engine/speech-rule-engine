@@ -303,3 +303,18 @@ sre.SemanticUtil.addAttributes = function(to, from) {
     }
   }
 };
+
+
+/**
+ * Finds the innermost element of an embellished operator node.
+ * @param {sre.SemanticNode} node The embellished node.
+ * @return {sre.SemanticNode} The innermost node.
+ */
+sre.SemanticUtil.getEmbellishedInner = function(node) {
+  if (node && node.embellished && node.childNodes.length > 0) {
+    return sre.SemanticUtil.getEmbellishedInner(node.childNodes[0]);
+  }
+  return node;
+};
+
+

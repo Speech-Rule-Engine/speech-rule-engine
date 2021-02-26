@@ -68,7 +68,7 @@ sre.Engine = function() {
    * Current domain.
    * @type {string}
    */
-  this.domain = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN];
+  this.domain = 'mathspeak';
 
   /**
    * Current style.
@@ -118,12 +118,6 @@ sre.Engine = function() {
    * @type {!Array.<string>}
    */
   this.ruleSets = [];
-
-  /**
-   * Caching during speech generation.
-   * @type {boolean}
-   */
-  this.cache = true;
 
   /**
    * Caching during speech generation.
@@ -313,7 +307,7 @@ goog.inherits(sre.Engine.Error, Error);
  * @type {Array.<string>}
  */
 sre.Engine.BINARY_FEATURES = [
-  'strict', 'cache', 'structure', 'pprint'
+  'strict', 'structure', 'pprint'
 ];
 
 

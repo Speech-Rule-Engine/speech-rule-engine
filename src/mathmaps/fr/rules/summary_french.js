@@ -1,38 +1,82 @@
-// Copyright 2016 Volker Sorge
-// Copyright (c) 2016 The MathJax Consortium
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//      http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-/**
- * @fileoverview Summary rules for collapsed elements.
- * @author v.sorge@mathjax.com (Volker Sorge)
- */
-
-goog.provide('sre.SummaryEnglish');
-
-
-/**
- * Summary rules.
- */
-sre.SummaryEnglish = {
-  "locale": "en",
+{
+  "locale": "fr",
   "modality": "summary",
   "rules": [
     [
       "Rule",
+      "collapsed-masculine",
+      "default.default",
+      "[t] \"compressé\"",
+      "self::*[@grammar]",
+      "contains(@grammar, \"gender:male\")",
+      "contains(@grammar, \"collapsed\")"
+    ],
+    [
+      "SpecializedRule",
+      "collapsed-masculine",
+      "default.default",
+      "mathspeak.brief"
+    ],
+    [
+      "SpecializedRule",
+      "collapsed-masculine",
+      "default.default",
+      "mathspeak.sbrief"
+    ],
+    [
+      "Rule",
+      "collapsed-feminine",
+      "default.default",
+      "[t] \"compressée\"",
+      "self::*[@grammar]",
+      "contains(@grammar, \"gender:female\")",
+      "contains(@grammar, \"collapsed\")"
+    ],
+    [
+      "SpecializedRule",
+      "collapsed-feminine",
+      "default.default",
+      "mathspeak.brief"
+    ],
+    [
+      "SpecializedRule",
+      "collapsed-feminine",
+      "default.default",
+      "mathspeak.sbrief"
+    ],
+    [
+      "Rule",
+      "no-collapsed",
+      "default.default",
+      "[t] \"\"",
+      "self::*[@grammar]",
+      "contains(@grammar, \"gender\")",
+      "not(contains(@grammar, \"collapsed\"))"
+    ],
+    [
+      "SpecializedRule",
+      "no-collapsed",
+      "default.default",
+      "mathspeak.brief"
+    ],
+    [
+      "SpecializedRule",
+      "no-collapsed",
+      "default.default",
+      "mathspeak.sbrief"
+    ],
+    [
+      "Rule",
+      "stree",
+      "default.default",
+      "[n] ./*[1]",
+      "self::stree"
+    ],
+    [
+      "Rule",
       "abstr-identifier",
       "default.default",
-      "[t] \"long identifier\"",
+      "[t] \"identifiant long\"; [n] . (grammar:gender=\"male\")",
       "self::identifier",
       "contains(@grammar, \"collapsed\")"
     ],
@@ -40,14 +84,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-identifier",
       "default.default",
-      "[t] \"identifier\"",
+      "[t] \"identifiant\"; [n] . (grammar:gender=\"male\")",
       "self::identifier"
     ],
     [
       "Rule",
       "abstr-number",
       "default.default",
-      "[t] \"long number\"",
+      "[t] \"nombre long\"; [n] . (grammar:gender=\"male\")",
       "self::number",
       "contains(@grammar, \"collapsed\")"
     ],
@@ -55,14 +99,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-number",
       "default.default",
-      "[t] \"number\"",
+      "[t] \"nombre\"; [n] . (grammar:gender=\"male\")",
       "self::number"
     ],
     [
       "Rule",
       "abstr-mixed-number",
       "default.default",
-      "[t] \"long mixed number\"",
+      "[t] \"nombre fractionnaire long\"; [n] . (grammar:gender=\"male\")",
       "self::number",
       "@role=\"mixed\"",
       "contains(@grammar, \"collapsed\")"
@@ -71,7 +115,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-mixed-number",
       "default.default",
-      "[t] \"mixed number\"",
+      "[t] \"nombre fractionnaire\"; [n] . (grammar:gender=\"male\")",
       "self::number",
       "@role=\"mixed\""
     ],
@@ -79,21 +123,21 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-text",
       "default.default",
-      "[t] \"text\"",
+      "[t] \"texte\"; [n] . (grammar:gender=\"male\")",
       "self::text"
     ],
     [
       "Rule",
       "abstr-function",
       "default.default",
-      "[t] \"functional expression\"",
+      "[t] \"expression fonctionnelle\"; [n] . (grammar:gender=\"female\")",
       "self::function"
     ],
     [
       "Rule",
       "abstr-function",
       "mathspeak.brief",
-      "[t] \"function\"",
+      "[t] \"fonction\"; [n] . (grammar:gender=\"female\")",
       "self::function"
     ],
     [
@@ -106,7 +150,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-lim",
       "default.default",
-      "[t] \"limit function\"",
+      "[t] \"fonction de limitation\"; [n] . (grammar:gender=\"female\")",
       "self::function",
       "@role=\"limit function\""
     ],
@@ -114,7 +158,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-lim",
       "mathspeak.brief",
-      "[t] \"lim\"",
+      "[t] \"lim\"; [n] . (grammar:gender=\"female\")",
       "self::function",
       "@role=\"limit function\""
     ],
@@ -128,14 +172,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-fraction",
       "default.default",
-      "[t] \"fraction\"",
+      "[t] \"fraction\"; [n] . (grammar:gender=\"female\")",
       "self::fraction"
     ],
     [
       "Rule",
       "abstr-fraction",
       "mathspeak.brief",
-      "[t] \"frac\"",
+      "[t] \"frac\"; [n] . (grammar:gender=\"female\")",
       "self::fraction"
     ],
     [
@@ -148,7 +192,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-continued-fraction",
       "default.default",
-      "[t] \"continued fraction\"",
+      "[t] \"fraction continue\"; [n] . (grammar:gender=\"female\")",
       "self::fraction",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\"]"
     ],
@@ -156,7 +200,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-continued-fraction",
       "mathspeak.brief",
-      "[t] \"continued frac\"",
+      "[t] \"frac continue\"; [n] . (grammar:gender=\"female\")",
       "self::fraction",
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\"]"
     ],
@@ -170,14 +214,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-sqrt",
       "default.default",
-      "[t] \"square root\"",
+      "[t] \"racine carrée\"; [n] . (grammar:gender=\"female\")",
       "self::sqrt"
     ],
     [
       "Rule",
       "abstr-sqrt-nested",
       "default.default",
-      "[t] \"nested square root\"",
+      "[t] \"racine carrée imbriquée\"; [n] . (grammar:gender=\"female\")",
       "self::sqrt",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -185,7 +229,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"root of index\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"endindex\"",
+      "[t] \"racine d'indice\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"fin indice\"; [n] . (grammar:gender=\"female\")",
       "self::root",
       "contains(@grammar, \"collapsed\")",
       "following-sibling::* or ancestor::*/following-sibling::*"
@@ -194,14 +238,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"root of index\"; [n] children/*[1] (engine:modality=\"speech\")",
+      "[t] \"racine d'indice\"; [n] children/*[1] (engine:modality=\"speech\"); [n] . (grammar:gender=\"female\")",
       "self::root"
     ],
     [
       "Rule",
       "abstr-root",
       "mathspeak.brief",
-      "[t] \"root\"",
+      "[t] \"racine\"; [n] . (grammar:gender=\"female\")",
       "self::root"
     ],
     [
@@ -214,7 +258,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-root-nested",
       "default.default",
-      "[t] \"nested root of index\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"endindex\"",
+      "[t] \"racine imbriquée d'indice\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"fin indice\"; [n] . (grammar:gender=\"female\")",
       "self::root",
       "contains(@grammar, \"collapsed\")",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
@@ -224,7 +268,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-root-nested",
       "default.default",
-      "[t] \"nested root of index\"; [n] children/*[1] (engine:modality=\"speech\")",
+      "[t] \"racine imbriquée d'indice\"; [n] children/*[1] (engine:modality=\"speech\"); [n] . (grammar:gender=\"female\")",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -232,7 +276,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-root-nested",
       "mathspeak.brief",
-      "[t] \"nested root\"",
+      "[t] \"racine imbriquée\"; [n] . (grammar:gender=\"female\")",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],
@@ -246,21 +290,21 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-superscript",
       "default.default",
-      "[t] \"power\"",
+      "[t] \"puissance\"; [n] . (grammar:gender=\"female\")",
       "self::superscript"
     ],
     [
       "Rule",
       "abstr-subscript",
       "default.default",
-      "[t] \"subscript\"",
+      "[t] \"indice\"; [n] . (grammar:gender=\"male\")",
       "self::subscript"
     ],
     [
       "Rule",
       "abstr-subsup",
       "default.default",
-      "[t] \"power with subscript\"",
+      "[t] \"puissance avec index\"; [n] . (grammar:gender=\"female\")",
       "self::superscript",
       "name(children/*[1])=\"subscript\""
     ],
@@ -268,14 +312,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-infixop",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"with\"; [t] count(./children/*); [t] \"elements\"",
+      "[t] @role (grammar:localRole); [t] \"avec\"; [t] count(./children/*); [t] \"éléments\"; [n] . (grammar:gender=\"male\")",
       "self::infixop"
     ],
     [
       "Rule",
       "abstr-infixop",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"with variable number of elements\"",
+      "[t] @role (grammar:localRole); [t] \"avec un nombre d'éléments variable\"; [n] . (grammar:gender=\"male\")",
       "self::infixop",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -284,7 +328,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-infixop",
       "mathspeak.brief",
-      "[t] @role (grammar:localRole)",
+      "[t] @role (grammar:localRole); [n] . (grammar:gender=\"male\")",
       "self::infixop"
     ],
     [
@@ -297,7 +341,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-addition",
       "default.default",
-      "[t] \"sum with\"; [t] count(./children/*); [t] \"summands\"",
+      "[t] \"somme avec\"; [t] count(./children/*); [t] \"opérandes\"; [n] . (grammar:gender=\"female\")",
       "self::infixop",
       "@role=\"addition\""
     ],
@@ -305,7 +349,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-addition",
       "mathspeak.brief",
-      "[t] \"sum\"",
+      "[t] \"somme\"; [n] . (grammar:gender=\"female\")",
       "self::infixop",
       "@role=\"addition\""
     ],
@@ -319,7 +363,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-addition",
       "default.default",
-      "[t] \"sum with variable number of summands\"",
+      "[t] \"somme avec un nombre variable d'opérandes\"; [n] . (grammar:gender=\"female\")",
       "self::infixop",
       "@role=\"addition\"",
       "count(./children/*)>2",
@@ -329,7 +373,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-multiplication",
       "default.default",
-      "[t] \"product with\"; [t] count(./children/*); [t] \"factors\"",
+      "[t] \"produit avec\"; [t] count(./children/*); [t] \"facteurs\"; [n] . (grammar:gender=\"male\");",
       "self::infixop",
       "@role=\"multiplication\""
     ],
@@ -337,7 +381,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-multiplication",
       "mathspeak.brief",
-      "[t] \"product\"",
+      "[t] \"produit\"; [n] . (grammar:gender=\"male\")",
       "self::infixop",
       "@role=\"multiplication\""
     ],
@@ -357,7 +401,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-multiplication",
       "default.default",
-      "[t] \"product with variable number of factors\"",
+      "[t] \"produit avec un nombre de facteurs variable\"; [n] . (grammar:gender=\"male\")",
       "self::infixop",
       "@role=\"multiplication\"",
       "count(./children/*)>2",
@@ -375,14 +419,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-vector",
       "default.default",
-      "[t] count(./children/*) ; [t] \"dimensional vector\"",
+      "[t] \"vecteur de dimension\"; [t] count(./children/*); [n] . (grammar:gender=\"male\")",
       "self::vector"
     ],
     [
       "Rule",
       "abstr-vector",
       "mathspeak.brief",
-      "[t] \"vector\"",
+      "[t] \"vecteur\"; [n] . (grammar:gender=\"male\")",
       "self::vector"
     ],
     [
@@ -395,7 +439,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-vector",
       "default.default",
-      "[t] \"n dimensional vector\"",
+      "[t] \"vecteur colonne de dimension n\"; [n] . (grammar:gender=\"male\")",
       "self::vector",
       "./children/*/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -403,7 +447,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-binomial",
       "default.default",
-      "[t] \"binomial\"",
+      "[t] \"binomial\"; [n] . (grammar:gender=\"male\")",
       "self::vector",
       "@role=\"binomial\""
     ],
@@ -423,7 +467,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-determinant",
       "default.default",
-      "[t] count(./children/*); [t] \"dimensional determinant\"",
+      "[t] \"déterminant de dimension\"; [t] count(./children/*); [n] . (grammar:gender=\"male\")",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -431,7 +475,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-determinant",
       "mathspeak.brief",
-      "[t] \"determinant\"",
+      "[t] \"déterminant\"; [n] . (grammar:gender=\"male\")",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -445,7 +489,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-determinant",
       "default.default",
-      "[t] \"n dimensional determinant\"",
+      "[t] \"déterminant de dimension n\"; [n] . (grammar:gender=\"male\")",
       "self::matrix",
       "@role=\"determinant\"",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
@@ -454,7 +498,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-squarematrix",
       "default.default",
-      "[t] count(./children/*); [t] \"dimensional square matrix\"",
+      "[t] \"matrice carrée de dimension\"; [t] count(./children/*); [n] . (grammar:gender=\"female\")",
       "self::matrix",
       "@role=\"squarematrix\""
     ],
@@ -462,7 +506,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-squarematrix",
       "mathspeak.brief",
-      "[t] \"square matrix\"",
+      "[t] \"matrice carrée\"; [n] . (grammar:gender=\"female\")",
       "self::matrix",
       "@role=\"squarematrix\""
     ],
@@ -476,7 +520,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-rowvector",
       "default.default",
-      "[t] count(./children/row/children/*); [t] \"dimensional row vector\"",
+      "[t] \"vecteur ligne de dimension\"; [t] count(./children/row/children/*); [n] . (grammar:gender=\"male\")",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -484,7 +528,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-rowvector",
       "mathspeak.brief",
-      "[t] \"row vector\"",
+      "[t] \"vecteur ligne\"; [n] . (grammar:gender=\"male\")",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -498,7 +542,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-matrix",
       "default.default",
-      "[t] \"n dimensional row vector\"",
+      "[t] \"vecteur ligne de dimension n\"",
       "self::matrix",
       "@role=\"rowvector\"",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
@@ -507,14 +551,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-matrix",
       "default.default",
-      "[t] count(children/*);  [t] \"by\";[t] count(children/*[1]/children/*); [t] \"matrix\"",
+      "[t] \"matrice\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [n] . (grammar:gender=\"female\")",
       "self::matrix"
     ],
     [
       "Rule",
       "abstr-matrix",
       "mathspeak.brief",
-      "[t] \"matrix\"",
+      "[t] \"matrice\"; [n] . (grammar:gender=\"female\")",
       "self::matrix"
     ],
     [
@@ -527,7 +571,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-matrix",
       "default.default",
-      "[t] \"n by m dimensional matrix\"",
+      "[t] \"matrice de dimension n par m\"; [n] . (grammar:gender=\"female\")",
       "self::matrix",
       "./children/*/children/*/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -535,14 +579,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-cases",
       "default.default",
-      "[t] \"case statement\";[t] \"with\"; [t] count(children/*); [t] \"cases\"",
+      "[t] \"déclaration de cas\";[t] \"avec\"; [t] count(children/*); [t] \"cas\"; [n] . (grammar:gender=\"female\")",
       "self::cases"
     ],
     [
       "Rule",
       "abstr-cases",
       "mathspeak.brief",
-      "[t] \"case statement\"",
+      "[t] \"déclaration de cas\"; [n] . (grammar:gender=\"female\")",
       "self::cases"
     ],
     [
@@ -555,7 +599,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-cases",
       "default.default",
-      "[t] \"case statement with variable number of cases\"",
+      "[t] \"déclaration de cas variable\"; [n] . (grammar:gender=\"female\")",
       "self::cases",
       "./children/row/children/cell/children/punctuation[@role=\"ellipsis\"]or ./children/line/children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -563,14 +607,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-punctuated",
       "default.default",
-      "[n] content/*[1]; [t] \"separated list\"; [t] \"of length\"; [t] count(children/*) - count(content/*)",
+      "[t] \"liste de longueur\"; [t] count(children/*) - count(content/*); [t] \"séparée par des\"; [n] content/*[1] (join:\"\"); [t] \"s\"; [n] . (grammar:gender=\"female\")",
       "self::punctuated"
     ],
     [
       "Rule",
       "abstr-punctuated",
       "mathspeak.brief",
-      "[n] content/*[1]; [t] \"separated list\"",
+      "[t] \"liste séparée par des\"; [n] content/*[1] (join:\"\"); [t] \"s\"; [n] . (grammar:gender=\"female\")",
       "self::punctuated"
     ],
     [
@@ -583,7 +627,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-punctuated",
       "default.default",
-      "[n] content/*[1]; [t] \"separated list\";[t] \"of variable length\"",
+      "[t] \"liste de longueur variable séparée par des\"; [n] content/*[1] (join:\"\"); [t] \"s\"; [n] . (grammar:gender=\"female\")",
       "self::punctuated",
       "./children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -591,14 +635,14 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-bigop",
       "default.default",
-      "[n] content/*[1]",
+      "[n] content/*[1]; [n] . (grammar:gender=\"male\")",
       "self::bigop"
     ],
     [
       "Rule",
       "abstr-integral",
       "default.default",
-      "[t] \"integral\"",
+      "[t] \"intégrale\"; [n] . (grammar:gender=\"female\")",
       "self::*",
       "@role=\"integral\""
     ],
@@ -606,7 +650,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-relation",
       "default.default",
-      "[t] @role (grammar:localRole);",
+      "[t] @role (grammar:localRole); [n] . (grammar:gender=\"male\")",
       "self::relseq",
       "count(./children/*)=2"
     ],
@@ -614,7 +658,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-relation-seq",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"sequence\"; [t] \"with\"; [t] count(./children/*); [t] \"elements\"",
+      "[t] @role (grammar:localRole); [t] \"séquence\"; [t] \"avec\"; [t] count(./children/*); [t] \"éléments\"; [n] . (grammar:gender=\"female\")",
       "self::relseq",
       "count(./children/*)>2"
     ],
@@ -622,7 +666,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-relation-seq",
       "mathspeak.brief",
-      "[t] @role (grammar:localRole); [t] \"sequence\"",
+      "[t] @role (grammar:localRole); [t] \"séquence\"; [n] . (grammar:gender=\"female\")",
       "self::relseq",
       "count(./children/*)>2"
     ],
@@ -636,7 +680,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-relation",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"sequence\"; [t] \"with variable number of elements\"",
+      "[t] @role (grammar:localRole); [t] \"séquence\"; [t] \"avec un nombre de éléments variable\"; [n] . (grammar:gender=\"female\")",
       "self::relseq",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -661,7 +705,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-multirel",
       "default.default",
-      "[t] \"relation sequence\"; [t] \"with\"; [t] count(./children/*); [t] \"elements\"",
+      "[t] \"séquence de relation\"; [t] \"avec\"; [t] count(./children/*); [t] \"éléments\"; [n] . (grammar:gender=\"female\")",
       "self::multirel",
       "count(./children/*)>2"
     ],
@@ -669,7 +713,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-multirel",
       "mathspeak.brief",
-      "[t] \"relation sequence\"",
+      "[t] \"séquence de relation\"; [n] . (grammar:gender=\"female\")",
       "self::multirel",
       "count(./children/*)>2"
     ],
@@ -683,7 +727,7 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-var-multirel",
       "default.default",
-      "[t] \"relation sequence with variable number of elements\"",
+      "[t] \"séquence de relation avec un nombre de éléments variable\"; [n] . (grammar:gender=\"female\")",
       "self::multirel",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -692,29 +736,29 @@ sre.SummaryEnglish = {
       "Rule",
       "abstr-table",
       "default.default",
-      "[t] \"table with\"; [t] count(children/*); [t] \"rows and\";[t] count(children/*[1]/children/*); [t] \"columns\"",
+      "[t] \"table avec\"; [t] count(children/*); [t] \"lignes et\";[t] count(children/*[1]/children/*); [t] \"colonnes\"; [n] . (grammar:gender=\"female\")",
       "self::table"
     ],
     [
       "Rule",
       "abstr-line",
       "default.default",
-      "[t] \"in\"; [t] @role (grammar:localRole);",
+      "[t] \"dans\"; [t] @role (grammar:localRole); [n] . (grammar:gender=\"male\")",
       "self::line"
     ],
     [
       "Rule",
       "abstr-row",
       "default.default",
-      "[t] \"in\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"with\";[t] count(children/*); [t] \"columns\"",
+      "[t] \"dans\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"avec\";[t] count(children/*); [t] \"colonnes\"; [n] . (grammar:gender=\"female\")",
       "self::row"
     ],
     [
       "Rule",
       "abstr-cell",
       "default.default",
-      "[t] \"in\"; [t] @role (grammar:localRole);",
+      "[t] \"dans\"; [t] @role (grammar:localRole); [n] . (grammar:gender=\"female\")",
       "self::cell"
     ]
   ]
-};
+}

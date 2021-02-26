@@ -50,7 +50,7 @@ sre.MathMap = function() {
    * Methods for parsing json structures.
    * @type {Object.<function(Array.<string>)>}
    */
-  this.addRules = {
+  this.addSymbols = {
     functions: goog.bind(this.store.addFunctionRules, this.store),
     symbols: goog.bind(this.store.addSymbolRules, this.store),
     units: goog.bind(this.store.addUnitRules, this.store),
@@ -166,7 +166,11 @@ sre.MathMap.prototype.addMaps = function(json, opt_locale) {
     if (opt_locale && opt_locale !== info[0]) {
       continue;
     }
-    json[key].forEach(this.addRules[info[1]]);
+    if (info[1] !== 'rules') {
+      json[key].forEach(this.addSymbols[info[1]]);
+    } else {
+      sre.SpeechRuleEngine.getInstance().addStore(json[key]);
+    }
   }
 };
 

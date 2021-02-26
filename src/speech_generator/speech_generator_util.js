@@ -38,9 +38,7 @@ goog.require('sre.XpathUtil');
  *     for the node.
  */
 sre.SpeechGeneratorUtil.computeSpeech = function(xml) {
-  var sreng = sre.SpeechRuleEngine.getInstance();
-  sreng.clearCache();
-  return sreng.evaluateNode(xml);
+  return sre.SpeechRuleEngine.getInstance().evaluateNode(xml);
 };
 
 
@@ -52,75 +50,28 @@ sre.SpeechGeneratorUtil.computeSpeech = function(xml) {
  */
 sre.SpeechGeneratorUtil.recomputeSpeech = function(semantic) {
   var tree = sre.SemanticTree.fromNode(semantic);
-  return sre.SpeechRuleEngine.getInstance().evaluateNode(tree.xml());
+  return sre.SpeechGeneratorUtil.computeSpeech(tree.xml());
 };
 
 
 /**
- * Computes speech descriptions for a single semantic node without cache.
+ * Computes speech markup for the xml version of the semantic tree.
  * @param {!Node} tree The semantic node as XML.
  * @return {string} The speech string.
  */
-sre.SpeechGeneratorUtil.computeSpeechWithoutCache = function(tree) {
-  var oldCache = sre.Engine.getInstance().cache;
-  sre.Engine.getInstance().cache = false;
-  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(tree);
-  sre.Engine.getInstance().cache = oldCache;
+sre.SpeechGeneratorUtil.computeMarkup = function(tree) {
+  var descrs = sre.SpeechGeneratorUtil.computeSpeech(tree);
   return sre.AuralRendering.getInstance().markup(descrs);
 };
 
 
 /**
- * Computes speech descriptions for a single semantic node with cache.
- * @param {!Node} tree The semantic node as XML.
- * @return {string} The speech string.
- */
-sre.SpeechGeneratorUtil.computeSpeechWithCache = function(tree) {
-  var oldCache = sre.Engine.getInstance().cache;
-  sre.Engine.getInstance().cache = true;
-  var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(tree);
-  sre.Engine.getInstance().cache = oldCache;
-  return sre.AuralRendering.getInstance().markup(descrs);
-};
-
-
-/**
- * Computes speech string for a single semantic node, either by retrieving it
- * from the the cache or by recomputing it.
+ * Computes speech markup for a single semantic node.
  * @param {!sre.SemanticNode} semantic The semantic tree node.
- * @param {boolean=} opt_force Forces the use of cache even if globally disabled.
  * @return {string} The speech string.
  */
-sre.SpeechGeneratorUtil.retrieveSpeech = function(semantic, opt_force) {
-  var descrs = null;
-  if (sre.Engine.getInstance().cache || opt_force) {
-    descrs = sre.SpeechRuleEngine.getInstance().
-        getCache(semantic.id.toString());
-  }
-  if (!descrs) {
-    descrs = sre.SpeechGeneratorUtil.recomputeSpeech(semantic);
-  }
-  return sre.AuralRendering.getInstance().markup(descrs);
-};
-
-
-/**
- * Computes speech string for a single semantic node, either by retrieving it
- * from the the cache or by recomputing it.
- * @param {!Node} xml The semantic tree node as XML.
- * @param {boolean=} opt_force Forces the use of cache even if globally disabled.
- * @return {string} The speech string.
- */
-sre.SpeechGeneratorUtil.retrieveSpeechXml = function(xml, opt_force) {
-  var descrs = null;
-  var id = xml.getAttribute('id');
-  var sreng = sre.SpeechRuleEngine.getInstance();
-  if (sre.Engine.getInstance().cache || opt_force) {
-    descrs = sreng.getCache(id);
-  }
-  if (!descrs) {
-    descrs = sreng.evaluateNode(xml);
-  }
+sre.SpeechGeneratorUtil.recomputeMarkup = function(semantic) {
+  var descrs = sre.SpeechGeneratorUtil.recomputeSpeech(semantic);
   return sre.AuralRendering.getInstance().markup(descrs);
 };
 
@@ -132,7 +83,7 @@ sre.SpeechGeneratorUtil.retrieveSpeechXml = function(xml, opt_force) {
  * @param {string=} opt_modality The speech modality.
  */
 sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic, opt_modality) {
-  var speech = sre.SpeechGeneratorUtil.retrieveSpeech(semantic);
+  var speech = sre.SpeechGeneratorUtil.recomputeMarkup(semantic);
   mml.setAttribute(opt_modality || sre.EnrichMathml.Attribute.SPEECH, speech);
 };
 
@@ -181,7 +132,7 @@ sre.SpeechGeneratorUtil.computePrefix_ = function(semantic) {
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
       {'modality': 'prefix', 'domain': 'default', 'style': 'default',
-        'strict': true, 'cache': false, 'speech': true},
+        'strict': true, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];
@@ -308,7 +259,7 @@ sre.SpeechGeneratorUtil.retrieveSummary = function(node) {
 sre.SpeechGeneratorUtil.computeSummary_ = function(node) {
   return node ?
       sre.SpeechRuleEngine.getInstance().runInSetting(
-      {'modality': 'summary', 'strict': false, 'cache': false, 'speech': true},
+      {'modality': 'summary', 'strict': false, 'speech': true},
       function() {return sre.SpeechRuleEngine.getInstance().evaluateNode(node);}
       ) :
       [];
