@@ -104,7 +104,7 @@
       "number-indicator",
       "default",
       "[t] \"⠼\"; [n] text() (pause:10)",
-      "self::number",
+      "self::number", "not(@font) or @font=\"normal\"",
       "contains(@annotation, \"nemeth:number\")",
       "not(ancestor::sqrt)",
       "not(ancestor::root)",
@@ -117,6 +117,18 @@
       "default",
       "[n] text()",
       "self::number"
+    ],
+    [
+      "Rule",
+      "number-font-indicator",
+      "default",
+      "[t] \"⠼\"; [n] text() (pause:10)",
+      "self::number", "contains(@grammar, \"ignoreFont\")",
+      "contains(@annotation, \"nemeth:number\")",
+      "not(ancestor::sqrt)",
+      "not(ancestor::root)",
+      "not(ancestor::fraction)",
+      "\"\" = translate(text(), \"0123456789.,\", \"\")"
     ],
     [
       "Rule",
