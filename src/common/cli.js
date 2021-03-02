@@ -234,6 +234,13 @@ sre.Cli.prototype.readExpression_ = function(input) {
 
 
 /**
+ * Mathmap that should be loaded from source.
+ * @type {string}
+ */
+sre.Cli.localeFile = '';
+
+
+/**
  * Method for the command line interface of the Speech Rule Engine
  */
 sre.Cli.prototype.commandLine = function() {
@@ -284,6 +291,7 @@ sre.Cli.prototype.commandLine = function() {
              ' MathML (with -m option only).', set('structure')).
       option('-P, --pprint', 'Pretty print output whenever possible.',
              set('pprint')).
+      option('-f, --file [name]', 'Loads a local locale file [name].').
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
       option('--opt', 'List engine setup options.').
@@ -291,6 +299,7 @@ sre.Cli.prototype.commandLine = function() {
         this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);
+  sre.Cli.localeFile = commander.file;
   if (commander.verbose) {
     sre.Debugger.getInstance().init(commander.log);
   }
@@ -308,4 +317,13 @@ sre.Cli.prototype.commandLine = function() {
 
 if (sre.SystemExternal.process && sre.SystemExternal.process.env.SRE_TOP_PATH) {
   (new sre.Cli()).commandLine();
+  // TODO: Cleanup, put into a better place, extend to ASYNC and HTTP.
+  if (sre.Cli.localeFile) {
+    var path = sre.SystemExternal.jsonPath.replace(
+      '/lib/mathmaps', '/src/mathmaps');
+    var file = sre.MathMap.loadFile(path + sre.Cli.localeFile);
+    sre.MathMap.getInstance().parseMaps(
+      '{"' + sre.Cli.localeFile + '":' + file + '}'
+    );
+  }
 }
