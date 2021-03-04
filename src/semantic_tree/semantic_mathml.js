@@ -61,6 +61,7 @@ sre.SemanticMathml = function() {
     'MTD': goog.bind(this.tableCell_, this),
     'MS': goog.bind(this.text_, this),
     'MTEXT': goog.bind(this.text_, this),
+    'MSPACE': goog.bind(this.space_, this),
     'ANNOTATION-XML': goog.bind(this.text_, this),
     'MI': goog.bind(this.identifier_, this),
     'MN': goog.bind(this.number_, this),
@@ -295,6 +296,18 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
       sre.SemanticAttr.Type.CELL, childNodes, []);
   newNode.role = sre.SemanticAttr.Role.TABLE;
   return newNode;
+};
+
+
+sre.SemanticMathml.prototype.space_ = function(node, children) {
+  let width = node.getAttribute('width');
+  if (!width) {
+    return this.empty_(node, children);
+  }
+  let newNode = this.getFactory().makeUnprocessed(node);
+  newNode.textContent = ' ';
+  return sre.SemanticProcessor.getInstance().
+    text(newNode, sre.DomUtil.tagName(node));
 };
 
 
