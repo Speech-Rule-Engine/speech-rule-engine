@@ -57,6 +57,7 @@ goog.addSingletonGetter(sre.SemanticProcessor);
  */
 sre.SemanticProcessor.prototype.setNodeFactory = function(factory) {
   this.factory_ = factory;
+  this.heuristics.factory = this.factory_;
 };
 
 
@@ -136,7 +137,7 @@ sre.SemanticProcessor.prototype.implicitNode = function(nodes) {
     return nodes[0];
   }
   var node = this.implicitNode_(nodes);
-  return sre.SemanticHeuristics.run('juxtaposition', node);
+  return sre.SemanticHeuristics.run('combine_juxtaposition', node);
 };
 
 
@@ -163,7 +164,7 @@ sre.SemanticProcessor.prototype.infixNode_ = function(children, opNode) {
  * @private
  */
 sre.SemanticProcessor.prototype.explicitMixed_ = function(nodes) {
-  var partition = sre.SemanticProcessor.partitionNodes_(
+  var partition = sre.SemanticUtil.partitionNodes(
       nodes, function(x) {
         return x.textContent === sre.SemanticAttr.invisiblePlus();});
   if (!partition.rel.length) {
@@ -242,7 +243,7 @@ sre.SemanticProcessor.prototype.concatNode_ = function(inner, nodeList, type) {
  * @private
  */
 sre.SemanticProcessor.prototype.prefixNode_ = function(node, prefixes) {
-  var negatives = sre.SemanticProcessor.partitionNodes_(
+  var negatives = sre.SemanticUtil.partitionNodes(
       prefixes, sre.SemanticPred.isAttribute('role', 'SUBTRACTION'));
   var newNode = sre.SemanticProcessor.getInstance().concatNode_(
       node, negatives.comp.pop(), sre.SemanticAttr.Type.PREFIXOP);
@@ -334,7 +335,7 @@ sre.SemanticProcessor.prototype.row = function(nodes) {
  * @private
  */
 sre.SemanticProcessor.prototype.combineUnits_ = function(nodes) {
-  var partition = sre.SemanticProcessor.partitionNodes_(
+  var partition = sre.SemanticUtil.partitionNodes(
       nodes, function(x) {
         return !sre.SemanticPred.isAttribute('role', 'UNIT')(x);
       }
@@ -382,7 +383,7 @@ sre.SemanticProcessor.prototype.combineUnits_ = function(nodes) {
  * @private
  */ // Change that to compute mixed fractions.
 sre.SemanticProcessor.prototype.getMixedNumbers_ = function(nodes) {
-  var partition = sre.SemanticProcessor.partitionNodes_(
+  var partition = sre.SemanticUtil.partitionNodes(
       nodes, function(x) {
         return sre.SemanticPred.isAttribute('type', 'FRACTION')(x) &&
             sre.SemanticPred.isAttribute('role', 'VULGAR')(x);});
@@ -422,7 +423,7 @@ sre.SemanticProcessor.prototype.getTextInRow_ = function(nodes) {
   if (nodes.length <= 1) {
     return nodes;
   }
-  var partition = sre.SemanticProcessor.partitionNodes_(
+  var partition = sre.SemanticUtil.partitionNodes(
       nodes, sre.SemanticPred.isAttribute('type', 'TEXT'));
   if (partition.rel.length === 0) {
     return nodes;
@@ -451,7 +452,7 @@ sre.SemanticProcessor.prototype.getTextInRow_ = function(nodes) {
  * @private
  */
 sre.SemanticProcessor.prototype.relationsInRow_ = function(nodes) {
-  var partition = sre.SemanticProcessor.partitionNodes_(
+  var partition = sre.SemanticUtil.partitionNodes(
       nodes, sre.SemanticPred.isRelation);
   var firstRel = partition.rel[0];
 
@@ -513,9 +514,9 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
   }
 
   // Deal with explicit juxtaposition
-  nodes = this.combineJuxtaposition_(nodes);
+  nodes = sre.SemanticHeuristics.runMulti('convert_juxtaposition', nodes);
 
-  var split = sre.SemanticProcessor.sliceNodes_(
+  var split = sre.SemanticUtil.sliceNodes(
       nodes, sre.SemanticPred.isOperator);
   // At this point, we know that split.head is not empty!
   var node = sre.SemanticProcessor.getInstance().prefixNode_(
@@ -527,109 +528,6 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
   }
   return sre.SemanticProcessor.getInstance().operationsTree_(
       split.tail, node, split.div);
-};
-
-
-/**
- * Combines explicitly given juxtapositions.
- * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
- * @return {!Array.<!sre.SemanticNode>} The list with juxtapositions combined.
- * @private
- */
-sre.SemanticProcessor.prototype.combineJuxtaposition_ = function(nodes) {
-  var partition = sre.SemanticProcessor.partitionNodes_(
-      nodes, function(x) {
-        return x.textContent === sre.SemanticAttr.invisibleTimes();
-      });
-  if (!partition.rel.length) {
-    return nodes;
-  }
-  return this.recurseJuxtaposition_(
-    partition.comp.shift(), partition.rel, partition.comp);
-};
-
-
-/**
- * Heuristic to recursibely combines implicitly and explicitly given
- * juxtapositions. The heuristic is applied unless the separate implicit
- * heuristic is selected.
- * @param {!Array.<!sre.SemanticNode>} acc Elements to the left of the first
- *     implicit operation or application of an implicit operation. The serves as
- *     an accumulator during the recursion.
- * @param {!Array.<!sre.SemanticNode>} ops The list of implicit operators or
- *     applications. That is, subtres that are infix operations with inivisible
- *     times.
- * @param {!Array.<!Array.<!sre.SemanticNode>>} elements The list of elements
- *     between the operators in ops. These are lists of not yet combined elements.
- * @return {!Array.<!sre.SemanticNode>} The resulting lists where implicit and
- *     explicitly given invisible times are combined as much as possible.
- * @private
- */
-sre.SemanticProcessor.prototype.recurseJuxtaposition_ = function(acc, ops, elements) {
-  if (!ops.length) {
-    return acc;
-  }
-  var left = acc.pop();
-  var op = ops.shift();
-  var first = elements.shift();
-  if (!left) {
-    sre.Debugger.getInstance().output('Case 3');
-    return this.recurseJuxtaposition_([op].concat(first), ops, elements);
-  }
-  var right = first.shift();
-  if (!right) {
-    sre.Debugger.getInstance().output('Case 9');
-    // Recall: If op is a single implicit node it needs to be omitted!
-    right = sre.SemanticPred.isOperator(op) ? [left] : [left, op];
-    return this.recurseJuxtaposition_(acc.concat(right), ops, elements);
-  }
-  if (sre.SemanticPred.isOperator(left) || sre.SemanticPred.isOperator(right)) {
-    sre.Debugger.getInstance().output('Case 4');
-    return this.recurseJuxtaposition_(
-      acc.concat([left, op, right]).concat(first), ops, elements);
-  }
-  var result = null;
-  if (sre.SemanticPred.isImplicitOp(left) &&
-      sre.SemanticPred.isImplicitOp(right)) {
-    // Merge both left and right.
-    sre.Debugger.getInstance().output('Case 5');
-    left.contentNodes.push(op);
-    left.contentNodes = left.contentNodes.concat(right.contentNodes);
-    left.childNodes.push(right);
-    left.childNodes = left.childNodes.concat(right.childNodes);
-    right.childNodes.forEach(function(x) {x.parentNode = left;});
-    op.parentNode = left;
-    left.addMathmlNodes(op.mathml);
-    left.addMathmlNodes(right.mathml);
-    result = left;
-  } else if (sre.SemanticPred.isImplicitOp(left)) {
-    // Add to the left one.
-    sre.Debugger.getInstance().output('Case 6');
-    left.contentNodes.push(op);
-    left.childNodes.push(right);
-    right.parentNode = left;
-    op.parentNode = left;
-    left.addMathmlNodes(op.mathml);
-    left.addMathmlNodes(right.mathml);
-    result = left;
-  } else if (sre.SemanticPred.isImplicitOp(right)) {
-    // Add to the right one.
-    sre.Debugger.getInstance().output('Case 7');
-    right.contentNodes.unshift(op);
-    right.childNodes.unshift(left);
-    left.parentNode = right;
-    op.parentNode = right;
-    right.addMathmlNodes(op.mathml);
-    right.addMathmlNodes(left.mathml);
-    result = right;
-  } else {
-  // Create new implicit node.
-    sre.Debugger.getInstance().output('Case 8');
-    result = sre.SemanticProcessor.getInstance().infixNode_([left, right], op);
-    result.role = sre.SemanticAttr.Role.IMPLICIT;
-  }
-  acc.push(result);
-  return this.recurseJuxtaposition_(acc.concat(first), ops, elements);
 };
 
 
@@ -665,7 +563,7 @@ sre.SemanticProcessor.prototype.operationsTree_ = function(
     return sre.SemanticProcessor.getInstance().postfixNode_(root, prefixes);
   }
 
-  var split = sre.SemanticProcessor.sliceNodes_(
+  var split = sre.SemanticUtil.sliceNodes(
       nodes, sre.SemanticPred.isOperator);
 
   if (split.head.length === 0) {
@@ -851,7 +749,7 @@ sre.SemanticProcessor.prototype.appendExistingOperator_ = function(
  * @private
  */
 sre.SemanticProcessor.prototype.getFencesInRow_ = function(nodes) {
-  var partition = sre.SemanticProcessor.partitionNodes_(
+  var partition = sre.SemanticUtil.partitionNodes(
       nodes,
       sre.SemanticPred.isFence);
   partition = sre.SemanticProcessor.purgeFences_(partition);
@@ -904,7 +802,7 @@ sre.SemanticProcessor.prototype.fences_ = function(
         sre.SemanticProcessor.fenceToPunct_(firstOpen);
         result.push(firstOpen);
       } else {
-        var split = sre.SemanticProcessor.sliceNodes_(openStack, openPred);
+        var split = sre.SemanticUtil.sliceNodes(openStack, openPred);
         var cutLength = split.head.length - 1;
         var innerNodes = sre.SemanticProcessor.getInstance().neutralFences_(
             split.head, contentStack.slice(0, cutLength));
@@ -980,7 +878,7 @@ sre.SemanticProcessor.prototype.fences_ = function(
     // 4. Make fenced node.
     //
     // Careful, this reverses openStack!
-    var split = sre.SemanticProcessor.sliceNodes_(openStack, openPred, true);
+    var split = sre.SemanticUtil.sliceNodes(openStack, openPred, true);
     // We know that
     // (a) div & tail exist,
     // (b) all are combined in this step into a single fenced node,
@@ -1035,7 +933,7 @@ sre.SemanticProcessor.prototype.neutralFences_ = function(fences, content) {
     return restContent.concat(
         sre.SemanticProcessor.getInstance().neutralFences_(fences, content));
   }
-  var split = sre.SemanticProcessor.sliceNodes_(
+  var split = sre.SemanticUtil.sliceNodes(
       fences, function(x) {
         return sre.SemanticPred.compareNeutralFences(x, firstFence);
       });
@@ -1258,7 +1156,7 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
         type === 'operator' || type === 'relation';
   };
   // Partition with improved ellipses handling.
-  var partition = sre.SemanticProcessor.partitionNodes_(
+  var partition = sre.SemanticUtil.partitionNodes(
       nodes, function(x) {
         if (!sre.SemanticPred.isPunctuation(x)) {
           return false;
@@ -1733,7 +1631,7 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
         rest.unshift(funcNode);
         return rest;
       }
-      var partition = sre.SemanticProcessor.sliceNodes_(
+      var partition = sre.SemanticUtil.sliceNodes(
           rest, sre.SemanticPred.isPrefixFunctionBoundary);
       if (!partition.head.length) {
         if (!partition.div ||
@@ -1758,7 +1656,7 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
       return partition.tail;
       break;
     case 'bigop':
-      var partition = sre.SemanticProcessor.sliceNodes_(
+      var partition = sre.SemanticUtil.sliceNodes(
           rest, sre.SemanticPred.isBigOpBoundary);
       if (!partition.head.length) {
         rest.unshift(func);
@@ -1965,7 +1863,7 @@ sre.SemanticProcessor.getFunctionOp_ = function(tree, pred) {
  */
 sre.SemanticProcessor.prototype.tablesInRow = function(nodes) {
   // First we process all matrices:
-  var partition = sre.SemanticProcessor.partitionNodes_(
+  var partition = sre.SemanticUtil.partitionNodes(
       nodes, sre.SemanticPred.tableIsMatrixOrVector);
   var result = [];
   for (var i = 0, matrix; matrix = partition.rel[i]; i++) {
@@ -1974,7 +1872,7 @@ sre.SemanticProcessor.prototype.tablesInRow = function(nodes) {
   }
   result = result.concat(partition.comp.shift());
   // Process the remaining tables for cases.
-  partition = sre.SemanticProcessor.partitionNodes_(
+  partition = sre.SemanticUtil.partitionNodes(
       result, sre.SemanticPred.isTableOrMultiline);
   result = [];
   for (var i = 0, table; table = partition.rel[i]; i++) {
@@ -2200,74 +2098,6 @@ sre.SemanticProcessor.assignRoleToRow_ = function(row, role) {
       }
     });
   }
-};
-
-
-/**
- * Splits a list of nodes wrt. to a given predicate.
- * @param {Array.<sre.SemanticNode>} nodes A list of nodes.
- * @param {function(sre.SemanticNode): boolean} pred Predicate for the
- *    partitioning relation.
- * @param {boolean=} opt_reverse If true slicing is done from the end.
- * @return {{head: !Array.<sre.SemanticNode>,
- *           div: sre.SemanticNode,
- *           tail: !Array.<sre.SemanticNode>}} The split list.
- * @private
- */
-sre.SemanticProcessor.sliceNodes_ = function(nodes, pred, opt_reverse) {
-  if (opt_reverse) {
-    nodes.reverse();
-  }
-  var head = [];
-  for (var i = 0, node; node = nodes[i]; i++) {
-    if (pred(node)) {
-      if (opt_reverse) {
-        return {head: nodes.slice(i + 1).reverse(),
-          div: node,
-          tail: head.reverse()};
-      }
-      return {head: head,
-        div: node,
-        tail: nodes.slice(i + 1)};
-    }
-    head.push(node);
-  }
-  if (opt_reverse) {
-    return {head: [], div: null, tail: head.reverse()};
-  }
-  return {head: head, div: null, tail: []};
-};
-
-
-/**
- * Partitions a list of nodes wrt. to a given predicate. Effectively works like
- * a PER on the ordered set of nodes.
- * @param {!Array.<!sre.SemanticNode>} nodes A list of nodes.
- * @param {function(sre.SemanticNode): boolean} pred Predicate for the
- *    partitioning relation.
- * @return {{rel: !Array.<sre.SemanticNode>,
- *           comp: !Array.<!Array.<sre.SemanticNode>>}}
- *    The partitioning given in terms of a collection of elements satisfying
- *    the predicate and a collection of complementary sets lying inbetween the
- *    related elements. Observe that we always have |comp| = |rel| + 1.
- *
- * Example: On input [a, r_1, b, c, r_2, d, e, r_3] where P(r_i) holds, we
- *    get as output: {rel: [r_1, r_2, r_3], comp: [[a], [b, c], [d, e], []].
- * @private
- */
-sre.SemanticProcessor.partitionNodes_ = function(nodes, pred) {
-  var restNodes = nodes;
-  var rel = [];
-  var comp = [];
-
-  do {
-    var result = sre.SemanticProcessor.sliceNodes_(restNodes, pred);
-    comp.push(result.head);
-    rel.push(result.div);
-    restNodes = result.tail;
-  } while (result.div);
-  rel.pop();
-  return {rel: rel, comp: comp};
 };
 
 

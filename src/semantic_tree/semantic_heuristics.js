@@ -21,6 +21,8 @@
  */
 
 goog.provide('sre.SemanticHeuristic');
+goog.provide('sre.SemanticTreeHeuristic');
+goog.provide('sre.SemanticMultiHeuristic');
 goog.provide('sre.SemanticHeuristics');
 
 goog.require('sre.SemanticAttr');
@@ -50,7 +52,8 @@ sre.SemanticHeuristics = function() {
    * @type {Object.<boolean>}
    */
   this.flags = {
-    juxtaposition: true,
+    combine_juxtaposition: true,
+    convert_juxtaposition: true,
     multioperator: true
   };
 
@@ -91,6 +94,25 @@ sre.SemanticHeuristics.run = function(name, root, opt_alternative) {
 
 
 /**
+ * Runs a multi heuristic if its predicate evaluates to true.
+ * @param {string} name The name of the heuristic.
+ * @param {!Array.<sre.SemanticNode>} root The list of root nodes.
+ * @param {(function(!Array.<sre.SemanticNode>): !Array.<sre.SemanticNode>)=}
+ *       opt_alternative An optional method to run if the heuristic is not
+ *       applicable.
+ * @return {!Array.<sre.SemanticNode>} The resulting subtree.
+ */
+sre.SemanticHeuristics.runMulti = function(name, root, opt_alternative) {
+  var heuristic = sre.SemanticHeuristics.lookup(name);
+  return heuristic &&
+      (sre.SemanticHeuristics.getInstance().flags[name] ||
+       heuristic.applicable(root)) ?
+      heuristic.apply(root) :
+      (opt_alternative ? opt_alternative(root) : root);
+};
+
+
+/**
  * Looks up the named heuristic.
  * @param {string} name The name of the heuristic.
  * @return {sre.SemanticHeuristic} The heuristic.
@@ -109,10 +131,11 @@ sre.SemanticHeuristics.lookup = function(name) {
  * either switches them on automatically (e.g., on selection of a domain), or
  * they can be switched on manually via a flag. Currently these flags are hard
  * coded.
- * @constructor
- * @param {{predicate: ((function(sre.SemanticNode): boolean)|undefined),
- *          method: function(sre.SemanticNode): sre.SemanticNode} } heuristic
+ * @interface
+ * @param {{predicate: ((function(T): boolean)|undefined),
+ *          method: function(T): T} } heuristic
  *          The predicate and method of the heuristic
+ * @template T
  */
 sre.SemanticHeuristic = function(
     {predicate: predicate = function(node) {return false;}, method: method}) {
@@ -125,13 +148,54 @@ sre.SemanticHeuristic = function(
 
 
 /**
- * Create a branching node for an implicit operation, currently assumed to be of
- * multiplicative type. Recursively combines implicit nodes for the given root
+ * All heuristic methods get a root of a subtree and have a predicate that
+ * either switches them on automatically (e.g., on selection of a domain), or
+ * they can be switched on manually via a flag. Currently these flags are hard
+ * coded.
+ * @constructor
+ * @implements {sre.SemanticHeuristic<sre.SemanticNode>}
+ * @param {{predicate: ((function(sre.SemanticNode): boolean)|undefined),
+ *          method: function(sre.SemanticNode): sre.SemanticNode} } heuristic
+ *          The predicate and method of the heuristic
+ */
+sre.SemanticTreeHeuristic = function(
+    {predicate: predicate = function(node) {return false;}, method: method}) {
+
+  this.apply = method;
+
+  this.applicable = predicate;
+
+};
+
+
+/**
+ * All heuristic methods get a root of a subtree and have a predicate that
+ * either switches them on automatically (e.g., on selection of a domain), or
+ * they can be switched on manually via a flag. Currently these flags are hard
+ * coded.
+ * @constructor
+ * @implements {sre.SemanticHeuristic<Array.<sre.SemanticNode>>}
+ * @param {{predicate: ((function(Array.<sre.SemanticNode>): boolean)|undefined),
+ *          method: function(Array.<sre.SemanticNode>): Array.<sre.SemanticNode>} } heuristic
+ *          The predicate and method of the heuristic
+ */
+sre.SemanticMultiHeuristic = function(
+    {predicate: predicate = function(node) {return false;}, method: method}) {
+
+  this.apply = method;
+
+  this.applicable = predicate;
+
+};
+
+
+/**
+ * Recursively combines implicit nodes as much as possible for the given root
  * node of a subtree.
  */
 sre.SemanticHeuristics.add(
-  'juxtaposition',
-  new sre.SemanticHeuristic(
+  'combine_juxtaposition',
+  new sre.SemanticTreeHeuristic(
   {method: function(root) {
     for (var i = root.childNodes.length - 1, child;
          child = root.childNodes[i]; i--) {
@@ -158,7 +222,7 @@ sre.SemanticHeuristics.add(
  */
 sre.SemanticHeuristics.add(
   'propagateSimpleFunction',
-  new sre.SemanticHeuristic({
+  new sre.SemanticTreeHeuristic({
     predicate: function(node) {
       return sre.Engine.getInstance().domain === 'clearspeak';
     },
@@ -179,7 +243,7 @@ sre.SemanticHeuristics.add(
  */
 sre.SemanticHeuristics.add(
   'simpleNamedFunction',
-  new sre.SemanticHeuristic({
+  new sre.SemanticTreeHeuristic({
     predicate: function(node) {
       return sre.Engine.getInstance().domain === 'clearspeak';
     },
@@ -199,7 +263,7 @@ sre.SemanticHeuristics.add(
  */
 sre.SemanticHeuristics.add(
   'propagateComposedFunction',
-  new sre.SemanticHeuristic({
+  new sre.SemanticTreeHeuristic({
     predicate: function(node) {
       return sre.Engine.getInstance().domain === 'clearspeak';
     },
@@ -215,7 +279,7 @@ sre.SemanticHeuristics.add(
 
 sre.SemanticHeuristics.add(
   'multioperator',
-  new sre.SemanticHeuristic({
+  new sre.SemanticTreeHeuristic({
     method: function(node) {
       if (node.role !== sre.SemanticAttr.Role.UNKNOWN ||
           node.textContent.length <= 1) {
@@ -242,3 +306,116 @@ sre.SemanticHeuristics.add(
       }
     }})
 );
+
+
+/**
+ * Combines explicitly given juxtapositions.
+ // * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
+ // * @return {!Array.<!sre.SemanticNode>} The list with juxtapositions combined.
+ // * @private
+ */
+sre.SemanticHeuristics.add(
+  'convert_juxtaposition',
+  new sre.SemanticMultiHeuristic({
+    method: function(nodes) {
+      var partition = sre.SemanticUtil.partitionNodes(
+        nodes, function(x) {
+          return x.textContent === sre.SemanticAttr.invisibleTimes();
+        });
+      if (!partition.rel.length) {
+        return nodes;
+      }
+      return sre.SemanticHeuristics.recurseJuxtaposition_(
+        partition.comp.shift(), partition.rel, partition.comp);
+    }})
+);
+
+
+/**
+ * Heuristic to recursibely combines implicitly and explicitly given
+ * juxtapositions. The heuristic is applied unless the separate implicit
+ * heuristic is selected.
+ * @param {!Array.<!sre.SemanticNode>} acc Elements to the left of the first
+ *     implicit operation or application of an implicit operation. The serves as
+ *     an accumulator during the recursion.
+ * @param {!Array.<!sre.SemanticNode>} ops The list of implicit operators or
+ *     applications. That is, subtrees that are infix operations with inivisible
+ *     times.
+ * @param {!Array.<!Array.<!sre.SemanticNode>>} elements The list of elements
+ *     between the operators in ops. These are lists of not yet combined elements.
+ * @return {!Array.<!sre.SemanticNode>} The resulting lists where implicit and
+ *     explicitly given invisible times are combined as much as possible.
+ * @private
+ */
+sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
+  if (!ops.length) {
+    return acc;
+  }
+  var left = acc.pop();
+  var op = ops.shift();
+  var first = elements.shift();
+  if (!left) {
+    sre.Debugger.getInstance().output('Case 3');
+    return sre.SemanticHeuristics.recurseJuxtaposition_([op].concat(first), ops, elements);
+  }
+  // if (!sre.SemanticPred.isOperator(op)) {
+  //   console.log(12);
+  //   return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat([left, op]), ops, elements);
+  // }
+  var right = first.shift();
+  if (!right) {
+    sre.Debugger.getInstance().output('Case 9');
+    // Recall: If op is a single implicit node it needs to be omitted!
+    right = sre.SemanticPred.isOperator(op) ? [left] : [left, op];
+    return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(right), ops, elements);
+  }
+  if (sre.SemanticPred.isOperator(left) || sre.SemanticPred.isOperator(right)) {
+    sre.Debugger.getInstance().output('Case 4');
+    return sre.SemanticHeuristics.recurseJuxtaposition_(
+      acc.concat([left, op, right]).concat(first), ops, elements);
+  }
+  var result = null;
+  if (sre.SemanticPred.isImplicitOp(left) &&
+      sre.SemanticPred.isImplicitOp(right)) {
+    // Merge both left and right.
+    sre.Debugger.getInstance().output('Case 5');
+    left.contentNodes.push(op);
+    left.contentNodes = left.contentNodes.concat(right.contentNodes);
+    left.childNodes.push(right);
+    left.childNodes = left.childNodes.concat(right.childNodes);
+    right.childNodes.forEach(function(x) {x.parentNode = left;});
+    op.parentNode = left;
+    left.addMathmlNodes(op.mathml);
+    left.addMathmlNodes(right.mathml);
+    result = left;
+  } else if (sre.SemanticPred.isImplicitOp(left)) {
+    // Add to the left one.
+    sre.Debugger.getInstance().output('Case 6');
+    left.contentNodes.push(op);
+    left.childNodes.push(right);
+    right.parentNode = left;
+    op.parentNode = left;
+    left.addMathmlNodes(op.mathml);
+    left.addMathmlNodes(right.mathml);
+    result = left;
+  } else if (sre.SemanticPred.isImplicitOp(right)) {
+    // Add to the right one.
+    sre.Debugger.getInstance().output('Case 7');
+    right.contentNodes.unshift(op);
+    right.childNodes.unshift(left);
+    left.parentNode = right;
+    op.parentNode = right;
+    right.addMathmlNodes(op.mathml);
+    right.addMathmlNodes(left.mathml);
+    result = right;
+  } else {
+  // Create new implicit node.
+    sre.Debugger.getInstance().output('Case 8');
+    // right = sre.SemanticPred.isOperator(op) ? [left] : [left, op];
+    result = sre.SemanticHeuristics.getInstance().factory.makeBranchNode(
+      sre.SemanticAttr.Type.INFIXOP, [left, right], [op], op.textContent);
+    result.role = sre.SemanticAttr.Role.IMPLICIT;
+  }
+  acc.push(result);
+  return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(first), ops, elements);
+};
