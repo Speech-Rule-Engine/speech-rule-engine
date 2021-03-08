@@ -444,9 +444,6 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     sre.Debugger.getInstance().output('Case 3');
     return sre.SemanticHeuristics.recurseJuxtaposition_([op].concat(first), ops, elements);
   }
-  // if (!sre.SemanticPred.isOperator(op)) {
-  //   return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat([left, op]), ops, elements);
-  // }
   var right = first.shift();
   if (!right) {
     sre.Debugger.getInstance().output('Case 9');
@@ -496,17 +493,9 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   } else {
   // Create new implicit node.
     sre.Debugger.getInstance().output('Case 8');
-    if (sre.SemanticPred.isOperator(op)) {
-      // right = sre.SemanticPred.isOperator(op) ? [left] : [left, op];
-      result = sre.SemanticHeuristics.getInstance().factory.makeBranchNode(
-        sre.SemanticAttr.Type.INFIXOP, [left, right], [op], op.textContent);
-      result.role = sre.SemanticAttr.Role.IMPLICIT;
-    } else {
-      sre.Debugger.getInstance().output('Case 9');
-      acc.push(left);
-      acc.push(op);
-      result = right;
-    }
+    result = sre.SemanticHeuristics.getInstance().factory.makeBranchNode(
+      sre.SemanticAttr.Type.INFIXOP, [left, right], [op], op.textContent);
+    result.role = sre.SemanticAttr.Role.IMPLICIT;
   }
   acc.push(result);
   return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(first), ops, elements);
