@@ -501,7 +501,9 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
 
   var prefix = [];
   while (nodes.length > 0 &&
-         sre.SemanticPred.isOperator(nodes[0])) {
+         sre.SemanticPred.isOperator(nodes[0]) &&
+         // Stop at invisible times.
+         nodes[0].textContent !== sre.SemanticAttr.invisibleTimes()) {
     prefix.push(nodes.shift());
   }
   // Pathological case: only operators in row.
