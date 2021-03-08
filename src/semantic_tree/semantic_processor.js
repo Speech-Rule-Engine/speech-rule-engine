@@ -514,7 +514,6 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
 
   // Deal with explicit juxtaposition
   nodes = sre.SemanticHeuristics.runMulti('convert_juxtaposition', nodes);
-  console.log(nodes);
 
   var split = sre.SemanticUtil.sliceNodes(
       nodes, sre.SemanticPred.isOperator);

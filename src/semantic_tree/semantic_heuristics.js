@@ -203,7 +203,7 @@ sre.SemanticHeuristics.add(
         continue;
       }
       root.childNodes.splice.apply(root.childNodes, [i, 1].concat(child.childNodes));
-      root.contentNodes.splice.apply(root.contentNodes, [i, 1].concat(child.contentNodes));
+      root.contentNodes.splice.apply(root.contentNodes, [i, 0].concat(child.contentNodes));
       child.childNodes.concat(child.contentNodes).forEach(
         function(x) {x.parentNode = root;}
       );
