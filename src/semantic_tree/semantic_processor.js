@@ -500,10 +500,7 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
   }
 
   var prefix = [];
-  while (nodes.length > 0 &&
-         sre.SemanticPred.isOperator(nodes[0]) &&
-         // Stop at invisible times.
-         nodes[0].textContent !== sre.SemanticAttr.invisibleTimes()) {
+  while (nodes.length > 0 && sre.SemanticPred.isOperator(nodes[0])) {
     prefix.push(nodes.shift());
   }
   // Pathological case: only operators in row.
@@ -517,6 +514,7 @@ sre.SemanticProcessor.prototype.operationsInRow_ = function(nodes) {
 
   // Deal with explicit juxtaposition
   nodes = sre.SemanticHeuristics.runMulti('convert_juxtaposition', nodes);
+  console.log(nodes);
 
   var split = sre.SemanticUtil.sliceNodes(
       nodes, sre.SemanticPred.isOperator);

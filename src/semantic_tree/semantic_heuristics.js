@@ -320,29 +320,27 @@ sre.SemanticHeuristics.add(
     method: function(nodes) {
       var partition = sre.SemanticUtil.partitionNodes(
         nodes, function(x) {
-          // Ignore pre/postfix operators!
-          // if (x.textContent === sre.SemanticAttr.invisibleTimes()) {
-          //   console.log(x.type);
-          //   console.log(x.role);
-          // }
           return x.textContent === sre.SemanticAttr.invisibleTimes() &&
             x.type === sre.SemanticAttr.Type.OPERATOR;
-          // return x.textContent === sre.SemanticAttr.invisibleTimes() &&
-          //   x.type !== sre.SemanticAttr.Type.PREFIXOP &&
-          //   x.type !== sre.SemanticAttr.Type.POSTFIXOP;
+        });
+      // Preprocessing pre and postfixes.
+      partition = partition.rel.length ?
+        sre.SemanticHeuristics.juxtapositionPrePost_(partition) : partition;
+      // TODO: Move to Util
+      nodes = partition.comp[0];
+      for (var i = 1, c, r; c = partition.comp[i], r = partition.rel[i - 1]; i++) {
+        nodes.push(r);
+        nodes = nodes.concat(c);
+      }
+      partition = sre.SemanticUtil.partitionNodes(
+        nodes, function(x) {
+          return x.textContent === sre.SemanticAttr.invisibleTimes() &&
+            (x.type === sre.SemanticAttr.Type.OPERATOR ||
+             x.type === sre.SemanticAttr.Type.INFIXOP);
         });
       if (!partition.rel.length) {
         return nodes;
       }
-      // Preprocessing pre and postfixes.
-      console.log('Relation: ' + partition.rel.length);
-      partition.rel.forEach(x => console.log(x));
-      console.log('Components: ' + partition.comp.length);
-      partition.comp.forEach(x => console.log(x));
-      partition = sre.SemanticHeuristics.juxtapositionPrePost_(partition);
-      console.log(partition.comp.length);
-      console.log(partition.rel.length);
-      console.log(partition);
       return sre.SemanticHeuristics.recurseJuxtaposition_(
         partition.comp.shift(), partition.rel, partition.comp);
     }})
@@ -350,16 +348,13 @@ sre.SemanticHeuristics.add(
 
 
 sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
-  console.log(2);
   var rels = [];
   var comps = [];
   var next = partition.comp.shift();
   var rel = null;
   while (partition.comp.length) {
     var collect = [];
-    console.log(3);
     if (next.length) {
-      console.log(11);
       if (rel) {
         rels.push(rel);
       }
@@ -368,23 +363,17 @@ sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
       next = partition.comp.shift();
       continue;
     }
-    console.log(12);
     if (rel) {
       collect.push(rel);
     }
     while (!next.length && partition.comp.length) {
-      console.log(13);
       next = partition.comp.shift();
       collect.push(partition.rel.shift());
     }
-    console.log(collect);
     sre.SemanticHeuristics.convertPrePost_(collect, next, comps, rels);
   }
   // Rest?
-  console.log('Collect:');
-  console.log(collect);
   if (!collect.length && !next.length) {
-    console.log(10);
     collect.push(rel);
     sre.SemanticHeuristics.convertPrePost_(collect, next, comps, rels);
   } else {
@@ -392,45 +381,34 @@ sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
     comps.push(next);
   }
   // comps.push(partition.comp.shift());
-  console.log(rels);
-  console.log(comps);
   return {rel: rels, comp: comps};
 };
 
 
 sre.SemanticHeuristics.convertPrePost_ = function(collect, next, comps, rels) {
   if (!collect.length) return;
-  // Ignore collect.length === 1 and both prev and last exists!
   var prev = comps[comps.length - 1];
   var prevExists = prev && prev.length;
   var nextExists = next && next.length;
   if (prevExists && nextExists) {
     if (next[0].type === sre.SemanticAttr.Type.INFIXOP &&
         next[0].role === sre.SemanticAttr.Role.IMPLICIT) {
-      console.log(5);
       rels.push(collect.pop());
       prev.push(sre.SemanticProcessor.getInstance()['postfixNode_'](prev.pop(), collect));
-      comps.push(next);
       return;
     }
-    console.log(7);
     rels.push(collect.shift());
     next.unshift(sre.SemanticProcessor.getInstance()['prefixNode_'](next.shift(), collect));
-    comps.push(next);
     return;
   }
   if (prevExists) {
-    console.log(8);
     prev.push(sre.SemanticProcessor.getInstance()['postfixNode_'](prev.pop(), collect));
     return;
   }
   if (nextExists) {
-    console.log(9);
     next.unshift(sre.SemanticProcessor.getInstance()['prefixNode_'](next.shift(), collect));
-    comps.push(next);
     return;
   }
-  console.log('This case should never happen!');
 };
 
 /**
@@ -461,7 +439,6 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     return sre.SemanticHeuristics.recurseJuxtaposition_([op].concat(first), ops, elements);
   }
   // if (!sre.SemanticPred.isOperator(op)) {
-  //   console.log(12);
   //   return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat([left, op]), ops, elements);
   // }
   var right = first.shift();
