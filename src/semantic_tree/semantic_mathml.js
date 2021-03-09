@@ -299,12 +299,30 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
 };
 
 
+/**
+ * Parse a space element. If sufficiently wide, create an empty text element.
+ * alpha only: ignore, em pc >= .5, cm >= .4, ex >= 1, in >= .15, pt mm >= 5.
+ * @param {Element} node A MathML node.
+ * @param {!Array.<Element>} children The children of the node.
+ * @return {!sre.SemanticNode} The newly created semantic node.
+ * @private
+ */
 sre.SemanticMathml.prototype.space_ = function(node, children) {
-  let width = node.getAttribute('width');
-  if (!width) {
+  var width = node.getAttribute('width');
+  var match = width && width.match(/[a-z]*$/);
+  if (!match) {
     return this.empty_(node, children);
   }
-  let newNode = this.getFactory().makeUnprocessed(node);
+  var sizes = {
+    'cm': .4, 'pc': .5, 'em': .5, 'ex': 1, 'in': .15, 'pt': 5, 'mm': 5
+  };
+  var unit = match[0];
+  var measure = parseFloat(width.slice(0, match.index));
+  var size = sizes[unit];
+  if (!size || isNaN(measure) || measure < size) {
+    return this.empty_(node, children);
+  }
+  var newNode = this.getFactory().makeUnprocessed(node);
   newNode.textContent = ' ';
   return sre.SemanticProcessor.getInstance().
     text(newNode, sre.DomUtil.tagName(node));
