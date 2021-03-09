@@ -153,11 +153,11 @@ sre.Cli.prototype.enumerate = function() {
  * @param {string} input The name of the input file.
  */
 sre.Cli.prototype.execute = function(input) {
-  var commander = sre.SystemExternal.commander;
+  var options = sre.SystemExternal.commander.opts();
   this.runProcessors_(
       goog.bind(
       function(proc, file) {
-        this.system.processFile(proc, file, commander.output);
+        this.system.processFile(proc, file, options.output);
       }, this),
       input);
 };
@@ -192,12 +192,12 @@ sre.Cli.prototype.runProcessors_ = function(processor, input) {
  * given output file.
  */
 sre.Cli.prototype.readline = function() {
-  var commander = sre.SystemExternal.commander;
+  var options = sre.SystemExternal.commander.opts();
   sre.SystemExternal.process.stdin.setEncoding('utf8');
   var inter = sre.SystemExternal.require('readline').createInterface({
     input: sre.SystemExternal.process.stdin,
-    output: commander.output ?
-        sre.SystemExternal.fs.createWriteStream(commander.output) :
+    output: options.output ?
+        sre.SystemExternal.fs.createWriteStream(options.output) :
         sre.SystemExternal.process.stdout
   });
   var input = '';
@@ -299,12 +299,13 @@ sre.Cli.prototype.commandLine = function() {
         this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);
-  sre.Cli.localeFile = commander.file;
-  if (commander.verbose) {
-    sre.Debugger.getInstance().init(commander.log);
+  var options = commander.opts();
+  sre.Cli.localeFile = options.file;
+  if (options.verbose) {
+    sre.Debugger.getInstance().init(options.log);
   }
-  if (commander.input) {
-    this.execute(commander.input);
+  if (options.input) {
+    this.execute(options.input);
   }
   if (commander.args.length) {
     commander.args.forEach(goog.bind(this.execute, this));
