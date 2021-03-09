@@ -277,6 +277,11 @@ sre.SemanticHeuristics.add(
   }));
 
 
+/**
+ * Heuristic to compute a meaningful role for multi character operators (e.g.,
+ * as in a++). If all operators have the same role (ignoring unknown) that role
+ * is used.
+ */
 sre.SemanticHeuristics.add(
   'multioperator',
   new sre.SemanticTreeHeuristic({
@@ -310,9 +315,6 @@ sre.SemanticHeuristics.add(
 
 /**
  * Combines explicitly given juxtapositions.
- // * @param {!Array.<!sre.SemanticNode>} nodes The list of nodes.
- // * @return {!Array.<!sre.SemanticNode>} The list with juxtapositions combined.
- // * @private
  */
 sre.SemanticHeuristics.add(
   'convert_juxtaposition',
@@ -347,6 +349,15 @@ sre.SemanticHeuristics.add(
 );
 
 
+/**
+ * Rewrites a partition with respect to explicit juxtapositions into one where
+ * all multiple operators are combined to post or prefix operators.
+ * @param {sre.SemanticUtil.Partition} partition The partition wrt. invisible
+ *     times.
+ * @return {sre.SemanticUtil.Partition} The partition with collated pre/postfix
+ *     operators.
+ * @private
+ */
 sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
   var rels = [];
   var comps = [];
@@ -372,19 +383,27 @@ sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
     }
     sre.SemanticHeuristics.convertPrePost_(collect, next, comps, rels);
   }
-  // Rest?
   if (!collect.length && !next.length) {
+    // A trailing rest exists that needs to be rewritten.
     collect.push(rel);
     sre.SemanticHeuristics.convertPrePost_(collect, next, comps, rels);
   } else {
     rels.push(rel);
     comps.push(next);
   }
-  // comps.push(partition.comp.shift());
   return {rel: rels, comp: comps};
 };
 
 
+/**
+ * Converts lists of invisible times operators into pre/postfix operatiors.
+ * @param {!Array.<sre.SemanticNode>} collect The collected list of invisible
+ *     etimes.
+ * @param {!Array.<sre.SemanticNode>} next The next component element.
+ * @param {!Array.<!Array.<sre.SemanticNode>>} comps The previous components.
+ * @param {!Array.<sre.SemanticNode>} rels The list of remaining relations.
+ * @private
+ */
 sre.SemanticHeuristics.convertPrePost_ = function(collect, next, comps, rels) {
   if (!collect.length) return;
   var prev = comps[comps.length - 1];
@@ -407,14 +426,13 @@ sre.SemanticHeuristics.convertPrePost_ = function(collect, next, comps, rels) {
   }
   if (nextExists) {
     next.unshift(sre.SemanticProcessor.getInstance()['prefixNode_'](next.shift(), collect));
-    return;
   }
 };
 
+
 /**
- * Heuristic to recursibely combines implicitly and explicitly given
- * juxtapositions. The heuristic is applied unless the separate implicit
- * heuristic is selected.
+ * Heuristic to recursively combines a list of juxtaposition elements
+ * expressions.
  * @param {!Array.<!sre.SemanticNode>} acc Elements to the left of the first
  *     implicit operation or application of an implicit operation. The serves as
  *     an accumulator during the recursion.
@@ -436,6 +454,8 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   var first = elements.shift();
   if (sre.SemanticPred.isImplicitOp(op)) {
     sre.Debugger.getInstance().output('Case 2');
+    // In case we have a tree as operator, move on.
+    // TODO: Simplify with Case 9?
     var right = (left ? [left, op] : [op]).concat(first);
     return sre.SemanticHeuristics.recurseJuxtaposition_(
       acc.concat(right), ops, elements);
@@ -500,5 +520,3 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   acc.push(result);
   return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(first), ops, elements);
 };
-
-

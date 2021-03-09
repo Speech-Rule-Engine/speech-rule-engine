@@ -353,14 +353,21 @@ sre.SemanticUtil.sliceNodes = function(nodes, pred, opt_reverse) {
 };
 
 
+
+/**
+ * @typedef {{rel: !Array.<sre.SemanticNode>,
+ *            comp: !Array.<!Array.<sre.SemanticNode>>}}
+ */
+sre.SemanticUtil.Partition;
+
+
 /**
  * Partitions a list of nodes wrt. to a given predicate. Effectively works like
  * a PER on the ordered set of nodes.
  * @param {!Array.<!sre.SemanticNode>} nodes A list of nodes.
  * @param {function(sre.SemanticNode): boolean} pred Predicate for the
  *    partitioning relation.
- * @return {{rel: !Array.<sre.SemanticNode>,
- *           comp: !Array.<!Array.<sre.SemanticNode>>}}
+ * @return {sre.SemanticUtil.Partition}
  *    The partitioning given in terms of a collection of elements satisfying
  *    the predicate and a collection of complementary sets lying inbetween the
  *    related elements. Observe that we always have |comp| = |rel| + 1.
