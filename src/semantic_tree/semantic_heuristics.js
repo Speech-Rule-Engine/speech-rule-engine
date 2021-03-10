@@ -205,7 +205,7 @@ sre.SemanticHeuristics.add(
       root.childNodes.splice.apply(root.childNodes, [i, 1].concat(child.childNodes));
       root.contentNodes.splice.apply(root.contentNodes, [i, 0].concat(child.contentNodes));
       child.childNodes.concat(child.contentNodes).forEach(
-        function(x) {x.parentNode = root;}
+        function(x) {x.parent = root;}
       );
       root.addMathmlNodes(child.mathml);
     }
