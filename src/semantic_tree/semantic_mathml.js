@@ -313,8 +313,10 @@ sre.SemanticMathml.prototype.space_ = function(node, children) {
   if (!match) {
     return this.empty_(node, children);
   }
+  // alternativ: .15 .25 .5 .05 1.5 .25 2.5
+  // !negative && thickmathspace
   var sizes = {
-    'cm': .4, 'pc': .5, 'em': .5, 'ex': 1, 'in': .15, 'pt': 5, 'mm': 5
+    'cm': .4, 'em': .5, 'ex': 1, 'in': .15, 'mm': 5, 'pc': .5, 'pt': 5
   };
   var unit = match[0];
   var measure = parseFloat(width.slice(0, match.index));
