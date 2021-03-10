@@ -178,7 +178,7 @@ sre.EnrichMathml.walkTree = function(semantic) {
     }
   }
   newNode = sre.EnrichMathml.rewriteMfenced(newNode);
-  sre.EnrichMathml.mergeChildren_(newNode, childrenList);
+  sre.EnrichMathml.mergeChildren_(newNode, childrenList, semantic);
   sre.EnrichMathml.setAttributes(newNode, semantic);
   let res = sre.EnrichMathml.ascendNewNode(newNode);
   return res;
@@ -302,18 +302,38 @@ sre.EnrichMathml.childrenSubset_ = function(node, newChildren) {
 };
 
 
+// sre.EnrichMathml.collateChildNodes_ = function(node, newChildren) {
+//   var oldChildren = [];
+//   for ()
+//   if ()
+// }
+
 /**
  * Merges a list of new children with the children of the given node.
  * @param {!Element} node The node whose children are merged.
  * @param {!Array.<Element>} newChildren The list of children to be merged.
+ * @param {!sre.SemanticNode} semantic The semantic node whose children are
+ *     merged.
  * @private
  */
-sre.EnrichMathml.mergeChildren_ = function(node, newChildren) {
+sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
+  // console.log('Merging');
+  // console.log('Newchildren');
+  // newChildren.forEach(x => {console.log(x); console.log(x.getAttribute('data-semantic-type'));});
+
+  // var oldChildren = (semantic.role === sre.SemanticAttr.Role.IMPLICIT) ?
+  //     sre.EnrichMathml.collateChildNodes_(node, newChildren) :
+  //     /**@type{!NodeList.<Element>}*/ (node.childNodes);
   var oldChildren = /**@type{!NodeList.<Element>}*/ (node.childNodes);
+
+
   if (!oldChildren.length) {
     newChildren.forEach(function(x) {node.appendChild(x);});
     return;
   }
+  // console.log('Oldchildren');
+  // oldChildren = [oldChildren[0], oldChildren[1], oldChildren[2].childNodes[0], oldChildren[2].childNodes[1], oldChildren[2].childNodes[2]];
+  // oldChildren.forEach(x => {console.log(x); console.log(x.getAttribute('data-semantic-type'));});
   var oldCounter = 0;
   while (newChildren.length) {
     // TODO (sorge) This special case is only necessary, because explicit
@@ -338,7 +358,12 @@ sre.EnrichMathml.mergeChildren_ = function(node, newChildren) {
       newChildren.shift();
       continue;
     }
-    node.insertBefore(newChildren[0], oldChildren[oldCounter] || null);
+    if (oldChildren[oldCounter]) {
+      oldChildren[oldCounter].parentNode.insertBefore(newChildren[0], oldChildren[oldCounter]);
+    } else {
+      node.insertBefore(newChildren[0], null);
+    }
+    // node.insertBefore(newChildren[0], oldChildren[oldCounter] || null);
     newChildren.shift();
   }
 };
