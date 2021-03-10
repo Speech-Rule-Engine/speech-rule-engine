@@ -300,6 +300,9 @@ sre.SemanticUtil.addAttributes = function(to, from) {
       if (key.match(/texclass$/)) {
         to.attributes['texclass'] = attrs[i].value;
       }
+      if (key === 'href') {
+        to.attributes['href'] = attrs[i].value;
+      }
     }
   }
 };

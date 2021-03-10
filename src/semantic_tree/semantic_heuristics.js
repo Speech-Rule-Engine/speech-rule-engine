@@ -199,7 +199,8 @@ sre.SemanticHeuristics.add(
   {method: function(root) {
     for (var i = root.childNodes.length - 1, child;
          child = root.childNodes[i]; i--) {
-      if (!sre.SemanticPred.isImplicitOp(child)) {
+      if (!sre.SemanticPred.isImplicitOp(child) ||
+          Object.keys(child.attributes).length) { // TODO: Refine to stop attributes
         continue;
       }
       root.childNodes.splice.apply(root.childNodes, [i, 1].concat(child.childNodes));

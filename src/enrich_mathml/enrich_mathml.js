@@ -666,6 +666,9 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
     mml.setAttribute(sre.EnrichMathml.Attribute[attr[0].toUpperCase()],
                      attr[1]);
   }
+  if (semantic.attributes['href']) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.PREFIX, 'link');
+  } // Refine to postfix.
   if (semantic.childNodes.length) {
     mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
                      sre.EnrichMathml.makeIdList(semantic.childNodes));
