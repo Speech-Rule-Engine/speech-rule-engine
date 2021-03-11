@@ -197,8 +197,6 @@ sre.SemanticHeuristics.add(
   'combine_juxtaposition',
   new sre.SemanticTreeHeuristic(
   {method: function(root) {
-    console.log('Combining Juxtaposition');
-    console.log(root.toString());
     for (var i = root.childNodes.length - 1, child;
          child = root.childNodes[i]; i--) {
       if (!sre.SemanticPred.isImplicitOp(child)) {
@@ -328,12 +326,8 @@ sre.SemanticHeuristics.add(
             x.type === sre.SemanticAttr.Type.OPERATOR;
         });
       // Preprocessing pre and postfixes.
-      console.log('Pre Post Relations');
-      console.log(partition.rel.forEach(x => console.log(x.toString())));
       partition = partition.rel.length ?
         sre.SemanticHeuristics.juxtapositionPrePost_(partition) : partition;
-      console.log('Post Post Relations');
-      console.log(partition.rel.forEach(x => console.log(x.toString())));
       // TODO: Move to Util
       nodes = partition.comp[0];
       for (var i = 1, c, r; c = partition.comp[i], r = partition.rel[i - 1]; i++) {
@@ -349,10 +343,6 @@ sre.SemanticHeuristics.add(
       if (!partition.rel.length) {
         return nodes;
       }
-      console.log('Relations');
-      console.log(partition.rel.forEach(x => console.log(x.toString())));
-      console.log('Components');
-      console.log(partition.comp.forEach(x => x.forEach(y => console.log(y.toString()))));
       return sre.SemanticHeuristics.recurseJuxtaposition_(
         partition.comp.shift(), partition.rel, partition.comp);
     }})
@@ -377,8 +367,6 @@ sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
     var collect = [];
     if (next.length) {
       if (rel) {
-        console.log('Pushing Rel');
-        console.log(rel.toString());
         rels.push(rel);
       }
       comps.push(next);
@@ -393,18 +381,12 @@ sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
       next = partition.comp.shift();
       collect.push(partition.rel.shift());
     }
-    console.log('Before Convert');
-    console.log(rels);
-    console.log(rels.forEach(x => console.log(x.toString())));
-    sre.SemanticHeuristics.convertPrePost_(collect, next, comps, rels);
-    console.log('After Convert');
-    console.log(rels);
-    console.log(rels.forEach(x => console.log(x.toString())));
+    rel = sre.SemanticHeuristics.convertPrePost_(collect, next, comps);
   }
   if (!collect.length && !next.length) {
     // A trailing rest exists that needs to be rewritten.
     collect.push(rel);
-    sre.SemanticHeuristics.convertPrePost_(collect, next, comps, rels);
+    sre.SemanticHeuristics.convertPrePost_(collect, next, comps);
   } else {
     rels.push(rel);
     comps.push(next);
@@ -419,32 +401,36 @@ sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
  *     etimes.
  * @param {!Array.<sre.SemanticNode>} next The next component element.
  * @param {!Array.<!Array.<sre.SemanticNode>>} comps The previous components.
- * @param {!Array.<sre.SemanticNode>} rels The list of remaining relations.
+ * @return {sre.SemanticNode|null} The operator that needs to be taken care of.
  * @private
  */
-sre.SemanticHeuristics.convertPrePost_ = function(collect, next, comps, rels) {
-  if (!collect.length) return;
+sre.SemanticHeuristics.convertPrePost_ = function(collect, next, comps) {
+  var rel = null;
+  if (!collect.length) {
+    return rel;
+  }
   var prev = comps[comps.length - 1];
   var prevExists = prev && prev.length;
   var nextExists = next && next.length;
   if (prevExists && nextExists) {
     if (next[0].type === sre.SemanticAttr.Type.INFIXOP &&
         next[0].role === sre.SemanticAttr.Role.IMPLICIT) {
-      rels.unshift(collect.pop());
+      rel = collect.pop();
       prev.push(sre.SemanticProcessor.getInstance()['postfixNode_'](prev.pop(), collect));
-      return;
+      return rel;
     }
-    rels.unshift(collect.shift());
+    rel = collect.shift();
     next.unshift(sre.SemanticProcessor.getInstance()['prefixNode_'](next.shift(), collect));
-    return;
+    return rel;
   }
   if (prevExists) {
     prev.push(sre.SemanticProcessor.getInstance()['postfixNode_'](prev.pop(), collect));
-    return;
+    return rel;
   }
   if (nextExists) {
     next.unshift(sre.SemanticProcessor.getInstance()['prefixNode_'](next.shift(), collect));
   }
+  return rel;
 };
 
 
@@ -495,22 +481,14 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     // right = sre.SemanticPred.isOperator(op) ? [left] : [left, op];
     // op.mathmlTree.setAttribute('AuxiliaryRemoved', true);
     // right = [left, op]; // .concat(first);
-    console.log(9);
-    console.log(op.toString());
-    console.log(left.toString());
-    console.log(ops.forEach(x => console.log(x.toString())));
     if (!ops.length) {
       return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(left), ops, elements);
     }
     var newOp = sre.SemanticHeuristics.getInstance().factory.makeBranchNode(
       sre.SemanticAttr.Type.INFIXOP, [left, ops.shift()], [op], op.textContent);
-    console.log(10);
     newOp.role = sre.SemanticAttr.Role.IMPLICIT;
-    console.log(11);
     sre.SemanticHeuristics.run('combine_juxtaposition', newOp);
-    console.log(12);
     ops.unshift(newOp);
-    console.log(13);
     return sre.SemanticHeuristics.recurseJuxtaposition_(acc, ops, elements);
     // ops.unshift(sre.SemanticProcessor.getInstance()['implicitNode']([left, op, ops.shift()]));
     // return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(right), ops, elements);
@@ -557,8 +535,6 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   } else {
   // Create new implicit node.
     sre.Debugger.getInstance().output('Case 8');
-    console.log('Making new infixop');
-    console.log(op);
     result = sre.SemanticHeuristics.getInstance().factory.makeBranchNode(
       sre.SemanticAttr.Type.INFIXOP, [left, right], [op], op.textContent);
     result.role = sre.SemanticAttr.Role.IMPLICIT;
