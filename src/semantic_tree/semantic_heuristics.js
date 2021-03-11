@@ -412,11 +412,11 @@ sre.SemanticHeuristics.convertPrePost_ = function(collect, next, comps, rels) {
   if (prevExists && nextExists) {
     if (next[0].type === sre.SemanticAttr.Type.INFIXOP &&
         next[0].role === sre.SemanticAttr.Role.IMPLICIT) {
-      rels.push(collect.pop());
+      rels.unshift(collect.pop());
       prev.push(sre.SemanticProcessor.getInstance()['postfixNode_'](prev.pop(), collect));
       return;
     }
-    rels.push(collect.shift());
+    rels.unshift(collect.shift());
     next.unshift(sre.SemanticProcessor.getInstance()['prefixNode_'](next.shift(), collect));
     return;
   }
