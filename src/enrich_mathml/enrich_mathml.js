@@ -346,8 +346,11 @@ sre.EnrichMathml.collateChildNodes_ = function(node) {
 sre.EnrichMathml.collectChildNodes_ = function(node) {
   var collect = [];
   var newChildren = sre.DomUtil.toArray(node.childNodes);
+  console.log('Collecting Children for');
+  console.log(node);
   while (newChildren.length) {
     var child = newChildren.shift();
+    console.log(child);
     if (child.nodeType !== sre.DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
@@ -357,6 +360,7 @@ sre.EnrichMathml.collectChildNodes_ = function(node) {
     }
     newChildren = sre.DomUtil.toArray(child.childNodes).concat(newChildren);
   }
+  console.log('Done Collecting Children');
   return collect;
 };
 
@@ -378,9 +382,9 @@ sre.EnrichMathml.collectChildNodes_ = function(node) {
  * @private
  */
 sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
-  // console.log('Merging');
-  // console.log('Newchildren');
-  // newChildren.forEach(x => {console.log(x); console.log(x.getAttribute('data-semantic-type'));});
+  console.log('Merging');
+  console.log('Newchildren');
+  newChildren.forEach(x => console.log(x));
 
   console.log(5);
   console.log(semantic.type);
@@ -395,10 +399,15 @@ sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
     newChildren.forEach(function(x) {node.appendChild(x);});
     return;
   }
+  console.log('Original children');
+  sre.DomUtil.toArray(node.childNodes).forEach(x => console.log(x));
   console.log('Oldchildren');
-  // oldChildren.forEach(x => {console.log(x.toString()); console.log(x.getAttribute('data-semantic-type'));});
+  oldChildren.forEach(x => console.log(x));
   var oldCounter = 0;
   while (newChildren.length) {
+    console.log('Comparison: ' + (oldChildren[oldCounter] === newChildren[0]));
+    console.log(oldChildren[oldCounter]);
+    console.log(newChildren[0]);
     // TODO (sorge) This special case is only necessary, because explicit
     // function applications are destructively dropped in the semantic tree
     // computation. This should be addressed in the future!
@@ -744,6 +753,8 @@ sre.EnrichMathml.cloneContentNode = function(content) {
   if (content.mathml.length) {
     return sre.EnrichMathml.walkTree(content);
   }
+  console.log('Cloning');
+  console.log(content);
   var clone = sre.EnrichMathml.SETTINGS.implicit ?
       sre.EnrichMathml.createInvisibleOperator_(content) :
       sre.DomUtil.createElement('mrow');
@@ -820,6 +831,7 @@ sre.EnrichMathml.rewriteMfenced = function(mml) {
  * @private
  */
 sre.EnrichMathml.createInvisibleOperator_ = function(operator) {
+  console.log(7);
   var moNode = sre.DomUtil.createElement('mo');
   var text = sre.DomUtil.createTextNode(operator.textContent);
   moNode.appendChild(text);
