@@ -47,6 +47,12 @@ sre.SemanticProcessor = function() {
   this.heuristics = sre.SemanticHeuristics.getInstance();
   this.heuristics.factory = this.factory_;
 
+  /**
+   * Table for caching explicit function applications.
+   * @type {Object.<sre.SemanticNode>}
+   */
+  this.funcAppls = {};
+
 };
 goog.addSingletonGetter(sre.SemanticProcessor);
 
@@ -1550,7 +1556,8 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
     //
     // TODO (sorge) This should not be destructive! This in particular destroys
     // any information we get on the element. Eg., texclass=NONE.
-    restNodes.shift();
+    sre.SemanticProcessor.getInstance().funcAppls[funcNode.id] =
+      restNodes.shift();
     var role = sre.SemanticAttr.Role.SIMPLEFUNC;
     if (funcNode.role === sre.SemanticAttr.Role.PREFIXFUNC ||
         funcNode.role === sre.SemanticAttr.Role.LIMFUNC) {
@@ -1742,7 +1749,15 @@ sre.SemanticProcessor.prototype.getIntegralArgs_ = function(nodes, opt_args) {
  */
 sre.SemanticProcessor.prototype.functionNode_ = function(func, arg) {
   var applNode = sre.SemanticProcessor.getInstance().factory_.makeContentNode(
-      sre.SemanticAttr.functionApplication());
+        sre.SemanticAttr.functionApplication());
+  var appl = this.funcAppls[func.id];
+  if (appl) {
+    // TODO: Work out why we cannot just take appl.
+    applNode.mathmlTree = appl.mathmlTree;
+    applNode.mathml = appl.mathml;
+    applNode.annotation = appl.annotation;
+    applNode.attributes = appl.attributes;
+  }
   applNode.type = sre.SemanticAttr.Type.PUNCTUATION;
   applNode.role = sre.SemanticAttr.Role.APPLICATION;
   var funcop = sre.SemanticProcessor.getFunctionOp_(
