@@ -398,7 +398,7 @@ sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
 /**
  * Converts lists of invisible times operators into pre/postfix operatiors.
  * @param {!Array.<sre.SemanticNode>} collect The collected list of invisible
- *     etimes.
+ *     times.
  * @param {!Array.<sre.SemanticNode>} next The next component element.
  * @param {!Array.<!Array.<sre.SemanticNode>>} comps The previous components.
  * @return {sre.SemanticNode|null} The operator that needs to be taken care of.
@@ -460,41 +460,31 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   var op = ops.shift();
   var first = elements.shift();
   if (sre.SemanticPred.isImplicitOp(op)) {
-    sre.Debugger.getInstance().output('Case 2');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 2');
     // In case we have a tree as operator, move on.
-    // TODO: Simplify with Case 9?
     var right = (left ? [left, op] : [op]).concat(first);
     return sre.SemanticHeuristics.recurseJuxtaposition_(
       acc.concat(right), ops, elements);
   }
   if (!left) {
-    sre.Debugger.getInstance().output('Case 3');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 3');
     return sre.SemanticHeuristics.recurseJuxtaposition_([op].concat(first), ops, elements);
   }
   var right = first.shift();
   if (!right) {
-    sre.Debugger.getInstance().output('Case 9');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 9');
     // Attach to the next operator, which must be an infix operation, As there
     // are no more double operators. Left also exists. Cases that left is an
     // implicit infix or simple.
-    // Recall: If op is a single implicit node it needs to be omitted!
-    // right = sre.SemanticPred.isOperator(op) ? [left] : [left, op];
-    // op.mathmlTree.setAttribute('AuxiliaryRemoved', true);
-    // right = [left, op]; // .concat(first);
-    // if (!ops.length) {
-    //   return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(left), ops, elements);
-    // }
     var newOp = sre.SemanticHeuristics.getInstance().factory.makeBranchNode(
       sre.SemanticAttr.Type.INFIXOP, [left, ops.shift()], [op], op.textContent);
     newOp.role = sre.SemanticAttr.Role.IMPLICIT;
     sre.SemanticHeuristics.run('combine_juxtaposition', newOp);
     ops.unshift(newOp);
     return sre.SemanticHeuristics.recurseJuxtaposition_(acc, ops, elements);
-    // ops.unshift(sre.SemanticProcessor.getInstance()['implicitNode']([left, op, ops.shift()]));
-    // return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(right), ops, elements);
   }
   if (sre.SemanticPred.isOperator(left) || sre.SemanticPred.isOperator(right)) {
-    sre.Debugger.getInstance().output('Case 4');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 4');
     return sre.SemanticHeuristics.recurseJuxtaposition_(
       acc.concat([left, op, right]).concat(first), ops, elements);
   }
@@ -502,7 +492,7 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   if (sre.SemanticPred.isImplicitOp(left) &&
       sre.SemanticPred.isImplicitOp(right)) {
     // Merge both left and right.
-    sre.Debugger.getInstance().output('Case 5');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 5');
     left.contentNodes.push(op);
     left.contentNodes = left.contentNodes.concat(right.contentNodes);
     left.childNodes.push(right);
@@ -514,7 +504,7 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     result = left;
   } else if (sre.SemanticPred.isImplicitOp(left)) {
     // Add to the left one.
-    sre.Debugger.getInstance().output('Case 6');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 6');
     left.contentNodes.push(op);
     left.childNodes.push(right);
     right.parentNode = left;
@@ -524,7 +514,7 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     result = left;
   } else if (sre.SemanticPred.isImplicitOp(right)) {
     // Add to the right one.
-    sre.Debugger.getInstance().output('Case 7');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 7');
     right.contentNodes.unshift(op);
     right.childNodes.unshift(left);
     left.parentNode = right;
@@ -534,7 +524,7 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     result = right;
   } else {
   // Create new implicit node.
-    sre.Debugger.getInstance().output('Case 8');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 8');
     result = sre.SemanticHeuristics.getInstance().factory.makeBranchNode(
       sre.SemanticAttr.Type.INFIXOP, [left, right], [op], op.textContent);
     result.role = sre.SemanticAttr.Role.IMPLICIT;

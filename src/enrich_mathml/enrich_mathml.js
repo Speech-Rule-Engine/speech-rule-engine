@@ -302,12 +302,12 @@ sre.EnrichMathml.childrenSubset_ = function(node, newChildren) {
 };
 
 
-
 /**
  * Collates the childnodes in the light of potential contractions of the combine
- * juxtaposition heuristic.
+ * juxtaposition heuristic. This extends the list of know children by those
+ * deeper in the tree.
  * @param {!Element} node The node whose children are picked.
- * @param {!Array.<Element>} children The list of children to be merged.
+ * @param {!Array.<Element>} children The current list of children to be merged.
  * @param {!sre.SemanticNode} semantic The semantic node.
  * @return {!Array.<Element>} The collated list of children to be merged.
  * @private
@@ -353,8 +353,11 @@ sre.EnrichMathml.collateChildNodes_ = function(node, children, semantic) {
 
 
 /**
- * @param {!Element} node The node whose children are picked.
- * @return {!Array.<Element>} The minimal subset.
+ * Collects child nodes that belong to a juxtaposition tree, but that are
+ * embedded deeper in the tree. The algorithm descends through nodes that are
+ * not semantically enriched.
+ * @param {!Element} node The top level node.
+ * @return {!Array.<Element>} The lower level children.
  * @private
  */
 sre.EnrichMathml.collectChildNodes_ = function(node) {
@@ -375,16 +378,6 @@ sre.EnrichMathml.collectChildNodes_ = function(node) {
 };
 
 
-// Trailing empty mrow (for tests!)
-// <math><mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mrow something="other"><mi>b</mi><mi>q</mi><mi>b</mi></mrow></math>
-// <math><mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mrow something="other"><mi>b</mi><mi>q</mi><mi>b</mi></mrow><mrow something="other2"><mi>b</mi><mi>q</mi><mi>b</mi></mrow></math>
-// <math><mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mrow something="other2"><mi>b</mi><mi>q</mi></mrow></math>
-// Middle empty mo
-// <math><mi>a</mi><mo>&#x2062;</mo><mrow><mi>c</mi></mrow><mo>&#x2062;</mo><mrow><mi>b</mi><mi>q</mi><mi>b</mi></mrow></math>
-// <math><mi>a</mi><mo>&#x2062;</mo><mrow><mi>c</mi></mrow><mo>&#x2062;</mo><mrow><mi>q</mi><mi>b</mi></mrow></math>
-
-
-
 /**
  * Merges a list of new children with the children of the given node.
  * @param {!Element} node The node whose children are merged.
@@ -394,97 +387,64 @@ sre.EnrichMathml.collectChildNodes_ = function(node) {
  * @private
  */
 sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
-  // console.log('Merging');
-  // console.log('Newchildren');
-  // console.log(newChildren);
-  // newChildren.forEach(x => console.log(x.outerHTML));
-  var output = false;
-  // console.log('Original children');
-  // sre.DomUtil.toArray(node.childNodes).forEach(x => console.log(x.outerHTML));
-
-  // console.log(5);
-  // console.log(semantic.type);
-
-  // We have to rewrite potential lca ancestors.
   var oldChildren = (
     semantic.role === sre.SemanticAttr.Role.IMPLICIT &&
       sre.SemanticHeuristics.getInstance().flags.combine_juxtaposition) ?
       sre.EnrichMathml.collateChildNodes_(node, newChildren, semantic) :
       sre.DomUtil.toArray(node.childNodes);
-  // var oldChildren = /**@type{!NodeList.<Element>}*/ (node.childNodes);
-
   if (!oldChildren.length) {
     newChildren.forEach(function(x) {node.appendChild(x);});
     return;
   }
-  // console.log('Oldchildren');
-  // oldChildren.forEach(x => console.log(x));
   var oldCounter = 0;
   while (newChildren.length) {
-    // console.log('Comparison: ' + (oldChildren[oldCounter] === newChildren[0]));
-    // console.log(oldChildren[oldCounter]);
-    // console.log(newChildren[0]);
-    // TODO (sorge) This special case is only necessary, because explicit
-    // function applications are destructively dropped in the semantic tree
-    // computation. This should be addressed in the future!
-    //
-    // if (newChildren[0].textContent === 'q') {
-    //   output = true;
-    // } else {
-    //   output = false;
-    // };
-    if (oldChildren[oldCounter] === newChildren[0] ||
+    var newChild = /** @type {!Element} */(newChildren[0]);
+    if (oldChildren[oldCounter] === newChild ||
         sre.EnrichMathml.functionApplication_(
-        oldChildren[oldCounter], newChildren[0])) {
-      if (output) console.log('Case 1');
+          oldChildren[oldCounter], newChild)) {
+      // newChild same as oldChild. Advance both.
       newChildren.shift();
       oldCounter++;
       continue;
     }
     if (oldChildren[oldCounter] &&
         newChildren.indexOf(oldChildren[oldCounter]) === -1) {
+      // oldChild not related to the current semantic node is skipped.
       oldCounter++;
-      if (output) console.log('Case 2');
       continue;
     }
-    // Here we need a case that the newChild is actually an existing descendant
-    // of the node, i.e., somewhere beneath but not contained in oldChildren.
-    if (sre.EnrichMathml.isDescendant_(newChildren[0], node)) {
+    if (sre.EnrichMathml.isDescendant_(newChild, node)) {
+      // newChild is an existing descendant of the node, i.e., somewhere beneath
+      // but not contained in oldChildren. No need to rearrange.
       newChildren.shift();
-      if (output) console.log('Case 3');
       continue;
     }
-    if (output) console.log('Case 4');
-    // var newChild = newChildren[0].mathmlAncestor || newChildren[0];
-    // In case the old child is deeper in the tree.
-    sre.EnrichMathml.insertNewChild_(node, oldChildren[oldCounter], newChildren[0], semantic);
+    // newChild is indeed new and needs to be added.
+    sre.EnrichMathml.insertNewChild_(node, oldChildren[oldCounter], newChild);
     newChildren.shift();
   }
 };
 
- // * @return {!Array.<Element>} The minimal subset.
-sre.EnrichMathml.insertNewChild_ = function(node, oldChild, newChild, semantic) {
-  // console.log('Insert New Child');
-  // console.log(newChild);
-  // console.log(0);
-  if (!oldChild) { // Try the ancestor here
-    // console.log(1);
+/**
+ * Inserts a new child into the mml tree at the right position.
+ * @param {!Element} node The parent node.
+ * @param {Element} oldChild The reference where newChild is inserted.
+ * @param {!Element} newChild The new child to be inserted.
+ * @private
+ */
+sre.EnrichMathml.insertNewChild_ = function(node, oldChild, newChild) {
+  if (!oldChild) {
     node.insertBefore(newChild, null);
     return;
-  } // TODO: Combine cases below
-  var parent = sre.EnrichMathml.parentNode_(oldChild);
-  if (parent === node || parent.firstChild !== oldChild) {
-    // console.log(2);
-    parent.insertBefore(newChild, oldChild);
-    return;
   }
+  var parent = oldChild;
   var next = sre.EnrichMathml.parentNode_(parent);
-  while (next && next.firstChild === parent && !parent.hasAttribute('AuxiliaryImplicit') && next !== node) {
+  while (next && next.firstChild === parent &&
+         !parent.hasAttribute('AuxiliaryImplicit') && next !== node) {
     parent = next;
     next = sre.EnrichMathml.parentNode_(parent);
   }
   if (next) {
-    // console.log(3);
     next.insertBefore(newChild, parent);
     parent.removeAttribute('AuxiliaryImplicit');
   }

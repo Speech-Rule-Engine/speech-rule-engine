@@ -199,14 +199,6 @@ sre.SemanticProcessor.prototype.explicitMixed_ = function(nodes) {
   return result.concat(partition.comp[partition.comp.length - 1]);
 };
 
-//   if (sre.SemanticPred.isAttribute('type', 'NUMBER')(node.childNodes[0]) &&
-//       sre.SemanticPred.isAttribute('type', 'FRACTION')(node.childNodes[1])) {
-//     node.type = sre.SemanticAttr.Type.NUMBER;
-//     node.role = sre.SemanticAttr.Role.MIXED;
-//   }
-//   return node;
-// };
-
 
 /**
  * Creates a node of the specified type by collapsing the given node list into
@@ -1757,6 +1749,7 @@ sre.SemanticProcessor.prototype.functionNode_ = function(func, arg) {
     applNode.mathml = appl.mathml;
     applNode.annotation = appl.annotation;
     applNode.attributes = appl.attributes;
+    delete this.funcAppls[func.id];
   }
   applNode.type = sre.SemanticAttr.Type.PUNCTUATION;
   applNode.role = sre.SemanticAttr.Role.APPLICATION;
