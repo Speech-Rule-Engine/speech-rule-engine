@@ -304,12 +304,15 @@ sre.EnrichMathml.childrenSubset_ = function(node, newChildren) {
 
 
 /**
+ * Collates the childnodes in the light of potential contractions of the combine
+ * juxtaposition heuristic.
  * @param {!Element} node The node whose children are picked.
- * @return {!Array.<Element>} The minimal subset.
+ * @param {!Array.<Element>} children The list of children to be merged.
+ * @param {!sre.SemanticNode} semantic The semantic node.
+ * @return {!Array.<Element>} The collated list of children to be merged.
  * @private
  */
-sre.EnrichMathml.collateChildNodes_ = function(node) {
-  console.log(4);
+sre.EnrichMathml.collateChildNodes_ = function(node, children, semantic) {
   var oldChildren = [];
   var newChildren = sre.DomUtil.toArray(node.childNodes);
   var notFirst = false;
@@ -334,7 +337,18 @@ sre.EnrichMathml.collateChildNodes_ = function(node) {
     }
     newChildren = collect.concat(newChildren);
   }
-  return oldChildren;
+  // If there is a trailing row with further factors.
+  var rear = [];
+  var semChildren = semantic.childNodes.map(function(x) {return x.mathmlTree;});
+  while (semChildren.length) {
+    var schild = semChildren.pop();
+    if (!schild) continue;
+    if (oldChildren.indexOf(schild) !== -1) break;
+    if (children.indexOf(schild) !== -1) {
+      rear.unshift(schild);
+    }
+  }
+  return oldChildren.concat(rear);
 };
 
 
@@ -346,11 +360,8 @@ sre.EnrichMathml.collateChildNodes_ = function(node) {
 sre.EnrichMathml.collectChildNodes_ = function(node) {
   var collect = [];
   var newChildren = sre.DomUtil.toArray(node.childNodes);
-  console.log('Collecting Children for');
-  console.log(node);
   while (newChildren.length) {
     var child = newChildren.shift();
-    console.log(child);
     if (child.nodeType !== sre.DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
@@ -360,13 +371,14 @@ sre.EnrichMathml.collectChildNodes_ = function(node) {
     }
     newChildren = sre.DomUtil.toArray(child.childNodes).concat(newChildren);
   }
-  console.log('Done Collecting Children');
   return collect;
 };
 
 
-// Trailing empty mrow
-// <math><mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mrow><mi>b</mi><mi>q</mi><mi>b</mi></mrow></math>
+// Trailing empty mrow (for tests!)
+// <math><mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mrow something="other"><mi>b</mi><mi>q</mi><mi>b</mi></mrow></math>
+// <math><mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mi>c</mi><mo>&#x2062;</mo><mo>&#x2062;</mo><mo>&#x2062;</mo><mrow something="other"><mi>b</mi><mi>q</mi><mi>b</mi></mrow><mrow something="other2"><mi>b</mi><mi>q</mi><mi>b</mi></mrow></math>
+// <math><mo>&#x2062;</mo><mi>a</mi><mo>&#x2062;</mo><mrow something="other2"><mi>b</mi><mi>q</mi></mrow></math>
 // Middle empty mo
 // <math><mi>a</mi><mo>&#x2062;</mo><mrow><mi>c</mi></mrow><mo>&#x2062;</mo><mrow><mi>b</mi><mi>q</mi><mi>b</mi></mrow></math>
 // <math><mi>a</mi><mo>&#x2062;</mo><mrow><mi>c</mi></mrow><mo>&#x2062;</mo><mrow><mi>q</mi><mi>b</mi></mrow></math>
@@ -382,16 +394,22 @@ sre.EnrichMathml.collectChildNodes_ = function(node) {
  * @private
  */
 sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
-  console.log('Merging');
-  console.log('Newchildren');
-  newChildren.forEach(x => console.log(x));
+  // console.log('Merging');
+  // console.log('Newchildren');
+  // console.log(newChildren);
+  // newChildren.forEach(x => console.log(x.outerHTML));
+  var output = false;
+  // console.log('Original children');
+  // sre.DomUtil.toArray(node.childNodes).forEach(x => console.log(x.outerHTML));
 
-  console.log(5);
-  console.log(semantic.type);
+  // console.log(5);
+  // console.log(semantic.type);
+
+  // We have to rewrite potential lca ancestors.
   var oldChildren = (
     semantic.role === sre.SemanticAttr.Role.IMPLICIT &&
       sre.SemanticHeuristics.getInstance().flags.combine_juxtaposition) ?
-      sre.EnrichMathml.collateChildNodes_(node) :
+      sre.EnrichMathml.collateChildNodes_(node, newChildren, semantic) :
       sre.DomUtil.toArray(node.childNodes);
   // var oldChildren = /**@type{!NodeList.<Element>}*/ (node.childNodes);
 
@@ -399,22 +417,26 @@ sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
     newChildren.forEach(function(x) {node.appendChild(x);});
     return;
   }
-  console.log('Original children');
-  sre.DomUtil.toArray(node.childNodes).forEach(x => console.log(x));
-  console.log('Oldchildren');
-  oldChildren.forEach(x => console.log(x));
+  // console.log('Oldchildren');
+  // oldChildren.forEach(x => console.log(x));
   var oldCounter = 0;
   while (newChildren.length) {
-    console.log('Comparison: ' + (oldChildren[oldCounter] === newChildren[0]));
-    console.log(oldChildren[oldCounter]);
-    console.log(newChildren[0]);
+    // console.log('Comparison: ' + (oldChildren[oldCounter] === newChildren[0]));
+    // console.log(oldChildren[oldCounter]);
+    // console.log(newChildren[0]);
     // TODO (sorge) This special case is only necessary, because explicit
     // function applications are destructively dropped in the semantic tree
     // computation. This should be addressed in the future!
     //
+    // if (newChildren[0].textContent === 'q') {
+    //   output = true;
+    // } else {
+    //   output = false;
+    // };
     if (oldChildren[oldCounter] === newChildren[0] ||
         sre.EnrichMathml.functionApplication_(
         oldChildren[oldCounter], newChildren[0])) {
+      if (output) console.log('Case 1');
       newChildren.shift();
       oldCounter++;
       continue;
@@ -422,31 +444,37 @@ sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
     if (oldChildren[oldCounter] &&
         newChildren.indexOf(oldChildren[oldCounter]) === -1) {
       oldCounter++;
+      if (output) console.log('Case 2');
       continue;
     }
     // Here we need a case that the newChild is actually an existing descendant
     // of the node, i.e., somewhere beneath but not contained in oldChildren.
     if (sre.EnrichMathml.isDescendant_(newChildren[0], node)) {
       newChildren.shift();
+      if (output) console.log('Case 3');
       continue;
     }
+    if (output) console.log('Case 4');
+    // var newChild = newChildren[0].mathmlAncestor || newChildren[0];
     // In case the old child is deeper in the tree.
-    sre.EnrichMathml.insertNewChild_(node, oldChildren[oldCounter], newChildren[0]);
+    sre.EnrichMathml.insertNewChild_(node, oldChildren[oldCounter], newChildren[0], semantic);
     newChildren.shift();
   }
 };
 
-
-sre.EnrichMathml.insertNewChild_ = function(node, oldChild, newChild) {
-  console.log(0);
-  if (!oldChild) {
-    console.log(1);
+ // * @return {!Array.<Element>} The minimal subset.
+sre.EnrichMathml.insertNewChild_ = function(node, oldChild, newChild, semantic) {
+  // console.log('Insert New Child');
+  // console.log(newChild);
+  // console.log(0);
+  if (!oldChild) { // Try the ancestor here
+    // console.log(1);
     node.insertBefore(newChild, null);
     return;
   } // TODO: Combine cases below
   var parent = sre.EnrichMathml.parentNode_(oldChild);
   if (parent === node || parent.firstChild !== oldChild) {
-    console.log(2);
+    // console.log(2);
     parent.insertBefore(newChild, oldChild);
     return;
   }
@@ -456,7 +484,7 @@ sre.EnrichMathml.insertNewChild_ = function(node, oldChild, newChild) {
     next = sre.EnrichMathml.parentNode_(parent);
   }
   if (next) {
-    console.log(3);
+    // console.log(3);
     next.insertBefore(newChild, parent);
     parent.removeAttribute('AuxiliaryImplicit');
   }
@@ -753,8 +781,6 @@ sre.EnrichMathml.cloneContentNode = function(content) {
   if (content.mathml.length) {
     return sre.EnrichMathml.walkTree(content);
   }
-  console.log('Cloning');
-  console.log(content);
   var clone = sre.EnrichMathml.SETTINGS.implicit ?
       sre.EnrichMathml.createInvisibleOperator_(content) :
       sre.DomUtil.createElement('mrow');
@@ -831,7 +857,6 @@ sre.EnrichMathml.rewriteMfenced = function(mml) {
  * @private
  */
 sre.EnrichMathml.createInvisibleOperator_ = function(operator) {
-  console.log(7);
   var moNode = sre.DomUtil.createElement('mo');
   var text = sre.DomUtil.createTextNode(operator.textContent);
   moNode.appendChild(text);

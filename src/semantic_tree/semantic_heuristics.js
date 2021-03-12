@@ -481,9 +481,9 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     // right = sre.SemanticPred.isOperator(op) ? [left] : [left, op];
     // op.mathmlTree.setAttribute('AuxiliaryRemoved', true);
     // right = [left, op]; // .concat(first);
-    if (!ops.length) {
-      return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(left), ops, elements);
-    }
+    // if (!ops.length) {
+    //   return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(left), ops, elements);
+    // }
     var newOp = sre.SemanticHeuristics.getInstance().factory.makeBranchNode(
       sre.SemanticAttr.Type.INFIXOP, [left, ops.shift()], [op], op.textContent);
     newOp.role = sre.SemanticAttr.Role.IMPLICIT;
