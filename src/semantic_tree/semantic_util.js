@@ -125,7 +125,7 @@ sre.SemanticUtil.splitUnicode = function(str) {
  * @type {Array.<string>}
  * @const
  */
-sre.SemanticUtil.LEAFTAGS = ['MO', 'MI', 'MN', 'MTEXT', 'MS'];
+sre.SemanticUtil.LEAFTAGS = ['MO', 'MI', 'MN', 'MTEXT', 'MS', 'MSTYLE'];
 
 
 /**
@@ -145,7 +145,7 @@ sre.SemanticUtil.IGNORETAGS = [
  * @const
  */
 sre.SemanticUtil.EMPTYTAGS = [
-  'MATH', 'MROW', 'MPADDED', 'MACTION', 'NONE', 'MSTYLE', 'SEMANTICS'
+  'MATH', 'MROW', 'MPADDED', 'MACTION', 'NONE', 'SEMANTICS'
 ];
 
 

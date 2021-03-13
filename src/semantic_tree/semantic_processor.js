@@ -282,21 +282,24 @@ sre.SemanticProcessor.prototype.postfixNode_ = function(node, postfixes) {
 
 /**
  * Create an text node, keeping string notation correct.
- * @param {sre.SemanticNode} leaf The text node.
+ * @param {!sre.SemanticNode} leaf The text node.
  * @param {string} type The type of the text node.
  * @return {!sre.SemanticNode} The new semantic text node.
  */
 sre.SemanticProcessor.prototype.text = function(leaf, type) {
   // TODO (simons): Here check if there is already a type or if we can compute
   // an interesting number role. Than use this.
+  sre.SemanticProcessor.exprFont_(leaf);
   leaf.type = sre.SemanticAttr.Type.TEXT;
-  if (leaf.textContent.match(/^\s*$/)) {
-    leaf.role = sre.SemanticAttr.Role.SPACE;
-  }
   if (type === 'MS') {
     leaf.role = sre.SemanticAttr.Role.STRING;
+    return leaf;
   }
-  sre.SemanticProcessor.exprFont_(leaf);
+  if (type === 'MSPACE' || leaf.textContent.match(/^\s*$/)) {
+    leaf.type = sre.SemanticAttr.Type.PUNCTUATION;
+    leaf.role = sre.SemanticAttr.Role.SPACE;
+    return leaf;
+  }
   // TODO (simons): Process single element in text. E.g., check if a text
   //      element represents a function or a single letter, number, etc.
   return leaf;
@@ -1239,6 +1242,9 @@ sre.SemanticProcessor.prototype.punctuatedNode_ = function(
   } else if (punctuations.every(
       sre.SemanticPred.isAttribute('role', 'DUMMY'))) {
     newNode.role = sre.SemanticAttr.Role.TEXT;
+  } else if (punctuations.every(
+    sre.SemanticPred.isAttribute('role', 'SPACE'))) {
+    newNode.role = sre.SemanticAttr.Role.SPACE;
   } else {
     newNode.role = sre.SemanticAttr.Role.SEQUENCE;
   }
