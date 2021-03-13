@@ -301,7 +301,8 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
 
 /**
  * Parse a space element. If sufficiently wide, create an empty text element.
- * alpha only: ignore, em pc >= .5, cm >= .4, ex >= 1, in >= .15, pt mm >= 5.
+ * alpha only: !negative && thickmathspace,
+ * em pc >= .25, cm >= .15, ex >= .5, in >= .05, pt >= 2.5 mm >= 1.5.
  * @param {Element} node A MathML node.
  * @param {!Array.<Element>} children The children of the node.
  * @return {!sre.SemanticNode} The newly created semantic node.
@@ -313,6 +314,8 @@ sre.SemanticMathml.prototype.space_ = function(node, children) {
   if (!match) {
     return this.empty_(node, children);
   }
+  // alternative:
+  // alpha only: ignore, em pc >= .5, cm >= .4, ex >= 1, in >= .15, pt mm >= 5.
   // alternativ: .15 .25 .5 .05 1.5 .25 2.5
   // !negative && thickmathspace
   var sizes = {

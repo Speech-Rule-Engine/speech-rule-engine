@@ -290,6 +290,9 @@ sre.SemanticProcessor.prototype.text = function(leaf, type) {
   // TODO (simons): Here check if there is already a type or if we can compute
   // an interesting number role. Than use this.
   leaf.type = sre.SemanticAttr.Type.TEXT;
+  if (leaf.textContent.match(/^\s*$/)) {
+    leaf.role = sre.SemanticAttr.Role.SPACE;
+  }
   if (type === 'MS') {
     leaf.role = sre.SemanticAttr.Role.STRING;
   }
