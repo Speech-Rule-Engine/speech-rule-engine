@@ -328,6 +328,7 @@ sre.SemanticProcessor.prototype.row = function(nodes) {
   nodes = sre.SemanticProcessor.getInstance().getPunctuationInRow_(nodes);
   nodes = sre.SemanticProcessor.getInstance().getTextInRow_(nodes);
   nodes = sre.SemanticProcessor.getInstance().getFunctionsInRow_(nodes);
+  nodes = sre.SemanticProcessor.getInstance().getSpacesInRow_(nodes);
   return sre.SemanticProcessor.getInstance().relationsInRow_(nodes);
 };
 
@@ -434,6 +435,7 @@ sre.SemanticProcessor.prototype.getTextInRow_ = function(nodes) {
   }
   var result = [];
   var nextComp = partition.comp[0];
+  // TODO: Improve texts with punctuation and spaces!
   if (nextComp.length > 0) {
     result.push(sre.SemanticProcessor.getInstance().row(nextComp));
   }
@@ -1139,6 +1141,46 @@ sre.SemanticProcessor.prototype.setExtension_ = function(set) {
 };
 
 
+sre.SemanticProcessor.prototype.getSpacesInRow_ = function(nodes) {
+  if (nodes.length <= 1) {
+    return nodes;
+  }
+  var partition = sre.SemanticUtil.partitionNodes(nodes, function(x) {
+    return sre.SemanticPred.isPunctuation(x) &&
+      x.role === sre.SemanticAttr.Role.SPACE;
+  });
+  // Ignore spaces at start and end.
+  while (partition.rel.length && !partition.comp[0].length) {
+    partition.rel.shift();
+    partition.comp.shift();
+  }
+  while (partition.rel.length &&
+         !partition.comp[partition.comp.length - 1].length) {
+    partition.rel.pop();
+    partition.comp.pop();
+  }
+  if (partition.rel.length === 0) {
+    return partition.comp[0];
+  }
+  var newNodes = [];
+  var firstComp = partition.comp.shift();
+  if (firstComp.length > 0) {
+    newNodes.push(sre.SemanticProcessor.getInstance().row(firstComp));
+  }
+  var relCounter = 0;
+  while (partition.comp.length > 0) {
+    newNodes.push(partition.rel[relCounter++]);
+    firstComp = partition.comp.shift();
+    if (firstComp.length > 0) {
+      newNodes.push(sre.SemanticProcessor.getInstance().row(firstComp));
+    }
+  }
+  return [
+    sre.SemanticProcessor.getInstance().punctuatedNode_(newNodes, partition.rel)
+  ];
+};
+
+
 /**
  * Combines sequences of punctuated expressions in a list of nodes.
  * @param {!Array.<sre.SemanticNode>} nodes The list of nodes.
@@ -1161,7 +1203,8 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
   // Partition with improved ellipses handling.
   var partition = sre.SemanticUtil.partitionNodes(
       nodes, function(x) {
-        if (!sre.SemanticPred.isPunctuation(x)) {
+        if (!sre.SemanticPred.isPunctuation(x) ||
+            x.role === sre.SemanticAttr.Role.SPACE) {
           return false;
         }
         if (sre.SemanticPred.isPunctuation(x) &&
@@ -1212,6 +1255,8 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
 };
 
 
+// TODO: Refine roles to reflect same roles. Find sequences of punctuation
+// elements and separate those out or at least rewrite ellipses.
 /**
  * Create a punctuated node.
  * @param {!Array.<!sre.SemanticNode>} nodes List of all nodes separated
