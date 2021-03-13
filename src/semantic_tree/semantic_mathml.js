@@ -527,16 +527,14 @@ sre.SemanticMathml.prototype.dummy_ = function(node, children) {
   let unknown = this.getFactory().makeUnprocessed(node);
   unknown.role = /** @type {!sre.SemanticAttr.Role} */(node.tagName);
   unknown.textContent = node.textContent;
-  // unknown.mathml.unshift(node);
-  // unknown.mathmlTree = node;
   return unknown;
 };
 
 
 /**
  * Creates a leaf node from MathML node.
- * @param {Node} mml The MathML node.
- * @param {Array.<Node>} children Its child nodes.
+ * @param {Element} mml The MathML node.
+ * @param {Array.<Element>} children Its child nodes.
  * @return {!sre.SemanticNode} The new node.
  * @private
  */
