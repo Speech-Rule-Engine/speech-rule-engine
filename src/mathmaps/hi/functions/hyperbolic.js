@@ -10,7 +10,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "हाइपरबोलिक कोसाइन",
         "singular": "",
         "dual": ""
       }
@@ -24,7 +24,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "हाइपरबोलिक कॉट",
         "singular": "",
         "dual": ""
       }
@@ -38,7 +38,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "हाइपरबोलिक कोसेक",
         "singular": "",
         "dual": ""
       }
@@ -52,7 +52,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "हाइपरबोलिक सेक",
         "singular": "",
         "dual": ""
       }
@@ -66,7 +66,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "हाइपरबोलिक साइन",
         "singular": "",
         "dual": ""
       }
@@ -80,7 +80,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "हाइपरबोलिक टेन",
         "singular": "",
         "dual": ""
       }
@@ -95,7 +95,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम हाइपरबोलिक कोसाइन",
         "singular": "",
         "dual": ""
       }
@@ -110,7 +110,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम हाइपरबोलिक कॉट",
         "singular": "",
         "dual": ""
       }
@@ -125,7 +125,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम हाइपरबोलिक कोसेक",
         "singular": "",
         "dual": ""
       }
@@ -140,7 +140,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम हाइपरबोलिक सेक",
         "singular": "",
         "dual": ""
       }
@@ -155,7 +155,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम हाइपरबोलिक साइन",
         "singular": "",
         "dual": ""
       }
@@ -170,7 +170,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम हाइपरबोलिक टेन",
         "singular": "",
         "dual": ""
       }

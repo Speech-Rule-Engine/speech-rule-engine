@@ -11,7 +11,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "कोस",
         "singular": "",
         "dual": ""
       }
@@ -25,7 +25,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "कॉट",
         "singular": "",
         "dual": ""
       }
@@ -39,7 +39,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "कोसेक",
         "singular": "",
         "dual": ""
       }
@@ -53,7 +53,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "सेक",
         "singular": "",
         "dual": ""
       }
@@ -68,7 +68,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "साइन",
         "singular": "",
         "dual": ""
       }
@@ -82,7 +82,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "टेन",
         "singular": "",
         "dual": ""
       }
@@ -96,7 +96,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम कोस",
         "singular": "",
         "dual": ""
       }
@@ -110,7 +110,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम कॉट",
         "singular": "",
         "dual": ""
       }
@@ -124,7 +124,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम कोसेक",
         "singular": "",
         "dual": ""
       }
@@ -138,7 +138,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम सेक",
         "singular": "",
         "dual": ""
       }
@@ -152,7 +152,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम साइन",
         "singular": "",
         "dual": ""
       }
@@ -166,7 +166,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रतिलोम टेन",
         "singular": "",
         "dual": ""
       }

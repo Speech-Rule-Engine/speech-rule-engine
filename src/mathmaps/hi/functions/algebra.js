@@ -13,7 +13,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "अंश",
         "singular": "",
         "dual": ""
       }
@@ -27,7 +27,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "सारणिक",
         "singular": "",
         "dual": ""
       }
@@ -41,7 +41,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "आयाम",
         "singular": "",
         "dual": ""
       }
@@ -56,7 +56,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "समरूपी",
         "singular": "",
         "dual": ""
       }
@@ -70,7 +70,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "बीज",
         "singular": "",
         "dual": ""
       }
@@ -85,7 +85,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "अनुरेख",
         "singular": "",
         "dual": ""
       }

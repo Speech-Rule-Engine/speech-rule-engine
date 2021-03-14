@@ -10,7 +10,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "लघुगणक",
         "singular": "",
         "dual": ""
       }
@@ -24,7 +24,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्राकृतिक लघुगणक",
         "singular": "",
         "dual": ""
       }
@@ -38,7 +38,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "दस आधारित लघुगणक",
         "singular": "",
         "dual": ""
       }
@@ -53,7 +53,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "चरघातांकी",
         "singular": "",
         "dual": ""
       }
@@ -67,7 +67,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "महत्तम समापवर्तक",
         "singular": "",
         "dual": ""
       }
@@ -81,7 +81,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "लघुत्तम समापवर्त्य",
         "singular": "",
         "dual": ""
       }
@@ -95,7 +95,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "तर्क (Argument)",
         "singular": "",
         "dual": ""
       }
@@ -109,7 +109,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "काल्पनिक (Imaginary)",
         "singular": "",
         "dual": ""
       }
@@ -123,7 +123,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "वास्तविक (Real)",
         "singular": "",
         "dual": ""
       }
@@ -137,7 +137,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "अधिकतम निम्न परिबद्ध",
         "singular": "",
         "dual": ""
       }
@@ -151,7 +151,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "सीमा",
         "singular": "",
         "dual": ""
       }
@@ -166,7 +166,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "निम्न सीमा",
         "singular": "",
         "dual": ""
       }
@@ -181,7 +181,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "उच्च सीमा",
         "singular": "",
         "dual": ""
       }
@@ -195,7 +195,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "महत्तम",
         "singular": "",
         "dual": ""
       }
@@ -209,7 +209,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "न्यूनतम",
         "singular": "",
         "dual": ""
       }
@@ -223,7 +223,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "लघुत्तम उच्च परिबद्ध",
         "singular": "",
         "dual": ""
       }
@@ -238,7 +238,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "सह सीमा",
         "singular": "",
         "dual": ""
       }
@@ -253,7 +253,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "व्युत्क्रम सीमा",
         "singular": "",
         "dual": ""
       }
@@ -267,7 +267,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "मापांक (modulus)",
         "singular": "",
         "dual": ""
       }
@@ -281,7 +281,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "प्रायिकता",
         "singular": "",
         "dual": ""
       }
