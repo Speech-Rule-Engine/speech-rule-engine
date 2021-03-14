@@ -1151,11 +1151,13 @@ sre.SemanticProcessor.prototype.getSpacesInRow_ = function(nodes) {
   });
   // Ignore spaces at start and end.
   while (partition.rel.length && !partition.comp[0].length) {
+    console.log(10);
     partition.rel.shift();
     partition.comp.shift();
   }
   while (partition.rel.length &&
          !partition.comp[partition.comp.length - 1].length) {
+    console.log(11);
     partition.rel.pop();
     partition.comp.pop();
   }
@@ -1669,7 +1671,7 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
       return components.rest;
       break;
     case 'prefix':
-      if (rest[0] && rest[0].type === sre.SemanticAttr.Type.FENCED) {
+    if (rest[0] && rest[0].type === sre.SemanticAttr.Type.FENCED) {
         // TODO: (MS2.3|simons) This needs to be made more robust!  Currently we
         //       reset to eliminate sets. Once we include bra-ket heuristics,
         //       this might be incorrect.
@@ -1685,7 +1687,12 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
       }
       var partition = sre.SemanticUtil.sliceNodes(
           rest, sre.SemanticPred.isPrefixFunctionBoundary);
-      if (!partition.head.length) {
+    if (!partition.head.length
+        // ignore leading spaces. (always?)
+         || partition.head.every(function(x) {
+          return sre.SemanticPred.isPunctuation(x) &&
+            x.role === sre.SemanticAttr.Role.SPACE; })
+       ) {
         if (!partition.div ||
             !sre.SemanticPred.isAttribute('type', 'APPL')(partition.div)) {
           rest.unshift(func);
