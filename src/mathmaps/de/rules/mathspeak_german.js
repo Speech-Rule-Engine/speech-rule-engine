@@ -1351,14 +1351,14 @@
       "Rule",
       "matrix-row",
       "default",
-      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Spalte\");[p] (pause: 200)",
+      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Spalte\", pause: 200)",
       "self::row"
     ],
     [
       "Rule",
       "row-with-label",
       "default",
-      "[t] \"mit Bezeichner\"; [n] content/*[1]; [t] \"Ende Bezeichner\"(pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Spalte\")",
+      "[t] \"mit Bezeichner\"; [n] content/*[1]; [t] \"Ende Bezeichner\" (pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Spalte\")",
       "self::row",
       "content"
     ],
@@ -1397,14 +1397,14 @@
       "Rule",
       "matrix-cell",
       "default",
-      "[n] children/*[1]; [p] (pause: 300)",
+      "[n] children/*[1] (pause: 300)",
       "self::cell"
     ],
     [
       "Rule",
       "empty-cell",
       "default",
-      "[t] \"leer\"; [p] (pause: 300)",
+      "[t] \"leer\" (pause: 300)",
       "self::cell",
       "count(children/*)=0"
     ],
@@ -1574,7 +1574,7 @@
       "Rule",
       "empty-line-with-label",
       "default",
-      "[t] \"mit Bezeichner\"; [n] content/*[1]; [t] \"Ende Bezeichner\"(pause: 200); [t] \"leer\"",
+      "[t] \"mit Bezeichner\"; [n] content/*[1]; [t] \"Ende Bezeichner\" (pause: 200); [t] \"leer\"",
       "self::line",
       "count(children/*)=0",
       "content"
