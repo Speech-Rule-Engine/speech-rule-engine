@@ -74,44 +74,44 @@ sre.Locale.hi = {
   MS_ROOT_INDEX: { },
 
   FONT: {
-    'bold': 'bold',
-    'bold-fraktur': 'bold fraktur',
-    'bold-italic': 'bold italic',
-    'bold-script': 'bold script',
-    'caligraphic': 'calligraphic',
-    'caligraphic-bold': 'calligraphic bold',
-    'double-struck': 'double struck',
-    'double-struck-italic': 'double struck italic',
-    'fraktur': 'fraktur',
-    'fullwidth': 'fullwidth',
-    'italic': 'italic',
-    'monospace': 'monospace',
-    'normal': 'normal',
-    'oldstyle': 'oldstyle',
-    'oldstyle-bold': 'oldstyle bold',
-    'script': 'script',
-    'sans-serif': 'sans serif',
-    'sans-serif-italic': 'sans serif italic',
-    'sans-serif-bold': 'sans serif bold',
-    'sans-serif-bold-italic': 'sans serif bold italic',
-    'unknown': 'unknown'
+    'bold': 'बोल्ड',
+    'bold-fraktur': 'बोल्ड फ़्रेक्टुर',
+    'bold-italic': 'बोल्ड इटैलिक',
+    'bold-script': 'बोल्ड स्क्रिप्ट',
+    'caligraphic': '',
+    'caligraphic-bold': '',
+    'double-struck': 'डबल-स्ट्रक',
+    'double-struck-italic': 'डबल-स्ट्रक इटैलिक',
+    'fraktur': 'फ़्राक्टुर',
+    'fullwidth': 'पूर्णता',
+    'italic': 'इटैलिक',
+    'monospace': 'मोनोपेस',
+    'normal': 'सामान्य',
+    'oldstyle': '',
+    'oldstyle-bold': '',
+    'script': 'लिपि',
+    'sans-serif': 'संस-सेरिफ़',
+    'sans-serif-italic': 'संस-सेरिफ़ बोल्ड',
+    'sans-serif-bold': 'सैंस-सेरिफ़ इटैलिक',
+    'sans-serif-bold-italic': 'संस-सेरिफ़ बोल्ड इटैलिक',
+    'unknown': ''
   },
 
   EMBELLISH: {
     // Embellishments
     // TODO: Here we need specialist combiners!
-    'super': 'super',
-    'sub': 'sub',
-    'circled': 'circled',
-    'parenthesized': 'parenthesized',
-    'period': ['period', sre.Locale.postfixCombiner],
-    'negative-circled': 'black circled',
-    'double-circled': 'double circled',
-    'circled-sans-serif': 'circled sans serif',
-    'negative-circled-sans-serif': 'black circled sans serif',
-    'comma': ['comma', sre.Locale.postfixCombiner],
-    'squared': 'squared',
-    'negative-squared': 'black squared'
+    'super': 'सुपरस्क्रिप्ट',
+    'sub': 'सबस्क्रिप्ट',
+    'circled': 'सर्किल',
+    'parenthesized': 'कोष्ठक',
+    'period': ['पूर्ण विराम', sre.Locale.postfixCombiner],
+    'negative-circled': 'नेगेटिव सर्किल',
+    'double-circled': 'डबल सर्किल',
+    'circled-sans-serif': 'सर्किल सैंस-सेरिफ़',
+    'negative-circled-sans-serif': 'नेगेटिव सर्किल सैंस-सेरिफ़',
+    'comma': ['अल्प विराम', sre.Locale.postfixCombiner],
+    'squared': 'चुकता',
+    'negative-squared': 'नकारात्मक वर्ग'
   },
 
   ROLE: {
@@ -205,39 +205,10 @@ sre.Locale.hi = {
       'वाई', 'जेड'
     ],
     greekSmall: [
-      'नाबला',
-      'आल्फा',
-      'बीटा',
-      'गामा',
-      'डेल्टा',
-      'एप्सिलॉन',
-      'ज़ेटा',
-      'एटा',
-      'थीटा',
-      'आयोटा',
-      'कप्पा',
-      'लैम्ब्डा',
-      'मु',
-      'नू',
-      'ग्जाए',
-      'ओमिक्रॉन',
-      'पाइ',
-      'रो',
-      'अंतिम सिग्मा ',
-      'सिग्मा',
-      'टाउ',
-      'अपसिलं',
-      'फाई',
-      'काई',
-      'साई',
-      'ओमेगा',
-      'आंशिक अवकलन',
-      'ल्यूनेट एप्सिलॉन ',
-      'थीटा ',
-      'कप्पा ',
-      'फाई',
-      'रो ',
-      'पोमेगा'
+      'नाबला', 'आल्फा', 'बीटा', 'गामा', 'डेल्टा', 'एप्सिलॉन', 'ज़ेटा', 'एटा', 'थीटा',
+      'आयोटा', 'कप्पा', 'लैम्ब्डा', 'मु', 'नू', 'ग्जाए', 'ओमिक्रॉन', 'पाइ', 'रो',
+      'अंतिम सिग्मा ', 'सिग्मा', 'टाउ', 'अपसिलं', 'फाई', 'काई', 'साई', 'ओमेगा',
+      'आंशिक अवकलन', 'ल्यूनेट एप्सिलॉन ', 'थीटा ', 'कप्पा ', 'फाई', 'रो ', 'पोमेगा'
       // ,nabla',  // This is here as it is small.
       // 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
       // 'iota', 'kappa', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho',
@@ -246,17 +217,21 @@ sre.Locale.hi = {
       // 'partial differential', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
     ],
     greekCap: [
-      'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
-      'Iota', 'Kappa', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho',
-      'Theta', // Theta symbol
-      'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
+      'आल्फा', 'बीटा', 'गामा', 'डेल्टा', 'एप्सिलॉन', 'ज़ेटा', 'एटा', 'थीटा',
+      'आयोटा', 'कप्पा', 'लैम्ब्डा', 'मु', 'नू', 'ग्जाए', 'ओमिक्रॉन', 'पाइ', 'रो',
+      'थीटा',
+      'सिग्मा', 'टाउ', 'अपसिलं', 'फाई', 'काई', 'साई', 'ओमेगा'
+      // 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
+      // 'Iota', 'Kappa', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho',
+      // 'Theta', // Theta symbol
+      // 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
     ]
   },
 
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-        return n === 0 ? 'zero' : sre.Numbers.hi.numberToWords(n);},
+        return n === 0 ? 'शून्य' : sre.Numbers.hi.numberToWords(n);},
       mathspeak: function(n) {return n.toString();},
       clearspeak: function(n) {return n.toString();}},
     letter: {
