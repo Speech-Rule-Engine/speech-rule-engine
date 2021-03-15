@@ -12,9 +12,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "फेरनहाइट"
       }
     }
   },
@@ -27,9 +27,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "सेल्शियस"
       }
     }
   },
@@ -42,9 +42,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "केल्विन"
       }
     }
   }

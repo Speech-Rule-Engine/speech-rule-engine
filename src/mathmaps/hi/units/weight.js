@@ -11,9 +11,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "ड्राम"
       }
     }
   },
@@ -26,9 +26,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "औंस"
       }
     }
   },
@@ -41,9 +41,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "रतल"
       }
     }
   },
@@ -56,9 +56,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "स्टोन"
       }
     }
   },
@@ -71,9 +71,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "क़्वार्टर"
       }
     }
   },
@@ -86,9 +86,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "हन्ड्रेड्वेट"
       }
     }
   },
@@ -101,9 +101,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "इम्पीरियल टन"
       }
     }
   },
@@ -115,9 +115,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "ग्राम"
       }
     }
   },
@@ -130,9 +130,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "ग्राम"
       }
     }
   },
@@ -144,9 +144,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "माइक्रोग्राम"
       }
     }
   },
@@ -159,9 +159,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "टन"
       }
     }
   }

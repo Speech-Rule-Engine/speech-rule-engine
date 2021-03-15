@@ -11,9 +11,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "सेकंड"
       }
     }
   },
@@ -25,9 +25,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "सेकंड"
       }
     }
   },
@@ -40,9 +40,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "मिनट"
       }
     }
   },
@@ -54,9 +54,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "अंश"
       }
     }
   },
@@ -69,9 +69,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "singular": "घंटे",
+        "dual": "",
+        "default": "घंटा"
       }
     }
   }

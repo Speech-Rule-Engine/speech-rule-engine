@@ -12,9 +12,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "वॉट"
       }
     }
   },
@@ -27,9 +27,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "किलोवॉट घंटा"
       }
     }
   },
@@ -42,9 +42,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "जूल"
       }
     }
   },
@@ -57,9 +57,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "न्यूटन"
       }
     }
   },
@@ -72,9 +72,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "एम्पियर"
       }
     }
   },
@@ -87,9 +87,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "वॉल्ट"
       }
     }
   },
@@ -102,9 +102,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "ओह्म"
       }
     }
   },
@@ -117,9 +117,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "ओह्म"
       }
     }
   }

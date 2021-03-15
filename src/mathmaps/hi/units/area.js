@@ -14,9 +14,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "वर्ग"
       }
     }
   },
@@ -31,9 +31,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "वर्ग इंच"
       }
     }
   },
@@ -46,9 +46,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "वर्ग रॉड"
       }
     }
   },
@@ -61,9 +61,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "singular": "वर्ग फुट",
+        "dual": "",
+        "default": "वर्ग फिट"
       }
     }
   },
@@ -76,9 +76,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "वर्ग गज"
       }
     }
   },
@@ -91,9 +91,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "वर्ग मील"
       }
     }
   },
@@ -108,9 +108,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "एकर"
       }
     }
   },
@@ -122,9 +122,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "हेक्टर"
       }
     }
   }

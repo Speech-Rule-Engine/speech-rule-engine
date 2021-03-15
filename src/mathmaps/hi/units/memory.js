@@ -10,9 +10,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "बिट"
       }
     }
   },
@@ -25,9 +25,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "बाईट"
       }
     }
   },
@@ -39,9 +39,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "किलोबाईट"
       }
     }
   }

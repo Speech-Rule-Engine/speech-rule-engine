@@ -11,9 +11,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "घन"
       }
     }
   },
@@ -26,9 +26,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "घन इंच"
       }
     }
   },
@@ -41,9 +41,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "singular": "घन फुट",
+        "dual": "",
+        "default": "घन फीट"
       }
     }
   },
@@ -56,9 +56,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "घन गज"
       }
     }
   },
@@ -71,9 +71,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "बैरल"
       }
     }
   },
@@ -86,9 +86,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "तरल औंस"
       }
     }
   },
@@ -101,9 +101,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "गेलन"
       }
     }
   },
@@ -116,9 +116,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "पाइंट"
       }
     }
   },
@@ -131,9 +131,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "क़्वार्ट"
       }
     }
   },
@@ -146,9 +146,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "तरल ड्राम"
       }
     }
   },
@@ -163,9 +163,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "बड़ी चम्मच"
       }
     }
   },
@@ -178,9 +178,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "छोटी चम्मच"
       }
     }
   },
@@ -193,9 +193,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "कप"
       }
     }
   },
@@ -208,9 +208,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "घन सेंटीमीटर"
       }
     }
   },
@@ -223,9 +223,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "लीटर"
       }
     }
   }

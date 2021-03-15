@@ -11,9 +11,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "singular": "फुट",
+        "dual": "",
+        "default": "फिट"
       }
     }
   },
@@ -26,9 +26,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "इंच"
       }
     }
   },
@@ -41,9 +41,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "मील"
       }
     }
   },
@@ -56,9 +56,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "गज"
       }
     }
   },
@@ -71,9 +71,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "लिंक"
       }
     }
   },
@@ -86,9 +86,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "रॉड"
       }
     }
   },
@@ -101,9 +101,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "चेन"
       }
     }
   },
@@ -116,9 +116,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "फ़र्लांग"
       }
     }
   },
@@ -130,9 +130,9 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "समुद्री मील"
       }
     }
   },
@@ -145,9 +145,9 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
         "singular": "",
-        "dual": ""
+        "dual": "",
+        "default": "मीटर"
       }
     }
   }
