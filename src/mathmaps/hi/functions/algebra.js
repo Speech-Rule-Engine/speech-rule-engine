@@ -13,9 +13,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "अंश",
-        "singular": "",
-        "dual": ""
+        "default": "अंश"
       }
     }
   },
@@ -27,9 +25,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "सारणिक",
-        "singular": "",
-        "dual": ""
+        "default": "सारणिक"
       }
     }
   },
@@ -41,9 +37,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "आयाम",
-        "singular": "",
-        "dual": ""
+        "default": "आयाम"
       }
     }
   },
@@ -56,9 +50,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "समरूपी",
-        "singular": "",
-        "dual": ""
+        "default": "समरूपी"
       }
     }
   },
@@ -70,9 +62,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "बीज",
-        "singular": "",
-        "dual": ""
+        "default": "बीज"
       }
     }
   },
@@ -85,9 +75,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "अनुरेख",
-        "singular": "",
-        "dual": ""
+        "default": "अनुरेख"
       }
     }
   }

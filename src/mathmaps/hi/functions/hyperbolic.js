@@ -10,9 +10,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "हाइपरबोलिक कोसाइन",
-        "singular": "",
-        "dual": ""
+        "default": "हाइपरबोलिक कोसाइन"
       }
     }
   },
@@ -24,9 +22,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "हाइपरबोलिक कॉट",
-        "singular": "",
-        "dual": ""
+        "default": "हाइपरबोलिक कॉट"
       }
     }
   },
@@ -38,9 +34,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "हाइपरबोलिक कोसेक",
-        "singular": "",
-        "dual": ""
+        "default": "हाइपरबोलिक कोसेक"
       }
     }
   },
@@ -52,9 +46,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "हाइपरबोलिक सेक",
-        "singular": "",
-        "dual": ""
+        "default": "हाइपरबोलिक सेक"
       }
     }
   },
@@ -66,9 +58,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "हाइपरबोलिक साइन",
-        "singular": "",
-        "dual": ""
+        "default": "हाइपरबोलिक साइन"
       }
     }
   },
@@ -80,9 +70,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "हाइपरबोलिक टेन",
-        "singular": "",
-        "dual": ""
+        "default": "हाइपरबोलिक टेन"
       }
     }
   },
@@ -95,9 +83,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम हाइपरबोलिक कोसाइन",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम हाइपरबोलिक कोसाइन"
       }
     }
   },
@@ -110,9 +96,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम हाइपरबोलिक कॉट",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम हाइपरबोलिक कॉट"
       }
     }
   },
@@ -125,9 +109,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम हाइपरबोलिक कोसेक",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम हाइपरबोलिक कोसेक"
       }
     }
   },
@@ -140,9 +122,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम हाइपरबोलिक सेक",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम हाइपरबोलिक सेक"
       }
     }
   },
@@ -155,9 +135,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम हाइपरबोलिक साइन",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम हाइपरबोलिक साइन"
       }
     }
   },
@@ -170,9 +148,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम हाइपरबोलिक टेन",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम हाइपरबोलिक टेन"
       }
     }
   }

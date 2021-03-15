@@ -11,8 +11,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "ड्राम"
       }
     }
@@ -26,8 +24,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "औंस"
       }
     }
@@ -41,8 +37,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "रतल"
       }
     }
@@ -56,8 +50,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "स्टोन"
       }
     }
@@ -71,8 +63,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "क़्वार्टर"
       }
     }
@@ -86,8 +76,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "हन्ड्रेड्वेट"
       }
     }
@@ -101,8 +89,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "इम्पीरियल टन"
       }
     }
@@ -115,8 +101,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "ग्राम"
       }
     }
@@ -130,8 +114,6 @@
     "si": true,
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "ग्राम"
       }
     }
@@ -144,8 +126,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "माइक्रोग्राम"
       }
     }
@@ -159,8 +139,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "टन"
       }
     }

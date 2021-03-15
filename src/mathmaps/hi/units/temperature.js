@@ -12,8 +12,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "फेरनहाइट"
       }
     }
@@ -27,8 +25,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "सेल्शियस"
       }
     }
@@ -42,8 +38,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "केल्विन"
       }
     }

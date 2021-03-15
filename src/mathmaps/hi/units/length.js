@@ -12,7 +12,6 @@
     "mappings": {
       "default": {
         "singular": "फुट",
-        "dual": "",
         "default": "फिट"
       }
     }
@@ -26,8 +25,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "इंच"
       }
     }
@@ -41,8 +38,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "मील"
       }
     }
@@ -56,8 +51,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "गज"
       }
     }
@@ -71,8 +64,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "लिंक"
       }
     }
@@ -86,8 +77,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "रॉड"
       }
     }
@@ -101,8 +90,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "चेन"
       }
     }
@@ -116,8 +103,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "फ़र्लांग"
       }
     }
@@ -130,8 +115,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "समुद्री मील"
       }
     }
@@ -145,8 +128,6 @@
     "si": true,
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "मीटर"
       }
     }

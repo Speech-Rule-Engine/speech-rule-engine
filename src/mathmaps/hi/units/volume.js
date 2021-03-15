@@ -11,8 +11,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "घन"
       }
     }
@@ -26,8 +24,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "घन इंच"
       }
     }
@@ -42,7 +38,6 @@
     "mappings": {
       "default": {
         "singular": "घन फुट",
-        "dual": "",
         "default": "घन फीट"
       }
     }
@@ -56,8 +51,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "घन गज"
       }
     }
@@ -71,8 +64,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "बैरल"
       }
     }
@@ -86,8 +77,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "तरल औंस"
       }
     }
@@ -101,8 +90,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "गेलन"
       }
     }
@@ -116,8 +103,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "पाइंट"
       }
     }
@@ -131,8 +116,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "क़्वार्ट"
       }
     }
@@ -146,8 +129,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "तरल ड्राम"
       }
     }
@@ -163,8 +144,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "बड़ी चम्मच"
       }
     }
@@ -178,8 +157,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "छोटी चम्मच"
       }
     }
@@ -193,8 +170,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "कप"
       }
     }
@@ -208,8 +183,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "घन सेंटीमीटर"
       }
     }
@@ -223,8 +196,6 @@
     "si": true,
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "लीटर"
       }
     }

@@ -11,9 +11,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "कोस",
-        "singular": "",
-        "dual": ""
+        "default": "कोस"
       }
     }
   },
@@ -25,9 +23,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "कॉट",
-        "singular": "",
-        "dual": ""
+        "default": "कॉट"
       }
     }
   },
@@ -39,9 +35,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "कोसेक",
-        "singular": "",
-        "dual": ""
+        "default": "कोसेक"
       }
     }
   },
@@ -53,9 +47,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "सेक",
-        "singular": "",
-        "dual": ""
+        "default": "सेक"
       }
     }
   },
@@ -68,9 +60,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "साइन",
-        "singular": "",
-        "dual": ""
+        "default": "साइन"
       }
     }
   },
@@ -82,9 +72,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "टेन",
-        "singular": "",
-        "dual": ""
+        "default": "टेन"
       }
     }
   },
@@ -96,9 +84,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम कोस",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम कोस"
       }
     }
   },
@@ -110,9 +96,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम कॉट",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम कॉट"
       }
     }
   },
@@ -124,9 +108,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम कोसेक",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम कोसेक"
       }
     }
   },
@@ -138,9 +120,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम सेक",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम सेक"
       }
     }
   },
@@ -152,9 +132,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम साइन",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम साइन"
       }
     }
   },
@@ -166,9 +144,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रतिलोम टेन",
-        "singular": "",
-        "dual": ""
+        "default": "प्रतिलोम टेन"
       }
     }
   }

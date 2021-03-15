@@ -10,9 +10,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "लघुगणक",
-        "singular": "",
-        "dual": ""
+        "default": "लघुगणक"
       }
     }
   },
@@ -24,9 +22,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्राकृतिक लघुगणक",
-        "singular": "",
-        "dual": ""
+        "default": "प्राकृतिक लघुगणक"
       }
     }
   },
@@ -38,9 +34,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "दस आधारित लघुगणक",
-        "singular": "",
-        "dual": ""
+        "default": "दस आधारित लघुगणक"
       }
     }
   },
@@ -53,9 +47,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "चरघातांकी",
-        "singular": "",
-        "dual": ""
+        "default": "चरघातांकी"
       }
     }
   },
@@ -67,9 +59,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "महत्तम समापवर्तक",
-        "singular": "",
-        "dual": ""
+        "default": "महत्तम समापवर्तक"
       }
     }
   },
@@ -81,9 +71,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "लघुत्तम समापवर्त्य",
-        "singular": "",
-        "dual": ""
+        "default": "लघुत्तम समापवर्त्य"
       }
     }
   },
@@ -95,9 +83,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "तर्क (Argument)",
-        "singular": "",
-        "dual": ""
+        "default": "तर्क (Argument)"
       }
     }
   },
@@ -109,9 +95,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "काल्पनिक (Imaginary)",
-        "singular": "",
-        "dual": ""
+        "default": "काल्पनिक (Imaginary)"
       }
     }
   },
@@ -123,9 +107,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "वास्तविक (Real)",
-        "singular": "",
-        "dual": ""
+        "default": "वास्तविक (Real)"
       }
     }
   },
@@ -137,9 +119,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "अधिकतम निम्न परिबद्ध",
-        "singular": "",
-        "dual": ""
+        "default": "अधिकतम निम्न परिबद्ध"
       }
     }
   },
@@ -151,9 +131,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "सीमा",
-        "singular": "",
-        "dual": ""
+        "default": "सीमा"
       }
     }
   },
@@ -166,9 +144,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "निम्न सीमा",
-        "singular": "",
-        "dual": ""
+        "default": "निम्न सीमा"
       }
     }
   },
@@ -181,9 +157,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "उच्च सीमा",
-        "singular": "",
-        "dual": ""
+        "default": "उच्च सीमा"
       }
     }
   },
@@ -195,9 +169,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "महत्तम",
-        "singular": "",
-        "dual": ""
+        "default": "महत्तम"
       }
     }
   },
@@ -209,9 +181,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "न्यूनतम",
-        "singular": "",
-        "dual": ""
+        "default": "न्यूनतम"
       }
     }
   },
@@ -223,9 +193,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "लघुत्तम उच्च परिबद्ध",
-        "singular": "",
-        "dual": ""
+        "default": "लघुत्तम उच्च परिबद्ध"
       }
     }
   },
@@ -238,9 +206,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "सह सीमा",
-        "singular": "",
-        "dual": ""
+        "default": "सह सीमा"
       }
     }
   },
@@ -253,9 +219,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "व्युत्क्रम सीमा",
-        "singular": "",
-        "dual": ""
+        "default": "व्युत्क्रम सीमा"
       }
     }
   },
@@ -267,9 +231,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "मापांक (modulus)",
-        "singular": "",
-        "dual": ""
+        "default": "मापांक (modulus)"
       }
     }
   },
@@ -281,9 +243,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "प्रायिकता",
-        "singular": "",
-        "dual": ""
+        "default": "प्रायिकता"
       }
     }
   }

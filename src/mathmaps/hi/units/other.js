@@ -13,8 +13,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "डज़न"
       }
     }

@@ -7,9 +7,7 @@
     "key": "$",
     "mappings": {
       "default": {
-        "default": "डॉलर",
-        "singular": "",
-        "dual": ""
+        "default": "डॉलर"
       }
     },
     "names": [
@@ -25,9 +23,7 @@
     "key": "£",
     "mappings": {
       "default": {
-        "default": "पाउंड",
-        "singular": "",
-        "dual": ""
+        "default": "पाउंड"
       }
     },
     "names": [
@@ -41,9 +37,7 @@
     "key": "¥",
     "mappings": {
       "default": {
-        "default": "येन",
-        "singular": "",
-        "dual": ""
+        "default": "येन"
       }
     },
     "names": [
@@ -57,9 +51,7 @@
     "key": "€",
     "mappings": {
       "default": {
-        "default": "यूरो",
-        "singular": "",
-        "dual": ""
+        "default": "यूरो"
       }
     },
     "names": [
@@ -72,9 +64,7 @@
     "key": "₡",
     "mappings": {
       "default": {
-        "default": "कोलोन",
-        "singular": "",
-        "dual": ""
+        "default": "कोलोन"
       }
     },
     "names": [
@@ -87,9 +77,7 @@
     "key": "₢",
     "mappings": {
       "default": {
-        "default": "क्रुज़ीरू",
-        "singular": "",
-        "dual": ""
+        "default": "क्रुज़ीरू"
       }
     },
     "names": [
@@ -101,9 +89,7 @@
     "key": "₣",
     "mappings": {
       "default": {
-        "default": "फ्रांक",
-        "singular": "",
-        "dual": ""
+        "default": "फ्रांक"
       }
     },
     "names": [
@@ -115,9 +101,7 @@
     "key": "₤",
     "mappings": {
       "default": {
-        "default": "लीरा",
-        "singular": "",
-        "dual": ""
+        "default": "लीरा"
       }
     },
     "names": [
@@ -129,9 +113,7 @@
     "key": "₥",
     "mappings": {
       "default": {
-        "default": "मिल",
-        "singular": "",
-        "dual": ""
+        "default": "मिल"
       }
     },
     "names": [
@@ -143,9 +125,7 @@
     "key": "₦",
     "mappings": {
       "default": {
-        "default": "नाइरा",
-        "singular": "",
-        "dual": ""
+        "default": "नाइरा"
       }
     },
     "names": [
@@ -158,9 +138,7 @@
     "key": "₧",
     "mappings": {
       "default": {
-        "default": "पेसेता",
-        "singular": "",
-        "dual": ""
+        "default": "पेसेता"
       }
     },
     "names": [
@@ -173,8 +151,7 @@
     "mappings": {
       "default": {
         "default": "रूपए",
-        "singular": "रूपया",
-        "dual": ""
+        "singular": "रूपया"
       }
     },
     "names": [
@@ -191,9 +168,7 @@
     "key": "₩",
     "mappings": {
       "default": {
-        "default": "वॉन",
-        "singular": "",
-        "dual": ""
+        "default": "वॉन"
       }
     },
     "names": [
@@ -207,9 +182,7 @@
     "key": "₪",
     "mappings": {
       "default": {
-        "default": "शेकेल",
-        "singular": "",
-        "dual": ""
+        "default": "शेकेल"
       }
     },
     "names": [
@@ -221,9 +194,7 @@
     "key": "₫",
     "mappings": {
       "default": {
-        "default": "दोंग",
-        "singular": "",
-        "dual": ""
+        "default": "दोंग"
       }
     },
     "names": [
@@ -235,9 +206,7 @@
     "key": "₭",
     "mappings": {
       "default": {
-        "default": "किप",
-        "singular": "",
-        "dual": ""
+        "default": "किप"
       }
     },
     "names": [
@@ -249,9 +218,7 @@
     "key": "₮",
     "mappings": {
       "default": {
-        "default": "तुग्रिक",
-        "singular": "",
-        "dual": ""
+        "default": "तुग्रिक"
       }
     },
     "names": [
@@ -263,9 +230,7 @@
     "key": "₯",
     "mappings": {
       "default": {
-        "default": "द्राख़्मा",
-        "singular": "",
-        "dual": ""
+        "default": "द्राख़्मा"
       }
     },
     "names": [
@@ -277,9 +242,7 @@
     "key": "₰",
     "mappings": {
       "default": {
-        "default": "फेनीग",
-        "singular": "",
-        "dual": ""
+        "default": "फेनीग"
       }
     },
     "names": [
@@ -291,9 +254,7 @@
     "key": "₱",
     "mappings": {
       "default": {
-        "default": "पेसो",
-        "singular": "",
-        "dual": ""
+        "default": "पेसो"
       }
     },
     "names": [
@@ -305,9 +266,7 @@
     "key": "₲",
     "mappings": {
       "default": {
-        "default": "ग्वारानी",
-        "singular": "",
-        "dual": ""
+        "default": "ग्वारानी"
       }
     },
     "names": [
@@ -319,9 +278,7 @@
     "key": "₳",
     "mappings": {
       "default": {
-        "default": "ऑस्ट्राल",
-        "singular": "",
-        "dual": ""
+        "default": "ऑस्ट्राल"
       }
     },
     "names": [
@@ -333,9 +290,7 @@
     "key": "₴",
     "mappings": {
       "default": {
-        "default": "ह्रीविन्या",
-        "singular": "",
-        "dual": ""
+        "default": "ह्रीविन्या"
       }
     },
     "names": [
@@ -348,9 +303,7 @@
     "key": "₵",
     "mappings": {
       "default": {
-        "default": "सीडी",
-        "singular": "",
-        "dual": ""
+        "default": "सीडी"
       }
     },
     "names": [
@@ -363,9 +316,7 @@
     "key": "₶",
     "mappings": {
       "default": {
-        "default": "लिव्रे तूर्नवा",
-        "singular": "",
-        "dual": ""
+        "default": "लिव्रे तूर्नवा"
       }
     },
     "names": [
@@ -377,9 +328,7 @@
     "key": "₷",
     "mappings": {
       "default": {
-        "default": "स्पेसमीलो",
-        "singular": "",
-        "dual": ""
+        "default": "स्पेसमीलो"
       }
     },
     "names": [
@@ -391,9 +340,7 @@
     "key": "₸",
     "mappings": {
       "default": {
-        "default": "तेंगे",
-        "singular": "",
-        "dual": ""
+        "default": "तेंगे"
       }
     },
     "names": [
@@ -406,9 +353,7 @@
     "key": "₺",
     "mappings": {
       "default": {
-        "default": "तुर्की लीरा",
-        "singular": "",
-        "dual": ""
+        "default": "तुर्की लीरा"
       }
     },
     "names": [
@@ -421,9 +366,7 @@
     "key": "元",
     "mappings": {
       "default": {
-        "default": "युआन",
-        "singular": "",
-        "dual": ""
+        "default": "युआन"
       }
     },
     "names": [
@@ -435,9 +378,7 @@
     "key": "¢",
     "mappings": {
       "default": {
-        "default": "सेंट",
-        "singular": "",
-        "dual": ""
+        "default": "सेंट"
       }
     },
     "names": [

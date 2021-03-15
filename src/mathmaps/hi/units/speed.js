@@ -11,8 +11,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "नॉट"
       }
     }
@@ -25,8 +23,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "मील प्रति घंटा"
       }
     }
@@ -39,8 +35,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "परिक्रमण प्रति मिनट"
       }
     }
@@ -53,8 +47,6 @@
     ],
     "mappings": {
       "default": {
-        "singular": "",
-        "dual": "",
         "default": "किलोमीटर प्रति घंटा"
       }
     }
