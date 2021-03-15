@@ -61,8 +61,8 @@
     ],
     "mappings": {
       "default": {
-        "singular": "घंटे",
-        "default": "घंटा"
+        "default": "घंटे",
+        "plural": "घंटा"
       }
     }
   }

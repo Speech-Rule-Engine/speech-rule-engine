@@ -37,8 +37,8 @@
     ],
     "mappings": {
       "default": {
-        "singular": "घन फुट",
-        "default": "घन फीट"
+        "default": "घन फुट",
+        "plural": "घन फीट"
       }
     }
   },

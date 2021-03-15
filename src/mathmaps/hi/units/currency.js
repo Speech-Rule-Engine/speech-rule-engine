@@ -150,8 +150,8 @@
     "key": "₨",
     "mappings": {
       "default": {
-        "default": "रूपए",
-        "singular": "रूपया"
+        "default": "रूपया",
+        "plural": "रूपए"
       }
     },
     "names": [

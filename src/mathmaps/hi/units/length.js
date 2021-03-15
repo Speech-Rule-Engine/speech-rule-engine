@@ -11,8 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "singular": "फुट",
-        "default": "फिट"
+        "default": "फुट",
+        "plural": "फिट"
       }
     }
   },

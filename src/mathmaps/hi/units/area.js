@@ -55,8 +55,8 @@
     ],
     "mappings": {
       "default": {
-        "singular": "वर्ग फुट",
-        "default": "वर्ग फिट"
+        "default": "वर्ग फुट",
+        "plural": "वर्ग फिट"
       }
     }
   },

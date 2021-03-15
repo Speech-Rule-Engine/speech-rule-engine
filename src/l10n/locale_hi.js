@@ -179,16 +179,11 @@ sre.Locale.hi = {
   },
 
   SI: function(prefix, unit) {
-    var abbr = {
-      'megaohm': 'megohm',
-      'kiloohm': 'kilohm'
-    };
-    var si = prefix + unit;
-    return abbr[si] || si;
+    return prefix + unit;
   },
 
   PLURAL: function(unit) {
-    return (/.*s$/.test(unit)) ? unit : unit + 's';
+    return unit;
   },
 
   NUMBERS: sre.Numbers.hi.NUMBERS,
