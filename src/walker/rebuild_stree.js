@@ -121,7 +121,7 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
     return snode;
   }
   if (content.length > 0) {
-    var fcontent = sre.WalkerUtil.getBySemanticId(node, content[0]);
+    var fcontent = sre.WalkerUtil.getBySemanticId(this.mathml, content[0]);
     if (fcontent) {
       var operator = sre.WalkerUtil.splitAttribute(
           sre.WalkerUtil.getAttribute(
@@ -132,7 +132,7 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
     }
   }
   var setParent = function(n) {
-    var mml = sre.WalkerUtil.getBySemanticId(node, n);
+    var mml = sre.WalkerUtil.getBySemanticId(this.mathml, n);
     var sn = this.assembleTree(mml);
     sn.parent = snode;
     return sn;

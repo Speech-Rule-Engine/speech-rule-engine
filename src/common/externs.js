@@ -19,6 +19,7 @@ readline.createInterface = function() {
 };
 
 var commander;
+commander.opts;
 commander.version;
 commander.option;
 commander.parse;
