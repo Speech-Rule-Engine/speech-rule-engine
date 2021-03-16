@@ -15,7 +15,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠹"
+        "default": "⠄⠄"
       }
     },
     "key": "0022"
@@ -170,7 +170,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "⠸⠦"
+        "default": "⠿"
       }
     },
     "key": "003F"
@@ -197,7 +197,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "⡘"
+        "default": "⠸⠣"
       }
     },
     "key": "005E"
@@ -260,7 +260,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "⠼"
+        "default": "⠈⠇"
       }
     },
     "key": "00A3"
@@ -278,7 +278,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠽"
       }
     },
     "key": "00A5"
@@ -287,7 +287,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠸⠳"
+        "default": ""
       }
     },
     "key": "00A6"
@@ -323,7 +323,7 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠸⠰⠁"
       }
     },
     "key": "00AA"
@@ -332,7 +332,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠅⠈⠐⠅⠻"
       }
     },
     "key": "00AB"
@@ -368,7 +368,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠘⠨⠡"
+        "default": "⠨⠡"
       }
     },
     "key": "00B0"
@@ -404,7 +404,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠠⠏"
       }
     },
     "key": "00B6"
@@ -1772,7 +1772,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠰⠆⠀"
       }
     },
     "key": "2237"
@@ -1781,7 +1781,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠨⠤"
       }
     },
     "key": "2238"
@@ -1862,7 +1862,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠌⠈⠱"
       }
     },
     "key": "2241"
@@ -1871,7 +1871,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠱⠈⠱"
       }
     },
     "key": "2242"
@@ -1880,7 +1880,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠱⠱"
       }
     },
     "key": "2243"
@@ -1889,7 +1889,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠌⠈⠱⠱"
       }
     },
     "key": "2244"
@@ -1898,7 +1898,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠈⠱⠈⠱⠀"
+        "default": "⠈⠱⠨⠅"
       }
     },
     "key": "2245"
@@ -1907,7 +1907,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠱⠌⠨⠅"
       }
     },
     "key": "2246"
@@ -1916,7 +1916,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠌⠈⠱⠨⠅"
       }
     },
     "key": "2247"
@@ -1925,7 +1925,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠱⠈⠱"
       }
     },
     "key": "2248"
@@ -1934,7 +1934,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠌⠈⠱⠈⠱"
       }
     },
     "key": "2249"
@@ -1943,7 +1943,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠱⠈⠱⠱"
       }
     },
     "key": "224A"
@@ -1979,7 +1979,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠈⠣⠠⠣"
       }
     },
     "key": "224E"
@@ -1997,7 +1997,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠣⠡⠻"
       }
     },
     "key": "2250"
@@ -2006,7 +2006,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠩⠡⠣⠡⠻"
       }
     },
     "key": "2251"
@@ -2060,7 +2060,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠣⠨⠡⠻"
       }
     },
     "key": "2257"
@@ -2069,7 +2069,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠣⠫⠁⠻"
       }
     },
     "key": "2258"
@@ -2078,7 +2078,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠣⠸⠣⠻"
       }
     },
     "key": "2259"
@@ -2087,7 +2087,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠣⠸⠩⠻"
       }
     },
     "key": "225A"
@@ -2096,7 +2096,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠣⠫⠸⠎⠻"
       }
     },
     "key": "225B"
@@ -2105,7 +2105,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠣⠫⠞⠻"
       }
     },
     "key": "225C"
@@ -2114,7 +2114,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠣⠙⠑⠋⠻"
       }
     },
     "key": "225D"
@@ -2123,7 +2123,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠣⠍⠻"
       }
     },
     "key": "225E"
@@ -2132,7 +2132,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠐⠨⠅⠣⠸⠦⠻"
       }
     },
     "key": "225F"
@@ -2483,7 +2483,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠸⠀⠅⠱"
+        "default": "⠸⠐⠅⠱"
       }
     },
     "key": "2286"
@@ -2492,7 +2492,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠨⠂⠱⠀"
+        "default": "⠸⠨⠂⠱⠀"
       }
     },
     "key": "2287"
@@ -2501,7 +2501,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠌⠀⠅⠱⠀"
+        "default": "⠌⠸⠐⠅⠱"
       }
     },
     "key": "2288"
@@ -2510,7 +2510,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠌⠨⠂⠱⠀"
+        "default": "⠌⠸⠨⠂⠱⠀"
       }
     },
     "key": "2289"
