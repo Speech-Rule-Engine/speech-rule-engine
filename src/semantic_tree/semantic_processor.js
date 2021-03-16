@@ -296,8 +296,7 @@ sre.SemanticProcessor.prototype.text = function(leaf, type) {
     return leaf;
   }
   if (type === 'MSPACE' || leaf.textContent.match(/^\s*$/)) {
-    leaf.type = sre.SemanticAttr.Type.PUNCTUATION;
-    leaf.role = sre.SemanticAttr.Role.SPACE;
+    leaf.role = sre.SemanticAttr.Role.SEPARATOR;
     return leaf;
   }
   // TODO (simons): Process single element in text. E.g., check if a text
@@ -435,7 +434,11 @@ sre.SemanticProcessor.prototype.getTextInRow_ = function(nodes) {
   }
   var result = [];
   var nextComp = partition.comp[0];
-  // TODO: Improve texts with punctuation and spaces!
+  // TODO: Properly collate punctuation: Add start and end punctuation to become
+  //       the punctuation content of the punctuated node. Consider spaces
+  //       separately.  This currently introduces too many invisible commas.  We
+  //       should also ensure that at least one proper text element exists!  Or
+  //       that spaces are text elements.
   if (nextComp.length > 0) {
     result.push(sre.SemanticProcessor.getInstance().row(nextComp));
   }
@@ -1151,13 +1154,11 @@ sre.SemanticProcessor.prototype.getSpacesInRow_ = function(nodes) {
   });
   // Ignore spaces at start and end.
   while (partition.rel.length && !partition.comp[0].length) {
-    console.log(10);
     partition.rel.shift();
     partition.comp.shift();
   }
   while (partition.rel.length &&
          !partition.comp[partition.comp.length - 1].length) {
-    console.log(11);
     partition.rel.pop();
     partition.comp.pop();
   }
