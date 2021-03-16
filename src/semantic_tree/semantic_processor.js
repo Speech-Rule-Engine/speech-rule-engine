@@ -282,18 +282,23 @@ sre.SemanticProcessor.prototype.postfixNode_ = function(node, postfixes) {
 
 /**
  * Create an text node, keeping string notation correct.
- * @param {sre.SemanticNode} leaf The text node.
+ * @param {!sre.SemanticNode} leaf The text node.
  * @param {string} type The type of the text node.
  * @return {!sre.SemanticNode} The new semantic text node.
  */
 sre.SemanticProcessor.prototype.text = function(leaf, type) {
   // TODO (simons): Here check if there is already a type or if we can compute
   // an interesting number role. Than use this.
+  sre.SemanticProcessor.exprFont_(leaf);
   leaf.type = sre.SemanticAttr.Type.TEXT;
   if (type === 'MS') {
     leaf.role = sre.SemanticAttr.Role.STRING;
+    return leaf;
   }
-  sre.SemanticProcessor.exprFont_(leaf);
+  if (type === 'MSPACE' || leaf.textContent.match(/^\s*$/)) {
+    leaf.role = sre.SemanticAttr.Role.SEPARATOR;
+    return leaf;
+  }
   // TODO (simons): Process single element in text. E.g., check if a text
   //      element represents a function or a single letter, number, etc.
   return leaf;
@@ -322,6 +327,7 @@ sre.SemanticProcessor.prototype.row = function(nodes) {
   nodes = sre.SemanticProcessor.getInstance().getPunctuationInRow_(nodes);
   nodes = sre.SemanticProcessor.getInstance().getTextInRow_(nodes);
   nodes = sre.SemanticProcessor.getInstance().getFunctionsInRow_(nodes);
+  nodes = sre.SemanticProcessor.getInstance().getSpacesInRow_(nodes);
   return sre.SemanticProcessor.getInstance().relationsInRow_(nodes);
 };
 
@@ -428,6 +434,11 @@ sre.SemanticProcessor.prototype.getTextInRow_ = function(nodes) {
   }
   var result = [];
   var nextComp = partition.comp[0];
+  // TODO: Properly collate punctuation: Add start and end punctuation to become
+  //       the punctuation content of the punctuated node. Consider spaces
+  //       separately.  This currently introduces too many invisible commas.  We
+  //       should also ensure that at least one proper text element exists!  Or
+  //       that spaces are text elements.
   if (nextComp.length > 0) {
     result.push(sre.SemanticProcessor.getInstance().row(nextComp));
   }
@@ -1133,6 +1144,46 @@ sre.SemanticProcessor.prototype.setExtension_ = function(set) {
 };
 
 
+sre.SemanticProcessor.prototype.getSpacesInRow_ = function(nodes) {
+  if (nodes.length <= 1) {
+    return nodes;
+  }
+  var partition = sre.SemanticUtil.partitionNodes(nodes, function(x) {
+    return sre.SemanticPred.isPunctuation(x) &&
+      x.role === sre.SemanticAttr.Role.SPACE;
+  });
+  // Ignore spaces at start and end.
+  while (partition.rel.length && !partition.comp[0].length) {
+    partition.rel.shift();
+    partition.comp.shift();
+  }
+  while (partition.rel.length &&
+         !partition.comp[partition.comp.length - 1].length) {
+    partition.rel.pop();
+    partition.comp.pop();
+  }
+  if (partition.rel.length === 0) {
+    return partition.comp[0];
+  }
+  var newNodes = [];
+  var firstComp = partition.comp.shift();
+  if (firstComp.length > 0) {
+    newNodes.push(sre.SemanticProcessor.getInstance().row(firstComp));
+  }
+  var relCounter = 0;
+  while (partition.comp.length > 0) {
+    newNodes.push(partition.rel[relCounter++]);
+    firstComp = partition.comp.shift();
+    if (firstComp.length > 0) {
+      newNodes.push(sre.SemanticProcessor.getInstance().row(firstComp));
+    }
+  }
+  return [
+    sre.SemanticProcessor.getInstance().punctuatedNode_(newNodes, partition.rel)
+  ];
+};
+
+
 /**
  * Combines sequences of punctuated expressions in a list of nodes.
  * @param {!Array.<sre.SemanticNode>} nodes The list of nodes.
@@ -1155,7 +1206,8 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
   // Partition with improved ellipses handling.
   var partition = sre.SemanticUtil.partitionNodes(
       nodes, function(x) {
-        if (!sre.SemanticPred.isPunctuation(x)) {
+        if (!sre.SemanticPred.isPunctuation(x) ||
+            x.role === sre.SemanticAttr.Role.SPACE) {
           return false;
         }
         if (sre.SemanticPred.isPunctuation(x) &&
@@ -1206,6 +1258,8 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
 };
 
 
+// TODO: Refine roles to reflect same roles. Find sequences of punctuation
+// elements and separate those out or at least rewrite ellipses.
 /**
  * Create a punctuated node.
  * @param {!Array.<!sre.SemanticNode>} nodes List of all nodes separated
@@ -1236,6 +1290,9 @@ sre.SemanticProcessor.prototype.punctuatedNode_ = function(
   } else if (punctuations.every(
       sre.SemanticPred.isAttribute('role', 'DUMMY'))) {
     newNode.role = sre.SemanticAttr.Role.TEXT;
+  } else if (punctuations.every(
+    sre.SemanticPred.isAttribute('role', 'SPACE'))) {
+    newNode.role = sre.SemanticAttr.Role.SPACE;
   } else {
     newNode.role = sre.SemanticAttr.Role.SEQUENCE;
   }
@@ -1615,7 +1672,7 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
       return components.rest;
       break;
     case 'prefix':
-      if (rest[0] && rest[0].type === sre.SemanticAttr.Type.FENCED) {
+    if (rest[0] && rest[0].type === sre.SemanticAttr.Type.FENCED) {
         // TODO: (MS2.3|simons) This needs to be made more robust!  Currently we
         //       reset to eliminate sets. Once we include bra-ket heuristics,
         //       this might be incorrect.
@@ -1631,7 +1688,12 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
       }
       var partition = sre.SemanticUtil.sliceNodes(
           rest, sre.SemanticPred.isPrefixFunctionBoundary);
-      if (!partition.head.length) {
+    if (!partition.head.length
+        // ignore leading spaces. (always?)
+         || partition.head.every(function(x) {
+          return sre.SemanticPred.isPunctuation(x) &&
+            x.role === sre.SemanticAttr.Role.SPACE; })
+       ) {
         if (!partition.div ||
             !sre.SemanticPred.isAttribute('type', 'APPL')(partition.div)) {
           rest.unshift(func);

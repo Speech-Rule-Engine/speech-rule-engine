@@ -856,8 +856,7 @@ sre.EnrichMathml.getInnerNode = function(node) {
     return node;
   }
   var remainder = children.filter(function(child) {
-    return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
-        !sre.EnrichMathml.isIgnorable_(child);
+    return !sre.EnrichMathml.isIgnorable_(child);
   });
   var result = [];
   for (var i = 0, remain; remain = remainder[i]; i++) {
