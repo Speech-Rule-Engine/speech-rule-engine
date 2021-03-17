@@ -296,7 +296,7 @@ sre.SemanticProcessor.prototype.text = function(leaf, type) {
     return leaf;
   }
   if (type === 'MSPACE' || leaf.textContent.match(/^\s*$/)) {
-    leaf.role = sre.SemanticAttr.Role.SEPARATOR;
+    leaf.role = sre.SemanticAttr.Role.SPACE;
     return leaf;
   }
   // TODO (simons): Process single element in text. E.g., check if a text
@@ -327,7 +327,7 @@ sre.SemanticProcessor.prototype.row = function(nodes) {
   nodes = sre.SemanticProcessor.getInstance().getPunctuationInRow_(nodes);
   nodes = sre.SemanticProcessor.getInstance().getTextInRow_(nodes);
   nodes = sre.SemanticProcessor.getInstance().getFunctionsInRow_(nodes);
-  nodes = sre.SemanticProcessor.getInstance().getSpacesInRow_(nodes);
+  // nodes = sre.SemanticProcessor.getInstance().getSpacesInRow_(nodes);
   return sre.SemanticProcessor.getInstance().relationsInRow_(nodes);
 };
 
@@ -1153,15 +1153,15 @@ sre.SemanticProcessor.prototype.getSpacesInRow_ = function(nodes) {
       x.role === sre.SemanticAttr.Role.SPACE;
   });
   // Ignore spaces at start and end.
-  while (partition.rel.length && !partition.comp[0].length) {
-    partition.rel.shift();
-    partition.comp.shift();
-  }
-  while (partition.rel.length &&
-         !partition.comp[partition.comp.length - 1].length) {
-    partition.rel.pop();
-    partition.comp.pop();
-  }
+  // while (partition.rel.length && !partition.comp[0].length) {
+  //   partition.rel.shift();
+  //   partition.comp.shift();
+  // }
+  // while (partition.rel.length &&
+  //        !partition.comp[partition.comp.length - 1].length) {
+  //   partition.rel.pop();
+  //   partition.comp.pop();
+  // }
   if (partition.rel.length === 0) {
     return partition.comp[0];
   }
@@ -1206,10 +1206,13 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
   // Partition with improved ellipses handling.
   var partition = sre.SemanticUtil.partitionNodes(
       nodes, function(x) {
-        if (!sre.SemanticPred.isPunctuation(x) ||
-            x.role === sre.SemanticAttr.Role.SPACE) {
+        if (!sre.SemanticPred.isPunctuation(x)) {
           return false;
         }
+        // if (!sre.SemanticPred.isPunctuation(x) ||
+        //     x.role === sre.SemanticAttr.Role.SPACE) {
+        //   return false;
+        // }
         if (sre.SemanticPred.isPunctuation(x) &&
             !sre.SemanticPred.isAttribute('role', 'ELLIPSIS')(x)) {
           return true;
@@ -1689,10 +1692,10 @@ sre.SemanticProcessor.prototype.getFunctionArgs_ = function(
       var partition = sre.SemanticUtil.sliceNodes(
           rest, sre.SemanticPred.isPrefixFunctionBoundary);
     if (!partition.head.length
-        // ignore leading spaces. (always?)
-         || partition.head.every(function(x) {
-          return sre.SemanticPred.isPunctuation(x) &&
-            x.role === sre.SemanticAttr.Role.SPACE; })
+        // // ignore leading spaces. (always?)
+        //  || partition.head.every(function(x) {
+        //   return sre.SemanticPred.isPunctuation(x) &&
+        //     x.role === sre.SemanticAttr.Role.SPACE; })
        ) {
         if (!partition.div ||
             !sre.SemanticPred.isAttribute('type', 'APPL')(partition.div)) {
