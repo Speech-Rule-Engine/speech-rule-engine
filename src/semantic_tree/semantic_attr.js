@@ -1540,7 +1540,6 @@ sre.SemanticAttr.Role = {
   CLOSEFENCE: 'closefence',
   APPLICATION: 'application', // Function Application.
   DUMMY: 'dummy', // A dummy separator for text.
-  SPACE: 'space',
 
   // Identifier that describes a unit.
   UNIT: 'unit',
@@ -1592,7 +1591,7 @@ sre.SemanticAttr.Role = {
 
   // Text.
   STRING: 'string',
-  SEPARATOR: 'separator',
+  SPACE: 'space',
 
   // Punctuated elements.
   SEQUENCE: 'sequence',
