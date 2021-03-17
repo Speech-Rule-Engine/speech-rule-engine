@@ -167,9 +167,7 @@ sre.SemanticPred.isIntegralDxBoundarySingle = function(node) {
  */
 sre.SemanticPred.isGeneralFunctionBoundary = function(node) {
   return sre.SemanticPred.isRelation(node) ||
-    sre.SemanticPred.isPunctuation(node);
-    // &&
-    //    node.role !== sre.SemanticAttr.Role.SPACE);
+      sre.SemanticPred.isPunctuation(node);
 };
 
 

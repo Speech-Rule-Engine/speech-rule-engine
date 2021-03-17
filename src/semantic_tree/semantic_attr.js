@@ -1592,7 +1592,6 @@ sre.SemanticAttr.Role = {
   // Text.
   STRING: 'string',
   SPACE: 'space',
-  // SEPARATOR: 'separator',
 
   // Punctuated elements.
   SEQUENCE: 'sequence',

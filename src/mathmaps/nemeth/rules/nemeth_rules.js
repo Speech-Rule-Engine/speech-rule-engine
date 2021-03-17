@@ -266,13 +266,6 @@
     ],
     [
       "Rule",
-      "punctuation-space",
-      "default",
-      "[t] \"⠀\"",
-      "self::punctuation[@role=\"space\"]"
-    ],
-    [
-      "Rule",
       "single-prime",
       "default",
       "[t] \"⠄\"",
