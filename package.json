@@ -9,8 +9,7 @@
     "sre": "bin/sre"
   },
   "scripts": {
-    "test-old": "make test VERBOSE=1 NOOUTPUT=true",
-    "test": "make test_compile; cd sre-tests; SRE_JSON_PATH=../lib/mathmaps; npm run test",
+    "test": "make test VERBOSE=1 NOOUTPUT=true",
     "prepublishOnly": "make clean; make publish"
   },
   "maintainers": [
