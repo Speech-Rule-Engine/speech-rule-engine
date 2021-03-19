@@ -10,7 +10,9 @@
   },
   "scripts": {
     "test": "make test_compile; cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
-    "prepublishOnly": "make clean; make publish"
+    "actionTest": "make test_compile; cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; for i in js/json/*; do npx jest $i; done",
+    "prepublishOnly": "make clean; make publish",
+    "build": "make all"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"

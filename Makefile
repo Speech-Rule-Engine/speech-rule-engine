@@ -301,13 +301,10 @@ $(IEMAPS_FILE):
 	@echo "Creating mappings for IE."
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
-		echo $$j;\
 		for dir in $(MAPS); do\
-			echo $$dir;\
 			echo $(JSON_SRC)/$$j/$$dir;\
 			if [ -d $(JSON_SRC)/$$j/$$dir ]; then\
 				for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
-					echo $$i;\
 					echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
 					$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
 					echo ','  >> $(IEMAPS_FILE); \
