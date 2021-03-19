@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "make test_compile; cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
-    "actionTest": "make test_compile; cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; for i in js/json/*; do npx jest $i; done",
+    "actionTest": "make test_compile; cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npx jest js/json/nemeth/rules/",
     "prepublishOnly": "make clean; make publish",
     "build": "make all"
   },
