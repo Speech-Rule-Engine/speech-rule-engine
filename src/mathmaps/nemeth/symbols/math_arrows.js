@@ -6,7 +6,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠒⠒⠀"
+        "default": "⠫⠪⠒⠒"
       }
     },
     "key": "2190"
@@ -15,7 +15,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠒⠒⠕⠀"
+        "default": "⠫⠣⠒⠒⠕"
       }
     },
     "key": "2191"
@@ -24,7 +24,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠕⠀"
+        "default": "⠫⠕"
       }
     },
     "key": "2192"
@@ -33,7 +33,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠩⠒⠒⠕⠀"
+        "default": "⠫⠩⠒⠒⠕"
       }
     },
     "key": "2193"
@@ -42,7 +42,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠒⠒⠕⠀"
+        "default": "⠫⠪⠒⠒⠕"
       }
     },
     "key": "2194"
@@ -51,7 +51,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠩⠪⠒⠒⠕⠀"
+        "default": "⠫⠣⠩⠪⠒⠒⠕"
       }
     },
     "key": "2195"
@@ -60,7 +60,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠘⠪⠒⠒⠀"
+        "default": "⠫⠘⠪⠒⠒"
       }
     },
     "key": "2196"
@@ -69,7 +69,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠘⠒⠒⠕⠀"
+        "default": "⠫⠘⠒⠒⠕"
       }
     },
     "key": "2197"
@@ -78,7 +78,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠰⠒⠒⠕⠀"
+        "default": "⠫⠰⠒⠒⠕"
       }
     },
     "key": "2198"
@@ -87,7 +87,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠰⠪⠒⠒⠀"
+        "default": "⠫⠰⠪⠒⠒"
       }
     },
     "key": "2199"
@@ -96,7 +96,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠈⠫⠪⠒⠒⠻⠀"
+        "default": "⠳⠈⠫⠪⠒⠒⠻"
       }
     },
     "key": "219A"
@@ -105,7 +105,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠈⠫⠒⠒⠕⠻⠀"
+        "default": "⠳⠈⠫⠒⠒⠕⠻"
       }
     },
     "key": "219B"
@@ -114,7 +114,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠔⠒⠢⠀"
+        "default": "⠫⠪⠔⠒⠢"
       }
     },
     "key": "219C"
@@ -123,7 +123,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠔⠒⠢⠕⠀"
+        "default": "⠫⠔⠒⠢⠕"
       }
     },
     "key": "219D"
@@ -132,7 +132,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠪⠒⠒⠀"
+        "default": "⠫⠪⠪⠒⠒"
       }
     },
     "key": "219E"
@@ -141,7 +141,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠒⠒⠕⠕⠀"
+        "default": "⠫⠣⠒⠒⠕⠕"
       }
     },
     "key": "219F"
@@ -150,7 +150,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠒⠒⠕⠕⠀"
+        "default": "⠫⠒⠒⠕⠕"
       }
     },
     "key": "21A0"
@@ -159,7 +159,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠩⠒⠒⠕⠕⠀"
+        "default": "⠫⠩⠒⠒⠕⠕"
       }
     },
     "key": "21A1"
@@ -168,7 +168,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠒⠒⠠⠽⠀"
+        "default": "⠫⠪⠒⠒⠠⠽"
       }
     },
     "key": "21A2"
@@ -177,7 +177,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠠⠯⠒⠒⠕⠀"
+        "default": "⠫⠠⠯⠒⠒⠕"
       }
     },
     "key": "21A3"
@@ -186,7 +186,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠒⠒⠳⠀"
+        "default": "⠫⠪⠒⠒⠳"
       }
     },
     "key": "21A4"
@@ -195,7 +195,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠳⠒⠒⠕⠀"
+        "default": "⠫⠣⠳⠒⠒⠕"
       }
     },
     "key": "21A5"
@@ -204,7 +204,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠳⠒⠒⠕⠀"
+        "default": "⠫⠳⠒⠒⠕"
       }
     },
     "key": "21A6"
@@ -213,7 +213,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠩⠳⠒⠒⠕⠀"
+        "default": "⠫⠩⠳⠒⠒⠕"
       }
     },
     "key": "21A7"
@@ -222,7 +222,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠒⠳⠒⠕⠀"
+        "default": "⠫⠪⠒⠳⠒⠕"
       }
     },
     "key": "21A8"
@@ -231,7 +231,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠒⠒⠠⠕⠀"
+        "default": "⠫⠪⠒⠒⠠⠕"
       }
     },
     "key": "21A9"
@@ -240,7 +240,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠠⠪⠒⠒⠕⠀"
+        "default": "⠫⠠⠪⠒⠒⠕"
       }
     },
     "key": "21AA"
@@ -249,7 +249,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠒⠒⠨⠡⠀"
+        "default": "⠫⠪⠒⠒⠨⠡"
       }
     },
     "key": "21AB"
@@ -258,7 +258,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠨⠡⠒⠒⠕⠀"
+        "default": "⠫⠨⠡⠒⠒⠕"
       }
     },
     "key": "21AC"
@@ -267,7 +267,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠔⠒⠢⠕⠀"
+        "default": "⠫⠪⠔⠒⠢⠕"
       }
     },
     "key": "21AD"
@@ -276,7 +276,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠈⠫⠪⠒⠒⠕⠀"
+        "default": "⠳⠈⠫⠪⠒⠒⠕"
       }
     },
     "key": "21AE"
@@ -285,7 +285,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠩⠔⠢⠔⠀"
+        "default": "⠫⠩⠔⠢⠔"
       }
     },
     "key": "21AF"
@@ -330,7 +330,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠠⠳⠒⠒⠕⠀"
+        "default": "⠫⠠⠳⠒⠒⠕"
       }
     },
     "key": "21B4"
@@ -339,7 +339,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠩⠠⠳⠒⠒⠕⠀"
+        "default": "⠫⠩⠠⠳⠒⠒⠕"
       }
     },
     "key": "21B5"
@@ -348,7 +348,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠢⠔⠀⠕⠀"
+        "default": "⠫⠢⠔⠕"
       }
     },
     "key": "21B6"
@@ -357,7 +357,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠢⠀⠔⠀"
+        "default": "⠫⠪⠢⠔"
       }
     },
     "key": "21B7"
@@ -384,7 +384,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠢⠔⠕⠀"
+        "default": "⠫⠢⠔⠕"
       }
     },
     "key": "21BA"
@@ -393,7 +393,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠢⠔⠀"
+        "default": "⠫⠪⠢⠔"
       }
     },
     "key": "21BB"
@@ -402,7 +402,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠒⠒⠕⠫⠪⠒⠒⠀"
+        "default": "⠫⠒⠒⠕⠫⠪⠒⠒"
       }
     },
     "key": "21C4"
@@ -411,7 +411,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠒⠒⠕⠐⠫⠩⠒⠒⠕⠀"
+        "default": "⠫⠣⠒⠒⠕⠐⠫⠩⠒⠒⠕"
       }
     },
     "key": "21C5"
@@ -420,7 +420,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠒⠒⠫⠒⠒⠕⠀"
+        "default": "⠫⠪⠒⠒⠫⠒⠒⠕"
       }
     },
     "key": "21C6"
@@ -429,7 +429,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠚⠒⠒⠫⠚⠒⠒⠀"
+        "default": "⠫⠚⠒⠒⠫⠚⠒⠒"
       }
     },
     "key": "21C7"
@@ -438,7 +438,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠒⠒⠕⠐⠫⠣⠒⠒⠕⠀"
+        "default": "⠫⠣⠒⠒⠕⠐⠫⠣⠒⠒⠕"
       }
     },
     "key": "21C8"
@@ -447,7 +447,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠒⠒⠕⠫⠒⠒⠕⠀"
+        "default": "⠫⠒⠒⠕⠫⠒⠒⠕"
       }
     },
     "key": "21C9"
@@ -456,7 +456,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠩⠒⠒⠕⠐⠫⠩⠒⠒⠕⠀"
+        "default": "⠫⠩⠒⠒⠕⠐⠫⠩⠒⠒⠕"
       }
     },
     "key": "21CA"
@@ -465,7 +465,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠈⠫⠪⠪⠒⠒⠀"
+        "default": "⠳⠈⠫⠪⠪⠒⠒"
       }
     },
     "key": "21CD"
@@ -474,7 +474,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠈⠫⠪⠪⠒⠒⠕⠕⠀"
+        "default": "⠳⠈⠫⠪⠪⠒⠒⠕⠕"
       }
     },
     "key": "21CE"
@@ -483,7 +483,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠈⠫⠒⠒⠕⠕⠀"
+        "default": "⠳⠈⠫⠒⠒⠕⠕"
       }
     },
     "key": "21CF"
@@ -492,7 +492,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠪⠒⠒⠀"
+        "default": "⠫⠪⠪⠒⠒"
       }
     },
     "key": "21D0"
@@ -501,7 +501,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠒⠒⠕⠕⠀"
+        "default": "⠫⠣⠒⠒⠕⠕"
       }
     },
     "key": "21D1"
@@ -510,7 +510,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠒⠒⠕⠕⠀"
+        "default": "⠫⠒⠒⠕⠕"
       }
     },
     "key": "21D2"
@@ -519,7 +519,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠒⠒⠕⠕⠀"
+        "default": "⠫⠣⠒⠒⠕⠕"
       }
     },
     "key": "21D3"
@@ -528,7 +528,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠪⠒⠒⠕⠕⠀"
+        "default": "⠫⠪⠪⠒⠒⠕⠕"
       }
     },
     "key": "21D4"
@@ -537,7 +537,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠪⠪⠒⠒⠕⠕⠀"
+        "default": "⠫⠣⠪⠪⠒⠒⠕⠕"
       }
     },
     "key": "21D5"
@@ -546,7 +546,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠘⠪⠪⠒⠒⠀"
+        "default": "⠫⠘⠪⠪⠒⠒"
       }
     },
     "key": "21D6"
@@ -555,7 +555,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠘⠒⠒⠕⠕⠀"
+        "default": "⠫⠘⠒⠒⠕⠕"
       }
     },
     "key": "21D7"
@@ -564,7 +564,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠰⠒⠒⠕⠕⠀"
+        "default": "⠫⠰⠒⠒⠕⠕"
       }
     },
     "key": "21D8"
@@ -573,7 +573,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠰⠪⠪⠒⠒⠀"
+        "default": "⠫⠰⠪⠪⠒⠒"
       }
     },
     "key": "21D9"
@@ -582,7 +582,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠪⠪⠒⠒⠀"
+        "default": "⠫⠪⠪⠪⠒⠒"
       }
     },
     "key": "21DA"
@@ -591,7 +591,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠒⠒⠕⠕⠕⠀"
+        "default": "⠫⠒⠒⠕⠕⠕"
       }
     },
     "key": "21DB"
@@ -600,7 +600,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠢⠤⠔⠒⠢⠀"
+        "default": "⠫⠪⠢⠤⠔⠒⠢"
       }
     },
     "key": "21DC"
@@ -609,7 +609,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠢⠤⠔⠒⠢⠕⠀"
+        "default": "⠫⠢⠤⠔⠒⠢⠕"
       }
     },
     "key": "21DD"
@@ -618,7 +618,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠳⠈⠫⠣⠒⠒⠕⠻⠀"
+        "default": "⠳⠳⠈⠫⠣⠒⠒⠕⠻"
       }
     },
     "key": "21DE"
@@ -627,7 +627,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠳⠈⠫⠩⠒⠒⠕⠻⠀"
+        "default": "⠳⠳⠈⠫⠩⠒⠒⠕⠻"
       }
     },
     "key": "21DF"
@@ -636,7 +636,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠪⠒⠀⠒⠀"
+        "default": "⠫⠪⠒⠒"
       }
     },
     "key": "21E0"
@@ -645,7 +645,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠒⠀⠒⠕⠀"
+        "default": "⠫⠣⠒⠒⠕"
       }
     },
     "key": "21E1"
@@ -654,7 +654,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠒⠀⠒⠕⠀"
+        "default": "⠫⠒⠒⠕"
       }
     },
     "key": "21E2"
@@ -663,7 +663,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠩⠒⠀⠒⠕⠀"
+        "default": "⠫⠩⠒⠒⠕"
       }
     },
     "key": "21E3"
@@ -672,7 +672,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠳⠪⠒⠒⠀"
+        "default": "⠫⠳⠪⠒⠒"
       }
     },
     "key": "21E4"
@@ -681,7 +681,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠒⠒⠕⠳⠀"
+        "default": "⠫⠒⠒⠕⠳"
       }
     },
     "key": "21E5"
@@ -690,7 +690,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠸⠪⠒⠒⠀"
+        "default": "⠫⠸⠪⠒⠒"
       }
     },
     "key": "21E6"
@@ -699,7 +699,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠸⠒⠒⠕⠀"
+        "default": "⠫⠣⠸⠒⠒⠕"
       }
     },
     "key": "21E7"
@@ -708,7 +708,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠸⠒⠒⠕⠀"
+        "default": "⠫⠸⠒⠒⠕"
       }
     },
     "key": "21E8"
@@ -717,7 +717,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠩⠸⠒⠒⠕⠀"
+        "default": "⠫⠩⠸⠒⠒⠕"
       }
     },
     "key": "21E9"
@@ -807,7 +807,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠣⠸⠪⠒⠒⠕⠀"
+        "default": "⠫⠣⠸⠪⠒⠒⠕"
       }
     },
     "key": "21F3"
@@ -816,7 +816,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠒⠒⠕⠨⠡⠀"
+        "default": "⠫⠒⠒⠕⠨⠡"
       }
     },
     "key": "21F4"
@@ -825,7 +825,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠩⠒⠒⠕⠐⠫⠣⠒⠒⠕⠀"
+        "default": "⠫⠩⠒⠒⠕⠐⠫⠣⠒⠒⠕"
       }
     },
     "key": "21F5"
@@ -834,7 +834,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠒⠒⠕⠫⠒⠒⠕⠫⠒⠒⠕⠀"
+        "default": "⠫⠒⠒⠕⠫⠒⠒⠕⠫⠒⠒⠕"
       }
     },
     "key": "21F6"
@@ -843,7 +843,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠈⠫⠪⠒⠒⠻⠀"
+        "default": "⠳⠈⠫⠪⠒⠒⠻"
       }
     },
     "key": "21F7"
@@ -852,7 +852,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠈⠫⠒⠒⠕⠻⠀"
+        "default": "⠳⠈⠫⠒⠒⠕⠻"
       }
     },
     "key": "21F8"
@@ -861,7 +861,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠈⠫⠪⠒⠒⠕⠀"
+        "default": "⠳⠈⠫⠪⠒⠒⠕"
       }
     },
     "key": "21F9"
@@ -870,7 +870,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠳⠈⠫⠪⠒⠒⠻⠀"
+        "default": "⠳⠳⠈⠫⠪⠒⠒⠻"
       }
     },
     "key": "21FA"
@@ -879,7 +879,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠳⠈⠫⠒⠒⠕⠻⠀"
+        "default": "⠳⠳⠈⠫⠒⠒⠕⠻"
       }
     },
     "key": "21FB"
@@ -888,7 +888,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠳⠳⠈⠫⠪⠒⠒⠕⠀"
+        "default": "⠳⠳⠈⠫⠪⠒⠒⠕"
       }
     },
     "key": "21FC"
@@ -897,7 +897,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠳⠒⠒⠀"
+        "default": "⠫⠳⠒⠒"
       }
     },
     "key": "21FD"
@@ -906,7 +906,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠒⠒⠳⠀"
+        "default": "⠫⠒⠒⠳"
       }
     },
     "key": "21FE"
@@ -915,7 +915,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠀⠫⠳⠒⠒⠳⠀"
+        "default": "⠫⠳⠒⠒⠳"
       }
     },
     "key": "21FF"
