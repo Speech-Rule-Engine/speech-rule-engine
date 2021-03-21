@@ -1,5 +1,5 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# This workflow will do a clean install of node dependencies, build the source
+# code and run tests in block on the latest version of node.
 
 name: Node.js CI
 
@@ -10,30 +10,38 @@ on:
     branches: [ develop ]
 
 jobs:
-  build:
-
+  setup:
     runs-on: ubuntu-latest
+    name: Compile SRE with locales
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Speech Rule Engine
+        run: npm ci; npm run build --if-present; npm run pretest
+      - name: Upload build
+        uses: actions/upload-artifact@v2
+        with:
+          name: sre-library
+          path: lib
+          
+  test:
 
     strategy:
       matrix:
-        include: 
-          - node-version: 15.x
-
+        block: [base, walker, semantic, en, de, fr, es, it, nemeth]
+    needs: setup
+    runs-on: ubuntu-latest
+    name: SRE jests tests for ${{ matrix.block }}
     steps:
-    - uses: actions/checkout@v2
-    - name: Changes cloning method
-      run: sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
-    - name: Checkout submodules
-      uses: srt32/git-actions@v0.0.3
-      with:
-        args: git submodule update --init --recursive
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: Setup test module
-      run: cd sre-tests; sudo chmod -R 777 .; npm ci; npm run prepare
-    - name: Setup Speech Rule Engine
-      run: npm ci; npm run build --if-present
-    - name: SRE Tests
-      run: npm run actionTest
+      - uses: actions/checkout@v2
+      - name: Downloading the build
+        uses: actions/download-artifact@v2
+        with:
+          name: sre-library
+          path: lib
+      - name: Set up tests
+        run: |
+          sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+          git submodule update --init --recursive
+          cd sre-tests; sudo chmod -R 777 .; npm ci
+      - name: Run tests for ${{ matrix.block }}
+        run: npm run actionTest js/json/${{ matrix.block }}

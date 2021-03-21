@@ -9,8 +9,9 @@
     "sre": "bin/sre"
   },
   "scripts": {
-    "test": "make test_compile; cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
-    "actionTest": "make test_compile; cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npx jest js/json/nemeth/rules/",
+    "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
+    "pretest": "make test_compile",
+    "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npx jest",
     "prepublishOnly": "make clean; make publish",
     "build": "make all"
   },
