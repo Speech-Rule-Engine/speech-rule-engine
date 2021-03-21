@@ -198,8 +198,8 @@ sre.SemanticAttr = function() {
    */
   this.neutralFences =
       [
-        '|',  '¦', '‖', '∣',  '⏐', '⎸', '⎹', '∥', '❘',
-        '⦀',  '⫴', '｜', '￤'
+        '|', '¦', '‖', '∣', '⏐', '⎸', '⎹', '∥', '❘',
+        '⦀', '⫴', '｜', '￤'
       ];
   /** Array of all fences.
    * @type {Array.<string>}
@@ -637,9 +637,8 @@ sre.SemanticAttr = function() {
    */
   this.additions =
       [
-        '+', '±', '∓', '∔', '∧', '∨', '∩', '∪', '⊌', '⊓', '⊔', '⊝', '⊞',
-        '⊤', '⊥', '⊺', '⊻', '⊼', '⋄', '⋎', '⋏', '⋒', '⋓', '△', '▷', '▽',
-        '◁', '⩞', '⊕'
+        '+', '±', '∓', '∔', '∧', '∨', '∩', '∪', '⊌', '⊍', '⊎', '⊓', '⊔', '⊝',
+        '⊞', '⊤', '⊥', '⊺', '⊻', '⊼', '⋄', '⋎', '⋏', '⋒', '⋓', '⩞', '⊕', '⋔'
       ];
   /**
    * @type {Array.<string>}
@@ -657,7 +656,7 @@ sre.SemanticAttr = function() {
   this.multiplications =
       [
         '†', '‡', '∐', '∗', '∘', '∙', '≀', '⊚', '⊛', '⊠', '⊡', '⋅', '⋆', '⋇',
-        '⋉', '⋊', '⋋', '⋌', '○', '·', '*'
+        '⋈', '⋉', '⋊', '⋋', '⋌', '○', '·', '*', '⊗', '⊙'
       ];
   /**
    * Invisible operator for multiplication.
@@ -672,7 +671,7 @@ sre.SemanticAttr = function() {
   this.subtractions =
       [
         '-', '⁒', '⁻', '₋', '−', '∖', '∸', '≂', '⊖', '⊟', '➖', '⨩', '⨪',
-       '⨫', '⨬', '⨺', '⩁', '⩬', '﹣', '－', '‐', '‑'
+       '⨫', '⨬', '⨺', '⩁', '﹣', '－', '‐', '‑'
       ];
   /**
    * @type {Array.<string>}
@@ -695,9 +694,10 @@ sre.SemanticAttr = function() {
   this.equalities =
       [
         '=', '~', '⁼', '₌', '∼', '∽', '≃', '≅', '≈', '≊', '≋', '≌', '≍',
-       '≎', '≑', '≒', '≓', '≔', '≕', '≖', '≗', '≘', '≙', '≚', '≛', '≜',
-       '≝', '≞', '≟', '≡', '≣', '⧤', '⩦', '⩮', '⩯', '⩰', '⩱', '⩲', '⩳',
-       '⩴', '⩵', '⩶', '⩷', '⩸', '⋕', '⩭', '⩪', '⩫', '⩬', '﹦', '＝'
+        '≎', '≑', '≒', '≓', '≔', '≕', '≖', '≗', '≘', '≙', '≚', '≛', '≜',
+        '≝', '≞', '≟', '≡', '≣', '⧤', '⩦', '⩮', '⩯', '⩰', '⩱', '⩲', '⩳',
+        '⩴', '⩵', '⩶', '⩷', '⩸', '⋕', '⩭', '⩪', '⩫', '⩬', '﹦', '＝', '⩬',
+        '⊜',
       ];
   /**
    * @type {Array.<string>}
@@ -708,7 +708,7 @@ sre.SemanticAttr = function() {
         '≥', '≦', '≧', '≨', '≩', '≪', '≫', '≬', '≭', '≮', '≯', '≰', '≱',
         '≲', '≳', '≴', '≵', '≶', '≷', '≸', '≹', '≺', '≻', '≼', '≽', '≾',
         '≿', '⊀', '⊁', '⋖', '⋗', '⋘', '⋙', '⋚', '⋛', '⋜', '⋝', '⋞', '⋟',
-        '⋠', '⋡', '⋢', '⋣', '⋤', '⋥', '⋦', '⋧', '⋨', '⋩', '⩹', '⩺', '⩻',
+        '⋠', '⋡', '⋦', '⋧', '⋨', '⋩', '⩹', '⩺', '⩻',
         '⩼', '⩽', '⩾', '⩿', '⪀', '⪁', '⪂', '⪃', '⪄', '⪅', '⪆', '⪇', '⪈',
         '⪉', '⪊', '⪋', '⪌', '⪍', '⪎', '⪏', '⪐', '⪑', '⪒', '⪓', '⪔', '⪕',
         '⪖', '⪗', '⪘', '⪙', '⪚', '⪛', '⪜', '⪝', '⪞', '⪟', '⪠', '⪡', '⪢',
@@ -719,9 +719,28 @@ sre.SemanticAttr = function() {
   /**
    * @type {Array.<string>}
    */
+  this.setRelations =
+      [
+        '⋢', '⋣', '⋤', '⋥',
+        '⊂', '⊃', '⊄', '⊅', '⊆', '⊇', '⊈', '⊉', '⊊', '⊋', '⊏', '⊐', '⊑', '⊒',
+        '⪽', '⪾', '⪿', '⫀', '⫁', '⫂', '⫃', '⫄', '⫅', '⫆', '⫇', '⫈', '⫉', '⫊',
+        '⫋', '⫌', '⫍', '⫎', '⫏', '⫐', '⫑', '⫒', '⫓', '⫔', '⫕', '⫖', '⫗', '⫘',
+        '⋐', '⋑', '⋪', '⋫', '⋬', '⋭', '⊲', '⊳', '⊴', '⊵'
+      ];
+  this.elementRelations =
+      [
+        '∈', '∉', '∊', '∋', '∌', '∍',
+        '⋲', '⋳', '⋴', '⋵', '⋶', '⋷', '⋸', '⋹', '⋺', '⋻', '⋼', '⋽', '⋾', '⋿',
+      ];
+  /**
+   * @type {Array.<string>}
+   */
   this.relations =
       [
-       // TODO (sorge): Add all the other relations.
+        // TODO (sorge): Add all the other relations. Currently mainly tacks and
+        // turnstyles.
+        '⊢', '⊣', '⊦', '⊧', '⊨', '⊩', '⊪', '⊫', '⊬', '⊭', '⊮', '⊯', '⫞', '⫟',
+        '⫠', '⫡', '⫢', '⫣', '⫤', '⫥', '⫦', '⫧', '⫨', '⫩', '⫪', '⫫', '⫬', '⫭'
       ];
   /**
    * @type {Array.<string>}
@@ -777,11 +796,16 @@ sre.SemanticAttr = function() {
         '∫', '∬', '∭', '∮', '∯', '∰', '∱', '∲', '∳', '⨌', '⨍', '⨎', '⨏',
         '⨐', '⨑', '⨒', '⨓', '⨔', '⨕', '⨖', '⨗', '⨘', '⨙', '⨚', '⨛', '⨜'
       ];
+  this.geometryOps =
+      [
+        '∟', '∠', '∡', '∢', '⊾', '⊿',
+        // TODO: Add the entire geometric shape set programmatically.
+        '△', '▷', '▽', '◁',
+      ];
   /**
    * @type {Array.<string>}
    */
   this.prefixOps =
-      // TODO (sorge) Insert nabla, differential operators etc.
       [
         '∀', '∃', '∆', '∇', '∂', '∁', '∄'
       ];
@@ -797,6 +821,7 @@ sre.SemanticAttr = function() {
    * @type {Array.<string>}
    */
   this.prefixOpsSansSerifBold = ['𝝯', '𝞉'];
+  // TODO (sorge) Insert nabla, differential operators sans serif bold italic
 
   /**
    * @type {Array.<string>}
@@ -928,8 +953,8 @@ sre.SemanticAttr = function() {
   this.numbers = this.fractions;
 
   this.otherNumbers = this.digitsSuperscript.concat(
-    this.digitsSubscript, this.enclosedNumbers,
-    this.fencedNumbers, this.punctuatedNumbers);
+      this.digitsSubscript, this.enclosedNumbers,
+      this.fencedNumbers, this.punctuatedNumbers);
   /** Array of all number symbols.
    * @type {Array.<string>}
    */
@@ -1393,6 +1418,16 @@ sre.SemanticAttr = function() {
       type: sre.SemanticAttr.Type.RELATION,
       role: sre.SemanticAttr.Role.INEQUALITY
     },
+    {set: this.setRelations,
+      type: sre.SemanticAttr.Type.RELATION,
+      role: sre.SemanticAttr.Role.SET
+    },
+    {set: this.elementRelations,
+      type: sre.SemanticAttr.Type.OPERATOR,
+      // TODO: Changes that to relation once speech rules are separated
+      //       as this has effects on clearspeak.
+      role: sre.SemanticAttr.Role.ELEMENT
+    },
     {set: this.relations,
       type: sre.SemanticAttr.Type.RELATION,
       role: sre.SemanticAttr.Role.UNKNOWN
@@ -1408,6 +1443,9 @@ sre.SemanticAttr = function() {
     {set: this.intOps,
       type: sre.SemanticAttr.Type.LARGEOP,
       role: sre.SemanticAttr.Role.INTEGRAL},
+    {set: this.geometryOps, // TODO: Change that after speech rule work?
+      type: sre.SemanticAttr.Type.OPERATOR,
+      role: sre.SemanticAttr.Role.GEOMETRY},
     // Functions
     {set: this.limitFunctions,
       type: sre.SemanticAttr.Type.FUNCTION,
@@ -1618,6 +1656,7 @@ sre.SemanticAttr.Role = {
   // Large operators.
   SUM: 'sum',
   INTEGRAL: 'integral',
+  GEOMETRY: 'geometry',
 
   // Binary operations.
   ADDITION: 'addition',
@@ -1634,6 +1673,7 @@ sre.SemanticAttr.Role = {
   INEQUALITY: 'inequality',
   ELEMENT: 'element',
   ARROW: 'arrow',
+  SET: 'set',
 
   // Roles of matrices or vectors.
   DETERMINANT: 'determinant',
