@@ -1126,7 +1126,7 @@ sre.SemanticProcessor.prototype.setExtension_ = function(set) {
   var extender = set.childNodes[0].childNodes[0];
   if (extender && extender.type === sre.SemanticAttr.Type.INFIXOP &&
       extender.contentNodes.length === 1 &&
-      extender.contentNodes[0].role === sre.SemanticAttr.Role.UNKNOWN
+      extender.contentNodes[0].role === sre.SemanticAttr.Role.ELEMENT
   ) {
     extender.contentNodes[0].role = sre.SemanticAttr.Role.SETEXT;
   }
