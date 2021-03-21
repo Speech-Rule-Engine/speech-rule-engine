@@ -198,8 +198,8 @@ sre.SemanticAttr = function() {
    */
   this.neutralFences =
       [
-        '|',  '¦', '‖', '∣',  '⏐', '⎸', '⎹', '∥', '❘',
-        '⦀',  '⫴', '｜', '￤'
+        '|', '¦', '‖', '∣', '⏐', '⎸', '⎹', '∥', '❘',
+        '⦀', '⫴', '｜', '￤'
       ];
   /** Array of all fences.
    * @type {Array.<string>}
@@ -720,28 +720,28 @@ sre.SemanticAttr = function() {
    * @type {Array.<string>}
    */
   this.setRelations =
-    [
-      '⋢', '⋣', '⋤', '⋥',
-      '⊂', '⊃', '⊄', '⊅', '⊆', '⊇', '⊈', '⊉', '⊊', '⊋', '⊏', '⊐', '⊑', '⊒',
-      '⪽', '⪾', '⪿', '⫀', '⫁', '⫂', '⫃', '⫄', '⫅', '⫆', '⫇', '⫈', '⫉', '⫊',
-      '⫋', '⫌', '⫍', '⫎', '⫏', '⫐', '⫑', '⫒', '⫓', '⫔', '⫕', '⫖', '⫗', '⫘',
-      '⋐', '⋑', '⋪', '⋫', '⋬', '⋭', '⊲', '⊳', '⊴', '⊵'
-    ];
+      [
+        '⋢', '⋣', '⋤', '⋥',
+        '⊂', '⊃', '⊄', '⊅', '⊆', '⊇', '⊈', '⊉', '⊊', '⊋', '⊏', '⊐', '⊑', '⊒',
+        '⪽', '⪾', '⪿', '⫀', '⫁', '⫂', '⫃', '⫄', '⫅', '⫆', '⫇', '⫈', '⫉', '⫊',
+        '⫋', '⫌', '⫍', '⫎', '⫏', '⫐', '⫑', '⫒', '⫓', '⫔', '⫕', '⫖', '⫗', '⫘',
+        '⋐', '⋑', '⋪', '⋫', '⋬', '⋭', '⊲', '⊳', '⊴', '⊵'
+      ];
   this.elementRelations =
-    [
-      '∈', '∉', '∊', '∋', '∌', '∍',
-      '⋲', '⋳', '⋴', '⋵', '⋶', '⋷', '⋸', '⋹', '⋺', '⋻', '⋼', '⋽', '⋾', '⋿',
-    ];
+      [
+        '∈', '∉', '∊', '∋', '∌', '∍',
+        '⋲', '⋳', '⋴', '⋵', '⋶', '⋷', '⋸', '⋹', '⋺', '⋻', '⋼', '⋽', '⋾', '⋿',
+      ];
   /**
    * @type {Array.<string>}
    */
   this.relations =
-    [
-      // TODO (sorge): Add all the other relations. Currently mainly tacks and
-      // turnstyles.
-      '⊢', '⊣', '⊦', '⊧', '⊨', '⊩', '⊪', '⊫', '⊬', '⊭', '⊮', '⊯', '⫞', '⫟',
-      '⫠', '⫡', '⫢', '⫣', '⫤', '⫥', '⫦', '⫧', '⫨', '⫩', '⫪', '⫫', '⫬', '⫭'
-    ];
+      [
+        // TODO (sorge): Add all the other relations. Currently mainly tacks and
+        // turnstyles.
+        '⊢', '⊣', '⊦', '⊧', '⊨', '⊩', '⊪', '⊫', '⊬', '⊭', '⊮', '⊯', '⫞', '⫟',
+        '⫠', '⫡', '⫢', '⫣', '⫤', '⫥', '⫦', '⫧', '⫨', '⫩', '⫪', '⫫', '⫬', '⫭'
+      ];
   /**
    * @type {Array.<string>}
    */
@@ -797,11 +797,11 @@ sre.SemanticAttr = function() {
         '⨐', '⨑', '⨒', '⨓', '⨔', '⨕', '⨖', '⨗', '⨘', '⨙', '⨚', '⨛', '⨜'
       ];
   this.geometryOps =
-    [
-      '∟', '∠', '∡', '∢', '⊾', '⊿',
-      // TODO: Add the entire geometric shape set programmatically.
-      '△', '▷', '▽', '◁',
-    ];
+      [
+        '∟', '∠', '∡', '∢', '⊾', '⊿',
+        // TODO: Add the entire geometric shape set programmatically.
+        '△', '▷', '▽', '◁',
+      ];
   /**
    * @type {Array.<string>}
    */
@@ -953,8 +953,8 @@ sre.SemanticAttr = function() {
   this.numbers = this.fractions;
 
   this.otherNumbers = this.digitsSuperscript.concat(
-    this.digitsSubscript, this.enclosedNumbers,
-    this.fencedNumbers, this.punctuatedNumbers);
+      this.digitsSubscript, this.enclosedNumbers,
+      this.fencedNumbers, this.punctuatedNumbers);
   /** Array of all number symbols.
    * @type {Array.<string>}
    */
@@ -989,7 +989,7 @@ sre.SemanticAttr = function() {
   /**
    * @type {Array.<string>}
    */
-this.elementaryFunctions =
+  this.elementaryFunctions =
       [
         'log', 'ln', 'lg', 'exp', 'expt', 'gcd', 'gcd', 'arg', 'im', 're', 'Pr'
       ];
@@ -1424,8 +1424,8 @@ this.elementaryFunctions =
     },
     {set: this.elementRelations,
       type: sre.SemanticAttr.Type.OPERATOR,
-     // TODO: Changes that to relation once speech rules are separated
-     //       as this has effects on clearspeak.
+      // TODO: Changes that to relation once speech rules are separated
+      //       as this has effects on clearspeak.
       role: sre.SemanticAttr.Role.ELEMENT
     },
     {set: this.relations,
