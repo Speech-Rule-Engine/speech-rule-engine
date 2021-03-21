@@ -30,15 +30,6 @@
     "key": "0023"
   },
   {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": "⠈⠎"
-      }
-    },
-    "key": "0024"
-  },
-  {
     "category": "Po",
     "mappings": {
       "default": {
@@ -246,42 +237,6 @@
       }
     },
     "key": "00A1"
-  },
-  {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": "⠈⠉"
-      }
-    },
-    "key": "00A2"
-  },
-  {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": "⠈⠇"
-      }
-    },
-    "key": "00A3"
-  },
-  {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": "⠫"
-      }
-    },
-    "key": "00A4"
-  },
-  {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": "⠈⠽"
-      }
-    },
-    "key": "00A5"
   },
   {
     "category": "So",
@@ -7322,15 +7277,6 @@
     "key": "FE68"
   },
   {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    },
-    "key": "FE69"
-  },
-  {
     "category": "Po",
     "mappings": {
       "default": {
@@ -7374,15 +7320,6 @@
       }
     },
     "key": "FF03"
-  },
-  {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    },
-    "key": "FF04"
   },
   {
     "category": "Po",
@@ -7583,24 +7520,6 @@
     "key": "FF5E"
   },
   {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    },
-    "key": "FFE0"
-  },
-  {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    },
-    "key": "FFE1"
-  },
-  {
     "category": "Sm",
     "mappings": {
       "default": {
@@ -7626,24 +7545,6 @@
       }
     },
     "key": "FFE4"
-  },
-  {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    },
-    "key": "FFE5"
-  },
-  {
-    "category": "Sc",
-    "mappings": {
-      "default": {
-        "default": ""
-      }
-    },
-    "key": "FFE6"
   },
   {
     "category": "So",
