@@ -200,7 +200,11 @@ sre.NemethUtil.checkParent_ = function(node, info) {
   if (sre.NemethUtil.NUMBER_PROPAGATORS_.indexOf(type) !== -1 ||
       (type === sre.SemanticAttr.Type.PREFIXOP &&
        parent.role === sre.SemanticAttr.Role.NEGATIVE &&
-       !info.script)) {
+       !info.script) ||
+      (type === sre.SemanticAttr.Type.PREFIXOP &&
+       // TODO: This needs to be rewritten once there is a better treatment of
+       // prefixop.
+       parent.role === sre.SemanticAttr.Role.GEOMETRY)) {
     return true;
   }
   if (type === sre.SemanticAttr.Type.PUNCTUATED) {

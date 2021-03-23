@@ -125,11 +125,7 @@
       "number-font-indicator",
       "default",
       "[t] \"⠼\"; [n] text() (pause:10)",
-      "self::number", "contains(@grammar, \"ignoreFont\")",
-      "contains(@annotation, \"nemeth:number\")",
-      "not(ancestor::sqrt)",
-      "not(ancestor::root)",
-      "not(ancestor::fraction)",
+      "self::number[contains(@grammar, \"ignoreFont\")]",
       "\"\" = translate(text(), \"0123456789.,\", \"\")"
     ],
     [
