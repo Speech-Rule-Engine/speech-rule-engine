@@ -1556,14 +1556,11 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
   // content is.
   if (restNodes[0] &&
       restNodes[0].textContent === sre.SemanticAttr.functionApplication()) {
-    // Remove explicit function application. This is destructive on the
-    // underlying list.
-    //
-    // TODO (sorge) This should not be destructive! This in particular destroys
-    // any information we get on the element. Eg., texclass=NONE.
+    // Store explicit function application to be reused later.
     sre.SemanticProcessor.getInstance().funcAppls[funcNode.id] =
       restNodes.shift();
     var role = sre.SemanticAttr.Role.SIMPLEFUNC;
+    sre.SemanticHeuristics.run('simple2prefix', funcNode);
     if (funcNode.role === sre.SemanticAttr.Role.PREFIXFUNC ||
         funcNode.role === sre.SemanticAttr.Role.LIMFUNC) {
       role = funcNode.role;

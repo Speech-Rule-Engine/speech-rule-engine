@@ -214,7 +214,6 @@ sre.SemanticHeuristics.add(
   }));
 
 
-
 /**
  * Finds composed functions, i.e., simple functions that are either composed
  * with an infix operation or fraction and rewrites their role accordingly.
@@ -532,3 +531,25 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   acc.push(result);
   return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(first), ops, elements);
 };
+
+
+/**
+ * Rewrites a simple function to a prefix function if it consists of multiple
+ * letters. (Currently restricted to Braille!)
+ */
+sre.SemanticHeuristics.add(
+  'simple2prefix',
+  new sre.SemanticTreeHeuristic({
+    predicate: function(node) {
+      return sre.Engine.getInstance().modality === 'braille' &&
+        node.type === sre.SemanticAttr.Type.IDENTIFIER;
+    },
+    method: function(node) {
+      if (node.textContent.length > 1 &&
+          // TODO: Discuss this line!
+          !node.textContent[0].match(/[A-Z]/)) {
+        node.role = sre.SemanticAttr.Role.PREFIXFUNC;
+      }
+      return node;
+  }
+  }));
