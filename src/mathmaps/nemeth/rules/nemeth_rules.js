@@ -357,6 +357,26 @@
     ],
     [
       "Rule",
+      "arrow-underscore",
+      "default",
+      "[t] \"⠐\"; [t] \"⠫⠒⠒⠕\"; [t] CSFunderscript; [n] children/*[2]; [t] \"⠻\"",
+      "self::underscore",
+      "name(children/*[1])=\"relation\"",
+      "children/*[1][@role=\"arrow\"]",
+      "children/*[1][text()]=\"→\""
+    ],
+    [
+      "Rule",
+      "arrow-overscore",
+      "default",
+      "[t] \"⠐\"; [t] \"⠫⠒⠒⠕\"; [t] CSFoverscript; [n] children/*[2]; [t] \"⠻\"",
+      "self::overscore",
+      "name(children/*[1])=\"relation\"",
+      "children/*[1][@role=\"arrow\"]",
+      "children/*[1][text()]=\"→\""
+    ],
+    [
+      "Rule",
       "limboth",
       "default",
       "[t] \"⠐\"; [n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]",
