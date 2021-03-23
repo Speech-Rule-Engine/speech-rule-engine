@@ -136,9 +136,10 @@ sre.Locale.nemeth = {
     'bold-script': '⠸⠈',
     'caligraphic': '⠈',
     'caligraphic-bold': '⠈⠸',
-    'double-struck': '⠸',
+    'double-struck': '⠈',
     'double-struck-italic': '⠸⠨',
     'fraktur': ['⠸', germanCombiner],
+    'fullwidth': '',
     'italic': '⠨',
     'monospace': '',
     'normal': '',
@@ -283,8 +284,8 @@ sre.Locale.nemeth = {
     },
   },
 
-  ALPHABET_COMBINER: function(letter, font, cap) {
-    return font ? (font + cap + letter) : simpleEnglish(letter);
+  ALPHABET_COMBINER: function(letter, font, number) {
+    return font ? (font + number + letter) : simpleEnglish(letter);
   }
 
 };

@@ -24,7 +24,8 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠫⠕"
+        "default": "⠫⠕",
+        "uncontracted": "⠫⠒⠒⠕"
       }
     },
     "key": "2192"

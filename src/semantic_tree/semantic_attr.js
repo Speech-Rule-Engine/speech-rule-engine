@@ -1455,7 +1455,7 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.PREFIXFUNC},
     {set: this.infixFunctions,
       type: sre.SemanticAttr.Type.OPERATOR,
-      role: sre.SemanticAttr.Role.INFIXFUNC
+      role: sre.SemanticAttr.Role.PREFIXFUNC
     }
     // TODO (sorge) Add some of the remaining elements.
   ];

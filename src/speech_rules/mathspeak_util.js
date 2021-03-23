@@ -394,6 +394,9 @@ sre.MathspeakUtil.nestedSubSuper = function(node, init, replace) {
   while (node.parentNode) {
     var children = node.parentNode;
     var parent = children.parentNode;
+    if (!parent) {
+      break;
+    }
     var nodeRole = node.getAttribute && node.getAttribute('role');
     if ((parent.tagName === sre.Semantic.Type.SUBSCRIPT &&
          node === children.childNodes[1]) ||

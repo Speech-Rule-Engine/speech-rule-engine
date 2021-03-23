@@ -85,7 +85,8 @@ sre.SemanticAnnotations.prototype.annotate = function(node) {
   for (var name of Object.keys(this.visitors)) {
     var visitor = this.visitors[name];
     if (visitor.active) {
-      this.visitors[name].visit(node, this.visitors[name].def);
+      this.visitors[name].visit(
+        node, Object.assign({}, this.visitors[name].def));
     }
   }
 };

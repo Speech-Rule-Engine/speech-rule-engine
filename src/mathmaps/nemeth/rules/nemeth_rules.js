@@ -50,7 +50,9 @@
       "self::*",
       "@font",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "@font!=\"normal\""
+      "@font!=\"normal\"",
+      "@font!=\"fullwidth\"",
+      "@font!=\"monospace\""
     ],
     [
       "Rule",
@@ -61,7 +63,7 @@
       "string-length(text())=1",
       "@font",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"normal\"",
+      "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
       "\"\"=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψωABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")",
       "@role!=\"unit\""
     ],
@@ -85,7 +87,7 @@
       "self::identifier",
       "string-length(text())=1",
       "@font",
-      "@font=\"normal\"",
+      "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@role!=\"unit\""
     ],
@@ -104,7 +106,7 @@
       "number-indicator",
       "default",
       "[t] \"⠼\"; [n] text() (pause:10)",
-      "self::number", "not(@font) or @font=\"normal\"",
+      "self::number", "not(@font) or @font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
       "contains(@annotation, \"nemeth:number\")",
       "not(ancestor::sqrt)",
       "not(ancestor::root)",
@@ -167,6 +169,8 @@
       "@font",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@font!=\"normal\"",
+      "@font!=\"fullwidth\"",
+      "@font!=\"monospace\"",
       "preceding-sibling::identifier",
       "preceding-sibling::*[@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]",
       "parent::*/parent::infixop[@role=\"implicit\"]"
@@ -188,6 +192,13 @@
     ],
     [
       "Rule",
+      "prefix-geometry",
+      "default",
+      "[n] content/*[1]; [t] \"⠀\"; [n] children/*[1]",
+      "self::prefixop[@role=\"geometry\"]"
+    ],
+    [
+      "Rule",
       "postfix",
       "default",
       "[n] children/*[1]; [n] text()",
@@ -202,9 +213,16 @@
     ],
     [
       "Rule",
+      "binary-operation",
+      "default",
+      "[m] children/* (sepFunc:CTFrelationIterator);",
+      "self::infixop[@role=\"element\"]"
+    ],
+    [
+      "Rule",
       "implicit",
       "default",
-      "[m] children/*",
+      "[m] children/* (sepFunc:CTFimplicitIterator);",
       "self::infixop",
       "@role=\"implicit\""
     ],
@@ -241,7 +259,7 @@
       "Rule",
       "function-simple",
       "default",
-      "[n] children/*[1]; [n] children/*[2]",
+      "[n] children/*[1]; [n] children/*[2];",
       "self::appl",
       "children/*[1][@role=\"simple function\"]"
     ],
@@ -455,32 +473,14 @@
       "Rule",
       "relseq",
       "default",
-      "[m] children/* (sepFunc:CTFcontentIterator)",
+      "[m] children/* (sepFunc:CTFrelationIterator)",
       "self::relseq"
-    ],
-    [
-      "Rule",
-      "equality",
-      "default",
-      "[n] children/*[1]; [n] content/*[1]; [n] children/*[2]",
-      "self::relseq",
-      "@role=\"equality\"",
-      "count(./children/*)=2"
-    ],
-    [
-      "Rule",
-      "multi-equality",
-      "default",
-      "[m] children/* (sepFunc:CTFcontentIterator)",
-      "self::relseq",
-      "@role=\"equality\"",
-      "count(./children/*)>2"
     ],
     [
       "Rule",
       "multrel",
       "default",
-      "[m] children/* (sepFunc:CTFcontentIterator)",
+      "[m] children/* (sepFunc:CTFrelationIterator)",
       "self::multirel"
     ],
     [
@@ -495,12 +495,20 @@
       "subscript-simple",
       "default",
       "[n] children/*[1]; [n] children/*[2]",
-      "self::subscript",
-      "name(./children/*[1])=\"identifier\"",
+      "self::subscript[contains(@role,\"letter\")]",
+      "name(./children/*[1])=\"identifier\" or name(./children/*[1])=\"function\"",
       "name(./children/*[2])=\"number\"",
       "./children/*[2][@role!=\"mixed\"]",
-      "./children/*[2][@role!=\"othernumber\"]",
-      "self::*"
+      "./children/*[2][@role!=\"othernumber\"]"
+    ],
+    [
+      "Aliases",
+      "subscript-simple",
+      "self::subscript[contains(@role,\"function\")]",
+      "name(./children/*[1])=\"identifier\" or name(./children/*[1])=\"function\"",
+      "name(./children/*[2])=\"number\"",
+      "./children/*[2][@role!=\"mixed\"]",
+      "./children/*[2][@role!=\"othernumber\"]"
     ],
     [
       "Rule",
@@ -508,9 +516,12 @@
       "default",
       "[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]; [t] CSFbaselineVerbose",
       "self::subscript",
+      "@role!=\"subsup\"",
       "following-sibling::*",
       "@role!=\"prefix function\"",
-      "not(name(following-sibling::subscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"subscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\")) and @role!=\"subsup\"",
+      "name(../..)!=\"relseq\"",
+      "name(../..)!=\"multirel\"",
+      "not(name(following-sibling::subscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"subscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\"))",
       "not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
     ],
     [
@@ -520,14 +531,6 @@
       "not(following-sibling::*)",
       "ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated|ancestor::fraction",
       "not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
-    ],
-    [
-      "Aliases",
-      "subscript-baseline",
-      "self::subscript",
-      "not(following-sibling::*)",
-      "ancestor::relseq|ancestor::multirel",
-      "CGFbaselineConstraint"
     ],
     [
       "Aliases",
@@ -568,6 +571,8 @@
       "self::superscript",
       "following-sibling::*",
       "@role!=\"prefix function\"",
+      "name(../..)!=\"relseq\"",
+      "name(../..)!=\"multirel\"",
       "not(name(following-sibling::superscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"superscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\")) and not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
     ],
     [
@@ -864,6 +869,26 @@
     ],
     [
       "Rule",
+      "bar-above",
+      "default",
+      "[n] children/*[1]; [t] \"⠱\"",
+      "self::overscore",
+      "contains(@role,\"letter\") or contains(@role,\"integer\")",
+      "string-length(children/*[1][text()])=1",
+      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"      
+    ],
+    [
+      "Rule",
+      "bar-below",
+      "default",
+      "[n] children/*[1]; [t] \"⠩⠱\"",
+      "self::underscore",
+      "contains(@role,\"letter\") or contains(@role,\"integer\")",
+      "string-length(children/*[1][text()])=1",
+      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"      
+    ],
+    [
+      "Rule",
       "underbar",
       "default",
       "[t] \"⠐\"; [n] children/*[1]; [t] \"⠩⠱⠻\"",
@@ -965,28 +990,36 @@
       "parent::*/parent::punctuated",
       "following-sibling::*",
       "@role!=\"fullstop\"",
-      "@role!=\"vbar\""
+      "@role!=\"vbar\"",
+      "@role!=\"ellipsis\""
     ],
     [
       "Rule",
-      "punctuation-ellipses",
+      "punctuation-ellipses-both",
       "default",
-      "[t] \"⠀\"; [n] text(); [t] \"⠀\"",
-      "self::punctuation",
+      "[t] \"⠀\"; [n] text(); [t] \"⠀\";",
+      "self::punctuation[@role=\"ellipsis\"]",
       "parent::*/parent::punctuated",
       "following-sibling::*",
-      "@role=\"ellipsis\"",
+      "name(preceding-sibling::*[1])!=\"punctuation\"",
+      "name(following-sibling::*[1])!=\"punctuation\""
+    ],
+    [
+      "Rule",
+      "punctuation-ellipses-left",
+      "default",
+      "[t] \"⠀\"; [n] text();",
+      "self::punctuation[@role=\"ellipsis\"]",
       "name(preceding-sibling::*[1])!=\"punctuation\""
     ],
     [
       "Rule",
-      "punctuation-ellipses",
+      "punctuation-ellipses-right",
       "default",
-      "[t] \"⠀\"; [n] text();",
-      "self::punctuation",
-      "parent::*/parent::punctuated",
-      "@role=\"ellipsis\"",
-      "name(preceding-sibling::*[1])!=\"punctuation\""
+      "[n] text(); [t] \"⠀\";",
+      "self::punctuation[@role=\"ellipsis\"]",
+      "following-sibling::*",
+      "name(following-sibling::*[1])!=\"punctuation\""
     ],
     [
       "Rule",
