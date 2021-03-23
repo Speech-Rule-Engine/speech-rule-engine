@@ -119,6 +119,7 @@ sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
   var operators = sre.SemanticProcessor.getInstance().factory_.
       makeMultipleContentNodes(nodes.length - 1,
                                sre.SemanticAttr.invisibleTimes());
+  sre.SemanticProcessor.matchSpaces_(nodes, operators);
   // For now we assume this is a multiplication using invisible times.
   var newNode = sre.SemanticProcessor.getInstance().infixNode_(
       nodes, /**@type{!sre.SemanticNode}*/(operators[0]));
@@ -127,6 +128,43 @@ sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
   newNode.contentNodes = operators;
   return newNode;
 };
+
+
+sre.SemanticProcessor.matchSpaces_ = function(nodes, ops) {
+  for (var i = 0, op; op = ops[i]; i++) {
+    var node = nodes[i];
+    var mt1 = node.mathmlTree;
+    var mt2 = nodes[i + 1].mathmlTree;
+    if (!mt1 || !mt2) {
+      continue;
+    }
+    var sibling = mt1.nextSibling;
+    if (!sibling || sibling === mt2) {
+      continue;
+    }
+    var spacer = sre.SemanticProcessor.getSpacer_(sibling);
+    if (spacer) {
+      op.mathml.push(spacer);
+      op.mathmlTree = spacer;
+      op.role = sre.SemanticAttr.Role.SPACE;
+    }
+  }
+};
+
+
+sre.SemanticProcessor.getSpacer_ = function(node) {
+  if (sre.DomUtil.tagName(node) === 'MSPACE') {
+    return node;
+  }
+  while (sre.SemanticUtil.hasEmptyTag(node) &&
+         node.childNodes.length === 1) {
+    node = node.childNodes[0];
+    if (sre.DomUtil.tagName(node) === 'MSPACE') {
+      return node;
+    }
+  }
+  return null;
+}
 
 
 /**

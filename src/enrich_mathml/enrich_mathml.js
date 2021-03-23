@@ -700,6 +700,7 @@ sre.EnrichMathml.isIgnorable_ = function(node) {
   var children = sre.DomUtil.toArray(node.childNodes);
   if ((!sre.SemanticUtil.hasEmptyTag(node) && children.length) ||
       sre.SemanticUtil.hasDisplayTag(node) ||
+      node.hasAttribute(sre.EnrichMathml.Attribute.TYPE) ||
       sre.SemanticUtil.isOrphanedGlyph(node)) {
     return false;
   }
