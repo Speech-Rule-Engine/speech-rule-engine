@@ -493,7 +493,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠪⠪⠒⠒"
+        "default": "⠫⠪⠶⠶"
       }
     },
     "key": "21D0"

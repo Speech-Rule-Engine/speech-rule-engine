@@ -414,9 +414,9 @@ sre.NemethUtil.implicitIterator = function(nodes, context) {
     var contentNodes = [];
   }
   return function() {
-    var content = contentNodes.shift();
     var leftChild = childNodes.shift();
     var rightChild = childNodes[0];
+    var content = contentNodes.shift();
     var contextDescr = context ?
         [sre.AuditoryDescription.create(
             {text: context}, {translate: true})] :
@@ -427,7 +427,9 @@ sre.NemethUtil.implicitIterator = function(nodes, context) {
     var left = leftChild && sre.DomUtil.tagName(leftChild) === 'NUMBER';
     var right = rightChild && sre.DomUtil.tagName(rightChild) === 'NUMBER';
     return contextDescr.concat(
-      (left && right) ? [sre.AuditoryDescription.create({text: '⠀'}, {})] : []);
+      (left && right &&
+       content.getAttribute('role') === sre.SemanticAttr.Role.SPACE) ?
+       [sre.AuditoryDescription.create({text: '⠀'}, {})] : []);
   };
 };
   

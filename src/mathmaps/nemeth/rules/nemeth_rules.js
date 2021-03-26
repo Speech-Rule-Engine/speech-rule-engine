@@ -99,7 +99,8 @@
       "self::identifier[@font=\"italic\"]",
       "string-length(text())=1",
       "@role!=\"greekletter\"",
-      "not(contains(@grammar, \"ignoreFont\"))"
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "\"\"!=translate(text(), \"αβγδεζηθικλμνξοπρςστυφχψωΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\", \"\")"
     ],
     [
       "Rule",
@@ -285,10 +286,18 @@
       "Rule",
       "factorial",
       "default",
-      "[t] \"⠯\"",
-      "self::punctuation",
-      "text()=\"!\"",
+      "[t] \"⠯⠀\"",
+      "self::punctuation[text()=\"!\"]",
       "name(preceding-sibling::*[1])!=\"text\""
+    ],
+    [
+      "Rule",
+      "factorial",
+      "default",
+      "[t] \"⠯\"",
+      "self::punctuation[text()=\"!\"]",
+      "name(preceding-sibling::*[1])!=\"text\"",
+      "not(following::*) or name(following::*)=\"punctuation\""
     ],
     [
       "Rule",
@@ -585,10 +594,11 @@
       "default",
       "[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2];[t] CSFbaselineVerbose",
       "self::superscript",
-      "following-sibling::*",
+      "following::*",
       "@role!=\"prefix function\"",
-      "name(../..)!=\"relseq\"",
-      "name(../..)!=\"multirel\"",
+      "name(following::*[1]/../..)!=\"relseq\"",
+      "name(following::*[1]/../..)!=\"multirel\"",
+      "name(following::*[1])!=\"punctuation\"",
       "not(name(following-sibling::superscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"superscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\")) and not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
     ],
     [
@@ -596,6 +606,7 @@
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
+      "name(following::*[1])!=\"punctuation\"",
       "ancestor::punctuated",
       "ancestor::*/following-sibling::* and not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
     ],
@@ -604,6 +615,7 @@
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
+      "name(following::*[1])!=\"punctuation\"",
       "ancestor::fraction|ancestor::fenced|ancestor::root|ancestor::sqrt"
     ],
     [
@@ -611,6 +623,7 @@
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
+      "name(following::*[1])!=\"punctuation\"",
       "ancestor::relseq|ancestor::multirel",
       "not(@embellished)",
       "CGFbaselineConstraint"
@@ -620,6 +633,7 @@
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
+      "name(following::*[1])!=\"punctuation\"",
       "@embellished",
       "not(children/*[2][@role=\"prime\"])"
     ],
@@ -682,7 +696,7 @@
       "Rule",
       "prime-subscript-simple",
       "default",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2];[n] children/*[1]/children/*[2]",
+      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [n] children/*[1]/children/*[2]",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
       "name(children/*[1])=\"subscript\"",
@@ -1007,7 +1021,16 @@
       "following-sibling::*",
       "@role!=\"fullstop\"",
       "@role!=\"vbar\"",
+      "@role!=\"colon\"",
       "@role!=\"ellipsis\""
+    ],
+    [
+      "Rule",
+      "punctuation-colon-mapping",
+      "default",
+      "[n] text(); [t] \"⠀\"",
+      "self::punctuation[@role=\"colon\"]",
+      "following-sibling::relseq[@role=\"arrow\"]"
     ],
     [
       "Rule",
