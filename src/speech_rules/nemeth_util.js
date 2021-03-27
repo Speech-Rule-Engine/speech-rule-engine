@@ -166,7 +166,9 @@ sre.Grammar.getInstance().setCorrection('enlargeFence',
 sre.NemethUtil.NUMBER_PROPAGATORS_ = [
   sre.SemanticAttr.Type.MULTIREL,
   sre.SemanticAttr.Type.RELSEQ,
-  sre.SemanticAttr.Type.APPL
+  sre.SemanticAttr.Type.APPL,
+  sre.SemanticAttr.Type.ROW,
+  sre.SemanticAttr.Type.LINE
 ];
 
 

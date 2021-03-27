@@ -542,10 +542,10 @@
       "[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]; [t] CSFbaselineVerbose",
       "self::subscript",
       "@role!=\"subsup\"",
-      "following-sibling::*",
+      "following::*",
       "@role!=\"prefix function\"",
-      "name(../..)!=\"relseq\"",
-      "name(../..)!=\"multirel\"",
+      "name(following::*[1]/../..)!=\"relseq\"",
+      "name(following::*[1]/../..)!=\"multirel\"",
       "not(name(following-sibling::subscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"subscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\"))",
       "not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
     ],
@@ -553,6 +553,7 @@
       "Aliases",
       "subscript-baseline",
       "self::subscript",
+      "following::*",
       "not(following-sibling::*)",
       "ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated|ancestor::fraction",
       "not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
@@ -561,6 +562,13 @@
       "Aliases",
       "subscript-baseline",
       "self::subscript",
+      "ancestor::fenced"
+    ],
+    [
+      "Aliases",
+      "subscript-baseline",
+      "self::subscript",
+      "following::*",
       "not(following-sibling::*)",
       "@embellished"
     ],
@@ -761,15 +769,6 @@
     ],
     [
       "Rule",
-      "matrix-fence",
-      "default",
-      "[n] children/*[1];",
-      "self::fenced",
-      "count(children/*)=1",
-      "name(children/*[1])=\"matrix\""
-    ],
-    [
-      "Rule",
       "matrix",
       "default",
       "[m] children/* (separator:\"⠀\", join:\"\");",
@@ -881,6 +880,13 @@
       "self::line",
       "count(children/*)=0",
       "content"
+    ],
+    [
+      "Rule",
+      "cycle",
+      "default",
+      "[n] content/*[1]; [m] children/*[1]/children/* (separator:\"⠀\", join:\"\"); [n] content/*[2];",
+      "self::matrix[@role=\"cycle\"]"
     ],
     [
       "Rule",

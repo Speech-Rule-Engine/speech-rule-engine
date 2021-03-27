@@ -1680,6 +1680,7 @@ sre.SemanticAttr.Role = {
   ROWVECTOR: 'rowvector',
   BINOMIAL: 'binomial',
   SQUAREMATRIX: 'squarematrix',
+  CYCLE: 'cycle',
 
   // Roles of rows, lines, cells.
   // They mirror the different types for tables, unless a more specific role is
