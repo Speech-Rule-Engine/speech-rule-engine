@@ -166,7 +166,9 @@ sre.Grammar.getInstance().setCorrection('enlargeFence',
 sre.NemethUtil.NUMBER_PROPAGATORS_ = [
   sre.SemanticAttr.Type.MULTIREL,
   sre.SemanticAttr.Type.RELSEQ,
-  sre.SemanticAttr.Type.APPL
+  sre.SemanticAttr.Type.APPL,
+  sre.SemanticAttr.Type.ROW,
+  sre.SemanticAttr.Type.LINE
 ];
 
 
@@ -236,7 +238,6 @@ sre.NemethUtil.propagateNumber = function(node, info) {
             '', {number: false, enclosed: info.enclosed, script: info.script}];
   }
   if (sre.NemethUtil.NUMBER_INHIBITORS_.indexOf(node.type) !== -1) {
-    // info.number = false;
     info.script = true;
   }
   if (node.type === sre.SemanticAttr.Type.FENCED) {
@@ -246,7 +247,6 @@ sre.NemethUtil.propagateNumber = function(node, info) {
   }
   if (sre.NemethUtil.checkParent_(node, info)) {
     info.number = true;
-    info.script = false;
     info.enclosed = false;
   }
   return ['', info];

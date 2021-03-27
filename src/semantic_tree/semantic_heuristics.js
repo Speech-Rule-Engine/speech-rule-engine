@@ -49,6 +49,7 @@ sre.SemanticHeuristics = function() {
 
 
   /**
+   * Heuristics that are run by default.
    * @type {Object.<boolean>}
    */
   this.flags = {
@@ -56,6 +57,12 @@ sre.SemanticHeuristics = function() {
     convert_juxtaposition: true,
     multioperator: true
   };
+
+  /**
+   * Heuristics that are permanently switched off.
+   * @type {Object.<boolean>}
+   */
+  this.blacklist = { };
 
 };
 goog.addSingletonGetter(sre.SemanticHeuristics);
@@ -86,6 +93,7 @@ sre.SemanticHeuristics.add = function(name, heuristic) {
 sre.SemanticHeuristics.run = function(name, root, opt_alternative) {
   var heuristic = sre.SemanticHeuristics.lookup(name);
   return heuristic &&
+      !sre.SemanticHeuristics.getInstance().blacklist[name] &&
       (sre.SemanticHeuristics.getInstance().flags[name] ||
        heuristic.applicable(root)) ?
       heuristic.apply(root) :
@@ -438,7 +446,7 @@ sre.SemanticHeuristics.convertPrePost_ = function(collect, next, comps) {
  * expressions. Note that the heuristic assumes that all multiple occurrences of
  * invisible times elements are processed. So all we have here are single
  * operators or infix operators of role implicit.
- * 
+ *
  * @param {!Array.<!sre.SemanticNode>} acc Elements to the left of the first
  *     implicit operation or application of an implicit operation. This serves as
  *     an accumulator during the recursion.
@@ -553,3 +561,36 @@ sre.SemanticHeuristics.add(
       return node;
   }
   }));
+
+
+/**
+ *  Rewrites space separated lists of numbers into of cycles.
+ *  (Currently only used in Nemeth.)
+ */
+sre.SemanticHeuristics.add(
+  'detect_cycle',
+  new sre.SemanticTreeHeuristic({
+    predicate: function(node) {
+      return sre.Engine.getInstance().modality === 'braille' &&
+        node.type === sre.SemanticAttr.Type.FENCED &&
+        node.childNodes[0].type === sre.SemanticAttr.Type.INFIXOP &&
+        node.childNodes[0].role === sre.SemanticAttr.Role.IMPLICIT &&
+        node.childNodes[0].childNodes.every(function(x) {
+          return x.type === sre.SemanticAttr.Type.NUMBER;
+        }) &&
+        node.childNodes[0].contentNodes.every(function(x) {
+          return x.role === sre.SemanticAttr.Role.SPACE;
+        })
+        ;
+    },
+    method: function(node) {
+      // TODO: Test for simple elements?
+      node.type = sre.SemanticAttr.Type.MATRIX;
+      node.role = sre.SemanticAttr.Role.CYCLE;
+      var row = node.childNodes[0];
+      row.type = sre.SemanticAttr.Type.ROW;
+      row.role = sre.SemanticAttr.Role.CYCLE;
+      row.contentNodes = [];
+      return node;
+    }})
+);

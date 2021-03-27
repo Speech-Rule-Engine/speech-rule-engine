@@ -1112,6 +1112,7 @@ sre.SemanticProcessor.prototype.horizontalFencedNode_ = function(
   } else {
     newNode.role = ofence.role;
   }
+  newNode = sre.SemanticHeuristics.run('detect_cycle', newNode);
   return sre.SemanticProcessor.rewriteFencedNode_(newNode);
 };
 

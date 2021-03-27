@@ -81,6 +81,18 @@
     ],
     [
       "Rule",
+      "multi-caps-english",
+      "default",
+      "[t] \"⠠⠠\"; [n] . (grammar:ignoreFont=\"⠠\");",
+      "self::identifier",
+      "string-length(text())>1",
+      "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "\"\"=translate(text(), \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")",
+      "@role!=\"unit\""
+    ],
+    [
+      "Rule",
       "font-identifier",
       "default",
       "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)",
@@ -520,16 +532,7 @@
       "subscript-simple",
       "default",
       "[n] children/*[1]; [n] children/*[2]",
-      "self::subscript[contains(@role,\"letter\")]",
-      "name(./children/*[1])=\"identifier\" or name(./children/*[1])=\"function\"",
-      "name(./children/*[2])=\"number\"",
-      "./children/*[2][@role!=\"mixed\"]",
-      "./children/*[2][@role!=\"othernumber\"]"
-    ],
-    [
-      "Aliases",
-      "subscript-simple",
-      "self::subscript[contains(@role,\"function\")]",
+      "self::subscript[@role!=\"unknown\"]",
       "name(./children/*[1])=\"identifier\" or name(./children/*[1])=\"function\"",
       "name(./children/*[2])=\"number\"",
       "./children/*[2][@role!=\"mixed\"]",
@@ -542,10 +545,11 @@
       "[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]; [t] CSFbaselineVerbose",
       "self::subscript",
       "@role!=\"subsup\"",
-      "following-sibling::*",
+      "following::*",
       "@role!=\"prefix function\"",
-      "name(../..)!=\"relseq\"",
-      "name(../..)!=\"multirel\"",
+      "name(following::*[1]/../..)!=\"relseq\"",
+      "name(following::*[1]/../..)!=\"multirel\"",
+      "name(following::*[1])!=\"punctuation\"",
       "not(name(following-sibling::subscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"subscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\"))",
       "not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
     ],
@@ -553,7 +557,9 @@
       "Aliases",
       "subscript-baseline",
       "self::subscript",
+      "following::*",
       "not(following-sibling::*)",
+      "name(following::*[1])!=\"punctuation\"",
       "ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated|ancestor::fraction",
       "not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
     ],
@@ -561,7 +567,16 @@
       "Aliases",
       "subscript-baseline",
       "self::subscript",
+      "ancestor::fenced",
+      "name(following::*[1])!=\"punctuation\""
+    ],
+    [
+      "Aliases",
+      "subscript-baseline",
+      "self::subscript",
+      "following::*",
       "not(following-sibling::*)",
+      "name(following::*[1])!=\"punctuation\"",
       "@embellished"
     ],
     [
@@ -624,7 +639,8 @@
       "self::superscript",
       "not(following-sibling::*)",
       "name(following::*[1])!=\"punctuation\"",
-      "ancestor::relseq|ancestor::multirel",
+      "name(following::*[1]/../..)!=\"relseq\"",
+      "name(following::*[1]/../..)!=\"multirel\"",
       "not(@embellished)",
       "CGFbaselineConstraint"
     ],
@@ -761,15 +777,6 @@
     ],
     [
       "Rule",
-      "matrix-fence",
-      "default",
-      "[n] children/*[1];",
-      "self::fenced",
-      "count(children/*)=1",
-      "name(children/*[1])=\"matrix\""
-    ],
-    [
-      "Rule",
       "matrix",
       "default",
       "[m] children/* (separator:\"⠀\", join:\"\");",
@@ -881,6 +888,13 @@
       "self::line",
       "count(children/*)=0",
       "content"
+    ],
+    [
+      "Rule",
+      "cycle",
+      "default",
+      "[n] content/*[1]; [m] children/*[1]/children/* (separator:\"⠀\", join:\"\"); [n] content/*[2];",
+      "self::matrix[@role=\"cycle\"]"
     ],
     [
       "Rule",
@@ -1031,6 +1045,17 @@
       "[n] text(); [t] \"⠀\"",
       "self::punctuation[@role=\"colon\"]",
       "following-sibling::relseq[@role=\"arrow\"]"
+    ],
+    [
+      "Rule",
+      "punctuation-colon-ratio",
+      "default",
+      "[t] \"⠀⠐⠂⠀\"",
+      "self::punctuation[@role=\"colon\"]",
+      "preceding-sibling::*",
+      "following-sibling::*",
+      "name(preceding-sibling::*)=name(following-sibling::*)",
+      "preceding-sibling::*[@role=following-sibling::*/@role]"
     ],
     [
       "Rule",
