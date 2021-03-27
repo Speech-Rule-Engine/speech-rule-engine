@@ -546,6 +546,7 @@
       "@role!=\"prefix function\"",
       "name(following::*[1]/../..)!=\"relseq\"",
       "name(following::*[1]/../..)!=\"multirel\"",
+      "name(following::*[1])!=\"punctuation\"",
       "not(name(following-sibling::subscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"subscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\"))",
       "not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
     ],
@@ -555,6 +556,7 @@
       "self::subscript",
       "following::*",
       "not(following-sibling::*)",
+      "name(following::*[1])!=\"punctuation\"",
       "ancestor::fenced|ancestor::root|ancestor::sqrt|ancestor::punctuated|ancestor::fraction",
       "not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
     ],
@@ -562,7 +564,8 @@
       "Aliases",
       "subscript-baseline",
       "self::subscript",
-      "ancestor::fenced"
+      "ancestor::fenced",
+      "name(following::*[1])!=\"punctuation\""
     ],
     [
       "Aliases",
@@ -570,6 +573,7 @@
       "self::subscript",
       "following::*",
       "not(following-sibling::*)",
+      "name(following::*[1])!=\"punctuation\"",
       "@embellished"
     ],
     [
@@ -632,7 +636,8 @@
       "self::superscript",
       "not(following-sibling::*)",
       "name(following::*[1])!=\"punctuation\"",
-      "ancestor::relseq|ancestor::multirel",
+      "name(following::*[1]/../..)!=\"relseq\"",
+      "name(following::*[1]/../..)!=\"multirel\"",
       "not(@embellished)",
       "CGFbaselineConstraint"
     ],
