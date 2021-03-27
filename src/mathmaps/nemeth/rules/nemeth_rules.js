@@ -81,6 +81,18 @@
     ],
     [
       "Rule",
+      "multi-caps-english",
+      "default",
+      "[t] \"⠠⠠\"; [n] . (grammar:ignoreFont=\"⠠\");",
+      "self::identifier",
+      "string-length(text())>1",
+      "@font=\"normal\" or @font=\"fullwidth\" or @font=\"monospace\"",
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "\"\"=translate(text(), \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\", \"\")",
+      "@role!=\"unit\""
+    ],
+    [
+      "Rule",
       "font-identifier",
       "default",
       "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)",
@@ -1042,6 +1054,17 @@
       "[n] text(); [t] \"⠀\"",
       "self::punctuation[@role=\"colon\"]",
       "following-sibling::relseq[@role=\"arrow\"]"
+    ],
+    [
+      "Rule",
+      "punctuation-colon-ratio",
+      "default",
+      "[t] \"⠀⠐⠂⠀\"",
+      "self::punctuation[@role=\"colon\"]",
+      "preceding-sibling::*",
+      "following-sibling::*",
+      "name(preceding-sibling::*)=name(following-sibling::*)",
+      "preceding-sibling::*[@role=following-sibling::*/@role]"
     ],
     [
       "Rule",
