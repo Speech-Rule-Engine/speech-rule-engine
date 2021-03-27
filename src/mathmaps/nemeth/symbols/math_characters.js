@@ -6,7 +6,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "⠈⠇"
+        "default": "⠈⠰⠇"
       }
     },
     "key": "2113"

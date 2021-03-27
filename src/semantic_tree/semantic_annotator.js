@@ -70,7 +70,7 @@ sre.SemanticAnnotator.prototype.annotate = function(node) {
  * @param {string} name A name for the visitor.
  * @param {function(sre.SemanticNode, Object.<*>): *} func The annotation
  *     function.
- * @param {Object.<*>=} opt_def The annotation function.
+ * @param {Object.<*>=} opt_def The initial object that is used for annotation.
  */
 sre.SemanticVisitor = function(domain, name, func, opt_def) {
 
