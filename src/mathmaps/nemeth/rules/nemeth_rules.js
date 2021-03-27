@@ -532,16 +532,7 @@
       "subscript-simple",
       "default",
       "[n] children/*[1]; [n] children/*[2]",
-      "self::subscript[contains(@role,\"letter\")]",
-      "name(./children/*[1])=\"identifier\" or name(./children/*[1])=\"function\"",
-      "name(./children/*[2])=\"number\"",
-      "./children/*[2][@role!=\"mixed\"]",
-      "./children/*[2][@role!=\"othernumber\"]"
-    ],
-    [
-      "Aliases",
-      "subscript-simple",
-      "self::subscript[contains(@role,\"function\")]",
+      "self::subscript[@role!=\"unknown\"]",
       "name(./children/*[1])=\"identifier\" or name(./children/*[1])=\"function\"",
       "name(./children/*[2])=\"number\"",
       "./children/*[2][@role!=\"mixed\"]",
