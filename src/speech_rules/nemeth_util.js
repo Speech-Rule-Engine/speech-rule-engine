@@ -238,7 +238,6 @@ sre.NemethUtil.propagateNumber = function(node, info) {
             '', {number: false, enclosed: info.enclosed, script: info.script}];
   }
   if (sre.NemethUtil.NUMBER_INHIBITORS_.indexOf(node.type) !== -1) {
-    // info.number = false;
     info.script = true;
   }
   if (node.type === sre.SemanticAttr.Type.FENCED) {
@@ -248,7 +247,6 @@ sre.NemethUtil.propagateNumber = function(node, info) {
   }
   if (sre.NemethUtil.checkParent_(node, info)) {
     info.number = true;
-    info.script = false;
     info.enclosed = false;
   }
   return ['', info];
