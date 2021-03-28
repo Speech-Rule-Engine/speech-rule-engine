@@ -323,7 +323,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠨⠡"
+        "default": "⠘⠨⠡"
       }
     },
     "key": "00B0"
