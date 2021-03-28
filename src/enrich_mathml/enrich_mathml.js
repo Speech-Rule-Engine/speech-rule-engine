@@ -700,6 +700,7 @@ sre.EnrichMathml.isIgnorable_ = function(node) {
   var children = sre.DomUtil.toArray(node.childNodes);
   if ((!sre.SemanticUtil.hasEmptyTag(node) && children.length) ||
       sre.SemanticUtil.hasDisplayTag(node) ||
+      node.hasAttribute(sre.EnrichMathml.Attribute.TYPE) ||
       sre.SemanticUtil.isOrphanedGlyph(node)) {
     return false;
   }
@@ -856,8 +857,7 @@ sre.EnrichMathml.getInnerNode = function(node) {
     return node;
   }
   var remainder = children.filter(function(child) {
-    return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
-        !sre.EnrichMathml.isIgnorable_(child);
+    return !sre.EnrichMathml.isIgnorable_(child);
   });
   var result = [];
   for (var i = 0, remain; remain = remainder[i]; i++) {

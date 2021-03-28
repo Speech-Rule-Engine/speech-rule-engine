@@ -70,13 +70,13 @@ sre.SemanticAttr = function() {
    */
   this.generalPunctuations =
       [
-        '!', '"', '#', '%', '&', ':', ';', '?', '@', '\\',
+        '!', '"', '#', '%', '&', ';', '?', '@', '\\',
         '¡', '§', '¶', '¿', '‗', '†', '‡', '•', '‣', '․', '‥', '‧',
         '‰', '‱', '‸', '※', '‼', '‽', '‾', '⁁', '⁂', '⁃', '⁇', '⁈', '⁉',
         '⁋', '⁌', '⁍', '⁎', '⁏', '⁐', '⁑', '⁓', '⁕', '⁖', '⁘', '⁙', '⁚',
-        '⁛', '⁜', '⁝', '⁞', '︐', '︓', '︔', '︕', '︖', '︰', '﹅', '﹆',
-        '﹉', '﹊', '﹋', '﹌', '﹐', '﹔', '﹕', '﹖', '﹗', '﹟', '﹠', '﹡', '﹨',
-        '﹪', '﹫', '！', '＂', '＃', '％', '＆', '＇', '＊', '，', '／', '：',
+        '⁛', '⁜', '⁝', '⁞', '︐', '︔', '︕', '︖', '︰', '﹅', '﹆',
+        '﹉', '﹊', '﹋', '﹌', '﹔', '﹖', '﹗', '﹟', '﹠', '﹡', '﹨',
+        '﹪', '﹫', '！', '＂', '＃', '％', '＆', '＇', '＊', '／',
         '；', '？', '＠', '＼'
       ];
   /**
@@ -84,7 +84,7 @@ sre.SemanticAttr = function() {
    */
   this.colons =
       [
-        ':', '：', '﹕'
+        '︓', ':', '：', '﹕'
       ];
   /**
    * @type {string}
@@ -96,7 +96,7 @@ sre.SemanticAttr = function() {
    */
   this.commas =
       [
-       ',', this.invisibleComma_
+       '，', '﹐', ',', this.invisibleComma_
       ];
   /**
    * @type {Array.<string>}
@@ -697,7 +697,7 @@ sre.SemanticAttr = function() {
         '≎', '≑', '≒', '≓', '≔', '≕', '≖', '≗', '≘', '≙', '≚', '≛', '≜',
         '≝', '≞', '≟', '≡', '≣', '⧤', '⩦', '⩮', '⩯', '⩰', '⩱', '⩲', '⩳',
         '⩴', '⩵', '⩶', '⩷', '⩸', '⋕', '⩭', '⩪', '⩫', '⩬', '﹦', '＝', '⩬',
-        '⊜',
+        '⊜', '∷'
       ];
   /**
    * @type {Array.<string>}
@@ -1455,7 +1455,7 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.PREFIXFUNC},
     {set: this.infixFunctions,
       type: sre.SemanticAttr.Type.OPERATOR,
-      role: sre.SemanticAttr.Role.INFIXFUNC
+      role: sre.SemanticAttr.Role.PREFIXFUNC
     }
     // TODO (sorge) Add some of the remaining elements.
   ];
@@ -1629,6 +1629,7 @@ sre.SemanticAttr.Role = {
 
   // Text.
   STRING: 'string',
+  SPACE: 'space',
 
   // Punctuated elements.
   SEQUENCE: 'sequence',
@@ -1679,6 +1680,7 @@ sre.SemanticAttr.Role = {
   ROWVECTOR: 'rowvector',
   BINOMIAL: 'binomial',
   SQUAREMATRIX: 'squarematrix',
+  CYCLE: 'cycle',
 
   // Roles of rows, lines, cells.
   // They mirror the different types for tables, unless a more specific role is

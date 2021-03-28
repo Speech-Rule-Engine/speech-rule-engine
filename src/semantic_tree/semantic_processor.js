@@ -119,6 +119,7 @@ sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
   var operators = sre.SemanticProcessor.getInstance().factory_.
       makeMultipleContentNodes(nodes.length - 1,
                                sre.SemanticAttr.invisibleTimes());
+  sre.SemanticProcessor.matchSpaces_(nodes, operators);
   // For now we assume this is a multiplication using invisible times.
   var newNode = sre.SemanticProcessor.getInstance().infixNode_(
       nodes, /**@type{!sre.SemanticNode}*/(operators[0]));
@@ -127,6 +128,43 @@ sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
   newNode.contentNodes = operators;
   return newNode;
 };
+
+
+sre.SemanticProcessor.matchSpaces_ = function(nodes, ops) {
+  for (var i = 0, op; op = ops[i]; i++) {
+    var node = nodes[i];
+    var mt1 = node.mathmlTree;
+    var mt2 = nodes[i + 1].mathmlTree;
+    if (!mt1 || !mt2) {
+      continue;
+    }
+    var sibling = mt1.nextSibling;
+    if (!sibling || sibling === mt2) {
+      continue;
+    }
+    var spacer = sre.SemanticProcessor.getSpacer_(sibling);
+    if (spacer) {
+      op.mathml.push(spacer);
+      op.mathmlTree = spacer;
+      op.role = sre.SemanticAttr.Role.SPACE;
+    }
+  }
+};
+
+
+sre.SemanticProcessor.getSpacer_ = function(node) {
+  if (sre.DomUtil.tagName(node) === 'MSPACE') {
+    return node;
+  }
+  while (sre.SemanticUtil.hasEmptyTag(node) &&
+         node.childNodes.length === 1) {
+    node = node.childNodes[0];
+    if (sre.DomUtil.tagName(node) === 'MSPACE') {
+      return node;
+    }
+  }
+  return null;
+}
 
 
 /**
@@ -282,18 +320,23 @@ sre.SemanticProcessor.prototype.postfixNode_ = function(node, postfixes) {
 
 /**
  * Create an text node, keeping string notation correct.
- * @param {sre.SemanticNode} leaf The text node.
+ * @param {!sre.SemanticNode} leaf The text node.
  * @param {string} type The type of the text node.
  * @return {!sre.SemanticNode} The new semantic text node.
  */
 sre.SemanticProcessor.prototype.text = function(leaf, type) {
   // TODO (simons): Here check if there is already a type or if we can compute
   // an interesting number role. Than use this.
+  sre.SemanticProcessor.exprFont_(leaf);
   leaf.type = sre.SemanticAttr.Type.TEXT;
   if (type === 'MS') {
     leaf.role = sre.SemanticAttr.Role.STRING;
+    return leaf;
   }
-  sre.SemanticProcessor.exprFont_(leaf);
+  if (type === 'MSPACE' || leaf.textContent.match(/^\s*$/)) {
+    leaf.role = sre.SemanticAttr.Role.SPACE;
+    return leaf;
+  }
   // TODO (simons): Process single element in text. E.g., check if a text
   //      element represents a function or a single letter, number, etc.
   return leaf;
@@ -428,6 +471,9 @@ sre.SemanticProcessor.prototype.getTextInRow_ = function(nodes) {
   }
   var result = [];
   var nextComp = partition.comp[0];
+  // TODO: Properly collate punctuation: Add start and end punctuation to become
+  //       the punctuation content of the punctuated node. Consider spaces
+  //       separately.  This currently introduces too many invisible commas.
   if (nextComp.length > 0) {
     result.push(sre.SemanticProcessor.getInstance().row(nextComp));
   }
@@ -1066,6 +1112,7 @@ sre.SemanticProcessor.prototype.horizontalFencedNode_ = function(
   } else {
     newNode.role = ofence.role;
   }
+  newNode = sre.SemanticHeuristics.run('detect_cycle', newNode);
   return sre.SemanticProcessor.rewriteFencedNode_(newNode);
 };
 
@@ -1206,6 +1253,8 @@ sre.SemanticProcessor.prototype.getPunctuationInRow_ = function(nodes) {
 };
 
 
+// TODO: Refine roles to reflect same roles. Find sequences of punctuation
+// elements and separate those out or at least rewrite ellipses.
 /**
  * Create a punctuated node.
  * @param {!Array.<!sre.SemanticNode>} nodes List of all nodes separated
@@ -1236,6 +1285,9 @@ sre.SemanticProcessor.prototype.punctuatedNode_ = function(
   } else if (punctuations.every(
       sre.SemanticPred.isAttribute('role', 'DUMMY'))) {
     newNode.role = sre.SemanticAttr.Role.TEXT;
+  } else if (punctuations.every(
+    sre.SemanticPred.isAttribute('role', 'SPACE'))) {
+    newNode.role = sre.SemanticAttr.Role.SPACE;
   } else {
     newNode.role = sre.SemanticAttr.Role.SEQUENCE;
   }
@@ -1543,14 +1595,11 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
   // content is.
   if (restNodes[0] &&
       restNodes[0].textContent === sre.SemanticAttr.functionApplication()) {
-    // Remove explicit function application. This is destructive on the
-    // underlying list.
-    //
-    // TODO (sorge) This should not be destructive! This in particular destroys
-    // any information we get on the element. Eg., texclass=NONE.
+    // Store explicit function application to be reused later.
     sre.SemanticProcessor.getInstance().funcAppls[funcNode.id] =
       restNodes.shift();
     var role = sre.SemanticAttr.Role.SIMPLEFUNC;
+    sre.SemanticHeuristics.run('simple2prefix', funcNode);
     if (funcNode.role === sre.SemanticAttr.Role.PREFIXFUNC ||
         funcNode.role === sre.SemanticAttr.Role.LIMFUNC) {
       role = funcNode.role;

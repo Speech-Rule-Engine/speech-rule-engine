@@ -6,7 +6,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠱"
       }
     },
     "key": "2500"
@@ -24,7 +24,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠳"
       }
     },
     "key": "2502"
@@ -1788,7 +1788,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠙"
       }
     },
     "key": "25C6"
@@ -1797,7 +1797,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠙"
       }
     },
     "key": "25C7"
@@ -1806,7 +1806,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠙"
       }
     },
     "key": "25C8"
@@ -1815,7 +1815,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠉"
       }
     },
     "key": "25C9"
@@ -1824,7 +1824,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "⠫⠸⠉"
+        "default": "⠫⠙"
       }
     },
     "key": "25CA"
@@ -1869,7 +1869,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠉"
       }
     },
     "key": "25CF"
@@ -2427,7 +2427,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠢"
       }
     },
     "key": "2B1F"
@@ -2436,7 +2436,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠢"
       }
     },
     "key": "2B20"
@@ -2445,7 +2445,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠖"
       }
     },
     "key": "2B21"
@@ -2454,7 +2454,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠖"
       }
     },
     "key": "2B22"
@@ -2463,7 +2463,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠖"
       }
     },
     "key": "2B23"
@@ -2472,7 +2472,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠉"
       }
     },
     "key": "2B24"
@@ -2481,7 +2481,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "⠫⠸⠙"
       }
     },
     "key": "2B25"

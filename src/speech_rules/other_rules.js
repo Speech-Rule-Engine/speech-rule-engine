@@ -72,7 +72,10 @@ sre.BrailleRules = function() {
       'CSFcloseRadicalVerbose': sre.NemethUtil.closingRadical,
       'CSFindexRadicalVerbose': sre.NemethUtil.indexRadical,
 
-      'CGFtensorRules': sre.NemethUtil.generateTensorRules
+      'CGFtensorRules': sre.NemethUtil.generateTensorRules,
+
+      'CTFrelationIterator': sre.NemethUtil.relationIterator,
+      'CTFimplicitIterator': sre.NemethUtil.implicitIterator
     });
 
 };

@@ -9,8 +9,11 @@
     "sre": "bin/sre"
   },
   "scripts": {
-    "test": "make test VERBOSE=1 NOOUTPUT=true",
-    "prepublishOnly": "make clean; make publish"
+    "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
+    "pretest": "make test_compile",
+    "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npx jest",
+    "prepublishOnly": "make clean; make publish",
+    "build": "make all"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"

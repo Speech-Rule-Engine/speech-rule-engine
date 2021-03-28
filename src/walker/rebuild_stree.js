@@ -117,18 +117,13 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
   sre.RebuildStree.addAttributes(
       snode, node, !(children.length || content.length));
   if (content.length === 0 && children.length === 0) {
-    snode.textContent = node.textContent;
+    sre.RebuildStree.textContent(snode, node);
     return snode;
   }
   if (content.length > 0) {
     var fcontent = sre.WalkerUtil.getBySemanticId(this.mathml, content[0]);
     if (fcontent) {
-      var operator = sre.WalkerUtil.splitAttribute(
-          sre.WalkerUtil.getAttribute(
-              fcontent, sre.EnrichMathml.Attribute.OPERATOR));
-      if (operator.length > 1) {
-        snode.textContent = operator[1];
-      }
+      sre.RebuildStree.textContent(snode, fcontent, true);
     }
   }
   var setParent = function(n) {
@@ -142,6 +137,26 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
   var collapsed = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.COLLAPSED);
   return collapsed ? this.postProcess(snode, collapsed) : snode;
+};
+
+
+/**
+ * Sets the text content of the semantic node. If no text content is available
+ * or it is ignored, but an operator is given, it uses that.
+ * @param {!sre.SemanticNode} snode The semantic node.
+ * @param {!Node} node The mml node.
+ * @param {boolean=} opt_ignore Ignores using text content.
+ */
+sre.RebuildStree.textContent = function(snode, node, opt_ignore) {
+  if (!opt_ignore && node.textContent) {
+    snode.textContent = node.textContent;
+    return;
+  }
+  var operator = sre.WalkerUtil.splitAttribute(
+    sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.OPERATOR));
+  if (operator.length > 1) {
+    snode.textContent = operator[1];
+  }
 };
 
 
