@@ -68,6 +68,8 @@ sre.SpeechRuleEngine = function() {
    */
   this.evaluators_ = {};
 
+  this.prune_ = true;
+
   sre.Engine.registerTest(
       goog.bind(function(x) {return this.ready_;}, this));
 
@@ -483,8 +485,34 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
     setTimeout(goog.bind(this.updateEngine, this), 250);
     return;
   }
+  if (this.prune_) {
+    this.prune_ = false;
+    this.adjustEngine();
+    return;
+  }
+  sre.SpeechRuleEngine.getInstance().prune_ = true;
   sre.Engine.getInstance().evaluator =
       goog.bind(maps.store.lookupString, maps.store);
+};
+
+
+sre.SpeechRuleEngine.prototype.adjustEngine = function() {
+  var engine = sre.Engine.getInstance();
+  if (engine.prune) {
+    this.activeStore_.prune(engine.prune.split('.'));
+  }
+  if (engine.rules) {
+    // TODO: Not sure where to move that.
+    var path = sre.SystemExternal.jsonPath.replace(
+      '/lib/mathmaps', '/src/mathmaps');
+    var parse = function(json) {
+      return sre.MathMap.getInstance().parseMaps(
+        '{"' + engine.rules + '":' + json + '}'
+      );
+    };
+    sre.MathMap.getInstance().retrieveFiles(path + engine.rules, parse);
+    setTimeout(goog.bind(this.updateEngine, this), 100);
+  }
 };
 
 
