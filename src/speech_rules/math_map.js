@@ -93,8 +93,8 @@ sre.MathMap.prototype.loadLocale = function() {
     if (async) {
       sre.Engine.getInstance().mode = sre.Engine.Mode.SYNC;
     }
-    this.loaded_.push(locale);
     this.retrieveMaps(locale);
+    this.loaded_.push(locale);
     if (async) {
       sre.Engine.getInstance().mode = sre.Engine.Mode.ASYNC;
     }
@@ -120,10 +120,10 @@ sre.Engine.registerTest(function() {
 sre.MathMap.prototype.retrieveFiles = function(locale) {
   var file = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
       locale + '.js';
+  var parse = goog.bind(this.parseMaps, this);
   switch (sre.Engine.getInstance().mode) {
     case sre.Engine.Mode.ASYNC:
-      sre.MathMap.toFetch_++;
-      var parse = goog.bind(this.parseMaps, this);
+    sre.MathMap.toFetch_++;
       sre.MathMap.fromFile_(file,
           function(err, json) {
             sre.MathMap.toFetch_--;
@@ -133,12 +133,12 @@ sre.MathMap.prototype.retrieveFiles = function(locale) {
       break;
     case sre.Engine.Mode.HTTP:
       sre.MathMap.toFetch_++;
-      this.getJsonAjax_(file);
+      sre.MathMap.getJsonAjax_(file, parse);
       break;
     case sre.Engine.Mode.SYNC:
     default:
       var strs = sre.MathMap.loadFile(file);
-      this.parseMaps(strs);
+      parse(strs);
       break;
   }
 };
@@ -251,11 +251,11 @@ sre.MathMap.readJSON_ = function(path) {
 /**
  * Sents AJAX request to retrieve a JSON rule file.
  * @param {string} file The file to retrieve.
+ * @param {function(string)} parse Method adding the rules.
  * @private
  */
-sre.MathMap.prototype.getJsonAjax_ = function(file) {
+sre.MathMap.getJsonAjax_ = function(file, parse) {
   var httpRequest = new XMLHttpRequest();
-  var parse = goog.bind(this.parseMaps, this);
   httpRequest.onreadystatechange = function() {
     if (httpRequest.readyState === 4) {
       sre.MathMap.toFetch_--;
