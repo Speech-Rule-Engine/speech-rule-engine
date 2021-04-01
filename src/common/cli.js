@@ -292,7 +292,7 @@ sre.Cli.prototype.commandLine = function() {
       option('-l, --log [name]', 'Log file [name].').
       option('--opt', 'List engine setup options.').
       on('option:opt', goog.bind(function() {
-        this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
+        this.enumerate(); sre.System.getInstance.exit(0);}, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);
   var options = commander.opts();
@@ -308,7 +308,7 @@ sre.Cli.prototype.commandLine = function() {
     this.readline();
   }
   sre.Debugger.getInstance().exit(
-      function() {sre.SystemExternal.process.exit(0);});
+      function() {sre.System.getInstance().exit(0);});
 };
 
 if (sre.SystemExternal.process && sre.SystemExternal.process.env.SRE_TOP_PATH) {
