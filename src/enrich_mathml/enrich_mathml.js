@@ -165,7 +165,7 @@ sre.EnrichMathml.walkTree = function(semantic) {
   newNode = semantic.mathmlTree;
   if (newNode === null) {
     sre.Debugger.getInstance().output('Walktree Case 1');
-    newNode = sre.EnrichMathml.introduceNewLayer(childrenList);
+    newNode = sre.EnrichMathml.introduceNewLayer(childrenList, semantic);
   } else {
     var attached = sre.EnrichMathml.attachedElement_(childrenList);
     sre.Debugger.getInstance().output('Walktree Case 2');
@@ -204,9 +204,11 @@ sre.EnrichMathml.walkTree = function(semantic) {
  *
  * @param {!Array.<Element>} children The list of children of the MathML
  *     element.
+ * @param {!sre.SemanticNode} semantic The semantic node for which a new layer
+ *     is introduced.
  * @return {!Element} The node containing the children.
  */
-sre.EnrichMathml.introduceNewLayer = function(children) {
+sre.EnrichMathml.introduceNewLayer = function(children, semantic) {
   var lca = sre.EnrichMathml.mathmlLca_(children);
   var newNode = lca.node;
   var info = lca.type;
@@ -227,6 +229,7 @@ sre.EnrichMathml.introduceNewLayer = function(children) {
       oldChildren.forEach(function(x) {newNode.appendChild(x);});
     }
   }
+  semantic.mathmlTree = newNode;
   return /**@type{!Element}*/(newNode);
 };
 
