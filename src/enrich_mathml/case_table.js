@@ -55,10 +55,9 @@ goog.inherits(sre.CaseTable, sre.AbstractEnrichCase);
  * @return {boolean} True if case is applicable.
  */
 sre.CaseTable.test = function(semantic) {
-  return !!semantic.mathmlTree &&
-      (semantic.type === sre.SemanticAttr.Type.MATRIX ||
+  return semantic.type === sre.SemanticAttr.Type.MATRIX ||
       semantic.type === sre.SemanticAttr.Type.VECTOR ||
-      semantic.type === sre.SemanticAttr.Type.CASES);
+      semantic.type === sre.SemanticAttr.Type.CASES;
 };
 
 
@@ -74,7 +73,9 @@ sre.CaseTable.prototype.getMathml = function() {
       null;
   this.inner = this.semantic.childNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.walkTree));
-  if (sre.DomUtil.tagName(this.mml) === 'MFENCED') {
+  if (!this.mml) {
+    this.mml = sre.EnrichMathml.introduceNewLayer([lfence, this.inner, rfence]);
+  } else if (sre.DomUtil.tagName(this.mml) === 'MFENCED') {
     var children = this.mml.childNodes;
     this.mml.insertBefore(lfence, children[0] || null);
     rfence && this.mml.appendChild(rfence);

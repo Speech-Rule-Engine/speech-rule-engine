@@ -61,6 +61,7 @@ sre.SemanticMathml = function() {
     'MTD': goog.bind(this.tableCell_, this),
     'MS': goog.bind(this.text_, this),
     'MTEXT': goog.bind(this.text_, this),
+    'MSPACE': goog.bind(this.space_, this),
     'ANNOTATION-XML': goog.bind(this.text_, this),
     'MI': goog.bind(this.identifier_, this),
     'MN': goog.bind(this.number_, this),
@@ -299,6 +300,35 @@ sre.SemanticMathml.prototype.tableCell_ = function(node, children) {
 
 
 /**
+ * Parse a space element. If sufficiently wide, create an empty text element.
+ * alpha only: ignore, em pc >= .5, cm >= .4, ex >= 1, in >= .15, pt mm >= 5.
+ * @param {Element} node A MathML node.
+ * @param {!Array.<Element>} children The children of the node.
+ * @return {!sre.SemanticNode} The newly created semantic node.
+ * @private
+ */
+sre.SemanticMathml.prototype.space_ = function(node, children) {
+  var width = node.getAttribute('width');
+  var match = width && width.match(/[a-z]*$/);
+  if (!match) {
+    return this.empty_(node, children);
+  }
+  var sizes = {
+    'cm': .4, 'pc': .5, 'em': .5, 'ex': 1, 'in': .15, 'pt': 5, 'mm': 5
+  };
+  var unit = match[0];
+  var measure = parseFloat(width.slice(0, match.index));
+  var size = sizes[unit];
+  if (!size || isNaN(measure) || measure < size) {
+    return this.empty_(node, children);
+  }
+  var newNode = this.getFactory().makeUnprocessed(node);
+  return sre.SemanticProcessor.getInstance().
+    text(newNode, sre.DomUtil.tagName(node));
+};
+
+
+/**
  * Parses a text element.
  * @param {Element} node A MathML node.
  * @param {!Array.<Element>} children The children of the node.
@@ -493,16 +523,14 @@ sre.SemanticMathml.prototype.dummy_ = function(node, children) {
   let unknown = this.getFactory().makeUnprocessed(node);
   unknown.role = /** @type {!sre.SemanticAttr.Role} */(node.tagName);
   unknown.textContent = node.textContent;
-  // unknown.mathml.unshift(node);
-  // unknown.mathmlTree = node;
   return unknown;
 };
 
 
 /**
  * Creates a leaf node from MathML node.
- * @param {Node} mml The MathML node.
- * @param {Array.<Node>} children Its child nodes.
+ * @param {Element} mml The MathML node.
+ * @param {Array.<Element>} children Its child nodes.
  * @return {!sre.SemanticNode} The new node.
  * @private
  */
