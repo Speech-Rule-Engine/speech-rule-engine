@@ -68,7 +68,7 @@ sre.SpeechRuleEngine = function() {
    */
   this.evaluators_ = {};
 
-  this.prune_ = true;
+  this.prune = true;
 
   sre.Engine.registerTest(
       goog.bind(function(x) {return this.ready_;}, this));
@@ -485,24 +485,27 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
     setTimeout(goog.bind(this.updateEngine, this), 250);
     return;
   }
-  if (this.prune_) {
-    this.prune_ = false;
+  if (this.prune) {
+    this.prune = false;
     this.adjustEngine();
     return;
   }
-  sre.SpeechRuleEngine.getInstance().prune_ = true;
   sre.Engine.getInstance().evaluator =
       goog.bind(maps.store.lookupString, maps.store);
 };
 
 
+/**
+ * Adjust Engine with local rule files.
+ */
 sre.SpeechRuleEngine.prototype.adjustEngine = function() {
   var engine = sre.Engine.getInstance();
   if (engine.prune) {
-    this.activeStore_.prune(engine.prune.split('.'));
+    var cstr = engine.prune.split('.');
+    this.activeStore_.prune(cstr);
   }
   if (engine.rules) {
-    // TODO: Not sure where to move that.
+    // TODO: This needs to be made more robust.
     var path = sre.SystemExternal.jsonPath.replace(
       '/lib/mathmaps', '/src/mathmaps');
     var parse = function(json) {
@@ -511,8 +514,8 @@ sre.SpeechRuleEngine.prototype.adjustEngine = function() {
       );
     };
     sre.MathMap.getInstance().retrieveFiles(path + engine.rules, parse);
-    setTimeout(goog.bind(this.updateEngine, this), 100);
   }
+  setTimeout(goog.bind(this.updateEngine, this), 100);
 };
 
 
