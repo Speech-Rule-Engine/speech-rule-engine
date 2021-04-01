@@ -483,8 +483,28 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
     setTimeout(goog.bind(this.updateEngine, this), 250);
     return;
   }
+  this.adjustEngine();
   sre.Engine.getInstance().evaluator =
       goog.bind(maps.store.lookupString, maps.store);
+};
+
+
+sre.SpeechRuleEngine.prototype.adjustEngine = function() {
+  var engine = sre.Engine.getInstance();
+  if (engine.prune) {
+    this.activeStore_.prune(engine.prune.split('.'));
+    engine.prune = '';
+  }
+  if (engine.rules) {
+    var path = sre.SystemExternal.jsonPath.replace(
+      '/lib/mathmaps', '/src/mathmaps');
+    var file = sre.MathMap.loadFile(path + engine.rules);
+    sre.MathMap.getInstance().parseMaps(
+      '{"' + engine.rules + '":' + file + '}'
+    );
+    engine.rules = '';
+    setTimeout(goog.bind(this.updateEngine, this), 100);
+  }
 };
 
 
