@@ -75,7 +75,7 @@ sre.CaseLimit.prototype.getMathml = function() {
       this.mml.childNodes.length >= 3) {
     // Extra layer only necessary if a split upper/lower script. Second
     // condition excludes incomplete elements.
-    this.mml = sre.EnrichMathml.introduceNewLayer([this.mml]);
+    this.mml = sre.EnrichMathml.introduceNewLayer([this.mml], this.semantic);
   }
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
   children[0].mathmlTree = this.semantic.mathmlTree;
