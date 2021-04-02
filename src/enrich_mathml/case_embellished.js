@@ -90,12 +90,15 @@ goog.inherits(sre.CaseEmbellished, sre.AbstractEnrichCase);
 
 
 /**
- * Applicability test of the case.
+ * Applicability test of the case. This method also prevents walking embellished
+ * punctuations twice as they might have already been walked as content nodes.
  * @param {!sre.SemanticNode} semantic The semantic node.
  * @return {boolean} True if case is applicable.
  */
 sre.CaseEmbellished.test = function(semantic) {
-  return !!(semantic.mathmlTree && semantic.fencePointer);
+  return !!(semantic.mathmlTree && semantic.fencePointer
+            // TODO: This needs a cleaner solution at some point.
+            && !semantic.mathmlTree.getAttribute('data-semantic-type'));
 };
 
 
