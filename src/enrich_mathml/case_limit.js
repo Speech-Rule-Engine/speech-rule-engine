@@ -78,7 +78,9 @@ sre.CaseLimit.prototype.getMathml = function() {
     this.mml = sre.EnrichMathml.introduceNewLayer([this.mml]);
   }
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
-  children[0].mathmlTree = this.semantic.mathmlTree;
+  if (!children[0].mathmlTree) {
+    children[0].mathmlTree = this.semantic.mathmlTree;
+  }
   children.forEach(sre.CaseLimit.walkTree_);
   return this.mml;
 };
