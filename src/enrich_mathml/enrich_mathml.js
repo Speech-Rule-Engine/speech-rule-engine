@@ -229,7 +229,9 @@ sre.EnrichMathml.introduceNewLayer = function(children, semantic) {
       oldChildren.forEach(function(x) {newNode.appendChild(x);});
     }
   }
-  semantic.mathmlTree = newNode;
+  if (!semantic.mathmlTree) {
+    semantic.mathmlTree = newNode;
+  }
   return /**@type{!Element}*/(newNode);
 };
 
