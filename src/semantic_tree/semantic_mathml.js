@@ -140,6 +140,9 @@ sre.SemanticMathml.prototype.rows_ = function(node, children) {
   if (children.length === 1) {
     // TODO: Collate external attributes!
     var newNode = this.parse(children[0]);
+    if (newNode.type === sre.SemanticAttr.Type.EMPTY && !newNode.mathmlTree) {
+      newNode.mathmlTree = node;
+    }
   } else {
     // Case of a 'meaningful' row, even if they are empty.
     newNode = sre.SemanticProcessor.getInstance().row(
