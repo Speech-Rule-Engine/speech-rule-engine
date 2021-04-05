@@ -153,11 +153,11 @@ sre.Cli.prototype.enumerate = function() {
  * @param {string} input The name of the input file.
  */
 sre.Cli.prototype.execute = function(input) {
-  var commander = sre.SystemExternal.commander;
+  var options = sre.SystemExternal.commander.opts();
   this.runProcessors_(
       goog.bind(
       function(proc, file) {
-        this.system.processFile(proc, file, commander.output);
+        this.system.processFile(proc, file, options.output);
       }, this),
       input);
 };
@@ -192,12 +192,12 @@ sre.Cli.prototype.runProcessors_ = function(processor, input) {
  * given output file.
  */
 sre.Cli.prototype.readline = function() {
-  var commander = sre.SystemExternal.commander;
+  var options = sre.SystemExternal.commander.opts();
   sre.SystemExternal.process.stdin.setEncoding('utf8');
   var inter = sre.SystemExternal.require('readline').createInterface({
     input: sre.SystemExternal.process.stdin,
-    output: commander.output ?
-        sre.SystemExternal.fs.createWriteStream(commander.output) :
+    output: options.output ?
+        sre.SystemExternal.fs.createWriteStream(options.output) :
         sre.SystemExternal.process.stdout
   });
   var input = '';
@@ -230,6 +230,47 @@ sre.Cli.prototype.readExpression_ = function(input) {
     return false;
   }
   return true;
+};
+
+
+/**
+ * Mathmap that should be loaded from source.
+ * @type {string}
+ */
+sre.Cli.localeFile = '';
+
+sre.Cli.prune = [];
+
+
+// The following is for pruning. Not certain yet if this should remain here!
+/**
+ * Retrieves a rules for a given sequence of constraints.
+ *
+ * @param {Array.<string>} constraint A list of constraints.
+ * @return {sre.TrieNode} The speech rule or null.
+ * What if multiple rules exist?
+ */
+sre.Trie.prototype.byConstraint = function(constraint) {
+  let node = this.root;
+  while (constraint.length && node) {
+    let cstr = constraint.shift();
+    node = node.getChild(cstr);
+  }
+  return node || null;
+};
+
+
+sre.AbstractTrieNode.prototype.removeChild = function(constraint) {
+  delete this['children_'][constraint];
+};
+
+
+sre.BaseRuleStore.prototype.prune = function(constraints) {
+  var last = constraints.pop();
+  var parent = this.trie.byConstraint(constraints);
+  if (parent) {
+    parent.removeChild(last);
+  }
 };
 
 
@@ -284,6 +325,8 @@ sre.Cli.prototype.commandLine = function() {
              ' MathML (with -m option only).', set('structure')).
       option('-P, --pprint', 'Pretty print output whenever possible.',
              set('pprint')).
+      option('-f, --file [name]', 'Loads a local locale file [name].').
+      option('-C, --cut [branch]', 'Prune trie [branch] for clean reload.').
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
       option('--opt', 'List engine setup options.').
@@ -291,11 +334,16 @@ sre.Cli.prototype.commandLine = function() {
         this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);
-  if (commander.verbose) {
-    sre.Debugger.getInstance().init(commander.log);
+  var options = commander.opts();
+  sre.Cli.localeFile = options.file;
+  if (options.cut) {
+    sre.Cli.prune = options.cut.split('.');
   }
-  if (commander.input) {
-    this.execute(commander.input);
+  if (options.verbose) {
+    sre.Debugger.getInstance().init(options.log);
+  }
+  if (options.input) {
+    this.execute(options.input);
   }
   if (commander.args.length) {
     commander.args.forEach(goog.bind(this.execute, this));
@@ -308,4 +356,16 @@ sre.Cli.prototype.commandLine = function() {
 
 if (sre.SystemExternal.process && sre.SystemExternal.process.env.SRE_TOP_PATH) {
   (new sre.Cli()).commandLine();
+  // TODO: Cleanup, put into a better place, extend to ASYNC and HTTP.
+  if (sre.Cli.prune.length) {
+    sre.SpeechRuleEngine.getInstance()['activeStore_'].prune(sre.Cli.prune);
+  }
+  if (sre.Cli.localeFile) {
+    var path = sre.SystemExternal.jsonPath.replace(
+      '/lib/mathmaps', '/src/mathmaps');
+    var file = sre.MathMap.loadFile(path + sre.Cli.localeFile);
+    sre.MathMap.getInstance().parseMaps(
+      '{"' + sre.Cli.localeFile + '":' + file + '}'
+    );
+  }
 }

@@ -1418,7 +1418,7 @@
       "Rule",
       "matrix-row",
       "default",
-      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonna\"); [p] (pause:200)",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonna\", pause:200)",
       "self::row"
     ],
     [
@@ -1464,14 +1464,14 @@
       "Rule",
       "matrix-cell",
       "default",
-      "[n] children/*[1]; [p] (pause:300)",
+      "[n] children/*[1] (pause:300)",
       "self::cell"
     ],
     [
       "Rule",
       "empty-cell",
       "default",
-      "[t] \"vuoto\"; [p] (pause:300)",
+      "[t] \"vuoto\" (pause:300)",
       "self::cell",
       "count(children/*)=0"
     ],

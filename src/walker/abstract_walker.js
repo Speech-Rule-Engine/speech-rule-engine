@@ -308,7 +308,7 @@ sre.AbstractWalker.prototype.speech = function() {
         var node = nodes[i];
         var snode = /** @type {!sre.SemanticNode} */(snodes[i]);
         speech.push(node ? this.generator.getSpeech(node, this.getXml()) :
-                    sre.SpeechGeneratorUtil.retrieveSpeech(snode));
+                    sre.SpeechGeneratorUtil.recomputeMarkup(snode));
       }
       return this.mergePrefix_(speech);
   }
@@ -739,7 +739,7 @@ sre.AbstractWalker.prototype.detail_ = function() {
           this.getRebuilt().xml, 'id', sid)[0];
   var oldAlt = snode.getAttribute('alternative');
   snode.removeAttribute('alternative');
-  var detail = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
+  var detail = sre.SpeechGeneratorUtil.computeMarkup(
       /** @type {!Node} */(snode));
   var speech = this.mergePrefix_([detail]);
   snode.setAttribute('alternative', oldAlt);

@@ -302,7 +302,8 @@ $(IEMAPS_FILE):
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
-			if [ -d $(JSON_SRC)/`basename $@ .js`/$$dir ]; then \
+			echo $(JSON_SRC)/$$j/$$dir;\
+			if [ -d $(JSON_SRC)/$$j/$$dir ]; then\
 				for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
 					echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
 					$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \

@@ -7,7 +7,7 @@
       "Rule",
       "numerator",
       "default",
-      "[t] \"Numerator\"; [p] (pause:200)",
+      "[t] \"Numerator\" (pause:200)",
       "self::*",
       "name(../..)=\"fraction\"",
       "count(preceding-sibling::*)=0"
@@ -16,7 +16,7 @@
       "Rule",
       "denominator",
       "default",
-      "[t] \"Denominator\"; [p] (pause:200)",
+      "[t] \"Denominator\" (pause:200)",
       "self::*",
       "name(../..)=\"fraction\"",
       "count(preceding-sibling::*)=1"
@@ -25,7 +25,7 @@
       "Rule",
       "base",
       "default",
-      "[t] \"Base\"; [p] (pause:200)",
+      "[t] \"Base\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"superscript\""
@@ -83,7 +83,7 @@
       "Rule",
       "exponent",
       "default",
-      "[t] \"Exponent\"; [p] (pause:200)",
+      "[t] \"Exponent\" (pause:200)",
       "self::*",
       "name(../..)=\"superscript\"",
       "count(preceding-sibling::*)=1"
@@ -92,7 +92,7 @@
       "Rule",
       "subscript",
       "default",
-      "[t] \"Subscript\"; [p] (pause:200)",
+      "[t] \"Subscript\" (pause:200)",
       "self::*",
       "name(../..)=\"subscript\"",
       "count(preceding-sibling::*)=1"
@@ -101,7 +101,7 @@
       "Rule",
       "overscript",
       "default",
-      "[t] \"Overscript\"; [p] (pause:200)",
+      "[t] \"Overscript\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"overscore\""
@@ -124,7 +124,7 @@
       "Rule",
       "underscript",
       "default",
-      "[t] \"Underscript\"; [p] (pause:200)",
+      "[t] \"Underscript\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"underscore\""
@@ -147,7 +147,7 @@
       "Rule",
       "radicand",
       "default",
-      "[t] \"Radicand\"; [p] (pause:200)",
+      "[t] \"Radicand\" (pause:200)",
       "self::*",
       "name(../..)=\"sqrt\""
     ],
@@ -155,7 +155,7 @@
       "Rule",
       "radicand",
       "default",
-      "[t] \"Radicand\"; [p] (pause:200)",
+      "[t] \"Radicand\" (pause:200)",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=1"
@@ -164,7 +164,7 @@
       "Rule",
       "index",
       "default",
-      "[t] \"Index\"; [p] (pause:200)",
+      "[t] \"Index\" (pause:200)",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=0"
@@ -173,7 +173,7 @@
       "Rule",
       "leftsub",
       "default",
-      "[t] \"Left Subscript\"; [p] (pause:200)",
+      "[t] \"Left Subscript\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"leftsub\""
@@ -182,7 +182,7 @@
       "Rule",
       "leftsub",
       "default",
-      "[t] CSFordinalPosition; [t] \"Left Subscript\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"Left Subscript\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -192,7 +192,7 @@
       "Rule",
       "leftsuper",
       "default",
-      "[t] \"Left Superscript\"; [p] (pause:200)",
+      "[t] \"Left Superscript\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"leftsuper\""
@@ -201,7 +201,7 @@
       "Rule",
       "leftsuper",
       "default",
-      "[t] CSFordinalPosition; [t] \"Left Superscript\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"Left Superscript\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -211,7 +211,7 @@
       "Rule",
       "rightsub",
       "default",
-      "[t] \"Right Subscript\"; [p] (pause:200)",
+      "[t] \"Right Subscript\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"rightsub\""
@@ -220,7 +220,7 @@
       "Rule",
       "rightsub",
       "default",
-      "[t] CSFordinalPosition; [t] \"Right Subscript\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"Right Subscript\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -230,7 +230,7 @@
       "Rule",
       "rightsuper",
       "default",
-      "[t] \"Right Superscript\"; [p] (pause:200)",
+      "[t] \"Right Superscript\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"rightsuper\""
@@ -239,7 +239,7 @@
       "Rule",
       "rightsuper",
       "default",
-      "[t] CSFordinalPosition; [t] \"Right Superscript\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"Right Superscript\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -249,7 +249,7 @@
       "Rule",
       "choice",
       "default",
-      "[t] \"Choice Quantity\"; [p] (pause:200)",
+      "[t] \"Choice Quantity\" (pause:200)",
       "self::line",
       "@role=\"binomial\"",
       "parent::*/parent::vector",
@@ -259,7 +259,7 @@
       "Rule",
       "select",
       "default",
-      "[t] \"Selection Quantity\"; [p] (pause:200)",
+      "[t] \"Selection Quantity\" (pause:200)",
       "self::line",
       "@role=\"binomial\"",
       "parent::*/parent::vector",
@@ -269,7 +269,7 @@
       "Rule",
       "row",
       "default",
-      "[t] CSFordinalPosition; [t] \"Row\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"Row\" (pause:200)",
       "self::row"
     ],
     [
@@ -281,7 +281,7 @@
       "Rule",
       "cell",
       "default",
-      "[n] ../..; [t] CSFordinalPosition; [t] \"Column\"; [p] (pause:200)",
+      "[n] ../..; [t] CSFordinalPosition; [t] \"Column\" (pause:200)",
       "self::cell",
       "contains(@grammar,\"depth\")"
     ],
@@ -289,7 +289,7 @@
       "Rule",
       "cell",
       "default",
-      "[t] CSFordinalPosition; [t] \"Column\"; [p] (pause:200)",
+      "[t] CSFordinalPosition; [t] \"Column\" (pause:200)",
       "self::cell"
     ]
   ]
