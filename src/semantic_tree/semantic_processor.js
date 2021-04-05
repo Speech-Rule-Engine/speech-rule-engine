@@ -2268,9 +2268,11 @@ sre.SemanticProcessor.numberRole_ = function(node) {
     return (x.type === sre.SemanticAttr.Type.NUMBER &&
             x.role === sre.SemanticAttr.Role.INTEGER) ||
         (x.type === sre.SemanticAttr.Type.PUNCTUATION &&
-        x.role === sre.SemanticAttr.Role.COMMA);})) {
-    node.role = content[0] === '0' ? sre.SemanticAttr.Role.OTHERNUMBER :
-      sre.SemanticAttr.Role.INTEGER;
+         x.role === sre.SemanticAttr.Role.COMMA);})) {
+    node.role = sre.SemanticAttr.Role.INTEGER;
+    if (content[0] === '0') {
+      node.addAnnotation('general', 'basenumber');
+    }
     return; }
   if (meaning.every(function(x) {
     return (x.type === sre.SemanticAttr.Type.NUMBER &&
