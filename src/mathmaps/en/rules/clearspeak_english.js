@@ -1069,7 +1069,8 @@
       "self::number",
       "@role=\"integer\"",
       "contains(@grammar, \"ordinal\")",
-      "text()!=\"0\""
+      "text()!=\"0\"",
+      "not(contains(@annotation, \"general:basenumber\"))"
     ],
     [
       "Rule",
@@ -1079,7 +1080,8 @@
       "self::number",
       "@role=\"integer\"",
       "contains(@grammar, \"ordinal\")",
-      "text()!=\"0\""
+      "text()!=\"0\"",
+      "not(contains(@annotation, \"general:basenumber\"))"
     ],
     [
       "Rule",
@@ -1099,7 +1101,8 @@
       "self::number",
       "@role=\"integer\"",
       "contains(@grammar, \"ordinal\")",
-      "text()!=\"0\""
+      "text()!=\"0\"",
+      "not(contains(@annotation, \"general:basenumber\"))"
     ],
     [
       "Rule",
