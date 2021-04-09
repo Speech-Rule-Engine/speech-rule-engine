@@ -808,14 +808,6 @@
     ],
     [
       "Rule",
-      "row-with-label",
-      "default",
-      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\"(pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Column\")",
-      "self::row",
-      "content"
-    ],
-    [
-      "Rule",
       "empty-row",
       "default",
       "[t] \"⠀\" (pause:300)",
@@ -865,14 +857,6 @@
     ],
     [
       "Rule",
-      "line-with-label",
-      "default",
-      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\" (pause: 200); [m] children/*",
-      "self::line",
-      "content"
-    ],
-    [
-      "Rule",
       "empty-line",
       "default",
       "[t] \"⠀\"",
@@ -882,11 +866,16 @@
     ],
     [
       "Rule",
-      "empty-line-with-label",
+      "row-with-label",
       "default",
-      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\"(pause: 200); [t] \"Blank\"",
+      "[m] children/* (separator:\"⠀\"); [t] \"⠀⠀⠀\"; [m] content/*",
+      "self::row",
+      "content"
+    ],
+    [
+      "Aliases",
+      "row-with-label",
       "self::line",
-      "count(children/*)=0",
       "content"
     ],
     [
@@ -900,7 +889,7 @@
       "Rule",
       "enclose",
       "default",
-      "[t] \"StartEnclose\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"EndEnclose\"",
+      "[t] \"⠫\"; [t] @role (grammar:localEnclose); [t] \"⠸⠫\"; [n] children/*[1]; [t] \"⠻\"",
       "self::enclose"
     ],
     [
