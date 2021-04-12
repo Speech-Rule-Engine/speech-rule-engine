@@ -488,7 +488,6 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
   if (this.prune) {
     this.prune = false;
     this.adjustEngine();
-    return;
   }
   sre.Engine.getInstance().evaluator =
       goog.bind(maps.store.lookupString, maps.store);
