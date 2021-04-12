@@ -39,19 +39,14 @@ sre.Numbers.hi.onesNumbers_ = [
   'इकहतर', 'बहतर', 'तिहतर', 'चौहतर', 'पचहतर', 'छिहतर', 'सतहतर', 'अठहतर',
   'उन्नासी', 'अस्सी', 'इक्यासी', 'बयासी', 'तिरासी', 'चौरासी', 'पचासी', 'छियासी',
   'सतासी', 'अट्ठासी', 'नवासी', 'नब्बे', 'इक्यानवे', 'ब्यानवे', 'तिरानवे', 'चौरानवे', 'पचानवे',
-  'छियानवे', 'सतानवे', 'अट्ठानवे', 'निन्यानवे', 'एक सौ'
+  'छियानवे', 'सतानवे', 'अट्ठानवे', 'निन्यानवे'
 ];
 
 
 /**
- * String representation of twenty to ninety.
- * @type {Array.<string>}
- * @private
+ * @type {string}
  */
-sre.Numbers.hi.tensNumbers_ = [
-  '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
-  'ninety'
-];
+sre.Numbers.hi.hundred_ = 'सौ',  // hundred: 1 - 9 hundred  (sau)
 
 
 /**
@@ -60,9 +55,18 @@ sre.Numbers.hi.tensNumbers_ = [
  * @private
  */
 sre.Numbers.hi.largeNumbers_ = [
-  '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
-  'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
-  'decillion'
+  'हजार',  // thousand: 1 - 99 thousand (hazaar)
+  'लाख', // thousand/million: 100 thousand - 9 million (lakh)
+  'करोड़', // million: 10 - 999 million (caror)
+  'अरब', // billion: 1 - 99 billion (arab)
+  'खरब', // billion/trillion: 100 billion - 9 trillion (kharab)
+  'नील', // 10 trillion - 999 trillion (sau kharab)
+  'पद्मा', // 1 quadrillion - 99 quadrillion (nil)
+  'शंख', // 100 quadrillion - 9 quintillion (padma)
+  'महाशंख', // 10 quin - 999 quin (Shankh)
+  'महाउपाध', // 1 sext - 99 sext
+  'जल्द', // 100 sext - 9 sept 
+  'परार्ध', 'अंत', 'शिष्ट'
 ];
 
 
@@ -77,15 +81,11 @@ sre.Numbers.hi.hundredsToWords_ = function(number) {
   var str = '';
   str += sre.Numbers.hi.onesNumbers_[Math.floor(n / 100)] ?
       sre.Numbers.hi.onesNumbers_[Math.floor(n / 100)] +
-      sre.Numbers.hi.NUMBERS.numSep + 'hundred' : '';
+      sre.Numbers.hi.NUMBERS.numSep + sre.Numbers.hi.hundred_ : '';
   n = n % 100;
   if (n) {
     str += str ? sre.Numbers.hi.NUMBERS.numSep : '';
-    str += sre.Numbers.hi.onesNumbers_[n] ||
-        (sre.Numbers.hi.tensNumbers_[Math.floor(n / 10)] +
-         (n % 10 ?
-          sre.Numbers.hi.NUMBERS.numSep + sre.Numbers.hi.onesNumbers_[n % 10] :
-          ''));
+    str += sre.Numbers.hi.onesNumbers_[n];
   }
   return str;
 };
@@ -97,23 +97,28 @@ sre.Numbers.hi.hundredsToWords_ = function(number) {
  * @return {string} The string representation of that number.
  */
 sre.Numbers.hi.numberToWords = function(number) {
-  if (number >= Math.pow(10, 36)) {
+  if (number >= Math.pow(10, 32)) {
     return number.toString();
   }
   var pos = 0;
   var str = '';
+  var hundreds = number % 1000;
+  var hundredsWords = sre.Numbers.hi.hundredsToWords_(hundreds);
+  var number = Math.floor(number / 1000);
+  if (!number) {
+    return hundredsWords;
+  }
   while (number > 0) {
-    var hundreds = number % 1000;
-    if (hundreds) {
-      str = sre.Numbers.hi.hundredsToWords_(number % 1000) +
-          (pos ? '-' + sre.Numbers.hi.largeNumbers_[pos] +
-          '-' : '') +
-          str;
+    var thousands = number % 100;
+    if (thousands) {
+      str = sre.Numbers.hi.onesNumbers_[thousands] +
+        sre.Numbers.hi.NUMBERS.numSep + sre.Numbers.hi.largeNumbers_[pos] +
+        (str ? sre.Numbers.hi.NUMBERS.numSep + str : '');
     }
-    number = Math.floor(number / 1000);
+    number = Math.floor(number / 100);
     pos++;
   }
-  return str.replace(/-$/, '');
+  return hundredsWords ? str + sre.Numbers.hi.NUMBERS.numSep + hundredsWords : str;
 };
 
 
