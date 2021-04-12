@@ -201,9 +201,9 @@ sre.Locale.nemeth = {
     'longdiv': 'long division',
     'actuarial': 'actuarial symbol',
     'radical': 'square root',
-    'box': 'box',
+    'box': '⠗',
     'roundedbox': 'rounded box',
-    'circle': 'circle',
+    'circle': '⠉',
     'left': 'left vertical-line',
     'right': 'right vertical-line',
     'top': 'overbar',
@@ -214,7 +214,7 @@ sre.Locale.nemeth = {
     'horizontalstrike': 'crossout',
     'madruwb': 'Arabic factorial symbol',
     'updiagonalarrow': 'diagonal arrow',
-    'phasorangle': 'phasor angle',
+    'phasorangle': '⠪',
     // Unknown
     'unknown': 'long division'
   },

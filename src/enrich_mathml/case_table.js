@@ -74,7 +74,8 @@ sre.CaseTable.prototype.getMathml = function() {
   this.inner = this.semantic.childNodes.map(
       /**@type{Function}*/(sre.EnrichMathml.walkTree));
   if (!this.mml) {
-    this.mml = sre.EnrichMathml.introduceNewLayer([lfence, this.inner, rfence]);
+    this.mml = sre.EnrichMathml.introduceNewLayer(
+        [lfence, this.inner, rfence], this.semantic);
   } else if (sre.DomUtil.tagName(this.mml) === 'MFENCED') {
     var children = this.mml.childNodes;
     this.mml.insertBefore(lfence, children[0] || null);
@@ -83,7 +84,7 @@ sre.CaseTable.prototype.getMathml = function() {
   } else {
     var newChildren = [lfence, this.mml];
     rfence && newChildren.push(rfence);
-    this.mml = sre.EnrichMathml.introduceNewLayer(newChildren);
+    this.mml = sre.EnrichMathml.introduceNewLayer(newChildren, this.semantic);
   }
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
   return this.mml;
