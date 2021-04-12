@@ -439,7 +439,7 @@
     "key": "0130",
     "mappings": {
       "default": {
-        "default": "I विद डॉट एबव :  मैं डॉट"
+        "default": "I विद डॉट एबव"
       }
     }
   },
