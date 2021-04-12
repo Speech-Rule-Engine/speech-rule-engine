@@ -89,6 +89,7 @@ sre.MathMap.getInstance = function() {
 sre.MathMap.prototype.loadLocale = function() {
   var locale = sre.Engine.getInstance().locale;
   if (this.loaded_.indexOf(locale) === -1) {
+    sre.SpeechRuleEngine.getInstance().prune = true;
     this.retrieveMaps(locale);
     this.loaded_.push(locale);
   }
