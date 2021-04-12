@@ -46,7 +46,7 @@ sre.Numbers.hi.onesNumbers_ = [
 /**
  * @type {string}
  */
-sre.Numbers.hi.hundred_ = 'सौ',  // hundred: 1 - 9 hundred  (sau)
+sre.Numbers.hi.hundred_ = 'सौ';  // hundred: 1 - 9 hundred  (sau)
 
 
 /**
@@ -104,7 +104,7 @@ sre.Numbers.hi.numberToWords = function(number) {
   var str = '';
   var hundreds = number % 1000;
   var hundredsWords = sre.Numbers.hi.hundredsToWords_(hundreds);
-  var number = Math.floor(number / 1000);
+  number = Math.floor(number / 1000);
   if (!number) {
     return hundredsWords;
   }
@@ -130,15 +130,26 @@ sre.Numbers.hi.numberToWords = function(number) {
  * @return {string} The ordinal of the number as string.
  */
 sre.Numbers.hi.numberToOrdinal = function(num, plural) {
-  if (num === 1) {
-    return plural ? 'oneths' : 'oneth';
-  }
-  if (num === 2) {
-    return plural ? 'halves' : 'half';
-  }
-  var ordinal = sre.Numbers.hi.wordOrdinal(num);
-  return plural ? ordinal + 's' : ordinal;
+  return sre.Numbers.hi.wordOrdinal(num);
 };
+
+
+/**
+ * @type {Array.<string>}
+ * @private
+ */
+sre.Numbers.hi.ordinalsMasculine_ = [
+  '', 'पहला', 'दूसरा', 'तीसरा', 'चौथा', 'पांचवाँ', 'छठा', 'सातवाँ', 'आठवाँ', 'नौवाँ'
+];
+
+
+/**
+ * @type {Array.<string>}
+ * @private
+ */
+sre.Numbers.hi.ordinalsFeminine_ = [
+  '', 'पहली', 'दूसरी', 'तीसरी', 'चौथी', 'पाँचवीं', 'छठी', 'सातवीं', 'आठवीं', 'नौवीं'
+];
 
 
 /**
@@ -147,28 +158,46 @@ sre.Numbers.hi.numberToOrdinal = function(num, plural) {
  * @return {string} The ordinal string.
  */
 sre.Numbers.hi.wordOrdinal = function(number) {
-  var ordinal = sre.Numbers.hi.numberToWords(number);
-  if (ordinal.match(/one$/)) {
-    ordinal = ordinal.slice(0, -3) + 'first';
-  } else if (ordinal.match(/two$/)) {
-    ordinal = ordinal.slice(0, -3) + 'second';
-  } else if (ordinal.match(/three$/)) {
-    ordinal = ordinal.slice(0, -5) + 'third';
-  } else if (ordinal.match(/five$/)) {
-    ordinal = ordinal.slice(0, -4) + 'fifth';
-  } else if (ordinal.match(/eight$/)) {
-    ordinal = ordinal.slice(0, -5) + 'eighth';
-  } else if (ordinal.match(/nine$/)) {
-    ordinal = ordinal.slice(0, -4) + 'ninth';
-  } else if (ordinal.match(/twelve$/)) {
-    ordinal = ordinal.slice(0, -6) + 'twelfth';
-  } else if (ordinal.match(/ty$/)) {
-    ordinal = ordinal.slice(0, -2) + 'tieth';
-  } else {
-    ordinal = ordinal + 'th';
+  var gender = /** @type {string} */(
+      sre.Grammar.getInstance().getParameter('gender'));
+  if (number <= 0) {
+    return number.toString();
   }
-  return ordinal;
+  if (number < 10) {
+    return gender === 'male' ?
+      sre.Numbers.hi.ordinalsMasculine_[number] :
+      sre.Numbers.hi.ordinalsFeminine_[number];
+  }
+  var ordinal = sre.Numbers.hi.numberToWords(number);
+  return ordinal + (gender === 'male' ? 'वाँ' : 'वीं');
 };
+
+
+/**
+ * @type {Array.<string>}
+ * @private
+ */
+sre.Numbers.hi.simpleNumbers_ = [
+  '०', '१', '२', '३', '४', '५', '६', '७', '८', '९'
+];
+
+
+/**
+ * @type {Array.<string>}
+ * @private
+ */
+sre.Numbers.hi.simpleSmallOrdinalsMasculine_ = [
+  '', '१ला', '२रा', '३रा', '४था', '५वाँ', '६ठा', '७वाँ', '८वाँ', '९वाँ'
+];
+
+
+/**
+ * @type {Array.<string>}
+ * @private
+ */
+sre.Numbers.hi.simpleSmallOrdinalsFeminine_ = [
+  '', '१ली', '२री', '३री', '४थी', '५वीं', '६ठी', '७वीं', '८वीं', '९वीं'
+];
 
 
 /**
@@ -177,21 +206,21 @@ sre.Numbers.hi.wordOrdinal = function(number) {
  * @return {string} The ordinal string.
  */
 sre.Numbers.hi.simpleOrdinal = function(number) {
-  var tens = number % 100;
-  var numStr = number.toString();
-  if (tens > 10 && tens < 20) {
-    return numStr + 'th';
+  var gender = /** @type {string} */(
+      sre.Grammar.getInstance().getParameter('gender'));
+  
+  if (number > 0 && number < 10) {
+    return gender === 'male' ?
+      sre.Numbers.hi.simpleSmallOrdinalsMasculine_[number] :
+      sre.Numbers.hi.simpleSmallOrdinalsFeminine_[number];
   }
-  switch (number % 10) {
-    case 1:
-      return numStr + 'st';
-    case 2:
-      return numStr + 'nd';
-    case 3:
-      return numStr + 'rd';
-    default:
-      return numStr + 'th';
-  }
+  var ordinal = number.toString().
+      split('').
+      map(function(x) {
+        var num = parseInt(x, 10);
+        return isNaN(num) ? '' : sre.Numbers.hi.simpleNumbers_[num];
+      }).join('');
+  return ordinal + (gender === 'male' ? 'वाँ' : 'वीं');
 };
 
 
