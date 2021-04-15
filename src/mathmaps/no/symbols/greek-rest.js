@@ -6,7 +6,8 @@
     "key": "0394",
     "mappings": {
       "default": {
-        "default": "stor delta"
+        "default": "triangel",
+        "TriangleSymbol_Delta": "stor Delta"
       }
     },
     "category": "Lu"

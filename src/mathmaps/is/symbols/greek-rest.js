@@ -6,7 +6,8 @@
     "key": "0394",
     "mappings": {
       "default": {
-        "default": "stórt delta"
+        "default": "þríhyrningur",
+        "TriangleSymbol_Delta": "stórt Delta"
       }
     },
     "category": "Lu"
