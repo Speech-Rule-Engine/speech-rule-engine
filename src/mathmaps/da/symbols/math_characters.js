@@ -21,6 +21,51 @@
     "category": "Sm"
   },
   {
+    "category": "Ll",
+    "key": "213C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "213D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "213E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "213F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2140",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2145",
     "mappings": {
       "default": {
@@ -55,6 +100,15 @@
       }
     },
     "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "2149",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "1D6A4",

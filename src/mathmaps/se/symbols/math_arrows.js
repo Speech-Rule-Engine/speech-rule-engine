@@ -732,6 +732,96 @@
     "category": "So"
   },
   {
+    "category": "So",
+    "key": "21EB",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21EC",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21ED",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21EE",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21EF",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21F0",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21F1",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21F2",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "21F3",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21F4",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "21F5",
     "mappings": {
       "default": {
@@ -739,6 +829,69 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "21F6",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21F7",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21F8",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21F9",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21FA",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21FB",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "21FC",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "21FD",
@@ -766,6 +919,447 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "So",
+    "key": "2301",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2303",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2304",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2324",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "238B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2794",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2798",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2799",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "279F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A0",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A1",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A2",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A3",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A4",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A5",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A6",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A7",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A8",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27A9",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AA",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AB",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AC",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AD",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AE",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27AF",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B1",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B2",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B3",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B4",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B5",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B6",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B7",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B8",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B9",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BA",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BB",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BC",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BD",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BE",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27F0",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27F1",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27F2",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27F3",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27F4",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "27F5",
@@ -822,6 +1416,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "27FB",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "27FC",
     "mappings": {
       "default": {
@@ -829,6 +1432,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "27FD",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27FE",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "27FF",
@@ -840,6 +1461,51 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2900",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2901",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2902",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2903",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2904",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2905",
     "mappings": {
       "default": {
@@ -847,6 +1513,60 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2906",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2907",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2908",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2909",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "290A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "290B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "290C",
@@ -921,6 +1641,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2914",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2915",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2916",
     "mappings": {
       "default": {
@@ -930,6 +1668,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2917",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2918",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2919",
     "mappings": {
       "default": {
@@ -937,6 +1693,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "291A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "291B",
@@ -991,6 +1756,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2921",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2922",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "2923",
@@ -1065,6 +1848,60 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "292D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "292E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "292F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2930",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2931",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2932",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2933",
     "mappings": {
       "default": {
@@ -1072,6 +1909,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2934",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "2935",
@@ -1119,6 +1965,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "293A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "293B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "293C",
     "mappings": {
       "default": {
@@ -1137,6 +2001,69 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "293E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "293F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2940",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2941",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2942",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2943",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2944",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2945",
     "mappings": {
       "default": {
@@ -1144,6 +2071,24 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2946",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2947",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "2948",
@@ -1227,6 +2172,15 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "2977",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2978",
     "mappings": {
       "default": {
@@ -1243,6 +2197,15 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "297A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "297B",
@@ -1272,6 +2235,42 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "29BD",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29EA",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29EC",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29ED",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2A17",
     "mappings": {
       "default": {
@@ -1279,5 +2278,464 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "So",
+    "key": "2B00",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B01",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B02",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B03",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B04",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B05",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B06",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B07",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B08",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B09",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B0F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B10",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B11",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B30",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B31",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B32",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B33",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B34",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B35",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B36",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B37",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B38",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B39",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B3F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B40",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B41",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B42",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B43",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B44",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B45",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B46",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B47",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B48",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B49",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B4A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B4B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2B4C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FFE9",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FFEA",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FFEB",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FFEC",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   }
 ]

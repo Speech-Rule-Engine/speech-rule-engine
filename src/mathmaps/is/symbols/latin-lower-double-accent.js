@@ -3,6 +3,105 @@
     "locale": "is"
   },
   {
+    "category": "Ll",
+    "key": "01D6",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01D8",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DA",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DC",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DF",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E1",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01ED",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01FB",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "022B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "022D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0231",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "1E09",
     "mappings": {
       "default": {

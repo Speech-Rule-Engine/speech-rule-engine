@@ -57,6 +57,24 @@
     "category": "Pe"
   },
   {
+    "category": "Ps",
+    "key": "2045",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2046",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2308",
     "mappings": {
       "default": {
@@ -201,6 +219,195 @@
     "category": "Pe"
   },
   {
+    "category": "Sm",
+    "key": "239B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "239C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "239D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "239E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "239F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A0",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A1",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A2",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A3",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A4",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A5",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A6",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A7",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A8",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A9",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AA",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AB",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AC",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AD",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AE",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AF",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "23B0",
     "mappings": {
       "default": {
@@ -219,6 +426,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "23B2",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23B3",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "23B4",
     "mappings": {
       "default": {
@@ -235,6 +460,42 @@
       }
     },
     "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "23B6",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "23B7",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "23B8",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "23B9",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "23DC",
@@ -289,6 +550,132 @@
       }
     },
     "category": "Sm"
+  },
+  {
+    "category": "Ps",
+    "key": "2768",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2769",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "276A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "276B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "276C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "276D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "276E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "276F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2770",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2771",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2772",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2773",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2774",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2775",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "27C5",
@@ -399,6 +786,24 @@
     "category": "Pe"
   },
   {
+    "category": "Ps",
+    "key": "2983",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2984",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2985",
     "mappings": {
       "default": {
@@ -415,6 +820,24 @@
       }
     },
     "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "2987",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2988",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "2989",
@@ -543,6 +966,42 @@
     "category": "Pe"
   },
   {
+    "category": "Ps",
+    "key": "2997",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2998",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "29D8",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "29D9",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "29DA",
     "mappings": {
       "default": {
@@ -559,6 +1018,114 @@
       }
     },
     "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "29FC",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "29FD",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2E22",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2E23",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2E24",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2E25",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2E26",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2E27",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2E28",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2E29",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "3008",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "3009",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "300A",
@@ -579,6 +1146,60 @@
     "category": "Pe"
   },
   {
+    "category": "Ps",
+    "key": "300C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "300D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "300E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "300F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "3010",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "3011",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "3014",
     "mappings": {
       "default": {
@@ -595,6 +1216,42 @@
       }
     },
     "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "3016",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "3017",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "3018",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "3019",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "301A",
@@ -615,6 +1272,15 @@
     "category": "Pe"
   },
   {
+    "category": "Ps",
+    "key": "301D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "301E",
     "mappings": {
       "default": {
@@ -622,6 +1288,51 @@
       }
     },
     "category": "Pe"
+  },
+  {
+    "category": "Pe",
+    "key": "301F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FD3E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FD3F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE17",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE18",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "FE35",
@@ -660,6 +1371,60 @@
     "category": "Pe"
   },
   {
+    "category": "Ps",
+    "key": "FE39",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE3A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE3B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE3C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE3D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE3E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "FE3F",
     "mappings": {
       "default": {
@@ -676,5 +1441,203 @@
       }
     },
     "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "FE41",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE42",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE43",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE44",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE47",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE48",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE59",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE5A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE5B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE5C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE5D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE5E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FF08",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FF09",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FF3B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FF3D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FF5B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FF5D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FF5F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FF60",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FF62",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FF63",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   }
 ]

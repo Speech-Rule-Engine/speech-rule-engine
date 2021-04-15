@@ -12,6 +12,15 @@
     "category": "Ll"
   },
   {
+    "category": "So",
+    "key": "2114",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2116",
     "mappings": {
       "default": {
@@ -39,6 +48,33 @@
     "category": "So"
   },
   {
+    "category": "So",
+    "key": "211F",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2120",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2121",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2122",
     "mappings": {
       "default": {
@@ -46,6 +82,15 @@
       }
     },
     "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2123",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   },
   {
     "key": "2125",
@@ -93,6 +138,15 @@
     "category": "Lu"
   },
   {
+    "category": "So",
+    "key": "212E",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "2132",
     "mappings": {
       "default": {
@@ -100,5 +154,68 @@
       }
     },
     "category": "Lu"
+  },
+  {
+    "category": "Ll",
+    "key": "2139",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "213A",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "213B",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2141",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2142",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2143",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2144",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   }
 ]

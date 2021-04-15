@@ -111,6 +111,24 @@
     "category": "Sm"
   },
   {
+    "category": "Sm",
+    "key": "294C",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "294D",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
     "key": "294E",
     "mappings": {
       "default": {
