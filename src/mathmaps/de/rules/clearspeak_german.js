@@ -36,7 +36,7 @@
       "Rule",
       "protected",
       "default",
-      "[t] text()",
+      "[n] text()",
       "self::number",
       "contains(@grammar, \"protected\")"
     ],

@@ -22,7 +22,7 @@
       "Rule",
       "protected",
       "default",
-      "[t] text()",
+      "[n] text()",
       "self::*",
       "@role=\"protected\""
     ],
