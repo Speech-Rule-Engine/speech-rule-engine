@@ -563,12 +563,12 @@
     ],
     [
       "Rule",
-      "function-article",
+      "article",
       "default",
-      "[t] \"the\"; [n] text()",
-      "self::function",
-      "@role=\"prefix function\"",
-      "contains(@grammar, \"addArticle\")"
+      "[t] \"the\"; [n] . (grammar:!addArticle)",
+      "self::*",
+      "contains(@grammar, \"addArticle\")",
+      "not(contains(@grammar, \"noArticle\"))"
     ],
     [
       "Rule",
@@ -870,7 +870,7 @@
       "Rule",
       "superscript-simple-exponent",
       "default",
-      "[n] children/*[1]; [t] \"raised to the\"; [n] children/*[2]; [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"raised to the\"; [n] children/*[2] (grammar:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "not(descendant::superscript)"
     ],
@@ -878,7 +878,7 @@
       "Rule",
       "superscript-simple-exponent-end",
       "default",
-      "[n] children/*[1]; [t] \"raised to the\"; [n] children/*[2]; [t] \"power\"",
+      "[n] children/*[1]; [t] \"raised to the\"; [n] children/*[2] (grammar:noArticle); [t] \"power\"",
       "self::superscript",
       "not(descendant::superscript)",
       "not(following-sibling::*)"
@@ -1456,14 +1456,14 @@
       "Rule",
       "fraction",
       "default",
-      "[p] (pause:short); [t] \"the fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)",
+      "[p] (pause:short); [t] \"the\" (grammar:noarticle); [t] \"fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
       "fraction",
       "Functions_None",
-      "[p] (pause:short); [t] \"the fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)",
+      "[p] (pause:short); [t] \"the\" (grammar:noarticle); [t] \"fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)",
       "self::fraction",
       "name(children/*[1])=\"appl\" or name(children/*[2])=\"appl\""
     ],
