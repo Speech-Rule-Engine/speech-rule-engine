@@ -3181,6 +3181,120 @@
       "contains(@annotation, \"clearspeak:unit\")",
       "children/*[last()][@role=\"unit\"]",
       "CQFlastCurrency"
+    ],
+    [
+      "Rule",
+      "enclose",
+      "default",
+      "[t] \"enclosed with\"; [t] @role (grammar:localEnclose); [n] children/*[1]",
+      "self::enclose"
+    ],
+    [
+      "Rule",
+      "enclose-end",
+      "Enclosed_EndEnclose",
+      "[t] \"enclosed with\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"end enclosed\"",
+      "self::enclose"
+    ],
+    [
+      "Aliases",
+      "overscript",
+      "self::enclose",
+      "@role=\"top\""
+    ],
+    [
+      "Aliases",
+      "underscript",
+      "self::enclose",
+      "@role=\"bottom\""
+    ],
+    [
+      "Rule",
+      "leftbar",
+      "default",
+      "[t] \"vertical bar\"; [n] children/*[1]",
+      "self::enclose",
+      "@role=\"left\""
+    ],
+    [
+      "Rule",
+      "rightbar",
+      "default",
+      "[n] children/*[1]; [t] \"vertical bar\"",
+      "self::enclose",
+      "@role=\"right\""
+    ],
+    [
+      "Rule",
+      "crossout",
+      "default",
+      "[t] \"crossed out\"; [n] children/*[1]",
+      "self::enclose",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Rule",
+      "crossout-end",
+      "Enclosed_EndEnclose",
+      "[t] \"crossed out\"; [n] children/*[1]; [t] \"end crossout\"",
+      "self::enclose",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Rule",
+      "cancel",
+      "default",
+      "[n] children/*[1]/children/*[1]; [t] \"crossed out with\"; [n] children/*[2]",
+      "self::overscore",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Aliases",
+      "cancel",
+      "self::underscore",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Aliases",
+      "cancel",
+      "self::overscore",
+      "name(children/*[2])=\"enclose\"",
+      "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
+    ],
+    [
+      "Aliases",
+      "cancel",
+      "self::underscore",
+      "name(children/*[2])=\"enclose\"",
+      "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
+    ],
+    [
+      "Rule",
+      "cancel-end",
+      "Enclosed_EndEnclose",
+      "[t] \"crossed out\"; [n] children/*[1]/children/*[1]; [t] \"with\"; [n] children/*[2]; [t] \"end crossout\"",
+      "self::overscore",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Aliases",
+      "cancel-end",
+      "self::underscore",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Aliases",
+      "cancel-end",
+      "self::overscore",
+      "name(children/*[2])=\"enclose\"",
+      "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
+    ],
+    [
+      "Aliases",
+      "cancel-end",
+      "self::underscore",
+      "name(children/*[2])=\"enclose\"",
+      "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
     ]
   ],
   "annotators": [
