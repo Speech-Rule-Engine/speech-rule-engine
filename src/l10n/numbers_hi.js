@@ -122,6 +122,11 @@ sre.Numbers.hi.numberToWords = function(number) {
 };
 
 
+sre.Numbers.hi.smallDenominators_ = [
+  '', 'एकांश', 'द्वितीयांश', 'तृतीयांश', 'चतुर्थांश', 'पंचमांश', 'षष्टांश',
+  'सप्तमांश', 'अष्टांश', 'नवमांश', 'दशांश'];
+
+
 /**
  * Translates a number of up to twelve digits into a string representation of
  * its ordinal.
@@ -130,7 +135,10 @@ sre.Numbers.hi.numberToWords = function(number) {
  * @return {string} The ordinal of the number as string.
  */
 sre.Numbers.hi.numberToOrdinal = function(num, plural) {
-  return sre.Numbers.hi.wordOrdinal(num);
+  if (num <= 10) {
+    return sre.Numbers.hi.smallDenominators_[num];
+  }
+  return sre.Numbers.hi.wordOrdinal(num) + ' अंश';
 };
 
 
@@ -164,12 +172,12 @@ sre.Numbers.hi.wordOrdinal = function(number) {
     return number.toString();
   }
   if (number < 10) {
-    return gender === 'male' ?
-      sre.Numbers.hi.ordinalsMasculine_[number] :
-      sre.Numbers.hi.ordinalsFeminine_[number];
+    return gender === 'female' ?
+      sre.Numbers.hi.ordinalsFeminine_[number] :
+      sre.Numbers.hi.ordinalsMasculine_[number];
   }
   var ordinal = sre.Numbers.hi.numberToWords(number);
-  return ordinal + (gender === 'male' ? 'वाँ' : 'वीं');
+  return ordinal + (gender === 'female' ? 'वीं' : 'वाँ');
 };
 
 
@@ -210,9 +218,9 @@ sre.Numbers.hi.simpleOrdinal = function(number) {
       sre.Grammar.getInstance().getParameter('gender'));
   
   if (number > 0 && number < 10) {
-    return gender === 'male' ?
-      sre.Numbers.hi.simpleSmallOrdinalsMasculine_[number] :
-      sre.Numbers.hi.simpleSmallOrdinalsFeminine_[number];
+    return gender === 'female' ?
+      sre.Numbers.hi.simpleSmallOrdinalsFeminine_[number] :
+      sre.Numbers.hi.simpleSmallOrdinalsMasculine_[number];
   }
   var ordinal = number.toString().
       split('').
@@ -220,7 +228,7 @@ sre.Numbers.hi.simpleOrdinal = function(number) {
         var num = parseInt(x, 10);
         return isNaN(num) ? '' : sre.Numbers.hi.simpleNumbers_[num];
       }).join('');
-  return ordinal + (gender === 'male' ? 'वाँ' : 'वीं');
+  return ordinal + (gender === 'female' ? 'वीं' : 'वाँ');
 };
 
 

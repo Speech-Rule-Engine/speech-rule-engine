@@ -98,6 +98,9 @@
     "mappings": {
       "default": {
         "default": "ऋण चिह्न"
+      },
+      "mathspeak": {
+        "default": "समास चिह्न"
       }
     }
   },
@@ -106,7 +109,7 @@
     "key": "002E",
     "mappings": {
       "default": {
-        "default": "पूर्ण विराम (For full stop.)"
+        "default": "पूर्ण विराम"
       }
     }
   },
@@ -142,7 +145,7 @@
     "key": "003C",
     "mappings": {
       "default": {
-        "default": "से कम"
+        "default": "कम है"
       }
     }
   },
@@ -160,7 +163,7 @@
     "key": "003E",
     "mappings": {
       "default": {
-        "default": "से अधिक"
+        "default": "अधिक है"
       }
     }
   },
@@ -376,7 +379,7 @@
     "key": "00B1",
     "mappings": {
       "default": {
-        "default": "योगवियोग अथवा प्लस माइनस चिह्न"
+        "default": "योगवियोग"
       }
     }
   },
@@ -1663,7 +1666,7 @@
     "key": "222B",
     "mappings": {
       "default": {
-        "default": "अविभाज्य"
+        "default": "समाकल"
       }
     }
   },
@@ -1672,7 +1675,7 @@
     "key": "222C",
     "mappings": {
       "default": {
-        "default": "डबल इंटीग्रल"
+        "default": "दुगना समाकल"
       }
     }
   },
@@ -1681,7 +1684,7 @@
     "key": "222D",
     "mappings": {
       "default": {
-        "default": "ट्रिपल इंटीग्रल"
+        "default": "तिगुना समाकल"
       }
     }
   },
@@ -1690,7 +1693,7 @@
     "key": "222E",
     "mappings": {
       "default": {
-        "default": "कंटूर इंटीग्रल"
+        "default": "कॉन्टूर समाकल"
       }
     }
   },
@@ -1699,7 +1702,7 @@
     "key": "222F",
     "mappings": {
       "default": {
-        "default": "सतह इंटीग्रल"
+        "default": "सतह समाकल"
       }
     }
   },
@@ -1708,7 +1711,7 @@
     "key": "2230",
     "mappings": {
       "default": {
-        "default": "वॉल्यूम इंटीग्रल"
+        "default": "कद समाकल"
       }
     }
   },
@@ -1717,7 +1720,7 @@
     "key": "2231",
     "mappings": {
       "default": {
-        "default": "दक्षिणावर्त अभिन्न"
+        "default": "दक्षिणावर्त समाकल"
       }
     }
   },
@@ -1726,7 +1729,7 @@
     "key": "2232",
     "mappings": {
       "default": {
-        "default": "क्लॉकवाइज कंटूर इंटीग्रल"
+        "default": "दक्षिणावर्त कॉन्टूर समाकल"
       }
     }
   },
@@ -1735,7 +1738,7 @@
     "key": "2233",
     "mappings": {
       "default": {
-        "default": "एंटीक्लॉकवाइज कंटूर इंटीग्रल"
+        "default": "वामावर्त कॉन्टूर समाकल"
       }
     }
   },
@@ -2185,7 +2188,7 @@
     "key": "2265",
     "mappings": {
       "default": {
-        "default": "इससे बड़ा या इसके बराबर"
+        "default": "अधिक या समान है"
       }
     }
   },
@@ -2194,7 +2197,7 @@
     "key": "2266",
     "mappings": {
       "default": {
-        "default": "कम से अधिक बराबर करने के लिए"
+        "default": "कम या समान है"
       }
     }
   },

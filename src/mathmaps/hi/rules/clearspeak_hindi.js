@@ -2135,14 +2135,14 @@
       "Rule",
       "matrix",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long)",
       "self::matrix"
     ],
     [
       "Rule",
       "matrix-simple",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "count(children/*)<4",
       "count(children/*[1]/children/*)<4",
@@ -2160,7 +2160,7 @@
       "Rule",
       "determinant",
       "default",
-      "[t] \"का सारणिक\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
+      "[t] \"का सारणिक\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"determinant\"",
       "count(children/*)<4",
@@ -2170,7 +2170,7 @@
       "Rule",
       "determinant-simple",
       "default",
-      "[t] \"का सारणिक\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long)",
+      "[t] \"का सारणिक\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long)",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -2178,7 +2178,7 @@
       "Rule",
       "matrix-vector",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
       "self::vector"
     ],
     [
@@ -2191,7 +2191,7 @@
       "Rule",
       "matrix-vector-simple",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::vector",
       "count(children/*)<4",
       "CQFcellsSimple",
@@ -2201,14 +2201,14 @@
       "Rule",
       "matrix-vector-simple",
       "Matrix_SilentColNum",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::vector"
     ],
     [
       "Rule",
       "matrix-row-vector",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"स्तंभ-:\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"स्तंभ-:\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2222,7 +2222,7 @@
       "Rule",
       "matrix-row-vector-simple",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"rowvector\"",
       "count(children/*[1]/children/*)<4",
@@ -2232,7 +2232,7 @@
       "Rule",
       "matrix-row-vector-simple",
       "Matrix_SilentColNum",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2308,7 +2308,7 @@
       "Rule",
       "vector",
       "Matrix_Vector",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ सदिश\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ सदिश\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
       "self::vector"
     ],
     [
@@ -2321,7 +2321,7 @@
       "Rule",
       "vector-simple",
       "Matrix_Vector",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ सदिश\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ सदिश\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::vector",
       "count(children/*)<4",
       "CQFcellsSimple"
@@ -2336,7 +2336,7 @@
       "Rule",
       "row-vector",
       "Matrix_Vector",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति सदिश\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"स्तंभ-:\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति सदिश\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"स्तंभ-:\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2350,7 +2350,7 @@
       "Rule",
       "row-vector-simple",
       "Matrix_Vector",
-      "[t] \"the\"; [t] count(children/*); [t] \"द्वारा\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति सदिश\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति सदिश\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"rowvector\"",
       "count(children/*[1]/children/*)<4",
@@ -2453,7 +2453,7 @@
       "Rule",
       "lines",
       "default",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Line-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"रेखा-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
       "self::table"
     ],
     [
@@ -2548,7 +2548,7 @@
       "Rule",
       "cases",
       "default",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Case-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"फलन उपशर्त-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
       "self::cases"
     ],
     [
@@ -2569,7 +2569,7 @@
       "Rule",
       "lines-cases",
       "MultiLineLabel_Case",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Case-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"फलन उपशर्त-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
       "self::table"
     ],
     [
@@ -2595,7 +2595,7 @@
       "Rule",
       "lines-equations",
       "MultiLineLabel_Equation",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Equation-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"समीकरण-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
       "self::table"
     ],
     [
@@ -2621,7 +2621,7 @@
       "Rule",
       "lines-steps",
       "MultiLineLabel_Step",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Step-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"चरण-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
       "self::table"
     ],
     [
@@ -2673,7 +2673,7 @@
       "Rule",
       "lines-constraints",
       "MultiLineLabel_Constraint",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Constraint-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"व्यवरोध-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)",
       "self::table"
     ],
     [
@@ -2788,7 +2788,7 @@
       "Rule",
       "mixed-number",
       "default",
-      "[n] children/*[1]; [t] \"और\"; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"पूर्णांक\"; [n] children/*[2]",
       "self::number",
       "@role=\"mixed\""
     ],

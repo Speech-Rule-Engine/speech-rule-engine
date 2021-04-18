@@ -572,7 +572,7 @@
       "Rule",
       "abstr-integral",
       "default.default",
-      "[t] \"समाकल (in calculus)\"",
+      "[t] \"समाकल\"",
       "self::*",
       "@role=\"integral\""
     ],
