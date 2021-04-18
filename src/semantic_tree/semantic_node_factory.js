@@ -88,12 +88,13 @@ sre.SemanticNodeFactory.prototype.makeNode = function(id) {
 
 /**
  * Create a node that is to be processed at a later point in time.
- * @param {Node} mml The MathML tree.
+ * @param {Element} mml The MathML tree.
  * @return {!sre.SemanticNode} The new node.
  */
 sre.SemanticNodeFactory.prototype.makeUnprocessed = function(mml) {
   var node = this.createNode_();
   node.mathml = [mml];
+  node.mathmlTree = mml;
   return node;
 };
 

@@ -1,6 +1,6 @@
 {
   "name": "speech-rule-engine",
-  "version": "3.2.0-beta.2",
+  "version": "3.2.0-beta.4",
   "description": "A standalone speech rule engine for XML structures, based on the original engine from ChromeVox.",
   "directories": {
     "test": "tests"
@@ -9,8 +9,11 @@
     "sre": "bin/sre"
   },
   "scripts": {
-    "test": "make test VERBOSE=1 NOOUTPUT=true",
-    "prepublishOnly": "make clean; make publish"
+    "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
+    "pretest": "make test_compile",
+    "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npx jest",
+    "prepublishOnly": "make clean; make publish",
+    "build": "make all"
   },
   "maintainers": [
     "Volker Sorge <Volker.Sorge@gmail.com> (http://www.cs.bham.ac.uk/~vxs)"

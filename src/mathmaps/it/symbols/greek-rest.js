@@ -7,7 +7,7 @@
     "mappings": {
       "clearspeak": {
         "default": "triangolo",
-        "TriangleSymbol_Delta": "delta maiuscola"
+        "TriangleSymbol_Delta": "Delta maiuscola"
       }
     },
     "category": "Lu"

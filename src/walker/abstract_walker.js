@@ -889,3 +889,20 @@ sre.AbstractWalker.prototype.previousRules = function() {
   this.moved = sre.Walker.move.REPEAT;
   return this.getFocus().clone();
 };
+
+
+/**
+ * Refocuses in case levels have been altered outside the walker's control.
+ */
+sre.AbstractWalker.prototype.refocus = function() {
+  var focus = this.getFocus();
+  while (!focus.getNodes().length) {
+    var last = this.levels.peek();
+    var up = this.up();
+    if (!up) break;
+    this.setFocus(up);
+    focus = this.getFocus(true);
+  }
+  this.levels.push(last);
+  this.setFocus(focus);
+};

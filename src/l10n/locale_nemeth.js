@@ -136,9 +136,10 @@ sre.Locale.nemeth = {
     'bold-script': '⠸⠈',
     'caligraphic': '⠈',
     'caligraphic-bold': '⠈⠸',
-    'double-struck': '⠸',
+    'double-struck': '⠈',
     'double-struck-italic': '⠸⠨',
     'fraktur': ['⠸', germanCombiner],
+    'fullwidth': '',
     'italic': '⠨',
     'monospace': '',
     'normal': '',
@@ -155,8 +156,8 @@ sre.Locale.nemeth = {
   EMBELLISH: {
     // Embellishments
     // TODO: Here we need specialist combiners!
-    'super': '⠘',
-    'sub': '⠰',
+    'super': ['⠘', germanCombiner],
+    'sub': ['⠰', germanCombiner],
     'circled': ['⠫⠉⠸⠫', embellishCombiner],
     'parenthesized': ['⠷', parensCombiner],
     'period': ['⠸⠲', postfixCombiner],
@@ -200,9 +201,9 @@ sre.Locale.nemeth = {
     'longdiv': 'long division',
     'actuarial': 'actuarial symbol',
     'radical': 'square root',
-    'box': 'box',
+    'box': '⠗',
     'roundedbox': 'rounded box',
-    'circle': 'circle',
+    'circle': '⠉',
     'left': 'left vertical-line',
     'right': 'right vertical-line',
     'top': 'overbar',
@@ -213,7 +214,7 @@ sre.Locale.nemeth = {
     'horizontalstrike': 'crossout',
     'madruwb': 'Arabic factorial symbol',
     'updiagonalarrow': 'diagonal arrow',
-    'phasorangle': 'phasor angle',
+    'phasorangle': '⠪',
     // Unknown
     'unknown': 'long division'
   },
@@ -247,17 +248,17 @@ sre.Locale.nemeth = {
     ],
     greekSmall: [
       '⠨⠫',  // This is here as it is small.
-      '⠨⠁', '⠨⠃', '⠨⠛', '⠨⠙', '⠨⠑', '⠨⠱', '⠨⠦', '⠨⠹',
+      '⠨⠁', '⠨⠃', '⠨⠛', '⠨⠙', '⠨⠑', '⠨⠵', '⠨⠱', '⠨⠹',
       '⠨⠊', '⠨⠅', '⠨⠇', '⠨⠍', '⠨⠝', '⠨⠭', '⠨⠕', '⠨⠏', '⠨⠗',
-      '⠨⠒', '⠨⠎', '⠨⠞', '⠨⠥', '⠨⠋', '⠨⠯', '⠨⠓', '⠨⠕',
+      '⠨⠈⠎', '⠨⠎', '⠨⠞', '⠨⠥', '⠨⠈⠋', '⠨⠯', '⠨⠽', '⠨⠺',
       // Symbols below
-      '⠈⠙', '⠨⠑', '⠨⠹', '⠨⠅', '⠨⠋', '⠨⠗', '⠨⠏'
+      '⠈⠙', '⠨⠑', '⠨⠈⠹', '⠨⠅', '⠨⠋', '⠨⠗', '⠨⠏'
     ],
     greekCap: [
-      '⠨⠠⠁', '⠨⠠⠃', '⠨⠠⠛', '⠨⠠⠙', '⠨⠠⠑', '⠨⠠⠱', '⠨⠠⠣', '⠨⠠⠹',
+      '⠨⠠⠁', '⠨⠠⠃', '⠨⠠⠛', '⠨⠠⠙', '⠨⠠⠑', '⠨⠠⠵', '⠨⠠⠱', '⠨⠠⠹',
       '⠨⠠⠊', '⠨⠠⠅', '⠨⠠⠇', '⠨⠠⠍', '⠨⠠⠝', '⠨⠠⠭', '⠨⠠⠕', '⠨⠠⠏', '⠨⠠⠗',
       '⠨⠠⠹',  // Theta symbol
-      '⠨⠠⠎', '⠨⠠⠥', '⠨⠠⠥', '⠨⠠⠋', '⠨⠠⠯', '⠨⠠⠫', '⠨⠠⠺'
+      '⠨⠠⠎', '⠨⠠⠞', '⠨⠠⠥', '⠨⠠⠋', '⠨⠠⠯', '⠨⠠⠽', '⠨⠠⠺'
     ]
   },
 
@@ -283,8 +284,10 @@ sre.Locale.nemeth = {
     },
   },
 
-  ALPHABET_COMBINER: function(letter, font, cap) {
-    return font ? (font + letter) : simpleEnglish(letter);
+  ALPHABET_COMBINER: function(letter, font, number) {
+    return font ? (font + number + letter) : simpleEnglish(letter);
   }
 
 };
+  // <mn>𝟗</mn>
+  // <mn mathvariant="bold">9</mn>

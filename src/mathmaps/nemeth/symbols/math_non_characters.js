@@ -132,7 +132,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "⠀⠈⠠⠁"
+        "default": "⠈⠠⠁"
       }
     },
     "key": "212B"

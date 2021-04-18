@@ -49,6 +49,7 @@ sre.SemanticHeuristics = function() {
 
 
   /**
+   * Heuristics that are run by default.
    * @type {Object.<boolean>}
    */
   this.flags = {
@@ -56,6 +57,12 @@ sre.SemanticHeuristics = function() {
     convert_juxtaposition: true,
     multioperator: true
   };
+
+  /**
+   * Heuristics that are permanently switched off.
+   * @type {Object.<boolean>}
+   */
+  this.blacklist = { };
 
 };
 goog.addSingletonGetter(sre.SemanticHeuristics);
@@ -86,6 +93,7 @@ sre.SemanticHeuristics.add = function(name, heuristic) {
 sre.SemanticHeuristics.run = function(name, root, opt_alternative) {
   var heuristic = sre.SemanticHeuristics.lookup(name);
   return heuristic &&
+      !sre.SemanticHeuristics.getInstance().blacklist[name] &&
       (sre.SemanticHeuristics.getInstance().flags[name] ||
        heuristic.applicable(root)) ?
       heuristic.apply(root) :
@@ -213,7 +221,6 @@ sre.SemanticHeuristics.add(
     return root;
   }
   }));
-
 
 
 /**
@@ -382,12 +389,12 @@ sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
       next = partition.comp.shift();
       collect.push(partition.rel.shift());
     }
-    sre.SemanticHeuristics.convertPrePost_(collect, next, comps, rels);
+    rel = sre.SemanticHeuristics.convertPrePost_(collect, next, comps);
   }
   if (!collect.length && !next.length) {
     // A trailing rest exists that needs to be rewritten.
     collect.push(rel);
-    sre.SemanticHeuristics.convertPrePost_(collect, next, comps, rels);
+    sre.SemanticHeuristics.convertPrePost_(collect, next, comps);
   } else {
     rels.push(rel);
     comps.push(next);
@@ -399,45 +406,52 @@ sre.SemanticHeuristics.juxtapositionPrePost_ = function(partition) {
 /**
  * Converts lists of invisible times operators into pre/postfix operatiors.
  * @param {!Array.<sre.SemanticNode>} collect The collected list of invisible
- *     etimes.
+ *     times.
  * @param {!Array.<sre.SemanticNode>} next The next component element.
  * @param {!Array.<!Array.<sre.SemanticNode>>} comps The previous components.
- * @param {!Array.<sre.SemanticNode>} rels The list of remaining relations.
+ * @return {sre.SemanticNode|null} The operator that needs to be taken care of.
  * @private
  */
-sre.SemanticHeuristics.convertPrePost_ = function(collect, next, comps, rels) {
-  if (!collect.length) return;
+sre.SemanticHeuristics.convertPrePost_ = function(collect, next, comps) {
+  var rel = null;
+  if (!collect.length) {
+    return rel;
+  }
   var prev = comps[comps.length - 1];
   var prevExists = prev && prev.length;
   var nextExists = next && next.length;
   if (prevExists && nextExists) {
     if (next[0].type === sre.SemanticAttr.Type.INFIXOP &&
         next[0].role === sre.SemanticAttr.Role.IMPLICIT) {
-      rels.push(collect.pop());
+      rel = collect.pop();
       prev.push(sre.SemanticProcessor.getInstance()['postfixNode_'](prev.pop(), collect));
-      return;
+      return rel;
     }
-    rels.push(collect.shift());
+    rel = collect.shift();
     next.unshift(sre.SemanticProcessor.getInstance()['prefixNode_'](next.shift(), collect));
-    return;
+    return rel;
   }
   if (prevExists) {
     prev.push(sre.SemanticProcessor.getInstance()['postfixNode_'](prev.pop(), collect));
-    return;
+    return rel;
   }
   if (nextExists) {
     next.unshift(sre.SemanticProcessor.getInstance()['prefixNode_'](next.shift(), collect));
   }
+  return rel;
 };
 
 
 /**
  * Heuristic to recursively combines a list of juxtaposition elements
- * expressions.
+ * expressions. Note that the heuristic assumes that all multiple occurrences of
+ * invisible times elements are processed. So all we have here are single
+ * operators or infix operators of role implicit.
+ *
  * @param {!Array.<!sre.SemanticNode>} acc Elements to the left of the first
- *     implicit operation or application of an implicit operation. The serves as
+ *     implicit operation or application of an implicit operation. This serves as
  *     an accumulator during the recursion.
- * @param {!Array.<!sre.SemanticNode>} ops The list of implicit operators or
+ * @param {!Array.<!sre.SemanticNode>} ops The list of juxtaposition operators or
  *     applications. That is, subtrees that are infix operations with inivisible
  *     times.
  * @param {!Array.<!Array.<!sre.SemanticNode>>} elements The list of elements
@@ -454,26 +468,31 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   var op = ops.shift();
   var first = elements.shift();
   if (sre.SemanticPred.isImplicitOp(op)) {
-    sre.Debugger.getInstance().output('Case 2');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 2');
     // In case we have a tree as operator, move on.
-    // TODO: Simplify with Case 9?
     var right = (left ? [left, op] : [op]).concat(first);
     return sre.SemanticHeuristics.recurseJuxtaposition_(
       acc.concat(right), ops, elements);
   }
   if (!left) {
-    sre.Debugger.getInstance().output('Case 3');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 3');
     return sre.SemanticHeuristics.recurseJuxtaposition_([op].concat(first), ops, elements);
   }
   var right = first.shift();
   if (!right) {
-    sre.Debugger.getInstance().output('Case 9');
-    // Recall: If op is a single implicit node it needs to be omitted!
-    right = sre.SemanticPred.isOperator(op) ? [left] : [left, op];
-    return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(right), ops, elements);
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 9');
+    // Attach to the next operator, which must be an infix operation, As there
+    // are no more double operators. Left also exists. Cases that left is an
+    // implicit infix or simple.
+    var newOp = sre.SemanticHeuristics.getInstance().factory.makeBranchNode(
+      sre.SemanticAttr.Type.INFIXOP, [left, ops.shift()], [op], op.textContent);
+    newOp.role = sre.SemanticAttr.Role.IMPLICIT;
+    sre.SemanticHeuristics.run('combine_juxtaposition', newOp);
+    ops.unshift(newOp);
+    return sre.SemanticHeuristics.recurseJuxtaposition_(acc, ops, elements);
   }
   if (sre.SemanticPred.isOperator(left) || sre.SemanticPred.isOperator(right)) {
-    sre.Debugger.getInstance().output('Case 4');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 4');
     return sre.SemanticHeuristics.recurseJuxtaposition_(
       acc.concat([left, op, right]).concat(first), ops, elements);
   }
@@ -481,7 +500,7 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   if (sre.SemanticPred.isImplicitOp(left) &&
       sre.SemanticPred.isImplicitOp(right)) {
     // Merge both left and right.
-    sre.Debugger.getInstance().output('Case 5');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 5');
     left.contentNodes.push(op);
     left.contentNodes = left.contentNodes.concat(right.contentNodes);
     left.childNodes.push(right);
@@ -493,7 +512,7 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     result = left;
   } else if (sre.SemanticPred.isImplicitOp(left)) {
     // Add to the left one.
-    sre.Debugger.getInstance().output('Case 6');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 6');
     left.contentNodes.push(op);
     left.childNodes.push(right);
     right.parentNode = left;
@@ -503,7 +522,7 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     result = left;
   } else if (sre.SemanticPred.isImplicitOp(right)) {
     // Add to the right one.
-    sre.Debugger.getInstance().output('Case 7');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 7');
     right.contentNodes.unshift(op);
     right.childNodes.unshift(left);
     left.parentNode = right;
@@ -513,7 +532,7 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     result = right;
   } else {
   // Create new implicit node.
-    sre.Debugger.getInstance().output('Case 8');
+    sre.Debugger.getInstance().output('Juxta Heuristic Case 8');
     result = sre.SemanticHeuristics.getInstance().factory.makeBranchNode(
       sre.SemanticAttr.Type.INFIXOP, [left, right], [op], op.textContent);
     result.role = sre.SemanticAttr.Role.IMPLICIT;
@@ -521,3 +540,58 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   acc.push(result);
   return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(first), ops, elements);
 };
+
+
+/**
+ * Rewrites a simple function to a prefix function if it consists of multiple
+ * letters. (Currently restricted to Braille!)
+ */
+sre.SemanticHeuristics.add(
+  'simple2prefix',
+  new sre.SemanticTreeHeuristic({
+    predicate: function(node) {
+      return sre.Engine.getInstance().modality === 'braille' &&
+        node.type === sre.SemanticAttr.Type.IDENTIFIER;
+    },
+    method: function(node) {
+      if (node.textContent.length > 1 &&
+          // TODO: Discuss this line!
+          !node.textContent[0].match(/[A-Z]/)) {
+        node.role = sre.SemanticAttr.Role.PREFIXFUNC;
+      }
+      return node;
+  }
+  }));
+
+
+/**
+ *  Rewrites space separated lists of numbers into of cycles.
+ *  (Currently only used in Nemeth.)
+ */
+sre.SemanticHeuristics.add(
+  'detect_cycle',
+  new sre.SemanticTreeHeuristic({
+    predicate: function(node) {
+      return sre.Engine.getInstance().modality === 'braille' &&
+        node.type === sre.SemanticAttr.Type.FENCED &&
+        node.childNodes[0].type === sre.SemanticAttr.Type.INFIXOP &&
+        node.childNodes[0].role === sre.SemanticAttr.Role.IMPLICIT &&
+        node.childNodes[0].childNodes.every(function(x) {
+          return x.type === sre.SemanticAttr.Type.NUMBER;
+        }) &&
+        node.childNodes[0].contentNodes.every(function(x) {
+          return x.role === sre.SemanticAttr.Role.SPACE;
+        })
+        ;
+    },
+    method: function(node) {
+      // TODO: Test for simple elements?
+      node.type = sre.SemanticAttr.Type.MATRIX;
+      node.role = sre.SemanticAttr.Role.CYCLE;
+      var row = node.childNodes[0];
+      row.type = sre.SemanticAttr.Type.ROW;
+      row.role = sre.SemanticAttr.Role.CYCLE;
+      row.contentNodes = [];
+      return node;
+    }})
+);

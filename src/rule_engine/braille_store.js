@@ -34,6 +34,14 @@ sre.BrailleStore = function() {
 
   this.modality = 'braille';
 
+  /**
+   * Local transcriptions for special characters.
+   * @type {Object.<string>}
+   */
+  this.transcriptions = {
+    '⋊': '⠈⠡⠳'
+  };
+
 };
 goog.inherits(sre.BrailleStore, sre.MathStore);
 
@@ -60,16 +68,21 @@ sre.BrailleStore.prototype.evaluateString_ = function(text) {
   while (text) {
     var chr = text[0];
     var code = chr.charCodeAt(0);
+    var transcription = this.transcriptions[chr];
+    var translate = true;
+    if (transcription) {
+      translate = false;
+    }
     if (0xD800 <= code && code <= 0xDBFF &&
         text.length > 1 && !isNaN(text.charCodeAt(1))) {
-      descs.push(sre.AuditoryDescription.create(
-          {text: text.slice(0, 2)}, {adjust: true, translate: true}));
+      transcription = transcription || text.slice(0, 2);
       text = text.substring(2);
     } else {
-      descs.push(sre.AuditoryDescription.create(
-          {text: chr}, {adjust: true, translate: true}));
+      transcription = transcription || chr;
       text = text.substring(1);
     }
+    descs.push(sre.AuditoryDescription.create(
+      {text: transcription}, {adjust: true, translate: translate}));
   }
   return descs;
 };
