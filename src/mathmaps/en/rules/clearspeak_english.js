@@ -565,9 +565,8 @@
       "Rule",
       "article",
       "default",
-      "[t] \"the\"; [n] . (grammar:!addArticle)",
-      "self::*",
-      "contains(@grammar, \"addArticle\")",
+      "[t] \"the\"; [n] . (grammar:noArticle)",
+      "self::*[contains(@grammar, \"addArticle\")]",
       "not(contains(@grammar, \"noArticle\"))"
     ],
     [
@@ -832,7 +831,7 @@
       "Rule",
       "superscript-prefix-function",
       "default",
-      "[t] \"the\"; [n] children/*[2] (grammar:ordinal); [t] \"power of\"; [n] children/*[1]",
+      "[n] children/*[2] (grammar:ordinal:addArticle); [t] \"power of\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"prefix function\"",
       "name(children/*[2])=\"number\"",
@@ -842,7 +841,7 @@
       "Rule",
       "superscript-prefix-function",
       "default",
-      "[t] \"the\"; [n] children/*[2] (grammar:ordinal); [t] \"power of\"; [n] children/*[1]",
+      "[n] children/*[2] (grammar:ordinal:addArticle); [t] \"power of\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"prefix function\"",
       "name(children/*[2])=\"identifier\""
@@ -921,7 +920,7 @@
       "Rule",
       "superscript-ordinal",
       "default",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal); [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"number\"",
       "children/*[2][@role=\"integer\"]"
@@ -937,7 +936,7 @@
       "Rule",
       "superscript-non-ordinal",
       "default",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2]; [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "children/*[2][@role=\"negative\"]",
       "name(children/*[2]/children/*[1])=\"number\"",
@@ -947,7 +946,7 @@
       "Rule",
       "superscript-simple-function",
       "default",
-      "[t] \"the\"; [n] children/*[2] (grammar:ordinal); [t] \"power of\" (pause:\"short\"); [n] children/*[1]",
+      "[n] children/*[2] (grammar:ordinal:addArticle); [t] \"power of\" (pause:\"short\"); [n] children/*[1]",
       "self::superscript",
       "name(children/*[1])=\"identifier\"",
       "children/*[1][@role=\"simple function\"]",
@@ -968,7 +967,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_Ordinal",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal, pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"number\"",
       "children/*[2][@role=\"integer\"]"
@@ -977,7 +976,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_Ordinal",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:noArticle, pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"prefixop\"",
       "children/*[2][@role=\"negative\"]",
@@ -988,7 +987,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_Ordinal",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal, pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
       "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
@@ -1005,7 +1004,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_OrdinalPower",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal); [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"number\"",
       "children/*[2][@role=\"integer\"]"
@@ -1014,7 +1013,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_OrdinalPower",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2]; [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"prefixop\"",
       "children/*[2][@role=\"negative\"]",
@@ -1025,7 +1024,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_OrdinalPower",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal); [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
       "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
@@ -1723,14 +1722,14 @@
       "Rule",
       "root",
       "default",
-      "[t] \"the\"; [n] children/*[1] (grammar:ordinal); [t] \"root of\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)",
+      "[n] children/*[1] (grammar:ordinal:addArticle); [t] \"root of\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)",
       "self::root"
     ],
     [
       "Rule",
       "root-nested",
       "default",
-      "[p] (pause:short); [t] \"the\"; [n] children/*[1] (grammar:ordinal); [t] \"root of\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)",
+      "[p] (pause:short); [n] children/*[1] (grammar:ordinal:addArticle); [t] \"root of\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)",
       "self::root",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root"
@@ -1794,7 +1793,7 @@
       "Rule",
       "set-prefix-operators",
       "default",
-      "[t] \"the\"; [n] self::* (grammar:!prefix); [t] \"of\"",
+      "[n] self::* (grammar:!prefix:addArticle); [t] \"of\"",
       "self::*",
       "contains(@grammar,\"prefix\")",
       "descendant-or-self::*/text()=\"∩\" or descendant-or-self::*/text()=\"∪\"",
@@ -2725,7 +2724,7 @@
       "Rule",
       "bigop",
       "default",
-      "[t] \"the\"; [n] children/*[1]; [t] \"of\"; [n] children/*[2] (pause:short)",
+      "[n] children/*[1] (grammar:addArticle); [t] \"of\"; [n] children/*[2] (pause:short)",
       "self::bigop"
     ],
     [
@@ -2753,7 +2752,7 @@
       "Rule",
       "integral",
       "default",
-      "[t] \"the\"; [n] children/*[1]; [t] \"of\"; [n] children/*[2] (pause:short)",
+      "[n] children/*[1] (grammar:addArticle); [t] \"of\"; [n] children/*[2] (pause:short)",
       "self::integral"
     ],
     [
