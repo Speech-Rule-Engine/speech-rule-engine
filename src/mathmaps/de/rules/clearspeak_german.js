@@ -36,7 +36,7 @@
       "Rule",
       "protected",
       "default",
-      "[n] text()",
+      "[n] text() (grammar:ignoreCaps=\"großes\")",
       "self::number",
       "contains(@grammar, \"protected\")"
     ],

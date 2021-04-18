@@ -49,7 +49,7 @@
       "Rule",
       "protected",
       "default",
-      "[n] text()",
+      "[n] text() (grammar:ignoreCaps=\"maiuscola\")",
       "self::number",
       "contains(@grammar, \"protected\")"
     ],
