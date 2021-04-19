@@ -1,10 +1,13 @@
 Speech Rule Engine
 ==================
-[![Build Status](https://travis-ci.org/zorkow/speech-rule-engine.svg?branch=master)](https://travis-ci.org/zorkow/speech-rule-engine) [![Dependencies](https://david-dm.org/zorkow/speech-rule-engine.svg)](https://david-dm.org/zorkow/speech-rule-engine) [![devDependency Status](https://david-dm.org/zorkow/speech-rule-engine/dev-status.svg)](https://david-dm.org/zorkow/speech-rule-engine#info=devDependencies) [![NPM version](https://img.shields.io/npm/v/speech-rule-engine.svg?style=flat)](https://www.npmjs.com/package/speech-rule-engine) [![NPM monthly downloads](https://img.shields.io/npm/dm/speech-rule-engine.svg?style=flat)](https://npmjs.org/package/speech-rule-engine) [![NPM total downloads](https://img.shields.io/npm/dt/speech-rule-engine.svg?style=flat)](https://npmjs.org/package/speech-rule-engine) [![Linux Build Status](https://img.shields.io/travis/zorkow/speech-rule-engine.svg?style=flat&label=Travis)](https://travis-ci.org/zorkow/speech-rule-engine) [![Coverage Status](https://coveralls.io/repos/zorkow/speech-rule-engine/badge.svg?branch=master&service=github)](https://coveralls.io/github/zorkow/speech-rule-engine?branch=master)
+[![Build Status](https://travis-ci.org/zorkow/speech-rule-engine.svg?branch=master)](https://travis-ci.org/zorkow/speech-rule-engine) [![Dependencies](https://img.shields.io/david/zorkow/speech-rule-engine)](https://img.shields.io/david/zorkow/speech-rule-engine) [![devDependency Status](https://img.shields.io/david/dev/zorkow/speech-rule-engine)](https://img.shields.io/david/dev/zorkow/speech-rule-engine) [![NPM version](https://img.shields.io/npm/v/speech-rule-engine.svg?style=flat)](https://www.npmjs.com/package/speech-rule-engine) [![NPM monthly downloads](https://img.shields.io/npm/dm/speech-rule-engine.svg?style=flat)](https://npmjs.org/package/speech-rule-engine) [![NPM total downloads](https://img.shields.io/npm/dt/speech-rule-engine.svg?style=flat)](https://npmjs.org/package/speech-rule-engine) [![Linux Build Status](https://img.shields.io/travis/zorkow/speech-rule-engine.svg?style=flat&label=Travis)](https://travis-ci.org/zorkow/speech-rule-engine) [![](https://data.jsdelivr.com/v1/package/npm/speech-rule-engine/badge)](https://www.jsdelivr.com/package/npm/speech-rule-engine)
+[![jsdelivr rank](https://flat.badgen.net/jsdelivr/rank/npm/speech-rule-engine)](https://www.jsdelivr.com/package/npm/speech-rule-engine)
+![example workflow](https://github.com/zorkow/speech-rule-engine/actions/workflows/node.js.yml/badge.svg?branch=develop)
+
 
 ***
 
-**Breaking Change:** Please move to v3.0.2 (master) or v3.1.0-beta.3 (develop). [More info here.](#breaking-change)
+**Breaking Change:** Please move to v3.0.2 or later. [More info here.](#breaking-change)
 
 ***
 
@@ -30,7 +33,7 @@ strings.
 
 There are three ways of using SRE:
 
-1. [**Node Module:**](#node-module) Download via npm. This is the easiest way to use the speech
+1. [**Node Module:**](#node-module) Download via npm or yarn. This is the easiest way to use the speech
 rule engine via its Api and is the preferred option if you just want to include
 it in your project.
 
@@ -53,6 +56,10 @@ Node Module
 Install as a node module using npm:
 
      npm install speech-rule-engine
+
+Or add it with yarn:
+
+     yarn add speech-rule-engine
 
 Then import into a running node or a source file using require:
 
@@ -440,7 +447,7 @@ the [commander library](https://github.com/tj/commander.js/releases/tag/v6.0.0)
 old versions of SRE might break when newly installed from `npm`.  SRE relies on
 commander for running its command line interface.
 
-**Therefore, please move to SRE v3.0.2 (master) or v3.1.0-beta.3 (develop).**
+**Therefore, please move to SRE v3.0.2 or later.**
 
 
 If you want to run older versions of SRE, you need to manually downgrade the

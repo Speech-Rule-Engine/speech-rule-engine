@@ -18,8 +18,7 @@ NODE_MODULES = $(PREFIX)/$(MODULE_NAME)
 SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
-RES_DIR = $(abspath ./res)
-SRC = $(SRC_DIR)/**/*.js $(SRC_DIR)/speech_rules/**/*.js
+SRC = $(SRC_DIR)/**/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
@@ -27,22 +26,21 @@ MATHJAX = $(LIB_DIR)/mathjax-sre.js
 SEMANTIC = $(LIB_DIR)/semantic.js
 SEMANTIC_NODE = $(LIB_DIR)/semantic-node.js
 ENRICH = $(LIB_DIR)/enrich.js
-LICENSE = $(RES_DIR)/license-header.txt
+LICENSE = $(SRC_DIR)/license-header.txt
 
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_SRC = $(SRC_DIR)/mathmaps
 JSON_DST = $(LIB_DIR)/mathmaps
-MAPS = functions symbols units
+MAPS = si functions symbols units rules
 IEMAPS_FILE = $(JSON_DST)/mathmaps_ie.js
 LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
 
-TEST_DIR = $(abspath ./tests)
-TEST_TARGET = $(LIB_DIR)/test.js
-TEST_DEPS = $(TEST_DIR)/deps.js
+TEST_DIR = $(abspath ./sre-tests)
+TEST_TARGET = $(LIB_DIR)/sre_test.js
+TEST_RUNNER = $(TEST_DIR)/dist/sretest.js
 TEST = $(BIN_DIR)/test_sre
-TEST_SRC = $(TEST_DIR)/**/*.js $(TEST_DIR)/*.js
 
 JSDOC = $(NODE_MODULES)/.bin/jsdoc
 JSDOC_FLAGS = -c $(PREFIX)/.jsdoc.json
@@ -141,7 +139,7 @@ all: directories deps compile start_files maps
 
 ## This is a hack to get around a closure library problem.
 $(GOOG_BASE_CLEAN):
-	@sed -i s/"^.*@deprecated Use ES6.*"// $(GOOG_BASE)
+	@sed -i.bak s/"^.*@deprecated Use ES6.*"// $(GOOG_BASE)
 	@touch $(GOOG_BASE_CLEAN)
 
 directories: $(BIN_DIR)
@@ -195,11 +193,10 @@ $(INTERACTIVE):
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.setAsync()" >> $@
 
-clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps
+clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps clean_json
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(INTERACTIVE)
-	rm -rf $(JSON_DST)
 
 
 ##################################################################
@@ -207,22 +204,15 @@ clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_
 ##################################################################
 # Extern files.
 ##################################################################
-TEST_EXTERN_FILES = $(shell find $(TEST_DIR) -type f -name 'externs.js')
-TEST_FLAGS = $(foreach extern, $(TEST_EXTERN_FILES), $(MAKE_EXTERN_FLAG))
 
-test_deps: $(TEST_DEPS)
-
-$(TEST_DEPS):
-	@echo Building Javascript dependencies in test directory $(TEST_DEPS)
-	@$(DEPSWRITER) --root_with_prefix="$(TEST_DIR) $(TEST_DIR)" > $(TEST_DEPS)
-
-test: directories test_deps deps test_compile test_script maps run_test
+test: directories deps test_compile test_script maps run_test
 
 test_compile: $(TEST_TARGET)
 
-$(TEST_TARGET): $(GOOG_BASE_CLEAN) $(TEST_SRC) $(SRC)
+$(TEST_TARGET): $(GOOG_BASE_CLEAN) $(SRC)
 	@echo Compiling test version of Speech Rule Engine
-	@$(CLOSURE_COMPILER) $(TEST_FLAGS) --entry_point=goog:sre.Tests --js_output_file=$(TEST_TARGET) $^
+	@$(CLOSURE_COMPILER) --entry_point=goog:sre.Global --js_output_file=$(TEST_TARGET) $^
+
 
 test_script: $(TEST)
 
@@ -233,17 +223,42 @@ $(TEST):
 	@echo "" >> $@
 	@echo "export SRE_JSON_PATH=$(JSON_DST)" >> $@
 	@echo "" >> $@
-	@echo $(NODEJS) $(TEST_TARGET) "\$$@" >> $@
+	@echo $(NODEJS) $(TEST_RUNNER) "\$$@" >> $@
 	@chmod 755 $@
 
-run_test:
+run_test: $(TEST_RUNNER)
 	@$(TEST)
+
+$(TEST_RUNNER): $(TEST_DIR)/node_modules
+	@cd $(TEST_DIR); npm run prepare
+	@cd ..
+
+## Using webpack instead.
+## @cd $(TEST_DIR); npx webpack
+
+$(TEST_DIR)/node_modules:
+	@cd $(TEST_DIR); npm install
+	@cd ..
+
 
 clean_test:
 	rm -f $(TEST_TARGET)
-	rm -f $(TEST_DEPS)
+	rm -f $(TEST_RUNNER)
 	rm -f $(TEST)
+	rm -f tests
 
+###
+### This is for local tests, assuming that sre-tests repo is in parallel to the
+### speech-rule-engine directory. This allows easier changes in sre-tests
+### without having to bother with commits from a git submodule.
+###
+### Call with: make test_local TEST_DIR=tests
+###
+test_local: tests test
+
+tests:
+	@ln -s ../sre-tests tests
+	@echo $(TEST_DIR)
 
 ##################################################################
 # Publish the API via npm.
@@ -255,17 +270,25 @@ $(JSON_DST):
 	@echo "Creating JSON destination."
 	@mkdir -p $(JSON_DST)
 
-maps: $(JSON_DST) $(LOC_DST)
+maps: $(JSON_DST) clean_loc $(LOC_DST)
+
+clean_loc:
+	@if ! [ -z $(LOC) ]; then \
+		echo "Deleting $(LOC).js"; \
+		rm -f $(JSON_DST)/$(LOC).js; \
+	fi
 
 $(LOC_DST):
 	@echo "Creating mappings for locale `basename $@ .js`."
 	@echo '{' > $@
 	@for dir in $(MAPS); do\
-		for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
-			echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
-			$(JSON_MINIFY) $$i >> $@; \
-			echo ','  >> $@; \
-		done; \
+		if [ -d $(JSON_SRC)/`basename $@ .js`/$$dir ]; then \
+			for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
+				echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
+				$(JSON_MINIFY) $$i >> $@; \
+				echo ','  >> $@; \
+			done; \
+		fi; \
 	done
 	@sed '$$d' $@ > $@.tmp
 	@echo '}' >> $@.tmp
@@ -279,11 +302,14 @@ $(IEMAPS_FILE):
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
-			for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
-				echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
-				$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
-				echo ','  >> $(IEMAPS_FILE); \
-			done; \
+			echo $(JSON_SRC)/$$j/$$dir;\
+			if [ -d $(JSON_SRC)/$$j/$$dir ]; then\
+				for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
+					echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
+					$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
+					echo ','  >> $(IEMAPS_FILE); \
+				done; \
+			fi; \
 		done; \
 	done
 	@sed '$$d' $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp
@@ -351,3 +377,6 @@ clean_docs:
 
 clean_iemaps:
 	rm -f $(IEMAPS_FILE)
+
+clean_json:
+	rm -rf $(JSON_DST)

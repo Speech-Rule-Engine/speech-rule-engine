@@ -178,13 +178,17 @@ sre.Locale.en = {
     JOINER_FRAC: ''
   },
 
-  PLURAL_UNIT: {
-    'foot': 'feet',
-    'inch': 'inches',
-    'square foot': 'square feet',
-    'square inch': 'square inches',
-    'cubic foot': 'cubic feet',
-    'cubic inch': 'cubic inches'
+  SI: function(prefix, unit) {
+    var abbr = {
+      'megaohm': 'megohm',
+      'kiloohm': 'kilohm'
+    };
+    var si = prefix + unit;
+    return abbr[si] || si;
+  },
+
+  PLURAL: function(unit) {
+    return (/.*s$/.test(unit)) ? unit : unit + 's';
   },
 
   NUMBERS: sre.Numbers.en.NUMBERS,
@@ -235,3 +239,9 @@ sre.Locale.en = {
 
 };
 
+
+sre.Grammar.getInstance().setCorrection(
+    'noarticle', function(name) {
+      return sre.Grammar.getInstance().getParameter('noArticle') ? '': name;
+    }
+);

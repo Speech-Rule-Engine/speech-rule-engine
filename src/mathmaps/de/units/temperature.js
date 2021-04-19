@@ -6,7 +6,7 @@
     "key": "F",
     "mappings": {
       "default": {
-        "default": "Farad"
+        "default": "Grad Fahrenheit"
       }
     },
     "category": "temperature",
@@ -20,7 +20,7 @@
     "key": "C",
     "mappings": {
       "default": {
-        "default": "Celsius"
+        "default": "Grad Celsius"
       }
     },
     "category": "temperature",

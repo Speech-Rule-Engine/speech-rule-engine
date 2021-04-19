@@ -27,7 +27,6 @@ goog.require('sre.Engine.Error');
 goog.require('sre.L10n');
 goog.require('sre.ProcessorFactory');
 goog.require('sre.SpeechRuleEngine');
-goog.require('sre.SpeechRuleStores');
 goog.require('sre.SystemExternal');
 goog.require('sre.Variables');
 
@@ -44,6 +43,16 @@ sre.System = function() {
    */
   this.version = sre.Variables.VERSION;
 
+  /**
+   * Number of open files.
+   * @type {number}
+   * @private
+   */
+  this.files_ = 0;
+
+  sre.Engine.registerTest(
+    function() {return !sre.System.getInstance().files_;}
+  );
 };
 goog.addSingletonGetter(sre.System);
 
@@ -54,13 +63,23 @@ goog.addSingletonGetter(sre.System);
 // These are all API interface functions. Therefore, avoid any usage of "this"
 // in the code.
 /**
- * Method to setup and intialize the speech rule engine. Currently the feature
+ * Method to setup and initialize the speech rule engine. Currently the feature
  * parameter is ignored, however, this could be used to fine tune the setup.
  * @param {Object.<boolean|string>} feature An object describing some
  *     setup features.
  */
 sre.System.prototype.setupEngine = function(feature) {
   var engine = sre.Engine.getInstance();
+  // This preserves the possibility to specify default as domain.
+  //
+  // < 3.2  this lead to the use of chromevox rules in English.
+  // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales we
+  //        get a meaningful output.
+  if (feature.domain === 'default' &&
+      (feature.modality === 'speech' ||
+       (!feature.modality || engine.modality === 'speech'))) {
+    feature.domain = 'mathspeak';
+  }
   var setIf = function(feat) {
     if (typeof feature[feat] !== 'undefined') {
       engine[feat] = !!feature[feat];
@@ -80,11 +99,9 @@ sre.System.prototype.setupEngine = function(feature) {
     sre.SystemExternal.WGXpath = feature.xpath;
   }
   engine.setupBrowsers();
-  engine.ruleSets = feature.rules ? feature.rules :
-      sre.SpeechRuleStores.availableSets();
-  sre.SpeechRuleEngine.getInstance().parameterize(engine.ruleSets);
   engine.setDynamicCstr();
   sre.L10n.setLocale();
+  sre.SpeechRuleEngine.getInstance().updateEngine();
 };
 
 
@@ -375,20 +392,24 @@ sre.System.prototype.inputFileAsync_ = function(file, callback) {
  * @private
  */
 sre.System.prototype.processFileAsync_ = function(
-    processor, input, opt_output) {
+  processor, input, opt_output) {
+  this.files_++;
   sre.System.getInstance().inputFileAsync_(
       input,
       goog.bind(function(expr) {
         var result = sre.ProcessorFactory.output(processor, expr);
         if (!opt_output) {
           console.info(result);
+          this.files_--;
           return;
         }
         sre.SystemExternal.fs.writeFile(opt_output, result, function(err) {
           if (err) {
+            this.files_--;
             throw new sre.Engine.Error('Can not write to file: ' + opt_output);
           }
         });
+        this.files_--;
       }, this));
 };
 
@@ -413,4 +434,20 @@ sre.System.prototype.walk = function(expr) {
  */
 sre.System.prototype.move = function(direction) {
   return sre.ProcessorFactory.keypress('move', direction);
+};
+
+
+/**
+ * A clean exit method, that ensures all file processes are completed.
+ * @param {number=} opt_value The exit value. Defaults to 0.
+ */
+sre.System.prototype.exit = function(opt_value) {
+  var value = opt_value || 0;
+  if (!value && !sre.Engine.isReady()) {
+    setTimeout(goog.bind(function() {
+      this.exit(value);
+    }, this), 100);
+    return;
+  }
+  sre.SystemExternal.process.exit(value);
 };

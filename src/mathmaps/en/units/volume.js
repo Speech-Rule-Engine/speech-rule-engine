@@ -12,7 +12,8 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "cubic inch"
+       "default": "cubic inch",
+       "plural": "cubic inches"
      }
    },
    "key": "cu inch",
@@ -37,7 +38,6 @@
    "key": "cu yd",
    "names": ["cu yd", "cu. yd."]
   },
-
   {"category": "volume",
    "mappings": {
      "default": {
@@ -131,15 +131,7 @@
    "names": ["cc", "ccm"]
   },
   {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "kiloliter"
-     }
-   },
-   "key": "kl",
-   "names": ["kl"]
-  },
-  {"category": "volume",
+   "si": true,
    "mappings": {
      "default": {
        "default": "liter"
@@ -147,14 +139,5 @@
    },
    "key": "l",
    "names": ["l"]
-  },
-  {"category": "volume",
-   "mappings": {
-     "default": {
-       "default": "milliliter"
-     }
-   },
-   "key": "ml",
-   "names": ["ml"]
   }
 ]

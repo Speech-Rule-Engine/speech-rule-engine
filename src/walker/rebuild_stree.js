@@ -88,6 +88,22 @@ sre.RebuildStree.prototype.getTree = function() {
 
 
 /**
+ * Adds external attributes if they exists. Recurses one level if we have a leaf
+ * element with a none-text child.
+ * @param {sre.SemanticNode} snode The semantic node.
+ * @param {Node} node The mml node.
+ * @param {boolean} leaf True if it is a leaf node.
+ */
+sre.RebuildStree.addAttributes = function(snode, node, leaf) {
+  if (leaf && node.childNodes.length === 1 &&
+      node.childNodes[0].nodeType !== sre.DomUtil.NodeType.TEXT_NODE) {
+    sre.SemanticUtil.addAttributes(snode, node.childNodes[0]);
+  }
+  sre.SemanticUtil.addAttributes(snode, node);
+};
+
+
+/**
  * Assembles the semantic tree from the data attributes of the MathML node.
  * @param {!Node} node The MathML node.
  * @return {!sre.SemanticNode} The corresponding semantic tree node.
@@ -98,23 +114,20 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
       sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CHILDREN));
   var content = sre.WalkerUtil.splitAttribute(
       sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.CONTENT));
+  sre.RebuildStree.addAttributes(
+      snode, node, !(children.length || content.length));
   if (content.length === 0 && children.length === 0) {
-    snode.textContent = node.textContent;
+    sre.RebuildStree.textContent(snode, node);
     return snode;
   }
   if (content.length > 0) {
-    var fcontent = sre.WalkerUtil.getBySemanticId(node, content[0]);
+    var fcontent = sre.WalkerUtil.getBySemanticId(this.mathml, content[0]);
     if (fcontent) {
-      var operator = sre.WalkerUtil.splitAttribute(
-          sre.WalkerUtil.getAttribute(
-              fcontent, sre.EnrichMathml.Attribute.OPERATOR));
-      if (operator.length > 1) {
-        snode.textContent = operator[1];
-      }
+      sre.RebuildStree.textContent(snode, fcontent, true);
     }
   }
   var setParent = function(n) {
-    var mml = sre.WalkerUtil.getBySemanticId(node, n);
+    var mml = sre.WalkerUtil.getBySemanticId(this.mathml, n);
     var sn = this.assembleTree(mml);
     sn.parent = snode;
     return sn;
@@ -124,6 +137,26 @@ sre.RebuildStree.prototype.assembleTree = function(node) {
   var collapsed = sre.WalkerUtil.getAttribute(
       node, sre.EnrichMathml.Attribute.COLLAPSED);
   return collapsed ? this.postProcess(snode, collapsed) : snode;
+};
+
+
+/**
+ * Sets the text content of the semantic node. If no text content is available
+ * or it is ignored, but an operator is given, it uses that.
+ * @param {!sre.SemanticNode} snode The semantic node.
+ * @param {!Node} node The mml node.
+ * @param {boolean=} opt_ignore Ignores using text content.
+ */
+sre.RebuildStree.textContent = function(snode, node, opt_ignore) {
+  if (!opt_ignore && node.textContent) {
+    snode.textContent = node.textContent;
+    return;
+  }
+  var operator = sre.WalkerUtil.splitAttribute(
+    sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.OPERATOR));
+  if (operator.length > 1) {
+    snode.textContent = operator[1];
+  }
 };
 
 

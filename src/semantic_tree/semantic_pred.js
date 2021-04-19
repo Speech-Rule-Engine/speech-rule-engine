@@ -54,14 +54,15 @@ sre.SemanticPred.isAttribute = function(prop, attr) {
 sre.SemanticPred.isAccent = function(node) {
   return sre.SemanticPred.isAttribute('type', 'FENCE')(node) ||
       sre.SemanticPred.isAttribute('type', 'PUNCTUATION')(node) ||
-      sre.SemanticPred.isAttribute('type', 'OPERATOR')(node) ||
-      sre.SemanticPred.isAttribute('type', 'RELATION')(node) ||
       // TODO (sorge) Simplify this once meaning of all characters is fully
-      // defined.
+      // defined. Improve dealing with Infinity.
+      (sre.SemanticPred.isAttribute('type', 'OPERATOR')(node) &&
+       !node.textContent.match(new RegExp('∞|᪲'))) ||
+      sre.SemanticPred.isAttribute('type', 'RELATION')(node) ||
       (sre.SemanticPred.isAttribute('type', 'IDENTIFIER')(node) &&
       sre.SemanticPred.isAttribute('role', 'UNKNOWN')(node) &&
-      !node.textContent.match(new RegExp(
-         (sre.SemanticAttr.getInstance()).allLetters.join('|'))));
+       !node.textContent.match(new RegExp(
+         (sre.SemanticAttr.getInstance()).allLetters.join('|') + '|∞|᪲')));
 };
 
 
@@ -362,7 +363,11 @@ sre.SemanticPred.isLimitBase = function(node) {
       sre.SemanticPred.isAttribute('type', 'LIMLOWER')(node) ||
       sre.SemanticPred.isAttribute('type', 'LIMUPPER')(node) ||
       (sre.SemanticPred.isAttribute('type', 'FUNCTION')(node) &&
-      sre.SemanticPred.isAttribute('role', 'LIMFUNC')(node));
+       sre.SemanticPred.isAttribute('role', 'LIMFUNC')(node)) ||
+      ((sre.SemanticPred.isAttribute('type', 'OVERSCORE')(node) ||
+        sre.SemanticPred.isAttribute('type', 'UNDERSCORE')(node)) &&
+       sre.SemanticPred.isLimitBase(
+         /** @type {!sre.SemanticNode} */(node.childNodes[0])));
 };
 
 
@@ -488,8 +493,8 @@ sre.SemanticPred.isSingletonSetContent = function(node) {
   }
   if (type === sre.SemanticAttr.Type.FENCED) {
     return node.role === sre.SemanticAttr.Role.LEFTRIGHT ?
-      sre.SemanticPred.isSingletonSetContent(node.childNodes[0]) :
-      true;
+        sre.SemanticPred.isSingletonSetContent(node.childNodes[0]) :
+        true;
   }
   if (sre.SemanticPred.scriptedElement_.indexOf(type) !== -1) {
     return sre.SemanticPred.isSingletonSetContent(node.childNodes[0]);
@@ -551,4 +556,65 @@ sre.SemanticPred.isImplicit = function(node) {
       !!node.contentNodes.length &&
       node.contentNodes[0].textContent === sre.SemanticAttr.invisibleTimes()
       );
+};
+
+
+/**
+ * Tests if a node is an implicit operator node only.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @return {boolean} True if the node is a true implicit operator node.
+ */
+sre.SemanticPred.isImplicitOp = function(node) {
+  return node.type === sre.SemanticAttr.Type.INFIXOP &&
+    node.role === sre.SemanticAttr.Role.IMPLICIT;
+};
+
+
+/**
+ * Comparison operation for neutral fences depending on textual equality of the
+ * (innermost for embellished) fences.
+ * @param {sre.SemanticNode} fence1 First fence to compare.
+ * @param {sre.SemanticNode} fence2 Second fence to compare.
+ * @return {boolean} True if both fences are neutral and have same textual content.
+ */
+sre.SemanticPred.compareNeutralFences = function(fence1, fence2) {
+  return fence1.role === sre.SemanticAttr.Role.NEUTRAL &&
+    fence2.role === sre.SemanticAttr.Role.NEUTRAL &&
+    sre.SemanticUtil.getEmbellishedInner(fence1).textContent ==
+    sre.SemanticUtil.getEmbellishedInner(fence2).textContent;
+};
+
+
+
+/**
+ * Fence is ellibigle as a left neutral fence, if it is either not embellished
+ * or all its embellishments are to the left.
+ * @param {sre.SemanticNode} fence The neutral fence to check.
+ * @return {boolean} True if fence is elligible.
+ */
+sre.SemanticPred.elligibleLeftNeutral = function(fence) {
+  if (fence.role !== sre.SemanticAttr.Role.NEUTRAL) return false;
+  if (!fence.embellished) return true;
+  if (fence.type === sre.SemanticAttr.Type.SUPERSCRIPT ||
+      fence.type === sre.SemanticAttr.Type.SUBSCRIPT) return false;
+  if (fence.type === sre.SemanticAttr.Type.TENSOR &&
+      (fence.childNodes[3].type !== sre.SemanticAttr.Type.EMPTY ||
+       fence.childNodes[4].type !== sre.SemanticAttr.Type.EMPTY)) return false;
+  return true;
+};
+
+
+/**
+ * Fence is ellibigle as a right neutral fence, if it is either not embellished
+ * or all its embellishments are to the right.
+ * @param {sre.SemanticNode} fence The neutral fence to check.
+ * @return {boolean} True if fence is elligible.
+ */
+sre.SemanticPred.elligibleRightNeutral = function(fence) {
+  if (fence.role !== sre.SemanticAttr.Role.NEUTRAL) return false;
+  if (!fence.embellished) return true;
+  if (fence.type === sre.SemanticAttr.Type.TENSOR &&
+      (fence.childNodes[1].type !== sre.SemanticAttr.Type.EMPTY ||
+       fence.childNodes[2].type !== sre.SemanticAttr.Type.EMPTY)) return false;
+  return true;
 };

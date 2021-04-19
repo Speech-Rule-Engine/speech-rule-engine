@@ -478,6 +478,24 @@
     "category": "Sm"
   },
   {
+    "key": "02B9",
+    "mappings": {
+      "default": {
+        "default": "prima"
+      }
+    },
+    "category": "Lm"
+  },
+  {
+    "key": "02BA",
+    "mappings": {
+      "default": {
+        "default": "dos prima"
+      }
+    },
+    "category": "Lm"
+  },
+  {
     "key": "02D8",
     "mappings": {
       "default": {
@@ -778,7 +796,7 @@
     "key": "2033",
     "mappings": {
       "default": {
-        "default": "segunda"
+        "default": "dos prima"
       }
     },
     "category": "Po"
@@ -787,7 +805,7 @@
     "key": "2034",
     "mappings": {
       "default": {
-        "default": "tercera"
+        "default": "tres prima"
       }
     },
     "category": "Po"
@@ -815,7 +833,7 @@
     "key": "2037",
     "mappings": {
       "default": {
-        "default": "prime Prime invertido"
+        "default": "prima invertido"
       }
     }
   },
@@ -1077,7 +1095,7 @@
     "key": "2057",
     "mappings": {
       "default": {
-        "default": "cuarta"
+        "default": "cuatro prima"
       }
     },
     "category": "Po"

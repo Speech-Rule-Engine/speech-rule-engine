@@ -190,10 +190,12 @@ sre.Locale.fr = {
     JOINER_FRAC: ' '
   },
 
-  // TODO: These!
-  PLURAL_UNIT: {
-    'foot': 'feet',
-    'inch': 'inches'
+  SI: function(prefix, unit) {
+    return prefix + unit;
+  },
+
+  PLURAL: function(unit) {
+    return (/.*s$/.test(unit)) ? unit : unit + 's';
   },
 
   NUMBERS: sre.Numbers.fr.NUMBERS,

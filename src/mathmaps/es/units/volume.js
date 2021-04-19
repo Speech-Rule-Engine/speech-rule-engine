@@ -31,11 +31,13 @@
   {
     "key": "fl. oz.",
     "names": [
-      "fl. oz."
+      "fl. oz.",
+      "fl oz"
     ],
     "mappings": {
       "default": {
-        "default": "onzas líquidas"
+        "default": "onza líquida",
+        "plural": "onzas líquidas"
       }
     },
     "category": "volume"
@@ -83,7 +85,9 @@
     "key": "tbsp",
     "names": [
       "tbsp",
-      "tbsp."
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
     ],
     "mappings": {
       "default": {
@@ -108,29 +112,20 @@
   {
     "key": "cc",
     "names": [
-      "cc"
+      "cc",
+      "ccm"
     ],
     "mappings": {
       "default": {
-        "default": "centímetros cúbicos"
-      }
-    },
-    "category": "volume"
-  },
-  {
-    "key": "kl",
-    "names": [
-      "kl"
-    ],
-    "mappings": {
-      "default": {
-        "default": "kilolitro"
+        "default": "centímetro cúbico",
+        "plural": "centímetros cúbicos"
       }
     },
     "category": "volume"
   },
   {
     "key": "l",
+   "si": true,
     "names": [
       "l"
     ],
@@ -141,16 +136,65 @@
     },
     "category": "volume"
   },
-  {
-    "key": "ml",
-    "names": [
-      "ml"
-    ],
+    {
+    "category": "volume",
     "mappings": {
       "default": {
-        "default": "mililitro"
+        "default": "pulgada cúbica",
+        "plural": "pulgadas cúbicas"
       }
     },
-    "category": "volume"
+    "key": "cu inch",
+    "names": [
+      "cu in",
+      "cu. in."
+    ]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "pie cúbico",
+       "plural": "pies cúbicos"
+     }
+   },
+   "key": "cu ft",
+   "names": ["cu ft", "cu. ft."]
+  },
+  {"category": "volume",
+   "mappings": {
+     "default": {
+       "default": "yarda cúbica",
+       "plural": "yardas cúbicas"
+     }
+   },
+   "key": "cu yd",
+   "names": ["cu yd", "cu. yd."]
+  },
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "dracma líquida",
+        "plural": "dracma líquidas"
+      }
+    },
+    "key": "fluid dram",
+    "names": [
+      "fl dr",
+      "fl. dr."
+    ]
+  },
+  {
+    "category": "volume",
+    "mappings": {
+      "default": {
+        "default": "taza"
+      }
+    },
+    "key": "cup",
+    "names": [
+      "cp",
+      "cp."
+    ]
   }
 ]
