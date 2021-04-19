@@ -385,7 +385,7 @@
       "[t] \"StartAbsoluteValue\"; [n] children/*[1]; [t] \"EndAbsoluteValue\"",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "SpecializedRule",

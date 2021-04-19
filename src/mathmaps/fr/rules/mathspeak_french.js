@@ -342,7 +342,7 @@
       "[t] \"début valeur absolue\"; [n] children/*[1]; [t] \"fin valeur absolue\"",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "SpecializedRule",

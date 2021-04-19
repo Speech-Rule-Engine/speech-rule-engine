@@ -2124,7 +2124,7 @@
       "[p] (pause:short); [t] \"the absolute value of\"; [n] children/*[1] (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2133,7 +2133,7 @@
       "[p] (pause:short); [t] \"the absolute value of\"; [n] children/*[1] (pause: short); [t] \"end absolute value\" (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2142,7 +2142,7 @@
       "[p] (pause:short); [t] \"the cardinality of\"; [n] children/*[1] (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2151,7 +2151,7 @@
       "[p] (pause:short); [t] \"the determinant of\"; [n] children/*[1] (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
