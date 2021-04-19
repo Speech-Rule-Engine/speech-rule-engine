@@ -779,9 +779,6 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
     mml.setAttribute(sre.EnrichMathml.Attribute[attr[0].toUpperCase()],
                      attr[1]);
   }
-  if (semantic.attributes['href']) {
-    mml.setAttribute(sre.EnrichMathml.Attribute.POSTFIX, 'link');
-  }
   if (semantic.childNodes.length) {
     mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
                      sre.EnrichMathml.makeIdList(semantic.childNodes));
@@ -792,6 +789,27 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   }
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
+  }
+  sre.EnrichMathml.setPostfix(mml, semantic);
+};
+
+
+/**
+ * Sets postfix attributes to surface properties via suffixes. Examples: link,
+ * image, etc.
+ * @param {!Element} mml The MathML node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ */
+sre.EnrichMathml.setPostfix = function(mml, semantic) {
+  var postfix = [];
+  if (semantic.role === 'mglyph') {
+    postfix.push('image');
+  }
+  if (semantic.attributes['href']) {
+    postfix.push('link');
+  }
+  if (postfix.length) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.POSTFIX, postfix.join(' '));
   }
 };
 
