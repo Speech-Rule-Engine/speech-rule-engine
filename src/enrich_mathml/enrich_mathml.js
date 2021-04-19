@@ -88,6 +88,7 @@ sre.EnrichMathml.Attribute = {
   OPERATOR: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'operator',
   OWNS: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'owns',
   PARENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'parent',
+  POSTFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'postfix',
   PREFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'prefix',
   ROLE: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'role',
   SPEECH: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'speech',
@@ -777,6 +778,9 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   for (var i = 0, attr; attr = attributes[i]; i++) {
     mml.setAttribute(sre.EnrichMathml.Attribute[attr[0].toUpperCase()],
                      attr[1]);
+  }
+  if (semantic.attributes['href']) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.POSTFIX, 'link');
   }
   if (semantic.childNodes.length) {
     mml.setAttribute(sre.EnrichMathml.Attribute.CHILDREN,
