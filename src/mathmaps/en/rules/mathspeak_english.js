@@ -164,8 +164,7 @@
       "number-with-chars",
       "default",
       "[t] \"Number\"; [m] CQFspaceoutNumber (grammar:protected)",
-      "self::number",
-      "@role=\"othernumber\"",
+      "self::number[@role=\"othernumber\"]",
       "\"\" != translate(text(), \"0123456789.,\", \"\")",
       "not(contains(@grammar, \"protected\"))"
     ],
@@ -187,7 +186,7 @@
       "number-as-upper-word",
       "default",
       "[t] \"UpperWord\"; [t] CSFspaceoutText",
-      "self::number",
+      "self::number[@role=\"othernumber\"]",
       "string-length(text())>1",
       "text()=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψω\", \"ABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\")",
       "\"\"=translate(text(), \"ABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\",\"\")"
