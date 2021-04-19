@@ -2149,7 +2149,7 @@
       "[p] (pause:short); [t] \"valore assoluto di\"; [n] children/*[1] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2158,7 +2158,7 @@
       "[p] (pause:short); [t] \"valore assoluto di\"; [n] children/*[1] (pause:short); [t] \"fine valore assoluto\" (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2167,7 +2167,7 @@
       "[p] (pause:short); [t] \"cardinalità di\"; [n] children/*[1] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2176,7 +2176,7 @@
       "[p] (pause:short); [t] \"determinante della\"; [n] children/*[1] (pause:short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",

@@ -366,7 +366,7 @@
       "[t] \"empezar valor absoluto\"; [n] children/*[1]; [t] \"finalizar valor absoluto\"",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "SpecializedRule",
