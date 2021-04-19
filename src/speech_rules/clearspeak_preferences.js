@@ -80,6 +80,7 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   CombinationPermutation: ['Auto', 'ChoosePermute'],
   Currency: ['Auto', 'Position', 'Prefix'],
   Ellipses: ['Auto', 'AndSoOn'],
+  Enclosed: ['Auto', 'EndEnclose'],
   Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower',
              // The following are German
              'Exponent'
