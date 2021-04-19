@@ -68,6 +68,8 @@ sre.SpeechRuleEngine = function() {
    */
   this.evaluators_ = {};
 
+  this.prune = true;
+
   sre.Engine.registerTest(
       goog.bind(function(x) {return this.ready_;}, this));
 
@@ -483,8 +485,36 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
     setTimeout(goog.bind(this.updateEngine, this), 250);
     return;
   }
+  if (this.prune) {
+    this.prune = false;
+    this.adjustEngine();
+  }
   sre.Engine.getInstance().evaluator =
       goog.bind(maps.store.lookupString, maps.store);
+};
+
+
+/**
+ * Adjust Engine with local rule files.
+ */
+sre.SpeechRuleEngine.prototype.adjustEngine = function() {
+  var engine = sre.Engine.getInstance();
+  if (engine.prune) {
+    var cstr = engine.prune.split('.');
+    this.activeStore_.prune(cstr);
+  }
+  if (engine.rules) {
+    // TODO: This needs to be made more robust.
+    var path = sre.SystemExternal.jsonPath.replace(
+      '/lib/mathmaps', '/src/mathmaps');
+    var parse = function(json) {
+      return sre.MathMap.getInstance().parseMaps(
+        '{"' + engine.rules + '":' + json + '}'
+      );
+    };
+    sre.MathMap.getInstance().retrieveFiles(path + engine.rules, parse);
+  }
+  setTimeout(goog.bind(this.updateEngine, this), 100);
 };
 
 
