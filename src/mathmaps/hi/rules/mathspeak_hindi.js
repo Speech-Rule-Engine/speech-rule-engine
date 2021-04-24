@@ -1358,14 +1358,14 @@
       "Rule",
       "matrix",
       "default",
-      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:female, context:\"पंक्ति \"); [t] \"आव्यूह समाप्त\"",
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"आव्यूह समाप्त\"",
       "self::matrix"
     ],
     [
       "Rule",
       "matrix",
       "sbrief",
-      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:female, context:\"पंक्ति \"); [t] \"आव्यूह समाप्त\"",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"आव्यूह समाप्त\"",
       "self::matrix"
     ],
     [
@@ -1438,7 +1438,7 @@
       "Rule",
       "determinant",
       "default",
-      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:female, context:\"पंक्ति \"); [t] \"सारणिक समाप्त\"",
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"सारणिक समाप्त\"",
       "self::matrix",
       "@role=\"determinant\""
     ],
@@ -1447,13 +1447,13 @@
       "determinant",
       "default",
       "sbrief",
-      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:female, context:\"पंक्ति \"); [t] \"सारणिक समाप्त\""
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"सारणिक समाप्त\""
     ],
     [
       "Rule",
       "determinant-simple",
       "default",
-      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:female, context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\"",
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\"",
       "self::matrix",
       "@role=\"determinant\"",
       "CQFdetIsSimple"
@@ -1463,7 +1463,7 @@
       "determinant-simple",
       "default",
       "sbrief",
-      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:female, context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
     ],
     [
       "Rule",
@@ -1478,14 +1478,14 @@
       "Rule",
       "layout",
       "default",
-      "[t] \"खाका आरंभ\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:female, context:\"पंक्ति \"); [t] \"खाका समाप्त\"",
+      "[t] \"खाका आरंभ\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"खाका समाप्त\"",
       "self::table"
     ],
     [
       "Rule",
       "layout",
       "sbrief",
-      "[t] \"खाका\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:female, context:\"पंक्ति \"); [t] \"खाका समाप्त\"",
+      "[t] \"खाका\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"खाका समाप्त\"",
       "self::table"
     ],
     [
@@ -1508,14 +1508,14 @@
       "Rule",
       "cases",
       "default",
-      "[t] \"खाका आरंभ\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:female, context:\"पंक्ति \"); [t] \"खाका समाप्त\"",
+      "[t] \"खाका आरंभ\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"खाका समाप्त\"",
       "self::cases"
     ],
     [
       "Rule",
       "cases",
       "sbrief",
-      "[t] \"खाका\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:female, context:\"पंक्ति \"); [t] \"खाका समाप्त\"",
+      "[t] \"खाका\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"खाका समाप्त\"",
       "self::cases"
     ],
     [
