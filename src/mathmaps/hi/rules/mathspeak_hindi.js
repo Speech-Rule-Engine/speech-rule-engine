@@ -213,7 +213,7 @@
       "Rule",
       "number-baseline-font",
       "default",
-      "[t] \"आधार रेखा\"; [t] @font; [n] . (grammar:ignoreFont=@font)",
+      "[t] \"आधार रेखा\"; [t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)",
       "self::number",
       "@font",
       "not(contains(@grammar, \"ignoreFont\"))",
@@ -227,7 +227,7 @@
       "number-baseline-font",
       "default",
       "brief",
-      "[t] \"आधार\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
+      "[t] \"आधार\"; [t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
     ],
     [
       "SpecializedRule",
