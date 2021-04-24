@@ -49,7 +49,7 @@
       "Rule",
       "protected",
       "default",
-      "[t] text()",
+      "[n] text() (grammar:ignoreCaps=\"großes\")",
       "self::number",
       "contains(@grammar, \"protected\")"
     ],
@@ -388,7 +388,7 @@
       "[t] \"Anfang Betrag\"; [n] children/*[1]; [t] \"Ende Betrag\"",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "SpecializedRule",

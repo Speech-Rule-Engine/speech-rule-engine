@@ -85,6 +85,13 @@ sre.SemanticNode = function(id) {
    */
   this.attributes = {};
 
+  /**
+   * Is the node non-breaking, i.e., external attributes are so important that
+   * no heuristic should ignore them.
+   * @type {boolean}
+   */
+  this.nobreaking = false;
+
 };
 
 

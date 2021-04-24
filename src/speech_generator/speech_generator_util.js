@@ -80,11 +80,29 @@ sre.SpeechGeneratorUtil.recomputeMarkup = function(semantic) {
  * Add speech as a semantic attributes in a MathML node.
  * @param {!Element} mml The MathML node.
  * @param {!sre.SemanticNode} semantic The semantic tree node.
- * @param {string=} opt_modality The speech modality.
+ * @param {!Node} snode The XML node representing the semantic tree.
  */
-sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic, opt_modality) {
-  var speech = sre.SpeechGeneratorUtil.recomputeMarkup(semantic);
-  mml.setAttribute(opt_modality || sre.EnrichMathml.Attribute.SPEECH, speech);
+sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic, snode) {
+  let sxml = sre.DomUtil.querySelectorAllByAttrValue(
+      snode, 'id', semantic.id.toString())[0];
+  var speech = sxml ?
+      sre.AuralRendering.getInstance().markup(
+        sre.SpeechGeneratorUtil.computeSpeech(sxml)) :
+      sre.SpeechGeneratorUtil.recomputeMarkup(semantic);
+  mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
+};
+
+
+/**
+ * Add markup for the given modality (generally other than speech) in a MathML
+ * node.
+ * @param {!Element} mml The MathML node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ * @param {string} modality The speech modality.
+ */
+sre.SpeechGeneratorUtil.addModality = function(mml, semantic, modality) {
+  var markup = sre.SpeechGeneratorUtil.recomputeMarkup(semantic);
+  mml.setAttribute(modality, markup);
 };
 
 
