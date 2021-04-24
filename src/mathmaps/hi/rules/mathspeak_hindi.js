@@ -166,7 +166,7 @@
       "Rule",
       "number-as-upper-word",
       "default",
-      "[t] \"ऊपर का शब्द\"; [t] CSFspaceoutText (grammar:translate)",
+      "[t] \"ऊपर का शब्द\"; [m] CQFspaceoutNumber",
       "self::number",
       "string-length(text())>1",
       "text()=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψω\", \"ABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\")",
