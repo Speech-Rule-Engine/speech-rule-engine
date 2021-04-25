@@ -268,7 +268,7 @@
     "key": "2061",
     "mappings": {
       "default": {
-        "default": "समारोह आवेदन"
+        "default": "का फलन"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "2062",
     "mappings": {
       "default": {
-        "default": "अदृश्य समय"
+        "default": "के गुणन में"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "2063",
     "mappings": {
       "default": {
-        "default": "अदृश्य विभाजक"
+        "default": "अल्पविराम"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "2064",
     "mappings": {
       "default": {
-        "default": "अदृश्य प्लस"
+        "default": "पूर्णांक"
       }
     }
   },

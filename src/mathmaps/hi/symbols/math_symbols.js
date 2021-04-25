@@ -748,7 +748,7 @@
     "key": "2026",
     "mappings": {
       "default": {
-        "default": "तीन बिंदु"
+        "default": "आदि आदि आदि"
       }
     }
   },
@@ -3421,7 +3421,7 @@
     "key": "22EF",
     "mappings": {
       "default": {
-        "default": "मिडलाइन हॉरिजॉन्टल एलिप्सिस"
+        "default": "आदि आदि आदि"
       }
     }
   },
