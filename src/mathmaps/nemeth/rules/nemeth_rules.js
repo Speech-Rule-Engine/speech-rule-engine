@@ -364,6 +364,14 @@
     ],
     [
       "Rule",
+      "bevelled-division",
+      "default",
+      "[t] CSFopenFraction; [n] children/*[1]; [t] CSFoverBevFraction; [n] children/*[2]; [t] CSFcloseFraction",
+      "self::infixop[@role=\"division\"]",
+      "text()=\"/\" or text()=\"⁄\" or text()=\"∕\""
+    ],
+    [
+      "Rule",
       "sqrt",
       "default",
       "[t] CSFopenRadicalVerbose; [n] children/*[1]; [t] CSFcloseRadicalVerbose",
