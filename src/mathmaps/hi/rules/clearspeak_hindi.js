@@ -190,7 +190,7 @@
       "Rule",
       "ellipsis",
       "Ellipses_AndSoOn",
-      "[t] \"and so on up to\"",
+      "[t] \"आदि आदि आदि\"",
       "self::punctuation",
       "@role=\"ellipsis\"",
       "preceding-sibling::*[1]",
@@ -540,15 +540,6 @@
       "default",
       "[n] text()",
       "self::function"
-    ],
-    [
-      "Rule",
-      "function-article",
-      "default",
-      "[t] \"the\"; [n] text()",
-      "self::function",
-      "@role=\"prefix function\"",
-      "contains(@grammar, \"addArticle\")"
     ],
     [
       "Rule",
@@ -1591,14 +1582,14 @@
       "Rule",
       "sqrt",
       "default",
-      "[t] \"का वर्गमूल\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)",
+      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का वर्गमूल\" (pause:\"short\")",
       "self::sqrt"
     ],
     [
       "Rule",
       "sqrt-nested",
       "default",
-      "[p] (pause:\"short\"); [t] \"का वर्गमूल\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)",
+      "[p] (pause: \"short\"); [n] children/*[1] (grammar:EndRoot=false); [t] \"का वर्गमूल\" (pause:\"short\")",
       "self::sqrt",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root"
@@ -1607,7 +1598,7 @@
       "Rule",
       "negative-sqrt",
       "default",
-      "[t] \"का ऋणात्मक वर्गमूल\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)",
+      "[n] children/*[1]/children/*[1] (grammar:EndRoot=false); [t] \"का ऋणात्मक वर्गमूल\" (pause:\"short\")",
       "self::prefixop",
       "@role=\"negative\"",
       "name(children/*[1])=\"sqrt\""
@@ -1616,7 +1607,7 @@
       "Rule",
       "negative-sqrt",
       "default",
-      "[p] (pause:\"short\"); [t] \"का ऋणात्मक वर्गमूल\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)",
+      "[p] (pause: \"short\"); [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [t] \"का ऋणात्मक वर्गमूल\" (pause:\"short\")",
       "self::prefixop",
       "@role=\"negative\"",
       "name(children/*[1])=\"sqrt\"",
@@ -1627,7 +1618,7 @@
       "Rule",
       "sqrt-plus-minus",
       "Roots_PosNegSqRoot",
-      "[t] \"का धनात्मक वर्गमूल\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)",
+      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:\"short\")",
       "self::sqrt",
       "parent::stree or not(parent::*/parent::infixop[@role=\"addition\"]) or (parent::*/parent::*[1]/text()!=\"±\" and parent::*/parent::*/text()!=\"∓\")"
     ],
@@ -1635,7 +1626,7 @@
       "Rule",
       "sqrt-nested-plus-minus",
       "Roots_PosNegSqRoot",
-      "[p] (pause:\"short\"); [t] \"का धनात्मक वर्गमूल\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)",
+      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:\"short\")",
       "self::sqrt",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root",
@@ -1645,7 +1636,7 @@
       "Rule",
       "sqrt-plus-minus",
       "Roots_PosNegSqRootEnd",
-      "[t] \"का धनात्मक वर्गमूल\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)",
+      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:\"short\")",
       "self::sqrt",
       "parent::stree or not(parent::*/parent::infixop[@role=\"addition\"]) or (parent::*/parent::*[1]/text()!=\"±\" and parent::*/parent::*/text()!=\"∓\")"
     ],
@@ -1653,7 +1644,7 @@
       "Rule",
       "sqrt-nested-plus-minus",
       "Roots_PosNegSqRootEnd",
-      "[p] (pause:\"short\"); [t] \"का धनात्मक वर्गमूल\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)",
+      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:\"short\")",
       "self::sqrt",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root",
@@ -1699,7 +1690,7 @@
       "Rule",
       "cube",
       "default",
-      "[t] \"का घनमूल\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)",
+      "[n] children/*[2] (grammar:EndRoot=false); [t] \"का घनमूल\" (pause:short)",
       "self::root",
       "children/*[1][text()=\"3\"]"
     ],
@@ -1707,7 +1698,7 @@
       "Rule",
       "cube-nested",
       "default",
-      "[p] (pause:short); [t] \"का घनमूल\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)",
+      "[n] children/*[2] (grammar:EndRoot=false); [t] \"का घनमूल\" (pause:short)",
       "self::root",
       "children/*[1][text()=\"3\"]",
       "not(preceding-sibling::*)",
@@ -1717,14 +1708,14 @@
       "Rule",
       "root",
       "default",
-      "[t] \"the\"; [n] children/*[1] (grammar:ordinal); [t] \"का मूल\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)",
+      "[n] children/*[2] (grammar:EndRoot=false); [n] children/*[1] (grammar:ordinal); [t] \"का मूल\" (pause:short)",
       "self::root"
     ],
     [
       "Rule",
       "root-nested",
       "default",
-      "[p] (pause:short); [t] \"the\"; [n] children/*[1] (grammar:ordinal); [t] \"का मूल\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)",
+      "[n] children/*[2] (grammar:EndRoot=false); [n] children/*[1] (grammar:ordinal); [t] \"का मूल\" (pause:short)",
       "self::root",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root"
@@ -2149,14 +2140,14 @@
       "Rule",
       "matrix",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long)",
       "self::matrix"
     ],
     [
       "Rule",
       "matrix-simple",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "count(children/*)<4",
       "count(children/*[1]/children/*)<4",
@@ -2192,7 +2183,7 @@
       "Rule",
       "matrix-vector",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
       "self::vector"
     ],
     [
@@ -2205,7 +2196,7 @@
       "Rule",
       "matrix-vector-simple",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::vector",
       "count(children/*)<4",
       "CQFcellsSimple",
@@ -2215,14 +2206,14 @@
       "Rule",
       "matrix-vector-simple",
       "Matrix_SilentColNum",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ आव्यूह\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::vector"
     ],
     [
       "Rule",
       "matrix-row-vector",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"स्तंभ-:\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"स्तंभ-:\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2236,7 +2227,7 @@
       "Rule",
       "matrix-row-vector-simple",
       "default",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"rowvector\"",
       "count(children/*[1]/children/*)<4",
@@ -2246,7 +2237,7 @@
       "Rule",
       "matrix-row-vector-simple",
       "Matrix_SilentColNum",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति आव्यूह\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2322,7 +2313,7 @@
       "Rule",
       "vector",
       "Matrix_Vector",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ सदिश\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ सदिश\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long, grammar:simpleDet)",
       "self::vector"
     ],
     [
@@ -2335,7 +2326,7 @@
       "Rule",
       "vector-simple",
       "Matrix_Vector",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ सदिश\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ सदिश\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::vector",
       "count(children/*)<4",
       "CQFcellsSimple"
@@ -2350,7 +2341,7 @@
       "Rule",
       "row-vector",
       "Matrix_Vector",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति सदिश\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"स्तंभ-:\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति सदिश\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"स्तंभ-:\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"rowvector\""
     ],
@@ -2364,7 +2355,7 @@
       "Rule",
       "row-vector-simple",
       "Matrix_Vector",
-      "[t] \"the\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति सदिश\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"पंक्ति सदिश\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)",
       "self::matrix",
       "@role=\"rowvector\"",
       "count(children/*[1]/children/*)<4",
