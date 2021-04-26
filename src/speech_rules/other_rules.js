@@ -68,10 +68,15 @@ sre.BrailleRules = function() {
       'CSFoverBevFraction': sre.NemethUtil.overBevelledFraction,
 
       // Radical function.
-      'CSFopenRadicalVerbose': sre.NemethUtil.openingRadical,
-      'CSFcloseRadicalVerbose': sre.NemethUtil.closingRadical,
-      'CSFindexRadicalVerbose': sre.NemethUtil.indexRadical,
+      'CSFopenRadical': sre.NemethUtil.openingRadical,
+      'CSFcloseRadical': sre.NemethUtil.closingRadical,
+      'CSFindexRadical': sre.NemethUtil.indexRadical,
 
+      //
+      'CSFsubscript': sre.MathspeakUtil.subscriptVerbose,
+      'CSFsuperscript': sre.MathspeakUtil.superscriptVerbose,
+      'CSFbaseline': sre.MathspeakUtil.baselineVerbose,
+      
       'CGFtensorRules': sre.NemethUtil.generateTensorRules,
 
       'CTFrelationIterator': sre.NemethUtil.relationIterator,
