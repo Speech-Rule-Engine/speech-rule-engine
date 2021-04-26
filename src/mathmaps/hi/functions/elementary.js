@@ -1,34 +1,34 @@
 [
   {
-    "locale": "it"
+    "locale": "hi"
   },
   {
     "key": "log",
-    "mappings": {
-      "default": {
-        "default": "logaritmo"
-      }
-    },
     "category": "Logarithm",
     "names": [
       "log"
-    ]
+    ],
+    "mappings": {
+      "default": {
+        "default": "लघुगणक"
+      }
+    }
   },
   {
     "key": "ln",
-    "mappings": {
-      "default": {
-        "default": "logaritmo naturale"
-      },
-     "clearspeak": {
-       "default": "l n",
-       "Log_LnAsNaturalLog": "logaritmo naturale"
-     }
-    },
     "category": "Logarithm",
     "names": [
       "ln"
-    ]
+    ],
+    "mappings": {
+      "default": {
+        "default": "प्राकृतिक लघुगणक"
+      },
+      "clearspeak": {
+        "default": "एल एन",
+        "Log_LnAsNaturalLog": "प्राकृतिक लघुगणक"
+      }
+    }
   },
   {
     "key": "lg",
@@ -38,7 +38,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "logaritmo in basi 10"
+        "default": "दस आधारित लघुगणक"
       }
     }
   },
@@ -51,7 +51,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "esponenziale"
+        "default": "चरघातांकी"
       }
     }
   },
@@ -59,13 +59,11 @@
     "key": "gcd",
     "category": "Elementary",
     "names": [
-      "gcd",
-      "mcd",
-      "MCD"
+      "gcd"
     ],
     "mappings": {
       "default": {
-        "default": "massimo comun divisore"
+        "default": "महत्तम समापवर्तक"
       }
     }
   },
@@ -73,13 +71,11 @@
     "key": "lcm",
     "category": "Elementary",
     "names": [
-      "lcm",
-      "mcm",
-      "MCM"
+      "lcm"
     ],
     "mappings": {
       "default": {
-        "default": "minimo comune multiplo"
+        "default": "लघुत्तम समापवर्त्य"
       }
     }
   },
@@ -91,33 +87,33 @@
     ],
     "mappings": {
       "default": {
-        "default": "argomento"
+        "default": "तर्क (Argument)"
       }
     }
   },
   {
     "key": "im",
-    "mappings": {
-      "default": {
-        "default": "la parte immaginaria del numero complesso"
-      }
-    },
     "category": "Complex",
     "names": [
       "im"
-    ]
+    ],
+    "mappings": {
+      "default": {
+        "default": "काल्पनिक (Imaginary)"
+      }
+    }
   },
   {
     "key": "re",
-    "mappings": {
-      "default": {
-        "default": "la parte reale del numero complesso"
-      }
-    },
     "category": "Complex",
     "names": [
       "re"
-    ]
+    ],
+    "mappings": {
+      "default": {
+        "default": "वास्तविक (Real)"
+      }
+    }
   },
   {
     "key": "inf",
@@ -127,21 +123,21 @@
     ],
     "mappings": {
       "default": {
-        "default": "estremo inferiore"
+        "default": "अधिकतम निम्न परिबद्ध"
       }
     }
   },
   {
     "key": "lim",
-    "mappings": {
-      "default": {
-        "default": "limite"
-      }
-    },
     "category": "Limits",
     "names": [
       "lim"
-    ]
+    ],
+    "mappings": {
+      "default": {
+        "default": "सीमा"
+      }
+    }
   },
   {
     "key": "liminf",
@@ -152,7 +148,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "limite inferiore"
+        "default": "निम्न सीमा"
       }
     }
   },
@@ -165,7 +161,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "limite superiore"
+        "default": "उच्च सीमा"
       }
     }
   },
@@ -177,7 +173,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "massimo"
+        "default": "महत्तम"
       }
     }
   },
@@ -189,7 +185,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "minimo"
+        "default": "न्यूनतम"
       }
     }
   },
@@ -201,7 +197,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "estremo superiore"
+        "default": "लघुत्तम उच्च परिबद्ध"
       }
     }
   },
@@ -214,7 +210,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "colimiti"
+        "default": "सह सीमा"
       }
     }
   },
@@ -227,21 +223,21 @@
     ],
     "mappings": {
       "default": {
-        "default": "limite proiettivo"
+        "default": "व्युत्क्रम सीमा"
       }
     }
   },
   {
     "key": "mod",
-    "mappings": {
-      "default": {
-        "default": "modulo"
-      }
-    },
     "category": "Elementary",
     "names": [
       "mod"
-    ]
+    ],
+    "mappings": {
+      "default": {
+        "default": "मापांक (modulus)"
+      }
+    }
   },
   {
     "key": "Pr",
@@ -251,7 +247,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "probabilità"
+        "default": "प्रायिकता"
       }
     }
   }
