@@ -383,10 +383,13 @@ sre.NemethUtil.relationIterator = function(nodes, context) {
     if (!content) {
       return contextDescr;
     }
+    var base = leftChild ?
+        sre.MathspeakUtil.nestedSubSuper(
+          leftChild, '', {sup: msg.MS.SUPER, sub: msg.MS.SUB}) : '';
     var left = (leftChild && sre.DomUtil.tagName(leftChild) !== 'EMPTY') ||
         (first && content.parentNode.parentNode &&
          content.parentNode.parentNode.previousSibling) ?
-        [sre.AuditoryDescription.create({text: '⠀'}, {})] : [];
+    [sre.AuditoryDescription.create({text: '⠀' + base}, {})] : [];
     var right = (rightChild && sre.DomUtil.tagName(rightChild) !== 'EMPTY') ||
         (!contentNodes.length && content.parentNode.parentNode &&
          content.parentNode.parentNode.nextSibling) ?
