@@ -107,9 +107,10 @@ sre.SemanticPred.isSimpleFunctionScope = function(node) {
  * @return {boolean} True if the node meets the boundary criteria.
  */
 sre.SemanticPred.isPrefixFunctionBoundary = function(node) {
-  return sre.SemanticPred.isOperator(node) ||
-      sre.SemanticPred.isAttribute('type', 'APPL')(node) ||
-      sre.SemanticPred.isGeneralFunctionBoundary(node);
+  return (sre.SemanticPred.isOperator(node) &&
+          !sre.SemanticPred.isAttribute('role', 'DIVISION')(node)) ||
+    sre.SemanticPred.isAttribute('type', 'APPL')(node) ||
+    sre.SemanticPred.isGeneralFunctionBoundary(node);
 };
 
 
