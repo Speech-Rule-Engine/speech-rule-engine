@@ -19,7 +19,11 @@
     "mappings": {
       "default": {
         "default": "logarithme népérien"
-      }
+      },
+     "clearspeak": {
+       "default": "l n",
+       "Log_LnAsNaturalLog": "logarithme népérien"
+     }
     },
     "category": "Logarithm",
     "names": [
