@@ -151,6 +151,25 @@ sre.TrieNodeFactory.constraintTest_ = function(constraint) {
       return !sre.Grammar.getInstance().getParameter(value);
     };
   }
+  // name(../..)="something"
+  if (constraint.match(/^name\(\.\.\/\.\.\)="\w+"$/)) {
+    split = constraint.split('"');
+    tag = split[1].toUpperCase();
+    return function(node) {
+      return node.parentNode && node.parentNode.parentNode &&
+          node.parentNode.parentNode.tagName &&
+          sre.DomUtil.tagName(node.parentNode.parentNode) === tag;
+    };
+  }
+  // count(preceding-sibling::*)=n
+  if (constraint.match(/^count\(preceding-sibling::\*\)=\d+$/)) {
+    split = constraint.split('=');
+    var num = parseInt(split[1], 10);
+    return function(node) {
+      return node.parentNode &&
+          node.parentNode.childNodes[num] === node;
+    };
+  }
   return null;
 };
 

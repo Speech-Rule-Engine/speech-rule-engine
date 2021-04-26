@@ -22,6 +22,7 @@ goog.provide('sre.EnrichCases');
 goog.require('sre.CaseBinomial');
 goog.require('sre.CaseDoubleScript');
 goog.require('sre.CaseEmbellished');
+goog.require('sre.CaseLimit');
 goog.require('sre.CaseLine');
 goog.require('sre.CaseMultiscripts');
 goog.require('sre.CaseProof');
@@ -39,6 +40,8 @@ sre.EnrichCases = function() { };
 
 
 sre.EnrichCaseFactory.cases.push(
+    {test: sre.CaseLimit.test,
+      constr: sre.CaseLimit},
     {test: sre.CaseEmbellished.test,
       constr: sre.CaseEmbellished},
     {test: sre.CaseDoubleScript.test,

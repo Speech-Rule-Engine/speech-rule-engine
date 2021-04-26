@@ -90,12 +90,15 @@ goog.inherits(sre.CaseEmbellished, sre.AbstractEnrichCase);
 
 
 /**
- * Applicability test of the case.
+ * Applicability test of the case. This method also prevents walking embellished
+ * punctuations twice as they might have already been walked as content nodes.
  * @param {!sre.SemanticNode} semantic The semantic node.
  * @return {boolean} True if case is applicable.
  */
 sre.CaseEmbellished.test = function(semantic) {
-  return !!(semantic.mathmlTree && semantic.fencePointer);
+  return !!(semantic.mathmlTree && semantic.fencePointer &&
+            // TODO: This needs a cleaner solution at some point.
+            !semantic.mathmlTree.getAttribute('data-semantic-type'));
 };
 
 
@@ -107,6 +110,13 @@ sre.CaseEmbellished.prototype.getMathml = function() {
   this.fencedMml = sre.EnrichMathml.walkTree(
       /** @type {!sre.SemanticNode} */(this.fenced));
   this.getFencesMml_();
+  if (this.fenced.type === sre.SemanticAttr.Type.EMPTY &&
+      !this.fencedMml.parentNode) {
+    // Fenced element is empty and new. Insert it before the closing fence so it
+    // can be walked as usual.
+    this.fencedMml.setAttribute(sre.EnrichMathml.Attribute.ADDED, 'true');
+    this.cfenceMml.parentNode.insertBefore(this.fencedMml, this.cfenceMml);
+  }
   return this.rewrite_();
 };
 
@@ -190,6 +200,7 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
       newNode, /** @type {!sre.SemanticNode} */(this.fenced.parent));
 
   while (currentNode.type !== sre.SemanticAttr.Type.FENCED) {
+    // Outer embellished node is the one with the fence pointer.
     var mml = /** @type {!Element} */(currentNode.mathmlTree);
     var specialCase = this.specialCase_(currentNode, mml);
     if (specialCase) {
@@ -197,6 +208,7 @@ sre.CaseEmbellished.prototype.rewrite_ = function() {
     } else {
       sre.EnrichMathml.setAttributes(mml, currentNode);
       var mmlChildren = [];
+      // The base node is rewritten. Walk the remaining nodes.
       for (var i = 1, child; child = currentNode.childNodes[i]; i++) {
         mmlChildren.push(sre.EnrichMathml.walkTree(child));
       }

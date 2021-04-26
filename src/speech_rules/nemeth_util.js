@@ -166,8 +166,21 @@ sre.Grammar.getInstance().setCorrection('enlargeFence',
 sre.NemethUtil.NUMBER_PROPAGATORS_ = [
   sre.SemanticAttr.Type.MULTIREL,
   sre.SemanticAttr.Type.RELSEQ,
-  sre.SemanticAttr.Type.PUNCTUATED,
-  sre.SemanticAttr.Type.APPL
+  sre.SemanticAttr.Type.APPL,
+  sre.SemanticAttr.Type.ROW,
+  sre.SemanticAttr.Type.LINE
+];
+
+
+/**
+ * @type {Array.<sre.SemanticAttr.Type>}
+ * @private
+ */
+sre.NemethUtil.NUMBER_INHIBITORS_ = [
+  sre.SemanticAttr.Type.SUBSCRIPT,
+  sre.SemanticAttr.Type.SUPERSCRIPT,
+  sre.SemanticAttr.Type.OVERSCORE,
+  sre.SemanticAttr.Type.UNDERSCORE
 ];
 
 
@@ -175,11 +188,12 @@ sre.NemethUtil.NUMBER_PROPAGATORS_ = [
  * Checks if a Nemeth number indicator has to be propagated beyond the node's
  * parent.
  * @param {!sre.SemanticNode} node The node which can get a number indicator.
- * @return {boolean} True if parent is a relation, puntuation or application or
+ * @param {Object.<boolean>} info True if we are in an enclosed list.
+ * @return {boolean} True if parent is a relation, punctuation or application or
  *     a negative sign.
  * @private
  */
-sre.NemethUtil.checkParent_ = function(node) {
+sre.NemethUtil.checkParent_ = function(node, info) {
   var parent = node.parent;
   if (!parent) {
     return false;
@@ -187,8 +201,18 @@ sre.NemethUtil.checkParent_ = function(node) {
   var type = parent.type;
   if (sre.NemethUtil.NUMBER_PROPAGATORS_.indexOf(type) !== -1 ||
       (type === sre.SemanticAttr.Type.PREFIXOP &&
-      parent.role === sre.SemanticAttr.Role.NEGATIVE)) {
+       parent.role === sre.SemanticAttr.Role.NEGATIVE &&
+       !info.script) ||
+      (type === sre.SemanticAttr.Type.PREFIXOP &&
+       // TODO: This needs to be rewritten once there is a better treatment of
+       // prefixop.
+       parent.role === sre.SemanticAttr.Role.GEOMETRY)) {
     return true;
+  }
+  if (type === sre.SemanticAttr.Type.PUNCTUATED) {
+    if (!info.enclosed || parent.role === sre.SemanticAttr.Role.TEXT) {
+      return true;
+    }
   }
   return false;
 };
@@ -203,35 +227,35 @@ sre.NemethUtil.checkParent_ = function(node) {
  */
 sre.NemethUtil.propagateNumber = function(node, info) {
   // TODO: Font indicator followed by number.
+  // TODO: Check for enclosed list
   if (!node.childNodes.length) {
-    if (sre.NemethUtil.checkParent_(node)) {
+    if (sre.NemethUtil.checkParent_(node, info)) {
       info.number = true;
+      info.script = false;
+      info.enclosed = false;
     }
-    return [info['number'] ? 'number' : '', {number: false}];
+    return [info['number'] ? 'number' :
+            '', {number: false, enclosed: info.enclosed, script: info.script}];
   }
-  if (sre.NemethUtil.checkParent_(node)) {
+  if (sre.NemethUtil.NUMBER_INHIBITORS_.indexOf(node.type) !== -1) {
+    info.script = true;
+  }
+  if (node.type === sre.SemanticAttr.Type.FENCED) {
+    info.number = false;
+    info.enclosed = true;
+    return ['', info];
+  }
+  if (sre.NemethUtil.checkParent_(node, info)) {
     info.number = true;
+    info.enclosed = false;
   }
   return ['', info];
 };
 
 
-/**
- * @return {sre.SemanticVisitor} A semantic annotator for numbered expressions.
- */
-sre.NemethUtil.numberIndicator = function() {
-  return new sre.SemanticVisitor(
-      'nemeth', sre.NemethUtil.propagateNumber, {number: true});
-};
-
-
-/**
- * Adds the annotators.
- */
-sre.NemethUtil.addAnnotators = function() {
-  sre.SemanticAnnotations.getInstance().register(
-      sre.NemethUtil.numberIndicator());
-};
+sre.SemanticAnnotations.getInstance().register(
+    new sre.SemanticVisitor(
+    'nemeth', 'number', sre.NemethUtil.propagateNumber, {number: true}));
 
 
 /**
@@ -329,5 +353,89 @@ sre.NemethUtil.generateTensorRules = function(store) {
     defineRulesAlias.apply(null, aliasList);
   }
 };
+
+
+/**
+ * Iterates over the list of relation nodes and intersperses Braille spaces if
+ * necessary.
+ * @param {Array.<Element>} nodes A node array.
+ * @param {string} context A context string.
+ * @return {function(): Array.<sre.AuditoryDescription>} A closure that returns
+ *     the content of the next content node. Returns only context string if list
+ *     is exhausted.
+ */
+sre.NemethUtil.relationIterator = function(nodes, context) {
+  var childNodes = nodes.slice(0);
+  var first = true;
+  if (nodes.length > 0) {
+    var contentNodes = sre.XpathUtil.evalXPath('../../content/*', nodes[0]);
+  } else {
+    var contentNodes = [];
+  }
+  return function() {
+    var content = contentNodes.shift();
+    var leftChild = childNodes.shift();
+    var rightChild = childNodes[0];
+    var contextDescr = context ?
+        [sre.AuditoryDescription.create(
+            {text: context}, {translate: true})] :
+        [];
+    if (!content) {
+      return contextDescr;
+    }
+    var base = leftChild ?
+        sre.MathspeakUtil.nestedSubSuper(
+        leftChild, '', {sup: msg.MS.SUPER, sub: msg.MS.SUB}) : '';
+    var left = (leftChild && sre.DomUtil.tagName(leftChild) !== 'EMPTY') ||
+        (first && content.parentNode.parentNode &&
+         content.parentNode.parentNode.previousSibling) ?
+        [sre.AuditoryDescription.create({text: '⠀' + base}, {})] : [];
+    var right = (rightChild && sre.DomUtil.tagName(rightChild) !== 'EMPTY') ||
+        (!contentNodes.length && content.parentNode.parentNode &&
+         content.parentNode.parentNode.nextSibling) ?
+        [sre.AuditoryDescription.create({text: '⠀'}, {})] : [];
+    var descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(content);
+    first = false;
+    return contextDescr.concat(left, descrs, right);
+  };
+};
+
+
+/**
+ * Iterates over the list of juxtapositions and inserts spaces between two
+ * numbers.
+ * @param {Array.<Element>} nodes A node array.
+ * @param {string} context A context string.
+ * @return {function(): Array.<sre.AuditoryDescription>} A closure that returns
+ *     the content of the next content node. Returns only context string if list
+ *     is exhausted.
+ */
+sre.NemethUtil.implicitIterator = function(nodes, context) {
+  var childNodes = nodes.slice(0);
+  if (nodes.length > 0) {
+    var contentNodes = sre.XpathUtil.evalXPath('../../content/*', nodes[0]);
+  } else {
+    var contentNodes = [];
+  }
+  return function() {
+    var leftChild = childNodes.shift();
+    var rightChild = childNodes[0];
+    var content = contentNodes.shift();
+    var contextDescr = context ?
+        [sre.AuditoryDescription.create(
+            {text: context}, {translate: true})] :
+        [];
+    if (!content) {
+      return contextDescr;
+    }
+    var left = leftChild && sre.DomUtil.tagName(leftChild) === 'NUMBER';
+    var right = rightChild && sre.DomUtil.tagName(rightChild) === 'NUMBER';
+    return contextDescr.concat(
+        (left && right &&
+        content.getAttribute('role') === sre.SemanticAttr.Role.SPACE) ?
+        [sre.AuditoryDescription.create({text: '⠀'}, {})] : []);
+  };
+};
+
 
 });  // goog.scope

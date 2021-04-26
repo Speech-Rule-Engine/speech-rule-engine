@@ -308,7 +308,7 @@ sre.AbstractWalker.prototype.speech = function() {
         var node = nodes[i];
         var snode = /** @type {!sre.SemanticNode} */(snodes[i]);
         speech.push(node ? this.generator.getSpeech(node, this.getXml()) :
-                    sre.SpeechGeneratorUtil.retrieveSpeech(snode));
+                    sre.SpeechGeneratorUtil.recomputeMarkup(snode));
       }
       return this.mergePrefix_(speech);
   }
@@ -316,7 +316,7 @@ sre.AbstractWalker.prototype.speech = function() {
 
 
 /**
- * Merges a prefix into a list of speech strings.
+ * Merges a prefix and possibly a postfix into a list of speech strings.
  * @param {Array.<string>} speech The speech strings.
  * @param {Array.<string>=} opt_pre A list of strings that should precede the
  *     prefix.
@@ -326,8 +326,10 @@ sre.AbstractWalker.prototype.speech = function() {
 sre.AbstractWalker.prototype.mergePrefix_ = function(speech, opt_pre) {
   var pre = opt_pre || [];
   var prefix = this.isSpeech() ? this.prefix_() : '';
-  var aural = sre.AuralRendering.getInstance();
   if (prefix) speech.unshift(prefix);
+  var postfix = this.isSpeech() ? this.postfix_() : '';
+  if (postfix) speech.push(postfix);
+  var aural = sre.AuralRendering.getInstance();
   return aural.finalize(aural.merge(pre.concat(speech)));
 };
 
@@ -342,6 +344,20 @@ sre.AbstractWalker.prototype.prefix_ = function() {
   return nodes[0] ? sre.WalkerUtil.getAttribute(
       /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.PREFIX) :
       sre.SpeechGeneratorUtil.retrievePrefix(snodes[0]);
+};
+
+
+/**
+ * @return {string} The postfix of the currently focused element. Postfixes
+ *    cannot be recomputed and therefore are only looked up on the actual node.
+ * @private
+ */
+sre.AbstractWalker.prototype.postfix_ = function() {
+  // TODO: Style this differently for usage with auditory markup.
+  var nodes = this.getFocus().getDomNodes();
+  return nodes[0] ? sre.WalkerUtil.getAttribute(
+      /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.POSTFIX) :
+      '';
 };
 
 
@@ -739,7 +755,7 @@ sre.AbstractWalker.prototype.detail_ = function() {
           this.getRebuilt().xml, 'id', sid)[0];
   var oldAlt = snode.getAttribute('alternative');
   snode.removeAttribute('alternative');
-  var detail = sre.SpeechGeneratorUtil.computeSpeechWithoutCache(
+  var detail = sre.SpeechGeneratorUtil.computeMarkup(
       /** @type {!Node} */(snode));
   var speech = this.mergePrefix_([detail]);
   snode.setAttribute('alternative', oldAlt);
@@ -888,4 +904,21 @@ sre.AbstractWalker.prototype.previousRules = function() {
   this.update(options);
   this.moved = sre.Walker.move.REPEAT;
   return this.getFocus().clone();
+};
+
+
+/**
+ * Refocuses in case levels have been altered outside the walker's control.
+ */
+sre.AbstractWalker.prototype.refocus = function() {
+  var focus = this.getFocus();
+  while (!focus.getNodes().length) {
+    var last = this.levels.peek();
+    var up = this.up();
+    if (!up) break;
+    this.setFocus(up);
+    focus = this.getFocus(true);
+  }
+  this.levels.push(last);
+  this.setFocus(focus);
 };

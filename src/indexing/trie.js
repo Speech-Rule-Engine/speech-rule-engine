@@ -261,3 +261,20 @@ sre.Trie.prototype.enumerate_ = function(node, info) {
   }
   return info;
 };
+
+
+/**
+ * Retrieves a node for a given sequence of constraints.
+ *
+ * @param {Array.<string>} constraint A list of constraints.
+ * @return {sre.TrieNode} The speech rule or null.
+ * What if multiple rules exist?
+ */
+sre.Trie.prototype.byConstraint = function(constraint) {
+  let node = this.root;
+  while (constraint.length && node) {
+    let cstr = constraint.shift();
+    node = node.getChild(cstr);
+  }
+  return node || null;
+};

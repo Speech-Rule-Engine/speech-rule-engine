@@ -118,6 +118,8 @@ sre.Cli.prototype.enumerate = function() {
                         compStr(clear2 ? ax2 : '', length[1]),
                         compStr(clear3 ? ax3 : '', length[2]),
                         prefs[ax4].join(', ')]);
+            clear1 = false;
+            clear2 = false;
             clear3 = false;
           }
         } else {
@@ -151,11 +153,11 @@ sre.Cli.prototype.enumerate = function() {
  * @param {string} input The name of the input file.
  */
 sre.Cli.prototype.execute = function(input) {
-  var commander = sre.SystemExternal.commander;
+  var options = sre.SystemExternal.commander.opts();
   this.runProcessors_(
       goog.bind(
       function(proc, file) {
-        this.system.processFile(proc, file, commander.output);
+        this.system.processFile(proc, file, options.output);
       }, this),
       input);
 };
@@ -190,12 +192,12 @@ sre.Cli.prototype.runProcessors_ = function(processor, input) {
  * given output file.
  */
 sre.Cli.prototype.readline = function() {
-  var commander = sre.SystemExternal.commander;
+  var options = sre.SystemExternal.commander.opts();
   sre.SystemExternal.process.stdin.setEncoding('utf8');
   var inter = sre.SystemExternal.require('readline').createInterface({
     input: sre.SystemExternal.process.stdin,
-    output: commander.output ?
-        sre.SystemExternal.fs.createWriteStream(commander.output) :
+    output: options.output ?
+        sre.SystemExternal.fs.createWriteStream(options.output) :
         sre.SystemExternal.process.stdout
   });
   var input = '';
@@ -282,18 +284,23 @@ sre.Cli.prototype.commandLine = function() {
              ' MathML (with -m option only).', set('structure')).
       option('-P, --pprint', 'Pretty print output whenever possible.',
              set('pprint')).
+      option('-f, --rules [name]', 'Loads a local rule file [name].',
+             set('rules')).
+      option('-C, --prune [branch]', 'Prune trie [branch] for clean reload.',
+             set('prune')).
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
       option('--opt', 'List engine setup options.').
       on('option:opt', goog.bind(function() {
-        this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
+        this.enumerate(); sre.System.getInstance().exit(0);}, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);
-  if (commander.verbose) {
-    sre.Debugger.getInstance().init(commander.log);
+  var options = commander.opts();
+  if (options.verbose) {
+    sre.Debugger.getInstance().init(options.log);
   }
-  if (commander.input) {
-    this.execute(commander.input);
+  if (options.input) {
+    this.execute(options.input);
   }
   if (commander.args.length) {
     commander.args.forEach(goog.bind(this.execute, this));
@@ -301,7 +308,7 @@ sre.Cli.prototype.commandLine = function() {
     this.readline();
   }
   sre.Debugger.getInstance().exit(
-      function() {sre.SystemExternal.process.exit(0);});
+      function() {sre.System.getInstance().exit(0);});
 };
 
 if (sre.SystemExternal.process && sre.SystemExternal.process.env.SRE_TOP_PATH) {

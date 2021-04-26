@@ -25,23 +25,51 @@ goog.require('sre.Locale');
 goog.require('sre.Numbers.nemeth');
 
 
-let postfixCombiner = function(letter, font, cap) {
+/**
+ * Removes English indicator from a simple letter.
+ * @param {string} letter The letter with indicator.
+ * @return {string} The cleaned letter if it was English without font.
+ */
+let simpleEnglish = function(letter) {
+  return letter.match(RegExp(
+      '^' + sre.Locale.nemeth.ALPHABET_PREFIXES.languagePrefix.english)) ?
+      letter.slice(1) : letter;
+};
+
+
+// Note that the cap here is a number indicator as caps are already included in
+// the alphabets. All we need to do is remove the English indicator in case
+// there is no font indicator. For the parenthesised fonts we don't need number
+// indicator either.
+let postfixCombiner = function(letter, font, number) {
+  letter = simpleEnglish(letter);
   return font ? letter + font : letter;
 };
 
 
-let embellishCombiner = function(letter, font, cap) {
-  return font + (cap ? cap : '⠰') + letter + '⠻';
+let germanCombiner = function(letter, font, cap) {
+  return font + simpleEnglish(letter);
 };
 
 
-let doubleEmbellishCombiner = function(letter, font, cap) {
-  return font + (cap ? cap : '⠰') + letter + '⠻⠻';
+let embellishCombiner = function(letter, font, number) {
+  letter = simpleEnglish(letter);
+  return font + (number ? number : '') + letter + '⠻';
 };
 
 
-let parensCombiner = function(letter, font, cap) {
-  return font + (cap ? cap : '⠰') + letter + '⠾';
+let doubleEmbellishCombiner = function(letter, font, number) {
+  letter = simpleEnglish(letter);
+  return font + (number ? number : '') + letter + '⠻⠻';
+};
+
+
+// Font is the start parenthesis.
+// Number is the number indicator which is ignored.
+// English characters have language indicator removed.
+let parensCombiner = function(letter, font, number) {
+  letter = simpleEnglish(letter);
+  return font + letter + '⠾';
 };
 
 
@@ -103,14 +131,15 @@ sre.Locale.nemeth = {
     // Oldstyle and Monospace: Currently ignored.
     // Normal: is currently just empty.
     'bold': '⠸',
-    'bold-fraktur': '⠸⠀⠸',
+    'bold-fraktur': ['⠸⠀⠸', germanCombiner],
     'bold-italic': '⠸⠨',
     'bold-script': '⠸⠈',
     'caligraphic': '⠈',
     'caligraphic-bold': '⠈⠸',
-    'double-struck': '⠸',
+    'double-struck': '⠈',
     'double-struck-italic': '⠸⠨',
-    'fraktur': '⠸',
+    'fraktur': ['⠸', germanCombiner],
+    'fullwidth': '',
     'italic': '⠨',
     'monospace': '',
     'normal': '',
@@ -127,8 +156,8 @@ sre.Locale.nemeth = {
   EMBELLISH: {
     // Embellishments
     // TODO: Here we need specialist combiners!
-    'super': '⠘',
-    'sub': '⠰',
+    'super': ['⠘', germanCombiner],
+    'sub': ['⠰', germanCombiner],
     'circled': ['⠫⠉⠸⠫', embellishCombiner],
     'parenthesized': ['⠷', parensCombiner],
     'period': ['⠸⠲', postfixCombiner],
@@ -172,9 +201,9 @@ sre.Locale.nemeth = {
     'longdiv': 'long division',
     'actuarial': 'actuarial symbol',
     'radical': 'square root',
-    'box': 'box',
+    'box': '⠗',
     'roundedbox': 'rounded box',
-    'circle': 'circle',
+    'circle': '⠉',
     'left': 'left vertical-line',
     'right': 'right vertical-line',
     'top': 'overbar',
@@ -185,7 +214,7 @@ sre.Locale.nemeth = {
     'horizontalstrike': 'crossout',
     'madruwb': 'Arabic factorial symbol',
     'updiagonalarrow': 'diagonal arrow',
-    'phasorangle': 'phasor angle',
+    'phasorangle': '⠪',
     // Unknown
     'unknown': 'long division'
   },
@@ -209,27 +238,31 @@ sre.Locale.nemeth = {
 
   ALPHABETS: {
     latinSmall: [
-      '⠁', '⠃', '⠉', '⠙', '⠑', '⠋', '⠛', '⠓', '⠊', '⠚', '⠅', '⠇', '⠍',
-      '⠝', '⠕', '⠏', '⠟', '⠗', '⠎', '⠞', '⠥', '⠧', '⠺', '⠭', '⠽', '⠵'
+      '⠰⠁', '⠰⠃', '⠰⠉', '⠰⠙', '⠰⠑', '⠰⠋', '⠰⠛',
+      '⠰⠓', '⠰⠊', '⠰⠚', '⠰⠅', '⠰⠇', '⠰⠍',
+      '⠰⠝', '⠰⠕', '⠰⠏', '⠰⠟', '⠰⠗', '⠰⠎', '⠰⠞',
+      '⠰⠥', '⠰⠧', '⠰⠺', '⠰⠭', '⠰⠽', '⠰⠵'
     ],
     latinCap: [
-      '⠠⠁', '⠠⠃', '⠠⠉', '⠠⠙', '⠠⠑', '⠠⠋', '⠠⠛', '⠠⠓', '⠠⠊', '⠠⠚',
-      '⠠⠅', '⠠⠇', '⠠⠍', '⠠⠝', '⠠⠕', '⠠⠏', '⠠⠟', '⠠⠗', '⠠⠎', '⠠⠞',
-      '⠠⠥', '⠠⠧', '⠠⠺', '⠠⠭', '⠠⠽', '⠠⠵'
+      '⠰⠠⠁', '⠰⠠⠃', '⠰⠠⠉', '⠰⠠⠙', '⠰⠠⠑',
+      '⠰⠠⠋', '⠰⠠⠛', '⠰⠠⠓', '⠰⠠⠊', '⠰⠠⠚',
+      '⠰⠠⠅', '⠰⠠⠇', '⠰⠠⠍', '⠰⠠⠝', '⠰⠠⠕',
+      '⠰⠠⠏', '⠰⠠⠟', '⠰⠠⠗', '⠰⠠⠎', '⠰⠠⠞',
+      '⠰⠠⠥', '⠰⠠⠧', '⠰⠠⠺', '⠰⠠⠭', '⠰⠠⠽', '⠰⠠⠵'
     ],
     greekSmall: [
       '⠨⠫',  // This is here as it is small.
-      '⠨⠁', '⠨⠃', '⠨⠛', '⠨⠙', '⠨⠑', '⠨⠱', '⠨⠦', '⠨⠹',
+      '⠨⠁', '⠨⠃', '⠨⠛', '⠨⠙', '⠨⠑', '⠨⠵', '⠨⠱', '⠨⠹',
       '⠨⠊', '⠨⠅', '⠨⠇', '⠨⠍', '⠨⠝', '⠨⠭', '⠨⠕', '⠨⠏', '⠨⠗',
-      '⠨⠒', '⠨⠎', '⠨⠞', '⠨⠥', '⠨⠋', '⠨⠯', '⠨⠓', '⠨⠕',
+      '⠨⠈⠎', '⠨⠎', '⠨⠞', '⠨⠥', '⠨⠈⠋', '⠨⠯', '⠨⠽', '⠨⠺',
       // Symbols below
-      '⠈⠙', '⠨⠑', '⠨⠹', '⠨⠅', '⠨⠋', '⠨⠗', '⠨⠏'
+      '⠈⠙', '⠨⠑', '⠨⠈⠹', '⠨⠅', '⠨⠋', '⠨⠗', '⠨⠏'
     ],
     greekCap: [
-      '⠨⠠⠁', '⠨⠠⠃', '⠨⠠⠛', '⠨⠠⠙', '⠨⠠⠑', '⠨⠠⠱', '⠨⠠⠣', '⠨⠠⠹',
+      '⠨⠠⠁', '⠨⠠⠃', '⠨⠠⠛', '⠨⠠⠙', '⠨⠠⠑', '⠨⠠⠵', '⠨⠠⠱', '⠨⠠⠹',
       '⠨⠠⠊', '⠨⠠⠅', '⠨⠠⠇', '⠨⠠⠍', '⠨⠠⠝', '⠨⠠⠭', '⠨⠠⠕', '⠨⠠⠏', '⠨⠠⠗',
       '⠨⠠⠹',  // Theta symbol
-      '⠨⠠⠎', '⠨⠠⠥', '⠨⠠⠥', '⠨⠠⠋', '⠨⠠⠯', '⠨⠠⠫', '⠨⠠⠺'
+      '⠨⠠⠎', '⠨⠠⠞', '⠨⠠⠥', '⠨⠠⠋', '⠨⠠⠯', '⠨⠠⠽', '⠨⠠⠺'
     ]
   },
 
@@ -245,11 +278,20 @@ sre.Locale.nemeth = {
   ALPHABET_PREFIXES: {
     capPrefix: {default: ''},
     smallPrefix: {default: ''},
-    digitPrefix: {default: '⠼'}
+    digitPrefix: {default: '⠼'},
+    languagePrefix: {
+      greek: '⠨',
+      english: '⠰',
+      german: '⠸',
+      hebrew: '⠠⠠',
+      number: '⠼'
+    },
   },
 
-  ALPHABET_COMBINER: function(letter, font, cap) {
-    return font ? font + letter : letter;
+  ALPHABET_COMBINER: function(letter, font, number) {
+    return font ? (font + number + letter) : simpleEnglish(letter);
   }
 
 };
+// <mn>𝟗</mn>
+// <mn mathvariant="bold">9</mn>

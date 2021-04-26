@@ -34,6 +34,13 @@ sre.BrailleStore = function() {
 
   this.modality = 'braille';
 
+  /**
+   * @override
+   */
+  this.customTranscriptions = {
+    '⋊': '⠈⠡⠳'
+  };
+
 };
 goog.inherits(sre.BrailleStore, sre.MathStore);
 
@@ -41,26 +48,21 @@ goog.inherits(sre.BrailleStore, sre.MathStore);
 /**
  * @override
  */
-sre.BrailleStore.prototype.evaluateDefault = function(node) {
-  var rest = node.textContent.slice(0);
-  var descs = new Array();
-  if (rest.match(/^\s+$/)) {
-    // Nothing but whitespace: Ignore.
-    return descs;
-  }
-  while (rest) {
-    var chr = rest[0];
-    var code = chr.charCodeAt(0);
-    if (0xD800 <= code && code <= 0xDBFF &&
-        rest.length > 1 && !isNaN(rest.charCodeAt(1))) {
-      descs.push(sre.AuditoryDescription.create(
-          {text: rest.slice(0, 2)}, {adjust: true, translate: true}));
-      rest = rest.substring(2);
-    } else {
-      descs.push(sre.AuditoryDescription.create(
-          {text: chr}, {adjust: true, translate: true}));
-      rest = rest.substring(1);
-    }
+sre.BrailleStore.prototype.evaluateString = function(str) {
+  let descs = [];
+  var text = Array.from(str);
+  for (var i = 0; i < text.length; i++) {
+    descs.push(this.evaluateCharacter(text[i]));
   }
   return descs;
+};
+
+
+/**
+ * @override
+ */
+sre.BrailleStore.prototype.annotations = function() {
+  for (var i = 0, annotator; annotator = this.annotators[i]; i++) {
+    sre.SemanticAnnotations.getInstance().activate(this.locale, annotator);
+  }
 };

@@ -6,9 +6,7 @@
     "key": "F",
     "mappings": {
       "default": {
-        "default": "farads",
-        "singular": "farad",
-        "dual": ""
+        "default": "farad"
       }
     },
     "names": [
@@ -21,9 +19,7 @@
     "key": "C",
     "mappings": {
       "default": {
-        "default": "coulombs",
-        "singular": "coulomb",
-        "dual": ""
+        "default": "celcius"
       }
     },
     "names": [
@@ -35,9 +31,7 @@
     "key": "K",
     "mappings": {
       "default": {
-        "default": "kelvins",
-        "singular": "kelvin",
-        "dual": ""
+        "default": "kelvin"
       }
     },
     "names": [

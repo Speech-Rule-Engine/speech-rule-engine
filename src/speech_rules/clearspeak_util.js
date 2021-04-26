@@ -26,6 +26,7 @@ goog.require('sre.SemanticAnnotator');
 goog.require('sre.StoreUtil');
 
 
+// TODO: remove
 /**
  * Translates a single non-negative integer into a word.
  * @param {string} text The text to translate.
@@ -36,6 +37,10 @@ sre.ClearspeakUtil.numbersToAlpha = function(text) {
       sre.Messages.NUMBERS.numberToWords(parseInt(text, 10)) :
       text;
 };
+
+
+sre.Grammar.getInstance().setPreprocessor('numbers2alpha',
+                                          sre.ClearspeakUtil.numbersToAlpha);
 
 
 /**
@@ -277,15 +282,11 @@ sre.ClearspeakUtil.hasPreference = function(pref) {
 };
 
 
-/**
- * @return {sre.SemanticAnnotator} A semantic annotator for simple expressions.
- */
-sre.ClearspeakUtil.simpleExpression = function() {
-  return new sre.SemanticAnnotator(
-      'clearspeak',
-      function(node) {
-        return sre.ClearspeakUtil.isSimpleExpression(node) ? 'simple' : ''; });
-};
+sre.SemanticAnnotations.getInstance().register(
+    new sre.SemanticAnnotator(
+    'clearspeak', 'simple',
+    function(node) {
+      return sre.ClearspeakUtil.isSimpleExpression(node) ? 'simple' : ''; }));
 
 
 /**
@@ -422,15 +423,11 @@ sre.ClearspeakUtil.allTextLastContent_ = function(nodes) {
 };
 
 
-/**
- * @return {sre.SemanticAnnotator} A semantic annotator for unit expressions.
- */
-sre.ClearspeakUtil.unitExpression = function() {
-  return new sre.SemanticAnnotator(
-      'clearspeak',
-      function(node) {
-        return sre.ClearspeakUtil.isUnitExpression(node) ? 'unit' : ''; });
-};
+sre.SemanticAnnotations.getInstance().register(
+    new sre.SemanticAnnotator(
+    'clearspeak', 'unit',
+    function(node) {
+      return sre.ClearspeakUtil.isUnitExpression(node) ? 'unit' : ''; }));
 
 
 /**
@@ -701,12 +698,13 @@ sre.ClearspeakUtil.lastCurrency = function(node) {
 
 
 /**
- * Adds the annotators.
+ * Tests for unit to be of category length.
+ * @param {Node} node The XML node.
+ * @return {Array.<Node>} True if the text is a length unit.
  */
-sre.ClearspeakUtil.addAnnotators = function() {
-  sre.SemanticAnnotations.getInstance().register(
-      sre.ClearspeakUtil.simpleExpression());
-  sre.SemanticAnnotations.getInstance().register(
-      sre.ClearspeakUtil.unitExpression());
+sre.ClearspeakUtil.isLengthUnit = function(node) {
+  var first = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
+  var result = first && sre.MathCompoundStore.getInstance().
+      lookupCategory(first.textContent.trim() + ':unit') === 'length';
+  return result ? [node] : [];
 };
-

@@ -63,7 +63,7 @@ sre.CaseText.test = function(semantic) {
 sre.CaseText.prototype.getMathml = function() {
   var children = [];
   var collapsed = sre.EnrichMathml.collapsePunctuated(this.semantic, children);
-  this.mml = sre.EnrichMathml.introduceNewLayer(children);
+  this.mml = sre.EnrichMathml.introduceNewLayer(children, this.semantic);
   sre.EnrichMathml.setAttributes(this.mml, this.semantic);
   this.mml.removeAttribute(sre.EnrichMathml.Attribute.CONTENT);
   sre.EnrichMathml.addCollapsedAttribute(this.mml, collapsed);

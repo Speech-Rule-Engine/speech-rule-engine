@@ -132,6 +132,14 @@ sre.AbstractTrieNode.prototype.findChildren = function(object) {
 /**
  * @override
  */
+sre.AbstractTrieNode.prototype.removeChild = function(constraint) {
+  delete this.children_[constraint];
+};
+
+
+/**
+ * @override
+ */
 sre.AbstractTrieNode.prototype.toString = function() {
   return this.constraint;
 };

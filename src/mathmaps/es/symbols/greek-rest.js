@@ -7,8 +7,8 @@
     "key": "0394",
     "mappings": {
       "clearspeak": {
-        "default": "triangle",
-        "TriangleSymbol_Delta": "cap Delta"
+        "default": "triángulo",
+        "TriangleSymbol_Delta": "Delta mayúsculo"
       }
     }
   }

@@ -139,9 +139,32 @@ sre.SpeechRuleFunctions.ContextFunctions = function() {
       /** @type {!Object.<sre.SpeechRuleFunctions.ContextFunction>} */
       ({});
   sre.SpeechRuleFunctions.ContextFunctions.base(
-      this, 'constructor', 'CTXF', store);
+      this, 'constructor', 'CTF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.ContextFunctions,
+              sre.SpeechRuleFunctions.Store_);
+
+
+/**
+ * Context function for use in speech rules.
+ * @typedef {function(): Array.<string>}
+ */
+sre.SpeechRuleFunctions.CustomGenerator;
+
+
+
+/**
+ * @constructor
+ * @extends {sre.SpeechRuleFunctions.Store_}
+ */
+sre.SpeechRuleFunctions.CustomGenerators = function() {
+  var store =
+      /** @type {!Object.<sre.SpeechRuleFunctions.CustomGenerator>} */
+      ({});
+  sre.SpeechRuleFunctions.CustomGenerators.base(
+      this, 'constructor', 'CGF', store);
+};
+goog.inherits(sre.SpeechRuleFunctions.CustomGenerators,
               sre.SpeechRuleFunctions.Store_);
 
 

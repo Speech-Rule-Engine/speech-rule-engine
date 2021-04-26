@@ -88,6 +88,7 @@ sre.EnrichMathml.Attribute = {
   OPERATOR: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'operator',
   OWNS: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'owns',
   PARENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'parent',
+  POSTFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'postfix',
   PREFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'prefix',
   ROLE: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'role',
   SPEECH: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'speech',
@@ -165,7 +166,7 @@ sre.EnrichMathml.walkTree = function(semantic) {
   newNode = semantic.mathmlTree;
   if (newNode === null) {
     sre.Debugger.getInstance().output('Walktree Case 1');
-    newNode = sre.EnrichMathml.introduceNewLayer(childrenList);
+    newNode = sre.EnrichMathml.introduceNewLayer(childrenList, semantic);
   } else {
     var attached = sre.EnrichMathml.attachedElement_(childrenList);
     sre.Debugger.getInstance().output('Walktree Case 2');
@@ -178,10 +179,9 @@ sre.EnrichMathml.walkTree = function(semantic) {
     }
   }
   newNode = sre.EnrichMathml.rewriteMfenced(newNode);
-  sre.EnrichMathml.mergeChildren_(newNode, childrenList);
+  sre.EnrichMathml.mergeChildren_(newNode, childrenList, semantic);
   sre.EnrichMathml.setAttributes(newNode, semantic);
-  let res = sre.EnrichMathml.ascendNewNode(newNode);
-  return res;
+  return sre.EnrichMathml.ascendNewNode(newNode);
 };
 
 
@@ -204,9 +204,11 @@ sre.EnrichMathml.walkTree = function(semantic) {
  *
  * @param {!Array.<Element>} children The list of children of the MathML
  *     element.
+ * @param {!sre.SemanticNode} semantic The semantic node for which a new layer
+ *     is introduced.
  * @return {!Element} The node containing the children.
  */
-sre.EnrichMathml.introduceNewLayer = function(children) {
+sre.EnrichMathml.introduceNewLayer = function(children, semantic) {
   var lca = sre.EnrichMathml.mathmlLca_(children);
   var newNode = lca.node;
   var info = lca.type;
@@ -226,6 +228,9 @@ sre.EnrichMathml.introduceNewLayer = function(children) {
       sre.DomUtil.replaceNode(node, newNode);
       oldChildren.forEach(function(x) {newNode.appendChild(x);});
     }
+  }
+  if (!semantic.mathmlTree) {
+    semantic.mathmlTree = newNode;
   }
   return /**@type{!Element}*/(newNode);
 };
@@ -303,43 +308,151 @@ sre.EnrichMathml.childrenSubset_ = function(node, newChildren) {
 
 
 /**
+ * Collates the childnodes in the light of potential contractions of the combine
+ * juxtaposition heuristic. This extends the list of know children by those
+ * deeper in the tree.
+ * @param {!Element} node The node whose children are picked.
+ * @param {!Array.<Element>} children The current list of children to be merged.
+ * @param {!sre.SemanticNode} semantic The semantic node.
+ * @return {!Array.<Element>} The collated list of children to be merged.
+ * @private
+ */
+sre.EnrichMathml.collateChildNodes_ = function(node, children, semantic) {
+  var oldChildren = [];
+  var newChildren = sre.DomUtil.toArray(node.childNodes);
+  var notFirst = false;
+  while (newChildren.length) {
+    var child = newChildren.shift();
+    if (child.hasAttribute(sre.EnrichMathml.Attribute.TYPE)) {
+      oldChildren.push(child);
+      continue;
+    }
+    var collect = sre.EnrichMathml.collectChildNodes_(child);
+    if (collect.length === 0) {
+      continue;
+    }
+    if (collect.length === 1) {
+      oldChildren.push(child);
+      continue;
+    }
+    if (notFirst) {
+      child.setAttribute('AuxiliaryImplicit', true);
+    } else {
+      notFirst = true;
+    }
+    newChildren = collect.concat(newChildren);
+  }
+  // If there is a trailing row with further factors.
+  var rear = [];
+  var semChildren = semantic.childNodes.map(function(x) {return x.mathmlTree;});
+  while (semChildren.length) {
+    var schild = semChildren.pop();
+    if (!schild) continue;
+    if (oldChildren.indexOf(schild) !== -1) break;
+    if (children.indexOf(schild) !== -1) {
+      rear.unshift(schild);
+    }
+  }
+  return oldChildren.concat(rear);
+};
+
+
+/**
+ * Collects child nodes that belong to a juxtaposition tree, but that are
+ * embedded deeper in the tree. The algorithm descends through nodes that are
+ * not semantically enriched.
+ * @param {!Element} node The top level node.
+ * @return {!Array.<Element>} The lower level children.
+ * @private
+ */
+sre.EnrichMathml.collectChildNodes_ = function(node) {
+  var collect = [];
+  var newChildren = sre.DomUtil.toArray(node.childNodes);
+  while (newChildren.length) {
+    var child = newChildren.shift();
+    if (child.nodeType !== sre.DomUtil.NodeType.ELEMENT_NODE) {
+      continue;
+    }
+    if (child.hasAttribute(sre.EnrichMathml.Attribute.TYPE)) {
+      collect.push(child);
+      continue;
+    }
+    newChildren = sre.DomUtil.toArray(child.childNodes).concat(newChildren);
+  }
+  return collect;
+};
+
+
+/**
  * Merges a list of new children with the children of the given node.
  * @param {!Element} node The node whose children are merged.
  * @param {!Array.<Element>} newChildren The list of children to be merged.
+ * @param {!sre.SemanticNode} semantic The semantic node whose children are
+ *     merged.
  * @private
  */
-sre.EnrichMathml.mergeChildren_ = function(node, newChildren) {
-  var oldChildren = /**@type{!NodeList.<Element>}*/ (node.childNodes);
+sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
+  var oldChildren = (
+      semantic.role === sre.SemanticAttr.Role.IMPLICIT &&
+      sre.SemanticHeuristics.getInstance().flags.combine_juxtaposition) ?
+      sre.EnrichMathml.collateChildNodes_(node, newChildren, semantic) :
+      sre.DomUtil.toArray(node.childNodes);
   if (!oldChildren.length) {
     newChildren.forEach(function(x) {node.appendChild(x);});
     return;
   }
   var oldCounter = 0;
   while (newChildren.length) {
-    // TODO (sorge) This special case is only necessary, because explicit
-    // function applications are destructively dropped in the semantic tree
-    // computation. This should be addressed in the future!
-    //
-    if (oldChildren[oldCounter] === newChildren[0] ||
+    var newChild = /** @type {!Element} */(newChildren[0]);
+    if (oldChildren[oldCounter] === newChild ||
         sre.EnrichMathml.functionApplication_(
-        oldChildren[oldCounter], newChildren[0])) {
+        oldChildren[oldCounter], newChild)) {
+      // newChild same as oldChild. Advance both.
       newChildren.shift();
       oldCounter++;
       continue;
     }
     if (oldChildren[oldCounter] &&
         newChildren.indexOf(oldChildren[oldCounter]) === -1) {
+      // oldChild not related to the current semantic node is skipped.
       oldCounter++;
       continue;
     }
-    // Here we need a case that the newChild is actually an existing descendant
-    // of the node, i.e., somewhere beneath but not contained in oldChildren.
-    if (sre.EnrichMathml.isDescendant_(newChildren[0], node)) {
+    if (sre.EnrichMathml.isDescendant_(newChild, node)) {
+      // newChild is an existing descendant of the node, i.e., somewhere beneath
+      // but not contained in oldChildren. No need to rearrange.
       newChildren.shift();
       continue;
     }
-    node.insertBefore(newChildren[0], oldChildren[oldCounter] || null);
+    // newChild is indeed new and needs to be added.
+    sre.EnrichMathml.insertNewChild_(node, oldChildren[oldCounter], newChild);
     newChildren.shift();
+  }
+};
+
+
+/**
+ * Inserts a new child into the mml tree at the right position.
+ * @param {!Element} node The parent node.
+ * @param {Element} oldChild The reference where newChild is inserted.
+ * @param {!Element} newChild The new child to be inserted.
+ * @private
+ */
+sre.EnrichMathml.insertNewChild_ = function(node, oldChild, newChild) {
+  if (!oldChild) {
+    node.insertBefore(newChild, null);
+    return;
+  }
+  var parent = oldChild;
+  var next = sre.EnrichMathml.parentNode_(parent);
+  while (next && next.firstChild === parent &&
+         !parent.hasAttribute('AuxiliaryImplicit') && next !== node) {
+    parent = next;
+    next = sre.EnrichMathml.parentNode_(parent);
+  }
+  if (next) {
+    next.insertBefore(newChild, parent);
+    parent.removeAttribute('AuxiliaryImplicit');
   }
 };
 
@@ -593,6 +706,7 @@ sre.EnrichMathml.isIgnorable_ = function(node) {
   var children = sre.DomUtil.toArray(node.childNodes);
   if ((!sre.SemanticUtil.hasEmptyTag(node) && children.length) ||
       sre.SemanticUtil.hasDisplayTag(node) ||
+      node.hasAttribute(sre.EnrichMathml.Attribute.TYPE) ||
       sre.SemanticUtil.isOrphanedGlyph(node)) {
     return false;
   }
@@ -677,6 +791,27 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
   }
+  sre.EnrichMathml.setPostfix(mml, semantic);
+};
+
+
+/**
+ * Sets postfix attributes to surface properties via suffixes. Examples: link,
+ * image, etc.
+ * @param {!Element} mml The MathML node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ */
+sre.EnrichMathml.setPostfix = function(mml, semantic) {
+  var postfix = [];
+  if (semantic.role === 'mglyph') {
+    postfix.push('image');
+  }
+  if (semantic.attributes['href']) {
+    postfix.push('link');
+  }
+  if (postfix.length) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.POSTFIX, postfix.join(' '));
+  }
 };
 
 
@@ -749,8 +884,7 @@ sre.EnrichMathml.getInnerNode = function(node) {
     return node;
   }
   var remainder = children.filter(function(child) {
-    return child.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE &&
-        !sre.EnrichMathml.isIgnorable_(child);
+    return !sre.EnrichMathml.isIgnorable_(child);
   });
   var result = [];
   for (var i = 0, remain; remain = remainder[i]; i++) {
