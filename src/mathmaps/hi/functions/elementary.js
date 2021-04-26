@@ -23,6 +23,10 @@
     "mappings": {
       "default": {
         "default": "प्राकृतिक लघुगणक"
+      },
+      "clearspeak": {
+        "default": "एल एन",
+        "Log_LnAsNaturalLog": "प्राकृतिक लघुगणक"
       }
     }
   },
