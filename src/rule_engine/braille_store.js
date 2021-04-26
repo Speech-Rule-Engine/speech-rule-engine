@@ -55,8 +55,7 @@ sre.BrailleStore.prototype.evaluateDefault = function(node) {
     // Nothing but whitespace: Ignore.
     return [];
   }
-  return this.locale === 'nemeth' ?
-      this.evaluateNemeth_(rest) : this.evaluateString_(rest);
+  return this.evaluateString_(rest);
 };
 
 
@@ -85,19 +84,6 @@ sre.BrailleStore.prototype.evaluateString_ = function(text) {
         {text: transcription}, {adjust: true, translate: translate}));
   }
   return descs;
-};
-
-
-/**
- * Translates a string wrt. to Nemeth conventions in the order of:
- *
- * Numbers, Large English, small English, anything else character by character.
- * @param {string} text The text string to translate.
- * @return {!Array.<sre.AuditoryDescription>} The list of auditory descriptions.
- * @private
- */
-sre.BrailleStore.prototype.evaluateNemeth_ = function(text) {
-  return this.evaluateString_(text);
 };
 
 
