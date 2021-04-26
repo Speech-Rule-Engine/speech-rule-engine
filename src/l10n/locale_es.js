@@ -24,6 +24,12 @@ goog.require('sre.Locale');
 goog.require('sre.Numbers.es');
 
 
+var sansserifCombiner = function(letter, font, cap) {
+  letter = 'sans serif ' + (cap ? cap + ' ' + letter : letter);
+  return font ? letter + ' ' + font : letter;
+};
+
+
 /**
  * @type {sre.Locale.Messages}
  */
@@ -47,7 +53,7 @@ sre.Locale.es = {
     SUPERSCRIPT: 'superíndice',
     SUBSCRIPT: 'subíndice',
     BASELINE: 'línea base',
-    BASE: '',
+    BASE: 'base',
     NESTED: '',
     NEST_ROOT: '',
     STARTROOT: 'empezar raíz',
@@ -93,16 +99,17 @@ sre.Locale.es = {
     'double-struck': 'negrita de pizarra',
     'double-struck-italic': 'negrita de pizarra cursiva',
     'fraktur': 'Fraktur',
+    'fullwidth': 'ancho completo',
     'italic': 'cursiva',
     'monospace': 'monoespacio',
     'normal': 'normal',
     'oldstyle': 'estilo antiguo',
     'oldstyle-bold': 'estilo antiguo negrita',
     'script': 'script',
-    'sans-serif': 'sans-serif',
-    'sans-serif-italic': 'sans-serif cursiva',
-    'sans-serif-bold': 'sans-serif negrita',
-    'sans-serif-bold-italic': 'sans-serif negrita cursiva',
+    'sans-serif': 'sans serif',
+    'sans-serif-italic': 'sans serif cursiva',
+    'sans-serif-bold': 'sans serif negrita',
+    'sans-serif-bold-italic': 'sans serif negrita cursiva',
     'unknown': 'desconocida'
   },
 
@@ -155,6 +162,23 @@ sre.Locale.es = {
     'unknown': 'división larga'
   },
 
+  EMBELLISH: {
+    // Embellishments
+    // TODO: Here we need specialist combiners!
+    'super': 'superíndice',
+    'sub': 'subíndice',
+    'circled': ['en circulo', sre.Locale.postfixCombiner],
+    'parenthesized': ['entre paréntesis', sre.Locale.postfixCombiner],
+    'period': ['punto', sre.Locale.postfixCombiner],
+    'negative-circled': ['en circulo negro', sre.Locale.postfixCombiner],
+    'double-circled': ['en doble circulo', sre.Locale.postfixCombiner],
+    'circled-sans-serif': ['en circulo', sansserifCombiner],
+    'negative-circled-sans-serif': ['en circulo negro', sansserifCombiner],
+    'comma': ['coma', sre.Locale.postfixCombiner],
+    'squared': ['en cuadrado', sre.Locale.postfixCombiner],
+    'negative-squared': ['en cuadrado negro', sre.Locale.postfixCombiner]
+  },
+
   NAVIGATE: {
     COLLAPSIBLE: 'plegable',
     EXPANDABLE: 'ampliable',
@@ -170,6 +194,78 @@ sre.Locale.es = {
     JOINER_FRAC: ' '
   },
 
-  NUMBERS: sre.Numbers.es.NUMBERS
+  PLURAL: function(unit) {
+    if (/.*(a|e|i|o|u)$/.test(unit)) {
+      return unit + 's';
+    }
+    if (/.*z$/.test(unit)) {
+      return unit.slice(0, -1) + 'ces';
+    }
+    if (/.*c$/.test(unit)) {
+      return unit.slice(0, -1) + 'ques';
+    }
+    if (/.*g$/.test(unit)) {
+      return unit + 'ues';
+    }
+    if (/.*ón$/.test(unit)) {
+      return unit.slice(0, -2) + 'ones';
+    }
+    return unit + 'es';
+  },
+
+  SI: function(prefix, unit) {
+    if (unit.match(/^metro/)) {
+      prefix = prefix.replace(/a$/, 'á').replace(/o$/, 'ó').replace(/i$/, 'í');
+    }
+    return prefix + unit;
+  },
+
+  NUMBERS: sre.Numbers.es.NUMBERS,
+
+  ALPHABETS: {
+    latinSmall: [
+      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+    ],
+    latinCap: [
+      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+    ],
+    greekSmall: [
+      'nabla',  // This is here as it is small.
+      'alfa', 'beta', 'gamma', 'delta', 'épsilon', 'zeta', 'eta', 'theta',
+      'iota', 'kappa', 'lambda', 'mi', 'ni', 'xi', 'ómicron', 'pi', 'rho',
+      'sigma final', 'sigma', 'tau', 'ípsilon', 'phi', 'ji', 'psi', 'omega',
+      // Symbols below
+      'diferencial parcial', 'épsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
+    ],
+    greekCap: [
+      'Alfa', 'Beta', 'Gamma', 'Delta', 'Épsilon', 'Zeta', 'Eta', 'Theta',
+      'Iota', 'Kappa', 'Lambda', 'Mi', 'Ni', 'Xi', 'Ómicron', 'Pi', 'Rho',
+      'Theta', // Theta symbol
+      'Sigma', 'Tau', 'Ípsilon', 'Phi', 'Ji', 'Psi', 'Omega'
+    ]
+  },
+
+  ALPHABET_TRANSFORMERS: {
+    digit: {
+      default: function(n) {
+        return n === 0 ? 'cero' : sre.Numbers.es.numberToWords(n);},
+      mathspeak: function(n) {return n.toString();},
+      clearspeak: function(n) {return n.toString();}},
+    letter: {
+      default: function(n) {return n;}
+    }
+  },
+
+  ALPHABET_PREFIXES: {
+    capPrefix: {default: 'mayúscula'},
+    smallPrefix: {default: ''},
+    digitPrefix: {default: ''}
+  },
+
+  ALPHABET_COMBINER: sre.Locale.prefixCombiner,
+
+  UNIT_TIMES: 'por'
 
 };

@@ -3,6 +3,105 @@
     "locale": "es"
   },
   {
+    "category": "Ll",
+    "key": "01D6",
+    "mappings": {
+      "default": {
+        "default": "u con diéresis y macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01D8",
+    "mappings": {
+      "default": {
+        "default": "u con diéresis y acento agudo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DA",
+    "mappings": {
+      "default": {
+        "default": "u con diéresis y acento"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DC",
+    "mappings": {
+      "default": {
+        "default": "u con diéresis y grave"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DF",
+    "mappings": {
+      "default": {
+        "default": "a con diéresis y macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E1",
+    "mappings": {
+      "default": {
+        "default": "a con punto arriba y macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01ED",
+    "mappings": {
+      "default": {
+        "default": "o con pecíolo y macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01FB",
+    "mappings": {
+      "default": {
+        "default": "a con ring above y acento agudo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "022B",
+    "mappings": {
+      "default": {
+        "default": "o con diéresis y macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "022D",
+    "mappings": {
+      "default": {
+        "default": "o con tilde y macron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0231",
+    "mappings": {
+      "default": {
+        "default": "o con Dot Above y Macron"
+      }
+    }
+  },
+  {
     "key": "1E09",
     "mappings": {
       "default": {

@@ -30,8 +30,8 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "medium white circle",
-        "short": "white circle"
+        "default": "white circle",
+        "alternative": "medium white circle"
       }
     },
     "key": "26AA"
@@ -40,8 +40,8 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "medium black circle",
-        "short": "black circle"
+        "default": "black circle",
+        "alternative":  "medium black circle"
       }
     },
     "key": "26AB"
@@ -50,8 +50,8 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white heavy check mark",
-        "short": "white check"
+        "default": "white check mark",
+        "alternative": "white heavy check mark"
       }
     },
     "key": "2705"
@@ -60,8 +60,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "check mark",
-        "short": "check"
+        "default": "check mark"
       }
     },
     "key": "2713"
@@ -70,8 +69,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy check mark",
-        "short": "heavy check"
+        "default": "heavy check mark"
       }
     },
     "key": "2714"

@@ -24,7 +24,6 @@
 goog.provide('sre.BaseRuleStore');
 
 goog.require('sre.AuditoryDescription');
-goog.require('sre.BaseUtil');
 goog.require('sre.Debugger');
 goog.require('sre.DomUtil');
 goog.require('sre.DynamicCstr');
@@ -49,11 +48,6 @@ sre.BaseRuleStore = function() {
    * @type {sre.SpeechRuleContext}
    */
   this.context = new sre.SpeechRuleContext();
-
-  // TODO: Temporary shortcuts for ease of goog.bind in store definitions.
-  this.customQueries = this.context.customQueries;
-  this.customStrings = this.context.customStrings;
-  this.contextFunctions = this.context.contextFunctions;
 
   /**
    * Set of speech rules in the store.
@@ -93,9 +87,26 @@ sre.BaseRuleStore = function() {
   this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
 
   /**
+   * Default domain.
+   * @type {string}
+   */
+  this.domain = '';
+
+  /**
    * @type {boolean}
    */
   this.initialized = false;
+
+  this.parseMethods = {
+    'Rule': goog.bind(this.defineRule, this),
+    'Generator': goog.bind(this.generateRules, this)
+  };
+
+  /**
+   * Local transcriptions for special characters.
+   * @type {Object.<string>}
+   */
+  this.customTranscriptions = { };
 
 };
 
@@ -109,9 +120,21 @@ sre.BaseRuleStore.prototype.lookupRule = function(node, dynamic) {
        node.nodeType != sre.DomUtil.NodeType.TEXT_NODE)) {
     return null;
   }
-  var matchingRules = this.trie.lookupRules(node, dynamic.allProperties());
+  var matchingRules = this.lookupRules(node, dynamic);
   return (matchingRules.length > 0) ?
       this.pickMostConstraint_(dynamic, matchingRules) : null;
+};
+
+
+/**
+ * Retrieves a list of applicable rule for the given node.
+ * @param {!Node} node A node.
+ * @param {!sre.DynamicCstr} dynamic Additional dynamic
+ *     constraints. These are matched against properties of a rule.
+ * @return {Array.<sre.SpeechRule>} All applicable speech rules.
+ */
+sre.BaseRuleStore.prototype.lookupRules = function(node, dynamic) {
+  return this.trie.lookupRules(node, dynamic.allProperties());
 };
 
 
@@ -122,9 +145,10 @@ sre.BaseRuleStore.prototype.defineRule = function(
     name, dynamic, action, prec, cstr) {
   var rule;
   try {
+    // TODO: Have a parser that respects generators.
     var postc = sre.SpeechRule.Action.fromString(action);
     var cstrList = Array.prototype.slice.call(arguments, 4);
-    var fullPrec = new sre.SpeechRule.Precondition(prec, cstrList);
+    var fullPrec = this.parsePrecondition(prec, cstrList);
     var dynamicCstr = this.parseCstr(dynamic);
     rule = new sre.SpeechRule(name, dynamicCstr, fullPrec, postc);
   } catch (err) {
@@ -187,7 +211,46 @@ sre.BaseRuleStore.prototype.findAllRules = function(pred) {
  * @override
  */
 sre.BaseRuleStore.prototype.evaluateDefault = function(node) {
-  return [sre.AuditoryDescription.create({'text': node.textContent})];
+  var rest = node.textContent.slice(0);
+  if (rest.match(/^\s+$/)) {
+    // Nothing but whitespace: Ignore.
+    return this.evaluateWhitespace(rest);
+  }
+  return this.evaluateString(rest);
+};
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateString = goog.abstractMethod;
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateWhitespace = function(str) {
+  return [];
+};
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateCustom = function(str) {
+  var trans = this.customTranscriptions[str];
+  return (trans !== undefined) ?
+      sre.AuditoryDescription.create(
+          {'text': trans}, {adjust: true, translate: false}) : null;
+};
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateCharacter = function(str) {
+  return this.evaluateCustom(str) || sre.AuditoryDescription.create(
+      {'text': str}, {adjust: true, translate: true});
 };
 
 
@@ -252,6 +315,8 @@ sre.BaseRuleStore.prototype.pickMostConstraint_ = function(dynamic, rules) {
         return comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
             // When same number of dynamic constraint attributes matches for
             // both rules, compare length of static constraints.
+            // sre.BaseRuleStore.strongQuery_(r1, r2) ||
+            sre.BaseRuleStore.priority_(r1, r2) ||
             (r2.precondition.constraints.length -
              r1.precondition.constraints.length);}
   );
@@ -308,6 +373,21 @@ sre.BaseRuleStore.comparePreconditions_ = function(rule1, rule2) {
 
 
 /**
+ * Compares priority of two rules.
+ * @param {sre.SpeechRule} rule1 The first speech rule.
+ * @param {sre.SpeechRule} rule2 The second speech rule.
+ * @return {number} -1, 0, 1 depending on the comparison.
+ * @private
+ */
+sre.BaseRuleStore.priority_ = function(rule1, rule2) {
+  var priority1 = rule1.precondition.priority;
+  var priority2 = rule2.precondition.priority;
+  return (priority1 === priority2) ? 0 :
+      ((priority1 > priority2) ? -1 : 1);
+};
+
+
+/**
  * @return {!Array.<sre.SpeechRule>} Set of all speech rules in the store.
  */
 sre.BaseRuleStore.prototype.getSpeechRules = function() {
@@ -331,5 +411,91 @@ sre.BaseRuleStore.prototype.setSpeechRules = function(rules) {
  * @return {!sre.DynamicCstr} The parsed constraint including locale.
  */
 sre.BaseRuleStore.prototype.parseCstr = function(cstr) {
-  return this.parser.parse(this.locale + '.' + this.modality + '.' + cstr);
+  return this.parser.parse(
+      this.locale + '.' + this.modality +
+      (this.domain ? '.' + this.domain : '') +
+      '.' + cstr);
+};
+
+
+/**
+ * Parses precondition by resolving generator rules.
+ * @param {string} query The query constraint.
+ * @param {!Array.<string>} rest The rest constraints.
+ * @return {sre.SpeechRule.Precondition} The new precondition.
+ */
+sre.BaseRuleStore.prototype.parsePrecondition = function(query, rest) {
+  var queryCstr = this.parsePrecondition_(query);
+  query = queryCstr[0];
+  var restCstr = queryCstr.slice(1);
+  for (var cstr of rest) {
+    restCstr = restCstr.concat(this.parsePrecondition_(cstr));
+  }
+  return new sre.SpeechRule.Precondition(query, restCstr);
+};
+
+
+/**
+ * Resolves a single precondition constraint.
+ * @param {string} cstr The precondition constraint.
+ * @return {Array.<string>} Array of constraints, possibly generated.
+ * @private
+ */
+sre.BaseRuleStore.prototype.parsePrecondition_ = function(cstr) {
+  var generator = this.context.customGenerators.lookup(cstr);
+  return generator ? generator() : [cstr];
+};
+
+
+/**
+ * Parses a rule set definition.
+ * @param {Object.<string|Array<*>>} ruleSet The
+ *     definition object.
+ */
+sre.BaseRuleStore.prototype.parse = function(ruleSet) {
+  this.modality = ruleSet.modality || this.modality;
+  this.locale = ruleSet.locale || this.locale;
+  this.domain = ruleSet.domain || this.domain;
+  this.context.parse(ruleSet.functions || []);
+  this.parseRules(ruleSet.rules || []);
+};
+
+
+/**
+ * Parse a list of rules, each given as a list of strings.
+ * @param {Array.<Array.<string>>} rules The list of rules.
+ */
+sre.BaseRuleStore.prototype.parseRules = function(rules) {
+  for (var i = 0, rule; rule = rules[i]; i++) {
+    let type = rule[0];
+    let method = this.parseMethods[type];
+    if (type && method) {
+      method.apply(this, rule.slice(1));
+    }
+  }
+};
+
+
+/**
+ * Parses rules generated by the given generator function.
+ * @param {string} generator Name of the generator function.
+ */
+sre.BaseRuleStore.prototype.generateRules = function(generator) {
+  var method = this.context.customGenerators.lookup(generator);
+  if (method) {
+    method(this);
+  }
+};
+
+
+/**
+ * Prunes the trie of the store for a given constraint.
+ * @param {Array.<string>} constraints A list of constraints.
+ */
+sre.BaseRuleStore.prototype.prune = function(constraints) {
+  var last = constraints.pop();
+  var parent = this.trie.byConstraint(constraints);
+  if (parent) {
+    parent.removeChild(last);
+  }
 };

@@ -3,8 +3,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb upwards",
-        "short": "left harpoon with barb up"
+        "default": "left harpoon with barb up"
       }
     },
     "key": "21BC"
@@ -13,8 +12,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb downwards",
-        "short": "left harpoon with barb down"
+        "default": "left harpoon with barb down"
       }
     },
     "key": "21BD"
@@ -23,8 +21,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards harpoon with barb rightwards",
-        "short": "up harpoon with barb right"
+        "default": "up harpoon with barb right"
       }
     },
     "key": "21BE"
@@ -33,8 +30,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "upwards harpoon with barb leftwards",
-        "short": "up harpoon with barb left"
+        "default": "up harpoon with barb left"
       }
     },
     "key": "21BF"
@@ -43,8 +39,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb upwards",
-        "short": "right harpoon with barb up"
+        "default": "right harpoon with barb up"
       }
     },
     "key": "21C0"
@@ -53,8 +48,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb downwards",
-        "short": "right harpoon with barb down"
+        "default": "right harpoon with barb down"
       }
     },
     "key": "21C1"
@@ -63,8 +57,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards harpoon with barb rightwards",
-        "short": "down harpoon with barb right"
+        "default": "down harpoon with barb right"
       }
     },
     "key": "21C2"
@@ -73,8 +66,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "downwards harpoon with barb leftwards",
-        "short": "down harpoon with barb left"
+        "default": "down harpoon with barb left"
       }
     },
     "key": "21C3"
@@ -83,8 +75,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon over rightwards harpoon",
-        "short": "left harpoon over right harpoon"
+        "default": "left harpoon over right harpoon"
       }
     },
     "key": "21CB"
@@ -93,8 +84,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon over leftwards harpoon",
-        "short": "right harpoon over left harpoon"
+        "default": "right harpoon over left harpoon"
       }
     },
     "key": "21CC"
@@ -175,8 +165,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb up to bar",
-        "short": "left harpoon with barb up to bar"
+        "default": "left harpoon with barb up to bar"
       }
     },
     "key": "2952"
@@ -185,8 +174,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb up to bar",
-        "short": "right harpoon with barb up to bar"
+        "default": "right harpoon with barb up to bar"
       }
     },
     "key": "2953"
@@ -195,8 +183,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards harpoon with barb right to bar",
-        "short": "up harpoon with barb right to bar"
+        "default": "up harpoon with barb right to bar"
       }
     },
     "key": "2954"
@@ -205,8 +192,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards harpoon with barb right to bar",
-        "short": "down harpoon with barb right to bar"
+        "default": "down harpoon with barb right to bar"
       }
     },
     "key": "2955"
@@ -215,8 +201,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb down to bar",
-        "short": "left harpoon with barb down to bar"
+        "default": "left harpoon with barb down to bar"
       }
     },
     "key": "2956"
@@ -225,8 +210,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb down to bar",
-        "short": "right harpoon with barb down to bar"
+        "default": "right harpoon with barb down to bar"
       }
     },
     "key": "2957"
@@ -235,8 +219,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards harpoon with barb left to bar",
-        "short": "up harpoon with barb left to bar"
+        "default": "up harpoon with barb left to bar"
       }
     },
     "key": "2958"
@@ -245,8 +228,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards harpoon with barb left to bar",
-        "short": "down harpoon with barb left to bar"
+        "default": "down harpoon with barb left to bar"
       }
     },
     "key": "2959"
@@ -255,8 +237,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb up from bar",
-        "short": "left harpoon with barb up from bar"
+        "default": "left harpoon with barb up from bar"
       }
     },
     "key": "295A"
@@ -265,8 +246,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb up from bar",
-        "short": "right harpoon with barb up from bar"
+        "default": "right harpoon with barb up from bar"
       }
     },
     "key": "295B"
@@ -275,8 +255,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards harpoon with barb right from bar",
-        "short": "up harpoon with barb right from bar"
+        "default": "up harpoon with barb right from bar"
       }
     },
     "key": "295C"
@@ -285,8 +264,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards harpoon with barb right from bar",
-        "short": "down harpoon with barb right from bar"
+        "default": "down harpoon with barb right from bar"
       }
     },
     "key": "295D"
@@ -295,8 +273,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb down from bar",
-        "short": "left harpoon with barb down from bar"
+        "default": "left harpoon with barb down from bar"
       }
     },
     "key": "295E"
@@ -305,8 +282,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb down from bar",
-        "short": "right harpoon with barb down from bar"
+        "default": "right harpoon with barb down from bar"
       }
     },
     "key": "295F"
@@ -315,8 +291,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards harpoon with barb left from bar",
-        "short": "up harpoon with barb left from bar"
+        "default": "up harpoon with barb left from bar"
       }
     },
     "key": "2960"
@@ -325,8 +300,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards harpoon with barb left from bar",
-        "short": "down harpoon with barb left from bar"
+        "default": "down harpoon with barb left from bar"
       }
     },
     "key": "2961"
@@ -335,8 +309,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb up above leftwards harpoon with barb down",
-        "short": "left harpoon with barb up above left harpoon with barb down"
+        "default": "left harpoon with barb up above left harpoon with barb down"
       }
     },
     "key": "2962"
@@ -345,8 +318,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards harpoon with barb left beside upwards harpoon with barb right",
-        "short": "up harpoon with barb left beside up harpoon with barb right"
+        "default": "up harpoon with barb left beside up harpoon with barb right"
       }
     },
     "key": "2963"
@@ -355,8 +327,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb up above rightwards harpoon with barb down",
-        "short": "right harpoon with barb up above right harpoon with barb down"
+        "default": "right harpoon with barb up above right harpoon with barb down"
       }
     },
     "key": "2964"
@@ -365,8 +336,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards harpoon with barb left beside downwards harpoon with barb right",
-        "short": "down harpoon with barb left beside down harpoon with barb right"
+        "default": "down harpoon with barb left beside down harpoon with barb right"
       }
     },
     "key": "2965"
@@ -375,8 +345,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb up above rightwards harpoon with barb up",
-        "short": "left harpoon with barb up above right harpoon with barb up"
+        "default": "left harpoon with barb up above right harpoon with barb up"
       }
     },
     "key": "2966"
@@ -385,8 +354,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb down above rightwards harpoon with barb down",
-        "short": "left harpoon with barb down above right harpoon with barb down"
+        "default": "left harpoon with barb down above right harpoon with barb down"
       }
     },
     "key": "2967"
@@ -395,8 +363,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb up above leftwards harpoon with barb up",
-        "short": "right harpoon with barb up above left harpoon with barb up"
+        "default": "right harpoon with barb up above left harpoon with barb up"
       }
     },
     "key": "2968"
@@ -405,8 +372,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb down above leftwards harpoon with barb down",
-        "short": "right harpoon with barb down above left harpoon with barb down"
+        "default": "right harpoon with barb down above left harpoon with barb down"
       }
     },
     "key": "2969"
@@ -415,8 +381,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb up above long dash",
-        "short": "left harpoon with barb up above long dash"
+        "default": "left harpoon with barb up above long dash"
       }
     },
     "key": "296A"
@@ -425,8 +390,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "leftwards harpoon with barb down below long dash",
-        "short": "left harpoon with barb down below long dash"
+        "default": "left harpoon with barb down below long dash"
       }
     },
     "key": "296B"
@@ -435,8 +399,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb up above long dash",
-        "short": "right harpoon with barb up above long dash"
+        "default": "right harpoon with barb up above long dash"
       }
     },
     "key": "296C"
@@ -445,8 +408,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rightwards harpoon with barb down below long dash",
-        "short": "right harpoon with barb down below long dash"
+        "default": "right harpoon with barb down below long dash"
       }
     },
     "key": "296D"
@@ -455,8 +417,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upwards harpoon with barb left beside downwards harpoon with barb right",
-        "short": "up harpoon with barb left beside down harpoon with barb right"
+        "default": "up harpoon with barb left beside down harpoon with barb right"
       }
     },
     "key": "296E"
@@ -465,8 +426,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "downwards harpoon with barb left beside upwards harpoon with barb right",
-        "short": "down harpoon with barb left beside up harpoon with barb right"
+        "default": "down harpoon with barb left beside up harpoon with barb right"
       }
     },
     "key": "296F"

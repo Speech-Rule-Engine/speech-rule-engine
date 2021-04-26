@@ -3,8 +3,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "script small l",
-        "short": "script l"
+        "default": "script l"
       }
     },
     "key": "2113"
@@ -13,9 +12,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "script capital p",
-        "alternative": "script p",
-        "short": "script cap p"
+        "default": "script cap P"
       },
       "mathspeak": {
         "default": "script upper P"
@@ -27,8 +24,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "double struck small pi",
-        "short": "double struck pi"
+        "default": "double struck pi"
       }
     },
     "key": "213C"
@@ -37,8 +33,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "double struck small gamma",
-        "short": "double struck gamma"
+        "default": "double struck gamma"
       }
     },
     "key": "213D"
@@ -47,8 +42,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "double struck capital gamma",
-        "short": "double struck cap gamma"
+        "default": "double struck cap Gamma"
       },
       "mathspeak": {
         "default": "double struck upper Gamma"
@@ -60,8 +54,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "double struck capital pi",
-        "short": "double struck cap pi"
+        "default": "double struck cap Pi"
       },
       "mathspeak": {
         "default": "double struck upper Pi"
@@ -73,7 +66,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double struck n ary summation"
+        "default": "double struck sum"
+      },
+      "mathspeak": {
+        "default": "double struck sigma summation"
       }
     },
     "key": "2140"
@@ -82,8 +78,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "double struck italic capital d",
-        "short": "double struck italic cap d"
+        "default": "double struck italic cap D"
       },
       "mathspeak": {
         "default": "double struck italic upper D"
@@ -95,8 +90,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "double struck italic small d",
-        "short": "double struck italic d"
+        "default": "double struck italic d"
       }
     },
     "key": "2146"
@@ -105,8 +99,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "double struck italic small e",
-        "short": "double struck italic e"
+        "default": "double struck italic e"
       }
     },
     "key": "2147"
@@ -115,8 +108,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "double struck italic small i",
-        "short": "double struck italic i"
+        "default": "double struck italic i"
       }
     },
     "key": "2148"
@@ -125,8 +117,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "double struck italic small j",
-        "short": "double struck italic j"
+        "default": "double struck italic j"
       }
     },
     "key": "2149"
@@ -135,8 +126,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "italic small dotless i",
-        "short": "italic dotless i"
+        "default": "italic dotless i"
       }
     },
     "key": "1D6A4"
@@ -145,8 +135,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "italic small dotless j",
-        "short": "italic dotless j"
+        "default": "italic dotless j"
       }
     },
     "key": "1D6A5"

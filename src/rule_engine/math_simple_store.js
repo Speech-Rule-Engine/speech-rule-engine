@@ -27,12 +27,9 @@
 goog.provide('sre.MathCompoundStore');
 goog.provide('sre.MathSimpleStore');
 
-goog.require('sre.BaseUtil');
-goog.require('sre.DomUtil');
 goog.require('sre.DynamicCstr');
 goog.require('sre.MathStore');
 goog.require('sre.SpeechRule');
-goog.require('sre.XpathUtil');
 
 
 
@@ -48,6 +45,7 @@ sre.MathSimpleStore = function() {
    * @type {string}
    */
   this.category = '';
+
 };
 goog.inherits(sre.MathSimpleStore, sre.MathStore);
 
@@ -65,15 +63,29 @@ sre.MathSimpleStore.prototype.defineRulesFromMappings = function(
   for (var domain in mapping) {
     for (var style in mapping[domain]) {
       var content = mapping[domain][style];
-      if (str === '"') {
-        var cstr = 'self::text() = \'' + str + '\'';
-      } else {
-        cstr = 'self::text() = "' + str + '"';
-      }
-      this.defineRule(name, domain + '.' + style, '[t] "' + content + '"',
-                      'self::text()', cstr);
+      this.defineRuleFromStrings(name, domain, style, str, content);
     }
   }
+};
+
+
+/**
+ * Creates a single rule from strings.
+ * @param {string} name Name of the rule.
+ * @param {string} domain The domain axis.
+ * @param {string} style The style axis.
+ * @param {string} str String for precondition and constraints.
+ * @param {string} content The content for the postcondition.
+ */
+sre.MathSimpleStore.prototype.defineRuleFromStrings = function(
+    name, domain, style, str, content) {
+  if (str === '"') {
+    var cstr = 'self::text() = \'' + str + '\'';
+  } else {
+    cstr = 'self::text() = "' + str + '"';
+  }
+  this.defineRule(name, domain + '.' + style, '[t] "' + content + '"',
+                  'self::text()', cstr);
 };
 
 
@@ -134,8 +146,47 @@ sre.MathCompoundStore = function() {
    * @type {string}
    */
   this.modality = sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY];
+
+  /**
+   * @type {!Object.<string>}
+   */
+  this.siPrefixes = {};
+
 };
 goog.addSingletonGetter(sre.MathCompoundStore);
+
+
+/**
+ * Retrieves a substore for a key. Creates a new one if it does not exist.
+ * @param {string} key The key for the store.
+ * @return {sre.MathStore} The rule store.
+ * @private
+ */
+sre.MathCompoundStore.prototype.getSubStore_ = function(key) {
+  var store = this.subStores_[key];
+  if (store) {
+    sre.Debugger.getInstance().output('Store exists! ' + key);
+    return store;
+  }
+  store = new sre.MathSimpleStore();
+  this.subStores_[key] = store;
+  return store;
+};
+
+
+/**
+ * Transfers parameters of the compound store to a substore.
+ * @param {sre.MathStore} store
+ * @param {string=} opt_cat The category if it exists.
+ * @private
+ */
+sre.MathCompoundStore.prototype.setupStore_ = function(store, opt_cat) {
+  store.locale = this.locale;
+  store.modality = this.modality;
+  if (opt_cat) {
+    store.category = opt_cat;
+  }
+};
 
 
 /**
@@ -150,19 +201,26 @@ goog.addSingletonGetter(sre.MathCompoundStore);
  */
 sre.MathCompoundStore.prototype.defineRules = function(
     name, str, cat, mappings) {
-  var store = this.subStores_[str];
-  if (store) {
-    sre.Debugger.getInstance().output('Store exists! ' + str);
-  } else {
-    store = new sre.MathSimpleStore();
-    this.subStores_[str] = store;
-  }
-  // TODO: Add modality?
-  store.locale = this.locale;
-  if (cat) {
-    store.category = cat;
-  }
+  var store = this.getSubStore_(str);
+  this.setupStore_(store, cat);
   store.defineRulesFromMappings(name, str, mappings);
+};
+
+
+/**
+ * Creates a single rule from strings.
+ * @param {string} name Name of the rule.
+ * @param {string} domain The domain axis.
+ * @param {string} style The style axis.
+ * @param {string} cat The category if it exists.
+ * @param {string} str String for precondition and constraints.
+ * @param {string} content The content for the postcondition.
+ */
+sre.MathCompoundStore.prototype.defineRule = function(
+    name, domain, style, cat, str, content) {
+  var store = this.getSubStore_(str);
+  this.setupStore_(store, cat);
+  store.defineRuleFromStrings(name, domain, style, str, content);
 };
 
 
@@ -174,11 +232,11 @@ sre.MathCompoundStore.prototype.defineRules = function(
  * @private
  */
 sre.MathCompoundStore.prototype.changeLocale_ = function(json) {
-  // TODO: Add modality check.
-  if (!json['locale']) {
+  if (!json['locale'] && !json['modality']) {
     return false;
   }
-  this.locale = json['locale'];
+  this.locale = json['locale'] || this.locale;
+  this.modality = json['modality'] || this.modality;
   return true;
 };
 
@@ -214,18 +272,59 @@ sre.MathCompoundStore.prototype.addFunctionRules = function(json) {
 
 
 /**
- * Makes a speech rule for Unit descriptors from its JSON representation.
+ * Makes speech rules for Unit descriptors from its JSON representation.
  * @param {Object} json JSON object of the speech rules.
  */
 sre.MathCompoundStore.prototype.addUnitRules = function(json) {
   if (this.changeLocale_(json)) {
     return;
   }
+  if (json['si']) {
+    this.addSiUnitRules(json);
+    return;
+  }
+  this.addUnitRules_(json);
+};
+
+
+/**
+ * Adds a single speech rule for Unit descriptors from its JSON representation.
+ * @param {Object} json JSON object of the speech rules.
+ * @private
+ */
+sre.MathCompoundStore.prototype.addUnitRules_ = function(json) {
   var names = json['names'];
   if (names) {
     json['names'] = names.map(function(name) {return name + ':' + 'unit';});
   }
   this.addFunctionRules(json);
+};
+
+
+/**
+ * Makes speech rules for SI units from the JSON representation of the base
+ * unit.
+ * @param {Object} json JSON object of the base speech rules.
+ */
+sre.MathCompoundStore.prototype.addSiUnitRules = function(json) {
+  for (var key of Object.keys(this.siPrefixes)) {
+    var newJson = Object.assign({}, json);
+    newJson.mappings = {};
+    var prefix = this.siPrefixes[key];
+    newJson['key'] = key + newJson['key'];
+    newJson['names'] = newJson['names'].map(
+        function(name) { return key + name; });
+    for (var domain of Object.keys(json['mappings'])) {
+      newJson.mappings[domain] = {};
+      for (var style of Object.keys(json['mappings'][domain])) {
+        newJson['mappings'][domain][style] =
+            sre.Locale[this.locale].SI(
+            prefix, json['mappings'][domain][style]);
+      }
+    }
+    this.addUnitRules_(newJson);
+  }
+  this.addUnitRules_(json);
 };
 
 
@@ -258,12 +357,12 @@ sre.MathCompoundStore.prototype.lookupCategory = function(character) {
  * @param {string} text The text to be translated.
  * @param {!sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
- * @return {string} The string resulting from the action of speech rule.
+ * @return {?string} The string resulting from the action of speech rule.
  */
 sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
   var rule = this.lookupRule(text, dynamic);
   if (!rule) {
-    return '';
+    return null;
   }
   return rule.action.components
       .map(function(comp) {

@@ -19,15 +19,14 @@
 
 goog.provide('sre.ClearspeakUtil');
 
-goog.require('sre.AuditoryDescription');
-goog.require('sre.BaseUtil');
 goog.require('sre.DomUtil');
-goog.require('sre.MathspeakUtil');
+goog.require('sre.Grammar');
 goog.require('sre.Messages');
 goog.require('sre.SemanticAnnotator');
 goog.require('sre.StoreUtil');
 
 
+// TODO: remove
 /**
  * Translates a single non-negative integer into a word.
  * @param {string} text The text to translate.
@@ -38,6 +37,10 @@ sre.ClearspeakUtil.numbersToAlpha = function(text) {
       sre.Messages.NUMBERS.numberToWords(parseInt(text, 10)) :
       text;
 };
+
+
+sre.Grammar.getInstance().setPreprocessor('numbers2alpha',
+                                          sre.ClearspeakUtil.numbersToAlpha);
 
 
 /**
@@ -262,8 +265,8 @@ sre.ClearspeakUtil.isSimpleFraction_ = function(node) {
   if (sre.ClearspeakUtil.hasPreference('Fraction_Ordinal')) {
     return true;
   }
-  var enumerator = node.childNodes[0].textContent;
-  var denominator = node.childNodes[1].textContent;
+  var enumerator = parseInt(node.childNodes[0].textContent, 10);
+  var denominator = parseInt(node.childNodes[1].textContent, 10);
   return enumerator > 0 && enumerator < 20 &&
       denominator > 0 && denominator < 11;
 };
@@ -279,15 +282,11 @@ sre.ClearspeakUtil.hasPreference = function(pref) {
 };
 
 
-/**
- * @return {sre.SemanticAnnotator} A semantic annotator for simple expressions.
- */
-sre.ClearspeakUtil.simpleExpression = function() {
-  return new sre.SemanticAnnotator(
-      'clearspeak',
-      function(node) {
-        return sre.ClearspeakUtil.isSimpleExpression(node) ? 'simple' : ''; });
-};
+sre.SemanticAnnotations.getInstance().register(
+    new sre.SemanticAnnotator(
+    'clearspeak', 'simple',
+    function(node) {
+      return sre.ClearspeakUtil.isSimpleExpression(node) ? 'simple' : ''; }));
 
 
 /**
@@ -424,15 +423,11 @@ sre.ClearspeakUtil.allTextLastContent_ = function(nodes) {
 };
 
 
-/**
- * @return {sre.SemanticAnnotator} A semantic annotator for unit expressions.
- */
-sre.ClearspeakUtil.unitExpression = function() {
-  return new sre.SemanticAnnotator(
-      'clearspeak',
-      function(node) {
-        return sre.ClearspeakUtil.isUnitExpression(node) ? 'unit' : ''; });
-};
+sre.SemanticAnnotations.getInstance().register(
+    new sre.SemanticAnnotator(
+    'clearspeak', 'unit',
+    function(node) {
+      return sre.ClearspeakUtil.isUnitExpression(node) ? 'unit' : ''; }));
 
 
 /**
@@ -676,3 +671,40 @@ sre.ClearspeakUtil.wordOrdinal = function(node) {
 };
 
 
+/**
+ * Tests for currency.
+ * @param {Node} node The XML node.
+ * @return {Array.<Node>} True if the text is a currency.
+ */
+sre.ClearspeakUtil.firstCurrency = function(node) {
+  var first = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
+  var result = first && sre.MathCompoundStore.getInstance().
+      lookupCategory(first.textContent + ':unit') === 'currency';
+  return result ? [node] : [];
+};
+
+
+/**
+ * Tests for currency.
+ * @param {Node} node The XML node.
+ * @return {Array.<Node>} True if the text is a currency.
+ */
+sre.ClearspeakUtil.lastCurrency = function(node) {
+  var last = sre.XpathUtil.evalXPath('children/*[last()]', node)[0];
+  var result = last && sre.MathCompoundStore.getInstance().
+      lookupCategory(last.textContent + ':unit') === 'currency';
+  return result ? [node] : [];
+};
+
+
+/**
+ * Tests for unit to be of category length.
+ * @param {Node} node The XML node.
+ * @return {Array.<Node>} True if the text is a length unit.
+ */
+sre.ClearspeakUtil.isLengthUnit = function(node) {
+  var first = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
+  var result = first && sre.MathCompoundStore.getInstance().
+      lookupCategory(first.textContent.trim() + ':unit') === 'length';
+  return result ? [node] : [];
+};

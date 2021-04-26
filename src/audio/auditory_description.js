@@ -22,8 +22,6 @@
  */
 goog.provide('sre.AuditoryDescription');
 
-goog.require('sre.BaseUtil');
-goog.require('sre.Engine');
 goog.require('sre.Span');
 
 
@@ -73,7 +71,7 @@ sre.AuditoryDescription = function(kwargs) {
  *          correct: (undefined|boolean),
  *          translate: (undefined|boolean)}=} opt_flag Flag to force grammar
  *      processing options.
- * @return {sre.AuditoryDescription} The newly created auditory description.
+ * @return {!sre.AuditoryDescription} The newly created auditory description.
  * @constructor
  */
 sre.AuditoryDescription.create = function(kwargs, opt_flag) {
@@ -102,14 +100,14 @@ sre.AuditoryDescription.prototype.clone = function() {
   if (this.personality) {
     personality = {};
     for (var key in this.personality) {
-      personality = this.personality[key];
+      personality[key] = this.personality[key];
     }
   }
   var attributes;
   if (this.attributes) {
     attributes = {};
     for (var key in this.attributes) {
-      attributes = this.attributes[key];
+      attributes[key] = this.attributes[key];
     }
   }
   return new sre.AuditoryDescription(

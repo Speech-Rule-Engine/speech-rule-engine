@@ -69,7 +69,7 @@ sre.SpeechRuleStore.prototype.findAllRules = goog.abstractMethod;
  * @param {Node} node A node.
  * @param {!sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
- * @return {sre.SpeechRule} The actions of the speech rule if it exists.
+ * @return {sre.SpeechRule} The speech rule if an applicable one exists.
  */
 sre.SpeechRuleStore.prototype.lookupRule = goog.abstractMethod;
 

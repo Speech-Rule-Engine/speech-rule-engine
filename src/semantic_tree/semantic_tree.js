@@ -27,10 +27,10 @@
 goog.provide('sre.SemanticTree');
 
 goog.require('sre.DomUtil');
-goog.require('sre.MathUtil');
 goog.require('sre.SemanticAnnotations');
 goog.require('sre.SemanticMathml');
 goog.require('sre.SemanticNode');
+goog.require('sre.SemanticVisitor');
 goog.require('sre.SystemExternal');
 
 
@@ -64,10 +64,34 @@ sre.SemanticTree = function(mml) {
     this.parser.getFactory().defaultMap = newDefault;
     this.root = this.parser.parse(mml);
   }
+  sre.SemanticTree.unitVisitor_.visit(this.root, {});
 
   sre.SemanticAnnotations.getInstance().annotate(this.root);
 
 };
+
+
+/**
+ * Visitor to propagate unit expressions if possible.
+ * @type {sre.SemanticVisitor}
+ * @private
+ */
+sre.SemanticTree.unitVisitor_ = new sre.SemanticVisitor(
+    'general', 'unit',
+    function(node, info) {
+      if (node.type === sre.SemanticAttr.Type.INFIXOP &&
+          (node.role === sre.SemanticAttr.Role.MULTIPLICATION ||
+           node.role === sre.SemanticAttr.Role.IMPLICIT)) {
+        var children = node.childNodes;
+        if (children.length &&
+            (sre.SemanticPred.isPureUnit(children[0]) ||
+            sre.SemanticPred.isUnitCounter(children[0])) &&
+            node.childNodes.slice(1).every(sre.SemanticPred.isPureUnit)) {
+          node.role = sre.SemanticAttr.Role.UNIT;
+        }
+      }
+      return false;
+    });
 
 
 /**
@@ -187,4 +211,19 @@ sre.SemanticTree.prototype.toJson = function() {
   var json = /** @type {JSONType} */({});
   json['stree'] = this.root.toJson();
   return json;
+};
+
+
+/**
+ * Generates a semantic tree from its XML representation.
+ * @param {Element} xml The XML representation.
+ * @return {sre.SemanticTree} The generated semantic tree.
+ */
+sre.SemanticTree.fromXml = function(xml) {
+  var stree = sre.SemanticTree.empty();
+  if (xml.childNodes[0]) {
+    stree.root = sre.SemanticNode.fromXml(
+        /** @type {!Element} */(xml.childNodes[0]));
+  }
+  return stree;
 };

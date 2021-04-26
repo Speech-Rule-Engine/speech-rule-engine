@@ -20,61 +20,31 @@
 
 goog.provide('sre.SpeechRuleStores');
 
-goog.require('sre.BaseRuleStore');
-goog.require('sre.ClearspeakFrench');
+goog.require('sre.BrailleRules');
 goog.require('sre.ClearspeakRules');
-goog.require('sre.EmacspeakRules');
-goog.require('sre.MathmlStoreRules');
-goog.require('sre.MathspeakFrench');
 goog.require('sre.MathspeakRules');
-goog.require('sre.MathspeakSpanish');
-goog.require('sre.NemethRules');
-goog.require('sre.PrefixFrench');
+goog.require('sre.OtherRules');
 goog.require('sre.PrefixRules');
-goog.require('sre.PrefixSpanish');
-goog.require('sre.SemanticTreeRules');
-goog.require('sre.SummaryFrench');
-goog.require('sre.SummaryRules');
-goog.require('sre.SummarySpanish');
 
 
 /**
- * @type {!Object.<sre.BaseRuleStore>}
+ * @type {boolean}
  * @private
  */
-sre.SpeechRuleStores.RULE_SETS_ = {
-  'MathmlStoreRules': sre.MathmlStoreRules,
-  'SemanticTreeRules': sre.SemanticTreeRules,
-  'MathspeakFrench': sre.MathspeakFrench,
-  'MathspeakRules': sre.MathspeakRules,
-  'MathspeakSpanish': sre.MathspeakSpanish,
-  'NemethRules': sre.NemethRules,
-  'ClearspeakFrench': sre.ClearspeakFrench,
-  'ClearspeakRules': sre.ClearspeakRules,
-  'EmacspeakRules': sre.EmacspeakRules,
-  'SummaryFrench': sre.SummaryFrench,
-  'SummaryRules': sre.SummaryRules,
-  'SummarySpanish': sre.SummarySpanish,
-  'PrefixFrench': sre.PrefixFrench,
-  'PrefixRules': sre.PrefixRules,
-  'PrefixSpanish': sre.PrefixSpanish
-};
+sre.SpeechRuleStores.INIT_ = false;
 
 
 /**
- * @return {Array.<string>} A list of all rule set names.
+ * Initializes the context function mappings for speech rule stores.
  */
-sre.SpeechRuleStores.availableSets = function() {
-  return Object.keys(sre.SpeechRuleStores.RULE_SETS_);
-};
-
-
-/**
- * Retrieves a constructor of a valid rule set.
- * @param {string} name The name of the rule set.
- * @return {sre.BaseRuleStore} The constructor of the rule store.
- */
-sre.SpeechRuleStores.getConstructor = function(name) {
-  var set = sre.SpeechRuleStores.RULE_SETS_[name];
-  return set ? set : null;
+sre.SpeechRuleStores.init = function() {
+  if (sre.SpeechRuleStores.INIT_) {
+    return;
+  }
+  sre.MathspeakRules();
+  sre.ClearspeakRules();
+  sre.PrefixRules();
+  sre.OtherRules();
+  sre.BrailleRules();
+  sre.SpeechRuleStores.INIT_ = true;
 };

@@ -11,7 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "Fahrenheit"
+        "default": "grado Fahrenheit",
+        "plural": "grados Fahrenheit"
       }
     },
     "category": "temperature"
@@ -24,7 +25,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "centígrados"
+        "default": "centígrado"
       }
     },
     "category": "temperature"
@@ -37,7 +38,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "Kelvin"
+        "default": "Kelvin",
+        "plural": "Kelvin"
       }
     },
     "category": "temperature"

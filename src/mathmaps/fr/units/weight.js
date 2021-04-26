@@ -6,9 +6,7 @@
     "key": "lb",
     "mappings": {
       "default": {
-        "default": "livres",
-        "singular": "livre",
-        "dual": ""
+        "default": "livre"
       }
     },
     "names": [
@@ -20,9 +18,7 @@
     "key": "oz",
     "mappings": {
       "default": {
-        "default": "onces",
-        "singular": "oce",
-        "dual": ""
+        "default": "once"
       }
     },
     "names": [
@@ -34,28 +30,108 @@
     "key": "gr",
     "mappings": {
       "default": {
-        "default": "grains",
-        "singular": "grain",
-        "dual": ""
+        "default": "gramme"
       }
     },
     "names": [
-      "g",
       "gr"
+    ]
+  },
+  {
+    "key": "g",
+    "si": true,
+    "mappings": {
+      "default": {
+        "default": "gramme"
+      }
+    },
+    "names": [
+      "g"
     ]
   },
   {
     "key": "t",
     "mappings": {
       "default": {
-        "default": "tonnes",
-        "singular": "tonne",
-        "dual": ""
+        "default": "tonne"
       }
     },
     "names": [
       "t",
       "T"
     ]
+  },
+    {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "drachme"
+      }
+    },
+    "key": "dram",
+    "names": [
+      "dr",
+      "dr."
+    ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "stone"
+      }
+    },
+    "key": "st",
+    "names": [
+      "st",
+      "st."
+    ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "quarter"
+      }
+    },
+    "key": "qtr",
+    "names": [
+      "qtr",
+      "qtr."
+    ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "long ton"
+      }
+    },
+    "key": "LT",
+    "names": [
+      "LT",
+      "L.T."
+    ]
+  },
+  {
+    "category": "weight",
+    "mappings": {
+      "default": {
+        "default": "microgramme"
+      }
+    },
+    "key": "mcg",
+    "names": [
+      "mcg"
+    ]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "quintal"
+     }
+   },
+   "key": "cwt",
+   "names": ["cwt", "cwt.", "qq"]
   }
 ]

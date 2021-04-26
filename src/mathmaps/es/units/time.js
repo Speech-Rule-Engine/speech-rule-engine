@@ -3,49 +3,26 @@
     "locale": "es"
   },
   {
-    "key": "ns",
-    "names": [
-      "ns"
-    ],
-    "mappings": {
-      "default": {
-        "default": "nanosegundos"
-      }
-    },
-    "category": "time"
-  },
-  {
-    "key": "µs",
-    "names": [
-      "µs"
-    ],
-    "mappings": {
-      "default": {
-        "default": "microsegundos"
-      }
-    },
-    "category": "time"
-  },
-  {
-    "key": "ms",
-    "names": [
-      "ms"
-    ],
-    "mappings": {
-      "default": {
-        "default": "milisegundos"
-      }
-    },
-    "category": "time"
-  },
-  {
     "key": "s",
+    "si": true,
     "names": [
       "s"
     ],
     "mappings": {
       "default": {
-        "default": "segundos"
+        "default": "segundo"
+      }
+    },
+    "category": "time"
+  },
+  {
+    "key": "″",
+    "names": [
+      "″"
+    ],
+    "mappings": {
+      "default": {
+        "default": "segundo"
       }
     },
     "category": "time"
@@ -53,14 +30,23 @@
   {
     "key": "min",
     "names": [
-      "min"
+      "min", "′"
     ],
     "mappings": {
       "default": {
-        "default": "minutos"
+        "default": "minuto"
       }
     },
     "category": "time"
+  },
+  {"category": "time",
+   "mappings": {
+     "default": {
+       "default": "grado"
+     }
+   },
+   "key": "°",
+   "names": ["°"]
   },
   {
     "key": "h",

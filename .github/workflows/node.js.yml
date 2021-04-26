@@ -1,0 +1,47 @@
+# This workflow will do a clean install of node dependencies, build the source
+# code and run tests in block on the latest version of node.
+
+name: Tests
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    name: Compile SRE with locales
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Speech Rule Engine
+        run: npm ci; npm run build --if-present; npm run pretest
+      - name: Upload build
+        uses: actions/upload-artifact@v2
+        with:
+          name: sre-library
+          path: lib
+          
+  test:
+
+    strategy:
+      matrix:
+        block: [base, walker, semantic, en, de, fr, es, it, nemeth]
+    needs: setup
+    runs-on: ubuntu-latest
+    name: SRE jests tests for ${{ matrix.block }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Downloading the build
+        uses: actions/download-artifact@v2
+        with:
+          name: sre-library
+          path: lib
+      - name: Set up tests
+        run: |
+          sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+          git submodule update --init --recursive
+          cd sre-tests; sudo chmod -R 777 .; npm ci
+      - name: Run tests for ${{ matrix.block }}
+        run: npm run actionTest js/json/${{ matrix.block }}

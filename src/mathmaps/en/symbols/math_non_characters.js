@@ -3,13 +3,8 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "mathematical italic small h over two time greek letter pi",
-        "alternative": "italic small h over two pi",
-        "short": "italic h over two pi"
-      },
-      "physics": {
-        "default": "planck constant over two pi",
-        "alternative": "planck constant over 2 pi"
+        "default": "italic h over two pi",
+        "physics": "planck constant over two pi"
       }
     },
     "key": "210F"
@@ -18,8 +13,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "l b bar symbol",
-        "short": "l b bar"
+        "default": "l b bar"
       }
     },
     "key": "2114"
@@ -28,9 +22,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "numero sign",
-        "alternative": "numero",
-        "short": "numero"
+        "default": "numero"
       }
     },
     "key": "2116"
@@ -85,9 +77,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "trade mark sign",
-        "alternative": "trademark",
-        "short": "trade mark"
+        "default": "trade mark"
       }
     },
     "key": "2122"
@@ -105,9 +95,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "ounce sign",
-        "alternative": "ounce",
-        "short": "ounce"
+        "default": "ounce"
       }
     },
     "key": "2125"
@@ -116,9 +104,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "ohm sign",
-        "alternative": "ohm",
-        "short": "ohm"
+        "default": "ohm"
       }
     },
     "key": "2126"
@@ -127,9 +113,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "inverted ohm sign",
-        "alternative": "mho",
-        "short": "inverted ohm"
+        "default": "inverted ohm"
       }
     },
     "key": "2127"
@@ -138,9 +122,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "kelvin sign",
-        "alternative": "degrees kelvin",
-        "short": "kelvin"
+        "default": "kelvin"
       }
     },
     "key": "212A"
@@ -149,9 +131,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "angstrom sign",
-        "alternative": "angstrom unit",
-        "short": "angstrom"
+        "default": "angstrom"
       }
     },
     "key": "212B"
@@ -160,8 +140,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "estimated symbol",
-        "short": "estimated"
+        "default": "estimated"
       }
     },
     "key": "212E"
@@ -170,9 +149,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "turned capital f",
-        "alternative": "turned f",
-        "short": "turned cap f"
+        "default": "turned cap F"
       },
       "mathspeak": {
         "default": "turned upper F"
@@ -193,8 +170,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rotated capital q",
-        "short": "rotated cap q"
+        "default": "rotated cap Q"
       },
       "mathspeak": {
         "default": "rotated upper Q"
@@ -215,8 +191,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "turned sans serif capital g",
-        "short": "turned sans serif cap g"
+        "default": "turned sans serif cap G"
       },
       "mathspeak": {
         "default": "turned sans serif upper G"
@@ -228,8 +203,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "turned sans serif capital l",
-        "short": "turned sans serif cap l"
+        "default": "turned sans serif cap L"
       },
       "mathspeak": {
         "default": "turned sans serif upper L"
@@ -241,8 +215,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "reversed sans serif capital l",
-        "short": "reversed sans serif cap l"
+        "default": "reversed sans serif cap L"
       },
       "mathspeak": {
         "default": "reversed sans serif upper L"
@@ -254,8 +227,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "turned sans serif capital y",
-        "short": "turned sans serif cap y"
+        "default": "turned sans serif cap Y"
       },
       "mathspeak": {
         "default": "turned sans serif upper Y"

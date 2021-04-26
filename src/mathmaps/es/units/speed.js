@@ -22,7 +22,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "millas por hora"
+        "default": "milla por hora",
+        "plural": "millas por hora"
       }
     },
     "category": "speed"
@@ -46,7 +47,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "kilómetros por hora"
+        "plural": "kilómetros por hora",
+        "default": "kilómetro por hora"
       }
     },
     "category": "speed"

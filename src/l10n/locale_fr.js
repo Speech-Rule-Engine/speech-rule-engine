@@ -21,7 +21,6 @@
 goog.provide('sre.Locale.fr');
 
 goog.require('sre.Locale');
-goog.require('sre.Messages');
 goog.require('sre.Numbers.fr');
 
 
@@ -66,7 +65,8 @@ sre.Locale.fr = {
     FRAC_NEST_DEPTH: function(node) { return false; },
     RADICAL_NEST_DEPTH: sre.Locale.nestingToString,
     COMBINE_ROOT_INDEX: sre.Locale.combinePostfixIndex,
-    COMBINE_NESTED_FRACTION: function(a, b, c) {return c.replace(/ $/g, '') + b + a;},
+    COMBINE_NESTED_FRACTION: function(a, b, c) {
+      return c.replace(/ $/g, '') + b + a;},
     COMBINE_NESTED_RADICAL: function(a, b, c) {return c + ' ' + a;},
     FONT_REGEXP: function(font) {return RegExp(' (en |)' + font + '$');}
   },
@@ -78,26 +78,45 @@ sre.Locale.fr = {
   },
 
   FONT: {
-    'bold': 'gras',
-    'bold-fraktur': 'gothique gras',
-    'bold-italic': 'italique gras',
-    'bold-script': 'script gras',
-    'caligraphic': 'calligraphique',
-    'caligraphic-bold': 'calligraphique gras',
+    'bold': 'en gras',
+    'bold-fraktur': 'en gothique gras',
+    'bold-italic': 'en italique gras',
+    'bold-script': 'de ronde en gras',
+    'caligraphic': 'en calligraphique',
+    'caligraphic-bold': 'en calligraphique gras',
     'double-struck': 'ajouré',
-    'double-struck-italic': 'ajouré en italique',  // TODO: Get the ajoure fonts right!
-    'fraktur': 'gothique',
-    'italic': 'italique',
-    'monospace': 'chasse fixe',
-    'normal': 'normal',
-    'oldstyle': 'ancien',
-    'oldstyle-bold': 'ancien gras',
-    'script': 'script',
+    'double-struck-italic': 'ajouré en italique',
+    'fraktur': 'en gothique',
+    'fullwidth': 'en pleine largeur',
+    'italic': 'en italique',
+    'monospace': 'en chasse fixe',
+    'normal': 'en normal',
+    'oldstyle': 'en ancien',
+    'oldstyle-bold': 'en ancien gras',
+    'script': 'de ronde',
     'sans-serif': 'sans empattement',
-    'sans-serif-italic': 'sans empattement italique',
-    'sans-serif-bold': 'sans empattement gras',
-    'sans-serif-bold-italic': 'sans empattement italique gras',
+    'sans-serif-italic': 'en italique sans empattement',
+    'sans-serif-bold': 'en gras sans empattement',
+    'sans-serif-bold-italic': 'en italique gras sans empattement',
     'unknown': 'inconnu'
+  },
+
+
+  EMBELLISH: {
+    // Embellishments
+    // TODO: Here we need specialist combiners!
+    'super': ['exposant', sre.Locale.prefixCombiner],
+    'sub': ['indice', sre.Locale.prefixCombiner],
+    'circled': 'encerclé',
+    'parenthesized': 'entre parenthèses',
+    'period': 'un point',
+    'negative-circled': 'encerclé noir',
+    'double-circled': 'encerclé double',
+    'circled-sans-serif': 'sans empattement encerclé',
+    'negative-circled-sans-serif': 'sans empattement encerclé noir',
+    'comma': 'virgule',
+    'squared': 'encadré',
+    'negative-squared': 'encadré inverse'
   },
 
   ROLE: {
@@ -171,12 +190,61 @@ sre.Locale.fr = {
     JOINER_FRAC: ' '
   },
 
-  // TODO: These!
-  PLURAL_UNIT: {
-    'foot': 'feet',
-    'inch': 'inches'
+  SI: function(prefix, unit) {
+    return prefix + unit;
   },
 
-  NUMBERS: sre.Numbers.fr.NUMBERS
+  PLURAL: function(unit) {
+    return (/.*s$/.test(unit)) ? unit : unit + 's';
+  },
+
+  NUMBERS: sre.Numbers.fr.NUMBERS,
+
+  ALPHABETS: {
+    latinSmall: [
+      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+    ],
+    latinCap: [
+      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+    ],
+    greekSmall: [
+      'nabla',  // This is here as it is small.
+      'alpha', 'bêta', 'gamma', 'delta', 'epsilon', 'zêta', 'êta', 'thêta',
+      'iota', 'kappa', 'lambda', 'mû', 'nû', 'xi', 'omicron', 'pi', 'rhô',
+      'sigma final', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'oméga',
+      // Symbols below
+      'dérivée partielle', 'epsilon', 'thêta', 'kappa', 'phi', 'rhô', 'pi'
+    ],
+    greekCap: [
+      'Alpha', 'Bêta', 'Gamma', 'Delta', 'Epsilon', 'Zêta', 'Êta', 'Thêta',
+      'Iota', 'Kappa', 'Lambda', 'Mû', 'Nû', 'Xi', 'Omicron', 'Pi', 'Rhô',
+      'Thêta', // Theta symbol
+      'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Oméga'
+    ]
+  },
+
+  ALPHABET_TRANSFORMERS: {
+    digit: {
+      default: function(n) {
+        return n === 0 ? 'zero' : sre.Numbers.fr.numberToWords(n);},
+      mathspeak: function(n) {return n.toString();},
+      clearspeak: function(n) {return n.toString();}},
+    letter: {
+      default: function(n) {return n;}
+    }
+  },
+
+  ALPHABET_PREFIXES: {
+    capPrefix: {default: 'majuscule'},
+    smallPrefix: {default: ''},
+    digitPrefix: {default: ''}
+  },
+
+  ALPHABET_COMBINER: function(letter, font, cap) {
+    letter = cap ? letter + ' ' + cap : letter;
+    return font ? letter + ' ' + font : letter;
+  }
 
 };

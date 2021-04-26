@@ -8,8 +8,18 @@ process.stdin;
 process.stdin.setEncoding;
 process.stdout;
 var readline;
-readline.createInterface;
+
+
+
+/**
+ * @constructor
+ */
+readline.createInterface = function() {
+  this.on = function(msg, fnc) { };
+};
+
 var commander;
+commander.opts;
 commander.version;
 commander.option;
 commander.parse;

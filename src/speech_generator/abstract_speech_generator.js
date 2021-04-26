@@ -22,7 +22,6 @@
 
 goog.provide('sre.AbstractSpeechGenerator');
 
-goog.require('sre.AuralRendering');
 goog.require('sre.RebuildStree');
 goog.require('sre.SpeechGenerator');
 goog.require('sre.SpeechGeneratorUtil');
@@ -79,7 +78,8 @@ sre.AbstractSpeechGenerator.prototype.setRebuilt = function(rebuilt) {
  */
 sre.AbstractSpeechGenerator.prototype.setOptions = function(options) {
   this.options_ = options || {};
-  this.modality = sre.EnrichMathml.addPrefix(this.options_.modality || 'speech');
+  this.modality = sre.EnrichMathml.addPrefix(
+      this.options_.modality || 'speech');
 };
 
 
@@ -120,6 +120,5 @@ sre.AbstractSpeechGenerator.prototype.generateSpeech = function(node, xml) {
     this.rebuilt_ = new sre.RebuildStree(xml);
   }
   sre.System.getInstance().setupEngine(this.options_);
-  var descrs = sre.SpeechGeneratorUtil.computeSpeech(this.getRebuilt().xml);
-  return sre.AuralRendering.getInstance().markup(descrs);
+  return sre.SpeechGeneratorUtil.computeMarkup(this.getRebuilt().xml);
 };

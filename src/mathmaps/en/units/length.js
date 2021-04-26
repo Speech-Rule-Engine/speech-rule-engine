@@ -1,44 +1,10 @@
-[{"locale": "en"},
+[
+  {"locale": "en"},
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "millimeter"
-     }
-   },
-   "key": "mm",
-   "names": ["mm"]
-  },
-  {"category": "length",
-   "mappings": {
-     "default": {
-       "default": "centimeter"
-     }
-   },
-   "key": "cm",
-   "names": ["cm"]
-  },
-  {"category": "length",
-   "mappings": {
-     "default": {
-       "default": "meter"
-     }
-   },
-   "key": "m",
-   "names": ["m"]
-  },
-  {"category": "length",
-   "mappings": {
-     "default": {
-       "default": "kilometer"
-     }
-   },
-   "key": "km",
-   "names": ["km"]
-  },
-  {"category": "length",
-   "mappings": {
-     "default": {
-       "default": "foot"
+       "default": "foot",
+       "plural": "feet"
      }
    },
    "key": "ft",
@@ -47,7 +13,8 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "inch"
+       "default": "inch",
+       "plural": "inches"
      }
    },
    "key": "in",
@@ -71,6 +38,45 @@
    "key": "yd",
    "names": ["yd", "yd."]
   },
+
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "link"
+     }
+   },
+   "key": "link",
+   "names": ["li", "li."]
+  },
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "rod"
+     }
+   },
+   "key": "rod",
+   "names": ["rd", "rd."]
+  },
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "chain"
+     }
+   },
+   "key": "chain",
+   "names": ["ch", "ch."]
+  },
+  {"category": "length",
+   "mappings": {
+     "default": {
+       "default": "furlong"
+     }
+   },
+   "key": "furlong",
+   "names": ["fur", "fur."]
+  },
+
+  
   {"category": "length",
    "mappings": {
      "default": {
@@ -79,5 +85,15 @@
    },
    "key": "n.m.",
    "names": ["n.m."]
+  },
+  {"category": "length",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "meter"
+     }
+   },
+   "key": "m",
+   "names": ["m"]
   }
 ]

@@ -20,8 +20,6 @@
  */
 goog.provide('sre.Api');
 
-goog.require('sre.DomUtil');
-goog.require('sre.Engine.Mode');
 goog.require('sre.System');
 
 
@@ -125,13 +123,6 @@ module.exports.setupEngine = sre.System.getInstance().setupEngine;
 
 
 /**
- * Exporting XML pretty printer.
- * @deprecated Use engine option pprint.
- */
-module.exports.pprintXML = sre.DomUtil.formatXml;
-
-
-/**
  * Exporting readiness flag.
  */
 module.exports.engineReady = sre.System.getInstance().engineReady;
@@ -144,9 +135,14 @@ module.exports.engineSetup = sre.System.getInstance().engineSetup;
 
 
 /**
+ * Clean exit from the system. Needed in async mode.
+ */
+module.exports.exit = sre.System.getInstance().exit;
+
+
+/**
  * Default setup of the Engine.
  */
 if (global && global.SRE_JSON_PATH) {
   sre.System.setAsync();
 }
-

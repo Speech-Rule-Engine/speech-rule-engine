@@ -52,9 +52,11 @@ sre.Trie.prototype.addRule = function(rule) {
   var context = rule.context;
   var dynamicCstr = rule.dynamicCstr.getValues();
   for (var i = 0, l = dynamicCstr.length; i < l; i++) {
-    node = this.addNode_(node, dynamicCstr[i], sre.TrieNode.Kind.DYNAMIC, context);
+    node = this.addNode_(node, dynamicCstr[i], sre.TrieNode.Kind.DYNAMIC,
+                         context);
   }
-  node = this.addNode_(node, rule.precondition.query, sre.TrieNode.Kind.QUERY, context);
+  node = this.addNode_(node, rule.precondition.query, sre.TrieNode.Kind.QUERY,
+                       context);
   var booleans = rule.precondition.constraints;
   for (i = 0, l = booleans.length; i < l; i++) {
     node = this.addNode_(node, booleans[i], sre.TrieNode.Kind.BOOLEAN, context);
@@ -245,6 +247,7 @@ sre.Trie.prototype.enumerate = function(opt_info) {
  * @param {sre.TrieNode} node The trie node from where to start.
  * @param {Object|undefined} info Initial dynamic constraint information.
  * @return {Object} The collated information.
+ * @private
  */
 sre.Trie.prototype.enumerate_ = function(node, info) {
   info = info || {};
@@ -253,7 +256,25 @@ sre.Trie.prototype.enumerate_ = function(node, info) {
     if (child.kind !== sre.TrieNode.Kind.DYNAMIC) {
       continue;
     }
-    info[child.getConstraint()] = this.enumerate_(child, info[child.getConstraint()]);
+    info[child.getConstraint()] =
+        this.enumerate_(child, info[child.getConstraint()]);
   }
   return info;
+};
+
+
+/**
+ * Retrieves a node for a given sequence of constraints.
+ *
+ * @param {Array.<string>} constraint A list of constraints.
+ * @return {sre.TrieNode} The speech rule or null.
+ * What if multiple rules exist?
+ */
+sre.Trie.prototype.byConstraint = function(constraint) {
+  let node = this.root;
+  while (constraint.length && node) {
+    let cstr = constraint.shift();
+    node = node.getChild(cstr);
+  }
+  return node || null;
 };

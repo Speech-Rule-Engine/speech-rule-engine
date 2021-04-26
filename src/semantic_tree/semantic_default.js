@@ -90,6 +90,7 @@ sre.SemanticDefault.prototype.retrieveNode = function(node) {
  * @param {string} symbol The symbol or text content of a node.
  * @param {sre.SemanticAttr.Font} font The name of its font if it exists.
  * @return {string} A uniform key for the default mapping.
+ * @private
  */
 sre.SemanticDefault.key_ = function(symbol, font) {
   return font ? symbol + ':' + font : symbol;
@@ -123,7 +124,7 @@ sre.SemanticCollator_ = function() {
 
 /**
  * Adds a semantic node to the structure by appending it to the already existing
- * one for a particular the symbol.
+ * one for a particular symbol.
  * @param {string} symbol A symbol.
  * @param {T} entry A semantic entry.
  */
@@ -175,7 +176,7 @@ sre.SemanticCollator_.prototype.retrieveNode = function(node) {
  * @return {sre.SemanticCollator_} An empty copy of the collator.
  * @protected
  */
-sre.SemanticCollator_.prototype.copy_ = goog.abstractMethod;
+sre.SemanticCollator_.prototype.copyCollator = goog.abstractMethod;
 
 
 /**
@@ -183,7 +184,7 @@ sre.SemanticCollator_.prototype.copy_ = goog.abstractMethod;
  *     deep copy!
  */
 sre.SemanticCollator_.prototype.copy = function() {
-  var collator = this.copy_();
+  var collator = this.copyCollator();
   for (var key in this.map_) {
     collator.map_[key] = this.map_[key];
   }
@@ -267,7 +268,7 @@ goog.inherits(sre.SemanticNodeCollator, sre.SemanticCollator_);
 /**
  * @override
  */
-sre.SemanticNodeCollator.prototype.copy_ = function() {
+sre.SemanticNodeCollator.prototype.copyCollator = function() {
   return new sre.SemanticNodeCollator();
 };
 
@@ -318,13 +319,8 @@ goog.inherits(sre.SemanticMeaningCollator, sre.SemanticCollator_);
 /**
  * @override
  */
-sre.SemanticMeaningCollator.prototype.copy_ = function() {
+sre.SemanticMeaningCollator.prototype.copyCollator = function() {
   return new sre.SemanticMeaningCollator();
-};
-
-
-sre.SemanticMeaningCollator.prototype.addKey = function(key, entry) {
-
 };
 
 
@@ -387,7 +383,7 @@ sre.SemanticMeaningCollator.prototype.default = function() {
 
 /**
  * Derives a default mapping from the collator if there is a possible reduction.
- * @return {?sre.SemanticDefault} The unambiguous default mapping. Null, if not
+ * @return {?sre.SemanticDefault} The unambiguous default mapping. Null, if no
  *     reduction can be achieved.
  */
 sre.SemanticMeaningCollator.prototype.newDefault = function() {

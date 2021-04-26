@@ -3,9 +3,8 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": "alef symbol",
-        "alternative": "first transfinite cardinal",
-        "short": "alef"
+        "default": "first transfinite cardinal",
+        "alternative": "alef"
       }
     },
     "key": "2135"
@@ -14,9 +13,8 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": "bet symbol",
-        "alternative": "second transfinite cardinal",
-        "short": "bet"
+        "default": "second transfinite cardinal",
+        "alternative": "bet"
       }
     },
     "key": "2136"
@@ -25,9 +23,8 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": "gimel symbol",
-        "alternative": "third transfinite cardinal",
-        "short": "gimel"
+        "default": "third transfinite cardinal",
+        "alternative": "gimel"
       }
     },
     "key": "2137"
@@ -36,9 +33,8 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": "dalet symbol",
-        "alternative": "fourth transfinite cardinal",
-        "short": "dalet"
+        "default": "fourth transfinite cardinal",
+        "alternative": "dalet"
       }
     },
     "key": "2138"

@@ -20,7 +20,6 @@
  */
 goog.provide('sre.Cli');
 
-goog.require('sre.Api');
 goog.require('sre.Debugger');
 goog.require('sre.Engine');
 goog.require('sre.Engine.Mode');
@@ -62,12 +61,12 @@ sre.Cli = function() {
 
 /**
  * Sets parameters for the speech rule engine.
- * @param {string|boolean} value The cli option value.
  * @param {string} arg The option to set.
+ * @param {string|boolean} value The cli option value.
+ * @param {string} def The default for the option.
  */
-sre.Cli.prototype.set = function(value, arg) {
-  this.setup[arg] = typeof value === 'undefined' ?
-      ((arg === 'semantics') ? false : true) : value;
+sre.Cli.prototype.set = function(arg, value, def) {
+  this.setup[arg] = typeof value === 'undefined' ? true : value;
 };
 
 
@@ -112,12 +111,15 @@ sre.Cli.prototype.enumerate = function() {
         let styles = Object.keys(dyna2[ax3]).sort();
         if (ax3 === 'clearspeak') {
           var clear3 = true;
-          var prefs = sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
+          var prefs =
+              sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
           for (var ax4 in prefs) {
             table.push([compStr(clear1 ? ax1 : '', length[0]),
                         compStr(clear2 ? ax2 : '', length[1]),
                         compStr(clear3 ? ax3 : '', length[2]),
                         prefs[ax4].join(', ')]);
+            clear1 = false;
+            clear2 = false;
             clear3 = false;
           }
         } else {
@@ -151,11 +153,11 @@ sre.Cli.prototype.enumerate = function() {
  * @param {string} input The name of the input file.
  */
 sre.Cli.prototype.execute = function(input) {
-  var commander = sre.SystemExternal.commander;
+  var options = sre.SystemExternal.commander.opts();
   this.runProcessors_(
       goog.bind(
       function(proc, file) {
-        this.system.processFile(proc, file, commander.output);
+        this.system.processFile(proc, file, options.output);
       }, this),
       input);
 };
@@ -190,12 +192,12 @@ sre.Cli.prototype.runProcessors_ = function(processor, input) {
  * given output file.
  */
 sre.Cli.prototype.readline = function() {
-  var commander = sre.SystemExternal.commander;
+  var options = sre.SystemExternal.commander.opts();
   sre.SystemExternal.process.stdin.setEncoding('utf8');
   var inter = sre.SystemExternal.require('readline').createInterface({
     input: sre.SystemExternal.process.stdin,
-    output: commander.output ?
-        sre.SystemExternal.fs.createWriteStream(commander.output) :
+    output: options.output ?
+        sre.SystemExternal.fs.createWriteStream(options.output) :
         sre.SystemExternal.process.stdout
   });
   var input = '';
@@ -237,27 +239,35 @@ sre.Cli.prototype.readExpression_ = function(input) {
 sre.Cli.prototype.commandLine = function() {
   var commander = sre.SystemExternal.commander;
   var system = this.system;
-  var set = goog.bind(this.set, this);
+  var set = goog.bind(function(key) {
+    return goog.bind(function(val, def) {
+      this.set(key, val, def);
+    }, this);
+  }, this);
   var processor = goog.bind(this.processor, this);
 
   commander.version(system.version).
       usage('[options] <file ...>').
-      option('').
       option('-i, --input [name]', 'Input file [name]. (Deprecated)').
       option('-o, --output [name]', 'Output file [name]. Defaults to stdout.').
-      option('').
-      option('-d, --dom [name]', 'Domain or subject area [name].',
-             set, 'domain').
-      option('-t, --style [name]', 'Speech style [name].', set, 'style').
-      option('-c, --locale [code]', 'Locale [code].', set, 'locale').
-      option('-b, --modality [name]', 'Modality [name].', set, 'modality').
-      option('-s, --semantics', 'Switch OFF semantics interpretation. (Deprecated)',
-             set, 'semantics').
+      option('-d, --domain [name]', 'Speech rule set [name]. See --options' +
+             ' for details.',
+             set(sre.DynamicCstr.Axis.DOMAIN),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN]).
+      option('-t, --style [name]', 'Speech style [name]. See --options' +
+             ' for details.',
+             set(sre.DynamicCstr.Axis.STYLE),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE]).
+      option('-c, --locale [code]', 'Locale [code].',
+             set(sre.DynamicCstr.Axis.LOCALE),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE]).
+      option('-b, --modality [name]', 'Modality [name].',
+             set(sre.DynamicCstr.Axis.MODALITY),
+             sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY]).
       option('-k, --markup [name]', 'Generate speech output with markup tags.',
-             set, 'markup').
+             set('markup'), 'none').
       option('-r, --rate [value]', 'Base rate [value] for tagged speech' +
-             ' output.', set, 'rate').
-      option('').
+             ' output.', set('rate'), '100').
       option('-p, --speech', 'Generate speech output (default).',
              processor, 'speech').
       option('-a, --audit', 'Generate auditory descriptions (JSON format).',
@@ -266,28 +276,31 @@ sre.Cli.prototype.commandLine = function() {
              processor, 'json').
       option('-x, --xml', 'Generate XML of semantic tree.',
              processor, 'semantic').
-      option('').
       option('-m, --mathml', 'Generate enriched MathML.',
              processor, 'enriched').
       option('-g, --generate <depth>', 'Include generated speech in enriched' +
-             ' MathML (with -m option only).', set, 'speech').
-      option('-r, --structure', 'Include structure attribute in enriched' +
-             ' MathML (with -m option only).', set, 'structure').
-      option('').
+             ' MathML (with -m option only).', set('speech'), 'none').
+      option('-w, --structure', 'Include structure attribute in enriched' +
+             ' MathML (with -m option only).', set('structure')).
       option('-P, --pprint', 'Pretty print output whenever possible.',
-             set, 'pprint').
+             set('pprint')).
+      option('-f, --rules [name]', 'Loads a local rule file [name].',
+             set('rules')).
+      option('-C, --prune [branch]', 'Prune trie [branch] for clean reload.',
+             set('prune')).
       option('-v, --verbose', 'Verbose mode.').
       option('-l, --log [name]', 'Log file [name].').
-      option('--options', 'List engine setup options.').
-      on('option:options', goog.bind(function() {
-        this.enumerate(); sre.SystemExternal.process.exit(0);}, this)).
+      option('--opt', 'List engine setup options.').
+      on('option:opt', goog.bind(function() {
+        this.enumerate(); sre.System.getInstance().exit(0);}, this)).
       parse(sre.SystemExternal.process.argv);
   this.system.setupEngine(this.setup);
-  if (commander.verbose) {
-    sre.Debugger.getInstance().init(commander.log);
+  var options = commander.opts();
+  if (options.verbose) {
+    sre.Debugger.getInstance().init(options.log);
   }
-  if (commander.input) {
-    this.execute(commander.input);
+  if (options.input) {
+    this.execute(options.input);
   }
   if (commander.args.length) {
     commander.args.forEach(goog.bind(this.execute, this));
@@ -295,7 +308,7 @@ sre.Cli.prototype.commandLine = function() {
     this.readline();
   }
   sre.Debugger.getInstance().exit(
-      function() {sre.SystemExternal.process.exit(0);});
+      function() {sre.System.getInstance().exit(0);});
 };
 
 if (sre.SystemExternal.process && sre.SystemExternal.process.env.SRE_TOP_PATH) {

@@ -37,3 +37,35 @@ sre.SpeechRuleEvaluator = function() { };
  * @return {!Array.<sre.AuditoryDescription>} The resulting description.
  */
 sre.SpeechRuleEvaluator.prototype.evaluateDefault = goog.abstractMethod;
+
+
+/**
+ * Default evaluation of a whitespace string.
+ * @param {!string} str The string.
+ * @return {!Array.<sre.AuditoryDescription>} The resulting description.
+ */
+sre.SpeechRuleEvaluator.prototype.evaluateWhitespace = goog.abstractMethod;
+
+
+/**
+ * Default evaluation of a string string.
+ * @param {!string} str The string.
+ * @return {!Array.<sre.AuditoryDescription>} The resulting description.
+ */
+sre.SpeechRuleEvaluator.prototype.evaluateString = goog.abstractMethod;
+
+
+/**
+ * Custom evaluation of a string.
+ * @param {!string} str The string.
+ * @return {sre.AuditoryDescription} The resulting description.
+ */
+sre.SpeechRuleEvaluator.prototype.evaluateCustom = goog.abstractMethod;
+
+
+/**
+ * Default evaluation of a character.
+ * @param {!string} chr The character.
+ * @return {!sre.AuditoryDescription} The resulting description.
+ */
+sre.SpeechRuleEvaluator.prototype.evaluateCharacter = goog.abstractMethod;

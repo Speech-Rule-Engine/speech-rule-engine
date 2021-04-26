@@ -23,7 +23,6 @@
 goog.provide('sre.DummyWalker');
 
 goog.require('sre.AbstractWalker');
-goog.require('sre.Levels');
 
 
 
@@ -85,4 +84,12 @@ sre.DummyWalker.prototype.home = function() { };
  */
 sre.DummyWalker.prototype.getDepth = function() {
   return 0;
+};
+
+
+/**
+ * @override
+ */
+sre.DummyWalker.prototype.initLevels = function() {
+
 };

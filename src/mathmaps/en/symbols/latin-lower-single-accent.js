@@ -4,9 +4,7 @@
     "key": "00E0",
     "mappings": {
       "default": {
-        "default": "latin small letter a with grave",
-        "alternative": "latin small letter a grave",
-        "short": "a grave"
+        "default": "a grave"
       },
       "mathspeak": {
         "default": "modifying above a with grave",
@@ -20,9 +18,7 @@
     "key": "00E1",
     "mappings": {
       "default": {
-        "default": "latin small letter a with acute",
-        "alternative": "latin small letter a acute",
-        "short": "a acute"
+        "default": "a acute"
       },
       "mathspeak": {
         "default": "modifying above a with acute",
@@ -36,9 +32,7 @@
     "key": "00E2",
     "mappings": {
       "default": {
-        "default": "latin small letter a with circumflex",
-        "alternative": "latin small letter a hat",
-        "short": "a hat"
+        "default": "a hat"
       },
       "mathspeak": {
         "default": "modifying above a with caret",
@@ -52,9 +46,7 @@
     "key": "00E3",
     "mappings": {
       "default": {
-        "default": "latin small letter a with tilde",
-        "alternative": "latin small letter a tilde",
-        "short": "a tilde"
+        "default": "a tilde"
       },
       "mathspeak": {
         "default": "a overtilde",
@@ -68,9 +60,7 @@
     "key": "00E4",
     "mappings": {
       "default": {
-        "default": "latin small letter a with diaeresis",
-        "alternative": "latin small letter a double overdot",
-        "short": "a double overdot"
+        "default": "a double overdot"
       },
       "mathspeak": {
         "default": "modifying above a with double dot",
@@ -84,9 +74,7 @@
     "key": "00E5",
     "mappings": {
       "default": {
-        "default": "latin small letter a with ring above",
-        "alternative": "latin small letter a ring",
-        "short": "a ring"
+        "default": "a ring"
       },
       "mathspeak": {
         "default": "modifying above a with ring",
@@ -100,9 +88,7 @@
     "key": "00E7",
     "mappings": {
       "default": {
-        "default": "latin small letter c with cedilla",
-        "alternative": "latin small letter c cedilla",
-        "short": "c cedilla"
+        "default": "c cedilla"
       },
       "mathspeak": {
         "default": "modifying above c with cedilla",
@@ -116,9 +102,7 @@
     "key": "00E8",
     "mappings": {
       "default": {
-        "default": "latin small letter e with grave",
-        "alternative": "latin small letter e grave",
-        "short": "e grave"
+        "default": "e grave"
       },
       "mathspeak": {
         "default": "modifying above e with grave",
@@ -132,9 +116,7 @@
     "key": "00E9",
     "mappings": {
       "default": {
-        "default": "latin small letter e with acute",
-        "alternative": "latin small letter e acute",
-        "short": "e acute"
+        "default": "e acute"
       },
       "mathspeak": {
         "default": "modifying above e with acute",
@@ -148,9 +130,7 @@
     "key": "00EA",
     "mappings": {
       "default": {
-        "default": "latin small letter e with circumflex",
-        "alternative": "latin small letter e hat",
-        "short": "e hat"
+        "default": "e hat"
       },
       "mathspeak": {
         "default": "modifying above e with caret",
@@ -164,9 +144,7 @@
     "key": "00EB",
     "mappings": {
       "default": {
-        "default": "latin small letter e with diaeresis",
-        "alternative": "latin small letter e double overdot",
-        "short": "e double overdot"
+        "default": "e double overdot"
       },
       "mathspeak": {
         "default": "modifying above e with double dot",
@@ -180,9 +158,7 @@
     "key": "00EC",
     "mappings": {
       "default": {
-        "default": "latin small letter i with grave",
-        "alternative": "latin small letter i grave",
-        "short": "i grave"
+        "default": "i grave"
       },
       "mathspeak": {
         "default": "modifying above i with grave",
@@ -196,9 +172,7 @@
     "key": "00ED",
     "mappings": {
       "default": {
-        "default": "latin small letter i with acute",
-        "alternative": "latin small letter i acute",
-        "short": "i acute"
+        "default": "i acute"
       },
       "mathspeak": {
         "default": "modifying above i with acute",
@@ -212,9 +186,7 @@
     "key": "00EE",
     "mappings": {
       "default": {
-        "default": "latin small letter i with circumflex",
-        "alternative": "latin small letter i hat",
-        "short": "i hat"
+        "default": "i hat"
       },
       "mathspeak": {
         "default": "modifying above i with caret",
@@ -228,9 +200,7 @@
     "key": "00EF",
     "mappings": {
       "default": {
-        "default": "latin small letter i with diaeresis",
-        "alternative": "latin small letter i double overdot",
-        "short": "i double overdot"
+        "default": "i double overdot"
       },
       "mathspeak": {
         "default": "modifying above i with double dot",
@@ -244,9 +214,7 @@
     "key": "00F1",
     "mappings": {
       "default": {
-        "default": "latin small letter n with tilde",
-        "alternative": "latin small letter n tilde",
-        "short": "n tilde"
+        "default": "n tilde"
       },
       "mathspeak": {
         "default": "n overtilde",
@@ -260,9 +228,7 @@
     "key": "00F2",
     "mappings": {
       "default": {
-        "default": "latin small letter o with grave",
-        "alternative": "latin small letter o grave",
-        "short": "o grave"
+        "default": "o grave"
       },
       "mathspeak": {
         "default": "modifying above o with grave",
@@ -276,9 +242,7 @@
     "key": "00F3",
     "mappings": {
       "default": {
-        "default": "latin small letter o with acute",
-        "alternative": "latin small letter o acute",
-        "short": "o acute"
+        "default": "o acute"
       },
       "mathspeak": {
         "default": "modifying above o with acute",
@@ -292,9 +256,7 @@
     "key": "00F4",
     "mappings": {
       "default": {
-        "default": "latin small letter o with circumflex",
-        "alternative": "latin small letter o hat",
-        "short": "o hat"
+        "default": "o hat"
       },
       "mathspeak": {
         "default": "modifying above o with caret",
@@ -308,9 +270,7 @@
     "key": "00F5",
     "mappings": {
       "default": {
-        "default": "latin small letter o with tilde",
-        "alternative": "latin small letter o tilde",
-        "short": "o tilde"
+        "default": "o tilde"
       },
       "mathspeak": {
         "default": "o overtilde",
@@ -324,9 +284,7 @@
     "key": "00F6",
     "mappings": {
       "default": {
-        "default": "latin small letter o with diaeresis",
-        "alternative": "latin small letter o double overdot",
-        "short": "o double overdot"
+        "default": "o double overdot"
       },
       "mathspeak": {
         "default": "modifying above o with double dot",
@@ -340,9 +298,7 @@
     "key": "00F9",
     "mappings": {
       "default": {
-        "default": "latin small letter u with grave",
-        "alternative": "latin small letter u grave",
-        "short": "u grave"
+        "default": "u grave"
       },
       "mathspeak": {
         "default": "modifying above u with grave",
@@ -356,9 +312,7 @@
     "key": "00FA",
     "mappings": {
       "default": {
-        "default": "latin small letter u with acute",
-        "alternative": "latin small letter u acute",
-        "short": "u acute"
+        "default": "u acute"
       },
       "mathspeak": {
         "default": "modifying above u with acute",
@@ -372,9 +326,7 @@
     "key": "00FB",
     "mappings": {
       "default": {
-        "default": "latin small letter u with circumflex",
-        "alternative": "latin small letter u hat",
-        "short": "u hat"
+        "default": "u hat"
       },
       "mathspeak": {
         "default": "modifying above u with caret",
@@ -388,9 +340,7 @@
     "key": "00FC",
     "mappings": {
       "default": {
-        "default": "latin small letter u with diaeresis",
-        "alternative": "latin small letter u double overdot",
-        "short": "u double overdot"
+        "default": "u double overdot"
       },
       "mathspeak": {
         "default": "modifying above u with double dot",
@@ -404,9 +354,7 @@
     "key": "00FD",
     "mappings": {
       "default": {
-        "default": "latin small letter y with acute",
-        "alternative": "latin small letter y acute",
-        "short": "y acute"
+        "default": "y acute"
       },
       "mathspeak": {
         "default": "modifying above y with acute",
@@ -420,9 +368,7 @@
     "key": "00FF",
     "mappings": {
       "default": {
-        "default": "latin small letter y with diaeresis",
-        "alternative": "latin small letter y double overdot",
-        "short": "y double overdot"
+        "default": "y double overdot"
       },
       "mathspeak": {
         "default": "modifying above y with double dot",
@@ -436,9 +382,7 @@
     "key": "0101",
     "mappings": {
       "default": {
-        "default": "latin small letter a with macron",
-        "alternative": "latin small letter a overbar",
-        "short": "a overbar"
+        "default": "a overbar"
       },
       "mathspeak": {
         "default": "a overbar",
@@ -452,9 +396,7 @@
     "key": "0103",
     "mappings": {
       "default": {
-        "default": "latin small letter a with breve",
-        "alternative": "latin small letter a breve",
-        "short": "a breve"
+        "default": "a breve"
       },
       "mathspeak": {
         "default": "modifying above a with breve",
@@ -468,9 +410,7 @@
     "key": "0105",
     "mappings": {
       "default": {
-        "default": "latin small letter a with ogonek",
-        "alternative": "latin small letter a ogonek",
-        "short": "a ogonek"
+        "default": "a ogonek"
       },
       "mathspeak": {
         "default": "modifying above a with ogonek",
@@ -484,9 +424,7 @@
     "key": "0107",
     "mappings": {
       "default": {
-        "default": "latin small letter c with acute",
-        "alternative": "latin small letter c acute",
-        "short": "c acute"
+        "default": "c acute"
       },
       "mathspeak": {
         "default": "modifying above c with acute",
@@ -500,9 +438,7 @@
     "key": "0109",
     "mappings": {
       "default": {
-        "default": "latin small letter c with circumflex",
-        "alternative": "latin small letter c hat",
-        "short": "c hat"
+        "default": "c hat"
       },
       "mathspeak": {
         "default": "modifying above c with caret",
@@ -516,9 +452,7 @@
     "key": "010B",
     "mappings": {
       "default": {
-        "default": "latin small letter c with dot above",
-        "alternative": "latin small letter c dot",
-        "short": "c overdot"
+        "default": "c overdot"
       },
       "mathspeak": {
         "default": "modifying above c with dot",
@@ -532,9 +466,7 @@
     "key": "010D",
     "mappings": {
       "default": {
-        "default": "latin small letter c with caron",
-        "alternative": "latin small letter c hacek",
-        "short": "c caron"
+        "default": "c caron"
       },
       "mathspeak": {
         "default": "modifying above c with caron",
@@ -548,9 +480,7 @@
     "key": "010F",
     "mappings": {
       "default": {
-        "default": "latin small letter d with caron",
-        "alternative": "latin small letter d hacek",
-        "short": "d caron"
+        "default": "d caron"
       },
       "mathspeak": {
         "default": "modifying above d with caron",
@@ -564,9 +494,7 @@
     "key": "0113",
     "mappings": {
       "default": {
-        "default": "latin small letter e with macron",
-        "alternative": "latin small letter e overbar",
-        "short": "e overbar"
+        "default": "e overbar"
       },
       "mathspeak": {
         "default": "e overbar",
@@ -580,9 +508,7 @@
     "key": "0115",
     "mappings": {
       "default": {
-        "default": "latin small letter e with breve",
-        "alternative": "latin small letter e breve",
-        "short": "e breve"
+        "default": "e breve"
       },
       "mathspeak": {
         "default": "modifying above e with breve",
@@ -596,9 +522,7 @@
     "key": "0117",
     "mappings": {
       "default": {
-        "default": "latin small letter e with dot above",
-        "alternative": "latin small letter e dot",
-        "short": "e overdot"
+        "default": "e overdot"
       },
       "mathspeak": {
         "default": "modifying above e with dot",
@@ -612,9 +536,7 @@
     "key": "0119",
     "mappings": {
       "default": {
-        "default": "latin small letter e with ogonek",
-        "alternative": "latin small letter e ogonek",
-        "short": "e ogonek"
+        "default": "e ogonek"
       },
       "mathspeak": {
         "default": "modifying above e with ogonek",
@@ -628,9 +550,7 @@
     "key": "011B",
     "mappings": {
       "default": {
-        "default": "latin small letter e with caron",
-        "alternative": "latin small letter e hacek",
-        "short": "e caron"
+        "default": "e caron"
       },
       "mathspeak": {
         "default": "modifying above e with caron",
@@ -644,9 +564,7 @@
     "key": "011D",
     "mappings": {
       "default": {
-        "default": "latin small letter g with circumflex",
-        "alternative": "latin small letter g hat",
-        "short": "g hat"
+        "default": "g hat"
       },
       "mathspeak": {
         "default": "modifying above g with caret",
@@ -660,9 +578,7 @@
     "key": "011F",
     "mappings": {
       "default": {
-        "default": "latin small letter g with breve",
-        "alternative": "latin small letter g breve",
-        "short": "g breve"
+        "default": "g breve"
       },
       "mathspeak": {
         "default": "modifying above g with breve",
@@ -676,9 +592,7 @@
     "key": "0121",
     "mappings": {
       "default": {
-        "default": "latin small letter g with dot above",
-        "alternative": "latin small letter g dot",
-        "short": "g overdot"
+        "default": "g overdot"
       },
       "mathspeak": {
         "default": "modifying above g with dot",
@@ -692,9 +606,7 @@
     "key": "0123",
     "mappings": {
       "default": {
-        "default": "latin small letter g with cedilla",
-        "alternative": "latin small letter g cedilla",
-        "short": "g cedilla"
+        "default": "g cedilla"
       },
       "mathspeak": {
         "default": "modifying above g with cedilla",
@@ -708,9 +620,7 @@
     "key": "0125",
     "mappings": {
       "default": {
-        "default": "latin small letter h with circumflex",
-        "alternative": "latin small letter h hat",
-        "short": "h hat"
+        "default": "h hat"
       },
       "mathspeak": {
         "default": "modifying above h with caret",
@@ -724,9 +634,7 @@
     "key": "0129",
     "mappings": {
       "default": {
-        "default": "latin small letter i with tilde",
-        "alternative": "latin small letter i tilde",
-        "short": "i tilde"
+        "default": "i tilde"
       },
       "mathspeak": {
         "default": "i overtilde",
@@ -740,9 +648,7 @@
     "key": "012B",
     "mappings": {
       "default": {
-        "default": "latin small letter i with macron",
-        "alternative": "latin small letter i overbar",
-        "short": "i overbar"
+        "default": "i overbar"
       },
       "mathspeak": {
         "default": "i overbar",
@@ -756,9 +662,7 @@
     "key": "012D",
     "mappings": {
       "default": {
-        "default": "latin small letter i with breve",
-        "alternative": "latin small letter i breve",
-        "short": "i breve"
+        "default": "i breve"
       },
       "mathspeak": {
         "default": "modifying above i with breve",
@@ -772,9 +676,7 @@
     "key": "012F",
     "mappings": {
       "default": {
-        "default": "latin small letter i with ogonek",
-        "alternative": "latin small letter i ogonek",
-        "short": "i ogonek"
+        "default": "i ogonek"
       },
       "mathspeak": {
         "default": "modifying above i with ogonek",
@@ -788,9 +690,7 @@
     "key": "0131",
     "mappings": {
       "default": {
-        "default": "latin small letter dotless i",
-        "alternative": "latin small letter dotless i",
-        "short": "dotless i"
+        "default": "dotless i"
       },
       "mathspeak": {
         "default": "modifying above dotless i",
@@ -804,9 +704,7 @@
     "key": "0135",
     "mappings": {
       "default": {
-        "default": "latin small letter j circumflex",
-        "alternative": "latin small letter j hat",
-        "short": "j hat"
+        "default": "j hat"
       },
       "mathspeak": {
         "default": "modifying above j with caret",
@@ -820,9 +718,7 @@
     "key": "0137",
     "mappings": {
       "default": {
-        "default": "latin small letter k with cedilla",
-        "alternative": "latin small letter k cedilla",
-        "short": "k cedilla"
+        "default": "k cedilla"
       },
       "mathspeak": {
         "default": "modifying above k with cedilla",
@@ -836,9 +732,7 @@
     "key": "013A",
     "mappings": {
       "default": {
-        "default": "latin small letter l with acute",
-        "alternative": "latin small letter l acute",
-        "short": "l acute"
+        "default": "l acute"
       },
       "mathspeak": {
         "default": "modifying above l with acute",
@@ -852,9 +746,7 @@
     "key": "013C",
     "mappings": {
       "default": {
-        "default": "latin small letter l with cedilla",
-        "alternative": "latin small letter l cedilla",
-        "short": "l cedilla"
+        "default": "l cedilla"
       },
       "mathspeak": {
         "default": "modifying above l with cedilla",
@@ -868,9 +760,7 @@
     "key": "013E",
     "mappings": {
       "default": {
-        "default": "latin small letter l with caron",
-        "alternative": "latin small letter l hacek",
-        "short": "l caron"
+        "default": "l caron"
       },
       "mathspeak": {
         "default": "modifying above l with caron",
@@ -884,9 +774,7 @@
     "key": "0140",
     "mappings": {
       "default": {
-        "default": "latin small letter l with middle dot",
-        "alternative": "latin small letter l middle dot",
-        "short": "l middle dot"
+        "default": "l middle dot"
       },
       "mathspeak": {
         "default": "modifying above l with middle dot",
@@ -900,9 +788,7 @@
     "key": "0144",
     "mappings": {
       "default": {
-        "default": "latin small letter n with acute",
-        "alternative": "latin small letter n acute",
-        "short": "n acute"
+        "default": "n acute"
       },
       "mathspeak": {
         "default": "modifying above n with acute",
@@ -916,9 +802,7 @@
     "key": "0146",
     "mappings": {
       "default": {
-        "default": "latin small letter n with cedilla",
-        "alternative": "latin small letter n cedilla",
-        "short": "n cedilla"
+        "default": "n cedilla"
       },
       "mathspeak": {
         "default": "modifying above n with cedilla",
@@ -932,9 +816,7 @@
     "key": "0148",
     "mappings": {
       "default": {
-        "default": "latin small letter n with caron",
-        "alternative": "latin small letter n hacek",
-        "short": "n caron"
+        "default": "n caron"
       },
       "mathspeak": {
         "default": "modifying above n with caron",
@@ -948,9 +830,7 @@
     "key": "014D",
     "mappings": {
       "default": {
-        "default": "latin small letter o macron",
-        "alternative": "latin small letter o overbar",
-        "short": "o overbar"
+        "default": "o overbar"
       },
       "mathspeak": {
         "default": "o overbar",
@@ -964,9 +844,7 @@
     "key": "014F",
     "mappings": {
       "default": {
-        "default": "latin small letter o with breve",
-        "alternative": "latin small letter o breve",
-        "short": "o breve"
+        "default": "o breve"
       },
       "mathspeak": {
         "default": "modifying above o with breve",
@@ -980,9 +858,7 @@
     "key": "0151",
     "mappings": {
       "default": {
-        "default": "latin small letter o with double acute",
-        "alternative": "latin small letter o double acute",
-        "short": "o double acute"
+        "default": "o double acute"
       },
       "mathspeak": {
         "default": "modifying above o with double acute",
@@ -996,9 +872,7 @@
     "key": "0155",
     "mappings": {
       "default": {
-        "default": "latin small letter r with acute",
-        "alternative": "latin small letter r acute",
-        "short": "r acute"
+        "default": "r acute"
       },
       "mathspeak": {
         "default": "modifying above r with acute",
@@ -1012,9 +886,7 @@
     "key": "0157",
     "mappings": {
       "default": {
-        "default": "latin small letter r with cedilla",
-        "alternative": "latin small letter r cedilla",
-        "short": "r cedilla"
+        "default": "r cedilla"
       },
       "mathspeak": {
         "default": "modifying above r with cedilla",
@@ -1028,9 +900,7 @@
     "key": "0159",
     "mappings": {
       "default": {
-        "default": "latin small letter r with caron",
-        "alternative": "latin small letter r hacek",
-        "short": "r caron"
+        "default": "r caron"
       },
       "mathspeak": {
         "default": "modifying above r with caron",
@@ -1044,9 +914,7 @@
     "key": "015B",
     "mappings": {
       "default": {
-        "default": "latin small letter s with acute",
-        "alternative": "latin small letter s acute",
-        "short": "s acute"
+        "default": "s acute"
       },
       "mathspeak": {
         "default": "modifying above s with acute",
@@ -1060,9 +928,7 @@
     "key": "015D",
     "mappings": {
       "default": {
-        "default": "latin small letter s with circumflex",
-        "alternative": "latin small letter s hat",
-        "short": "s hat"
+        "default": "s hat"
       },
       "mathspeak": {
         "default": "modifying above s with caret",
@@ -1076,9 +942,7 @@
     "key": "015F",
     "mappings": {
       "default": {
-        "default": "latin small letter s with cedilla",
-        "alternative": "latin small letter s cedilla",
-        "short": "s cedilla"
+        "default": "s cedilla"
       },
       "mathspeak": {
         "default": "modifying above s with cedilla",
@@ -1092,9 +956,7 @@
     "key": "0161",
     "mappings": {
       "default": {
-        "default": "latin small letter s with caron",
-        "alternative": "latin small letter s hacek",
-        "short": "s caron"
+        "default": "s caron"
       },
       "mathspeak": {
         "default": "modifying above s with caron",
@@ -1108,9 +970,7 @@
     "key": "0163",
     "mappings": {
       "default": {
-        "default": "latin small letter t with cedilla",
-        "alternative": "latin small letter t cedilla",
-        "short": "t cedilla"
+        "default": "t cedilla"
       },
       "mathspeak": {
         "default": "modifying above t with cedilla",
@@ -1124,9 +984,7 @@
     "key": "0165",
     "mappings": {
       "default": {
-        "default": "latin small letter t with caron",
-        "alternative": "latin small letter t hacek",
-        "short": "t caron"
+        "default": "t caron"
       },
       "mathspeak": {
         "default": "modifying above t with caron",
@@ -1140,9 +998,7 @@
     "key": "0169",
     "mappings": {
       "default": {
-        "default": "latin small letter u with tilde",
-        "alternative": "latin small letter u tilde",
-        "short": "u tilde"
+        "default": "u tilde"
       },
       "mathspeak": {
         "default": "u overtilde",
@@ -1156,9 +1012,7 @@
     "key": "016B",
     "mappings": {
       "default": {
-        "default": "latin small letter u with macron",
-        "alternative": "latin small letter u overbar",
-        "short": "u overbar"
+        "default": "u overbar"
       },
       "mathspeak": {
         "default": "u overbar",
@@ -1172,9 +1026,7 @@
     "key": "016D",
     "mappings": {
       "default": {
-        "default": "latin small letter u with breve",
-        "alternative": "latin small letter u breve",
-        "short": "u breve"
+        "default": "u breve"
       },
       "mathspeak": {
         "default": "modifying above u with breve",
@@ -1188,9 +1040,7 @@
     "key": "016F",
     "mappings": {
       "default": {
-        "default": "latin small letter u with ring above",
-        "alternative": "latin small letter u ring",
-        "short": "u ring"
+        "default": "u ring"
       },
       "mathspeak": {
         "default": "modifying above u with ring",
@@ -1204,9 +1054,7 @@
     "key": "0171",
     "mappings": {
       "default": {
-        "default": "latin small letter u with double acute",
-        "alternative": "latin small letter u double acute",
-        "short": "u double acute"
+        "default": "u double acute"
       },
       "mathspeak": {
         "default": "modifying above u with double acute",
@@ -1220,9 +1068,7 @@
     "key": "0173",
     "mappings": {
       "default": {
-        "default": "latin small letter u with ogonek",
-        "alternative": "latin small letter u ogonek",
-        "short": "u ogonek"
+        "default": "u ogonek"
       },
       "mathspeak": {
         "default": "modifying above u with ogonek",
@@ -1236,9 +1082,7 @@
     "key": "0175",
     "mappings": {
       "default": {
-        "default": "latin small letter w with circumflex",
-        "alternative": "latin small letter w hat",
-        "short": "w hat"
+        "default": "w hat"
       },
       "mathspeak": {
         "default": "modifying above w with caret",
@@ -1252,9 +1096,7 @@
     "key": "0177",
     "mappings": {
       "default": {
-        "default": "latin small letter y with circumflex",
-        "alternative": "latin small letter y hat",
-        "short": "y hat"
+        "default": "y hat"
       },
       "mathspeak": {
         "default": "modifying above y with caret",
@@ -1268,9 +1110,7 @@
     "key": "017A",
     "mappings": {
       "default": {
-        "default": "latin small letter z with acute",
-        "alternative": "latin small letter z acute",
-        "short": "z acute"
+        "default": "z acute"
       },
       "mathspeak": {
         "default": "modifying above z with acute",
@@ -1284,9 +1124,7 @@
     "key": "017C",
     "mappings": {
       "default": {
-        "default": "latin small letter z with dot above",
-        "alternative": "latin small letter z dot",
-        "short": "z overdot"
+        "default": "z overdot"
       },
       "mathspeak": {
         "default": "modifying above z with dot",
@@ -1300,9 +1138,7 @@
     "key": "017E",
     "mappings": {
       "default": {
-        "default": "latin small letter z with caron",
-        "alternative": "latin small letter z hacek",
-        "short": "z caron"
+        "default": "z caron"
       },
       "mathspeak": {
         "default": "modifying above z with caron",
@@ -1316,9 +1152,7 @@
     "key": "01CE",
     "mappings": {
       "default": {
-        "default": "latin small letter a with caron",
-        "alternative": "latin small letter a hacek",
-        "short": "a caron"
+        "default": "a caron"
       },
       "mathspeak": {
         "default": "modifying above a with caron",
@@ -1332,9 +1166,7 @@
     "key": "01D0",
     "mappings": {
       "default": {
-        "default": "latin small letter i with caron",
-        "alternative": "latin small letter i hacek",
-        "short": "i caron"
+        "default": "i caron"
       },
       "mathspeak": {
         "default": "modifying above i with caron",
@@ -1348,9 +1180,7 @@
     "key": "01D2",
     "mappings": {
       "default": {
-        "default": "latin small letter o with caron",
-        "alternative": "latin small letter o hacek",
-        "short": "o caron"
+        "default": "o caron"
       },
       "mathspeak": {
         "default": "modifying above o with caron",
@@ -1364,9 +1194,7 @@
     "key": "01D4",
     "mappings": {
       "default": {
-        "default": "latin small letter u with caron",
-        "alternative": "latin small letter u hacek",
-        "short": "u caron"
+        "default": "u caron"
       },
       "mathspeak": {
         "default": "modifying above u with caron",
@@ -1380,9 +1208,7 @@
     "key": "01E7",
     "mappings": {
       "default": {
-        "default": "latin small letter g with caron",
-        "alternative": "latin small letter g hacek",
-        "short": "g caron"
+        "default": "g caron"
       },
       "mathspeak": {
         "default": "modifying above g with caron",
@@ -1396,9 +1222,7 @@
     "key": "01E9",
     "mappings": {
       "default": {
-        "default": "latin small letter k with caron",
-        "alternative": "latin small letter k hacek",
-        "short": "k caron"
+        "default": "k caron"
       },
       "mathspeak": {
         "default": "modifying above k with caron",
@@ -1412,9 +1236,7 @@
     "key": "01EB",
     "mappings": {
       "default": {
-        "default": "latin small letter o with ogonek",
-        "alternative": "latin small letter o ogonek",
-        "short": "o ogonek"
+        "default": "o ogonek"
       },
       "mathspeak": {
         "default": "modifying above o with ogonek",
@@ -1428,9 +1250,7 @@
     "key": "01F0",
     "mappings": {
       "default": {
-        "default": "latin small letter j with caron",
-        "alternative": "latin small letter j hacek",
-        "short": "j caron"
+        "default": "j caron"
       },
       "mathspeak": {
         "default": "modifying above j with caron",
@@ -1444,9 +1264,7 @@
     "key": "01F5",
     "mappings": {
       "default": {
-        "default": "latin small letter g with acute",
-        "alternative": "latin small letter g acute",
-        "short": "g acute"
+        "default": "g acute"
       },
       "mathspeak": {
         "default": "modifying above g with acute",
@@ -1460,9 +1278,7 @@
     "key": "01F9",
     "mappings": {
       "default": {
-        "default": "latin small letter n with grave",
-        "alternative": "latin small letter n grave",
-        "short": "n grave"
+        "default": "n grave"
       },
       "mathspeak": {
         "default": "modifying above n with grave",
@@ -1476,9 +1292,7 @@
     "key": "0201",
     "mappings": {
       "default": {
-        "default": "latin small letter a with double grave",
-        "alternative": "latin small letter a double grave",
-        "short": "a double grave"
+        "default": "a double grave"
       },
       "mathspeak": {
         "default": "modifying above a with double grave",
@@ -1492,9 +1306,7 @@
     "key": "0203",
     "mappings": {
       "default": {
-        "default": "latin small letter a with inverted breve",
-        "alternative": "latin small letter a inverted breve",
-        "short": "a inverted breve"
+        "default": "a inverted breve"
       },
       "mathspeak": {
         "default": "modifying above a with inverted breve",
@@ -1508,9 +1320,7 @@
     "key": "0205",
     "mappings": {
       "default": {
-        "default": "latin small letter e with double grave",
-        "alternative": "latin small letter e double grave",
-        "short": "e double grave"
+        "default": "e double grave"
       },
       "mathspeak": {
         "default": "modifying above e with double grave",
@@ -1524,9 +1334,7 @@
     "key": "0207",
     "mappings": {
       "default": {
-        "default": "latin small letter e with inverted breve",
-        "alternative": "latin small letter e inverted breve",
-        "short": "e inverted breve"
+        "default": "e inverted breve"
       },
       "mathspeak": {
         "default": "modifying above e with inverted breve",
@@ -1540,9 +1348,7 @@
     "key": "0209",
     "mappings": {
       "default": {
-        "default": "latin small letter i with double grave",
-        "alternative": "latin small letter i double grave",
-        "short": "i double grave"
+        "default": "i double grave"
       },
       "mathspeak": {
         "default": "modifying above i with double grave",
@@ -1556,9 +1362,7 @@
     "key": "020B",
     "mappings": {
       "default": {
-        "default": "latin small letter i with inverted breve",
-        "alternative": "latin small letter i inverted breve",
-        "short": "i inverted breve"
+        "default": "i inverted breve"
       },
       "mathspeak": {
         "default": "modifying above i with inverted breve",
@@ -1572,9 +1376,7 @@
     "key": "020D",
     "mappings": {
       "default": {
-        "default": "latin small letter o with double grave",
-        "alternative": "latin small letter o double grave",
-        "short": "o double grave"
+        "default": "o double grave"
       },
       "mathspeak": {
         "default": "modifying above o with double grave",
@@ -1588,9 +1390,7 @@
     "key": "020F",
     "mappings": {
       "default": {
-        "default": "latin small letter o with inverted breve",
-        "alternative": "latin small letter o inverted breve",
-        "short": "o inverted breve"
+        "default": "o inverted breve"
       },
       "mathspeak": {
         "default": "modifying above o with inverted breve",
@@ -1604,9 +1404,7 @@
     "key": "0211",
     "mappings": {
       "default": {
-        "default": "latin small letter r with double grave",
-        "alternative": "latin small letter r double grave",
-        "short": "r double grave"
+        "default": "r double grave"
       },
       "mathspeak": {
         "default": "modifying above r with double grave",
@@ -1620,9 +1418,7 @@
     "key": "0213",
     "mappings": {
       "default": {
-        "default": "latin small letter r with inverted breve",
-        "alternative": "latin small letter r inverted breve",
-        "short": "r inverted breve"
+        "default": "r inverted breve"
       },
       "mathspeak": {
         "default": "modifying above r with inverted breve",
@@ -1636,9 +1432,7 @@
     "key": "0215",
     "mappings": {
       "default": {
-        "default": "latin small letter u with double grave",
-        "alternative": "latin small letter u double grave",
-        "short": "u double grave"
+        "default": "u double grave"
       },
       "mathspeak": {
         "default": "modifying above u with double grave",
@@ -1652,9 +1446,7 @@
     "key": "0217",
     "mappings": {
       "default": {
-        "default": "latin small letter u with inverted breve",
-        "alternative": "latin small letter u inverted breve",
-        "short": "u inverted breve"
+        "default": "u inverted breve"
       },
       "mathspeak": {
         "default": "modifying above u with inverted breve",
@@ -1668,9 +1460,7 @@
     "key": "0219",
     "mappings": {
       "default": {
-        "default": "latin small letter s with comma below",
-        "alternative": "latin small letter s comma below",
-        "short": "s comma below"
+        "default": "s comma below"
       },
       "mathspeak": {
         "default": "modifying below s with comma below",
@@ -1684,9 +1474,7 @@
     "key": "021B",
     "mappings": {
       "default": {
-        "default": "latin small letter t with comma below",
-        "alternative": "latin small letter t comma below",
-        "short": "t comma below"
+        "default": "t comma below"
       },
       "mathspeak": {
         "default": "modifying below t with comma below",
@@ -1700,9 +1488,7 @@
     "key": "021F",
     "mappings": {
       "default": {
-        "default": "latin small letter h with caron",
-        "alternative": "latin small letter h caron",
-        "short": "h caron"
+        "default": "h caron"
       },
       "mathspeak": {
         "default": "modifying above h with caron",
@@ -1716,9 +1502,7 @@
     "key": "0227",
     "mappings": {
       "default": {
-        "default": "latin small letter a with dot above",
-        "alternative": "latin small letter a overdot",
-        "short": "a overdot"
+        "default": "a overdot"
       },
       "mathspeak": {
         "default": "modifying above a with dot",
@@ -1732,9 +1516,7 @@
     "key": "0229",
     "mappings": {
       "default": {
-        "default": "latin small letter e with cedilla",
-        "alternative": "latin small letter e cedilla",
-        "short": "e cedilla"
+        "default": "e cedilla"
       },
       "mathspeak": {
         "default": "modifying above e with cedilla",
@@ -1748,9 +1530,7 @@
     "key": "022F",
     "mappings": {
       "default": {
-        "default": "latin small letter o with dot above",
-        "alternative": "latin small letter o overdot",
-        "short": "o overdot"
+        "default": "o overdot"
       },
       "mathspeak": {
         "default": "modifying above o with dot",
@@ -1764,9 +1544,7 @@
     "key": "0233",
     "mappings": {
       "default": {
-        "default": "latin small letter y with macron",
-        "alternative": "latin small letter y overbar",
-        "short": "y overbar"
+        "default": "y overbar"
       },
       "mathspeak": {
         "default": "y overbar",
@@ -1780,9 +1558,7 @@
     "key": "0237",
     "mappings": {
       "default": {
-        "default": "latin small letter dotless j",
-        "alternative": "latin small letter dotless j",
-        "short": "dotless j"
+        "default": "dotless j"
       },
       "mathspeak": {
         "default": "modifying above dotless j",
@@ -1796,9 +1572,7 @@
     "key": "1E01",
     "mappings": {
       "default": {
-        "default": "latin small letter a ring below",
-        "alternative": "latin small letter a ring below",
-        "short": "a ring below"
+        "default": "a ring below"
       },
       "mathspeak": {
         "default": "modifying below a with ring below",
@@ -1812,9 +1586,7 @@
     "key": "1E03",
     "mappings": {
       "default": {
-        "default": "latin small letter b with dot above",
-        "alternative": "latin small letter b overdot",
-        "short": "b overdot"
+        "default": "b overdot"
       },
       "mathspeak": {
         "default": "modifying above b with dot",
@@ -1828,9 +1600,7 @@
     "key": "1E05",
     "mappings": {
       "default": {
-        "default": "latin small letter b with dot below",
-        "alternative": "latin small letter b underdot",
-        "short": "b underdot"
+        "default": "b underdot"
       },
       "mathspeak": {
         "default": "modifying below b with dot",
@@ -1844,9 +1614,7 @@
     "key": "1E07",
     "mappings": {
       "default": {
-        "default": "latin small letter b with line below",
-        "alternative": "latin small letter b underbar",
-        "short": "b underbar"
+        "default": "b underbar"
       },
       "mathspeak": {
         "default": "b underbar",
@@ -1860,9 +1628,7 @@
     "key": "1E0B",
     "mappings": {
       "default": {
-        "default": "latin small letter d with dot above",
-        "alternative": "latin small letter d overdot",
-        "short": "d overdot"
+        "default": "d overdot"
       },
       "mathspeak": {
         "default": "modifying above d with dot",
@@ -1876,9 +1642,7 @@
     "key": "1E0D",
     "mappings": {
       "default": {
-        "default": "latin small letter d with dot below",
-        "alternative": "latin small letter d underdot",
-        "short": "d underdot"
+        "default": "d underdot"
       },
       "mathspeak": {
         "default": "modifying below d with dot",
@@ -1892,9 +1656,7 @@
     "key": "1E0F",
     "mappings": {
       "default": {
-        "default": "latin small letter d with line below",
-        "alternative": "latin small letter d underbar",
-        "short": "d underbar"
+        "default": "d underbar"
       },
       "mathspeak": {
         "default": "d underbar",
@@ -1908,9 +1670,7 @@
     "key": "1E11",
     "mappings": {
       "default": {
-        "default": "latin small letter d with cedilla",
-        "alternative": "latin small letter d cedilla",
-        "short": "d cedilla"
+        "default": "d cedilla"
       },
       "mathspeak": {
         "default": "modifying above d with cedilla",
@@ -1924,9 +1684,7 @@
     "key": "1E13",
     "mappings": {
       "default": {
-        "default": "latin small letter d with circumflex below",
-        "alternative": "latin small letter d underhat",
-        "short": "d underhat"
+        "default": "d underhat"
       },
       "mathspeak": {
         "default": "modifying below d with caret",
@@ -1940,9 +1698,7 @@
     "key": "1E19",
     "mappings": {
       "default": {
-        "default": "latin small letter e with circumflex below",
-        "alternative": "latin small letter e underhat",
-        "short": "e underhat"
+        "default": "e underhat"
       },
       "mathspeak": {
         "default": "modifying below e with caret",
@@ -1956,9 +1712,7 @@
     "key": "1E1B",
     "mappings": {
       "default": {
-        "default": "latin small letter e with tilde below",
-        "alternative": "latin small letter e tilde below",
-        "short": "e tilde below"
+        "default": "e tilde below"
       },
       "mathspeak": {
         "default": "e undertilde",
@@ -1972,9 +1726,7 @@
     "key": "1E1F",
     "mappings": {
       "default": {
-        "default": "latin small letter f with dot above",
-        "alternative": "latin small letter f overdot",
-        "short": "f overdot"
+        "default": "f overdot"
       },
       "mathspeak": {
         "default": "modifying above f with dot",
@@ -1988,9 +1740,7 @@
     "key": "1E21",
     "mappings": {
       "default": {
-        "default": "latin small letter g with macron",
-        "alternative": "latin small letter g overbar",
-        "short": "g overbar"
+        "default": "g overbar"
       },
       "mathspeak": {
         "default": "g overbar",
@@ -2004,9 +1754,7 @@
     "key": "1E23",
     "mappings": {
       "default": {
-        "default": "latin small letter h with dot above",
-        "alternative": "latin small letter h overdot",
-        "short": "h overdot"
+        "default": "h overdot"
       },
       "mathspeak": {
         "default": "modifying above h with dot",
@@ -2020,9 +1768,7 @@
     "key": "1E25",
     "mappings": {
       "default": {
-        "default": "latin small letter h with dot below",
-        "alternative": "latin small letter h underdot",
-        "short": "h underdot"
+        "default": "h underdot"
       },
       "mathspeak": {
         "default": "modifying below h with dot",
@@ -2036,9 +1782,7 @@
     "key": "1E27",
     "mappings": {
       "default": {
-        "default": "latin small letter h with diaeresis",
-        "alternative": "latin small letter h double overdot",
-        "short": "h double overdot"
+        "default": "h double overdot"
       },
       "mathspeak": {
         "default": "modifying above h with double dot",
@@ -2052,9 +1796,7 @@
     "key": "1E29",
     "mappings": {
       "default": {
-        "default": "latin small letter h with cedilla",
-        "alternative": "latin small letter h cedilla",
-        "short": "h cedilla"
+        "default": "h cedilla"
       },
       "mathspeak": {
         "default": "modifying above h with cedilla",
@@ -2068,9 +1810,7 @@
     "key": "1E2B",
     "mappings": {
       "default": {
-        "default": "latin small letter h with breve below",
-        "alternative": "latin small letter h breve below",
-        "short": "h breve below"
+        "default": "h breve below"
       },
       "mathspeak": {
         "default": "modifying below h with breve below",
@@ -2084,9 +1824,7 @@
     "key": "1E2D",
     "mappings": {
       "default": {
-        "default": "latin small letter i with tilde below",
-        "alternative": "latin small letter i tilde below",
-        "short": "i tilde below"
+        "default": "i tilde below"
       },
       "mathspeak": {
         "default": "i undertilde",
@@ -2100,9 +1838,7 @@
     "key": "1E31",
     "mappings": {
       "default": {
-        "default": "latin small letter k with acute",
-        "alternative": "latin small letter k acute",
-        "short": "k acute"
+        "default": "k acute"
       },
       "mathspeak": {
         "default": "modifying above k with acute",
@@ -2116,9 +1852,7 @@
     "key": "1E33",
     "mappings": {
       "default": {
-        "default": "latin small letter k with dot below",
-        "alternative": "latin small letter k underdot",
-        "short": "k underdot"
+        "default": "k underdot"
       },
       "mathspeak": {
         "default": "modifying below k with dot",
@@ -2132,9 +1866,7 @@
     "key": "1E35",
     "mappings": {
       "default": {
-        "default": "latin small letter k with line below",
-        "alternative": "latin small letter k underbar",
-        "short": "k underbar"
+        "default": "k underbar"
       },
       "mathspeak": {
         "default": "k underbar",
@@ -2148,9 +1880,7 @@
     "key": "1E37",
     "mappings": {
       "default": {
-        "default": "latin small letter l with dot below",
-        "alternative": "latin small letter l underdot",
-        "short": "l underdot"
+        "default": "l underdot"
       },
       "mathspeak": {
         "default": "modifying below l with dot",
@@ -2164,9 +1894,7 @@
     "key": "1E3B",
     "mappings": {
       "default": {
-        "default": "latin small letter l with line below",
-        "alternative": "latin small letter l underbar",
-        "short": "l underbar"
+        "default": "l underbar"
       },
       "mathspeak": {
         "default": "l underbar",
@@ -2180,9 +1908,7 @@
     "key": "1E3D",
     "mappings": {
       "default": {
-        "default": "latin small letter l with circumflex below",
-        "alternative": "latin small letter l underhat",
-        "short": "l underhat"
+        "default": "l underhat"
       },
       "mathspeak": {
         "default": "modifying below l with caret",
@@ -2196,9 +1922,7 @@
     "key": "1E3F",
     "mappings": {
       "default": {
-        "default": "latin small letter m with acute",
-        "alternative": "latin small letter m acute",
-        "short": "m acute"
+        "default": "m acute"
       },
       "mathspeak": {
         "default": "modifying above m with acute",
@@ -2212,9 +1936,7 @@
     "key": "1E41",
     "mappings": {
       "default": {
-        "default": "latin small letter m with dot above",
-        "alternative": "latin small letter m overdot",
-        "short": "m overdot"
+        "default": "m overdot"
       },
       "mathspeak": {
         "default": "modifying above m with dot",
@@ -2228,9 +1950,7 @@
     "key": "1E43",
     "mappings": {
       "default": {
-        "default": "latin small letter m with dot below",
-        "alternative": "latin small letter m underdot",
-        "short": "m underdot"
+        "default": "m underdot"
       },
       "mathspeak": {
         "default": "modifying below m with dot",
@@ -2244,9 +1964,7 @@
     "key": "1E45",
     "mappings": {
       "default": {
-        "default": "latin small letter n with dot above",
-        "alternative": "latin small letter n overdot",
-        "short": "n overdot"
+        "default": "n overdot"
       },
       "mathspeak": {
         "default": "modifying above n with dot",
@@ -2260,9 +1978,7 @@
     "key": "1E47",
     "mappings": {
       "default": {
-        "default": "latin small letter n with dot below",
-        "alternative": "latin small letter n underdot",
-        "short": "n underdot"
+        "default": "n underdot"
       },
       "mathspeak": {
         "default": "modifying below n with dot",
@@ -2276,9 +1992,7 @@
     "key": "1E49",
     "mappings": {
       "default": {
-        "default": "latin small letter n with line below",
-        "alternative": "latin small letter n underbar",
-        "short": "n underbar"
+        "default": "n underbar"
       },
       "mathspeak": {
         "default": "n underbar",
@@ -2292,9 +2006,7 @@
     "key": "1E4B",
     "mappings": {
       "default": {
-        "default": "latin small letter n with circumflex below",
-        "alternative": "latin small letter n underhat",
-        "short": "n underhat"
+        "default": "n underhat"
       },
       "mathspeak": {
         "default": "modifying below n with caret",
@@ -2308,9 +2020,7 @@
     "key": "1E55",
     "mappings": {
       "default": {
-        "default": "latin small letter p with acute",
-        "alternative": "latin small letter p acute",
-        "short": "p acute"
+        "default": "p acute"
       },
       "mathspeak": {
         "default": "modifying above p with acute",
@@ -2324,9 +2034,7 @@
     "key": "1E57",
     "mappings": {
       "default": {
-        "default": "latin small letter p with dot above",
-        "alternative": "latin small letter p overdot",
-        "short": "p overdot"
+        "default": "p overdot"
       },
       "mathspeak": {
         "default": "modifying above p with dot",
@@ -2340,9 +2048,7 @@
     "key": "1E59",
     "mappings": {
       "default": {
-        "default": "latin small letter r with dot above",
-        "alternative": "latin small letter r overdot",
-        "short": "r overdot"
+        "default": "r overdot"
       },
       "mathspeak": {
         "default": "modifying above r with dot",
@@ -2356,9 +2062,7 @@
     "key": "1E5B",
     "mappings": {
       "default": {
-        "default": "latin small letter r with dot below",
-        "alternative": "latin small letter r underdot",
-        "short": "r underdot"
+        "default": "r underdot"
       },
       "mathspeak": {
         "default": "modifying below r with dot",
@@ -2372,9 +2076,7 @@
     "key": "1E5F",
     "mappings": {
       "default": {
-        "default": "latin small letter r with line below",
-        "alternative": "latin small letter r underbar",
-        "short": "r underbar"
+        "default": "r underbar"
       },
       "mathspeak": {
         "default": "r underbar",
@@ -2388,9 +2090,7 @@
     "key": "1E61",
     "mappings": {
       "default": {
-        "default": "latin small letter s with dot above",
-        "alternative": "latin small letter s overdot",
-        "short": "s overdot"
+        "default": "s overdot"
       },
       "mathspeak": {
         "default": "modifying above s with dot",
@@ -2404,9 +2104,7 @@
     "key": "1E63",
     "mappings": {
       "default": {
-        "default": "latin small letter s with dot below",
-        "alternative": "latin small letter s underdot",
-        "short": "s underdot"
+        "default": "s underdot"
       },
       "mathspeak": {
         "default": "modifying below s with dot",
@@ -2420,9 +2118,7 @@
     "key": "1E6B",
     "mappings": {
       "default": {
-        "default": "latin small letter t with dot above",
-        "alternative": "latin small letter t overdot",
-        "short": "t overdot"
+        "default": "t overdot"
       },
       "mathspeak": {
         "default": "modifying above t with dot",
@@ -2436,9 +2132,7 @@
     "key": "1E6D",
     "mappings": {
       "default": {
-        "default": "latin small letter t with dot below",
-        "alternative": "latin small letter t underdot",
-        "short": "t underdot"
+        "default": "t underdot"
       },
       "mathspeak": {
         "default": "modifying below t with dot",
@@ -2452,9 +2146,7 @@
     "key": "1E6F",
     "mappings": {
       "default": {
-        "default": "latin small letter t with line below",
-        "alternative": "latin small letter t underbar",
-        "short": "t underbar"
+        "default": "t underbar"
       },
       "mathspeak": {
         "default": "t underbar",
@@ -2468,9 +2160,7 @@
     "key": "1E71",
     "mappings": {
       "default": {
-        "default": "latin small letter t with circumflex below",
-        "alternative": "latin small letter t underhat",
-        "short": "t underhat"
+        "default": "t underhat"
       },
       "mathspeak": {
         "default": "modifying below t with caret",
@@ -2484,9 +2174,7 @@
     "key": "1E73",
     "mappings": {
       "default": {
-        "default": "latin small letter u with diaeresis below",
-        "alternative": "latin small letter u double underdot",
-        "short": "u double underdot"
+        "default": "u double underdot"
       },
       "mathspeak": {
         "default": "modifying below u with double dot",
@@ -2500,9 +2188,7 @@
     "key": "1E75",
     "mappings": {
       "default": {
-        "default": "latin small letter u with tilde below",
-        "alternative": "latin small letter u tilde below",
-        "short": "u tilde below"
+        "default": "u tilde below"
       },
       "mathspeak": {
         "default": "u undertilde",
@@ -2516,9 +2202,7 @@
     "key": "1E77",
     "mappings": {
       "default": {
-        "default": "latin small letter u with circumflex below",
-        "alternative": "latin small letter u underhat",
-        "short": "u underhat"
+        "default": "u underhat"
       },
       "mathspeak": {
         "default": "modifying below u with caret",
@@ -2532,9 +2216,7 @@
     "key": "1E7D",
     "mappings": {
       "default": {
-        "default": "latin small letter v with tilde",
-        "alternative": "latin small letter v tilde",
-        "short": "v tilde"
+        "default": "v tilde"
       },
       "mathspeak": {
         "default": "v overtilde",
@@ -2548,9 +2230,7 @@
     "key": "1E7F",
     "mappings": {
       "default": {
-        "default": "latin small letter v with dot below",
-        "alternative": "latin small letter v underdot",
-        "short": "v underdot"
+        "default": "v underdot"
       },
       "mathspeak": {
         "default": "modifying below v with dot",
@@ -2564,9 +2244,7 @@
     "key": "1E81",
     "mappings": {
       "default": {
-        "default": "latin small letter w with grave",
-        "alternative": "latin small letter w grave",
-        "short": "w grave"
+        "default": "w grave"
       },
       "mathspeak": {
         "default": "modifying above w with grave",
@@ -2580,9 +2258,7 @@
     "key": "1E83",
     "mappings": {
       "default": {
-        "default": "latin small letter w with acute",
-        "alternative": "latin small letter w acute",
-        "short": "w acute"
+        "default": "w acute"
       },
       "mathspeak": {
         "default": "modifying above w with acute",
@@ -2596,9 +2272,7 @@
     "key": "1E85",
     "mappings": {
       "default": {
-        "default": "latin small letter w with diaeresis",
-        "alternative": "latin small letter w double overdot",
-        "short": "w double overdot"
+        "default": "w double overdot"
       },
       "mathspeak": {
         "default": "modifying above w with double dot",
@@ -2612,9 +2286,7 @@
     "key": "1E87",
     "mappings": {
       "default": {
-        "default": "latin small letter w with dot above",
-        "alternative": "latin small letter w overdot",
-        "short": "w overdot"
+        "default": "w overdot"
       },
       "mathspeak": {
         "default": "modifying above w with dot",
@@ -2628,9 +2300,7 @@
     "key": "1E89",
     "mappings": {
       "default": {
-        "default": "latin small letter w with dot below",
-        "alternative": "latin small letter w underdot",
-        "short": "w underdot"
+        "default": "w underdot"
       },
       "mathspeak": {
         "default": "modifying below w with dot",
@@ -2644,9 +2314,7 @@
     "key": "1E8B",
     "mappings": {
       "default": {
-        "default": "latin small letter x with dot above",
-        "alternative": "latin small letter x overdot",
-        "short": "x overdot"
+        "default": "x overdot"
       },
       "mathspeak": {
         "default": "modifying above x with dot",
@@ -2660,9 +2328,7 @@
     "key": "1E8D",
     "mappings": {
       "default": {
-        "default": "latin small letter x with diaeresis",
-        "alternative": "latin small letter x double overdot",
-        "short": "x double overdot"
+        "default": "x double overdot"
       },
       "mathspeak": {
         "default": "modifying above x with double dot",
@@ -2676,9 +2342,7 @@
     "key": "1E8F",
     "mappings": {
       "default": {
-        "default": "latin small letter y with dot above",
-        "alternative": "latin small letter y overdot",
-        "short": "y overdot"
+        "default": "y overdot"
       },
       "mathspeak": {
         "default": "modifying above y with dot",
@@ -2692,9 +2356,7 @@
     "key": "1E91",
     "mappings": {
       "default": {
-        "default": "latin small letter z with circumflex",
-        "alternative": "latin small letter z hat",
-        "short": "z hat"
+        "default": "z hat"
       },
       "mathspeak": {
         "default": "modifying above z with caret",
@@ -2708,9 +2370,7 @@
     "key": "1E93",
     "mappings": {
       "default": {
-        "default": "latin small letter z with dot below",
-        "alternative": "latin small letter z underdot",
-        "short": "z underdot"
+        "default": "z underdot"
       },
       "mathspeak": {
         "default": "modifying below z with dot",
@@ -2724,9 +2384,7 @@
     "key": "1E95",
     "mappings": {
       "default": {
-        "default": "latin small letter z with line below",
-        "alternative": "latin small letter z underbar",
-        "short": "z underbar"
+        "default": "z underbar"
       },
       "mathspeak": {
         "default": "z underbar",
@@ -2740,9 +2398,7 @@
     "key": "1E96",
     "mappings": {
       "default": {
-        "default": "latin small letter h with line below",
-        "alternative": "latin small letter h underbar",
-        "short": "h underbar"
+        "default": "h underbar"
       },
       "mathspeak": {
         "default": "h underbar",
@@ -2756,9 +2412,7 @@
     "key": "1E97",
     "mappings": {
       "default": {
-        "default": "latin small letter t with diaeresis",
-        "alternative": "latin small letter t double overdot",
-        "short": "t double overdot"
+        "default": "t double overdot"
       },
       "mathspeak": {
         "default": "modifying above t with double dot",
@@ -2772,9 +2426,7 @@
     "key": "1E98",
     "mappings": {
       "default": {
-        "default": "latin small letter w with ring above",
-        "alternative": "latin small letter w ring",
-        "short": "w ring"
+        "default": "w ring"
       },
       "mathspeak": {
         "default": "modifying above w with ring",
@@ -2788,9 +2440,7 @@
     "key": "1E99",
     "mappings": {
       "default": {
-        "default": "latin small letter y with ring above",
-        "alternative": "latin small letter y ring",
-        "short": "y ring"
+        "default": "y ring"
       },
       "mathspeak": {
         "default": "modifying above y with ring",
@@ -2804,9 +2454,7 @@
     "key": "1E9A",
     "mappings": {
       "default": {
-        "default": "latin small letter a with right half ring",
-        "alternative": "latin small letter a right half ring",
-        "short": "a right half ring"
+        "default": "a right half ring"
       },
       "mathspeak": {
         "default": "modifying above a with right half ring",
@@ -2820,9 +2468,7 @@
     "key": "1EA1",
     "mappings": {
       "default": {
-        "default": "latin small letter a with dot below",
-        "alternative": "latin small letter a underdot",
-        "short": "a underdot"
+        "default": "a underdot"
       },
       "mathspeak": {
         "default": "modifying below a with dot",
@@ -2836,9 +2482,7 @@
     "key": "1EA3",
     "mappings": {
       "default": {
-        "default": "latin small letter a with hook above",
-        "alternative": "latin small letter a hook",
-        "short": "a hook"
+        "default": "a hook"
       },
       "mathspeak": {
         "default": "modifying above a with hook",
@@ -2852,9 +2496,7 @@
     "key": "1EB9",
     "mappings": {
       "default": {
-        "default": "latin small letter e with dot below",
-        "alternative": "latin small letter e underdot",
-        "short": "e underdot"
+        "default": "e underdot"
       },
       "mathspeak": {
         "default": "modifying below e with dot",
@@ -2868,9 +2510,7 @@
     "key": "1EBB",
     "mappings": {
       "default": {
-        "default": "latin small letter e with hook above",
-        "alternative": "latin small letter e hook",
-        "short": "e hook"
+        "default": "e hook"
       },
       "mathspeak": {
         "default": "modifying above e with hook",
@@ -2884,9 +2524,7 @@
     "key": "1EBD",
     "mappings": {
       "default": {
-        "default": "latin small letter e with tilde",
-        "alternative": "latin small letter e tilde",
-        "short": "e tilde"
+        "default": "e tilde"
       },
       "mathspeak": {
         "default": "e overtilde",
@@ -2900,9 +2538,7 @@
     "key": "1EC9",
     "mappings": {
       "default": {
-        "default": "latin small letter i with hook above",
-        "alternative": "latin small letter i hook",
-        "short": "i hook"
+        "default": "i hook"
       },
       "mathspeak": {
         "default": "modifying above i with hook",
@@ -2916,9 +2552,7 @@
     "key": "1ECB",
     "mappings": {
       "default": {
-        "default": "latin small letter i with dot below",
-        "alternative": "latin small letter i underdot",
-        "short": "i underdot"
+        "default": "i underdot"
       },
       "mathspeak": {
         "default": "modifying below i with dot",
@@ -2932,9 +2566,7 @@
     "key": "1ECD",
     "mappings": {
       "default": {
-        "default": "latin small letter o with dot below",
-        "alternative": "latin small letter o underdot",
-        "short": "o underdot"
+        "default": "o underdot"
       },
       "mathspeak": {
         "default": "modifying below o with dot",
@@ -2948,9 +2580,7 @@
     "key": "1ECF",
     "mappings": {
       "default": {
-        "default": "latin small letter o with hook above",
-        "alternative": "latin small letter o hook",
-        "short": "o hook"
+        "default": "o hook"
       },
       "mathspeak": {
         "default": "modifying above o with hook",
@@ -2964,9 +2594,7 @@
     "key": "1EE5",
     "mappings": {
       "default": {
-        "default": "latin small letter u with dot below",
-        "alternative": "latin small letter u underdot",
-        "short": "u underdot"
+        "default": "u underdot"
       },
       "mathspeak": {
         "default": "modifying below u with dot",
@@ -2980,9 +2608,7 @@
     "key": "1EE7",
     "mappings": {
       "default": {
-        "default": "latin small letter u with hook above",
-        "alternative": "latin small letter u hook",
-        "short": "u hook"
+        "default": "u hook"
       },
       "mathspeak": {
         "default": "modifying above u with hook",
@@ -2996,9 +2622,7 @@
     "key": "1EF3",
     "mappings": {
       "default": {
-        "default": "latin small letter y with grave",
-        "alternative": "latin small letter y grave",
-        "short": "y grave"
+        "default": "y grave"
       },
       "mathspeak": {
         "default": "modifying above y with grave",
@@ -3012,9 +2636,7 @@
     "key": "1EF5",
     "mappings": {
       "default": {
-        "default": "latin small letter y with dot below",
-        "alternative": "latin small letter y underdot",
-        "short": "y underdot"
+        "default": "y underdot"
       },
       "mathspeak": {
         "default": "modifying below y with dot",
@@ -3028,9 +2650,7 @@
     "key": "1EF7",
     "mappings": {
       "default": {
-        "default": "latin small letter y with hook above",
-        "alternative": "latin small letter y hook",
-        "short": "y hook"
+        "default": "y hook"
       },
       "mathspeak": {
         "default": "modifying above y with hook",
@@ -3044,9 +2664,7 @@
     "key": "1EF9",
     "mappings": {
       "default": {
-        "default": "latin small letter y with tilde",
-        "alternative": "latin small letter y tilde",
-        "short": "y tilde"
+        "default": "y tilde"
       },
       "mathspeak": {
         "default": "y overtilde",

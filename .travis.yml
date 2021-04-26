@@ -1,9 +1,0 @@
-language: node_js
-node_js:
-  - "stable"
-sudo: false
-branches:
-  except:
-    - fix_brackeing
-install:
-  - npm install

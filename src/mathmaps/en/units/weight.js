@@ -1,21 +1,13 @@
-[{"locale": "en"},
+[
+  {"locale": "en"},
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "pound"
+       "default": "dram"
      }
    },
-   "key": "lb",
-   "names": ["lb", "lb."]
-  },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "long ton"
-     }
-   },
-   "key": "LT",
-   "names": ["LT", "L.T."]
+   "key": "dram",
+   "names": ["dr", "dr."]
   },
   {"category": "weight",
    "mappings": {
@@ -29,20 +21,66 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "gram"
+       "default": "pound"
      }
    },
-   "key": "gr",
-   "names": ["g", "gr"]
+   "key": "lb",
+   "names": ["lb", "lb."]
   },
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "kilogram"
+       "default": "stone"
      }
    },
-   "key": "kg",
-   "names": ["kg"]
+   "key": "st",
+   "names": ["st", "st."]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "quarter"
+     }
+   },
+   "key": "qtr",
+   "names": ["qtr", "qtr."]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "hundredweight"
+     }
+   },
+   "key": "cwt",
+   "names": ["cwt", "cwt."]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "long ton"
+     }
+   },
+   "key": "LT",
+   "names": ["LT", "L.T."]
+  },
+  {"category": "weight",
+   "mappings": {
+     "default": {
+       "default": "gram"
+     }
+   },
+   "key": "gr",
+   "names": ["gr"]
+  },
+  {"category": "weight",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "gram"
+     }
+   },
+   "key": "g",
+   "names": ["g"]
   },
   {"category": "weight",
    "mappings": {
@@ -51,16 +89,7 @@
      }
    },
    "key": "mcg",
-   "names": ["mcg", "µg"]
-  },
-  {"category": "weight",
-   "mappings": {
-     "default": {
-       "default": "milligram"
-     }
-   },
-   "key": "mg",
-   "names": ["mg"]
+   "names": ["mcg"]
   },
   {"category": "weight",
    "mappings": {

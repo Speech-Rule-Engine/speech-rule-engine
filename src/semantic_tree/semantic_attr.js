@@ -70,13 +70,13 @@ sre.SemanticAttr = function() {
    */
   this.generalPunctuations =
       [
-        '!', '"', '#', '%', '&', ':', ';', '?', '@', '\\',
+        '!', '"', '#', '%', '&', ';', '?', '@', '\\',
         '¡', '§', '¶', '¿', '‗', '†', '‡', '•', '‣', '․', '‥', '‧',
         '‰', '‱', '‸', '※', '‼', '‽', '‾', '⁁', '⁂', '⁃', '⁇', '⁈', '⁉',
         '⁋', '⁌', '⁍', '⁎', '⁏', '⁐', '⁑', '⁓', '⁕', '⁖', '⁘', '⁙', '⁚',
-        '⁛', '⁜', '⁝', '⁞', '︐', '︓', '︔', '︕', '︖', '︰', '﹅', '﹆',
-        '﹉', '﹊', '﹋', '﹌', '﹐', '﹔', '﹕', '﹖', '﹗', '﹟', '﹠', '﹡', '﹨',
-        '﹪', '﹫', '！', '＂', '＃', '％', '＆', '＇', '＊', '，', '／', '：',
+        '⁛', '⁜', '⁝', '⁞', '︐', '︔', '︕', '︖', '︰', '﹅', '﹆',
+        '﹉', '﹊', '﹋', '﹌', '﹔', '﹖', '﹗', '﹟', '﹠', '﹡', '﹨',
+        '﹪', '﹫', '！', '＂', '＃', '％', '＆', '＇', '＊', '／',
         '；', '？', '＠', '＼'
       ];
   /**
@@ -84,7 +84,7 @@ sre.SemanticAttr = function() {
    */
   this.colons =
       [
-        ':', '：', '﹕'
+        '︓', ':', '：', '﹕'
       ];
   /**
    * @type {string}
@@ -96,7 +96,7 @@ sre.SemanticAttr = function() {
    */
   this.commas =
       [
-       ',', this.invisibleComma_
+       '，', '﹐', ',', this.invisibleComma_
       ];
   /**
    * @type {Array.<string>}
@@ -124,7 +124,7 @@ sre.SemanticAttr = function() {
    */
   this.primes =
       [
-        '\'', '′', '″', '‴', '‵', '‶', '‷', '⁗'
+        '\'', '′', '″', '‴', '‵', '‶', '‷', '⁗', 'ʹ', 'ʺ'
       ];
   /**
    * @type {Array.<string>}
@@ -198,7 +198,8 @@ sre.SemanticAttr = function() {
    */
   this.neutralFences =
       [
-        '|', '¦', '‖', '❘', '⦀', '⫴', '￤', '｜'
+        '|', '¦', '‖', '∣', '⏐', '⎸', '⎹', '∥', '❘',
+        '⦀', '⫴', '｜', '￤'
       ];
   /** Array of all fences.
    * @type {Array.<string>}
@@ -275,6 +276,22 @@ sre.SemanticAttr = function() {
        '𝑛', '𝑜', '𝑝', '𝑞', '𝑟', '𝑠', '𝑡', '𝑢', '𝑣', '𝑤', '𝑥', '𝑦', '𝑧',
        // dotless i and j.
        '𝚤', '𝚥'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.capitalLatinBoldItalic =
+      [
+        '𝑨', '𝑩', '𝑪', '𝑫', '𝑬', '𝑭', '𝑮', '𝑯', '𝑰', '𝑱', '𝑲', '𝑳', '𝑴',
+        '𝑵', '𝑶', '𝑷', '𝑸', '𝑹', '𝑺', '𝑻', '𝑼', '𝑽', '𝑾', '𝑿', '𝒀', '𝒁'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.smallLatinBoldItalic =
+      [
+        '𝒂', '𝒃', '𝒄', '𝒅', '𝒆', '𝒇', '𝒈', '𝒉', '𝒊', '𝒋', '𝒌', '𝒍', '𝒎',
+        '𝒏', '𝒐', '𝒑', '𝒒', '𝒓', '𝒔', '𝒕', '𝒖', '𝒗', '𝒘', '𝒙', '𝒚', '𝒛'
       ];
   /**
    * @type {Array.<string>}
@@ -411,6 +428,22 @@ sre.SemanticAttr = function() {
   /**
    * @type {Array.<string>}
    */
+  this.capitalLatinSansSerifBoldItalic =
+      [
+        '𝘼', '𝘽', '𝘾', '𝘿', '𝙀', '𝙁', '𝙂', '𝙃', '𝙄', '𝙅', '𝙆', '𝙇', '𝙈',
+        '𝙉', '𝙊', '𝙋', '𝙌', '𝙍', '𝙎', '𝙏', '𝙐', '𝙑', '𝙒', '𝙓', '𝙔', '𝙕'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.smallLatinSansSerifBoldItalic =
+      [
+        '𝙖', '𝙗', '𝙘', '𝙙', '𝙚', '𝙛', '𝙜', '𝙝', '𝙞', '𝙟', '𝙠', '𝙡', '𝙢',
+        '𝙣', '𝙤', '𝙥', '𝙦', '𝙧', '𝙨', '𝙩', '𝙪', '𝙫', '𝙬', '𝙭', '𝙮', '𝙯'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
   this.capitalLatinMonospace =
       [
         '𝙰', '𝙱', '𝙲', '𝙳', '𝙴', '𝙵', '𝙶', '𝙷', '𝙸', '𝙹', '𝙺', '𝙻', '𝙼',
@@ -484,6 +517,22 @@ sre.SemanticAttr = function() {
   /**
    * @type {Array.<string>}
    */
+  this.capitalGreekBoldItalic =
+      [
+        '𝜜', '𝜝', '𝜞', '𝜟', '𝜠', '𝜡', '𝜢', '𝜣', '𝜤', '𝜥', '𝜦', '𝜧', '𝜨',
+        '𝜩', '𝜪', '𝜫', '𝜬', '𝜮', '𝜯', '𝜰', '𝜱', '𝜲', '𝜳', '𝜴'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.smallGreekBoldItalic =
+      [
+        '𝜶', '𝜷', '𝜸', '𝜹', '𝜺', '𝜻', '𝜼', '𝜽', '𝜾', '𝜿', '𝝀', '𝝁', '𝝂',
+        '𝝃', '𝝄', '𝝅', '𝝆', '𝝇', '𝝈', '𝝉', '𝝊', '𝝋', '𝝌', '𝝍', '𝝎'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
   this.capitalGreekSansSerifBold =
       [
         '𝝖', '𝝗', '𝝘', '𝝙', '𝝚', '𝝛', '𝝜', '𝝝', '𝝞', '𝝟', '𝝠', '𝝡', '𝝢',
@@ -496,6 +545,22 @@ sre.SemanticAttr = function() {
       [
         '𝝰', '𝝱', '𝝲', '𝝳', '𝝴', '𝝵', '𝝶', '𝝷', '𝝸', '𝝹', '𝝺', '𝝻', '𝝼',
        '𝝽', '𝝾', '𝝿', '𝞀', '𝞁', '𝞂', '𝞃', '𝞄', '𝞅', '𝞆', '𝞇', '𝞈'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.capitalGreekSansSerifBoldItalic =
+      [
+        '𝞐', '𝞑', '𝞒', '𝞓', '𝞔', '𝞕', '𝞖', '𝞗', '𝞘', '𝞙', '𝞚', '𝞛', '𝞜',
+        '𝞝', '𝞞', '𝞟', '𝞠', '𝞢', '𝞣', '𝞤', '𝞥', '𝞦', '𝞧', '𝞨'
+      ];
+  /**
+   * @type {Array.<string>}
+   */
+  this.smallGreekSansSerifBoldItalic =
+      [
+        '𝞪', '𝞫', '𝞬', '𝞭', '𝞮', '𝞯', '𝞰', '𝞱', '𝞲', '𝞳', '𝞴', '𝞵', '𝞶',
+        '𝞷', '𝞸', '𝞹', '𝞺', '𝞻', '𝞼', '𝞽', '𝞾', '𝞿', '𝟀', '𝟁', '𝟂'
       ];
   /**
    * @type {Array.<string>}
@@ -545,6 +610,7 @@ sre.SemanticAttr = function() {
   this.allLetters = this.capitalLatin.concat(
       this.smallLatin, this.capitalLatinFullWidth, this.smallLatinFullWidth,
       this.capitalLatinBold, this.smallLatinBold, this.capitalLatinItalic,
+      this.capitalLatinBoldItalic, this.smallLatinBoldItalic,
       this.smallLatinItalic, this.capitalLatinScript, this.smallLatinScript,
       this.capitalLatinBoldScript, this.smallLatinBoldScript,
       this.capitalLatinFraktur, this.smallLatinFraktur,
@@ -553,11 +619,14 @@ sre.SemanticAttr = function() {
       this.capitalLatinSansSerif, this.smallLatinSansSerif,
       this.capitalLatinSansSerifBold, this.smallLatinSansSerifBold,
       this.capitalLatinSansSerifItalic, this.smallLatinSansSerifItalic,
+      this.capitalLatinSansSerifBoldItalic, this.smallLatinSansSerifBoldItalic,
       this.capitalLatinMonospace, this.smallLatinMonospace,
       this.latinDoubleStruckItalic, this.capitalGreek, this.smallGreek,
       this.capitalGreekBold, this.smallGreekBold, this.capitalGreekItalic,
-      this.smallGreekItalic, this.capitalGreekSansSerifBold,
+      this.smallGreekItalic, this.capitalGreekBoldItalic,
+      this.smallGreekBoldItalic, this.capitalGreekSansSerifBold,
       this.smallGreekSansSerifBold, this.greekDoubleStruck, this.greekSpecial,
+      this.capitalGreekSansSerifBoldItalic, this.smallGreekSansSerifBoldItalic,
       this.greekSpecialBold, this.greekSpecialItalic,
       this.greekSpecialSansSerifBold,
       this.hebrewLetters);
@@ -568,9 +637,8 @@ sre.SemanticAttr = function() {
    */
   this.additions =
       [
-        '+', '±', '∓', '∔', '∧', '∨', '∩', '∪', '⊌', '⊓', '⊔', '⊝', '⊞',
-        '⊤', '⊥', '⊺', '⊻', '⊼', '⋄', '⋎', '⋏', '⋒', '⋓', '△', '▷', '▽',
-        '◁', '⩞', '⊕'
+        '+', '±', '∓', '∔', '∧', '∨', '∩', '∪', '⊌', '⊍', '⊎', '⊓', '⊔', '⊝',
+        '⊞', '⊤', '⊥', '⊺', '⊻', '⊼', '⋄', '⋎', '⋏', '⋒', '⋓', '⩞', '⊕', '⋔'
       ];
   /**
    * @type {Array.<string>}
@@ -588,7 +656,7 @@ sre.SemanticAttr = function() {
   this.multiplications =
       [
         '†', '‡', '∐', '∗', '∘', '∙', '≀', '⊚', '⊛', '⊠', '⊡', '⋅', '⋆', '⋇',
-        '⋉', '⋊', '⋋', '⋌', '○', '·', '*'
+        '⋈', '⋉', '⋊', '⋋', '⋌', '○', '·', '*', '⊗', '⊙'
       ];
   /**
    * Invisible operator for multiplication.
@@ -603,7 +671,7 @@ sre.SemanticAttr = function() {
   this.subtractions =
       [
         '-', '⁒', '⁻', '₋', '−', '∖', '∸', '≂', '⊖', '⊟', '➖', '⨩', '⨪',
-       '⨫', '⨬', '⨺', '⩁', '⩬', '﹣', '－', '‐', '‑'
+       '⨫', '⨬', '⨺', '⩁', '﹣', '－', '‐', '‑'
       ];
   /**
    * @type {Array.<string>}
@@ -626,9 +694,10 @@ sre.SemanticAttr = function() {
   this.equalities =
       [
         '=', '~', '⁼', '₌', '∼', '∽', '≃', '≅', '≈', '≊', '≋', '≌', '≍',
-       '≎', '≑', '≒', '≓', '≔', '≕', '≖', '≗', '≘', '≙', '≚', '≛', '≜',
-       '≝', '≞', '≟', '≡', '≣', '⧤', '⩦', '⩮', '⩯', '⩰', '⩱', '⩲', '⩳',
-       '⩴', '⩵', '⩶', '⩷', '⩸', '⋕', '⩭', '⩪', '⩫', '⩬', '﹦', '＝'
+        '≎', '≑', '≒', '≓', '≔', '≕', '≖', '≗', '≘', '≙', '≚', '≛', '≜',
+        '≝', '≞', '≟', '≡', '≣', '⧤', '⩦', '⩮', '⩯', '⩰', '⩱', '⩲', '⩳',
+        '⩴', '⩵', '⩶', '⩷', '⩸', '⋕', '⩭', '⩪', '⩫', '⩬', '﹦', '＝', '⩬',
+        '⊜', '∷'
       ];
   /**
    * @type {Array.<string>}
@@ -639,7 +708,7 @@ sre.SemanticAttr = function() {
         '≥', '≦', '≧', '≨', '≩', '≪', '≫', '≬', '≭', '≮', '≯', '≰', '≱',
         '≲', '≳', '≴', '≵', '≶', '≷', '≸', '≹', '≺', '≻', '≼', '≽', '≾',
         '≿', '⊀', '⊁', '⋖', '⋗', '⋘', '⋙', '⋚', '⋛', '⋜', '⋝', '⋞', '⋟',
-        '⋠', '⋡', '⋢', '⋣', '⋤', '⋥', '⋦', '⋧', '⋨', '⋩', '⩹', '⩺', '⩻',
+        '⋠', '⋡', '⋦', '⋧', '⋨', '⋩', '⩹', '⩺', '⩻',
         '⩼', '⩽', '⩾', '⩿', '⪀', '⪁', '⪂', '⪃', '⪄', '⪅', '⪆', '⪇', '⪈',
         '⪉', '⪊', '⪋', '⪌', '⪍', '⪎', '⪏', '⪐', '⪑', '⪒', '⪓', '⪔', '⪕',
         '⪖', '⪗', '⪘', '⪙', '⪚', '⪛', '⪜', '⪝', '⪞', '⪟', '⪠', '⪡', '⪢',
@@ -650,9 +719,28 @@ sre.SemanticAttr = function() {
   /**
    * @type {Array.<string>}
    */
+  this.setRelations =
+      [
+        '⋢', '⋣', '⋤', '⋥',
+        '⊂', '⊃', '⊄', '⊅', '⊆', '⊇', '⊈', '⊉', '⊊', '⊋', '⊏', '⊐', '⊑', '⊒',
+        '⪽', '⪾', '⪿', '⫀', '⫁', '⫂', '⫃', '⫄', '⫅', '⫆', '⫇', '⫈', '⫉', '⫊',
+        '⫋', '⫌', '⫍', '⫎', '⫏', '⫐', '⫑', '⫒', '⫓', '⫔', '⫕', '⫖', '⫗', '⫘',
+        '⋐', '⋑', '⋪', '⋫', '⋬', '⋭', '⊲', '⊳', '⊴', '⊵'
+      ];
+  this.elementRelations =
+      [
+        '∈', '∉', '∊', '∋', '∌', '∍',
+        '⋲', '⋳', '⋴', '⋵', '⋶', '⋷', '⋸', '⋹', '⋺', '⋻', '⋼', '⋽', '⋾', '⋿',
+      ];
+  /**
+   * @type {Array.<string>}
+   */
   this.relations =
       [
-       // TODO (sorge): Add all the other relations.
+        // TODO (sorge): Add all the other relations. Currently mainly tacks and
+        // turnstyles.
+        '⊢', '⊣', '⊦', '⊧', '⊨', '⊩', '⊪', '⊫', '⊬', '⊭', '⊮', '⊯', '⫞', '⫟',
+        '⫠', '⫡', '⫢', '⫣', '⫤', '⫥', '⫦', '⫧', '⫨', '⫩', '⫪', '⫫', '⫬', '⫭'
       ];
   /**
    * @type {Array.<string>}
@@ -708,11 +796,16 @@ sre.SemanticAttr = function() {
         '∫', '∬', '∭', '∮', '∯', '∰', '∱', '∲', '∳', '⨌', '⨍', '⨎', '⨏',
         '⨐', '⨑', '⨒', '⨓', '⨔', '⨕', '⨖', '⨗', '⨘', '⨙', '⨚', '⨛', '⨜'
       ];
+  this.geometryOps =
+      [
+        '∟', '∠', '∡', '∢', '⊾', '⊿',
+        // TODO: Add the entire geometric shape set programmatically.
+        '△', '▷', '▽', '◁',
+      ];
   /**
    * @type {Array.<string>}
    */
   this.prefixOps =
-      // TODO (sorge) Insert nabla, differential operators etc.
       [
         '∀', '∃', '∆', '∇', '∂', '∁', '∄'
       ];
@@ -728,6 +821,7 @@ sre.SemanticAttr = function() {
    * @type {Array.<string>}
    */
   this.prefixOpsSansSerifBold = ['𝝯', '𝞉'];
+  // TODO (sorge) Insert nabla, differential operators sans serif bold italic
 
   /**
    * @type {Array.<string>}
@@ -856,13 +950,15 @@ sre.SemanticAttr = function() {
   /** Array of all non-digit number symbols.
    * @type {Array.<string>}
    */
-  this.numbers = this.fractions.concat(
-      this.digitsSuperscript, this.digitsSubscript,
-      this.enclosedNumbers, this.fencedNumbers, this.punctuatedNumbers);
+  this.numbers = this.fractions;
+
+  this.otherNumbers = this.digitsSuperscript.concat(
+      this.digitsSubscript, this.enclosedNumbers,
+      this.fencedNumbers, this.punctuatedNumbers);
   /** Array of all number symbols.
    * @type {Array.<string>}
    */
-  this.allNumbers = this.digits.concat(this.numbers);
+  this.allNumbers = this.digits.concat(this.numbers, this.otherNumbers);
 
   // Functions.
   /**
@@ -871,7 +967,8 @@ sre.SemanticAttr = function() {
   this.trigonometricFunctions =
       [
         'cos', 'cot', 'csc', 'sec', 'sin', 'tan', 'arccos', 'arccot',
-        'arccsc', 'arcsec', 'arcsin', 'arctan'
+        'arccsc', 'arcsec', 'arcsin', 'arctan', 'arc cos', 'arc cot',
+        'arc csc', 'arc sec', 'arc sin', 'arc tan'
       ];
   /**
    * @type {Array.<string>}
@@ -911,7 +1008,7 @@ sre.SemanticAttr = function() {
   this.limitFunctions =
       [
         'inf', 'lim', 'liminf', 'limsup', 'max', 'min', 'sup', 'injlim',
-        'projlim'
+        'projlim', 'inj lim', 'proj lim'
       ];
   /**
    * @type {Array.<string>}
@@ -1025,6 +1122,16 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.LATINLETTER,
       font: sre.SemanticAttr.Font.ITALIC
     },
+    {set: this.smallLatinBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.LATINLETTER,
+      font: sre.SemanticAttr.Font.BOLDITALIC
+    },
+    {set: this.capitalLatinBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.LATINLETTER,
+      font: sre.SemanticAttr.Font.BOLDITALIC
+    },
     {set: this.smallLatinScript,
       type: sre.SemanticAttr.Type.IDENTIFIER,
       role: sre.SemanticAttr.Role.LATINLETTER,
@@ -1105,6 +1212,16 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.LATINLETTER,
       font: sre.SemanticAttr.Font.SANSSERIFITALIC
     },
+    {set: this.smallLatinSansSerifBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.LATINLETTER,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLDITALIC
+    },
+    {set: this.capitalLatinSansSerifBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.LATINLETTER,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLDITALIC
+    },
     {set: this.smallLatinMonospace,
       type: sre.SemanticAttr.Type.IDENTIFIER,
       role: sre.SemanticAttr.Role.LATINLETTER,
@@ -1151,6 +1268,16 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.GREEKLETTER,
       font: sre.SemanticAttr.Font.ITALIC
     },
+    {set: this.smallGreekBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.BOLDITALIC
+    },
+    {set: this.capitalGreekBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.BOLDITALIC
+    },
     {set: this.smallGreekSansSerifBold,
       type: sre.SemanticAttr.Type.IDENTIFIER,
       role: sre.SemanticAttr.Role.GREEKLETTER,
@@ -1160,6 +1287,16 @@ sre.SemanticAttr = function() {
       type: sre.SemanticAttr.Type.IDENTIFIER,
       role: sre.SemanticAttr.Role.GREEKLETTER,
       font: sre.SemanticAttr.Font.SANSSERIFBOLD
+    },
+    {set: this.capitalGreekSansSerifBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLDITALIC
+    },
+    {set: this.smallGreekSansSerifBoldItalic,
+      type: sre.SemanticAttr.Type.IDENTIFIER,
+      role: sre.SemanticAttr.Role.GREEKLETTER,
+      font: sre.SemanticAttr.Font.SANSSERIFBOLDITALIC
     },
     {set: this.greekDoubleStruck,
       type: sre.SemanticAttr.Type.IDENTIFIER,
@@ -1232,6 +1369,10 @@ sre.SemanticAttr = function() {
       type: sre.SemanticAttr.Type.NUMBER,
       role: sre.SemanticAttr.Role.FLOAT
     },
+    {set: this.otherNumbers,
+      type: sre.SemanticAttr.Type.NUMBER,
+      role: sre.SemanticAttr.Role.OTHERNUMBER
+    },
     // Operators.
     {set: this.additions,
       type: sre.SemanticAttr.Type.OPERATOR,
@@ -1250,22 +1391,22 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.DIVISION
     },
     {set: this.prefixOps,
-      type: sre.SemanticAttr.Type.PREFIXOP,
-      role: sre.SemanticAttr.Role.PREFIXFUNC
+      type: sre.SemanticAttr.Type.OPERATOR,
+      role: sre.SemanticAttr.Role.PREFIXOP
     },
     {set: this.prefixOpsBold,
-      type: sre.SemanticAttr.Type.PREFIXOP,
-      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      type: sre.SemanticAttr.Type.OPERATOR,
+      role: sre.SemanticAttr.Role.PREFIXOP,
       font: sre.SemanticAttr.Font.BOLD
     },
     {set: this.prefixOpsItalic,
-      type: sre.SemanticAttr.Type.PREFIXOP,
-      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      type: sre.SemanticAttr.Type.OPERATOR,
+      role: sre.SemanticAttr.Role.PREFIXOP,
       font: sre.SemanticAttr.Font.ITALIC
     },
     {set: this.prefixOpsSansSerifBold,
-      type: sre.SemanticAttr.Type.PREFIXOP,
-      role: sre.SemanticAttr.Role.PREFIXFUNC,
+      type: sre.SemanticAttr.Type.OPERATOR,
+      role: sre.SemanticAttr.Role.PREFIXOP,
       font: sre.SemanticAttr.Font.SANSSERIFBOLD
     },
     // Relations
@@ -1276,6 +1417,16 @@ sre.SemanticAttr = function() {
     {set: this.inequalities,
       type: sre.SemanticAttr.Type.RELATION,
       role: sre.SemanticAttr.Role.INEQUALITY
+    },
+    {set: this.setRelations,
+      type: sre.SemanticAttr.Type.RELATION,
+      role: sre.SemanticAttr.Role.SET
+    },
+    {set: this.elementRelations,
+      type: sre.SemanticAttr.Type.OPERATOR,
+      // TODO: Changes that to relation once speech rules are separated
+      //       as this has effects on clearspeak.
+      role: sre.SemanticAttr.Role.ELEMENT
     },
     {set: this.relations,
       type: sre.SemanticAttr.Type.RELATION,
@@ -1292,6 +1443,9 @@ sre.SemanticAttr = function() {
     {set: this.intOps,
       type: sre.SemanticAttr.Type.LARGEOP,
       role: sre.SemanticAttr.Role.INTEGRAL},
+    {set: this.geometryOps, // TODO: Change that after speech rule work?
+      type: sre.SemanticAttr.Type.OPERATOR,
+      role: sre.SemanticAttr.Role.GEOMETRY},
     // Functions
     {set: this.limitFunctions,
       type: sre.SemanticAttr.Type.FUNCTION,
@@ -1301,7 +1455,7 @@ sre.SemanticAttr = function() {
       role: sre.SemanticAttr.Role.PREFIXFUNC},
     {set: this.infixFunctions,
       type: sre.SemanticAttr.Type.OPERATOR,
-      role: sre.SemanticAttr.Role.INFIXFUNC
+      role: sre.SemanticAttr.Role.PREFIXFUNC
     }
     // TODO (sorge) Add some of the remaining elements.
   ];
@@ -1442,6 +1596,7 @@ sre.SemanticAttr.Role = {
   LATINLETTER: 'latinletter',
   GREEKLETTER: 'greekletter',
   OTHERLETTER: 'otherletter',
+  NUMBERSET: 'numbersetletter',
 
   // Numbers.
   INTEGER: 'integer',
@@ -1474,6 +1629,7 @@ sre.SemanticAttr.Role = {
 
   // Text.
   STRING: 'string',
+  SPACE: 'space',
 
   // Punctuated elements.
   SEQUENCE: 'sequence',
@@ -1486,6 +1642,8 @@ sre.SemanticAttr.Role = {
   POSITIVE: 'positive',
   NEGATION: 'negation',
   MULTIOP: 'multiop',
+  PREFIXOP: 'prefix operator',
+  POSTFIXOP: 'postfix operator',
 
   // Functions.
   LIMFUNC: 'limit function',
@@ -1498,6 +1656,7 @@ sre.SemanticAttr.Role = {
   // Large operators.
   SUM: 'sum',
   INTEGRAL: 'integral',
+  GEOMETRY: 'geometry',
 
   // Binary operations.
   ADDITION: 'addition',
@@ -1514,12 +1673,14 @@ sre.SemanticAttr.Role = {
   INEQUALITY: 'inequality',
   ELEMENT: 'element',
   ARROW: 'arrow',
+  SET: 'set',
 
   // Roles of matrices or vectors.
   DETERMINANT: 'determinant',
   ROWVECTOR: 'rowvector',
   BINOMIAL: 'binomial',
   SQUAREMATRIX: 'squarematrix',
+  CYCLE: 'cycle',
 
   // Roles of rows, lines, cells.
   // They mirror the different types for tables, unless a more specific role is
@@ -1635,6 +1796,15 @@ sre.SemanticAttr.lookupMeaning = function(symbol) {
  */
 sre.SemanticAttr.invisibleTimes = function() {
   return sre.SemanticAttr.getInstance().invisibleTimes_;
+};
+
+
+/**
+ * String representation of the invisible plus unicode character.
+ * @return {string} The invisible plus character.
+ */
+sre.SemanticAttr.invisiblePlus = function() {
+  return sre.SemanticAttr.getInstance().invisiblePlus_;
 };
 
 

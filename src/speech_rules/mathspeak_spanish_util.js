@@ -20,7 +20,6 @@
 goog.provide('sre.MathspeakSpanishUtil');
 
 goog.require('sre.Messages');
-goog.require('sre.XpathUtil');
 
 
 /**
@@ -32,7 +31,7 @@ goog.require('sre.XpathUtil');
 sre.MathspeakSpanishUtil.ordinalCounter = function(node, context) {
   var counter = 0;
   return function() {
-    return sre.Messages.NUMBERS.numberToOrdinal(++counter, null) +
+    return sre.Messages.NUMBERS.numberToOrdinal(++counter, false) +
         ' ' + context;
   };
 };
@@ -55,96 +54,4 @@ sre.MathspeakSpanishUtil.smallRoot = function(node) {
   }
   var number = parseInt(index, 10);
   return (number > 1 && number <= 10) ? [node] : [];
-};
-
-
-/**
- * Iterates over the list of content nodes of a multiplication of units.
- * @param {Array.<Node>} nodes A node array.
- * @param {string} context A context string.
- * @return {function(): Array.<sre.AuditoryDescription>} A closure that returns
- *     "por" between two unit nodes, otherwise the empty string.
- */
-sre.MathspeakSpanishUtil.unitMultipliers = function(nodes, context) {
-  var children = nodes;
-  var counter = 0;
-  return function() {
-    var descr = sre.AuditoryDescription.create({
-      text: (sre.MathspeakSpanishUtil.rightMostUnit(children[counter]) &&
-             sre.MathspeakSpanishUtil.leftMostUnit(children[counter + 1])) ?
-          'por' : ''}, {});
-    counter++;
-    return [descr];
-  };
-};
-
-
-/**
- * @type {Array.<sre.SemanticAttr.Type>}
- */
-sre.MathspeakSpanishUtil.SCRIPT_ELEMENTS = [
-  sre.SemanticAttr.Type.SUPERSCRIPT,
-  sre.SemanticAttr.Type.SUBSCRIPT,
-  sre.SemanticAttr.Type.OVERSCORE,
-  sre.SemanticAttr.Type.UNDERSCORE
-];
-
-
-/**
- * Tests if node is a right most unit element in a sub-expression.
- * @param {Node} node The node to test.
- * @return {boolean} True if it is the right most unit in that subtree.
- */
-sre.MathspeakSpanishUtil.rightMostUnit = function(node) {
-  while (node) {
-    if (node.getAttribute('role') === 'unit') {
-      return true;
-    }
-    var tag = node.tagName;
-    var children = sre.XpathUtil.evalXPath('children/*', node);
-    node = (sre.MathspeakSpanishUtil.SCRIPT_ELEMENTS.indexOf(tag) !== -1) ?
-        children[0] : children[children.length - 1];
-  }
-  return false;
-};
-
-
-/**
- * Tests if node is a left most unit element in a sub-expression.
- * @param {Node} node The node to test.
- * @return {boolean} True if it is the left most unit in that subtree.
- */
-sre.MathspeakSpanishUtil.leftMostUnit = function(node) {
-  while (node) {
-    if (node.getAttribute('role') === 'unit') {
-      return true;
-    }
-    var children = sre.XpathUtil.evalXPath('children/*', node);
-    node = children[0];
-  }
-  return false;
-};
-
-
-/**
- * Checks if a given node is preceded by a 1. This is useful to decide if the
- * next text element is singular or plural.
- * @param {Node} node The base node.
- * @return {Array.<Node>} List with the base node if the preceding node (the
- *     next left in the subexpression containing node) is 1. Otherwise empty
- *     list.
- */
-sre.MathspeakSpanishUtil.oneLeft = function(node) {
-  while (node) {
-    if (node.tagName === 'number' && node.textContent === '1') {
-      return [node];
-    }
-    if (node.tagName !== 'infixop' ||
-        (node.getAttribute('role') !== 'multiplication' &&
-         node.getAttribute('role') !== 'implicit')) {
-      return [];
-    }
-    node = sre.XpathUtil.evalXPath('children/*', node)[0];
-  }
-  return [];
 };

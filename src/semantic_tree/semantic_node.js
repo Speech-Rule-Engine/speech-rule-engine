@@ -85,6 +85,13 @@ sre.SemanticNode = function(id) {
    */
   this.attributes = {};
 
+  /**
+   * Is the node non-breaking, i.e., external attributes are so important that
+   * no heuristic should ignore them.
+   * @type {boolean}
+   */
+  this.nobreaking = false;
+
 };
 
 
@@ -205,7 +212,8 @@ sre.SemanticNode.prototype.allAttributes = function() {
     attributes.push([sre.SemanticNode.Attribute.FONT, this.font]);
   }
   if (Object.keys(this.annotation).length) {
-    attributes.push([sre.SemanticNode.Attribute.ANNOTATION, this.xmlAnnotation()]);
+    attributes.push(
+        [sre.SemanticNode.Attribute.ANNOTATION, this.xmlAnnotation()]);
   }
   if (this.embellished) {
     attributes.push([sre.SemanticNode.Attribute.EMBELLISHED, this.embellished]);
@@ -222,6 +230,7 @@ sre.SemanticNode.prototype.allAttributes = function() {
 /**
  * Adds the external attributes for this node to its XML representation.
  * @param {Node} node The XML node.
+ * @private
  */
 sre.SemanticNode.prototype.addExternalAttributes_ = function(node) {
   for (var attr in this.attributes) {
@@ -277,7 +286,7 @@ sre.SemanticNode.prototype.toJson = function() {
  * @param {boolean=} opt_text Text indicator. If true non-breaking spaces are
  *     retained.
  */
-sre.SemanticNode.prototype.updateContent = function(content, opt_text = false) {
+sre.SemanticNode.prototype.updateContent = function(content, opt_text) {
   // Remove superfluous whitespace only if it is not the only content!
   // But without removing non-breaking spaces if we have a text.
   var newContent = opt_text ?
@@ -435,6 +444,7 @@ sre.SemanticNode.prototype.displayTree = function() {
  * Convenience method to display the whole tree and its elements.
  * @param {number} depth The depth of the tree.
  * @return {string} String with nested tree display.
+ * @private
  */
 sre.SemanticNode.prototype.displayTree_ = function(depth) {
   depth++;
@@ -539,4 +549,71 @@ sre.SemanticNode.prototype.parseAnnotation = function(stateStr) {
  */
 sre.SemanticNode.prototype.meaning = function() {
   return {type: this.type, role: this.role, font: this.font};
+};
+
+
+/**
+ * Generates a semantic node from its XML representation.
+ * @param {!Element} xml The XML representation.
+ * @return {!sre.SemanticNode} The generated semantic node.
+ */
+sre.SemanticNode.fromXml = function(xml) {
+  var id = parseInt(xml.getAttribute('id'), 10);
+  var node = new sre.SemanticNode(id);
+  node.type = /** @type {sre.SemanticAttr.Type} */(xml.tagName);
+  sre.SemanticNode.setAttribute_(node, xml, 'role');
+  sre.SemanticNode.setAttribute_(node, xml, 'font');
+  sre.SemanticNode.setAttribute_(node, xml, 'embellished');
+  sre.SemanticNode.setAttribute_(node, xml, 'fencepointer', 'fencePointer');
+  if (xml.getAttribute('annotation')) {
+    node.parseAnnotation(xml.getAttribute('annotation'));
+  }
+  sre.SemanticUtil.addAttributes(node, xml);
+  sre.SemanticNode.processChildren_(node, xml);
+  return node;
+};
+
+
+/**
+ * Adds the given attributed to the semantic node if it exists.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @param {Element} xml The XML element representation of the node.
+ * @param {string} attribute The name of the attribute.
+ * @param {string=} opt_name Optionally the field name for the attribute in the
+ *     semantic node if it differs.
+ * @private
+ */
+sre.SemanticNode.setAttribute_ = function(node, xml, attribute, opt_name) {
+  opt_name = opt_name || attribute;
+  let value = xml.getAttribute(attribute);
+  if (value) {
+    node[opt_name] = value;
+  }
+};
+
+
+/**
+ * Processes the children of the XML node to set text content, child nodes and
+ * content nodes of the semantic node.
+ * @param {sre.SemanticNode} node The semantic node.
+ * @param {Element} xml The XML element representation of the node.
+ * @private
+ */
+sre.SemanticNode.processChildren_ = function(node, xml) {
+  for (var child of sre.DomUtil.toArray(xml.childNodes)) {
+    if (child.nodeType === sre.DomUtil.NodeType.TEXT_NODE) {
+      node.textContent = child.textContent;
+      continue;
+    }
+    var children = sre.DomUtil.toArray(child.childNodes)
+        .map(sre.SemanticNode.fromXml);
+    children.forEach(function(x) {
+      x.parent = node;
+    });
+    if (sre.DomUtil.tagName(child) === 'CONTENT') {
+      node.contentNodes = children;
+    } else {
+      node.childNodes = children;
+    }
+  }
 };

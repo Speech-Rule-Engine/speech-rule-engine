@@ -33,15 +33,15 @@ sre.Variables = function() {};
  * @const
  * @type {string}
  */
-sre.Variables.VERSION = '3.0.0-beta.6';
+sre.Variables.VERSION = '3.2.0';
 
 
 /**
  * List of locales to load.
  * @const
- * @type {Array.<string>}
+ * @type {!Array.<string>}
  */
-sre.Variables.LOCALES = ['en', 'es', 'fr', 'nemeth'];
+sre.Variables.LOCALES = ['en', 'de', 'fr', 'es', 'hi', 'it', 'nemeth'];
 
 
 /**
@@ -66,7 +66,7 @@ sre.Variables.url = 'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
  * @const
  * @type {string}
  */
-sre.Variables.WGXpath = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/' +
-    sre.Variables.mathjaxVersion + '/extensions/a11y/wgxpath.install.js';
+sre.Variables.WGXpath =
+    'https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js';
 
 

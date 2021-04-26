@@ -22,6 +22,7 @@ goog.provide('sre.SemanticAnnotations');
 
 goog.require('sre.SemanticAnnotator');
 goog.require('sre.SemanticNode');
+goog.require('sre.SemanticVisitor');
 
 
 
@@ -31,14 +32,14 @@ goog.require('sre.SemanticNode');
 sre.SemanticAnnotations = function() {
 
   /**
-   * @type {Object.<sre.SemanticAnnotator>}
+   * @type {!Object.<sre.SemanticAnnotator>}
    */
   this.annotators = {};
 
   /**
-   * @type {number}
+   * @type {!Object.<sre.SemanticVisitor>}
    */
-  this.counter = 0;
+  this.visitors = {};
 
 };
 goog.addSingletonGetter(sre.SemanticAnnotations);
@@ -46,20 +47,26 @@ goog.addSingletonGetter(sre.SemanticAnnotations);
 
 /**
  * Registers an annotator.
- * @param {sre.SemanticAnnotator} annotator The annotator.
+ * @param {sre.SemanticAnnotator|sre.SemanticVisitor} annotator The annotator.
  */
 sre.SemanticAnnotations.prototype.register = function(annotator) {
-  annotator.name = annotator.domain + this.counter++;
-  this.annotators[annotator.name] = annotator;
+  var name = annotator.domain + ':' + annotator.name;
+  ((annotator instanceof sre.SemanticAnnotator) ?
+   this.annotators : this.visitors)[name] = annotator;
 };
 
 
 /**
- * Unregisters an annotator by its name.
- * @param {string} name The annotator name.
+ * Activates a particular annotator.
+ * @param {string} domain The domain.
+ * @param {string} name The name of the annotator.
  */
-sre.SemanticAnnotations.prototype.unregister = function(name) {
-  delete this.annotators[name];
+sre.SemanticAnnotations.prototype.activate = function(domain, name) {
+  var key = domain + ':' + name;
+  var annotator = this.annotators[key] || this.visitors[key];
+  if (annotator) {
+    annotator.active = true;
+  }
 };
 
 
@@ -68,7 +75,17 @@ sre.SemanticAnnotations.prototype.unregister = function(name) {
  * @param {sre.SemanticNode} node The semantic node to annotate.
  */
 sre.SemanticAnnotations.prototype.annotate = function(node) {
-  for (var key in this.annotators) {
-    this.annotators[key].annotate(node);
+  for (var key of Object.keys(this.annotators)) {
+    var annotator = this.annotators[key];
+    if (annotator.active) {
+      this.annotators[key].annotate(node);
+    }
+  }
+  for (var name of Object.keys(this.visitors)) {
+    var visitor = this.visitors[name];
+    if (visitor.active) {
+      this.visitors[name].visit(
+          node, Object.assign({}, this.visitors[name].def));
+    }
   }
 };
