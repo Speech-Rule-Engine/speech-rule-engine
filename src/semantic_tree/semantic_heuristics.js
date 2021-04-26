@@ -140,19 +140,10 @@ sre.SemanticHeuristics.lookup = function(name) {
  * they can be switched on manually via a flag. Currently these flags are hard
  * coded.
  * @interface
- * @param {{predicate: ((function(T): boolean)|undefined),
- *          method: function(T): T} } heuristic
- *          The predicate and method of the heuristic
  * @template T
  */
-sre.SemanticHeuristic = function(
-    {predicate: predicate = function(node) {return false;}, method: method}) {
+sre.SemanticHeuristic = function() {};
 
-  this.apply = method;
-
-  this.applicable = predicate;
-
-};
 
 
 /**
@@ -183,9 +174,10 @@ sre.SemanticTreeHeuristic = function(
  * coded.
  * @constructor
  * @implements {sre.SemanticHeuristic<Array.<sre.SemanticNode>>}
- * @param {{predicate: ((function(Array.<sre.SemanticNode>): boolean)|undefined),
- *          method: function(Array.<sre.SemanticNode>): Array.<sre.SemanticNode>} } heuristic
- *          The predicate and method of the heuristic
+ * @param {{predicate: ((function(Array.<sre.SemanticNode>):
+ *          boolean)|undefined), method: function(Array.<sre.SemanticNode>):
+ *          Array.<sre.SemanticNode>} } heuristic The predicate and method of
+ *          the heuristic
  */
 sre.SemanticMultiHeuristic = function(
     {predicate: predicate = function(node) {return false;}, method: method}) {
@@ -476,7 +468,8 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
   }
   if (!left) {
     sre.Debugger.getInstance().output('Juxta Heuristic Case 3');
-    return sre.SemanticHeuristics.recurseJuxtaposition_([op].concat(first), ops, elements);
+    return sre.SemanticHeuristics.recurseJuxtaposition_(
+        [op].concat(first), ops, elements);
   }
   var right = first.shift();
   if (!right) {
@@ -538,7 +531,8 @@ sre.SemanticHeuristics.recurseJuxtaposition_ = function(acc, ops, elements) {
     result.role = sre.SemanticAttr.Role.IMPLICIT;
   }
   acc.push(result);
-  return sre.SemanticHeuristics.recurseJuxtaposition_(acc.concat(first), ops, elements);
+  return sre.SemanticHeuristics.recurseJuxtaposition_(
+      acc.concat(first), ops, elements);
 };
 
 

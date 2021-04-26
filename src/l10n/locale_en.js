@@ -242,6 +242,6 @@ sre.Locale.en = {
 
 sre.Grammar.getInstance().setCorrection(
     'noarticle', function(name) {
-      return sre.Grammar.getInstance().getParameter('noArticle') ? '': name;
+      return sre.Grammar.getInstance().getParameter('noArticle') ? '' : name;
     }
 );

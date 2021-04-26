@@ -338,7 +338,7 @@ sre.BaseRuleStore.priority_ = function(rule1, rule2) {
   var priority1 = rule1.precondition.priority;
   var priority2 = rule2.precondition.priority;
   return (priority1 === priority2) ? 0 :
-    ((priority1 > priority2) ? -1 : 1);
+      ((priority1 > priority2) ? -1 : 1);
 };
 
 
@@ -394,6 +394,7 @@ sre.BaseRuleStore.prototype.parsePrecondition = function(query, rest) {
  * Resolves a single precondition constraint.
  * @param {string} cstr The precondition constraint.
  * @return {Array.<string>} Array of constraints, possibly generated.
+ * @private
  */
 sre.BaseRuleStore.prototype.parsePrecondition_ = function(cstr) {
   var generator = this.context.customGenerators.lookup(cstr);

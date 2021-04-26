@@ -306,14 +306,15 @@ sre.SemanticSkeleton.tree_ = function(mml, node) {
  * @param {Node} node An mml node to add the owns attribute to.
  * @param {Array.<Node>} children Its semantic children with content nodes
  *     already interspersed.
+ * @private
  */
 sre.SemanticSkeleton.addOwns_ = function(node, children) {
   var collapsed = node.getAttribute(sre.EnrichMathml.Attribute.COLLAPSED);
   var leafs = collapsed ? sre.SemanticSkeleton.realLeafs_(
-    sre.SemanticSkeleton.fromString(collapsed).array) :
+      sre.SemanticSkeleton.fromString(collapsed).array) :
       children.map(x => x.id);
   node.setAttribute(
-    sre.EnrichMathml.Attribute.OWNS, leafs.join(' '));
+      sre.EnrichMathml.Attribute.OWNS, leafs.join(' '));
 };
 
 
@@ -321,6 +322,7 @@ sre.SemanticSkeleton.addOwns_ = function(node, children) {
  * Computes the existing leafs from a collapse skeleton structure.
  * @param {sre.SemanticSkeleton.Sexp} sexp The sexpression.
  * @return {Array.<number>} The actual leaf ids.
+ * @private
  */
 sre.SemanticSkeleton.realLeafs_ = function(sexp) {
   if (sre.SemanticSkeleton.simpleCollapseStructure(sexp)) {

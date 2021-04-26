@@ -290,6 +290,7 @@ sre.MathCompoundStore.prototype.addUnitRules = function(json) {
 /**
  * Adds a single speech rule for Unit descriptors from its JSON representation.
  * @param {Object} json JSON object of the speech rules.
+ * @private
  */
 sre.MathCompoundStore.prototype.addUnitRules_ = function(json) {
   var names = json['names'];
@@ -311,13 +312,14 @@ sre.MathCompoundStore.prototype.addSiUnitRules = function(json) {
     newJson.mappings = {};
     var prefix = this.siPrefixes[key];
     newJson['key'] = key + newJson['key'];
-    newJson['names'] = newJson['names'].map(function(name) { return key + name; });
+    newJson['names'] = newJson['names'].map(
+        function(name) { return key + name; });
     for (var domain of Object.keys(json['mappings'])) {
       newJson.mappings[domain] = {};
       for (var style of Object.keys(json['mappings'][domain])) {
         newJson['mappings'][domain][style] =
-          sre.Locale[this.locale].SI(
-              prefix, json['mappings'][domain][style]);
+            sre.Locale[this.locale].SI(
+            prefix, json['mappings'][domain][style]);
       }
     }
     this.addUnitRules_(newJson);
@@ -355,7 +357,7 @@ sre.MathCompoundStore.prototype.lookupCategory = function(character) {
  * @param {string} text The text to be translated.
  * @param {!sre.DynamicCstr} dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
- * @return {string|null} The string resulting from the action of speech rule.
+ * @return {?string} The string resulting from the action of speech rule.
  */
 sre.MathCompoundStore.prototype.lookupString = function(text, dynamic) {
   var rule = this.lookupRule(text, dynamic);

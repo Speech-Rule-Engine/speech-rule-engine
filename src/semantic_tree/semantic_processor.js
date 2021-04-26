@@ -130,6 +130,15 @@ sre.SemanticProcessor.prototype.implicitNode_ = function(nodes) {
 };
 
 
+/**
+ * Matches juxtaposition with existing spaces by adding the potentially nested
+ * space elements as mathmlTree elements. This has the effect that newly
+ * introduced invisible times operators will enrich the spaces rather than add
+ * new empty elements.
+ * @param {!Array.<!sre.SemanticNode>} nodes The operands.
+ * @param {!Array.<sre.SemanticNode>} ops A list of invisible times operators.
+ * @private
+ */
 sre.SemanticProcessor.matchSpaces_ = function(nodes, ops) {
   for (var i = 0, op; op = ops[i]; i++) {
     var node = nodes[i];
@@ -138,7 +147,7 @@ sre.SemanticProcessor.matchSpaces_ = function(nodes, ops) {
     if (!mt1 || !mt2) {
       continue;
     }
-    var sibling = mt1.nextSibling;
+    var sibling = /** @type {Element} */(mt1.nextSibling);
     if (!sibling || sibling === mt2) {
       continue;
     }
@@ -152,19 +161,26 @@ sre.SemanticProcessor.matchSpaces_ = function(nodes, ops) {
 };
 
 
+// TODO (TS): Make this optional conditions.
+/**
+ * Recursively retrieves an embedded space element.
+ * @param {Element} node The mml element.
+ * @return {Element} The space element if it exists.
+ * @private
+ */
 sre.SemanticProcessor.getSpacer_ = function(node) {
   if (sre.DomUtil.tagName(node) === 'MSPACE') {
     return node;
   }
   while (sre.SemanticUtil.hasEmptyTag(node) &&
          node.childNodes.length === 1) {
-    node = node.childNodes[0];
+    node = /** @type {Element} */(node.childNodes[0]);
     if (sre.DomUtil.tagName(node) === 'MSPACE') {
       return node;
     }
   }
   return null;
-}
+};
 
 
 /**
@@ -882,7 +898,7 @@ sre.SemanticProcessor.prototype.fences_ = function(
   }
   // General closing case.
   if (lastOpen &&
-    // Closing fence for some opening fence.
+      // Closing fence for some opening fence.
       firstRole === sre.SemanticAttr.Role.CLOSE &&
       lastOpen.role === sre.SemanticAttr.Role.OPEN) {
     var fenced = sre.SemanticProcessor.getInstance().horizontalFencedNode_(
@@ -902,7 +918,7 @@ sre.SemanticProcessor.prototype.fences_ = function(
         contentStack.push(cont);
       }
       return sre.SemanticProcessor.getInstance().fences_(
-        fences, content, openStack, contentStack);
+          fences, content, openStack, contentStack);
     }
     var fenced = sre.SemanticProcessor.getInstance().horizontalFencedNode_(
         openStack.pop(), fences.shift(), contentStack.pop());
@@ -911,8 +927,8 @@ sre.SemanticProcessor.prototype.fences_ = function(
         fences, content, openStack, contentStack);
   }
   // Closing with a neutral fence on the stack.
-  if (lastOpen && firstRole === sre.SemanticAttr.Role.CLOSE
-      && lastOpen.role === sre.SemanticAttr.Role.NEUTRAL &&
+  if (lastOpen && firstRole === sre.SemanticAttr.Role.CLOSE &&
+      lastOpen.role === sre.SemanticAttr.Role.NEUTRAL &&
       openStack.some(openPred)) {
     // Steps of the algorithm:
     // 1. Split list at right most opening bracket.
@@ -1286,7 +1302,7 @@ sre.SemanticProcessor.prototype.punctuatedNode_ = function(
       sre.SemanticPred.isAttribute('role', 'DUMMY'))) {
     newNode.role = sre.SemanticAttr.Role.TEXT;
   } else if (punctuations.every(
-    sre.SemanticPred.isAttribute('role', 'SPACE'))) {
+      sre.SemanticPred.isAttribute('role', 'SPACE'))) {
     newNode.role = sre.SemanticAttr.Role.SPACE;
   } else {
     newNode.role = sre.SemanticAttr.Role.SEQUENCE;
@@ -1336,7 +1352,8 @@ sre.SemanticProcessor.MML_TO_BOUNDS_ = {
   'MSUBSUP': {type: sre.SemanticAttr.Type.SUBSCRIPT, length: 2, accent: false},
   'MUNDER': {type: sre.SemanticAttr.Type.UNDERSCORE, length: 1, accent: true},
   'MOVER': {type: sre.SemanticAttr.Type.OVERSCORE, length: 1, accent: true},
-  'MUNDEROVER': {type: sre.SemanticAttr.Type.UNDERSCORE, length: 2, accent: true}
+  'MUNDEROVER': {
+    type: sre.SemanticAttr.Type.UNDERSCORE, length: 2, accent: true}
 };
 
 
@@ -1346,13 +1363,14 @@ sre.SemanticProcessor.MML_TO_BOUNDS_ = {
  * @param {!sre.SemanticNode} node The semantic node.
  * @param {sre.SemanticAttr.Type} type The semantic type of the parent node.
  * @return {boolean} True if node is a legal accent.
+ * @private
  */
 sre.SemanticProcessor.prototype.accentRole_ = function(node, type) {
   if (!sre.SemanticPred.isAccent(node)) {
     return false;
   }
   node.role = type === sre.SemanticAttr.Type.UNDERSCORE ?
-    sre.SemanticAttr.Role.UNDERACCENT : sre.SemanticAttr.Role.OVERACCENT;
+      sre.SemanticAttr.Role.UNDERACCENT : sre.SemanticAttr.Role.OVERACCENT;
   return true;
 };
 
@@ -1391,18 +1409,18 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
     if (length === 2) {
       if (sre.SemanticPred.isAccent(children[1])) {
         center = this.accentNode_(
-          center, [center, children[1]],
-          {'MSUBSUP': sre.SemanticAttr.Type.SUBSCRIPT,
-           'MUNDEROVER': sre.SemanticAttr.Type.UNDERSCORE}[mmlTag], 1, true);
+            center, [center, children[1]],
+            {'MSUBSUP': sre.SemanticAttr.Type.SUBSCRIPT,
+              'MUNDEROVER': sre.SemanticAttr.Type.UNDERSCORE}[mmlTag], 1, true);
         return !children[2] ? center :
-          this.makeLimitNode_(center, [center, children[2]], null,
+            this.makeLimitNode_(center, [center, children[2]], null,
                               sre.SemanticAttr.Type.LIMUPPER);
       }
       if (children[2] && sre.SemanticPred.isAccent(children[2])) {
         center = this.accentNode_(
-          center, [center, children[2]],
-          {'MSUBSUP': sre.SemanticAttr.Type.SUPERSCRIPT,
-           'MUNDEROVER': sre.SemanticAttr.Type.OVERSCORE}[mmlTag], 1, true);
+            center, [center, children[2]],
+            {'MSUBSUP': sre.SemanticAttr.Type.SUPERSCRIPT,
+              'MUNDEROVER': sre.SemanticAttr.Type.OVERSCORE}[mmlTag], 1, true);
         return this.makeLimitNode_(center, [center, children[1]], null,
                                    sre.SemanticAttr.Type.LIMLOWER);
       }
@@ -1430,9 +1448,10 @@ sre.SemanticProcessor.prototype.limitNode = function(mmlTag, children) {
  *     in case not enough children exist, then the type has to be changed.
  * @param {boolean} accent Is this an accent node?
  * @return {!sre.SemanticNode} The newly created node.
+ * @private
  */
 sre.SemanticProcessor.prototype.accentNode_ = function(
-  center, children, type, length, accent) {
+    center, children, type, length, accent) {
   children = children.slice(0, length + 1);
   var child1 = /** @type {!sre.SemanticNode} */(children[1]);
   var child2 = children[2];
@@ -1453,13 +1472,13 @@ sre.SemanticProcessor.prototype.accentNode_ = function(
                                         sre.SemanticAttr.Type.OVERSCORE);
       if (overAccent && !underAccent) {
         innerNode = sre.SemanticProcessor.getInstance().factory_.
-          makeBranchNode(
+            makeBranchNode(
             sre.SemanticAttr.Type.OVERSCORE, [center, child2], []);
         children = [innerNode, child1];
         type = sre.SemanticAttr.Type.UNDERSCORE;
       } else {
         innerNode = sre.SemanticProcessor.getInstance().factory_.
-          makeBranchNode(
+            makeBranchNode(
             sre.SemanticAttr.Type.UNDERSCORE, [center, child1], []);
         children = [innerNode, child2];
         type = sre.SemanticAttr.Type.OVERSCORE;
@@ -1476,12 +1495,14 @@ sre.SemanticProcessor.prototype.accentNode_ = function(
  * @param {!sre.SemanticNode} center The inner center node.
  * @param {!Array.<sre.SemanticNode>} children All children, where center is
  *     first node.
- * @param {sre.SemanticNode|undefined} innerNode The innermost node if it exists.
+ * @param {sre.SemanticNode|undefined} innerNode The innermost node if it
+ *     exists.
  * @param {sre.SemanticAttr.Type} type The new node type.
  * @return {!sre.SemanticNode} The newly created limit node.
+ * @private
  */
 sre.SemanticProcessor.prototype.makeLimitNode_ = function(
-  center, children, innerNode, type) {
+    center, children, innerNode, type) {
   // These two conditions implement the limitboth heuristic, which works before
   // a new node is created.
   if (type === sre.SemanticAttr.Type.LIMUPPER &&
@@ -1597,7 +1618,7 @@ sre.SemanticProcessor.classifyFunction_ = function(funcNode, restNodes) {
       restNodes[0].textContent === sre.SemanticAttr.functionApplication()) {
     // Store explicit function application to be reused later.
     sre.SemanticProcessor.getInstance().funcAppls[funcNode.id] =
-      restNodes.shift();
+        restNodes.shift();
     var role = sre.SemanticAttr.Role.SIMPLEFUNC;
     sre.SemanticHeuristics.run('simple2prefix', funcNode);
     if (funcNode.role === sre.SemanticAttr.Role.PREFIXFUNC ||
@@ -1790,7 +1811,7 @@ sre.SemanticProcessor.prototype.getIntegralArgs_ = function(nodes, opt_args) {
  */
 sre.SemanticProcessor.prototype.functionNode_ = function(func, arg) {
   var applNode = sre.SemanticProcessor.getInstance().factory_.makeContentNode(
-        sre.SemanticAttr.functionApplication());
+      sre.SemanticAttr.functionApplication());
   var appl = this.funcAppls[func.id];
   if (appl) {
     // TODO: Work out why we cannot just take appl.
@@ -1808,7 +1829,7 @@ sre.SemanticProcessor.prototype.functionNode_ = function(func, arg) {
             (sre.SemanticPred.isAttribute('type', 'IDENTIFIER')(node) &&
              sre.SemanticPred.isAttribute('role', 'SIMPLEFUNC')(node));
       }
-  );
+      );
   return sre.SemanticProcessor.getInstance().functionalNode_(
       sre.SemanticAttr.Type.APPL, [func, arg], funcop, [applNode]);
 };
