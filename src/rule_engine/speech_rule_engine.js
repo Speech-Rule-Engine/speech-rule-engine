@@ -43,6 +43,7 @@ goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleStores');
 
 
+
 /**
  * @constructor
  */
@@ -67,6 +68,8 @@ sre.SpeechRuleEngine = function() {
    * @private
    */
   this.evaluators_ = {};
+
+  this.prune = true;
 
   sre.Engine.registerTest(
       goog.bind(function(x) {return this.ready_;}, this));
@@ -321,7 +324,7 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
     var last = descrs[descrs.length - 1];
     if (last.text || Object.keys(last.personality).length) {
       descrs.push(sre.AuditoryDescription.create(
-        {text: '', personality: {pause: pause}}));
+          {text: '', personality: {pause: pause}}));
     } else {
       last.personality[sre.Engine.personalityProps.PAUSE] = pause;
     }
@@ -459,13 +462,13 @@ sre.SpeechRuleEngine.prototype.addStore = function(set) {
   sre.SpeechRuleStores.init();
   if (set && !set.functions) {
     set.functions = sre.SpeechRules.getInstance().getStore(
-      set.locale, set.modality, set.domain);
+        set.locale, set.modality, set.domain);
   }
   let store = this.storeFactory_(set.modality);
   store.parse(set);
   store.initialize();
   store.getSpeechRules().forEach(
-    goog.bind(function(x) {this.activeStore_.trie.addRule(x);}, this));
+      goog.bind(function(x) {this.activeStore_.trie.addRule(x);}, this));
   this.addEvaluator(store);
   this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
 };
@@ -483,8 +486,36 @@ sre.SpeechRuleEngine.prototype.updateEngine = function() {
     setTimeout(goog.bind(this.updateEngine, this), 250);
     return;
   }
+  if (this.prune) {
+    this.prune = false;
+    this.adjustEngine();
+  }
   sre.Engine.getInstance().evaluator =
       goog.bind(maps.store.lookupString, maps.store);
+};
+
+
+/**
+ * Adjust Engine with local rule files.
+ */
+sre.SpeechRuleEngine.prototype.adjustEngine = function() {
+  var engine = sre.Engine.getInstance();
+  if (engine.prune) {
+    var cstr = engine.prune.split('.');
+    this.activeStore_.prune(cstr);
+  }
+  if (engine.rules) {
+    // TODO: This needs to be made more robust.
+    var path = sre.SystemExternal.jsonPath.replace(
+        '/lib/mathmaps', '/src/mathmaps');
+    var parse = function(json) {
+      return sre.MathMap.getInstance().parseMaps(
+          '{"' + engine.rules + '":' + json + '}'
+      );
+    };
+    sre.MathMap.getInstance().retrieveFiles(path + engine.rules, parse);
+  }
+  setTimeout(goog.bind(this.updateEngine, this), 100);
 };
 
 

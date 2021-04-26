@@ -223,7 +223,7 @@ sre.SemanticTree.fromXml = function(xml) {
   var stree = sre.SemanticTree.empty();
   if (xml.childNodes[0]) {
     stree.root = sre.SemanticNode.fromXml(
-      /** @type {!Element} */(xml.childNodes[0]));
+        /** @type {!Element} */(xml.childNodes[0]));
   }
   return stree;
 };

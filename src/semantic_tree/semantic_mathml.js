@@ -327,7 +327,7 @@ sre.SemanticMathml.prototype.space_ = function(node, children) {
   }
   var newNode = this.getFactory().makeUnprocessed(node);
   return sre.SemanticProcessor.getInstance().
-    text(newNode, sre.DomUtil.tagName(node));
+      text(newNode, sre.DomUtil.tagName(node));
 };
 
 
@@ -541,6 +541,7 @@ sre.SemanticMathml.prototype.leaf_ = function(mml, children) {
   if (children.length === 1 &&
       children[0].nodeType !== sre.DomUtil.NodeType.TEXT_NODE) {
     let node = this.getFactory().makeUnprocessed(mml);
+    node.role = /** @type {!sre.SemanticAttr.Role} */(children[0].tagName);
     sre.SemanticUtil.addAttributes(node, children[0]);
     return node;
   }

@@ -102,6 +102,12 @@ sre.BaseRuleStore = function() {
     'Generator': goog.bind(this.generateRules, this)
   };
 
+  /**
+   * Local transcriptions for special characters.
+   * @type {Object.<string>}
+   */
+  this.customTranscriptions = { };
+
 };
 
 
@@ -205,7 +211,46 @@ sre.BaseRuleStore.prototype.findAllRules = function(pred) {
  * @override
  */
 sre.BaseRuleStore.prototype.evaluateDefault = function(node) {
-  return [sre.AuditoryDescription.create({'text': node.textContent})];
+  var rest = node.textContent.slice(0);
+  if (rest.match(/^\s+$/)) {
+    // Nothing but whitespace: Ignore.
+    return this.evaluateWhitespace(rest);
+  }
+  return this.evaluateString(rest);
+};
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateString = goog.abstractMethod;
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateWhitespace = function(str) {
+  return [];
+};
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateCustom = function(str) {
+  var trans = this.customTranscriptions[str];
+  return (trans !== undefined) ?
+      sre.AuditoryDescription.create(
+          {'text': trans}, {adjust: true, translate: false}) : null;
+};
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateCharacter = function(str) {
+  return this.evaluateCustom(str) || sre.AuditoryDescription.create(
+      {'text': str}, {adjust: true, translate: true});
 };
 
 
@@ -338,7 +383,7 @@ sre.BaseRuleStore.priority_ = function(rule1, rule2) {
   var priority1 = rule1.precondition.priority;
   var priority2 = rule2.precondition.priority;
   return (priority1 === priority2) ? 0 :
-    ((priority1 > priority2) ? -1 : 1);
+      ((priority1 > priority2) ? -1 : 1);
 };
 
 
@@ -394,6 +439,7 @@ sre.BaseRuleStore.prototype.parsePrecondition = function(query, rest) {
  * Resolves a single precondition constraint.
  * @param {string} cstr The precondition constraint.
  * @return {Array.<string>} Array of constraints, possibly generated.
+ * @private
  */
 sre.BaseRuleStore.prototype.parsePrecondition_ = function(cstr) {
   var generator = this.context.customGenerators.lookup(cstr);
@@ -442,3 +488,14 @@ sre.BaseRuleStore.prototype.generateRules = function(generator) {
 };
 
 
+/**
+ * Prunes the trie of the store for a given constraint.
+ * @param {Array.<string>} constraints A list of constraints.
+ */
+sre.BaseRuleStore.prototype.prune = function(constraints) {
+  var last = constraints.pop();
+  var parent = this.trie.byConstraint(constraints);
+  if (parent) {
+    parent.removeChild(last);
+  }
+};

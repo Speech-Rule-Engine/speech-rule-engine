@@ -238,3 +238,10 @@ sre.Locale.en = {
   ALPHABET_COMBINER: sre.Locale.prefixCombiner
 
 };
+
+
+sre.Grammar.getInstance().setCorrection(
+    'noarticle', function(name) {
+      return sre.Grammar.getInstance().getParameter('noArticle') ? '' : name;
+    }
+);

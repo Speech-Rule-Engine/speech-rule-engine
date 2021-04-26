@@ -43,6 +43,16 @@ sre.System = function() {
    */
   this.version = sre.Variables.VERSION;
 
+  /**
+   * Number of open files.
+   * @type {number}
+   * @private
+   */
+  this.files_ = 0;
+
+  sre.Engine.registerTest(
+      function() {return !sre.System.getInstance().files_;}
+  );
 };
 goog.addSingletonGetter(sre.System);
 
@@ -383,19 +393,23 @@ sre.System.prototype.inputFileAsync_ = function(file, callback) {
  */
 sre.System.prototype.processFileAsync_ = function(
     processor, input, opt_output) {
+  this.files_++;
   sre.System.getInstance().inputFileAsync_(
       input,
       goog.bind(function(expr) {
         var result = sre.ProcessorFactory.output(processor, expr);
         if (!opt_output) {
           console.info(result);
+          this.files_--;
           return;
         }
         sre.SystemExternal.fs.writeFile(opt_output, result, function(err) {
           if (err) {
+            this.files_--;
             throw new sre.Engine.Error('Can not write to file: ' + opt_output);
           }
         });
+        this.files_--;
       }, this));
 };
 
@@ -420,4 +434,20 @@ sre.System.prototype.walk = function(expr) {
  */
 sre.System.prototype.move = function(direction) {
   return sre.ProcessorFactory.keypress('move', direction);
+};
+
+
+/**
+ * A clean exit method, that ensures all file processes are completed.
+ * @param {number=} opt_value The exit value. Defaults to 0.
+ */
+sre.System.prototype.exit = function(opt_value) {
+  var value = opt_value || 0;
+  if (!value && !sre.Engine.isReady()) {
+    setTimeout(goog.bind(function() {
+      this.exit(value);
+    }, this), 100);
+    return;
+  }
+  sre.SystemExternal.process.exit(value);
 };

@@ -36,7 +36,7 @@ goog.require('sre.DynamicCstr');
 sre.Engine = function() {
 
   /**
-   * @type {function(string, !sre.DynamicCstr): (string|null)}
+   * @type {function(string, !sre.DynamicCstr):? (string)}
    */
   this.evaluator = sre.Engine.defaultEvaluator;
 
@@ -167,6 +167,17 @@ sre.Engine = function() {
    * @type {boolean}
    */
   this.config = false;
+
+  /**
+   * @type {string}
+   */
+  this.rules = '';
+
+  /**
+   * Constraints to prune given dot separated.
+   * @type {string}
+   */
+  this.prune = '';
 
 };
 goog.addSingletonGetter(sre.Engine);
@@ -317,7 +328,7 @@ sre.Engine.BINARY_FEATURES = [
  */
 sre.Engine.STRING_FEATURES = [
   'markup', 'style', 'domain', 'speech', 'walker',
-  'locale', 'modality', 'rate'
+  'locale', 'modality', 'rate', 'rules', 'prune'
 ];
 
 
@@ -363,4 +374,3 @@ sre.Engine.DOMAIN_TO_STYLES = {
   'mathspeak': 'default',
   'clearspeak': 'default'
 };
-

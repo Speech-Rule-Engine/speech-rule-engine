@@ -87,7 +87,7 @@ sre.SpeechGeneratorUtil.addSpeech = function(mml, semantic, snode) {
       snode, 'id', semantic.id.toString())[0];
   var speech = sxml ?
       sre.AuralRendering.getInstance().markup(
-        sre.SpeechGeneratorUtil.computeSpeech(sxml)) :
+      sre.SpeechGeneratorUtil.computeSpeech(sxml)) :
       sre.SpeechGeneratorUtil.recomputeMarkup(semantic);
   mml.setAttribute(sre.EnrichMathml.Attribute.SPEECH, speech);
 };
