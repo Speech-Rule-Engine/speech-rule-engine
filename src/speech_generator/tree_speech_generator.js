@@ -55,7 +55,12 @@ sre.TreeSpeechGenerator.prototype.getSpeech = function(node, xml) {
     var innerNode = /** @type {Element} */(
         sre.WalkerUtil.getBySemanticId(node, key));
     if (!innerMml || !innerNode) continue;
-    sre.SpeechGeneratorUtil.addSpeech(innerNode, snode, this.modality);
+    if (!this.modality || this.modality === sre.EnrichMathml.Attribute.SPEECH) {
+      sre.SpeechGeneratorUtil.addSpeech(
+          innerNode, snode, this.getRebuilt().xml);
+    } else {
+      sre.SpeechGeneratorUtil.addModality(innerNode, snode, this.modality);
+    }
     if (this.modality === sre.EnrichMathml.Attribute.SPEECH) {
       sre.SpeechGeneratorUtil.addPrefix(innerNode, snode);
     }

@@ -442,3 +442,14 @@ sre.BaseRuleStore.prototype.generateRules = function(generator) {
 };
 
 
+/**
+ * Prunes the trie of the store for a given constraint.
+ * @param {Array.<string>} constraints A list of constraints.
+ */
+sre.BaseRuleStore.prototype.prune = function(constraints) {
+  var last = constraints.pop();
+  var parent = this.trie.byConstraint(constraints);
+  if (parent) {
+    parent.removeChild(last);
+  }
+};

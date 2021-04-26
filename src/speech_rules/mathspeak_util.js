@@ -40,7 +40,7 @@ var msg = sre.Messages;
  * @return {string} The spaced out text.
  */
 sre.MathspeakUtil.spaceoutText = function(node) {
-  return node.textContent.split('').join(' ');
+  return Array.from(node.textContent).join(' ');
 };
 
 
@@ -53,7 +53,7 @@ sre.MathspeakUtil.spaceoutText = function(node) {
  * @return {Array.<Node>} List of single nodes.
  */
 sre.MathspeakUtil.spaceoutNodes = function(node, correction) {
-  var content = node.textContent.split('');
+  var content = Array.from(node.textContent);
   var result = [];
   var processor = sre.SemanticProcessor.getInstance();
   var doc = node.ownerDocument;

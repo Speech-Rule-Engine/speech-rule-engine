@@ -49,7 +49,7 @@
       "Rule",
       "protected",
       "default",
-      "[t] text()",
+      "[n] text() (grammar:ignoreCaps=\"upper\")",
       "self::number",
       "contains(@grammar, \"protected\")"
     ],
@@ -164,8 +164,7 @@
       "number-with-chars",
       "default",
       "[t] \"Number\"; [m] CQFspaceoutNumber (grammar:protected)",
-      "self::number",
-      "@role=\"othernumber\"",
+      "self::number[@role=\"othernumber\"]",
       "\"\" != translate(text(), \"0123456789.,\", \"\")",
       "not(contains(@grammar, \"protected\"))"
     ],
@@ -187,7 +186,7 @@
       "number-as-upper-word",
       "default",
       "[t] \"UpperWord\"; [t] CSFspaceoutText",
-      "self::number",
+      "self::number[@role=\"othernumber\"]",
       "string-length(text())>1",
       "text()=translate(text(), \"abcdefghijklmnopqrstuvwxyzαβγδεζηθικλμνξοπρςστυφχψω\", \"ABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\")",
       "\"\"=translate(text(), \"ABCDEFGHIJKLMNOPQRSTUVWXYZΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΣΤΥΦΧΨΩ\",\"\")"
@@ -386,7 +385,7 @@
       "[t] \"StartAbsoluteValue\"; [n] children/*[1]; [t] \"EndAbsoluteValue\"",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "SpecializedRule",

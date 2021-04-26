@@ -49,7 +49,7 @@
       "Rule",
       "protected",
       "default",
-      "[t] text()",
+      "[n] text() (grammar:ignoreCaps=\"maiuscola\")",
       "self::number",
       "contains(@grammar, \"protected\")"
     ],
@@ -367,7 +367,7 @@
       "[t] \"inizio valore assoluto\"; [n] children/*[1]; [t] \"fine valore assoluto\"",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "SpecializedRule",

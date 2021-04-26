@@ -36,7 +36,7 @@
       "Rule",
       "protected",
       "default",
-      "[t] text()",
+      "[n] text() (grammar:ignoreCaps=\"majuscule\")",
       "self::number",
       "contains(@grammar, \"protected\")"
     ],
@@ -2006,7 +2006,7 @@
       "[p] (pause:short); [t] \"la valeur absolue de\"; [n] children/*[1] (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2015,7 +2015,7 @@
       "[p] (pause:short); [t] \"la valeur absolue de\"; [n] children/*[1] (pause: short); [t] \"fin de valeur absolue\" (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2024,7 +2024,7 @@
       "[p] (pause:short); [t] \"la cardinalité de\"; [n] children/*[1] (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2033,7 +2033,7 @@
       "[p] (pause:short); [t] \"le déterminant de\"; [n] children/*[1] (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",

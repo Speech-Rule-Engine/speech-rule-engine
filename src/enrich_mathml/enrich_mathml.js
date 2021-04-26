@@ -88,6 +88,7 @@ sre.EnrichMathml.Attribute = {
   OPERATOR: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'operator',
   OWNS: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'owns',
   PARENT: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'parent',
+  POSTFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'postfix',
   PREFIX: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'prefix',
   ROLE: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'role',
   SPEECH: sre.EnrichMathml.ATTRIBUTE_PREFIX_ + 'speech',
@@ -788,6 +789,27 @@ sre.EnrichMathml.setAttributes = function(mml, semantic) {
   }
   if (semantic.parent) {
     mml.setAttribute(sre.EnrichMathml.Attribute.PARENT, semantic.parent.id);
+  }
+  sre.EnrichMathml.setPostfix(mml, semantic);
+};
+
+
+/**
+ * Sets postfix attributes to surface properties via suffixes. Examples: link,
+ * image, etc.
+ * @param {!Element} mml The MathML node.
+ * @param {!sre.SemanticNode} semantic The semantic tree node.
+ */
+sre.EnrichMathml.setPostfix = function(mml, semantic) {
+  var postfix = [];
+  if (semantic.role === 'mglyph') {
+    postfix.push('image');
+  }
+  if (semantic.attributes['href']) {
+    postfix.push('link');
+  }
+  if (postfix.length) {
+    mml.setAttribute(sre.EnrichMathml.Attribute.POSTFIX, postfix.join(' '));
   }
 };
 

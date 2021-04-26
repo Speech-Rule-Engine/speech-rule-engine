@@ -135,6 +135,12 @@ module.exports.engineSetup = sre.System.getInstance().engineSetup;
 
 
 /**
+ * Clean exit from the system. Needed in async mode.
+ */
+module.exports.exit = sre.System.getInstance().exit;
+
+
+/**
  * Default setup of the Engine.
  */
 if (global && global.SRE_JSON_PATH) {

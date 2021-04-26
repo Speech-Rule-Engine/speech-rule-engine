@@ -36,7 +36,7 @@
       "Rule",
       "protected",
       "default",
-      "[t] text()",
+      "[n] text() (grammar:ignoreCaps=\"cap\")",
       "self::number",
       "contains(@grammar, \"protected\")"
     ],
@@ -563,12 +563,11 @@
     ],
     [
       "Rule",
-      "function-article",
+      "article",
       "default",
-      "[t] \"the\"; [n] text()",
-      "self::function",
-      "@role=\"prefix function\"",
-      "contains(@grammar, \"addArticle\")"
+      "[t] \"the\"; [n] . (grammar:noArticle)",
+      "self::*[contains(@grammar, \"addArticle\")]",
+      "not(contains(@grammar, \"noArticle\"))"
     ],
     [
       "Rule",
@@ -832,7 +831,7 @@
       "Rule",
       "superscript-prefix-function",
       "default",
-      "[t] \"the\"; [n] children/*[2] (grammar:ordinal); [t] \"power of\"; [n] children/*[1]",
+      "[n] children/*[2] (grammar:ordinal:addArticle); [t] \"power of\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"prefix function\"",
       "name(children/*[2])=\"number\"",
@@ -842,7 +841,7 @@
       "Rule",
       "superscript-prefix-function",
       "default",
-      "[t] \"the\"; [n] children/*[2] (grammar:ordinal); [t] \"power of\"; [n] children/*[1]",
+      "[n] children/*[2] (grammar:ordinal:addArticle); [t] \"power of\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"prefix function\"",
       "name(children/*[2])=\"identifier\""
@@ -870,7 +869,7 @@
       "Rule",
       "superscript-simple-exponent",
       "default",
-      "[n] children/*[1]; [t] \"raised to the\"; [n] children/*[2]; [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"raised to the\"; [n] children/*[2] (grammar:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "not(descendant::superscript)"
     ],
@@ -878,7 +877,7 @@
       "Rule",
       "superscript-simple-exponent-end",
       "default",
-      "[n] children/*[1]; [t] \"raised to the\"; [n] children/*[2]; [t] \"power\"",
+      "[n] children/*[1]; [t] \"raised to the\"; [n] children/*[2] (grammar:noArticle); [t] \"power\"",
       "self::superscript",
       "not(descendant::superscript)",
       "not(following-sibling::*)"
@@ -921,7 +920,7 @@
       "Rule",
       "superscript-ordinal",
       "default",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal); [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"number\"",
       "children/*[2][@role=\"integer\"]"
@@ -937,7 +936,7 @@
       "Rule",
       "superscript-non-ordinal",
       "default",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2]; [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "children/*[2][@role=\"negative\"]",
       "name(children/*[2]/children/*[1])=\"number\"",
@@ -947,7 +946,7 @@
       "Rule",
       "superscript-simple-function",
       "default",
-      "[t] \"the\"; [n] children/*[2] (grammar:ordinal); [t] \"power of\" (pause:\"short\"); [n] children/*[1]",
+      "[n] children/*[2] (grammar:ordinal:addArticle); [t] \"power of\" (pause:\"short\"); [n] children/*[1]",
       "self::superscript",
       "name(children/*[1])=\"identifier\"",
       "children/*[1][@role=\"simple function\"]",
@@ -968,7 +967,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_Ordinal",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal, pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"number\"",
       "children/*[2][@role=\"integer\"]"
@@ -977,7 +976,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_Ordinal",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:noArticle, pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"prefixop\"",
       "children/*[2][@role=\"negative\"]",
@@ -988,7 +987,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_Ordinal",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal, pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
       "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
@@ -1005,7 +1004,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_OrdinalPower",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal); [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"number\"",
       "children/*[2][@role=\"integer\"]"
@@ -1014,7 +1013,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_OrdinalPower",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2]; [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"prefixop\"",
       "children/*[2][@role=\"negative\"]",
@@ -1025,7 +1024,7 @@
       "Rule",
       "superscript-ordinal",
       "Exponent_OrdinalPower",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal); [t] \"power\" (pause:\"short\")",
+      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
       "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
@@ -1069,7 +1068,8 @@
       "self::number",
       "@role=\"integer\"",
       "contains(@grammar, \"ordinal\")",
-      "text()!=\"0\""
+      "text()!=\"0\"",
+      "not(contains(@annotation, \"general:basenumber\"))"
     ],
     [
       "Rule",
@@ -1079,7 +1079,8 @@
       "self::number",
       "@role=\"integer\"",
       "contains(@grammar, \"ordinal\")",
-      "text()!=\"0\""
+      "text()!=\"0\"",
+      "not(contains(@annotation, \"general:basenumber\"))"
     ],
     [
       "Rule",
@@ -1099,7 +1100,8 @@
       "self::number",
       "@role=\"integer\"",
       "contains(@grammar, \"ordinal\")",
-      "text()!=\"0\""
+      "text()!=\"0\"",
+      "not(contains(@annotation, \"general:basenumber\"))"
     ],
     [
       "Rule",
@@ -1456,14 +1458,14 @@
       "Rule",
       "fraction",
       "default",
-      "[p] (pause:short); [t] \"the fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)",
+      "[p] (pause:short); [t] \"the\" (grammar:noarticle); [t] \"fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
       "fraction",
       "Functions_None",
-      "[p] (pause:short); [t] \"the fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)",
+      "[p] (pause:short); [t] \"the\" (grammar:noarticle); [t] \"fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)",
       "self::fraction",
       "name(children/*[1])=\"appl\" or name(children/*[2])=\"appl\""
     ],
@@ -1723,14 +1725,14 @@
       "Rule",
       "root",
       "default",
-      "[t] \"the\"; [n] children/*[1] (grammar:ordinal); [t] \"root of\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)",
+      "[n] children/*[1] (grammar:ordinal:addArticle); [t] \"root of\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)",
       "self::root"
     ],
     [
       "Rule",
       "root-nested",
       "default",
-      "[p] (pause:short); [t] \"the\"; [n] children/*[1] (grammar:ordinal); [t] \"root of\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)",
+      "[p] (pause:short); [n] children/*[1] (grammar:ordinal:addArticle); [t] \"root of\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)",
       "self::root",
       "not(preceding-sibling::*)",
       "ancestor::sqrt|ancestor::root"
@@ -1794,7 +1796,7 @@
       "Rule",
       "set-prefix-operators",
       "default",
-      "[t] \"the\"; [n] self::* (grammar:!prefix); [t] \"of\"",
+      "[n] self::* (grammar:!prefix:addArticle); [t] \"of\"",
       "self::*",
       "contains(@grammar,\"prefix\")",
       "descendant-or-self::*/text()=\"∩\" or descendant-or-self::*/text()=\"∪\"",
@@ -2122,7 +2124,7 @@
       "[p] (pause:short); [t] \"the absolute value of\"; [n] children/*[1] (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2131,7 +2133,7 @@
       "[p] (pause:short); [t] \"the absolute value of\"; [n] children/*[1] (pause: short); [t] \"end absolute value\" (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2140,7 +2142,7 @@
       "[p] (pause:short); [t] \"the cardinality of\"; [n] children/*[1] (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2149,7 +2151,7 @@
       "[p] (pause:short); [t] \"the determinant of\"; [n] children/*[1] (pause: short)",
       "self::fenced",
       "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\""
+      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
       "Rule",
@@ -2725,7 +2727,7 @@
       "Rule",
       "bigop",
       "default",
-      "[t] \"the\"; [n] children/*[1]; [t] \"of\"; [n] children/*[2] (pause:short)",
+      "[n] children/*[1] (grammar:addArticle); [t] \"of\"; [n] children/*[2] (pause:short)",
       "self::bigop"
     ],
     [
@@ -2753,7 +2755,7 @@
       "Rule",
       "integral",
       "default",
-      "[t] \"the\"; [n] children/*[1]; [t] \"of\"; [n] children/*[2] (pause:short)",
+      "[n] children/*[1] (grammar:addArticle); [t] \"of\"; [n] children/*[2] (pause:short)",
       "self::integral"
     ],
     [
@@ -3181,6 +3183,120 @@
       "contains(@annotation, \"clearspeak:unit\")",
       "children/*[last()][@role=\"unit\"]",
       "CQFlastCurrency"
+    ],
+    [
+      "Rule",
+      "enclose",
+      "default",
+      "[t] \"enclosed with\"; [t] @role (grammar:localEnclose); [n] children/*[1]",
+      "self::enclose"
+    ],
+    [
+      "Rule",
+      "enclose-end",
+      "Enclosed_EndEnclose",
+      "[t] \"enclosed with\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"end enclosed\"",
+      "self::enclose"
+    ],
+    [
+      "Aliases",
+      "overscript",
+      "self::enclose",
+      "@role=\"top\""
+    ],
+    [
+      "Aliases",
+      "underscript",
+      "self::enclose",
+      "@role=\"bottom\""
+    ],
+    [
+      "Rule",
+      "leftbar",
+      "default",
+      "[t] \"vertical bar\"; [n] children/*[1]",
+      "self::enclose",
+      "@role=\"left\""
+    ],
+    [
+      "Rule",
+      "rightbar",
+      "default",
+      "[n] children/*[1]; [t] \"vertical bar\"",
+      "self::enclose",
+      "@role=\"right\""
+    ],
+    [
+      "Rule",
+      "crossout",
+      "default",
+      "[t] \"crossed out\"; [n] children/*[1]",
+      "self::enclose",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Rule",
+      "crossout-end",
+      "Enclosed_EndEnclose",
+      "[t] \"crossed out\"; [n] children/*[1]; [t] \"end crossout\"",
+      "self::enclose",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Rule",
+      "cancel",
+      "default",
+      "[n] children/*[1]/children/*[1]; [t] \"crossed out with\"; [n] children/*[2]",
+      "self::overscore",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Aliases",
+      "cancel",
+      "self::underscore",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Aliases",
+      "cancel",
+      "self::overscore",
+      "name(children/*[2])=\"enclose\"",
+      "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
+    ],
+    [
+      "Aliases",
+      "cancel",
+      "self::underscore",
+      "name(children/*[2])=\"enclose\"",
+      "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
+    ],
+    [
+      "Rule",
+      "cancel-end",
+      "Enclosed_EndEnclose",
+      "[t] \"crossed out\"; [n] children/*[1]/children/*[1]; [t] \"with\"; [n] children/*[2]; [t] \"end crossout\"",
+      "self::overscore",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Aliases",
+      "cancel-end",
+      "self::underscore",
+      "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
+    ],
+    [
+      "Aliases",
+      "cancel-end",
+      "self::overscore",
+      "name(children/*[2])=\"enclose\"",
+      "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
+    ],
+    [
+      "Aliases",
+      "cancel-end",
+      "self::underscore",
+      "name(children/*[2])=\"enclose\"",
+      "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
     ]
   ],
   "annotators": [
