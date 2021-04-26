@@ -43,6 +43,7 @@ goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleStores');
 
 
+
 /**
  * @constructor
  */
@@ -323,7 +324,7 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
     var last = descrs[descrs.length - 1];
     if (last.text || Object.keys(last.personality).length) {
       descrs.push(sre.AuditoryDescription.create(
-        {text: '', personality: {pause: pause}}));
+          {text: '', personality: {pause: pause}}));
     } else {
       last.personality[sre.Engine.personalityProps.PAUSE] = pause;
     }
@@ -461,13 +462,13 @@ sre.SpeechRuleEngine.prototype.addStore = function(set) {
   sre.SpeechRuleStores.init();
   if (set && !set.functions) {
     set.functions = sre.SpeechRules.getInstance().getStore(
-      set.locale, set.modality, set.domain);
+        set.locale, set.modality, set.domain);
   }
   let store = this.storeFactory_(set.modality);
   store.parse(set);
   store.initialize();
   store.getSpeechRules().forEach(
-    goog.bind(function(x) {this.activeStore_.trie.addRule(x);}, this));
+      goog.bind(function(x) {this.activeStore_.trie.addRule(x);}, this));
   this.addEvaluator(store);
   this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
 };
@@ -506,10 +507,10 @@ sre.SpeechRuleEngine.prototype.adjustEngine = function() {
   if (engine.rules) {
     // TODO: This needs to be made more robust.
     var path = sre.SystemExternal.jsonPath.replace(
-      '/lib/mathmaps', '/src/mathmaps');
+        '/lib/mathmaps', '/src/mathmaps');
     var parse = function(json) {
       return sre.MathMap.getInstance().parseMaps(
-        '{"' + engine.rules + '":' + json + '}'
+          '{"' + engine.rules + '":' + json + '}'
       );
     };
     sre.MathMap.getInstance().retrieveFiles(path + engine.rules, parse);

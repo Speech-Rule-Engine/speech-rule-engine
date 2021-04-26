@@ -254,7 +254,7 @@ sre.NemethUtil.propagateNumber = function(node, info) {
 
 
 sre.SemanticAnnotations.getInstance().register(
-  new sre.SemanticVisitor(
+    new sre.SemanticVisitor(
     'nemeth', 'number', sre.NemethUtil.propagateNumber, {number: true}));
 
 
@@ -385,11 +385,11 @@ sre.NemethUtil.relationIterator = function(nodes, context) {
     }
     var base = leftChild ?
         sre.MathspeakUtil.nestedSubSuper(
-          leftChild, '', {sup: msg.MS.SUPER, sub: msg.MS.SUB}) : '';
+        leftChild, '', {sup: msg.MS.SUPER, sub: msg.MS.SUB}) : '';
     var left = (leftChild && sre.DomUtil.tagName(leftChild) !== 'EMPTY') ||
         (first && content.parentNode.parentNode &&
          content.parentNode.parentNode.previousSibling) ?
-    [sre.AuditoryDescription.create({text: '⠀' + base}, {})] : [];
+        [sre.AuditoryDescription.create({text: '⠀' + base}, {})] : [];
     var right = (rightChild && sre.DomUtil.tagName(rightChild) !== 'EMPTY') ||
         (!contentNodes.length && content.parentNode.parentNode &&
          content.parentNode.parentNode.nextSibling) ?
@@ -399,10 +399,11 @@ sre.NemethUtil.relationIterator = function(nodes, context) {
     return contextDescr.concat(left, descrs, right);
   };
 };
-  
+
 
 /**
- * Iterates over the list of juxtapositions and inserts spaces between two numbers.
+ * Iterates over the list of juxtapositions and inserts spaces between two
+ * numbers.
  * @param {Array.<Element>} nodes A node array.
  * @param {string} context A context string.
  * @return {function(): Array.<sre.AuditoryDescription>} A closure that returns
@@ -430,11 +431,11 @@ sre.NemethUtil.implicitIterator = function(nodes, context) {
     var left = leftChild && sre.DomUtil.tagName(leftChild) === 'NUMBER';
     var right = rightChild && sre.DomUtil.tagName(rightChild) === 'NUMBER';
     return contextDescr.concat(
-      (left && right &&
-       content.getAttribute('role') === sre.SemanticAttr.Role.SPACE) ?
-       [sre.AuditoryDescription.create({text: '⠀'}, {})] : []);
+        (left && right &&
+        content.getAttribute('role') === sre.SemanticAttr.Role.SPACE) ?
+        [sre.AuditoryDescription.create({text: '⠀'}, {})] : []);
   };
 };
-  
+
 
 });  // goog.scope

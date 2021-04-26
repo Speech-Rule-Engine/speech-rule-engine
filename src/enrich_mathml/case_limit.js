@@ -60,8 +60,8 @@ sre.CaseLimit.test = function(semantic) {
   return ((type === sre.SemanticAttr.Type.LIMUPPER ||
            type === sre.SemanticAttr.Type.LIMLOWER) &&
           (mmlTag === 'MSUBSUP' || mmlTag === 'MUNDEROVER')) ||
-    (type === sre.SemanticAttr.Type.LIMBOTH &&
-     (mmlTag === 'MSUB' || mmlTag === 'MUNDER' ||
+      (type === sre.SemanticAttr.Type.LIMBOTH &&
+      (mmlTag === 'MSUB' || mmlTag === 'MUNDER' ||
       mmlTag === 'MSUP' || mmlTag === 'MOVER'));
 };
 
@@ -89,9 +89,10 @@ sre.CaseLimit.prototype.getMathml = function() {
 /**
  * Enriches a semantic node if it is given.
  * @param {sre.SemanticNode} node The semantic node.
+ * @private
  */
 sre.CaseLimit.walkTree_ = function(node) {
   if (node) {
-    sre.EnrichMathml.walkTree(/** @type{!sre.SemanticNode} */(node));
+    sre.EnrichMathml.walkTree(/** @type {!sre.SemanticNode} */(node));
   }
 };

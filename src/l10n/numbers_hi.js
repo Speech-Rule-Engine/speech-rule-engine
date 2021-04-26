@@ -28,23 +28,35 @@ goog.require('sre.Numbers');
  * @private
  */
 sre.Numbers.hi.onesNumbers_ = [
-  '', 'एक', 'दो', 'तीन', 'चार', 'पाँच', 'छः', 'सात', 'आठ', 'नौ', 'दस',
-  'ग्यारह', 'बारह', 'तेरह', 'चौदह', 'पंद्रह', 'सोलह', 'सत्रह', 'अठारह', 'उन्नीस',
-  'बीस', 'इक्कीस', 'बाईस', 'तेइस', 'चौबीस', 'पच्चीस', 'छब्बीस', 'सताइस', 'अट्ठाइस',
-  'उनतीस', 'तीस', 'इकतीस', 'बतीस', 'तैंतीस', 'चौंतीस', 'पैंतीस', 'छतीस', 'सैंतीस',
-  'अड़तीस', 'उनतालीस', 'चालीस', 'इकतालीस', 'बयालीस', 'तैतालीस', 'चवालीस',
-  'पैंतालीस', 'छयालिस', 'सैंतालीस', 'अड़तालीस', 'उनचास', 'पचास', 'इक्यावन', 'बावन',
-  'तिरपन', 'चौवन', 'पचपन', 'छप्पन', 'सतावन', 'अठावन', 'उनसठ', 'साठ', 'इकसठ',
-  'बासठ', 'तिरसठ', 'चौंसठ', 'पैंसठ', 'छियासठ', 'सड़सठ', 'अड़सठ', 'उनहतर', 'सत्तर',
-  'इकहतर', 'बहतर', 'तिहतर', 'चौहतर', 'पचहतर', 'छिहतर', 'सतहतर', 'अठहतर',
-  'उन्नासी', 'अस्सी', 'इक्यासी', 'बयासी', 'तिरासी', 'चौरासी', 'पचासी', 'छियासी',
-  'सतासी', 'अट्ठासी', 'नवासी', 'नब्बे', 'इक्यानवे', 'ब्यानवे', 'तिरानवे', 'चौरानवे', 'पचानवे',
+  '', 'एक', 'दो', 'तीन', 'चार', 'पाँच',
+  'छः', 'सात', 'आठ', 'नौ', 'दस',
+  'ग्यारह', 'बारह', 'तेरह', 'चौदह', 'पंद्रह', 'सोलह',
+  'सत्रह', 'अठारह', 'उन्नीस',
+  'बीस', 'इक्कीस', 'बाईस', 'तेइस', 'चौबीस', 'पच्चीस',
+  'छब्बीस', 'सताइस', 'अट्ठाइस',
+  'उनतीस', 'तीस', 'इकतीस', 'बतीस', 'तैंतीस', 'चौंतीस',
+  'पैंतीस', 'छतीस', 'सैंतीस',
+  'अड़तीस', 'उनतालीस', 'चालीस', 'इकतालीस', 'बयालीस', 'तैतालीस',
+  'चवालीस',
+  'पैंतालीस', 'छयालिस', 'सैंतालीस', 'अड़तालीस', 'उनचास', 'पचास',
+  'इक्यावन', 'बावन',
+  'तिरपन', 'चौवन', 'पचपन', 'छप्पन', 'सतावन', 'अठावन',
+  'उनसठ', 'साठ', 'इकसठ',
+  'बासठ', 'तिरसठ', 'चौंसठ', 'पैंसठ', 'छियासठ', 'सड़सठ',
+  'अड़सठ', 'उनहतर', 'सत्तर',
+  'इकहतर', 'बहतर', 'तिहतर', 'चौहतर', 'पचहतर', 'छिहतर',
+  'सतहतर', 'अठहतर',
+  'उन्नासी', 'अस्सी', 'इक्यासी', 'बयासी', 'तिरासी', 'चौरासी',
+  'पचासी', 'छियासी',
+  'सतासी', 'अट्ठासी', 'नवासी', 'नब्बे', 'इक्यानवे', 'ब्यानवे',
+  'तिरानवे', 'चौरानवे', 'पचानवे',
   'छियानवे', 'सतानवे', 'अट्ठानवे', 'निन्यानवे'
 ];
 
 
 /**
  * @type {string}
+ * @private
  */
 sre.Numbers.hi.hundred_ = 'सौ';  // hundred: 1 - 9 hundred  (sau)
 
@@ -65,7 +77,7 @@ sre.Numbers.hi.largeNumbers_ = [
   'शंख', // 100 quadrillion - 9 quintillion (padma)
   'महाशंख', // 10 quin - 999 quin (Shankh)
   'महाउपाध', // 1 sext - 99 sext
-  'जल्द', // 100 sext - 9 sept 
+  'जल्द', // 100 sext - 9 sept
   'परार्ध', 'अंत', 'शिष्ट'
 ];
 
@@ -112,19 +124,25 @@ sre.Numbers.hi.numberToWords = function(number) {
     var thousands = number % 100;
     if (thousands) {
       str = sre.Numbers.hi.onesNumbers_[thousands] +
-        sre.Numbers.hi.NUMBERS.numSep + sre.Numbers.hi.largeNumbers_[pos] +
-        (str ? sre.Numbers.hi.NUMBERS.numSep + str : '');
+          sre.Numbers.hi.NUMBERS.numSep + sre.Numbers.hi.largeNumbers_[pos] +
+          (str ? sre.Numbers.hi.NUMBERS.numSep + str : '');
     }
     number = Math.floor(number / 100);
     pos++;
   }
-  return hundredsWords ? str + sre.Numbers.hi.NUMBERS.numSep + hundredsWords : str;
+  return hundredsWords ?
+      str + sre.Numbers.hi.NUMBERS.numSep + hundredsWords : str;
 };
 
 
+/**
+ * @type {Array.<string>}
+ * @private
+ */
 sre.Numbers.hi.smallDenominators_ = [
-  '', 'एकांश', 'द्वितीयांश', 'तृतीयांश', 'चतुर्थांश', 'पंचमांश', 'षष्टांश',
-  'सप्तमांश', 'अष्टांश', 'नवमांश', 'दशांश'];
+  '', 'एकांश', 'द्वितीयांश', 'तृतीयांश', 'चतुर्थांश', 'पंचमांश',
+  'षष्टांश', 'सप्तमांश', 'अष्टांश', 'नवमांश', 'दशांश'
+];
 
 
 /**
@@ -147,7 +165,8 @@ sre.Numbers.hi.numberToOrdinal = function(num, plural) {
  * @private
  */
 sre.Numbers.hi.ordinalsMasculine_ = [
-  '', 'पहला', 'दूसरा', 'तीसरा', 'चौथा', 'पांचवाँ', 'छठा', 'सातवाँ', 'आठवाँ', 'नौवाँ'
+  '', 'पहला', 'दूसरा', 'तीसरा', 'चौथा', 'पांचवाँ',
+  'छठा', 'सातवाँ', 'आठवाँ', 'नौवाँ'
 ];
 
 
@@ -156,7 +175,8 @@ sre.Numbers.hi.ordinalsMasculine_ = [
  * @private
  */
 sre.Numbers.hi.ordinalsFeminine_ = [
-  '', 'पहली', 'दूसरी', 'तीसरी', 'चौथी', 'पाँचवीं', 'छठी', 'सातवीं', 'आठवीं', 'नौवीं'
+  '', 'पहली', 'दूसरी', 'तीसरी', 'चौथी', 'पाँचवीं',
+  'छठी', 'सातवीं', 'आठवीं', 'नौवीं'
 ];
 
 
@@ -173,8 +193,8 @@ sre.Numbers.hi.wordOrdinal = function(number) {
   }
   if (number < 10) {
     return gender === 'female' ?
-      sre.Numbers.hi.ordinalsFeminine_[number] :
-      sre.Numbers.hi.ordinalsMasculine_[number];
+        sre.Numbers.hi.ordinalsFeminine_[number] :
+        sre.Numbers.hi.ordinalsMasculine_[number];
   }
   var ordinal = sre.Numbers.hi.numberToWords(number);
   return ordinal + (gender === 'female' ? 'वीं' : 'वाँ');
@@ -216,11 +236,11 @@ sre.Numbers.hi.simpleSmallOrdinalsFeminine_ = [
 sre.Numbers.hi.simpleOrdinal = function(number) {
   var gender = /** @type {string} */(
       sre.Grammar.getInstance().getParameter('gender'));
-  
+
   if (number > 0 && number < 10) {
     return gender === 'female' ?
-      sre.Numbers.hi.simpleSmallOrdinalsFeminine_[number] :
-      sre.Numbers.hi.simpleSmallOrdinalsMasculine_[number];
+        sre.Numbers.hi.simpleSmallOrdinalsFeminine_[number] :
+        sre.Numbers.hi.simpleSmallOrdinalsMasculine_[number];
   }
   var ordinal = number.toString().
       split('').

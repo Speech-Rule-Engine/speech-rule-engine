@@ -143,8 +143,8 @@ sre.SpeechRuleContext.prototype.constructString = function(node, expr) {
 
 /**
  * Parses a list of context functions.
- * @param {!(Array.<Array.<string>> | Object.<string>)} functions The list of context
- *     function assignments.
+ * @param {!(Array.<Array.<string>> | Object.<string>)} functions The list of
+ *     context function assignments.
  */
 sre.SpeechRuleContext.prototype.parse = function(functions) {
   var functs = Array.isArray(functions) ? functions : Object.entries(functions);

@@ -96,9 +96,9 @@ goog.inherits(sre.CaseEmbellished, sre.AbstractEnrichCase);
  * @return {boolean} True if case is applicable.
  */
 sre.CaseEmbellished.test = function(semantic) {
-  return !!(semantic.mathmlTree && semantic.fencePointer
+  return !!(semantic.mathmlTree && semantic.fencePointer &&
             // TODO: This needs a cleaner solution at some point.
-            && !semantic.mathmlTree.getAttribute('data-semantic-type'));
+            !semantic.mathmlTree.getAttribute('data-semantic-type'));
 };
 
 
