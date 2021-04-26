@@ -138,21 +138,6 @@ sre.Grammar.getInstance().setCorrection(
 
 
 /**
- * Makes a plural out of a unit denomination.
- * @param {string} unit The unit name.
- * @return {string} The unit set into plural (i.e., append an s if necessary).
- */
-sre.Locale.makePlural = function(unit) {
-  var plural = sre.Messages.PLURAL_UNIT[unit];
-  return plural ? plural : sre.Messages.PLURAL(unit);
-};
-
-
-sre.Grammar.getInstance().setCorrection(
-    'plural', sre.Locale.makePlural);
-
-
-/**
  * @typedef {function((string|number)): string}
  */
 sre.Locale.Transformer;

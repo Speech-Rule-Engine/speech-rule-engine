@@ -518,6 +518,24 @@
     "key": "02D8"
   },
   {
+    "key": "02B9",
+    "mappings": {
+      "default": {
+        "default": "prime"
+      }
+    },
+    "category": "Lm"
+  },
+  {
+    "key": "02BA",
+    "mappings": {
+      "default": {
+        "default": "double prime"
+      }
+    },
+    "category": "Lm"
+  },
+  {
     "category": "Sk",
     "mappings": {
       "default": {

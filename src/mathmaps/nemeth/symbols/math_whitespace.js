@@ -159,7 +159,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠑⠄"
+        "default": ""
       }
     },
     "key": "200E"
@@ -168,7 +168,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠴⠋⠄"
+        "default": ""
       }
     },
     "key": "200F"
@@ -177,7 +177,7 @@
     "category": "Zl",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠦⠄"
+        "default": ""
       }
     },
     "key": "2028"
@@ -186,7 +186,7 @@
     "category": "Zp",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠔⠄"
+        "default": ""
       }
     },
     "key": "2029"
@@ -195,7 +195,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠁⠄"
+        "default": ""
       }
     },
     "key": "202A"
@@ -204,7 +204,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠃⠄"
+        "default": ""
       }
     },
     "key": "202B"
@@ -213,7 +213,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠉⠄"
+        "default": ""
       }
     },
     "key": "202C"
@@ -222,7 +222,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠙⠄"
+        "default": ""
       }
     },
     "key": "202D"
@@ -231,7 +231,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠆⠑⠄"
+        "default": ""
       }
     },
     "key": "202E"
@@ -303,7 +303,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠖⠁⠄"
+        "default": ""
       }
     },
     "key": "206A"
@@ -312,7 +312,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠖⠃⠄"
+        "default": ""
       }
     },
     "key": "206B"
@@ -321,7 +321,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠖⠑⠄"
+        "default": ""
       }
     },
     "key": "206E"
@@ -330,7 +330,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠆⠴⠖⠋⠄"
+        "default": ""
       }
     },
     "key": "206F"
@@ -339,7 +339,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠋⠑⠋⠋⠄"
+        "default": ""
       }
     },
     "key": "FEFF"
@@ -348,7 +348,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠋⠋⠋⠔⠄"
+        "default": ""
       }
     },
     "key": "FFF9"
@@ -357,7 +357,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠋⠋⠋⠁⠄"
+        "default": ""
       }
     },
     "key": "FFFA"
@@ -366,7 +366,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠋⠋⠋⠃⠄"
+        "default": ""
       }
     },
     "key": "FFFB"

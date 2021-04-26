@@ -28,9 +28,10 @@ goog.require('sre.SemanticNode');
 /**
  * @constructor
  * @param {string} domain The domain name of the annotation.
+ * @param {string} name A name for the annotator.
  * @param {function(sre.SemanticNode)} func The annotation function.
  */
-sre.SemanticAnnotator = function(domain, func) {
+sre.SemanticAnnotator = function(domain, name, func) {
 
   /**
    * @type {string}
@@ -46,8 +47,9 @@ sre.SemanticAnnotator = function(domain, func) {
    * This can be changed to a unique name.
    * @type {string}
    */
-  this.name = domain;
+  this.name = name;
 
+  this.active = false;
 };
 
 
@@ -65,11 +67,12 @@ sre.SemanticAnnotator.prototype.annotate = function(node) {
 /**
  * @constructor
  * @param {string} domain The domain name of the annotation.
+ * @param {string} name A name for the visitor.
  * @param {function(sre.SemanticNode, Object.<*>): *} func The annotation
  *     function.
- * @param {Object.<*>=} opt_def The annotation function.
+ * @param {Object.<*>=} opt_def The initial object that is used for annotation.
  */
-sre.SemanticVisitor = function(domain, func, opt_def) {
+sre.SemanticVisitor = function(domain, name, func, opt_def) {
 
   /**
    * @type {string}
@@ -85,12 +88,14 @@ sre.SemanticVisitor = function(domain, func, opt_def) {
    * This can be changed to a unique name.
    * @type {string}
    */
-  this.name = domain;
+  this.name = name;
 
   /**
    * @type {Object.<*>}
    */
   this.def = opt_def || {};
+
+  this.active = false;
 };
 
 

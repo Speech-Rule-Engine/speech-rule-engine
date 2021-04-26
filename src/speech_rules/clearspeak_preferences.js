@@ -80,6 +80,7 @@ sre.ClearspeakPreferences.PREFERENCES = new sre.DynamicProperties({
   CombinationPermutation: ['Auto', 'ChoosePermute'],
   Currency: ['Auto', 'Position', 'Prefix'],
   Ellipses: ['Auto', 'AndSoOn'],
+  Enclosed: ['Auto', 'EndEnclose'],
   Exponent: ['Auto', 'AfterPower', 'Ordinal', 'OrdinalPower',
              // The following are German
              'Exponent'
@@ -295,14 +296,6 @@ sre.ClearspeakPreferences.toPreference = function(pref) {
 };
 
 
-// The following is for ease of preference selection per locale.
-/**
- * Cache of Mapping locales to clearspeak preferences.
- * @type {Object.<sre.DynamicProperties>}
- */
-sre.ClearspeakPreferences.LOCALE_PREFERENCES = null;
-
-
 /**
  * Computes the clearspeak preferences per locale and caches them.
  * @param {Object=} opt_dynamic Optionally a tree structure with the dynamic
@@ -310,14 +303,10 @@ sre.ClearspeakPreferences.LOCALE_PREFERENCES = null;
  * @return {Object.<sre.DynamicProperties>} Mapping of locale to preferences.
  */
 sre.ClearspeakPreferences.getLocalePreferences = function(opt_dynamic) {
-  if (!sre.ClearspeakPreferences.LOCALE_PREFERENCES) {
-    var dynamic = opt_dynamic ||
-        sre.MathCompoundStore.getInstance().enumerate(
+  var dynamic = opt_dynamic ||
+      sre.MathCompoundStore.getInstance().enumerate(
         sre.SpeechRuleEngine.getInstance().enumerate());
-    sre.ClearspeakPreferences.LOCALE_PREFERENCES =
-        sre.ClearspeakPreferences.getLocalePreferences_(dynamic);
-  }
-  return sre.ClearspeakPreferences.LOCALE_PREFERENCES;
+  return sre.ClearspeakPreferences.getLocalePreferences_(dynamic);
 };
 
 

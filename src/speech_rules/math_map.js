@@ -50,10 +50,11 @@ sre.MathMap = function() {
    * Methods for parsing json structures.
    * @type {Object.<function(Array.<string>)>}
    */
-  this.addRules = {
+  this.addSymbols = {
     functions: goog.bind(this.store.addFunctionRules, this.store),
     symbols: goog.bind(this.store.addSymbolRules, this.store),
-    units: goog.bind(this.store.addUnitRules, this.store)
+    units: goog.bind(this.store.addUnitRules, this.store),
+    si: goog.bind(this.addSiPrefixes, this)
   };
 
 };
@@ -65,6 +66,11 @@ goog.addSingletonGetter(sre.MathMap);
  * @private
  */
 sre.MathMap.oldInst_ = sre.MathMap.getInstance;
+
+
+sre.MathMap.prototype.addSiPrefixes = function(json) {
+  this.store.siPrefixes = json;
+};
 
 
 /**
@@ -83,15 +89,9 @@ sre.MathMap.getInstance = function() {
 sre.MathMap.prototype.loadLocale = function() {
   var locale = sre.Engine.getInstance().locale;
   if (this.loaded_.indexOf(locale) === -1) {
-    var async = sre.Engine.getInstance().mode === sre.Engine.Mode.ASYNC;
-    if (async) {
-      sre.Engine.getInstance().mode = sre.Engine.Mode.SYNC;
-    }
-    this.loaded_.push(locale);
+    sre.SpeechRuleEngine.getInstance().prune = true;
     this.retrieveMaps(locale);
-    if (async) {
-      sre.Engine.getInstance().mode = sre.Engine.Mode.ASYNC;
-    }
+    this.loaded_.push(locale);
   }
 };
 
@@ -109,15 +109,17 @@ sre.Engine.registerTest(function() {
 
 /**
  * Retrieves JSON rule mappings for a given locale.
- * @param {string} locale The target locale.
+ * @param {string} file The target locale.
+ * @param {function(string)} parse Method adding the rules.
  */
-sre.MathMap.prototype.retrieveFiles = function(locale) {
-  var file = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
-      locale + '.js';
+sre.MathMap.prototype.retrieveFiles = function(file, parse) {
+  var async = sre.Engine.getInstance().mode === sre.Engine.Mode.ASYNC;
+  if (async) {
+    sre.Engine.getInstance().mode = sre.Engine.Mode.SYNC;
+  }
   switch (sre.Engine.getInstance().mode) {
     case sre.Engine.Mode.ASYNC:
-      sre.MathMap.toFetch_++;
-      var parse = goog.bind(this.parseMaps, this);
+    sre.MathMap.toFetch_++;
       sre.MathMap.fromFile_(file,
           function(err, json) {
             sre.MathMap.toFetch_--;
@@ -127,13 +129,16 @@ sre.MathMap.prototype.retrieveFiles = function(locale) {
       break;
     case sre.Engine.Mode.HTTP:
       sre.MathMap.toFetch_++;
-      this.getJsonAjax_(file);
+      sre.MathMap.getJsonAjax_(file, parse);
       break;
     case sre.Engine.Mode.SYNC:
     default:
       var strs = sre.MathMap.loadFile(file);
-      this.parseMaps(strs);
+      parse(strs);
       break;
+  }
+  if (async) {
+    sre.Engine.getInstance().mode = sre.Engine.Mode.ASYNC;
   }
 };
 
@@ -160,7 +165,11 @@ sre.MathMap.prototype.addMaps = function(json, opt_locale) {
     if (opt_locale && opt_locale !== info[0]) {
       continue;
     }
-    json[key].forEach(this.addRules[info[1]]);
+    if (info[1] !== 'rules') {
+      json[key].forEach(this.addSymbols[info[1]]);
+    } else {
+      sre.SpeechRuleEngine.getInstance().addStore(json[key]);
+    }
   }
 };
 
@@ -176,7 +185,10 @@ sre.MathMap.prototype.retrieveMaps = function(locale) {
     this.getJsonIE_(locale);
     return;
   }
-  this.retrieveFiles(locale);
+  var file = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
+      locale + '.js';
+  var parse = goog.bind(this.parseMaps, this);
+  this.retrieveFiles(file, parse);
 };
 
 
@@ -241,11 +253,11 @@ sre.MathMap.readJSON_ = function(path) {
 /**
  * Sents AJAX request to retrieve a JSON rule file.
  * @param {string} file The file to retrieve.
+ * @param {function(string)} parse Method adding the rules.
  * @private
  */
-sre.MathMap.prototype.getJsonAjax_ = function(file) {
+sre.MathMap.getJsonAjax_ = function(file, parse) {
   var httpRequest = new XMLHttpRequest();
-  var parse = goog.bind(this.parseMaps, this);
   httpRequest.onreadystatechange = function() {
     if (httpRequest.readyState === 4) {
       sre.MathMap.toFetch_--;

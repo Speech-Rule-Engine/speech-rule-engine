@@ -48,6 +48,12 @@ sre.SpeechRuleContext = function() {
    */
   this.contextFunctions = new sre.SpeechRuleFunctions.ContextFunctions();
 
+  /**
+   * Set of custom generators for the store.
+   * @type {sre.SpeechRuleFunctions.CustomGenerators}
+   */
+  this.customGenerators = new sre.SpeechRuleFunctions.CustomGenerators();
+
 };
 
 
@@ -137,15 +143,24 @@ sre.SpeechRuleContext.prototype.constructString = function(node, expr) {
 
 /**
  * Parses a list of context functions.
- * @param {Array.<Array.<string>>} functions The list of context
+ * @param {!(Array.<Array.<string>> | Object.<string>)} functions The list of context
  *     function assignments.
  */
 sre.SpeechRuleContext.prototype.parse = function(functions) {
-  for (var i = 0, func; func = functions[i]; i++) {
-    let kind = func[0];
-    let map = {CQF: this.customQueries,
+  var functs = Array.isArray(functions) ? functions : Object.entries(functions);
+  for (var i = 0, func; func = functs[i]; i++) {
+    let kind = func[0].slice(0, 3);
+    let map = {
+      CQF: this.customQueries,
       CSF: this.customStrings,
-      CTXF: this.contextFunctions};
-    map[kind].add(func[1], func[2]);
+      CTF: this.contextFunctions,
+      CGF: this.customGenerators
+    };
+    let call = map[kind];
+    if (call) {
+      call.add(func[0], func[1]);
+    } else {
+      console.error('FunctionError: Invalid function name ' + func[0]);
+    }
   }
 };

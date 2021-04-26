@@ -1,39 +1,22 @@
 [{"locale": "en"},
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "nanosecond"
-     }
-   },
-   "key": "ns",
-   "names": ["ns"]
-  },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "microsecond"
-     }
-   },
-   "key": "µs",
-   "names": ["µs"]
-  },
-  {"category": "time",
-   "mappings": {
-     "default": {
-       "default": "millisecond"
-     }
-   },
-   "key": "ms",
-   "names": ["ms"]
-  },
-  {"category": "time",
+ {"category": "time",
+  "si": true,
    "mappings": {
      "default": {
        "default": "second"
      }
    },
    "key": "s",
-   "names": ["s"]
+  "names": ["s"]
+ },
+  {"category": "time",
+   "mappings": {
+     "default": {
+       "default": "second"
+     }
+   },
+   "key": "″",
+  "names": ["″"]
   },
   {"category": "time",
    "mappings": {
@@ -42,9 +25,18 @@
      }
    },
    "key": "min",
-   "names": ["min"]
+   "names": ["min", "′"]
   },
-  {"category": "time",
+ {"category": "time",
+   "mappings": {
+     "default": {
+       "default": "degree"
+     }
+   },
+  "key": "°",
+  "names": ["°"]
+ },
+ {"category": "time",
    "mappings": {
      "default": {
        "default": "hour"

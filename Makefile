@@ -18,7 +18,7 @@ NODE_MODULES = $(PREFIX)/$(MODULE_NAME)
 SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
 LIB_DIR = $(abspath ./lib)
-SRC = $(SRC_DIR)/**/*.js $(SRC_DIR)/speech_rules/**/*.js
+SRC = $(SRC_DIR)/**/*.js
 TARGET = $(LIB_DIR)/sre.js
 DEPS = $(SRC_DIR)/deps.js
 BROWSER = $(LIB_DIR)/sre_browser.js
@@ -31,7 +31,7 @@ LICENSE = $(SRC_DIR)/license-header.txt
 INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_SRC = $(SRC_DIR)/mathmaps
 JSON_DST = $(LIB_DIR)/mathmaps
-MAPS = functions symbols units
+MAPS = si functions symbols units rules
 IEMAPS_FILE = $(JSON_DST)/mathmaps_ie.js
 LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
@@ -139,7 +139,7 @@ all: directories deps compile start_files maps
 
 ## This is a hack to get around a closure library problem.
 $(GOOG_BASE_CLEAN):
-	@sed -i s/"^.*@deprecated Use ES6.*"// $(GOOG_BASE)
+	@sed -i.bak s/"^.*@deprecated Use ES6.*"// $(GOOG_BASE)
 	@touch $(GOOG_BASE_CLEAN)
 
 directories: $(BIN_DIR)
@@ -270,17 +270,25 @@ $(JSON_DST):
 	@echo "Creating JSON destination."
 	@mkdir -p $(JSON_DST)
 
-maps: $(JSON_DST) $(LOC_DST)
+maps: $(JSON_DST) clean_loc $(LOC_DST)
+
+clean_loc:
+	@if ! [ -z $(LOC) ]; then \
+		echo "Deleting $(LOC).js"; \
+		rm -f $(JSON_DST)/$(LOC).js; \
+	fi
 
 $(LOC_DST):
 	@echo "Creating mappings for locale `basename $@ .js`."
 	@echo '{' > $@
 	@for dir in $(MAPS); do\
-		for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
-			echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
-			$(JSON_MINIFY) $$i >> $@; \
-			echo ','  >> $@; \
-		done; \
+		if [ -d $(JSON_SRC)/`basename $@ .js`/$$dir ]; then \
+			for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
+				echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
+				$(JSON_MINIFY) $$i >> $@; \
+				echo ','  >> $@; \
+			done; \
+		fi; \
 	done
 	@sed '$$d' $@ > $@.tmp
 	@echo '}' >> $@.tmp
@@ -294,11 +302,14 @@ $(IEMAPS_FILE):
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
-			for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
-				echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
-				$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
-				echo ','  >> $(IEMAPS_FILE); \
-			done; \
+			echo $(JSON_SRC)/$$j/$$dir;\
+			if [ -d $(JSON_SRC)/$$j/$$dir ]; then\
+				for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
+					echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
+					$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
+					echo ','  >> $(IEMAPS_FILE); \
+				done; \
+			fi; \
 		done; \
 	done
 	@sed '$$d' $(IEMAPS_FILE) > $(IEMAPS_FILE).tmp

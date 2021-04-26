@@ -3,31 +3,8 @@
     "locale": "de"
   },
   {
-    "key": "mm",
-    "names": [
-      "mm"
-    ],
-    "mappings": {
-      "default": {
-        "default": "Millimeter"
-      }
-    },
-    "category": "length"
-  },
-  {
-    "key": "cm",
-    "names": [
-      "cm"
-    ],
-    "mappings": {
-      "default": {
-        "default": "Zentimeter"
-      }
-    },
-    "category": "length"
-  },
-  {
     "key": "m",
+    "si": true,
     "mappings": {
       "default": {
         "default": "Meter"
@@ -37,15 +14,6 @@
     "names": [
       "m"
     ]
-  },
-  {"category": "length",
-   "mappings": {
-     "default": {
-       "default": "Kilometer"
-     }
-   },
-   "key": "km",
-   "names": ["km"]
   },
   {
     "key": "ft",
@@ -108,9 +76,66 @@
     ],
     "mappings": {
       "default": {
-        "default": "nautische Meile"
+        "default": "nautische Meile",
+        "plural": "nautische Meilen"
       }
     },
     "category": "length"
+  },
+    {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "Kettenglied",
+        "plural": "Kettenglieder"
+      }
+    },
+    "key": "link",
+    "names": [
+      "li",
+      "li."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "Rute",
+        "plural": "Ruten"
+      }
+    },
+    "key": "rod",
+    "names": [
+      "rd",
+      "rd."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "Kette",
+        "plural": "Ketten"
+      }
+    },
+    "key": "chain",
+    "names": [
+      "ch",
+      "ch."
+    ]
+  },
+  {
+    "category": "length",
+    "mappings": {
+      "default": {
+        "default": "Furchenlänge",
+        "plural": "Furchenlängen"
+      }
+    },
+    "key": "furlong",
+    "names": [
+      "fur",
+      "fur."
+    ]
   }
 ]

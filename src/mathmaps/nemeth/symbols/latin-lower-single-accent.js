@@ -250,7 +250,7 @@
     "key": "0101",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠴⠂⠄"
+        "default": ""
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "0103",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠴⠒⠄"
+        "default": ""
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "0105",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠴⠢⠄"
+        "default": ""
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "0107",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠴⠶⠄"
+        "default": ""
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "0109",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠴⠔⠄"
+        "default": ""
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "010B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠴⠃⠄"
+        "default": ""
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "010D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠴⠙⠄"
+        "default": ""
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "010F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠴⠋⠄"
+        "default": ""
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "0113",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠂⠒⠄"
+        "default": ""
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "0115",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠂⠢⠄"
+        "default": ""
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "0117",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠂⠶⠄"
+        "default": ""
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "0119",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠂⠔⠄"
+        "default": ""
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "011B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠂⠃⠄"
+        "default": ""
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "011D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠂⠙⠄"
+        "default": ""
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "011F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠂⠋⠄"
+        "default": ""
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "0121",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠆⠂⠄"
+        "default": ""
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "0123",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠆⠒⠄"
+        "default": ""
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "0125",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠆⠢⠄"
+        "default": ""
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "0129",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠆⠔⠄"
+        "default": ""
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "012B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠆⠃⠄"
+        "default": ""
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "012D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠆⠙⠄"
+        "default": ""
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "012F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠆⠋⠄"
+        "default": ""
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "0131",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠒⠂⠄"
+        "default": ""
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "0135",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠒⠢⠄"
+        "default": ""
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "0137",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠒⠶⠄"
+        "default": ""
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "013A",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠒⠁⠄"
+        "default": ""
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "013C",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠒⠉⠄"
+        "default": ""
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "013E",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠒⠑⠄"
+        "default": ""
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "0140",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠲⠴⠄"
+        "default": ""
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "0144",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠲⠲⠄"
+        "default": ""
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "0146",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠲⠖⠄"
+        "default": ""
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "0148",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠲⠦⠄"
+        "default": ""
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "014D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠲⠙⠄"
+        "default": ""
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "014F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠲⠋⠄"
+        "default": ""
       }
     }
   },
@@ -556,7 +556,7 @@
     "key": "0151",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠢⠂⠄"
+        "default": ""
       }
     }
   },
@@ -565,7 +565,7 @@
     "key": "0155",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠢⠢⠄"
+        "default": ""
       }
     }
   },
@@ -574,7 +574,7 @@
     "key": "0157",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠢⠶⠄"
+        "default": ""
       }
     }
   },
@@ -583,7 +583,7 @@
     "key": "0159",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠢⠔⠄"
+        "default": ""
       }
     }
   },
@@ -592,7 +592,7 @@
     "key": "015B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠢⠃⠄"
+        "default": ""
       }
     }
   },
@@ -601,7 +601,7 @@
     "key": "015D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠢⠙⠄"
+        "default": ""
       }
     }
   },
@@ -610,7 +610,7 @@
     "key": "015F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠢⠋⠄"
+        "default": ""
       }
     }
   },
@@ -619,7 +619,7 @@
     "key": "0161",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠖⠂⠄"
+        "default": ""
       }
     }
   },
@@ -628,7 +628,7 @@
     "key": "0163",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠖⠒⠄"
+        "default": ""
       }
     }
   },
@@ -637,7 +637,7 @@
     "key": "0165",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠖⠢⠄"
+        "default": ""
       }
     }
   },
@@ -646,7 +646,7 @@
     "key": "0169",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠖⠔⠄"
+        "default": ""
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "016B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠖⠃⠄"
+        "default": ""
       }
     }
   },
@@ -664,7 +664,7 @@
     "key": "016D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠖⠙⠄"
+        "default": ""
       }
     }
   },
@@ -673,7 +673,7 @@
     "key": "016F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠖⠋⠄"
+        "default": ""
       }
     }
   },
@@ -682,7 +682,7 @@
     "key": "0171",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠶⠂⠄"
+        "default": ""
       }
     }
   },
@@ -691,7 +691,7 @@
     "key": "0173",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠶⠒⠄"
+        "default": ""
       }
     }
   },
@@ -700,7 +700,7 @@
     "key": "0175",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠶⠢⠄"
+        "default": ""
       }
     }
   },
@@ -709,7 +709,7 @@
     "key": "0177",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠶⠶⠄"
+        "default": ""
       }
     }
   },
@@ -718,7 +718,7 @@
     "key": "017A",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠶⠁⠄"
+        "default": ""
       }
     }
   },
@@ -727,7 +727,7 @@
     "key": "017C",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠶⠉⠄"
+        "default": ""
       }
     }
   },
@@ -736,7 +736,7 @@
     "key": "017E",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠶⠑⠄"
+        "default": ""
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "01CE",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠉⠑⠄"
+        "default": ""
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "01D0",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠙⠴⠄"
+        "default": ""
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "01D2",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠙⠆⠄"
+        "default": ""
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "01D4",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠙⠲⠄"
+        "default": ""
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "01E7",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠑⠶⠄"
+        "default": ""
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "01E9",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠑⠔⠄"
+        "default": ""
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "01EB",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠑⠃⠄"
+        "default": ""
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "01F0",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠋⠴⠄"
+        "default": ""
       }
     }
   },
@@ -817,7 +817,7 @@
     "key": "01F5",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠋⠢⠄"
+        "default": ""
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "01F9",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠂⠋⠔⠄"
+        "default": ""
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "0201",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠴⠂⠄"
+        "default": ""
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "0203",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠴⠒⠄"
+        "default": ""
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0205",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠴⠢⠄"
+        "default": ""
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0207",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠴⠶⠄"
+        "default": ""
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "0209",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠴⠔⠄"
+        "default": ""
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "020B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠴⠃⠄"
+        "default": ""
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "020D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠴⠙⠄"
+        "default": ""
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "020F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠴⠋⠄"
+        "default": ""
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0211",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠂⠂⠄"
+        "default": ""
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0213",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠂⠒⠄"
+        "default": ""
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "0215",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠂⠢⠄"
+        "default": ""
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "0217",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠂⠶⠄"
+        "default": ""
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "0219",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠂⠔⠄"
+        "default": ""
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "021B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠂⠃⠄"
+        "default": ""
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "021F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠂⠋⠄"
+        "default": ""
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0227",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠆⠶⠄"
+        "default": ""
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "0229",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠆⠔⠄"
+        "default": ""
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "022F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠆⠋⠄"
+        "default": ""
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "0233",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠒⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "0237",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠴⠆⠒⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "key": "1E01",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠴⠂⠄"
+        "default": ""
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "1E03",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠴⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "key": "1E05",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠴⠢⠄"
+        "default": ""
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "1E07",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠴⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "key": "1E0B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠴⠃⠄"
+        "default": ""
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "1E0D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠴⠙⠄"
+        "default": ""
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "1E0F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠴⠋⠄"
+        "default": ""
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "1E11",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠂⠂⠄"
+        "default": ""
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "key": "1E13",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠂⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "key": "1E19",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠂⠔⠄"
+        "default": ""
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "1E1B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠂⠃⠄"
+        "default": ""
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "1E1F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠂⠋⠄"
+        "default": ""
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "1E21",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠆⠂⠄"
+        "default": ""
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "key": "1E23",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠆⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "key": "1E25",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠆⠢⠄"
+        "default": ""
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "1E27",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠆⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "key": "1E29",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠆⠔⠄"
+        "default": ""
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "1E2B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠆⠃⠄"
+        "default": ""
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "1E2D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠆⠙⠄"
+        "default": ""
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "1E31",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠒⠂⠄"
+        "default": ""
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "1E33",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠒⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "1E35",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠒⠢⠄"
+        "default": ""
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "key": "1E37",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠒⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "1E3B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠒⠃⠄"
+        "default": ""
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "key": "1E3D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠒⠙⠄"
+        "default": ""
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "key": "1E3F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠒⠋⠄"
+        "default": ""
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "key": "1E41",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠲⠂⠄"
+        "default": ""
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "key": "1E43",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠲⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "key": "1E45",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠲⠢⠄"
+        "default": ""
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "key": "1E47",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠲⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "key": "1E49",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠲⠔⠄"
+        "default": ""
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "1E4B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠲⠃⠄"
+        "default": ""
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "key": "1E55",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠢⠢⠄"
+        "default": ""
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "key": "1E57",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠢⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "key": "1E59",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠢⠔⠄"
+        "default": ""
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "key": "1E5B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠢⠃⠄"
+        "default": ""
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "key": "1E5F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠢⠋⠄"
+        "default": ""
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "key": "1E61",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠖⠂⠄"
+        "default": ""
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "key": "1E63",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠖⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "key": "1E6B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠖⠃⠄"
+        "default": ""
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "key": "1E6D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠖⠙⠄"
+        "default": ""
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "key": "1E6F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠖⠋⠄"
+        "default": ""
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "key": "1E71",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠶⠂⠄"
+        "default": ""
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "key": "1E73",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠶⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "key": "1E75",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠶⠢⠄"
+        "default": ""
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "key": "1E77",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠶⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "key": "1E7D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠶⠙⠄"
+        "default": ""
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "key": "1E7F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠶⠋⠄"
+        "default": ""
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "key": "1E81",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠦⠂⠄"
+        "default": ""
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "key": "1E83",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠦⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "key": "1E85",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠦⠢⠄"
+        "default": ""
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "key": "1E87",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠦⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "key": "1E89",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠦⠔⠄"
+        "default": ""
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "key": "1E8B",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠦⠃⠄"
+        "default": ""
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "key": "1E8D",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠦⠙⠄"
+        "default": ""
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "1E8F",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠦⠋⠄"
+        "default": ""
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "key": "1E91",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠔⠂⠄"
+        "default": ""
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "key": "1E93",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠔⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "key": "1E95",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠔⠢⠄"
+        "default": ""
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "1E96",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠔⠖⠄"
+        "default": ""
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "key": "1E97",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠔⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "key": "1E98",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠔⠦⠄"
+        "default": ""
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "key": "1E99",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠔⠔⠄"
+        "default": ""
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "key": "1E9A",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠔⠁⠄"
+        "default": ""
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "key": "1EA1",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠁⠂⠄"
+        "default": ""
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "key": "1EA3",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠁⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "key": "1EB9",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠃⠔⠄"
+        "default": ""
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "key": "1EBB",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠃⠃⠄"
+        "default": ""
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "key": "1EBD",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠃⠙⠄"
+        "default": ""
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "key": "1EC9",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠉⠔⠄"
+        "default": ""
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "key": "1ECB",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠉⠃⠄"
+        "default": ""
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "key": "1ECD",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠉⠙⠄"
+        "default": ""
       }
     }
   },
@@ -1663,7 +1663,7 @@
     "key": "1ECF",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠉⠋⠄"
+        "default": ""
       }
     }
   },
@@ -1672,7 +1672,7 @@
     "key": "1EE5",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠑⠢⠄"
+        "default": ""
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "key": "1EE7",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠑⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1690,7 +1690,7 @@
     "key": "1EF3",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠋⠒⠄"
+        "default": ""
       }
     }
   },
@@ -1699,7 +1699,7 @@
     "key": "1EF5",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠋⠢⠄"
+        "default": ""
       }
     }
   },
@@ -1708,7 +1708,7 @@
     "key": "1EF7",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠋⠶⠄"
+        "default": ""
       }
     }
   },
@@ -1717,7 +1717,7 @@
     "key": "1EF9",
     "mappings": {
       "default": {
-        "default": "⠄⡳⠭⠂⠑⠋⠔⠄"
+        "default": ""
       }
     }
   }

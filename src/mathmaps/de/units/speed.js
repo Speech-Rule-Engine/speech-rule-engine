@@ -15,8 +15,8 @@
     "key": "mph",
     "mappings": {
       "default": {
-        "default": "Meilen pro Stunde",
-        "singular": "Meile pro Stunde"
+        "plural": "Meilen pro Stunde",
+        "default": "Meile pro Stunde"
       }
     },
     "category": "speed",
@@ -40,8 +40,8 @@
     "key": "rpm",
     "mappings": {
       "default": {
-        "default": "Umdrehungen pro Minute",
-        "singular": "Umdrehung pro Minute"
+        "plural": "Umdrehungen pro Minute",
+        "default": "Umdrehung pro Minute"
       }
     },
     "category": "speed",
