@@ -102,6 +102,12 @@ sre.BaseRuleStore = function() {
     'Generator': goog.bind(this.generateRules, this)
   };
 
+  /**
+   * Local transcriptions for special characters.
+   * @type {Object.<string>}
+   */
+  this.customTranscriptions = { };
+
 };
 
 
@@ -205,7 +211,46 @@ sre.BaseRuleStore.prototype.findAllRules = function(pred) {
  * @override
  */
 sre.BaseRuleStore.prototype.evaluateDefault = function(node) {
-  return [sre.AuditoryDescription.create({'text': node.textContent})];
+  var rest = node.textContent.slice(0);
+  if (rest.match(/^\s+$/)) {
+    // Nothing but whitespace: Ignore.
+    return this.evaluateWhitespace(rest);
+  }
+  return this.evaluateString(rest);
+};
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateString = goog.abstractMethod;
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateWhitespace = function(str) {
+  return [];
+};
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateCustom = function(str) {
+  var trans = this.customTranscriptions[str];
+  return (trans !== undefined) ?
+      sre.AuditoryDescription.create(
+          {'text': trans}, {adjust: true, translate: false}) : null;
+};
+
+
+/**
+ * @override
+ */
+sre.BaseRuleStore.prototype.evaluateCharacter = function(str) {
+  return this.evaluateCustom(str) || sre.AuditoryDescription.create(
+      {'text': str}, {adjust: true, translate: true});
 };
 
 
