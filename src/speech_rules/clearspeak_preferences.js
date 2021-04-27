@@ -305,7 +305,7 @@ sre.ClearspeakPreferences.toPreference = function(pref) {
 sre.ClearspeakPreferences.getLocalePreferences = function(opt_dynamic) {
   var dynamic = opt_dynamic ||
       sre.MathCompoundStore.getInstance().enumerate(
-        sre.SpeechRuleEngine.getInstance().enumerate());
+      sre.SpeechRuleEngine.getInstance().enumerate());
   return sre.ClearspeakPreferences.getLocalePreferences_(dynamic);
 };
 

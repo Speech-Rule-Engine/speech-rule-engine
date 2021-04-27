@@ -357,7 +357,7 @@ sre.AbstractWalker.prototype.postfix_ = function() {
   var nodes = this.getFocus().getDomNodes();
   return nodes[0] ? sre.WalkerUtil.getAttribute(
       /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.POSTFIX) :
-    '';
+      '';
 };
 
 

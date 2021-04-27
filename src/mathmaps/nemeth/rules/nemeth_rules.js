@@ -374,14 +374,14 @@
       "Rule",
       "sqrt",
       "default",
-      "[t] CSFopenRadicalVerbose; [n] children/*[1]; [t] CSFcloseRadicalVerbose",
+      "[t] CSFopenRadical; [n] children/*[1]; [t] CSFcloseRadical",
       "self::sqrt"
     ],
     [
       "Rule",
       "root",
       "default",
-      "[t] CSFindexRadicalVerbose; [n] children/*[1];[t] \"⠜\"; [n] children/*[2]; [t] CSFcloseRadicalVerbose",
+      "[t] CSFindexRadical; [n] children/*[1];[t] \"⠜\"; [n] children/*[2]; [t] CSFcloseRadical",
       "self::root"
     ],
     [
@@ -532,7 +532,7 @@
       "Rule",
       "subscript",
       "default",
-      "[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]",
+      "[n] children/*[1]; [t] CSFsubscript; [n] children/*[2]",
       "self::subscript"
     ],
     [
@@ -550,7 +550,7 @@
       "Rule",
       "subscript-baseline",
       "default",
-      "[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]; [t] CSFbaselineVerbose",
+      "[n] children/*[1]; [t] CSFsubscript; [n] children/*[2]; [t] CSFbaseline",
       "self::subscript",
       "@role!=\"subsup\"",
       "following::*",
@@ -608,14 +608,14 @@
       "Rule",
       "superscript",
       "default",
-      "[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2]",
+      "[n] children/*[1]; [t] CSFsuperscript; [n] children/*[2]",
       "self::superscript"
     ],
     [
       "Rule",
       "superscript-baseline",
       "default",
-      "[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2];[t] CSFbaselineVerbose",
+      "[n] children/*[1]; [t] CSFsuperscript; [n] children/*[2];[t] CSFbaseline",
       "self::superscript",
       "following::*",
       "@role!=\"prefix function\"",
@@ -691,7 +691,7 @@
       "Rule",
       "prime-subscript",
       "default",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]",
+      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscript; [n] children/*[1]/children/*[2]",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
       "name(children/*[1])=\"subscript\"",
@@ -701,7 +701,7 @@
       "Rule",
       "prime-subscript-baseline",
       "default",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]; [t] CSFbaselineVerbose",
+      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscript; [n] children/*[1]/children/*[2]; [t] CSFbaseline",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
       "name(children/*[1])=\"subscript\"",

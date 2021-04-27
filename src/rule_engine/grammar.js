@@ -264,6 +264,7 @@ sre.Grammar.translateString_ = function(text) {
  * Unit translation using grammatical numbering from mappings directly.
  * @param {string} text The text to translate.
  * @return {string} The translated result.
+ * @private
  */
 sre.Grammar.translateUnit_ = function(text) {
   text = sre.Grammar.prepareUnit_(text);

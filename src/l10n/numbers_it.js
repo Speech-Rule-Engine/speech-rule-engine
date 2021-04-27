@@ -86,8 +86,8 @@ sre.Numbers.it.hundredsToWords_ = function(number) {
       }
       str += tens;
       str += rest ?
-        sre.Numbers.it.NUMBERS.numSep + sre.Numbers.it.onesNumbers_[n % 10] :
-        '';
+          sre.Numbers.it.NUMBERS.numSep + sre.Numbers.it.onesNumbers_[n % 10] :
+          '';
     }
   }
   return str;
@@ -161,7 +161,7 @@ sre.Numbers.it.onesOrdinals_ = [
  */
 sre.Numbers.it.wordOrdinal = function(number) {
   var gender = /** @type {string} */(
-    sre.Grammar.getInstance().getParameter('gender'));
+      sre.Grammar.getInstance().getParameter('gender'));
   var postfix = (gender === 'male' ? 'o' : 'a');
   var ordinal = sre.Numbers.it.onesOrdinals_[number];
   if (ordinal) {

@@ -597,6 +597,7 @@ sre.SemanticNode.setAttribute_ = function(node, xml, attribute, opt_name) {
  * content nodes of the semantic node.
  * @param {sre.SemanticNode} node The semantic node.
  * @param {Element} xml The XML element representation of the node.
+ * @private
  */
 sre.SemanticNode.processChildren_ = function(node, xml) {
   for (var child of sre.DomUtil.toArray(xml.childNodes)) {

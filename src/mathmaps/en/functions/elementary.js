@@ -20,7 +20,6 @@
        "default": "l n",
        "Log_LnAsNaturalLog": "natural log"
      }
-
    },
    "key": "ln",
    "names": ["ln"]
