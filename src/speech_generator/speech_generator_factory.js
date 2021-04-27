@@ -1,4 +1,4 @@
-// Copyright 2016 Volker Sorge
+// Copyright 2016-21 Volker Sorge
 // Copyright (c) 2016 The MathJax Consortium
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
