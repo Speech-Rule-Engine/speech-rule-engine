@@ -52,7 +52,8 @@ sre.AbstractAudioRenderer.prototype.setSeparator = function(sep) {
  * @override
  */
 sre.AbstractAudioRenderer.prototype.getSeparator = function() {
-  return this.separator_;
+  // TODO: (Span) Do this via setSeparator.
+  return sre.Engine.getInstance().modality === 'braille' ? '' : this.separator_;
 };
 
 
@@ -74,7 +75,16 @@ sre.AbstractAudioRenderer.prototype.error = function(key) {
  * @override
  */
 sre.AbstractAudioRenderer.prototype.merge = function(spans) {
-  return spans.map(function(x) {return x.string;}).join(this.getSeparator());
+  var str = '';
+  var len = spans.length - 1;
+  for (var i = 0, span; span = spans[i]; i++) {
+    str += span.string;
+    if (i < len) {
+      var sep = span.attributes['separator'];
+      str += (sep !== undefined) ? sep : this.getSeparator();
+    }
+  }
+  return str;
 };
 
 
