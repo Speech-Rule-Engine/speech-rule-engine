@@ -135,10 +135,10 @@ sre.SemanticHeuristics.lookup = function(name) {
 // TODO: Heuristic paths have to be included in the tests.
 //
 /**
- * All heuristic methods get a root of a subtree and have a predicate that
- * either switches them on automatically (e.g., on selection of a domain), or
- * they can be switched on manually via a flag. Currently these flags are hard
- * coded.
+ * All heuristic methods get a method to manipulate nodes and have a predicate
+ * that either switches them on automatically (e.g., on selection of a domain),
+ * or they can be switched on manually via a flag. Currently these flags are
+ * hard coded.
  * @interface
  * @template T
  */
@@ -147,46 +147,46 @@ sre.SemanticHeuristic = function() {};
 
 
 /**
- * All heuristic methods get a root of a subtree and have a predicate that
- * either switches them on automatically (e.g., on selection of a domain), or
- * they can be switched on manually via a flag. Currently these flags are hard
- * coded.
+ * Abstract class of heuristics.
  * @constructor
- * @implements {sre.SemanticHeuristic<sre.SemanticNode>}
- * @param {{predicate: ((function(sre.SemanticNode): boolean)|undefined),
- *          method: function(sre.SemanticNode): sre.SemanticNode} } heuristic
+ * @template T
+ * @implements {sre.SemanticHeuristic<T>}
+ * @param {{predicate: ((function(T): boolean)|undefined),
+ *          method: function(T): sre.SemanticNode} } heuristic
  *          The predicate and method of the heuristic
+ * @private
  */
-sre.SemanticTreeHeuristic = function(
-    {predicate: predicate = function(node) {return false;}, method: method}) {
+sre.SemanticAbstractHeuristic = function(heuristic) {
 
-  this.apply = method;
+  this.apply = heuristic.method;
 
-  this.applicable = predicate;
+  this.applicable = heuristic.predicate || function(node) {return false;};
 
 };
 
 
 /**
- * All heuristic methods get a root of a subtree and have a predicate that
- * either switches them on automatically (e.g., on selection of a domain), or
- * they can be switched on manually via a flag. Currently these flags are hard
- * coded.
+ * Heuristics work on the root of a subtree.
  * @constructor
- * @implements {sre.SemanticHeuristic<Array.<sre.SemanticNode>>}
- * @param {{predicate: ((function(Array.<sre.SemanticNode>):
- *          boolean)|undefined), method: function(Array.<sre.SemanticNode>):
- *          Array.<sre.SemanticNode>} } heuristic The predicate and method of
- *          the heuristic
+ * @extends {sre.SemanticAbstractHeuristic<sre.SemanticNode>}
+ * @override
  */
-sre.SemanticMultiHeuristic = function(
-    {predicate: predicate = function(node) {return false;}, method: method}) {
-
-  this.apply = method;
-
-  this.applicable = predicate;
-
+sre.SemanticTreeHeuristic = function(heuristic) {
+  sre.SemanticTreeHeuristic.base(this, 'constructor', heuristic);
 };
+goog.inherits(sre.SemanticTreeHeuristic, sre.SemanticAbstractHeuristic);
+
+
+/**
+ * Heuristics work on a list of nodes.
+ * @constructor
+ * @extends {sre.SemanticAbstractHeuristic<Array.<sre.SemanticNode>>}
+ * @override
+ */
+sre.SemanticMultiHeuristic = function(heuristic) {
+  sre.SemanticMultiHeuristic.base(this, 'constructor', heuristic);
+};
+goog.inherits(sre.SemanticMultiHeuristic, sre.SemanticAbstractHeuristic);
 
 
 /**
