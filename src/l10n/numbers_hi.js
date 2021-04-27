@@ -12,8 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//
+// This work was supported by British Council UKIERI SPARC Project #P1161
+//
+
 /**
- * @fileoverview Translating numbers into English.
+ * @fileoverview Translating numbers into Hindi.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
