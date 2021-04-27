@@ -38,7 +38,7 @@ sre.Numbers.NumberToGrammarString;
  *   simpleOrdinal: (sre.Numbers.NumberToString|undefined),
  *   numberToWords: (sre.Numbers.NumberToString|undefined),
  *   numberToOrdinal: (sre.Numbers.NumberToGrammarString|undefined),
- *   vulgarSep: (string|undefined),
+ *   vulgarSep: string,
  *   numSep: (string|undefined)
  * }}
  */

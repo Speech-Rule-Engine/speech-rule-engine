@@ -189,16 +189,38 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
               context,
               selected,
               attributes['sepFunc'],
-              context.constructString(node, attributes['separator']),
+              // TODO (span): Sort out those types better.
+              /** @type {string} */(
+              context.constructString(node, attributes['separator'])),
               attributes['ctxtFunc'],
-              context.constructString(node, attributes['context']));
+              /** @type {string} */(
+              context.constructString(node, attributes['context'])));
         }
         break;
       case sre.SpeechRule.Type.TEXT:
+        // TODO (span): We need the span concept here as a parameter with xpath.
+        var xpath = attributes['span'];
+        var attrs = {};
+        if (xpath) {
+          var nodes = sre.XpathUtil.evalXPath(xpath, node);
+          // TODO: Those could be multiple nodes!
+          //       We need the right xpath expression and combine their
+          //       attributes.
+          // Generalise the following:
+          if (nodes.length) attrs.extid = nodes[0].getAttribute('extid');
+        }
         selected = context.constructString(node, content);
         if (selected) {
-          descrs = [sre.AuditoryDescription.create(
-              {text: selected}, {adjust: true})];
+          if (Array.isArray(selected)) {
+            descrs = selected.map(function(span) {
+              return sre.AuditoryDescription.create(
+                  {text: span.string, attributes: span.attributes},
+                  {adjust: true});
+            });
+          } else {
+            descrs = [sre.AuditoryDescription.create(
+                {text: selected, attributes: attrs}, {adjust: true})];
+          }
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:
