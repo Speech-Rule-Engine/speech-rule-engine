@@ -1,4 +1,4 @@
-// Copyright 2017 Volker Sorge
+// Copyright 2021 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -13,8 +13,12 @@
 // limitations under the License.
 
 
+//
+// This work was supported by British Council UKIERI SPARC Project #P1161
+//
+
 /**
- * @fileoverview English message file.
+ * @fileoverview Hindi message file.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
