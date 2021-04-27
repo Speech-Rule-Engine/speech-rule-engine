@@ -739,7 +739,7 @@ sre.MathspeakUtil.generateBaselineConstraint = function() {
   return [[prefix, middle, postfix].join(' and ')];
 };
 
-  
+
 /**
  * Removes parentheses around a label.
  * @param {!Node} node The label to be processed.

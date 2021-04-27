@@ -51,7 +51,7 @@ sre.System = function() {
   this.files_ = 0;
 
   sre.Engine.registerTest(
-    function() {return !sre.System.getInstance().files_;}
+      function() {return !sre.System.getInstance().files_;}
   );
 };
 goog.addSingletonGetter(sre.System);
@@ -392,7 +392,7 @@ sre.System.prototype.inputFileAsync_ = function(file, callback) {
  * @private
  */
 sre.System.prototype.processFileAsync_ = function(
-  processor, input, opt_output) {
+    processor, input, opt_output) {
   this.files_++;
   sre.System.getInstance().inputFileAsync_(
       input,

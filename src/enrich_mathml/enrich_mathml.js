@@ -393,7 +393,7 @@ sre.EnrichMathml.collectChildNodes_ = function(node) {
  */
 sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
   var oldChildren = (
-    semantic.role === sre.SemanticAttr.Role.IMPLICIT &&
+      semantic.role === sre.SemanticAttr.Role.IMPLICIT &&
       sre.SemanticHeuristics.getInstance().flags.combine_juxtaposition) ?
       sre.EnrichMathml.collateChildNodes_(node, newChildren, semantic) :
       sre.DomUtil.toArray(node.childNodes);
@@ -406,7 +406,7 @@ sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
     var newChild = /** @type {!Element} */(newChildren[0]);
     if (oldChildren[oldCounter] === newChild ||
         sre.EnrichMathml.functionApplication_(
-          oldChildren[oldCounter], newChild)) {
+        oldChildren[oldCounter], newChild)) {
       // newChild same as oldChild. Advance both.
       newChildren.shift();
       oldCounter++;
@@ -429,6 +429,7 @@ sre.EnrichMathml.mergeChildren_ = function(node, newChildren, semantic) {
     newChildren.shift();
   }
 };
+
 
 /**
  * Inserts a new child into the mml tree at the right position.

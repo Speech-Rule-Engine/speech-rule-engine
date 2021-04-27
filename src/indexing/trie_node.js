@@ -81,7 +81,6 @@ sre.TrieNode.prototype.getChildren = function() { };
 sre.TrieNode.prototype.findChildren = function(object) { };
 
 
-
 /**
  * Remove the child registered in the node for the given constraint.
  * @param {string} constraint The constraint string.

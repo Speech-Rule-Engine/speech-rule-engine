@@ -327,7 +327,7 @@ sre.SemanticMathml.prototype.space_ = function(node, children) {
   }
   var newNode = this.getFactory().makeUnprocessed(node);
   return sre.SemanticProcessor.getInstance().
-    text(newNode, sre.DomUtil.tagName(node));
+      text(newNode, sre.DomUtil.tagName(node));
 };
 
 

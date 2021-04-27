@@ -71,7 +71,7 @@ sre.AuditoryDescription = function(kwargs) {
  *          correct: (undefined|boolean),
  *          translate: (undefined|boolean)}=} opt_flag Flag to force grammar
  *      processing options.
- * @return {sre.AuditoryDescription} The newly created auditory description.
+ * @return {!sre.AuditoryDescription} The newly created auditory description.
  * @constructor
  */
 sre.AuditoryDescription.create = function(kwargs, opt_flag) {
