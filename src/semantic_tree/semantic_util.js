@@ -361,7 +361,6 @@ sre.SemanticUtil.sliceNodes = function(nodes, pred, opt_reverse) {
 };
 
 
-
 /**
  * @typedef {{rel: !Array.<sre.SemanticNode>,
  *            comp: !Array.<!Array.<sre.SemanticNode>>}}

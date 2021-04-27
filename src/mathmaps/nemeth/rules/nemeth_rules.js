@@ -366,14 +366,14 @@
       "Rule",
       "sqrt",
       "default",
-      "[t] CSFopenRadicalVerbose; [n] children/*[1]; [t] CSFcloseRadicalVerbose",
+      "[t] CSFopenRadical; [n] children/*[1]; [t] CSFcloseRadical",
       "self::sqrt"
     ],
     [
       "Rule",
       "root",
       "default",
-      "[t] CSFindexRadicalVerbose; [n] children/*[1];[t] \"⠜\"; [n] children/*[2]; [t] CSFcloseRadicalVerbose",
+      "[t] CSFindexRadical; [n] children/*[1];[t] \"⠜\"; [n] children/*[2]; [t] CSFcloseRadical",
       "self::root"
     ],
     [

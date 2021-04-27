@@ -275,7 +275,7 @@ sre.Locale.de = {
 
 sre.Grammar.getInstance().setCorrection(
     'correctOne', function(number) {
-      return number.replace(/^eins /, 'ein ');
+      return number.replace(/^eins$/, 'ein');
     }
 );
 

@@ -127,7 +127,7 @@ DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 space = $(null) #
 comma = ,
 LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
-LINT_EXCLUDE_DIRS = $(JSON_SRC)
+LINT_EXCLUDE_DIRS = $(JSON_SRC),$(NODE_MODULES),$(TEST_DIR)
 
 LINT_ROOT = $(NODE_MODULES)/closure-linter-wrapper/tools/
 GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)'

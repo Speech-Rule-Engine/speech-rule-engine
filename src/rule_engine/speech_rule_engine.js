@@ -43,6 +43,7 @@ goog.require('sre.SpeechRule');
 goog.require('sre.SpeechRuleStores');
 
 
+
 /**
  * @constructor
  */
@@ -188,16 +189,38 @@ sre.SpeechRuleEngine.prototype.evaluateTree_ = function(node) {
               context,
               selected,
               attributes['sepFunc'],
-              context.constructString(node, attributes['separator']),
+              // TODO (span): Sort out those types better.
+              /** @type {string} */(
+              context.constructString(node, attributes['separator'])),
               attributes['ctxtFunc'],
-              context.constructString(node, attributes['context']));
+              /** @type {string} */(
+              context.constructString(node, attributes['context'])));
         }
         break;
       case sre.SpeechRule.Type.TEXT:
+        // TODO (span): We need the span concept here as a parameter with xpath.
+        var xpath = attributes['span'];
+        var attrs = {};
+        if (xpath) {
+          var nodes = sre.XpathUtil.evalXPath(xpath, node);
+          // TODO: Those could be multiple nodes!
+          //       We need the right xpath expression and combine their
+          //       attributes.
+          // Generalise the following:
+          if (nodes.length) attrs.extid = nodes[0].getAttribute('extid');
+        }
         selected = context.constructString(node, content);
         if (selected) {
-          descrs = [sre.AuditoryDescription.create(
-              {text: selected}, {adjust: true})];
+          if (Array.isArray(selected)) {
+            descrs = selected.map(function(span) {
+              return sre.AuditoryDescription.create(
+                  {text: span.string, attributes: span.attributes},
+                  {adjust: true});
+            });
+          } else {
+            descrs = [sre.AuditoryDescription.create(
+                {text: selected, attributes: attrs}, {adjust: true})];
+          }
         }
         break;
       case sre.SpeechRule.Type.PERSONALITY:
@@ -323,7 +346,7 @@ sre.SpeechRuleEngine.prototype.addPersonality_ = function(
     var last = descrs[descrs.length - 1];
     if (last.text || Object.keys(last.personality).length) {
       descrs.push(sre.AuditoryDescription.create(
-        {text: '', personality: {pause: pause}}));
+          {text: '', personality: {pause: pause}}));
     } else {
       last.personality[sre.Engine.personalityProps.PAUSE] = pause;
     }
@@ -461,13 +484,13 @@ sre.SpeechRuleEngine.prototype.addStore = function(set) {
   sre.SpeechRuleStores.init();
   if (set && !set.functions) {
     set.functions = sre.SpeechRules.getInstance().getStore(
-      set.locale, set.modality, set.domain);
+        set.locale, set.modality, set.domain);
   }
   let store = this.storeFactory_(set.modality);
   store.parse(set);
   store.initialize();
   store.getSpeechRules().forEach(
-    goog.bind(function(x) {this.activeStore_.trie.addRule(x);}, this));
+      goog.bind(function(x) {this.activeStore_.trie.addRule(x);}, this));
   this.addEvaluator(store);
   this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
 };
@@ -506,10 +529,10 @@ sre.SpeechRuleEngine.prototype.adjustEngine = function() {
   if (engine.rules) {
     // TODO: This needs to be made more robust.
     var path = sre.SystemExternal.jsonPath.replace(
-      '/lib/mathmaps', '/src/mathmaps');
+        '/lib/mathmaps', '/src/mathmaps');
     var parse = function(json) {
       return sre.MathMap.getInstance().parseMaps(
-        '{"' + engine.rules + '":' + json + '}'
+          '{"' + engine.rules + '":' + json + '}'
       );
     };
     sre.MathMap.getInstance().retrieveFiles(path + engine.rules, parse);

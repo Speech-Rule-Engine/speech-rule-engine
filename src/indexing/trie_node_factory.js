@@ -157,8 +157,8 @@ sre.TrieNodeFactory.constraintTest_ = function(constraint) {
     tag = split[1].toUpperCase();
     return function(node) {
       return node.parentNode && node.parentNode.parentNode &&
-        node.parentNode.parentNode.tagName &&
-        sre.DomUtil.tagName(node.parentNode.parentNode) === tag;
+          node.parentNode.parentNode.tagName &&
+          sre.DomUtil.tagName(node.parentNode.parentNode) === tag;
     };
   }
   // count(preceding-sibling::*)=n
@@ -167,7 +167,7 @@ sre.TrieNodeFactory.constraintTest_ = function(constraint) {
     var num = parseInt(split[1], 10);
     return function(node) {
       return node.parentNode &&
-        node.parentNode.childNodes[num] === node;
+          node.parentNode.childNodes[num] === node;
     };
   }
   return null;

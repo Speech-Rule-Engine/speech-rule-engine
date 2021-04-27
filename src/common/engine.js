@@ -36,7 +36,7 @@ goog.require('sre.DynamicCstr');
 sre.Engine = function() {
 
   /**
-   * @type {function(string, !sre.DynamicCstr): (string|null)}
+   * @type {function(string, !sre.DynamicCstr):? (string)}
    */
   this.evaluator = sre.Engine.defaultEvaluator;
 

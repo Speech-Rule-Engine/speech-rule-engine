@@ -161,7 +161,8 @@ sre.SpeechRuleFunctions.CustomGenerators = function() {
   var store =
       /** @type {!Object.<sre.SpeechRuleFunctions.CustomGenerator>} */
       ({});
-  sre.SpeechRuleFunctions.CustomGenerators.base(this, 'constructor', 'CGF', store);
+  sre.SpeechRuleFunctions.CustomGenerators.base(
+      this, 'constructor', 'CGF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.CustomGenerators,
               sre.SpeechRuleFunctions.Store_);

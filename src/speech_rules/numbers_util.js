@@ -20,6 +20,7 @@
 goog.provide('sre.NumbersUtil');
 
 goog.require('sre.Messages');
+goog.require('sre.Span');
 
 
 // Number transformation
@@ -83,19 +84,25 @@ sre.NumbersUtil.convertVulgarFraction_ = function(node) {
  * Converts a vulgar fraction into string representation of enumerator and
  * denominator as ordinal.
  * @param {!Node} node Fraction node to be translated.
- * @return {string} The string representation if it is a valid vulgar fraction.
+ * @return {string|Array.<sre.Span>} The string representation if it is a valid
+ *     vulgar fraction.
  */
 sre.NumbersUtil.vulgarFraction = function(node) {
   var conversion = sre.NumbersUtil.convertVulgarFraction_(node);
   if (conversion.convertible &&
       conversion.enumerator &&
       conversion.denominator) {
-    return sre.Messages.NUMBERS.numberToWords(conversion.enumerator) +
-        sre.Messages.NUMBERS.vulgarSep +
-        sre.Messages.NUMBERS.numberToOrdinal(conversion.denominator,
-        conversion.enumerator !== 1);
+    return [
+      new sre.Span(sre.Messages.NUMBERS.numberToWords(conversion.enumerator),
+          {extid: node.childNodes[0].childNodes[0].getAttribute('extid'),
+            separator: ''}),
+      new sre.Span(sre.Messages.NUMBERS.vulgarSep, {separator: ''}),
+      new sre.Span(sre.Messages.NUMBERS.numberToOrdinal(
+          conversion.denominator, conversion.enumerator !== 1),
+          {extid: node.childNodes[0].childNodes[1].getAttribute('extid')})];
   }
-  return conversion.content || '';
+  return [new sre.Span(conversion.content || '',
+                       {extid: node.getAttribute('extid')})];
 };
 
 
