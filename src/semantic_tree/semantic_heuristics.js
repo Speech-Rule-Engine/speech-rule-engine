@@ -158,7 +158,7 @@ sre.SemanticHeuristic = function() {};
  *          The predicate and method of the heuristic
  */
 sre.SemanticTreeHeuristic = function(
-    {predicate: predicate = function(node) {return false;};, method: method}) {
+    {predicate: predicate = function(node) {return false;}, method: method}) {
 
   this.apply = method;
 
