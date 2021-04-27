@@ -120,7 +120,7 @@ sre.SpeechRuleContext.prototype.applyConstraint = function(node, expr) {
  * @param {!Node} node The initial node.
  * @param {string} expr An Xpath expression string, a name of a custom
  *     function or a string.
- * @return {string} The result of applying expression to node.
+ * @return {string|Array.<sre.Span>} The result of applying expression to node.
  */
 sre.SpeechRuleContext.prototype.constructString = function(node, expr) {
   if (!expr) {

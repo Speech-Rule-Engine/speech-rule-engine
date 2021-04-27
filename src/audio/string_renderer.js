@@ -39,19 +39,19 @@ goog.inherits(sre.StringRenderer, sre.AbstractAudioRenderer);
  */
 sre.StringRenderer.prototype.markup = function(descrs) {
   var str = '';
-  var clean = descrs.filter(function(x) {return x.descriptionString();});
+  var markup = sre.AudioUtil.personalityMarkup(descrs);
+  var clean = markup.filter(function(x) {return x.span;});
   if (!clean.length) {
     return str;
   }
-  for (var i = 0; i < clean.length - 1; i++) {
-    var descr = clean[i];
-    var join = descr.personality[sre.Engine.personalityProps.JOIN];
-    // TODO: Do this via modalities.
-    var sep = sre.Engine.getInstance().locale === 'nemeth' ?
-        '' : this.getSeparator();
-    join = (typeof join === 'undefined') ? sep : join;
-    str += descr.descriptionString() + join;
+  var len = clean.length - 1;
+  for (var i = 0, descr; descr = clean[i]; i++) {
+    if (descr.span) {
+      str += this.merge(descr.span);
+    }
+    if (i >= len) continue;
+    var join = descr.join;
+    str += (typeof join === 'undefined') ? this.getSeparator() : join;
   }
-  str += clean[i].descriptionString();
   return str;
 };
