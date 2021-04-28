@@ -25,7 +25,7 @@
 
 import * as EngineExports from './engine';
 import {Engine} from './engine';
-import {SystemExternal} from './system_external';
+import SystemExternal from './system_external';
 
 
 /**
@@ -62,7 +62,7 @@ export const createNSResolver: Function = xpathSupported() ?
 /**
  * Mapping for some default namespaces.
  */
-export const nameSpaces_ = {
+export const nameSpaces_: {[key: string]: string} = {
   'xhtml': 'http://www.w3.org/1999/xhtml',
   'mathml': 'http://www.w3.org/1998/Math/MathML',
   'mml': 'http://www.w3.org/1998/Math/MathML',
@@ -86,7 +86,7 @@ export function resolveNameSpace(prefix: string): string {
  */
 export class resolver_ {
   lookupNamespaceURI: any;
-  private constructor() {
+  constructor() {
     this.lookupNamespaceURI = resolveNameSpace;
   }
 }

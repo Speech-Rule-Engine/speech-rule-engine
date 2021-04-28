@@ -20,7 +20,7 @@
  */
 
 
-import {SemanticMeaning} from './semantic_attr';
+import {SemanticAttr, SemanticMeaning} from './semantic_attr';
 import {SemanticNode} from './semantic_node';
 import {SemanticOrdering} from './semantic_ordering';
 
@@ -28,7 +28,7 @@ import {SemanticOrdering} from './semantic_ordering';
 
 // TODO: Combine default and collator with a common superclass mapping.
 export class SemanticDefault {
-  private map_: {[key: any]: SemanticMeaning} = {};
+  private map_: {[key: string]: SemanticMeaning} = {};
 
 
   /**
@@ -98,7 +98,7 @@ export class SemanticDefault {
 sre.SemanticCollator_ = class<T> {
   protected copyCollator: any;
 
-  private map_: {[key: any]: T[]} = {};
+  private map_: {[key: string]: T[]} = {};
 
 
   /**

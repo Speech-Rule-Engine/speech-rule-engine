@@ -31,7 +31,7 @@ import {SemanticProcessor} from './semantic_processor';
 
 export class SemanticMathml extends sre.SemanticAbstractParser implements
     SemanticParser<Element> {
-  private parseMap_: {[key: any]: (p1: Element, p2: Element[]) => SemanticNode};
+  private parseMap_: {[key: string]: (p1: Element, p2: Element[]) => SemanticNode};
   constructor() {
     super('MathML');
     this.parseMap_ = {

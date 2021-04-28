@@ -23,10 +23,12 @@
 
 import * as AudioUtil from './audio_util';
 import {MarkupRenderer} from './markup_renderer';
+import {AuditoryDescription} from './auditory_description';
+import * as EventUtil from '../common/event_util';
 
 
 
-export class AcssRenderer extends sre.MarkupRenderer {
+export class AcssRenderer extends MarkupRenderer {
   constructor() {
     super();
   }
@@ -35,7 +37,7 @@ export class AcssRenderer extends sre.MarkupRenderer {
   /**
    * @override
    */
-  markup(descrs) {
+  markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
     this.setScaleFunction(-2, 2, 0, 10, 0);
     let markup = AudioUtil.personalityMarkup(descrs);
@@ -76,8 +78,8 @@ export class AcssRenderer extends sre.MarkupRenderer {
   /**
    * @override
    */
-  error(key) {
-    return '(error "' + sre.EventUtil.Move[key.toString()] + '")';
+  error(key: number) {
+    return '(error "' + EventUtil.Move.get(key) + '")';
   }
 
 
@@ -86,7 +88,7 @@ export class AcssRenderer extends sre.MarkupRenderer {
    * @param pros The prosody element.
    * @return The S-expression.
    */
-  private prosody_(pros: {[key: any]: number}): string {
+  private prosody_(pros: {[key: string]: number}): string {
     let keys = pros.open;
     let result = [];
     for (let i = 0, key; key = keys[i]; i++) {

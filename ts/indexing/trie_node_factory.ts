@@ -27,8 +27,9 @@ import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
 
 import {AbstractTrieNode} from './abstract_trie_node';
 import {StaticTrieNode} from './abstract_trie_node';
-import {Kind} from './trie_node';
-import {TrieNode} from './trie_node';
+import {TrieNode, TrieNodeKind} from './trie_node';
+import * as DomUtil from '../common/dom_util';
+import * as XpathUtil from '../common/xpath_util';
 
 
 /**
@@ -39,15 +40,15 @@ import {TrieNode} from './trie_node';
  * @return The newly generated trie node.
  */
 export function getNode(
-    kind: Kind, constraint: string, context: SpeechRuleContext): TrieNode|null {
+    kind: TrieNodeKind, constraint: string, context: SpeechRuleContext): TrieNode|null {
   switch (kind) {
-    case sre.TrieNode.Kind.ROOT:
+    case TrieNodeKind.ROOT:
       return new RootTrieNode();
-    case sre.TrieNode.Kind.DYNAMIC:
+    case TrieNodeKind.DYNAMIC:
       return new DynamicTrieNode(constraint);
-    case sre.TrieNode.Kind.QUERY:
+    case TrieNodeKind.QUERY:
       return new QueryTrieNode(constraint, context);
-    case sre.TrieNode.Kind.BOOLEAN:
+    case TrieNodeKind.BOOLEAN:
       return new BooleanTrieNode(constraint, context);
     default:
       return null;
@@ -56,32 +57,27 @@ export function getNode(
 
 
 
-export class RootTrieNode extends sre.AbstractTrieNode {
-  kind: any;
+export class RootTrieNode extends AbstractTrieNode<Node> {
+
   constructor() {
     super('', function() {
       return true;
     });
-    this.kind = sre.TrieNode.Kind.ROOT;
+    this.kind = TrieNodeKind.ROOT;
   }
 }
-goog.inherits(RootTrieNode, AbstractTrieNode);
 
 
-
-/**
- * @param constraint The constraint the node represents.
- */
-export class DynamicTrieNode extends sre.AbstractTrieNode {
-  kind: any;
+export class DynamicTrieNode extends AbstractTrieNode<string> {
+  
+  /**
+   * @param constraint The constraint the node represents.
+   */
   constructor(constraint: string) {
-    super(constraint, function(axis) {
-      return axis === constraint;
-    });
-    this.kind = sre.TrieNode.Kind.DYNAMIC;
+    super(constraint, axis => axis === constraint)
+    this.kind = TrieNodeKind.DYNAMIC;
   }
 }
-goog.inherits(DynamicTrieNode, AbstractTrieNode);
 
 
 /**
@@ -90,148 +86,130 @@ goog.inherits(DynamicTrieNode, AbstractTrieNode);
  * @return An efficient test function in lieu of the
  *    xpath expression.
  */
+// TODO (TS): Improve methods by testing for Element type.
 export function constraintTest_(constraint: string): ((p1: Node) => boolean)|
     null {
   // @self::*
   if (constraint.match(/^self::\*$/)) {
-    return function(node) {
-      return true;
-    };
+    return (_node => true);
   }
   // @self::tagname
   if (constraint.match(/^self::\w+$/)) {
-    let tag = constraint.slice(6).toUpperCase();
-    return function(node) {
-      return node.tagName && sre.DomUtil.tagName(node) === tag;
-    };
+    const tag = constraint.slice(6).toUpperCase();
+    return ((node: Element) => node.tagName && DomUtil.tagName(node) === tag);
   }
   // @self::namespace:tagname
   if (constraint.match(/^self::\w+:\w+$/)) {
     let inter = constraint.split(':');
-    let namespace = sre.XpathUtil.resolveNameSpace(inter[2]);
+    let namespace = XpathUtil.resolveNameSpace(inter[2]);
     if (!namespace) {
       return null;
     }
-    tag = inter[3].toUpperCase();
-    return function(node) {
-      return node.localName && node.localName.toUpperCase() === tag &&
-          node.namespaceURI === namespace;
-    };
+    let tag = inter[3].toUpperCase();
+    return ((node: Element) => 
+      node.localName && node.localName.toUpperCase() === tag &&
+      node.namespaceURI === namespace);
   }
   // @attr
   if (constraint.match(/^@\w+$/)) {
     let attr = constraint.slice(1);
-    return function(node) {
-      return node.hasAttribute && node.hasAttribute(attr);
-    };
+    return ((node: Element) =>
+      node.hasAttribute && node.hasAttribute(attr));
   }
   // @attr="value"
   if (constraint.match(/^@\w+="[\w\d ]+"$/)) {
     let split = constraint.split('=');
-    attr = split[0].slice(1);
+    let attr = split[0].slice(1);
     let value = split[1].slice(1, -1);
-    return function(node) {
-      return node.hasAttribute && node.hasAttribute(attr) &&
-          node.getAttribute(attr) === value;
-    };
+    return ((node: Element) =>
+      node.hasAttribute && node.hasAttribute(attr) &&
+      node.getAttribute(attr) === value);
   }
   // @attr!="value"
   if (constraint.match(/^@\w+!="[\w\d ]+"$/)) {
-    split = constraint.split('!=');
-    attr = split[0].slice(1);
-    value = split[1].slice(1, -1);
-    return function(node) {
-      return !node.hasAttribute || !node.hasAttribute(attr) ||
-          node.getAttribute(attr) !== value;
-    };
+    let split = constraint.split('!=');
+    let attr = split[0].slice(1);
+    let value = split[1].slice(1, -1);
+    return ((node: Element) =>
+      !node.hasAttribute || !node.hasAttribute(attr) ||
+      node.getAttribute(attr) !== value);
   }
   // contains(@grammar, "something")
   if (constraint.match(/^contains\(\s*@grammar\s*,\s*"[\w\d ]+"\s*\)$/)) {
-    split = constraint.split('"');
-    value = split[1];
-    return function(node) {
-      return sre.Grammar.getInstance().getParameter(value);
-    };
+    let split = constraint.split('"');
+    let value = split[1];
+    return ((_node: Element) =>
+      Grammar.getInstance().getParameter(value));
   }
   // not(contains(@grammar, "something"))
   if (constraint.match(
           /^not\(\s*contains\(\s*@grammar\s*,\s*"[\w\d ]+"\s*\)\s*\)$/)) {
-    split = constraint.split('"');
-    value = split[1];
-    return function(node) {
-      return !sre.Grammar.getInstance().getParameter(value);
-    };
+    let split = constraint.split('"');
+    let value = split[1];
+    return ((_node: Element) =>
+      !Grammar.getInstance().getParameter(value));
   }
   // name(../..)="something"
   if (constraint.match(/^name\(\.\.\/\.\.\)="\w+"$/)) {
-    split = constraint.split('"');
-    tag = split[1].toUpperCase();
-    return function(node) {
-      return node.parentNode && node.parentNode.parentNode &&
-          node.parentNode.parentNode.tagName &&
-          sre.DomUtil.tagName(node.parentNode.parentNode) === tag;
-    };
+    let split = constraint.split('"');
+    let tag = split[1].toUpperCase();
+    return ((node: Element) =>
+      (node.parentNode?.parentNode as Element)?.tagName &&
+      DomUtil.tagName(node.parentNode.parentNode as Element) === tag);
   }
   // count(preceding-sibling::*)=n
   if (constraint.match(/^count\(preceding-sibling::\*\)=\d+$/)) {
-    split = constraint.split('=');
+    let split = constraint.split('=');
     let num = parseInt(split[1], 10);
-    return function(node) {
-      return node.parentNode && node.parentNode.childNodes[num] === node;
-    };
+    return ((node: Element) =>
+      node.parentNode?.childNodes[num] === node);
   }
   return null;
 }
 
 
 
-/**
- * @param constraint The constraint the node represents.
- * @param context The rule context.
- */
-export class QueryTrieNode extends sre.StaticTrieNode {
-  context_: any;
-  kind: any;
-  constructor(constraint: string, context: SpeechRuleContext) {
-    this.context_ = context;
+export class QueryTrieNode extends StaticTrieNode {
+
+  /**
+   * @param constraint The constraint the node represents.
+   * @param context The rule context.
+   */
+  constructor(constraint: string, private context: SpeechRuleContext) {
     super(constraint, constraintTest_(constraint));
-    this.kind = sre.TrieNode.Kind.QUERY;
+    this.kind = TrieNodeKind.QUERY;
   }
 
 
   /**
    * @override
    */
-  applyTest(object) {
+  applyTest(object: Node) {
     return this.test ?
         this.test(object) :
-        this.context_.applyQuery(object, this.constraint) === object;
+        this.context.applyQuery(object, this.constraint) === object;
   }
 }
-goog.inherits(QueryTrieNode, StaticTrieNode);
 
 
+export class BooleanTrieNode extends StaticTrieNode {
 
-/**
- * @param constraint The constraint the node represents.
- * @param context The rule context.
- */
-export class BooleanTrieNode extends sre.StaticTrieNode {
-  context_: any;
-  kind: any;
-  constructor(constraint: string, context: SpeechRuleContext) {
-    this.context_ = context;
+  /**
+   * @param constraint The constraint the node represents.
+   * @param context The rule context.
+   */
+  constructor(constraint: string, private context: SpeechRuleContext) {
     super(constraint, constraintTest_(constraint));
-    this.kind = sre.TrieNode.Kind.BOOLEAN;
+    this.kind = TrieNodeKind.BOOLEAN;
   }
 
 
   /**
    * @override
    */
-  applyTest(object) {
+  applyTest(object: Node ) {
     return this.test ? this.test(object) :
-                       this.context_.applyConstraint(object, this.constraint);
+      this.context.applyConstraint(object, this.constraint);
   }
 }
-goog.inherits(BooleanTrieNode, StaticTrieNode);
+

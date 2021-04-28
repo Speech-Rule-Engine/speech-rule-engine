@@ -83,7 +83,7 @@ export class Engine {
 
 
   static DOMAIN_TO_STYLES:
-      {[key: any]: string} = {'mathspeak': 'default', 'clearspeak': 'default'};
+      {[key: string]: string} = {'mathspeak': 'default', 'clearspeak': 'default'};
 
   evaluator: (p1: string, p2: DynamicCstr) => string | null;
 
@@ -325,7 +325,7 @@ export enum Mode {
  * The base error class for signaling SRE errors.
  * @param msg The error message.
  */
-export class Error extends Error {
+export class SREError extends Error {
   message: any;
   name = 'SRE Error';
   constructor(msg: string) {

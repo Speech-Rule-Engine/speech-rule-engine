@@ -32,6 +32,7 @@ import {SpeechGenerator} from '../speech_generator/speech_generator';
 import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
 import * as ClearspeakPreferencesExports from '../speech_rules/clearspeak_preferences';
 import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
+import {SemanticAttr} from '../semantic_tree/semantic_attr';
 
 import {Focus} from './focus';
 import {Levels} from './levels';
@@ -42,17 +43,13 @@ import * as WalkerUtil from './walker_util';
 
 
 
+
 /**
- * @param node The (rendered) node on which the walker is called.
- * @param generator The speech generator for
- *     this walker.
- * @param highlighter The currently active
- *     highlighter.
- * @param xml The original xml/mathml node on which the walker is
- *      called as a string.
- * @override
+ * The abstract walker class.
+ * @template T
  */
-export class AbstractWalker implements Walker {
+export abstract class AbstractWalker<T> implements Walker {
+  
   /**
    * Unique id counter for walkers. Needed to regain states on rerendering.
    */
@@ -65,14 +62,31 @@ export class AbstractWalker implements Walker {
    */
   static SRE_ID_ATTR: string = 'sre-explorer-id';
 
+  /**
+   * Finds the focus on the current level for a given semantic node id.
+   * @param id The id number.
+   * @return The focus on a particular level.
+   */
+  public abstract findFocusOnLevel(id: number): Focus;
 
-  findFocusOnLevel: any;
+  /**
+   * Returns a new, initialised level structure suitable for the walker.
+   * @return The new level structure initialised with root focus.
+   */
+  public abstract initLevels: Levels<T>;
 
-
-  initLevels: any;
-
-
-  combineContentChildren: any;
+  /**
+   * Combines content and children lists depending on semantic type and role.
+   * @param type The semantic type.
+   * @param role The semantic role.
+   * @param content The list of content nodes.
+   * @param children The list of child nodes.
+   * @return The list of focus elements.
+   */
+  public abstract combineContentChildren(
+    type: SemanticAttr.Type, role: SemanticAttr.Role,
+    content: string[], children: string[]): T[];
+  
   id: any;
 
   rootNode: Node;
@@ -104,18 +118,32 @@ export class AbstractWalker implements Walker {
   /**
    * Stack of virtual cursors.
    */
-  cursors: WalkerExports.Cursor[] = [];
+  public cursors: {focus: Focus,
+            levels: Levels<T>,
+            undo: boolean}[] = [];
+
   levels: any;
-  constructor<T>(
-      public node: Node, public generator: SpeechGenerator,
+
+  /**
+   * @param node The (rendered) node on which the walker is called.
+   * @param generator The speech generator for
+   *     this walker.
+   * @param highlighter The currently active
+   *     highlighter.
+   * @param xml The original xml/mathml node on which the walker is
+   *      called as a string.
+   */
+  constructor(
+      public node: Element, public generator: SpeechGenerator,
       public highlighter: Highlighter, xml: string) {
+
     if (this.node.id) {
       this.id = this.node.id;
     } else if (this.node.hasAttribute(AbstractWalker.SRE_ID_ATTR)) {
       this.id = this.node.getAttribute(AbstractWalker.SRE_ID_ATTR);
     } else {
       this.node.setAttribute(
-          AbstractWalker.SRE_ID_ATTR, AbstractWalker.ID_COUNTER);
+        AbstractWalker.SRE_ID_ATTR, AbstractWalker.ID_COUNTER.toString());
       this.id = AbstractWalker.ID_COUNTER++;
     }
     /**
@@ -860,23 +888,3 @@ export class AbstractWalker implements Walker {
     this.setFocus(focus);
   }
 }
-/**
- * Finds the focus on the current level for a given semantic node id.
- * @param id The id number.
- * @return The focus on a particular level.
- */
-AbstractWalker.prototype.findFocusOnLevel = goog.abstractMethod;
-/**
- * Returns a new, initialised level structure suitable for the walker.
- * @return The new level structure initialised with root focus.
- */
-AbstractWalker.prototype.initLevels = goog.abstractMethod;
-/**
- * Combines content and children lists depending on semantic type and role.
- * @param type The semantic type.
- * @param role The semantic role.
- * @param content The list of content nodes.
- * @param children The list of child nodes.
- * @return The list of focus elements.
- */
-AbstractWalker.prototype.combineContentChildren = goog.abstractMethod;

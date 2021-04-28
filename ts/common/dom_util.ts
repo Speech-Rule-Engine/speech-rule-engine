@@ -25,7 +25,7 @@
 
 import * as EngineExports from './engine';
 import {Engine} from './engine';
-import {SystemExternal} from './system_external';
+import SystemExternal from './system_external';
 import * as XpathUtil from './xpath_util';
 
 
@@ -57,7 +57,7 @@ export function trimInput_(input: string): string {
 /**
  * Set of XML entities.
  */
-export const XML_ENTITIES: {[key: any]: boolean} = {
+export const XML_ENTITIES: {[key: string]: boolean} = {
   '&lt;': true,
   '&gt;': true,
   '&amp;': true,
@@ -80,7 +80,7 @@ export function parseInput(
   let allValues = clean_input.match(/&(?!lt|gt|amp|quot|apos)\w+;/g);
   let html = !!allValues;
   if (!clean_input) {
-    throw new error('Empty input!');
+    throw new Error('Empty input!');
   }
   try {
     let doc = dp.parseFromString(clean_input, html ? 'text/html' : 'text/xml');
@@ -278,7 +278,7 @@ export function dataAttribute(attr: string): string {
  * @param attr The data attribute.
  * @return The value for that attribute.
  */
-export function getDataAttribute(node: Node, attr: string): string {
+export function getDataAttribute(node: HTMLElement, attr: string): string {
   if (node.dataset) {
     return node.dataset[dataAttribute(attr)];
   }
@@ -293,7 +293,7 @@ export function getDataAttribute(node: Node, attr: string): string {
  * @param attr The data attribute.
  * @return The list of result nodes.
  */
-export function querySelectorAllByAttr(node: Node, attr: string): Node[] {
+export function querySelectorAllByAttr(node: Element, attr: string): Element[] {
   return node.querySelectorAll ?
       toArray(node.querySelectorAll('[' + attr + ']')) :
       XpathUtil.evalXPath('.//*[@' + attr + ']', node);
@@ -307,7 +307,7 @@ export function querySelectorAllByAttr(node: Node, attr: string): Node[] {
  * @return The list of result nodes.
  */
 export function querySelectorAllByAttrValue(
-    node: Node, attr: string, value: string): Node[] {
+    node: Element, attr: string, value: string): Element[] {
   return node.querySelectorAll ?
       toArray(node.querySelectorAll('[' + attr + '="' + value + '"]')) :
       XpathUtil.evalXPath('.//*[@' + attr + '="' + value + '"]', node);
@@ -319,7 +319,7 @@ export function querySelectorAllByAttrValue(
  * @param tag The tag name.
  * @return The list of result nodes.
  */
-export function querySelectorAll(node: Node, tag: string): Node[] {
+export function querySelectorAll(node: Element, tag: string): Element[] {
   return node.querySelectorAll ? toArray(node.querySelectorAll(tag)) :
                                  XpathUtil.evalXPath('.//' + tag, node);
 }

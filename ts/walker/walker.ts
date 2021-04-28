@@ -24,9 +24,7 @@ import {KeyCode} from '../common/event_util';
 import {Map} from '../rule_engine/dynamic_cstr';
 
 import {Focus} from './focus';
-import {Levels} from './levels';
 import {RebuildStree} from './rebuild_stree';
-
 
 
 export interface Walker {
@@ -126,20 +124,17 @@ export enum move {
   ROW = 'row',
   CELL = 'cell'
 }
-type Cursor = {
-  focus: Focus,
-  levels: Levels,
-  undo: boolean
-};
-export {Cursor};
 
+
+// TODO (ts): Replace with a Map.
+const STATE: {[id: string]: string} = {};
 
 /**
  * Removes a state for a particular node.
  * @param id A node id.
  */
 export function resetState(id: string) {
-  delete STATE_[id];
+  delete STATE[id];
 }
 
 
@@ -149,7 +144,7 @@ export function resetState(id: string) {
  * @param value The state value.
  */
 export function setState(id: string, value: string) {
-  STATE_[id] = value;
+  STATE[id] = value;
 }
 
 
@@ -159,5 +154,5 @@ export function setState(id: string, value: string) {
  * @return The state value.
  */
 export function getState(id: string): string {
-  return STATE_[id];
+  return STATE[id];
 }

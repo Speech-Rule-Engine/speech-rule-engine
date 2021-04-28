@@ -20,7 +20,7 @@
  */
 
 
-export class Levels {
+export class Levels<T> {
   /**
    * Array caching levels.
    */
@@ -31,7 +31,7 @@ export class Levels {
    * Pushes a new level onto the stack.
    * @param level The new level.
    */
-  push(level: T[]) {
+  public push(level: T[]) {
     this.level_.push(level);
   }
 
@@ -40,7 +40,7 @@ export class Levels {
    * Pops a level off the stack.
    * @return The old top level.
    */
-  pop(): T[] {
+  public pop(): T[] {
     return this.level_.pop();
   }
 
@@ -49,7 +49,7 @@ export class Levels {
    * Peeks at the top level off the stack without popping it.
    * @return The top level.
    */
-  peek(): T[] {
+  public peek(): T[] {
     return this.level_[this.level_.length - 1] || null;
   }
 
@@ -59,7 +59,7 @@ export class Levels {
    * @param element The element to look up.
    * @return The index, -1 if element is not contained.
    */
-  indexOf(element: T): number|null {
+  public indexOf(element: T): number|null {
     let last = this.peek();
     return !last ? null : last.indexOf(element);
   }
@@ -71,7 +71,7 @@ export class Levels {
    * @param pred A predicate for testing.
    * @return The element matching the predicate.
    */
-  find(pred: (p1: T) => boolean): T|null {
+  public find(pred: (p1: T) => boolean): T|null {
     let last = this.peek();
     if (!last) {
       return null;
@@ -91,7 +91,7 @@ export class Levels {
    * @param index The index of the element to retrieves.
    * @return The element at the position.
    */
-  get(index: number): T|null {
+  public get(index: number): T|null {
     let last = this.peek();
     return !last || index < 0 || index >= last.length ? null : last[index];
   }
@@ -100,7 +100,7 @@ export class Levels {
   /**
    * @return The current depth of the levels.
    */
-  depth(): number {
+  public depth(): number {
     return this.level_.length;
   }
 
@@ -108,8 +108,8 @@ export class Levels {
   /**
    * @return The clone of this object.
    */
-  clone(): Levels {
-    let levels = new Levels();
+  public clone(): Levels<T> {
+    let levels = new Levels<T>();
     levels.level_ = this.level_.slice(0);
     return levels;
   }
@@ -118,7 +118,7 @@ export class Levels {
   /**
    * @override
    */
-  toString() {
+  public toString() {
     let str = '';
     for (let i = 0, level; level = this.level_[i]; i++) {
       str += '\n' + level.map(function(x) {

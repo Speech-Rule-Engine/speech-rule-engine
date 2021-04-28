@@ -34,14 +34,14 @@ export interface TrieNode {
   /**
    * @return The kind of trie node.
    */
-  getKind(): Kind;
+  getKind(): TrieNodeKind;
 
 
   /**
    * @param object The object.
    * @return The static method which tests the constraint.
    */
-  applyTest(object: T): boolean;
+  applyTest(object: any): boolean;
 
 
   /**
@@ -72,7 +72,7 @@ export interface TrieNode {
    * @param object The object to which to apply the test.
    * @return The child node if it exists.
    */
-  findChildren(object: T): TrieNode[];
+  findChildren(object: any): TrieNode[];
 
 
   /**
@@ -83,7 +83,7 @@ export interface TrieNode {
 }
 
 
-export enum Kind {
+export enum TrieNodeKind {
   ROOT = 'root',
   DYNAMIC = 'dynamic',
   QUERY = 'query',

@@ -27,6 +27,7 @@ import {Span} from './span';
 
 
 export interface AudioRenderer {
+
   /**
    * Sets the separator for merging markup description strings.
    * @param sep The separator string.

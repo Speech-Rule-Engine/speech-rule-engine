@@ -27,73 +27,115 @@ export enum KeyCode {
   ENTER = 13,
   ESC = 27,
   SPACE = 32,
-  PAGE_UP,
-  // also NUM_NORTH_EAST
-  PAGE_DOWN,
-  // also NUM_SOUTH_EAST
-  END,
-  // also NUM_SOUTH_WEST
-  HOME,
-  // also NUM_NORTH_WEST
-  LEFT,
-  UP,
-  RIGHT,
-  DOWN,
+  PAGE_UP = 33,    // also NUM_NORTH_EAST
+  PAGE_DOWN = 34,  // also NUM_SOUTH_EAST
+  END = 35,        // also NUM_SOUTH_WEST
+  HOME = 36,       // also NUM_NORTH_WEST
+  LEFT = 37,
+  UP = 38,
+  RIGHT = 39,
+  DOWN = 40,
   TAB = 9,
   LESS = 188,
   GREATER = 190,
   DASH = 189,
   // Numeric
-  0 = 48,
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
+  ZERO = 48,
+  ONE = 49,
+  TWO = 50,
+  THREE = 51,
+  FOUR = 52,
+  FIVE = 53,
+  SIX = 54,
+  SEVEN = 55,
+  EIGHT = 56,
+  NINE = 57,
   // Alpha
   A = 65,
-  B,
-  C,
-  D,
-  E,
-  F,
-  G,
-  H,
-  I,
-  J,
-  K,
-  L,
-  M,
-  N,
-  O,
-  P,
-  Q,
-  R,
-  S,
-  T,
-  U,
-  V,
-  W,
-  X,
-  Y,
-  Z
+  B = 66,
+  C = 67,
+  D = 68,
+  E = 69,
+  F = 70,
+  G = 71,
+  H = 72,
+  I = 73,
+  J = 74,
+  K = 75,
+  L = 76,
+  M = 77,
+  N = 78,
+  O = 79,
+  P = 80,
+  Q = 81,
+  R = 82,
+  S = 83,
+  T = 84,
+  U = 85,
+  V = 86,
+  W = 87,
+  X = 88,
+  Y = 89,
+  Z = 90
 }
 
 
 /**
  * Key codes to move names.
  */
-sre.EventUtil.Move = function() {
-  let ret = {};
-  for (let key in KeyCode) {
-    ret[KeyCode[key]] = key;
-  }
-  return ret;
-}();
+export const Move = new Map([
+  [13, 'ENTER'],
+  [27, 'ESC'],
+  [32, 'SPACE'],
+  [33, 'PAGE_UP'],
+  [34, 'PAGE_DOWN'],
+  [35, 'END'],
+  [36, 'HOME'],
+  [37, 'LEFT'],
+  [38, 'UP'],
+  [39, 'RIGHT'],
+  [40, 'DOWN'],
+  [9, 'TAB'],
+  [188, 'LESS'],
+  [190, 'GREATER'],
+  [189, 'DASH'],
+  [48, 'ZERO'],
+  [49, 'ONE'],
+  [50, 'TWO'],
+  [51, 'THREE'],
+  [52, 'FOUR'],
+  [53, 'FIVE'],
+  [54, 'SIX'],
+  [55, 'SEVEN'],
+  [56, 'EIGHT'],
+  [57, 'NINE'],
+  [65, 'A'],
+  [66, 'B'],
+  [67, 'C'],
+  [68, 'D'],
+  [69, 'E'],
+  [70, 'F'],
+  [71, 'G'],
+  [72, 'H'],
+  [73, 'I'],
+  [74, 'J'],
+  [75, 'K'],
+  [76, 'L'],
+  [77, 'M'],
+  [78, 'N'],
+  [79, 'O'],
+  [80, 'P'],
+  [81, 'Q'],
+  [82, 'R'],
+  [83, 'S'],
+  [84, 'T'],
+  [85, 'U'],
+  [86, 'V'],
+  [87, 'W'],
+  [88, 'X'],
+  [89, 'Y'],
+  [90, 'Z']
+]);
 
 
 /**
@@ -125,27 +167,23 @@ export enum EventType {
 
 
 
-/**
- * The type of events.
- * @param src The target element of the event.
- * @param type The event type.
- * @param callback The event handler function.
- */
 export class Event {
-  src: any;
-  type: any;
-  callback: any;
-  constructor(src: Node, type: EventType, callback: (p1: Event) => any) {
-    this.src = src;
-    this.type = type;
-    this.callback = callback;
+
+  /**
+   * The type of events.
+   * @param src The target element of the event.
+   * @param type The event type.
+   * @param callback The event handler function.
+   */
+  constructor(public src: Node, public type: EventType,
+              public callback: EventListener) {
   }
 
 
   /**
    * Registers the event listener with its source element.
    */
-  add() {
+  public add() {
     this.src.addEventListener(this.type, this.callback);
   }
 
@@ -153,7 +191,7 @@ export class Event {
   /**
    * Removes the event listener from the source element.
    */
-  remove() {
+  public remove() {
     this.src.removeEventListener(this.type, this.callback);
   }
 }

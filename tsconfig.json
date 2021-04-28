@@ -1,0 +1,32 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "downlevelIteration": true,
+    "noLib": false,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "lib": ["es6", "dom"],
+    "typeRoots": [],
+    "outDir": "js"
+  },
+  "include": ["ts/**/*"],
+  "typeRoots": [],
+  "types": [],
+  "exclude": [
+    "dist",
+    "js",
+    "node_modules",
+    "bin",
+    "lib",
+    "sre-tests",
+    "src"
+  ]
+}

@@ -26,114 +26,125 @@
 import {Variables} from './variables';
 
 
+namespace SystemExternal {
 
-export class SystemExternal {
-  static process: Object;
-
-
-  static xmldom: Object;
-
-
-  static document: Object;
-
-
-  static xpath: Object;
-
-
-  static commander: Object;
-
-
-  static fs: Object;
-
-
-  /**
-   * The URL for SRE resources.
-   */
-  static readonly url: string = Variables.url;
-
-
-  static jsonPath: string;
-
-
-  static WGXpath: string;
-
-
-  /**
-   * WGXpath library.
-   */
-  static wgxpath: Object = null;
-
-
+  declare var global: any;
+  
   /**
    * The local require function for NodeJS.
    * @param library A library name.
    * @return The library object that has been loaded.
    */
-  static require(library: string): Object {
+  export function require(library: string): any {
     if (typeof process !== 'undefined' && typeof require !== 'undefined') {
       return require(library);
     }
     return null;
   }
 
-
   /**
    * Check if DOM document is already supported in this JS.
    * @return True if document is defined.
    */
-  static documentSupported(): boolean {
+  export function documentSupported(): boolean {
     return !(typeof document == 'undefined');
   }
-}
-/**
- * Process library.
- */
-SystemExternal.process = SystemExternal.require('process');
-/**
- * Xmldom library.
- */
-SystemExternal.xmldom = SystemExternal.documentSupported() ?
+
+  /**
+   * Process library.
+   */
+  export const process: any = SystemExternal.require('process');
+
+  /**
+   * Xmldom library.
+   */
+  export const xmldom = SystemExternal.documentSupported() ?
     window :
     SystemExternal.require('xmldom-sre');
-/**
- * DOM document implementation.
- */
-SystemExternal.document = SystemExternal.documentSupported() ?
-    document :
+  
+  /**
+   * DOM document implementation.
+   */
+  export const document: Document = SystemExternal.documentSupported() ?
+    window.document :
     (new SystemExternal.xmldom.DOMImplementation()).createDocument('', '', 0);
-/**
- * Xpath library.
- */
-SystemExternal.xpath =
+
+  /**
+   * Xpath library.
+   */
+  export const xpath: any =
     SystemExternal.documentSupported() ? document : function() {
       let window = {document: {}, XPathResult: {}};
       let wgx = SystemExternal.require('wicked-good-xpath');
       wgx.install(window);
-      window.document.XPathResult = window.XPathResult;
+      (window.document as any).XPathResult = window.XPathResult;
       return window.document;
     }();
-/**
- * Commander library.
- */
-SystemExternal.commander = SystemExternal.documentSupported() ?
+
+  /**
+   * Commander library.
+   */
+  export const commander = SystemExternal.documentSupported() ?
     null :
     SystemExternal.require('commander');
-/**
- * Filesystem library.
- */
-SystemExternal.fs =
+
+  /**
+   * Filesystem library.
+   */
+  export const fs =
     SystemExternal.documentSupported() ? null : SystemExternal.require('fs');
-/**
- * Path to JSON files.
- */
-SystemExternal.jsonPath = function() {
-  return (SystemExternal.process && typeof global !== 'undefined' ?
-              SystemExternal.process.env.SRE_JSON_PATH ||
-                  global.SRE_JSON_PATH || SystemExternal.process.cwd() :
-              SystemExternal.url) +
+
+  /**
+   * The URL for SRE resources.
+   */
+  export const url: string = Variables.url;
+
+  /**
+   * Path to JSON files.
+   */
+  export const jsonPath = function() {
+    return (SystemExternal.process && typeof global !== 'undefined' ?
+      SystemExternal.process.env.SRE_JSON_PATH ||
+      global.SRE_JSON_PATH || SystemExternal.process.cwd() :
+      SystemExternal.url) +
       '/';
-}();
-/**
- * Path to Xpath library file.
- */
-SystemExternal.WGXpath = Variables.WGXpath;
+  }();
+
+  /**
+   * Path to Xpath library file.
+   */
+  export const WGXpath = Variables.WGXpath;
+
+  // static process: Object;
+
+  // static xmldom: Object;
+
+
+  // static document: Object;
+
+
+  // static xpath: Object;
+
+
+  // static commander: Object;
+
+
+  // static fs: Object;
+
+
+  // static jsonPath: string;
+
+
+  // static WGXpath: string;
+
+
+  // /**
+  //  * WGXpath library.
+  //  */
+  // static wgxpath: Object = null;
+
+
+
+}
+
+export default SystemExternal;

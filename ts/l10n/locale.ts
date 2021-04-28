@@ -23,19 +23,21 @@
 import {Grammar} from '../rule_engine/grammar';
 import * as MathspeakUtil from '../speech_rules/mathspeak_util';
 import * as Messages from './messages';
+import {SemanticAttr} from '../semantic_tree/semantic_attr';
+
 type Messages = {
-  MS: {[key: any]: string},
-  MS_FUNC: {[key: any]: Function},
-  MS_ROOT_INDEX: {[key: any]: string},
-  FONT: {[key: any]: SemanticAttr.Font|SemanticAttr.Font[]},
-  ROLE: {[key: any]: SemanticAttr.Role},
-  ENCLOSE: {[key: any]: SemanticAttr.Role},
-  NAVIGATE: {[key: any]: string},
-  REGEXP: {[key: any]: string},
-  NUMBERS: {[key: any]: Function|string},
-  ALPHABETS: {[key: any]: string[]},
-  ALPHABET_PREFIXES: {[key: any]: {[key: any]: string}},
-  ALPHABET_TRANSFORMERS: {[key: any]: {[key: any]: Transformer}},
+  MS: {[key: string]: string},
+  MS_FUNC: {[key: string]: Function},
+  MS_ROOT_INDEX: {[key: string]: string},
+  FONT: {[key: string]: SemanticAttr.Font|SemanticAttr.Font[]},
+  ROLE: {[key: string]: SemanticAttr.Role},
+  ENCLOSE: {[key: string]: SemanticAttr.Role},
+  NAVIGATE: {[key: string]: string},
+  REGEXP: {[key: string]: string},
+  NUMBERS: {[key: string]: Function|string},
+  ALPHABETS: {[key: string]: string[]},
+  ALPHABET_PREFIXES: {[key: string]: {[key: string]: string}},
+  ALPHABET_TRANSFORMERS: {[key: string]: {[key: string]: Transformer}},
   ALPHABET_COMBINER: Combiner
 };
 export {Messages};

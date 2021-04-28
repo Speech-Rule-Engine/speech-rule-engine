@@ -23,31 +23,34 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import {Debugger} from '../common/debugger';
 import {SpeechRule} from '../rule_engine/speech_rule';
-
-import * as TrieNodeExports from './trie_node';
-import {TrieNode} from './trie_node';
+import {TrieNode, TrieNodeKind} from './trie_node';
 
 
+export class AbstractTrieNode<T> implements TrieNode {
 
-/**
- * @param constraint The constraint the node represents.
- * @param test The constraint test of this node.
- */
-export class AbstractTrieNode implements TrieNode {
-  private children_: {[key: any]: TrieNode} = {};
+  /**
+   * The kind of node.
+   */
+  protected kind: TrieNodeKind;
 
-  kind: TrieNodeExports.Kind;
-  constructor<T>(
-      public constraint: string, public test: ((p1: T) => boolean)|null) {
-    this.kind = TrieNodeExports.Kind.ROOT;
+  private children_: {[key: string]: TrieNode} = {};
+
+  /**
+   * @param constraint The constraint the node represents.
+   * @param test The constraint test of this node.
+   */
+  constructor(
+    public constraint: string, public test: ((p1: T) => boolean)|null) {
+    this.kind = TrieNodeKind.ROOT;
   }
 
 
   /**
    * @override
    */
-  getConstraint() {
+  public getConstraint() {
     return this.constraint;
   }
 
@@ -55,7 +58,7 @@ export class AbstractTrieNode implements TrieNode {
   /**
    * @override
    */
-  getKind() {
+  public getKind() {
     return this.kind;
   }
 
@@ -63,7 +66,7 @@ export class AbstractTrieNode implements TrieNode {
   /**
    * @override
    */
-  applyTest(object) {
+  public applyTest(object: T) {
     return this.test(object);
   }
 
@@ -71,7 +74,7 @@ export class AbstractTrieNode implements TrieNode {
   /**
    * @override
    */
-  addChild(node) {
+  public addChild(node: TrieNode) {
     let constraint = node.getConstraint();
     let child = this.children_[constraint];
     this.children_[constraint] = node;
@@ -82,7 +85,7 @@ export class AbstractTrieNode implements TrieNode {
   /**
    * @override
    */
-  getChild(constraint) {
+  public getChild(constraint: string) {
     return this.children_[constraint];
   }
 
@@ -90,7 +93,7 @@ export class AbstractTrieNode implements TrieNode {
   /**
    * @override
    */
-  getChildren() {
+  public getChildren() {
     let children = [];
     for (let key in this.children_) {
       children.push(this.children_[key]);
@@ -102,7 +105,7 @@ export class AbstractTrieNode implements TrieNode {
   /**
    * @override
    */
-  findChildren(object) {
+  public findChildren(object: T) {
     let children = [];
     for (let key in this.children_) {
       let child = this.children_[key];
@@ -117,7 +120,7 @@ export class AbstractTrieNode implements TrieNode {
   /**
    * @override
    */
-  removeChild(constraint) {
+  public removeChild(constraint: string) {
     delete this.children_[constraint];
   }
 
@@ -125,31 +128,30 @@ export class AbstractTrieNode implements TrieNode {
   /**
    * @override
    */
-  toString() {
+  public toString() {
     return this.constraint;
   }
 }
 
 
-
-/**
- * @param constraint The constraint the node represents.
- * @param test The constraint test of this node.
- */
-export class StaticTrieNode extends sre.AbstractTrieNode {
-  kind: any;
+export class StaticTrieNode extends AbstractTrieNode<Node> {
 
   private rule_: SpeechRule|null = null;
+
+  /**
+   * @param constraint The constraint the node represents.
+   * @param test The constraint test of this node.
+   */
   constructor(constraint: string, test: ((p1: Node) => boolean)|null) {
     super(constraint, test);
-    this.kind = TrieNodeExports.Kind.STATIC;
+    this.kind = TrieNodeKind.STATIC;
   }
 
 
   /**
    * @return The speech rule of the node.
    */
-  getRule(): SpeechRule|null {
+  public getRule(): SpeechRule|null {
     return this.rule_;
   }
 
@@ -157,9 +159,9 @@ export class StaticTrieNode extends sre.AbstractTrieNode {
   /**
    * @param rule speech rule of the node.
    */
-  setRule(rule: SpeechRule) {
+  public setRule(rule: SpeechRule) {
     if (this.rule_) {
-      sre.Debugger.getInstance().output(
+      Debugger.getInstance().output(
           'Replacing rule ' + this.rule_ + ' with ' + rule);
     }
     this.rule_ = rule;
@@ -169,12 +171,10 @@ export class StaticTrieNode extends sre.AbstractTrieNode {
   /**
    * @override
    */
-  toString() {
+  public toString() {
     let rule = this.getRule();
     return rule ? this.constraint + '\n' +
             '==> ' + this.getRule().action :
                   this.constraint;
   }
 }
-
-goog.inherits(StaticTrieNode, AbstractTrieNode);

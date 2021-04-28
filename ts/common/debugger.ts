@@ -20,33 +20,41 @@
  */
 
 
-import {SystemExternal} from './system_external';
-
+import SystemExternal from './system_external';
 
 
 export class Debugger {
+
+  private static instance: Debugger;
   /**
    * Whether the debugger is active.
    */
   private isActive_: boolean = false;
-  private outputFunction_: (p1: string) => any;
+  private outputFunction_: (p1: string) => any = console.info;
+  
   /**
    * Output stream of the debug file.
    */
-  private stream_: stream|null = null;
-  constructor() {
-    /**
-     * Output function.
-     */
-    this.outputFunction_ = console.info;
+  private stream_: any | null = null;
+  
+  /**
+   * Private constructor.
+   */
+  private constructor() { }
+
+  /**
+   * @return The debugger object.
+   */
+  static getInstance(): Debugger {
+    Debugger.instance = Debugger.instance || new Debugger();
+    return Debugger.instance;
   }
-
-
+  
   /**
    * Flag for the debug mode of the speech rule engine.
    * @param opt_file A filename to log the debug information.
    */
-  init(opt_file?: string) {
+  public init(opt_file?: string) {
     if (opt_file) {
       this.startDebugFile_(opt_file);
     }
@@ -61,15 +69,14 @@ export class Debugger {
    */
   private startDebugFile_(filename: string) {
     this.stream_ = SystemExternal.fs.createWriteStream(filename);
-    this.outputFunction_ = goog.bind(function(var_args) {
-      let outputList = Array.prototype.slice.call(arguments, 0);
-      this.stream_.write(outputList.join(' '));
+    this.outputFunction_ = function(...args: string[]) {
+      this.stream_.write(args.join(' '));
       this.stream_.write('\n');
-    }, this);
-    this.stream_.on('error', goog.bind(function(error) {
+    }.bind(this);
+    this.stream_.on('error', function(_error: Error) {
       console.info('Invalid log file. Debug information sent to console.');
       this.outputFunction_ = console.info;
-    }, this));
+    }.bind(this));
     this.stream_.on('finish', function() {
       console.info('Finalizing debug file.');
     });
@@ -91,9 +98,9 @@ export class Debugger {
    * Give debug output.
    * @param var_args Rest elements of debug output.
    */
-  output(...var_args: any[]) {
+  public output(...args: any[]) {
     if (this.isActive_) {
-      this.output_(Array.prototype.slice.call(arguments, 0));
+      this.output_(args);
     }
   }
 
@@ -104,7 +111,7 @@ export class Debugger {
    * @param func The function that generates the
    *      debug output.
    */
-  generateOutput(func: () => string[]) {
+  public generateOutput(func: () => string[]) {
     if (this.isActive_) {
       this.output_(func.apply(func, []));
     }
@@ -116,12 +123,11 @@ export class Debugger {
    * @param opt_callback Function to be executed after exiting the
    *     debugger.
    */
-  exit(opt_callback?: () => any) {
+  public exit(opt_callback?: () => any) {
     let callback = opt_callback || function() {};
     if (this.isActive_ && this.stream_) {
       this.stream_.end('', '', callback);
     }
   }
 }
-goog.addSingletonGetter(Debugger);
-// this.isActive_ = false;
+

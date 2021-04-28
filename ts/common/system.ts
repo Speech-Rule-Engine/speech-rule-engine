@@ -27,10 +27,10 @@ import * as BaseUtil from './base_util';
 import {Debugger} from './debugger';
 import * as EngineExports from './engine';
 import {Engine} from './engine';
-import {Error} from './engine';
+import {SREError} from './engine';
 import {KeyCode} from './event_util';
 import * as ProcessorFactory from './processors';
-import {SystemExternal} from './system_external';
+import SystemExternal from './system_external';
 import {Variables} from './variables';
 
 
@@ -328,7 +328,7 @@ export class System {
     try {
       let expr = SystemExternal.fs.readFileSync(file, {encoding: 'utf8'});
     } catch (err) {
-      throw new Error('Can not open file: ' + file);
+      throw new SREError('Can not open file: ' + file);
     }
     return expr;
   }
@@ -352,7 +352,7 @@ export class System {
     try {
       SystemExternal.fs.writeFileSync(opt_output, result);
     } catch (err) {
-      throw new Error('Can not write to file: ' + opt_output);
+      throw new SREError('Can not write to file: ' + opt_output);
     }
   }
 
@@ -367,7 +367,7 @@ export class System {
     SystemExternal.fs.readFile(
         file, {encoding: 'utf8'}, goog.bind(function(err, data) {
           if (err) {
-            throw new Error('Can not open file: ' + file);
+            throw new SREError('Can not open file: ' + file);
           }
           callback(data);
         }, this));
@@ -394,7 +394,7 @@ export class System {
       SystemExternal.fs.writeFile(opt_output, result, function(err) {
         if (err) {
           this.files_--;
-          throw new Error('Can not write to file: ' + opt_output);
+          throw new SREError('Can not write to file: ' + opt_output);
         }
       });
       this.files_--;
@@ -440,4 +440,3 @@ export class System {
     SystemExternal.process.exit(value);
   }
 }
-goog.addSingletonGetter(System);
