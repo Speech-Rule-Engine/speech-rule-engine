@@ -279,7 +279,7 @@ new Processor('speech', {
 //  json: Json version of the semantic tree.
 new Processor('json', {
   processor: function(expr) {
-    let mml = sre.DomUtil.parseInput(expr, EngineExports.Error);
+    let mml = sre.DomUtil.parseInput(expr);
     let stree = Semantic.getTree(mml);
     return stree.toJson();
   },

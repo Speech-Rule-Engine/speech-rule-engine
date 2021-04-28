@@ -138,11 +138,10 @@ namespace SystemExternal {
   // static WGXpath: string;
 
 
-  // /**
-  //  * WGXpath library.
-  //  */
-  // static wgxpath: Object = null;
-
+  /**
+   * WGXpath library.
+   */
+  export let wgxpath: any = null;
 
 
 }

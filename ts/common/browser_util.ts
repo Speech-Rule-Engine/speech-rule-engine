@@ -20,7 +20,8 @@
  */
 
 
-import {SystemExternal} from './system_external';
+import SystemExternal from './system_external';
+import XpathUtil from './xpath_util';
 
 
 /**
@@ -39,13 +40,14 @@ export function detectIE(): boolean {
 }
 
 
+// TODO (TS): This can probably go in 4.0
 /**
  * Predicate to check for MS Edge.
  * @return True if the browser is Edge.
  */
 export function detectEdge(): boolean {
   let isEdge = typeof window !== 'undefined' && 'MSGestureEvent' in window &&
-      'chrome' in window && window.chrome.loadTimes == null;
+      (window as any).chrome?.loadTimes === null;
   // This has to remain ==!
   if (!isEdge) {
     return false;
@@ -71,6 +73,7 @@ export function loadWGXpath_(opt_isEdge?: boolean) {
   installWGXpath_(opt_isEdge);
 }
 
+declare var wgxpath: any;
 
 /**
  * Loads all JSON mappings for IE using a script tag.
@@ -79,6 +82,7 @@ export function loadWGXpath_(opt_isEdge?: boolean) {
  */
 export function installWGXpath_(opt_isEdge?: boolean, opt_count?: number) {
   let count = opt_count || 1;
+  // TODO (TS): Rewrite as promise
   if (typeof wgxpath === 'undefined' && count < 10) {
     setTimeout(function() {
       installWGXpath_(opt_isEdge, count++);
@@ -91,9 +95,9 @@ export function installWGXpath_(opt_isEdge?: boolean, opt_count?: number) {
   SystemExternal.wgxpath = wgxpath;
   opt_isEdge ? SystemExternal.wgxpath.install({'document': document}) :
                SystemExternal.wgxpath.install();
-  sre.XpathUtil.xpathEvaluate = document.evaluate;
-  sre.XpathUtil.xpathResult = XPathResult;
-  sre.XpathUtil.createNSResolver = document.createNSResolver;
+  XpathUtil.xpathEvaluate = document.evaluate;
+  XpathUtil.xpathResult = XPathResult;
+  XpathUtil.createNSResolver = document.createNSResolver;
 }
 
 

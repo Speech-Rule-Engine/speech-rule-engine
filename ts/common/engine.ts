@@ -33,6 +33,10 @@ import * as BrowserUtil from './browser_util';
  *
  */
 export class Engine {
+
+  // TODO (TS): Keeping this as a singleton for the time being.
+  private static instance: Engine;
+
   /**
    * Defines the basic personality Properties available.
    */
@@ -171,7 +175,19 @@ export class Engine {
    * Constraints to prune given dot separated.
    */
   prune: string = '';
-  constructor() {
+
+  /**
+   * @return The debugger object.
+   */
+  static getInstance(): Engine {
+    Engine.instance = Engine.instance || new Engine();
+    return Engine.instance;
+  }
+  
+  /**
+   * Private constructor.
+   */
+  private constructor() {
     this.evaluator = Engine.defaultEvaluator;
     this.defaultParser =
         new DynamicCstrExports.Parser(DynamicCstr.DEFAULT_ORDER);
@@ -306,8 +322,6 @@ export class Engine {
         new DynamicCstr.DefaultComparator(this.dynamicCstr);
   }
 }
-
-goog.addSingletonGetter(Engine);
 
 
 /**

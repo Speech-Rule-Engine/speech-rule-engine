@@ -23,10 +23,9 @@
  */
 
 
-import * as EngineExports from './engine';
-import {Engine} from './engine';
+import {Engine, Mode, SREError} from './engine';
 import SystemExternal from './system_external';
-import * as XpathUtil from './xpath_util';
+import XpathUtil from './xpath_util';
 
 
 /**
@@ -72,9 +71,7 @@ export const XML_ENTITIES: {[key: string]: boolean} = {
  * @param opt_error Optional error function.
  * @return The XML document structure corresponding to the node.
  */
-export function parseInput(
-    input: string, opt_error?: (p1: string) => any): Element {
-  let error = opt_error || EngineExports.Error;
+export function parseInput(input: string): Element {
   let dp = new SystemExternal.xmldom.DOMParser();
   let clean_input = trimInput_(input);
   let allValues = clean_input.match(/&(?!lt|gt|amp|quot|apos)\w+;/g);
@@ -84,13 +81,13 @@ export function parseInput(
   }
   try {
     let doc = dp.parseFromString(clean_input, html ? 'text/html' : 'text/xml');
-    if (Engine.getInstance().mode === EngineExports.Mode.HTTP) {
+    if (Engine.getInstance().mode === Mode.HTTP) {
       XpathUtil.currentDocument = doc;
       return html ? doc.body.childNodes[0] : doc.documentElement;
     }
     return doc.documentElement;
   } catch (err) {
-    throw new error('Illegal input: ' + err.message);
+    throw new SREError('Illegal input: ' + err.message);
   }
 }
 
@@ -98,6 +95,7 @@ export function parseInput(
 /**
  * Missing Node interface.
  */
+// TODO (TS): Get rid of this!
 export enum NodeType {
   ELEMENT_NODE = 1,
   ATTRIBUTE_NODE,
@@ -134,7 +132,7 @@ export function replaceNode(oldNode: Node, newNode: Node) {
  * @param tag The tagname of the node.
  * @return The newly create node.
  */
-export function createElement(tag: string): Element {
+export function createElement(tag: string): HTMLElement {
   return SystemExternal.document.createElement(tag);
 }
 
@@ -158,7 +156,7 @@ export function createElementNS(url: string, tag: string): Element {
  * @param content The text content for the node.
  * @return The newly create node.
  */
-export function createTextNode(content: string): Element {
+export function createTextNode(content: string): Text {
   return SystemExternal.document.createTextNode(content);
 }
 
@@ -214,7 +212,7 @@ export function formatXml(xml: string): string {
       }
     } else if (node.match(/^<\/\w/)) {
       // End node.
-      if (pad != 0) {
+      if (pad !== 0) {
         pad -= 1;
       }
     } else if (node.match(/^<\w[^>]*[^\/]>.*$/)) {
@@ -246,7 +244,7 @@ export function formatXml(xml: string): string {
  *     remainder after the end tag, in case it is followed by mixed content.
  */
 export function matchingStartEnd_(
-    start: string, end: string): (boolean|string)[] {
+  start: string, end: string): [boolean, string] {
   if (!end) {
     return [false, ''];
   }
@@ -265,9 +263,7 @@ export function dataAttribute(attr: string): string {
   if (attr.match(/^data-/)) {
     attr = attr.substr(5);
   }
-  return attr.replace(/-([a-z])/g, function(letter, index) {
-    return index.toUpperCase();
-  });
+  return attr.replace(/-([a-z])/g, (_, index) => index.toUpperCase());
 }
 
 
@@ -295,9 +291,10 @@ export function getDataAttribute(node: HTMLElement, attr: string): string {
  */
 export function querySelectorAllByAttr(node: Element, attr: string): Element[] {
   return node.querySelectorAll ?
-      toArray(node.querySelectorAll('[' + attr + ']')) :
-      XpathUtil.evalXPath('.//*[@' + attr + ']', node);
+      toArray(node.querySelectorAll(`[${attr}]`)) :
+    XpathUtil.evalXPath(`.//*[@${attr}]`, node);
 }
+
 /**
  * A wrapper function for query selector on a node wrt. to an attribute. If
  * query selectors are not implemented on that node it reverts to Xpath.
@@ -309,9 +306,10 @@ export function querySelectorAllByAttr(node: Element, attr: string): Element[] {
 export function querySelectorAllByAttrValue(
     node: Element, attr: string, value: string): Element[] {
   return node.querySelectorAll ?
-      toArray(node.querySelectorAll('[' + attr + '="' + value + '"]')) :
-      XpathUtil.evalXPath('.//*[@' + attr + '="' + value + '"]', node);
+      toArray(node.querySelectorAll(`[${attr}="${value}"]`)) :
+      XpathUtil.evalXPath(`.//*[@${attr}="${value}"]`, node);
 }
+
 /**
  * A wrapper function for query selector on a node wrt. to a tag name. If
  * query selectors are not implemented on that node it reverts to Xpath.
@@ -321,7 +319,7 @@ export function querySelectorAllByAttrValue(
  */
 export function querySelectorAll(node: Element, tag: string): Element[] {
   return node.querySelectorAll ? toArray(node.querySelectorAll(tag)) :
-                                 XpathUtil.evalXPath('.//' + tag, node);
+                                 XpathUtil.evalXPath(`.//${tag}`, node);
 }
 
 
