@@ -23,18 +23,43 @@
  */
 
 
-import * as EngineExports from '../common/engine';
+import * as DomUtil from '../common/dom_util';
 import {Engine} from '../common/engine';
+import * as Locale from '../l10n/locale';
+import * as Messages from '../l10n/messages';
+import {DynamicCstr} from './dynamic_cstr';
 
 
+type Value = boolean|string;
+
+export type State = {
+  [key: string]: Value
+};
+
+interface Flags {
+  adjust?: boolean;
+  preprocess?: boolean;
+  correct?: boolean;
+  translate?: boolean;
+}
 
 export class Grammar {
-  static ATTRIBUTE: string = 'grammar';
+
+  // TODO (TS): Keeping this as a singleton for the time being.
+  private static instance: Grammar;
+
+  private static ATTRIBUTE: string = 'grammar';
+
+  /**
+   * Current processing flags of the grammar. This is only filled during
+   * application of grammatical structures to an input text.
+   */
+  public currentFlags: Flags = {};
 
   /**
    * Grammatical annotations that need to be propagated.
    */
-  private parameters_: Grammar.State = {};
+  private parameters_: State = {};
 
   /**
    * Maps grammatical annotations to correction functions.
@@ -46,170 +71,55 @@ export class Grammar {
    */
   private preprocessors_: {[key: string]: Function} = {};
 
-  private stateStack_: ({[key: string]: Grammar.Value})[] = [];
-
-  /**
-   * Current processing flags of the grammar. This is only filled during
-   * application of grammatical structures to an input text.
-   */
-  currentFlags: {
-    adjust?: boolean,
-    preprocess?: boolean,
-    correct?: boolean,
-    translate?: boolean
-  } = {};
+  private stateStack_: State[] = [];
 
 
   /**
-   * Clears the grammar object.
+   * @return The Grammar object.
    */
-  clear() {
-    this.parameters_ = {};
-    this.stateStack_ = [];
+  public static getInstance(): Grammar {
+    Grammar.instance = Grammar.instance || new Grammar();
+    return Grammar.instance;
   }
 
 
   /**
-   * Sets a grammar parameter.
-   * @param parameter The parameter name.
-   * @param value The parameter's value.
-   * @return The old value if it existed.
+   * Processes the grammar annotations of a rule.
+   * @param grammar The grammar annotations.
+   * @return The grammar structure.
    */
-  setParameter(parameter: string, value: Grammar.Value): Grammar.Value {
-    let oldValue = this.parameters_[parameter];
-    value ? this.parameters_[parameter] = value :
-            delete this.parameters_[parameter];
-    return oldValue;
-  }
-
-
-  /**
-   * Returns the value for a parameter.
-   * @param parameter The parameter name.
-   * @return Value of a parameter if it exists.
-   */
-  getParameter(parameter: string): Grammar.Value {
-    return this.parameters_[parameter];
-  }
-
-
-  /**
-   * Sets a grammar correction.
-   * @param correction The correction name.
-   * @param func The correction function.
-   */
-  setCorrection(correction: string, func: Function) {
-    this.corrections_[correction] = func;
-  }
-
-
-  /**
-   * Sets a grammar preprocessor.
-   * @param preprocessor The preprocessor name.
-   * @param func The preprocessor function.
-   */
-  setPreprocessor(preprocessor: string, func: Function) {
-    this.preprocessors_[preprocessor] = func;
-  }
-
-
-  /**
-   * Returns a grammar correction function if it exists.
-   * @param correction The grammar annotation.
-   * @return The correction function.
-   */
-  getCorrection(correction: string): Function {
-    return this.corrections_[correction];
-  }
-
-
-  /**
-   * @return A string version of the grammatical state.
-   */
-  getState(): string {
-    let pairs = [];
-    for (let key in this.parameters_) {
-      let value = this.parameters_[key];
-      pairs.push(typeof value === 'string' ? key + ':' + value : key);
-    }
-    return pairs.join(' ');
-  }
-
-
-  /**
-   * Saves the current state of the grammar object.
-   * @param assignment A list of key value
-   *     pairs.
-   */
-  pushState(assignment: {[key: string]: Grammar.Value}) {
-    for (let key in assignment) {
-      assignment[key] = this.setParameter(key, assignment[key]);
-    }
-    this.stateStack_.push(assignment);
-  }
-
-
-  /**
-   * Saves the current state of the grammar object.
-   */
-  popState() {
-    let assignment = this.stateStack_.pop();
-    for (let key in assignment) {
-      this.setParameter(key, assignment[key]);
-    }
-  }
-
-
-  /**
-   * Adds the grammatical state as attributed to an XML node.
-   * @param node Adds a grammar value to the node.
-   */
-  setAttribute(node: Node) {
-    if (node && node.nodeType === sre.DomUtil.NodeType.ELEMENT_NODE) {
-      let state = this.getState();
-      if (state) {
-        node.setAttribute(Grammar.ATTRIBUTE, state);
-      }
-    }
-  }
-
-
-  /**
-   * Applies a grammatical preprocessors to a given description text.
-   * @param text The original description text.
-   * @return The grammatically corrected string.
-   */
-  preprocess(text: string): string {
-    return this.runProcessors_(text, this.preprocessors_);
-  }
-
-
-  /**
-   * Applies a grammatical corrections to a given description text.
-   * @param text The original description text.
-   * @return The grammatically corrected string.
-   */
-  correct(text: string): string {
-    return this.runProcessors_(text, this.corrections_);
-  }
-
-
-  /**
-   * Applies a grammatical processors to a given description text.
-   * @param text The original description text.
-   * @param funcs Dictionary of processor functions.
-   * @return The grammatically corrected string.
-   */
-  private runProcessors_(text: string, funcs: {[key: string]: Function}): string {
-    for (let key in this.parameters_) {
-      let func = funcs[key];
-      if (!func) {
+  public static parseInput(grammar: string): State {
+    let attributes: State = {};
+    let components = grammar.split(':');
+    for (let i = 0, l = components.length; i < l; i++) {
+      let comp = components[i].split('=');
+      let key = comp[0].trim();
+      if (comp[1]) {
+        attributes[key] = comp[1].trim();
         continue;
       }
-      let value = this.parameters_[key];
-      text = value === true ? func(text) : func(text, value);
+      key.match(/^!/) ? attributes[key.slice(1)] = false :
+                        attributes[key] = true;
     }
-    return text;
+    return attributes;
+  }
+
+
+  /**
+   * Parses a state string that can be passed to the grammar.
+   * @param stateStr The state string for the grammar.
+   * @return The grammar structure.
+   */
+  public static parseState(stateStr: string): State {
+    let state: State = {};
+    let corrections = stateStr.split(' ');
+    for (let i = 0, l = corrections.length; i < l; i++) {
+      let corr = corrections[i].split(':');
+      let key = corr[0];
+      let value = corr[1];
+      state[key] = value ? value : true;
+    }
+    return state;
   }
 
 
@@ -238,11 +148,13 @@ export class Grammar {
     let engine = Engine.getInstance();
     let plural = Grammar.getInstance().getParameter('plural');
     let strict = engine.strict;
-    let baseCstr = engine.locale + '.' + engine.modality + '.default';
+    let baseCstr = `${engine.locale}.${engine.modality}.default`;
     engine.strict = true;
+    let cstr: DynamicCstr;
+    let result: string;
     if (plural) {
-      let cstr = engine.defaultParser.parse(baseCstr + '.plural');
-      let result = engine.evaluator(text, cstr);
+      cstr = engine.defaultParser.parse(baseCstr + '.plural');
+      result = engine.evaluator(text, cstr);
     }
     if (result) {
       engine.strict = strict;
@@ -255,7 +167,7 @@ export class Grammar {
       return Grammar.cleanUnit_(text);
     }
     if (plural) {
-      result = sre.Messages.PLURAL(result);
+      result = Messages.PLURAL(result);
     }
     return result;
   }
@@ -288,6 +200,140 @@ export class Grammar {
 
 
   /**
+   * Clears the grammar object.
+   */
+  public clear() {
+    this.parameters_ = {};
+    this.stateStack_ = [];
+  }
+
+
+  /**
+   * Sets a grammar parameter.
+   * @param parameter The parameter name.
+   * @param value The parameter's value.
+   * @return The old value if it existed.
+   */
+  public setParameter(parameter: string, value: Value): Value {
+    let oldValue = this.parameters_[parameter];
+    value ? this.parameters_[parameter] = value :
+            delete this.parameters_[parameter];
+    return oldValue;
+  }
+
+
+  /**
+   * Returns the value for a parameter.
+   * @param parameter The parameter name.
+   * @return Value of a parameter if it exists.
+   */
+  public getParameter(parameter: string): Value {
+    return this.parameters_[parameter];
+  }
+
+
+  /**
+   * Sets a grammar correction.
+   * @param correction The correction name.
+   * @param func The correction function.
+   */
+  public setCorrection(correction: string, func: Function) {
+    this.corrections_[correction] = func;
+  }
+
+
+  /**
+   * Sets a grammar preprocessor.
+   * @param preprocessor The preprocessor name.
+   * @param func The preprocessor function.
+   */
+  public setPreprocessor(preprocessor: string, func: Function) {
+    this.preprocessors_[preprocessor] = func;
+  }
+
+
+  /**
+   * Returns a grammar correction function if it exists.
+   * @param correction The grammar annotation.
+   * @return The correction function.
+   */
+  public getCorrection(correction: string): Function {
+    return this.corrections_[correction];
+  }
+
+
+  /**
+   * @return A string version of the grammatical state.
+   */
+  public getState(): string {
+    let pairs = [];
+    for (let key in this.parameters_) {
+      let value = this.parameters_[key];
+      pairs.push(typeof value === 'string' ? key + ':' + value : key);
+    }
+    return pairs.join(' ');
+  }
+
+
+  /**
+   * Saves the current state of the grammar object.
+   * @param assignment A list of key value
+   *     pairs.
+   */
+  public pushState(assignment: {[key: string]: Value}) {
+    for (let key in assignment) {
+      assignment[key] = this.setParameter(key, assignment[key]);
+    }
+    this.stateStack_.push(assignment);
+  }
+
+
+  /**
+   * Saves the current state of the grammar object.
+   */
+  public popState() {
+    let assignment = this.stateStack_.pop();
+    for (let key in assignment) {
+      this.setParameter(key, assignment[key]);
+    }
+  }
+
+
+  /**
+   * Adds the grammatical state as attributed to an XML node.
+   * @param node Adds a grammar value to the node.
+   */
+  public setAttribute(node: Element) {
+    if (node && node.nodeType === DomUtil.NodeType.ELEMENT_NODE) {
+      let state = this.getState();
+      if (state) {
+        node.setAttribute(Grammar.ATTRIBUTE, state);
+      }
+    }
+  }
+
+
+  /**
+   * Applies a grammatical preprocessors to a given description text.
+   * @param text The original description text.
+   * @return The grammatically corrected string.
+   */
+  public preprocess(text: string): string {
+    return this.runProcessors_(text, this.preprocessors_);
+  }
+
+
+  /**
+   * Applies a grammatical corrections to a given description text.
+   * @param text The original description text.
+   * @return The grammatically corrected string.
+   */
+  public correct(text: string): string {
+    return this.runProcessors_(text, this.corrections_);
+  }
+
+
+  /**
    * Apply grammatical adjustments of the current state to a text string.
    * @param text The text string to be processed.
    * @param {{adjust: (undefined|boolean),
@@ -304,12 +350,7 @@ export class Grammar {
    *
    * @return The transformed text.
    */
-  apply(text: string, opt_flags?: {
-    adjust?: boolean,
-    preprocess?: boolean,
-    correct?: boolean,
-    translate?: boolean
-  }): string {
+  public apply(text: string, opt_flags?: Flags): string {
     this.currentFlags = opt_flags || {};
     text = this.currentFlags.adjust || this.currentFlags.preprocess ?
         Grammar.getInstance().preprocess(text) :
@@ -326,99 +367,76 @@ export class Grammar {
 
 
   /**
-   * Parses a state string that can be passed to the grammar.
-   * @param stateStr The state string for the grammar.
-   * @return The grammar structure.
+   * Applies a grammatical processors to a given description text.
+   * @param text The original description text.
+   * @param funcs Dictionary of processor functions.
+   * @return The grammatically corrected string.
    */
-  static parseState(stateStr: string): Grammar.State {
-    let state = {};
-    let corrections = stateStr.split(' ');
-    for (let i = 0, l = corrections.length; i < l; i++) {
-      let corr = corrections[i].split(':');
-      let key = corr[0];
-      let value = corr[1];
-      state[key] = value ? value : true;
-    }
-    return state;
-  }
-
-
-  /**
-   * Processes the grammar annotations of a rule.
-   * @param grammar The grammar annotations.
-   * @return The grammar structure.
-   */
-  static parseInput(grammar: string): Grammar.State {
-    let attributes = {};
-    let components = grammar.split(':');
-    for (let i = 0, l = components.length; i < l; i++) {
-      let comp = components[i].split('=');
-      let key = comp[0].trim();
-      if (comp[1]) {
-        attributes[key] = comp[1].trim();
+  private runProcessors_(
+      text: string, funcs: {[key: string]: Function}): string {
+    for (let key in this.parameters_) {
+      let func = funcs[key];
+      if (!func) {
         continue;
       }
-      key.match(/^!/) ? attributes[key.slice(1)] = false :
-                        attributes[key] = true;
-    }
-    return attributes;
-  }
-
-
-  // TODO: The following is temporary and needs a better place.
-  /**
-   * Applies a corrective string to the given description text.
-   * @param text The original description text.
-   * @param correction The correction string to be applied.
-   * @return The cleaned up string.
-   */
-  private static correctFont_(text: string, correction: string): string {
-    if (!correction || !text) {
-      return text;
-    }
-    correction =
-        sre.Messages.MS_FUNC.FONT_REGEXP(sre.Locale.localFont(correction));
-    return text.replace(correction, '');
-  }
-
-
-  /**
-   * Attaches an annotation to a description.
-   * @param text The original description text.
-   * @param annotation The annotation string to be applied.
-   * @return The cleaned up string.
-   */
-  private static addAnnotation_(text: string, annotation: string): string {
-    return text + ':' + annotation;
-  }
-
-
-  // TODO: Check if that is still necessary!
-  /**
-   * Method switches of translation of text elements if they match the regexp of
-   * locale.
-   * @param text The text.
-   * @return The untranslated text.
-   */
-  private static noTranslateText_(text: string): string {
-    if (text.match(new RegExp('^[' + sre.Messages.REGEXP.TEXT + ']+$'))) {
-      Grammar.getInstance().currentFlags['translate'] = false;
+      let value = this.parameters_[key];
+      text = value === true ? func(text) : func(text, value);
     }
     return text;
   }
+
+
+  /**
+   * Private constructor.
+   */
+  private constructor() {}
+
 }
 
-goog.addSingletonGetter(Grammar);
-type Value = boolean|string;
-export {Grammar};
-type State = {
-  [key: string]: Grammar.Value
-};
-export {Grammar};
+// TODO: The following is temporary and needs a better place.
+/**
+ * Applies a corrective string to the given description text.
+ * @param text The original description text.
+ * @param correction The correction string to be applied.
+ * @return The cleaned up string.
+ */
+function correctFont_(text: string, correction: string): string {
+  if (!correction || !text) {
+    return text;
+  }
+  correction =
+    Messages.MS_FUNC.FONT_REGEXP(Locale.localFont(correction));
+  return text.replace(correction, '');
+}
 
 
-Grammar.getInstance().setCorrection('ignoreFont', Grammar.correctFont_);
-Grammar.getInstance().setPreprocessor('annotation', Grammar.addAnnotation_);
+/**
+ * Attaches an annotation to a description.
+ * @param text The original description text.
+ * @param annotation The annotation string to be applied.
+ * @return The cleaned up string.
+ */
+function addAnnotation_(text: string, annotation: string): string {
+  return text + ':' + annotation;
+}
+
+
+// TODO: Check if that is still necessary!
+/**
+ * Method switches of translation of text elements if they match the regexp of
+ * locale.
+ * @param text The text.
+ * @return The untranslated text.
+ */
+function noTranslateText_(text: string): string {
+  if (text.match(new RegExp('^[' + Messages.REGEXP.TEXT + ']+$'))) {
+    Grammar.getInstance().currentFlags['translate'] = false;
+  }
+  return text;
+}
+
+Grammar.getInstance().setCorrection('ignoreFont', correctFont_);
+Grammar.getInstance().setPreprocessor('annotation', addAnnotation_);
 Grammar.getInstance().setPreprocessor(
-    'noTranslateText', Grammar.noTranslateText_);
-Grammar.getInstance().setCorrection('ignoreCaps', Grammar.correctFont_);
+  'noTranslateText', noTranslateText_);
+Grammar.getInstance().setCorrection('ignoreCaps', correctFont_);

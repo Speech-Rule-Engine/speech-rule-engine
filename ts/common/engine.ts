@@ -177,7 +177,7 @@ export class Engine {
   prune: string = '';
 
   /**
-   * @return The debugger object.
+   * @return The Engine object.
    */
   static getInstance(): Engine {
     Engine.instance = Engine.instance || new Engine();
