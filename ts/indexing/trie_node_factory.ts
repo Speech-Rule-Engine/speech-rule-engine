@@ -23,13 +23,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
 
+import * as DomUtil from '../common/dom_util';
+import XpathUtil from '../common/xpath_util';
+import {Grammar} from '../rule_engine/grammar';
+import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
 import {AbstractTrieNode} from './abstract_trie_node';
 import {StaticTrieNode} from './abstract_trie_node';
 import {TrieNode, TrieNodeKind} from './trie_node';
-import * as DomUtil from '../common/dom_util';
-import * as XpathUtil from '../common/xpath_util';
 
 
 /**
@@ -40,7 +41,8 @@ import * as XpathUtil from '../common/xpath_util';
  * @return The newly generated trie node.
  */
 export function getNode(
-    kind: TrieNodeKind, constraint: string, context: SpeechRuleContext): TrieNode|null {
+  kind: TrieNodeKind, constraint: string, context: SpeechRuleContext):
+     TrieNode|null {
   switch (kind) {
     case TrieNodeKind.ROOT:
       return new RootTrieNode();
@@ -56,25 +58,26 @@ export function getNode(
 }
 
 
-
 export class RootTrieNode extends AbstractTrieNode<Node> {
 
+  /**
+   * Creates the root node for the trie.
+   */
   constructor() {
-    super('', function() {
-      return true;
-    });
+    super('', () => true);
     this.kind = TrieNodeKind.ROOT;
   }
+
 }
 
 
 export class DynamicTrieNode extends AbstractTrieNode<string> {
-  
+
   /**
    * @param constraint The constraint the node represents.
    */
   constructor(constraint: string) {
-    super(constraint, axis => axis === constraint)
+    super(constraint, axis => axis === constraint);
     this.kind = TrieNodeKind.DYNAMIC;
   }
 }
@@ -106,7 +109,7 @@ export function constraintTest_(constraint: string): ((p1: Node) => boolean)|
       return null;
     }
     let tag = inter[3].toUpperCase();
-    return ((node: Element) => 
+    return ((node: Element) =>
       node.localName && node.localName.toUpperCase() === tag &&
       node.namespaceURI === namespace);
   }
@@ -139,7 +142,7 @@ export function constraintTest_(constraint: string): ((p1: Node) => boolean)|
     let split = constraint.split('"');
     let value = split[1];
     return ((_node: Element) =>
-      Grammar.getInstance().getParameter(value));
+      !!Grammar.getInstance().getParameter(value));
   }
   // not(contains(@grammar, "something"))
   if (constraint.match(
@@ -168,7 +171,6 @@ export function constraintTest_(constraint: string): ((p1: Node) => boolean)|
 }
 
 
-
 export class QueryTrieNode extends StaticTrieNode {
 
   /**
@@ -184,7 +186,7 @@ export class QueryTrieNode extends StaticTrieNode {
   /**
    * @override
    */
-  applyTest(object: Node) {
+  public applyTest(object: Node) {
     return this.test ?
         this.test(object) :
         this.context.applyQuery(object, this.constraint) === object;
@@ -203,13 +205,12 @@ export class BooleanTrieNode extends StaticTrieNode {
     this.kind = TrieNodeKind.BOOLEAN;
   }
 
-
   /**
    * @override
    */
-  applyTest(object: Node ) {
+  public applyTest(object: Node ) {
     return this.test ? this.test(object) :
       this.context.applyConstraint(object, this.constraint);
   }
-}
 
+}

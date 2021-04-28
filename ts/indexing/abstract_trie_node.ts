@@ -31,9 +31,9 @@ import {TrieNode, TrieNodeKind} from './trie_node';
 export class AbstractTrieNode<T> implements TrieNode {
 
   /**
-   * The kind of node.
+   * @override
    */
-  protected kind: TrieNodeKind;
+  public kind: TrieNodeKind;
 
   private children_: {[key: string]: TrieNode} = {};
 

@@ -25,6 +25,13 @@
 
 
 export interface TrieNode {
+
+  /**
+   * The kind of node.
+   */
+  kind: TrieNodeKind;
+
+
   /**
    * @return The constraint the node represents.
    */

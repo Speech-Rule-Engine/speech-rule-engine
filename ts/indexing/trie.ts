@@ -32,22 +32,21 @@ import {SpeechRule} from '../rule_engine/speech_rule';
 import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
 import {SpeechRuleStore} from '../rule_engine/speech_rule_store';
 
-import * as TrieNodeExports from './trie_node';
-import {TrieNode} from './trie_node';
-import * as TrieNodeFactory from './trie_node_factory';
+import {TrieNode, TrieNodeKind} from './trie_node';
+import {StaticTrieNode} from './abstract_trie_node';
+import {getNode} from './trie_node_factory';
 
 
 
-/**
- * @param store The store the trie belongs to.
- */
 export class Trie {
-  store: any;
+
   root: any;
-  constructor(store: SpeechRuleStore) {
-    this.store = store;
-    this.root = TrieNodeFactory.getNode(
-        TrieNodeExports.Kind.ROOT, '', this.store.context);
+
+  /**
+   * @param store The store the trie belongs to.
+   */
+  constructor(public store: SpeechRuleStore) {
+    this.root = getNode(TrieNodeKind.ROOT, '', this.store.context);
   }
 
 
@@ -61,14 +60,14 @@ export class Trie {
     let dynamicCstr = rule.dynamicCstr.getValues();
     for (let i = 0, l = dynamicCstr.length; i < l; i++) {
       node = this.addNode_(
-          node, dynamicCstr[i], TrieNodeExports.Kind.DYNAMIC, context);
+          node, dynamicCstr[i], TrieNodeKind.DYNAMIC, context);
     }
     node = this.addNode_(
-        node, rule.precondition.query, TrieNodeExports.Kind.QUERY, context);
+        node, rule.precondition.query, TrieNodeKind.QUERY, context);
     let booleans = rule.precondition.constraints;
-    for (i = 0, l = booleans.length; i < l; i++) {
+    for (let i = 0, l = booleans.length; i < l; i++) {
       node = this.addNode_(
-          node, booleans[i], TrieNodeExports.Kind.BOOLEAN, context);
+          node, booleans[i], TrieNodeKind.BOOLEAN, context);
     }
     node.setRule(rule);
   }
@@ -83,11 +82,11 @@ export class Trie {
    * @return The trie node corresponding to the constraint.
    */
   private addNode_(
-      node: TrieNode, constraint: string, kind: TrieNodeExports.Kind,
+      node: TrieNode, constraint: string, kind: TrieNodeKind,
       context: SpeechRuleContext): TrieNode {
     let nextNode = node.getChild(constraint);
     if (!nextNode) {
-      nextNode = TrieNodeFactory.getNode(kind, constraint, context);
+      nextNode = getNode(kind, constraint, context);
       node.addChild(nextNode);
     }
     return nextNode;
@@ -112,12 +111,12 @@ export class Trie {
     // First deal with dynamic constraints.
     while (dynamic.length) {
       let dynamicSet = dynamic.shift();
-      let newNodes = [];
+      let newNodes: TrieNode[] = [];
       while (nodes.length) {
         let node = nodes.shift();
         let children = node.getChildren();
-        children.forEach(function(child) {
-          if (child.getKind() !== TrieNodeExports.Kind.DYNAMIC ||
+        children.forEach((child: TrieNode) => {
+          if (child.getKind() !== TrieNodeKind.DYNAMIC ||
               dynamicSet.indexOf(child.getConstraint()) !== -1) {
             newNodes.push(child);
           }
@@ -127,14 +126,14 @@ export class Trie {
     }
     // Then we deal with static constraints, while collecting rules.
     while (nodes.length) {
-      node = nodes.shift();
+      let node = nodes.shift();
       if (node.getRule) {
         let rule = node.getRule();
         if (rule) {
           rules.push(rule);
         }
       }
-      children = node.findChildren(xml);
+      let children = node.findChildren(xml);
       nodes = nodes.concat(children);
     }
     return rules;
@@ -191,7 +190,7 @@ export class Trie {
    */
   private static printWithDepth_(node: TrieNode, depth: number, str: string):
       string {
-    let prefix = (new Array(depth + 2)).join(depth) + ': ';
+    let prefix = (new Array(depth + 2)).join(depth.toString()) + ': ';
     str += prefix + node.toString() + '\n';
     let children = node.getChildren();
     for (let i = 0, child; child = children[i]; i++) {
@@ -226,9 +225,9 @@ export class Trie {
     let explore = [root];
     while (explore.length) {
       let node = explore.shift();
-      if (node.getKind() === TrieNodeExports.Kind.QUERY ||
-          node.getKind() === TrieNodeExports.Kind.BOOLEAN) {
-        let rule = node.getRule();
+      if (node.getKind() === TrieNodeKind.QUERY ||
+          node.getKind() === TrieNodeKind.BOOLEAN) {
+        let rule = (node as StaticTrieNode).getRule();
         if (rule) {
           rules.unshift(rule);
         }
@@ -244,7 +243,7 @@ export class Trie {
    * @param opt_info Initial dynamic constraint information.
    * @return The collated information.
    */
-  enumerate(opt_info?: Object): Object {
+  public enumerate(opt_info?: Object): Object {
     return this.enumerate_(this.root, opt_info);
   }
 
@@ -255,11 +254,12 @@ export class Trie {
    * @param info Initial dynamic constraint information.
    * @return The collated information.
    */
-  private enumerate_(node: TrieNode, info: Object|undefined): Object {
+  private enumerate_(
+    node: TrieNode, info: {[key: string]: any}): {[key: string]: any} {
     info = info || {};
     let children = node.getChildren();
     for (let i = 0, child; child = children[i]; i++) {
-      if (child.kind !== TrieNodeExports.Kind.DYNAMIC) {
+      if (child.kind !== TrieNodeKind.DYNAMIC) {
         continue;
       }
       info[child.getConstraint()] =
@@ -276,7 +276,7 @@ export class Trie {
    * @return The speech rule or null.
    * What if multiple rules exist?
    */
-  byConstraint(constraint: string[]): TrieNode {
+  public byConstraint(constraint: string[]): TrieNode {
     let node = this.root;
     while (constraint.length && node) {
       let cstr = constraint.shift();
@@ -284,4 +284,5 @@ export class Trie {
     }
     return node || null;
   }
+  
 }
