@@ -29,7 +29,7 @@ export interface Highlighter {
    * Sets highlighting on a node.
    * @param nodes The node to highlight.
    */
-  highlight(nodes: Node[]): void;
+  highlight(nodes: HTMLElement[]): void;
 
 
   /**
@@ -42,7 +42,7 @@ export interface Highlighter {
    * Sets highlighting on all maction-like sub nodes of the given node.
    * @param node The node to highlight.
    */
-  highlightAll(node: Node): void;
+  highlightAll(node: HTMLElement): void;
 
 
   /**
@@ -64,5 +64,5 @@ export interface Highlighter {
    * @param events The events to attach given as event
    *     type and function to execute
    */
-  addEvents(node: Node, events: {[key: any]: Function}): void;
+  addEvents(node: HTMLElement, events: {[key: string]: EventListener}): void;
 }

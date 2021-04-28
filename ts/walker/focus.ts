@@ -153,7 +153,7 @@ export class Focus {
    * @return The list of existing nodes in the DOM tree.
    */
   private static generateAllVisibleNodes_(
-      ids: string[], nodes: (Node|null)[], dict: {[key: any]: SemanticNode},
+      ids: string[], nodes: (Node|null)[], dict: {[key: string]: SemanticNode},
       domNode: Node): Node[] {
     let idFunc = function(id) {
       return sre.WalkerUtil.getBySemanticId(domNode, id);

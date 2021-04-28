@@ -42,7 +42,7 @@ import * as WalkerUtil from './walker_util';
 export class RebuildStree {
   factory: SemanticNodeFactory;
 
-  nodeDict: {[key: any]: SemanticNode} = {};
+  nodeDict: {[key: string]: SemanticNode} = {};
 
   mmlRoot: Node;
 

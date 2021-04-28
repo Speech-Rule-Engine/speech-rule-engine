@@ -25,7 +25,7 @@ import {Numbers} from './numbers';
 
 
 // One (or more) flat message object per rule set.
-export const MS: {[key: any]: string} = {
+export const MS: {[key: string]: string} = {
   START: '',
   FRAC_V: '',
   FRAC_B: '',
@@ -60,7 +60,7 @@ export const MS: {[key: any]: string} = {
  * Parsing functions.
  */
 
-export const MS_FUNC: {[key: any]: (p1: any) => any} = {
+export const MS_FUNC: {[key: string]: (p1: any) => any} = {
   /**
    * Method to determine end of nesting depth for nested fraction.
    * @param node A node.
@@ -97,7 +97,7 @@ export const MS_FUNC: {[key: any]: (p1: any) => any} = {
 /**
  * Localised font names.
  */
-export const FONT: {[key: any]: SemanticAttr.Font|SemanticAttr.Font[]} = {
+export const FONT: {[key: string]: SemanticAttr.Font|SemanticAttr.Font[]} = {
   'bold': '',
   'bold-fraktur': '',
   'bold-italic': '',
@@ -124,7 +124,7 @@ export const FONT: {[key: any]: SemanticAttr.Font|SemanticAttr.Font[]} = {
 /**
  * Localised embalishment names. Treated like fonts.
  */
-export const EMBELLISH: {[key: any]: string|string[]} = {
+export const EMBELLISH: {[key: string]: string|string[]} = {
   // More embellishments than fonts.
   'super': '',
   'sub': '',
@@ -145,7 +145,7 @@ export const EMBELLISH: {[key: any]: string|string[]} = {
 /**
  * Localised role names.
  */
-export const ROLE: {[key: any]: SemanticAttr.Role} = {
+export const ROLE: {[key: string]: SemanticAttr.Role} = {
   // Infixoperators
   'addition': '',
   'multiplication': '',
@@ -181,7 +181,7 @@ export const ROLE: {[key: any]: SemanticAttr.Role} = {
 /**
  * Localised enclose roles.
  */
-export const ENCLOSE: {[key: any]: SemanticAttr.Role} = {
+export const ENCLOSE: {[key: string]: SemanticAttr.Role} = {
   'longdiv': '',
   'actuarial': '',
   'radical': '',
@@ -207,7 +207,7 @@ export const ENCLOSE: {[key: any]: SemanticAttr.Role} = {
 /**
  * Navigation messages.
  */
-export const NAVIGATE: {[key: any]: string} = {
+export const NAVIGATE: {[key: string]: string} = {
   COLLAPSIBLE: '',
   EXPANDABLE: '',
   LEVEL: ''
@@ -217,7 +217,7 @@ export const NAVIGATE: {[key: any]: string} = {
 /**
  * Regular expressions for text, digits, decimal marks, etc.
  */
-export const REGEXP: {[key: any]: string} = {
+export const REGEXP: {[key: string]: string} = {
   TEXT: 'a-zA-Z',
   NUMBER: '',
   DECIMAL_MARK: '',
@@ -251,7 +251,7 @@ export const NUMBERS: Numbers = NumbersExports.NUMBERS;
 /**
  * Localisable alphabets.
  */
-export const ALPHABETS: {[key: any]: string[]} = {
+export const ALPHABETS: {[key: string]: string[]} = {
   latinSmall: [],
   latinCap: [],
   greekSmall: [],
@@ -262,7 +262,7 @@ export const ALPHABETS: {[key: any]: string[]} = {
 /**
  * Prefixes for alphabet rules that can be specialised by rule set.
  */
-export const ALPHABET_PREFIXES: {[key: any]: {[key: any]: string}} = {
+export const ALPHABET_PREFIXES: {[key: string]: {[key: string]: string}} = {
   capPrefix: {default: ''},
   smallPrefix: {default: ''},
   digitPrefix: {default: ''}
@@ -282,7 +282,7 @@ export function identityTransformer_(input: string|number): string {
 /**
  * Transformer functions for alphabet rules that can be specialised by rule set.
  */
-export const ALPHABET_TRANSFORMERS: {[key: any]: {[key: any]: Transformer}} = {
+export const ALPHABET_TRANSFORMERS: {[key: string]: {[key: string]: Transformer}} = {
   digit: {default: identityTransformer_},
   letter: {default: identityTransformer_}
 };

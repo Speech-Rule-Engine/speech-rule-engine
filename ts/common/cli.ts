@@ -32,7 +32,7 @@ import {SystemExternal} from './system_external';
 export class Cli {
   system: System;
 
-  setup: {[key: any]: string|boolean};
+  setup: {[key: string]: string|boolean};
 
   processors: string[] = [];
 

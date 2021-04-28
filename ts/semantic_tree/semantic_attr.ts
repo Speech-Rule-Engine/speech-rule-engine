@@ -353,7 +353,7 @@ export namespace SemanticAttr {
   /**
    * Mapping opening to closing fences.
    */
-  const openClosePairs: {[key: any]: string} = {
+  const openClosePairs: {[key: string]: string} = {
     // Unicode categories Ps and Pe.
     // Observe that left quotation 301D could also be matched to 301F,
     // but is currently matched to 301E.
@@ -440,7 +440,7 @@ export namespace SemanticAttr {
   /**
    * Mapping top to bottom fences.
    */
-  const topBottomPairs: {[key: any]: string} = {
+  const topBottomPairs: {[key: string]: string} = {
     '\u23b4': '⎵',
     '\u23dc': '⏝',
     '\u23de': '⏟',
@@ -1455,7 +1455,7 @@ export namespace SemanticAttr {
    * @return The dictionary mapping strings to
    *     semantic attributes.
    */
-  const meaning_: {[key: any]: SemanticMeaning} = function() {
+  const meaning_: {[key: string]: SemanticMeaning} = function() {
     let result = {};
     for (let i = 0, set; set = symbolSetToSemantic_[i]; i++) {
       set.set.forEach(function(symbol) {

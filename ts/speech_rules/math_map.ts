@@ -46,7 +46,7 @@ export class MathMap {
 
   loaded_ = [];
 
-  addSymbols: {[key: any]: (p1: string[]) => any};
+  addSymbols: {[key: string]: (p1: string[]) => any};
   constructor() {
     /**
      * The compund store for symbol and function mappings.
@@ -68,7 +68,7 @@ export class MathMap {
    * Adds the Si prefix mapping.
    * @param json Single dictionary object.
    */
-  addSiPrefixes(json: {[key: any]: string}) {
+  addSiPrefixes(json: {[key: string]: string}) {
     this.store.siPrefixes = json;
   }
 
@@ -138,7 +138,7 @@ export class MathMap {
    * @param json The json mappings string.
    */
   parseMaps(json: string) {
-    let js = (JSON.parse(json) as {[key: any]: any[]});
+    let js = (JSON.parse(json) as {[key: string]: any[]});
     this.addMaps(js);
   }
 
@@ -149,7 +149,7 @@ export class MathMap {
    * @param opt_locale Optionally the locale for the mappings to
    *     add. This is necessary for the single IE dictionary.
    */
-  addMaps(json: {[key: any]: any[]}, opt_locale?: string) {
+  addMaps(json: {[key: string]: any[]}, opt_locale?: string) {
     for (let i = 0, key; key = Object.keys(json)[i]; i++) {
       let info = key.split('/');
       if (opt_locale && opt_locale !== info[0]) {

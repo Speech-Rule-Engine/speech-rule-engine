@@ -22,21 +22,25 @@
  */
 
 
-import {AbstractHighlighter} from './abstract_highlighter';
+import {AbstractHighlighter, Highlight} from './abstract_highlighter';
 
 
 
-export class MmlHighlighter extends sre.AbstractHighlighter {
-  mactionName = 'maction';
+export class MmlHighlighter extends AbstractHighlighter {
+
+  /**
+   * @override
+   */
   constructor() {
     super();
+    this.mactionName = 'maction';
   }
 
 
   /**
    * @override
    */
-  highlightNode(node) {
+  public highlightNode(node: HTMLElement) {
     let style = node.getAttribute('style');
     style += ';background-color: ' + this.colorString().background;
     style += ';color: ' + this.colorString().foreground;
@@ -48,7 +52,7 @@ export class MmlHighlighter extends sre.AbstractHighlighter {
   /**
    * @override
    */
-  unhighlightNode(info) {
+  public unhighlightNode(info: Highlight) {
     let style = info.node.getAttribute('style');
     style = style.replace(
         ';background-color: ' + this.colorString().background, '');
@@ -60,7 +64,7 @@ export class MmlHighlighter extends sre.AbstractHighlighter {
   /**
    * @override
    */
-  colorString() {
+  public colorString() {
     return this.color.rgba();
   }
 
@@ -68,16 +72,18 @@ export class MmlHighlighter extends sre.AbstractHighlighter {
   /**
    * @override
    */
-  getMactionNodes(node) {
-    return node.getElementsByTagName(this.mactionName);
+  public getMactionNodes(node: HTMLElement) {
+    return Array.from(
+        node.getElementsByTagName(this.mactionName)) as HTMLElement[];
   }
 
 
   /**
    * @override
    */
-  isMactionNode(node) {
+  public isMactionNode(node: HTMLElement) {
     return node.tagName === this.mactionName;
   }
+
 }
-goog.inherits(MmlHighlighter, AbstractHighlighter);
+

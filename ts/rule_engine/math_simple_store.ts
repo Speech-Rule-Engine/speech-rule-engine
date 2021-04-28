@@ -52,7 +52,7 @@ export class MathSimpleStore extends sre.MathStore {
    *     mapping.
    */
   defineRulesFromMappings(
-      name: string, str: string, mapping: {[key: any]: {[key: any]: string}}) {
+      name: string, str: string, mapping: {[key: string]: {[key: string]: string}}) {
     for (let domain in mapping) {
       for (let style in mapping[domain]) {
         let content = mapping[domain][style];
@@ -146,14 +146,14 @@ export class MathCompoundStore {
   /**
    * A set of efficient substores.
    */
-  private subStores_: {[key: any]: MathStore} = {};
+  private subStores_: {[key: string]: MathStore} = {};
 
 
   locale: string;
 
   modality: string;
 
-  siPrefixes: {[key: any]: string} = {};
+  siPrefixes: {[key: string]: string} = {};
   constructor() {
     this.locale = DynamicCstr.DEFAULT_VALUES[DynamicCstrExports.Axis.LOCALE];
     this.modality =

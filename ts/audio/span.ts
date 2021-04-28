@@ -29,7 +29,7 @@ export class Span {
   string: any;
 
   attributes: any;
-  constructor(string: string, attributes: {[key: any]: string}) {
+  constructor(string: string, attributes: {[key: string]: string}) {
     this.string = string;
     this.attributes = attributes;
   }

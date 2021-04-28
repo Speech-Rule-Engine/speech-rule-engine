@@ -137,7 +137,7 @@ export function resetNestingDepth(node: Node): Node[] {
  */
 export function getNestingDepth(
     type: string, node: Node, tags: string[], opt_barrierTags?: Semantic.Attr[],
-    opt_barrierAttrs?: {[key: any]: string},
+    opt_barrierAttrs?: {[key: string]: string},
     opt_func?: (p1: Node) => boolean): number {
   opt_barrierTags = opt_barrierTags || nestingBarriers;
   opt_barrierAttrs = opt_barrierAttrs || {};
@@ -170,7 +170,7 @@ export function getNestingDepth(
  * @return True if all attributes are contained and have the given
  *     values.
  */
-export function containsAttr(node: Node, attrs: {[key: any]: string}): boolean {
+export function containsAttr(node: Node, attrs: {[key: string]: string}): boolean {
   if (!node.attributes) {
     return false;
   }
@@ -199,7 +199,7 @@ export function containsAttr(node: Node, attrs: {[key: any]: string}): boolean {
  * @return The nesting depth.
  */
 export function computeNestingDepth_(
-    node: Node, tags: string[], barriers: string[], attrs: {[key: any]: string},
+    node: Node, tags: string[], barriers: string[], attrs: {[key: string]: string},
     func: (p1: Node) => boolean, depth: number): number {
   if (func(node) || barriers.indexOf(node.tagName) > -1 ||
       containsAttr(node, attrs)) {

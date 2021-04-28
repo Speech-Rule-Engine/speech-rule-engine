@@ -85,7 +85,7 @@ export enum Base {
 /**
  * Structure to hold domain combinations for a locale during rule generation.
  */
-export const Domains_: {[key: any]: string[]} = {
+export const Domains_: {[key: string]: string[]} = {
   small: ['default'],
   capital: ['default'],
   digit: ['default']
@@ -155,7 +155,7 @@ export function generate(locale: string, store: MathCompoundStore) {
  * @return The generated interval of Unicode characters.
  */
 export function makeInterval(
-    int: string[], subst: {[key: any]: string|boolean}): number[] {
+    int: string[], subst: {[key: string]: string|boolean}): number[] {
   let num2str = function(x) {
     let str = i.toString(16).toUpperCase();
     return str.length > 3 ? str : ('000' + str).slice(-4);
@@ -263,8 +263,8 @@ export function numberRules(
  */
 export function makeLetter(
     store: MathCompoundStore, combiner: Combiner, key: number, unicode: string,
-    letter: string|number, font: string, prefixes: {[key: any]: string},
-    category: string, transformers: {[key: any]: Transformer},
+    letter: string|number, font: string, prefixes: {[key: string]: string},
+    category: string, transformers: {[key: string]: Transformer},
     domains: string[]) {
   for (let i = 0, domain; domain = domains[i]; i++) {
     let transformer =
@@ -278,7 +278,7 @@ export function makeLetter(
 type alphabet_ = {
   interval: string[],
   base: Base,
-  subst: {[key: any]: string|boolean},
+  subst: {[key: string]: string|boolean},
   category: string,
   font: Font|Embellish,
   capital?: boolean,

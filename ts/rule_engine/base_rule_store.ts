@@ -74,7 +74,7 @@ export class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleStore {
   /**
    * Local transcriptions for special characters.
    */
-  customTranscriptions: {[key: any]: string} = {};
+  customTranscriptions: {[key: string]: string} = {};
   constructor() {
     /**
      * Context for custom functions of this rule store.
@@ -426,7 +426,7 @@ export class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleStore {
    * @param ruleSet The
    *     definition object.
    */
-  parse(ruleSet: {[key: any]: string|any[]}) {
+  parse(ruleSet: {[key: string]: string|any[]}) {
     this.modality = ruleSet.modality || this.modality;
     this.locale = ruleSet.locale || this.locale;
     this.domain = ruleSet.domain || this.domain;

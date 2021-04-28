@@ -56,13 +56,13 @@ export class SemanticAnnotator {
  * @param opt_def The initial object that is used for annotation.
  */
 export class SemanticVisitor {
-  def: {[key: any]: any};
+  def: {[key: string]: any};
 
   active = false;
   constructor(
       public domain: string, public name: string,
-      public func: (p1: SemanticNode, p2: {[key: any]: any}) => any,
-      opt_def?: {[key: any]: any}) {
+      public func: (p1: SemanticNode, p2: {[key: string]: any}) => any,
+      opt_def?: {[key: string]: any}) {
     this.def = opt_def || {};
   }
 
@@ -73,11 +73,11 @@ export class SemanticVisitor {
    * @param info The information to propagate.
    * @return The result with updated information.
    */
-  visit(node: SemanticNode, info: {[key: any]: any}): any {
+  visit(node: SemanticNode, info: {[key: string]: any}): any {
     let result = this.func(node, info);
     node.addAnnotation(this.domain, result[0]);
     for (let i = 0, child; child = node.childNodes[i]; i++) {
-      result = this.visit(child, (result[1] as {[key: any]: any}));
+      result = this.visit(child, (result[1] as {[key: string]: any}));
     }
     return result;
   }

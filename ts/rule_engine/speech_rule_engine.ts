@@ -61,7 +61,7 @@ export class SpeechRuleEngine {
    * Default evaluators collated by locale and modality.
    */
   private evaluators_:
-      {[key: any]: {[key: any]: (p1: Node) => AuditoryDescription[]}} = {};
+      {[key: string]: {[key: string]: (p1: Node) => AuditoryDescription[]}} = {};
 
   prune = true;
   constructor() {
@@ -478,7 +478,7 @@ export class SpeechRuleEngine {
    * when loading a rule set.
    * @param set The definition of a speech rule set.
    */
-  addStore(set: {[key: any]: string|any[]}) {
+  addStore(set: {[key: string]: string|any[]}) {
     // This line is important to setup the context functions for stores.
     // It has to run __before__ the first speech rule store is added.
     SpeechRuleStores.init();
@@ -623,7 +623,7 @@ export class SpeechRuleEngine {
    * @return The style settings. Either a single element or a
    *      pair associating a Clearspeak preference with a value.
    */
-  private makeSet_(value: string, preferences: {[key: any]: string}|null):
+  private makeSet_(value: string, preferences: {[key: string]: string}|null):
       string[] {
     if (!preferences || !Object.keys(preferences).length) {
       return [value];

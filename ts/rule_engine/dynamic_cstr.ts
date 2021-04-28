@@ -310,7 +310,7 @@ export enum Axis {
   MODALITY = 'modality'
 }
 DynamicCstr.Values_ = class {
-  axisToValues: {[key: Axis]: {[key: any]: boolean}};
+  axisToValues: {[key: Axis]: {[key: string]: boolean}};
   private constructor() {
     this.axisToValues = DynamicCstr.Values_.makeAxisValueObject_();
   }
@@ -344,7 +344,7 @@ DynamicCstr.Values_ = class {
    * Initialises an object for collecting all values per axis.
    * @return The nested object structure.
    */
-  private static makeAxisValueObject_(): {[key: Axis]: {[key: any]: boolean}} {
+  private static makeAxisValueObject_(): {[key: Axis]: {[key: string]: boolean}} {
     let result = {};
     for (let axis in Axis) {
       result[Axis[axis]] = {};

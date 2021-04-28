@@ -24,7 +24,7 @@ export class SpeechRules {
    * Mapping for context functions: The store maps constraint strings to
    * dictionaries of context functions.
    */
-  store: {[key: any]: {[key: any]: Function}} = {};
+  store: {[key: string]: {[key: string]: Function}} = {};
 
 
   /**
@@ -34,7 +34,7 @@ export class SpeechRules {
    * @param store An individual mapping of names to context
    *     functions.
    */
-  addStore(constr: string, inherit: string, store: {[key: any]: Function}) {
+  addStore(constr: string, inherit: string, store: {[key: string]: Function}) {
     let values = {};
     if (inherit) {
       let inherits = this.store[inherit] || {};
@@ -53,7 +53,7 @@ export class SpeechRules {
    */
   // TODO: Make this robust with dynamic constraints and defaults.
   getStore(locale: string, modality: string, domain: string):
-      {[key: any]: Function} {
+      {[key: string]: Function} {
     return this.store[[locale, modality, domain].join('.')] || this.store[[
       sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE], modality,
       domain

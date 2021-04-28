@@ -39,14 +39,14 @@ export class Grammar {
   /**
    * Maps grammatical annotations to correction functions.
    */
-  private corrections_: {[key: any]: Function} = {};
+  private corrections_: {[key: string]: Function} = {};
 
   /**
    * Maps grammatical annotations to preprocessor functions.
    */
-  private preprocessors_: {[key: any]: Function} = {};
+  private preprocessors_: {[key: string]: Function} = {};
 
-  private stateStack_: ({[key: any]: Grammar.Value})[] = [];
+  private stateStack_: ({[key: string]: Grammar.Value})[] = [];
 
   /**
    * Current processing flags of the grammar. This is only filled during
@@ -141,7 +141,7 @@ export class Grammar {
    * @param assignment A list of key value
    *     pairs.
    */
-  pushState(assignment: {[key: any]: Grammar.Value}) {
+  pushState(assignment: {[key: string]: Grammar.Value}) {
     for (let key in assignment) {
       assignment[key] = this.setParameter(key, assignment[key]);
     }
@@ -200,7 +200,7 @@ export class Grammar {
    * @param funcs Dictionary of processor functions.
    * @return The grammatically corrected string.
    */
-  private runProcessors_(text: string, funcs: {[key: any]: Function}): string {
+  private runProcessors_(text: string, funcs: {[key: string]: Function}): string {
     for (let key in this.parameters_) {
       let func = funcs[key];
       if (!func) {
@@ -412,7 +412,7 @@ goog.addSingletonGetter(Grammar);
 type Value = boolean|string;
 export {Grammar};
 type State = {
-  [key: any]: Grammar.Value
+  [key: string]: Grammar.Value
 };
 export {Grammar};
 

@@ -42,7 +42,7 @@ import {EnrichCaseFactory} from './enrich_case_factory';
  * Error object for signaling enirchment errors.
  * @param msg The error message.
  */
-export class Error extends Error {
+export class EnrichmentError extends Error {
   message: any;
   name = 'MathML Enrichment Error';
   constructor(msg: string) {
@@ -67,29 +67,30 @@ export const SETTINGS: {collapsed: boolean, implicit: boolean} = {
 export const ATTRIBUTE_PREFIX_: string = 'data-semantic-';
 
 
+// TODO (TS): Do something about the prefix computation.
 /**
  * Mapping for attributes used in semantic enrichment.
  */
 export enum Attribute {
-  ADDED = ATTRIBUTE_PREFIX_ + 'added',
-  ALTERNATIVE = ATTRIBUTE_PREFIX_ + 'alternative',
-  CHILDREN = ATTRIBUTE_PREFIX_ + 'children',
-  COLLAPSED = ATTRIBUTE_PREFIX_ + 'collapsed',
-  CONTENT = ATTRIBUTE_PREFIX_ + 'content',
-  EMBELLISHED = ATTRIBUTE_PREFIX_ + 'embellished',
-  FENCEPOINTER = ATTRIBUTE_PREFIX_ + 'fencepointer',
-  FONT = ATTRIBUTE_PREFIX_ + 'font',
-  ID = ATTRIBUTE_PREFIX_ + 'id',
-  ANNOTATION = ATTRIBUTE_PREFIX_ + 'annotation',
-  OPERATOR = ATTRIBUTE_PREFIX_ + 'operator',
-  OWNS = ATTRIBUTE_PREFIX_ + 'owns',
-  PARENT = ATTRIBUTE_PREFIX_ + 'parent',
-  POSTFIX = ATTRIBUTE_PREFIX_ + 'postfix',
-  PREFIX = ATTRIBUTE_PREFIX_ + 'prefix',
-  ROLE = ATTRIBUTE_PREFIX_ + 'role',
-  SPEECH = ATTRIBUTE_PREFIX_ + 'speech',
-  STRUCTURE = ATTRIBUTE_PREFIX_ + 'structure',
-  TYPE = ATTRIBUTE_PREFIX_ + 'type'
+  ADDED = 'data-semantic-added',
+  ALTERNATIVE = 'data-semantic-alternative',
+  CHILDREN = 'data-semantic-children',
+  COLLAPSED = 'data-semantic-collapsed',
+  CONTENT = 'data-semantic-content',
+  EMBELLISHED = 'data-semantic-embellished',
+  FENCEPOINTER = 'data-semantic-fencepointer',
+  FONT = 'data-semantic-font',
+  ID = 'data-semantic-id',
+  ANNOTATION = 'data-semantic-annotation',
+  OPERATOR = 'data-semantic-operator',
+  OWNS = 'data-semantic-owns',
+  PARENT = 'data-semantic-parent',
+  POSTFIX = 'data-semantic-postfix',
+  PREFIX = 'data-semantic-prefix',
+  ROLE = 'data-semantic-role',
+  SPEECH = 'data-semantic-speech',
+  STRUCTURE = 'data-semantic-structure',
+  TYPE = 'data-semantic-type'
 }
 
 
@@ -947,9 +948,9 @@ export function removeAttributePrefix(mml: string): string {
  * @param attr The attribute.
  * @return The completed attribute.
  */
-export function addPrefix(attr: string): Attribute {
-  let upcase = attr.toUpperCase();
-  return Attribute[upcase] || ATTRIBUTE_PREFIX_ + attr;
+// TODO (TS): Again this should have been return time Attribute
+export function addPrefix(attr: string): string {
+  return ATTRIBUTE_PREFIX_ + attr;
 }
 
 

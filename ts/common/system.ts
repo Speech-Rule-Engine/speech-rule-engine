@@ -66,7 +66,7 @@ export class System {
    * @param feature An object describing some
    *     setup features.
    */
-  setupEngine(feature: {[key: any]: boolean|string}) {
+  setupEngine(feature: {[key: string]: boolean|string}) {
     let engine = Engine.getInstance();
     // This preserves the possibility to specify default as domain.
     // < 3.2  this lead to the use of chromevox rules in English.
@@ -108,7 +108,7 @@ export class System {
    * @param feature An object describing some
    *     setup features.
    */
-  private configBlocks_(feature: {[key: any]: boolean|string}) {
+  private configBlocks_(feature: {[key: string]: boolean|string}) {
     if (Engine.getInstance().config ||
         Engine.getInstance().mode !== EngineExports.Mode.HTTP) {
       return;
@@ -146,7 +146,7 @@ export class System {
    * @return Object vector with all engine feature
    *     values.
    */
-  engineSetup(): {[key: any]: boolean|string} {
+  engineSetup(): {[key: string]: boolean|string} {
     let engineFeatures =
         ['mode'].concat(Engine.STRING_FEATURES, Engine.BINARY_FEATURES);
     let engine = Engine.getInstance();

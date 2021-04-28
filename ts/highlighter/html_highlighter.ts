@@ -22,32 +22,25 @@
 
 import * as DomUtil from '../common/dom_util';
 
-import {AbstractHighlighter} from './abstract_highlighter';
+import {AbstractHighlighter, Highlight} from './abstract_highlighter';
 
 
-
-export class HtmlHighlighter extends sre.AbstractHighlighter {
-  mactionName = 'maction';
-  mode: any;
-  constructor() {
-    super();
-  }
-
+export class HtmlHighlighter extends AbstractHighlighter {
 
   /**
-   * Set the mode of the highlighter.
-   * @param mode The mode indicator.
+   * @override
    */
-  setMode(mode: string) {
-    this.mode = mode;
+  constructor() {
+    super();
+    this.mactionName = 'maction';
   }
 
 
   /**
    * @override
    */
-  highlightNode(node) {
-    let info = {
+  public highlightNode(node: HTMLElement) {
+    let info: Highlight = {
       node: node,
       foreground: node.style.color,
       position: node.style.position
@@ -55,12 +48,13 @@ export class HtmlHighlighter extends sre.AbstractHighlighter {
     let color = this.color.rgb();
     node.style.color = color.foreground;
     node.style.position = 'relative';
-    let bbox = node.bbox;
+    // TODO (TS): Work out what this is for.
+    let bbox = (node as any).bbox;
     if (bbox && bbox.w) {
       // vertical and horizontal padding
       let vpad = 0.05;
       let hpad = 0;
-      let span = DomUtil.createElement('span');
+      let span = DomUtil.createElement('span') as HTMLElement;
       let left = parseFloat(node.style.paddingLeft || '0');
       span.style.backgroundColor = color.background;
       span.style.opacity = color.alphaback.toString();
@@ -81,7 +75,7 @@ export class HtmlHighlighter extends sre.AbstractHighlighter {
   /**
    * @override
    */
-  unhighlightNode(info) {
+  public unhighlightNode(info: Highlight) {
     let node = info.node;
     node.style.color = info.foreground;
     node.style.position = info.position;
@@ -90,5 +84,3 @@ export class HtmlHighlighter extends sre.AbstractHighlighter {
     }
   }
 }
-
-goog.inherits(HtmlHighlighter, AbstractHighlighter);

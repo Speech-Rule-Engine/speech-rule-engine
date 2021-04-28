@@ -46,7 +46,7 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
 
   // TODO: Make these into a proper class.
   preference: any;
-  constructor(cstr: DynamicCstrExports.Map, preference: {[key: any]: string}) {
+  constructor(cstr: DynamicCstrExports.Map, preference: {[key: string]: string}) {
     super(cstr);
     this.preference = preference;
   }
@@ -95,7 +95,7 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    * @param pref The preference string.
    * @return The preference settings.
    */
-  static fromPreference(pref: string): {[key: any]: string} {
+  static fromPreference(pref: string): {[key: string]: string} {
     let pairs = pref.split(':');
     let preferences = {};
     let properties = ClearspeakPreferences.PREFERENCES.getProperties();
@@ -123,7 +123,7 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    * @param pref A preference mapping.
    * @return A style string created from the preferences.
    */
-  static toPreference(pref: {[key: any]: string}): string {
+  static toPreference(pref: {[key: string]: string}): string {
     let keys = Object.keys(pref);
     let str = [];
     for (let i = 0; i < keys.length; i++) {
@@ -140,7 +140,7 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    * @return Mapping of locale to preferences.
    */
   static getLocalePreferences(opt_dynamic?: Object):
-      {[key: any]: DynamicProperties} {
+      {[key: string]: DynamicProperties} {
     let dynamic = opt_dynamic ||
         sre.MathCompoundStore.getInstance().enumerate(
             sre.SpeechRuleEngine.getInstance().enumerate());
@@ -155,7 +155,7 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    * @return Mapping of locale to preferences.
    */
   private static getLocalePreferences_(dynamic: Object):
-      {[key: any]: DynamicProperties} {
+      {[key: string]: DynamicProperties} {
     let result = {};
     for (let locale in dynamic) {
       if (!dynamic[locale]['speech'] ||
@@ -208,7 +208,7 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    *    sub menu.
    */
   static smartPreferences(item: MathItem, locale: string):
-      ({[key: any]: string})[] {
+      ({[key: string]: string})[] {
     let prefs = ClearspeakPreferences.getLocalePreferences();
     let loc = prefs[locale];
     if (!loc) {
@@ -361,7 +361,7 @@ ClearspeakPreferences.PREFERENCES = new DynamicProperties({
  * @param props A properties element for matching.
  */
 export class Comparator extends sre.DynamicCstr.DefaultComparator {
-  preference: {[key: any]: string};
+  preference: {[key: string]: string};
   constructor(cstr: DynamicCstr, props: DynamicProperties) {
     super(cstr, props);
     this.preference = cstr.preference || {};
@@ -455,7 +455,7 @@ export class Parser extends sre.DynamicCstr.Parser {
    * @param pref The preference string.
    * @return The preference settings.
    */
-  fromPreference(pref: string): {[key: any]: string} {
+  fromPreference(pref: string): {[key: string]: string} {
     return ClearspeakPreferences.fromPreference(pref);
   }
 
@@ -467,7 +467,7 @@ export class Parser extends sre.DynamicCstr.Parser {
    * @param pref A preference mapping.
    * @return A style string created from the preferences.
    */
-  toPreference(pref: {[key: any]: string}): string {
+  toPreference(pref: {[key: string]: string}): string {
     return ClearspeakPreferences.toPreference(pref);
   }
 }

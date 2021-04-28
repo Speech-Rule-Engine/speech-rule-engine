@@ -47,7 +47,7 @@ export const onesNumbers_: string[] = [
 /**
  * String representation of twenty to ninety.
  */
-export const tensNumbers_: {[key: any]: string[]} = {
+export const tensNumbers_: {[key: string]: string[]} = {
   'fr': [
     '', '', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante',
     'soixante-dix', 'quatre-vingts', 'quatre-vingt-dix'
@@ -146,7 +146,7 @@ export function numberToWords(number: number): string {
 
 
 // Ordinals
-export const SMALL_ORDINAL: {[key: any]: string} = {
+export const SMALL_ORDINAL: {[key: string]: string} = {
   1: 'unième',
   2: 'demi',
   3: 'tiers',

@@ -32,13 +32,13 @@ export class SemanticHeuristics {
   factory: SemanticNodeFactory = null;
 
 
-  heuristics: {[key: any]: SemanticHeuristic} = {};
+  heuristics: {[key: string]: SemanticHeuristic} = {};
 
 
   /**
    * Heuristics that are run by default.
    */
-  flags: {[key: any]: boolean} = {
+  flags: {[key: string]: boolean} = {
     combine_juxtaposition: true,
     convert_juxtaposition: true,
     multioperator: true
@@ -47,7 +47,7 @@ export class SemanticHeuristics {
   /**
    * Heuristics that are permanently switched off.
    */
-  blacklist: {[key: any]: boolean} = {};
+  blacklist: {[key: string]: boolean} = {};
   constructor() {}
 
 

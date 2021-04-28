@@ -54,7 +54,7 @@ export function walker(
 
 
 export const walkerMapping_: {
-  [key: any]: (p1: Node, p2: SpeechGenerator, p3: Highlighter, p4: string) =>
+  [key: string]: (p1: Node, p2: SpeechGenerator, p3: Highlighter, p4: string) =>
       any
 } = {
   'dummy': DummyWalker,

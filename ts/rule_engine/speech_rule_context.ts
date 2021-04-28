@@ -142,7 +142,7 @@ export class SpeechRuleContext {
    * @param functions The list of
    *     context function assignments.
    */
-  parse(functions: string[][]|{[key: any]: string}) {
+  parse(functions: string[][]|{[key: string]: string}) {
     let functs =
         Array.isArray(functions) ? functions : Object.entries(functions);
     for (let i = 0, func; func = functs[i]; i++) {

@@ -20,21 +20,24 @@
  */
 
 
-import {AbstractHighlighter} from './abstract_highlighter';
+import {AbstractHighlighter, Highlight} from './abstract_highlighter';
 
 
+export class CssHighlighter extends AbstractHighlighter {
 
-export class CssHighlighter extends sre.AbstractHighlighter {
-  mactionName = 'mjx-maction';
+  /**
+   * @override
+   */
   constructor() {
     super();
+    this.mactionName = 'mjx-maction';
   }
 
 
   /**
    * @override
    */
-  highlightNode(node) {
+  public highlightNode(node: HTMLElement) {
     let info = {
       node: node,
       background: node.style.backgroundColor,
@@ -50,9 +53,8 @@ export class CssHighlighter extends sre.AbstractHighlighter {
   /**
    * @override
    */
-  unhighlightNode(info) {
+  public unhighlightNode(info: Highlight) {
     info.node.style.backgroundColor = info.background;
     info.node.style.color = info.foreground;
   }
 }
-goog.inherits(CssHighlighter, AbstractHighlighter);

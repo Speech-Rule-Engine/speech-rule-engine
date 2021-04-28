@@ -23,17 +23,19 @@
 import {CssHighlighter} from './css_highlighter';
 
 
-
-export class ChtmlHighlighter extends sre.CssHighlighter {
-  constructor() {
-    super();
-  }
-
+export class ChtmlHighlighter extends CssHighlighter {
 
   /**
    * @override
    */
-  isMactionNode(node) {
+  constructor() {
+    super();
+  }
+
+  /**
+   * @override
+   */
+  public isMactionNode(node: HTMLElement) {
     return node.tagName.toUpperCase() === this.mactionName.toUpperCase();
   }
 
@@ -41,8 +43,8 @@ export class ChtmlHighlighter extends sre.CssHighlighter {
   /**
    * @override
    */
-  getMactionNodes(node) {
-    return node.getElementsByTagName(this.mactionName);
+  public getMactionNodes(node: HTMLElement) {
+    return Array.from(
+        node.getElementsByTagName(this.mactionName)) as HTMLElement[];
   }
 }
-goog.inherits(ChtmlHighlighter, CssHighlighter);

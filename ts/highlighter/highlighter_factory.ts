@@ -21,7 +21,7 @@
 
 
 import {ChtmlHighlighter} from './chtml_highlighter';
-import {ColorPicker} from './color_picker';
+import {Color, ColorPicker} from './color_picker';
 import {CssHighlighter} from './css_highlighter';
 import {Highlighter} from './highlighter';
 import {HtmlHighlighter} from './html_highlighter';
@@ -42,7 +42,7 @@ import {SvgV3Highlighter} from './svg_v3_highlighter';
  * @return A new highlighter.
  */
 export function highlighter(
-    back: ColorPicker.Color, fore: ColorPicker.Color,
+    back: Color, fore: Color,
     rendererInfo: {renderer: string, browser?: string}): Highlighter {
   let colorPicker = new ColorPicker(back, fore);
   let renderer = rendererInfo.renderer === 'NativeMML' &&
@@ -63,21 +63,20 @@ export function highlighter(
  * @param node  The base node for highlighting.
  * @param events The events to attach given as event
  *     type and function to execute
- * @param {{renderer: string,
- *          browser: (undefined|string)}} rendererInfo Information on renderer,
+ * @param rendererInfo Information on renderer,
  * browser. Has to at least contain the renderer field.
  */
 export function addEvents(
-    node: Node, events: {[key: any]: Function},
+    node: HTMLElement, events: {[key: string]: EventListener},
     rendererInfo: {renderer: string, browser?: string}) {
-  let highlighter = highlighterMapping_[rendererInfo.renderer];
-  if (highlighter) {
-    (new highlighter()).addEvents(node, events);
+  let highlight = highlighterMapping_[rendererInfo.renderer];
+  if (highlight) {
+    (new highlight()).addEvents(node, events);
   }
 }
 
 
-export const highlighterMapping_: {[key: any]: () => any} = {
+export const highlighterMapping_: {[key: string]: new () => Highlighter} = {
   'SVG': SvgHighlighter,
   'SVG-V3': SvgV3Highlighter,
   'NativeMML': MmlHighlighter,

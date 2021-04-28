@@ -36,7 +36,7 @@ export class AbstractSpeechGenerator implements SpeechGenerator {
   private rebuilt_: RebuildStree = null;
 
 
-  private options_: {[key: any]: string} = {};
+  private options_: {[key: string]: string} = {};
 
 
   modality: Attribute;

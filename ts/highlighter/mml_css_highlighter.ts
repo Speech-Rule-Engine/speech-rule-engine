@@ -25,26 +25,31 @@ import {CssHighlighter} from './css_highlighter';
 
 
 
-export class MmlCssHighlighter extends sre.CssHighlighter {
-  mactionName = 'maction';
+export class MmlCssHighlighter extends CssHighlighter {
+
+  /**
+   * @override
+   */
   constructor() {
     super();
+    this.mactionName = 'maction';
   }
 
 
   /**
    * @override
    */
-  getMactionNodes(node) {
-    return node.getElementsByTagName(this.mactionName);
+  public getMactionNodes(node: HTMLElement) {
+    return Array.from(
+      node.getElementsByTagName(this.mactionName)) as HTMLElement[];
   }
 
 
   /**
    * @override
    */
-  isMactionNode(node) {
+  public isMactionNode(node: HTMLElement) {
     return node.tagName === this.mactionName;
   }
+
 }
-goog.inherits(MmlCssHighlighter, CssHighlighter);

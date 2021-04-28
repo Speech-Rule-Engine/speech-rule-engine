@@ -34,7 +34,7 @@ export class SsmlStepRenderer extends sre.SsmlRenderer {
   /**
    * Record for remembering mark ids.
    */
-  static MARKS: {[key: any]: boolean} = {};
+  static MARKS: {[key: string]: boolean} = {};
   constructor() {
     super();
   }

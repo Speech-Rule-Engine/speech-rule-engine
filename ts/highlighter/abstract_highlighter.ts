@@ -20,51 +20,80 @@
  */
 
 
-import {Attribute} from '../enrich_mathml/enrich_mathml';
-
-import {ColorPicker} from './color_picker';
+import * as XpathUtil from '../common/xpath_util';
+import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
+import {ColorPicker, StringColor} from './color_picker';
 import {Highlighter} from './highlighter';
 
 
+/**
+ * Highlight information consisting of node, opacity, fore and background color.
+ */
+export interface Highlight {
+  node: HTMLElement;
+  opacity?: string;
+  background?: string;
+  foreground?: string;
+  // The following is for the CSS highlighter
+  box?: HTMLElement;
+  position?: string;
+}
 
-export class AbstractHighlighter implements Highlighter {
-  static ATTR: string = 'sre-highlight';
+export abstract class AbstractHighlighter implements Highlighter {
 
+  /**
+   * The Attribute for marking highlighted nodes.
+   */
+  protected static ATTR: string = 'sre-highlight';
 
-  protected highlightNode: any;
+  /**
+   * The color picker.
+   */
+  protected color: ColorPicker = null;
 
+  /**
+   * The maction name/class for a highlighter.
+   */
+  protected mactionName: string = '';
 
-  protected unhighlightNode: any;
   /**
    * List of currently highlighted nodes and their original background color.
    */
-  private currentHighlights_:
-      {node: Node,
-       opacity?: string,
-       background?: string,
-       foreground?: string}[][] = [];
+  private currentHighlights: Highlight[][] = [];
 
-  protected color: ColorPicker = null;
 
-  protected mactionName: string = '';
+  /**
+   * Highlights a single node.
+   *
+   * @param node The node to be highlighted.
+   * @return The old node information.
+   */
+  protected abstract highlightNode(node: HTMLElement): Highlight;
 
+
+  /**
+   * Unhighlights a single node.
+   * @param highlight The highlight info for the node to be unhighlighted.
+   */
+  protected abstract unhighlightNode(highlight: Highlight): void;
 
   /**
    * @override
    */
-  highlight(nodes) {
-    this.currentHighlights_.push(nodes.map(goog.bind(function(node) {
-      let info = this.highlightNode(node);
-      this.setHighlighted(node);
-      return info;
-    }, this)));
+  public highlight(nodes: HTMLElement[]) {
+    this.currentHighlights.push(
+      nodes.map((node) => {
+        let info = this.highlightNode(node);
+        this.setHighlighted(node);
+        return info;
+      }));
   }
 
 
   /**
    * @override
    */
-  highlightAll(node) {
+  public highlightAll(node: HTMLElement) {
     let mactions = this.getMactionNodes(node);
     for (let i = 0, maction; maction = mactions[i]; i++) {
       this.highlight([maction]);
@@ -75,25 +104,25 @@ export class AbstractHighlighter implements Highlighter {
   /**
    * @override
    */
-  unhighlight() {
-    let nodes = this.currentHighlights_.pop();
+  public unhighlight() {
+    let nodes = this.currentHighlights.pop();
     if (!nodes) {
       return;
     }
-    nodes.forEach(goog.bind(function(node) {
-      if (this.isHighlighted(node.node)) {
-        this.unhighlightNode(node);
-        this.unsetHighlighted(node.node);
+    nodes.forEach((highlight: Highlight) => {
+      if (this.isHighlighted(highlight.node)) {
+        this.unhighlightNode(highlight);
+        this.unsetHighlighted(highlight.node);
       }
-    }, this));
+    });
   }
 
 
   /**
    * @override
    */
-  unhighlightAll() {
-    while (this.currentHighlights_.length > 0) {
+  public unhighlightAll() {
+    while (this.currentHighlights.length > 0) {
       this.unhighlight();
     }
   }
@@ -102,7 +131,7 @@ export class AbstractHighlighter implements Highlighter {
   /**
    * @override
    */
-  setColor(color) {
+  public setColor(color: ColorPicker) {
     this.color = color;
   }
 
@@ -111,7 +140,7 @@ export class AbstractHighlighter implements Highlighter {
    * Turns the current color into a string representation.
    * @return The color string, by default as rgba.
    */
-  protected colorString(): ColorPicker.String {
+  protected colorString(): StringColor {
     return this.color.rgba();
   }
 
@@ -119,7 +148,7 @@ export class AbstractHighlighter implements Highlighter {
   /**
    * @override
    */
-  addEvents(node, events) {
+  public addEvents(node: HTMLElement, events: {[key: string]: EventListener}) {
     let mactions = this.getMactionNodes(node);
     for (let i = 0, maction; maction = mactions[i]; i++) {
       for (let event in events) {
@@ -134,8 +163,9 @@ export class AbstractHighlighter implements Highlighter {
    * @param node The root node.
    * @return The list of maction sub nodes.
    */
-  getMactionNodes(node: Node): NodeList|Node[] {
-    return node.getElementsByClassName(this.mactionName);
+  public getMactionNodes(node: HTMLElement): HTMLElement[] {
+    return Array.from(
+      node.getElementsByClassName(this.mactionName)) as HTMLElement[];
   }
 
 
@@ -144,9 +174,9 @@ export class AbstractHighlighter implements Highlighter {
    * @param node A DOM node.
    * @return True if the node is an maction node.
    */
-  isMactionNode(node: Node): boolean {
+  public isMactionNode(node: HTMLElement): boolean {
     let className = node.className || node.getAttribute('class');
-    return className ? className.match(new RegExp(this.mactionName)) : false;
+    return className ? !!className.match(new RegExp(this.mactionName)) : false;
   }
 
 
@@ -155,7 +185,7 @@ export class AbstractHighlighter implements Highlighter {
    * @param node The node.
    * @return True if already highlighted.
    */
-  isHighlighted(node: Node): boolean {
+  public isHighlighted(node: HTMLElement): boolean {
     return node.hasAttribute(AbstractHighlighter.ATTR);
   }
 
@@ -164,8 +194,8 @@ export class AbstractHighlighter implements Highlighter {
    * Sets the indicator attribute that node is already highlighted.
    * @param node The node.
    */
-  setHighlighted(node: Node) {
-    node.setAttribute(AbstractHighlighter.ATTR, true);
+  public setHighlighted(node: HTMLElement) {
+    node.setAttribute(AbstractHighlighter.ATTR, 'true');
   }
 
 
@@ -173,7 +203,7 @@ export class AbstractHighlighter implements Highlighter {
    * Removes the indicator attribute that node is already highlighted.
    * @param node The node.
    */
-  unsetHighlighted(node: Node) {
+  public unsetHighlighted(node: HTMLElement) {
     node.removeAttribute(AbstractHighlighter.ATTR);
   }
 
@@ -182,29 +212,29 @@ export class AbstractHighlighter implements Highlighter {
    * Tree colorization method for all sub-expressions.
    * @param node The node.
    */
-  colorizeAll(node: Node) {
-    let allNodes = sre.XpathUtil.evalXPath('.//*[@' + Attribute.ID + ']', node);
-    allNodes.forEach(goog.bind(function(x) {
-      this.colorize(x);
-    }, this));
+  public colorizeAll(node: HTMLElement) {
+    let allNodes = XpathUtil.evalXPath(
+        `.//*[@${EnrichMathml.Attribute.ID}]`, node);
+    allNodes.forEach(x => this.colorize(x as HTMLElement));
   }
+
   /**
    * Removes tree colorization.
    * @param node The node.
    */
-  uncolorizeAll(node: Node) {
-    let allNodes = sre.XpathUtil.evalXPath('.//*[@' + Attribute.ID + ']', node);
-    allNodes.forEach(goog.bind(function(x) {
-      this.uncolorize(x);
-    }, this));
+  public uncolorizeAll(node: HTMLElement) {
+    let allNodes = XpathUtil.evalXPath(
+        `.//*[@${EnrichMathml.Attribute.ID}]`, node);
+    allNodes.forEach(x => this.uncolorize(x as HTMLElement));
   }
+
   /**
    * Tree colors a single node.
    * @param node The node.
    */
   // TODO: Generalise this to use the highlighter method and background.
-  colorize(node: Node) {
-    let fore = sre.EnrichMathml.addPrefix('foreground');
+  public colorize(node: HTMLElement) {
+    let fore = EnrichMathml.addPrefix('foreground');
     if (node.hasAttribute(fore)) {
       node.setAttribute(fore + '-old', node.style.color);
       node.style.color = node.getAttribute(fore);
@@ -216,26 +246,10 @@ export class AbstractHighlighter implements Highlighter {
    * Removes tree coloring from a single node.
    * @param node The node.
    */
-  uncolorize(node: Node) {
-    let fore = sre.EnrichMathml.addPrefix('foreground') + '-old';
+  public uncolorize(node: HTMLElement) {
+    let fore = EnrichMathml.addPrefix('foreground') + '-old';
     if (node.hasAttribute(fore)) {
       node.style.color = node.getAttribute(fore);
     }
   }
 }
-
-/**
- * Highlights a single node.
- * @param node The node to be highlighted.
- * @return {{node: !Node, opacity: (undefined|string), background:
- *          (undefined|string), foreground: (undefined|string)} } The old node
- *          information.
- */
-AbstractHighlighter.prototype.highlightNode = goog.abstractMethod;
-/**
- * Unhighlights a single node.
- * @param {{node: !Node, opacity: (undefined|string),
- *          background: (undefined|string), foreground: (undefined|string)} }
- * info The info for the node to be unhighlighted.
- */
-AbstractHighlighter.prototype.unhighlightNode = goog.abstractMethod;

@@ -183,7 +183,7 @@ export const NUMBER_INHIBITORS_: SemanticAttr.Type[] = [
  *     a negative sign.
  */
 export function checkParent_(
-    node: SemanticNode, info: {[key: any]: boolean}): boolean {
+    node: SemanticNode, info: {[key: string]: boolean}): boolean {
   let parent = node.parent;
   if (!parent) {
     return false;
@@ -215,7 +215,7 @@ export function checkParent_(
  *     information object.
  */
 export function propagateNumber(
-    node: SemanticNode, info: {[key: any]: any}): any[] {
+    node: SemanticNode, info: {[key: string]: any}): any[] {
   // TODO: Font indicator followed by number.
   // TODO: Check for enclosed list
   if (!node.childNodes.length) {

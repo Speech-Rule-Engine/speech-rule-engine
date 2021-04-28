@@ -42,7 +42,7 @@ export function generator(type: string): SpeechGenerator {
 }
 
 
-export const generatorMapping_: {[key: any]: () => any} = {
+export const generatorMapping_: {[key: string]: () => any} = {
   Adhoc: AdhocSpeechGenerator,
   Color: ColorGenerator,
   Direct: DirectSpeechGenerator,

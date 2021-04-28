@@ -48,7 +48,7 @@ export class SpeechRuleFunctions {
 SpeechRuleFunctions.Store_ = class {
   private prefix_: any;
   private store_: any;
-  private constructor(prefix: string, store: {[key: any]: Function}) {
+  private constructor(prefix: string, store: {[key: string]: Function}) {
     this.prefix_ = prefix;
     this.store_ = store;
   }
@@ -109,7 +109,7 @@ export {SpeechRuleFunctions};
 SpeechRuleFunctions.CustomQueries =
     class extends sre.SpeechRuleFunctions.Store_ {
   constructor() {
-    let store = ({} as {[key: any]: SpeechRuleFunctions.CustomQuery});
+    let store = ({} as {[key: string]: SpeechRuleFunctions.CustomQuery});
     super('CQF', store);
   }
 };
@@ -119,7 +119,7 @@ export {SpeechRuleFunctions};
 SpeechRuleFunctions.CustomStrings =
     class extends sre.SpeechRuleFunctions.Store_ {
   constructor() {
-    let store = ({} as {[key: any]: SpeechRuleFunctions.CustomString});
+    let store = ({} as {[key: string]: SpeechRuleFunctions.CustomString});
     super('CSF', store);
   }
 };
@@ -129,7 +129,7 @@ export {SpeechRuleFunctions};
 SpeechRuleFunctions.ContextFunctions =
     class extends sre.SpeechRuleFunctions.Store_ {
   constructor() {
-    let store = ({} as {[key: any]: SpeechRuleFunctions.ContextFunction});
+    let store = ({} as {[key: string]: SpeechRuleFunctions.ContextFunction});
     super('CTF', store);
   }
 };
@@ -139,7 +139,7 @@ export {SpeechRuleFunctions};
 SpeechRuleFunctions.CustomGenerators =
     class extends sre.SpeechRuleFunctions.Store_ {
   constructor() {
-    let store = ({} as {[key: any]: SpeechRuleFunctions.CustomGenerator});
+    let store = ({} as {[key: string]: SpeechRuleFunctions.CustomGenerator});
     super('CGF', store);
   }
 };

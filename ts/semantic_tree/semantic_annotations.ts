@@ -27,9 +27,9 @@ import {SemanticNode} from './semantic_node';
 
 
 export class SemanticAnnotations {
-  annotators: {[key: any]: SemanticAnnotator} = {};
+  annotators: {[key: string]: SemanticAnnotator} = {};
 
-  visitors: {[key: any]: SemanticVisitor} = {};
+  visitors: {[key: string]: SemanticVisitor} = {};
 
 
   /**

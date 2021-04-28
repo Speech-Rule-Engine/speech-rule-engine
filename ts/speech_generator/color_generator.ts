@@ -110,7 +110,7 @@ export class ColorGenerator extends sre.AbstractSpeechGenerator {
    */
   private static visitStree_(
       tree: SemanticNode, leaves: (number|number[])[],
-      ignore: {[key: any]: boolean}) {
+      ignore: {[key: string]: boolean}) {
     if (!tree.childNodes.length) {
       if (!ignore[tree.id]) {
         leaves.push(tree.id);

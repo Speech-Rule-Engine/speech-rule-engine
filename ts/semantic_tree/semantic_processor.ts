@@ -36,7 +36,7 @@ export class SemanticProcessor {
 
 
   private static readonly MML_TO_LIMIT_:
-      {[key: any]: {type: SemanticAttr.Type, length: number}} = {
+      {[key: string]: {type: SemanticAttr.Type, length: number}} = {
         'MSUB': {type: SemanticAttr.Type.LIMLOWER, length: 1},
         'MUNDER': {type: SemanticAttr.Type.LIMLOWER, length: 1},
         'MSUP': {type: SemanticAttr.Type.LIMUPPER, length: 1},
@@ -51,7 +51,7 @@ export class SemanticProcessor {
    *         length: number, accent: boolean}>}
    *  */
   private static readonly MML_TO_BOUNDS_:
-      {[key: any]:
+      {[key: string]:
            {type: SemanticAttr.Type, length: number, accent: boolean}} = {
         'MSUB': {type: SemanticAttr.Type.SUBSCRIPT, length: 1, accent: false},
         'MSUP': {type: SemanticAttr.Type.SUPERSCRIPT, length: 1, accent: false},
@@ -68,7 +68,7 @@ export class SemanticProcessor {
       {[key: SemanticAttr.Role]: string} = {};
 
 
-  static MATHJAX_FONTS: {[key: any]: SemanticAttr.Font};
+  static MATHJAX_FONTS: {[key: string]: SemanticAttr.Font};
 
   private factory_: SemanticNodeFactory;
 
@@ -77,7 +77,7 @@ export class SemanticProcessor {
   /**
    * Table for caching explicit function applications.
    */
-  funcAppls: {[key: any]: SemanticNode} = {};
+  funcAppls: {[key: string]: SemanticNode} = {};
   constructor() {
     this.factory_ = new SemanticNodeFactory();
     this.heuristics = SemanticHeuristics.getInstance();
@@ -2727,7 +2727,7 @@ export class SemanticProcessor {
    * @return The semantic node for the proof.
    */
   proof(
-      node: Element, semantics: {[key: any]: string},
+      node: Element, semantics: {[key: string]: string},
       parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
     if (!semantics['inference'] && !semantics['axiom']) {
       console.log('Noise');
@@ -2763,7 +2763,7 @@ export class SemanticProcessor {
    * @return The semantic node for the inference.
    */
   inference(
-      node: Element, semantics: {[key: any]: string},
+      node: Element, semantics: {[key: string]: string},
       parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
     if (semantics['inferenceRule']) {
       let formulas = this.getFormulas(node, [], parse);
@@ -2944,7 +2944,7 @@ export class SemanticProcessor {
    * @param node The mml node.
    * @return The association list.
    */
-  static getSemantics(node: Element): {[key: any]: string} {
+  static getSemantics(node: Element): {[key: string]: string} {
     let semantics = node.getAttribute('semantics');
     if (!semantics) {
       return null;
@@ -2969,7 +2969,7 @@ export class SemanticProcessor {
    * @param attr Content of the semantic attribute.
    * @return Association list of semantic attributes.
    */
-  static separateSemantics(attr: string): {[key: any]: string} {
+  static separateSemantics(attr: string): {[key: string]: string} {
     let result = {};
     attr.split(';').forEach(function(x) {
       let [name, value] = x.split(':');

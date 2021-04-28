@@ -320,7 +320,7 @@ SpeechRule.Component = class {
    *     attributes, possibly containing the grammar.
    */
   static attributesFromString(attrs: string):
-      {[key: any]: string|Grammar.State} {
+      {[key: string]: string|Grammar.State} {
     if (attrs[0] != '(' || attrs.slice(-1) != ')') {
       throw new SpeechRule.OutputError(
           'Invalid attribute expression: ' + attrs);
@@ -371,7 +371,7 @@ SpeechRule.Component = class {
   }
 };
 type Attributes = {
-  [key: any]: string
+  [key: string]: string
 };
 export {SpeechRule};
 /**
