@@ -18,35 +18,25 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineExports from '../common/engine';
 import {Engine} from '../common/engine';
-import * as DynamicCstrExports from '../rule_engine/dynamic_cstr';
 import {DynamicCstr} from '../rule_engine/dynamic_cstr';
-import {DynamicProperties} from '../rule_engine/dynamic_cstr';
+import {Axis, AxisMap, AxisProperties, DynamicCstrParser, DynamicProperties, DefaultComparator} from '../rule_engine/dynamic_cstr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
+import {SemanticAttr} from '../semantic_tree/semantic_attr';
 
 
+export class ClearspeakPreferences extends DynamicCstr {
 
-/**
- * @param cstr The constraint mapping.
- * @param preference The preference.
- */
-export class ClearspeakPreferences extends sre.DynamicCstr {
   static AUTO: string = 'Auto';
-
-
-  static PREFERENCES: DynamicProperties;
-
-
-  private static REVERSE_MAPPING_: string[][];
-
-
-  private static SEMANTIC_MAPPING_:
-      {[key: SemanticAttr.Type]: {[key: SemanticAttr.Role|string]: string}};
 
   // TODO: Make these into a proper class.
   preference: any;
-  constructor(cstr: DynamicCstrExports.Map, preference: {[key: string]: string}) {
+
+  /**
+   * @param cstr The constraint mapping.
+   * @param preference The preference.
+   */
+  constructor(cstr: AxisMap, preference: {[key: string]: string}) {
     super(cstr);
     this.preference = preference;
   }
@@ -55,7 +45,7 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
   /**
    * @override
    */
-  equal(cstr) {
+  equal(cstr: ClearspeakPreferences) {
     let top = super.equal(cstr);
     if (!top) {
       return false;
@@ -81,11 +71,11 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
   static comparator(): Comparator {
     return new Comparator(
         Engine.getInstance().dynamicCstr,
-        DynamicProperties.create(
-            [DynamicCstr.DEFAULT_VALUES[DynamicCstrExports.Axis.LOCALE]],
-            [DynamicCstr.DEFAULT_VALUES[DynamicCstrExports.Axis.MODALITY]],
-            [DynamicCstr.DEFAULT_VALUES[DynamicCstrExports.Axis.DOMAIN]],
-            [DynamicCstr.DEFAULT_VALUES[DynamicCstrExports.Axis.STYLE]]));
+        DynamicProperties.createProp(
+            [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE]],
+            [DynamicCstr.DEFAULT_VALUES[Axis.MODALITY]],
+            [DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN]],
+            [DynamicCstr.DEFAULT_VALUES[Axis.STYLE]]));
   }
 
 
@@ -95,10 +85,10 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    * @param pref The preference string.
    * @return The preference settings.
    */
-  static fromPreference(pref: string): {[key: string]: string} {
+  static fromPreference(pref: string): AxisMap {
     let pairs = pref.split(':');
-    let preferences = {};
-    let properties = ClearspeakPreferences.PREFERENCES.getProperties();
+    let preferences: AxisMap = {};
+    let properties = PREFERENCES.getProperties();
     let validKeys = Object.keys(properties);
     for (let i = 0, key; key = pairs[i]; i++) {
       let pair = key.split('_');
@@ -107,7 +97,7 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
       }
       let value = pair[1];
       if (value && value !== ClearspeakPreferences.AUTO &&
-          properties[(pair[0] as DynamicCstrExports.Axis)].indexOf(value) !==
+          properties[(pair[0] as Axis)].indexOf(value) !==
               -1) {
         preferences[pair[0]] = pair[1];
       }
@@ -123,7 +113,7 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    * @param pref A preference mapping.
    * @return A style string created from the preferences.
    */
-  static toPreference(pref: {[key: string]: string}): string {
+  static toPreference(pref: AxisMap): string {
     let keys = Object.keys(pref);
     let str = [];
     for (let i = 0; i < keys.length; i++) {
@@ -140,10 +130,10 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    * @return Mapping of locale to preferences.
    */
   static getLocalePreferences(opt_dynamic?: Object):
-      {[key: string]: DynamicProperties} {
+     {[key: string]: AxisProperties} {
     let dynamic = opt_dynamic ||
-        sre.MathCompoundStore.getInstance().enumerate(
-            sre.SpeechRuleEngine.getInstance().enumerate());
+        MathCompoundStore.getInstance().enumerate(
+            SpeechRuleEngine.getInstance().enumerate());
     return ClearspeakPreferences.getLocalePreferences_(dynamic);
   }
 
@@ -154,18 +144,18 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    *     constraints.
    * @return Mapping of locale to preferences.
    */
-  private static getLocalePreferences_(dynamic: Object):
-      {[key: string]: DynamicProperties} {
-    let result = {};
+  private static getLocalePreferences_(dynamic: any):
+      {[key: string]: AxisProperties} {
+    let result: {[key: string]: AxisProperties} = {};
     for (let locale in dynamic) {
       if (!dynamic[locale]['speech'] ||
           !dynamic[locale]['speech']['clearspeak']) {
         continue;
       }
       let locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
-      let prefs = result[locale] = {};
-      for (let axis in ClearspeakPreferences.PREFERENCES.getProperties()) {
-        let allSty = ClearspeakPreferences.PREFERENCES.getProperties()[axis];
+      let prefs: AxisProperties = result[locale] = {};
+      for (let axis in PREFERENCES.getProperties()) {
+        let allSty = PREFERENCES.getProperties()[axis];
         let values = [axis + '_Auto'];
         if (allSty) {
           for (let sty of allSty) {
@@ -207,8 +197,8 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    * @return The menu settings for a new radio button
    *    sub menu.
    */
-  static smartPreferences(item: MathItem, locale: string):
-      ({[key: string]: string})[] {
+  // TODO (TS): item should get MathJax type MathItem
+  static smartPreferences(item: any, locale: string): AxisMap[] {
     let prefs = ClearspeakPreferences.getLocalePreferences();
     let loc = prefs[locale];
     if (!loc) {
@@ -263,7 +253,7 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
    * @return The preference that fits the node's type and role.
    */
   static relevantPreferences(node: SemanticNode): string {
-    let roles = ClearspeakPreferences.SEMANTIC_MAPPING_[node.type];
+    let roles = SEMANTIC_MAPPING_[node.type];
     if (!roles) {
       return 'ImpliedTimes';
     }
@@ -303,8 +293,9 @@ export class ClearspeakPreferences extends sre.DynamicCstr {
     return ClearspeakPreferences.toPreference(parsed);
   }
 }
-goog.inherits(ClearspeakPreferences, DynamicCstr);
-ClearspeakPreferences.PREFERENCES = new DynamicProperties({
+
+
+const PREFERENCES = new DynamicProperties({
   AbsoluteValue: ['Auto', 'AbsEnd', 'Cardinality', 'Determinant'],
   Bar: ['Auto', 'Conjugate'],
   Caps: ['Auto', 'SayCaps'],
@@ -352,31 +343,33 @@ ClearspeakPreferences.PREFERENCES = new DynamicProperties({
     'Reciprocal'
   ],
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
-});
+})
 
 
+export class Comparator extends DefaultComparator {
 
-/**
- * @param cstr A Clearspeak preference constraint.
- * @param props A properties element for matching.
- */
-export class Comparator extends sre.DynamicCstr.DefaultComparator {
-  preference: {[key: string]: string};
+  preference: AxisMap;
+
+  /**
+   * @param cstr A Clearspeak preference constraint.
+   * @param props A properties element for matching.
+   */
   constructor(cstr: DynamicCstr, props: DynamicProperties) {
     super(cstr, props);
-    this.preference = cstr.preference || {};
+    this.preference = (cstr instanceof ClearspeakPreferences) ?
+      cstr.preference : {};
   }
 
 
   /**
    * @override
    */
-  match(cstr) {
+  match(cstr: DynamicCstr) {
     let top = super.match(cstr);
     if (!top) {
       return false;
     }
-    if (!cstr.preference) {
+    if (!(cstr instanceof ClearspeakPreferences)) {
       return true;
     }
     let keys = Object.keys(cstr.preference);
@@ -392,47 +385,44 @@ export class Comparator extends sre.DynamicCstr.DefaultComparator {
   /**
    * @override
    */
-  compare(cstr1, cstr2) {
+  compare(cstr1: DynamicCstr, cstr2: DynamicCstr) {
     let top = super.compare(cstr1, cstr2);
     if (top !== 0) {
-      return top;
+      return top as 0|1|-1;
     }
-    if (!cstr1.preference && cstr2.preference) {
+    let pref1 = (cstr1 instanceof ClearspeakPreferences);
+    let pref2 = (cstr2 instanceof ClearspeakPreferences);
+    if (!pref1 && pref2) {
       return 1;
     }
-    if (cstr1.preference && !cstr2.preference) {
+    if (pref1 && !pref2) {
       return -1;
     }
-    if (!cstr1.preference && !cstr2.preference) {
+    if (!pref1 && !pref2) {
       return 0;
     }
-    let length1 = Object.keys(cstr1.preference).length;
-    let length2 = Object.keys(cstr2.preference).length;
+    let length1 = Object.keys((cstr1 as ClearspeakPreferences).preference).length;
+    let length2 = Object.keys((cstr2 as ClearspeakPreferences).preference).length;
     return length1 > length2 ? -1 : length1 < length2 ? 1 : 0;
   }
 }
 
-goog.inherits(Comparator, DynamicCstr.DefaultComparator);
 
+export class Parser extends DynamicCstrParser {
 
-
-export class Parser extends sre.DynamicCstr.Parser {
   constructor() {
-    super([
-      DynamicCstrExports.Axis.LOCALE, DynamicCstrExports.Axis.MODALITY,
-      DynamicCstrExports.Axis.DOMAIN, DynamicCstrExports.Axis.STYLE
-    ]);
+    super([Axis.LOCALE, Axis.MODALITY, Axis.DOMAIN, Axis.STYLE]);
   }
 
 
   /**
    * @override
    */
-  parse(str) {
+  parse(str: string) {
     let initial = super.parse(str);
-    let style = initial.getValue(DynamicCstrExports.Axis.STYLE);
-    let locale = initial.getValue(DynamicCstrExports.Axis.LOCALE);
-    let modality = initial.getValue(DynamicCstrExports.Axis.MODALITY);
+    let style = initial.getValue(Axis.STYLE);
+    let locale = initial.getValue(Axis.LOCALE);
+    let modality = initial.getValue(Axis.MODALITY);
     let pref = {};
     if (style !== DynamicCstr.DEFAULT_VALUE) {
       pref = this.fromPreference(style);
@@ -471,109 +461,116 @@ export class Parser extends sre.DynamicCstr.Parser {
     return ClearspeakPreferences.toPreference(pref);
   }
 }
-goog.inherits(Parser, DynamicCstrExports.Parser);
-ClearspeakPreferences.REVERSE_MAPPING_ = [
+
+
+/**
+ * Mapping from preferences to semantic values.
+ */
+// TODO (TS): Replace with a Map to partial meaning elements.
+const REVERSE_MAPPING: string[][] = [
   [
-    'AbsoluteValue', sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.NEUTRAL
+    'AbsoluteValue', SemanticAttr.Type.FENCED, SemanticAttr.Role.NEUTRAL
   ],
   [
-    'Bar', sre.SemanticAttr.Type.OVERSCORE,
-    sre.SemanticAttr.Role.OVERACCENT
+    'Bar', SemanticAttr.Type.OVERSCORE,
+    SemanticAttr.Role.OVERACCENT
   ],  // more
   [
-    'Caps', sre.SemanticAttr.Type.IDENTIFIER,
-    sre.SemanticAttr.Role.LATINLETTER
+    'Caps', SemanticAttr.Type.IDENTIFIER,
+    SemanticAttr.Role.LATINLETTER
   ],  // more
   [
-    'CombinationPermutation', sre.SemanticAttr.Type.APPL,
-    sre.SemanticAttr.Role.UNKNOWN
+    'CombinationPermutation', SemanticAttr.Type.APPL,
+    SemanticAttr.Role.UNKNOWN
   ],  // more
   [
-    'Ellipses', sre.SemanticAttr.Type.PUNCTUATION,
-    sre.SemanticAttr.Role.ELLIPSIS
+    'Ellipses', SemanticAttr.Type.PUNCTUATION,
+    SemanticAttr.Role.ELLIPSIS
   ],
-  ['Exponent', sre.SemanticAttr.Type.SUPERSCRIPT, ''],
-  ['Fraction', sre.SemanticAttr.Type.FRACTION, ''],
-  ['Functions', sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Role.SIMPLEFUNC],
+  ['Exponent', SemanticAttr.Type.SUPERSCRIPT, ''],
+  ['Fraction', SemanticAttr.Type.FRACTION, ''],
+  ['Functions', SemanticAttr.Type.APPL, SemanticAttr.Role.SIMPLEFUNC],
   [
-    'ImpliedTimes', sre.SemanticAttr.Type.OPERATOR,
-    sre.SemanticAttr.Role.IMPLICIT
+    'ImpliedTimes', SemanticAttr.Type.OPERATOR,
+    SemanticAttr.Role.IMPLICIT
   ],
   [
-    'Log', sre.SemanticAttr.Type.APPL,
-    sre.SemanticAttr.Role.PREFIXFUNC
-  ],                                             // specific
-  ['Matrix', sre.SemanticAttr.Type.MATRIX, ''],  // multiple
-  ['Matrix', sre.SemanticAttr.Type.VECTOR, ''],  // multiple
+    'Log', SemanticAttr.Type.APPL,
+    SemanticAttr.Role.PREFIXFUNC
+  ],                                         // specific
+  ['Matrix', SemanticAttr.Type.MATRIX, ''],  // multiple
+  ['Matrix', SemanticAttr.Type.VECTOR, ''],  // multiple
   [
-    'MultiLineLabel', sre.SemanticAttr.Type.MULTILINE,
-    sre.SemanticAttr.Role.LABEL
+    'MultiLineLabel', SemanticAttr.Type.MULTILINE,
+    SemanticAttr.Role.LABEL
   ],  // more, multiple (table)
   [
-    'MultiLineOverview', sre.SemanticAttr.Type.MULTILINE,
-    sre.SemanticAttr.Role.TABLE
+    'MultiLineOverview', SemanticAttr.Type.MULTILINE,
+    SemanticAttr.Role.TABLE
   ],  // more, multiple (table)
   [
-    'MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.MULTILINE,
-    sre.SemanticAttr.Role.TABLE
+    'MultiLinePausesBetweenColumns', SemanticAttr.Type.MULTILINE,
+    SemanticAttr.Role.TABLE
   ],  // more, multiple (table)
   [
-    'MultiLineLabel', sre.SemanticAttr.Type.TABLE,
-    sre.SemanticAttr.Role.LABEL
+    'MultiLineLabel', SemanticAttr.Type.TABLE,
+    SemanticAttr.Role.LABEL
   ],  // more, multiple (table)
   [
-    'MultiLineOverview', sre.SemanticAttr.Type.TABLE,
-    sre.SemanticAttr.Role.TABLE
+    'MultiLineOverview', SemanticAttr.Type.TABLE,
+    SemanticAttr.Role.TABLE
   ],  // more, multiple (table)
   [
-    'MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.TABLE,
-    sre.SemanticAttr.Role.TABLE
+    'MultiLinePausesBetweenColumns', SemanticAttr.Type.TABLE,
+    SemanticAttr.Role.TABLE
   ],  // more, multiple (table)
   [
-    'MultiLineLabel', sre.SemanticAttr.Type.CASES,
-    sre.SemanticAttr.Role.LABEL
+    'MultiLineLabel', SemanticAttr.Type.CASES,
+    SemanticAttr.Role.LABEL
   ],  // more, multiple (table)
   [
-    'MultiLineOverview', sre.SemanticAttr.Type.CASES,
-    sre.SemanticAttr.Role.TABLE
+    'MultiLineOverview', SemanticAttr.Type.CASES,
+    SemanticAttr.Role.TABLE
   ],  // more, multiple (table)
   [
-    'MultiLinePausesBetweenColumns', sre.SemanticAttr.Type.CASES,
-    sre.SemanticAttr.Role.TABLE
+    'MultiLinePausesBetweenColumns', SemanticAttr.Type.CASES,
+    SemanticAttr.Role.TABLE
   ],  // more, multiple (table)
   [
-    'MultsymbolDot', sre.SemanticAttr.Type.OPERATOR,
-    sre.SemanticAttr.Role.MULTIPLICATION
+    'MultsymbolDot', SemanticAttr.Type.OPERATOR,
+    SemanticAttr.Role.MULTIPLICATION
   ],  // multiple?
   [
-    'MultsymbolX', sre.SemanticAttr.Type.OPERATOR,
-    sre.SemanticAttr.Role.MULTIPLICATION
+    'MultsymbolX', SemanticAttr.Type.OPERATOR,
+    SemanticAttr.Role.MULTIPLICATION
   ],  // multiple?
-  ['Paren', sre.SemanticAttr.Type.FENCED, sre.SemanticAttr.Role.LEFTRIGHT],
-  ['Prime', sre.SemanticAttr.Type.SUPERSCRIPT, sre.SemanticAttr.Role.PRIME],
-  ['Roots', sre.SemanticAttr.Type.ROOT, ''],  // multiple (sqrt)
-  ['Roots', sre.SemanticAttr.Type.SQRT, ''],  // multiple (sqrt)
+  ['Paren', SemanticAttr.Type.FENCED, SemanticAttr.Role.LEFTRIGHT],
+  ['Prime', SemanticAttr.Type.SUPERSCRIPT, SemanticAttr.Role.PRIME],
+  ['Roots', SemanticAttr.Type.ROOT, ''],  // multiple (sqrt)
+  ['Roots', SemanticAttr.Type.SQRT, ''],  // multiple (sqrt)
   [
-    'SetMemberSymbol', sre.SemanticAttr.Type.RELATION,
-    sre.SemanticAttr.Role.ELEMENT
+    'SetMemberSymbol', SemanticAttr.Type.RELATION,
+    SemanticAttr.Role.ELEMENT
   ],
   [
-    'Sets', sre.SemanticAttr.Type.FENCED,
-    sre.SemanticAttr.Role.SETEXT
+    'Sets', SemanticAttr.Type.FENCED,
+    SemanticAttr.Role.SETEXT
   ],  // multiple
   [
-    'TriangleSymbol', sre.SemanticAttr.Type.IDENTIFIER,
-    sre.SemanticAttr.Role.GREEKLETTER
+    'TriangleSymbol', SemanticAttr.Type.IDENTIFIER,
+    SemanticAttr.Role.GREEKLETTER
   ],  //????
   [
-    'Trig', sre.SemanticAttr.Type.APPL,
-    sre.SemanticAttr.Role.PREFIXFUNC
+    'Trig', SemanticAttr.Type.APPL,
+    SemanticAttr.Role.PREFIXFUNC
   ],  // specific
-  ['VerticalLine', sre.SemanticAttr.Type.PUNCTUATED, sre.SemanticAttr.Role.VBAR]
+  ['VerticalLine', SemanticAttr.Type.PUNCTUATED, SemanticAttr.Role.VBAR]
 ];
-ClearspeakPreferences.SEMANTIC_MAPPING_ = function() {
-  let result = {};
-  for (let i = 0, triple; triple = ClearspeakPreferences.REVERSE_MAPPING_[i];
+
+
+const SEMANTIC_MAPPING_: {[key: string]: AxisMap} = function() {
+  let result: {[key: string]: AxisMap} = {};
+  for (let i = 0, triple; triple = REVERSE_MAPPING[i];
        i++) {
     let pref = triple[0];
     let role = result[triple[1]];

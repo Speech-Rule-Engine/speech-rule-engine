@@ -185,7 +185,7 @@ export namespace SemanticAttr {
 
     NEUTRAL = 'neutral',
     // Letters.
-    LETTER = 'latinletter',
+    LATINLETTER = 'latinletter',
     GREEKLETTER = 'greekletter',
     OTHERLETTER = 'otherletter',
 

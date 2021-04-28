@@ -35,13 +35,13 @@ export enum Axis {
   MODALITY = 'modality'
 }
 
-type AxisProperties = {[key: string]: string[]};
+export type AxisProperties = {[key: string]: string[]};
 
-type Order = Axis[];
+export type AxisOrder = Axis[];
 
-type AxisValues = {[key: string]: boolean};
+export type AxisValues = {[key: string]: boolean};
 
-type AxisMap = {[key: string]: string};
+export type AxisMap = {[key: string]: string};
 
 namespace CstrValues {
 
@@ -104,7 +104,7 @@ export class DynamicProperties {
    * @param opt_order A parse order of the keys.
    */
   constructor(private properties: AxisProperties,
-              protected order: Order = Object.keys(properties) as Axis[]) {
+              protected order: AxisOrder = Object.keys(properties) as Axis[]) {
   }
 
 
@@ -121,7 +121,7 @@ export class DynamicProperties {
    * @return The priority order of constraint attributes
    *     in the comparator.
    */
-  public getOrder(): Order {
+  public getOrder(): AxisOrder {
     return this.order;
   }
 
@@ -129,7 +129,7 @@ export class DynamicProperties {
   /**
    * @return The components of the constraint.
    */
-  public getAxes(): Order {
+  public getAxes(): AxisOrder {
     return this.order;
   }
 
@@ -184,7 +184,7 @@ export class DynamicCstr extends DynamicProperties {
   /**
    *  Default order of constraints.
    */
-  public static DEFAULT_ORDER: Order =
+  public static DEFAULT_ORDER: AxisOrder =
     [Axis.LOCALE, Axis.MODALITY, Axis.DOMAIN, Axis.STYLE, Axis.TOPIC];
 
   /**
@@ -248,7 +248,7 @@ export class DynamicCstr extends DynamicProperties {
    * @param order The order to check.
    * @return True if the order only contains valid axis descriptions.
    */
-  public static validOrder(order: Order): boolean {
+  public static validOrder(order: AxisOrder): boolean {
     let axes = DynamicCstr.DEFAULT_ORDER.slice();
     return order.every(x => {
       let index = axes.indexOf(x);
@@ -263,7 +263,7 @@ export class DynamicCstr extends DynamicProperties {
    * @param cstr The constraint mapping.
    * @param opt_order A parse order of the keys.
    */
-  constructor(components_: AxisMap, order?: Order) {
+  constructor(components_: AxisMap, order?: AxisOrder) {
     let properties: AxisProperties = {};
     for (let [key, value] of Object.entries(components_)) {
       properties[key] = [value];
@@ -348,14 +348,14 @@ export class DynamicCstr extends DynamicProperties {
 }
 
 
-export class Parser {
+export class DynamicCstrParser {
 
   /**
    * A parser for dynamic constraint representations.
    * @param order The order of attributes in the
    *     dynamic constraint string.
    */
-  constructor(private order: Order) {}
+  constructor(private order: AxisOrder) {}
 
   /**
    * Parses the dynamic constraint for math rules, consisting of a domain and
@@ -420,7 +420,7 @@ export interface Comparator {
 
 export class DefaultComparator implements Comparator {
 
-  private order: Order;
+  private order: AxisOrder;
 
   /**
    * A default comparator for dynamic constraints. Has initially a reference
