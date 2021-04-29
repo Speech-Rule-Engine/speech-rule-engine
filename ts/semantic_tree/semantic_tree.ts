@@ -26,35 +26,30 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SystemExternal} from '../common/system_external';
+import SystemExternal from '../common/system_external';
 
 import {SemanticAnnotations} from './semantic_annotations';
+import {SemanticAttr} from './semantic_attr';
 import {SemanticVisitor} from './semantic_annotator';
 import {SemanticMathml} from './semantic_mathml';
 import {SemanticNode} from './semantic_node';
 import {SemanticParser} from './semantic_parser';
+import {SemanticPred} from './semantic_pred';
 
 
-
-/**
- * Create an initial semantic tree.
- * @param mml The original MathML node.
- */
 export class SemanticTree {
-  private static unitVisitor_: SemanticVisitor;
-
-  mathml: Node;
 
   parser: SemanticParser;
 
   root: SemanticNode;
 
   collator: any;
-  constructor(mml: Element) {
-    /**
-     * Original MathML tree.
-     */
-    this.mathml = mml;
+
+  /**
+   * Create an initial semantic tree.
+   * @param mathml The original MathML node.
+   */
+  constructor(public mathml: Element) {
     this.parser = new SemanticMathml();
     this.root = this.parser.parse(mml);
     this.collator = this.parser.getFactory().leafMap.collateMeaning();
@@ -66,9 +61,9 @@ export class SemanticTree {
       this.parser.getFactory().defaultMap = newDefault;
       this.root = this.parser.parse(mml);
     }
-    SemanticTree.unitVisitor_.visit(this.root, {});
+    unitVisitor.visit(this.root, {});
 
-    SemanticAnnotations.getInstance().annotate(this.root);
+    SemanticAnnotations.annotate(this.root);
   }
 
 
@@ -185,8 +180,9 @@ export class SemanticTree {
    * Turns tree into JSON format.
    * @return The JSON object for the tree.
    */
-  toJson(): JSONType {
-    let json = ({} as JSONType);
+  // TODO (TS): JSON type.
+  toJson(): any {
+    let json = ({} as any);
     json['stree'] = this.root.toJson();
     return json;
   }
@@ -206,21 +202,23 @@ export class SemanticTree {
   }
 }
 
+
 /**
  * Visitor to propagate unit expressions if possible.
  */
-SemanticTree.unitVisitor_ =
-    new SemanticVisitor('general', 'unit', function(node, info) {
-      if (node.type === sre.SemanticAttr.Type.INFIXOP &&
-          (node.role === sre.SemanticAttr.Role.MULTIPLICATION ||
-           node.role === sre.SemanticAttr.Role.IMPLICIT)) {
+const unitVisitor =
+    new SemanticVisitor('general', 'unit', (node, _info) => {
+      if (node.type === SemanticAttr.Type.INFIXOP &&
+          (node.role === SemanticAttr.Role.MULTIPLICATION ||
+           node.role === SemanticAttr.Role.IMPLICIT)) {
         let children = node.childNodes;
         if (children.length &&
-            (sre.SemanticPred.isPureUnit(children[0]) ||
-             sre.SemanticPred.isUnitCounter(children[0])) &&
-            node.childNodes.slice(1).every(sre.SemanticPred.isPureUnit)) {
-          node.role = sre.SemanticAttr.Role.UNIT;
+            (SemanticPred.isPureUnit(children[0]) ||
+             SemanticPred.isUnitCounter(children[0])) &&
+            node.childNodes.slice(1).every(SemanticPred.isPureUnit)) {
+          node.role = SemanticAttr.Role.UNIT;
         }
       }
       return false;
     });
+

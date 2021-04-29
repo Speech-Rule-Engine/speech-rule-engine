@@ -21,7 +21,7 @@
 
 
 import {KeyCode} from '../common/event_util';
-import {Map} from '../rule_engine/dynamic_cstr';
+import {AxisMap} from '../rule_engine/dynamic_cstr';
 
 import {Focus} from './focus';
 import {RebuildStree} from './rebuild_stree';
@@ -102,14 +102,14 @@ export interface Walker {
    * Updates speech in case of option changes.
    * @param options The dynamic constraint.
    */
-  update(options: Map): void;
+  update(options: AxisMap): void;
 }
 
 
 /**
  * Enumerator for different types of moves.
  */
-export enum move {
+export enum WalkerMoves {
   UP = 'up',
   DOWN = 'down',
   LEFT = 'left',
@@ -126,33 +126,35 @@ export enum move {
 }
 
 
-// TODO (ts): Replace with a Map.
-const STATE: {[id: string]: string} = {};
+export namespace WalkerState {
+  // TODO (ts): Replace with a Map.
+  const STATE: {[id: string]: string} = {};
 
-/**
- * Removes a state for a particular node.
- * @param id A node id.
- */
-export function resetState(id: string) {
-  delete STATE[id];
-}
-
-
-/**
- * Sets a state value for a particular node.
- * @param id A node id.
- * @param value The state value.
- */
-export function setState(id: string, value: string) {
-  STATE[id] = value;
-}
+  /**
+   * Removes a state for a particular node.
+   * @param id A node id.
+   */
+  export function resetState(id: string) {
+    delete STATE[id];
+  }
 
 
-/**
- * Returns the state a particular node if it exists.
- * @param id The node id.
- * @return The state value.
- */
-export function getState(id: string): string {
-  return STATE[id];
+  /**
+   * Sets a state value for a particular node.
+   * @param id A node id.
+   * @param value The state value.
+   */
+  export function setState(id: string, value: string) {
+    STATE[id] = value;
+  }
+
+
+  /**
+   * Returns the state a particular node if it exists.
+   * @param id The node id.
+   * @return The state value.
+   */
+  export function getState(id: string): string {
+    return STATE[id];
+  }
 }

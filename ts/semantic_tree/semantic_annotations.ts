@@ -20,26 +20,26 @@
  */
 
 
-import {SemanticAnnotator} from './semantic_annotator';
-import {SemanticVisitor} from './semantic_annotator';
+import {SemanticAnnotator, SemanticVisitor} from './semantic_annotator';
 import {SemanticNode} from './semantic_node';
 
 
+export namespace SemanticAnnotations {
 
-export class SemanticAnnotations {
-  annotators: {[key: string]: SemanticAnnotator} = {};
+  // TODO (TS): Replace this with maps.
+  const annotators: {[key: string]: SemanticAnnotator} = {};
 
-  visitors: {[key: string]: SemanticVisitor} = {};
+  const visitors: {[key: string]: SemanticVisitor} = {};
 
 
   /**
    * Registers an annotator.
    * @param annotator The annotator.
    */
-  register(annotator: SemanticAnnotator|SemanticVisitor) {
+  export function register(annotator: SemanticAnnotator|SemanticVisitor) {
     let name = annotator.domain + ':' + annotator.name;
-    (annotator instanceof SemanticAnnotator ? this.annotators :
-                                              this.visitors)[name] = annotator;
+    (annotator instanceof SemanticAnnotator ? annotators :
+                                              visitors)[name] = annotator;
   }
 
 
@@ -48,9 +48,9 @@ export class SemanticAnnotations {
    * @param domain The domain.
    * @param name The name of the annotator.
    */
-  activate(domain: string, name: string) {
+  export function activate(domain: string, name: string) {
     let key = domain + ':' + name;
-    let annotator = this.annotators[key] || this.visitors[key];
+    let annotator = annotators[key] || visitors[key];
     if (annotator) {
       annotator.active = true;
     }
@@ -61,21 +61,19 @@ export class SemanticAnnotations {
    * Annotates the given semantic node recursively.
    * @param node The semantic node to annotate.
    */
-  annotate(node: SemanticNode) {
-    for (let key of Object.keys(this.annotators)) {
-      let annotator = this.annotators[key];
+  export function annotate(node: SemanticNode) {
+    for (let key of Object.keys(annotators)) {
+      let annotator = annotators[key];
       if (annotator.active) {
-        this.annotators[key].annotate(node);
+        annotators[key].annotate(node);
       }
     }
-    for (let name of Object.keys(this.visitors)) {
-      let visitor = this.visitors[name];
+    for (let name of Object.keys(visitors)) {
+      let visitor = visitors[name];
       if (visitor.active) {
-        this.visitors[name].visit(
-            node, Object.assign({}, this.visitors[name].def));
+        visitors[name].visit(
+            node, Object.assign({}, visitors[name].def));
       }
     }
   }
 }
-
-goog.addSingletonGetter(SemanticAnnotations);

@@ -30,7 +30,6 @@ import {SemanticNode} from './semantic_node';
  * @param attr The attribute.
  * @return The predicate.
  */
-
 export function isAttribute(prop: string, attr: string): (p1: SemanticNode) =>
     boolean {
   let getAttr = function(prop) {

@@ -98,7 +98,7 @@ export function unicodeToNumber(unicode: string): number|null {
     return null;
   }
   // Treating surrogate pairs.
-  if (unicode.length == 2) {
+  if (unicode.length === 2) {
     let hi = unicode.charCodeAt(0);
     let low = unicode.charCodeAt(1);
     if (0xD800 <= hi && hi <= 0xDBFF && !isNaN(low)) {
@@ -228,11 +228,11 @@ export function purgeNodes(nodes: Element[]): Element[] {
       continue;
     }
     let tagName = DomUtil.tagName(node);
-    if (IGNORETAGS.indexOf(tagName) != -1) {
+    if (IGNORETAGS.indexOf(tagName) !== -1) {
       continue;
     }
-    if (EMPTYTAGS.indexOf(tagName) != -1 &&
-      node.childNodes.length == 0) {
+    if (EMPTYTAGS.indexOf(tagName) !== -1 &&
+      node.childNodes.length === 0) {
       continue;
     }
     nodeArray.push(node);

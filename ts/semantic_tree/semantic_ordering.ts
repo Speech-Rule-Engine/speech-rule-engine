@@ -22,24 +22,23 @@
  */
 
 
-import {SemanticAttr} from './semantic_attr';
-import {SemanticMeaning} from './semantic_attr';
-
+import {SemanticAttr, SemanticMeaning} from './semantic_attr';
 
 
 // TODO: Have some better ordering mechanism than array order.
 /**
  * A structure for ordering semantic comparators.
  */
-export class SemanticOrdering {
-  comparators: SemanticComparator[] = [];
+export namespace SemanticOrdering {
+
+  const comparators: SemanticComparator[] = [];
 
 
   /**
    * @param comparator Adds the comparator
    */
-  add(comparator: SemanticComparator) {
-    this.comparators.push(comparator);
+  export function add(comparator: SemanticComparator) {
+    comparators.push(comparator);
   }
 
 
@@ -49,8 +48,9 @@ export class SemanticOrdering {
    * @param meaning2 The second meaning.
    * @return 0, 1, -1 depending on the partial order.
    */
-  apply(meaning1: SemanticMeaning, meaning2: SemanticMeaning): number {
-    for (let i = 0, comparator; comparator = this.comparators[i]; i++) {
+  export function apply(meaning1: SemanticMeaning,
+                        meaning2: SemanticMeaning): number {
+    for (let i = 0, comparator; comparator = comparators[i]; i++) {
       let result = comparator.compare(meaning1, meaning2);
       if (result !== 0) {
         return result;
@@ -64,8 +64,8 @@ export class SemanticOrdering {
    * Sorts a list of semantic meaning elements.
    * @param meanings List of meaning elements.
    */
-  sort(meanings: SemanticMeaning[]) {
-    meanings.sort(goog.bind(this.apply, this));
+  export function sort(meanings: SemanticMeaning[]) {
+    meanings.sort(apply);
   }
 
 
@@ -74,18 +74,19 @@ export class SemanticOrdering {
    * @param meanings A list of semantic meanings.
    * @return A priority list of semantic meanings.
    */
-  reduce(meanings: SemanticMeaning[]): SemanticMeaning[] {
+  export function reduce(meanings: SemanticMeaning[]): SemanticMeaning[] {
     if (meanings.length <= 1) {
       return meanings;
     }
     let copy = meanings.slice();
     this.sort(copy);
     let result = [];
+    let last;
     do {
-      let last = copy.pop();
+      last = copy.pop();
       result.push(last);
     } while (last && copy.length &&
-             this.apply(copy[copy.length - 1], last) === 0);
+      apply(copy[copy.length - 1], last) === 0);
     return result;
   }
 
@@ -97,7 +98,8 @@ export class SemanticOrdering {
    * @param meaning2 The second meaning.
    * @return 0, 1, -1 depending on the partial order.
    */
-  static simpleFunction(meaning1: SemanticMeaning, meaning2: SemanticMeaning):
+  export function simpleFunction(meaning1: SemanticMeaning,
+                                 meaning2: SemanticMeaning):
       number {
     if (meaning1.role === SemanticAttr.Role.SIMPLEFUNC) {
       return 1;
@@ -109,23 +111,18 @@ export class SemanticOrdering {
   }
 }
 
-goog.addSingletonGetter(SemanticOrdering);
 
-
-
-/**
- * @param comparator The actual comparator function.
- * @param opt_type Type restriction for a comparator to
- *      work on. If not given it works on any type.
- */
 export class SemanticComparator {
-  type: SemanticAttr.Type|null;
-  constructor(
-      public comparator: (p1: SemanticMeaning, p2: SemanticMeaning) => number,
-      opt_type?: SemanticAttr.Type) {
-    this.type = opt_type || null;
 
-    SemanticOrdering.getInstance().add(this);
+  /**
+   * @param comparator The actual comparator function.
+   * @param opt_type Type restriction for a comparator to
+   *      work on. If not given it works on any type.
+   */
+  constructor(
+    public comparator: (p1: SemanticMeaning, p2: SemanticMeaning) => number,
+    public type: SemanticAttr.Type = null) {
+    SemanticOrdering.add(this);
   }
 
 
@@ -135,7 +132,7 @@ export class SemanticComparator {
    * @param meaning2 The second meaning.
    * @return 0, 1, -1 depending on the partial order.
    */
-  compare(meaning1: SemanticMeaning, meaning2: SemanticMeaning): number {
+  public compare(meaning1: SemanticMeaning, meaning2: SemanticMeaning): number {
     return this.type && this.type === meaning1.type &&
             this.type === meaning2.type ?
         this.comparator(meaning1, meaning2) :

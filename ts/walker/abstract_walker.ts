@@ -21,6 +21,7 @@
 
 
 import {AuditoryDescription} from '../audio/auditory_description';
+import {AxisMap} from '../rule_engine/dynamic_cstr';
 import {AuralRendering} from '../audio/aural_rendering';
 import * as DomUtil from '../common/dom_util';
 import {KeyCode} from '../common/event_util';
@@ -30,18 +31,15 @@ import * as Messages from '../l10n/messages';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {SpeechGenerator} from '../speech_generator/speech_generator';
 import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
-import * as ClearspeakPreferencesExports from '../speech_rules/clearspeak_preferences';
 import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
 import {SemanticAttr} from '../semantic_tree/semantic_attr';
-
+import {EngineConst} from '../common/engine';
 import {Focus} from './focus';
 import {Levels} from './levels';
 import {RebuildStree} from './rebuild_stree';
-import * as WalkerExports from './walker';
-import {Walker} from './walker';
+import {Walker, WalkerMoves, WalkerState} from './walker';
 import * as WalkerUtil from './walker_util';
-
-
+import {Grammar} from '../rule_engine/grammar';
 
 
 /**
@@ -89,7 +87,7 @@ export abstract class AbstractWalker<T> implements Walker {
   
   id: any;
 
-  rootNode: Node;
+  rootNode: Element;
 
   rootId: string;
 
@@ -108,12 +106,29 @@ export abstract class AbstractWalker<T> implements Walker {
    * expression.
    */
   private focus_: Focus = null;
+  // End of uninitialized fields.
 
-  keyMapping: {[key: KeyCode]: () => any} = {};
-
+  public keyMapping: Map<KeyCode, () => any> = new Map([
+    [KeyCode.UP, this.up.bind(this)],
+    [KeyCode.DOWN, this.down.bind(this)],
+    [KeyCode.RIGHT, this.right.bind(this)],
+    [KeyCode.LEFT, this.left.bind(this)],
+    [KeyCode.TAB, this.repeat.bind(this)],
+    [KeyCode.DASH, this.expand.bind(this)],
+    [KeyCode.SPACE, this.depth.bind(this)],
+    [KeyCode.HOME, this.home.bind(this)],
+    [KeyCode.X, this.summary.bind(this)],
+    [KeyCode.Z, this.detail.bind(this)],
+    [KeyCode.V, this.virtualize.bind(this)],
+    [KeyCode.P, this.previous.bind(this)],
+    [KeyCode.U, this.undo.bind(this)],
+    [KeyCode.LESS, this.previousRules.bind(this)],
+    [KeyCode.GREATER, this.nextRules.bind(this)]
+    ]);
+    
   private active_: boolean = false;
 
-  moved: WalkerExports.move;
+  moved: WalkerMoves;
 
   /**
    * Stack of virtual cursors.
@@ -159,26 +174,10 @@ export abstract class AbstractWalker<T> implements Walker {
      * The original XML string. Kept for lazy initialization.
      */
     this.xmlString_ = xml;
-    // End of uninitialized fields.
-    this.keyMapping[KeyCode.UP] = goog.bind(this.up, this);
-    this.keyMapping[KeyCode.DOWN] = goog.bind(this.down, this);
-    this.keyMapping[KeyCode.RIGHT] = goog.bind(this.right, this);
-    this.keyMapping[KeyCode.LEFT] = goog.bind(this.left, this);
-    this.keyMapping[KeyCode.TAB] = goog.bind(this.repeat, this);
-    this.keyMapping[KeyCode.DASH] = goog.bind(this.expand, this);
-    this.keyMapping[KeyCode.SPACE] = goog.bind(this.depth, this);
-    this.keyMapping[KeyCode.HOME] = goog.bind(this.home, this);
-    this.keyMapping[KeyCode.X] = goog.bind(this.summary, this);
-    this.keyMapping[KeyCode.Z] = goog.bind(this.detail, this);
-    this.keyMapping[KeyCode.V] = goog.bind(this.virtualize, this);
-    this.keyMapping[KeyCode.P] = goog.bind(this.previous, this);
-    this.keyMapping[KeyCode.U] = goog.bind(this.undo, this);
-    this.keyMapping[KeyCode.LESS] = goog.bind(this.previousRules, this);
-    this.keyMapping[KeyCode.GREATER] = goog.bind(this.nextRules, this);
     /**
      * Flag indicating whether the last move actually moved focus.
      */
-    this.moved = WalkerExports.move.ENTER;
+    this.moved = WalkerMoves.ENTER;
   }
 
 
@@ -239,7 +238,7 @@ export abstract class AbstractWalker<T> implements Walker {
     if (!this.isActive()) {
       return;
     }
-    WalkerExports.setState(this.id, this.primaryId());
+    WalkerState.setState(this.id, this.primaryId());
     this.generator.end();
     this.toggleActive_();
   }
@@ -248,12 +247,12 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  getFocus(opt_update) {
+  getFocus(update = false) {
     if (!this.focus_) {
       this.focus_ = Focus.factory(
           this.rootId, [this.rootId], this.getRebuilt(), this.node);
     }
-    if (opt_update) {
+    if (update) {
       this.updateFocus();
     }
     return (this.focus_ as Focus);
@@ -297,11 +296,11 @@ export abstract class AbstractWalker<T> implements Walker {
       return special;
     }
     switch (this.moved) {
-      case WalkerExports.move.DEPTH:
+      case WalkerMoves.DEPTH:
         return this.depth_();
-      case WalkerExports.move.SUMMARY:
+      case WalkerMoves.SUMMARY:
         return this.summary_();
-      case WalkerExports.move.DETAIL:
+      case WalkerMoves.DETAIL:
         return this.detail_();
       default:
         let speech = [];
@@ -379,7 +378,7 @@ export abstract class AbstractWalker<T> implements Walker {
       return false;
     }
     this.setFocus(focus);
-    if (this.moved === WalkerExports.move.HOME) {
+    if (this.moved === WalkerMoves.HOME) {
       this.levels = this.initLevels();
     }
     return true;
@@ -390,7 +389,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Moves up from the current node if possible.
    */
   protected up(): Focus|null {
-    this.moved = WalkerExports.move.UP;
+    this.moved = WalkerMoves.UP;
     return this.getFocus();
   }
 
@@ -399,7 +398,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Moves down from the current node if possible.
    */
   protected down(): Focus|null {
-    this.moved = WalkerExports.move.DOWN;
+    this.moved = WalkerMoves.DOWN;
     return this.getFocus();
   }
 
@@ -408,7 +407,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Moves left from the current node if possible.
    */
   protected left(): Focus|null {
-    this.moved = WalkerExports.move.LEFT;
+    this.moved = WalkerMoves.LEFT;
     return this.getFocus();
   }
 
@@ -417,7 +416,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Moves right from the current node if possible.
    */
   protected right(): Focus|null {
-    this.moved = WalkerExports.move.RIGHT;
+    this.moved = WalkerMoves.RIGHT;
     return this.getFocus();
   }
 
@@ -426,7 +425,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Stays on the current node and repeats it.
    */
   protected repeat(): Focus|null {
-    this.moved = WalkerExports.move.REPEAT;
+    this.moved = WalkerMoves.REPEAT;
     return this.getFocus().clone();
   }
 
@@ -436,7 +435,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   protected depth(): Focus|null {
     this.moved =
-        this.isSpeech() ? WalkerExports.move.DEPTH : WalkerExports.move.REPEAT;
+        this.isSpeech() ? WalkerMoves.DEPTH : WalkerMoves.REPEAT;
     return this.getFocus().clone();
   }
 
@@ -445,8 +444,8 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The depth announcement for the currently focused element.
    */
   private depth_(): string {
-    let oldDepth = sre.Grammar.getInstance().getParameter('depth');
-    sre.Grammar.getInstance().setParameter('depth', true);
+    let oldDepth = Grammar.getInstance().getParameter('depth');
+    Grammar.getInstance().setParameter('depth', true);
     let primary = this.getFocus().getDomPrimary();
     let expand = this.expandable(primary) && [Messages.NAVIGATE.EXPANDABLE] ||
         this.collapsible(primary) && [Messages.NAVIGATE.COLLAPSIBLE] || [];
@@ -460,7 +459,7 @@ export abstract class AbstractWalker<T> implements Walker {
     if (prefix) {
       level.push(prefix);
     }
-    sre.Grammar.getInstance().setParameter('depth', oldDepth);
+    Grammar.getInstance().setParameter('depth', oldDepth);
     return aural.finalize(aural.merge(level.concat(expand)));
   }
 
@@ -469,7 +468,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Moving to the home position.
    */
   protected home(): Focus|null {
-    this.moved = WalkerExports.move.HOME;
+    this.moved = WalkerMoves.HOME;
     let focus =
         Focus.factory(this.rootId, [this.rootId], this.getRebuilt(), this.node);
     return focus;
@@ -504,7 +503,7 @@ export abstract class AbstractWalker<T> implements Walker {
     if (!expandable) {
       return this.getFocus();
     }
-    this.moved = WalkerExports.move.EXPAND;
+    this.moved = WalkerMoves.EXPAND;
     expandable.dispatchEvent(new Event('click'));
     return this.getFocus().clone();
   }
@@ -552,7 +551,7 @@ export abstract class AbstractWalker<T> implements Walker {
     if (!this.highlighter) {
       return;
     }
-    let state = WalkerExports.getState(this.id);
+    let state = WalkerState.getState(this.id);
     if (!state) {
       return;
     }
@@ -572,7 +571,7 @@ export abstract class AbstractWalker<T> implements Walker {
       }
       this.setFocus(focus);
     }
-    this.moved = WalkerExports.move.ENTER;
+    this.moved = WalkerMoves.ENTER;
   }
 
 
@@ -671,8 +670,8 @@ export abstract class AbstractWalker<T> implements Walker {
    * Voicing a virtual summary.
    */
   protected summary(): Focus|null {
-    this.moved = this.isSpeech() ? WalkerExports.move.SUMMARY :
-                                   WalkerExports.move.REPEAT;
+    this.moved = this.isSpeech() ? WalkerMoves.SUMMARY :
+                                   WalkerMoves.REPEAT;
     return this.getFocus().clone();
   }
 
@@ -698,7 +697,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   protected detail(): Focus|null {
     this.moved =
-        this.isSpeech() ? WalkerExports.move.DETAIL : WalkerExports.move.REPEAT;
+        this.isSpeech() ? WalkerMoves.DETAIL : WalkerMoves.REPEAT;
     return this.getFocus().clone();
   }
 
@@ -767,8 +766,9 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return A previous focus.
    */
   undo(): Focus {
+    let previous;
     do {
-      let previous = this.cursors.pop();
+      previous = this.cursors.pop();
     } while (previous && !previous.undo);
     if (!previous) {
       return this.getFocus();
@@ -781,11 +781,11 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  update(options) {
+  update(options: AxisMap) {
     this.generator.setOptions(options);
-    sre.System.getInstance().setupEngine(options);
-    sre.SpeechGeneratorFactory.generator('Tree').getSpeech(
-        this.node, this.getXml());
+    System.getInstance().setupEngine(options);
+    SpeechGeneratorFactory.generator('Tree').getSpeech(
+      this.node, this.getXml());
   }
 
 
@@ -802,12 +802,12 @@ export abstract class AbstractWalker<T> implements Walker {
       return this.getFocus();
     }
     // TODO: Check if domains exist for the current locale.
-    sre.Engine.DOMAIN_TO_STYLES[options.domain] = options.style;
+    EngineConst.DOMAIN_TO_STYLES[options.domain] = options.style;
     options.domain =
         options.domain === 'mathspeak' ? 'clearspeak' : 'mathspeak';
-    options.style = sre.Engine.DOMAIN_TO_STYLES[options.domain];
+    options.style = EngineConst.DOMAIN_TO_STYLES[options.domain];
     this.update(options);
-    this.moved = WalkerExports.move.REPEAT;
+    this.moved = WalkerMoves.REPEAT;
     return this.getFocus().clone();
   }
 
@@ -865,7 +865,7 @@ export abstract class AbstractWalker<T> implements Walker {
     }
     options.style = this.nextStyle(options.domain, options.style);
     this.update(options);
-    this.moved = WalkerExports.move.REPEAT;
+    this.moved = WalkerMoves.REPEAT;
     return this.getFocus().clone();
   }
 
@@ -875,8 +875,9 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   refocus() {
     let focus = this.getFocus();
+    let last;
     while (!focus.getNodes().length) {
-      let last = this.levels.peek();
+      last = this.levels.peek();
       let up = this.up();
       if (!up) {
         break;

@@ -29,6 +29,7 @@ import {SemanticProcessor} from '../semantic_tree/semantic_processor';
 import * as SemanticSkeletonExports from '../semantic_tree/semantic_skeleton';
 import {SemanticSkeleton} from '../semantic_tree/semantic_skeleton';
 import {SemanticTree} from '../semantic_tree/semantic_tree';
+import * as SemanticUtil from '../semantic_tree/semantic_util';
 
 import * as WalkerUtil from './walker_util';
 
@@ -36,21 +37,22 @@ import * as WalkerUtil from './walker_util';
 
 // Note that reassemble tree will not give you exactly the original tree, as the
 // mathml nodes and mathml tree components can not be reconstructed.
-/**
- * @param mathml The enriched MathML node.
- */
 export class RebuildStree {
   factory: SemanticNodeFactory;
 
   nodeDict: {[key: string]: SemanticNode} = {};
 
-  mmlRoot: Node;
+  mmlRoot: Element;
 
   streeRoot: SemanticNode;
 
   stree: SemanticTree;
 
   xml: Node;
+
+  /**
+   * @param mathml The enriched MathML node.
+   */
   constructor(public mathml: Element) {
     this.factory = new SemanticNodeFactory();
     this.mmlRoot = WalkerUtil.getSemanticRoot(mathml);
@@ -76,12 +78,12 @@ export class RebuildStree {
    * @param node The mml node.
    * @param leaf True if it is a leaf node.
    */
-  static addAttributes(snode: SemanticNode, node: Node, leaf: boolean) {
+  static addAttributes(snode: SemanticNode, node: Element, leaf: boolean) {
     if (leaf && node.childNodes.length === 1 &&
-        node.childNodes[0].nodeType !== sre.DomUtil.NodeType.TEXT_NODE) {
-      sre.SemanticUtil.addAttributes(snode, node.childNodes[0]);
+        node.childNodes[0].nodeType !== DomUtil.NodeType.TEXT_NODE) {
+      SemanticUtil.addAttributes(snode, node.childNodes[0] as Element);
     }
-    sre.SemanticUtil.addAttributes(snode, node);
+    SemanticUtil.addAttributes(snode, node);
   }
 
 
@@ -90,7 +92,7 @@ export class RebuildStree {
    * @param node The MathML node.
    * @return The corresponding semantic tree node.
    */
-  assembleTree(node: Node): SemanticNode {
+  assembleTree(node: Element): SemanticNode {
     let snode = this.makeNode(node);
     let children = WalkerUtil.splitAttribute(
         WalkerUtil.getAttribute(node, Attribute.CHILDREN));
@@ -332,7 +334,7 @@ export class RebuildStree {
    * @param collapsed Array of integer arrays.
    */
   private collapsedChildren_(collapsed: SemanticSkeletonExports.Sexp) {
-    let recurseCollapsed = goog.bind(function(coll) {
+    let recurseCollapsed = (coll: SemanticSkeletonExports.Sexp) => {
       let parent = this.nodeDict[coll[0]];
       parent.childNodes = [];
       for (let j = 1, l = coll.length; j < l; j++) {
@@ -343,7 +345,7 @@ export class RebuildStree {
                 recurseCollapsed(id));
       }
       return parent;
-    }, this);
+    };
     recurseCollapsed(collapsed);
   }
 }

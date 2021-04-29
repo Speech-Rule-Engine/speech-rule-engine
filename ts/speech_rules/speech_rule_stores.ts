@@ -27,7 +27,7 @@ import {OtherRules} from './other_rules';
 import {PrefixRules} from './other_rules';
 
 
-export const INIT_: boolean = false;
+export let INIT_: boolean = false;
 
 
 /**

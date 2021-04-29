@@ -23,14 +23,18 @@
 import {SemanticNode} from './semantic_node';
 
 
-
-/**
- * @param domain The domain name of the annotation.
- * @param name A name for the annotator.
- * @param func The annotation function.
- */
 export class SemanticAnnotator {
-  active = false;
+
+  /**
+   * Activation flag.
+   */
+  public active = false;
+
+  /**
+   * @param domain The domain name of the annotation.
+   * @param name A name for the annotator.
+   * @param func The annotation function.
+   */
   constructor(
       public domain: string, public name: string,
       public func: (p1: SemanticNode) => any) {}
@@ -40,30 +44,32 @@ export class SemanticAnnotator {
    * Annotates the tree bottom up.
    * @param node The semantic node.
    */
-  annotate(node: SemanticNode) {
-    node.childNodes.forEach(goog.bind(this.annotate, this));
+  public annotate(node: SemanticNode) {
+    node.childNodes.forEach(this.annotate.bind(this));
     node.addAnnotation(this.domain, this.func(node));
   }
+
 }
 
 
-
-/**
- * @param domain The domain name of the annotation.
- * @param name A name for the visitor.
- * @param func The annotation
- *     function.
- * @param opt_def The initial object that is used for annotation.
- */
 export class SemanticVisitor {
-  def: {[key: string]: any};
 
-  active = false;
+  /**
+   * Activation flag.
+   */
+  public active = false;
+
+  /**
+   * @param domain The domain name of the annotation.
+   * @param name A name for the visitor.
+   * @param func The annotation
+   *     function.
+   * @param def The initial object that is used for annotation.
+   */
   constructor(
-      public domain: string, public name: string,
-      public func: (p1: SemanticNode, p2: {[key: string]: any}) => any,
-      opt_def?: {[key: string]: any}) {
-    this.def = opt_def || {};
+    public domain: string, public name: string,
+    public func: (p1: SemanticNode, p2: {[key: string]: any}) => any,
+    public def: {[key: string]: any} = {}) {
   }
 
 
@@ -73,7 +79,7 @@ export class SemanticVisitor {
    * @param info The information to propagate.
    * @return The result with updated information.
    */
-  visit(node: SemanticNode, info: {[key: string]: any}): any {
+  public visit(node: SemanticNode, info: {[key: string]: any}): any {
     let result = this.func(node, info);
     node.addAnnotation(this.domain, result[0]);
     for (let i = 0, child; child = node.childNodes[i]; i++) {
@@ -81,4 +87,5 @@ export class SemanticVisitor {
     }
     return result;
   }
+
 }

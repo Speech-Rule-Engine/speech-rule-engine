@@ -56,10 +56,10 @@ export class MathMap {
      * Methods for parsing json structures.
      */
     this.addSymbols = {
-      functions: goog.bind(this.store.addFunctionRules, this.store),
-      symbols: goog.bind(this.store.addSymbolRules, this.store),
-      units: goog.bind(this.store.addUnitRules, this.store),
-      si: goog.bind(this.addSiPrefixes, this)
+      functions: this.store.addFunctionRules.bind(this.store),
+      symbols: this.store.addSymbolRules.bind(this.store),
+      units: this.store.addUnitRules.bind(this.store),
+      si: this.addSiPrefixes.bind(this)
     };
   }
 

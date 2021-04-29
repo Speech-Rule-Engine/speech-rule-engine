@@ -25,15 +25,8 @@ import {AbstractWalker} from './abstract_walker';
 
 
 
-/**
- * @override
- */
-export class DummyWalker extends sre.AbstractWalker {
-  constructor(node, generator, highlighter, xml) {
-    super(node, generator, highlighter, xml);
-  }
-
-
+export class DummyWalker extends AbstractWalker {
+  
   /**
    * @override
    */
@@ -89,4 +82,3 @@ export class DummyWalker extends sre.AbstractWalker {
    */
   initLevels() {}
 }
-goog.inherits(DummyWalker, AbstractWalker);

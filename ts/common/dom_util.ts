@@ -23,7 +23,7 @@
  */
 
 
-import {Engine, Mode, SREError} from './engine';
+import {Engine, EngineConst, SREError} from './engine';
 import SystemExternal from './system_external';
 import XpathUtil from './xpath_util';
 
@@ -81,7 +81,7 @@ export function parseInput(input: string): Element {
   }
   try {
     let doc = dp.parseFromString(clean_input, html ? 'text/html' : 'text/xml');
-    if (Engine.getInstance().mode === Mode.HTTP) {
+    if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
       XpathUtil.currentDocument = doc;
       return html ? doc.body.childNodes[0] : doc.documentElement;
     }
@@ -132,7 +132,7 @@ export function replaceNode(oldNode: Node, newNode: Node) {
  * @param tag The tagname of the node.
  * @return The newly create node.
  */
-export function createElement(tag: string): HTMLElement {
+export function createElement(tag: string): Element {
   return SystemExternal.document.createElement(tag);
 }
 
@@ -274,8 +274,8 @@ export function dataAttribute(attr: string): string {
  * @param attr The data attribute.
  * @return The value for that attribute.
  */
-export function getDataAttribute(node: HTMLElement, attr: string): string {
-  if (node.dataset) {
+export function getDataAttribute(node: Element, attr: string): string {
+  if (node instanceof HTMLElement) {
     return node.dataset[dataAttribute(attr)];
   }
   return node.getAttribute(attr);

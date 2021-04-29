@@ -20,12 +20,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import * as DomUtil from '../common/dom_util';
 import SystemExternal from '../common/system_external';
-
 import {SemanticMeaning} from './semantic_attr';
 import {SemanticAttr} from './semantic_attr';
 import * as SemanticUtil from './semantic_util';
-import * as DomUtil from '../common/dom_util';
 
 
 /**

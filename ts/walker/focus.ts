@@ -19,99 +19,28 @@
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
+
 import {SemanticNode} from '../semantic_tree/semantic_node';
-
 import {RebuildStree} from './rebuild_stree';
+import * as WalkerUtil from './walker_util';
 
 
-/**
- * @param nodes The semantic nodes of the focus.
- * @param primary The primary component of the focus.
- */
 export class Focus {
-  private semanticNodes_: SemanticNode[];
-
-  private semanticPrimary_: SemanticNode;
 
   /**
    * The DOM nodes of the focus.
    */
-  private domNodes_: (Node|null)[] = [];
+  private domNodes: (Element|null)[] = [];
 
   /**
    * The primary DOM component of the focus.
    */
-  private domPrimary_: Node = null;
+  private domPrimary_: Element = null;
 
   /**
    * The DOM nodes of the focus.
    */
-  private allNodes_: (Node|null)[] = [];
-  constructor(nodes: SemanticNode[], primary: SemanticNode) {
-    this.semanticNodes_ = nodes;
-    this.semanticPrimary_ = primary;
-  }
-
-
-  /**
-   * @return The nodes of the focus.
-   */
-  getSemanticPrimary(): SemanticNode {
-    return this.semanticPrimary_;
-  }
-
-
-  /**
-   * @return The nodes of the focus.
-   */
-  getSemanticNodes(): SemanticNode[] {
-    return this.semanticNodes_;
-  }
-
-
-  /**
-   * @return The nodes of the focus.
-   */
-  getNodes(): Node[] {
-    return this.allNodes_;
-  }
-
-
-  /**
-   * @return The nodes of the focus.
-   */
-  getDomNodes(): (Node|null)[] {
-    return this.domNodes_;
-  }
-
-
-  /**
-   * @return The primary node of the focus. Can be empty.
-   */
-  getDomPrimary(): Node {
-    return this.domPrimary_;
-  }
-
-
-  /**
-   * @override
-   */
-  toString() {
-    return 'Primary:' + this.domPrimary_ + ' Nodes:' + this.domNodes_;
-  }
-
-
-  /**
-   * Clones the focus.
-   * @return The new focus, containing the same component as this.
-   */
-  clone(): Focus {
-    let focus = new Focus(this.semanticNodes_, this.semanticPrimary_);
-    focus.domNodes_ = this.domNodes_;
-    focus.domPrimary_ = this.domPrimary_;
-    focus.allNodes_ = this.allNodes_;
-    return focus;
-  }
+  private allNodes: (Element|null)[] = [];
 
 
   /**
@@ -122,12 +51,10 @@ export class Focus {
    * @param dom The original DOM node.
    * @return The new focus.
    */
-  static factory(
+  public static factory(
       primaryId: string, nodeIds: string[], rebuilt: RebuildStree,
-      dom: Node): Focus {
-    let idFunc = function(id) {
-      return sre.WalkerUtil.getBySemanticId(dom, id);
-    };
+      dom: Element): Focus {
+    let idFunc = (id: string) => WalkerUtil.getBySemanticId(dom, id);
     let dict = rebuilt.nodeDict;
     let node = idFunc(primaryId);
     let nodes = nodeIds.map(idFunc);
@@ -135,9 +62,9 @@ export class Focus {
       return dict[primaryId];
     });
     let focus = new Focus(snodes, dict[primaryId]);
-    focus.domNodes_ = nodes;
+    focus.domNodes = nodes;
     focus.domPrimary_ = node;
-    focus.allNodes_ = Focus.generateAllVisibleNodes_(nodeIds, nodes, dict, dom);
+    focus.allNodes = Focus.generateAllVisibleNodes_(nodeIds, nodes, dict, dom);
     return focus;
   }
 
@@ -153,12 +80,10 @@ export class Focus {
    * @return The list of existing nodes in the DOM tree.
    */
   private static generateAllVisibleNodes_(
-      ids: string[], nodes: (Node|null)[], dict: {[key: string]: SemanticNode},
-      domNode: Node): Node[] {
-    let idFunc = function(id) {
-      return sre.WalkerUtil.getBySemanticId(domNode, id);
-    };
-    let result = [];
+    ids: string[], nodes: (Element|null)[],
+    dict: {[key: string]: SemanticNode}, domNode: Element): Element[] {
+    let idFunc = (id: string) => WalkerUtil.getBySemanticId(domNode, id);
+    let result: Element[] = [];
     for (let i = 0, l = ids.length; i < l; i++) {
       if (nodes[i]) {
         result.push(nodes[i]);
@@ -171,10 +96,80 @@ export class Focus {
       let childIds = virtual.childNodes.map(function(x) {
         return x.id.toString();
       });
-      let children = childIds.map(idFunc);
+      let children = childIds.map(idFunc) as Element[];
       result = result.concat(
           Focus.generateAllVisibleNodes_(childIds, children, dict, domNode));
     }
     return result;
   }
+
+
+  /**
+   * @param nodes The semantic nodes of the focus.
+   * @param primary The primary component of the focus.
+   */
+  constructor(private nodes: SemanticNode[],
+              private primary: SemanticNode) { }
+
+
+  /**
+   * @return The nodes of the focus.
+   */
+  public getSemanticPrimary(): SemanticNode {
+    return this.primary;
+  }
+
+
+  /**
+   * @return The nodes of the focus.
+   */
+  public getSemanticNodes(): SemanticNode[] {
+    return this.nodes;
+  }
+
+
+  /**
+   * @return The nodes of the focus.
+   */
+  public getNodes(): Element[] {
+    return this.allNodes;
+  }
+
+
+  /**
+   * @return The nodes of the focus.
+   */
+  public getDomNodes(): (Element|null)[] {
+    return this.domNodes;
+  }
+
+
+  /**
+   * @return The primary node of the focus. Can be empty.
+   */
+  public getDomPrimary(): Element {
+    return this.domPrimary_;
+  }
+
+
+  /**
+   * @override
+   */
+  public toString() {
+    return 'Primary:' + this.domPrimary_ + ' Nodes:' + this.domNodes;
+  }
+
+
+  /**
+   * Clones the focus.
+   * @return The new focus, containing the same component as this.
+   */
+  public clone(): Focus {
+    let focus = new Focus(this.nodes, this.primary);
+    focus.domNodes = this.domNodes;
+    focus.domPrimary_ = this.domPrimary_;
+    focus.allNodes = this.allNodes;
+    return focus;
+  }
+
 }

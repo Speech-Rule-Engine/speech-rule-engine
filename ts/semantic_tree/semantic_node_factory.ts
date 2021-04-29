@@ -29,41 +29,22 @@ import {SemanticNodeCollator} from './semantic_default';
 import {SemanticNode} from './semantic_node';
 
 
-
 export class SemanticNodeFactory {
+
+  /**
+   * Collator for leaf nodes.
+   */
+  public leafMap: SemanticNodeCollator = new SemanticNodeCollator();
+
+  /**
+   * Set of default values.
+   */
+  public defaultMap: SemanticDefault = new SemanticDefault();
+
   /**
    * ID counter.
    */
   private idCounter_: number = -1;
-
-  leafMap: SemanticNodeCollator;
-
-  defaultMap: SemanticDefault;
-  constructor() {
-    this.leafMap = new SemanticNodeCollator();
-
-    // /**
-    //  * @type {sre.SemanticMeaningCollator}
-    //  */
-    // this.leafMeaning = new sre.SemanticMeaningCollator();
-    this.defaultMap = new SemanticDefault();
-  }
-
-
-  /**
-   * Creates a new node object.
-   * @param opt_id Optional ID. It will be maxed with the current id.
-   * @return The newly created node.
-   */
-  private createNode_(opt_id?: number): SemanticNode {
-    if (typeof opt_id !== 'undefined') {
-      let id = opt_id;
-      this.idCounter_ = Math.max(this.idCounter_, id);
-    } else {
-      id = ++this.idCounter_;
-    }
-    return new SemanticNode(id);
-  }
 
 
   /**
@@ -71,7 +52,7 @@ export class SemanticNodeFactory {
    * @param id The node id.
    * @return The newly created node.
    */
-  makeNode(id: number): SemanticNode {
+  public makeNode(id: number): SemanticNode {
     return this.createNode_(id);
   }
 
@@ -81,7 +62,7 @@ export class SemanticNodeFactory {
    * @param mml The MathML tree.
    * @return The new node.
    */
-  makeUnprocessed(mml: Element): SemanticNode {
+  public makeUnprocessed(mml: Element): SemanticNode {
     let node = this.createNode_();
     node.mathml = [mml];
     node.mathmlTree = mml;
@@ -93,7 +74,7 @@ export class SemanticNodeFactory {
    * Create an empty leaf node.
    * @return The new node.
    */
-  makeEmptyNode(): SemanticNode {
+  public makeEmptyNode(): SemanticNode {
     let node = this.createNode_();
     node.type = SemanticAttr.Type.EMPTY;
     return node;
@@ -106,7 +87,7 @@ export class SemanticNodeFactory {
    * @param content The text content of the node.
    * @return The new node.
    */
-  makeContentNode(content: string): SemanticNode {
+  public makeContentNode(content: string): SemanticNode {
     let node = this.createNode_();
     node.updateContent(content);
     return node;
@@ -119,7 +100,8 @@ export class SemanticNodeFactory {
    * @param content The text content of the node.
    * @return The list of new nodes.
    */
-  makeMultipleContentNodes(num: number, content: string): SemanticNode[] {
+  public makeMultipleContentNodes(
+      num: number, content: string): SemanticNode[] {
     let nodes = [];
     for (let i = 0; i < num; i++) {
       nodes.push(this.makeContentNode(content));
@@ -134,7 +116,7 @@ export class SemanticNodeFactory {
    * @param font The font name.
    * @return The new node.
    */
-  makeLeafNode(content: string, font: SemanticAttr.Font): SemanticNode {
+  public makeLeafNode(content: string, font: SemanticAttr.Font): SemanticNode {
     if (!content) {
       return this.makeEmptyNode();
     }
@@ -160,7 +142,7 @@ export class SemanticNodeFactory {
    * @param opt_content Content string if there is any.
    * @return The new node.
    */
-  makeBranchNode(
+  public makeBranchNode(
       type: SemanticAttr.Type, children: SemanticNode[],
       contentNodes: SemanticNode[], opt_content?: string): SemanticNode {
     let node = this.createNode_();
@@ -176,4 +158,19 @@ export class SemanticNodeFactory {
     });
     return node;
   }
+
+  /**
+   * Creates a new node object.
+   * @param opt_id Optional ID. It will be maxed with the current id.
+   * @return The newly created node.
+   */
+  private createNode_(id?: number): SemanticNode {
+    if (typeof id !== 'undefined') {
+      this.idCounter_ = Math.max(this.idCounter_, id);
+    } else {
+      id = ++this.idCounter_;
+    }
+    return new SemanticNode(id);
+  }
+
 }

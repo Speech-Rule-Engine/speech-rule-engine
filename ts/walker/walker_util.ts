@@ -41,7 +41,8 @@ export function splitAttribute(attr: string|null): string[] {
  * @param attr The semantic data attribute.
  * @return The value for that attribute.
  */
-export function getAttribute(node: Node, attr: EnrichMathml.Attribute): string {
+export function getAttribute(node: Element,
+                             attr: EnrichMathml.Attribute): string {
   return DomUtil.getDataAttribute(node, attr);
 }
 
@@ -52,7 +53,7 @@ export function getAttribute(node: Node, attr: EnrichMathml.Attribute): string {
  * @return The node with the embedded root. If we cannot find one, the
  *     input node is returned.
  */
-export function getSemanticRoot(node: Node): Node {
+export function getSemanticRoot(node: Element): Element {
   if (node.hasAttribute(EnrichMathml.Attribute.TYPE) &&
       !node.hasAttribute(EnrichMathml.Attribute.PARENT)) {
     return node;
@@ -75,7 +76,7 @@ export function getSemanticRoot(node: Node): Node {
  * @param id The id of a semantic node.
  * @return The node for that id.
  */
-export function getBySemanticId(root: Node, id: string): Node {
+export function getBySemanticId(root: Element, id: string): Element {
   if (root.getAttribute(EnrichMathml.Attribute.ID) === id) {
     return root;
   }
