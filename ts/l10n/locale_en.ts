@@ -20,12 +20,14 @@
  */
 
 
+import {Grammar} from '../rule_engine/grammar';
 import * as Locale from './locale';
-import * as en from './numbers_en';
+import {Messages} from './messages';
+import NUMBERS from './numbers_en';
+import * as tr from './transformers';
 
 
-
-export const en: Locale.Messages = {
+export const en: Messages = {
   MS: {
     START: 'Start',
     FRAC_V: 'Fraction',
@@ -59,23 +61,22 @@ export const en: Locale.Messages = {
   MS_FUNC: {
     FRAC_NEST_DEPTH: Locale.vulgarNestingDepth,
     RADICAL_NEST_DEPTH: Locale.nestingToString,
-    COMBINE_ROOT_INDEX: function(postfix, index) {
+    COMBINE_ROOT_INDEX: function(postfix: string, _index: string) {
       return postfix;
     },
-    COMBINE_NESTED_FRACTION: function(a, b, c) {
+    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
       return a + b + c;
     },
-    COMBINE_NESTED_RADICAL: function(a, b, c) {
+    COMBINE_NESTED_RADICAL: function(a: string, b: string, c: string) {
       return a + b + c;
     },
-    FONT_REGEXP: function(font) {
+    FONT_REGEXP: function(font: string) {
       return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
     }
   },
 
-
-
   MS_ROOT_INDEX: {},
+
   FONT: {
     'bold': 'bold',
     'bold-fraktur': 'bold fraktur',
@@ -107,12 +108,12 @@ export const en: Locale.Messages = {
     'sub': 'sub',
     'circled': 'circled',
     'parenthesized': 'parenthesized',
-    'period': ['period', Locale.postfixCombiner],
+    'period': ['period', tr.postfixCombiner],
     'negative-circled': 'black circled',
     'double-circled': 'double circled',
     'circled-sans-serif': 'circled sans serif',
     'negative-circled-sans-serif': 'black circled sans serif',
-    'comma': ['comma', Locale.postfixCombiner],
+    'comma': ['comma', tr.postfixCombiner],
     'squared': 'squared',
     'negative-squared': 'black squared'
   },
@@ -178,18 +179,23 @@ export const en: Locale.Messages = {
     JOINER_FRAC: ''
   },
 
-  SI: function(prefix, unit) {
-    let abbr = {'megaohm': 'megohm', 'kiloohm': 'kilohm'};
+  SI: function(prefix: string, unit: string) {
+    let abbr: {[key: string]: string} = {
+      'megaohm': 'megohm',
+      'kiloohm': 'kilohm'
+    };
     let si = prefix + unit;
     return abbr[si] || si;
   },
 
-  PLURAL: function(unit) {
+  UNIT_TIMES: '',
+
+  PLURAL: function(unit: string) {
     return /.*s$/.test(unit) ? unit : unit + 's';
   },
 
 
-  NUMBERS: en.NUMBERS,
+  NUMBERS: NUMBERS,
   ALPHABETS: {
     latinSmall: [
       'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
@@ -219,7 +225,7 @@ export const en: Locale.Messages = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-        return n === 0 ? 'zero' : en.numberToWords(n);
+        return n === 0 ? 'zero' : NUMBERS.numberToWords(n);
       },
       mathspeak: function(n) {
         return n.toString();
@@ -230,7 +236,7 @@ export const en: Locale.Messages = {
     },
     letter: {
       default: function(n) {
-        return n;
+        return n.toString();
       }
     }
   },
@@ -241,11 +247,10 @@ export const en: Locale.Messages = {
     digitPrefix: {default: ''}
   },
 
-  ALPHABET_COMBINER: Locale.prefixCombiner
+  ALPHABET_COMBINER: tr.prefixCombiner
 };
 
 
-
-sre.Grammar.getInstance().setCorrection('noarticle', function(name) {
-  return sre.Grammar.getInstance().getParameter('noArticle') ? '' : name;
+Grammar.getInstance().setCorrection('noarticle', (name: string) => {
+  return Grammar.getInstance().getParameter('noArticle') ? '' : name;
 });

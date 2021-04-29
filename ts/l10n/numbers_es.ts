@@ -17,6 +17,8 @@
  * @fileoverview Translating numbers into Spanish.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
+
+import {Grammar} from '../rule_engine/grammar';
 import {Numbers} from './numbers';
 
 //
@@ -28,7 +30,7 @@ import {Numbers} from './numbers';
 /**
  * String representation of zero to twenty-nine.
  */
-export const onesNumbers_: string[] = [
+const onesNumbers_: string[] = [
   '',
   'uno',
   'dos',
@@ -65,7 +67,7 @@ export const onesNumbers_: string[] = [
 /**
  * String representation of thirty to ninety.
  */
-export const tensNumbers_: string[] = [
+const tensNumbers_: string[] = [
   '', '', '', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta',
   'ochenta', 'noventa'
 ];
@@ -74,7 +76,7 @@ export const tensNumbers_: string[] = [
 /**
  * String representation of one hundred to nine hundred.
  */
-export const hundredsNumbers_: string[] = [
+const hundredsNumbers_: string[] = [
   '', 'cien', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos',
   'seiscientos', 'setecientos', 'ochocientos', 'novecientos'
 ];
@@ -83,7 +85,7 @@ export const hundredsNumbers_: string[] = [
 /**
  * String representation of thousand to decillion.
  */
-export const largeNumbers_: string[] = [
+const largeNumbers_: string[] = [
   '',           'mil',
   'millón',     'mil millónes',
   'billón',     'mil billónes',
@@ -100,11 +102,11 @@ export const largeNumbers_: string[] = [
 
 /**
  * Turns a tens position in a number into words.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The word for the tens position.
  */
-export function tensToWords_(number: number): string {
-  let n = number % 100;
+function tensToWords_(num: number): string {
+  let n = num % 100;
   if (n < 30) {
     return onesNumbers_[n];
   }
@@ -116,11 +118,11 @@ export function tensToWords_(number: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The string representation of that number.
  */
-export function hundredsToWords_(number: number): string {
-  let n = number % 1000;
+function hundredsToWords_(num: number): string {
+  let n = num % 1000;
   let hundred = Math.floor(n / 100);
   let hundreds = hundredsNumbers_[hundred];
   let tens = tensToWords_(n % 100);
@@ -138,17 +140,17 @@ export function hundredsToWords_(number: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The string representation of that number.
  */
-export function numberToWords(number: number): string {
-  if (number >= Math.pow(10, 36)) {
-    return number.toString();
+function numberToWords(num: number): string {
+  if (num >= Math.pow(10, 36)) {
+    return num.toString();
   }
   let pos = 0;
   let str = '';
-  while (number > 0) {
-    let hundreds = number % 1000;
+  while (num > 0) {
+    let hundreds = num % 1000;
     if (hundreds) {
       let large = largeNumbers_[pos];
       let huns = hundredsToWords_(hundreds);
@@ -162,7 +164,7 @@ export function numberToWords(number: number): string {
         str = hundredsToWords_(hundreds) + ' ' + large + (str ? ' ' + str : '');
       }
     }
-    number = Math.floor(number / 1000);
+    num = Math.floor(num / 1000);
     pos++;
   }
   return str;
@@ -173,7 +175,7 @@ export function numberToWords(number: number): string {
 /**
  * String representation of zero to nineteen.
  */
-export const onesOrdinals_: string[] = [
+const onesOrdinals_: string[] = [
   'primera', 'segunda', 'tercera', 'cuarta', 'quinta', 'sexta', 'séptima',
   'octava', 'novena', 'décima', 'undécima', 'duodécima'
 ];
@@ -182,7 +184,7 @@ export const onesOrdinals_: string[] = [
 /**
  * String representation of twenty to ninety.
  */
-export const tensOrdinals_: string[] = [
+const tensOrdinals_: string[] = [
   'décima', 'vigésima', 'trigésima', 'cuadragésima', 'quincuagésima',
   'sexagésima', 'septuagésima', 'octogésima', 'nonagésima'
 ];
@@ -191,7 +193,7 @@ export const tensOrdinals_: string[] = [
 /**
  * String representation of thousand to decillion.
  */
-export const hundredsOrdinals_: string[] = [
+const hundredsOrdinals_: string[] = [
   'centésima', 'ducentésima', 'tricentésima', 'cuadringentésima',
   'quingentésima', 'sexcentésima', 'septingentésima', 'octingentésima',
   'noningentésima'
@@ -204,7 +206,7 @@ export const hundredsOrdinals_: string[] = [
  * @param plural A flag indicating if the ordinal is in plural.
  * @return The ordinal of the number as string.
  */
-export function numberToOrdinal(num: number, plural: boolean): string {
+function numberToOrdinal(num: number, _plural: boolean): string {
   if (num > 1999) {
     return num.toString() + 'a';
   }
@@ -243,19 +245,22 @@ export function numberToOrdinal(num: number, plural: boolean): string {
 
 /**
  * Creates a simple ordinal string from a number.
- * @param number The number to be converted.
+ * @param num The number to be converted.
  * @return The ordinal string.
  */
-export function simpleOrdinal(number: number): string {
-  let gender = (sre.Grammar.getInstance().getParameter('gender') as string);
-  return number.toString() + (gender === 'female' ? 'a' : 'o');
+function simpleOrdinal(num: number): string {
+  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  return num.toString() + (gender === 'female' ? 'a' : 'o');
 }
 
 
-export const NUMBERS: Numbers = {
+const NUMBERS: Numbers = {
   // wordOrdinal: sre.Numbers.es.wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
   numberToOrdinal: numberToOrdinal,
   vulgarSep: '-'
 };
+
+
+export default NUMBERS;

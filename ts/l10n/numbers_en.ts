@@ -19,14 +19,13 @@
  */
 
 
-import * as NumbersExports from './numbers';
 import {Numbers} from './numbers';
 
 
 /**
  * String representation of zero to nineteen.
  */
-export const onesNumbers_: string[] = [
+const onesNumbers_: string[] = [
   '',        'one',     'two',       'three',    'four',
   'five',    'six',     'seven',     'eight',    'nine',
   'ten',     'eleven',  'twelve',    'thirteen', 'fourteen',
@@ -37,7 +36,7 @@ export const onesNumbers_: string[] = [
 /**
  * String representation of twenty to ninety.
  */
-export const tensNumbers_: string[] = [
+const tensNumbers_: string[] = [
   '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
   'ninety'
 ];
@@ -46,7 +45,7 @@ export const tensNumbers_: string[] = [
 /**
  * String representation of thousand to decillion.
  */
-export const largeNumbers_: string[] = [
+const largeNumbers_: string[] = [
   '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
   'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
   'decillion'
@@ -55,11 +54,11 @@ export const largeNumbers_: string[] = [
 
 /**
  * Translates a number of up to twelve digits into a string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The string representation of that number.
  */
-export function hundredsToWords_(number: number): string {
-  let n = number % 1000;
+function hundredsToWords_(num: number): string {
+  let n = num % 1000;
   let str = '';
   str += onesNumbers_[Math.floor(n / 100)] ?
       onesNumbers_[Math.floor(n / 100)] + NUMBERS.numSep + 'hundred' :
@@ -77,22 +76,22 @@ export function hundredsToWords_(number: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The string representation of that number.
  */
-export function numberToWords(number: number): string {
-  if (number >= Math.pow(10, 36)) {
-    return number.toString();
+function numberToWords(num: number): string {
+  if (num >= Math.pow(10, 36)) {
+    return num.toString();
   }
   let pos = 0;
   let str = '';
-  while (number > 0) {
-    let hundreds = number % 1000;
+  while (num > 0) {
+    let hundreds = num % 1000;
     if (hundreds) {
-      str = hundredsToWords_(number % 1000) +
+      str = hundredsToWords_(num % 1000) +
           (pos ? '-' + largeNumbers_[pos] + '-' : '') + str;
     }
-    number = Math.floor(number / 1000);
+    num = Math.floor(num / 1000);
     pos++;
   }
   return str.replace(/-$/, '');
@@ -106,7 +105,7 @@ export function numberToWords(number: number): string {
  * @param plural A flag indicating if the ordinal is in plural.
  * @return The ordinal of the number as string.
  */
-export function numberToOrdinal(num: number, plural: boolean): string {
+function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 1) {
     return plural ? 'oneths' : 'oneth';
   }
@@ -120,11 +119,11 @@ export function numberToOrdinal(num: number, plural: boolean): string {
 
 /**
  * Creates a word ordinal string from a number.
- * @param number The number to be converted.
+ * @param num The number to be converted.
  * @return The ordinal string.
  */
-export function wordOrdinal(number: number): string {
-  let ordinal = numberToWords(number);
+function wordOrdinal(num: number): string {
+  let ordinal = numberToWords(num);
   if (ordinal.match(/one$/)) {
     ordinal = ordinal.slice(0, -3) + 'first';
   } else if (ordinal.match(/two$/)) {
@@ -150,16 +149,16 @@ export function wordOrdinal(number: number): string {
 
 /**
  * Creates a simple ordinal string from a number.
- * @param number The number to be converted.
+ * @param num The number to be converted.
  * @return The ordinal string.
  */
-export function simpleOrdinal(number: number): string {
-  let tens = number % 100;
-  let numStr = number.toString();
+function simpleOrdinal(num: number): string {
+  let tens = num % 100;
+  let numStr = num.toString();
   if (tens > 10 && tens < 20) {
     return numStr + 'th';
   }
-  switch (number % 10) {
+  switch (num % 10) {
     case 1:
       return numStr + 'st';
     case 2:
@@ -172,7 +171,7 @@ export function simpleOrdinal(number: number): string {
 }
 
 
-export const NUMBERS: Numbers = {
+const NUMBERS: Numbers = {
   wordOrdinal: wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
@@ -180,4 +179,6 @@ export const NUMBERS: Numbers = {
   vulgarSep: ' ',
   numSep: ' '
 };
+
+export default NUMBERS;
 // TODO: For simple speech output this should be different.

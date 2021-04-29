@@ -23,14 +23,14 @@
 //
 
 
-import * as NumbersExports from './numbers';
+import {Grammar} from '../rule_engine/grammar';
 import {Numbers} from './numbers';
 
 
 /**
  * String representation of zero to nineteen.
  */
-export const onesNumbers_: string[] = [
+const onesNumbers_: string[] = [
   '',         'uno',    'due',         'tre',      'quattro',
   'cinque',   'sei',    'sette',       'otto',     'nove',
   'dieci',    'undici', 'dodici',      'tredici',  'quattordici',
@@ -41,7 +41,7 @@ export const onesNumbers_: string[] = [
 /**
  * String representation of twenty to ninety.
  */
-export const tensNumbers_: string[] = [
+const tensNumbers_: string[] = [
   '', '', 'venti', 'trenta', 'quaranta', 'cinquanta', 'sessanta', 'settanta',
   'ottanta', 'novanta'
 ];
@@ -50,7 +50,7 @@ export const tensNumbers_: string[] = [
 /**
  * String representation of thousand to decillion.
  */
-export const largeNumbers_: string[] = [
+const largeNumbers_: string[] = [
   '', 'mille', 'milione', 'miliardo', 'bilione', 'biliardo', 'trilione',
   'triliardo', 'quadrilione', 'quadriliardo', 'quntilione', 'quintiliardo'
 ];
@@ -58,11 +58,11 @@ export const largeNumbers_: string[] = [
 
 /**
  * Translates a number of up to twelve digits into a string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The string representation of that number.
  */
-export function hundredsToWords_(number: number): string {
-  let n = number % 1000;
+function hundredsToWords_(num: number): string {
+  let n = num % 1000;
   let str = '';
   str += onesNumbers_[Math.floor(n / 100)] ?
       onesNumbers_[Math.floor(n / 100)] + NUMBERS.numSep + 'cento' :
@@ -89,25 +89,25 @@ export function hundredsToWords_(number: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The string representation of that number.
  */
-export function numberToWords(number: number): string {
-  if (number >= Math.pow(10, 36)) {
-    return number.toString();
+function numberToWords(num: number): string {
+  if (num >= Math.pow(10, 36)) {
+    return num.toString();
   }
-  if (number === 1 && sre.Grammar.getInstance().getParameter('fraction')) {
+  if (num === 1 && Grammar.getInstance().getParameter('fraction')) {
     return 'un';
   }
   let pos = 0;
   let str = '';
-  while (number > 0) {
-    let hundreds = number % 1000;
+  while (num > 0) {
+    let hundreds = num % 1000;
     if (hundreds) {
-      str = hundredsToWords_(number % 1000) +
+      str = hundredsToWords_(num % 1000) +
           (pos ? '-' + largeNumbers_[pos] + '-' : '') + str;
     }
-    number = Math.floor(number / 1000);
+    num = Math.floor(num / 1000);
     pos++;
   }
   return str.replace(/-$/, '');
@@ -121,7 +121,7 @@ export function numberToWords(number: number): string {
  * @param plural A flag indicating if the ordinal is in plural.
  * @return The ordinal of the number as string.
  */
-export function numberToOrdinal(num: number, plural: boolean): string {
+function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 2) {
     return plural ? 'mezzi' : 'mezzo';
   }
@@ -137,7 +137,7 @@ export function numberToOrdinal(num: number, plural: boolean): string {
 /**
  * String representation of ordinals from zero to ten.
  */
-export const onesOrdinals_: string[] = [
+const onesOrdinals_: string[] = [
   'zero', 'primo', 'secondo', 'terzo', 'quarto', 'quinto', 'sesto', 'settimo',
   'ottavo', 'nono', 'decimo'
 ];
@@ -145,33 +145,33 @@ export const onesOrdinals_: string[] = [
 
 /**
  * Creates a word ordinal string from a number.
- * @param number The number to be converted.
+ * @param num The number to be converted.
  * @return The ordinal string.
  */
-export function wordOrdinal(number: number): string {
-  let gender = (sre.Grammar.getInstance().getParameter('gender') as string);
+function wordOrdinal(num: number): string {
+  let gender = (Grammar.getInstance().getParameter('gender') as string);
   let postfix = gender === 'male' ? 'o' : 'a';
-  let ordinal = onesOrdinals_[number];
+  let ordinal = onesOrdinals_[num];
   if (ordinal) {
     return ordinal.slice(0, -1) + postfix;
   }
-  ordinal = numberToWords(number);
+  ordinal = numberToWords(num);
   return ordinal.slice(0, -1) + 'esim' + postfix;
 }
 
 
 /**
  * Creates a simple ordinal string from a number.
- * @param number The number to be converted.
+ * @param num The number to be converted.
  * @return The ordinal string.
  */
-export function simpleOrdinal(number: number): string {
-  let gender = (sre.Grammar.getInstance().getParameter('gender') as string);
-  return number.toString() + (gender === 'male' ? 'o' : 'a');
+function simpleOrdinal(num: number): string {
+  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  return num.toString() + (gender === 'male' ? 'o' : 'a');
 }
 
 
-export const NUMBERS: Numbers = {
+const NUMBERS: Numbers = {
   wordOrdinal: wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
@@ -179,3 +179,6 @@ export const NUMBERS: Numbers = {
   vulgarSep: ' ',
   numSep: ''
 };
+
+
+export default NUMBERS;

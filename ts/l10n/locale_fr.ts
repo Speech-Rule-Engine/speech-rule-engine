@@ -23,12 +23,13 @@
 // This work was sponsored by TextHelp
 //
 
-import * as Locale from './locale';
-import * as fr from './numbers_fr';
+import {combinePostfixIndex, nestingToString} from './locale';
+import {Messages} from './messages';
+import NUMBERS from './numbers_fr';
+import {prefixCombiner} from './transformers';
 
 
-
-export const fr: Locale.Messages = {
+export const fr: Messages = {
   MS: {
     START: 'début',
     FRAC_V: 'fraction',
@@ -62,18 +63,18 @@ export const fr: Locale.Messages = {
   },
 
   MS_FUNC: {
-    FRAC_NEST_DEPTH: function(node) {
+    FRAC_NEST_DEPTH: function(_node: string) {
       return false;
     },
-    RADICAL_NEST_DEPTH: Locale.nestingToString,
-    COMBINE_ROOT_INDEX: Locale.combinePostfixIndex,
-    COMBINE_NESTED_FRACTION: function(a, b, c) {
+    RADICAL_NEST_DEPTH: nestingToString,
+    COMBINE_ROOT_INDEX: combinePostfixIndex,
+    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
       return c.replace(/ $/g, '') + b + a;
     },
-    COMBINE_NESTED_RADICAL: function(a, b, c) {
+    COMBINE_NESTED_RADICAL: function(a: string, _b: string, c: string) {
       return c + ' ' + a;
     },
-    FONT_REGEXP: function(font) {
+    FONT_REGEXP: function(font: string) {
       return RegExp(' (en |)' + font + '$');
     }
   },
@@ -109,8 +110,8 @@ export const fr: Locale.Messages = {
   EMBELLISH: {
     // Embellishments
     // TODO: Here we need specialist combiners!
-    'super': ['exposant', Locale.prefixCombiner],
-    'sub': ['indice', Locale.prefixCombiner],
+    'super': ['exposant', prefixCombiner],
+    'sub': ['indice', prefixCombiner],
     'circled': 'encerclé',
     'parenthesized': 'entre parenthèses',
     'period': 'un point',
@@ -194,16 +195,18 @@ export const fr: Locale.Messages = {
     JOINER_FRAC: ' '
   },
 
-  SI: function(prefix, unit) {
+  SI: function(prefix: string, unit: string) {
     return prefix + unit;
   },
 
-  PLURAL: function(unit) {
+  UNIT_TIMES: '',
+
+  PLURAL: function(unit: string) {
     return /.*s$/.test(unit) ? unit : unit + 's';
   },
 
 
-  NUMBERS: fr.NUMBERS,
+  NUMBERS: NUMBERS,
   ALPHABETS: {
     latinSmall: [
       'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
@@ -233,7 +236,7 @@ export const fr: Locale.Messages = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-        return n === 0 ? 'zero' : fr.numberToWords(n);
+        return n === 0 ? 'zero' : NUMBERS.numberToWords(n);
       },
       mathspeak: function(n) {
         return n.toString();
@@ -244,7 +247,7 @@ export const fr: Locale.Messages = {
     },
     letter: {
       default: function(n) {
-        return n;
+        return n.toString();
       }
     }
   },

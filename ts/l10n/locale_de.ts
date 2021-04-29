@@ -24,11 +24,12 @@
 //
 
 import {Grammar} from '../rule_engine/grammar';
-import * as Locale from './locale';
-import * as de from './numbers_de';
+import {localFont, vulgarNestingDepth} from './locale';
+import {Messages} from './messages';
+import NUMBERS from './numbers_de';
 
 
-let germanPrefixCombiner = function(letter, font, cap) {
+let germanPrefixCombiner = function(letter: string, font: string, cap: string) {
   if (cap === 's') {
     font = font.split(' ')
                .map(function(x) {
@@ -42,14 +43,14 @@ let germanPrefixCombiner = function(letter, font, cap) {
 };
 
 
-let germanPostfixCombiner = function(letter, font, cap) {
+let germanPostfixCombiner = function(
+  letter: string, font: string, cap: string) {
   letter = !cap || cap === 's' ? letter : cap + ' ' + letter;
   return font ? letter + ' ' + font : letter;
 };
 
 
-
-export const de: Locale.Messages = {
+export const de: Messages = {
   MS: {
     START: 'Anfang',
     FRAC_V: 'Bruch',
@@ -81,23 +82,23 @@ export const de: Locale.Messages = {
   },
 
   MS_FUNC: {
-    FRAC_NEST_DEPTH: Locale.vulgarNestingDepth,
-    RADICAL_NEST_DEPTH: function(x) {
+    FRAC_NEST_DEPTH: vulgarNestingDepth,
+    RADICAL_NEST_DEPTH: function(x: number) {
       return x > 1 ? de.NUMBERS.numberToWords(x) + 'fach' : '';
     },
-    COMBINE_ROOT_INDEX: function(postfix, index) {
+    COMBINE_ROOT_INDEX: function(postfix: string, index: string) {
       let root = index ? index + 'wurzel' : '';
       return postfix.replace('Wurzel', root);
     },
-    COMBINE_NESTED_FRACTION: function(a, b, c) {
+    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
       return a + b + c;
     },
-    COMBINE_NESTED_RADICAL: function(a, b, c) {
+    COMBINE_NESTED_RADICAL: function(a: string, b: string, c: string) {
       a = c.match(/exponent$/) ? a + 'r' : a;
       let count = (b ? b + ' ' : '') + a;
       return c.match(/ /) ? c.replace(/ /, ' ' + count + ' ') : count + ' ' + c;
     },
-    FONT_REGEXP: function(font) {
+    FONT_REGEXP: function(font: string) {
       font = font.split(' ')
                  .map(function(x) {
                    return x.replace(/s$/, '(|s)');
@@ -213,16 +214,18 @@ export const de: Locale.Messages = {
     JOINER_FRAC: ' '
   },
 
-  SI: function(prefix, unit) {
+  SI: function(prefix: string, unit: string) {
     return prefix + unit.toLowerCase();
   },
 
-  PLURAL: function(unit) {
+  UNIT_TIMES: '',
+
+  PLURAL: function(unit: string) {
     return unit;
   },
 
 
-  NUMBERS: de.NUMBERS,
+  NUMBERS: NUMBERS,
   ALPHABETS: {
     latinSmall: [
       'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
@@ -252,19 +255,19 @@ export const de: Locale.Messages = {
 
   ALPHABET_TRANSFORMERS: {
     digit: {
-      default: function(n) {
-        return n === 0 ? 'null' : de.numberToWords(n);
+      default: function(n: number) {
+        return n === 0 ? 'null' : de.NUMBERS.numberToWords(n);
       },
-      mathspeak: function(n) {
+      mathspeak: function(n: number) {
         return n.toString();
       },
-      clearspeak: function(n) {
+      clearspeak: function(n: number) {
         return n.toString();
       }
     },
     letter: {
-      default: function(n) {
-        return n;
+      default: function(n: number) {
+        return n.toString();
       }
     }
   },
@@ -279,18 +282,11 @@ export const de: Locale.Messages = {
 };
 
 
+Grammar.getInstance().setCorrection(
+  'correctOne', (num: string) => num.replace(/^eins$/, 'ein'));
 
-Grammar.getInstance().setCorrection('correctOne', function(number) {
-  return number.replace(/^eins$/, 'ein');
-});
-
-
-Grammar.getInstance().setCorrection('localFontNumber', function(font) {
-  let realFont = sre.Messages.FONT[font];
-  if (realFont === undefined) {
-    realFont = font || '';
-  }
-  realFont = typeof realFont === 'string' ? realFont : realFont[0];
+Grammar.getInstance().setCorrection('localFontNumber', (font: string) => {
+  let realFont = localFont(font);
   return realFont.split(' ')
       .map(function(x) {
         return x.replace(/s$/, '');
@@ -298,13 +294,10 @@ Grammar.getInstance().setCorrection('localFontNumber', function(font) {
       .join(' ');
 });
 
+Grammar.getInstance().setCorrection(
+  'lowercase', (name: string) => name.toLowerCase());
 
-Grammar.getInstance().setCorrection('lowercase', function(name) {
-  return name.toLowerCase();
-});
-
-
-Grammar.getInstance().setCorrection('article', function(name) {
+Grammar.getInstance().setCorrection('article', (name: string) => {
   let decl = Grammar.getInstance().getParameter('case');
   if (decl === 'dative') {
     return {'der': 'dem', 'die': 'der', 'das': 'dem'}[name];
@@ -312,8 +305,7 @@ Grammar.getInstance().setCorrection('article', function(name) {
   return name;
 });
 
-
-Grammar.getInstance().setCorrection('masculine', function(name) {
+Grammar.getInstance().setCorrection('masculine', (name: string) => {
   let decl = Grammar.getInstance().getParameter('case');
   if (decl === 'dative') {
     return name + 'n';

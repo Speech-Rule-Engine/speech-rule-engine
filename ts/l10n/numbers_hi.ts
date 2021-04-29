@@ -23,15 +23,14 @@
 //
 
 
-
-import * as NumbersExports from './numbers';
+import {Grammar} from '../rule_engine/grammar';
 import {Numbers} from './numbers';
 
 
 /**
  * String representation of zero to nineteen.
  */
-export const onesNumbers_: string[] = [
+const onesNumbers_: string[] = [
   '',       'एक',     'दो',     'तीन',    'चार',     'पाँच',    'छः',
   'सात',    'आठ',     'नौ',     'दस',     'ग्यारह',   'बारह',   'तेरह',
   'चौदह',   'पंद्रह',   'सोलह',   'सत्रह',   'अठारह',   'उन्नीस',  'बीस',
@@ -50,14 +49,14 @@ export const onesNumbers_: string[] = [
 ];
 
 
-export const hundred_: string = 'सौ';
+const hundred_: string = 'सौ';
 // hundred: 1 - 9 hundred  (sau)
 
 
 /**
  * String representation of thousand to decillion.
  */
-export const largeNumbers_: string[] = [
+const largeNumbers_: string[] = [
   'हजार',     // thousand: 1 - 99 thousand (hazaar)
   'लाख',      // thousand/million: 100 thousand - 9 million (lakh)
   'करोड़',     // million: 10 - 999 million (caror)
@@ -75,11 +74,11 @@ export const largeNumbers_: string[] = [
 
 /**
  * Translates a number of up to twelve digits into a string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The string representation of that number.
  */
-export function hundredsToWords_(number: number): string {
-  let n = number % 1000;
+function hundredsToWords_(num: number): string {
+  let n = num % 1000;
   let str = '';
   str += onesNumbers_[Math.floor(n / 100)] ?
       onesNumbers_[Math.floor(n / 100)] + NUMBERS.numSep + hundred_ :
@@ -95,35 +94,35 @@ export function hundredsToWords_(number: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The string representation of that number.
  */
-export function numberToWords(number: number): string {
-  if (number >= Math.pow(10, 32)) {
-    return number.toString();
+function numberToWords(num: number): string {
+  if (num >= Math.pow(10, 32)) {
+    return num.toString();
   }
   let pos = 0;
   let str = '';
-  let hundreds = number % 1000;
+  let hundreds = num % 1000;
   let hundredsWords = hundredsToWords_(hundreds);
-  number = Math.floor(number / 1000);
-  if (!number) {
+  num = Math.floor(num / 1000);
+  if (!num) {
     return hundredsWords;
   }
-  while (number > 0) {
-    let thousands = number % 100;
+  while (num > 0) {
+    let thousands = num % 100;
     if (thousands) {
       str = onesNumbers_[thousands] + NUMBERS.numSep + largeNumbers_[pos] +
           (str ? NUMBERS.numSep + str : '');
     }
-    number = Math.floor(number / 100);
+    num = Math.floor(num / 100);
     pos++;
   }
   return hundredsWords ? str + NUMBERS.numSep + hundredsWords : str;
 }
 
 
-export const smallDenominators_: string[] = [
+const smallDenominators_: string[] = [
   '', 'एकांश', 'द्वितीयांश', 'तृतीयांश', 'चतुर्थांश', 'पंचमांश', 'षष्टांश', 'सप्तमांश',
   'अष्टांश', 'नवमांश', 'दशांश'
 ];
@@ -136,7 +135,7 @@ export const smallDenominators_: string[] = [
  * @param plural A flag indicating if the ordinal is in plural.
  * @return The ordinal of the number as string.
  */
-export function numberToOrdinal(num: number, plural: boolean): string {
+function numberToOrdinal(num: number, _plural: boolean): string {
   if (num <= 10) {
     return smallDenominators_[num];
   }
@@ -144,60 +143,60 @@ export function numberToOrdinal(num: number, plural: boolean): string {
 }
 
 
-export const ordinalsMasculine_: string[] = [
+const ordinalsMasculine_: string[] = [
   '', 'पहला', 'दूसरा', 'तीसरा', 'चौथा', 'पांचवाँ', 'छठा', 'सातवाँ', 'आठवाँ', 'नौवाँ'
 ];
 
 
-export const ordinalsFeminine_: string[] = [
+const ordinalsFeminine_: string[] = [
   '', 'पहली', 'दूसरी', 'तीसरी', 'चौथी', 'पाँचवीं', 'छठी', 'सातवीं', 'आठवीं', 'नौवीं'
 ];
 
 
 /**
  * Creates a word ordinal string from a number.
- * @param number The number to be converted.
+ * @param num The number to be converted.
  * @return The ordinal string.
  */
-export function wordOrdinal(number: number): string {
-  let gender = (sre.Grammar.getInstance().getParameter('gender') as string);
-  if (number <= 0) {
-    return number.toString();
+function wordOrdinal(num: number): string {
+  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  if (num <= 0) {
+    return num.toString();
   }
-  if (number < 10) {
-    return gender === 'female' ? ordinalsFeminine_[number] :
-                                 ordinalsMasculine_[number];
+  if (num < 10) {
+    return gender === 'female' ? ordinalsFeminine_[num] :
+                                 ordinalsMasculine_[num];
   }
-  let ordinal = numberToWords(number);
+  let ordinal = numberToWords(num);
   return ordinal + (gender === 'female' ? 'वीं' : 'वाँ');
 }
 
 
-export const simpleNumbers_: string[] =
+const simpleNumbers_: string[] =
     ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
 
 
-export const simpleSmallOrdinalsMasculine_: string[] =
+const simpleSmallOrdinalsMasculine_: string[] =
     ['', '१ला', '२रा', '३रा', '४था', '५वाँ', '६ठा', '७वाँ', '८वाँ', '९वाँ'];
 
 
-export const simpleSmallOrdinalsFeminine_: string[] =
+const simpleSmallOrdinalsFeminine_: string[] =
     ['', '१ली', '२री', '३री', '४थी', '५वीं', '६ठी', '७वीं', '८वीं', '९वीं'];
 
 
 /**
  * Creates a simple ordinal string from a number.
- * @param number The number to be converted.
+ * @param num The number to be converted.
  * @return The ordinal string.
  */
-export function simpleOrdinal(number: number): string {
-  let gender = (sre.Grammar.getInstance().getParameter('gender') as string);
+function simpleOrdinal(num: number): string {
+  let gender = (Grammar.getInstance().getParameter('gender') as string);
 
-  if (number > 0 && number < 10) {
-    return gender === 'female' ? simpleSmallOrdinalsFeminine_[number] :
-                                 simpleSmallOrdinalsMasculine_[number];
+  if (num > 0 && num < 10) {
+    return gender === 'female' ? simpleSmallOrdinalsFeminine_[num] :
+                                 simpleSmallOrdinalsMasculine_[num];
   }
-  let ordinal = number.toString()
+  let ordinal = num.toString()
                     .split('')
                     .map(function(x) {
                       let num = parseInt(x, 10);
@@ -208,7 +207,7 @@ export function simpleOrdinal(number: number): string {
 }
 
 
-export const NUMBERS: Numbers = {
+const NUMBERS: Numbers = {
   wordOrdinal: wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
@@ -216,4 +215,5 @@ export const NUMBERS: Numbers = {
   vulgarSep: ' ',
   numSep: ' '
 };
-// TODO: For simple speech output this should be different.
+
+export default NUMBERS;

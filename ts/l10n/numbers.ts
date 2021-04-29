@@ -18,46 +18,24 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-type NumberToString = (p1: number) => string;
-export {NumberToString};
-type NumberToGrammarString = (p1: number, p2: boolean) => string;
-export {NumberToGrammarString};
+import * as tr from './transformers';
+
 type Numbers = {
-  wordOrdinal?: NumberToString,
-  simpleOrdinal?: NumberToString,
-  numberToWords?: NumberToString,
-  numberToOrdinal?: NumberToGrammarString, vulgarSep: string,
+  wordOrdinal?: tr.Transformer,
+  simpleOrdinal?: tr.Transformer,
+  numberToWords?: tr.Transformer,
+  numberToOrdinal?: tr.GrammarCase,
+  vulgarSep: string,
   numSep?: string
 };
 export {Numbers};
 
 
-/**
- * A trivial translator of numbers into string.
- * @param num A number.
- * @return The number as a string.
- */
-export function identityTransformer_(num: number): string {
-  return num.toString();
-}
-
-
-/**
- * A trivial translator of numbers with plural.
- * @param num A number.
- * @param plural A flag indicating plural.
- * @return The number as a string.
- */
-export function pluralTransformer_(num: number, plural: boolean): string {
-  return num.toString();
-}
-
-
 export const NUMBERS: Numbers = {
-  wordOrdinal: identityTransformer_,
-  simpleOrdinal: identityTransformer_,
-  numberToWords: identityTransformer_,
-  numberToOrdinal: pluralTransformer_,
+  wordOrdinal: tr.identityTransformer,
+  simpleOrdinal: tr.identityTransformer,
+  numberToWords: tr.identityTransformer,
+  numberToOrdinal: tr.pluralTransformer,
   vulgarSep: ' ',
   numSep: ' '
 };

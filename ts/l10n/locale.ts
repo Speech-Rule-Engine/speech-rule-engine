@@ -22,25 +22,8 @@
 
 import {Grammar} from '../rule_engine/grammar';
 import * as MathspeakUtil from '../speech_rules/mathspeak_util';
-import * as Messages from './messages';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
-
-type Messages = {
-  MS: {[key: string]: string},
-  MS_FUNC: {[key: string]: Function},
-  MS_ROOT_INDEX: {[key: string]: string},
-  FONT: {[key: string]: SemanticAttr.Font|SemanticAttr.Font[]},
-  ROLE: {[key: string]: SemanticAttr.Role},
-  ENCLOSE: {[key: string]: SemanticAttr.Role},
-  NAVIGATE: {[key: string]: string},
-  REGEXP: {[key: string]: string},
-  NUMBERS: {[key: string]: Function|string},
-  ALPHABETS: {[key: string]: string[]},
-  ALPHABET_PREFIXES: {[key: string]: {[key: string]: string}},
-  ALPHABET_TRANSFORMERS: {[key: string]: {[key: string]: Transformer}},
-  ALPHABET_COMBINER: Combiner
-};
-export {Messages};
+import {Locale} from './messages';
+import {extractString} from './transformers';
 
 
 /**
@@ -51,9 +34,9 @@ export {Messages};
 export function nestingToString(count: number): string {
   switch (count) {
     case 1:
-      return Messages.MS.ONCE || '';
+      return Locale.MS.ONCE || '';
     case 2:
-      return Messages.MS.TWICE;
+      return Locale.MS.TWICE;
     default:
       return count.toString();
   }
@@ -78,7 +61,7 @@ export function vulgarNestingDepth(node: Node): boolean {
  * @return The combined string, postfix plus index.
  */
 export function combinePostfixIndex(postfix: string, index: string): string {
-  return postfix === Messages.MS.ROOTINDEX || postfix === Messages.MS.INDEX ?
+  return postfix === Locale.MS.ROOTINDEX || postfix === Locale.MS.INDEX ?
       postfix :
       postfix + ' ' + index;
 }
@@ -90,11 +73,7 @@ export function combinePostfixIndex(postfix: string, index: string): string {
  * @return The localized font name.
  */
 export function localFont(font: string): string {
-  let realFont = Messages.FONT[font];
-  if (realFont === undefined) {
-    realFont = font || '';
-  }
-  return typeof realFont === 'string' ? realFont : realFont[0];
+  return extractString(Locale.FONT[font]);
 }
 
 
@@ -107,7 +86,7 @@ Grammar.getInstance().setCorrection('localFont', localFont);
  * @return The localized role name.
  */
 export function localRole(role: string): string {
-  return Messages.ROLE[role] || role;
+  return extractString(Locale.ROLE[role]);
 }
 
 
@@ -120,40 +99,8 @@ Grammar.getInstance().setCorrection('localRole', localRole);
  * @return The localized enclose name.
  */
 export function localEnclose(enclose: string): string {
-  return Messages.ENCLOSE[enclose] || enclose;
+  return extractString(Locale.ENCLOSE[enclose]);
 }
 
 
 Grammar.getInstance().setCorrection('localEnclose', localEnclose);
-type Transformer = (p1: string|number) => string;
-export {Transformer};
-type Combiner = (p1: string, p2: string, p3: string) => string;
-export {Combiner};
-
-
-/**
- * A combiner adding the font name before the letter. Empty strings are ignored.
- * @param letter The letter.
- * @param font The font name.
- * @param cap Capitalisation expression.
- * @return The speech string as `font cap letter`.
- */
-export function prefixCombiner(
-    letter: string, font: string, cap: string): string {
-  letter = cap ? cap + ' ' + letter : letter;
-  return font ? font + ' ' + letter : letter;
-}
-
-
-/**
- * A combiner adding the font name after the letter. Empty strings are ignored.
- * @param letter The letter.
- * @param font The font name.
- * @param cap Capitalisation expression.
- * @return The speech string as `cap letter font`.
- */
-export function postfixCombiner(
-    letter: string, font: string, cap: string): string {
-  letter = cap ? cap + ' ' + letter : letter;
-  return font ? letter + ' ' + font : letter;
-}

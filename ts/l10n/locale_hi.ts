@@ -24,13 +24,13 @@
 // This work was supported by British Council UKIERI SPARC Project #P1161
 //
 
+import {nestingToString, vulgarNestingDepth} from './locale';
+import {Messages} from './messages';
+import NUMBERS from './numbers_hi';
+import {postfixCombiner, prefixCombiner} from './transformers';
 
-import * as Locale from './locale';
-import * as hi from './numbers_hi';
 
-
-
-export const hi: Locale.Messages = {
+export const hi: Messages = {
   MS: {
     'START': 'आरंभ',
     'FRAC_V': 'भिन्न',
@@ -62,22 +62,21 @@ export const hi: Locale.Messages = {
   },
 
   MS_FUNC: {
-    FRAC_NEST_DEPTH: Locale.vulgarNestingDepth,
-    RADICAL_NEST_DEPTH: Locale.nestingToString,
-    COMBINE_ROOT_INDEX: function(postfix, index) {
+    FRAC_NEST_DEPTH: vulgarNestingDepth,
+    RADICAL_NEST_DEPTH: nestingToString,
+    COMBINE_ROOT_INDEX: function(postfix: string, _index: string) {
       return postfix;
     },
-    COMBINE_NESTED_FRACTION: function(a, b, c) {
+    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
       return a + b + c;
     },
-    COMBINE_NESTED_RADICAL: function(a, b, c) {
+    COMBINE_NESTED_RADICAL: function(a: string, b: string, c: string) {
       return a + b + c;
     },
-    FONT_REGEXP: function(font) {
+    FONT_REGEXP: function(font: string) {
       return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
     }
   },
-
 
 
   MS_ROOT_INDEX: {},
@@ -112,12 +111,12 @@ export const hi: Locale.Messages = {
     'sub': 'सबस्क्रिप्ट',
     'circled': 'सर्किल',
     'parenthesized': 'कोष्ठक',
-    'period': ['पूर्ण विराम', Locale.postfixCombiner],
+    'period': ['पूर्ण विराम', postfixCombiner],
     'negative-circled': 'नेगेटिव सर्किल',
     'double-circled': 'डबल सर्किल',
     'circled-sans-serif': 'सर्किल सैंस-सेरिफ़',
     'negative-circled-sans-serif': 'नेगेटिव सर्किल सैंस-सेरिफ़',
-    'comma': ['अल्प विराम', Locale.postfixCombiner],
+    'comma': ['अल्प विराम', postfixCombiner],
     'squared': 'चुकता',
     'negative-squared': 'नकारात्मक वर्ग'
   },
@@ -181,16 +180,18 @@ export const hi: Locale.Messages = {
     JOINER_FRAC: ''
   },
 
-  SI: function(prefix, unit) {
+  SI: function(prefix: string, unit: string) {
     return prefix + unit;
   },
 
-  PLURAL: function(unit) {
+  UNIT_TIMES: '',
+  
+  PLURAL: function(unit: string) {
     return unit;
   },
 
 
-  NUMBERS: hi.NUMBERS,
+  NUMBERS: NUMBERS,
   ALPHABETS: {
     latinSmall: [
       'ए',  'बी', 'सी', 'डी', 'ई',    'एफ',  'जी',  'एच', 'आय',
@@ -231,7 +232,7 @@ export const hi: Locale.Messages = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-        return n === 0 ? 'शून्य' : hi.numberToWords(n);
+        return n === 0 ? 'शून्य' : NUMBERS.numberToWords(n);
       },
       mathspeak: function(n) {
         return n.toString();
@@ -242,7 +243,7 @@ export const hi: Locale.Messages = {
     },
     letter: {
       default: function(n) {
-        return n;
+        return n.toString();
       }
     }
   },
@@ -253,5 +254,5 @@ export const hi: Locale.Messages = {
     digitPrefix: {default: ''}
   },
 
-  ALPHABET_COMBINER: Locale.prefixCombiner
+  ALPHABET_COMBINER: prefixCombiner
 };

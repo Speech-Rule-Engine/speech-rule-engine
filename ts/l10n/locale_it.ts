@@ -23,11 +23,15 @@
 // This work was sponsored by TextHelp
 //
 
-import * as Locale from './locale';
-import * as it from './numbers_it';
+
+import {combinePostfixIndex, nestingToString} from './locale';
+import {Messages} from './messages';
+import NUMBERS from './numbers_it';
+import {prefixCombiner} from './transformers';
 
 
-let italianPostfixCombiner = function(letter, font, cap) {
+let italianPostfixCombiner = function(
+  letter: string, font: string, cap: string) {
   if (letter.match(/^[a-zA-Z]$/)) {
     font = font.replace('cerchiato', 'cerchiata');
   }
@@ -36,8 +40,7 @@ let italianPostfixCombiner = function(letter, font, cap) {
 };
 
 
-
-export const it: Locale.Messages = {
+export const it: Messages = {
   MS: {
     START: 'inizio',
     FRAC_V: 'frazione',
@@ -70,18 +73,18 @@ export const it: Locale.Messages = {
   },
 
   MS_FUNC: {
-    FRAC_NEST_DEPTH: function(node) {
+    FRAC_NEST_DEPTH: function(_node: string) {
       return false;
     },
-    RADICAL_NEST_DEPTH: Locale.nestingToString,
-    COMBINE_ROOT_INDEX: Locale.combinePostfixIndex,
-    COMBINE_NESTED_FRACTION: function(a, b, c) {
+    RADICAL_NEST_DEPTH: nestingToString,
+    COMBINE_ROOT_INDEX: combinePostfixIndex,
+    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
       return c.replace(/ $/g, '') + b + a;
     },
-    COMBINE_NESTED_RADICAL: function(a, b, c) {
+    COMBINE_NESTED_RADICAL: function(a: string, _b: string, c: string) {
       return c + ' ' + a;
     },
-    FONT_REGEXP: function(font) {
+    FONT_REGEXP: function(font: string) {
       return RegExp(' (en |)' + font + '$');
     }
   },
@@ -116,8 +119,8 @@ export const it: Locale.Messages = {
 
   EMBELLISH: {
     // Embellishments
-    'super': ['apice', Locale.prefixCombiner],
-    'sub': ['pedice', Locale.prefixCombiner],
+    'super': ['apice', prefixCombiner],
+    'sub': ['pedice', prefixCombiner],
     'circled': ['cerchiato', italianPostfixCombiner],
     'parenthesized': 'tra parentesi',
     'period': 'punto',
@@ -201,17 +204,19 @@ export const it: Locale.Messages = {
     JOINER_FRAC: ' '
   },
 
-  PLURAL: function(unit) {
+  PLURAL: function(unit: string) {
     // TODO: Make as programmatical as possible!
     return unit;
   },
+
+  UNIT_TIMES: '',
 
   SI: function(prefix, unit) {
     return prefix + unit;
   },
 
 
-  NUMBERS: it.NUMBERS,
+  NUMBERS: NUMBERS,
   ALPHABETS: {
     latinSmall: [
       'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
@@ -243,7 +248,7 @@ export const it: Locale.Messages = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-        return n === 0 ? 'zero' : it.numberToWords(n);
+        return n === 0 ? 'zero' : NUMBERS.numberToWords(n);
       },
       mathspeak: function(n) {
         return n.toString();
@@ -254,7 +259,7 @@ export const it: Locale.Messages = {
     },
     letter: {
       default: function(n) {
-        return n;
+        return n.toString();
       }
     }
   },
@@ -265,7 +270,7 @@ export const it: Locale.Messages = {
     digitPrefix: {default: ''}
   },
 
-  ALPHABET_COMBINER: function(letter, font, cap) {
+  ALPHABET_COMBINER: function(letter: string, font: string, cap: string) {
     letter = cap ? letter + ' ' + cap : letter;
     return font ? letter + ' ' + font : letter;
   }

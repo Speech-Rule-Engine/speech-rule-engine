@@ -23,21 +23,20 @@
 //
 
 
-import * as NumbersExports from './numbers';
 import {Numbers} from './numbers';
 
 
-export const oneNumbers_: string[] =
+const oneNumbers_: string[] =
     ['⠴', '⠂', '⠆', '⠒', '⠲', '⠢', '⠖', '⠶', '⠦', '⠔'];
 
 
 /**
  * Translates a number of into a Braille string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The Braille representation of that number.
  */
-export function numberToWords(number: number): string {
-  let digits = number.toString().split('');
+function numberToWords(num: number): string {
+  let digits = num.toString().split('');
   return digits
       .map(function(digit) {
         return oneNumbers_[parseInt(digit, 10)];
@@ -46,8 +45,10 @@ export function numberToWords(number: number): string {
 }
 
 
-export const NUMBERS: Numbers = {
+const NUMBERS: Numbers = {
   numberToWords: numberToWords,
   simpleOrdinal: numberToWords,
   vulgarSep: ''
 };
+
+export default NUMBERS;

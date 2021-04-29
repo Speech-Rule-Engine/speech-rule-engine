@@ -19,10 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineExports from '../common/engine';
 import {Engine} from '../common/engine';
+import {Variables} from '../common/variables';
 
-import {Messages} from './locale';
 import {de} from './locale_de';
 import {en} from './locale_en';
 import {es} from './locale_es';
@@ -30,8 +29,18 @@ import {fr} from './locale_fr';
 import {hi} from './locale_hi';
 import {it} from './locale_it';
 import {nemeth} from './locale_nemeth';
-import * as Messages from './messages';
+import {Locale, Messages} from './messages';
 
+
+const locales: {[key: string]: Messages} = {
+  'de': de,
+  'en': en,
+  'es': es,
+  'fr': fr,
+  'hi': hi,
+  'it': it,
+  'nemeth': nemeth
+};
 
 /**
  * The basic method for setting the localized messages.
@@ -39,8 +48,9 @@ import * as Messages from './messages';
 export function setLocale() {
   let msgs = getLocale();
   if (msgs) {
-    for (let key in msgs) {
-      sre.Messages[key] = msgs[key];
+    for (let key of Object.getOwnPropertyNames(msgs)) {
+      // TODO (TS): See if this is really an object structure.
+      (Locale as any)[key] = (msgs as any)[key];
     }
   }
 }
@@ -53,9 +63,9 @@ export function setLocale() {
  */
 export function getLocale(): Messages {
   let locale = Engine.getInstance().locale;
-  if (sre.Variables.LOCALES.indexOf(locale) === -1) {
+  if (Variables.LOCALES.indexOf(locale) === -1) {
     console.error('Locale ' + locale + ' does not exist! Using en instead.');
     Engine.getInstance().locale = 'en';
   }
-  return sre.Locale[Engine.getInstance().locale] || sre.Locale['en'];
+  return locales[Engine.getInstance().locale] || locales['en'];
 }

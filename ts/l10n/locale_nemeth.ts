@@ -24,8 +24,9 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import * as Locale from './locale';
-import * as nemeth from './numbers_nemeth';
+import {Messages} from './messages';
+import NUMBERS from './numbers_nemeth';
+import * as tr from './transformers';
 
 
 /**
@@ -45,40 +46,40 @@ let simpleEnglish = function(letter: string): string {
 // the alphabets. All we need to do is remove the English indicator in case
 // there is no font indicator. For the parenthesised fonts we don't need number
 // indicator either.
-let postfixCombiner = function(letter, font, number) {
+let postfixCombiner = function(letter: string, font: string, _number: string) {
   letter = simpleEnglish(letter);
   return font ? letter + font : letter;
 };
 
 
-let germanCombiner = function(letter, font, cap) {
+let germanCombiner = function(letter: string, font: string, _cap: string) {
   return font + simpleEnglish(letter);
 };
 
 
-let embellishCombiner = function(letter, font, number) {
+let embellishCombiner = function(letter: string, font: string, num: string) {
   letter = simpleEnglish(letter);
-  return font + (number ? number : '') + letter + '⠻';
+  return font + (num ? num : '') + letter + '⠻';
 };
 
 
-let doubleEmbellishCombiner = function(letter, font, number) {
+let doubleEmbellishCombiner = function(
+  letter: string, font: string, num: string) {
   letter = simpleEnglish(letter);
-  return font + (number ? number : '') + letter + '⠻⠻';
+  return font + (num ? num : '') + letter + '⠻⠻';
 };
 
 
 // Font is the start parenthesis.
 // Number is the number indicator which is ignored.
 // English characters have language indicator removed.
-let parensCombiner = function(letter, font, number) {
+let parensCombiner = function(letter: string, font: string, _number: string) {
   letter = simpleEnglish(letter);
   return font + letter + '⠾';
 };
 
 
-
-export const nemeth: Locale.Messages = {
+export const nemeth: Messages = {
   MS: {
     FRACTION_REPEAT: '⠠',
     FRACTION_START: '⠹',
@@ -112,16 +113,16 @@ export const nemeth: Locale.Messages = {
   },
 
   MS_FUNC: {
-    FRAC_NEST_DEPTH: function(node) {
+    FRAC_NEST_DEPTH: function(_node: string) {
       return false;
     },
-    RADICAL_NEST_DEPTH: function(count) {
+    RADICAL_NEST_DEPTH: function(_count: string) {
       return '';
     },
-    COMBINE_ROOT_INDEX: function(postfix, index) {
+    COMBINE_ROOT_INDEX: function(postfix: string, _index: string) {
       return postfix;
     },
-    FONT_REGEXP: function(font) {
+    FONT_REGEXP: function(font: string) {
       return RegExp('^' + font);
     }
   },
@@ -237,8 +238,11 @@ export const nemeth: Locale.Messages = {
   NAVIGATE:
       {COLLAPSIBLE: 'collapsible', EXPANDABLE: 'expandable', LEVEL: 'Level'},
 
+  PLURAL: tr.identityTransformer,
+  SI: tr.identityTransformer,
+  UNIT_TIMES: '',
 
-  NUMBERS: nemeth.NUMBERS,
+  NUMBERS: NUMBERS,
   ALPHABETS: {
     latinSmall: [
       '⠰⠁', '⠰⠃', '⠰⠉', '⠰⠙', '⠰⠑', '⠰⠋', '⠰⠛', '⠰⠓', '⠰⠊',
@@ -267,9 +271,9 @@ export const nemeth: Locale.Messages = {
   },
 
   ALPHABET_TRANSFORMERS: {
-    digit: {default: nemeth.numberToWords},
+    digit: {default: NUMBERS.numberToWords},
     letter: {
-      default: function(n) {
+      default: function(n: string) {
         return n;
       }
     }
@@ -283,8 +287,8 @@ export const nemeth: Locale.Messages = {
         {greek: '⠨', english: '⠰', german: '⠸', hebrew: '⠠⠠', number: '⠼'},
   },
 
-  ALPHABET_COMBINER: function(letter, font, number) {
-    return font ? font + number + letter : simpleEnglish(letter);
+  ALPHABET_COMBINER: function(letter: string, font: string, num: string) {
+    return font ? font + num + letter : simpleEnglish(letter);
   }
 };
 

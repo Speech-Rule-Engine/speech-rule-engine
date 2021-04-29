@@ -23,18 +23,19 @@
 // This work was sponsored by TextHelp
 //
 
-import * as Locale from './locale';
-import * as es from './numbers_es';
+import {combinePostfixIndex} from './locale';
+import {Messages} from './messages';
+import NUMBERS from './numbers_es';
+import {postfixCombiner, prefixCombiner} from './transformers';
 
 
-let sansserifCombiner = function(letter, font, cap) {
+let sansserifCombiner = function(letter: string, font: string, cap: string) {
   letter = 'sans serif ' + (cap ? cap + ' ' + letter : letter);
   return font ? letter + ' ' + font : letter;
 };
 
 
-
-export const es: Locale.Messages = {
+export const es: Messages = {
   MS: {
     START: 'empezar',
     FRAC_V: 'fracción',
@@ -68,20 +69,20 @@ export const es: Locale.Messages = {
   },
 
   MS_FUNC: {
-    FRAC_NEST_DEPTH: function(node) {
+    FRAC_NEST_DEPTH: function(_node: string) {
       return false;
     },
-    RADICAL_NEST_DEPTH: function(count) {
+    RADICAL_NEST_DEPTH: function(_count: string) {
       return '';
     },
-    COMBINE_ROOT_INDEX: Locale.combinePostfixIndex,
-    COMBINE_NESTED_FRACTION: function(a, b, c) {
+    COMBINE_ROOT_INDEX: combinePostfixIndex,
+    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
       return a + b + c;
     },
-    COMBINE_NESTED_RADICAL: function(a, b, c) {
+    COMBINE_NESTED_RADICAL: function(a: string, _b: string, c: string) {
       return a + c;
     },
-    FONT_REGEXP: function(font) {
+    FONT_REGEXP: function(font: string) {
       return RegExp('^' + font + ' ');
     }
   },
@@ -177,16 +178,16 @@ export const es: Locale.Messages = {
     // TODO: Here we need specialist combiners!
     'super': 'superíndice',
     'sub': 'subíndice',
-    'circled': ['en circulo', Locale.postfixCombiner],
-    'parenthesized': ['entre paréntesis', Locale.postfixCombiner],
-    'period': ['punto', Locale.postfixCombiner],
-    'negative-circled': ['en circulo negro', Locale.postfixCombiner],
-    'double-circled': ['en doble circulo', Locale.postfixCombiner],
+    'circled': ['en circulo', postfixCombiner],
+    'parenthesized': ['entre paréntesis', postfixCombiner],
+    'period': ['punto', postfixCombiner],
+    'negative-circled': ['en circulo negro', postfixCombiner],
+    'double-circled': ['en doble circulo', postfixCombiner],
     'circled-sans-serif': ['en circulo', sansserifCombiner],
     'negative-circled-sans-serif': ['en circulo negro', sansserifCombiner],
-    'comma': ['coma', Locale.postfixCombiner],
-    'squared': ['en cuadrado', Locale.postfixCombiner],
-    'negative-squared': ['en cuadrado negro', Locale.postfixCombiner]
+    'comma': ['coma', postfixCombiner],
+    'squared': ['en cuadrado', postfixCombiner],
+    'negative-squared': ['en cuadrado negro', postfixCombiner]
   },
 
   NAVIGATE: {COLLAPSIBLE: 'plegable', EXPANDABLE: 'ampliable', LEVEL: 'nivel'},
@@ -200,7 +201,7 @@ export const es: Locale.Messages = {
     JOINER_FRAC: ' '
   },
 
-  PLURAL: function(unit) {
+  PLURAL: function(unit: string) {
     if (/.*(a|e|i|o|u)$/.test(unit)) {
       return unit + 's';
     }
@@ -227,7 +228,7 @@ export const es: Locale.Messages = {
   },
 
 
-  NUMBERS: es.NUMBERS,
+  NUMBERS: NUMBERS,
   ALPHABETS: {
     latinSmall: [
       'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
@@ -257,7 +258,7 @@ export const es: Locale.Messages = {
   ALPHABET_TRANSFORMERS: {
     digit: {
       default: function(n) {
-        return n === 0 ? 'cero' : es.numberToWords(n);
+        return n === 0 ? 'cero' : NUMBERS.numberToWords(n);
       },
       mathspeak: function(n) {
         return n.toString();
@@ -268,7 +269,7 @@ export const es: Locale.Messages = {
     },
     letter: {
       default: function(n) {
-        return n;
+        return n.toString();
       }
     }
   },
@@ -280,6 +281,6 @@ export const es: Locale.Messages = {
   },
 
 
-  ALPHABET_COMBINER: Locale.prefixCombiner,
+  ALPHABET_COMBINER: prefixCombiner,
   UNIT_TIMES: 'por'
 };

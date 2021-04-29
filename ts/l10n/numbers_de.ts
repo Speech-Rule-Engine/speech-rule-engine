@@ -27,7 +27,7 @@ import {Numbers} from './numbers';
 /**
  * String representation of zero to nineteen.
  */
-export const onesNumbers_: string[] = [
+const onesNumbers_: string[] = [
   '',         'eins',     'zwei',     'drei',     'vier',
   'fünf',     'sechs',    'sieben',   'acht',     'neun',
   'zehn',     'elf',      'zwölf',    'dreizehn', 'vierzehn',
@@ -38,7 +38,7 @@ export const onesNumbers_: string[] = [
 /**
  * String representation of twenty to ninety.
  */
-export const tensNumbers_: string[] = [
+const tensNumbers_: string[] = [
   '', '', 'zwanzig', 'dreißig', 'vierzig', 'fünfzig', 'sechzig', 'siebzig',
   'achtzig', 'neunzig'
 ];
@@ -47,7 +47,7 @@ export const tensNumbers_: string[] = [
 /**
  * String representation of thousand to decillion.
  */
-export const largeNumbers_: string[] = [
+const largeNumbers_: string[] = [
   '',
   'tausend',
   'million',
@@ -70,18 +70,18 @@ export const largeNumbers_: string[] = [
  * @param num number string.
  * @return If it is a one, it is made into prefix.
  */
-export function onePrefix_(num: string): string {
+function onePrefix_(num: string): string {
   return num === onesNumbers_[1] ? 'ein' : num;
 }
 
 
 /**
  * Translates a number of up to twelve digits into a string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The string representation of that number.
  */
-export function hundredsToWords_(number: number): string {
-  let n = number % 1000;
+function hundredsToWords_(num: number): string {
+  let n = num % 1000;
   let str = '';
   let ones = onesNumbers_[Math.floor(n / 100)];
   str += ones ? onePrefix_(ones) + 'hundert' : '';
@@ -103,22 +103,22 @@ export function hundredsToWords_(number: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
- * @param number The number to translate.
+ * @param num The number to translate.
  * @return The string representation of that number.
  */
-export function numberToWords(number: number): string {
-  if (number >= Math.pow(10, 36)) {
-    return number.toString();
+function numberToWords(num: number): string {
+  if (num >= Math.pow(10, 36)) {
+    return num.toString();
   }
   let pos = 0;
   let str = '';
-  while (number > 0) {
-    let hundreds = number % 1000;
+  while (num > 0) {
+    let hundreds = num % 1000;
     if (hundreds) {
-      let hund = hundredsToWords_(number % 1000);
+      let hund = hundredsToWords_(num % 1000);
       str = onePrefix_(hund) + (pos ? largeNumbers_[pos] : '') + str;
     }
-    number = Math.floor(number / 1000);
+    num = Math.floor(num / 1000);
     pos++;
   }
   return str.replace(/ein$/, 'eins');
@@ -132,7 +132,7 @@ export function numberToWords(number: number): string {
  * @param plural A flag indicating if the ordinal is in plural.
  * @return The ordinal of the number as string.
  */
-export function numberToOrdinal(num: number, plural: boolean): string {
+function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 1) {
     return 'eintel';
   }
@@ -148,35 +148,35 @@ export function numberToOrdinal(num: number, plural: boolean): string {
  * @param number The number to be converted.
  * @return The ordinal string.
  */
-export function wordOrdinal(number: number): string {
-  if (number === 1) {
+function wordOrdinal(num: number): string {
+  if (num === 1) {
     return 'erste';
   }
-  if (number === 3) {
+  if (num === 3) {
     return 'dritte';
   }
-  if (number === 7) {
+  if (num === 7) {
     return 'siebte';
   }
-  if (number === 8) {
+  if (num === 8) {
     return 'achte';
   }
-  let ordinal = numberToWords(number);
-  return ordinal + (number < 19 ? 'te' : 'ste');
+  let ordinal = numberToWords(num);
+  return ordinal + (num < 19 ? 'te' : 'ste');
 }
 
 
 /**
  * Creates a simple ordinal string from a number.
- * @param number The number to be converted.
+ * @param num The number to be converted.
  * @return The ordinal string.
  */
-export function simpleOrdinal(number: number): string {
-  return number.toString() + '.';
+function simpleOrdinal(num: number): string {
+  return num.toString() + '.';
 }
 
 
-export const NUMBERS: Numbers = {
+const NUMBERS: Numbers = {
   wordOrdinal: wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
@@ -184,3 +184,6 @@ export const NUMBERS: Numbers = {
   vulgarSep: ' ',
   numSep: ''
 };
+
+
+export default NUMBERS;

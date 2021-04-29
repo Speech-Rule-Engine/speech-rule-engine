@@ -19,283 +19,305 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Transformer} from './locale';
-import * as NumbersExports from './numbers';
-import {Numbers} from './numbers';
+import {Numbers, NUMBERS} from './numbers';
+import * as tr from './transformers';
 
 
 // One (or more) flat message object per rule set.
-export const MS: {[key: string]: string} = {
-  START: '',
-  FRAC_V: '',
-  FRAC_B: '',
-  FRAC_S: '',
-  END: '',
-  FRAC_OVER: '',
-  TWICE: '',
-  NEST_FRAC: '',
-  ENDFRAC: '',
-  SUPER: '',
-  SUB: '',
-  SUP: '',
-  SUPERSCRIPT: '',
-  SUBSCRIPT: '',
-  BASELINE: '',
-  BASE: '',
-  NESTED: '',
-  NEST_ROOT: '',
-  STARTROOT: '',
-  ENDROOT: '',
-  ROOTINDEX: '',
-  ROOT: '',
-  INDEX: '',
-  UNDER: '',
-  UNDERSCRIPT: '',
-  OVER: '',
-  OVERSCRIPT: ''
-};
+export interface Messages {
+  MS: {[key: string]: string};
+  MS_FUNC: {[key: string]: Function};
+  MS_ROOT_INDEX: {[key: string]: string};
+  FONT: {[key: string]: string|[string, tr.Combiner]};
+  EMBELLISH: {[key: string]: string|[string, tr.Combiner]};
+  ROLE: {[key: string]: string|[string, tr.Combiner]};
+  ENCLOSE: {[key: string]: string|[string, tr.Combiner]};
+  NAVIGATE: {[key: string]: string};
+  REGEXP: {[key: string]: string};
+  PLURAL: tr.Transformer;
+  SI: tr.Combiner;
+  UNIT_TIMES: string;
+  NUMBERS: Numbers;
+  ALPHABETS: {[key: string]: string[]};
+  ALPHABET_PREFIXES: {[key: string]: {[key: string]: string}};
+  ALPHABET_TRANSFORMERS: {[key: string]: {[key: string]: tr.Transformer}};
+  ALPHABET_COMBINER: tr.Combiner;
+}
 
 
-/**
- * Parsing functions.
- */
+export const Locale: Messages = {
 
-export const MS_FUNC: {[key: string]: (p1: any) => any} = {
-  /**
-   * Method to determine end of nesting depth for nested fraction.
-   * @param node A node.
-   * @return True if current element should not be considered for
-   *     nesting depth.
-   */
-  FRAC_NEST_DEPTH: function(node: Node): boolean {
-    return false;
+  MS: {
+    START: '',
+    FRAC_V: '',
+    FRAC_B: '',
+    FRAC_S: '',
+    END: '',
+    FRAC_OVER: '',
+    ONCE: '',
+    TWICE: '',
+    NEST_FRAC: '',
+    ENDFRAC: '',
+    SUPER: '',
+    SUB: '',
+    SUP: '',
+    SUPERSCRIPT: '',
+    SUBSCRIPT: '',
+    BASELINE: '',
+    BASE: '',
+    NESTED: '',
+    NEST_ROOT: '',
+    STARTROOT: '',
+    ENDROOT: '',
+    ROOTINDEX: '',
+    ROOT: '',
+    INDEX: '',
+    UNDER: '',
+    UNDERSCRIPT: '',
+    OVER: '',
+    OVERSCRIPT: ''
   },
+
   /**
-   * Translation for count word nesting description of radicals.
-   * @param count The counting parameter.
-   * @return The corresponding string.
+   * Parsing functions.
    */
-  RADICAL_NEST_DEPTH: function(count: number): string {
-    return '';
+  MS_FUNC: {
+
+    /**
+     * Method to determine end of nesting depth for nested fraction.
+     * @param node A node.
+     * @return True if current element should not be considered for
+     *     nesting depth.
+     */
+    FRAC_NEST_DEPTH: function(_node: Node): boolean {
+      return false;
+    },
+
+    /**
+     * Translation for count word nesting description of radicals.
+     * @param count The counting parameter.
+     * @return The corresponding string.
+     */
+    RADICAL_NEST_DEPTH: function(_count: number): string {
+      return '';
+    },
+
+    /**
+     * Generates a root ending message by combining the end message (postfix)
+     * with the index. Example: Start Root Cubic ... End Root Cubic.
+     *
+     * @param postfix The postfix.
+     * @param index The index.
+     * @return The combined string, postfix plus index.
+     */
+    COMBINE_ROOT_INDEX: function(postfix: string, _index: string): string {
+      return postfix;
+    }
   },
+
+  // TODO: Add new functions.
+  MS_ROOT_INDEX: {},
+
   /**
-   * Generates a root ending message by combining the end message (postfix) with
-   * the index. Example: Start Root Cubic ... End Root Cubic.
-   * @param postfix The postfix.
-   * @param index The index.
-   * @return The combined string, postfix plus index.
+   * Localised font names.
    */
-  COMBINE_ROOT_INDEX: function(postfix: string, index: string): string {
-    return postfix;
+  FONT: {
+    'bold': '',
+    'bold-fraktur': '',
+    'bold-italic': '',
+    'bold-script': '',
+    'caligraphic': '',
+    'caligraphic-bold': '',
+    'double-struck': '',
+    'double-struck-italic': '',
+    'fraktur': '',
+    'italic': '',
+    'monospace': '',
+    'normal': '',
+    'oldstyle': '',
+    'oldstyle-bold': '',
+    'script': '',
+    'sans-serif': '',
+    'sans-serif-italic': '',
+    'sans-serif-bold': '',
+    'sans-serif-bold-italic': '',
+    'unknown': ''
+  },
+
+
+  /**
+   * Localised embalishment names. Treated like fonts.
+   */
+  EMBELLISH: {
+    // More embellishments than fonts.
+    'super': '',
+    'sub': '',
+    'circled': '',
+    'parenthesized': '',
+    'period': '',
+    'negative-circled': '',
+    'double-circled': '',
+    'circled-sans-serif': '',
+    'negative-circled-sans-serif': '',
+    'blackboard': '',
+    'comma': '',
+    'squared': '',
+    'negative-squared': ''
+  },
+
+
+  /**
+   * Localised role names.
+   */
+   ROLE: {
+    // Infixoperators
+    'addition': '',
+    'multiplication': '',
+    'subtraction': '',
+    'division': '',
+    // Relations.
+    'equality': '',
+    'inequality': '',
+    'element': '',
+    'arrow': '',
+    // Roles of matrices or vectors.
+    'determinant': '',
+    'rowvector': '',
+    'binomial': '',
+    'squarematrix': '',
+    // Sets
+    'set empty': '',
+    'set extended': '',
+    'set singleton': '',
+    'set collection': '',
+    // Roles of rows, lines, cells.
+    'label': '',
+    'multiline': '',
+    'matrix': '',
+    'vector': '',
+    'cases': '',
+    'table': '',
+    // Unknown
+    'unknown': ''
+   },
+
+
+  /**
+   * Localised enclose roles.
+   */
+  ENCLOSE: {
+    'longdiv': '',
+    'actuarial': '',
+    'radical': '',
+    'box': '',
+    'roundedbox': '',
+    'circle': '',
+    'left': '',
+    'right': '',
+    'top': '',
+    'bottom': '',
+    'updiagonalstrike': '',
+    'downdiagonalstrike': '',
+    'verticalstrike': '',
+    'horizontalstrike': '',
+    'madruwb': '',
+    'updiagonalarrow': '',
+    'phasorangle': '',
+    // Unknown
+    'unknown': ''
+  },
+
+
+  /**
+   * Navigation messages.
+   */
+  NAVIGATE: {
+    COLLAPSIBLE: '',
+    EXPANDABLE: '',
+    LEVEL: ''
+  },
+
+
+  /**
+   * Regular expressions for text, digits, decimal marks, etc.
+   */
+  REGEXP: {
+    TEXT: 'a-zA-Z',
+    NUMBER: '',
+    DECIMAL_MARK: '',
+    DIGIT_GROUP: '',
+    JOINER_SUBSUPER: ' '
+  },
+
+
+  /**
+   * Function to build regular plurals for units.
+   * @param unit A unit expression.
+   * @return The unit in plural.
+   */
+  PLURAL: (unit: string) => {
+    return /.*s$/.test(unit) ? unit : unit + 's';
+  },
+
+
+  /**
+   * The units combiner.
+   */
+  SI: tr.siCombiner,
+
+
+  /**
+   * The times expression between units, if used.
+   */
+  UNIT_TIMES: '',
+
+
+  /**
+   * Localisable number computation.
+   */
+  NUMBERS: NUMBERS,
+
+
+  /**
+   * Localisable alphabets.
+   */
+  ALPHABETS: {
+    latinSmall: [],
+    latinCap: [],
+    greekSmall: [],
+    greekCap: []
+  },
+
+
+  /**
+   * Prefixes for alphabet rules that can be specialised by rule set.
+   */
+  ALPHABET_PREFIXES: {
+    capPrefix: {default: ''},
+    smallPrefix: {default: ''},
+    digitPrefix: {default: ''}
+  },
+
+
+  /**
+   * Transformer functions for alphabet rules that can be specialised by rule
+   * set.
+   */
+  ALPHABET_TRANSFORMERS: {
+    digit: {default: tr.identityTransformer},
+    letter: {default: tr.identityTransformer}
+  },
+
+
+  /**
+   * A default combiner for alphabet.
+   * @param letter The letter.
+   * @param font The font name.
+   * @param cap Capitalisation expression.
+   * @return The speech string as `letter`.
+   */
+  ALPHABET_COMBINER: (letter: string, _font: string, _cap: string) => {
+    return letter;
   }
+
 };
-
-// TODO: Add new functions.
-
-
-
-/**
- * Localised font names.
- */
-export const FONT: {[key: string]: SemanticAttr.Font|SemanticAttr.Font[]} = {
-  'bold': '',
-  'bold-fraktur': '',
-  'bold-italic': '',
-  'bold-script': '',
-  'caligraphic': '',
-  'caligraphic-bold': '',
-  'double-struck': '',
-  'double-struck-italic': '',
-  'fraktur': '',
-  'italic': '',
-  'monospace': '',
-  'normal': '',
-  'oldstyle': '',
-  'oldstyle-bold': '',
-  'script': '',
-  'sans-serif': '',
-  'sans-serif-italic': '',
-  'sans-serif-bold': '',
-  'sans-serif-bold-italic': '',
-  'unknown': ''
-};
-
-
-/**
- * Localised embalishment names. Treated like fonts.
- */
-export const EMBELLISH: {[key: string]: string|string[]} = {
-  // More embellishments than fonts.
-  'super': '',
-  'sub': '',
-  'circled': '',
-  'parenthesized': '',
-  'period': '',
-  'negative-circled': '',
-  'double-circled': '',
-  'circled-sans-serif': '',
-  'negative-circled-sans-serif': '',
-  'blackboard': '',
-  'comma': '',
-  'squared': '',
-  'negative-squared': ''
-};
-
-
-/**
- * Localised role names.
- */
-export const ROLE: {[key: string]: SemanticAttr.Role} = {
-  // Infixoperators
-  'addition': '',
-  'multiplication': '',
-  'subtraction': '',
-  'division': '',
-  // Relations.
-  'equality': '',
-  'inequality': '',
-  'element': '',
-  'arrow': '',
-  // Roles of matrices or vectors.
-  'determinant': '',
-  'rowvector': '',
-  'binomial': '',
-  'squarematrix': '',
-  // Sets
-  'set empty': '',
-  'set extended': '',
-  'set singleton': '',
-  'set collection': '',
-  // Roles of rows, lines, cells.
-  'label': '',
-  'multiline': '',
-  'matrix': '',
-  'vector': '',
-  'cases': '',
-  'table': '',
-  // Unknown
-  'unknown': ''
-};
-
-
-/**
- * Localised enclose roles.
- */
-export const ENCLOSE: {[key: string]: SemanticAttr.Role} = {
-  'longdiv': '',
-  'actuarial': '',
-  'radical': '',
-  'box': '',
-  'roundedbox': '',
-  'circle': '',
-  'left': '',
-  'right': '',
-  'top': '',
-  'bottom': '',
-  'updiagonalstrike': '',
-  'downdiagonalstrike': '',
-  'verticalstrike': '',
-  'horizontalstrike': '',
-  'madruwb': '',
-  'updiagonalarrow': '',
-  'phasorangle': '',
-  // Unknown
-  'unknown': ''
-};
-
-
-/**
- * Navigation messages.
- */
-export const NAVIGATE: {[key: string]: string} = {
-  COLLAPSIBLE: '',
-  EXPANDABLE: '',
-  LEVEL: ''
-};
-
-
-/**
- * Regular expressions for text, digits, decimal marks, etc.
- */
-export const REGEXP: {[key: string]: string} = {
-  TEXT: 'a-zA-Z',
-  NUMBER: '',
-  DECIMAL_MARK: '',
-  DIGIT_GROUP: '',
-  JOINER_SUBSUPER: ' '
-};
-
-
-/**
- * Function to build regular plurals for units.
- * @param unit A unit expression.
- * @return The unit in plural.
- */
-export function PLURAL(unit: string): string {
-  return /.*s$/.test(unit) ? unit : unit + 's';
-}
-
-
-/**
- * The times expression between units, if used.
- */
-export const UNIT_TIMES: string = '';
-
-
-/**
- * Localisable number computation.
- */
-export const NUMBERS: Numbers = NumbersExports.NUMBERS;
-
-
-/**
- * Localisable alphabets.
- */
-export const ALPHABETS: {[key: string]: string[]} = {
-  latinSmall: [],
-  latinCap: [],
-  greekSmall: [],
-  greekCap: []
-};
-
-
-/**
- * Prefixes for alphabet rules that can be specialised by rule set.
- */
-export const ALPHABET_PREFIXES: {[key: string]: {[key: string]: string}} = {
-  capPrefix: {default: ''},
-  smallPrefix: {default: ''},
-  digitPrefix: {default: ''}
-};
-
-
-/**
- * A trivial transformer.
- * @param input A number or string.
- * @return The input as a string.
- */
-export function identityTransformer_(input: string|number): string {
-  return input.toString();
-}
-
-
-/**
- * Transformer functions for alphabet rules that can be specialised by rule set.
- */
-export const ALPHABET_TRANSFORMERS: {[key: string]: {[key: string]: Transformer}} = {
-  digit: {default: identityTransformer_},
-  letter: {default: identityTransformer_}
-};
-
-
-/**
- * A default combiner for alphabet.
- * @param letter The letter.
- * @param font The font name.
- * @param cap Capitalisation expression.
- * @return The speech string as `letter`.
- */
-export function ALPHABET_COMBINER(
-    letter: string, font: string, cap: string): string {
-  return letter;
-}
