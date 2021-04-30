@@ -45,8 +45,8 @@ export class CaseBinomial extends sre.AbstractEnrichCase {
    * @return True if case is applicable.
    */
   static test(semantic: SemanticNode): boolean {
-    return !semantic.mathmlTree && semantic.type === SemanticAttr.Type.LINE &&
-        semantic.role === SemanticAttr.Role.BINOMIAL;
+    return !semantic.mathmlTree && semantic.type === SemanticType.LINE &&
+        semantic.role === SemanticRole.BINOMIAL;
   }
 
 

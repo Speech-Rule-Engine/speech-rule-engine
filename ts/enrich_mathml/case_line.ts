@@ -45,7 +45,7 @@ export class CaseLine extends sre.AbstractEnrichCase {
    * @return True if case is applicable.
    */
   static test(semantic: SemanticNode): boolean {
-    return !!semantic.mathmlTree && semantic.type === SemanticAttr.Type.LINE;
+    return !!semantic.mathmlTree && semantic.type === SemanticType.LINE;
   }
 
 

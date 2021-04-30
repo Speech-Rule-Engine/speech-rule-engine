@@ -53,9 +53,270 @@ import * as SemanticUtil from './semantic_util';
 
 
 export interface SemanticMeaning {
-  type: SemanticAttr.Type;
-  role: SemanticAttr.Role;
-  font: SemanticAttr.Font;
+  type: SemanticType;
+  role: SemanticRole;
+  font: SemanticFont;
+}
+
+
+/**
+ * Mapping for types of elements.
+ */
+export const enum SemanticType {
+  // Leafs.
+  // Punctuation like comma, dot, ellipses.
+  PUNCTUATION = 'punctuation',
+  // Fence symbol.
+  FENCE = 'fence',
+  // One or several digits, plus some punctuation.
+  NUMBER = 'number',
+  // Single or multiple letters.
+  IDENTIFIER = 'identifier',
+  // Regular text in a math expression.
+  TEXT = 'text',
+  // e.g. +, *.
+  OPERATOR = 'operator',
+  // Relation symbol, e.g. equals.
+  RELATION = 'relation',
+  // e.g. Sum, product, integral.
+  LARGEOP = 'largeop',
+  // Some named function.
+
+  FUNCTION = 'function',
+  // Branches.
+  // Compound Symbols.
+  ACCENT = 'accent',
+  FENCED = 'fenced',
+  FRACTION = 'fraction',
+
+  PUNCTUATED = 'punctuated',
+  // Relations.
+  // Relation sequence of a single relation.
+  RELSEQ = 'relseq',
+  // Relation sequence containing at least two different relations.
+  MULTIREL = 'multirel',
+  // Operations.
+  INFIXOP = 'infixop',
+  PREFIXOP = 'prefixop',
+
+  POSTFIXOP = 'postfixop',
+  // Function and Bigop Application.
+  APPL = 'appl',
+  INTEGRAL = 'integral',
+
+  BIGOP = 'bigop',
+  SQRT = 'sqrt',
+  ROOT = 'root',
+  // These are bigops or functions with limits.
+  LIMUPPER = 'limupper',
+  LIMLOWER = 'limlower',
+  LIMBOTH = 'limboth',
+  SUBSCRIPT = 'subscript',
+  SUPERSCRIPT = 'superscript',
+  UNDERSCORE = 'underscore',
+  OVERSCORE = 'overscore',
+
+  TENSOR = 'tensor',
+  // Tables and their elements.
+  TABLE = 'table',
+  MULTILINE = 'multiline',
+  MATRIX = 'matrix',
+  VECTOR = 'vector',
+  CASES = 'cases',
+  ROW = 'row',
+  // Lines are effectively single cell rows.
+  LINE = 'line',
+
+  CELL = 'cell',
+  // Enclosed (counterpart for menclosed).
+
+  ENCLOSE = 'enclose',
+  // Proofs and Inferences
+  INFERENCE = 'inference',
+  RULELABEL = 'rulelabel',
+  CONCLUSION = 'conclusion',
+
+  PREMISES = 'premises',
+  // General.
+  UNKNOWN = 'unknown',
+  EMPTY = 'empty'
+}
+
+/**
+ * Mapping for roles of nodes.
+ * Roles are more specific than types.
+ * @final
+ */
+export const enum SemanticRole {
+  // Punctuation.
+  COMMA = 'comma',
+  ELLIPSIS = 'ellipsis',
+  FULLSTOP = 'fullstop',
+  DASH = 'dash',
+  PRIME = 'prime',    // Superscript.
+  DEGREE = 'degree',  // Superscript.
+  VBAR = 'vbar',      // A vertical bar.
+  COLON = 'colon',    // A vertical bar.
+  OPENFENCE = 'openfence',
+  CLOSEFENCE = 'closefence',
+  APPLICATION = 'application',  // Function Application.
+  DUMMY = 'dummy',              // A dummy separator for text.
+
+  // Identifier that describes a unit.
+
+  UNIT = 'unit',
+  // Expression that is used as a label.
+
+  LABEL = 'label',
+  // Fences.
+  OPEN = 'open',
+  CLOSE = 'close',
+  TOP = 'top',
+  BOTTOM = 'bottom',
+
+  NEUTRAL = 'neutral',
+  // Letters.
+  LATINLETTER = 'latinletter',
+  GREEKLETTER = 'greekletter',
+  OTHERLETTER = 'otherletter',
+
+  NUMBERSET = 'numbersetletter',
+  // Numbers.
+  INTEGER = 'integer',
+  FLOAT = 'float',
+  OTHERNUMBER = 'othernumber',
+
+  MIXED = 'mixed',
+  // Accents.
+  MULTIACCENT = 'multiaccent',
+  OVERACCENT = 'overaccent',
+
+  UNDERACCENT = 'underaccent',
+  // Index and tensor roles.
+  UNDEROVER = 'underover',
+  SUBSUP = 'subsup',
+  LEFTSUB = 'leftsub',
+  LEFTSUPER = 'leftsuper',
+  RIGHTSUB = 'rightsub',
+
+  RIGHTSUPER = 'rightsuper',
+  // Fenced.
+  LEFTRIGHT = 'leftright',
+
+  ABOVEBELOW = 'abovebelow',
+  // Sets.
+  SETEMPTY = 'set empty',
+  SETEXT = 'set extended',
+  SETSINGLE = 'set singleton',
+
+  SETCOLLECT = 'set collection',
+  // Text.
+  STRING = 'string',
+
+  SPACE = 'space',
+  // Punctuated elements.
+  SEQUENCE = 'sequence',
+  ENDPUNCT = 'endpunct',
+  STARTPUNCT = 'startpunct',
+
+  TEXT = 'text',
+  // Operators.
+  NEGATIVE = 'negative',
+  POSITIVE = 'positive',
+  NEGATION = 'negation',
+  MULTIOP = 'multiop',
+  PREFIXOP = 'prefix operator',
+
+  POSTFIXOP = 'postfix operator',
+  // Functions.
+  LIMFUNC = 'limit function',
+  INFIXFUNC = 'infix function',
+  PREFIXFUNC = 'prefix function',
+  POSTFIXFUNC = 'postfix function',
+  SIMPLEFUNC = 'simple function',
+
+  COMPFUNC = 'composed function',
+  // Large operators.
+  SUM = 'sum',
+  INTEGRAL = 'integral',
+
+  GEOMETRY = 'geometry',
+  // Binary operations.
+  ADDITION = 'addition',
+  MULTIPLICATION = 'multiplication',
+  SUBTRACTION = 'subtraction',
+
+  IMPLICIT = 'implicit',
+  // Fractions.
+  DIVISION = 'division',
+
+  VULGAR = 'vulgar',
+  // Relations.
+  EQUALITY = 'equality',
+  INEQUALITY = 'inequality',
+  ELEMENT = 'element',
+  ARROW = 'arrow',
+
+  SET = 'set',
+  // Roles of matrices or vectors.
+  DETERMINANT = 'determinant',
+  ROWVECTOR = 'rowvector',
+  BINOMIAL = 'binomial',
+  SQUAREMATRIX = 'squarematrix',
+
+  CYCLE = 'cycle',
+  // Roles of rows, lines, cells.
+  // They mirror the different types for tables, unless a more specific role
+  // is
+  // known.
+  MULTILINE = 'multiline',
+  MATRIX = 'matrix',
+  VECTOR = 'vector',
+  CASES = 'cases',
+
+  TABLE = 'table',
+  // Inference Roles
+  PROOF = 'proof',
+  LEFT = 'left',
+  RIGHT = 'right',
+  UP = 'up',
+  DOWN = 'down',
+  // conclusion types
+  FINAL = 'final',
+  // premise types
+  SINGLE = 'single',
+  HYP = 'hyp',
+
+  AXIOM = 'axiom',
+  // General
+  UNKNOWN = 'unknown'
+}
+
+/**
+ * Mapping for font annotations. (Taken from MathML2 section 3.2.2, with the
+ * exception of double-struck-italic.)
+ */
+export const enum SemanticFont {
+  BOLD = 'bold',
+  BOLDFRAKTUR = 'bold-fraktur',
+  BOLDITALIC = 'bold-italic',
+  BOLDSCRIPT = 'bold-script',
+  CALIGRAPHIC = 'caligraphic',
+  CALIGRAPHICBOLD = 'caligraphic-bold',
+  DOUBLESTRUCK = 'double-struck',
+  DOUBLESTRUCKITALIC = 'double-struck-italic',
+  FRAKTUR = 'fraktur',
+  ITALIC = 'italic',
+  MONOSPACE = 'monospace',
+  NORMAL = 'normal',
+  OLDSTYLE = 'oldstyle',
+  OLDSTYLEBOLD = 'oldstyle-bold',
+  SCRIPT = 'script',
+  SANSSERIF = 'sans-serif',
+  SANSSERIFITALIC = 'sans-serif-italic',
+  SANSSERIFBOLD = 'sans-serif-bold',
+  SANSSERIFBOLDITALIC = 'sans-serif-bold-italic',
+  UNKNOWN = 'unknown'
 }
 
 
@@ -68,266 +329,6 @@ export interface SemanticMeaning {
  * character.
  */
 export namespace SemanticAttr {
-  /**
-   * Mapping for types of elements.
-   */
-  export const enum Type {
-    // Leafs.
-    // Punctuation like comma, dot, ellipses.
-    PUNCTUATION = 'punctuation',
-    // Fence symbol.
-    FENCE = 'fence',
-    // One or several digits, plus some punctuation.
-    NUMBER = 'number',
-    // Single or multiple letters.
-    IDENTIFIER = 'identifier',
-    // Regular text in a math expression.
-    TEXT = 'text',
-    // e.g. +, *.
-    OPERATOR = 'operator',
-    // Relation symbol, e.g. equals.
-    RELATION = 'relation',
-    // e.g. Sum, product, integral.
-    LARGEOP = 'largeop',
-    // Some named function.
-
-    FUNCTION = 'function',
-    // Branches.
-    // Compound Symbols.
-    ACCENT = 'accent',
-    FENCED = 'fenced',
-    FRACTION = 'fraction',
-
-    PUNCTUATED = 'punctuated',
-    // Relations.
-    // Relation sequence of a single relation.
-    RELSEQ = 'relseq',
-    // Relation sequence containing at least two different relations.
-    MULTIREL = 'multirel',
-    // Operations.
-    INFIXOP = 'infixop',
-    PREFIXOP = 'prefixop',
-
-    POSTFIXOP = 'postfixop',
-    // Function and Bigop Application.
-    APPL = 'appl',
-    INTEGRAL = 'integral',
-
-    BIGOP = 'bigop',
-    SQRT = 'sqrt',
-    ROOT = 'root',
-    // These are bigops or functions with limits.
-    LIMUPPER = 'limupper',
-    LIMLOWER = 'limlower',
-    LIMBOTH = 'limboth',
-    SUBSCRIPT = 'subscript',
-    SUPERSCRIPT = 'superscript',
-    UNDERSCORE = 'underscore',
-    OVERSCORE = 'overscore',
-
-    TENSOR = 'tensor',
-    // Tables and their elements.
-    TABLE = 'table',
-    MULTILINE = 'multiline',
-    MATRIX = 'matrix',
-    VECTOR = 'vector',
-    CASES = 'cases',
-    ROW = 'row',
-    // Lines are effectively single cell rows.
-    LINE = 'line',
-
-    CELL = 'cell',
-    // Enclosed (counterpart for menclosed).
-
-    ENCLOSE = 'enclose',
-    // Proofs and Inferences
-    INFERENCE = 'inference',
-    RULELABEL = 'rulelabel',
-    CONCLUSION = 'conclusion',
-
-    PREMISES = 'premises',
-    // General.
-    UNKNOWN = 'unknown',
-    EMPTY = 'empty'
-  }
-
-  /**
-   * Mapping for roles of nodes.
-   * Roles are more specific than types.
-   * @final
-   */
-  export const enum Role {
-    // Punctuation.
-    COMMA = 'comma',
-    ELLIPSIS = 'ellipsis',
-    FULLSTOP = 'fullstop',
-    DASH = 'dash',
-    PRIME = 'prime',    // Superscript.
-    DEGREE = 'degree',  // Superscript.
-    VBAR = 'vbar',      // A vertical bar.
-    COLON = 'colon',    // A vertical bar.
-    OPENFENCE = 'openfence',
-    CLOSEFENCE = 'closefence',
-    APPLICATION = 'application',  // Function Application.
-    DUMMY = 'dummy',              // A dummy separator for text.
-
-    // Identifier that describes a unit.
-
-    UNIT = 'unit',
-    // Expression that is used as a label.
-
-    LABEL = 'label',
-    // Fences.
-    OPEN = 'open',
-    CLOSE = 'close',
-    TOP = 'top',
-    BOTTOM = 'bottom',
-
-    NEUTRAL = 'neutral',
-    // Letters.
-    LATINLETTER = 'latinletter',
-    GREEKLETTER = 'greekletter',
-    OTHERLETTER = 'otherletter',
-
-    NUMBERSET = 'numbersetletter',
-    // Numbers.
-    INTEGER = 'integer',
-    FLOAT = 'float',
-    OTHERNUMBER = 'othernumber',
-
-    MIXED = 'mixed',
-    // Accents.
-    MULTIACCENT = 'multiaccent',
-    OVERACCENT = 'overaccent',
-
-    UNDERACCENT = 'underaccent',
-    // Index and tensor roles.
-    UNDEROVER = 'underover',
-    SUBSUP = 'subsup',
-    LEFTSUB = 'leftsub',
-    LEFTSUPER = 'leftsuper',
-    RIGHTSUB = 'rightsub',
-
-    RIGHTSUPER = 'rightsuper',
-    // Fenced.
-    LEFTRIGHT = 'leftright',
-
-    ABOVEBELOW = 'abovebelow',
-    // Sets.
-    SETEMPTY = 'set empty',
-    SETEXT = 'set extended',
-    SETSINGLE = 'set singleton',
-
-    SETCOLLECT = 'set collection',
-    // Text.
-    STRING = 'string',
-
-    SPACE = 'space',
-    // Punctuated elements.
-    SEQUENCE = 'sequence',
-    ENDPUNCT = 'endpunct',
-    STARTPUNCT = 'startpunct',
-
-    TEXT = 'text',
-    // Operators.
-    NEGATIVE = 'negative',
-    POSITIVE = 'positive',
-    NEGATION = 'negation',
-    MULTIOP = 'multiop',
-    PREFIXOP = 'prefix operator',
-
-    POSTFIXOP = 'postfix operator',
-    // Functions.
-    LIMFUNC = 'limit function',
-    INFIXFUNC = 'infix function',
-    PREFIXFUNC = 'prefix function',
-    POSTFIXFUNC = 'postfix function',
-    SIMPLEFUNC = 'simple function',
-
-    COMPFUNC = 'composed function',
-    // Large operators.
-    SUM = 'sum',
-    INTEGRAL = 'integral',
-
-    GEOMETRY = 'geometry',
-    // Binary operations.
-    ADDITION = 'addition',
-    MULTIPLICATION = 'multiplication',
-    SUBTRACTION = 'subtraction',
-
-    IMPLICIT = 'implicit',
-    // Fractions.
-    DIVISION = 'division',
-
-    VULGAR = 'vulgar',
-    // Relations.
-    EQUALITY = 'equality',
-    INEQUALITY = 'inequality',
-    ELEMENT = 'element',
-    ARROW = 'arrow',
-
-    SET = 'set',
-    // Roles of matrices or vectors.
-    DETERMINANT = 'determinant',
-    ROWVECTOR = 'rowvector',
-    BINOMIAL = 'binomial',
-    SQUAREMATRIX = 'squarematrix',
-
-    CYCLE = 'cycle',
-    // Roles of rows, lines, cells.
-    // They mirror the different types for tables, unless a more specific role
-    // is
-    // known.
-    MULTILINE = 'multiline',
-    MATRIX = 'matrix',
-    VECTOR = 'vector',
-    CASES = 'cases',
-
-    TABLE = 'table',
-    // Inference Roles
-    PROOF = 'proof',
-    LEFT = 'left',
-    RIGHT = 'right',
-    UP = 'up',
-    DOWN = 'down',
-    // conclusion types
-    FINAL = 'final',
-    // premise types
-    SINGLE = 'single',
-    HYP = 'hyp',
-
-    AXIOM = 'axiom',
-    // General
-    UNKNOWN = 'unknown'
-  }
-
-  /**
-   * Mapping for font annotations. (Taken from MathML2 section 3.2.2, with the
-   * exception of double-struck-italic.)
-   */
-  export const enum Font {
-    BOLD = 'bold',
-    BOLDFRAKTUR = 'bold-fraktur',
-    BOLDITALIC = 'bold-italic',
-    BOLDSCRIPT = 'bold-script',
-    CALIGRAPHIC = 'caligraphic',
-    CALIGRAPHICBOLD = 'caligraphic-bold',
-    DOUBLESTRUCK = 'double-struck',
-    DOUBLESTRUCKITALIC = 'double-struck-italic',
-    FRAKTUR = 'fraktur',
-    ITALIC = 'italic',
-    MONOSPACE = 'monospace',
-    NORMAL = 'normal',
-    OLDSTYLE = 'oldstyle',
-    OLDSTYLEBOLD = 'oldstyle-bold',
-    SCRIPT = 'script',
-    SANSSERIF = 'sans-serif',
-    SANSSERIFITALIC = 'sans-serif-italic',
-    SANSSERIFBOLD = 'sans-serif-bold',
-    SANSSERIFBOLDITALIC = 'sans-serif-bold-italic',
-    UNKNOWN = 'unknown'
-  }
-
   // Punctuation Characters.
   const generalPunctuations: string[] = [
     '!',  '"',  '#',  '%',  '&',  ';',  '?',  '@',  '\\', '¡',  '§',  '¶',
@@ -340,7 +341,7 @@ export namespace SemanticAttr {
   ];
   const colons: string[] = ['︓', ':', '：', '﹕'];
   const invisibleComma_: string = SemanticUtil.numberToUnicode(0x2063);
-  const commas: string[] = ['，', '﹐', ',', this.invisibleComma_];
+  const commas: string[] = ['，', '﹐', ',', invisibleComma_];
   const ellipses: string[] = ['…', '⋮', '⋯', '⋰', '⋱', '︙'];
   const fullStops: string[] = ['.', '﹒', '．'];
   const dashes: string[] = ['‒', '–', '—', '―', '〜', '︱', '︲', '﹘'];
@@ -456,19 +457,19 @@ export namespace SemanticAttr {
     '\ufe47': '﹈'
   };
 
-  const leftFences: string[] = SemanticUtil.objectsToKeys(this.openClosePairs);
-  const rightFences: string[] = SemanticUtil.objectsToValues(this.openClosePairs);
+  const leftFences: string[] = SemanticUtil.objectsToKeys(openClosePairs);
+  const rightFences: string[] = SemanticUtil.objectsToValues(openClosePairs);
   rightFences.push('〟');
-  const topFences: string[] = SemanticUtil.objectsToKeys(this.topBottomPairs);
-  const bottomFences: string[] = SemanticUtil.objectsToValues(this.topBottomPairs);
+  const topFences: string[] = SemanticUtil.objectsToKeys(topBottomPairs);
+  const bottomFences: string[] = SemanticUtil.objectsToValues(topBottomPairs);
 
   const neutralFences: string[] =
       ['|', '¦', '‖', '∣', '⏐', '⎸', '⎹', '∥', '❘', '⦀', '⫴', '｜', '￤'];
   /**
    * Array of all fences.
    */
-  const allFences: string[] = neutralFences.concat(
-    leftFences, rightFences, topFences, bottomFences);
+  // const allFences: string[] = neutralFences.concat(
+  //   leftFences, rightFences, topFences, bottomFences);
 
   // Identifiers.
   // Latin Alphabets.
@@ -662,30 +663,30 @@ export namespace SemanticAttr {
   // Other alphabets.
   const hebrewLetters: string[] = ['ℵ', 'ℶ', 'ℷ', 'ℸ'];
 
-  const allLetters: string[] = capitalLatin.concat(
-        smallLatin, capitalLatinFullWidth, smallLatinFullWidth,
-        capitalLatinBold, smallLatinBold, capitalLatinItalic,
-        capitalLatinBoldItalic, smallLatinBoldItalic,
-        smallLatinItalic, capitalLatinScript, smallLatinScript,
-        capitalLatinBoldScript, smallLatinBoldScript,
-        capitalLatinFraktur, smallLatinFraktur,
-        capitalLatinDoubleStruck, smallLatinDoubleStruck,
-        capitalLatinBoldFraktur, smallLatinBoldFraktur,
-        capitalLatinSansSerif, smallLatinSansSerif,
-        capitalLatinSansSerifBold, smallLatinSansSerifBold,
-        capitalLatinSansSerifItalic, smallLatinSansSerifItalic,
-        capitalLatinSansSerifBoldItalic,
-        smallLatinSansSerifBoldItalic, capitalLatinMonospace,
-        smallLatinMonospace, latinDoubleStruckItalic,
-        capitalGreek, smallGreek, capitalGreekBold,
-        smallGreekBold, capitalGreekItalic, smallGreekItalic,
-        capitalGreekBoldItalic, smallGreekBoldItalic,
-        capitalGreekSansSerifBold, smallGreekSansSerifBold,
-        greekDoubleStruck, greekSpecial,
-        capitalGreekSansSerifBoldItalic,
-        smallGreekSansSerifBoldItalic, greekSpecialBold,
-        greekSpecialItalic, greekSpecialSansSerifBold,
-        hebrewLetters);
+  // const allLetters: string[] = capitalLatin.concat(
+  //       smallLatin, capitalLatinFullWidth, smallLatinFullWidth,
+  //       capitalLatinBold, smallLatinBold, capitalLatinItalic,
+  //       capitalLatinBoldItalic, smallLatinBoldItalic,
+  //       smallLatinItalic, capitalLatinScript, smallLatinScript,
+  //       capitalLatinBoldScript, smallLatinBoldScript,
+  //       capitalLatinFraktur, smallLatinFraktur,
+  //       capitalLatinDoubleStruck, smallLatinDoubleStruck,
+  //       capitalLatinBoldFraktur, smallLatinBoldFraktur,
+  //       capitalLatinSansSerif, smallLatinSansSerif,
+  //       capitalLatinSansSerifBold, smallLatinSansSerifBold,
+  //       capitalLatinSansSerifItalic, smallLatinSansSerifItalic,
+  //       capitalLatinSansSerifBoldItalic,
+  //       smallLatinSansSerifBoldItalic, capitalLatinMonospace,
+  //       smallLatinMonospace, latinDoubleStruckItalic,
+  //       capitalGreek, smallGreek, capitalGreekBold,
+  //       smallGreekBold, capitalGreekItalic, smallGreekItalic,
+  //       capitalGreekBoldItalic, smallGreekBoldItalic,
+  //       capitalGreekSansSerifBold, smallGreekSansSerifBold,
+  //       greekDoubleStruck, greekSpecial,
+  //       capitalGreekSansSerifBoldItalic,
+  //       smallGreekSansSerifBoldItalic, greekSpecialBold,
+  //       greekSpecialItalic, greekSpecialSansSerifBold,
+  //       hebrewLetters);
 
   // Operator symbols
   const additions: string[] = [
@@ -697,7 +698,7 @@ export namespace SemanticAttr {
    * Invisible operator for plus.
    */
   const invisiblePlus_: string = SemanticUtil.numberToUnicode(0x2064);
-  additions.push(this.invisiblePlus_);
+  additions.push(invisiblePlus_);
 
   const multiplications: string[] = [
     '†', '‡', '∐', '∗', '∘', '∙', '≀', '⊚', '⊛', '⊠', '⊡', '⋅',
@@ -804,9 +805,9 @@ export namespace SemanticAttr {
   const prefixOpsSansSerifBold: string[] = ['𝝯', '𝞉'];
   // TODO (sorge) Insert nabla, differential operators sans serif bold italic
 
-  const operatorBits: string[] =
-      // TODO (sorge) What to do if single glyphs of big ops occur on their own.
-      ['⌠', '⌡', '⎶', '⎪', '⎮', '⎯', '⎲', '⎳', '⎷'];
+  // const operatorBits: string[] =
+  //     // TODO (sorge) What to do if single glyphs of big ops occur on their own.
+  //     ['⌠', '⌡', '⎶', '⎪', '⎮', '⎯', '⎲', '⎳', '⎷'];
 
   // Accents.
   // TODO (sorge) Add accented characters.
@@ -863,9 +864,9 @@ export namespace SemanticAttr {
     /**
      * Array of all single digits.
      */
-  const digits: string[] = digitsNormal.concat(
-        digitsFullWidth, digitsBold, digitsDoubleStruck,
-        digitsSansSerif, digitsSansSerifBold, digitsMonospace);
+  // const digits: string[] = digitsNormal.concat(
+  //       digitsFullWidth, digitsBold, digitsDoubleStruck,
+  //       digitsSansSerif, digitsSansSerifBold, digitsMonospace);
   /**
    * Array of all non-digit number symbols.
    */
@@ -877,7 +878,7 @@ export namespace SemanticAttr {
   /**
    * Array of all number symbols.
    */
-  const allNumbers: string[] = digits.concat(numbers, otherNumbers);
+  // const allNumbers: string[] = digits.concat(numbers, otherNumbers);
 
   // Functions.
   const trigonometricFunctions: string[] = [
@@ -911,542 +912,544 @@ export namespace SemanticAttr {
   ];
   const infixFunctions: string[] = ['mod', 'rem'];
 
+  interface MeaningSet {
+    set: string[];
+    role: SemanticRole;
+    type: SemanticType;
+    font?: SemanticFont;
+  }
+  
   /**
    * Default assignments of semantic attributes.
    * Assigns sets of symbols to meaning.
    */
-  const symbolSetToSemantic_: {
-    set: string[],
-    role: SemanticAttr.Role,
-    type: SemanticAttr.Type,
-    font: SemanticAttr.Font
-  }[] = [
+  const symbolSetToSemantic_: MeaningSet[] = [
       // Punctuation
       {
         set: generalPunctuations,
-        type: SemanticAttr.Type.PUNCTUATION,
-        role: SemanticAttr.Role.UNKNOWN
+        type: SemanticType.PUNCTUATION,
+        role: SemanticRole.UNKNOWN
       },
       {
         set: colons,
-        type: SemanticAttr.Type.PUNCTUATION,
-        role: SemanticAttr.Role.COLON
+        type: SemanticType.PUNCTUATION,
+        role: SemanticRole.COLON
       },
       {
         set: commas,
-        type: SemanticAttr.Type.PUNCTUATION,
-        role: SemanticAttr.Role.COMMA
+        type: SemanticType.PUNCTUATION,
+        role: SemanticRole.COMMA
       },
       {
         set: ellipses,
-        type: SemanticAttr.Type.PUNCTUATION,
-        role: SemanticAttr.Role.ELLIPSIS
+        type: SemanticType.PUNCTUATION,
+        role: SemanticRole.ELLIPSIS
       },
       {
         set: fullStops,
-        type: SemanticAttr.Type.PUNCTUATION,
-        role: SemanticAttr.Role.FULLSTOP
+        type: SemanticType.PUNCTUATION,
+        role: SemanticRole.FULLSTOP
       },
       {
         set: dashes,
-        type: SemanticAttr.Type.PUNCTUATION,
-        role: SemanticAttr.Role.DASH
+        type: SemanticType.PUNCTUATION,
+        role: SemanticRole.DASH
       },
       {
         set: primes,
-        type: SemanticAttr.Type.PUNCTUATION,
-        role: SemanticAttr.Role.PRIME
+        type: SemanticType.PUNCTUATION,
+        role: SemanticRole.PRIME
       },
       {
         set: degrees,
-        type: SemanticAttr.Type.PUNCTUATION,
-        role: SemanticAttr.Role.DEGREE
+        type: SemanticType.PUNCTUATION,
+        role: SemanticRole.DEGREE
       },
       // Fences
       {
         set: leftFences,
-        type: SemanticAttr.Type.FENCE,
-        role: SemanticAttr.Role.OPEN
+        type: SemanticType.FENCE,
+        role: SemanticRole.OPEN
       },
       {
         set: rightFences,
-        type: SemanticAttr.Type.FENCE,
-        role: SemanticAttr.Role.CLOSE
+        type: SemanticType.FENCE,
+        role: SemanticRole.CLOSE
       },
       {
         set: topFences,
-        type: SemanticAttr.Type.FENCE,
-        role: SemanticAttr.Role.TOP
+        type: SemanticType.FENCE,
+        role: SemanticRole.TOP
       },
       {
         set: bottomFences,
-        type: SemanticAttr.Type.FENCE,
-        role: SemanticAttr.Role.BOTTOM
+        type: SemanticType.FENCE,
+        role: SemanticRole.BOTTOM
       },
       {
         set: neutralFences,
-        type: SemanticAttr.Type.FENCE,
-        role: SemanticAttr.Role.NEUTRAL
+        type: SemanticType.FENCE,
+        role: SemanticRole.NEUTRAL
       },
       // Single characters.
       // Latin alphabets.
       {
         set: smallLatin,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.NORMAL
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.NORMAL
       },
       {
         set: capitalLatin,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.NORMAL
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.NORMAL
       },
       {
         set: smallLatinFullWidth,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.NORMAL
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.NORMAL
       },
       {
         set: capitalLatinFullWidth,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.NORMAL
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.NORMAL
       },
       {
         set: smallLatinBold,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.BOLD
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.BOLD
       },
       {
         set: capitalLatinBold,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.BOLD
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.BOLD
       },
       {
         set: smallLatinItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.ITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.ITALIC
       },
       {
         set: capitalLatinItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.ITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.ITALIC
       },
       {
         set: smallLatinBoldItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.BOLDITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.BOLDITALIC
       },
       {
         set: capitalLatinBoldItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.BOLDITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.BOLDITALIC
       },
       {
         set: smallLatinScript,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.SCRIPT
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.SCRIPT
       },
       {
         set: capitalLatinScript,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.SCRIPT
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.SCRIPT
       },
       {
         set: smallLatinBoldScript,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.BOLDSCRIPT
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.BOLDSCRIPT
       },
       {
         set: capitalLatinBoldScript,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.BOLDSCRIPT
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.BOLDSCRIPT
       },
       {
         set: smallLatinFraktur,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.FRAKTUR
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.FRAKTUR
       },
       {
         set: capitalLatinFraktur,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.FRAKTUR
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.FRAKTUR
       },
       {
         set: smallLatinDoubleStruck,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.DOUBLESTRUCK
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.DOUBLESTRUCK
       },
       {
         set: capitalLatinDoubleStruck,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.DOUBLESTRUCK
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.DOUBLESTRUCK
       },
       {
         set: smallLatinBoldFraktur,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.BOLDFRAKTUR
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.BOLDFRAKTUR
       },
       {
         set: capitalLatinBoldFraktur,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.BOLDFRAKTUR
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.BOLDFRAKTUR
       },
       {
         set: smallLatinSansSerif,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.SANSSERIF
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.SANSSERIF
       },
       {
         set: capitalLatinSansSerif,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.SANSSERIF
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.SANSSERIF
       },
       {
         set: smallLatinSansSerifBold,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.SANSSERIFBOLD
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.SANSSERIFBOLD
       },
       {
         set: capitalLatinSansSerifBold,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.SANSSERIFBOLD
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.SANSSERIFBOLD
       },
       {
         set: smallLatinSansSerifItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.SANSSERIFITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.SANSSERIFITALIC
       },
       {
         set: capitalLatinSansSerifItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.SANSSERIFITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.SANSSERIFITALIC
       },
       {
         set: smallLatinSansSerifBoldItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.SANSSERIFBOLDITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.SANSSERIFBOLDITALIC
       },
       {
         set: capitalLatinSansSerifBoldItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.SANSSERIFBOLDITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.SANSSERIFBOLDITALIC
       },
       {
         set: smallLatinMonospace,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.MONOSPACE
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.MONOSPACE
       },
       {
         set: capitalLatinMonospace,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.MONOSPACE
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.MONOSPACE
       },
       {
         set: latinDoubleStruckItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.LATINLETTER,
-        font: SemanticAttr.Font.DOUBLESTRUCKITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.LATINLETTER,
+        font: SemanticFont.DOUBLESTRUCKITALIC
       },
       // Greek alphabets.
       {
         set: smallGreek,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.NORMAL
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.NORMAL
       },
       {
         set: capitalGreek,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.NORMAL
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.NORMAL
       },
       {
         set: smallGreekBold,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.BOLD
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.BOLD
       },
       {
         set: capitalGreekBold,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.BOLD
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.BOLD
       },
       {
         set: smallGreekItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.ITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.ITALIC
       },
       {
         set: capitalGreekItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.ITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.ITALIC
       },
       {
         set: smallGreekBoldItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.BOLDITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.BOLDITALIC
       },
       {
         set: capitalGreekBoldItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.BOLDITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.BOLDITALIC
       },
       {
         set: smallGreekSansSerifBold,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.SANSSERIFBOLD
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.SANSSERIFBOLD
       },
       {
         set: capitalGreekSansSerifBold,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.SANSSERIFBOLD
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.SANSSERIFBOLD
       },
       {
         set: capitalGreekSansSerifBoldItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.SANSSERIFBOLDITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.SANSSERIFBOLDITALIC
       },
       {
         set: smallGreekSansSerifBoldItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.SANSSERIFBOLDITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.SANSSERIFBOLDITALIC
       },
       {
         set: greekDoubleStruck,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.DOUBLESTRUCK
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.DOUBLESTRUCK
       },
       {
         set: greekSpecial,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.NORMAL
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.NORMAL
       },
       {
         set: greekSpecialBold,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.BOLD
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.BOLD
       },
       {
         set: greekSpecialItalic,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.ITALIC
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.ITALIC
       },
       {
         set: greekSpecialSansSerifBold,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.GREEKLETTER,
-        font: SemanticAttr.Font.SANSSERIFBOLD
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.GREEKLETTER,
+        font: SemanticFont.SANSSERIFBOLD
       },
       // Other alphabets.
       {
         set: hebrewLetters,
-        type: SemanticAttr.Type.IDENTIFIER,
-        role: SemanticAttr.Role.OTHERLETTER,
-        font: SemanticAttr.Font.NORMAL
+        type: SemanticType.IDENTIFIER,
+        role: SemanticRole.OTHERLETTER,
+        font: SemanticFont.NORMAL
       },
       // Numbers.
       {
         set: digitsNormal,
-        type: SemanticAttr.Type.NUMBER,
-        role: SemanticAttr.Role.INTEGER,
-        font: SemanticAttr.Font.NORMAL
+        type: SemanticType.NUMBER,
+        role: SemanticRole.INTEGER,
+        font: SemanticFont.NORMAL
       },
       {
         set: digitsFullWidth,
-        type: SemanticAttr.Type.NUMBER,
-        role: SemanticAttr.Role.INTEGER,
-        font: SemanticAttr.Font.NORMAL
+        type: SemanticType.NUMBER,
+        role: SemanticRole.INTEGER,
+        font: SemanticFont.NORMAL
       },
       {
         set: digitsBold,
-        type: SemanticAttr.Type.NUMBER,
-        role: SemanticAttr.Role.INTEGER,
-        font: SemanticAttr.Font.BOLD
+        type: SemanticType.NUMBER,
+        role: SemanticRole.INTEGER,
+        font: SemanticFont.BOLD
       },
       {
         set: digitsDoubleStruck,
-        type: SemanticAttr.Type.NUMBER,
-        role: SemanticAttr.Role.INTEGER,
-        font: SemanticAttr.Font.DOUBLESTRUCK
+        type: SemanticType.NUMBER,
+        role: SemanticRole.INTEGER,
+        font: SemanticFont.DOUBLESTRUCK
       },
       {
         set: digitsSansSerif,
-        type: SemanticAttr.Type.NUMBER,
-        role: SemanticAttr.Role.INTEGER,
-        font: SemanticAttr.Font.SANSSERIF
+        type: SemanticType.NUMBER,
+        role: SemanticRole.INTEGER,
+        font: SemanticFont.SANSSERIF
       },
       {
         set: digitsSansSerifBold,
-        type: SemanticAttr.Type.NUMBER,
-        role: SemanticAttr.Role.INTEGER,
-        font: SemanticAttr.Font.SANSSERIFBOLD
+        type: SemanticType.NUMBER,
+        role: SemanticRole.INTEGER,
+        font: SemanticFont.SANSSERIFBOLD
       },
       {
         set: digitsMonospace,
-        type: SemanticAttr.Type.NUMBER,
-        role: SemanticAttr.Role.INTEGER,
-        font: SemanticAttr.Font.MONOSPACE
+        type: SemanticType.NUMBER,
+        role: SemanticRole.INTEGER,
+        font: SemanticFont.MONOSPACE
       },
       {
         set: numbers,
-        type: SemanticAttr.Type.NUMBER,
-        role: SemanticAttr.Role.FLOAT
+        type: SemanticType.NUMBER,
+        role: SemanticRole.FLOAT
       },
       {
         set: otherNumbers,
-        type: SemanticAttr.Type.NUMBER,
-        role: SemanticAttr.Role.OTHERNUMBER
+        type: SemanticType.NUMBER,
+        role: SemanticRole.OTHERNUMBER
       },
       // Operators.
       {
         set: additions,
-        type: SemanticAttr.Type.OPERATOR,
-        role: SemanticAttr.Role.ADDITION
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.ADDITION
       },
       {
         set: multiplications,
-        type: SemanticAttr.Type.OPERATOR,
-        role: SemanticAttr.Role.MULTIPLICATION
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.MULTIPLICATION
       },
       {
         set: subtractions,
-        type: SemanticAttr.Type.OPERATOR,
-        role: SemanticAttr.Role.SUBTRACTION
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.SUBTRACTION
       },
       {
         set: divisions,
-        type: SemanticAttr.Type.OPERATOR,
-        role: SemanticAttr.Role.DIVISION
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.DIVISION
       },
       {
         set: prefixOps,
-        type: SemanticAttr.Type.OPERATOR,
-        role: SemanticAttr.Role.PREFIXOP
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.PREFIXOP
       },
       {
         set: prefixOpsBold,
-        type: SemanticAttr.Type.OPERATOR,
-        role: SemanticAttr.Role.PREFIXOP,
-        font: SemanticAttr.Font.BOLD
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.PREFIXOP,
+        font: SemanticFont.BOLD
       },
       {
         set: prefixOpsItalic,
-        type: SemanticAttr.Type.OPERATOR,
-        role: SemanticAttr.Role.PREFIXOP,
-        font: SemanticAttr.Font.ITALIC
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.PREFIXOP,
+        font: SemanticFont.ITALIC
       },
       {
         set: prefixOpsSansSerifBold,
-        type: SemanticAttr.Type.OPERATOR,
-        role: SemanticAttr.Role.PREFIXOP,
-        font: SemanticAttr.Font.SANSSERIFBOLD
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.PREFIXOP,
+        font: SemanticFont.SANSSERIFBOLD
       },
       // Relations
       {
         set: equalities,
-        type: SemanticAttr.Type.RELATION,
-        role: SemanticAttr.Role.EQUALITY
+        type: SemanticType.RELATION,
+        role: SemanticRole.EQUALITY
       },
       {
         set: inequalities,
-        type: SemanticAttr.Type.RELATION,
-        role: SemanticAttr.Role.INEQUALITY
+        type: SemanticType.RELATION,
+        role: SemanticRole.INEQUALITY
       },
       {
         set: setRelations,
-        type: SemanticAttr.Type.RELATION,
-        role: SemanticAttr.Role.SET
+        type: SemanticType.RELATION,
+        role: SemanticRole.SET
       },
       {
         set: elementRelations,
-        type: SemanticAttr.Type.OPERATOR,
+        type: SemanticType.OPERATOR,
         // TODO: Changes that to relation once speech rules are separated
         //       as this has effects on clearspeak.
-        role: SemanticAttr.Role.ELEMENT
+        role: SemanticRole.ELEMENT
       },
       {
         set: relations,
-        type: SemanticAttr.Type.RELATION,
-        role: SemanticAttr.Role.UNKNOWN
+        type: SemanticType.RELATION,
+        role: SemanticRole.UNKNOWN
       },
       {
         set: arrows,
-        type: SemanticAttr.Type.RELATION,
-        role: SemanticAttr.Role.ARROW
+        type: SemanticType.RELATION,
+        role: SemanticRole.ARROW
       },
       // Large operators
       {
         set: sumOps,
-        type: SemanticAttr.Type.LARGEOP,
-        role: SemanticAttr.Role.SUM
+        type: SemanticType.LARGEOP,
+        role: SemanticRole.SUM
       },
       {
         set: intOps,
-        type: SemanticAttr.Type.LARGEOP,
-        role: SemanticAttr.Role.INTEGRAL
+        type: SemanticType.LARGEOP,
+        role: SemanticRole.INTEGRAL
       },
       {
         set: geometryOps,  // TODO: Change that after speech rule work?
-        type: SemanticAttr.Type.OPERATOR,
-        role: SemanticAttr.Role.GEOMETRY
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.GEOMETRY
       },
       // Functions
       {
         set: limitFunctions,
-        type: SemanticAttr.Type.FUNCTION,
-        role: SemanticAttr.Role.LIMFUNC
+        type: SemanticType.FUNCTION,
+        role: SemanticRole.LIMFUNC
       },
       {
         set: prefixFunctions,
-        type: SemanticAttr.Type.FUNCTION,
-        role: SemanticAttr.Role.PREFIXFUNC
+        type: SemanticType.FUNCTION,
+        role: SemanticRole.PREFIXFUNC
       },
       {
         set: infixFunctions,
-        type: SemanticAttr.Type.OPERATOR,
-        role: SemanticAttr.Role.PREFIXFUNC
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.PREFIXFUNC
       }
     ];
 
@@ -1456,13 +1459,13 @@ export namespace SemanticAttr {
    *     semantic attributes.
    */
   const meaning_: {[key: string]: SemanticMeaning} = function() {
-    let result = {};
-    for (let i = 0, set; set = symbolSetToSemantic_[i]; i++) {
-      set.set.forEach(function(symbol) {
+    let result: {[key: string]: SemanticMeaning} = {};
+    for (let i = 0, st: MeaningSet; st = symbolSetToSemantic_[i]; i++) {
+      st.set.forEach(function(symbol) {
         result[symbol] = {
-          role: set.role || SemanticAttr.Role.UNKNOWN,
-          type: set.type || SemanticAttr.Type.UNKNOWN,
-          font: set.font || SemanticAttr.Font.UNKNOWN
+          role: st.role || SemanticRole.UNKNOWN,
+          type: st.type || SemanticType.UNKNOWN,
+          font: st.font || SemanticFont.UNKNOWN
         };
       });
     }
@@ -1487,8 +1490,8 @@ export namespace SemanticAttr {
    * @param symbol The symbol to which we want to determine the type.
    * @return The semantic type of the symbol.
    */
-  export function lookupType(symbol: string): SemanticAttr.Type {
-    return SemanticAttr.Type.UNKNOWN;
+  export function lookupType(symbol: string): SemanticType {
+    return meaning_[symbol]?.type || SemanticType.UNKNOWN;
   }
 
 
@@ -1497,8 +1500,8 @@ export namespace SemanticAttr {
    * @param symbol The symbol to which we want to determine the role.
    * @return The semantic role of the symbol.
    */
-  export function lookupRole(symbol: string): SemanticAttr.Role {
-    return SemanticAttr.Role.UNKNOWN;
+  export function lookupRole(symbol: string): SemanticRole {
+    return meaning_[symbol]?.role || SemanticRole.UNKNOWN;
   }
 
 
@@ -1508,10 +1511,10 @@ export namespace SemanticAttr {
    * @return The semantic meaning of the symbol.
    */
   export function lookupMeaning(symbol: string): SemanticMeaning {
-    return this.meaning_[symbol] || {
-      role: SemanticAttr.Role.UNKNOWN,
-      type: SemanticAttr.Type.UNKNOWN,
-      font: SemanticAttr.Font.UNKNOWN
+    return meaning_[symbol] || {
+      role: SemanticRole.UNKNOWN,
+      type: SemanticType.UNKNOWN,
+      font: SemanticFont.UNKNOWN
     };
   }
 
@@ -1560,11 +1563,11 @@ export namespace SemanticAttr {
    * @return True if the fences are matching.
    */
   export function isMatchingFenceRole(open: string, close: string): boolean {
-    return open === SemanticAttr.Role.OPEN &&
-      close === SemanticAttr.Role.CLOSE ||
-      open === SemanticAttr.Role.NEUTRAL &&
-      close === SemanticAttr.Role.NEUTRAL ||
-      open === SemanticAttr.Role.TOP && close === SemanticAttr.Role.BOTTOM;
+    return open === SemanticRole.OPEN &&
+      close === SemanticRole.CLOSE ||
+      open === SemanticRole.NEUTRAL &&
+      close === SemanticRole.NEUTRAL ||
+      open === SemanticRole.TOP && close === SemanticRole.BOTTOM;
   }
 
   /**
@@ -1589,9 +1592,9 @@ export namespace SemanticAttr {
    * @param fence Opening fence.
    * @return True if the fence is open or neutral.
    */
-  export function isOpeningFence(fence: SemanticAttr.Role): boolean {
-    return fence === SemanticAttr.Role.OPEN ||
-        fence === SemanticAttr.Role.NEUTRAL;
+  export function isOpeningFence(fence: SemanticRole): boolean {
+    return fence === SemanticRole.OPEN ||
+        fence === SemanticRole.NEUTRAL;
   }
 
 
@@ -1600,9 +1603,9 @@ export namespace SemanticAttr {
    * @param fence Closing fence.
    * @return True if the fence is close or neutral.
    */
-  export function isClosingFence(fence: SemanticAttr.Role): boolean {
-    return fence === SemanticAttr.Role.CLOSE ||
-        fence === SemanticAttr.Role.NEUTRAL;
+  export function isClosingFence(fence: SemanticRole): boolean {
+    return fence === SemanticRole.CLOSE ||
+        fence === SemanticRole.NEUTRAL;
   }
 
 
@@ -1612,11 +1615,11 @@ export namespace SemanticAttr {
    * @param type The type.
    * @return True if the type can be embellished.
    */
-  export function isEmbellishedType(type: SemanticAttr.Type): boolean {
-    return type === SemanticAttr.Type.OPERATOR ||
-        type === SemanticAttr.Type.RELATION ||
-        type === SemanticAttr.Type.FENCE ||
-        type === SemanticAttr.Type.PUNCTUATION;
+  export function isEmbellishedType(type: SemanticType): boolean {
+    return type === SemanticType.OPERATOR ||
+        type === SemanticType.RELATION ||
+        type === SemanticType.FENCE ||
+        type === SemanticType.PUNCTUATION;
   }
 
 

@@ -32,10 +32,10 @@ import {SyntaxWalker} from './syntax_walker';
  * @override
  */
 export class TableWalker extends sre.SyntaxWalker {
-  static ELIGIBLE_CELL_ROLES: SemanticAttr.Role[];
+  static ELIGIBLE_CELL_ROLES: SemanticRole[];
 
 
-  static ELIGIBLE_TABLE_TYPES: SemanticAttr.Type[];
+  static ELIGIBLE_TABLE_TYPES: SemanticType[];
 
   modifier: boolean = false;
 
@@ -107,7 +107,7 @@ export class TableWalker extends sre.SyntaxWalker {
    */
   private eligibleCell_(): boolean {
     let primary = this.getFocus().getSemanticPrimary();
-    return this.modifier && primary.type === sre.SemanticAttr.Type.CELL &&
+    return this.modifier && primary.type === SemanticType.CELL &&
         TableWalker.ELIGIBLE_CELL_ROLES.indexOf(primary.role) !== -1;
   }
 
@@ -256,14 +256,14 @@ export class TableWalker extends sre.SyntaxWalker {
 }
 goog.inherits(TableWalker, SyntaxWalker);
 TableWalker.ELIGIBLE_CELL_ROLES = [
-  sre.SemanticAttr.Role.DETERMINANT, sre.SemanticAttr.Role.ROWVECTOR,
-  sre.SemanticAttr.Role.BINOMIAL, sre.SemanticAttr.Role.SQUAREMATRIX,
-  sre.SemanticAttr.Role.MULTILINE, sre.SemanticAttr.Role.MATRIX,
-  sre.SemanticAttr.Role.VECTOR, sre.SemanticAttr.Role.CASES,
-  sre.SemanticAttr.Role.TABLE
+  SemanticRole.DETERMINANT, SemanticRole.ROWVECTOR,
+  SemanticRole.BINOMIAL, SemanticRole.SQUAREMATRIX,
+  SemanticRole.MULTILINE, SemanticRole.MATRIX,
+  SemanticRole.VECTOR, SemanticRole.CASES,
+  SemanticRole.TABLE
 ];
 TableWalker.ELIGIBLE_TABLE_TYPES = [
-  sre.SemanticAttr.Type.MULTILINE, sre.SemanticAttr.Type.MATRIX,
-  sre.SemanticAttr.Type.VECTOR, sre.SemanticAttr.Type.CASES,
-  sre.SemanticAttr.Type.TABLE
+  SemanticType.MULTILINE, SemanticType.MATRIX,
+  SemanticType.VECTOR, SemanticType.CASES,
+  SemanticType.TABLE
 ];

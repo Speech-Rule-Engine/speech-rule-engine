@@ -89,23 +89,23 @@ export class SemanticWalker extends sre.AbstractWalker {
    */
   combineContentChildren(type, role, content, children) {
     switch (type) {
-      case sre.SemanticAttr.Type.RELSEQ:
-      case sre.SemanticAttr.Type.INFIXOP:
-      case sre.SemanticAttr.Type.MULTIREL:
+      case SemanticType.RELSEQ:
+      case SemanticType.INFIXOP:
+      case SemanticType.MULTIREL:
         return this.makePairList(children, content);
-      case sre.SemanticAttr.Type.PREFIXOP:
+      case SemanticType.PREFIXOP:
         return [this.focusFromId(children[0], content.concat(children))];
-      case sre.SemanticAttr.Type.POSTFIXOP:
+      case SemanticType.POSTFIXOP:
         return [this.focusFromId(children[0], children.concat(content))];
-      case sre.SemanticAttr.Type.MATRIX:
-      case sre.SemanticAttr.Type.VECTOR:
-      case sre.SemanticAttr.Type.FENCED:
+      case SemanticType.MATRIX:
+      case SemanticType.VECTOR:
+      case SemanticType.FENCED:
         return [this.focusFromId(
             children[0], [content[0], children[0], content[1]])];
-      case sre.SemanticAttr.Type.CASES:
+      case SemanticType.CASES:
         return [this.focusFromId(children[0], [content[0], children[0]])];
-      case sre.SemanticAttr.Type.PUNCTUATED:
-        if (role === sre.SemanticAttr.Role.TEXT) {
+      case SemanticType.PUNCTUATED:
+        if (role === SemanticRole.TEXT) {
           return children.map(goog.bind(this.singletonFocus, this));
         }
         // TODO: That needs to be fixed!
@@ -114,12 +114,12 @@ export class SemanticWalker extends sre.AbstractWalker {
         }
         let focusList = this.combinePunctuations(children, content, [], []);
         return focusList;
-      case sre.SemanticAttr.Type.APPL:
+      case SemanticType.APPL:
         return [
           this.focusFromId(children[0], [children[0], content[0]]),
           this.singletonFocus(children[1])
         ];
-      case sre.SemanticAttr.Type.ROOT:
+      case SemanticType.ROOT:
         return [
           this.singletonFocus(children[1]), this.singletonFocus(children[0])
         ];

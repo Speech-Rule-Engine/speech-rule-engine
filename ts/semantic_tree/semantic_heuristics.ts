@@ -182,8 +182,8 @@ export class SemanticHeuristics {
     let nextExists = next && next.length;
     let processor = sre.SemanticProcessor.getInstance();
     if (prevExists && nextExists) {
-      if (next[0].type === SemanticAttr.Type.INFIXOP &&
-          next[0].role === SemanticAttr.Role.IMPLICIT) {
+      if (next[0].type === SemanticType.INFIXOP &&
+          next[0].role === SemanticRole.IMPLICIT) {
         rel = collect.pop();
         prev.push(processor['postfixNode_'](prev.pop(), collect));
         return rel;
@@ -249,8 +249,8 @@ export class SemanticHeuristics {
       // are no more double operators. Left also exists. Cases that left is an
       // implicit infix or simple.
       let newOp = SemanticHeuristics.getInstance().factory.makeBranchNode(
-          SemanticAttr.Type.INFIXOP, [left, ops.shift()], [op], op.textContent);
-      newOp.role = SemanticAttr.Role.IMPLICIT;
+          SemanticType.INFIXOP, [left, ops.shift()], [op], op.textContent);
+      newOp.role = SemanticRole.IMPLICIT;
       SemanticHeuristics.run('combine_juxtaposition', newOp);
       ops.unshift(newOp);
       return SemanticHeuristics.recurseJuxtaposition_(acc, ops, elements);
@@ -299,8 +299,8 @@ export class SemanticHeuristics {
       // Create new implicit node.
       sre.Debugger.getInstance().output('Juxta Heuristic Case 8');
       result = SemanticHeuristics.getInstance().factory.makeBranchNode(
-          SemanticAttr.Type.INFIXOP, [left, right], [op], op.textContent);
-      result.role = SemanticAttr.Role.IMPLICIT;
+          SemanticType.INFIXOP, [left, right], [op], op.textContent);
+      result.role = SemanticRole.IMPLICIT;
     }
     acc.push(result);
     return SemanticHeuristics.recurseJuxtaposition_(
@@ -407,10 +407,10 @@ SemanticHeuristics.add(
         return sre.Engine.getInstance().domain === 'clearspeak';
       },
       method: function(node) {
-        if ((node.type === SemanticAttr.Type.INFIXOP ||
-             node.type === SemanticAttr.Type.FRACTION) &&
+        if ((node.type === SemanticType.INFIXOP ||
+             node.type === SemanticType.FRACTION) &&
             node.childNodes.every(SemanticPred.isSimpleFunction)) {
-          node.role = SemanticAttr.Role.COMPFUNC;
+          node.role = SemanticRole.COMPFUNC;
         }
         return node;
       }
@@ -428,9 +428,9 @@ SemanticHeuristics.add(
       },
       method: function(node) {
         let specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
-        if (node.role !== SemanticAttr.Role.UNIT &&
+        if (node.role !== SemanticRole.UNIT &&
             specialFunctions.indexOf(node.textContent) !== -1) {
-          node.role = SemanticAttr.Role.SIMPLEFUNC;
+          node.role = SemanticRole.SIMPLEFUNC;
         }
         return node;
       }
@@ -447,9 +447,9 @@ SemanticHeuristics.add(
         return sre.Engine.getInstance().domain === 'clearspeak';
       },
       method: function(node) {
-        if (node.type === SemanticAttr.Type.FENCED &&
-            node.childNodes[0].role === SemanticAttr.Role.COMPFUNC) {
-          node.role = SemanticAttr.Role.COMPFUNC;
+        if (node.type === SemanticType.FENCED &&
+            node.childNodes[0].role === SemanticRole.COMPFUNC) {
+          node.role = SemanticRole.COMPFUNC;
         }
         return node;
       }
@@ -464,7 +464,7 @@ SemanticHeuristics.add(
 SemanticHeuristics.add(
     'multioperator', new SemanticTreeHeuristic({
       method: function(node) {
-        if (node.role !== SemanticAttr.Role.UNKNOWN ||
+        if (node.role !== SemanticRole.UNKNOWN ||
             node.textContent.length <= 1) {
           return;
         }
@@ -472,15 +472,15 @@ SemanticHeuristics.add(
         let content = sre.SemanticUtil.splitUnicode(node.textContent);
         let meaning = content.map(SemanticAttr.lookupMeaning);
         let singleRole = meaning.reduce(function(prev, curr) {
-          if (!prev || !curr.role || curr.role === SemanticAttr.Role.UNKNOWN ||
+          if (!prev || !curr.role || curr.role === SemanticRole.UNKNOWN ||
               curr.role === prev) {
             return prev;
           }
-          if (prev === SemanticAttr.Role.UNKNOWN) {
+          if (prev === SemanticRole.UNKNOWN) {
             return curr.role;
           }
           return null;
-        }, SemanticAttr.Role.UNKNOWN);
+        }, SemanticRole.UNKNOWN);
         if (singleRole) {
           node.role = singleRole;
         }
@@ -496,7 +496,7 @@ SemanticHeuristics.add(
       method: function(nodes) {
         let partition = sre.SemanticUtil.partitionNodes(nodes, function(x) {
           return x.textContent === SemanticAttr.invisibleTimes() &&
-              x.type === SemanticAttr.Type.OPERATOR;
+              x.type === SemanticType.OPERATOR;
         });
         // Preprocessing pre and postfixes.
         partition = partition.rel.length ?
@@ -511,8 +511,8 @@ SemanticHeuristics.add(
         }
         partition = sre.SemanticUtil.partitionNodes(nodes, function(x) {
           return x.textContent === SemanticAttr.invisibleTimes() &&
-              (x.type === SemanticAttr.Type.OPERATOR ||
-               x.type === SemanticAttr.Type.INFIXOP);
+              (x.type === SemanticType.OPERATOR ||
+               x.type === SemanticType.INFIXOP);
         });
         if (!partition.rel.length) {
           return nodes;
@@ -531,13 +531,13 @@ SemanticHeuristics.add('simple2prefix', new SemanticTreeHeuristic({
                          predicate: function(node) {
                            return sre.Engine.getInstance().modality ===
                                'braille' &&
-                               node.type === SemanticAttr.Type.IDENTIFIER;
+                               node.type === SemanticType.IDENTIFIER;
                          },
                          method: function(node) {
                            if (node.textContent.length > 1 &&
                                // TODO: Discuss this line!
                                !node.textContent[0].match(/[A-Z]/)) {
-                             node.role = SemanticAttr.Role.PREFIXFUNC;
+                             node.role = SemanticRole.PREFIXFUNC;
                            }
                            return node;
                          }
@@ -552,24 +552,24 @@ SemanticHeuristics.add(
     'detect_cycle', new SemanticTreeHeuristic({
       predicate: function(node) {
         return sre.Engine.getInstance().modality === 'braille' &&
-            node.type === SemanticAttr.Type.FENCED &&
-            node.childNodes[0].type === SemanticAttr.Type.INFIXOP &&
-            node.childNodes[0].role === SemanticAttr.Role.IMPLICIT &&
+            node.type === SemanticType.FENCED &&
+            node.childNodes[0].type === SemanticType.INFIXOP &&
+            node.childNodes[0].role === SemanticRole.IMPLICIT &&
             node.childNodes[0].childNodes.every(function(x) {
-              return x.type === SemanticAttr.Type.NUMBER;
+              return x.type === SemanticType.NUMBER;
             }) &&
             node.childNodes[0].contentNodes.every(function(x) {
-              return x.role === SemanticAttr.Role.SPACE;
+              return x.role === SemanticRole.SPACE;
             });
       },
 
       method: function(node) {
         // TODO: Test for simple elements?
-        node.type = SemanticAttr.Type.MATRIX;
-        node.role = SemanticAttr.Role.CYCLE;
+        node.type = SemanticType.MATRIX;
+        node.role = SemanticRole.CYCLE;
         let row = node.childNodes[0];
-        row.type = SemanticAttr.Type.ROW;
-        row.role = SemanticAttr.Role.CYCLE;
+        row.type = SemanticType.ROW;
+        row.role = SemanticRole.CYCLE;
         row.contentNodes = [];
         return node;
       }

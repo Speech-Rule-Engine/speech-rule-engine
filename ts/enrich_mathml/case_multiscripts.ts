@@ -49,8 +49,8 @@ export class CaseMultiscripts extends sre.CaseMultiindex {
     }
     let mmlTag = DomUtil.tagName(semantic.mathmlTree);
     return mmlTag === 'MMULTISCRIPTS' &&
-        (semantic.type === SemanticAttr.Type.SUPERSCRIPT ||
-         semantic.type === SemanticAttr.Type.SUBSCRIPT);
+        (semantic.type === SemanticType.SUPERSCRIPT ||
+         semantic.type === SemanticType.SUBSCRIPT);
   }
 
 
@@ -60,7 +60,7 @@ export class CaseMultiscripts extends sre.CaseMultiindex {
   getMathml() {
     EnrichMathml.setAttributes(this.mml, this.semantic);
     if (this.semantic.childNodes[0] &&
-        this.semantic.childNodes[0].role === SemanticAttr.Role.SUBSUP) {
+        this.semantic.childNodes[0].role === SemanticRole.SUBSUP) {
       let ignore = this.semantic.childNodes[0];
       let baseSem = ignore.childNodes[0];
       let rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);

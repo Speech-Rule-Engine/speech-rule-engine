@@ -40,7 +40,7 @@ export class SemanticDefault {
    * @param font The name of its font if it exists.
    * @return A uniform key for the default mapping.
    */
-  public static key(symbol: string, font: SemanticAttr.Font): string {
+  public static key(symbol: string, font: SemanticFont): string {
     return font ? symbol + ':' + font : symbol;
   }
 
@@ -72,7 +72,7 @@ export class SemanticDefault {
    * @return The semantic meaning of the symbol if it is in
    *     the structure.
    */
-  public retrieve(symbol: string, font: SemanticAttr.Font): SemanticMeaning {
+  public retrieve(symbol: string, font: SemanticFont): SemanticMeaning {
     return this.map[SemanticDefault.key(symbol, font)];
   }
 
@@ -138,7 +138,7 @@ abstract class SemanticCollator<T> {
    * @param font The font of the symbol.
    * @return A list of semantic nodes.
    */
-  public retrieve(symbol: string, font: SemanticAttr.Font): T[] {
+  public retrieve(symbol: string, font: SemanticFont): T[] {
     return this.map[SemanticDefault.key(symbol, font)];
   }
 

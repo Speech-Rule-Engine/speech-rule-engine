@@ -22,7 +22,7 @@
 import {AuditoryDescription} from '../audio/auditory_description';
 import XpathUtil from '../common/xpath_util';
 import {Locale} from '../l10n/messages';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticType} from '../semantic_tree/semantic_attr';
 
 
 namespace UnitUtil {
@@ -57,8 +57,8 @@ export function unitMultipliers(nodes: Element[], _context: string): () =>
 
 
 const SCRIPT_ELEMENTS: string[] = [
-  SemanticAttr.Type.SUPERSCRIPT, SemanticAttr.Type.SUBSCRIPT,
-  SemanticAttr.Type.OVERSCORE, SemanticAttr.Type.UNDERSCORE
+  SemanticType.SUPERSCRIPT, SemanticType.SUBSCRIPT,
+  SemanticType.OVERSCORE, SemanticType.UNDERSCORE
 ];
 
 

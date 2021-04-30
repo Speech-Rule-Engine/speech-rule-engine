@@ -45,8 +45,8 @@ export class CaseProof extends sre.AbstractEnrichCase {
    */
   static test(semantic: SemanticNode): boolean {
     return !!semantic.mathmlTree &&
-        (semantic.type === SemanticAttr.Type.INFERENCE ||
-         semantic.type === SemanticAttr.Type.PREMISES);
+        (semantic.type === SemanticType.INFERENCE ||
+         semantic.type === SemanticType.PREMISES);
   }
 
 

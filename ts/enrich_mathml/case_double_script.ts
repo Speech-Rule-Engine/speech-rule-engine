@@ -51,8 +51,8 @@ export class CaseDoubleScript extends sre.AbstractEnrichCase {
     }
     let mmlTag = DomUtil.tagName(semantic.mathmlTree);
     let role = semantic.childNodes[0].role;
-    return mmlTag === 'MSUBSUP' && role === SemanticAttr.Role.SUBSUP ||
-        mmlTag === 'MUNDEROVER' && role === SemanticAttr.Role.UNDEROVER;
+    return mmlTag === 'MSUBSUP' && role === SemanticRole.SUBSUP ||
+        mmlTag === 'MUNDEROVER' && role === SemanticRole.UNDEROVER;
   }
 
 

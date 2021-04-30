@@ -208,15 +208,15 @@ export class SemanticTree {
  */
 const unitVisitor =
     new SemanticVisitor('general', 'unit', (node, _info) => {
-      if (node.type === SemanticAttr.Type.INFIXOP &&
-          (node.role === SemanticAttr.Role.MULTIPLICATION ||
-           node.role === SemanticAttr.Role.IMPLICIT)) {
+      if (node.type === SemanticType.INFIXOP &&
+          (node.role === SemanticRole.MULTIPLICATION ||
+           node.role === SemanticRole.IMPLICIT)) {
         let children = node.childNodes;
         if (children.length &&
             (SemanticPred.isPureUnit(children[0]) ||
              SemanticPred.isUnitCounter(children[0])) &&
             node.childNodes.slice(1).every(SemanticPred.isPureUnit)) {
-          node.role = SemanticAttr.Role.UNIT;
+          node.role = SemanticRole.UNIT;
         }
       }
       return false;

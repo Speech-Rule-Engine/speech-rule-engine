@@ -69,9 +69,9 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
     };
 
     let meaning = {
-      type: sre.SemanticAttr.Type.IDENTIFIER,
-      role: sre.SemanticAttr.Role.NUMBERSET,
-      font: sre.SemanticAttr.Font.DOUBLESTRUCK
+      type: SemanticType.IDENTIFIER,
+      role: SemanticRole.NUMBERSET,
+      font: SemanticFont.DOUBLESTRUCK
     };
     ['C', 'H', 'N', 'P', 'Q', 'R', 'Z', 'ℂ', 'ℍ', 'ℕ', 'ℙ', 'ℚ', 'ℝ', 'ℤ']
         .forEach(function(x) {
@@ -131,7 +131,7 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
     if (children.length === 1) {
       // TODO: Collate external attributes!
       let newNode = this.parse(children[0]);
-      if (newNode.type === sre.SemanticAttr.Type.EMPTY && !newNode.mathmlTree) {
+      if (newNode.type === SemanticType.EMPTY && !newNode.mathmlTree) {
         newNode.mathmlTree = node;
       }
     } else {
@@ -186,7 +186,7 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
       return this.sqrt_(node, children);
     }
     return this.getFactory().makeBranchNode(
-        sre.SemanticAttr.Type.ROOT,
+        SemanticType.ROOT,
         [this.parse(children[1]), this.parse(children[0])], []);
   }
 
@@ -200,7 +200,7 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
   private sqrt_(node: Element, children: Element[]): SemanticNode {
     let semNodes = this.parseList(sre.SemanticUtil.purgeNodes(children));
     return this.getFactory().makeBranchNode(
-        sre.SemanticAttr.Type.SQRT,
+        SemanticType.SQRT,
         [SemanticProcessor.getInstance().row(semNodes)], []);
   }
 
@@ -218,7 +218,7 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
           node, semantics, goog.bind(this.parseList, this));
     }
     let newNode = this.getFactory().makeBranchNode(
-        sre.SemanticAttr.Type.TABLE, this.parseList(children), []);
+        SemanticType.TABLE, this.parseList(children), []);
     SemanticProcessor.tableToMultiline(newNode);
     return newNode;
   }
@@ -232,8 +232,8 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
    */
   private tableRow_(node: Element, children: Element[]): SemanticNode {
     let newNode = this.getFactory().makeBranchNode(
-        sre.SemanticAttr.Type.ROW, this.parseList(children), []);
-    newNode.role = sre.SemanticAttr.Role.TABLE;
+        SemanticType.ROW, this.parseList(children), []);
+    newNode.role = SemanticRole.TABLE;
     return newNode;
   }
 
@@ -249,10 +249,10 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
       return this.tableRow_(node, children);
     }
     let label = this.parse(children[0]);
-    label.role = sre.SemanticAttr.Role.LABEL;
+    label.role = SemanticRole.LABEL;
     let newNode = this.getFactory().makeBranchNode(
-        sre.SemanticAttr.Type.ROW, this.parseList(children.slice(1)), [label]);
-    newNode.role = sre.SemanticAttr.Role.TABLE;
+        SemanticType.ROW, this.parseList(children.slice(1)), [label]);
+    newNode.role = SemanticRole.TABLE;
     return newNode;
   }
 
@@ -279,8 +279,8 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
       childNodes = [SemanticProcessor.getInstance().row(semNodes)];
     }
     let newNode = this.getFactory().makeBranchNode(
-        sre.SemanticAttr.Type.CELL, childNodes, []);
-    newNode.role = sre.SemanticAttr.Role.TABLE;
+        SemanticType.CELL, childNodes, []);
+    newNode.role = SemanticRole.TABLE;
     return newNode;
   }
 
@@ -395,10 +395,10 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
   private enclosed_(node: Element, children: Element[]): SemanticNode {
     let semNodes = this.parseList(sre.SemanticUtil.purgeNodes(children));
     let newNode = this.getFactory().makeBranchNode(
-        sre.SemanticAttr.Type.ENCLOSE,
+        SemanticType.ENCLOSE,
         [SemanticProcessor.getInstance().row(semNodes)], []);
-    newNode.role = (node.getAttribute('notation') as SemanticAttr.Role) ||
-        sre.SemanticAttr.Role.UNKNOWN;
+    newNode.role = (node.getAttribute('notation') as SemanticRole) ||
+        SemanticRole.UNKNOWN;
     return newNode;
   }
 
@@ -481,7 +481,7 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
    */
   private dummy_(node: Element, children: Element[]): SemanticNode {
     let unknown = this.getFactory().makeUnprocessed(node);
-    unknown.role = (node.tagName as SemanticAttr.Role);
+    unknown.role = (node.tagName as SemanticRole);
     unknown.textContent = node.textContent;
     return unknown;
   }
@@ -497,7 +497,7 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
     if (children.length === 1 &&
         children[0].nodeType !== DomUtil.NodeType.TEXT_NODE) {
       let node = this.getFactory().makeUnprocessed(mml);
-      node.role = (children[0].tagName as SemanticAttr.Role);
+      node.role = (children[0].tagName as SemanticRole);
       sre.SemanticUtil.addAttributes(node, children[0]);
       return node;
     }

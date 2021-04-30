@@ -157,15 +157,15 @@ export class RebuildStree {
     let embellished = WalkerUtil.getAttribute(node, Attribute.EMBELLISHED);
     let fencepointer = WalkerUtil.getAttribute(node, Attribute.FENCEPOINTER);
     let snode = this.createNode(parseInt(id, 10));
-    snode.type = (type as SemanticAttr.Type);
-    snode.role = (role as SemanticAttr.Role);
-    snode.font = font ? (font as SemanticAttr.Font) : SemanticAttr.Font.UNKNOWN;
+    snode.type = (type as SemanticType);
+    snode.role = (role as SemanticRole);
+    snode.font = font ? (font as SemanticFont) : SemanticFont.UNKNOWN;
     snode.parseAnnotation(annotation);
     if (fencepointer) {
       snode.fencePointer = fencepointer;
     }
     if (embellished) {
-      snode.embellished = (embellished as SemanticAttr.Type);
+      snode.embellished = (embellished as SemanticType);
     }
     return snode;
   }
@@ -191,7 +191,7 @@ export class RebuildStree {
   makePunctuation(id: number): SemanticNode {
     let node = this.createNode(id);
     node.updateContent(SemanticAttr.invisibleComma());
-    node.role = SemanticAttr.Role.DUMMY;
+    node.role = SemanticRole.DUMMY;
     return node;
   }
 
@@ -204,9 +204,9 @@ export class RebuildStree {
    */
   makePunctuated(
       snode: SemanticNode, collapsed: SemanticSkeletonExports.Sexp,
-      role: SemanticAttr.Role) {
+      role: SemanticRole) {
     let punctuated = this.createNode(collapsed[0]);
-    punctuated.type = SemanticAttr.Type.PUNCTUATED;
+    punctuated.type = SemanticType.PUNCTUATED;
     punctuated.embellished = snode.embellished;
     punctuated.fencePointer = snode.fencePointer;
     punctuated.role = role;
@@ -222,9 +222,9 @@ export class RebuildStree {
    * @param collapsed A skeleton structure.
    * @param role The role of the new index node.
    */
-  makeEmpty(snode: SemanticNode, collapsed: number, role: SemanticAttr.Role) {
+  makeEmpty(snode: SemanticNode, collapsed: number, role: SemanticRole) {
     let empty = this.createNode(collapsed);
-    empty.type = SemanticAttr.Type.EMPTY;
+    empty.type = SemanticType.EMPTY;
     empty.embellished = snode.embellished;
     empty.fencePointer = snode.fencePointer;
     empty.role = role;
@@ -239,7 +239,7 @@ export class RebuildStree {
    */
   makeIndex(
       snode: SemanticNode, collapsed: SemanticSkeletonExports.Sexp,
-      role: SemanticAttr.Role) {
+      role: SemanticRole) {
     if (RebuildStree.isPunctuated(collapsed)) {
       this.makePunctuated(snode, collapsed, role);
       collapsed = collapsed[0];
@@ -260,53 +260,53 @@ export class RebuildStree {
    */
   postProcess(snode: SemanticNode, collapsed: string): SemanticNode {
     let array = SemanticSkeleton.fromString(collapsed).array;
-    if (snode.type === SemanticAttr.Role.SUBSUP) {
+    if (snode.type === SemanticRole.SUBSUP) {
       let subscript = this.createNode(array[1][0]);
-      subscript.type = SemanticAttr.Type.SUBSCRIPT;
-      subscript.role = SemanticAttr.Role.SUBSUP;
-      snode.type = SemanticAttr.Type.SUPERSCRIPT;
+      subscript.type = SemanticType.SUBSCRIPT;
+      subscript.role = SemanticRole.SUBSUP;
+      snode.type = SemanticType.SUPERSCRIPT;
       subscript.embellished = snode.embellished;
       subscript.fencePointer = snode.fencePointer;
-      this.makeIndex(snode, array[1][2], SemanticAttr.Role.RIGHTSUB);
-      this.makeIndex(snode, array[2], SemanticAttr.Role.RIGHTSUPER);
+      this.makeIndex(snode, array[1][2], SemanticRole.RIGHTSUB);
+      this.makeIndex(snode, array[2], SemanticRole.RIGHTSUPER);
       this.collapsedChildren_(array);
       return snode;
     }
-    if (snode.type === SemanticAttr.Type.SUBSCRIPT) {
-      this.makeIndex(snode, array[2], SemanticAttr.Role.RIGHTSUB);
+    if (snode.type === SemanticType.SUBSCRIPT) {
+      this.makeIndex(snode, array[2], SemanticRole.RIGHTSUB);
       this.collapsedChildren_(array);
       return snode;
     }
-    if (snode.type === SemanticAttr.Type.SUPERSCRIPT) {
-      this.makeIndex(snode, array[2], SemanticAttr.Role.RIGHTSUPER);
+    if (snode.type === SemanticType.SUPERSCRIPT) {
+      this.makeIndex(snode, array[2], SemanticRole.RIGHTSUPER);
       this.collapsedChildren_(array);
       return snode;
     }
-    if (snode.type === SemanticAttr.Type.TENSOR) {
-      this.makeIndex(snode, array[2], SemanticAttr.Role.LEFTSUB);
-      this.makeIndex(snode, array[3], SemanticAttr.Role.LEFTSUPER);
-      this.makeIndex(snode, array[4], SemanticAttr.Role.RIGHTSUB);
-      this.makeIndex(snode, array[5], SemanticAttr.Role.RIGHTSUPER);
+    if (snode.type === SemanticType.TENSOR) {
+      this.makeIndex(snode, array[2], SemanticRole.LEFTSUB);
+      this.makeIndex(snode, array[3], SemanticRole.LEFTSUPER);
+      this.makeIndex(snode, array[4], SemanticRole.RIGHTSUB);
+      this.makeIndex(snode, array[5], SemanticRole.RIGHTSUPER);
       this.collapsedChildren_(array);
       return snode;
     }
-    if (snode.type === SemanticAttr.Type.PUNCTUATED) {
+    if (snode.type === SemanticType.PUNCTUATED) {
       if (RebuildStree.isPunctuated(array)) {
         let cont = array.splice(1, 1)[0].slice(1);
         snode.contentNodes = cont.map(goog.bind(this.makePunctuation, this));
       }
       return snode;
     }
-    if (snode.type === SemanticAttr.Role.UNDEROVER) {
+    if (snode.type === SemanticRole.UNDEROVER) {
       let score = this.createNode(array[1][0]);
-      if (snode.childNodes[1].role === SemanticAttr.Role.OVERACCENT) {
-        score.type = SemanticAttr.Type.OVERSCORE;
-        snode.type = SemanticAttr.Type.UNDERSCORE;
+      if (snode.childNodes[1].role === SemanticRole.OVERACCENT) {
+        score.type = SemanticType.OVERSCORE;
+        snode.type = SemanticType.UNDERSCORE;
       } else {
-        score.type = SemanticAttr.Type.UNDERSCORE;
-        snode.type = SemanticAttr.Type.OVERSCORE;
+        score.type = SemanticType.UNDERSCORE;
+        snode.type = SemanticType.OVERSCORE;
       }
-      score.role = SemanticAttr.Role.UNDEROVER;
+      score.role = SemanticRole.UNDEROVER;
       score.embellished = snode.embellished;
       score.fencePointer = snode.fencePointer;
       this.collapsedChildren_(array);

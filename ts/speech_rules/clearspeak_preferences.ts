@@ -470,102 +470,102 @@ export class Parser extends DynamicCstrParser {
 // TODO (TS): Replace with a Map to partial meaning elements.
 const REVERSE_MAPPING: string[][] = [
   [
-    'AbsoluteValue', SemanticAttr.Type.FENCED, SemanticAttr.Role.NEUTRAL
+    'AbsoluteValue', SemanticType.FENCED, SemanticRole.NEUTRAL
   ],
   [
-    'Bar', SemanticAttr.Type.OVERSCORE,
-    SemanticAttr.Role.OVERACCENT
+    'Bar', SemanticType.OVERSCORE,
+    SemanticRole.OVERACCENT
   ],  // more
   [
-    'Caps', SemanticAttr.Type.IDENTIFIER,
-    SemanticAttr.Role.LATINLETTER
+    'Caps', SemanticType.IDENTIFIER,
+    SemanticRole.LATINLETTER
   ],  // more
   [
-    'CombinationPermutation', SemanticAttr.Type.APPL,
-    SemanticAttr.Role.UNKNOWN
+    'CombinationPermutation', SemanticType.APPL,
+    SemanticRole.UNKNOWN
   ],  // more
   [
-    'Ellipses', SemanticAttr.Type.PUNCTUATION,
-    SemanticAttr.Role.ELLIPSIS
+    'Ellipses', SemanticType.PUNCTUATION,
+    SemanticRole.ELLIPSIS
   ],
-  ['Exponent', SemanticAttr.Type.SUPERSCRIPT, ''],
-  ['Fraction', SemanticAttr.Type.FRACTION, ''],
-  ['Functions', SemanticAttr.Type.APPL, SemanticAttr.Role.SIMPLEFUNC],
+  ['Exponent', SemanticType.SUPERSCRIPT, ''],
+  ['Fraction', SemanticType.FRACTION, ''],
+  ['Functions', SemanticType.APPL, SemanticRole.SIMPLEFUNC],
   [
-    'ImpliedTimes', SemanticAttr.Type.OPERATOR,
-    SemanticAttr.Role.IMPLICIT
+    'ImpliedTimes', SemanticType.OPERATOR,
+    SemanticRole.IMPLICIT
   ],
   [
-    'Log', SemanticAttr.Type.APPL,
-    SemanticAttr.Role.PREFIXFUNC
+    'Log', SemanticType.APPL,
+    SemanticRole.PREFIXFUNC
   ],                                         // specific
-  ['Matrix', SemanticAttr.Type.MATRIX, ''],  // multiple
-  ['Matrix', SemanticAttr.Type.VECTOR, ''],  // multiple
+  ['Matrix', SemanticType.MATRIX, ''],  // multiple
+  ['Matrix', SemanticType.VECTOR, ''],  // multiple
   [
-    'MultiLineLabel', SemanticAttr.Type.MULTILINE,
-    SemanticAttr.Role.LABEL
+    'MultiLineLabel', SemanticType.MULTILINE,
+    SemanticRole.LABEL
   ],  // more, multiple (table)
   [
-    'MultiLineOverview', SemanticAttr.Type.MULTILINE,
-    SemanticAttr.Role.TABLE
+    'MultiLineOverview', SemanticType.MULTILINE,
+    SemanticRole.TABLE
   ],  // more, multiple (table)
   [
-    'MultiLinePausesBetweenColumns', SemanticAttr.Type.MULTILINE,
-    SemanticAttr.Role.TABLE
+    'MultiLinePausesBetweenColumns', SemanticType.MULTILINE,
+    SemanticRole.TABLE
   ],  // more, multiple (table)
   [
-    'MultiLineLabel', SemanticAttr.Type.TABLE,
-    SemanticAttr.Role.LABEL
+    'MultiLineLabel', SemanticType.TABLE,
+    SemanticRole.LABEL
   ],  // more, multiple (table)
   [
-    'MultiLineOverview', SemanticAttr.Type.TABLE,
-    SemanticAttr.Role.TABLE
+    'MultiLineOverview', SemanticType.TABLE,
+    SemanticRole.TABLE
   ],  // more, multiple (table)
   [
-    'MultiLinePausesBetweenColumns', SemanticAttr.Type.TABLE,
-    SemanticAttr.Role.TABLE
+    'MultiLinePausesBetweenColumns', SemanticType.TABLE,
+    SemanticRole.TABLE
   ],  // more, multiple (table)
   [
-    'MultiLineLabel', SemanticAttr.Type.CASES,
-    SemanticAttr.Role.LABEL
+    'MultiLineLabel', SemanticType.CASES,
+    SemanticRole.LABEL
   ],  // more, multiple (table)
   [
-    'MultiLineOverview', SemanticAttr.Type.CASES,
-    SemanticAttr.Role.TABLE
+    'MultiLineOverview', SemanticType.CASES,
+    SemanticRole.TABLE
   ],  // more, multiple (table)
   [
-    'MultiLinePausesBetweenColumns', SemanticAttr.Type.CASES,
-    SemanticAttr.Role.TABLE
+    'MultiLinePausesBetweenColumns', SemanticType.CASES,
+    SemanticRole.TABLE
   ],  // more, multiple (table)
   [
-    'MultsymbolDot', SemanticAttr.Type.OPERATOR,
-    SemanticAttr.Role.MULTIPLICATION
+    'MultsymbolDot', SemanticType.OPERATOR,
+    SemanticRole.MULTIPLICATION
   ],  // multiple?
   [
-    'MultsymbolX', SemanticAttr.Type.OPERATOR,
-    SemanticAttr.Role.MULTIPLICATION
+    'MultsymbolX', SemanticType.OPERATOR,
+    SemanticRole.MULTIPLICATION
   ],  // multiple?
-  ['Paren', SemanticAttr.Type.FENCED, SemanticAttr.Role.LEFTRIGHT],
-  ['Prime', SemanticAttr.Type.SUPERSCRIPT, SemanticAttr.Role.PRIME],
-  ['Roots', SemanticAttr.Type.ROOT, ''],  // multiple (sqrt)
-  ['Roots', SemanticAttr.Type.SQRT, ''],  // multiple (sqrt)
+  ['Paren', SemanticType.FENCED, SemanticRole.LEFTRIGHT],
+  ['Prime', SemanticType.SUPERSCRIPT, SemanticRole.PRIME],
+  ['Roots', SemanticType.ROOT, ''],  // multiple (sqrt)
+  ['Roots', SemanticType.SQRT, ''],  // multiple (sqrt)
   [
-    'SetMemberSymbol', SemanticAttr.Type.RELATION,
-    SemanticAttr.Role.ELEMENT
+    'SetMemberSymbol', SemanticType.RELATION,
+    SemanticRole.ELEMENT
   ],
   [
-    'Sets', SemanticAttr.Type.FENCED,
-    SemanticAttr.Role.SETEXT
+    'Sets', SemanticType.FENCED,
+    SemanticRole.SETEXT
   ],  // multiple
   [
-    'TriangleSymbol', SemanticAttr.Type.IDENTIFIER,
-    SemanticAttr.Role.GREEKLETTER
+    'TriangleSymbol', SemanticType.IDENTIFIER,
+    SemanticRole.GREEKLETTER
   ],  //????
   [
-    'Trig', SemanticAttr.Type.APPL,
-    SemanticAttr.Role.PREFIXFUNC
+    'Trig', SemanticType.APPL,
+    SemanticRole.PREFIXFUNC
   ],  // specific
-  ['VerticalLine', SemanticAttr.Type.PUNCTUATED, SemanticAttr.Role.VBAR]
+  ['VerticalLine', SemanticType.PUNCTUATED, SemanticRole.VBAR]
 ];
 
 

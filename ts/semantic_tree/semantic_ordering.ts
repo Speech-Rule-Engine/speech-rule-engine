@@ -101,10 +101,10 @@ export namespace SemanticOrdering {
   export function simpleFunction(meaning1: SemanticMeaning,
                                  meaning2: SemanticMeaning):
       number {
-    if (meaning1.role === SemanticAttr.Role.SIMPLEFUNC) {
+    if (meaning1.role === SemanticRole.SIMPLEFUNC) {
       return 1;
     }
-    if (meaning2.role === SemanticAttr.Role.SIMPLEFUNC) {
+    if (meaning2.role === SemanticRole.SIMPLEFUNC) {
       return -1;
     }
     return 0;
@@ -121,7 +121,7 @@ export class SemanticComparator {
    */
   constructor(
     public comparator: (p1: SemanticMeaning, p2: SemanticMeaning) => number,
-    public type: SemanticAttr.Type = null) {
+    public type: SemanticType = null) {
     SemanticOrdering.add(this);
   }
 
@@ -141,4 +141,4 @@ export class SemanticComparator {
 }
 
 new SemanticComparator(
-    SemanticOrdering.simpleFunction, SemanticAttr.Type.IDENTIFIER);
+    SemanticOrdering.simpleFunction, SemanticType.IDENTIFIER);

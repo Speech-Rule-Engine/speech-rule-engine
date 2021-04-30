@@ -87,31 +87,31 @@ export class SyntaxWalker extends sre.AbstractWalker {
    */
   combineContentChildren(type, role, content, children) {
     switch (type) {
-      case sre.SemanticAttr.Type.RELSEQ:
-      case sre.SemanticAttr.Type.INFIXOP:
-      case sre.SemanticAttr.Type.MULTIREL:
+      case SemanticType.RELSEQ:
+      case SemanticType.INFIXOP:
+      case SemanticType.MULTIREL:
         return sre.BaseUtil.interleaveLists(children, content);
-      case sre.SemanticAttr.Type.PREFIXOP:
+      case SemanticType.PREFIXOP:
         return content.concat(children);
-      case sre.SemanticAttr.Type.POSTFIXOP:
+      case SemanticType.POSTFIXOP:
         return children.concat(content);
-      case sre.SemanticAttr.Type.MATRIX:
-      case sre.SemanticAttr.Type.VECTOR:
-      case sre.SemanticAttr.Type.FENCED:
+      case SemanticType.MATRIX:
+      case SemanticType.VECTOR:
+      case SemanticType.FENCED:
         children.unshift(content[0]);
         children.push(content[1]);
         return children;
-      case sre.SemanticAttr.Type.CASES:
+      case SemanticType.CASES:
         children.unshift(content[0]);
         return children;
-      case sre.SemanticAttr.Type.PUNCTUATED:
-        if (role === sre.SemanticAttr.Role.TEXT) {
+      case SemanticType.PUNCTUATED:
+        if (role === SemanticRole.TEXT) {
           return sre.BaseUtil.interleaveLists(children, content);
         }
         return children;
-      case sre.SemanticAttr.Type.APPL:
+      case SemanticType.APPL:
         return [children[0], content[0], children[1]];
-      case sre.SemanticAttr.Type.ROOT:
+      case SemanticType.ROOT:
         return [children[1], children[0]];
       default:
         return children;

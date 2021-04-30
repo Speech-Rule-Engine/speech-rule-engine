@@ -62,22 +62,22 @@ export class SemanticNode {
   /**
    * Type of node.
    */
-  public type: SemanticAttr.Type = SemanticAttr.Type.UNKNOWN;
+  public type: SemanticType = SemanticType.UNKNOWN;
 
   /**
    * Role of node.
    */
-  public role: SemanticAttr.Role = SemanticAttr.Role.UNKNOWN;
+  public role: SemanticRole = SemanticRole.UNKNOWN;
 
   /**
    * Font if know.
    */
-  public font: SemanticAttr.Font = SemanticAttr.Font.UNKNOWN;
+  public font: SemanticFont = SemanticFont.UNKNOWN;
 
   /**
    * Embellished flag.
    */
-  public embellished: SemanticAttr.Type = null;
+  public embellished: SemanticType = null;
 
   /**
    * Pointer to fence if embellished.
@@ -206,7 +206,7 @@ export class SemanticNode {
   public allAttributes(): [Attribute, string][] {
     let attributes: [Attribute, string][] = [];
     attributes.push([Attribute.ROLE, this.role]);
-    if (this.font !== SemanticAttr.Font.UNKNOWN) {
+    if (this.font !== SemanticFont.UNKNOWN) {
       attributes.push([Attribute.FONT, this.font]);
     }
     if (Object.keys(this.annotation).length) {
@@ -564,7 +564,7 @@ export class SemanticNode {
   public static fromXml(xml: Element): SemanticNode {
     let id = parseInt(xml.getAttribute('id'), 10);
     let node = new SemanticNode(id);
-    node.type = (xml.tagName as SemanticAttr.Type);
+    node.type = (xml.tagName as SemanticType);
     SemanticNode.setAttribute(node, xml, 'role');
     SemanticNode.setAttribute(node, xml, 'font');
     SemanticNode.setAttribute(node, xml, 'embellished');

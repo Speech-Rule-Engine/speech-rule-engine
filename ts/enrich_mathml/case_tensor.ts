@@ -45,7 +45,7 @@ export class CaseTensor extends sre.CaseMultiindex {
    * @return True if case is applicable.
    */
   static test(semantic: SemanticNode): boolean {
-    return !!semantic.mathmlTree && semantic.type === SemanticAttr.Type.TENSOR;
+    return !!semantic.mathmlTree && semantic.type === SemanticType.TENSOR;
   }
 
 

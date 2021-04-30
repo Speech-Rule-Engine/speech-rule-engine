@@ -144,7 +144,7 @@ export function walkTree(semantic: SemanticNode): Element {
       // These children should all be empty.
       Debugger.getInstance().output('Walktree Case 0.1');
       semantic.childNodes.forEach(function(child) {
-        if (child.type === SemanticAttr.Type.EMPTY) {
+        if (child.type === SemanticType.EMPTY) {
           newNode.appendChild(walkTree(child));
         }
       });
@@ -395,7 +395,7 @@ export function collectChildNodes_(node: Element): Element[] {
  */
 export function mergeChildren_(
     node: Element, newChildren: Element[], semantic: SemanticNode) {
-  let oldChildren = semantic.role === SemanticAttr.Role.IMPLICIT &&
+  let oldChildren = semantic.role === SemanticRole.IMPLICIT &&
           sre.SemanticHeuristics.getInstance().flags.combine_juxtaposition ?
       collateChildNodes_(node, newChildren, semantic) :
       DomUtil.toArray(node.childNodes);

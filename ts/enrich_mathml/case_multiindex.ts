@@ -109,8 +109,8 @@ export class CaseMultiindex extends sre.AbstractEnrichCase {
    *     strings for the collapsed structure is returned, otherwise the node id.
    */
   static multiscriptIndex(index: SemanticNode): Sexp {
-    if (index.type === SemanticAttr.Type.PUNCTUATED &&
-        index.contentNodes[0].role === SemanticAttr.Role.DUMMY) {
+    if (index.type === SemanticType.PUNCTUATED &&
+        index.contentNodes[0].role === SemanticRole.DUMMY) {
       return EnrichMathml.collapsePunctuated(index);
     }
     EnrichMathml.walkTree(index);

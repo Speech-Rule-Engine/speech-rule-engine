@@ -162,16 +162,16 @@ export function enlargeFence(text: string): string {
 sre.Grammar.getInstance().setCorrection('enlargeFence', enlargeFence);
 
 
-export const NUMBER_PROPAGATORS_: SemanticAttr.Type[] = [
-  sre.SemanticAttr.Type.MULTIREL, sre.SemanticAttr.Type.RELSEQ,
-  sre.SemanticAttr.Type.APPL, sre.SemanticAttr.Type.ROW,
-  sre.SemanticAttr.Type.LINE
+export const NUMBER_PROPAGATORS_: SemanticType[] = [
+  SemanticType.MULTIREL, SemanticType.RELSEQ,
+  SemanticType.APPL, SemanticType.ROW,
+  SemanticType.LINE
 ];
 
 
-export const NUMBER_INHIBITORS_: SemanticAttr.Type[] = [
-  sre.SemanticAttr.Type.SUBSCRIPT, sre.SemanticAttr.Type.SUPERSCRIPT,
-  sre.SemanticAttr.Type.OVERSCORE, sre.SemanticAttr.Type.UNDERSCORE
+export const NUMBER_INHIBITORS_: SemanticType[] = [
+  SemanticType.SUBSCRIPT, SemanticType.SUPERSCRIPT,
+  SemanticType.OVERSCORE, SemanticType.UNDERSCORE
 ];
 
 
@@ -191,16 +191,16 @@ export function checkParent_(
   }
   let type = parent.type;
   if (NUMBER_PROPAGATORS_.indexOf(type) !== -1 ||
-      type === sre.SemanticAttr.Type.PREFIXOP &&
-          parent.role === sre.SemanticAttr.Role.NEGATIVE && !info.script ||
-      type === sre.SemanticAttr.Type.PREFIXOP &&
+      type === SemanticType.PREFIXOP &&
+          parent.role === SemanticRole.NEGATIVE && !info.script ||
+      type === SemanticType.PREFIXOP &&
           // TODO: This needs to be rewritten once there is a better treatment
           // of prefixop.
-          parent.role === sre.SemanticAttr.Role.GEOMETRY) {
+          parent.role === SemanticRole.GEOMETRY) {
     return true;
   }
-  if (type === sre.SemanticAttr.Type.PUNCTUATED) {
-    if (!info.enclosed || parent.role === sre.SemanticAttr.Role.TEXT) {
+  if (type === SemanticType.PUNCTUATED) {
+    if (!info.enclosed || parent.role === SemanticRole.TEXT) {
       return true;
     }
   }
@@ -233,7 +233,7 @@ export function propagateNumber(
   if (NUMBER_INHIBITORS_.indexOf(node.type) !== -1) {
     info.script = true;
   }
-  if (node.type === sre.SemanticAttr.Type.FENCED) {
+  if (node.type === SemanticType.FENCED) {
     info.number = false;
     info.enclosed = true;
     return ['', info];
@@ -418,7 +418,7 @@ export function implicitIterator(nodes: Element[], context: string): () =>
     let right = rightChild && sre.DomUtil.tagName(rightChild) === 'NUMBER';
     return contextDescr.concat(
         left && right &&
-                content.getAttribute('role') === sre.SemanticAttr.Role.SPACE ?
+                content.getAttribute('role') === SemanticRole.SPACE ?
             [sre.AuditoryDescription.create({text: '⠀'}, {})] :
             []);
   };

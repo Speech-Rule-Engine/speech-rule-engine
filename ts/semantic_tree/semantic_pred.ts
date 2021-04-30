@@ -35,13 +35,13 @@ export function isAttribute(prop: string, attr: string): (p1: SemanticNode) =>
   let getAttr = function(prop) {
     switch (prop) {
       case 'role':
-        return SemanticAttr.Role[attr];
+        return SemanticRole[attr];
       case 'font':
-        return SemanticAttr.Font[attr];
+        return SemanticFont[attr];
       case 'embellished':
       case 'type':
       default:
-        return SemanticAttr.Type[attr];
+        return SemanticType[attr];
     }
   };
 
@@ -89,8 +89,8 @@ export function isSimpleFunctionScope(node: SemanticNode): boolean {
     return false;
   }
   let child = children[0];
-  if (child.type === SemanticAttr.Type.INFIXOP) {
-    if (child.role !== SemanticAttr.Role.IMPLICIT) {
+  if (child.type === SemanticType.INFIXOP) {
+    if (child.role !== SemanticRole.IMPLICIT) {
       return false;
     }
     if (child.childNodes.some(isAttribute('type', 'INFIXOP'))) {
@@ -176,7 +176,7 @@ export function isGeneralFunctionBoundary(node: SemanticNode): boolean {
  * @param node A node to test.
  * @return The type of the node that is embellished.
  */
-export function isEmbellished(node: SemanticNode): SemanticAttr.Type|null {
+export function isEmbellished(node: SemanticNode): SemanticType|null {
   if (node.embellished) {
     return node.embellished;
   }
@@ -377,10 +377,10 @@ export function isLimitBase(node: SemanticNode): boolean {
  * @return True if node is an identifier or a simple letter.
  */
 export function isSimpleFunctionHead(node: SemanticNode): boolean {
-  return node.type === SemanticAttr.Type.IDENTIFIER ||
-      node.role === SemanticAttr.Role.LATINLETTER ||
-      node.role === SemanticAttr.Role.GREEKLETTER ||
-      node.role === SemanticAttr.Role.OTHERLETTER;
+  return node.type === SemanticType.IDENTIFIER ||
+      node.role === SemanticRole.LATINLETTER ||
+      node.role === SemanticRole.GREEKLETTER ||
+      node.role === SemanticRole.OTHERLETTER;
 }
 
 
@@ -397,8 +397,8 @@ export function isSimpleFunctionHead(node: SemanticNode): boolean {
 export function singlePunctAtPosition(
     nodes: SemanticNode[], puncts: SemanticNode[], position: number): boolean {
   return puncts.length === 1 &&
-      (nodes[position].type === SemanticAttr.Type.PUNCTUATION ||
-       nodes[position].embellished === SemanticAttr.Type.PUNCTUATION) &&
+      (nodes[position].type === SemanticType.PUNCTUATION ||
+       nodes[position].embellished === SemanticType.PUNCTUATION) &&
       nodes[position] === puncts[0];
 }
 
@@ -450,19 +450,19 @@ export function isSetNode(node: SemanticNode): boolean {
 
 
 // TODO: Rewrite as dictionary or map!
-export const illegalSingleton_: SemanticAttr.Type[] = [
-  SemanticAttr.Type.PUNCTUATION, SemanticAttr.Type.PUNCTUATED,
-  SemanticAttr.Type.RELSEQ, SemanticAttr.Type.MULTIREL, SemanticAttr.Type.TABLE,
-  SemanticAttr.Type.MULTILINE, SemanticAttr.Type.CASES,
-  SemanticAttr.Type.INFERENCE
+export const illegalSingleton_: SemanticType[] = [
+  SemanticType.PUNCTUATION, SemanticType.PUNCTUATED,
+  SemanticType.RELSEQ, SemanticType.MULTIREL, SemanticType.TABLE,
+  SemanticType.MULTILINE, SemanticType.CASES,
+  SemanticType.INFERENCE
 ];
 
 
-export const scriptedElement_: SemanticAttr.Type[] = [
-  SemanticAttr.Type.LIMUPPER, SemanticAttr.Type.LIMLOWER,
-  SemanticAttr.Type.LIMBOTH, SemanticAttr.Type.SUBSCRIPT,
-  SemanticAttr.Type.SUPERSCRIPT, SemanticAttr.Type.UNDERSCORE,
-  SemanticAttr.Type.OVERSCORE, SemanticAttr.Type.TENSOR
+export const scriptedElement_: SemanticType[] = [
+  SemanticType.LIMUPPER, SemanticType.LIMLOWER,
+  SemanticType.LIMBOTH, SemanticType.SUBSCRIPT,
+  SemanticType.SUPERSCRIPT, SemanticType.UNDERSCORE,
+  SemanticType.OVERSCORE, SemanticType.TENSOR
 ];
 
 
@@ -474,12 +474,12 @@ export const scriptedElement_: SemanticAttr.Type[] = [
 export function isSingletonSetContent(node: SemanticNode): boolean {
   let type = node.type;
   if (illegalSingleton_.indexOf(type) !== -1 ||
-      type === SemanticAttr.Type.INFIXOP &&
-          node.role !== SemanticAttr.Role.IMPLICIT) {
+      type === SemanticType.INFIXOP &&
+          node.role !== SemanticRole.IMPLICIT) {
     return false;
   }
-  if (type === SemanticAttr.Type.FENCED) {
-    return node.role === SemanticAttr.Role.LEFTRIGHT ?
+  if (type === SemanticType.FENCED) {
+    return node.role === SemanticRole.LEFTRIGHT ?
         isSingletonSetContent(node.childNodes[0]) :
         true;
   }
@@ -496,9 +496,9 @@ export function isSingletonSetContent(node: SemanticNode): boolean {
  * @return True if the number is an integer or a decimal.
  */
 export function isNumber(node: SemanticNode): boolean {
-  return node.type === SemanticAttr.Type.NUMBER &&
-      (node.role === SemanticAttr.Role.INTEGER ||
-       node.role === SemanticAttr.Role.FLOAT);
+  return node.type === SemanticType.NUMBER &&
+      (node.role === SemanticRole.INTEGER ||
+       node.role === SemanticRole.FLOAT);
 }
 
 
@@ -511,8 +511,8 @@ export function isNumber(node: SemanticNode): boolean {
  * @return True if the number is an integer or a decimal.
  */
 export function isUnitCounter(node: SemanticNode): boolean {
-  return isNumber(node) || node.role === SemanticAttr.Role.VULGAR ||
-      node.role === SemanticAttr.Role.MIXED;
+  return isNumber(node) || node.role === SemanticRole.VULGAR ||
+      node.role === SemanticRole.MIXED;
 }
 
 
@@ -524,8 +524,8 @@ export function isUnitCounter(node: SemanticNode): boolean {
  */
 export function isPureUnit(node: SemanticNode): boolean {
   let children = node.childNodes;
-  return node.role === SemanticAttr.Role.UNIT &&
-      (!children.length || children[0].role === SemanticAttr.Role.UNIT);
+  return node.role === SemanticRole.UNIT &&
+      (!children.length || children[0].role === SemanticRole.UNIT);
 }
 
 
@@ -536,8 +536,8 @@ export function isPureUnit(node: SemanticNode): boolean {
  * @return True if the node is considered an implicit node.
  */
 export function isImplicit(node: SemanticNode): boolean {
-  return node.role === SemanticAttr.Role.IMPLICIT ||
-      node.role === SemanticAttr.Role.UNIT && !!node.contentNodes.length &&
+  return node.role === SemanticRole.IMPLICIT ||
+      node.role === SemanticRole.UNIT && !!node.contentNodes.length &&
       node.contentNodes[0].textContent === SemanticAttr.invisibleTimes();
 }
 
@@ -548,8 +548,8 @@ export function isImplicit(node: SemanticNode): boolean {
  * @return True if the node is a true implicit operator node.
  */
 export function isImplicitOp(node: SemanticNode): boolean {
-  return node.type === SemanticAttr.Type.INFIXOP &&
-      node.role === SemanticAttr.Role.IMPLICIT;
+  return node.type === SemanticType.INFIXOP &&
+      node.role === SemanticRole.IMPLICIT;
 }
 
 
@@ -563,8 +563,8 @@ export function isImplicitOp(node: SemanticNode): boolean {
  */
 export function compareNeutralFences(
     fence1: SemanticNode, fence2: SemanticNode): boolean {
-  return fence1.role === SemanticAttr.Role.NEUTRAL &&
-      fence2.role === SemanticAttr.Role.NEUTRAL &&
+  return fence1.role === SemanticRole.NEUTRAL &&
+      fence2.role === SemanticRole.NEUTRAL &&
       sre.SemanticUtil.getEmbellishedInner(fence1).textContent ==
       sre.SemanticUtil.getEmbellishedInner(fence2).textContent;
 }
@@ -577,19 +577,19 @@ export function compareNeutralFences(
  * @return True if fence is elligible.
  */
 export function elligibleLeftNeutral(fence: SemanticNode): boolean {
-  if (fence.role !== SemanticAttr.Role.NEUTRAL) {
+  if (fence.role !== SemanticRole.NEUTRAL) {
     return false;
   }
   if (!fence.embellished) {
     return true;
   }
-  if (fence.type === SemanticAttr.Type.SUPERSCRIPT ||
-      fence.type === SemanticAttr.Type.SUBSCRIPT) {
+  if (fence.type === SemanticType.SUPERSCRIPT ||
+      fence.type === SemanticType.SUBSCRIPT) {
     return false;
   }
-  if (fence.type === SemanticAttr.Type.TENSOR &&
-      (fence.childNodes[3].type !== SemanticAttr.Type.EMPTY ||
-       fence.childNodes[4].type !== SemanticAttr.Type.EMPTY)) {
+  if (fence.type === SemanticType.TENSOR &&
+      (fence.childNodes[3].type !== SemanticType.EMPTY ||
+       fence.childNodes[4].type !== SemanticType.EMPTY)) {
     return false;
   }
   return true;
@@ -603,15 +603,15 @@ export function elligibleLeftNeutral(fence: SemanticNode): boolean {
  * @return True if fence is elligible.
  */
 export function elligibleRightNeutral(fence: SemanticNode): boolean {
-  if (fence.role !== SemanticAttr.Role.NEUTRAL) {
+  if (fence.role !== SemanticRole.NEUTRAL) {
     return false;
   }
   if (!fence.embellished) {
     return true;
   }
-  if (fence.type === SemanticAttr.Type.TENSOR &&
-      (fence.childNodes[1].type !== SemanticAttr.Type.EMPTY ||
-       fence.childNodes[2].type !== SemanticAttr.Type.EMPTY)) {
+  if (fence.type === SemanticType.TENSOR &&
+      (fence.childNodes[1].type !== SemanticType.EMPTY ||
+       fence.childNodes[2].type !== SemanticType.EMPTY)) {
     return false;
   }
   return true;

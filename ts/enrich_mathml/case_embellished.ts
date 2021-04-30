@@ -83,7 +83,7 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
     this.getFenced_();
     this.fencedMml = EnrichMathml.walkTree((this.fenced as SemanticNode));
     this.getFencesMml_();
-    if (this.fenced.type === SemanticAttr.Type.EMPTY &&
+    if (this.fenced.type === SemanticType.EMPTY &&
         !this.fencedMml.parentNode) {
       // Fenced element is empty and new. Insert it before the closing fence so
       // it can be walked as usual.
@@ -99,7 +99,7 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
    */
   private getFenced_() {
     let currentNode = this.semantic;
-    while (currentNode.type !== SemanticAttr.Type.FENCED) {
+    while (currentNode.type !== SemanticType.FENCED) {
       currentNode = currentNode.childNodes[0];
     }
     this.fenced = currentNode.childNodes[0];
@@ -171,7 +171,7 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
     // Sets the basics composition.
     EnrichMathml.setAttributes(newNode, (this.fenced.parent as SemanticNode));
 
-    while (currentNode.type !== SemanticAttr.Type.FENCED) {
+    while (currentNode.type !== SemanticType.FENCED) {
       // Outer embellished node is the one with the fence pointer.
       let mml = (currentNode.mathmlTree as Element);
       let specialCase = this.specialCase_(currentNode, mml);
@@ -228,14 +228,14 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
       parent = semantic.childNodes[0];
       caller = CaseDoubleScript;
     } else if (mmlTag === 'MMULTISCRIPTS') {
-      if (semantic.type === SemanticAttr.Type.SUPERSCRIPT ||
-          semantic.type === SemanticAttr.Type.SUBSCRIPT) {
+      if (semantic.type === SemanticType.SUPERSCRIPT ||
+          semantic.type === SemanticType.SUBSCRIPT) {
         caller = CaseMultiscripts;
-      } else if (semantic.type === SemanticAttr.Type.TENSOR) {
+      } else if (semantic.type === SemanticType.TENSOR) {
         caller = sre.CaseTensor;
       }
       if (caller && semantic.childNodes[0] &&
-          semantic.childNodes[0].role === SemanticAttr.Role.SUBSUP) {
+          semantic.childNodes[0].role === SemanticRole.SUBSUP) {
         parent = semantic.childNodes[0];
       } else {
         parent = semantic;
@@ -263,7 +263,7 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
   private static makeEmptyNode_(id: number): SemanticNode {
     let mrow = DomUtil.createElement('mrow');
     let empty = new SemanticNode(id);
-    empty.type = SemanticAttr.Type.EMPTY;
+    empty.type = SemanticType.EMPTY;
     empty.mathmlTree = mrow;
     return empty;
   }

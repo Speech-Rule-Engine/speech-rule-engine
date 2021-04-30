@@ -52,10 +52,10 @@ export class CaseLimit extends sre.AbstractEnrichCase {
     }
     let mmlTag = DomUtil.tagName(semantic.mathmlTree);
     let type = semantic.type;
-    return (type === SemanticAttr.Type.LIMUPPER ||
-            type === SemanticAttr.Type.LIMLOWER) &&
+    return (type === SemanticType.LIMUPPER ||
+            type === SemanticType.LIMLOWER) &&
         (mmlTag === 'MSUBSUP' || mmlTag === 'MUNDEROVER') ||
-        type === SemanticAttr.Type.LIMBOTH &&
+        type === SemanticType.LIMBOTH &&
         (mmlTag === 'MSUB' || mmlTag === 'MUNDER' || mmlTag === 'MSUP' ||
          mmlTag === 'MOVER');
   }
@@ -66,7 +66,7 @@ export class CaseLimit extends sre.AbstractEnrichCase {
    */
   getMathml() {
     let children = this.semantic.childNodes;
-    if (this.semantic.type !== SemanticAttr.Type.LIMBOTH &&
+    if (this.semantic.type !== SemanticType.LIMBOTH &&
         this.mml.childNodes.length >= 3) {
       // Extra layer only necessary if a split upper/lower script. Second
       // condition excludes incomplete elements.

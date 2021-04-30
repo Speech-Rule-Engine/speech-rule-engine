@@ -57,13 +57,13 @@ export function convertVulgarFraction_(node: Element):
       !node.childNodes[0].childNodes ||
       node.childNodes[0].childNodes.length < 2 ||
       (node.childNodes[0].childNodes[0].tagName !==
-          sre.SemanticAttr.Type.NUMBER ||
+          SemanticType.NUMBER ||
       node.childNodes[0].childNodes[0].getAttribute('role') !==
-          sre.SemanticAttr.Role.INTEGER ||
+          SemanticRole.INTEGER ||
       node.childNodes[0].childNodes[1].tagName !==
-          sre.SemanticAttr.Type.NUMBER ||
+          SemanticType.NUMBER ||
       node.childNodes[0].childNodes[1].getAttribute('role') !==
-          sre.SemanticAttr.Role.INTEGER) {
+          SemanticRole.INTEGER) {
     return {convertible: false, content: node.textContent};
   }
   let denStr = node.childNodes[0].childNodes[1].textContent;

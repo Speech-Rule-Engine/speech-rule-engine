@@ -76,7 +76,7 @@ export class SemanticNodeFactory {
    */
   public makeEmptyNode(): SemanticNode {
     let node = this.createNode_();
-    node.type = SemanticAttr.Type.EMPTY;
+    node.type = SemanticType.EMPTY;
     return node;
   }
 
@@ -116,7 +116,7 @@ export class SemanticNodeFactory {
    * @param font The font name.
    * @return The new node.
    */
-  public makeLeafNode(content: string, font: SemanticAttr.Font): SemanticNode {
+  public makeLeafNode(content: string, font: SemanticFont): SemanticNode {
     if (!content) {
       return this.makeEmptyNode();
     }
@@ -143,7 +143,7 @@ export class SemanticNodeFactory {
    * @return The new node.
    */
   public makeBranchNode(
-      type: SemanticAttr.Type, children: SemanticNode[],
+      type: SemanticType, children: SemanticNode[],
       contentNodes: SemanticNode[], opt_content?: string): SemanticNode {
     let node = this.createNode_();
     if (opt_content) {

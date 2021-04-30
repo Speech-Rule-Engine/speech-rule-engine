@@ -32,43 +32,43 @@ import * as SemanticPred from './semantic_pred';
 
 export class SemanticProcessor {
   private static readonly FENCE_TO_PUNCT_:
-      {[key: SemanticAttr.Role]: SemanticAttr.Role} = {};
+      {[key: SemanticRole]: SemanticRole} = {};
 
 
   private static readonly MML_TO_LIMIT_:
-      {[key: string]: {type: SemanticAttr.Type, length: number}} = {
-        'MSUB': {type: SemanticAttr.Type.LIMLOWER, length: 1},
-        'MUNDER': {type: SemanticAttr.Type.LIMLOWER, length: 1},
-        'MSUP': {type: SemanticAttr.Type.LIMUPPER, length: 1},
-        'MOVER': {type: SemanticAttr.Type.LIMUPPER, length: 1},
-        'MSUBSUP': {type: SemanticAttr.Type.LIMBOTH, length: 2},
-        'MUNDEROVER': {type: SemanticAttr.Type.LIMBOTH, length: 2}
+      {[key: string]: {type: SemanticType, length: number}} = {
+        'MSUB': {type: SemanticType.LIMLOWER, length: 1},
+        'MUNDER': {type: SemanticType.LIMLOWER, length: 1},
+        'MSUP': {type: SemanticType.LIMUPPER, length: 1},
+        'MOVER': {type: SemanticType.LIMUPPER, length: 1},
+        'MSUBSUP': {type: SemanticType.LIMBOTH, length: 2},
+        'MUNDEROVER': {type: SemanticType.LIMBOTH, length: 2}
       };
 
 
   /**
-   * {Object.<{type: sre.SemanticAttr.Type,
+   * {Object.<{type: SemanticType,
    *         length: number, accent: boolean}>}
    *  */
   private static readonly MML_TO_BOUNDS_:
       {[key: string]:
-           {type: SemanticAttr.Type, length: number, accent: boolean}} = {
-        'MSUB': {type: SemanticAttr.Type.SUBSCRIPT, length: 1, accent: false},
-        'MSUP': {type: SemanticAttr.Type.SUPERSCRIPT, length: 1, accent: false},
+           {type: SemanticType, length: number, accent: boolean}} = {
+        'MSUB': {type: SemanticType.SUBSCRIPT, length: 1, accent: false},
+        'MSUP': {type: SemanticType.SUPERSCRIPT, length: 1, accent: false},
         'MSUBSUP':
-            {type: SemanticAttr.Type.SUBSCRIPT, length: 2, accent: false},
-        'MUNDER': {type: SemanticAttr.Type.UNDERSCORE, length: 1, accent: true},
-        'MOVER': {type: SemanticAttr.Type.OVERSCORE, length: 1, accent: true},
+            {type: SemanticType.SUBSCRIPT, length: 2, accent: false},
+        'MUNDER': {type: SemanticType.UNDERSCORE, length: 1, accent: true},
+        'MOVER': {type: SemanticType.OVERSCORE, length: 1, accent: true},
         'MUNDEROVER':
-            {type: SemanticAttr.Type.UNDERSCORE, length: 2, accent: true}
+            {type: SemanticType.UNDERSCORE, length: 2, accent: true}
       };
 
 
   private static readonly CLASSIFY_FUNCTION_:
-      {[key: SemanticAttr.Role]: string} = {};
+      {[key: SemanticRole]: string} = {};
 
 
-  static MATHJAX_FONTS: {[key: string]: SemanticAttr.Font};
+  static MATHJAX_FONTS: {[key: string]: SemanticFont};
 
   private factory_: SemanticNodeFactory;
 
@@ -114,24 +114,24 @@ export class SemanticProcessor {
    *     a unit.
    * @return The semantic identifier node.
    */
-  identifierNode(leaf: SemanticNode, font: SemanticAttr.Font, unit: string):
+  identifierNode(leaf: SemanticNode, font: SemanticFont, unit: string):
       SemanticNode {
     if (unit === 'MathML-Unit') {
-      leaf.type = SemanticAttr.Type.IDENTIFIER;
-      leaf.role = SemanticAttr.Role.UNIT;
+      leaf.type = SemanticType.IDENTIFIER;
+      leaf.role = SemanticRole.UNIT;
     } else if (
         !font && leaf.textContent.length === 1 &&
-        (leaf.role === SemanticAttr.Role.INTEGER ||
-         leaf.role === SemanticAttr.Role.LATINLETTER ||
-         leaf.role === SemanticAttr.Role.GREEKLETTER) &&
-        leaf.font === SemanticAttr.Font.NORMAL) {
+        (leaf.role === SemanticRole.INTEGER ||
+         leaf.role === SemanticRole.LATINLETTER ||
+         leaf.role === SemanticRole.GREEKLETTER) &&
+        leaf.font === SemanticFont.NORMAL) {
       // If single letter or single integer and font normal but no mathvariant
       // then this letter/number should be in italic font.
-      leaf.font = SemanticAttr.Font.ITALIC;
+      leaf.font = SemanticFont.ITALIC;
       return SemanticHeuristics.run('simpleNamedFunction', leaf);
     }
-    if (leaf.type === SemanticAttr.Type.UNKNOWN) {
-      leaf.type = SemanticAttr.Type.IDENTIFIER;
+    if (leaf.type === SemanticType.UNKNOWN) {
+      leaf.type = SemanticType.IDENTIFIER;
     }
     SemanticProcessor.exprFont_(leaf);
     return SemanticHeuristics.run('simpleNamedFunction', leaf);
@@ -152,7 +152,7 @@ export class SemanticProcessor {
     // For now we assume this is a multiplication using invisible times.
     let newNode = SemanticProcessor.getInstance().infixNode_(
         nodes, (operators[0] as SemanticNode));
-    newNode.role = SemanticAttr.Role.IMPLICIT;
+    newNode.role = SemanticRole.IMPLICIT;
     operators.forEach(function(op) {
       op.parent = newNode;
     });
@@ -185,7 +185,7 @@ export class SemanticProcessor {
       if (spacer) {
         op.mathml.push(spacer);
         op.mathmlTree = spacer;
-        op.role = SemanticAttr.Role.SPACE;
+        op.role = SemanticRole.SPACE;
       }
     }
   }
@@ -238,7 +238,7 @@ export class SemanticProcessor {
   private infixNode_(children: SemanticNode[], opNode: SemanticNode):
       SemanticNode {
     let node = SemanticProcessor.getInstance().factory_.makeBranchNode(
-        SemanticAttr.Type.INFIXOP, children, [opNode],
+        SemanticType.INFIXOP, children, [opNode],
         sre.SemanticUtil.getEmbellishedInner(opNode).textContent);
     node.role = opNode.role;
     return SemanticHeuristics.run('propagateSimpleFunction', node);
@@ -267,8 +267,8 @@ export class SemanticProcessor {
           !SemanticPred.isAttribute('role', 'MIXED')(prev[last]) &&
           SemanticPred.isAttribute('type', 'FRACTION')(next[0])) {
         let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
-            SemanticAttr.Type.NUMBER, [prev[last], next[0]], []);
-        newNode.role = SemanticAttr.Role.MIXED;
+            SemanticType.NUMBER, [prev[last], next[0]], []);
+        newNode.role = SemanticRole.MIXED;
         result = result.concat(prev.slice(0, last));
         result.push(newNode);
         next.shift();
@@ -292,7 +292,7 @@ export class SemanticProcessor {
    */
   private concatNode_(
       inner: SemanticNode, nodeList: SemanticNode[],
-      type: SemanticAttr.Type): SemanticNode {
+      type: SemanticType): SemanticNode {
     if (nodeList.length === 0) {
       return inner;
     }
@@ -305,7 +305,7 @@ export class SemanticProcessor {
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
         type, [inner], nodeList, content);
     if (nodeList.length > 1) {
-      newNode.role = SemanticAttr.Role.MULTIOP;
+      newNode.role = SemanticRole.MULTIOP;
     }
     return newNode;
   }
@@ -328,18 +328,18 @@ export class SemanticProcessor {
     let negatives = sre.SemanticUtil.partitionNodes(
         prefixes, SemanticPred.isAttribute('role', 'SUBTRACTION'));
     let newNode = SemanticProcessor.getInstance().concatNode_(
-        node, negatives.comp.pop(), SemanticAttr.Type.PREFIXOP);
+        node, negatives.comp.pop(), SemanticType.PREFIXOP);
     if (newNode.contentNodes.length === 1 &&
-        newNode.contentNodes[0].role === SemanticAttr.Role.ADDITION &&
+        newNode.contentNodes[0].role === SemanticRole.ADDITION &&
         newNode.contentNodes[0].textContent === '+') {
-      newNode.role = SemanticAttr.Role.POSITIVE;
+      newNode.role = SemanticRole.POSITIVE;
     }
     while (negatives.rel.length > 0) {
       newNode = SemanticProcessor.getInstance().concatNode_(
-          newNode, [negatives.rel.pop()], SemanticAttr.Type.PREFIXOP);
-      newNode.role = SemanticAttr.Role.NEGATIVE;
+          newNode, [negatives.rel.pop()], SemanticType.PREFIXOP);
+      newNode.role = SemanticRole.NEGATIVE;
       newNode = SemanticProcessor.getInstance().concatNode_(
-          newNode, negatives.comp.pop(), SemanticAttr.Type.PREFIXOP);
+          newNode, negatives.comp.pop(), SemanticType.PREFIXOP);
     }
     return newNode;
   }
@@ -360,7 +360,7 @@ export class SemanticProcessor {
       return node;
     }
     return SemanticProcessor.getInstance().concatNode_(
-        node, postfixes, SemanticAttr.Type.POSTFIXOP);
+        node, postfixes, SemanticType.POSTFIXOP);
   }
 
 
@@ -374,13 +374,13 @@ export class SemanticProcessor {
     // TODO (simons): Here check if there is already a type or if we can compute
     // an interesting number role. Than use this.
     SemanticProcessor.exprFont_(leaf);
-    leaf.type = SemanticAttr.Type.TEXT;
+    leaf.type = SemanticType.TEXT;
     if (type === 'MS') {
-      leaf.role = SemanticAttr.Role.STRING;
+      leaf.role = SemanticRole.STRING;
       return leaf;
     }
     if (type === 'MSPACE' || leaf.textContent.match(/^\s*$/)) {
-      leaf.role = SemanticAttr.Role.SPACE;
+      leaf.role = SemanticRole.SPACE;
       return leaf;
     }
     // TODO (simons): Process single element in text. E.g., check if a text
@@ -446,7 +446,7 @@ export class SemanticProcessor {
       if (comp.length > 1) {
         // For now we assume this is a multiplication using invisible times.
         unitNode = SemanticProcessor.getInstance().implicitNode_(comp);
-        unitNode.role = SemanticAttr.Role.UNIT;
+        unitNode.role = SemanticRole.UNIT;
       }
       if (unitNode) {
         result.push(unitNode);
@@ -483,8 +483,8 @@ export class SemanticProcessor {
           (SemanticPred.isAttribute('role', 'INTEGER')(comp[last]) ||
            SemanticPred.isAttribute('role', 'FLOAT')(comp[last]))) {
         let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
-            SemanticAttr.Type.NUMBER, [comp[last], rel], []);
-        newNode.role = SemanticAttr.Role.MIXED;
+            SemanticType.NUMBER, [comp[last], rel], []);
+        newNode.role = SemanticRole.MIXED;
         result = result.concat(comp.slice(0, last));
         result.push(newNode);
       } else {
@@ -554,7 +554,7 @@ export class SemanticProcessor {
           return !x.equals(firstRel);
         })) {
       let node = SemanticProcessor.getInstance().factory_.makeBranchNode(
-          SemanticAttr.Type.MULTIREL, children, partition.rel);
+          SemanticType.MULTIREL, children, partition.rel);
       if (partition.rel.every(function(x) {
             return x.role === firstRel.role;
           })) {
@@ -563,7 +563,7 @@ export class SemanticProcessor {
       return node;
     }
     node = SemanticProcessor.getInstance().factory_.makeBranchNode(
-        SemanticAttr.Type.RELSEQ, children, partition.rel,
+        SemanticType.RELSEQ, children, partition.rel,
         sre.SemanticUtil.getEmbellishedInner(firstRel).textContent);
     node.role = firstRel.role;
     return node;
@@ -635,7 +635,7 @@ export class SemanticProcessor {
     if (nodes.length === 0) {
       // Left over prefixes become postfixes.
       prefixes.unshift(lastop);
-      if (root.type === SemanticAttr.Type.INFIXOP) {
+      if (root.type === SemanticType.INFIXOP) {
         // We assume prefixes bind stronger than postfixes.
         let node = SemanticProcessor.getInstance().postfixNode_(
             // Here we know that the childNodes are not empty!
@@ -680,7 +680,7 @@ export class SemanticProcessor {
       root: SemanticNode, op: SemanticNode, node: SemanticNode): SemanticNode {
     // In general our operator tree will have the form that additions and
     // subtractions are stacked, while multiplications are subordinate.
-    if (root.type !== SemanticAttr.Type.INFIXOP) {
+    if (root.type !== SemanticType.INFIXOP) {
       return SemanticProcessor.getInstance().infixNode_([root, node], op);
     }
     let division = this.appendDivisionOp_(root, op, node);
@@ -691,7 +691,7 @@ export class SemanticProcessor {
             root, op, node)) {
       return root;
     }
-    return op.role === SemanticAttr.Role.MULTIPLICATION ?
+    return op.role === SemanticRole.MULTIPLICATION ?
         SemanticProcessor.getInstance().appendMultiplicativeOp_(
             root, op, node) :
         SemanticProcessor.getInstance().appendAdditiveOp_(root, op, node);
@@ -707,13 +707,13 @@ export class SemanticProcessor {
    */
   private appendDivisionOp_(
       root: SemanticNode, op: SemanticNode, node: SemanticNode): SemanticNode {
-    if (op.role === SemanticAttr.Role.DIVISION) {
+    if (op.role === SemanticRole.DIVISION) {
       if (SemanticPred.isImplicit(root)) {
         return SemanticProcessor.getInstance().infixNode_([root, node], op);
       }
       return this.appendLastOperand_(root, op, node);
     }
-    return root.role === SemanticAttr.Role.DIVISION ?
+    return root.role === SemanticRole.DIVISION ?
         this.infixNode_([root, node], op) :
         null;
   }
@@ -730,7 +730,7 @@ export class SemanticProcessor {
       root: SemanticNode, op: SemanticNode, node: SemanticNode): SemanticNode {
     let lastRoot = root;
     let lastChild = root.childNodes[root.childNodes.length - 1];
-    while (lastChild && lastChild.type === SemanticAttr.Type.INFIXOP &&
+    while (lastChild && lastChild.type === SemanticType.INFIXOP &&
            !SemanticPred.isImplicit(lastChild)) {
       lastRoot = lastChild;
       lastChild = lastRoot.childNodes[root.childNodes.length - 1];
@@ -758,7 +758,7 @@ export class SemanticProcessor {
     }
     let lastRoot = root;
     let lastChild = root.childNodes[root.childNodes.length - 1];
-    while (lastChild && lastChild.type === SemanticAttr.Type.INFIXOP &&
+    while (lastChild && lastChild.type === SemanticType.INFIXOP &&
            !SemanticPred.isImplicit(lastChild)) {
       lastRoot = lastChild;
       lastChild = lastRoot.childNodes[root.childNodes.length - 1];
@@ -793,7 +793,7 @@ export class SemanticProcessor {
    */
   private appendExistingOperator_(
       root: SemanticNode, op: SemanticNode, node: SemanticNode): boolean {
-    if (!root || root.type !== SemanticAttr.Type.INFIXOP ||
+    if (!root || root.type !== SemanticType.INFIXOP ||
         // This ensures that implicit nodes stay together, which is probably
         // what we want.
         SemanticPred.isImplicit(root)) {
@@ -903,9 +903,9 @@ export class SemanticProcessor {
     let firstRole = fences[0].role;
     // General opening case.
     // Either we have an open fence.
-    if (firstRole === SemanticAttr.Role.OPEN ||
+    if (firstRole === SemanticRole.OPEN ||
         // Or we have a neutral fence that does not have a counter part.
-        firstRole === SemanticAttr.Role.NEUTRAL &&
+        firstRole === SemanticRole.NEUTRAL &&
             !(lastOpen &&
               SemanticPred.compareNeutralFences(fences[0], lastOpen))) {
       openStack.push(fences.shift());
@@ -920,8 +920,8 @@ export class SemanticProcessor {
     // General closing case.
     if (lastOpen &&
         // Closing fence for some opening fence.
-        firstRole === SemanticAttr.Role.CLOSE &&
-        lastOpen.role === SemanticAttr.Role.OPEN) {
+        firstRole === SemanticRole.CLOSE &&
+        lastOpen.role === SemanticRole.OPEN) {
       let fenced = SemanticProcessor.getInstance().horizontalFencedNode_(
           openStack.pop(), fences.shift(), contentStack.pop());
       contentStack.push(contentStack.pop().concat([fenced], content.shift()));
@@ -948,8 +948,8 @@ export class SemanticProcessor {
           fences, content, openStack, contentStack);
     }
     // Closing with a neutral fence on the stack.
-    if (lastOpen && firstRole === SemanticAttr.Role.CLOSE &&
-        lastOpen.role === SemanticAttr.Role.NEUTRAL &&
+    if (lastOpen && firstRole === SemanticRole.CLOSE &&
+        lastOpen.role === SemanticRole.NEUTRAL &&
         openStack.some(openPred)) {
       // Steps of the algorithm:
       // 1. Split list at right most opening bracket.
@@ -1101,14 +1101,14 @@ export class SemanticProcessor {
       return;
     }
     while (fence.embellished) {
-      fence.embellished = SemanticAttr.Type.PUNCTUATION;
+      fence.embellished = SemanticType.PUNCTUATION;
       if (!(SemanticPred.isAttribute('role', 'SUBSUP')(fence) ||
             SemanticPred.isAttribute('role', 'UNDEROVER')(fence))) {
         fence.role = newRole;
       }
       fence = fence.childNodes[0];
     }
-    fence.type = SemanticAttr.Type.PUNCTUATION;
+    fence.type = SemanticType.PUNCTUATION;
     fence.role = newRole;
   }
 
@@ -1126,9 +1126,9 @@ export class SemanticProcessor {
       content: SemanticNode[]): SemanticNode {
     let childNode = SemanticProcessor.getInstance().row(content);
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
-        SemanticAttr.Type.FENCED, [childNode], [ofence, cfence]);
-    if (ofence.role === SemanticAttr.Role.OPEN) {
-      // newNode.role = sre.SemanticAttr.Role.LEFTRIGHT;
+        SemanticType.FENCED, [childNode], [ofence, cfence]);
+    if (ofence.role === SemanticRole.OPEN) {
+      // newNode.role = SemanticRole.LEFTRIGHT;
       this.classifyHorizontalFence_(newNode);
       newNode = SemanticHeuristics.run('propagateComposedFunction', newNode);
     } else {
@@ -1145,34 +1145,34 @@ export class SemanticProcessor {
    * @param node A fenced semantic node.
    */
   private classifyHorizontalFence_(node: SemanticNode) {
-    node.role = SemanticAttr.Role.LEFTRIGHT;
+    node.role = SemanticRole.LEFTRIGHT;
     let children = node.childNodes;
     if (!SemanticPred.isSetNode(node) || children.length > 1) {
       return;
     }
-    if (children.length === 0 || children[0].type === SemanticAttr.Type.EMPTY) {
-      node.role = SemanticAttr.Role.SETEMPTY;
+    if (children.length === 0 || children[0].type === SemanticType.EMPTY) {
+      node.role = SemanticRole.SETEMPTY;
       return;
     }
     let type = children[0].type;
     if (children.length === 1 &&
         SemanticPred.isSingletonSetContent(children[0])) {
-      node.role = SemanticAttr.Role.SETSINGLE;
+      node.role = SemanticRole.SETSINGLE;
       return;
     }
     let role = children[0].role;
-    if (type !== SemanticAttr.Type.PUNCTUATED ||
-        role !== SemanticAttr.Role.SEQUENCE) {
+    if (type !== SemanticType.PUNCTUATED ||
+        role !== SemanticRole.SEQUENCE) {
       return;
     }
-    if (children[0].contentNodes[0].role === SemanticAttr.Role.COMMA) {
-      node.role = SemanticAttr.Role.SETCOLLECT;
+    if (children[0].contentNodes[0].role === SemanticRole.COMMA) {
+      node.role = SemanticRole.SETCOLLECT;
       return;
     }
     if (children[0].contentNodes.length === 1 &&
-        (children[0].contentNodes[0].role === SemanticAttr.Role.VBAR ||
-         children[0].contentNodes[0].role === SemanticAttr.Role.COLON)) {
-      node.role = SemanticAttr.Role.SETEXT;
+        (children[0].contentNodes[0].role === SemanticRole.VBAR ||
+         children[0].contentNodes[0].role === SemanticRole.COLON)) {
+      node.role = SemanticRole.SETEXT;
       this.setExtension_(node);
       return;
     }
@@ -1189,10 +1189,10 @@ export class SemanticProcessor {
    */
   private setExtension_(set: SemanticNode) {
     let extender = set.childNodes[0].childNodes[0];
-    if (extender && extender.type === SemanticAttr.Type.INFIXOP &&
+    if (extender && extender.type === SemanticType.INFIXOP &&
         extender.contentNodes.length === 1 &&
-        extender.contentNodes[0].role === SemanticAttr.Role.ELEMENT) {
-      extender.contentNodes[0].role = SemanticAttr.Role.SETEXT;
+        extender.contentNodes[0].role === SemanticRole.ELEMENT) {
+      extender.contentNodes[0].role = SemanticRole.SETEXT;
     }
   }
 
@@ -1279,10 +1279,10 @@ export class SemanticProcessor {
   private punctuatedNode_(nodes: SemanticNode[], punctuations: SemanticNode[]):
       SemanticNode {
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
-        SemanticAttr.Type.PUNCTUATED, nodes, punctuations);
+        SemanticType.PUNCTUATED, nodes, punctuations);
     if (punctuations.length === nodes.length) {
       let firstRole = punctuations[0].role;
-      if (firstRole !== SemanticAttr.Role.UNKNOWN &&
+      if (firstRole !== SemanticRole.UNKNOWN &&
           punctuations.every(function(punct) {
             return punct.role === firstRole;
           })) {
@@ -1291,16 +1291,16 @@ export class SemanticProcessor {
       }
     }
     if (SemanticPred.singlePunctAtPosition(nodes, punctuations, 0)) {
-      newNode.role = SemanticAttr.Role.STARTPUNCT;
+      newNode.role = SemanticRole.STARTPUNCT;
     } else if (SemanticPred.singlePunctAtPosition(
                    nodes, punctuations, nodes.length - 1)) {
-      newNode.role = SemanticAttr.Role.ENDPUNCT;
+      newNode.role = SemanticRole.ENDPUNCT;
     } else if (punctuations.every(SemanticPred.isAttribute('role', 'DUMMY'))) {
-      newNode.role = SemanticAttr.Role.TEXT;
+      newNode.role = SemanticRole.TEXT;
     } else if (punctuations.every(SemanticPred.isAttribute('role', 'SPACE'))) {
-      newNode.role = SemanticAttr.Role.SPACE;
+      newNode.role = SemanticRole.SPACE;
     } else {
-      newNode.role = SemanticAttr.Role.SEQUENCE;
+      newNode.role = SemanticRole.SEQUENCE;
     }
     return newNode;
   }
@@ -1317,7 +1317,7 @@ export class SemanticProcessor {
         SemanticProcessor.getInstance().factory_.makeMultipleContentNodes(
             children.length - 1, SemanticAttr.invisibleComma());
     commata.forEach(function(comma) {
-      comma.role = SemanticAttr.Role.DUMMY;
+      comma.role = SemanticRole.DUMMY;
     });
     return SemanticProcessor.getInstance().punctuatedNode_(children, commata);
   }
@@ -1330,13 +1330,13 @@ export class SemanticProcessor {
    * @param type The semantic type of the parent node.
    * @return True if node is a legal accent.
    */
-  private accentRole_(node: SemanticNode, type: SemanticAttr.Type): boolean {
+  private accentRole_(node: SemanticNode, type: SemanticType): boolean {
     if (!SemanticPred.isAccent(node)) {
       return false;
     }
-    node.role = type === SemanticAttr.Type.UNDERSCORE ?
-        SemanticAttr.Role.UNDERACCENT :
-        SemanticAttr.Role.OVERACCENT;
+    node.role = type === SemanticType.UNDERSCORE ?
+        SemanticRole.UNDERACCENT :
+        SemanticRole.OVERACCENT;
     return true;
   }
 
@@ -1355,7 +1355,7 @@ export class SemanticProcessor {
       return SemanticProcessor.getInstance().factory_.makeEmptyNode();
     }
     let center = children[0];
-    let type = SemanticAttr.Type.UNKNOWN;
+    let type = SemanticType.UNKNOWN;
     if (!children[1]) {
       return center;
     }
@@ -1377,28 +1377,28 @@ export class SemanticProcessor {
         if (SemanticPred.isAccent(children[1])) {
           center = this.accentNode_(
               center, [center, children[1]], {
-                'MSUBSUP': SemanticAttr.Type.SUBSCRIPT,
-                'MUNDEROVER': SemanticAttr.Type.UNDERSCORE
+                'MSUBSUP': SemanticType.SUBSCRIPT,
+                'MUNDEROVER': SemanticType.UNDERSCORE
               }[mmlTag],
               1, true);
           return !children[2] ? center :
                                 this.makeLimitNode_(
                                     center, [center, children[2]], null,
-                                    SemanticAttr.Type.LIMUPPER);
+                                    SemanticType.LIMUPPER);
         }
         if (children[2] && SemanticPred.isAccent(children[2])) {
           center = this.accentNode_(
               center, [center, children[2]], {
-                'MSUBSUP': SemanticAttr.Type.SUPERSCRIPT,
-                'MUNDEROVER': SemanticAttr.Type.OVERSCORE
+                'MSUBSUP': SemanticType.SUPERSCRIPT,
+                'MUNDEROVER': SemanticType.OVERSCORE
               }[mmlTag],
               1, true);
           return this.makeLimitNode_(
-              center, [center, children[1]], null, SemanticAttr.Type.LIMLOWER);
+              center, [center, children[1]], null, SemanticType.LIMLOWER);
         }
         // Limit nodes only the number of children has to be restricted.
         if (!children[length]) {
-          type = SemanticAttr.Type.LIMLOWER;
+          type = SemanticType.LIMLOWER;
         }
       }
       return this.makeLimitNode_(center, children, null, type);
@@ -1423,7 +1423,7 @@ export class SemanticProcessor {
    * @return The newly created node.
    */
   private accentNode_(
-      center: SemanticNode, children: SemanticNode[], type: SemanticAttr.Type,
+      center: SemanticNode, children: SemanticNode[], type: SemanticType,
       length: number, accent: boolean): SemanticNode {
     children = children.slice(0, length + 1);
     let child1 = (children[1] as SemanticNode);
@@ -1431,28 +1431,28 @@ export class SemanticProcessor {
     if (!accent && child2) {
       // For indexed we only have to nest if we have two children.
       let innerNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
-          SemanticAttr.Type.SUBSCRIPT, [center, child1], []);
-      innerNode.role = SemanticAttr.Role.SUBSUP;
+          SemanticType.SUBSCRIPT, [center, child1], []);
+      innerNode.role = SemanticRole.SUBSUP;
       children = [innerNode, child2];
-      type = SemanticAttr.Type.SUPERSCRIPT;
+      type = SemanticType.SUPERSCRIPT;
     }
     if (accent) {
       // Check if we have stacked or accented expressions (or mix).
       let underAccent = this.accentRole_(child1, type);
       if (child2) {
-        let overAccent = this.accentRole_(child2, SemanticAttr.Type.OVERSCORE);
+        let overAccent = this.accentRole_(child2, SemanticType.OVERSCORE);
         if (overAccent && !underAccent) {
           innerNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
-              SemanticAttr.Type.OVERSCORE, [center, child2], []);
+              SemanticType.OVERSCORE, [center, child2], []);
           children = [innerNode, child1];
-          type = SemanticAttr.Type.UNDERSCORE;
+          type = SemanticType.UNDERSCORE;
         } else {
           innerNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
-              SemanticAttr.Type.UNDERSCORE, [center, child1], []);
+              SemanticType.UNDERSCORE, [center, child1], []);
           children = [innerNode, child2];
-          type = SemanticAttr.Type.OVERSCORE;
+          type = SemanticType.OVERSCORE;
         }
-        innerNode.role = SemanticAttr.Role.UNDEROVER;
+        innerNode.role = SemanticRole.UNDEROVER;
       }
     }
     return this.makeLimitNode_(center, children, innerNode, type);
@@ -1472,21 +1472,21 @@ export class SemanticProcessor {
   private makeLimitNode_(
       center: SemanticNode, children: SemanticNode[],
       innerNode: SemanticNode|undefined,
-      type: SemanticAttr.Type): SemanticNode {
+      type: SemanticType): SemanticNode {
     // These two conditions implement the limitboth heuristic, which works
     // before a new node is created.
-    if (type === SemanticAttr.Type.LIMUPPER &&
-        center.type === SemanticAttr.Type.LIMLOWER) {
+    if (type === SemanticType.LIMUPPER &&
+        center.type === SemanticType.LIMLOWER) {
       center.childNodes.push(children[1]);
       children[1].parent = center;
-      center.type = SemanticAttr.Type.LIMBOTH;
+      center.type = SemanticType.LIMBOTH;
       return center;
     }
-    if (type === SemanticAttr.Type.LIMLOWER &&
-        center.type === SemanticAttr.Type.LIMUPPER) {
+    if (type === SemanticType.LIMLOWER &&
+        center.type === SemanticType.LIMUPPER) {
       center.childNodes.splice(1, -1, children[1]);
       children[1].parent = center;
-      center.type = SemanticAttr.Type.LIMBOTH;
+      center.type = SemanticType.LIMBOTH;
       return center;
     }
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
@@ -1558,9 +1558,9 @@ export class SemanticProcessor {
       funcNode: SemanticNode, restNodes: SemanticNode[]): string {
     //  We do not allow double function application. This is not lambda
     //  calculus!
-    if (funcNode.type === SemanticAttr.Type.APPL ||
-        funcNode.type === SemanticAttr.Type.BIGOP ||
-        funcNode.type === SemanticAttr.Type.INTEGRAL) {
+    if (funcNode.type === SemanticType.APPL ||
+        funcNode.type === SemanticType.BIGOP ||
+        funcNode.type === SemanticType.INTEGRAL) {
       return '';
     }
     // Find and remove explicit function applications.
@@ -1571,10 +1571,10 @@ export class SemanticProcessor {
       // Store explicit function application to be reused later.
       SemanticProcessor.getInstance().funcAppls[funcNode.id] =
           restNodes.shift();
-      let role = SemanticAttr.Role.SIMPLEFUNC;
+      let role = SemanticRole.SIMPLEFUNC;
       SemanticHeuristics.run('simple2prefix', funcNode);
-      if (funcNode.role === SemanticAttr.Role.PREFIXFUNC ||
-          funcNode.role === SemanticAttr.Role.LIMFUNC) {
+      if (funcNode.role === SemanticRole.PREFIXFUNC ||
+          funcNode.role === SemanticRole.LIMFUNC) {
         role = funcNode.role;
       }
       SemanticProcessor.propagateFunctionRole_(funcNode, role);
@@ -1593,7 +1593,7 @@ export class SemanticProcessor {
    * @param tag The function role to be inserted.
    */
   private static propagateFunctionRole_(
-      funcNode: SemanticNode, tag: SemanticAttr.Role) {
+      funcNode: SemanticNode, tag: SemanticRole) {
     if (funcNode) {
       if (funcNode.type === sre.Semantic.Type.INFIXOP) {
         return;
@@ -1635,14 +1635,14 @@ export class SemanticProcessor {
         return components.rest;
         break;
       case 'prefix':
-        if (rest[0] && rest[0].type === SemanticAttr.Type.FENCED) {
+        if (rest[0] && rest[0].type === SemanticType.FENCED) {
           // TODO: (MS2.3|simons) This needs to be made more robust!  Currently
           // we
           //       reset to eliminate sets. Once we include bra-ket heuristics,
           //       this might be incorrect.
           let arg = rest.shift();
-          if (arg.role !== SemanticAttr.Role.NEUTRAL) {
-            arg.role = SemanticAttr.Role.LEFTRIGHT;
+          if (arg.role !== SemanticRole.NEUTRAL) {
+            arg.role = SemanticRole.LEFTRIGHT;
           }
           funcNode = SemanticProcessor.getInstance().functionNode_(
               func, (arg as SemanticNode));
@@ -1694,16 +1694,16 @@ export class SemanticProcessor {
           return [func];
         }
         let firstArg = rest[0];
-        if (firstArg.type === SemanticAttr.Type.FENCED &&
-            firstArg.role !== SemanticAttr.Role.NEUTRAL &&
+        if (firstArg.type === SemanticType.FENCED &&
+            firstArg.role !== SemanticRole.NEUTRAL &&
             SemanticPred.isSimpleFunctionScope(firstArg)) {
           // TODO: (MS2.3|simons) This needs to be made more robust!  Currently
           // we
           //       reset to eliminate sets. Once we include bra-ket heuristics,
           //       this might be incorrect.
-          firstArg.role = SemanticAttr.Role.LEFTRIGHT;
+          firstArg.role = SemanticRole.LEFTRIGHT;
           SemanticProcessor.propagateFunctionRole_(
-              func, SemanticAttr.Role.SIMPLEFUNC);
+              func, SemanticRole.SIMPLEFUNC);
           funcNode = SemanticProcessor.getInstance().functionNode_(
               func, (rest.shift() as SemanticNode));
           rest.unshift(funcNode);
@@ -1737,13 +1737,13 @@ export class SemanticProcessor {
       return {integrand: args, intvar: null, rest: nodes};
     }
     if (SemanticPred.isIntegralDxBoundarySingle(firstNode)) {
-      firstNode.role = SemanticAttr.Role.INTEGRAL;
+      firstNode.role = SemanticRole.INTEGRAL;
       return {integrand: args, intvar: firstNode, rest: nodes.slice(1)};
     }
     if (nodes[1] && SemanticPred.isIntegralDxBoundary(firstNode, nodes[1])) {
       let intvar = SemanticProcessor.getInstance().prefixNode_(
           (nodes[1] as SemanticNode), [firstNode]);
-      intvar.role = SemanticAttr.Role.INTEGRAL;
+      intvar.role = SemanticRole.INTEGRAL;
       return {integrand: args, intvar: intvar, rest: nodes.slice(2)};
     }
     args.push(nodes.shift());
@@ -1769,15 +1769,15 @@ export class SemanticProcessor {
       applNode.attributes = appl.attributes;
       delete this.funcAppls[func.id];
     }
-    applNode.type = SemanticAttr.Type.PUNCTUATION;
-    applNode.role = SemanticAttr.Role.APPLICATION;
+    applNode.type = SemanticType.PUNCTUATION;
+    applNode.role = SemanticRole.APPLICATION;
     let funcop = SemanticProcessor.getFunctionOp_(func, function(node) {
       return SemanticPred.isAttribute('type', 'FUNCTION')(node) ||
           SemanticPred.isAttribute('type', 'IDENTIFIER')(node) &&
           SemanticPred.isAttribute('role', 'SIMPLEFUNC')(node);
     });
     return SemanticProcessor.getInstance().functionalNode_(
-        SemanticAttr.Type.APPL, [func, arg], funcop, [applNode]);
+        SemanticType.APPL, [func, arg], funcop, [applNode]);
   }
 
 
@@ -1791,7 +1791,7 @@ export class SemanticProcessor {
     let largeop = SemanticProcessor.getFunctionOp_(
         bigOp, SemanticPred.isAttribute('type', 'LARGEOP'));
     return SemanticProcessor.getInstance().functionalNode_(
-        SemanticAttr.Type.BIGOP, [bigOp, arg], largeop, []);
+        SemanticType.BIGOP, [bigOp, arg], largeop, []);
   }
 
 
@@ -1812,7 +1812,7 @@ export class SemanticProcessor {
     let largeop = SemanticProcessor.getFunctionOp_(
         integral, SemanticPred.isAttribute('type', 'LARGEOP'));
     return SemanticProcessor.getInstance().functionalNode_(
-        SemanticAttr.Type.INTEGRAL, [integral, integrand, intvar], largeop, []);
+        SemanticType.INTEGRAL, [integral, integrand, intvar], largeop, []);
   }
 
 
@@ -1835,7 +1835,7 @@ export class SemanticProcessor {
    * @return The new functional node.
    */
   private functionalNode_(
-      type: SemanticAttr.Type, children: SemanticNode[],
+      type: SemanticType, children: SemanticNode[],
       operator: SemanticNode|null, content: SemanticNode[]): SemanticNode {
     let funcop = children[0];
     if (operator) {
@@ -1935,7 +1935,7 @@ export class SemanticProcessor {
    */
   private static tableToVector_(node: SemanticNode) {
     let vector = node.childNodes[0];
-    vector.type = SemanticAttr.Type.VECTOR;
+    vector.type = SemanticType.VECTOR;
     if (vector.childNodes.length === 1) {
       SemanticProcessor.tableToSquare_(node);
       return;
@@ -1950,9 +1950,9 @@ export class SemanticProcessor {
    */
   private static binomialForm_(node: SemanticNode) {
     if (SemanticPred.isBinomial(node)) {
-      node.role = SemanticAttr.Role.BINOMIAL;
-      node.childNodes[0].role = SemanticAttr.Role.BINOMIAL;
-      node.childNodes[1].role = SemanticAttr.Role.BINOMIAL;
+      node.role = SemanticRole.BINOMIAL;
+      node.childNodes[0].role = SemanticRole.BINOMIAL;
+      node.childNodes[1].role = SemanticRole.BINOMIAL;
     }
   }
 
@@ -1963,7 +1963,7 @@ export class SemanticProcessor {
    */
   private static tableToMatrix_(node: SemanticNode) {
     let matrix = node.childNodes[0];
-    matrix.type = SemanticAttr.Type.MATRIX;
+    matrix.type = SemanticType.MATRIX;
     if (matrix.childNodes && matrix.childNodes.length > 0 &&
         matrix.childNodes[0].childNodes &&
         matrix.childNodes.length === matrix.childNodes[0].childNodes.length) {
@@ -1971,7 +1971,7 @@ export class SemanticProcessor {
       return;
     }
     if (matrix.childNodes && matrix.childNodes.length === 1) {
-      matrix.role = SemanticAttr.Role.ROWVECTOR;
+      matrix.role = SemanticRole.ROWVECTOR;
     }
   }
 
@@ -1984,10 +1984,10 @@ export class SemanticProcessor {
   private static tableToSquare_(node: SemanticNode) {
     let matrix = node.childNodes[0];
     if (SemanticPred.isAttribute('role', 'NEUTRAL')(node)) {
-      matrix.role = SemanticAttr.Role.DETERMINANT;
+      matrix.role = SemanticRole.DETERMINANT;
       return;
     }
-    matrix.role = SemanticAttr.Role.SQUAREMATRIX;
+    matrix.role = SemanticRole.SQUAREMATRIX;
   }
 
 
@@ -1997,13 +1997,13 @@ export class SemanticProcessor {
    * @param node The matrix or vector node.
    * @return The role to be assigned to the components.
    */
-  private static getComponentRoles_(node: SemanticNode): SemanticAttr.Role {
+  private static getComponentRoles_(node: SemanticNode): SemanticRole {
     let role = node.role;
-    if (role && role !== SemanticAttr.Role.UNKNOWN) {
+    if (role && role !== SemanticRole.UNKNOWN) {
       return role;
     }
-    return SemanticAttr.Role[node.type.toUpperCase()] ||
-        SemanticAttr.Role.UNKNOWN;
+    return SemanticRole[node.type.toUpperCase()] ||
+        SemanticRole.UNKNOWN;
   }
 
 
@@ -2017,9 +2017,9 @@ export class SemanticProcessor {
   private static tableToCases_(table: SemanticNode, openFence: SemanticNode):
       SemanticNode {
     for (let i = 0, row; row = table.childNodes[i]; i++) {
-      SemanticProcessor.assignRoleToRow_(row, SemanticAttr.Role.CASES);
+      SemanticProcessor.assignRoleToRow_(row, SemanticRole.CASES);
     }
-    table.type = SemanticAttr.Type.CASES;
+    table.type = SemanticType.CASES;
     table.appendContentNode(openFence);
     if (SemanticPred.tableIsMultiline(table)) {
       SemanticProcessor.binomialForm_(table);
@@ -2038,9 +2038,9 @@ export class SemanticProcessor {
       SemanticProcessor.classifyTable(table);
       return;
     }
-    table.type = SemanticAttr.Type.MULTILINE;
+    table.type = SemanticType.MULTILINE;
     for (let i = 0, row; row = table.childNodes[i]; i++) {
-      SemanticProcessor.rowToLine_(row, SemanticAttr.Role.MULTILINE);
+      SemanticProcessor.rowToLine_(row, SemanticRole.MULTILINE);
     }
     if (table.childNodes.length === 1 &&
         SemanticPred.isFencedElement(table.childNodes[0].childNodes[0])) {
@@ -2076,10 +2076,10 @@ export class SemanticProcessor {
    * @param row The row to convert.
    * @param opt_role The new role for the line.
    */
-  private static rowToLine_(row: SemanticNode, opt_role?: SemanticAttr.Role) {
-    let role = opt_role || SemanticAttr.Role.UNKNOWN;
+  private static rowToLine_(row: SemanticNode, opt_role?: SemanticRole) {
+    let role = opt_role || SemanticRole.UNKNOWN;
     if (SemanticPred.isAttribute('type', 'ROW')(row)) {
-      row.type = SemanticAttr.Type.LINE;
+      row.type = SemanticType.LINE;
       row.role = role;
       if (row.childNodes.length === 1 &&
           SemanticPred.isAttribute('type', 'CELL')(row.childNodes[0])) {
@@ -2097,7 +2097,7 @@ export class SemanticProcessor {
    * @param row The row to be updated.
    * @param role The new role for the row and its cells.
    */
-  private static assignRoleToRow_(row: SemanticNode, role: SemanticAttr.Role) {
+  private static assignRoleToRow_(row: SemanticNode, role: SemanticRole) {
     if (SemanticPred.isAttribute('type', 'LINE')(row)) {
       row.role = role;
       return;
@@ -2203,10 +2203,10 @@ export class SemanticProcessor {
    * @param node The semantic tree node.
    */
   static number(node: SemanticNode) {
-    if (node.type === SemanticAttr.Type.UNKNOWN ||
+    if (node.type === SemanticType.UNKNOWN ||
         // In case of latin numbers etc.
-        node.type === SemanticAttr.Type.IDENTIFIER) {
-      node.type = SemanticAttr.Type.NUMBER;
+        node.type === SemanticType.IDENTIFIER) {
+      node.type = SemanticType.NUMBER;
     }
     SemanticProcessor.numberRole_(node);
     SemanticProcessor.exprFont_(node);
@@ -2218,32 +2218,32 @@ export class SemanticProcessor {
    * @param node The semantic tree node.
    */
   private static numberRole_(node: SemanticNode) {
-    if (node.role !== SemanticAttr.Role.UNKNOWN) {
+    if (node.role !== SemanticRole.UNKNOWN) {
       return;
     }
     let content = sre.SemanticUtil.splitUnicode(node.textContent);
     let meaning = content.map(SemanticAttr.lookupMeaning);
     if (meaning.every(function(x) {
-          return x.type === SemanticAttr.Type.NUMBER &&
-              x.role === SemanticAttr.Role.INTEGER ||
-              x.type === SemanticAttr.Type.PUNCTUATION &&
-              x.role === SemanticAttr.Role.COMMA;
+          return x.type === SemanticType.NUMBER &&
+              x.role === SemanticRole.INTEGER ||
+              x.type === SemanticType.PUNCTUATION &&
+              x.role === SemanticRole.COMMA;
         })) {
-      node.role = SemanticAttr.Role.INTEGER;
+      node.role = SemanticRole.INTEGER;
       if (content[0] === '0') {
         node.addAnnotation('general', 'basenumber');
       }
       return;
     }
     if (meaning.every(function(x) {
-          return x.type === SemanticAttr.Type.NUMBER &&
-              x.role === SemanticAttr.Role.INTEGER ||
-              x.type === SemanticAttr.Type.PUNCTUATION;
+          return x.type === SemanticType.NUMBER &&
+              x.role === SemanticRole.INTEGER ||
+              x.type === SemanticType.PUNCTUATION;
         })) {
-      node.role = SemanticAttr.Role.FLOAT;
+      node.role = SemanticRole.FLOAT;
       return;
     }
-    node.role = SemanticAttr.Role.OTHERNUMBER;
+    node.role = SemanticRole.OTHERNUMBER;
   }
 
 
@@ -2252,21 +2252,21 @@ export class SemanticProcessor {
    * @param node The semantic tree node.
    */
   private static exprFont_(node: SemanticNode) {
-    if (node.font !== SemanticAttr.Font.UNKNOWN) {
+    if (node.font !== SemanticFont.UNKNOWN) {
       return;
     }
     let content = sre.SemanticUtil.splitUnicode(node.textContent);
     let meaning = content.map(SemanticAttr.lookupMeaning);
     let singleFont = meaning.reduce(function(prev, curr) {
-      if (!prev || !curr.font || curr.font === SemanticAttr.Font.UNKNOWN ||
+      if (!prev || !curr.font || curr.font === SemanticFont.UNKNOWN ||
           curr.font === prev) {
         return prev;
       }
-      if (prev === SemanticAttr.Font.UNKNOWN) {
+      if (prev === SemanticFont.UNKNOWN) {
         return curr.font;
       }
       return null;
-    }, SemanticAttr.Font.UNKNOWN);
+    }, SemanticFont.UNKNOWN);
     if (singleFont) {
       node.font = singleFont;
     }
@@ -2285,14 +2285,14 @@ export class SemanticProcessor {
       denom: SemanticNode, enume: SemanticNode, linethickness: string,
       bevelled: boolean): SemanticNode {
     // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
-    //     sre.SemanticAttr.Type.MULTILINE, [child0, child1], []);
+    //     SemanticType.MULTILINE, [child0, child1], []);
     if (!bevelled && sre.SemanticUtil.isZeroLength(linethickness)) {
       let child0 = SemanticProcessor.getInstance().factory_.makeBranchNode(
-          SemanticAttr.Type.LINE, [denom], []);
+          SemanticType.LINE, [denom], []);
       let child1 = SemanticProcessor.getInstance().factory_.makeBranchNode(
-          SemanticAttr.Type.LINE, [enume], []);
+          SemanticType.LINE, [enume], []);
       let node = SemanticProcessor.getInstance().factory_.makeBranchNode(
-          SemanticAttr.Type.MULTILINE, [child0, child1], []);
+          SemanticType.MULTILINE, [child0, child1], []);
       SemanticProcessor.binomialForm_(node);
       SemanticProcessor.classifyMultiline(node);
       return node;
@@ -2315,15 +2315,15 @@ export class SemanticProcessor {
   private fractionNode_(denom: SemanticNode, enume: SemanticNode):
       SemanticNode {
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
-        SemanticAttr.Type.FRACTION, [denom, enume], []);
+        SemanticType.FRACTION, [denom, enume], []);
     newNode.role = newNode.childNodes.every(function(x) {
       return SemanticPred.isAttribute('type', 'NUMBER')(x) &&
           SemanticPred.isAttribute('role', 'INTEGER')(x);
     }) ?
-        SemanticAttr.Role.VULGAR :
+        SemanticRole.VULGAR :
         newNode.childNodes.every(SemanticPred.isPureUnit) ?
-        SemanticAttr.Role.UNIT :
-        SemanticAttr.Role.DIVISION;
+        SemanticRole.UNIT :
+        SemanticRole.DIVISION;
     return SemanticHeuristics.run('propagateSimpleFunction', newNode);
   }
 
@@ -2341,17 +2341,17 @@ export class SemanticProcessor {
       base: SemanticNode, lsub: SemanticNode[], lsup: SemanticNode[],
       rsub: SemanticNode[], rsup: SemanticNode[]): SemanticNode {
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
-        SemanticAttr.Type.TENSOR,
+        SemanticType.TENSOR,
         [
           base,
           SemanticProcessor.getInstance().scriptNode_(
-              lsub, SemanticAttr.Role.LEFTSUB),
+              lsub, SemanticRole.LEFTSUB),
           SemanticProcessor.getInstance().scriptNode_(
-              lsup, SemanticAttr.Role.LEFTSUPER),
+              lsup, SemanticRole.LEFTSUPER),
           SemanticProcessor.getInstance().scriptNode_(
-              rsub, SemanticAttr.Role.RIGHTSUB),
+              rsub, SemanticRole.RIGHTSUB),
           SemanticProcessor.getInstance().scriptNode_(
-              rsup, SemanticAttr.Role.RIGHTSUPER)
+              rsup, SemanticRole.RIGHTSUPER)
         ],
         []);
     newNode.role = base.role;
@@ -2382,11 +2382,11 @@ export class SemanticProcessor {
     let mmlchild = [base];
     if (nonEmptySub) {
       mmlchild.push(SemanticProcessor.getInstance().scriptNode_(
-          sub, SemanticAttr.Role.RIGHTSUB, true));
+          sub, SemanticRole.RIGHTSUB, true));
     }
     if (nonEmptySup) {
       mmlchild.push(SemanticProcessor.getInstance().scriptNode_(
-          sup, SemanticAttr.Role.RIGHTSUPER, true));
+          sup, SemanticRole.RIGHTSUPER, true));
     }
     return SemanticProcessor.getInstance().limitNode(mmlTag, mmlchild);
   }
@@ -2403,7 +2403,7 @@ export class SemanticProcessor {
    * @return The semantic tensor node.
    */
   private scriptNode_(
-      nodes: SemanticNode[], role: SemanticAttr.Role,
+      nodes: SemanticNode[], role: SemanticRole,
       opt_noSingle?: boolean): SemanticNode {
     switch (nodes.length) {
       case 0:
@@ -2552,7 +2552,7 @@ export class SemanticProcessor {
       return;
     }
     let firstRole = line.childNodes[0].role;
-    if (firstRole !== SemanticAttr.Role.UNKNOWN &&
+    if (firstRole !== SemanticRole.UNKNOWN &&
         multiline.childNodes.every(function(x) {
           let cell = x.childNodes[0];
           return !cell ||
@@ -2609,7 +2609,7 @@ export class SemanticProcessor {
         columns.length === 2 &&
             (SemanticProcessor.testColumns_(columns, 1, test2) ||
              SemanticProcessor.testColumns_(columns, 0, test3))) {
-      table.role = SemanticAttr.Role[relation];
+      table.role = SemanticRole[relation];
       return true;
     }
     return false;
@@ -2693,9 +2693,9 @@ export class SemanticProcessor {
    * @param font The font name.
    * @return The clean name.
    */
-  font(font: string): SemanticAttr.Font {
+  font(font: string): SemanticFont {
     let mathjaxFont = SemanticProcessor.MATHJAX_FONTS[font];
-    return mathjaxFont ? mathjaxFont : (font as SemanticAttr.Font);
+    return mathjaxFont ? mathjaxFont : (font as SemanticFont);
   }
 
 
@@ -2739,16 +2739,16 @@ export class SemanticProcessor {
       let cleaned = this.cleanInference(node.childNodes);
       let axiom = cleaned.length ?
           this.factory_.makeBranchNode(
-              SemanticAttr.Type.INFERENCE, parse(cleaned), []) :
+              SemanticType.INFERENCE, parse(cleaned), []) :
           this.factory_.makeEmptyNode();
-      axiom.role = SemanticAttr.Role.AXIOM;
+      axiom.role = SemanticRole.AXIOM;
       axiom.mathmlTree = node;
       return axiom;
     }
     let inference = this.inference(node, semantics, parse);
     if (semantics['proof']) {
-      inference.role = SemanticAttr.Role.PROOF;
-      inference.childNodes[0].role = SemanticAttr.Role.FINAL;
+      inference.role = SemanticRole.PROOF;
+      inference.childNodes[0].role = SemanticRole.FINAL;
     }
     return inference;
   }
@@ -2768,7 +2768,7 @@ export class SemanticProcessor {
     if (semantics['inferenceRule']) {
       let formulas = this.getFormulas(node, [], parse);
       let inference = this.factory_.makeBranchNode(
-          SemanticAttr.Type.INFERENCE, [formulas.conclusion, formulas.premises],
+          SemanticType.INFERENCE, [formulas.conclusion, formulas.premises],
           []);
       // Setting role
       return inference;
@@ -2778,15 +2778,15 @@ export class SemanticProcessor {
     let content = [];
     if (label === 'left' || label === 'both') {
       content.push(
-          this.getLabel(node, children, parse, SemanticAttr.Role.LEFT));
+          this.getLabel(node, children, parse, SemanticRole.LEFT));
     }
     if (label === 'right' || label === 'both') {
       content.push(
-          this.getLabel(node, children, parse, SemanticAttr.Role.RIGHT));
+          this.getLabel(node, children, parse, SemanticRole.RIGHT));
     }
     let formulas = this.getFormulas(node, children, parse);
     let inference = this.factory_.makeBranchNode(
-        SemanticAttr.Type.INFERENCE, [formulas.conclusion, formulas.premises],
+        SemanticType.INFERENCE, [formulas.conclusion, formulas.premises],
         content);
     // Setting role
     inference.mathmlTree = node;
@@ -2808,9 +2808,9 @@ export class SemanticProcessor {
       parse: (p1: Element[]) => SemanticNode[], side: string): SemanticNode {
     let label = this.findNestedRow(children, 'prooflabel', side);
     let sem = this.factory_.makeBranchNode(
-        SemanticAttr.Type.RULELABEL,
+        SemanticType.RULELABEL,
         parse(sre.DomUtil.toArray(label.childNodes)), []);
-    sem.role = (side as SemanticAttr.Role);
+    sem.role = (side as SemanticRole);
     sem.mathmlTree = label;
     return sem;
   }
@@ -2848,10 +2848,10 @@ export class SemanticProcessor {
     let conclusion =
         parse(sre.DomUtil.toArray(concRow.childNodes[0].childNodes))[0];
     let prem =
-        this.factory_.makeBranchNode(SemanticAttr.Type.PREMISES, premises, []);
+        this.factory_.makeBranchNode(SemanticType.PREMISES, premises, []);
     prem.mathmlTree = (premTable as Element);
     let conc = this.factory_.makeBranchNode(
-        SemanticAttr.Type.CONCLUSION, [conclusion], []);
+        SemanticType.CONCLUSION, [conclusion], []);
     conc.mathmlTree = (concRow.childNodes[0].childNodes[0] as Element);
     return {conclusion: conc, premises: prem};
   }
@@ -2985,36 +2985,36 @@ export class SemanticProcessor {
    * @return The node resulting from applying the heuristic.
    */
   operatorNode(node: SemanticNode): SemanticNode {
-    if (node.type === SemanticAttr.Type.UNKNOWN) {
-      node.type = SemanticAttr.Type.OPERATOR;
+    if (node.type === SemanticType.UNKNOWN) {
+      node.type = SemanticType.OPERATOR;
     }
     return SemanticHeuristics.run('multioperator', node);
   }
 }
 
 goog.addSingletonGetter(SemanticProcessor);
-SemanticProcessor.FENCE_TO_PUNCT_[SemanticAttr.Role.NEUTRAL] =
-    SemanticAttr.Role.VBAR;
-SemanticProcessor.FENCE_TO_PUNCT_[SemanticAttr.Role.OPEN] =
-    SemanticAttr.Role.OPENFENCE;
-SemanticProcessor.FENCE_TO_PUNCT_[SemanticAttr.Role.CLOSE] =
-    SemanticAttr.Role.CLOSEFENCE;
+SemanticProcessor.FENCE_TO_PUNCT_[SemanticRole.NEUTRAL] =
+    SemanticRole.VBAR;
+SemanticProcessor.FENCE_TO_PUNCT_[SemanticRole.OPEN] =
+    SemanticRole.OPENFENCE;
+SemanticProcessor.FENCE_TO_PUNCT_[SemanticRole.CLOSE] =
+    SemanticRole.CLOSEFENCE;
 // TODO (sorge): Intervals after the Bra-Ket heuristic.
-SemanticProcessor.CLASSIFY_FUNCTION_[SemanticAttr.Role.INTEGRAL] = 'integral';
-SemanticProcessor.CLASSIFY_FUNCTION_[SemanticAttr.Role.SUM] = 'bigop';
-SemanticProcessor.CLASSIFY_FUNCTION_[SemanticAttr.Role.PREFIXFUNC] = 'prefix';
-SemanticProcessor.CLASSIFY_FUNCTION_[SemanticAttr.Role.LIMFUNC] = 'prefix';
-SemanticProcessor.CLASSIFY_FUNCTION_[SemanticAttr.Role.SIMPLEFUNC] = 'prefix';
-SemanticProcessor.CLASSIFY_FUNCTION_[SemanticAttr.Role.COMPFUNC] = 'prefix';
+SemanticProcessor.CLASSIFY_FUNCTION_[SemanticRole.INTEGRAL] = 'integral';
+SemanticProcessor.CLASSIFY_FUNCTION_[SemanticRole.SUM] = 'bigop';
+SemanticProcessor.CLASSIFY_FUNCTION_[SemanticRole.PREFIXFUNC] = 'prefix';
+SemanticProcessor.CLASSIFY_FUNCTION_[SemanticRole.LIMFUNC] = 'prefix';
+SemanticProcessor.CLASSIFY_FUNCTION_[SemanticRole.SIMPLEFUNC] = 'prefix';
+SemanticProcessor.CLASSIFY_FUNCTION_[SemanticRole.COMPFUNC] = 'prefix';
 /**
  * Maps mathjax font variants to semantic font names.
  */
 SemanticProcessor.MATHJAX_FONTS = {
-  '-tex-caligraphic': SemanticAttr.Font.CALIGRAPHIC,
-  '-tex-caligraphic-bold': SemanticAttr.Font.CALIGRAPHICBOLD,
-  '-tex-calligraphic': SemanticAttr.Font.CALIGRAPHIC,
-  '-tex-calligraphic-bold': SemanticAttr.Font.CALIGRAPHICBOLD,
-  '-tex-oldstyle': SemanticAttr.Font.OLDSTYLE,
-  '-tex-oldstyle-bold': SemanticAttr.Font.OLDSTYLEBOLD,
-  '-tex-mathit': SemanticAttr.Font.ITALIC
+  '-tex-caligraphic': SemanticFont.CALIGRAPHIC,
+  '-tex-caligraphic-bold': SemanticFont.CALIGRAPHICBOLD,
+  '-tex-calligraphic': SemanticFont.CALIGRAPHIC,
+  '-tex-calligraphic-bold': SemanticFont.CALIGRAPHICBOLD,
+  '-tex-oldstyle': SemanticFont.OLDSTYLE,
+  '-tex-oldstyle-bold': SemanticFont.OLDSTYLEBOLD,
+  '-tex-mathit': SemanticFont.ITALIC
 };

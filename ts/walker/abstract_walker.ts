@@ -82,7 +82,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The list of focus elements.
    */
   public abstract combineContentChildren(
-    type: SemanticAttr.Type, role: SemanticAttr.Role,
+    type: SemanticType, role: SemanticRole,
     content: string[], children: string[]): T[];
   
   id: any;
@@ -627,7 +627,7 @@ export abstract class AbstractWalker<T> implements Walker {
       let type = WalkerUtil.getAttribute(dnode, Attribute.TYPE);
       let role = WalkerUtil.getAttribute(dnode, Attribute.ROLE);
       return this.combineContentChildren(
-          (type as SemanticAttr.Type), (role as SemanticAttr.Role), content,
+          (type as SemanticType), (role as SemanticRole), content,
           children);
     }
     let toIds = function(x) {

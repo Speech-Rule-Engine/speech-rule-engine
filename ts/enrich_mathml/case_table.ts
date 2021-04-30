@@ -47,9 +47,9 @@ export class CaseTable extends sre.AbstractEnrichCase {
    * @return True if case is applicable.
    */
   static test(semantic: SemanticNode): boolean {
-    return semantic.type === SemanticAttr.Type.MATRIX ||
-        semantic.type === SemanticAttr.Type.VECTOR ||
-        semantic.type === SemanticAttr.Type.CASES;
+    return semantic.type === SemanticType.MATRIX ||
+        semantic.type === SemanticType.VECTOR ||
+        semantic.type === SemanticType.CASES;
   }
 
 

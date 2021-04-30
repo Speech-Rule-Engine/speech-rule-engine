@@ -45,10 +45,10 @@ export class CaseText extends sre.AbstractEnrichCase {
    * @return True if case is applicable.
    */
   static test(semantic: SemanticNode): boolean {
-    return semantic.type === SemanticAttr.Type.PUNCTUATED &&
-        (semantic.role === SemanticAttr.Role.TEXT ||
+    return semantic.type === SemanticType.PUNCTUATED &&
+        (semantic.role === SemanticRole.TEXT ||
          semantic.contentNodes.every(function(x) {
-           return x.role === SemanticAttr.Role.DUMMY;
+           return x.role === SemanticRole.DUMMY;
          }));
   }
 
