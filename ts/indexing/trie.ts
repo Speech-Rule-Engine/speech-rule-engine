@@ -31,156 +31,17 @@
 import {SpeechRule} from '../rule_engine/speech_rule';
 import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
 import {SpeechRuleStore} from '../rule_engine/speech_rule_store';
-
-import {TrieNode, TrieNodeKind} from './trie_node';
 import {StaticTrieNode} from './abstract_trie_node';
+import {TrieNode, TrieNodeKind} from './trie_node';
 import {getNode} from './trie_node_factory';
-
 
 
 export class Trie {
 
-  root: any;
-
   /**
-   * @param store The store the trie belongs to.
+   *  The root of the trie.
    */
-  constructor(public store: SpeechRuleStore) {
-    this.root = getNode(TrieNodeKind.ROOT, '', this.store.context);
-  }
-
-
-  /**
-   * Inserts a speech rule into the trie.
-   * @param rule The speech rule to add.
-   */
-  addRule(rule: SpeechRule) {
-    let node = this.root;
-    let context = rule.context;
-    let dynamicCstr = rule.dynamicCstr.getValues();
-    for (let i = 0, l = dynamicCstr.length; i < l; i++) {
-      node = this.addNode_(
-          node, dynamicCstr[i], TrieNodeKind.DYNAMIC, context);
-    }
-    node = this.addNode_(
-        node, rule.precondition.query, TrieNodeKind.QUERY, context);
-    let booleans = rule.precondition.constraints;
-    for (let i = 0, l = booleans.length; i < l; i++) {
-      node = this.addNode_(
-          node, booleans[i], TrieNodeKind.BOOLEAN, context);
-    }
-    node.setRule(rule);
-  }
-
-
-  /**
-   * Retrieves node for the given constraint. Adds a new node if necessary.
-   * @param node The current node in the trie.
-   * @param constraint The constraint string.
-   * @param kind The kind of node.
-   * @param context The context of the speech rule to add.
-   * @return The trie node corresponding to the constraint.
-   */
-  private addNode_(
-      node: TrieNode, constraint: string, kind: TrieNodeKind,
-      context: SpeechRuleContext): TrieNode {
-    let nextNode = node.getChild(constraint);
-    if (!nextNode) {
-      nextNode = getNode(kind, constraint, context);
-      node.addChild(nextNode);
-    }
-    return nextNode;
-  }
-
-
-  /**
-   * Retrieves a set of speech rules that are applicable to a given XML node
-   * wrt. to a dynamic constraint.
-   * @param xml An XML node.
-   * @param dynamic A dynamic properties list.
-   * @return The speech rules that can be applied to the
-   *     given node.
-   */
-  lookupRules(xml: Node, dynamic: string[][]): SpeechRule[] {
-    let nodes = [this.root];
-    let rules = [];
-    // Algorithm:
-    // Pop node, get children,
-    // add child if constraint is correct.
-    // add rule if child has a rule.
-    // First deal with dynamic constraints.
-    while (dynamic.length) {
-      let dynamicSet = dynamic.shift();
-      let newNodes: TrieNode[] = [];
-      while (nodes.length) {
-        let node = nodes.shift();
-        let children = node.getChildren();
-        children.forEach((child: TrieNode) => {
-          if (child.getKind() !== TrieNodeKind.DYNAMIC ||
-              dynamicSet.indexOf(child.getConstraint()) !== -1) {
-            newNodes.push(child);
-          }
-        });
-      }
-      nodes = newNodes.slice();
-    }
-    // Then we deal with static constraints, while collecting rules.
-    while (nodes.length) {
-      let node = nodes.shift();
-      if (node.getRule) {
-        let rule = node.getRule();
-        if (rule) {
-          rules.push(rule);
-        }
-      }
-      let children = node.findChildren(xml);
-      nodes = nodes.concat(children);
-    }
-    return rules;
-  }
-
-
-  /**
-   * Checks if the trie contains sub-trie for the given constraint list.
-   * @param cstrs The list of constraints.
-   * @return True if the trie contains elements for cstrs.
-   */
-  hasSubtrie(cstrs: string[]): boolean {
-    let subtrie = this.root;
-    for (let i = 0, l = cstrs.length; i < l; i++) {
-      let cstr = cstrs[i];
-      subtrie = subtrie.getChild(cstr);
-      if (!subtrie) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-
-  /**
-   * @override
-   */
-  toString() {
-    return Trie.printWithDepth_(this.root, 0, '');
-  }
-
-
-  /**
-   * @return Set of speech rules in the trie.
-   */
-  collectRules(): SpeechRule[] {
-    return Trie.collectRules_(this.root);
-  }
-
-
-  /**
-   * @return The order of the trie.
-   */
-  order(): number {
-    return Trie.order_(this.root);
-  }
-
+  public root: TrieNode;
 
   /**
    * Prints tree to a string.
@@ -239,12 +100,149 @@ export class Trie {
 
 
   /**
+   * @param store The store the trie belongs to.
+   */
+  constructor(public store: SpeechRuleStore) {
+    this.root = getNode(TrieNodeKind.ROOT, '', this.store.context);
+  }
+
+
+  /**
+   * Inserts a speech rule into the trie.
+   * @param rule The speech rule to add.
+   */
+  public addRule(rule: SpeechRule) {
+    let node = this.root;
+    let context = rule.context;
+    let dynamicCstr = rule.dynamicCstr.getValues();
+    for (let i = 0, l = dynamicCstr.length; i < l; i++) {
+      node = this.addNode_(
+          node, dynamicCstr[i], TrieNodeKind.DYNAMIC, context);
+    }
+    node = this.addNode_(
+        node, rule.precondition.query, TrieNodeKind.QUERY, context);
+    let booleans = rule.precondition.constraints;
+    for (let i = 0, l = booleans.length; i < l; i++) {
+      node = this.addNode_(
+          node, booleans[i], TrieNodeKind.BOOLEAN, context);
+    }
+    (node as StaticTrieNode).setRule(rule);
+  }
+
+
+  /**
+   * Retrieves a set of speech rules that are applicable to a given XML node
+   * wrt. to a dynamic constraint.
+   * @param xml An XML node.
+   * @param dynamic A dynamic properties list.
+   * @return The speech rules that can be applied to the
+   *     given node.
+   */
+  public lookupRules(xml: Node, dynamic: string[][]): SpeechRule[] {
+    let nodes = [this.root];
+    let rules = [];
+    // Algorithm:
+    // Pop node, get children,
+    // add child if constraint is correct.
+    // add rule if child has a rule.
+    // First deal with dynamic constraints.
+    while (dynamic.length) {
+      let dynamicSet = dynamic.shift();
+      let newNodes: TrieNode[] = [];
+      while (nodes.length) {
+        let node = nodes.shift();
+        let children = node.getChildren();
+        children.forEach((child: TrieNode) => {
+          if (child.getKind() !== TrieNodeKind.DYNAMIC ||
+              dynamicSet.indexOf(child.getConstraint()) !== -1) {
+            newNodes.push(child);
+          }
+        });
+      }
+      nodes = newNodes.slice();
+    }
+    // Then we deal with static constraints, while collecting rules.
+    while (nodes.length) {
+      let node = nodes.shift() as StaticTrieNode;
+      if (node.getRule) {
+        let rule = node.getRule();
+        if (rule) {
+          rules.push(rule);
+        }
+      }
+      let children = node.findChildren(xml);
+      nodes = nodes.concat(children);
+    }
+    return rules;
+  }
+
+
+  /**
+   * Checks if the trie contains sub-trie for the given constraint list.
+   * @param cstrs The list of constraints.
+   * @return True if the trie contains elements for cstrs.
+   */
+  public hasSubtrie(cstrs: string[]): boolean {
+    let subtrie = this.root;
+    for (let i = 0, l = cstrs.length; i < l; i++) {
+      let cstr = cstrs[i];
+      subtrie = subtrie.getChild(cstr);
+      if (!subtrie) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+
+  /**
+   * @override
+   */
+  public toString() {
+    return Trie.printWithDepth_(this.root, 0, '');
+  }
+
+
+  /**
+   * @return Set of speech rules in the trie.
+   */
+  public collectRules(): SpeechRule[] {
+    return Trie.collectRules_(this.root);
+  }
+
+
+  /**
+   * @return The order of the trie.
+   */
+  public order(): number {
+    return Trie.order_(this.root);
+  }
+
+
+  /**
    * Collates information on dynamic constraint values of this trie.
    * @param opt_info Initial dynamic constraint information.
    * @return The collated information.
    */
   public enumerate(opt_info?: Object): Object {
     return this.enumerate_(this.root, opt_info);
+  }
+
+
+  /**
+   * Retrieves a node for a given sequence of constraints.
+   *
+   * @param constraint A list of constraints.
+   * @return The speech rule or null.
+   * What if multiple rules exist?
+   */
+  public byConstraint(constraint: string[]): TrieNode {
+    let node = this.root;
+    while (constraint.length && node) {
+      let cstr = constraint.shift();
+      node = node.getChild(cstr);
+    }
+    return node || null;
   }
 
 
@@ -268,21 +266,23 @@ export class Trie {
     return info;
   }
 
-
   /**
-   * Retrieves a node for a given sequence of constraints.
-   *
-   * @param constraint A list of constraints.
-   * @return The speech rule or null.
-   * What if multiple rules exist?
+   * Retrieves node for the given constraint. Adds a new node if necessary.
+   * @param node The current node in the trie.
+   * @param constraint The constraint string.
+   * @param kind The kind of node.
+   * @param context The context of the speech rule to add.
+   * @return The trie node corresponding to the constraint.
    */
-  public byConstraint(constraint: string[]): TrieNode {
-    let node = this.root;
-    while (constraint.length && node) {
-      let cstr = constraint.shift();
-      node = node.getChild(cstr);
+  private addNode_(
+      node: TrieNode, constraint: string, kind: TrieNodeKind,
+      context: SpeechRuleContext): TrieNode {
+    let nextNode = node.getChild(constraint);
+    if (!nextNode) {
+      nextNode = getNode(kind, constraint, context);
+      node.addChild(nextNode);
     }
-    return node || null;
+    return nextNode;
   }
-  
+
 }
