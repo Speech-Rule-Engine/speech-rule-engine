@@ -29,8 +29,12 @@ import * as SpeechGeneratorUtil from './speech_generator_util';
 
 
 
-export class AbstractSpeechGenerator implements SpeechGenerator {
-  getSpeech: any;
+export abstract class AbstractSpeechGenerator implements SpeechGenerator {
+
+  /**
+   * @override
+   */
+  public abstract getSpeech(node: Node, xml: Element): string;
 
 
   private rebuilt_: RebuildStree = null;
@@ -41,7 +45,7 @@ export class AbstractSpeechGenerator implements SpeechGenerator {
 
   modality: Attribute;
   constructor() {
-    this.modality = sre.EnrichMathml.addPrefix('speech');
+    this.modality = EnrichMathml.addPrefix('speech');
   }
 
 
@@ -97,16 +101,11 @@ export class AbstractSpeechGenerator implements SpeechGenerator {
    * @param xml The base xml element belonging to node.
    * @return The generated speech string.
    */
-  generateSpeech(node: Node, xml: Element): string {
+  generateSpeech(_node: Node, xml: Element): string {
     if (!this.rebuilt_) {
       this.rebuilt_ = new RebuildStree(xml);
     }
-    sre.System.getInstance().setupEngine(this.options_);
+    System.getInstance().setupEngine(this.options_);
     return SpeechGeneratorUtil.computeMarkup(this.getRebuilt().xml);
   }
 }
-
-/**
- * @override
- */
-AbstractSpeechGenerator.prototype.getSpeech = goog.abstractMethod;

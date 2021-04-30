@@ -20,10 +20,8 @@
  */
 
 
-import * as DynamicCstrExports from '../rule_engine/dynamic_cstr';
-import {DynamicCstr} from '../rule_engine/dynamic_cstr';
+import {AxisMap} from '../rule_engine/dynamic_cstr';
 import {RebuildStree} from '../walker/rebuild_stree';
-
 
 
 export interface SpeechGenerator {
@@ -54,13 +52,13 @@ export interface SpeechGenerator {
    * Sets dynamic constraint options for the speech engine.
    * @param options The dynamic constraint.
    */
-  setOptions(options: DynamicCstrExports.Map): void;
+  setOptions(options: AxisMap): void;
 
 
   /**
    * @return Dynamic constraint options of the generator.
    */
-  getOptions(): DynamicCstrExports.Map;
+  getOptions(): AxisMap;
 
 
   /**

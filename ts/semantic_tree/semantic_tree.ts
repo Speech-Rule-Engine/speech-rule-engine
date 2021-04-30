@@ -123,7 +123,7 @@ export class SemanticTree {
    * @param opt_brief If set attributes are omitted.
    * @return The XML representation of the tree.
    */
-  xml(opt_brief?: boolean): Node {
+  xml(opt_brief?: boolean): Element {
     let xml = DomUtil.parseInput('<stree></stree>');
     let xmlRoot = this.root.xml(xml.ownerDocument, opt_brief);
     xml.appendChild(xmlRoot);

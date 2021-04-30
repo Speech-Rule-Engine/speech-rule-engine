@@ -50,7 +50,7 @@ export {Attr};
  * @param mml The MathML node.
  * @return Semantic tree for input node as XML node.
  */
-export function xmlTree(mml: Element): Node {
+export function xmlTree(mml: Element): Element {
   return getTree(mml).xml();
 }
 
