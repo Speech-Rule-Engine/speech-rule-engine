@@ -21,37 +21,33 @@
  */
 
 
-import * as AudioUtil from './audio_util';
-import {MarkupRenderer} from './markup_renderer';
-import {AuditoryDescription} from './auditory_description';
+import {EngineConst} from '../common/engine';
 import * as EventUtil from '../common/event_util';
-
+import * as AudioUtil from './audio_util';
+import {AuditoryDescription} from './auditory_description';
+import {MarkupRenderer} from './markup_renderer';
 
 
 export class AcssRenderer extends MarkupRenderer {
-  constructor() {
-    super();
-  }
-
 
   /**
    * @override
    */
-  markup(descrs: AuditoryDescription[]) {
+  public markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
     this.setScaleFunction(-2, 2, 0, 10, 0);
     let markup = AudioUtil.personalityMarkup(descrs);
     let result = [];
-    let currentPers = {open: []};
+    let currentPers: AudioUtil.Tags = {open: []};
     let pause = null;
-    let string = false;
+    let isString = false;
     for (let i = 0, descr; descr = markup[i]; i++) {
       if (AudioUtil.isMarkupElement(descr)) {
         AudioUtil.mergeMarkup(currentPers, descr);
         continue;
       }
       if (AudioUtil.isPauseElement(descr)) {
-        if (string) {
+        if (isString) {
           // TODO: (MS 2.3) Sort out this type and the merge function!
           pause =
               (AudioUtil.mergePause(
@@ -63,7 +59,7 @@ export class AcssRenderer extends MarkupRenderer {
       let str = '"' + this.merge(descr.span) + '"';
       // var str = '"' + descr.span.join(this.getSeparator()) + '"';
       // var str = '"' + descr.string.join(this.getSeparator()) + '"';
-      string = true;
+      isString = true;
       if (pause) {
         result.push(this.pause(pause));
         pause = null;
@@ -78,41 +74,23 @@ export class AcssRenderer extends MarkupRenderer {
   /**
    * @override
    */
-  error(key: number) {
+  public error(key: number) {
     return '(error "' + EventUtil.Move.get(key) + '")';
-  }
-
-
-  /**
-   * Transforms a prosody element into an S-expression.
-   * @param pros The prosody element.
-   * @return The S-expression.
-   */
-  private prosody_(pros: {[key: string]: number}): string {
-    let keys = pros.open;
-    let result = [];
-    for (let i = 0, key; key = keys[i]; i++) {
-      result.push(this.prosodyElement(key, pros[key]));
-    }
-    return result.join(' ');
   }
 
 
   /**
    * @override
    */
-  prosodyElement(key, value) {
+  public prosodyElement(key: EngineConst.personalityProps, value: number) {
     value = this.applyScaleFunction(value);
     switch (key) {
-      case sre.Engine.personalityProps.RATE:
+      case EngineConst.personalityProps.RATE:
         return '(richness . ' + value + ')';
-        break;
-      case sre.Engine.personalityProps.PITCH:
+      case EngineConst.personalityProps.PITCH:
         return '(average-pitch . ' + value + ')';
-        break;
-      case sre.Engine.personalityProps.VOLUME:
+      case EngineConst.personalityProps.VOLUME:
         return '(stress . ' + value + ')';
-        break;
     }
     return '(value . ' + value + ')';
   }
@@ -121,12 +99,28 @@ export class AcssRenderer extends MarkupRenderer {
   /**
    * @override
    */
-  pause(pause) {
+  public pause(pause: AudioUtil.Pause) {
     return '(pause . ' +
-        this.pauseValue(pause[sre.Engine.personalityProps.PAUSE]) + ')';
+        this.pauseValue(
+        pause[EngineConst.personalityProps.PAUSE] as string) + ')';
   }
+
+
+  /**
+   * Transforms a prosody element into an S-expression.
+   * @param pros The prosody element.
+   * @return The S-expression.
+   */
+  private prosody_(pros: AudioUtil.Tags): string {
+    let keys: EngineConst.personalityProps[] = pros.open;
+    let result = [];
+    for (let i = 0, key; key = keys[i]; i++) {
+      result.push(this.prosodyElement(key, pros[key]));
+    }
+    return result.join(' ');
+  }
+
 }
-goog.inherits(AcssRenderer, MarkupRenderer);
 
 
 /**

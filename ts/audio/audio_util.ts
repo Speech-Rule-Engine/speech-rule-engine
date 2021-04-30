@@ -19,10 +19,26 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import {setdifference} from '../common/base_util';
+import {EngineConst} from '../common/engine';
 import {AuditoryDescription} from './auditory_description';
-
 import {Span} from './span';
 
+
+export interface Tags {
+  open?: EngineConst.personalityProps[];
+  close?: EngineConst.personalityProps[];
+  [personality: string]: any;
+}
+
+export type PauseValue = number | string;
+
+export interface Pause {
+  pause: PauseValue;
+  [personality: string]: any;
+}
+
+export type Markup = Pause | Tags;
 
 // TODO: Refactor into dedicated personality/markup data structure.
 /**
@@ -34,9 +50,8 @@ import {Span} from './span';
  *     pause values.
  */
 export function mergePause(
-    oldPause: {pause: number|string}|null, newPause: {pause: number|string},
-    opt_merge?: (p1: number|string, p2: number|string) =>
-        number | string): {pause: number|string} {
+    oldPause: Pause|null, newPause: Pause,
+    opt_merge?: (p1: PauseValue, p2: PauseValue) => PauseValue): Pause {
   if (!oldPause) {
     return newPause;
   }
@@ -52,12 +67,12 @@ export function mergePause(
  * @return A personality annotation with the merged pause
  *     values.
  */
-export function mergePause_(
-    oldPause: number|string, newPause: number|string,
-    opt_merge?: (p1: number|string, p2: number|string) =>
-        number | string): number|string {
+function mergePause_(
+    oldPause: PauseValue, newPause: PauseValue,
+    opt_merge?: (p1: PauseValue, p2: PauseValue) => PauseValue): PauseValue {
   let merge = opt_merge || function(x, y) {
-    if (typeof x === 'number' || typeof y === 'number') {
+    // TODO (TS): Changes this from || to &&.
+    if (typeof x === 'number' && typeof y === 'number') {
       return x + y;
     }
     if (typeof x === 'number') {
@@ -77,16 +92,12 @@ export function mergePause_(
  * @param oldPers Old personality markup.
  * @param newPers New personality markup.
  */
-export function mergeMarkup(oldPers: Object, newPers: Object) {
+export function mergeMarkup(oldPers: Tags, newPers: Tags) {
   delete oldPers.open;
-  newPers.close.forEach(function(x) {
-    delete oldPers[x];
-  });
-  newPers.open.forEach(function(x) {
-    oldPers[x] = newPers[x];
-  });
+  newPers.close.forEach(x => delete oldPers[x]);
+  newPers.open.forEach(x => oldPers[x] = newPers[x]);
   let keys = Object.keys(oldPers);
-  oldPers.open = keys;
+  oldPers.open = keys as EngineConst.personalityProps[];
 }
 
 
@@ -99,12 +110,12 @@ export function mergeMarkup(oldPers: Object, newPers: Object) {
  * @return The sorted array.
  */
 export function sortClose(
-    open: Engine.personalityProps[],
-    descrs: AuditoryDescription[]): Engine.personalityProps[] {
+    open: EngineConst.personalityProps[],
+    descrs: Tags[]): EngineConst.personalityProps[] {
   if (open.length <= 1) {
     return open;
   }
-  let result = [];
+  let result: EngineConst.personalityProps[] = [];
   for (let i = 0, descr; descr = descrs[i], open.length; i++) {
     if (!descr.close || !descr.close.length) {
       continue;
@@ -121,10 +132,17 @@ export function sortClose(
 }
 
 
+// The procedure transforms lists of descriptions into the internal format of
+// markup elements.
+/**
+ * The range of personality annotations in the current list of descriptions.
+ */
+let PersonalityRanges_: {[key: string]: number[]} = {};
+
 /**
  * The range of personality annotations.
  */
-export const LastOpen_: Engine.personalityProps[][] = [];
+let LastOpen_: EngineConst.personalityProps[][] = [];
 
 
 /**
@@ -132,22 +150,22 @@ export const LastOpen_: Engine.personalityProps[][] = [];
  * @param descrs The list of descriptions.
  * @return Markup list.
  */
-export function personalityMarkup(descrs: AuditoryDescription[]): Object[] {
+export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   PersonalityRanges_ = {};
   LastOpen_ = [];
-  let result = [];
+  let result: Markup[] = [];
   let currentPers = {};
   for (let i = 0, descr; descr = descrs[i]; i++) {
-    let pause = null;
+    let pause: Pause = null;
     let span = descr.descriptionSpan();
-    let pers = descr.personality;
-    let join = pers[sre.Engine.personalityProps.JOIN];
-    delete pers[sre.Engine.personalityProps.JOIN];
-    if (typeof pers[sre.Engine.personalityProps.PAUSE] !== 'undefined') {
-      pause = {};
-      pause[sre.Engine.personalityProps.PAUSE] =
-          (pers[sre.Engine.personalityProps.PAUSE] as number);
-      delete pers[sre.Engine.personalityProps.PAUSE];
+    let pers: Markup = descr.personality;
+    let join = pers[EngineConst.personalityProps.JOIN];
+    delete pers[EngineConst.personalityProps.JOIN];
+    if (typeof pers[EngineConst.personalityProps.PAUSE] !== 'undefined') {
+      pause[EngineConst.personalityProps.PAUSE] =
+        pers[EngineConst.personalityProps.PAUSE];
+      // TODO (TS): Look at that once more!
+      delete pers[EngineConst.personalityProps.PAUSE];
     }
     let diff = personalityDiff_(pers, currentPers);
     // TODO: Replace last parameter by global parameter, depending on format.
@@ -166,7 +184,7 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Object[] {
  * @param markup The markup list.
  * @param element A single markup element.
  */
-export function appendElement_(markup: Object[], element: Object) {
+function appendElement_(markup: Markup[], element: Markup) {
   let last = markup[markup.length - 1];
   if (!last) {
     markup.push(element);
@@ -197,8 +215,8 @@ export function appendElement_(markup: Object[], element: Object) {
  * @param markup Markup list.
  * @return Simplified markup list.
  */
-export function simplifyMarkup_(markup: Object[]): Object[] {
-  let lastPers = {};
+function simplifyMarkup_(markup: Markup[]): Markup[] {
+  let lastPers: Markup = {};
   let result = [];
   for (let i = 0, element; element = markup[i]; i++) {
     if (!isMarkupElement(element)) {
@@ -243,7 +261,7 @@ export function simplifyMarkup_(markup: Object[]): Object[] {
  * @param from Source element.
  * @param to Target element.
  */
-export function copyValues_(from: Object, to: Object) {
+function copyValues_(from: Markup, to: Markup) {
   if (from['rate']) {
     to['rate'] = from['rate'];
   }
@@ -260,12 +278,12 @@ export function copyValues_(from: Object, to: Object) {
  * Computes the final markup elements, if necessary.
  * @return Markup list.
  */
-export function finaliseMarkup_(): Object[] {
+function finaliseMarkup_(): Markup[] {
   let final = [];
   for (let i = LastOpen_.length - 1; i >= 0; i--) {
     let pers = LastOpen_[i];
     if (pers.length) {
-      let markup = {open: [], close: []};
+      let markup: Markup = {open: [], close: []};
       for (let j = 0; j < pers.length; j++) {
         let per = pers[j];
         markup.close.push(per);
@@ -283,7 +301,7 @@ export function finaliseMarkup_(): Object[] {
  * @param element An element of the markup list.
  * @return True if this is a pause element.
  */
-export function isMarkupElement(element: Object): boolean {
+export function isMarkupElement(element: Markup): boolean {
   return typeof element === 'object' && element.open;
 }
 
@@ -293,9 +311,9 @@ export function isMarkupElement(element: Object): boolean {
  * @param element An element of the markup list.
  * @return True if this is a pause element.
  */
-export function isPauseElement(element: Object): boolean {
+export function isPauseElement(element: Markup): boolean {
   return typeof element === 'object' && Object.keys(element).length === 1 &&
-      Object.keys(element)[0] === sre.Engine.personalityProps.PAUSE;
+      Object.keys(element)[0] === EngineConst.personalityProps.PAUSE;
 }
 
 
@@ -304,7 +322,7 @@ export function isPauseElement(element: Object): boolean {
  * @param element An element of the markup list.
  * @return True if this is a span element.
  */
-export function isSpanElement(element: Object): boolean {
+export function isSpanElement(element: Markup): boolean {
   let keys = Object.keys(element);
   return typeof element === 'object' &&
       (keys.length === 1 && keys[0] === 'span' ||
@@ -318,49 +336,44 @@ export function isSpanElement(element: Object): boolean {
  * Appends content to the current markup list.
  * @param markup The markup list.
  * @param span A content span.
- * @param pers A personality
- *     annotation.
- * @param join An
- *     optional joiner string.
- * @param pause A
- *     pause annotation.
+ * @param pers A personality annotation.
+ * @param join An optional joiner string.
+ * @param pause A pause annotation.
  * @param opt_merge Flag that specifies subsequent pauses are to be
  *     merged.
  */
-export function appendMarkup_(
-    markup: Object[], span: Span,
-    pers: {[key: Engine.personalityProps]: number},
-    join: {sre.Engine.personalityProps.JOIN?: string}|null,
-    pause: {sre.Engine.personalityProps.PAUSE?: number}|null,
-    opt_merge?: boolean) {
-  if (opt_merge) {
+function appendMarkup_(
+    markup: Markup[], span: Span, pers: {[key: string]: number},
+    join: string, pause: Pause, merge: boolean = false) {
+  if (merge) {
     let last = markup[markup.length - 1];
+    let oldJoin;
     if (last) {
-      let oldJoin = last[sre.Engine.personalityProps.JOIN];
+      oldJoin = last[EngineConst.personalityProps.JOIN];
     }
-    if (last && !span.string && pause && isPauseElement(last)) {
-      let pauseProp = sre.Engine.personalityProps.PAUSE;
+    if (last && !span.speech && pause && isPauseElement(last)) {
+      let pauseProp = EngineConst.personalityProps.PAUSE;
       // Merging could be done using max or min or plus.
       last[pauseProp] = mergePause_(last[pauseProp], pause[pauseProp]);
       pause = null;
     }
-    if (last && span.string && Object.keys(pers).length === 0 &&
+    if (last && span.speech && Object.keys(pers).length === 0 &&
         isSpanElement(last)) {
       // TODO: Check that out if this works with spans.
       if (typeof oldJoin !== 'undefined') {
         let lastSpan = last['span'].pop();
         span = new Span(
-            lastSpan.string + oldJoin + span.string, lastSpan.attributes);
+            lastSpan.speech + oldJoin + span.speech, lastSpan.attributes);
       }
       last['span'].push(span);
       span = new Span('', {});
-      last[sre.Engine.personalityProps.JOIN] = join;
+      last[EngineConst.personalityProps.JOIN] = join;
     }
   }
   if (Object.keys(pers).length !== 0) {
     markup.push(pers);
   }
-  if (span.string) {
+  if (span.speech) {
     markup.push({span: [span], join: join});
   }
   if (pause) {
@@ -371,23 +384,18 @@ export function appendMarkup_(
 
 /**
  * Compute the difference of two personality annotations.
- * @param current The current
- *     personality annotation.
- * @param old The previous
- *     personality annotation.
- * @return The difference
- *     between the two annotations.
+ * @param current The current personality annotation.
+ * @param old The previous personality annotation.
+ * @return The difference between the two annotations.
  */
-export function personalityDiff_(
-    current: {[key: Engine.personalityProps]: number},
-    old: {[key: Engine.personalityProps]: number}):
-    {[key: Engine.personalityProps]: number} {
+function personalityDiff_(
+  current: {[key: string]: number}, old: {[key: string]: number}):
+  {[key: string]: number} {
   if (!old) {
     return current;
   }
-  let result = {};
-  for (let key in sre.Engine.personalityProps) {
-    let prop = sre.Engine.personalityProps[key];
+  let result: Markup = {};
+  for (let prop of EngineConst.personalityPropList) {
     let currentValue = current[prop];
     let oldValue = old[prop];
     if (!currentValue && !oldValue ||
@@ -433,8 +441,8 @@ export function personalityDiff_(
     let c = result.close.slice();
     while (c.length > 0) {
       let lo = LastOpen_.pop();
-      let loNew = sre.BaseUtil.setdifference(lo, c);
-      c = sre.BaseUtil.setdifference(c, lo);
+      let loNew = setdifference(lo, c);
+      c = setdifference(c, lo);
       lo = loNew;
       if (c.length === 0) {
         if (lo.length !== 0) {

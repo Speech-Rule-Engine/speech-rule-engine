@@ -19,11 +19,16 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import * as Messages from '../l10n/messages';
+import XpathUtil from '../common/xpath_util';
+import {Engine} from '../common/engine';
+import {Locale} from '../l10n/messages';
 import {Grammar} from '../rule_engine/grammar';
 import * as StoreUtil from '../rule_engine/store_util';
 import {SemanticAnnotator} from '../semantic_tree/semantic_annotator';
+import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
 import {SemanticNode} from '../semantic_tree/semantic_node';
+import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {MathCompoundStore} from '../rule_engine/math_simple_store';
 
 
 
@@ -35,7 +40,7 @@ import {SemanticNode} from '../semantic_tree/semantic_node';
  */
 export function numbersToAlpha(text: string): string {
   return text.match(/\d+/) ?
-      Messages.NUMBERS.numberToWords(parseInt(text, 10)) :
+      Locale.NUMBERS.numberToWords(parseInt(text, 10)) :
       text;
 }
 
@@ -109,19 +114,19 @@ export function isSimpleExpression(node: SemanticNode): boolean {
  * @return True if the node is a simple function.
  */
 export function isSimpleFunction_(node: SemanticNode): boolean {
-  return node.type === sre.SemanticAttr.Type.APPL &&
+  return node.type === SemanticAttr.Type.APPL &&
       (
              // The types are there for distinguishing non-embellished
              // functions.
              // TODO: (MS 2.3) Make this more robust, i.e., make sure the
              // embellished functions are only embellished with simple
              // expressions. node.childNodes[0].type ===
-             // sre.SemanticAttr.Type.FUNCTION &&
-             node.childNodes[0].role === sre.SemanticAttr.Role.PREFIXFUNC ||
-             // node.childNodes[0].type === sre.SemanticAttr.Type.IDENTIFIER &&
-             node.childNodes[0].role === sre.SemanticAttr.Role.SIMPLEFUNC) &&
+             // SemanticAttr.Type.FUNCTION &&
+             node.childNodes[0].role === SemanticAttr.Role.PREFIXFUNC ||
+             // node.childNodes[0].type === SemanticAttr.Type.IDENTIFIER &&
+             node.childNodes[0].role === SemanticAttr.Role.SIMPLEFUNC) &&
       (isSimple_(node.childNodes[1]) ||
-       node.childNodes[1].type === sre.SemanticAttr.Type.FENCED &&
+       node.childNodes[1].type === SemanticAttr.Type.FENCED &&
            isSimple_(node.childNodes[1].childNodes[0]));
 }
 
@@ -134,12 +139,12 @@ export function isSimpleFunction_(node: SemanticNode): boolean {
  * @return True if the node is negated simple expression.
  */
 export function isSimpleNegative_(node: SemanticNode): boolean {
-  return node.type === sre.SemanticAttr.Type.PREFIXOP &&
-      node.role === sre.SemanticAttr.Role.NEGATIVE &&
+  return node.type === SemanticAttr.Type.PREFIXOP &&
+      node.role === SemanticAttr.Role.NEGATIVE &&
       isSimple_(node.childNodes[0]) &&
-      node.childNodes[0].type !== sre.SemanticAttr.Type.PREFIXOP &&
-      node.childNodes[0].type !== sre.SemanticAttr.Type.APPL &&
-      node.childNodes[0].type !== sre.SemanticAttr.Type.PUNCTUATED;
+      node.childNodes[0].type !== SemanticAttr.Type.PREFIXOP &&
+      node.childNodes[0].type !== SemanticAttr.Type.APPL &&
+      node.childNodes[0].type !== SemanticAttr.Type.PUNCTUATED;
 }
 
 
@@ -152,13 +157,13 @@ export function isSimpleNegative_(node: SemanticNode): boolean {
  * @return True if the node is simple degree expression.
  */
 export function isSimpleDegree_(node: SemanticNode): boolean {
-  return node.type === sre.SemanticAttr.Type.PUNCTUATED &&
-      node.role === sre.SemanticAttr.Role.ENDPUNCT &&
+  return node.type === SemanticAttr.Type.PUNCTUATED &&
+      node.role === SemanticAttr.Role.ENDPUNCT &&
       (node.childNodes.length === 2 &&
-       (node.childNodes[1].role === sre.SemanticAttr.Role.DEGREE &&
+       (node.childNodes[1].role === SemanticAttr.Role.DEGREE &&
         (isLetter_(node.childNodes[0]) || isNumber_(node.childNodes[0]) ||
-         node.childNodes[0].type === sre.SemanticAttr.Type.PREFIXOP &&
-             node.childNodes[0].role === sre.SemanticAttr.Role.NEGATIVE &&
+         node.childNodes[0].type === SemanticAttr.Type.PREFIXOP &&
+             node.childNodes[0].role === SemanticAttr.Role.NEGATIVE &&
              (isLetter_(node.childNodes[0].childNodes[0]) ||
               isNumber_(node.childNodes[0].childNodes[0])))));
 }
@@ -175,8 +180,8 @@ export function isSimpleDegree_(node: SemanticNode): boolean {
  */
 export function isSimpleLetters_(node: SemanticNode): boolean {
   return isLetter_(node) ||
-      node.type === sre.SemanticAttr.Type.INFIXOP &&
-      node.role === sre.SemanticAttr.Role.IMPLICIT &&
+      node.type === SemanticAttr.Type.INFIXOP &&
+      node.role === SemanticAttr.Role.IMPLICIT &&
       (node.childNodes.length === 2 &&
            (isLetter_(node.childNodes[0]) ||
             isSimpleNumber_(node.childNodes[0])) &&
@@ -202,11 +207,11 @@ export function isSimple_(node: SemanticNode): boolean {
  * @return True if the node is a single letter from any alphabet.
  */
 export function isLetter_(node: SemanticNode): boolean {
-  return node.type === sre.SemanticAttr.Type.IDENTIFIER &&
-      (node.role === sre.SemanticAttr.Role.LATINLETTER ||
-       node.role === sre.SemanticAttr.Role.GREEKLETTER ||
-       node.role === sre.SemanticAttr.Role.OTHERLETTER ||
-       node.role === sre.SemanticAttr.Role.SIMPLEFUNC);
+  return node.type === SemanticAttr.Type.IDENTIFIER &&
+      (node.role === SemanticAttr.Role.LATINLETTER ||
+       node.role === SemanticAttr.Role.GREEKLETTER ||
+       node.role === SemanticAttr.Role.OTHERLETTER ||
+       node.role === SemanticAttr.Role.SIMPLEFUNC);
 }
 
 
@@ -218,9 +223,9 @@ export function isLetter_(node: SemanticNode): boolean {
  * @return True if the number is an integer or a decimal.
  */
 export function isNumber_(node: SemanticNode): boolean {
-  return node.type === sre.SemanticAttr.Type.NUMBER &&
-      (node.role === sre.SemanticAttr.Role.INTEGER ||
-       node.role === sre.SemanticAttr.Role.FLOAT);
+  return node.type === SemanticAttr.Type.NUMBER &&
+      (node.role === SemanticAttr.Role.INTEGER ||
+       node.role === SemanticAttr.Role.FLOAT);
 }
 
 
@@ -245,8 +250,8 @@ export function isSimpleFraction_(node: SemanticNode): boolean {
   if (hasPreference('Fraction_Over') || hasPreference('Fraction_FracOver')) {
     return false;
   }
-  if (node.type !== sre.SemanticAttr.Type.FRACTION ||
-      node.role !== sre.SemanticAttr.Role.VULGAR) {
+  if (node.type !== SemanticAttr.Type.FRACTION ||
+      node.role !== SemanticAttr.Role.VULGAR) {
     return false;
   }
   if (hasPreference('Fraction_Ordinal')) {
@@ -265,11 +270,11 @@ export function isSimpleFraction_(node: SemanticNode): boolean {
  * @return True of the given preference is set.
  */
 export function hasPreference(pref: string): boolean {
-  return sre.Engine.getInstance().style === pref;
+  return Engine.getInstance().style === pref;
 }
 
 
-sre.SemanticAnnotations.getInstance().register(
+SemanticAnnotations.register(
     new SemanticAnnotator('clearspeak', 'simple', function(node) {
       return isSimpleExpression(node) ? 'simple' : '';
     }));
@@ -280,7 +285,7 @@ sre.SemanticAnnotations.getInstance().register(
  * @param node The node in question.
  * @return True if the node has a annotation entry of simple.
  */
-export function simpleNode(node: Node): boolean {
+export function simpleNode(node: Element): boolean {
   if (!node.hasAttribute('annotation')) {
     return false;
   }
@@ -294,7 +299,7 @@ export function simpleNode(node: Node): boolean {
  * @param node The node in question.
  * @return True if the node is a simple cell.
  */
-export function simpleCell_(node: Node): boolean {
+export function simpleCell_(node: Element): boolean {
   if (simpleNode(node)) {
     return true;
   }
@@ -302,16 +307,16 @@ export function simpleCell_(node: Node): boolean {
   // certain indices from implicit multiplication to punctuation. For clearspeak
   // this should yield a simple expression then. And have a subscript with index
   // role.
-  if (node.tagName !== sre.SemanticAttr.Type.SUBSCRIPT) {
+  if (node.tagName !== SemanticAttr.Type.SUBSCRIPT) {
     return false;
   }
   let children = node.childNodes[0].childNodes;
-  let index = children[1];
-  return children[0].tagName === sre.SemanticAttr.Type.IDENTIFIER &&
+  let index = children[1] as Element;
+  return (children[0] as Element).tagName === SemanticAttr.Type.IDENTIFIER &&
       (isInteger_(index) ||
-       index.tagName === sre.SemanticAttr.Type.INFIXOP &&
+       index.tagName === SemanticAttr.Type.INFIXOP &&
            index.hasAttribute('role') &&
-           index.getAttribute('role') === sre.SemanticAttr.Role.IMPLICIT &&
+           index.getAttribute('role') === SemanticAttr.Role.IMPLICIT &&
            allIndices_(index));
 }
 
@@ -321,10 +326,10 @@ export function simpleCell_(node: Node): boolean {
  * @param node The node in question.
  * @return True if the node is an integer.
  */
-export function isInteger_(node: Node): boolean {
-  return node.tagName === sre.SemanticAttr.Type.NUMBER &&
+export function isInteger_(node: Element): boolean {
+  return node.tagName === SemanticAttr.Type.NUMBER &&
       node.hasAttribute('role') &&
-      node.getAttribute('role') === sre.SemanticAttr.Role.INTEGER;
+      node.getAttribute('role') === SemanticAttr.Role.INTEGER;
 }
 
 
@@ -333,22 +338,23 @@ export function isInteger_(node: Node): boolean {
  * @param node The node in question.
  * @return True if the node is an index.
  */
-export function allIndices_(node: Node): boolean {
-  let nodes = sre.XpathUtil.evalXPath('children/*', node);
-  return nodes.every(function(x) {
-    return isInteger_(x) || x.tagName === sre.SemanticAttr.Type.IDENTIFIER;
-  });
+export function allIndices_(node: Element): boolean {
+  let nodes = XpathUtil.evalXPath('children/*', node);
+  return nodes.every(
+    (x: Element) => isInteger_(x) || x.tagName === SemanticAttr.Type.IDENTIFIER
+  );
 }
+
 /**
  * Query function that decides if a table has only simple cells.
  * @param node The table node.
  * @return The node if the table only has simple cells.
  */
-export function allCellsSimple(node: Node): Node[] {
-  let xpath = node.tagName === sre.SemanticAttr.Type.MATRIX ?
+export function allCellsSimple(node: Element): Element[] {
+  let xpath = node.tagName === SemanticAttr.Type.MATRIX ?
       'children/row/children/cell/children/*' :
       'children/line/children/*';
-  let nodes = sre.XpathUtil.evalXPath(xpath, node);
+  let nodes = XpathUtil.evalXPath(xpath, node);
   let result = nodes.every(simpleCell_);
   return result ? [node] : [];
 }
@@ -359,8 +365,8 @@ export function allCellsSimple(node: Node): Node[] {
  * @return List containing the node if it is eligible. Otherwise
  *     empty.
  */
-export function isSmallVulgarFraction(node: Node): Node[] {
-  return sre.NumbersUtil.vulgarFractionSmall(node, 20, 11) ? [node] : [];
+export function isSmallVulgarFraction(node: Element): Element[] {
+  return NumbersUtil.vulgarFractionSmall(node, 20, 11) ? [node] : [];
 }
 
 
@@ -370,18 +376,18 @@ export function isSmallVulgarFraction(node: Node): Node[] {
  * @return True if the node is a unit expression.
  */
 export function isUnitExpression(node: SemanticNode): boolean {
-  return node.type === sre.SemanticAttr.Type.TEXT ||
-      node.type === sre.SemanticAttr.Type.PUNCTUATED &&
-      node.role === sre.SemanticAttr.Role.TEXT &&
+  return node.type === SemanticAttr.Type.TEXT ||
+      node.type === SemanticAttr.Type.PUNCTUATED &&
+      node.role === SemanticAttr.Role.TEXT &&
       isNumber_(node.childNodes[0]) &&
       allTextLastContent_(node.childNodes.slice(1)) ||
-      node.type === sre.SemanticAttr.Type.IDENTIFIER &&
-      node.role === sre.SemanticAttr.Role.UNIT ||
-      node.type === sre.SemanticAttr.Type.INFIXOP &&
+      node.type === SemanticAttr.Type.IDENTIFIER &&
+      node.role === SemanticAttr.Role.UNIT ||
+      node.type === SemanticAttr.Type.INFIXOP &&
       (
           // TODO: Fix: Only integers are considered to be units.
-          node.role === sre.SemanticAttr.Role.IMPLICIT ||
-          node.role === sre.SemanticAttr.Role.UNIT);
+          node.role === SemanticAttr.Role.IMPLICIT ||
+          node.role === SemanticAttr.Role.UNIT);
 }
 
 
@@ -392,16 +398,16 @@ export function isUnitExpression(node: SemanticNode): boolean {
  */
 export function allTextLastContent_(nodes: SemanticNode[]): boolean {
   for (let i = 0; i < nodes.length - 1; i++) {
-    if (!(nodes[i].type === sre.SemanticAttr.Type.TEXT &&
+    if (!(nodes[i].type === SemanticAttr.Type.TEXT &&
           nodes[i].textContent === '')) {
       return false;
     }
   }
-  return nodes[nodes.length - 1].type === sre.SemanticAttr.Type.TEXT;
+  return nodes[nodes.length - 1].type === SemanticAttr.Type.TEXT;
 }
 
 
-sre.SemanticAnnotations.getInstance().register(
+SemanticAnnotations.register(
     new SemanticAnnotator('clearspeak', 'unit', function(node) {
       return isUnitExpression(node) ? 'unit' : '';
     }));
@@ -417,8 +423,8 @@ export function ordinalExponent(node: Element): string {
   if (isNaN(number)) {
     return node.textContent;
   }
-  return number > 10 ? Messages.NUMBERS.simpleOrdinal(number) :
-                       Messages.NUMBERS.wordOrdinal(number);
+  return number > 10 ? Locale.NUMBERS.simpleOrdinal(number) :
+                       Locale.NUMBERS.wordOrdinal(number);
 }
 
 
@@ -427,14 +433,14 @@ export function ordinalExponent(node: Element): string {
  * @param node The XML node.
  * @return True if the text is a capital letter.
  */
-export function isCapitalLetter(node: Node): Node[] {
-  let result = sre.MathCompoundStore.getInstance().lookupCategory(
+export function isCapitalLetter(node: Element): Element[] {
+  let result = MathCompoundStore.getInstance().lookupCategory(
                    node.textContent) === 'Lu';
   return result ? [node] : [];
 }
 
 
-export const NESTING_DEPTH: string|null = null;
+export let NESTING_DEPTH: string|null = null;
 
 
 /**
@@ -442,19 +448,19 @@ export const NESTING_DEPTH: string|null = null;
  * @param node The fenced node.
  * @return The nesting depth as an ordinal number.
  */
-export function nestingDepth(node: Node): string|null {
+export function nestingDepth(node: Element): string|null {
   let count = 0;
   let fence = (node as Element).textContent;
   let index = node.getAttribute('role') === 'open' ? 0 : 1;
-  let parent = node.parentNode;
+  let parent = node.parentNode as Element;
   while (parent) {
-    if (parent.tagName === sre.SemanticAttr.Type.FENCED &&
+    if (parent.tagName === SemanticAttr.Type.FENCED &&
         parent.childNodes[0].childNodes[index].textContent === fence) {
       count++;
     }
-    parent = parent.parentNode;
+    parent = parent.parentNode as Element;
   }
-  NESTING_DEPTH = count > 1 ? Messages.NUMBERS.wordOrdinal(count) : '';
+  NESTING_DEPTH = count > 1 ? Locale.NUMBERS.wordOrdinal(count) : '';
   return NESTING_DEPTH;
 }
 
@@ -464,11 +470,12 @@ export function nestingDepth(node: Node): string|null {
  * @param node The node to test.
  * @return The node if it has matching fences.
  */
-export function matchingFences(node: Node): Node[] {
+export function matchingFences(node: Element): Element[] {
   let sibling = node.previousSibling;
+  let left, right;
   if (sibling) {
-    let left = sibling;
-    let right = node;
+    left = sibling;
+    right = node;
   } else {
     left = node;
     right = node.nextSibling;
@@ -477,7 +484,7 @@ export function matchingFences(node: Node): Node[] {
     // this case should not happen!
     return [];
   }
-  return sre.SemanticAttr.isMatchingFence(left.textContent, right.textContent) ?
+  return SemanticAttr.isMatchingFence(left.textContent, right.textContent) ?
       [node] :
       [];
 }
@@ -511,9 +518,9 @@ Grammar.getInstance().setCorrection('insertNesting', insertNesting);
  * @param node The implicit times node.
  * @return The node if it has fenced arguments only.
  */
-export function fencedArguments(node: Node): Node[] {
+export function fencedArguments(node: Element): Element[] {
   let content = DomUtil.toArray(node.parentNode.childNodes);
-  let children = sre.XpathUtil.evalXPath('../../children/*', node);
+  let children = XpathUtil.evalXPath('../../children/*', node) as Element[];
   let index = content.indexOf(node);
   return fencedFactor_(children[index]) || fencedFactor_(children[index + 1]) ?
       [node] :
@@ -525,20 +532,20 @@ export function fencedArguments(node: Node): Node[] {
  * @param node The implicit times node.
  * @return The node if it has at most three simple arguments.
  */
-export function simpleArguments(node: Node): Node[] {
+export function simpleArguments(node: Element): Element[] {
   let content = DomUtil.toArray(node.parentNode.childNodes);
-  let children = sre.XpathUtil.evalXPath('../../children/*', node);
+  let children = XpathUtil.evalXPath('../../children/*', node) as Element[];
   let index = content.indexOf(node);
   return simpleFactor_(children[index]) && children[index + 1] &&
           (simpleFactor_(children[index + 1]) ||
-           children[index + 1].tagName === sre.SemanticAttr.Type.ROOT ||
-           children[index + 1].tagName === sre.SemanticAttr.Type.SQRT ||
-           children[index + 1].tagName === sre.SemanticAttr.Type.SUPERSCRIPT &&
+           children[index + 1].tagName === SemanticAttr.Type.ROOT ||
+           children[index + 1].tagName === SemanticAttr.Type.SQRT ||
+           children[index + 1].tagName === SemanticAttr.Type.SUPERSCRIPT &&
                children[index + 1].childNodes[0].childNodes[0] &&
-               (children[index + 1].childNodes[0].childNodes[0].tagName ===
-                    sre.SemanticAttr.Type.NUMBER ||
-                children[index + 1].childNodes[0].childNodes[0].tagName ===
-                    sre.SemanticAttr.Type.IDENTIFIER) &&
+            ((children[index + 1].childNodes[0].childNodes[0] as Element).tagName ===
+                    SemanticAttr.Type.NUMBER ||
+              (children[index + 1].childNodes[0].childNodes[0] as Element).tagName ===
+                    SemanticAttr.Type.IDENTIFIER) &&
                (children[index + 1].childNodes[0].childNodes[1].textContent ===
                     '2' ||
                 children[index + 1].childNodes[0].childNodes[1].textContent ===
@@ -552,15 +559,15 @@ export function simpleArguments(node: Node): Node[] {
  * @return True if the node is a number, identifier, function or
  *     applicatio or a fraction.
  */
-export function simpleFactor_(node: Node): boolean {
+export function simpleFactor_(node: Element): boolean {
   return !!node &&
-      (node.tagName === sre.SemanticAttr.Type.NUMBER ||
-       node.tagName === sre.SemanticAttr.Type.IDENTIFIER ||
-       node.tagName === sre.SemanticAttr.Type.FUNCTION ||
-       node.tagName === sre.SemanticAttr.Type.APPL ||
+      (node.tagName === SemanticAttr.Type.NUMBER ||
+       node.tagName === SemanticAttr.Type.IDENTIFIER ||
+       node.tagName === SemanticAttr.Type.FUNCTION ||
+       node.tagName === SemanticAttr.Type.APPL ||
        // This works as fractions take care of their own
        // surrounding pauses!
-       node.tagName === sre.SemanticAttr.Type.FRACTION);
+       node.tagName === SemanticAttr.Type.FRACTION);
 }
 
 
@@ -570,11 +577,11 @@ export function simpleFactor_(node: Node): boolean {
  * @return True if the node is a fenced on both sides or a matrix or
  *     vector.
  */
-export function fencedFactor_(node: Node): boolean {
+export function fencedFactor_(node: Element): boolean {
   return node &&
-      (node.tagName === sre.SemanticAttr.Type.FENCED ||
+      (node.tagName === SemanticAttr.Type.FENCED ||
        node.hasAttribute('role') &&
-           node.getAttribute('role') === sre.SemanticAttr.Role.LEFTRIGHT ||
+           node.getAttribute('role') === SemanticAttr.Role.LEFTRIGHT ||
        layoutFactor_(node));
 }
 
@@ -584,10 +591,10 @@ export function fencedFactor_(node: Node): boolean {
  * @param node The node in question.
  * @return True if the node is a matrix or vector.
  */
-export function layoutFactor_(node: Node): boolean {
+export function layoutFactor_(node: Element): boolean {
   return !!node &&
-      (node.tagName === sre.SemanticAttr.Type.MATRIX ||
-       node.tagName === sre.SemanticAttr.Type.VECTOR);
+      (node.tagName === SemanticAttr.Type.MATRIX ||
+       node.tagName === SemanticAttr.Type.VECTOR);
 }
 
 
@@ -596,11 +603,11 @@ export function layoutFactor_(node: Node): boolean {
  * @param node The XML node.
  * @return True if application of a hyperbolic function.
  */
-export function isHyperbolic(node: Node): Node[] {
-  if (node.tagName === sre.SemanticAttr.Type.APPL) {
-    let func = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
-    if (func && func.tagName === sre.SemanticAttr.Type.FUNCTION &&
-        sre.MathCompoundStore.getInstance().lookupCategory(func.textContent) ===
+export function isHyperbolic(node: Element): Element[] {
+  if (node.tagName === SemanticAttr.Type.APPL) {
+    let func = XpathUtil.evalXPath('children/*[1]', node)[0] as Element;
+    if (func && func.tagName === SemanticAttr.Type.FUNCTION &&
+        MathCompoundStore.getInstance().lookupCategory(func.textContent) ===
             'Hyperbolic') {
       return [node];
     }
@@ -612,11 +619,11 @@ export function isHyperbolic(node: Node): Node[] {
  * @param node The XML node.
  * @return True if logrithm with a basis in subscript.
  */
-export function isLogarithmWithBase(node: Node): Node[] {
-  if (node.tagName === sre.SemanticAttr.Type.SUBSCRIPT) {
-    let func = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
-    if (func && func.tagName === sre.SemanticAttr.Type.FUNCTION &&
-        sre.MathCompoundStore.getInstance().lookupCategory(func.textContent) ===
+export function isLogarithmWithBase(node: Element): Element[] {
+  if (node.tagName === SemanticAttr.Type.SUBSCRIPT) {
+    let func = XpathUtil.evalXPath('children/*[1]', node)[0] as Element;
+    if (func && func.tagName === SemanticAttr.Type.FUNCTION &&
+        MathCompoundStore.getInstance().lookupCategory(func.textContent) ===
             'Logarithm') {
       return [node];
     }
@@ -631,7 +638,7 @@ export function isLogarithmWithBase(node: Node): Node[] {
  * @return The ordinal as a word.
  */
 export function wordOrdinal(node: Element): string {
-  return Messages.NUMBERS.wordOrdinal(parseInt(node.textContent, 10));
+  return Locale.NUMBERS.wordOrdinal(parseInt(node.textContent, 10));
 }
 
 
@@ -640,10 +647,10 @@ export function wordOrdinal(node: Element): string {
  * @param node The XML node.
  * @return True if the text is a currency.
  */
-export function firstCurrency(node: Node): Node[] {
-  let first = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
+export function firstCurrency(node: Element): Element[] {
+  let first = XpathUtil.evalXPath('children/*[1]', node)[0];
   let result = first &&
-      sre.MathCompoundStore.getInstance().lookupCategory(
+      MathCompoundStore.getInstance().lookupCategory(
           first.textContent + ':unit') === 'currency';
   return result ? [node] : [];
 }
@@ -652,10 +659,10 @@ export function firstCurrency(node: Node): Node[] {
  * @param node The XML node.
  * @return True if the text is a currency.
  */
-export function lastCurrency(node: Node): Node[] {
-  let last = sre.XpathUtil.evalXPath('children/*[last()]', node)[0];
+export function lastCurrency(node: Element): Element[] {
+  let last = XpathUtil.evalXPath('children/*[last()]', node)[0];
   let result = last &&
-      sre.MathCompoundStore.getInstance().lookupCategory(
+      MathCompoundStore.getInstance().lookupCategory(
           last.textContent + ':unit') === 'currency';
   return result ? [node] : [];
 }
@@ -664,10 +671,10 @@ export function lastCurrency(node: Node): Node[] {
  * @param node The XML node.
  * @return True if the text is a length unit.
  */
-export function isLengthUnit(node: Node): Node[] {
-  let first = sre.XpathUtil.evalXPath('children/*[1]', node)[0];
+export function isLengthUnit(node: Element): Element[] {
+  let first = XpathUtil.evalXPath('children/*[1]', node)[0];
   let result = first &&
-      sre.MathCompoundStore.getInstance().lookupCategory(
+      MathCompoundStore.getInstance().lookupCategory(
           first.textContent.trim() + ':unit') === 'length';
   return result ? [node] : [];
 }

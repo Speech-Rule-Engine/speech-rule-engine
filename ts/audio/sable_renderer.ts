@@ -20,23 +20,17 @@
  */
 
 
-import * as EngineExports from '../common/engine';
-import {Engine} from '../common/engine';
-
+import {EngineConst} from '../common/engine';
+import {Pause} from './audio_util';
 import {XmlRenderer} from './xml_renderer';
 
 
-
-export class SableRenderer extends sre.XmlRenderer {
-  constructor() {
-    super();
-  }
-
+export class SableRenderer extends XmlRenderer {
 
   /**
    * @override
    */
-  finalize(str) {
+  public finalize(str: string) {
     return '<?xml version="1.0"?>' +
         '<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN"' +
         ' "Sable.v0_2.dtd" []><SABLE>' + this.getSeparator() + str +
@@ -47,25 +41,26 @@ export class SableRenderer extends sre.XmlRenderer {
   /**
    * @override
    */
-  pause(pause) {
+  public pause(pause: Pause) {
     return '<BREAK ' +
-        'MSEC="' + this.pauseValue(pause[Engine.personalityProps.PAUSE]) +
-        '"/>';
+      'MSEC="' +
+      this.pauseValue(pause[EngineConst.personalityProps.PAUSE] as string) +
+      '"/>';
   }
 
 
   /**
    * @override
    */
-  prosodyElement(tag, value) {
+  public prosodyElement(tag: EngineConst.personalityProps, value: number) {
     value = this.applyScaleFunction(value);
     switch (tag) {
-      case Engine.personalityProps.PITCH:
+      case EngineConst.personalityProps.PITCH:
         // TODO: Experiment with range, base, middle
         return '<PITCH RANGE="' + value + '%">';
-      case Engine.personalityProps.RATE:
+      case EngineConst.personalityProps.RATE:
         return '<RATE SPEED="' + value + '%">';
-      case Engine.personalityProps.VOLUME:
+      case EngineConst.personalityProps.VOLUME:
         return '<VOLUME LEVEL="' + value + '%">';
       default:
         return '<' + tag.toUpperCase() + ' VALUE="' + value + '">';
@@ -76,8 +71,8 @@ export class SableRenderer extends sre.XmlRenderer {
   /**
    * @override
    */
-  closeTag(tag) {
+  public closeTag(tag: string) {
     return '</' + tag.toUpperCase() + '>';
   }
+
 }
-goog.inherits(SableRenderer, XmlRenderer);

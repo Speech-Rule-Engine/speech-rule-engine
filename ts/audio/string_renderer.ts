@@ -21,24 +21,19 @@
 
 
 import {AbstractAudioRenderer} from './abstract_audio_renderer';
+import {personalityMarkup} from './audio_util';
+import {AuditoryDescription} from './auditory_description';
 
 
-
-export class StringRenderer extends sre.AbstractAudioRenderer {
-  constructor() {
-    super();
-  }
-
+export class StringRenderer extends AbstractAudioRenderer {
 
   /**
    * @override
    */
-  markup(descrs) {
+  public markup(descrs: AuditoryDescription[]) {
     let str = '';
-    let markup = sre.AudioUtil.personalityMarkup(descrs);
-    let clean = markup.filter(function(x) {
-      return x.span;
-    });
+    let markup = personalityMarkup(descrs);
+    let clean = markup.filter(x => x.span);
     if (!clean.length) {
       return str;
     }
@@ -55,5 +50,5 @@ export class StringRenderer extends sre.AbstractAudioRenderer {
     }
     return str;
   }
+
 }
-goog.inherits(StringRenderer, AbstractAudioRenderer);

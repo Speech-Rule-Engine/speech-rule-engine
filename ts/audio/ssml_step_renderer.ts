@@ -20,30 +20,26 @@
  */
 
 
+import {AuditoryDescription} from './auditory_description';
+import {Span} from './span';
 import {SsmlRenderer} from './ssml_renderer';
 
 
-
-export class SsmlStepRenderer extends sre.SsmlRenderer {
-  static MARKS: any;
+export class SsmlStepRenderer extends SsmlRenderer {
 
 
-  private static CHARACTER_ATTR_: string = 'character';
-
+  private static CHARACTER_ATTR: string = 'character';
 
   /**
    * Record for remembering mark ids.
    */
-  static MARKS: {[key: string]: boolean} = {};
-  constructor() {
-    super();
-  }
+  private static MARKS: {[key: string]: boolean} = {};
 
 
   /**
    * @override
    */
-  markup(descrs) {
+  public markup(descrs: AuditoryDescription[]) {
     SsmlStepRenderer.MARKS = {};
     return super.markup(descrs);
   }
@@ -52,24 +48,24 @@ export class SsmlStepRenderer extends sre.SsmlRenderer {
   /**
    * @override
    */
-  merge(strs) {
+  public merge(spans: Span[]): string {
     let result = [];
-    for (let i = 0; i < strs.length; i++) {
-      let str = strs[i];
-      let id = str.attributes['extid'];
+    for (let i = 0; i < spans.length; i++) {
+      let span = spans[i];
+      let id = span.attributes['extid'];
       if (id && !SsmlStepRenderer.MARKS[id]) {
         result.push('<mark name="' + id + '"/>');
         SsmlStepRenderer.MARKS[id] = true;
       }
-      if (str.string.length === 1 && str.string.match(/[a-zA-Z]/)) {
+      if (span.speech.length === 1 && span.speech.match(/[a-zA-Z]/)) {
         result.push(
-            '<say-as interpret-as="' + SsmlStepRenderer.CHARACTER_ATTR_ + '">' +
-            str.string + '</say-as>');
+            '<say-as interpret-as="' + SsmlStepRenderer.CHARACTER_ATTR + '">' +
+            span.speech + '</say-as>');
       } else {
-        result.push(str.string);
+        result.push(span.speech);
       }
     }
     return result.join(this.getSeparator());
   }
+
 }
-goog.inherits(SsmlStepRenderer, SsmlRenderer);

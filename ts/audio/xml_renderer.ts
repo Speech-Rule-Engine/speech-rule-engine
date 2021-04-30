@@ -20,31 +20,31 @@
  */
 
 
-import {Error} from '../common/engine';
-
+import {EngineConst, SREError} from '../common/engine';
 import * as AudioUtil from './audio_util';
+import {AuditoryDescription} from './auditory_description';
 import {MarkupRenderer} from './markup_renderer';
 
 
+export abstract class XmlRenderer extends MarkupRenderer {
 
-export class XmlRenderer extends sre.MarkupRenderer {
-  closeTag: any;
-  constructor() {
-    super();
-  }
-
+  /**
+   * Computes the closing tag for a personality property.
+   * @param tag The tagname.
+   */
+  public abstract closeTag(tag: EngineConst.personalityProps): void;
 
   // TODO: Remove redundant markup and start/end pauses.
   /**
    * @override
    */
-  markup(descrs) {
+  public markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
     this.setScaleFunction(-2, 2, -100, 100, 2);
     let markup = AudioUtil.personalityMarkup(descrs);
     let result = [];
-    let currentOpen = [];
-    for (let i = 0, descr; descr = markup[i]; i++) {
+    let currentOpen: EngineConst.personalityProps[] = [];
+    for (let i = 0, descr: AudioUtil.Markup; descr = markup[i]; i++) {
       if (descr.span) {
         result.push(this.merge(descr.span));
         continue;
@@ -57,26 +57,19 @@ export class XmlRenderer extends sre.MarkupRenderer {
         for (let j = 0; j < descr.close.length; j++) {
           let last = currentOpen.pop();
           if (descr.close.indexOf(last) === -1) {
-            throw new Error('Unknown closing markup element: ' + last);
+            throw new SREError('Unknown closing markup element: ' + last);
           }
           result.push(this.closeTag(last));
         }
       }
       if (descr.open.length) {
         let open = AudioUtil.sortClose(descr.open.slice(), markup.slice(i + 1));
-        open.forEach(goog.bind(function(o) {
+        open.forEach(o => {
           result.push(this.prosodyElement(o, descr[o]));
           currentOpen.push(o);
-        }, this));
+        });
       }
     }
-    return result.join(  // this.merge(result);
-        ' ');
+    return result.join(' ');  // this.merge(result);
   }
 }
-goog.inherits(XmlRenderer, MarkupRenderer);
-/**
- * Computes the closing tag for a personality property.
- * @param tag The tagname.
- */
-XmlRenderer.prototype.closeTag = goog.abstractMethod;

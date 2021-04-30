@@ -21,31 +21,40 @@
  */
 
 
-import * as EngineExports from '../common/engine';
-import {Engine} from '../common/engine';
-
+import {Engine, EngineConst} from '../common/engine';
 import {AcssRenderer} from './acss_renderer';
 import {AudioRenderer} from './audio_renderer';
+import {AuditoryDescription} from './auditory_description';
 import {PunctuationRenderer} from './punctuation_renderer';
 import {SableRenderer} from './sable_renderer';
+import {Span} from './span';
 import {SsmlRenderer} from './ssml_renderer';
 import {SsmlStepRenderer} from './ssml_step_renderer';
 import {StringRenderer} from './string_renderer';
+import {XmlRenderer} from './xml_renderer';
 
 
+// TODO (TS): Factory has same interface as AudioRenderer. Not sure how to tell
+//            it typescript!
+namespace AuralRendering {
 
-export class AuralRendering implements AudioRenderer {
-  private static rendererMapping_: {[key: Engine.Markup]: AudioRenderer} = {};
-
-
-  static xmlInstance: AudioRenderer;
+  const xmlInstance = new SsmlRenderer();
+  const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
+    [EngineConst.Markup.NONE, new StringRenderer()],
+    [EngineConst.Markup.PUNCTUATION, new PunctuationRenderer()],
+    [EngineConst.Markup.ACSS, new AcssRenderer()],
+    [EngineConst.Markup.SABLE, new SableRenderer()],
+    [EngineConst.Markup.VOICEXML, xmlInstance],
+    [EngineConst.Markup.SSML, xmlInstance],
+    [EngineConst.Markup.SSML_STEP, new SsmlStepRenderer()],
+  ]);
 
 
   /**
    * @override
    */
-  setSeparator(sep) {
-    let renderer = AuralRendering.rendererMapping_[Engine.getInstance().markup];
+  export function setSeparator(sep: string) {
+    let renderer = renderers.get(Engine.getInstance().markup);
     if (renderer) {
       renderer.setSeparator(sep);
     }
@@ -55,8 +64,8 @@ export class AuralRendering implements AudioRenderer {
   /**
    * @override
    */
-  getSeparator() {
-    let renderer = AuralRendering.rendererMapping_[Engine.getInstance().markup];
+  export function getSeparator() {
+    let renderer = renderers.get(Engine.getInstance().markup);
     return renderer ? renderer.getSeparator() : '';
   }
 
@@ -64,8 +73,8 @@ export class AuralRendering implements AudioRenderer {
   /**
    * @override
    */
-  markup(descrs) {
-    let renderer = AuralRendering.rendererMapping_[Engine.getInstance().markup];
+  export function markup(descrs: AuditoryDescription[]) {
+    let renderer = renderers.get(Engine.getInstance().markup);
     if (!renderer) {
       return '';
     }
@@ -76,23 +85,21 @@ export class AuralRendering implements AudioRenderer {
   /**
    * @override
    */
-  merge(strs) {
-    let span = strs.map(function(s) {
-      return {string: s, attributes: {}};
-    });
-    let renderer = AuralRendering.rendererMapping_[Engine.getInstance().markup];
+  export function merge(strs: Span[]) {
+    // let span = strs.map(s => {string: s, attributes: {}});
+    let renderer = renderers.get(Engine.getInstance().markup);
     if (!renderer) {
       return strs.join();
     }
-    return renderer.merge(span);
+    return renderer.merge(strs);
   }
 
 
   /**
    * @override
    */
-  finalize(str) {
-    let renderer = AuralRendering.rendererMapping_[Engine.getInstance().markup];
+  export function finalize(str: string) {
+    let renderer = renderers.get(Engine.getInstance().markup);
     if (!renderer) {
       return str;
     }
@@ -103,8 +110,8 @@ export class AuralRendering implements AudioRenderer {
   /**
    * @override
    */
-  error(key) {
-    let renderer = AuralRendering.rendererMapping_[Engine.getInstance().markup];
+  export function error(key: string) {
+    let renderer = renderers.get(Engine.getInstance().markup);
     if (!renderer) {
       return '';
     }
@@ -117,34 +124,21 @@ export class AuralRendering implements AudioRenderer {
    * @param type The markup type.
    * @param renderer The audio renderer.
    */
-  static registerRenderer(type: Engine.Markup, renderer: AudioRenderer) {
-    AuralRendering.rendererMapping_[type] = renderer;
+  export function registerRenderer(type: EngineConst.Markup,
+                                   renderer: AudioRenderer) {
+    renderers.set(type, renderer);
   }
 
 
   /**
    * Checks if the current renderer is of a given type.
-   * @param type This is a type.
    * @return True if it is an instance of the given type.
    */
-  static ofType(type: () => any): boolean {
-    return AuralRendering
-               .rendererMapping_[Engine.getInstance().markup] instanceof
-        type;
+  export function isXml(): boolean {
+    return renderers.get(Engine.getInstance().markup) instanceof XmlRenderer;
   }
+
 }
-goog.addSingletonGetter(AuralRendering);
 
 
-
-AuralRendering.registerRenderer(Engine.Markup.NONE, new StringRenderer());
-AuralRendering.registerRenderer(
-    Engine.Markup.PUNCTUATION, new PunctuationRenderer());
-AuralRendering.registerRenderer(Engine.Markup.ACSS, new AcssRenderer());
-AuralRendering.registerRenderer(Engine.Markup.SABLE, new SableRenderer());
-AuralRendering.xmlInstance = new SsmlRenderer();
-AuralRendering.registerRenderer(
-    Engine.Markup.VOICEXML, AuralRendering.xmlInstance);
-AuralRendering.registerRenderer(Engine.Markup.SSML, AuralRendering.xmlInstance);
-AuralRendering.registerRenderer(
-    Engine.Markup.SSML_STEP, new SsmlStepRenderer());
+export default AuralRendering;

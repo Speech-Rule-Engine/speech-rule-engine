@@ -20,23 +20,17 @@
  */
 
 
-import * as EngineExports from '../common/engine';
-import {Engine} from '../common/engine';
-
+import {Engine, EngineConst} from '../common/engine';
+import {Pause} from './audio_util';
 import {XmlRenderer} from './xml_renderer';
 
 
-
-export class SsmlRenderer extends sre.XmlRenderer {
-  constructor() {
-    super();
-  }
-
+export class SsmlRenderer extends XmlRenderer {
 
   /**
    * @override
    */
-  finalize(str) {
+  public finalize(str: string) {
     return '<?xml version="1.0"?><speak version="1.1"' +
         ' xmlns="http://www.w3.org/2001/10/synthesis">' +
         '<prosody rate="' + Engine.getInstance().getRate() + '%">' +
@@ -47,29 +41,30 @@ export class SsmlRenderer extends sre.XmlRenderer {
   /**
    * @override
    */
-  pause(pause) {
+  public pause(pause: Pause) {
     return '<break ' +
-        'time="' + this.pauseValue(pause[Engine.personalityProps.PAUSE]) +
-        'ms"/>';
+      'time="' +
+      this.pauseValue(pause[EngineConst.personalityProps.PAUSE] as string) +
+      'ms"/>';
   }
 
 
   /**
    * @override
    */
-  prosodyElement(attr, value) {
+  public prosodyElement(attr: string, value: number) {
     value = Math.floor(this.applyScaleFunction(value));
     let valueStr = value < 0 ? value.toString() : '+' + value.toString();
     return '<prosody ' + attr.toLowerCase() + '="' + valueStr +
-        (attr === Engine.personalityProps.VOLUME ? '>' : '%">');
+        (attr === EngineConst.personalityProps.VOLUME ? '>' : '%">');
   }
 
 
   /**
    * @override
    */
-  closeTag(tag) {
+  public closeTag(_tag: string) {
     return '</prosody>';
   }
+
 }
-goog.inherits(SsmlRenderer, XmlRenderer);

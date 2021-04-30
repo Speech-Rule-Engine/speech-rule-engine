@@ -21,16 +21,13 @@
  */
 
 
-/**
- * @param string The textual content of the span.
- * @param attributes Annotations for the textual content.
- */
 export class Span {
-  string: any;
 
-  attributes: any;
-  constructor(string: string, attributes: {[key: string]: string}) {
-    this.string = string;
-    this.attributes = attributes;
-  }
+  /**
+   * @param string The textual content of the span.
+   * @param attributes Annotations for the textual content.
+   */
+  constructor(public speech: string,
+              public attributes: {[key: string]: string}) { }
+
 }

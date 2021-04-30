@@ -20,23 +20,26 @@
  */
 
 
-import * as EngineExports from '../common/engine';
 import {Engine} from '../common/engine';
-
+import {KeyCode} from '../common/event_util';
 import {AudioRenderer} from './audio_renderer';
+import {AuditoryDescription} from './auditory_description';
+import {Span} from './span';
 
 
-
-export class AbstractAudioRenderer implements AudioRenderer {
-  markup: any;
+export abstract class AbstractAudioRenderer implements AudioRenderer {
 
   private separator_: string = ' ';
-
 
   /**
    * @override
    */
-  setSeparator(sep) {
+  public abstract markup(descrs: AuditoryDescription[]): string;
+
+  /**
+   * @override
+   */
+  public setSeparator(sep: string) {
     this.separator_ = sep;
   }
 
@@ -44,7 +47,7 @@ export class AbstractAudioRenderer implements AudioRenderer {
   /**
    * @override
    */
-  getSeparator() {
+  public getSeparator() {
     // TODO: (Span) Do this via setSeparator.
     return Engine.getInstance().modality === 'braille' ? '' : this.separator_;
   }
@@ -53,7 +56,7 @@ export class AbstractAudioRenderer implements AudioRenderer {
   /**
    * @override
    */
-  error(key) {
+  public error(_key: KeyCode|string): string|null {
     return null;
   }
 
@@ -61,11 +64,11 @@ export class AbstractAudioRenderer implements AudioRenderer {
   /**
    * @override
    */
-  merge(spans) {
+  public merge(spans: Span[]): string {
     let str = '';
     let len = spans.length - 1;
     for (let i = 0, span; span = spans[i]; i++) {
-      str += span.string;
+      str += span.speech;
       if (i < len) {
         let sep = span.attributes['separator'];
         str += sep !== undefined ? sep : this.getSeparator();
@@ -78,7 +81,7 @@ export class AbstractAudioRenderer implements AudioRenderer {
   /**
    * @override
    */
-  finalize(str) {
+  public finalize(str: string) {
     return str;
   }
 
@@ -88,7 +91,7 @@ export class AbstractAudioRenderer implements AudioRenderer {
    * @param value The alpha value for the pause.
    * @return The corresponding numerical value.
    */
-  pauseValue(value: string): number {
+  public pauseValue(value: string): number {
     let numeric;
     switch (value) {
       case 'long':
@@ -104,11 +107,8 @@ export class AbstractAudioRenderer implements AudioRenderer {
         numeric = parseInt(value, 10);
     }
     return Math.floor(
-        numeric * parseInt(Engine.getInstance().getRate(), 10) / 100);
+        numeric * Engine.getInstance().getRate() / 100);
   }
+
 }
 
-/**
- * @override
- */
-AbstractAudioRenderer.prototype.markup = goog.abstractMethod;

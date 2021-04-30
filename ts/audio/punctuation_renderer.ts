@@ -21,45 +21,44 @@
  */
 
 
+import {EngineConst} from '../common/engine';
 import {AbstractAudioRenderer} from './abstract_audio_renderer';
+import * as AudioUtil from './audio_util';
+import {AuditoryDescription} from './auditory_description';
 
 
+export class PunctuationRenderer extends AbstractAudioRenderer {
 
-export class PunctuationRenderer extends sre.AbstractAudioRenderer {
   /**
    * Alpha values for pauses.
    */
-  private static PAUSE_PUNCTUATION_ = {
-    'short': ',',
-    'medium': ';',
-    'long': '.'
-  };
-  constructor() {
-    super();
-  }
-
+  private static PAUSE_PUNCTUATION = new Map([
+    ['short', ','],
+    ['medium', ';'],
+    ['long', '.']
+  ]);
 
   /**
    * @override
    */
-  markup(descrs) {
-    let markup = sre.AudioUtil.personalityMarkup(descrs);
+  public markup(descrs: AuditoryDescription[]) {
+    let markup = AudioUtil.personalityMarkup(descrs);
     let str = '';
     let pause = null;
     let span = false;
     for (let i = 0, descr; descr = markup[i]; i++) {
-      if (sre.AudioUtil.isMarkupElement(descr)) {
+      if (AudioUtil.isMarkupElement(descr)) {
         continue;
       }
-      if (sre.AudioUtil.isPauseElement(descr)) {
+      if (AudioUtil.isPauseElement(descr)) {
         if (span) {
-          pause = sre.AudioUtil.mergePause(
+          pause = AudioUtil.mergePause(
               pause, (descr as {pause: number}), Math.max);
         }
         continue;
       }
       if (pause) {
-        str += this.pause(pause[sre.Engine.personalityProps.PAUSE]);
+        str += this.pause(pause[EngineConst.personalityProps.PAUSE]);
         pause = null;
       }
       str += (span ? this.getSeparator() : '') + this.merge(descr.span);
@@ -74,10 +73,11 @@ export class PunctuationRenderer extends sre.AbstractAudioRenderer {
    * @param pause The pause length.
    * @return The alpha equivalent.
    */
-  pause(pause: number): string {
+  public pause(pause: AudioUtil.PauseValue): string {
+    let newPause;
     if (typeof pause === 'number') {
       if (pause <= 250) {
-        let newPause = 'short';
+        newPause = 'short';
       } else if (pause <= 500) {
         newPause = 'medium';
       } else {
@@ -86,7 +86,6 @@ export class PunctuationRenderer extends sre.AbstractAudioRenderer {
     } else {
       newPause = pause;
     }
-    return PunctuationRenderer.PAUSE_PUNCTUATION_[newPause] || '';
+    return PunctuationRenderer.PAUSE_PUNCTUATION.get(newPause) || '';
   }
 }
-goog.inherits(PunctuationRenderer, AbstractAudioRenderer);

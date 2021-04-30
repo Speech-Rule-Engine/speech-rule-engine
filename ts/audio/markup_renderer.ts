@@ -21,20 +21,30 @@
 
 
 import {AbstractAudioRenderer} from './abstract_audio_renderer';
+import {Pause} from './audio_util';
 
 
+export abstract class MarkupRenderer extends AbstractAudioRenderer {
 
-export class MarkupRenderer extends sre.AbstractAudioRenderer {
-  pause: any;
+  /**
+   *  A scale function.
+   */
+  private scaleFunction: ((p1: number) => number) = null;
 
+  /**
+   * Translates a pause into its corresponding markup.
+   * @param pause A pause element.
+   * @return The markup for the pause.
+   */
+  public abstract pause(pause: Pause): void;
 
-  prosodyElement: any;
-
-  private scaleFunction_: ((p1: number) => number)|null = null;
-  constructor() {
-    super();
-  }
-
+  /**
+   * Transforms a prosody key value pair into a markup element.
+   * @param key The prosody name.
+   * @param value The prosody value.
+   * @return The markup element.
+   */
+  public abstract prosodyElement(key: string, value: number): void;
 
   /**
    * Sets the scale function to scale from interval [a, b] to [c, d].  Rounds
@@ -48,13 +58,14 @@ export class MarkupRenderer extends sre.AbstractAudioRenderer {
    * @param d Upper boundary of target interval.
    * @param opt_decimals Number of digits after the decimal point.
    */
-  setScaleFunction(
-      a: number, b: number, c: number, d: number, opt_decimals?: number) {
-    let decimals = opt_decimals || 0;
-    this.scaleFunction_ = function(x) {
+  public setScaleFunction(
+      a: number, b: number, c: number, d: number, decimals: number = 0) {
+    this.scaleFunction = x => {
       let delta = (x - a) / (b - a);
-      let number = c * (1 - delta) + d * delta;
-      return +(Math.round(number + 'e+' + decimals) + 'e-' + decimals);
+      let num = c * (1 - delta) + d * delta;
+      /// TODO (TS): Avoid all that casting!
+      return +(Math.round(((num + 'e+' + decimals) as any) as number) +
+        'e-' + decimals);
     };
   }
 
@@ -64,22 +75,8 @@ export class MarkupRenderer extends sre.AbstractAudioRenderer {
    * @param value The value to be scaled.
    * @return The scaled value.
    */
-  applyScaleFunction(value: number): number {
-    return this.scaleFunction_ ? this.scaleFunction_(value) : value;
+  public applyScaleFunction(value: number): number {
+    return this.scaleFunction ? this.scaleFunction(value) : value;
   }
-}
 
-goog.inherits(MarkupRenderer, AbstractAudioRenderer);
-/**
- * Translates a pause into its corresponding markup.
- * @param pause A pause element.
- * @return The markup for the pause.
- */
-MarkupRenderer.prototype.pause = goog.abstractMethod;
-/**
- * Transforms a prosody key value pair into a markup element.
- * @param key The prosody name.
- * @param value The prosody value.
- * @return The markup element.
- */
-MarkupRenderer.prototype.prosodyElement = goog.abstractMethod;
+}

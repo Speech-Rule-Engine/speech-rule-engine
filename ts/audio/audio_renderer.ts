@@ -20,10 +20,8 @@
  */
 
 import {KeyCode} from '../common/event_util';
-
 import {AuditoryDescription} from './auditory_description';
 import {Span} from './span';
-
 
 
 export interface AudioRenderer {
