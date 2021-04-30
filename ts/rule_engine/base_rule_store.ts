@@ -26,7 +26,6 @@
 import {AuditoryDescription} from '../audio/auditory_description';
 import {Debugger} from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
-import * as EngineExports from '../common/engine';
 import {Engine} from '../common/engine';
 import {Trie} from '../indexing/trie';
 
@@ -39,13 +38,29 @@ import {SpeechRuleStore} from './speech_rule_store';
 
 
 
-export class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleStore {
+export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleStore {
+
+  /**
+   * @override
+   */
+  abstract public evaluateString() {}
+/**
+ * Function to initialize the store with speech rules. It is called by the
+ * speech rule engine upon parametrization with this store. The function allows
+ * us to define sets of rules in separate files while depending on functionality
+ * that is defined in the rule store.
+ * Essentially it is a way of getting around dependencies.
+ */
+BaseRuleStore.prototype.initialize = goog.abstractMethod;
   evaluateString: any;
 
 
   initialize: any;
 
-  context: SpeechRuleContext;
+  /**
+   * Context for custom functions of this rule store.
+   */
+  context: SpeechRuleContext = new SpeechRuleContext();
 
   /**
    * Set of speech rules in the store.
@@ -76,10 +91,6 @@ export class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleStore {
    */
   customTranscriptions: {[key: string]: string} = {};
   constructor() {
-    /**
-     * Context for custom functions of this rule store.
-     */
-    this.context = new SpeechRuleContext();
     /**
      * Trie for indexing speech rules in this store.
      */
@@ -474,16 +485,3 @@ export class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleStore {
     }
   }
 }
-
-/**
- * @override
- */
-BaseRuleStore.prototype.evaluateString = goog.abstractMethod;
-/**
- * Function to initialize the store with speech rules. It is called by the
- * speech rule engine upon parametrization with this store. The function allows
- * us to define sets of rules in separate files while depending on functionality
- * that is defined in the rule store.
- * Essentially it is a way of getting around dependencies.
- */
-BaseRuleStore.prototype.initialize = goog.abstractMethod;

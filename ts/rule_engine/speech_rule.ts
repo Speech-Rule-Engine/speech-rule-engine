@@ -28,217 +28,178 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import {Error} from '../common/engine';
 
-import * as DynamicCstrExports from './dynamic_cstr';
+import {SREError} from '../common/engine';
 import {DynamicCstr} from './dynamic_cstr';
-import {Grammar} from './grammar';
+import * as Grammar from './grammar';
 import {SpeechRuleContext} from './speech_rule_context';
 
 
-
-/**
- * Creates a speech rule with precondition, actions and admin information.
- * @param name The name of the rule.
- * @param dynamic Dynamic constraint annotations of the rule.
- * @param prec Precondition of the rule.
- * @param action Action of the speech rule.
- */
 export class SpeechRule {
+
+
   /**
-   * Mapping for types of speech rule components.
+   *  The context of the speech rule.
    */
-  static Type =
-      {NODE: 'NODE', MULTI: 'MULTI', TEXT: 'TEXT', PERSONALITY: 'PERSONALITY'};
-
-
-
-  static Component: any;
-
-
-
-  static Action: any;
-
-
-
-  static Precondition: any;
-
-
-
-  static OutputError: any;
-  dynamicCstr: DynamicCstr;
-  precondition: SpeechRule.Precondition;
-  context: SpeechRuleContext = null;
-  constructor(
-      public name: string, dynamic: DynamicCstr, prec: SpeechRule.Precondition,
-      public action: SpeechRule.Action) {
-    this.dynamicCstr = dynamic;
-    this.precondition = prec;
-  }
-
+  public context: SpeechRuleContext = null;
 
   /**
-   *
+   * Creates a speech rule with precondition, actions and admin information.
+   * @param name The name of the rule.
+   * @param dynamic Dynamic constraint annotations of the rule.
+   * @param prec Precondition of the rule.
+   * @param action Action of the speech rule.
+   */
+  constructor(
+    public name: string, public dynamicCstr: DynamicCstr,
+    public precondition: Precondition,
+    public action: Action) { }
+
+  /**
    * @override
    */
-  toString() {
+  public toString() {
     return this.name + ' | ' + this.dynamicCstr.toString() + ' | ' +
         this.precondition.toString() + ' ==> ' + this.action.toString();
   }
 
-
-  /**
-   * Split a string wrt. a given separator symbol while not splitting inside of
-   * a double quoted string. For example, splitting
-   * '[t] "matrix; 3 by 3"; [n] ./*[1]' with separators ';' would yield
-   * ['[t] "matrix; 3 by 3"', ' [n] ./*[1]'].
-   * @param str String to be split.
-   * @param sep Separator symbol.
-   * @return A list of single component strings.
-   */
-  private static splitString_(str: string, sep: string): string[] {
-    let strList = [];
-    let prefix = '';
-
-    while (str != '') {
-      let sepPos = str.search(sep);
-      if (sepPos == -1) {
-        if ((str.match(/"/g) || []).length % 2 != 0) {
-          throw new SpeechRule.OutputError(
-              'Invalid string in expression: ' + str);
-        }
-        strList.push(prefix + str);
-        prefix = '';
-        str = '';
-      } else if ((str.substring(0, sepPos).match(/"/g) || []).length % 2 == 0) {
-        strList.push(prefix + str.substring(0, sepPos));
-        prefix = '';
-        str = str.substring(sepPos + 1);
-      } else {
-        let nextQuot = str.substring(sepPos).search('"');
-        if (nextQuot == -1) {
-          throw new SpeechRule.OutputError(
-              'Invalid string in expression: ' + str);
-        } else {
-          prefix = prefix + str.substring(0, sepPos + nextQuot + 1);
-          str = str.substring(sepPos + nextQuot + 1);
-        }
-      }
-    }
-    if (prefix) {
-      strList.push(prefix);
-    }
-    return strList;
-  }
 }
 
 
 /**
+ * Mapping for types of speech rule action components.
+ */
+export enum ActionType {
+  NODE = 'NODE',
+  MULTI = 'MULTI',
+  TEXT = 'TEXT',
+  PERSONALITY = 'PERSONALITY'
+}
+
+
+// TODO (TS):
+/**
  * Maps a string to a valid speech rule type.
  * @param str Input string.
  */
-SpeechRule.Type.fromString = function(str: string): SpeechRule.Type {
+function actionFromString(str: string): ActionType {
   switch (str) {
     case '[n]':
-      return SpeechRule.Type.NODE;
+      return ActionType.NODE;
     case '[m]':
-      return SpeechRule.Type.MULTI;
+      return ActionType.MULTI;
     case '[t]':
-      return SpeechRule.Type.TEXT;
+      return ActionType.TEXT;
     case '[p]':
-      return SpeechRule.Type.PERSONALITY;
+      return ActionType.PERSONALITY;
     default:
       throw 'Parse error: ' + str;
   }
-};
+}
 
 
 /**
  * Maps a speech rule type to a human-readable string.
  * @return Output string.
  */
-SpeechRule.Type.toString = function(speechType: SpeechRule.Type): string {
+function actionToString(speechType: ActionType): string {
   switch (speechType) {
-    case SpeechRule.Type.NODE:
+    case ActionType.NODE:
       return '[n]';
-    case SpeechRule.Type.MULTI:
+    case ActionType.MULTI:
       return '[m]';
-    case SpeechRule.Type.TEXT:
+    case ActionType.TEXT:
       return '[t]';
-    case SpeechRule.Type.PERSONALITY:
+    case ActionType.PERSONALITY:
       return '[p]';
     default:
       throw 'Unknown type error: ' + speechType;
   }
-};
+}
+
+
 /**
- * Defines a component within a speech rule.
- * @param {{type: sre.SpeechRule.Type,
- *          content: string,
- *          attributes: sre.SpeechRule.Attributes,
- *          grammar: sre.Grammar.State}} kwargs The input component in JSON
- *     format.
+ *  The type of single components.
  */
-SpeechRule.Component = class {
-  type: SpeechRule.Type;
+export interface ComponentType {
+  type: ActionType;
+  content?: string;
+  attributes?: Attributes;
+  grammar?: Grammar.State;
+}
 
-  content: string;
 
-  attributes: SpeechRule.Attributes;
+export class Component {
 
-  grammar: Grammar.State;
-  constructor(kwargs: {
-    type: SpeechRule.Type,
-    content: string,
-    attributes: SpeechRule.Attributes,
-    grammar: Grammar.State
-  }) {
-    this.type = kwargs.type;
-    this.content = kwargs.content;
-    this.attributes = kwargs.attributes;
-    this.grammar = kwargs.grammar;
+  /**
+   * Component's action type.
+   */
+  public type: ActionType;
+
+  /**
+   * Component's content.
+   */
+  public content: string;
+
+  /**
+   * Component's attributes.
+   */
+  public attributes: Attributes;
+
+  /**
+   * Component's grammar attributes.
+   */
+  public grammar: Grammar.State;
+
+  // TODO (MOSS) remove!
+  /**
+   * Processes the grammar annotations of a rule.
+   * @param grammar The grammar annotations.
+   * @return The grammar structure.
+   */
+  public static grammarFromString(grammar: string): Grammar.State {
+    return Grammar.Grammar.parseInput(grammar);
   }
 
 
   /**
-   * Parses a valid string representation of a speech component into a Component
-   * object.
+   * Parses a valid string representation of an action component into a
+   * Component object.
+   *
    * @param input The input string.
    * @return The resulting component.
    */
-  static fromString(input: string): SpeechRule.Component {
-    // The output JSON.
-    let output = {};
-
-    // Parse the type.
-    output.type = SpeechRule.Type.fromString(input.substring(0, 3));
-
+  public static fromString(input: string): Component {
+    // The output JSON; initialized with action type.
+    let output: ComponentType = {
+      type: actionFromString(input.substring(0, 3))
+    };
     // Prep the rest of the parsing.
     let rest = input.slice(3).trim();
     if (!rest) {
-      throw new SpeechRule.OutputError('Missing content.');
+      throw new OutputError('Missing content.');
     }
 
     switch (output.type) {
-      case SpeechRule.Type.TEXT:
-        if (rest[0] == '"') {
-          let quotedString = SpeechRule.splitString_(rest, '\\(')[0].trim();
-          if (quotedString.slice(-1) != '"') {
-            throw new SpeechRule.OutputError('Invalid string syntax.');
+      case ActionType.TEXT:
+        if (rest[0] === '"') {
+          let quotedString = splitString(rest, '\\(')[0].trim();
+          if (quotedString.slice(-1) !== '"') {
+            throw new OutputError('Invalid string syntax.');
           }
           output.content = quotedString;
           rest = rest.slice(quotedString.length).trim();
-          if (rest.indexOf('(') == -1) {
+          if (rest.indexOf('(') === -1) {
             rest = '';
           }
           // This break is conditional. If the content is not an explicit
           // string, it can be treated like node and multi type.
           break;
         }
-      case SpeechRule.Type.NODE:
-      case SpeechRule.Type.MULTI:
+      case ActionType.NODE:
+      case ActionType.MULTI:
         let bracket = rest.indexOf(' (');
-        if (bracket == -1) {
+        if (bracket === -1) {
           output.content = rest.trim();
           rest = '';
           break;
@@ -248,26 +209,69 @@ SpeechRule.Component = class {
         break;
     }
     if (rest) {
-      let attributes = SpeechRule.Component.attributesFromString(rest);
+      let attributes = Component.attributesFromString(rest);
       if (attributes.grammar) {
         output.grammar = (attributes.grammar as Grammar.State);
         delete attributes.grammar;
       }
       if (Object.keys(attributes).length) {
-        output.attributes = (attributes as SpeechRule.Attributes);
+        output.attributes = (attributes as Attributes);
       }
     }
-    output = new SpeechRule.Component(output);
-    return output;
+    return new Component(output);
+  }
+
+
+  /**
+   * Adds a single attribute to the component.
+   * @param attrs String representation of an attribute.
+   * @return The parsed
+   *     attributes, possibly containing the grammar.
+   */
+  public static attributesFromString(attrs: string): {
+    [key: string]: string|Grammar.State} {
+    if (attrs[0] !== '(' || attrs.slice(-1) !== ')') {
+      throw new OutputError(
+          'Invalid attribute expression: ' + attrs);
+    }
+    let attributes: {[key: string]: string|Grammar.State} = {};
+    let attribs = splitString(attrs.slice(1, -1), ',');
+    for (let i = 0, m = attribs.length; i < m; i++) {
+      let attr = attribs[i];
+      let colon = attr.indexOf(':');
+      if (colon === -1) {
+        attributes[attr.trim()] = 'true';
+      } else {
+        let key = attr.substring(0, colon).trim();
+        let value = attr.slice(colon + 1).trim();
+        attributes[key] = key === Grammar.ATTRIBUTE ?
+            Component.grammarFromString(value) : value;
+      }
+    }
+    return attributes;
+  }
+
+
+  /**
+   * Defines a component within a speech rule.
+   *
+   * @param {type, content, attributes, grammar} The input component in JSON
+   *     format.
+   */
+  constructor({type, content, attributes, grammar}: ComponentType) {
+    this.type = type;
+    this.content = content;
+    this.attributes = attributes;
+    this.grammar = grammar;
   }
 
 
   /**
    * @override
    */
-  toString() {
+  public toString() {
     let strs = '';
-    strs += SpeechRule.Type.toString(this.type);
+    strs += actionToString(this.type);
     strs += this.content ? ' ' + this.content : '';
     let attrs = this.attributesToString();
     strs += attrs ? ' ' + attrs : '';
@@ -275,21 +279,10 @@ SpeechRule.Component = class {
   }
 
 
-  // TODO (MOSS) remove!
-  /**
-   * Processes the grammar annotations of a rule.
-   * @param grammar The grammar annotations.
-   * @return The grammar structure.
-   */
-  static grammarFromString(grammar: string): Grammar.State {
-    return Grammar.parseInput(grammar);
-  }
-
-
   /**
    * @return String representation of the grammar.
    */
-  grammarToString(): string {
+  public grammarToString(): string {
     return this.getGrammar().join(':');
   }
 
@@ -298,7 +291,7 @@ SpeechRule.Component = class {
    * Transforms the grammar of an object into a list of strings.
    * @return List of translated attribute:value strings.
    */
-  getGrammar(): string[] {
+  public getGrammar(): string[] {
     let attribs = [];
     for (let key in this.grammar) {
       if (this.grammar[key] === true) {
@@ -314,40 +307,9 @@ SpeechRule.Component = class {
 
 
   /**
-   * Adds a single attribute to the component.
-   * @param attrs String representation of an attribute.
-   * @return The parsed
-   *     attributes, possibly containing the grammar.
-   */
-  static attributesFromString(attrs: string):
-      {[key: string]: string|Grammar.State} {
-    if (attrs[0] != '(' || attrs.slice(-1) != ')') {
-      throw new SpeechRule.OutputError(
-          'Invalid attribute expression: ' + attrs);
-    }
-    let attributes = {};
-    let attribs = SpeechRule.splitString_(attrs.slice(1, -1), ',');
-    for (let i = 0, m = attribs.length; i < m; i++) {
-      let attr = attribs[i];
-      let colon = attr.indexOf(':');
-      if (colon == -1) {
-        attributes[attr.trim()] = 'true';
-      } else {
-        let key = attr.substring(0, colon).trim();
-        let value = attr.slice(colon + 1).trim();
-        attributes[key] = key === 'grammar' ?
-            SpeechRule.Component.grammarFromString(value) :
-            attributes[key] = value;
-      }
-    }
-    return attributes;
-  }
-
-
-  /**
    * @return String representation of the attributes.
    */
-  attributesToString(): string {
+  public attributesToString(): string {
     let attribs = this.getAttributes();
     let grammar = this.grammarToString();
     if (grammar) {
@@ -361,7 +323,7 @@ SpeechRule.Component = class {
    * Transforms the attributes of an object into a list of strings.
    * @return List of translated attribute:value strings.
    */
-  getAttributes(): string[] {
+  public getAttributes(): string[] {
     let attribs = [];
     for (let key in this.attributes) {
       let value = this.attributes[key];
@@ -369,26 +331,25 @@ SpeechRule.Component = class {
     }
     return attribs;
   }
-};
-type Attributes = {
-  [key: string]: string
-};
-export {SpeechRule};
-/**
- * A speech rule is a collection of speech components.
- * @param components The input rule.
- */
-SpeechRule.Action = class {
-  constructor(public components: SpeechRule.Component[]) {}
 
+}
+
+
+/**
+ * Defines attributes for a component of a speech rule.
+ */
+type Attributes = {[key: string]: string};
+
+
+export class Action {
 
   /**
    * Parses an input string into a speech rule class object.
    * @param input The input string.
    * @return The resulting object.
    */
-  static fromString(input: string): SpeechRule.Action {
-    let comps = SpeechRule.splitString_(input, ';')
+  public static fromString(input: string): Action {
+    let comps = splitString(input, ';')
                     .filter(function(x) {
                       return x.match(/\S/);
                     })
@@ -397,38 +358,44 @@ SpeechRule.Action = class {
                     });
     let newComps = [];
     for (let i = 0, m = comps.length; i < m; i++) {
-      let comp = SpeechRule.Component.fromString(comps[i]);
+      let comp = Component.fromString(comps[i]);
       if (comp) {
         newComps.push(comp);
       }
     }
-    return new SpeechRule.Action(newComps);
+    return new Action(newComps);
   }
+
+
+  /**
+   * A speech rule is a collection of speech components.
+   * @param components The input rule.
+   */
+  constructor(public components: Component[]) {}
 
 
   /**
    * @override
    */
-  toString() {
+  public toString() {
     let comps = this.components.map(function(c) {
       return c.toString();
     });
     return comps.join('; ');
   }
-};
-/**
- * Constructs a valid precondition for a speech rule.
- * @param query A node selector function or xpath expression.
- * @param opt_constraints A list of constraint functions.
- */
-SpeechRule.Precondition = class {
+
+}
+
+
+export class Precondition {
+
   /**
    * 1. Any self
    * 2. Specific self
    * 3. Any self with condition
    * 4. Specific self with condition
    */
-  private static queryPriorities_: RegExp[] = [
+  private static queryPriorities: RegExp[] = [
     // /^self::\*$/, /^self::[\w-]+$/,
     /^self::\*\[.+\]$/, /^self::[\w-]+\[.+\]$/
   ];
@@ -441,17 +408,54 @@ SpeechRule.Precondition = class {
    * 4: Attribute contains
    * 5: Attribute has precise value
    */
-  private static attributePriorities_: RegExp[] = [
+  private static attributePriorities: RegExp[] = [
     /^@[\w-]+$/, /^@[\w-]+!=".+"$/, /^not\(contains\(@[\w-]+,\s*".+"\)\)$/,
     /^contains\(@[\w-]+,".+"\)$/, /^@[\w-]+=".+"$/
   ];
 
-  constraints: string[];
+  /**
+   * The constraints of the precondition.
+   */
+  public constraints: string[];
 
-  priority: number;
-  constructor(public query: string, opt_constraints?: string[]) {
-    this.constraints = opt_constraints || [];
-    this.priority = this.calculatePriority_();
+  /**
+   * An autmoatically computed priority level.
+   */
+  public priority: number;
+
+  /**
+   * Computes a base priority of a constraint by matching against an ordered
+   * list of regular expressions.
+   * @param constr The constraint.
+   * @param priorities The list of regular expressions.
+   * @return The computer priority.
+   */
+  private static constraintValue(constr: string, priorities: RegExp[]):
+      number {
+    for (let i = 0, regexp; regexp = priorities[i]; i++) {
+      if (constr.match(regexp)) {
+        return ++i;
+      }
+    }
+    return 0;
+  }
+
+  /**
+   * @override
+   */
+  public toString() {
+    let constrs = this.constraints.join(', ');
+    return this.query + ', ' + constrs + ' (' + this.priority + ')';
+  }
+
+  /**
+   * Constructs a valid precondition for a speech rule.
+   * @param query A node selector function or xpath expression.
+   * @param cstr A rest list of constraint functions.
+   */
+  constructor(public query: string, ...cstr: string[]) {
+    this.constraints = cstr;
+    this.priority = this.calculatePriority();
   }
 
 
@@ -465,53 +469,83 @@ SpeechRule.Precondition = class {
    *
    * @return The priority.
    */
-  private calculatePriority_(): number {
-    let query = SpeechRule.Precondition.constraintValue_(
-        this.query, SpeechRule.Precondition.queryPriorities_);
+  private calculatePriority(): number {
+    let query = Precondition.constraintValue(
+        this.query, Precondition.queryPriorities);
     if (!query) {
       return 0;
     }
     let inner = this.query.match(/^self::.+\[(.+)\]/)[1];
-    let attr = SpeechRule.Precondition.constraintValue_(
-        inner, SpeechRule.Precondition.attributePriorities_);
+    let attr = Precondition.constraintValue(
+        inner, Precondition.attributePriorities);
     return query * 100 + attr * 10;
   }
 
-
-  /**
-   * Computes a base priority of a constraint by matching against an ordered
-   * list of regular expressions.
-   * @param constr The constraint.
-   * @param priorities The list of regular expressions.
-   * @return The computer priority.
-   */
-  private static constraintValue_(constr: string, priorities: RegExp[]):
-      number {
-    for (let i = 0, regexp; regexp = priorities[i]; i++) {
-      if (constr.match(regexp)) {
-        return ++i;
-      }
-    }
-    return 0;
-  }
+}
 
 
-  /**
-   * @override
-   */
-  toString() {
-    let constrs = this.constraints.join(', ');
-    return this.query + ', ' + constrs + ' (' + this.priority + ')';
-  }
-};
 /**
  * Error object for signaling parsing errors.
  * @param msg The error message.
  */
-SpeechRule.OutputError = class extends sre.Engine.Error {
-  name = 'RuleError';
+export class OutputError extends SREError {
+
+  /**
+   * @override
+   */
+  public name = 'RuleError';
+
+  // TODO (TS): See if this is necessary.
+  /**
+   * @override
+   */
   constructor(msg: string) {
     super(msg);
   }
-};
-goog.inherits(SpeechRule.OutputError, Error);
+
+}
+
+
+/**
+ * Split a string wrt. a given separator symbol while not splitting inside of
+ * a double quoted string. For example, splitting
+ * '[t] "matrix; 3 by 3"; [n] ./*[1]' with separators ';' would yield
+ * ['[t] "matrix; 3 by 3"', ' [n] ./*[1]'].
+ * @param str String to be split.
+ * @param sep Separator symbol.
+ * @return A list of single component strings.
+ */
+function splitString(str: string, sep: string): string[] {
+  let strList = [];
+  let prefix = '';
+
+  while (str !== '') {
+    let sepPos = str.search(sep);
+    if (sepPos === -1) {
+      if ((str.match(/"/g) || []).length % 2 !== 0) {
+        throw new OutputError(
+          'Invalid string in expression: ' + str);
+      }
+      strList.push(prefix + str);
+      prefix = '';
+      str = '';
+    } else if ((str.substring(0, sepPos).match(/"/g) || []).length % 2 === 0) {
+      strList.push(prefix + str.substring(0, sepPos));
+      prefix = '';
+      str = str.substring(sepPos + 1);
+    } else {
+      let nextQuot = str.substring(sepPos).search('"');
+      if (nextQuot === -1) {
+        throw new OutputError(
+          'Invalid string in expression: ' + str);
+      } else {
+        prefix = prefix + str.substring(0, sepPos + nextQuot + 1);
+        str = str.substring(sepPos + nextQuot + 1);
+      }
+    }
+  }
+  if (prefix) {
+    strList.push(prefix);
+  }
+  return strList;
+}

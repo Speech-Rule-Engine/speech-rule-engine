@@ -20,38 +20,31 @@
  */
 
 import {Span} from '../audio/span';
-import * as XpathUtil from '../common/xpath_util';
-
-import {SpeechRuleFunctions} from './speech_rule_functions';
-
+import XpathUtil from '../common/xpath_util';
+import * as srf from './speech_rule_functions';
 
 
 export class SpeechRuleContext {
-  customQueries: SpeechRuleFunctions.CustomQueries;
 
-  customStrings: SpeechRuleFunctions.CustomStrings;
+  /**
+   * Set of custom query functions for the store.
+   */
+  public customQueries: srf.CustomQueries = new srf.CustomQueries();
 
-  contextFunctions: SpeechRuleFunctions.ContextFunctions;
+  /**
+   * Set of custom strings for the store.
+   */
+  public customStrings: srf.CustomStrings = new srf.CustomStrings();
 
-  customGenerators: SpeechRuleFunctions.CustomGenerators;
-  constructor() {
-    /**
-     * Set of custom query functions for the store.
-     */
-    this.customQueries = new SpeechRuleFunctions.CustomQueries();
-    /**
-     * Set of custom strings for the store.
-     */
-    this.customStrings = new SpeechRuleFunctions.CustomStrings();
-    /**
-     * Set of context functions for the store.
-     */
-    this.contextFunctions = new SpeechRuleFunctions.ContextFunctions();
-    /**
-     * Set of custom generators for the store.
-     */
-    this.customGenerators = new SpeechRuleFunctions.CustomGenerators();
-  }
+  /**
+   * Set of context functions for the store.
+   */
+  public contextFunctions: srf.ContextFunctions = new srf.ContextFunctions();
+
+  /**
+   * Set of custom generators for the store.
+   */
+  public customGenerators: srf.CustomGenerators = new srf.CustomGenerators();
 
 
   /**
@@ -60,7 +53,7 @@ export class SpeechRuleContext {
    * @param funcName A function name.
    * @return The list of resulting nodes.
    */
-  applyCustomQuery(node: Node, funcName: string): Node[] {
+  public applyCustomQuery(node: Node, funcName: string): Node[] {
     let func = this.customQueries.lookup(funcName);
     return func ? func(node) : null;
   }
@@ -74,7 +67,7 @@ export class SpeechRuleContext {
    *     query.
    * @return The list of resulting nodes.
    */
-  applySelector(node: Node, expr: string): Node[] {
+  public applySelector(node: Node, expr: string): Node[] {
     let result = this.applyCustomQuery(node, expr);
     return result || XpathUtil.evalXPath(expr, node);
   }
@@ -88,7 +81,7 @@ export class SpeechRuleContext {
    *     query.
    * @return The resulting node.
    */
-  applyQuery(node: Node, expr: string): Node {
+  public applyQuery(node: Node, expr: string): Node {
     let results = this.applySelector(node, expr);
     if (results.length > 0) {
       return results[0];
@@ -105,7 +98,7 @@ export class SpeechRuleContext {
    *     query.
    * @return True if application was successful.
    */
-  applyConstraint(node: Node, expr: string): boolean {
+  public applyConstraint(node: Node, expr: string): boolean {
     let result = this.applyQuery(node, expr);
     return !!result || XpathUtil.evaluateBoolean(expr, node);
   }
@@ -118,7 +111,7 @@ export class SpeechRuleContext {
    *     function or a string.
    * @return The result of applying expression to node.
    */
-  constructString(node: Node, expr: string): string|Span[] {
+  public constructString(node: Node, expr: string): string|Span[] {
     if (!expr) {
       return '';
     }
@@ -142,22 +135,27 @@ export class SpeechRuleContext {
    * @param functions The list of
    *     context function assignments.
    */
-  parse(functions: string[][]|{[key: string]: string}) {
+  public parse(functions: [string, srf.SpeechRuleFunction][]|
+    {[key: string]: srf.SpeechRuleFunction}) {
     let functs =
         Array.isArray(functions) ? functions : Object.entries(functions);
     for (let i = 0, func; func = functs[i]; i++) {
       let kind = func[0].slice(0, 3);
-      let map = {
-        CQF: this.customQueries,
-        CSF: this.customStrings,
-        CTF: this.contextFunctions,
-        CGF: this.customGenerators
-      };
-      let call = map[kind];
-      if (call) {
-        call.add(func[0], func[1]);
-      } else {
-        console.error('FunctionError: Invalid function name ' + func[0]);
+      switch (kind) {
+        case 'CQF':
+          this.customQueries.add(func[0], func[1] as srf.CustomQuery);
+          break;
+        case 'CSF':
+          this.customStrings.add(func[0], func[1] as srf.CustomString);
+          break;
+        case 'CTF':
+          this.contextFunctions.add(func[0], func[1] as srf.ContextFunction);
+          break;
+        case 'CGF':
+          this.customGenerators.add(func[0], func[1] as srf.CustomGenerator);
+          break;
+        default:
+          console.error('FunctionError: Invalid function name ' + func[0]);
       }
     }
   }

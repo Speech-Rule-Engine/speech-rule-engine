@@ -21,36 +21,15 @@
  */
 
 
-export class SpeechRuleFunctions {
-  private static Store_: any;
+abstract class FunctionsStore<S> {
 
-
-
-  static CustomQueries: any;
-
-
-
-  static CustomStrings: any;
-
-
-
-  static ContextFunctions: any;
-
-
-
-  static CustomGenerators: any;
-}
-/**
- * Private superclass of all the custom function stores.
- * @param prefix A prefix string for the function names.
- * @param store Storage object.
- */
-SpeechRuleFunctions.Store_ = class {
-  private prefix_: any;
-  private store_: any;
-  private constructor(prefix: string, store: {[key: string]: Function}) {
-    this.prefix_ = prefix;
-    this.store_ = store;
+  /**
+   * Private superclass of all the custom function stores.
+   * @param prefix A prefix string for the function names.
+   * @param store Storage object.
+   */
+  protected constructor(private prefix: string,
+                        private store: {[key: string]: S}) {
   }
 
 
@@ -59,9 +38,9 @@ SpeechRuleFunctions.Store_ = class {
    * @param name A name.
    * @param func A function.
    */
-  add(name: string, func: Function) {
+  public add(name: string, func: S) {
     if (this.checkCustomFunctionSyntax_(name)) {
-      this.store_[name] = func;
+      this.store[name] = func;
     }
   }
 
@@ -70,10 +49,10 @@ SpeechRuleFunctions.Store_ = class {
    * Adds the functions of another store.
    * @param store A speech rule store.
    */
-  addStore(store: SpeechRuleFunctions.Store_) {
-    let keys = Object.keys(store.store_);
+  public addStore(store: FunctionsStore<S>) {
+    let keys = Object.keys(store.store);
     for (let i = 0, key; key = keys[i]; i++) {
-      this.add(key, (store.store_[key] as Function));
+      this.add(key, (store.store[key] as S));
     }
   }
 
@@ -83,8 +62,8 @@ SpeechRuleFunctions.Store_ = class {
    * @param name A name.
    * @return The function if it exists.
    */
-  lookup(name: string): Function {
-    return this.store_[name];
+  public lookup(name: string): S {
+    return this.store[name];
   }
 
 
@@ -94,53 +73,77 @@ SpeechRuleFunctions.Store_ = class {
    * @return True if the name is valid.
    */
   private checkCustomFunctionSyntax_(name: string): boolean {
-    let reg = new RegExp('^' + this.prefix_);
+    let reg = new RegExp('^' + this.prefix);
     if (!name.match(reg)) {
       console.error(
           'FunctionError: Invalid function name. Expected prefix ' +
-          this.prefix_);
+          this.prefix);
       return false;
     }
     return true;
   }
-};
-type CustomQuery = (p1: Node) => Node[];
-export {SpeechRuleFunctions};
-SpeechRuleFunctions.CustomQueries =
-    class extends sre.SpeechRuleFunctions.Store_ {
+
+}
+
+export type CustomQuery = (p1: Node) => Node[];
+
+export class CustomQueries extends FunctionsStore<CustomQuery> {
+
+  /**
+   * Constructs custom queries for precondition constraints.
+   */
   constructor() {
-    let store = ({} as {[key: string]: SpeechRuleFunctions.CustomQuery});
+    let store = ({} as {[key: string]: CustomQuery});
     super('CQF', store);
   }
-};
-goog.inherits(SpeechRuleFunctions.CustomQueries, SpeechRuleFunctions.Store_);
-type CustomString = (p1: Node) => string;
-export {SpeechRuleFunctions};
-SpeechRuleFunctions.CustomStrings =
-    class extends sre.SpeechRuleFunctions.Store_ {
+
+}
+
+
+export type CustomString = (p1: Node) => string;
+
+export class CustomStrings extends FunctionsStore<CustomString> {
+
+  /**
+   * Constructs custom strings for text elements in actions.
+   */
   constructor() {
-    let store = ({} as {[key: string]: SpeechRuleFunctions.CustomString});
+    let store = ({} as {[key: string]: CustomString});
     super('CSF', store);
   }
-};
-goog.inherits(SpeechRuleFunctions.CustomStrings, SpeechRuleFunctions.Store_);
-type ContextFunction = (p1: Node[], p2: string|null) => () => string;
-export {SpeechRuleFunctions};
-SpeechRuleFunctions.ContextFunctions =
-    class extends sre.SpeechRuleFunctions.Store_ {
+
+}
+
+export type ContextFunction = (p1: Node[], p2: string|null) => () => string;
+
+export class ContextFunctions extends FunctionsStore<ContextFunction> {
+
+  /**
+   * Constructs context functions for separators or contexts.
+   */
   constructor() {
-    let store = ({} as {[key: string]: SpeechRuleFunctions.ContextFunction});
+    let store = ({} as {[key: string]: ContextFunction});
     super('CTF', store);
   }
-};
-goog.inherits(SpeechRuleFunctions.ContextFunctions, SpeechRuleFunctions.Store_);
-type CustomGenerator = () => string[];
-export {SpeechRuleFunctions};
-SpeechRuleFunctions.CustomGenerators =
-    class extends sre.SpeechRuleFunctions.Store_ {
+
+}
+
+export type CustomGenerator = () => string[];
+
+export class CustomGenerators extends FunctionsStore<CustomGenerator> {
+
+  /**
+   * Constructs generators for generating JSON for entire speech rules.
+   */
   constructor() {
-    let store = ({} as {[key: string]: SpeechRuleFunctions.CustomGenerator});
+    let store = ({} as {[key: string]: CustomGenerator});
     super('CGF', store);
   }
-};
-goog.inherits(SpeechRuleFunctions.CustomGenerators, SpeechRuleFunctions.Store_);
+
+}
+
+export type SpeechRuleStore =
+  CustomQueries | CustomStrings | ContextFunctions | CustomGenerators;
+
+export type SpeechRuleFunction =
+  CustomQuery | CustomString | ContextFunction | CustomGenerator;

@@ -24,63 +24,69 @@
  * @author dtseng@google.com (David Tseng)
  */
 
+import {DynamicCstr} from './dynamic_cstr';
+import {SpeechRule} from './speech_rule';
+import {SpeechRuleContext} from './speech_rule_context';
+
 
 export interface SpeechRuleStore {
-  addRule: any;
+
+  /**
+   * Context for custom functions of this rule store.
+   */
+  context: SpeechRuleContext;
+
+  /**
+   * Adds a new speech rule.
+   * @param rule The speech rule to be added.
+   */
+  addRule(rule: SpeechRule): void;
 
 
-  deleteRule: any;
+  /**
+   * Deletes a speech rule if it exists.
+   * @param rule The speech rule to be deleted.
+   */
+  deleteRule(rule: SpeechRule): void;
 
 
-  findRule: any;
+  /**
+   * Retrieves the first rule satisfying a given predicate.
+   * @param pred A predicate on speech rules.
+   * @return The first speech rule in the store satisfying pred.
+   */
+  findRule(pred: (rule: SpeechRule) => boolean): SpeechRule;
 
 
-  findAllRules: any;
+  /**
+   * Retrieves all rules satisfying a given predicate.
+   * @param pred A predicate on speech rules.
+   * @return All speech rules in the store satisfying
+   *     pred.
+   */
+  findAllRules(pred: (rule: SpeechRule) => boolean): SpeechRule[];
 
 
-  lookupRule: any;
+  /**
+   * Retrieves a rule for the given node if one exists.
+   * @param node A node.
+   * @param dynamic Additional dynamic
+   *     constraints. These are matched against properties of a rule.
+   * @return The speech rule if an applicable one exists.
+   */
+  lookupRule(node: Node, dynamic: DynamicCstr): SpeechRule;
 
 
-  defineRule: any;
+  /**
+   * Defines a new speech rule from given components.
+   * @param name Name of the rule. It does not have to be unique.
+   * @param dynamic Dynamic constraint annotation of the rule.
+   * @param action String version of the speech rule.
+   * @param prec Precondition of the rule.
+   * @param var_args Additional constraints.
+   * @return The newly defined rule.
+   */
+  defineRule(name: string, dynamic: string, action: string,
+             pre: string, ...args: string[]): SpeechRule;
+
 }
-/**
- * Adds a new speech rule.
- * @param rule The speech rule to be added.
- */
-SpeechRuleStore.prototype.addRule = goog.abstractMethod;
-/**
- * Deletes a speech rule if it exists.
- * @param rule The speech rule to be deleted.
- */
-SpeechRuleStore.prototype.deleteRule = goog.abstractMethod;
-/**
- * Retrieves the first rule satisfying a given predicate.
- * @param pred A predicate on speech rules.
- * @return The first speech rule in the store satisfying pred.
- */
-SpeechRuleStore.prototype.findRule = goog.abstractMethod;
-/**
- * Retrieves all rules satisfying a given predicate.
- * @param pred A predicate on speech rules.
- * @return All speech rules in the store satisfying
- *     pred.
- */
-SpeechRuleStore.prototype.findAllRules = goog.abstractMethod;
-/**
- * Retrieves a rule for the given node if one exists.
- * @param node A node.
- * @param dynamic Additional dynamic
- *     constraints. These are matched against properties of a rule.
- * @return The speech rule if an applicable one exists.
- */
-SpeechRuleStore.prototype.lookupRule = goog.abstractMethod;
-/**
- * Defines a new speech rule from given components.
- * @param name Name of the rule. It does not have to be unique.
- * @param dynamic Dynamic constraint annotation of the rule.
- * @param action String version of the speech rule.
- * @param prec Precondition of the rule.
- * @param var_args Additional constraints.
- * @return The newly defined rule.
- */
-SpeechRuleStore.prototype.defineRule = goog.abstractMethod;

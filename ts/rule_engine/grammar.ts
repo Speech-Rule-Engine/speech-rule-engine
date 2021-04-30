@@ -25,8 +25,8 @@
 
 import * as DomUtil from '../common/dom_util';
 import {Engine} from '../common/engine';
-import * as Locale from '../l10n/locale';
-import * as Messages from '../l10n/messages';
+import {localFont}  from '../l10n/locale';
+import {Locale} from '../l10n/messages';
 import {DynamicCstr} from './dynamic_cstr';
 
 
@@ -43,12 +43,12 @@ interface Flags {
   translate?: boolean;
 }
 
+export const ATTRIBUTE: string = 'grammar';
+
 export class Grammar {
 
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Grammar;
-
-  private static ATTRIBUTE: string = 'grammar';
 
   /**
    * Current processing flags of the grammar. This is only filled during
@@ -167,7 +167,7 @@ export class Grammar {
       return Grammar.cleanUnit_(text);
     }
     if (plural) {
-      result = Messages.PLURAL(result);
+      result = Locale.PLURAL(result);
     }
     return result;
   }
@@ -307,7 +307,7 @@ export class Grammar {
     if (node && node.nodeType === DomUtil.NodeType.ELEMENT_NODE) {
       let state = this.getState();
       if (state) {
-        node.setAttribute(Grammar.ATTRIBUTE, state);
+        node.setAttribute(ATTRIBUTE, state);
       }
     }
   }
@@ -405,7 +405,7 @@ function correctFont_(text: string, correction: string): string {
     return text;
   }
   correction =
-    Messages.MS_FUNC.FONT_REGEXP(Locale.localFont(correction));
+    Locale.MS_FUNC.FONT_REGEXP(localFont(correction));
   return text.replace(correction, '');
 }
 
@@ -429,7 +429,7 @@ function addAnnotation_(text: string, annotation: string): string {
  * @return The untranslated text.
  */
 function noTranslateText_(text: string): string {
-  if (text.match(new RegExp('^[' + Messages.REGEXP.TEXT + ']+$'))) {
+  if (text.match(new RegExp('^[' + Locale.REGEXP.TEXT + ']+$'))) {
     Grammar.getInstance().currentFlags['translate'] = false;
   }
   return text;
@@ -437,6 +437,5 @@ function noTranslateText_(text: string): string {
 
 Grammar.getInstance().setCorrection('ignoreFont', correctFont_);
 Grammar.getInstance().setPreprocessor('annotation', addAnnotation_);
-Grammar.getInstance().setPreprocessor(
-  'noTranslateText', noTranslateText_);
+Grammar.getInstance().setPreprocessor('noTranslateText', noTranslateText_);
 Grammar.getInstance().setCorrection('ignoreCaps', correctFont_);

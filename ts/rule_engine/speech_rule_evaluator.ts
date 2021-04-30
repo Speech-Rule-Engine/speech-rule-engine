@@ -22,49 +22,44 @@
  * @author dtseng@google.com (David Tseng)
  */
 
+import {AuditoryDescription} from '../audio/auditory_description';
+
 
 export interface SpeechRuleEvaluator {
-  evaluateDefault: any;
 
+  /**
+   * Default evaluation of a node if no speech rule is applicable.
+   * @param node The target node (or root of subtree).
+   * @return The resulting description.
+   */
+  evaluateDefault(node: Element): void;
 
-  evaluateWhitespace: any;
+  /**
+   * Default evaluation of a whitespace string.
+   * @param str The string.
+   * @return The resulting description.
+   */
+  evaluateWhitespace(str: string): AuditoryDescription[];
 
+  /**
+   * Default evaluation of a string string.
+   * @param str The string.
+   * @return The resulting description.
+   */
+  evaluateString(str: string): AuditoryDescription[];
 
-  evaluateString: any;
+  /**
+   * Custom evaluation of a string.
+   * @param str The string.
+   * @return The resulting description.
+   */
+  evaluateCustom(str: string): AuditoryDescription[];
 
+  /**
+   * Default evaluation of a character.
+   * @param chr The character.
+   * @return The resulting description.
+   */
+  evaluateCharacter(str: string): AuditoryDescription[];
 
-  evaluateCustom: any;
-
-
-  evaluateCharacter: any;
 }
-/**
- * Default evaluation of a node if no speech rule is applicable.
- * @param node The target node (or root of subtree).
- * @return The resulting description.
- */
-SpeechRuleEvaluator.prototype.evaluateDefault = goog.abstractMethod;
-/**
- * Default evaluation of a whitespace string.
- * @param str The string.
- * @return The resulting description.
- */
-SpeechRuleEvaluator.prototype.evaluateWhitespace = goog.abstractMethod;
-/**
- * Default evaluation of a string string.
- * @param str The string.
- * @return The resulting description.
- */
-SpeechRuleEvaluator.prototype.evaluateString = goog.abstractMethod;
-/**
- * Custom evaluation of a string.
- * @param str The string.
- * @return The resulting description.
- */
-SpeechRuleEvaluator.prototype.evaluateCustom = goog.abstractMethod;
-/**
- * Default evaluation of a character.
- * @param chr The character.
- * @return The resulting description.
- */
-SpeechRuleEvaluator.prototype.evaluateCharacter = goog.abstractMethod;

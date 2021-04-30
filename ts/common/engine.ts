@@ -298,6 +298,7 @@ export namespace EngineConst {
     HTTP = 'http'
   }
 
+  // TODO (TS): Moves those to auditory_descriptions.
   /**
    * Defines the basic personality Properties available.
    */
@@ -309,6 +310,10 @@ export namespace EngineConst {
     JOIN = 'join'
   }
 
+  export const personalityPropList: personalityProps[] = [
+    personalityProps.PITCH, personalityProps.RATE, personalityProps.VOLUME,
+    personalityProps.PAUSE, personalityProps.JOIN
+  ];
 
   /**
    * Defines to what level the engine enriches expressions with speech string

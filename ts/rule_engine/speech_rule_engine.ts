@@ -208,7 +208,7 @@ export class SpeechRuleEngine {
             if (Array.isArray(selected)) {
               descrs = selected.map(function(span) {
                 return AuditoryDescription.create(
-                    {text: span.string, attributes: span.attributes},
+                    {text: span.speech, attributes: span.attributes},
                     {adjust: true});
               });
             } else {

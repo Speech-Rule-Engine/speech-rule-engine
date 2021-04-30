@@ -30,9 +30,11 @@ import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util'
 import {Walker} from '../walker/walker';
 import * as WalkerFactory from '../walker/walker_factory';
 import * as WalkerUtil from '../walker/walker_util';
+import {XmlRenderer} from '../audio/xml_renderer';
+import {AuralRendering} from '../audio/aural_rendering';
+import * as DomUtil from './dom_util';
 
-import * as EngineExports from './engine';
-import {Engine} from './engine';
+import {Engine, EngineConst} from './engine';
 import {KeyCode} from './event_util';
 
 
@@ -226,12 +228,12 @@ goog.inherits(KeyProcessor, Processor);
 //  semantic: XML of semantic tree.
 new Processor('semantic', {
   processor: function(expr) {
-    let mml = sre.DomUtil.parseInput(expr);
+    let mml = DomUtil.parseInput(expr);
     return Semantic.xmlTree(mml);
   },
   postprocessor: function(xml, expr) {
     let setting = Engine.getInstance().speech;
-    if (setting === Engine.Speech.NONE) {
+    if (setting === EngineConst.Speech.NONE) {
       return xml;
     }
     // This avoids temporary attributes (e.g., for grammar) to bleed into
@@ -239,7 +241,7 @@ new Processor('semantic', {
     let clone = xml.cloneNode(true);
     let speech = SpeechGeneratorUtil.computeMarkup(clone);
     let aural = sre.AuralRendering.getInstance();
-    if (setting === Engine.Speech.SHALLOW) {
+    if (setting === EngineConst.Speech.SHALLOW) {
       xml.setAttribute('speech', aural.finalize(speech));
       return xml;
     }
@@ -252,7 +254,7 @@ new Processor('semantic', {
     return xml;
   },
   pprint: function(tree) {
-    return sre.DomUtil.formatXml(tree.toString());
+    return DomUtil.formatXml(tree.toString());
   }
 });
 
@@ -260,17 +262,16 @@ new Processor('semantic', {
 //  speech: Aural rendering string.
 new Processor('speech', {
   processor: function(expr) {
-    let mml = sre.DomUtil.parseInput(expr);
+    let mml = DomUtil.parseInput(expr);
     let xml = Semantic.xmlTree(mml);
     let descrs = SpeechGeneratorUtil.computeSpeech(xml);
-    let aural = sre.AuralRendering.getInstance();
-    return aural.finalize(aural.markup(descrs));
+    return AuralRendering.finalize(AuralRendering.markup(descrs));
   },
   pprint: function(speech) {
     let str = speech.toString();
     // Pretty Printing wrt. markup renderer.
-    return sre.AuralRendering.ofType(sre.XmlRenderer) ?
-        sre.DomUtil.formatXml(str) :
+    return AuralRendering.isXml(XmlRenderer) ?
+        DomUtil.formatXml(str) :
         str;
   }
 });
@@ -279,20 +280,20 @@ new Processor('speech', {
 //  json: Json version of the semantic tree.
 new Processor('json', {
   processor: function(expr) {
-    let mml = sre.DomUtil.parseInput(expr);
+    let mml = DomUtil.parseInput(expr);
     let stree = Semantic.getTree(mml);
     return stree.toJson();
   },
   postprocessor: function(json, expr) {
     let setting = Engine.getInstance().speech;
-    if (setting === Engine.Speech.NONE) {
+    if (setting === EngineConst.Speech.NONE) {
       return json;
     }
-    let mml = sre.DomUtil.parseInput(expr);
+    let mml = DomUtil.parseInput(expr);
     let xml = Semantic.xmlTree(mml);
     let speech = SpeechGeneratorUtil.computeMarkup(xml);
     let aural = sre.AuralRendering.getInstance();
-    if (setting === Engine.Speech.SHALLOW) {
+    if (setting === EngineConst.Speech.SHALLOW) {
       json.stree.speech = aural.finalize(speech);
       return json;
     }
@@ -318,7 +319,7 @@ new Processor('json', {
 //  description: List of auditory descriptions.
 new Processor('description', {
   processor: function(expr) {
-    let mml = sre.DomUtil.parseInput(expr);
+    let mml = DomUtil.parseInput(expr);
     let xml = Semantic.xmlTree(mml);
     let descrs = SpeechGeneratorUtil.computeSpeech(xml);
     return descrs;
@@ -338,13 +339,13 @@ new Processor('enriched', {
   postprocessor: function(enr, expr) {
     let root = WalkerUtil.getSemanticRoot(enr);
     switch (Engine.getInstance().speech) {
-      case Engine.Speech.NONE:
+      case EngineConst.Speech.NONE:
         break;
-      case Engine.Speech.SHALLOW:
+      case EngineConst.Speech.SHALLOW:
         let generator = SpeechGeneratorFactory.generator('Adhoc');
         generator.getSpeech(root, enr);
         break;
-      case Engine.Speech.DEEP:
+      case EngineConst.Speech.DEEP:
         generator = SpeechGeneratorFactory.generator('Tree');
         generator.getSpeech(root, enr);
         break;
@@ -354,7 +355,7 @@ new Processor('enriched', {
     return enr;
   },
   pprint: function(tree) {
-    return sre.DomUtil.formatXml(tree.toString());
+    return DomUtil.formatXml(tree.toString());
   }
 });
 new Processor('walker', {

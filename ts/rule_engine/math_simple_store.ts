@@ -33,11 +33,13 @@ import {SpeechRule} from './speech_rule';
 
 
 
-/**
- * A base store for simple Math objects.
- */
 export class MathSimpleStore extends sre.MathStore {
+
   category: string = '';
+
+  /**
+   * A base store for simple Math objects.
+   */
   constructor() {
     super();
   }
