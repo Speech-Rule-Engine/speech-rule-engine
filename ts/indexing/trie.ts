@@ -31,6 +31,7 @@
 import {SpeechRule} from '../rule_engine/speech_rule';
 import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
 import {SpeechRuleStore} from '../rule_engine/speech_rule_store';
+import {BaseRuleStore} from '../rule_engine/base_rule_store';
 import {StaticTrieNode} from './abstract_trie_node';
 import {TrieNode, TrieNodeKind} from './trie_node';
 import {getNode} from './trie_node_factory';
@@ -102,7 +103,7 @@ export class Trie {
   /**
    * @param store The store the trie belongs to.
    */
-  constructor(public store: SpeechRuleStore) {
+  constructor(public store: BaseRuleStore) {
     this.root = getNode(TrieNodeKind.ROOT, '', this.store.context);
   }
 

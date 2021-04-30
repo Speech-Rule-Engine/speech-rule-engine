@@ -32,7 +32,7 @@ export interface SpeechRuleEvaluator {
    * @param node The target node (or root of subtree).
    * @return The resulting description.
    */
-  evaluateDefault(node: Element): void;
+  evaluateDefault(node: Node): void;
 
   /**
    * Default evaluation of a whitespace string.
@@ -53,13 +53,13 @@ export interface SpeechRuleEvaluator {
    * @param str The string.
    * @return The resulting description.
    */
-  evaluateCustom(str: string): AuditoryDescription[];
+  evaluateCustom(str: string): AuditoryDescription;
 
   /**
    * Default evaluation of a character.
    * @param chr The character.
    * @return The resulting description.
    */
-  evaluateCharacter(str: string): AuditoryDescription[];
+  evaluateCharacter(str: string): AuditoryDescription;
 
 }

@@ -22,35 +22,37 @@
 
 import * as BaseUtil from '../common/base_util';
 import {en} from '../l10n/locale_en';
-import * as Messages from '../l10n/messages';
+import {Locale} from '../l10n/messages';
+import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
+import {BaseRuleStore, RulesJson} from './base_rule_store';
+import {Action, OutputError, SpeechRule} from './speech_rule';
 
-import {BaseRuleStore} from './base_rule_store';
-import {SpeechRule} from './speech_rule';
 
+export class MathStore extends BaseRuleStore {
 
+  /**
+   * A list of annotators and visitors.
+   */
+  public annotators: string[] = [];
 
-/**
- * A store for Math rules.
- */
-export class MathStore extends sre.BaseRuleStore {
-  annotators: string[] = [];
-  initialized: any;
+  /**
+   * A store for Math rules.
+   */
   constructor() {
     super();
 
-    this.parseMethods['Alias'] = goog.bind(this.defineRuleAlias, this);
-    this.parseMethods['Aliases'] = goog.bind(this.defineRulesAlias, this);
-    this.parseMethods['UniqueAlias'] =
-        goog.bind(this.defineUniqueRuleAlias, this);
+    this.parseMethods['Alias'] = this.defineRuleAlias.bind(this);
+    this.parseMethods['Aliases'] = this.defineRulesAlias.bind(this);
+    this.parseMethods['UniqueAlias'] = this.defineUniqueRuleAlias.bind(this);
     this.parseMethods['SpecializedRule'] =
-        goog.bind(this.defineSpecialisedRule, this);
+      this.defineSpecialisedRule.bind(this);
   }
 
 
   /**
    * @override
    */
-  initialize() {
+  public initialize() {
     if (this.initialized) {
       return;
     }
@@ -63,9 +65,9 @@ export class MathStore extends sre.BaseRuleStore {
   /**
    * Activates annotators.
    */
-  annotations() {
+  public annotations() {
     for (let i = 0, annotator; annotator = this.annotators[i]; i++) {
-      sre.SemanticAnnotations.getInstance().activate(this.domain, annotator);
+      SemanticAnnotations.activate(this.domain, annotator);
     }
   }
 
@@ -75,19 +77,18 @@ export class MathStore extends sre.BaseRuleStore {
    * @param name The name of the rule.
    * @param dynamic A math domain and style assignment.
    * @param query Precondition query of the rule.
-   * @param var_args Additional static precondition constraints.
+   * @param args Additional static precondition constraints.
    */
-  defineUniqueRuleAlias(
-      name: string, dynamic: string, query: string, ...var_args: string[]) {
+  public defineUniqueRuleAlias(
+      name: string, dynamic: string, query: string, ...args: string[]) {
     let dynamicCstr = this.parseCstr(dynamic);
-    let rule = this.findRule(goog.bind(function(rule) {
-      return rule.name == name && dynamicCstr.equal(rule.dynamicCstr);
-    }, this));
+    let rule = this.findRule(
+        rule => rule.name === name && dynamicCstr.equal(rule.dynamicCstr));
     if (!rule) {
-      throw new SpeechRule.OutputError(
+      throw new OutputError(
           'Rule named ' + name + ' with style ' + dynamic + ' does not exist.');
     }
-    this.addAlias_(rule, query, Array.prototype.slice.call(arguments, 3));
+    this.addAlias_(rule, query, args);
   }
 
 
@@ -99,17 +100,17 @@ export class MathStore extends sre.BaseRuleStore {
    * Adds an alias for an existing rule.
    * @param name The name of the rule.
    * @param query Precondition query of the rule.
-   * @param var_args Additional static precondition constraints.
+   * @param args Additional static precondition constraints.
    */
-  defineRuleAlias(name: string, query: string, ...var_args: string[]) {
+  public defineRuleAlias(name: string, query: string, ...args: string[]) {
     let rule = this.findRule(function(rule) {
-      return rule.name == name;
+      return rule.name === name;
     });
     if (!rule) {
-      throw new SpeechRule.OutputError(
+      throw new OutputError(
           'Rule with named ' + name + ' does not exist.');
     }
-    this.addAlias_(rule, query, Array.prototype.slice.call(arguments, 2));
+    this.addAlias_(rule, query, args);
   }
 
 
@@ -117,19 +118,18 @@ export class MathStore extends sre.BaseRuleStore {
    * Adds an alias for an existing rule.
    * @param name The name of the rule.
    * @param query Precondition query of the rule.
-   * @param var_args Additional static precondition constraints.
+   * @param args Additional static precondition constraints.
    */
-  defineRulesAlias(name: string, query: string, ...var_args: string[]) {
+  public defineRulesAlias(name: string, query: string, ...args: string[]) {
     let rules = this.findAllRules(function(rule) {
-      return rule.name == name;
+      return rule.name === name;
     });
-    if (rules.length == 0) {
-      throw new SpeechRule.OutputError(
+    if (rules.length === 0) {
+      throw new OutputError(
           'Rule with name ' + name + ' does not exist.');
     }
-    let cstrList = Array.prototype.slice.call(arguments, 2);
-    let keep = [];
-    let findKeep = function(rule) {
+    let keep: {cstr: string, action: string}[] = [];
+    let findKeep = (rule: SpeechRule) => {
       let cstr = rule.dynamicCstr.toString();
       let action = rule.action.toString();
       for (let i = 0, k; k = keep[i]; i++) {
@@ -140,26 +140,11 @@ export class MathStore extends sre.BaseRuleStore {
       keep.push({cstr: cstr, action: action});
       return true;
     };
-    rules.forEach(goog.bind(function(rule) {
+    rules.forEach((rule) => {
       if (findKeep(rule)) {
-        this.addAlias_(rule, query, cstrList);
+        this.addAlias_(rule, query, args);
       }
-    }, this));
-  }
-
-
-  /**
-   * Adds a new speech rule as alias of the given rule.
-   * @param rule The existing rule.
-   * @param query Precondition query of the rule.
-   * @param cstrList List of additional constraints.
-   */
-  private addAlias_(rule: SpeechRule, query: string, cstrList: string[]) {
-    let prec = this.parsePrecondition(query, cstrList);
-    let newRule =
-        new SpeechRule(rule.name, rule.dynamicCstr, prec, rule.action);
-    newRule.name = rule.name;
-    this.addRule(newRule);
+    });
   }
 
 
@@ -172,21 +157,20 @@ export class MathStore extends sre.BaseRuleStore {
    * @param newDynamic The new math domain and style assignment.
    * @param opt_action String version of the speech rule.
    */
-  defineSpecialisedRule(
+  public defineSpecialisedRule(
       name: string, oldDynamic: string, newDynamic: string,
       opt_action?: string) {
     let dynamicCstr = this.parseCstr(oldDynamic);
-    let rule = this.findRule(goog.bind(function(rule) {
-      return rule.name == name && dynamicCstr.equal(rule.dynamicCstr);
-    }, this));
+    let rule = this.findRule(
+      rule => rule.name === name && dynamicCstr.equal(rule.dynamicCstr));
     if (!rule) {
-      throw new SpeechRule.OutputError(
+      throw new OutputError(
           'Rule named ' + name + ' with style ' + oldDynamic +
           ' does not exist.');
     }
     let newCstr = this.parseCstr(newDynamic);
     let action =
-        opt_action ? SpeechRule.Action.fromString(opt_action) : rule.action;
+        opt_action ? Action.fromString(opt_action) : rule.action;
     let newRule = new SpeechRule(rule.name, newCstr, rule.precondition, action);
     this.addRule(newRule);
   }
@@ -199,7 +183,7 @@ export class MathStore extends sre.BaseRuleStore {
    * words, numbers, etc. and creates the appropriate auditory descriptions.
    * @override
    */
-  evaluateString(str) {
+  public evaluateString(str: string) {
     let descs = new Array();
     if (str.match(/^\s+$/)) {
       // Nothing but whitespace: Ignore.
@@ -213,9 +197,9 @@ export class MathStore extends sre.BaseRuleStore {
     }
     let split = BaseUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
     for (let i = 0, s; s = split[i]; i++) {
-      if (s.length == 1) {
+      if (s.length === 1) {
         descs.push(this.evaluateCharacter(s));
-      } else if (s.match(new RegExp('^[' + Messages.REGEXP.TEXT + ']+$'))) {
+      } else if (s.match(new RegExp('^[' + Locale.REGEXP.TEXT + ']+$'))) {
         descs.push(this.evaluateCharacter(s));
       } else {
         // Break up string even further wrt. symbols vs alphanum substrings.
@@ -223,7 +207,7 @@ export class MathStore extends sre.BaseRuleStore {
         while (rest) {
           num = this.matchNumber_(rest);
           let alpha =
-              rest.match(new RegExp('^[' + Messages.REGEXP.TEXT + ']+'));
+              rest.match(new RegExp('^[' + Locale.REGEXP.TEXT + ']+'));
           if (num) {
             descs.push(this.evaluateCharacter(num.number));
             rest = rest.substring(num.length);
@@ -244,13 +228,37 @@ export class MathStore extends sre.BaseRuleStore {
 
 
   /**
+   * @override
+   */
+  public parse(ruleSet: RulesJson) {
+    super.parse(ruleSet);
+    this.annotators = (ruleSet['annotators'] || [] as string[]);
+  }
+
+
+  /**
+   * Adds a new speech rule as alias of the given rule.
+   * @param rule The existing rule.
+   * @param query Precondition query of the rule.
+   * @param cstrList List of additional constraints.
+   */
+  private addAlias_(rule: SpeechRule, query: string, cstrList: string[]) {
+    let prec = this.parsePrecondition(query, cstrList);
+    let newRule =
+        new SpeechRule(rule.name, rule.dynamicCstr, prec, rule.action);
+    newRule.name = rule.name;
+    this.addRule(newRule);
+  }
+
+
+  /**
    * Matches a number with respect to locale. If it discovers it is a number in
    * English writing, it will attempt to translate it.
    * @param str The string to match.
    * @return The number and its length.
    */
   private matchNumber_(str: string): {number: string, length: number}|null {
-    let locNum = str.match(new RegExp('^' + Messages.REGEXP.NUMBER));
+    let locNum = str.match(new RegExp('^' + Locale.REGEXP.NUMBER));
     let enNum = str.match(new RegExp('^' + en.REGEXP.NUMBER));
     if (!locNum && !enNum) {
       return null;
@@ -260,24 +268,15 @@ export class MathStore extends sre.BaseRuleStore {
     if (isLoc) {
       return locNum ? {number: locNum[0], length: locNum[0].length} : null;
     }
-    let number =
+    let num =
         enNum[0]
             .replace(new RegExp(en.REGEXP.DIGIT_GROUP, 'g'), 'X')
             .replace(
                 new RegExp(en.REGEXP.DECIMAL_MARK, 'g'),
-                Messages.REGEXP.DECIMAL_MARK)
-            .replace(/X/g, Messages.REGEXP.DIGIT_GROUP.replace(/\\/g, ''));
-    return {number: number, length: enNum[0].length};
+                Locale.REGEXP.DECIMAL_MARK)
+            .replace(/X/g, Locale.REGEXP.DIGIT_GROUP.replace(/\\/g, ''));
+    return {number: num, length: enNum[0].length};
   }
 
-
-  /**
-   * @override
-   */
-  parse(ruleSet) {
-    super.parse(ruleSet);
-    this.annotators = (ruleSet['annotators'] || [] as string[]);
-  }
 }
 
-goog.inherits(MathStore, BaseRuleStore);

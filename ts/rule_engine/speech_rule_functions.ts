@@ -128,7 +128,7 @@ export class ContextFunctions extends FunctionsStore<ContextFunction> {
 
 }
 
-export type CustomGenerator = () => string[];
+export type CustomGenerator = (store?: any) => string[];
 
 export class CustomGenerators extends FunctionsStore<CustomGenerator> {
 
