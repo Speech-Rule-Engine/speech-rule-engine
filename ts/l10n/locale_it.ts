@@ -211,7 +211,7 @@ export const it: Messages = {
 
   UNIT_TIMES: '',
 
-  SI: function(prefix, unit) {
+  SI: function(prefix: string, unit: string) {
     return prefix + unit;
   },
 

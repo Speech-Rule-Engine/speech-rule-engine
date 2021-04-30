@@ -24,7 +24,7 @@ import * as StoreUtil from '../rule_engine/store_util';
 import * as ClearspeakUtil from './clearspeak_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NumbersUtil from './numbers_util';
-import {SpeechRules} from './speech_rules';
+import SpeechRules from './speech_rules';
 
 
 /**
@@ -32,7 +32,7 @@ import {SpeechRules} from './speech_rules';
  */
 export function ClearspeakRules() {
   // Basic English
-  SpeechRules.getInstance().addStore('en.speech.clearspeak', '', {
+  SpeechRules.addStore('en.speech.clearspeak', '', {
     'CTFpauseSeparator': StoreUtil.pauseSeparator,
     'CTFnodeCounter': ClearspeakUtil.nodeCounter,
     'CTFcontentIterator': StoreUtil.contentIterator,
@@ -57,10 +57,10 @@ export function ClearspeakRules() {
   });
 
   // French
-  SpeechRules.getInstance().addStore(
+  SpeechRules.addStore(
       'fr.speech.clearspeak', 'en.speech.clearspeak', {});
 
   // German
-  SpeechRules.getInstance().addStore(
+  SpeechRules.addStore(
       'de.speech.clearspeak', 'en.speech.clearspeak', {});
 }

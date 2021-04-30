@@ -22,6 +22,10 @@
 // This work was sponsored by TextHelp
 //
 
+import MathspeakUtil from './mathspeak_util';
+
+
+namespace MathspeakFrenchUtil {
 
 /**
  * Predicate to decide if a root has a small index, i.e., between 1 and 10.
@@ -49,7 +53,7 @@ export function smallRoot(node: Node): Node[] {
  * @return The prefix string.
  */
 export function baselineVerbose(node: Node): string {
-  let baseline = sre.MathspeakUtil.baselineVerbose(node);
+  let baseline = MathspeakUtil.baselineVerbose(node);
   return baseline.replace(/\-$/, '');
 }
 
@@ -60,7 +64,7 @@ export function baselineVerbose(node: Node): string {
  * @return The prefix string.
  */
 export function baselineBrief(node: Node): string {
-  let baseline = sre.MathspeakUtil.baselineBrief(node);
+  let baseline = MathspeakUtil.baselineBrief(node);
   return baseline.replace(/\-$/, '');
 }
 
@@ -71,7 +75,7 @@ export function baselineBrief(node: Node): string {
  * @return The prefix string.
  */
 export function leftSuperscriptVerbose(node: Node): string {
-  let leftIndex = sre.MathspeakUtil.superscriptVerbose(node);
+  let leftIndex = MathspeakUtil.superscriptVerbose(node);
   return leftIndex.replace(/^exposant/, 'exposant gauche');
 }
 
@@ -82,7 +86,7 @@ export function leftSuperscriptVerbose(node: Node): string {
  * @return The prefix string.
  */
 export function leftSubscriptVerbose(node: Node): string {
-  let leftIndex = sre.MathspeakUtil.subscriptVerbose(node);
+  let leftIndex = MathspeakUtil.subscriptVerbose(node);
   return leftIndex.replace(/^indice/, 'indice gauche');
 }
 
@@ -93,7 +97,7 @@ export function leftSubscriptVerbose(node: Node): string {
  * @return The prefix string.
  */
 export function leftSuperscriptBrief(node: Node): string {
-  let leftIndex = sre.MathspeakUtil.superscriptBrief(node);
+  let leftIndex = MathspeakUtil.superscriptBrief(node);
   return leftIndex.replace(/^sup/, 'sup gauche');
 }
 
@@ -104,6 +108,10 @@ export function leftSuperscriptBrief(node: Node): string {
  * @return The prefix string.
  */
 export function leftSubscriptBrief(node: Node): string {
-  let leftIndex = sre.MathspeakUtil.subscriptBrief(node);
+  let leftIndex = MathspeakUtil.subscriptBrief(node);
   return leftIndex.replace(/^sub/, 'sub gauche');
 }
+
+}
+
+export default MathspeakFrenchUtil;

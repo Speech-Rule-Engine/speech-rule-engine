@@ -23,8 +23,10 @@
 //
 
 
-import * as Messages from '../l10n/messages';
+import {Locale} from '../l10n/messages';
 
+
+namespace MathspeakSpanishUtil {
 
 /**
  * Simple counter function for counting ordinals.
@@ -32,10 +34,10 @@ import * as Messages from '../l10n/messages';
  * @param context The context string.
  * @return The context function returning ordinals.
  */
-export function ordinalCounter(node: Node, context: string): () => string {
+export function ordinalCounter(_node: Element, context: string): () => string {
   let counter = 0;
   return function() {
-    return Messages.NUMBERS.numberToOrdinal(++counter, false) + ' ' + context;
+    return Locale.NUMBERS.numberToOrdinal(++counter, false) + ' ' + context;
   };
 }
 
@@ -46,7 +48,7 @@ export function ordinalCounter(node: Node, context: string): () => string {
  * @return The list with the given node, if it is a root with a
  *     small index.
  */
-export function smallRoot(node: Node): Node[] {
+export function smallRoot(node: Element): Element[] {
   if (!node.childNodes || node.childNodes.length === 0 ||
       !node.childNodes[0].childNodes) {
     return [];
@@ -55,6 +57,10 @@ export function smallRoot(node: Node): Node[] {
   if (!/^\d+$/.test(index)) {
     return [];
   }
-  let number = parseInt(index, 10);
-  return number > 1 && number <= 10 ? [node] : [];
+  let num = parseInt(index, 10);
+  return num > 1 && num <= 10 ? [node] : [];
 }
+
+}
+
+export default MathspeakSpanishUtil;

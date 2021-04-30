@@ -19,12 +19,17 @@
  */
 
 
-export class SpeechRules {
+import {Axis, DynamicCstr} from '../rule_engine/dynamic_cstr';
+
+
+namespace SpeechRules {
+
+  // TODO (TS): Move this to Map.
   /**
    * Mapping for context functions: The store maps constraint strings to
    * dictionaries of context functions.
    */
-  store: {[key: string]: {[key: string]: Function}} = {};
+  export const store: {[key: string]: {[key: string]: Function}} = {};
 
 
   /**
@@ -34,7 +39,8 @@ export class SpeechRules {
    * @param store An individual mapping of names to context
    *     functions.
    */
-  addStore(constr: string, inherit: string, store: {[key: string]: Function}) {
+  export function addStore(
+      constr: string, inherit: string, store: {[key: string]: Function}) {
     let values = {};
     if (inherit) {
       let inherits = this.store[inherit] || {};
@@ -52,14 +58,14 @@ export class SpeechRules {
    * @return The store for the given constraints.
    */
   // TODO: Make this robust with dynamic constraints and defaults.
-  getStore(locale: string, modality: string, domain: string):
+  export function getStore(locale: string, modality: string, domain: string):
       {[key: string]: Function} {
     return this.store[[locale, modality, domain].join('.')] || this.store[[
-      sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE], modality,
+      DynamicCstr.DEFAULT_VALUES[Axis.LOCALE], modality,
       domain
     ].join('.')] ||
         {};
   }
 }
 
-goog.addSingletonGetter(SpeechRules);
+export default SpeechRules;

@@ -22,9 +22,7 @@
 
 import {ClearspeakRules} from './clearspeak_rules';
 import {MathspeakRules} from './mathspeak_rules';
-import {BrailleRules} from './other_rules';
-import {OtherRules} from './other_rules';
-import {PrefixRules} from './other_rules';
+import {BrailleRules, OtherRules, PrefixRules} from './other_rules';
 
 
 export let INIT_: boolean = false;

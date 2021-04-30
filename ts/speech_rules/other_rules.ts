@@ -24,6 +24,7 @@ import * as StoreUtil from '../rule_engine/store_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NemethUtil from './nemeth_util';
 import * as NumbersUtil from './numbers_util';
+import SpeechRules from './speech_rules';
 
 
 /**
@@ -31,7 +32,7 @@ import * as NumbersUtil from './numbers_util';
  */
 export function PrefixRules() {
   // Basic English
-  sre.SpeechRules.getInstance().addStore(
+  SpeechRules.addStore(
       'en.prefix.default', '',
       {'CSFordinalPosition': NumbersUtil.ordinalPosition});
 }
@@ -41,12 +42,12 @@ export function PrefixRules() {
  * Adds the custom functions for non-standard rule sets.
  */
 export function OtherRules() {
-  sre.SpeechRules.getInstance().addStore('en.speech.chromevox', '', {
+  SpeechRules.addStore('en.speech.chromevox', '', {
     'CTFnodeCounter': StoreUtil.nodeCounter,
     'CTFcontentIterator': StoreUtil.contentIterator
   });
 
-  sre.SpeechRules.getInstance().addStore(
+  SpeechRules.addStore(
       'en.speech.emacspeak', 'en.speech.chromevox', {
         'CQFvulgarFractionSmall': MathspeakUtil.isSmallVulgarFraction,
         'CSFvulgarFraction': NumbersUtil.vulgarFraction
@@ -54,13 +55,12 @@ export function OtherRules() {
 }
 
 
-
 /**
  * Adds the custom functions for the braille modality rules.
  */
 export function BrailleRules() {
   // Basic Nemeth
-  sre.SpeechRules.getInstance().addStore(
+  SpeechRules.addStore(
       'nemeth.braille.default', 'en.speech.mathspeak', {
         'CSFopenFraction': NemethUtil.openingFraction,
         'CSFcloseFraction': NemethUtil.closingFraction,

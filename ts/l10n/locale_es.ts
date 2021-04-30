@@ -220,7 +220,7 @@ export const es: Messages = {
     return unit + 'es';
   },
 
-  SI: function(prefix, unit) {
+  SI: function(prefix: string, unit: string) {
     if (unit.match(/^metro/)) {
       prefix = prefix.replace(/a$/, 'á').replace(/o$/, 'ó').replace(/i$/, 'í');
     }

@@ -23,29 +23,29 @@
 //
 
 
+import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
 import {MathStore} from './math_store';
-
 
 
 /**
  * Braille rule store.
  */
-export class BrailleStore extends sre.MathStore {
-  modality = 'braille';
+export class BrailleStore extends MathStore {
 
   /**
    * @override
    */
-  customTranscriptions = {'\u22ca': '⠈⠡⠳'};
-  constructor() {
-    super();
-  }
-
+  public modality = 'braille';
 
   /**
    * @override
    */
-  evaluateString(str) {
+  public customTranscriptions = {'\u22ca': '⠈⠡⠳'};
+
+  /**
+   * @override
+   */
+  public evaluateString(str: string) {
     let descs = [];
     let text = Array.from(str);
     for (let i = 0; i < text.length; i++) {
@@ -58,11 +58,9 @@ export class BrailleStore extends sre.MathStore {
   /**
    * @override
    */
-  annotations() {
+  public annotations() {
     for (let i = 0, annotator; annotator = this.annotators[i]; i++) {
-      sre.SemanticAnnotations.getInstance().activate(this.locale, annotator);
+      SemanticAnnotations.activate(this.locale, annotator);
     }
   }
 }
-
-goog.inherits(BrailleStore, MathStore);

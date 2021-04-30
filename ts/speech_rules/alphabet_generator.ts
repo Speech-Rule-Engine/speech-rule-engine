@@ -19,12 +19,12 @@
  *
  */
 
+import {Engine} from '../common/engine';
 import * as L10n from '../l10n/l10n';
-import {Combiner} from '../l10n/locale';
-import {Transformer} from '../l10n/locale';
-import * as Messages from '../l10n/messages';
-import {MathCompoundStore} from '../rule_engine/math_simple_store';
-import {SemanticUtil} from '../semantic_tree/semantic_util';
+import {Locale} from '../l10n/messages';
+import {Combiner, Transformer} from '../l10n/transformers';
+import {MathCompoundStore, UnicodeJson} from '../rule_engine/math_simple_store';
+import * as SemanticUtil from '../semantic_tree/semantic_util';
 
 
 /**
@@ -96,10 +96,11 @@ export const Domains_: {[key: string]: string[]} = {
  * Generates the domain combinations for the given locale.
  */
 export function makeDomains_() {
-  let prefs = Messages.ALPHABET_PREFIXES;
-  let trans = Messages.ALPHABET_TRANSFORMERS;
-  let combineKeys = function(obj1, obj2) {
-    let result = {};
+  let prefs = Locale.ALPHABET_PREFIXES;
+  let trans = Locale.ALPHABET_TRANSFORMERS;
+  let combineKeys = (obj1: {[key: string]: any},
+                     obj2: {[key: string]: any}) => {
+    let result: {[key: string]: boolean} = {};
     Object.keys(obj1).forEach(function(k) {
       result[k] = true;
     });
@@ -120,10 +121,10 @@ export function makeDomains_() {
  * @param store The current speech rule store.
  */
 export function generate(locale: string, store: MathCompoundStore) {
-  let oldLocale = sre.Engine.getInstance().locale;
-  sre.Engine.getInstance().locale = locale;
+  let oldLocale = Engine.getInstance().locale;
+  Engine.getInstance().locale = locale;
   L10n.setLocale();
-  store.addSymbolRules({locale: locale});
+  store.addSymbolRules({locale: locale} as UnicodeJson);
   makeDomains_();
   let intervals = INTERVALS;
   for (let i = 0, int; int = intervals[i]; i++) {
@@ -135,14 +136,25 @@ export function generate(locale: string, store: MathCompoundStore) {
       numberRules(
           store, keys, letters, int.font, int.category, int.offset || 0);
     } else {
-      let alphabet = Messages.ALPHABETS[int.base];
+      let alphabet = Locale.ALPHABETS[int.base];
       alphabetRules(
           store, keys, letters, alphabet, int.font, int.category,
           !!int.capital);
     }
   }
-  sre.Engine.getInstance().locale = oldLocale;
+  Engine.getInstance().locale = oldLocale;
   L10n.setLocale();
+}
+
+
+/**
+ * Translate number to string with at least four characters.
+ * @param num The number.
+ * @return The resulting string padded with 0 if necessary.
+ */
+function num2str(num: number): string {
+  let str = num.toString(16).toUpperCase();
+  return str.length > 3 ? str : ('000' + str).slice(-4);
 }
 
 
@@ -154,22 +166,19 @@ export function generate(locale: string, store: MathCompoundStore) {
  *      above interval.
  * @return The generated interval of Unicode characters.
  */
-export function makeInterval(
-    int: string[], subst: {[key: string]: string|boolean}): number[] {
-  let num2str = function(x) {
-    let str = i.toString(16).toUpperCase();
-    return str.length > 3 ? str : ('000' + str).slice(-4);
-  };
-  let start = parseInt(int[0], 16);
-  let end = parseInt(int[1], 16);
+export function makeInterval([a, b]: [string, string],
+                             subst: {[key: string]: string|boolean}): string[] {
+  let start = parseInt(a, 16);
+  let end = parseInt(b, 16);
   let result = [];
   for (let i = start; i <= end; i++) {
     let key = num2str(i);
     let sub = subst[key];
+    // TODO (TS): Check if this can be simplified by removing the boolean case.
     if (sub === false) {
       continue;
     }
-    key = subst[key] || key;
+    key = subst[key] as any || key;
     result.push(key);
   }
   return result;
@@ -185,9 +194,9 @@ export function makeInterval(
 export function getFont(font: string): {font: string, combiner: Combiner} {
   let realFont = font === 'normal' || font === 'fullwidth' ?
       '' :
-      Messages.FONT[font] || Messages.EMBELLISH[font] || '';
+      Locale.FONT[font] || Locale.EMBELLISH[font] || '';
   return typeof realFont === 'string' ?
-      {font: realFont, combiner: Messages.ALPHABET_COMBINER} :
+      {font: realFont, combiner: Locale.ALPHABET_COMBINER} :
       {font: realFont[0], combiner: realFont[1]};
 }
 
@@ -204,17 +213,17 @@ export function getFont(font: string): {font: string, combiner: Combiner} {
  * @param cap True if it is an alphabet of capitals.
  */
 export function alphabetRules(
-    store: MathCompoundStore, keys: number[], unicodes: string[],
+    store: MathCompoundStore, keys: string[], unicodes: string[],
     letters: string[], font: string, category: string, cap: boolean) {
   let realFont = getFont(font);
   for (let i = 0, key, unicode, letter;
        key = keys[i], unicode = unicodes[i], letter = letters[i]; i++) {
-    let prefixes = cap ? Messages.ALPHABET_PREFIXES.capPrefix :
-                         Messages.ALPHABET_PREFIXES.smallPrefix;
+    let prefixes = cap ? Locale.ALPHABET_PREFIXES.capPrefix :
+                         Locale.ALPHABET_PREFIXES.smallPrefix;
     let domains = cap ? Domains_.capital : Domains_.small;
     makeLetter(
         store, realFont.combiner, key, unicode, letter, realFont.font, prefixes,
-        category, Messages.ALPHABET_TRANSFORMERS.letter, domains);
+        category, Locale.ALPHABET_TRANSFORMERS.letter, domains);
   }
 }
 
@@ -230,15 +239,15 @@ export function alphabetRules(
  * @param offset The offset value for the initial number.
  */
 export function numberRules(
-    store: MathCompoundStore, keys: number[], unicodes: string[], font: string,
+    store: MathCompoundStore, keys: string[], unicodes: string[], font: string,
     category: string, offset: number) {
   let realFont = getFont(font);
   for (let i = 0, key, unicode; key = keys[i], unicode = unicodes[i]; i++) {
-    let prefixes = Messages.ALPHABET_PREFIXES.digitPrefix;
-    let number = i + offset;
+    let prefixes = Locale.ALPHABET_PREFIXES.digitPrefix;
+    let num = i + offset;
     makeLetter(
-        store, realFont.combiner, key, unicode, number, realFont.font, prefixes,
-        category, Messages.ALPHABET_TRANSFORMERS.digit, Domains_.digit);
+        store, realFont.combiner, key, unicode, num, realFont.font, prefixes,
+        category, Locale.ALPHABET_TRANSFORMERS.digit, Domains_.digit);
   }
 }
 
@@ -262,7 +271,7 @@ export function numberRules(
  *     transformers.
  */
 export function makeLetter(
-    store: MathCompoundStore, combiner: Combiner, key: number, unicode: string,
+    store: MathCompoundStore, combiner: Combiner, key: string, unicode: string,
     letter: string|number, font: string, prefixes: {[key: string]: string},
     category: string, transformers: {[key: string]: Transformer},
     domains: string[]) {
@@ -275,8 +284,9 @@ export function makeLetter(
         combiner(transformer(letter), font, prefix));
   }
 }
-type alphabet_ = {
-  interval: string[],
+
+export declare type Alphabet = {
+  interval: [string, string],
   base: Base,
   subst: {[key: string]: string|boolean},
   category: string,
@@ -284,13 +294,12 @@ type alphabet_ = {
   capital?: boolean,
   offset?: number
 };
-export {alphabet_};
 
 
 /**
  * Alphabet definitions by intervals and exceptions
  */
-export const INTERVALS: alphabet_[] = [
+export const INTERVALS: Alphabet[] = [
   // Latin
   {
     interval: ['1D400', '1D419'],

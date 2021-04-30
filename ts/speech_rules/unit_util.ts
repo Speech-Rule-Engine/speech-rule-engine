@@ -20,10 +20,12 @@
 
 
 import {AuditoryDescription} from '../audio/auditory_description';
-import * as XpathUtil from '../common/xpath_util';
-import * as Messages from '../l10n/messages';
+import XpathUtil from '../common/xpath_util';
+import {Locale} from '../l10n/messages';
 import {SemanticAttr} from '../semantic_tree/semantic_attr';
 
+
+namespace UnitUtil {
 
 /**
  * Iterates over the list of content nodes of a multiplication of units and
@@ -35,7 +37,7 @@ import {SemanticAttr} from '../semantic_tree/semantic_attr';
  *     the unit multiplied between two proper unit expressions, otherwise the
  *     empty string.
  */
-export function unitMultipliers(nodes: Node[], context: string): () =>
+export function unitMultipliers(nodes: Element[], _context: string): () =>
     AuditoryDescription[] {
   let children = nodes;
   let counter = 0;
@@ -44,7 +46,7 @@ export function unitMultipliers(nodes: Node[], context: string): () =>
         {
           text: rightMostUnit(children[counter]) &&
                   leftMostUnit(children[counter + 1]) ?
-              Messages.UNIT_TIMES :
+              Locale.UNIT_TIMES :
               ''
         },
         {});
@@ -54,7 +56,7 @@ export function unitMultipliers(nodes: Node[], context: string): () =>
 }
 
 
-export const SCRIPT_ELEMENTS: SemanticAttr.Type[] = [
+const SCRIPT_ELEMENTS: string[] = [
   SemanticAttr.Type.SUPERSCRIPT, SemanticAttr.Type.SUBSCRIPT,
   SemanticAttr.Type.OVERSCORE, SemanticAttr.Type.UNDERSCORE
 ];
@@ -65,15 +67,15 @@ export const SCRIPT_ELEMENTS: SemanticAttr.Type[] = [
  * @param node The node to test.
  * @return True if it is the right most unit in that subtree.
  */
-export function rightMostUnit(node: Node): boolean {
+export function rightMostUnit(node: Element): boolean {
   while (node) {
     if (node.getAttribute('role') === 'unit') {
       return true;
     }
     let tag = node.tagName;
     let children = XpathUtil.evalXPath('children/*', node);
-    node = SCRIPT_ELEMENTS.indexOf(tag) !== -1 ? children[0] :
-                                                 children[children.length - 1];
+    node = (SCRIPT_ELEMENTS.indexOf(tag) !== -1 ?
+      children[0] : children[children.length - 1]) as Element;
   }
   return false;
 }
@@ -82,13 +84,13 @@ export function rightMostUnit(node: Node): boolean {
  * @param node The node to test.
  * @return True if it is the left most unit in that subtree.
  */
-export function leftMostUnit(node: Node): boolean {
+export function leftMostUnit(node: Element): boolean {
   while (node) {
     if (node.getAttribute('role') === 'unit') {
       return true;
     }
     let children = XpathUtil.evalXPath('children/*', node);
-    node = children[0];
+    node = children[0] as Element;
   }
   return false;
 }
@@ -100,7 +102,7 @@ export function leftMostUnit(node: Node): boolean {
  *     next left in the subexpression containing node) is 1. Otherwise empty
  *     list.
  */
-export function oneLeft(node: Node): Node[] {
+export function oneLeft(node: Element): Element[] {
   while (node) {
     if (node.tagName === 'number' && node.textContent === '1') {
       return [node];
@@ -110,7 +112,11 @@ export function oneLeft(node: Node): Node[] {
             node.getAttribute('role') !== 'implicit') {
       return [];
     }
-    node = XpathUtil.evalXPath('children/*', node)[0];
+    node = XpathUtil.evalXPath('children/*', node)[0] as Element;
   }
   return [];
 }
+
+}
+
+export default UnitUtil;

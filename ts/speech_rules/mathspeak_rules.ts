@@ -19,13 +19,14 @@
  */
 
 
+import * as StoreUtil from '../rule_engine/store_util';
 import * as ClearspeakUtil from './clearspeak_util';
-import * as MathspeakFrenchUtil from './mathspeak_french_util';
-import * as MathspeakSpanishUtil from './mathspeak_spanish_util';
+import MathspeakFrenchUtil from './mathspeak_french_util';
+import MathspeakSpanishUtil from './mathspeak_spanish_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NumbersUtil from './numbers_util';
-import {SpeechRules} from './speech_rules';
-import * as UnitUtil from './unit_util';
+import SpeechRules from './speech_rules';
+import UnitUtil from './unit_util';
 
 
 /**
@@ -33,7 +34,7 @@ import * as UnitUtil from './unit_util';
  */
 export function MathspeakRules() {
   // Basic English
-  SpeechRules.getInstance().addStore('en.speech.mathspeak', '', {
+  SpeechRules.addStore('en.speech.mathspeak', '', {
     'CQFspaceoutNumber': MathspeakUtil.spaceoutNumber,
 
     'CQFspaceoutIdentifier': MathspeakUtil.spaceoutIdentifier,
@@ -83,7 +84,7 @@ export function MathspeakRules() {
     'CSFoverscript': MathspeakUtil.nestedOverscore,
     'CTFordinalCounter': NumbersUtil.ordinalCounter,
 
-    'CTFcontentIterator': sre.StoreUtil.contentIterator,
+    'CTFcontentIterator': StoreUtil.contentIterator,
     // Layout related.
     'CQFdetIsSimple': MathspeakUtil.determinantIsSimple,
 
@@ -97,7 +98,7 @@ export function MathspeakRules() {
   });
 
   // Spanish
-  SpeechRules.getInstance().addStore(
+  SpeechRules.addStore(
       'es.speech.mathspeak', 'en.speech.mathspeak', {
         'CQFisSmallRoot': MathspeakSpanishUtil.smallRoot,
         'CTFordinalCounter': MathspeakSpanishUtil.ordinalCounter,
@@ -106,7 +107,7 @@ export function MathspeakRules() {
       });
 
   // French
-  SpeechRules.getInstance().addStore(
+  SpeechRules.addStore(
       'fr.speech.mathspeak', 'en.speech.mathspeak', {
         'CQFisSmallRoot': MathspeakFrenchUtil.smallRoot,
         'CSFbaselineVerbose': MathspeakFrenchUtil.baselineVerbose,

@@ -26,8 +26,9 @@ import * as BaseUtil from '../common/base_util';
 import * as BrowserUtil from '../common/browser_util';
 import * as EngineExports from '../common/engine';
 import {Engine} from '../common/engine';
-import {SystemExternal} from '../common/system_external';
+import SystemExternal from '../common/system_external';
 import {MathCompoundStore} from '../rule_engine/math_simple_store';
+import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 
 import * as AlphabetGenerator from './alphabet_generator';
 
@@ -89,7 +90,7 @@ export class MathMap {
   loadLocale() {
     let locale = Engine.getInstance().locale;
     if (this.loaded_.indexOf(locale) === -1) {
-      sre.SpeechRuleEngine.getInstance().prune = true;
+      SpeechRuleEngine.getInstance().prune = true;
       this.retrieveMaps(locale);
       this.loaded_.push(locale);
     }
@@ -158,7 +159,7 @@ export class MathMap {
       if (info[1] !== 'rules') {
         json[key].forEach(this.addSymbols[info[1]]);
       } else {
-        sre.SpeechRuleEngine.getInstance().addStore(json[key]);
+        SpeechRuleEngine.getInstance().addStore(json[key]);
       }
     }
   }

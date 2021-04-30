@@ -400,7 +400,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     this.modality = ruleSet.modality || this.modality;
     this.locale = ruleSet.locale || this.locale;
     this.domain = ruleSet.domain || this.domain;
-    this.context.parse(ruleSet.functions || []);
+    // TODO (TS): Fix this to avoid casting!
+    this.context.parse(ruleSet.functions as any || []);
     this.parseRules(ruleSet.rules || []);
   }
 
@@ -488,7 +489,7 @@ export interface RulesJson {
   modality?: string;
   domain?: string;
   locale?: string;
-  functions?: any[];
+  functions?: {[key: string]: Function};
   rules?: any[];
   annotators?: any[];
 }

@@ -115,7 +115,7 @@ export class SpeechRuleContext {
     if (!expr) {
       return '';
     }
-    if (expr.charAt(0) == '"') {
+    if (expr.charAt(0) === '"') {
       return expr.slice(1, -1);
     }
     let func = this.customStrings.lookup(expr);

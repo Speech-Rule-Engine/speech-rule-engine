@@ -32,7 +32,7 @@ import {nemeth} from './locale_nemeth';
 import {Locale, Messages} from './messages';
 
 
-const locales: {[key: string]: Messages} = {
+export const locales: {[key: string]: Messages} = {
   'de': de,
   'en': en,
   'es': es,

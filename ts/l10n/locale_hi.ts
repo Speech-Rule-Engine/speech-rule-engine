@@ -185,7 +185,7 @@ export const hi: Messages = {
   },
 
   UNIT_TIMES: '',
-  
+
   PLURAL: function(unit: string) {
     return unit;
   },

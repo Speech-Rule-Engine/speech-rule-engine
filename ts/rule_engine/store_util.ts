@@ -19,6 +19,8 @@
  * @author sorge@google.com (Volker Sorge)
  */
 import {AuditoryDescription} from '../audio/auditory_description';
+import XpathUtil from '../common/xpath_util';
+import {SpeechRuleEngine} from './speech_rule_engine';
 
 
 /**
@@ -52,13 +54,14 @@ export function nodeCounter(nodes: Node[], context: string|null): () => string {
  * @return A closure that
  *     returns a personality description of a single pause.
  */
-export function pauseSeparator(nodes: Node[], context: string): () =>
+export function pauseSeparator(_nodes: Node[], context: string): () =>
     AuditoryDescription[] {
   let numeral = parseFloat(context);
   let value = isNaN(numeral) ? context : numeral;
   return function() {
-    return [sre.AuditoryDescription.create(
-        {text: '', personality: {pause: value}})];
+    return [AuditoryDescription.create(
+        {text: '', personality: {pause: value as string}})];
+    // TODO (TS): This cast to string is wrong and should be fixed.
   };
 }
 
@@ -71,22 +74,24 @@ export function pauseSeparator(nodes: Node[], context: string): () =>
  *     the content of the next content node. Returns only context string if list
  *     is exhausted.
  */
-export function contentIterator(nodes: Node[], context: string): () =>
+export function contentIterator(nodes: Element[], context: string): () =>
     AuditoryDescription[] {
+  let contentNodes: Element[];
   if (nodes.length > 0) {
-    let contentNodes = sre.XpathUtil.evalXPath('../../content/*', nodes[0]);
+    contentNodes =
+        XpathUtil.evalXPath('../../content/*', nodes[0]) as Element[];
   } else {
-    let contentNodes = [];
+    contentNodes = [];
   }
   return function() {
     let content = contentNodes.shift();
     let contextDescr = context ?
-        [sre.AuditoryDescription.create({text: context}, {translate: true})] :
+        [AuditoryDescription.create({text: context}, {translate: true})] :
         [];
     if (!content) {
       return contextDescr;
     }
-    let descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(content);
+    let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
     return contextDescr.concat(descrs);
   };
 }

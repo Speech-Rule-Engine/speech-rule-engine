@@ -18,9 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Engine} from '../common/engine';
+import {Engine, EngineConst} from '../common/engine';
 import {DynamicCstr} from '../rule_engine/dynamic_cstr';
-import {Axis, AxisMap, AxisProperties, DynamicCstrParser, DynamicProperties, DefaultComparator} from '../rule_engine/dynamic_cstr';
+import {Axis, AxisMap, AxisProperties, DynamicCstrParser,
+        DynamicProperties, DefaultComparator} from '../rule_engine/dynamic_cstr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {SemanticAttr} from '../semantic_tree/semantic_attr';
 
@@ -216,7 +217,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     let smart = ClearspeakPreferences.relevantPreferences(
         explorer.walker.getFocus().getSemanticPrimary());
     // var smart = 'Bar'; // TODO: Lookup the right preference.
-    let previous = Engine.DOMAIN_TO_STYLES['clearspeak'];
+    let previous = EngineConst.DOMAIN_TO_STYLES['clearspeak'];
     let items = [
       {
         type: 'radio',

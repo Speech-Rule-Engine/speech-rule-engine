@@ -35,7 +35,7 @@ export interface Messages {
   NAVIGATE: {[key: string]: string};
   REGEXP: {[key: string]: string};
   PLURAL: tr.Transformer;
-  SI: tr.Combiner;
+  SI: tr.SiCombiner;
   UNIT_TIMES: string;
   NUMBERS: Numbers;
   ALPHABETS: {[key: string]: string[]};

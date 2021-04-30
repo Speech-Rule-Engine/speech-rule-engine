@@ -20,7 +20,7 @@
 
 
 import {Span} from '../audio/span';
-import * as Messages from '../l10n/messages';
+import {Locale} from '../l10n/messages';
 
 
 
@@ -31,10 +31,10 @@ import * as Messages from '../l10n/messages';
  * @param context The context string.
  * @return The context function returning ordinals.
  */
-export function ordinalCounter(node: Node, context: string): () => string {
+export function ordinalCounter(_node: Node, context: string): () => string {
   let counter = 0;
   return function() {
-    return Messages.NUMBERS.simpleOrdinal(++counter) + ' ' + context;
+    return Locale.NUMBERS.simpleOrdinal(++counter) + ' ' + context;
   };
 }
 
@@ -49,13 +49,14 @@ export function ordinalCounter(node: Node, context: string): () => string {
  *           enumerator: number}} If convertible denominator and
  *     enumerator are set. Otherwise only the text content is given.
  */
-export function convertVulgarFraction_(node: Node):
+export function convertVulgarFraction_(node: Element):
     {convertible: boolean, content: string}|
     {convertible: boolean, denominator: number, enumerator: number} {
+  // TODO (TS): Optional chaining.
   if (!node.childNodes || !node.childNodes[0] ||
       !node.childNodes[0].childNodes ||
       node.childNodes[0].childNodes.length < 2 ||
-      node.childNodes[0].childNodes[0].tagName !==
+      (node.childNodes[0].childNodes[0].tagName !==
           sre.SemanticAttr.Type.NUMBER ||
       node.childNodes[0].childNodes[0].getAttribute('role') !==
           sre.SemanticAttr.Role.INTEGER ||
@@ -72,7 +73,7 @@ export function convertVulgarFraction_(node: Node):
   if (isNaN(denominator) || isNaN(enumerator)) {
     return {
       convertible: false,
-      content: enumStr + ' ' + Messages.MS.FRAC_OVER + ' ' + denStr
+      content: enumStr + ' ' + Locale.MS.FRAC_OVER + ' ' + denStr
     };
   }
   return {convertible: true, enumerator: enumerator, denominator: denominator};
@@ -91,13 +92,13 @@ export function vulgarFraction(node: Node): string|Span[] {
   if (conversion.convertible && conversion.enumerator &&
       conversion.denominator) {
     return [
-      new Span(Messages.NUMBERS.numberToWords(conversion.enumerator), {
+      new Span(Locale.NUMBERS.numberToWords(conversion.enumerator), {
         extid: node.childNodes[0].childNodes[0].getAttribute('extid'),
         separator: ''
       }),
-      new Span(Messages.NUMBERS.vulgarSep, {separator: ''}),
+      new Span(Locale.NUMBERS.vulgarSep, {separator: ''}),
       new Span(
-          Messages.NUMBERS.numberToOrdinal(
+          Locale.NUMBERS.numberToOrdinal(
               conversion.denominator, conversion.enumerator !== 1),
           {extid: node.childNodes[0].childNodes[1].getAttribute('extid')})
     ];
@@ -136,5 +137,5 @@ export function vulgarFractionSmall(
  */
 export function ordinalPosition(node: Node): string {
   let children = sre.DomUtil.toArray(node.parentNode.childNodes);
-  return Messages.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
+  return Locale.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
 }

@@ -26,22 +26,77 @@
  */
 
 
-import * as DynamicCstrExports from './dynamic_cstr';
-import {DynamicCstr} from './dynamic_cstr';
+import {Debugger} from '../common/debugger';
+import {Engine} from '../common/engine';
+import {locales} from '../l10n/l10n';
+import {Axis, DynamicCstr} from './dynamic_cstr';
 import {MathStore} from './math_store';
 import {SpeechRule} from './speech_rule';
 
 
+export interface MappingsJson {
+  default: {[key: string]: string};
+  [domainName: string]: {[key: string]: string};
+}
 
-export class MathSimpleStore extends sre.MathStore {
+export interface UnicodeJson {
+  key: string;
+  category: string;
+  names?: string[];
+  si?: boolean;
+  mappings: MappingsJson;
+  // TODO (TS): It would be nice to handle these in CtrlJson type. But that
+  //      leads to a lot of casting at the moment. Maybe have a special ctrl
+  //      entry in the overall file Json and handle it there.
+  modality?: string;
+  locale?: string;
+  domain?: string;
+}
 
-  category: string = '';
+
+/**
+ * A base store for simple Math objects.
+ */
+export class MathSimpleStore extends MathStore {
 
   /**
-   * A base store for simple Math objects.
+   * The category of the character/function/unit.
    */
-  constructor() {
-    super();
+  public category: string = '';
+
+
+  /**
+   * Parses a string with a hex representation of a unicode code point into the
+   * corresponding unicode character.
+   * @param num The code point to be parsed.
+   * @return The unicode character.
+   */
+  public static parseUnicode(num: string): string {
+    let keyValue = parseInt(num, 16);
+    if (keyValue < 0x10000) {
+      return String.fromCharCode(keyValue);
+    }
+    keyValue -= 0x10000;
+    let hiSurrogate = (keyValue >> 10) + 0xD800;
+    let lowSurrogate = (keyValue & 0x3FF) + 0xDC00;
+    return String.fromCharCode(hiSurrogate, lowSurrogate);
+  }
+
+
+  /**
+   * Tests whether a speech rule satisfies a set of dynamic constraints.  Unless
+   * the engine is in strict mode, the dynamic constraints can be "relaxed",
+   * that is, a default value can also be choosen.
+   * @param dynamic Dynamic constraints.
+   * @param rule The rule.
+   * @return True if the preconditions apply to the node.
+   */
+  private static testDynamicConstraints_(
+      dynamic: DynamicCstr, rule: SpeechRule): boolean {
+    if (Engine.getInstance().strict) {
+      return rule.dynamicCstr.equal(dynamic);
+    }
+    return Engine.getInstance().comparator.match(rule.dynamicCstr);
   }
 
 
@@ -53,8 +108,8 @@ export class MathSimpleStore extends sre.MathStore {
    * @param mapping Simple string
    *     mapping.
    */
-  defineRulesFromMappings(
-      name: string, str: string, mapping: {[key: string]: {[key: string]: string}}) {
+  public defineRulesFromMappings(name: string, str: string,
+                                 mapping: MappingsJson) {
     for (let domain in mapping) {
       for (let style in mapping[domain]) {
         let content = mapping[domain][style];
@@ -72,125 +127,56 @@ export class MathSimpleStore extends sre.MathStore {
    * @param str String for precondition and constraints.
    * @param content The content for the postcondition.
    */
-  defineRuleFromStrings(
-      name: string, domain: string, style: string, str: string,
-      content: string) {
-    if (str === '"') {
-      let cstr = 'self::text() = \'' + str + '\'';
-    } else {
-      cstr = 'self::text() = "' + str + '"';
-    }
+  public defineRuleFromStrings(name: string, domain: string, style: string,
+                               str: string, content: string) {
+    let cstr = (str === '"') ? `self::text() = '${str}'` :
+        `self::text() = "${str}"`;
     this.defineRule(
-        name, domain + '.' + style, '[t] "' + content + '"', 'self::text()',
-        cstr);
+        name, `${domain}.${style}`, `[t] "${content}"`, 'self::text()', cstr);
   }
 
 
   /**
    * @override
    */
-  lookupRule(node, dynamic) {
+  public lookupRule(_node: Node, dynamic: DynamicCstr) {
     // node is actually null!
     let rules = this.getSpeechRules().filter(function(rule) {
       return MathSimpleStore.testDynamicConstraints_(dynamic, rule);
     });
-    return rules.length ? rules.sort(function(r1, r2) {
-      return sre.Engine.getInstance().comparator.compare(
-          r1.dynamicCstr, r2.dynamicCstr);
-    })[0] :
-                          null;
+    return rules.length ? rules.sort(
+      (r1, r2) =>
+        Engine.getInstance().comparator.compare(
+          r1.dynamicCstr, r2.dynamicCstr))[0] :  null;
   }
 
-
-  /**
-   * Tests whether a speech rule satisfies a set of dynamic constraints.  Unless
-   * the engine is in strict mode, the dynamic constraints can be "relaxed",
-   * that is, a default value can also be choosen.
-   * @param dynamic Dynamic constraints.
-   * @param rule The rule.
-   * @return True if the preconditions apply to the node.
-   */
-  private static testDynamicConstraints_(
-      dynamic: DynamicCstr, rule: SpeechRule): boolean {
-    if (sre.Engine.getInstance().strict) {
-      return rule.dynamicCstr.equal(dynamic);
-    }
-    return sre.Engine.getInstance().comparator.match(rule.dynamicCstr);
-  }
-
-
-  /**
-   * Parses a string with a hex representation of a unicode code point into the
-   * corresponding unicode character.
-   * @param number The code point to be parsed.
-   * @return The unicode character.
-   */
-  private static parseUnicode_(number: string): string {
-    let keyValue = parseInt(number, 16);
-    if (keyValue < 0x10000) {
-      return String.fromCharCode(keyValue);
-    }
-    keyValue -= 0x10000;
-    let hiSurrogate = (keyValue >> 10) + 0xD800;
-    let lowSurrogate = (keyValue & 0x3FF) + 0xDC00;
-    return String.fromCharCode(hiSurrogate, lowSurrogate);
-  }
 }
-
-goog.inherits(MathSimpleStore, MathStore);
-
 
 
 /**
  * A compound store for simple Math objects.
  */
 export class MathCompoundStore {
+
+  /**
+   * The locale for the store.
+   */
+  public locale: string = DynamicCstr.DEFAULT_VALUES[Axis.LOCALE];
+
+  /**
+   * The modality of the store.
+   */
+  public modality: string = DynamicCstr.DEFAULT_VALUES[Axis.MODALITY];
+
+  /**
+   * An association list of SI prefixes.
+   */
+  public siPrefixes: {[key: string]: string} = {};
+
   /**
    * A set of efficient substores.
    */
-  private subStores_: {[key: string]: MathStore} = {};
-
-
-  locale: string;
-
-  modality: string;
-
-  siPrefixes: {[key: string]: string} = {};
-  constructor() {
-    this.locale = DynamicCstr.DEFAULT_VALUES[DynamicCstrExports.Axis.LOCALE];
-    this.modality =
-        DynamicCstr.DEFAULT_VALUES[DynamicCstrExports.Axis.MODALITY];
-  }
-
-
-  /**
-   * Retrieves a substore for a key. Creates a new one if it does not exist.
-   * @param key The key for the store.
-   * @return The rule store.
-   */
-  private getSubStore_(key: string): MathStore {
-    let store = this.subStores_[key];
-    if (store) {
-      sre.Debugger.getInstance().output('Store exists! ' + key);
-      return store;
-    }
-    store = new MathSimpleStore();
-    this.subStores_[key] = store;
-    return store;
-  }
-
-
-  /**
-   * Transfers parameters of the compound store to a substore.
-   * @param opt_cat The category if it exists.
-   */
-  private setupStore_(store: MathStore, opt_cat?: string) {
-    store.locale = this.locale;
-    store.modality = this.modality;
-    if (opt_cat) {
-      store.category = opt_cat;
-    }
-  }
+  private subStores_: {[key: string]: MathSimpleStore} = {};
 
 
   /**
@@ -203,7 +189,8 @@ export class MathCompoundStore {
    * @param mappings JSON representation of mappings from styles and
    *     domains to strings, from which the speech rules will be computed.
    */
-  defineRules(name: string, str: string, cat: string, mappings: Object) {
+  public defineRules(name: string, str: string, cat: string,
+                     mappings: MappingsJson) {
     let store = this.getSubStore_(str);
     this.setupStore_(store, cat);
     store.defineRulesFromMappings(name, str, mappings);
@@ -219,7 +206,7 @@ export class MathCompoundStore {
    * @param str String for precondition and constraints.
    * @param content The content for the postcondition.
    */
-  defineRule(
+  public defineRule(
       name: string, domain: string, style: string, cat: string, str: string,
       content: string) {
     let store = this.getSubStore_(str);
@@ -229,30 +216,14 @@ export class MathCompoundStore {
 
 
   /**
-   * Changes the internal locale for the rule definitions if the given JSON
-   * element is a locale instruction.
-   * @param json JSON object of a speech rules.
-   * @return True if the locale was changed.
-   */
-  private changeLocale_(json: Object): boolean {
-    if (!json['locale'] && !json['modality']) {
-      return false;
-    }
-    this.locale = json['locale'] || this.locale;
-    this.modality = json['modality'] || this.modality;
-    return true;
-  }
-
-
-  /**
    * Makes a speech rule for Unicode characters from its JSON representation.
    * @param json JSON object of the speech rules.
    */
-  addSymbolRules(json: Object) {
+  public addSymbolRules(json: UnicodeJson) {
     if (this.changeLocale_(json)) {
       return;
     }
-    let key = MathSimpleStore.parseUnicode_(json['key']);
+    let key = MathSimpleStore.parseUnicode(json['key']);
     this.defineRules(json['key'], key, json['category'], json['mappings']);
   }
 
@@ -261,7 +232,7 @@ export class MathCompoundStore {
    * Makes a speech rule for Function names from its JSON representation.
    * @param json JSON object of the speech rules.
    */
-  addFunctionRules(json: Object) {
+  public addFunctionRules(json: UnicodeJson) {
     if (this.changeLocale_(json)) {
       return;
     }
@@ -278,7 +249,7 @@ export class MathCompoundStore {
    * Makes speech rules for Unit descriptors from its JSON representation.
    * @param json JSON object of the speech rules.
    */
-  addUnitRules(json: Object) {
+  public addUnitRules(json: UnicodeJson) {
     if (this.changeLocale_(json)) {
       return;
     }
@@ -291,31 +262,14 @@ export class MathCompoundStore {
 
 
   /**
-   * Adds a single speech rule for Unit descriptors from its JSON
-   * representation.
-   * @param json JSON object of the speech rules.
-   */
-  private addUnitRules_(json: Object) {
-    let names = json['names'];
-    if (names) {
-      json['names'] = names.map(function(name) {
-        return name + ':' +
-            'unit';
-      });
-    }
-    this.addFunctionRules(json);
-  }
-
-
-  /**
    * Makes speech rules for SI units from the JSON representation of the base
    * unit.
    * @param json JSON object of the base speech rules.
    */
-  addSiUnitRules(json: Object) {
+  public addSiUnitRules(json: UnicodeJson) {
     for (let key of Object.keys(this.siPrefixes)) {
       let newJson = Object.assign({}, json);
-      newJson.mappings = {};
+      newJson.mappings = {} as MappingsJson;
       let prefix = this.siPrefixes[key];
       newJson['key'] = key + newJson['key'];
       newJson['names'] = newJson['names'].map(function(name) {
@@ -324,7 +278,7 @@ export class MathCompoundStore {
       for (let domain of Object.keys(json['mappings'])) {
         newJson.mappings[domain] = {};
         for (let style of Object.keys(json['mappings'][domain])) {
-          newJson['mappings'][domain][style] = sre.Locale[this.locale].SI(
+          newJson['mappings'][domain][style] = locales[this.locale].SI(
               prefix, json['mappings'][domain][style]);
         }
       }
@@ -341,7 +295,7 @@ export class MathCompoundStore {
    *     constraints. These are matched against properties of a rule.
    * @return The speech rule if it exists.
    */
-  lookupRule(node: string, dynamic: DynamicCstr): SpeechRule {
+  public lookupRule(node: string, dynamic: DynamicCstr): SpeechRule {
     let store = this.subStores_[node];
     return store ? store.lookupRule(null, dynamic) : null;
   }
@@ -352,7 +306,7 @@ export class MathCompoundStore {
    * @param character The character or string.
    * @return The category if it exists.
    */
-  lookupCategory(character: string): string {
+  public lookupCategory(character: string): string {
     let store = this.subStores_[character];
     return store ? store.category : '';
   }
@@ -365,7 +319,7 @@ export class MathCompoundStore {
    *     constraints. These are matched against properties of a rule.
    * @return The string resulting from the action of speech rule.
    */
-  lookupString(text: string, dynamic: DynamicCstr): string|null {
+  public lookupString(text: string, dynamic: DynamicCstr): string|null {
     let rule = this.lookupRule(text, dynamic);
     if (!rule) {
       return null;
@@ -384,13 +338,72 @@ export class MathCompoundStore {
    * @param opt_info Initial dynamic constraint information.
    * @return The collated information.
    */
-  enumerate(opt_info?: Object): Object {
+  public enumerate(opt_info?: Object): Object {
     let info = opt_info || {};
     for (let store in this.subStores_) {
       info = this.subStores_[store].trie.enumerate(info);
     }
     return info;
   }
-}
 
-goog.addSingletonGetter(MathCompoundStore);
+  /**
+   * Adds a single speech rule for Unit descriptors from its JSON
+   * representation.
+   * @param json JSON object of the speech rules.
+   */
+  private addUnitRules_(json: UnicodeJson) {
+    let names = json['names'];
+    if (names) {
+      json['names'] = names.map(function(name) {
+        return name + ':' +
+            'unit';
+      });
+    }
+    this.addFunctionRules(json);
+  }
+
+  /**
+   * Changes the internal locale for the rule definitions if the given JSON
+   * element is a locale instruction.
+   * @param json JSON object of a speech rules.
+   * @return True if the locale was changed.
+   */
+  private changeLocale_(json: UnicodeJson): boolean {
+    if (!json['locale'] && !json['modality']) {
+      return false;
+    }
+    this.locale = json['locale'] || this.locale;
+    this.modality = json['modality'] || this.modality;
+    return true;
+  }
+
+  /**
+   * Retrieves a substore for a key. Creates a new one if it does not exist.
+   * @param key The key for the store.
+   * @return The rule store.
+   */
+  private getSubStore_(key: string): MathSimpleStore {
+    let store = this.subStores_[key];
+    if (store) {
+      Debugger.getInstance().output('Store exists! ' + key);
+      return store;
+    }
+    store = new MathSimpleStore();
+    this.subStores_[key] = store;
+    return store;
+  }
+
+
+  /**
+   * Transfers parameters of the compound store to a substore.
+   * @param opt_cat The category if it exists.
+   */
+  private setupStore_(store: MathSimpleStore, opt_cat?: string) {
+    store.locale = this.locale;
+    store.modality = this.modality;
+    if (opt_cat) {
+      store.category = opt_cat;
+    }
+  }
+
+}
