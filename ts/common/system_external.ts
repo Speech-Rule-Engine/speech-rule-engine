@@ -29,13 +29,14 @@ import {Variables} from './variables';
 namespace SystemExternal {
 
   declare var global: any;
+  declare var require: (name: string) => any;
   
   /**
    * The local require function for NodeJS.
    * @param library A library name.
    * @return The library object that has been loaded.
    */
-  export function require(library: string): any {
+  export function extRequire(library: string): any {
     if (typeof process !== 'undefined' && typeof require !== 'undefined') {
       return require(library);
     }
@@ -53,14 +54,14 @@ namespace SystemExternal {
   /**
    * Process library.
    */
-  export const process: any = SystemExternal.require('process');
+  export const process: any = SystemExternal.extRequire('process');
 
   /**
    * Xmldom library.
    */
   export const xmldom = SystemExternal.documentSupported() ?
     window :
-    SystemExternal.require('xmldom-sre');
+    SystemExternal.extRequire('xmldom-sre');
   
   /**
    * DOM document implementation.
@@ -75,7 +76,7 @@ namespace SystemExternal {
   export const xpath: any =
     SystemExternal.documentSupported() ? document : function() {
       let window = {document: {}, XPathResult: {}};
-      let wgx = SystemExternal.require('wicked-good-xpath');
+      let wgx = SystemExternal.extRequire('wicked-good-xpath');
       wgx.install(window);
       (window.document as any).XPathResult = window.XPathResult;
       return window.document;
@@ -86,13 +87,13 @@ namespace SystemExternal {
    */
   export const commander = SystemExternal.documentSupported() ?
     null :
-    SystemExternal.require('commander');
+    SystemExternal.extRequire('commander');
 
   /**
    * Filesystem library.
    */
   export const fs =
-    SystemExternal.documentSupported() ? null : SystemExternal.require('fs');
+    SystemExternal.documentSupported() ? null : SystemExternal.extRequire('fs');
 
   /**
    * The URL for SRE resources.

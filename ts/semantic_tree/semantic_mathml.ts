@@ -21,17 +21,44 @@
 
 
 import * as DomUtil from '../common/dom_util';
-
 import {SemanticFont, SemanticRole, SemanticType} from './semantic_attr';
 import {SemanticNode} from './semantic_node';
 import {SemanticAbstractParser} from './semantic_parser';
-import {SemanticProcessor} from './semantic_processor';
 import * as SemanticPred from './semantic_pred';
+import SemanticProcessor from './semantic_processor';
 import * as SemanticUtil from './semantic_util';
 
 
 export class SemanticMathml extends SemanticAbstractParser<Element> {
-  private parseMap_: {[key: string]: (p1: Element, p2: Element[]) => SemanticNode};
+
+  private parseMap_: {[key: string]:
+                      (p1: Element, p2: Element[]) => SemanticNode};
+
+
+  /**
+   * Get an attribute from a node and provide a default if it does not exist. It
+   * returns null if attribute is empty string or whitespace only.
+   * @param node The node from which to retrieve the attribute.
+   * @param attr The attribute.
+   * @param def The default return value.
+   * @return The value of the attribute or null.
+   */
+  private static getAttribute_(node: Element, attr: string, def: string): string
+      |null {
+    if (!node.hasAttribute(attr)) {
+      return def;
+    }
+    let value = node.getAttribute(attr);
+    if (value.match(/^\s*$/)) {
+      return null;
+    }
+    return value;
+  }
+
+
+  /**
+   * The semantic parser for MathML elements.
+   */
   constructor() {
     super('MathML');
     this.parseMap_ = {
@@ -75,14 +102,14 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     };
     ['C', 'H', 'N', 'P', 'Q', 'R', 'Z', 'ℂ', 'ℍ', 'ℕ', 'ℙ', 'ℚ', 'ℝ', 'ℤ']
         .forEach(((x: string) =>
-          this.getFactory().defaultMap.add(x, meaning)).bind(this))
+          this.getFactory().defaultMap.add(x, meaning)).bind(this));
   }
 
 
   /**
    * @override
    */
-  parse(mml: Element) {
+  public parse(mml: Element) {
     SemanticProcessor.getInstance().setNodeFactory(this.getFactory());
     let children = DomUtil.toArray(mml.childNodes);
     let tag = DomUtil.tagName(mml);
@@ -197,7 +224,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * @param children The children of the node.
    * @return The newly created semantic node.
    */
-  private sqrt_(node: Element, children: Element[]): SemanticNode {
+  private sqrt_(_node: Element, children: Element[]): SemanticNode {
     let semNodes = this.parseList(SemanticUtil.purgeNodes(children));
     return this.getFactory().makeBranchNode(
         SemanticType.SQRT,
@@ -298,8 +325,9 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     if (!match) {
       return this.empty_(node, children);
     }
-    let sizes: {[key: string]: number} =
-        {'cm': .4, 'pc': .5, 'em': .5, 'ex': 1, 'in': .15, 'pt': 5, 'mm': 5};
+    let sizes: {[key: string]: number} = {
+      'cm': .4, 'pc': .5, 'em': .5, 'ex': 1, 'in': .15, 'pt': 5, 'mm': 5
+    };
     let unit = match[0];
     let measure = parseFloat(width.slice(0, match.index));
     let size = sizes[unit];
@@ -430,8 +458,9 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
         scriptcount = 0;
         continue;
       }
-      prescripts ? scriptcount&1 ? lsup.push(child) : lsub.push(child) :
-                   scriptcount&1 ? rsup.push(child) : rsub.push(child);
+      prescripts ?
+        (scriptcount & 1 ? lsup.push(child) : lsub.push(child)) :
+        (scriptcount & 1 ? rsup.push(child) : rsub.push(child));
       scriptcount++;
     }
     // This is the pathological msubsup case.
@@ -506,26 +535,6 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
         SemanticProcessor.getInstance().font(mml.getAttribute('mathvariant')));
   }
 
-
-  /**
-   * Get an attribute from a node and provide a default if it does not exist. It
-   * returns null if attribute is empty string or whitespace only.
-   * @param node The node from which to retrieve the attribute.
-   * @param attr The attribute.
-   * @param def The default return value.
-   * @return The value of the attribute or null.
-   */
-  private static getAttribute_(node: Element, attr: string, def: string): string
-      |null {
-    if (!node.hasAttribute(attr)) {
-      return def;
-    }
-    let value = node.getAttribute(attr);
-    if (value.match(/^\s*$/)) {
-      return null;
-    }
-    return value;
-  }
 }
 
 // TODO (sorge) Role and font of multi-character and digits unicode strings.

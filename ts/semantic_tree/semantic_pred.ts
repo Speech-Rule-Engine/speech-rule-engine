@@ -44,7 +44,8 @@ export function isType(node: SemanticNode, attr: SemanticType): boolean {
  * @param attr The embellished attribute.
  * @return True if node has that embellished type.
  */
-export function embellishedType(node: SemanticNode, attr: SemanticType): boolean {
+export function embellishedType(node: SemanticNode,
+                                attr: SemanticType): boolean {
   return node.embellished === attr;
 }
 
@@ -256,32 +257,46 @@ export function isElligibleEmbellishedFence(node: SemanticNode): boolean {
   if (!node.embellished) {
     return true;
   }
-  let bothSide = function(node) {
-    return isType(node, SemanticType.TENSOR) &&
-      (!isType(node.childNodes[1], SemanticType.EMPTY) ||
-        !isType(node.childNodes[2], SemanticType.EMPTY)) &&
-      (!isType(node.childNodes[3], SemanticType.EMPTY) ||
-        !isType(node.childNodes[4], SemanticType.EMPTY));
-  };
-  let recurseBaseNode = function(node) {
-    if (!node.embellished) {
-      return true;
-    }
-    if (bothSide(node)) {
-      return false;
-    }
-    if (isRole(node, SemanticRole.CLOSE) &&
-      isType(node, SemanticType.TENSOR)) {
-      return false;
-    }
-    if (isRole(node, SemanticRole.OPEN) &&
-      (isType(node, SemanticType.SUBSCRIPT) ||
-        isType(node, SemanticType.SUPERSCRIPT))) {
-      return false;
-    }
-    return recurseBaseNode(node.childNodes[0]);
-  };
   return recurseBaseNode(node);
+}
+
+
+/**
+ * Predicate to check if indexes either side of a tensor node are empty.
+ * @param node The tensor node.
+ * @return True if tensor node with both sides having content.
+ */
+function bothSide(node: SemanticNode): boolean {
+  return isType(node, SemanticType.TENSOR) &&
+    (!isType(node.childNodes[1], SemanticType.EMPTY) ||
+      !isType(node.childNodes[2], SemanticType.EMPTY)) &&
+    (!isType(node.childNodes[3], SemanticType.EMPTY) ||
+      !isType(node.childNodes[4], SemanticType.EMPTY));
+}
+
+
+/**
+ * Recursively checks a node if it is an eligible fence node.
+ * @param {SemanticNode} node The tensor node.
+ * @return {boolean} True if it is a legitimate fence node.
+ */
+function recurseBaseNode(node: SemanticNode): boolean {
+  if (!node.embellished) {
+    return true;
+  }
+  if (bothSide(node)) {
+      return false;
+  }
+  if (isRole(node, SemanticRole.CLOSE) &&
+    isType(node, SemanticType.TENSOR)) {
+    return false;
+  }
+  if (isRole(node, SemanticRole.OPEN) &&
+    (isType(node, SemanticType.SUBSCRIPT) ||
+      isType(node, SemanticType.SUPERSCRIPT))) {
+    return false;
+    }
+  return recurseBaseNode(node.childNodes[0]);
 }
 
 

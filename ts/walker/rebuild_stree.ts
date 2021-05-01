@@ -21,40 +21,94 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
+import * as DomUtil from '../common/dom_util';
 import {Attribute} from '../enrich_mathml/enrich_mathml';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticAttr, SemanticFont, SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {SemanticNodeFactory} from '../semantic_tree/semantic_node_factory';
-import {SemanticProcessor} from '../semantic_tree/semantic_processor';
-import * as SemanticSkeletonExports from '../semantic_tree/semantic_skeleton';
-import {SemanticSkeleton} from '../semantic_tree/semantic_skeleton';
+import SemanticProcessor from '../semantic_tree/semantic_processor';
+import {SemanticSkeleton, Sexp} from '../semantic_tree/semantic_skeleton';
 import {SemanticTree} from '../semantic_tree/semantic_tree';
 import * as SemanticUtil from '../semantic_tree/semantic_util';
-
 import * as WalkerUtil from './walker_util';
-
 
 
 // Note that reassemble tree will not give you exactly the original tree, as the
 // mathml nodes and mathml tree components can not be reconstructed.
 export class RebuildStree {
-  factory: SemanticNodeFactory;
 
-  nodeDict: {[key: string]: SemanticNode} = {};
+  /**
+   * The node factory.
+   */
+  public factory: SemanticNodeFactory = new SemanticNodeFactory();
 
-  mmlRoot: Element;
+  /**
+   * A dictionary to keep track of produced nodes.
+   */
+  public nodeDict: {[key: string]: SemanticNode} = {};
 
-  streeRoot: SemanticNode;
+  /**
+   * The semantic root node in the mml structure.
+   */
+  public mmlRoot: Element;
 
-  stree: SemanticTree;
+  /**
+   * The semantic root node in the mml structure.
+   */
+  public streeRoot: SemanticNode;
 
-  xml: Node;
+  /**
+   * The semantic tree to be computed.
+   */
+  public stree: SemanticTree;
+
+  /**
+   * The xml representation of semantic tree.
+   */
+  public xml: Element;
+
+  /**
+   * Adds external attributes if they exists. Recurses one level if we have a
+   * leaf element with a none-text child.
+   * @param snode The semantic node.
+   * @param node The mml node.
+   * @param leaf True if it is a leaf node.
+   */
+  public static addAttributes(snode: SemanticNode, node: Element,
+                              leaf: boolean) {
+    if (leaf && node.childNodes.length === 1 &&
+        node.childNodes[0].nodeType !== DomUtil.NodeType.TEXT_NODE) {
+      SemanticUtil.addAttributes(snode, node.childNodes[0] as Element);
+    }
+    SemanticUtil.addAttributes(snode, node);
+  }
+
+
+  /**
+   * Sets the text content of the semantic node. If no text content is available
+   * or it is ignored, but an operator is given, it uses that.
+   * @param snode The semantic node.
+   * @param node The mml node.
+   * @param ignore Ignores using text content.
+   */
+  public static textContent(snode: SemanticNode, node: Element,
+                            ignore?: boolean) {
+    if (!ignore && node.textContent) {
+      snode.textContent = node.textContent;
+      return;
+    }
+    let operator = WalkerUtil.splitAttribute(
+        WalkerUtil.getAttribute(node, Attribute.OPERATOR));
+    if (operator.length > 1) {
+      snode.textContent = operator[1];
+    }
+  }
+
 
   /**
    * @param mathml The enriched MathML node.
    */
   constructor(public mathml: Element) {
-    this.factory = new SemanticNodeFactory();
     this.mmlRoot = WalkerUtil.getSemanticRoot(mathml);
     this.streeRoot = this.assembleTree(this.mmlRoot);
     this.stree = SemanticTree.fromNode(this.streeRoot, this.mathml);
@@ -66,24 +120,8 @@ export class RebuildStree {
   /**
    * @return The rebuilt semantic tree.
    */
-  getTree(): SemanticTree {
+  public getTree(): SemanticTree {
     return this.stree;
-  }
-
-
-  /**
-   * Adds external attributes if they exists. Recurses one level if we have a
-   * leaf element with a none-text child.
-   * @param snode The semantic node.
-   * @param node The mml node.
-   * @param leaf True if it is a leaf node.
-   */
-  static addAttributes(snode: SemanticNode, node: Element, leaf: boolean) {
-    if (leaf && node.childNodes.length === 1 &&
-        node.childNodes[0].nodeType !== DomUtil.NodeType.TEXT_NODE) {
-      SemanticUtil.addAttributes(snode, node.childNodes[0] as Element);
-    }
-    SemanticUtil.addAttributes(snode, node);
   }
 
 
@@ -92,7 +130,7 @@ export class RebuildStree {
    * @param node The MathML node.
    * @return The corresponding semantic tree node.
    */
-  assembleTree(node: Element): SemanticNode {
+  public assembleTree(node: Element): SemanticNode {
     let snode = this.makeNode(node);
     let children = WalkerUtil.splitAttribute(
         WalkerUtil.getAttribute(node, Attribute.CHILDREN));
@@ -110,36 +148,10 @@ export class RebuildStree {
         RebuildStree.textContent(snode, fcontent, true);
       }
     }
-    let setParent = function(n) {
-      let mml = WalkerUtil.getBySemanticId(this.mathml, n);
-      let sn = this.assembleTree(mml);
-      sn.parent = snode;
-      return sn;
-    };
-    snode.contentNodes = content.map(goog.bind(setParent, this));
-    snode.childNodes = children.map(goog.bind(setParent, this));
+    snode.contentNodes = content.map(id => this.setParent(id, snode));
+    snode.childNodes = children.map(id => this.setParent(id, snode));
     let collapsed = WalkerUtil.getAttribute(node, Attribute.COLLAPSED);
     return collapsed ? this.postProcess(snode, collapsed) : snode;
-  }
-
-
-  /**
-   * Sets the text content of the semantic node. If no text content is available
-   * or it is ignored, but an operator is given, it uses that.
-   * @param snode The semantic node.
-   * @param node The mml node.
-   * @param opt_ignore Ignores using text content.
-   */
-  static textContent(snode: SemanticNode, node: Node, opt_ignore?: boolean) {
-    if (!opt_ignore && node.textContent) {
-      snode.textContent = node.textContent;
-      return;
-    }
-    let operator = WalkerUtil.splitAttribute(
-        WalkerUtil.getAttribute(node, Attribute.OPERATOR));
-    if (operator.length > 1) {
-      snode.textContent = operator[1];
-    }
   }
 
 
@@ -148,7 +160,7 @@ export class RebuildStree {
    * @param node The enriched MathML node.
    * @return The reconstructed semantic tree node.
    */
-  makeNode(node: Node): SemanticNode {
+  public makeNode(node: Element): SemanticNode {
     let type = WalkerUtil.getAttribute(node, Attribute.TYPE);
     let role = WalkerUtil.getAttribute(node, Attribute.ROLE);
     let font = WalkerUtil.getAttribute(node, Attribute.FONT);
@@ -172,14 +184,15 @@ export class RebuildStree {
 
 
   /**
-   * Tests is a collapsed attribute belongs to a punctuated index.
+   * Tests if a collapsed attribute belongs to a punctuated index.
    * @param collapsed A skeleton structure.
    * @return True if the skeleton indicates a collapsed punctuated
    *     element.
    */
-  static isPunctuated(collapsed: SemanticSkeletonExports.Sexp): boolean {
+  public static isPunctuated(collapsed: Sexp): boolean {
     return !SemanticSkeleton.simpleCollapseStructure(collapsed) &&
-        collapsed[1] && SemanticSkeleton.contentCollapseStructure(collapsed[1]);
+      (collapsed as any)[1] &&
+      SemanticSkeleton.contentCollapseStructure((collapsed as any)[1]);
   }
 
 
@@ -188,7 +201,7 @@ export class RebuildStree {
    * @param id The id of the new node.
    * @return The newly created punctuation node.
    */
-  makePunctuation(id: number): SemanticNode {
+  public makePunctuation(id: number): SemanticNode {
     let node = this.createNode(id);
     node.updateContent(SemanticAttr.invisibleComma());
     node.role = SemanticRole.DUMMY;
@@ -202,8 +215,9 @@ export class RebuildStree {
    * @param collapsed A skeleton structure.
    * @param role The role of the new index node.
    */
-  makePunctuated(
-      snode: SemanticNode, collapsed: SemanticSkeletonExports.Sexp,
+  // TODO (TS):  any to Sexp!
+  public makePunctuated(
+      snode: SemanticNode, collapsed: any,
       role: SemanticRole) {
     let punctuated = this.createNode(collapsed[0]);
     punctuated.type = SemanticType.PUNCTUATED;
@@ -211,7 +225,7 @@ export class RebuildStree {
     punctuated.fencePointer = snode.fencePointer;
     punctuated.role = role;
     let cont = collapsed.splice(1, 1)[0].slice(1);
-    punctuated.contentNodes = cont.map(goog.bind(this.makePunctuation, this));
+    punctuated.contentNodes = cont.map(this.makePunctuation.bind(this));
     this.collapsedChildren_(collapsed);
   }
 
@@ -222,7 +236,7 @@ export class RebuildStree {
    * @param collapsed A skeleton structure.
    * @param role The role of the new index node.
    */
-  makeEmpty(snode: SemanticNode, collapsed: number, role: SemanticRole) {
+  public makeEmpty(snode: SemanticNode, collapsed: number, role: SemanticRole) {
     let empty = this.createNode(collapsed);
     empty.type = SemanticType.EMPTY;
     empty.embellished = snode.embellished;
@@ -237,12 +251,12 @@ export class RebuildStree {
    * @param collapsed A skeleton structure.
    * @param role The role of the new index node.
    */
-  makeIndex(
-      snode: SemanticNode, collapsed: SemanticSkeletonExports.Sexp,
+  public makeIndex(
+      snode: SemanticNode, collapsed: Sexp,
       role: SemanticRole) {
     if (RebuildStree.isPunctuated(collapsed)) {
       this.makePunctuated(snode, collapsed, role);
-      collapsed = collapsed[0];
+      collapsed = (collapsed as any)[0];
       return;
     }
     if (SemanticSkeleton.simpleCollapseStructure(collapsed) &&
@@ -258,9 +272,10 @@ export class RebuildStree {
    * @param collapsed The collapse structure.
    * @return The semantic node.
    */
-  postProcess(snode: SemanticNode, collapsed: string): SemanticNode {
-    let array = SemanticSkeleton.fromString(collapsed).array;
-    if (snode.type === SemanticRole.SUBSUP) {
+  public postProcess(snode: SemanticNode, collapsed: string): SemanticNode {
+    let array = SemanticSkeleton.fromString(collapsed).array as any;
+    // TODO (TS): Semantic types used as roles.
+    if (((snode.type as any) as SemanticRole) === SemanticRole.SUBSUP) {
       let subscript = this.createNode(array[1][0]);
       subscript.type = SemanticType.SUBSCRIPT;
       subscript.role = SemanticRole.SUBSUP;
@@ -293,11 +308,11 @@ export class RebuildStree {
     if (snode.type === SemanticType.PUNCTUATED) {
       if (RebuildStree.isPunctuated(array)) {
         let cont = array.splice(1, 1)[0].slice(1);
-        snode.contentNodes = cont.map(goog.bind(this.makePunctuation, this));
+        snode.contentNodes = cont.map(this.makePunctuation.bind(this));
       }
       return snode;
     }
-    if (snode.type === SemanticRole.UNDEROVER) {
+    if (((snode.type as any) as SemanticRole) === SemanticRole.UNDEROVER) {
       let score = this.createNode(array[1][0]);
       if (snode.childNodes[1].role === SemanticRole.OVERACCENT) {
         score.type = SemanticType.OVERSCORE;
@@ -321,7 +336,7 @@ export class RebuildStree {
    * @param id The id for that node.
    * @return The newly created node.
    */
-  createNode(id: number): SemanticNode {
+  public createNode(id: number): SemanticNode {
     let node = this.factory.makeNode(id);
     this.nodeDict[id.toString()] = node;
     return node;
@@ -333,8 +348,8 @@ export class RebuildStree {
    * structure.
    * @param collapsed Array of integer arrays.
    */
-  private collapsedChildren_(collapsed: SemanticSkeletonExports.Sexp) {
-    let recurseCollapsed = (coll: SemanticSkeletonExports.Sexp) => {
+  private collapsedChildren_(collapsed: Sexp) {
+    let recurseCollapsed = (coll: any) => {
       let parent = this.nodeDict[coll[0]];
       parent.childNodes = [];
       for (let j = 1, l = coll.length; j < l; j++) {
@@ -348,4 +363,18 @@ export class RebuildStree {
     };
     recurseCollapsed(collapsed);
   }
+
+
+  /**
+   * Sets a parent for a node.
+   * @param {string} id of the node.
+   * @param {SemanticNode} snode The parent node.
+   */
+  private setParent(id: string, snode: SemanticNode) {
+    let mml = WalkerUtil.getBySemanticId(this.mathml, id);
+    let sn = this.assembleTree(mml);
+    sn.parent = snode;
+    return sn;
+  }
+
 }

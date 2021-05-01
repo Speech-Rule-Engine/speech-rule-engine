@@ -22,14 +22,16 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import * as DomUtil from '../common/dom_util';
 import {SemanticAttr, SemanticFont, SemanticRole, SemanticType} from './semantic_attr';
 import {SemanticHeuristics} from './semantic_heuristics';
 import {SemanticNode} from './semantic_node';
 import {SemanticNodeFactory} from './semantic_node_factory';
 import * as SemanticPred from './semantic_pred';
+import * as SemanticUtil from './semantic_util';
 
 
-export class SemanticProcessor {
+export default class SemanticProcessor {
 
   private static readonly FENCE_TO_PUNCT_: {[key: string]: SemanticRole} = {
     [SemanticRole.NEUTRAL]: SemanticRole.VBAR,
@@ -91,7 +93,6 @@ export class SemanticProcessor {
 
   private factory_: SemanticNodeFactory;
 
-  public heuristics: SemanticHeuristics;
 
   /**
    * Table for caching explicit function applications.
@@ -116,8 +117,7 @@ export class SemanticProcessor {
    */
   private constructor() {
     this.factory_ = new SemanticNodeFactory();
-    this.heuristics = SemanticHeuristics.getInstance();
-    this.heuristics.factory = this.factory_;
+    SemanticHeuristics.factory = this.factory_;
   }
 
 
@@ -127,7 +127,7 @@ export class SemanticProcessor {
    */
   public setNodeFactory(factory: SemanticNodeFactory) {
     this.factory_ = factory;
-    this.heuristics.factory = this.factory_;
+    SemanticHeuristics.factory = this.factory_;
   }
 
 
@@ -234,12 +234,12 @@ export class SemanticProcessor {
    * @return The space element if it exists.
    */
   private static getSpacer_(node: Element): Element {
-    if (sre.DomUtil.tagName(node) === 'MSPACE') {
+    if (DomUtil.tagName(node) === 'MSPACE') {
       return node;
     }
-    while (sre.SemanticUtil.hasEmptyTag(node) && node.childNodes.length === 1) {
+    while (SemanticUtil.hasEmptyTag(node) && node.childNodes.length === 1) {
       node = (node.childNodes[0] as Element);
-      if (sre.DomUtil.tagName(node) === 'MSPACE') {
+      if (DomUtil.tagName(node) === 'MSPACE') {
         return node;
       }
     }
@@ -275,7 +275,7 @@ export class SemanticProcessor {
       SemanticNode {
     let node = SemanticProcessor.getInstance().factory_.makeBranchNode(
         SemanticType.INFIXOP, children, [opNode],
-        sre.SemanticUtil.getEmbellishedInner(opNode).textContent);
+        SemanticUtil.getEmbellishedInner(opNode).textContent);
     node.role = opNode.role;
     return SemanticHeuristics.run('propagateSimpleFunction', node);
   }
@@ -287,7 +287,7 @@ export class SemanticProcessor {
    * @return The new list of nodes.
    */
   private explicitMixed_(nodes: SemanticNode[]): SemanticNode[] {
-    let partition = sre.SemanticUtil.partitionNodes(nodes, function(x) {
+    let partition = SemanticUtil.partitionNodes(nodes, function(x) {
       return x.textContent === SemanticAttr.invisiblePlus();
     });
     if (!partition.rel.length) {
@@ -335,7 +335,7 @@ export class SemanticProcessor {
     let content =
         nodeList
             .map(function(x) {
-              return sre.SemanticUtil.getEmbellishedInner(x).textContent;
+              return SemanticUtil.getEmbellishedInner(x).textContent;
             })
             .join(' ');
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
@@ -361,7 +361,7 @@ export class SemanticProcessor {
    */
   private prefixNode_(node: SemanticNode, prefixes: SemanticNode[]):
       SemanticNode {
-    let negatives = sre.SemanticUtil.partitionNodes(
+    let negatives = SemanticUtil.partitionNodes(
       prefixes, x => SemanticPred.isRole(x , SemanticRole.SUBTRACTION));
     let newNode = SemanticProcessor.getInstance().concatNode_(
         node, negatives.comp.pop(), SemanticType.PREFIXOP);
@@ -457,7 +457,7 @@ export class SemanticProcessor {
    * @return The new list of nodes.
    */
   private combineUnits_(nodes: SemanticNode[]): SemanticNode[] {
-    let partition = sre.SemanticUtil.partitionNodes(nodes, function(x) {
+    let partition = SemanticUtil.partitionNodes(nodes, function(x) {
       return !SemanticPred.isRole(x, SemanticRole.UNIT);
     });
     if (nodes.length === partition.rel.length) {
@@ -503,7 +503,7 @@ export class SemanticProcessor {
    */
   // Change that to compute mixed fractions.
   private getMixedNumbers_(nodes: SemanticNode[]): SemanticNode[] {
-    let partition = sre.SemanticUtil.partitionNodes(nodes, function(x) {
+    let partition = SemanticUtil.partitionNodes(nodes, function(x) {
       return SemanticPred.isType(x, SemanticType.FRACTION) &&
         SemanticPred.isRole(x, SemanticRole.VULGAR);
     });
@@ -542,8 +542,8 @@ export class SemanticProcessor {
     if (nodes.length <= 1) {
       return nodes;
     }
-    let partition = sre.SemanticUtil.partitionNodes(
-        nodes, SemanticPred.isType(x , SemanticType.TEXT));
+    let partition = SemanticUtil.partitionNodes(
+        nodes, x => SemanticPred.isType(x , SemanticType.TEXT));
     if (partition.rel.length === 0) {
       return nodes;
     }
@@ -575,7 +575,7 @@ export class SemanticProcessor {
    */
   private relationsInRow_(nodes: SemanticNode[]): SemanticNode {
     let partition =
-        sre.SemanticUtil.partitionNodes(nodes, SemanticPred.isRelation);
+        SemanticUtil.partitionNodes(nodes, SemanticPred.isRelation);
     let firstRel = partition.rel[0];
 
     if (!firstRel) {
@@ -600,7 +600,7 @@ export class SemanticProcessor {
     }
     node = SemanticProcessor.getInstance().factory_.makeBranchNode(
         SemanticType.RELSEQ, children, partition.rel,
-        sre.SemanticUtil.getEmbellishedInner(firstRel).textContent);
+        SemanticUtil.getEmbellishedInner(firstRel).textContent);
     node.role = firstRel.role;
     return node;
   }
@@ -635,9 +635,9 @@ export class SemanticProcessor {
     }
 
     // Deal with explicit juxtaposition
-    nodes = SemanticHeuristics.runMulti('convert_juxtaposition', nodes);
+    nodes = SemanticHeuristics.run('convert_juxtaposition', nodes);
 
-    let split = sre.SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
+    let split = SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
     // At this point, we know that split.head is not empty!
     let node = SemanticProcessor.getInstance().prefixNode_(
         SemanticProcessor.getInstance().implicitNode(
@@ -682,7 +682,7 @@ export class SemanticProcessor {
       return SemanticProcessor.getInstance().postfixNode_(root, prefixes);
     }
 
-    let split = sre.SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
+    let split = SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
 
     if (split.head.length === 0) {
       prefixes.push(split.div);
@@ -865,7 +865,7 @@ export class SemanticProcessor {
    */
   private getFencesInRow_(nodes: SemanticNode[]): SemanticNode[] {
     let partition =
-        sre.SemanticUtil.partitionNodes(nodes, SemanticPred.isFence);
+        SemanticUtil.partitionNodes(nodes, SemanticPred.isFence);
     partition = SemanticProcessor.purgeFences_(partition);
     let felem = partition.comp.shift();
     return SemanticProcessor.getInstance().fences_(
@@ -918,7 +918,7 @@ export class SemanticProcessor {
           SemanticProcessor.fenceToPunct_(firstOpen);
           result.push(firstOpen);
         } else {
-          let split = sre.SemanticUtil.sliceNodes(openStack, openPred);
+          let split = SemanticUtil.sliceNodes(openStack, openPred);
           let cutLength = split.head.length - 1;
           let innerNodes = SemanticProcessor.getInstance().neutralFences_(
               split.head, contentStack.slice(0, cutLength));
@@ -993,7 +993,7 @@ export class SemanticProcessor {
       // 3. Optimise the neutral fences.
       // 4. Make fenced node.
       // Careful, this reverses openStack!
-      let split = sre.SemanticUtil.sliceNodes(openStack, openPred, true);
+      let split = SemanticUtil.sliceNodes(openStack, openPred, true);
       // We know that
       // (a) div & tail exist,
       // (b) all are combined in this step into a single fenced node,
@@ -1048,7 +1048,7 @@ export class SemanticProcessor {
       return restContent.concat(
           SemanticProcessor.getInstance().neutralFences_(fences, content));
     }
-    let split = sre.SemanticUtil.sliceNodes(fences, function(x) {
+    let split = SemanticUtil.sliceNodes(fences, function(x) {
       return SemanticPred.compareNeutralFences(x, firstFence);
     });
     if (!split.div) {
@@ -1253,7 +1253,7 @@ export class SemanticProcessor {
           type === 'relation';
     };
     // Partition with improved ellipses handling.
-    let partition = sre.SemanticUtil.partitionNodes(nodes, function(x) {
+    let partition = SemanticUtil.partitionNodes(nodes, function(x) {
       if (!SemanticPred.isPunctuation(x)) {
         return false;
       }
@@ -1687,7 +1687,7 @@ export class SemanticProcessor {
           rest.unshift(funcNode);
           return rest;
         }
-        let partition = sre.SemanticUtil.sliceNodes(
+        let partition = SemanticUtil.sliceNodes(
             rest, SemanticPred.isPrefixFunctionBoundary);
         if (!partition.head.length) {
           if (!partition.div ||
@@ -1713,7 +1713,7 @@ export class SemanticProcessor {
         break;
       case 'bigop':
         let partition =
-            sre.SemanticUtil.sliceNodes(rest, SemanticPred.isBigOpBoundary);
+            SemanticUtil.sliceNodes(rest, SemanticPred.isBigOpBoundary);
         if (!partition.head.length) {
           rest.unshift(func);
           return rest;
@@ -1921,7 +1921,7 @@ export class SemanticProcessor {
    */
   public tablesInRow(nodes: SemanticNode[]): SemanticNode[] {
     // First we process all matrices:
-    let partition = sre.SemanticUtil.partitionNodes(
+    let partition = SemanticUtil.partitionNodes(
         nodes, SemanticPred.tableIsMatrixOrVector);
     let result = [];
     for (let i = 0, matrix; matrix = partition.rel[i]; i++) {
@@ -1930,7 +1930,7 @@ export class SemanticProcessor {
     }
     result = result.concat(partition.comp.shift());
     // Process the remaining tables for cases.
-    partition = sre.SemanticUtil.partitionNodes(
+    partition = SemanticUtil.partitionNodes(
         result, SemanticPred.isTableOrMultiline);
     result = [];
     for (let i = 0, table; table = partition.rel[i]; i++) {
@@ -2258,7 +2258,7 @@ export class SemanticProcessor {
     if (node.role !== SemanticRole.UNKNOWN) {
       return;
     }
-    let content = sre.SemanticUtil.splitUnicode(node.textContent);
+    let content = SemanticUtil.splitUnicode(node.textContent);
     let meaning = content.map(SemanticAttr.lookupMeaning);
     if (meaning.every(function(x) {
           return x.type === SemanticType.NUMBER &&
@@ -2292,7 +2292,7 @@ export class SemanticProcessor {
     if (node.font !== SemanticFont.UNKNOWN) {
       return;
     }
-    let content = sre.SemanticUtil.splitUnicode(node.textContent);
+    let content = SemanticUtil.splitUnicode(node.textContent);
     let meaning = content.map(SemanticAttr.lookupMeaning);
     let singleFont = meaning.reduce(function(prev, curr) {
       if (!prev || !curr.font || curr.font === SemanticFont.UNKNOWN ||
@@ -2323,7 +2323,7 @@ export class SemanticProcessor {
       bevelled: boolean): SemanticNode {
     // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
     //     SemanticType.MULTILINE, [child0, child1], []);
-    if (!bevelled && sre.SemanticUtil.isZeroLength(linethickness)) {
+    if (!bevelled && SemanticUtil.isZeroLength(linethickness)) {
       let child0 = SemanticProcessor.getInstance().factory_.makeBranchNode(
           SemanticType.LINE, [denom], []);
       let child1 = SemanticProcessor.getInstance().factory_.makeBranchNode(
@@ -2808,7 +2808,7 @@ export class SemanticProcessor {
       return inference;
     }
     let label = semantics['labelledRule'];
-    let children = sre.DomUtil.toArray(node.childNodes);
+    let children = DomUtil.toArray(node.childNodes);
     let content = [];
     if (label === 'left' || label === 'both') {
       content.push(
@@ -2843,7 +2843,7 @@ export class SemanticProcessor {
     let label = this.findNestedRow(children, 'prooflabel', side);
     let sem = this.factory_.makeBranchNode(
         SemanticType.RULELABEL,
-        parse(sre.DomUtil.toArray(label.childNodes)), []);
+        parse(DomUtil.toArray(label.childNodes)), []);
     sem.role = (side as SemanticRole);
     sem.mathmlTree = label;
     return sem;
@@ -2869,7 +2869,7 @@ export class SemanticProcessor {
     let premRow = up ? inf.childNodes[1] : inf.childNodes[0];
     let concRow = up ? inf.childNodes[0] : inf.childNodes[1];
     let premTable = premRow.childNodes[0].childNodes[0];
-    let topRow = sre.DomUtil.toArray(premTable.childNodes[0].childNodes);
+    let topRow = DomUtil.toArray(premTable.childNodes[0].childNodes);
     let premNodes = [];
     let i = 1;
     for (let cell of topRow) {
@@ -2880,7 +2880,7 @@ export class SemanticProcessor {
     }
     let premises = parse(premNodes);
     let conclusion =
-        parse(sre.DomUtil.toArray(concRow.childNodes[0].childNodes))[0];
+        parse(DomUtil.toArray(concRow.childNodes[0].childNodes))[0];
     let prem =
         this.factory_.makeBranchNode(SemanticType.PREMISES, premises, []);
     prem.mathmlTree = (premTable as Element);
@@ -2922,11 +2922,11 @@ export class SemanticProcessor {
       return null;
     }
     for (let i = 0, node; node = nodes[i]; i++) {
-      let tag = sre.DomUtil.tagName(node);
+      let tag = DomUtil.tagName(node);
       if (tag !== 'MSPACE') {
         if (tag === 'MROW') {
           return this.findNestedRow_(
-              sre.DomUtil.toArray(node.childNodes), semantic, level + 1, value);
+              DomUtil.toArray(node.childNodes), semantic, level + 1, value);
         }
         if (SemanticProcessor.findSemantics(node, semantic, value)) {
           return node;
@@ -2943,8 +2943,8 @@ export class SemanticProcessor {
    * @return The list with all space elements removed.
    */
   public cleanInference(nodes: NodeList): Element[] {
-    return sre.DomUtil.toArray(nodes).filter(function(x) {
-      return sre.DomUtil.tagName(x) !== 'MSPACE';
+    return DomUtil.toArray(nodes).filter(function(x) {
+      return DomUtil.tagName(x) !== 'MSPACE';
     });
   }
 
