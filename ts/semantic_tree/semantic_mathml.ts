@@ -22,6 +22,7 @@
 
 import * as DomUtil from '../common/dom_util';
 
+import {SemanticFont, SemanticRole, SemanticType} from './semantic_attr';
 import {SemanticNode} from './semantic_node';
 import {SemanticAbstractParser} from './semantic_parser';
 import {SemanticParser} from './semantic_parser';
@@ -29,43 +30,43 @@ import {SemanticProcessor} from './semantic_processor';
 
 
 
-export class SemanticMathml extends sre.SemanticAbstractParser implements
+export class SemanticMathml extends SemanticAbstractParser<Element> implements
     SemanticParser<Element> {
   private parseMap_: {[key: string]: (p1: Element, p2: Element[]) => SemanticNode};
   constructor() {
     super('MathML');
     this.parseMap_ = {
-      'SEMANTICS': goog.bind(this.semantics_, this),
-      'MATH': goog.bind(this.rows_, this),
-      'MROW': goog.bind(this.rows_, this),
-      'MPADDED': goog.bind(this.rows_, this),
-      'MSTYLE': goog.bind(this.rows_, this),
-      'MFRAC': goog.bind(this.fraction_, this),
-      'MSUB': goog.bind(this.limits_, this),
-      'MSUP': goog.bind(this.limits_, this),
-      'MSUBSUP': goog.bind(this.limits_, this),
-      'MOVER': goog.bind(this.limits_, this),
-      'MUNDER': goog.bind(this.limits_, this),
-      'MUNDEROVER': goog.bind(this.limits_, this),
-      'MROOT': goog.bind(this.root_, this),
-      'MSQRT': goog.bind(this.sqrt_, this),
-      'MTABLE': goog.bind(this.table_, this),
-      'MLABELEDTR': goog.bind(this.tableLabeledRow_, this),
-      'MTR': goog.bind(this.tableRow_, this),
-      'MTD': goog.bind(this.tableCell_, this),
-      'MS': goog.bind(this.text_, this),
-      'MTEXT': goog.bind(this.text_, this),
-      'MSPACE': goog.bind(this.space_, this),
-      'ANNOTATION-XML': goog.bind(this.text_, this),
-      'MI': goog.bind(this.identifier_, this),
-      'MN': goog.bind(this.number_, this),
-      'MO': goog.bind(this.operator_, this),
-      'MFENCED': goog.bind(this.fenced_, this),
-      'MENCLOSE': goog.bind(this.enclosed_, this),
-      'MMULTISCRIPTS': goog.bind(this.multiscripts_, this),
-      'ANNOTATION': goog.bind(this.empty_, this),
-      'NONE': goog.bind(this.empty_, this),
-      'MACTION': goog.bind(this.action_, this)
+      'SEMANTICS': this.semantics_.bind(this),
+      'MATH': this.rows_.bind(this),
+      'MROW': this.rows_.bind(this),
+      'MPADDED': this.rows_.bind(this),
+      'MSTYLE': this.rows_.bind(this),
+      'MFRAC': this.fraction_.bind(this),
+      'MSUB': this.limits_.bind(this),
+      'MSUP': this.limits_.bind(this),
+      'MSUBSUP': this.limits_.bind(this),
+      'MOVER': this.limits_.bind(this),
+      'MUNDER': this.limits_.bind(this),
+      'MUNDEROVER': this.limits_.bind(this),
+      'MROOT': this.root_.bind(this),
+      'MSQRT': this.sqrt_.bind(this),
+      'MTABLE': this.table_.bind(this),
+      'MLABELEDTR': this.tableLabeledRow_.bind(this),
+      'MTR': this.tableRow_.bind(this),
+      'MTD': this.tableCell_.bind(this),
+      'MS': this.text_.bind(this),
+      'MTEXT': this.text_.bind(this),
+      'MSPACE': this.space_.bind(this),
+      'ANNOTATION-XML': this.text_.bind(this),
+      'MI': this.identifier_.bind(this),
+      'MN': this.number_.bind(this),
+      'MO': this.operator_.bind(this),
+      'MFENCED': this.fenced_.bind(this),
+      'MENCLOSE': this.enclosed_.bind(this),
+      'MMULTISCRIPTS': this.multiscripts_.bind(this),
+      'ANNOTATION': this.empty_.bind(this),
+      'NONE': this.empty_.bind(this),
+      'MACTION': this.action_.bind(this)
     };
 
     let meaning = {
@@ -88,7 +89,7 @@ export class SemanticMathml extends sre.SemanticAbstractParser implements
     let children = DomUtil.toArray(mml.childNodes);
     let tag = DomUtil.tagName(mml);
     let func = this.parseMap_[tag];
-    let newNode = (func ? func : goog.bind(this.dummy_, this))(mml, children);
+    let newNode = (func ? func : this.dummy_.bind(this))(mml, children);
     sre.SemanticUtil.addAttributes(newNode, mml);
     if (['MATH', 'MROW', 'MPADDED', 'MSTYLE', 'SEMANTICS'].indexOf(tag) !==
         -1) {

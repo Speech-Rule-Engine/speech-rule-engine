@@ -24,8 +24,7 @@ import {SemanticNode} from './semantic_node';
 import {SemanticNodeFactory} from './semantic_node_factory';
 
 
-
-export interface SemanticParser {
+export interface SemanticParser<T> {
   /**
    * The parse method of this parser.
    * @param representation The representation from which a semantic
@@ -63,26 +62,26 @@ export interface SemanticParser {
 }
 
 
+export abstract class SemanticAbstractParser<T> implements SemanticParser<T> {
 
-/**
- * @param type The type of the parser.
- */
-export class SemanticAbstractParser implements SemanticParser {
-  parse: any;
+  private factory_: SemanticNodeFactory = new SemanticNodeFactory();
 
-  private type_: string;
-
-  private factory_: SemanticNodeFactory;
-  constructor(type: string) {
-    this.type_ = type;
-    this.factory_ = new SemanticNodeFactory();
-  }
+  /**
+   * @param type The type of the parser.
+   */
+  constructor(private type: string) { }
 
 
   /**
    * @override
    */
-  getFactory() {
+  public abstract parse(representation: T): SemanticNode;
+
+
+  /**
+   * @override
+   */
+  public getFactory() {
     return this.factory_;
   }
 
@@ -90,7 +89,7 @@ export class SemanticAbstractParser implements SemanticParser {
   /**
    * @override
    */
-  setFactory(factory) {
+  public setFactory(factory: SemanticNodeFactory) {
     this.factory_ = factory;
   }
 
@@ -98,24 +97,20 @@ export class SemanticAbstractParser implements SemanticParser {
   /**
    * @override
    */
-  getType() {
-    return this.type_;
+  public getType() {
+    return this.type;
   }
 
 
   /**
    * @override
    */
-  parseList(list) {
+  public parseList(list: T[]) {
     let result = [];
     for (let i = 0, element; element = list[i]; i++) {
       result.push(this.parse(element));
     }
     return result;
   }
-}
 
-/**
- * @override
- */
-SemanticAbstractParser.prototype.parse = goog.abstractMethod;
+}

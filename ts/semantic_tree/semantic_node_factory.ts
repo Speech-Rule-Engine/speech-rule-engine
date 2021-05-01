@@ -23,7 +23,7 @@
  */
 
 
-import {SemanticAttr} from './semantic_attr';
+import {SemanticFont, SemanticType} from './semantic_attr';
 import {SemanticDefault} from './semantic_default';
 import {SemanticNodeCollator} from './semantic_default';
 import {SemanticNode} from './semantic_node';

@@ -353,6 +353,7 @@ export function sliceNodes(
   return {head: head, div: null, tail: []};
 }
 
+
 export interface Partition {
   rel: SemanticNode[];
   comp: SemanticNode[][];

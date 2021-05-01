@@ -21,7 +21,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticAttr} from './semantic_attr';
+import {SemanticType, SemanticRole, SemanticAttr} from './semantic_attr';
 import {SemanticNode} from './semantic_node';
 import {SemanticNodeFactory} from './semantic_node_factory';
 import * as SemanticPred from './semantic_pred';

@@ -29,7 +29,6 @@ import {SemanticNodeFactory} from './semantic_node_factory';
 import * as SemanticPred from './semantic_pred';
 
 
-
 export class SemanticProcessor {
   private static readonly FENCE_TO_PUNCT_:
       {[key: SemanticRole]: SemanticRole} = {};
@@ -49,7 +48,8 @@ export class SemanticProcessor {
   /**
    * {Object.<{type: SemanticType,
    *         length: number, accent: boolean}>}
-   *  */
+   *
+   */
   private static readonly MML_TO_BOUNDS_:
       {[key: string]:
            {type: SemanticType, length: number, accent: boolean}} = {
@@ -78,6 +78,7 @@ export class SemanticProcessor {
    * Table for caching explicit function applications.
    */
   funcAppls: {[key: string]: SemanticNode} = {};
+
   constructor() {
     this.factory_ = new SemanticNodeFactory();
     this.heuristics = SemanticHeuristics.getInstance();

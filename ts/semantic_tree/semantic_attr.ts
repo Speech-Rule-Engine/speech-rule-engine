@@ -663,30 +663,30 @@ export namespace SemanticAttr {
   // Other alphabets.
   const hebrewLetters: string[] = ['ℵ', 'ℶ', 'ℷ', 'ℸ'];
 
-  // const allLetters: string[] = capitalLatin.concat(
-  //       smallLatin, capitalLatinFullWidth, smallLatinFullWidth,
-  //       capitalLatinBold, smallLatinBold, capitalLatinItalic,
-  //       capitalLatinBoldItalic, smallLatinBoldItalic,
-  //       smallLatinItalic, capitalLatinScript, smallLatinScript,
-  //       capitalLatinBoldScript, smallLatinBoldScript,
-  //       capitalLatinFraktur, smallLatinFraktur,
-  //       capitalLatinDoubleStruck, smallLatinDoubleStruck,
-  //       capitalLatinBoldFraktur, smallLatinBoldFraktur,
-  //       capitalLatinSansSerif, smallLatinSansSerif,
-  //       capitalLatinSansSerifBold, smallLatinSansSerifBold,
-  //       capitalLatinSansSerifItalic, smallLatinSansSerifItalic,
-  //       capitalLatinSansSerifBoldItalic,
-  //       smallLatinSansSerifBoldItalic, capitalLatinMonospace,
-  //       smallLatinMonospace, latinDoubleStruckItalic,
-  //       capitalGreek, smallGreek, capitalGreekBold,
-  //       smallGreekBold, capitalGreekItalic, smallGreekItalic,
-  //       capitalGreekBoldItalic, smallGreekBoldItalic,
-  //       capitalGreekSansSerifBold, smallGreekSansSerifBold,
-  //       greekDoubleStruck, greekSpecial,
-  //       capitalGreekSansSerifBoldItalic,
-  //       smallGreekSansSerifBoldItalic, greekSpecialBold,
-  //       greekSpecialItalic, greekSpecialSansSerifBold,
-  //       hebrewLetters);
+  export const allLetters: string[] = capitalLatin.concat(
+        smallLatin, capitalLatinFullWidth, smallLatinFullWidth,
+        capitalLatinBold, smallLatinBold, capitalLatinItalic,
+        capitalLatinBoldItalic, smallLatinBoldItalic,
+        smallLatinItalic, capitalLatinScript, smallLatinScript,
+        capitalLatinBoldScript, smallLatinBoldScript,
+        capitalLatinFraktur, smallLatinFraktur,
+        capitalLatinDoubleStruck, smallLatinDoubleStruck,
+        capitalLatinBoldFraktur, smallLatinBoldFraktur,
+        capitalLatinSansSerif, smallLatinSansSerif,
+        capitalLatinSansSerifBold, smallLatinSansSerifBold,
+        capitalLatinSansSerifItalic, smallLatinSansSerifItalic,
+        capitalLatinSansSerifBoldItalic,
+        smallLatinSansSerifBoldItalic, capitalLatinMonospace,
+        smallLatinMonospace, latinDoubleStruckItalic,
+        capitalGreek, smallGreek, capitalGreekBold,
+        smallGreekBold, capitalGreekItalic, smallGreekItalic,
+        capitalGreekBoldItalic, smallGreekBoldItalic,
+        capitalGreekSansSerifBold, smallGreekSansSerifBold,
+        greekDoubleStruck, greekSpecial,
+        capitalGreekSansSerifBoldItalic,
+        smallGreekSansSerifBoldItalic, greekSpecialBold,
+        greekSpecialItalic, greekSpecialSansSerifBold,
+        hebrewLetters);
 
   // Operator symbols
   const additions: string[] = [
@@ -1479,7 +1479,8 @@ export namespace SemanticAttr {
    * @param meaning2 Second meaning.
    * @return True if both contain the same field entries.
    */
-  export function equal(meaning1: SemanticMeaning, meaning2: SemanticMeaning): boolean {
+  export function equal(meaning1: SemanticMeaning,
+                        meaning2: SemanticMeaning): boolean {
     return meaning1.type === meaning2.type && meaning1.role === meaning2.role &&
         meaning1.font === meaning2.font;
   }

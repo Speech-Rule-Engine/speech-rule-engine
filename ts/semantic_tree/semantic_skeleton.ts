@@ -22,20 +22,26 @@
 
 import * as BaseUtil from '../common/base_util';
 
+import XpathUtil from '../common/xpath_util';
+import {Attribute as EnrichAttribute} from '../enrich_mathml/enrich_mathml';
+import {SemanticType} from './semantic_attr';
 import {SemanticNode} from './semantic_node';
 import {SemanticTree} from './semantic_tree';
 
 
+export type Sexp = number | Sexp[];
 
 /**
  * @param skeleton The skeleton array.
  */
 export class SemanticSkeleton {
+
   array: Sexp;
 
   parents: {[key: number]: number[]} = null;
 
   levelsMap: {[key: number]: Sexp} = null;
+
   constructor(skeleton: Sexp) {
     skeleton = skeleton === 0 ? skeleton : skeleton || [];
     this.array = skeleton;
@@ -71,9 +77,9 @@ export class SemanticSkeleton {
           element === parents[0] ? parents.slice(1) : parents;
       return;
     }
+    // TODO (TS): Add slice method to Sexp.
     let newElement = SemanticSkeleton.contentCollapseStructure(element) ?
-        element.slice(1) :
-        element;
+        (element as any).slice(1) :  element;
     let newParents = [newElement[0]].concat(parents);
     for (let i = 0, l = newElement.length; i < l; i++) {
       let current = newElement[i];
@@ -101,10 +107,10 @@ export class SemanticSkeleton {
     }
     if (SemanticSkeleton.contentCollapseStructure(struct)) {
       return '(' +
-          'c ' + struct.slice(1).map(SemanticSkeleton.makeSexp_).join(' ') +
+          'c ' + (struct as any).slice(1).map(SemanticSkeleton.makeSexp_).join(' ') +
           ')';
     }
-    return '(' + struct.map(SemanticSkeleton.makeSexp_).join(' ') + ')';
+    return '(' + (struct as any).map(SemanticSkeleton.makeSexp_).join(' ') + ')';
   }
 
 
@@ -163,8 +169,9 @@ export class SemanticSkeleton {
       return [];
     }
     let content = node.contentNodes;
+    let contentStructure;
     if (content.length) {
-      let contentStructure = content.map(SemanticSkeleton.fromNode_);
+      contentStructure = content.map(SemanticSkeleton.fromNode_) as any;
       contentStructure.unshift('c');
     }
     let children = node.childNodes;
@@ -198,7 +205,7 @@ export class SemanticSkeleton {
    */
   static contentCollapseStructure(strct: Sexp): boolean {
     return !!strct && !SemanticSkeleton.simpleCollapseStructure(strct) &&
-        strct[0] === 'c';
+        (strct as any)[0] === 'c';
   }
 
 
@@ -223,8 +230,8 @@ export class SemanticSkeleton {
    *     annotations.
    * @return The leafs of the structure annotations.
    */
-  static collapsedLeafs(...var_args: Sexp[]): number[] {
-    let collapseStructure = function(coll) {
+  static collapsedLeafs(...args: Sexp[]): number[] {
+    let collapseStructure = (coll: any) => {
       if (SemanticSkeleton.simpleCollapseStructure(coll)) {
         return [coll];
       }
@@ -232,9 +239,7 @@ export class SemanticSkeleton {
           coll.slice(2) :
           coll.slice(1);
     };
-    return Array.prototype.slice.call(arguments, 0).reduce(function(x, y) {
-      return x.concat(collapseStructure(y));
-    }, []);
+    return args.reduce((x: any, y) => x.concat(collapseStructure(y)), []);
   }
 
 
@@ -258,7 +263,7 @@ export class SemanticSkeleton {
    * @param node A semantic node.
    * @return The sexp structure.
    */
-  private static tree_(mml: Node, node: SemanticNode): Sexp {
+  private static tree_(mml: Element, node: SemanticNode): Sexp {
     if (!node) {
       return [];
     }
@@ -267,10 +272,10 @@ export class SemanticSkeleton {
     }
     let id = node.id;
     let skeleton = [id];
-    let mmlChild = sre.XpathUtil.evalXPath(
-        './/self::*[@' + sre.EnrichMathml.Attribute.ID + '=' + id + ']',
+    let mmlChild = XpathUtil.evalXPath(
+        `.//self::*[@${EnrichAttribute.ID}=${id}]`,
         mml)[0];
-    let children = SemanticSkeleton.combineContentChildren(
+    let children = SemanticSkeleton.combineContentChildren<SemanticNode>(
         node, node.contentNodes.map(function(x) {
           return x;
         }),
@@ -278,10 +283,10 @@ export class SemanticSkeleton {
           return x;
         }));
     if (mmlChild) {
-      SemanticSkeleton.addOwns_(mmlChild, children);
+      SemanticSkeleton.addOwns_(mmlChild as Element, children);
     }
     for (let i = 0, child; child = children[i]; i++) {
-      skeleton.push(SemanticSkeleton.tree_(mml, child));
+      skeleton.push(SemanticSkeleton.tree_(mml, child) as any);
     }
     return skeleton;
   }
@@ -293,12 +298,12 @@ export class SemanticSkeleton {
    * @param children Its semantic children with content nodes
    *     already interspersed.
    */
-  private static addOwns_(node: Node, children: Node[]) {
-    let collapsed = node.getAttribute(sre.EnrichMathml.Attribute.COLLAPSED);
+  private static addOwns_(node: Element, children: SemanticNode[]) {
+    let collapsed = node.getAttribute(EnrichAttribute.COLLAPSED);
     let leafs = collapsed ? SemanticSkeleton.realLeafs_(
                                 SemanticSkeleton.fromString(collapsed).array) :
                             children.map((x) => x.id);
-    node.setAttribute(sre.EnrichMathml.Attribute.OWNS, leafs.join(' '));
+    node.setAttribute(EnrichAttribute.OWNS, leafs.join(' '));
   }
 
 
@@ -307,14 +312,15 @@ export class SemanticSkeleton {
    * @param sexp The sexpression.
    * @return The actual leaf ids.
    */
-  private static realLeafs_(sexp: Sexp): number[] {
+  // TODO (TS): this used to be Sexp. Sort out all those any types!
+  private static realLeafs_(sexp: any): number[] {
     if (SemanticSkeleton.simpleCollapseStructure(sexp)) {
-      return [sexp];
+      return [sexp as number];
     }
     if (SemanticSkeleton.contentCollapseStructure(sexp)) {
       return [];
     }
-    let result = [];
+    let result: number[] = [];
     for (let i = 1; i < sexp.length; i++) {
       result = result.concat(SemanticSkeleton.realLeafs_(sexp[i]));
     }
@@ -333,24 +339,24 @@ export class SemanticSkeleton {
   static combineContentChildren<T>(
       semantic: SemanticNode, content: T[], children: T[]): T[] {
     switch (semantic.type) {
-      case sre.Semantic.Type.RELSEQ:
-      case sre.Semantic.Type.INFIXOP:
-      case sre.Semantic.Type.MULTIREL:
+      case SemanticType.RELSEQ:
+      case SemanticType.INFIXOP:
+      case SemanticType.MULTIREL:
         return BaseUtil.interleaveLists(children, content);
-      case sre.Semantic.Type.PREFIXOP:
+      case SemanticType.PREFIXOP:
         return content.concat(children);
-      case sre.Semantic.Type.POSTFIXOP:
+      case SemanticType.POSTFIXOP:
         return children.concat(content);
-      case sre.Semantic.Type.FENCED:
+      case SemanticType.FENCED:
         children.unshift(content[0]);
         children.push(content[1]);
         return children;
-      case sre.Semantic.Type.APPL:
+      case SemanticType.APPL:
         return [children[0], content[0], children[1]];
-      case sre.Semantic.Type.ROOT:
+      case SemanticType.ROOT:
         return [children[1], children[0]];
-      case sre.Semantic.Type.ROW:
-      case sre.Semantic.Type.LINE:
+      case SemanticType.ROW:
+      case SemanticType.LINE:
         if (content.length) {
           children.unshift(content[0]);
         }
@@ -360,6 +366,3 @@ export class SemanticSkeleton {
     }
   }
 }
-
-type Sexp = number|Sexp[];
-export {Sexp};

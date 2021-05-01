@@ -20,7 +20,7 @@
  */
 
 
-import {SemanticAttr, SemanticMeaning} from './semantic_attr';
+import {SemanticAttr, SemanticFont, SemanticMeaning} from './semantic_attr';
 import {SemanticNode} from './semantic_node';
 import {SemanticOrdering} from './semantic_ordering';
 

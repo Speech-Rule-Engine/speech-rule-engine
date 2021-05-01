@@ -20,8 +20,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticAttr} from './semantic_attr';
+import {SemanticAttr, SemanticFont, SemanticRole, SemanticType} from './semantic_attr';
 import {SemanticNode} from './semantic_node';
+import {getEmbellishedInner} from './semantic_util';
 
 
 /**
@@ -67,7 +68,7 @@ export function isAccent(node: SemanticNode): boolean {
       isAttribute('type', 'IDENTIFIER')(node) &&
       isAttribute('role', 'UNKNOWN')(node) &&
       !node.textContent.match(new RegExp(
-          SemanticAttr.getInstance().allLetters.join('|') + '|∞|᪲'));
+          SemanticAttr.allLetters.join('|') + '|∞|᪲'));
 }
 
 
@@ -322,7 +323,7 @@ export function isFencedElement(node: SemanticNode): boolean {
  * @return True if we believe we have a case statement.
  */
 export function tableIsCases(
-    table: SemanticNode, prevNodes: SemanticNode[]): boolean {
+    _table: SemanticNode, prevNodes: SemanticNode[]): boolean {
   return prevNodes.length > 0 &&
       isAttribute('role', 'OPENFENCE')(prevNodes[prevNodes.length - 1]);
 }
@@ -565,8 +566,8 @@ export function compareNeutralFences(
     fence1: SemanticNode, fence2: SemanticNode): boolean {
   return fence1.role === SemanticRole.NEUTRAL &&
       fence2.role === SemanticRole.NEUTRAL &&
-      sre.SemanticUtil.getEmbellishedInner(fence1).textContent ==
-      sre.SemanticUtil.getEmbellishedInner(fence2).textContent;
+      getEmbellishedInner(fence1).textContent ==
+      getEmbellishedInner(fence2).textContent;
 }
 
 

@@ -22,7 +22,7 @@
  */
 
 
-import {SemanticAttr, SemanticMeaning} from './semantic_attr';
+import {SemanticMeaning, SemanticRole, SemanticType} from './semantic_attr';
 
 
 // TODO: Have some better ordering mechanism than array order.

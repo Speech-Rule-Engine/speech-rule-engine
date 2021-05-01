@@ -155,7 +155,7 @@ export function walkTree(semantic: SemanticNode): Element {
   let newContent = semantic.contentNodes.map((cloneContentNode as Function));
   setOperatorAttribute_(semantic, newContent);
   let newChildren = semantic.childNodes.map((walkTree as Function));
-  let childrenList = SemanticSkeleton.combineContentChildren(
+  let childrenList = SemanticSkeleton.combineContentChildren<Element>(
       semantic, newContent, newChildren);
   newNode = semantic.mathmlTree;
   if (newNode === null) {

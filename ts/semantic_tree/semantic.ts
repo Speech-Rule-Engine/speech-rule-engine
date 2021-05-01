@@ -21,26 +21,26 @@
 
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticAttr} from './semantic_attr';
+import {SemanticFont, SemanticRole, SemanticType} from './semantic_attr';
 import {SemanticTree} from './semantic_tree';
 
 
 /**
  * Exports font attributes.
  */
-export type Font = Font;
+export type Font = SemanticFont;
 
 
 /**
  * Exports role attributes.
  */
-export type Role = Role;
+export type Role = SemanticRole;
 
 
 /**
  * Exports type attributes.
  */
-export type Type = Type;
+export type Type = SemanticType;
 type Attr = Font|Role|Type;
 export {Attr};
 
