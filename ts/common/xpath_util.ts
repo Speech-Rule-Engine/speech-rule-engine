@@ -47,7 +47,7 @@ namespace XpathUtil {
   export let currentDocument: Document = null;
 
 
-  export let xpathEvaluate: (x: string, node: Node, nsr: resolver_, rt: number, result: XPathResult) => XPathResult =
+  export let xpathEvaluate: (x: string, node: Node, nsr: Resolver, rt: number, result: XPathResult) => XPathResult =
     xpathSupported() ? document.evaluate : SystemExternal.xpath.evaluate;
 
 
@@ -84,7 +84,7 @@ namespace XpathUtil {
   /**
    * Resolver to work with xpath in node and wgxpath in IE/Edge.
    */
-  class Resolver {
+  export class Resolver {
     lookupNamespaceURI: any;
     constructor() {
       this.lookupNamespaceURI = resolveNameSpace;

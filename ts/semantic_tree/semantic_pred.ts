@@ -20,35 +20,43 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticAttr, SemanticFont, SemanticRole, SemanticType} from './semantic_attr';
+import {SemanticAttr, SemanticRole, SemanticType} from './semantic_attr';
 import {SemanticNode} from './semantic_node';
 import {getEmbellishedInner} from './semantic_util';
 
 
+// TODO (TS): Converted old isAttribute to three predicates. Make sure they are
+//            sound!
 /**
- * Constructs a predicate to check the semantic attribute of a node.
- * @param prop The property of a node.
- * @param attr The attribute.
- * @return The predicate.
+ * Checks if a node is of the given type.
+ * @param node The node.
+ * @param attr The type attribute.
+ * @return True if node has that type.
  */
-export function isAttribute(prop: string, attr: string): (p1: SemanticNode) =>
-    boolean {
-  let getAttr = function(prop) {
-    switch (prop) {
-      case 'role':
-        return SemanticRole[attr];
-      case 'font':
-        return SemanticFont[attr];
-      case 'embellished':
-      case 'type':
-      default:
-        return SemanticType[attr];
-    }
-  };
+export function isType(node: SemanticNode, attr: SemanticType): boolean {
+  return node.type === attr;
+}
 
-  return function(node) {
-    return node[prop] === getAttr(prop);
-  };
+
+/**
+ * Checks if a node is of the given embellished type.
+ * @param node The node.
+ * @param attr The embellished attribute.
+ * @return True if node has that embellished type.
+ */
+export function embellishedType(node: SemanticNode, attr: SemanticType): boolean {
+  return node.embellished === attr;
+}
+
+
+/**
+ * Checks if a node is of the given role.
+ * @param node The node.
+ * @param attr The role attribute.
+ * @return True if node has that role.
+ */
+export function isRole(node: SemanticNode, attr: SemanticRole): boolean {
+  return node.role === attr;
 }
 
 
@@ -58,15 +66,15 @@ export function isAttribute(prop: string, attr: string): (p1: SemanticNode) =>
  * @return True if the node is a punctuation, fence or operator.
  */
 export function isAccent(node: SemanticNode): boolean {
-  return isAttribute('type', 'FENCE')(node) ||
-      isAttribute('type', 'PUNCTUATION')(node) ||
+  return isType(node, SemanticType.FENCE) ||
+      isType(node, SemanticType.PUNCTUATION) ||
       // TODO (sorge) Simplify this once meaning of all characters is fully
       // defined. Improve dealing with Infinity.
-      isAttribute('type', 'OPERATOR')(node) &&
+      isType(node, SemanticType.OPERATOR) &&
       !node.textContent.match(new RegExp('∞|᪲')) ||
-      isAttribute('type', 'RELATION')(node) ||
-      isAttribute('type', 'IDENTIFIER')(node) &&
-      isAttribute('role', 'UNKNOWN')(node) &&
+      isType(node, SemanticType.RELATION) ||
+      isType(node, SemanticType.IDENTIFIER) &&
+      isRole(node, SemanticRole.UNKNOWN) &&
       !node.textContent.match(new RegExp(
           SemanticAttr.allLetters.join('|') + '|∞|᪲'));
 }
@@ -94,7 +102,7 @@ export function isSimpleFunctionScope(node: SemanticNode): boolean {
     if (child.role !== SemanticRole.IMPLICIT) {
       return false;
     }
-    if (child.childNodes.some(isAttribute('type', 'INFIXOP'))) {
+    if (child.childNodes.some(x => isType(x, SemanticType.INFIXOP))) {
       return false;
     }
   }
@@ -112,8 +120,8 @@ export function isSimpleFunctionScope(node: SemanticNode): boolean {
  * @return True if the node meets the boundary criteria.
  */
 export function isPrefixFunctionBoundary(node: SemanticNode): boolean {
-  return isOperator(node) && !isAttribute('role', 'DIVISION')(node) ||
-      isAttribute('type', 'APPL')(node) || isGeneralFunctionBoundary(node);
+  return isOperator(node) && !isRole(node, SemanticRole.DIVISION) ||
+    isType(node, SemanticType.APPL) || isGeneralFunctionBoundary(node);
 }
 
 
@@ -139,7 +147,7 @@ export function isBigOpBoundary(node: SemanticNode): boolean {
  */
 export function isIntegralDxBoundary(
     firstNode: SemanticNode, secondNode: SemanticNode): boolean {
-  return !!secondNode && isAttribute('type', 'IDENTIFIER')(secondNode) &&
+  return !!secondNode && isType(secondNode, SemanticType.IDENTIFIER) &&
       SemanticAttr.isCharacterD(firstNode.textContent);
 }
 
@@ -151,7 +159,7 @@ export function isIntegralDxBoundary(
  * @return True if the node meets the boundary criteria.
  */
 export function isIntegralDxBoundarySingle(node: SemanticNode): boolean {
-  if (isAttribute('type', 'IDENTIFIER')(node)) {
+  if (isType(node, SemanticType.IDENTIFIER)) {
     let firstChar = node.textContent[0];
     return firstChar && node.textContent[1] &&
         SemanticAttr.isCharacterD(firstChar);
@@ -194,8 +202,8 @@ export function isEmbellished(node: SemanticNode): SemanticType|null {
  * @return True if the node is considered as operator.
  */
 export function isOperator(node: SemanticNode): boolean {
-  return isAttribute('type', 'OPERATOR')(node) ||
-      isAttribute('embellished', 'OPERATOR')(node);
+  return isType(node, SemanticType.OPERATOR) ||
+    embellishedType(node, SemanticType.OPERATOR);
 }
 
 
@@ -205,8 +213,8 @@ export function isOperator(node: SemanticNode): boolean {
  * @return True if the node is considered as relation.
  */
 export function isRelation(node: SemanticNode): boolean {
-  return isAttribute('type', 'RELATION')(node) ||
-      isAttribute('embellished', 'RELATION')(node);
+  return isType(node, SemanticType.RELATION) ||
+    embellishedType(node, SemanticType.RELATION);
 }
 
 
@@ -216,8 +224,8 @@ export function isRelation(node: SemanticNode): boolean {
  * @return True if the node is considered as punctuation.
  */
 export function isPunctuation(node: SemanticNode): boolean {
-  return isAttribute('type', 'PUNCTUATION')(node) ||
-      isAttribute('embellished', 'PUNCTUATION')(node);
+  return isType(node, SemanticType.PUNCTUATION) ||
+    embellishedType(node, SemanticType.PUNCTUATION);
 }
 
 
@@ -227,8 +235,8 @@ export function isPunctuation(node: SemanticNode): boolean {
  * @return True if the node is considered as fence.
  */
 export function isFence(node: SemanticNode): boolean {
-  return isAttribute('type', 'FENCE')(node) ||
-      isAttribute('embellished', 'FENCE')(node);
+  return isType(node, SemanticType.FENCE) ||
+    embellishedType(node, SemanticType.FENCE);
 }
 
 
@@ -249,11 +257,11 @@ export function isElligibleEmbellishedFence(node: SemanticNode): boolean {
     return true;
   }
   let bothSide = function(node) {
-    return isAttribute('type', 'TENSOR')(node) &&
-        (!isAttribute('type', 'EMPTY')(node.childNodes[1]) ||
-         !isAttribute('type', 'EMPTY')(node.childNodes[2])) &&
-        (!isAttribute('type', 'EMPTY')(node.childNodes[3]) ||
-         !isAttribute('type', 'EMPTY')(node.childNodes[4]));
+    return isType(node, SemanticType.TENSOR) &&
+      (!isType(node.childNodes[1], SemanticType.EMPTY) ||
+        !isType(node.childNodes[2], SemanticType.EMPTY)) &&
+      (!isType(node.childNodes[3], SemanticType.EMPTY) ||
+        !isType(node.childNodes[4], SemanticType.EMPTY));
   };
   let recurseBaseNode = function(node) {
     if (!node.embellished) {
@@ -262,13 +270,13 @@ export function isElligibleEmbellishedFence(node: SemanticNode): boolean {
     if (bothSide(node)) {
       return false;
     }
-    if (isAttribute('role', 'CLOSE')(node) &&
-        isAttribute('type', 'TENSOR')(node)) {
+    if (isRole(node, SemanticRole.CLOSE) &&
+      isType(node, SemanticType.TENSOR)) {
       return false;
     }
-    if (isAttribute('role', 'OPEN')(node) &&
-        (isAttribute('type', 'SUBSCRIPT')(node) ||
-         isAttribute('type', 'SUPERSCRIPT')(node))) {
+    if (isRole(node, SemanticRole.OPEN) &&
+      (isType(node, SemanticType.SUBSCRIPT) ||
+        isType(node, SemanticType.SUPERSCRIPT))) {
       return false;
     }
     return recurseBaseNode(node.childNodes[0]);
@@ -284,8 +292,8 @@ export function isElligibleEmbellishedFence(node: SemanticNode): boolean {
  */
 export function isTableOrMultiline(node: SemanticNode): boolean {
   return !!node &&
-      (isAttribute('type', 'TABLE')(node) ||
-       isAttribute('type', 'MULTILINE')(node));
+    (isType(node, SemanticType.TABLE) ||
+      isType(node, SemanticType.MULTILINE));
 }
 
 
@@ -308,9 +316,9 @@ export function tableIsMatrixOrVector(node: SemanticNode): boolean {
  *     single contained element.
  */
 export function isFencedElement(node: SemanticNode): boolean {
-  return !!node && isAttribute('type', 'FENCED')(node) &&
-      (isAttribute('role', 'LEFTRIGHT')(node) ||
-       isAttribute('role', 'NEUTRAL')(node)) &&
+  return !!node && isType(node, SemanticType.FENCED) &&
+    (isRole(node, SemanticRole.LEFTRIGHT) ||
+      isRole(node, SemanticRole.NEUTRAL)) &&
       node.childNodes.length === 1;
 }
 
@@ -325,7 +333,7 @@ export function isFencedElement(node: SemanticNode): boolean {
 export function tableIsCases(
     _table: SemanticNode, prevNodes: SemanticNode[]): boolean {
   return prevNodes.length > 0 &&
-      isAttribute('role', 'OPENFENCE')(prevNodes[prevNodes.length - 1]);
+    isRole(prevNodes[prevNodes.length - 1], SemanticRole.OPENFENCE);
 }
 
 
@@ -360,14 +368,14 @@ export function isBinomial(table: SemanticNode): boolean {
  *    limit function.
  */
 export function isLimitBase(node: SemanticNode): boolean {
-  return isAttribute('type', 'LARGEOP')(node) ||
-      isAttribute('type', 'LIMBOTH')(node) ||
-      isAttribute('type', 'LIMLOWER')(node) ||
-      isAttribute('type', 'LIMUPPER')(node) ||
-      isAttribute('type', 'FUNCTION')(node) &&
-      isAttribute('role', 'LIMFUNC')(node) ||
-      (isAttribute('type', 'OVERSCORE')(node) ||
-       isAttribute('type', 'UNDERSCORE')(node)) &&
+  return isType(node, SemanticType.LARGEOP) ||
+    isType(node, SemanticType.LIMBOTH) ||
+    isType(node, SemanticType.LIMLOWER) ||
+    isType(node, SemanticType.LIMUPPER) ||
+    isType(node, SemanticType.FUNCTION) &&
+    isRole(node, SemanticRole.LIMFUNC) ||
+    (isType(node, SemanticType.OVERSCORE) ||
+      isType(node, SemanticType.UNDERSCORE)) &&
       isLimitBase((node.childNodes[0] as SemanticNode));
 }
 
@@ -410,8 +418,8 @@ export function singlePunctAtPosition(
  * @return True if node is an identifier with role simple function.
  */
 export function isSimpleFunction(node: SemanticNode): boolean {
-  return isAttribute('type', 'IDENTIFIER')(node) &&
-      isAttribute('role', 'SIMPLEFUNC')(node);
+  return isType(node, SemanticType.IDENTIFIER) &&
+    isRole(node, SemanticRole.SIMPLEFUNC);
 }
 
 
