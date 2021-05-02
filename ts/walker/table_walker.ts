@@ -53,25 +53,25 @@ export class TableWalker extends SyntaxWalker {
     super(node, generator, highlighter, xml);
 
     this.keyMapping[sre.EventUtil.KeyCode['0']] =
-        goog.bind(this.jumpCell, this);
+      this.jumpCell.bind(this);
     this.keyMapping[sre.EventUtil.KeyCode['1']] =
-        goog.bind(this.jumpCell, this);
+      this.jumpCell.bind(this);
     this.keyMapping[sre.EventUtil.KeyCode['2']] =
-        goog.bind(this.jumpCell, this);
+      this.jumpCell.bind(this);
     this.keyMapping[sre.EventUtil.KeyCode['3']] =
-        goog.bind(this.jumpCell, this);
+      this.jumpCell.bind(this);
     this.keyMapping[sre.EventUtil.KeyCode['4']] =
-        goog.bind(this.jumpCell, this);
+      this.jumpCell.bind(this);
     this.keyMapping[sre.EventUtil.KeyCode['5']] =
-        goog.bind(this.jumpCell, this);
+      this.jumpCell.bind(this);
     this.keyMapping[sre.EventUtil.KeyCode['6']] =
-        goog.bind(this.jumpCell, this);
+      this.jumpCell.bind(this);
     this.keyMapping[sre.EventUtil.KeyCode['7']] =
-        goog.bind(this.jumpCell, this);
+      this.jumpCell.bind(this);
     this.keyMapping[sre.EventUtil.KeyCode['8']] =
-        goog.bind(this.jumpCell, this);
+      this.jumpCell.bind(this);
     this.keyMapping[sre.EventUtil.KeyCode['9']] =
-        goog.bind(this.jumpCell, this);
+      this.jumpCell.bind(this);
   }
 
 

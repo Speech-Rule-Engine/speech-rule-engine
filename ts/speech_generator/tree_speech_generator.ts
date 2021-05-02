@@ -22,23 +22,19 @@
  */
 
 
+import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
 import * as WalkerUtil from '../walker/walker_util';
 
 import {AbstractSpeechGenerator} from './abstract_speech_generator';
 import * as SpeechGeneratorUtil from './speech_generator_util';
 
 
-
-export class TreeSpeechGenerator extends sre.AbstractSpeechGenerator {
-  constructor() {
-    super();
-  }
-
+export class TreeSpeechGenerator extends AbstractSpeechGenerator {
 
   /**
    * @override
    */
-  getSpeech(node, xml) {
+  public getSpeech(node: Element, xml: Element) {
     let speech = this.generateSpeech(node, xml);
     node.setAttribute(this.modality, speech);
     let nodes = this.getRebuilt().nodeDict;
@@ -52,16 +48,15 @@ export class TreeSpeechGenerator extends sre.AbstractSpeechGenerator {
         continue;
       }
       if (!this.modality ||
-          this.modality === sre.EnrichMathml.Attribute.SPEECH) {
+          this.modality === EnrichMathml.Attribute.SPEECH) {
         SpeechGeneratorUtil.addSpeech(innerNode, snode, this.getRebuilt().xml);
       } else {
         SpeechGeneratorUtil.addModality(innerNode, snode, this.modality);
       }
-      if (this.modality === sre.EnrichMathml.Attribute.SPEECH) {
+      if (this.modality === EnrichMathml.Attribute.SPEECH) {
         SpeechGeneratorUtil.addPrefix(innerNode, snode);
       }
     }
     return speech;
   }
 }
-goog.inherits(TreeSpeechGenerator, AbstractSpeechGenerator);

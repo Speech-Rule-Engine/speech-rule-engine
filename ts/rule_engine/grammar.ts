@@ -25,7 +25,7 @@
 
 import * as DomUtil from '../common/dom_util';
 import {Engine} from '../common/engine';
-import {localFont}  from '../l10n/locale';
+import * as L10n  from '../l10n/locale';
 import {Locale} from '../l10n/messages';
 import {DynamicCstr} from './dynamic_cstr';
 
@@ -405,7 +405,7 @@ function correctFont_(text: string, correction: string): string {
     return text;
   }
   correction =
-    Locale.MS_FUNC.FONT_REGEXP(localFont(correction));
+    Locale.MS_FUNC.FONT_REGEXP(L10n.localFont(correction));
   return text.replace(correction, '');
 }
 
@@ -434,6 +434,10 @@ function noTranslateText_(text: string): string {
   }
   return text;
 }
+
+Grammar.getInstance().setCorrection('localFont', L10n.localFont);
+Grammar.getInstance().setCorrection('localRole', L10n.localRole);
+Grammar.getInstance().setCorrection('localEnclose', L10n.localEnclose);
 
 Grammar.getInstance().setCorrection('ignoreFont', correctFont_);
 Grammar.getInstance().setPreprocessor('annotation', addAnnotation_);

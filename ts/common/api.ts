@@ -20,119 +20,122 @@
  */
 
 
-import {System} from './system';
+import System from './system';
 
 
 /**
  * Exports the version number of SRE.
  */
-module.exports.version = System.getInstance().version;
+export const version = System.version;
 
 
 /**
  * Exporting method to return an aural rendered speech string.
  */
-module.exports.toSpeech = System.getInstance().toSpeech;
+export const toSpeech = System.toSpeech;
 
 
 /**
  * Exporting method to return an XML string of the semantic tree.
  */
-module.exports.toSemantic = System.getInstance().toSemantic;
+export const toSemantic = System.toSemantic;
 
 
 /**
  * Exporting method to return an Json representation of the semantic tree.
  */
-module.exports.toJson = System.getInstance().toJson;
+export const toJson = System.toJson;
 
 
 /**
  * Exporting method to return auditory descriptions of the input.
  */
-module.exports.toDescription = System.getInstance().toDescription;
+export const toDescription = System.toDescription;
 
 
 /**
  * Exporting method to return semantically enriched MathML.
  */
-module.exports.toEnriched = System.getInstance().toEnriched;
+export const toEnriched = System.toEnriched;
 
 
 /**
  * Exporting method to walk an expression.
  */
-module.exports.walk = System.getInstance().walk;
+export const walk = System.walk;
 
 
 /**
  * Exporting method to move on an expression.
  */
-module.exports.move = System.getInstance().move;
+export const move = System.move;
 
 
 /**
  * Object for file io.
  */
-module.exports.file = {};
-
+export namespace file {
 
 /**
  * Exporting method to aural render an expression from a file.
  */
-module.exports.file.toSpeech = System.getInstance().fileToSpeech;
+export const toSpeech = System.fileToSpeech;
 
 
 /**
  * Exporting method to compute the semantic tree for an expression from a file.
  */
-module.exports.file.toSemantic = System.getInstance().fileToSemantic;
+export const toSemantic = System.fileToSemantic;
 
 
 /**
  * Exporting method to compute the Json of the semantic tree for an expression
  * from a file.
  */
-module.exports.file.toJson = System.getInstance().fileToJson;
+export const toJson = System.fileToJson;
 
 
 /**
  * Exporting method to compute auditory descriptions for an expression from a
  * file.
  */
-module.exports.file.toDescription = System.getInstance().fileToDescription;
+export const toDescription = System.fileToDescription;
 
 
 /**
  * Exporting method to compute semantically enriched MathML for an expression
  * from a file.
  */
-module.exports.file.toEnriched = System.getInstance().fileToEnriched;
+export const toEnriched = System.fileToEnriched;
+
+}
 
 
 /**
  * Exporting method to set up and parameterise the Engine.
  */
-module.exports.setupEngine = System.getInstance().setupEngine;
+export const setupEngine = System.setupEngine;
 
 
 /**
  * Exporting readiness flag.
  */
-module.exports.engineReady = System.getInstance().engineReady;
+export const engineReady = System.engineReady;
 
 
 /**
  * Returns the current setup.
  */
-module.exports.engineSetup = System.getInstance().engineSetup;
+export const engineSetup = System.engineSetup;
 
 
 /**
  * Clean exit from the system. Needed in async mode.
  */
-module.exports.exit = System.getInstance().exit;
+export const exit = System.exit;
 
+
+declare var global: any;
 
 /**
  * Default setup of the Engine.

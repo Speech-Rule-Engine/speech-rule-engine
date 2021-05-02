@@ -25,18 +25,12 @@
 import {AbstractSpeechGenerator} from './abstract_speech_generator';
 
 
-
-export class DummySpeechGenerator extends sre.AbstractSpeechGenerator {
-  constructor() {
-    super();
-  }
-
+export class DummySpeechGenerator extends AbstractSpeechGenerator {
 
   /**
    * @override
    */
-  getSpeech(node, xml) {
+  public getSpeech(_node: Element, _xml: Element) {
     return '';
   }
 }
-goog.inherits(DummySpeechGenerator, AbstractSpeechGenerator);

@@ -784,8 +784,8 @@ export function generateTensorRuleStrings_(constellation: string): string[] {
 export function generateTensorRules(store: MathStore) {
   // Constellations are built as bitvectors with the meaning:
   //  lsub lsuper base rsub rsuper
-  let defineRule = goog.bind(store.defineRule, store);
-  let defineSpecialisedRule = goog.bind(store.defineSpecialisedRule, store);
+  let defineRule = store.defineRule.bind(store);
+  let defineSpecialisedRule = store.defineSpecialisedRule.bind(store);
   let constellations = [
     '11111', '11110', '11101', '11100', '10111', '10110', '10101', '10100',
     '01111', '01110', '01101', '01100'

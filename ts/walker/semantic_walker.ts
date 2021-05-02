@@ -106,11 +106,11 @@ export class SemanticWalker extends sre.AbstractWalker {
         return [this.focusFromId(children[0], [content[0], children[0]])];
       case SemanticType.PUNCTUATED:
         if (role === SemanticRole.TEXT) {
-          return children.map(goog.bind(this.singletonFocus, this));
+          return children.map(this.singletonFocus.bind(this));
         }
         // TODO: That needs to be fixed!
         if (children.length === content.length) {
-          return content.map(goog.bind(this.singletonFocus, this));
+          return content.map(this.singletonFocus.bind(this));
         }
         let focusList = this.combinePunctuations(children, content, [], []);
         return focusList;
@@ -124,7 +124,7 @@ export class SemanticWalker extends sre.AbstractWalker {
           this.singletonFocus(children[1]), this.singletonFocus(children[0])
         ];
       default:
-        return children.map(goog.bind(this.singletonFocus, this));
+        return children.map(this.singletonFocus.bind(this));
     }
   }
 

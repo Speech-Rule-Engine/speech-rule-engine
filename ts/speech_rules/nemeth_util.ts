@@ -23,6 +23,8 @@ import XpathUtil from '../common/xpath_util';
 import {Grammar} from '../rule_engine/grammar';
 import {AuditoryDescription} from '../audio/auditory_description';
 import {MathStore} from '../rule_engine/math_store';
+import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
+import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
 import {SemanticVisitor} from '../semantic_tree/semantic_annotator';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
@@ -250,7 +252,7 @@ export function propagateNumber(
 }
 
 
-SemanticAnnotations.getInstance().register(
+SemanticAnnotations.register(
     new SemanticVisitor('nemeth', 'number', propagateNumber, {number: true}));
 
 
@@ -309,8 +311,8 @@ export function generateTensorRuleStrings_(constellation: string): string[] {
 export function generateTensorRules(store: MathStore) {
   // Constellations are built as bitvectors with the meaning:
   //  lsub lsuper base rsub rsuper
-  let defineRule = goog.bind(store.defineRule, store);
-  let defineRulesAlias = goog.bind(store.defineRulesAlias, store);
+  let defineRule = store.defineRule.bind(store);
+  let defineRulesAlias = store.defineRulesAlias.bind(store);
   let constellations = [
     '11111', '11110', '11101', '11100', '10111', '10110', '10101', '10100',
     '01111', '01110', '01101', '01100'

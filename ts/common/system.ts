@@ -299,7 +299,8 @@ namespace System {
    * @param input The input filename.
    * @param opt_output The output filename if one is given.
    */
-  function processFile(processor: string, input: string, opt_output?: string) {
+  export function processFile(
+      processor: string, input: string, opt_output?: string) {
     if (!Engine.isReady()) {
       setTimeout(() => processFile(processor, input, opt_output), 100);
       return;

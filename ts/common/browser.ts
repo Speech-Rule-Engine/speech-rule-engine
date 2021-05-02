@@ -20,14 +20,14 @@
  */
 
 
-import {Mode} from './engine';
-import {System} from './system';
+import {EngineConst} from './engine';
+import System from './system';
 
 
 /**
  * Default setup of the Engine.
  */
-System.getInstance().setupEngine(
-    {mode: Mode.HTTP, domain: 'mathspeak', style: 'default'});
+System.setupEngine(
+    {mode: EngineConst.Mode.HTTP, domain: 'mathspeak', style: 'default'});
 
-let SRE = System.getInstance();
+export let SRE = System;

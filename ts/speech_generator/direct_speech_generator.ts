@@ -26,18 +26,13 @@ import * as WalkerUtil from '../walker/walker_util';
 import {AbstractSpeechGenerator} from './abstract_speech_generator';
 
 
-
-export class DirectSpeechGenerator extends sre.AbstractSpeechGenerator {
-  constructor() {
-    super();
-  }
-
+export class DirectSpeechGenerator extends AbstractSpeechGenerator {
 
   /**
    * @override
    */
-  getSpeech(node, xml) {
+  public getSpeech(node: Element, _xml: Element) {
     return WalkerUtil.getAttribute(node, this.modality);
   }
+
 }
-goog.inherits(DirectSpeechGenerator, AbstractSpeechGenerator);

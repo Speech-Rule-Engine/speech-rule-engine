@@ -24,8 +24,7 @@
 
 import * as BaseUtil from '../common/base_util';
 import * as BrowserUtil from '../common/browser_util';
-import * as EngineExports from '../common/engine';
-import {Engine} from '../common/engine';
+import {Engine, EngineConst} from '../common/engine';
 import SystemExternal from '../common/system_external';
 import {MathCompoundStore} from '../rule_engine/math_simple_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
@@ -103,12 +102,12 @@ export class MathMap {
    * @param parse Method adding the rules.
    */
   retrieveFiles(file: string, parse: (p1: string) => any) {
-    let async = Engine.getInstance().mode === EngineExports.Mode.ASYNC;
+    let async = Engine.getInstance().mode === EngineConst.Mode.ASYNC;
     if (async) {
-      Engine.getInstance().mode = EngineExports.Mode.SYNC;
+      Engine.getInstance().mode = EngineConst.Mode.SYNC;
     }
     switch (Engine.getInstance().mode) {
-      case EngineExports.Mode.ASYNC:
+      case EngineConst.Mode.ASYNC:
         MathMap.toFetch_++;
         MathMap.fromFile_(file, function(err, json) {
           MathMap.toFetch_--;
@@ -118,18 +117,18 @@ export class MathMap {
           parse(json);
         });
         break;
-      case EngineExports.Mode.HTTP:
+      case EngineConst.Mode.HTTP:
         MathMap.toFetch_++;
         MathMap.getJsonAjax_(file, parse);
         break;
-      case EngineExports.Mode.SYNC:
+      case EngineConst.Mode.SYNC:
       default:
         let strs = MathMap.loadFile(file);
         parse(strs);
         break;
     }
     if (async) {
-      Engine.getInstance().mode = EngineExports.Mode.ASYNC;
+      Engine.getInstance().mode = EngineConst.Mode.ASYNC;
     }
   }
 
@@ -172,12 +171,12 @@ export class MathMap {
   retrieveMaps(locale: string) {
     AlphabetGenerator.generate(locale, this.store);
     if (Engine.getInstance().isIE &&
-        Engine.getInstance().mode === EngineExports.Mode.HTTP) {
+        Engine.getInstance().mode === EngineConst.Mode.HTTP) {
       this.getJsonIE_(locale);
       return;
     }
     let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.js';
-    let parse = goog.bind(this.parseMaps, this);
+    let parse = this.parseMaps.bind(this);
     this.retrieveFiles(file, parse);
   }
 
@@ -191,9 +190,7 @@ export class MathMap {
     let count = opt_count || 1;
     if (!BrowserUtil.mapsForIE) {
       if (count <= 5) {
-        setTimeout(goog.bind(function() {
-          this.getJsonIE_(locale, count++);
-        }, this), 300);
+        setTimeout((() => this.getJsonIE_(locale, count++)).bind(this), 300);
       }
       return;
     }
@@ -258,7 +255,6 @@ export class MathMap {
   }
 }
 
-goog.addSingletonGetter(MathMap);
 MathMap.oldInst_ = MathMap.getInstance;
 Engine.registerTest(function() {
   return MathMap.getInstance() && !MathMap.toFetch_;

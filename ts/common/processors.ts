@@ -268,16 +268,16 @@ new Processor<Element>('semantic', {
     }
     // This avoids temporary attributes (e.g., for grammar) to bleed into
     // the tree.
-    let clone = xml.cloneNode(true);
+    let clone = xml.cloneNode(true) as Element;
     let speech = SpeechGeneratorUtil.computeMarkup(clone);
     if (setting === EngineConst.Speech.SHALLOW) {
       xml.setAttribute('speech', AuralRendering.finalize(speech));
       return xml;
     }
     let nodesXml = XpathUtil.evalXPath('.//*[@id]', xml) as Element[];
-    let nodesClone = XpathUtil.evalXPath('.//*[@id]', clone);
+    let nodesClone = XpathUtil.evalXPath('.//*[@id]', clone) as Element[];
     for (let i = 0, orig, node; orig = nodesXml[i], node = nodesClone[i]; i++) {
-      speech = SpeechGeneratorUtil.computeMarkup((node as Node));
+      speech = SpeechGeneratorUtil.computeMarkup(node);
       orig.setAttribute('speech', AuralRendering.finalize(speech));
     }
     return xml;
@@ -327,7 +327,7 @@ new Processor('json', {
     }
     let addRec = (json: any) => {
       let node =
-          (XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0] as Node);
+        XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0] as Element;
       let speech = SpeechGeneratorUtil.computeMarkup(node);
       json.speech = AuralRendering.finalize(speech);
       if (json.children) {

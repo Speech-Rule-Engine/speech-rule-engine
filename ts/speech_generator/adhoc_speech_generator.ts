@@ -24,20 +24,14 @@
 import {AbstractSpeechGenerator} from './abstract_speech_generator';
 
 
-
-export class AdhocSpeechGenerator extends sre.AbstractSpeechGenerator {
-  constructor() {
-    super();
-  }
-
+export class AdhocSpeechGenerator extends AbstractSpeechGenerator {
 
   /**
    * @override
    */
-  getSpeech(node, xml) {
+  public getSpeech(node: Element, xml: Element) {
     let speech = this.generateSpeech(node, xml);
     node.setAttribute(this.modality, speech);
     return speech;
   }
 }
-goog.inherits(AdhocSpeechGenerator, AbstractSpeechGenerator);

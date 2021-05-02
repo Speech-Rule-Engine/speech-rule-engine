@@ -21,6 +21,7 @@
  */
 
 
+import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
 import {ContrastPicker} from '../highlighter/color_picker';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {RebuildStree} from '../walker/rebuild_stree';
@@ -29,76 +30,18 @@ import * as WalkerUtil from '../walker/walker_util';
 import {AbstractSpeechGenerator} from './abstract_speech_generator';
 
 
-
-export class ColorGenerator extends sre.AbstractSpeechGenerator {
-  modality: any;
-
-  contrast: any;
-  constructor() {
-    super();
-    this.modality = sre.EnrichMathml.addPrefix('foreground');
-    this.contrast = new ContrastPicker();
-  }
-
+export class ColorGenerator extends AbstractSpeechGenerator {
 
   /**
    * @override
    */
-  getSpeech(node, xml) {
-    return WalkerUtil.getAttribute(node, this.modality);
-  }
+  public modality: any = EnrichMathml.addPrefix('foreground');
 
 
   /**
-   * @override
+   * Contrast value.
    */
-  generateSpeech(node, xml) {
-    if (!this.getRebuilt()) {
-      this.setRebuilt(new RebuildStree((node as Element)));
-    }
-    this.colorLeaves_(node);
-    return WalkerUtil.getAttribute(node, this.modality);
-  }
-
-
-  /**
-   * Colors the leave nodes of an XML tree.
-   * @param node The root node.
-   */
-  private colorLeaves_(node: Node) {
-    let leaves = [];
-    ColorGenerator.visitStree_(this.getRebuilt().streeRoot, leaves, {});
-    for (let id of leaves) {
-      let color = this.contrast.generate();
-      let success = false;
-      if (Array.isArray(id)) {
-        success = id.map((x) => this.colorLeave_(node, x, color))
-                      .reduce((x, y) => x || y, false);
-      } else {
-        success = this.colorLeave_(node, id, color);
-      }
-      if (success) {
-        this.contrast.increment();
-      }
-    }
-  }
-
-
-  /**
-   * Colors a single leave node in an XML tree.
-   * @param node The node to color.
-   * @param id The ID of the node.
-   * @param color The color string.
-   * @return Returns true if successful.
-   */
-  private colorLeave_(node: Node, id: string, color: string): boolean {
-    let aux = WalkerUtil.getBySemanticId(node, id);
-    if (aux) {
-      aux.setAttribute(this.modality, color);
-      return true;
-    }
-    return false;
-  }
+  public contrast: any = new ContrastPicker();
 
 
   /**
@@ -128,9 +71,9 @@ export class ColorGenerator extends sre.AbstractSpeechGenerator {
     if (tree.childNodes.length) {
       if (tree.role === 'implicit') {
         let factors = [];
-        let rest = [];
+        let rest: number[] = [];
         for (let child of tree.childNodes) {
-          let tt = [];
+          let tt: number[] = [];
           ColorGenerator.visitStree_(child, tt, ignore);
           if (tt.length <= 2) {
             factors.push(tt.shift());
@@ -145,6 +88,65 @@ export class ColorGenerator extends sre.AbstractSpeechGenerator {
           (x) => ColorGenerator.visitStree_(x, leaves, ignore));
     }
   }
-}
 
-goog.inherits(ColorGenerator, AbstractSpeechGenerator);
+
+  /**
+   * @override
+   */
+  public getSpeech(node: Element, _xml: Element) {
+    return WalkerUtil.getAttribute(node, this.modality);
+  }
+
+
+  /**
+   * @override
+   */
+  public generateSpeech(node: Element, _xml: Element) {
+    if (!this.getRebuilt()) {
+      this.setRebuilt(new RebuildStree((node as Element)));
+    }
+    this.colorLeaves_(node);
+    return WalkerUtil.getAttribute(node, this.modality);
+  }
+
+
+  /**
+   * Colors the leave nodes of an XML tree.
+   * @param node The root node.
+   */
+  private colorLeaves_(node: Element) {
+    let leaves: number[] = [];
+    ColorGenerator.visitStree_(this.getRebuilt().streeRoot, leaves, {});
+    for (let id of leaves) {
+      let color = this.contrast.generate();
+      let success = false;
+      if (Array.isArray(id)) {
+        success = id.map((x) => this.colorLeave_(node, x, color))
+                      .reduce((x, y) => x || y, false);
+      } else {
+        success = this.colorLeave_(node, id.toString(), color);
+      }
+      if (success) {
+        this.contrast.increment();
+      }
+    }
+  }
+
+
+  /**
+   * Colors a single leave node in an XML tree.
+   * @param node The node to color.
+   * @param id The ID of the node.
+   * @param color The color string.
+   * @return Returns true if successful.
+   */
+  private colorLeave_(node: Element, id: string, color: string): boolean {
+    let aux = WalkerUtil.getBySemanticId(node, id);
+    if (aux) {
+      aux.setAttribute(this.modality, color);
+      return true;
+    }
+    return false;
+  }
+
+}

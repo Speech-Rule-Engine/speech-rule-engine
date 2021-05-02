@@ -27,22 +27,18 @@ import * as WalkerUtil from '../walker/walker_util';
 import {TreeSpeechGenerator} from './tree_speech_generator';
 
 
-
-export class NodeSpeechGenerator extends sre.TreeSpeechGenerator {
-  constructor() {
-    super();
-  }
-
+export class NodeSpeechGenerator extends TreeSpeechGenerator {
 
   /**
    * @override
    */
-  getSpeech(node, xml) {
+  public getSpeech(node: Element, xml: Element) {
     let speech = WalkerUtil.getAttribute(node, this.modality);
     if (speech) {
       return speech;
     }
     return super.getSpeech(node, xml);
   }
+
 }
-goog.inherits(NodeSpeechGenerator, TreeSpeechGenerator);
+

@@ -21,21 +21,20 @@
  */
 
 
-import {Attribute} from '../enrich_mathml/enrich_mathml';
-
 import System from '../common/system';
+import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
+import {AxisMap} from '../rule_engine/dynamic_cstr';
 import {RebuildStree} from '../walker/rebuild_stree';
 import {SpeechGenerator} from './speech_generator';
 import * as SpeechGeneratorUtil from './speech_generator_util';
 
 
-
 export abstract class AbstractSpeechGenerator implements SpeechGenerator {
 
   /**
-   * @override
+   * The modality of this speech generator.
    */
-  public abstract getSpeech(node: Node, xml: Element): string;
+  public modality: EnrichMathml.Attribute = EnrichMathml.addPrefix('speech');
 
 
   private rebuilt_: RebuildStree = null;
@@ -44,16 +43,16 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   private options_: {[key: string]: string} = {};
 
 
-  modality: Attribute;
-  constructor() {
-    this.modality = EnrichMathml.addPrefix('speech');
-  }
+  /**
+   * @override
+   */
+  public abstract getSpeech(node: Element, xml: Element): string;
 
 
   /**
    * @override
    */
-  getRebuilt() {
+  public getRebuilt() {
     return this.rebuilt_;
   }
 
@@ -61,7 +60,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
    * @override
    */
-  setRebuilt(rebuilt) {
+  public setRebuilt(rebuilt: RebuildStree) {
     this.rebuilt_ = rebuilt;
   }
 
@@ -69,17 +68,17 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
    * @override
    */
-  setOptions(options) {
+  public setOptions(options: AxisMap) {
     this.options_ = options || {};
     this.modality =
-        sre.EnrichMathml.addPrefix(this.options_.modality || 'speech');
+        EnrichMathml.addPrefix(this.options_.modality || 'speech');
   }
 
 
   /**
    * @override
    */
-  getOptions() {
+  public getOptions() {
     return this.options_;
   }
 
@@ -87,13 +86,13 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
    * @override
    */
-  start() {}
+  public start() {}
 
 
   /**
    * @override
    */
-  end() {}
+  public end() {}
 
 
   /**
@@ -102,11 +101,12 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
    * @param xml The base xml element belonging to node.
    * @return The generated speech string.
    */
-  generateSpeech(_node: Node, xml: Element): string {
+  public generateSpeech(_node: Node, xml: Element): string {
     if (!this.rebuilt_) {
       this.rebuilt_ = new RebuildStree(xml);
     }
     System.setupEngine(this.options_);
     return SpeechGeneratorUtil.computeMarkup(this.getRebuilt().xml);
   }
+
 }

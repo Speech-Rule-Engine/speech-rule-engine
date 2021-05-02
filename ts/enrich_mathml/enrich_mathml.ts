@@ -950,8 +950,8 @@ export function removeAttributePrefix(mml: string): string {
  * @return The completed attribute.
  */
 // TODO (TS): Again this should have been return time Attribute
-export function addPrefix(attr: string): string {
-  return ATTRIBUTE_PREFIX_ + attr;
+export function addPrefix(attr: string): Attribute {
+  return ATTRIBUTE_PREFIX_ + attr as Attribute;
 }
 
 

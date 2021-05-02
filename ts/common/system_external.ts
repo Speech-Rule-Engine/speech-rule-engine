@@ -48,7 +48,7 @@ namespace SystemExternal {
    * @return True if document is defined.
    */
   export function documentSupported(): boolean {
-    return !(typeof document == 'undefined');
+    return !(typeof document === 'undefined');
   }
 
   /**
@@ -115,28 +115,6 @@ namespace SystemExternal {
    * Path to Xpath library file.
    */
   export let WGXpath = Variables.WGXpath;
-
-  // static process: Object;
-
-  // static xmldom: Object;
-
-
-  // static document: Object;
-
-
-  // static xpath: Object;
-
-
-  // static commander: Object;
-
-
-  // static fs: Object;
-
-
-  // static jsonPath: string;
-
-
-  // static WGXpath: string;
 
 
   /**

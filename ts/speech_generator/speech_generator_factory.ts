@@ -38,16 +38,16 @@ import {TreeSpeechGenerator} from './tree_speech_generator';
  */
 export function generator(type: string): SpeechGenerator {
   let constructor = generatorMapping_[type] || generatorMapping_.Direct;
-  return new constructor();
+  return constructor();
 }
 
 
-export const generatorMapping_: {[key: string]: () => any} = {
-  Adhoc: AdhocSpeechGenerator,
-  Color: ColorGenerator,
-  Direct: DirectSpeechGenerator,
-  Dummy: DummySpeechGenerator,
-  Node: NodeSpeechGenerator,
-  Summary: SummarySpeechGenerator,
-  Tree: TreeSpeechGenerator
+export const generatorMapping_: {[key: string]: () => SpeechGenerator} = {
+  Adhoc: () => new AdhocSpeechGenerator(),
+  Color: () => new ColorGenerator(),
+  Direct: () => new DirectSpeechGenerator(),
+  Dummy: () => new DummySpeechGenerator(),
+  Node: () => new NodeSpeechGenerator(),
+  Summary: () => new SummarySpeechGenerator(),
+  Tree: () => new TreeSpeechGenerator()
 };

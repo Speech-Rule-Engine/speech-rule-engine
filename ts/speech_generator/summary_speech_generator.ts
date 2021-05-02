@@ -26,19 +26,15 @@ import {AbstractSpeechGenerator} from './abstract_speech_generator';
 import * as SpeechGeneratorUtil from './speech_generator_util';
 
 
-
-export class SummarySpeechGenerator extends sre.AbstractSpeechGenerator {
-  constructor() {
-    super();
-  }
-
+export class SummarySpeechGenerator extends AbstractSpeechGenerator {
 
   /**
    * @override
    */
-  getSpeech(node, xml) {
+  public getSpeech(node: Element, xml: Element) {
     SpeechGeneratorUtil.connectAllMactions(xml, this.getRebuilt().xml);
     return this.generateSpeech(node, xml);
   }
+
 }
-goog.inherits(SummarySpeechGenerator, AbstractSpeechGenerator);
+

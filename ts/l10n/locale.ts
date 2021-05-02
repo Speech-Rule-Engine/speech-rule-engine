@@ -20,7 +20,6 @@
  */
 
 
-import {Grammar} from '../rule_engine/grammar';
 import * as MathspeakUtil from '../speech_rules/mathspeak_util';
 import {Locale} from './messages';
 import {extractString} from './transformers';
@@ -77,9 +76,6 @@ export function localFont(font: string): string {
 }
 
 
-Grammar.getInstance().setCorrection('localFont', localFont);
-
-
 /**
  * Localizes the role name.
  * @param role The role name.
@@ -90,9 +86,6 @@ export function localRole(role: string): string {
 }
 
 
-Grammar.getInstance().setCorrection('localRole', localRole);
-
-
 /**
  * Localizes the enclose name.
  * @param enclose The enclose name.
@@ -101,6 +94,3 @@ Grammar.getInstance().setCorrection('localRole', localRole);
 export function localEnclose(enclose: string): string {
   return extractString(Locale.ENCLOSE[enclose]);
 }
-
-
-Grammar.getInstance().setCorrection('localEnclose', localEnclose);

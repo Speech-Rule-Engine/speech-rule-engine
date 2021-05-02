@@ -21,16 +21,17 @@
 
 
 import {Debugger} from './debugger';
-import * as EngineExports from './engine';
-import {Engine} from './engine';
-import {Mode} from './engine';
-import {System} from './system';
-import {SystemExternal} from './system_external';
-
+import {SREError, EngineConst} from './engine';
+import System from './system';
+import SystemExternal from './system_external';
+import {Axis, DynamicCstr} from '../rule_engine/dynamic_cstr';
+import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
+import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
+import {ProcessorFactory} from './processors';
+import {MathCompoundStore} from '../rule_engine/math_simple_store';
 
 
 export class Cli {
-  system: System;
 
   setup: {[key: string]: string|boolean};
 
@@ -38,11 +39,10 @@ export class Cli {
 
   dp: DOMParser;
   constructor() {
-    this.system = System.getInstance();
-    this.setup = {'mode': Mode.SYNC};
+    this.setup = {'mode': EngineConst.Mode.SYNC};
     this.dp = new SystemExternal.xmldom.DOMParser({
-      errorHandler: function(key, msg) {
-        throw new EngineExports.Error('XML DOM error!');
+      errorHandler: function(_key: string, _msg: string) {
+        throw new SREError('XML DOM error!');
       }
     });
   }
@@ -54,7 +54,7 @@ export class Cli {
    * @param value The cli option value.
    * @param def The default for the option.
    */
-  set(arg: string, value: string|boolean, def: string) {
+  set(arg: string, value: string|boolean, _def: string) {
     this.setup[arg] = typeof value === 'undefined' ? true : value;
   }
 
@@ -64,7 +64,7 @@ export class Cli {
    * @param v Unused parameter.
    * @param processor A processor method.
    */
-  processor(v: string, processor: string) {
+  processor(_v: string, processor: string) {
     this.processors.push(processor);
   }
 
@@ -73,9 +73,9 @@ export class Cli {
    * Prints information on axes values.
    */
   enumerate() {
-    this.system.setupEngine(this.setup);
-    let length = sre.DynamicCstr.DEFAULT_ORDER.map((x) => x.length);
-    let maxLength = function(obj, index) {
+    System.setupEngine(this.setup);
+    let length = DynamicCstr.DEFAULT_ORDER.map(x => x.length);
+    let maxLength = (obj: any, index: number) => {
       length[index] = Math.max.apply(
           null,
           Object.keys(obj)
@@ -84,11 +84,11 @@ export class Cli {
               })
               .concat(length[index]));
     };
-    let compStr = function(str, length) {
-      return str + (new Array(length - str.length + 1)).join(' ');
-    };
-    let dynamic = sre.SpeechRuleEngine.getInstance().enumerate();
-    dynamic = sre.MathCompoundStore.getInstance().enumerate(dynamic);
+    let compStr = (str: string, length: number) => 
+       str + (new Array(length - str.length + 1)).join(' ');
+    // TODO (TS): Sort out the any type.
+    let dynamic: any = SpeechRuleEngine.getInstance().enumerate();
+    dynamic = MathCompoundStore.getInstance().enumerate(dynamic);
     let table = [];
     maxLength(dynamic, 0);
     for (let ax1 in dynamic) {
@@ -104,7 +104,7 @@ export class Cli {
           if (ax3 === 'clearspeak') {
             let clear3 = true;
             let prefs =
-                sre.ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
+                ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
             for (let ax4 in prefs) {
               table.push([
                 compStr(clear1 ? ax1 : '', length[0]),
@@ -129,18 +129,13 @@ export class Cli {
     }
     let i = 0;
     let output = '';
-    output += sre.DynamicCstr.DEFAULT_ORDER
-                  .slice(
-                      0,  // No topics yet.
-                      -1)
-                  .map(function(x) {
-                    return compStr(x, length[i++]);
-                  })
-                  .join(' | ');
+    output += DynamicCstr.DEFAULT_ORDER
+      .slice(0,  // No topics yet.
+        -1)
+      .map((x: string) => compStr(x, length[i++]))
+      .join(' | ');
     output += '\n';
-    length.forEach(function(x) {
-      output += (new Array(x + 3)).join('=');
-    });
+    length.forEach((x: number) => output += (new Array(x + 3)).join('='));
     output += '========================\n';
     output += table.map((x) => x.join(' | ')).join('\n');
     console.info(output);
@@ -153,9 +148,9 @@ export class Cli {
    */
   execute(input: string) {
     let options = SystemExternal.commander.opts();
-    this.runProcessors_(goog.bind(function(proc, file) {
-      this.system.processFile(proc, file, options.output);
-    }, this), input);
+    this.runProcessors_((proc, file) => {
+      System.processFile(proc, file, options.output);
+    }, input);
   }
 
 
@@ -192,24 +187,24 @@ export class Cli {
   readline() {
     let options = SystemExternal.commander.opts();
     SystemExternal.process.stdin.setEncoding('utf8');
-    let inter = SystemExternal.require('readline').createInterface({
+    let inter = SystemExternal.extRequire('readline').createInterface({
       input: SystemExternal.process.stdin,
       output: options.output ?
           SystemExternal.fs.createWriteStream(options.output) :
           SystemExternal.process.stdout
     });
     let input = '';
-    inter.on('line', goog.bind(function(expr) {
+    inter.on('line', ((expr: string) => {
       input += expr;
       if (this.readExpression_(input)) {
         inter.close();
       }
-    }, this));
-    inter.on('close', goog.bind(function() {
-      this.runProcessors_(goog.bind(function(proc, expr) {
-        inter.output.write(sre.ProcessorFactory.output(proc, expr) + '\n');
-      }, this), input);
-    }, this));
+    }).bind(this));
+    inter.on('close', (() => {
+      this.runProcessors_((proc, expr) => {
+        inter.output.write(ProcessorFactory.output(proc, expr) + '\n');
+      }, input);
+    }).bind(this));
   }
 
 
@@ -233,13 +228,11 @@ export class Cli {
    */
   commandLine() {
     let commander = SystemExternal.commander;
-    let system = this.system;
-    let set = goog.bind(function(key) {
-      return goog.bind(function(val, def) {
-        this.set(key, val, def);
-      }, this);
-    }, this);
-    let processor = goog.bind(this.processor, this);
+    let system = System;
+    let set = ((key: string) => {
+      return (val: string, def: string) => this.set(key, val, def);
+    }).bind(this);
+    let processor = this.processor.bind(this);
 
     commander.version(system.version)
         .usage('[options] <file ...>')
@@ -250,22 +243,22 @@ export class Cli {
             '-d, --domain [name]',
             'Speech rule set [name]. See --options' +
                 ' for details.',
-            set(sre.DynamicCstr.Axis.DOMAIN),
-            sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.DOMAIN])
+            set(Axis.DOMAIN),
+            DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN])
         .option(
             '-t, --style [name]',
             'Speech style [name]. See --options' +
                 ' for details.',
-            set(sre.DynamicCstr.Axis.STYLE),
-            sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.STYLE])
+            set(Axis.STYLE),
+            DynamicCstr.DEFAULT_VALUES[Axis.STYLE])
         .option(
             '-c, --locale [code]', 'Locale [code].',
-            set(sre.DynamicCstr.Axis.LOCALE),
-            sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE])
+            set(Axis.LOCALE),
+            DynamicCstr.DEFAULT_VALUES[Axis.LOCALE])
         .option(
             '-b, --modality [name]', 'Modality [name].',
-            set(sre.DynamicCstr.Axis.MODALITY),
-            sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.MODALITY])
+            set(Axis.MODALITY),
+            DynamicCstr.DEFAULT_VALUES[Axis.MODALITY])
         .option(
             '-k, --markup [name]', 'Generate speech output with markup tags.',
             set('markup'), 'none')
@@ -310,14 +303,12 @@ export class Cli {
         .option('-l, --log [name]', 'Log file [name].')
         .option('--opt', 'List engine setup options.')
         .on('option:opt',
-            goog.bind(
-                function() {
-                  this.enumerate();
-                  System.getInstance().exit(0);
-                },
-                this))
+            (() => {
+              this.enumerate();
+              System.exit(0);
+            }).bind(this))
         .parse(SystemExternal.process.argv);
-    this.system.setupEngine(this.setup);
+    System.setupEngine(this.setup);
     let options = commander.opts();
     if (options.verbose) {
       Debugger.getInstance().init(options.log);
@@ -326,12 +317,12 @@ export class Cli {
       this.execute(options.input);
     }
     if (commander.args.length) {
-      commander.args.forEach(goog.bind(this.execute, this));
+      commander.args.forEach(this.execute.bind(this));
     } else {
       this.readline();
     }
     Debugger.getInstance().exit(function() {
-      System.getInstance().exit(0);
+      System.exit(0);
     });
   }
 }
