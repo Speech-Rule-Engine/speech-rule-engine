@@ -22,7 +22,7 @@
 
 import * as Semantic from './semantic';
 import {SemanticNodeFactory} from './semantic_node_factory';
-import {SemanticProcessor} from './semantic_processor';
+import SemanticProcessor from './semantic_processor';
 import {SemanticTree} from './semantic_tree';
 
 

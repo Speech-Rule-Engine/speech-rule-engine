@@ -21,6 +21,8 @@
 
 
 import {AbstractWalker} from './abstract_walker';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
+import {interleaveLists} from '../common/base_util';
 import {Levels} from './levels';
 
 
@@ -28,7 +30,7 @@ import {Levels} from './levels';
 /**
  * @override
  */
-export class SyntaxWalker extends sre.AbstractWalker {
+export class SyntaxWalker extends AbstractWalker {
   /**
    * Caching of levels.
    */
@@ -90,7 +92,7 @@ export class SyntaxWalker extends sre.AbstractWalker {
       case SemanticType.RELSEQ:
       case SemanticType.INFIXOP:
       case SemanticType.MULTIREL:
-        return sre.BaseUtil.interleaveLists(children, content);
+        return interleaveLists(children, content);
       case SemanticType.PREFIXOP:
         return content.concat(children);
       case SemanticType.POSTFIXOP:
@@ -106,7 +108,7 @@ export class SyntaxWalker extends sre.AbstractWalker {
         return children;
       case SemanticType.PUNCTUATED:
         if (role === SemanticRole.TEXT) {
-          return sre.BaseUtil.interleaveLists(children, content);
+          return interleaveLists(children, content);
         }
         return children;
       case SemanticType.APPL:

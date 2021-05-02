@@ -22,17 +22,18 @@
 
 import {AuditoryDescription} from '../audio/auditory_description';
 import {AxisMap} from '../rule_engine/dynamic_cstr';
-import {AuralRendering} from '../audio/aural_rendering';
+import AuralRendering from '../audio/aural_rendering';
 import * as DomUtil from '../common/dom_util';
+import System from '../common/system';
 import {KeyCode} from '../common/event_util';
 import {Attribute} from '../enrich_mathml/enrich_mathml';
 import {Highlighter} from '../highlighter/highlighter';
-import * as Messages from '../l10n/messages';
+import {Locale} from '../l10n/messages';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {SpeechGenerator} from '../speech_generator/speech_generator';
 import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
 import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {EngineConst} from '../common/engine';
 import {Focus} from './focus';
 import {Levels} from './levels';
@@ -262,7 +263,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  setFocus(focus) {
+  setFocus(focus: Focus) {
     this.focus_ = focus;
   }
 
@@ -346,7 +347,7 @@ export abstract class AbstractWalker<T> implements Walker {
     let nodes = this.getFocus().getDomNodes();
     let snodes = this.getFocus().getSemanticNodes();
     return nodes[0] ?
-        WalkerUtil.getAttribute((nodes[0] as Node), Attribute.PREFIX) :
+        WalkerUtil.getAttribute((nodes[0] as Element), Attribute.PREFIX) :
         SpeechGeneratorUtil.retrievePrefix(snodes[0]);
   }
 
@@ -360,7 +361,7 @@ export abstract class AbstractWalker<T> implements Walker {
     // TODO: Style this differently for usage with auditory markup.
     let nodes = this.getFocus().getDomNodes();
     return nodes[0] ?
-        WalkerUtil.getAttribute((nodes[0] as Node), Attribute.POSTFIX) :
+        WalkerUtil.getAttribute((nodes[0] as Element), Attribute.POSTFIX) :
         '';
   }
 
@@ -447,20 +448,19 @@ export abstract class AbstractWalker<T> implements Walker {
     let oldDepth = Grammar.getInstance().getParameter('depth');
     Grammar.getInstance().setParameter('depth', true);
     let primary = this.getFocus().getDomPrimary();
-    let expand = this.expandable(primary) && [Messages.NAVIGATE.EXPANDABLE] ||
-        this.collapsible(primary) && [Messages.NAVIGATE.COLLAPSIBLE] || [];
-    let level = [AuralRendering.getInstance().markup([new AuditoryDescription({
-      text: Messages.NAVIGATE.LEVEL + ' ' + this.getDepth(),
-      personality: {}
-    })])];
+    let expand = this.expandable(primary) ? Locale.NAVIGATE.EXPANDABLE :
+      (this.collapsible(primary) ? Locale.NAVIGATE.COLLAPSIBLE : '');
+    let level = Locale.NAVIGATE.LEVEL + ' ' + this.getDepth();
     let snodes = this.getFocus().getSemanticNodes();
     let prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);
-    let aural = AuralRendering.getInstance();
-    if (prefix) {
-      level.push(prefix);
-    }
+    let audio = [
+      new AuditoryDescription({text: prefix, personality: {}}),
+      new AuditoryDescription({text: level, personality: {}}),
+      new AuditoryDescription({text: expand, personality: {}})];
     Grammar.getInstance().setParameter('depth', oldDepth);
-    return aural.finalize(aural.merge(level.concat(expand)));
+    // TODO (TS): Make sure this is really a string to span.
+    return AuralRendering.finalize(
+      AuralRendering.markup(audio));
   }
 
 
@@ -480,7 +480,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @param id The id of a semantic node.
    * @return The node for that id.
    */
-  getBySemanticId(id: string): Node {
+  getBySemanticId(id: string): Element {
     return WalkerUtil.getBySemanticId(this.node, id);
   }
 
@@ -514,11 +514,10 @@ export abstract class AbstractWalker<T> implements Walker {
    * @param node The (rendered) node under consideration.
    * @return The node corresponding to an maction element.
    */
-  private actionable_(node: Node): Node {
-    return node && node.parentNode &&
-            this.highlighter.isMactionNode(node.parentNode) ?
-        node.parentNode :
-        null;
+  private actionable_(node: Element): Element {
+    let parent = node?.parentNode as Element;
+    return parent && this.highlighter.isMactionNode(parent) ?
+        parent : null;
   }
 
 
@@ -527,7 +526,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @param node The (rendered) node under consideration.
    * @return True if the node is expandable.
    */
-  expandable(node: Node): boolean {
+  expandable(node: Element): boolean {
     let parent = !!this.actionable_(node);
     return parent && node.childNodes.length === 0;
   }
@@ -538,7 +537,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @param node The (rendered) node under consideration.
    * @return True if the node is collapsible.
    */
-  collapsible(node: Node): boolean {
+  collapsible(node: Element): boolean {
     let parent = !!this.actionable_(node);
     return parent && node.childNodes.length > 0;
   }
@@ -581,7 +580,7 @@ export abstract class AbstractWalker<T> implements Walker {
   updateFocus() {
     this.setFocus(Focus.factory(
         this.getFocus().getSemanticPrimary().id.toString(),
-        this.getFocus().getSemanticNodes().map((x) => x.id), this.getRebuilt(),
+        this.getFocus().getSemanticNodes().map((x) => x.id.toString()), this.getRebuilt(),
         this.node));
   }
 
@@ -714,7 +713,7 @@ export abstract class AbstractWalker<T> implements Walker {
             this.getRebuilt().xml, 'id', sid)[0];
     let oldAlt = snode.getAttribute('alternative');
     snode.removeAttribute('alternative');
-    let detail = SpeechGeneratorUtil.computeMarkup((snode as Node));
+    let detail = SpeechGeneratorUtil.computeMarkup((snode as Element));
     let speech = this.mergePrefix_([detail]);
     snode.setAttribute('alternative', oldAlt);
     return speech;
@@ -783,7 +782,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   update(options: AxisMap) {
     this.generator.setOptions(options);
-    System.getInstance().setupEngine(options);
+    System.setupEngine(options);
     SpeechGeneratorFactory.generator('Tree').getSpeech(
       this.node, this.getXml());
   }

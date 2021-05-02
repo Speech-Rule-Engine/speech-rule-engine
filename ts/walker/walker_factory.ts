@@ -28,7 +28,6 @@ import {DummyWalker} from './dummy_walker';
 import {SemanticWalker} from './semantic_walker';
 import {SyntaxWalker} from './syntax_walker';
 import {TableWalker} from './table_walker';
-import * as WalkerExports from './walker';
 import {Walker} from './walker';
 
 

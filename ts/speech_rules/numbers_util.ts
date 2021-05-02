@@ -20,8 +20,9 @@
 
 
 import {Span} from '../audio/span';
+import * as DomUtil from '../common/dom_util';
 import {Locale} from '../l10n/messages';
-
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 
 
 // Number transformation
@@ -39,6 +40,14 @@ export function ordinalCounter(_node: Node, context: string): () => string {
 }
 
 
+interface Convertible {
+  convertible: boolean;
+  content?: string;
+  denominator?: number;
+  enumerator?: number;
+}
+
+
 /**
  * Checks if a fraction is a convertible vulgar fraction. In this case it
  * translates enumerator and the denominator.
@@ -49,21 +58,20 @@ export function ordinalCounter(_node: Node, context: string): () => string {
  *           enumerator: number}} If convertible denominator and
  *     enumerator are set. Otherwise only the text content is given.
  */
-export function convertVulgarFraction_(node: Element):
-    {convertible: boolean, content: string}|
-    {convertible: boolean, denominator: number, enumerator: number} {
+export function convertVulgarFraction_(node: Element): Convertible {
   // TODO (TS): Optional chaining.
   if (!node.childNodes || !node.childNodes[0] ||
       !node.childNodes[0].childNodes ||
       node.childNodes[0].childNodes.length < 2 ||
-      (node.childNodes[0].childNodes[0].tagName !==
+     (node.childNodes[0].childNodes[0] as Element).tagName !==
           SemanticType.NUMBER ||
-      node.childNodes[0].childNodes[0].getAttribute('role') !==
+      (node.childNodes[0].childNodes[0] as Element).getAttribute('role') !==
           SemanticRole.INTEGER ||
-      node.childNodes[0].childNodes[1].tagName !==
+      (node.childNodes[0].childNodes[1] as Element).tagName !==
           SemanticType.NUMBER ||
-      node.childNodes[0].childNodes[1].getAttribute('role') !==
-          SemanticRole.INTEGER) {
+      (node.childNodes[0].childNodes[1] as Element).getAttribute('role') !==
+       SemanticRole.INTEGER
+     ) {
     return {convertible: false, content: node.textContent};
   }
   let denStr = node.childNodes[0].childNodes[1].textContent;
@@ -87,20 +95,20 @@ export function convertVulgarFraction_(node: Element):
  * @return The string representation if it is a valid
  *     vulgar fraction.
  */
-export function vulgarFraction(node: Node): string|Span[] {
+export function vulgarFraction(node: Element): string|Span[] {
   let conversion = convertVulgarFraction_(node);
   if (conversion.convertible && conversion.enumerator &&
       conversion.denominator) {
     return [
       new Span(Locale.NUMBERS.numberToWords(conversion.enumerator), {
-        extid: node.childNodes[0].childNodes[0].getAttribute('extid'),
+        extid: (node.childNodes[0].childNodes[0] as Element).getAttribute('extid'),
         separator: ''
       }),
       new Span(Locale.NUMBERS.vulgarSep, {separator: ''}),
       new Span(
           Locale.NUMBERS.numberToOrdinal(
               conversion.denominator, conversion.enumerator !== 1),
-          {extid: node.childNodes[0].childNodes[1].getAttribute('extid')})
+        {extid: (node.childNodes[0].childNodes[1] as Element).getAttribute('extid')})
     ];
   }
   return [new Span(
@@ -117,7 +125,7 @@ export function vulgarFraction(node: Node): string|Span[] {
  * @return True if it is a valid, small enough fraction.
  */
 export function vulgarFractionSmall(
-    node: Node, enumer: number, denom: number): boolean {
+    node: Element, enumer: number, denom: number): boolean {
   let conversion = convertVulgarFraction_(node);
   if (conversion.convertible) {
     let enumerator = conversion.enumerator;
@@ -136,6 +144,6 @@ export function vulgarFractionSmall(
  *     the node.
  */
 export function ordinalPosition(node: Node): string {
-  let children = sre.DomUtil.toArray(node.parentNode.childNodes);
+  let children = DomUtil.toArray(node.parentNode.childNodes);
   return Locale.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
 }

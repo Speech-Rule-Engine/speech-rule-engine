@@ -25,34 +25,27 @@ import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 
 import * as BaseUtil from './base_util';
 import {Debugger} from './debugger';
-import * as EngineExports from './engine';
-import {Engine} from './engine';
+import {Engine, EngineConst} from './engine';
 import {SREError} from './engine';
 import {KeyCode} from './event_util';
-import * as ProcessorFactory from './processors';
+import {ProcessorFactory} from './processors';
 import SystemExternal from './system_external';
 import {Variables} from './variables';
 
 
+namespace System {
 
-export class System {
-  version: string;
+  /**
+   * Version number.
+   */
+  export const version: string = Variables.VERSION;
 
   /**
    * Number of open files.
    */
-  private files_: number = 0;
-  constructor() {
-    /**
-     * Version number.
-     */
-    this.version = Variables.VERSION;
+  let files_: number = 0;
 
-    Engine.registerTest(function() {
-      return !System.getInstance().files_;
-    });
-  }
-
+  Engine.registerTest(() => !!files_);
 
   /**
    *  Setup Methods functionality.
@@ -66,8 +59,9 @@ export class System {
    * @param feature An object describing some
    *     setup features.
    */
-  setupEngine(feature: {[key: string]: boolean|string}) {
-    let engine = Engine.getInstance();
+  export function setupEngine(feature: {[key: string]: boolean|string}) {
+    
+    let engine = Engine.getInstance() as any;
     // This preserves the possibility to specify default as domain.
     // < 3.2  this lead to the use of chromevox rules in English.
     // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
@@ -78,23 +72,23 @@ export class System {
          (!feature.modality || engine.modality === 'speech'))) {
       feature.domain = 'mathspeak';
     }
-    let setIf = function(feat) {
+    let setIf = (feat: string) => {
       if (typeof feature[feat] !== 'undefined') {
         engine[feat] = !!feature[feat];
       }
     };
-    let setMulti = function(feat) {
+    let setMulti = (feat: string) => {
       engine[feat] = feature[feat] || engine[feat];
     };
     setMulti('mode');
-    System.prototype.configBlocks_(feature);
+    configBlocks_(feature);
     Engine.BINARY_FEATURES.forEach(setIf);
     Engine.STRING_FEATURES.forEach(setMulti);
     if (feature.json) {
-      SystemExternal.jsonPath = BaseUtil.makePath(feature.json);
+      SystemExternal.jsonPath = BaseUtil.makePath(feature.json as string);
     }
     if (feature.xpath) {
-      SystemExternal.WGXpath = feature.xpath;
+      SystemExternal.WGXpath = feature.xpath as string;
     }
     engine.setupBrowsers();
     engine.setDynamicCstr();
@@ -108,17 +102,18 @@ export class System {
    * @param feature An object describing some
    *     setup features.
    */
-  private configBlocks_(feature: {[key: string]: boolean|string}) {
+  function configBlocks_(feature: {[key: string]: boolean|string}) {
     if (Engine.getInstance().config ||
-        Engine.getInstance().mode !== EngineExports.Mode.HTTP) {
+        Engine.getInstance().mode !== EngineConst.Mode.HTTP) {
       return;
     }
     Engine.getInstance().config = true;
     let scripts = document.documentElement.querySelectorAll(
         'script[type="text/x-sre-config"]');
     for (let i = 0, m = scripts.length; i < m; i++) {
+      let inner;
       try {
-        let inner = scripts[i].innerHTML;
+        inner = scripts[i].innerHTML;
         let config = JSON.parse(inner);
         for (let f in config) {
           feature[f] = config[f];
@@ -133,11 +128,11 @@ export class System {
   /**
    * Setting engine to async mode once it is ready.
    */
-  static setAsync() {
+  export function setAsync() {
     if (!Engine.isReady()) {
       setTimeout(System.setAsync, 500);
     }
-    System.getInstance().setupEngine({'mode': EngineExports.Mode.ASYNC});
+    setupEngine({'mode': EngineConst.Mode.ASYNC});
   }
 
 
@@ -146,11 +141,11 @@ export class System {
    * @return Object vector with all engine feature
    *     values.
    */
-  engineSetup(): {[key: string]: boolean|string} {
+  export function engineSetup(): {[key: string]: boolean|string} {
     let engineFeatures =
         ['mode'].concat(Engine.STRING_FEATURES, Engine.BINARY_FEATURES);
-    let engine = Engine.getInstance();
-    let features = {};
+    let engine = Engine.getInstance() as any;
+    let features: {[key: string]: string|boolean} = {};
     engineFeatures.forEach(function(x) {
       features[x] = engine[x];
     });
@@ -165,7 +160,7 @@ export class System {
    * @return True if engine is ready, i.e., unicode file for the current
    *     locale has been loaded.
    */
-  engineReady(): boolean {
+  export function engineReady(): boolean {
     return Engine.isReady();
   }
 
@@ -185,8 +180,8 @@ export class System {
    * @param expr Processes a given XML expression for translation.
    * @return The aural rendering of the expression.
    */
-  toSpeech(expr: string): string {
-    return System.getInstance().processString('speech', expr);
+  export function toSpeech(expr: string): string {
+    return processString('speech', expr);
   }
 
 
@@ -195,8 +190,8 @@ export class System {
    * @param expr Processes a given MathML expression for translation.
    * @return The semantic tree as Xml.
    */
-  toSemantic(expr: string): Node {
-    return System.getInstance().processString('semantic', expr);
+  export function toSemantic(expr: string): Node {
+    return processString('semantic', expr);
   }
 
 
@@ -205,8 +200,9 @@ export class System {
    * @param expr Processes a given MathML expression for translation.
    * @return The semantic tree as Json.
    */
-  toJson(expr: string): JSONType {
-    return System.getInstance().processString('json', expr);
+  // TODO (TS): Define the correct JSONType somewhere.
+  export function toJson(expr: string): any {
+    return processString('json', expr);
   }
 
 
@@ -215,8 +211,8 @@ export class System {
    * @param expr Processes a given Xml expression for translation.
    * @return The auditory descriptions.
    */
-  toDescription(expr: string): AuditoryDescription[] {
-    return System.getInstance().processString('description', expr);
+  export function toDescription(expr: string): AuditoryDescription[] {
+    return processString('description', expr);
   }
 
 
@@ -225,8 +221,8 @@ export class System {
    * @param expr Processes a given MathML expression for translation.
    * @return The enriched MathML node.
    */
-  toEnriched(expr: string): Element {
-    return System.getInstance().processString('enriched', expr);
+  export function toEnriched(expr: string): Element {
+    return processString('enriched', expr);
   }
 
 
@@ -236,7 +232,7 @@ export class System {
    * @param input The input string.
    * @return The computed data structure.
    */
-  processString<T>(processor: string, input: string): T {
+  function processString<T>(processor: string, input: string): T {
     return ProcessorFactory.process(processor, input);
   }
 
@@ -247,8 +243,8 @@ export class System {
    * @param input The input filename.
    * @param opt_output The output filename if one is given.
    */
-  fileToSpeech(input: string, opt_output?: string) {
-    System.getInstance().processFile('speech', input, opt_output);
+  export function fileToSpeech(input: string, opt_output?: string) {
+    processFile('speech', input, opt_output);
   }
 
 
@@ -258,8 +254,8 @@ export class System {
    * @param input The input filename.
    * @param opt_output The output filename if one is given.
    */
-  fileToSemantic(input: string, opt_output?: string) {
-    System.getInstance().processFile('semantic', input, opt_output);
+  export function fileToSemantic(input: string, opt_output?: string) {
+    processFile('semantic', input, opt_output);
   }
 
 
@@ -269,8 +265,8 @@ export class System {
    * @param input The input filename.
    * @param opt_output The output filename if one is given.
    */
-  fileToJson(input: string, opt_output?: string) {
-    System.getInstance().processFile('json', input, opt_output);
+  export function fileToJson(input: string, opt_output?: string) {
+    processFile('json', input, opt_output);
   }
 
 
@@ -280,8 +276,8 @@ export class System {
    * @param input The input filename.
    * @param opt_output The output filename if one is given.
    */
-  fileToDescription(input: string, opt_output?: string) {
-    System.getInstance().processFile('description', input, opt_output);
+  export function fileToDescription(input: string, opt_output?: string) {
+    processFile('description', input, opt_output);
   }
 
 
@@ -291,8 +287,8 @@ export class System {
    * @param input The input filename.
    * @param opt_output The output filename if one is given.
    */
-  fileToEnriched(input: string, opt_output?: string) {
-    System.getInstance().processFile('enriched', input, opt_output);
+  export function fileToEnriched(input: string, opt_output?: string) {
+    processFile('enriched', input, opt_output);
   }
 
 
@@ -303,18 +299,16 @@ export class System {
    * @param input The input filename.
    * @param opt_output The output filename if one is given.
    */
-  processFile(processor: string, input: string, opt_output?: string) {
+  function processFile(processor: string, input: string, opt_output?: string) {
     if (!Engine.isReady()) {
-      setTimeout(goog.bind(function() {
-        this.processFile(processor, input, opt_output);
-      }, this), 100);
+      setTimeout(() => processFile(processor, input, opt_output), 100);
       return;
     }
-    if (Engine.getInstance().mode === EngineExports.Mode.SYNC) {
-      this.processFileSync_(processor, input, opt_output);
+    if (Engine.getInstance().mode === EngineConst.Mode.SYNC) {
+      processFileSync_(processor, input, opt_output);
       return;
     }
-    this.processFileAsync_(processor, input, opt_output);
+    processFileAsync_(processor, input, opt_output);
   }
 
 
@@ -324,9 +318,10 @@ export class System {
    * @param file The input filename.
    * @return The input string read from file.
    */
-  private inputFileSync_(file: string): string {
+  function inputFileSync_(file: string): string {
+    let expr;
     try {
-      let expr = SystemExternal.fs.readFileSync(file, {encoding: 'utf8'});
+      expr = SystemExternal.fs.readFileSync(file, {encoding: 'utf8'});
     } catch (err) {
       throw new SREError('Can not open file: ' + file);
     }
@@ -341,9 +336,9 @@ export class System {
    * @param input The input filename.
    * @param opt_output The output filename if one is given.
    */
-  private processFileSync_(
+  function processFileSync_(
       processor: string, input: string, opt_output?: string) {
-    let expr = System.getInstance().inputFileSync_(input);
+    let expr = inputFileSync_(input);
     let result = ProcessorFactory.output(processor, expr);
     if (!opt_output) {
       console.info(result);
@@ -363,14 +358,14 @@ export class System {
    * @param file The input filename.
    * @param callback The callback to apply to the input.
    */
-  private inputFileAsync_(file: string, callback: (p1: string) => any) {
+  function inputFileAsync_(file: string, callback: (p1: string) => any) {
     SystemExternal.fs.readFile(
-        file, {encoding: 'utf8'}, goog.bind(function(err, data) {
+        file, {encoding: 'utf8'}, (err: Error, data: any) => {
           if (err) {
             throw new SREError('Can not open file: ' + file);
           }
           callback(data);
-        }, this));
+        });
   }
 
 
@@ -381,24 +376,25 @@ export class System {
    * @param input The input filename.
    * @param opt_output The output filename if one is given.
    */
-  private processFileAsync_(
+  function processFileAsync_(
       processor: string, input: string, opt_output?: string) {
-    this.files_++;
-    System.getInstance().inputFileAsync_(input, goog.bind(function(expr) {
+    files_++;
+    inputFileAsync_(
+      input, (expr) => {
       let result = ProcessorFactory.output(processor, expr);
       if (!opt_output) {
         console.info(result);
-        this.files_--;
+        files_--;
         return;
       }
-      SystemExternal.fs.writeFile(opt_output, result, function(err) {
+        SystemExternal.fs.writeFile(opt_output, result, (err: Error) => {
         if (err) {
-          this.files_--;
+          files_--;
           throw new SREError('Can not write to file: ' + opt_output);
         }
       });
-      this.files_--;
-    }, this));
+        files_--;
+      });
   }
 
 
@@ -408,7 +404,7 @@ export class System {
    * @param expr The string containing a MathML representation.
    * @return The initial speech string for that expression.
    */
-  walk(expr: string): string {
+  export function walk(expr: string): string {
     return ProcessorFactory.output('walker', expr);
   }
 
@@ -420,7 +416,7 @@ export class System {
    * @return The speech string generated by the walk. Null if a boundary
    *     is hit.
    */
-  move(direction: KeyCode|string): string|null {
+  export function move(direction: KeyCode|string): string|null {
     return ProcessorFactory.keypress('move', direction);
   }
 
@@ -429,14 +425,15 @@ export class System {
    * A clean exit method, that ensures all file processes are completed.
    * @param opt_value The exit value. Defaults to 0.
    */
-  exit(opt_value?: number) {
+  export function exit(opt_value?: number) {
     let value = opt_value || 0;
     if (!value && !Engine.isReady()) {
-      setTimeout(goog.bind(function() {
-        this.exit(value);
-      }, this), 100);
+      setTimeout(() => exit(value), 100);
       return;
     }
     SystemExternal.process.exit(value);
   }
+  
 }
+
+export default System;

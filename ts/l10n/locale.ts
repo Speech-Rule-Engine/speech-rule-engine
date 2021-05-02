@@ -48,7 +48,7 @@ export function nestingToString(count: number): string {
  * @param node The node to check.
  * @return True if a vulgar fraction.
  */
-export function vulgarNestingDepth(node: Node): boolean {
+export function vulgarNestingDepth(node: Element): boolean {
   return !!MathspeakUtil.isSmallVulgarFraction(node).length;
 }
 

@@ -31,6 +31,13 @@ import * as SemanticPred from './semantic_pred';
 import * as SemanticUtil from './semantic_util';
 
 
+interface BoundsType {
+  type: SemanticType;
+  length: number;
+  accent?: boolean;
+  }
+
+
 export default class SemanticProcessor {
 
   private static readonly FENCE_TO_PUNCT_: {[key: string]: SemanticRole} = {
@@ -39,9 +46,7 @@ export default class SemanticProcessor {
     [SemanticRole.CLOSE]: SemanticRole.CLOSEFENCE,
   };
 
-
-  private static readonly MML_TO_LIMIT_:
-  {[key: string]: {type: SemanticType, length: number}} = {
+  private static readonly MML_TO_LIMIT_: {[key: string]: BoundsType} = {
         'MSUB': {type: SemanticType.LIMLOWER, length: 1},
         'MUNDER': {type: SemanticType.LIMLOWER, length: 1},
         'MSUP': {type: SemanticType.LIMUPPER, length: 1},
@@ -56,8 +61,7 @@ export default class SemanticProcessor {
    *         length: number, accent: boolean}>}
    *
    */
-  private static readonly MML_TO_BOUNDS_:
-     {[key: string]: {type: SemanticType, length: number, accent: boolean}} = {
+  private static readonly MML_TO_BOUNDS_: {[key: string]: BoundsType} = {
        'MSUB': {type: SemanticType.SUBSCRIPT, length: 1, accent: false},
        'MSUP': {type: SemanticType.SUPERSCRIPT, length: 1, accent: false},
        'MSUBSUP': {type: SemanticType.SUBSCRIPT, length: 2, accent: false},
@@ -126,8 +130,8 @@ export default class SemanticProcessor {
    * @param factory New node factory.
    */
   public setNodeFactory(factory: SemanticNodeFactory) {
-    this.factory_ = factory;
-    SemanticHeuristics.factory = this.factory_;
+    SemanticProcessor.getInstance().factory_ = factory;
+    SemanticHeuristics.factory = SemanticProcessor.getInstance().factory_;
   }
 
 
@@ -136,7 +140,7 @@ export default class SemanticProcessor {
    * @return The node factory.
    */
   public getNodeFactory(): SemanticNodeFactory {
-    return this.factory_;
+    return SemanticProcessor.getInstance().factory_;
   }
 
 
@@ -164,13 +168,13 @@ export default class SemanticProcessor {
       // If single letter or single integer and font normal but no mathvariant
       // then this letter/number should be in italic font.
       leaf.font = SemanticFont.ITALIC;
-      return SemanticHeuristics.run('simpleNamedFunction', leaf);
+      return SemanticHeuristics.run('simpleNamedFunction', leaf) as SemanticNode;
     }
     if (leaf.type === SemanticType.UNKNOWN) {
       leaf.type = SemanticType.IDENTIFIER;
     }
     SemanticProcessor.exprFont_(leaf);
-    return SemanticHeuristics.run('simpleNamedFunction', leaf);
+    return SemanticHeuristics.run('simpleNamedFunction', leaf) as SemanticNode;
   }
 
 
@@ -260,8 +264,8 @@ export default class SemanticProcessor {
     if (nodes.length === 1) {
       return nodes[0];
     }
-    let node = this.implicitNode_(nodes);
-    return SemanticHeuristics.run('combine_juxtaposition', node);
+    let node = SemanticProcessor.getInstance().implicitNode_(nodes);
+    return SemanticHeuristics.run('combine_juxtaposition', node) as SemanticNode;
   }
 
 
@@ -277,7 +281,7 @@ export default class SemanticProcessor {
         SemanticType.INFIXOP, children, [opNode],
         SemanticUtil.getEmbellishedInner(opNode).textContent);
     node.role = opNode.role;
-    return SemanticHeuristics.run('propagateSimpleFunction', node);
+    return SemanticHeuristics.run('propagateSimpleFunction', node) as SemanticNode;
   }
 
 
@@ -293,7 +297,7 @@ export default class SemanticProcessor {
     if (!partition.rel.length) {
       return nodes;
     }
-    let result = [];
+    let result: SemanticNode[] = [];
     for (let i = 0, rel; rel = partition.rel[i]; i++) {
       let prev = partition.comp[i];
       let next = partition.comp[i + 1];
@@ -464,11 +468,13 @@ export default class SemanticProcessor {
       return partition.rel;
     }
     let result = [];
+    let rel: SemanticNode;
+    let last: SemanticNode;
     do {
       let comp = partition.comp.shift();
-      let rel = partition.rel.shift();
+      rel = partition.rel.shift();
       let unitNode = null;
-      let last = result.pop();
+      last = result.pop();
       if (last) {
         if (!comp.length || !SemanticPred.isUnitCounter(last)) {
           result.push(last);
@@ -510,7 +516,7 @@ export default class SemanticProcessor {
     if (!partition.rel.length) {
       return nodes;
     }
-    let result = [];
+    let result: SemanticNode[] = [];
     for (let i = 0, rel; rel = partition.rel[i]; i++) {
       let comp = partition.comp[i];
       let last = comp.length - 1;
@@ -585,11 +591,12 @@ export default class SemanticProcessor {
       return nodes[0];
     }
     let children = partition.comp.map(
-        goog.bind(SemanticProcessor.getInstance().operationsInRow_, this));
+      SemanticProcessor.getInstance().operationsInRow_);
+    let node: SemanticNode;
     if (partition.rel.some(function(x) {
           return !x.equals(firstRel);
         })) {
-      let node = SemanticProcessor.getInstance().factory_.makeBranchNode(
+      node = SemanticProcessor.getInstance().factory_.makeBranchNode(
           SemanticType.MULTIREL, children, partition.rel);
       if (partition.rel.every(function(x) {
             return x.role === firstRel.role;
@@ -616,7 +623,9 @@ export default class SemanticProcessor {
       return SemanticProcessor.getInstance().factory_.makeEmptyNode();
     }
     // Get explicitly given mixed numbers
-    nodes = this.explicitMixed_(nodes);
+    console.log(this);
+    console.log(SemanticProcessor.getInstance());
+    nodes = SemanticProcessor.getInstance().explicitMixed_(nodes);
 
     if (nodes.length === 1) {
       return nodes[0];
@@ -635,7 +644,7 @@ export default class SemanticProcessor {
     }
 
     // Deal with explicit juxtaposition
-    nodes = SemanticHeuristics.run('convert_juxtaposition', nodes);
+    nodes = SemanticHeuristics.run('convert_juxtaposition', nodes) as SemanticNode[];
 
     let split = SemanticUtil.sliceNodes(nodes, SemanticPred.isOperator);
     // At this point, we know that split.head is not empty!
@@ -719,7 +728,7 @@ export default class SemanticProcessor {
     if (root.type !== SemanticType.INFIXOP) {
       return SemanticProcessor.getInstance().infixNode_([root, node], op);
     }
-    let division = this.appendDivisionOp_(root, op, node);
+    let division = SemanticProcessor.getInstance().appendDivisionOp_(root, op, node);
     if (division) {
       return division;
     }
@@ -747,10 +756,10 @@ export default class SemanticProcessor {
       if (SemanticPred.isImplicit(root)) {
         return SemanticProcessor.getInstance().infixNode_([root, node], op);
       }
-      return this.appendLastOperand_(root, op, node);
+      return SemanticProcessor.getInstance().appendLastOperand_(root, op, node);
     }
     return root.role === SemanticRole.DIVISION ?
-        this.infixNode_([root, node], op) :
+        SemanticProcessor.getInstance().infixNode_([root, node], op) :
         null;
   }
 
@@ -894,7 +903,8 @@ export default class SemanticProcessor {
     if (fences.length === 0 && openStack.length === 0) {
       return contentStack[0];
     }
-    let openPred = SemanticPred.isAttribute('role', 'OPEN');
+    let openPred =
+      (x: SemanticNode) => SemanticPred.isRole(x, SemanticRole.OPEN);
     // Base case 2: Only open and neutral fences are left on the stack.
     if (fences.length === 0) {
       // Basic idea:
@@ -1165,12 +1175,12 @@ export default class SemanticProcessor {
         SemanticType.FENCED, [childNode], [ofence, cfence]);
     if (ofence.role === SemanticRole.OPEN) {
       // newNode.role = SemanticRole.LEFTRIGHT;
-      this.classifyHorizontalFence_(newNode);
-      newNode = SemanticHeuristics.run('propagateComposedFunction', newNode);
+      SemanticProcessor.getInstance().classifyHorizontalFence_(newNode);
+      newNode = SemanticHeuristics.run('propagateComposedFunction', newNode) as SemanticNode;
     } else {
       newNode.role = ofence.role;
     }
-    newNode = SemanticHeuristics.run('detect_cycle', newNode);
+    newNode = SemanticHeuristics.run('detect_cycle', newNode) as SemanticNode;
     return SemanticProcessor.rewriteFencedNode_(newNode);
   }
 
@@ -1209,7 +1219,7 @@ export default class SemanticProcessor {
         (children[0].contentNodes[0].role === SemanticRole.VBAR ||
          children[0].contentNodes[0].role === SemanticRole.COLON)) {
       node.role = SemanticRole.SETEXT;
-      this.setExtension_(node);
+      SemanticProcessor.getInstance().setExtension_(node);
       return;
     }
     // TODO (sorge): Intervals after the Bra-Ket heuristic.
@@ -1247,7 +1257,7 @@ export default class SemanticProcessor {
     if (nodes.length <= 1) {
       return nodes;
     }
-    let allowedType = function(x) {
+    let allowedType = (x: SemanticNode) => {
       let type = x.type;
       return type === 'punctuation' || type === 'text' || type === 'operator' ||
           type === 'relation';
@@ -1399,8 +1409,9 @@ export default class SemanticProcessor {
       return center;
     }
 
+    let result: BoundsType;
     if (SemanticPred.isLimitBase(center)) {
-      let result = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+      result = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
       let length = result.length;
       type = result.type;
       children = children.slice(0, result.length + 1);
@@ -1409,30 +1420,30 @@ export default class SemanticProcessor {
           length === 2 && SemanticPred.isAccent(children[1]) &&
               SemanticPred.isAccent(children[2])) {
         result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
-        return this.accentNode_(
+        return SemanticProcessor.getInstance().accentNode_(
             center, children, result.type, result.length, result.accent);
       }
       if (length === 2) {
         if (SemanticPred.isAccent(children[1])) {
-          center = this.accentNode_(
+          center = SemanticProcessor.getInstance().accentNode_(
               center, [center, children[1]], {
                 'MSUBSUP': SemanticType.SUBSCRIPT,
                 'MUNDEROVER': SemanticType.UNDERSCORE
               }[mmlTag],
               1, true);
           return !children[2] ? center :
-                                this.makeLimitNode_(
+                                SemanticProcessor.getInstance().makeLimitNode_(
                                     center, [center, children[2]], null,
                                     SemanticType.LIMUPPER);
         }
         if (children[2] && SemanticPred.isAccent(children[2])) {
-          center = this.accentNode_(
+          center = SemanticProcessor.getInstance().accentNode_(
               center, [center, children[2]], {
                 'MSUBSUP': SemanticType.SUPERSCRIPT,
                 'MUNDEROVER': SemanticType.OVERSCORE
               }[mmlTag],
               1, true);
-          return this.makeLimitNode_(
+          return SemanticProcessor.getInstance().makeLimitNode_(
               center, [center, children[1]], null, SemanticType.LIMLOWER);
         }
         // Limit nodes only the number of children has to be restricted.
@@ -1440,11 +1451,11 @@ export default class SemanticProcessor {
           type = SemanticType.LIMLOWER;
         }
       }
-      return this.makeLimitNode_(center, children, null, type);
+      return SemanticProcessor.getInstance().makeLimitNode_(center, children, null, type);
     }
     // We either have an indexed, stacked or accented expression.
     result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
-    return this.accentNode_(
+    return SemanticProcessor.getInstance().accentNode_(
         center, children, result.type, result.length, result.accent);
   }
 
@@ -1467,9 +1478,10 @@ export default class SemanticProcessor {
     children = children.slice(0, length + 1);
     let child1 = (children[1] as SemanticNode);
     let child2 = children[2];
+    let innerNode: SemanticNode;
     if (!accent && child2) {
       // For indexed we only have to nest if we have two children.
-      let innerNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
+      innerNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
           SemanticType.SUBSCRIPT, [center, child1], []);
       innerNode.role = SemanticRole.SUBSUP;
       children = [innerNode, child2];
@@ -1477,9 +1489,9 @@ export default class SemanticProcessor {
     }
     if (accent) {
       // Check if we have stacked or accented expressions (or mix).
-      let underAccent = this.accentRole_(child1, type);
+      let underAccent = SemanticProcessor.getInstance().accentRole_(child1, type);
       if (child2) {
-        let overAccent = this.accentRole_(child2, SemanticType.OVERSCORE);
+        let overAccent = SemanticProcessor.getInstance().accentRole_(child2, SemanticType.OVERSCORE);
         if (overAccent && !underAccent) {
           innerNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
               SemanticType.OVERSCORE, [center, child2], []);
@@ -1494,7 +1506,7 @@ export default class SemanticProcessor {
         innerNode.role = SemanticRole.UNDEROVER;
       }
     }
-    return this.makeLimitNode_(center, children, innerNode, type);
+    return SemanticProcessor.getInstance().makeLimitNode_(center, children, innerNode, type);
   }
 
 
@@ -1634,7 +1646,7 @@ export default class SemanticProcessor {
   private static propagateFunctionRole_(
       funcNode: SemanticNode, tag: SemanticRole) {
     if (funcNode) {
-      if (funcNode.type === sre.Semantic.Type.INFIXOP) {
+      if (funcNode.type === SemanticType.INFIXOP) {
         return;
       }
       if (!(SemanticPred.isRole(funcNode, SemanticRole.SUBSUP) ||
@@ -1658,6 +1670,8 @@ export default class SemanticProcessor {
    */
   private getFunctionArgs_(func: SemanticNode, rest: SemanticNode[],
                            heuristic: string): SemanticNode[] {
+    let partition;
+    let arg;
     switch (heuristic) {
       case 'integral':
         let components = SemanticProcessor.getInstance().getIntegralArgs_(rest);
@@ -1687,7 +1701,7 @@ export default class SemanticProcessor {
           rest.unshift(funcNode);
           return rest;
         }
-        let partition = SemanticUtil.sliceNodes(
+        partition = SemanticUtil.sliceNodes(
             rest, SemanticPred.isPrefixFunctionBoundary);
         if (!partition.head.length) {
           if (!partition.div ||
@@ -1695,7 +1709,7 @@ export default class SemanticProcessor {
             rest.unshift(func);
             return rest;
           }
-          let arg = partition.div;
+          arg = partition.div;
         } else {
           arg = SemanticProcessor.getInstance().row(partition.head);
           if (partition.div) {
@@ -1712,13 +1726,13 @@ export default class SemanticProcessor {
         return partition.tail;
         break;
       case 'bigop':
-        let partition =
+        partition =
             SemanticUtil.sliceNodes(rest, SemanticPred.isBigOpBoundary);
         if (!partition.head.length) {
           rest.unshift(func);
           return rest;
         }
-        let arg = SemanticProcessor.getInstance().row(partition.head);
+        arg = SemanticProcessor.getInstance().row(partition.head);
         funcNode = SemanticProcessor.getInstance().bigOpNode_(func, arg);
         if (partition.div) {
           partition.tail.unshift(partition.div);
@@ -1798,14 +1812,14 @@ export default class SemanticProcessor {
   private functionNode_(func: SemanticNode, arg: SemanticNode): SemanticNode {
     let applNode = SemanticProcessor.getInstance().factory_.makeContentNode(
         SemanticAttr.functionApplication());
-    let appl = this.funcAppls[func.id];
+    let appl = SemanticProcessor.getInstance().funcAppls[func.id];
     if (appl) {
       // TODO: Work out why we cannot just take appl.
       applNode.mathmlTree = appl.mathmlTree;
       applNode.mathml = appl.mathml;
       applNode.annotation = appl.annotation;
       applNode.attributes = appl.attributes;
-      delete this.funcAppls[func.id];
+      delete SemanticProcessor.getInstance().funcAppls[func.id];
     }
     applNode.type = SemanticType.PUNCTUATION;
     applNode.role = SemanticRole.APPLICATION;
@@ -1876,8 +1890,9 @@ export default class SemanticProcessor {
       type: SemanticType, children: SemanticNode[],
       operator: SemanticNode|null, content: SemanticNode[]): SemanticNode {
     let funcop = children[0];
+    let oldParent: SemanticNode;
     if (operator) {
-      let oldParent = operator.parent;
+      oldParent = operator.parent;
       content.push(operator);
     }
     let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
@@ -1923,7 +1938,7 @@ export default class SemanticProcessor {
     // First we process all matrices:
     let partition = SemanticUtil.partitionNodes(
         nodes, SemanticPred.tableIsMatrixOrVector);
-    let result = [];
+    let result: SemanticNode[] = [];
     for (let i = 0, matrix; matrix = partition.rel[i]; i++) {
       result = result.concat(partition.comp.shift());
       result.push(SemanticProcessor.tableToMatrixOrVector_(matrix));
@@ -1957,7 +1972,7 @@ export default class SemanticProcessor {
     SemanticPred.isType(matrix, SemanticType.MULTILINE) ?
         SemanticProcessor.tableToVector_(node) :
         SemanticProcessor.tableToMatrix_(node);
-    node.contentNodes.forEach(goog.bind(matrix.appendContentNode, matrix));
+    node.contentNodes.forEach(matrix.appendContentNode.bind(matrix));
     for (let i = 0, row; row = matrix.childNodes[i]; i++) {
       SemanticProcessor.assignRoleToRow_(
           row, SemanticProcessor.getComponentRoles_(matrix));
@@ -2040,7 +2055,7 @@ export default class SemanticProcessor {
     if (role && role !== SemanticRole.UNKNOWN) {
       return role;
     }
-    return SemanticRole[node.type.toUpperCase()] ||
+    return node.type.toLowerCase() as SemanticRole ||
         SemanticRole.UNKNOWN;
   }
 
@@ -2166,12 +2181,12 @@ export default class SemanticProcessor {
     if (sepValue && children.length > 0) {
       let separators = SemanticProcessor.nextSeparatorFunction_(sepValue);
       let newChildren = [children.shift()];
-      children.forEach(goog.bind(function(child) {
+      children.forEach((child) => {
         newChildren.push(
             SemanticProcessor.getInstance().factory_.makeContentNode(
                 separators()));
         newChildren.push(child);
-      }, this));
+      });
       children = newChildren;
     }
     // If both open and close are given, we assume those elements to be fences,
@@ -2211,19 +2226,20 @@ export default class SemanticProcessor {
    */
   private static nextSeparatorFunction_(separators: string):
       (() => string)|null {
+    let sepList: string[];
     if (separators) {
       // Mathjax does not expand empty separators.
       if (separators.match(/^\s+$/)) {
         return null;
       } else {
-        let sepList =
+        sepList =
             separators.replace(/\s/g, '').split('').filter(function(x) {
               return x;
             });
       }
     } else {
       // When no separator is given MathML uses comma as default.
-      let sepList = [','];
+      sepList = [','];
     }
 
     return function() {
@@ -2323,12 +2339,13 @@ export default class SemanticProcessor {
       bevelled: boolean): SemanticNode {
     // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
     //     SemanticType.MULTILINE, [child0, child1], []);
+    let node;
     if (!bevelled && SemanticUtil.isZeroLength(linethickness)) {
       let child0 = SemanticProcessor.getInstance().factory_.makeBranchNode(
           SemanticType.LINE, [denom], []);
       let child1 = SemanticProcessor.getInstance().factory_.makeBranchNode(
           SemanticType.LINE, [enume], []);
-      let node = SemanticProcessor.getInstance().factory_.makeBranchNode(
+      node = SemanticProcessor.getInstance().factory_.makeBranchNode(
           SemanticType.MULTILINE, [child0, child1], []);
       SemanticProcessor.binomialForm_(node);
       SemanticProcessor.classifyMultiline(node);
@@ -2361,7 +2378,7 @@ export default class SemanticProcessor {
         newNode.childNodes.every(SemanticPred.isPureUnit) ?
         SemanticRole.UNIT :
         SemanticRole.DIVISION;
-    return SemanticHeuristics.run('propagateSimpleFunction', newNode);
+    return SemanticHeuristics.run('propagateSimpleFunction', newNode) as SemanticNode;
   }
 
 
@@ -2406,7 +2423,7 @@ export default class SemanticProcessor {
    */
   public pseudoTensor(base: SemanticNode, sub: SemanticNode[],
                       sup: SemanticNode[]): SemanticNode {
-    let isEmpty = x => !SemanticPred.isType(x, SemanticType.EMPTY);
+    let isEmpty = (x: SemanticNode) => !SemanticPred.isType(x, SemanticType.EMPTY);
     let nonEmptySub = sub.filter(isEmpty).length;
     let nonEmptySup = sup.filter(isEmpty).length;
     if (!nonEmptySub && !nonEmptySup) {
@@ -2438,10 +2455,11 @@ export default class SemanticProcessor {
    */
   private scriptNode_(
       nodes: SemanticNode[], role: SemanticRole,
-      opt_noSingle?: boolean): SemanticNode {
+    opt_noSingle?: boolean): SemanticNode {
+    let newNode: SemanticNode;
     switch (nodes.length) {
       case 0:
-        let newNode = SemanticProcessor.getInstance().factory_.makeEmptyNode();
+        newNode = SemanticProcessor.getInstance().factory_.makeEmptyNode();
         break;
       case 1:
         newNode = nodes[0];
@@ -2617,33 +2635,27 @@ export default class SemanticProcessor {
    * @param table The table node.
    * @param columns The columns.
    * @param relation The main relation to classify.
-   * @param opt_alternatives Alternative relations that are
+   * @param alternatives Alternative relations that are
    *     permitted in addition to the main relation.
    * @return True if classification was successful.
    */
   private static classifyByColumns_(
       table: SemanticNode, columns: SemanticNode[][], relation: SemanticRole,
-      opt_alternatives?: SemanticRole[]): boolean {
+      _alternatives?: SemanticRole[]): boolean {
     // TODO: For more complex systems, work with permutations/alternations of
     // column indices.
-    let test1 = function(x) {
-      return SemanticProcessor.isPureRelation_(x, relation);
-    };
-    let test2 = function(x) {
-      return SemanticProcessor.isEndRelation_(x, relation) ||
+    let test1 = (x: SemanticNode) => SemanticProcessor.isPureRelation_(x, relation);
+    let test2 = (x: SemanticNode) => SemanticProcessor.isEndRelation_(x, relation) ||
+      SemanticProcessor.isPureRelation_(x, relation);
+    let test3 = (x: SemanticNode) => SemanticProcessor.isEndRelation_(x, relation, true) ||
           SemanticProcessor.isPureRelation_(x, relation);
-    };
-    let test3 = function(x) {
-      return SemanticProcessor.isEndRelation_(x, relation, true) ||
-          SemanticProcessor.isPureRelation_(x, relation);
-    };
 
     if (columns.length === 3 &&
             SemanticProcessor.testColumns_(columns, 1, test1) ||
         columns.length === 2 &&
             (SemanticProcessor.testColumns_(columns, 1, test2) ||
              SemanticProcessor.testColumns_(columns, 0, test3))) {
-      table.role = SemanticRole[relation];
+      table.role = relation;
       return true;
     }
     return false;
@@ -2770,16 +2782,16 @@ export default class SemanticProcessor {
     // Put in an invisible comma!
     // Axiom case!
     if (semantics['axiom']) {
-      let cleaned = this.cleanInference(node.childNodes);
+      let cleaned = SemanticProcessor.getInstance().cleanInference(node.childNodes);
       let axiom = cleaned.length ?
-          this.factory_.makeBranchNode(
+          SemanticProcessor.getInstance().factory_.makeBranchNode(
               SemanticType.INFERENCE, parse(cleaned), []) :
-          this.factory_.makeEmptyNode();
+          SemanticProcessor.getInstance().factory_.makeEmptyNode();
       axiom.role = SemanticRole.AXIOM;
       axiom.mathmlTree = node;
       return axiom;
     }
-    let inference = this.inference(node, semantics, parse);
+    let inference = SemanticProcessor.getInstance().inference(node, semantics, parse);
     if (semantics['proof']) {
       inference.role = SemanticRole.PROOF;
       inference.childNodes[0].role = SemanticRole.FINAL;
@@ -2800,8 +2812,8 @@ export default class SemanticProcessor {
       node: Element, semantics: {[key: string]: string},
       parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
     if (semantics['inferenceRule']) {
-      let formulas = this.getFormulas(node, [], parse);
-      let inference = this.factory_.makeBranchNode(
+      let formulas = SemanticProcessor.getInstance().getFormulas(node, [], parse);
+      let inference = SemanticProcessor.getInstance().factory_.makeBranchNode(
           SemanticType.INFERENCE, [formulas.conclusion, formulas.premises],
           []);
       // Setting role
@@ -2812,14 +2824,14 @@ export default class SemanticProcessor {
     let content = [];
     if (label === 'left' || label === 'both') {
       content.push(
-          this.getLabel(node, children, parse, SemanticRole.LEFT));
+          SemanticProcessor.getInstance().getLabel(node, children, parse, SemanticRole.LEFT));
     }
     if (label === 'right' || label === 'both') {
       content.push(
-          this.getLabel(node, children, parse, SemanticRole.RIGHT));
+          SemanticProcessor.getInstance().getLabel(node, children, parse, SemanticRole.RIGHT));
     }
-    let formulas = this.getFormulas(node, children, parse);
-    let inference = this.factory_.makeBranchNode(
+    let formulas = SemanticProcessor.getInstance().getFormulas(node, children, parse);
+    let inference = SemanticProcessor.getInstance().factory_.makeBranchNode(
         SemanticType.INFERENCE, [formulas.conclusion, formulas.premises],
         content);
     // Setting role
@@ -2837,11 +2849,10 @@ export default class SemanticProcessor {
    * @param side The side the label is on.
    * @return The semantic node for the label.
    */
-  public getLabel(
-      node: Element, children: Element[],
+  public getLabel(_node: Element, children: Element[],
       parse: (p1: Element[]) => SemanticNode[], side: string): SemanticNode {
-    let label = this.findNestedRow(children, 'prooflabel', side);
-    let sem = this.factory_.makeBranchNode(
+    let label = SemanticProcessor.getInstance().findNestedRow(children, 'prooflabel', side);
+    let sem = SemanticProcessor.getInstance().factory_.makeBranchNode(
         SemanticType.RULELABEL,
         parse(DomUtil.toArray(label.childNodes)), []);
     sem.role = (side as SemanticRole);
@@ -2864,7 +2875,7 @@ export default class SemanticProcessor {
       parse: (p1: Element[]) => SemanticNode[]):
       {conclusion: SemanticNode, premises: SemanticNode} {
     let inf =
-        children.length ? this.findNestedRow(children, 'inferenceRule') : node;
+        children.length ? SemanticProcessor.getInstance().findNestedRow(children, 'inferenceRule') : node;
     let up = SemanticProcessor.getSemantics(inf)['inferenceRule'] === 'up';
     let premRow = up ? inf.childNodes[1] : inf.childNodes[0];
     let concRow = up ? inf.childNodes[0] : inf.childNodes[1];
@@ -2882,9 +2893,9 @@ export default class SemanticProcessor {
     let conclusion =
         parse(DomUtil.toArray(concRow.childNodes[0].childNodes))[0];
     let prem =
-        this.factory_.makeBranchNode(SemanticType.PREMISES, premises, []);
+        SemanticProcessor.getInstance().factory_.makeBranchNode(SemanticType.PREMISES, premises, []);
     prem.mathmlTree = (premTable as Element);
-    let conc = this.factory_.makeBranchNode(
+    let conc = SemanticProcessor.getInstance().factory_.makeBranchNode(
         SemanticType.CONCLUSION, [conclusion], []);
     conc.mathmlTree = (concRow.childNodes[0].childNodes[0] as Element);
     return {conclusion: conc, premises: prem};
@@ -2901,7 +2912,7 @@ export default class SemanticProcessor {
    */
   public findNestedRow(nodes: Element[], semantic: string, opt_value?: string):
       Element {
-    return this.findNestedRow_(nodes, semantic, 0, opt_value);
+    return SemanticProcessor.getInstance().findNestedRow_(nodes, semantic, 0, opt_value);
   }
 
 
@@ -2925,7 +2936,7 @@ export default class SemanticProcessor {
       let tag = DomUtil.tagName(node);
       if (tag !== 'MSPACE') {
         if (tag === 'MROW') {
-          return this.findNestedRow_(
+          return SemanticProcessor.getInstance().findNestedRow_(
               DomUtil.toArray(node.childNodes), semantic, level + 1, value);
         }
         if (SemanticProcessor.findSemantics(node, semantic, value)) {
@@ -2993,7 +3004,7 @@ export default class SemanticProcessor {
    * @return Name with prefix removed.
    */
   public static removePrefix(name: string): string {
-    let [prefix, ...rest] = name.split('_');
+    let [ , ...rest] = name.split('_');
     return rest.join('_');
   }
 
@@ -3004,7 +3015,7 @@ export default class SemanticProcessor {
    * @return Association list of semantic attributes.
    */
   public static separateSemantics(attr: string): {[key: string]: string} {
-    let result = {};
+    let result: {[key: string]: string} = {};
     attr.split(';').forEach(function(x) {
       let [name, value] = x.split(':');
       result[SemanticProcessor.removePrefix(name)] = value;
@@ -3022,6 +3033,6 @@ export default class SemanticProcessor {
     if (node.type === SemanticType.UNKNOWN) {
       node.type = SemanticType.OPERATOR;
     }
-    return SemanticHeuristics.run('multioperator', node);
+    return SemanticHeuristics.run('multioperator', node) as SemanticNode;
   }
 }

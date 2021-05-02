@@ -23,7 +23,7 @@ import {DynamicCstr} from '../rule_engine/dynamic_cstr';
 import {Axis, AxisMap, AxisProperties, DynamicCstrParser,
         DynamicProperties, DefaultComparator} from '../rule_engine/dynamic_cstr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
 
 
 export class ClearspeakPreferences extends DynamicCstr {

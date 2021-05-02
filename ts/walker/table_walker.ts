@@ -20,8 +20,10 @@
  */
 
 
+import * as DomUtil from '../common/dom_util';
 import {KeyCode} from '../common/event_util';
 import {SemanticNode} from '../semantic_tree/semantic_node';
+import {SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
 
 import {Focus} from './focus';
 import {SyntaxWalker} from './syntax_walker';
@@ -31,7 +33,7 @@ import {SyntaxWalker} from './syntax_walker';
 /**
  * @override
  */
-export class TableWalker extends sre.SyntaxWalker {
+export class TableWalker extends SyntaxWalker {
   static ELIGIBLE_CELL_ROLES: SemanticRole[];
 
 
@@ -153,20 +155,20 @@ export class TableWalker extends sre.SyntaxWalker {
     if (!this.isInTable_() || this.key_ === null) {
       return this.getFocus();
     }
-    if (this.moved === sre.Walker.move.ROW) {
-      this.moved = sre.Walker.move.CELL;
-      let column = this.key_ - sre.EventUtil.KeyCode['0'];
+    if (this.moved === Walker.move.ROW) {
+      this.moved = Walker.move.CELL;
+      let column = this.key_ - EventUtil.KeyCode['0'];
       if (!this.isLegalJump_(this.row_, column)) {
         return this.getFocus();
       }
       return this.jumpCell_(this.row_, column);
     }
-    let row = this.key_ - sre.EventUtil.KeyCode['0'];
+    let row = this.key_ - EventUtil.KeyCode['0'];
     if (row > this.currentTable_.childNodes.length) {
       return this.getFocus();
     }
     this.row_ = row;
-    this.moved = sre.Walker.move.ROW;
+    this.moved = Walker.move.ROW;
     return this.getFocus().clone();
   }
 
@@ -209,7 +211,7 @@ export class TableWalker extends sre.SyntaxWalker {
    * @return True if the cell exists.
    */
   private isLegalJump_(row: number, column: number): boolean {
-    let xmlTable = sre.DomUtil.querySelectorAllByAttrValue(
+    let xmlTable = DomUtil.querySelectorAllByAttrValue(
         this.getRebuilt().xml, 'id', this.currentTable_.id.toString())[0];
     if (!xmlTable || xmlTable.hasAttribute('alternative')) {
       return false;
@@ -218,7 +220,7 @@ export class TableWalker extends sre.SyntaxWalker {
     if (!rowNode) {
       return false;
     }
-    let xmlRow = sre.DomUtil.querySelectorAllByAttrValue(
+    let xmlRow = DomUtil.querySelectorAllByAttrValue(
         xmlTable, 'id', rowNode.id.toString())[0];
     if (!xmlRow || xmlRow.hasAttribute('alternative')) {
       return false;
@@ -254,7 +256,7 @@ export class TableWalker extends sre.SyntaxWalker {
     return focus;
   }
 }
-goog.inherits(TableWalker, SyntaxWalker);
+
 TableWalker.ELIGIBLE_CELL_ROLES = [
   SemanticRole.DETERMINANT, SemanticRole.ROWVECTOR,
   SemanticRole.BINOMIAL, SemanticRole.SQUAREMATRIX,

@@ -23,7 +23,6 @@
 import {ColorPicker} from './color_picker';
 
 
-
 export interface Highlighter {
   /**
    * Sets highlighting on a node.
@@ -50,6 +49,13 @@ export interface Highlighter {
    */
   unhighlightAll(): void;
 
+
+  /**
+   * Predicate to check if a node is an maction node.
+   * @param node A DOM node.
+   * @return True if the node is an maction node.
+   */
+  isMactionNode(node: Element): boolean;
 
   /**
    * Sets of the color the highlighter is using.

@@ -20,13 +20,15 @@
 
 import * as BaseUtil from '../common/base_util';
 import * as DomUtil from '../common/dom_util';
-import {SystemExternal} from '../common/system_external';
-import * as XpathUtil from '../common/xpath_util';
-import * as Messages from '../l10n/messages';
+import SystemExternal from '../common/system_external';
+import XpathUtil from '../common/xpath_util';
+import {Locale} from '../l10n/messages';
+
 import {MathStore} from '../rule_engine/math_store';
 import * as Semantic from '../semantic_tree/semantic';
 import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticProcessor} from '../semantic_tree/semantic_processor';
+import {SemanticFont, SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
+import SemanticProcessor from '../semantic_tree/semantic_processor';
 
 import * as NumbersUtil from './numbers_util';
 
@@ -38,7 +40,7 @@ import * as NumbersUtil from './numbers_util';
  * @param node The node to be processed.
  * @return The spaced out text.
  */
-export function spaceoutText(node: Node): string {
+export function spaceoutText(node: Element): string {
   return Array.from(node.textContent).join(' ');
 }
 
@@ -52,15 +54,15 @@ export function spaceoutText(node: Node): string {
  * @return List of single nodes.
  */
 export function spaceoutNodes(
-    node: Node, correction: (p1: SemanticNode) => any): Node[] {
+    node: Element, correction: (p1: SemanticNode) => any): Element[] {
   let content = Array.from(node.textContent);
   let result = [];
   let processor = SemanticProcessor.getInstance();
   let doc = node.ownerDocument;
   for (let i = 0, chr; chr = content[i]; i++) {
     let leaf =
-        processor.getNodeFactory().makeLeafNode(chr, Semantic.Font.UNKNOWN);
-    let sn = processor.identifierNode(leaf, Semantic.Font.UNKNOWN, '');
+        processor.getNodeFactory().makeLeafNode(chr, SemanticFont.UNKNOWN);
+    let sn = processor.identifierNode(leaf, SemanticFont.UNKNOWN, '');
     correction(sn);
     result.push(sn.xml(doc));
   }
@@ -74,10 +76,10 @@ export function spaceoutNodes(
  * @param node The node to be processed.
  * @return List of single number nodes.
  */
-export function spaceoutNumber(node: Node): Node[] {
+export function spaceoutNumber(node: Element): Element[] {
   return spaceoutNodes(node, function(sn) {
     if (!sn.textContent.match(/\W/)) {
-      sn.type = Semantic.Type.NUMBER;
+      sn.type = SemanticType.NUMBER;
     }
   });
 }
@@ -88,10 +90,10 @@ export function spaceoutNumber(node: Node): Node[] {
  * @param node The node to be processed.
  * @return List of single identifier nodes.
  */
-export function spaceoutIdentifier(node: Node): Node[] {
+export function spaceoutIdentifier(node: Element): Element[] {
   return spaceoutNodes(node, function(sn) {
-    sn.font = Semantic.Font.UNKNOWN;
-    sn.type = Semantic.Type.IDENTIFIER;
+    sn.font = SemanticFont.UNKNOWN;
+    sn.type = SemanticType.IDENTIFIER;
   });
 }
 
@@ -99,12 +101,12 @@ export function spaceoutIdentifier(node: Node): Node[] {
 /**
  * Tags that serve as a nesting barrier by default.
  */
-export const nestingBarriers: Semantic.Type[] = [
-  Semantic.Type.CASES, Semantic.Type.CELL, Semantic.Type.INTEGRAL,
-  Semantic.Type.LINE, Semantic.Type.MATRIX, Semantic.Type.MULTILINE,
-  Semantic.Type.OVERSCORE, Semantic.Type.ROOT, Semantic.Type.ROW,
-  Semantic.Type.SQRT, Semantic.Type.SUBSCRIPT, Semantic.Type.SUPERSCRIPT,
-  Semantic.Type.TABLE, Semantic.Type.UNDERSCORE, Semantic.Type.VECTOR
+export const nestingBarriers: SemanticType[] = [
+  SemanticType.CASES, SemanticType.CELL, SemanticType.INTEGRAL,
+  SemanticType.LINE, SemanticType.MATRIX, SemanticType.MULTILINE,
+  SemanticType.OVERSCORE, SemanticType.ROOT, SemanticType.ROW,
+  SemanticType.SQRT, SemanticType.SUBSCRIPT, SemanticType.SUPERSCRIPT,
+  SemanticType.TABLE, SemanticType.UNDERSCORE, SemanticType.VECTOR
 ];
 
 
@@ -114,7 +116,7 @@ export const nestingBarriers: Semantic.Type[] = [
  * @param node The node to translate.
  * @return Array containing the original node only.
  */
-export function resetNestingDepth(node: Node): Node[] {
+export function resetNestingDepth(node: Element): Element[] {
   nestingDepth = {};
   return [node];
 }
@@ -136,9 +138,9 @@ export function resetNestingDepth(node: Node): Node[] {
  * @return The nesting depth.
  */
 export function getNestingDepth(
-    type: string, node: Node, tags: string[], opt_barrierTags?: Semantic.Attr[],
+    type: string, node: Element, tags: string[], opt_barrierTags?: Semantic.Attr[],
     opt_barrierAttrs?: {[key: string]: string},
-    opt_func?: (p1: Node) => boolean): number {
+    opt_func?: (p1: Element) => boolean): number {
   opt_barrierTags = opt_barrierTags || nestingBarriers;
   opt_barrierAttrs = opt_barrierAttrs || {};
   opt_func = opt_func || function(node) {
@@ -170,7 +172,7 @@ export function getNestingDepth(
  * @return True if all attributes are contained and have the given
  *     values.
  */
-export function containsAttr(node: Node, attrs: {[key: string]: string}): boolean {
+export function containsAttr(node: Element, attrs: {[key: string]: string}): boolean {
   if (!node.attributes) {
     return false;
   }
@@ -199,8 +201,8 @@ export function containsAttr(node: Node, attrs: {[key: string]: string}): boolea
  * @return The nesting depth.
  */
 export function computeNestingDepth_(
-    node: Node, tags: string[], barriers: string[], attrs: {[key: string]: string},
-    func: (p1: Node) => boolean, depth: number): number {
+    node: Element, tags: string[], barriers: string[], attrs: {[key: string]: string},
+    func: (p1: Element) => boolean, depth: number): number {
   if (func(node) || barriers.indexOf(node.tagName) > -1 ||
       containsAttr(node, attrs)) {
     return depth;
@@ -224,10 +226,10 @@ export function computeNestingDepth_(
  * @param node The fraction node.
  * @return The nesting depth. 0 if the node is not a fraction.
  */
-export function fractionNestingDepth(node: Node): number {
+export function fractionNestingDepth(node: Element): number {
   return getNestingDepth(
       'fraction', node, ['fraction'], nestingBarriers, {},
-      msg.MS_FUNC.FRAC_NEST_DEPTH);
+      Locale.MS_FUNC.FRAC_NEST_DEPTH);
 }
 
 
@@ -239,13 +241,13 @@ export function fractionNestingDepth(node: Node): number {
  * @return The disambiguating string.
  */
 export function nestedFraction(
-    node: Node, expr: string, opt_end?: string): string {
+    node: Element, expr: string, opt_end?: string): string {
   let depth = fractionNestingDepth(node);
   let annotation = Array.apply(null, Array(depth)).map((x) => expr);
   if (opt_end) {
     annotation.push(opt_end);
   }
-  return annotation.join(msg.REGEXP.JOINER_FRAC);
+  return annotation.join(Locale.REGEXP.JOINER_FRAC);
 }
 
 
@@ -254,8 +256,8 @@ export function nestedFraction(
  * @param node The fraction node.
  * @return The opening string.
  */
-export function openingFractionVerbose(node: Node): string {
-  return nestedFraction(node, msg.MS.START, msg.MS.FRAC_V);
+export function openingFractionVerbose(node: Element): string {
+  return nestedFraction(node, Locale.MS.START, Locale.MS.FRAC_V);
 }
 
 
@@ -264,8 +266,8 @@ export function openingFractionVerbose(node: Node): string {
  * @param node The fraction node.
  * @return The closing string.
  */
-export function closingFractionVerbose(node: Node): string {
-  return nestedFraction(node, msg.MS.END, msg.MS.FRAC_V);
+export function closingFractionVerbose(node: Element): string {
+  return nestedFraction(node, Locale.MS.END, Locale.MS.FRAC_V);
 }
 
 
@@ -274,8 +276,8 @@ export function closingFractionVerbose(node: Node): string {
  * @param node The fraction node.
  * @return The middle string.
  */
-export function overFractionVerbose(node: Node): string {
-  return nestedFraction(node, msg.MS.FRAC_OVER);
+export function overFractionVerbose(node: Element): string {
+  return nestedFraction(node, Locale.MS.FRAC_OVER);
 }
 
 
@@ -284,8 +286,8 @@ export function overFractionVerbose(node: Node): string {
  * @param node The fraction node.
  * @return The opening string.
  */
-export function openingFractionBrief(node: Node): string {
-  return nestedFraction(node, msg.MS.START, msg.MS.FRAC_B);
+export function openingFractionBrief(node: Element): string {
+  return nestedFraction(node, Locale.MS.START, Locale.MS.FRAC_B);
 }
 
 
@@ -294,8 +296,8 @@ export function openingFractionBrief(node: Node): string {
  * @param node The fraction node.
  * @return The closing string.
  */
-export function closingFractionBrief(node: Node): string {
-  return nestedFraction(node, msg.MS.END, msg.MS.FRAC_B);
+export function closingFractionBrief(node: Element): string {
+  return nestedFraction(node, Locale.MS.END, Locale.MS.FRAC_B);
 }
 
 
@@ -304,14 +306,14 @@ export function closingFractionBrief(node: Node): string {
  * @param node The fraction node.
  * @return The opening string.
  */
-export function openingFractionSbrief(node: Node): string {
+export function openingFractionSbrief(node: Element): string {
   let depth = fractionNestingDepth(node);
   if (depth === 1) {
-    return msg.MS.FRAC_S;
+    return Locale.MS.FRAC_S;
   }
-  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
-      msg.MS.NEST_FRAC, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
-      msg.MS.FRAC_S);
+  return Locale.MS_FUNC.COMBINE_NESTED_FRACTION(
+      Locale.MS.NEST_FRAC, Locale.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+      Locale.MS.FRAC_S);
 }
 
 
@@ -320,14 +322,14 @@ export function openingFractionSbrief(node: Node): string {
  * @param node The fraction node.
  * @return The closing string.
  */
-export function closingFractionSbrief(node: Node): string {
+export function closingFractionSbrief(node: Element): string {
   let depth = fractionNestingDepth(node);
   if (depth === 1) {
-    return msg.MS.ENDFRAC;
+    return Locale.MS.ENDFRAC;
   }
-  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
-      msg.MS.NEST_FRAC, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
-      msg.MS.ENDFRAC);
+  return Locale.MS_FUNC.COMBINE_NESTED_FRACTION(
+      Locale.MS.NEST_FRAC, Locale.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+      Locale.MS.ENDFRAC);
 }
 
 
@@ -336,14 +338,14 @@ export function closingFractionSbrief(node: Node): string {
  * @param node The fraction node.
  * @return The middle string.
  */
-export function overFractionSbrief(node: Node): string {
+export function overFractionSbrief(node: Element): string {
   let depth = fractionNestingDepth(node);
   if (depth === 1) {
-    return msg.MS.FRAC_OVER;
+    return Locale.MS.FRAC_OVER;
   }
-  return msg.MS_FUNC.COMBINE_NESTED_FRACTION(
-      msg.MS.NEST_FRAC, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
-      msg.MS.FRAC_OVER);
+  return Locale.MS_FUNC.COMBINE_NESTED_FRACTION(
+      Locale.MS.NEST_FRAC, Locale.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+      Locale.MS.FRAC_OVER);
 }
 
 
@@ -354,7 +356,7 @@ export function overFractionSbrief(node: Node): string {
  * @return List containing the node if it is eligible. Otherwise
  *     empty.
  */
-export function isSmallVulgarFraction(node: Node): Node[] {
+export function isSmallVulgarFraction(node: Element): Element[] {
   return NumbersUtil.vulgarFractionSmall(node, 10, 100) ? [node] : [];
 }
 
@@ -368,27 +370,27 @@ export function isSmallVulgarFraction(node: Node): Node[] {
  * @return The complete prefix string.
  */
 export function nestedSubSuper(
-    node: Node, init: string, replace: {sup: string, sub: string}): string {
+    node: Element, init: string, replace: {sup: string, sub: string}): string {
   while (node.parentNode) {
     let children = node.parentNode;
-    let parent = children.parentNode;
+    let parent = children.parentNode as Element;
     if (!parent) {
       break;
     }
     let nodeRole = node.getAttribute && node.getAttribute('role');
-    if (parent.tagName === Semantic.Type.SUBSCRIPT &&
+    if (parent.tagName === SemanticType.SUBSCRIPT &&
             node === children.childNodes[1] ||
-        parent.tagName === Semantic.Type.TENSOR && nodeRole &&
-            (nodeRole === Semantic.Role.LEFTSUB ||
-             nodeRole === Semantic.Role.RIGHTSUB)) {
-      init = replace.sub + msg.REGEXP.JOINER_SUBSUPER + init;
+        parent.tagName === SemanticType.TENSOR && nodeRole &&
+            (nodeRole === SemanticRole.LEFTSUB ||
+             nodeRole === SemanticRole.RIGHTSUB)) {
+      init = replace.sub + Locale.REGEXP.JOINER_SUBSUPER + init;
     }
-    if (parent.tagName === Semantic.Type.SUPERSCRIPT &&
+    if (parent.tagName === SemanticType.SUPERSCRIPT &&
             node === children.childNodes[1] ||
-        parent.tagName === Semantic.Type.TENSOR && nodeRole &&
-            (nodeRole === Semantic.Role.LEFTSUPER ||
-             nodeRole === Semantic.Role.RIGHTSUPER)) {
-      init = replace.sup + msg.REGEXP.JOINER_SUBSUPER + init;
+        parent.tagName === SemanticType.TENSOR && nodeRole &&
+            (nodeRole === SemanticRole.LEFTSUPER ||
+             nodeRole === SemanticRole.RIGHTSUPER)) {
+      init = replace.sup + Locale.REGEXP.JOINER_SUBSUPER + init;
     }
     node = parent;
   }
@@ -401,9 +403,9 @@ export function nestedSubSuper(
  * @param node Subscript node.
  * @return The prefix string.
  */
-export function subscriptVerbose(node: Node): string {
+export function subscriptVerbose(node: Element): string {
   return nestedSubSuper(
-      node, msg.MS.SUBSCRIPT, {sup: msg.MS.SUPER, sub: msg.MS.SUB});
+      node, Locale.MS.SUBSCRIPT, {sup: Locale.MS.SUPER, sub: Locale.MS.SUB});
 }
 
 
@@ -412,8 +414,8 @@ export function subscriptVerbose(node: Node): string {
  * @param node Subscript node.
  * @return The prefix string.
  */
-export function subscriptBrief(node: Node): string {
-  return nestedSubSuper(node, msg.MS.SUB, {sup: msg.MS.SUP, sub: msg.MS.SUB});
+export function subscriptBrief(node: Element): string {
+  return nestedSubSuper(node, Locale.MS.SUB, {sup: Locale.MS.SUP, sub: Locale.MS.SUB});
 }
 
 
@@ -422,9 +424,9 @@ export function subscriptBrief(node: Node): string {
  * @param node Subscript node.
  * @return The prefix string.
  */
-export function superscriptVerbose(node: Node): string {
+export function superscriptVerbose(node: Element): string {
   return nestedSubSuper(
-      node, msg.MS.SUPERSCRIPT, {sup: msg.MS.SUPER, sub: msg.MS.SUB});
+      node, Locale.MS.SUPERSCRIPT, {sup: Locale.MS.SUPER, sub: Locale.MS.SUB});
 }
 
 
@@ -433,8 +435,8 @@ export function superscriptVerbose(node: Node): string {
  * @param node Subscript node.
  * @return The prefix string.
  */
-export function superscriptBrief(node: Node): string {
-  return nestedSubSuper(node, msg.MS.SUP, {sup: msg.MS.SUP, sub: msg.MS.SUB});
+export function superscriptBrief(node: Element): string {
+  return nestedSubSuper(node, Locale.MS.SUP, {sup: Locale.MS.SUP, sub: Locale.MS.SUB});
 }
 
 
@@ -443,13 +445,13 @@ export function superscriptBrief(node: Node): string {
  * @param node Subscript node.
  * @return The prefix string.
  */
-export function baselineVerbose(node: Node): string {
-  let baseline = nestedSubSuper(node, '', {sup: msg.MS.SUPER, sub: msg.MS.SUB});
+export function baselineVerbose(node: Element): string {
+  let baseline = nestedSubSuper(node, '', {sup: Locale.MS.SUPER, sub: Locale.MS.SUB});
   if (!baseline) {
-    return msg.MS.BASELINE;
+    return Locale.MS.BASELINE;
   }
-  return baseline.replace(new RegExp(msg.MS.SUB + '$'), msg.MS.SUBSCRIPT)
-      .replace(new RegExp(msg.MS.SUPER + '$'), msg.MS.SUPERSCRIPT);
+  return baseline.replace(new RegExp(Locale.MS.SUB + '$'), Locale.MS.SUBSCRIPT)
+      .replace(new RegExp(Locale.MS.SUPER + '$'), Locale.MS.SUPERSCRIPT);
 }
 
 
@@ -458,9 +460,9 @@ export function baselineVerbose(node: Node): string {
  * @param node Subscript node.
  * @return The prefix string.
  */
-export function baselineBrief(node: Node): string {
-  let baseline = nestedSubSuper(node, '', {sup: msg.MS.SUP, sub: msg.MS.SUB});
-  return baseline || msg.MS.BASE;
+export function baselineBrief(node: Element): string {
+  let baseline = nestedSubSuper(node, '', {sup: Locale.MS.SUP, sub: Locale.MS.SUB});
+  return baseline || Locale.MS.BASE;
 }
 
 
@@ -470,7 +472,7 @@ export function baselineBrief(node: Node): string {
  * @param node The radical node.
  * @return The nesting depth. 0 if the node is not a radical.
  */
-export function radicalNestingDepth(node: Node): number {
+export function radicalNestingDepth(node: Element): number {
   return getNestingDepth(
       'radical', node, ['sqrt', 'root'], nestingBarriers, {});
 }
@@ -485,15 +487,15 @@ export function radicalNestingDepth(node: Node): number {
  * @return The opening string.
  */
 export function nestedRadical(
-    node: Node, prefix: string, postfix: string): string {
+    node: Element, prefix: string, postfix: string): string {
   let depth = radicalNestingDepth(node);
   let index = getRootIndex(node);
-  postfix = index ? msg.MS_FUNC.COMBINE_ROOT_INDEX(postfix, index) : postfix;
+  postfix = index ? Locale.MS_FUNC.COMBINE_ROOT_INDEX(postfix, index) : postfix;
   if (depth === 1) {
     return postfix;
   }
-  return msg.MS_FUNC.COMBINE_NESTED_RADICAL(
-      prefix, msg.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1), postfix);
+  return Locale.MS_FUNC.COMBINE_NESTED_RADICAL(
+      prefix, Locale.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1), postfix);
 }
 
 
@@ -502,19 +504,19 @@ export function nestedRadical(
  * @param node The radical node.
  * @return The localised indexing string if it exists.
  */
-export function getRootIndex(node: Node): string {
+export function getRootIndex(node: Element): string {
   let content = node.tagName === 'sqrt' ? '2' :
                                           // TODO (sorge): Make that safer?
       XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
-  return msg.MS_ROOT_INDEX[content] || '';
+  return Locale.MS_ROOT_INDEX[content] || '';
 }
 /**
  * Opening string for radicals in Mathspeak verbose mode.
  * @param node The radical node.
  * @return The opening string.
  */
-export function openingRadicalVerbose(node: Node): string {
-  return nestedRadical(node, msg.MS.NESTED, msg.MS.STARTROOT);
+export function openingRadicalVerbose(node: Element): string {
+  return nestedRadical(node, Locale.MS.NESTED, Locale.MS.STARTROOT);
 }
 
 
@@ -523,8 +525,8 @@ export function openingRadicalVerbose(node: Node): string {
  * @param node The radical node.
  * @return The closing string.
  */
-export function closingRadicalVerbose(node: Node): string {
-  return nestedRadical(node, msg.MS.NESTED, msg.MS.ENDROOT);
+export function closingRadicalVerbose(node: Element): string {
+  return nestedRadical(node, Locale.MS.NESTED, Locale.MS.ENDROOT);
 }
 
 
@@ -533,8 +535,8 @@ export function closingRadicalVerbose(node: Node): string {
  * @param node The radical node.
  * @return The middle string.
  */
-export function indexRadicalVerbose(node: Node): string {
-  return nestedRadical(node, msg.MS.NESTED, msg.MS.ROOTINDEX);
+export function indexRadicalVerbose(node: Element): string {
+  return nestedRadical(node, Locale.MS.NESTED, Locale.MS.ROOTINDEX);
 }
 
 
@@ -543,8 +545,8 @@ export function indexRadicalVerbose(node: Node): string {
  * @param node The radical node.
  * @return The opening string.
  */
-export function openingRadicalBrief(node: Node): string {
-  return nestedRadical(node, msg.MS.NEST_ROOT, msg.MS.STARTROOT);
+export function openingRadicalBrief(node: Element): string {
+  return nestedRadical(node, Locale.MS.NEST_ROOT, Locale.MS.STARTROOT);
 }
 
 
@@ -553,8 +555,8 @@ export function openingRadicalBrief(node: Node): string {
  * @param node The radical node.
  * @return The closing string.
  */
-export function closingRadicalBrief(node: Node): string {
-  return nestedRadical(node, msg.MS.NEST_ROOT, msg.MS.ENDROOT);
+export function closingRadicalBrief(node: Element): string {
+  return nestedRadical(node, Locale.MS.NEST_ROOT, Locale.MS.ENDROOT);
 }
 
 
@@ -563,8 +565,8 @@ export function closingRadicalBrief(node: Node): string {
  * @param node The radical node.
  * @return The middle string.
  */
-export function indexRadicalBrief(node: Node): string {
-  return nestedRadical(node, msg.MS.NEST_ROOT, msg.MS.ROOTINDEX);
+export function indexRadicalBrief(node: Element): string {
+  return nestedRadical(node, Locale.MS.NEST_ROOT, Locale.MS.ROOTINDEX);
 }
 
 
@@ -573,8 +575,8 @@ export function indexRadicalBrief(node: Node): string {
  * @param node The radical node.
  * @return The opening string.
  */
-export function openingRadicalSbrief(node: Node): string {
-  return nestedRadical(node, msg.MS.NEST_ROOT, msg.MS.ROOT);
+export function openingRadicalSbrief(node: Element): string {
+  return nestedRadical(node, Locale.MS.NEST_ROOT, Locale.MS.ROOT);
 }
 
 
@@ -583,8 +585,8 @@ export function openingRadicalSbrief(node: Node): string {
  * @param node The radical node.
  * @return The middle string.
  */
-export function indexRadicalSbrief(node: Node): string {
-  return nestedRadical(node, msg.MS.NEST_ROOT, msg.MS.INDEX);
+export function indexRadicalSbrief(node: Element): string {
+  return nestedRadical(node, Locale.MS.NEST_ROOT, Locale.MS.INDEX);
 }
 
 
@@ -593,12 +595,12 @@ export function indexRadicalSbrief(node: Node): string {
  * @param node The underscore node.
  * @return The nesting depth. 0 if the node is not an underscore.
  */
-export function underscoreNestingDepth(node: Node): number {
+export function underscoreNestingDepth(node: Element): number {
   return getNestingDepth(
       'underscore', node, ['underscore'], nestingBarriers, {}, function(node) {
-        return node.tagName && node.tagName === Semantic.Type.UNDERSCORE &&
+        return node.tagName && node.tagName === SemanticType.UNDERSCORE &&
             node.childNodes[0].childNodes[1].getAttribute('role') ===
-            Semantic.Role.UNDERACCENT;
+            SemanticRole.UNDERACCENT;
       });
 }
 
@@ -608,9 +610,9 @@ export function underscoreNestingDepth(node: Node): number {
  * @param node The underscore node.
  * @return The correct prefix string.
  */
-export function nestedUnderscore(node: Node): string {
+export function nestedUnderscore(node: Element): string {
   let depth = underscoreNestingDepth(node);
-  return Array(depth).join(msg.MS.UNDER) + msg.MS.UNDERSCRIPT;
+  return Array(depth).join(Locale.MS.UNDER) + Locale.MS.UNDERSCRIPT;
 }
 
 
@@ -619,12 +621,12 @@ export function nestedUnderscore(node: Node): string {
  * @param node The overscore node.
  * @return The nesting depth. 0 if the node is not an overscore.
  */
-export function overscoreNestingDepth(node: Node): number {
+export function overscoreNestingDepth(node: Element): number {
   return getNestingDepth(
       'overscore', node, ['overscore'], nestingBarriers, {}, function(node) {
-        return node.tagName && node.tagName === Semantic.Type.OVERSCORE &&
+        return node.tagName && node.tagName === SemanticType.OVERSCORE &&
             node.childNodes[0].childNodes[1].getAttribute('role') ===
-            Semantic.Role.OVERACCENT;
+            SemanticRole.OVERACCENT;
       });
 }
 
@@ -634,9 +636,9 @@ export function overscoreNestingDepth(node: Node): number {
  * @param node The overscore node.
  * @return The correct prefix string.
  */
-export function nestedOverscore(node: Node): string {
+export function nestedOverscore(node: Element): string {
   let depth = overscoreNestingDepth(node);
-  return Array(depth).join(msg.MS.OVER) + msg.MS.OVERSCRIPT;
+  return Array(depth).join(Locale.MS.OVER) + Locale.MS.OVERSCRIPT;
 }
 
 
@@ -646,22 +648,22 @@ export function nestedOverscore(node: Node): string {
  * @param node The determinant node.
  * @return List containing input node if true.
  */
-export function determinantIsSimple(node: Node): Node[] {
-  if (node.tagName !== Semantic.Type.MATRIX ||
-      node.getAttribute('role') !== Semantic.Role.DETERMINANT) {
+export function determinantIsSimple(node: Element): Element[] {
+  if (node.tagName !== SemanticType.MATRIX ||
+      node.getAttribute('role') !== SemanticRole.DETERMINANT) {
     return [];
   }
   let cells =
       XpathUtil.evalXPath('children/row/children/cell/children/*', node);
   for (let i = 0, cell; cell = cells[i]; i++) {
-    if (cell.tagName === Semantic.Type.NUMBER) {
+    if (cell.tagName === SemanticType.NUMBER) {
       continue;
     }
-    if (cell.tagName === Semantic.Type.IDENTIFIER) {
+    if (cell.tagName === SemanticType.IDENTIFIER) {
       let role = cell.getAttribute('role');
-      if (role === Semantic.Role.LATINLETTER ||
-          role === Semantic.Role.GREEKLETTER ||
-          role === Semantic.Role.OTHERLETTER) {
+      if (role === SemanticRole.LATINLETTER ||
+          role === SemanticRole.GREEKLETTER ||
+          role === SemanticRole.OTHERLETTER) {
         continue;
       }
     }
@@ -709,7 +711,7 @@ export function generateBaselineConstraint(): string[] {
  * @param node The label to be processed.
  * @return The text of the label.
  */
-export function removeParens(node: Node): string {
+export function removeParens(node: Element): string {
   if (!node.childNodes.length || !node.childNodes[0].childNodes.length ||
       !node.childNodes[0].childNodes[0].childNodes.length) {
     return '';

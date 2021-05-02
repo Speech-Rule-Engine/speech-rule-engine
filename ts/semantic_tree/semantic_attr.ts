@@ -289,7 +289,9 @@ export const enum SemanticRole {
 
   AXIOM = 'axiom',
   // General
-  UNKNOWN = 'unknown'
+  UNKNOWN = 'unknown',
+
+  MGLYPH = 'mglyph'
 }
 
 /**

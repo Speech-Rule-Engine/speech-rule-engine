@@ -27,7 +27,7 @@ import * as StoreUtil from '../rule_engine/store_util';
 import {SemanticAnnotator} from '../semantic_tree/semantic_annotator';
 import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
 import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticAttr, SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
 import {MathCompoundStore} from '../rule_engine/math_simple_store';
 
 

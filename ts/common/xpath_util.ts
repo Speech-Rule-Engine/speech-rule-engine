@@ -23,8 +23,7 @@
  */
 
 
-import * as EngineExports from './engine';
-import {Engine} from './engine';
+import {Engine, EngineConst} from './engine';
 import SystemExternal from './system_external';
 
 
@@ -103,7 +102,7 @@ namespace XpathUtil {
   export function evaluateXpath_(
     expression: string, rootNode: Node, type: number): XPathResult {
     let engine = Engine.getInstance();
-    return engine.mode === EngineExports.Mode.HTTP && !engine.isIE &&
+    return engine.mode === EngineConst.Mode.HTTP && !engine.isIE &&
       !engine.isEdge ?
       currentDocument.evaluate(
         expression, rootNode, resolveNameSpace, type, null) :

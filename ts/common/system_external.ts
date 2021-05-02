@@ -30,7 +30,7 @@ namespace SystemExternal {
 
   declare var global: any;
   declare var require: (name: string) => any;
-  
+
   /**
    * The local require function for NodeJS.
    * @param library A library name.
@@ -62,7 +62,7 @@ namespace SystemExternal {
   export const xmldom = SystemExternal.documentSupported() ?
     window :
     SystemExternal.extRequire('xmldom-sre');
-  
+
   /**
    * DOM document implementation.
    */
@@ -103,7 +103,7 @@ namespace SystemExternal {
   /**
    * Path to JSON files.
    */
-  export const jsonPath = function() {
+  export let jsonPath = function() {
     return (SystemExternal.process && typeof global !== 'undefined' ?
       SystemExternal.process.env.SRE_JSON_PATH ||
       global.SRE_JSON_PATH || SystemExternal.process.cwd() :
@@ -114,7 +114,7 @@ namespace SystemExternal {
   /**
    * Path to Xpath library file.
    */
-  export const WGXpath = Variables.WGXpath;
+  export let WGXpath = Variables.WGXpath;
 
   // static process: Object;
 

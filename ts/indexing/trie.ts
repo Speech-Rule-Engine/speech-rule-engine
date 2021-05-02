@@ -28,10 +28,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import {BaseRuleStore} from '../rule_engine/base_rule_store';
 import {SpeechRule} from '../rule_engine/speech_rule';
 import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
-import {SpeechRuleStore} from '../rule_engine/speech_rule_store';
-import {BaseRuleStore} from '../rule_engine/base_rule_store';
 import {StaticTrieNode} from './abstract_trie_node';
 import {TrieNode, TrieNodeKind} from './trie_node';
 import {getNode} from './trie_node_factory';

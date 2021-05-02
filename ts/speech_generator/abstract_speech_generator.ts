@@ -23,6 +23,7 @@
 
 import {Attribute} from '../enrich_mathml/enrich_mathml';
 
+import System from '../common/system';
 import {RebuildStree} from '../walker/rebuild_stree';
 import {SpeechGenerator} from './speech_generator';
 import * as SpeechGeneratorUtil from './speech_generator_util';
@@ -105,7 +106,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     if (!this.rebuilt_) {
       this.rebuilt_ = new RebuildStree(xml);
     }
-    System.getInstance().setupEngine(this.options_);
+    System.setupEngine(this.options_);
     return SpeechGeneratorUtil.computeMarkup(this.getRebuilt().xml);
   }
 }

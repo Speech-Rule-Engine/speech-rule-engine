@@ -18,10 +18,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import * as DomUtil from '../common/dom_util';
+import XpathUtil from '../common/xpath_util';
+import {Grammar} from '../rule_engine/grammar';
 import {AuditoryDescription} from '../audio/auditory_description';
 import {MathStore} from '../rule_engine/math_store';
 import {SemanticVisitor} from '../semantic_tree/semantic_annotator';
 import {SemanticNode} from '../semantic_tree/semantic_node';
+import {SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
 
 import * as MathspeakUtil from './mathspeak_util';
 import {Locale} from '../l10n/messages';
@@ -159,7 +163,7 @@ export function enlargeFence(text: string): string {
 }
 
 
-sre.Grammar.getInstance().setCorrection('enlargeFence', enlargeFence);
+Grammar.getInstance().setCorrection('enlargeFence', enlargeFence);
 
 
 export const NUMBER_PROPAGATORS_: SemanticType[] = [
@@ -246,7 +250,7 @@ export function propagateNumber(
 }
 
 
-sre.SemanticAnnotations.getInstance().register(
+SemanticAnnotations.getInstance().register(
     new SemanticVisitor('nemeth', 'number', propagateNumber, {number: true}));
 
 
@@ -354,7 +358,7 @@ export function relationIterator(nodes: Element[], context: string): () =>
   let childNodes = nodes.slice(0);
   let first = true;
   if (nodes.length > 0) {
-    let contentNodes = sre.XpathUtil.evalXPath('../../content/*', nodes[0]);
+    let contentNodes = XpathUtil.evalXPath('../../content/*', nodes[0]);
   } else {
     let contentNodes = [];
   }
@@ -363,7 +367,7 @@ export function relationIterator(nodes: Element[], context: string): () =>
     let leftChild = childNodes.shift();
     let rightChild = childNodes[0];
     let contextDescr = context ?
-        [sre.AuditoryDescription.create({text: context}, {translate: true})] :
+        [AuditoryDescription.create({text: context}, {translate: true})] :
         [];
     if (!content) {
       return contextDescr;
@@ -372,17 +376,17 @@ export function relationIterator(nodes: Element[], context: string): () =>
         MathspeakUtil.nestedSubSuper(
             leftChild, '', {sup: Locale.MS.SUPER, sub: Locale.MS.SUB}) :
         '';
-    let left = leftChild && sre.DomUtil.tagName(leftChild) !== 'EMPTY' ||
+    let left = leftChild && DomUtil.tagName(leftChild) !== 'EMPTY' ||
             first && content.parentNode.parentNode &&
                 content.parentNode.parentNode.previousSibling ?
-        [sre.AuditoryDescription.create({text: '⠀' + base}, {})] :
+        [AuditoryDescription.create({text: '⠀' + base}, {})] :
         [];
-    let right = rightChild && sre.DomUtil.tagName(rightChild) !== 'EMPTY' ||
+    let right = rightChild && DomUtil.tagName(rightChild) !== 'EMPTY' ||
             !contentNodes.length && content.parentNode.parentNode &&
                 content.parentNode.parentNode.nextSibling ?
-        [sre.AuditoryDescription.create({text: '⠀'}, {})] :
+        [AuditoryDescription.create({text: '⠀'}, {})] :
         [];
-    let descrs = sre.SpeechRuleEngine.getInstance().evaluateNode(content);
+    let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
     first = false;
     return contextDescr.concat(left, descrs, right);
   };
@@ -400,7 +404,7 @@ export function implicitIterator(nodes: Element[], context: string): () =>
     AuditoryDescription[] {
   let childNodes = nodes.slice(0);
   if (nodes.length > 0) {
-    let contentNodes = sre.XpathUtil.evalXPath('../../content/*', nodes[0]);
+    let contentNodes = XpathUtil.evalXPath('../../content/*', nodes[0]);
   } else {
     let contentNodes = [];
   }
@@ -409,17 +413,17 @@ export function implicitIterator(nodes: Element[], context: string): () =>
     let rightChild = childNodes[0];
     let content = contentNodes.shift();
     let contextDescr = context ?
-        [sre.AuditoryDescription.create({text: context}, {translate: true})] :
+        [AuditoryDescription.create({text: context}, {translate: true})] :
         [];
     if (!content) {
       return contextDescr;
     }
-    let left = leftChild && sre.DomUtil.tagName(leftChild) === 'NUMBER';
-    let right = rightChild && sre.DomUtil.tagName(rightChild) === 'NUMBER';
+    let left = leftChild && DomUtil.tagName(leftChild) === 'NUMBER';
+    let right = rightChild && DomUtil.tagName(rightChild) === 'NUMBER';
     return contextDescr.concat(
         left && right &&
                 content.getAttribute('role') === SemanticRole.SPACE ?
-            [sre.AuditoryDescription.create({text: '⠀'}, {})] :
+            [AuditoryDescription.create({text: '⠀'}, {})] :
             []);
   };
 }
