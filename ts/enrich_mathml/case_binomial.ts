@@ -19,32 +19,26 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import * as DomUtil from '../common/dom_util';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
-
 import {AbstractEnrichCase} from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
 
+export class CaseBinomial extends AbstractEnrichCase {
 
-/**
- * @override
- * @final
- */
-export class CaseBinomial extends sre.AbstractEnrichCase {
-  mml: Element;
-  constructor(semantic) {
-    super(semantic);
-    this.mml = semantic.mathmlTree;
-  }
-
+  /**
+   * The actual mml tree.
+   */
+  public mml: Element;
 
   /**
    * Applicability test of the case.
    * @param semantic The semantic node.
    * @return True if case is applicable.
    */
-  static test(semantic: SemanticNode): boolean {
+  public static test(semantic: SemanticNode): boolean {
     return !semantic.mathmlTree && semantic.type === SemanticType.LINE &&
         semantic.role === SemanticRole.BINOMIAL;
   }
@@ -52,8 +46,18 @@ export class CaseBinomial extends sre.AbstractEnrichCase {
 
   /**
    * @override
+   * @final
    */
-  getMathml() {
+  constructor(semantic: SemanticNode) {
+    super(semantic);
+    this.mml = semantic.mathmlTree;
+  }
+
+
+  /**
+   * @override
+   */
+  public getMathml() {
     if (!this.semantic.childNodes.length) {
       return this.mml;
     }
@@ -61,9 +65,9 @@ export class CaseBinomial extends sre.AbstractEnrichCase {
     this.mml = EnrichMathml.walkTree((child as SemanticNode));
     // Adds a redundant mrow to include the line information.
     if (this.mml.hasAttribute(EnrichMathml.Attribute.TYPE)) {
-      let mrow = sre.DomUtil.createElement('mrow');
+      let mrow = DomUtil.createElement('mrow');
       mrow.setAttribute(EnrichMathml.Attribute.ADDED, 'true');
-      sre.DomUtil.replaceNode(this.mml, mrow);
+      DomUtil.replaceNode(this.mml, mrow);
       mrow.appendChild(this.mml);
       this.mml = mrow;
     }
@@ -71,5 +75,3 @@ export class CaseBinomial extends sre.AbstractEnrichCase {
     return this.mml;
   }
 }
-
-goog.inherits(CaseBinomial, AbstractEnrichCase);

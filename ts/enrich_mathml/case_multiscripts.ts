@@ -20,30 +20,21 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
-
+import {SemanticSkeleton} from '../semantic_tree/semantic_skeleton';
 import {CaseMultiindex} from './case_multiindex';
 import * as EnrichMathml from './enrich_mathml';
 
 
-
-/**
- * @override
- * @final
- */
-export class CaseMultiscripts extends sre.CaseMultiindex {
-  constructor(semantic) {
-    super(semantic);
-  }
-
+export class CaseMultiscripts extends CaseMultiindex {
 
   /**
    * Applicability test of the case.
    * @param semantic The semantic node.
    * @return True if case is applicable.
    */
-  static test(semantic: SemanticNode): boolean {
+  public static test(semantic: SemanticNode): boolean {
     if (!semantic.mathmlTree) {
       return false;
     }
@@ -56,33 +47,42 @@ export class CaseMultiscripts extends sre.CaseMultiindex {
 
   /**
    * @override
+   * @final
    */
-  getMathml() {
+  constructor(semantic: SemanticNode) {
+    super(semantic);
+  }
+
+
+  /**
+   * @override
+   */
+  public getMathml() {
     EnrichMathml.setAttributes(this.mml, this.semantic);
+    let baseSem, rsup, rsub;
     if (this.semantic.childNodes[0] &&
         this.semantic.childNodes[0].role === SemanticRole.SUBSUP) {
       let ignore = this.semantic.childNodes[0];
-      let baseSem = ignore.childNodes[0];
-      let rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
-      let rsub = CaseMultiindex.multiscriptIndex(ignore.childNodes[1]);
+      baseSem = ignore.childNodes[0];
+      rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
+      rsub = CaseMultiindex.multiscriptIndex(ignore.childNodes[1]);
       let collapsed = [this.semantic.id, [ignore.id, baseSem.id, rsub], rsup];
       EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
       this.mml.setAttribute(EnrichMathml.Attribute.TYPE, ignore.role);
       this.completeMultiscript(
-          sre.SemanticSkeleton.interleaveIds(rsub, rsup), []);
+         SemanticSkeleton.interleaveIds(rsub, rsup), []);
     } else {
-      let baseSem = this.semantic.childNodes[0];
-      let rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
+      baseSem = this.semantic.childNodes[0];
+      rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
       let collapsed = [this.semantic.id, baseSem.id, rsup];
       EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
     }
-    let childIds = sre.SemanticSkeleton.collapsedLeafs(rsub || [], rsup);
+    let childIds = SemanticSkeleton.collapsedLeafs(rsub || [], rsup);
     let base = EnrichMathml.walkTree((baseSem as SemanticNode));
     EnrichMathml.getInnerNode(base).setAttribute(
-        EnrichMathml.Attribute.PARENT, this.semantic.id);
+        EnrichMathml.Attribute.PARENT, this.semantic.id.toString());
     childIds.unshift(baseSem.id);
     this.mml.setAttribute(EnrichMathml.Attribute.CHILDREN, childIds.join(','));
     return this.mml;
   }
 }
-goog.inherits(CaseMultiscripts, CaseMultiindex);

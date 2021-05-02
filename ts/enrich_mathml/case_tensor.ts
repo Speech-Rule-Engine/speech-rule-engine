@@ -19,40 +19,39 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
-import * as SemanticSkeletonExports from '../semantic_tree/semantic_skeleton';
 import {SemanticSkeleton} from '../semantic_tree/semantic_skeleton';
 
 import {CaseMultiindex} from './case_multiindex';
 import * as EnrichMathml from './enrich_mathml';
 
 
-
-/**
- * @override
- * @final
- */
-export class CaseTensor extends sre.CaseMultiindex {
-  constructor(semantic) {
-    super(semantic);
-  }
-
+export class CaseTensor extends CaseMultiindex {
 
   /**
    * Applicability test of the case.
    * @param semantic The semantic node.
    * @return True if case is applicable.
    */
-  static test(semantic: SemanticNode): boolean {
+  public static test(semantic: SemanticNode): boolean {
     return !!semantic.mathmlTree && semantic.type === SemanticType.TENSOR;
   }
 
 
   /**
    * @override
+   * @final
    */
-  getMathml() {
+  constructor(semantic: SemanticNode) {
+    super(semantic);
+  }
+
+
+  /**
+   * @override
+   */
+  public getMathml() {
     EnrichMathml.walkTree((this.semantic.childNodes[0] as SemanticNode));
     let lsub = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
     let lsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[2]);
@@ -72,4 +71,3 @@ export class CaseTensor extends sre.CaseMultiindex {
     return this.mml;
   }
 }
-goog.inherits(CaseTensor, CaseMultiindex);

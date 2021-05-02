@@ -19,45 +19,47 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
-
 import {AbstractEnrichCase} from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
 
+export class CaseText extends AbstractEnrichCase {
 
-/**
- * @override
- * @final
- */
-export class CaseText extends sre.AbstractEnrichCase {
-  mml: Element;
-  constructor(semantic) {
-    super(semantic);
-    this.mml = semantic.mathmlTree;
-  }
-
+  /**
+   * The actual mml tree.
+   */
+  public mml: Element;
 
   /**
    * Applicability test of the case.
    * @param semantic The semantic node.
    * @return True if case is applicable.
    */
-  static test(semantic: SemanticNode): boolean {
+  public static test(semantic: SemanticNode): boolean {
     return semantic.type === SemanticType.PUNCTUATED &&
         (semantic.role === SemanticRole.TEXT ||
-         semantic.contentNodes.every(function(x) {
-           return x.role === SemanticRole.DUMMY;
-         }));
+          semantic.contentNodes.every(
+            x => x.role === SemanticRole.DUMMY));
+  }
+
+
+  /**
+   * @override
+   * @final
+   */
+  constructor(semantic: SemanticNode) {
+    super(semantic);
+    this.mml = semantic.mathmlTree;
   }
 
 
   /**
    * @override
    */
-  getMathml() {
-    let children = [];
+  public getMathml() {
+    let children: Element[] = [];
     let collapsed = EnrichMathml.collapsePunctuated(this.semantic, children);
     this.mml = EnrichMathml.introduceNewLayer(children, this.semantic);
     EnrichMathml.setAttributes(this.mml, this.semantic);
@@ -66,5 +68,3 @@ export class CaseText extends sre.AbstractEnrichCase {
     return this.mml;
   }
 }
-
-goog.inherits(CaseText, AbstractEnrichCase);

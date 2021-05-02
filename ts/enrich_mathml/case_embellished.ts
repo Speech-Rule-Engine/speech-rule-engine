@@ -21,45 +21,62 @@
 
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 
 import {AbstractEnrichCase} from './abstract_enrich_case';
 import {CaseDoubleScript} from './case_double_script';
 import {CaseMultiscripts} from './case_multiscripts';
+import {CaseTensor} from './case_tensor';
 import * as EnrichMathml from './enrich_mathml';
 
 
+export class CaseEmbellished extends AbstractEnrichCase {
 
-/**
- * @override
- * @final
- */
-export class CaseEmbellished extends sre.AbstractEnrichCase {
-  fenced: SemanticNode = null;
+  /**
+   * Fenced semantic node.
+   */
+  public fenced: SemanticNode = null;
 
-  fencedMml: Element = null;
+  /**
+   * Fenced mml node.
+   */
+  public fencedMml: Element = null;
 
-  ofence: SemanticNode = null;
+  /**
+   * Open Fenced semantic node.
+   */
+  public ofence: SemanticNode = null;
 
-  ofenceMml: Element = null;
+  /**
+   * Open Fenced mml node.
+   */
+  public ofenceMml: Element = null;
 
-  ofenceMap: {[key: number]: Element} = {};
+  /**
+   * Open Fenced node map.
+   */
+  public ofenceMap: {[key: number]: Element} = {};
 
-  cfence: SemanticNode = null;
+  /**
+   * Closed Fenced semantic node.
+   */
+  public cfence: SemanticNode = null;
 
-  cfenceMml: Element = null;
+  /**
+   * Closed Fenced node map.
+   */
+  public cfenceMml: Element = null;
 
-  cfenceMap: {[key: number]: Element} = {};
+  /**
+   * Closed Fenced semantic node.
+   */
+  public cfenceMap: {[key: number]: Element} = {};
 
   /**
    * List of elements that need to get the parents reset.
    */
-  parentCleanup: Element[] = [];
-  constructor(semantic) {
-    super(semantic);
-  }
-
+  public parentCleanup: Element[] = [];
 
   /**
    * Applicability test of the case. This method also prevents walking
@@ -68,18 +85,56 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
    * @param semantic The semantic node.
    * @return True if case is applicable.
    */
-  static test(semantic: SemanticNode): boolean {
+  public static test(semantic: SemanticNode): boolean {
     return !!(
         semantic.mathmlTree && semantic.fencePointer &&
         // TODO: This needs a cleaner solution at some point.
         !semantic.mathmlTree.getAttribute('data-semantic-type'));
   }
 
+  /**
+   * Creates an empty semantic node with an associated empty mrow MathML
+   * element.
+   * @param id The id number of the node.
+   * @return The new empty node.
+   */
+  private static makeEmptyNode_(id: number): SemanticNode {
+    let mrow = DomUtil.createElement('mrow');
+    let empty = new SemanticNode(id);
+    empty.type = SemanticType.EMPTY;
+    empty.mathmlTree = mrow;
+    return empty;
+  }
+
+
+  /**
+   * Collates the id numbers of the fenced node.
+   * @param fence The fence expression.
+   * @param ids The list of id numbers.
+   */
+  private static fencedMap_(
+      fence: SemanticNode, ids: {[key: number]: Element}) {
+    ids[fence.id] = fence.mathmlTree;
+    if (!fence.embellished) {
+      return;
+    }
+    CaseEmbellished.fencedMap_(fence.childNodes[0], ids);
+  }
+
+
+  /**
+   * @override
+   * @final
+   */
+  constructor(semantic: SemanticNode) {
+    super(semantic);
+  }
+
 
   /**
    * @override
    */
-  getMathml() {
+  public getMathml() {
     this.getFenced_();
     this.fencedMml = EnrichMathml.walkTree((this.fenced as SemanticNode));
     this.getFencesMml_();
@@ -107,21 +162,6 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
     this.cfence = currentNode.contentNodes[1];
     CaseEmbellished.fencedMap_(this.ofence, this.ofenceMap);
     CaseEmbellished.fencedMap_(this.cfence, this.cfenceMap);
-  }
-
-
-  /**
-   * Collates the id numbers of the fenced node.
-   * @param fence The fence expression.
-   * @param ids The list of id numbers.
-   */
-  private static fencedMap_(
-      fence: SemanticNode, ids: {[key: number]: Element}) {
-    ids[fence.id] = fence.mathmlTree;
-    if (!fence.embellished) {
-      return;
-    }
-    CaseEmbellished.fencedMap_(fence.childNodes[0], ids);
   }
 
 
@@ -196,7 +236,8 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
       DomUtil.replaceNode(newNode, mml);
       DomUtil.replaceNode(mml.childNodes[0], newNode);
       DomUtil.replaceNode(dummy, saveChild);
-      mml.parentNode = saveParent;
+      // TODO (TS):  What to do here? Readonly property!
+      (mml as any).parentNode = saveParent;
 
       newNode = (mml.childNodes[0] as Element);
       if (!result) {
@@ -232,7 +273,7 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
           semantic.type === SemanticType.SUBSCRIPT) {
         caller = CaseMultiscripts;
       } else if (semantic.type === SemanticType.TENSOR) {
-        caller = sre.CaseTensor;
+        caller = CaseTensor;
       }
       if (caller && semantic.childNodes[0] &&
           semantic.childNodes[0].role === SemanticRole.SUBSUP) {
@@ -251,21 +292,6 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
     parent.childNodes[0] = base;
     this.parentCleanup.push(mml);
     return parent.childNodes[0];
-  }
-
-
-  /**
-   * Creates an empty semantic node with an associated empty mrow MathML
-   * element.
-   * @param id The id number of the node.
-   * @return The new empty node.
-   */
-  private static makeEmptyNode_(id: number): SemanticNode {
-    let mrow = DomUtil.createElement('mrow');
-    let empty = new SemanticNode(id);
-    empty.type = SemanticType.EMPTY;
-    empty.mathmlTree = mrow;
-    return empty;
   }
 
 
@@ -301,11 +327,11 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
    * @return The embellished version of that fence. Can be the fence
    *     itself if it was not embellished.
    */
-  fullFence(fence: Element): Element {
+  private fullFence(fence: Element): Element {
     let parent = this.fencedMml.parentNode;
     let currentFence = fence;
     while (currentFence.parentNode && currentFence.parentNode !== parent) {
-      currentFence = currentFence.parentNode;
+      currentFence = currentFence.parentNode as Element;
     }
     return (currentFence as Element);
   }
@@ -318,10 +344,11 @@ export class CaseEmbellished extends sre.AbstractEnrichCase {
    */
   private cleanupParents_() {
     this.parentCleanup.forEach(function(x) {
-      let parent = x.childNodes[1].getAttribute(EnrichMathml.Attribute.PARENT);
-      x.childNodes[0].setAttribute(EnrichMathml.Attribute.PARENT, parent);
+      let parent = (x.childNodes[1] as Element).getAttribute(
+          EnrichMathml.Attribute.PARENT);
+      (x.childNodes[0] as Element).setAttribute(
+          EnrichMathml.Attribute.PARENT, parent);
     });
   }
-}
 
-goog.inherits(CaseEmbellished, AbstractEnrichCase);
+}

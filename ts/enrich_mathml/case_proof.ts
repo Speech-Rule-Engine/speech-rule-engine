@@ -19,23 +19,19 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 
 import {AbstractEnrichCase} from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
 
+export class CaseProof extends AbstractEnrichCase {
 
-/**
- * @override
- */
-export class CaseProof extends sre.AbstractEnrichCase {
-  mml: Element;
-  constructor(semantic) {
-    super(semantic);
-    this.mml = semantic.mathmlTree;
-  }
+  /**
+   * The actual mml tree.
+   */
+  public mml: Element;
 
 
   /**
@@ -43,17 +39,25 @@ export class CaseProof extends sre.AbstractEnrichCase {
    * @param semantic The semantic node.
    * @return True if case is applicable.
    */
-  static test(semantic: SemanticNode): boolean {
+  public static test(semantic: SemanticNode): boolean {
     return !!semantic.mathmlTree &&
         (semantic.type === SemanticType.INFERENCE ||
          semantic.type === SemanticType.PREMISES);
+  }
+
+  /**
+   * @override
+   */
+  constructor(semantic: SemanticNode) {
+    super(semantic);
+    this.mml = semantic.mathmlTree;
   }
 
 
   /**
    * @override
    */
-  getMathml() {
+  public getMathml() {
     if (!this.semantic.childNodes.length) {
       return this.mml;
     }
@@ -74,5 +78,3 @@ export class CaseProof extends sre.AbstractEnrichCase {
     return this.mml;
   }
 }
-
-goog.inherits(CaseProof, AbstractEnrichCase);

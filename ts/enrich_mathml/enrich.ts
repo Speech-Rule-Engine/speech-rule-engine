@@ -22,11 +22,9 @@
 
 import {Debugger} from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
-import * as EngineExports from '../common/engine';
 import {Engine} from '../common/engine';
 import * as Semantic from '../semantic_tree/semantic';
 
-import {EnrichCases} from './enrich_cases';
 import * as EnrichMathml from './enrich_mathml';
 
 
@@ -36,7 +34,7 @@ import * as EnrichMathml from './enrich_mathml';
  * @return Semantically enriched MathML node.
  */
 export function semanticMathmlNode(mml: Element): Element {
-  let clone = mml.cloneNode(true);
+  let clone = mml.cloneNode(true) as Element;
   let tree = Semantic.getTree(clone);
   return EnrichMathml.enrich(clone, tree);
 }
@@ -76,7 +74,6 @@ export function semanticMathml(expr: string, callback: (p1: Element) => any) {
  * @return The enriched MathML expression.
  */
 export function testTranslation__(expr: string): string {
-  new EnrichCases();
   // dummy call
   Debugger.getInstance().init();
   let mml = semanticMathmlSync(prepareMmlString(expr)).toString();

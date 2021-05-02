@@ -21,24 +21,19 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 
 import {AbstractEnrichCase} from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
 
+export class CaseLimit extends AbstractEnrichCase {
 
-/**
- * @override
- * @final
- */
-export class CaseLimit extends sre.AbstractEnrichCase {
-  mml: Element;
-  constructor(semantic) {
-    super(semantic);
-    this.mml = semantic.mathmlTree;
-  }
+  /**
+   * The actual mml tree.
+   */
+  public mml: Element;
 
 
   /**
@@ -46,7 +41,7 @@ export class CaseLimit extends sre.AbstractEnrichCase {
    * @param semantic The semantic node.
    * @return True if case is applicable.
    */
-  static test(semantic: SemanticNode): boolean {
+  public static test(semantic: SemanticNode): boolean {
     if (!semantic.mathmlTree || !semantic.childNodes.length) {
       return false;
     }
@@ -62,9 +57,30 @@ export class CaseLimit extends sre.AbstractEnrichCase {
 
 
   /**
+   * Enriches a semantic node if it is given.
+   * @param node The semantic node.
+   */
+  private static walkTree_(node: SemanticNode) {
+    if (node) {
+      EnrichMathml.walkTree((node as SemanticNode));
+    }
+  }
+
+
+  /**
+   * @override
+   * @final
+   */
+  constructor(semantic: SemanticNode) {
+    super(semantic);
+    this.mml = semantic.mathmlTree;
+  }
+
+
+  /**
    * @override
    */
-  getMathml() {
+  public getMathml() {
     let children = this.semantic.childNodes;
     if (this.semantic.type !== SemanticType.LIMBOTH &&
         this.mml.childNodes.length >= 3) {
@@ -80,16 +96,5 @@ export class CaseLimit extends sre.AbstractEnrichCase {
     return this.mml;
   }
 
-
-  /**
-   * Enriches a semantic node if it is given.
-   * @param node The semantic node.
-   */
-  private static walkTree_(node: SemanticNode) {
-    if (node) {
-      EnrichMathml.walkTree((node as SemanticNode));
-    }
-  }
 }
 
-goog.inherits(CaseLimit, AbstractEnrichCase);

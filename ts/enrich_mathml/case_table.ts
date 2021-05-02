@@ -20,33 +20,31 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 
 import {AbstractEnrichCase} from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
 
+export class CaseTable extends AbstractEnrichCase {
 
-/**
- * @override
- */
-export class CaseTable extends sre.AbstractEnrichCase {
-  mml: Element;
+  /**
+   * The actual mml tree.
+   */
+  public mml: Element;
 
-  inner: Element[] = [];
-  constructor(semantic) {
-    super(semantic);
-    this.mml = semantic.mathmlTree;
-  }
-
+  /**
+   * The inner elements of the table.
+   */
+  public inner: Element[] = [];
 
   /**
    * Applicability test of the case.
    * @param semantic The semantic node.
    * @return True if case is applicable.
    */
-  static test(semantic: SemanticNode): boolean {
+  public static test(semantic: SemanticNode): boolean {
     return semantic.type === SemanticType.MATRIX ||
         semantic.type === SemanticType.VECTOR ||
         semantic.type === SemanticType.CASES;
@@ -56,7 +54,16 @@ export class CaseTable extends sre.AbstractEnrichCase {
   /**
    * @override
    */
-  getMathml() {
+  constructor(semantic: SemanticNode) {
+    super(semantic);
+    this.mml = semantic.mathmlTree;
+  }
+
+
+  /**
+   * @override
+   */
+  public getMathml() {
     let lfence = EnrichMathml.cloneContentNode(
         (this.semantic.contentNodes[0] as SemanticNode));
     let rfence = this.semantic.contentNodes[1] ?
@@ -64,10 +71,11 @@ export class CaseTable extends sre.AbstractEnrichCase {
             (this.semantic.contentNodes[1] as SemanticNode)) :
         null;
     this.inner =
-        this.semantic.childNodes.map((EnrichMathml.walkTree as Function));
+        this.semantic.childNodes.map(EnrichMathml.walkTree);
     if (!this.mml) {
       this.mml = EnrichMathml.introduceNewLayer(
-          [lfence, this.inner, rfence], this.semantic);
+        // TODO (TS): changed this here to create a single list!
+        [lfence].concat(this.inner, [rfence]), this.semantic);
     } else if (DomUtil.tagName(this.mml) === 'MFENCED') {
       let children = this.mml.childNodes;
       this.mml.insertBefore(lfence, children[0] || null);
@@ -82,5 +90,3 @@ export class CaseTable extends sre.AbstractEnrichCase {
     return this.mml;
   }
 }
-
-goog.inherits(CaseTable, AbstractEnrichCase);

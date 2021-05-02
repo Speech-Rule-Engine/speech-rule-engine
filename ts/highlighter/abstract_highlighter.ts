@@ -20,7 +20,7 @@
  */
 
 
-import * as XpathUtil from '../common/xpath_util';
+import XpathUtil from '../common/xpath_util';
 import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
 import {ColorPicker, StringColor} from './color_picker';
 import {Highlighter} from './highlighter';
@@ -170,11 +170,9 @@ export abstract class AbstractHighlighter implements Highlighter {
 
 
   /**
-   * Predicate to check if a node is an maction node.
-   * @param node A DOM node.
-   * @return True if the node is an maction node.
+   * @override
    */
-  public isMactionNode(node: HTMLElement): boolean {
+  public isMactionNode(node: Element): boolean {
     let className = node.className || node.getAttribute('class');
     return className ? !!className.match(new RegExp(this.mactionName)) : false;
   }
@@ -215,7 +213,7 @@ export abstract class AbstractHighlighter implements Highlighter {
   public colorizeAll(node: HTMLElement) {
     let allNodes = XpathUtil.evalXPath(
         `.//*[@${EnrichMathml.Attribute.ID}]`, node);
-    allNodes.forEach(x => this.colorize(x as HTMLElement));
+    allNodes.forEach((x: Element) => this.colorize(x as HTMLElement));
   }
 
   /**

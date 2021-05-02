@@ -20,20 +20,19 @@
  */
 
 import {SemanticNode} from '../semantic_tree/semantic_node';
-
 import {EnrichCase} from './enrich_case';
 
 
+export abstract class AbstractEnrichCase implements EnrichCase {
 
-/**
- * @param semantic The semantic node that is enriched.
- */
-export class AbstractEnrichCase implements EnrichCase {
-  getMathml: any;
+  /**
+   * @override
+   */
+  public abstract getMathml(): Element;
+
+  /**
+   * @param semantic The semantic node that is enriched.
+   */
   constructor(public semantic: SemanticNode) {}
-}
 
-/**
- * @override
- */
-AbstractEnrichCase.prototype.getMathml = goog.abstractMethod;
+}

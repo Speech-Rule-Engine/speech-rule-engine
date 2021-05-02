@@ -24,32 +24,15 @@
 
 import {Debugger} from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
-import * as EngineExports from '../common/engine';
 import {Engine} from '../common/engine';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticAttr, SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
+import {SemanticHeuristics} from '../semantic_tree/semantic_heuristics';
 import {SemanticNode} from '../semantic_tree/semantic_node';
-import * as SemanticSkeletonExports from '../semantic_tree/semantic_skeleton';
-import {SemanticSkeleton} from '../semantic_tree/semantic_skeleton';
-import {Sexp} from '../semantic_tree/semantic_skeleton';
+import {SemanticSkeleton, Sexp} from '../semantic_tree/semantic_skeleton';
 import {SemanticTree} from '../semantic_tree/semantic_tree';
-import {SemanticUtil} from '../semantic_tree/semantic_util';
+import * as SemanticUtil from '../semantic_tree/semantic_util';
 
-import {EnrichCaseFactory} from './enrich_case_factory';
-
-
-
-/**
- * Error object for signaling enirchment errors.
- * @param msg The error message.
- */
-export class EnrichmentError extends Error {
-  message: any;
-  name = 'MathML Enrichment Error';
-  constructor(msg: string) {
-    super();
-    this.message = msg || '';
-  }
-}
+import EnrichCaseFactory from './enrich_case_factory';
 
 
 /**
@@ -93,6 +76,27 @@ export enum Attribute {
   TYPE = 'data-semantic-type'
 }
 
+export const EnrichAttributes: string[] = [
+  Attribute.ADDED,
+  Attribute.ALTERNATIVE,
+  Attribute.CHILDREN,
+  Attribute.COLLAPSED,
+  Attribute.CONTENT,
+  Attribute.EMBELLISHED,
+  Attribute.FENCEPOINTER,
+  Attribute.FONT,
+  Attribute.ID,
+  Attribute.ANNOTATION,
+  Attribute.OPERATOR,
+  Attribute.OWNS,
+  Attribute.PARENT,
+  Attribute.POSTFIX,
+  Attribute.PREFIX,
+  Attribute.ROLE,
+  Attribute.SPEECH,
+  Attribute.STRUCTURE,
+  Attribute.TYPE
+]
 
 /**
  * Enriches a MathML element with semantics from the tree.
@@ -106,7 +110,7 @@ export enum Attribute {
 export function enrich(mml: Element, semantic: SemanticTree): Element {
   // The first line is only to preserve output. This should eventually be
   // deleted.
-  let oldMml = mml.cloneNode(true);
+  let oldMml = mml.cloneNode(true) as Element;
   walkTree(semantic.root);
   if (Engine.getInstance().structure) {
     mml.setAttribute(
@@ -131,7 +135,7 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
  */
 export function walkTree(semantic: SemanticNode): Element {
   let specialCase = EnrichCaseFactory.getCase(semantic);
-  let newNode;
+  let newNode: Element;
   if (specialCase) {
     newNode = specialCase.getMathml();
     return ascendNewNode(newNode);
@@ -152,9 +156,9 @@ export function walkTree(semantic: SemanticNode): Element {
     return ascendNewNode(newNode);
   }
 
-  let newContent = semantic.contentNodes.map((cloneContentNode as Function));
+  let newContent = semantic.contentNodes.map(cloneContentNode);
   setOperatorAttribute_(semantic, newContent);
-  let newChildren = semantic.childNodes.map((walkTree as Function));
+  let newChildren = semantic.childNodes.map(walkTree);
   let childrenList = SemanticSkeleton.combineContentChildren<Element>(
       semantic, newContent, newChildren);
   newNode = semantic.mathmlTree;
@@ -271,8 +275,7 @@ export function introduceLayerAboveLca(
  * @param newNode The node which receives the semantic attributes.
  */
 export function moveSemanticAttributes_(oldNode: Element, newNode: Element) {
-  for (let key in Attribute) {
-    let attr = Attribute[key];
+  for (let attr of EnrichAttributes) {
     if (oldNode.hasAttribute(attr)) {
       newNode.setAttribute(attr, oldNode.getAttribute(attr));
       oldNode.removeAttribute(attr);
@@ -396,7 +399,7 @@ export function collectChildNodes_(node: Element): Element[] {
 export function mergeChildren_(
     node: Element, newChildren: Element[], semantic: SemanticNode) {
   let oldChildren = semantic.role === SemanticRole.IMPLICIT &&
-          sre.SemanticHeuristics.getInstance().flags.combine_juxtaposition ?
+          SemanticHeuristics.flags.combine_juxtaposition ?
       collateChildNodes_(node, newChildren, semantic) :
       DomUtil.toArray(node.childNodes);
   if (!oldChildren.length) {
@@ -596,9 +599,7 @@ export function attachedElement_(nodes: Element[]): Element {
  */
 export function pathToRoot_(
     node: Element, opt_test?: (p1: Element) => boolean): Element[] {
-  let test = opt_test || function(x) {
-    return false;
-  };
+  let test = opt_test || ((_x) => false);
   let path = [node];
   while (!test(node) && !SemanticUtil.hasMathTag(node) && node.parentNode) {
     node = parentNode_(node);
@@ -764,7 +765,7 @@ export function setAttributes(mml: Element, semantic: SemanticNode) {
   mml.setAttribute(Attribute.TYPE, semantic.type);
   let attributes = semantic.allAttributes();
   for (let i = 0, attr; attr = attributes[i]; i++) {
-    mml.setAttribute(Attribute[attr[0].toUpperCase()], attr[1]);
+    mml.setAttribute(ATTRIBUTE_PREFIX_ + attr[0].toLowerCase(), attr[1]);
   }
   if (semantic.childNodes.length) {
     mml.setAttribute(Attribute.CHILDREN, makeIdList(semantic.childNodes));
@@ -773,7 +774,7 @@ export function setAttributes(mml: Element, semantic: SemanticNode) {
     mml.setAttribute(Attribute.CONTENT, makeIdList(semantic.contentNodes));
   }
   if (semantic.parent) {
-    mml.setAttribute(Attribute.PARENT, semantic.parent.id);
+    mml.setAttribute(Attribute.PARENT, semantic.parent.id.toString());
   }
   setPostfix(mml, semantic);
 }
@@ -787,7 +788,7 @@ export function setAttributes(mml: Element, semantic: SemanticNode) {
  */
 export function setPostfix(mml: Element, semantic: SemanticNode) {
   let postfix = [];
-  if (semantic.role === 'mglyph') {
+  if (semantic.role === SemanticRole.MGLYPH) {
     postfix.push('image');
   }
   if (semantic.attributes['href']) {
@@ -971,14 +972,15 @@ export function collapsePunctuated(
   let contentIds = semantic.contentNodes.map(function(x) {
     return x.id;
   });
-  contentIds.unshift('c');
+  // TODO (TS):  work out the type for Sexp properly.
+  (contentIds as any).unshift('c');
   let childIds = [semantic.id, contentIds];
   for (let i = 0, child; child = semantic.childNodes[i]; i++) {
     let mmlChild = walkTree(child);
     children.push(mmlChild);
     let innerNode = getInnerNode(mmlChild);
     if (parent && !optional) {
-      innerNode.setAttribute(Attribute.PARENT, parent.id);
+      innerNode.setAttribute(Attribute.PARENT, parent.id.toString());
     }
     childIds.push(child.id);
   }

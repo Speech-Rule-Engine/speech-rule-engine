@@ -20,24 +20,19 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticRole} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 
 import {AbstractEnrichCase} from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
 
+export class CaseDoubleScript extends AbstractEnrichCase {
 
-/**
- * @override
- * @final
- */
-export class CaseDoubleScript extends sre.AbstractEnrichCase {
-  mml: Element;
-  constructor(semantic) {
-    super(semantic);
-    this.mml = semantic.mathmlTree;
-  }
+  /**
+   * The actual mml tree.
+   */
+  public mml: Element;
 
 
   /**
@@ -45,7 +40,7 @@ export class CaseDoubleScript extends sre.AbstractEnrichCase {
    * @param semantic The semantic node.
    * @return True if case is applicable.
    */
-  static test(semantic: SemanticNode): boolean {
+  public static test(semantic: SemanticNode): boolean {
     if (!semantic.mathmlTree || !semantic.childNodes.length) {
       return false;
     }
@@ -58,8 +53,18 @@ export class CaseDoubleScript extends sre.AbstractEnrichCase {
 
   /**
    * @override
+   * @final
    */
-  getMathml() {
+  constructor(semantic: SemanticNode) {
+    super(semantic);
+    this.mml = semantic.mathmlTree;
+  }
+
+
+  /**
+   * @override
+   */
+  public getMathml() {
     let ignore = this.semantic.childNodes[0];
     let baseSem = (ignore.childNodes[0] as SemanticNode);
     let supSem = (this.semantic.childNodes[1] as SemanticNode);
@@ -71,11 +76,10 @@ export class CaseDoubleScript extends sre.AbstractEnrichCase {
     this.mml.setAttribute(
         EnrichMathml.Attribute.CHILDREN,
         EnrichMathml.makeIdList([baseSem, subSem, supSem]));
-    [baseMml, subMml, supMml].forEach(goog.bind(function(child) {
+    [baseMml, subMml, supMml].forEach((child) =>
       EnrichMathml.getInnerNode(child).setAttribute(
           EnrichMathml.Attribute.PARENT,
-          this.mml.getAttribute(EnrichMathml.Attribute.ID));
-    }, this));
+        this.mml.getAttribute(EnrichMathml.Attribute.ID)));
     this.mml.setAttribute(EnrichMathml.Attribute.TYPE, ignore.role);
     EnrichMathml.addCollapsedAttribute(
         this.mml,
@@ -83,5 +87,3 @@ export class CaseDoubleScript extends sre.AbstractEnrichCase {
     return this.mml;
   }
 }
-
-goog.inherits(CaseDoubleScript, AbstractEnrichCase);

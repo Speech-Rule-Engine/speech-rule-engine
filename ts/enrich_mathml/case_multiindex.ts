@@ -20,7 +20,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticAttr} from '../semantic_tree/semantic_attr';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {Sexp} from '../semantic_tree/semantic_skeleton';
 
@@ -28,60 +28,28 @@ import {AbstractEnrichCase} from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
 
-
-/**
- * @override
- */
-export class CaseMultiindex extends sre.AbstractEnrichCase {
-  mml: Element;
-  constructor(semantic) {
-    super(semantic);
-    this.mml = semantic.mathmlTree;
-  }
-
+export abstract class CaseMultiindex extends AbstractEnrichCase {
 
   /**
-   * Completes the mmultiscript by adding missing None nodes and sorting out the
-   * right order of children.
-   * @param rightIndices The ids of the leaf
-   *     nodes of the right indices.
-   * @param leftIndices The ids of the leaf
-   *     nodes of the left indices.
+   * The actual mml tree.
    */
-  protected completeMultiscript(rightIndices: Sexp, leftIndices: Sexp) {
-    let children = DomUtil.toArray(this.mml.childNodes).slice(1);
-    let childCounter = 0;
-    let completeIndices = goog.bind(function(indices) {
-      for (let i = 0, index; index = indices[i]; i++) {
-        let child = children[childCounter];
-        if (!child ||
-            index !=
-                EnrichMathml.getInnerNode(child).getAttribute(
-                    EnrichMathml.Attribute.ID)) {
-          let query = this.semantic.querySelectorAll(function(x) {
-            return x.id === index;
-          });
-          this.mml.insertBefore(
-              CaseMultiindex.createNone_(query[0]), child || null);
-        } else {
-          EnrichMathml.getInnerNode(child).setAttribute(
-              EnrichMathml.Attribute.PARENT, this.semantic.id);
-          childCounter++;
-        }
-      }
-    }, this);
-    // right sub and superscripts
-    completeIndices(rightIndices);
-    // mprescripts
-    if (children[childCounter] &&
-        DomUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
-      this.mml.insertBefore(
-          children[childCounter], DomUtil.createElement('mprescripts'));
-    } else {
-      childCounter++;
+  public mml: Element;
+
+  /**
+   * Treats the index nodes of a multiscript tensor, possibly collapsing dummy
+   * punctuations.
+   * @param index The index node of a tensor.
+   * @return If the index node was a
+   *     dummy punctuation, i.e. consisted of more than one index, a list of
+   *     strings for the collapsed structure is returned, otherwise the node id.
+   */
+  public static multiscriptIndex(index: SemanticNode): Sexp {
+    if (index.type === SemanticType.PUNCTUATED &&
+        index.contentNodes[0].role === SemanticRole.DUMMY) {
+      return EnrichMathml.collapsePunctuated(index);
     }
-    // left sub and superscripts
-    completeIndices(leftIndices);
+    EnrichMathml.walkTree(index);
+    return index.id;
   }
 
 
@@ -101,21 +69,53 @@ export class CaseMultiindex extends sre.AbstractEnrichCase {
 
 
   /**
-   * Treats the index nodes of a multiscript tensor, possibly collapsing dummy
-   * punctuations.
-   * @param index The index node of a tensor.
-   * @return If the index node was a
-   *     dummy punctuation, i.e. consisted of more than one index, a list of
-   *     strings for the collapsed structure is returned, otherwise the node id.
+   * @override
    */
-  static multiscriptIndex(index: SemanticNode): Sexp {
-    if (index.type === SemanticType.PUNCTUATED &&
-        index.contentNodes[0].role === SemanticRole.DUMMY) {
-      return EnrichMathml.collapsePunctuated(index);
-    }
-    EnrichMathml.walkTree(index);
-    return index.id;
+  constructor(semantic: SemanticNode) {
+    super(semantic);
+    this.mml = semantic.mathmlTree;
   }
-}
 
-goog.inherits(CaseMultiindex, AbstractEnrichCase);
+
+  /**
+   * Completes the mmultiscript by adding missing None nodes and sorting out the
+   * right order of children.
+   * @param rightIndices The ids of the leaf
+   *     nodes of the right indices.
+   * @param leftIndices The ids of the leaf
+   *     nodes of the left indices.
+   */
+  protected completeMultiscript(rightIndices: Sexp, leftIndices: Sexp) {
+    let children = DomUtil.toArray(this.mml.childNodes).slice(1);
+    let childCounter = 0;
+    let completeIndices = (indices: number[]) => {
+      for (let i = 0, index: number; index = indices[i]; i++) {
+        let child = children[childCounter];
+        if (!child || index !==
+              parseInt(EnrichMathml.getInnerNode(child).getAttribute(
+                EnrichMathml.Attribute.ID))) {
+          let query = this.semantic.querySelectorAll(x => x.id === index);
+          this.mml.insertBefore(
+              CaseMultiindex.createNone_(query[0]), child || null);
+        } else {
+          EnrichMathml.getInnerNode(child).setAttribute(
+            EnrichMathml.Attribute.PARENT, this.semantic.id.toString());
+          childCounter++;
+        }
+      }
+    };
+    // right sub and superscripts
+    completeIndices(rightIndices as number[]);
+    // mprescripts
+    if (children[childCounter] &&
+        DomUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
+      this.mml.insertBefore(
+          children[childCounter], DomUtil.createElement('mprescripts'));
+    } else {
+      childCounter++;
+    }
+    // left sub and superscripts
+    completeIndices(leftIndices as number[]);
+  }
+
+}
