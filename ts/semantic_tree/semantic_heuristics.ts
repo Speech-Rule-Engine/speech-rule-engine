@@ -38,7 +38,7 @@ export namespace SemanticHeuristics {
   export let factory: SemanticNodeFactory = null;
 
 
-  const heuristics: Map<string, SemanticHeuristic<SemanticHeuristicTypes>> =
+  export const heuristics: Map<string, SemanticHeuristic<SemanticHeuristicTypes>> =
     new Map();
 
 
@@ -159,7 +159,8 @@ export abstract class SemanticAbstractHeuristic<T extends SemanticHeuristicTypes
   constructor(public name: string, method: (node: T) => void,
               predicate: (node: T) => boolean = (_x:T) => false) {
     this.apply = method;
-    this.applicable = predicate
+    this.applicable = predicate;
+    SemanticHeuristics.add(name, this);
   }
 
 }

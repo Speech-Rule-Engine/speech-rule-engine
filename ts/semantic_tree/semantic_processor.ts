@@ -623,8 +623,6 @@ export default class SemanticProcessor {
       return SemanticProcessor.getInstance().factory_.makeEmptyNode();
     }
     // Get explicitly given mixed numbers
-    console.log(this);
-    console.log(SemanticProcessor.getInstance());
     nodes = SemanticProcessor.getInstance().explicitMixed_(nodes);
 
     if (nodes.length === 1) {

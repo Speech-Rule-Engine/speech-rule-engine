@@ -47,9 +47,8 @@ namespace SystemExternal {
    * Check if DOM document is already supported in this JS.
    * @return True if document is defined.
    */
-  export function documentSupported(): boolean {
-    return !(typeof document === 'undefined');
-  }
+  export const documentSupported: boolean =
+    (() => !(typeof document === 'undefined'))();
 
   /**
    * Process library.
@@ -59,14 +58,14 @@ namespace SystemExternal {
   /**
    * Xmldom library.
    */
-  export const xmldom = SystemExternal.documentSupported() ?
+  export const xmldom = SystemExternal.documentSupported ?
     window :
     SystemExternal.extRequire('xmldom-sre');
 
   /**
    * DOM document implementation.
    */
-  export const document: Document = SystemExternal.documentSupported() ?
+  export const document: Document = SystemExternal.documentSupported ?
     window.document :
     (new SystemExternal.xmldom.DOMImplementation()).createDocument('', '', 0);
 
@@ -74,7 +73,7 @@ namespace SystemExternal {
    * Xpath library.
    */
   export const xpath: any =
-    SystemExternal.documentSupported() ? document : function() {
+    SystemExternal.documentSupported ? document : function() {
       let window = {document: {}, XPathResult: {}};
       let wgx = SystemExternal.extRequire('wicked-good-xpath');
       wgx.install(window);
@@ -85,7 +84,7 @@ namespace SystemExternal {
   /**
    * Commander library.
    */
-  export const commander = SystemExternal.documentSupported() ?
+  export const commander = SystemExternal.documentSupported ?
     null :
     SystemExternal.extRequire('commander');
 
@@ -93,7 +92,8 @@ namespace SystemExternal {
    * Filesystem library.
    */
   export const fs =
-    SystemExternal.documentSupported() ? null : SystemExternal.extRequire('fs');
+    SystemExternal.documentSupported ? null : SystemExternal.extRequire('fs');
+
 
   /**
    * The URL for SRE resources.

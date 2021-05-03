@@ -275,9 +275,10 @@ export function dataAttribute(attr: string): string {
  * @return The value for that attribute.
  */
 export function getDataAttribute(node: Element, attr: string): string {
-  if (node instanceof HTMLElement) {
-    return node.dataset[dataAttribute(attr)];
-  }
+  // TODO (TS): Get this on the HTML side without crashing in node.
+  // if (node instanceof HTMLElement) {
+  //   return node.dataset[dataAttribute(attr)];
+  // }
   return node.getAttribute(attr);
 }
 

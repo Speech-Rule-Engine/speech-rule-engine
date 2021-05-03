@@ -21,7 +21,7 @@
 
 
 import * as DomUtil from '../common/dom_util';
-import * as XpathUtil from '../common/xpath_util';
+import XpathUtil from '../common/xpath_util';
 import {AbstractHighlighter, Highlight} from './abstract_highlighter';
 import {ColorPicker} from './color_picker';
 import {SvgHighlighter} from './svg_highlighter';
