@@ -432,9 +432,14 @@ namespace System {
       setTimeout(() => exit(value), 100);
       return;
     }
-    SystemExternal.process.exit(value);
+    SystemExternal.nodeProcess.exit(value);
   }
   
+  // Temporary!
+  export function getStore() {
+    return SpeechRuleEngine.getInstance().getStore();
+  }
+
 }
 
 export default System;

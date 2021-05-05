@@ -684,4 +684,9 @@ export class SpeechRuleEngine {
   enumerate(opt_info?: Object): Object {
     return this.activeStore_.trie.enumerate(opt_info);
   }
+
+  // Temporary
+  public getStore() {
+    return this.activeStore_;
+  }
 }
