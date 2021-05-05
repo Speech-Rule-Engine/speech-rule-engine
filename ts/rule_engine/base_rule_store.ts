@@ -153,8 +153,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   constructor() {
     this.parseMethods = {
-      'Rule': this.defineRule.bind(this),
-      'Generator': this.generateRules.bind(this)
+      'Rule': this.defineRule,
+      'Generator': this.generateRules
     };
   }
 

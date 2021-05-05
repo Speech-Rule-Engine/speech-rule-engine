@@ -370,8 +370,7 @@ export class DynamicCstrParser {
       throw new Error('Invalid dynamic constraint: ' + cstr);
     }
     let j = 0;
-    for (let i = 0, key; key = this.order[i], order.length; i++) {
-      j = i;
+    for (let i = 0, key; key = this.order[i], order.length; i++, j++) {
       let value = order.shift();
       cstr[key] = value;
     }
