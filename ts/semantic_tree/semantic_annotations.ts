@@ -26,10 +26,10 @@ import {SemanticNode} from './semantic_node';
 
 export namespace SemanticAnnotations {
 
-  // TODO (TS): Replace this with maps.
-  const annotators: {[key: string]: SemanticAnnotator} = {};
+  // TODO (TS): Replace this with maps. Exported for tests only.
+  export let annotators: {[key: string]: SemanticAnnotator} = {};
 
-  const visitors: {[key: string]: SemanticVisitor} = {};
+  export let visitors: {[key: string]: SemanticVisitor} = {};
 
 
   /**
