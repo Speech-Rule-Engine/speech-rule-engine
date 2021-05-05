@@ -24,29 +24,27 @@ import {Axis, AxisMap, AxisProperties, DynamicCstrParser,
         DynamicProperties, DefaultComparator} from '../rule_engine/dynamic_cstr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
+import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
+import {MathCompoundStore} from '../rule_engine/math_simple_store';
 
 
 export class ClearspeakPreferences extends DynamicCstr {
 
-  static AUTO: string = 'Auto';
-
-  // TODO: Make these into a proper class.
-  preference: any;
+  private static AUTO: string = 'Auto';
 
   /**
    * @param cstr The constraint mapping.
    * @param preference The preference.
    */
-  constructor(cstr: AxisMap, preference: {[key: string]: string}) {
+  constructor(cstr: AxisMap, public preference: {[key: string]: string}) {
     super(cstr);
-    this.preference = preference;
   }
 
 
   /**
    * @override
    */
-  equal(cstr: ClearspeakPreferences) {
+  public equal(cstr: ClearspeakPreferences) {
     let top = super.equal(cstr);
     if (!top) {
       return false;
@@ -69,7 +67,7 @@ export class ClearspeakPreferences extends DynamicCstr {
    * Exports the Clearspeak comparator with default settings.
    * @return The clearspeak comparator.
    */
-  static comparator(): Comparator {
+  public static comparator(): Comparator {
     return new Comparator(
         Engine.getInstance().dynamicCstr,
         DynamicProperties.createProp(
@@ -86,7 +84,7 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @param pref The preference string.
    * @return The preference settings.
    */
-  static fromPreference(pref: string): AxisMap {
+  public static fromPreference(pref: string): AxisMap {
     let pairs = pref.split(':');
     let preferences: AxisMap = {};
     let properties = PREFERENCES.getProperties();
@@ -114,7 +112,7 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @param pref A preference mapping.
    * @return A style string created from the preferences.
    */
-  static toPreference(pref: AxisMap): string {
+  public static toPreference(pref: AxisMap): string {
     let keys = Object.keys(pref);
     let str = [];
     for (let i = 0; i < keys.length; i++) {
@@ -130,10 +128,10 @@ export class ClearspeakPreferences extends DynamicCstr {
    *     constraints.
    * @return Mapping of locale to preferences.
    */
-  static getLocalePreferences(opt_dynamic?: Object):
+  public static getLocalePreferences(opt_dynamic?: Object):
      {[key: string]: AxisProperties} {
     let dynamic = opt_dynamic ||
-        MathCompoundStore.getInstance().enumerate(
+        MathCompoundStore.enumerate(
             SpeechRuleEngine.getInstance().enumerate());
     return ClearspeakPreferences.getLocalePreferences_(dynamic);
   }
@@ -173,17 +171,19 @@ export class ClearspeakPreferences extends DynamicCstr {
 
 
   // TODO: The following should be done in MathJax in the future!
+  // TODO (TS): Import the mathjax types, get rid of any.
+  // static getSpeechExplorer(item: MathItem): Explorer {
   /**
    * Retrieves a speech explorer from a MathJax math item.
    * @param item A Math Item.
    * @return A speech explorer if the item has one.
    */
-  static getSpeechExplorer(item: MathItem): Explorer {
+  public static getSpeechExplorer(item: any): any {
     let explorers = item['attached'];
     if (!explorers || !explorers.length) {
       return null;
     }
-    return explorers.find(function(ex) {
+    return explorers.find(function(ex: any) {
       return ex.speechGenerator &&
           ex.speechGenerator.getOptions().modality === 'speech';
     });
@@ -199,7 +199,7 @@ export class ClearspeakPreferences extends DynamicCstr {
    *    sub menu.
    */
   // TODO (TS): item should get MathJax type MathItem
-  static smartPreferences(item: any, locale: string): AxisMap[] {
+  public static smartPreferences(item: any, locale: string): AxisMap[] {
     let prefs = ClearspeakPreferences.getLocalePreferences();
     let loc = prefs[locale];
     if (!loc) {
@@ -253,7 +253,7 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @param node A semantic node.
    * @return The preference that fits the node's type and role.
    */
-  static relevantPreferences(node: SemanticNode): string {
+  public static relevantPreferences(node: SemanticNode): string {
     let roles = SEMANTIC_MAPPING_[node.type];
     if (!roles) {
       return 'ImpliedTimes';
@@ -269,7 +269,7 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @return The setting of that preference. If it does not exist,
    *     returns Auto.
    */
-  static findPreference(prefs: string, kind: string): string {
+  public static findPreference(prefs: string, kind: string): string {
     if (prefs === 'default') {
       return ClearspeakPreferences.AUTO;
     }
@@ -285,7 +285,8 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @param value New preference value.
    * @return The updated preference settings.
    */
-  static addPreference(prefs: string, kind: string, value: string): string {
+  public static addPreference(
+      prefs: string, kind: string, value: string): string {
     if (prefs === 'default') {
       return kind + '_' + value;
     }
@@ -293,6 +294,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     parsed[kind] = value;
     return ClearspeakPreferences.toPreference(parsed);
   }
+
 }
 
 
@@ -349,7 +351,10 @@ const PREFERENCES = new DynamicProperties({
 
 export class Comparator extends DefaultComparator {
 
-  preference: AxisMap;
+  /**
+   * @override
+   */
+  public preference: AxisMap;
 
   /**
    * @param cstr A Clearspeak preference constraint.
@@ -365,7 +370,7 @@ export class Comparator extends DefaultComparator {
   /**
    * @override
    */
-  match(cstr: DynamicCstr) {
+  public match(cstr: DynamicCstr) {
     let top = super.match(cstr);
     if (!top) {
       return false;
@@ -386,7 +391,7 @@ export class Comparator extends DefaultComparator {
   /**
    * @override
    */
-  compare(cstr1: DynamicCstr, cstr2: DynamicCstr) {
+  public compare(cstr1: DynamicCstr, cstr2: DynamicCstr) {
     let top = super.compare(cstr1, cstr2);
     if (top !== 0) {
       return top as 0|1|-1;
@@ -411,6 +416,9 @@ export class Comparator extends DefaultComparator {
 
 export class Parser extends DynamicCstrParser {
 
+  /**
+   * @override
+   */
   constructor() {
     super([Axis.LOCALE, Axis.MODALITY, Axis.DOMAIN, Axis.STYLE]);
   }
@@ -419,7 +427,7 @@ export class Parser extends DynamicCstrParser {
   /**
    * @override
    */
-  parse(str: string) {
+  public parse(str: string) {
     let initial = super.parse(str);
     let style = initial.getValue(Axis.STYLE);
     let locale = initial.getValue(Axis.LOCALE);
@@ -446,7 +454,7 @@ export class Parser extends DynamicCstrParser {
    * @param pref The preference string.
    * @return The preference settings.
    */
-  fromPreference(pref: string): {[key: string]: string} {
+  public fromPreference(pref: string): {[key: string]: string} {
     return ClearspeakPreferences.fromPreference(pref);
   }
 
@@ -458,7 +466,7 @@ export class Parser extends DynamicCstrParser {
    * @param pref A preference mapping.
    * @return A style string created from the preferences.
    */
-  toPreference(pref: {[key: string]: string}): string {
+  public toPreference(pref: {[key: string]: string}): string {
     return ClearspeakPreferences.toPreference(pref);
   }
 }

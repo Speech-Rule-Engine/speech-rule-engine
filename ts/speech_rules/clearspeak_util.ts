@@ -29,7 +29,7 @@ import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {SemanticAttr, SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
 import {MathCompoundStore} from '../rule_engine/math_simple_store';
-
+import {vulgarFractionSmall} from './numbers_util';
 
 
 // TODO: remove
@@ -366,7 +366,7 @@ export function allCellsSimple(node: Element): Element[] {
  *     empty.
  */
 export function isSmallVulgarFraction(node: Element): Element[] {
-  return NumbersUtil.vulgarFractionSmall(node, 20, 11) ? [node] : [];
+  return vulgarFractionSmall(node, 20, 11) ? [node] : [];
 }
 
 
@@ -434,8 +434,7 @@ export function ordinalExponent(node: Element): string {
  * @return True if the text is a capital letter.
  */
 export function isCapitalLetter(node: Element): Element[] {
-  let result = MathCompoundStore.getInstance().lookupCategory(
-                   node.textContent) === 'Lu';
+  let result = MathCompoundStore.lookupCategory(node.textContent) === 'Lu';
   return result ? [node] : [];
 }
 
@@ -607,7 +606,7 @@ export function isHyperbolic(node: Element): Element[] {
   if (node.tagName === SemanticType.APPL) {
     let func = XpathUtil.evalXPath('children/*[1]', node)[0] as Element;
     if (func && func.tagName === SemanticType.FUNCTION &&
-        MathCompoundStore.getInstance().lookupCategory(func.textContent) ===
+        MathCompoundStore.lookupCategory(func.textContent) ===
             'Hyperbolic') {
       return [node];
     }
@@ -623,7 +622,7 @@ export function isLogarithmWithBase(node: Element): Element[] {
   if (node.tagName === SemanticType.SUBSCRIPT) {
     let func = XpathUtil.evalXPath('children/*[1]', node)[0] as Element;
     if (func && func.tagName === SemanticType.FUNCTION &&
-        MathCompoundStore.getInstance().lookupCategory(func.textContent) ===
+        MathCompoundStore.lookupCategory(func.textContent) ===
             'Logarithm') {
       return [node];
     }
@@ -650,7 +649,7 @@ export function wordOrdinal(node: Element): string {
 export function firstCurrency(node: Element): Element[] {
   let first = XpathUtil.evalXPath('children/*[1]', node)[0];
   let result = first &&
-      MathCompoundStore.getInstance().lookupCategory(
+      MathCompoundStore.lookupCategory(
           first.textContent + ':unit') === 'currency';
   return result ? [node] : [];
 }
@@ -662,7 +661,7 @@ export function firstCurrency(node: Element): Element[] {
 export function lastCurrency(node: Element): Element[] {
   let last = XpathUtil.evalXPath('children/*[last()]', node)[0];
   let result = last &&
-      MathCompoundStore.getInstance().lookupCategory(
+      MathCompoundStore.lookupCategory(
           last.textContent + ':unit') === 'currency';
   return result ? [node] : [];
 }
@@ -674,7 +673,7 @@ export function lastCurrency(node: Element): Element[] {
 export function isLengthUnit(node: Element): Element[] {
   let first = XpathUtil.evalXPath('children/*[1]', node)[0];
   let result = first &&
-      MathCompoundStore.getInstance().lookupCategory(
+      MathCompoundStore.lookupCategory(
           first.textContent.trim() + ':unit') === 'length';
   return result ? [node] : [];
 }

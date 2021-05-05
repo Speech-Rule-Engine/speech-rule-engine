@@ -89,7 +89,7 @@ export const Locale: Messages = {
      * @return True if current element should not be considered for
      *     nesting depth.
      */
-    FRAC_NEST_DEPTH: function(_node: Node): boolean {
+    FRAC_NEST_DEPTH: function(_node: Element): boolean {
       return false;
     },
 

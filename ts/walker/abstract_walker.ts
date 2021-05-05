@@ -31,6 +31,7 @@ import {Highlighter} from '../highlighter/highlighter';
 import {Locale} from '../l10n/messages';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {SpeechGenerator} from '../speech_generator/speech_generator';
+import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory';
 import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
 import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
 import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
@@ -72,7 +73,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Returns a new, initialised level structure suitable for the walker.
    * @return The new level structure initialised with root focus.
    */
-  public abstract initLevels: Levels<T>;
+  public abstract initLevels(): Levels<T>;
 
   /**
    * Combines content and children lists depending on semantic type and role.
@@ -335,8 +336,9 @@ export abstract class AbstractWalker<T> implements Walker {
     if (postfix) {
       speech.push(postfix);
     }
-    let aural = AuralRendering.getInstance();
-    return aural.finalize(aural.merge(pre.concat(speech)));
+    return AuralRendering.finalize(AuralRendering.merge(
+      pre.concat(speech) as any));
+    // TODO: string vs Span problem.
   }
 
 
@@ -369,8 +371,8 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  move(key) {
-    let direction = this.keyMapping[key];
+  move(key: KeyCode) {
+    let direction = this.keyMapping.get(key);
     if (!direction) {
       return null;
     }
@@ -618,8 +620,10 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   nextLevel(): T[] {
     let dnode = this.getFocus().getDomPrimary();
+    let children;
+    let content;
     if (dnode) {
-      let children = WalkerUtil.splitAttribute(
+      children = WalkerUtil.splitAttribute(
           WalkerUtil.getAttribute(dnode, Attribute.CHILDREN));
       let content = WalkerUtil.splitAttribute(
           WalkerUtil.getAttribute(dnode, Attribute.CONTENT));
@@ -629,9 +633,7 @@ export abstract class AbstractWalker<T> implements Walker {
           (type as SemanticType), (role as SemanticRole), content,
           children);
     }
-    let toIds = function(x) {
-      return x.id.toString();
-    };
+    let toIds = (x: SemanticNode) => x.id.toString();
     let snode = this.getRebuilt().nodeDict[this.primaryId()];
     children = snode.childNodes.map(toIds);
     content = snode.contentNodes.map(toIds);

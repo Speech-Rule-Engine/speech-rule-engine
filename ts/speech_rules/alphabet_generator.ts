@@ -120,11 +120,11 @@ export function makeDomains_() {
  * @param locale The current locale.
  * @param store The current speech rule store.
  */
-export function generate(locale: string, store: MathCompoundStore) {
+export function generate(locale: string) {
   let oldLocale = Engine.getInstance().locale;
   Engine.getInstance().locale = locale;
   L10n.setLocale();
-  store.addSymbolRules({locale: locale} as UnicodeJson);
+  MathCompoundStore.addSymbolRules({locale: locale} as UnicodeJson);
   makeDomains_();
   let intervals = INTERVALS;
   for (let i = 0, int; int = intervals[i]; i++) {
@@ -134,11 +134,11 @@ export function generate(locale: string, store: MathCompoundStore) {
     });
     if ('offset' in int) {
       numberRules(
-          store, keys, letters, int.font, int.category, int.offset || 0);
+          keys, letters, int.font, int.category, int.offset || 0);
     } else {
       let alphabet = Locale.ALPHABETS[int.base];
       alphabetRules(
-          store, keys, letters, alphabet, int.font, int.category,
+          keys, letters, alphabet, int.font, int.category,
           !!int.capital);
     }
   }
@@ -212,8 +212,7 @@ export function getFont(font: string): {font: string, combiner: Combiner} {
  * @param category The category name.
  * @param cap True if it is an alphabet of capitals.
  */
-export function alphabetRules(
-    store: MathCompoundStore, keys: string[], unicodes: string[],
+export function alphabetRules(keys: string[], unicodes: string[],
     letters: string[], font: string, category: string, cap: boolean) {
   let realFont = getFont(font);
   for (let i = 0, key, unicode, letter;
@@ -221,8 +220,7 @@ export function alphabetRules(
     let prefixes = cap ? Locale.ALPHABET_PREFIXES.capPrefix :
                          Locale.ALPHABET_PREFIXES.smallPrefix;
     let domains = cap ? Domains_.capital : Domains_.small;
-    makeLetter(
-        store, realFont.combiner, key, unicode, letter, realFont.font, prefixes,
+    makeLetter(realFont.combiner, key, unicode, letter, realFont.font, prefixes,
         category, Locale.ALPHABET_TRANSFORMERS.letter, domains);
   }
 }
@@ -238,15 +236,13 @@ export function alphabetRules(
  * @param category The category name.
  * @param offset The offset value for the initial number.
  */
-export function numberRules(
-    store: MathCompoundStore, keys: string[], unicodes: string[], font: string,
+export function numberRules(keys: string[], unicodes: string[], font: string,
     category: string, offset: number) {
   let realFont = getFont(font);
   for (let i = 0, key, unicode; key = keys[i], unicode = unicodes[i]; i++) {
     let prefixes = Locale.ALPHABET_PREFIXES.digitPrefix;
     let num = i + offset;
-    makeLetter(
-        store, realFont.combiner, key, unicode, num, realFont.font, prefixes,
+    makeLetter(realFont.combiner, key, unicode, num, realFont.font, prefixes,
         category, Locale.ALPHABET_TRANSFORMERS.digit, Domains_.digit);
   }
 }
@@ -270,8 +266,7 @@ export function numberRules(
  *     rules. They correspond to the union of the domains for prefixes and
  *     transformers.
  */
-export function makeLetter(
-    store: MathCompoundStore, combiner: Combiner, key: string, unicode: string,
+export function makeLetter(combiner: Combiner, key: string, unicode: string,
     letter: string|number, font: string, prefixes: {[key: string]: string},
     category: string, transformers: {[key: string]: Transformer},
     domains: string[]) {
@@ -279,7 +274,7 @@ export function makeLetter(
     let transformer =
         domain in transformers ? transformers[domain] : transformers['default'];
     let prefix = domain in prefixes ? prefixes[domain] : prefixes['default'];
-    store.defineRule(
+    MathCompoundStore.defineRule(
         key.toString(), domain, 'default', category, unicode,
         combiner(transformer(letter), font, prefix));
   }

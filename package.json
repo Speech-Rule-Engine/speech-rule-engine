@@ -35,6 +35,7 @@
   "homepage": "https://github.com/zorkow/speech-rule-engine",
   "dependencies": {
     "commander": ">=7.0.0",
+    "esm": "^3.2.25",
     "wicked-good-xpath": "^1.3.0",
     "xmldom-sre": "^0.1.31"
   },

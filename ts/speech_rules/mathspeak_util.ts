@@ -33,6 +33,10 @@ import SemanticProcessor from '../semantic_tree/semantic_processor';
 import * as NumbersUtil from './numbers_util';
 
 
+/**
+ * Dictionary to store the nesting depth of each node.
+ */
+let nestingDepth: {[k1: string]: {[k2: string]: number}} = {};
 
 /**
  * String function to separate text into single characters by adding
@@ -66,7 +70,7 @@ export function spaceoutNodes(
     correction(sn);
     result.push(sn.xml(doc));
   }
-  return result;
+  return result as Element[];
 }
 
 
@@ -143,7 +147,7 @@ export function getNestingDepth(
     opt_func?: (p1: Element) => boolean): number {
   opt_barrierTags = opt_barrierTags || nestingBarriers;
   opt_barrierAttrs = opt_barrierAttrs || {};
-  opt_func = opt_func || function(node) {
+  opt_func = opt_func || function(_node) {
     return false;
   };
   let xmlText =
@@ -201,7 +205,8 @@ export function containsAttr(node: Element, attrs: {[key: string]: string}): boo
  * @return The nesting depth.
  */
 export function computeNestingDepth_(
-    node: Element, tags: string[], barriers: string[], attrs: {[key: string]: string},
+    node: Element, tags: string[], barriers: string[],
+    attrs: {[key: string]: string},
     func: (p1: Element) => boolean, depth: number): number {
   if (func(node) || barriers.indexOf(node.tagName) > -1 ||
       containsAttr(node, attrs)) {
@@ -229,7 +234,8 @@ export function computeNestingDepth_(
 export function fractionNestingDepth(node: Element): number {
   return getNestingDepth(
       'fraction', node, ['fraction'], nestingBarriers, {},
-      Locale.MS_FUNC.FRAC_NEST_DEPTH);
+    // TODO (TS): Make this a proper type.
+    Locale.MS_FUNC.FRAC_NEST_DEPTH as (n: Element) => boolean);
 }
 
 
@@ -243,7 +249,7 @@ export function fractionNestingDepth(node: Element): number {
 export function nestedFraction(
     node: Element, expr: string, opt_end?: string): string {
   let depth = fractionNestingDepth(node);
-  let annotation = Array.apply(null, Array(depth)).map((x) => expr);
+  let annotation = Array.apply(null, Array(depth)).map((_x: string) => expr);
   if (opt_end) {
     annotation.push(opt_end);
   }
@@ -599,7 +605,7 @@ export function underscoreNestingDepth(node: Element): number {
   return getNestingDepth(
       'underscore', node, ['underscore'], nestingBarriers, {}, function(node) {
         return node.tagName && node.tagName === SemanticType.UNDERSCORE &&
-            node.childNodes[0].childNodes[1].getAttribute('role') ===
+            (node.childNodes[0].childNodes[1] as Element).getAttribute('role') ===
             SemanticRole.UNDERACCENT;
       });
 }
@@ -625,7 +631,7 @@ export function overscoreNestingDepth(node: Element): number {
   return getNestingDepth(
       'overscore', node, ['overscore'], nestingBarriers, {}, function(node) {
         return node.tagName && node.tagName === SemanticType.OVERSCORE &&
-            node.childNodes[0].childNodes[1].getAttribute('role') ===
+          (node.childNodes[0].childNodes[1] as Element).getAttribute('role') ===
             SemanticRole.OVERACCENT;
       });
 }
@@ -654,7 +660,7 @@ export function determinantIsSimple(node: Element): Element[] {
     return [];
   }
   let cells =
-      XpathUtil.evalXPath('children/row/children/cell/children/*', node);
+      XpathUtil.evalXPath('children/row/children/cell/children/*', node) as Element[];
   for (let i = 0, cell; cell = cells[i]; i++) {
     if (cell.tagName === SemanticType.NUMBER) {
       continue;
@@ -681,22 +687,17 @@ export function generateBaselineConstraint(): string[] {
   let mainElems = ['relseq', 'multrel'];
   let breakElems = ['fraction', 'punctuation', 'fenced', 'sqrt', 'root'];
 
-  let ancestrify = function(elemList) {
-    return elemList.map(function(elem) {
-      return 'ancestor::' + elem;
-    });
-  };
+  let ancestrify = (elemList: string[]) =>
+      elemList.map(elem => 'ancestor::' + elem);
 
-  let notify = function(elem) {
-    return 'not(' + elem + ')';
-  };
+  let notify = (elem: string) => 'not(' + elem + ')';
 
   let prefix = 'ancestor::*/following-sibling::*';
   let middle = notify(ancestrify(ignoreElems).join(' or '));
   let mainList = ancestrify(mainElems);
   let breakList = ancestrify(breakElems);
-  let breakCstrs = [];
-  for (let i = 0, brk; brk = breakList[i]; i++) {
+  let breakCstrs: string[] = [];
+  for (let i = 0, brk: string; brk = breakList[i]; i++) {
     breakCstrs = breakCstrs.concat(mainList.map(function(elem) {
       return brk + '/' + elem;
     }));
@@ -725,25 +726,25 @@ export function removeParens(node: Element): string {
 /**
  * Component strings for tensor speech rules.
  */
-export enum componentString_ {
-  3 = 'CSFleftsuperscript',
-  4 = 'CSFleftsubscript',
-  2 = 'CSFbaseline',
-  1 = 'CSFrightsubscript',
-  0 = 'CSFrightsuperscript'
-}
+const componentString: Map<number, string> = new Map([
+  [3, 'CSFleftsuperscript'],
+  [4, 'CSFleftsubscript'],
+  [2, 'CSFbaseline'],
+  [1, 'CSFrightsubscript'],
+  [0, 'CSFrightsuperscript']
+]);
 
 
 /**
  * Child number translation for tensor speech rules.
  */
-export enum childNumber_ {
-  4 = 2,
-  3,
-  2 = 1,
-  1 = 4,
-  0
-}
+const childNumber: Map<number, number> = new Map([
+  [4, 2],
+  [3, 3],
+  [2, 1],
+  [1, 4],
+  [0, 0]
+]);
 
 
 /**
@@ -761,9 +762,9 @@ export function generateTensorRuleStrings_(constellation: string): string[] {
   let constel = parseInt(constellation, 2);
 
   for (let i = 0; i < 5; i++) {
-    let childString = 'children/*[' + childNumber_[i] + ']';
+    let childString = 'children/*[' + childNumber.get(i) + ']';
     if (constel & 1) {
-      let compString = componentString_[i % 5];
+      let compString = componentString.get(i % 5);
       verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
           verbString;
       briefString =
@@ -804,7 +805,7 @@ export function generateTensorRules(store: MathStore) {
     defineRule.apply(null, briefList);
     defineSpecialisedRule(name, 'brief', 'sbrief');
     // Rules with baseline.
-    let baselineStr = componentString_[2];
+    let baselineStr = componentString.get(2);
     verbStr += '; [t]' + baselineStr + 'Verbose';
     briefStr += '; [t]' + baselineStr + 'Brief';
     name = name + '-baseline';

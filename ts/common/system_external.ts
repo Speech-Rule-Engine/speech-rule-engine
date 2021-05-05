@@ -30,6 +30,7 @@ namespace SystemExternal {
 
   declare var global: any;
   declare var require: (name: string) => any;
+  declare var process: any;
 
   /**
    * The local require function for NodeJS.
@@ -53,7 +54,9 @@ namespace SystemExternal {
   /**
    * Process library.
    */
-  export const process: any = SystemExternal.extRequire('process');
+  export const nodeProcess: any = function() {
+    return SystemExternal.extRequire('process');
+  }();
 
   /**
    * Xmldom library.
@@ -104,9 +107,9 @@ namespace SystemExternal {
    * Path to JSON files.
    */
   export let jsonPath = function() {
-    return (SystemExternal.process && typeof global !== 'undefined' ?
-      SystemExternal.process.env.SRE_JSON_PATH ||
-      global.SRE_JSON_PATH || SystemExternal.process.cwd() :
+    return (SystemExternal.nodeProcess && typeof global !== 'undefined' ?
+      SystemExternal.nodeProcess.env.SRE_JSON_PATH ||
+      global.SRE_JSON_PATH || SystemExternal.nodeProcess.cwd() :
       SystemExternal.url) +
       '/';
   }();

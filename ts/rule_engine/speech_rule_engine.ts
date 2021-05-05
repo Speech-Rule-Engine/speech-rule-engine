@@ -75,7 +75,8 @@ export class SpeechRuleEngine {
      */
     this.activeStore_ = new MathStore();
 
-    Engine.registerTest((() => this.ready_).bind(this));
+    Engine.registerTest(() => this.ready_);
+    // Engine.registerTest((() => {console.log('SRE test'); return this.ready_}).bind(this));
   }
 
   /**
@@ -521,8 +522,8 @@ export class SpeechRuleEngine {
       this.prune = false;
       this.adjustEngine();
     }
-    Engine.getInstance().evaluator =
-      maps.store.lookupString.bind(maps.store);
+    Engine.getInstance().evaluator = maps.lookupString as (p1: string, p2: DynamicCstr) => string;
+      // maps.store.lookupString.bind(maps.store);
   }
 
 

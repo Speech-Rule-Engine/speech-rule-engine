@@ -21,58 +21,74 @@
  */
 
 
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {AbstractWalker} from './abstract_walker';
+import {Focus} from './focus';
+import {Levels} from './levels';
 
 
-
-export class DummyWalker extends AbstractWalker {
-  
-  /**
-   * @override
-   */
-  up() {}
-
+export class DummyWalker extends AbstractWalker<void> {
 
   /**
    * @override
    */
-  down() {}
-
-
-  /**
-   * @override
-   */
-  left() {}
+  public up(): Focus {
+    return null;
+  }
 
 
   /**
    * @override
    */
-  right() {}
+  public down(): Focus {
+    return null;
+  }
 
 
   /**
    * @override
    */
-  repeat() {}
+  public left(): Focus {
+    return null;
+  }
 
 
   /**
    * @override
    */
-  depth() {}
+  public right(): Focus {
+    return null;
+  }
 
 
   /**
    * @override
    */
-  home() {}
+  public repeat(): Focus {
+    return null;
+  }
 
 
   /**
    * @override
    */
-  getDepth() {
+  public depth(): Focus {
+    return null;
+  }
+
+
+  /**
+   * @override
+   */
+  public home(): Focus {
+    return null;
+  }
+
+
+  /**
+   * @override
+   */
+  public getDepth() {
     return 0;
   }
 
@@ -80,5 +96,26 @@ export class DummyWalker extends AbstractWalker {
   /**
    * @override
    */
-  initLevels() {}
+  public initLevels(): Levels<void> {
+    return null;
+  }
+
+
+  /**
+   * @override
+   */
+  public combineContentChildren(
+    _type: SemanticType, _role: SemanticRole,
+    _content: string[], _children: string[]): void[] {
+    return [];
+  }
+
+
+  /**
+   * @override
+   */
+  public findFocusOnLevel(_id: number): Focus {
+    return null;
+  }
+
 }

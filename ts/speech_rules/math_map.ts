@@ -26,72 +26,80 @@ import * as BaseUtil from '../common/base_util';
 import * as BrowserUtil from '../common/browser_util';
 import {Engine, EngineConst} from '../common/engine';
 import SystemExternal from '../common/system_external';
-import {MathCompoundStore} from '../rule_engine/math_simple_store';
+import {MathCompoundStore, SiJson, UnicodeJson} from '../rule_engine/math_simple_store';
+import {DynamicCstr} from '../rule_engine/dynamic_cstr';
+import {RulesJson} from '../rule_engine/base_rule_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 
 import * as AlphabetGenerator from './alphabet_generator';
 
 
+declare type MathMapType = UnicodeJson[] | [SiJson] | RulesJson;
 
-export class MathMap {
-  private static oldInst_: Function;
+interface MathMapJson {
+  [key: string]: MathMapType;
+}
 
+export namespace MathMap {
+  
+  /**
+   * The compund store for symbol and function mappings.
+   */
+  
 
   /**
    * Files left to fetch in asynchronous mode.
    */
-  private static toFetch_: number = 0;
+  export let toFetch_: number = 0;
 
-  store: MathCompoundStore;
+  let loaded_: string[] = [];
 
-  loaded_ = [];
-
-  addSymbols: {[key: string]: (p1: string[]) => any};
-  constructor() {
-    /**
-     * The compund store for symbol and function mappings.
-     */
-    this.store = MathCompoundStore.getInstance();
-    /**
-     * Methods for parsing json structures.
-     */
-    this.addSymbols = {
-      functions: this.store.addFunctionRules.bind(this.store),
-      symbols: this.store.addSymbolRules.bind(this.store),
-      units: this.store.addUnitRules.bind(this.store),
-      si: this.addSiPrefixes.bind(this)
+  export let store = MathCompoundStore;
+  
+  /**
+   * Methods for parsing json structures.
+   */
+  const addSymbols: {[key: string]: (p1: MathMapType) => any} = {
+      functions: MathCompoundStore.addFunctionRules,
+      symbols: MathCompoundStore.addSymbolRules,
+      units: MathCompoundStore.addUnitRules,
+      si: addSiPrefixes
     };
-  }
-
 
   /**
    * Adds the Si prefix mapping.
    * @param json Single dictionary object.
    */
-  addSiPrefixes(json: {[key: string]: string}) {
-    this.store.siPrefixes = json;
+  function addSiPrefixes(json: SiJson) {
+    MathCompoundStore.siPrefixes = json;
+  }
+
+  export function lookupString(node: string, dynamic: DynamicCstr) {
+    return MathCompoundStore.lookupString(node, dynamic);
   }
 
 
   /**
    * @return The instance of the MathMap singleton.
    */
-  static getInstance(): MathMap {
-    let instance = MathMap.oldInst_();
-    instance.loadLocale();
-    return instance;
+  // TODO (TS): This will become the promise one day.
+  export function getInstance(): {[key: string]: Function} {
+    loadLocale();
+    return {lookupString, retrieveFiles, parseMaps};
   }
+
+
 
 
   /**
    * Loads a new locale if necessary.
    */
-  loadLocale() {
+  export function loadLocale() {
     let locale = Engine.getInstance().locale;
-    if (this.loaded_.indexOf(locale) === -1) {
+    if (loaded_.indexOf(locale) === -1) {
       SpeechRuleEngine.getInstance().prune = true;
-      this.retrieveMaps(locale);
-      this.loaded_.push(locale);
+      retrieveMaps(locale);
+      loaded_.push(locale);
     }
   }
 
@@ -101,7 +109,8 @@ export class MathMap {
    * @param file The target locale.
    * @param parse Method adding the rules.
    */
-  retrieveFiles(file: string, parse: (p1: string) => any) {
+  export function retrieveFiles(file: string, parse: (p1: string) => MathMapJson) {
+    console.log(Engine.getInstance().mode);
     let async = Engine.getInstance().mode === EngineConst.Mode.ASYNC;
     if (async) {
       Engine.getInstance().mode = EngineConst.Mode.SYNC;
@@ -109,7 +118,7 @@ export class MathMap {
     switch (Engine.getInstance().mode) {
       case EngineConst.Mode.ASYNC:
         MathMap.toFetch_++;
-        MathMap.fromFile_(file, function(err, json) {
+        fromFile_(file, (err: Error, json: string) => {
           MathMap.toFetch_--;
           if (err) {
             return;
@@ -119,11 +128,11 @@ export class MathMap {
         break;
       case EngineConst.Mode.HTTP:
         MathMap.toFetch_++;
-        MathMap.getJsonAjax_(file, parse);
+        getJsonAjax_(file, parse);
         break;
       case EngineConst.Mode.SYNC:
       default:
-        let strs = MathMap.loadFile(file);
+        let strs = loadFile(file);
         parse(strs);
         break;
     }
@@ -137,9 +146,9 @@ export class MathMap {
    * Parses JSON mappings from a string and them to the MathStore.
    * @param json The json mappings string.
    */
-  parseMaps(json: string) {
+  export function parseMaps(json: string) {
     let js = (JSON.parse(json) as {[key: string]: any[]});
-    this.addMaps(js);
+    addMaps(js);
   }
 
 
@@ -149,16 +158,16 @@ export class MathMap {
    * @param opt_locale Optionally the locale for the mappings to
    *     add. This is necessary for the single IE dictionary.
    */
-  addMaps(json: {[key: string]: any[]}, opt_locale?: string) {
+  function addMaps(json: MathMapJson, opt_locale?: string) {
     for (let i = 0, key; key = Object.keys(json)[i]; i++) {
       let info = key.split('/');
       if (opt_locale && opt_locale !== info[0]) {
         continue;
       }
       if (info[1] !== 'rules') {
-        json[key].forEach(this.addSymbols[info[1]]);
+        (json[key] as UnicodeJson[] | [SiJson]).forEach(addSymbols[info[1]]);
       } else {
-        SpeechRuleEngine.getInstance().addStore(json[key]);
+        SpeechRuleEngine.getInstance().addStore(json[key] as RulesJson);
       }
     }
   }
@@ -168,16 +177,16 @@ export class MathMap {
    * Retrieves mappings and adds them to the respective stores.
    * @param locale The target locale.
    */
-  retrieveMaps(locale: string) {
-    AlphabetGenerator.generate(locale, this.store);
+  function retrieveMaps(locale: string) {
+    AlphabetGenerator.generate(locale);
     if (Engine.getInstance().isIE &&
         Engine.getInstance().mode === EngineConst.Mode.HTTP) {
-      this.getJsonIE_(locale);
+      getJsonIE_(locale);
       return;
     }
     let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.js';
-    let parse = this.parseMaps.bind(this);
-    this.retrieveFiles(file, parse);
+    let parse = parseMaps.bind(this);
+    retrieveFiles(file, parse);
   }
 
 
@@ -186,15 +195,15 @@ export class MathMap {
    * @param locale The target locale.
    * @param opt_count Optional counter argument for callback.
    */
-  private getJsonIE_(locale: string, opt_count?: number) {
+  function getJsonIE_(locale: string, opt_count?: number) {
     let count = opt_count || 1;
     if (!BrowserUtil.mapsForIE) {
       if (count <= 5) {
-        setTimeout((() => this.getJsonIE_(locale, count++)).bind(this), 300);
+        setTimeout((() => getJsonIE_(locale, count++)).bind(this), 300);
       }
       return;
     }
-    this.addMaps(BrowserUtil.mapsForIE, locale);
+    addMaps(BrowserUtil.mapsForIE as MathMapJson, locale);
   }
 
 
@@ -204,7 +213,7 @@ export class MathMap {
    * @param func Method adding the rules.
    * @return JSON.
    */
-  private static fromFile_(path: string, func: (p1: string, p2: string) => any):
+  function fromFile_(path: string, func: (p1: Error, p2: string) => any):
       string {
     return SystemExternal.fs.readFile(path, 'utf8', func);
   }
@@ -215,9 +224,9 @@ export class MathMap {
    * @param file A valid filename.
    * @return A string representing a JSON array.
    */
-  static loadFile(file: string): string {
+  export function loadFile(file: string): string {
     try {
-      return MathMap.readJSON_(file);
+      return readJSON_(file);
     } catch (x) {
       console.error('Unable to load file: ' + file + '\n' + x);
     }
@@ -230,7 +239,7 @@ export class MathMap {
    * @param path Contains the path to a JSON file.
    * @return JSON.
    */
-  private static readJSON_(path: string): string {
+  function readJSON_(path: string): string {
     return SystemExternal.fs.readFileSync(path);
   }
 
@@ -240,7 +249,7 @@ export class MathMap {
    * @param file The file to retrieve.
    * @param parse Method adding the rules.
    */
-  private static getJsonAjax_(file: string, parse: (p1: string) => any) {
+  function getJsonAjax_(file: string, parse: (p1: string) => any) {
     let httpRequest = new XMLHttpRequest();
     httpRequest.onreadystatechange = function() {
       if (httpRequest.readyState === 4) {
@@ -253,9 +262,7 @@ export class MathMap {
     httpRequest.open('GET', file, true);
     httpRequest.send();
   }
+
 }
 
-MathMap.oldInst_ = MathMap.getInstance;
-Engine.registerTest(function() {
-  return MathMap.getInstance() && !MathMap.toFetch_;
-});
+Engine.registerTest(() => MathMap.getInstance() && !MathMap.toFetch_);

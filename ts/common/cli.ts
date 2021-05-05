@@ -88,7 +88,7 @@ export class Cli {
        str + (new Array(length - str.length + 1)).join(' ');
     // TODO (TS): Sort out the any type.
     let dynamic: any = SpeechRuleEngine.getInstance().enumerate();
-    dynamic = MathCompoundStore.getInstance().enumerate(dynamic);
+    dynamic = MathCompoundStore.enumerate(dynamic);
     let table = [];
     maxLength(dynamic, 0);
     for (let ax1 in dynamic) {
@@ -173,7 +173,7 @@ export class Cli {
     } catch (err) {
       console.error(err.name + ': ' + err.message);
       Debugger.getInstance().exit(function() {
-        SystemExternal.process.exit(1);
+        SystemExternal.nodeProcess.exit(1);
       });
     }
   }
@@ -186,12 +186,12 @@ export class Cli {
    */
   readline() {
     let options = SystemExternal.commander.opts();
-    SystemExternal.process.stdin.setEncoding('utf8');
+    SystemExternal.nodeProcess.stdin.setEncoding('utf8');
     let inter = SystemExternal.extRequire('readline').createInterface({
-      input: SystemExternal.process.stdin,
+      input: SystemExternal.nodeProcess.stdin,
       output: options.output ?
           SystemExternal.fs.createWriteStream(options.output) :
-          SystemExternal.process.stdout
+          SystemExternal.nodeProcess.stdout
     });
     let input = '';
     inter.on('line', ((expr: string) => {
@@ -307,7 +307,7 @@ export class Cli {
               this.enumerate();
               System.exit(0);
             }).bind(this))
-        .parse(SystemExternal.process.argv);
+        .parse(SystemExternal.nodeProcess.argv);
     System.setupEngine(this.setup);
     let options = commander.opts();
     if (options.verbose) {
@@ -327,7 +327,6 @@ export class Cli {
   }
 }
 
-
-if (SystemExternal.process && SystemExternal.process.env.SRE_TOP_PATH) {
+if (SystemExternal.nodeProcess && SystemExternal.nodeProcess.env.SRE_TOP_PATH) {
   (new Cli()).commandLine();
 }

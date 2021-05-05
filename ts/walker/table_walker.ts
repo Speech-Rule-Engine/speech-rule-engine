@@ -20,6 +20,8 @@
  */
 
 
+import {Highlighter} from '../highlighter/highlighter';
+import {SpeechGenerator} from '../speech_generator/speech_generator';
 import * as DomUtil from '../common/dom_util';
 import {KeyCode} from '../common/event_util';
 import {SemanticNode} from '../semantic_tree/semantic_node';
@@ -27,13 +29,12 @@ import {SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
 
 import {Focus} from './focus';
 import {SyntaxWalker} from './syntax_walker';
+import {WalkerMoves} from './walker';
 
 
 
-/**
- * @override
- */
 export class TableWalker extends SyntaxWalker {
+  
   static ELIGIBLE_CELL_ROLES: SemanticRole[];
 
 
@@ -49,36 +50,32 @@ export class TableWalker extends SyntaxWalker {
 
   firstJump: Focus = null;
   moved: any;
-  constructor(node, generator, highlighter, xml) {
+
+  /**
+   * @override
+   */
+  constructor(
+      public node: Element, public generator: SpeechGenerator,
+      public highlighter: Highlighter, xml: string) {
     super(node, generator, highlighter, xml);
 
-    this.keyMapping[sre.EventUtil.KeyCode['0']] =
-      this.jumpCell.bind(this);
-    this.keyMapping[sre.EventUtil.KeyCode['1']] =
-      this.jumpCell.bind(this);
-    this.keyMapping[sre.EventUtil.KeyCode['2']] =
-      this.jumpCell.bind(this);
-    this.keyMapping[sre.EventUtil.KeyCode['3']] =
-      this.jumpCell.bind(this);
-    this.keyMapping[sre.EventUtil.KeyCode['4']] =
-      this.jumpCell.bind(this);
-    this.keyMapping[sre.EventUtil.KeyCode['5']] =
-      this.jumpCell.bind(this);
-    this.keyMapping[sre.EventUtil.KeyCode['6']] =
-      this.jumpCell.bind(this);
-    this.keyMapping[sre.EventUtil.KeyCode['7']] =
-      this.jumpCell.bind(this);
-    this.keyMapping[sre.EventUtil.KeyCode['8']] =
-      this.jumpCell.bind(this);
-    this.keyMapping[sre.EventUtil.KeyCode['9']] =
-      this.jumpCell.bind(this);
+    this.keyMapping.set(KeyCode.ZERO, this.jumpCell.bind(this));
+    this.keyMapping.set(KeyCode.ONE, this.jumpCell.bind(this));
+    this.keyMapping.set(KeyCode.TWO, this.jumpCell.bind(this));
+    this.keyMapping.set(KeyCode.THREE, this.jumpCell.bind(this));
+    this.keyMapping.set(KeyCode.FOUR, this.jumpCell.bind(this));
+    this.keyMapping.set(KeyCode.FIVE, this.jumpCell.bind(this));
+    this.keyMapping.set(KeyCode.SIX, this.jumpCell.bind(this));
+    this.keyMapping.set(KeyCode.SEVEN, this.jumpCell.bind(this));
+    this.keyMapping.set(KeyCode.EIGHT, this.jumpCell.bind(this));
+    this.keyMapping.set(KeyCode.NINE, this.jumpCell.bind(this));
   }
 
 
   /**
    * @override
    */
-  move(key) {
+  move(key: KeyCode) {
     this.key_ = key;
     let result = super.move(key);
     this.modifier = false;
@@ -90,7 +87,7 @@ export class TableWalker extends SyntaxWalker {
    * @override
    */
   up() {
-    this.moved = sre.Walker.move.UP;
+    this.moved = WalkerMoves.UP;
     return this.eligibleCell_() ? this.verticalMove_(false) : super.up();
   }
 
@@ -99,7 +96,7 @@ export class TableWalker extends SyntaxWalker {
    * @override
    */
   down() {
-    this.moved = sre.Walker.move.DOWN;
+    this.moved = WalkerMoves.DOWN;
     return this.eligibleCell_() ? this.verticalMove_(true) : super.down();
   }
 
@@ -155,20 +152,20 @@ export class TableWalker extends SyntaxWalker {
     if (!this.isInTable_() || this.key_ === null) {
       return this.getFocus();
     }
-    if (this.moved === Walker.move.ROW) {
-      this.moved = Walker.move.CELL;
-      let column = this.key_ - EventUtil.KeyCode['0'];
+    if (this.moved === WalkerMoves.ROW) {
+      this.moved = WalkerMoves.CELL;
+      let column = this.key_ - KeyCode.ZERO;
       if (!this.isLegalJump_(this.row_, column)) {
         return this.getFocus();
       }
       return this.jumpCell_(this.row_, column);
     }
-    let row = this.key_ - EventUtil.KeyCode['0'];
+    let row = this.key_ - KeyCode.ZERO;
     if (row > this.currentTable_.childNodes.length) {
       return this.getFocus();
     }
     this.row_ = row;
-    this.moved = Walker.move.ROW;
+    this.moved = WalkerMoves.ROW;
     return this.getFocus().clone();
   }
 
@@ -188,9 +185,10 @@ export class TableWalker extends SyntaxWalker {
     }
     // We know the cell position exists!
     let id = this.currentTable_.id.toString();
+    let level;
     // Pop foci until we have reached the table.
     do {
-      let level = this.levels.pop();
+      level = this.levels.pop();
     } while (level.indexOf(id) === -1);
     // Go to cell position by pushing row and cell onto levels.
     this.levels.push(level);
@@ -243,7 +241,6 @@ export class TableWalker extends SyntaxWalker {
     }
     return false;
   }
-
 
   /**
    * @override

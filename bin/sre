@@ -6,5 +6,5 @@ if (fs.existsSync(process.env.SRE_TOP_PATH + '/lib/mathmaps')) {
 } else {
   process.env.SRE_JSON_PATH = process.env.SRE_TOP_PATH + '/src/mathmaps';
 }
-require('../lib/sre.js')
+require('../js/common/cli.js')
 

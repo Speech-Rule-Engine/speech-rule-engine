@@ -20,11 +20,18 @@
  */
 
 
+import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
 import {AxisMap} from '../rule_engine/dynamic_cstr';
 import {RebuildStree} from '../walker/rebuild_stree';
 
 
 export interface SpeechGenerator {
+
+  /**
+   * The modality of this speech generator.
+   */
+  modality: EnrichMathml.Attribute;
+
   /**
    * Returns the speech string for math node.
    * @param node The target element of the event.

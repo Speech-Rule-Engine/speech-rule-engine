@@ -20,6 +20,8 @@
  */
 
 
+import {Highlighter} from '../highlighter/highlighter';
+import {SpeechGenerator} from '../speech_generator/speech_generator';
 import {AbstractWalker} from './abstract_walker';
 import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {interleaveLists} from '../common/base_util';
@@ -30,14 +32,15 @@ import {Levels} from './levels';
 /**
  * @override
  */
-export class SyntaxWalker extends AbstractWalker {
+export class SyntaxWalker extends AbstractWalker<string> {
   /**
    * Caching of levels.
    */
   levels: Levels<string> = null;
-  constructor(node, generator, highlighter, xml) {
+  constructor(
+      public node: Element, public generator: SpeechGenerator,
+      public highlighter: Highlighter, xml: string) {
     super(node, generator, highlighter, xml);
-
 
     this.restoreState();
   }
@@ -49,7 +52,7 @@ export class SyntaxWalker extends AbstractWalker {
   initLevels() {
     let levels = new Levels();
     levels.push([this.primaryId()]);
-    return levels;
+    return levels as Levels<string>;
   }
 
 
@@ -87,7 +90,7 @@ export class SyntaxWalker extends AbstractWalker {
   /**
    * @override
    */
-  combineContentChildren(type, role, content, children) {
+  combineContentChildren(type: SemanticType, role: SemanticRole, content: string[], children: string[]): string[] {
     switch (type) {
       case SemanticType.RELSEQ:
       case SemanticType.INFIXOP:
@@ -152,8 +155,7 @@ export class SyntaxWalker extends AbstractWalker {
   /**
    * @override
    */
-  findFocusOnLevel(id) {
+  findFocusOnLevel(id: number) {
     return this.singletonFocus(id.toString());
   }
 }
-goog.inherits(SyntaxWalker, AbstractWalker);

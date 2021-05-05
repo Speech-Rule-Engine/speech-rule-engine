@@ -259,23 +259,23 @@ SemanticAnnotations.register(
 /**
  * Component strings for tensor speech rules.
  */
-export enum componentString_ {
-  2 = 'CSFbaseline',
-  1 = 'CSFsubscript',
-  0 = 'CSFsuperscript'
-}
+const componentString: Map<number, string> = new Map([
+  [2, 'CSFbaseline'],
+  [1, 'CSFsubscript'],
+  [0, 'CSFsuperscript']
+]);
 
 
 /**
  * Child number translation for tensor speech rules.
  */
-export enum childNumber_ {
-  4 = 2,
-  3,
-  2 = 1,
-  1 = 4,
-  0
-}
+const childNumber: Map<number, number> = new Map([
+  [4, 2],
+  [3, 3],
+  [2, 1],
+  [1, 4],
+  [0, 0]
+]);
 
 
 /**
@@ -291,9 +291,9 @@ export function generateTensorRuleStrings_(constellation: string): string[] {
   let constel = parseInt(constellation, 2);
 
   for (let i = 0; i < 5; i++) {
-    let childString = 'children/*[' + childNumber_[i] + ']';
+    let childString = 'children/*[' + childNumber.get(i) + ']';
     if (constel & 1) {
-      let compString = componentString_[i % 3];
+      let compString = componentString.get(i % 3);
       verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
           verbString;
     } else {
@@ -326,7 +326,7 @@ export function generateTensorRules(store: MathStore) {
     // Rules without neighbour.
     defineRule.apply(null, verbList);
     // Rules with baseline.
-    let baselineStr = componentString_[2];
+    let baselineStr = componentString.get(2);
     verbStr += '; [t]' + baselineStr + 'Verbose';
     name = name + '-baseline';
     verbList = [
@@ -359,10 +359,11 @@ export function relationIterator(nodes: Element[], context: string): () =>
     AuditoryDescription[] {
   let childNodes = nodes.slice(0);
   let first = true;
+  let contentNodes: Element[];
   if (nodes.length > 0) {
-    let contentNodes = XpathUtil.evalXPath('../../content/*', nodes[0]);
+    contentNodes = XpathUtil.evalXPath('../../content/*', nodes[0]) as Element[];
   } else {
-    let contentNodes = [];
+    contentNodes = [];
   }
   return function() {
     let content = contentNodes.shift();
@@ -405,10 +406,11 @@ export function relationIterator(nodes: Element[], context: string): () =>
 export function implicitIterator(nodes: Element[], context: string): () =>
     AuditoryDescription[] {
   let childNodes = nodes.slice(0);
+  let contentNodes: Element[];
   if (nodes.length > 0) {
-    let contentNodes = XpathUtil.evalXPath('../../content/*', nodes[0]);
+    contentNodes = XpathUtil.evalXPath('../../content/*', nodes[0]) as Element[];
   } else {
-    let contentNodes = [];
+    contentNodes = [];
   }
   return function() {
     let leftChild = childNodes.shift();

@@ -20,21 +20,27 @@
  */
 
 
+import {Highlighter} from '../highlighter/highlighter';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
+import {SpeechGenerator} from '../speech_generator/speech_generator';
 import {AbstractWalker} from './abstract_walker';
 import {Focus} from './focus';
 import {Levels} from './levels';
 
 
 
-/**
- * @override
- */
-export class SemanticWalker extends sre.AbstractWalker {
+export class SemanticWalker extends AbstractWalker<Focus> {
   /**
    * Caching of levels.
    */
   levels: Levels<Focus> = null;
-  constructor(node, generator, highlighter, xml) {
+
+  /**
+   * @override
+   */
+  constructor(
+      public node: Element, public generator: SpeechGenerator,
+      public highlighter: Highlighter, xml: string) {
     super(node, generator, highlighter, xml);
 
     this.restoreState();
@@ -44,10 +50,10 @@ export class SemanticWalker extends sre.AbstractWalker {
   /**
    * @override
    */
-  initLevels() {
+  initLevels(): Levels<Focus> {
     let levels = new Levels();
     levels.push([this.getFocus()]);
-    return levels;
+    return levels as Levels<Focus>;
   }
 
 
@@ -87,7 +93,7 @@ export class SemanticWalker extends sre.AbstractWalker {
   /**
    * @override
    */
-  combineContentChildren(type, role, content, children) {
+  combineContentChildren(type: SemanticType, role: SemanticRole, content: string[], children: string[]): Focus[] {
     switch (type) {
       case SemanticType.RELSEQ:
       case SemanticType.INFIXOP:
@@ -219,12 +225,12 @@ export class SemanticWalker extends sre.AbstractWalker {
   /**
    * @override
    */
-  findFocusOnLevel(id) {
-    let focus = this.levels.find(function(x) {
+  findFocusOnLevel(id: number) {
+    let focus = this.levels.find(x => {
       let pid = x.getSemanticPrimary().id;
       return pid === id;
     });
     return focus;
   }
 }
-goog.inherits(SemanticWalker, AbstractWalker);
+

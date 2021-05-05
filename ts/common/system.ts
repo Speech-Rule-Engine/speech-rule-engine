@@ -45,7 +45,7 @@ namespace System {
    */
   let files_: number = 0;
 
-  Engine.registerTest(() => !!files_);
+  Engine.registerTest(() => !!!files_);
 
   /**
    *  Setup Methods functionality.

@@ -22,7 +22,7 @@
 // This work was sponsored by TextHelp
 //
 
-import MathspeakUtil from './mathspeak_util';
+import * as MathspeakUtil from './mathspeak_util';
 
 
 namespace MathspeakFrenchUtil {
@@ -33,7 +33,7 @@ namespace MathspeakFrenchUtil {
  * @return The list with the given node, if it is a root with a
  *     small index.
  */
-export function smallRoot(node: Node): Node[] {
+export function smallRoot(node: Element): Element[] {
   if (!node.childNodes || node.childNodes.length === 0 ||
       !node.childNodes[0].childNodes) {
     return [];
@@ -42,8 +42,8 @@ export function smallRoot(node: Node): Node[] {
   if (!/^\d+$/.test(index)) {
     return [];
   }
-  let number = parseInt(index, 10);
-  return number > 1 && number <= 3 ? [node] : [];
+  let num = parseInt(index, 10);
+  return num > 1 && num <= 3 ? [node] : [];
 }
 
 
@@ -52,7 +52,7 @@ export function smallRoot(node: Node): Node[] {
  * @param node Subscript node.
  * @return The prefix string.
  */
-export function baselineVerbose(node: Node): string {
+export function baselineVerbose(node: Element): string {
   let baseline = MathspeakUtil.baselineVerbose(node);
   return baseline.replace(/\-$/, '');
 }
@@ -63,7 +63,7 @@ export function baselineVerbose(node: Node): string {
  * @param node Subscript node.
  * @return The prefix string.
  */
-export function baselineBrief(node: Node): string {
+export function baselineBrief(node: Element): string {
   let baseline = MathspeakUtil.baselineBrief(node);
   return baseline.replace(/\-$/, '');
 }
@@ -74,7 +74,7 @@ export function baselineBrief(node: Node): string {
  * @param node Tensor node.
  * @return The prefix string.
  */
-export function leftSuperscriptVerbose(node: Node): string {
+export function leftSuperscriptVerbose(node: Element): string {
   let leftIndex = MathspeakUtil.superscriptVerbose(node);
   return leftIndex.replace(/^exposant/, 'exposant gauche');
 }
@@ -85,7 +85,7 @@ export function leftSuperscriptVerbose(node: Node): string {
  * @param node Tensor node.
  * @return The prefix string.
  */
-export function leftSubscriptVerbose(node: Node): string {
+export function leftSubscriptVerbose(node: Element): string {
   let leftIndex = MathspeakUtil.subscriptVerbose(node);
   return leftIndex.replace(/^indice/, 'indice gauche');
 }
@@ -96,7 +96,7 @@ export function leftSubscriptVerbose(node: Node): string {
  * @param node Tensor node.
  * @return The prefix string.
  */
-export function leftSuperscriptBrief(node: Node): string {
+export function leftSuperscriptBrief(node: Element): string {
   let leftIndex = MathspeakUtil.superscriptBrief(node);
   return leftIndex.replace(/^sup/, 'sup gauche');
 }
@@ -107,7 +107,7 @@ export function leftSuperscriptBrief(node: Node): string {
  * @param node Tensor node.
  * @return The prefix string.
  */
-export function leftSubscriptBrief(node: Node): string {
+export function leftSubscriptBrief(node: Element): string {
   let leftIndex = MathspeakUtil.subscriptBrief(node);
   return leftIndex.replace(/^sub/, 'sub gauche');
 }

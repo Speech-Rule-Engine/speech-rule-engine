@@ -32,7 +32,7 @@ import * as SpeechGeneratorUtil from './speech_generator_util';
 export abstract class AbstractSpeechGenerator implements SpeechGenerator {
 
   /**
-   * The modality of this speech generator.
+   * @override
    */
   public modality: EnrichMathml.Attribute = EnrichMathml.addPrefix('speech');
 
