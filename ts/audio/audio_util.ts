@@ -162,8 +162,8 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
     let join = pers[EngineConst.personalityProps.JOIN];
     delete pers[EngineConst.personalityProps.JOIN];
     if (typeof pers[EngineConst.personalityProps.PAUSE] !== 'undefined') {
-      pause[EngineConst.personalityProps.PAUSE] =
-        pers[EngineConst.personalityProps.PAUSE];
+      pause = {[EngineConst.personalityProps.PAUSE]:
+               pers[EngineConst.personalityProps.PAUSE]};
       // TODO (TS): Look at that once more!
       delete pers[EngineConst.personalityProps.PAUSE];
     }

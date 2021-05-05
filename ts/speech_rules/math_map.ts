@@ -110,7 +110,6 @@ export namespace MathMap {
    * @param parse Method adding the rules.
    */
   export function retrieveFiles(file: string, parse: (p1: string) => MathMapJson) {
-    console.log(Engine.getInstance().mode);
     let async = Engine.getInstance().mode === EngineConst.Mode.ASYNC;
     if (async) {
       Engine.getInstance().mode = EngineConst.Mode.SYNC;
