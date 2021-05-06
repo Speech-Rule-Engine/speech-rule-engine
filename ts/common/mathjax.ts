@@ -21,21 +21,20 @@
  */
 
 
-import * as EngineExports from './engine';
-import {Engine} from './engine';
-import {Mode} from './engine';
-import {System} from './system';
+import {Engine, EngineConst} from './engine';
+import System from './system';
 
+
+declare var MathJax: any;
 
 /**
  * Integration function into MathJax.
  * This is written in MathJax <=2.6 style.
  */
 (function() {
-let ENGINE = System.getInstance();
 let SIGNAL = MathJax.Callback.Signal('Sre');
 MathJax.Extension.Sre = {
-  version: ENGINE.version,
+  version: System.version,
 
   signal: SIGNAL,
   ConfigSre: function() {
@@ -51,8 +50,8 @@ MathJax.Extension.Sre = {
   }
 };
 
-System.getInstance().setupEngine({
-  mode: Mode.HTTP,
+System.setupEngine({
+  mode: EngineConst.Mode.HTTP,
   json: MathJax.Ajax.config.path['SRE'] + '/mathmaps',
   xpath: MathJax.Ajax.config.path['SRE'] + '/wgxpath.install.js',
   semantics: true
