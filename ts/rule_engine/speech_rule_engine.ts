@@ -148,7 +148,7 @@ export class SpeechRuleEngine {
     let engine = Engine.getInstance();
     let result: AuditoryDescription[];
     Debugger.getInstance().output(
-        engine.mode !== EngineConst.Mode.HTTP ? node.toString() : node);
+        Engine.mode !== EngineConst.Mode.HTTP ? node.toString() : node);
     Grammar.getInstance().setAttribute(node);
     let rule = this.activeStore_.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
@@ -163,7 +163,7 @@ export class SpeechRuleEngine {
     }
     Debugger.getInstance().generateOutput(() => [
         'Apply Rule:', rule.name, rule.dynamicCstr.toString(),
-        (engine.mode !== EngineConst.Mode.HTTP ? node : node).toString()
+        (Engine.mode !== EngineConst.Mode.HTTP ? node : node).toString()
     ]);
     let context = rule.context || this.activeStore_.context;
     let components = rule.action.components;

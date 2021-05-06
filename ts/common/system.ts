@@ -101,7 +101,7 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
  */
 function configBlocks_(feature: {[key: string]: boolean|string}) {
   if (Engine.getInstance().config ||
-    Engine.getInstance().mode !== EngineConst.Mode.HTTP) {
+    Engine.mode !== EngineConst.Mode.HTTP) {
     return;
   }
   Engine.getInstance().config = true;
@@ -315,7 +315,7 @@ export function processFile(
     setTimeout(() => processFile(processor, input, opt_output), 100);
     return;
   }
-  if (Engine.getInstance().mode === EngineConst.Mode.SYNC) {
+  if (Engine.mode === EngineConst.Mode.SYNC) {
     processFileSync_(processor, input, opt_output);
     return;
   }
@@ -453,3 +453,6 @@ export function getStore() {
 }
 
 
+if (SystemExternal.documentSupported) {
+  Engine.mode = EngineConst.Mode.HTTP;
+}

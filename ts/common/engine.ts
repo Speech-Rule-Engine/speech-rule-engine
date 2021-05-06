@@ -26,6 +26,89 @@ import * as BrowserUtil from './browser_util';
 
 
 /**
+ *  Namespace for all Engine enum constants.
+ */
+export namespace EngineConst {
+
+  /**
+   * Defines the modes in which the engine can run.
+   */
+  export enum Mode {
+    SYNC = 'sync',
+    ASYNC = 'async',
+    HTTP = 'http'
+  }
+
+  // TODO (TS): Moves those to auditory_descriptions.
+  /**
+   * Defines the basic personality Properties available.
+   */
+  export enum personalityProps {
+    PITCH = 'pitch',
+    RATE = 'rate',
+    VOLUME = 'volume',
+    PAUSE = 'pause',
+    JOIN = 'join'
+  }
+
+  export const personalityPropList: personalityProps[] = [
+    personalityProps.PITCH, personalityProps.RATE, personalityProps.VOLUME,
+    personalityProps.PAUSE, personalityProps.JOIN
+  ];
+
+  /**
+   * Defines to what level the engine enriches expressions with speech string
+   * attributes.
+   */
+  export enum Speech {NONE = 'none', SHALLOW = 'shallow', DEEP = 'deep'}
+
+
+  /**
+   * Different markup formats for the speech output.
+   * Not all are supported yet.
+   */
+  export enum Markup {
+    NONE = 'none',
+    PUNCTUATION = 'punctuation',
+    SSML = 'ssml',
+    SSML_STEP = 'ssml_step',
+    ACSS = 'acss',
+    SABLE = 'sable',
+    VOICEXML = 'voicexml'
+  }
+
+  /**
+   * Maps domains to their default style.
+   */
+  export const DOMAIN_TO_STYLES: {[key: string]: string} = {
+    'mathspeak': 'default',
+    'clearspeak': 'default'
+  };
+
+}
+
+
+/**
+ * The base error class for signaling SRE errors.
+ * @param msg The error message.
+ */
+export class SREError extends Error {
+
+  /**
+   * @override
+   */
+  public name = 'SRE Error';
+
+  /**
+   * @param message The error Message.
+   */
+  constructor(public message: string = '') {
+    super();
+  }
+
+}
+
+/**
  * Initializes the basic Speech engine and contains some global context.
  *
  */
@@ -44,6 +127,11 @@ export class Engine {
     'markup', 'style', 'domain', 'speech', 'walker', 'locale', 'modality',
     'rate', 'rules', 'prune'
   ];
+
+  /**
+   * The mode in which the engine is running (sync, async, http).
+   */
+  public static mode: EngineConst.Mode = EngineConst.Mode.SYNC;
 
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Engine;
@@ -82,11 +170,6 @@ export class Engine {
    * Current modality.
    */
   public modality = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY];
-
-  /**
-   * The mode in which the engine is running (sync, async, http).
-   */
-  public mode: EngineConst.Mode = EngineConst.Mode.SYNC;
 
   /**
    * The level to which speech attributes are added to enriched elements
@@ -279,90 +362,6 @@ export class Engine {
         new Dcstr.DynamicCstrParser(Dcstr.DynamicCstr.DEFAULT_ORDER);
     this.parser = this.defaultParser;
     this.dynamicCstr = Dcstr.DynamicCstr.defaultCstr();
-  }
-
-}
-
-
-/**
- *  Namespace for all Engine enum constants.
- */
-export namespace EngineConst {
-
-  /**
-   * Defines the modes in which the engine can run.
-   */
-  export enum Mode {
-    SYNC = 'sync',
-    ASYNC = 'async',
-    HTTP = 'http'
-  }
-
-  // TODO (TS): Moves those to auditory_descriptions.
-  /**
-   * Defines the basic personality Properties available.
-   */
-  export enum personalityProps {
-    PITCH = 'pitch',
-    RATE = 'rate',
-    VOLUME = 'volume',
-    PAUSE = 'pause',
-    JOIN = 'join'
-  }
-
-  export const personalityPropList: personalityProps[] = [
-    personalityProps.PITCH, personalityProps.RATE, personalityProps.VOLUME,
-    personalityProps.PAUSE, personalityProps.JOIN
-  ];
-
-  /**
-   * Defines to what level the engine enriches expressions with speech string
-   * attributes.
-   */
-  export enum Speech {NONE = 'none', SHALLOW = 'shallow', DEEP = 'deep'}
-
-
-  /**
-   * Different markup formats for the speech output.
-   * Not all are supported yet.
-   */
-  export enum Markup {
-    NONE = 'none',
-    PUNCTUATION = 'punctuation',
-    SSML = 'ssml',
-    SSML_STEP = 'ssml_step',
-    ACSS = 'acss',
-    SABLE = 'sable',
-    VOICEXML = 'voicexml'
-  }
-
-  /**
-   * Maps domains to their default style.
-   */
-  export const DOMAIN_TO_STYLES: {[key: string]: string} = {
-    'mathspeak': 'default',
-    'clearspeak': 'default'
-  };
-
-}
-
-
-/**
- * The base error class for signaling SRE errors.
- * @param msg The error message.
- */
-export class SREError extends Error {
-
-  /**
-   * @override
-   */
-  public name = 'SRE Error';
-
-  /**
-   * @param message The error Message.
-   */
-  constructor(public message: string = '') {
-    super();
   }
 
 }

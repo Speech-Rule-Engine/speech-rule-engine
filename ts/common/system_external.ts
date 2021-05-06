@@ -40,23 +40,21 @@ namespace SystemExternal {
   export function extRequire(library: string): any {
     if (typeof process !== 'undefined' && typeof require !== 'undefined') {
       return require(library);
+      // Davide: How did you get around the global require problem?
     }
     return null;
   }
+
+  export const windowSupported: boolean = (
+    () => !(typeof window === 'undefined')
+  )();
 
   /**
    * Check if DOM document is already supported in this JS.
    * @return True if document is defined.
    */
   export const documentSupported: boolean =
-    (() => !(typeof document === 'undefined'))();
-
-  /**
-   * Process library.
-   */
-  export const nodeProcess: any = function() {
-    return SystemExternal.extRequire('process');
-  }();
+    (() => windowSupported && !(typeof window.document === 'undefined'))();
 
   /**
    * Xmldom library.
@@ -107,9 +105,9 @@ namespace SystemExternal {
    * Path to JSON files.
    */
   export let jsonPath = function() {
-    return (SystemExternal.nodeProcess && typeof global !== 'undefined' ?
-      SystemExternal.nodeProcess.env.SRE_JSON_PATH ||
-      global.SRE_JSON_PATH || SystemExternal.nodeProcess.cwd() :
+    return (process && typeof global !== 'undefined' ?
+      process.env.SRE_JSON_PATH ||
+      global.SRE_JSON_PATH || process.cwd() :
       SystemExternal.url) +
       '/';
   }();
