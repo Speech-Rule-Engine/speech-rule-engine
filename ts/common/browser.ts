@@ -21,7 +21,7 @@
 
 
 import {EngineConst} from './engine';
-import System from './system';
+import * as System from './system';
 
 
 /**

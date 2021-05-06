@@ -109,7 +109,8 @@ export namespace MathMap {
    * @param file The target locale.
    * @param parse Method adding the rules.
    */
-  export function retrieveFiles(file: string, parse: (p1: string) => MathMapJson) {
+  export function retrieveFiles(
+      file: string, parse: (p1: string) => MathMapJson) {
     let async = Engine.getInstance().mode === EngineConst.Mode.ASYNC;
     if (async) {
       Engine.getInstance().mode = EngineConst.Mode.SYNC;

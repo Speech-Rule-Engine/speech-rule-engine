@@ -21,8 +21,8 @@
 
 
 import {Debugger} from './debugger';
-import {SREError, EngineConst} from './engine';
-import System from './system';
+import {EngineConst, SREError} from './engine';
+import * as System from './system';
 import SystemExternal from './system_external';
 import {Axis, DynamicCstr} from '../rule_engine/dynamic_cstr';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
@@ -30,6 +30,7 @@ import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
 import {ProcessorFactory} from './processors';
 import {MathCompoundStore} from '../rule_engine/math_simple_store';
 
+import * as process from 'process';
 
 export class Cli {
 
@@ -149,7 +150,7 @@ export class Cli {
   execute(input: string) {
     let options = SystemExternal.commander.opts();
     this.runProcessors_((proc, file) => {
-      System.processFile(proc, file, options.output);
+      System.file.processFile(proc, file, options.output);
     }, input);
   }
 
@@ -173,7 +174,7 @@ export class Cli {
     } catch (err) {
       console.error(err.name + ': ' + err.message);
       Debugger.getInstance().exit(function() {
-        SystemExternal.nodeProcess.exit(1);
+        process.exit(1);
       });
     }
   }
@@ -186,12 +187,12 @@ export class Cli {
    */
   readline() {
     let options = SystemExternal.commander.opts();
-    SystemExternal.nodeProcess.stdin.setEncoding('utf8');
+    process.stdin.setEncoding('utf8');
     let inter = SystemExternal.extRequire('readline').createInterface({
-      input: SystemExternal.nodeProcess.stdin,
+      input: process.stdin,
       output: options.output ?
           SystemExternal.fs.createWriteStream(options.output) :
-          SystemExternal.nodeProcess.stdout
+          process.stdout
     });
     let input = '';
     inter.on('line', ((expr: string) => {
@@ -307,7 +308,7 @@ export class Cli {
               this.enumerate();
               System.exit(0);
             }).bind(this))
-        .parse(SystemExternal.nodeProcess.argv);
+        .parse(process.argv);
     System.setupEngine(this.setup);
     let options = commander.opts();
     if (options.verbose) {
@@ -327,6 +328,6 @@ export class Cli {
   }
 }
 
-if (SystemExternal.nodeProcess && SystemExternal.nodeProcess.env.SRE_TOP_PATH) {
+if (process && process.env.SRE_TOP_PATH) {
   (new Cli()).commandLine();
 }

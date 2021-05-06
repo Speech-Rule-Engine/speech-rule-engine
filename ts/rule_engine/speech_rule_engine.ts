@@ -93,7 +93,7 @@ export class SpeechRuleEngine {
    * @param modality The modality.
    * @return The generated rule store.
    */
-  private storeFactory_(modality: string): BaseRuleStore {
+  public storeFactory(modality: string): BaseRuleStore {
     // TODO (TS): Not sure how to get the constructors directly
     // let constructors = {braille: BrailleStore, speech: MathStore};
     // return new (constructors[modality] || MathStore)();
@@ -497,7 +497,7 @@ export class SpeechRuleEngine {
       set.functions = SpeechRules.getStore(
           set.locale, set.modality, set.domain);
     }
-    let store = this.storeFactory_(set.modality);
+    let store = this.storeFactory(set.modality);
     store.parse(set);
     store.initialize();
     store.getSpeechRules().forEach(x => this.activeStore_.trie.addRule(x));

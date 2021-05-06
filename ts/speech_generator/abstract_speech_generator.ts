@@ -21,7 +21,7 @@
  */
 
 
-import System from '../common/system';
+import * as System from '../common/system';
 import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
 import {AxisMap} from '../rule_engine/dynamic_cstr';
 import {RebuildStree} from '../walker/rebuild_stree';

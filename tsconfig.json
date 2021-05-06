@@ -14,7 +14,9 @@
     "alwaysStrict": true,
     "sourceMap": true,
     "lib": ["es6", "dom", "es2017"],
-    "typeRoots": [],
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
     "outDir": "js"
   },
   "include": ["ts/**/*"],
