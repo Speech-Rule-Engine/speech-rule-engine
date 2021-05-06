@@ -72,7 +72,7 @@ export function combinePostfixIndex(postfix: string, index: string): string {
  * @return The localized font name.
  */
 export function localFont(font: string): string {
-  return extractString(Locale.FONT[font]);
+  return extractString(Locale.FONT[font], font);
 }
 
 
@@ -82,7 +82,7 @@ export function localFont(font: string): string {
  * @return The localized role name.
  */
 export function localRole(role: string): string {
-  return extractString(Locale.ROLE[role]);
+  return extractString(Locale.ROLE[role], role);
 }
 
 
@@ -92,5 +92,5 @@ export function localRole(role: string): string {
  * @return The localized enclose name.
  */
 export function localEnclose(enclose: string): string {
-  return extractString(Locale.ENCLOSE[enclose]);
+  return extractString(Locale.ENCLOSE[enclose], enclose);
 }

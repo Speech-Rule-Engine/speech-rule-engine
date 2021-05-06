@@ -391,6 +391,7 @@ function juxtapositionPrePost(partition: SemanticUtil.Partition):
     let rel = null;
     let collect = [];
     while (partition.comp.length) {
+      collect = [];
       if (next.length) {
         if (rel) {
           rels.push(rel);
@@ -448,7 +449,9 @@ function convertPrePost(
         return rel;
       }
       rel = collect.shift();
-      next.unshift(processor['prefixNode_'](next.shift(), collect));
+    let result = processor['prefixNode_'](next.shift(), collect);
+    next.unshift(result);
+      // next.unshift(processor['prefixNode_'](next.shift(), collect));
       return rel;
     }
     if (prevExists) {

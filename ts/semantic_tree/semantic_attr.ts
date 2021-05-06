@@ -1582,11 +1582,11 @@ export namespace SemanticAttr {
    * @return {boolean} True if the fences are matching.
    */
   export function isMatchingFence(open: string, close: string): boolean {
-    if (this.neutralFences.indexOf(open) !== -1) {
+    if (neutralFences.indexOf(open) !== -1) {
       return open === close;
     }
-    return this.openClosePairs[open] === close ||
-        this.topBottomPairs[open] === close;
+    return openClosePairs[open] === close ||
+        topBottomPairs[open] === close;
   }
 
 

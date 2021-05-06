@@ -93,9 +93,10 @@ export function postfixCombiner(
  * @param combiner The combined message
  * @return The name
  */
-export function extractString(combiner: string | [string, Processor]) {
+export function extractString(combiner: string | [string, Processor],
+                              fallback: string) {
   if (combiner === undefined) {
-    combiner = combiner || '';
+    return fallback;
   }
-  return typeof combiner === 'string' ? combiner : combiner[0];
+  return (typeof combiner === 'string') ? combiner : combiner[0];
 }

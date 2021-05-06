@@ -186,7 +186,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  getXml() {
+  public getXml() {
     if (!this.xml_) {
       this.xml_ = DomUtil.parseInput(this.xmlString_);
     }
@@ -197,7 +197,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  getRebuilt() {
+  public getRebuilt() {
     if (!this.rebuilt_) {
       this.rebuilt_ = this.rebuildStree();
     }
@@ -208,7 +208,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  isActive() {
+  public isActive() {
     return this.active_;
   }
 
@@ -224,7 +224,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  activate() {
+  public activate() {
     if (this.isActive()) {
       return;
     }
@@ -236,7 +236,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  deactivate() {
+  public deactivate() {
     if (!this.isActive()) {
       return;
     }
@@ -249,7 +249,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  getFocus(update = false) {
+  public getFocus(update = false) {
     if (!this.focus_) {
       this.focus_ = Focus.factory(
           this.rootId, [this.rootId], this.getRebuilt(), this.node);
@@ -264,7 +264,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  setFocus(focus: Focus) {
+  public setFocus(focus: Focus) {
     this.focus_ = focus;
   }
 
@@ -272,7 +272,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  getDepth() {
+  public getDepth() {
     return this.levels.depth() - 1;
   }
 
@@ -280,7 +280,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @return True if modality of walker's speech generator is speech.
    */
-  isSpeech(): boolean {
+  public isSpeech(): boolean {
     return this.generator.modality === Attribute.SPEECH;
   }
 
@@ -288,7 +288,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  speech() {
+  public speech() {
     let nodes = this.getFocus().getDomNodes();
     if (!nodes.length) {
       return '';
@@ -321,13 +321,12 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Merges a prefix and possibly a postfix into a list of speech strings.
+   *
    * @param speech The speech strings.
-   * @param opt_pre A list of strings that should precede the
-   *     prefix.
+   * @param pre An optional list of strings that should precede the prefix.
    * @return The merged speech string.
    */
-  private mergePrefix_(speech: string[], opt_pre?: string[]): string {
-    let pre = opt_pre || [];
+  private mergePrefix_(speech: string[], pre: string[] = []): string {
     let prefix = this.isSpeech() ? this.prefix_() : '';
     if (prefix) {
       speech.unshift(prefix);
@@ -371,7 +370,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  move(key: KeyCode) {
+  public move(key: KeyCode) {
     let direction = this.keyMapping.get(key);
     if (!direction) {
       return null;
@@ -456,8 +455,8 @@ export abstract class AbstractWalker<T> implements Walker {
     let snodes = this.getFocus().getSemanticNodes();
     let prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);
     let audio = [
-      new AuditoryDescription({text: prefix, personality: {}}),
       new AuditoryDescription({text: level, personality: {}}),
+      new AuditoryDescription({text: prefix, personality: {}}),
       new AuditoryDescription({text: expand, personality: {}})];
     Grammar.getInstance().setParameter('depth', oldDepth);
     // TODO (TS): Make sure this is really a string to span.
@@ -482,7 +481,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @param id The id of a semantic node.
    * @return The node for that id.
    */
-  getBySemanticId(id: string): Element {
+  public getBySemanticId(id: string): Element {
     return WalkerUtil.getBySemanticId(this.node, id);
   }
 
@@ -490,7 +489,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @return The id of the primary node of the current focus.
    */
-  primaryId(): string {
+  public primaryId(): string {
     return this.getFocus().getSemanticPrimary().id.toString();
   }
 
@@ -499,7 +498,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Expands or collapses a node if it is actionable.
    * @return New focus element if actionable. O/w old focus.
    */
-  expand(): Focus {
+  public expand(): Focus {
     let primary = this.getFocus().getDomPrimary();
     let expandable = this.actionable_(primary);
     if (!expandable) {
@@ -539,7 +538,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @param node The (rendered) node under consideration.
    * @return True if the node is collapsible.
    */
-  collapsible(node: Element): boolean {
+  public collapsible(node: Element): boolean {
     let parent = !!this.actionable_(node);
     return parent && node.childNodes.length > 0;
   }
@@ -548,7 +547,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * Restores the previous state for a node.
    */
-  restoreState() {
+  public restoreState() {
     if (!this.highlighter) {
       return;
     }
@@ -579,7 +578,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * Updates the walker's focus by recomputing the DOM elements.
    */
-  updateFocus() {
+  public updateFocus() {
     this.setFocus(Focus.factory(
         this.getFocus().getSemanticPrimary().id.toString(),
         this.getFocus().getSemanticNodes().map((x) => x.id.toString()), this.getRebuilt(),
@@ -607,7 +606,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Computes the previous level by Returning the id of the parent.
    * @return The previous level.
    */
-  previousLevel(): string|null {
+  public previousLevel(): string|null {
     let dnode = this.getFocus().getDomPrimary();
     return dnode ? WalkerUtil.getAttribute(dnode, Attribute.PARENT) :
                    this.getFocus().getSemanticPrimary().parent.id.toString();
@@ -618,7 +617,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Computes the next lower level from children and content.
    * @return The next lower level.
    */
-  nextLevel(): T[] {
+  public nextLevel(): T[] {
     let dnode = this.getFocus().getDomPrimary();
     let children;
     let content;
@@ -651,7 +650,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return A focus containing only this node and the other
    *     properties of the old focus.
    */
-  singletonFocus(id: string): Focus {
+  public singletonFocus(id: string): Focus {
     return this.focusFromId(id, [id]);
   }
 
@@ -662,7 +661,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @param ids The semantic id of the node list.
    * @return The new focus.
    */
-  focusFromId(id: string, ids: string[]): Focus {
+  public focusFromId(id: string, ids: string[]): Focus {
     return Focus.factory(id, ids, this.getRebuilt(), this.node);
   }
 
@@ -737,7 +736,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @param opt_undo Flag specifying if this is an undo jump point.
    * @return The new focus.
    */
-  virtualize(opt_undo?: boolean): Focus {
+  public virtualize(opt_undo?: boolean): Focus {
     this.cursors.push({
       focus: this.getFocus(),
       levels: this.levels,
@@ -752,7 +751,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Returns to previous cursor setting.
    * @return The previous focus.
    */
-  previous(): Focus {
+  public previous(): Focus {
     let previous = this.cursors.pop();
     if (!previous) {
       return this.getFocus();
@@ -766,7 +765,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * Undoes a series of virtual cursor generations.
    * @return A previous focus.
    */
-  undo(): Focus {
+  public undo(): Focus {
     let previous;
     do {
       previous = this.cursors.pop();
@@ -782,7 +781,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * @override
    */
-  update(options: AxisMap) {
+  public update(options: AxisMap) {
     this.generator.setOptions(options);
     System.setupEngine(options);
     SpeechGeneratorFactory.generator('Tree').getSpeech(
@@ -797,7 +796,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The current focus. Either the old one or if cycling was
    *     possible a cloned focus.
    */
-  nextRules(): Focus {
+  public nextRules(): Focus {
     let options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();
@@ -819,7 +818,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @param style The current style name.
    * @return The new style name.
    */
-  nextStyle(domain: string, style: string): string {
+  public nextStyle(domain: string, style: string): string {
     if (domain === 'mathspeak') {
       let styles = ['default', 'brief', 'sbrief'];
       let index = styles.indexOf(style);
@@ -859,7 +858,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The current focus. Either the old one or if cycling was
    *     possible a cloned focus.
    */
-  previousRules(): Focus {
+  public previousRules(): Focus {
     let options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();
@@ -874,7 +873,7 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * Refocuses in case levels have been altered outside the walker's control.
    */
-  refocus() {
+  public refocus() {
     let focus = this.getFocus();
     let last;
     while (!focus.getNodes().length) {

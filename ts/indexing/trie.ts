@@ -81,7 +81,7 @@ export class Trie {
    * @param root The node considered as root.
    * @return Set of speech rules in the trie.
    */
-  private static collectRules_(root: TrieNode): SpeechRule[] {
+  public static collectRules_(root: TrieNode): SpeechRule[] {
     let rules = [];
     let explore = [root];
     while (explore.length) {
