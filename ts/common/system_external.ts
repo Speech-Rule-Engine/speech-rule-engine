@@ -25,7 +25,6 @@
 
 import {Variables} from './variables';
 
-
 namespace SystemExternal {
 
   declare var global: any;
@@ -39,8 +38,8 @@ namespace SystemExternal {
    */
   export function extRequire(library: string): any {
     if (typeof process !== 'undefined' && typeof require !== 'undefined') {
-      return require(library);
-      // Davide: How did you get around the global require problem?
+      const nodeRequire = eval('require');
+      return nodeRequire(library);
     }
     return null;
   }
@@ -107,7 +106,8 @@ namespace SystemExternal {
   export let jsonPath = function() {
     return (process && typeof global !== 'undefined' ?
       process.env.SRE_JSON_PATH ||
-      global.SRE_JSON_PATH || process.cwd() :
+      global.SRE_JSON_PATH || (typeof __dirname !== 'undefined' ?
+        __dirname + '/mathmaps' : process.cwd()) :
       SystemExternal.url) +
       '/';
   }();

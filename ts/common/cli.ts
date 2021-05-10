@@ -30,9 +30,10 @@ import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
 import {ProcessorFactory} from './processors';
 import {MathCompoundStore} from '../rule_engine/math_simple_store';
 
-import * as process from 'process';
 
 export class Cli {
+
+  process: any = SystemExternal.extRequire('process');
 
   setup: {[key: string]: string|boolean};
 
@@ -174,7 +175,7 @@ export class Cli {
     } catch (err) {
       console.error(err.name + ': ' + err.message);
       Debugger.getInstance().exit(function() {
-        process.exit(1);
+        this.process.exit(1);
       });
     }
   }
@@ -187,12 +188,12 @@ export class Cli {
    */
   readline() {
     let options = SystemExternal.commander.opts();
-    process.stdin.setEncoding('utf8');
+    this.process.stdin.setEncoding('utf8');
     let inter = SystemExternal.extRequire('readline').createInterface({
-      input: process.stdin,
+      input: this.process.stdin,
       output: options.output ?
           SystemExternal.fs.createWriteStream(options.output) :
-          process.stdout
+          this.process.stdout
     });
     let input = '';
     inter.on('line', ((expr: string) => {
@@ -308,7 +309,7 @@ export class Cli {
               this.enumerate();
               System.exit(0);
             }).bind(this))
-        .parse(process.argv);
+        .parse(this.process.argv);
     System.setupEngine(this.setup);
     let options = commander.opts();
     if (options.verbose) {
@@ -326,8 +327,4 @@ export class Cli {
       System.exit(0);
     });
   }
-}
-
-if (process && process.env.SRE_TOP_PATH) {
-  (new Cli()).commandLine();
 }
