@@ -28,12 +28,11 @@ import {Focus} from './focus';
 import {Levels} from './levels';
 
 
-
 export class SemanticWalker extends AbstractWalker<Focus> {
   /**
    * Caching of levels.
    */
-  levels: Levels<Focus> = null;
+  public levels: Levels<Focus> = null;
 
   /**
    * @override
@@ -50,7 +49,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
   /**
    * @override
    */
-  initLevels(): Levels<Focus> {
+  public initLevels(): Levels<Focus> {
     let levels = new Levels();
     levels.push([this.getFocus()]);
     return levels as Levels<Focus>;
@@ -60,7 +59,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
   /**
    * @override
    */
-  up() {
+  public up() {
     super.up();
     let parent = this.previousLevel();
     if (!parent) {
@@ -79,7 +78,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
   /**
    * @override
    */
-  down() {
+  public down() {
     super.down();
     let children = this.nextLevel();
     if (children.length === 0) {
@@ -93,7 +92,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
   /**
    * @override
    */
-  combineContentChildren(type: SemanticType, role: SemanticRole, content: string[], children: string[]): Focus[] {
+  public combineContentChildren(type: SemanticType, role: SemanticRole, content: string[], children: string[]): Focus[] {
     switch (type) {
       case SemanticType.RELSEQ:
       case SemanticType.INFIXOP:
@@ -143,7 +142,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
    * @param acc Result accumulator.
    * @return The list of focuses with paired nodes.
    */
-  combinePunctuations(
+  public combinePunctuations(
       children: string[], content: string[], prepunct: string[],
       acc: Focus[]): Focus[] {
     if (children.length === 0) {
@@ -179,7 +178,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
    * @param content Content nodes of length n - 1.
    * @return The list of focuses with paired nodes.
    */
-  makePairList(children: string[], content: string[]): Focus[] {
+  public makePairList(children: string[], content: string[]): Focus[] {
     if (children.length === 0) {
       return [];
     }
@@ -197,7 +196,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
   /**
    * @override
    */
-  left() {
+  public left() {
     super.left();
     let index = this.levels.indexOf(this.getFocus());
     if (index === null) {
@@ -211,7 +210,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
   /**
    * @override
    */
-  right() {
+  public right() {
     super.right();
     let index = this.levels.indexOf(this.getFocus());
     if (index === null) {
@@ -225,7 +224,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
   /**
    * @override
    */
-  findFocusOnLevel(id: number) {
+  public findFocusOnLevel(id: number) {
     let focus = this.levels.find(x => {
       let pid = x.getSemanticPrimary().id;
       return pid === id;

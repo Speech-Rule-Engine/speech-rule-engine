@@ -31,25 +31,20 @@ export class Debugger {
    */
   private isActive_: boolean = false;
   private outputFunction_: (p1: string) => any = console.info;
-  
+
   /**
    * Output stream of the debug file.
    */
   private stream_: any | null = null;
-  
-  /**
-   * Private constructor.
-   */
-  private constructor() { }
 
   /**
    * @return The debugger object.
    */
-  static getInstance(): Debugger {
+  public static getInstance(): Debugger {
     Debugger.instance = Debugger.instance || new Debugger();
     return Debugger.instance;
   }
-  
+
   /**
    * Flag for the debug mode of the speech rule engine.
    * @param opt_file A filename to log the debug information.
@@ -59,38 +54,6 @@ export class Debugger {
       this.startDebugFile_(opt_file);
     }
     this.isActive_ = true;
-  }
-
-
-  /**
-   * Initialises the debug file.
-   * This is handled asynchronously.
-   * @param filename The filename to route debug output to.
-   */
-  private startDebugFile_(filename: string) {
-    this.stream_ = SystemExternal.fs.createWriteStream(filename);
-    this.outputFunction_ = function(...args: string[]) {
-      this.stream_.write(args.join(' '));
-      this.stream_.write('\n');
-    }.bind(this);
-    this.stream_.on('error', function(_error: Error) {
-      console.info('Invalid log file. Debug information sent to console.');
-      this.outputFunction_ = console.info;
-    }.bind(this));
-    this.stream_.on('finish', function() {
-      console.info('Finalizing debug file.');
-    });
-  }
-
-
-  /**
-   * Writes the debug output to the debuggers current stream.
-   * @param outputList List of output strings.
-   */
-  private output_(outputList: string[]) {
-    this.outputFunction_.apply(
-        console.info === this.outputFunction_ ? console : this.outputFunction_,
-        ['Speech Rule Engine Debugger:'].concat(outputList));
   }
 
 
@@ -128,6 +91,43 @@ export class Debugger {
     if (this.isActive_ && this.stream_) {
       this.stream_.end('', '', callback);
     }
+  }
+
+  /**
+   * Private constructor.
+   */
+  private constructor() { }
+
+
+  /**
+   * Initialises the debug file.
+   * This is handled asynchronously.
+   * @param filename The filename to route debug output to.
+   */
+  private startDebugFile_(filename: string) {
+    this.stream_ = SystemExternal.fs.createWriteStream(filename);
+    this.outputFunction_ = function(...args: string[]) {
+      this.stream_.write(args.join(' '));
+      this.stream_.write('\n');
+    }.bind(this);
+    this.stream_.on('error', function(_error: Error) {
+      console.info('Invalid log file. Debug information sent to console.');
+      this.outputFunction_ = console.info;
+    }.bind(this));
+    this.stream_.on('finish', function() {
+      console.info('Finalizing debug file.');
+    });
+  }
+
+
+  /**
+   * Writes the debug output to the debuggers current stream.
+   * @param outputList List of output strings.
+   */
+  private output_(outputList: string[]) {
+    this.outputFunction_.apply(
+        console.info === this.outputFunction_ ? console : this.outputFunction_,
+        ['Speech Rule Engine Debugger:'].concat(outputList));
   }
 }
 

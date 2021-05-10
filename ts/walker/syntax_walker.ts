@@ -20,13 +20,12 @@
  */
 
 
+import {interleaveLists} from '../common/base_util';
 import {Highlighter} from '../highlighter/highlighter';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SpeechGenerator} from '../speech_generator/speech_generator';
 import {AbstractWalker} from './abstract_walker';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {interleaveLists} from '../common/base_util';
 import {Levels} from './levels';
-
 
 
 /**
@@ -36,7 +35,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
   /**
    * Caching of levels.
    */
-  levels: Levels<string> = null;
+  public levels: Levels<string> = null;
   constructor(
       public node: Element, public generator: SpeechGenerator,
       public highlighter: Highlighter, xml: string) {
@@ -49,7 +48,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
   /**
    * @override
    */
-  initLevels() {
+  public initLevels() {
     let levels = new Levels();
     levels.push([this.primaryId()]);
     return levels as Levels<string>;
@@ -59,7 +58,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
   /**
    * @override
    */
-  up() {
+  public up() {
     super.up();
     let parent = this.previousLevel();
     if (!parent) {
@@ -73,7 +72,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
   /**
    * @override
    */
-  down() {
+  public down() {
     super.down();
     let children = this.nextLevel();
     if (children.length === 0) {
@@ -90,7 +89,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
   /**
    * @override
    */
-  combineContentChildren(type: SemanticType, role: SemanticRole, content: string[], children: string[]): string[] {
+  public combineContentChildren(type: SemanticType, role: SemanticRole, content: string[], children: string[]): string[] {
     switch (type) {
       case SemanticType.RELSEQ:
       case SemanticType.INFIXOP:
@@ -127,7 +126,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
   /**
    * @override
    */
-  left() {
+  public left() {
     super.left();
     let index = this.levels.indexOf(this.primaryId());
     if (index === null) {
@@ -141,7 +140,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
   /**
    * @override
    */
-  right() {
+  public right() {
     super.right();
     let index = this.levels.indexOf(this.primaryId());
     if (index === null) {
@@ -155,7 +154,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
   /**
    * @override
    */
-  findFocusOnLevel(id: number) {
+  public findFocusOnLevel(id: number) {
     return this.singletonFocus(id.toString());
   }
 }

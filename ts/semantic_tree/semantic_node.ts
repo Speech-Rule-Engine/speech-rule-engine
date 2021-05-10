@@ -121,6 +121,71 @@ export class SemanticNode {
    */
   public nobreaking: boolean = false;
 
+
+  /**
+   * Generates a semantic node from its XML representation.
+   * @param xml The XML representation.
+   * @return The generated semantic node.
+   */
+  public static fromXml(xml: Element): SemanticNode {
+    let id = parseInt(xml.getAttribute('id'), 10);
+    let node = new SemanticNode(id);
+    node.type = (xml.tagName as SemanticType);
+    SemanticNode.setAttribute(node, xml, 'role');
+    SemanticNode.setAttribute(node, xml, 'font');
+    SemanticNode.setAttribute(node, xml, 'embellished');
+    SemanticNode.setAttribute(node, xml, 'fencepointer', 'fencePointer');
+    if (xml.getAttribute('annotation')) {
+      node.parseAnnotation(xml.getAttribute('annotation'));
+    }
+    SemanticUtil.addAttributes(node, xml);
+    SemanticNode.processChildren(node, xml);
+    return node;
+  }
+
+
+  /**
+   * Adds the given attributed to the semantic node if it exists.
+   * @param node The semantic node.
+   * @param xml The XML element representation of the node.
+   * @param attribute The name of the attribute.
+   * @param opt_name Optionally the field name for the attribute in the
+   *     semantic node if it differs.
+   */
+  private static setAttribute(
+      node: SemanticNode, xml: Element, attribute: string, opt_name?: string) {
+    opt_name = opt_name || attribute;
+    let value = xml.getAttribute(attribute);
+    if (value) {
+      /// TODO (TS): Sort this out.
+      (node as any)[opt_name] = value;
+    }
+  }
+
+
+  /**
+   * Processes the children of the XML node to set text content, child nodes and
+   * content nodes of the semantic node.
+   * @param node The semantic node.
+   * @param xml The XML element representation of the node.
+   */
+  private static processChildren(node: SemanticNode, xml: Element) {
+    for (let child of DomUtil.toArray(xml.childNodes)) {
+      if (child.nodeType === DomUtil.NodeType.TEXT_NODE) {
+        node.textContent = child.textContent;
+        continue;
+      }
+      let children =
+          DomUtil.toArray(child.childNodes).map(SemanticNode.fromXml);
+      children.forEach(x => x.parent = node);
+      if (DomUtil.tagName(child) === 'CONTENT') {
+        node.contentNodes = children;
+      } else {
+        node.childNodes = children;
+      }
+    }
+  }
+
   /**
    * @param id The id number.
    */
@@ -407,6 +472,65 @@ export class SemanticNode {
 
 
   /**
+   * Adds a new annotation annotation if annotation is not empty.
+   * @param domain The domain.
+   * @param annotation The annotation.
+   */
+  public addAnnotation(domain: string, annotation: string) {
+    if (annotation) {
+      this.addAnnotation_(domain, annotation);
+    }
+  }
+
+
+  /**
+   * Retrieves the annotation annotations for a particular domain.
+   * @param domain The domain.
+   * @return The annotation annotations.
+   */
+  public getAnnotation(domain: string): string[] {
+    let content = this.annotation[domain];
+    return content ? content : [];
+  }
+
+
+  /**
+   * Checks if a node has a particular annotation.
+   * @param domain The domain.
+   * @param annotation The annotation.
+   * @return True if the annotation is contained.
+   */
+  public hasAnnotation(domain: string, annotation: string): boolean {
+    let content = this.annotation[domain];
+    if (!content) {
+      return false;
+    }
+    return content.indexOf(annotation) !== -1;
+  }
+
+
+  /**
+   * Parses a annotation string as given, for example, in an attribute.
+   * @param stateStr The state string for the annotation.
+   */
+  public parseAnnotation(stateStr: string) {
+    let annotations = stateStr.split(';');
+    for (let i = 0, l = annotations.length; i < l; i++) {
+      let annotation = annotations[i].split(':');
+      this.addAnnotation(annotation[0], annotation[1]);
+    }
+  }
+
+
+  /**
+   * @return The semantic meaning of the node.
+   */
+  public meaning(): SemanticMeaning {
+    return {type: this.type, role: this.role, font: this.font};
+  }
+
+
+  /**
    * Adds attributes to the XML representation of the current node.
    * @param node The XML node.
    */
@@ -483,18 +607,6 @@ export class SemanticNode {
 
 
   /**
-   * Adds a new annotation annotation if annotation is not empty.
-   * @param domain The domain.
-   * @param annotation The annotation.
-   */
-  public addAnnotation(domain: string, annotation: string) {
-    if (annotation) {
-      this.addAnnotation_(domain, annotation);
-    }
-  }
-
-
-  /**
    * Adds a new annotation annotation.
    * @param domain The domain.
    * @param annotation The annotation.
@@ -505,118 +617,6 @@ export class SemanticNode {
       content.push(annotation);
     } else {
       this.annotation[domain] = [annotation];
-    }
-  }
-
-
-  /**
-   * Retrieves the annotation annotations for a particular domain.
-   * @param domain The domain.
-   * @return The annotation annotations.
-   */
-  public getAnnotation(domain: string): string[] {
-    let content = this.annotation[domain];
-    return content ? content : [];
-  }
-
-
-  /**
-   * Checks if a node has a particular annotation.
-   * @param domain The domain.
-   * @param annotation The annotation.
-   * @return True if the annotation is contained.
-   */
-  public hasAnnotation(domain: string, annotation: string): boolean {
-    let content = this.annotation[domain];
-    if (!content) {
-      return false;
-    }
-    return content.indexOf(annotation) !== -1;
-  }
-
-
-  /**
-   * Parses a annotation string as given, for example, in an attribute.
-   * @param stateStr The state string for the annotation.
-   */
-  public parseAnnotation(stateStr: string) {
-    let annotations = stateStr.split(';');
-    for (let i = 0, l = annotations.length; i < l; i++) {
-      let annotation = annotations[i].split(':');
-      this.addAnnotation(annotation[0], annotation[1]);
-    }
-  }
-
-
-  /**
-   * @return The semantic meaning of the node.
-   */
-  public meaning(): SemanticMeaning {
-    return {type: this.type, role: this.role, font: this.font};
-  }
-
-
-  /**
-   * Generates a semantic node from its XML representation.
-   * @param xml The XML representation.
-   * @return The generated semantic node.
-   */
-  public static fromXml(xml: Element): SemanticNode {
-    let id = parseInt(xml.getAttribute('id'), 10);
-    let node = new SemanticNode(id);
-    node.type = (xml.tagName as SemanticType);
-    SemanticNode.setAttribute(node, xml, 'role');
-    SemanticNode.setAttribute(node, xml, 'font');
-    SemanticNode.setAttribute(node, xml, 'embellished');
-    SemanticNode.setAttribute(node, xml, 'fencepointer', 'fencePointer');
-    if (xml.getAttribute('annotation')) {
-      node.parseAnnotation(xml.getAttribute('annotation'));
-    }
-    SemanticUtil.addAttributes(node, xml);
-    SemanticNode.processChildren(node, xml);
-    return node;
-  }
-
-
-  /**
-   * Adds the given attributed to the semantic node if it exists.
-   * @param node The semantic node.
-   * @param xml The XML element representation of the node.
-   * @param attribute The name of the attribute.
-   * @param opt_name Optionally the field name for the attribute in the
-   *     semantic node if it differs.
-   */
-  private static setAttribute(
-      node: SemanticNode, xml: Element, attribute: string, opt_name?: string) {
-    opt_name = opt_name || attribute;
-    let value = xml.getAttribute(attribute);
-    if (value) {
-      /// TODO (TS): Sort this out.
-      (node as any)[opt_name] = value;
-    }
-  }
-
-
-  /**
-   * Processes the children of the XML node to set text content, child nodes and
-   * content nodes of the semantic node.
-   * @param node The semantic node.
-   * @param xml The XML element representation of the node.
-   */
-  private static processChildren(node: SemanticNode, xml: Element) {
-    for (let child of DomUtil.toArray(xml.childNodes)) {
-      if (child.nodeType === DomUtil.NodeType.TEXT_NODE) {
-        node.textContent = child.textContent;
-        continue;
-      }
-      let children =
-          DomUtil.toArray(child.childNodes).map(SemanticNode.fromXml);
-      children.forEach(x => x.parent = node);
-      if (DomUtil.tagName(child) === 'CONTENT') {
-        node.contentNodes = children;
-      } else {
-        node.childNodes = children;
-      }
     }
   }
 }

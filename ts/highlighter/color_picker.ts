@@ -249,9 +249,9 @@ function RGB2hex(col: {[key: string]: number}): string {
 
 
 // Auxiliary methods for HSL.
-// 
+//
 // TODO: Rewrite into ChannelColor_ format.
-// 
+//
 export class ContrastPicker {
 
   /**

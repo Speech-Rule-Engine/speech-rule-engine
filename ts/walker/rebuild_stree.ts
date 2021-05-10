@@ -106,6 +106,19 @@ export class RebuildStree {
 
 
   /**
+   * Tests if a collapsed attribute belongs to a punctuated index.
+   * @param collapsed A skeleton structure.
+   * @return True if the skeleton indicates a collapsed punctuated
+   *     element.
+   */
+  public static isPunctuated(collapsed: Sexp): boolean {
+    return !SemanticSkeleton.simpleCollapseStructure(collapsed) &&
+      (collapsed as any)[1] &&
+      SemanticSkeleton.contentCollapseStructure((collapsed as any)[1]);
+  }
+
+
+  /**
    * @param mathml The enriched MathML node.
    */
   constructor(public mathml: Element) {
@@ -180,19 +193,6 @@ export class RebuildStree {
       snode.embellished = (embellished as SemanticType);
     }
     return snode;
-  }
-
-
-  /**
-   * Tests if a collapsed attribute belongs to a punctuated index.
-   * @param collapsed A skeleton structure.
-   * @return True if the skeleton indicates a collapsed punctuated
-   *     element.
-   */
-  public static isPunctuated(collapsed: Sexp): boolean {
-    return !SemanticSkeleton.simpleCollapseStructure(collapsed) &&
-      (collapsed as any)[1] &&
-      SemanticSkeleton.contentCollapseStructure((collapsed as any)[1]);
   }
 
 

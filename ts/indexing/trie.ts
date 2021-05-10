@@ -43,6 +43,29 @@ export class Trie {
    */
   public root: TrieNode;
 
+
+  /**
+   * Compiles set of speech rules below a given node.
+   * @param root The node considered as root.
+   * @return Set of speech rules in the trie.
+   */
+  public static collectRules_(root: TrieNode): SpeechRule[] {
+    let rules = [];
+    let explore = [root];
+    while (explore.length) {
+      let node = explore.shift();
+      if (node.getKind() === TrieNodeKind.QUERY ||
+          node.getKind() === TrieNodeKind.BOOLEAN) {
+        let rule = (node as StaticTrieNode).getRule();
+        if (rule) {
+          rules.unshift(rule);
+        }
+      }
+      explore = explore.concat(node.getChildren());
+    }
+    return rules;
+  }
+
   /**
    * Prints tree to a string.
    * @param node The current try node to print.
@@ -73,29 +96,6 @@ export class Trie {
     }
     let max = Math.max.apply(null, children.map(Trie.order_));
     return Math.max(children.length, max);
-  }
-
-
-  /**
-   * Compiles set of speech rules below a given node.
-   * @param root The node considered as root.
-   * @return Set of speech rules in the trie.
-   */
-  public static collectRules_(root: TrieNode): SpeechRule[] {
-    let rules = [];
-    let explore = [root];
-    while (explore.length) {
-      let node = explore.shift();
-      if (node.getKind() === TrieNodeKind.QUERY ||
-          node.getKind() === TrieNodeKind.BOOLEAN) {
-        let rule = (node as StaticTrieNode).getRule();
-        if (rule) {
-          rules.unshift(rule);
-        }
-      }
-      explore = explore.concat(node.getChildren());
-    }
-    return rules;
   }
 
 

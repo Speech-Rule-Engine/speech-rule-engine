@@ -26,9 +26,9 @@ import * as BaseUtil from '../common/base_util';
 import * as BrowserUtil from '../common/browser_util';
 import {Engine, EngineConst} from '../common/engine';
 import SystemExternal from '../common/system_external';
-import {MathCompoundStore, SiJson, UnicodeJson} from '../rule_engine/math_simple_store';
-import {DynamicCstr} from '../rule_engine/dynamic_cstr';
 import {RulesJson} from '../rule_engine/base_rule_store';
+import {DynamicCstr} from '../rule_engine/dynamic_cstr';
+import {MathCompoundStore, SiJson, UnicodeJson} from '../rule_engine/math_simple_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 
 import * as AlphabetGenerator from './alphabet_generator';
@@ -41,11 +41,11 @@ interface MathMapJson {
 }
 
 export namespace MathMap {
-  
+
   /**
    * The compund store for symbol and function mappings.
    */
-  
+
 
   /**
    * Files left to fetch in asynchronous mode.
@@ -55,7 +55,7 @@ export namespace MathMap {
   let loaded_: string[] = [];
 
   export let store = MathCompoundStore;
-  
+
   /**
    * Methods for parsing json structures.
    */
@@ -87,8 +87,6 @@ export namespace MathMap {
     loadLocale();
     return {lookupString, retrieveFiles, parseMaps};
   }
-
-
 
 
   /**

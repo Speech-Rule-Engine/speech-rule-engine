@@ -25,7 +25,6 @@ import * as DomUtil from '../common/dom_util';
 import {AbstractHighlighter, Highlight} from './abstract_highlighter';
 
 
-
 export class SvgHighlighter extends AbstractHighlighter {
 
   /**

@@ -143,7 +143,6 @@ export interface SemanticHeuristic<T> {
 }
 
 
-
 export abstract class SemanticAbstractHeuristic<T extends SemanticHeuristicTypes> implements SemanticHeuristic<T> {
 
   public apply: (node: T) => void;
@@ -157,7 +156,7 @@ export abstract class SemanticAbstractHeuristic<T extends SemanticHeuristicTypes
    * method of the heuristic
    */
   constructor(public name: string, method: (node: T) => void,
-              predicate: (node: T) => boolean = (_x:T) => false) {
+              predicate: (node: T) => boolean = (_x: T) => false) {
     this.apply = method;
     this.applicable = predicate;
     SemanticHeuristics.add(name, this);

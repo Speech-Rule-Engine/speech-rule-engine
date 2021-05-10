@@ -920,7 +920,7 @@ export namespace SemanticAttr {
     type: SemanticType;
     font?: SemanticFont;
   }
-  
+
   /**
    * Default assignments of semantic attributes.
    * Assigns sets of symbols to meaning.

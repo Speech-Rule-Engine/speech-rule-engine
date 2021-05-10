@@ -166,7 +166,6 @@ export enum EventType {
 }
 
 
-
 export class Event {
 
   /**

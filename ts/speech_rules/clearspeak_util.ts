@@ -19,16 +19,16 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import XpathUtil from '../common/xpath_util';
 import {Engine} from '../common/engine';
+import XpathUtil from '../common/xpath_util';
 import {Locale} from '../l10n/messages';
 import {Grammar} from '../rule_engine/grammar';
-import * as StoreUtil from '../rule_engine/store_util';
-import {SemanticAnnotator} from '../semantic_tree/semantic_annotator';
-import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticAttr, SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
 import {MathCompoundStore} from '../rule_engine/math_simple_store';
+import * as StoreUtil from '../rule_engine/store_util';
+import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
+import {SemanticAnnotator} from '../semantic_tree/semantic_annotator';
+import {SemanticAttr, SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
+import {SemanticNode} from '../semantic_tree/semantic_node';
 import {vulgarFractionSmall} from './numbers_util';
 
 

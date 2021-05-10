@@ -51,6 +51,11 @@ import {SpeechRuleContext} from './speech_rule_context';
 
 export class SpeechRuleEngine {
 
+  // TODO (TS): Keeping this as a singleton for the time being.
+  private static instance: SpeechRuleEngine;
+
+  public prune = true;
+
   private activeStore_: BaseRuleStore;
 
   /**
@@ -64,27 +69,44 @@ export class SpeechRuleEngine {
   private evaluators_:
       {[key: string]: {[key: string]: (p1: Node) => AuditoryDescription[]}} = {};
 
-  prune = true;
-  
-  // TODO (TS): Keeping this as a singleton for the time being.
-  private static instance: SpeechRuleEngine;
-
-  private constructor() {
-    /**
-     * The currently active speech rule store.
-     */
-    this.activeStore_ = new MathStore();
-
-    Engine.registerTest(() => this.ready_);
-    // Engine.registerTest((() => {console.log('SRE test'); return this.ready_}).bind(this));
-  }
-
   /**
    * @return The Engine object.
    */
   public static getInstance(): SpeechRuleEngine {
     SpeechRuleEngine.instance = SpeechRuleEngine.instance || new SpeechRuleEngine();
     return SpeechRuleEngine.instance;
+  }
+
+
+  /**
+   * Test the precondition of a speech rule in debugging mode.
+   * @param rule A speech rule.
+   * @param node DOM node to test applicability of the rule.
+   */
+  public static debugSpeechRule(rule: SpeechRule, node: Node) {
+    let store = SpeechRuleEngine.getInstance().activeStore_;
+    if (store) {
+      store.debugSpeechRule(rule, node);
+    }
+  }
+
+
+  /**
+   * Test the precondition of a speech rule in debugging mode.
+   * @param name Rule to debug.
+   * @param node DOM node to test applicability of the rule.
+   */
+  public static debugNamedSpeechRule(name: string, node: Node) {
+    let store = SpeechRuleEngine.getInstance().activeStore_;
+    if (store) {
+      let allRules = store.findAllRules(rule => rule.name == name);
+      for (let i = 0, rule; rule = allRules[i]; i++) {
+        Debugger.getInstance().output(
+            'Rule', name, 'DynamicCstr:', rule.dynamicCstr.toString(), 'number',
+            i);
+        store.debugSpeechRule(rule, node);
+      }
+    }
   }
 
 
@@ -113,12 +135,198 @@ export class SpeechRuleEngine {
    * @return A list of auditory descriptions
    *   for that node.
    */
-  evaluateNode(node: Element): AuditoryDescription[] {
+  public evaluateNode(node: Element): AuditoryDescription[] {
     let timeIn = (new Date()).getTime();
     let result = this.evaluateNode_(node);
     let timeOut = (new Date()).getTime();
     Debugger.getInstance().output('Time:', timeOut - timeIn);
     return result;
+  }
+
+
+  /**
+   * Prints the list of all current rules in ChromeVox to the console.
+   * @return A textual representation of all rules in the speech rule
+   *     engine.
+   */
+  public toString(): string {
+    let allRules = this.activeStore_.findAllRules(_x => true);
+    return allRules.map(rule => rule.toString()).join('\n');
+  }
+
+
+  // TODO (TS): Rewrite engine to use a feature vector and save the settings
+  //            this way. Currently we mess about with a lot of casting!
+  /**
+   * Runs a function in the temporary context of the speech rule engine.
+   * @param settings The temporary settings for the speech rule
+   *     engine. They can contain the usual features.
+   * @param callback The runnable
+   *     function that computes speech results.
+   * @return The result of the callback.
+   */
+  public runInSetting(settings: {[feature: string]: string|boolean},
+               callback: () => AuditoryDescription[]):
+  AuditoryDescription[] {
+    let engine = Engine.getInstance() as any;
+    let save: {[feature: string]: string|boolean} = {};
+    for (let key in settings) {
+      save[key] = engine[key];
+      engine[key] = settings[key];
+    }
+    engine.setDynamicCstr();
+    let result = callback();
+    for (let key in save) {
+      engine[key] = save[key];
+    }
+    engine.setDynamicCstr();
+    return result;
+  }
+
+
+  /**
+   * Adds a speech rule store to the speech rule engine. This method is called
+   * when loading a rule set.
+   * @param set The definition of a speech rule set.
+   */
+  public addStore(set: RulesJson) {
+    // This line is important to setup the context functions for stores.
+    // It has to run __before__ the first speech rule store is added.
+    SpeechRuleStores.init();
+    if (set && !set.functions) {
+      set.functions = SpeechRules.getStore(
+          set.locale, set.modality, set.domain);
+    }
+    let store = this.storeFactory(set.modality);
+    store.parse(set);
+    store.initialize();
+    store.getSpeechRules().forEach(x => this.activeStore_.trie.addRule(x));
+    this.addEvaluator(store);
+    this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
+  }
+
+
+  /**
+   * Updates adminstrative info in the base Engine.
+   * During update the engine is not ready!
+   */
+  public updateEngine() {
+    this.ready_ = true;
+    let maps = MathMap.getInstance();
+    if (!Engine.isReady()) {
+      this.ready_ = false;
+      setTimeout(this.updateEngine.bind(this), 250);
+      return;
+    }
+    if (this.prune) {
+      this.prune = false;
+      this.adjustEngine();
+    }
+    Engine.getInstance().evaluator = maps.lookupString as (p1: string, p2: DynamicCstr) => string;
+      // maps.store.lookupString.bind(maps.store);
+  }
+
+
+  /**
+   * Adjust Engine with local rule files.
+   */
+  public adjustEngine() {
+    let engine = Engine.getInstance();
+    if (engine.prune) {
+      let cstr = engine.prune.split('.');
+      this.activeStore_.prune(cstr);
+    }
+    if (engine.rules) {
+      // TODO: This needs to be made more robust.
+      let path =
+          SystemExternal.jsonPath.replace('/lib/mathmaps', '/src/mathmaps');
+      let parse = (json: string) =>
+        MathMap.getInstance().parseMaps(`{"${engine.rules}":${json}}`);
+      MathMap.getInstance().retrieveFiles(path + engine.rules, parse);
+    }
+    setTimeout(this.updateEngine.bind(this), 100);
+  }
+
+
+  /**
+   * Processes the grammar annotations of a rule.
+   * @param context The function context in which to
+   *     evaluate the grammar expression.
+   * @param node The node to which the rule is applied.
+   * @param grammar The grammar annotations.
+   */
+  public processGrammar(
+      context: SpeechRuleContext, node: Node, grammar: GrammarState) {
+    let assignment: GrammarState = {};
+    for (let key in grammar) {
+      let value = grammar[key];
+      assignment[key] = typeof value === 'string' ?
+          // TODO (TS): This could be a span!
+          context.constructString(node, value) as string :
+          value;
+    }
+    Grammar.getInstance().pushState(assignment);
+  }
+
+
+  /**
+   * Adds an evaluation method by locale and modality.
+   * @param store The store whose evaluation method is
+   *     added.
+   */
+  public addEvaluator(store: BaseRuleStore) {
+    let fun = store.evaluateDefault.bind(store);
+    let loc = this.evaluators_[store.locale];
+    if (loc) {
+      loc[store.modality] = fun;
+      return;
+    }
+    let mod: {[key: string]: (p1: Node) => AuditoryDescription[]} = {};
+    mod[store.modality] = fun;
+    this.evaluators_[store.locale] = mod;
+  }
+
+
+  /**
+   * Selects a default evaluation method by locale and modality. If none exists
+   * it takes the default evaluation method of the active combined store.
+   * @param locale The locale.
+   * @param modality The modality.
+   * @return The evaluation
+   *     method.
+   */
+  public getEvaluator(locale: string, modality: string):
+      (p1: Node) => AuditoryDescription[] {
+    let loc = this.evaluators_[locale];
+    let fun = loc ? loc[modality] : null;
+    return fun ? fun :
+        this.activeStore_.evaluateDefault.bind(this.activeStore_);
+  }
+
+
+  /**
+   * Collates information on dynamic constraint values of the currently active
+   * trie of the engine.
+   * @param opt_info Initial dynamic constraint information.
+   * @return The collated information.
+   */
+  public enumerate(opt_info?: Object): Object {
+    return this.activeStore_.trie.enumerate(opt_info);
+  }
+
+  // Temporary
+  public getStore() {
+    return this.activeStore_;
+  }
+
+  private constructor() {
+    /**
+     * The currently active speech rule store.
+     */
+    this.activeStore_ = new MathStore();
+
+    Engine.registerTest(() => this.ready_);
+    // Engine.registerTest((() => {console.log('SRE test'); return this.ready_}).bind(this));
   }
 
 
@@ -413,163 +621,6 @@ export class SpeechRuleEngine {
 
 
   /**
-   * Prints the list of all current rules in ChromeVox to the console.
-   * @return A textual representation of all rules in the speech rule
-   *     engine.
-   */
-  toString(): string {
-    let allRules = this.activeStore_.findAllRules(_x => true);
-    return allRules.map(rule => rule.toString()).join('\n');
-  }
-
-
-  /**
-   * Test the precondition of a speech rule in debugging mode.
-   * @param rule A speech rule.
-   * @param node DOM node to test applicability of the rule.
-   */
-  static debugSpeechRule(rule: SpeechRule, node: Node) {
-    let store = SpeechRuleEngine.getInstance().activeStore_;
-    if (store) {
-      store.debugSpeechRule(rule, node);
-    }
-  }
-
-
-  /**
-   * Test the precondition of a speech rule in debugging mode.
-   * @param name Rule to debug.
-   * @param node DOM node to test applicability of the rule.
-   */
-  static debugNamedSpeechRule(name: string, node: Node) {
-    let store = SpeechRuleEngine.getInstance().activeStore_;
-    if (store) {
-      let allRules = store.findAllRules(rule => rule.name == name);
-      for (let i = 0, rule; rule = allRules[i]; i++) {
-        Debugger.getInstance().output(
-            'Rule', name, 'DynamicCstr:', rule.dynamicCstr.toString(), 'number',
-            i);
-        store.debugSpeechRule(rule, node);
-      }
-    }
-  }
-
-
-  // TODO (TS): Rewrite engine to use a feature vector and save the settings
-  //            this way. Currently we mess about with a lot of casting!
-  /**
-   * Runs a function in the temporary context of the speech rule engine.
-   * @param settings The temporary settings for the speech rule
-   *     engine. They can contain the usual features.
-   * @param callback The runnable
-   *     function that computes speech results.
-   * @return The result of the callback.
-   */
-  runInSetting(settings: {[feature: string]: string|boolean},
-               callback: () => AuditoryDescription[]):
-  AuditoryDescription[] {
-    let engine = Engine.getInstance() as any;
-    let save: {[feature: string]: string|boolean} = {};
-    for (let key in settings) {
-      save[key] = engine[key];
-      engine[key] = settings[key];
-    }
-    engine.setDynamicCstr();
-    let result = callback();
-    for (let key in save) {
-      engine[key] = save[key];
-    }
-    engine.setDynamicCstr();
-    return result;
-  }
-
-
-  /**
-   * Adds a speech rule store to the speech rule engine. This method is called
-   * when loading a rule set.
-   * @param set The definition of a speech rule set.
-   */
-  addStore(set: RulesJson) {
-    // This line is important to setup the context functions for stores.
-    // It has to run __before__ the first speech rule store is added.
-    SpeechRuleStores.init();
-    if (set && !set.functions) {
-      set.functions = SpeechRules.getStore(
-          set.locale, set.modality, set.domain);
-    }
-    let store = this.storeFactory(set.modality);
-    store.parse(set);
-    store.initialize();
-    store.getSpeechRules().forEach(x => this.activeStore_.trie.addRule(x));
-    this.addEvaluator(store);
-    this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
-  }
-
-
-  /**
-   * Updates adminstrative info in the base Engine.
-   * During update the engine is not ready!
-   */
-  updateEngine() {
-    this.ready_ = true;
-    let maps = MathMap.getInstance();
-    if (!Engine.isReady()) {
-      this.ready_ = false;
-      setTimeout(this.updateEngine.bind(this), 250);
-      return;
-    }
-    if (this.prune) {
-      this.prune = false;
-      this.adjustEngine();
-    }
-    Engine.getInstance().evaluator = maps.lookupString as (p1: string, p2: DynamicCstr) => string;
-      // maps.store.lookupString.bind(maps.store);
-  }
-
-
-  /**
-   * Adjust Engine with local rule files.
-   */
-  adjustEngine() {
-    let engine = Engine.getInstance();
-    if (engine.prune) {
-      let cstr = engine.prune.split('.');
-      this.activeStore_.prune(cstr);
-    }
-    if (engine.rules) {
-      // TODO: This needs to be made more robust.
-      let path =
-          SystemExternal.jsonPath.replace('/lib/mathmaps', '/src/mathmaps');
-      let parse = (json: string) =>
-        MathMap.getInstance().parseMaps(`{"${engine.rules}":${json}}`);
-      MathMap.getInstance().retrieveFiles(path + engine.rules, parse);
-    }
-    setTimeout(this.updateEngine.bind(this), 100);
-  }
-
-
-  /**
-   * Processes the grammar annotations of a rule.
-   * @param context The function context in which to
-   *     evaluate the grammar expression.
-   * @param node The node to which the rule is applied.
-   * @param grammar The grammar annotations.
-   */
-  processGrammar(
-      context: SpeechRuleContext, node: Node, grammar: GrammarState) {
-    let assignment: GrammarState = {};
-    for (let key in grammar) {
-      let value = grammar[key];
-      assignment[key] = typeof value === 'string' ?
-          // TODO (TS): This could be a span!
-          context.constructString(node, value) as string :
-          value;
-    }
-    Grammar.getInstance().pushState(assignment);
-  }
-
-
-  /**
    * Enriches the dynamic constraint with default properties.
    */
   // TODO: Exceptions and ordering between locale and modality?
@@ -637,56 +688,5 @@ export class SpeechRuleEngine {
       return [value];
     }
     return value.split(':');
-  }
-
-
-  /**
-   * Adds an evaluation method by locale and modality.
-   * @param store The store whose evaluation method is
-   *     added.
-   */
-  addEvaluator(store: BaseRuleStore) {
-    let fun = store.evaluateDefault.bind(store);
-    let loc = this.evaluators_[store.locale];
-    if (loc) {
-      loc[store.modality] = fun;
-      return;
-    }
-    let mod: {[key: string]: (p1: Node) => AuditoryDescription[]} = {};
-    mod[store.modality] = fun;
-    this.evaluators_[store.locale] = mod;
-  }
-
-
-  /**
-   * Selects a default evaluation method by locale and modality. If none exists
-   * it takes the default evaluation method of the active combined store.
-   * @param locale The locale.
-   * @param modality The modality.
-   * @return The evaluation
-   *     method.
-   */
-  getEvaluator(locale: string, modality: string):
-      (p1: Node) => AuditoryDescription[] {
-    let loc = this.evaluators_[locale];
-    let fun = loc ? loc[modality] : null;
-    return fun ? fun :
-        this.activeStore_.evaluateDefault.bind(this.activeStore_);
-  }
-
-
-  /**
-   * Collates information on dynamic constraint values of the currently active
-   * trie of the engine.
-   * @param opt_info Initial dynamic constraint information.
-   * @return The collated information.
-   */
-  enumerate(opt_info?: Object): Object {
-    return this.activeStore_.trie.enumerate(opt_info);
-  }
-
-  // Temporary
-  public getStore() {
-    return this.activeStore_;
   }
 }

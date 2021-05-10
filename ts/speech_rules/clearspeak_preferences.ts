@@ -20,47 +20,17 @@
 
 import {Engine, EngineConst} from '../common/engine';
 import {DynamicCstr} from '../rule_engine/dynamic_cstr';
-import {Axis, AxisMap, AxisProperties, DynamicCstrParser,
-        DynamicProperties, DefaultComparator} from '../rule_engine/dynamic_cstr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
-import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
+import {Axis, AxisMap, AxisProperties, DefaultComparator,
+        DynamicCstrParser, DynamicProperties} from '../rule_engine/dynamic_cstr';
 import {MathCompoundStore} from '../rule_engine/math_simple_store';
+import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
+import {SemanticNode} from '../semantic_tree/semantic_node';
 
 
 export class ClearspeakPreferences extends DynamicCstr {
 
   private static AUTO: string = 'Auto';
-
-  /**
-   * @param cstr The constraint mapping.
-   * @param preference The preference.
-   */
-  constructor(cstr: AxisMap, public preference: {[key: string]: string}) {
-    super(cstr);
-  }
-
-
-  /**
-   * @override
-   */
-  public equal(cstr: ClearspeakPreferences) {
-    let top = super.equal(cstr);
-    if (!top) {
-      return false;
-    }
-    let keys = Object.keys(this.preference);
-    let preference = cstr.preference;
-    if (keys.length !== Object.keys(preference).length) {
-      return false;
-    }
-    for (let i = 0, key; key = keys[i]; i++) {
-      if (this.preference[key] !== preference[key]) {
-        return false;
-      }
-    }
-    return true;
-  }
 
 
   /**
@@ -134,39 +104,6 @@ export class ClearspeakPreferences extends DynamicCstr {
         MathCompoundStore.enumerate(
             SpeechRuleEngine.getInstance().enumerate());
     return ClearspeakPreferences.getLocalePreferences_(dynamic);
-  }
-
-
-  /**
-   * Computes the clearspeak preferences per locale and caches them.
-   * @param dynamic Optionally a tree structure with the dynamic
-   *     constraints.
-   * @return Mapping of locale to preferences.
-   */
-  private static getLocalePreferences_(dynamic: any):
-      {[key: string]: AxisProperties} {
-    let result: {[key: string]: AxisProperties} = {};
-    for (let locale in dynamic) {
-      if (!dynamic[locale]['speech'] ||
-          !dynamic[locale]['speech']['clearspeak']) {
-        continue;
-      }
-      let locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
-      let prefs: AxisProperties = result[locale] = {};
-      for (let axis in PREFERENCES.getProperties()) {
-        let allSty = PREFERENCES.getProperties()[axis];
-        let values = [axis + '_Auto'];
-        if (allSty) {
-          for (let sty of allSty) {
-            if (locPrefs.indexOf(axis + '_' + sty) !== -1) {
-              values.push(axis + '_' + sty);
-            }
-          }
-        }
-        prefs[axis] = values;
-      }
-    }
-    return result;
   }
 
 
@@ -295,6 +232,69 @@ export class ClearspeakPreferences extends DynamicCstr {
     return ClearspeakPreferences.toPreference(parsed);
   }
 
+
+  /**
+   * Computes the clearspeak preferences per locale and caches them.
+   * @param dynamic Optionally a tree structure with the dynamic
+   *     constraints.
+   * @return Mapping of locale to preferences.
+   */
+  private static getLocalePreferences_(dynamic: any):
+      {[key: string]: AxisProperties} {
+    let result: {[key: string]: AxisProperties} = {};
+    for (let locale in dynamic) {
+      if (!dynamic[locale]['speech'] ||
+          !dynamic[locale]['speech']['clearspeak']) {
+        continue;
+      }
+      let locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
+      let prefs: AxisProperties = result[locale] = {};
+      for (let axis in PREFERENCES.getProperties()) {
+        let allSty = PREFERENCES.getProperties()[axis];
+        let values = [axis + '_Auto'];
+        if (allSty) {
+          for (let sty of allSty) {
+            if (locPrefs.indexOf(axis + '_' + sty) !== -1) {
+              values.push(axis + '_' + sty);
+            }
+          }
+        }
+        prefs[axis] = values;
+      }
+    }
+    return result;
+  }
+
+  /**
+   * @param cstr The constraint mapping.
+   * @param preference The preference.
+   */
+  constructor(cstr: AxisMap, public preference: {[key: string]: string}) {
+    super(cstr);
+  }
+
+
+  /**
+   * @override
+   */
+  public equal(cstr: ClearspeakPreferences) {
+    let top = super.equal(cstr);
+    if (!top) {
+      return false;
+    }
+    let keys = Object.keys(this.preference);
+    let preference = cstr.preference;
+    if (keys.length !== Object.keys(preference).length) {
+      return false;
+    }
+    for (let i = 0, key; key = keys[i]; i++) {
+      if (this.preference[key] !== preference[key]) {
+        return false;
+      }
+    }
+    return true;
+  }
+
 }
 
 
@@ -346,7 +346,7 @@ const PREFERENCES = new DynamicProperties({
     'Reciprocal'
   ],
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
-})
+});
 
 
 export class Comparator extends DefaultComparator {
@@ -568,7 +568,7 @@ const REVERSE_MAPPING: string[][] = [
   [
     'TriangleSymbol', SemanticType.IDENTIFIER,
     SemanticRole.GREEKLETTER
-  ],  //????
+  ],  // ????
   [
     'Trig', SemanticType.APPL,
     SemanticRole.PREFIXFUNC

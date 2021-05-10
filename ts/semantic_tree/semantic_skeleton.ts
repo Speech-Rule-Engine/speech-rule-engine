@@ -36,63 +36,147 @@ export type Sexp = number | Sexp[];
  */
 export class SemanticSkeleton {
 
-  array: Sexp;
+  public array: Sexp;
 
-  parents: {[key: number]: number[]} = null;
+  public parents: {[key: number]: number[]} = null;
 
-  levelsMap: {[key: number]: Sexp} = null;
+  public levelsMap: {[key: number]: Sexp} = null;
 
-  constructor(skeleton: Sexp) {
-    skeleton = skeleton === 0 ? skeleton : skeleton || [];
-    this.array = skeleton;
+
+  /**
+   * Compute a skeleton structure for a semantic tree.
+   * @param tree The semantic tree.
+   * @return The new skeleton structure object.
+   */
+  public static fromTree(tree: SemanticTree): SemanticSkeleton {
+    return SemanticSkeleton.fromNode(tree.root);
   }
 
 
   /**
-   * Populates the mapping from id to parents and the mapping from id to levels
-   * in the skeleton.
+   * Compute a skeleton structure for a semantic tree.
+   * @param node The root node of the tree.
+   * @return The new skeleton structure object.
    */
-  populate() {
-    if (this.parents && this.levelsMap) {
-      return;
-    }
-    this.parents = {};
-    this.levelsMap = {};
-    this.populate_(this.array, this.array, []);
+  public static fromNode(node: SemanticNode): SemanticSkeleton {
+    return new SemanticSkeleton(SemanticSkeleton.fromNode_(node));
   }
 
 
   /**
-   * Traverses the skeleton tree and composes the parents and layer mappings.
-   * @param element The current element to traverse.
-   * @param layer The layer of which the element is a
-   *     member.
-   * @param parents The list of parents of that element.
+   * Compute a skeleton structure from a string representation.
+   * @param skel The skeleton string.
+   * @return The new skeleton structure object.
    */
-  private populate_(element: Sexp, layer: Sexp, parents: number[]) {
-    if (SemanticSkeleton.simpleCollapseStructure(element)) {
-      element = (element as number);
-      this.levelsMap[element] = layer;
-      this.parents[element] =
-          element === parents[0] ? parents.slice(1) : parents;
-      return;
-    }
-    // TODO (TS): Add slice method to Sexp.
-    let newElement = SemanticSkeleton.contentCollapseStructure(element) ?
-        (element as any).slice(1) :  element;
-    let newParents = [newElement[0]].concat(parents);
-    for (let i = 0, l = newElement.length; i < l; i++) {
-      let current = newElement[i];
-      this.populate_(current, element, newParents);
-    }
+  public static fromString(skel: string): SemanticSkeleton {
+    return new SemanticSkeleton(SemanticSkeleton.fromString_(skel));
   }
 
 
   /**
-   * @override
+   * Checks if the structure is simple, i.e., a single id number.
+   * @param strct The structure.
+   * @return True if a simple number.
    */
-  toString() {
-    return SemanticSkeleton.makeSexp_(this.array);
+  public static simpleCollapseStructure(strct: Sexp): boolean {
+    return typeof strct === 'number';
+  }
+
+
+  /**
+   * Checks if the structure represents collapsed content nodes, i.e., it starts
+   * with a c.
+   * @param strct The structure.
+   * @return True if a content structure.
+   */
+  public static contentCollapseStructure(strct: Sexp): boolean {
+    return !!strct && !SemanticSkeleton.simpleCollapseStructure(strct) &&
+        (strct as any)[0] === 'c';
+  }
+
+
+  /**
+   * Interleaves the ids of two index lists.
+   * @param first A structured list of
+   *     ids.
+   * @param second A structured list of
+   *     ids.
+   * @return A simple list of ids.
+   */
+  public static interleaveIds(first: Sexp, second: Sexp): Sexp {
+    return BaseUtil.interleaveLists(
+        SemanticSkeleton.collapsedLeafs(first),
+        SemanticSkeleton.collapsedLeafs(second));
+  }
+
+
+  /**
+   * Returns a list of the leaf ids for the given collapsed structures.
+   * @param var_args The collapsed structure
+   *     annotations.
+   * @return The leafs of the structure annotations.
+   */
+  public static collapsedLeafs(...args: Sexp[]): number[] {
+    let collapseStructure = (coll: any) => {
+      if (SemanticSkeleton.simpleCollapseStructure(coll)) {
+        return [coll];
+      }
+      return SemanticSkeleton.contentCollapseStructure(coll[1]) ?
+          coll.slice(2) :
+          coll.slice(1);
+    };
+    return args.reduce((x: any, y) => x.concat(collapseStructure(y)), []);
+  }
+
+
+  /**
+   * Computes skeletal structure for a semantic tree folding together content
+   * and child nodes in a "syntactic" manner.
+   * @param mml A mml node to add a structure to.
+   * @param tree A semantic tree.
+   * @return The skeletal structure.
+   */
+  public static fromStructure(mml: Element, tree: SemanticTree): SemanticSkeleton {
+    return new SemanticSkeleton(SemanticSkeleton.tree_(mml, tree.root));
+  }
+
+
+  /**
+   * Combines content and children lists depending on the type of the semantic
+   * node.
+   * @param semantic The semantic tree node.
+   * @param content The list of content nodes.
+   * @param children The list of child nodes.
+   * @return The combined list.
+   */
+  public static combineContentChildren<T>(
+      semantic: SemanticNode, content: T[], children: T[]): T[] {
+    switch (semantic.type) {
+      case SemanticType.RELSEQ:
+      case SemanticType.INFIXOP:
+      case SemanticType.MULTIREL:
+        return BaseUtil.interleaveLists(children, content);
+      case SemanticType.PREFIXOP:
+        return content.concat(children);
+      case SemanticType.POSTFIXOP:
+        return children.concat(content);
+      case SemanticType.FENCED:
+        children.unshift(content[0]);
+        children.push(content[1]);
+        return children;
+      case SemanticType.APPL:
+        return [children[0], content[0], children[1]];
+      case SemanticType.ROOT:
+        return [children[1], children[0]];
+      case SemanticType.ROW:
+      case SemanticType.LINE:
+        if (content.length) {
+          children.unshift(content[0]);
+        }
+        return children;
+      default:
+        return children;
+    }
   }
 
 
@@ -111,36 +195,6 @@ export class SemanticSkeleton {
           ')';
     }
     return '(' + (struct as any).map(SemanticSkeleton.makeSexp_).join(' ') + ')';
-  }
-
-
-  /**
-   * Compute a skeleton structure for a semantic tree.
-   * @param tree The semantic tree.
-   * @return The new skeleton structure object.
-   */
-  static fromTree(tree: SemanticTree): SemanticSkeleton {
-    return SemanticSkeleton.fromNode(tree.root);
-  }
-
-
-  /**
-   * Compute a skeleton structure for a semantic tree.
-   * @param node The root node of the tree.
-   * @return The new skeleton structure object.
-   */
-  static fromNode(node: SemanticNode): SemanticSkeleton {
-    return new SemanticSkeleton(SemanticSkeleton.fromNode_(node));
-  }
-
-
-  /**
-   * Compute a skeleton structure from a string representation.
-   * @param skel The skeleton string.
-   * @return The new skeleton structure object.
-   */
-  static fromString(skel: string): SemanticSkeleton {
-    return new SemanticSkeleton(SemanticSkeleton.fromString_(skel));
   }
 
 
@@ -184,74 +238,6 @@ export class SemanticSkeleton {
     }
     structure.unshift(node.id);
     return structure;
-  }
-
-
-  /**
-   * Checks if the structure is simple, i.e., a single id number.
-   * @param strct The structure.
-   * @return True if a simple number.
-   */
-  static simpleCollapseStructure(strct: Sexp): boolean {
-    return typeof strct === 'number';
-  }
-
-
-  /**
-   * Checks if the structure represents collapsed content nodes, i.e., it starts
-   * with a c.
-   * @param strct The structure.
-   * @return True if a content structure.
-   */
-  static contentCollapseStructure(strct: Sexp): boolean {
-    return !!strct && !SemanticSkeleton.simpleCollapseStructure(strct) &&
-        (strct as any)[0] === 'c';
-  }
-
-
-  /**
-   * Interleaves the ids of two index lists.
-   * @param first A structured list of
-   *     ids.
-   * @param second A structured list of
-   *     ids.
-   * @return A simple list of ids.
-   */
-  static interleaveIds(first: Sexp, second: Sexp): Sexp {
-    return BaseUtil.interleaveLists(
-        SemanticSkeleton.collapsedLeafs(first),
-        SemanticSkeleton.collapsedLeafs(second));
-  }
-
-
-  /**
-   * Returns a list of the leaf ids for the given collapsed structures.
-   * @param var_args The collapsed structure
-   *     annotations.
-   * @return The leafs of the structure annotations.
-   */
-  static collapsedLeafs(...args: Sexp[]): number[] {
-    let collapseStructure = (coll: any) => {
-      if (SemanticSkeleton.simpleCollapseStructure(coll)) {
-        return [coll];
-      }
-      return SemanticSkeleton.contentCollapseStructure(coll[1]) ?
-          coll.slice(2) :
-          coll.slice(1);
-    };
-    return args.reduce((x: any, y) => x.concat(collapseStructure(y)), []);
-  }
-
-
-  /**
-   * Computes skeletal structure for a semantic tree folding together content
-   * and child nodes in a "syntactic" manner.
-   * @param mml A mml node to add a structure to.
-   * @param tree A semantic tree.
-   * @return The skeletal structure.
-   */
-  static fromStructure(mml: Element, tree: SemanticTree): SemanticSkeleton {
-    return new SemanticSkeleton(SemanticSkeleton.tree_(mml, tree.root));
   }
 
 
@@ -327,42 +313,56 @@ export class SemanticSkeleton {
     return result;
   }
 
+  constructor(skeleton: Sexp) {
+    skeleton = skeleton === 0 ? skeleton : skeleton || [];
+    this.array = skeleton;
+  }
+
 
   /**
-   * Combines content and children lists depending on the type of the semantic
-   * node.
-   * @param semantic The semantic tree node.
-   * @param content The list of content nodes.
-   * @param children The list of child nodes.
-   * @return The combined list.
+   * Populates the mapping from id to parents and the mapping from id to levels
+   * in the skeleton.
    */
-  static combineContentChildren<T>(
-      semantic: SemanticNode, content: T[], children: T[]): T[] {
-    switch (semantic.type) {
-      case SemanticType.RELSEQ:
-      case SemanticType.INFIXOP:
-      case SemanticType.MULTIREL:
-        return BaseUtil.interleaveLists(children, content);
-      case SemanticType.PREFIXOP:
-        return content.concat(children);
-      case SemanticType.POSTFIXOP:
-        return children.concat(content);
-      case SemanticType.FENCED:
-        children.unshift(content[0]);
-        children.push(content[1]);
-        return children;
-      case SemanticType.APPL:
-        return [children[0], content[0], children[1]];
-      case SemanticType.ROOT:
-        return [children[1], children[0]];
-      case SemanticType.ROW:
-      case SemanticType.LINE:
-        if (content.length) {
-          children.unshift(content[0]);
-        }
-        return children;
-      default:
-        return children;
+  public populate() {
+    if (this.parents && this.levelsMap) {
+      return;
+    }
+    this.parents = {};
+    this.levelsMap = {};
+    this.populate_(this.array, this.array, []);
+  }
+
+
+  /**
+   * @override
+   */
+  public toString() {
+    return SemanticSkeleton.makeSexp_(this.array);
+  }
+
+
+  /**
+   * Traverses the skeleton tree and composes the parents and layer mappings.
+   * @param element The current element to traverse.
+   * @param layer The layer of which the element is a
+   *     member.
+   * @param parents The list of parents of that element.
+   */
+  private populate_(element: Sexp, layer: Sexp, parents: number[]) {
+    if (SemanticSkeleton.simpleCollapseStructure(element)) {
+      element = (element as number);
+      this.levelsMap[element] = layer;
+      this.parents[element] =
+          element === parents[0] ? parents.slice(1) : parents;
+      return;
+    }
+    // TODO (TS): Add slice method to Sexp.
+    let newElement = SemanticSkeleton.contentCollapseStructure(element) ?
+        (element as any).slice(1) :  element;
+    let newParents = [newElement[0]].concat(parents);
+    for (let i = 0, l = newElement.length; i < l; i++) {
+      let current = newElement[i];
+      this.populate_(current, element, newParents);
     }
   }
 }

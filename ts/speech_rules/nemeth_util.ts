@@ -18,20 +18,19 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import {AuditoryDescription} from '../audio/auditory_description';
 import * as DomUtil from '../common/dom_util';
 import XpathUtil from '../common/xpath_util';
 import {Grammar} from '../rule_engine/grammar';
-import {AuditoryDescription} from '../audio/auditory_description';
 import {MathStore} from '../rule_engine/math_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
 import {SemanticVisitor} from '../semantic_tree/semantic_annotator';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
 
-import * as MathspeakUtil from './mathspeak_util';
 import {Locale} from '../l10n/messages';
-
+import * as MathspeakUtil from './mathspeak_util';
 
 
 /**

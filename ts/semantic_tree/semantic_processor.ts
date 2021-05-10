@@ -95,7 +95,8 @@ export default class SemanticProcessor {
   };
 
 
-  private factory_: SemanticNodeFactory;
+  // TODO (TS): Keeping this as a singleton for the time being.
+  private static instance: SemanticProcessor;
 
 
   /**
@@ -104,8 +105,7 @@ export default class SemanticProcessor {
   public funcAppls: {[key: string]: SemanticNode} = {};
 
 
-  // TODO (TS): Keeping this as a singleton for the time being.
-  private static instance: SemanticProcessor;
+  private factory_: SemanticNodeFactory;
 
   /**
    * @return The SemanticProcessor object.
@@ -116,12 +116,819 @@ export default class SemanticProcessor {
     return SemanticProcessor.instance;
   }
 
+
   /**
-   * Private constructor for singleton class.
+   * Rewrites a table to multiline structure, simplifying it by getting rid of
+   * the cell hierarchy level.
+   * @param table The node to be rewritten a multiline.
    */
-  private constructor() {
-    this.factory_ = new SemanticNodeFactory();
-    SemanticHeuristics.factory = this.factory_;
+  public static tableToMultiline(table: SemanticNode) {
+    if (!SemanticPred.tableIsMultiline(table)) {
+      SemanticProcessor.classifyTable(table);
+      return;
+    }
+    table.type = SemanticType.MULTILINE;
+    for (let i = 0, row; row = table.childNodes[i]; i++) {
+      SemanticProcessor.rowToLine_(row, SemanticRole.MULTILINE);
+    }
+    if (table.childNodes.length === 1 &&
+        SemanticPred.isFencedElement(table.childNodes[0].childNodes[0])) {
+      SemanticProcessor.tableToMatrixOrVector_(
+          SemanticProcessor.rewriteFencedLine_(table));
+    }
+    SemanticProcessor.binomialForm_(table);
+    SemanticProcessor.classifyMultiline(table);
+  }
+
+
+  /**
+   * Processes a number node and adapts its role and font if necessary.
+   * @param node The semantic tree node.
+   */
+  public static number(node: SemanticNode) {
+    if (node.type === SemanticType.UNKNOWN ||
+        // In case of latin numbers etc.
+        node.type === SemanticType.IDENTIFIER) {
+      node.type = SemanticType.NUMBER;
+    }
+    SemanticProcessor.numberRole_(node);
+    SemanticProcessor.exprFont_(node);
+  }
+
+
+  /**
+   * Semantically classifies a multiline table in terms of equation system it
+   * might be.
+   * @param multiline A multiline expression.
+   */
+  public static classifyMultiline(multiline: SemanticNode) {
+    let index = 0;
+    let length = multiline.childNodes.length;
+    let line;
+    while (index < length &&
+           (!(line = multiline.childNodes[index]) || !line.childNodes.length)) {
+      index++;
+    }
+    if (index >= length) {
+      return;
+    }
+    let firstRole = line.childNodes[0].role;
+    if (firstRole !== SemanticRole.UNKNOWN &&
+        multiline.childNodes.every(function(x) {
+          let cell = x.childNodes[0];
+          return !cell ||
+              cell.role === firstRole &&
+            (SemanticPred.isType(cell, SemanticType.RELATION) ||
+              SemanticPred.isType(cell, SemanticType.RELSEQ));
+        })) {
+      multiline.role = firstRole;
+    }
+  }
+
+
+  /**
+   * Semantically classifies a table in terms of equation system it might be.
+   * @param table The table node.
+   */
+  public static classifyTable(table: SemanticNode) {
+    let columns = SemanticProcessor.computeColumns_(table);
+    SemanticProcessor.classifyByColumns_(table, columns, SemanticRole.EQUALITY) ||
+        SemanticProcessor.classifyByColumns_(
+            table, columns, SemanticRole.INEQUALITY, [SemanticRole.EQUALITY]) ||
+        SemanticProcessor.classifyByColumns_(table, columns, SemanticRole.ARROW);
+  }
+
+
+  // Inference rules (Simons)
+  // This is top down parsing, so we have to keep the bottom-up processor
+  // available.
+  /**
+   * Parses a proof node.
+   * @param node The node.
+   * @param semantics Its semantics attribute value.
+   * @param parse The
+   *     current semantic parser for list of nodes.
+   * @return The semantic node.
+   */
+  public static proof(
+      node: Element, semantics: string,
+      parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
+    let attrs = SemanticProcessor.separateSemantics(semantics);
+    return SemanticProcessor.getInstance().proof(node, attrs, parse);
+  }
+
+
+  // Utilities
+  // This one should be prefix specific!
+  /**
+   *
+   * @param node The mml node.
+   * @param attr The attribute name.
+   * @param opt_value The attribute value.
+   * @return True if the semantic attribute is in the node.
+   */
+  public static findSemantics(node: Element, attr: string, opt_value?: string):
+      boolean {
+    let value = opt_value == null ? null : opt_value;
+    let semantics = SemanticProcessor.getSemantics(node);
+    if (!semantics) {
+      return false;
+    }
+    if (!semantics[attr]) {
+      return false;
+    }
+    return value == null ? true : semantics[attr] === value;
+  }
+
+
+  /**
+   * Retrieves the content of a semantic attribute in a node as an association
+   * list.
+   * @param node The mml node.
+   * @return The association list.
+   */
+  public static getSemantics(node: Element): {[key: string]: string} {
+    let semantics = node.getAttribute('semantics');
+    if (!semantics) {
+      return null;
+    }
+    return SemanticProcessor.separateSemantics(semantics);
+  }
+
+
+  /**
+   * Removes prefix from a semantic attribute.
+   * @param name The semantic attribute.
+   * @return Name with prefix removed.
+   */
+  public static removePrefix(name: string): string {
+    let [ , ...rest] = name.split('_');
+    return rest.join('_');
+  }
+
+
+  /**
+   * Separates a semantic attribute into it's components.
+   * @param attr Content of the semantic attribute.
+   * @return Association list of semantic attributes.
+   */
+  public static separateSemantics(attr: string): {[key: string]: string} {
+    let result: {[key: string]: string} = {};
+    attr.split(';').forEach(function(x) {
+      let [name, value] = x.split(':');
+      result[SemanticProcessor.removePrefix(name)] = value;
+    });
+    return result;
+  }
+
+
+  /**
+   * Matches juxtaposition with existing spaces by adding the potentially nested
+   * space elements as mathmlTree elements. This has the effect that newly
+   * introduced invisible times operators will enrich the spaces rather than add
+   * new empty elements.
+   * @param nodes The operands.
+   * @param ops A list of invisible times operators.
+   */
+  private static matchSpaces_(nodes: SemanticNode[], ops: SemanticNode[]) {
+    for (let i = 0, op; op = ops[i]; i++) {
+      let node = nodes[i];
+      let mt1 = node.mathmlTree;
+      let mt2 = nodes[i + 1].mathmlTree;
+      if (!mt1 || !mt2) {
+        continue;
+      }
+      let sibling = (mt1.nextSibling as Element);
+      if (!sibling || sibling === mt2) {
+        continue;
+      }
+      let spacer = SemanticProcessor.getSpacer_(sibling);
+      if (spacer) {
+        op.mathml.push(spacer);
+        op.mathmlTree = spacer;
+        op.role = SemanticRole.SPACE;
+      }
+    }
+  }
+
+
+  // TODO (TS): Make this optional conditions.
+  /**
+   * Recursively retrieves an embedded space element.
+   * @param node The mml element.
+   * @return The space element if it exists.
+   */
+  private static getSpacer_(node: Element): Element {
+    if (DomUtil.tagName(node) === 'MSPACE') {
+      return node;
+    }
+    while (SemanticUtil.hasEmptyTag(node) && node.childNodes.length === 1) {
+      node = (node.childNodes[0] as Element);
+      if (DomUtil.tagName(node) === 'MSPACE') {
+        return node;
+      }
+    }
+    return null;
+  }
+
+
+  /**
+   * Rewrite fences into punctuation. This is done with any "leftover" fence.
+   * @param fence Fence.
+   */
+  private static fenceToPunct_(fence: SemanticNode) {
+    let newRole = SemanticProcessor.FENCE_TO_PUNCT_[fence.role];
+    if (!newRole) {
+      return;
+    }
+    while (fence.embellished) {
+      fence.embellished = SemanticType.PUNCTUATION;
+      if (!(SemanticPred.isRole(fence, SemanticRole.SUBSUP) ||
+        SemanticPred.isRole(fence, SemanticRole.UNDEROVER))) {
+        fence.role = newRole;
+      }
+      fence = fence.childNodes[0];
+    }
+    fence.type = SemanticType.PUNCTUATION;
+    fence.role = newRole;
+  }
+
+
+  /**
+   * Classifies a function wrt. the heuristic that should be applied.
+   * @param funcNode The node to be classified.
+   * @param restNodes The remainder list of
+   *     nodes. They can be useful to look ahead if there is an explicit
+   * function application. If there is one, it will be destructively removed!
+   * @return The string specifying the heuristic.
+   */
+  private static classifyFunction_(
+      funcNode: SemanticNode, restNodes: SemanticNode[]): string {
+    //  We do not allow double function application. This is not lambda
+    //  calculus!
+    if (funcNode.type === SemanticType.APPL ||
+        funcNode.type === SemanticType.BIGOP ||
+        funcNode.type === SemanticType.INTEGRAL) {
+      return '';
+    }
+    // Find and remove explicit function applications.
+    // We now treat funcNode as a prefix function, regardless of what its actual
+    // content is.
+    if (restNodes[0] &&
+        restNodes[0].textContent === SemanticAttr.functionApplication()) {
+      // Store explicit function application to be reused later.
+      SemanticProcessor.getInstance().funcAppls[funcNode.id] =
+          restNodes.shift();
+      let role = SemanticRole.SIMPLEFUNC;
+      SemanticHeuristics.run('simple2prefix', funcNode);
+      if (funcNode.role === SemanticRole.PREFIXFUNC ||
+          funcNode.role === SemanticRole.LIMFUNC) {
+        role = funcNode.role;
+      }
+      SemanticProcessor.propagateFunctionRole_(funcNode, role);
+      return 'prefix';
+    }
+    let kind = SemanticProcessor.CLASSIFY_FUNCTION_[funcNode.role];
+    return kind ? kind :
+                  SemanticPred.isSimpleFunctionHead(funcNode) ? 'simple' : '';
+  }
+
+
+  /**
+   * Propagates a function role in a node.
+   * @param funcNode The node whose role is to be
+   *     rewritten.
+   * @param tag The function role to be inserted.
+   */
+  private static propagateFunctionRole_(
+      funcNode: SemanticNode, tag: SemanticRole) {
+    if (funcNode) {
+      if (funcNode.type === SemanticType.INFIXOP) {
+        return;
+      }
+      if (!(SemanticPred.isRole(funcNode, SemanticRole.SUBSUP) ||
+        SemanticPred.isRole(funcNode, SemanticRole.UNDEROVER))) {
+        funcNode.role = tag;
+      }
+      SemanticProcessor.propagateFunctionRole_(funcNode.childNodes[0], tag);
+    }
+  }
+
+
+  /**
+   * Finds the function operator in a partial semantic tree if it exists.
+   * @param tree The partial tree.
+   * @param pred Predicate for the
+   *    function operator.
+   * @return The function operator.
+   */
+  private static getFunctionOp_(
+      tree: SemanticNode, pred: (p1: SemanticNode) => boolean): SemanticNode {
+    if (pred(tree)) {
+      return tree;
+    }
+    for (let i = 0, child; child = tree.childNodes[i]; i++) {
+      let op = SemanticProcessor.getFunctionOp_(child, pred);
+      if (op) {
+        return op;
+      }
+    }
+    return null;
+  }
+
+
+  /**
+   * Replaces a fenced node by a matrix or vector node and possibly specialises
+   * it's role.
+   * @param node The fenced node to be rewritten.
+   * @return The matrix or vector node.
+   */
+  private static tableToMatrixOrVector_(node: SemanticNode): SemanticNode {
+    let matrix = node.childNodes[0];
+    SemanticPred.isType(matrix, SemanticType.MULTILINE) ?
+        SemanticProcessor.tableToVector_(node) :
+        SemanticProcessor.tableToMatrix_(node);
+    node.contentNodes.forEach(matrix.appendContentNode.bind(matrix));
+    for (let i = 0, row; row = matrix.childNodes[i]; i++) {
+      SemanticProcessor.assignRoleToRow_(
+          row, SemanticProcessor.getComponentRoles_(matrix));
+    }
+    matrix.parent = null;
+    return matrix;
+  }
+
+
+  /**
+   * Assigns a specialised roles to a vector node inside the given fenced node.
+   * @param node The fenced node containing the vector.
+   */
+  private static tableToVector_(node: SemanticNode) {
+    let vector = node.childNodes[0];
+    vector.type = SemanticType.VECTOR;
+    if (vector.childNodes.length === 1) {
+      SemanticProcessor.tableToSquare_(node);
+      return;
+    }
+    SemanticProcessor.binomialForm_(vector);
+  }
+
+
+  /**
+   * Assigns a binomial role if a table consists of two lines only.
+   * @param node The table node.
+   */
+  private static binomialForm_(node: SemanticNode) {
+    if (SemanticPred.isBinomial(node)) {
+      node.role = SemanticRole.BINOMIAL;
+      node.childNodes[0].role = SemanticRole.BINOMIAL;
+      node.childNodes[1].role = SemanticRole.BINOMIAL;
+    }
+  }
+
+
+  /**
+   * Assigns a specialised roles to a matrix node inside the given fenced node.
+   * @param node The fenced node containing the matrix.
+   */
+  private static tableToMatrix_(node: SemanticNode) {
+    let matrix = node.childNodes[0];
+    matrix.type = SemanticType.MATRIX;
+    if (matrix.childNodes && matrix.childNodes.length > 0 &&
+        matrix.childNodes[0].childNodes &&
+        matrix.childNodes.length === matrix.childNodes[0].childNodes.length) {
+      SemanticProcessor.tableToSquare_(node);
+      return;
+    }
+    if (matrix.childNodes && matrix.childNodes.length === 1) {
+      matrix.role = SemanticRole.ROWVECTOR;
+    }
+  }
+
+
+  /**
+   * Assigns a role to a square, fenced table.
+   * @param node The fenced node containing a square
+   *     table.
+   */
+  private static tableToSquare_(node: SemanticNode) {
+    let matrix = node.childNodes[0];
+    if (SemanticPred.isRole(node, SemanticRole.NEUTRAL)) {
+      matrix.role = SemanticRole.DETERMINANT;
+      return;
+    }
+    matrix.role = SemanticRole.SQUAREMATRIX;
+  }
+
+
+  /**
+   * Cmoputes the role for the components of a matrix. It is either the role of
+   * that matrix or its type.
+   * @param node The matrix or vector node.
+   * @return The role to be assigned to the components.
+   */
+  private static getComponentRoles_(node: SemanticNode): SemanticRole {
+    let role = node.role;
+    if (role && role !== SemanticRole.UNKNOWN) {
+      return role;
+    }
+    return node.type.toLowerCase() as SemanticRole ||
+        SemanticRole.UNKNOWN;
+  }
+
+
+  /**
+   * Makes case node out of a table and a fence.
+   * @param table The table containing the cases.
+   * @param openFence The left delimiter of the case
+   *     statement.
+   * @return The cases node.
+   */
+  private static tableToCases_(table: SemanticNode, openFence: SemanticNode):
+      SemanticNode {
+    for (let i = 0, row; row = table.childNodes[i]; i++) {
+      SemanticProcessor.assignRoleToRow_(row, SemanticRole.CASES);
+    }
+    table.type = SemanticType.CASES;
+    table.appendContentNode(openFence);
+    if (SemanticPred.tableIsMultiline(table)) {
+      SemanticProcessor.binomialForm_(table);
+    }
+    return table;
+  }
+
+
+  // TODO: (Simons) Is this heuristic really what we want? Make it selectable?
+  /**
+   * Heuristic to rewrite a single fenced line in a table into a square matrix.
+   * @param table The node to be rewritten.
+   * @return The rewritten node.
+   */
+  private static rewriteFencedLine_(table: SemanticNode): SemanticNode {
+    let line = table.childNodes[0];
+    let fenced = table.childNodes[0].childNodes[0];
+    let element = table.childNodes[0].childNodes[0].childNodes[0];
+    fenced.parent = table.parent;
+    table.parent = fenced;
+    element.parent = line;
+    fenced.childNodes = [table];
+    line.childNodes = [element];
+    return fenced;
+  }
+
+
+  /**
+   * Converts a row that only contains one cell into a single line.
+   * @param row The row to convert.
+   * @param opt_role The new role for the line.
+   */
+  private static rowToLine_(row: SemanticNode, opt_role?: SemanticRole) {
+    let role = opt_role || SemanticRole.UNKNOWN;
+    if (SemanticPred.isType(row, SemanticType.ROW)) {
+      row.type = SemanticType.LINE;
+      row.role = role;
+      if (row.childNodes.length === 1 &&
+        SemanticPred.isType(row.childNodes[0], SemanticType.CELL)) {
+        row.childNodes = row.childNodes[0].childNodes;
+        row.childNodes.forEach(function(x) {
+          x.parent = row;
+        });
+      }
+    }
+  }
+
+
+  /**
+   * Assign a row and its contained cells a new role value.
+   * @param row The row to be updated.
+   * @param role The new role for the row and its cells.
+   */
+  private static assignRoleToRow_(row: SemanticNode, role: SemanticRole) {
+    if (SemanticPred.isType(row, SemanticType.LINE)) {
+      row.role = role;
+      return;
+    }
+    if (SemanticPred.isType(row, SemanticType.ROW)) {
+      row.role = role;
+      row.childNodes.forEach(function(cell) {
+        if (SemanticPred.isType(cell, SemanticType.CELL)) {
+          cell.role = role;
+        }
+      });
+    }
+  }
+
+
+  /**
+   * Constructs a closure that returns separators for an MathML mfenced
+   * expression.
+   * Separators in MathML are represented by a list and used up one by one
+   * until the final element is used as the default.
+   * Example: a b c d e  and separators [+,-,*]
+   * would result in a + b - c * d * e.
+   * @param separators String representing a list of mfenced separators.
+   * @return A closure that returns the next separator
+   * for an mfenced expression starting with the first node in nodes.
+   */
+  private static nextSeparatorFunction_(separators: string):
+      (() => string)|null {
+    let sepList: string[];
+    if (separators) {
+      // Mathjax does not expand empty separators.
+      if (separators.match(/^\s+$/)) {
+        return null;
+      } else {
+        sepList =
+            separators.replace(/\s/g, '').split('').filter(function(x) {
+              return x;
+            });
+      }
+    } else {
+      // When no separator is given MathML uses comma as default.
+      sepList = [','];
+    }
+
+    return function() {
+      if (sepList.length > 1) {
+        return sepList.shift();
+      }
+      return sepList[0];
+    };
+  }
+
+
+  /**
+   * Compute the role of a number if it does not have one already.
+   * @param node The semantic tree node.
+   */
+  private static numberRole_(node: SemanticNode) {
+    if (node.role !== SemanticRole.UNKNOWN) {
+      return;
+    }
+    let content = SemanticUtil.splitUnicode(node.textContent);
+    let meaning = content.map(SemanticAttr.lookupMeaning);
+    if (meaning.every(function(x) {
+          return x.type === SemanticType.NUMBER &&
+              x.role === SemanticRole.INTEGER ||
+              x.type === SemanticType.PUNCTUATION &&
+              x.role === SemanticRole.COMMA;
+        })) {
+      node.role = SemanticRole.INTEGER;
+      if (content[0] === '0') {
+        node.addAnnotation('general', 'basenumber');
+      }
+      return;
+    }
+    if (meaning.every(function(x) {
+          return x.type === SemanticType.NUMBER &&
+              x.role === SemanticRole.INTEGER ||
+              x.type === SemanticType.PUNCTUATION;
+        })) {
+      node.role = SemanticRole.FLOAT;
+      return;
+    }
+    node.role = SemanticRole.OTHERNUMBER;
+  }
+
+
+  /**
+   * Updates the font of a node if a single font can be determined.
+   * @param node The semantic tree node.
+   */
+  private static exprFont_(node: SemanticNode) {
+    if (node.font !== SemanticFont.UNKNOWN) {
+      return;
+    }
+    let content = SemanticUtil.splitUnicode(node.textContent);
+    let meaning = content.map(SemanticAttr.lookupMeaning);
+    let singleFont = meaning.reduce(function(prev, curr) {
+      if (!prev || !curr.font || curr.font === SemanticFont.UNKNOWN ||
+          curr.font === prev) {
+        return prev;
+      }
+      if (prev === SemanticFont.UNKNOWN) {
+        return curr.font;
+      }
+      return null;
+    }, SemanticFont.UNKNOWN);
+    if (singleFont) {
+      node.font = singleFont;
+    }
+  }
+
+
+  /**
+   * Rewrites a fences partition to remove non-eligible embellished fences.
+   * It rewrites all other fences into punctuations.
+   * For eligibility see sre.SemanticPred.isElligibleEmbellishedFence
+   * @param {{rel: !Array.<sre.SemanticNode>,
+   *          comp: !Array.<!Array.<sre.SemanticNode>>}} partition A partition
+   * for fences.
+   * @return {{rel: !Array.<sre.SemanticNode>,
+   *           comp: !Array.<!Array.<sre.SemanticNode>>}} The cleansed
+   * partition.
+   */
+  private static purgeFences_(partition: {
+    rel: SemanticNode[],
+    comp: SemanticNode[][]
+  }): {rel: SemanticNode[], comp: SemanticNode[][]} {
+    let rel = partition.rel;
+    let comp = partition.comp;
+    let newRel = [];
+    let newComp = [];
+
+    while (rel.length > 0) {
+      let currentRel = rel.shift();
+      let currentComp = comp.shift();
+      if (SemanticPred.isElligibleEmbellishedFence(currentRel)) {
+        newRel.push(currentRel);
+        newComp.push(currentComp);
+        continue;
+      }
+      SemanticProcessor.fenceToPunct_(currentRel);
+      currentComp.push(currentRel);
+      currentComp = currentComp.concat(comp.shift());
+      comp.unshift(currentComp);
+    }
+    newComp.push(comp.shift());
+    return {rel: newRel, comp: newComp};
+  }
+
+
+  /**
+   * Rewrites a fenced node by pulling some embellishments from fences to the
+   * outside.
+   * @param fenced The fenced node.
+   * @return The rewritten node.
+   */
+  private static rewriteFencedNode_(fenced: SemanticNode): SemanticNode {
+    let ofence = (fenced.contentNodes[0] as SemanticNode);
+    let cfence = (fenced.contentNodes[1] as SemanticNode);
+    let rewritten = SemanticProcessor.rewriteFence_(fenced, ofence);
+    fenced.contentNodes[0] = rewritten.fence;
+    rewritten = SemanticProcessor.rewriteFence_(rewritten.node, cfence);
+    fenced.contentNodes[1] = rewritten.fence;
+    fenced.contentNodes[0].parent = fenced;
+    fenced.contentNodes[1].parent = fenced;
+    rewritten.node.parent = null;
+    return rewritten.node;
+  }
+
+
+  /**
+   * Rewrites a fence by removing embellishments and putting them around the
+   * node. The only embellishments that are not pulled out are overscore and
+   * underscore.
+   * @param node The original fenced node.
+   * @param fence The fence node.
+   * @return {{node: !sre.SemanticNode,
+   *           fence: !sre.SemanticNode}} The rewritten node and fence.
+   */
+  // TODO (sorge) Maybe remove the superfluous MathML element.
+  private static rewriteFence_(node: SemanticNode, fence: SemanticNode):
+      {node: SemanticNode, fence: SemanticNode} {
+    if (!fence.embellished) {
+      return {node: node, fence: fence};
+    }
+    let newFence = (fence.childNodes[0] as SemanticNode);
+    let rewritten = SemanticProcessor.rewriteFence_(node, newFence);
+    if (SemanticPred.isType(fence, SemanticType.SUPERSCRIPT) ||
+      SemanticPred.isType(fence, SemanticType.SUBSCRIPT) ||
+      SemanticPred.isType(fence, SemanticType.TENSOR)) {
+      // Fence is embellished and needs to be rewritten.
+      if (!SemanticPred.isRole(fence, SemanticRole.SUBSUP)) {
+        fence.role = node.role;
+      }
+      if (newFence !== rewritten.node) {
+        fence.replaceChild(newFence, rewritten.node);
+        newFence.parent = node;
+      }
+      SemanticProcessor.propagateFencePointer_(fence, newFence);
+      return {node: fence, fence: rewritten.fence};
+    }
+    fence.replaceChild(newFence, rewritten.fence);
+    if (fence.mathmlTree && fence.mathml.indexOf(fence.mathmlTree) === -1) {
+      fence.mathml.push(fence.mathmlTree);
+    }
+    return {node: rewritten.node, fence: fence};
+  }
+
+
+  /**
+   * Propagates the fence pointer, that is, the embellishing node links to the
+   * actual fence it embellishes. If the link is valid on the new node, the old
+   * node will point to that link as well. Note, that this fence might still be
+   * embellished itself, e.g. with under or overscore.
+   * @param oldNode The old embellished node.
+   * @param newNode The new embellished node.
+   */
+  private static propagateFencePointer_(
+      oldNode: SemanticNode, newNode: SemanticNode) {
+    oldNode.fencePointer = newNode.fencePointer || newNode.id.toString();
+    oldNode.embellished = null;
+  }
+
+
+  /**
+   * Classifies table by columns and a given relation.
+   * @param table The table node.
+   * @param columns The columns.
+   * @param relation The main relation to classify.
+   * @param alternatives Alternative relations that are
+   *     permitted in addition to the main relation.
+   * @return True if classification was successful.
+   */
+  private static classifyByColumns_(
+      table: SemanticNode, columns: SemanticNode[][], relation: SemanticRole,
+      _alternatives?: SemanticRole[]): boolean {
+    // TODO: For more complex systems, work with permutations/alternations of
+    // column indices.
+    let test1 = (x: SemanticNode) => SemanticProcessor.isPureRelation_(x, relation);
+    let test2 = (x: SemanticNode) => SemanticProcessor.isEndRelation_(x, relation) ||
+      SemanticProcessor.isPureRelation_(x, relation);
+    let test3 = (x: SemanticNode) => SemanticProcessor.isEndRelation_(x, relation, true) ||
+          SemanticProcessor.isPureRelation_(x, relation);
+
+    if (columns.length === 3 &&
+            SemanticProcessor.testColumns_(columns, 1, test1) ||
+        columns.length === 2 &&
+            (SemanticProcessor.testColumns_(columns, 1, test2) ||
+             SemanticProcessor.testColumns_(columns, 0, test3))) {
+      table.role = relation;
+      return true;
+    }
+    return false;
+  }
+
+
+  /**
+   * Check for a particular end relations, i.e., either a sole relation symbols
+   * or the relation ends in an side.
+   * @param node The node.
+   * @param relation The relation to be tested.
+   * @param opt_right From the right side?
+   * @return True if the node is an end relation.
+   */
+  private static isEndRelation_(node: SemanticNode, relation: SemanticRole,
+                                opt_right?: boolean): boolean {
+    let position = opt_right ? node.childNodes.length - 1 : 0;
+    return SemanticPred.isType(node, SemanticType.RELSEQ) &&
+      SemanticPred.isRole(node, relation) &&
+      SemanticPred.isType(node.childNodes[position], SemanticType.EMPTY);
+  }
+
+
+  /**
+   * Check for a particular relations.
+   * @param node The node.
+   * @param relation The relation to be tested.
+   * @return True if the node is an end relation.
+   */
+  private static isPureRelation_(node: SemanticNode, relation: SemanticRole):
+      boolean {
+    return SemanticPred.isType(node, SemanticType.RELATION) &&
+        SemanticPred.isRole(node, relation);
+  }
+
+
+  /**
+   * Computes columns from a table. Note that the columns are reduced, i.e.,
+   * empty cells are simply omitted. Consequently, rows are not preserved, i.e.,
+   * elements at the same index in different columns are not necessarily in the
+   * same row in the original table!
+   * @param table The table node.
+   * @return The columns.
+   */
+  private static computeColumns_(table: SemanticNode): SemanticNode[][] {
+    let columns = [];
+    for (let i = 0, row; row = table.childNodes[i]; i++) {
+      for (let j = 0, cell; cell = row.childNodes[j]; j++) {
+        let column = columns[j];
+        column ? columns[j].push(cell) : columns[j] = [cell];
+      }
+    }
+    return columns;
+  }
+
+
+  /**
+   * Test if all elements in the i-th column have the same property.
+   * @param columns The columns.
+   * @param index The column to be tested.
+   * @param pred Predicate to test against.
+   * @return True if all elements of the given column satisfy pred.
+   */
+  private static testColumns_(
+      columns: SemanticNode[][], index: number,
+      pred: (p1: SemanticNode) => boolean): boolean {
+    let column = columns[index];
+    return column ? column.some(function(cell) {
+      return cell.childNodes.length &&
+          pred((cell.childNodes[0] as SemanticNode));
+    }) && column.every(function(cell) {
+      return !cell.childNodes.length ||
+          pred((cell.childNodes[0] as SemanticNode));
+    }) :
+                    false;
   }
 
 
@@ -179,6 +986,517 @@ export default class SemanticProcessor {
 
 
   /**
+   * Process a list of nodes and create a node for implicit operations,
+   * currently assumed to be of multiplicative type. Determines mixed numbers
+   * and unit elements.
+   * @param nodes The operands.
+   * @return The new branch node.
+   */
+  public implicitNode(nodes: SemanticNode[]): SemanticNode {
+    nodes = SemanticProcessor.getInstance().getMixedNumbers_(nodes);
+    nodes = SemanticProcessor.getInstance().combineUnits_(nodes);
+    if (nodes.length === 1) {
+      return nodes[0];
+    }
+    let node = SemanticProcessor.getInstance().implicitNode_(nodes);
+    return SemanticHeuristics.run('combine_juxtaposition', node) as SemanticNode;
+  }
+
+
+  /**
+   * Create an text node, keeping string notation correct.
+   * @param leaf The text node.
+   * @param type The type of the text node.
+   * @return The new semantic text node.
+   */
+  public text(leaf: SemanticNode, type: string): SemanticNode {
+    // TODO (simons): Here check if there is already a type or if we can compute
+    // an interesting number role. Than use this.
+    SemanticProcessor.exprFont_(leaf);
+    leaf.type = SemanticType.TEXT;
+    if (type === 'MS') {
+      leaf.role = SemanticRole.STRING;
+      return leaf;
+    }
+    if (type === 'MSPACE' || leaf.textContent.match(/^\s*$/)) {
+      leaf.role = SemanticRole.SPACE;
+      return leaf;
+    }
+    // TODO (simons): Process single element in text. E.g., check if a text
+    //      element represents a function or a single letter, number, etc.
+    return leaf;
+  }
+
+
+  /**
+   * Processes a list of nodes, combining expressions by delimiters, tables,
+   * punctuation sequences, function/big operator/integral applications to
+   * generate a syntax tree with relation and operator precedence.
+   *
+   * This is the main heuristic to rewrite a flat row of terms into a meaningful
+   * term tree.
+   * @param nodes The list of nodes.
+   * @return The root node of the syntax tree.
+   */
+  public row(nodes: SemanticNode[]): SemanticNode {
+    nodes = nodes.filter(function(x) {
+      return !SemanticPred.isType(x, SemanticType.EMPTY);
+    });
+    if (nodes.length === 0) {
+      return SemanticProcessor.getInstance().factory_.makeEmptyNode();
+    }
+    nodes = SemanticProcessor.getInstance().getFencesInRow_(nodes);
+    nodes = SemanticProcessor.getInstance().tablesInRow(nodes);
+    nodes = SemanticProcessor.getInstance().getPunctuationInRow_(nodes);
+    nodes = SemanticProcessor.getInstance().getTextInRow_(nodes);
+    nodes = SemanticProcessor.getInstance().getFunctionsInRow_(nodes);
+    return SemanticProcessor.getInstance().relationsInRow_(nodes);
+  }
+
+
+  /**
+   * Creates a limit node from a sub/superscript or over/under node if the
+   * central element is a big operator. Otherwise it creates the standard
+   * elements.
+   * @param mmlTag The tag name of the original node.
+   * @param children The children of the
+   *     original node.
+   * @return The newly created limit node.
+   */
+  public limitNode(mmlTag: string, children: SemanticNode[]): SemanticNode {
+    if (!children.length) {
+      return SemanticProcessor.getInstance().factory_.makeEmptyNode();
+    }
+    let center = children[0];
+    let type = SemanticType.UNKNOWN;
+    if (!children[1]) {
+      return center;
+    }
+
+    let result: BoundsType;
+    if (SemanticPred.isLimitBase(center)) {
+      result = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
+      let length = result.length;
+      type = result.type;
+      children = children.slice(0, result.length + 1);
+      // Heuristic to deal with accents around limit functions/operators.
+      if (length === 1 && SemanticPred.isAccent(children[1]) ||
+          length === 2 && SemanticPred.isAccent(children[1]) &&
+              SemanticPred.isAccent(children[2])) {
+        result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+        return SemanticProcessor.getInstance().accentNode_(
+            center, children, result.type, result.length, result.accent);
+      }
+      if (length === 2) {
+        if (SemanticPred.isAccent(children[1])) {
+          center = SemanticProcessor.getInstance().accentNode_(
+              center, [center, children[1]], {
+                'MSUBSUP': SemanticType.SUBSCRIPT,
+                'MUNDEROVER': SemanticType.UNDERSCORE
+              }[mmlTag],
+              1, true);
+          return !children[2] ? center :
+                                SemanticProcessor.getInstance().makeLimitNode_(
+                                    center, [center, children[2]], null,
+                                    SemanticType.LIMUPPER);
+        }
+        if (children[2] && SemanticPred.isAccent(children[2])) {
+          center = SemanticProcessor.getInstance().accentNode_(
+              center, [center, children[2]], {
+                'MSUBSUP': SemanticType.SUPERSCRIPT,
+                'MUNDEROVER': SemanticType.OVERSCORE
+              }[mmlTag],
+              1, true);
+          return SemanticProcessor.getInstance().makeLimitNode_(
+              center, [center, children[1]], null, SemanticType.LIMLOWER);
+        }
+        // Limit nodes only the number of children has to be restricted.
+        if (!children[length]) {
+          type = SemanticType.LIMLOWER;
+        }
+      }
+      return SemanticProcessor.getInstance().makeLimitNode_(center, children, null, type);
+    }
+    // We either have an indexed, stacked or accented expression.
+    result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
+    return SemanticProcessor.getInstance().accentNode_(
+        center, children, result.type, result.length, result.accent);
+  }
+
+
+  // Improve table recognition, multiline alignments for pausing.
+  // Maybe labels, interspersed text etc.
+  /**
+   * Rewrites tables into matrices or case statements in a list of nodes.
+   * @param nodes List of nodes to rewrite.
+   * @return The new list of nodes.
+   */
+  public tablesInRow(nodes: SemanticNode[]): SemanticNode[] {
+    // First we process all matrices:
+    let partition = SemanticUtil.partitionNodes(
+        nodes, SemanticPred.tableIsMatrixOrVector);
+    let result: SemanticNode[] = [];
+    for (let i = 0, matrix; matrix = partition.rel[i]; i++) {
+      result = result.concat(partition.comp.shift());
+      result.push(SemanticProcessor.tableToMatrixOrVector_(matrix));
+    }
+    result = result.concat(partition.comp.shift());
+    // Process the remaining tables for cases.
+    partition = SemanticUtil.partitionNodes(
+        result, SemanticPred.isTableOrMultiline);
+    result = [];
+    for (let i = 0, table; table = partition.rel[i]; i++) {
+      let prevNodes = partition.comp.shift();
+      if (SemanticPred.tableIsCases(table, prevNodes)) {
+        SemanticProcessor.tableToCases_(
+            table, (prevNodes.pop() as SemanticNode));
+      }
+      result = result.concat(prevNodes);
+      result.push(table);
+    }
+    return result.concat(partition.comp.shift());
+  }
+
+
+  /**
+   * Process an fenced node, effectively given in an mfenced style.
+   * @param open Textual representation of the opening fence.
+   * @param close Textual representation of the closing fence.
+   * @param sepValue Textual representation of separators.
+   * @param children List of already translated
+   *     children.
+   * @return The semantic node.
+   */
+  public mfenced(
+      open: string|null, close: string|null, sepValue: string|null,
+      children: SemanticNode[]): SemanticNode {
+    if (sepValue && children.length > 0) {
+      let separators = SemanticProcessor.nextSeparatorFunction_(sepValue);
+      let newChildren = [children.shift()];
+      children.forEach((child) => {
+        newChildren.push(
+            SemanticProcessor.getInstance().factory_.makeContentNode(
+                separators()));
+        newChildren.push(child);
+      });
+      children = newChildren;
+    }
+    // If both open and close are given, we assume those elements to be fences,
+    // regardless of their initial semantic interpretation. However, if only one
+    // of the fences is given we do not explicitly interfere with the semantic
+    // interpretation. In other worde the mfence is ignored and the content is
+    // interpreted as usual. The only effect of the mfence node here is that the
+    // content will be interpreted into a single node.
+    if (open && close) {
+      return SemanticProcessor.getInstance().horizontalFencedNode_(
+          SemanticProcessor.getInstance().factory_.makeContentNode(open),
+          SemanticProcessor.getInstance().factory_.makeContentNode(close),
+          children);
+    }
+    if (open) {
+      children.unshift(
+          SemanticProcessor.getInstance().factory_.makeContentNode(open));
+    }
+    if (close) {
+      children.push(
+          SemanticProcessor.getInstance().factory_.makeContentNode(close));
+    }
+    return SemanticProcessor.getInstance().row(children);
+  }
+
+
+  /**
+   * Creates a fraction node with the appropriate role.
+   * @param denom The denominator node.
+   * @param enume The enumerator node.
+   * @param linethickness The line thickness attribute value.
+   * @param bevelled Is it a bevelled fraction?
+   * @return The new fraction node.
+   */
+  public fractionLikeNode(
+      denom: SemanticNode, enume: SemanticNode, linethickness: string,
+      bevelled: boolean): SemanticNode {
+    // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
+    //     SemanticType.MULTILINE, [child0, child1], []);
+    let node;
+    if (!bevelled && SemanticUtil.isZeroLength(linethickness)) {
+      let child0 = SemanticProcessor.getInstance().factory_.makeBranchNode(
+          SemanticType.LINE, [denom], []);
+      let child1 = SemanticProcessor.getInstance().factory_.makeBranchNode(
+          SemanticType.LINE, [enume], []);
+      node = SemanticProcessor.getInstance().factory_.makeBranchNode(
+          SemanticType.MULTILINE, [child0, child1], []);
+      SemanticProcessor.binomialForm_(node);
+      SemanticProcessor.classifyMultiline(node);
+      return node;
+    } else {
+      node = SemanticProcessor.getInstance().fractionNode_(denom, enume);
+      if (bevelled) {
+        node.addAnnotation('general', 'bevelled');
+      }
+      return node;
+    }
+  }
+
+
+  /**
+   * Create a tensor node.
+   * @param base The base node.
+   * @param lsub The left subscripts.
+   * @param lsup The left superscripts.
+   * @param rsub The right subscripts.
+   * @param rsup The right superscripts.
+   * @return The semantic tensor node.
+   */
+  public tensor(base: SemanticNode, lsub: SemanticNode[], lsup: SemanticNode[],
+                rsub: SemanticNode[], rsup: SemanticNode[]): SemanticNode {
+    let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
+        SemanticType.TENSOR,
+        [
+          base,
+          SemanticProcessor.getInstance().scriptNode_(
+              lsub, SemanticRole.LEFTSUB),
+          SemanticProcessor.getInstance().scriptNode_(
+              lsup, SemanticRole.LEFTSUPER),
+          SemanticProcessor.getInstance().scriptNode_(
+              rsub, SemanticRole.RIGHTSUB),
+          SemanticProcessor.getInstance().scriptNode_(
+              rsup, SemanticRole.RIGHTSUPER)
+        ],
+        []);
+    newNode.role = base.role;
+    newNode.embellished = SemanticPred.isEmbellished(base);
+    return newNode;
+  }
+
+
+  /**
+   * Creates a limit node from an original mmultiscript node, that only has
+   * non-empty right sub and superscript elements.
+   * @param base The base node.
+   * @param sub The subscripts.
+   * @param sup The superscripts.
+   * @return The semantic tensor node.
+   */
+  public pseudoTensor(base: SemanticNode, sub: SemanticNode[],
+                      sup: SemanticNode[]): SemanticNode {
+    let isEmpty = (x: SemanticNode) => !SemanticPred.isType(x, SemanticType.EMPTY);
+    let nonEmptySub = sub.filter(isEmpty).length;
+    let nonEmptySup = sup.filter(isEmpty).length;
+    if (!nonEmptySub && !nonEmptySup) {
+      return base;
+    }
+    let mmlTag = nonEmptySub ? nonEmptySup ? 'MSUBSUP' : 'MSUB' : 'MSUP';
+    let mmlchild = [base];
+    if (nonEmptySub) {
+      mmlchild.push(SemanticProcessor.getInstance().scriptNode_(
+          sub, SemanticRole.RIGHTSUB, true));
+    }
+    if (nonEmptySup) {
+      mmlchild.push(SemanticProcessor.getInstance().scriptNode_(
+          sup, SemanticRole.RIGHTSUPER, true));
+    }
+    return SemanticProcessor.getInstance().limitNode(mmlTag, mmlchild);
+  }
+
+
+  /**
+   * Cleans font names of potential MathJax prefixes.
+   * @param font The font name.
+   * @return The clean name.
+   */
+  public font(font: string): SemanticFont {
+    let mathjaxFont = SemanticProcessor.MATHJAX_FONTS[font];
+    return mathjaxFont ? mathjaxFont : (font as SemanticFont);
+  }
+
+
+  /**
+   * Parses a proof node.
+   * @param node The node.
+   * @param semantics Association of semantic keys to values.
+   * @param parse The
+   *     current semantic parser for list of nodes.
+   * @return The semantic node for the proof.
+   */
+  public proof(
+      node: Element, semantics: {[key: string]: string},
+      parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
+    if (!semantics['inference'] && !semantics['axiom']) {
+      console.log('Noise');
+    }
+    // do some preprocessing!
+    // Put in an invisible comma!
+    // Axiom case!
+    if (semantics['axiom']) {
+      let cleaned = SemanticProcessor.getInstance().cleanInference(node.childNodes);
+      let axiom = cleaned.length ?
+          SemanticProcessor.getInstance().factory_.makeBranchNode(
+              SemanticType.INFERENCE, parse(cleaned), []) :
+          SemanticProcessor.getInstance().factory_.makeEmptyNode();
+      axiom.role = SemanticRole.AXIOM;
+      axiom.mathmlTree = node;
+      return axiom;
+    }
+    let inference = SemanticProcessor.getInstance().inference(node, semantics, parse);
+    if (semantics['proof']) {
+      inference.role = SemanticRole.PROOF;
+      inference.childNodes[0].role = SemanticRole.FINAL;
+    }
+    return inference;
+  }
+
+
+  /**
+   * Parses a single inference node.
+   * @param node The node.
+   * @param semantics Association of semantic keys to values.
+   * @param parse The
+   *     current semantic parser for list of nodes.
+   * @return The semantic node for the inference.
+   */
+  public inference(
+      node: Element, semantics: {[key: string]: string},
+      parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
+    if (semantics['inferenceRule']) {
+      let formulas = SemanticProcessor.getInstance().getFormulas(node, [], parse);
+      let inference = SemanticProcessor.getInstance().factory_.makeBranchNode(
+          SemanticType.INFERENCE, [formulas.conclusion, formulas.premises],
+          []);
+      // Setting role
+      return inference;
+    }
+    let label = semantics['labelledRule'];
+    let children = DomUtil.toArray(node.childNodes);
+    let content = [];
+    if (label === 'left' || label === 'both') {
+      content.push(
+          SemanticProcessor.getInstance().getLabel(node, children, parse, SemanticRole.LEFT));
+    }
+    if (label === 'right' || label === 'both') {
+      content.push(
+          SemanticProcessor.getInstance().getLabel(node, children, parse, SemanticRole.RIGHT));
+    }
+    let formulas = SemanticProcessor.getInstance().getFormulas(node, children, parse);
+    let inference = SemanticProcessor.getInstance().factory_.makeBranchNode(
+        SemanticType.INFERENCE, [formulas.conclusion, formulas.premises],
+        content);
+    // Setting role
+    inference.mathmlTree = node;
+    return inference;
+  }
+
+
+  /**
+   * Parses the label of an inference rule.
+   * @param node The inference node.
+   * @param children The node's children containing the label.
+   * @param parse The
+   *     current semantic parser for list of nodes.
+   * @param side The side the label is on.
+   * @return The semantic node for the label.
+   */
+  public getLabel(_node: Element, children: Element[],
+      parse: (p1: Element[]) => SemanticNode[], side: string): SemanticNode {
+    let label = SemanticProcessor.getInstance().findNestedRow(children, 'prooflabel', side);
+    let sem = SemanticProcessor.getInstance().factory_.makeBranchNode(
+        SemanticType.RULELABEL,
+        parse(DomUtil.toArray(label.childNodes)), []);
+    sem.role = (side as SemanticRole);
+    sem.mathmlTree = label;
+    return sem;
+  }
+
+
+  /**
+   * Retrieves and parses premises and conclusion of an inference rule.
+   * @param node The inference rule node.
+   * @param children The node's children containing.
+   * @param parse The
+   *     current semantic parser for list of nodes.
+   * @return A pair
+   *       of conclusion and premises.
+   */
+  public getFormulas(
+      node: Element, children: Element[],
+      parse: (p1: Element[]) => SemanticNode[]):
+      {conclusion: SemanticNode, premises: SemanticNode} {
+    let inf =
+        children.length ? SemanticProcessor.getInstance().findNestedRow(children, 'inferenceRule') : node;
+    let up = SemanticProcessor.getSemantics(inf)['inferenceRule'] === 'up';
+    let premRow = up ? inf.childNodes[1] : inf.childNodes[0];
+    let concRow = up ? inf.childNodes[0] : inf.childNodes[1];
+    let premTable = premRow.childNodes[0].childNodes[0];
+    let topRow = DomUtil.toArray(premTable.childNodes[0].childNodes);
+    let premNodes = [];
+    let i = 1;
+    for (let cell of topRow) {
+      if (i % 2) {
+        premNodes.push(cell.childNodes[0]);
+      }
+      i++;
+    }
+    let premises = parse(premNodes);
+    let conclusion =
+        parse(DomUtil.toArray(concRow.childNodes[0].childNodes))[0];
+    let prem =
+        SemanticProcessor.getInstance().factory_.makeBranchNode(SemanticType.PREMISES, premises, []);
+    prem.mathmlTree = (premTable as Element);
+    let conc = SemanticProcessor.getInstance().factory_.makeBranchNode(
+        SemanticType.CONCLUSION, [conclusion], []);
+    conc.mathmlTree = (concRow.childNodes[0].childNodes[0] as Element);
+    return {conclusion: conc, premises: prem};
+  }
+
+
+  /**
+   * Find a inference element nested in a row.
+   * @param nodes A node list.
+   * @param semantic A semantic key.
+   * @param opt_value Optionally the semantic value.
+   * @return The first element in that row that contains the semantic
+   *     key (and has its value if the latter is given.)
+   */
+  public findNestedRow(nodes: Element[], semantic: string, opt_value?: string):
+      Element {
+    return SemanticProcessor.getInstance().findNestedRow_(nodes, semantic, 0, opt_value);
+  }
+
+
+  /**
+   * Removes mspaces in a row.
+   * @param nodes The list of nodes.
+   * @return The list with all space elements removed.
+   */
+  public cleanInference(nodes: NodeList): Element[] {
+    return DomUtil.toArray(nodes).filter(function(x) {
+      return DomUtil.tagName(x) !== 'MSPACE';
+    });
+  }
+
+
+  /**
+   * Switches unknown to operator node and runs multioperator heuristics.
+   * @param node The node to retype.
+   * @return The node resulting from applying the heuristic.
+   */
+  public operatorNode(node: SemanticNode): SemanticNode {
+    if (node.type === SemanticType.UNKNOWN) {
+      node.type = SemanticType.OPERATOR;
+    }
+    return SemanticHeuristics.run('multioperator', node) as SemanticNode;
+  }
+
+  /**
+   * Private constructor for singleton class.
+   */
+  private constructor() {
+    this.factory_ = new SemanticNodeFactory();
+    SemanticHeuristics.factory = this.factory_;
+  }
+
+
+  /**
    * Create a branching node for an implicit operation, currently assumed to be
    * of multiplicative type.
    * @param nodes The operands.
@@ -198,74 +1516,6 @@ export default class SemanticProcessor {
     });
     newNode.contentNodes = operators;
     return newNode;
-  }
-
-
-  /**
-   * Matches juxtaposition with existing spaces by adding the potentially nested
-   * space elements as mathmlTree elements. This has the effect that newly
-   * introduced invisible times operators will enrich the spaces rather than add
-   * new empty elements.
-   * @param nodes The operands.
-   * @param ops A list of invisible times operators.
-   */
-  private static matchSpaces_(nodes: SemanticNode[], ops: SemanticNode[]) {
-    for (let i = 0, op; op = ops[i]; i++) {
-      let node = nodes[i];
-      let mt1 = node.mathmlTree;
-      let mt2 = nodes[i + 1].mathmlTree;
-      if (!mt1 || !mt2) {
-        continue;
-      }
-      let sibling = (mt1.nextSibling as Element);
-      if (!sibling || sibling === mt2) {
-        continue;
-      }
-      let spacer = SemanticProcessor.getSpacer_(sibling);
-      if (spacer) {
-        op.mathml.push(spacer);
-        op.mathmlTree = spacer;
-        op.role = SemanticRole.SPACE;
-      }
-    }
-  }
-
-
-  // TODO (TS): Make this optional conditions.
-  /**
-   * Recursively retrieves an embedded space element.
-   * @param node The mml element.
-   * @return The space element if it exists.
-   */
-  private static getSpacer_(node: Element): Element {
-    if (DomUtil.tagName(node) === 'MSPACE') {
-      return node;
-    }
-    while (SemanticUtil.hasEmptyTag(node) && node.childNodes.length === 1) {
-      node = (node.childNodes[0] as Element);
-      if (DomUtil.tagName(node) === 'MSPACE') {
-        return node;
-      }
-    }
-    return null;
-  }
-
-
-  /**
-   * Process a list of nodes and create a node for implicit operations,
-   * currently assumed to be of multiplicative type. Determines mixed numbers
-   * and unit elements.
-   * @param nodes The operands.
-   * @return The new branch node.
-   */
-  public implicitNode(nodes: SemanticNode[]): SemanticNode {
-    nodes = SemanticProcessor.getInstance().getMixedNumbers_(nodes);
-    nodes = SemanticProcessor.getInstance().combineUnits_(nodes);
-    if (nodes.length === 1) {
-      return nodes[0];
-    }
-    let node = SemanticProcessor.getInstance().implicitNode_(nodes);
-    return SemanticHeuristics.run('combine_juxtaposition', node) as SemanticNode;
   }
 
 
@@ -401,57 +1651,6 @@ export default class SemanticProcessor {
     }
     return SemanticProcessor.getInstance().concatNode_(
         node, postfixes, SemanticType.POSTFIXOP);
-  }
-
-
-  /**
-   * Create an text node, keeping string notation correct.
-   * @param leaf The text node.
-   * @param type The type of the text node.
-   * @return The new semantic text node.
-   */
-  public text(leaf: SemanticNode, type: string): SemanticNode {
-    // TODO (simons): Here check if there is already a type or if we can compute
-    // an interesting number role. Than use this.
-    SemanticProcessor.exprFont_(leaf);
-    leaf.type = SemanticType.TEXT;
-    if (type === 'MS') {
-      leaf.role = SemanticRole.STRING;
-      return leaf;
-    }
-    if (type === 'MSPACE' || leaf.textContent.match(/^\s*$/)) {
-      leaf.role = SemanticRole.SPACE;
-      return leaf;
-    }
-    // TODO (simons): Process single element in text. E.g., check if a text
-    //      element represents a function or a single letter, number, etc.
-    return leaf;
-  }
-
-
-  /**
-   * Processes a list of nodes, combining expressions by delimiters, tables,
-   * punctuation sequences, function/big operator/integral applications to
-   * generate a syntax tree with relation and operator precedence.
-   *
-   * This is the main heuristic to rewrite a flat row of terms into a meaningful
-   * term tree.
-   * @param nodes The list of nodes.
-   * @return The root node of the syntax tree.
-   */
-  public row(nodes: SemanticNode[]): SemanticNode {
-    nodes = nodes.filter(function(x) {
-      return !SemanticPred.isType(x, SemanticType.EMPTY);
-    });
-    if (nodes.length === 0) {
-      return SemanticProcessor.getInstance().factory_.makeEmptyNode();
-    }
-    nodes = SemanticProcessor.getInstance().getFencesInRow_(nodes);
-    nodes = SemanticProcessor.getInstance().tablesInRow(nodes);
-    nodes = SemanticProcessor.getInstance().getPunctuationInRow_(nodes);
-    nodes = SemanticProcessor.getInstance().getTextInRow_(nodes);
-    nodes = SemanticProcessor.getInstance().getFunctionsInRow_(nodes);
-    return SemanticProcessor.getInstance().relationsInRow_(nodes);
   }
 
 
@@ -1136,28 +2335,6 @@ export default class SemanticProcessor {
 
 
   /**
-   * Rewrite fences into punctuation. This is done with any "leftover" fence.
-   * @param fence Fence.
-   */
-  private static fenceToPunct_(fence: SemanticNode) {
-    let newRole = SemanticProcessor.FENCE_TO_PUNCT_[fence.role];
-    if (!newRole) {
-      return;
-    }
-    while (fence.embellished) {
-      fence.embellished = SemanticType.PUNCTUATION;
-      if (!(SemanticPred.isRole(fence, SemanticRole.SUBSUP) ||
-        SemanticPred.isRole(fence, SemanticRole.UNDEROVER))) {
-        fence.role = newRole;
-      }
-      fence = fence.childNodes[0];
-    }
-    fence.type = SemanticType.PUNCTUATION;
-    fence.role = newRole;
-  }
-
-
-  /**
    * Create a fenced node.
    * @param ofence Opening fence.
    * @param cfence Closing fence.
@@ -1389,76 +2566,6 @@ export default class SemanticProcessor {
 
 
   /**
-   * Creates a limit node from a sub/superscript or over/under node if the
-   * central element is a big operator. Otherwise it creates the standard
-   * elements.
-   * @param mmlTag The tag name of the original node.
-   * @param children The children of the
-   *     original node.
-   * @return The newly created limit node.
-   */
-  public limitNode(mmlTag: string, children: SemanticNode[]): SemanticNode {
-    if (!children.length) {
-      return SemanticProcessor.getInstance().factory_.makeEmptyNode();
-    }
-    let center = children[0];
-    let type = SemanticType.UNKNOWN;
-    if (!children[1]) {
-      return center;
-    }
-
-    let result: BoundsType;
-    if (SemanticPred.isLimitBase(center)) {
-      result = SemanticProcessor.MML_TO_LIMIT_[mmlTag];
-      let length = result.length;
-      type = result.type;
-      children = children.slice(0, result.length + 1);
-      // Heuristic to deal with accents around limit functions/operators.
-      if (length === 1 && SemanticPred.isAccent(children[1]) ||
-          length === 2 && SemanticPred.isAccent(children[1]) &&
-              SemanticPred.isAccent(children[2])) {
-        result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
-        return SemanticProcessor.getInstance().accentNode_(
-            center, children, result.type, result.length, result.accent);
-      }
-      if (length === 2) {
-        if (SemanticPred.isAccent(children[1])) {
-          center = SemanticProcessor.getInstance().accentNode_(
-              center, [center, children[1]], {
-                'MSUBSUP': SemanticType.SUBSCRIPT,
-                'MUNDEROVER': SemanticType.UNDERSCORE
-              }[mmlTag],
-              1, true);
-          return !children[2] ? center :
-                                SemanticProcessor.getInstance().makeLimitNode_(
-                                    center, [center, children[2]], null,
-                                    SemanticType.LIMUPPER);
-        }
-        if (children[2] && SemanticPred.isAccent(children[2])) {
-          center = SemanticProcessor.getInstance().accentNode_(
-              center, [center, children[2]], {
-                'MSUBSUP': SemanticType.SUPERSCRIPT,
-                'MUNDEROVER': SemanticType.OVERSCORE
-              }[mmlTag],
-              1, true);
-          return SemanticProcessor.getInstance().makeLimitNode_(
-              center, [center, children[1]], null, SemanticType.LIMLOWER);
-        }
-        // Limit nodes only the number of children has to be restricted.
-        if (!children[length]) {
-          type = SemanticType.LIMLOWER;
-        }
-      }
-      return SemanticProcessor.getInstance().makeLimitNode_(center, children, null, type);
-    }
-    // We either have an indexed, stacked or accented expression.
-    result = SemanticProcessor.MML_TO_BOUNDS_[mmlTag];
-    return SemanticProcessor.getInstance().accentNode_(
-        center, children, result.type, result.length, result.accent);
-  }
-
-
-  /**
    * Creates an accent style node or sub/superscript depending on the given
    * type.
    * @param center The inner center node.
@@ -1592,67 +2699,6 @@ export default class SemanticProcessor {
     let newRest = SemanticProcessor.getInstance().getFunctionArgs_(
         firstNode, processedRest, heuristic);
     return result.concat(newRest);
-  }
-
-
-  /**
-   * Classifies a function wrt. the heuristic that should be applied.
-   * @param funcNode The node to be classified.
-   * @param restNodes The remainder list of
-   *     nodes. They can be useful to look ahead if there is an explicit
-   * function application. If there is one, it will be destructively removed!
-   * @return The string specifying the heuristic.
-   */
-  private static classifyFunction_(
-      funcNode: SemanticNode, restNodes: SemanticNode[]): string {
-    //  We do not allow double function application. This is not lambda
-    //  calculus!
-    if (funcNode.type === SemanticType.APPL ||
-        funcNode.type === SemanticType.BIGOP ||
-        funcNode.type === SemanticType.INTEGRAL) {
-      return '';
-    }
-    // Find and remove explicit function applications.
-    // We now treat funcNode as a prefix function, regardless of what its actual
-    // content is.
-    if (restNodes[0] &&
-        restNodes[0].textContent === SemanticAttr.functionApplication()) {
-      // Store explicit function application to be reused later.
-      SemanticProcessor.getInstance().funcAppls[funcNode.id] =
-          restNodes.shift();
-      let role = SemanticRole.SIMPLEFUNC;
-      SemanticHeuristics.run('simple2prefix', funcNode);
-      if (funcNode.role === SemanticRole.PREFIXFUNC ||
-          funcNode.role === SemanticRole.LIMFUNC) {
-        role = funcNode.role;
-      }
-      SemanticProcessor.propagateFunctionRole_(funcNode, role);
-      return 'prefix';
-    }
-    let kind = SemanticProcessor.CLASSIFY_FUNCTION_[funcNode.role];
-    return kind ? kind :
-                  SemanticPred.isSimpleFunctionHead(funcNode) ? 'simple' : '';
-  }
-
-
-  /**
-   * Propagates a function role in a node.
-   * @param funcNode The node whose role is to be
-   *     rewritten.
-   * @param tag The function role to be inserted.
-   */
-  private static propagateFunctionRole_(
-      funcNode: SemanticNode, tag: SemanticRole) {
-    if (funcNode) {
-      if (funcNode.type === SemanticType.INFIXOP) {
-        return;
-      }
-      if (!(SemanticPred.isRole(funcNode, SemanticRole.SUBSUP) ||
-        SemanticPred.isRole(funcNode, SemanticRole.UNDEROVER))) {
-        funcNode.role = tag;
-      }
-      SemanticProcessor.propagateFunctionRole_(funcNode.childNodes[0], tag);
-    }
   }
 
 
@@ -1904,461 +2950,6 @@ export default class SemanticProcessor {
 
 
   /**
-   * Finds the function operator in a partial semantic tree if it exists.
-   * @param tree The partial tree.
-   * @param pred Predicate for the
-   *    function operator.
-   * @return The function operator.
-   */
-  private static getFunctionOp_(
-      tree: SemanticNode, pred: (p1: SemanticNode) => boolean): SemanticNode {
-    if (pred(tree)) {
-      return tree;
-    }
-    for (let i = 0, child; child = tree.childNodes[i]; i++) {
-      let op = SemanticProcessor.getFunctionOp_(child, pred);
-      if (op) {
-        return op;
-      }
-    }
-    return null;
-  }
-
-
-  // Improve table recognition, multiline alignments for pausing.
-  // Maybe labels, interspersed text etc.
-  /**
-   * Rewrites tables into matrices or case statements in a list of nodes.
-   * @param nodes List of nodes to rewrite.
-   * @return The new list of nodes.
-   */
-  public tablesInRow(nodes: SemanticNode[]): SemanticNode[] {
-    // First we process all matrices:
-    let partition = SemanticUtil.partitionNodes(
-        nodes, SemanticPred.tableIsMatrixOrVector);
-    let result: SemanticNode[] = [];
-    for (let i = 0, matrix; matrix = partition.rel[i]; i++) {
-      result = result.concat(partition.comp.shift());
-      result.push(SemanticProcessor.tableToMatrixOrVector_(matrix));
-    }
-    result = result.concat(partition.comp.shift());
-    // Process the remaining tables for cases.
-    partition = SemanticUtil.partitionNodes(
-        result, SemanticPred.isTableOrMultiline);
-    result = [];
-    for (let i = 0, table; table = partition.rel[i]; i++) {
-      let prevNodes = partition.comp.shift();
-      if (SemanticPred.tableIsCases(table, prevNodes)) {
-        SemanticProcessor.tableToCases_(
-            table, (prevNodes.pop() as SemanticNode));
-      }
-      result = result.concat(prevNodes);
-      result.push(table);
-    }
-    return result.concat(partition.comp.shift());
-  }
-
-
-  /**
-   * Replaces a fenced node by a matrix or vector node and possibly specialises
-   * it's role.
-   * @param node The fenced node to be rewritten.
-   * @return The matrix or vector node.
-   */
-  private static tableToMatrixOrVector_(node: SemanticNode): SemanticNode {
-    let matrix = node.childNodes[0];
-    SemanticPred.isType(matrix, SemanticType.MULTILINE) ?
-        SemanticProcessor.tableToVector_(node) :
-        SemanticProcessor.tableToMatrix_(node);
-    node.contentNodes.forEach(matrix.appendContentNode.bind(matrix));
-    for (let i = 0, row; row = matrix.childNodes[i]; i++) {
-      SemanticProcessor.assignRoleToRow_(
-          row, SemanticProcessor.getComponentRoles_(matrix));
-    }
-    matrix.parent = null;
-    return matrix;
-  }
-
-
-  /**
-   * Assigns a specialised roles to a vector node inside the given fenced node.
-   * @param node The fenced node containing the vector.
-   */
-  private static tableToVector_(node: SemanticNode) {
-    let vector = node.childNodes[0];
-    vector.type = SemanticType.VECTOR;
-    if (vector.childNodes.length === 1) {
-      SemanticProcessor.tableToSquare_(node);
-      return;
-    }
-    SemanticProcessor.binomialForm_(vector);
-  }
-
-
-  /**
-   * Assigns a binomial role if a table consists of two lines only.
-   * @param node The table node.
-   */
-  private static binomialForm_(node: SemanticNode) {
-    if (SemanticPred.isBinomial(node)) {
-      node.role = SemanticRole.BINOMIAL;
-      node.childNodes[0].role = SemanticRole.BINOMIAL;
-      node.childNodes[1].role = SemanticRole.BINOMIAL;
-    }
-  }
-
-
-  /**
-   * Assigns a specialised roles to a matrix node inside the given fenced node.
-   * @param node The fenced node containing the matrix.
-   */
-  private static tableToMatrix_(node: SemanticNode) {
-    let matrix = node.childNodes[0];
-    matrix.type = SemanticType.MATRIX;
-    if (matrix.childNodes && matrix.childNodes.length > 0 &&
-        matrix.childNodes[0].childNodes &&
-        matrix.childNodes.length === matrix.childNodes[0].childNodes.length) {
-      SemanticProcessor.tableToSquare_(node);
-      return;
-    }
-    if (matrix.childNodes && matrix.childNodes.length === 1) {
-      matrix.role = SemanticRole.ROWVECTOR;
-    }
-  }
-
-
-  /**
-   * Assigns a role to a square, fenced table.
-   * @param node The fenced node containing a square
-   *     table.
-   */
-  private static tableToSquare_(node: SemanticNode) {
-    let matrix = node.childNodes[0];
-    if (SemanticPred.isRole(node, SemanticRole.NEUTRAL)) {
-      matrix.role = SemanticRole.DETERMINANT;
-      return;
-    }
-    matrix.role = SemanticRole.SQUAREMATRIX;
-  }
-
-
-  /**
-   * Cmoputes the role for the components of a matrix. It is either the role of
-   * that matrix or its type.
-   * @param node The matrix or vector node.
-   * @return The role to be assigned to the components.
-   */
-  private static getComponentRoles_(node: SemanticNode): SemanticRole {
-    let role = node.role;
-    if (role && role !== SemanticRole.UNKNOWN) {
-      return role;
-    }
-    return node.type.toLowerCase() as SemanticRole ||
-        SemanticRole.UNKNOWN;
-  }
-
-
-  /**
-   * Makes case node out of a table and a fence.
-   * @param table The table containing the cases.
-   * @param openFence The left delimiter of the case
-   *     statement.
-   * @return The cases node.
-   */
-  private static tableToCases_(table: SemanticNode, openFence: SemanticNode):
-      SemanticNode {
-    for (let i = 0, row; row = table.childNodes[i]; i++) {
-      SemanticProcessor.assignRoleToRow_(row, SemanticRole.CASES);
-    }
-    table.type = SemanticType.CASES;
-    table.appendContentNode(openFence);
-    if (SemanticPred.tableIsMultiline(table)) {
-      SemanticProcessor.binomialForm_(table);
-    }
-    return table;
-  }
-
-
-  /**
-   * Rewrites a table to multiline structure, simplifying it by getting rid of
-   * the cell hierarchy level.
-   * @param table The node to be rewritten a multiline.
-   */
-  public static tableToMultiline(table: SemanticNode) {
-    if (!SemanticPred.tableIsMultiline(table)) {
-      SemanticProcessor.classifyTable(table);
-      return;
-    }
-    table.type = SemanticType.MULTILINE;
-    for (let i = 0, row; row = table.childNodes[i]; i++) {
-      SemanticProcessor.rowToLine_(row, SemanticRole.MULTILINE);
-    }
-    if (table.childNodes.length === 1 &&
-        SemanticPred.isFencedElement(table.childNodes[0].childNodes[0])) {
-      SemanticProcessor.tableToMatrixOrVector_(
-          SemanticProcessor.rewriteFencedLine_(table));
-    }
-    SemanticProcessor.binomialForm_(table);
-    SemanticProcessor.classifyMultiline(table);
-  }
-
-
-  // TODO: (Simons) Is this heuristic really what we want? Make it selectable?
-  /**
-   * Heuristic to rewrite a single fenced line in a table into a square matrix.
-   * @param table The node to be rewritten.
-   * @return The rewritten node.
-   */
-  private static rewriteFencedLine_(table: SemanticNode): SemanticNode {
-    let line = table.childNodes[0];
-    let fenced = table.childNodes[0].childNodes[0];
-    let element = table.childNodes[0].childNodes[0].childNodes[0];
-    fenced.parent = table.parent;
-    table.parent = fenced;
-    element.parent = line;
-    fenced.childNodes = [table];
-    line.childNodes = [element];
-    return fenced;
-  }
-
-
-  /**
-   * Converts a row that only contains one cell into a single line.
-   * @param row The row to convert.
-   * @param opt_role The new role for the line.
-   */
-  private static rowToLine_(row: SemanticNode, opt_role?: SemanticRole) {
-    let role = opt_role || SemanticRole.UNKNOWN;
-    if (SemanticPred.isType(row, SemanticType.ROW)) {
-      row.type = SemanticType.LINE;
-      row.role = role;
-      if (row.childNodes.length === 1 &&
-        SemanticPred.isType(row.childNodes[0], SemanticType.CELL)) {
-        row.childNodes = row.childNodes[0].childNodes;
-        row.childNodes.forEach(function(x) {
-          x.parent = row;
-        });
-      }
-    }
-  }
-
-
-  /**
-   * Assign a row and its contained cells a new role value.
-   * @param row The row to be updated.
-   * @param role The new role for the row and its cells.
-   */
-  private static assignRoleToRow_(row: SemanticNode, role: SemanticRole) {
-    if (SemanticPred.isType(row, SemanticType.LINE)) {
-      row.role = role;
-      return;
-    }
-    if (SemanticPred.isType(row, SemanticType.ROW)) {
-      row.role = role;
-      row.childNodes.forEach(function(cell) {
-        if (SemanticPred.isType(cell, SemanticType.CELL)) {
-          cell.role = role;
-        }
-      });
-    }
-  }
-
-
-  /**
-   * Process an fenced node, effectively given in an mfenced style.
-   * @param open Textual representation of the opening fence.
-   * @param close Textual representation of the closing fence.
-   * @param sepValue Textual representation of separators.
-   * @param children List of already translated
-   *     children.
-   * @return The semantic node.
-   */
-  public mfenced(
-      open: string|null, close: string|null, sepValue: string|null,
-      children: SemanticNode[]): SemanticNode {
-    if (sepValue && children.length > 0) {
-      let separators = SemanticProcessor.nextSeparatorFunction_(sepValue);
-      let newChildren = [children.shift()];
-      children.forEach((child) => {
-        newChildren.push(
-            SemanticProcessor.getInstance().factory_.makeContentNode(
-                separators()));
-        newChildren.push(child);
-      });
-      children = newChildren;
-    }
-    // If both open and close are given, we assume those elements to be fences,
-    // regardless of their initial semantic interpretation. However, if only one
-    // of the fences is given we do not explicitly interfere with the semantic
-    // interpretation. In other worde the mfence is ignored and the content is
-    // interpreted as usual. The only effect of the mfence node here is that the
-    // content will be interpreted into a single node.
-    if (open && close) {
-      return SemanticProcessor.getInstance().horizontalFencedNode_(
-          SemanticProcessor.getInstance().factory_.makeContentNode(open),
-          SemanticProcessor.getInstance().factory_.makeContentNode(close),
-          children);
-    }
-    if (open) {
-      children.unshift(
-          SemanticProcessor.getInstance().factory_.makeContentNode(open));
-    }
-    if (close) {
-      children.push(
-          SemanticProcessor.getInstance().factory_.makeContentNode(close));
-    }
-    return SemanticProcessor.getInstance().row(children);
-  }
-
-
-  /**
-   * Constructs a closure that returns separators for an MathML mfenced
-   * expression.
-   * Separators in MathML are represented by a list and used up one by one
-   * until the final element is used as the default.
-   * Example: a b c d e  and separators [+,-,*]
-   * would result in a + b - c * d * e.
-   * @param separators String representing a list of mfenced separators.
-   * @return A closure that returns the next separator
-   * for an mfenced expression starting with the first node in nodes.
-   */
-  private static nextSeparatorFunction_(separators: string):
-      (() => string)|null {
-    let sepList: string[];
-    if (separators) {
-      // Mathjax does not expand empty separators.
-      if (separators.match(/^\s+$/)) {
-        return null;
-      } else {
-        sepList =
-            separators.replace(/\s/g, '').split('').filter(function(x) {
-              return x;
-            });
-      }
-    } else {
-      // When no separator is given MathML uses comma as default.
-      sepList = [','];
-    }
-
-    return function() {
-      if (sepList.length > 1) {
-        return sepList.shift();
-      }
-      return sepList[0];
-    };
-  }
-
-
-  /**
-   * Processes a number node and adapts its role and font if necessary.
-   * @param node The semantic tree node.
-   */
-  public static number(node: SemanticNode) {
-    if (node.type === SemanticType.UNKNOWN ||
-        // In case of latin numbers etc.
-        node.type === SemanticType.IDENTIFIER) {
-      node.type = SemanticType.NUMBER;
-    }
-    SemanticProcessor.numberRole_(node);
-    SemanticProcessor.exprFont_(node);
-  }
-
-
-  /**
-   * Compute the role of a number if it does not have one already.
-   * @param node The semantic tree node.
-   */
-  private static numberRole_(node: SemanticNode) {
-    if (node.role !== SemanticRole.UNKNOWN) {
-      return;
-    }
-    let content = SemanticUtil.splitUnicode(node.textContent);
-    let meaning = content.map(SemanticAttr.lookupMeaning);
-    if (meaning.every(function(x) {
-          return x.type === SemanticType.NUMBER &&
-              x.role === SemanticRole.INTEGER ||
-              x.type === SemanticType.PUNCTUATION &&
-              x.role === SemanticRole.COMMA;
-        })) {
-      node.role = SemanticRole.INTEGER;
-      if (content[0] === '0') {
-        node.addAnnotation('general', 'basenumber');
-      }
-      return;
-    }
-    if (meaning.every(function(x) {
-          return x.type === SemanticType.NUMBER &&
-              x.role === SemanticRole.INTEGER ||
-              x.type === SemanticType.PUNCTUATION;
-        })) {
-      node.role = SemanticRole.FLOAT;
-      return;
-    }
-    node.role = SemanticRole.OTHERNUMBER;
-  }
-
-
-  /**
-   * Updates the font of a node if a single font can be determined.
-   * @param node The semantic tree node.
-   */
-  private static exprFont_(node: SemanticNode) {
-    if (node.font !== SemanticFont.UNKNOWN) {
-      return;
-    }
-    let content = SemanticUtil.splitUnicode(node.textContent);
-    let meaning = content.map(SemanticAttr.lookupMeaning);
-    let singleFont = meaning.reduce(function(prev, curr) {
-      if (!prev || !curr.font || curr.font === SemanticFont.UNKNOWN ||
-          curr.font === prev) {
-        return prev;
-      }
-      if (prev === SemanticFont.UNKNOWN) {
-        return curr.font;
-      }
-      return null;
-    }, SemanticFont.UNKNOWN);
-    if (singleFont) {
-      node.font = singleFont;
-    }
-  }
-
-
-  /**
-   * Creates a fraction node with the appropriate role.
-   * @param denom The denominator node.
-   * @param enume The enumerator node.
-   * @param linethickness The line thickness attribute value.
-   * @param bevelled Is it a bevelled fraction?
-   * @return The new fraction node.
-   */
-  public fractionLikeNode(
-      denom: SemanticNode, enume: SemanticNode, linethickness: string,
-      bevelled: boolean): SemanticNode {
-    // return sre.SemanticProcessor.getInstance().factory_.makeBranchNode(
-    //     SemanticType.MULTILINE, [child0, child1], []);
-    let node;
-    if (!bevelled && SemanticUtil.isZeroLength(linethickness)) {
-      let child0 = SemanticProcessor.getInstance().factory_.makeBranchNode(
-          SemanticType.LINE, [denom], []);
-      let child1 = SemanticProcessor.getInstance().factory_.makeBranchNode(
-          SemanticType.LINE, [enume], []);
-      node = SemanticProcessor.getInstance().factory_.makeBranchNode(
-          SemanticType.MULTILINE, [child0, child1], []);
-      SemanticProcessor.binomialForm_(node);
-      SemanticProcessor.classifyMultiline(node);
-      return node;
-    } else {
-      node = SemanticProcessor.getInstance().fractionNode_(denom, enume);
-      if (bevelled) {
-        node.addAnnotation('general', 'bevelled');
-      }
-      return node;
-    }
-  }
-
-
-  /**
    * Creates a fraction node with the appropriate role.
    * @param denom The denominator node.
    * @param enume The enumerator node.
@@ -2377,67 +2968,6 @@ export default class SemanticProcessor {
         SemanticRole.UNIT :
         SemanticRole.DIVISION;
     return SemanticHeuristics.run('propagateSimpleFunction', newNode) as SemanticNode;
-  }
-
-
-  /**
-   * Create a tensor node.
-   * @param base The base node.
-   * @param lsub The left subscripts.
-   * @param lsup The left superscripts.
-   * @param rsub The right subscripts.
-   * @param rsup The right superscripts.
-   * @return The semantic tensor node.
-   */
-  public tensor(base: SemanticNode, lsub: SemanticNode[], lsup: SemanticNode[],
-                rsub: SemanticNode[], rsup: SemanticNode[]): SemanticNode {
-    let newNode = SemanticProcessor.getInstance().factory_.makeBranchNode(
-        SemanticType.TENSOR,
-        [
-          base,
-          SemanticProcessor.getInstance().scriptNode_(
-              lsub, SemanticRole.LEFTSUB),
-          SemanticProcessor.getInstance().scriptNode_(
-              lsup, SemanticRole.LEFTSUPER),
-          SemanticProcessor.getInstance().scriptNode_(
-              rsub, SemanticRole.RIGHTSUB),
-          SemanticProcessor.getInstance().scriptNode_(
-              rsup, SemanticRole.RIGHTSUPER)
-        ],
-        []);
-    newNode.role = base.role;
-    newNode.embellished = SemanticPred.isEmbellished(base);
-    return newNode;
-  }
-
-
-  /**
-   * Creates a limit node from an original mmultiscript node, that only has
-   * non-empty right sub and superscript elements.
-   * @param base The base node.
-   * @param sub The subscripts.
-   * @param sup The superscripts.
-   * @return The semantic tensor node.
-   */
-  public pseudoTensor(base: SemanticNode, sub: SemanticNode[],
-                      sup: SemanticNode[]): SemanticNode {
-    let isEmpty = (x: SemanticNode) => !SemanticPred.isType(x, SemanticType.EMPTY);
-    let nonEmptySub = sub.filter(isEmpty).length;
-    let nonEmptySup = sup.filter(isEmpty).length;
-    if (!nonEmptySub && !nonEmptySup) {
-      return base;
-    }
-    let mmlTag = nonEmptySub ? nonEmptySup ? 'MSUBSUP' : 'MSUB' : 'MSUP';
-    let mmlchild = [base];
-    if (nonEmptySub) {
-      mmlchild.push(SemanticProcessor.getInstance().scriptNode_(
-          sub, SemanticRole.RIGHTSUB, true));
-    }
-    if (nonEmptySup) {
-      mmlchild.push(SemanticProcessor.getInstance().scriptNode_(
-          sup, SemanticRole.RIGHTSUPER, true));
-    }
-    return SemanticProcessor.getInstance().limitNode(mmlTag, mmlchild);
   }
 
 
@@ -2474,447 +3004,6 @@ export default class SemanticProcessor {
 
 
   /**
-   * Rewrites a fences partition to remove non-eligible embellished fences.
-   * It rewrites all other fences into punctuations.
-   * For eligibility see sre.SemanticPred.isElligibleEmbellishedFence
-   * @param {{rel: !Array.<sre.SemanticNode>,
-   *          comp: !Array.<!Array.<sre.SemanticNode>>}} partition A partition
-   * for fences.
-   * @return {{rel: !Array.<sre.SemanticNode>,
-   *           comp: !Array.<!Array.<sre.SemanticNode>>}} The cleansed
-   * partition.
-   */
-  private static purgeFences_(partition: {
-    rel: SemanticNode[],
-    comp: SemanticNode[][]
-  }): {rel: SemanticNode[], comp: SemanticNode[][]} {
-    let rel = partition.rel;
-    let comp = partition.comp;
-    let newRel = [];
-    let newComp = [];
-
-    while (rel.length > 0) {
-      let currentRel = rel.shift();
-      let currentComp = comp.shift();
-      if (SemanticPred.isElligibleEmbellishedFence(currentRel)) {
-        newRel.push(currentRel);
-        newComp.push(currentComp);
-        continue;
-      }
-      SemanticProcessor.fenceToPunct_(currentRel);
-      currentComp.push(currentRel);
-      currentComp = currentComp.concat(comp.shift());
-      comp.unshift(currentComp);
-    }
-    newComp.push(comp.shift());
-    return {rel: newRel, comp: newComp};
-  }
-
-
-  /**
-   * Rewrites a fenced node by pulling some embellishments from fences to the
-   * outside.
-   * @param fenced The fenced node.
-   * @return The rewritten node.
-   */
-  private static rewriteFencedNode_(fenced: SemanticNode): SemanticNode {
-    let ofence = (fenced.contentNodes[0] as SemanticNode);
-    let cfence = (fenced.contentNodes[1] as SemanticNode);
-    let rewritten = SemanticProcessor.rewriteFence_(fenced, ofence);
-    fenced.contentNodes[0] = rewritten.fence;
-    rewritten = SemanticProcessor.rewriteFence_(rewritten.node, cfence);
-    fenced.contentNodes[1] = rewritten.fence;
-    fenced.contentNodes[0].parent = fenced;
-    fenced.contentNodes[1].parent = fenced;
-    rewritten.node.parent = null;
-    return rewritten.node;
-  }
-
-
-  /**
-   * Rewrites a fence by removing embellishments and putting them around the
-   * node. The only embellishments that are not pulled out are overscore and
-   * underscore.
-   * @param node The original fenced node.
-   * @param fence The fence node.
-   * @return {{node: !sre.SemanticNode,
-   *           fence: !sre.SemanticNode}} The rewritten node and fence.
-   */
-  // TODO (sorge) Maybe remove the superfluous MathML element.
-  private static rewriteFence_(node: SemanticNode, fence: SemanticNode):
-      {node: SemanticNode, fence: SemanticNode} {
-    if (!fence.embellished) {
-      return {node: node, fence: fence};
-    }
-    let newFence = (fence.childNodes[0] as SemanticNode);
-    let rewritten = SemanticProcessor.rewriteFence_(node, newFence);
-    if (SemanticPred.isType(fence, SemanticType.SUPERSCRIPT) ||
-      SemanticPred.isType(fence, SemanticType.SUBSCRIPT) ||
-      SemanticPred.isType(fence, SemanticType.TENSOR)) {
-      // Fence is embellished and needs to be rewritten.
-      if (!SemanticPred.isRole(fence, SemanticRole.SUBSUP)) {
-        fence.role = node.role;
-      }
-      if (newFence !== rewritten.node) {
-        fence.replaceChild(newFence, rewritten.node);
-        newFence.parent = node;
-      }
-      SemanticProcessor.propagateFencePointer_(fence, newFence);
-      return {node: fence, fence: rewritten.fence};
-    }
-    fence.replaceChild(newFence, rewritten.fence);
-    if (fence.mathmlTree && fence.mathml.indexOf(fence.mathmlTree) === -1) {
-      fence.mathml.push(fence.mathmlTree);
-    }
-    return {node: rewritten.node, fence: fence};
-  }
-
-
-  /**
-   * Propagates the fence pointer, that is, the embellishing node links to the
-   * actual fence it embellishes. If the link is valid on the new node, the old
-   * node will point to that link as well. Note, that this fence might still be
-   * embellished itself, e.g. with under or overscore.
-   * @param oldNode The old embellished node.
-   * @param newNode The new embellished node.
-   */
-  private static propagateFencePointer_(
-      oldNode: SemanticNode, newNode: SemanticNode) {
-    oldNode.fencePointer = newNode.fencePointer || newNode.id.toString();
-    oldNode.embellished = null;
-  }
-
-
-  /**
-   * Semantically classifies a multiline table in terms of equation system it
-   * might be.
-   * @param multiline A multiline expression.
-   */
-  public static classifyMultiline(multiline: SemanticNode) {
-    let index = 0;
-    let length = multiline.childNodes.length;
-    let line;
-    while (index < length &&
-           (!(line = multiline.childNodes[index]) || !line.childNodes.length)) {
-      index++;
-    }
-    if (index >= length) {
-      return;
-    }
-    let firstRole = line.childNodes[0].role;
-    if (firstRole !== SemanticRole.UNKNOWN &&
-        multiline.childNodes.every(function(x) {
-          let cell = x.childNodes[0];
-          return !cell ||
-              cell.role === firstRole &&
-            (SemanticPred.isType(cell, SemanticType.RELATION) ||
-              SemanticPred.isType(cell, SemanticType.RELSEQ));
-        })) {
-      multiline.role = firstRole;
-    }
-  }
-
-
-  /**
-   * Semantically classifies a table in terms of equation system it might be.
-   * @param table The table node.
-   */
-  public static classifyTable(table: SemanticNode) {
-    let columns = SemanticProcessor.computeColumns_(table);
-    SemanticProcessor.classifyByColumns_(table, columns, SemanticRole.EQUALITY) ||
-        SemanticProcessor.classifyByColumns_(
-            table, columns, SemanticRole.INEQUALITY, [SemanticRole.EQUALITY]) ||
-        SemanticProcessor.classifyByColumns_(table, columns, SemanticRole.ARROW);
-  }
-
-
-  /**
-   * Classifies table by columns and a given relation.
-   * @param table The table node.
-   * @param columns The columns.
-   * @param relation The main relation to classify.
-   * @param alternatives Alternative relations that are
-   *     permitted in addition to the main relation.
-   * @return True if classification was successful.
-   */
-  private static classifyByColumns_(
-      table: SemanticNode, columns: SemanticNode[][], relation: SemanticRole,
-      _alternatives?: SemanticRole[]): boolean {
-    // TODO: For more complex systems, work with permutations/alternations of
-    // column indices.
-    let test1 = (x: SemanticNode) => SemanticProcessor.isPureRelation_(x, relation);
-    let test2 = (x: SemanticNode) => SemanticProcessor.isEndRelation_(x, relation) ||
-      SemanticProcessor.isPureRelation_(x, relation);
-    let test3 = (x: SemanticNode) => SemanticProcessor.isEndRelation_(x, relation, true) ||
-          SemanticProcessor.isPureRelation_(x, relation);
-
-    if (columns.length === 3 &&
-            SemanticProcessor.testColumns_(columns, 1, test1) ||
-        columns.length === 2 &&
-            (SemanticProcessor.testColumns_(columns, 1, test2) ||
-             SemanticProcessor.testColumns_(columns, 0, test3))) {
-      table.role = relation;
-      return true;
-    }
-    return false;
-  }
-
-
-  /**
-   * Check for a particular end relations, i.e., either a sole relation symbols
-   * or the relation ends in an side.
-   * @param node The node.
-   * @param relation The relation to be tested.
-   * @param opt_right From the right side?
-   * @return True if the node is an end relation.
-   */
-  private static isEndRelation_(node: SemanticNode, relation: SemanticRole,
-                                opt_right?: boolean): boolean {
-    let position = opt_right ? node.childNodes.length - 1 : 0;
-    return SemanticPred.isType(node, SemanticType.RELSEQ) &&
-      SemanticPred.isRole(node, relation) &&
-      SemanticPred.isType(node.childNodes[position], SemanticType.EMPTY);
-  }
-
-
-  /**
-   * Check for a particular relations.
-   * @param node The node.
-   * @param relation The relation to be tested.
-   * @return True if the node is an end relation.
-   */
-  private static isPureRelation_(node: SemanticNode, relation: SemanticRole):
-      boolean {
-    return SemanticPred.isType(node, SemanticType.RELATION) &&
-        SemanticPred.isRole(node, relation);
-  }
-
-
-  /**
-   * Computes columns from a table. Note that the columns are reduced, i.e.,
-   * empty cells are simply omitted. Consequently, rows are not preserved, i.e.,
-   * elements at the same index in different columns are not necessarily in the
-   * same row in the original table!
-   * @param table The table node.
-   * @return The columns.
-   */
-  private static computeColumns_(table: SemanticNode): SemanticNode[][] {
-    let columns = [];
-    for (let i = 0, row; row = table.childNodes[i]; i++) {
-      for (let j = 0, cell; cell = row.childNodes[j]; j++) {
-        let column = columns[j];
-        column ? columns[j].push(cell) : columns[j] = [cell];
-      }
-    }
-    return columns;
-  }
-
-
-  /**
-   * Test if all elements in the i-th column have the same property.
-   * @param columns The columns.
-   * @param index The column to be tested.
-   * @param pred Predicate to test against.
-   * @return True if all elements of the given column satisfy pred.
-   */
-  private static testColumns_(
-      columns: SemanticNode[][], index: number,
-      pred: (p1: SemanticNode) => boolean): boolean {
-    let column = columns[index];
-    return column ? column.some(function(cell) {
-      return cell.childNodes.length &&
-          pred((cell.childNodes[0] as SemanticNode));
-    }) && column.every(function(cell) {
-      return !cell.childNodes.length ||
-          pred((cell.childNodes[0] as SemanticNode));
-    }) :
-                    false;
-  }
-
-
-  /**
-   * Cleans font names of potential MathJax prefixes.
-   * @param font The font name.
-   * @return The clean name.
-   */
-  public font(font: string): SemanticFont {
-    let mathjaxFont = SemanticProcessor.MATHJAX_FONTS[font];
-    return mathjaxFont ? mathjaxFont : (font as SemanticFont);
-  }
-
-
-  // Inference rules (Simons)
-  // This is top down parsing, so we have to keep the bottom-up processor
-  // available.
-  /**
-   * Parses a proof node.
-   * @param node The node.
-   * @param semantics Its semantics attribute value.
-   * @param parse The
-   *     current semantic parser for list of nodes.
-   * @return The semantic node.
-   */
-  public static proof(
-      node: Element, semantics: string,
-      parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
-    let attrs = SemanticProcessor.separateSemantics(semantics);
-    return SemanticProcessor.getInstance().proof(node, attrs, parse);
-  }
-
-
-  /**
-   * Parses a proof node.
-   * @param node The node.
-   * @param semantics Association of semantic keys to values.
-   * @param parse The
-   *     current semantic parser for list of nodes.
-   * @return The semantic node for the proof.
-   */
-  public proof(
-      node: Element, semantics: {[key: string]: string},
-      parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
-    if (!semantics['inference'] && !semantics['axiom']) {
-      console.log('Noise');
-    }
-    // do some preprocessing!
-    // Put in an invisible comma!
-    // Axiom case!
-    if (semantics['axiom']) {
-      let cleaned = SemanticProcessor.getInstance().cleanInference(node.childNodes);
-      let axiom = cleaned.length ?
-          SemanticProcessor.getInstance().factory_.makeBranchNode(
-              SemanticType.INFERENCE, parse(cleaned), []) :
-          SemanticProcessor.getInstance().factory_.makeEmptyNode();
-      axiom.role = SemanticRole.AXIOM;
-      axiom.mathmlTree = node;
-      return axiom;
-    }
-    let inference = SemanticProcessor.getInstance().inference(node, semantics, parse);
-    if (semantics['proof']) {
-      inference.role = SemanticRole.PROOF;
-      inference.childNodes[0].role = SemanticRole.FINAL;
-    }
-    return inference;
-  }
-
-
-  /**
-   * Parses a single inference node.
-   * @param node The node.
-   * @param semantics Association of semantic keys to values.
-   * @param parse The
-   *     current semantic parser for list of nodes.
-   * @return The semantic node for the inference.
-   */
-  public inference(
-      node: Element, semantics: {[key: string]: string},
-      parse: (p1: Element[]) => SemanticNode[]): SemanticNode {
-    if (semantics['inferenceRule']) {
-      let formulas = SemanticProcessor.getInstance().getFormulas(node, [], parse);
-      let inference = SemanticProcessor.getInstance().factory_.makeBranchNode(
-          SemanticType.INFERENCE, [formulas.conclusion, formulas.premises],
-          []);
-      // Setting role
-      return inference;
-    }
-    let label = semantics['labelledRule'];
-    let children = DomUtil.toArray(node.childNodes);
-    let content = [];
-    if (label === 'left' || label === 'both') {
-      content.push(
-          SemanticProcessor.getInstance().getLabel(node, children, parse, SemanticRole.LEFT));
-    }
-    if (label === 'right' || label === 'both') {
-      content.push(
-          SemanticProcessor.getInstance().getLabel(node, children, parse, SemanticRole.RIGHT));
-    }
-    let formulas = SemanticProcessor.getInstance().getFormulas(node, children, parse);
-    let inference = SemanticProcessor.getInstance().factory_.makeBranchNode(
-        SemanticType.INFERENCE, [formulas.conclusion, formulas.premises],
-        content);
-    // Setting role
-    inference.mathmlTree = node;
-    return inference;
-  }
-
-
-  /**
-   * Parses the label of an inference rule.
-   * @param node The inference node.
-   * @param children The node's children containing the label.
-   * @param parse The
-   *     current semantic parser for list of nodes.
-   * @param side The side the label is on.
-   * @return The semantic node for the label.
-   */
-  public getLabel(_node: Element, children: Element[],
-      parse: (p1: Element[]) => SemanticNode[], side: string): SemanticNode {
-    let label = SemanticProcessor.getInstance().findNestedRow(children, 'prooflabel', side);
-    let sem = SemanticProcessor.getInstance().factory_.makeBranchNode(
-        SemanticType.RULELABEL,
-        parse(DomUtil.toArray(label.childNodes)), []);
-    sem.role = (side as SemanticRole);
-    sem.mathmlTree = label;
-    return sem;
-  }
-
-
-  /**
-   * Retrieves and parses premises and conclusion of an inference rule.
-   * @param node The inference rule node.
-   * @param children The node's children containing.
-   * @param parse The
-   *     current semantic parser for list of nodes.
-   * @return A pair
-   *       of conclusion and premises.
-   */
-  public getFormulas(
-      node: Element, children: Element[],
-      parse: (p1: Element[]) => SemanticNode[]):
-      {conclusion: SemanticNode, premises: SemanticNode} {
-    let inf =
-        children.length ? SemanticProcessor.getInstance().findNestedRow(children, 'inferenceRule') : node;
-    let up = SemanticProcessor.getSemantics(inf)['inferenceRule'] === 'up';
-    let premRow = up ? inf.childNodes[1] : inf.childNodes[0];
-    let concRow = up ? inf.childNodes[0] : inf.childNodes[1];
-    let premTable = premRow.childNodes[0].childNodes[0];
-    let topRow = DomUtil.toArray(premTable.childNodes[0].childNodes);
-    let premNodes = [];
-    let i = 1;
-    for (let cell of topRow) {
-      if (i % 2) {
-        premNodes.push(cell.childNodes[0]);
-      }
-      i++;
-    }
-    let premises = parse(premNodes);
-    let conclusion =
-        parse(DomUtil.toArray(concRow.childNodes[0].childNodes))[0];
-    let prem =
-        SemanticProcessor.getInstance().factory_.makeBranchNode(SemanticType.PREMISES, premises, []);
-    prem.mathmlTree = (premTable as Element);
-    let conc = SemanticProcessor.getInstance().factory_.makeBranchNode(
-        SemanticType.CONCLUSION, [conclusion], []);
-    conc.mathmlTree = (concRow.childNodes[0].childNodes[0] as Element);
-    return {conclusion: conc, premises: prem};
-  }
-
-
-  /**
-   * Find a inference element nested in a row.
-   * @param nodes A node list.
-   * @param semantic A semantic key.
-   * @param opt_value Optionally the semantic value.
-   * @return The first element in that row that contains the semantic
-   *     key (and has its value if the latter is given.)
-   */
-  public findNestedRow(nodes: Element[], semantic: string, opt_value?: string):
-      Element {
-    return SemanticProcessor.getInstance().findNestedRow_(nodes, semantic, 0, opt_value);
-  }
-
-
-  /**
    * Searches the given row of elements for first element with the given
    * semantic key or key/value pair if a value is not null. Ignores space
    * elements and descents at most 3 levels.
@@ -2943,94 +3032,5 @@ export default class SemanticProcessor {
       }
     }
     return null;
-  }
-
-
-  /**
-   * Removes mspaces in a row.
-   * @param nodes The list of nodes.
-   * @return The list with all space elements removed.
-   */
-  public cleanInference(nodes: NodeList): Element[] {
-    return DomUtil.toArray(nodes).filter(function(x) {
-      return DomUtil.tagName(x) !== 'MSPACE';
-    });
-  }
-
-
-  // Utilities
-  // This one should be prefix specific!
-  /**
-   *
-   * @param node The mml node.
-   * @param attr The attribute name.
-   * @param opt_value The attribute value.
-   * @return True if the semantic attribute is in the node.
-   */
-  public static findSemantics(node: Element, attr: string, opt_value?: string):
-      boolean {
-    let value = opt_value == null ? null : opt_value;
-    let semantics = SemanticProcessor.getSemantics(node);
-    if (!semantics) {
-      return false;
-    }
-    if (!semantics[attr]) {
-      return false;
-    }
-    return value == null ? true : semantics[attr] === value;
-  }
-
-
-  /**
-   * Retrieves the content of a semantic attribute in a node as an association
-   * list.
-   * @param node The mml node.
-   * @return The association list.
-   */
-  public static getSemantics(node: Element): {[key: string]: string} {
-    let semantics = node.getAttribute('semantics');
-    if (!semantics) {
-      return null;
-    }
-    return SemanticProcessor.separateSemantics(semantics);
-  }
-
-
-  /**
-   * Removes prefix from a semantic attribute.
-   * @param name The semantic attribute.
-   * @return Name with prefix removed.
-   */
-  public static removePrefix(name: string): string {
-    let [ , ...rest] = name.split('_');
-    return rest.join('_');
-  }
-
-
-  /**
-   * Separates a semantic attribute into it's components.
-   * @param attr Content of the semantic attribute.
-   * @return Association list of semantic attributes.
-   */
-  public static separateSemantics(attr: string): {[key: string]: string} {
-    let result: {[key: string]: string} = {};
-    attr.split(';').forEach(function(x) {
-      let [name, value] = x.split(':');
-      result[SemanticProcessor.removePrefix(name)] = value;
-    });
-    return result;
-  }
-
-
-  /**
-   * Switches unknown to operator node and runs multioperator heuristics.
-   * @param node The node to retype.
-   * @return The node resulting from applying the heuristic.
-   */
-  public operatorNode(node: SemanticNode): SemanticNode {
-    if (node.type === SemanticType.UNKNOWN) {
-      node.type = SemanticType.OPERATOR;
-    }
-    return SemanticHeuristics.run('multioperator', node) as SemanticNode;
   }
 }

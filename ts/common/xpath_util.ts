@@ -84,7 +84,7 @@ namespace XpathUtil {
    * Resolver to work with xpath in node and wgxpath in IE/Edge.
    */
   export class Resolver {
-    lookupNamespaceURI: any;
+    public lookupNamespaceURI: any;
     constructor() {
       this.lookupNamespaceURI = resolveNameSpace;
     }
@@ -93,7 +93,7 @@ namespace XpathUtil {
 
   /**
    * Executes an xpath evaluation.
-   * 
+   *
    * @param expression The XPath expression to evaluate.
    * @param rootNode The HTML node to start evaluating the XPath from.
    * @param type The xpath result type.
@@ -111,8 +111,8 @@ namespace XpathUtil {
 
   /**
    * Given an XPath expression and rootNode, it returns an array of children
-   * nodes that match. 
-   * 
+   * nodes that match.
+   *
    * @param expression The XPath expression to evaluate.
    * @param rootNode The HTML node to start evaluating the XPath from.
    * @return The array of children nodes that match.
@@ -137,7 +137,7 @@ namespace XpathUtil {
 
   /**
    * Given a rootNode, it returns an array of all its leaf nodes.
-   * 
+   *
    * @param rootNode The node to get the leaf nodes from.
    * @return The array of leaf nodes for the given rootNode.
    */
@@ -147,7 +147,7 @@ namespace XpathUtil {
   /**
    * Given an XPath expression and rootNode, it evaluates the XPath expression
    * as a boolean type and returns the result.
-   * 
+   *
    * @param expression The XPath expression to evaluate.
    * @param rootNode The HTML node to start evaluating the XPath from.
    * @return The result of evaluating the xpath expression.
@@ -166,7 +166,7 @@ namespace XpathUtil {
   /**
    * Given an XPath expression and rootNode, it evaluates the XPath expression
    * as a string type and returns the result.
-   * 
+   *
    * @param expression The XPath expression to evaluate.
    * @param rootNode The HTML node to start evaluating the XPath from.
    * @return The result of evaluating the Xpath expression.

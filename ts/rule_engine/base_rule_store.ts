@@ -41,7 +41,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    * Context for custom functions of this rule store.
    */
   public context: SpeechRuleContext = new SpeechRuleContext();
-  
+
   /**
    * Trie for indexing speech rules in this store.
    */

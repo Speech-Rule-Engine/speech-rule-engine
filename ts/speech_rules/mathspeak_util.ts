@@ -26,8 +26,8 @@ import {Locale} from '../l10n/messages';
 
 import {MathStore} from '../rule_engine/math_store';
 import * as Semantic from '../semantic_tree/semantic';
-import {SemanticNode} from '../semantic_tree/semantic_node';
 import {SemanticFont, SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
+import {SemanticNode} from '../semantic_tree/semantic_node';
 import SemanticProcessor from '../semantic_tree/semantic_processor';
 
 import * as NumbersUtil from './numbers_util';
@@ -72,7 +72,6 @@ export function spaceoutNodes(
   }
   return result as Element[];
 }
-
 
 
 /**

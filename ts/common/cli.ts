@@ -20,26 +20,26 @@
  */
 
 
-import {Debugger} from './debugger';
-import {EngineConst, SREError} from './engine';
-import * as System from './system';
-import SystemExternal from './system_external';
 import {Axis, DynamicCstr} from '../rule_engine/dynamic_cstr';
+import {MathCompoundStore} from '../rule_engine/math_simple_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
+import {Debugger} from './debugger';
+import {EngineConst, SREError} from './engine';
 import {ProcessorFactory} from './processors';
-import {MathCompoundStore} from '../rule_engine/math_simple_store';
+import * as System from './system';
+import SystemExternal from './system_external';
 
 
 export class Cli {
 
-  process: any = SystemExternal.extRequire('process');
+  public process: any = SystemExternal.extRequire('process');
 
-  setup: {[key: string]: string|boolean};
+  public setup: {[key: string]: string|boolean};
 
-  processors: string[] = [];
+  public processors: string[] = [];
 
-  dp: DOMParser;
+  public dp: DOMParser;
   constructor() {
     this.setup = {'mode': EngineConst.Mode.SYNC};
     this.dp = new SystemExternal.xmldom.DOMParser({
@@ -56,7 +56,7 @@ export class Cli {
    * @param value The cli option value.
    * @param def The default for the option.
    */
-  set(arg: string, value: string|boolean, _def: string) {
+  public set(arg: string, value: string|boolean, _def: string) {
     this.setup[arg] = typeof value === 'undefined' ? true : value;
   }
 
@@ -66,7 +66,7 @@ export class Cli {
    * @param v Unused parameter.
    * @param processor A processor method.
    */
-  processor(_v: string, processor: string) {
+  public processor(_v: string, processor: string) {
     this.processors.push(processor);
   }
 
@@ -74,7 +74,7 @@ export class Cli {
   /**
    * Prints information on axes values.
    */
-  enumerate() {
+  public enumerate() {
     System.setupEngine(this.setup);
     let length = DynamicCstr.DEFAULT_ORDER.map(x => x.length);
     let maxLength = (obj: any, index: number) => {
@@ -86,7 +86,7 @@ export class Cli {
               })
               .concat(length[index]));
     };
-    let compStr = (str: string, length: number) => 
+    let compStr = (str: string, length: number) =>
        str + (new Array(length - str.length + 1)).join(' ');
     // TODO (TS): Sort out the any type.
     let dynamic: any = SpeechRuleEngine.getInstance().enumerate();
@@ -148,7 +148,7 @@ export class Cli {
    * Executes all processors on a single file.
    * @param input The name of the input file.
    */
-  execute(input: string) {
+  public execute(input: string) {
     let options = SystemExternal.commander.opts();
     this.runProcessors_((proc, file) => {
       System.file.processFile(proc, file, options.output);
@@ -157,36 +157,11 @@ export class Cli {
 
 
   /**
-   * Runs processor methods on the given input.
-   * @param processor Name of a processor.
-   * @param input The input expression or file name
-   */
-  private runProcessors_(
-      processor: (p1: string, p2: string) => any, input: string) {
-    try {
-      if (!this.processors.length) {
-        this.processors.push('speech');
-      }
-      if (input) {
-        this.processors.forEach(function(proc) {
-          processor(proc, input);
-        });
-      }
-    } catch (err) {
-      console.error(err.name + ': ' + err.message);
-      Debugger.getInstance().exit(function() {
-        this.process.exit(1);
-      });
-    }
-  }
-
-
-  /**
    * Readline functionality for CLI. Reads an expression from the command line
    * and runs the given processors on it. Result is either printed to stdout or
    * to the given output file.
    */
-  readline() {
+  public readline() {
     let options = SystemExternal.commander.opts();
     this.process.stdin.setEncoding('utf8');
     let inter = SystemExternal.extRequire('readline').createInterface({
@@ -211,24 +186,9 @@ export class Cli {
 
 
   /**
-   * Checks if the input expression is already complete.
-   * @param input The current input on the CLI.
-   * @return True if input is a complete XML expression.
-   */
-  private readExpression_(input: string): boolean {
-    try {
-      this.dp.parseFromString(input, 'text/xml');
-    } catch (err) {
-      return false;
-    }
-    return true;
-  }
-
-
-  /**
    * Method for the command line interface of the Speech Rule Engine
    */
-  commandLine() {
+  public commandLine() {
     let commander = SystemExternal.commander;
     let system = System;
     let set = ((key: string) => {
@@ -326,5 +286,45 @@ export class Cli {
     Debugger.getInstance().exit(function() {
       System.exit(0);
     });
+  }
+
+
+  /**
+   * Runs processor methods on the given input.
+   * @param processor Name of a processor.
+   * @param input The input expression or file name
+   */
+  private runProcessors_(
+      processor: (p1: string, p2: string) => any, input: string) {
+    try {
+      if (!this.processors.length) {
+        this.processors.push('speech');
+      }
+      if (input) {
+        this.processors.forEach(function(proc) {
+          processor(proc, input);
+        });
+      }
+    } catch (err) {
+      console.error(err.name + ': ' + err.message);
+      Debugger.getInstance().exit(function() {
+        this.process.exit(1);
+      });
+    }
+  }
+
+
+  /**
+   * Checks if the input expression is already complete.
+   * @param input The current input on the CLI.
+   * @return True if input is a complete XML expression.
+   */
+  private readExpression_(input: string): boolean {
+    try {
+      this.dp.parseFromString(input, 'text/xml');
+    } catch (err) {
+      return false;
+    }
+    return true;
   }
 }

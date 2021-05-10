@@ -25,7 +25,6 @@
 import {AbstractHighlighter, Highlight} from './abstract_highlighter';
 
 
-
 export class MmlHighlighter extends AbstractHighlighter {
 
   /**

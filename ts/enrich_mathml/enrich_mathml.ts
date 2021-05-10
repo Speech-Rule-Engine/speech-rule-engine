@@ -96,7 +96,7 @@ export const EnrichAttributes: string[] = [
   Attribute.SPEECH,
   Attribute.STRUCTURE,
   Attribute.TYPE
-]
+];
 
 /**
  * Enriches a MathML element with semantics from the tree.

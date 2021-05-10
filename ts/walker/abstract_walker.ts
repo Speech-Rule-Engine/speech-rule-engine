@@ -21,27 +21,27 @@
 
 
 import {AuditoryDescription} from '../audio/auditory_description';
-import {AxisMap} from '../rule_engine/dynamic_cstr';
 import AuralRendering from '../audio/aural_rendering';
 import * as DomUtil from '../common/dom_util';
-import * as System from '../common/system';
+import {EngineConst} from '../common/engine';
 import {KeyCode} from '../common/event_util';
+import * as System from '../common/system';
 import {Attribute} from '../enrich_mathml/enrich_mathml';
 import {Highlighter} from '../highlighter/highlighter';
 import {Locale} from '../l10n/messages';
+import {AxisMap} from '../rule_engine/dynamic_cstr';
+import {Grammar} from '../rule_engine/grammar';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {SpeechGenerator} from '../speech_generator/speech_generator';
 import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory';
 import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
 import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {EngineConst} from '../common/engine';
 import {Focus} from './focus';
 import {Levels} from './levels';
 import {RebuildStree} from './rebuild_stree';
 import {Walker, WalkerMoves, WalkerState} from './walker';
 import * as WalkerUtil from './walker_util';
-import {Grammar} from '../rule_engine/grammar';
 
 
 /**
@@ -49,18 +49,72 @@ import {Grammar} from '../rule_engine/grammar';
  * @template T
  */
 export abstract class AbstractWalker<T> implements Walker {
-  
+
   /**
    * Unique id counter for walkers. Needed to regain states on rerendering.
    */
-  static ID_COUNTER: number = 0;
+  public static ID_COUNTER: number = 0;
 
 
   /**
    * Attribute that saves the explorer id in a node when we have multiple
    * explorers.
    */
-  static SRE_ID_ATTR: string = 'sre-explorer-id';
+  public static SRE_ID_ATTR: string = 'sre-explorer-id';
+
+  public id: any;
+
+  public rootNode: Element;
+
+  public rootId: string;
+  // End of uninitialized fields.
+
+  public keyMapping: Map<KeyCode, () => any> = new Map([
+    [KeyCode.UP, this.up.bind(this)],
+    [KeyCode.DOWN, this.down.bind(this)],
+    [KeyCode.RIGHT, this.right.bind(this)],
+    [KeyCode.LEFT, this.left.bind(this)],
+    [KeyCode.TAB, this.repeat.bind(this)],
+    [KeyCode.DASH, this.expand.bind(this)],
+    [KeyCode.SPACE, this.depth.bind(this)],
+    [KeyCode.HOME, this.home.bind(this)],
+    [KeyCode.X, this.summary.bind(this)],
+    [KeyCode.Z, this.detail.bind(this)],
+    [KeyCode.V, this.virtualize.bind(this)],
+    [KeyCode.P, this.previous.bind(this)],
+    [KeyCode.U, this.undo.bind(this)],
+    [KeyCode.LESS, this.previousRules.bind(this)],
+    [KeyCode.GREATER, this.nextRules.bind(this)]
+    ]);
+
+  public moved: WalkerMoves;
+
+  /**
+   * Stack of virtual cursors.
+   */
+  public cursors: {focus: Focus,
+            levels: Levels<T>,
+            undo: boolean}[] = [];
+
+  public levels: any;
+
+  private xmlString_: string;
+
+  // All of these fields are initialized later for lazy evaluation.
+  /**
+   * The original xml/mathml node on which the walker is called.
+   */
+  private xml_: Element = null;
+
+  private rebuilt_: RebuildStree = null;
+
+  /**
+   * The node that currently inspected. Initially this is the entire math
+   * expression.
+   */
+  private focus_: Focus = null;
+
+  private active_: boolean = false;
 
   /**
    * Finds the focus on the current level for a given semantic node id.
@@ -86,60 +140,6 @@ export abstract class AbstractWalker<T> implements Walker {
   public abstract combineContentChildren(
     type: SemanticType, role: SemanticRole,
     content: string[], children: string[]): T[];
-  
-  id: any;
-
-  rootNode: Element;
-
-  rootId: string;
-
-  private xmlString_: string;
-
-  // All of these fields are initialized later for lazy evaluation.
-  /**
-   * The original xml/mathml node on which the walker is called.
-   */
-  private xml_: Element = null;
-
-  private rebuilt_: RebuildStree = null;
-
-  /**
-   * The node that currently inspected. Initially this is the entire math
-   * expression.
-   */
-  private focus_: Focus = null;
-  // End of uninitialized fields.
-
-  public keyMapping: Map<KeyCode, () => any> = new Map([
-    [KeyCode.UP, this.up.bind(this)],
-    [KeyCode.DOWN, this.down.bind(this)],
-    [KeyCode.RIGHT, this.right.bind(this)],
-    [KeyCode.LEFT, this.left.bind(this)],
-    [KeyCode.TAB, this.repeat.bind(this)],
-    [KeyCode.DASH, this.expand.bind(this)],
-    [KeyCode.SPACE, this.depth.bind(this)],
-    [KeyCode.HOME, this.home.bind(this)],
-    [KeyCode.X, this.summary.bind(this)],
-    [KeyCode.Z, this.detail.bind(this)],
-    [KeyCode.V, this.virtualize.bind(this)],
-    [KeyCode.P, this.previous.bind(this)],
-    [KeyCode.U, this.undo.bind(this)],
-    [KeyCode.LESS, this.previousRules.bind(this)],
-    [KeyCode.GREATER, this.nextRules.bind(this)]
-    ]);
-    
-  private active_: boolean = false;
-
-  moved: WalkerMoves;
-
-  /**
-   * Stack of virtual cursors.
-   */
-  public cursors: {focus: Focus,
-            levels: Levels<T>,
-            undo: boolean}[] = [];
-
-  levels: any;
 
   /**
    * @param node The (rendered) node on which the walker is called.
@@ -210,14 +210,6 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   public isActive() {
     return this.active_;
-  }
-
-
-  /**
-   * Toggles the activity indicator of the walker.
-   */
-  private toggleActive_() {
-    this.active_ = !this.active_;
   }
 
 
@@ -320,54 +312,6 @@ export abstract class AbstractWalker<T> implements Walker {
 
 
   /**
-   * Merges a prefix and possibly a postfix into a list of speech strings.
-   *
-   * @param speech The speech strings.
-   * @param pre An optional list of strings that should precede the prefix.
-   * @return The merged speech string.
-   */
-  private mergePrefix_(speech: string[], pre: string[] = []): string {
-    let prefix = this.isSpeech() ? this.prefix_() : '';
-    if (prefix) {
-      speech.unshift(prefix);
-    }
-    let postfix = this.isSpeech() ? this.postfix_() : '';
-    if (postfix) {
-      speech.push(postfix);
-    }
-    return AuralRendering.finalize(AuralRendering.merge(
-      pre.concat(speech) as any));
-    // TODO: string vs Span problem.
-  }
-
-
-  /**
-   * @return The prefix of the currently focused element.
-   */
-  private prefix_(): string {
-    let nodes = this.getFocus().getDomNodes();
-    let snodes = this.getFocus().getSemanticNodes();
-    return nodes[0] ?
-        WalkerUtil.getAttribute((nodes[0] as Element), Attribute.PREFIX) :
-        SpeechGeneratorUtil.retrievePrefix(snodes[0]);
-  }
-
-
-  /**
-   * @return The postfix of the currently focused element. Postfixes
-   *    cannot be recomputed and therefore are only looked up on the actual
-   * node.
-   */
-  private postfix_(): string {
-    // TODO: Style this differently for usage with auditory markup.
-    let nodes = this.getFocus().getDomNodes();
-    return nodes[0] ?
-        WalkerUtil.getAttribute((nodes[0] as Element), Attribute.POSTFIX) :
-        '';
-  }
-
-
-  /**
    * @override
    */
   public move(key: KeyCode) {
@@ -443,29 +387,6 @@ export abstract class AbstractWalker<T> implements Walker {
 
 
   /**
-   * @return The depth announcement for the currently focused element.
-   */
-  private depth_(): string {
-    let oldDepth = Grammar.getInstance().getParameter('depth');
-    Grammar.getInstance().setParameter('depth', true);
-    let primary = this.getFocus().getDomPrimary();
-    let expand = this.expandable(primary) ? Locale.NAVIGATE.EXPANDABLE :
-      (this.collapsible(primary) ? Locale.NAVIGATE.COLLAPSIBLE : '');
-    let level = Locale.NAVIGATE.LEVEL + ' ' + this.getDepth();
-    let snodes = this.getFocus().getSemanticNodes();
-    let prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);
-    let audio = [
-      new AuditoryDescription({text: level, personality: {}}),
-      new AuditoryDescription({text: prefix, personality: {}}),
-      new AuditoryDescription({text: expand, personality: {}})];
-    Grammar.getInstance().setParameter('depth', oldDepth);
-    // TODO (TS): Make sure this is really a string to span.
-    return AuralRendering.finalize(
-      AuralRendering.markup(audio));
-  }
-
-
-  /**
    * Moving to the home position.
    */
   protected home(): Focus|null {
@@ -511,23 +432,11 @@ export abstract class AbstractWalker<T> implements Walker {
 
 
   /**
-   * Checks if a node is actionable, i.e., corresponds to an maction.
-   * @param node The (rendered) node under consideration.
-   * @return The node corresponding to an maction element.
-   */
-  private actionable_(node: Element): Element {
-    let parent = node?.parentNode as Element;
-    return parent && this.highlighter.isMactionNode(parent) ?
-        parent : null;
-  }
-
-
-  /**
    * Checks if a node is expandable.
    * @param node The (rendered) node under consideration.
    * @return True if the node is expandable.
    */
-  expandable(node: Element): boolean {
+  public expandable(node: Element): boolean {
     let parent = !!this.actionable_(node);
     return parent && node.childNodes.length === 0;
   }
@@ -677,47 +586,12 @@ export abstract class AbstractWalker<T> implements Walker {
 
 
   /**
-   * @return The virtual summary of an element.
-   */
-  private summary_(): string {
-    let sprimary = this.getFocus().getSemanticPrimary();
-    let sid = sprimary.id.toString();
-    let snode = this.getRebuilt().xml.getAttribute('id') === sid ?
-        this.getRebuilt().xml :
-        DomUtil.querySelectorAllByAttrValue(
-            this.getRebuilt().xml, 'id', sid)[0];
-    let summary = SpeechGeneratorUtil.retrieveSummary(snode);
-    let speech = this.mergePrefix_([summary]);
-    return speech;
-  }
-
-
-  /**
    * Voices details of a collapsed element without expansion.
    */
   protected detail(): Focus|null {
     this.moved =
         this.isSpeech() ? WalkerMoves.DETAIL : WalkerMoves.REPEAT;
     return this.getFocus().clone();
-  }
-
-
-  /**
-   * @return The virtual detail of a collapsed element.
-   */
-  private detail_(): string {
-    let sprimary = this.getFocus().getSemanticPrimary();
-    let sid = sprimary.id.toString();
-    let snode = this.getRebuilt().xml.getAttribute('id') === sid ?
-        this.getRebuilt().xml :
-        DomUtil.querySelectorAllByAttrValue(
-            this.getRebuilt().xml, 'id', sid)[0];
-    let oldAlt = snode.getAttribute('alternative');
-    snode.removeAttribute('alternative');
-    let detail = SpeechGeneratorUtil.computeMarkup((snode as Element));
-    let speech = this.mergePrefix_([detail]);
-    snode.setAttribute('alternative', oldAlt);
-    return speech;
   }
 
 
@@ -887,5 +761,131 @@ export abstract class AbstractWalker<T> implements Walker {
     }
     this.levels.push(last);
     this.setFocus(focus);
+  }
+
+
+  /**
+   * Toggles the activity indicator of the walker.
+   */
+  private toggleActive_() {
+    this.active_ = !this.active_;
+  }
+
+
+  /**
+   * Merges a prefix and possibly a postfix into a list of speech strings.
+   *
+   * @param speech The speech strings.
+   * @param pre An optional list of strings that should precede the prefix.
+   * @return The merged speech string.
+   */
+  private mergePrefix_(speech: string[], pre: string[] = []): string {
+    let prefix = this.isSpeech() ? this.prefix_() : '';
+    if (prefix) {
+      speech.unshift(prefix);
+    }
+    let postfix = this.isSpeech() ? this.postfix_() : '';
+    if (postfix) {
+      speech.push(postfix);
+    }
+    return AuralRendering.finalize(AuralRendering.merge(
+      pre.concat(speech) as any));
+    // TODO: string vs Span problem.
+  }
+
+
+  /**
+   * @return The prefix of the currently focused element.
+   */
+  private prefix_(): string {
+    let nodes = this.getFocus().getDomNodes();
+    let snodes = this.getFocus().getSemanticNodes();
+    return nodes[0] ?
+        WalkerUtil.getAttribute((nodes[0] as Element), Attribute.PREFIX) :
+        SpeechGeneratorUtil.retrievePrefix(snodes[0]);
+  }
+
+
+  /**
+   * @return The postfix of the currently focused element. Postfixes
+   *    cannot be recomputed and therefore are only looked up on the actual
+   * node.
+   */
+  private postfix_(): string {
+    // TODO: Style this differently for usage with auditory markup.
+    let nodes = this.getFocus().getDomNodes();
+    return nodes[0] ?
+        WalkerUtil.getAttribute((nodes[0] as Element), Attribute.POSTFIX) :
+        '';
+  }
+
+
+  /**
+   * @return The depth announcement for the currently focused element.
+   */
+  private depth_(): string {
+    let oldDepth = Grammar.getInstance().getParameter('depth');
+    Grammar.getInstance().setParameter('depth', true);
+    let primary = this.getFocus().getDomPrimary();
+    let expand = this.expandable(primary) ? Locale.NAVIGATE.EXPANDABLE :
+      (this.collapsible(primary) ? Locale.NAVIGATE.COLLAPSIBLE : '');
+    let level = Locale.NAVIGATE.LEVEL + ' ' + this.getDepth();
+    let snodes = this.getFocus().getSemanticNodes();
+    let prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);
+    let audio = [
+      new AuditoryDescription({text: level, personality: {}}),
+      new AuditoryDescription({text: prefix, personality: {}}),
+      new AuditoryDescription({text: expand, personality: {}})];
+    Grammar.getInstance().setParameter('depth', oldDepth);
+    // TODO (TS): Make sure this is really a string to span.
+    return AuralRendering.finalize(
+      AuralRendering.markup(audio));
+  }
+
+
+  /**
+   * Checks if a node is actionable, i.e., corresponds to an maction.
+   * @param node The (rendered) node under consideration.
+   * @return The node corresponding to an maction element.
+   */
+  private actionable_(node: Element): Element {
+    let parent = node?.parentNode as Element;
+    return parent && this.highlighter.isMactionNode(parent) ?
+        parent : null;
+  }
+
+
+  /**
+   * @return The virtual summary of an element.
+   */
+  private summary_(): string {
+    let sprimary = this.getFocus().getSemanticPrimary();
+    let sid = sprimary.id.toString();
+    let snode = this.getRebuilt().xml.getAttribute('id') === sid ?
+        this.getRebuilt().xml :
+        DomUtil.querySelectorAllByAttrValue(
+            this.getRebuilt().xml, 'id', sid)[0];
+    let summary = SpeechGeneratorUtil.retrieveSummary(snode);
+    let speech = this.mergePrefix_([summary]);
+    return speech;
+  }
+
+
+  /**
+   * @return The virtual detail of a collapsed element.
+   */
+  private detail_(): string {
+    let sprimary = this.getFocus().getSemanticPrimary();
+    let sid = sprimary.id.toString();
+    let snode = this.getRebuilt().xml.getAttribute('id') === sid ?
+        this.getRebuilt().xml :
+        DomUtil.querySelectorAllByAttrValue(
+            this.getRebuilt().xml, 'id', sid)[0];
+    let oldAlt = snode.getAttribute('alternative');
+    snode.removeAttribute('alternative');
+    let detail = SpeechGeneratorUtil.computeMarkup((snode as Element));
+    let speech = this.mergePrefix_([detail]);
+    snode.setAttribute('alternative', oldAlt);
+    return speech;
   }
 }

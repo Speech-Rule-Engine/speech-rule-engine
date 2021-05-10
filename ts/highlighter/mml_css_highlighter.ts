@@ -24,7 +24,6 @@
 import {CssHighlighter} from './css_highlighter';
 
 
-
 export class MmlCssHighlighter extends CssHighlighter {
 
   /**

@@ -20,36 +20,35 @@
  */
 
 
-import {Highlighter} from '../highlighter/highlighter';
-import {SpeechGenerator} from '../speech_generator/speech_generator';
 import * as DomUtil from '../common/dom_util';
 import {KeyCode} from '../common/event_util';
+import {Highlighter} from '../highlighter/highlighter';
+import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticType, SemanticRole} from '../semantic_tree/semantic_attr';
+import {SpeechGenerator} from '../speech_generator/speech_generator';
 
 import {Focus} from './focus';
 import {SyntaxWalker} from './syntax_walker';
 import {WalkerMoves} from './walker';
 
 
-
 export class TableWalker extends SyntaxWalker {
-  
-  static ELIGIBLE_CELL_ROLES: SemanticRole[];
+
+  public static ELIGIBLE_CELL_ROLES: SemanticRole[];
 
 
-  static ELIGIBLE_TABLE_TYPES: SemanticType[];
+  public static ELIGIBLE_TABLE_TYPES: SemanticType[];
 
-  modifier: boolean = false;
+  public modifier: boolean = false;
+
+  public firstJump: Focus = null;
+  public moved: any;
 
   private key_: KeyCode|null = null;
 
   private row_: number = 0;
 
   private currentTable_: SemanticNode|null = null;
-
-  firstJump: Focus = null;
-  moved: any;
 
   /**
    * @override
@@ -75,7 +74,7 @@ export class TableWalker extends SyntaxWalker {
   /**
    * @override
    */
-  move(key: KeyCode) {
+  public move(key: KeyCode) {
     this.key_ = key;
     let result = super.move(key);
     this.modifier = false;
@@ -86,7 +85,7 @@ export class TableWalker extends SyntaxWalker {
   /**
    * @override
    */
-  up() {
+  public up() {
     this.moved = WalkerMoves.UP;
     return this.eligibleCell_() ? this.verticalMove_(false) : super.up();
   }
@@ -95,9 +94,45 @@ export class TableWalker extends SyntaxWalker {
   /**
    * @override
    */
-  down() {
+  public down() {
     this.moved = WalkerMoves.DOWN;
     return this.eligibleCell_() ? this.verticalMove_(true) : super.down();
+  }
+
+
+  /**
+   * Jumps directly to a table cell if possible.
+   */
+  protected jumpCell(): Focus|null {
+    if (!this.isInTable_() || this.key_ === null) {
+      return this.getFocus();
+    }
+    if (this.moved === WalkerMoves.ROW) {
+      this.moved = WalkerMoves.CELL;
+      let column = this.key_ - KeyCode.ZERO;
+      if (!this.isLegalJump_(this.row_, column)) {
+        return this.getFocus();
+      }
+      return this.jumpCell_(this.row_, column);
+    }
+    let row = this.key_ - KeyCode.ZERO;
+    if (row > this.currentTable_.childNodes.length) {
+      return this.getFocus();
+    }
+    this.row_ = row;
+    this.moved = WalkerMoves.ROW;
+    return this.getFocus().clone();
+  }
+
+  /**
+   * @override
+   */
+  public undo() {
+    let focus = super.undo();
+    if (focus === this.firstJump) {
+      this.firstJump = null;
+    }
+    return focus;
   }
 
 
@@ -142,31 +177,6 @@ export class TableWalker extends SyntaxWalker {
     }
     this.levels.push(children);
     return this.singletonFocus(children[origIndex]);
-  }
-
-
-  /**
-   * Jumps directly to a table cell if possible.
-   */
-  protected jumpCell(): Focus|null {
-    if (!this.isInTable_() || this.key_ === null) {
-      return this.getFocus();
-    }
-    if (this.moved === WalkerMoves.ROW) {
-      this.moved = WalkerMoves.CELL;
-      let column = this.key_ - KeyCode.ZERO;
-      if (!this.isLegalJump_(this.row_, column)) {
-        return this.getFocus();
-      }
-      return this.jumpCell_(this.row_, column);
-    }
-    let row = this.key_ - KeyCode.ZERO;
-    if (row > this.currentTable_.childNodes.length) {
-      return this.getFocus();
-    }
-    this.row_ = row;
-    this.moved = WalkerMoves.ROW;
-    return this.getFocus().clone();
   }
 
 
@@ -240,17 +250,6 @@ export class TableWalker extends SyntaxWalker {
       snode = snode.parent;
     }
     return false;
-  }
-
-  /**
-   * @override
-   */
-  undo() {
-    let focus = super.undo();
-    if (focus === this.firstJump) {
-      this.firstJump = null;
-    }
-    return focus;
   }
 }
 
