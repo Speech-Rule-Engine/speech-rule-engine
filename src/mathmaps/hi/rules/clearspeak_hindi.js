@@ -1829,7 +1829,7 @@
       "Rule",
       "division",
       "default",
-      "[n] children/*[1]; [t] \"divided by\"; [n] children/*[2]",
+      "[n] children/*[1]; [t] \"द्वारा विभाजित\"; [n] children/*[2]",
       "self::infixop",
       "@role=\"division\"",
       "count(children/*)=2"
@@ -2955,7 +2955,7 @@
       "Rule",
       "adorned-sign",
       "default",
-      "[n] children/*[1]; [t] \"चिन्ह और\"; [n] children/*[2]; [t] \"over it\"",
+      "[n] children/*[1]; [t] \"चिन्ह और\"; [n] children/*[2]; [t] \"इस पर\"",
       "self::overscore",
       "@embellished",
       "name(children/*[1])=\"operator\" or name(children/*[1])=\"relation\""
