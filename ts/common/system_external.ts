@@ -104,11 +104,10 @@ namespace SystemExternal {
    * Path to JSON files.
    */
   export let jsonPath = function() {
-    return (process && typeof global !== 'undefined' ?
-      process.env.SRE_JSON_PATH ||
+    return (SystemExternal.documentSupported ? SystemExternal.url :
+      (process.env.SRE_JSON_PATH ||
       global.SRE_JSON_PATH || (typeof __dirname !== 'undefined' ?
-        __dirname + '/mathmaps' : process.cwd()) :
-      SystemExternal.url) +
+        __dirname + '/mathmaps' : process.cwd()))) +
       '/';
   }();
 
