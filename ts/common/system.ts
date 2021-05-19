@@ -101,7 +101,7 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
  */
 function configBlocks_(feature: {[key: string]: boolean|string}) {
   if (Engine.getInstance().config ||
-    Engine.mode !== EngineConst.Mode.HTTP) {
+    Engine.getInstance().mode !== EngineConst.Mode.HTTP) {
     return;
   }
   Engine.getInstance().config = true;
@@ -130,17 +130,6 @@ export function setAsync() {
     setTimeout(setAsync, 500);
   }
   setupEngine({'mode': EngineConst.Mode.ASYNC});
-}
-
-
-/**
- * Setting engine to async mode once it is ready.
- */
-export function setHttp() {
-  if (!Engine.isReady()) {
-    setTimeout(setHttp, 500);
-  }
-  setupEngine({'mode': EngineConst.Mode.HTTP});
 }
 
 
@@ -315,7 +304,7 @@ export function processFile(
     setTimeout(() => processFile(processor, input, opt_output), 100);
     return;
   }
-  if (Engine.mode === EngineConst.Mode.SYNC) {
+  if (Engine.getInstance().mode === EngineConst.Mode.SYNC) {
     processFileSync_(processor, input, opt_output);
     return;
   }
@@ -448,5 +437,8 @@ export function exit(opt_value?: number) {
 }
 
 if (SystemExternal.documentSupported) {
-  Engine.mode = EngineConst.Mode.HTTP;
+  setupEngine({'mode': EngineConst.Mode.HTTP});
+} else {
+  // Currently we only allow for sync.
+  setupEngine({'mode': EngineConst.Mode.SYNC});
 }

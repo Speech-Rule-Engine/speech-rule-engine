@@ -96,7 +96,6 @@ export namespace MathMap {
     let locale = Engine.getInstance().locale;
     if (loaded_.indexOf(locale) === -1) {
       SpeechRuleEngine.getInstance().prune = true;
-      retrieveMaps(locale);
       loaded_.push(locale);
     }
   }
@@ -109,11 +108,11 @@ export namespace MathMap {
    */
   export function retrieveFiles(
       file: string, parse: (p1: string) => MathMapJson) {
-    let async = Engine.mode === EngineConst.Mode.ASYNC;
+    let async = Engine.getInstance().mode === EngineConst.Mode.ASYNC;
     if (async) {
-      Engine.mode = EngineConst.Mode.SYNC;
+      Engine.getInstance().mode = EngineConst.Mode.SYNC;
     }
-    switch (Engine.mode) {
+    switch (Engine.getInstance().mode) {
       case EngineConst.Mode.ASYNC:
         MathMap.toFetch_++;
         fromFile_(file, (err: Error, json: string) => {
@@ -135,7 +134,7 @@ export namespace MathMap {
         break;
     }
     if (async) {
-      Engine.mode = EngineConst.Mode.ASYNC;
+      Engine.getInstance().mode = EngineConst.Mode.ASYNC;
     }
   }
 
@@ -177,7 +176,8 @@ export namespace MathMap {
    */
   function retrieveMaps(locale: string) {
     AlphabetGenerator.generate(locale);
-    if (Engine.getInstance().isIE && Engine.mode === EngineConst.Mode.HTTP) {
+    if (Engine.getInstance().isIE &&
+      Engine.getInstance().mode === EngineConst.Mode.HTTP) {
       getJsonIE_(locale);
       return;
     }

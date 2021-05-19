@@ -128,11 +128,6 @@ export class Engine {
     'rate', 'rules', 'prune'
   ];
 
-  /**
-   * The mode in which the engine is running (sync, async, http).
-   */
-  public static mode: EngineConst.Mode = EngineConst.Mode.SYNC;
-
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Engine;
 
@@ -145,6 +140,11 @@ export class Engine {
   public dynamicCstr: Dcstr.DynamicCstr;
 
   public comparator: Dcstr.Comparator = null;
+
+  /**
+   * The mode in which the engine is running (sync, async, http).
+   */
+  public mode: EngineConst.Mode = EngineConst.Mode.SYNC;
 
   /**
    * Maps domains to comparators.

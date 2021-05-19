@@ -101,7 +101,7 @@ namespace XpathUtil {
    */
   export function evaluateXpath_(
     expression: string, rootNode: Node, type: number): XPathResult {
-    return Engine.mode === EngineConst.Mode.HTTP &&
+    return Engine.getInstance().mode === EngineConst.Mode.HTTP &&
       !Engine.getInstance().isIE && !Engine.getInstance().isEdge ?
       currentDocument.evaluate(
         expression, rootNode, resolveNameSpace, type, null) :

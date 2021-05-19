@@ -81,7 +81,7 @@ export function parseInput(input: string): Element {
   }
   try {
     let doc = dp.parseFromString(clean_input, html ? 'text/html' : 'text/xml');
-    if (Engine.mode === EngineConst.Mode.HTTP) {
+    if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
       XpathUtil.currentDocument = doc;
       return html ? doc.body.childNodes[0] : doc.documentElement;
     }
