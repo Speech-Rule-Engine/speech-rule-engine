@@ -1,4 +1,4 @@
-// Copyright 2021 Volker Sorge
+// Copyright 2021-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -26,10 +26,25 @@ goog.provide('sre.SpeechRules');
  * @constructor
  */
 sre.SpeechRules = function() {
+
+  /**
+   * Mapping for context functions: The store maps constraint strings to
+   * dictionaries of context functions.
+   * @type {Object.<Object.<Function>>}
+   */
   this.store = {};
+
 };
 goog.addSingletonGetter(sre.SpeechRules);
 
+
+/**
+ * Adds functions to the store potentially inheriting from another store.
+ * @param {string} constr Constraint string for the store.
+ * @param {string} inherit The store from which to inherit.
+ * @param {Object.<Function>} store An individual mapping of names to context
+ *     functions.
+ */
 sre.SpeechRules.prototype.addStore = function(constr, inherit, store) {
   var values = {};
   if (inherit) {
@@ -40,9 +55,16 @@ sre.SpeechRules.prototype.addStore = function(constr, inherit, store) {
 };
 
 
-// Make this robust with dynamic constraints and defaults.
+/**
+ * Retrieves a function store by three constraint values.
+ * @param {string} locale The locale.
+ * @param {string} modality The modality.
+ * @param {string} domain The rule set or domain.
+ * @return {Object.<Function>} The store for the given constraints.
+ */
+// TODO: Make this robust with dynamic constraints and defaults.
 sre.SpeechRules.prototype.getStore = function(locale, modality, domain) {
   return this.store[[locale, modality, domain].join('.')] ||
-    this.store[[sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE],
-                modality, domain].join('.')] || {};
+      this.store[[sre.DynamicCstr.DEFAULT_VALUES[sre.DynamicCstr.Axis.LOCALE],
+        modality, domain].join('.')] || {};
 };

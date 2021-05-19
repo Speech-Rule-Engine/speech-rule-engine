@@ -1,4 +1,4 @@
-// Copyright 2019-20 Volker Sorge
+// Copyright 2019-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -86,8 +86,8 @@ sre.Numbers.it.hundredsToWords_ = function(number) {
       }
       str += tens;
       str += rest ?
-        sre.Numbers.it.NUMBERS.numSep + sre.Numbers.it.onesNumbers_[n % 10] :
-        '';
+          sre.Numbers.it.NUMBERS.numSep + sre.Numbers.it.onesNumbers_[n % 10] :
+          '';
     }
   }
   return str;
@@ -161,7 +161,7 @@ sre.Numbers.it.onesOrdinals_ = [
  */
 sre.Numbers.it.wordOrdinal = function(number) {
   var gender = /** @type {string} */(
-    sre.Grammar.getInstance().getParameter('gender'));
+      sre.Grammar.getInstance().getParameter('gender'));
   var postfix = (gender === 'male' ? 'o' : 'a');
   var ordinal = sre.Numbers.it.onesOrdinals_[number];
   if (ordinal) {

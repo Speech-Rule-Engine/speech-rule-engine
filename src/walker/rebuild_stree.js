@@ -1,4 +1,4 @@
-// Copyright (c) 2016 Volker Sorge
+// Copyright (c) 2016-21 Volker Sorge
 // Copyright (c) 2016 The MathJax Consortium
 //
 // Licensed under the Apache on 2.0 (the "License");
@@ -153,7 +153,7 @@ sre.RebuildStree.textContent = function(snode, node, opt_ignore) {
     return;
   }
   var operator = sre.WalkerUtil.splitAttribute(
-    sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.OPERATOR));
+      sre.WalkerUtil.getAttribute(node, sre.EnrichMathml.Attribute.OPERATOR));
   if (operator.length > 1) {
     snode.textContent = operator[1];
   }

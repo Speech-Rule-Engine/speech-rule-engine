@@ -1,4 +1,4 @@
-// Copyright 2016 Volker Sorge
+// Copyright 2016-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -264,6 +264,7 @@ sre.Grammar.translateString_ = function(text) {
  * Unit translation using grammatical numbering from mappings directly.
  * @param {string} text The text to translate.
  * @return {string} The translated result.
+ * @private
  */
 sre.Grammar.translateUnit_ = function(text) {
   text = sre.Grammar.prepareUnit_(text);

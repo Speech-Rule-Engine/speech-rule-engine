@@ -1,4 +1,4 @@
-// Copyright 2017 Volker Sorge
+// Copyright 2017-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -223,14 +223,16 @@ sre.Locale.it = {
     greekSmall: [
       'nabla',  // This is here as it is small. pi greco is 3.14 o/w pi greca.
       'alfa', 'beta', 'gamma', 'delta', 'epsilon', 'zeta greca', 'eta', 'theta',
-      'iota', 'kappa greca', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi greco', 'rho',
+      'iota', 'kappa greca', 'lambda', 'mu', 'nu', 'xi', 'omicron',
+      'pi greco', 'rho',
       'sigma final', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
       // Symbols below
       'derivata parziale', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
     ],
     greekCap: [
       'Alfa', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta greca', 'Eta', 'Theta',
-      'Iota', 'Kappa greca', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi greca', 'Rho',
+      'Iota', 'Kappa greca', 'Lambda', 'Mu', 'Nu', 'Xi', 'Omicron',
+      'Pi greca', 'Rho',
       'Theta', // Theta symbol
       'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
     ]

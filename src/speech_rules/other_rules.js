@@ -28,54 +28,67 @@ goog.require('sre.NumbersUtil');
 goog.require('sre.StoreUtil');
 
 
-
+/**
+ * Adds the custom functions for the prefix rules.
+ */
 sre.PrefixRules = function() {
   // Basic English
   sre.SpeechRules.getInstance().addStore(
-    'en.prefix.default', '',
-    {'CSFordinalPosition': sre.NumbersUtil.ordinalPosition}
+      'en.prefix.default', '',
+      {'CSFordinalPosition': sre.NumbersUtil.ordinalPosition}
   );
 };
 
 
+/**
+ * Adds the custom functions for non-standard rule sets.
+ */
 sre.OtherRules = function() {
   sre.SpeechRules.getInstance().addStore(
-    'en.speech.chromevox', '',
-    {
-      'CTFnodeCounter': sre.StoreUtil.nodeCounter,
-      'CTFcontentIterator': sre.StoreUtil.contentIterator
-    });
+      'en.speech.chromevox', '',
+      {
+        'CTFnodeCounter': sre.StoreUtil.nodeCounter,
+        'CTFcontentIterator': sre.StoreUtil.contentIterator
+      });
 
   sre.SpeechRules.getInstance().addStore(
-    'en.speech.emacspeak', 'en.speech.chromevox',
-    {
-      'CQFvulgarFractionSmall': sre.MathspeakUtil.isSmallVulgarFraction,
-      'CSFvulgarFraction': sre.NumbersUtil.vulgarFraction
-    });
+      'en.speech.emacspeak', 'en.speech.chromevox',
+      {
+        'CQFvulgarFractionSmall': sre.MathspeakUtil.isSmallVulgarFraction,
+        'CSFvulgarFraction': sre.NumbersUtil.vulgarFraction
+      });
 
 };
 
 
+/**
+ * Adds the custom functions for the braille modality rules.
+ */
 sre.BrailleRules = function() {
 
   // Basic Nemeth
   sre.SpeechRules.getInstance().addStore(
-    'nemeth.braille.default', 'en.speech.mathspeak',
-    {
-      'CSFopenFraction': sre.NemethUtil.openingFraction,
-      'CSFcloseFraction': sre.NemethUtil.closingFraction,
-      'CSFoverFraction': sre.NemethUtil.overFraction,
-      'CSFoverBevFraction': sre.NemethUtil.overBevelledFraction,
+      'nemeth.braille.default', 'en.speech.mathspeak',
+      {
+        'CSFopenFraction': sre.NemethUtil.openingFraction,
+        'CSFcloseFraction': sre.NemethUtil.closingFraction,
+        'CSFoverFraction': sre.NemethUtil.overFraction,
+        'CSFoverBevFraction': sre.NemethUtil.overBevelledFraction,
 
-      // Radical function.
-      'CSFopenRadicalVerbose': sre.NemethUtil.openingRadical,
-      'CSFcloseRadicalVerbose': sre.NemethUtil.closingRadical,
-      'CSFindexRadicalVerbose': sre.NemethUtil.indexRadical,
+        // Radical function.
+        'CSFopenRadical': sre.NemethUtil.openingRadical,
+        'CSFcloseRadical': sre.NemethUtil.closingRadical,
+        'CSFindexRadical': sre.NemethUtil.indexRadical,
 
-      'CGFtensorRules': sre.NemethUtil.generateTensorRules,
+        //
+        'CSFsubscript': sre.MathspeakUtil.subscriptVerbose,
+        'CSFsuperscript': sre.MathspeakUtil.superscriptVerbose,
+        'CSFbaseline': sre.MathspeakUtil.baselineVerbose,
 
-      'CTFrelationIterator': sre.NemethUtil.relationIterator,
-      'CTFimplicitIterator': sre.NemethUtil.implicitIterator
-    });
+        'CGFtensorRules': sre.NemethUtil.generateTensorRules,
+
+        'CTFrelationIterator': sre.NemethUtil.relationIterator,
+        'CTFimplicitIterator': sre.NemethUtil.implicitIterator
+      });
 
 };

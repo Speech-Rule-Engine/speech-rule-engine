@@ -1,4 +1,4 @@
-// Copyright 2014-18 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ sre.Variables = function() {};
  * @const
  * @type {string}
  */
-sre.Variables.VERSION = '3.2.0';
+sre.Variables.VERSION = '3.3.1';
 
 
 /**
@@ -41,7 +41,7 @@ sre.Variables.VERSION = '3.2.0';
  * @const
  * @type {!Array.<string>}
  */
-sre.Variables.LOCALES = ['en', 'de', 'fr', 'es', 'it', 'nemeth'];
+sre.Variables.LOCALES = ['en', 'de', 'fr', 'es', 'hi', 'it', 'nemeth'];
 
 
 /**

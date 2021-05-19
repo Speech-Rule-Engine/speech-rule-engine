@@ -1,4 +1,4 @@
-// Copyright 2019 Volker Sorge
+// Copyright 2019-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -154,14 +154,16 @@ sre.Processor = function(name, methods) {
   /**
    * @type {function(T, string): T}
    */
-  this.postprocess = methods.postprocessor || function(x, y) {return x;};
+  this.postprocess = methods.postprocessor ||
+      /** @type {function(T, string): T} */(function(x, y) {return x;});
 
   /**
    * @type {function(string): T}
    */
   this.processor = this.postprocess ?
-    function(x) {return this.postprocess(this.process(x), x);} :
-  this.process;
+      /** @type {function(string): T} */(function(x) {
+        return this.postprocess(this.process(x), x);}) :
+      this.process;
 
   /**
    * @type {function(T): string}
@@ -328,12 +330,12 @@ new sre.Processor(
         }
         var addRec = function(json) {
           var node = /** @type {!Node} */(
-            sre.XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0]);
-          var speech = sre.SpeechGeneratorUtil.computeMarkup(node);
-          json.speech = aural.finalize(speech);
-          if (json.children) {
-            json.children.forEach(addRec);
-          }
+              sre.XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0]);
+              var speech = sre.SpeechGeneratorUtil.computeMarkup(node);
+              json.speech = aural.finalize(speech);
+              if (json.children) {
+                json.children.forEach(addRec);
+              }
         };
         addRec(json.stree);
         return json;

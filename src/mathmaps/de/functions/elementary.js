@@ -19,7 +19,11 @@
     "mappings": {
       "default": {
         "default": "natürlicher Logarithmus"
-      }
+      },
+     "clearspeak": {
+       "default": "l n",
+       "Log_LnAsNaturalLog": "natürlicher Logarithmus"
+     }
     },
     "category": "Logarithm",
     "names": [

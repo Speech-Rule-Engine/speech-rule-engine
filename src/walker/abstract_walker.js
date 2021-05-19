@@ -1,4 +1,4 @@
-// Copyright 2015 Volker Sorge
+// Copyright 2015-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -357,7 +357,7 @@ sre.AbstractWalker.prototype.postfix_ = function() {
   var nodes = this.getFocus().getDomNodes();
   return nodes[0] ? sre.WalkerUtil.getAttribute(
       /** @type {!Node} */(nodes[0]), sre.EnrichMathml.Attribute.POSTFIX) :
-    '';
+      '';
 };
 
 

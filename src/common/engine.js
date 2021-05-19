@@ -1,4 +1,4 @@
-// Copyright 2014 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ goog.require('sre.DynamicCstr');
 sre.Engine = function() {
 
   /**
-   * @type {function(string, !sre.DynamicCstr): (string|null)}
+   * @type {function(string, !sre.DynamicCstr):? (string)}
    */
   this.evaluator = sre.Engine.defaultEvaluator;
 

@@ -1,4 +1,4 @@
-// Copyright 2014 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -739,7 +739,7 @@ sre.MathspeakUtil.generateBaselineConstraint = function() {
   return [[prefix, middle, postfix].join(' and ')];
 };
 
-  
+
 /**
  * Removes parentheses around a label.
  * @param {!Node} node The label to be processed.

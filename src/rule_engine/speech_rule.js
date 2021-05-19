@@ -1,5 +1,5 @@
 // Copyright 2013 Google Inc.
-// Copyright 2014 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -380,19 +380,23 @@ sre.SpeechRule.Precondition = function(query, opt_constraints) {
 /**
  * Computes a default priority for a rule from the query constraint. Currently
  * we only consider "string queries". That is query constraints that contain a
- * specialisation of the form "self::something[other]". Priority formula is then:
- * Query strength * 100 + Specialisation strength * 10.
+ * specialisation of the form "self::something[other]". Priority formula is
+ * then:
+ *
+ *       Query strength * 100 + Specialisation strength * 10.
+ *
  * @return {number} The priority.
+ * @private
  */
 sre.SpeechRule.Precondition.prototype.calculatePriority_ = function() {
   var query = sre.SpeechRule.Precondition.constraintValue_(
-    this.query, sre.SpeechRule.Precondition.queryPriorities_);
+      this.query, sre.SpeechRule.Precondition.queryPriorities_);
   if (!query) {
     return 0;
   }
   var inner = this.query.match(/^self::.+\[(.+)\]/)[1];
   var attr = sre.SpeechRule.Precondition.constraintValue_(
-    inner, sre.SpeechRule.Precondition.attributePriorities_);
+      inner, sre.SpeechRule.Precondition.attributePriorities_);
   return query * 100 + attr * 10;
 };
 
@@ -403,6 +407,7 @@ sre.SpeechRule.Precondition.prototype.calculatePriority_ = function() {
  * 2. Specific self
  * 3. Any self with condition
  * 4. Specific self with condition
+ * @private
  */
 sre.SpeechRule.Precondition.queryPriorities_ = [
   // /^self::\*$/, /^self::[\w-]+$/,
@@ -417,6 +422,7 @@ sre.SpeechRule.Precondition.queryPriorities_ = [
  * 3: Attribute exists
  * 4: Attribute contains
  * 5: Attribute has precise value
+ * @private
  */
 sre.SpeechRule.Precondition.attributePriorities_ = [
   /^@[\w-]+$/, /^@[\w-]+!=".+"$/, /^not\(contains\(@[\w-]+,\s*".+"\)\)$/,
@@ -430,6 +436,7 @@ sre.SpeechRule.Precondition.attributePriorities_ = [
  * @param {string} constr The constraint.
  * @param {Array.<RegExp>} priorities The list of regular expressions.
  * @return {number} The computer priority.
+ * @private
  */
 sre.SpeechRule.Precondition.constraintValue_ = function(constr, priorities) {
   for (var i = 0, regexp; regexp = priorities[i]; i++) {

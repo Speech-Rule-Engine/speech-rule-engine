@@ -14,6 +14,8 @@ endif
 NODEJS = node
 NODE_MODULES = $(PREFIX)/$(MODULE_NAME)
 
+IEMAPS_PKG = $(abspath ../sre-mathmaps-ie)
+
 # Ideally, no changes necessary beyond this point!
 SRC_DIR = $(abspath ./src)
 BIN_DIR = $(abspath ./bin)
@@ -32,7 +34,7 @@ INTERACTIVE = $(LIB_DIR)/sre4node.js
 JSON_SRC = $(SRC_DIR)/mathmaps
 JSON_DST = $(LIB_DIR)/mathmaps
 MAPS = si functions symbols units rules
-IEMAPS_FILE = $(JSON_DST)/mathmaps_ie.js
+IEMAPS_FILE = $(IEMAPS_PKG)/mathmaps_ie.js
 LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
@@ -127,7 +129,7 @@ DEPSWRITER = python $(CLOSURE_ROOT)/depswriter.py
 space = $(null) #
 comma = ,
 LINT_EXCLUDE_FILES = deps.js,$(IEMAPS_FILE)
-LINT_EXCLUDE_DIRS = $(JSON_SRC)
+LINT_EXCLUDE_DIRS = $(JSON_SRC),$(NODE_MODULES),$(TEST_DIR)
 
 LINT_ROOT = $(NODE_MODULES)/closure-linter-wrapper/tools/
 GJSLINT = python $(LINT_ROOT)/gjslint.py --unix_mode --strict --jsdoc -x '$(LINT_EXCLUDE_FILES)' -e '$(LINT_EXCLUDE_DIRS)'
@@ -193,7 +195,7 @@ $(INTERACTIVE):
 	@echo "goog.require('sre.System');" >> $@
 	@echo "sre.System.setAsync()" >> $@
 
-clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_iemaps clean_json
+clean: clean_test clean_semantic clean_browser clean_enrich clean_mathjax clean_json
 	rm -f $(TARGET)
 	rm -f $(DEPS)
 	rm -f $(INTERACTIVE)
@@ -264,7 +266,7 @@ tests:
 # Publish the API via npm.
 ##################################################################
 
-publish: clean compile browser maps iemaps
+publish: clean compile browser maps
 
 $(JSON_DST):
 	@echo "Creating JSON destination."

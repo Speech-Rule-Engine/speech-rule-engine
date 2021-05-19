@@ -1,4 +1,4 @@
-// Copyright 2017 Volker Sorge
+// Copyright 2017-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -59,7 +59,7 @@ sre.SemanticAnnotations.prototype.register = function(annotator) {
 /**
  * Activates a particular annotator.
  * @param {string} domain The domain.
- * @param {string} name The name of the annotator. 
+ * @param {string} name The name of the annotator.
  */
 sre.SemanticAnnotations.prototype.activate = function(domain, name) {
   var key = domain + ':' + name;
@@ -68,7 +68,6 @@ sre.SemanticAnnotations.prototype.activate = function(domain, name) {
     annotator.active = true;
   }
 };
-
 
 
 /**
@@ -86,7 +85,7 @@ sre.SemanticAnnotations.prototype.annotate = function(node) {
     var visitor = this.visitors[name];
     if (visitor.active) {
       this.visitors[name].visit(
-        node, Object.assign({}, this.visitors[name].def));
+          node, Object.assign({}, this.visitors[name].def));
     }
   }
 };

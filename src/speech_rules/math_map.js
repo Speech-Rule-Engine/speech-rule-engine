@@ -1,5 +1,5 @@
 // Copyright 2013 Google Inc.
-// Copyright 2014 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -68,6 +68,10 @@ goog.addSingletonGetter(sre.MathMap);
 sre.MathMap.oldInst_ = sre.MathMap.getInstance;
 
 
+/**
+ * Adds the Si prefix mapping.
+ * @param {!Object.<string>} json Single dictionary object.
+ */
 sre.MathMap.prototype.addSiPrefixes = function(json) {
   this.store.siPrefixes = json;
 };
@@ -119,7 +123,7 @@ sre.MathMap.prototype.retrieveFiles = function(file, parse) {
   }
   switch (sre.Engine.getInstance().mode) {
     case sre.Engine.Mode.ASYNC:
-    sre.MathMap.toFetch_++;
+      sre.MathMap.toFetch_++;
       sre.MathMap.fromFile_(file,
           function(err, json) {
             sre.MathMap.toFetch_--;

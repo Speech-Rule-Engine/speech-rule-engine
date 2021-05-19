@@ -1,4 +1,4 @@
-// Copyright 2017 Volker Sorge
+// Copyright 2017-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -283,7 +283,7 @@ sre.ClearspeakUtil.hasPreference = function(pref) {
 
 
 sre.SemanticAnnotations.getInstance().register(
-  new sre.SemanticAnnotator(
+    new sre.SemanticAnnotator(
     'clearspeak', 'simple',
     function(node) {
       return sre.ClearspeakUtil.isSimpleExpression(node) ? 'simple' : ''; }));
@@ -424,10 +424,10 @@ sre.ClearspeakUtil.allTextLastContent_ = function(nodes) {
 
 
 sre.SemanticAnnotations.getInstance().register(
-  new sre.SemanticAnnotator(
-      'clearspeak', 'unit',
-      function(node) {
-        return sre.ClearspeakUtil.isUnitExpression(node) ? 'unit' : ''; }));
+    new sre.SemanticAnnotator(
+    'clearspeak', 'unit',
+    function(node) {
+      return sre.ClearspeakUtil.isUnitExpression(node) ? 'unit' : ''; }));
 
 
 /**

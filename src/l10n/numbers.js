@@ -1,4 +1,4 @@
-// Copyright 2020 Volker Sorge
+// Copyright 2020-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ sre.Numbers.NumberToGrammarString;
  *   simpleOrdinal: (sre.Numbers.NumberToString|undefined),
  *   numberToWords: (sre.Numbers.NumberToString|undefined),
  *   numberToOrdinal: (sre.Numbers.NumberToGrammarString|undefined),
- *   vulgarSep: (string|undefined),
+ *   vulgarSep: string,
  *   numSep: (string|undefined)
  * }}
  */

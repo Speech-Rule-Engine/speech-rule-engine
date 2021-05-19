@@ -1,4 +1,4 @@
-// Copyright 2021 Volker Sorge
+// Copyright 2021-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,41 +27,44 @@ goog.require('sre.SpeechRules');
 goog.require('sre.StoreUtil');
 
 
+/**
+ * Adds the custom functions for the clearspeak rules.
+ */
 sre.ClearspeakRules = function() {
   // Basic English
   sre.SpeechRules.getInstance().addStore(
-    'en.speech.clearspeak', '',
-    {
-      'CTFpauseSeparator': sre.StoreUtil.pauseSeparator,
-      'CTFnodeCounter': sre.ClearspeakUtil.nodeCounter,
-      'CTFcontentIterator': sre.StoreUtil.contentIterator,
-      'CSFvulgarFraction': sre.NumbersUtil.vulgarFraction,
-      'CQFvulgarFractionSmall': sre.ClearspeakUtil.isSmallVulgarFraction,
-      'CQFcellsSimple': sre.ClearspeakUtil.allCellsSimple,
-      'CSFordinalExponent': sre.ClearspeakUtil.ordinalExponent,
-      'CSFwordOrdinal': sre.ClearspeakUtil.wordOrdinal,
-      'CQFisCapital': sre.ClearspeakUtil.isCapitalLetter,
-      'CQFmatchingFences': sre.ClearspeakUtil.matchingFences,
-      'CSFnestingDepth': sre.ClearspeakUtil.nestingDepth,
-      'CQFfencedArguments': sre.ClearspeakUtil.fencedArguments,
-      'CQFsimpleArguments': sre.ClearspeakUtil.simpleArguments,
-      'CQFisHyperbolic': sre.ClearspeakUtil.isHyperbolic,
-      'CQFisLogarithm': sre.ClearspeakUtil.isLogarithmWithBase,
-      'CQFspaceoutNumber': sre.MathspeakUtil.spaceoutNumber,
-      // Units.
-      'CQFisLengthUnit': sre.ClearspeakUtil.isLengthUnit,
-      // Currency.
-      'CQFfirstCurrency': sre.ClearspeakUtil.firstCurrency,
-      'CQFlastCurrency': sre.ClearspeakUtil.lastCurrency
-    }
+      'en.speech.clearspeak', '',
+      {
+        'CTFpauseSeparator': sre.StoreUtil.pauseSeparator,
+        'CTFnodeCounter': sre.ClearspeakUtil.nodeCounter,
+        'CTFcontentIterator': sre.StoreUtil.contentIterator,
+        'CSFvulgarFraction': sre.NumbersUtil.vulgarFraction,
+        'CQFvulgarFractionSmall': sre.ClearspeakUtil.isSmallVulgarFraction,
+        'CQFcellsSimple': sre.ClearspeakUtil.allCellsSimple,
+        'CSFordinalExponent': sre.ClearspeakUtil.ordinalExponent,
+        'CSFwordOrdinal': sre.ClearspeakUtil.wordOrdinal,
+        'CQFisCapital': sre.ClearspeakUtil.isCapitalLetter,
+        'CQFmatchingFences': sre.ClearspeakUtil.matchingFences,
+        'CSFnestingDepth': sre.ClearspeakUtil.nestingDepth,
+        'CQFfencedArguments': sre.ClearspeakUtil.fencedArguments,
+        'CQFsimpleArguments': sre.ClearspeakUtil.simpleArguments,
+        'CQFisHyperbolic': sre.ClearspeakUtil.isHyperbolic,
+        'CQFisLogarithm': sre.ClearspeakUtil.isLogarithmWithBase,
+        'CQFspaceoutNumber': sre.MathspeakUtil.spaceoutNumber,
+        // Units.
+        'CQFisLengthUnit': sre.ClearspeakUtil.isLengthUnit,
+        // Currency.
+        'CQFfirstCurrency': sre.ClearspeakUtil.firstCurrency,
+        'CQFlastCurrency': sre.ClearspeakUtil.lastCurrency
+      }
   );
 
   // French
   sre.SpeechRules.getInstance().addStore(
-    'fr.speech.clearspeak', 'en.speech.clearspeak', {});
+      'fr.speech.clearspeak', 'en.speech.clearspeak', {});
 
   // German
   sre.SpeechRules.getInstance().addStore(
-    'de.speech.clearspeak', 'en.speech.clearspeak', {});
-  
+      'de.speech.clearspeak', 'en.speech.clearspeak', {});
+
 };

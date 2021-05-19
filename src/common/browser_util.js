@@ -1,4 +1,4 @@
-// Copyright 2015 Volker Sorge
+// Copyright 2015-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -105,7 +105,7 @@ sre.BrowserUtil.installWGXpath_ = function(opt_isEdge, opt_count) {
  * @private
  */
 sre.BrowserUtil.loadMapsForIE_ = function() {
-  sre.BrowserUtil.loadScript(sre.SystemExternal.jsonPath + 'mathmaps_ie.js');
+  sre.BrowserUtil.loadScript(sre.SystemExternal.mathmapsIePath);
 };
 
 

@@ -1,4 +1,4 @@
-// Copyright 2014-18 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -71,7 +71,7 @@ sre.AuditoryDescription = function(kwargs) {
  *          correct: (undefined|boolean),
  *          translate: (undefined|boolean)}=} opt_flag Flag to force grammar
  *      processing options.
- * @return {sre.AuditoryDescription} The newly created auditory description.
+ * @return {!sre.AuditoryDescription} The newly created auditory description.
  * @constructor
  */
 sre.AuditoryDescription.create = function(kwargs, opt_flag) {

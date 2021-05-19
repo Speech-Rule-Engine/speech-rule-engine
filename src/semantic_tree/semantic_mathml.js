@@ -1,4 +1,4 @@
-// Copyright 2014-16 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -327,7 +327,7 @@ sre.SemanticMathml.prototype.space_ = function(node, children) {
   }
   var newNode = this.getFactory().makeUnprocessed(node);
   return sre.SemanticProcessor.getInstance().
-    text(newNode, sre.DomUtil.tagName(node));
+      text(newNode, sre.DomUtil.tagName(node));
 };
 
 

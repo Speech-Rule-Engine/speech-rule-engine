@@ -1,5 +1,5 @@
 // Copyright 2013 Google Inc.
-// Copyright 2014-16 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -597,6 +597,7 @@ sre.SemanticNode.setAttribute_ = function(node, xml, attribute, opt_name) {
  * content nodes of the semantic node.
  * @param {sre.SemanticNode} node The semantic node.
  * @param {Element} xml The XML element representation of the node.
+ * @private
  */
 sre.SemanticNode.processChildren_ = function(node, xml) {
   for (var child of sre.DomUtil.toArray(xml.childNodes)) {

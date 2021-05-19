@@ -1,5 +1,5 @@
 // Copyright 2013 Google Inc.
-// Copyright 2014-2016 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -223,7 +223,7 @@ sre.SemanticTree.fromXml = function(xml) {
   var stree = sre.SemanticTree.empty();
   if (xml.childNodes[0]) {
     stree.root = sre.SemanticNode.fromXml(
-      /** @type {!Element} */(xml.childNodes[0]));
+        /** @type {!Element} */(xml.childNodes[0]));
   }
   return stree;
 };

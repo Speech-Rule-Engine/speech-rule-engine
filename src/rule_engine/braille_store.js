@@ -1,4 +1,4 @@
-// Copyright 2014 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,9 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//
+// This work was sponsored by BTAA (Big Ten Academic Alliance).
+//
+
 /**
  * @fileoverview Rule store for braille rules.
- *               Sponsored by BTAA (Big Ten Academic Alliance).
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -35,10 +38,9 @@ sre.BrailleStore = function() {
   this.modality = 'braille';
 
   /**
-   * Local transcriptions for special characters.
-   * @type {Object.<string>}
+   * @override
    */
-  this.transcriptions = {
+  this.customTranscriptions = {
     '⋊': '⠈⠡⠳'
   };
 
@@ -49,56 +51,14 @@ goog.inherits(sre.BrailleStore, sre.MathStore);
 /**
  * @override
  */
-sre.BrailleStore.prototype.evaluateDefault = function(node) {
-  var rest = node.textContent.slice(0);
-  if (rest.match(/^\s+$/)) {
-    // Nothing but whitespace: Ignore.
-    return [];
-  }
-  return this.locale === 'nemeth' ?
-    this.evaluateNemeth_(rest) : this.evaluateString_(rest);
-};
-
-
-/**
- * @override
- */
-sre.BrailleStore.prototype.evaluateString_ = function(text) {
+sre.BrailleStore.prototype.evaluateString = function(str) {
   let descs = [];
-  while (text) {
-    var chr = text[0];
-    var code = chr.charCodeAt(0);
-    var transcription = this.transcriptions[chr];
-    var translate = true;
-    if (transcription) {
-      translate = false;
-    }
-    if (0xD800 <= code && code <= 0xDBFF &&
-        text.length > 1 && !isNaN(text.charCodeAt(1))) {
-      transcription = transcription || text.slice(0, 2);
-      text = text.substring(2);
-    } else {
-      transcription = transcription || chr;
-      text = text.substring(1);
-    }
-    descs.push(sre.AuditoryDescription.create(
-      {text: transcription}, {adjust: true, translate: translate}));
+  var text = Array.from(str);
+  for (var i = 0; i < text.length; i++) {
+    descs.push(this.evaluateCharacter(text[i]));
   }
   return descs;
 };
-
-
-/**
- * Translates a string wrt. to Nemeth conventions in the order of:
- *
- * Numbers, Large English, small English, anything else character by character.
- * @param {string} text The text string to translate.
- * @return {!Array.<sre.AuditoryDescription>} The list of auditory descriptions.
- */
-sre.BrailleStore.prototype.evaluateNemeth_ = function(text) {
-  return this.evaluateString_(text);
-};
-
 
 
 /**

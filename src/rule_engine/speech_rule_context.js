@@ -1,4 +1,4 @@
-// Copyright 2019 Volker Sorge
+// Copyright 2019-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -120,7 +120,7 @@ sre.SpeechRuleContext.prototype.applyConstraint = function(node, expr) {
  * @param {!Node} node The initial node.
  * @param {string} expr An Xpath expression string, a name of a custom
  *     function or a string.
- * @return {string} The result of applying expression to node.
+ * @return {string|Array.<sre.Span>} The result of applying expression to node.
  */
 sre.SpeechRuleContext.prototype.constructString = function(node, expr) {
   if (!expr) {
@@ -143,8 +143,8 @@ sre.SpeechRuleContext.prototype.constructString = function(node, expr) {
 
 /**
  * Parses a list of context functions.
- * @param {!(Array.<Array.<string>> | Object.<string>)} functions The list of context
- *     function assignments.
+ * @param {!(Array.<Array.<string>> | Object.<string>)} functions The list of
+ *     context function assignments.
  */
 sre.SpeechRuleContext.prototype.parse = function(functions) {
   var functs = Array.isArray(functions) ? functions : Object.entries(functions);

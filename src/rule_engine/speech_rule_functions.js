@@ -1,5 +1,5 @@
 // Copyright 2013 Google Inc.
-// Copyright 2014 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -161,7 +161,8 @@ sre.SpeechRuleFunctions.CustomGenerators = function() {
   var store =
       /** @type {!Object.<sre.SpeechRuleFunctions.CustomGenerator>} */
       ({});
-  sre.SpeechRuleFunctions.CustomGenerators.base(this, 'constructor', 'CGF', store);
+  sre.SpeechRuleFunctions.CustomGenerators.base(
+      this, 'constructor', 'CGF', store);
 };
 goog.inherits(sre.SpeechRuleFunctions.CustomGenerators,
               sre.SpeechRuleFunctions.Store_);

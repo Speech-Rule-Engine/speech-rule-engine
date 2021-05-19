@@ -1,4 +1,4 @@
-// Copyright 2017 Volker Sorge
+// Copyright 2017-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,6 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+//
+// This work was sponsored by BTAA (Big Ten Academic Alliance).
+//
 
 /**
  * @fileoverview Nemeth message file.
@@ -32,8 +35,8 @@ goog.require('sre.Numbers.nemeth');
  */
 let simpleEnglish = function(letter) {
   return letter.match(RegExp(
-    '^' + sre.Locale.nemeth.ALPHABET_PREFIXES.languagePrefix.english)) ?
-    letter.slice(1) : letter;
+      '^' + sre.Locale.nemeth.ALPHABET_PREFIXES.languagePrefix.english)) ?
+      letter.slice(1) : letter;
 };
 
 
@@ -238,12 +241,16 @@ sre.Locale.nemeth = {
 
   ALPHABETS: {
     latinSmall: [
-      '⠰⠁', '⠰⠃', '⠰⠉', '⠰⠙', '⠰⠑', '⠰⠋', '⠰⠛', '⠰⠓', '⠰⠊', '⠰⠚', '⠰⠅', '⠰⠇', '⠰⠍',
-      '⠰⠝', '⠰⠕', '⠰⠏', '⠰⠟', '⠰⠗', '⠰⠎', '⠰⠞', '⠰⠥', '⠰⠧', '⠰⠺', '⠰⠭', '⠰⠽', '⠰⠵'
+      '⠰⠁', '⠰⠃', '⠰⠉', '⠰⠙', '⠰⠑', '⠰⠋', '⠰⠛',
+      '⠰⠓', '⠰⠊', '⠰⠚', '⠰⠅', '⠰⠇', '⠰⠍',
+      '⠰⠝', '⠰⠕', '⠰⠏', '⠰⠟', '⠰⠗', '⠰⠎', '⠰⠞',
+      '⠰⠥', '⠰⠧', '⠰⠺', '⠰⠭', '⠰⠽', '⠰⠵'
     ],
     latinCap: [
-      '⠰⠠⠁', '⠰⠠⠃', '⠰⠠⠉', '⠰⠠⠙', '⠰⠠⠑', '⠰⠠⠋', '⠰⠠⠛', '⠰⠠⠓', '⠰⠠⠊', '⠰⠠⠚',
-      '⠰⠠⠅', '⠰⠠⠇', '⠰⠠⠍', '⠰⠠⠝', '⠰⠠⠕', '⠰⠠⠏', '⠰⠠⠟', '⠰⠠⠗', '⠰⠠⠎', '⠰⠠⠞',
+      '⠰⠠⠁', '⠰⠠⠃', '⠰⠠⠉', '⠰⠠⠙', '⠰⠠⠑',
+      '⠰⠠⠋', '⠰⠠⠛', '⠰⠠⠓', '⠰⠠⠊', '⠰⠠⠚',
+      '⠰⠠⠅', '⠰⠠⠇', '⠰⠠⠍', '⠰⠠⠝', '⠰⠠⠕',
+      '⠰⠠⠏', '⠰⠠⠟', '⠰⠠⠗', '⠰⠠⠎', '⠰⠠⠞',
       '⠰⠠⠥', '⠰⠠⠧', '⠰⠠⠺', '⠰⠠⠭', '⠰⠠⠽', '⠰⠠⠵'
     ],
     greekSmall: [
@@ -289,5 +296,5 @@ sre.Locale.nemeth = {
   }
 
 };
-  // <mn>𝟗</mn>
-  // <mn mathvariant="bold">9</mn>
+// <mn>𝟗</mn>
+// <mn mathvariant="bold">9</mn>

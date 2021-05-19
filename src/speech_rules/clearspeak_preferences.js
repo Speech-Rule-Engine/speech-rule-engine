@@ -1,4 +1,4 @@
-// Copyright 2017 Volker Sorge
+// Copyright 2017-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -305,7 +305,7 @@ sre.ClearspeakPreferences.toPreference = function(pref) {
 sre.ClearspeakPreferences.getLocalePreferences = function(opt_dynamic) {
   var dynamic = opt_dynamic ||
       sre.MathCompoundStore.getInstance().enumerate(
-        sre.SpeechRuleEngine.getInstance().enumerate());
+      sre.SpeechRuleEngine.getInstance().enumerate());
   return sre.ClearspeakPreferences.getLocalePreferences_(dynamic);
 };
 

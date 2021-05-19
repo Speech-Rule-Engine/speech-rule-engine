@@ -1,5 +1,5 @@
 // Copyright 2013 Google Inc.
-// Copyright 2014-16 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -107,7 +107,8 @@ sre.SemanticPred.isSimpleFunctionScope = function(node) {
  * @return {boolean} True if the node meets the boundary criteria.
  */
 sre.SemanticPred.isPrefixFunctionBoundary = function(node) {
-  return sre.SemanticPred.isOperator(node) ||
+  return (sre.SemanticPred.isOperator(node) &&
+          !sre.SemanticPred.isAttribute('role', 'DIVISION')(node)) ||
       sre.SemanticPred.isAttribute('type', 'APPL')(node) ||
       sre.SemanticPred.isGeneralFunctionBoundary(node);
 };
@@ -566,7 +567,7 @@ sre.SemanticPred.isImplicit = function(node) {
  */
 sre.SemanticPred.isImplicitOp = function(node) {
   return node.type === sre.SemanticAttr.Type.INFIXOP &&
-    node.role === sre.SemanticAttr.Role.IMPLICIT;
+      node.role === sre.SemanticAttr.Role.IMPLICIT;
 };
 
 
@@ -575,15 +576,15 @@ sre.SemanticPred.isImplicitOp = function(node) {
  * (innermost for embellished) fences.
  * @param {sre.SemanticNode} fence1 First fence to compare.
  * @param {sre.SemanticNode} fence2 Second fence to compare.
- * @return {boolean} True if both fences are neutral and have same textual content.
+ * @return {boolean} True if both fences are neutral and have same textual
+ *     content.
  */
 sre.SemanticPred.compareNeutralFences = function(fence1, fence2) {
   return fence1.role === sre.SemanticAttr.Role.NEUTRAL &&
-    fence2.role === sre.SemanticAttr.Role.NEUTRAL &&
-    sre.SemanticUtil.getEmbellishedInner(fence1).textContent ==
-    sre.SemanticUtil.getEmbellishedInner(fence2).textContent;
+      fence2.role === sre.SemanticAttr.Role.NEUTRAL &&
+      sre.SemanticUtil.getEmbellishedInner(fence1).textContent ==
+      sre.SemanticUtil.getEmbellishedInner(fence2).textContent;
 };
-
 
 
 /**

@@ -1,4 +1,4 @@
-// Copyright 2020 Volker Sorge
+// Copyright 2020-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -11,6 +11,10 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
+//
+// This work was sponsored by BTAA (Big Ten Academic Alliance).
+//
 
 /**
  * @fileoverview Translating numbers to Nemeth.
@@ -49,5 +53,6 @@ sre.Numbers.nemeth.numberToWords = function(number) {
  */
 sre.Numbers.nemeth.NUMBERS = {
   numberToWords: sre.Numbers.nemeth.numberToWords,
-  simpleOrdinal: sre.Numbers.nemeth.numberToWords
+  simpleOrdinal: sre.Numbers.nemeth.numberToWords,
+  vulgarSep: ''
 };

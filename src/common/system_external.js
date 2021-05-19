@@ -1,4 +1,4 @@
-// Copyright 2014 Volker Sorge
+// Copyright 2014-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -94,6 +94,16 @@ sre.SystemExternal.xpath = sre.SystemExternal.documentSupported() ?
       window.document.XPathResult = window.XPathResult;
       return window.document;
     }();
+
+
+/**
+ * The URL for Mathmaps for IE.
+ * @const
+ * @type {string}
+ */
+sre.SystemExternal.mathmapsIePath =
+    'https://cdn.jsdelivr.net/npm/sre-mathmaps-ie@' +
+    sre.Variables.VERSION + 'mathmaps_ie.js';
 
 
 /**
