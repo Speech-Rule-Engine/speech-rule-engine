@@ -447,12 +447,6 @@ export function exit(opt_value?: number) {
   process.exit(value);
 }
 
-// Temporary!
-export function getStore() {
-  return SpeechRuleEngine.getInstance().getStore();
-}
-
-
 if (SystemExternal.documentSupported) {
   Engine.mode = EngineConst.Mode.HTTP;
 }

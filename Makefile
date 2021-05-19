@@ -264,7 +264,7 @@ tests:
 # Publish the API via npm.
 ##################################################################
 
-publish: clean compile browser maps iemaps
+publish: maps
 
 $(JSON_DST):
 	@echo "Creating JSON destination."

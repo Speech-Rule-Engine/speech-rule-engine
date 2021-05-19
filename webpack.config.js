@@ -17,7 +17,6 @@ let config = {
   node: {
     __dirname: false
   },
-  devtool: 'source-map',
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin({
@@ -38,6 +37,19 @@ let sreConfig = Object.assign({}, config, {
   output: {
     filename: 'sre.js',
     library: 'SRE',
+    libraryTarget: 'umd',
+    globalObject: 'this',
+    path: path.join(__dirname, 'lib'),
+  }
+});
+
+let mjConfig = Object.assign({}, config, {
+  entry: path.resolve(__dirname, 'ts/common/mathjax.ts'),
+  // devtool: false,
+  target: 'web',
+  output: {
+    filename: 'mathjax-sre.js',
+    library: 'MJ',
     libraryTarget: 'umd',
     globalObject: 'this',
     path: path.join(__dirname, 'lib'),

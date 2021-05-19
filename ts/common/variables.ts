@@ -25,7 +25,7 @@ export class Variables {
   /**
    * SRE version.
    */
-  public static readonly VERSION: string = '3.3.0-beta.0';
+  public static readonly VERSION: string = '4.0.0-alpha.0';
 
 
   /**

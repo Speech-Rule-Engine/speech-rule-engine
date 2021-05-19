@@ -1,6 +1,6 @@
 {
   "name": "speech-rule-engine",
-  "version": "3.3.0-beta.0",
+  "version": "4.0.0-alpha.0",
   "description": "A standalone speech rule engine for XML structures, based on the original engine from ChromeVox.",
   "directories": {
     "test": "tests"
@@ -12,7 +12,7 @@
     "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
     "pretest": "make test_compile",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npx jest",
-    "prepublishOnly": "make clean; make publish",
+    "prepublishOnly": "make clean; make publish; npx tsc; npx webpack",
     "build": "make all"
   },
   "maintainers": [
@@ -35,15 +35,10 @@
   "homepage": "https://github.com/zorkow/speech-rule-engine",
   "dependencies": {
     "commander": ">=7.0.0",
-    "esm": "^3.2.25",
     "wicked-good-xpath": "^1.3.0",
     "xmldom-sre": "^0.1.31"
   },
   "devDependencies": {
-    "closure-linter-wrapper": ">=1.1.0",
-    "google-closure-compiler": ">=20190618.0.0",
-    "google-closure-library": "^20200517.0.0",
-    "jsdoc": ">=3.6.2",
     "json-minify": ">=1.0.0",
     "terser-webpack-plugin": "^4.1.0",
     "ts-loader": "^8.0.2",
