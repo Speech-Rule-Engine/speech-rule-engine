@@ -96,6 +96,7 @@ export namespace MathMap {
     let locale = Engine.getInstance().locale;
     if (loaded_.indexOf(locale) === -1) {
       SpeechRuleEngine.getInstance().prune = true;
+      retrieveMaps(locale);
       loaded_.push(locale);
     }
   }
