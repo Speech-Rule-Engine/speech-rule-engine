@@ -27,7 +27,7 @@ jobs:
 
     strategy:
       matrix:
-        block: [base, walker, semantic, en, de, fr, es, it, nemeth]
+        block: [base, walker, semantic, en, de, fr, es, it, hi, nemeth]
     needs: setup
     runs-on: ubuntu-latest
     name: SRE jests tests for ${{ matrix.block }}
