@@ -62,6 +62,15 @@ sre.Variables.url = 'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
 
 
 /**
+ * The URL for Mathmaps for IE.
+ * @const
+ * @type {string}
+ */
+sre.SystemExternal.mathmapsIePath =
+    'https://cdn.jsdelivr.net/npm/sre-mathmaps-ie@' +
+    sre.Variables.VERSION + 'mathmaps_ie.js';
+
+/**
  * Path to Xpath library file.
  * @const
  * @type {string}
