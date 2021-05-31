@@ -1081,7 +1081,7 @@
       "Rule",
       "counted-prime",
       "default",
-      "[t] count(children/*) (grammar:numbers2alpha); [t] \"अभाज्य (as in prime number)\"",
+      "[t] count(children/*) (grammar:numbers2alpha); [t] \"प्राइम\"",
       "self::punctuated",
       "@role=\"prime\""
     ],
@@ -1089,7 +1089,7 @@
       "Rule",
       "counted-prime",
       "default",
-      "[t] string-length(text()) (grammar:numbers2alpha); [t] \"अभाज्य (as in prime number)\"",
+      "[t] string-length(text()) (grammar:numbers2alpha); [t] \"प्राइम\"",
       "self::operator",
       "@role=\"prime\"",
       "string-length(text())>4"
