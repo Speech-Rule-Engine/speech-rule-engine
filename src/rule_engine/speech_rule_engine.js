@@ -93,6 +93,16 @@ sre.SpeechRuleEngine.prototype.storeFactory_ = function(modality) {
 };
 
 
+sre.SpeechRuleEngine.updateEvaluator = function(node) {
+  let parent = node;
+  while(parent && !parent.evaluate) {
+    parent = parent.parentNode;
+  }
+  if (parent.evaluate) {
+    sre.XpathUtil.currentDocument = /** @type{Document} */(parent);
+  }
+};
+
 // Dispatch functionality.
 // The timing function is temporary until the MOSS deliverable is done.
 /**
@@ -103,6 +113,9 @@ sre.SpeechRuleEngine.prototype.storeFactory_ = function(modality) {
  *   for that node.
  */
 sre.SpeechRuleEngine.prototype.evaluateNode = function(node) {
+  if (sre.Engine.getInstance().mode === sre.Engine.Mode.HTTP) {
+    sre.SpeechRuleEngine.updateEvaluator(node);
+  }
   var timeIn = (new Date()).getTime();
   var result = this.evaluateNode_(node);
   var timeOut = (new Date()).getTime();

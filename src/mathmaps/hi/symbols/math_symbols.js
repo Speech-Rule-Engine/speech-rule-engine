@@ -361,7 +361,7 @@
     "key": "00AF",
     "mappings": {
       "default": {
-        "default": "ऊपर क्षैतिज रेखा"
+        "default": "के ऊपर क्षैतिज रेखा"
       }
     }
   },
@@ -415,7 +415,7 @@
     "key": "00B7",
     "mappings": {
       "default": {
-        "default": "के गुणन में"
+        "default": "गुणन चिह्न"
       }
     }
   },
@@ -784,7 +784,7 @@
     "key": "2032",
     "mappings": {
       "default": {
-        "default": "प्राइम (As in prime)"
+        "default": "प्राइम"
       }
     }
   },
@@ -793,7 +793,7 @@
     "key": "2033",
     "mappings": {
       "default": {
-        "default": "डबल प्राइम (As in double prime)"
+        "default": "डबल प्राइम"
       }
     }
   },
@@ -1414,7 +1414,7 @@
     "key": "220F",
     "mappings": {
       "default": {
-        "default": "एन-आर्य उत्पाद"
+        "default": "समूहगुणन चिह्न"
       }
     }
   },
@@ -1651,7 +1651,7 @@
     "key": "2229",
     "mappings": {
       "default": {
-        "default": "चौराहा"
+        "default": "प्रतिच्छेदन चिह्न"
       }
     }
   },
@@ -1660,7 +1660,7 @@
     "key": "222A",
     "mappings": {
       "default": {
-        "default": "संघ"
+        "default": "संयोग चिह्न"
       }
     }
   },
@@ -3046,10 +3046,10 @@
     "key": "22C5",
     "mappings": {
       "default": {
-        "default": "के गुणन में"
+        "default": "गुणन चिह्न"
       },
       "clearspeak": {
-        "MultsymbolDot_Dot": "के गुणन में"
+        "MultsymbolDot_Dot": "गुणन चिह्न"
       }
     }
   },
