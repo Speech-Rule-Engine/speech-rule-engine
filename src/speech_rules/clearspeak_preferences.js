@@ -345,23 +345,6 @@ sre.ClearspeakPreferences.getLocalePreferences_ = function(dynamic) {
 
 // TODO: The following should be done in MathJax in the future!
 /**
- * Retrieves a speech explorer from a MathJax math item.
- * @param {MathItem} item A Math Item.
- * @return {Explorer} A speech explorer if the item has one.
- */
-sre.ClearspeakPreferences.getSpeechExplorer = function(item) {
-  let explorers = item['attached'];
-  if (!explorers || !explorers.length) {
-    return null;
-  }
-  return explorers.find(function(ex) {
-    return ex.speechGenerator &&
-        ex.speechGenerator.getOptions().modality === 'speech';
-  });
-};
-
-
-/**
  * Computes a selection of clearspeak preferences for the MathJax context menu
  * wrt. currently focused subexpression.
  * @param {MathItem} item A Math Item.
@@ -375,7 +358,7 @@ sre.ClearspeakPreferences.smartPreferences = function(item, locale) {
   if (!loc) {
     return [];
   }
-  var explorer = sre.ClearspeakPreferences.getSpeechExplorer(item);
+  var explorer = item['explorers'];
   if (!explorer) {
     return [{type: 'radio',
       content: 'Standard',
