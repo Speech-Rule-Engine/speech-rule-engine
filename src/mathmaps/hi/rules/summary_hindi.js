@@ -168,7 +168,7 @@
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"वां मूल\"; [n] children/*[1] (engine:modality=\"speech\")",
+      "[n] children/*[1] (engine:modality=\"speech\"); [t] \"वां मूल\"",
       "self::root"
     ],
     [
@@ -227,7 +227,7 @@
       "Rule",
       "abstr-subscript",
       "default.default",
-      "[t] \"पादांक (when a number)\"",
+      "[t] \"पादांक\"",
       "self::subscript"
     ],
     [
@@ -242,14 +242,14 @@
       "Rule",
       "abstr-infixop",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"के साथ\"; [t] count(./children/*); [t] \"अवयव\"",
+      "[t] count(./children/*); [t] \"अवयव\"; [t] \"के साथ\"; [t] @role (grammar:localRole)",
       "self::infixop"
     ],
     [
       "Rule",
       "abstr-infixop",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"चल तादात के अवयवों के साथ\"",
+      "[t] \"चल तादात के अवयवों के साथ\"; [t] @role (grammar:localRole); ",
       "self::infixop",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -271,7 +271,7 @@
       "Rule",
       "abstr-addition",
       "default.default",
-      "[t] \"के साथ योग\"; [t] count(./children/*); [t] \"पद\"",
+      "[t] count(./children/*); [t] \"पद\"; [t] \"के साथ योग\"",
       "self::infixop",
       "@role=\"addition\""
     ],
@@ -303,7 +303,7 @@
       "Rule",
       "abstr-multiplication",
       "default.default",
-      "[t] \"के साथ गुणनफल\"; [t] count(./children/*); [t] \"गुणनखंड\"",
+      "[t] count(./children/*); [t] \"गुणनखंड\"; [t] \"के साथ गुणनफल\"",
       "self::infixop",
       "@role=\"multiplication\""
     ],
@@ -509,7 +509,7 @@
       "Rule",
       "abstr-cases",
       "default.default",
-      "[t] \"फलन उपशर्त कथन\"; [t] \"के साथ\"; [t] count(children/*); [t] \"फलन उपशर्त\"",
+      "[t] count(children/*); [t] \"फलन उपशर्त\"; [t] \"के साथ\"; [t] \"फलन उपशर्त कथन\"",
       "self::cases"
     ],
     [
@@ -537,7 +537,7 @@
       "Rule",
       "abstr-punctuated",
       "default.default",
-      "[n] content/*[1]; [t] \"विभाजित सूचि\"; [t] \"लम्बाई का\"; [t] count(children/*) - count(content/*)",
+      "[t] count(children/*) - count(content/*); [t] \"लम्बाई की\"; [n] content/*[1]; [t] \"विभाजित सूचि\"",
       "self::punctuated"
     ],
     [
@@ -557,7 +557,7 @@
       "Rule",
       "abstr-var-punctuated",
       "default.default",
-      "[n] content/*[1]; [t] \"विभाजित सूचि\"; [t] \"चल लम्बाई का\"",
+      "[t] \"चल लम्बाई की\"; [n] content/*[1]; [t] \"विभाजित सूचि\"",
       "self::punctuated",
       "./children/punctuation[@role=\"ellipsis\"]"
     ],
@@ -588,7 +588,7 @@
       "Rule",
       "abstr-relation-seq",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"अनुक्रम\"; [t] \"के साथ\"; [t] count(./children/*); [t] \"अवयव\"",
+      "[t] count(./children/*); [t] \"अवयव\";  [t] \"के साथ\"; [t] @role (grammar:localRole); [t] \"अनुक्रम\"",
       "self::relseq",
       "count(./children/*)>2"
     ],
@@ -610,7 +610,7 @@
       "Rule",
       "abstr-var-relation",
       "default.default",
-      "[t] @role (grammar:localRole); [t] \"अनुक्रम\"; [t] \"चल तादात के अवयवों के साथ\"",
+      "[t] \"चल तादात के अवयवों के साथ\"; [t] @role (grammar:localRole); [t] \"अनुक्रम\"",
       "self::relseq",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
@@ -635,7 +635,7 @@
       "Rule",
       "abstr-multirel",
       "default.default",
-      "[t] \"संबंधानुक्रम\"; [t] \"के साथ\"; [t] count(./children/*); [t] \"अवयव\"",
+      "[t] count(./children/*); [t] \"अवयव\"; [t] \"के साथ\"; [t] \"संबंधानुक्रम\"",
       "self::multirel",
       "count(./children/*)>2"
     ],
@@ -666,14 +666,14 @@
       "Rule",
       "abstr-table",
       "default.default",
-      "[t] \"के साथ सारणी\"; [t] count(children/*); [t] \"पक्तियां और\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ\"",
+      "[t] count(children/*); [t] \"पक्तियां और\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ\"; [t] \"के साथ सारणी\"",
       "self::table"
     ],
     [
       "Rule",
       "abstr-line",
       "default.default",
-      "[t] \"में\"; [t] @role (grammar:localRole)",
+      "[t] @role (grammar:localRole); [t] \"में\"",
       "self::line"
     ],
     [
@@ -687,7 +687,7 @@
       "Rule",
       "abstr-cell",
       "default.default",
-      "[t] \"में\"; [t] @role (grammar:localRole)",
+      "[t] @role (grammar:localRole); [t] \"में\"",
       "self::cell"
     ]
   ]
