@@ -111,23 +111,6 @@ export class ClearspeakPreferences extends DynamicCstr {
   // TODO (TS): Import the mathjax types, get rid of any.
   // static getSpeechExplorer(item: MathItem): Explorer {
   /**
-   * Retrieves a speech explorer from a MathJax math item.
-   * @param item A Math Item.
-   * @return A speech explorer if the item has one.
-   */
-  public static getSpeechExplorer(item: any): any {
-    let explorers = item['attached'];
-    if (!explorers || !explorers.length) {
-      return null;
-    }
-    return explorers.find(function(ex: any) {
-      return ex.speechGenerator &&
-          ex.speechGenerator.getOptions().modality === 'speech';
-    });
-  }
-
-
-  /**
    * Computes a selection of clearspeak preferences for the MathJax context menu
    * wrt. currently focused subexpression.
    * @param item A Math Item.
@@ -142,7 +125,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     if (!loc) {
       return [];
     }
-    let explorer = ClearspeakPreferences.getSpeechExplorer(item);
+    let explorer = item['explorers'];
     if (!explorer) {
       return [{
         type: 'radio',

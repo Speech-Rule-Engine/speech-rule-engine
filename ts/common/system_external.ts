@@ -82,6 +82,14 @@ namespace SystemExternal {
     }();
 
   /**
+   * The URL for Mathmaps for IE.
+   */
+  export const mathmapsIePath =
+    'https://cdn.jsdelivr.net/npm/sre-mathmaps-ie@' +
+    Variables.VERSION + 'mathmaps_ie.js';
+
+
+  /**
    * Commander library.
    */
   export const commander = SystemExternal.documentSupported ?

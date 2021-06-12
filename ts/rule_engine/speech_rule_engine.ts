@@ -126,6 +126,24 @@ export class SpeechRuleEngine {
   }
 
 
+  /**
+   * Updates the evaluator method for the document of the given node. This is
+   * particular important for XML documents in Firefox that generates a novel
+   * object (plus evaluate method) for every document.
+   *
+   * @param node The target node that is to be evaluated.
+   */
+  private static updateEvaluator(node: Element) {
+    let parent = node as any as Document;
+    while(parent && !parent.evaluate) {
+      parent = parent.parentNode as Document;
+    }
+    if (parent.evaluate) {
+      XpathUtil.currentDocument = /** @type{Document} */(parent);
+    }
+  };
+
+
   // Dispatch functionality.
   // The timing function is temporary until the MOSS deliverable is done.
   /**
@@ -136,6 +154,9 @@ export class SpeechRuleEngine {
    *   for that node.
    */
   public evaluateNode(node: Element): AuditoryDescription[] {
+    if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
+      SpeechRuleEngine.updateEvaluator(node);
+    }
     let timeIn = (new Date()).getTime();
     let result = this.evaluateNode_(node);
     let timeOut = (new Date()).getTime();

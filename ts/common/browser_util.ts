@@ -105,7 +105,7 @@ export function installWGXpath_(opt_isEdge?: boolean, opt_count?: number) {
  * Loads all JSON mappings for IE using a script tag.
  */
 export function loadMapsForIE_() {
-  loadScript(SystemExternal.jsonPath + 'mathmaps_ie.js');
+  loadScript(SystemExternal.mathmapsIePath);
 }
 
 
