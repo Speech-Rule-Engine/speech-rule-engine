@@ -277,7 +277,7 @@
     "key": "2062",
     "mappings": {
       "default": {
-        "default": "के गुणन में"
+        "default": "गुणन चिह्न"
       }
     }
   },

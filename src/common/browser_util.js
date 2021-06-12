@@ -105,7 +105,7 @@ sre.BrowserUtil.installWGXpath_ = function(opt_isEdge, opt_count) {
  * @private
  */
 sre.BrowserUtil.loadMapsForIE_ = function() {
-  sre.BrowserUtil.loadScript(sre.SystemExternal.jsonPath + 'mathmaps_ie.js');
+  sre.BrowserUtil.loadScript(sre.SystemExternal.mathmapsIePath);
 };
 
 

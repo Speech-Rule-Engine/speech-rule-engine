@@ -92,7 +92,7 @@
       "Rule",
       "subscript",
       "default",
-      "[t] \"पादांक (when a number)\" (pause:200)",
+      "[t] \"पादांक\" (pause:200)",
       "self::*",
       "name(../..)=\"subscript\"",
       "count(preceding-sibling::*)=1"
@@ -101,7 +101,7 @@
       "Rule",
       "overscript",
       "default",
-      "[t] \"उर्ध्वान्क (when a number)\" (pause:200)",
+      "[t] \"उर्ध्वान्क\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"overscore\""
@@ -124,7 +124,7 @@
       "Rule",
       "underscript",
       "default",
-      "[t] \"निम्नांक (when a number)\" (pause:200)",
+      "[t] \"निम्नांक\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"underscore\""
@@ -164,7 +164,7 @@
       "Rule",
       "index",
       "default",
-      "[t] \"सूचि\" (pause:200)",
+      "[t] \"मूलांक\" (pause:200)",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=0"
@@ -173,7 +173,7 @@
       "Rule",
       "leftsub",
       "default",
-      "[t] \"वाम पादांक (when a number)\" (pause:200)",
+      "[t] \"वाम पादांक\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"leftsub\""
@@ -182,7 +182,7 @@
       "Rule",
       "leftsub",
       "default",
-      "[t] CSFordinalPosition; [t] \"वाम पादांक (when a number)\" (pause:200)",
+      "[t] CSFordinalPosition; [t] \"वाम पादांक\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -192,7 +192,7 @@
       "Rule",
       "leftsuper",
       "default",
-      "[t] \"वाम उर्ध्वान्क (when a number)\" (pause:200)",
+      "[t] \"वाम उर्ध्वान्क\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"leftsuper\""
@@ -201,7 +201,7 @@
       "Rule",
       "leftsuper",
       "default",
-      "[t] CSFordinalPosition; [t] \"वाम उर्ध्वान्क (when a number)\" (pause:200)",
+      "[t] CSFordinalPosition; [t] \"वाम उर्ध्वान्क\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -211,7 +211,7 @@
       "Rule",
       "rightsub",
       "default",
-      "[t] \"दक्षिण पादांक (when a number)\" (pause:200)",
+      "[t] \"दक्षिण पादांक\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"rightsub\""
@@ -220,7 +220,7 @@
       "Rule",
       "rightsub",
       "default",
-      "[t] CSFordinalPosition; [t] \"दक्षिण पादांक (when a number)\" (pause:200)",
+      "[t] CSFordinalPosition; [t] \"दक्षिण पादांक\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -230,7 +230,7 @@
       "Rule",
       "rightsuper",
       "default",
-      "[t] \"दक्षिण उर्ध्वान्क (when a number)\" (pause:200)",
+      "[t] \"दक्षिण उर्ध्वान्क\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"rightsuper\""
@@ -239,7 +239,7 @@
       "Rule",
       "rightsuper",
       "default",
-      "[t] CSFordinalPosition; [t] \"दक्षिण उर्ध्वान्क (when a number)\" (pause:200)",
+      "[t] CSFordinalPosition; [t] \"दक्षिण उर्ध्वान्क\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
@@ -269,7 +269,7 @@
       "Rule",
       "row",
       "default",
-      "[t] CSFordinalPosition; [t] \"पंक्ति\" (pause:200)",
+      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"पंक्ति\" (pause:200)",
       "self::row"
     ],
     [
