@@ -34,6 +34,8 @@ const SUB_ISO: string = 'fr';
 
 
 // Numbers
+const zero_: string = 'zero';
+
 /**
  * String representation of zero to nineteen.
  */
@@ -113,6 +115,9 @@ function hundredsToWords_(num: number): string {
  * @return The string representation of that number.
  */
 function numberToWords(num: number): string {
+  if (num === 0) {
+    return zero_;
+  }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
   }

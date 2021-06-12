@@ -224,9 +224,7 @@ export const en: Messages = {
 
   ALPHABET_TRANSFORMERS: {
     digit: {
-      default: function(n) {
-        return n === 0 ? 'zero' : NUMBERS.numberToWords(n);
-      },
+      default: NUMBERS.numberToWords,
       mathspeak: function(n) {
         return n.toString();
       },

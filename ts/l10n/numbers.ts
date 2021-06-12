@@ -20,7 +20,7 @@
 
 import * as tr from './transformers';
 
-type Numbers = {
+interface Numbers {
   wordOrdinal?: tr.Transformer,
   simpleOrdinal?: tr.Transformer,
   numberToWords?: tr.Transformer,

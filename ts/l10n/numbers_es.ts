@@ -27,6 +27,8 @@ import {Numbers} from './numbers';
 
 
 // Numbers
+const zero_: string = 'cero';
+
 /**
  * String representation of zero to twenty-nine.
  */
@@ -144,6 +146,9 @@ function hundredsToWords_(num: number): string {
  * @return The string representation of that number.
  */
 function numberToWords(num: number): string {
+  if (num === 0) {
+    return zero_;
+  }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
   }

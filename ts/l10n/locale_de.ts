@@ -255,9 +255,7 @@ export const de: Messages = {
 
   ALPHABET_TRANSFORMERS: {
     digit: {
-      default: function(n: number) {
-        return n === 0 ? 'null' : de.NUMBERS.numberToWords(n);
-      },
+      default: NUMBERS.numberToWords,
       mathspeak: function(n: number) {
         return n.toString();
       },

@@ -231,9 +231,7 @@ export const hi: Messages = {
 
   ALPHABET_TRANSFORMERS: {
     digit: {
-      default: function(n) {
-        return n === 0 ? 'शून्य' : NUMBERS.numberToWords(n);
-      },
+      default: NUMBERS.numberToWords,
       mathspeak: function(n) {
         return n.toString();
       },
