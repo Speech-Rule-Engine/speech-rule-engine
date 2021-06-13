@@ -1,5 +1,5 @@
 //
-// Copyright 2020-21 Volker Sorge
+// Copyright 2019-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,25 +14,24 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers into German.
+ * @fileoverview Translating numbers into English.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-import {Numbers} from './numbers';
 
-//
-// This work was sponsored by ETH Zurich
-//
 
-const zero_: string = 'null';
+import {Numbers} from '../numbers';
+
+
+const zero_: string = 'zero';
 
 /**
  * String representation of zero to nineteen.
  */
 const onesNumbers_: string[] = [
-  '',         'eins',     'zwei',     'drei',     'vier',
-  'fünf',     'sechs',    'sieben',   'acht',     'neun',
-  'zehn',     'elf',      'zwölf',    'dreizehn', 'vierzehn',
-  'fünfzehn', 'sechzehn', 'siebzehn', 'achtzehn', 'neunzehn'
+  '',        'one',     'two',       'three',    'four',
+  'five',    'six',     'seven',     'eight',    'nine',
+  'ten',     'eleven',  'twelve',    'thirteen', 'fourteen',
+  'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'
 ];
 
 
@@ -40,8 +39,8 @@ const onesNumbers_: string[] = [
  * String representation of twenty to ninety.
  */
 const tensNumbers_: string[] = [
-  '', '', 'zwanzig', 'dreißig', 'vierzig', 'fünfzig', 'sechzig', 'siebzig',
-  'achtzig', 'neunzig'
+  '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
+  'ninety'
 ];
 
 
@@ -49,31 +48,10 @@ const tensNumbers_: string[] = [
  * String representation of thousand to decillion.
  */
 const largeNumbers_: string[] = [
-  '',
-  'tausend',
-  'million',
-  'milliarde',
-  'billion',
-  'billiarde',
-  'trillion',
-  'trilliard',
-  'quadrillion',
-  'quadrilliard',
-  'quintillion',
-  'quintilliarde',
-  'sextillion',
-  'sextilliarde',
+  '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
+  'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
+  'decillion'
 ];
-
-
-/**
- * Changes number one 'eins' into a prefix.
- * @param num number string.
- * @return If it is a one, it is made into prefix.
- */
-function onePrefix_(num: string): string {
-  return num === onesNumbers_[1] ? 'ein' : num;
-}
 
 
 /**
@@ -84,19 +62,15 @@ function onePrefix_(num: string): string {
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  let ones = onesNumbers_[Math.floor(n / 100)];
-  str += ones ? onePrefix_(ones) + 'hundert' : '';
+  str += onesNumbers_[Math.floor(n / 100)] ?
+      onesNumbers_[Math.floor(n / 100)] + NUMBERS.numSep + 'hundred' :
+      '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
-    ones = onesNumbers_[n];
-    if (ones) {
-      str += ones;
-    } else {
-      let tens = tensNumbers_[Math.floor(n / 10)];
-      ones = onesNumbers_[n % 10];
-      str += ones ? onePrefix_(ones) + 'und' + tens : tens;
-    }
+    str += onesNumbers_[n] ||
+        tensNumbers_[Math.floor(n / 10)] +
+            (n % 10 ? NUMBERS.numSep + onesNumbers_[n % 10] : '');
   }
   return str;
 }
@@ -119,13 +93,13 @@ function numberToWords(num: number): string {
   while (num > 0) {
     let hundreds = num % 1000;
     if (hundreds) {
-      let hund = hundredsToWords_(num % 1000);
-      str = onePrefix_(hund) + (pos ? largeNumbers_[pos] : '') + str;
+      str = hundredsToWords_(num % 1000) +
+          (pos ? '-' + largeNumbers_[pos] + '-' : '') + str;
     }
     num = Math.floor(num / 1000);
     pos++;
   }
-  return str.replace(/ein$/, 'eins');
+  return str.replace(/-$/, '');
 }
 
 
@@ -138,35 +112,43 @@ function numberToWords(num: number): string {
  */
 function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 1) {
-    return 'eintel';
+    return plural ? 'oneths' : 'oneth';
   }
   if (num === 2) {
-    return plural ? 'halbe' : 'halb';
+    return plural ? 'halves' : 'half';
   }
-  return wordOrdinal(num) + 'l';
+  let ordinal = wordOrdinal(num);
+  return plural ? ordinal + 's' : ordinal;
 }
 
 
 /**
  * Creates a word ordinal string from a number.
- * @param number The number to be converted.
+ * @param num The number to be converted.
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  if (num === 1) {
-    return 'erste';
-  }
-  if (num === 3) {
-    return 'dritte';
-  }
-  if (num === 7) {
-    return 'siebte';
-  }
-  if (num === 8) {
-    return 'achte';
-  }
   let ordinal = numberToWords(num);
-  return ordinal + (num < 19 ? 'te' : 'ste');
+  if (ordinal.match(/one$/)) {
+    ordinal = ordinal.slice(0, -3) + 'first';
+  } else if (ordinal.match(/two$/)) {
+    ordinal = ordinal.slice(0, -3) + 'second';
+  } else if (ordinal.match(/three$/)) {
+    ordinal = ordinal.slice(0, -5) + 'third';
+  } else if (ordinal.match(/five$/)) {
+    ordinal = ordinal.slice(0, -4) + 'fifth';
+  } else if (ordinal.match(/eight$/)) {
+    ordinal = ordinal.slice(0, -5) + 'eighth';
+  } else if (ordinal.match(/nine$/)) {
+    ordinal = ordinal.slice(0, -4) + 'ninth';
+  } else if (ordinal.match(/twelve$/)) {
+    ordinal = ordinal.slice(0, -6) + 'twelfth';
+  } else if (ordinal.match(/ty$/)) {
+    ordinal = ordinal.slice(0, -2) + 'tieth';
+  } else {
+    ordinal = ordinal + 'th';
+  }
+  return ordinal;
 }
 
 
@@ -176,7 +158,21 @@ function wordOrdinal(num: number): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  return num.toString() + '.';
+  let tens = num % 100;
+  let numStr = num.toString();
+  if (tens > 10 && tens < 20) {
+    return numStr + 'th';
+  }
+  switch (num % 10) {
+    case 1:
+      return numStr + 'st';
+    case 2:
+      return numStr + 'nd';
+    case 3:
+      return numStr + 'rd';
+    default:
+      return numStr + 'th';
+  }
 }
 
 
@@ -186,8 +182,8 @@ const NUMBERS: Numbers = {
   numberToWords: numberToWords,
   numberToOrdinal: numberToOrdinal,
   vulgarSep: ' ',
-  numSep: ''
+  numSep: ' '
 };
 
-
 export default NUMBERS;
+// TODO: For simple speech output this should be different.

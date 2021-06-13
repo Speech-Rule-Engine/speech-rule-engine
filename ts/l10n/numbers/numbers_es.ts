@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Grammar} from '../rule_engine/grammar';
-import {Numbers} from './numbers';
+import {Grammar} from '../../rule_engine/grammar';
+import {Numbers} from '../numbers';
 
 //
 // This work was sponsored by TextHelp

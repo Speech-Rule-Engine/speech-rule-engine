@@ -14,12 +14,17 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers into English.
+ * @fileoverview Translating numbers into Italian.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+//
+// This work was sponsored by TextHelp
+//
 
-import {Numbers} from './numbers';
+
+import {Grammar} from '../../rule_engine/grammar';
+import {Numbers} from '../numbers';
 
 
 const zero_: string = 'zero';
@@ -28,10 +33,10 @@ const zero_: string = 'zero';
  * String representation of zero to nineteen.
  */
 const onesNumbers_: string[] = [
-  '',        'one',     'two',       'three',    'four',
-  'five',    'six',     'seven',     'eight',    'nine',
-  'ten',     'eleven',  'twelve',    'thirteen', 'fourteen',
-  'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'
+  '',         'uno',    'due',         'tre',      'quattro',
+  'cinque',   'sei',    'sette',       'otto',     'nove',
+  'dieci',    'undici', 'dodici',      'tredici',  'quattordici',
+  'quindici', 'sedici', 'diciassette', 'diciotto', 'diciannove'
 ];
 
 
@@ -39,8 +44,8 @@ const onesNumbers_: string[] = [
  * String representation of twenty to ninety.
  */
 const tensNumbers_: string[] = [
-  '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
-  'ninety'
+  '', '', 'venti', 'trenta', 'quaranta', 'cinquanta', 'sessanta', 'settanta',
+  'ottanta', 'novanta'
 ];
 
 
@@ -48,9 +53,8 @@ const tensNumbers_: string[] = [
  * String representation of thousand to decillion.
  */
 const largeNumbers_: string[] = [
-  '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
-  'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
-  'decillion'
+  '', 'mille', 'milione', 'miliardo', 'bilione', 'biliardo', 'trilione',
+  'triliardo', 'quadrilione', 'quadriliardo', 'quntilione', 'quintiliardo'
 ];
 
 
@@ -63,14 +67,23 @@ function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
   str += onesNumbers_[Math.floor(n / 100)] ?
-      onesNumbers_[Math.floor(n / 100)] + NUMBERS.numSep + 'hundred' :
+      onesNumbers_[Math.floor(n / 100)] + NUMBERS.numSep + 'cento' :
       '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
-    str += onesNumbers_[n] ||
-        tensNumbers_[Math.floor(n / 10)] +
-            (n % 10 ? NUMBERS.numSep + onesNumbers_[n % 10] : '');
+    let ones = onesNumbers_[n];
+    if (ones) {
+      str += ones;
+    } else {
+      let tens = tensNumbers_[Math.floor(n / 10)];
+      let rest = n % 10;
+      if (rest === 1 || rest === 8) {
+        tens = tens.slice(0, -1);
+      }
+      str += tens;
+      str += rest ? NUMBERS.numSep + onesNumbers_[n % 10] : '';
+    }
   }
   return str;
 }
@@ -87,6 +100,9 @@ function numberToWords(num: number): string {
   }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
+  }
+  if (num === 1 && Grammar.getInstance().getParameter('fraction')) {
+    return 'un';
   }
   let pos = 0;
   let str = '';
@@ -111,15 +127,25 @@ function numberToWords(num: number): string {
  * @return The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, plural: boolean): string {
-  if (num === 1) {
-    return plural ? 'oneths' : 'oneth';
-  }
   if (num === 2) {
-    return plural ? 'halves' : 'half';
+    return plural ? 'mezzi' : 'mezzo';
   }
   let ordinal = wordOrdinal(num);
-  return plural ? ordinal + 's' : ordinal;
+  if (!plural) {
+    return ordinal;
+  }
+  let gender = ordinal.match(/o$/) ? 'i' : 'e';
+  return ordinal.slice(0, -1) + gender;
 }
+
+
+/**
+ * String representation of ordinals from zero to ten.
+ */
+const onesOrdinals_: string[] = [
+  'zero', 'primo', 'secondo', 'terzo', 'quarto', 'quinto', 'sesto', 'settimo',
+  'ottavo', 'nono', 'decimo'
+];
 
 
 /**
@@ -128,27 +154,14 @@ function numberToOrdinal(num: number, plural: boolean): string {
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let ordinal = numberToWords(num);
-  if (ordinal.match(/one$/)) {
-    ordinal = ordinal.slice(0, -3) + 'first';
-  } else if (ordinal.match(/two$/)) {
-    ordinal = ordinal.slice(0, -3) + 'second';
-  } else if (ordinal.match(/three$/)) {
-    ordinal = ordinal.slice(0, -5) + 'third';
-  } else if (ordinal.match(/five$/)) {
-    ordinal = ordinal.slice(0, -4) + 'fifth';
-  } else if (ordinal.match(/eight$/)) {
-    ordinal = ordinal.slice(0, -5) + 'eighth';
-  } else if (ordinal.match(/nine$/)) {
-    ordinal = ordinal.slice(0, -4) + 'ninth';
-  } else if (ordinal.match(/twelve$/)) {
-    ordinal = ordinal.slice(0, -6) + 'twelfth';
-  } else if (ordinal.match(/ty$/)) {
-    ordinal = ordinal.slice(0, -2) + 'tieth';
-  } else {
-    ordinal = ordinal + 'th';
+  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  let postfix = gender === 'male' ? 'o' : 'a';
+  let ordinal = onesOrdinals_[num];
+  if (ordinal) {
+    return ordinal.slice(0, -1) + postfix;
   }
-  return ordinal;
+  ordinal = numberToWords(num);
+  return ordinal.slice(0, -1) + 'esim' + postfix;
 }
 
 
@@ -158,21 +171,8 @@ function wordOrdinal(num: number): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let tens = num % 100;
-  let numStr = num.toString();
-  if (tens > 10 && tens < 20) {
-    return numStr + 'th';
-  }
-  switch (num % 10) {
-    case 1:
-      return numStr + 'st';
-    case 2:
-      return numStr + 'nd';
-    case 3:
-      return numStr + 'rd';
-    default:
-      return numStr + 'th';
-  }
+  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  return num.toString() + (gender === 'male' ? 'o' : 'a');
 }
 
 
@@ -182,8 +182,8 @@ const NUMBERS: Numbers = {
   numberToWords: numberToWords,
   numberToOrdinal: numberToOrdinal,
   vulgarSep: ' ',
-  numSep: ' '
+  numSep: ''
 };
 
+
 export default NUMBERS;
-// TODO: For simple speech output this should be different.

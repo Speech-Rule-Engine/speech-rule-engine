@@ -23,7 +23,7 @@
 import {Grammar} from '../rule_engine/grammar';
 import * as Locale from './locale';
 import {Messages} from './messages';
-import NUMBERS from './numbers_en';
+import NUMBERS from './numbers/numbers_en';
 import * as tr from './transformers';
 
 

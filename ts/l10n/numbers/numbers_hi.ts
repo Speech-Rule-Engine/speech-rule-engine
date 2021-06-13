@@ -23,14 +23,14 @@
 //
 
 
-import {Grammar} from '../rule_engine/grammar';
-import {Numbers} from './numbers';
+import {Grammar} from '../../rule_engine/grammar';
+import {Numbers} from '../numbers';
 
 
 const zero_: string = 'शून्य';
 
 /**
- * String representation of zero to nineteen.
+ * String representation of one to one hundred.
  */
 const onesNumbers_: string[] = [
   '',       'एक',     'दो',     'तीन',    'चार',     'पाँच',    'छः',

@@ -23,8 +23,8 @@
 //
 
 
-import {Grammar} from '../rule_engine/grammar';
-import {Numbers} from './numbers';
+import {Grammar} from '../../rule_engine/grammar';
+import {Numbers} from '../numbers';
 
 
 /**

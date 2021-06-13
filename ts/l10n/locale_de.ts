@@ -26,7 +26,7 @@
 import {Grammar} from '../rule_engine/grammar';
 import {localFont, vulgarNestingDepth} from './locale';
 import {Messages} from './messages';
-import NUMBERS from './numbers_de';
+import NUMBERS from './numbers/numbers_de';
 
 
 let germanPrefixCombiner = function(letter: string, font: string, cap: string) {

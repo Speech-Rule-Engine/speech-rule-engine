@@ -25,7 +25,7 @@
 //
 
 import {Messages} from './messages';
-import NUMBERS from './numbers_nemeth';
+import NUMBERS from './numbers/numbers_nemeth';
 import * as tr from './transformers';
 
 

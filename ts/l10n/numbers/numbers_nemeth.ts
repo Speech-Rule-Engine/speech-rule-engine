@@ -23,7 +23,7 @@
 //
 
 
-import {Numbers} from './numbers';
+import {Numbers} from '../numbers';
 
 
 const oneNumbers_: string[] =

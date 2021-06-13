@@ -1,5 +1,5 @@
 //
-// Copyright 2019-21 Volker Sorge
+// Copyright 2020-21 Volker Sorge
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,29 +14,25 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers into Italian.
+ * @fileoverview Translating numbers into German.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
+import {Numbers} from '../numbers';
 
 //
-// This work was sponsored by TextHelp
+// This work was sponsored by ETH Zurich
 //
 
-
-import {Grammar} from '../rule_engine/grammar';
-import {Numbers} from './numbers';
-
-
-const zero_: string = 'zero';
+const zero_: string = 'null';
 
 /**
  * String representation of zero to nineteen.
  */
 const onesNumbers_: string[] = [
-  '',         'uno',    'due',         'tre',      'quattro',
-  'cinque',   'sei',    'sette',       'otto',     'nove',
-  'dieci',    'undici', 'dodici',      'tredici',  'quattordici',
-  'quindici', 'sedici', 'diciassette', 'diciotto', 'diciannove'
+  '',         'eins',     'zwei',     'drei',     'vier',
+  'fünf',     'sechs',    'sieben',   'acht',     'neun',
+  'zehn',     'elf',      'zwölf',    'dreizehn', 'vierzehn',
+  'fünfzehn', 'sechzehn', 'siebzehn', 'achtzehn', 'neunzehn'
 ];
 
 
@@ -44,8 +40,8 @@ const onesNumbers_: string[] = [
  * String representation of twenty to ninety.
  */
 const tensNumbers_: string[] = [
-  '', '', 'venti', 'trenta', 'quaranta', 'cinquanta', 'sessanta', 'settanta',
-  'ottanta', 'novanta'
+  '', '', 'zwanzig', 'dreißig', 'vierzig', 'fünfzig', 'sechzig', 'siebzig',
+  'achtzig', 'neunzig'
 ];
 
 
@@ -53,9 +49,31 @@ const tensNumbers_: string[] = [
  * String representation of thousand to decillion.
  */
 const largeNumbers_: string[] = [
-  '', 'mille', 'milione', 'miliardo', 'bilione', 'biliardo', 'trilione',
-  'triliardo', 'quadrilione', 'quadriliardo', 'quntilione', 'quintiliardo'
+  '',
+  'tausend',
+  'million',
+  'milliarde',
+  'billion',
+  'billiarde',
+  'trillion',
+  'trilliard',
+  'quadrillion',
+  'quadrilliard',
+  'quintillion',
+  'quintilliarde',
+  'sextillion',
+  'sextilliarde',
 ];
+
+
+/**
+ * Changes number one 'eins' into a prefix.
+ * @param num number string.
+ * @return If it is a one, it is made into prefix.
+ */
+function onePrefix_(num: string): string {
+  return num === onesNumbers_[1] ? 'ein' : num;
+}
 
 
 /**
@@ -66,23 +84,18 @@ const largeNumbers_: string[] = [
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  str += onesNumbers_[Math.floor(n / 100)] ?
-      onesNumbers_[Math.floor(n / 100)] + NUMBERS.numSep + 'cento' :
-      '';
+  let ones = onesNumbers_[Math.floor(n / 100)];
+  str += ones ? onePrefix_(ones) + 'hundert' : '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
-    let ones = onesNumbers_[n];
+    ones = onesNumbers_[n];
     if (ones) {
       str += ones;
     } else {
       let tens = tensNumbers_[Math.floor(n / 10)];
-      let rest = n % 10;
-      if (rest === 1 || rest === 8) {
-        tens = tens.slice(0, -1);
-      }
-      str += tens;
-      str += rest ? NUMBERS.numSep + onesNumbers_[n % 10] : '';
+      ones = onesNumbers_[n % 10];
+      str += ones ? onePrefix_(ones) + 'und' + tens : tens;
     }
   }
   return str;
@@ -101,21 +114,18 @@ function numberToWords(num: number): string {
   if (num >= Math.pow(10, 36)) {
     return num.toString();
   }
-  if (num === 1 && Grammar.getInstance().getParameter('fraction')) {
-    return 'un';
-  }
   let pos = 0;
   let str = '';
   while (num > 0) {
     let hundreds = num % 1000;
     if (hundreds) {
-      str = hundredsToWords_(num % 1000) +
-          (pos ? '-' + largeNumbers_[pos] + '-' : '') + str;
+      let hund = hundredsToWords_(num % 1000);
+      str = onePrefix_(hund) + (pos ? largeNumbers_[pos] : '') + str;
     }
     num = Math.floor(num / 1000);
     pos++;
   }
-  return str.replace(/-$/, '');
+  return str.replace(/ein$/, 'eins');
 }
 
 
@@ -127,41 +137,36 @@ function numberToWords(num: number): string {
  * @return The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, plural: boolean): string {
+  if (num === 1) {
+    return 'eintel';
+  }
   if (num === 2) {
-    return plural ? 'mezzi' : 'mezzo';
+    return plural ? 'halbe' : 'halb';
   }
-  let ordinal = wordOrdinal(num);
-  if (!plural) {
-    return ordinal;
-  }
-  let gender = ordinal.match(/o$/) ? 'i' : 'e';
-  return ordinal.slice(0, -1) + gender;
+  return wordOrdinal(num) + 'l';
 }
 
 
 /**
- * String representation of ordinals from zero to ten.
- */
-const onesOrdinals_: string[] = [
-  'zero', 'primo', 'secondo', 'terzo', 'quarto', 'quinto', 'sesto', 'settimo',
-  'ottavo', 'nono', 'decimo'
-];
-
-
-/**
  * Creates a word ordinal string from a number.
- * @param num The number to be converted.
+ * @param number The number to be converted.
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let gender = (Grammar.getInstance().getParameter('gender') as string);
-  let postfix = gender === 'male' ? 'o' : 'a';
-  let ordinal = onesOrdinals_[num];
-  if (ordinal) {
-    return ordinal.slice(0, -1) + postfix;
+  if (num === 1) {
+    return 'erste';
   }
-  ordinal = numberToWords(num);
-  return ordinal.slice(0, -1) + 'esim' + postfix;
+  if (num === 3) {
+    return 'dritte';
+  }
+  if (num === 7) {
+    return 'siebte';
+  }
+  if (num === 8) {
+    return 'achte';
+  }
+  let ordinal = numberToWords(num);
+  return ordinal + (num < 19 ? 'te' : 'ste');
 }
 
 
@@ -171,8 +176,7 @@ function wordOrdinal(num: number): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = (Grammar.getInstance().getParameter('gender') as string);
-  return num.toString() + (gender === 'male' ? 'o' : 'a');
+  return num.toString() + '.';
 }
 
 

@@ -25,7 +25,7 @@
 
 import {combinePostfixIndex, nestingToString} from './locale';
 import {Messages} from './messages';
-import NUMBERS from './numbers_fr';
+import NUMBERS from './numbers/numbers_fr';
 import {prefixCombiner} from './transformers';
 
 

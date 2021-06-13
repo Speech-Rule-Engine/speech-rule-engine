@@ -26,7 +26,7 @@
 
 import {nestingToString, vulgarNestingDepth} from './locale';
 import {Messages} from './messages';
-import NUMBERS from './numbers_hi';
+import NUMBERS from './numbers/numbers_hi';
 import {postfixCombiner, prefixCombiner} from './transformers';
 
 
