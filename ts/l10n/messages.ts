@@ -40,7 +40,7 @@ export interface Messages {
   NUMBERS: Numbers;
   ALPHABETS: {[key: string]: string[]};
   ALPHABET_PREFIXES: {[key: string]: {[key: string]: string}};
-  ALPHABET_TRANSFORMERS: {[key: string]: {[key: string]: tr.Transformer}};
+  ALPHABET_TRANSFORMERS?: {[key: string]: {[key: string]: tr.Transformer}};
   ALPHABET_COMBINER: tr.Combiner;
 }
 
@@ -298,13 +298,15 @@ export const Locale: Messages = {
     digitPrefix: {default: ''}
   },
 
-
   /**
    * Transformer functions for alphabet rules that can be specialised by rule
    * set.
    */
   ALPHABET_TRANSFORMERS: {
-    digit: {default: tr.identityTransformer},
+    digit: {
+      default: NUMBERS.numberToWords,
+      mathspeak: tr.identityTransformer,
+      clearspeak: tr.identityTransformer},
     letter: {default: tr.identityTransformer}
   },
 

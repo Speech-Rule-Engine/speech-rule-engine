@@ -52,6 +52,9 @@ export function setLocale() {
       // TODO (TS): See if this is really an object structure.
       (Locale as any)[key] = (msgs as any)[key];
     }
+    // TODO (Speech Rules): This is temporary until locales are handled in a
+    // bespoke class.
+    Locale.ALPHABET_TRANSFORMERS.digit.default = msgs.NUMBERS.numberToWords;
   }
 }
 

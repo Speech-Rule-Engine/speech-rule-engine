@@ -229,23 +229,6 @@ export const hi: Messages = {
   // 'Theta', // Theta symbol
   // 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
 
-  ALPHABET_TRANSFORMERS: {
-    digit: {
-      default: NUMBERS.numberToWords,
-      mathspeak: function(n) {
-        return n.toString();
-      },
-      clearspeak: function(n) {
-        return n.toString();
-      }
-    },
-    letter: {
-      default: function(n) {
-        return n.toString();
-      }
-    }
-  },
-
   ALPHABET_PREFIXES: {
     capPrefix: {default: 'कैपिटल'},
     smallPrefix: {default: ''},

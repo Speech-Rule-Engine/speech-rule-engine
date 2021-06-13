@@ -253,23 +253,6 @@ export const de: Messages = {
     ]
   },
 
-  ALPHABET_TRANSFORMERS: {
-    digit: {
-      default: NUMBERS.numberToWords,
-      mathspeak: function(n: number) {
-        return n.toString();
-      },
-      clearspeak: function(n: number) {
-        return n.toString();
-      }
-    },
-    letter: {
-      default: function(n: number) {
-        return n.toString();
-      }
-    }
-  },
-
   ALPHABET_PREFIXES: {
     capPrefix: {default: 'großes'},
     smallPrefix: {default: ''},
