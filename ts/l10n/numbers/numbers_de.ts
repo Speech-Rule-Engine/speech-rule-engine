@@ -23,56 +23,13 @@ import {Numbers} from '../numbers';
 // This work was sponsored by ETH Zurich
 //
 
-const zero_: string = 'null';
-
-/**
- * String representation of zero to nineteen.
- */
-const onesNumbers_: string[] = [
-  '',         'eins',     'zwei',     'drei',     'vier',
-  'fünf',     'sechs',    'sieben',   'acht',     'neun',
-  'zehn',     'elf',      'zwölf',    'dreizehn', 'vierzehn',
-  'fünfzehn', 'sechzehn', 'siebzehn', 'achtzehn', 'neunzehn'
-];
-
-
-/**
- * String representation of twenty to ninety.
- */
-const tensNumbers_: string[] = [
-  '', '', 'zwanzig', 'dreißig', 'vierzig', 'fünfzig', 'sechzig', 'siebzig',
-  'achtzig', 'neunzig'
-];
-
-
-/**
- * String representation of thousand to decillion.
- */
-const largeNumbers_: string[] = [
-  '',
-  'tausend',
-  'million',
-  'milliarde',
-  'billion',
-  'billiarde',
-  'trillion',
-  'trilliard',
-  'quadrillion',
-  'quadrilliard',
-  'quintillion',
-  'quintilliarde',
-  'sextillion',
-  'sextilliarde',
-];
-
-
 /**
  * Changes number one 'eins' into a prefix.
  * @param num number string.
  * @return If it is a one, it is made into prefix.
  */
 function onePrefix_(num: string): string {
-  return num === onesNumbers_[1] ? 'ein' : num;
+  return num === NUMBERS.ones[1] ? 'ein' : num;
 }
 
 
@@ -84,17 +41,17 @@ function onePrefix_(num: string): string {
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  let ones = onesNumbers_[Math.floor(n / 100)];
+  let ones = NUMBERS.ones[Math.floor(n / 100)];
   str += ones ? onePrefix_(ones) + 'hundert' : '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
-    ones = onesNumbers_[n];
+    ones = NUMBERS.ones[n];
     if (ones) {
       str += ones;
     } else {
-      let tens = tensNumbers_[Math.floor(n / 10)];
-      ones = onesNumbers_[n % 10];
+      let tens = NUMBERS.tens[Math.floor(n / 10)];
+      ones = NUMBERS.ones[n % 10];
       str += ones ? onePrefix_(ones) + 'und' + tens : tens;
     }
   }
@@ -109,7 +66,7 @@ function hundredsToWords_(num: number): string {
  */
 function numberToWords(num: number): string {
   if (num === 0) {
-    return zero_;
+    return NUMBERS.zero;
   }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
@@ -120,7 +77,7 @@ function numberToWords(num: number): string {
     let hundreds = num % 1000;
     if (hundreds) {
       let hund = hundredsToWords_(num % 1000);
-      str = onePrefix_(hund) + (pos ? largeNumbers_[pos] : '') + str;
+      str = onePrefix_(hund) + (pos ? NUMBERS.large[pos] : '') + str;
     }
     num = Math.floor(num / 1000);
     pos++;
@@ -181,10 +138,40 @@ function simpleOrdinal(num: number): string {
 
 
 const NUMBERS: Numbers = {
+  zero: 'null',
+  ones: [
+    '',         'eins',     'zwei',     'drei',     'vier',
+    'fünf',     'sechs',    'sieben',   'acht',     'neun',
+    'zehn',     'elf',      'zwölf',    'dreizehn', 'vierzehn',
+    'fünfzehn', 'sechzehn', 'siebzehn', 'achtzehn', 'neunzehn'
+  ],
+  tens: [
+    '', '', 'zwanzig', 'dreißig', 'vierzig', 'fünfzig', 'sechzig', 'siebzig',
+    'achtzig', 'neunzig'
+  ],
+
+  large: [
+  '',
+  'tausend',
+  'million',
+  'milliarde',
+  'billion',
+  'billiarde',
+  'trillion',
+  'trilliard',
+  'quadrillion',
+  'quadrilliard',
+  'quintillion',
+  'quintilliarde',
+  'sextillion',
+  'sextilliarde',
+  ],
+
   wordOrdinal: wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
   numberToOrdinal: numberToOrdinal,
+
   vulgarSep: ' ',
   numSep: ''
 };

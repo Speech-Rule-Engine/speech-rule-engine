@@ -22,38 +22,6 @@
 import {Numbers} from '../numbers';
 
 
-const zero_: string = 'zero';
-
-/**
- * String representation of zero to nineteen.
- */
-const onesNumbers_: string[] = [
-  '',        'one',     'two',       'three',    'four',
-  'five',    'six',     'seven',     'eight',    'nine',
-  'ten',     'eleven',  'twelve',    'thirteen', 'fourteen',
-  'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'
-];
-
-
-/**
- * String representation of twenty to ninety.
- */
-const tensNumbers_: string[] = [
-  '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
-  'ninety'
-];
-
-
-/**
- * String representation of thousand to decillion.
- */
-const largeNumbers_: string[] = [
-  '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
-  'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
-  'decillion'
-];
-
-
 /**
  * Translates a number of up to twelve digits into a string representation.
  * @param num The number to translate.
@@ -62,15 +30,15 @@ const largeNumbers_: string[] = [
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  str += onesNumbers_[Math.floor(n / 100)] ?
-      onesNumbers_[Math.floor(n / 100)] + NUMBERS.numSep + 'hundred' :
+  str += NUMBERS.ones[Math.floor(n / 100)] ?
+      NUMBERS.ones[Math.floor(n / 100)] + NUMBERS.numSep + 'hundred' :
       '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
-    str += onesNumbers_[n] ||
-        tensNumbers_[Math.floor(n / 10)] +
-            (n % 10 ? NUMBERS.numSep + onesNumbers_[n % 10] : '');
+    str += NUMBERS.ones[n] ||
+        NUMBERS.tens[Math.floor(n / 10)] +
+            (n % 10 ? NUMBERS.numSep + NUMBERS.ones[n % 10] : '');
   }
   return str;
 }
@@ -83,7 +51,7 @@ function hundredsToWords_(num: number): string {
  */
 function numberToWords(num: number): string {
   if (num === 0) {
-    return zero_;
+    return NUMBERS.zero;
   }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
@@ -94,7 +62,7 @@ function numberToWords(num: number): string {
     let hundreds = num % 1000;
     if (hundreds) {
       str = hundredsToWords_(num % 1000) +
-          (pos ? '-' + largeNumbers_[pos] + '-' : '') + str;
+          (pos ? '-' + NUMBERS.large[pos] + '-' : '') + str;
     }
     num = Math.floor(num / 1000);
     pos++;
@@ -177,6 +145,23 @@ function simpleOrdinal(num: number): string {
 
 
 const NUMBERS: Numbers = {
+  zero: 'zero',
+  ones: [
+  '',        'one',     'two',       'three',    'four',
+  'five',    'six',     'seven',     'eight',    'nine',
+  'ten',     'eleven',  'twelve',    'thirteen', 'fourteen',
+  'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'
+  ],
+  tens: [
+    '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
+    'ninety'
+  ],
+  large: [
+    '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
+    'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
+    'decillion'
+  ],
+
   wordOrdinal: wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,

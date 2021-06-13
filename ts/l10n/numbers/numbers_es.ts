@@ -26,82 +26,6 @@ import {Numbers} from '../numbers';
 //
 
 
-// Numbers
-const zero_: string = 'cero';
-
-/**
- * String representation of zero to twenty-nine.
- */
-const onesNumbers_: string[] = [
-  '',
-  'uno',
-  'dos',
-  'tres',
-  'cuatro',
-  'cinco',
-  'seis',
-  'siete',
-  'ocho',
-  'nueve',
-  'diez',
-  'once',
-  'doce',
-  'trece',
-  'catorce',
-  'quince',
-  'dieciséis',
-  'diecisiete',
-  'dieciocho',
-  'diecinueve',
-  'veinte',
-  'veintiuno',
-  'veintidós',
-  'veintitrés',
-  'veinticuatro',
-  'veinticinco',
-  'veintiséis',
-  'veintisiete',
-  'veintiocho',
-  'veintinueve'
-];
-
-
-/**
- * String representation of thirty to ninety.
- */
-const tensNumbers_: string[] = [
-  '', '', '', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta',
-  'ochenta', 'noventa'
-];
-
-
-/**
- * String representation of one hundred to nine hundred.
- */
-const hundredsNumbers_: string[] = [
-  '', 'cien', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos',
-  'seiscientos', 'setecientos', 'ochocientos', 'novecientos'
-];
-
-
-/**
- * String representation of thousand to decillion.
- */
-const largeNumbers_: string[] = [
-  '',           'mil',
-  'millón',     'mil millónes',
-  'billón',     'mil billónes',
-  'trillón',    'mil trillónes',
-  'cuatrilló',  'mil cuatrillóes',
-  'quintillón', 'mil quintillónes',
-  'sextillón',  'mil sextillónes',
-  'septillón',  'mil septillónes',
-  'octillón',   'mil octillónes',
-  'nonillón',   'mil nonillónes',
-  'decillón',   'mil decillónes'
-];
-
-
 /**
  * Turns a tens position in a number into words.
  * @param num The number to translate.
@@ -110,10 +34,10 @@ const largeNumbers_: string[] = [
 function tensToWords_(num: number): string {
   let n = num % 100;
   if (n < 30) {
-    return onesNumbers_[n];
+    return NUMBERS.ones[n];
   }
-  let tens = tensNumbers_[Math.floor(n / 10)];
-  let ones = onesNumbers_[n % 10];
+  let tens = NUMBERS.tens[Math.floor(n / 10)];
+  let ones = NUMBERS.ones[n % 10];
   return tens && ones ? tens + ' y ' + ones : tens || ones;
 }
 
@@ -126,7 +50,7 @@ function tensToWords_(num: number): string {
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let hundred = Math.floor(n / 100);
-  let hundreds = hundredsNumbers_[hundred];
+  let hundreds = NUMBERS.special.hundreds[hundred];
   let tens = tensToWords_(n % 100);
   if (hundred === 1) {
     if (!tens) {
@@ -147,7 +71,7 @@ function hundredsToWords_(num: number): string {
  */
 function numberToWords(num: number): string {
   if (num === 0) {
-    return zero_;
+    return NUMBERS.zero;
   }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
@@ -157,7 +81,7 @@ function numberToWords(num: number): string {
   while (num > 0) {
     let hundreds = num % 1000;
     if (hundreds) {
-      let large = largeNumbers_[pos];
+      let large = NUMBERS.large[pos];
       let huns = hundredsToWords_(hundreds);
       if (!pos) {
         str = huns;
@@ -260,10 +184,70 @@ function simpleOrdinal(num: number): string {
 
 
 const NUMBERS: Numbers = {
-  // wordOrdinal: sre.Numbers.es.wordOrdinal,
+  zero: 'cero',
+  ones: [
+    '',
+    'uno',
+    'dos',
+    'tres',
+    'cuatro',
+    'cinco',
+    'seis',
+    'siete',
+    'ocho',
+    'nueve',
+    'diez',
+    'once',
+    'doce',
+    'trece',
+    'catorce',
+    'quince',
+    'dieciséis',
+    'diecisiete',
+    'dieciocho',
+    'diecinueve',
+    'veinte',
+    'veintiuno',
+    'veintidós',
+    'veintitrés',
+    'veinticuatro',
+    'veinticinco',
+    'veintiséis',
+    'veintisiete',
+    'veintiocho',
+    'veintinueve'
+  ],
+  tens: [
+    '', '', '', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta',
+    'ochenta', 'noventa'
+  ],
+  large: [
+    '',           'mil',
+    'millón',     'mil millónes',
+    'billón',     'mil billónes',
+    'trillón',    'mil trillónes',
+    'cuatrilló',  'mil cuatrillóes',
+    'quintillón', 'mil quintillónes',
+    'sextillón',  'mil sextillónes',
+    'septillón',  'mil septillónes',
+    'octillón',   'mil octillónes',
+    'nonillón',   'mil nonillónes',
+    'decillón',   'mil decillónes'
+  ],
+
+  special: {
+    hundredsNumbers_: [
+      '', 'cien', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos',
+      'seiscientos', 'setecientos', 'ochocientos', 'novecientos'
+    ],
+  },
+
+  
+  // wordOrdinal: 
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
   numberToOrdinal: numberToOrdinal,
+
   vulgarSep: '-'
 };
 

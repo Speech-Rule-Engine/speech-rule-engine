@@ -20,18 +20,51 @@
 
 import * as tr from './transformers';
 
-interface Numbers {
-  wordOrdinal?: tr.Transformer,
-  simpleOrdinal?: tr.Transformer,
-  numberToWords?: tr.Transformer,
-  numberToOrdinal?: tr.GrammarCase,
-  vulgarSep: string,
-  numSep?: string
+export interface Numbers {
+  /**
+   * The word for zero.
+   */
+  zero?: string;
+
+  /**
+   * String representation of one to nineteen (or higher).
+   * The zero position is generally left empty.
+   */
+  ones: string[];
+
+  /**
+   * String representation of twenty to ninety.
+   */
+  tens?: string[];
+
+  /**
+   * String representation of thousand to decillion.
+   */
+  large?: string[];
+
+  /**
+   * Other special representations that are loaded via locale.
+   */
+  special?: {[key: string]: string|string[]};
+  
+  // Constructor methods
+  wordOrdinal?: tr.Transformer;
+  simpleOrdinal: tr.Transformer;
+  numberToWords: tr.Transformer;
+  numberToOrdinal?: tr.GrammarCase;
+
+  vulgarSep: string;
+  numSep?: string;
 };
-export {Numbers};
 
 
 export const NUMBERS: Numbers = {
+  zero: 'zero',
+  ones: [],
+  tens: [],
+  large: [],
+  special: {},
+
   wordOrdinal: tr.identityTransformer,
   simpleOrdinal: tr.identityTransformer,
   numberToWords: tr.identityTransformer,

@@ -26,10 +26,6 @@
 import {Numbers} from '../numbers';
 
 
-const oneNumbers_: string[] =
-    ['⠴', '⠂', '⠆', '⠒', '⠲', '⠢', '⠖', '⠶', '⠦', '⠔'];
-
-
 /**
  * Translates a number of into a Braille string representation.
  * @param num The number to translate.
@@ -39,13 +35,15 @@ function numberToWords(num: number): string {
   let digits = num.toString().split('');
   return digits
       .map(function(digit) {
-        return oneNumbers_[parseInt(digit, 10)];
+        return NUMBERS.ones[parseInt(digit, 10)];
       })
       .join('');
 }
 
 
 const NUMBERS: Numbers = {
+  ones: ['⠴', '⠂', '⠆', '⠒', '⠲', '⠢', '⠖', '⠶', '⠦', '⠔'],
+
   numberToWords: numberToWords,
   simpleOrdinal: numberToWords,
   vulgarSep: ''

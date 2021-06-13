@@ -27,51 +27,8 @@ import {Grammar} from '../../rule_engine/grammar';
 import {Numbers} from '../numbers';
 
 
-const zero_: string = 'शून्य';
-
-/**
- * String representation of one to one hundred.
- */
-const onesNumbers_: string[] = [
-  '',       'एक',     'दो',     'तीन',    'चार',     'पाँच',    'छः',
-  'सात',    'आठ',     'नौ',     'दस',     'ग्यारह',   'बारह',   'तेरह',
-  'चौदह',   'पंद्रह',   'सोलह',   'सत्रह',   'अठारह',   'उन्नीस',  'बीस',
-  'इक्कीस',  'बाईस',   'तेइस',    'चौबीस',  'पच्चीस',   'छब्बीस',  'सताइस',
-  'अट्ठाइस', 'उनतीस',  'तीस',    'इकतीस',  'बतीस',    'तैंतीस',   'चौंतीस',
-  'पैंतीस',   'छतीस',   'सैंतीस',   'अड़तीस',  'उनतालीस', 'चालीस',  'इकतालीस',
-  'बयालीस', 'तैतालीस', 'चवालीस', 'पैंतालीस', 'छयालिस',  'सैंतालीस', 'अड़तालीस',
-  'उनचास',  'पचास',   'इक्यावन', 'बावन',   'तिरपन',   'चौवन',   'पचपन',
-  'छप्पन',   'सतावन',  'अठावन',  'उनसठ',   'साठ',     'इकसठ',   'बासठ',
-  'तिरसठ',  'चौंसठ',   'पैंसठ',    'छियासठ', 'सड़सठ',    'अड़सठ',   'उनहतर',
-  'सत्तर',   'इकहतर',  'बहतर',   'तिहतर',  'चौहतर',   'पचहतर',  'छिहतर',
-  'सतहतर',  'अठहतर',  'उन्नासी', 'अस्सी',   'इक्यासी',  'बयासी',  'तिरासी',
-  'चौरासी', 'पचासी',  'छियासी', 'सतासी',  'अट्ठासी',  'नवासी',  'नब्बे',
-  'इक्यानवे', 'ब्यानवे',  'तिरानवे', 'चौरानवे', 'पचानवे',   'छियानवे', 'सतानवे',
-  'अट्ठानवे', 'निन्यानवे'
-];
-
-
 const hundred_: string = 'सौ';
 // hundred: 1 - 9 hundred  (sau)
-
-
-/**
- * String representation of thousand to decillion.
- */
-const largeNumbers_: string[] = [
-  'हजार',     // thousand: 1 - 99 thousand (hazaar)
-  'लाख',      // thousand/million: 100 thousand - 9 million (lakh)
-  'करोड़',     // million: 10 - 999 million (caror)
-  'अरब',      // billion: 1 - 99 billion (arab)
-  'खरब',      // billion/trillion: 100 billion - 9 trillion (kharab)
-  'नील',      // 10 trillion - 999 trillion (sau kharab)
-  'पद्मा',     // 1 quadrillion - 99 quadrillion (nil)
-  'शंख',       // 100 quadrillion - 9 quintillion (padma)
-  'महाशंख',    // 10 quin - 999 quin (Shankh)
-  'महाउपाध',  // 1 sext - 99 sext
-  'जल्द',      // 100 sext - 9 sept
-  'परार्ध', 'अंत', 'शिष्ट'
-];
 
 
 /**
@@ -82,13 +39,13 @@ const largeNumbers_: string[] = [
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  str += onesNumbers_[Math.floor(n / 100)] ?
-      onesNumbers_[Math.floor(n / 100)] + NUMBERS.numSep + hundred_ :
+  str += NUMBERS.ones[Math.floor(n / 100)] ?
+      NUMBERS.ones[Math.floor(n / 100)] + NUMBERS.numSep + hundred_ :
       '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
-    str += onesNumbers_[n];
+    str += NUMBERS.ones[n];
   }
   return str;
 }
@@ -101,7 +58,7 @@ function hundredsToWords_(num: number): string {
  */
 function numberToWords(num: number): string {
   if (num === 0) {
-    return zero_;
+    return NUMBERS.zero;
   }
   if (num >= Math.pow(10, 32)) {
     return num.toString();
@@ -117,7 +74,7 @@ function numberToWords(num: number): string {
   while (num > 0) {
     let thousands = num % 100;
     if (thousands) {
-      str = onesNumbers_[thousands] + NUMBERS.numSep + largeNumbers_[pos] +
+      str = NUMBERS.ones[thousands] + NUMBERS.numSep + NUMBERS.large[pos] +
           (str ? NUMBERS.numSep + str : '');
     }
     num = Math.floor(num / 100);
@@ -213,6 +170,39 @@ function simpleOrdinal(num: number): string {
 
 
 const NUMBERS: Numbers = {
+  zero: 'शून्य',
+  ones: [
+    '',       'एक',     'दो',     'तीन',    'चार',     'पाँच',    'छः',
+    'सात',    'आठ',     'नौ',     'दस',     'ग्यारह',   'बारह',   'तेरह',
+    'चौदह',   'पंद्रह',   'सोलह',   'सत्रह',   'अठारह',   'उन्नीस',  'बीस',
+    'इक्कीस',  'बाईस',   'तेइस',    'चौबीस',  'पच्चीस',   'छब्बीस',  'सताइस',
+    'अट्ठाइस', 'उनतीस',  'तीस',    'इकतीस',  'बतीस',    'तैंतीस',   'चौंतीस',
+    'पैंतीस',   'छतीस',   'सैंतीस',   'अड़तीस',  'उनतालीस', 'चालीस',  'इकतालीस',
+    'बयालीस', 'तैतालीस', 'चवालीस', 'पैंतालीस', 'छयालिस',  'सैंतालीस', 'अड़तालीस',
+    'उनचास',  'पचास',   'इक्यावन', 'बावन',   'तिरपन',   'चौवन',   'पचपन',
+    'छप्पन',   'सतावन',  'अठावन',  'उनसठ',   'साठ',     'इकसठ',   'बासठ',
+    'तिरसठ',  'चौंसठ',   'पैंसठ',    'छियासठ', 'सड़सठ',    'अड़सठ',   'उनहतर',
+    'सत्तर',   'इकहतर',  'बहतर',   'तिहतर',  'चौहतर',   'पचहतर',  'छिहतर',
+    'सतहतर',  'अठहतर',  'उन्नासी', 'अस्सी',   'इक्यासी',  'बयासी',  'तिरासी',
+    'चौरासी', 'पचासी',  'छियासी', 'सतासी',  'अट्ठासी',  'नवासी',  'नब्बे',
+    'इक्यानवे', 'ब्यानवे',  'तिरानवे', 'चौरानवे', 'पचानवे',   'छियानवे', 'सतानवे',
+    'अट्ठानवे', 'निन्यानवे'
+  ],
+  large: [
+    'हजार',     // thousand: 1 - 99 thousand (hazaar)
+    'लाख',      // thousand/million: 100 thousand - 9 million (lakh)
+    'करोड़',     // million: 10 - 999 million (caror)
+    'अरब',      // billion: 1 - 99 billion (arab)
+    'खरब',      // billion/trillion: 100 billion - 9 trillion (kharab)
+    'नील',      // 10 trillion - 999 trillion (sau kharab)
+    'पद्मा',     // 1 quadrillion - 99 quadrillion (nil)
+    'शंख',       // 100 quadrillion - 9 quintillion (padma)
+    'महाशंख',    // 10 quin - 999 quin (Shankh)
+    'महाउपाध',  // 1 sext - 99 sext
+    'जल्द',      // 100 sext - 9 sept
+    'परार्ध', 'अंत', 'शिष्ट'
+  ],
+
   wordOrdinal: wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
