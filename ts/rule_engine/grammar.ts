@@ -26,7 +26,7 @@
 import * as DomUtil from '../common/dom_util';
 import {Engine} from '../common/engine';
 import * as LocaleUtil  from '../l10n/locale_util';
-import {Locale} from '../l10n/messages';
+import {LOCALE} from '../l10n/locale';
 import {DynamicCstr} from './dynamic_cstr';
 
 
@@ -167,7 +167,7 @@ export class Grammar {
       return Grammar.cleanUnit_(text);
     }
     if (plural) {
-      result = Locale.PLURAL(result);
+      result = LOCALE.PLURAL(result);
     }
     return result;
   }
@@ -405,7 +405,7 @@ function correctFont_(text: string, correction: string): string {
     return text;
   }
   correction =
-    Locale.MS_FUNC.FONT_REGEXP(LocaleUtil.localFont(correction));
+    LOCALE.MS_FUNC.FONT_REGEXP(LocaleUtil.localFont(correction));
   return text.replace(correction, '');
 }
 
@@ -429,7 +429,7 @@ function addAnnotation_(text: string, annotation: string): string {
  * @return The untranslated text.
  */
 function noTranslateText_(text: string): string {
-  if (text.match(new RegExp('^[' + Locale.REGEXP.TEXT + ']+$'))) {
+  if (text.match(new RegExp('^[' + LOCALE.REGEXP.TEXT + ']+$'))) {
     Grammar.getInstance().currentFlags['translate'] = false;
   }
   return text;

@@ -29,10 +29,10 @@ import {fr} from './locales/locale_fr';
 import {hi} from './locales/locale_hi';
 import {it} from './locales/locale_it';
 import {nemeth} from './locales/locale_nemeth';
-import {Locale, Messages} from './messages';
+import {Locale, LOCALE} from './locale';
 
 
-export const locales: {[key: string]: Messages} = {
+export const locales: {[key: string]: Locale} = {
   'de': de,
   'en': en,
   'es': es,
@@ -50,7 +50,7 @@ export function setLocale() {
   if (msgs) {
     for (let key of Object.getOwnPropertyNames(msgs)) {
       // TODO (TS): See if this is really an object structure.
-      (Locale as any)[key] = (msgs as any)[key];
+      (LOCALE as any)[key] = (msgs as any)[key];
     }
     // TODO (Speech Rules): This is temporary until locales are handled in a
     // bespoke class.
@@ -64,7 +64,7 @@ export function setLocale() {
  * defaults to English.
  * @return A message object.
  */
-export function getLocale(): Messages {
+export function getLocale(): Locale {
   let locale = Engine.getInstance().locale;
   if (Variables.LOCALES.indexOf(locale) === -1) {
     console.error('Locale ' + locale + ' does not exist! Using en instead.');

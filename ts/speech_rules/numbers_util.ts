@@ -21,7 +21,7 @@
 
 import {Span} from '../audio/span';
 import * as DomUtil from '../common/dom_util';
-import {Locale} from '../l10n/messages';
+import {LOCALE} from '../l10n/locale';
 import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 
 
@@ -35,7 +35,7 @@ import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 export function ordinalCounter(_node: Node, context: string): () => string {
   let counter = 0;
   return function() {
-    return Locale.NUMBERS.simpleOrdinal(++counter) + ' ' + context;
+    return LOCALE.NUMBERS.simpleOrdinal(++counter) + ' ' + context;
   };
 }
 
@@ -81,7 +81,7 @@ export function convertVulgarFraction_(node: Element): Convertible {
   if (isNaN(denominator) || isNaN(enumerator)) {
     return {
       convertible: false,
-      content: enumStr + ' ' + Locale.MS.FRAC_OVER + ' ' + denStr
+      content: enumStr + ' ' + LOCALE.MS.FRAC_OVER + ' ' + denStr
     };
   }
   return {convertible: true, enumerator: enumerator, denominator: denominator};
@@ -100,13 +100,13 @@ export function vulgarFraction(node: Element): string|Span[] {
   if (conversion.convertible && conversion.enumerator &&
       conversion.denominator) {
     return [
-      new Span(Locale.NUMBERS.numberToWords(conversion.enumerator), {
+      new Span(LOCALE.NUMBERS.numberToWords(conversion.enumerator), {
         extid: (node.childNodes[0].childNodes[0] as Element).getAttribute('extid'),
         separator: ''
       }),
-      new Span(Locale.NUMBERS.vulgarSep, {separator: ''}),
+      new Span(LOCALE.NUMBERS.vulgarSep, {separator: ''}),
       new Span(
-          Locale.NUMBERS.numberToOrdinal(
+          LOCALE.NUMBERS.numberToOrdinal(
               conversion.denominator, conversion.enumerator !== 1),
         {extid: (node.childNodes[0].childNodes[1] as Element).getAttribute('extid')})
     ];
@@ -145,5 +145,5 @@ export function vulgarFractionSmall(
  */
 export function ordinalPosition(node: Node): string {
   let children = DomUtil.toArray(node.parentNode.childNodes);
-  return Locale.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
+  return LOCALE.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
 }

@@ -21,14 +21,14 @@
 
 
 import {Grammar} from '../../rule_engine/grammar';
-import * as Locale from '../locale_util';
+import * as LocaleUtil from '../locale_util';
 import {ALPHABETS} from '../alphabets';
-import {Messages} from '../messages';
+import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_en';
 import * as tr from '../transformers';
 
 
-export const en: Messages = {
+export const en: Locale = {
   MS: {
     START: 'Start',
     FRAC_V: 'Fraction',
@@ -60,8 +60,8 @@ export const en: Messages = {
   },
 
   MS_FUNC: {
-    FRAC_NEST_DEPTH: Locale.vulgarNestingDepth,
-    RADICAL_NEST_DEPTH: Locale.nestingToString,
+    FRAC_NEST_DEPTH: LocaleUtil.vulgarNestingDepth,
+    RADICAL_NEST_DEPTH: LocaleUtil.nestingToString,
     COMBINE_ROOT_INDEX: function(postfix: string, _index: string) {
       return postfix;
     },

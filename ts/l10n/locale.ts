@@ -25,7 +25,7 @@ import * as tr from './transformers';
 
 
 // One (or more) flat message object per rule set.
-export interface Messages {
+export interface Locale {
   MS: {[key: string]: string};
   MS_FUNC: {[key: string]: Function};
   MS_ROOT_INDEX: {[key: string]: string};
@@ -43,7 +43,7 @@ export interface Messages {
 }
 
 
-export const Locale: Messages = {
+export const LOCALE: Locale = {
 
   MS: {
     START: '',

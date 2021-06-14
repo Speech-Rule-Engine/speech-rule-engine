@@ -25,7 +25,7 @@
 
 import {combinePostfixIndex} from '../locale_util';
 import {ALPHABETS} from '../alphabets';
-import {Messages} from '../messages';
+import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_es';
 import {postfixCombiner, prefixCombiner} from '../transformers';
 
@@ -36,7 +36,7 @@ let sansserifCombiner = function(letter: string, font: string, cap: string) {
 };
 
 
-export const es: Messages = {
+export const es: Locale = {
   MS: {
     START: 'empezar',
     FRAC_V: 'fracción',

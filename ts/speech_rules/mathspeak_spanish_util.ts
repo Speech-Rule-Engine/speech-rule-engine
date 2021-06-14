@@ -23,7 +23,7 @@
 //
 
 
-import {Locale} from '../l10n/messages';
+import {LOCALE} from '../l10n/locale';
 
 
 namespace MathspeakSpanishUtil {
@@ -37,7 +37,7 @@ namespace MathspeakSpanishUtil {
 export function ordinalCounter(_node: Element, context: string): () => string {
   let counter = 0;
   return function() {
-    return Locale.NUMBERS.numberToOrdinal(++counter, false) + ' ' + context;
+    return LOCALE.NUMBERS.numberToOrdinal(++counter, false) + ' ' + context;
   };
 }
 

@@ -25,7 +25,7 @@
 //
 
 import {ALPHABETS} from '../alphabets';
-import {Messages} from '../messages';
+import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_nemeth';
 import * as tr from '../transformers';
 
@@ -80,7 +80,7 @@ let parensCombiner = function(letter: string, font: string, _number: string) {
 };
 
 
-export const nemeth: Messages = {
+export const nemeth: Locale = {
   MS: {
     FRACTION_REPEAT: '⠠',
     FRACTION_START: '⠹',

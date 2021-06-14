@@ -21,7 +21,7 @@
 
 
 import * as MathspeakUtil from '../speech_rules/mathspeak_util';
-import {Locale} from './messages';
+import {LOCALE} from './locale';
 import {extractString} from './transformers';
 
 
@@ -33,9 +33,9 @@ import {extractString} from './transformers';
 export function nestingToString(count: number): string {
   switch (count) {
     case 1:
-      return Locale.MS.ONCE || '';
+      return LOCALE.MS.ONCE || '';
     case 2:
-      return Locale.MS.TWICE;
+      return LOCALE.MS.TWICE;
     default:
       return count.toString();
   }
@@ -60,7 +60,7 @@ export function vulgarNestingDepth(node: Element): boolean {
  * @return The combined string, postfix plus index.
  */
 export function combinePostfixIndex(postfix: string, index: string): string {
-  return postfix === Locale.MS.ROOTINDEX || postfix === Locale.MS.INDEX ?
+  return postfix === LOCALE.MS.ROOTINDEX || postfix === LOCALE.MS.INDEX ?
       postfix :
       postfix + ' ' + index;
 }
@@ -72,7 +72,7 @@ export function combinePostfixIndex(postfix: string, index: string): string {
  * @return The localized font name.
  */
 export function localFont(font: string): string {
-  return extractString(Locale.FONT[font], font);
+  return extractString(LOCALE.FONT[font], font);
 }
 
 
@@ -82,7 +82,7 @@ export function localFont(font: string): string {
  * @return The localized role name.
  */
 export function localRole(role: string): string {
-  return extractString(Locale.ROLE[role], role);
+  return extractString(LOCALE.ROLE[role], role);
 }
 
 
@@ -92,5 +92,5 @@ export function localRole(role: string): string {
  * @return The localized enclose name.
  */
 export function localEnclose(enclose: string): string {
-  return extractString(Locale.ENCLOSE[enclose], enclose);
+  return extractString(LOCALE.ENCLOSE[enclose], enclose);
 }

@@ -21,7 +21,7 @@
 
 import {Engine} from '../common/engine';
 import * as L10n from '../l10n/l10n';
-import {Locale} from '../l10n/messages';
+import {LOCALE} from '../l10n/locale';
 import {Combiner, Transformer} from '../l10n/transformers';
 import {MathCompoundStore, UnicodeJson} from '../rule_engine/math_simple_store';
 import * as SemanticUtil from '../semantic_tree/semantic_util';
@@ -52,7 +52,7 @@ export enum Font {
 
 /**
  * Embellishing/modifying of Unicode characters. These match the embellish
- * elements in sre.Messages.
+ * elements in the Locale.
  */
 export enum Embellish {
   SUPER = 'super',
@@ -96,7 +96,7 @@ export const Domains_: {[key: string]: string[]} = {
  * Generates the domain combinations for the given locale.
  */
 export function makeDomains_() {
-  let alph = Locale.ALPHABETS;
+  let alph = LOCALE.ALPHABETS;
   let combineKeys =
     (obj1: {[key: string]: any},
      obj2: {[key: string]: any}) => {
@@ -132,7 +132,7 @@ export function generate(locale: string) {
       numberRules(
           keys, letters, int.font, int.category, int.offset || 0);
     } else {
-      let alphabet = (Locale.ALPHABETS as any)[int.base];
+      let alphabet = (LOCALE.ALPHABETS as any)[int.base];
       alphabetRules(
           keys, letters, alphabet, int.font, int.category,
           !!int.capital);
@@ -190,9 +190,9 @@ export function makeInterval([a, b]: [string, string],
 export function getFont(font: string): {font: string, combiner: Combiner} {
   let realFont = font === 'normal' || font === 'fullwidth' ?
       '' :
-      Locale.FONT[font] || Locale.EMBELLISH[font] || '';
+      LOCALE.FONT[font] || LOCALE.EMBELLISH[font] || '';
   return typeof realFont === 'string' ?
-      {font: realFont, combiner: Locale.ALPHABETS.combiner} :
+      {font: realFont, combiner: LOCALE.ALPHABETS.combiner} :
       {font: realFont[0], combiner: realFont[1]};
 }
 
@@ -213,11 +213,11 @@ export function alphabetRules(keys: string[], unicodes: string[],
   let realFont = getFont(font);
   for (let i = 0, key, unicode, letter;
        key = keys[i], unicode = unicodes[i], letter = letters[i]; i++) {
-    let prefixes = cap ? Locale.ALPHABETS.capPrefix :
-                         Locale.ALPHABETS.smallPrefix;
+    let prefixes = cap ? LOCALE.ALPHABETS.capPrefix :
+                         LOCALE.ALPHABETS.smallPrefix;
     let domains = cap ? Domains_.capital : Domains_.small;
     makeLetter(realFont.combiner, key, unicode, letter, realFont.font, prefixes,
-        category, Locale.ALPHABETS.letterTrans, domains);
+        category, LOCALE.ALPHABETS.letterTrans, domains);
   }
 }
 
@@ -236,10 +236,10 @@ export function numberRules(keys: string[], unicodes: string[], font: string,
     category: string, offset: number) {
   let realFont = getFont(font);
   for (let i = 0, key, unicode; key = keys[i], unicode = unicodes[i]; i++) {
-    let prefixes = Locale.ALPHABETS.digitPrefix;
+    let prefixes = LOCALE.ALPHABETS.digitPrefix;
     let num = i + offset;
     makeLetter(realFont.combiner, key, unicode, num, realFont.font, prefixes,
-        category, Locale.ALPHABETS.digitTrans, Domains_.digit);
+        category, LOCALE.ALPHABETS.digitTrans, Domains_.digit);
   }
 }
 

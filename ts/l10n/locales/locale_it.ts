@@ -26,7 +26,7 @@
 
 import {combinePostfixIndex, nestingToString} from '../locale_util';
 import {ALPHABETS} from '../alphabets';
-import {Messages} from '../messages';
+import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_it';
 import {prefixCombiner} from '../transformers';
 
@@ -41,7 +41,7 @@ let italianPostfixCombiner = function(
 };
 
 
-export const it: Messages = {
+export const it: Locale = {
   MS: {
     START: 'inizio',
     FRAC_V: 'frazione',

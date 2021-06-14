@@ -21,7 +21,7 @@
 
 import {AuditoryDescription} from '../audio/auditory_description';
 import XpathUtil from '../common/xpath_util';
-import {Locale} from '../l10n/messages';
+import {LOCALE} from '../l10n/locale';
 import {SemanticType} from '../semantic_tree/semantic_attr';
 
 
@@ -46,7 +46,7 @@ export function unitMultipliers(nodes: Element[], _context: string): () =>
         {
           text: rightMostUnit(children[counter]) &&
                   leftMostUnit(children[counter + 1]) ?
-              Locale.UNIT_TIMES :
+              LOCALE.UNIT_TIMES :
               ''
         },
         {});

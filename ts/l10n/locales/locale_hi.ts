@@ -26,12 +26,12 @@
 
 import {nestingToString, vulgarNestingDepth} from '../locale_util';
 import {ALPHABETS} from '../alphabets';
-import {Messages} from '../messages';
+import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_hi';
 import {postfixCombiner, prefixCombiner} from '../transformers';
 
 
-export const hi: Messages = {
+export const hi: Locale = {
   MS: {
     'START': 'आरंभ',
     'FRAC_V': 'भिन्न',

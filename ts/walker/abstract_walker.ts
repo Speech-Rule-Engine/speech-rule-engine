@@ -28,7 +28,7 @@ import {KeyCode} from '../common/event_util';
 import * as System from '../common/system';
 import {Attribute} from '../enrich_mathml/enrich_mathml';
 import {Highlighter} from '../highlighter/highlighter';
-import {Locale} from '../l10n/messages';
+import {LOCALE} from '../l10n/locale';
 import {AxisMap} from '../rule_engine/dynamic_cstr';
 import {Grammar} from '../rule_engine/grammar';
 import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
@@ -827,9 +827,9 @@ export abstract class AbstractWalker<T> implements Walker {
     let oldDepth = Grammar.getInstance().getParameter('depth');
     Grammar.getInstance().setParameter('depth', true);
     let primary = this.getFocus().getDomPrimary();
-    let expand = this.expandable(primary) ? Locale.NAVIGATE.EXPANDABLE :
-      (this.collapsible(primary) ? Locale.NAVIGATE.COLLAPSIBLE : '');
-    let level = Locale.NAVIGATE.LEVEL + ' ' + this.getDepth();
+    let expand = this.expandable(primary) ? LOCALE.NAVIGATE.EXPANDABLE :
+      (this.collapsible(primary) ? LOCALE.NAVIGATE.COLLAPSIBLE : '');
+    let level = LOCALE.NAVIGATE.LEVEL + ' ' + this.getDepth();
     let snodes = this.getFocus().getSemanticNodes();
     let prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);
     let audio = [

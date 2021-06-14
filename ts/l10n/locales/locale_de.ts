@@ -26,7 +26,7 @@
 import {Grammar} from '../../rule_engine/grammar';
 import {localFont, vulgarNestingDepth} from '../locale_util';
 import {ALPHABETS} from '../alphabets';
-import {Messages} from '../messages';
+import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_de';
 
 
@@ -51,7 +51,7 @@ let germanPostfixCombiner = function(
 };
 
 
-export const de: Messages = {
+export const de: Locale = {
   MS: {
     START: 'Anfang',
     FRAC_V: 'Bruch',

@@ -24,13 +24,13 @@
 //
 
 import {combinePostfixIndex, nestingToString} from '../locale_util';
-import {Messages} from '../messages';
+import {Locale} from '../locale';
 import {ALPHABETS} from '../alphabets';
 import NUMBERS from '../numbers/numbers_fr';
 import {prefixCombiner} from '../transformers';
 
 
-export const fr: Messages = {
+export const fr: Locale = {
   MS: {
     START: 'début',
     FRAC_V: 'fraction',
