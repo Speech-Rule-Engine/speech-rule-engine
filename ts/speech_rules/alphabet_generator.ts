@@ -96,22 +96,18 @@ export const Domains_: {[key: string]: string[]} = {
  * Generates the domain combinations for the given locale.
  */
 export function makeDomains_() {
-  let prefs = Locale.ALPHABET_PREFIXES;
-  let trans = Locale.ALPHABET_TRANSFORMERS;
-  let combineKeys = (obj1: {[key: string]: any},
-                     obj2: {[key: string]: any}) => {
-    let result: {[key: string]: boolean} = {};
-    Object.keys(obj1).forEach(function(k) {
-      result[k] = true;
-    });
-    Object.keys(obj2).forEach(function(k) {
-      result[k] = true;
-    });
+  let alph = Locale.ALPHABETS;
+  let combineKeys =
+    (obj1: {[key: string]: any},
+     obj2: {[key: string]: any}) => {
+       let result: {[key: string]: boolean} = {};
+       Object.keys(obj1).forEach(k => result[k] = true)
+       Object.keys(obj2).forEach(k => result[k] = true)
     return Object.keys(result);
   };
-  Domains_.small = combineKeys(prefs.smallPrefix, trans.letter);
-  Domains_.capital = combineKeys(prefs.capPrefix, trans.letter);
-  Domains_.digit = combineKeys(prefs.digitPrefix, trans.digit);
+  Domains_.small = combineKeys(alph.smallPrefix, alph.letterTrans);
+  Domains_.capital = combineKeys(alph.capPrefix, alph.letterTrans);
+  Domains_.digit = combineKeys(alph.digitPrefix, alph.digitTrans);
 }
 
 
@@ -136,7 +132,7 @@ export function generate(locale: string) {
       numberRules(
           keys, letters, int.font, int.category, int.offset || 0);
     } else {
-      let alphabet = Locale.ALPHABETS[int.base];
+      let alphabet = (Locale.ALPHABETS as any)[int.base];
       alphabetRules(
           keys, letters, alphabet, int.font, int.category,
           !!int.capital);
@@ -196,7 +192,7 @@ export function getFont(font: string): {font: string, combiner: Combiner} {
       '' :
       Locale.FONT[font] || Locale.EMBELLISH[font] || '';
   return typeof realFont === 'string' ?
-      {font: realFont, combiner: Locale.ALPHABET_COMBINER} :
+      {font: realFont, combiner: Locale.ALPHABETS.combiner} :
       {font: realFont[0], combiner: realFont[1]};
 }
 
@@ -217,11 +213,11 @@ export function alphabetRules(keys: string[], unicodes: string[],
   let realFont = getFont(font);
   for (let i = 0, key, unicode, letter;
        key = keys[i], unicode = unicodes[i], letter = letters[i]; i++) {
-    let prefixes = cap ? Locale.ALPHABET_PREFIXES.capPrefix :
-                         Locale.ALPHABET_PREFIXES.smallPrefix;
+    let prefixes = cap ? Locale.ALPHABETS.capPrefix :
+                         Locale.ALPHABETS.smallPrefix;
     let domains = cap ? Domains_.capital : Domains_.small;
     makeLetter(realFont.combiner, key, unicode, letter, realFont.font, prefixes,
-        category, Locale.ALPHABET_TRANSFORMERS.letter, domains);
+        category, Locale.ALPHABETS.letterTrans, domains);
   }
 }
 
@@ -240,10 +236,10 @@ export function numberRules(keys: string[], unicodes: string[], font: string,
     category: string, offset: number) {
   let realFont = getFont(font);
   for (let i = 0, key, unicode; key = keys[i], unicode = unicodes[i]; i++) {
-    let prefixes = Locale.ALPHABET_PREFIXES.digitPrefix;
+    let prefixes = Locale.ALPHABETS.digitPrefix;
     let num = i + offset;
     makeLetter(realFont.combiner, key, unicode, num, realFont.font, prefixes,
-        category, Locale.ALPHABET_TRANSFORMERS.digit, Domains_.digit);
+        category, Locale.ALPHABETS.digitTrans, Domains_.digit);
   }
 }
 

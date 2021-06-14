@@ -24,6 +24,7 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
+import {ALPHABETS} from './alphabets';
 import {Messages} from './messages';
 import NUMBERS from './numbers/numbers_nemeth';
 import * as tr from './transformers';
@@ -36,7 +37,7 @@ import * as tr from './transformers';
  */
 let simpleEnglish = function(letter: string): string {
   return letter.match(
-             RegExp('^' + nemeth.ALPHABET_PREFIXES.languagePrefix.english)) ?
+             RegExp('^' + nemeth.ALPHABETS.languagePrefix.english)) ?
       letter.slice(1) :
       letter;
 };
@@ -243,54 +244,11 @@ export const nemeth: Messages = {
   UNIT_TIMES: '',
 
   NUMBERS: NUMBERS,
-  ALPHABETS: {
-    latinSmall: [
-      '⠰⠁', '⠰⠃', '⠰⠉', '⠰⠙', '⠰⠑', '⠰⠋', '⠰⠛', '⠰⠓', '⠰⠊',
-      '⠰⠚', '⠰⠅', '⠰⠇', '⠰⠍', '⠰⠝', '⠰⠕', '⠰⠏', '⠰⠟', '⠰⠗',
-      '⠰⠎', '⠰⠞', '⠰⠥', '⠰⠧', '⠰⠺', '⠰⠭', '⠰⠽', '⠰⠵'
-    ],
-    latinCap: [
-      '⠰⠠⠁', '⠰⠠⠃', '⠰⠠⠉', '⠰⠠⠙', '⠰⠠⠑', '⠰⠠⠋', '⠰⠠⠛', '⠰⠠⠓', '⠰⠠⠊',
-      '⠰⠠⠚', '⠰⠠⠅', '⠰⠠⠇', '⠰⠠⠍', '⠰⠠⠝', '⠰⠠⠕', '⠰⠠⠏', '⠰⠠⠟', '⠰⠠⠗',
-      '⠰⠠⠎', '⠰⠠⠞', '⠰⠠⠥', '⠰⠠⠧', '⠰⠠⠺', '⠰⠠⠭', '⠰⠠⠽', '⠰⠠⠵'
-    ],
-    greekSmall: [
-      '⠨⠫',  // This is here as it is small.
-      '⠨⠁', '⠨⠃', '⠨⠛', '⠨⠙', '⠨⠑', '⠨⠵', '⠨⠱', '⠨⠹', '⠨⠊', '⠨⠅', '⠨⠇', '⠨⠍',
-      '⠨⠝', '⠨⠭', '⠨⠕', '⠨⠏', '⠨⠗', '⠨⠈⠎', '⠨⠎', '⠨⠞', '⠨⠥', '⠨⠈⠋', '⠨⠯', '⠨⠽',
-      '⠨⠺',
-      // Symbols below
-      '⠈⠙', '⠨⠑', '⠨⠈⠹', '⠨⠅', '⠨⠋', '⠨⠗', '⠨⠏'
-    ],
-    greekCap: [
-      '⠨⠠⠁', '⠨⠠⠃', '⠨⠠⠛', '⠨⠠⠙', '⠨⠠⠑', '⠨⠠⠵', '⠨⠠⠱', '⠨⠠⠹', '⠨⠠⠊',
-      '⠨⠠⠅', '⠨⠠⠇', '⠨⠠⠍', '⠨⠠⠝', '⠨⠠⠭', '⠨⠠⠕', '⠨⠠⠏', '⠨⠠⠗',
-      '⠨⠠⠹',  // Theta symbol
-      '⠨⠠⠎', '⠨⠠⠞', '⠨⠠⠥', '⠨⠠⠋', '⠨⠠⠯', '⠨⠠⠽', '⠨⠠⠺'
-    ]
-  },
-
-  ALPHABET_TRANSFORMERS: {
-    digit: {default: NUMBERS.numberToWords},
-    letter: {
-      default: function(n: string) {
-        return n;
-      }
-    }
-  },
-
-  ALPHABET_PREFIXES: {
-    capPrefix: {default: ''},
-    smallPrefix: {default: ''},
-    digitPrefix: {default: '⠼'},
-    languagePrefix:
-        {greek: '⠨', english: '⠰', german: '⠸', hebrew: '⠠⠠', number: '⠼'},
-  },
-
-  ALPHABET_COMBINER: function(letter: string, font: string, num: string) {
-    return font ? font + num + letter : simpleEnglish(letter);
-  }
+  ALPHABETS: ALPHABETS()
 };
 
-// <mn>𝟗</mn>
-// <mn mathvariant="bold">9</mn>
+nemeth.ALPHABETS.combiner = function(
+  letter: string, font: string, num: string) {
+  return font ? font + num + letter : simpleEnglish(letter);
+};
+nemeth.ALPHABETS.digitTrans = {default: NUMBERS.numberToWords};

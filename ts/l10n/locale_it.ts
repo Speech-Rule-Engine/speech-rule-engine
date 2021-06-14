@@ -25,6 +25,7 @@
 
 
 import {combinePostfixIndex, nestingToString} from './locale';
+import {ALPHABETS} from './alphabets';
 import {Messages} from './messages';
 import NUMBERS from './numbers/numbers_it';
 import {prefixCombiner} from './transformers';
@@ -217,59 +218,11 @@ export const it: Messages = {
 
 
   NUMBERS: NUMBERS,
-  ALPHABETS: {
-    latinSmall: [
-      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-    ],
-    latinCap: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-    ],
-    greekSmall: [
-      'nabla',  // This is here as it is small. pi greco is 3.14 o/w pi greca.
-      'alfa', 'beta', 'gamma', 'delta', 'epsilon', 'zeta greca', 'eta', 'theta',
-      'iota', 'kappa greca', 'lambda', 'mu', 'nu', 'xi', 'omicron', 'pi greco',
-      'rho', 'sigma final', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi',
-      'omega',
-      // Symbols below
-      'derivata parziale', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
-    ],
-    greekCap: [
-      'Alfa',  'Beta',  'Gamma',   'Delta',       'Epsilon', 'Zeta greca',
-      'Eta',   'Theta', 'Iota',    'Kappa greca', 'Lambda',  'Mu',
-      'Nu',    'Xi',    'Omicron', 'Pi greca',    'Rho',
-      'Theta',  // Theta symbol
-      'Sigma', 'Tau',   'Upsilon', 'Phi',         'Chi',     'Psi',
-      'Omega'
-    ]
-  },
+  ALPHABETS: ALPHABETS()
 
-  ALPHABET_TRANSFORMERS: {
-    digit: {
-      default: NUMBERS.numberToWords,
-      mathspeak: function(n) {
-        return n.toString();
-      },
-      clearspeak: function(n) {
-        return n.toString();
-      }
-    },
-    letter: {
-      default: function(n) {
-        return n.toString();
-      }
-    }
-  },
+};
 
-  ALPHABET_PREFIXES: {
-    capPrefix: {default: 'maiuscola'},
-    smallPrefix: {default: ''},  // minuscolo
-    digitPrefix: {default: ''}
-  },
-
-  ALPHABET_COMBINER: function(letter: string, font: string, cap: string) {
-    letter = cap ? letter + ' ' + cap : letter;
-    return font ? letter + ' ' + font : letter;
-  }
+it.ALPHABETS.combiner = function(letter: string, font: string, cap: string) {
+  letter = cap ? letter + ' ' + cap : letter;
+  return font ? letter + ' ' + font : letter;
 };

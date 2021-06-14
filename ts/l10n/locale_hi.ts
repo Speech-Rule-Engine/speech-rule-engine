@@ -25,6 +25,7 @@
 //
 
 import {nestingToString, vulgarNestingDepth} from './locale';
+import {ALPHABETS} from './alphabets';
 import {Messages} from './messages';
 import NUMBERS from './numbers/numbers_hi';
 import {postfixCombiner, prefixCombiner} from './transformers';
@@ -192,48 +193,8 @@ export const hi: Messages = {
 
 
   NUMBERS: NUMBERS,
-  ALPHABETS: {
-    latinSmall: [
-      'ए',  'बी', 'सी', 'डी', 'ई',    'एफ',  'जी',  'एच', 'आय',
-      'जे',  'के',  'एल', 'एम', 'एन',   'ओ',   'पी',  'क्यू', 'आर',
-      'एस', 'टी', 'यू',  'वी', 'डब्ल्यू', 'एक्स', 'वाई', 'जेड'
-    ],
-    latinCap: [
-      'ए',  'बी', 'सी', 'डी', 'ई',    'एफ',  'जी',  'एच', 'आय',
-      'जे',  'के',  'एल', 'एम', 'एन',   'ओ',   'पी',  'क्यू', 'आर',
-      'एस', 'टी', 'यू',  'वी', 'डब्ल्यू', 'एक्स', 'वाई', 'जेड'
-    ],
-    greekSmall: [
-      'नाबला',       'आल्फा',  'बीटा',       'गामा',          'डेल्टा',  'एप्सिलॉन',
-      'ज़ेटा',         'एटा',   'थीटा',       'आयोटा',         'कप्पा',  'लैम्ब्डा',
-      'मु',           'नू',     'ग्जाए',       'ओमिक्रॉन',       'पाइ',   'रो',
-      'अंतिम सिग्मा ', 'सिग्मा', 'टाउ',        'अपसिलं',         'फाई',   'काई',
-      'साई',         'ओमेगा',  'आंशिक अवकलन', 'ल्यूनेट एप्सिलॉन ', 'थीटा ', 'कप्पा ',
-      'फाई',         'रो ',   'पोमेगा'
-    ],
-    // ,nabla',  // This is here as it is small.
-    // 'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
-    // 'iota', 'kappa', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho',
-    // 'final sigma', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
-    // // Symbols below
-    // 'partial differential', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
-    greekCap: [
-      'आल्फा',    'बीटा',  'गामा', 'डेल्टा',  'एप्सिलॉन', 'ज़ेटा', 'एटा',
-      'थीटा',    'आयोटा', 'कप्पा', 'लैम्ब्डा', 'मु',       'नू',   'ग्जाए',
-      'ओमिक्रॉन', 'पाइ',   'रो',   'थीटा',  'सिग्मा',   'टाउ', 'अपसिलं',
-      'फाई',     'काई',   'साई',  'ओमेगा'
-    ]
-  },
-  // 'Alpha', 'Beta', 'Gamma', 'Delta', 'Epsilon', 'Zeta', 'Eta', 'Theta',
-  // 'Iota', 'Kappa', 'Lamda', 'Mu', 'Nu', 'Xi', 'Omicron', 'Pi', 'Rho',
-  // 'Theta', // Theta symbol
-  // 'Sigma', 'Tau', 'Upsilon', 'Phi', 'Chi', 'Psi', 'Omega'
+  ALPHABETS: ALPHABETS()
 
-  ALPHABET_PREFIXES: {
-    capPrefix: {default: 'कैपिटल'},
-    smallPrefix: {default: ''},
-    digitPrefix: {default: ''}
-  },
-
-  ALPHABET_COMBINER: prefixCombiner
 };
+
+hi.ALPHABETS.combiner = prefixCombiner;

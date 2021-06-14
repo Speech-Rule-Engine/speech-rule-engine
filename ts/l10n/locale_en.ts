@@ -22,6 +22,7 @@
 
 import {Grammar} from '../rule_engine/grammar';
 import * as Locale from './locale';
+import {ALPHABETS} from './alphabets';
 import {Messages} from './messages';
 import NUMBERS from './numbers/numbers_en';
 import * as tr from './transformers';
@@ -196,41 +197,11 @@ export const en: Messages = {
 
 
   NUMBERS: NUMBERS,
-  ALPHABETS: {
-    latinSmall: [
-      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-    ],
-    latinCap: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-    ],
-    greekSmall: [
-      'nabla',  // This is here as it is small.
-      'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
-      'iota', 'kappa', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho',
-      'final sigma', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
-      // Symbols below
-      'partial differential', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
-    ],
-    greekCap: [
-      'Alpha',   'Beta', 'Gamma',   'Delta', 'Epsilon', 'Zeta', 'Eta',
-      'Theta',   'Iota', 'Kappa',   'Lamda', 'Mu',      'Nu',   'Xi',
-      'Omicron', 'Pi',   'Rho',
-      'Theta',  // Theta symbol
-      'Sigma',   'Tau',  'Upsilon', 'Phi',   'Chi',     'Psi',  'Omega'
-    ]
-  },
-
-  ALPHABET_PREFIXES: {
-    capPrefix: {default: 'cap', mathspeak: 'upper'},
-    smallPrefix: {default: ''},
-    digitPrefix: {default: ''}
-  },
-
-  ALPHABET_COMBINER: tr.prefixCombiner
+  ALPHABETS: ALPHABETS()
 };
 
+en.ALPHABETS.combiner = tr.prefixCombiner;
+en.ALPHABETS.digitTrans.default = en.NUMBERS.numberToWords;
 
 Grammar.getInstance().setCorrection('noarticle', (name: string) => {
   return Grammar.getInstance().getParameter('noArticle') ? '' : name;

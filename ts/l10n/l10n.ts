@@ -54,7 +54,7 @@ export function setLocale() {
     }
     // TODO (Speech Rules): This is temporary until locales are handled in a
     // bespoke class.
-    Locale.ALPHABET_TRANSFORMERS.digit.default = msgs.NUMBERS.numberToWords;
+    // Locale.ALPHABETS.digitTrans.default = msgs.NUMBERS.numberToWords;
   }
 }
 
@@ -86,7 +86,7 @@ export function completeLocale(json: any) {
   }
   let kind = json.kind.toUpperCase();
   // temporary!
-  if (kind !== 'NUMBERS') return;
+  if (kind !== 'NUMBERS' && kind !== 'ALPHABETS') return;
   let messages = json.messages;
   if (!messages) return;
   for (let [key, value] of Object.entries(messages)) {

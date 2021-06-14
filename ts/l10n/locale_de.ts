@@ -25,6 +25,7 @@
 
 import {Grammar} from '../rule_engine/grammar';
 import {localFont, vulgarNestingDepth} from './locale';
+import {ALPHABETS} from './alphabets';
 import {Messages} from './messages';
 import NUMBERS from './numbers/numbers_de';
 
@@ -226,42 +227,11 @@ export const de: Messages = {
 
 
   NUMBERS: NUMBERS,
-  ALPHABETS: {
-    latinSmall: [
-      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-    ],
-    latinCap: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-    ],
-    greekSmall: [
-      'nabla',  // This is here as it is small.
-      'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
-      'iota', 'kappa', 'lambda', 'my', 'ny', 'xi', 'omikron', 'pi', 'rho',
-      'abschließendes sigma', 'sigma', 'tau', 'ypsilon', 'phi', 'chi', 'psi',
-      'omega',
-      // Symbols below
-      'partielle Ableitung', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
-    ],
-    greekCap: [
-      'Alpha',   'Beta', 'Gamma',   'Delta',  'Epsilon', 'Zeta', 'Eta',
-      'Theta',   'Iota', 'Kappa',   'Lambda', 'My',      'Ny',   'Xi',
-      'Omikron', 'Pi',   'Rho',
-      'Theta',  // Theta symbol
-      'Sigma',   'Tau',  'Ypsilon', 'Phi',    'Chi',     'Psi',  'Omega'
-    ]
-  },
+  ALPHABETS: ALPHABETS()
 
-  ALPHABET_PREFIXES: {
-    capPrefix: {default: 'großes'},
-    smallPrefix: {default: ''},
-    digitPrefix: {default: 's'}
-  },
-
-  ALPHABET_COMBINER: germanPrefixCombiner
 };
 
+de.ALPHABETS.combiner = germanPrefixCombiner;
 
 Grammar.getInstance().setCorrection(
   'correctOne', (num: string) => num.replace(/^eins$/, 'ein'));

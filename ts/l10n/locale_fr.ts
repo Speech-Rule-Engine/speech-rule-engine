@@ -25,6 +25,7 @@
 
 import {combinePostfixIndex, nestingToString} from './locale';
 import {Messages} from './messages';
+import {ALPHABETS} from './alphabets';
 import NUMBERS from './numbers/numbers_fr';
 import {prefixCombiner} from './transformers';
 
@@ -207,40 +208,12 @@ export const fr: Messages = {
 
 
   NUMBERS: NUMBERS,
-  ALPHABETS: {
-    latinSmall: [
-      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-    ],
-    latinCap: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-    ],
-    greekSmall: [
-      'nabla',  // This is here as it is small.
-      'alpha', 'bêta', 'gamma', 'delta', 'epsilon', 'zêta', 'êta', 'thêta',
-      'iota', 'kappa', 'lambda', 'mû', 'nû', 'xi', 'omicron', 'pi', 'rhô',
-      'sigma final', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'oméga',
-      // Symbols below
-      'dérivée partielle', 'epsilon', 'thêta', 'kappa', 'phi', 'rhô', 'pi'
-    ],
-    greekCap: [
-      'Alpha',   'Bêta', 'Gamma',   'Delta',  'Epsilon', 'Zêta', 'Êta',
-      'Thêta',   'Iota', 'Kappa',   'Lambda', 'Mû',      'Nû',   'Xi',
-      'Omicron', 'Pi',   'Rhô',
-      'Thêta',  // Theta symbol
-      'Sigma',   'Tau',  'Upsilon', 'Phi',    'Chi',     'Psi',  'Oméga'
-    ]
-  },
+  ALPHABETS: ALPHABETS()
 
-  ALPHABET_PREFIXES: {
-    capPrefix: {default: 'majuscule'},
-    smallPrefix: {default: ''},
-    digitPrefix: {default: ''}
-  },
-
-  ALPHABET_COMBINER: function(letter, font, cap) {
-    letter = cap ? letter + ' ' + cap : letter;
-    return font ? letter + ' ' + font : letter;
-  }
 };
+
+fr.ALPHABETS.combiner = function(letter, font, cap) {
+  letter = cap ? letter + ' ' + cap : letter;
+  return font ? letter + ' ' + font : letter;
+};
+

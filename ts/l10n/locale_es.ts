@@ -24,6 +24,7 @@
 //
 
 import {combinePostfixIndex} from './locale';
+import {ALPHABETS} from './alphabets';
 import {Messages} from './messages';
 import NUMBERS from './numbers/numbers_es';
 import {postfixCombiner, prefixCombiner} from './transformers';
@@ -228,40 +229,10 @@ export const es: Messages = {
   },
 
 
+  UNIT_TIMES: 'por',
+
   NUMBERS: NUMBERS,
-  ALPHABETS: {
-    latinSmall: [
-      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-    ],
-    latinCap: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-    ],
-    greekSmall: [
-      'nabla',  // This is here as it is small.
-      'alfa', 'beta', 'gamma', 'delta', 'épsilon', 'zeta', 'eta', 'theta',
-      'iota', 'kappa', 'lambda', 'mi', 'ni', 'xi', 'ómicron', 'pi', 'rho',
-      'sigma final', 'sigma', 'tau', 'ípsilon', 'phi', 'ji', 'psi', 'omega',
-      // Symbols below
-      'diferencial parcial', 'épsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
-    ],
-    greekCap: [
-      'Alfa',    'Beta', 'Gamma',   'Delta',  'Épsilon', 'Zeta', 'Eta',
-      'Theta',   'Iota', 'Kappa',   'Lambda', 'Mi',      'Ni',   'Xi',
-      'Ómicron', 'Pi',   'Rho',
-      'Theta',  // Theta symbol
-      'Sigma',   'Tau',  'Ípsilon', 'Phi',    'Ji',      'Psi',  'Omega'
-    ]
-  },
-
-  ALPHABET_PREFIXES: {
-    capPrefix: {default: 'mayúscula'},
-    smallPrefix: {default: ''},
-    digitPrefix: {default: ''}
-  },
-
-
-  ALPHABET_COMBINER: prefixCombiner,
-  UNIT_TIMES: 'por'
+  ALPHABETS: ALPHABETS()
 };
+
+es.ALPHABETS.combiner = prefixCombiner;
