@@ -20,12 +20,12 @@
  */
 
 
-import {Grammar} from '../rule_engine/grammar';
-import * as Locale from './locale_util';
-import {ALPHABETS} from './alphabets';
-import {Messages} from './messages';
-import NUMBERS from './numbers/numbers_en';
-import * as tr from './transformers';
+import {Grammar} from '../../rule_engine/grammar';
+import * as Locale from '../locale_util';
+import {ALPHABETS} from '../alphabets';
+import {Messages} from '../messages';
+import NUMBERS from '../numbers/numbers_en';
+import * as tr from '../transformers';
 
 
 export const en: Messages = {
@@ -201,7 +201,7 @@ export const en: Messages = {
 };
 
 en.ALPHABETS.combiner = tr.prefixCombiner;
-en.ALPHABETS.digitTrans.default = en.NUMBERS.numberToWords;
+en.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
 
 Grammar.getInstance().setCorrection('noarticle', (name: string) => {
   return Grammar.getInstance().getParameter('noArticle') ? '' : name;

@@ -23,11 +23,11 @@
 // This work was sponsored by TextHelp
 //
 
-import {combinePostfixIndex} from './locale_util';
-import {ALPHABETS} from './alphabets';
-import {Messages} from './messages';
-import NUMBERS from './numbers/numbers_es';
-import {postfixCombiner, prefixCombiner} from './transformers';
+import {combinePostfixIndex} from '../locale_util';
+import {ALPHABETS} from '../alphabets';
+import {Messages} from '../messages';
+import NUMBERS from '../numbers/numbers_es';
+import {postfixCombiner, prefixCombiner} from '../transformers';
 
 
 let sansserifCombiner = function(letter: string, font: string, cap: string) {

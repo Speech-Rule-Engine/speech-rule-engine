@@ -24,11 +24,11 @@
 // This work was supported by British Council UKIERI SPARC Project #P1161
 //
 
-import {nestingToString, vulgarNestingDepth} from './locale_util';
-import {ALPHABETS} from './alphabets';
-import {Messages} from './messages';
-import NUMBERS from './numbers/numbers_hi';
-import {postfixCombiner, prefixCombiner} from './transformers';
+import {nestingToString, vulgarNestingDepth} from '../locale_util';
+import {ALPHABETS} from '../alphabets';
+import {Messages} from '../messages';
+import NUMBERS from '../numbers/numbers_hi';
+import {postfixCombiner, prefixCombiner} from '../transformers';
 
 
 export const hi: Messages = {

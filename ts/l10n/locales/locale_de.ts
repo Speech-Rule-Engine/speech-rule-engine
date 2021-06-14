@@ -23,11 +23,11 @@
 // This work was sponsored by ETH Zurich
 //
 
-import {Grammar} from '../rule_engine/grammar';
-import {localFont, vulgarNestingDepth} from './locale_util';
-import {ALPHABETS} from './alphabets';
-import {Messages} from './messages';
-import NUMBERS from './numbers/numbers_de';
+import {Grammar} from '../../rule_engine/grammar';
+import {localFont, vulgarNestingDepth} from '../locale_util';
+import {ALPHABETS} from '../alphabets';
+import {Messages} from '../messages';
+import NUMBERS from '../numbers/numbers_de';
 
 
 let germanPrefixCombiner = function(letter: string, font: string, cap: string) {
@@ -232,6 +232,7 @@ export const de: Messages = {
 };
 
 de.ALPHABETS.combiner = germanPrefixCombiner;
+de.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
 
 Grammar.getInstance().setCorrection(
   'correctOne', (num: string) => num.replace(/^eins$/, 'ein'));

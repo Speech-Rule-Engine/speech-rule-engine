@@ -24,10 +24,10 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import {ALPHABETS} from './alphabets';
-import {Messages} from './messages';
-import NUMBERS from './numbers/numbers_nemeth';
-import * as tr from './transformers';
+import {ALPHABETS} from '../alphabets';
+import {Messages} from '../messages';
+import NUMBERS from '../numbers/numbers_nemeth';
+import * as tr from '../transformers';
 
 
 /**

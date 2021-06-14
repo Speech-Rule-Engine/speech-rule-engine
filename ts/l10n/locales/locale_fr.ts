@@ -23,11 +23,11 @@
 // This work was sponsored by TextHelp
 //
 
-import {combinePostfixIndex, nestingToString} from './locale_util';
-import {Messages} from './messages';
-import {ALPHABETS} from './alphabets';
-import NUMBERS from './numbers/numbers_fr';
-import {prefixCombiner} from './transformers';
+import {combinePostfixIndex, nestingToString} from '../locale_util';
+import {Messages} from '../messages';
+import {ALPHABETS} from '../alphabets';
+import NUMBERS from '../numbers/numbers_fr';
+import {prefixCombiner} from '../transformers';
 
 
 export const fr: Messages = {

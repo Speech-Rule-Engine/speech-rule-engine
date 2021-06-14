@@ -24,11 +24,11 @@
 //
 
 
-import {combinePostfixIndex, nestingToString} from './locale_util';
-import {ALPHABETS} from './alphabets';
-import {Messages} from './messages';
-import NUMBERS from './numbers/numbers_it';
-import {prefixCombiner} from './transformers';
+import {combinePostfixIndex, nestingToString} from '../locale_util';
+import {ALPHABETS} from '../alphabets';
+import {Messages} from '../messages';
+import NUMBERS from '../numbers/numbers_it';
+import {prefixCombiner} from '../transformers';
 
 
 let italianPostfixCombiner = function(

@@ -22,13 +22,13 @@
 import {Engine} from '../common/engine';
 import {Variables} from '../common/variables';
 
-import {de} from './locale_de';
-import {en} from './locale_en';
-import {es} from './locale_es';
-import {fr} from './locale_fr';
-import {hi} from './locale_hi';
-import {it} from './locale_it';
-import {nemeth} from './locale_nemeth';
+import {de} from './locales/locale_de';
+import {en} from './locales/locale_en';
+import {es} from './locales/locale_es';
+import {fr} from './locales/locale_fr';
+import {hi} from './locales/locale_hi';
+import {it} from './locales/locale_it';
+import {nemeth} from './locales/locale_nemeth';
 import {Locale, Messages} from './messages';
 
 

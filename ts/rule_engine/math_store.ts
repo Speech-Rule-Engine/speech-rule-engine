@@ -21,7 +21,7 @@
 
 
 import * as BaseUtil from '../common/base_util';
-import {en} from '../l10n/locale_en';
+import {en} from '../l10n/locales/locale_en';
 import {Locale} from '../l10n/messages';
 import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
 import {BaseRuleStore, RulesJson} from './base_rule_store';
