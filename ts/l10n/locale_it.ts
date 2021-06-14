@@ -24,7 +24,7 @@
 //
 
 
-import {combinePostfixIndex, nestingToString} from './locale';
+import {combinePostfixIndex, nestingToString} from './locale_util';
 import {ALPHABETS} from './alphabets';
 import {Messages} from './messages';
 import NUMBERS from './numbers/numbers_it';

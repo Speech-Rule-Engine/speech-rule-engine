@@ -24,7 +24,7 @@
 //
 
 import {Grammar} from '../rule_engine/grammar';
-import {localFont, vulgarNestingDepth} from './locale';
+import {localFont, vulgarNestingDepth} from './locale_util';
 import {ALPHABETS} from './alphabets';
 import {Messages} from './messages';
 import NUMBERS from './numbers/numbers_de';

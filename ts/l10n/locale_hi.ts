@@ -24,7 +24,7 @@
 // This work was supported by British Council UKIERI SPARC Project #P1161
 //
 
-import {nestingToString, vulgarNestingDepth} from './locale';
+import {nestingToString, vulgarNestingDepth} from './locale_util';
 import {ALPHABETS} from './alphabets';
 import {Messages} from './messages';
 import NUMBERS from './numbers/numbers_hi';

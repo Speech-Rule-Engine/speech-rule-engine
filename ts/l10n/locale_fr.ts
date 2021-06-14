@@ -23,7 +23,7 @@
 // This work was sponsored by TextHelp
 //
 
-import {combinePostfixIndex, nestingToString} from './locale';
+import {combinePostfixIndex, nestingToString} from './locale_util';
 import {Messages} from './messages';
 import {ALPHABETS} from './alphabets';
 import NUMBERS from './numbers/numbers_fr';

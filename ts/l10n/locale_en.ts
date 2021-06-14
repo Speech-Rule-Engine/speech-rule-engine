@@ -21,7 +21,7 @@
 
 
 import {Grammar} from '../rule_engine/grammar';
-import * as Locale from './locale';
+import * as Locale from './locale_util';
 import {ALPHABETS} from './alphabets';
 import {Messages} from './messages';
 import NUMBERS from './numbers/numbers_en';
