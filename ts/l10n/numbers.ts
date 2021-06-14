@@ -30,7 +30,7 @@ export interface Numbers {
    * String representation of one to nineteen (or higher).
    * The zero position is generally left empty.
    */
-  ones: string[];
+  ones?: string[];
 
   /**
    * String representation of twenty to ninety.
@@ -53,7 +53,7 @@ export interface Numbers {
   numberToWords: tr.Transformer;
   numberToOrdinal?: tr.GrammarCase;
 
-  vulgarSep: string;
+  vulgarSep?: string;
   numSep?: string;
 };
 

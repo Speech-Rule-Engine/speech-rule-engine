@@ -42,11 +42,8 @@ function numberToWords(num: number): string {
 
 
 const NUMBERS: Numbers = {
-  ones: ['⠴', '⠂', '⠆', '⠒', '⠲', '⠢', '⠖', '⠶', '⠦', '⠔'],
-
   numberToWords: numberToWords,
   simpleOrdinal: numberToWords,
-  vulgarSep: ''
 };
 
 export default NUMBERS;

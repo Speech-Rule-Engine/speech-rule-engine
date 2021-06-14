@@ -99,36 +99,6 @@ function numberToWords(num: number): string {
   return str;
 }
 
-
-// Ordinals
-/**
- * String representation of zero to nineteen.
- */
-const onesOrdinals_: string[] = [
-  'primera', 'segunda', 'tercera', 'cuarta', 'quinta', 'sexta', 'séptima',
-  'octava', 'novena', 'décima', 'undécima', 'duodécima'
-];
-
-
-/**
- * String representation of twenty to ninety.
- */
-const tensOrdinals_: string[] = [
-  'décima', 'vigésima', 'trigésima', 'cuadragésima', 'quincuagésima',
-  'sexagésima', 'septuagésima', 'octogésima', 'nonagésima'
-];
-
-
-/**
- * String representation of thousand to decillion.
- */
-const hundredsOrdinals_: string[] = [
-  'centésima', 'ducentésima', 'tricentésima', 'cuadringentésima',
-  'quingentésima', 'sexcentésima', 'septingentésima', 'octingentésima',
-  'noningentésima'
-];
-
-
 /**
  * Translates a number into Spanish ordinal
  * @param num The number to translate.
@@ -140,7 +110,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
     return num.toString() + 'a';
   }
   if (num <= 12) {
-    return onesOrdinals_[num - 1];
+    return NUMBERS.special.onesOrdinals[num - 1];
   }
   let result = [];
   if (num >= 1000) {
@@ -153,19 +123,19 @@ function numberToOrdinal(num: number, _plural: boolean): string {
   let pos = 0;
   pos = Math.floor(num / 100);
   if (pos > 0) {
-    result.push(hundredsOrdinals_[pos - 1]);
+    result.push(NUMBERS.special.hundredsOrdinals[pos - 1]);
     num = num % 100;
   }
   if (num <= 12) {
-    result.push(onesOrdinals_[num - 1]);
+    result.push(NUMBERS.special.onesOrdinals[num - 1]);
   } else {
     pos = Math.floor(num / 10);
     if (pos > 0) {
-      result.push(tensOrdinals_[pos - 1]);
+      result.push(NUMBERS.special.tensOrdinals[pos - 1]);
       num = num % 10;
     }
     if (num > 0) {
-      result.push(onesOrdinals_[num - 1]);
+      result.push(NUMBERS.special.onesOrdinals[num - 1]);
     }
   }
   return result.join(' ');
@@ -184,71 +154,10 @@ function simpleOrdinal(num: number): string {
 
 
 const NUMBERS: Numbers = {
-  zero: 'cero',
-  ones: [
-    '',
-    'uno',
-    'dos',
-    'tres',
-    'cuatro',
-    'cinco',
-    'seis',
-    'siete',
-    'ocho',
-    'nueve',
-    'diez',
-    'once',
-    'doce',
-    'trece',
-    'catorce',
-    'quince',
-    'dieciséis',
-    'diecisiete',
-    'dieciocho',
-    'diecinueve',
-    'veinte',
-    'veintiuno',
-    'veintidós',
-    'veintitrés',
-    'veinticuatro',
-    'veinticinco',
-    'veintiséis',
-    'veintisiete',
-    'veintiocho',
-    'veintinueve'
-  ],
-  tens: [
-    '', '', '', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta',
-    'ochenta', 'noventa'
-  ],
-  large: [
-    '',           'mil',
-    'millón',     'mil millónes',
-    'billón',     'mil billónes',
-    'trillón',    'mil trillónes',
-    'cuatrilló',  'mil cuatrillóes',
-    'quintillón', 'mil quintillónes',
-    'sextillón',  'mil sextillónes',
-    'septillón',  'mil septillónes',
-    'octillón',   'mil octillónes',
-    'nonillón',   'mil nonillónes',
-    'decillón',   'mil decillónes'
-  ],
-
-  special: {
-    hundredsNumbers_: [
-      '', 'cien', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos',
-      'seiscientos', 'setecientos', 'ochocientos', 'novecientos'
-    ],
-  },
-
-  
   // wordOrdinal: 
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
-  numberToOrdinal: numberToOrdinal,
-
-  vulgarSep: '-'
+  numberToOrdinal: numberToOrdinal
 };
 
 

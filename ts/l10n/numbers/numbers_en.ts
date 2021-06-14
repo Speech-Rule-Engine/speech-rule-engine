@@ -145,29 +145,10 @@ function simpleOrdinal(num: number): string {
 
 
 const NUMBERS: Numbers = {
-  zero: 'zero',
-  ones: [
-  '',        'one',     'two',       'three',    'four',
-  'five',    'six',     'seven',     'eight',    'nine',
-  'ten',     'eleven',  'twelve',    'thirteen', 'fourteen',
-  'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'
-  ],
-  tens: [
-    '', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty',
-    'ninety'
-  ],
-  large: [
-    '', 'thousand', 'million', 'billion', 'trillion', 'quadrillion',
-    'quintillion', 'sextillion', 'septillion', 'octillion', 'nonillion',
-    'decillion'
-  ],
-
   wordOrdinal: wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
   numberToOrdinal: numberToOrdinal,
-  vulgarSep: ' ',
-  numSep: ' '
 };
 
 export default NUMBERS;

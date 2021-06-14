@@ -109,15 +109,6 @@ function numberToOrdinal(num: number, plural: boolean): string {
 
 
 /**
- * String representation of ordinals from zero to ten.
- */
-const onesOrdinals_: string[] = [
-  'zero', 'primo', 'secondo', 'terzo', 'quarto', 'quinto', 'sesto', 'settimo',
-  'ottavo', 'nono', 'decimo'
-];
-
-
-/**
  * Creates a word ordinal string from a number.
  * @param num The number to be converted.
  * @return The ordinal string.
@@ -125,7 +116,7 @@ const onesOrdinals_: string[] = [
 function wordOrdinal(num: number): string {
   let gender = (Grammar.getInstance().getParameter('gender') as string);
   let postfix = gender === 'male' ? 'o' : 'a';
-  let ordinal = onesOrdinals_[num];
+  let ordinal = NUMBERS.special.onesOrdinals[num];
   if (ordinal) {
     return ordinal.slice(0, -1) + postfix;
   }
@@ -144,30 +135,11 @@ function simpleOrdinal(num: number): string {
   return num.toString() + (gender === 'male' ? 'o' : 'a');
 }
 
-
 const NUMBERS: Numbers = {
-  zero: 'zero',
-  ones: [
-    '',         'uno',    'due',         'tre',      'quattro',
-    'cinque',   'sei',    'sette',       'otto',     'nove',
-    'dieci',    'undici', 'dodici',      'tredici',  'quattordici',
-    'quindici', 'sedici', 'diciassette', 'diciotto', 'diciannove'
-  ],
-  tens: [
-    '', '', 'venti', 'trenta', 'quaranta', 'cinquanta', 'sessanta', 'settanta',
-    'ottanta', 'novanta'
-  ],
-  large: [
-    '', 'mille', 'milione', 'miliardo', 'bilione', 'biliardo', 'trilione',
-    'triliardo', 'quadrilione', 'quadriliardo', 'quntilione', 'quintiliardo'
-  ],
-
   wordOrdinal: wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
-  numberToOrdinal: numberToOrdinal,
-  vulgarSep: ' ',
-  numSep: ''
+  numberToOrdinal: numberToOrdinal
 };
 
 

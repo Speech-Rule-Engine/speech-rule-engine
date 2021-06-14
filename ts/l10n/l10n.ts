@@ -72,3 +72,25 @@ export function getLocale(): Messages {
   }
   return locales[Engine.getInstance().locale] || locales['en'];
 }
+
+
+/**
+ * Locale completion with loaded mathmaps.
+ * @param json The JSON of the locale map.
+ */
+export function completeLocale(json: any) {
+  let locale = locales[json.locale] as any;
+  if (!locale) {
+    console.error('Locale ' + json.locale + ' does not exist!');
+    return;
+  }
+  let kind = json.kind.toUpperCase();
+  // temporary!
+  if (kind !== 'NUMBERS') return;
+  let messages = json.messages;
+  if (!messages) return;
+  for (let [key, value] of Object.entries(messages)) {
+    // TODO (TS): See if this is really an object structure.
+    locale[kind][key] = value;
+  }
+}
