@@ -37,6 +37,10 @@ let sansserifCombiner = function(letter: string, font: string, cap: string) {
 
 
 export const es: Locale = {
+  COMBINERS: {
+    'sansserif': sansserifCombiner
+  },
+  
   MS: {
     START: 'empezar',
     FRAC_V: 'fracción',
@@ -179,16 +183,16 @@ export const es: Locale = {
     // TODO: Here we need specialist combiners!
     'super': 'superíndice',
     'sub': 'subíndice',
-    'circled': ['en circulo', Combiners.postfixCombiner],
-    'parenthesized': ['entre paréntesis', Combiners.postfixCombiner],
-    'period': ['punto', Combiners.postfixCombiner],
-    'negative-circled': ['en circulo negro', Combiners.postfixCombiner],
-    'double-circled': ['en doble circulo', Combiners.postfixCombiner],
-    'circled-sans-serif': ['en circulo', sansserifCombiner],
-    'negative-circled-sans-serif': ['en circulo negro', sansserifCombiner],
-    'comma': ['coma', Combiners.postfixCombiner],
-    'squared': ['en cuadrado', Combiners.postfixCombiner],
-    'negative-squared': ['en cuadrado negro', Combiners.postfixCombiner]
+    'circled': ['en circulo', 'postfixCombiner'],
+    'parenthesized': ['entre paréntesis', 'postfixCombiner'],
+    'period': ['punto', 'postfixCombiner'],
+    'negative-circled': ['en circulo negro', 'postfixCombiner'],
+    'double-circled': ['en doble circulo', 'postfixCombiner'],
+    'circled-sans-serif': ['en circulo', 'sansserif'],
+    'negative-circled-sans-serif': ['en circulo negro', 'sansserif'],
+    'comma': ['coma', 'postfixCombiner'],
+    'squared': ['en cuadrado', 'postfixCombiner'],
+    'negative-squared': ['en cuadrado negro', 'postfixCombiner']
   },
 
   NAVIGATE: {COLLAPSIBLE: 'plegable', EXPANDABLE: 'ampliable', LEVEL: 'nivel'},

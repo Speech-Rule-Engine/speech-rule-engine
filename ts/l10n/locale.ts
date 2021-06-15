@@ -29,10 +29,10 @@ export interface Locale {
   MS: {[key: string]: string};
   MS_FUNC: {[key: string]: Function};
   MS_ROOT_INDEX: {[key: string]: string};
-  FONT: {[key: string]: string|[string, tr.Combiner]};
-  EMBELLISH: {[key: string]: string|[string, tr.Combiner]};
-  ROLE: {[key: string]: string|[string, tr.Combiner]};
-  ENCLOSE: {[key: string]: string|[string, tr.Combiner]};
+  FONT: {[key: string]: string|[string, string]};
+  EMBELLISH: {[key: string]: string|[string, string]};
+  ROLE: {[key: string]: string|[string, string]};
+  ENCLOSE: {[key: string]: string|[string, string]};
   NAVIGATE: {[key: string]: string};
   REGEXP: {[key: string]: string};
   PLURAL: tr.Transformer;
@@ -262,7 +262,7 @@ export const LOCALE: Locale = {
   /**
    * The units combiner.
    */
-  SI: tr.SiCombiners.siCombiner,
+  SI: tr.siCombiner,
 
 
   /**

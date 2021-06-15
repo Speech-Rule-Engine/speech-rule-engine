@@ -27,7 +27,7 @@
 import {ALPHABETS} from '../alphabets';
 import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_nemeth';
-import {Transformers} from '../transformers';
+import {identityTransformer} from '../transformers';
 
 
 /**
@@ -81,6 +81,14 @@ let parensCombiner = function(letter: string, font: string, _number: string) {
 
 
 export const nemeth: Locale = {
+  COMBINERS: {
+    'postfixCombiner': postfixCombiner,
+    'germanCombiner': germanCombiner,
+    'embellishCombiner': embellishCombiner,
+    'doubleEmbellishCombiner': doubleEmbellishCombiner,
+    'parensCombiner': parensCombiner
+  },
+
   MS: {
     FRACTION_REPEAT: '⠠',
     FRACTION_START: '⠹',
@@ -131,22 +139,15 @@ export const nemeth: Locale = {
 
   MS_ROOT_INDEX: {},
   FONT: {
-    // TODO: Some font translations:
-    // Caligraphic: Currently translated as script. Caligraphic bold as script
-    //              bold (vs. bold-script)
-    // Double Struck: Currently translated as bold. Double-struck italic is
-    //                therefore the same as bold italic.
-    // Oldstyle and Monospace: Currently ignored.
-    // Normal: is currently just empty.
     'bold': '⠸',
-    'bold-fraktur': ['⠸⠀⠸', germanCombiner],
+    'bold-fraktur': ['⠸⠀⠸', 'germanCombiner'],
     'bold-italic': '⠸⠨',
     'bold-script': '⠸⠈',
     'caligraphic': '⠈',
     'caligraphic-bold': '⠈⠸',
     'double-struck': '⠈',
     'double-struck-italic': '⠸⠨',
-    'fraktur': ['⠸', germanCombiner],
+    'fraktur': ['⠸', 'germanCombiner'],
     'fullwidth': '',
     'italic': '⠨',
     'monospace': '',
@@ -164,18 +165,18 @@ export const nemeth: Locale = {
   EMBELLISH: {
     // Embellishments
     // TODO: Here we need specialist combiners!
-    'super': ['⠘', germanCombiner],
-    'sub': ['⠰', germanCombiner],
-    'circled': ['⠫⠉⠸⠫', embellishCombiner],
-    'parenthesized': ['⠷', parensCombiner],
-    'period': ['⠸⠲', postfixCombiner],
-    'negative-circled': ['⠫⠸⠉⠸⠫', embellishCombiner],
-    'double-circled': ['⠫⠉⠸⠫⠫⠉⠸⠫', doubleEmbellishCombiner],
-    'circled-sans-serif': ['⠫⠉⠸⠫⠠⠨', embellishCombiner],
-    'negative-circled-sans-serif': ['⠫⠸⠉⠸⠫⠠⠨', embellishCombiner],
-    'comma': ['⠠', postfixCombiner],
-    'squared': ['⠫⠲⠸⠫', embellishCombiner],
-    'negative-squared': ['⠫⠸⠲⠸⠫', embellishCombiner]
+    'super': ['⠘', 'germanCombiner'],
+    'sub': ['⠰', 'germanCombiner'],
+    'circled': ['⠫⠉⠸⠫', 'embellishCombiner'],
+    'parenthesized': ['⠷', 'parensCombiner'],
+    'period': ['⠸⠲', 'postfixCombiner'],
+    'negative-circled': ['⠫⠸⠉⠸⠫', 'embellishCombiner'],
+    'double-circled': ['⠫⠉⠸⠫⠫⠉⠸⠫', 'doubleEmbellishCombiner'],
+    'circled-sans-serif': ['⠫⠉⠸⠫⠠⠨', 'embellishCombiner'],
+    'negative-circled-sans-serif': ['⠫⠸⠉⠸⠫⠠⠨', 'embellishCombiner'],
+    'comma': ['⠠', 'postfixCombiner'],
+    'squared': ['⠫⠲⠸⠫', 'embellishCombiner'],
+    'negative-squared': ['⠫⠸⠲⠸⠫', 'embellishCombiner']
   },
 
   ROLE: {
@@ -239,8 +240,8 @@ export const nemeth: Locale = {
   NAVIGATE:
       {COLLAPSIBLE: 'collapsible', EXPANDABLE: 'expandable', LEVEL: 'Level'},
 
-  PLURAL: Transformers.identityTransformer,
-  SI: Transformers.identityTransformer,
+  PLURAL: identityTransformer,
+  SI: identityTransformer,
   UNIT_TIMES: '',
 
   NUMBERS: NUMBERS,
@@ -252,3 +253,13 @@ nemeth.ALPHABETS.combiner = function(
   return font ? font + num + letter : simpleEnglish(letter);
 };
 nemeth.ALPHABETS.digitTrans = {default: NUMBERS.numberToWords};
+
+// TODO: Some font translations:
+// Caligraphic: Currently translated as script. Caligraphic bold as script
+//              bold (vs. bold-script)
+// Double Struck: Currently translated as bold. Double-struck italic is
+//                therefore the same as bold italic.
+// Oldstyle and Monospace: Currently ignored.
+// Normal: is currently just empty.
+//
+// Roles and Enclosed forms.

@@ -27,7 +27,7 @@ import {combinePostfixIndex, nestingToString} from '../locale_util';
 import {Locale} from '../locale';
 import {ALPHABETS} from '../alphabets';
 import NUMBERS from '../numbers/numbers_fr';
-import {Combiners, SiCombiners} from '../transformers';
+import {Combiners, siCombiner} from '../transformers';
 
 
 export const fr: Locale = {
@@ -111,8 +111,8 @@ export const fr: Locale = {
   EMBELLISH: {
     // Embellishments
     // TODO: Here we need specialist combiners!
-    'super': ['exposant', Combiners.prefixCombiner],
-    'sub': ['indice', Combiners.prefixCombiner],
+    'super': ['exposant', 'prefixCombiner'],
+    'sub': ['indice', 'prefixCombiner'],
     'circled': 'encerclé',
     'parenthesized': 'entre parenthèses',
     'period': 'un point',
@@ -196,7 +196,7 @@ export const fr: Locale = {
     JOINER_FRAC: ' '
   },
 
-  SI: SiCombiners.siCombiner,
+  SI: siCombiner,
 
   UNIT_TIMES: '',
 

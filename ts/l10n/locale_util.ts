@@ -22,7 +22,7 @@
 
 import * as MathspeakUtil from '../speech_rules/mathspeak_util';
 import {LOCALE} from './locale';
-import {Combiner, Processor} from './transformers';
+import {Combiner, Combiners} from './transformers';
 
 
 /**
@@ -101,7 +101,7 @@ export function localEnclose(enclose: string): string {
  * @param combiner The combined message
  * @return The name
  */
-export function extractString(combiner: string | [string, Processor],
+export function extractString(combiner: string | [string, string],
                               fallback: string) {
   if (combiner === undefined) {
     return fallback;
@@ -116,8 +116,9 @@ export function extractString(combiner: string | [string, Processor],
  * @return The localised font value plus a combiner.
  */
 export function localeFontCombiner(
-  font: string | [string, Combiner]): {font: string, combiner: Combiner} {
+  font: string | [string, string]): {font: string, combiner: Combiner} {
   return typeof font === 'string' ?
     {font: font, combiner: LOCALE.ALPHABETS.combiner} :
-    {font: font[0], combiner: font[1]};
+    {font: font[0], combiner: 
+     LOCALE.COMBINERS[font[1]] || Combiners[font[1]] || LOCALE.ALPHABETS.combiner};
 }

@@ -31,7 +31,7 @@ import NUMBERS from '../numbers/numbers_it';
 import {Combiners} from '../transformers';
 
 
-Combiners.italianPostfixCombiner = function(
+let italianPostfixCombiner = function(
   letter: string, font: string, cap: string) {
   if (letter.match(/^[a-zA-Z]$/)) {
     font = font.replace('cerchiato', 'cerchiata');
@@ -42,6 +42,10 @@ Combiners.italianPostfixCombiner = function(
 
 
 export const it: Locale = {
+  COMBINERS: {
+    'italianPostfix': italianPostfixCombiner
+  },
+  
   MS: {
     START: 'inizio',
     FRAC_V: 'frazione',
@@ -120,12 +124,12 @@ export const it: Locale = {
 
   EMBELLISH: {
     // Embellishments
-    'super': ['apice', Combiners.prefixCombiner],
-    'sub': ['pedice', Combiners.prefixCombiner],
-    'circled': ['cerchiato', Combiners.italianPostfixCombiner],
+    'super': ['apice', 'prefixCombiner'],
+    'sub': ['pedice', 'prefixCombiner'],
+    'circled': ['cerchiato', 'italianPostfix'],
     'parenthesized': 'tra parentesi',
     'period': 'punto',
-    'negative-circled': ['cerchiato in negativo', Combiners.italianPostfixCombiner],
+    'negative-circled': ['cerchiato in negativo', 'italianPostfix'],
     'double-circled': 'doppio cerchiato',
     'circled-sans-serif': 'cerchiato senza grazie',
     'negative-circled-sans-serif': 'cerchiato in negativo senza grazie',

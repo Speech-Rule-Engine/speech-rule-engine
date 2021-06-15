@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Transformers, Transformer, GrammarCases, GrammarCase} from './transformers';
+import * as tr from './transformers';
 
 export interface Numbers {
   /**
@@ -48,10 +48,10 @@ export interface Numbers {
   special?: {[key: string]: string|string[]};
   
   // Constructor methods
-  wordOrdinal?: Transformer;
-  simpleOrdinal: Transformer;
-  numberToWords: Transformer;
-  numberToOrdinal?: GrammarCase;
+  wordOrdinal?: tr.Transformer;
+  simpleOrdinal: tr.Transformer;
+  numberToWords: tr.Transformer;
+  numberToOrdinal?: tr.GrammarCase;
 
   vulgarSep?: string;
   numSep?: string;
@@ -65,10 +65,10 @@ export const NUMBERS: Numbers = {
   large: [],
   special: {},
 
-  wordOrdinal: Transformers.identityTransformer,
-  simpleOrdinal: Transformers.identityTransformer,
-  numberToWords: Transformers.identityTransformer,
-  numberToOrdinal: GrammarCases.pluralTransformer,
+  wordOrdinal: tr.identityTransformer,
+  simpleOrdinal: tr.identityTransformer,
+  numberToWords: tr.identityTransformer,
+  numberToOrdinal: tr.pluralCase,
   vulgarSep: ' ',
   numSep: ' '
 };

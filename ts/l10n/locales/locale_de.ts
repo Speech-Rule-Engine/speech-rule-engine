@@ -112,6 +112,10 @@ export const de: Locale = {
 
   MS_ROOT_INDEX: {2: 'Quadrat', 3: 'Kubik'},
 
+  COMBINERS: {
+    'germanPostfix': germanPostfixCombiner
+  },
+  
   // TODO: Grammar of numbers vs digits! Currently grammar is wrt. letters.
   FONT: {
     'bold': 'fettes',
@@ -120,8 +124,8 @@ export const de: Locale = {
     'bold-script': 'fettes Schreibschrift',
     'caligraphic': 'kalligrafisches',
     'caligraphic-bold': 'fettes kalligrafisches',
-    'double-struck': ['mit Doppelstrich', germanPostfixCombiner],
-    'double-struck-italic': ['kursiv mit Doppelstrich', germanPostfixCombiner],
+    'double-struck': ['mit Doppelstrich', 'germanPostfix'],
+    'double-struck-italic': ['kursiv mit Doppelstrich', 'germanPostfix'],
     'fraktur': 'Fraktur',
     'fullwidth': 'vollbreites',
     'italic': 'kursives',
@@ -144,12 +148,12 @@ export const de: Locale = {
     'sub': 'Index',
     'circled': 'eingekreistes',
     'parenthesized': 'eingeklammertes',
-    'period': ['Punkt', germanPostfixCombiner],
+    'period': ['Punkt', 'germanPostfix'],
     'negative-circled': 'schwarz eingekreistes',
     'double-circled': 'doppelt eingekreistes',
     'circled-sans-serif': 'eingekreistes serifenloses',
     'negative-circled-sans-serif': 'schwarz eingekreistes serifenloses',
-    'comma': ['Komma', germanPostfixCombiner],
+    'comma': ['Komma', 'germanPostfix'],
     'squared': 'umrahmtes',
     'negative-squared': 'schwarz umrahmtes'
   },

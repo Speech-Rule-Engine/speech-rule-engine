@@ -29,12 +29,6 @@ export type GrammarCase = (p1: number, p2: boolean) => string;
 
 export type Processor = Transformer | Combiner | GrammarCase | SiCombiner;
 
-// TODO: Do we really need those?
-export let SiCombiners: Record<string, SiCombiner> = {};
-
-export let GrammarCases: Record<string, GrammarCase> = {};
-
-export let Transformers: Record<string, Transformer> = {};
 
 /**
  * A trivial translator of numbers with plural.
@@ -42,7 +36,7 @@ export let Transformers: Record<string, Transformer> = {};
  * @param plural A flag indicating plural.
  * @return The number as a string.
  */
-GrammarCases.pluralCase = function(num: number, _plural: boolean): string {
+export function pluralCase(num: number, _plural: boolean): string {
   return num.toString();
 }
 
@@ -51,7 +45,7 @@ GrammarCases.pluralCase = function(num: number, _plural: boolean): string {
  * @param input A number or string.
  * @return The input as a string.
  */
-Transformers.identityTransformer = function(input: string|number): string {
+export function identityTransformer(input: string|number): string {
   return input.toString();
 }
 
@@ -61,7 +55,7 @@ Transformers.identityTransformer = function(input: string|number): string {
  * @param  prefix The prefix.
  * @param  unit The main part.
  */
-SiCombiners.siCombiner = function(prefix: string, unit: string) {
+export function siCombiner(prefix: string, unit: string) {
   return prefix + unit;
 }
 
