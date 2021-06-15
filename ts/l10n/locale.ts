@@ -20,24 +20,17 @@
  */
 
 import {Alphabets, ALPHABETS} from './alphabets';
+import {Messages, MESSAGES} from './messages';
 import {Numbers, NUMBERS} from './numbers';
 import * as tr from './transformers';
 
 
 // One (or more) flat message object per rule set.
 export interface Locale {
-  MS: {[key: string]: string};
-  MS_FUNC: {[key: string]: Function};
-  MS_ROOT_INDEX: {[key: string]: string};
-  FONT: {[key: string]: string|[string, string]};
-  EMBELLISH: {[key: string]: string|[string, string]};
-  ROLE: {[key: string]: string|[string, string]};
-  ENCLOSE: {[key: string]: string|[string, string]};
-  NAVIGATE: {[key: string]: string};
-  REGEXP: {[key: string]: string};
+  MESSAGES: Messages;
   PLURAL: tr.Transformer;
+  MS_FUNC: {[key: string]: Function};
   SI: tr.SiCombiner;
-  UNIT_TIMES: string;
   ALPHABETS: Alphabets;
   NUMBERS: Numbers;
   COMBINERS?: {[key: string]: tr.Combiner};
@@ -45,37 +38,6 @@ export interface Locale {
 
 
 export const LOCALE: Locale = {
-
-  MS: {
-    START: '',
-    FRAC_V: '',
-    FRAC_B: '',
-    FRAC_S: '',
-    END: '',
-    FRAC_OVER: '',
-    ONCE: '',
-    TWICE: '',
-    NEST_FRAC: '',
-    ENDFRAC: '',
-    SUPER: '',
-    SUB: '',
-    SUP: '',
-    SUPERSCRIPT: '',
-    SUBSCRIPT: '',
-    BASELINE: '',
-    BASE: '',
-    NESTED: '',
-    NEST_ROOT: '',
-    STARTROOT: '',
-    ENDROOT: '',
-    ROOTINDEX: '',
-    ROOT: '',
-    INDEX: '',
-    UNDER: '',
-    UNDERSCRIPT: '',
-    OVER: '',
-    OVERSCRIPT: ''
-  },
 
   /**
    * Parsing functions.
@@ -114,141 +76,6 @@ export const LOCALE: Locale = {
     }
   },
 
-  // TODO: Add new functions.
-  MS_ROOT_INDEX: {},
-
-  /**
-   * Localised font names.
-   */
-  FONT: {
-    'bold': '',
-    'bold-fraktur': '',
-    'bold-italic': '',
-    'bold-script': '',
-    'caligraphic': '',
-    'caligraphic-bold': '',
-    'double-struck': '',
-    'double-struck-italic': '',
-    'fraktur': '',
-    'italic': '',
-    'monospace': '',
-    'normal': '',
-    'oldstyle': '',
-    'oldstyle-bold': '',
-    'script': '',
-    'sans-serif': '',
-    'sans-serif-italic': '',
-    'sans-serif-bold': '',
-    'sans-serif-bold-italic': '',
-    'unknown': ''
-  },
-
-
-  /**
-   * Localised embalishment names. Treated like fonts.
-   */
-  EMBELLISH: {
-    // More embellishments than fonts.
-    'super': '',
-    'sub': '',
-    'circled': '',
-    'parenthesized': '',
-    'period': '',
-    'negative-circled': '',
-    'double-circled': '',
-    'circled-sans-serif': '',
-    'negative-circled-sans-serif': '',
-    'blackboard': '',
-    'comma': '',
-    'squared': '',
-    'negative-squared': ''
-  },
-
-
-  /**
-   * Localised role names.
-   */
-   ROLE: {
-    // Infixoperators
-    'addition': '',
-    'multiplication': '',
-    'subtraction': '',
-    'division': '',
-    // Relations.
-    'equality': '',
-    'inequality': '',
-    'element': '',
-    'arrow': '',
-    // Roles of matrices or vectors.
-    'determinant': '',
-    'rowvector': '',
-    'binomial': '',
-    'squarematrix': '',
-    // Sets
-    'set empty': '',
-    'set extended': '',
-    'set singleton': '',
-    'set collection': '',
-    // Roles of rows, lines, cells.
-    'label': '',
-    'multiline': '',
-    'matrix': '',
-    'vector': '',
-    'cases': '',
-    'table': '',
-    // Unknown
-    'unknown': ''
-   },
-
-
-  /**
-   * Localised enclose roles.
-   */
-  ENCLOSE: {
-    'longdiv': '',
-    'actuarial': '',
-    'radical': '',
-    'box': '',
-    'roundedbox': '',
-    'circle': '',
-    'left': '',
-    'right': '',
-    'top': '',
-    'bottom': '',
-    'updiagonalstrike': '',
-    'downdiagonalstrike': '',
-    'verticalstrike': '',
-    'horizontalstrike': '',
-    'madruwb': '',
-    'updiagonalarrow': '',
-    'phasorangle': '',
-    // Unknown
-    'unknown': ''
-  },
-
-
-  /**
-   * Navigation messages.
-   */
-  NAVIGATE: {
-    COLLAPSIBLE: '',
-    EXPANDABLE: '',
-    LEVEL: ''
-  },
-
-
-  /**
-   * Regular expressions for text, digits, decimal marks, etc.
-   */
-  REGEXP: {
-    TEXT: 'a-zA-Z',
-    NUMBER: '',
-    DECIMAL_MARK: '',
-    DIGIT_GROUP: '',
-    JOINER_SUBSUPER: ' '
-  },
-
-
   /**
    * Function to build regular plurals for units.
    * @param unit A unit expression.
@@ -265,11 +92,10 @@ export const LOCALE: Locale = {
   SI: tr.siCombiner,
 
 
-  /**
-   * The times expression between units, if used.
+  /** 
+   * The messages content.
    */
-  UNIT_TIMES: '',
-
+  MESSAGES: MESSAGES(),
 
   /**
    * The Alphabets content.

@@ -429,7 +429,7 @@ function addAnnotation_(text: string, annotation: string): string {
  * @return The untranslated text.
  */
 function noTranslateText_(text: string): string {
-  if (text.match(new RegExp('^[' + LOCALE.REGEXP.TEXT + ']+$'))) {
+  if (text.match(new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+$'))) {
     Grammar.getInstance().currentFlags['translate'] = false;
   }
   return text;

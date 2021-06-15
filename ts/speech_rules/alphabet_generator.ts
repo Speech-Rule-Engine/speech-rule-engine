@@ -190,7 +190,7 @@ export function makeInterval([a, b]: [string, string],
 export function getFont(font: string): {font: string, combiner: Combiner} {
   let realFont = font === 'normal' || font === 'fullwidth' ?
       '' :
-      LOCALE.FONT[font] || LOCALE.EMBELLISH[font] || '';
+      LOCALE.MESSAGES.font[font] || LOCALE.MESSAGES.embellish[font] || '';
   // TODO: Combiners: Retrieve with string here.
   return localeFontCombiner(realFont);
 }

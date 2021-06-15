@@ -40,8 +40,8 @@ import * as MathspeakUtil from './mathspeak_util';
  */
 export function openingFraction(node: Element): string {
   let depth = MathspeakUtil.fractionNestingDepth(node);
-  return (new Array(depth)).join(LOCALE.MS.FRACTION_REPEAT) +
-      LOCALE.MS.FRACTION_START;
+  return (new Array(depth)).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
+      LOCALE.MESSAGES.MS.FRACTION_START;
 }
 
 
@@ -52,7 +52,7 @@ export function openingFraction(node: Element): string {
  */
 export function closingFraction(node: Element): string {
   let depth = MathspeakUtil.fractionNestingDepth(node);
-  return (new Array(depth)).join(LOCALE.MS.FRACTION_REPEAT) + LOCALE.MS.FRACTION_END;
+  return (new Array(depth)).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) + LOCALE.MESSAGES.MS.FRACTION_END;
 }
 
 
@@ -63,7 +63,7 @@ export function closingFraction(node: Element): string {
  */
 export function overFraction(node: Element): string {
   let depth = MathspeakUtil.fractionNestingDepth(node);
-  return (new Array(depth)).join(LOCALE.MS.FRACTION_REPEAT) + LOCALE.MS.FRACTION_OVER;
+  return (new Array(depth)).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) + LOCALE.MESSAGES.MS.FRACTION_OVER;
 }
 
 
@@ -74,8 +74,8 @@ export function overFraction(node: Element): string {
  */
 export function overBevelledFraction(node: Element): string {
   let depth = MathspeakUtil.fractionNestingDepth(node);
-  return (new Array(depth)).join(LOCALE.MS.FRACTION_REPEAT) + '⠸' +
-      LOCALE.MS.FRACTION_OVER;
+  return (new Array(depth)).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) + '⠸' +
+      LOCALE.MESSAGES.MS.FRACTION_OVER;
 }
 
 
@@ -91,7 +91,7 @@ export function nestedRadical(node: Element, postfix: string): string {
   if (depth === 1) {
     return postfix;
   }
-  return (new Array(depth)).join(LOCALE.MS.NESTED) + postfix;
+  return (new Array(depth)).join(LOCALE.MESSAGES.MS.NESTED) + postfix;
 }
 
 
@@ -118,7 +118,7 @@ export function radicalNestingDepth(node: Element, opt_depth?: number): number {
  * @return The opening string.
  */
 export function openingRadical(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.STARTROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.STARTROOT);
 }
 
 
@@ -128,7 +128,7 @@ export function openingRadical(node: Element): string {
  * @return The closing string.
  */
 export function closingRadical(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.ENDROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.ENDROOT);
 }
 
 
@@ -138,7 +138,7 @@ export function closingRadical(node: Element): string {
  * @return The middle string.
  */
 export function indexRadical(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.ROOTINDEX);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX);
 }
 
 
@@ -376,7 +376,7 @@ export function relationIterator(nodes: Element[], context: string): () =>
     }
     let base = leftChild ?
         MathspeakUtil.nestedSubSuper(
-            leftChild, '', {sup: LOCALE.MS.SUPER, sub: LOCALE.MS.SUB}) :
+            leftChild, '', {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB}) :
         '';
     let left = leftChild && DomUtil.tagName(leftChild) !== 'EMPTY' ||
             first && content.parentNode.parentNode &&

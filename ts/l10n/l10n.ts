@@ -85,8 +85,6 @@ export function completeLocale(json: any) {
     return;
   }
   let kind = json.kind.toUpperCase();
-  // temporary!
-  if (kind !== 'NUMBERS' && kind !== 'ALPHABETS') return;
   let messages = json.messages;
   if (!messages) return;
   for (let [key, value] of Object.entries(messages)) {

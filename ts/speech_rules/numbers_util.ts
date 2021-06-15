@@ -81,7 +81,7 @@ export function convertVulgarFraction_(node: Element): Convertible {
   if (isNaN(denominator) || isNaN(enumerator)) {
     return {
       convertible: false,
-      content: enumStr + ' ' + LOCALE.MS.FRAC_OVER + ' ' + denStr
+      content: enumStr + ' ' + LOCALE.MESSAGES.MS.FRAC_OVER + ' ' + denStr
     };
   }
   return {convertible: true, enumerator: enumerator, denominator: denominator};

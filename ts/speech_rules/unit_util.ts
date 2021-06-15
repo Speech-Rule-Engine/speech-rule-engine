@@ -46,7 +46,7 @@ export function unitMultipliers(nodes: Element[], _context: string): () =>
         {
           text: rightMostUnit(children[counter]) &&
                   leftMostUnit(children[counter + 1]) ?
-              LOCALE.UNIT_TIMES :
+              LOCALE.MESSAGES.unitTimes :
               ''
         },
         {});
