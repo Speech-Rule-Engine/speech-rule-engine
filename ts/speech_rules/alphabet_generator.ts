@@ -191,9 +191,11 @@ export function getFont(font: string): {font: string, combiner: Combiner} {
   let realFont = font === 'normal' || font === 'fullwidth' ?
       '' :
       LOCALE.FONT[font] || LOCALE.EMBELLISH[font] || '';
+  // TODO: Combiners: Retrieve with string here.
   return typeof realFont === 'string' ?
       {font: realFont, combiner: LOCALE.ALPHABETS.combiner} :
       {font: realFont[0], combiner: realFont[1]};
+      // {font: realFont[0], combiner: Combiners[realFont[1]]};
 }
 
 

@@ -29,23 +29,29 @@ export type GrammarCase = (p1: number, p2: boolean) => string;
 
 export type Processor = Transformer | Combiner | GrammarCase | SiCombiner;
 
+// TODO: Do we really need those?
+export let SiCombiners: Record<string, SiCombiner> = {};
+
+export let GrammarCases: Record<string, GrammarCase> = {};
+
+export let Transformers: Record<string, Transformer> = {};
+
 /**
  * A trivial translator of numbers with plural.
  * @param num A number.
  * @param plural A flag indicating plural.
  * @return The number as a string.
  */
-export function pluralTransformer(num: number, _plural: boolean): string {
+GrammarCases.pluralCase = function(num: number, _plural: boolean): string {
   return num.toString();
 }
-
 
 /**
  * A trivial transformer.
  * @param input A number or string.
  * @return The input as a string.
  */
-export function identityTransformer(input: string|number): string {
+Transformers.identityTransformer = function(input: string|number): string {
   return input.toString();
 }
 
@@ -55,10 +61,13 @@ export function identityTransformer(input: string|number): string {
  * @param  prefix The prefix.
  * @param  unit The main part.
  */
-export function siCombiner(prefix: string, unit: string) {
+SiCombiners.siCombiner = function(prefix: string, unit: string) {
   return prefix + unit;
 }
 
+
+// Namespaces
+export let Combiners: Record<string, Combiner> = {};
 
 /**
  * A combiner adding the font name before the letter. Empty strings are ignored.
@@ -67,7 +76,7 @@ export function siCombiner(prefix: string, unit: string) {
  * @param cap Capitalisation expression.
  * @return The speech string as `font cap letter`.
  */
-export function prefixCombiner(
+Combiners.prefixCombiner = function(
     letter: string, font: string, cap: string): string {
   letter = cap ? cap + ' ' + letter : letter;
   return font ? font + ' ' + letter : letter;
@@ -81,7 +90,7 @@ export function prefixCombiner(
  * @param cap Capitalisation expression.
  * @return The speech string as `cap letter font`.
  */
-export function postfixCombiner(
+Combiners.postfixCombiner = function(
     letter: string, font: string, cap: string): string {
   letter = cap ? cap + ' ' + letter : letter;
   return font ? letter + ' ' + font : letter;

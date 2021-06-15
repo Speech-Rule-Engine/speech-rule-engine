@@ -28,7 +28,7 @@ import {nestingToString, vulgarNestingDepth} from '../locale_util';
 import {ALPHABETS} from '../alphabets';
 import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_hi';
-import {postfixCombiner, prefixCombiner} from '../transformers';
+import {Combiners} from '../transformers';
 
 
 export const hi: Locale = {
@@ -112,12 +112,12 @@ export const hi: Locale = {
     'sub': 'सबस्क्रिप्ट',
     'circled': 'सर्किल',
     'parenthesized': 'कोष्ठक',
-    'period': ['पूर्ण विराम', postfixCombiner],
+    'period': ['पूर्ण विराम', Combiners.postfixCombiner],
     'negative-circled': 'नेगेटिव सर्किल',
     'double-circled': 'डबल सर्किल',
     'circled-sans-serif': 'सर्किल सैंस-सेरिफ़',
     'negative-circled-sans-serif': 'नेगेटिव सर्किल सैंस-सेरिफ़',
-    'comma': ['अल्प विराम', postfixCombiner],
+    'comma': ['अल्प विराम', Combiners.postfixCombiner],
     'squared': 'चुकता',
     'negative-squared': 'नकारात्मक वर्ग'
   },
@@ -197,4 +197,4 @@ export const hi: Locale = {
 
 };
 
-hi.ALPHABETS.combiner = prefixCombiner;
+hi.ALPHABETS.combiner = Combiners.prefixCombiner;

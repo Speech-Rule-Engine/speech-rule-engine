@@ -261,7 +261,7 @@ export const LOCALE: Locale = {
   /**
    * The units combiner.
    */
-  SI: tr.siCombiner,
+  SI: tr.SiCombiners.siCombiner,
 
 
   /**

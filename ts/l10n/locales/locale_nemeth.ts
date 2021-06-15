@@ -27,7 +27,7 @@
 import {ALPHABETS} from '../alphabets';
 import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_nemeth';
-import * as tr from '../transformers';
+import {Transformers} from '../transformers';
 
 
 /**
@@ -239,8 +239,8 @@ export const nemeth: Locale = {
   NAVIGATE:
       {COLLAPSIBLE: 'collapsible', EXPANDABLE: 'expandable', LEVEL: 'Level'},
 
-  PLURAL: tr.identityTransformer,
-  SI: tr.identityTransformer,
+  PLURAL: Transformers.identityTransformer,
+  SI: Transformers.identityTransformer,
   UNIT_TIMES: '',
 
   NUMBERS: NUMBERS,

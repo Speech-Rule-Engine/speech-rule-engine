@@ -27,7 +27,7 @@ import {combinePostfixIndex} from '../locale_util';
 import {ALPHABETS} from '../alphabets';
 import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_es';
-import {postfixCombiner, prefixCombiner} from '../transformers';
+import {Combiners} from '../transformers';
 
 
 let sansserifCombiner = function(letter: string, font: string, cap: string) {
@@ -179,16 +179,16 @@ export const es: Locale = {
     // TODO: Here we need specialist combiners!
     'super': 'superíndice',
     'sub': 'subíndice',
-    'circled': ['en circulo', postfixCombiner],
-    'parenthesized': ['entre paréntesis', postfixCombiner],
-    'period': ['punto', postfixCombiner],
-    'negative-circled': ['en circulo negro', postfixCombiner],
-    'double-circled': ['en doble circulo', postfixCombiner],
+    'circled': ['en circulo', Combiners.postfixCombiner],
+    'parenthesized': ['entre paréntesis', Combiners.postfixCombiner],
+    'period': ['punto', Combiners.postfixCombiner],
+    'negative-circled': ['en circulo negro', Combiners.postfixCombiner],
+    'double-circled': ['en doble circulo', Combiners.postfixCombiner],
     'circled-sans-serif': ['en circulo', sansserifCombiner],
     'negative-circled-sans-serif': ['en circulo negro', sansserifCombiner],
-    'comma': ['coma', postfixCombiner],
-    'squared': ['en cuadrado', postfixCombiner],
-    'negative-squared': ['en cuadrado negro', postfixCombiner]
+    'comma': ['coma', Combiners.postfixCombiner],
+    'squared': ['en cuadrado', Combiners.postfixCombiner],
+    'negative-squared': ['en cuadrado negro', Combiners.postfixCombiner]
   },
 
   NAVIGATE: {COLLAPSIBLE: 'plegable', EXPANDABLE: 'ampliable', LEVEL: 'nivel'},
@@ -235,4 +235,4 @@ export const es: Locale = {
   ALPHABETS: ALPHABETS()
 };
 
-es.ALPHABETS.combiner = prefixCombiner;
+es.ALPHABETS.combiner = Combiners.prefixCombiner;

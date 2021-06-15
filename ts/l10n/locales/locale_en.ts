@@ -109,12 +109,12 @@ export const en: Locale = {
     'sub': 'sub',
     'circled': 'circled',
     'parenthesized': 'parenthesized',
-    'period': ['period', tr.postfixCombiner],
+    'period': ['period', tr.Combiners.postfixCombiner],
     'negative-circled': 'black circled',
     'double-circled': 'double circled',
     'circled-sans-serif': 'circled sans serif',
     'negative-circled-sans-serif': 'black circled sans serif',
-    'comma': ['comma', tr.postfixCombiner],
+    'comma': ['comma', tr.Combiners.postfixCombiner],
     'squared': 'squared',
     'negative-squared': 'black squared'
   },
@@ -200,7 +200,7 @@ export const en: Locale = {
   ALPHABETS: ALPHABETS()
 };
 
-en.ALPHABETS.combiner = tr.prefixCombiner;
+en.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
 en.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
 
 Grammar.getInstance().setCorrection('noarticle', (name: string) => {

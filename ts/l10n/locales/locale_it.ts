@@ -28,10 +28,10 @@ import {combinePostfixIndex, nestingToString} from '../locale_util';
 import {ALPHABETS} from '../alphabets';
 import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_it';
-import {prefixCombiner} from '../transformers';
+import {Combiners} from '../transformers';
 
 
-let italianPostfixCombiner = function(
+Combiners.italianPostfixCombiner = function(
   letter: string, font: string, cap: string) {
   if (letter.match(/^[a-zA-Z]$/)) {
     font = font.replace('cerchiato', 'cerchiata');
@@ -120,12 +120,12 @@ export const it: Locale = {
 
   EMBELLISH: {
     // Embellishments
-    'super': ['apice', prefixCombiner],
-    'sub': ['pedice', prefixCombiner],
-    'circled': ['cerchiato', italianPostfixCombiner],
+    'super': ['apice', Combiners.prefixCombiner],
+    'sub': ['pedice', Combiners.prefixCombiner],
+    'circled': ['cerchiato', Combiners.italianPostfixCombiner],
     'parenthesized': 'tra parentesi',
     'period': 'punto',
-    'negative-circled': ['cerchiato in negativo', italianPostfixCombiner],
+    'negative-circled': ['cerchiato in negativo', Combiners.italianPostfixCombiner],
     'double-circled': 'doppio cerchiato',
     'circled-sans-serif': 'cerchiato senza grazie',
     'negative-circled-sans-serif': 'cerchiato in negativo senza grazie',
