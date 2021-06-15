@@ -210,8 +210,5 @@ export const fr: Locale = {
 
 };
 
-fr.ALPHABETS.combiner = function(letter, font, cap) {
-  letter = cap ? letter + ' ' + cap : letter;
-  return font ? letter + ' ' + font : letter;
-};
+fr.ALPHABETS.combiner = Combiners.romanceCombiner;
 

@@ -222,7 +222,4 @@ export const it: Locale = {
 
 };
 
-it.ALPHABETS.combiner = function(letter: string, font: string, cap: string) {
-  letter = cap ? letter + ' ' + cap : letter;
-  return font ? letter + ' ' + font : letter;
-};
+it.ALPHABETS.combiner = Combiners.romanceCombiner;

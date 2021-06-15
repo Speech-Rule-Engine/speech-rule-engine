@@ -98,14 +98,14 @@ Combiners.postfixCombiner = function(
 
 
 /**
- * Extracts a string from a combined message entry.
- * @param combiner The combined message
- * @return The name
+ * A combiner used in a number of romance languages.
+ * @param letter The letter.
+ * @param font The font name.
+ * @param cap Capitalisation expression.
+ * @return The speech string as `letter cap font`.
  */
-export function extractString(combiner: string | [string, Processor],
-                              fallback: string) {
-  if (combiner === undefined) {
-    return fallback;
-  }
-  return (typeof combiner === 'string') ? combiner : combiner[0];
-}
+Combiners.romanceCombiner = function (
+    letter: string, font: string, cap: string): string {
+  letter = cap ? letter + ' ' + cap : letter;
+  return font ? letter + ' ' + font : letter;
+};

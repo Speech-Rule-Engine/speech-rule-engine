@@ -40,6 +40,7 @@ export interface Locale {
   UNIT_TIMES: string;
   ALPHABETS: Alphabets;
   NUMBERS: Numbers;
+  COMBINERS?: {[key: string]: tr.Combiner};
 }
 
 
@@ -278,6 +279,7 @@ export const LOCALE: Locale = {
   /**
    * Localisable number computation.
    */
-  NUMBERS: NUMBERS
+  NUMBERS: NUMBERS,
 
+  COMBINERS: {}
 };

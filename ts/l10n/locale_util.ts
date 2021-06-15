@@ -22,7 +22,7 @@
 
 import * as MathspeakUtil from '../speech_rules/mathspeak_util';
 import {LOCALE} from './locale';
-import {extractString} from './transformers';
+import {Combiner, Processor} from './transformers';
 
 
 /**
@@ -93,4 +93,31 @@ export function localRole(role: string): string {
  */
 export function localEnclose(enclose: string): string {
   return extractString(LOCALE.ENCLOSE[enclose], enclose);
+}
+
+
+/**
+ * Extracts a string from a combined message entry.
+ * @param combiner The combined message
+ * @return The name
+ */
+export function extractString(combiner: string | [string, Processor],
+                              fallback: string) {
+  if (combiner === undefined) {
+    return fallback;
+  }
+  return (typeof combiner === 'string') ? combiner : combiner[0];
+}
+
+
+/**
+ * Retrieves font value and combiner for the current locale.
+ * @param font The font of an alphabet.
+ * @return The localised font value plus a combiner.
+ */
+export function localeFontCombiner(
+  font: string | [string, Combiner]): {font: string, combiner: Combiner} {
+  return typeof font === 'string' ?
+    {font: font, combiner: LOCALE.ALPHABETS.combiner} :
+    {font: font[0], combiner: font[1]};
 }

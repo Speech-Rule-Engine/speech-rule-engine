@@ -22,6 +22,7 @@
 import {Engine} from '../common/engine';
 import * as L10n from '../l10n/l10n';
 import {LOCALE} from '../l10n/locale';
+import {localeFontCombiner} from '../l10n/locale_util';
 import {Combiner, Transformer} from '../l10n/transformers';
 import {MathCompoundStore, UnicodeJson} from '../rule_engine/math_simple_store';
 import * as SemanticUtil from '../semantic_tree/semantic_util';
@@ -184,18 +185,14 @@ export function makeInterval([a, b]: [string, string],
 /**
  * Retrieves font value for the current locale.
  * @param font The font of an alphabet.
- * @return The localised font
- *     value.
+ * @return The localised font value plus a combiner.
  */
 export function getFont(font: string): {font: string, combiner: Combiner} {
   let realFont = font === 'normal' || font === 'fullwidth' ?
       '' :
       LOCALE.FONT[font] || LOCALE.EMBELLISH[font] || '';
   // TODO: Combiners: Retrieve with string here.
-  return typeof realFont === 'string' ?
-      {font: realFont, combiner: LOCALE.ALPHABETS.combiner} :
-      {font: realFont[0], combiner: realFont[1]};
-      // {font: realFont[0], combiner: Combiners[realFont[1]]};
+  return localeFontCombiner(realFont);
 }
 
 
