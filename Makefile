@@ -31,7 +31,7 @@ ENRICH = $(LIB_DIR)/enrich.js
 LICENSE = $(SRC_DIR)/license-header.txt
 
 INTERACTIVE = $(LIB_DIR)/sre4node.js
-JSON_SRC = $(SRC_DIR)/mathmaps
+JSON_SRC = $(abspath ./mathmaps)
 JSON_DST = $(LIB_DIR)/mathmaps
 MAPS = messages si functions symbols units rules
 IEMAPS_FILE = $(IEMAPS_PKG)/mathmaps_ie.js
