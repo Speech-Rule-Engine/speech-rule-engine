@@ -24,9 +24,7 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import {ALPHABETS} from '../alphabets';
-import {MESSAGES} from '../messages';
-import {Locale} from '../locale';
+import {createLocale, Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_nemeth';
 import {identityTransformer} from '../transformers';
 
@@ -38,7 +36,7 @@ import {identityTransformer} from '../transformers';
  */
 let simpleEnglish = function(letter: string): string {
   return letter.match(
-             RegExp('^' + nemeth.ALPHABETS.languagePrefix.english)) ?
+             RegExp('^' + locale.ALPHABETS.languagePrefix.english)) ?
       letter.slice(1) :
       letter;
 };
@@ -82,42 +80,39 @@ let parensCombiner = function(letter: string, font: string, _number: string) {
 };
 
 
-export const nemeth: Locale = {
-  COMBINERS: {
+let locale: Locale = null;
+
+export function nemeth(): Locale {
+  if (!locale) {
+    locale = create();
+  }
+  // TODO: Initialise the grammar methods here?
+  return locale;
+}
+
+function create(): Locale {
+  let loc = createLocale();
+  loc.NUMBERS = NUMBERS;
+  loc.COMBINERS = {
     'postfixCombiner': postfixCombiner,
     'germanCombiner': germanCombiner,
     'embellishCombiner': embellishCombiner,
     'doubleEmbellishCombiner': doubleEmbellishCombiner,
     'parensCombiner': parensCombiner
-  },
+  };
 
-  MS_FUNC: {
-    FRAC_NEST_DEPTH: function(_node: string) {
-      return false;
-    },
-    RADICAL_NEST_DEPTH: function(_count: string) {
-      return '';
-    },
-    COMBINE_ROOT_INDEX: function(postfix: string, _index: string) {
-      return postfix;
-    },
-    FONT_REGEXP: function(font: string) {
-      return RegExp('^' + font);
-    }
-  },
-  PLURAL: identityTransformer,
-  SI: identityTransformer,
-  MESSAGES: MESSAGES(),
-  NUMBERS: NUMBERS,
-  ALPHABETS: ALPHABETS()
-};
+  loc.FUNCTIONS.fracNestDepth = _node => false;
+  loc.FUNCTIONS.radicalNestDepth = _count => '';
+  loc.FUNCTIONS.fontRegexp = font => RegExp('^' + font);
+  loc.FUNCTIONS.si = identityTransformer,
+  loc.ALPHABETS.combiner = (letter, font, num) => {
+    return font ? font + num + letter : simpleEnglish(letter);
+  }
+  loc.ALPHABETS.digitTrans = {default: NUMBERS.numberToWords};
 
-nemeth.ALPHABETS.combiner = function(
-  letter: string, font: string, num: string) {
-  return font ? font + num + letter : simpleEnglish(letter);
-};
-nemeth.ALPHABETS.digitTrans = {default: NUMBERS.numberToWords};
-
+  return loc;
+}
+  
 // TODO: Some font translations:
 // Caligraphic: Currently translated as script. Caligraphic bold as script
 //              bold (vs. bold-script)

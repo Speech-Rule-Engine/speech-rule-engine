@@ -167,7 +167,7 @@ export class Grammar {
       return Grammar.cleanUnit_(text);
     }
     if (plural) {
-      result = LOCALE.PLURAL(result);
+      result = LOCALE.FUNCTIONS.plural(result);
     }
     return result;
   }
@@ -404,9 +404,9 @@ function correctFont_(text: string, correction: string): string {
   if (!correction || !text) {
     return text;
   }
-  correction =
-    LOCALE.MS_FUNC.FONT_REGEXP(LocaleUtil.localFont(correction));
-  return text.replace(correction, '');
+  let regexp =
+    LOCALE.FUNCTIONS.fontRegexp(LocaleUtil.localFont(correction));
+  return text.replace(regexp, '');
 }
 
 

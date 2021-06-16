@@ -24,13 +24,9 @@
 //
 
 import {Grammar} from '../../rule_engine/grammar';
-import {localFont, vulgarNestingDepth} from '../locale_util';
-import {ALPHABETS} from '../alphabets';
-import {MESSAGES} from '../messages';
-import {Locale} from '../locale';
+import {localFont} from '../locale_util';
+import {createLocale, Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_de';
-import {siCombiner} from '../transformers';
-
 
 let germanPrefixCombiner = function(letter: string, font: string, cap: string) {
   if (cap === 's') {
@@ -53,53 +49,44 @@ let germanPostfixCombiner = function(
 };
 
 
-export const de: Locale = {
-  MS_FUNC: {
-    FRAC_NEST_DEPTH: vulgarNestingDepth,
-    RADICAL_NEST_DEPTH: function(x: number) {
-      return x > 1 ? de.NUMBERS.numberToWords(x) + 'fach' : '';
-    },
-    COMBINE_ROOT_INDEX: function(postfix: string, index: string) {
-      let root = index ? index + 'wurzel' : '';
-      return postfix.replace('Wurzel', root);
-    },
-    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
-      return a + b + c;
-    },
-    COMBINE_NESTED_RADICAL: function(a: string, b: string, c: string) {
-      a = c.match(/exponent$/) ? a + 'r' : a;
-      let count = (b ? b + ' ' : '') + a;
-      return c.match(/ /) ? c.replace(/ /, ' ' + count + ' ') : count + ' ' + c;
-    },
-    FONT_REGEXP: function(font: string) {
-      font = font.split(' ')
-                 .map(function(x) {
-                   return x.replace(/s$/, '(|s)');
-                 })
-                 .join(' ');
-      return new RegExp('((^' + font + ' )|( ' + font + '$))');
-    }
-  },
+let locale: Locale = null;
 
+export function de(): Locale {
+  if (!locale) {
+    locale = create();
+  }
+  // TODO: Initialise the grammar methods here?
+  return locale;
+}
 
-  COMBINERS: {
-    'germanPostfix': germanPostfixCombiner
-  },
-  
-  SI: siCombiner,
+function create(): Locale {
+  let loc = createLocale();
+  loc.NUMBERS = NUMBERS;
+  loc.COMBINERS['germanPostfix'] = germanPostfixCombiner;
+  loc.ALPHABETS.combiner = germanPrefixCombiner;
+  loc.FUNCTIONS.radicalNestDepth = function(x: number) {
+    return x > 1 ? loc.NUMBERS.numberToWords(x) + 'fach' : '';
+  };
+  loc.FUNCTIONS.combineRootIndex = function(postfix: string, index: string) {
+    let root = index ? index + 'wurzel' : '';
+    return postfix.replace('Wurzel', root);
+  };
+  loc.FUNCTIONS.combineNestedRadical = function(a: string, b: string, c: string) {
+    a = c.match(/exponent$/) ? a + 'r' : a;
+    let count = (b ? b + ' ' : '') + a;
+    return c.match(/ /) ? c.replace(/ /, ' ' + count + ' ') : count + ' ' + c;
+  };
+  loc.FUNCTIONS.fontRegexp = function(font: string) {
+    font = font.split(' ')
+      .map(function(x) {
+        return x.replace(/s$/, '(|s)');
+      })
+      .join(' ');
+    return new RegExp('((^' + font + ' )|( ' + font + '$))');
+  };
+  return loc;
+}
 
-  PLURAL: function(unit: string) {
-    return unit;
-  },
-
-  MESSAGES: MESSAGES(),
-  NUMBERS: NUMBERS,
-  ALPHABETS: ALPHABETS()
-
-};
-
-de.ALPHABETS.combiner = germanPrefixCombiner;
-de.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
 
 Grammar.getInstance().setCorrection(
   'correctOne', (num: string) => num.replace(/^eins$/, 'ein'));

@@ -21,44 +21,31 @@
 
 
 import {Grammar} from '../../rule_engine/grammar';
-import * as LocaleUtil from '../locale_util';
-import {ALPHABETS} from '../alphabets';
-import {MESSAGES} from '../messages';
-import {Locale} from '../locale';
+import {createLocale, Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_en';
 import * as tr from '../transformers';
 
 
-export const en: Locale = {
-  MS_FUNC: {
-    FRAC_NEST_DEPTH: LocaleUtil.vulgarNestingDepth,
-    RADICAL_NEST_DEPTH: LocaleUtil.nestingToString,
-    COMBINE_ROOT_INDEX: function(postfix: string, _index: string) {
-      return postfix;
-    },
-    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
-      return a + b + c;
-    },
-    COMBINE_NESTED_RADICAL: function(a: string, b: string, c: string) {
-      return a + b + c;
-    },
-    FONT_REGEXP: function(font: string) {
-      return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
-    }
-  },
-  SI: tr.siCombiner,
+let locale: Locale = null;
 
-  PLURAL: function(unit: string) {
+export function en(): Locale {
+  if (!locale) {
+    locale = create();
+  }
+  // TODO: Initialise the grammar methods here?
+  return locale;
+}
+
+function create(): Locale {
+  let loc = createLocale();
+  loc.NUMBERS = NUMBERS;
+  loc.FUNCTIONS.plural = function(unit: string) {
     return /.*s$/.test(unit) ? unit : unit + 's';
-  },
-
-  MESSAGES: MESSAGES(),
-  NUMBERS: NUMBERS,
-  ALPHABETS: ALPHABETS()
-};
-
-en.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
-en.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
+  };
+  loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
+  loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
+  return loc;
+}
 
 Grammar.getInstance().setCorrection('noarticle', (name: string) => {
   return Grammar.getInstance().getParameter('noArticle') ? '' : name;

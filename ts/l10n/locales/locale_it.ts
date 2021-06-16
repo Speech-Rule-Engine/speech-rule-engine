@@ -24,12 +24,10 @@
 //
 
 
-import {combinePostfixIndex, nestingToString} from '../locale_util';
-import {ALPHABETS} from '../alphabets';
-import {MESSAGES} from '../messages';
-import {Locale} from '../locale';
+import {combinePostfixIndex} from '../locale_util';
+import {createLocale, Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_it';
-import {Combiners, siCombiner} from '../transformers';
+import {Combiners} from '../transformers';
 
 
 let italianPostfixCombiner = function(
@@ -42,38 +40,30 @@ let italianPostfixCombiner = function(
 };
 
 
-export const it: Locale = {
-  COMBINERS: {
-    'italianPostfix': italianPostfixCombiner
-  },
+let locale: Locale = null;
 
-  MS_FUNC: {
-    FRAC_NEST_DEPTH: function(_node: string) {
-      return false;
-    },
-    RADICAL_NEST_DEPTH: nestingToString,
-    COMBINE_ROOT_INDEX: combinePostfixIndex,
-    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
-      return c.replace(/ $/g, '') + b + a;
-    },
-    COMBINE_NESTED_RADICAL: function(a: string, _b: string, c: string) {
-      return c + ' ' + a;
-    },
-    FONT_REGEXP: function(font: string) {
-      return RegExp(' (en |)' + font + '$');
-    }
-  },
-  PLURAL: function(unit: string) {
-    // TODO: Make as programmatical as possible!
-    return unit;
-  },
+export function it(): Locale {
+  if (!locale) {
+    locale = create();
+  }
+  // TODO: Initialise the grammar methods here?
+  return locale;
+}
 
-  SI: siCombiner,
+function create(): Locale {
+  let loc = createLocale();
+  loc.NUMBERS = NUMBERS;
 
-  MESSAGES: MESSAGES(),
-  NUMBERS: NUMBERS,
-  ALPHABETS: ALPHABETS()
+  loc.COMBINERS['italianPostfix'] = italianPostfixCombiner;
 
-};
+  loc.FUNCTIONS.fracNestDepth = _node => false;
+  loc.FUNCTIONS.combineRootIndex = combinePostfixIndex;
+  loc.FUNCTIONS.combineNestedFraction =
+      (a, b, c) => c.replace(/ $/g, '') + b + a;
+  loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => c + ' ' + a;
+  loc.FUNCTIONS.fontRegexp = font => RegExp(' (en |)' + font + '$');
 
-it.ALPHABETS.combiner = Combiners.romanceCombiner;
+  loc.ALPHABETS.combiner = Combiners.romanceCombiner;
+
+  return loc;
+}

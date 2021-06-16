@@ -21,6 +21,7 @@
 
 
 import * as BaseUtil from '../common/base_util';
+// TODO: This should not really load the locale constructor.
 import {en} from '../l10n/locales/locale_en';
 import {LOCALE} from '../l10n/locale';
 import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
@@ -259,7 +260,7 @@ export class MathStore extends BaseRuleStore {
    */
   private matchNumber_(str: string): {number: string, length: number}|null {
     let locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp.NUMBER));
-    let enNum = str.match(new RegExp('^' + en.MESSAGES.regexp.NUMBER));
+    let enNum = str.match(new RegExp('^' + en().MESSAGES.regexp.NUMBER));
     if (!locNum && !enNum) {
       return null;
     }
@@ -270,9 +271,9 @@ export class MathStore extends BaseRuleStore {
     }
     let num =
         enNum[0]
-            .replace(new RegExp(en.MESSAGES.regexp.DIGIT_GROUP, 'g'), 'X')
+          .replace(new RegExp(en().MESSAGES.regexp.DIGIT_GROUP, 'g'), 'X')
             .replace(
-                new RegExp(en.MESSAGES.regexp.DECIMAL_MARK, 'g'),
+              new RegExp(en().MESSAGES.regexp.DECIMAL_MARK, 'g'),
                 LOCALE.MESSAGES.regexp.DECIMAL_MARK)
             .replace(/X/g, LOCALE.MESSAGES.regexp.DIGIT_GROUP.replace(/\\/g, ''));
     return {number: num, length: enNum[0].length};

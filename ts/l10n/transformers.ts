@@ -63,6 +63,10 @@ export function siCombiner(prefix: string, unit: string) {
 // Namespaces
 export let Combiners: Record<string, Combiner> = {};
 
+Combiners.identityCombiner = function(a: string, b: string, c: string) {
+  return a + b + c;
+}
+
 /**
  * A combiner adding the font name before the letter. Empty strings are ignored.
  * @param letter The letter.

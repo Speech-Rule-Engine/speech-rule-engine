@@ -24,9 +24,7 @@
 //
 
 import {combinePostfixIndex} from '../locale_util';
-import {ALPHABETS} from '../alphabets';
-import {MESSAGES} from '../messages';
-import {Locale} from '../locale';
+import {createLocale, Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_es';
 import {Combiners} from '../transformers';
 
@@ -37,31 +35,28 @@ let sansserifCombiner = function(letter: string, font: string, cap: string) {
 };
 
 
-export const es: Locale = {
-  COMBINERS: {
-    'sansserif': sansserifCombiner
-  },
-  
-  MS_FUNC: {
-    FRAC_NEST_DEPTH: function(_node: string) {
-      return false;
-    },
-    RADICAL_NEST_DEPTH: function(_count: string) {
-      return '';
-    },
-    COMBINE_ROOT_INDEX: combinePostfixIndex,
-    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
-      return a + b + c;
-    },
-    COMBINE_NESTED_RADICAL: function(a: string, _b: string, c: string) {
-      return a + c;
-    },
-    FONT_REGEXP: function(font: string) {
-      return RegExp('^' + font + ' ');
-    }
-  },
+let locale: Locale = null;
 
-  PLURAL: function(unit: string) {
+export function es(): Locale {
+  if (!locale) {
+    locale = create();
+  }
+  // TODO: Initialise the grammar methods here?
+  return locale;
+}
+
+function create(): Locale {
+  let loc = createLocale();
+  loc.NUMBERS = NUMBERS;
+
+  loc.COMBINERS['sansserif'] = sansserifCombiner;
+
+  loc.FUNCTIONS.fracNestDepth = _node => false;
+  loc.FUNCTIONS.radicalNestDepth = _count => '';
+  loc.FUNCTIONS.combineRootIndex = combinePostfixIndex,
+  loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c;
+  loc.FUNCTIONS.fontRegexp = font => RegExp('^' + font + ' ');
+  loc.FUNCTIONS.plural = (unit: string) => {
     if (/.*(a|e|i|o|u)$/.test(unit)) {
       return unit + 's';
     }
@@ -79,17 +74,15 @@ export const es: Locale = {
     }
     return unit + 'es';
   },
-
-  SI: function(prefix: string, unit: string) {
+  loc.FUNCTIONS.si = (prefix: string, unit: string) => {
     if (unit.match(/^metro/)) {
       prefix = prefix.replace(/a$/, 'á').replace(/o$/, 'ó').replace(/i$/, 'í');
     }
     return prefix + unit;
-  },
+  };
 
-  MESSAGES: MESSAGES(),
-  NUMBERS: NUMBERS,
-  ALPHABETS: ALPHABETS()
+  loc.ALPHABETS.combiner = Combiners.prefixCombiner;
+
+  return loc;
 };
 
-es.ALPHABETS.combiner = Combiners.prefixCombiner;

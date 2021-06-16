@@ -17,7 +17,7 @@
  * @fileoverview Translating numbers into German.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-import {Numbers} from '../numbers';
+import {Numbers, NUMBERS as NUMB} from '../messages';
 
 //
 // This work was sponsored by ETH Zurich
@@ -137,12 +137,10 @@ function simpleOrdinal(num: number): string {
 }
 
 
-const NUMBERS: Numbers = {
-  wordOrdinal: wordOrdinal,
-  simpleOrdinal: simpleOrdinal,
-  numberToWords: numberToWords,
-  numberToOrdinal: numberToOrdinal,
-};
-
+const NUMBERS: Numbers = NUMB();
+NUMBERS.wordOrdinal = wordOrdinal;
+NUMBERS.simpleOrdinal = simpleOrdinal;
+NUMBERS.numberToWords = numberToWords;
+NUMBERS.numberToOrdinal = numberToOrdinal;
 
 export default NUMBERS;

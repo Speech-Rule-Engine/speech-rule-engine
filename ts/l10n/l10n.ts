@@ -32,7 +32,7 @@ import {nemeth} from './locales/locale_nemeth';
 import {Locale, LOCALE} from './locale';
 
 
-export const locales: {[key: string]: Locale} = {
+export const locales: {[key: string]: () => Locale} = {
   'de': de,
   'en': en,
   'es': es,
@@ -70,7 +70,7 @@ export function getLocale(): Locale {
     console.error('Locale ' + locale + ' does not exist! Using en instead.');
     Engine.getInstance().locale = 'en';
   }
-  return locales[Engine.getInstance().locale] || locales['en'];
+  return (locales[Engine.getInstance().locale] || locales['en'])();
 }
 
 
@@ -79,7 +79,7 @@ export function getLocale(): Locale {
  * @param json The JSON of the locale map.
  */
 export function completeLocale(json: any) {
-  let locale = locales[json.locale] as any;
+  let locale = locales[json.locale];
   if (!locale) {
     console.error('Locale ' + json.locale + ' does not exist!');
     return;
@@ -87,8 +87,9 @@ export function completeLocale(json: any) {
   let kind = json.kind.toUpperCase();
   let messages = json.messages;
   if (!messages) return;
+  let loc = locale() as any;
   for (let [key, value] of Object.entries(messages)) {
     // TODO (TS): See if this is really an object structure.
-    locale[kind][key] = value;
+    loc[kind][key] = value;
   }
 }

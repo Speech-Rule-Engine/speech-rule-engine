@@ -234,7 +234,7 @@ export function fractionNestingDepth(node: Element): number {
   return getNestingDepth(
       'fraction', node, ['fraction'], nestingBarriers, {},
     // TODO (TS): Make this a proper type.
-    LOCALE.MS_FUNC.FRAC_NEST_DEPTH as (n: Element) => boolean);
+    LOCALE.FUNCTIONS.fracNestDepth as (n: Element) => boolean);
 }
 
 
@@ -316,8 +316,8 @@ export function openingFractionSbrief(node: Element): string {
   if (depth === 1) {
     return LOCALE.MESSAGES.MS.FRAC_S;
   }
-  return LOCALE.MS_FUNC.COMBINE_NESTED_FRACTION(
-      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+  return LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
       LOCALE.MESSAGES.MS.FRAC_S);
 }
 
@@ -332,8 +332,8 @@ export function closingFractionSbrief(node: Element): string {
   if (depth === 1) {
     return LOCALE.MESSAGES.MS.ENDFRAC;
   }
-  return LOCALE.MS_FUNC.COMBINE_NESTED_FRACTION(
-      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+  return LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
       LOCALE.MESSAGES.MS.ENDFRAC);
 }
 
@@ -348,8 +348,8 @@ export function overFractionSbrief(node: Element): string {
   if (depth === 1) {
     return LOCALE.MESSAGES.MS.FRAC_OVER;
   }
-  return LOCALE.MS_FUNC.COMBINE_NESTED_FRACTION(
-      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
+  return LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
       LOCALE.MESSAGES.MS.FRAC_OVER);
 }
 
@@ -495,12 +495,12 @@ export function nestedRadical(
     node: Element, prefix: string, postfix: string): string {
   let depth = radicalNestingDepth(node);
   let index = getRootIndex(node);
-  postfix = index ? LOCALE.MS_FUNC.COMBINE_ROOT_INDEX(postfix, index) : postfix;
+  postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(postfix, index) : postfix;
   if (depth === 1) {
     return postfix;
   }
-  return LOCALE.MS_FUNC.COMBINE_NESTED_RADICAL(
-      prefix, LOCALE.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1), postfix);
+  return LOCALE.FUNCTIONS.combineNestedRadical(
+      prefix, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), postfix);
 }
 
 

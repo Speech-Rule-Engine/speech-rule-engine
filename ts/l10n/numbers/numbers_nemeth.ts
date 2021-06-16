@@ -23,7 +23,7 @@
 //
 
 
-import {Numbers} from '../numbers';
+import {Numbers, NUMBERS as NUMB} from '../messages';
 
 
 /**
@@ -41,9 +41,8 @@ function numberToWords(num: number): string {
 }
 
 
-const NUMBERS: Numbers = {
-  numberToWords: numberToWords,
-  simpleOrdinal: numberToWords,
-};
+const NUMBERS: Numbers = NUMB();
+NUMBERS.numberToWords = numberToWords;
+NUMBERS.numberToOrdinal = numberToWords;
 
 export default NUMBERS;

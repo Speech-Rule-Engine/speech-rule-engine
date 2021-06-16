@@ -14,61 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic types and structurs for localised numbers.
+ * @fileoverview 
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as tr from './transformers';
-
-export interface Numbers {
-  /**
-   * The word for zero.
-   */
-  zero?: string;
-
-  /**
-   * String representation of one to nineteen (or higher).
-   * The zero position is generally left empty.
-   */
-  ones?: string[];
-
-  /**
-   * String representation of twenty to ninety.
-   */
-  tens?: string[];
-
-  /**
-   * String representation of thousand to decillion.
-   */
-  large?: string[];
-
-  /**
-   * Other special representations that are loaded via locale.
-   */
-  special?: {[key: string]: string|string[]};
-  
-  // Constructor methods
-  wordOrdinal?: tr.Transformer;
-  simpleOrdinal: tr.Transformer;
-  numberToWords: tr.Transformer;
-  numberToOrdinal?: tr.GrammarCase;
-
-  vulgarSep?: string;
-  numSep?: string;
-};
-
-
-export const NUMBERS: Numbers = {
-  zero: 'zero',
-  ones: [],
-  tens: [],
-  large: [],
-  special: {},
-
-  wordOrdinal: tr.identityTransformer,
-  simpleOrdinal: tr.identityTransformer,
-  numberToWords: tr.identityTransformer,
-  numberToOrdinal: tr.pluralCase,
-  vulgarSep: ' ',
-  numSep: ' '
-};

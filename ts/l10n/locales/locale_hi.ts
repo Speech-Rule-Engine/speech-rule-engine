@@ -24,41 +24,26 @@
 // This work was supported by British Council UKIERI SPARC Project #P1161
 //
 
-import {nestingToString, vulgarNestingDepth} from '../locale_util';
-import {ALPHABETS} from '../alphabets';
-import {MESSAGES} from '../messages';
-import {Locale} from '../locale';
+import {createLocale, Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_hi';
-import {Combiners, siCombiner} from '../transformers';
+import {Combiners} from '../transformers';
 
 
-export const hi: Locale = {
-  MS_FUNC: {
-    FRAC_NEST_DEPTH: vulgarNestingDepth,
-    RADICAL_NEST_DEPTH: nestingToString,
-    COMBINE_ROOT_INDEX: function(postfix: string, _index: string) {
-      return postfix;
-    },
-    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
-      return a + b + c;
-    },
-    COMBINE_NESTED_RADICAL: function(a: string, b: string, c: string) {
-      return a + b + c;
-    },
-    FONT_REGEXP: function(font: string) {
-      return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
-    }
-  },
-  SI: siCombiner,
+let locale: Locale = null;
 
-  PLURAL: function(unit: string) {
-    return unit;
-  },
+export function hi(): Locale {
+  if (!locale) {
+    locale = create();
+  }
+  // TODO: Initialise the grammar methods here?
+  return locale;
+}
 
-  MESSAGES: MESSAGES(),
-  NUMBERS: NUMBERS,
-  ALPHABETS: ALPHABETS()
+function create(): Locale {
+  let loc = createLocale();
+  loc.NUMBERS = NUMBERS;
+  loc.ALPHABETS.combiner = Combiners.prefixCombiner;
 
+  return loc;
 };
 
-hi.ALPHABETS.combiner = Combiners.prefixCombiner;
