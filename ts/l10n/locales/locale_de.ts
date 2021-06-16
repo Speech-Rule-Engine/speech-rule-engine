@@ -29,6 +29,7 @@ import {ALPHABETS} from '../alphabets';
 import {MESSAGES} from '../messages';
 import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_de';
+import {siCombiner} from '../transformers';
 
 
 let germanPrefixCombiner = function(letter: string, font: string, cap: string) {
@@ -85,9 +86,7 @@ export const de: Locale = {
     'germanPostfix': germanPostfixCombiner
   },
   
-  SI: function(prefix: string, unit: string) {
-    return prefix + unit.toLowerCase();
-  },
+  SI: siCombiner,
 
   PLURAL: function(unit: string) {
     return unit;

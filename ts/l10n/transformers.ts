@@ -56,7 +56,7 @@ export function identityTransformer(input: string|number): string {
  * @param  unit The main part.
  */
 export function siCombiner(prefix: string, unit: string) {
-  return prefix + unit;
+  return prefix + unit.toLowerCase();
 }
 
 

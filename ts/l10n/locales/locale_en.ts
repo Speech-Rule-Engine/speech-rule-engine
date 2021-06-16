@@ -46,14 +46,7 @@ export const en: Locale = {
       return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
     }
   },
-  SI: function(prefix: string, unit: string) {
-    let abbr: {[key: string]: string} = {
-      'megaohm': 'megohm',
-      'kiloohm': 'kilohm'
-    };
-    let si = prefix + unit;
-    return abbr[si] || si;
-  },
+  SI: tr.siCombiner,
 
   PLURAL: function(unit: string) {
     return /.*s$/.test(unit) ? unit : unit + 's';

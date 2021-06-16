@@ -29,7 +29,7 @@ import {ALPHABETS} from '../alphabets';
 import {MESSAGES} from '../messages';
 import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_it';
-import {Combiners} from '../transformers';
+import {Combiners, siCombiner} from '../transformers';
 
 
 let italianPostfixCombiner = function(
@@ -68,9 +68,7 @@ export const it: Locale = {
     return unit;
   },
 
-  SI: function(prefix: string, unit: string) {
-    return prefix + unit;
-  },
+  SI: siCombiner,
 
   MESSAGES: MESSAGES(),
   NUMBERS: NUMBERS,

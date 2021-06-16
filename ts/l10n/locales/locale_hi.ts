@@ -29,7 +29,7 @@ import {ALPHABETS} from '../alphabets';
 import {MESSAGES} from '../messages';
 import {Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_hi';
-import {Combiners} from '../transformers';
+import {Combiners, siCombiner} from '../transformers';
 
 
 export const hi: Locale = {
@@ -49,9 +49,7 @@ export const hi: Locale = {
       return new RegExp('^' + font.split(/ |-/).join('( |-)') + '( |-)');
     }
   },
-  SI: function(prefix: string, unit: string) {
-    return prefix + unit;
-  },
+  SI: siCombiner,
 
   PLURAL: function(unit: string) {
     return unit;
