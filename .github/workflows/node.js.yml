@@ -37,7 +37,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: sre-library
-          path: lib
+          path: lib js ts
       - name: Set up tests
         run: |
           sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
