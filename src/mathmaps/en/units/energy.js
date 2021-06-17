@@ -76,5 +76,25 @@
    },
    "key": "\u03A9",
    "names": ["\u03A9"]
+  },
+  {"category": "energy",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "megohm"
+     }
+   },
+   "key": "M\u03A9",
+   "names": ["M\u03A9"]
+  },
+  {"category": "energy",
+   "si": true,
+   "mappings": {
+     "default": {
+       "default": "kilohm"
+     }
+   },
+   "key": "k\u03A9",
+   "names": ["k\u03A9"]
   }
 ]

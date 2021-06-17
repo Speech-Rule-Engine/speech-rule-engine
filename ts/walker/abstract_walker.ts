@@ -827,9 +827,9 @@ export abstract class AbstractWalker<T> implements Walker {
     let oldDepth = Grammar.getInstance().getParameter('depth');
     Grammar.getInstance().setParameter('depth', true);
     let primary = this.getFocus().getDomPrimary();
-    let expand = this.expandable(primary) ? LOCALE.NAVIGATE.EXPANDABLE :
-      (this.collapsible(primary) ? LOCALE.NAVIGATE.COLLAPSIBLE : '');
-    let level = LOCALE.NAVIGATE.LEVEL + ' ' + this.getDepth();
+    let expand = this.expandable(primary) ? LOCALE.MESSAGES.navigate.EXPANDABLE :
+      (this.collapsible(primary) ? LOCALE.MESSAGES.navigate.COLLAPSIBLE : '');
+    let level = LOCALE.MESSAGES.navigate.LEVEL + ' ' + this.getDepth();
     let snodes = this.getFocus().getSemanticNodes();
     let prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);
     let audio = [

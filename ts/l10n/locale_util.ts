@@ -22,7 +22,7 @@
 
 import * as MathspeakUtil from '../speech_rules/mathspeak_util';
 import {LOCALE} from './locale';
-import {extractString} from './transformers';
+import {Combiner, Combiners} from './transformers';
 
 
 /**
@@ -33,9 +33,9 @@ import {extractString} from './transformers';
 export function nestingToString(count: number): string {
   switch (count) {
     case 1:
-      return LOCALE.MS.ONCE || '';
+      return LOCALE.MESSAGES.MS.ONCE || '';
     case 2:
-      return LOCALE.MS.TWICE;
+      return LOCALE.MESSAGES.MS.TWICE;
     default:
       return count.toString();
   }
@@ -60,7 +60,7 @@ export function vulgarNestingDepth(node: Element): boolean {
  * @return The combined string, postfix plus index.
  */
 export function combinePostfixIndex(postfix: string, index: string): string {
-  return postfix === LOCALE.MS.ROOTINDEX || postfix === LOCALE.MS.INDEX ?
+  return postfix === LOCALE.MESSAGES.MS.ROOTINDEX || postfix === LOCALE.MESSAGES.MS.INDEX ?
       postfix :
       postfix + ' ' + index;
 }
@@ -72,7 +72,7 @@ export function combinePostfixIndex(postfix: string, index: string): string {
  * @return The localized font name.
  */
 export function localFont(font: string): string {
-  return extractString(LOCALE.FONT[font], font);
+  return extractString(LOCALE.MESSAGES.font[font], font);
 }
 
 
@@ -82,7 +82,7 @@ export function localFont(font: string): string {
  * @return The localized role name.
  */
 export function localRole(role: string): string {
-  return extractString(LOCALE.ROLE[role], role);
+  return extractString(LOCALE.MESSAGES.role[role], role);
 }
 
 
@@ -92,5 +92,33 @@ export function localRole(role: string): string {
  * @return The localized enclose name.
  */
 export function localEnclose(enclose: string): string {
-  return extractString(LOCALE.ENCLOSE[enclose], enclose);
+  return extractString(LOCALE.MESSAGES.enclose[enclose], enclose);
+}
+
+
+/**
+ * Extracts a string from a combined message entry.
+ * @param combiner The combined message
+ * @return The name
+ */
+export function extractString(combiner: string | [string, string],
+                              fallback: string) {
+  if (combiner === undefined) {
+    return fallback;
+  }
+  return (typeof combiner === 'string') ? combiner : combiner[0];
+}
+
+
+/**
+ * Retrieves font value and combiner for the current locale.
+ * @param font The font of an alphabet.
+ * @return The localised font value plus a combiner.
+ */
+export function localeFontCombiner(
+  font: string | [string, string]): {font: string, combiner: Combiner} {
+  return typeof font === 'string' ?
+    {font: font, combiner: LOCALE.ALPHABETS.combiner} :
+    {font: font[0], combiner: 
+     LOCALE.COMBINERS[font[1]] || Combiners[font[1]] || LOCALE.ALPHABETS.combiner};
 }

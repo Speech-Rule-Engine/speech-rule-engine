@@ -24,11 +24,9 @@
 //
 
 import {Grammar} from '../../rule_engine/grammar';
-import {localFont, vulgarNestingDepth} from '../locale_util';
-import {ALPHABETS} from '../alphabets';
-import {Locale} from '../locale';
+import {localFont} from '../locale_util';
+import {createLocale, Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_de';
-
 
 let germanPrefixCombiner = function(letter: string, font: string, cap: string) {
   if (cap === 's') {
@@ -51,188 +49,44 @@ let germanPostfixCombiner = function(
 };
 
 
-export const de: Locale = {
-  MS: {
-    START: 'Anfang',
-    FRAC_V: 'Bruch',
-    FRAC_B: 'Bruch',
-    FRAC_S: 'Bruch',
-    END: 'Ende',
-    FRAC_OVER: 'durch',
-    TWICE: 'Twice',  // TODO: Do we need this?
-    NEST_FRAC: 'geschachtelt',
-    ENDFRAC: 'Ende Bruch',
-    SUPER: 'hoch',
-    SUB: 'Index',  // TODO: Maybe Index should be 'tief'?
-    SUP: 'hoch',
-    SUPERSCRIPT: 'hoch',
-    SUBSCRIPT: 'Index',
-    BASELINE: 'Grundlinie',
-    BASE: 'Grund',
-    NESTED: 'geschachtelte',
-    NEST_ROOT: 'geschachtelte',
-    STARTROOT: 'Anfang Wurzel',
-    ENDROOT: 'Ende Wurzel',
-    ROOTINDEX: 'Wurzelexponent',
-    ROOT: 'Wurzel',
-    INDEX: 'Exponent',
-    UNDER: 'Unter',
-    UNDERSCRIPT: 'Unterschrift',
-    OVER: 'Über',
-    OVERSCRIPT: 'Überschrift'
-  },
+let locale: Locale = null;
 
-  MS_FUNC: {
-    FRAC_NEST_DEPTH: vulgarNestingDepth,
-    RADICAL_NEST_DEPTH: function(x: number) {
-      return x > 1 ? de.NUMBERS.numberToWords(x) + 'fach' : '';
-    },
-    COMBINE_ROOT_INDEX: function(postfix: string, index: string) {
-      let root = index ? index + 'wurzel' : '';
-      return postfix.replace('Wurzel', root);
-    },
-    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
-      return a + b + c;
-    },
-    COMBINE_NESTED_RADICAL: function(a: string, b: string, c: string) {
-      a = c.match(/exponent$/) ? a + 'r' : a;
-      let count = (b ? b + ' ' : '') + a;
-      return c.match(/ /) ? c.replace(/ /, ' ' + count + ' ') : count + ' ' + c;
-    },
-    FONT_REGEXP: function(font: string) {
-      font = font.split(' ')
-                 .map(function(x) {
-                   return x.replace(/s$/, '(|s)');
-                 })
-                 .join(' ');
-      return new RegExp('((^' + font + ' )|( ' + font + '$))');
-    }
-  },
+export function de(): Locale {
+  if (!locale) {
+    locale = create();
+  }
+  // TODO: Initialise the grammar methods here?
+  return locale;
+}
 
+function create(): Locale {
+  let loc = createLocale();
+  loc.NUMBERS = NUMBERS;
+  loc.COMBINERS['germanPostfix'] = germanPostfixCombiner;
+  loc.ALPHABETS.combiner = germanPrefixCombiner;
+  loc.FUNCTIONS.radicalNestDepth = function(x: number) {
+    return x > 1 ? loc.NUMBERS.numberToWords(x) + 'fach' : '';
+  };
+  loc.FUNCTIONS.combineRootIndex = function(postfix: string, index: string) {
+    let root = index ? index + 'wurzel' : '';
+    return postfix.replace('Wurzel', root);
+  };
+  loc.FUNCTIONS.combineNestedRadical = function(a: string, b: string, c: string) {
+    a = c.match(/exponent$/) ? a + 'r' : a;
+    let count = (b ? b + ' ' : '') + a;
+    return c.match(/ /) ? c.replace(/ /, ' ' + count + ' ') : count + ' ' + c;
+  };
+  loc.FUNCTIONS.fontRegexp = function(font: string) {
+    font = font.split(' ')
+      .map(function(x) {
+        return x.replace(/s$/, '(|s)');
+      })
+      .join(' ');
+    return new RegExp('((^' + font + ' )|( ' + font + '$))');
+  };
+  return loc;
+}
 
-  MS_ROOT_INDEX: {2: 'Quadrat', 3: 'Kubik'},
-
-  // TODO: Grammar of numbers vs digits! Currently grammar is wrt. letters.
-  FONT: {
-    'bold': 'fettes',
-    'bold-fraktur': 'fettes Fraktur',
-    'bold-italic': 'fettkursives',
-    'bold-script': 'fettes Schreibschrift',
-    'caligraphic': 'kalligrafisches',
-    'caligraphic-bold': 'fettes kalligrafisches',
-    'double-struck': ['mit Doppelstrich', germanPostfixCombiner],
-    'double-struck-italic': ['kursiv mit Doppelstrich', germanPostfixCombiner],
-    'fraktur': 'Fraktur',
-    'fullwidth': 'vollbreites',
-    'italic': 'kursives',
-    'monospace': 'nichtproportionales',
-    'normal': 'normales',
-    'oldstyle': 'antiquiertes',
-    'oldstyle-bold': 'antiquiertes fettes',
-    'script': 'Schreibschrift',
-    'sans-serif': 'serifenloses',
-    'sans-serif-italic': 'serifenloses kursives',
-    'sans-serif-bold': 'serifenloses fettes',
-    'sans-serif-bold-italic': 'serifenloses fettkursives',
-    'unknown': 'unbekannt'
-  },
-
-  EMBELLISH: {
-    // Embellishments
-    // TODO: Grammar of numbers vs digits!
-    'super': 'hoch',
-    'sub': 'Index',
-    'circled': 'eingekreistes',
-    'parenthesized': 'eingeklammertes',
-    'period': ['Punkt', germanPostfixCombiner],
-    'negative-circled': 'schwarz eingekreistes',
-    'double-circled': 'doppelt eingekreistes',
-    'circled-sans-serif': 'eingekreistes serifenloses',
-    'negative-circled-sans-serif': 'schwarz eingekreistes serifenloses',
-    'comma': ['Komma', germanPostfixCombiner],
-    'squared': 'umrahmtes',
-    'negative-squared': 'schwarz umrahmtes'
-  },
-
-  ROLE: {
-    // Infixoperators
-    'addition': 'Addition',
-    'multiplication': 'Multiplikation',
-    'subtraction': 'Subtraktion',
-    'division': 'Division',
-    // Relations.
-    'equality': 'Gleichung',
-    'inequality': 'Ungleichung',
-    'element': 'Element',
-    'arrow': 'Pfeil',
-    // Roles of matrices or vectors.
-    'determinant': 'Determinante',
-    'rowvector': 'Zeilenvektor',
-    'binomial': 'Binomialkoeffizient',
-    'squarematrix': 'quadratische Matrize',
-    // Roles of rows, lines, cells.
-    'multiline': 'mehrzeiligem Ausdruck',
-    'matrix': 'Matrize',
-    'vector': 'Vektor',
-    'cases': 'Fallunterscheidung',
-    'table': 'Tabelle',
-    // Unknown
-    'unknown': 'unbekannt'
-  },
-
-
-  ENCLOSE: {
-    'longdiv': 'langer Bruchstrich',
-    'actuarial': 'Bilanzsumme',
-    'radical': 'Quadratwurzel',
-    'box': 'rechteckige Umrandung',
-    'roundedbox': 'abgerundete rechteckige Umrandung',
-    'circle': 'kreisähnliche Umrandung',
-    'left': 'senkrechte Linie links',
-    'right': 'senkrechte Linie rechts',
-    'top': 'waagerechte Linie oberhalb',
-    'bottom': 'waagerechte Linie unterhalb',
-    'updiagonalstrike': 'durchgestrichen',
-    'downdiagonalstrike': 'durchgestrichen',
-    'verticalstrike': 'senkrecht durchgestrichen',
-    'horizontalstrike': 'durchgestrichen',
-    'madruwb': 'arabisches Fakultätssymbol',
-    'updiagonalarrow': 'Pfeil von links unten nach rechts oben',
-    'phasorangle': 'phasor angle',
-    // Unknown
-    'unknown': 'langer Bruchstrich'
-  },
-
-  NAVIGATE:
-      {COLLAPSIBLE: 'kollabierbar', EXPANDABLE: 'ausfaltbar', LEVEL: 'Niveau'},
-
-  REGEXP: {
-    TEXT: 'a-zA-ZäöüÄÖÜß',
-    NUMBER: '((\\d{1,3})(?=(.| ))((.| )\\d{3})*(\\,\\d+)?)|^\\d*\\,\\d+|^\\d+',
-    DECIMAL_MARK: ',',
-    DIGIT_GROUP: '\\.',
-    JOINER_SUBSUPER: ' ',
-    JOINER_FRAC: ' '
-  },
-
-  SI: function(prefix: string, unit: string) {
-    return prefix + unit.toLowerCase();
-  },
-
-  UNIT_TIMES: '',
-
-  PLURAL: function(unit: string) {
-    return unit;
-  },
-
-
-  NUMBERS: NUMBERS,
-  ALPHABETS: ALPHABETS()
-
-};
-
-de.ALPHABETS.combiner = germanPrefixCombiner;
-de.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
 
 Grammar.getInstance().setCorrection(
   'correctOne', (num: string) => num.replace(/^eins$/, 'ein'));

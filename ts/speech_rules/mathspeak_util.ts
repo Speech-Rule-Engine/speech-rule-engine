@@ -234,7 +234,7 @@ export function fractionNestingDepth(node: Element): number {
   return getNestingDepth(
       'fraction', node, ['fraction'], nestingBarriers, {},
     // TODO (TS): Make this a proper type.
-    LOCALE.MS_FUNC.FRAC_NEST_DEPTH as (n: Element) => boolean);
+    LOCALE.FUNCTIONS.fracNestDepth as (n: Element) => boolean);
 }
 
 
@@ -252,7 +252,7 @@ export function nestedFraction(
   if (opt_end) {
     annotation.push(opt_end);
   }
-  return annotation.join(LOCALE.REGEXP.JOINER_FRAC);
+  return annotation.join(LOCALE.MESSAGES.regexp.JOINER_FRAC);
 }
 
 
@@ -262,7 +262,7 @@ export function nestedFraction(
  * @return The opening string.
  */
 export function openingFractionVerbose(node: Element): string {
-  return nestedFraction(node, LOCALE.MS.START, LOCALE.MS.FRAC_V);
+  return nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_V);
 }
 
 
@@ -272,7 +272,7 @@ export function openingFractionVerbose(node: Element): string {
  * @return The closing string.
  */
 export function closingFractionVerbose(node: Element): string {
-  return nestedFraction(node, LOCALE.MS.END, LOCALE.MS.FRAC_V);
+  return nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_V);
 }
 
 
@@ -282,7 +282,7 @@ export function closingFractionVerbose(node: Element): string {
  * @return The middle string.
  */
 export function overFractionVerbose(node: Element): string {
-  return nestedFraction(node, LOCALE.MS.FRAC_OVER);
+  return nestedFraction(node, LOCALE.MESSAGES.MS.FRAC_OVER);
 }
 
 
@@ -292,7 +292,7 @@ export function overFractionVerbose(node: Element): string {
  * @return The opening string.
  */
 export function openingFractionBrief(node: Element): string {
-  return nestedFraction(node, LOCALE.MS.START, LOCALE.MS.FRAC_B);
+  return nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_B);
 }
 
 
@@ -302,7 +302,7 @@ export function openingFractionBrief(node: Element): string {
  * @return The closing string.
  */
 export function closingFractionBrief(node: Element): string {
-  return nestedFraction(node, LOCALE.MS.END, LOCALE.MS.FRAC_B);
+  return nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_B);
 }
 
 
@@ -314,11 +314,11 @@ export function closingFractionBrief(node: Element): string {
 export function openingFractionSbrief(node: Element): string {
   let depth = fractionNestingDepth(node);
   if (depth === 1) {
-    return LOCALE.MS.FRAC_S;
+    return LOCALE.MESSAGES.MS.FRAC_S;
   }
-  return LOCALE.MS_FUNC.COMBINE_NESTED_FRACTION(
-      LOCALE.MS.NEST_FRAC, LOCALE.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
-      LOCALE.MS.FRAC_S);
+  return LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.FRAC_S);
 }
 
 
@@ -330,11 +330,11 @@ export function openingFractionSbrief(node: Element): string {
 export function closingFractionSbrief(node: Element): string {
   let depth = fractionNestingDepth(node);
   if (depth === 1) {
-    return LOCALE.MS.ENDFRAC;
+    return LOCALE.MESSAGES.MS.ENDFRAC;
   }
-  return LOCALE.MS_FUNC.COMBINE_NESTED_FRACTION(
-      LOCALE.MS.NEST_FRAC, LOCALE.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
-      LOCALE.MS.ENDFRAC);
+  return LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.ENDFRAC);
 }
 
 
@@ -346,11 +346,11 @@ export function closingFractionSbrief(node: Element): string {
 export function overFractionSbrief(node: Element): string {
   let depth = fractionNestingDepth(node);
   if (depth === 1) {
-    return LOCALE.MS.FRAC_OVER;
+    return LOCALE.MESSAGES.MS.FRAC_OVER;
   }
-  return LOCALE.MS_FUNC.COMBINE_NESTED_FRACTION(
-      LOCALE.MS.NEST_FRAC, LOCALE.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1),
-      LOCALE.MS.FRAC_OVER);
+  return LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.FRAC_OVER);
 }
 
 
@@ -388,14 +388,14 @@ export function nestedSubSuper(
         parent.tagName === SemanticType.TENSOR && nodeRole &&
             (nodeRole === SemanticRole.LEFTSUB ||
              nodeRole === SemanticRole.RIGHTSUB)) {
-      init = replace.sub + LOCALE.REGEXP.JOINER_SUBSUPER + init;
+      init = replace.sub + LOCALE.MESSAGES.regexp.JOINER_SUBSUPER + init;
     }
     if (parent.tagName === SemanticType.SUPERSCRIPT &&
             node === children.childNodes[1] ||
         parent.tagName === SemanticType.TENSOR && nodeRole &&
             (nodeRole === SemanticRole.LEFTSUPER ||
              nodeRole === SemanticRole.RIGHTSUPER)) {
-      init = replace.sup + LOCALE.REGEXP.JOINER_SUBSUPER + init;
+      init = replace.sup + LOCALE.MESSAGES.regexp.JOINER_SUBSUPER + init;
     }
     node = parent;
   }
@@ -410,7 +410,7 @@ export function nestedSubSuper(
  */
 export function subscriptVerbose(node: Element): string {
   return nestedSubSuper(
-      node, LOCALE.MS.SUBSCRIPT, {sup: LOCALE.MS.SUPER, sub: LOCALE.MS.SUB});
+      node, LOCALE.MESSAGES.MS.SUBSCRIPT, {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB});
 }
 
 
@@ -420,7 +420,7 @@ export function subscriptVerbose(node: Element): string {
  * @return The prefix string.
  */
 export function subscriptBrief(node: Element): string {
-  return nestedSubSuper(node, LOCALE.MS.SUB, {sup: LOCALE.MS.SUP, sub: LOCALE.MS.SUB});
+  return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUB, {sup: LOCALE.MESSAGES.MS.SUP, sub: LOCALE.MESSAGES.MS.SUB});
 }
 
 
@@ -431,7 +431,7 @@ export function subscriptBrief(node: Element): string {
  */
 export function superscriptVerbose(node: Element): string {
   return nestedSubSuper(
-      node, LOCALE.MS.SUPERSCRIPT, {sup: LOCALE.MS.SUPER, sub: LOCALE.MS.SUB});
+      node, LOCALE.MESSAGES.MS.SUPERSCRIPT, {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB});
 }
 
 
@@ -441,7 +441,7 @@ export function superscriptVerbose(node: Element): string {
  * @return The prefix string.
  */
 export function superscriptBrief(node: Element): string {
-  return nestedSubSuper(node, LOCALE.MS.SUP, {sup: LOCALE.MS.SUP, sub: LOCALE.MS.SUB});
+  return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUP, {sup: LOCALE.MESSAGES.MS.SUP, sub: LOCALE.MESSAGES.MS.SUB});
 }
 
 
@@ -451,12 +451,12 @@ export function superscriptBrief(node: Element): string {
  * @return The prefix string.
  */
 export function baselineVerbose(node: Element): string {
-  let baseline = nestedSubSuper(node, '', {sup: LOCALE.MS.SUPER, sub: LOCALE.MS.SUB});
+  let baseline = nestedSubSuper(node, '', {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB});
   if (!baseline) {
-    return LOCALE.MS.BASELINE;
+    return LOCALE.MESSAGES.MS.BASELINE;
   }
-  return baseline.replace(new RegExp(LOCALE.MS.SUB + '$'), LOCALE.MS.SUBSCRIPT)
-      .replace(new RegExp(LOCALE.MS.SUPER + '$'), LOCALE.MS.SUPERSCRIPT);
+  return baseline.replace(new RegExp(LOCALE.MESSAGES.MS.SUB + '$'), LOCALE.MESSAGES.MS.SUBSCRIPT)
+      .replace(new RegExp(LOCALE.MESSAGES.MS.SUPER + '$'), LOCALE.MESSAGES.MS.SUPERSCRIPT);
 }
 
 
@@ -466,8 +466,8 @@ export function baselineVerbose(node: Element): string {
  * @return The prefix string.
  */
 export function baselineBrief(node: Element): string {
-  let baseline = nestedSubSuper(node, '', {sup: LOCALE.MS.SUP, sub: LOCALE.MS.SUB});
-  return baseline || LOCALE.MS.BASE;
+  let baseline = nestedSubSuper(node, '', {sup: LOCALE.MESSAGES.MS.SUP, sub: LOCALE.MESSAGES.MS.SUB});
+  return baseline || LOCALE.MESSAGES.MS.BASE;
 }
 
 
@@ -495,12 +495,12 @@ export function nestedRadical(
     node: Element, prefix: string, postfix: string): string {
   let depth = radicalNestingDepth(node);
   let index = getRootIndex(node);
-  postfix = index ? LOCALE.MS_FUNC.COMBINE_ROOT_INDEX(postfix, index) : postfix;
+  postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(postfix, index) : postfix;
   if (depth === 1) {
     return postfix;
   }
-  return LOCALE.MS_FUNC.COMBINE_NESTED_RADICAL(
-      prefix, LOCALE.MS_FUNC.RADICAL_NEST_DEPTH(depth - 1), postfix);
+  return LOCALE.FUNCTIONS.combineNestedRadical(
+      prefix, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), postfix);
 }
 
 
@@ -513,7 +513,7 @@ export function getRootIndex(node: Element): string {
   let content = node.tagName === 'sqrt' ? '2' :
                                           // TODO (sorge): Make that safer?
       XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
-  return LOCALE.MS_ROOT_INDEX[content] || '';
+  return LOCALE.MESSAGES.MSroots[content] || '';
 }
 /**
  * Opening string for radicals in Mathspeak verbose mode.
@@ -521,7 +521,7 @@ export function getRootIndex(node: Element): string {
  * @return The opening string.
  */
 export function openingRadicalVerbose(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.NESTED, LOCALE.MS.STARTROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.STARTROOT);
 }
 
 
@@ -531,7 +531,7 @@ export function openingRadicalVerbose(node: Element): string {
  * @return The closing string.
  */
 export function closingRadicalVerbose(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.NESTED, LOCALE.MS.ENDROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ENDROOT);
 }
 
 
@@ -541,7 +541,7 @@ export function closingRadicalVerbose(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalVerbose(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.NESTED, LOCALE.MS.ROOTINDEX);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX);
 }
 
 
@@ -551,7 +551,7 @@ export function indexRadicalVerbose(node: Element): string {
  * @return The opening string.
  */
 export function openingRadicalBrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.NEST_ROOT, LOCALE.MS.STARTROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.STARTROOT);
 }
 
 
@@ -561,7 +561,7 @@ export function openingRadicalBrief(node: Element): string {
  * @return The closing string.
  */
 export function closingRadicalBrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.NEST_ROOT, LOCALE.MS.ENDROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ENDROOT);
 }
 
 
@@ -571,7 +571,7 @@ export function closingRadicalBrief(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalBrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.NEST_ROOT, LOCALE.MS.ROOTINDEX);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX);
 }
 
 
@@ -581,7 +581,7 @@ export function indexRadicalBrief(node: Element): string {
  * @return The opening string.
  */
 export function openingRadicalSbrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.NEST_ROOT, LOCALE.MS.ROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOT);
 }
 
 
@@ -591,7 +591,7 @@ export function openingRadicalSbrief(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalSbrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MS.NEST_ROOT, LOCALE.MS.INDEX);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX);
 }
 
 
@@ -617,7 +617,7 @@ export function underscoreNestingDepth(node: Element): number {
  */
 export function nestedUnderscore(node: Element): string {
   let depth = underscoreNestingDepth(node);
-  return Array(depth).join(LOCALE.MS.UNDER) + LOCALE.MS.UNDERSCRIPT;
+  return Array(depth).join(LOCALE.MESSAGES.MS.UNDER) + LOCALE.MESSAGES.MS.UNDERSCRIPT;
 }
 
 
@@ -643,7 +643,7 @@ export function overscoreNestingDepth(node: Element): number {
  */
 export function nestedOverscore(node: Element): string {
   let depth = overscoreNestingDepth(node);
-  return Array(depth).join(LOCALE.MS.OVER) + LOCALE.MS.OVERSCRIPT;
+  return Array(depth).join(LOCALE.MESSAGES.MS.OVER) + LOCALE.MESSAGES.MS.OVERSCRIPT;
 }
 
 

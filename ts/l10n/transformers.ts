@@ -29,16 +29,16 @@ export type GrammarCase = (p1: number, p2: boolean) => string;
 
 export type Processor = Transformer | Combiner | GrammarCase | SiCombiner;
 
+
 /**
  * A trivial translator of numbers with plural.
  * @param num A number.
  * @param plural A flag indicating plural.
  * @return The number as a string.
  */
-export function pluralTransformer(num: number, _plural: boolean): string {
+export function pluralCase(num: number, _plural: boolean): string {
   return num.toString();
 }
-
 
 /**
  * A trivial transformer.
@@ -56,9 +56,16 @@ export function identityTransformer(input: string|number): string {
  * @param  unit The main part.
  */
 export function siCombiner(prefix: string, unit: string) {
-  return prefix + unit;
+  return prefix + unit.toLowerCase();
 }
 
+
+// Namespaces
+export let Combiners: Record<string, Combiner> = {};
+
+Combiners.identityCombiner = function(a: string, b: string, c: string) {
+  return a + b + c;
+}
 
 /**
  * A combiner adding the font name before the letter. Empty strings are ignored.
@@ -67,7 +74,7 @@ export function siCombiner(prefix: string, unit: string) {
  * @param cap Capitalisation expression.
  * @return The speech string as `font cap letter`.
  */
-export function prefixCombiner(
+Combiners.prefixCombiner = function(
     letter: string, font: string, cap: string): string {
   letter = cap ? cap + ' ' + letter : letter;
   return font ? font + ' ' + letter : letter;
@@ -81,7 +88,7 @@ export function prefixCombiner(
  * @param cap Capitalisation expression.
  * @return The speech string as `cap letter font`.
  */
-export function postfixCombiner(
+Combiners.postfixCombiner = function(
     letter: string, font: string, cap: string): string {
   letter = cap ? cap + ' ' + letter : letter;
   return font ? letter + ' ' + font : letter;
@@ -89,14 +96,14 @@ export function postfixCombiner(
 
 
 /**
- * Extracts a string from a combined message entry.
- * @param combiner The combined message
- * @return The name
+ * A combiner used in a number of romance languages.
+ * @param letter The letter.
+ * @param font The font name.
+ * @param cap Capitalisation expression.
+ * @return The speech string as `letter cap font`.
  */
-export function extractString(combiner: string | [string, Processor],
-                              fallback: string) {
-  if (combiner === undefined) {
-    return fallback;
-  }
-  return (typeof combiner === 'string') ? combiner : combiner[0];
-}
+Combiners.romanceCombiner = function (
+    letter: string, font: string, cap: string): string {
+  letter = cap ? letter + ' ' + cap : letter;
+  return font ? letter + ' ' + font : letter;
+};

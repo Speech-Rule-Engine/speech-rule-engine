@@ -23,197 +23,39 @@
 // This work was sponsored by TextHelp
 //
 
-import {combinePostfixIndex, nestingToString} from '../locale_util';
-import {Locale} from '../locale';
-import {ALPHABETS} from '../alphabets';
+import {combinePostfixIndex} from '../locale_util';
+import {createLocale, Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_fr';
-import {prefixCombiner} from '../transformers';
+import {Combiners} from '../transformers';
 
 
-export const fr: Locale = {
-  MS: {
-    START: 'début',
-    FRAC_V: 'fraction',
-    FRAC_B: 'frac',
-    FRAC_S: 'frac',
-    END: 'fin',
-    FRAC_OVER: 'sur',
-    ONCE: '1',
-    TWICE: '2',
-    NEST_FRAC: 'imbriquée',
-    ENDFRAC: 'fin frac',
-    SUPER: 'sup',
-    SUB: 'sub',
-    // SUB: 'inf-', // Short
-    SUP: 'sup',
-    SUPERSCRIPT: 'exposant',
-    SUBSCRIPT: 'indice',
-    BASELINE: 'position de base',
-    BASE: 'position de base',
-    NESTED: 'imbriquée',
-    NEST_ROOT: 'imbriquée',
-    STARTROOT: 'début racine',
-    ENDROOT: 'fin racine',
-    ROOTINDEX: 'indice du radical',
-    ROOT: 'racine',
-    INDEX: 'indice',
-    UNDER: 'sous',
-    UNDERSCRIPT: 'souscript',
-    OVER: 'sus',
-    OVERSCRIPT: 'suscript'
-  },
+let locale: Locale = null;
 
-  MS_FUNC: {
-    FRAC_NEST_DEPTH: function(_node: string) {
-      return false;
-    },
-    RADICAL_NEST_DEPTH: nestingToString,
-    COMBINE_ROOT_INDEX: combinePostfixIndex,
-    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
-      return c.replace(/ $/g, '') + b + a;
-    },
-    COMBINE_NESTED_RADICAL: function(a: string, _b: string, c: string) {
-      return c + ' ' + a;
-    },
-    FONT_REGEXP: function(font: string) {
-      return RegExp(' (en |)' + font + '$');
-    }
-  },
+export function fr(): Locale {
+  if (!locale) {
+    locale = create();
+  }
+  // TODO: Initialise the grammar methods here?
+  return locale;
+}
 
+function create(): Locale {
+  let loc = createLocale();
+  loc.NUMBERS = NUMBERS;
 
-  MS_ROOT_INDEX: {2: 'carrée', 3: 'cubique'},
-
-  FONT: {
-    'bold': 'en gras',
-    'bold-fraktur': 'en gothique gras',
-    'bold-italic': 'en italique gras',
-    'bold-script': 'de ronde en gras',
-    'caligraphic': 'en calligraphique',
-    'caligraphic-bold': 'en calligraphique gras',
-    'double-struck': 'ajouré',
-    'double-struck-italic': 'ajouré en italique',
-    'fraktur': 'en gothique',
-    'fullwidth': 'en pleine largeur',
-    'italic': 'en italique',
-    'monospace': 'en chasse fixe',
-    'normal': 'en normal',
-    'oldstyle': 'en ancien',
-    'oldstyle-bold': 'en ancien gras',
-    'script': 'de ronde',
-    'sans-serif': 'sans empattement',
-    'sans-serif-italic': 'en italique sans empattement',
-    'sans-serif-bold': 'en gras sans empattement',
-    'sans-serif-bold-italic': 'en italique gras sans empattement',
-    'unknown': 'inconnu'
-  },
-
-
-  EMBELLISH: {
-    // Embellishments
-    // TODO: Here we need specialist combiners!
-    'super': ['exposant', prefixCombiner],
-    'sub': ['indice', prefixCombiner],
-    'circled': 'encerclé',
-    'parenthesized': 'entre parenthèses',
-    'period': 'un point',
-    'negative-circled': 'encerclé noir',
-    'double-circled': 'encerclé double',
-    'circled-sans-serif': 'sans empattement encerclé',
-    'negative-circled-sans-serif': 'sans empattement encerclé noir',
-    'comma': 'virgule',
-    'squared': 'encadré',
-    'negative-squared': 'encadré inverse'
-  },
-
-  ROLE: {
-    // Infixoperators
-    'addition': 'addition',
-    'multiplication': 'multiplication',
-    'subtraction': 'soustraction',
-    'division': 'division',
-    // Relations.
-    'equality': 'égalité',
-    'inequality': 'inégalité',
-    'element': 'élément',
-    'arrow': 'flèche',
-    // Roles of matrices or vectors.
-    'determinant': 'déterminant',
-    'rowvector': 'vecteur-rangée',
-    'binomial': 'binomial',
-    'squarematrix': 'matrice carrée',
-    // Sets
-    'set empty': 'ensemble vide',
-    'set extended': 'extension',
-    'set singleton': 'singleton',
-    'set collection': 'collection',
-    // Roles of rows, lines, cells.
-    'label': 'étiquette',
-    'multiline': 'multi-ligne',
-    'matrix': 'matrice',
-    'vector': 'vecteur',
-    'cases': 'déclaration de cas',
-    'table': 'tableau',
-    // Unknown
-    'unknown': 'inconnu'
-  },
-
-
-  ENCLOSE: {
-    'longdiv': 'longue division',
-    'actuarial': 'notation actuarielle',
-    'radical': 'radical',
-    'box': 'boîte',
-    'roundedbox': 'boîte arrondie',
-    'circle': 'cercle',
-    'left': 'barre verticale gauche',
-    'right': 'barre verticale droite',
-    'top': 'trait suscrit',
-    'bottom': 'trait souscrit',
-    'updiagonalstrike': 'texte biffé diagonal montant',
-    'downdiagonalstrike': 'texte biffé diagonal descendant',
-    'verticalstrike': 'texte biffé vertical',
-    'horizontalstrike': 'texte biffé horizontal',
-    'madruwb': 'symbole factorielle arabe',
-    'updiagonalarrow': 'flèche diagonale montante',
-    'phasorangle': 'angle de phase',
-    // Unknown
-    'unknown': 'division longue'
-  },
-
-
-  NAVIGATE: {
-    COLLAPSIBLE: 'compressible',
-    EXPANDABLE: 'décompressible',
-    LEVEL: 'niveau'
-  },
-
-  REGEXP: {
-    TEXT: 'a-zA-ZàâæçéèêëîïôœùûüÿÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ',
-    NUMBER: '((\\d{1,3})(?=( ))(( )\\d{3})*(,\\d+)?)|^\\d*,\\d+|^\\d+',
-    DECIMAL_MARK: ',',
-    DIGIT_GROUP: '',
-    JOINER_SUBSUPER: '-',
-    JOINER_FRAC: ' '
-  },
-
-  SI: function(prefix: string, unit: string) {
-    return prefix + unit;
-  },
-
-  UNIT_TIMES: '',
-
-  PLURAL: function(unit: string) {
+  loc.FUNCTIONS.fracNestDepth = _node => false;
+  loc.FUNCTIONS.combineRootIndex = combinePostfixIndex;
+  loc.FUNCTIONS.combineNestedFraction =
+      (a, b, c) => c.replace(/ $/g, '') + b + a;
+  loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => c + ' ' + a;
+  loc.FUNCTIONS.fontRegexp = font => RegExp(' (en |)' + font + '$');
+  loc.FUNCTIONS.plural = (unit: string) => {
     return /.*s$/.test(unit) ? unit : unit + 's';
-  },
+  };
 
+  loc.ALPHABETS.combiner = Combiners.romanceCombiner;
 
-  NUMBERS: NUMBERS,
-  ALPHABETS: ALPHABETS()
-
+  return loc;
 };
 
-fr.ALPHABETS.combiner = function(letter, font, cap) {
-  letter = cap ? letter + ' ' + cap : letter;
-  return font ? letter + ' ' + font : letter;
-};
 

@@ -282,7 +282,8 @@ export namespace MathCompoundStore {
       for (let domain of Object.keys(json['mappings'])) {
         newJson.mappings[domain] = {};
         for (let style of Object.keys(json['mappings'][domain])) {
-          newJson['mappings'][domain][style] = locales[locale].SI(
+          // TODO: This should not really call the locale method.
+          newJson['mappings'][domain][style] = locales[locale]().FUNCTIONS.si(
               prefix, json['mappings'][domain][style]);
         }
       }

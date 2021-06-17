@@ -24,11 +24,10 @@
 //
 
 
-import {combinePostfixIndex, nestingToString} from '../locale_util';
-import {ALPHABETS} from '../alphabets';
-import {Locale} from '../locale';
+import {combinePostfixIndex} from '../locale_util';
+import {createLocale, Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_it';
-import {prefixCombiner} from '../transformers';
+import {Combiners} from '../transformers';
 
 
 let italianPostfixCombiner = function(
@@ -41,188 +40,30 @@ let italianPostfixCombiner = function(
 };
 
 
-export const it: Locale = {
-  MS: {
-    START: 'inizio',
-    FRAC_V: 'frazione',
-    FRAC_B: 'frazione',
-    FRAC_S: 'frazione',
-    END: 'fine',
-    FRAC_OVER: 'fratto',
-    ONCE: 'una volta',
-    TWICE: 'due volte',
-    NEST_FRAC: 'annidamento',
-    ENDFRAC: 'fine frazione',
-    SUPER: 'super',
-    SUB: 'sub',
-    SUP: 'sup',
-    SUPERSCRIPT: 'apice',
-    SUBSCRIPT: 'pedice',
-    BASELINE: 'linea di base',
-    BASE: 'base',
-    NESTED: 'annidato',
-    NEST_ROOT: 'annidamento',
-    STARTROOT: 'inizio radice',
-    ENDROOT: 'fine radice',
-    ROOTINDEX: 'indice radice',
-    ROOT: 'radice',
-    INDEX: 'indice Radice',
-    UNDER: 'sotto',
-    UNDERSCRIPT: 'sottoscritto',
-    OVER: 'sopra',
-    OVERSCRIPT: 'soprascritto'
-  },
+let locale: Locale = null;
 
-  MS_FUNC: {
-    FRAC_NEST_DEPTH: function(_node: string) {
-      return false;
-    },
-    RADICAL_NEST_DEPTH: nestingToString,
-    COMBINE_ROOT_INDEX: combinePostfixIndex,
-    COMBINE_NESTED_FRACTION: function(a: string, b: string, c: string) {
-      return c.replace(/ $/g, '') + b + a;
-    },
-    COMBINE_NESTED_RADICAL: function(a: string, _b: string, c: string) {
-      return c + ' ' + a;
-    },
-    FONT_REGEXP: function(font: string) {
-      return RegExp(' (en |)' + font + '$');
-    }
-  },
+export function it(): Locale {
+  if (!locale) {
+    locale = create();
+  }
+  // TODO: Initialise the grammar methods here?
+  return locale;
+}
 
+function create(): Locale {
+  let loc = createLocale();
+  loc.NUMBERS = NUMBERS;
 
-  MS_ROOT_INDEX: {2: '', 3: ''},
+  loc.COMBINERS['italianPostfix'] = italianPostfixCombiner;
 
-  FONT: {
-    'bold': 'grassetto',
-    'bold-fraktur': 'grassetto gotico',
-    'bold-italic': 'grassetto italico',
-    'bold-script': 'grassetto script',
-    'caligraphic': 'calligrafico',
-    'caligraphic-bold': 'grassetto calligrafico',
-    'double-struck': 'grassetto da lavagna',
-    'double-struck-italic': 'grassetto da lavagna italico',
-    'fraktur': 'gotico',
-    'fullwidth': 'fullwidth',
-    'italic': 'italico',
-    'monospace': 'monospazio',
-    'normal': 'normale',
-    'oldstyle': 'vecchio stile',
-    'oldstyle-bold': 'vecchio stile grassetto',
-    'script': 'script',
-    'sans-serif': 'senza grazie',  // Sans serif could just be sans serif
-    'sans-serif-italic': 'senza grazie italico',
-    'sans-serif-bold': 'senza grazie grassetto',
-    'sans-serif-bold-italic': 'senza grazie grassetto italico',
-    'unknown': 'sconosciuto'
-  },
+  loc.FUNCTIONS.fracNestDepth = _node => false;
+  loc.FUNCTIONS.combineRootIndex = combinePostfixIndex;
+  loc.FUNCTIONS.combineNestedFraction =
+      (a, b, c) => c.replace(/ $/g, '') + b + a;
+  loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => c + ' ' + a;
+  loc.FUNCTIONS.fontRegexp = font => RegExp(' (en |)' + font + '$');
 
+  loc.ALPHABETS.combiner = Combiners.romanceCombiner;
 
-  EMBELLISH: {
-    // Embellishments
-    'super': ['apice', prefixCombiner],
-    'sub': ['pedice', prefixCombiner],
-    'circled': ['cerchiato', italianPostfixCombiner],
-    'parenthesized': 'tra parentesi',
-    'period': 'punto',
-    'negative-circled': ['cerchiato in negativo', italianPostfixCombiner],
-    'double-circled': 'doppio cerchiato',
-    'circled-sans-serif': 'cerchiato senza grazie',
-    'negative-circled-sans-serif': 'cerchiato in negativo senza grazie',
-    'comma': 'virgola',
-    'squared': 'dentro quadrato',
-    'negative-squared': 'dentro quadrato in negativo'
-  },
-
-  ROLE: {
-    // Infixoperators
-    'addition': 'addizione',
-    'multiplication': 'moltiplicazione',
-    'subtraction': 'sottrazione',
-    'division': 'divisione',
-    // Relations.
-    'equality': 'uguaglianza',
-    'inequality': 'disuguaglianza',
-    'element': 'elemento',
-    'arrow': 'freccia',
-    // Roles of matrices or vectors.
-    'determinant': 'determinante',
-    'rowvector': 'vettore riga',
-    'binomial': 'binomiale',
-    'squarematrix': 'matrice quadrata',
-    // Sets
-    'set empty': 'insieme vuoto',
-    'set extended': 'estensione di insieme',
-    'set singleton': 'singoletto',
-    'set collection': 'collezione',
-    // Roles of rows, lines, cells.
-    'label': 'eitchetta',
-    'multiline': 'linee multiple',
-    'matrix': 'matrice',
-    'vector': 'vettore',
-    'cases': 'comando switch',
-    'table': 'tavola',
-    // Unknown
-    'unknown': 'sconosciuto'
-  },
-
-
-  ENCLOSE: {
-    'longdiv': 'divisione lunga',
-    'actuarial': 'simbolo attuario',
-    'radical': 'radice quadrata',
-    'box': 'riquadro',
-    'roundedbox': 'riquadro arrotondato',
-    'circle': 'cerchio',
-    'left': 'linea verticale sinistra',
-    'right': 'linea verticale destra',
-    'top': 'barra sopra',
-    'bottom': 'barra sotto',
-    'updiagonalstrike': 'cancellatura',
-    'downdiagonalstrike': 'cancellatura',
-    'verticalstrike': 'cancellatura verticale',
-    'horizontalstrike': 'cancellatura',
-    'madruwb': 'simbolo fattoriale arabo',
-    'updiagonalarrow': 'freccia diagonale',
-    'phasorangle': 'angolo fasore',
-    // Unknown
-    'unknown': 'divisione lunga'
-  },
-
-
-  NAVIGATE: {
-    COLLAPSIBLE: 'collassabile',
-    EXPANDABLE: 'espandibile',
-    LEVEL: 'livello'
-  },
-
-  REGEXP: {
-    TEXT: 'a-zA-ZàèìòùéóÀ',
-    NUMBER: '((\\d{1,3})(?=(.| ))((.| )\\d{3})*(\\,\\d+)?)|^\\d*\\,\\d+|^\\d+',
-    DECIMAL_MARK: ',',
-    DIGIT_GROUP: '\\.',
-    JOINER_SUBSUPER: ' ',
-    JOINER_FRAC: ' '
-  },
-
-  PLURAL: function(unit: string) {
-    // TODO: Make as programmatical as possible!
-    return unit;
-  },
-
-  UNIT_TIMES: '',
-
-  SI: function(prefix: string, unit: string) {
-    return prefix + unit;
-  },
-
-
-  NUMBERS: NUMBERS,
-  ALPHABETS: ALPHABETS()
-
-};
-
-it.ALPHABETS.combiner = function(letter: string, font: string, cap: string) {
-  letter = cap ? letter + ' ' + cap : letter;
-  return font ? letter + ' ' + font : letter;
-};
+  return loc;
+}

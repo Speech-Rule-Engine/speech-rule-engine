@@ -167,7 +167,7 @@ export class Grammar {
       return Grammar.cleanUnit_(text);
     }
     if (plural) {
-      result = LOCALE.PLURAL(result);
+      result = LOCALE.FUNCTIONS.plural(result);
     }
     return result;
   }
@@ -404,9 +404,9 @@ function correctFont_(text: string, correction: string): string {
   if (!correction || !text) {
     return text;
   }
-  correction =
-    LOCALE.MS_FUNC.FONT_REGEXP(LocaleUtil.localFont(correction));
-  return text.replace(correction, '');
+  let regexp =
+    LOCALE.FUNCTIONS.fontRegexp(LocaleUtil.localFont(correction));
+  return text.replace(regexp, '');
 }
 
 
@@ -429,7 +429,7 @@ function addAnnotation_(text: string, annotation: string): string {
  * @return The untranslated text.
  */
 function noTranslateText_(text: string): string {
-  if (text.match(new RegExp('^[' + LOCALE.REGEXP.TEXT + ']+$'))) {
+  if (text.match(new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+$'))) {
     Grammar.getInstance().currentFlags['translate'] = false;
   }
   return text;

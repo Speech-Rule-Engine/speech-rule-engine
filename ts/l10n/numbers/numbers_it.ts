@@ -24,7 +24,7 @@
 
 
 import {Grammar} from '../../rule_engine/grammar';
-import {Numbers} from '../numbers';
+import {Numbers, NUMBERS as NUMB} from '../messages';
 
 
 /**
@@ -135,12 +135,10 @@ function simpleOrdinal(num: number): string {
   return num.toString() + (gender === 'male' ? 'o' : 'a');
 }
 
-const NUMBERS: Numbers = {
-  wordOrdinal: wordOrdinal,
-  simpleOrdinal: simpleOrdinal,
-  numberToWords: numberToWords,
-  numberToOrdinal: numberToOrdinal
-};
-
+const NUMBERS: Numbers = NUMB();
+NUMBERS.wordOrdinal = wordOrdinal;
+NUMBERS.simpleOrdinal = simpleOrdinal;
+NUMBERS.numberToWords = numberToWords;
+NUMBERS.numberToOrdinal = numberToOrdinal;
 
 export default NUMBERS;
