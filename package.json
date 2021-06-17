@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
-    "pretest": "git submodule update; npm run compile; cd sre-tests; npm install",
+    "pretest": "git submodule update --remote --merge; npm run compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
     "compile": "npx tsc",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npx jest",
     "prepublishOnly": "make clean; make publish; npx tsc; npx webpack",
