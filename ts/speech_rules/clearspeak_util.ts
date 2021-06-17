@@ -21,7 +21,7 @@
 import * as DomUtil from '../common/dom_util';
 import {Engine} from '../common/engine';
 import XpathUtil from '../common/xpath_util';
-import {Locale} from '../l10n/messages';
+import {LOCALE} from '../l10n/locale';
 import {Grammar} from '../rule_engine/grammar';
 import {MathCompoundStore} from '../rule_engine/math_simple_store';
 import * as StoreUtil from '../rule_engine/store_util';
@@ -40,7 +40,7 @@ import {vulgarFractionSmall} from './numbers_util';
  */
 export function numbersToAlpha(text: string): string {
   return text.match(/\d+/) ?
-      Locale.NUMBERS.numberToWords(parseInt(text, 10)) :
+      LOCALE.NUMBERS.numberToWords(parseInt(text, 10)) :
       text;
 }
 
@@ -423,8 +423,8 @@ export function ordinalExponent(node: Element): string {
   if (isNaN(number)) {
     return node.textContent;
   }
-  return number > 10 ? Locale.NUMBERS.simpleOrdinal(number) :
-                       Locale.NUMBERS.wordOrdinal(number);
+  return number > 10 ? LOCALE.NUMBERS.simpleOrdinal(number) :
+                       LOCALE.NUMBERS.wordOrdinal(number);
 }
 
 
@@ -459,7 +459,7 @@ export function nestingDepth(node: Element): string|null {
     }
     parent = parent.parentNode as Element;
   }
-  NESTING_DEPTH = count > 1 ? Locale.NUMBERS.wordOrdinal(count) : '';
+  NESTING_DEPTH = count > 1 ? LOCALE.NUMBERS.wordOrdinal(count) : '';
   return NESTING_DEPTH;
 }
 
@@ -637,7 +637,7 @@ export function isLogarithmWithBase(node: Element): Element[] {
  * @return The ordinal as a word.
  */
 export function wordOrdinal(node: Element): string {
-  return Locale.NUMBERS.wordOrdinal(parseInt(node.textContent, 10));
+  return LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10));
 }
 
 

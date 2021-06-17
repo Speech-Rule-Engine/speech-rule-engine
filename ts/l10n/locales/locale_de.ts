@@ -23,10 +23,11 @@
 // This work was sponsored by ETH Zurich
 //
 
-import {Grammar} from '../rule_engine/grammar';
-import {localFont, vulgarNestingDepth} from './locale';
-import {Messages} from './messages';
-import NUMBERS from './numbers_de';
+import {Grammar} from '../../rule_engine/grammar';
+import {localFont, vulgarNestingDepth} from '../locale_util';
+import {ALPHABETS} from '../alphabets';
+import {Locale} from '../locale';
+import NUMBERS from '../numbers/numbers_de';
 
 
 let germanPrefixCombiner = function(letter: string, font: string, cap: string) {
@@ -50,7 +51,7 @@ let germanPostfixCombiner = function(
 };
 
 
-export const de: Messages = {
+export const de: Locale = {
   MS: {
     START: 'Anfang',
     FRAC_V: 'Bruch',
@@ -226,61 +227,12 @@ export const de: Messages = {
 
 
   NUMBERS: NUMBERS,
-  ALPHABETS: {
-    latinSmall: [
-      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-    ],
-    latinCap: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-    ],
-    greekSmall: [
-      'nabla',  // This is here as it is small.
-      'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
-      'iota', 'kappa', 'lambda', 'my', 'ny', 'xi', 'omikron', 'pi', 'rho',
-      'abschließendes sigma', 'sigma', 'tau', 'ypsilon', 'phi', 'chi', 'psi',
-      'omega',
-      // Symbols below
-      'partielle Ableitung', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
-    ],
-    greekCap: [
-      'Alpha',   'Beta', 'Gamma',   'Delta',  'Epsilon', 'Zeta', 'Eta',
-      'Theta',   'Iota', 'Kappa',   'Lambda', 'My',      'Ny',   'Xi',
-      'Omikron', 'Pi',   'Rho',
-      'Theta',  // Theta symbol
-      'Sigma',   'Tau',  'Ypsilon', 'Phi',    'Chi',     'Psi',  'Omega'
-    ]
-  },
+  ALPHABETS: ALPHABETS()
 
-  ALPHABET_TRANSFORMERS: {
-    digit: {
-      default: function(n: number) {
-        return n === 0 ? 'null' : de.NUMBERS.numberToWords(n);
-      },
-      mathspeak: function(n: number) {
-        return n.toString();
-      },
-      clearspeak: function(n: number) {
-        return n.toString();
-      }
-    },
-    letter: {
-      default: function(n: number) {
-        return n.toString();
-      }
-    }
-  },
-
-  ALPHABET_PREFIXES: {
-    capPrefix: {default: 'großes'},
-    smallPrefix: {default: ''},
-    digitPrefix: {default: 's'}
-  },
-
-  ALPHABET_COMBINER: germanPrefixCombiner
 };
 
+de.ALPHABETS.combiner = germanPrefixCombiner;
+de.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
 
 Grammar.getInstance().setCorrection(
   'correctOne', (num: string) => num.replace(/^eins$/, 'ein'));

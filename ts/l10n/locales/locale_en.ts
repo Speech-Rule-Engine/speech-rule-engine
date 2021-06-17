@@ -20,14 +20,15 @@
  */
 
 
-import {Grammar} from '../rule_engine/grammar';
-import * as Locale from './locale';
-import {Messages} from './messages';
-import NUMBERS from './numbers_en';
-import * as tr from './transformers';
+import {Grammar} from '../../rule_engine/grammar';
+import * as LocaleUtil from '../locale_util';
+import {ALPHABETS} from '../alphabets';
+import {Locale} from '../locale';
+import NUMBERS from '../numbers/numbers_en';
+import * as tr from '../transformers';
 
 
-export const en: Messages = {
+export const en: Locale = {
   MS: {
     START: 'Start',
     FRAC_V: 'Fraction',
@@ -59,8 +60,8 @@ export const en: Messages = {
   },
 
   MS_FUNC: {
-    FRAC_NEST_DEPTH: Locale.vulgarNestingDepth,
-    RADICAL_NEST_DEPTH: Locale.nestingToString,
+    FRAC_NEST_DEPTH: LocaleUtil.vulgarNestingDepth,
+    RADICAL_NEST_DEPTH: LocaleUtil.nestingToString,
     COMBINE_ROOT_INDEX: function(postfix: string, _index: string) {
       return postfix;
     },
@@ -196,60 +197,11 @@ export const en: Messages = {
 
 
   NUMBERS: NUMBERS,
-  ALPHABETS: {
-    latinSmall: [
-      'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
-      'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-    ],
-    latinCap: [
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-      'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
-    ],
-    greekSmall: [
-      'nabla',  // This is here as it is small.
-      'alpha', 'beta', 'gamma', 'delta', 'epsilon', 'zeta', 'eta', 'theta',
-      'iota', 'kappa', 'lamda', 'mu', 'nu', 'xi', 'omicron', 'pi', 'rho',
-      'final sigma', 'sigma', 'tau', 'upsilon', 'phi', 'chi', 'psi', 'omega',
-      // Symbols below
-      'partial differential', 'epsilon', 'theta', 'kappa', 'phi', 'rho', 'pi'
-    ],
-    greekCap: [
-      'Alpha',   'Beta', 'Gamma',   'Delta', 'Epsilon', 'Zeta', 'Eta',
-      'Theta',   'Iota', 'Kappa',   'Lamda', 'Mu',      'Nu',   'Xi',
-      'Omicron', 'Pi',   'Rho',
-      'Theta',  // Theta symbol
-      'Sigma',   'Tau',  'Upsilon', 'Phi',   'Chi',     'Psi',  'Omega'
-    ]
-  },
-
-  ALPHABET_TRANSFORMERS: {
-    digit: {
-      default: function(n) {
-        return n === 0 ? 'zero' : NUMBERS.numberToWords(n);
-      },
-      mathspeak: function(n) {
-        return n.toString();
-      },
-      clearspeak: function(n) {
-        return n.toString();
-      }
-    },
-    letter: {
-      default: function(n) {
-        return n.toString();
-      }
-    }
-  },
-
-  ALPHABET_PREFIXES: {
-    capPrefix: {default: 'cap', mathspeak: 'upper'},
-    smallPrefix: {default: ''},
-    digitPrefix: {default: ''}
-  },
-
-  ALPHABET_COMBINER: tr.prefixCombiner
+  ALPHABETS: ALPHABETS()
 };
 
+en.ALPHABETS.combiner = tr.prefixCombiner;
+en.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
 
 Grammar.getInstance().setCorrection('noarticle', (name: string) => {
   return Grammar.getInstance().getParameter('noArticle') ? '' : name;

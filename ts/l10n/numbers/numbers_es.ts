@@ -18,86 +18,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Grammar} from '../rule_engine/grammar';
-import {Numbers} from './numbers';
+import {Grammar} from '../../rule_engine/grammar';
+import {Numbers} from '../numbers';
 
 //
 // This work was sponsored by TextHelp
 //
-
-
-// Numbers
-/**
- * String representation of zero to twenty-nine.
- */
-const onesNumbers_: string[] = [
-  '',
-  'uno',
-  'dos',
-  'tres',
-  'cuatro',
-  'cinco',
-  'seis',
-  'siete',
-  'ocho',
-  'nueve',
-  'diez',
-  'once',
-  'doce',
-  'trece',
-  'catorce',
-  'quince',
-  'dieciséis',
-  'diecisiete',
-  'dieciocho',
-  'diecinueve',
-  'veinte',
-  'veintiuno',
-  'veintidós',
-  'veintitrés',
-  'veinticuatro',
-  'veinticinco',
-  'veintiséis',
-  'veintisiete',
-  'veintiocho',
-  'veintinueve'
-];
-
-
-/**
- * String representation of thirty to ninety.
- */
-const tensNumbers_: string[] = [
-  '', '', '', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta',
-  'ochenta', 'noventa'
-];
-
-
-/**
- * String representation of one hundred to nine hundred.
- */
-const hundredsNumbers_: string[] = [
-  '', 'cien', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos',
-  'seiscientos', 'setecientos', 'ochocientos', 'novecientos'
-];
-
-
-/**
- * String representation of thousand to decillion.
- */
-const largeNumbers_: string[] = [
-  '',           'mil',
-  'millón',     'mil millónes',
-  'billón',     'mil billónes',
-  'trillón',    'mil trillónes',
-  'cuatrilló',  'mil cuatrillóes',
-  'quintillón', 'mil quintillónes',
-  'sextillón',  'mil sextillónes',
-  'septillón',  'mil septillónes',
-  'octillón',   'mil octillónes',
-  'nonillón',   'mil nonillónes',
-  'decillón',   'mil decillónes'
-];
 
 
 /**
@@ -108,10 +34,10 @@ const largeNumbers_: string[] = [
 function tensToWords_(num: number): string {
   let n = num % 100;
   if (n < 30) {
-    return onesNumbers_[n];
+    return NUMBERS.ones[n];
   }
-  let tens = tensNumbers_[Math.floor(n / 10)];
-  let ones = onesNumbers_[n % 10];
+  let tens = NUMBERS.tens[Math.floor(n / 10)];
+  let ones = NUMBERS.ones[n % 10];
   return tens && ones ? tens + ' y ' + ones : tens || ones;
 }
 
@@ -124,7 +50,7 @@ function tensToWords_(num: number): string {
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let hundred = Math.floor(n / 100);
-  let hundreds = hundredsNumbers_[hundred];
+  let hundreds = NUMBERS.special.hundreds[hundred];
   let tens = tensToWords_(n % 100);
   if (hundred === 1) {
     if (!tens) {
@@ -144,6 +70,9 @@ function hundredsToWords_(num: number): string {
  * @return The string representation of that number.
  */
 function numberToWords(num: number): string {
+  if (num === 0) {
+    return NUMBERS.zero;
+  }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
   }
@@ -152,7 +81,7 @@ function numberToWords(num: number): string {
   while (num > 0) {
     let hundreds = num % 1000;
     if (hundreds) {
-      let large = largeNumbers_[pos];
+      let large = NUMBERS.large[pos];
       let huns = hundredsToWords_(hundreds);
       if (!pos) {
         str = huns;
@@ -170,36 +99,6 @@ function numberToWords(num: number): string {
   return str;
 }
 
-
-// Ordinals
-/**
- * String representation of zero to nineteen.
- */
-const onesOrdinals_: string[] = [
-  'primera', 'segunda', 'tercera', 'cuarta', 'quinta', 'sexta', 'séptima',
-  'octava', 'novena', 'décima', 'undécima', 'duodécima'
-];
-
-
-/**
- * String representation of twenty to ninety.
- */
-const tensOrdinals_: string[] = [
-  'décima', 'vigésima', 'trigésima', 'cuadragésima', 'quincuagésima',
-  'sexagésima', 'septuagésima', 'octogésima', 'nonagésima'
-];
-
-
-/**
- * String representation of thousand to decillion.
- */
-const hundredsOrdinals_: string[] = [
-  'centésima', 'ducentésima', 'tricentésima', 'cuadringentésima',
-  'quingentésima', 'sexcentésima', 'septingentésima', 'octingentésima',
-  'noningentésima'
-];
-
-
 /**
  * Translates a number into Spanish ordinal
  * @param num The number to translate.
@@ -211,7 +110,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
     return num.toString() + 'a';
   }
   if (num <= 12) {
-    return onesOrdinals_[num - 1];
+    return NUMBERS.special.onesOrdinals[num - 1];
   }
   let result = [];
   if (num >= 1000) {
@@ -224,19 +123,19 @@ function numberToOrdinal(num: number, _plural: boolean): string {
   let pos = 0;
   pos = Math.floor(num / 100);
   if (pos > 0) {
-    result.push(hundredsOrdinals_[pos - 1]);
+    result.push(NUMBERS.special.hundredsOrdinals[pos - 1]);
     num = num % 100;
   }
   if (num <= 12) {
-    result.push(onesOrdinals_[num - 1]);
+    result.push(NUMBERS.special.onesOrdinals[num - 1]);
   } else {
     pos = Math.floor(num / 10);
     if (pos > 0) {
-      result.push(tensOrdinals_[pos - 1]);
+      result.push(NUMBERS.special.tensOrdinals[pos - 1]);
       num = num % 10;
     }
     if (num > 0) {
-      result.push(onesOrdinals_[num - 1]);
+      result.push(NUMBERS.special.onesOrdinals[num - 1]);
     }
   }
   return result.join(' ');
@@ -255,11 +154,10 @@ function simpleOrdinal(num: number): string {
 
 
 const NUMBERS: Numbers = {
-  // wordOrdinal: sre.Numbers.es.wordOrdinal,
+  // wordOrdinal: 
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
-  numberToOrdinal: numberToOrdinal,
-  vulgarSep: '-'
+  numberToOrdinal: numberToOrdinal
 };
 
 

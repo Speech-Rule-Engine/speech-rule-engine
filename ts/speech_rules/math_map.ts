@@ -31,6 +31,7 @@ import {DynamicCstr} from '../rule_engine/dynamic_cstr';
 import {MathCompoundStore, SiJson, UnicodeJson} from '../rule_engine/math_simple_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 
+import {completeLocale} from '../l10n/l10n';
 import * as AlphabetGenerator from './alphabet_generator';
 
 
@@ -157,15 +158,23 @@ export namespace MathMap {
    *     add. This is necessary for the single IE dictionary.
    */
   function addMaps(json: MathMapJson, opt_locale?: string) {
+    let generate = true;
     for (let i = 0, key; key = Object.keys(json)[i]; i++) {
       let info = key.split('/');
       if (opt_locale && opt_locale !== info[0]) {
         continue;
       }
-      if (info[1] !== 'rules') {
-        (json[key] as UnicodeJson[] | [SiJson]).forEach(addSymbols[info[1]]);
-      } else {
+      if (info[1] === 'rules') {
         SpeechRuleEngine.getInstance().addStore(json[key] as RulesJson);
+      } else if (info[1] === 'messages') {
+        completeLocale(json[key]);
+      }
+      else {
+        if (generate) {
+          AlphabetGenerator.generate(info[0]);
+          generate = false;
+        }
+        (json[key] as UnicodeJson[] | [SiJson]).forEach(addSymbols[info[1]]);
       }
     }
   }
@@ -176,7 +185,6 @@ export namespace MathMap {
    * @param locale The target locale.
    */
   function retrieveMaps(locale: string) {
-    AlphabetGenerator.generate(locale);
     if (Engine.getInstance().isIE &&
       Engine.getInstance().mode === EngineConst.Mode.HTTP) {
       getJsonIE_(locale);

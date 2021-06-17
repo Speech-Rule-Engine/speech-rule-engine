@@ -23,55 +23,14 @@
 //
 
 
-import {Grammar} from '../rule_engine/grammar';
-import {Numbers} from './numbers';
+import {Grammar} from '../../rule_engine/grammar';
+import {Numbers} from '../numbers';
 
 
 /**
  * Sub-ISO specification. Possible values: fr, be, sw.
  */
 const SUB_ISO: string = 'fr';
-
-
-// Numbers
-/**
- * String representation of zero to nineteen.
- */
-const onesNumbers_: string[] = [
-  '',         'un',     'deux',  'trois',    'quatre',   'cinq',    'six',
-  'sept',     'huit',   'neuf',  'dix',      'onze',     'douze',   'treize',
-  'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf'
-];
-
-
-/**
- * String representation of twenty to ninety.
- */
-const tensNumbers_: {[key: string]: string[]} = {
-  'fr': [
-    '', '', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante',
-    'soixante-dix', 'quatre-vingts', 'quatre-vingt-dix'
-  ],
-  'be': [
-    '', '', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'septante',
-    'quatre-vingts', 'nonante'
-  ],
-  'sw': [
-    '', '', 'vingt', 'trente', 'quarante', 'cinquante', 'soixante', 'septante',
-    'huitante', 'nonante'
-  ]
-};
-
-
-/**
- * String representation of thousand to decillion.
- */
-const largeNumbers_: string[] = [
-  '', 'mille', 'millions', 'milliards', 'billions', 'mille billions',
-  'trillions', 'mille trillions', 'quadrillions', 'mille quadrillions',
-  'quintillions', 'mille quintillions'
-];
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -81,23 +40,23 @@ const largeNumbers_: string[] = [
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  str += onesNumbers_[Math.floor(n / 100)] ?
-      onesNumbers_[Math.floor(n / 100)] + '-cent' :
+  str += NUMBERS.ones[Math.floor(n / 100)] ?
+      NUMBERS.ones[Math.floor(n / 100)] + '-cent' :
       '';
   n = n % 100;
   if (n) {
     str += str ? '-' : '';
-    let ones = onesNumbers_[n];
+    let ones = NUMBERS.ones[n];
     if (ones) {
       str += ones;
     } else {
       // -dix case!
-      let tens = tensNumbers_[SUB_ISO][Math.floor(n / 10)];
+      let tens = NUMBERS.tens[Math.floor(n / 10)];
       if (tens.match(/\-dix$/)) {
-        ones = onesNumbers_[n % 10 + 10];
+        ones = NUMBERS.ones[n % 10 + 10];
         str += tens.replace(/\-dix$/, '') + '-' + ones;
       } else {
-        str += tens + (n % 10 ? '-' + onesNumbers_[n % 10] : '');
+        str += tens + (n % 10 ? '-' + NUMBERS.ones[n % 10] : '');
       }
     }
   }
@@ -113,15 +72,22 @@ function hundredsToWords_(num: number): string {
  * @return The string representation of that number.
  */
 function numberToWords(num: number): string {
+  if (num === 0) {
+    return NUMBERS.zero;
+  }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
+  }
+  if (NUMBERS.special['tens-' + SUB_ISO]) {
+    NUMBERS.tens =
+      NUMBERS.special['tens-' + SUB_ISO] as string[];
   }
   let pos = 0;
   let str = '';
   while (num > 0) {
     let hundreds = num % 1000;
     if (hundreds) {
-      let large = largeNumbers_[pos];
+      let large = NUMBERS.large[pos];
       let huns = hundredsToWords_(hundreds);
       if (large && large.match(/^mille /)) {
         let rest = large.replace(/^mille /, '');
@@ -207,8 +173,7 @@ const NUMBERS: Numbers = {
   wordOrdinal: wordOrdinal,
   simpleOrdinal: simpleOrdinal,
   numberToWords: numberToWords,
-  numberToOrdinal: numberToOrdinal,
-  vulgarSep: '-'
+  numberToOrdinal: numberToOrdinal
 };
 
 export default NUMBERS;

@@ -22,17 +22,17 @@
 import {Engine} from '../common/engine';
 import {Variables} from '../common/variables';
 
-import {de} from './locale_de';
-import {en} from './locale_en';
-import {es} from './locale_es';
-import {fr} from './locale_fr';
-import {hi} from './locale_hi';
-import {it} from './locale_it';
-import {nemeth} from './locale_nemeth';
-import {Locale, Messages} from './messages';
+import {de} from './locales/locale_de';
+import {en} from './locales/locale_en';
+import {es} from './locales/locale_es';
+import {fr} from './locales/locale_fr';
+import {hi} from './locales/locale_hi';
+import {it} from './locales/locale_it';
+import {nemeth} from './locales/locale_nemeth';
+import {Locale, LOCALE} from './locale';
 
 
-export const locales: {[key: string]: Messages} = {
+export const locales: {[key: string]: Locale} = {
   'de': de,
   'en': en,
   'es': es,
@@ -50,8 +50,11 @@ export function setLocale() {
   if (msgs) {
     for (let key of Object.getOwnPropertyNames(msgs)) {
       // TODO (TS): See if this is really an object structure.
-      (Locale as any)[key] = (msgs as any)[key];
+      (LOCALE as any)[key] = (msgs as any)[key];
     }
+    // TODO (Speech Rules): This is temporary until locales are handled in a
+    // bespoke class.
+    // Locale.ALPHABETS.digitTrans.default = msgs.NUMBERS.numberToWords;
   }
 }
 
@@ -61,11 +64,33 @@ export function setLocale() {
  * defaults to English.
  * @return A message object.
  */
-export function getLocale(): Messages {
+export function getLocale(): Locale {
   let locale = Engine.getInstance().locale;
   if (Variables.LOCALES.indexOf(locale) === -1) {
     console.error('Locale ' + locale + ' does not exist! Using en instead.');
     Engine.getInstance().locale = 'en';
   }
   return locales[Engine.getInstance().locale] || locales['en'];
+}
+
+
+/**
+ * Locale completion with loaded mathmaps.
+ * @param json The JSON of the locale map.
+ */
+export function completeLocale(json: any) {
+  let locale = locales[json.locale] as any;
+  if (!locale) {
+    console.error('Locale ' + json.locale + ' does not exist!');
+    return;
+  }
+  let kind = json.kind.toUpperCase();
+  // temporary!
+  if (kind !== 'NUMBERS' && kind !== 'ALPHABETS') return;
+  let messages = json.messages;
+  if (!messages) return;
+  for (let [key, value] of Object.entries(messages)) {
+    // TODO (TS): See if this is really an object structure.
+    locale[kind][key] = value;
+  }
 }

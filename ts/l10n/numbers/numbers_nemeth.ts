@@ -23,11 +23,7 @@
 //
 
 
-import {Numbers} from './numbers';
-
-
-const oneNumbers_: string[] =
-    ['⠴', '⠂', '⠆', '⠒', '⠲', '⠢', '⠖', '⠶', '⠦', '⠔'];
+import {Numbers} from '../numbers';
 
 
 /**
@@ -39,7 +35,7 @@ function numberToWords(num: number): string {
   let digits = num.toString().split('');
   return digits
       .map(function(digit) {
-        return oneNumbers_[parseInt(digit, 10)];
+        return NUMBERS.ones[parseInt(digit, 10)];
       })
       .join('');
 }
@@ -48,7 +44,6 @@ function numberToWords(num: number): string {
 const NUMBERS: Numbers = {
   numberToWords: numberToWords,
   simpleOrdinal: numberToWords,
-  vulgarSep: ''
 };
 
 export default NUMBERS;

@@ -21,8 +21,8 @@
 
 
 import * as BaseUtil from '../common/base_util';
-import {en} from '../l10n/locale_en';
-import {Locale} from '../l10n/messages';
+import {en} from '../l10n/locales/locale_en';
+import {LOCALE} from '../l10n/locale';
 import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
 import {BaseRuleStore, RulesJson} from './base_rule_store';
 import {Action, OutputError, SpeechRule} from './speech_rule';
@@ -199,7 +199,7 @@ export class MathStore extends BaseRuleStore {
     for (let i = 0, s; s = split[i]; i++) {
       if (s.length === 1) {
         descs.push(this.evaluateCharacter(s));
-      } else if (s.match(new RegExp('^[' + Locale.REGEXP.TEXT + ']+$'))) {
+      } else if (s.match(new RegExp('^[' + LOCALE.REGEXP.TEXT + ']+$'))) {
         descs.push(this.evaluateCharacter(s));
       } else {
         // Break up string even further wrt. symbols vs alphanum substrings.
@@ -207,7 +207,7 @@ export class MathStore extends BaseRuleStore {
         while (rest) {
           num = this.matchNumber_(rest);
           let alpha =
-              rest.match(new RegExp('^[' + Locale.REGEXP.TEXT + ']+'));
+              rest.match(new RegExp('^[' + LOCALE.REGEXP.TEXT + ']+'));
           if (num) {
             descs.push(this.evaluateCharacter(num.number));
             rest = rest.substring(num.length);
@@ -258,7 +258,7 @@ export class MathStore extends BaseRuleStore {
    * @return The number and its length.
    */
   private matchNumber_(str: string): {number: string, length: number}|null {
-    let locNum = str.match(new RegExp('^' + Locale.REGEXP.NUMBER));
+    let locNum = str.match(new RegExp('^' + LOCALE.REGEXP.NUMBER));
     let enNum = str.match(new RegExp('^' + en.REGEXP.NUMBER));
     if (!locNum && !enNum) {
       return null;
@@ -273,8 +273,8 @@ export class MathStore extends BaseRuleStore {
             .replace(new RegExp(en.REGEXP.DIGIT_GROUP, 'g'), 'X')
             .replace(
                 new RegExp(en.REGEXP.DECIMAL_MARK, 'g'),
-                Locale.REGEXP.DECIMAL_MARK)
-            .replace(/X/g, Locale.REGEXP.DIGIT_GROUP.replace(/\\/g, ''));
+                LOCALE.REGEXP.DECIMAL_MARK)
+            .replace(/X/g, LOCALE.REGEXP.DIGIT_GROUP.replace(/\\/g, ''));
     return {number: num, length: enNum[0].length};
   }
 

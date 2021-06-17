@@ -14,83 +14,270 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic locale file providing namespace and utilities.
+ * @fileoverview Basic message file for l10n.
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import {Alphabets, ALPHABETS} from './alphabets';
+import {Numbers, NUMBERS} from './numbers';
+import * as tr from './transformers';
 
-import * as MathspeakUtil from '../speech_rules/mathspeak_util';
-import {Locale} from './messages';
-import {extractString} from './transformers';
 
-
-/**
- * Translation for count word in superbrief nesting description.
- * @param count The counting parameter.
- * @return The corresponding string.
- */
-export function nestingToString(count: number): string {
-  switch (count) {
-    case 1:
-      return Locale.MS.ONCE || '';
-    case 2:
-      return Locale.MS.TWICE;
-    default:
-      return count.toString();
-  }
+// One (or more) flat message object per rule set.
+export interface Locale {
+  MS: {[key: string]: string};
+  MS_FUNC: {[key: string]: Function};
+  MS_ROOT_INDEX: {[key: string]: string};
+  FONT: {[key: string]: string|[string, tr.Combiner]};
+  EMBELLISH: {[key: string]: string|[string, tr.Combiner]};
+  ROLE: {[key: string]: string|[string, tr.Combiner]};
+  ENCLOSE: {[key: string]: string|[string, tr.Combiner]};
+  NAVIGATE: {[key: string]: string};
+  REGEXP: {[key: string]: string};
+  PLURAL: tr.Transformer;
+  SI: tr.SiCombiner;
+  UNIT_TIMES: string;
+  ALPHABETS: Alphabets;
+  NUMBERS: Numbers;
 }
 
 
-/**
- * Sets the nesting depth of a fraction to end at vulgar fraction.
- * @param node The node to check.
- * @return True if a vulgar fraction.
- */
-export function vulgarNestingDepth(node: Element): boolean {
-  return !!MathspeakUtil.isSmallVulgarFraction(node).length;
-}
+export const LOCALE: Locale = {
+
+  MS: {
+    START: '',
+    FRAC_V: '',
+    FRAC_B: '',
+    FRAC_S: '',
+    END: '',
+    FRAC_OVER: '',
+    ONCE: '',
+    TWICE: '',
+    NEST_FRAC: '',
+    ENDFRAC: '',
+    SUPER: '',
+    SUB: '',
+    SUP: '',
+    SUPERSCRIPT: '',
+    SUBSCRIPT: '',
+    BASELINE: '',
+    BASE: '',
+    NESTED: '',
+    NEST_ROOT: '',
+    STARTROOT: '',
+    ENDROOT: '',
+    ROOTINDEX: '',
+    ROOT: '',
+    INDEX: '',
+    UNDER: '',
+    UNDERSCRIPT: '',
+    OVER: '',
+    OVERSCRIPT: ''
+  },
+
+  /**
+   * Parsing functions.
+   */
+  MS_FUNC: {
+
+    /**
+     * Method to determine end of nesting depth for nested fraction.
+     * @param node A node.
+     * @return True if current element should not be considered for
+     *     nesting depth.
+     */
+    FRAC_NEST_DEPTH: function(_node: Element): boolean {
+      return false;
+    },
+
+    /**
+     * Translation for count word nesting description of radicals.
+     * @param count The counting parameter.
+     * @return The corresponding string.
+     */
+    RADICAL_NEST_DEPTH: function(_count: number): string {
+      return '';
+    },
+
+    /**
+     * Generates a root ending message by combining the end message (postfix)
+     * with the index. Example: Start Root Cubic ... End Root Cubic.
+     *
+     * @param postfix The postfix.
+     * @param index The index.
+     * @return The combined string, postfix plus index.
+     */
+    COMBINE_ROOT_INDEX: function(postfix: string, _index: string): string {
+      return postfix;
+    }
+  },
+
+  // TODO: Add new functions.
+  MS_ROOT_INDEX: {},
+
+  /**
+   * Localised font names.
+   */
+  FONT: {
+    'bold': '',
+    'bold-fraktur': '',
+    'bold-italic': '',
+    'bold-script': '',
+    'caligraphic': '',
+    'caligraphic-bold': '',
+    'double-struck': '',
+    'double-struck-italic': '',
+    'fraktur': '',
+    'italic': '',
+    'monospace': '',
+    'normal': '',
+    'oldstyle': '',
+    'oldstyle-bold': '',
+    'script': '',
+    'sans-serif': '',
+    'sans-serif-italic': '',
+    'sans-serif-bold': '',
+    'sans-serif-bold-italic': '',
+    'unknown': ''
+  },
 
 
-/**
- * Generates a root ending message by combining the end message (postfix) with
- * the index. Example: Start Root Cubic ... End Root Cubic.
- * @param postfix The postfix.
- * @param index The index.
- * @return The combined string, postfix plus index.
- */
-export function combinePostfixIndex(postfix: string, index: string): string {
-  return postfix === Locale.MS.ROOTINDEX || postfix === Locale.MS.INDEX ?
-      postfix :
-      postfix + ' ' + index;
-}
+  /**
+   * Localised embalishment names. Treated like fonts.
+   */
+  EMBELLISH: {
+    // More embellishments than fonts.
+    'super': '',
+    'sub': '',
+    'circled': '',
+    'parenthesized': '',
+    'period': '',
+    'negative-circled': '',
+    'double-circled': '',
+    'circled-sans-serif': '',
+    'negative-circled-sans-serif': '',
+    'blackboard': '',
+    'comma': '',
+    'squared': '',
+    'negative-squared': ''
+  },
 
 
-/**
- * Localizes the font name.
- * @param font The font name.
- * @return The localized font name.
- */
-export function localFont(font: string): string {
-  return extractString(Locale.FONT[font], font);
-}
+  /**
+   * Localised role names.
+   */
+   ROLE: {
+    // Infixoperators
+    'addition': '',
+    'multiplication': '',
+    'subtraction': '',
+    'division': '',
+    // Relations.
+    'equality': '',
+    'inequality': '',
+    'element': '',
+    'arrow': '',
+    // Roles of matrices or vectors.
+    'determinant': '',
+    'rowvector': '',
+    'binomial': '',
+    'squarematrix': '',
+    // Sets
+    'set empty': '',
+    'set extended': '',
+    'set singleton': '',
+    'set collection': '',
+    // Roles of rows, lines, cells.
+    'label': '',
+    'multiline': '',
+    'matrix': '',
+    'vector': '',
+    'cases': '',
+    'table': '',
+    // Unknown
+    'unknown': ''
+   },
 
 
-/**
- * Localizes the role name.
- * @param role The role name.
- * @return The localized role name.
- */
-export function localRole(role: string): string {
-  return extractString(Locale.ROLE[role], role);
-}
+  /**
+   * Localised enclose roles.
+   */
+  ENCLOSE: {
+    'longdiv': '',
+    'actuarial': '',
+    'radical': '',
+    'box': '',
+    'roundedbox': '',
+    'circle': '',
+    'left': '',
+    'right': '',
+    'top': '',
+    'bottom': '',
+    'updiagonalstrike': '',
+    'downdiagonalstrike': '',
+    'verticalstrike': '',
+    'horizontalstrike': '',
+    'madruwb': '',
+    'updiagonalarrow': '',
+    'phasorangle': '',
+    // Unknown
+    'unknown': ''
+  },
 
 
-/**
- * Localizes the enclose name.
- * @param enclose The enclose name.
- * @return The localized enclose name.
- */
-export function localEnclose(enclose: string): string {
-  return extractString(Locale.ENCLOSE[enclose], enclose);
-}
+  /**
+   * Navigation messages.
+   */
+  NAVIGATE: {
+    COLLAPSIBLE: '',
+    EXPANDABLE: '',
+    LEVEL: ''
+  },
+
+
+  /**
+   * Regular expressions for text, digits, decimal marks, etc.
+   */
+  REGEXP: {
+    TEXT: 'a-zA-Z',
+    NUMBER: '',
+    DECIMAL_MARK: '',
+    DIGIT_GROUP: '',
+    JOINER_SUBSUPER: ' '
+  },
+
+
+  /**
+   * Function to build regular plurals for units.
+   * @param unit A unit expression.
+   * @return The unit in plural.
+   */
+  PLURAL: (unit: string) => {
+    return /.*s$/.test(unit) ? unit : unit + 's';
+  },
+
+
+  /**
+   * The units combiner.
+   */
+  SI: tr.siCombiner,
+
+
+  /**
+   * The times expression between units, if used.
+   */
+  UNIT_TIMES: '',
+
+
+  /**
+   * The Alphabets content.
+   */
+  ALPHABETS: ALPHABETS(),
+
+  /**
+   * Localisable number computation.
+   */
+  NUMBERS: NUMBERS
+
+};
