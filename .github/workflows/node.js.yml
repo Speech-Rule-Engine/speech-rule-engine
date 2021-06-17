@@ -24,7 +24,6 @@ jobs:
           path: |
                 lib
                 js
-                ts
           
   test:
 
