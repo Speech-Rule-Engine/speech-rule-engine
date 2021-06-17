@@ -21,7 +21,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: sre-library
-          path: lib
+          path: lib js ts
           
   test:
 
