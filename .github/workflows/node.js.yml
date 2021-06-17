@@ -44,6 +44,6 @@ jobs:
         run: |
           sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
           git submodule update --init --recursive
-          cd sre-tests; sudo chmod -R 777 .; npm ci
+          cd sre-tests; ln -s .. speech-rule-engine; sudo chmod -R 777 .; npm ci
       - name: Run tests for ${{ matrix.block }}
         run: npm run actionTest js/json/${{ matrix.block }}
