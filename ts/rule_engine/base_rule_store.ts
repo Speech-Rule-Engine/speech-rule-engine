@@ -45,7 +45,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
   /**
    * Trie for indexing speech rules in this store.
    */
-  public trie: Trie = new Trie(this);
+  public trie: Trie = null;
 
   /**
    * A priority list of dynamic constraint attributes.
@@ -93,6 +93,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    * Set of speech rules in the store.
    */
   private speechRules_: SpeechRule[] = [];
+
+  private rank: number = 0;
 
   // TODO (sorge) Define the following methods directly on the precondition
   //     classes.
@@ -207,6 +209,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
         throw err;
       }
     }
+    rule.precondition.rank = this.rank++;
     this.addRule(rule);
     return rule;
   }
@@ -217,7 +220,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   public addRule(rule: SpeechRule) {
     rule.context = this.context;
-    this.trie.addRule(rule);
+    // this.trie.addRule(rule);
     this.speechRules_.unshift(rule);
   }
 
@@ -415,7 +418,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
       let type = rule[0];
       let method = this.parseMethods[type];
       if (type && method) {
-        method.apply(this, rule.slice(1));
+        method.apply(this, rule.slice(1))
       }
     }
   }
@@ -464,7 +467,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
           // sre.BaseRuleStore.strongQuery_(r1, r2) ||
           BaseRuleStore.priority_(r1, r2) ||
           r2.precondition.constraints.length -
-          r1.precondition.constraints.length;
+          r1.precondition.constraints.length ||
+          r2.precondition.rank - r1.precondition.rank;
     });
     Debugger.getInstance().generateOutput((() => {
       return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');

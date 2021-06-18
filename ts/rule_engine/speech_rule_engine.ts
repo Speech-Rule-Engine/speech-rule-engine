@@ -48,6 +48,7 @@ import {MathStore} from './math_store';
 import {ActionType, SpeechRule} from './speech_rule';
 import {SpeechRuleContext} from './speech_rule_context';
 
+import {Trie} from '../indexing/trie';
 
 export class SpeechRuleEngine {
 
@@ -222,8 +223,9 @@ export class SpeechRuleEngine {
     store.parse(set);
     store.initialize();
     store.getSpeechRules().forEach(x => this.activeStore_.trie.addRule(x));
+    // console.log(store.getSpeechRules().map(x => x.name).join(', '));
     this.addEvaluator(store);
-    this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
+    // this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
   }
 
 
@@ -345,7 +347,7 @@ export class SpeechRuleEngine {
      * The currently active speech rule store.
      */
     this.activeStore_ = new MathStore();
-
+    this.activeStore_.trie = new Trie(this.activeStore_);
     Engine.registerTest(() => this.ready_);
     // Engine.registerTest((() => {console.log('SRE test'); return this.ready_}).bind(this));
   }

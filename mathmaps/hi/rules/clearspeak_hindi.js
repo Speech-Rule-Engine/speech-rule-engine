@@ -869,8 +869,7 @@
       "superscript-prefix-function",
       "default",
       "[n] children/*[1]; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\"",
-      "self::superscript",
-      "@role=\"prefix function\"",
+      "self::superscript[@role=\"prefix function\"]",
       "name(children/*[2])=\"identifier\""
     ],
     [
@@ -2468,7 +2467,8 @@
       "Aliases",
       "lines-summary",
       "self::table",
-      "not(contains(@grammar, \"layoutSummary\"))"
+      "not(contains(@grammar, \"layoutSummary\"))",
+      "self::*"
     ],
     [
       "Rule",
