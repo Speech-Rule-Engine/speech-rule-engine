@@ -58,7 +58,6 @@ export class MathStore extends BaseRuleStore {
       return;
     }
     this.annotations();
-    // this.setSpeechRules(this.trie.collectRules());
     this.initialized = true;
   }
 

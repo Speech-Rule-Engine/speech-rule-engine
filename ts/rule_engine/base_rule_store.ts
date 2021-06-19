@@ -24,9 +24,6 @@
 
 
 import {AuditoryDescription} from '../audio/auditory_description';
-// import {Debugger} from '../common/debugger';
-// import * as DomUtil from '../common/dom_util';
-// import {Engine} from '../common/engine';
 import {Axis, AxisOrder, DynamicCstr, DynamicCstrParser} from './dynamic_cstr';
 import {Action, Precondition, SpeechRule} from './speech_rule';
 import {SpeechRuleContext} from './speech_rule_context';
@@ -173,7 +170,6 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   public addRule(rule: SpeechRule) {
     rule.context = this.context;
-    // this.trie.addRule(rule);
     this.speechRules_.unshift(rule);
   }
 

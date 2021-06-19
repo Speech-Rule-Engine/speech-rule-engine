@@ -77,13 +77,7 @@ export class MathSimpleStore extends MathStore {
    */
   public static parseUnicode(num: string): string {
     let keyValue = parseInt(num, 16);
-    if (keyValue < 0x10000) {
-      return String.fromCharCode(keyValue);
-    }
-    keyValue -= 0x10000;
-    let hiSurrogate = (keyValue >> 10) + 0xD800;
-    let lowSurrogate = (keyValue & 0x3FF) + 0xDC00;
-    return String.fromCharCode(hiSurrogate, lowSurrogate);
+    return String.fromCodePoint(keyValue);
   }
 
 

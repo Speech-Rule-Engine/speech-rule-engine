@@ -118,12 +118,7 @@ export function unicodeToNumber(unicode: string): number|null {
  * @return The string representation.
  */
 export function numberToUnicode(num: number): string {
-  if (num < 0x10000) {
-    return String.fromCharCode(num);
-  }
-  let hi = (num - 0x10000) / 0x0400 + 0xD800;
-  let lo = (num - 0x10000) % 0x0400 + 0xDC00;
-  return String.fromCharCode(hi, lo);
+  return String.fromCodePoint(num);
 }
 
 

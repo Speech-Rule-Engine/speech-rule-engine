@@ -63,8 +63,6 @@ export class SpeechRuleEngine {
    */
   public trie: Trie = null;
 
-  // private activeStore_: BaseRuleStore;
-
   /**
    * Flag indicating if the engine is ready. Not ready while it is updating!
    */
@@ -230,9 +228,7 @@ export class SpeechRuleEngine {
     store.parse(set);
     store.initialize();
     store.getSpeechRules().forEach(x => this.trie.addRule(x));
-    // console.log(store.getSpeechRules().map(x => x.name).join(', '));
     this.addEvaluator(store);
-    // this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
   }
 
 
@@ -334,8 +330,9 @@ export class SpeechRuleEngine {
 
 
   /**
-   * Collates information on dynamic constraint values of the currently active
-   * trie of the engine.
+   * Collates information on dynamic constraint values of the current state of
+   * the trie of the engine.
+   * 
    * @param opt_info Initial dynamic constraint information.
    * @return The collated information.
    */
@@ -345,12 +342,10 @@ export class SpeechRuleEngine {
 
   private constructor() {
     /**
-     * The currently active speech rule store.
+     * Initialised the trie.
      */
-    // this.activeStore_ = new MathStore();
     this.trie = new Trie();
     Engine.registerTest(() => this.ready_);
-    // Engine.registerTest((() => {console.log('SRE test'); return this.ready_}).bind(this));
   }
 
 
@@ -397,7 +392,7 @@ export class SpeechRuleEngine {
         'Apply Rule:', rule.name, rule.dynamicCstr.toString(),
         (engine.mode !== EngineConst.Mode.HTTP ? node : node).toString()
     ]);
-    let context = rule.context;//  || this.activeStore_.context;
+    let context = rule.context;
     let components = rule.action.components;
     result = [];
     for (let i = 0, component; component = components[i]; i++) {
@@ -716,7 +711,11 @@ export class SpeechRuleEngine {
 
 
   /**
-   * @override
+   * Retrieves a rule for the given node if one exists.
+   * @param node A node.
+   * @param dynamic Additional dynamic
+   *     constraints. These are matched against properties of a rule.
+   * @return The speech rule if an applicable one exists.
    */
   public lookupRule(node: Node, dynamic: DynamicCstr) {
     if (!node ||
