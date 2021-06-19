@@ -24,7 +24,7 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import {DynamicCstr} from './dynamic_cstr';
+// import {DynamicCstr} from './dynamic_cstr';
 import {SpeechRule} from './speech_rule';
 import {SpeechRuleContext} from './speech_rule_context';
 
@@ -74,7 +74,7 @@ export interface SpeechRuleStore {
    *     constraints. These are matched against properties of a rule.
    * @return The speech rule if an applicable one exists.
    */
-  lookupRule(node: Node, dynamic: DynamicCstr): SpeechRule;
+  // lookupRule(node: Node, dynamic: DynamicCstr): SpeechRule;
 
 
   /**

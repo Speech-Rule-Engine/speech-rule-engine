@@ -29,6 +29,7 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
+import * as DomUtil from '../common/dom_util';
 import {AuditoryDescription} from '../audio/auditory_description';
 import {Span} from '../audio/span';
 import {Debugger} from '../common/debugger';
@@ -56,6 +57,11 @@ export class SpeechRuleEngine {
   private static instance: SpeechRuleEngine;
 
   public prune = true;
+
+  /**
+   * Trie for indexing speech rules in this store.
+   */
+  public trie: Trie = null;
 
   private activeStore_: BaseRuleStore;
 
@@ -222,7 +228,7 @@ export class SpeechRuleEngine {
     let store = this.storeFactory(set.modality);
     store.parse(set);
     store.initialize();
-    store.getSpeechRules().forEach(x => this.activeStore_.trie.addRule(x));
+    store.getSpeechRules().forEach(x => this.trie.addRule(x));
     // console.log(store.getSpeechRules().map(x => x.name).join(', '));
     this.addEvaluator(store);
     // this.activeStore_.setSpeechRules(this.activeStore_.trie.collectRules());
@@ -257,7 +263,7 @@ export class SpeechRuleEngine {
     let engine = Engine.getInstance();
     if (engine.prune) {
       let cstr = engine.prune.split('.');
-      this.activeStore_.prune(cstr);
+      this.pruneTrie(cstr);
     }
     if (engine.rules) {
       // TODO: This needs to be made more robust.
@@ -333,7 +339,7 @@ export class SpeechRuleEngine {
    * @return The collated information.
    */
   public enumerate(opt_info?: Object): Object {
-    return this.activeStore_.trie.enumerate(opt_info);
+    return this.trie.enumerate(opt_info);
   }
 
   // Temporary
@@ -346,7 +352,7 @@ export class SpeechRuleEngine {
      * The currently active speech rule store.
      */
     this.activeStore_ = new MathStore();
-    this.activeStore_.trie = new Trie();
+    this.trie = new Trie();
     Engine.registerTest(() => this.ready_);
     // Engine.registerTest((() => {console.log('SRE test'); return this.ready_}).bind(this));
   }
@@ -380,7 +386,7 @@ export class SpeechRuleEngine {
     Debugger.getInstance().output(
         engine.mode !== EngineConst.Mode.HTTP ? node.toString() : node);
     Grammar.getInstance().setAttribute(node);
-    let rule = this.activeStore_.lookupRule(node, engine.dynamicCstr);
+    let rule = this.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
       if (engine.strict) {
         return [];
@@ -654,7 +660,7 @@ export class SpeechRuleEngine {
   private updateConstraint_() {
     let dynamic = Engine.getInstance().dynamicCstr;
     let strict = Engine.getInstance().strict;
-    let trie = this.activeStore_.trie;
+    let trie = this.trie;
     let props: {[key: string]: string[]} = {};
     let locale = dynamic.getValue(Axis.LOCALE);
     let modality = dynamic.getValue(Axis.MODALITY);
@@ -711,4 +717,88 @@ export class SpeechRuleEngine {
     }
     return value.split(':');
   }
+
+
+  /**
+   * @override
+   */
+  public lookupRule(node: Node, dynamic: DynamicCstr) {
+    if (!node ||
+        node.nodeType !== DomUtil.NodeType.ELEMENT_NODE &&
+            node.nodeType !== DomUtil.NodeType.TEXT_NODE) {
+      return null;
+    }
+    let matchingRules = this.lookupRules(node, dynamic);
+    return matchingRules.length > 0 ?
+        this.pickMostConstraint_(dynamic, matchingRules) :
+        null;
+  }
+
+
+  /**
+   * Retrieves a list of applicable rule for the given node.
+   * @param node A node.
+   * @param dynamic Additional dynamic
+   *     constraints. These are matched against properties of a rule.
+   * @return All applicable speech rules.
+   */
+  public lookupRules(node: Node, dynamic: DynamicCstr): SpeechRule[] {
+    return this.trie.lookupRules(node, dynamic.allProperties());
+  }
+
+  
+  /**
+   * Picks the result of the most constraint rule by prefering those:
+   * 1) that best match the dynamic constraints.
+   * 2) with the most additional constraints.
+   * @param dynamic Dynamic constraints.
+   * @param rules An array of rules.
+   * @return The most constraint rule.
+   */
+  private pickMostConstraint_(_dynamic: DynamicCstr, rules: SpeechRule[]):
+      SpeechRule {
+    let comparator = Engine.getInstance().comparator;
+    rules.sort(function(r1, r2) {
+      return comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
+          // When same number of dynamic constraint attributes matches for
+          // both rules, compare length of static constraints.
+          // sre.BaseRuleStore.strongQuery_(r1, r2) ||
+          SpeechRuleEngine.priority_(r1, r2) ||
+          r2.precondition.constraints.length -
+          r1.precondition.constraints.length ||
+          r2.precondition.rank - r1.precondition.rank;
+    });
+    Debugger.getInstance().generateOutput((() => {
+      return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
+    }).bind(this));
+    return rules[0];
+  }
+
+
+  /**
+   * Prunes the trie of the store for a given constraint.
+   * @param constraints A list of constraints.
+   */
+  public pruneTrie(constraints: string[]) {
+    let last = constraints.pop();
+    let parent = this.trie.byConstraint(constraints);
+    if (parent) {
+      parent.removeChild(last);
+    }
+  }
+
+
+  /**
+   * Compares priority of two rules.
+   * @param rule1 The first speech rule.
+   * @param rule2 The second speech rule.
+   * @return -1, 0, 1 depending on the comparison.
+   */
+  private static priority_(rule1: SpeechRule, rule2: SpeechRule): number {
+    let priority1 = rule1.precondition.priority;
+    let priority2 = rule2.precondition.priority;
+    return priority1 === priority2 ? 0 : priority1 > priority2 ? -1 : 1;
+  }
+
+
 }

@@ -345,9 +345,9 @@ export namespace MathCompoundStore {
    */
   export function enumerate(opt_info?: Object): Object {
     let info = opt_info || {};
-    for (let store in subStores_) {
-      info = subStores_[store].trie.enumerate(info);
-    }
+    // for (let store in subStores_) {
+    //   info = subStores_[store].trie.enumerate(info);
+    // }
     return info;
   }
 
