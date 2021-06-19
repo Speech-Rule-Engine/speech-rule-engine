@@ -63,7 +63,7 @@ export class SpeechRuleEngine {
    */
   public trie: Trie = null;
 
-  private activeStore_: BaseRuleStore;
+  // private activeStore_: BaseRuleStore;
 
   /**
    * Flag indicating if the engine is ready. Not ready while it is updating!
@@ -91,10 +91,13 @@ export class SpeechRuleEngine {
    * @param node DOM node to test applicability of the rule.
    */
   public static debugSpeechRule(rule: SpeechRule, node: Node) {
-    let store = SpeechRuleEngine.getInstance().activeStore_;
-    if (store) {
-      store.debugSpeechRule(rule, node);
-    }
+    let prec = rule.precondition;
+    let queryResult = rule.context.applyQuery(node, prec.query);
+    Debugger.getInstance().output(
+        prec.query, queryResult ? queryResult.toString() : queryResult);
+    prec.constraints.forEach(cstr =>
+      Debugger.getInstance().output(
+        cstr, rule.context.applyConstraint(node, cstr)));
   }
 
 
@@ -104,15 +107,13 @@ export class SpeechRuleEngine {
    * @param node DOM node to test applicability of the rule.
    */
   public static debugNamedSpeechRule(name: string, node: Node) {
-    let store = SpeechRuleEngine.getInstance().activeStore_;
-    if (store) {
-      let allRules = store.findAllRules(rule => rule.name == name);
-      for (let i = 0, rule; rule = allRules[i]; i++) {
-        Debugger.getInstance().output(
-            'Rule', name, 'DynamicCstr:', rule.dynamicCstr.toString(), 'number',
-            i);
-        store.debugSpeechRule(rule, node);
-      }
+    let rules = SpeechRuleEngine.getInstance().trie.collectRules();
+    let allRules = rules.filter(rule => rule.name == name);
+    for (let i = 0, rule; rule = allRules[i]; i++) {
+      Debugger.getInstance().output(
+        'Rule', name, 'DynamicCstr:', rule.dynamicCstr.toString(), 'number',
+        i);
+      SpeechRuleEngine.debugSpeechRule(rule, node);
     }
   }
 
@@ -178,7 +179,7 @@ export class SpeechRuleEngine {
    *     engine.
    */
   public toString(): string {
-    let allRules = this.activeStore_.findAllRules(_x => true);
+    let allRules = this.trie.collectRules();
     return allRules.map(rule => rule.toString()).join('\n');
   }
 
@@ -342,16 +343,11 @@ export class SpeechRuleEngine {
     return this.trie.enumerate(opt_info);
   }
 
-  // Temporary
-  public getStore() {
-    return this.activeStore_;
-  }
-
   private constructor() {
     /**
      * The currently active speech rule store.
      */
-    this.activeStore_ = new MathStore();
+    // this.activeStore_ = new MathStore();
     this.trie = new Trie();
     Engine.registerTest(() => this.ready_);
     // Engine.registerTest((() => {console.log('SRE test'); return this.ready_}).bind(this));
@@ -761,9 +757,12 @@ export class SpeechRuleEngine {
     rules.sort(function(r1, r2) {
       return comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
           // When same number of dynamic constraint attributes matches for
-          // both rules, compare length of static constraints.
-          // sre.BaseRuleStore.strongQuery_(r1, r2) ||
-          SpeechRuleEngine.priority_(r1, r2) ||
+          // both rules, compare
+          // 1. Computed priority value
+          // 2. length of static constraints,
+          // 3. Rank in the definition. Note that later rules
+          //    supersede earlier ones. 
+          r2.precondition.priority - r1.precondition.priority ||
           r2.precondition.constraints.length -
           r1.precondition.constraints.length ||
           r2.precondition.rank - r1.precondition.rank;
@@ -786,19 +785,5 @@ export class SpeechRuleEngine {
       parent.removeChild(last);
     }
   }
-
-
-  /**
-   * Compares priority of two rules.
-   * @param rule1 The first speech rule.
-   * @param rule2 The second speech rule.
-   * @return -1, 0, 1 depending on the comparison.
-   */
-  private static priority_(rule1: SpeechRule, rule2: SpeechRule): number {
-    let priority1 = rule1.precondition.priority;
-    let priority2 = rule2.precondition.priority;
-    return priority1 === priority2 ? 0 : priority1 > priority2 ? -1 : 1;
-  }
-
 
 }

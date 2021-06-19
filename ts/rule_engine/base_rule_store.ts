@@ -24,7 +24,7 @@
 
 
 import {AuditoryDescription} from '../audio/auditory_description';
-import {Debugger} from '../common/debugger';
+// import {Debugger} from '../common/debugger';
 // import * as DomUtil from '../common/dom_util';
 // import {Engine} from '../common/engine';
 import {Axis, AxisOrder, DynamicCstr, DynamicCstrParser} from './dynamic_cstr';
@@ -266,22 +266,6 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    * of getting around dependencies.
    */
   public abstract initialize(): void;
-
-
-  /**
-   * Test the applicability of a speech rule in debugging mode.
-   * @param rule Rule to debug.
-   * @param node DOM node to test applicability of given rule.
-   */
-  public debugSpeechRule(rule: SpeechRule, node: Node) {
-    let prec = rule.precondition;
-    let queryResult = rule.context.applyQuery(node, prec.query);
-    Debugger.getInstance().output(
-        prec.query, queryResult ? queryResult.toString() : queryResult);
-    prec.constraints.forEach(cstr =>
-      Debugger.getInstance().output(
-        cstr, rule.context.applyConstraint(node, cstr)));
-  }
 
 
   /**
