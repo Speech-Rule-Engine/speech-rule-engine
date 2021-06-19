@@ -321,9 +321,8 @@ export class SpeechRuleEngine {
   public getEvaluator(locale: string, modality: string):
       (p1: Node) => AuditoryDescription[] {
     let loc = this.evaluators_[locale];
-    let fun = loc ? loc[modality] : null;
-    return fun ? fun :
-        this.activeStore_.evaluateDefault.bind(this.activeStore_);
+    // TODO: Do we need a fallback here?
+    return loc[modality];
   }
 
 
@@ -347,7 +346,7 @@ export class SpeechRuleEngine {
      * The currently active speech rule store.
      */
     this.activeStore_ = new MathStore();
-    this.activeStore_.trie = new Trie(this.activeStore_);
+    this.activeStore_.trie = new Trie();
     Engine.registerTest(() => this.ready_);
     // Engine.registerTest((() => {console.log('SRE test'); return this.ready_}).bind(this));
   }
@@ -396,7 +395,7 @@ export class SpeechRuleEngine {
         'Apply Rule:', rule.name, rule.dynamicCstr.toString(),
         (engine.mode !== EngineConst.Mode.HTTP ? node : node).toString()
     ]);
-    let context = rule.context || this.activeStore_.context;
+    let context = rule.context;//  || this.activeStore_.context;
     let components = rule.action.components;
     result = [];
     for (let i = 0, component; component = components[i]; i++) {

@@ -229,7 +229,7 @@
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"radice di indice\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"indice finale\"; [n] . (grammar:gender=\"female\")",
+      "[t] \"radice di indice\"; [n] children/*[1] (engine:modality=speech); [t] \"indice finale\"; [n] . (grammar:gender=\"female\")",
       "self::root",
       "contains(@grammar, \"collapsed\")",
       "following-sibling::* or ancestor::*/following-sibling::*"
@@ -238,7 +238,7 @@
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"radice di indice\"; [n] children/*[1] (engine:modality=\"speech\"); [n] . (grammar:gender=\"female\")",
+      "[t] \"radice di indice\"; [n] children/*[1] (engine:modality=speech); [n] . (grammar:gender=\"female\")",
       "self::root"
     ],
     [
@@ -258,7 +258,7 @@
       "Rule",
       "abstr-root-nested",
       "default.default",
-      "[t] \"radicale doppio di indice\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"indice finale\"; [n] . (grammar:gender=\"male\")",
+      "[t] \"radicale doppio di indice\"; [n] children/*[1] (engine:modality=speech); [t] \"indice finale\"; [n] . (grammar:gender=\"male\")",
       "self::root",
       "contains(@grammar, \"collapsed\")",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
@@ -268,7 +268,7 @@
       "Rule",
       "abstr-root-nested",
       "default.default",
-      "[t] \"radicale doppio di indice\";  [n] children/*[1] (engine:modality=\"speech\"); [n] . (grammar:gender=\"male\")",
+      "[t] \"radicale doppio di indice\";  [n] children/*[1] (engine:modality=speech); [n] . (grammar:gender=\"male\")",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],

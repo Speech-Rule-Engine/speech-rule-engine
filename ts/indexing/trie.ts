@@ -28,7 +28,6 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {BaseRuleStore} from '../rule_engine/base_rule_store';
 import {SpeechRule} from '../rule_engine/speech_rule';
 import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
 import {StaticTrieNode} from './abstract_trie_node';
@@ -102,8 +101,8 @@ export class Trie {
   /**
    * @param store The store the trie belongs to.
    */
-  constructor(public store: BaseRuleStore) {
-    this.root = getNode(TrieNodeKind.ROOT, '', this.store.context);
+  constructor() {
+    this.root = getNode(TrieNodeKind.ROOT, '', null);
   }
 
 
