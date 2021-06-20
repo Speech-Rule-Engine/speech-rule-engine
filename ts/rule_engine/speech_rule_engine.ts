@@ -248,6 +248,7 @@ export class SpeechRuleEngine {
       this.prune = false;
       this.adjustEngine();
     }
+    // TODO: Rewrite this to use MathCompoundStore
     Engine.getInstance().evaluator = maps.lookupString as (p1: string, p2: DynamicCstr) => string;
       // maps.store.lookupString.bind(maps.store);
   }
