@@ -29,6 +29,7 @@ import {EngineConst, SREError} from './engine';
 import {ProcessorFactory} from './processors';
 import * as System from './system';
 import SystemExternal from './system_external';
+import {Variables} from './variables';
 
 
 export class Cli {
@@ -74,8 +75,13 @@ export class Cli {
   /**
    * Prints information on axes values.
    */
-  public enumerate() {
+  public enumerate(all: boolean = false) {
     System.setupEngine(this.setup);
+    if (all) {
+      for (let loc of Variables.LOCALES) {
+        System.setupEngine({locale: loc});
+      }
+    }
     let length = DynamicCstr.DEFAULT_ORDER.map(x => x.length);
     let maxLength = (obj: any, index: number) => {
       length[index] = Math.max.apply(
@@ -264,11 +270,15 @@ export class Cli {
         .option('-v, --verbose', 'Verbose mode.')
         .option('-l, --log [name]', 'Log file [name].')
         .option('--opt', 'List engine setup options.')
-        .on('option:opt',
-            (() => {
-              this.enumerate();
-              System.exit(0);
-            }).bind(this))
+        .option('--opt-all', 'List engine setup options for all available locales.')
+        .on('option:opt', () => {
+            this.enumerate();
+            System.exit(0);
+            })
+        .on('option:opt-all', () => {
+            this.enumerate(true);
+            System.exit(0);
+            })
         .parse(this.process.argv);
     System.setupEngine(this.setup);
     let options = commander.opts();

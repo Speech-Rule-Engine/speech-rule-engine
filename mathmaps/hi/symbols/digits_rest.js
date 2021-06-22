@@ -6,7 +6,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "वर्ग"
+        "default": "चुकता"
       },
       "mathspeak": {
         "default": "चुकता"

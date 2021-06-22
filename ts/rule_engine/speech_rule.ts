@@ -419,9 +419,14 @@ export class Precondition {
   public constraints: string[];
 
   /**
-   * An autmoatically computed priority level.
+   * An automatically computed priority level.
    */
   public priority: number;
+
+  /**
+   * The rank in the definition order. This is a secondary priority.
+   */
+  public rank: number;
 
   /**
    * Computes a base priority of a constraint by matching against an ordered
@@ -445,7 +450,7 @@ export class Precondition {
    */
   public toString() {
     let constrs = this.constraints.join(', ');
-    return this.query + ', ' + constrs + ' (' + this.priority + ')';
+    return `${this.query}, ${constrs} (${this.priority}, ${this.rank})`;
   }
 
   /**

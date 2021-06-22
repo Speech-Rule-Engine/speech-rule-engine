@@ -320,7 +320,7 @@ const PREFERENCES = new DynamicProperties({
   ],
   Prime: ['Auto', 'Angle', 'Length'],
   Roots: ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
-  SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member'],
+  SetMemberSymbol: ['Auto', 'Belongs', 'Element', 'Member', 'In'],
   Sets: ['Auto', 'SilentBracket', 'woAll'],
   TriangleSymbol: ['Auto', 'Delta'],
   Trig: [

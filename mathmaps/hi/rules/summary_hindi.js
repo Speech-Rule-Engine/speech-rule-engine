@@ -159,7 +159,7 @@
       "Rule",
       "abstr-root",
       "default.default",
-      "[t] \"वां मूल\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"मूलांक समाप्त\"",
+      "[t] \"वां मूल\"; [n] children/*[1] (engine:modality=speech); [t] \"मूलांक समाप्त\"",
       "self::root",
       "contains(@grammar, \"collapsed\")",
       "following-sibling::* or ancestor::*/following-sibling::*"
@@ -168,7 +168,7 @@
       "Rule",
       "abstr-root",
       "default.default",
-      "[n] children/*[1] (engine:modality=\"speech\"); [t] \"वां मूल\"",
+      "[n] children/*[1] (engine:modality=speech); [t] \"वां मूल\"",
       "self::root"
     ],
     [
@@ -188,7 +188,7 @@
       "Rule",
       "abstr-root-nested",
       "default.default",
-      "[t] \"नीड़ित मूल्यांक\"; [n] children/*[1] (engine:modality=\"speech\"); [t] \"मूलांक समाप्त\"",
+      "[t] \"नीड़ित मूल्यांक\"; [n] children/*[1] (engine:modality=speech); [t] \"मूलांक समाप्त\"",
       "self::root",
       "contains(@grammar, \"collapsed\")",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
@@ -198,7 +198,7 @@
       "Rule",
       "abstr-root-nested",
       "default.default",
-      "[t] \"नीड़ित मूल्यांक\"; [n] children/*[1] (engine:modality=\"speech\")",
+      "[t] \"नीड़ित मूल्यांक\"; [n] children/*[1] (engine:modality=speech)",
       "self::root",
       "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root"
     ],

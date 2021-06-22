@@ -24,10 +24,6 @@
 
 
 import {AuditoryDescription} from '../audio/auditory_description';
-import {Debugger} from '../common/debugger';
-import * as DomUtil from '../common/dom_util';
-import {Engine} from '../common/engine';
-import {Trie} from '../indexing/trie';
 import {Axis, AxisOrder, DynamicCstr, DynamicCstrParser} from './dynamic_cstr';
 import {Action, Precondition, SpeechRule} from './speech_rule';
 import {SpeechRuleContext} from './speech_rule_context';
@@ -41,11 +37,6 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    * Context for custom functions of this rule store.
    */
   public context: SpeechRuleContext = new SpeechRuleContext();
-
-  /**
-   * Trie for indexing speech rules in this store.
-   */
-  public trie: Trie = new Trie(this);
 
   /**
    * A priority list of dynamic constraint attributes.
@@ -94,6 +85,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   private speechRules_: SpeechRule[] = [];
 
+  private rank: number = 0;
+
   // TODO (sorge) Define the following methods directly on the precondition
   //     classes.
   /**
@@ -136,19 +129,6 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
 
 
   /**
-   * Compares priority of two rules.
-   * @param rule1 The first speech rule.
-   * @param rule2 The second speech rule.
-   * @return -1, 0, 1 depending on the comparison.
-   */
-  private static priority_(rule1: SpeechRule, rule2: SpeechRule): number {
-    let priority1 = rule1.precondition.priority;
-    let priority2 = rule2.precondition.priority;
-    return priority1 === priority2 ? 0 : priority1 > priority2 ? -1 : 1;
-  }
-
-
-  /**
    * @override
    */
   constructor() {
@@ -156,34 +136,6 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
       'Rule': this.defineRule,
       'Generator': this.generateRules
     };
-  }
-
-
-  /**
-   * @override
-   */
-  public lookupRule(node: Node, dynamic: DynamicCstr) {
-    if (!node ||
-        node.nodeType !== DomUtil.NodeType.ELEMENT_NODE &&
-            node.nodeType !== DomUtil.NodeType.TEXT_NODE) {
-      return null;
-    }
-    let matchingRules = this.lookupRules(node, dynamic);
-    return matchingRules.length > 0 ?
-        this.pickMostConstraint_(dynamic, matchingRules) :
-        null;
-  }
-
-
-  /**
-   * Retrieves a list of applicable rule for the given node.
-   * @param node A node.
-   * @param dynamic Additional dynamic
-   *     constraints. These are matched against properties of a rule.
-   * @return All applicable speech rules.
-   */
-  public lookupRules(node: Node, dynamic: DynamicCstr): SpeechRule[] {
-    return this.trie.lookupRules(node, dynamic.allProperties());
   }
 
 
@@ -207,6 +159,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
         throw err;
       }
     }
+    rule.precondition.rank = this.rank++;
     this.addRule(rule);
     return rule;
   }
@@ -217,7 +170,6 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   public addRule(rule: SpeechRule) {
     rule.context = this.context;
-    this.trie.addRule(rule);
     this.speechRules_.unshift(rule);
   }
 
@@ -313,22 +265,6 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
 
 
   /**
-   * Test the applicability of a speech rule in debugging mode.
-   * @param rule Rule to debug.
-   * @param node DOM node to test applicability of given rule.
-   */
-  public debugSpeechRule(rule: SpeechRule, node: Node) {
-    let prec = rule.precondition;
-    let queryResult = rule.context.applyQuery(node, prec.query);
-    Debugger.getInstance().output(
-        prec.query, queryResult ? queryResult.toString() : queryResult);
-    prec.constraints.forEach(cstr =>
-      Debugger.getInstance().output(
-        cstr, rule.context.applyConstraint(node, cstr)));
-  }
-
-
-  /**
    * Removes duplicates of the given rule from the rule store. Thereby
    * duplicates are identified by having the same precondition and dynamic
    * constraint.
@@ -415,7 +351,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
       let type = rule[0];
       let method = this.parseMethods[type];
       if (type && method) {
-        method.apply(this, rule.slice(1));
+        method.apply(this, rule.slice(1))
       }
     }
   }
@@ -430,46 +366,6 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     if (method) {
       method(this);
     }
-  }
-
-
-  /**
-   * Prunes the trie of the store for a given constraint.
-   * @param constraints A list of constraints.
-   */
-  public prune(constraints: string[]) {
-    let last = constraints.pop();
-    let parent = this.trie.byConstraint(constraints);
-    if (parent) {
-      parent.removeChild(last);
-    }
-  }
-
-
-  /**
-   * Picks the result of the most constraint rule by prefering those:
-   * 1) that best match the dynamic constraints.
-   * 2) with the most additional constraints.
-   * @param dynamic Dynamic constraints.
-   * @param rules An array of rules.
-   * @return The most constraint rule.
-   */
-  private pickMostConstraint_(_dynamic: DynamicCstr, rules: SpeechRule[]):
-      SpeechRule {
-    let comparator = Engine.getInstance().comparator;
-    rules.sort(function(r1, r2) {
-      return comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
-          // When same number of dynamic constraint attributes matches for
-          // both rules, compare length of static constraints.
-          // sre.BaseRuleStore.strongQuery_(r1, r2) ||
-          BaseRuleStore.priority_(r1, r2) ||
-          r2.precondition.constraints.length -
-          r1.precondition.constraints.length;
-    });
-    Debugger.getInstance().generateOutput((() => {
-      return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
-    }).bind(this));
-    return rules[0];
   }
 
 

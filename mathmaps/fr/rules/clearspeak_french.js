@@ -2334,7 +2334,8 @@
       "Aliases",
       "lines-summary",
       "self::table",
-      "not(contains(@grammar, \"layoutSummary\"))"
+      "not(contains(@grammar, \"layoutSummary\"))",
+      "self::*"
     ],
     [
       "Rule",
