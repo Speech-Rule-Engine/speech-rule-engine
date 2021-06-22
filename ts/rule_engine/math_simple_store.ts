@@ -30,8 +30,6 @@ import {Debugger} from '../common/debugger';
 import {Engine} from '../common/engine';
 import {locales} from '../l10n/l10n';
 import {Axis, DynamicCstr} from './dynamic_cstr';
-// import {MathStore} from './math_store';
-// import {SpeechRule} from './speech_rule';
 
 
 export interface MappingsJson {
@@ -59,7 +57,7 @@ export interface SiJson {
 }
 
 export interface SimpleRule {
-  dynamicCstr: DynamicCstr;
+  cstr: DynamicCstr;
   action: string;
 }
 
@@ -100,9 +98,9 @@ export class MathSimpleStore {
   private static testDynamicConstraints_(
       dynamic: DynamicCstr, rule: SimpleRule): boolean {
     if (Engine.getInstance().strict) {
-      return rule.dynamicCstr.equal(dynamic);
+      return rule.cstr.equal(dynamic);
     }
-    return Engine.getInstance().comparator.match(rule.dynamicCstr);
+    return Engine.getInstance().comparator.match(rule.cstr);
   }
 
 
@@ -153,8 +151,8 @@ export class MathSimpleStore {
     let comparator = comp ? comp() : Engine.getInstance().comparator;
     let oldCstr = comparator.getReference();
     comparator.setReference(dynamic)
-    let rule = {dynamicCstr: dynamic, action: content};
-    store = store.filter(r => !comparator.match(r.dynamicCstr));
+    let rule = {cstr: dynamic, action: content};
+    store = store.filter(r => !comparator.match(r.cstr));
     store.push(rule);
     this.rules.set(locale, store);
     comparator.setReference(oldCstr);
@@ -174,8 +172,7 @@ export class MathSimpleStore {
     }
     return rules.length ? rules.sort(
       (r1, r2) =>
-        Engine.getInstance().comparator.compare(
-          r1.dynamicCstr, r2.dynamicCstr))[0] :  null;
+        Engine.getInstance().comparator.compare(r1.cstr, r2.cstr))[0] :  null;
   }
 
 }
@@ -326,7 +323,6 @@ export namespace MathCompoundStore {
    */
   export function lookupRule(node: string, dynamic: DynamicCstr): SimpleRule {
     let store = subStores_[node];
-    // console.log(store.rules.get('en').map(x => [x.dynamicCstr.getValues(), x.action]));
     return store ? store.lookupRule(null, dynamic) : null;
   }
 
@@ -364,11 +360,24 @@ export namespace MathCompoundStore {
    * @param opt_info Initial dynamic constraint information.
    * @return The collated information.
    */
-  export function enumerate(opt_info?: Object): Object {
-    let info = opt_info || {};
-    // for (let store in subStores_) {
-    //   info = subStores_[store].trie.enumerate(info);
-    // }
+  export function enumerate(info: Object = {}): Object {
+    for (let store of Object.values(subStores_)) {
+      for (let [_locale, rules] of store.rules.entries()) {
+        for (let {cstr: dynamic} of rules) {
+          info = enumerate_(dynamic.getValues(), info);
+        }
+      }
+    }
+    return info;
+  }
+
+  function enumerate_(dynamic: string[],
+                      info: {[key: string]: any}): {[key: string]: any} {
+    info = info || {};
+    if (!dynamic.length) {
+      return info;
+    }
+    info[dynamic[0]] = enumerate_(dynamic.slice(1), info[dynamic[0]]);
     return info;
   }
 
