@@ -190,7 +190,7 @@ export namespace MathMap {
       getJsonIE_(locale);
       return;
     }
-    let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.js';
+    let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
     let parse = parseMaps.bind(this);
     retrieveFiles(file, parse);
   }

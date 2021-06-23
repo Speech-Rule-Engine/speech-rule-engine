@@ -29,10 +29,10 @@ LICENSE = $(SRC_DIR)/license-header.txt
 JSON_SRC = $(abspath ./mathmaps)
 JSON_DST = $(LIB_DIR)/mathmaps
 MAPS = messages si functions symbols units rules
-IEMAPS_FILE = $(IEMAPS_PKG)/mathmaps_ie.js
+IEMAPS_FILE = $(IEMAPS_PKG)/mathmaps_ie.json
 LOCALES = $(notdir $(wildcard $(JSON_SRC)/*))  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
 LOC_SRC = $(JSON_SRC)/*  ## $(foreach dir, $(MAPS), $(JSON_SRC)/$(dir))
-LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .js,$(LOCALES)))
+LOC_DST = $(addprefix $(JSON_DST)/, $(addsuffix .json,$(LOCALES)))
 
 TEST_DIR = $(abspath ./sre-tests)
 TEST_RUNNER = $(TEST_DIR)/dist/sretest.js
@@ -76,17 +76,17 @@ maps: $(JSON_DST) clean_loc $(LOC_DST)
 
 clean_loc:
 	@if ! [ -z $(LOC) ]; then \
-		echo "Deleting $(LOC).js"; \
-		rm -f $(JSON_DST)/$(LOC).js; \
+		echo "Deleting $(LOC).json"; \
+		rm -f $(JSON_DST)/$(LOC).json; \
 	fi
 
 $(LOC_DST):
-	@echo "Creating mappings for locale `basename $@ .js`."
+	@echo "Creating mappings for locale `basename $@ .json`."
 	@echo '{' > $@
 	@for dir in $(MAPS); do\
-		if [ -d $(JSON_SRC)/`basename $@ .js`/$$dir ]; then \
-			for i in $(JSON_SRC)/`basename $@ .js`/$$dir/*.js; do\
-				echo '"'`basename $@ .js`/$$dir/`basename $$i`'": '  >> $@; \
+		if [ -d $(JSON_SRC)/`basename $@ .json`/$$dir ]; then \
+			for i in $(JSON_SRC)/`basename $@ .json`/$$dir/*.json; do\
+				echo '"'`basename $@ .json`/$$dir/`basename $$i`'": '  >> $@; \
 				$(JSON_MINIFY) $$i >> $@; \
 				echo ','  >> $@; \
 			done; \
@@ -106,7 +106,7 @@ $(IEMAPS_FILE):
 		for dir in $(MAPS); do\
 			echo $(JSON_SRC)/$$j/$$dir;\
 			if [ -d $(JSON_SRC)/$$j/$$dir ]; then\
-				for i in $(JSON_SRC)/$$j/$$dir/*.js; do\
+				for i in $(JSON_SRC)/$$j/$$dir/*.json; do\
 					echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
 					$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
 					echo ','  >> $(IEMAPS_FILE); \
