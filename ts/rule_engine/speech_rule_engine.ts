@@ -266,7 +266,7 @@ export class SpeechRuleEngine {
     if (engine.rules) {
       // TODO: This needs to be made more robust.
       let path =
-          SystemExternal.jsonPath.replace('/lib/mathmaps', '/src/mathmaps');
+          SystemExternal.jsonPath.replace('/lib/mathmaps', '/mathmaps');
       let parse = (json: string) =>
         MathMap.getInstance().parseMaps(`{"${engine.rules}":${json}}`);
       MathMap.getInstance().retrieveFiles(path + engine.rules, parse);
