@@ -107,11 +107,11 @@ sre.Locale.en = {
     'period': ['점', sre.Locale.postfixCombiner],
     'negative-circled': '검은 원문자',
     'double-circled': '겹원문자',
-    'circled-sans-serif': 'circled sans serif',
-    'negative-circled-sans-serif': 'black circled sans serif',
+    'circled-sans-serif': '고딕 원문자',
+    'negative-circled-sans-serif': '검은 고딕 원문자',
     'comma': ['반점', sre.Locale.postfixCombiner],
-    'squared': 'squared',
-    'negative-squared': 'black squared'
+    'squared': '사각형 문자',
+    'negative-squared': '검은 사각형 문자'
   },
 
   ROLE: {
