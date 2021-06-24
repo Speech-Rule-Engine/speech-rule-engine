@@ -117,27 +117,27 @@ sre.Locale.en = {
   ROLE: {
     // Infixoperators
     'addition': '덧셈',
-    'multiplication': 'multiplication',
-    'subtraction': 'subtraction',
-    'division': 'division',
+    'multiplication': '곱셈',
+    'subtraction': '뺄셈',
+    'division': '나눗셈',
     // Relations.
-    'equality': 'equality',
-    'inequality': 'inequality',
-    'element': 'element',
-    'arrow': 'arrow',
+    'equality': '등호',
+    'inequality': '같지 않다',
+    'element': '원소',
+    'arrow': '화살표',
     // Roles of matrices or vectors.
-    'determinant': 'determinant',
-    'rowvector': 'row vector',
-    'binomial': 'binomial',
-    'squarematrix': 'square matrix',
+    'determinant': '행렬식', 
+    'rowvector': '행 벡터',
+    'binomial': '이항',
+    'squarematrix': '정사각형 행렬',
     // Roles of rows, lines, cells.
-    'multiline': 'multiple lines',
-    'matrix': 'matrix',
-    'vector': 'vector',
-    'cases': 'case statement',
-    'table': 'table',
+    'multiline': '연립',
+    'matrix': '행렬',
+    'vector': '벡터',
+    'cases': 'case', //조건? 경우? 상태?
+    'table': '표',
     // Unknown
-    'unknown': 'unknown'
+    'unknown': '알 수 없음'
   },
 
 
