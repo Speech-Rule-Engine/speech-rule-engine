@@ -18,16 +18,16 @@
  *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-goog.provide('sre.Locale.en');
+goog.provide('sre.Locale.ko');
 
 goog.require('sre.Locale');
-goog.require('sre.Numbers.en');
+goog.require('sre.Numbers.ko');
 
 
 /**
  * @type {sre.Locale.Messages}
  */
-sre.Locale.en = {
+sre.Locale.ko = {
 
   MS: {
     START: '시작',
@@ -191,7 +191,7 @@ sre.Locale.en = {
     return (/.*s$/.test(unit)) ? unit : unit + '들';
   },
 
-  NUMBERS: sre.Numbers.en.NUMBERS,
+  NUMBERS: sre.Numbers.ko.NUMBERS,
 
   ALPHABETS: {
     latinSmall: [
