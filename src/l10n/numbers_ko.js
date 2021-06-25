@@ -80,17 +80,35 @@ sre.Numbers.ko.hundredsToWords_ = function (number) {
       sre.Numbers.ko.onesNumbers_[Math.floor(n / 100)] + '백' : '';
     n = n % 100;
 
-    if (n) {
-      str += str ? sre.Numbers.ko.NUMBERS.numSep : '';
-      str += sre.Numbers.ko.onesNumbers_[n] ||
-        (sre.Numbers.ko.tensNumbers_[Math.floor(n / 10)] +
-          (n % 10 ? sre.Numbers.ko.onesNumbers_[n % 10] : ''));
-    }
+    str += sre.Numbers.ko.onesNumbers_[n] ||
+      (sre.Numbers.ko.tensNumbers_[Math.floor(n / 10)] +
+        (n % 10 ? sre.Numbers.ko.onesNumbers_[n % 10] : ''));
   }
 
   return str;
 };
 
+
+sre.Numbers.ko.hundredsToWords_ordinal = function (number) {
+  var n = number % 10000;
+  var str = '';
+  str += sre.Numbers.ko.onesNumbers_[Math.floor(n / 1000)] ?
+    sre.Numbers.ko.onesNumbers_[Math.floor(n / 1000)] + '천' : '';
+  n = n % 1000;
+  if (n) {
+    str += sre.Numbers.ko.onesNumbers_[Math.floor(n / 100)] ?
+      sre.Numbers.ko.onesNumbers_[Math.floor(n / 100)] + '백' : '';
+    n = n % 100;
+
+    str += sre.Numbers.ko.onesNumbers_ordinal[n] ||
+      (sre.Numbers.ko.tensNumbers_ordinal[Math.floor(n / 10)] +
+        (n % 10 ? sre.Numbers.ko.onesNumbers_ordinal[n % 10] : ''));
+    
+    str += '번째';
+  }
+
+  return str;
+};
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -161,7 +179,31 @@ sre.Numbers.ko.wordOrdinal = function (number) {
  * @return {string} The ordinal string.
  */
 sre.Numbers.ko.simpleOrdinal = function (number) {
-  return sre.Numbers.ko.wordOrdinal(number);
+  var pos = -1;
+  var str = '';
+
+  var new_number = number;
+  while(new_number > 0){
+      new_number = Math.floor(new_number / 10000);
+      pos++;
+  }
+
+  while (number > 0) {
+    var hundreds = number % 10000;
+    if (number < 10000){
+      str += sre.Numbers.ko.hundredsToWords_ordinal(number % 10000) +
+      (pos ? sre.Numbers.ko.largeNumbers_[pos] +
+          sre.Numbers.ko.NUMBERS.numSep : '');
+    }
+    else if (hundreds) {
+      str += sre.Numbers.ko.hundredsToWords_(number % 10000) +
+          (pos ? sre.Numbers.ko.largeNumbers_[pos] +
+              sre.Numbers.ko.NUMBERS.numSep : '');
+    }
+    number = Math.floor(number / 10000);
+    pos--;
+  }
+  return str.replace(/-$/, '');
 };
 
 
