@@ -130,7 +130,7 @@ sre.Numbers.ko.numberToWords = function (number) {
     number = Math.floor(number / 10000);
     pos++;
   }
-  return str.replace(/-$/, '');
+  return str.replace(/ $/, '');
 };
 
 
@@ -161,12 +161,12 @@ sre.Numbers.ko.wordOrdinal = function (number) {
   if (number === 0) { }
   else if (number % 10 === 0) {
     if (number === 20) tens = '스무';
-    ordinal = ordinal.slice(0, -3) + tens;
+    ordinal = ordinal.slice(0, -2) + tens;
   }
   else if (number < 10) {
-    ordinal = ordinal.slice(0, -2) + ones;
+    ordinal = ordinal.slice(0, -1) + ones;
   }
-  else ordinal = ordinal.slice(0, -4) + tens + ' ' + ones;
+  else ordinal = ordinal.slice(0, -3) + tens + ones;
 
   return ordinal + '번째';
 };
