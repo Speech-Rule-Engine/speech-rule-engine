@@ -1,4 +1,4 @@
-[{"locale": "en"},
+[{"locale": "ko"},
   {
     "category": "Ll",
     "mappings": {
