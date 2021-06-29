@@ -67,7 +67,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "전화 사인"//"telephone sign",
+        "default": "전화 사인", //"telephone sign"
         "alternative": "T E L 기호"//"t e l symbol"
       }
     },

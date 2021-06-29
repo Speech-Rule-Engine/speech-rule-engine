@@ -1740,7 +1740,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "적분"//"integral"
+        "default": "인테그럴"//"integral"
       }
     },
     "key": "222B"
@@ -1749,7 +1749,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이중 적분"//"double integral"
+        "default": "이중 인테그럴"//"double integral"
       }
     },
     "key": "222C"
@@ -1758,7 +1758,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "삼중 적분"//"triple integral"
+        "default": "삼중 인테그럴"//"triple integral"
       }
     },
     "key": "222D"
