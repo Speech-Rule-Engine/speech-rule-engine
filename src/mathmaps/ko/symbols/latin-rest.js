@@ -1,0 +1,561 @@
+[{"locale": "ko"},
+    {
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "이텔릭체 h",
+        "physics": "플랑크상수"
+      }
+    },
+    "key": "210E"
+  },
+ {
+    "category": "Mn",
+    "key": "0363",
+    "mappings": {
+      "default": {
+        "default": "소문자 a 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0364",
+    "mappings": {
+      "default": {
+        "default": "소문자 e 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0365",
+    "mappings": {
+      "default": {
+        "default": "소문자 i 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0366",
+    "mappings": {
+      "default": {
+        "default": "소문자 o 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0367",
+    "mappings": {
+      "default": {
+        "default": "소문자 u 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0368",
+    "mappings": {
+      "default": {
+        "default": "소문자 c 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0369",
+    "mappings": {
+      "default": {
+        "default": "소문자 d 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036A",
+    "mappings": {
+      "default": {
+        "default": "소문자 h 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036B",
+    "mappings": {
+      "default": {
+        "default": "소문자 m 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036C",
+    "mappings": {
+      "default": {
+        "default": "소문자 r 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036D",
+    "mappings": {
+      "default": {
+        "default": "소문자 t 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036E",
+    "mappings": {
+      "default": {
+        "default": "소문자 v 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036F",
+    "mappings": {
+      "default": {
+        "default": "소문자 x 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D62",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 i"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D63",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 r"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D64",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 u"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D65",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 v"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DCA",
+    "mappings": {
+      "default": {
+        "default": "소문자 r 아래 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD3",
+    "mappings": {
+      "default": {
+        "default": "a 자를 평평하게 편 문자 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD4",
+    "mappings": {
+      "default": {
+        "default": "라틴 문자 ae 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD5",
+    "mappings": {
+      "default": {
+        "default": "라틴 문자 ao 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD6",
+    "mappings": {
+      "default": {
+        "default": "라틴 문자 av 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD7",
+    "mappings": {
+      "default": {
+        "default": "라틴 문자 갈고리형 c 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD8",
+    "mappings": {
+      "default": {
+        "default": "라틴 문자 소문자 d 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD9",
+    "mappings": {
+      "default": {
+        "default": "라틴 문자 eth 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDA",
+    "mappings": {
+      "default": {
+        "default": "소문자 g 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDB",
+    "mappings": {
+      "default": {
+        "default": "대문자 G 윗 결합"
+      },
+      "mathspeak": {
+        "default": "대문자 G 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDC",
+    "mappings": {
+      "default": {
+        "default": "소문자 k 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDD",
+    "mappings": {
+      "default": {
+        "default": "소문자 l 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDE",
+    "mappings": {
+      "default": {
+        "default": "대문자 L 윗 결합"
+      },
+      "mathspeak": {
+        "default": "대문자 L 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDF",
+    "mappings": {
+      "default": {
+        "default": "대문자 M 윗 결합"
+      },
+      "mathspeak": {
+        "default": "대문자 M 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE0",
+    "mappings": {
+      "default": {
+        "default": "소문자 n 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE1",
+    "mappings": {
+      "default": {
+        "default": "대문자 N 윗 결합"
+      },
+      "mathspeak": {
+        "default": "대문자 N 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE2",
+    "mappings": {
+      "default": {
+        "default": "대문자 R 윗 결합"
+      },
+      "mathspeak": {
+        "default": "대문자 R 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE3",
+    "mappings": {
+      "default": {
+        "default": "라틴 문자 r 로툰다 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE4",
+    "mappings": {
+      "default": {
+        "default": "소문자 s 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE5",
+    "mappings": {
+      "default": {
+        "default": "라틴 문자 long s 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE6",
+    "mappings": {
+      "default": {
+        "default": "소문자 z 윗 결합"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2071",
+    "mappings": {
+      "default": {
+        "default": "위 첨자 i"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "207F",
+    "mappings": {
+      "default": {
+        "default": "위 첨자 n"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2090",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 a"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2091",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 e"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2092",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 o"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2093",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 x"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2094",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 슈와"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2095",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 h"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2096",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 k"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2097",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 l"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2098",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 m"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2099",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 n"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209A",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 p"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209B",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 s"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209C",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 t"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2C7C",
+    "mappings": {
+      "default": {
+        "default": "아래첨자 j"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12A",
+    "mappings": {
+      "default": {
+        "default": "거북이 등껍질형 대괄호로 묶은 대문자 S"
+      },
+      "mathspeak": {
+        "default": "거북이 등껍질형 대괄호로 묶은 대문자 S"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12B",
+    "mappings": {
+      "default": {
+        "default": "원 안의 이텔릭체 대문자 C"
+      },
+      "mathspeak": {
+        "default": "원 안의 이텔릭체 대문자 C"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12C",
+    "mappings": {
+      "default": {
+        "default": "원 안에 이텔릭체 대문자 R"
+      },
+      "mathspeak": {
+        "default": "원 안에 이텔릭체 대문자 R"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F18A",
+    "mappings": {
+      "default": {
+        "default": "사각형 안에 x자로 교차된 대문자 P"
+      },
+      "mathspeak": {
+        "default": "사각형 안에 x자로 교차된 대문자 P"
+      }
+    }
+  }
+]

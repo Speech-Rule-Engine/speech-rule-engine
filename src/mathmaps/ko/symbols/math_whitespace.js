@@ -1,0 +1,377 @@
+[{"locale": "en"},
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "공간간"
+      }
+    },
+    "key": "0020"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "중간 없는 공간",
+        "alternative": "중간 없는 공간"
+      }
+    },
+    "key": "00A0"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "소프트 하이픈"
+      }
+    },
+    "key": "00AD"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "엔 쿼드"
+      }
+    },
+    "key": "2000"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "엠 쿼드"
+      }
+    },
+    "key": "2001"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "엔 스페이스"
+      }
+    },
+    "key": "2002"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "엠 스페이스"
+      }
+    },
+    "key": "2003"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "3PM 공간"
+      }
+    },
+    "key": "2004"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "4PM 공간"
+      }
+    },
+    "key": "2005"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "6MP 공간간"
+      }
+    },
+    "key": "2006"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "그림 공간"
+      }
+    },
+    "key": "2007"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "구두점"
+      }
+    },
+    "key": "2008"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "얇은 공간"
+      }
+    },
+    "key": "2009"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "헤어 스페이스"
+      }
+    },
+    "key": "200A"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "제로 너비 공간"
+      }
+    },
+    "key": "200B"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "제로 폭 비 결합 자"
+      }
+    },
+    "key": "200C"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "제로 너비 결합 자"
+      }
+    },
+    "key": "200D"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "왼쪽에서 오른쪽으로 표시"
+      }
+    },
+    "key": "200E"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "오른쪽에서 왼쪽으로 표시"
+      }
+    },
+    "key": "200F"
+  },
+  {
+    "category": "Zl",
+    "mappings": {
+      "default": {
+        "default": "라인 구분 기호"
+      }
+    },
+    "key": "2028"
+  },
+  {
+    "category": "Zp",
+    "mappings": {
+      "default": {
+        "default": "단락 구분 기호"
+      }
+    },
+    "key": "2029"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "왼쪽에서 오른쪽으로 포함"
+      }
+    },
+    "key": "202A"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "오른쪽에서 왼쪽으로 임베딩"
+      }
+    },
+    "key": "202B"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "팝 방향 지정"
+      }
+    },
+    "key": "202C"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "왼쪽에서 오른쪽으로 재정의"
+      }
+    },
+    "key": "202D"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "오른쪽에서 왼쪽으로 재정의"
+      }
+    },
+    "key": "202E"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "좁은 브레이크 공간 없음"
+      }
+    },
+    "key": "202F"
+  },
+  {
+    "category": "Zs",
+    "mappings": {
+      "default": {
+        "default": "중간 수학 공간"
+      }
+    },
+    "key": "205F"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "단어 결합 자"
+      }
+    },
+    "key": "2060"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "의의", //"of"
+        "alternative": "기능 응용" // "function application"
+      }
+    },
+    "key": "2061"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "곱샘", //times
+        "alternative": "보이지 않는 곱셈" //invisible times
+      }
+    },
+    "key": "2062"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "나눗셈", //seperator
+        "alternative": "보이지 않는 구분 기호"//invisible seperator
+      }
+    },
+    "key": "2063"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "플러스",
+        "alternative": "보이지 않는 플러스"
+      }
+    },
+    "key": "2064"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "대칭 스와핑 금지"//"inhibit symmetric swapping"
+      }
+    },
+    "key": "206A"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "대칭 교환 활성화"//"activate symmetric swapping"
+      }
+    },
+    "key": "206B"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "내셔널 디지트 셰이프"//"national digit shapes"
+      }
+    },
+    "key": "206E"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "공칭 자리 모양" //"nominal digit shapes"
+      }
+    },
+    "key": "206F"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "제로 너비 브레이크 공간 없음",//"zero width no break space"
+        "alternative": "byte order mark"
+      }
+    },
+    "key": "FEFF"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "선간 주석 앵커"// "interlinear annotation anchor"
+      }
+    },
+    "key": "FFF9"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "선간 주석 구분 기호"//"interlinear annotation separator"
+      }
+    },
+    "key": "FFFA"
+  },
+  {
+    "category": "Cf",
+    "mappings": {
+      "default": {
+        "default": "선간 주석 종결 기호"//"interlinear annotation terminator"
+      }
+    },
+    "key": "FFFB"
+  }
+]

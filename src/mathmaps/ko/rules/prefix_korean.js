@@ -1,0 +1,296 @@
+{
+  "modality": "prefix",
+  "domain": "default",
+  "locale": "ko",
+  "rules": [
+    [
+      "Rule",
+      "numerator",
+      "default",
+      "[t] \"분자\" (pause:200)",
+      "self::*",
+      "name(../..)=\"fraction\"",
+      "count(preceding-sibling::*)=0"
+    ],
+    [
+      "Rule",
+      "denominator",
+      "default",
+      "[t] \"분모\" (pause:200)",
+      "self::*",
+      "name(../..)=\"fraction\"",
+      "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Rule",
+      "base",
+      "default",
+      "[t] \"밑\" (pause:200)",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"superscript\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"subscript\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"overscore\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"underscore\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"tensor\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"limlower\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"limupper\""
+    ],
+    [
+      "Alias",
+      "base",
+      "self::*",
+      "count(preceding-sibling::*)=0",
+      "name(../..)=\"limboth\""
+    ],
+    [
+      "Rule",
+      "exponent",
+      "default",
+      "[t] \"지수\" (pause:200)",
+      "self::*",
+      "name(../..)=\"superscript\"",
+      "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Rule",
+      "subscript",
+      "default",
+      "[t] \"아래 첨자\" (pause:200)",
+      "self::*",
+      "name(../..)=\"subscript\"",
+      "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Rule",
+      "overscript",
+      "default",
+      "[t] \"윗 첨자\" (pause:200)",
+      "self::*",
+      "count(preceding-sibling::*)=1",
+      "name(../..)=\"overscore\""
+    ],
+    [
+      "Alias",
+      "overscript",
+      "self::*",
+      "count(preceding-sibling::*)=1",
+      "name(../..)=\"limupper\""
+    ],
+    [
+      "Alias",
+      "overscript",
+      "self::*",
+      "count(preceding-sibling::*)=2",
+      "name(../..)=\"limboth\""
+    ],
+    [// 보류
+      "Rule",
+      "underscript",
+      "default",
+      "[t] \"밑 첨자\" (pause:200)",
+      "self::*",
+      "count(preceding-sibling::*)=1",
+      "name(../..)=\"underscore\""
+    ],
+    [
+      "Alias",
+      "underscript",
+      "self::*",
+      "count(preceding-sibling::*)=1",
+      "name(../..)=\"limlower\""
+    ],
+    [
+      "Alias",
+      "underscript",
+      "self::*",
+      "count(preceding-sibling::*)=1",
+      "name(../..)=\"limboth\""
+    ],
+    [
+      "Rule",
+      "radicand",
+      "default",
+      "[t] \"근호 속의 수수\" (pause:200)",
+      "self::*",
+      "name(../..)=\"sqrt\""
+    ],
+    [
+      "Rule",
+      "radicand",
+      "default",
+      "[t] \"근호 속의 수\" (pause:200)",
+      "self::*",
+      "name(../..)=\"root\"",
+      "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Rule",
+      "index",
+      "default",
+      "[t] \"제곱근 수\" (pause:200)",
+      "self::*",
+      "name(../..)=\"root\"",
+      "count(preceding-sibling::*)=0"
+    ],
+    [
+      "Rule",
+      "leftsub",
+      "default",
+      "[t] \"왼쪽 아래 첨자\" (pause:200)",
+      "self::*",
+      "name(../..)=\"tensor\"",
+      "@role=\"leftsub\""
+    ],
+    [
+      "Rule",
+      "leftsub",
+      "default",
+      "[t] CSFordinalPosition; [t] \"왼쪽 아래 첨자\" (pause:200)",
+      "self::*",
+      "name(../..)=\"punctuated\"",
+      "name(../../../..)=\"tensor\"",
+      "../../@role=\"leftsub\""
+    ],
+    [
+      "Rule",
+      "leftsuper",
+      "default",
+      "[t] \"왼쪽 윗 첨자\" (pause:200)",
+      "self::*",
+      "name(../..)=\"tensor\"",
+      "@role=\"leftsuper\""
+    ],
+    [
+      "Rule",
+      "leftsuper",
+      "default",
+      "[t] CSFordinalPosition; [t] \"왼쪽 윗 첨자\" (pause:200)",
+      "self::*",
+      "name(../..)=\"punctuated\"",
+      "name(../../../..)=\"tensor\"",
+      "../../@role=\"leftsuper\""
+    ],
+    [
+      "Rule",
+      "rightsub",
+      "default",
+      "[t] \"오른쪽 아래 첨자\" (pause:200)",
+      "self::*",
+      "name(../..)=\"tensor\"",
+      "@role=\"rightsub\""
+    ],
+    [
+      "Rule",
+      "rightsub",
+      "default",
+      "[t] CSFordinalPosition; [t] \"오른쪽 아래 첨자\" (pause:200)",
+      "self::*",
+      "name(../..)=\"punctuated\"",
+      "name(../../../..)=\"tensor\"",
+      "../../@role=\"rightsub\""
+    ],
+    [
+      "Rule",
+      "rightsuper",
+      "default",
+      "[t] \"오른쪽 윗 첨자\" (pause:200)",
+      "self::*",
+      "name(../..)=\"tensor\"",
+      "@role=\"rightsuper\""
+    ],
+    [
+      "Rule",
+      "rightsuper",
+      "default",
+      "[t] CSFordinalPosition; [t] \"오른쪽 윗 첨자\" (pause:200)",
+      "self::*",
+      "name(../..)=\"punctuated\"",
+      "name(../../../..)=\"tensor\"",
+      "../../@role=\"rightsuper\""
+    ],
+    [
+      "Rule",
+      "choice",
+      "default",
+      "[t] \"조합 식\" (pause:200)",
+      "self::line",
+      "@role=\"binomial\"",
+      "parent::*/parent::vector",
+      "count(preceding-sibling::*)=0"
+    ],
+    [
+      "Rule",
+      "select",
+      "default",
+      "[t] \"분할 식\" (pause:200)",
+      "self::line",
+      "@role=\"binomial\"",
+      "parent::*/parent::vector",
+      "count(preceding-sibling::*)=1"
+    ],
+    [
+      "Rule",
+      "row",
+      "default",
+      "[t] CSFordinalPosition; [t] \"행\" (pause:200)",
+      "self::row"
+    ],
+    [
+      "Aliases",
+      "row",
+      "self::line"
+    ],
+    [
+      "Rule",
+      "cell",
+      "default",
+      "[n] ../..; [t] CSFordinalPosition; [t] \"열\" (pause:200)",
+      "self::cell",
+      "contains(@grammar,\"depth\")"
+    ],
+    [
+      "Rule",
+      "cell",
+      "default",
+      "[t] CSFordinalPosition; [t] \"열\" (pause:200)",
+      "self::cell"
+    ]
+  ]
+}
