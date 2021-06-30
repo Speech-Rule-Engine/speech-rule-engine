@@ -190,7 +190,7 @@ sre.MathMap.prototype.retrieveMaps = function(locale) {
     return;
   }
   var file = sre.BaseUtil.makePath(sre.SystemExternal.jsonPath) +
-      locale + '.js';
+      locale + '.json';
   var parse = goog.bind(this.parseMaps, this);
   this.retrieveFiles(file, parse);
 };
