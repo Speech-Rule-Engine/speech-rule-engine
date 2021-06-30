@@ -331,7 +331,8 @@ export class Cli {
    */
   private readExpression_(input: string): boolean {
     try {
-      this.dp.parseFromString(input, 'text/xml');
+      let testInput = input.replace(/(&|#|;)/g, '');
+      this.dp.parseFromString(testInput, 'text/xml');
     } catch (err) {
       return false;
     }
