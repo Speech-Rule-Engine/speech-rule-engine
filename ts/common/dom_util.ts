@@ -183,9 +183,7 @@ export function formatXml(xml: string): string {
   reg = /(\.)*(<)(\/*)/g;
   // Separate at any remaining tags.
   split = split.map((x) => x.replace(reg, '$1\r\n$2$3').split('\r\n'))
-              .reduce(function(x, y) {
-                return x.concat(y);
-              }, []);
+              .reduce((x, y) => x.concat(y), []);
   while (split.length) {
     let node = split.shift();
     if (!node) {

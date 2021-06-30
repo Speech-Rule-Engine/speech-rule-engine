@@ -41,8 +41,7 @@ import XpathUtil from './xpath_util';
 
 export namespace ProcessorFactory {
 
-  // TODO (TS): Do something against the any.
-  const PROCESSORS: Map<string, any> = new Map();
+  const PROCESSORS = new Map();
 
   /**
    * Adds a processor to the processor map.
