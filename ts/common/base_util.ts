@@ -25,9 +25,7 @@
  * @return The cleaned array.
  */
 export function removeEmpty(strs: string[]): string[] {
-  return strs.filter(function(str) {
-    return str;
-  });
+  return strs.filter(str => str);
 }
 
 
@@ -61,9 +59,7 @@ export function setdifference(a: any[], b: any[]): any[] {
   if (!b) {
     return a;
   }
-  return a.filter(function(x) {
-    return b.indexOf(x) < 0;
-  });
+  return a.filter(x => b.indexOf(x) < 0);
 }
 
 
