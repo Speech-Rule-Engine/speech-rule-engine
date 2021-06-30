@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers into English.
+ * @fileoverview Translating numbers into Korean.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -31,15 +31,15 @@ function hundredsToWords_(num: number): string {
   let n = num % 10000;
   let str = '';
   str += NUMBERS.ones[Math.floor(n / 1000)] ?
-      NUMBERS.ones[Math.floor(n / 1000)] + NUMBERS.numSep + '천' : '';
+      NUMBERS.ones[Math.floor(n / 1000)] + '천' : '';
   n = n % 1000;
   if (n) {
     str += NUMBERS.ones[Math.floor(n / 100)] ?
-      NUMBERS.ones[Math.floor(n / 100)] + NUMBERS.numSep + '백' : '';
+      NUMBERS.ones[Math.floor(n / 100)] + '백' : '';
     n = n % 100;
     str += NUMBERS.ones[n] ||
         NUMBERS.tens[Math.floor(n / 10)] +
-            (n % 10 ? NUMBERS.numSep + NUMBERS.ones[n % 10] : '');
+            (n % 10 ? NUMBERS.ones[n % 10] : '');
   }
   return str;
 }
@@ -63,12 +63,12 @@ function numberToWords(num: number): string {
     let hundreds = num % 10000;
     if (hundreds) {
       str = hundredsToWords_(num % 10000) +
-          (pos ? '-' + NUMBERS.large[pos] + '-' : '') + str;
+          (pos ? NUMBERS.large[pos] + sre.Numbers.numSep : '') + str;
     }
     num = Math.floor(num / 10000);
     pos++;
   }
-  return str.replace(/-$/, '');
+  return str.replace(/ $/, '');
 }
 
 
