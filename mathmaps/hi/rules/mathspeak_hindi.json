@@ -1778,16 +1778,15 @@
       "axiom",
       "default",
       "[t] \"अभिगृहीत\"; [m] children/*[1]",
-      "self::inference",
-      "@role=\"axiom\""
+      "self::inference[@role=\"axiom\"]"
     ],
     [
       "Rule",
       "axiom",
       "default",
       "[t] \"रिक्त अभिगृहीत\"",
-      "self::empty",
-      "@role=\"axiom\""
+      "self::inference[@role=\"axiom\"]",
+      "name(children/*[1])=\"empty\""
     ],
     [
       "Generator",

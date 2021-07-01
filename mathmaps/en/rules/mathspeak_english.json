@@ -1797,16 +1797,15 @@
       "axiom",
       "default",
       "[t] \"axiom\"; [m] children/*[1];",
-      "self::inference",
-      "@role=\"axiom\""
+      "self::inference[@role=\"axiom\"]"
     ],
     [
       "Rule",
-      "axiom",
+      "empty-axiom",
       "default",
       "[t] \"empty axiom\";",
-      "self::empty",
-      "@role=\"axiom\""
+      "self::inference[@role=\"axiom\"]",
+      "name(children/*[1])=\"empty\""
     ],
     [
       "Generator",
