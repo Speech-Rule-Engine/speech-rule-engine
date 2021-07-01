@@ -749,9 +749,9 @@
       "[n] children/*[1]; [t] \"base\"; [n] children/*[2]",
       "self::subscript",
       "CQFisLogarithm",
-      "self::*",
-      "self::*",
-      "self::*"
+      "name(./children/*[2])=\"identifier\" or name(./children/*[2])=\"number\"",
+      "./children/*[2][@role!=\"mixed\"]",
+      "./children/*[2][@role!=\"othernumber\"]"
     ],
     [
       "SpecializedRule",

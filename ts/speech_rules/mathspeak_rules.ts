@@ -94,7 +94,8 @@ export function MathspeakRules() {
     'CQFresetNesting': MathspeakUtil.resetNestingDepth,
     // Generators.
     'CGFbaselineConstraint': MathspeakUtil.generateBaselineConstraint,
-    'CGFtensorRules': MathspeakUtil.generateTensorRules
+    'CGFtensorRules': MathspeakUtil.generateTensorRules,
+    'CQFisLogarithm': ClearspeakUtil.isLogarithmWithBase
   });
 
   // Spanish
@@ -116,7 +117,7 @@ export function MathspeakRules() {
         'CSFleftsuperscriptVerbose': MathspeakFrenchUtil.leftSuperscriptVerbose,
         'CSFleftsubscriptVerbose': MathspeakFrenchUtil.leftSubscriptVerbose,
         'CSFleftsuperscriptBrief': MathspeakFrenchUtil.leftSuperscriptBrief,
-        'CSFleftsubscriptBrief': MathspeakFrenchUtil.leftSubscriptBrief,
-        'CQFisLogarithm': ClearspeakUtil.isLogarithmWithBase,
+        'CSFleftsubscriptBrief': MathspeakFrenchUtil.leftSubscriptBrief
       });
+
 }
