@@ -3244,7 +3244,7 @@
     ],
     [
       "Rule",
-      "cancel",
+      "cancel-over",
       "default",
       "[n] children/*[1]/children/*[1]; [t] \"crossed out with\"; [n] children/*[2]",
       "self::overscore",
@@ -3252,27 +3252,29 @@
     ],
     [
       "Aliases",
-      "cancel",
+      "cancel-over",
       "self::underscore",
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
     ],
     [
+      "Rule",
+      "cancel-under",
+      "default",
+      "[n] children/*[2]/children/*[1]; [t] \"crossed out with\"; [n] children/*[1]",
+      "self::underscore",
+      "name(children/*[2])=\"enclose\"",
+      "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
+    ],
+    [
       "Aliases",
-      "cancel",
+      "cancel-under",
       "self::overscore",
       "name(children/*[2])=\"enclose\"",
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
     ],
     [
-      "Aliases",
-      "cancel",
-      "self::underscore",
-      "name(children/*[2])=\"enclose\"",
-      "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
-    ],
-    [
       "Rule",
-      "cancel-end",
+      "cancel-over-end",
       "Enclosed_EndEnclose",
       "[t] \"crossed out\"; [n] children/*[1]/children/*[1]; [t] \"with\"; [n] children/*[2]; [t] \"end crossout\"",
       "self::overscore",
@@ -3280,21 +3282,23 @@
     ],
     [
       "Aliases",
-      "cancel-end",
+      "cancel-over-end",
       "self::underscore",
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
     ],
     [
-      "Aliases",
-      "cancel-end",
-      "self::overscore",
+      "Rule",
+      "cancel-under-end",
+      "Enclosed_EndEnclose",
+      "[t] \"crossed out\"; [n] children/*[2]/children/*[1]; [t] \"with\"; [n] children/*[1]; [t] \"end crossout\"",
+      "self::underscore",
       "name(children/*[2])=\"enclose\"",
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
     ],
     [
       "Aliases",
-      "cancel-end",
-      "self::underscore",
+      "cancel-under-end",
+      "self::overscore",
       "name(children/*[2])=\"enclose\"",
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
     ]
