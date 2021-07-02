@@ -20,7 +20,6 @@
 
 
 import * as StoreUtil from '../rule_engine/store_util';
-import * as ClearspeakUtil from './clearspeak_util';
 import MathspeakFrenchUtil from './mathspeak_french_util';
 import MathspeakSpanishUtil from './mathspeak_spanish_util';
 import * as MathspeakUtil from './mathspeak_util';
@@ -94,8 +93,7 @@ export function MathspeakRules() {
     'CQFresetNesting': MathspeakUtil.resetNestingDepth,
     // Generators.
     'CGFbaselineConstraint': MathspeakUtil.generateBaselineConstraint,
-    'CGFtensorRules': MathspeakUtil.generateTensorRules,
-    'CQFisLogarithm': ClearspeakUtil.isLogarithmWithBase
+    'CGFtensorRules': MathspeakUtil.generateTensorRules
   });
 
   // Spanish

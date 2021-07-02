@@ -94,7 +94,7 @@
       "[n] text() (pitch:0.6, grammar:ignoreCaps=\"कैपिटल\")",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\" or @role=\"simple function\"",
-      "CQFisCapital"
+      ".[@category=\"Lu\"]"
     ],
     [
       "Rule",
@@ -103,7 +103,7 @@
       "[n] text()",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\"",
-      "CQFisCapital"
+      ".[@category=\"Lu\"]"
     ],
     [
       "Rule",
@@ -112,7 +112,7 @@
       "[p] (pause:\"short\"); [n] text()",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\"",
-      "CQFisCapital",
+      ".[@category=\"Lu\"]",
       "preceding-sibling::*[1]",
       "not(name(preceding-sibling::*[1])=\"function\")",
       "not(contains(@grammar, \"angle\"))"
@@ -124,7 +124,7 @@
       "[n] text() (pause:\"short\")",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\"",
-      "CQFisCapital",
+      ".[@category=\"Lu\"]",
       "following-sibling::*[1]"
     ],
     [
@@ -134,7 +134,7 @@
       "[p] (pause:\"short\"); [n] text() (pause:\"short\")",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\"",
-      "CQFisCapital",
+      ".[@category=\"Lu\"]",
       "preceding-sibling::*[1]",
       "following-sibling::*[1]",
       "not(name(preceding-sibling::*[1])=\"function\")",
@@ -757,7 +757,7 @@
       "[p] (pause:\"short\"); [n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:\"short\")",
       "self::appl",
       "@role=\"prefix function\"",
-      "CQFisHyperbolic"
+      "children/*[1][@category=\"Hyperbolic\"]"
     ],
     [
       "Rule",
@@ -1444,7 +1444,7 @@
       "default",
       "[n] children/*[1]; [t] \"आधार\"; [n] children/*[2]",
       "self::subscript",
-      "CQFisLogarithm"
+      "children/*[1][@category=\"Logarithm\"]"
     ],
     [
       "Rule",
@@ -3087,7 +3087,7 @@
       "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=2]",
       "name(children/*[1])=\"identifier\"",
-      "CQFisLengthUnit"
+      "children/*[1][@category=\"unit:length\"]"
     ],
     [
       "Rule",
@@ -3097,7 +3097,7 @@
       "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\"",
-      "CQFisLengthUnit"
+      "children/*[1][@category=\"unit:length\"]"
     ],
     [
       "Rule",
@@ -3154,7 +3154,7 @@
       "self::infixop",
       "contains(@annotation, \"clearspeak:unit\")",
       "children/*[1][@role=\"unit\"]",
-      "CQFfirstCurrency"
+      "children/*[1][@category=\"unit:currency\"]"
     ],
     [
       "Rule",
@@ -3178,7 +3178,7 @@
       "self::infixop",
       "contains(@annotation, \"clearspeak:unit\")",
       "children/*[last()][@role=\"unit\"]",
-      "CQFlastCurrency"
+      "children/*[last()][@category=\"unit:currency\"]"
     ]
   ],
   "annotators": [

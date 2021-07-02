@@ -27,6 +27,7 @@
 import * as DomUtil from '../common/dom_util';
 import XpathUtil from '../common/xpath_util';
 import {Grammar} from '../rule_engine/grammar';
+import {MathCompoundStore} from '../rule_engine/math_simple_store';
 import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
 import {AbstractTrieNode} from './abstract_trie_node';
 import {StaticTrieNode} from './abstract_trie_node';
@@ -166,6 +167,26 @@ export function constraintTest_(constraint: string): ((p1: Node) => boolean)|
     let num = parseInt(split[1], 10);
     return ((node: Element) =>
       node.parentNode?.childNodes[num] === node);
+  }
+  // category constraint
+  // xpath[@constraint!?="xy"]
+  if (constraint.match(/^.+\[@category!?=\".+\"\]$/)) {
+    let [, query, equality, category] =
+        constraint.match(/^(.+)\[@category(!?=)\"(.+)\"\]$/);
+    let unit = category.match(/^unit:(.+)$/);
+    let add = '';
+    if (unit) {
+      category = unit[1];
+      add = ':unit';
+    }
+    return (node: Element) => {
+      let xpath = XpathUtil.evalXPath(query, node)[0];
+      if (xpath) {
+        let result = MathCompoundStore.lookupCategory(xpath.textContent + add);
+        return equality === '=' ? result === category : result !== category;
+      }
+      return false;
+    };
   }
   return null;
 }
