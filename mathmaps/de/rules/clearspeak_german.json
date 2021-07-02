@@ -1993,15 +1993,6 @@
     ],
     [
       "Rule",
-      "operators-after-power",
-      "Exponent_AfterPower",
-      "[m] children/* (rate:\"0.5\")",
-      "self::infixop",
-      "@role=\"implicit\"",
-      "contains(@grammar, \"afterPower\")"
-    ],
-    [
-      "Rule",
       "relseq",
       "default",
       "[m] children/* (sepFunc:CTFcontentIterator)",
