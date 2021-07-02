@@ -2991,8 +2991,7 @@
       "left-super",
       "default",
       "[t] \"वाम उर्ध्व\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"leftsuper\"",
+      "self::punctuated[@role=\"leftsuper\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -3008,8 +3007,7 @@
       "left-sub",
       "default",
       "[t] \"वाम पाद\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"leftsub\"",
+      "self::punctuated[@role=\"leftsub\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -3025,8 +3023,7 @@
       "right-super",
       "default",
       "[t] \"दक्षिण उर्ध्व\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"rightsuper\"",
+      "self::punctuated[@role=\"rightsuper\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -3042,8 +3039,7 @@
       "right-sub",
       "default",
       "[t] \"दक्षिण पाद\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"rightsub\"",
+      "self::punctuated[@role=\"rightsub\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -3051,8 +3047,7 @@
       "empty-index",
       "default",
       "[p] (pause:medium)",
-      "self::empty",
-      "@role=\"rightsub\" or @role=\"rightsuper\" or @role=\"leftsub\" or @role=\"leftsuper\""
+      "self::empty[@role=\"rightsub\" or @role=\"rightsuper\" or @role=\"leftsub\" or @role=\"leftsuper\"]"
     ],
     [
       "Rule",

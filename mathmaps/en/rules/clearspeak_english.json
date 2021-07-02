@@ -2975,8 +2975,7 @@
       "left-super",
       "default",
       "[t] \"left super\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"leftsuper\"",
+      "self::punctuated[@role=\"leftsuper\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -2992,8 +2991,7 @@
       "left-sub",
       "default",
       "[t] \"left sub\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"leftsub\"",
+      "self::punctuated[@role=\"leftsub\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -3009,8 +3007,7 @@
       "right-super",
       "default",
       "[t] \"right super\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"rightsuper\"",
+      "self::punctuated[@role=\"rightsuper\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -3026,8 +3023,7 @@
       "right-sub",
       "default",
       "[t] \"right sub\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"rightsub\"",
+      "self::punctuated[@role=\"rightsub\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -3035,8 +3031,7 @@
       "empty-index",
       "default",
       "[p] (pause:medium)",
-      "self::empty",
-      "@role=\"rightsub\" or @role=\"rightsuper\" or @role=\"leftsub\" or @role=\"leftsuper\""
+      "self::empty[@role=\"rightsub\" or @role=\"rightsuper\" or @role=\"leftsub\" or @role=\"leftsuper\"]"
     ],
     [
       "Rule",
@@ -3199,14 +3194,18 @@
       "self::enclose"
     ],
     [
-      "Aliases",
-      "overscript",
+      "Rule",
+      "overbar",
+      "default",
+      "[n] children/*[1]; [t] \"horizontal bar\"",
       "self::enclose",
       "@role=\"top\""
     ],
     [
-      "Aliases",
-      "underscript",
+      "Rule",
+      "underbar",
+      "default",
+      "[n] children/*[1]; [t] \"over horizontal bar\"",
       "self::enclose",
       "@role=\"bottom\""
     ],

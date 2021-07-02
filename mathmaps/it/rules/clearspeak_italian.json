@@ -2967,8 +2967,7 @@
       "left-super",
       "default",
       "[t] \"sub sinistro\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"leftsuper\"",
+      "self::punctuated[@role=\"leftsuper\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -2984,8 +2983,7 @@
       "left-sub",
       "default",
       "[t] \"sub sotto\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"leftsub\"",
+      "self::punctuated[@role=\"leftsub\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -3001,8 +2999,7 @@
       "right-super",
       "default",
       "[t] \"sub sopra\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"rightsuper\"",
+      "self::punctuated[@role=\"rightsuper\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -3018,8 +3015,7 @@
       "right-sub",
       "default",
       "[t] \"sub destro\"; [m] children/*",
-      "self::punctuated",
-      "@role=\"rightsub\"",
+      "self::punctuated[@role=\"rightsub\"]",
       "not(contains(@grammar,\"combinatorics\"))"
     ],
     [
@@ -3027,8 +3023,7 @@
       "empty-index",
       "default",
       "[p] (pause:medium)",
-      "self::empty",
-      "@role=\"rightsub\" or @role=\"rightsuper\" or @role=\"leftsub\" or @role=\"leftsuper\""
+      "self::empty[@role=\"rightsub\" or @role=\"rightsuper\" or @role=\"leftsub\" or @role=\"leftsuper\"]"
     ],
     [
       "Rule",
