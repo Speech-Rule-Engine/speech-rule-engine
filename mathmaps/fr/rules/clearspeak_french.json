@@ -920,7 +920,7 @@
     ],
     [
       "Rule",
-      "superscript-ordinal",
+      "superscript-ordinal-letter",
       "Exponent_Ordinal",
       "[n] children/*[1]; [t] \"à la\"; [n] children/*[2] (grammar:ordinal); [t] \"puissance\" (pause:\"medium\")",
       "self::superscript",
@@ -929,13 +929,24 @@
     ],
     [
       "Rule",
-      "superscript-ordinal",
+      "superscript-ordinal-number",
+      "Exponent_Ordinal",
+      "[n] children/*[1]; [t] \"à la\"; [n] children/*[2] (grammar:ordinal); [t] \"puissance\" (pause:\"medium\")",
+      "self::superscript",
+      "name(children/*[2])=\"number\"",
+      "children/*[2][@role=\"integer\"]",
+      "children/*[2][text()!=\"2\"]",
+      "children/*[2][text()!=\"3\"]"
+    ],
+    [
+      "Rule",
+      "superscript-ordinal-cap",
       "Exponent_Ordinal",
       "[n] children/*[1]; [t] \"à la puissance\"; [n] children/*[2] (pause:\"medium\")",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
       "children/*[2][@role=\"latinletter\"]",
-      "CQFisCaptial"
+      "CQFisCapital"
     ],
     [
       "Rule",
@@ -969,26 +980,6 @@
       "Rule",
       "exponent",
       "Exponent_Ordinal",
-      "[t] \"zero\"",
-      "self::number",
-      "@role=\"integer\"",
-      "contains(@grammar, \"ordinal\")",
-      "text()=\"0\""
-    ],
-    [
-      "Rule",
-      "exponent",
-      "Exponent_OrdinalPower",
-      "[t] CSFwordOrdinal",
-      "self::number",
-      "@role=\"integer\"",
-      "contains(@grammar, \"ordinal\")",
-      "text()!=\"0\""
-    ],
-    [
-      "Rule",
-      "exponent",
-      "Exponent_OrdinalPower",
       "[t] \"zero\"",
       "self::number",
       "@role=\"integer\"",
@@ -1808,15 +1799,6 @@
       "name(.)!=\"number\"",
       "name(parent::*/parent::*)=\"fraction\"",
       "not(preceding-sibling::*)"
-    ],
-    [
-      "Rule",
-      "operators-after-power",
-      "Exponent_AfterPower",
-      "[m] children/* (rate:\"0.5\")",
-      "self::infixop",
-      "@role=\"implicit\"",
-      "contains(@grammar, \"afterPower\")"
     ],
     [
       "Rule",
