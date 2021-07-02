@@ -223,10 +223,11 @@
       "Rule",
       "vbar-such-that",
       "VerticalLine_SuchThat",
-      "[t] \"जैसा की\"",
-      "self::punctuation",
-      "@role=\"vbar\"",
-      "not(parent::*/parent::*[@embellished=\"punctuation\"])"
+      "[n] children/*[1]; [t] \"जैसा की\"; [n] children/*[3]",
+      "self::punctuated",
+      "@role=\"sequence\"",
+      "content/*[1][@role=\"vbar\"]",
+      "not(parent::*[@embellished=\"punctuation\"])"
     ],
     [
       "Rule",
@@ -269,7 +270,7 @@
       "Rule",
       "element-in-set",
       "default",
-      "[n] children/*[2]; [t] \"में\"; [n] children/*[1];",
+      "[n] children/*[2]; [n] content/*[1]; [t] \"सभीं\"; [n] children/*[1];",
       "self::infixop[@role=\"element\"]",
       "contains(@grammar, \"setext\")"
     ],
@@ -277,23 +278,7 @@
       "Rule",
       "element-in-set-woall",
       "Sets_woAll",
-      "[n] children/*[2]; [t] \"सभीं\"; [n] children/*[1];",
-      "self::infixop[@role=\"element\"]",
-      "contains(@grammar, \"setext\")"
-    ],
-    [
-      "Rule",
-      "element-in-set-woall-belongs",
-      "Sets_woAll:SetMemberSymbol_Member",
-      "[n] children/*[2]; [t] \"में सभीं\"; [n] children/*[1];",
-      "self::infixop[@role=\"element\"]",
-      "contains(@grammar, \"setext\")"
-    ],
-    [
-      "Rule",
-      "element-in-set-woall-belongs",
-      "Sets_woAll:SetMemberSymbol_Belongs",
-      "[n] children/*[2]; [t] \"में सभीं\"; [n] children/*[1];",
+      "[n] children/*[2]; [n] content/*[1]; [n] children/*[1];",
       "self::infixop[@role=\"element\"]",
       "contains(@grammar, \"setext\")"
     ],
@@ -311,21 +296,21 @@
       "set-member",
       "default",
       "SetMemberSymbol_Member",
-      "[t] \"का सदस्य\""
+      "[t] \"में\""
     ],
     [
       "SpecializedRule",
       "set-member",
       "default",
       "SetMemberSymbol_Element",
-      "[t] \"का अवयव\""
+      "[t] \"में\""
     ],
     [
       "SpecializedRule",
       "set-member",
       "default",
       "SetMemberSymbol_Belongs",
-      "[t] \"का भाग\""
+      "[t] \"में\""
     ],
     [
       "Rule",
@@ -341,21 +326,21 @@
       "set-not-member",
       "default",
       "SetMemberSymbol_Member",
-      "[t] \"का अवयव नहीं\""
+      "[t] \"में नही\""
     ],
     [
       "SpecializedRule",
       "set-not-member",
       "default",
       "SetMemberSymbol_Element",
-      "[t] \"का अवयव नहीं\""
+      "[t] \"में नही\""
     ],
     [
       "SpecializedRule",
       "set-not-member",
       "default",
       "SetMemberSymbol_Belongs",
-      "[t] \"का नहीं\""
+      "[t] \"में नही\""
     ],
     [
       "Rule",
