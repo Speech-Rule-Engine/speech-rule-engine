@@ -1,5 +1,14 @@
 [
   {
     "locale": "bn"
+  },
+  {
+    "category": "Lu",
+    "key": "0394",
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
   }
 ]
