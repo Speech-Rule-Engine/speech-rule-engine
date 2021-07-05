@@ -4,5 +4,448 @@
   },
   {
     "locale": "bn"
+  },
+  {
+    "key": "$",
+    "category": "currency",
+    "names": [
+      "$",
+      "💲",
+      "＄",
+      "﹩",
+      "USD"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "£",
+    "category": "currency",
+    "names": [
+      "£",
+      "￡",
+      "GBP"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "¥",
+    "category": "currency",
+    "names": [
+      "¥",
+      "￥",
+      "JPY"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "€",
+    "category": "currency",
+    "names": [
+      "€",
+      "EUR"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₡",
+    "category": "currency",
+    "names": [
+      "₡",
+      "CRC"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₢",
+    "category": "currency",
+    "names": [
+      "₢"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₣",
+    "category": "currency",
+    "names": [
+      "₣"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₤",
+    "category": "currency",
+    "names": [
+      "₤"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₥",
+    "category": "currency",
+    "names": [
+      "₥"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₦",
+    "category": "currency",
+    "names": [
+      "₦",
+      "NGN"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₧",
+    "category": "currency",
+    "names": [
+      "₧"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₨",
+    "category": "currency",
+    "names": [
+      "₨",
+      "₹",
+      "INR",
+      "NPR",
+      "PKR",
+      "LKR"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₩",
+    "category": "currency",
+    "names": [
+      "₩",
+      "￦",
+      "KRW"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₪",
+    "category": "currency",
+    "names": [
+      "₪"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₫",
+    "category": "currency",
+    "names": [
+      "₫"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₭",
+    "category": "currency",
+    "names": [
+      "₭"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₮",
+    "category": "currency",
+    "names": [
+      "₮"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₯",
+    "category": "currency",
+    "names": [
+      "₯"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₰",
+    "category": "currency",
+    "names": [
+      "₰"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₱",
+    "category": "currency",
+    "names": [
+      "₱"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₲",
+    "category": "currency",
+    "names": [
+      "₲"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₳",
+    "category": "currency",
+    "names": [
+      "₳"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₴",
+    "category": "currency",
+    "names": [
+      "₴",
+      "UAH"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₵",
+    "category": "currency",
+    "names": [
+      "₵",
+      "GHS"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₶",
+    "category": "currency",
+    "names": [
+      "₶"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₷",
+    "category": "currency",
+    "names": [
+      "₷"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₸",
+    "category": "currency",
+    "names": [
+      "₸",
+      "KZT"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "₺",
+    "category": "currency",
+    "names": [
+      "₺",
+      "TRY"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "元",
+    "category": "currency",
+    "names": [
+      "元"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
+  },
+  {
+    "key": "¢",
+    "category": "currency",
+    "names": [
+      "￠",
+      "¢"
+    ],
+    "mappings": {
+      "default": {
+        "default": "",
+        "singular": "",
+        "dual": ""
+      }
+    }
   }
 ]
