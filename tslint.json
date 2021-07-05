@@ -1,0 +1,150 @@
+{
+  "rulesDirectory": [
+    "node_modules/tslint-jsdoc-rules/lib"
+  ],
+  "rules": {
+    "class-name": true,
+    "comment-format": [
+      true,
+      "check-space"
+      // "check-uppercase"
+    ],
+    "curly": true,
+    "eofline": true,
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "jsdoc-format": true,
+    "jsdoc-require": [
+      true,
+      "no-private-properties"
+    ],
+    "linebreak-style": true,
+    "max-line-length": [
+      true,
+      80
+    ],
+    "member-access": true,
+    "member-ordering": [
+      true,
+      {
+        "order": [
+          {
+            "name": "public static field",
+            "kinds": [
+              "public-static-field",
+              "protected-static-field"
+            ]
+          },
+          {
+            "name": "private static field",
+            "kinds": [
+              "private-static-field"
+            ]
+          },
+          {
+            "name": "public instance field",
+            "kinds": [
+              "public-instance-field",
+              "protected-instance-field"
+            ]
+          },
+          {
+            "name": "private instance field",
+            "kinds": [
+              "private-instance-field"
+            ]
+          },
+          {
+            "name": "public static method",
+            "kinds": [
+              "public-static-method",
+              "protected-static-method",
+              "public-static-accessor",
+              "protected-static-accessor"
+            ]
+          },
+          {
+            "name": "private static method",
+            "kinds": [
+              "private-static-method",
+              "private-static-accessor"
+            ]
+          },
+          {
+            "name": "public instance method",
+            "kinds": [
+              "public-constructor",
+              "protected-constructor",
+              "public-instance-method",
+              "protected-instance-method",
+              "public-instance-accessor",
+              "protected-instance-accessor"
+            ]
+          },
+          {
+            "name": "private instance method",
+            "kinds": [
+              "private-constructor",
+              "private-instance-method",
+              "private-instance-accessor"
+            ]
+          }
+        ]
+
+      }
+    ],
+    "no-consecutive-blank-lines": [true, 2],
+    "no-duplicate-variable": true,
+    "no-eval": true,
+    "no-internal-module": true,
+    "no-trailing-whitespace": true,
+    "no-var-keyword": true,
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-whitespace"
+    ],
+    "ordered-imports": true,
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "semicolon": true,
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "typedef": [
+      "callSignature",
+      "catchClause",
+      "indexSignature",
+      "parameter",
+      "propertySignature",
+      "variableDeclarator"
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type"
+    ]
+  }
+}
