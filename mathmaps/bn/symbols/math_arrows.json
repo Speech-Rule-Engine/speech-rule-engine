@@ -7,7 +7,7 @@
     "key": "2190",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বাঁ-দিকে তাক করা তীর"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "2191",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উপরের-দিকে তাক করা তীর"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "2192",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডান-দিকে পয়েন্ট করা তীর"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "2193",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিচের-দিকে তাক করা তীর"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "2194",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামে-ডানে তীর"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "2195",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উপরে নীচে তীর"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2196",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উপরে বামে তীর"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2197",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উপরে ডানে তীর"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "2198",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নীচে ডানে তীর"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "2199",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নীচের বামে তীর"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "219A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী তীরের স্ট্রোক"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "219B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী তীরের স্ট্রোক"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "219C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী প্রবাহের তীর"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "219D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী প্রবাহের তীর"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "219E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী দুটি মাথাযুক্ত তীর"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "219F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উর্ধ্বমুখী দুটি মাথাযুক্ত তীর"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "21A0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী দুটি মাথাযুক্ত তীর"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "21A1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিম্নমুখী দুটি মাথাযুক্ত তীর"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "21A2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী তীরের শেষ প্রান্ত"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "21A3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী তীরের শেষ প্রান্ত"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "21A4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বার থেকে বামমুখী তীর"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "21A5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বার থেকে উর্ধ্বমুখী তীর"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "21A6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বার থেকে ডানমুখী তীর"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "21A7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বার থেকে নিম্নমুখী তীর"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "21A8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বেস সহ উর্ধ্বের অংশ নিচে তীর"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "21A9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডান তীর বাদিকে বাঁকানো"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "21AA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বাম তীর ডান দিকে বাঁকানো"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "21AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী তীরের লুপ"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "21AC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী তীরের লুপ"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "21AD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বাম ডান প্রবাহের তীর"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "21AE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বাম ডান তীরের স্ট্রোক"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "21AF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিম্নমুখী আঁকাবাঁকা তীর"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "21B0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উর্ধ্বমুখী তীরের প্রান্ত বামদিকে"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "21B1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উর্ধ্বমুখী তীরের প্রান্ত ডানদিকে"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "21B2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিম্নমুখী তীরের প্রান্ত বামদিকে"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "21B3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিম্নমুখী তীরের প্রান্ত ডানদিকে"
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "21B4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী তীরের কোণ নিচের দিকে"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "21B5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিচের দিকে তীরের কোণ বামদিকে"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "21B6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ঘড়ির কাটার বামদিকে শীর্ষে অর্ধবৃত্তের তীর"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "21B7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ঘড়ির কাটার ডানদিকে শীর্ষে অর্ধবৃত্তের তীর"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "21B8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উত্তর পশ্চিম তীর দীর্ঘ বার"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "21B9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী তীরের বারের উপরে বামমুখী তীরের বার"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "21BA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামদিকে খোলা বৃত্তের তীর"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "21BB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ঘড়ির কাটার ডানদিকে খোলা বৃত্তের তীর"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "21C4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী তীরের উপরে ডানমুখী তীর"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "21C5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উপরের- দিকে ও নিচের দিকে তাক করা তীর"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "21C6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বাঁ-দিকের উপর ডান-দিকে তাক করা তীর"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "21C7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী জোড়বদ্ধ তীর"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "21C8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উর্ধ্বমুখী জোড়বদ্ধ তীর"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "21C9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী জোড়বদ্ধ তীর"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "21CA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিম্নমুখী জোড়বদ্ধ তীর"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "21CD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী দ্বৈত তীর স্ট্রোক"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "21CE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামে ডানে দ্বৈত তীর স্ট্রোক"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "21CF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী দ্বৈত তীর স্ট্রোক"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "21D0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী দ্বৈত তীর"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "21D1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উর্ধ্বমুখী দ্বৈত তীর"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "21D2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী দ্বৈত তীর"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "21D3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিম্নমুখী দ্বৈত তীর"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "21D4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামে ডানে দ্বৈত তীর"
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "21D6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উত্তর পশ্চিম দ্বৈত তীর"
       }
     }
   },
@@ -556,7 +556,7 @@
     "key": "21D7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উত্তর পূর্ব দ্বৈত তীর"
       }
     }
   },
@@ -565,7 +565,7 @@
     "key": "21D8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "দক্ষিণ পূর্ব দ্বৈত তীর"
       }
     }
   },
@@ -574,7 +574,7 @@
     "key": "21D9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "দক্ষিণ পশ্চিম দ্বৈত তীর"
       }
     }
   },
@@ -583,7 +583,7 @@
     "key": "21DA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী ত্রিমুখী তীর"
       }
     }
   },
@@ -592,7 +592,7 @@
     "key": "21DB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী ত্রিমুখী তীর"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "27A1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানদিকের তীর"
       }
     }
   },
@@ -1915,7 +1915,7 @@
     "key": "2934",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডান তীর উপরের দিকে বাঁকানো"
       }
     }
   },
@@ -1924,7 +1924,7 @@
     "key": "2935",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডান তীর নীচের দিকে বাঁকানো"
       }
     }
   },
@@ -2329,7 +2329,7 @@
     "key": "2B05",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বাম তীর"
       }
     }
   },
@@ -2338,7 +2338,7 @@
     "key": "2B06",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উপরে তীর"
       }
     }
   },
@@ -2347,7 +2347,7 @@
     "key": "2B07",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিচের দিকের তীর"
       }
     }
   },

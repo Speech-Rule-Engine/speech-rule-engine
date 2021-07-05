@@ -18,7 +18,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "ডলার",
         "dual": ""
       }
     }
@@ -34,7 +34,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "পাউন্ড",
         "dual": ""
       }
     }
@@ -50,7 +50,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "ইয়েন",
         "dual": ""
       }
     }
@@ -65,7 +65,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "ইউরো",
         "dual": ""
       }
     }
@@ -136,7 +136,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "মিল",
         "dual": ""
       }
     }
@@ -184,7 +184,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "রুপি",
         "dual": ""
       }
     }
@@ -200,7 +200,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "ওন",
         "dual": ""
       }
     }
@@ -298,7 +298,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "পেসো",
         "dual": ""
       }
     }
@@ -326,7 +326,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "অস্ট্রাল",
         "dual": ""
       }
     }
@@ -370,7 +370,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "লিভরে ট্যুরনয়েস",
         "dual": ""
       }
     }
@@ -384,7 +384,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "স্পেসমিলো",
         "dual": ""
       }
     }
@@ -443,7 +443,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "singular": "সেন্ট",
         "dual": ""
       }
     }

@@ -16,7 +16,7 @@
     "key": "0029",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ক্লোস প্যারেনথিসিস"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "005B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ওপেন স্কোয়ের ব্র্যাকেট"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "005D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ক্লোস স্কোয়ের ব্যাকেট"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "007B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ওপেন কার্লি ব্র্যাকেট"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "007D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ক্লোস কার্লি ব্যাকেট"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "3008",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ওপেন অ্যাঙ্গেল ব্র্যাকেট"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "3009",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ক্লোস অ্যাঙ্গেল ব্র্য়াকেট"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "key": "300A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ওপেন ডাবল অ্যাঙ্গেল ব্র্যাকেট"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "key": "300B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ক্লোস ডাবল অ্যাঙ্গেল ব্র্য়াকেট"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "300C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ওপেন করনার ব্র্যাকেট"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "key": "300D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ক্লোস করনার ব্র্যাকেট"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "300E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ওপেন হলো করনার ব্র্যাকেট"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "300F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ক্লোস হলো করনার ব্র্যাকেট"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "3010",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ওপেন ব্ল্যাক লেন্স ব্র্যাকেট"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "3011",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ক্লোজ ব্ল্যাক লেন্স ব্র্যাকেট"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "3014",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ওপেন টরটরাইজ শেল ব্র্যাকেট"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "key": "3015",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ক্লোস টরটরাইজ শেল ব্র্যাকেট"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "3016",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ওপেন হলে লেন্স ব্র্যাকেট"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "key": "3017",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ক্লোজ হলো লেন্স ব্র্যাকেট"
       }
     }
   },

@@ -34,7 +34,7 @@
     "key": "2117",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সাউন্ড রেকর্ডিং কপিরাইট"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "2122",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ট্রেড মার্ক"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "2139",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "তথ্য সূত্র"
       }
     }
   },

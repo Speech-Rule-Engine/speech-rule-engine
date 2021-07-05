@@ -7,7 +7,7 @@
     "key": "21BC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী হার্পুন বার্ব উর্ধ্বমুখী"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "21BD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী হার্পুন বার্ব নিম্নমুখী"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "21BE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উর্ধ্বমুখী হার্পুন বার্ব ডানমুখী"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "21BF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উর্ধ্বমুখী হার্পুন বার্ব বামমুখী"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "21C0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী হার্পুন বার্ব উর্ধ্বমুখী"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "21C1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী হার্পুন বার্ব নিম্নমুখী"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "21C2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিম্নমুখী হার্পুন বার্ব ডানমুখী"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "21C3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিম্নমুখী হার্পুন বার্ব বামমুখী"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "21CB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডানমুখী হার্পুনের উপর বামমুখী হার্পুন"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "21CC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বামমুখী হার্পুনের উপর ডানমুখী হার্পুন"
       }
     }
   },

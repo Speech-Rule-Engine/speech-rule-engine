@@ -7,7 +7,7 @@
     "key": "0021",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "এক্সক্লামেশন মার্ক"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "0023",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "হ্যাশ চিহ্ন"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "0024",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডলার"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "0025",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "শতাংশ"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "0026",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "অ্যাম্পারস্যান্ড"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "0027",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "টাইপরাইটার এপোসট্রফি"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "002A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "অ্যাস্টারিস্ক"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "002B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "যোগ চিহ্ন"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "002C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "কমা"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "002D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "হাইফেন-মাইনাস"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "002E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ফুল স্টপ"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "002F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "স্ল্যাশ"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "003A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "কোলোন"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "003B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সেমিকোলোন"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "003C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "তার চেয়ে কম"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "003D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সমান চিহ্ন"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "003E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "তার চেয়ে অনেক বেশী"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "003F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "প্রশ্ন চিহ্ন"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "0040",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "অ্যাট-চিহ্ন"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "005C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ব্যাকশ্ল্যাস"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "005E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সারকমফ্লেক্স অ্যাকসেন্ট"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "005F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "লো লাইন"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "0060",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "গ্রেভ অ্যাকসেন্ট"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "007C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উল্লম্ব লাইন"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "007E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "টিল্ড"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "00A1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ইনভার্টেড এক্সক্লামেশন মার্ক"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "00A2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সেন্ট"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "00A3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "পাউন্ড"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "00A5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ইয়েন"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "00A7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বিভাগ"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "00A8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডায়ারিসেস"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "00A9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "কপিরাইট"
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "00AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বাম উদ্ধৃতি চিহ্ন"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "00AC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নাকচ"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "00AE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিবন্ধিত"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "00B0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডিগ্রি"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "00B1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "যোগ-বিয়োগ"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "00B4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "অ্যাকিউট অ্যকসেন্ট"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "00B5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "মাইক্রো সাইন"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "00B6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "অনুচ্ছেদ চিহ্ন"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "00B7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "মধ্য বিন্দু"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "00BB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডান উদ্ধৃতি চিহ্ন"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "00BF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ইনভার্টেড প্রশ্ন চিহ্ন"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "00D7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "গুণচিহ্ন"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "00F7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ভাগ চিহ্ন"
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "2010",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "হাইফেন"
       }
     }
   },
@@ -574,7 +574,7 @@
     "key": "2013",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "এন ড্যাশ"
       }
     }
   },
@@ -583,7 +583,7 @@
     "key": "2014",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "এম ড্যাশ"
       }
     }
   },
@@ -592,7 +592,7 @@
     "key": "2015",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "হরাইজন্টাল বার"
       }
     }
   },
@@ -619,7 +619,7 @@
     "key": "2018",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বাঁদিকের এপোস্ট্রফি"
       }
     }
   },
@@ -628,7 +628,7 @@
     "key": "2019",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডান দিকের অ্যাপস্ট্রফি"
       }
     }
   },
@@ -637,7 +637,7 @@
     "key": "201A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিচে দান দিকের অ্যাপোসট্রফি"
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "201C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বাঁ দিকের ইনভার্টেড কমা"
       }
     }
   },
@@ -664,7 +664,7 @@
     "key": "201D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডান দিকের ইনভার্টেড কমা"
       }
     }
   },
@@ -673,7 +673,7 @@
     "key": "201E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিচের ডান দিকের ইনভার্টেড কমা"
       }
     }
   },
@@ -691,7 +691,7 @@
     "key": "2020",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ছোরার চিহ্ন"
       }
     }
   },
@@ -700,7 +700,7 @@
     "key": "2021",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "দুটি ছোরার চিহ্ন"
       }
     }
   },
@@ -709,7 +709,7 @@
     "key": "2022",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বুলেট"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "2026",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "এলিপসেস"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "2027",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "হাইপারনেশন পয়েন্ট"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "2030",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "প্রতি মাইল"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "2032",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "প্রাইম"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "2033",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডাবল প্রাইম"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "2034",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ট্রিপল প্রাইম"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "2038",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উর্ধ্বমুখী কৌণিক বন্ধনী"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "203B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "রেফারেন্স মার্ক"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "203C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "দুটি বিস্ময়বোধক চিহ্ন"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "203D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বিস্ময়বোধক ও প্রশ্নবোধক চিহ্নের মিশ্রণ"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "203E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ওভারলাইন"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "2042",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "রাতের আকাশের মতো তারকা"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "2049",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বিস্ময়বোধক প্রশ্নবোধক চিহ্ন"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "207B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সুপারস্ক্রিপ্ট মাইনাস"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "key": "2206",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বৃদ্ধি"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "key": "2208",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "এর উপাদান"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "key": "2212",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বিয়োগ চিহ্ন"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "221A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বর্গমূল"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "221E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "অসীম চিহ্ন"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "key": "2229",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ছেদ"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "key": "222A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ইউনিয়ন"
       }
     }
   },
@@ -1924,7 +1924,7 @@
     "key": "2248",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "প্রায় সমান"
       }
     }
   },
@@ -2140,7 +2140,7 @@
     "key": "2260",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সমান নয়"
       }
     }
   },
@@ -2149,7 +2149,7 @@
     "key": "2261",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "এর সাথে সমান"
       }
     }
   },
@@ -2176,7 +2176,7 @@
     "key": "2264",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "তার চেয়ে কম বা সমান"
       }
     }
   },
@@ -2185,7 +2185,7 @@
     "key": "2265",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "তার চেয়ে অনেক বেশী বা সমান"
       }
     }
   },
@@ -2446,7 +2446,7 @@
     "key": "2282",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "এর উপসেট"
       }
     }
   },
@@ -3661,7 +3661,7 @@
     "key": "2795",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "যোগ"
       }
     }
   },
@@ -3670,7 +3670,7 @@
     "key": "2796",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বিয়োগ"
       }
     }
   },
@@ -3679,7 +3679,7 @@
     "key": "2797",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ভাগ"
       }
     }
   },
@@ -3688,7 +3688,7 @@
     "key": "27B0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "কার্লি লুপ"
       }
     }
   },
@@ -3697,7 +3697,7 @@
     "key": "27BF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "দুটি কার্লি লুপ"
       }
     }
   },

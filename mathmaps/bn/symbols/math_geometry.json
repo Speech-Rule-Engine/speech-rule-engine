@@ -1537,7 +1537,7 @@
     "key": "25AA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "কালো ছোট বর্গক্ষেত্র"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "25AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সাদা ছোট বর্গক্ষেত্র"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "key": "25B2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "উর্ধ্বমুখী কোণযুক্ত ভরাট ত্রিভুজ"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "key": "25B6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "প্লে বোতাম"
       }
     }
   },
@@ -1699,7 +1699,7 @@
     "key": "25BC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "নিম্নমুখী কোণযুক্ত ভরাট ত্রিভুজ"
       }
     }
   },
@@ -1735,7 +1735,7 @@
     "key": "25C0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "রিভার্স বোতাম"
       }
     }
   },
@@ -1825,7 +1825,7 @@
     "key": "25CA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ডায়মন্ড আকার"
       }
     }
   },
@@ -1834,7 +1834,7 @@
     "key": "25CB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ফাঁকা বৃত্ত"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "key": "25CF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ভরাট বৃত্ত"
       }
     }
   },
@@ -2158,7 +2158,7 @@
     "key": "25EF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "বড় ফাঁকা বৃত্ত"
       }
     }
   },
@@ -2266,7 +2266,7 @@
     "key": "25FB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সাদা মাঝারি বর্গক্ষেত্র"
       }
     }
   },
@@ -2275,7 +2275,7 @@
     "key": "25FC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "কালো মাঝারি বর্গক্ষেত্র"
       }
     }
   },
@@ -2284,7 +2284,7 @@
     "key": "25FD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সাদা মাঝারি ছোট বর্গক্ষেত্র"
       }
     }
   },
@@ -2293,7 +2293,7 @@
     "key": "25FE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "কালো মাঝারি ছোট বর্গক্ষেত্র"
       }
     }
   },
@@ -2392,7 +2392,7 @@
     "key": "2B1B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "কালো বড় বর্গক্ষেত্র"
       }
     }
   },
@@ -2401,7 +2401,7 @@
     "key": "2B1C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সাদা বড় বর্গক্ষেত্র"
       }
     }
   },
@@ -2581,7 +2581,7 @@
     "key": "2B50",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "সাদা মাঝারি তারা"
       }
     }
   },
@@ -2626,7 +2626,7 @@
     "key": "2B55",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ফাঁপা লাল বৃত্ত"
       }
     }
   },
