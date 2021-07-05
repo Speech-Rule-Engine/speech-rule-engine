@@ -28,6 +28,7 @@ import {es} from './locales/locale_es';
 import {fr} from './locales/locale_fr';
 import {hi} from './locales/locale_hi';
 import {it} from './locales/locale_it';
+import {ko} from './locales/locale_ko';
 import {nemeth} from './locales/locale_nemeth';
 import {Locale, LOCALE} from './locale';
 
@@ -39,6 +40,7 @@ export const locales: {[key: string]: () => Locale} = {
   'fr': fr,
   'hi': hi,
   'it': it,
+  'ko': ko,
   'nemeth': nemeth
 };
 
