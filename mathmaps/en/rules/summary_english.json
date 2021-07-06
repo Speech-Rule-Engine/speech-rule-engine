@@ -4,6 +4,13 @@
   "rules": [
     [
       "Rule",
+      "stree",
+      "default.default",
+      "[n] ./*[1]",
+      "self::stree"
+    ],
+    [
+      "Rule",
       "abstr-identifier",
       "default.default",
       "[t] \"long identifier\"",
