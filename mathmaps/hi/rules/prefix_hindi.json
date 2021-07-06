@@ -152,10 +152,8 @@
       "name(../..)=\"sqrt\""
     ],
     [
-      "Rule",
+      "Alias",
       "radicand",
-      "default",
-      "[t] \"करणीगत राशि\" (pause:200)",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=1"
@@ -180,7 +178,7 @@
     ],
     [
       "Rule",
-      "leftsub",
+      "leftsub-counted",
       "default",
       "[t] CSFordinalPosition; [t] \"वाम पादांक\" (pause:200)",
       "self::*",
@@ -199,7 +197,7 @@
     ],
     [
       "Rule",
-      "leftsuper",
+      "leftsuper-counted",
       "default",
       "[t] CSFordinalPosition; [t] \"वाम उर्ध्वान्क\" (pause:200)",
       "self::*",
@@ -218,7 +216,7 @@
     ],
     [
       "Rule",
-      "rightsub",
+      "rightsub-counted",
       "default",
       "[t] CSFordinalPosition; [t] \"दक्षिण पादांक\" (pause:200)",
       "self::*",
@@ -237,7 +235,7 @@
     ],
     [
       "Rule",
-      "rightsuper",
+      "rightsuper-counted",
       "default",
       "[t] CSFordinalPosition; [t] \"दक्षिण उर्ध्वान्क\" (pause:200)",
       "self::*",
@@ -287,7 +285,7 @@
     ],
     [
       "Rule",
-      "cell",
+      "cell-simple",
       "default",
       "[t] CSFordinalPosition; [t] \"स्तंभ\" (pause:200)",
       "self::cell"

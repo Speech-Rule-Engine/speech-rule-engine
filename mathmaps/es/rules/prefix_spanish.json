@@ -152,10 +152,8 @@
       "name(../..)=\"sqrt\""
     ],
     [
-      "Rule",
+      "Alias",
       "radicand",
-      "default",
-      "[t] \"radicand\" (pause:200)",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=1"
@@ -180,7 +178,7 @@
     ],
     [
       "Rule",
-      "leftsub",
+      "leftsub-counted",
       "default",
       "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"subíndice izquierdo\" (pause:200)",
       "self::*",
@@ -199,7 +197,7 @@
     ],
     [
       "Rule",
-      "leftsuper",
+      "leftsuper-counted",
       "default",
       "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"superíndice izquierdo\" (pause:200)",
       "self::*",
@@ -218,7 +216,7 @@
     ],
     [
       "Rule",
-      "rightsub",
+      "rightsub-counted",
       "default",
       "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"subíndice derecho\" (pause:200)",
       "self::*",
@@ -237,7 +235,7 @@
     ],
     [
       "Rule",
-      "rightsuper",
+      "rightsuper-counted",
       "default",
       "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"superíndice derecho\" (pause:200)",
       "self::*",
@@ -287,7 +285,7 @@
     ],
     [
       "Rule",
-      "cell",
+      "cell-simple",
       "default",
       "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"columna\" (pause:200)",
       "self::cell"
