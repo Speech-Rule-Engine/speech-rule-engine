@@ -292,21 +292,21 @@
       "text()=\"∈\" or text()=\"∊\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-member",
       "default",
       "SetMemberSymbol_Member",
       "[t] \"में\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-member",
       "default",
       "SetMemberSymbol_Element",
       "[t] \"में\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-member",
       "default",
       "SetMemberSymbol_Belongs",
@@ -322,21 +322,21 @@
       "text()=\"∉\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-not-member",
       "default",
       "SetMemberSymbol_Member",
       "[t] \"में नही\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-not-member",
       "default",
       "SetMemberSymbol_Element",
       "[t] \"में नही\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-not-member",
       "default",
       "SetMemberSymbol_Belongs",

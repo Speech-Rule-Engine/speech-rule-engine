@@ -169,7 +169,7 @@
       "not(contains(@grammar, \"protected\"))"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "number-with-chars",
       "default",
       "brief",
@@ -216,7 +216,7 @@
       "parent::*/parent::infixop[@role=\"implicit\"]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "number-baseline",
       "default",
       "brief",
@@ -242,7 +242,7 @@
       "parent::*/parent::infixop[@role=\"implicit\"]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "number-baseline-font",
       "default",
       "brief",
@@ -388,7 +388,7 @@
       "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "fences-neutral",
       "default",
       "sbrief",
@@ -426,7 +426,7 @@
       "not(name(../..)=\"appl\")"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "fences-set",
       "default",
       "sbrief",
@@ -508,7 +508,7 @@
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\" and not(following-sibling::*)]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "continued-fraction-outer",
       "default",
       "brief",
@@ -530,14 +530,14 @@
       "children/*[2]/descendant-or-self::*[@role=\"ellipsis\" and not(following-sibling::*)]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "continued-fraction-inner",
       "default",
       "brief",
       "[t] \"StartFrac\"; [n] children/*[1];[t] \"Over\"; [n] children/*[2]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "continued-fraction-inner",
       "brief",
       "sbrief",
@@ -689,7 +689,7 @@
       "@role=\"integral\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "integral",
       "default",
       "brief",
@@ -794,7 +794,7 @@
       "not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "subscript-baseline",
       "default",
       "brief",
@@ -866,7 +866,7 @@
       "self::superscript"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "superscript",
       "default",
       "brief",
@@ -888,7 +888,7 @@
       "not(name(following-sibling::superscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"superscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\")) and not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "superscript-baseline",
       "default",
       "brief",
@@ -1124,7 +1124,7 @@
       "not(following-sibling::*)"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "prime-subscript",
       "default",
       "brief",
@@ -1147,7 +1147,7 @@
       "following-sibling::*"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "prime-subscript-baseline",
       "default",
       "brief",
@@ -1202,7 +1202,7 @@
       "children/*[2][@role=\"overaccent\"]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "overscore",
       "default",
       "brief",
@@ -1225,7 +1225,7 @@
       "children/*[1]/children/*[2][@role=\"overaccent\"]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "double-overscore",
       "default",
       "brief",
@@ -1246,7 +1246,7 @@
       "children/*[2][@role=\"underaccent\"]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "underscore",
       "default",
       "brief",
@@ -1269,7 +1269,7 @@
       "children/*[1]/children/*[2][@role=\"underaccent\"]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "double-underscore",
       "default",
       "brief",
@@ -1292,7 +1292,7 @@
       "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "overbar",
       "default",
       "brief",
@@ -1315,7 +1315,7 @@
       "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "underbar",
       "default",
       "brief",
@@ -1338,7 +1338,7 @@
       "children/*[2][text()=\"~\" or text()=\"˜\" or text()=\"∼\" or text()=\"～\"]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "overtilde",
       "default",
       "brief",
@@ -1361,7 +1361,7 @@
       "children/*[2][text()=\"~\" or text()=\"˜\" or text()=\"∼\" or text()=\"～\"]"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "undertilde",
       "default",
       "brief",
@@ -1462,7 +1462,7 @@
       "@role=\"determinant\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "determinant",
       "default",
       "sbrief",
@@ -1478,7 +1478,7 @@
       "CQFdetIsSimple"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "determinant-simple",
       "default",
       "sbrief",
@@ -1558,7 +1558,7 @@
       "content"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "line-with-label",
       "default",
       "brief",
@@ -1610,7 +1610,7 @@
       "content"
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "empty-line-with-label",
       "default",
       "brief",

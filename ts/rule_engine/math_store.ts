@@ -47,6 +47,8 @@ export class MathStore extends BaseRuleStore {
     this.parseMethods['UniqueAlias'] = this.defineUniqueRuleAlias.bind(this);
     this.parseMethods['SpecializedRule'] =
       this.defineSpecialisedRule.bind(this);
+    this.parseMethods['SpecializedAction'] =
+      this.defineSpecialisedRule.bind(this);
   }
 
 

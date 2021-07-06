@@ -325,14 +325,14 @@
       "text()=\"∈\" or text()=\"∊\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-member",
       "default",
       "SetMemberSymbol_Element",
       "[t] \"Element von\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-member",
       "default",
       "SetMemberSymbol_Belongs",
@@ -348,14 +348,14 @@
       "text()=\"∉\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-not-member",
       "default",
       "SetMemberSymbol_Element",
       "[t] \"kein Element von\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-not-member",
       "default",
       "SetMemberSymbol_Belongs",

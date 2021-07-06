@@ -266,21 +266,21 @@
       "text()=\"∈\" or text()=\"∊\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-member",
       "default",
       "SetMemberSymbol_Member",
       "[t] \"appartient à\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-member",
       "default",
       "SetMemberSymbol_Element",
       "[t] \"est un élément de\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-member",
       "default",
       "SetMemberSymbol_Belongs",
@@ -296,21 +296,21 @@
       "text()=\"∉\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-not-member",
       "default",
       "SetMemberSymbol_Member",
       "[t] \"n'appartient pas à\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-not-member",
       "default",
       "SetMemberSymbol_Element",
       "[t] \"n'est pas un élément de\""
     ],
     [
-      "SpecializedRule",
+      "SpecializedAction",
       "set-not-member",
       "default",
       "SetMemberSymbol_Belongs",
