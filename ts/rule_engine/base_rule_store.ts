@@ -134,7 +134,9 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
   constructor() {
     this.parseMethods = {
       'Rule': this.defineRule,
-      'Generator': this.generateRules
+      'Generator': this.generateRules,
+      'Action': this.defineAction,
+      'Precondition': this.definePrecondition
     };
   }
 
@@ -377,6 +379,68 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
   private parsePrecondition_(cstr: string): string[] {
     let generator = this.context.customGenerators.lookup(cstr);
     return generator ? generator() : [cstr];
+  }
+
+  /**
+   * Set of Preconditions
+   */
+  private preconditions: Map<string, [DynamicCstr, Precondition][]> = new Map();
+
+  private addPrecondition(name: string, dynamic: DynamicCstr, prec: Precondition) {
+    let existing = this.preconditions.get(name);
+    if (existing) {
+      existing.push([dynamic, prec]);
+    } else {
+      this.preconditions.set(name, [[dynamic, prec]]);
+    }
+  }
+
+  /**
+   * @override
+   */
+  public defineAction(name: string, action: string) {
+    let postc: Action;
+    try {
+      // TODO: Have a parser that respects generators.
+      postc = Action.fromString(action);
+    } catch (err) {
+      if (err.name === 'RuleError') {
+        console.error('Action Error ', action, err.message);
+        return;
+      } else {
+        throw err;
+      }
+    }
+    let prec = this.preconditions.get(name);
+    if (!prec) {
+      console.error(`Action Error: No precondition for action ${name}`);
+      return;
+    }
+    prec.forEach(([dynamic, prec]) =>
+      this.addRule(new SpeechRule(name, dynamic, prec, postc)));
+  }
+
+
+  /**
+   * @override
+   */
+  public definePrecondition(name: string, dynamic: string,
+                            prec: string, ...args: string[]) {
+    let fullPrec, dynamicCstr;
+    try {
+      fullPrec = this.parsePrecondition(prec, args);
+      dynamicCstr = this.parseCstr(dynamic);
+    } catch (err) {
+      if (err.name === 'RuleError') {
+        console.error('Precondition Error ', prec, '(' + dynamic + '):', err.message);
+        return;
+      } else {
+        throw err;
+      }
+    }
+    fullPrec.rank = this.rank++;
+    this.addPrecondition(name, dynamicCstr, fullPrec);
+    // TODO: Maybe return something?
   }
 
 }
