@@ -44,7 +44,6 @@ export class MathStore extends BaseRuleStore {
 
     this.parseMethods['Alias'] = this.defineRuleAlias.bind(this);
     this.parseMethods['Aliases'] = this.defineRulesAlias.bind(this);
-    this.parseMethods['UniqueAlias'] = this.defineUniqueRuleAlias.bind(this);
     this.parseMethods['SpecializedRule'] =
       this.defineSpecialisedRule.bind(this);
     this.parseMethods['SpecializedAction'] =
@@ -71,26 +70,6 @@ export class MathStore extends BaseRuleStore {
     for (let i = 0, annotator; annotator = this.annotators[i]; i++) {
       SemanticAnnotations.activate(this.domain, annotator);
     }
-  }
-
-
-  /**
-   * Adds an alias for an existing rule.
-   * @param name The name of the rule.
-   * @param dynamic A math domain and style assignment.
-   * @param query Precondition query of the rule.
-   * @param args Additional static precondition constraints.
-   */
-  public defineUniqueRuleAlias(
-      name: string, dynamic: string, query: string, ...args: string[]) {
-    let dynamicCstr = this.parseCstr(dynamic);
-    let rule = this.findRule(
-        rule => rule.name === name && dynamicCstr.equal(rule.dynamicCstr));
-    if (!rule) {
-      throw new OutputError(
-          'Rule named ' + name + ' with style ' + dynamic + ' does not exist.');
-    }
-    this.addAlias_(rule, query, args);
   }
 
 
