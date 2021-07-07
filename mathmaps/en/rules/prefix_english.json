@@ -4,290 +4,268 @@
   "locale": "en",
   "rules": [
     [
-      "Rule",
+      "Precondition",
       "numerator",
       "default",
-      "[t] \"Numerator\" (pause:200)",
       "self::*",
       "name(../..)=\"fraction\"",
       "count(preceding-sibling::*)=0"
     ],
     [
-      "Rule",
+      "Precondition",
       "denominator",
       "default",
-      "[t] \"Denominator\" (pause:200)",
       "self::*",
       "name(../..)=\"fraction\"",
       "count(preceding-sibling::*)=1"
     ],
     [
-      "Rule",
+      "Precondition",
       "base",
       "default",
-      "[t] \"Base\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"superscript\""
     ],
     [
-      "Alias",
+      "PAlias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"subscript\""
     ],
     [
-      "Alias",
+      "PAlias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"overscore\""
     ],
     [
-      "Alias",
+      "PAlias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"underscore\""
     ],
     [
-      "Alias",
+      "PAlias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"tensor\""
     ],
     [
-      "Alias",
+      "PAlias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"limlower\""
     ],
     [
-      "Alias",
+      "PAlias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"limupper\""
     ],
     [
-      "Alias",
+      "PAlias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"limboth\""
     ],
     [
-      "Rule",
+      "Precondition",
       "exponent",
       "default",
-      "[t] \"Exponent\" (pause:200)",
       "self::*",
       "name(../..)=\"superscript\"",
       "count(preceding-sibling::*)=1"
     ],
     [
-      "Rule",
+      "Precondition",
       "subscript",
       "default",
-      "[t] \"Subscript\" (pause:200)",
       "self::*",
       "name(../..)=\"subscript\"",
       "count(preceding-sibling::*)=1"
     ],
     [
-      "Rule",
+      "Precondition",
       "overscript",
       "default",
-      "[t] \"Overscript\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"overscore\""
     ],
     [
-      "Alias",
+      "PAlias",
       "overscript",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"limupper\""
     ],
     [
-      "Alias",
+      "PAlias",
       "overscript",
       "self::*",
       "count(preceding-sibling::*)=2",
       "name(../..)=\"limboth\""
     ],
     [
-      "Rule",
+      "Precondition",
       "underscript",
       "default",
-      "[t] \"Underscript\" (pause:200)",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"underscore\""
     ],
     [
-      "Alias",
+      "PAlias",
       "underscript",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"limlower\""
     ],
     [
-      "Alias",
+      "PAlias",
       "underscript",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"limboth\""
     ],
     [
-      "Rule",
+      "Precondition",
       "radicand",
       "default",
-      "[t] \"Radicand\" (pause:200)",
       "self::*",
       "name(../..)=\"sqrt\""
     ],
     [
-      "Alias",
+      "PAlias",
       "radicand",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=1"
     ],
     [
-      "Rule",
+      "Precondition",
       "index",
       "default",
-      "[t] \"Index\" (pause:200)",
       "self::*",
       "name(../..)=\"root\"",
       "count(preceding-sibling::*)=0"
     ],
     [
-      "Rule",
+      "Precondition",
       "leftsub",
       "default",
-      "[t] \"Left Subscript\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"leftsub\""
     ],
     [
-      "Rule",
+      "Precondition",
       "leftsub-counted",
       "default",
-      "[t] CSFordinalPosition; [t] \"Left Subscript\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
       "../../@role=\"leftsub\""
     ],
     [
-      "Rule",
+      "Precondition",
       "leftsuper",
       "default",
-      "[t] \"Left Superscript\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"leftsuper\""
     ],
     [
-      "Rule",
+      "Precondition",
       "leftsuper-counted",
       "default",
-      "[t] CSFordinalPosition; [t] \"Left Superscript\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
       "../../@role=\"leftsuper\""
     ],
     [
-      "Rule",
+      "Precondition",
       "rightsub",
       "default",
-      "[t] \"Right Subscript\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"rightsub\""
     ],
     [
-      "Rule",
+      "Precondition",
       "rightsub-counted",
       "default",
-      "[t] CSFordinalPosition; [t] \"Right Subscript\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
       "../../@role=\"rightsub\""
     ],
     [
-      "Rule",
+      "Precondition",
       "rightsuper",
       "default",
-      "[t] \"Right Superscript\" (pause:200)",
       "self::*",
       "name(../..)=\"tensor\"",
       "@role=\"rightsuper\""
     ],
     [
-      "Rule",
+      "Precondition",
       "rightsuper-counted",
       "default",
-      "[t] CSFordinalPosition; [t] \"Right Superscript\" (pause:200)",
       "self::*",
       "name(../..)=\"punctuated\"",
       "name(../../../..)=\"tensor\"",
       "../../@role=\"rightsuper\""
     ],
     [
-      "Rule",
+      "Precondition",
       "choice",
       "default",
-      "[t] \"Choice Quantity\" (pause:200)",
       "self::line",
       "@role=\"binomial\"",
       "parent::*/parent::vector",
       "count(preceding-sibling::*)=0"
     ],
     [
-      "Rule",
+      "Precondition",
       "select",
       "default",
-      "[t] \"Selection Quantity\" (pause:200)",
       "self::line",
       "@role=\"binomial\"",
       "parent::*/parent::vector",
       "count(preceding-sibling::*)=1"
     ],
     [
-      "Rule",
+      "Precondition",
       "row",
       "default",
-      "[t] CSFordinalPosition; [t] \"Row\" (pause:200)",
       "self::row"
     ],
     [
-      "Aliases",
+      "PAliases",
       "row",
       "self::line"
     ],
     [
-      "Rule",
+      "Precondition",
       "cell",
       "default",
-      "[n] ../..; [t] CSFordinalPosition; [t] \"Column\" (pause:200)",
       "self::cell",
       "contains(@grammar,\"depth\")"
     ],
     [
-      "Rule",
+      "Precondition",
       "cell-simple",
       "default",
-      "[t] CSFordinalPosition; [t] \"Column\" (pause:200)",
       "self::cell"
     ]
   ]

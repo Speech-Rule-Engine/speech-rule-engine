@@ -147,15 +147,15 @@ export class MathStore extends BaseRuleStore {
     let newCstr = this.parseCstr(newDynamic);
 
     // TMP: What to do about the dynamicCstr? That should only be needed wrt. specializedActions.
-    if (!rule && !opt_action) {
-      let precs = this.getPrecondition(name);
-      precs.forEach(([dyn, prec]) => {
-        if (dynamicCstr === dyn) {
-          this.addPrecondition(name, newCstr, prec);
-        }
-      });
-      return;
-    }
+    // if (!rule && !opt_action) {
+    //   let precs = this.getPrecondition(name);
+    //   precs.forEach(([dyn, prec]) => {
+    //     if (dynamicCstr === dyn) {
+    //       this.addPrecondition(name, newCstr, prec);
+    //     }
+    //   });
+    //   return;
+    // }
     if (!rule && opt_action) {
       throw new OutputError(
           'Rule named ' + name + ' with style ' + oldDynamic +
