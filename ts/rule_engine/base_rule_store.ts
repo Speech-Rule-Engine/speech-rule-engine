@@ -386,7 +386,12 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   private preconditions: Map<string, [DynamicCstr, Precondition][]> = new Map();
 
-  private addPrecondition(name: string, dynamic: DynamicCstr, prec: Precondition) {
+  public getPrecondition(name: string) {
+    // TODO: Inheritance!
+    return this.preconditions.get(name);
+  }
+
+  public addPrecondition(name: string, dynamic: DynamicCstr, prec: Precondition) {
     let existing = this.preconditions.get(name);
     if (existing) {
       existing.push([dynamic, prec]);
@@ -449,6 +454,7 @@ export interface RulesJson {
   modality?: string;
   domain?: string;
   locale?: string;
+  kind?: string;
   functions?: {[key: string]: Function};
   rules?: any[];
   annotators?: any[];
