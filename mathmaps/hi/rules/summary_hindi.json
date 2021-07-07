@@ -4,6 +4,13 @@
   "rules": [
     [
       "Rule",
+      "stree",
+      "default.default",
+      "[n] ./*[1]",
+      "self::stree"
+    ],
+    [
+      "Rule",
       "abstr-identifier",
       "default.default",
       "[t] \"दीर्घ तत्समक\"",
@@ -616,9 +623,8 @@
       "./children/punctuation[@role=\"ellipsis\"]"
     ],
     [
-      "UniqueAlias",
+      "Alias",
       "abstr-relation",
-      "default.default",
       "self::multirel",
       "@role!=\"unknown\"",
       "count(./children/*)>2"

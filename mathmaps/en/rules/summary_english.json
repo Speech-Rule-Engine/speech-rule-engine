@@ -623,9 +623,8 @@
       "./children/punctuation[@role=\"ellipsis\"]"
     ],
     [
-      "UniqueAlias",
+      "Alias",
       "abstr-relation",
-      "default.default",
       "self::multirel",
       "@role!=\"unknown\"",
       "count(./children/*)>2"
