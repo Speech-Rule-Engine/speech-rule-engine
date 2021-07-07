@@ -36,7 +36,7 @@
       "Rule",
       "protected",
       "default",
-      "[n] text() (grammar:ignoreCaps=\"maiuscola\")",
+      "[n] text() (grammar:ignoreCaps)",
       "self::number",
       "contains(@grammar, \"protected\")"
     ],
@@ -91,7 +91,7 @@
       "Rule",
       "capital",
       "default",
-      "[n] text() (pitch:0.6, grammar:ignoreCaps=\"maiuscola\")",
+      "[n] text() (pitch:0.6, grammar:ignoreCaps)",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\" or @role=\"simple function\"",
       ".[@category=\"Lu\"]"

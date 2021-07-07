@@ -91,7 +91,7 @@
       "Rule",
       "capital",
       "default",
-      "[n] text() (pitch:0.6, grammar:ignoreCaps=\"कैपिटल\")",
+      "[n] text() (pitch:0.6, grammar:ignoreCaps)",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\" or @role=\"simple function\"",
       ".[@category=\"Lu\"]"
