@@ -74,6 +74,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   public initialized: boolean = false;
 
+  public inherits: BaseRuleStore = null;
 
   /**
    * Local transcriptions for special characters.
@@ -433,13 +434,18 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
         throw err;
       }
     }
-    let prec = this.preconditions.get(name);
+    let prec = this.getFullPreconditions(name);
     if (!prec) {
       console.error(`Action Error: No precondition for action ${name}`);
       return;
     }
-    prec.conditions.forEach(([dynamic, prec]) =>
-      this.addRule(new SpeechRule(name, dynamic, prec, postc)));
+    let regexp = new RegExp('^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : ''));
+    prec.conditions.forEach(([dynamic, prec]) => {
+      // TODO: Work this out wrt. domain.
+      let newDynamic = this.parseCstr(
+        dynamic.toString().replace(regexp, ''));
+      this.addRule(new SpeechRule(name, newDynamic, prec, postc));
+    });
   }
 
 
@@ -448,7 +454,14 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   private preconditions: Map<string, Condition> = new Map();
 
-
+  public getFullPreconditions(name: string): Condition {
+    let prec = this.preconditions.get(name);
+    if (prec || !this.inherits) {
+      return prec;
+    }
+    return this.inherits.getFullPreconditions(name);
+  }
+  
   /**
    * @override
    */
@@ -575,6 +588,7 @@ export interface RulesJson {
   domain?: string;
   locale?: string;
   kind?: string;
+  inherits?: string;
   functions?: {[key: string]: Function};
   rules?: any[];
   annotators?: any[];

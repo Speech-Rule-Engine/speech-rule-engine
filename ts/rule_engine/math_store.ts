@@ -89,7 +89,7 @@ export class MathStore extends BaseRuleStore {
     });
     if (!rule) {
       throw new OutputError(
-          'Rule with named ' + name + ' does not exist.');
+          'Rule with name ' + name + ' does not exist.');
     }
     this.addAlias_(rule, query, args);
   }
