@@ -1,0 +1,357 @@
+{
+  "locale": "hi",
+  "modality": "summary",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "stree",
+      "[n] ./*[1]"
+    ],
+    [
+      "Action",
+      "abstr-identifier-long",
+      "[t] \"दीर्घ तत्समक\""
+    ],
+    [
+      "Action",
+      "abstr-identifier",
+      "[t] \"तत्समक\""
+    ],
+    [
+      "Action",
+      "abstr-number-long",
+      "[t] \"दीर्घ संख्या\""
+    ],
+    [
+      "Action",
+      "abstr-number",
+      "[t] \"संख्या\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number-long",
+      "[t] \"दीर्घ मिश्र संख्या\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number",
+      "[t] \"मिश्र संख्या\""
+    ],
+    [
+      "Action",
+      "abstr-text",
+      "[t] \"पाठ\""
+    ],
+    [
+      "Action",
+      "abstr-function",
+      "[t] \"फलन व्यंजक\""
+    ],
+    [
+      "Action",
+      "abstr-function-brief",
+      "[t] \"फलन\""
+    ],
+    [
+      "Action",
+      "abstr-lim",
+      "[t] \"फलन सीमा\""
+    ],
+    [
+      "Action",
+      "abstr-lim-brief",
+      "[t] \"सीमा\""
+    ],
+    [
+      "Action",
+      "abstr-fraction",
+      "[t] \"भिन्न\""
+    ],
+    [
+      "Action",
+      "abstr-fraction-brief",
+      "[t] \"अपूर्णांश\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction",
+      "[t] \"सतत भिन्न\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction-brief",
+      "[t] \"सतत अपूर्णांश\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt",
+      "[t] \"वर्ग मूल\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt-nested",
+      "[t] \"नीड़ित वर्ग मूल\""
+    ],
+    [
+      "Action",
+      "abstr-root-end",
+      "[t] \"वां मूल\"; [n] children/*[1] (engine:modality=speech); [t] \"मूलांक समाप्त\""
+    ],
+    [
+      "Action",
+      "abstr-root",
+      "[n] children/*[1] (engine:modality=speech); [t] \"वां मूल\""
+    ],
+    [
+      "Action",
+      "abstr-root-brief",
+      "[t] \"मूल\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested-end",
+      "[t] \"नीड़ित मूल्यांक\"; [n] children/*[1] (engine:modality=speech); [t] \"मूलांक समाप्त\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested",
+      "[t] \"नीड़ित मूल्यांक\"; [n] children/*[1] (engine:modality=speech)"
+    ],
+    [
+      "Action",
+      "abstr-root-nested-brief",
+      "[t] \"नीड़ित मूल\""
+    ],
+    [
+      "Action",
+      "abstr-superscript",
+      "[t] \"घातांक\""
+    ],
+    [
+      "Action",
+      "abstr-subscript",
+      "[t] \"पादांक\""
+    ],
+    [
+      "Action",
+      "abstr-subsup",
+      "[t] \"पादांक वाला घातांक\""
+    ],
+    [
+      "Action",
+      "abstr-infixop",
+      "[t] count(./children/*); [t] \"अवयव\"; [t] \"के साथ\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-infixop-var",
+      "[t] \"चल तादात के अवयवों के साथ\"; [t] @role (grammar:localRole); "
+    ],
+    [
+      "Action",
+      "abstr-infixop-brief",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-addition",
+      "[t] count(./children/*); [t] \"पद\"; [t] \"के साथ योग\""
+    ],
+    [
+      "Action",
+      "abstr-addition-brief",
+      "[t] \"योग\""
+    ],
+    [
+      "Action",
+      "abstr-addition-var",
+      "[t] \"चल तादात के पदों का योग\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication",
+      "[t] count(./children/*); [t] \"गुणनखंड\"; [t] \"के साथ गुणनफल\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-brief",
+      "[t] \"गुणनफल\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-var",
+      "[t] \"चल तादात के गुणनखंडो का गुणनफल\""
+    ],
+    [
+      "Action",
+      "abstr-vector",
+      "[t] count(./children/*); [t] \"विमीय सदिश\""
+    ],
+    [
+      "Action",
+      "abstr-vector-brief",
+      "[t] \"सदिश\""
+    ],
+    [
+      "Action",
+      "abstr-vector-var",
+      "[t] \"एन विमीय सदिश\""
+    ],
+    [
+      "Action",
+      "abstr-binomial",
+      "[t] \"द्विपद\""
+    ],
+    [
+      "Action",
+      "abstr-determinant",
+      "[t] count(./children/*); [t] \"विमीय सारणिक\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-brief",
+      "[t] \"सारणिक\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-var",
+      "[t] \"एन विमीय सारणिक\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix",
+      "[t] count(./children/*); [t] \"विमीय वर्ग आव्यूह\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix-brief",
+      "[t] \"वर्ग आव्यूह\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector",
+      "[t] count(./children/row/children/*); [t] \"विमीय पंक्ति सदिश\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-brief",
+      "[t] \"पंक्ति सदिश\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-var",
+      "[t] \"एन विमीय पंक्ति सदिश\""
+    ],
+    [
+      "Action",
+      "abstr-matrix",
+      "[t] count(children/*); [t] \"गुणा\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-brief",
+      "[t] \"आव्यूह\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-var",
+      "[t] \"एन गुणा एम आव्यूह\""
+    ],
+    [
+      "Action",
+      "abstr-cases",
+      "[t] count(children/*); [t] \"फलन उपशर्त\"; [t] \"के साथ\"; [t] \"फलन उपशर्त कथन\""
+    ],
+    [
+      "Action",
+      "abstr-cases-brief",
+      "[t] \"फलन उपशर्त कथन\""
+    ],
+    [
+      "Action",
+      "abstr-cases-var",
+      "[t] \"चल तादात की फलन उपशर्तों वाला फलन उपशर्त कथन\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated",
+      "[t] count(children/*) - count(content/*); [t] \"लम्बाई की\"; [n] content/*[1]; [t] \"विभाजित सूचि\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated-brief",
+      "[n] content/*[1]; [t] \"विभाजित सूचि\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated-var",
+      "[t] \"चल लम्बाई की\"; [n] content/*[1]; [t] \"विभाजित सूचि\""
+    ],
+    [
+      "Action",
+      "abstr-bigop",
+      "[n] content/*[1]"
+    ],
+    [
+      "Action",
+      "abstr-integral",
+      "[t] \"समाकल\""
+    ],
+    [
+      "Action",
+      "abstr-relation",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-relation-seq",
+      "[t] count(./children/*); [t] \"अवयव\";  [t] \"के साथ\"; [t] @role (grammar:localRole); [t] \"अनुक्रम\""
+    ],
+    [
+      "Action",
+      "abstr-relation-seq-brief",
+      "[t] @role (grammar:localRole); [t] \"अनुक्रम\""
+    ],
+    [
+      "Action",
+      "abstr-relation-var",
+      "[t] \"चल तादात के अवयवों के साथ\"; [t] @role (grammar:localRole); [t] \"अनुक्रम\""
+    ],
+    [
+      "Action",
+      "abstr-multirel",
+      "[t] count(./children/*); [t] \"अवयव\"; [t] \"के साथ\"; [t] \"संबंधानुक्रम\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-brief",
+      "[t] \"संबंधानुक्रम\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-var",
+      "[t] \"चल तादात के अवयवों का संबंधानुक्रम\""
+    ],
+    [
+      "Action",
+      "abstr-table",
+      "[t] count(children/*); [t] \"पक्तियां और\"; [t] count(children/*[1]/children/*); [t] \"स्तंभ\"; [t] \"के साथ सारणी\""
+    ],
+    [
+      "Action",
+      "abstr-line",
+      "[t] @role (grammar:localRole); [t] \"में\""
+    ],
+    [
+      "Action",
+      "abstr-row",
+      "[t] \"में\"; [t] @role (grammar:localRole); [t] count(preceding-sibling::..); [t] \"के साथ\"; [t] count(children/*); [t] \"स्तंभ\""
+    ],
+    [
+      "Action",
+      "abstr-cell",
+      "[t] @role (grammar:localRole); [t] \"में\""
+    ]
+  ]
+}

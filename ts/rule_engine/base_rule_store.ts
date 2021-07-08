@@ -139,7 +139,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
       'Action': this.defineAction,
       'Precondition': this.definePrecondition,
       'PAlias': this.defineAlias,
-      'PAliases': this.defineAliases
+      'PAliases': this.defineAliases,
+      'Specialized': this.defineSpecialized
     };
   }
 

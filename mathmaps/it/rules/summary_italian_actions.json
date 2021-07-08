@@ -1,0 +1,372 @@
+{
+  "locale": "it",
+  "modality": "summary",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "collapsed-masculine",
+      "[t] \"collassato\""
+    ],
+    [
+      "Action",
+      "collapsed-feminine",
+      "[t] \"collassata\""
+    ],
+    [
+      "Action",
+      "no-collapsed",
+      "[t] \"\""
+    ],
+    [
+      "Action",
+      "stree",
+      "[n] ./*[1]"
+    ],
+    [
+      "Action",
+      "abstr-identifier-long",
+      "[t] \"identificatore lungo\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-identifier",
+      "[t] \"identificatore\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-number-long",
+      "[t] \"intero lungo\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-number",
+      "[t] \"numero\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-mixed-number-long",
+      "[t] \"numero misto lungo\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-mixed-number",
+      "[t] \"numero misto\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-text",
+      "[t] \"testo\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-function",
+      "[t] \"espressione funzionale\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-function-brief",
+      "[t] \"funzione\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-lim",
+      "[t] \"funzione limite\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-lim-brief",
+      "[t] \"limite\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-fraction",
+      "[t] \"frazione\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-fraction-brief",
+      "[t] \"frazione\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction",
+      "[t] \"frazione continua\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction-brief",
+      "[t] \"frazione continua\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-sqrt",
+      "[t] \"radice quadrata\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-sqrt-nested",
+      "[t] \"radice quadrata doppia\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-root-end",
+      "[t] \"radice di indice\"; [n] children/*[1] (engine:modality=speech); [t] \"indice finale\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-root",
+      "[t] \"radice di indice\"; [n] children/*[1] (engine:modality=speech); [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-root-brief",
+      "[t] \"radice \"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-root-nested-end",
+      "[t] \"radicale doppio di indice\"; [n] children/*[1] (engine:modality=speech); [t] \"indice finale\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-root-nested",
+      "[t] \"radicale doppio di indice\";  [n] children/*[1] (engine:modality=speech); [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-root-nested-brief",
+      "[t] \"radicale doppio\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-superscript",
+      "[t] \"potenza\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-subscript",
+      "[t] \"pedice\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-subsup",
+      "[t] \"potenza con pedice\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-infixop",
+      "[t] @role (grammar:localRole); [t] \"con\"; [t] count(./children/*); [t] \"elementi\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-infixop-var",
+      "[t] @role (grammar:localRole); [t] \"con numero variabile di elementi\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-infixop-brief",
+      "[t] @role (grammar:localRole); [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-addition",
+      "[t] \"somma con\"; [t] count(./children/*); [t] \"addendi\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-addition-brief",
+      "[t] \"somma\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-addition-var",
+      "[t] \"somma con numero variabile di addendi\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-multiplication",
+      "[t] \"prodotto di\"; [t] count(./children/*); [t] \"fattori\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-multiplication-brief",
+      "[t] \"prodotto\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-multiplication-var",
+      "[t] \"prodotto con numero variabile di fattori\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-vector",
+      "[t] count(./children/*); [t] \"vettore dimensionale\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-vector-brief",
+      "[t] \"vettore\""
+    ],
+    [
+      "Action",
+      "abstr-vector-var",
+      "[t] \"vettore di dimensione n\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-binomial",
+      "[t] \"binomiale\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-determinant",
+      "[t] count(./children/*); [t] \"derminante dimensionale\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-determinant-brief",
+      "[t] \"determinante\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-determinant-var",
+      "[t] \"determinante di dimensione n\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-squarematrix",
+      "[t] count(./children/*); [t] \"matrice quadrata dimensionale\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-squarematrix-brief",
+      "[t] \"matrice quadrata\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-rowvector",
+      "[t] count(./children/row/children/*); [t] \"vettore riga dimensionale\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-rowvector-brief",
+      "[t] \"vettore riga\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-rowvector-var",
+      "[t] \"vettore riga di dimensione n\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-matrix",
+      "[t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [t] \"matrice\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-matrix-brief",
+      "[t] \"matrice\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-matrix-var",
+      "[t] \"matrice dimensionale n pr m\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-cases",
+      "[t] \"comando switch\"; [t] \"con\"; [t] count(children/*); [t] \"casi\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-cases-brief",
+      "[t] \"comando switch\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-cases-var",
+      "[t] \"comando di switch con numero variabile di casi\"; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-punctuated",
+      "[n] content/*[1]; [t] \"lista separata\"; [t] \"di lunghezza\"; [t] count(children/*) - count(content/*); [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-punctuated-brief",
+      "[n] content/*[1]; [t] \"lista separata\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-punctuated-var",
+      "[n] content/*[1]; [t] \"lista separata\"; [t] \"di lunghezza variabile\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-bigop",
+      "[n] content/*[1]; [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-integral",
+      "[t] \"integrale\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-relation",
+      "[t] @role (grammar:localRole); [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-relation-seq",
+      "[t] @role (grammar:localRole); [t] \"sequenza\"; [t] \"con\"; [t] count(./children/*); [t] \"elementi\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-relation-seq-brief",
+      "[t] @role (grammar:localRole); [t] \"sequenza\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-relation-var",
+      "[t] @role (grammar:localRole); [t] \"sequenza\"; [t] \"con numero variabile di elementi\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-multirel",
+      "[t] \"sequenza di relazione\"; [t] \"con\"; [t] count(./children/*); [t] \"elementi\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-multirel-brief",
+      "[t] \"sequenza di relazione\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-multirel-var",
+      "[t] \"sequenza di relazione con numero variabile di elementi\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-table",
+      "[t] \"tavola con\"; [t] count(children/*); [t] \"righe e\"; [t] count(children/*[1]/children/*); [t] \"colonne\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-line",
+      "[t] \"in\"; [t] @role (grammar:localRole); [n] . (grammar:gender=\"male\")"
+    ],
+    [
+      "Action",
+      "abstr-row",
+      "[t] \"in\"; [t] @role (grammar:localRole); [t] count(preceding-sibling::..); [t] \"con\"; [t] count(children/*); [t] \"colonne\"; [n] . (grammar:gender=\"female\")"
+    ],
+    [
+      "Action",
+      "abstr-cell",
+      "[t] \"in\"; [t] @role (grammar:localRole); [n] . (grammar:gender=\"female\")"
+    ]
+  ]
+}
