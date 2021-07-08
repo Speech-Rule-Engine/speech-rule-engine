@@ -521,6 +521,27 @@
     ],
     [
       "Precondition",
+      "root-small",
+      "default",
+      "self::root",
+      "CQFisSmallRoot"
+    ],
+    [
+      "Precondition",
+      "root-small-brief",
+      "brief",
+      "self::root",
+      "CQFisSmallRoot"
+    ],
+    [
+      "Precondition",
+      "root-small-sbrief",
+      "sbrief",
+      "self::root",
+      "CQFisSmallRoot"
+    ],
+    [
+      "Precondition",
       "root",
       "default",
       "self::root"
@@ -1709,6 +1730,46 @@
       "unit",
       "default",
       "self::identifier[@role=\"unit\"]"
+    ],
+    [
+      "Precondition",
+      "unit-square",
+      "default",
+      "self::superscript[@role=\"unit\"]",
+      "children/*[2][text()=2]",
+      "name(children/*[1])=\"identifier\""
+    ],
+    [
+      "Specialized",
+      "unit-square",
+      "default",
+      "brief"
+    ],
+    [
+      "Specialized",
+      "unit-square",
+      "brief",
+      "sbrief"
+    ],
+    [
+      "Precondition",
+      "unit-cubic",
+      "default",
+      "self::superscript[@role=\"unit\"]",
+      "children/*[2][text()=3]",
+      "name(children/*[1])=\"identifier\""
+    ],
+    [
+      "Specialized",
+      "unit-cubic",
+      "default",
+      "brief"
+    ],
+    [
+      "Specialized",
+      "unit-cubic",
+      "brief",
+      "sbrief"
     ],
     [
       "Precondition",
