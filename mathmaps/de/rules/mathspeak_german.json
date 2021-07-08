@@ -270,7 +270,7 @@
     ],
     [
       "Rule",
-      "identifier",
+      "identifier-spacing",
       "default",
       "[m] CQFspaceoutIdentifier",
       "self::identifier",
@@ -288,7 +288,7 @@
     ],
     [
       "Rule",
-      "negative",
+      "negative-number",
       "default",
       "[t] \"minus\"; [n] children/*[1]",
       "self::prefixop",
@@ -297,14 +297,14 @@
     ],
     [
       "Aliases",
-      "negative",
+      "negative-number",
       "self::prefixop",
       "@role=\"negative\"",
       "children/number"
     ],
     [
       "Aliases",
-      "negative",
+      "negative-number",
       "self::prefixop",
       "@role=\"negative\"",
       "children/fraction[@role=\"vulgar\"]"
@@ -412,7 +412,7 @@
     ],
     [
       "Rule",
-      "fences-neutral",
+      "fences-metric",
       "default",
       "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]",
       "self::fenced",
@@ -483,14 +483,14 @@
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-brief",
       "brief",
       "[t] CSFopenFracBrief; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracBrief",
       "self::fraction"
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-sbrief",
       "sbrief",
       "[t] CSFopenFracSbrief; [n] children/*[1]; [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief",
       "self::fraction"
@@ -552,14 +552,14 @@
     ],
     [
       "Rule",
-      "sqrt",
+      "sqrt-brief",
       "brief",
       "[t] CSFopenRadicalBrief; [n] children/*[1]; [t] CSFcloseRadicalBrief",
       "self::sqrt"
     ],
     [
       "Rule",
-      "sqrt",
+      "sqrt-sbrief",
       "sbrief",
       "[t] CSFopenRadicalSbrief; [n] children/*[1]; [t] CSFcloseRadicalBrief",
       "self::sqrt"
@@ -574,7 +574,7 @@
     ],
     [
       "Rule",
-      "root-small",
+      "root-small-brief",
       "brief",
       "[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root",
@@ -582,7 +582,7 @@
     ],
     [
       "Rule",
-      "root-small",
+      "root-small-sbrief",
       "sbrief",
       "[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root",
@@ -597,14 +597,14 @@
     ],
     [
       "Rule",
-      "root",
+      "root-brief",
       "brief",
       "[t] CSFindexRadicalBrief; [n] children/*[1];[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root"
     ],
     [
       "Rule",
-      "root",
+      "root-sbrief",
       "sbrief",
       "[t] CSFindexRadicalSbrief; [n] children/*[1];[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root"
@@ -699,7 +699,7 @@
     ],
     [
       "Rule",
-      "integral",
+      "integral-index",
       "default",
       "[n] children/*[1]; [n] children/*[2]; [n] children/*[3];",
       "self::integral"
@@ -774,14 +774,14 @@
     ],
     [
       "Rule",
-      "subscript",
+      "subscript-brief",
       "brief",
       "[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]",
       "self::subscript"
     ],
     [
       "SpecializedRule",
-      "subscript",
+      "subscript-brief",
       "brief",
       "sbrief"
     ],
@@ -1191,7 +1191,7 @@
     ],
     [
       "Rule",
-      "counted-prime",
+      "counted-prime-multichar",
       "default",
       "[t] string-length(text()) (grammar:numbers2alpha); [t] \"Strich\"",
       "self::operator",
@@ -1438,7 +1438,7 @@
     ],
     [
       "Rule",
-      "matrix",
+      "matrix-sbrief",
       "sbrief",
       "[t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Matrize\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Matrize\"",
       "self::matrix"
@@ -1446,6 +1446,11 @@
     [
       "Aliases",
       "matrix",
+      "self::vector"
+    ],
+    [
+      "Aliases",
+      "matrix-sbrief",
       "self::vector"
     ],
     [
@@ -1465,7 +1470,7 @@
     ],
     [
       "Rule",
-      "row-with-label",
+      "row-with-label-brief",
       "brief",
       "[t] \"Bezeichner\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Spalte\")",
       "self::row",
@@ -1473,7 +1478,7 @@
     ],
     [
       "SpecializedRule",
-      "row-with-label",
+      "row-with-label-brief",
       "brief",
       "sbrief"
     ],
@@ -1561,7 +1566,7 @@
     ],
     [
       "Rule",
-      "layout",
+      "layout-sbrief",
       "sbrief",
       "[t] \"Anordnung\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Anordnung\"",
       "self::table"
@@ -1576,7 +1581,7 @@
     ],
     [
       "Rule",
-      "binomial",
+      "binomial-brief",
       "brief",
       "[t] \"Anfang Binomial\"; [n] children/*[2]/children/*[1]; [t] \"aus\";  [n] children/*[1]/children/*[1]; [t] \"Ende Binomial\"",
       "self::vector",
@@ -1584,7 +1589,7 @@
     ],
     [
       "Rule",
-      "binomial",
+      "binomial-sbrief",
       "sbrief",
       "[t] \"Binomial\"; [n] children/*[2]/children/*[1]; [t] \"aus\";  [n] children/*[1]/children/*[1]; [t] \"Ende Binomial\"",
       "self::vector",
@@ -1599,14 +1604,14 @@
     ],
     [
       "Rule",
-      "cases",
+      "cases-brief",
       "brief",
       "[t] \"Anfang Fälle\"; [t] \"große\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Fälle\"",
       "self::cases"
     ],
     [
       "Rule",
-      "cases",
+      "cases-sbrief",
       "sbrief",
       "[t] \"Fälle\"; [t] \"große\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Fälle\"",
       "self::cases"
@@ -1614,6 +1619,11 @@
     [
       "Aliases",
       "layout",
+      "self::multiline"
+    ],
+    [
+      "Aliases",
+      "layout-sbrief",
       "self::multiline"
     ],
     [
@@ -1835,7 +1845,7 @@
     ],
     [
       "Rule",
-      "inference",
+      "multi-inference",
       "default",
       "[t] \"Schlussregel\"; [m] content/*; [t] \"mit Folgerung\"; [n] children/*[1]; [t] \"aus\"; [t] count(children/*[2]/children/*); [t] \"Prämissen\"",
       "self::inference"
@@ -1878,7 +1888,7 @@
     ],
     [
       "Rule",
-      "axiom",
+      "empty-axiom",
       "default",
       "[t] \"leeres Axiom\";",
       "self::inference[@role=\"axiom\"]",

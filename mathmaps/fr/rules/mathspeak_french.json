@@ -223,7 +223,7 @@
     ],
     [
       "Rule",
-      "identifier",
+      "identifier-spacing",
       "default",
       "[m] CQFspaceoutIdentifier",
       "self::identifier",
@@ -242,7 +242,7 @@
     ],
     [
       "Rule",
-      "negative",
+      "negative-number",
       "default",
       "[t] \"négatif\"; [n] children/*[1]",
       "self::prefixop",
@@ -251,14 +251,14 @@
     ],
     [
       "Aliases",
-      "negative",
+      "negative-number",
       "self::prefixop",
       "@role=\"negative\"",
       "children/number"
     ],
     [
       "Aliases",
-      "negative",
+      "negative-number",
       "self::prefixop",
       "@role=\"negative\"",
       "children/fraction[@role=\"vulgar\"]"
@@ -366,7 +366,7 @@
     ],
     [
       "Rule",
-      "fences-neutral",
+      "fences-metric",
       "default",
       "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]",
       "self::fenced",
@@ -437,14 +437,14 @@
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-brief",
       "brief",
       "[t] CSFopenFracBrief; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracBrief",
       "self::fraction"
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-sbrief",
       "sbrief",
       "[t] CSFopenFracSbrief; [n] children/*[1]; [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief",
       "self::fraction"
@@ -530,14 +530,14 @@
     ],
     [
       "Rule",
-      "sqrt",
+      "sqrt-brief",
       "brief",
       "[t] CSFopenRadicalBrief; [n] children/*[1]; [t] CSFcloseRadicalBrief",
       "self::sqrt"
     ],
     [
       "Rule",
-      "sqrt",
+      "sqrt-sbrief",
       "sbrief",
       "[t] CSFopenRadicalSbrief; [n] children/*[1]; [t] CSFcloseRadicalBrief",
       "self::sqrt"
@@ -552,7 +552,7 @@
     ],
     [
       "Rule",
-      "root-small",
+      "root-small-brief",
       "brief",
       "[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root",
@@ -560,7 +560,7 @@
     ],
     [
       "Rule",
-      "root-small",
+      "root-small-sbrief",
       "sbrief",
       "[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root",
@@ -575,14 +575,14 @@
     ],
     [
       "Rule",
-      "root",
+      "root-brief",
       "brief",
       "[t] CSFindexRadicalBrief; [n] children/*[1];[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root"
     ],
     [
       "Rule",
-      "root",
+      "root-sbrief",
       "sbrief",
       "[t] CSFindexRadicalSbrief; [n] children/*[1];[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root"
@@ -677,7 +677,7 @@
     ],
     [
       "Rule",
-      "integral",
+      "integral-index",
       "default",
       "[n] children/*[1]; [n] children/*[2]; [n] children/*[3];",
       "self::integral"
@@ -752,14 +752,14 @@
     ],
     [
       "Rule",
-      "subscript",
+      "subscript-brief",
       "brief",
       "[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]",
       "self::subscript"
     ],
     [
       "SpecializedRule",
-      "subscript",
+      "subscript-brief",
       "brief",
       "sbrief"
     ],
@@ -1186,7 +1186,7 @@
     ],
     [
       "Rule",
-      "counted-prime",
+      "counted-prime-multichar",
       "default",
       "[t] string-length(text()) (grammar:numbers2alpha); [t] \"prime\"",
       "self::operator",
@@ -1283,34 +1283,6 @@
       "sbrief"
     ],
     [
-      "Aliases",
-      "prime-subscript-baseline",
-      "self::superscript",
-      "children/*[2][@role=\"prime\"]",
-      "name(children/*[1])=\"subscript\"",
-      "not(following-sibling::*)",
-      "@embellished"
-    ],
-    [
-      "Rule",
-      "prime-subscript-simple",
-      "brief",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2];[n] children/*[1]/children/*[2]",
-      "self::superscript",
-      "children/*[2][@role=\"prime\"]",
-      "name(children/*[1])=\"subscript\"",
-      "name(children/*[1]/children/*[1])=\"identifier\"",
-      "name(children/*[1]/children/*[2])=\"number\"",
-      "children/*[1]/children/*[2][@role!=\"mixed\"]",
-      "children/*[1]/children/*[2][@role!=\"othernumber\"]"
-    ],
-    [
-      "SpecializedRule",
-      "prime-subscript-simple",
-      "brief",
-      "sbrief"
-    ],
-    [
       "Rule",
       "overscore",
       "default",
@@ -1355,7 +1327,7 @@
     ],
     [
       "Rule",
-      "matrix",
+      "matrix-sbrief",
       "sbrief",
       "[t] \"matrice\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin matrice\"",
       "self::matrix"
@@ -1363,6 +1335,11 @@
     [
       "Aliases",
       "matrix",
+      "self::vector"
+    ],
+    [
+      "Aliases",
+      "matrix-sbrief",
       "self::vector"
     ],
     [
@@ -1382,7 +1359,7 @@
     ],
     [
       "Rule",
-      "row-with-label",
+      "row-with-label-brief",
       "brief",
       "[t] \"étiquette\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\")",
       "self::row",
@@ -1390,7 +1367,7 @@
     ],
     [
       "SpecializedRule",
-      "row-with-label",
+      "row-with-label-brief",
       "brief",
       "sbrief"
     ],
@@ -1478,7 +1455,7 @@
     ],
     [
       "Rule",
-      "layout",
+      "layout-sbrief",
       "sbrief",
       "[t] \"tableau\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\"",
       "self::table"
@@ -1493,7 +1470,7 @@
     ],
     [
       "Rule",
-      "binomial",
+      "binomial-sbrief",
       "sbrief",
       "[t] \"binomiale\"; [n] children/*[1]/children/*[1]; [t] \"parmi\"; [n] children/*[2]/children/*[1];  [t] \"fin binomiale\"",
       "self::vector",
@@ -1508,7 +1485,7 @@
     ],
     [
       "Rule",
-      "cases",
+      "cases-sbrief",
       "sbrief",
       "[t] \"tableau\"; [n] content/*[1]; [t] \"élargie\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\"",
       "self::cases"
@@ -1516,6 +1493,11 @@
     [
       "Aliases",
       "layout",
+      "self::multiline"
+    ],
+    [
+      "Aliases",
+      "layout-sbrief",
       "self::multiline"
     ],
     [

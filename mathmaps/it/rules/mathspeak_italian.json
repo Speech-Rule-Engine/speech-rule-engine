@@ -251,7 +251,7 @@
     ],
     [
       "Rule",
-      "identifier",
+      "identifier-spacing",
       "default",
       "[m] CQFspaceoutIdentifier",
       "self::identifier",
@@ -270,7 +270,7 @@
     ],
     [
       "Rule",
-      "negative",
+      "negative-number",
       "default",
       "[t] \"meno\"; [n] children/*[1]",
       "self::prefixop",
@@ -279,14 +279,14 @@
     ],
     [
       "Aliases",
-      "negative",
+      "negative-number",
       "self::prefixop",
       "@role=\"negative\"",
       "children/number"
     ],
     [
       "Aliases",
-      "negative",
+      "negative-number",
       "self::prefixop",
       "@role=\"negative\"",
       "children/fraction[@role=\"vulgar\"]"
@@ -394,7 +394,7 @@
     ],
     [
       "Rule",
-      "fences-neutral",
+      "fences-metric",
       "default",
       "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]",
       "self::fenced",
@@ -465,14 +465,14 @@
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-brief",
       "brief",
       "[t] CSFopenFracBrief; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracBrief",
       "self::fraction"
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-sbrief",
       "sbrief",
       "[t] CSFopenFracSbrief; [n] children/*[1]; [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief",
       "self::fraction"
@@ -558,14 +558,14 @@
     ],
     [
       "Rule",
-      "sqrt",
+      "sqrt-brief",
       "brief",
       "[t] CSFopenRadicalBrief; [n] children/*[1]; [t] CSFcloseRadicalBrief",
       "self::sqrt"
     ],
     [
       "Rule",
-      "sqrt",
+      "sqrt-sbrief",
       "sbrief",
       "[t] CSFopenRadicalSbrief; [n] children/*[1]; [t] CSFcloseRadicalBrief",
       "self::sqrt"
@@ -579,14 +579,14 @@
     ],
     [
       "Rule",
-      "root",
+      "root-brief",
       "brief",
       "[t] CSFindexRadicalBrief; [n] children/*[1]; [t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root"
     ],
     [
       "Rule",
-      "root",
+      "root-sbrief",
       "sbrief",
       "[t] CSFindexRadicalSbrief; [n] children/*[1]; [t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root"
@@ -681,7 +681,7 @@
     ],
     [
       "Rule",
-      "integral",
+      "integral-index",
       "default",
       "[n] children/*[1]; [n] children/*[2]; [n] children/*[3]",
       "self::integral"
@@ -756,14 +756,14 @@
     ],
     [
       "Rule",
-      "subscript",
+      "subscript-brief",
       "brief",
       "[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]",
       "self::subscript"
     ],
     [
       "SpecializedRule",
-      "subscript",
+      "subscript-brief",
       "brief",
       "sbrief"
     ],
@@ -1213,7 +1213,7 @@
     ],
     [
       "Rule",
-      "counted-prime",
+      "counted-prime-multichar",
       "default",
       "[t] string-length(text()) (grammar:numbers2alpha); [t] \"primo\"",
       "self::operator",
@@ -1508,7 +1508,7 @@
     ],
     [
       "Rule",
-      "matrix",
+      "matrix-sbrief",
       "sbrief",
       "[t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [t] \"matrice\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"riga \"); [t] \"fine matrice\"",
       "self::matrix"
@@ -1516,6 +1516,11 @@
     [
       "Aliases",
       "matrix",
+      "self::vector"
+    ],
+    [
+      "Aliases",
+      "matrix-sbrief",
       "self::vector"
     ],
     [
@@ -1535,7 +1540,7 @@
     ],
     [
       "Rule",
-      "row-with-label",
+      "row-with-label-brief",
       "brief",
       "[t] \"etichetta\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonna\")",
       "self::row",
@@ -1543,7 +1548,7 @@
     ],
     [
       "SpecializedRule",
-      "row-with-label",
+      "row-with-label-brief",
       "brief",
       "sbrief"
     ],
@@ -1631,7 +1636,7 @@
     ],
     [
       "Rule",
-      "layout",
+      "layout-sbrief",
       "sbrief",
       "[t] \"layout\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"row \"); [t] \"fine layout\"",
       "self::table"
@@ -1646,7 +1651,7 @@
     ],
     [
       "Rule",
-      "binomial",
+      "binomial-sbrief",
       "sbrief",
       "[t] \"bInomiale o matrice\"; [n] children/*[1]/children/*[1]; [t] \"scelta\"; [n] children/*[2]/children/*[1]; [t] \"fine binomiale o matrice\"",
       "self::vector",
@@ -1661,7 +1666,7 @@
     ],
     [
       "Rule",
-      "cases",
+      "cases-sbrief",
       "sbrief",
       "[t] \"layout\"; [t] \"allargato\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"row \"); [t] \"fine layout\"",
       "self::cases"
@@ -1669,6 +1674,11 @@
     [
       "Aliases",
       "layout",
+      "self::multiline"
+    ],
+    [
+      "Aliases",
+      "layout-sbrief",
       "self::multiline"
     ],
     [
@@ -1890,7 +1900,7 @@
     ],
     [
       "Rule",
-      "inference",
+      "multi-inference",
       "default",
       "[t] \"regola di inferenza\"; [m] content/*; [t] \"con conclusione\"; [n] children/*[1]; [t] \"e\"; [t] count(children/*[2]/children/*); [t] \"premesse\"",
       "self::inference"
@@ -1933,7 +1943,7 @@
     ],
     [
       "Rule",
-      "axiom",
+      "empty-axiom",
       "default",
       "[t] \"assioma vuoto\"",
       "self::inference[@role=\"axiom\"]",

@@ -251,7 +251,7 @@
     ],
     [
       "Rule",
-      "identifier",
+      "identifier-spacing",
       "default",
       "[m] CQFspaceoutIdentifier",
       "self::identifier",
@@ -269,7 +269,7 @@
     ],
     [
       "Rule",
-      "negative",
+      "negative-number",
       "default",
       "[t] \"ऋण\"; [n] children/*[1]",
       "self::prefixop",
@@ -278,14 +278,14 @@
     ],
     [
       "Aliases",
-      "negative",
+      "negative-number",
       "self::prefixop",
       "@role=\"negative\"",
       "children/number"
     ],
     [
       "Aliases",
-      "negative",
+      "negative-number",
       "self::prefixop",
       "@role=\"negative\"",
       "children/fraction[@role=\"vulgar\"]"
@@ -393,7 +393,7 @@
     ],
     [
       "Rule",
-      "fences-neutral",
+      "fences-metric",
       "default",
       "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]",
       "self::fenced",
@@ -464,14 +464,14 @@
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-brief",
       "brief",
       "[t] CSFopenFracBrief; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracBrief",
       "self::fraction"
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-sbrief",
       "sbrief",
       "[t] CSFopenFracSbrief; [n] children/*[1]; [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief",
       "self::fraction"
@@ -557,14 +557,14 @@
     ],
     [
       "Rule",
-      "sqrt",
+      "sqrt-brief",
       "brief",
       "[t] CSFopenRadicalBrief; [n] children/*[1]; [t] CSFcloseRadicalBrief",
       "self::sqrt"
     ],
     [
       "Rule",
-      "sqrt",
+      "sqrt-sbrief",
       "sbrief",
       "[t] CSFopenRadicalSbrief; [n] children/*[1]; [t] CSFcloseRadicalBrief",
       "self::sqrt"
@@ -578,14 +578,14 @@
     ],
     [
       "Rule",
-      "root",
+      "root-brief",
       "brief",
       "[t] CSFindexRadicalBrief; [n] children/*[1]; [t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root"
     ],
     [
       "Rule",
-      "root",
+      "root-sbrief",
       "sbrief",
       "[t] CSFindexRadicalSbrief; [n] children/*[1]; [t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief",
       "self::root"
@@ -680,7 +680,7 @@
     ],
     [
       "Rule",
-      "integral",
+      "integral-index",
       "default",
       "[n] children/*[1]; [n] children/*[2]; [n] children/*[3]",
       "self::integral"
@@ -755,14 +755,14 @@
     ],
     [
       "Rule",
-      "subscript",
+      "subscript-brief",
       "brief",
       "[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]",
       "self::subscript"
     ],
     [
       "SpecializedRule",
-      "subscript",
+      "subscript-brief",
       "brief",
       "sbrief"
     ],
@@ -1172,7 +1172,7 @@
     ],
     [
       "Rule",
-      "counted-prime",
+      "counted-prime-multichar",
       "default",
       "[t] string-length(text()) (grammar:numbers2alpha); [t] \"प्राइम\"",
       "self::operator",
@@ -1467,7 +1467,7 @@
     ],
     [
       "Rule",
-      "matrix",
+      "matrix-sbrief",
       "sbrief",
       "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"आव्यूह समाप्त\"",
       "self::matrix"
@@ -1475,6 +1475,11 @@
     [
       "Aliases",
       "matrix",
+      "self::vector"
+    ],
+    [
+      "Aliases",
+      "matrix-sbrief",
       "self::vector"
     ],
     [
@@ -1494,7 +1499,7 @@
     ],
     [
       "Rule",
-      "row-with-label",
+      "row-with-label-brief",
       "brief",
       "[t] \"लेबल\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"स्तंभ\")",
       "self::row",
@@ -1502,7 +1507,7 @@
     ],
     [
       "SpecializedRule",
-      "row-with-label",
+      "row-with-label-brief",
       "brief",
       "sbrief"
     ],
@@ -1590,7 +1595,7 @@
     ],
     [
       "Rule",
-      "layout",
+      "layout-sbrief",
       "sbrief",
       "[t] \"खाका\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"खाका समाप्त\"",
       "self::table"
@@ -1605,7 +1610,7 @@
     ],
     [
       "Rule",
-      "binomial",
+      "binomial-brief",
       "sbrief",
       "[t] \"द्विपद अथवा आव्यूह\"; [n] children/*[1]/children/*[1]; [t] \"चयन करें\"; [n] children/*[2]/children/*[1]; [t] \"द्विपद अथवा आव्यूह समाप्त\"",
       "self::vector",
@@ -1620,7 +1625,7 @@
     ],
     [
       "Rule",
-      "cases",
+      "cases-sbrief",
       "sbrief",
       "[t] \"खाका\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"खाका समाप्त\"",
       "self::cases"
@@ -1628,6 +1633,11 @@
     [
       "Aliases",
       "layout",
+      "self::multiline"
+    ],
+    [
+      "Aliases",
+      "layout-sbrief",
       "self::multiline"
     ],
     [
@@ -1849,7 +1859,7 @@
     ],
     [
       "Rule",
-      "inference",
+      "multi-inference",
       "default",
       "[t] \"अनुमान नियम\"; [m] content/*; [t] \"निष्कर्ष के साथ\"; [n] children/*[1]; [t] \"और\"; [t] count(children/*[2]/children/*); [t] \"पूर्वपक्ष\"",
       "self::inference"
@@ -1892,7 +1902,7 @@
     ],
     [
       "Rule",
-      "axiom",
+      "empty-axiom",
       "default",
       "[t] \"रिक्त अभिगृहीत\"",
       "self::inference[@role=\"axiom\"]",
