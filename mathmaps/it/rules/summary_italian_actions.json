@@ -15,16 +15,6 @@
     ],
     [
       "Action",
-      "no-collapsed",
-      "[t] \"\""
-    ],
-    [
-      "Action",
-      "stree",
-      "[n] ./*[1]"
-    ],
-    [
-      "Action",
       "abstr-identifier-long",
       "[t] \"identificatore lungo\"; [n] . (grammar:gender=\"male\")"
     ],

@@ -5,11 +5,6 @@
   "rules": [
     [
       "Action",
-      "stree",
-      "[n] ./*[1]"
-    ],
-    [
-      "Action",
       "abstr-identifier-long",
       "[t] \"identificador largo\""
     ],

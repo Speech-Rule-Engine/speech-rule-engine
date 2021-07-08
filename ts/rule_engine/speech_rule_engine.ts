@@ -204,7 +204,9 @@ export class SpeechRuleEngine {
     // This line is important to setup the context functions for stores.
     // It has to run __before__ the first speech rule store is added.
     let store = StoreFactory.get(set);
-    store.getSpeechRules().forEach(x => this.trie.addRule(x));
+    if (store.kind !== 'abstract') {
+      store.getSpeechRules().forEach(x => this.trie.addRule(x));
+    }
     this.addEvaluator(store);
   }
 
@@ -803,9 +805,10 @@ export namespace StoreFactory {
     if (set.inherits) {
       // TODO: Copy rules!
       store.inherits = stores.get(
-          `${set.inherits}.${set.modality}.${set.domain}`);
+        `${set.inherits}.${set.modality}.${set.domain}`);
     }
     store.parse(set);
+    store.inheritRules();
     store.initialize();
     return store;
   }

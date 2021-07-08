@@ -1,67 +1,6 @@
 {
   "locale": "it",
   "modality": "summary",
-  "inherits": "base",
-  "rules": [
-    [
-      "Precondition",
-      "collapsed-masculine",
-      "default.default",
-      "self::*[@grammar]",
-      "contains(@grammar, \"gender:male\")",
-      "contains(@grammar, \"collapsed\")"
-    ],
-    [
-      "Specialized",
-      "collapsed-masculine",
-      "default.default",
-      "mathspeak.brief"
-    ],
-    [
-      "Specialized",
-      "collapsed-masculine",
-      "default.default",
-      "mathspeak.sbrief"
-    ],
-    [
-      "Precondition",
-      "collapsed-feminine",
-      "default.default",
-      "self::*[@grammar]",
-      "contains(@grammar, \"gender:female\")",
-      "contains(@grammar, \"collapsed\")"
-    ],
-    [
-      "Specialized",
-      "collapsed-feminine",
-      "default.default",
-      "mathspeak.brief"
-    ],
-    [
-      "Specialized",
-      "collapsed-feminine",
-      "default.default",
-      "mathspeak.sbrief"
-    ],
-    [
-      "Precondition",
-      "no-collapsed",
-      "default.default",
-      "self::*[@grammar]",
-      "contains(@grammar, \"gender\")",
-      "not(contains(@grammar, \"collapsed\"))"
-    ],
-    [
-      "Specialized",
-      "no-collapsed",
-      "default.default",
-      "mathspeak.brief"
-    ],
-    [
-      "Specialized",
-      "no-collapsed",
-      "default.default",
-      "mathspeak.sbrief"
-    ]
-  ]
+  "inherits": "romance",
+  "rules": [ ]
 }

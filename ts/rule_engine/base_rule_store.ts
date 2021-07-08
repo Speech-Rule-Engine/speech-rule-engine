@@ -76,6 +76,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
 
   public inherits: BaseRuleStore = null;
 
+  public kind: string = 'standard';
+  
   /**
    * Local transcriptions for special characters.
    */
@@ -376,6 +378,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     this.modality = ruleSet.modality || this.modality;
     this.locale = ruleSet.locale || this.locale;
     this.domain = ruleSet.domain || this.domain;
+    this.kind = ruleSet.kind || this.kind;
     // TODO (TS): Fix this to avoid casting!
     this.context.parse(ruleSet.functions as any || []);
     this.parseRules(ruleSet.rules || []);
@@ -520,6 +523,20 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
       return;
     }
     condition.addConstraint(cstr);
+  }
+
+  public inheritRules() {
+    if (!this.inherits || !this.inherits.getSpeechRules().length) {
+      return;
+    }
+    let regexp = new RegExp('^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : ''));
+    this.inherits.getSpeechRules().forEach(rule => {
+      // TODO: Work this out wrt. domain.
+      let newDynamic = this.parseCstr(
+        rule.dynamicCstr.toString().replace(regexp, ''));
+      this.addRule(new SpeechRule(rule.name, newDynamic,
+                                  rule.precondition, rule.action));
+    });
   }
 
 }

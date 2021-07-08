@@ -1,11 +1,13 @@
 {
   "modality": "summary",
   "locale": "base",
+  "kind": "abstract",
   "rules": [
     [
-      "Precondition",
+      "Rule",
       "stree",
       "default.default",
+      "[n] ./*[1]",
       "self::stree"
     ],
     [
