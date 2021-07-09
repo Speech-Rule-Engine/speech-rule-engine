@@ -1,0 +1,115 @@
+{
+  "locale": "base",
+  "domain": "clearspeak",
+  "modality": "speech",
+  "kind": "abstract",
+  "rules": [
+    [
+      "Rule",
+      "direct-speech",
+      "default",
+      "[t] @ext-speech",
+      "self::*[@ext-speech]"
+    ],
+    [
+      "Rule",
+      "stree",
+      "default",
+      "[n] ./*[1]",
+      "self::stree"
+    ],
+    [
+      "Rule",
+      "unknown",
+      "default",
+      "[n] text()",
+      "self::unknown"
+    ],
+    [
+      "Rule",
+      "protected",
+      "default",
+      "[n] text() (grammar:ignoreCaps)",
+      "self::number",
+      "contains(@grammar, \"protected\")"
+    ],
+    [
+      "Rule",
+      "omit-empty",
+      "default",
+      "[p] (pause:\"short\")",
+      "self::empty"
+    ],
+    [
+      "Rule",
+      "omit-font",
+      "default",
+      "[n] self::* (grammar:ignoreFont=@font)",
+      "self::identifier",
+      "string-length(text())=1",
+      "@font",
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "@font=\"italic\""
+    ],
+    [
+      "Rule",
+      "text",
+      "default",
+      "[n] text()",
+      "self::text"
+    ],
+    [
+      "Rule",
+      "capital",
+      "default",
+      "[n] text() (pitch:0.6, grammar:ignoreCaps)",
+      "self::identifier",
+      "@role=\"latinletter\" or @role=\"greekletter\" or @role=\"simple function\"",
+      ".[@category=\"Lu\"]"
+    ],
+    [
+      "Rule",
+      "capital-cap",
+      "Caps_SayCaps",
+      "[n] text()",
+      "self::identifier",
+      "@role=\"latinletter\" or @role=\"greekletter\"",
+      ".[@category=\"Lu\"]"
+    ],
+    [
+      "Rule",
+      "capital-cap-l",
+      "Caps_SayCaps",
+      "[p] (pause:\"short\"); [n] text()",
+      "self::identifier",
+      "@role=\"latinletter\" or @role=\"greekletter\"",
+      ".[@category=\"Lu\"]",
+      "preceding-sibling::*[1]",
+      "not(name(preceding-sibling::*[1])=\"function\")",
+      "not(contains(@grammar, \"angle\"))"
+    ],
+    [
+      "Rule",
+      "capital-cap-r",
+      "Caps_SayCaps",
+      "[n] text() (pause:\"short\")",
+      "self::identifier",
+      "@role=\"latinletter\" or @role=\"greekletter\"",
+      ".[@category=\"Lu\"]",
+      "following-sibling::*[1]"
+    ],
+    [
+      "Rule",
+      "capital-cap-lr",
+      "Caps_SayCaps",
+      "[p] (pause:\"short\"); [n] text() (pause:\"short\")",
+      "self::identifier",
+      "@role=\"latinletter\" or @role=\"greekletter\"",
+      ".[@category=\"Lu\"]",
+      "preceding-sibling::*[1]",
+      "following-sibling::*[1]",
+      "not(name(preceding-sibling::*[1])=\"function\")",
+      "not(contains(@grammar, \"angle\"))"
+    ]
+  ]
+}

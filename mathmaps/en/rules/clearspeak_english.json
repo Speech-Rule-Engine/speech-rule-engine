@@ -2,6 +2,7 @@
   "domain": "clearspeak",
   "locale": "en",
   "modality": "speech",
+  "inherits": "base",
   "rules": [
     [
       "Rule",
@@ -10,42 +11,6 @@
       "[t] \"collapsed\"; [n] . (engine:modality=summary,grammar:collapsed)",
       "self::*[@alternative]",
       "not(contains(@grammar, \"collapsed\"))"
-    ],
-    [
-      "Rule",
-      "direct-speech",
-      "default",
-      "[t] @ext-speech",
-      "self::*[@ext-speech]"
-    ],
-    [
-      "Rule",
-      "stree",
-      "default",
-      "[n] ./*[1]",
-      "self::stree"
-    ],
-    [
-      "Rule",
-      "unknown",
-      "default",
-      "[n] text()",
-      "self::unknown"
-    ],
-    [
-      "Rule",
-      "protected",
-      "default",
-      "[n] text() (grammar:ignoreCaps)",
-      "self::number",
-      "contains(@grammar, \"protected\")"
-    ],
-    [
-      "Rule",
-      "omit-empty",
-      "default",
-      "[p] (pause:\"short\")",
-      "self::empty"
     ],
     [
       "Rule",
@@ -92,73 +57,13 @@
     ],
     [
       "Rule",
-      "german-font",
+      "german-font-bold",
       "default",
       "[t] \"bold German\"; [n] self::* (grammar:ignoreFont=@font)",
       "self::*",
       "@font",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@font=\"bold-fraktur\""
-    ],
-    [
-      "Rule",
-      "text",
-      "default",
-      "[n] text()",
-      "self::text"
-    ],
-    [
-      "Rule",
-      "capital",
-      "default",
-      "[n] text() (pitch:0.6,grammar:ignoreCaps)",
-      "self::identifier",
-      "@role=\"latinletter\" or @role=\"greekletter\" or @role=\"simple function\"",
-      ".[@category=\"Lu\"]"
-    ],
-    [
-      "Rule",
-      "capital",
-      "Caps_SayCaps",
-      "[n] text()",
-      "self::identifier",
-      "@role=\"latinletter\" or @role=\"greekletter\"",
-      ".[@category=\"Lu\"]"
-    ],
-    [
-      "Rule",
-      "capital",
-      "Caps_SayCaps",
-      "[p] (pause:\"short\"); [n] text()",
-      "self::identifier",
-      "@role=\"latinletter\" or @role=\"greekletter\"",
-      ".[@category=\"Lu\"]",
-      "preceding-sibling::*[1]",
-      "not(name(preceding-sibling::*[1])=\"function\")",
-      "not(contains(@grammar, \"angle\"))"
-    ],
-    [
-      "Rule",
-      "capital",
-      "Caps_SayCaps",
-      "[n] text() (pause:\"short\")",
-      "self::identifier",
-      "@role=\"latinletter\" or @role=\"greekletter\"",
-      ".[@category=\"Lu\"]",
-      "following-sibling::*[1]"
-    ],
-    [
-      "Rule",
-      "capital",
-      "Caps_SayCaps",
-      "[p] (pause:\"short\"); [n] text() (pause:\"short\")",
-      "self::identifier",
-      "@role=\"latinletter\" or @role=\"greekletter\"",
-      ".[@category=\"Lu\"]",
-      "preceding-sibling::*[1]",
-      "following-sibling::*[1]",
-      "not(name(preceding-sibling::*[1])=\"function\")",
-      "not(contains(@grammar, \"angle\"))"
     ],
     [
       "Rule",
@@ -208,7 +113,7 @@
     ],
     [
       "Rule",
-      "ellipsis",
+      "ellipsis-andsoon",
       "Ellipses_AndSoOn",
       "[t] \"and so on up to\"",
       "self::punctuation",
@@ -229,7 +134,7 @@
     ],
     [
       "Rule",
-      "vbar-evaluated",
+      "vbar-evaluated-both",
       "default",
       "[n] children/*[1] (pause:\"short\"); [t] \"evaluated at\"; [n] content/*[1]/children/*[2] (pause:\"short\"); [t] \"minus the same expression evaluated at\"; [n] content/*[1]/children/*[1]/children/*[2] (pause:\"short\")",
       "self::punctuated",
@@ -260,7 +165,7 @@
     ],
     [
       "Rule",
-      "vbar-divides",
+      "vbar-always-divides",
       "VerticalLine_Divides",
       "[t] \"divides\"",
       "self::punctuation",
@@ -286,25 +191,31 @@
       "text()=\"∈\" or text()=\"∊\""
     ],
     [
-      "SpecializedAction",
-      "set-member",
-      "default",
+      "Rule",
+      "set-member-member",
       "SetMemberSymbol_Member",
-      "[t] \"member of\""
+      "[t] \"member of\"",
+      "self::operator",
+      "@role=\"set extended\"",
+      "text()=\"∈\" or text()=\"∊\""
     ],
     [
-      "SpecializedAction",
-      "set-member",
-      "default",
+      "Rule",
+      "set-member-element",
       "SetMemberSymbol_Element",
-      "[t] \"element of\""
+      "[t] \"element of\"",
+      "self::operator",
+      "@role=\"set extended\"",
+      "text()=\"∈\" or text()=\"∊\""
     ],
     [
-      "SpecializedAction",
-      "set-member",
-      "default",
+      "Rule",
+      "set-member-belongs",
       "SetMemberSymbol_Belongs",
-      "[t] \"belonging to\""
+      "[t] \"belonging to\"",
+      "self::operator",
+      "@role=\"set extended\"",
+      "text()=\"∈\" or text()=\"∊\""
     ],
     [
       "Rule",
@@ -316,25 +227,31 @@
       "text()=\"∉\""
     ],
     [
-      "SpecializedAction",
-      "set-not-member",
-      "default",
+      "Rule",
+      "set-not-member-member",
       "SetMemberSymbol_Member",
-      "[t] \"not member of\""
+      "[t] \"not member of\"",
+      "self::operator",
+      "@role=\"set extended\"",
+      "text()=\"∉\""
     ],
     [
-      "SpecializedAction",
-      "set-not-member",
-      "default",
+      "Rule",
+      "set-not-member-element",
       "SetMemberSymbol_Element",
-      "[t] \"not element of\""
+      "[t] \"not element of\"",
+      "self::operator",
+      "@role=\"set extended\"",
+      "text()=\"∉\""
     ],
     [
-      "SpecializedAction",
-      "set-not-member",
-      "default",
+      "Rule",
+      "set-not-member-belongs",
       "SetMemberSymbol_Belongs",
-      "[t] \"not belonging to\""
+      "[t] \"not belonging to\"",
+      "self::operator",
+      "@role=\"set extended\"",
+      "text()=\"∉\""
     ],
     [
       "Rule",
@@ -587,7 +504,7 @@
     ],
     [
       "Rule",
-      "appl-simple",
+      "appl-simple-fenced",
       "default",
       "[n] children/*[1]; [t] \"of\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")",
       "self::appl",
@@ -597,7 +514,7 @@
     ],
     [
       "Rule",
-      "appl",
+      "appl-times",
       "Functions_None",
       "[p] (pause:\"short\"); [n] children/*[1]; [t] \"times\"; [n] children/*[2] (pause:\"short\")",
       "self::appl"
@@ -676,7 +593,7 @@
     ],
     [
       "Rule",
-      "function-ln",
+      "function-ln-pause",
       "default",
       "[n] children/*[1]; [n] children/*[2] (pause:\"short\")",
       "self::appl",
@@ -686,7 +603,7 @@
     ],
     [
       "Rule",
-      "function-ln",
+      "function-ln-of",
       "default",
       "[n] children/*[1]; [t] \"of\"; [n] children/*[2] (pause:\"short\")",
       "self::appl",
@@ -697,7 +614,7 @@
     ],
     [
       "Rule",
-      "function-ln",
+      "function-ln-natlog",
       "Log_LnAsNaturalLog",
       "[n] . (grammar:NatLog)",
       "self::appl",
@@ -708,7 +625,7 @@
     ],
     [
       "Rule",
-      "function-ln",
+      "function-ln-natlog-pause",
       "Log_LnAsNaturalLog",
       "[n] . (grammar:NatLog, pause:\"short\")",
       "self::appl",
@@ -787,7 +704,7 @@
     ],
     [
       "Rule",
-      "function-prefix-arc-simple",
+      "function-prefix-arc-simple-fenced",
       "Trig_ArcTrig",
       "[p] (pause:\"short\"); [t] \"arc\"; [n] children/*[1]/children/*[1] (pause:\"short\"); [n] children/*[2] (pause:\"short\")",
       "self::appl",
@@ -838,16 +755,14 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
-      "Rule",
+      "Aliases",
       "superscript-prefix-function",
-      "default",
-      "[n] children/*[2] (grammar:ordinal:addArticle); [t] \"power of\"; [n] children/*[1]",
       "self::superscript[@role=\"prefix function\"]",
       "name(children/*[2])=\"identifier\""
     ],
     [
       "Rule",
-      "function-inverse",
+      "function-no-inverse",
       "Functions_None",
       "[n] . (grammar:functions_none)",
       "self::superscript",
@@ -954,7 +869,7 @@
     ],
     [
       "Rule",
-      "superscript-simple-function",
+      "superscript-simple-function-none",
       "Functions_None",
       "[n] . (grammar:functions_none)",
       "self::superscript",
@@ -964,7 +879,7 @@
     ],
     [
       "Rule",
-      "superscript-ordinal",
+      "superscript-ordinal-number",
       "Exponent_Ordinal",
       "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:\"short\")",
       "self::superscript",
@@ -972,8 +887,15 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
+      "Alias",
+      "superscript-ordinal-number",
+      "self::superscript",
+      "name(children/*[2])=\"identifier\"",
+      "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
+    ],
+    [
       "Rule",
-      "superscript-ordinal",
+      "superscript-ordinal-negative",
       "Exponent_Ordinal",
       "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:noArticle, pause:\"short\")",
       "self::superscript",
@@ -981,15 +903,6 @@
       "children/*[2][@role=\"negative\"]",
       "name(children/*[2]/children/*[1])=\"number\"",
       "children/*[2]/children/*[1][@role=\"integer\"]"
-    ],
-    [
-      "Rule",
-      "superscript-ordinal",
-      "Exponent_Ordinal",
-      "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:\"short\")",
-      "self::superscript",
-      "name(children/*[2])=\"identifier\"",
-      "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
     ],
     [
       "Rule",
@@ -1001,7 +914,7 @@
     ],
     [
       "Rule",
-      "superscript-ordinal",
+      "superscript-ordinal-power-number",
       "Exponent_OrdinalPower",
       "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
@@ -1010,7 +923,7 @@
     ],
     [
       "Rule",
-      "superscript-ordinal",
+      "superscript-ordinal-power-negative",
       "Exponent_OrdinalPower",
       "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
@@ -1021,7 +934,7 @@
     ],
     [
       "Rule",
-      "superscript-ordinal",
+      "superscript-ordinal-power-identifier",
       "Exponent_OrdinalPower",
       "[n] children/*[1]; [t] \"to the\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"power\" (pause:\"short\")",
       "self::superscript",
@@ -1030,7 +943,7 @@
     ],
     [
       "Rule",
-      "superscript-ordinal-default",
+      "superscript-ordinal-power-default",
       "Exponent_OrdinalPower",
       "[n] children/*[1]; [t] \"raised to the exponent\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"end exponent\" (pause:\"short\")",
       "self::superscript",
@@ -1061,7 +974,7 @@
     ],
     [
       "Rule",
-      "exponent",
+      "exponent-number",
       "default",
       "[t] CSFordinalExponent",
       "self::number",
@@ -1072,7 +985,7 @@
     ],
     [
       "Rule",
-      "exponent",
+      "exponent-ordinal",
       "Exponent_Ordinal",
       "[t] CSFwordOrdinal",
       "self::number",
@@ -1083,7 +996,7 @@
     ],
     [
       "Rule",
-      "exponent",
+      "exponent-ordinal-zero",
       "Exponent_Ordinal",
       "[t] \"zero\"",
       "self::number",
@@ -1093,7 +1006,7 @@
     ],
     [
       "Rule",
-      "exponent",
+      "exponent-ordinalpower",
       "Exponent_OrdinalPower",
       "[t] CSFwordOrdinal",
       "self::number",
@@ -1104,7 +1017,7 @@
     ],
     [
       "Rule",
-      "exponent",
+      "exponent-ordinalpower-zero",
       "Exponent_OrdinalPower",
       "[t] \"zero\"",
       "self::number",
@@ -1190,7 +1103,7 @@
     ],
     [
       "Rule",
-      "paren-simple-nested-func",
+      "paren-simple-nested-func-default",
       "default",
       "[p] (pause:\"short\"); [n] content/*[1] (pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (pause:\"short\")",
       "self::fenced",
@@ -1201,7 +1114,7 @@
     ],
     [
       "Rule",
-      "paren-simple-nested-func",
+      "paren-simple-nested-func-none",
       "Functions_None",
       "[p] (pause:\"short\"); [n] content/*[1] (grammar:spokenFence, pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (grammar:spokenFence, pause:\"short\")",
       "self::fenced",
@@ -1232,7 +1145,7 @@
     ],
     [
       "Rule",
-      "fences-open-close",
+      "fences-open-close-none",
       "ImpliedTimes_None",
       "[p] (pause:\"short\"); [n] content/*[1] (grammar:spokenFence, pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (grammar:spokenFence, pause:\"short\")",
       "self::fenced",
@@ -1416,7 +1329,7 @@
     ],
     [
       "Rule",
-      "set-extended",
+      "set-extended-woall",
       "Sets_woAll",
       "[t] \"the set of\"; [n] children/*[1]/children/*[1]; [t] \"such that\"; [n] children/*[1]/children/*[3]",
       "self::fenced",
@@ -1424,7 +1337,7 @@
     ],
     [
       "Rule",
-      "set-collection",
+      "set-collection-silentbracket",
       "Sets_SilentBracket",
       "[n] children/*[1]",
       "self::fenced",
@@ -1462,7 +1375,7 @@
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-none",
       "Functions_None",
       "[p] (pause:short); [t] \"the\" (grammar:noarticle); [t] \"fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)",
       "self::fraction",
@@ -1495,10 +1408,8 @@
       "name(children/*[2])=\"text\""
     ],
     [
-      "Rule",
+      "Aliases",
       "simple-text-fraction",
-      "default",
-      "[p] (pause:short); [n] children/*[1]; [t] \"over\"; [n] children/*[2] (pause:short)",
       "self::fraction",
       "name(children/*[1])=\"infixop\"",
       "children/*[1][@role=\"unit\"]",
@@ -1515,49 +1426,49 @@
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-over",
       "Fraction_Over",
       "[p] (pause:short); [n] children/*[1]; [t] \"over\"; [n] children/*[2] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-overendfrac",
       "Fraction_OverEndFrac",
       "[p] (pause:short); [n] children/*[1]; [t] \"over\"; [n] children/*[2] (pause:short); [t] \"end fraction\" (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-fracover",
       "Fraction_FracOver",
       "[p] (pause:short); [t] \"the fraction\"; [n] children/*[1]; [t] \"over\"; [n] children/*[2] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-per",
       "Fraction_Per",
       "[p] (pause:short); [n] children/*[1]; [t] \"per\"; [n] children/*[2] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-generalendfrac",
       "Fraction_GeneralEndFrac",
       "[p] (pause:short); [t] \"the fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short); [t] \"end fraction\" (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-general",
       "Fraction_General",
       "[p] (pause:short); [t] \"the fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)",
       "self::fraction"
     ],
     [
       "Rule",
-      "simple-vulgar-fraction",
+      "simple-vulgar-fraction-ordinal",
       "Fraction_Ordinal",
       "[t] CSFvulgarFraction",
       "self::fraction",
@@ -1565,7 +1476,7 @@
     ],
     [
       "Rule",
-      "fraction",
+      "fraction-endfrac",
       "Fraction_EndFrac",
       "[p] (pause:short); [n] . (grammar:endfrac); [t] \"end fraction\" (pause:short)",
       "self::fraction",
@@ -1575,7 +1486,7 @@
     ],
     [
       "Rule",
-      "vulgar-fraction",
+      "vulgar-fraction-endfrac",
       "Fraction_EndFrac",
       "[p] (pause:short); [n] children/*[1]; [t] \"over\"; [n] children/*[2] (pause:short)",
       "self::fraction",
@@ -1586,7 +1497,7 @@
     ],
     [
       "Rule",
-      "simple-vulgar-fraction",
+      "simple-vulgar-fraction-endfrac",
       "Fraction_EndFrac",
       "[t] CSFvulgarFraction",
       "self::fraction",
@@ -1621,7 +1532,7 @@
     ],
     [
       "Rule",
-      "negative-sqrt",
+      "negative-sqrt-default",
       "default",
       "[p] (pause: \"short\"); [t] \"the negative square root of\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false, pause:short)",
       "self::prefixop",
@@ -1650,7 +1561,7 @@
     ],
     [
       "Rule",
-      "sqrt-plus-minus",
+      "sqrt-plus-minus-posnegsqrootend",
       "Roots_PosNegSqRootEnd",
       "[t] \"the positive square root of\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)",
       "self::sqrt",
@@ -1658,7 +1569,7 @@
     ],
     [
       "Rule",
-      "sqrt-nested-plus-minus",
+      "sqrt-nested-plus-minus-posnegsqrootend",
       "Roots_PosNegSqRootEnd",
       "[p] (pause: \"short\"); [t] \"the positive square root of\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)",
       "self::sqrt",
@@ -1686,7 +1597,7 @@
     ],
     [
       "Rule",
-      "sqrt-endroot",
+      "sqrt-posnegsqrootend",
       "Roots_PosNegSqRootEnd",
       "[n] . (grammar:EndRoot); [t] \"end root\" (pause:short)",
       "self::sqrt",
@@ -1694,7 +1605,7 @@
     ],
     [
       "Rule",
-      "negative-sqrt-endroot",
+      "negative-sqrt-posnegsqrootend",
       "Roots_PosNegSqRootEnd",
       "[n] . (grammar:EndRoot); [t] \"end root\" (pause:short)",
       "self::prefixop",
@@ -1704,7 +1615,7 @@
     ],
     [
       "Rule",
-      "cube",
+      "cubic",
       "default",
       "[t] \"the cube root of\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)",
       "self::root",
@@ -1712,7 +1623,7 @@
     ],
     [
       "Rule",
-      "cube-nested",
+      "cubic-nested",
       "default",
       "[p] (pause:short); [t] \"the cube root of\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)",
       "self::root",
@@ -1746,7 +1657,7 @@
     ],
     [
       "Rule",
-      "root-endroot",
+      "root-posnegsqrootend",
       "Roots_PosNegSqRootEnd",
       "[n] . (grammar:EndRoot); [t] \"end root\" (pause:short)",
       "self::root",
@@ -1805,7 +1716,7 @@
     ],
     [
       "Rule",
-      "binary-operation",
+      "binary-operation-default",
       "default",
       "[m] children/* (sepFunc:CTFcontentIterator);",
       "self::infixop"
@@ -1821,7 +1732,7 @@
     ],
     [
       "Rule",
-      "binary-operation",
+      "binary-operation-moreimpliedtimes",
       "ImpliedTimes_MoreImpliedTimes",
       "[m] children/* (sepFunc:CTFcontentIterator);",
       "self::infixop",
@@ -1838,7 +1749,7 @@
     ],
     [
       "Rule",
-      "binary-operation-pause",
+      "binary-operation-pause-r",
       "default",
       "[m] children/* (sepFunc:CTFcontentIterator, pause:short)",
       "self::infixop",
@@ -1847,7 +1758,7 @@
     ],
     [
       "Rule",
-      "binary-operation-pause",
+      "binary-operation-pause-lr",
       "default",
       "[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator, pause:short)",
       "self::infixop",
@@ -1866,7 +1777,7 @@
     ],
     [
       "Rule",
-      "implicit-times",
+      "implicit-times-default",
       "default",
       "",
       "self::operator",
@@ -1876,7 +1787,7 @@
     ],
     [
       "Rule",
-      "implicit-times",
+      "implicit-times-simple",
       "default",
       "[n] text()",
       "self::operator",
@@ -1886,7 +1797,7 @@
     ],
     [
       "Rule",
-      "implicit-times",
+      "implicit-times-moreimpliedtimes",
       "ImpliedTimes_MoreImpliedTimes",
       "[n] text()",
       "self::operator",
@@ -1895,7 +1806,7 @@
     ],
     [
       "Rule",
-      "implicit-times",
+      "implicit-times-none",
       "ImpliedTimes_None",
       "",
       "self::operator",
@@ -2082,7 +1993,7 @@
     ],
     [
       "Rule",
-      "positive-integers",
+      "negative-integers",
       "default",
       "[t] \"the negative integers\" (span:.)",
       "self::superscript",
@@ -2127,7 +2038,7 @@
     ],
     [
       "Rule",
-      "fences-neutral",
+      "fences-neutral-absend",
       "AbsoluteValue_AbsEnd",
       "[p] (pause:short); [t] \"the absolute value of\" (span:content/*[1]); [n] children/*[1] (pause: short); [t] \"end absolute value\"  (span:content/*[1], pause: short)",
       "self::fenced",
@@ -2136,7 +2047,7 @@
     ],
     [
       "Rule",
-      "fences-neutral",
+      "fences-neutral-cardinality",
       "AbsoluteValue_Cardinality",
       "[p] (pause:short); [t] \"the cardinality of\" (span:.); [n] children/*[1] (pause: short)",
       "self::fenced",
@@ -2145,7 +2056,7 @@
     ],
     [
       "Rule",
-      "fences-neutral",
+      "fences-neutral-determinant",
       "AbsoluteValue_Determinant",
       "[p] (pause:short); [t] \"the determinant of\" (span:.); [n] children/*[1] (pause: short)",
       "self::fenced",
@@ -2220,7 +2131,7 @@
     ],
     [
       "Rule",
-      "matrix-vector-simple",
+      "matrix-vector-simple-silentcolnum",
       "Matrix_SilentColNum",
       "[t] \"the\"; [t] count(children/*);  [t] \"by\";[t] count(children/*[1]/children/*); [t] \"column matrix\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet, pause:long)",
       "self::vector"
@@ -2251,7 +2162,7 @@
     ],
     [
       "Rule",
-      "matrix-row-vector-simple",
+      "matrix-row-vector-simple-silentcolnum",
       "Matrix_SilentColNum",
       "[t] \"the\"; [t] count(children/*);  [t] \"by\";[t] count(children/*[1]/children/*); [t] \"row matrix\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet, pause:long)",
       "self::matrix",
@@ -2267,7 +2178,7 @@
     ],
     [
       "Rule",
-      "matrix-row-simple",
+      "matrix-row-simple-silentcolnum",
       "Matrix_SilentColNum",
       "[m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\")",
       "self::row"
@@ -2403,7 +2314,7 @@
     ],
     [
       "Rule",
-      "vector-end-vector",
+      "vector-end-vector-endvector",
       "Matrix_EndVector",
       "[n] . (grammar:EndMatrix); [t] \"end vector\"",
       "self::matrix",
@@ -2439,8 +2350,15 @@
       "self::*"
     ],
     [
-      "Rule",
+      "Aliases",
       "lines-summary",
+      "self::table",
+      "not(contains(@grammar, \"layoutSummary\"))",
+      "self::*"
+    ],
+    [
+      "Rule",
+      "lines-summary-none",
       "MultiLineOverview_None",
       "[n] . (grammar:layoutSummary)",
       "self::multiline",
@@ -2449,7 +2367,7 @@
     ],
     [
       "Aliases",
-      "lines-summary",
+      "lines-summary-none",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))",
       "self::*"
@@ -2464,7 +2382,7 @@
     ],
     [
       "Rule",
-      "cases-summary",
+      "cases-summary-none",
       "MultiLineOverview_None",
       "[n] . (grammar:layoutSummary)",
       "self::cases",
@@ -2767,7 +2685,7 @@
     ],
     [
       "Rule",
-      "overscript",
+      "overscript-accent",
       "default",
       "[n] children/*[1]; [n] children/*[2];",
       "self::overscore",
@@ -2842,7 +2760,7 @@
     ],
     [
       "Rule",
-      "decimal-period",
+      "decimal-period-float",
       "default",
       "[t] \"the repeating decimal\"; [n] children/*[1] (grammar:spaceout); [t] \"followed by repeating digits\";  [n] children/*[2]/children/*[1] (grammar:spaceout);",
       "self::infixop",
@@ -2874,7 +2792,7 @@
     ],
     [
       "Rule",
-      "decimal-period-singular",
+      "decimal-period-singular-float",
       "default",
       "[t] \"the repeating decimal\"; [n] children/*[1] (grammar:spaceout); [t] \"followed by repeating digit\";  [n] children/*[2]/children/*[1] (grammar:spaceout);",
       "self::infixop",
@@ -2972,7 +2890,7 @@
     ],
     [
       "Rule",
-      "left-super",
+      "left-super-list",
       "default",
       "[t] \"left super\"; [m] children/*",
       "self::punctuated[@role=\"leftsuper\"]",
@@ -2988,7 +2906,7 @@
     ],
     [
       "Rule",
-      "left-sub",
+      "left-sub-list",
       "default",
       "[t] \"left sub\"; [m] children/*",
       "self::punctuated[@role=\"leftsub\"]",
@@ -3004,7 +2922,7 @@
     ],
     [
       "Rule",
-      "right-super",
+      "right-super-list",
       "default",
       "[t] \"right super\"; [m] children/*",
       "self::punctuated[@role=\"rightsuper\"]",
@@ -3020,7 +2938,7 @@
     ],
     [
       "Rule",
-      "right-sub",
+      "right-sub-list",
       "default",
       "[t] \"right sub\"; [m] children/*",
       "self::punctuated[@role=\"rightsub\"]",
@@ -3112,7 +3030,7 @@
     ],
     [
       "Rule",
-      "unit-reciprocal",
+      "unit-reciprocal-singular",
       "default",
       "[t] \"per\"; [n] children/*[1] (grammar:singularUnit)",
       "self::superscript[@role=\"unit\"]",
@@ -3157,7 +3075,7 @@
     ],
     [
       "Rule",
-      "currency",
+      "currency-position",
       "Currency_Position",
       "[m] children/*",
       "self::infixop",
@@ -3165,13 +3083,13 @@
     ],
     [
       "SpecializedRule",
-      "currency",
+      "currency-position",
       "Currency_Position",
       "Currency_Prefix"
     ],
     [
       "Rule",
-      "currency",
+      "currency-prefix",
       "Currency_Prefix",
       "[n] children/*[last()]; [m] children/*[position()<last()]; ",
       "self::infixop",
