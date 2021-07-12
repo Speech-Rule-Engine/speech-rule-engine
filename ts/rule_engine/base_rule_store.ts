@@ -510,7 +510,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     }
     condition.addFullCondition(fullPrec);
   }
-  
+
+
   public defineSpecialized(name: string, _old: string, dynamic: string) {
     let cstr = this.parseCstr(dynamic);
     if (!cstr) {

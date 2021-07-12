@@ -391,6 +391,11 @@
     ],
     [
       "Action",
+      "superscript-ordinal-prefixop",
+      "[n] children/*[1]; [t] \"hoch\"; [n] children/*[2] (pause:\"short\")"
+    ],
+    [
+      "Action",
       "superscript-ordinal-default",
       "[n] children/*[1]; [t] \"mit Exponent\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"Ende Exponent\" (pause:\"short\")"
     ],
@@ -426,7 +431,7 @@
     ],
     [
       "Action",
-      "superscript-simple-function",
+      "superscript-simple-function-ordinal",
       "[t] \"die\" (grammar:article); [n] children/*[2] (grammar:ordinal); [t] \"Potenz von\" (pause:\"short\"); [n] children/*[1]"
     ],
     [
@@ -456,7 +461,7 @@
     ],
     [
       "Action",
-      "superscript-simple-function",
+      "superscript-simple-function-none",
       "[n] . (grammar:functions_none)"
     ],
     [

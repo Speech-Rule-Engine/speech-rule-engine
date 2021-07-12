@@ -6,6 +6,23 @@
   "rules": [
     [
       "Precondition",
+      "font",
+      "default",
+      "self::*",
+      "name(self::*)!=\"number\"",
+      "@font",
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "@font!=\"normal\""
+    ],
+    [
+      "Specialized",
+      "font",
+      "default",
+      "Caps_SayCaps"
+    ],
+
+    [
+      "Precondition",
       "font-number",
       "default",
       "self::number[@font!=\"normal\"]",
@@ -36,6 +53,37 @@
     ],
     [
       "Precondition",
+      "font-identifier",
+      "default",
+      "self::identifier",
+      "string-length(text())=1 or string-length(text())=2",
+      "@font",
+      "@font=\"normal\"",
+      "not(contains(@grammar, \"ignoreFont\"))",
+      "@role!=\"unit\""
+    ],
+    [
+      "Specialized",
+      "font-identifier",
+      "default",
+      "Caps_SayCaps"
+    ],
+    [
+      "Precondition",
+      "omit-font",
+      "default",
+      "self::identifier[@font=\"italic\"]",
+      "string-length(text())=1 or string-length(text())=2",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Specialized",
+      "omit-font",
+      "default",
+      "Caps_SayCaps"
+    ],
+    [
+      "Precondition",
       "function-article",
       "default",
       "self::function",
@@ -50,6 +98,25 @@
       "@role=\"prefix function\"",
       "contains(@grammar, \"addArticle\")",
       "text()=\"det\" or text()=\"dim\" or text()=\"tr\""
+    ],
+    [
+      "Precondition",
+      "superscript-ordinal-prefixop",
+      "default",
+      "self::superscript",
+      "name(children/*[2])=\"prefixop\"",
+      "children/*[2][@role=\"negative\"]",
+      "name(children/*[2]/children/*[1])=\"number\"",
+      "children/*[2]/children/*[1][@role=\"integer\"]"
+    ],
+    [
+      "Precondition",
+      "superscript-non-ordinal",
+      "Exponent_OrdinalPower",
+      "self::superscript",
+      "children/*[2][@role=\"negative\"]",
+      "name(children/*[2]/children/*[1])=\"number\"",
+      "children/*[2]/children/*[1][@role=\"integer\"]"
     ],
     [
       "Precondition",
@@ -114,6 +181,16 @@
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
       "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
+    ],
+    [
+      "Precondition",
+      "superscript-simple-function-ordinal",
+      "Exponent_OrdinalPower",
+      "self::superscript",
+      "name(children/*[1])=\"identifier\"",
+      "children/*[1][@role=\"simple function\"]",
+      "children/*[2][@role!=\"prime\"]",
+      "not(contains(@grammar, \"functions_none\"))"
     ],
     [
       "Precondition",

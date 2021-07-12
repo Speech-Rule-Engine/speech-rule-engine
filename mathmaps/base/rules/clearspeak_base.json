@@ -1768,51 +1768,36 @@
       "Precondition",
       "natural-numbers",
       "default",
-      "self::identifier",
-      "text()=\"ℕ\" or (text()=\"N\" and @font=\"double-struck\")",
-      "self::*",
-      "self::*",
-      "self::*"
+      "self::identifier[@role=\"numbersetletter\"]",
+      "text()=\"ℕ\" or (text()=\"N\" and @font=\"double-struck\")"
     ],
     [
       "Precondition",
       "integers",
       "default",
-      "self::identifier",
-      "text()=\"ℤ\" or (text()=\"Z\" and @font=\"double-struck\")",
-      "self::*",
-      "self::*",
-      "self::*"
+      "self::identifier[@role=\"numbersetletter\"]",
+      "text()=\"ℤ\" or (text()=\"Z\" and @font=\"double-struck\")"
     ],
     [
       "Precondition",
       "rational-numbers",
       "default",
-      "self::identifier",
-      "text()=\"ℚ\" or (text()=\"Q\" and @font=\"double-struck\")",
-      "self::*",
-      "self::*",
-      "self::*"
+      "self::identifier[@role=\"numbersetletter\"]",
+      "text()=\"ℚ\" or (text()=\"Q\" and @font=\"double-struck\")"
     ],
     [
       "Precondition",
       "real-numbers",
       "default",
-      "self::identifier",
-      "text()=\"ℝ\" or (text()=\"R\" and @font=\"double-struck\")",
-      "self::*",
-      "self::*",
-      "self::*"
+      "self::identifier[@role=\"numbersetletter\"]",
+      "text()=\"ℝ\" or (text()=\"R\" and @font=\"double-struck\")"
     ],
     [
       "Precondition",
       "complex-numbers",
       "default",
-      "self::identifier",
-      "text()=\"ℂ\" or (text()=\"C\" and @font=\"double-struck\")",
-      "self::*",
-      "self::*",
-      "self::*"
+      "self::identifier[@role=\"numbersetletter\"]",
+      "text()=\"ℂ\" or (text()=\"C\" and @font=\"double-struck\")"
     ],
     [
       "Precondition",
