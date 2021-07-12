@@ -3,5 +3,101 @@
   "locale": "hi",
   "modality": "speech",
   "inherits": "base",
-  "rules": []
+  "rules": [
+    [
+      "Rule",
+      "protected-number",
+      "default",
+      "[t] text()",
+      "self::number",
+      "contains(@grammar, \"protected\")"
+    ],
+    [
+      "Precondition",
+      "appl-simple-inverse",
+      "default",
+      "self::appl",
+      "@role=\"simple function\"",
+      "name(children/*[1])=\"superscript\"",
+      "children/*[1][@role=\"simple function\"]",
+      "name(children/*[1]/children/*[2])=\"prefixop\"",
+      "children/*[1]/children/*[2][@role=\"negative\"]",
+      "children/*[1]/children/*[2]/children/*[1][text()=\"1\"]",
+      "not(contains(@grammar, \"functions_none\"))"
+    ],
+    [
+      "Precondition",
+      "vbar-args-such-that",
+      "VerticalLine_SuchThat",
+      "self::punctuated",
+      "@role=\"sequence\"",
+      "content/*[1][@role=\"vbar\"]",
+      "not(parent::*[@embellished=\"punctuation\"])"
+    ],
+    [
+      "Precondition",
+      "vbar-args-divides",
+      "default",
+      "self::punctuated",
+      "@role=\"sequence\"",
+      "content/*[1][@role=\"vbar\"]",
+      "not(parent::*[@embellished=\"punctuation\"])"
+    ],
+    [
+      "Precondition",
+      "vbar-args-always-divides",
+      "VerticalLine_Divides",
+      "self::punctuated",
+      "@role=\"sequence\"",
+      "content/*[1][@role=\"vbar\"]",
+      "not(parent::*[@embellished=\"punctuation\"])"
+    ],
+    [
+      "Precondition",
+      "vbar-args-given",
+      "VerticalLine_Given",
+      "self::punctuated",
+      "@role=\"sequence\"",
+      "content/*[1][@role=\"vbar\"]",
+      "not(parent::*[@embellished=\"punctuation\"])"
+    ],
+    [
+      "Precondition",
+      "element",
+      "default",
+      "self::infixop[@role=\"element\"]"
+    ],
+    [
+      "Precondition",
+      "element-in-set",
+      "default",
+      "self::infixop[@role=\"element\"]",
+      "contains(@grammar, \"setext\")"
+    ],
+    [
+      "Precondition",
+      "element-in-set-woall",
+      "Sets_woAll",
+      "self::infixop[@role=\"element\"]",
+      "contains(@grammar, \"setext\")"
+    ],
+    [
+      "Precondition",
+      "unit-square",
+      "default",
+      "self::superscript[@role=\"unit\"]",
+      "children/*[2][text()=2]",
+      "name(children/*[1])=\"identifier\"",
+      "children/*[1][@category=\"unit:length\"]"
+    ],
+    [
+      "Precondition",
+      "unit-cubic",
+      "default",
+      "self::superscript[@role=\"unit\"]",
+      "children/*[2][text()=3]",
+      "name(children/*[1])=\"identifier\"",
+      "children/*[1][@category=\"unit:length\"]"
+    ]
+  ]
 }

@@ -11,11 +11,6 @@
     ],
     [
       "Action",
-      "protected",
-      "[t] text()"
-    ],
-    [
-      "Action",
       "font",
       "[t] @font (grammar:localFont); [n] self::* (pause:\"short\", grammar:ignoreFont=@font)"
     ],
@@ -66,22 +61,22 @@
     ],
     [
       "Action",
-      "vbar-such-that",
+      "vbar-args-such-that",
       "[n] children/*[1]; [t] \"जैसा की\"; [n] children/*[3]"
     ],
     [
       "Action",
-      "vbar-divides",
+      "vbar-args-divides",
       "[n] children/*[3] (pause:short); [n] children/*[1]; [t] \"से विभाज्य है\""
     ],
     [
       "Action",
-      "vbar-always-divides",
+      "vbar-args-always-divides",
       "[n] children/*[3] (pause:short); [n] children/*[1]; [t] \"से विभाज्य है\""
     ],
     [
       "Action",
-      "vbar-given",
+      "vbar-args-given",
       "[n] children/*[1]; [t] \"यदि निश्चित है\"; [n] children/*[3]"
     ],
     [
@@ -431,27 +426,22 @@
     ],
     [
       "Action",
-      "superscript-ordinal-power-number",
-      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (pause:\"short\", grammar:ordinal)"
-    ],
-    [
-      "Action",
       "superscript-ordinal-default",
       "[n] children/*[1]; [t] \"का घात\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"घातांक समाप्त\" (pause:\"short\")"
     ],
     [
       "Action",
-      "superscript-ordinal-power-negative",
+      "superscript-ordinal-power-number",
       "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\" (pause:\"short\")"
     ],
     [
       "Action",
-      "superscript-ordinal-power-identifier",
+      "superscript-ordinal-power-negative",
       "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2]; [t] \"घातांक\" (pause:\"short\")"
     ],
     [
       "Action",
-      "superscript-ordinal",
+      "superscript-ordinal-power-identifier",
       "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\" (pause:\"short\")"
     ],
     [
