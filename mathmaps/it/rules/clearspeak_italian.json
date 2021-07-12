@@ -50,6 +50,14 @@
     ],
     [
       "Precondition",
+      "fraction-per",
+      "Fraction_Per",
+      "self::fraction",
+      "contains(children/*[1]/@annotation, \"clearspeak:unit\")",
+      "contains(children/*[2]/@annotation, \"clearspeak:unit\")"
+    ],
+    [
+      "Precondition",
       "squared-male",
       "default",
       "self::number[text()=2]",

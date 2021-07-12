@@ -421,27 +421,22 @@
     ],
     [
       "Action",
-      "superscript-ordinal-power-number",
-      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal, pause:\"short\")"
-    ],
-    [
-      "Action",
       "superscript-ordinal-default",
       "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"fine esponente\" (pause:\"short\")"
     ],
     [
       "Action",
-      "superscript-ordinal-power-negative",
+      "superscript-ordinal-power-number",
       "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\" (pause:\"short\")"
     ],
     [
       "Action",
-      "superscript-ordinal-power-identifier",
+      "superscript-ordinal-power-negative",
       "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (pause:\"short\")"
     ],
     [
       "Action",
-      "superscript-ordinal",
+      "superscript-ordinal-power-identifier",
       "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\" (pause:\"short\")"
     ],
     [

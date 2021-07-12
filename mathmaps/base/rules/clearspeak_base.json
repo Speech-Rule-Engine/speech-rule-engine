@@ -2795,8 +2795,7 @@
       "default",
       "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=2]",
-      "name(children/*[1])=\"identifier\"",
-      "children/*[1][@category=\"unit:length\"]"
+      "name(children/*[1])=\"identifier\""
     ],
     [
       "Precondition",
@@ -2804,8 +2803,7 @@
       "default",
       "self::superscript[@role=\"unit\"]",
       "children/*[2][text()=3]",
-      "name(children/*[1])=\"identifier\"",
-      "children/*[1][@category=\"unit:length\"]"
+      "name(children/*[1])=\"identifier\""
     ],
     [
       "Precondition",
