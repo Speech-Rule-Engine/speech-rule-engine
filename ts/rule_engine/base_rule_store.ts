@@ -74,7 +74,10 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   public initialized: boolean = false;
 
+  public inherits: BaseRuleStore = null;
 
+  public kind: string = 'standard';
+  
   /**
    * Local transcriptions for special characters.
    */
@@ -134,7 +137,12 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
   constructor() {
     this.parseMethods = {
       'Rule': this.defineRule,
-      'Generator': this.generateRules
+      'Generator': this.generateRules,
+      'Action': this.defineAction,
+      'Precondition': this.definePrecondition,
+      'PAlias': this.defineAlias,
+      'PAliases': this.defineAliases,
+      'Specialized': this.defineSpecialized
     };
   }
 
@@ -144,21 +152,14 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   public defineRule(name: string, dynamic: string, action: string,
              prec: string, ...args: string[]) {
-    let rule;
-    try {
-      // TODO: Have a parser that respects generators.
-      let postc = Action.fromString(action);
-      let fullPrec = this.parsePrecondition(prec, args);
-      let dynamicCstr = this.parseCstr(dynamic);
-      rule = new SpeechRule(name, dynamicCstr, fullPrec, postc);
-    } catch (err) {
-      if (err.name === 'RuleError') {
-        console.error('Rule Error ', prec, '(' + dynamic + '):', err.message);
-        return null;
-      } else {
-        throw err;
-      }
+    let postc = this.parseAction(action);
+    let fullPrec = this.parsePrecondition(prec, args);
+    let dynamicCstr = this.parseCstr(dynamic);
+    if (!(postc && fullPrec && dynamicCstr)) {
+      console.error(`Rule Error: ${prec}, (${dynamic}): ${action}`);
+      return null;
     }
+    let rule = new SpeechRule(name, dynamicCstr, fullPrec, postc);
     rule.precondition.rank = this.rank++;
     this.addRule(rule);
     return rule;
@@ -304,9 +305,20 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    * @return The parsed constraint including locale.
    */
   public parseCstr(cstr: string): DynamicCstr {
-    return this.parser.parse(
+    try {
+      // TODO: Have a parser that respects generators.
+      return this.parser.parse(
         this.locale + '.' + this.modality +
-        (this.domain ? '.' + this.domain : '') + '.' + cstr);
+          (this.domain ? '.' + this.domain : '') + '.' + cstr);
+    } catch (err) {
+      if (err.name === 'RuleError') {
+        console.error(
+          'Rule Error ', `Illegal Dynamic Constraint: ${cstr}.`, err.message);
+        return null;
+      } else {
+        throw err;
+      }
+    }
   }
 
 
@@ -317,13 +329,43 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    * @return The new precondition.
    */
   public parsePrecondition(query: string, rest: string[]): Precondition {
-    let queryCstr = this.parsePrecondition_(query);
-    query = queryCstr[0];
-    let restCstr = queryCstr.slice(1);
-    for (let cstr of rest) {
-      restCstr = restCstr.concat(this.parsePrecondition_(cstr));
+    try {
+      let queryCstr = this.parsePrecondition_(query);
+      query = queryCstr[0];
+      let restCstr = queryCstr.slice(1);
+      for (let cstr of rest) {
+        restCstr = restCstr.concat(this.parsePrecondition_(cstr));
+      }
+      return new Precondition(query, ...restCstr);
+    } catch (err) {
+      if (err.name === 'RuleError') {
+        console.error('Rule Error ',
+                      `Illegal preconditions: ${query}, ${rest}.`, err.message);
+        return null;
+      } else {
+        throw err;
+      }
     }
-    return new Precondition(query, ...restCstr);
+  }
+
+
+  /**
+   * Parses a speech rule action.
+   * @param action The action string.
+   * @return The new action.
+   */
+  public parseAction(action: string) {
+    try {
+      return Action.fromString(action);
+    } catch (err) {
+      if (err.name === 'RuleError') {
+        console.error('Rule Error ',
+                      `Illegal action: ${action}.`, err.message);
+        return null;
+      } else {
+        throw err;
+      }
+    }
   }
 
 
@@ -336,6 +378,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     this.modality = ruleSet.modality || this.modality;
     this.locale = ruleSet.locale || this.locale;
     this.domain = ruleSet.domain || this.domain;
+    this.kind = ruleSet.kind || this.kind;
     // TODO (TS): Fix this to avoid casting!
     this.context.parse(ruleSet.functions as any || []);
     this.parseRules(ruleSet.rules || []);
@@ -351,7 +394,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
       let type = rule[0];
       let method = this.parseMethods[type];
       if (type && method) {
-        method.apply(this, rule.slice(1))
+        method.apply(this, rule.slice(1));
       }
     }
   }
@@ -379,12 +422,192 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     return generator ? generator() : [cstr];
   }
 
+  /**
+   * @override
+   */
+  public defineAction(name: string, action: string) {
+    let postc: Action;
+    try {
+      // TODO: Have a parser that respects generators.
+      postc = Action.fromString(action);
+    } catch (err) {
+      if (err.name === 'RuleError') {
+        console.error('Action Error ', action, err.message);
+        return;
+      } else {
+        throw err;
+      }
+    }
+    let prec = this.getFullPreconditions(name);
+    if (!prec) {
+      console.error(`Action Error: No precondition for action ${name}`);
+      return;
+    }
+    let regexp = new RegExp('^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : ''));
+    prec.conditions.forEach(([dynamic, prec]) => {
+      // TODO: Work this out wrt. domain.
+      let newDynamic = this.parseCstr(
+        dynamic.toString().replace(regexp, ''));
+      this.addRule(new SpeechRule(name, newDynamic, prec, postc));
+    });
+  }
+
+
+  /**
+   * Set of Preconditions
+   */
+  private preconditions: Map<string, Condition> = new Map();
+
+  public getFullPreconditions(name: string): Condition {
+    let prec = this.preconditions.get(name);
+    if (prec || !this.inherits) {
+      return prec;
+    }
+    return this.inherits.getFullPreconditions(name);
+  }
+  
+  /**
+   * @override
+   */
+  public definePrecondition(name: string, dynamic: string,
+                            prec: string, ...args: string[]) {
+    let fullPrec = this.parsePrecondition(prec, args);
+    let dynamicCstr = this.parseCstr(dynamic);
+    if (!(fullPrec && dynamicCstr)) {
+      console.error(`Precondition Error: ${prec}, (${dynamic})`);
+      return;
+    }
+    fullPrec.rank = this.rank++;
+    this.preconditions.set(name, new Condition(dynamicCstr, fullPrec));
+    // TODO: Maybe return something?
+  }
+
+  public defineAlias(name: string, prec: string, ...args: string[]) {
+    let fullPrec = this.parsePrecondition(prec, args);
+    if (!fullPrec) {
+      console.error(`Precondition Error: ${prec} ${args}`);
+      return;
+    }
+    let condition = this.preconditions.get(name);
+    if (!condition) {
+      console.error(`Alias Error: No precondition by the name of ${name}`);
+      return;
+    }
+    condition.addBaseCondition(fullPrec);
+  }
+
+
+  public defineAliases(name: string, prec: string, ...args: string[]) {
+    let fullPrec = this.parsePrecondition(prec, args);
+    if (!fullPrec) {
+      console.error(`Precondition Error: ${prec} ${args}`);
+      return;
+    }
+    let condition = this.preconditions.get(name);
+    if (!condition) {
+      console.error(`Aliases Error: No precondition by the name of ${name}`);
+      return;
+    }
+    condition.addFullCondition(fullPrec);
+  }
+
+
+  public defineSpecialized(name: string, _old: string, dynamic: string) {
+    let cstr = this.parseCstr(dynamic);
+    if (!cstr) {
+      console.error(`Dynamic Constraint Error: ${dynamic}`);
+      return;
+    }
+    let condition = this.preconditions.get(name);
+    if (!condition) {
+      console.error(`Alias Error: No precondition by the name of ${name}`);
+      return;
+    }
+    condition.addConstraint(cstr);
+  }
+
+  public inheritRules() {
+    if (!this.inherits || !this.inherits.getSpeechRules().length) {
+      return;
+    }
+    let regexp = new RegExp('^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : ''));
+    this.inherits.getSpeechRules().forEach(rule => {
+      // TODO: Work this out wrt. domain.
+      let newDynamic = this.parseCstr(
+        rule.dynamicCstr.toString().replace(regexp, ''));
+      this.addRule(new SpeechRule(rule.name, newDynamic,
+                                  rule.precondition, rule.action));
+    });
+  }
+
+}
+
+export class Condition {
+
+  private _conditions: [DynamicCstr, Precondition][] = [];
+
+  private constraints: DynamicCstr[] = [];
+
+  private allCstr: {[cond: string]: boolean} = {};
+
+  /**
+   *
+   * @param {DynamicCstr} dynamic
+   * @param {Precondition} condition
+   */
+  constructor(private base: DynamicCstr, condition: Precondition) {
+    this.constraints.push(base);
+    this.addCondition(base, condition);
+  }
+
+  public get conditions() {
+    return this._conditions;
+  }
+
+  /**
+   *
+   * @param {DynamicCstr} dynamic
+   */
+  public addConstraint(dynamic: DynamicCstr) {
+    if (this.constraints.filter(cstr => cstr.equal(dynamic)).length) {
+      return;
+    }
+    this.constraints.push(dynamic);
+    let newConds: [DynamicCstr, Precondition][] = [];
+    for (let [dyn, pre] of this.conditions) {
+      if (this.base.equal(dyn)) {
+        newConds.push([dynamic, pre]);
+      }
+    }
+    this._conditions = this._conditions.concat(newConds);
+  }
+
+  public addBaseCondition(cond: Precondition) {
+    this.addCondition(this.base, cond);
+  }
+
+  public addFullCondition(cond: Precondition) {
+    this.constraints.forEach(cstr =>
+      this.addCondition(cstr, cond));
+  }
+
+  private addCondition(dynamic: DynamicCstr, cond: Precondition) {
+    let condStr = dynamic.toString() + ' ' + cond.toString();
+    if (this.allCstr.condStr) {
+      return;
+    }
+    this.allCstr[condStr] = true;
+    this._conditions.push([dynamic, cond]);
+  }
+
 }
 
 export interface RulesJson {
   modality?: string;
   domain?: string;
   locale?: string;
+  kind?: string;
+  inherits?: string;
   functions?: {[key: string]: Function};
   rules?: any[];
   annotators?: any[];

@@ -117,22 +117,6 @@ export class SpeechRuleEngine {
 
 
   /**
-   * Factory method for generating rule stores by modality.
-   * @param modality The modality.
-   * @return The generated rule store.
-   */
-  public storeFactory(modality: string): BaseRuleStore {
-    // TODO (TS): Not sure how to get the constructors directly
-    // let constructors = {braille: BrailleStore, speech: MathStore};
-    // return new (constructors[modality] || MathStore)();
-    if (modality === 'braille') {
-      return new BrailleStore();
-    }
-    return new MathStore();
-  }
-
-
-  /**
    * Updates the evaluator method for the document of the given node. This is
    * particular important for XML documents in Firefox that generates a novel
    * object (plus evaluate method) for every document.
@@ -219,15 +203,10 @@ export class SpeechRuleEngine {
   public addStore(set: RulesJson) {
     // This line is important to setup the context functions for stores.
     // It has to run __before__ the first speech rule store is added.
-    SpeechRuleStores.init();
-    if (set && !set.functions) {
-      set.functions = SpeechRules.getStore(
-          set.locale, set.modality, set.domain);
+    let store = StoreFactory.get(set);
+    if (store.kind !== 'abstract') {
+      store.getSpeechRules().forEach(x => this.trie.addRule(x));
     }
-    let store = this.storeFactory(set.modality);
-    store.parse(set);
-    store.initialize();
-    store.getSpeechRules().forEach(x => this.trie.addRule(x));
     this.addEvaluator(store);
   }
 
@@ -784,6 +763,54 @@ export class SpeechRuleEngine {
     if (parent) {
       parent.removeChild(last);
     }
+  }
+
+}
+
+
+export namespace StoreFactory {
+
+  const stores: Map<string, BaseRuleStore> = new Map();
+
+  /**
+   * Factory method for generating rule stores by modality.
+   * @param modality The modality.
+   * @return The generated rule store.
+   */
+  function factory(modality: string): BaseRuleStore {
+    // TODO (TS): Not sure how to get the constructors directly
+    // let constructors = {braille: BrailleStore, speech: MathStore};
+    // return new (constructors[modality] || MathStore)();
+    if (modality === 'braille') {
+      return new BrailleStore();
+    }
+    return new MathStore();
+  }
+
+
+  export function get(set: RulesJson) {
+    let name = `${set.locale}.${set.modality}.${set.domain}`;
+    if (set.kind === 'actions') {
+      let store = stores.get(name);
+      store.parse(set);
+      return store;
+    }
+    SpeechRuleStores.init();
+    if (set && !set.functions) {
+      set.functions = SpeechRules.getStore(
+        set.locale, set.modality, set.domain);
+    }
+    let store = factory(set.modality);
+    stores.set(name, store);
+    if (set.inherits) {
+      // TODO: Copy rules!
+      store.inherits = stores.get(
+        `${set.inherits}.${set.modality}.${set.domain}`);
+    }
+    store.parse(set);
+    store.inheritRules();
+    store.initialize();
+    return store;
   }
 
 }
