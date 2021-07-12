@@ -2,6 +2,45 @@
   "locale": "fr",
   "domain": "clearspeak",
   "modality": "speech",
-  "inherits": "base",
-  "rules": []
+  "inherits": "romance",
+  "rules": [
+    [
+      "Precondition",
+      "superscript-ordinal-letter",
+      "Exponent_Ordinal",
+      "self::superscript",
+      "name(children/*[2])=\"identifier\"",
+      "children/*[2][@role=\"latinletter\"]"
+    ],
+    [
+      "Precondition",
+      "superscript-ordinal-number",
+      "Exponent_Ordinal",
+      "self::superscript",
+      "name(children/*[2])=\"number\"",
+      "children/*[2][@role=\"integer\"]",
+      "children/*[2][text()!=\"2\"]",
+      "children/*[2][text()!=\"3\"]"
+    ],
+    [
+      "Precondition",
+      "superscript-ordinal-cap",
+      "Exponent_Ordinal",
+      "self::superscript",
+      "name(children/*[2])=\"identifier\"",
+      "children/*[2][@role=\"latinletter\"]",
+      "children/*[2][@category=\"Lu\"]"
+    ],
+    [
+      "Precondition",
+      "unit-reciprocal-multi",
+      "default",
+      "self::superscript[@role=\"unit\"]",
+      "name(children/*[1])=\"identifier\"",
+      "name(children/*[2])=\"prefixop\"",
+      "children/*[2][@role=\"negative\"]",
+      "children/*[2]/children/*[1][text()=1]",
+      "preceding-sibling::*[@role=\"unit\"]"
+    ]
+  ]
 }

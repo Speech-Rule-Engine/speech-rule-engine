@@ -2,7 +2,7 @@
   "locale": "fr",
   "domain": "clearspeak",
   "modality": "speech",
-  "inherits": "base",
+  "kind": "actions",
   "rules": [
     [
       "Action",
