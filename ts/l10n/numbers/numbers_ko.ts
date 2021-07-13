@@ -63,7 +63,7 @@ function numberToWords(num: number): string {
     let hundreds = num % 10000;
     if (hundreds) {
       str = hundredsToWords_(num % 10000) +
-          (pos ? NUMBERS.large[pos] + sre.Numbers.numSep : '') + str;
+          (pos ? NUMBERS.large[pos] + NUMBERS.numSep : '') + str;
     }
     num = Math.floor(num / 10000);
     pos++;
@@ -80,8 +80,7 @@ function numberToWords(num: number): string {
  * @return The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, plural: boolean): string {
-  let ordinal = wordOrdinal(num);
-  return ordinal;
+  return wordOrdinal(num);
 }
 
 
@@ -92,19 +91,13 @@ function numberToOrdinal(num: number, plural: boolean): string {
  */
 function wordOrdinal(num: number): string {
   let ordinal = numberToWords(num);
-  let tens = NUMBERS.tens_ordinal[Math.floor(number % 100 / 10)];
-  let ones = NUMBERS.ones_ordinal[Math.floor(number % 10)];
+  let tens = NUMBERS.tens[10 + Math.floor(num % 100 / 10)];
+  let ones = NUMBERS.ones[10 + Math.floor(num % 10)];
 
-  num %= 100;
-  if (num === 0) { }
-  else if (num % 10 === 0) {
-    if (num === 20) tens = '스무';
-    ordinal = ordinal.slice(0, -2) + tens;
-  }
-  else if (num < 10) {
-    ordinal = ordinal.slice(0, -1) + ones;
-  }
-  else ordinal = ordinal.slice(0, -3) + tens + ones;
+  if (num === 1) ones = '첫';
+  else if ((num % 100) === 20) tens = '스무';
+  let label: string = tens + ones;
+  ordinal = label ? ordinal.slice(0, -label.length + 1) + label : label;
 
   return ordinal + '번째';
 }
@@ -116,7 +109,7 @@ function wordOrdinal(num: number): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  wordOrdinal(num);
+  return wordOrdinal(num);
 }
 
 const NUMBERS: Numbers = NUMB();
