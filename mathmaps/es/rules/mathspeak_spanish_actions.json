@@ -517,32 +517,32 @@
     [
       "Action",
       "matrix",
-      "[t] \"empezar matriz\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"fila \"); [t] \"finalizar matriz\""
+      "[t] \"empezar matriz\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila \"); [t] \"finalizar matriz\""
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] \"matriz\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\" \"); [t] \"finalizar matriz\""
+      "[t] \"matriz\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter,context:\" \"); [t] \"finalizar matriz\""
     ],
     [
       "Action",
       "matrix-row",
-      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"columna\", pause: 200)"
+      "[m] children/* (ctxtFunc:CTFwordCounter,context:\"columna\", pause: 200)"
     ],
     [
       "Action",
       "row-with-label",
-      "[t] \"con etiqueta\"; [n] content/*[1]; [t] \"finalizar etiqueta\" (pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"columna\")"
+      "[t] \"con etiqueta\"; [n] content/*[1]; [t] \"finalizar etiqueta\" (pause: 200); [m] children/* (ctxtFunc:CTFwordCounter,context:\"columna\")"
     ],
     [
       "Action",
       "row-with-label-brief",
-      "[t] \"etiqueta\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"columna\")"
+      "[t] \"etiqueta\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFwordCounter,context:\"columna\")"
     ],
     [
       "Action",
       "row-with-text-label",
-      "[t] \"etiqueta\"; [t] CSFRemoveParens;[m] children/* (ctxtFunc:CTFordinalCounter,context:\"columna\")"
+      "[t] \"etiqueta\"; [t] CSFRemoveParens;[m] children/* (ctxtFunc:CTFwordCounter,context:\"columna\")"
     ],
     [
       "Action",
@@ -562,22 +562,22 @@
     [
       "Action",
       "determinant",
-      "[t] \"empezar determinante\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"fila \"); [t] \"finalizar determinante\""
+      "[t] \"empezar determinante\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila \"); [t] \"finalizar determinante\""
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] \"determinante\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"fila \"); [t] \"finalizar determinante\""
+      "[t] \"determinante\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila \"); [t] \"finalizar determinante\""
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"empezar determinante\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"fila\",grammar:simpleDet); [t] \"finalizar determinante\""
+      "[t] \"empezar determinante\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila\",grammar:simpleDet); [t] \"finalizar determinante\""
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] \"determinante\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"fila\",grammar:simpleDet); [t] \"finalizar determinante\""
+      "[t] \"determinante\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila\",grammar:simpleDet); [t] \"finalizar determinante\""
     ],
     [
       "Action",
@@ -587,12 +587,12 @@
     [
       "Action",
       "layout",
-      "[t] \"empezar esquema\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"fila \"); [t] \"finalizar esquema\""
+      "[t] \"empezar esquema\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila \"); [t] \"finalizar esquema\""
     ],
     [
       "Action",
       "layout-sbrief",
-      "[t] \"esquema\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"fila \"); [t] \"finalizar esquema\""
+      "[t] \"esquema\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila \"); [t] \"finalizar esquema\""
     ],
     [
       "Action",
@@ -607,12 +607,12 @@
     [
       "Action",
       "cases",
-      "[t] \"empezar esquema\"; [n] content/*[1]; [t] \"alargada\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"fila \"); [t] \"finalizar esquema\""
+      "[t] \"empezar esquema\"; [n] content/*[1]; [t] \"alargada\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila \"); [t] \"finalizar esquema\""
     ],
     [
       "Action",
       "cases-sbrief",
-      "[t] \"esquema\"; [n] content/*[1]; [t] \"alargada\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"fila \"); [t] \"finalizar esquema\""
+      "[t] \"esquema\"; [n] content/*[1]; [t] \"alargada\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila \"); [t] \"finalizar esquema\""
     ],
     [
       "Action",

@@ -69,27 +69,6 @@
     ],
     [
       "Precondition",
-      "root-small",
-      "default",
-      "self::root",
-      "children/*[1][text()=3 or text()=2]"
-    ],
-    [
-      "Precondition",
-      "root-small-brief",
-      "brief",
-      "self::root",
-      "children/*[1][text()=3 or text()=2]"
-    ],
-    [
-      "Precondition",
-      "root-small-sbrief",
-      "sbrief",
-      "self::root",
-      "children/*[1][text()=3 or text()=2]"
-    ],
-    [
-      "Precondition",
       "overscore",
       "default",
       "self::overscore",

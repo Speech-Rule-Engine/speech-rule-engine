@@ -60,6 +60,7 @@ export function MathspeakRules() {
     'CSFopenRadicalSbrief': MathspeakUtil.openingRadicalSbrief,
 
     'CSFindexRadicalSbrief': MathspeakUtil.indexRadicalSbrief,
+    'CQFisSmallRoot': MathspeakUtil.smallRoot,
     // Sub- Superscript.
     'CSFsuperscriptVerbose': MathspeakUtil.superscriptVerbose,
     'CSFsuperscriptBrief': MathspeakUtil.superscriptBrief,
@@ -79,11 +80,13 @@ export function MathspeakRules() {
     'CSFrightsubscriptBrief': MathspeakUtil.subscriptBrief,
     // Over- Underscore.
     'CSFunderscript': MathspeakUtil.nestedUnderscore,
-
     'CSFoverscript': MathspeakUtil.nestedOverscore,
-    'CTFordinalCounter': NumbersUtil.ordinalCounter,
 
+    // Iteratros and counters
+    'CTFordinalCounter': NumbersUtil.ordinalCounter,
+    'CTFwordCounter': NumbersUtil.wordCounter,
     'CTFcontentIterator': StoreUtil.contentIterator,
+
     // Layout related.
     'CQFdetIsSimple': MathspeakUtil.determinantIsSimple,
 
@@ -99,8 +102,6 @@ export function MathspeakRules() {
   // Spanish
   SpeechRules.addStore(
       'es.speech.mathspeak', 'en.speech.mathspeak', {
-        'CQFisSmallRoot': MathspeakSpanishUtil.smallRoot,
-        'CTFordinalCounter': MathspeakSpanishUtil.ordinalCounter,
         'CTFunitMultipliers': UnitUtil.unitMultipliers,
         'CQFoneLeft': UnitUtil.oneLeft
       });
@@ -108,7 +109,6 @@ export function MathspeakRules() {
   // French
   SpeechRules.addStore(
       'fr.speech.mathspeak', 'en.speech.mathspeak', {
-        'CQFisSmallRoot': MathspeakFrenchUtil.smallRoot,
         'CSFbaselineVerbose': MathspeakFrenchUtil.baselineVerbose,
         'CSFbaselineBrief': MathspeakFrenchUtil.baselineBrief,
         // Tensor specific:
