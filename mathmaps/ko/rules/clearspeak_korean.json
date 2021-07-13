@@ -1,0 +1,40 @@
+{
+  "domain": "clearspeak",
+  "locale": "ko",
+  "modality": "speech",
+  "inherits": "base",
+  "rules": [
+    [
+      "Precondition",
+      "german-font",
+      "default",
+      "self::*[@font=\"fraktur\"]",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Precondition",
+      "german-font-bold",
+      "default",
+      "self::*[@font=\"bold-fraktur\"]",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Precondition",
+      "unit-square",
+      "default",
+      "self::superscript[@role=\"unit\"]",
+      "children/*[2][text()=2]",
+      "name(children/*[1])=\"identifier\"",
+      "children/*[1][@category=\"unit:length\"]"
+    ],
+    [
+      "Precondition",
+      "unit-cubic",
+      "default",
+      "self::superscript[@role=\"unit\"]",
+      "children/*[2][text()=3]",
+      "name(children/*[1])=\"identifier\"",
+      "children/*[1][@category=\"unit:length\"]"
+    ]
+  ]
+}

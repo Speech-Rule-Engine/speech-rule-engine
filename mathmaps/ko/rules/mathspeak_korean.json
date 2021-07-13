@@ -1,0 +1,22 @@
+{
+  "domain": "mathspeak",
+  "locale": "ko",
+  "modality": "speech",
+  "inherits": "base",
+  "rules": [
+    [
+      "Precondition",
+      "german-font",
+      "default",
+      "self::*[@font=\"fraktur\"]",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Precondition",
+      "german-font-bold",
+      "default",
+      "self::*[@font=\"bold-fraktur\"]",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ]
+  ]
+}

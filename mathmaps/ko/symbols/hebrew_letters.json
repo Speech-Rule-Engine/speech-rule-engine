@@ -1,0 +1,42 @@
+[{"locale": "en"},
+  {
+    "category": "Lo",
+    "mappings": {
+      "default": {
+        "default": "first transfinite cardinal",
+        "alternative": "alef"
+      }
+    },
+    "key": "2135"
+  },
+  {
+    "category": "Lo",
+    "mappings": {
+      "default": {
+        "default": "second transfinite cardinal",
+        "alternative": "bet"
+      }
+    },
+    "key": "2136"
+  },
+  {
+    "category": "Lo",
+    "mappings": {
+      "default": {
+        "default": "third transfinite cardinal",
+        "alternative": "gimel"
+      }
+    },
+    "key": "2137"
+  },
+  {
+    "category": "Lo",
+    "mappings": {
+      "default": {
+        "default": "fourth transfinite cardinal",
+        "alternative": "dalet"
+      }
+    },
+    "key": "2138"
+  }
+]
