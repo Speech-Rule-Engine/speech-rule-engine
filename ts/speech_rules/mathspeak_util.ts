@@ -141,7 +141,8 @@ export function resetNestingDepth(node: Element): Element[] {
  * @return The nesting depth.
  */
 export function getNestingDepth(
-    type: string, node: Element, tags: string[], opt_barrierTags?: Semantic.Attr[],
+    type: string, node: Element, tags: string[],
+    opt_barrierTags?: Semantic.Attr[],
     opt_barrierAttrs?: {[key: string]: string},
     opt_func?: (p1: Element) => boolean): number {
   opt_barrierTags = opt_barrierTags || nestingBarriers;
@@ -175,7 +176,8 @@ export function getNestingDepth(
  * @return True if all attributes are contained and have the given
  *     values.
  */
-export function containsAttr(node: Element, attrs: {[key: string]: string}): boolean {
+export function containsAttr(
+  node: Element, attrs: {[key: string]: string}): boolean {
   if (!node.attributes) {
     return false;
   }
@@ -262,7 +264,8 @@ export function nestedFraction(
  * @return The opening string.
  */
 export function openingFractionVerbose(node: Element): string {
-  return nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_V);
+  return nestedFraction(
+    node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_V);
 }
 
 
@@ -272,7 +275,8 @@ export function openingFractionVerbose(node: Element): string {
  * @return The closing string.
  */
 export function closingFractionVerbose(node: Element): string {
-  return nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_V);
+  return nestedFraction(
+    node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_V);
 }
 
 
@@ -292,7 +296,8 @@ export function overFractionVerbose(node: Element): string {
  * @return The opening string.
  */
 export function openingFractionBrief(node: Element): string {
-  return nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_B);
+  return nestedFraction(
+    node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_B);
 }
 
 
@@ -302,7 +307,8 @@ export function openingFractionBrief(node: Element): string {
  * @return The closing string.
  */
 export function closingFractionBrief(node: Element): string {
-  return nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_B);
+  return nestedFraction(
+    node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_B);
 }
 
 
@@ -317,7 +323,8 @@ export function openingFractionSbrief(node: Element): string {
     return LOCALE.MESSAGES.MS.FRAC_S;
   }
   return LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
       LOCALE.MESSAGES.MS.FRAC_S);
 }
 
@@ -333,7 +340,8 @@ export function closingFractionSbrief(node: Element): string {
     return LOCALE.MESSAGES.MS.ENDFRAC;
   }
   return LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
       LOCALE.MESSAGES.MS.ENDFRAC);
 }
 
@@ -349,7 +357,8 @@ export function overFractionSbrief(node: Element): string {
     return LOCALE.MESSAGES.MS.FRAC_OVER;
   }
   return LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
       LOCALE.MESSAGES.MS.FRAC_OVER);
 }
 
@@ -410,7 +419,8 @@ export function nestedSubSuper(
  */
 export function subscriptVerbose(node: Element): string {
   return nestedSubSuper(
-      node, LOCALE.MESSAGES.MS.SUBSCRIPT, {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB});
+    node, LOCALE.MESSAGES.MS.SUBSCRIPT,
+    {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB});
 }
 
 
@@ -420,7 +430,9 @@ export function subscriptVerbose(node: Element): string {
  * @return The prefix string.
  */
 export function subscriptBrief(node: Element): string {
-  return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUB, {sup: LOCALE.MESSAGES.MS.SUP, sub: LOCALE.MESSAGES.MS.SUB});
+  return nestedSubSuper(
+    node, LOCALE.MESSAGES.MS.SUB,
+    {sup: LOCALE.MESSAGES.MS.SUP, sub: LOCALE.MESSAGES.MS.SUB});
 }
 
 
@@ -431,7 +443,8 @@ export function subscriptBrief(node: Element): string {
  */
 export function superscriptVerbose(node: Element): string {
   return nestedSubSuper(
-      node, LOCALE.MESSAGES.MS.SUPERSCRIPT, {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB});
+    node, LOCALE.MESSAGES.MS.SUPERSCRIPT,
+    {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB});
 }
 
 
@@ -441,7 +454,9 @@ export function superscriptVerbose(node: Element): string {
  * @return The prefix string.
  */
 export function superscriptBrief(node: Element): string {
-  return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUP, {sup: LOCALE.MESSAGES.MS.SUP, sub: LOCALE.MESSAGES.MS.SUB});
+  return nestedSubSuper(
+    node, LOCALE.MESSAGES.MS.SUP,
+    {sup: LOCALE.MESSAGES.MS.SUP, sub: LOCALE.MESSAGES.MS.SUB});
 }
 
 
@@ -451,12 +466,15 @@ export function superscriptBrief(node: Element): string {
  * @return The prefix string.
  */
 export function baselineVerbose(node: Element): string {
-  let baseline = nestedSubSuper(node, '', {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB});
+  let baseline = nestedSubSuper(
+    node, '', {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB});
   if (!baseline) {
     return LOCALE.MESSAGES.MS.BASELINE;
   }
-  return baseline.replace(new RegExp(LOCALE.MESSAGES.MS.SUB + '$'), LOCALE.MESSAGES.MS.SUBSCRIPT)
-      .replace(new RegExp(LOCALE.MESSAGES.MS.SUPER + '$'), LOCALE.MESSAGES.MS.SUPERSCRIPT);
+  return baseline.replace(
+    new RegExp(LOCALE.MESSAGES.MS.SUB + '$'), LOCALE.MESSAGES.MS.SUBSCRIPT)
+    .replace(new RegExp(LOCALE.MESSAGES.MS.SUPER + '$'),
+             LOCALE.MESSAGES.MS.SUPERSCRIPT);
 }
 
 
@@ -466,7 +484,8 @@ export function baselineVerbose(node: Element): string {
  * @return The prefix string.
  */
 export function baselineBrief(node: Element): string {
-  let baseline = nestedSubSuper(node, '', {sup: LOCALE.MESSAGES.MS.SUP, sub: LOCALE.MESSAGES.MS.SUB});
+  let baseline = nestedSubSuper(
+    node, '', {sup: LOCALE.MESSAGES.MS.SUP, sub: LOCALE.MESSAGES.MS.SUB});
   return baseline || LOCALE.MESSAGES.MS.BASE;
 }
 
@@ -521,7 +540,8 @@ export function getRootIndex(node: Element): string {
  * @return The opening string.
  */
 export function openingRadicalVerbose(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.STARTROOT);
+  return nestedRadical(
+      node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.STARTROOT);
 }
 
 
@@ -531,7 +551,8 @@ export function openingRadicalVerbose(node: Element): string {
  * @return The closing string.
  */
 export function closingRadicalVerbose(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ENDROOT);
+  return nestedRadical(
+      node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ENDROOT);
 }
 
 
@@ -541,7 +562,8 @@ export function closingRadicalVerbose(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalVerbose(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX);
+  return nestedRadical(
+      node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX);
 }
 
 
@@ -551,7 +573,8 @@ export function indexRadicalVerbose(node: Element): string {
  * @return The opening string.
  */
 export function openingRadicalBrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.STARTROOT);
+  return nestedRadical(
+      node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.STARTROOT);
 }
 
 
@@ -561,7 +584,8 @@ export function openingRadicalBrief(node: Element): string {
  * @return The closing string.
  */
 export function closingRadicalBrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ENDROOT);
+  return nestedRadical(
+      node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ENDROOT);
 }
 
 
@@ -571,7 +595,8 @@ export function closingRadicalBrief(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalBrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX);
+  return nestedRadical(
+      node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX);
 }
 
 
@@ -581,7 +606,8 @@ export function indexRadicalBrief(node: Element): string {
  * @return The opening string.
  */
 export function openingRadicalSbrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOT);
+  return nestedRadical(
+      node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOT);
 }
 
 
@@ -591,7 +617,8 @@ export function openingRadicalSbrief(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalSbrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX);
+  return nestedRadical(
+      node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX);
 }
 
 
@@ -604,8 +631,8 @@ export function underscoreNestingDepth(node: Element): number {
   return getNestingDepth(
       'underscore', node, ['underscore'], nestingBarriers, {}, function(node) {
         return node.tagName && node.tagName === SemanticType.UNDERSCORE &&
-            (node.childNodes[0].childNodes[1] as Element).getAttribute('role') ===
-            SemanticRole.UNDERACCENT;
+            (node.childNodes[0].childNodes[1] as Element).
+                getAttribute('role') === SemanticRole.UNDERACCENT;
       });
 }
 
@@ -617,7 +644,8 @@ export function underscoreNestingDepth(node: Element): number {
  */
 export function nestedUnderscore(node: Element): string {
   let depth = underscoreNestingDepth(node);
-  return Array(depth).join(LOCALE.MESSAGES.MS.UNDER) + LOCALE.MESSAGES.MS.UNDERSCRIPT;
+  return Array(depth).join(LOCALE.MESSAGES.MS.UNDER) +
+      LOCALE.MESSAGES.MS.UNDERSCRIPT;
 }
 
 
@@ -643,7 +671,8 @@ export function overscoreNestingDepth(node: Element): number {
  */
 export function nestedOverscore(node: Element): string {
   let depth = overscoreNestingDepth(node);
-  return Array(depth).join(LOCALE.MESSAGES.MS.OVER) + LOCALE.MESSAGES.MS.OVERSCRIPT;
+  return Array(depth).join(LOCALE.MESSAGES.MS.OVER) +
+      LOCALE.MESSAGES.MS.OVERSCRIPT;
 }
 
 
@@ -658,8 +687,8 @@ export function determinantIsSimple(node: Element): Element[] {
       node.getAttribute('role') !== SemanticRole.DETERMINANT) {
     return [];
   }
-  let cells =
-      XpathUtil.evalXPath('children/row/children/cell/children/*', node) as Element[];
+  let cells = XpathUtil.evalXPath(
+    'children/row/children/cell/children/*', node) as Element[];
   for (let i = 0, cell; cell = cells[i]; i++) {
     if (cell.tagName === SemanticType.NUMBER) {
       continue;
