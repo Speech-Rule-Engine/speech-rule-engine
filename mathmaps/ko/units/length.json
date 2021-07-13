@@ -1,10 +1,10 @@
 [
-  {"locale": "en"},
+  {"locale": "ko"},
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "foot",
-       "plural": "feet"
+       "default": "피트",
+       "plural": "피트"
      }
    },
    "key": "ft",
@@ -13,8 +13,8 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "inch",
-       "plural": "inches"
+       "default": "인치",
+       "plural": "인치"
      }
    },
    "key": "in",
@@ -23,7 +23,7 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "mile"
+       "default": "마일"
      }
    },
    "key": "mi",
@@ -32,7 +32,7 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "yard"
+       "default": "야드"
      }
    },
    "key": "yd",
@@ -42,7 +42,7 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "link"
+       "default": "링크"
      }
    },
    "key": "link",
@@ -51,7 +51,7 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "rod"
+       "default": "로드"
      }
    },
    "key": "rod",
@@ -60,7 +60,7 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "chain"
+       "default": "체인"
      }
    },
    "key": "chain",
@@ -69,7 +69,7 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "furlong"
+       "default": "펄롱"
      }
    },
    "key": "furlong",
@@ -80,7 +80,7 @@
   {"category": "length",
    "mappings": {
      "default": {
-       "default": "nautical mile"
+       "default": "해리"
      }
    },
    "key": "n.m.",
@@ -90,7 +90,7 @@
    "si": true,
    "mappings": {
      "default": {
-       "default": "meter"
+       "default": "미터"
      }
    },
    "key": "m",

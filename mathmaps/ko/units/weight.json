@@ -1,9 +1,9 @@
 [
-  {"locale": "en"},
+  {"locale": "ko"},
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "dram"
+       "default": "드램"
      }
    },
    "key": "dram",
@@ -12,7 +12,7 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "ounce"
+       "default": "온스"
      }
    },
    "key": "oz",
@@ -21,7 +21,7 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "pound"
+       "default": "파운드"
      }
    },
    "key": "lb",
@@ -30,7 +30,7 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "stone"
+       "default": "스톤"
      }
    },
    "key": "st",
@@ -39,7 +39,7 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "quarter"
+       "default": "쿼터"
      }
    },
    "key": "qtr",
@@ -48,7 +48,7 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "hundredweight"
+       "default": "헌드레드웨이트"
      }
    },
    "key": "cwt",
@@ -57,7 +57,7 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "long ton"
+       "default": "롱톤"
      }
    },
    "key": "LT",
@@ -66,7 +66,7 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "gram"
+       "default": "그램"
      }
    },
    "key": "gr",
@@ -76,7 +76,7 @@
    "si": true,
    "mappings": {
      "default": {
-       "default": "gram"
+       "default": "그램"
      }
    },
    "key": "g",
@@ -85,7 +85,7 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "microgram"
+       "default": "마이크로그램"
      }
    },
    "key": "mcg",
@@ -94,7 +94,7 @@
   {"category": "weight",
    "mappings": {
      "default": {
-       "default": "ton"
+       "default": "톤"
      }
    },
    "key": "t",

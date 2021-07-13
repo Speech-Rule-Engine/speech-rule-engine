@@ -1,11 +1,11 @@
 [
-  {"locale": "en"},
+  {"locale": "ko"},
   {
     "category": "currency",
     "key": "$",
     "mappings": {
       "default": {
-        "default": "dollar"
+        "default": "달러"
       }
     },
     "names": [
@@ -17,7 +17,7 @@
     "key": "£",
     "mappings": {
       "default": {
-        "default": "pound"
+        "default": "파운드"
       }
     },
     "names": [
@@ -29,7 +29,7 @@
     "key": "¥",
     "mappings": {
       "default": {
-        "default": "yen"
+        "default": "엔"
       }
     },
     "names": [
@@ -41,7 +41,7 @@
     "key": "€",
     "mappings": {
       "default": {
-        "default": "euro"
+        "default": "유로"
       }
     },
     "names": [
@@ -53,7 +53,7 @@
     "key": "₡",
     "mappings": {
       "default": {
-        "default": "colon"
+        "default": "콜론"
       }
     },
     "names": [
@@ -65,7 +65,7 @@
     "key": "₢",
     "mappings": {
       "default": {
-        "default": "cruzeiro"
+        "default": "크루제이루"
       }
     },
     "names": [
@@ -77,7 +77,7 @@
     "key": "₣",
     "mappings": {
       "default": {
-        "default": "franc"
+        "default": "프랑"
       }
     },
     "names": [
@@ -89,7 +89,7 @@
     "key": "₤",
     "mappings": {
       "default": {
-        "default": "lira"
+        "default": "리라"
       }
     },
     "names": [
@@ -101,7 +101,7 @@
     "key": "₥",
     "mappings": {
       "default": {
-        "default": "mill"
+        "default": "밀"
       }
     },
     "names": [
@@ -113,7 +113,7 @@
     "key": "₦",
     "mappings": {
       "default": {
-        "default": "naira"
+        "default": "나이라"
       }
     },
     "names": [
@@ -125,7 +125,7 @@
     "key": "₧",
     "mappings": {
       "default": {
-        "default": "peseta"
+        "default": "페세타"
       }
     },
     "names": [
@@ -137,7 +137,7 @@
     "key": "₨",
     "mappings": {
       "default": {
-        "default": "rupee"
+        "default": "루피"
       }
     },
     "names": [
@@ -149,7 +149,7 @@
     "key": "₩",
     "mappings": {
       "default": {
-        "default": "won"
+        "default": "원"
       }
     },
     "names": [
@@ -161,7 +161,7 @@
     "key": "₪",
     "mappings": {
       "default": {
-        "default": "sheqel"
+        "default": "세겔"
       }
     },
     "names": [
@@ -173,7 +173,7 @@
     "key": "₫",
     "mappings": {
       "default": {
-        "default": "dong"
+        "default": "동"
       }
     },
     "names": [
@@ -185,7 +185,7 @@
     "key": "₭",
     "mappings": {
       "default": {
-        "default": "kip"
+        "default": "낍"
       }
     },
     "names": [
@@ -197,7 +197,7 @@
     "key": "₮",
     "mappings": {
       "default": {
-        "default": "tugrik"
+        "default": "투그릭"
       }
     },
     "names": [
@@ -209,7 +209,7 @@
     "key": "₯",
     "mappings": {
       "default": {
-        "default": "drachma"
+        "default": "드라크마"
       }
     },
     "names": [
@@ -221,7 +221,7 @@
     "key": "₰",
     "mappings": {
       "default": {
-        "default": "Pfennig"
+        "default": "페니히"
       }
     },
     "names": [
@@ -233,7 +233,7 @@
     "key": "₱",
     "mappings": {
       "default": {
-        "default": "peso"
+        "default": "페소"
       }
     },
     "names": [
@@ -245,7 +245,7 @@
     "key": "₲",
     "mappings": {
       "default": {
-        "default": "guaranis"
+        "default": "과라니"
       }
     },
     "names": [
@@ -257,7 +257,7 @@
     "key": "₳",
     "mappings": {
       "default": {
-        "default": "austral"
+        "default": "오스트랄"
       }
     },
     "names": [
@@ -269,7 +269,7 @@
     "key": "₴",
     "mappings": {
       "default": {
-        "default": "hryvnia"
+        "default": "그리브나"
       }
     },
     "names": [
@@ -281,7 +281,7 @@
     "key": "₵",
     "mappings": {
       "default": {
-        "default": "cedis"
+        "default": "세디"
       }
     },
     "names": [
@@ -293,7 +293,7 @@
     "key": "₶",
     "mappings": {
       "default": {
-        "default": "livre tournois"
+        "default": "리브르 투르누아"
       }
     },
     "names": [
@@ -305,7 +305,7 @@
     "key": "₷",
     "mappings": {
       "default": {
-        "default": "spesmilo"
+        "default": "스페스밀로"
       }
     },
     "names": [
@@ -317,7 +317,7 @@
     "key": "₸",
     "mappings": {
       "default": {
-        "default": "tenge"
+        "default": "텡게"
       }
     },
     "names": [
@@ -329,7 +329,7 @@
     "key": "₺",
     "mappings": {
       "default": {
-        "default": "turkish lira"
+        "default": "터키 리라"
       }
     },
     "names": [
@@ -341,7 +341,7 @@
     "key": "元",
     "mappings": {
       "default": {
-        "default": "yuan"
+        "default": "위안"
       }
     },
     "names": [
@@ -353,7 +353,7 @@
     "key": "¢",
     "mappings": {
       "default": {
-        "default": "cent"
+        "default": "센트"
       }
     },
     "names": [

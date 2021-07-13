@@ -1,15 +1,15 @@
-[{"locale": "en"},
+[{"locale": "ko"},
   {
     "category": "Ll",
     "key": "00E0",
     "mappings": {
       "default": {
-        "default": "a grave"
+        "default": "억음 a"
       },
       "mathspeak": {
-        "default": "modifying above a with grave",
-        "brief": "mod above a with grave",
-        "sbrief": "mod above a with grave"
+        "default": "억음 부호가 올려진 a",
+        "brief": "억음 부호가 올려진 a",
+        "sbrief": "억음 부호가 올려진 a"
       }
     }
   },
@@ -18,12 +18,12 @@
     "key": "00E1",
     "mappings": {
       "default": {
-        "default": "a acute"
+        "default": "양음 a"
       },
       "mathspeak": {
-        "default": "modifying above a with acute",
-        "brief": "mod above a with acute",
-        "sbrief": "mod above a with acute"
+        "default": "양음 부호가 올려진 a",
+        "brief": "양음 부호가 올려진 a",
+        "sbrief": "양음 부호가 올려진 a"
       }
     }
   },
@@ -32,12 +32,12 @@
     "key": "00E2",
     "mappings": {
       "default": {
-        "default": "a hat"
+        "default": "곡절음 a"
       },
       "mathspeak": {
-        "default": "modifying above a with caret",
-        "brief": "mod above a with caret",
-        "sbrief": "mod above a with caret"
+        "default": "삽입 기호가 올려진 a",
+        "brief": "삽입 기호가 올려진 a",
+        "sbrief": "삽입 기호가 올려진 a"
       }
     }
   },
@@ -46,12 +46,12 @@
     "key": "00E3",
     "mappings": {
       "default": {
-        "default": "a tilde"
+        "default": "물결표 a"
       },
       "mathspeak": {
-        "default": "a overtilde",
-        "brief": "a overtilde",
-        "sbrief": "a overtilde"
+        "default": "물결표가 올려진 a",
+        "brief": "물결표가 올려진 a",
+        "sbrief": "물결표가 올려진 a"
       }
     }
   },
@@ -60,12 +60,12 @@
     "key": "00E4",
     "mappings": {
       "default": {
-        "default": "a double overdot"
+        "default": "분음 부호표 a"
       },
       "mathspeak": {
-        "default": "modifying above a with double dot",
-        "brief": "mod above a with double dot",
-        "sbrief": "mod above a with double dot"
+        "default": "분음 부호가 올려진 a",
+        "brief": "분음 부호가 올려진 a",
+        "sbrief": "분음 부호가 올려진 a"
       }
     }
   },
@@ -74,12 +74,12 @@
     "key": "00E5",
     "mappings": {
       "default": {
-        "default": "a ring"
+        "default": "반지 부호 a"
       },
       "mathspeak": {
-        "default": "modifying above a with ring",
-        "brief": "mod above a with ring",
-        "sbrief": "mod above a with ring"
+        "default": "반지 부호가 올려진 a",
+        "brief": "반지 부호가 올려진 a",
+        "sbrief": "반지 부호가 올려진 a"
       }
     }
   },
@@ -88,12 +88,12 @@
     "key": "00E7",
     "mappings": {
       "default": {
-        "default": "c cedilla"
+        "default": "갈고리형 c"
       },
       "mathspeak": {
-        "default": "modifying above c with cedilla",
-        "brief": "mod above c with cedilla",
-        "sbrief": "mod above c with cedilla"
+        "default": "갈고리형 부호가 붙여진 c",
+        "brief": "갈고리형 부호가 붙여진 c",
+        "sbrief": "갈고리형 부호가 붙여진 c"
       }
     }
   },
@@ -102,12 +102,12 @@
     "key": "00E8",
     "mappings": {
       "default": {
-        "default": "e grave"
+        "default": "억음 e"
       },
       "mathspeak": {
-        "default": "modifying above e with grave",
-        "brief": "mod above e with grave",
-        "sbrief": "mod above e with grave"
+        "default": "억음 부호가 올려진 e",
+        "brief": "억음 부호가 올려진 e",
+        "sbrief": "억음 부호가 올려진 e"
       }
     }
   },
@@ -116,12 +116,12 @@
     "key": "00E9",
     "mappings": {
       "default": {
-        "default": "e acute"
+        "default": "양음 e"
       },
       "mathspeak": {
-        "default": "modifying above e with acute",
-        "brief": "mod above e with acute",
-        "sbrief": "mod above e with acute"
+        "default": "양음 부호가 올려진 e",
+        "brief": "양음 부호가 올려진 e",
+        "sbrief": "양음 부호가 올려진 e"
       }
     }
   },
@@ -130,12 +130,12 @@
     "key": "00EA",
     "mappings": {
       "default": {
-        "default": "e hat"
+        "default": "곡절음 e"
       },
       "mathspeak": {
-        "default": "modifying above e with caret",
-        "brief": "mod above e with caret",
-        "sbrief": "mod above e with caret"
+        "default": "삽입 기호가 올려진 e",
+        "brief": "삽입 기호가 올려진 e",
+        "sbrief": "삽입 기호가 올려진 e"
       }
     }
   },
@@ -144,12 +144,12 @@
     "key": "00EB",
     "mappings": {
       "default": {
-        "default": "e double overdot"
+        "default": "분음 부호표 e"
       },
       "mathspeak": {
-        "default": "modifying above e with double dot",
-        "brief": "mod above e with double dot",
-        "sbrief": "mod above e with double dot"
+        "default": "분음 부호가 올려진 e",
+        "brief": "분음 부호가 올려진 e",
+        "sbrief": "분음 부호가 올려진 e"
       }
     }
   },
@@ -158,12 +158,12 @@
     "key": "00EC",
     "mappings": {
       "default": {
-        "default": "i grave"
+        "default": "억음 i"
       },
       "mathspeak": {
-        "default": "modifying above i with grave",
-        "brief": "mod above i with grave",
-        "sbrief": "mod above i with grave"
+        "default": "억음 부호가 올려진 i",
+        "brief": "억음 부호가 올려진 i",
+        "sbrief": "억음 부호가 올려진 i"
       }
     }
   },
@@ -172,12 +172,12 @@
     "key": "00ED",
     "mappings": {
       "default": {
-        "default": "i acute"
+        "default": "양음 i"
       },
       "mathspeak": {
-        "default": "modifying above i with acute",
-        "brief": "mod above i with acute",
-        "sbrief": "mod above i with acute"
+        "default": "양음 부호가 올려진 i",
+        "brief": "양음 부호가 올려진 i",
+        "sbrief": "양음 부호가 올려진 i"
       }
     }
   },
@@ -186,12 +186,12 @@
     "key": "00EE",
     "mappings": {
       "default": {
-        "default": "i hat"
+        "default": "곡절음 i"
       },
       "mathspeak": {
-        "default": "modifying above i with caret",
-        "brief": "mod above i with caret",
-        "sbrief": "mod above i with caret"
+        "default": "삽입 기호가  올려진 i",
+        "brief": "삽입 기호가 올려진 i",
+        "sbrief": "삽입 기호가 올려진 i"
       }
     }
   },
@@ -200,12 +200,12 @@
     "key": "00EF",
     "mappings": {
       "default": {
-        "default": "i double overdot"
+        "default": "분음 부호표 i"
       },
       "mathspeak": {
-        "default": "modifying above i with double dot",
-        "brief": "mod above i with double dot",
-        "sbrief": "mod above i with double dot"
+        "default": "분음 부호가 올려진 i",
+        "brief": "분음 부호가 올려진 i",
+        "sbrief": "분음 부호가 올려진 i"
       }
     }
   },
@@ -214,12 +214,12 @@
     "key": "00F1",
     "mappings": {
       "default": {
-        "default": "n tilde"
+        "default": "물결표 n"
       },
       "mathspeak": {
-        "default": "n overtilde",
-        "brief": "n overtilde",
-        "sbrief": "n overtilde"
+        "default": "물결표가 올려진 n",
+        "brief": "물결표가 올려진 n",
+        "sbrief": "물결표가 올려진 n"
       }
     }
   },
@@ -228,12 +228,12 @@
     "key": "00F2",
     "mappings": {
       "default": {
-        "default": "o grave"
+        "default": "억음 o"
       },
       "mathspeak": {
-        "default": "modifying above o with grave",
-        "brief": "mod above o with grave",
-        "sbrief": "mod above o with grave"
+        "default": "억음 부호가 올려진 o",
+        "brief": "억음 부호가 올려진 o",
+        "sbrief": "억음 부호가 올려진 o"
       }
     }
   },
@@ -242,12 +242,12 @@
     "key": "00F3",
     "mappings": {
       "default": {
-        "default": "o acute"
+        "default": "양음 o"
       },
       "mathspeak": {
-        "default": "modifying above o with acute",
-        "brief": "mod above o with acute",
-        "sbrief": "mod above o with acute"
+        "default": "양음 부호가 올려진 o",
+        "brief": "양음 부호가 올려진 o",
+        "sbrief": "양음 부호가 올려진 o"
       }
     }
   },
@@ -256,12 +256,12 @@
     "key": "00F4",
     "mappings": {
       "default": {
-        "default": "o hat"
+        "default": "곡절음 o"
       },
       "mathspeak": {
-        "default": "modifying above o with caret",
-        "brief": "mod above o with caret",
-        "sbrief": "mod above o with caret"
+        "default": "삽입 기호가 올려진 o",
+        "brief": "삽입 기호가 올려진 o",
+        "sbrief": "삽입 기호가 올려진 o"
       }
     }
   },
@@ -270,12 +270,12 @@
     "key": "00F5",
     "mappings": {
       "default": {
-        "default": "o tilde"
+        "default": "물결표 o"
       },
       "mathspeak": {
-        "default": "o overtilde",
-        "brief": "o overtilde",
-        "sbrief": "o overtilde"
+        "default": "물결표가 올려진 o",
+        "brief": "물결표가 올려진 o",
+        "sbrief": "물결표가 올려진 o"
       }
     }
   },
@@ -284,12 +284,12 @@
     "key": "00F6",
     "mappings": {
       "default": {
-        "default": "o double overdot"
+        "default": "분음 부호표 o"
       },
       "mathspeak": {
-        "default": "modifying above o with double dot",
-        "brief": "mod above o with double dot",
-        "sbrief": "mod above o with double dot"
+        "default": "분음 부호가 올려진 o",
+        "brief": "분음 부호가 올려진 o",
+        "sbrief": "분음 부호가 올려진 o"
       }
     }
   },
@@ -298,12 +298,12 @@
     "key": "00F9",
     "mappings": {
       "default": {
-        "default": "u grave"
+        "default": "억음 u"
       },
       "mathspeak": {
-        "default": "modifying above u with grave",
-        "brief": "mod above u with grave",
-        "sbrief": "mod above u with grave"
+        "default": "억음 부호가 올려진 u",
+        "brief": "억음 부호가 올려진 u",
+        "sbrief": "억음 부호가 올려진 u"
       }
     }
   },
@@ -312,12 +312,12 @@
     "key": "00FA",
     "mappings": {
       "default": {
-        "default": "u acute"
+        "default": "양음 u"
       },
       "mathspeak": {
-        "default": "modifying above u with acute",
-        "brief": "mod above u with acute",
-        "sbrief": "mod above u with acute"
+        "default": "양음 부호가 올려진 u",
+        "brief": "양음 부호가 올려진 u",
+        "sbrief": "양음 부호가 올려진 u"
       }
     }
   },
@@ -326,12 +326,12 @@
     "key": "00FB",
     "mappings": {
       "default": {
-        "default": "u hat"
+        "default": "곡절음 u"
       },
       "mathspeak": {
-        "default": "modifying above u with caret",
-        "brief": "mod above u with caret",
-        "sbrief": "mod above u with caret"
+        "default": "삽입 기호가 올려진 u",
+        "brief": "삽입 기호가 올려진 u",
+        "sbrief": "삽입 기호가 올려진 u"
       }
     }
   },
@@ -340,12 +340,12 @@
     "key": "00FC",
     "mappings": {
       "default": {
-        "default": "u double overdot"
+        "default": "분음 부호표 u"
       },
       "mathspeak": {
-        "default": "modifying above u with double dot",
-        "brief": "mod above u with double dot",
-        "sbrief": "mod above u with double dot"
+        "default": "분음 부호가 올려진 u",
+        "brief": "분음 부호가 올려진 u",
+        "sbrief": "분음 부호가 올려진 u"
       }
     }
   },
@@ -354,12 +354,12 @@
     "key": "00FD",
     "mappings": {
       "default": {
-        "default": "y acute"
+        "default": "양음 y"
       },
       "mathspeak": {
-        "default": "modifying above y with acute",
-        "brief": "mod above y with acute",
-        "sbrief": "mod above y with acute"
+        "default": "양음 부호가 올려진 y",
+        "brief": "양음 부호가 올려진 y",
+        "sbrief": "양음 부호가 올려진 y"
       }
     }
   },
@@ -368,12 +368,12 @@
     "key": "00FF",
     "mappings": {
       "default": {
-        "default": "y double overdot"
+        "default": "분음 부호표 y"
       },
       "mathspeak": {
-        "default": "modifying above y with double dot",
-        "brief": "mod above y with double dot",
-        "sbrief": "mod above y with double dot"
+        "default": "분음 부호가 올려진 y",
+        "brief": "분음 부호가 올려진 y",
+        "sbrief": "분음 부호가 올려진 y"
       }
     }
   },
@@ -382,12 +382,12 @@
     "key": "0101",
     "mappings": {
       "default": {
-        "default": "a overbar"
+        "default": "오버바 a"
       },
       "mathspeak": {
-        "default": "a overbar",
-        "brief": "a overbar",
-        "sbrief": "a overbar"
+        "default": "오버바 부호가 올려진 a",
+        "brief": "오버바 부호가 올려진 a",
+        "sbrief": "오버바 부호가 올려진 a"
       }
     }
   },
@@ -396,12 +396,12 @@
     "key": "0103",
     "mappings": {
       "default": {
-        "default": "a breve"
+        "default": "겹온음표 a"
       },
       "mathspeak": {
-        "default": "modifying above a with breve",
-        "brief": "mod above a with breve",
-        "sbrief": "mod above a with breve"
+        "default": "겹온음표 부호가 올려진 a",
+        "brief": "겹온음표 부호가 올려진 a",
+        "sbrief": "겹온음표 부호가 올려진 a"
       }
     }
   },
@@ -410,12 +410,12 @@
     "key": "0105",
     "mappings": {
       "default": {
-        "default": "a ogonek"
+        "default": "아가뇩 a"
       },
       "mathspeak": {
-        "default": "modifying above a with ogonek",
-        "brief": "mod above a with ogonek",
-        "sbrief": "mod above a with ogonek"
+        "default": "아가뇩 부호가 있는 a",
+        "brief": "아가뇩 부호가 있는 a",
+        "sbrief": "아가뇩 부호가 있는 a"
       }
     }
   },
@@ -424,12 +424,12 @@
     "key": "0107",
     "mappings": {
       "default": {
-        "default": "c acute"
+        "default": "양음 c"
       },
       "mathspeak": {
-        "default": "modifying above c with acute",
-        "brief": "mod above c with acute",
-        "sbrief": "mod above c with acute"
+        "default": "양음 부호가 올려진 c",
+        "brief": "양음 부호가 올려진 c",
+        "sbrief": "양음 부호가 올려진 c"
       }
     }
   },
@@ -438,12 +438,12 @@
     "key": "0109",
     "mappings": {
       "default": {
-        "default": "c hat"
+        "default": "곡절음 c"
       },
       "mathspeak": {
-        "default": "modifying above c with caret",
-        "brief": "mod above c with caret",
-        "sbrief": "mod above c with caret"
+        "default": "삽입 기호가 올려진 c",
+        "brief": "삽입 기호가 올려진 c",
+        "sbrief": "삽입 기호가 올려진 c"
       }
     }
   },
@@ -452,12 +452,12 @@
     "key": "010B",
     "mappings": {
       "default": {
-        "default": "c overdot"
+        "default": "윗점 c"
       },
       "mathspeak": {
-        "default": "modifying above c with dot",
-        "brief": "mod above c with dot",
-        "sbrief": "mod above c with dot"
+        "default": "마침점 부호가 올려진 c",
+        "brief": "마침점 부호가 올려진 c",
+        "sbrief": "마침점 부호가 올려진 c"
       }
     }
   },
@@ -466,12 +466,12 @@
     "key": "010D",
     "mappings": {
       "default": {
-        "default": "c caron"
+        "default": "카론 c"
       },
       "mathspeak": {
-        "default": "modifying above c with caron",
-        "brief": "mod above c with caron",
-        "sbrief": "mod above c with caron"
+        "default": "카론 부호가 올려진 c",
+        "brief": "카론 부호가 올려진 c",
+        "sbrief": "카론 부호가 올려진 c"
       }
     }
   },
@@ -480,12 +480,12 @@
     "key": "010F",
     "mappings": {
       "default": {
-        "default": "d caron"
+        "default": "카론 d"
       },
       "mathspeak": {
-        "default": "modifying above d with caron",
-        "brief": "mod above d with caron",
-        "sbrief": "mod above d with caron"
+        "default": "카론 부호가 올려진 d",
+        "brief": "카론 부호가 올려진 d",
+        "sbrief": "카론 부호가 올려진 d"
       }
     }
   },
@@ -494,12 +494,12 @@
     "key": "0113",
     "mappings": {
       "default": {
-        "default": "e overbar"
+        "default": "오버바 e"
       },
       "mathspeak": {
-        "default": "e overbar",
-        "brief": "e overbar",
-        "sbrief": "e overbar"
+        "default": "오버바 부호가 올려진 e",
+        "brief": "오버바 부호가 올려진 e",
+        "sbrief": "오버바 부호가 올려진 e"
       }
     }
   },
@@ -508,12 +508,12 @@
     "key": "0115",
     "mappings": {
       "default": {
-        "default": "e breve"
+        "default": "겹온음표 e"
       },
       "mathspeak": {
-        "default": "modifying above e with breve",
-        "brief": "mod above e with breve",
-        "sbrief": "mod above e with breve"
+        "default": "겹온음표 부호가 올려진 e",
+        "brief": "겹온음표 부호가 올려진 e",
+        "sbrief": "겹온음표 부호가 올려진 e"
       }
     }
   },
@@ -522,12 +522,12 @@
     "key": "0117",
     "mappings": {
       "default": {
-        "default": "e overdot"
+        "default": "윗점 e"
       },
       "mathspeak": {
-        "default": "modifying above e with dot",
-        "brief": "mod above e with dot",
-        "sbrief": "mod above e with dot"
+        "default": "마침점 부호가 올려진 e",
+        "brief": "마침점 부호가 올려진 e",
+        "sbrief": "마침점 부호가 올려진 e"
       }
     }
   },
@@ -536,12 +536,12 @@
     "key": "0119",
     "mappings": {
       "default": {
-        "default": "e ogonek"
+        "default": "아가뇩 e"
       },
       "mathspeak": {
-        "default": "modifying above e with ogonek",
-        "brief": "mod above e with ogonek",
-        "sbrief": "mod above e with ogonek"
+        "default": "아가뇩 부호가 있는 e",
+        "brief": "아가뇩 부호가 있는 e",
+        "sbrief": "아가뇩 부호가 있는 e"
       }
     }
   },
@@ -550,12 +550,12 @@
     "key": "011B",
     "mappings": {
       "default": {
-        "default": "e caron"
+        "default": "카론 e"
       },
       "mathspeak": {
-        "default": "modifying above e with caron",
-        "brief": "mod above e with caron",
-        "sbrief": "mod above e with caron"
+        "default": "카론 부호가 올려진 e",
+        "brief": "카론 부호가 올려진 e",
+        "sbrief": "카론 부호가 올려진 e"
       }
     }
   },
@@ -564,12 +564,12 @@
     "key": "011D",
     "mappings": {
       "default": {
-        "default": "g hat"
+        "default": "곡절음 g"
       },
       "mathspeak": {
-        "default": "modifying above g with caret",
-        "brief": "mod above g with caret",
-        "sbrief": "mod above g with caret"
+        "default": "삽입 기호가 올려진 g",
+        "brief": "삽입 기호가 올려진 g",
+        "sbrief": "삽입 기호가 올려진 g"
       }
     }
   },
@@ -578,12 +578,12 @@
     "key": "011F",
     "mappings": {
       "default": {
-        "default": "g breve"
+        "default": "겹온음표 g"
       },
       "mathspeak": {
-        "default": "modifying above g with breve",
-        "brief": "mod above g with breve",
-        "sbrief": "mod above g with breve"
+        "default": "겹온음표 부호가 올려진 g",
+        "brief": "겹온음표 부호가 올려진 g",
+        "sbrief": "겹온음표 부호가 올려진 g"
       }
     }
   },
@@ -592,12 +592,12 @@
     "key": "0121",
     "mappings": {
       "default": {
-        "default": "g overdot"
+        "default": "윗점 g"
       },
       "mathspeak": {
-        "default": "modifying above g with dot",
-        "brief": "mod above g with dot",
-        "sbrief": "mod above g with dot"
+        "default": "마침점 부호가 올려진 g",
+        "brief": "마침점 부호가 올려진 g",
+        "sbrief": "마침점 부호가 올려진 g"
       }
     }
   },
@@ -606,12 +606,12 @@
     "key": "0123",
     "mappings": {
       "default": {
-        "default": "g cedilla"
+        "default": "갈고리형 g"
       },
       "mathspeak": {
-        "default": "modifying above g with cedilla",
-        "brief": "mod above g with cedilla",
-        "sbrief": "mod above g with cedilla"
+        "default": "갈고리형 부호가 붙여진 g",
+        "brief": "갈고리형 부호가 붙여진 g",
+        "sbrief": "갈고리형 부호가 붙여진 g"
       }
     }
   },
@@ -620,12 +620,12 @@
     "key": "0125",
     "mappings": {
       "default": {
-        "default": "h hat"
+        "default": "곡절음 h"
       },
       "mathspeak": {
-        "default": "modifying above h with caret",
-        "brief": "mod above h with caret",
-        "sbrief": "mod above h with caret"
+        "default": "삽입 기호가 올려진 h",
+        "brief": "삽입 기호가 올려진 h",
+        "sbrief": "삽입 기호가 올려진 h"
       }
     }
   },
@@ -634,12 +634,12 @@
     "key": "0129",
     "mappings": {
       "default": {
-        "default": "i tilde"
+        "default": "물결표 i"
       },
       "mathspeak": {
-        "default": "i overtilde",
-        "brief": "i overtilde",
-        "sbrief": "i overtilde"
+        "default": "물결표가 올려진 i",
+        "brief": "물결표가 올려진 i",
+        "sbrief": "물결표가 올려진 i"
       }
     }
   },
@@ -648,12 +648,12 @@
     "key": "012B",
     "mappings": {
       "default": {
-        "default": "i overbar"
+        "default": "오버바 i"
       },
       "mathspeak": {
-        "default": "i overbar",
-        "brief": "i overbar",
-        "sbrief": "i overbar"
+        "default": "오버바 부호가 올려진 i",
+        "brief": "오버바 부호가 올려진 i",
+        "sbrief": "오버바 부호가 올려진 i"
       }
     }
   },
@@ -662,12 +662,12 @@
     "key": "012D",
     "mappings": {
       "default": {
-        "default": "i breve"
+        "default": "겹온음표 i"
       },
       "mathspeak": {
-        "default": "modifying above i with breve",
-        "brief": "mod above i with breve",
-        "sbrief": "mod above i with breve"
+        "default": "겹온음표 부호가 올려진 i",
+        "brief": "겹온음표 부호가 올려진 i",
+        "sbrief": "겹온음표 부호가 올려진 i"
       }
     }
   },
@@ -676,12 +676,12 @@
     "key": "012F",
     "mappings": {
       "default": {
-        "default": "i ogonek"
+        "default": "아가뇩 i"
       },
       "mathspeak": {
-        "default": "modifying above i with ogonek",
-        "brief": "mod above i with ogonek",
-        "sbrief": "mod above i with ogonek"
+        "default": "아가뇩 부호가 있는 i",
+        "brief": "아가뇩 부호가 있는 i",
+        "sbrief": "아가뇩 부호가 있는 i"
       }
     }
   },
@@ -690,12 +690,12 @@
     "key": "0131",
     "mappings": {
       "default": {
-        "default": "dotless i"
+        "default": "윗점 없는 i"
       },
       "mathspeak": {
-        "default": "modifying above dotless i",
-        "brief": "mod above dotless i",
-        "sbrief": "mod above dotless i"
+        "default": "위에 점이 없는 i",
+        "brief": "위에 점이 없는 i",
+        "sbrief": "위에 점이 없는 i"
       }
     }
   },
@@ -704,12 +704,12 @@
     "key": "0135",
     "mappings": {
       "default": {
-        "default": "j hat"
+        "default": "곡절음 j"
       },
       "mathspeak": {
-        "default": "modifying above j with caret",
-        "brief": "mod above j with caret",
-        "sbrief": "mod above j with caret"
+        "default": "삽입 기호가 올려진 j",
+        "brief": "삽입 기호가 올려진 j",
+        "sbrief": "삽입 기호가 올려진 j"
       }
     }
   },
@@ -718,12 +718,12 @@
     "key": "0137",
     "mappings": {
       "default": {
-        "default": "k cedilla"
+        "default": "갈고리형 k"
       },
       "mathspeak": {
-        "default": "modifying above k with cedilla",
-        "brief": "mod above k with cedilla",
-        "sbrief": "mod above k with cedilla"
+        "default": "갈고리형 부호가 붙여진 k",
+        "brief": "갈고리형 부호가 붙여진 k",
+        "sbrief": "갈고리형 부호가 붙여진 k"
       }
     }
   },
@@ -732,12 +732,12 @@
     "key": "013A",
     "mappings": {
       "default": {
-        "default": "l acute"
+        "default": "양음 l"
       },
       "mathspeak": {
-        "default": "modifying above l with acute",
-        "brief": "mod above l with acute",
-        "sbrief": "mod above l with acute"
+        "default": "양음 부호가 올려진 l",
+        "brief": "양음 부호가 올려진 l",
+        "sbrief": "양음 부호가 올려진 l"
       }
     }
   },
@@ -746,12 +746,12 @@
     "key": "013C",
     "mappings": {
       "default": {
-        "default": "l cedilla"
+        "default": "갈고리형 l"
       },
       "mathspeak": {
-        "default": "modifying above l with cedilla",
-        "brief": "mod above l with cedilla",
-        "sbrief": "mod above l with cedilla"
+        "default": "갈고리형 부호가 붙여진 l",
+        "brief": "갈고리형 부호가 붙여진 l",
+        "sbrief": "갈고리형 부호가 붙여진 l"
       }
     }
   },
@@ -760,12 +760,12 @@
     "key": "013E",
     "mappings": {
       "default": {
-        "default": "l caron"
+        "default": "카론 l"
       },
       "mathspeak": {
-        "default": "modifying above l with caron",
-        "brief": "mod above l with caron",
-        "sbrief": "mod above l with caron"
+        "default": "카론 부호가 올려진 l",
+        "brief": "카론 부호가 올려진 l",
+        "sbrief": "카론 부호가 올려진 l"
       }
     }
   },
@@ -774,12 +774,12 @@
     "key": "0140",
     "mappings": {
       "default": {
-        "default": "l middle dot"
+        "default": "중간점 l"
       },
       "mathspeak": {
-        "default": "modifying above l with middle dot",
-        "brief": "mod above l with middle dot",
-        "sbrief": "mod above l with middle dot"
+        "default": "중간점 부호가 있는 l",
+        "brief": "중간점 부호가 있는 l",
+        "sbrief": "중간점 부호가 있는 l"
       }
     }
   },
@@ -788,12 +788,12 @@
     "key": "0144",
     "mappings": {
       "default": {
-        "default": "n acute"
+        "default": "양음 n"
       },
       "mathspeak": {
-        "default": "modifying above n with acute",
-        "brief": "mod above n with acute",
-        "sbrief": "mod above n with acute"
+        "default": "양음 부호가 올려진 n",
+        "brief": "양음 부호가 올려진 n",
+        "sbrief": "양음 부호가 올려진 n"
       }
     }
   },
@@ -802,12 +802,12 @@
     "key": "0146",
     "mappings": {
       "default": {
-        "default": "n cedilla"
+        "default": "갈고리형 n"
       },
       "mathspeak": {
-        "default": "modifying above n with cedilla",
-        "brief": "mod above n with cedilla",
-        "sbrief": "mod above n with cedilla"
+        "default": "갈고리형 부호가 붙여진 n",
+        "brief": "갈고리형 부호가 붙여진 n",
+        "sbrief": "갈고리형 부호가 붙여진 n"
       }
     }
   },
@@ -816,12 +816,12 @@
     "key": "0148",
     "mappings": {
       "default": {
-        "default": "n caron"
+        "default": "카론 n"
       },
       "mathspeak": {
-        "default": "modifying above n with caron",
-        "brief": "mod above n with caron",
-        "sbrief": "mod above n with caron"
+        "default": "카론 부호가 올려진 n",
+        "brief": "카론 부호가 올려진 n",
+        "sbrief": "카론 부호가 올려진 n"
       }
     }
   },
@@ -830,12 +830,12 @@
     "key": "014D",
     "mappings": {
       "default": {
-        "default": "o overbar"
+        "default": "오버바 o"
       },
       "mathspeak": {
-        "default": "o overbar",
-        "brief": "o overbar",
-        "sbrief": "o overbar"
+        "default": "오버바 부호가 올려진 o",
+        "brief": "오버바 부호가 올려진 o",
+        "sbrief": "오버바 부호가 올려진 o"
       }
     }
   },
@@ -844,12 +844,12 @@
     "key": "014F",
     "mappings": {
       "default": {
-        "default": "o breve"
+        "default": "겹온음표 o"
       },
       "mathspeak": {
-        "default": "modifying above o with breve",
-        "brief": "mod above o with breve",
-        "sbrief": "mod above o with breve"
+        "default": "겹온음표 부호가 올려진 o",
+        "brief": "겹온음표 부호가 올려진 o",
+        "sbrief": "겹온음표 부호가 올려진 o"
       }
     }
   },
@@ -858,12 +858,12 @@
     "key": "0151",
     "mappings": {
       "default": {
-        "default": "o double acute"
+        "default": "이중 양음 o"
       },
       "mathspeak": {
-        "default": "modifying above o with double acute",
-        "brief": "mod above o with double acute",
-        "sbrief": "mod above o with double acute"
+        "default": "이중 양음 부호가 올려진 o",
+        "brief": "이중 양음 부호가 올려진 o",
+        "sbrief": "이중 양음 부호가 올려진 o"
       }
     }
   },
@@ -872,12 +872,12 @@
     "key": "0155",
     "mappings": {
       "default": {
-        "default": "r acute"
+        "default": "양음 r"
       },
       "mathspeak": {
-        "default": "modifying above r with acute",
-        "brief": "mod above r with acute",
-        "sbrief": "mod above r with acute"
+        "default": "양음 부호가 올려진 r",
+        "brief": "양음 부호가 올려진 r",
+        "sbrief": "양음 부호가 올려진 r"
       }
     }
   },
@@ -886,12 +886,12 @@
     "key": "0157",
     "mappings": {
       "default": {
-        "default": "r cedilla"
+        "default": "갈고리형 r"
       },
       "mathspeak": {
-        "default": "modifying above r with cedilla",
-        "brief": "mod above r with cedilla",
-        "sbrief": "mod above r with cedilla"
+        "default": "갈고리형 부호가 붙여진 r",
+        "brief": "갈고리형 부호가 붙여진 r",
+        "sbrief": "갈고리형 부호가 붙여진 r"
       }
     }
   },
@@ -900,12 +900,12 @@
     "key": "0159",
     "mappings": {
       "default": {
-        "default": "r caron"
+        "default": "카론 r"
       },
       "mathspeak": {
-        "default": "modifying above r with caron",
-        "brief": "mod above r with caron",
-        "sbrief": "mod above r with caron"
+        "default": "카론 부호가 올려진 r",
+        "brief": "카론 부호가 올려진 r",
+        "sbrief": "카론 부호가 올려진 r"
       }
     }
   },
@@ -914,12 +914,12 @@
     "key": "015B",
     "mappings": {
       "default": {
-        "default": "s acute"
+        "default": "양음 s"
       },
       "mathspeak": {
-        "default": "modifying above s with acute",
-        "brief": "mod above s with acute",
-        "sbrief": "mod above s with acute"
+        "default": "양음 부호가 올려진 s",
+        "brief": "양음 부호가 올려진 s",
+        "sbrief": "양음 부호가 올려진 s"
       }
     }
   },
@@ -928,12 +928,12 @@
     "key": "015D",
     "mappings": {
       "default": {
-        "default": "s hat"
+        "default": "곡절음 s"
       },
       "mathspeak": {
-        "default": "modifying above s with caret",
-        "brief": "mod above s with caret",
-        "sbrief": "mod above s with caret"
+        "default": "삽입 기호가 올려진 s",
+        "brief": "삽입 기호가 올려진 s",
+        "sbrief": "삽입 기호가 올려진 s"
       }
     }
   },
@@ -942,12 +942,12 @@
     "key": "015F",
     "mappings": {
       "default": {
-        "default": "s cedilla"
+        "default": "갈고리형 s"
       },
       "mathspeak": {
-        "default": "modifying above s with cedilla",
-        "brief": "mod above s with cedilla",
-        "sbrief": "mod above s with cedilla"
+        "default": "갈고리형 부호가 붙여진 s",
+        "brief": "갈고리형 부호가 붙여진 s",
+        "sbrief": "갈고리형 부호가 붙여진 s"
       }
     }
   },
@@ -956,12 +956,12 @@
     "key": "0161",
     "mappings": {
       "default": {
-        "default": "s caron"
+        "default": "카론 s"
       },
       "mathspeak": {
-        "default": "modifying above s with caron",
-        "brief": "mod above s with caron",
-        "sbrief": "mod above s with caron"
+        "default": "카론 부호가 올려진 s",
+        "brief": "카론 부호가 올려진 s",
+        "sbrief": "카론 부호가 올려진 s"
       }
     }
   },
@@ -970,12 +970,12 @@
     "key": "0163",
     "mappings": {
       "default": {
-        "default": "t cedilla"
+        "default": "갈고리형 t"
       },
       "mathspeak": {
-        "default": "modifying above t with cedilla",
-        "brief": "mod above t with cedilla",
-        "sbrief": "mod above t with cedilla"
+        "default": "갈고리형 부호가 붙여진 t",
+        "brief": "갈고리형 부호가 붙여진 t",
+        "sbrief": "갈고리형 부호가 붙여진 t"
       }
     }
   },
@@ -984,12 +984,12 @@
     "key": "0165",
     "mappings": {
       "default": {
-        "default": "t caron"
+        "default": "카론 t"
       },
       "mathspeak": {
-        "default": "modifying above t with caron",
-        "brief": "mod above t with caron",
-        "sbrief": "mod above t with caron"
+        "default": "카론 부호가 올려진 t",
+        "brief": "카론 부호가 올려진 t",
+        "sbrief": "카론 부호가 올려진 t"
       }
     }
   },
@@ -998,12 +998,12 @@
     "key": "0169",
     "mappings": {
       "default": {
-        "default": "u tilde"
+        "default": "물결표 u"
       },
       "mathspeak": {
-        "default": "u overtilde",
-        "brief": "u overtilde",
-        "sbrief": "u overtilde"
+        "default": "물결표가 올려진 u",
+        "brief": "물결표가 올려진 u",
+        "sbrief": "물결표가 올려진 u"
       }
     }
   },
@@ -1012,12 +1012,12 @@
     "key": "016B",
     "mappings": {
       "default": {
-        "default": "u overbar"
+        "default": "오버바 u"
       },
       "mathspeak": {
-        "default": "u overbar",
-        "brief": "u overbar",
-        "sbrief": "u overbar"
+        "default": "오버바 부호가 올려진 u",
+        "brief": "오버바 부호가 올려진 u",
+        "sbrief": "오버바 부호가 올려진 u"
       }
     }
   },
@@ -1026,12 +1026,12 @@
     "key": "016D",
     "mappings": {
       "default": {
-        "default": "u breve"
+        "default": "겹온음표 u"
       },
       "mathspeak": {
-        "default": "modifying above u with breve",
-        "brief": "mod above u with breve",
-        "sbrief": "mod above u with breve"
+        "default": "겹온음표 부호가 올려진 u",
+        "brief": "겹온음표 부호가 올려진 u",
+        "sbrief": "겹온음표 부호가 올려진 u"
       }
     }
   },
@@ -1040,12 +1040,12 @@
     "key": "016F",
     "mappings": {
       "default": {
-        "default": "u ring"
+        "default": "반지 부호 u"
       },
       "mathspeak": {
-        "default": "modifying above u with ring",
-        "brief": "mod above u with ring",
-        "sbrief": "mod above u with ring"
+        "default": "반지 부호가 올려진 u",
+        "brief": "반지 부호가 올려진 u",
+        "sbrief": "반지 부호가 올려진 u"
       }
     }
   },
@@ -1054,12 +1054,12 @@
     "key": "0171",
     "mappings": {
       "default": {
-        "default": "u double acute"
+        "default": "이중 양음 u"
       },
       "mathspeak": {
-        "default": "modifying above u with double acute",
-        "brief": "mod above u with double acute",
-        "sbrief": "mod above u with double acute"
+        "default": "이중 양음 부호가 올려진 u",
+        "brief": "이중 양음 부호가 올려진 u",
+        "sbrief": "이중 양음 부호가 올려진 u"
       }
     }
   },
@@ -1068,12 +1068,12 @@
     "key": "0173",
     "mappings": {
       "default": {
-        "default": "u ogonek"
+        "default": "아가뇩 u"
       },
       "mathspeak": {
-        "default": "modifying above u with ogonek",
-        "brief": "mod above u with ogonek",
-        "sbrief": "mod above u with ogonek"
+        "default": "아가뇩 부호가 있는 u",
+        "brief": "아가뇩 부호가 있는 u",
+        "sbrief": "아가뇩 부호가 있는 u"
       }
     }
   },
@@ -1082,12 +1082,12 @@
     "key": "0175",
     "mappings": {
       "default": {
-        "default": "w hat"
+        "default": "곡절음 w"
       },
       "mathspeak": {
-        "default": "modifying above w with caret",
-        "brief": "mod above w with caret",
-        "sbrief": "mod above w with caret"
+        "default": "삽입 기호가 올려진 w",
+        "brief": "삽입 기호가 올려진 w",
+        "sbrief": "삽입 기호가 올려진 w"
       }
     }
   },
@@ -1096,12 +1096,12 @@
     "key": "0177",
     "mappings": {
       "default": {
-        "default": "y hat"
+        "default": "곡절음 y"
       },
       "mathspeak": {
-        "default": "modifying above y with caret",
-        "brief": "mod above y with caret",
-        "sbrief": "mod above y with caret"
+        "default": "삽입 기호가 올려진 y",
+        "brief": "삽입 기호가 올려진 y",
+        "sbrief": "삽입 기호가 올려진 y"
       }
     }
   },
@@ -1110,12 +1110,12 @@
     "key": "017A",
     "mappings": {
       "default": {
-        "default": "z acute"
+        "default": "양음 z"
       },
       "mathspeak": {
-        "default": "modifying above z with acute",
-        "brief": "mod above z with acute",
-        "sbrief": "mod above z with acute"
+        "default": "양음 부호가 올려진 z",
+        "brief": "양음 부호가 올려진 z",
+        "sbrief": "양음 부호가 올려진 z"
       }
     }
   },
@@ -1124,12 +1124,12 @@
     "key": "017C",
     "mappings": {
       "default": {
-        "default": "z overdot"
+        "default": "윗점 z"
       },
       "mathspeak": {
-        "default": "modifying above z with dot",
-        "brief": "mod above z with dot",
-        "sbrief": "mod above z with dot"
+        "default": "마침점 부호가 올려진 z",
+        "brief": "마침점 부호가 올려진 z",
+        "sbrief": "마침점 부호가 올려진 z"
       }
     }
   },
@@ -1138,12 +1138,12 @@
     "key": "017E",
     "mappings": {
       "default": {
-        "default": "z caron"
+        "default": "카론 z"
       },
       "mathspeak": {
-        "default": "modifying above z with caron",
-        "brief": "mod above z with caron",
-        "sbrief": "mod above z with caron"
+        "default": "카론 부호가 올려진 z",
+        "brief": "카론 부호가 올려진 z",
+        "sbrief": "카론 부호가 올려진 z"
       }
     }
   },
@@ -1152,12 +1152,12 @@
     "key": "01CE",
     "mappings": {
       "default": {
-        "default": "a caron"
+        "default": "카론 a"
       },
       "mathspeak": {
-        "default": "modifying above a with caron",
-        "brief": "mod above a with caron",
-        "sbrief": "mod above a with caron"
+        "default": "카론 부호가 올려진 a",
+        "brief": "카론 부호가 올려진 a",
+        "sbrief": "카론 부호가 올려진 a"
       }
     }
   },
@@ -1166,12 +1166,12 @@
     "key": "01D0",
     "mappings": {
       "default": {
-        "default": "i caron"
+        "default": "카론 i"
       },
       "mathspeak": {
-        "default": "modifying above i with caron",
-        "brief": "mod above i with caron",
-        "sbrief": "mod above i with caron"
+        "default": "카론 부호가 올려진 i",
+        "brief": "카론 부호가 올려진 i",
+        "sbrief": "카론 부호가 올려진 i"
       }
     }
   },
@@ -1180,12 +1180,12 @@
     "key": "01D2",
     "mappings": {
       "default": {
-        "default": "o caron"
+        "default": "카론 o"
       },
       "mathspeak": {
-        "default": "modifying above o with caron",
-        "brief": "mod above o with caron",
-        "sbrief": "mod above o with caron"
+        "default": "카론 부호가 올려진 o",
+        "brief": "카론 부호가 올려진 o",
+        "sbrief": "카론 부호가 올려진 o"
       }
     }
   },
@@ -1194,12 +1194,12 @@
     "key": "01D4",
     "mappings": {
       "default": {
-        "default": "u caron"
+        "default": "카론 u"
       },
       "mathspeak": {
-        "default": "modifying above u with caron",
-        "brief": "mod above u with caron",
-        "sbrief": "mod above u with caron"
+        "default": "카론 부호가 올려진 u",
+        "brief": "카론 부호가 올려진 u",
+        "sbrief": "카론 부호가 올려진 u"
       }
     }
   },
@@ -1208,12 +1208,12 @@
     "key": "01E7",
     "mappings": {
       "default": {
-        "default": "g caron"
+        "default": "카론 g"
       },
       "mathspeak": {
-        "default": "modifying above g with caron",
-        "brief": "mod above g with caron",
-        "sbrief": "mod above g with caron"
+        "default": "카론 부호가 올려진 g",
+        "brief": "카론 부호가 올려진 g",
+        "sbrief": "카론 부호가 올려진 g"
       }
     }
   },
@@ -1222,12 +1222,12 @@
     "key": "01E9",
     "mappings": {
       "default": {
-        "default": "k caron"
+        "default": "카론 k"
       },
       "mathspeak": {
-        "default": "modifying above k with caron",
-        "brief": "mod above k with caron",
-        "sbrief": "mod above k with caron"
+        "default": "카론 부호가 올려진 k",
+        "brief": "카론 부호가 올려진 k",
+        "sbrief": "카론 부호가 올려진 k"
       }
     }
   },
@@ -1236,12 +1236,12 @@
     "key": "01EB",
     "mappings": {
       "default": {
-        "default": "o ogonek"
+        "default": "아가뇩 o"
       },
       "mathspeak": {
-        "default": "modifying above o with ogonek",
-        "brief": "mod above o with ogonek",
-        "sbrief": "mod above o with ogonek"
+        "default": "아가뇩 부호가 있는 o",
+        "brief": "아가뇩 부호가 있는 o",
+        "sbrief": "아가뇩 부호가 있는 o"
       }
     }
   },
@@ -1250,12 +1250,12 @@
     "key": "01F0",
     "mappings": {
       "default": {
-        "default": "j caron"
+        "default": "카론 j"
       },
       "mathspeak": {
-        "default": "modifying above j with caron",
-        "brief": "mod above j with caron",
-        "sbrief": "mod above j with caron"
+        "default": "카론 부호가 올려진 j",
+        "brief": "카론 부호가 올려진 j",
+        "sbrief": "카론 부호가 올려진 j"
       }
     }
   },
@@ -1264,12 +1264,12 @@
     "key": "01F5",
     "mappings": {
       "default": {
-        "default": "g acute"
+        "default": "양음 g"
       },
       "mathspeak": {
-        "default": "modifying above g with acute",
-        "brief": "mod above g with acute",
-        "sbrief": "mod above g with acute"
+        "default": "양음 부호가 올려진 g",
+        "brief": "양음 부호가 올려진 g",
+        "sbrief": "양음 부호가 올려진 g"
       }
     }
   },
@@ -1278,12 +1278,12 @@
     "key": "01F9",
     "mappings": {
       "default": {
-        "default": "n grave"
+        "default": "억음 n"
       },
       "mathspeak": {
-        "default": "modifying above n with grave",
-        "brief": "mod above n with grave",
-        "sbrief": "mod above n with grave"
+        "default": "억음 부호가 올려진 n",
+        "brief": "억음 부호가 올려진 n",
+        "sbrief": "억음 부호가 올려진 n"
       }
     }
   },
@@ -1292,12 +1292,12 @@
     "key": "0201",
     "mappings": {
       "default": {
-        "default": "a double grave"
+        "default": "이중 억음 a"
       },
       "mathspeak": {
-        "default": "modifying above a with double grave",
-        "brief": "mod above a with double grave",
-        "sbrief": "mod above a with double grave"
+        "default": "이중 억음 부호가 올려진 a",
+        "brief": "이중 억음 부호가 올려진 a",
+        "sbrief": "이중 억음 부호가 올려진 a"
       }
     }
   },
@@ -1306,12 +1306,12 @@
     "key": "0203",
     "mappings": {
       "default": {
-        "default": "a inverted breve"
+        "default": "반전 겹온음표 a"
       },
       "mathspeak": {
-        "default": "modifying above a with inverted breve",
-        "brief": "mod above a with inverted breve",
-        "sbrief": "mod above a with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 a",
+        "brief": "반전된 겹온음표 부호가 올려진 a",
+        "sbrief": "반전된 겹온음표 부호가 올려진 a"
       }
     }
   },
@@ -1320,12 +1320,12 @@
     "key": "0205",
     "mappings": {
       "default": {
-        "default": "e double grave"
+        "default": "이중 억음 e"
       },
       "mathspeak": {
-        "default": "modifying above e with double grave",
-        "brief": "mod above e with double grave",
-        "sbrief": "mod above e with double grave"
+        "default": "이중 억음 부호가 올려진 e",
+        "brief": "이중 억음 부호가 올려진 e",
+        "sbrief": "이중 억음 부호가 올려진 e"
       }
     }
   },
@@ -1334,12 +1334,12 @@
     "key": "0207",
     "mappings": {
       "default": {
-        "default": "e inverted breve"
+        "default": "반전 겹온음표 e"
       },
       "mathspeak": {
-        "default": "modifying above e with inverted breve",
-        "brief": "mod above e with inverted breve",
-        "sbrief": "mod above e with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 e",
+        "brief": "반전된 겹온음표 부호가 올려진 e",
+        "sbrief": "반전된 겹온음표 부호가 올려진 e"
       }
     }
   },
@@ -1348,12 +1348,12 @@
     "key": "0209",
     "mappings": {
       "default": {
-        "default": "i double grave"
+        "default": "이중 억음 i"
       },
       "mathspeak": {
-        "default": "modifying above i with double grave",
-        "brief": "mod above i with double grave",
-        "sbrief": "mod above i with double grave"
+        "default": "이중 억음 부호가 올려진 i",
+        "brief": "이중 억음 부호가 올려진 i",
+        "sbrief": "이중 억음 부호가 올려진 i"
       }
     }
   },
@@ -1362,12 +1362,12 @@
     "key": "020B",
     "mappings": {
       "default": {
-        "default": "i inverted breve"
+        "default": "반전 겹온음표 i"
       },
       "mathspeak": {
-        "default": "modifying above i with inverted breve",
-        "brief": "mod above i with inverted breve",
-        "sbrief": "mod above i with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 i",
+        "brief": "반전된 겹온음표 부호가 올려진 i",
+        "sbrief": "반전된 겹온음표 부호가 올려진 i"
       }
     }
   },
@@ -1376,12 +1376,12 @@
     "key": "020D",
     "mappings": {
       "default": {
-        "default": "o double grave"
+        "default": "이중 억음 o"
       },
       "mathspeak": {
-        "default": "modifying above o with double grave",
-        "brief": "mod above o with double grave",
-        "sbrief": "mod above o with double grave"
+        "default": "이중 억음 부호가 올려진 o",
+        "brief": "이중 억음 부호가 올려진 o",
+        "sbrief": "이중 억음 부호가 올려진 o"
       }
     }
   },
@@ -1390,12 +1390,12 @@
     "key": "020F",
     "mappings": {
       "default": {
-        "default": "o inverted breve"
+        "default": "반전 겹온음표 o"
       },
       "mathspeak": {
-        "default": "modifying above o with inverted breve",
-        "brief": "mod above o with inverted breve",
-        "sbrief": "mod above o with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 o",
+        "brief": "반전된 겹온음표 부호가 올려진 o",
+        "sbrief": "반전된 겹온음표 부호가 올려진 o"
       }
     }
   },
@@ -1404,12 +1404,12 @@
     "key": "0211",
     "mappings": {
       "default": {
-        "default": "r double grave"
+        "default": "이중 억음 r"
       },
       "mathspeak": {
-        "default": "modifying above r with double grave",
-        "brief": "mod above r with double grave",
-        "sbrief": "mod above r with double grave"
+        "default": "이중 억음 부호가 올려진 r",
+        "brief": "이중 억음 부호가 올려진 r",
+        "sbrief": "이중 억음 부호가 올려진 r"
       }
     }
   },
@@ -1418,12 +1418,12 @@
     "key": "0213",
     "mappings": {
       "default": {
-        "default": "r inverted breve"
+        "default": "반전 겹온음표 r"
       },
       "mathspeak": {
-        "default": "modifying above r with inverted breve",
-        "brief": "mod above r with inverted breve",
-        "sbrief": "mod above r with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 r",
+        "brief": "반전된 겹온음표 부호가 올려진 r",
+        "sbrief": "반전된 겹온음표 부호가 올려진 r"
       }
     }
   },
@@ -1432,12 +1432,12 @@
     "key": "0215",
     "mappings": {
       "default": {
-        "default": "u double grave"
+        "default": "이중 억음 u"
       },
       "mathspeak": {
-        "default": "modifying above u with double grave",
-        "brief": "mod above u with double grave",
-        "sbrief": "mod above u with double grave"
+        "default": "이중 억음 부호가 올려진 u",
+        "brief": "이중 억음 부호가 올려진 u",
+        "sbrief": "이중 억음 부호가 올려진 u"
       }
     }
   },
@@ -1446,12 +1446,12 @@
     "key": "0217",
     "mappings": {
       "default": {
-        "default": "u inverted breve"
+        "default": "반전 겹온음표 u"
       },
       "mathspeak": {
-        "default": "modifying above u with inverted breve",
-        "brief": "mod above u with inverted breve",
-        "sbrief": "mod above u with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 u",
+        "brief": "반전된 겹온음표 부호가 올려진 u",
+        "sbrief": "반전된 겹온음표 부호가 올려진 u"
       }
     }
   },
@@ -1460,12 +1460,12 @@
     "key": "0219",
     "mappings": {
       "default": {
-        "default": "s comma below"
+        "default": "아래 쉼표 s"
       },
       "mathspeak": {
-        "default": "modifying below s with comma below",
-        "brief": "mod below s with comma below",
-        "sbrief": "mod below s with comma below"
+        "default": "아래에 쉼표 부호가 있는 s",
+        "brief": "아래에 쉼표 부호가 있는 s",
+        "sbrief": "아래에 쉼표 부호가 있는 s"
       }
     }
   },
@@ -1474,12 +1474,12 @@
     "key": "021B",
     "mappings": {
       "default": {
-        "default": "t comma below"
+        "default": "아래 쉼표 t"
       },
       "mathspeak": {
-        "default": "modifying below t with comma below",
-        "brief": "mod below t with comma below",
-        "sbrief": "mod below t with comma below"
+        "default": "아래에 쉼표 부호가 있는 t",
+        "brief": "아래에 쉼표 부호가 있는 t",
+        "sbrief": "아래에 쉼표 부호가 있는 t"
       }
     }
   },
@@ -1488,12 +1488,12 @@
     "key": "021F",
     "mappings": {
       "default": {
-        "default": "h caron"
+        "default": "카론 h"
       },
       "mathspeak": {
-        "default": "modifying above h with caron",
-        "brief": "mod above h with caron",
-        "sbrief": "mod above h with caron"
+        "default": "카론 부호가 올려진 h",
+        "brief": "카론 부호가 올려진 h",
+        "sbrief": "카론 부호가 올려진 h"
       }
     }
   },
@@ -1502,12 +1502,12 @@
     "key": "0227",
     "mappings": {
       "default": {
-        "default": "a overdot"
+        "default": "윗점 a"
       },
       "mathspeak": {
-        "default": "modifying above a with dot",
-        "brief": "mod above a with dot",
-        "sbrief": "mod above a with dot"
+        "default": "마침점 부호가 올려진 a",
+        "brief": "마침점 부호가 올려진 a",
+        "sbrief": "마침점 부호가 올려진 a"
       }
     }
   },
@@ -1516,12 +1516,12 @@
     "key": "0229",
     "mappings": {
       "default": {
-        "default": "e cedilla"
+        "default": "갈고리형 e"
       },
       "mathspeak": {
-        "default": "modifying above e with cedilla",
-        "brief": "mod above e with cedilla",
-        "sbrief": "mod above e with cedilla"
+        "default": "갈고리형 부호가 붙여진 e",
+        "brief": "갈고리형 부호가 붙여진 e",
+        "sbrief": "갈고리형 부호가 붙여진 e"
       }
     }
   },
@@ -1530,12 +1530,12 @@
     "key": "022F",
     "mappings": {
       "default": {
-        "default": "o overdot"
+        "default": "윗점 o"
       },
       "mathspeak": {
-        "default": "modifying above o with dot",
-        "brief": "mod above o with dot",
-        "sbrief": "mod above o with dot"
+        "default": "마침점 부호가 올려진 o",
+        "brief": "마침점 부호가 올려진 o",
+        "sbrief": "마침점 부호가 올려진 o"
       }
     }
   },
@@ -1544,12 +1544,12 @@
     "key": "0233",
     "mappings": {
       "default": {
-        "default": "y overbar"
+        "default": "오버바 y"
       },
       "mathspeak": {
-        "default": "y overbar",
-        "brief": "y overbar",
-        "sbrief": "y overbar"
+        "default": "오버바 부호가 올려진 y",
+        "brief": "오버바 부호가 올려진 y",
+        "sbrief": "오버바 부호가 올려진 y"
       }
     }
   },
@@ -1558,12 +1558,12 @@
     "key": "0237",
     "mappings": {
       "default": {
-        "default": "dotless j"
+        "default": "윗점 없는 j"
       },
       "mathspeak": {
-        "default": "modifying above dotless j",
-        "brief": "mod above dotless j",
-        "sbrief": "mod above dotless j"
+        "default": "위에 점이 없는 j",
+        "brief": "위에 점이 없는 j",
+        "sbrief": "위에 점이 없는 j"
       }
     }
   },
@@ -1572,12 +1572,12 @@
     "key": "1E01",
     "mappings": {
       "default": {
-        "default": "a ring below"
+        "default": "아래 반지 부호 a"
       },
       "mathspeak": {
-        "default": "modifying below a with ring below",
-        "brief": "mod below a with ring below",
-        "sbrief": "mod below a with ring below"
+        "default": "아래에 반지 부호가 있는 a",
+        "brief": "아래에 반지 부호가 있는 a",
+        "sbrief": "아래에 반지 부호가 있는 a"
       }
     }
   },
@@ -1586,12 +1586,12 @@
     "key": "1E03",
     "mappings": {
       "default": {
-        "default": "b overdot"
+        "default": "윗점 b"
       },
       "mathspeak": {
-        "default": "modifying above b with dot",
-        "brief": "mod above b with dot",
-        "sbrief": "mod above b with dot"
+        "default": "마침점 부호가 올려진 b",
+        "brief": "마침점 부호가 올려진 b",
+        "sbrief": "마침점 부호가 올려진 b"
       }
     }
   },
@@ -1600,12 +1600,12 @@
     "key": "1E05",
     "mappings": {
       "default": {
-        "default": "b underdot"
+        "default": "아랫점 b"
       },
       "mathspeak": {
-        "default": "modifying below b with dot",
-        "brief": "mod below b with dot",
-        "sbrief": "mod below b with dot"
+        "default": "아래에 마침표 부호가 있는 b",
+        "brief": "아래에 마침표 부호가 있는 b",
+        "sbrief": "아래에 마침표 부호가 있는 b"
       }
     }
   },
@@ -1614,12 +1614,12 @@
     "key": "1E07",
     "mappings": {
       "default": {
-        "default": "b underbar"
+        "default": "언더바 b"
       },
       "mathspeak": {
-        "default": "b underbar",
-        "brief": "b underbar",
-        "sbrief": "b underbar"
+        "default": "언더바 부호가 있는 b",
+        "brief": "언더바 부호가 있는 b",
+        "sbrief": "언더바 부호가 있는 b"
       }
     }
   },
@@ -1628,12 +1628,12 @@
     "key": "1E0B",
     "mappings": {
       "default": {
-        "default": "d overdot"
+        "default": "윗점 d"
       },
       "mathspeak": {
-        "default": "modifying above d with dot",
-        "brief": "mod above d with dot",
-        "sbrief": "mod above d with dot"
+        "default": "마침점 부호가 올려진 d",
+        "brief": "마침점 부호가 올려진 d",
+        "sbrief": "마침점 부호가 올려진 d"
       }
     }
   },
@@ -1642,12 +1642,12 @@
     "key": "1E0D",
     "mappings": {
       "default": {
-        "default": "d underdot"
+        "default": "아랫점 d"
       },
       "mathspeak": {
-        "default": "modifying below d with dot",
-        "brief": "mod below d with dot",
-        "sbrief": "mod below d with dot"
+        "default": "아래에 마침표 부호가 있는 d",
+        "brief": "아래에 마침표 부호가 있는 d",
+        "sbrief": "아래에 마침표 부호가 있는 d"
       }
     }
   },
@@ -1656,12 +1656,12 @@
     "key": "1E0F",
     "mappings": {
       "default": {
-        "default": "d underbar"
+        "default": "언더바 d"
       },
       "mathspeak": {
-        "default": "d underbar",
-        "brief": "d underbar",
-        "sbrief": "d underbar"
+        "default": "언더바 부호가 있는 d",
+        "brief": "언더바 부호가 있는 d",
+        "sbrief": "언더바 부호가 있는 d"
       }
     }
   },
@@ -1670,12 +1670,12 @@
     "key": "1E11",
     "mappings": {
       "default": {
-        "default": "d cedilla"
+        "default": "갈고리형 d"
       },
       "mathspeak": {
-        "default": "modifying above d with cedilla",
-        "brief": "mod above d with cedilla",
-        "sbrief": "mod above d with cedilla"
+        "default": "갈고리형 부호가 붙여진 d",
+        "brief": "갈고리형 부호가 붙여진 d",
+        "sbrief": "갈고리형 부호가 붙여진 d"
       }
     }
   },
@@ -1684,12 +1684,12 @@
     "key": "1E13",
     "mappings": {
       "default": {
-        "default": "d underhat"
+        "default": "아래 곡절음 d"
       },
       "mathspeak": {
-        "default": "modifying below d with caret",
-        "brief": "mod below d with caret",
-        "sbrief": "mod below d with caret"
+        "default": "아래에 곡절음 부호가 있는 d",
+        "brief": "아래에 곡절음 부호가 있는 d",
+        "sbrief": "아래에 곡절음 부호가 있는 d"
       }
     }
   },
@@ -1698,12 +1698,12 @@
     "key": "1E19",
     "mappings": {
       "default": {
-        "default": "e underhat"
+        "default": "아래 곡절음 e"
       },
       "mathspeak": {
-        "default": "modifying below e with caret",
-        "brief": "mod below e with caret",
-        "sbrief": "mod below e with caret"
+        "default": "아래에 곡절음 부호가 있는 e",
+        "brief": "아래에 곡절음 부호가 있는 e",
+        "sbrief": "아래에 곡절음 부호가 있는 e"
       }
     }
   },
@@ -1712,12 +1712,12 @@
     "key": "1E1B",
     "mappings": {
       "default": {
-        "default": "e tilde below"
+        "default": "아래 물결표 e"
       },
       "mathspeak": {
-        "default": "e undertilde",
-        "brief": "e undertilde",
-        "sbrief": "e undertilde"
+        "default": "아래에 물결표가 있는 e",
+        "brief": "아래에 물결표가 있는 e",
+        "sbrief": "아래에 물결표가 있는 e"
       }
     }
   },
@@ -1726,12 +1726,12 @@
     "key": "1E1F",
     "mappings": {
       "default": {
-        "default": "f overdot"
+        "default": "윗점 f"
       },
       "mathspeak": {
-        "default": "modifying above f with dot",
-        "brief": "mod above f with dot",
-        "sbrief": "mod above f with dot"
+        "default": "마침점 부호가 올려진 f",
+        "brief": "마침점 부호가 올려진 f",
+        "sbrief": "마침점 부호가 올려진 f"
       }
     }
   },
@@ -1740,12 +1740,12 @@
     "key": "1E21",
     "mappings": {
       "default": {
-        "default": "g overbar"
+        "default": "오버바 g"
       },
       "mathspeak": {
-        "default": "g overbar",
-        "brief": "g overbar",
-        "sbrief": "g overbar"
+        "default": "오버바 부호가 올려진 g",
+        "brief": "오버바 부호가 올려진 g",
+        "sbrief": "오버바 부호가 올려진 g"
       }
     }
   },
@@ -1754,12 +1754,12 @@
     "key": "1E23",
     "mappings": {
       "default": {
-        "default": "h overdot"
+        "default": "윗점 h"
       },
       "mathspeak": {
-        "default": "modifying above h with dot",
-        "brief": "mod above h with dot",
-        "sbrief": "mod above h with dot"
+        "default": "마침점 부호가 올려진 h",
+        "brief": "마침점 부호가 올려진 h",
+        "sbrief": "마침점 부호가 올려진 h"
       }
     }
   },
@@ -1768,12 +1768,12 @@
     "key": "1E25",
     "mappings": {
       "default": {
-        "default": "h underdot"
+        "default": "아랫점 h"
       },
       "mathspeak": {
-        "default": "modifying below h with dot",
-        "brief": "mod below h with dot",
-        "sbrief": "mod below h with dot"
+        "default": "아래에 마침표 부호가 있는 h",
+        "brief": "아래에 마침표 부호가 있는 h",
+        "sbrief": "아래에 마침표 부호가 있는 h"
       }
     }
   },
@@ -1782,12 +1782,12 @@
     "key": "1E27",
     "mappings": {
       "default": {
-        "default": "h double overdot"
+        "default": "분음 부호표 h"
       },
       "mathspeak": {
-        "default": "modifying above h with double dot",
-        "brief": "mod above h with double dot",
-        "sbrief": "mod above h with double dot"
+        "default": "분음 부호가 올려진 h",
+        "brief": "분음 부호가 올려진 h",
+        "sbrief": "분음 부호가 올려진 h"
       }
     }
   },
@@ -1796,12 +1796,12 @@
     "key": "1E29",
     "mappings": {
       "default": {
-        "default": "h cedilla"
+        "default": "갈고리형 h"
       },
       "mathspeak": {
-        "default": "modifying above h with cedilla",
-        "brief": "mod above h with cedilla",
-        "sbrief": "mod above h with cedilla"
+        "default": "갈고리형 부호가 붙여진 h",
+        "brief": "갈고리형 부호가 붙여진 h",
+        "sbrief": "갈고리형 부호가 붙여진 h"
       }
     }
   },
@@ -1810,12 +1810,12 @@
     "key": "1E2B",
     "mappings": {
       "default": {
-        "default": "h breve below"
+        "default": "아래 겹온음표 h"
       },
       "mathspeak": {
-        "default": "modifying below h with breve below",
-        "brief": "mod below h with breve below",
-        "sbrief": "mod below h with breve below"
+        "default": "아래에 겹온음표 부호가 있는 h",
+        "brief": "아래에 겹온음표 부호가 있는 h",
+        "sbrief": "아래에 겹온음표 부호가 있는 h"
       }
     }
   },
@@ -1824,12 +1824,12 @@
     "key": "1E2D",
     "mappings": {
       "default": {
-        "default": "i tilde below"
+        "default": "아래 물결표 i"
       },
       "mathspeak": {
-        "default": "i undertilde",
-        "brief": "i undertilde",
-        "sbrief": "i undertilde"
+        "default": "아래에 물결표가 있는 i",
+        "brief": "아래에 물결표가 있는 i",
+        "sbrief": "아래에 물결표가 있는 i"
       }
     }
   },
@@ -1838,12 +1838,12 @@
     "key": "1E31",
     "mappings": {
       "default": {
-        "default": "k acute"
+        "default": "양음 k"
       },
       "mathspeak": {
-        "default": "modifying above k with acute",
-        "brief": "mod above k with acute",
-        "sbrief": "mod above k with acute"
+        "default": "양음 부호가 올려진 k",
+        "brief": "양음 부호가 올려진 k",
+        "sbrief": "양음 부호가 올려진 k"
       }
     }
   },
@@ -1852,12 +1852,12 @@
     "key": "1E33",
     "mappings": {
       "default": {
-        "default": "k underdot"
+        "default": "아랫점 k"
       },
       "mathspeak": {
-        "default": "modifying below k with dot",
-        "brief": "mod below k with dot",
-        "sbrief": "mod below k with dot"
+        "default": "아래에 마침표 부호가 있는 k",
+        "brief": "아래에 마침표 부호가 있는 k",
+        "sbrief": "아래에 마침표 부호가 있는 k"
       }
     }
   },
@@ -1866,12 +1866,12 @@
     "key": "1E35",
     "mappings": {
       "default": {
-        "default": "k underbar"
+        "default": "언더바 k"
       },
       "mathspeak": {
-        "default": "k underbar",
-        "brief": "k underbar",
-        "sbrief": "k underbar"
+        "default": "언더바 부호가 있는 k",
+        "brief": "언더바 부호가 있는 k",
+        "sbrief": "언더바 부호가 있는 k"
       }
     }
   },
@@ -1880,12 +1880,12 @@
     "key": "1E37",
     "mappings": {
       "default": {
-        "default": "l underdot"
+        "default": "아랫점 l"
       },
       "mathspeak": {
-        "default": "modifying below l with dot",
-        "brief": "mod below l with dot",
-        "sbrief": "mod below l with dot"
+        "default": "아래에 마침표 부호가 있는 l",
+        "brief": "아래에 마침표 부호가 있는 l",
+        "sbrief": "아래에 마침표 부호가 있는 l"
       }
     }
   },
@@ -1894,12 +1894,12 @@
     "key": "1E3B",
     "mappings": {
       "default": {
-        "default": "l underbar"
+        "default": "언더바 l"
       },
       "mathspeak": {
-        "default": "l underbar",
-        "brief": "l underbar",
-        "sbrief": "l underbar"
+        "default": "언더바 부호가 있는 l",
+        "brief": "언더바 부호가 있는 l",
+        "sbrief": "언더바 부호가 있는 l"
       }
     }
   },
@@ -1908,12 +1908,12 @@
     "key": "1E3D",
     "mappings": {
       "default": {
-        "default": "l underhat"
+        "default": "아래 곡절음 l"
       },
       "mathspeak": {
-        "default": "modifying below l with caret",
-        "brief": "mod below l with caret",
-        "sbrief": "mod below l with caret"
+        "default": "아래에 곡절음 부호가 있는 l",
+        "brief": "아래에 곡절음 부호가 있는 l",
+        "sbrief": "아래에 곡절음 부호가 있는 l"
       }
     }
   },
@@ -1922,12 +1922,12 @@
     "key": "1E3F",
     "mappings": {
       "default": {
-        "default": "m acute"
+        "default": "양음 m"
       },
       "mathspeak": {
-        "default": "modifying above m with acute",
-        "brief": "mod above m with acute",
-        "sbrief": "mod above m with acute"
+        "default": "양음 부호가 올려진 m",
+        "brief": "양음 부호가 올려진 m",
+        "sbrief": "양음 부호가 올려진 m"
       }
     }
   },
@@ -1936,12 +1936,12 @@
     "key": "1E41",
     "mappings": {
       "default": {
-        "default": "m overdot"
+        "default": "윗점 m"
       },
       "mathspeak": {
-        "default": "modifying above m with dot",
-        "brief": "mod above m with dot",
-        "sbrief": "mod above m with dot"
+        "default": "마침점 부호가 올려진 m",
+        "brief": "마침점 부호가 올려진 m",
+        "sbrief": "마침점 부호가 올려진 m"
       }
     }
   },
@@ -1950,12 +1950,12 @@
     "key": "1E43",
     "mappings": {
       "default": {
-        "default": "m underdot"
+        "default": "아랫점 m"
       },
       "mathspeak": {
-        "default": "modifying below m with dot",
-        "brief": "mod below m with dot",
-        "sbrief": "mod below m with dot"
+        "default": "아래에 마침표 부호가 있는 m",
+        "brief": "아래에 마침표 부호가 있는 m",
+        "sbrief": "아래에 마침표 부호가 있는 m"
       }
     }
   },
@@ -1964,12 +1964,12 @@
     "key": "1E45",
     "mappings": {
       "default": {
-        "default": "n overdot"
+        "default": "윗점 n"
       },
       "mathspeak": {
-        "default": "modifying above n with dot",
-        "brief": "mod above n with dot",
-        "sbrief": "mod above n with dot"
+        "default": "마침점 부호가 올려진 n",
+        "brief": "마침점 부호가 올려진 n",
+        "sbrief": "마침점 부호가 올려진 n"
       }
     }
   },
@@ -1978,12 +1978,12 @@
     "key": "1E47",
     "mappings": {
       "default": {
-        "default": "n underdot"
+        "default": "아랫점 n"
       },
       "mathspeak": {
-        "default": "modifying below n with dot",
-        "brief": "mod below n with dot",
-        "sbrief": "mod below n with dot"
+        "default": "아래에 마침표 부호가 있는 n",
+        "brief": "아래에 마침표 부호가 있는 n",
+        "sbrief": "아래에 마침표 부호가 있는 n"
       }
     }
   },
@@ -1992,12 +1992,12 @@
     "key": "1E49",
     "mappings": {
       "default": {
-        "default": "n underbar"
+        "default": "언더바 n"
       },
       "mathspeak": {
-        "default": "n underbar",
-        "brief": "n underbar",
-        "sbrief": "n underbar"
+        "default": "언더바 부호가 있는 n",
+        "brief": "언더바 부호가 있는 n",
+        "sbrief": "언더바 부호가 있는 n"
       }
     }
   },
@@ -2006,12 +2006,12 @@
     "key": "1E4B",
     "mappings": {
       "default": {
-        "default": "n underhat"
+        "default": "아래 곡절음 n"
       },
       "mathspeak": {
-        "default": "modifying below n with caret",
-        "brief": "mod below n with caret",
-        "sbrief": "mod below n with caret"
+        "default": "아래에 곡절음 부호가 있는 n",
+        "brief": "아래에 곡절음 부호가 있는 n",
+        "sbrief": "아래에 곡절음 부호가 있는 n"
       }
     }
   },
@@ -2020,12 +2020,12 @@
     "key": "1E55",
     "mappings": {
       "default": {
-        "default": "p acute"
+        "default": "양음 p"
       },
       "mathspeak": {
-        "default": "modifying above p with acute",
-        "brief": "mod above p with acute",
-        "sbrief": "mod above p with acute"
+        "default": "양음 부호가 올려진 p",
+        "brief": "양음 부호가 올려진 p",
+        "sbrief": "양음 부호가 올려진 p"
       }
     }
   },
@@ -2034,12 +2034,12 @@
     "key": "1E57",
     "mappings": {
       "default": {
-        "default": "p overdot"
+        "default": "윗점 p"
       },
       "mathspeak": {
-        "default": "modifying above p with dot",
-        "brief": "mod above p with dot",
-        "sbrief": "mod above p with dot"
+        "default": "마침점 부호가 올려진 p",
+        "brief": "마침점 부호가 올려진 p",
+        "sbrief": "마침점 부호가 올려진 p"
       }
     }
   },
@@ -2048,12 +2048,12 @@
     "key": "1E59",
     "mappings": {
       "default": {
-        "default": "r overdot"
+        "default": "윗점 r"
       },
       "mathspeak": {
-        "default": "modifying above r with dot",
-        "brief": "mod above r with dot",
-        "sbrief": "mod above r with dot"
+        "default": "마침점 부호가 올려진 r",
+        "brief": "마침점 부호가 올려진 r",
+        "sbrief": "마침점 부호가 올려진 r"
       }
     }
   },
@@ -2062,12 +2062,12 @@
     "key": "1E5B",
     "mappings": {
       "default": {
-        "default": "r underdot"
+        "default": "아랫점 r"
       },
       "mathspeak": {
-        "default": "modifying below r with dot",
-        "brief": "mod below r with dot",
-        "sbrief": "mod below r with dot"
+        "default": "아래에 마침표 부호가 있는 r",
+        "brief": "아래에 마침표 부호가 있는 r",
+        "sbrief": "아래에 마침표 부호가 있는 r"
       }
     }
   },
@@ -2076,12 +2076,12 @@
     "key": "1E5F",
     "mappings": {
       "default": {
-        "default": "r underbar"
+        "default": "언더바 r"
       },
       "mathspeak": {
-        "default": "r underbar",
-        "brief": "r underbar",
-        "sbrief": "r underbar"
+        "default": "언더바 부호가 있는 r",
+        "brief": "언더바 부호가 있는 r",
+        "sbrief": "언더바 부호가 있는 r"
       }
     }
   },
@@ -2090,12 +2090,12 @@
     "key": "1E61",
     "mappings": {
       "default": {
-        "default": "s overdot"
+        "default": "윗점 s"
       },
       "mathspeak": {
-        "default": "modifying above s with dot",
-        "brief": "mod above s with dot",
-        "sbrief": "mod above s with dot"
+        "default": "마침점 부호가 올려진 s",
+        "brief": "마침점 부호가 올려진 s",
+        "sbrief": "마침점 부호가 올려진 s"
       }
     }
   },
@@ -2104,12 +2104,12 @@
     "key": "1E63",
     "mappings": {
       "default": {
-        "default": "s underdot"
+        "default": "아랫점 s"
       },
       "mathspeak": {
-        "default": "modifying below s with dot",
-        "brief": "mod below s with dot",
-        "sbrief": "mod below s with dot"
+        "default": "아래에 마침표 부호가 있는 s",
+        "brief": "아래에 마침표 부호가 있는 s",
+        "sbrief": "아래에 마침표 부호가 있는 s"
       }
     }
   },
@@ -2118,12 +2118,12 @@
     "key": "1E6B",
     "mappings": {
       "default": {
-        "default": "t overdot"
+        "default": "윗점 t"
       },
       "mathspeak": {
-        "default": "modifying above t with dot",
-        "brief": "mod above t with dot",
-        "sbrief": "mod above t with dot"
+        "default": "마침점 부호가 올려진 t",
+        "brief": "마침점 부호가 올려진 t",
+        "sbrief": "마침점 부호가 올려진 t"
       }
     }
   },
@@ -2132,12 +2132,12 @@
     "key": "1E6D",
     "mappings": {
       "default": {
-        "default": "t underdot"
+        "default": "아랫점 t"
       },
       "mathspeak": {
-        "default": "modifying below t with dot",
-        "brief": "mod below t with dot",
-        "sbrief": "mod below t with dot"
+        "default": "아래에 마침표 부호가 있는 t",
+        "brief": "아래에 마침표 부호가 있는 t",
+        "sbrief": "아래에 마침표 부호가 있는 t"
       }
     }
   },
@@ -2146,12 +2146,12 @@
     "key": "1E6F",
     "mappings": {
       "default": {
-        "default": "t underbar"
+        "default": "언더바 t"
       },
       "mathspeak": {
-        "default": "t underbar",
-        "brief": "t underbar",
-        "sbrief": "t underbar"
+        "default": "언더바 부호가 있는 t",
+        "brief": "언더바 부호가 있는 t",
+        "sbrief": "언더바 부호가 있는 t"
       }
     }
   },
@@ -2160,12 +2160,12 @@
     "key": "1E71",
     "mappings": {
       "default": {
-        "default": "t underhat"
+        "default": "아래 곡절음 t"
       },
       "mathspeak": {
-        "default": "modifying below t with caret",
-        "brief": "mod below t with caret",
-        "sbrief": "mod below t with caret"
+        "default": "아래에 곡절음 부호가 있는 t",
+        "brief": "아래에 곡절음 부호가 있는 t",
+        "sbrief": "아래에 곡절음 부호가 있는 t"
       }
     }
   },
@@ -2174,12 +2174,12 @@
     "key": "1E73",
     "mappings": {
       "default": {
-        "default": "u double underdot"
+        "default": "아래 분음 부호표 u"
       },
       "mathspeak": {
-        "default": "modifying below u with double dot",
-        "brief": "mod below u with double dot",
-        "sbrief": "mod below u with double dot"
+        "default": "아래에 분음 부호가 있는 u",
+        "brief": "아래에 분음 부호가 있는 u",
+        "sbrief": "아래에 분음 부호가 있는 u"
       }
     }
   },
@@ -2188,12 +2188,12 @@
     "key": "1E75",
     "mappings": {
       "default": {
-        "default": "u tilde below"
+        "default": "아래 물결표 u"
       },
       "mathspeak": {
-        "default": "u undertilde",
-        "brief": "u undertilde",
-        "sbrief": "u undertilde"
+        "default": "아래에 물결표가 있는 u",
+        "brief": "아래에 물결표가 있는 u",
+        "sbrief": "아래에 물결표가 있는 u"
       }
     }
   },
@@ -2202,12 +2202,12 @@
     "key": "1E77",
     "mappings": {
       "default": {
-        "default": "u underhat"
+        "default": "아래 곡절음 u"
       },
       "mathspeak": {
-        "default": "modifying below u with caret",
-        "brief": "mod below u with caret",
-        "sbrief": "mod below u with caret"
+        "default": "아래에 곡절음 부호가 있는 u",
+        "brief": "아래에 곡절음 부호가 있는 u",
+        "sbrief": "아래에 곡절음 부호가 있는 u"
       }
     }
   },
@@ -2216,12 +2216,12 @@
     "key": "1E7D",
     "mappings": {
       "default": {
-        "default": "v tilde"
+        "default": "물결표 v"
       },
       "mathspeak": {
-        "default": "v overtilde",
-        "brief": "v overtilde",
-        "sbrief": "v overtilde"
+        "default": "물결표가 올려진 v",
+        "brief": "물결표가 올려진 v",
+        "sbrief": "물결표가 올려진 v"
       }
     }
   },
@@ -2230,12 +2230,12 @@
     "key": "1E7F",
     "mappings": {
       "default": {
-        "default": "v underdot"
+        "default": "아랫점 v"
       },
       "mathspeak": {
-        "default": "modifying below v with dot",
-        "brief": "mod below v with dot",
-        "sbrief": "mod below v with dot"
+        "default": "아래에 마침표 부호가 있는 v",
+        "brief": "아래에 마침표 부호가 있는 v",
+        "sbrief": "아래에 마침표 부호가 있는 v"
       }
     }
   },
@@ -2244,12 +2244,12 @@
     "key": "1E81",
     "mappings": {
       "default": {
-        "default": "w grave"
+        "default": "억음 w"
       },
       "mathspeak": {
-        "default": "modifying above w with grave",
-        "brief": "mod above w with grave",
-        "sbrief": "mod above w with grave"
+        "default": "억음 부호가 올려진 w",
+        "brief": "억음 부호가 올려진 w",
+        "sbrief": "억음 부호가 올려진 w"
       }
     }
   },
@@ -2258,12 +2258,12 @@
     "key": "1E83",
     "mappings": {
       "default": {
-        "default": "w acute"
+        "default": "양음 w"
       },
       "mathspeak": {
-        "default": "modifying above w with acute",
-        "brief": "mod above w with acute",
-        "sbrief": "mod above w with acute"
+        "default": "양음 부호가 올려진 w",
+        "brief": "양음 부호가 올려진 w",
+        "sbrief": "양음 부호가 올려진 w"
       }
     }
   },
@@ -2272,12 +2272,12 @@
     "key": "1E85",
     "mappings": {
       "default": {
-        "default": "w double overdot"
+        "default": "분음 부호표 w"
       },
       "mathspeak": {
-        "default": "modifying above w with double dot",
-        "brief": "mod above w with double dot",
-        "sbrief": "mod above w with double dot"
+        "default": "분음 부호가 올려진 w",
+        "brief": "분음 부호가 올려진 w",
+        "sbrief": "분음 부호가 올려진 w"
       }
     }
   },
@@ -2286,12 +2286,12 @@
     "key": "1E87",
     "mappings": {
       "default": {
-        "default": "w overdot"
+        "default": "윗점 w"
       },
       "mathspeak": {
-        "default": "modifying above w with dot",
-        "brief": "mod above w with dot",
-        "sbrief": "mod above w with dot"
+        "default": "마침점 부호가 올려진 w",
+        "brief": "마침점 부호가 올려진 w",
+        "sbrief": "마침점 부호가 올려진 w"
       }
     }
   },
@@ -2300,12 +2300,12 @@
     "key": "1E89",
     "mappings": {
       "default": {
-        "default": "w underdot"
+        "default": "아랫점 w"
       },
       "mathspeak": {
-        "default": "modifying below w with dot",
-        "brief": "mod below w with dot",
-        "sbrief": "mod below w with dot"
+        "default": "아래에 마침표 부호가 있는 w",
+        "brief": "아래에 마침표 부호가 있는 w",
+        "sbrief": "아래에 마침표 부호가 있는 w"
       }
     }
   },
@@ -2314,12 +2314,12 @@
     "key": "1E8B",
     "mappings": {
       "default": {
-        "default": "x overdot"
+        "default": "윗점 x"
       },
       "mathspeak": {
-        "default": "modifying above x with dot",
-        "brief": "mod above x with dot",
-        "sbrief": "mod above x with dot"
+        "default": "마침점 부호가 올려진 x",
+        "brief": "마침점 부호가 올려진 x",
+        "sbrief": "마침점 부호가 올려진 x"
       }
     }
   },
@@ -2328,12 +2328,12 @@
     "key": "1E8D",
     "mappings": {
       "default": {
-        "default": "x double overdot"
+        "default": "분음 부호표 x"
       },
       "mathspeak": {
-        "default": "modifying above x with double dot",
-        "brief": "mod above x with double dot",
-        "sbrief": "mod above x with double dot"
+        "default": "분음 부호가 올려진 x",
+        "brief": "분음 부호가 올려진 x",
+        "sbrief": "분음 부호가 올려진 x"
       }
     }
   },
@@ -2342,12 +2342,12 @@
     "key": "1E8F",
     "mappings": {
       "default": {
-        "default": "y overdot"
+        "default": "윗점 y"
       },
       "mathspeak": {
-        "default": "modifying above y with dot",
-        "brief": "mod above y with dot",
-        "sbrief": "mod above y with dot"
+        "default": "마침점 부호가 올려진 y",
+        "brief": "마침점 부호가 올려진 y",
+        "sbrief": "마침점 부호가 올려진 y"
       }
     }
   },
@@ -2356,12 +2356,12 @@
     "key": "1E91",
     "mappings": {
       "default": {
-        "default": "z hat"
+        "default": "곡절 악센트 z"
       },
       "mathspeak": {
-        "default": "modifying above z with caret",
-        "brief": "mod above z with caret",
-        "sbrief": "mod above z with caret"
+        "default": "곡절 악센트 부호가 올려진 z",
+        "brief": "곡절 악센트 부호가 올려진 z",
+        "sbrief": "곡절 악센트 부호가 올려진 z"
       }
     }
   },
@@ -2370,12 +2370,12 @@
     "key": "1E93",
     "mappings": {
       "default": {
-        "default": "z underdot"
+        "default": "아랫점 z"
       },
       "mathspeak": {
-        "default": "modifying below z with dot",
-        "brief": "mod below z with dot",
-        "sbrief": "mod below z with dot"
+        "default": "아래에 마침표 부호가 있는 z",
+        "brief": "아래에 마침표 부호가 있는 z",
+        "sbrief": "아래에 마침표 부호가 있는 z"
       }
     }
   },
@@ -2384,12 +2384,12 @@
     "key": "1E95",
     "mappings": {
       "default": {
-        "default": "z underbar"
+        "default": "언더바 z"
       },
       "mathspeak": {
-        "default": "z underbar",
-        "brief": "z underbar",
-        "sbrief": "z underbar"
+        "default": "언더바 부호가 있는 z",
+        "brief": "언더바 부호가 있는 z",
+        "sbrief": "언더바 부호가 있는 z"
       }
     }
   },
@@ -2398,12 +2398,12 @@
     "key": "1E96",
     "mappings": {
       "default": {
-        "default": "h underbar"
+        "default": "언더바 h"
       },
       "mathspeak": {
-        "default": "h underbar",
-        "brief": "h underbar",
-        "sbrief": "h underbar"
+        "default": "언더바 부호가 있는 h",
+        "brief": "언더바 부호가 있는 h",
+        "sbrief": "언더바 부호가 있는 h"
       }
     }
   },
@@ -2412,12 +2412,12 @@
     "key": "1E97",
     "mappings": {
       "default": {
-        "default": "t double overdot"
+        "default": "분음 부호표 t"
       },
       "mathspeak": {
-        "default": "modifying above t with double dot",
-        "brief": "mod above t with double dot",
-        "sbrief": "mod above t with double dot"
+        "default": "분음 부호가 올려진 t",
+        "brief": "분음 부호가 올려진 t",
+        "sbrief": "분음 부호가 올려진 t"
       }
     }
   },
@@ -2426,12 +2426,12 @@
     "key": "1E98",
     "mappings": {
       "default": {
-        "default": "w ring"
+        "default": "반지 부호 w"
       },
       "mathspeak": {
-        "default": "modifying above w with ring",
-        "brief": "mod above w with ring",
-        "sbrief": "mod above w with ring"
+        "default": "반지 부호가 올려진 w",
+        "brief": "반지 부호가 올려진 w",
+        "sbrief": "반지 부호가 올려진 w"
       }
     }
   },
@@ -2440,12 +2440,12 @@
     "key": "1E99",
     "mappings": {
       "default": {
-        "default": "y ring"
+        "default": "반지 부호 y"
       },
       "mathspeak": {
-        "default": "modifying above y with ring",
-        "brief": "mod above y with ring",
-        "sbrief": "mod above y with ring"
+        "default": "반지 부호가 올려진 y",
+        "brief": "반지 부호가 올려진 y",
+        "sbrief": "반지 부호가 올려진 y"
       }
     }
   },
@@ -2454,12 +2454,12 @@
     "key": "1E9A",
     "mappings": {
       "default": {
-        "default": "a right half ring"
+        "default": "오른쪽 반원 부호 a"
       },
       "mathspeak": {
-        "default": "modifying above a with right half ring",
-        "brief": "mod above a with right half ring",
-        "sbrief": "mod above a with right half ring"
+        "default": "오른쪽 반원 부호가 올려진 a",
+        "brief": "오른쪽 반원 부호가 올려진 a",
+        "sbrief": "오른쪽 반원 부호가 올려진 a"
       }
     }
   },
@@ -2468,12 +2468,12 @@
     "key": "1EA1",
     "mappings": {
       "default": {
-        "default": "a underdot"
+        "default": "아랫점 a"
       },
       "mathspeak": {
-        "default": "modifying below a with dot",
-        "brief": "mod below a with dot",
-        "sbrief": "mod below a with dot"
+        "default": "아래에 마침표 부호가 있는 a",
+        "brief": "아래에 마침표 부호가 있는 a",
+        "sbrief": "아래에 마침표 부호가 있는 a"
       }
     }
   },
@@ -2482,12 +2482,12 @@
     "key": "1EA3",
     "mappings": {
       "default": {
-        "default": "a hook"
+        "default": "후크 a"
       },
       "mathspeak": {
-        "default": "modifying above a with hook",
-        "brief": "mod above a with hook",
-        "sbrief": "mod above a with hook"
+        "default": "후크 부호가 올려진 a",
+        "brief": "후크 부호가 올려진 a",
+        "sbrief": "후크 부호가 올려진 a"
       }
     }
   },
@@ -2496,12 +2496,12 @@
     "key": "1EB9",
     "mappings": {
       "default": {
-        "default": "e underdot"
+        "default": "아랫점 e"
       },
       "mathspeak": {
-        "default": "modifying below e with dot",
-        "brief": "mod below e with dot",
-        "sbrief": "mod below e with dot"
+        "default": "아래에 마침표 부호가 있는 e",
+        "brief": "아래에 마침표 부호가 있는 e",
+        "sbrief": "아래에 마침표 부호가 있는 e"
       }
     }
   },
@@ -2510,12 +2510,12 @@
     "key": "1EBB",
     "mappings": {
       "default": {
-        "default": "e hook"
+        "default": "후크 e"
       },
       "mathspeak": {
-        "default": "modifying above e with hook",
-        "brief": "mod above e with hook",
-        "sbrief": "mod above e with hook"
+        "default": "후크 부호가 올려진 e",
+        "brief": "후크 부호가 올려진 e",
+        "sbrief": "후크 부호가 올려진 e"
       }
     }
   },
@@ -2524,12 +2524,12 @@
     "key": "1EBD",
     "mappings": {
       "default": {
-        "default": "e tilde"
+        "default": "물결표 e"
       },
       "mathspeak": {
-        "default": "e overtilde",
-        "brief": "e overtilde",
-        "sbrief": "e overtilde"
+        "default": "물결표가 올려진 e",
+        "brief": "물결표가 올려진 e",
+        "sbrief": "물결표가 올려진 e"
       }
     }
   },
@@ -2538,12 +2538,12 @@
     "key": "1EC9",
     "mappings": {
       "default": {
-        "default": "i hook"
+        "default": "후크 i"
       },
       "mathspeak": {
-        "default": "modifying above i with hook",
-        "brief": "mod above i with hook",
-        "sbrief": "mod above i with hook"
+        "default": "후크 부호가 올려진 i",
+        "brief": "후크 부호가 올려진 i",
+        "sbrief": "후크 부호가 올려진 i"
       }
     }
   },
@@ -2552,12 +2552,12 @@
     "key": "1ECB",
     "mappings": {
       "default": {
-        "default": "i underdot"
+        "default": "아랫점 i"
       },
       "mathspeak": {
-        "default": "modifying below i with dot",
-        "brief": "mod below i with dot",
-        "sbrief": "mod below i with dot"
+        "default": "아래에 마침표 부호가 있는 i",
+        "brief": "아래에 마침표 부호가 있는 i",
+        "sbrief": "아래에 마침표 부호가 있는 i"
       }
     }
   },
@@ -2566,12 +2566,12 @@
     "key": "1ECD",
     "mappings": {
       "default": {
-        "default": "o underdot"
+        "default": "아랫점 o"
       },
       "mathspeak": {
-        "default": "modifying below o with dot",
-        "brief": "mod below o with dot",
-        "sbrief": "mod below o with dot"
+        "default": "아래에 마침표 부호가 있는 o",
+        "brief": "아래에 마침표 부호가 있는 o",
+        "sbrief": "아래에 마침표 부호가 있는 o"
       }
     }
   },
@@ -2580,12 +2580,12 @@
     "key": "1ECF",
     "mappings": {
       "default": {
-        "default": "o hook"
+        "default": "후크 o"
       },
       "mathspeak": {
-        "default": "modifying above o with hook",
-        "brief": "mod above o with hook",
-        "sbrief": "mod above o with hook"
+        "default": "후크 부호가 올려진 o",
+        "brief": "후크 부호가 올려진 o",
+        "sbrief": "후크 부호가 올려진 o"
       }
     }
   },
@@ -2594,12 +2594,12 @@
     "key": "1EE5",
     "mappings": {
       "default": {
-        "default": "u underdot"
+        "default": "아랫점 u"
       },
       "mathspeak": {
-        "default": "modifying below u with dot",
-        "brief": "mod below u with dot",
-        "sbrief": "mod below u with dot"
+        "default": "아래에 마침표 부호가 있는 u",
+        "brief": "아래에 마침표 부호가 있는 u",
+        "sbrief": "아래에 마침표 부호가 있는 u"
       }
     }
   },
@@ -2608,12 +2608,12 @@
     "key": "1EE7",
     "mappings": {
       "default": {
-        "default": "u hook"
+        "default": "후크 u"
       },
       "mathspeak": {
-        "default": "modifying above u with hook",
-        "brief": "mod above u with hook",
-        "sbrief": "mod above u with hook"
+        "default": "후크 부호가 올려진 u",
+        "brief": "후크 부호가 올려진 u",
+        "sbrief": "후크 부호가 올려진 u"
       }
     }
   },
@@ -2622,12 +2622,12 @@
     "key": "1EF3",
     "mappings": {
       "default": {
-        "default": "y grave"
+        "default": "억음 y"
       },
       "mathspeak": {
-        "default": "modifying above y with grave",
-        "brief": "mod above y with grave",
-        "sbrief": "mod above y with grave"
+        "default": "억음 부호가 올려진 y",
+        "brief": "억음 부호가 올려진 y",
+        "sbrief": "억음 부호가 올려진 y"
       }
     }
   },
@@ -2636,12 +2636,12 @@
     "key": "1EF5",
     "mappings": {
       "default": {
-        "default": "y underdot"
+        "default": "아랫점 y"
       },
       "mathspeak": {
-        "default": "modifying below y with dot",
-        "brief": "mod below y with dot",
-        "sbrief": "mod below y with dot"
+        "default": "아래에 마침표 부호가 있는 y",
+        "brief": "아래에 마침표 부호가 있는 y",
+        "sbrief": "아래에 마침표 부호가 있는 y"
       }
     }
   },
@@ -2650,12 +2650,12 @@
     "key": "1EF7",
     "mappings": {
       "default": {
-        "default": "y hook"
+        "default": "후크 y"
       },
       "mathspeak": {
-        "default": "modifying above y with hook",
-        "brief": "mod above y with hook",
-        "sbrief": "mod above y with hook"
+        "default": "후크 부호가 올려진 y",
+        "brief": "후크 부호가 올려진 y",
+        "sbrief": "후크 부호가 올려진 y"
       }
     }
   },
@@ -2664,12 +2664,12 @@
     "key": "1EF9",
     "mappings": {
       "default": {
-        "default": "y tilde"
+        "default": "물결표 y"
       },
       "mathspeak": {
-        "default": "y overtilde",
-        "brief": "y overtilde",
-        "sbrief": "y overtilde"
+        "default": "물결표가 올려진 y",
+        "brief": "물결표가 올려진 y",
+        "sbrief": "물결표가 올려진 y"
       }
     }
   }

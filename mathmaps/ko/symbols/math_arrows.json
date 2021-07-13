@@ -1,12 +1,12 @@
-[{"locale": "en"},
+[{"locale": "ko"},
   {
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow"
+        "default": "왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow"
+        "sbrief": "왼쪽 화살표"
       }
     },
     "key": "2190"
@@ -15,10 +15,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up arrow"
+        "default": "위쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "U arrow"
+        "sbrief": "위쪽 화살표"
       }
     },
     "key": "2191"
@@ -27,10 +27,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow"
+        "default": "오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow"
+        "sbrief": "오른쪽 화살표"
       }
     },
     "key": "2192"
@@ -39,10 +39,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down arrow"
+        "default": "아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "D arrow"
+        "sbrief": "아래쪽 화살표"
       }
     },
     "key": "2193"
@@ -51,10 +51,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left right arrow"
+        "default": "좌우 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R arrow"
+        "sbrief": "좌우 화살표"
       }
     },
     "key": "2194"
@@ -63,10 +63,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up down arrow"
+        "default": "상하 화살표"
       },
       "mathspeak": {
-        "sbrief": "U D arrow"
+        "sbrief": "상하 화살표"
       }
     },
     "key": "2195"
@@ -75,10 +75,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up left arrow"
+        "default": "좌상향 화살표"
       },
       "mathspeak": {
-        "sbrief": "U L arrow"
+        "sbrief": "좌상향 화살표"
       }
     },
     "key": "2196"
@@ -87,10 +87,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up right arrow"
+        "default": "우상향 화살표"
       },
       "mathspeak": {
-        "sbrief": "U R arrow"
+        "sbrief": "우상향 화살표"
       }
     },
     "key": "2197"
@@ -99,10 +99,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down right arrow"
+        "default": "우하향 화살표"
       },
       "mathspeak": {
-        "sbrief": "D R arrow"
+        "sbrief": "우하향 화살표"
       }
     },
     "key": "2198"
@@ -111,10 +111,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down left arrow"
+        "default": "좌하향 화살표"
       },
       "mathspeak": {
-        "sbrief": "D L arrow"
+        "sbrief": "좌하향 화살표"
       }
     },
     "key": "2199"
@@ -123,10 +123,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow with stroke"
+        "default": "사선이 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with stroke"
+        "sbrief": "사선이 붙은 왼쪽 화살표"
       }
     },
     "key": "219A"
@@ -135,10 +135,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow with stroke"
+        "default": "사선이 붙은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with stroke"
+        "sbrief": "사선이 붙은 오른쪽 화살표"
       }
     },
     "key": "219B"
@@ -147,10 +147,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left wave arrow"
+        "default": "왼쪽 물결 화살표"
       },
       "mathspeak": {
-        "sbrief": "L wave arrow"
+        "sbrief": "왼쪽 물결 화살표"
       }
     },
     "key": "219C"
@@ -159,10 +159,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right wave arrow"
+        "default": "오른쪽 물결 화살표"
       },
       "mathspeak": {
-        "sbrief": "R wave arrow"
+        "sbrief": "오른쪽 물결 화살표"
       }
     },
     "key": "219D"
@@ -171,10 +171,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "two headed left arrow"
+        "default": "왼쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "two headed L arrow"
+        "sbrief": "왼쪽 쌍화살표"
       }
     },
     "key": "219E"
@@ -183,10 +183,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "two headed up arrow"
+        "default": "위쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "two headed U arrow"
+        "sbrief": "위쪽 쌍화살표"
       }
     },
     "key": "219F"
@@ -195,10 +195,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "two headed right arrow"
+        "default": "오른쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "two headed R arrow"
+        "sbrief": "오른쪽 쌍화살표"
       }
     },
     "key": "21A0"
@@ -207,10 +207,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "two headed down arrow"
+        "default": "아래쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "two headed D arrow"
+        "sbrief": "아래쪽 쌍화살표"
       }
     },
     "key": "21A1"
@@ -219,10 +219,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left arrow with tail"
+        "default": "꼬리가 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with tail"
+        "sbrief": "꼬리가 있는 왼쪽 화살표"
       }
     },
     "key": "21A2"
@@ -231,10 +231,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow with tail"
+        "default": "꼬리가 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with tail"
+        "sbrief": "꼬리가 있는 오른쪽 화살표"
       }
     },
     "key": "21A3"
@@ -243,10 +243,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left arrow from bar"
+        "default": "세로선이 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow from bar"
+        "sbrief": "세로선이 붙은 왼쪽 화살표"
       }
     },
     "key": "21A4"
@@ -255,10 +255,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up arrow from bar"
+        "default": "가로선이 붙은 위쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "U arrow from bar"
+        "sbrief": "가로선이 붙은 위쪽 화살표"
       }
     },
     "key": "21A5"
@@ -267,10 +267,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow from bar"
+        "default": "세로선이 붙은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow from bar"
+        "sbrief": "세로선이 붙은 오른쪽 화살표"
       }
     },
     "key": "21A6"
@@ -279,10 +279,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down arrow from bar"
+        "default": "가로선이 붙은 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "D arrow from bar"
+        "sbrief": "가로선이 붙은 아래쪽 화살표"
       }
     },
     "key": "21A7"
@@ -291,10 +291,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up down arrow with base"
+        "default": "밑줄이 있는 상하 화살표"
       },
       "mathspeak": {
-        "sbrief": "U D arrow with base"
+        "sbrief": "밑줄이 있는 상하 화살표"
       }
     },
     "key": "21A8"
@@ -303,10 +303,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left arrow with hook"
+        "default": "후크가 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with hook"
+        "sbrief": "후크가 있는 왼쪽 화살표"
       }
     },
     "key": "21A9"
@@ -315,10 +315,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right arrow with hook"
+        "default": "후크가 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with hook"
+        "sbrief": "후크가 있는 오른쪽 화살표"
       }
     },
     "key": "21AA"
@@ -327,10 +327,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left arrow with loop"
+        "default": "루프가 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with loop"
+        "sbrief": "루프가 있는 왼쪽 화살표"
       }
     },
     "key": "21AB"
@@ -339,10 +339,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right arrow with loop"
+        "default": "루프가 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with loop"
+        "sbrief": "루프가 있는 오른쪽 화살표"
       }
     },
     "key": "21AC"
@@ -351,10 +351,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left right wave arrow"
+        "default": "좌우 물결 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R wave arrow"
+        "sbrief": "좌우 물결 화살표"
       }
     },
     "key": "21AD"
@@ -363,10 +363,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left right arrow with stroke"
+        "default": "사선이 그어진 좌우 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R arrow with stroke"
+        "sbrief": "사선이 그어진 좌우 화살표"
       }
     },
     "key": "21AE"
@@ -375,10 +375,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down zigzag arrow"
+        "default": "아래쪽 지그재그 화살표"
       },
       "mathspeak": {
-        "sbrief": "d zigzag arrow"
+        "sbrief": "아래쪽 지그재그 화살표"
       }
     },
     "key": "21AF"
@@ -387,10 +387,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up arrow with tip left"
+        "default": "끝이 왼쪽으로 꺾인 위쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "U arrow with tip left"
+        "sbrief": "끝이 왼쪽으로 꺾인 위쪽 화살표"
       }
     },
     "key": "21B0"
@@ -399,10 +399,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up arrow with tip right"
+        "default": "끝이 오른쪽으로 꺾인 위쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "U arrow with tip right"
+        "sbrief": "끝이 오른쪽으로 꺾인 위쪽 화살표"
       }
     },
     "key": "21B1"
@@ -411,10 +411,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down arrow with tip left"
+        "default": "끝이 왼쪽으로 꺾인 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "D arrow with tip left"
+        "sbrief": "끝이 왼쪽으로 꺾인 아래쪽 화살표"
       }
     },
     "key": "21B2"
@@ -423,10 +423,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down arrow with tip right"
+        "default": "끝이 오른쪽으로 꺾인 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "D arrow with tip right"
+        "sbrief": "끝이 오른쪽으로 꺾인 아래쪽 화살표"
       }
     },
     "key": "21B3"
@@ -435,10 +435,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right arrow with corner down"
+        "default": "아래쪽 코너가 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with corner down"
+        "sbrief": "아래쪽 코너가 있는 오른쪽 화살표"
       }
     },
     "key": "21B4"
@@ -447,10 +447,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down arrow with corner left"
+        "default": "왼쪽 코너가 있는 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "D arrow with corner left"
+        "sbrief": "왼쪽 코너가 있는 아래쪽 화살표"
       }
     },
     "key": "21B5"
@@ -459,7 +459,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "anticlockwise top semicircle arrow"
+        "default": "반시계 방향 반원 화살표"
       }
     },
     "key": "21B6"
@@ -468,7 +468,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "clockwise top semicircle arrow"
+        "default": "시계 방향 반원 화살표"
       }
     },
     "key": "21B7"
@@ -477,10 +477,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up left arrow to long bar"
+        "default": "윗줄이 있는 좌상향 화살표"
       },
       "mathspeak": {
-        "sbrief": "U L arrow to long bar"
+        "sbrief": "윗줄이 있는 좌상향 화살표"
       }
     },
     "key": "21B8"
@@ -489,10 +489,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left arrow to bar over right arrow to bar"
+        "default": "왼쪽 화살표 바와 그 위의 오른쪽 화살표 바"
       },
       "mathspeak": {
-        "sbrief": "L arrow to bar over R arrow to bar"
+        "sbrief": "왼쪽 화살표 바와 그 위의 오른쪽 화살표 바"
       }
     },
     "key": "21B9"
@@ -501,7 +501,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "anticlockwise open circle arrow"
+        "default": "반시계 방향 원 화살표"
       }
     },
     "key": "21BA"
@@ -510,7 +510,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "clockwise open circle arrow"
+        "default": "시계 방향 원 화살표"
       }
     },
     "key": "21BB"
@@ -519,10 +519,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right arrow over left arrow"
+        "default": "왼쪽 화살표와 그 위의 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow over L arrow"
+        "sbrief": "왼쪽 화살표와 그 위의 오른쪽 화살표"
       }
     },
     "key": "21C4"
@@ -531,10 +531,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up arrow left of down arrow"
+        "default": "위쪽 화살표와 그 옆의 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "U arrow L of D arrow"
+        "sbrief": "위쪽 화살표와 그 옆의 아래쪽 화살표"
       }
     },
     "key": "21C5"
@@ -543,10 +543,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left arrow over right arrow"
+        "default": "오른쪽 화살표와 그 위의 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow over R arrow"
+        "sbrief": "오른쪽 화살표와 그 위의 왼쪽 화살표"
       }
     },
     "key": "21C6"
@@ -555,10 +555,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left paired arrows"
+        "default": "두 개의 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L paired arrows"
+        "sbrief": "두 개의 왼쪽 화살표"
       }
     },
     "key": "21C7"
@@ -567,10 +567,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up paired arrows"
+        "default": "두 개의 위쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "U paired arrows"
+        "sbrief": "두 개의 위쪽 화살표"
       }
     },
     "key": "21C8"
@@ -579,10 +579,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right paired arrows"
+        "default": "두 개의 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R paired arrows"
+        "sbrief": "두 개의 오른쪽 화살표"
       }
     },
     "key": "21C9"
@@ -591,10 +591,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down paired arrows"
+        "default": "두 개의 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "D paired arrows"
+        "sbrief": "두 개의 아래쪽 화살표"
       }
     },
     "key": "21CA"
@@ -603,10 +603,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left double arrow with stroke"
+        "default": "사선이 그어진 왼쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "L double arrow with stroke"
+        "sbrief": "사선이 그어진 왼쪽 이중 화살표"
       }
     },
     "key": "21CD"
@@ -615,10 +615,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left right double arrow with stroke"
+        "default": "사선이 그어진 좌우 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R double arrow with stroke"
+        "sbrief": "사선이 그어진 좌우 이중 화살표"
       }
     },
     "key": "21CE"
@@ -627,10 +627,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right double arrow with stroke"
+        "default": "사선이 그어진 오른쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "R double arrow with stroke"
+        "sbrief": "사선이 그어진 오른쪽 이중 화살표"
       }
     },
     "key": "21CF"
@@ -639,10 +639,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left double arrow"
+        "default": "왼쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "L double arrow"
+        "sbrief": "왼쪽 이중 화살표"
       }
     },
     "key": "21D0"
@@ -651,10 +651,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up double arrow"
+        "default": "위쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "U double arrow"
+        "sbrief": "위쪽 이중 화살표"
       }
     },
     "key": "21D1"
@@ -663,10 +663,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right double arrow"
+        "default": "오른쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "R double arrow"
+        "sbrief": "오른쪽 이중 화살표"
       }
     },
     "key": "21D2"
@@ -675,10 +675,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down double arrow"
+        "default": "아래쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "d double arrow"
+        "sbrief": "아래쪽 이중 화살표"
       }
     },
     "key": "21D3"
@@ -687,10 +687,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left right double arrow"
+        "default": "좌우 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R double arrow"
+        "sbrief": "좌우 이중 화살표"
       }
     },
     "key": "21D4"
@@ -699,10 +699,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up down double arrow"
+        "default": "상하 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "U d double arrow"
+        "sbrief": "상하 이중 화살표"
       }
     },
     "key": "21D5"
@@ -711,10 +711,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up left double arrow"
+        "default": "좌상향 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "U L double arrow"
+        "sbrief": "좌상향 이중 화살표"
       }
     },
     "key": "21D6"
@@ -723,10 +723,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up right double arrow"
+        "default": "우상향 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "U R double arrow"
+        "sbrief": "우상향 이중 화살표"
       }
     },
     "key": "21D7"
@@ -735,10 +735,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down right double arrow"
+        "default": "우하향 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "d R double arrow"
+        "sbrief": "우하향 이중 화살표"
       }
     },
     "key": "21D8"
@@ -747,10 +747,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down left double arrow"
+        "default": "좌하향 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "d L double arrow"
+        "sbrief": "좌하향 이중 화살표"
       }
     },
     "key": "21D9"
@@ -759,10 +759,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left triple arrow"
+        "default": "왼쪽 삼중 화살표"
       },
       "mathspeak": {
-        "sbrief": "L triple arrow"
+        "sbrief": "왼쪽 삼중 화살표"
       }
     },
     "key": "21DA"
@@ -771,10 +771,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right triple arrow"
+        "default": "오른쪽 삼중 화살표"
       },
       "mathspeak": {
-        "sbrief": "r triple arrow"
+        "sbrief": "오른쪽 삼중 화살표"
       }
     },
     "key": "21DB"
@@ -783,10 +783,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left squiggle arrow"
+        "default": "왼쪽 흔들리는 화살표"
       },
       "mathspeak": {
-        "sbrief": "L squiggle arrow"
+        "sbrief": "왼쪽 흔들리는 화살표"
       }
     },
     "key": "21DC"
@@ -795,10 +795,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right squiggle arrow"
+        "default": "오른쪽 흔들리는 화살표"
       },
       "mathspeak": {
-        "sbrief": "r squiggle arrow"
+        "sbrief": "오른쪽 흔들리는 화살표"
       }
     },
     "key": "21DD"
@@ -807,10 +807,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up arrow with double stroke"
+        "default": "두 줄이 그어진 위쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "U arrow with double stroke"
+        "sbrief": "두 줄이 그어진 위쪽 화살표"
       }
     },
     "key": "21DE"
@@ -819,10 +819,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down arrow with double stroke"
+        "default": "두 줄이 그어진 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "D arrow with double stroke"
+        "sbrief": "두 줄이 그어진 아래쪽 화살표"
       }
     },
     "key": "21DF"
@@ -831,10 +831,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left dasheD arrow"
+        "default": "왼쪽 점선 화살표"
       },
       "mathspeak": {
-        "sbrief": "L dasheD arrow"
+        "sbrief": "왼쪽 점선 화살표"
       }
     },
     "key": "21E0"
@@ -843,10 +843,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up dasheD arrow"
+        "default": "위쪽 점선 화살표"
       },
       "mathspeak": {
-        "sbrief": "U dasheD arrow"
+        "sbrief": "위쪽 점선 화살표"
       }
     },
     "key": "21E1"
@@ -855,10 +855,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right dasheD arrow"
+        "default": "오른쪽 점선 화살표"
       },
       "mathspeak": {
-        "sbrief": "r dasheD arrow"
+        "sbrief": "오른쪽 점선 화살표"
       }
     },
     "key": "21E2"
@@ -867,10 +867,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down dasheD arrow"
+        "default": "아래쪽 점선 화살표"
       },
       "mathspeak": {
-        "sbrief": "d dasheD arrow"
+        "sbrief": "아래쪽 점선 화살표"
       }
     },
     "key": "21E3"
@@ -879,10 +879,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left arrow to bar"
+        "default": "세로선을 가리키는 왼쪽 화샇표"
       },
       "mathspeak": {
-        "sbrief": "L arrow to bar"
+        "sbrief": "세로선을 가리키는 왼쪽 화샇표"
       }
     },
     "key": "21E4"
@@ -891,10 +891,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right arrow to bar"
+        "default": "세로선을 가리키는 오른쪽 화샇표"
       },
       "mathspeak": {
-        "sbrief": "R arrow to bar"
+        "sbrief": "세로선을 가리키는 오른쪽 화샇표"
       }
     },
     "key": "21E5"
@@ -903,10 +903,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white left arrow"
+        "default": "왼쪽 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "white L arrow"
+        "sbrief": "왼쪽 흰색 화살표"
       }
     },
     "key": "21E6"
@@ -915,10 +915,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white up arrow"
+        "default": "위쪽 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "white U arrow"
+        "sbrief": "위쪽 흰색 화살표"
       }
     },
     "key": "21E7"
@@ -927,10 +927,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white right arrow"
+        "default": "오른쪽 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "white R arrow"
+        "sbrief": "오른쪽 흰색 화살표"
       }
     },
     "key": "21E8"
@@ -939,10 +939,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white down arrow"
+        "default": "아래쪽 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "white D arrow"
+        "sbrief": "아래쪽 흰색 화살표"
       }
     },
     "key": "21E9"
@@ -951,10 +951,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white up arrow from bar"
+        "default": "흰색 막대와 위쪽 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "white U arrow from bar"
+        "sbrief": "흰색 막대와 위쪽 흰색 화살표"
       }
     },
     "key": "21EA"
@@ -963,10 +963,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white up arrow on pedestal"
+        "default": "받침대가 있는 위쪽 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "white U arrow on pedestal"
+        "sbrief": "받침대가 있는 위쪽 흰색 화살표"
       }
     },
     "key": "21EB"
@@ -975,10 +975,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white up arrow on pedestal with horizontal bar"
+        "default": "받침대가 있고 화살촉에 가로선이 추가된 위쪽 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "white U arrow on pedestal with horizontal bar"
+        "sbrief": "받침대가 있고 화살촉에 가로선이 추가된 위쪽 흰색 화살표"
       }
     },
     "key": "21EC"
@@ -987,10 +987,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white up arrow on pedestal with vertical bar"
+        "default": "받침대가 있고 안에 세로줄이 그어진 위쪽 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "white U arrow on pedestal with vertical bar"
+        "sbrief": "받침대가 있고 안에 세로줄이 그어진 위쪽 흰색 화살표"
       }
     },
     "key": "21ED"
@@ -999,10 +999,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white double up arrow"
+        "default": "위쪽 흰색 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "white double U arrow"
+        "sbrief": "위쪽 흰색 쌍화살표"
       }
     },
     "key": "21EE"
@@ -1011,10 +1011,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white double up arrow on pedestal"
+        "default": "받침대가 있는 위쪽 흰색 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "white double U arrow on pedestal"
+        "sbrief": "받침대가 있는 위쪽 흰색 쌍화살표"
       }
     },
     "key": "21EF"
@@ -1023,10 +1023,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white right arrow from wall"
+        "default": "받침대가 있는 오른쪽 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "white R arrow from wall"
+        "sbrief": "받침대가 있는 오른쪽 흰색 화살표"
       }
     },
     "key": "21F0"
@@ -1035,7 +1035,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "north west arrow to corner"
+        "default": "모서리를 가리키는 좌상향 화살표"
       }
     },
     "key": "21F1"
@@ -1044,7 +1044,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "south east arrow to corner"
+        "default": "모서리를 가리키는 우하향 화살표"
       }
     },
     "key": "21F2"
@@ -1053,10 +1053,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up down white arrow"
+        "default": "상하 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "U d white arrow"
+        "sbrief": "상하 흰색 화살표"
       }
     },
     "key": "21F3"
@@ -1065,10 +1065,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow with small circle"
+        "default": "작은 원이 겹쳐진 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with small circle"
+        "sbrief": "작은 원이 겹쳐진 오른쪽 화살표"
       }
     },
     "key": "21F4"
@@ -1077,10 +1077,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down arrow left of up arrow"
+        "default": "아래쪽 화살표와 그 옆에 위쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "D arrow l of U arrow"
+        "sbrief": "아래쪽 화살표와 그 옆에 위쪽 화살표"
       }
     },
     "key": "21F5"
@@ -1089,10 +1089,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "three right arrows"
+        "default": "세 개의 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "three R arrows"
+        "sbrief": "세 개의 오른쪽 화살표"
       }
     },
     "key": "21F6"
@@ -1101,10 +1101,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow with vertical stroke"
+        "default": "세로선이 그어진 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with vertical stroke"
+        "sbrief": "세로선이 그어진 왼쪽 화살표"
       }
     },
     "key": "21F7"
@@ -1113,10 +1113,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow with vertical stroke"
+        "default": "세로선이 그어진 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with vertical stroke"
+        "sbrief": "세로선이 그어진 오른쪽 화살표"
       }
     },
     "key": "21F8"
@@ -1125,10 +1125,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left right arrow with vertical stroke"
+        "default": "세로선이 그어진 좌우 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R arrow with vertical stroke"
+        "sbrief": "세로선이 그어진 좌우 화살표"
       }
     },
     "key": "21F9"
@@ -1137,10 +1137,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow with double vertical stroke"
+        "default": "두 개의 세로선이 그어진 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with double vertical stroke"
+        "sbrief": "두 개의 세로선이 그어진 왼쪽 화살표"
       }
     },
     "key": "21FA"
@@ -1149,10 +1149,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow with double vertical stroke"
+        "default": "두 개의 세로선이 그어진 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with double vertical stroke"
+        "sbrief": "두 개의 세로선이 그어진 오른쪽 화살표"
       }
     },
     "key": "21FB"
@@ -1161,10 +1161,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left right arrow with double vertical stroke"
+        "default": "두 개의 세로선이 그어진 좌우 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R arrow with double vertical stroke"
+        "sbrief": "두 개의 세로선이 그어진 좌우 화살표"
       }
     },
     "key": "21FC"
@@ -1173,10 +1173,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left open headed arrow"
+        "default": "촉이 비어잇는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "l open headed arrow"
+        "sbrief": "촉이 비어잇는 왼쪽 화살표"
       }
     },
     "key": "21FD"
@@ -1185,10 +1185,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right open headed arrow"
+        "default": "촉이 비어잇는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "r open headed arrow"
+        "sbrief": "촉이 비어잇는 오른쪽 화살표"
       }
     },
     "key": "21FE"
@@ -1197,10 +1197,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left right open headed arrow"
+        "default": "촉이 비어잇는 좌우 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R open headed arrow"
+        "sbrief": "촉이 비어잇는 좌우 화살표"
       }
     },
     "key": "21FF"
@@ -1209,7 +1209,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "electric arrow"
+        "default": "전기 화살표"
       }
     },
     "key": "2301"
@@ -1218,10 +1218,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up arrowhead"
+        "default": "위쪽 화살촉"
       },
       "mathspeak": {
-        "sbrief": "U arrowhead"
+        "sbrief": "위쪽 화살촉"
       }
     },
     "key": "2303"
@@ -1230,10 +1230,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down arrowhead"
+        "default": "아래쪽 화살촉"
       },
       "mathspeak": {
-        "sbrief": "D arrowhead"
+        "sbrief": "아래쪽 화살촉"
       }
     },
     "key": "2304"
@@ -1242,11 +1242,11 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up arrowhead between two horizontal bars",
-        "alternative": "enter key"
+        "default": "두 가로선 사이의 위쪽 화살촉",
+        "alternative": "엔터 키"
       },
       "mathspeak": {
-        "sbrief": "U arrowhead between two horizontal bars"
+        "sbrief": "두 가로선 사이의 위쪽 화살촉"
       }
     },
     "key": "2324"
@@ -1255,7 +1255,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "broken circle with northwest arrow"
+        "default": "좌상향 화살표가 있는 깨진 원"
       }
     },
     "key": "238B"
@@ -1264,10 +1264,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy wide headed right arrow"
+        "default": "굵고 넓은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy wide headed R arrow"
+        "sbrief": "굵고 넓은 오른쪽 화살표"
       }
     },
     "key": "2794"
@@ -1276,10 +1276,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy down right arrow"
+        "default": "진한 우하향 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy d R arrow"
+        "sbrief": "진한 우하향 화살표"
       }
     },
     "key": "2798"
@@ -1288,10 +1288,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy right arrow"
+        "default": "진한 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy R arrow"
+        "sbrief": "진한 오른쪽 화살표"
       }
     },
     "key": "2799"
@@ -1300,10 +1300,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy up right arrow"
+        "default": "진한 우상향 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy U R arrow"
+        "sbrief": "진한 우상향 화살표"
       }
     },
     "key": "279A"
@@ -1312,10 +1312,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "drafting point right arrow"
+        "default": "화살촉이 큰 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "drafting point R arrow"
+        "sbrief": "화살촉이 큰 오른쪽 화살표"
       }
     },
     "key": "279B"
@@ -1324,10 +1324,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy round tipped right arrow"
+        "default": "굵은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy round tipped R arrow"
+        "sbrief": "굵은 오른쪽 화살표"
       }
     },
     "key": "279C"
@@ -1336,10 +1336,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "triangle headed right arrow"
+        "default": "삼각형 화살촉을 가진 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "triangle headed R arrow"
+        "sbrief": "삼각형 화살촉을 가진 오른쪽 화살표"
       }
     },
     "key": "279D"
@@ -1348,10 +1348,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy triangle headed right arrow"
+        "default": "삼각형 화살촉을 가진 진한 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy triangle headed R arrow"
+        "sbrief": "삼각형 화살촉을 가진 진한 오른쪽 화살표"
       }
     },
     "key": "279E"
@@ -1360,10 +1360,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "dashed triangle headed right arrow"
+        "default": "삼각형 화살촉을 가진 오른쪽 점선 화살표"
       },
       "mathspeak": {
-        "sbrief": "dashed triangle headed R arrow"
+        "sbrief": "삼각형 화살촉을 가진 오른쪽 점선 화살표"
       }
     },
     "key": "279F"
@@ -1372,10 +1372,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy dashed triangle headed right arrow"
+        "default": "삼각형 화살촉을 가진 진한 오른쪽 점선 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy dashed triangle headed R arrow"
+        "sbrief": "삼각형 화살촉을 가진 진한 오른쪽 점선 화살표"
       }
     },
     "key": "27A0"
@@ -1384,10 +1384,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black right arrow"
+        "default": "검은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "black R arrow"
+        "sbrief": "검은 오른쪽 화살표"
       }
     },
     "key": "27A1"
@@ -1396,10 +1396,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "three d top lighted right arrowhead"
+        "default": "삼차원 오른쪽 화살촉"
       },
       "mathspeak": {
-        "sbrief": "three d top lighted R arrowhead"
+        "sbrief": "삼차원 오른쪽 화살촉"
       }
     },
     "key": "27A2"
@@ -1408,10 +1408,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "three d bottom lighted right arrowhead"
+        "default": "위쪽에 그림자가 있는 삼차원 오른쪽 화살촉"
       },
       "mathspeak": {
-        "sbrief": "three d bottom lighted R arrowhead"
+        "sbrief": "위쪽에 그림자가 있는 삼차원 오른쪽 화살촉"
       }
     },
     "key": "27A3"
@@ -1420,10 +1420,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black right arrowhead"
+        "default": "검은 오른쪽 화살촉"
       },
       "mathspeak": {
-        "sbrief": "black R arrowhead"
+        "sbrief": "검은 오른쪽 화살촉"
       }
     },
     "key": "27A4"
@@ -1432,10 +1432,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy black curved down and right arrow"
+        "default": "위에서 오른쪽으로 휘어지는 진한 검은 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy black curved d and R arrow"
+        "sbrief": "위에서 오른쪽으로 휘어지는 진한 검은 화살표"
       }
     },
     "key": "27A5"
@@ -1444,10 +1444,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy black curved up and right arrow"
+        "default": "밑에서 오른쪽으로 휘어지는 진한 검은 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy black curved U and R arrow"
+        "sbrief": "밑에서 오른쪽으로 휘어지는 진한 검은 화살표"
       }
     },
     "key": "27A6"
@@ -1456,10 +1456,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "squat black right arrow"
+        "default": "검은 오른쪽 스쿼트 화살표"
       },
       "mathspeak": {
-        "sbrief": "squat black R arrow"
+        "sbrief": "검은 오른쪽 스쿼트 화살표"
       }
     },
     "key": "27A7"
@@ -1468,10 +1468,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy concave pointed black right arrow"
+        "default": "화살대가 굵은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy concave pointed black R arrow"
+        "sbrief": "화살대가 굵은 오른쪽 화살표"
       }
     },
     "key": "27A8"
@@ -1480,10 +1480,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right shaded white right arrow"
+        "default": "음영 처리된 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "right shaded white R arrow"
+        "sbrief": "음영 처리된 오른쪽 화살표"
       }
     },
     "key": "27A9"
@@ -1492,10 +1492,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left shaded white right arrow"
+        "default": "우측으로 음영 처리된 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "left shaded white R arrow"
+        "sbrief": "우측으로 음영 처리된 오른쪽 화살표"
       }
     },
     "key": "27AA"
@@ -1504,10 +1504,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "back tilted shadowed white right arrow"
+        "default": "기울어진 흰색 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "back tilted shadowed white R arrow"
+        "sbrief": "기울어진 흰색 오른쪽 화살표"
       }
     },
     "key": "27AB"
@@ -1516,10 +1516,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "front tilted shadowed white right arrow"
+        "default": "앞쪽으로 기울어진 흰색 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "front tilted shadowed white R arrow"
+        "sbrief": "앞쪽으로 기울어진 흰색 오른쪽 화살표"
       }
     },
     "key": "27AC"
@@ -1528,10 +1528,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy lower right shadowed white right arrow"
+        "default": "짦은 흰색 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy lower right shadowed white R arrow"
+        "sbrief": "짦은 흰색 오른쪽 화살표"
       }
     },
     "key": "27AD"
@@ -1540,10 +1540,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy upper right shadowed white right arrow"
+        "default": "위쪽으로 음영 처리된 짦은 흰색 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy upper right shadowed white R arrow"
+        "sbrief": "위쪽으로 음영 처리된 짦은 흰색 오른쪽 화살표"
       }
     },
     "key": "27AE"
@@ -1552,10 +1552,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "notched lower right shadowed white right arrow"
+        "default": "끝이 파인 흰색 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "notched lower right shadowed white R arrow"
+        "sbrief": "끝이 파인 흰색 오른쪽 화살표"
       }
     },
     "key": "27AF"
@@ -1564,10 +1564,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "notched upper right shadowed white right arrow"
+        "default": "끝이 파였고 흰색 위쪽으로 음영 처리된 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "notched upper right shadowed white R arrow"
+        "sbrief": "끝이 파였고 흰색 위쪽으로 음영 처리된 오른쪽 화살표"
       }
     },
     "key": "27B1"
@@ -1576,10 +1576,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "circled heavy white right arrow"
+        "default": "진한 원 안의 흰색 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "circled heavy white R arrow"
+        "sbrief": "진한 원 안의 흰색 오른쪽 화살표"
       }
     },
     "key": "27B2"
@@ -1588,10 +1588,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "white feathered right arrow"
+        "default": "화살깃이 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "white feathered R arrow"
+        "sbrief": "화살깃이 있는 오른쪽 화살표"
       }
     },
     "key": "27B3"
@@ -1600,10 +1600,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black feathered down right arrow"
+        "default": "화살깃이 있는 우하향 화살표"
       },
       "mathspeak": {
-        "sbrief": "black feathered d R arrow"
+        "sbrief": "화살깃이 있는 우하향 화살표"
       }
     },
     "key": "27B4"
@@ -1612,10 +1612,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black feathered right arrow"
+        "default": "화살깃이 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "black feathered R arrow"
+        "sbrief": "화살깃이 있는 오른쪽 화살표"
       }
     },
     "key": "27B5"
@@ -1624,10 +1624,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "black feathered up right arrow"
+        "default": "화살깃이 있는 우상향 화살표"
       },
       "mathspeak": {
-        "sbrief": "black feathered U R arrow"
+        "sbrief": "화살깃이 있는 우상향 화살표"
       }
     },
     "key": "27B6"
@@ -1636,10 +1636,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy black feathered down right arrow"
+        "default": "진한 화살깃이 있는 우하향 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy black feathered d R arrow"
+        "sbrief": "진한 화살깃이 있는 우하향 화살표"
       }
     },
     "key": "27B7"
@@ -1648,10 +1648,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy black feathered right arrow"
+        "default": "진한 화살깃이 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy black feathered R arrow"
+        "sbrief": "진한 화살깃이 있는 오른쪽 화살표"
       }
     },
     "key": "27B8"
@@ -1660,10 +1660,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy black feathered up right arrow"
+        "default": "진한 화살깃이 있는 우상향 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy black feathered U R arrow"
+        "sbrief": "진한 화살깃이 있는 우상향 화살표"
       }
     },
     "key": "27B9"
@@ -1672,10 +1672,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "teardrop barbed right arrow"
+        "default": "눈물 방울 모양의 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "teardrop barbed R arrow"
+        "sbrief": "눈물 방울 모양의 오른쪽 화살표"
       }
     },
     "key": "27BA"
@@ -1684,10 +1684,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy teardrop shanked right arrow"
+        "default": "화살깃이 두꺼운 눈물 모양의 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy teardrop shanked R arrow"
+        "sbrief": "화살깃이 두꺼운 눈물 모양의 오른쪽 화살표"
       }
     },
     "key": "27BB"
@@ -1696,10 +1696,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "wedge tailed right arrow"
+        "default": "꼬리가 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "wedge tailed R arrow"
+        "sbrief": "꼬리가 있는 오른쪽 화살표"
       }
     },
     "key": "27BC"
@@ -1708,10 +1708,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "heavy wedge tailed right arrow"
+        "default": "꼬리가 있는 굵은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "heavy wedge tailed R arrow"
+        "sbrief": "꼬리가 있는 굵은 오른쪽 화살표"
       }
     },
     "key": "27BD"
@@ -1720,10 +1720,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "open outlined right arrow"
+        "default": "열린 윤곽선의 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "open outlined R arrow"
+        "sbrief": "열린 윤곽선의 오른쪽 화살표"
       }
     },
     "key": "27BE"
@@ -1732,10 +1732,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up quadruple arrow"
+        "default": "위쪽 쿼드러플 화살표"
       },
       "mathspeak": {
-        "sbrief": "U quadruple arrow"
+        "sbrief": "위쪽 쿼드러플 화살표"
       }
     },
     "key": "27F0"
@@ -1744,10 +1744,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down quadruple arrow"
+        "default": "아래쪽 쿼드러플 화살표"
       },
       "mathspeak": {
-        "sbrief": "d quadrule arrow"
+        "sbrief": "아래쪽 쿼드러플 화살표"
       }
     },
     "key": "27F1"
@@ -1756,7 +1756,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "anticlockwise gapped circle arrow"
+        "default": "반시계 방향의 원 화살표"
       }
     },
     "key": "27F2"
@@ -1765,7 +1765,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "clockwise gapped circle arrow"
+        "default": "시계 방향의 원 화살표"
       }
     },
     "key": "27F3"
@@ -1774,10 +1774,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow with circled plus"
+        "default": "원과 플러스 부호 안에 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with circled plus"
+        "sbrief": "원과 플러스 부호 안에 있는 오른쪽 화살표"
       }
     },
     "key": "27F4"
@@ -1786,10 +1786,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long left arrow"
+        "default": "긴 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "long L arrow"
+        "sbrief": "긴 왼쪽 화살표"
       }
     },
     "key": "27F5"
@@ -1798,10 +1798,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long right arrow"
+        "default": "긴 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "long R arrow"
+        "sbrief": "긴 오른쪽 화살표"
       }
     },
     "key": "27F6"
@@ -1810,10 +1810,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long left right arrow"
+        "default": "긴 좌우 화살표"
       },
       "mathspeak": {
-        "sbrief": "long L R arrow"
+        "sbrief": "긴 좌우 화살표"
       }
     },
     "key": "27F7"
@@ -1822,10 +1822,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long left double arrow"
+        "default": "긴 왼쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "long l double arrow"
+        "sbrief": "긴 왼쪽 이중 화살표"
       }
     },
     "key": "27F8"
@@ -1834,10 +1834,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long right double arrow"
+        "default": "긴 오른쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "long R double arrow"
+        "sbrief": "긴 오른쪽 이중 화살표"
       }
     },
     "key": "27F9"
@@ -1846,10 +1846,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long left right double arrow"
+        "default": "긴 좌우 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "long L R double arrow"
+        "sbrief": "긴 좌우 이중 화살표"
       }
     },
     "key": "27FA"
@@ -1858,10 +1858,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long left arrow from bar"
+        "default": "세로선에서 시작하는 긴 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "long L arrow from bar"
+        "sbrief": "세로선에서 시작하는 긴 왼쪽 화살표"
       }
     },
     "key": "27FB"
@@ -1870,10 +1870,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long right arrow from bar"
+        "default": "세로선에서 시작하는 긴 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "long R arrow from bar"
+        "sbrief": "세로선에서 시작하는 긴 오른쪽 화살표"
       }
     },
     "key": "27FC"
@@ -1882,10 +1882,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long left double arrow from bar"
+        "default": "세로선에서 시작하는 긴 왼쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "long l double arrow from bar"
+        "sbrief": "세로선에서 시작하는 긴 왼쪽 이중 화살표"
       }
     },
     "key": "27FD"
@@ -1894,10 +1894,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long right double arrow from bar"
+        "default": "세로선에서 시작하는 긴 오른쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "long R double arrow from bar"
+        "sbrief": "세로선에서 시작하는 긴 오른쪽 이중 화살표"
       }
     },
     "key": "27FE"
@@ -1906,10 +1906,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long right squiggle arrow"
+        "default": "흔들리는 긴 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "long r squiggle arrow"
+        "sbrief": "흔들리는 긴 오른쪽 화살표"
       }
     },
     "key": "27FF"
@@ -1918,10 +1918,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "two headed right arrow with vertical stroke"
+        "default": "세로선이 그어진 오른쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "two headed R arrow with vertical stroke"
+        "sbrief": "세로선이 그어진 오른쪽 쌍화살표"
       }
     },
     "key": "2900"
@@ -1930,10 +1930,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "two headed right arrow with double vertical stroke"
+        "default": "두 개의 세로선이 그어진 오른쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "two headed R arrow with double vertical stroke"
+        "sbrief": "두 개의 세로선이 그어진 오른쪽 쌍화살표"
       }
     },
     "key": "2901"
@@ -1942,10 +1942,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double left arrow with vertical stroke"
+        "default": "세로선이 그어진 왼쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "double L arrow with vertical stroke"
+        "sbrief": "세로선이 그어진 왼쪽 이중 화살표"
       }
     },
     "key": "2902"
@@ -1954,10 +1954,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double right arrow with vertical stroke"
+        "default": "세로선이 그어진 오른쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "double R arrow with vertical stroke"
+        "sbrief": "세로선이 그어진 오른쪽 이중 화살표"
       }
     },
     "key": "2903"
@@ -1966,10 +1966,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double left right arrow with vertical stroke"
+        "default": "세로선이 그어진 좌우 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "double L R arrow with vertical stroke"
+        "sbrief": "세로선이 그어진 좌우 이중 화살표"
       }
     },
     "key": "2904"
@@ -1978,10 +1978,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "two headed right arrow from bar"
+        "default": "세로선에서 시작하는 오른쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "two headed R arrow from bar"
+        "sbrief": "세로선에서 시작하는 오른쪽 쌍화살표"
       }
     },
     "key": "2905"
@@ -1990,10 +1990,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double left arrow from bar"
+        "default": "세로선에서 시작하는 왼쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "double L arrow from bar"
+        "sbrief": "세로선에서 시작하는 왼쪽 이중 화살표"
       }
     },
     "key": "2906"
@@ -2002,10 +2002,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "double right arrow from bar"
+        "default": "세로선에서 시작하는 오른쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "double R arrow from bar"
+        "sbrief": "세로선에서 시작하는 오른쪽 이중 화살표"
       }
     },
     "key": "2907"
@@ -2014,7 +2014,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "arrow down with horizontal stroke"
+        "default": "가로선이 그어진 아래쪽 화살표"
       }
     },
     "key": "2908"
@@ -2023,10 +2023,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up arrow with horizontal stroke"
+        "default": "가로선이 그어진 위쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "U arrow with horizontal stroke"
+        "sbrief": "가로선이 그어진 위쪽 화살표"
       }
     },
     "key": "2909"
@@ -2035,10 +2035,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up triple arrow"
+        "default": "위쪽 삼중 화살표"
       },
       "mathspeak": {
-        "sbrief": "U triple arrow"
+        "sbrief": "위쪽 삼중 화살표"
       }
     },
     "key": "290A"
@@ -2047,10 +2047,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down triple arrow"
+        "default": "아래쪽 삼중 화살표"
       },
       "mathspeak": {
-        "sbrief": "d triple arrow"
+        "sbrief": "아래쪽 삼중 화살표"
       }
     },
     "key": "290B"
@@ -2059,10 +2059,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left double dash arrow"
+        "default": "왼쪽 더블 대시 화살표"
       },
       "mathspeak": {
-        "sbrief": "l double dash arrow"
+        "sbrief": "왼쪽 더블 대시 화살표"
       }
     },
     "key": "290C"
@@ -2071,10 +2071,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right double dash arrow"
+        "default": "오른쪽 더블 대시 화살표"
       },
       "mathspeak": {
-        "sbrief": "R double dash arrow"
+        "sbrief": "오른쪽 더블 대시 화살표"
       }
     },
     "key": "290D"
@@ -2083,10 +2083,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left triple dash arrow"
+        "default": "왼쪽 트리플 대시 화살표"
       },
       "mathspeak": {
-        "sbrief": "l triple dash arrow"
+        "sbrief": "왼쪽 트리플 대시 화살표"
       }
     },
     "key": "290E"
@@ -2095,10 +2095,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right triple dash arrow"
+        "default": "오른쪽 트리플 대시 화살표"
       },
       "mathspeak": {
-        "sbrief": "r triple dash arrow"
+        "sbrief": "오른쪽 트리플 대시 화살표"
       }
     },
     "key": "290F"
@@ -2107,10 +2107,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right two headed triple dash arrow"
+        "default": "화살깃이 있는 오른쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "r two headed triple dash arrow"
+        "sbrief": "화살깃이 있는 오른쪽 쌍화살표"
       }
     },
     "key": "2910"
@@ -2119,10 +2119,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow with dotted stem"
+        "default": "오른쪽 점선 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with dotted stem"
+        "sbrief": "오른쪽 점선 화살표"
       }
     },
     "key": "2911"
@@ -2131,10 +2131,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up arrow to bar"
+        "default": "가로선을 가리키는 위쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "U arrow to bar"
+        "sbrief": "가로선을 가리키는 위쪽 화살표"
       }
     },
     "key": "2912"
@@ -2143,10 +2143,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down arrow to bar"
+        "default": "가로선을 가리키는 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "D arrow to bar"
+        "sbrief": "가로선을 가리키는 아래쪽 화살표"
       }
     },
     "key": "2913"
@@ -2155,10 +2155,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow with tail with vertical stroke"
+        "default": "세로선이 그어졌고 화살깃이 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with tail with vertical stroke"
+        "sbrief": "세로선이 그어졌고 화살깃이 있는 오른쪽 화살표"
       }
     },
     "key": "2914"
@@ -2167,10 +2167,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow with tail with double vertical stroke"
+        "default": "두 개의 세로선이 그어졌고 화살깃이 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with tail with double vertical stroke"
+        "sbrief": "두 개의 세로선이 그어졌고 화살깃이 있는 오른쪽 화살표"
       }
     },
     "key": "2915"
@@ -2179,10 +2179,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right two headed arrow with tail"
+        "default": "화살깃이 있는 오른쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "r two headed arrow with tail"
+        "sbrief": "화살깃이 있는 오른쪽 쌍화살표"
       }
     },
     "key": "2916"
@@ -2191,10 +2191,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right two headed arrow with tail with vertical stroke"
+        "default": "세로선이 그어졌고 화살깃이 있는 오른쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "r two headed arrow with tail with vertical stroke"
+        "sbrief": "세로선이 그어졌고 화살깃이 있는 오른쪽 쌍화살표"
       }
     },
     "key": "2917"
@@ -2203,10 +2203,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right two headed arrow with tail with double vertical stroke"
+        "default": "두 개의 세로선이 그어졌고 화살깃이 있는 오른쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "r two headed arrow with tail with double vertical stroke"
+        "sbrief": "두 개의 세로선이 그어졌고 화살깃이 있는 오른쪽 쌍화살표"
       }
     },
     "key": "2918"
@@ -2215,10 +2215,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow tail"
+        "default": "꼬리만 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow tail"
+        "sbrief": "꼬리만 있는 왼쪽 화살표"
       }
     },
     "key": "2919"
@@ -2227,10 +2227,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow tail"
+        "default": "꼬리만 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow tail"
+        "sbrief": "꼬리만 있는 오른쪽 화살표"
       }
     },
     "key": "291A"
@@ -2239,10 +2239,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left double arrow tail"
+        "default": "두 개의 꼬리만 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "l double arrow tail"
+        "sbrief": "두 개의 꼬리만 있는 왼쪽 화살표"
       }
     },
     "key": "291B"
@@ -2251,10 +2251,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right double arrow tail"
+        "default": "두 개의 꼬리만 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R double arrow tail"
+        "sbrief": "두 개의 꼬리만 있는 오른쪽 화살표"
       }
     },
     "key": "291C"
@@ -2263,10 +2263,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow to black diamond"
+        "default": "검은 다이아몬드를 가리키고 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow to black diamond"
+        "sbrief": "검은 다이아몬드를 가리키고 있는 왼쪽 화살표"
       }
     },
     "key": "291D"
@@ -2275,10 +2275,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow to black diamond"
+        "default": "검은 다이아몬드를 가리키고 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow to black diamond"
+        "sbrief": "검은 다이아몬드를 가리키고 있는 오른쪽 화살표"
       }
     },
     "key": "291E"
@@ -2287,10 +2287,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow from bar to black diamond"
+        "default": "세로선부터 검은 다이아몬드까지 가리키고 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow from bar to black diamond"
+        "sbrief": "세로선부터 검은 다이아몬드까지 가리키고 있는 왼쪽 화살표"
       }
     },
     "key": "291F"
@@ -2299,10 +2299,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow from bar to black diamond"
+        "default": "세로선부터 검은 다이아몬드까지 가리키는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow from bar to black diamond"
+        "sbrief": "세로선부터 검은 다이아몬드까지 가리키는 오른쪽 화살표"
       }
     },
     "key": "2920"
@@ -2311,7 +2311,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "north west and south east arrow"
+        "default": "좌상향과 우하향이 결합된 화살표"
       }
     },
     "key": "2921"
@@ -2320,7 +2320,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "north east and south west arrow"
+        "default": "좌하향과 우상향이 결합된 화살표"
       }
     },
     "key": "2922"
@@ -2329,7 +2329,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "north west arrow with hook"
+        "default": "후크가 있는 좌상향 화살표"
       }
     },
     "key": "2923"
@@ -2338,7 +2338,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "north east arrow with hook"
+        "default": "후크가 있는 우상향 화살표"
       }
     },
     "key": "2924"
@@ -2347,7 +2347,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "south east arrow with hook"
+        "default": "후크가 있는 우하향 화살표"
       }
     },
     "key": "2925"
@@ -2356,7 +2356,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "south west arrow with hook"
+        "default": "후크가 있는 좌하향 화살표"
       }
     },
     "key": "2926"
@@ -2365,7 +2365,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "north west arrow and north east arrow"
+        "default": "좌상향 화살표와 우상향 화살표의 교차"
       }
     },
     "key": "2927"
@@ -2374,7 +2374,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "north east arrow and south east arrow"
+        "default": "우상향 화살표와 우하향 화살표의 교차"
       }
     },
     "key": "2928"
@@ -2383,7 +2383,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "south east arrow and south west arrow"
+        "default": "좌하향 화살표와 우하향 화살표의 교차"
       }
     },
     "key": "2929"
@@ -2392,7 +2392,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "south west arrow and north west arrow"
+        "default": "좌상향 화살표와 좌하향 화살표의 교차"
       }
     },
     "key": "292A"
@@ -2401,7 +2401,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "south east arrow crossing north east arrow"
+        "default": "우상향 화살표가 위에 있는 우하향 화살표와의 교차"
       }
     },
     "key": "292D"
@@ -2410,7 +2410,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "north east arrow crossing south east arrow"
+        "default": "우하향 화살표가 위에 있는 우상향 화살표와의 교차"
       }
     },
     "key": "292E"
@@ -2419,7 +2419,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "falling diagonal crossing north east arrow"
+        "default": "대각선이 위에 있는 우상향 화살표와의 교차"
       }
     },
     "key": "292F"
@@ -2428,7 +2428,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "rising diagonal crossing south east arrow"
+        "default": "대각선이 위에 있는 우하향 화살표와의 교차"
       }
     },
     "key": "2930"
@@ -2437,7 +2437,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "north east arrow crossing north west arrow"
+        "default": "우상향 화살표가 위에 있는 좌상향 화살표와의 교차"
       }
     },
     "key": "2931"
@@ -2446,7 +2446,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "north west arrow crossing north east arrow"
+        "default": "좌상향 화살표가 위에 있는 우상향 화살표와의 교차"
       }
     },
     "key": "2932"
@@ -2455,7 +2455,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "wave arrow pointing directly right"
+        "default": "오른쪽 웨이브 화살표"
       }
     },
     "key": "2933"
@@ -2464,7 +2464,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "arrow pointing right then curving up"
+        "default": "왼쪽에서 위로 휘어지는 화살표"
       }
     },
     "key": "2934"
@@ -2473,7 +2473,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "arrow pointing right then curving down"
+        "default": "왼쪽에서 아래로 휘어지는 화살표"
       }
     },
     "key": "2935"
@@ -2482,7 +2482,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "arrow pointing down then curving left"
+        "default": "위쪽에서 왼쪽으로 휘아지는 화살표"
       }
     },
     "key": "2936"
@@ -2491,7 +2491,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "arrow pointing down then curving right"
+        "default": "위쪽에서 오른쪽으로 휘아지는 화살표"
       }
     },
     "key": "2937"
@@ -2500,10 +2500,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right side arc clockwise arrow"
+        "default": "시계 방향 원호 화살표"
       },
       "mathspeak": {
-        "sbrief": "r side arc clockwise arrow"
+        "sbrief": "시계 방향 원호 화살표"
       }
     },
     "key": "2938"
@@ -2512,10 +2512,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left side arc anticlockwise arrow"
+        "default": "반시계 방향 원호 화살표"
       },
       "mathspeak": {
-        "sbrief": "l side arc anticlockwise arrow"
+        "sbrief": "반시계 방향 원호 화살표"
       }
     },
     "key": "2939"
@@ -2524,7 +2524,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "top arc anticlockwise arrow"
+        "default": "반시계 방향 윗 원호 화살표"
       }
     },
     "key": "293A"
@@ -2533,7 +2533,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "bottom arc anticlockwise arrow"
+        "default": "반시계 방향 아랫 원호 화살표"
       }
     },
     "key": "293B"
@@ -2542,7 +2542,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "top arc clockwise arrow with minus"
+        "default": "시계 방향 윗 원호 화살표와 마이너스 부호"
       }
     },
     "key": "293C"
@@ -2551,7 +2551,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "top arc anticlockwise arrow with plus"
+        "default": "반시계 방향 윗 원호 화살표와 플러스 부호"
       }
     },
     "key": "293D"
@@ -2560,10 +2560,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down right semicircular clockwise arrow"
+        "default": "시계 방향 반원 화살표"
       },
       "mathspeak": {
-        "sbrief": "d r semicircular clockwise arrow"
+        "sbrief": "시계 방향 반원 화살표"
       }
     },
     "key": "293E"
@@ -2572,10 +2572,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down left semicircular anticlockwise arrow"
+        "default": "반시계 방향 반원 화살표"
       },
       "mathspeak": {
-        "sbrief": "d l semicircular anticlockwise arrow"
+        "sbrief": "반시계 방향 반원 화살표"
       }
     },
     "key": "293F"
@@ -2584,7 +2584,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "anticlockwise closed circle arrow"
+        "default": "반시계 방향 닫힌 원 화살표"
       }
     },
     "key": "2940"
@@ -2593,7 +2593,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "clockwise closed circle arrow"
+        "default": "시계 방향 닫힌 원 화살표"
       }
     },
     "key": "2941"
@@ -2602,10 +2602,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow above short left arrow"
+        "default": "짦은 왼쪽 화살표와 그 위에 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow above short L arrow"
+        "sbrief": "짦은 왼쪽 화살표와 그 위에 오른쪽 화살표"
       }
     },
     "key": "2942"
@@ -2614,10 +2614,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow above short right arrow"
+        "default": "짦은 오른쪽 화살표와 그 위에 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow above short R arrow"
+        "sbrief": "짦은 오른쪽 화살표와 그 위에 왼쪽 화살표"
       }
     },
     "key": "2943"
@@ -2626,10 +2626,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "short right arrow above left arrow"
+        "default": "왼쪽 화살표와 그 위에 짦은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "short R arrow above L arrow"
+        "sbrief": "왼쪽 화살표와 그 위에 짦은 오른쪽 화살표"
       }
     },
     "key": "2944"
@@ -2638,10 +2638,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow with plus below"
+        "default": "오른쪽 화살표와 그 아래에 플러스 기호"
       },
       "mathspeak": {
-        "sbrief": "R arrow with plus below"
+        "sbrief": "오른쪽 화살표와 그 아래에 플러스 기호"
       }
     },
     "key": "2945"
@@ -2650,10 +2650,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow with plus below"
+        "default": "왼쪽 화살표와 그 아래에 플러스 기호"
       },
       "mathspeak": {
-        "sbrief": "L arrow with plus below"
+        "sbrief": "왼쪽 화살표와 그 아래에 플러스 기호"
       }
     },
     "key": "2946"
@@ -2662,10 +2662,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow through x"
+        "default": "엑스 자를 통과하는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow through x"
+        "sbrief": "엑스 자를 통과하는 오른쪽 화살표"
       }
     },
     "key": "2947"
@@ -2674,10 +2674,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left right arrow through small circle"
+        "default": "작은 원이 붙은 좌우 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R arrow through small circle"
+        "sbrief": "작은 원이 붙은 좌우 화살표"
       }
     },
     "key": "2948"
@@ -2686,10 +2686,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up two headed arrow from small circle"
+        "default": "작은 원에서 시작하는 위쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "U two headed arrow from small circle"
+        "sbrief": "작은 원에서 시작하는 위쪽 쌍화살표"
       }
     },
     "key": "2949"
@@ -2698,10 +2698,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right double arrow with rounded head"
+        "default": "끝이 뭉툭한 오른쪽 이중 화살표"
       },
       "mathspeak": {
-        "sbrief": "R double arrow with rounded head"
+        "sbrief": "끝이 뭉툭한 오른쪽 이중 화살표"
       }
     },
     "key": "2970"
@@ -2710,10 +2710,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "equals sign above right arrow"
+        "default": "위에 등호가 붙은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "equals sign above R arrow"
+        "sbrief": "위에 등호가 붙은 오른쪽 화살표"
       }
     },
     "key": "2971"
@@ -2722,10 +2722,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "tilde operator above right arrow"
+        "default": "위에 물결표가 붙은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "tilde operator above R arrow"
+        "sbrief": "위에 물결표가 붙은 오른쪽 화살표"
       }
     },
     "key": "2972"
@@ -2734,10 +2734,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow above tilde operator"
+        "default": "밑에 물결표가 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow above tilde operator"
+        "sbrief": "밑에 물결표가 붙은 왼쪽 화살표"
       }
     },
     "key": "2973"
@@ -2746,10 +2746,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow above tilde operator"
+        "default": "밑에 물결표가 붙은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow above tilde operator"
+        "sbrief": "밑에 물결표가 붙은 오른쪽 화살표"
       }
     },
     "key": "2974"
@@ -2758,10 +2758,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow above almost equals"
+        "default": "밑에 근사 등호가 붙은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow above almost equals"
+        "sbrief": "밑에 근사 등호가 붙은 오른쪽 화살표"
       }
     },
     "key": "2975"
@@ -2770,10 +2770,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "less than above left arrow"
+        "default": "위에 미만 부등호가 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "less than above L arrow"
+        "sbrief": "위에 미만 부등호가 붙은 왼쪽 화살표"
       }
     },
     "key": "2976"
@@ -2782,10 +2782,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow through less than"
+        "default": "미만 부등호가 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow through less than"
+        "sbrief": "미만 부등호가 붙은 왼쪽 화살표"
       }
     },
     "key": "2977"
@@ -2794,10 +2794,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "greater than above right arrow"
+        "default": "위에 초과 부등호가 붙은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "greater than above R arrow"
+        "sbrief": "위에 초과 부등호가 붙은 오른쪽 화살표"
       }
     },
     "key": "2978"
@@ -2806,10 +2806,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "subset above right arrow"
+        "default": "위에 부분 집합이 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "subset above R arrow"
+        "sbrief": "위에 부분 집합이 붙은 왼쪽 화살표"
       }
     },
     "key": "2979"
@@ -2818,10 +2818,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow through subset"
+        "default": "부분 집합이 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow through subset"
+        "sbrief": "부분 집합이 붙은 왼쪽 화살표"
       }
     },
     "key": "297A"
@@ -2830,10 +2830,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "superset above left arrow"
+        "default": "위에 상위 집합이 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "suerset above L arrow"
+        "sbrief": "위에 상위 집합이 붙은 왼쪽 화살표"
       }
     },
     "key": "297B"
@@ -2842,10 +2842,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "empty set with right arrow above"
+        "default": "위에 오른쪽 화살표가 붙은 공집합"
       },
       "mathspeak": {
-        "sbrief": "empty set with R arrow above"
+        "sbrief": "위에 오른쪽 화살표가 붙은 공집합"
       }
     },
     "key": "29B3"
@@ -2854,10 +2854,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "empty set with left arrow above"
+        "default": "위에 왼쪽 화살표가 붙은 공집합"
       },
       "mathspeak": {
-        "sbrief": "empty set with L arrow above"
+        "sbrief": "위에 왼쪽 화살표가 붙은 공집합"
       }
     },
     "key": "29B4"
@@ -2866,10 +2866,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up arrow through circle"
+        "default": "공집합이 겹쳐진 화살표"
       },
       "mathspeak": {
-        "sbrief": "U arrow through circle"
+        "sbrief": "공집합이 겹쳐진 화살표"
       }
     },
     "key": "29BD"
@@ -2878,10 +2878,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "black diamond with down arrow"
+        "default": "검은 다이아몬드가 겹쳐진 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "black diamond with D arrow"
+        "sbrief": "검은 다이아몬드가 겹쳐진 아래쪽 화살표"
       }
     },
     "key": "29EA"
@@ -2890,10 +2890,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "white circle with down arrow"
+        "default": "흰 원이 겹쳐진 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "white circle with D arrow"
+        "sbrief": "흰 원이 겹쳐진 아래쪽 화살표"
       }
     },
     "key": "29EC"
@@ -2902,10 +2902,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "black circle with down arrow"
+        "default": "검은 원이 겹쳐진 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "black circle with D arrow"
+        "sbrief": "검은 원이 겹쳐진 아래쪽 화살표"
       }
     },
     "key": "29ED"
@@ -2914,10 +2914,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "integral with left arrow with hook"
+        "default": "인테그럴이 겹쳐진 후크가 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "integral with L arrow with hook"
+        "sbrief": "인테그럴이 겹쳐진 후크가 있는 왼쪽 화살표"
       }
     },
     "key": "2A17"
@@ -2926,7 +2926,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "north east white arrow"
+        "default": "우상향 흰색 화살표"
       }
     },
     "key": "2B00"
@@ -2935,7 +2935,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "north west white arrow"
+        "default": "좌상향 흰색 화살표"
       }
     },
     "key": "2B01"
@@ -2944,7 +2944,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "south east white arrow"
+        "default": "우하향 흰색 화살표"
       }
     },
     "key": "2B02"
@@ -2953,7 +2953,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "south west white arrow"
+        "default": "좌하향 흰색 화살표"
       }
     },
     "key": "2B03"
@@ -2962,10 +2962,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left right white arrow"
+        "default": "좌우 흰색 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R white arrow"
+        "sbrief": "좌우 흰색 화살표"
       }
     },
     "key": "2B04"
@@ -2974,10 +2974,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left black arrow"
+        "default": "왼쪽 진한 화살표"
       },
       "mathspeak": {
-        "sbrief": "L black arrow"
+        "sbrief": "왼쪽 진한 화살표"
       }
     },
     "key": "2B05"
@@ -2986,10 +2986,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up black arrow"
+        "default": "위쪽 진한 화살표"
       },
       "mathspeak": {
-        "sbrief": "U black arrow"
+        "sbrief": "위쪽 진한 화살표"
       }
     },
     "key": "2B06"
@@ -2998,10 +2998,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down black arrow"
+        "default": "아래쪽 진한 화살표"
       },
       "mathspeak": {
-        "sbrief": "D black arrow"
+        "sbrief": "아래쪽 진한 화살표"
       }
     },
     "key": "2B07"
@@ -3010,7 +3010,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "north east black arrow"
+        "default": "우상향 진한 화살표"
       }
     },
     "key": "2B08"
@@ -3019,7 +3019,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "north west black arrow"
+        "default": "좌상향 진한 화살표"
       }
     },
     "key": "2B09"
@@ -3028,7 +3028,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "south east black arrow"
+        "default": "우하향 진한 화살표"
       }
     },
     "key": "2B0A"
@@ -3037,7 +3037,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "south west black arrow"
+        "default": "좌하향 진한 화살표"
       }
     },
     "key": "2B0B"
@@ -3046,10 +3046,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left right black arrow"
+        "default": "좌우 진한 화살표"
       },
       "mathspeak": {
-        "sbrief": "L R black arrow"
+        "sbrief": "좌우 진한 화살표"
       }
     },
     "key": "2B0C"
@@ -3058,10 +3058,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up down black arrow"
+        "default": "상하 진한 화살표"
       },
       "mathspeak": {
-        "sbrief": "U D black arrow"
+        "sbrief": "상하 진한 화살표"
       }
     },
     "key": "2B0D"
@@ -3070,10 +3070,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right arrow with tip down"
+        "default": "아래쪽으로 꺾인 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with tip down"
+        "sbrief": "아래쪽으로 꺾인 오른쪽 화살표"
       }
     },
     "key": "2B0E"
@@ -3082,10 +3082,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right arrow with tip up"
+        "default": "위쪽으로 꺾인 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow with tip up"
+        "sbrief": "위쪽으로 꺾인 오른쪽 화살표"
       }
     },
     "key": "2B0F"
@@ -3094,10 +3094,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left arrow with tip down"
+        "default": "아래쪽으로 꺾인 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with tip down"
+        "sbrief": "아래쪽으로 꺾인 왼쪽 화살표"
       }
     },
     "key": "2B10"
@@ -3106,10 +3106,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left arrow with tip up"
+        "default": "위쪽으로 꺾인 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with tip up"
+        "sbrief": "위쪽으로 꺾인 왼쪽 화살표"
       }
     },
     "key": "2B11"
@@ -3118,10 +3118,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow with small circle"
+        "default": "작은 원이 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with small circle"
+        "sbrief": "작은 원이 붙은 왼쪽 화살표"
       }
     },
     "key": "2B30"
@@ -3130,10 +3130,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "three left arrows"
+        "default": "세 개의 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "three L arrows"
+        "sbrief": "세 개의 왼쪽 화살표"
       }
     },
     "key": "2B31"
@@ -3142,10 +3142,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow with circled plus"
+        "default": "원과 플러스 부호 안의 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with circled plus"
+        "sbrief": "원과 플러스 부호 안의 왼쪽 화살표"
       }
     },
     "key": "2B32"
@@ -3154,10 +3154,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "long left squiggle arrow"
+        "default": "흔들리는 긴 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "long l squiggle arrow"
+        "sbrief": "흔들리는 긴 왼쪽 화살표"
       }
     },
     "key": "2B33"
@@ -3166,10 +3166,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left two headed arrow with vertical stroke"
+        "default": "두 개의 세로선이 그어진 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "l two headed arrow with vertical stroke"
+        "sbrief": "두 개의 세로선이 그어진 왼쪽 화살표"
       }
     },
     "key": "2B34"
@@ -3178,10 +3178,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left two headed arrow with double vertical stroke"
+        "default": "두 개의 세로선이 그어진 왼쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "l two headed arrow with double vertical stroke"
+        "sbrief": "두 개의 세로선이 그어진 왼쪽 쌍화살표"
       }
     },
     "key": "2B35"
@@ -3190,10 +3190,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left two headed arrow from bar"
+        "default": "세로선에서 시작하는 왼쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "l two headed arrow from bar"
+        "sbrief": "세로선에서 시작하는 왼쪽 쌍화살표"
       }
     },
     "key": "2B36"
@@ -3202,10 +3202,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left two headed triple dash arrow"
+        "default": "왼쪽 트리플 대시 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "l two headed triple dash arrow"
+        "sbrief": "왼쪽 트리플 대시 쌍화살표"
       }
     },
     "key": "2B37"
@@ -3214,10 +3214,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow with dotted stem"
+        "default": "왼쪽 점선 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with dotted stem"
+        "sbrief": "왼쪽 점선 화살표"
       }
     },
     "key": "2B38"
@@ -3226,10 +3226,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow with tail with vertical stroke"
+        "default": "세로선이 그어졌고 꼬리가 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with tail with vertical stroke"
+        "sbrief": "세로선이 그어졌고 꼬리가 있는 왼쪽 화살표"
       }
     },
     "key": "2B39"
@@ -3238,10 +3238,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow with tail with double vertical stroke"
+        "default": "두 개의 세로선이 그어졌고 꼬리가 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow with tail with double vertical stroke"
+        "sbrief": "두 개의 세로선이 그어졌고 꼬리가 있는 왼쪽 화살표"
       }
     },
     "key": "2B3A"
@@ -3250,10 +3250,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left two headed arrow with tail"
+        "default": "꼬리가 있는 왼쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "l two headed arrow with tail"
+        "sbrief": "꼬리가 있는 왼쪽 쌍화살표"
       }
     },
     "key": "2B3B"
@@ -3262,10 +3262,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left two headed arrow with tail with vertical stroke"
+        "default": "세로선이 그어졌고 꼬리가 있는 왼쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "l two headed arrow with tail with vertical stroke"
+        "sbrief": "세로선이 그어졌고 꼬리가 있는 왼쪽 쌍화살표"
       }
     },
     "key": "2B3C"
@@ -3274,10 +3274,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left two headed arrow with tail with double vertical stroke"
+        "default": "두 개의 세로선이 그어졌고 꼬리가 있는 왼쪽 쌍화살표"
       },
       "mathspeak": {
-        "sbrief": "l two headed arrow with tail with double vertical stroke"
+        "sbrief": "두 개의 세로선이 그어졌고 꼬리가 있는 왼쪽 쌍화살표"
       }
     },
     "key": "2B3D"
@@ -3286,10 +3286,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow through x"
+        "default": "엑스 자가 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow through x"
+        "sbrief": "엑스 자가 붙은 왼쪽 화살표"
       }
     },
     "key": "2B3E"
@@ -3298,7 +3298,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "wave arrow pointing directly left"
+        "default": "왼쪽 웨이브 화살표"
       }
     },
     "key": "2B3F"
@@ -3307,10 +3307,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "equals sign above left arrow"
+        "default": "위에 등호가 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "equals sign above L arrow"
+        "sbrief": "위에 등호가 붙은 왼쪽 화살표"
       }
     },
     "key": "2B40"
@@ -3319,10 +3319,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "reverse tilde operator above left arrow"
+        "default": "위에 물결표가 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "reverse tilde operator above L arrow"
+        "sbrief": "위에 물결표가 붙은 왼쪽 화살표"
       }
     },
     "key": "2B41"
@@ -3331,10 +3331,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow above reverse almost equals"
+        "default": "밑에 근사 등호가 붙은 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow above reverse almost equals"
+        "sbrief": "밑에 근사 등호가 붙은 왼쪽 화살표"
       }
     },
     "key": "2B42"
@@ -3343,10 +3343,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow through greater than"
+        "default": "오른쪽 부등호가 붙은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow through greater than"
+        "sbrief": "오른쪽 부등호가 붙은 오른쪽 화살표"
       }
     },
     "key": "2B43"
@@ -3355,10 +3355,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow through superset"
+        "default": "상위 집합이 붙은 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow through superset"
+        "sbrief": "상위 집합이 붙은 오른쪽 화살표"
       }
     },
     "key": "2B44"
@@ -3367,10 +3367,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left quadruple arrow"
+        "default": "왼쪽 쿼드러플 화살표"
       },
       "mathspeak": {
-        "sbrief": "l quadrule arrow"
+        "sbrief": "왼쪽 쿼드러플 화살표"
       }
     },
     "key": "2B45"
@@ -3379,10 +3379,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right quadruple arrow"
+        "default": "오른쪽 쿼드러플 화살표"
       },
       "mathspeak": {
-        "sbrief": "r quadrule arrow"
+        "sbrief": "오른쪽 쿼드러플 화살표"
       }
     },
     "key": "2B46"
@@ -3391,10 +3391,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "reverse tilde operator above right arrow"
+        "default": "위에 물결표가 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "reverse tilde operator above R arrow"
+        "sbrief": "위에 물결표가 있는 오른쪽 화살표"
       }
     },
     "key": "2B47"
@@ -3403,10 +3403,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow above reverse almost equals"
+        "default": "밑에 근사 등호가 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow above reverse almost equals"
+        "sbrief": "밑에 근사 등호가 있는 오른쪽 화살표"
       }
     },
     "key": "2B48"
@@ -3415,10 +3415,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "tilde operator above left arrow"
+        "default": "위에 물결표가 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "tilde operator above L arrow"
+        "sbrief": "위에 물결표가 있는 왼쪽 화살표"
       }
     },
     "key": "2B49"
@@ -3427,10 +3427,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow above almost equals"
+        "default": "밑에 근사 등호가 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow above almost equals"
+        "sbrief": "밑에 근사 등호가 있는 왼쪽 화살표"
       }
     },
     "key": "2B4A"
@@ -3439,10 +3439,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left arrow above reverse tilde operator"
+        "default": "밑에 물결표가 있는 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "L arrow above reverse tilde operator"
+        "sbrief": "밑에 물결표가 있는 왼쪽 화살표"
       }
     },
     "key": "2B4B"
@@ -3451,10 +3451,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right arrow above reverse tilde operator"
+        "default": "밑에 물결표가 있는 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "R arrow above reverse tilde operator"
+        "sbrief": "밑에 물결표가 있는 오른쪽 화살표"
       }
     },
     "key": "2B4C"
@@ -3463,10 +3463,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "halfwidth left arrow"
+        "default": "반쪽짜리 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "halfwidth L arrow"
+        "sbrief": "반쪽짜리 왼쪽 화살표"
       }
     },
     "key": "FFE9"
@@ -3475,10 +3475,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "halfwidth up arrow"
+        "default": "반쪽짜리 위쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "halfwidth U arrow"
+        "sbrief": "반쪽짜리 위쪽 화살표"
       }
     },
     "key": "FFEA"
@@ -3487,10 +3487,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "halfwidth right arrow"
+        "default": "반쪽짜리 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "halfwidth R arrow"
+        "sbrief": "반쪽짜리 오른쪽 화살표"
       }
     },
     "key": "FFEB"
@@ -3499,10 +3499,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "halfwidth down arrow"
+        "default": "반쪽짜리 아래쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "halfwidth D arrow"
+        "sbrief": "반쪽짜리 아래쪽 화살표"
       }
     },
     "key": "FFEC"

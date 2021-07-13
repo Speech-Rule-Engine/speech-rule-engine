@@ -1,8 +1,8 @@
-[{"locale": "en"},
+[{"locale": "ko"},
   {"category": "memory",
    "mappings": {
      "default": {
-       "default": "bit"
+       "default": "비트"
      }
    },
    "key": "b",
@@ -12,7 +12,7 @@
    "si": true,
    "mappings": {
      "default": {
-       "default": "byte"
+       "default": "바이트"
      }
    },
    "key": "B",
@@ -21,7 +21,7 @@
   {"category": "memory",
    "mappings": {
      "default": {
-       "default": "kilobyte"
+       "default": "킬로바이트"
      }
    },
    "key": "KB",

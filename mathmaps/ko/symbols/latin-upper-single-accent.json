@@ -1,15 +1,15 @@
-[{"locale": "en"},
+[{"locale": "ko"},
   {
     "category": "Lu",
     "key": "00C0",
     "mappings": {
       "default": {
-        "default": "cap A grave"
+        "default": "대문자 억음 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with grave",
-        "brief": "mod above upper A with grave",
-        "sbrief": "mod above upper A with grave"
+        "default": "억음 부호가 올려진 대문자 A",
+        "brief": "억음 부호가 올려진 대문자 A",
+        "sbrief": "억음 부호가 올려진 대문자 A"
       }
     }
   },
@@ -18,12 +18,12 @@
     "key": "00C1",
     "mappings": {
       "default": {
-        "default": "cap A acute"
+        "default": "대문자 양음 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with acute",
-        "brief": "mod above upper A with acute",
-        "sbrief": "mod above upper A with acute"
+        "default": "양음 부호가 올려진 대문자 A",
+        "brief": "양음 부호가 올려진 대문자 A",
+        "sbrief": "양음 부호가 올려진 대문자 A"
       }
     }
   },
@@ -32,12 +32,12 @@
     "key": "00C2",
     "mappings": {
       "default": {
-        "default": "cap A hat"
+        "default": "대문자 곡절음 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with caret",
-        "brief": "mod above upper A with caret",
-        "sbrief": "mod above upper A with caret"
+        "default": "삽입 기호가 올려진 대문자 A",
+        "brief": "삽입 기호가 올려진 대문자 A",
+        "sbrief": "삽입 기호가 올려진 대문자 A"
       }
     }
   },
@@ -46,12 +46,12 @@
     "key": "00C3",
     "mappings": {
       "default": {
-        "default": "cap A tilde"
+        "default": "대문자 물결표 A"
       },
       "mathspeak": {
-        "default": "upper A overtilde",
-        "brief": "upper A overtilde",
-        "sbrief": "upper A overtilde"
+        "default": "물결표가 올려진 대문자 A",
+        "brief": "물결표가 올려진 대문자 A",
+        "sbrief": "물결표가 올려진 대문자 A"
       }
     }
   },
@@ -60,12 +60,12 @@
     "key": "00C4",
     "mappings": {
       "default": {
-        "default": "cap A double overdot"
+        "default": "대문자 분음 부호표 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with double dot",
-        "brief": "mod above upper A with double dot",
-        "sbrief": "mod above upper A with double dot"
+        "default": "분음 부호가 올려진 대문자 A",
+        "brief": "분음 부호가 올려진 대문자 A",
+        "sbrief": "분음 부호가 올려진 대문자 A"
       }
     }
   },
@@ -74,12 +74,12 @@
     "key": "00C5",
     "mappings": {
       "default": {
-        "default": "cap A ring"
+        "default": "대문자 반지 부호 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with ring",
-        "brief": "mod above upper A with ring",
-        "sbrief": "mod above upper A with ring"
+        "default": "반지 부호가 올려진 대문자 A",
+        "brief": "반지 부호가 올려진 대문자 A",
+        "sbrief": "반지 부호가 올려진 대문자 A"
       }
     }
   },
@@ -88,12 +88,12 @@
     "key": "00C7",
     "mappings": {
       "default": {
-        "default": "cap C cedilla"
+        "default": "대문자 갈고리형 C"
       },
       "mathspeak": {
-        "default": "modifying above upper C with cedilla",
-        "brief": "mod above upper C with cedilla",
-        "sbrief": "mod above upper C with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 C",
+        "brief": "갈고리형 부호가 붙여진 대문자 C",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 C"
       }
     }
   },
@@ -102,12 +102,12 @@
     "key": "00C8",
     "mappings": {
       "default": {
-        "default": "cap E grave"
+        "default": "대문자 억음 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with grave",
-        "brief": "mod above upper E with grave",
-        "sbrief": "mod above upper E with grave"
+        "default": "억음 부호가 올려진 대문자 E",
+        "brief": "억음 부호가 올려진 대문자 E",
+        "sbrief": "억음 부호가 올려진 대문자 E"
       }
     }
   },
@@ -116,12 +116,12 @@
     "key": "00C9",
     "mappings": {
       "default": {
-        "default": "cap E acute"
+        "default": "대문자 양음 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with acute",
-        "brief": "mod above upper E with acute",
-        "sbrief": "mod above upper E with acute"
+        "default": "양음 부호가 올려진 대문자 E",
+        "brief": "양음 부호가 올려진 대문자 E",
+        "sbrief": "양음 부호가 올려진 대문자 E"
       }
     }
   },
@@ -130,12 +130,12 @@
     "key": "00CA",
     "mappings": {
       "default": {
-        "default": "cap E hat"
+        "default": "대문자 곡절음 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with caret",
-        "brief": "mod above upper E with caret",
-        "sbrief": "mod above upper E with caret"
+        "default": "삽입 기호가 올려진 대문자 E",
+        "brief": "삽입 기호가 올려진 대문자 E",
+        "sbrief": "삽입 기호가 올려진 대문자 E"
       }
     }
   },
@@ -144,12 +144,12 @@
     "key": "00CB",
     "mappings": {
       "default": {
-        "default": "cap E double overdot"
+        "default": "대문자 분음 부호표 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with double dot",
-        "brief": "mod above upper E with double dot",
-        "sbrief": "mod above upper E with double dot"
+        "default": "분음 부호가 올려진 대문자 E",
+        "brief": "분음 부호가 올려진 대문자 E",
+        "sbrief": "분음 부호가 올려진 대문자 E"
       }
     }
   },
@@ -158,12 +158,12 @@
     "key": "00CC",
     "mappings": {
       "default": {
-        "default": "cap I grave"
+        "default": "대문자 억음 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with grave",
-        "brief": "mod above upper I with grave",
-        "sbrief": "mod above upper I with grave"
+        "default": "억음 부호가 올려진 대문자 I",
+        "brief": "억음 부호가 올려진 대문자 I",
+        "sbrief": "억음 부호가 올려진 대문자 I"
       }
     }
   },
@@ -172,12 +172,12 @@
     "key": "00CD",
     "mappings": {
       "default": {
-        "default": "cap I acute"
+        "default": "대문자 양음 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with acute",
-        "brief": "mod above upper I with acute",
-        "sbrief": "mod above upper I with acute"
+        "default": "양음 부호가 올려진 대문자 I",
+        "brief": "양음 부호가 올려진 대문자 I",
+        "sbrief": "양음 부호가 올려진 대문자 I"
       }
     }
   },
@@ -186,12 +186,12 @@
     "key": "00CE",
     "mappings": {
       "default": {
-        "default": "cap I hat"
+        "default": "대문자 곡절음 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with caret",
-        "brief": "mod above upper I with caret",
-        "sbrief": "mod above upper I with caret"
+        "default": "삽입 기호가  올려진 대문자 I",
+        "brief": "삽입 기호가 올려진 대문자 I",
+        "sbrief": "삽입 기호가 올려진 대문자 I"
       }
     }
   },
@@ -200,12 +200,12 @@
     "key": "00CF",
     "mappings": {
       "default": {
-        "default": "cap I double overdot"
+        "default": "대문자 분음 부호표 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with double dot",
-        "brief": "mod above upper I with double dot",
-        "sbrief": "mod above upper I with double dot"
+        "default": "분음 부호가 올려진 대문자 I",
+        "brief": "분음 부호가 올려진 대문자 I",
+        "sbrief": "분음 부호가 올려진 대문자 I"
       }
     }
   },
@@ -214,12 +214,12 @@
     "key": "00D1",
     "mappings": {
       "default": {
-        "default": "cap N tilde"
+        "default": "대문자 물결표 N"
       },
       "mathspeak": {
-        "default": "upper N overtilde",
-        "brief": "upper N overtilde",
-        "sbrief": "upper N overtilde"
+        "default": "물결표가 올려진 대문자 N",
+        "brief": "물결표가 올려진 대문자 N",
+        "sbrief": "물결표가 올려진 대문자 N"
       }
     }
   },
@@ -228,12 +228,12 @@
     "key": "00D2",
     "mappings": {
       "default": {
-        "default": "cap O grave"
+        "default": "대문자 억음 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with grave",
-        "brief": "mod above upper O with grave",
-        "sbrief": "mod above upper O with grave"
+        "default": "억음 부호가 올려진 대문자 O",
+        "brief": "억음 부호가 올려진 대문자 O",
+        "sbrief": "억음 부호가 올려진 대문자 O"
       }
     }
   },
@@ -242,12 +242,12 @@
     "key": "00D3",
     "mappings": {
       "default": {
-        "default": "cap O acute"
+        "default": "대문자 양음 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with acute",
-        "brief": "mod above upper O with acute",
-        "sbrief": "mod above upper O with acute"
+        "default": "양음 부호가 올려진 대문자 O",
+        "brief": "양음 부호가 올려진 대문자 O",
+        "sbrief": "양음 부호가 올려진 대문자 O"
       }
     }
   },
@@ -256,12 +256,12 @@
     "key": "00D4",
     "mappings": {
       "default": {
-        "default": "cap O hat"
+        "default": "대문자 곡절음 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with caret",
-        "brief": "mod above upper O with caret",
-        "sbrief": "mod above upper O with caret"
+        "default": "삽입 기호가 올려진 대문자 O",
+        "brief": "삽입 기호가 올려진 대문자 O",
+        "sbrief": "삽입 기호가 올려진 대문자 O"
       }
     }
   },
@@ -270,12 +270,12 @@
     "key": "00D5",
     "mappings": {
       "default": {
-        "default": "cap O tilde"
+        "default": "대문자 물결표 O"
       },
       "mathspeak": {
-        "default": "upper O overtilde",
-        "brief": "upper O overtilde",
-        "sbrief": "upper O overtilde"
+        "default": "물결표가 올려진 대문자 O",
+        "brief": "물결표가 올려진 대문자 O",
+        "sbrief": "물결표가 올려진 대문자 O"
       }
     }
   },
@@ -284,12 +284,12 @@
     "key": "00D6",
     "mappings": {
       "default": {
-        "default": "cap O double overdot"
+        "default": "대문자 분음 부호표 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with double dot",
-        "brief": "mod above upper O with double dot",
-        "sbrief": "mod above upper O with double dot"
+        "default": "분음 부호가 올려진 대문자 O",
+        "brief": "분음 부호가 올려진 대문자 O",
+        "sbrief": "분음 부호가 올려진 대문자 O"
       }
     }
   },
@@ -298,12 +298,12 @@
     "key": "00D9",
     "mappings": {
       "default": {
-        "default": "cap U grave"
+        "default": "대문자 억음 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with grave",
-        "brief": "mod above upper U with grave",
-        "sbrief": "mod above upper U with grave"
+        "default": "억음 부호가 올려진 대문자 U",
+        "brief": "억음 부호가 올려진 대문자 U",
+        "sbrief": "억음 부호가 올려진 대문자 U"
       }
     }
   },
@@ -312,12 +312,12 @@
     "key": "00DA",
     "mappings": {
       "default": {
-        "default": "cap U acute"
+        "default": "대문자 양음 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with acute",
-        "brief": "mod above upper U with acute",
-        "sbrief": "mod above upper U with acute"
+        "default": "양음 부호가 올려진 대문자 U",
+        "brief": "양음 부호가 올려진 대문자 U",
+        "sbrief": "양음 부호가 올려진 대문자 U"
       }
     }
   },
@@ -326,12 +326,12 @@
     "key": "00DB",
     "mappings": {
       "default": {
-        "default": "cap U hat"
+        "default": "대문자 곡절음 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with caret",
-        "brief": "mod above upper U with caret",
-        "sbrief": "mod above upper U with caret"
+        "default": "삽입 기호가 올려진 대문자 U",
+        "brief": "삽입 기호가 올려진 대문자 U",
+        "sbrief": "삽입 기호가 올려진 대문자 U"
       }
     }
   },
@@ -340,12 +340,12 @@
     "key": "00DC",
     "mappings": {
       "default": {
-        "default": "cap U double overdot"
+        "default": "대문자 분음 부호표 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with double dot",
-        "brief": "mod above upper U with double dot",
-        "sbrief": "mod above upper U with double dot"
+        "default": "분음 부호가 올려진 대문자 U",
+        "brief": "분음 부호가 올려진 대문자 U",
+        "sbrief": "분음 부호가 올려진 대문자 U"
       }
     }
   },
@@ -354,12 +354,12 @@
     "key": "00DD",
     "mappings": {
       "default": {
-        "default": "cap Y acute"
+        "default": "대문자 양음 Y"
       },
       "mathspeak": {
-        "default": "modifying above upper Y with acute",
-        "brief": "mod above upper Y with acute",
-        "sbrief": "mod above upper Y with acute"
+        "default": "양음 부호가 올려진 대문자 Y",
+        "brief": "양음 부호가 올려진 대문자 Y",
+        "sbrief": "양음 부호가 올려진 대문자 Y"
       }
     }
   },
@@ -368,12 +368,12 @@
     "key": "0100",
     "mappings": {
       "default": {
-        "default": "cap A overbar"
+        "default": "대문자 오버바 A"
       },
       "mathspeak": {
-        "default": "upper A overbar",
-        "brief": "upper A overbar",
-        "sbrief": "upper A overbar"
+        "default": "오버바 부호가 올려진 대문자 A",
+        "brief": "오버바 부호가 올려진 대문자 A",
+        "sbrief": "오버바 부호가 올려진 대문자 A"
       }
     }
   },
@@ -382,12 +382,12 @@
     "key": "0102",
     "mappings": {
       "default": {
-        "default": "cap A breve"
+        "default": "대문자 겹온음표 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with breve",
-        "brief": "mod above upper A with breve",
-        "sbrief": "mod above upper A with breve"
+        "default": "겹온음표 부호가 올려진 대문자 A",
+        "brief": "겹온음표 부호가 올려진 대문자 A",
+        "sbrief": "겹온음표 부호가 올려진 대문자 A"
       }
     }
   },
@@ -396,12 +396,12 @@
     "key": "0104",
     "mappings": {
       "default": {
-        "default": "cap A ogonek"
+        "default": "대문자 아가뇩 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with ogonek",
-        "brief": "mod above upper A with ogonek",
-        "sbrief": "mod above upper A with ogonek"
+        "default": "아가뇩 부호가 있는 대문자 A",
+        "brief": "아가뇩 부호가 있는 대문자 A",
+        "sbrief": "아가뇩 부호가 있는 대문자 A"
       }
     }
   },
@@ -410,12 +410,12 @@
     "key": "0106",
     "mappings": {
       "default": {
-        "default": "cap C acute"
+        "default": "대문자 양음 C"
       },
       "mathspeak": {
-        "default": "modifying above upper C with acute",
-        "brief": "mod above upper C with acute",
-        "sbrief": "mod above upper C with acute"
+        "default": "양음 부호가 올려진 대문자 C",
+        "brief": "양음 부호가 올려진 대문자 C",
+        "sbrief": "양음 부호가 올려진 대문자 C"
       }
     }
   },
@@ -424,12 +424,12 @@
     "key": "0108",
     "mappings": {
       "default": {
-        "default": "cap C hat"
+        "default": "대문자 곡절음 C"
       },
       "mathspeak": {
-        "default": "modifying above upper C with caret",
-        "brief": "mod above upper C with caret",
-        "sbrief": "mod above upper C with caret"
+        "default": "삽입 기호가 올려진 대문자 C",
+        "brief": "삽입 기호가 올려진 대문자 C",
+        "sbrief": "삽입 기호가 올려진 대문자 C"
       }
     }
   },
@@ -438,12 +438,12 @@
     "key": "010A",
     "mappings": {
       "default": {
-        "default": "cap C overdot"
+        "default": "대문자 윗점 C"
       },
       "mathspeak": {
-        "default": "modifying above upper C with dot",
-        "brief": "mod above upper C with dot",
-        "sbrief": "mod above upper C with dot"
+        "default": "마침점 부호가 올려진 대문자 C",
+        "brief": "마침점 부호가 올려진 대문자 C",
+        "sbrief": "마침점 부호가 올려진 대문자 C"
       }
     }
   },
@@ -452,12 +452,12 @@
     "key": "010C",
     "mappings": {
       "default": {
-        "default": "cap C caron"
+        "default": "대문자 카론 C"
       },
       "mathspeak": {
-        "default": "modifying above upper C with caron",
-        "brief": "mod above upper C with caron",
-        "sbrief": "mod above upper C with caron"
+        "default": "카론 부호가 올려진 대문자 C",
+        "brief": "카론 부호가 올려진 대문자 C",
+        "sbrief": "카론 부호가 올려진 대문자 C"
       }
     }
   },
@@ -466,12 +466,12 @@
     "key": "010E",
     "mappings": {
       "default": {
-        "default": "cap D caron"
+        "default": "대문자 카론 D"
       },
       "mathspeak": {
-        "default": "modifying above upper D with caron",
-        "brief": "mod above upper D with caron",
-        "sbrief": "mod above upper D with caron"
+        "default": "카론 부호가 올려진 대문자 D",
+        "brief": "카론 부호가 올려진 대문자 D",
+        "sbrief": "카론 부호가 올려진 대문자 D"
       }
     }
   },
@@ -480,12 +480,12 @@
     "key": "0112",
     "mappings": {
       "default": {
-        "default": "cap E overbar"
+        "default": "대문자 오버바 E"
       },
       "mathspeak": {
-        "default": "upper E overbar",
-        "brief": "upper E overbar",
-        "sbrief": "upper E overbar"
+        "default": "오버바 부호가 올려진 대문자 E",
+        "brief": "오버바 부호가 올려진 대문자 E",
+        "sbrief": "오버바 부호가 올려진 대문자 E"
       }
     }
   },
@@ -494,12 +494,12 @@
     "key": "0114",
     "mappings": {
       "default": {
-        "default": "cap E breve"
+        "default": "대문자 겹온음표 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with breve",
-        "brief": "mod above upper E with breve",
-        "sbrief": "mod above upper E with breve"
+        "default": "겹온음표 부호가 올려진 대문자 E",
+        "brief": "겹온음표 부호가 올려진 대문자 E",
+        "sbrief": "겹온음표 부호가 올려진 대문자 E"
       }
     }
   },
@@ -508,12 +508,12 @@
     "key": "0116",
     "mappings": {
       "default": {
-        "default": "cap E overdot"
+        "default": "대문자 윗점 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with dot",
-        "brief": "mod above upper E with dot",
-        "sbrief": "mod above upper E with dot"
+        "default": "마침점 부호가 올려진 대문자 E",
+        "brief": "마침점 부호가 올려진 대문자 E",
+        "sbrief": "마침점 부호가 올려진 대문자 E"
       }
     }
   },
@@ -522,12 +522,12 @@
     "key": "0118",
     "mappings": {
       "default": {
-        "default": "cap E ogonek"
+        "default": "대문자 아가뇩 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with ogonek",
-        "brief": "mod above upper E with ogonek",
-        "sbrief": "mod above upper E with ogonek"
+        "default": "아가뇩 부호가 있는 대문자 E",
+        "brief": "아가뇩 부호가 있는 대문자 E",
+        "sbrief": "아가뇩 부호가 있는 대문자 E"
       }
     }
   },
@@ -536,12 +536,12 @@
     "key": "011A",
     "mappings": {
       "default": {
-        "default": "cap E caron"
+        "default": "대문자 카론 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with caron",
-        "brief": "mod above upper E with caron",
-        "sbrief": "mod above upper E with caron"
+        "default": "카론 부호가 올려진 대문자 E",
+        "brief": "카론 부호가 올려진 대문자 E",
+        "sbrief": "카론 부호가 올려진 대문자 E"
       }
     }
   },
@@ -550,12 +550,12 @@
     "key": "011C",
     "mappings": {
       "default": {
-        "default": "cap G hat"
+        "default": "대문자 곡절음 G"
       },
       "mathspeak": {
-        "default": "modifying above upper G with caret",
-        "brief": "mod above upper G with caret",
-        "sbrief": "mod above upper G with caret"
+        "default": "삽입 기호가 올려진 대문자 G",
+        "brief": "삽입 기호가 올려진 대문자 G",
+        "sbrief": "삽입 기호가 올려진 대문자 G"
       }
     }
   },
@@ -564,12 +564,12 @@
     "key": "011E",
     "mappings": {
       "default": {
-        "default": "cap G breve"
+        "default": "대문자 겹온음표 G"
       },
       "mathspeak": {
-        "default": "modifying above upper G with breve",
-        "brief": "mod above upper G with breve",
-        "sbrief": "mod above upper G with breve"
+        "default": "겹온음표 부호가 올려진 대문자 G",
+        "brief": "겹온음표 부호가 올려진 대문자 G",
+        "sbrief": "겹온음표 부호가 올려진 대문자 G"
       }
     }
   },
@@ -578,12 +578,12 @@
     "key": "0120",
     "mappings": {
       "default": {
-        "default": "cap G overdot"
+        "default": "대문자 윗점 G"
       },
       "mathspeak": {
-        "default": "modifying above upper G with dot",
-        "brief": "mod above upper G with dot",
-        "sbrief": "mod above upper G with dot"
+        "default": "마침점 부호가 올려진 대문자 G",
+        "brief": "마침점 부호가 올려진 대문자 G",
+        "sbrief": "마침점 부호가 올려진 대문자 G"
       }
     }
   },
@@ -592,12 +592,12 @@
     "key": "0122",
     "mappings": {
       "default": {
-        "default": "cap G cedilla"
+        "default": "대문자 갈고리형 G"
       },
       "mathspeak": {
-        "default": "modifying above upper G with cedilla",
-        "brief": "mod above upper G with cedilla",
-        "sbrief": "mod above upper G with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 G",
+        "brief": "갈고리형 부호가 붙여진 대문자 G",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 G"
       }
     }
   },
@@ -606,12 +606,12 @@
     "key": "0124",
     "mappings": {
       "default": {
-        "default": "cap H hat"
+        "default": "대문자 곡절음 H"
       },
       "mathspeak": {
-        "default": "modifying above upper H with caret",
-        "brief": "mod above upper H with caret",
-        "sbrief": "mod above upper H with caret"
+        "default": "삽입 기호가 올려진 대문자 H",
+        "brief": "삽입 기호가 올려진 대문자 H",
+        "sbrief": "삽입 기호가 올려진 대문자 H"
       }
     }
   },
@@ -620,12 +620,12 @@
     "key": "0128",
     "mappings": {
       "default": {
-        "default": "cap I tilde"
+        "default": "대문자 물결표 I"
       },
       "mathspeak": {
-        "default": "upper I overtilde",
-        "brief": "upper I overtilde",
-        "sbrief": "upper I overtilde"
+        "default": "물결표가 올려진 대문자 I",
+        "brief": "물결표가 올려진 대문자 I",
+        "sbrief": "물결표가 올려진 대문자 I"
       }
     }
   },
@@ -634,12 +634,12 @@
     "key": "012A",
     "mappings": {
       "default": {
-        "default": "cap I overbar"
+        "default": "대문자 오버바 I"
       },
       "mathspeak": {
-        "default": "upper I overbar",
-        "brief": "upper I overbar",
-        "sbrief": "upper I overbar"
+        "default": "오버바 부호가 올려진 대문자 I",
+        "brief": "오버바 부호가 올려진 대문자 I",
+        "sbrief": "오버바 부호가 올려진 대문자 I"
       }
     }
   },
@@ -648,12 +648,12 @@
     "key": "012C",
     "mappings": {
       "default": {
-        "default": "cap I breve"
+        "default": "대문자 겹온음표 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with breve",
-        "brief": "mod above upper I with breve",
-        "sbrief": "mod above upper I with breve"
+        "default": "겹온음표 부호가 올려진 대문자 I",
+        "brief": "겹온음표 부호가 올려진 대문자 I",
+        "sbrief": "겹온음표 부호가 올려진 대문자 I"
       }
     }
   },
@@ -662,12 +662,12 @@
     "key": "012E",
     "mappings": {
       "default": {
-        "default": "cap I ogonek"
+        "default": "대문자 아가뇩 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with ogonek",
-        "brief": "mod above upper I with ogonek",
-        "sbrief": "mod above upper I with ogonek"
+        "default": "아가뇩 부호가 있는 대문자 I",
+        "brief": "아가뇩 부호가 있는 대문자 I",
+        "sbrief": "아가뇩 부호가 있는 대문자 I"
       }
     }
   },
@@ -676,12 +676,12 @@
     "key": "0130",
     "mappings": {
       "default": {
-        "default": "cap I overdot"
+        "default": "대문자 윗점 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with dot",
-        "brief": "mod above upper I with dot",
-        "sbrief": "mod above upper I with dot"
+        "default": "마침점 부호가 올려진 대문자 I",
+        "brief": "마침점 부호가 올려진 대문자 I",
+        "sbrief": "마침점 부호가 올려진 대문자 I"
       }
     }
   },
@@ -690,12 +690,12 @@
     "key": "0134",
     "mappings": {
       "default": {
-        "default": "cap J hat"
+        "default": "대문자 곡절음 J"
       },
       "mathspeak": {
-        "default": "modifying above upper J with caret",
-        "brief": "mod above upper J with caret",
-        "sbrief": "mod above upper J with caret"
+        "default": "삽입 기호가 올려진 대문자 J",
+        "brief": "삽입 기호가 올려진 대문자 J",
+        "sbrief": "삽입 기호가 올려진 대문자 J"
       }
     }
   },
@@ -704,12 +704,12 @@
     "key": "0136",
     "mappings": {
       "default": {
-        "default": "cap K cedilla"
+        "default": "대문자 갈고리형 K"
       },
       "mathspeak": {
-        "default": "modifying above upper K with cedilla",
-        "brief": "mod above upper K with cedilla",
-        "sbrief": "mod above upper K with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 K",
+        "brief": "갈고리형 부호가 붙여진 대문자 K",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 K"
       }
     }
   },
@@ -718,12 +718,12 @@
     "key": "0139",
     "mappings": {
       "default": {
-        "default": "cap L acute"
+        "default": "대문자 양음 L"
       },
       "mathspeak": {
-        "default": "modifying above upper L with acute",
-        "brief": "mod above upper L with acute",
-        "sbrief": "mod above upper L with acute"
+        "default": "양음 부호가 올려진 대문자 L",
+        "brief": "양음 부호가 올려진 대문자 L",
+        "sbrief": "양음 부호가 올려진 대문자 L"
       }
     }
   },
@@ -732,12 +732,12 @@
     "key": "013B",
     "mappings": {
       "default": {
-        "default": "cap L cedilla"
+        "default": "대문자 갈고리형 L"
       },
       "mathspeak": {
-        "default": "modifying above upper L with cedilla",
-        "brief": "mod above upper L with cedilla",
-        "sbrief": "mod above upper L with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 L",
+        "brief": "갈고리형 부호가 붙여진 대문자 L",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 L"
       }
     }
   },
@@ -746,12 +746,12 @@
     "key": "013D",
     "mappings": {
       "default": {
-        "default": "cap L caron"
+        "default": "대문자 카론 L"
       },
       "mathspeak": {
-        "default": "modifying above upper L with caron",
-        "brief": "mod above upper L with caron",
-        "sbrief": "mod above upper L with caron"
+        "default": "카론 부호가 올려진 대문자 L",
+        "brief": "카론 부호가 올려진 대문자 L",
+        "sbrief": "카론 부호가 올려진 대문자 L"
       }
     }
   },
@@ -760,12 +760,12 @@
     "key": "013F",
     "mappings": {
       "default": {
-        "default": "cap L middle dot"
+        "default": "대문자 중간점 L"
       },
       "mathspeak": {
-        "default": "modifying above upper L with middle dot",
-        "brief": "mod above upper L with middle dot",
-        "sbrief": "mod above upper L with middle dot"
+        "default": "중간점 부호가 있는 대문자 L",
+        "brief": "중간점 부호가 있는 대문자 L",
+        "sbrief": "중간점 부호가 있는 대문자 L"
       }
     }
   },
@@ -774,12 +774,12 @@
     "key": "0143",
     "mappings": {
       "default": {
-        "default": "cap N acute"
+        "default": "대문자 양음 N"
       },
       "mathspeak": {
-        "default": "modifying above upper N with acute",
-        "brief": "mod above upper N with acute",
-        "sbrief": "mod above upper N with acute"
+        "default": "양음 부호가 올려진 대문자 N",
+        "brief": "양음 부호가 올려진 대문자 N",
+        "sbrief": "양음 부호가 올려진 대문자 N"
       }
     }
   },
@@ -788,12 +788,12 @@
     "key": "0145",
     "mappings": {
       "default": {
-        "default": "cap N cedilla"
+        "default": "대문자 갈고리형 N"
       },
       "mathspeak": {
-        "default": "modifying above upper N with cedilla",
-        "brief": "mod above upper N with cedilla",
-        "sbrief": "mod above upper N with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 N",
+        "brief": "갈고리형 부호가 붙여진 대문자 N",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 N"
       }
     }
   },
@@ -802,12 +802,12 @@
     "key": "0147",
     "mappings": {
       "default": {
-        "default": "cap N caron"
+        "default": "대문자 카론 N"
       },
       "mathspeak": {
-        "default": "modifying above upper N with caron",
-        "brief": "mod above upper N with caron",
-        "sbrief": "mod above upper N with caron"
+        "default": "카론 부호가 올려진 대문자 N",
+        "brief": "카론 부호가 올려진 대문자 N",
+        "sbrief": "카론 부호가 올려진 대문자 N"
       }
     }
   },
@@ -816,12 +816,12 @@
     "key": "014C",
     "mappings": {
       "default": {
-        "default": "cap O overbar"
+        "default": "대문자 오버바 O"
       },
       "mathspeak": {
-        "default": "upper O overbar",
-        "brief": "upper O overbar",
-        "sbrief": "upper O overbar"
+        "default": "오버바 부호가 올려진 대문자 O",
+        "brief": "오버바 부호가 올려진 대문자 O",
+        "sbrief": "오버바 부호가 올려진 대문자 O"
       }
     }
   },
@@ -830,12 +830,12 @@
     "key": "014E",
     "mappings": {
       "default": {
-        "default": "cap O breve"
+        "default": "대문자 겹온음표 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with breve",
-        "brief": "mod above upper O with breve",
-        "sbrief": "mod above upper O with breve"
+        "default": "겹온음표 부호가 올려진 대문자 O",
+        "brief": "겹온음표 부호가 올려진 대문자 O",
+        "sbrief": "겹온음표 부호가 올려진 대문자 O"
       }
     }
   },
@@ -844,12 +844,12 @@
     "key": "0150",
     "mappings": {
       "default": {
-        "default": "cap O double acute"
+        "default": "대문자 이중 양음 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with double acute",
-        "brief": "mod above upper O with double acute",
-        "sbrief": "mod above upper O with double acute"
+        "default": "이중 양음 부호가 올려진 대문자 O",
+        "brief": "이중 양음 부호가 올려진 대문자 O",
+        "sbrief": "이중 양음 부호가 올려진 대문자 O"
       }
     }
   },
@@ -858,12 +858,12 @@
     "key": "0154",
     "mappings": {
       "default": {
-        "default": "cap R acute"
+        "default": "대문자 양음 R"
       },
       "mathspeak": {
-        "default": "modifying above upper R with acute",
-        "brief": "mod above upper R with acute",
-        "sbrief": "mod above upper R with acute"
+        "default": "양음 부호가 올려진 대문자 R",
+        "brief": "양음 부호가 올려진 대문자 R",
+        "sbrief": "양음 부호가 올려진 대문자 R"
       }
     }
   },
@@ -872,12 +872,12 @@
     "key": "0156",
     "mappings": {
       "default": {
-        "default": "cap R cedilla"
+        "default": "대문자 갈고리형 R"
       },
       "mathspeak": {
-        "default": "modifying above upper R with cedilla",
-        "brief": "mod above upper R with cedilla",
-        "sbrief": "mod above upper R with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 R",
+        "brief": "갈고리형 부호가 붙여진 대문자 R",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 R"
       }
     }
   },
@@ -886,12 +886,12 @@
     "key": "0158",
     "mappings": {
       "default": {
-        "default": "cap R caron"
+        "default": "대문자 카론 R"
       },
       "mathspeak": {
-        "default": "modifying above upper R with caron",
-        "brief": "mod above upper R with caron",
-        "sbrief": "mod above upper R with caron"
+        "default": "카론 부호가 올려진 대문자 R",
+        "brief": "카론 부호가 올려진 대문자 R",
+        "sbrief": "카론 부호가 올려진 대문자 R"
       }
     }
   },
@@ -900,12 +900,12 @@
     "key": "015A",
     "mappings": {
       "default": {
-        "default": "cap S acute"
+        "default": "대문자 양음 S"
       },
       "mathspeak": {
-        "default": "modifying above upper S with acute",
-        "brief": "mod above upper S with acute",
-        "sbrief": "mod above upper S with acute"
+        "default": "양음 부호가 올려진 대문자 S",
+        "brief": "양음 부호가 올려진 대문자 S",
+        "sbrief": "양음 부호가 올려진 대문자 S"
       }
     }
   },
@@ -914,12 +914,12 @@
     "key": "015C",
     "mappings": {
       "default": {
-        "default": "cap S hat"
+        "default": "대문자 곡절음 S"
       },
       "mathspeak": {
-        "default": "modifying above upper S with caret",
-        "brief": "mod above upper S with caret",
-        "sbrief": "mod above upper S with caret"
+        "default": "삽입 기호가 올려진 대문자 S",
+        "brief": "삽입 기호가 올려진 대문자 S",
+        "sbrief": "삽입 기호가 올려진 대문자 S"
       }
     }
   },
@@ -928,12 +928,12 @@
     "key": "015E",
     "mappings": {
       "default": {
-        "default": "cap S cedilla"
+        "default": "대문자 갈고리형 S"
       },
       "mathspeak": {
-        "default": "modifying above upper S with cedilla",
-        "brief": "mod above upper S with cedilla",
-        "sbrief": "mod above upper S with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 S",
+        "brief": "갈고리형 부호가 붙여진 대문자 S",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 S"
       }
     }
   },
@@ -942,12 +942,12 @@
     "key": "0160",
     "mappings": {
       "default": {
-        "default": "cap S caron"
+        "default": "대문자 카론 S"
       },
       "mathspeak": {
-        "default": "modifying above upper S with caron",
-        "brief": "mod above upper S with caron",
-        "sbrief": "mod above upper S with caron"
+        "default": "카론 부호가 올려진 대문자 S",
+        "brief": "카론 부호가 올려진 대문자 S",
+        "sbrief": "카론 부호가 올려진 대문자 S"
       }
     }
   },
@@ -956,12 +956,12 @@
     "key": "0162",
     "mappings": {
       "default": {
-        "default": "cap T cedilla"
+        "default": "대문자 갈고리형 T"
       },
       "mathspeak": {
-        "default": "modifying above upper T with cedilla",
-        "brief": "mod above upper T with cedilla",
-        "sbrief": "mod above upper T with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 T",
+        "brief": "갈고리형 부호가 붙여진 대문자 T",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 T"
       }
     }
   },
@@ -970,12 +970,12 @@
     "key": "0164",
     "mappings": {
       "default": {
-        "default": "cap T caron"
+        "default": "대문자 카론 T"
       },
       "mathspeak": {
-        "default": "modifying above upper T with caron",
-        "brief": "mod above upper T with caron",
-        "sbrief": "mod above upper T with caron"
+        "default": "카론 부호가 올려진 대문자 T",
+        "brief": "카론 부호가 올려진 대문자 T",
+        "sbrief": "카론 부호가 올려진 대문자 T"
       }
     }
   },
@@ -984,12 +984,12 @@
     "key": "0168",
     "mappings": {
       "default": {
-        "default": "cap U tilde"
+        "default": "대문자 물결표 U"
       },
       "mathspeak": {
-        "default": "upper U overtilde",
-        "brief": "upper U overtilde",
-        "sbrief": "upper U overtilde"
+        "default": "물결표가 올려진 대문자 U",
+        "brief": "물결표가 올려진 대문자 U",
+        "sbrief": "물결표가 올려진 대문자 U"
       }
     }
   },
@@ -998,12 +998,12 @@
     "key": "016A",
     "mappings": {
       "default": {
-        "default": "cap U overbar"
+        "default": "대문자 오버바 U"
       },
       "mathspeak": {
-        "default": "upper U overbar",
-        "brief": "upper U overbar",
-        "sbrief": "upper U overbar"
+        "default": "오버바 부호가 올려진 대문자 U",
+        "brief": "오버바 부호가 올려진 대문자 U",
+        "sbrief": "오버바 부호가 올려진 대문자 U"
       }
     }
   },
@@ -1012,12 +1012,12 @@
     "key": "016C",
     "mappings": {
       "default": {
-        "default": "cap U breve"
+        "default": "대문자 겹온음표 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with breve",
-        "brief": "mod above upper U with breve",
-        "sbrief": "mod above upper U with breve"
+        "default": "겹온음표 부호가 올려진 대문자 U",
+        "brief": "겹온음표 부호가 올려진 대문자 U",
+        "sbrief": "겹온음표 부호가 올려진 대문자 U"
       }
     }
   },
@@ -1026,12 +1026,12 @@
     "key": "016E",
     "mappings": {
       "default": {
-        "default": "cap U ring"
+        "default": "대문자 반지 부호 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with ring",
-        "brief": "mod above upper U with ring",
-        "sbrief": "mod above upper U with ring"
+        "default": "반지 부호가 올려진 대문자 U",
+        "brief": "반지 부호가 올려진 대문자 U",
+        "sbrief": "반지 부호가 올려진 대문자 U"
       }
     }
   },
@@ -1040,12 +1040,12 @@
     "key": "0170",
     "mappings": {
       "default": {
-        "default": "cap U double acute"
+        "default": "대문자 이중 양음 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with double acute",
-        "brief": "mod above upper U with double acute",
-        "sbrief": "mod above upper U with double acute"
+        "default": "이중 양음 부호가 올려진 대문자 U",
+        "brief": "이중 양음 부호가 올려진 대문자 U",
+        "sbrief": "이중 양음 부호가 올려진 대문자 U"
       }
     }
   },
@@ -1054,12 +1054,12 @@
     "key": "0172",
     "mappings": {
       "default": {
-        "default": "cap U ogonek"
+        "default": "대문자 아가뇩 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with ogonek",
-        "brief": "mod above upper U with ogonek",
-        "sbrief": "mod above upper U with ogonek"
+        "default": "아가뇩 부호가 있는 대문자 U",
+        "brief": "아가뇩 부호가 있는 대문자 U",
+        "sbrief": "아가뇩 부호가 있는 대문자 U"
       }
     }
   },
@@ -1068,12 +1068,12 @@
     "key": "0174",
     "mappings": {
       "default": {
-        "default": "cap W hat"
+        "default": "대문자 곡절음 W"
       },
       "mathspeak": {
-        "default": "modifying above upper W with caret",
-        "brief": "mod above upper W with caret",
-        "sbrief": "mod above upper W with caret"
+        "default": "삽입 기호가 올려진 대문자 W",
+        "brief": "삽입 기호가 올려진 대문자 W",
+        "sbrief": "삽입 기호가 올려진 대문자 W"
       }
     }
   },
@@ -1082,12 +1082,12 @@
     "key": "0176",
     "mappings": {
       "default": {
-        "default": "cap Y hat"
+        "default": "대문자 곡절음 Y"
       },
       "mathspeak": {
-        "default": "modifying above upper Y with caret",
-        "brief": "mod above upper Y with caret",
-        "sbrief": "mod above upper Y with caret"
+        "default": "삽입 기호가 올려진 대문자 Y",
+        "brief": "삽입 기호가 올려진 대문자 Y",
+        "sbrief": "삽입 기호가 올려진 대문자 Y"
       }
     }
   },
@@ -1096,12 +1096,12 @@
     "key": "0178",
     "mappings": {
       "default": {
-        "default": "cap Y double overdot"
+        "default": "대문자 분음 부호표 Y"
       },
       "mathspeak": {
-        "default": "modifying above upper Y with double dot",
-        "brief": "mod above upper Y with double dot",
-        "sbrief": "mod above upper Y with double dot"
+        "default": "분음 부호가 올려진 대문자 Y",
+        "brief": "분음 부호가 올려진 대문자 Y",
+        "sbrief": "분음 부호가 올려진 대문자 Y"
       }
     }
   },
@@ -1110,12 +1110,12 @@
     "key": "0179",
     "mappings": {
       "default": {
-        "default": "cap Z acute"
+        "default": "대문자 양음 Z"
       },
       "mathspeak": {
-        "default": "modifying above upper Z with acute",
-        "brief": "mod above upper Z with acute",
-        "sbrief": "mod above upper Z with acute"
+        "default": "양음 부호가 올려진 대문자 Z",
+        "brief": "양음 부호가 올려진 대문자 Z",
+        "sbrief": "양음 부호가 올려진 대문자 Z"
       }
     }
   },
@@ -1124,12 +1124,12 @@
     "key": "017B",
     "mappings": {
       "default": {
-        "default": "cap Z overdot"
+        "default": "대문자 윗점 Z"
       },
       "mathspeak": {
-        "default": "modifying above upper Z with dot",
-        "brief": "mod above upper Z with dot",
-        "sbrief": "mod above upper Z with dot"
+        "default": "마침점 부호가 올려진 대문자 Z",
+        "brief": "마침점 부호가 올려진 대문자 Z",
+        "sbrief": "마침점 부호가 올려진 대문자 Z"
       }
     }
   },
@@ -1138,12 +1138,12 @@
     "key": "017D",
     "mappings": {
       "default": {
-        "default": "cap Z caron"
+        "default": "대문자 카론 Z"
       },
       "mathspeak": {
-        "default": "modifying above upper Z with caron",
-        "brief": "mod above upper Z with caron",
-        "sbrief": "mod above upper Z with caron"
+        "default": "카론 부호가 올려진 대문자 Z",
+        "brief": "카론 부호가 올려진 대문자 Z",
+        "sbrief": "카론 부호가 올려진 대문자 Z"
       }
     }
   },
@@ -1152,12 +1152,12 @@
     "key": "01CD",
     "mappings": {
       "default": {
-        "default": "cap A caron"
+        "default": "대문자 카론 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with caron",
-        "brief": "mod above upper A with caron",
-        "sbrief": "mod above upper A with caron"
+        "default": "카론 부호가 올려진 대문자 A",
+        "brief": "카론 부호가 올려진 대문자 A",
+        "sbrief": ""
       }
     }
   },
@@ -1166,12 +1166,12 @@
     "key": "01CF",
     "mappings": {
       "default": {
-        "default": "cap I caron"
+        "default": "대문자 카론 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with caron",
-        "brief": "mod above upper I with caron",
-        "sbrief": "mod above upper I with caron"
+        "default": "카론 부호가 올려진 대문자 I",
+        "brief": "카론 부호가 올려진 대문자 I",
+        "sbrief": "카론 부호가 올려진 대문자 I"
       }
     }
   },
@@ -1180,12 +1180,12 @@
     "key": "01D1",
     "mappings": {
       "default": {
-        "default": "cap O caron"
+        "default": "대문자 카론 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with caron",
-        "brief": "mod above upper O with caron",
-        "sbrief": "mod above upper O with caron"
+        "default": "카론 부호가 올려진 대문자 O",
+        "brief": "카론 부호가 올려진 대문자 O",
+        "sbrief": "카론 부호가 올려진 대문자 O"
       }
     }
   },
@@ -1194,12 +1194,12 @@
     "key": "01D3",
     "mappings": {
       "default": {
-        "default": "cap U caron"
+        "default": "대문자 카론 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with caron",
-        "brief": "mod above upper U with caron",
-        "sbrief": "mod above upper U with caron"
+        "default": "카론 부호가 올려진 대문자 U",
+        "brief": "카론 부호가 올려진 대문자 U",
+        "sbrief": "카론 부호가 올려진 대문자 U"
       }
     }
   },
@@ -1208,12 +1208,12 @@
     "key": "01E6",
     "mappings": {
       "default": {
-        "default": "cap G caron"
+        "default": "대문자 카론 G"
       },
       "mathspeak": {
-        "default": "modifying above upper G with caron",
-        "brief": "mod above upper G with caron",
-        "sbrief": "mod above upper G with caron"
+        "default": "카론 부호가 올려진 대문자 G",
+        "brief": "카론 부호가 올려진 대문자 G",
+        "sbrief": "카론 부호가 올려진 대문자 G"
       }
     }
   },
@@ -1222,12 +1222,12 @@
     "key": "01E8",
     "mappings": {
       "default": {
-        "default": "cap K caron"
+        "default": "대문자 카론 K"
       },
       "mathspeak": {
-        "default": "modifying above upper K with caron",
-        "brief": "mod above upper K with caron",
-        "sbrief": "mod above upper K with caron"
+        "default": "카론 부호가 올려진 대문자 K",
+        "brief": "카론 부호가 올려진 대문자 K",
+        "sbrief": "카론 부호가 올려진 대문자 K"
       }
     }
   },
@@ -1236,12 +1236,12 @@
     "key": "01EA",
     "mappings": {
       "default": {
-        "default": "cap O ogonek"
+        "default": "대문자 아가뇩 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with ogonek",
-        "brief": "mod above upper O with ogonek",
-        "sbrief": "mod above upper O with ogonek"
+        "default": "아가뇩 부호가 있는 대문자 O",
+        "brief": "아가뇩 부호가 있는 대문자 O",
+        "sbrief": "아가뇩 부호가 있는 대문자 O"
       }
     }
   },
@@ -1250,12 +1250,12 @@
     "key": "01F4",
     "mappings": {
       "default": {
-        "default": "cap G acute"
+        "default": "대문자 양음 G"
       },
       "mathspeak": {
-        "default": "modifying above upper G with acute",
-        "brief": "mod above upper G with acute",
-        "sbrief": "mod above upper G with acute"
+        "default": "양음 부호가 올려진 대문자 G",
+        "brief": "양음 부호가 올려진 대문자 G",
+        "sbrief": "양음 부호가 올려진 대문자 G"
       }
     }
   },
@@ -1264,12 +1264,12 @@
     "key": "01F8",
     "mappings": {
       "default": {
-        "default": "cap N grave"
+        "default": "대문자 억음 N"
       },
       "mathspeak": {
-        "default": "modifying above upper N with grave",
-        "brief": "mod above upper N with grave",
-        "sbrief": "mod above upper N with grave"
+        "default": "억음 부호가 올려진 대문자 N",
+        "brief": "억음 부호가 올려진 대문자 N",
+        "sbrief": "억음 부호가 올려진 대문자 N"
       }
     }
   },
@@ -1278,12 +1278,12 @@
     "key": "0200",
     "mappings": {
       "default": {
-        "default": "cap A double grave"
+        "default": "대문자 이중 억음 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with double grave",
-        "brief": "mod above upper A with double grave",
-        "sbrief": "mod above upper A with double grave"
+        "default": "이중 억음 부호가 올려진 대문자 A",
+        "brief": "이중 억음 부호가 올려진 대문자 A",
+        "sbrief": "이중 억음 부호가 올려진 대문자 A"
       }
     }
   },
@@ -1292,12 +1292,12 @@
     "key": "0202",
     "mappings": {
       "default": {
-        "default": "cap A inverted breve"
+        "default": "대문자 반전 겹온음표 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with inverted breve",
-        "brief": "mod above upper A with inverted breve",
-        "sbrief": "mod above upper A with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 대문자 A",
+        "brief": "반전된 겹온음표 부호가 올려진 대문자 A",
+        "sbrief": "반전된 겹온음표 부호가 올려진 대문자 A"
       }
     }
   },
@@ -1306,12 +1306,12 @@
     "key": "0204",
     "mappings": {
       "default": {
-        "default": "cap E double grave"
+        "default": "대문자 이중 억음 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with double grave",
-        "brief": "mod above upper E with double grave",
-        "sbrief": "mod above upper E with double grave"
+        "default": "이중 억음 부호가 올려진 대문자 E",
+        "brief": "이중 억음 부호가 올려진 대문자 E",
+        "sbrief": "이중 억음 부호가 올려진 대문자 E"
       }
     }
   },
@@ -1320,12 +1320,12 @@
     "key": "0206",
     "mappings": {
       "default": {
-        "default": "cap E inverted breve"
+        "default": "대문자 반전 겹온음표 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with inverted breve",
-        "brief": "mod above upper E with inverted breve",
-        "sbrief": "mod above upper E with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 대문자 E",
+        "brief": "반전된 겹온음표 부호가 올려진 대문자 E",
+        "sbrief": "반전된 겹온음표 부호가 올려진 대문자 E"
       }
     }
   },
@@ -1334,12 +1334,12 @@
     "key": "0208",
     "mappings": {
       "default": {
-        "default": "cap I double grave"
+        "default": "대문자 이중 억음 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with double grave",
-        "brief": "mod above upper I with double grave",
-        "sbrief": "mod above upper I with double grave"
+        "default": "이중 억음 부호가 올려진 대문자 I",
+        "brief": "이중 억음 부호가 올려진 대문자 I",
+        "sbrief": "이중 억음 부호가 올려진 대문자 I"
       }
     }
   },
@@ -1348,12 +1348,12 @@
     "key": "020A",
     "mappings": {
       "default": {
-        "default": "cap I inverted breve"
+        "default": "대문자 반전 겹온음표 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with inverted breve",
-        "brief": "mod above upper I with inverted breve",
-        "sbrief": "mod above upper I with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 대문자 I",
+        "brief": "반전된 겹온음표 부호가 올려진 대문자 I",
+        "sbrief": "반전된 겹온음표 부호가 올려진 대문자 I"
       }
     }
   },
@@ -1362,12 +1362,12 @@
     "key": "020C",
     "mappings": {
       "default": {
-        "default": "cap O double grave"
+        "default": "대문자 이중 억음 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with double grave",
-        "brief": "mod above upper O with double grave",
-        "sbrief": "mod above upper O with double grave"
+        "default": "이중 억음 부호가 올려진 대문자 O",
+        "brief": "이중 억음 부호가 올려진 대문자 O",
+        "sbrief": "이중 억음 부호가 올려진 대문자 O"
       }
     }
   },
@@ -1376,12 +1376,12 @@
     "key": "020E",
     "mappings": {
       "default": {
-        "default": "cap O inverted breve"
+        "default": "대문자 반전 겹온음표 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with inverted breve",
-        "brief": "mod above upper O with inverted breve",
-        "sbrief": "mod above upper O with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 대문자 O",
+        "brief": "반전된 겹온음표 부호가 올려진 대문자 O",
+        "sbrief": "반전된 겹온음표 부호가 올려진 대문자 O"
       }
     }
   },
@@ -1390,12 +1390,12 @@
     "key": "0210",
     "mappings": {
       "default": {
-        "default": "cap R double grave"
+        "default": "대문자 이중 억음 R"
       },
       "mathspeak": {
-        "default": "modifying above upper R with double grave",
-        "brief": "mod above upper R with double grave",
-        "sbrief": "mod above upper R with double grave"
+        "default": "이중 억음 부호가 올려진 대문자 R",
+        "brief": "이중 억음 부호가 올려진 대문자 R",
+        "sbrief": "이중 억음 부호가 올려진 대문자 R"
       }
     }
   },
@@ -1404,12 +1404,12 @@
     "key": "0212",
     "mappings": {
       "default": {
-        "default": "cap R inverted breve"
+        "default": "대문자 반전 겹온음표 R"
       },
       "mathspeak": {
-        "default": "modifying above upper R with inverted breve",
-        "brief": "mod above upper R with inverted breve",
-        "sbrief": "mod above upper R with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 대문자 R",
+        "brief": "반전된 겹온음표 부호가 올려진 대문자 R",
+        "sbrief": "반전된 겹온음표 부호가 올려진 대문자 R"
       }
     }
   },
@@ -1418,12 +1418,12 @@
     "key": "0214",
     "mappings": {
       "default": {
-        "default": "cap U double grave"
+        "default": "대문자 이중 억음 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with double grave",
-        "brief": "mod above upper U with double grave",
-        "sbrief": "mod above upper U with double grave"
+        "default": "이중 억음 부호가 올려진 대문자 U",
+        "brief": "이중 억음 부호가 올려진 대문자 U",
+        "sbrief": "이중 억음 부호가 올려진 대문자 U"
       }
     }
   },
@@ -1432,12 +1432,12 @@
     "key": "0216",
     "mappings": {
       "default": {
-        "default": "cap U inverted breve"
+        "default": "대문자 반전 겹온음표 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with inverted breve",
-        "brief": "mod above upper U with inverted breve",
-        "sbrief": "mod above upper U with inverted breve"
+        "default": "반전된 겹온음표 부호가 올려진 대문자 U",
+        "brief": "반전된 겹온음표 부호가 올려진 대문자 U",
+        "sbrief": "반전된 겹온음표 부호가 올려진 대문자 U"
       }
     }
   },
@@ -1446,12 +1446,12 @@
     "key": "0218",
     "mappings": {
       "default": {
-        "default": "cap S comma below"
+        "default": "대문자 아래 쉼표 S"
       },
       "mathspeak": {
-        "default": "modifying below upper S with comma below",
-        "brief": "mod below upper S with comma below",
-        "sbrief": "mod below upper S with comma below"
+        "default": "아래에 쉼표 부호가 있는 대문자 S",
+        "brief": "아래에 쉼표 부호가 있는 대문자 S",
+        "sbrief": "아래에 쉼표 부호가 있는 대문자 S"
       }
     }
   },
@@ -1460,12 +1460,12 @@
     "key": "021A",
     "mappings": {
       "default": {
-        "default": "cap T comma below"
+        "default": "대문자 아래 쉼표 T"
       },
       "mathspeak": {
-        "default": "modifying below upper T with comma below",
-        "brief": "mod below upper T with comma below",
-        "sbrief": "mod below upper T with comma below"
+        "default": "아래에 쉼표 부호가 있는 대문자 T",
+        "brief": "아래에 쉼표 부호가 있는 대문자 T",
+        "sbrief": "아래에 쉼표 부호가 있는 대문자 T"
       }
     }
   },
@@ -1474,12 +1474,12 @@
     "key": "021E",
     "mappings": {
       "default": {
-        "default": "cap H caron"
+        "default": "대문자 카론 H"
       },
       "mathspeak": {
-        "default": "modifying above upper H with caron",
-        "brief": "mod above upper H with caron",
-        "sbrief": "mod above upper H with caron"
+        "default": "카론 부호가 올려진 대문자 H",
+        "brief": "카론 부호가 올려진 대문자 H",
+        "sbrief": "카론 부호가 올려진 대문자 H"
       }
     }
   },
@@ -1488,12 +1488,12 @@
     "key": "0226",
     "mappings": {
       "default": {
-        "default": "cap A overdot"
+        "default": "대문자 윗점 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with dot",
-        "brief": "mod above upper A with dot",
-        "sbrief": "mod above upper A with dot"
+        "default": "마침점 부호가 올려진 대문자 A",
+        "brief": "마침점 부호가 올려진 대문자 A",
+        "sbrief": "마침점 부호가 올려진 대문자 A"
       }
     }
   },
@@ -1502,12 +1502,12 @@
     "key": "0228",
     "mappings": {
       "default": {
-        "default": "cap E cedilla"
+        "default": "대문자 갈고리형 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with cedilla",
-        "brief": "mod above upper E with cedilla",
-        "sbrief": "mod above upper E with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 E",
+        "brief": "갈고리형 부호가 붙여진 대문자 E",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 E"
       }
     }
   },
@@ -1516,12 +1516,12 @@
     "key": "022E",
     "mappings": {
       "default": {
-        "default": "cap O overdot"
+        "default": "대문자 윗점 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with dot",
-        "brief": "mod above upper O with dot",
-        "sbrief": "mod above upper O with dot"
+        "default": "마침점 부호가 올려진 대문자 O",
+        "brief": "마침점 부호가 올려진 대문자 O",
+        "sbrief": "마침점 부호가 올려진 대문자 O"
       }
     }
   },
@@ -1530,12 +1530,12 @@
     "key": "0232",
     "mappings": {
       "default": {
-        "default": "cap Y overbar"
+        "default": "대문자 오버바 Y"
       },
       "mathspeak": {
-        "default": "upper Y overbar",
-        "brief": "upper Y overbar",
-        "sbrief": "upper Y overbar"
+        "default": "오버바 부호가 올려진 대문자 Y",
+        "brief": "오버바 부호가 올려진 대문자 Y",
+        "sbrief": "오버바 부호가 올려진 대문자 Y"
       }
     }
   },
@@ -1544,12 +1544,12 @@
     "key": "1E00",
     "mappings": {
       "default": {
-        "default": "cap A ring below"
+        "default": "대문자 아래 반지 부호 A"
       },
       "mathspeak": {
-        "default": "modifying below upper A with ring below",
-        "brief": "mod below upper A with ring below",
-        "sbrief": "mod below upper A with ring below"
+        "default": "아래에 반지 부호가 있는 대문자 A",
+        "brief": "아래에 반지 부호가 있는 대문자 A",
+        "sbrief": "아래에 반지 부호가 있는 대문자 A"
       }
     }
   },
@@ -1558,12 +1558,12 @@
     "key": "1E02",
     "mappings": {
       "default": {
-        "default": "cap B overdot"
+        "default": "대문자 윗점 B"
       },
       "mathspeak": {
-        "default": "modifying above upper B with dot",
-        "brief": "mod above upper B with dot",
-        "sbrief": "mod above upper B with dot"
+        "default": "마침점 부호가 올려진 대문자 B",
+        "brief": "마침점 부호가 올려진 대문자 B",
+        "sbrief": "마침점 부호가 올려진 대문자 B"
       }
     }
   },
@@ -1572,12 +1572,12 @@
     "key": "1E04",
     "mappings": {
       "default": {
-        "default": "cap B underdot"
+        "default": "대문자 아랫점 B"
       },
       "mathspeak": {
-        "default": "modifying below upper B with dot",
-        "brief": "mod below upper B with dot",
-        "sbrief": "mod below upper B with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 B",
+        "brief": "아래에 마침표 부호가 있는 대문자 B",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 B"
       }
     }
   },
@@ -1586,12 +1586,12 @@
     "key": "1E06",
     "mappings": {
       "default": {
-        "default": "cap B underbar"
+        "default": "대문자 언더바 B"
       },
       "mathspeak": {
-        "default": "upper B underbar",
-        "brief": "upper B underbar",
-        "sbrief": "upper B underbar"
+        "default": "언더바 부호가 있는 대문자 B",
+        "brief": "언더바 부호가 있는 대문자 B",
+        "sbrief": "언더바 부호가 있는 대문자 B"
       }
     }
   },
@@ -1600,12 +1600,12 @@
     "key": "1E0A",
     "mappings": {
       "default": {
-        "default": "cap D overdot"
+        "default": "대문자 윗점 D"
       },
       "mathspeak": {
-        "default": "modifying above upper D with dot",
-        "brief": "mod above upper D with dot",
-        "sbrief": "mod above upper D with dot"
+        "default": "마침점 부호가 올려진 대문자 D",
+        "brief": "마침점 부호가 올려진 대문자 D",
+        "sbrief": "마침점 부호가 올려진 대문자 D"
       }
     }
   },
@@ -1614,12 +1614,12 @@
     "key": "1E0C",
     "mappings": {
       "default": {
-        "default": "cap D underdot"
+        "default": "대문자 아랫점 D"
       },
       "mathspeak": {
-        "default": "modifying below upper D with dot",
-        "brief": "mod below upper D with dot",
-        "sbrief": "mod below upper D with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 D",
+        "brief": "아래에 마침표 부호가 있는 대문자 D",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 D"
       }
     }
   },
@@ -1628,12 +1628,12 @@
     "key": "1E0E",
     "mappings": {
       "default": {
-        "default": "cap D underbar"
+        "default": "대문자 언더바 D"
       },
       "mathspeak": {
-        "default": "upper D underbar",
-        "brief": "upper D underbar",
-        "sbrief": "upper D underbar"
+        "default": "언더바 부호가 있는 대문자 D",
+        "brief": "언더바 부호가 있는 대문자 D",
+        "sbrief": "언더바 부호가 있는 대문자 D"
       }
     }
   },
@@ -1642,12 +1642,12 @@
     "key": "1E10",
     "mappings": {
       "default": {
-        "default": "cap D cedilla"
+        "default": "대문자 갈고리형 D"
       },
       "mathspeak": {
-        "default": "modifying above upper D with cedilla",
-        "brief": "mod above upper D with cedilla",
-        "sbrief": "mod above upper D with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 D",
+        "brief": "갈고리형 부호가 붙여진 대문자 D",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 D"
       }
     }
   },
@@ -1656,12 +1656,12 @@
     "key": "1E12",
     "mappings": {
       "default": {
-        "default": "cap D underhat"
+        "default": "대문자 아래 곡절음 D"
       },
       "mathspeak": {
-        "default": "modifying below upper D with caret",
-        "brief": "mod below upper D with caret",
-        "sbrief": "mod below upper D with caret"
+        "default": "아래에 곡절음 부호가 있는 대문자 D",
+        "brief": "아래에 곡절음 부호가 있는 대문자 D",
+        "sbrief": "아래에 곡절음 부호가 있는 대문자 D"
       }
     }
   },
@@ -1670,12 +1670,12 @@
     "key": "1E18",
     "mappings": {
       "default": {
-        "default": "cap E underhat"
+        "default": "대문자 아래 곡절음 E"
       },
       "mathspeak": {
-        "default": "modifying below upper E with caret",
-        "brief": "mod below upper E with caret",
-        "sbrief": "mod below upper E with caret"
+        "default": "아래에 곡절음 부호가 있는 대문자 E",
+        "brief": "아래에 곡절음 부호가 있는 대문자 E",
+        "sbrief": "아래에 곡절음 부호가 있는 대문자 E"
       }
     }
   },
@@ -1684,12 +1684,12 @@
     "key": "1E1A",
     "mappings": {
       "default": {
-        "default": "cap E tilde below"
+        "default": "대문자 아래 물결표 E"
       },
       "mathspeak": {
-        "default": "upper E undertilde",
-        "brief": "upper E undertilde",
-        "sbrief": "upper E undertilde"
+        "default": "아래에 물결표가 있는 대문자 E",
+        "brief": "아래에 물결표가 있는 대문자 E",
+        "sbrief": "아래에 물결표가 있는 대문자 E"
       }
     }
   },
@@ -1698,12 +1698,12 @@
     "key": "1E1E",
     "mappings": {
       "default": {
-        "default": "cap F overdot"
+        "default": "대문자 윗점 F"
       },
       "mathspeak": {
-        "default": "modifying above upper F with dot",
-        "brief": "mod above upper F with dot",
-        "sbrief": "mod above upper F with dot"
+        "default": "마침점 부호가 올려진 대문자 F",
+        "brief": "마침점 부호가 올려진 대문자 F",
+        "sbrief": "마침점 부호가 올려진 대문자 F"
       }
     }
   },
@@ -1712,12 +1712,12 @@
     "key": "1E20",
     "mappings": {
       "default": {
-        "default": "cap G overbar"
+        "default": "대문자 오버바 G"
       },
       "mathspeak": {
-        "default": "upper G overbar",
-        "brief": "upper G overbar",
-        "sbrief": "upper G overbar"
+        "default": "오버바 부호가 올려진 대문자 G",
+        "brief": "오버바 부호가 올려진 대문자 G",
+        "sbrief": "오버바 부호가 올려진 대문자 G"
       }
     }
   },
@@ -1726,12 +1726,12 @@
     "key": "1E22",
     "mappings": {
       "default": {
-        "default": "cap H overdot"
+        "default": "대문자 윗점 H"
       },
       "mathspeak": {
-        "default": "modifying above upper H with dot",
-        "brief": "mod above upper H with dot",
-        "sbrief": "mod above upper H with dot"
+        "default": "마침점 부호가 올려진 대문자 H",
+        "brief": "마침점 부호가 올려진 대문자 H",
+        "sbrief": "마침점 부호가 올려진 대문자 H"
       }
     }
   },
@@ -1740,12 +1740,12 @@
     "key": "1E24",
     "mappings": {
       "default": {
-        "default": "cap H underdot"
+        "default": "대문자 아랫점 H"
       },
       "mathspeak": {
-        "default": "modifying below upper H with dot",
-        "brief": "mod below upper H with dot",
-        "sbrief": "mod below upper H with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 H",
+        "brief": "아래에 마침표 부호가 있는 대문자 H",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 H"
       }
     }
   },
@@ -1754,12 +1754,12 @@
     "key": "1E26",
     "mappings": {
       "default": {
-        "default": "cap H double overdot"
+        "default": "대문자 분음 부호표 H"
       },
       "mathspeak": {
-        "default": "modifying above upper H with double dot",
-        "brief": "mod above upper H with double dot",
-        "sbrief": "mod above upper H with double dot"
+        "default": "분음 부호가 올려진 대문자 H",
+        "brief": "분음 부호가 올려진 대문자 H",
+        "sbrief": "분음 부호가 올려진 대문자 H"
       }
     }
   },
@@ -1768,12 +1768,12 @@
     "key": "1E28",
     "mappings": {
       "default": {
-        "default": "cap H cedilla"
+        "default": "대문자 갈고리형 H"
       },
       "mathspeak": {
-        "default": "modifying above upper H with cedilla",
-        "brief": "mod above upper H with cedilla",
-        "sbrief": "mod above upper H with cedilla"
+        "default": "갈고리형 부호가 붙여진 대문자 H",
+        "brief": "갈고리형 부호가 붙여진 대문자 H",
+        "sbrief": "갈고리형 부호가 붙여진 대문자 H"
       }
     }
   },
@@ -1782,12 +1782,12 @@
     "key": "1E2A",
     "mappings": {
       "default": {
-        "default": "cap H breve below"
+        "default": "대문자 아래 겹온음표 H"
       },
       "mathspeak": {
-        "default": "modifying below upper H with breve below",
-        "brief": "mod below upper H with breve below",
-        "sbrief": "mod below upper H with breve below"
+        "default": "아래에 겹온음표 부호가 있는 대문자 H",
+        "brief": "아래에 겹온음표 부호가 있는 대문자 H",
+        "sbrief": "아래에 겹온음표 부호가 있는 대문자 H"
       }
     }
   },
@@ -1796,12 +1796,12 @@
     "key": "1E2C",
     "mappings": {
       "default": {
-        "default": "cap I tilde below"
+        "default": "대문자 아래 물결표 I"
       },
       "mathspeak": {
-        "default": "upper I undertilde",
-        "brief": "upper I undertilde",
-        "sbrief": "upper I undertilde"
+        "default": "아래에 물결표가 있는 대문자 I",
+        "brief": "아래에 물결표가 있는 대문자 I",
+        "sbrief": "아래에 물결표가 있는 대문자 I"
       }
     }
   },
@@ -1810,12 +1810,12 @@
     "key": "1E30",
     "mappings": {
       "default": {
-        "default": "cap K acute"
+        "default": "대문자 양음 K"
       },
       "mathspeak": {
-        "default": "modifying above upper K with acute",
-        "brief": "mod above upper K with acute",
-        "sbrief": "mod above upper K with acute"
+        "default": "양음 부호가 올려진 대문자 K",
+        "brief": "양음 부호가 올려진 대문자 K",
+        "sbrief": "양음 부호가 올려진 대문자 K"
       }
     }
   },
@@ -1824,12 +1824,12 @@
     "key": "1E32",
     "mappings": {
       "default": {
-        "default": "cap K underdot"
+        "default": "대문자 아랫점 K"
       },
       "mathspeak": {
-        "default": "modifying below upper K with dot",
-        "brief": "mod below upper K with dot",
-        "sbrief": "mod below upper K with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 K",
+        "brief": "아래에 마침표 부호가 있는 대문자 K",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 K"
       }
     }
   },
@@ -1838,12 +1838,12 @@
     "key": "1E34",
     "mappings": {
       "default": {
-        "default": "cap K underbar"
+        "default": "대문자 언더바 K"
       },
       "mathspeak": {
-        "default": "upper K underbar",
-        "brief": "upper K underbar",
-        "sbrief": "upper K underbar"
+        "default": "언더바 부호가 있는 대문자 K",
+        "brief": "언더바 부호가 있는 대문자 K",
+        "sbrief": "언더바 부호가 있는 대문자 K"
       }
     }
   },
@@ -1852,12 +1852,12 @@
     "key": "1E36",
     "mappings": {
       "default": {
-        "default": "cap L underdot"
+        "default": "대문자 아랫점 L"
       },
       "mathspeak": {
-        "default": "modifying below upper L with dot",
-        "brief": "mod below upper L with dot",
-        "sbrief": "mod below upper L with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 L",
+        "brief": "아래에 마침표 부호가 있는 대문자 L",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 L"
       }
     }
   },
@@ -1866,12 +1866,12 @@
     "key": "1E3A",
     "mappings": {
       "default": {
-        "default": "cap L underbar"
+        "default": "대문자 언더바 L"
       },
       "mathspeak": {
-        "default": "upper L underbar",
-        "brief": "upper L underbar",
-        "sbrief": "upper L underbar"
+        "default": "언더바 부호가 있는 대문자 L",
+        "brief": "언더바 부호가 있는 대문자 L",
+        "sbrief": "언더바 부호가 있는 대문자 L"
       }
     }
   },
@@ -1880,12 +1880,12 @@
     "key": "1E3C",
     "mappings": {
       "default": {
-        "default": "cap L underhat"
+        "default": "대문자 아래 곡절음 L"
       },
       "mathspeak": {
-        "default": "modifying below upper L with caret",
-        "brief": "mod below upper L with caret",
-        "sbrief": "mod below upper L with caret"
+        "default": "아래에 곡절음 부호가 있는 대문자 L",
+        "brief": "아래에 곡절음 부호가 있는 대문자 L",
+        "sbrief": "아래에 곡절음 부호가 있는 대문자 L"
       }
     }
   },
@@ -1894,12 +1894,12 @@
     "key": "1E3E",
     "mappings": {
       "default": {
-        "default": "cap M acute"
+        "default": "대문자 양음 M"
       },
       "mathspeak": {
-        "default": "modifying above upper M with acute",
-        "brief": "mod above upper M with acute",
-        "sbrief": "mod above upper M with acute"
+        "default": "양음 부호가 올려진 대문자 M",
+        "brief": "양음 부호가 올려진 대문자 M",
+        "sbrief": "양음 부호가 올려진 대문자 M"
       }
     }
   },
@@ -1908,12 +1908,12 @@
     "key": "1E40",
     "mappings": {
       "default": {
-        "default": "cap M overdot"
+        "default": "대문자 윗점 M"
       },
       "mathspeak": {
-        "default": "modifying above upper M with dot",
-        "brief": "mod above upper M with dot",
-        "sbrief": "mod above upper M with dot"
+        "default": "마침점 부호가 올려진 대문자 M",
+        "brief": "마침점 부호가 올려진 대문자 M",
+        "sbrief": "마침점 부호가 올려진 대문자 M"
       }
     }
   },
@@ -1922,12 +1922,12 @@
     "key": "1E42",
     "mappings": {
       "default": {
-        "default": "cap M underdot"
+        "default": "대문자 아랫점 M"
       },
       "mathspeak": {
-        "default": "modifying below upper M with dot",
-        "brief": "mod below upper M with dot",
-        "sbrief": "mod below upper M with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 M",
+        "brief": "아래에 마침표 부호가 있는 대문자 M",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 M"
       }
     }
   },
@@ -1936,12 +1936,12 @@
     "key": "1E44",
     "mappings": {
       "default": {
-        "default": "cap N overdot"
+        "default": "대문자 윗점 N"
       },
       "mathspeak": {
-        "default": "modifying above upper N with dot",
-        "brief": "mod above upper N with dot",
-        "sbrief": "mod above upper N with dot"
+        "default": "마침점 부호가 올려진 대문자 N",
+        "brief": "마침점 부호가 올려진 대문자 N",
+        "sbrief": "마침점 부호가 올려진 대문자 N"
       }
     }
   },
@@ -1950,12 +1950,12 @@
     "key": "1E46",
     "mappings": {
       "default": {
-        "default": "cap N underdot"
+        "default": "대문자 아랫점 N"
       },
       "mathspeak": {
-        "default": "modifying below upper N with dot",
-        "brief": "mod below upper N with dot",
-        "sbrief": "mod below upper N with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 N",
+        "brief": "아래에 마침표 부호가 있는 대문자 N",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 N"
       }
     }
   },
@@ -1964,12 +1964,12 @@
     "key": "1E48",
     "mappings": {
       "default": {
-        "default": "cap N underbar"
+        "default": "대문자 언더바 N"
       },
       "mathspeak": {
-        "default": "upper N underbar",
-        "brief": "upper N underbar",
-        "sbrief": "upper N underbar"
+        "default": "언더바 부호가 있는 대문자 N",
+        "brief": "언더바 부호가 있는 대문자 N",
+        "sbrief": "언더바 부호가 있는 대문자 N"
       }
     }
   },
@@ -1978,12 +1978,12 @@
     "key": "1E4A",
     "mappings": {
       "default": {
-        "default": "cap N underhat"
+        "default": "대문자 아래 곡절음 N"
       },
       "mathspeak": {
-        "default": "modifying below upper N with caret",
-        "brief": "mod below upper N with caret",
-        "sbrief": "mod below upper N with caret"
+        "default": "아래에 곡절음 부호가 있는 대문자 N",
+        "brief": "아래에 곡절음 부호가 있는 대문자 N",
+        "sbrief": "아래에 곡절음 부호가 있는 대문자 N"
       }
     }
   },
@@ -1992,12 +1992,12 @@
     "key": "1E54",
     "mappings": {
       "default": {
-        "default": "cap P acute"
+        "default": "대문자 양음 P"
       },
       "mathspeak": {
-        "default": "modifying above upper P with acute",
-        "brief": "mod above upper P with acute",
-        "sbrief": "mod above upper P with acute"
+        "default": "양음 부호가 올려진 대문자 P",
+        "brief": "양음 부호가 올려진 대문자 P",
+        "sbrief": "양음 부호가 올려진 대문자 P"
       }
     }
   },
@@ -2006,12 +2006,12 @@
     "key": "1E56",
     "mappings": {
       "default": {
-        "default": "cap P overdot"
+        "default": "대문자 윗점 P"
       },
       "mathspeak": {
-        "default": "modifying above upper P with dot",
-        "brief": "mod above upper P with dot",
-        "sbrief": "mod above upper P with dot"
+        "default": "마침점 부호가 올려진 대문자 P",
+        "brief": "마침점 부호가 올려진 대문자 P",
+        "sbrief": "마침점 부호가 올려진 대문자 P"
       }
     }
   },
@@ -2020,12 +2020,12 @@
     "key": "1E58",
     "mappings": {
       "default": {
-        "default": "cap R overdot"
+        "default": "대문자 윗점 R"
       },
       "mathspeak": {
-        "default": "modifying above upper R with dot",
-        "brief": "mod above upper R with dot",
-        "sbrief": "mod above upper R with dot"
+        "default": "마침점 부호가 올려진 대문자 R",
+        "brief": "마침점 부호가 올려진 대문자 R",
+        "sbrief": "마침점 부호가 올려진 대문자 R"
       }
     }
   },
@@ -2034,12 +2034,12 @@
     "key": "1E5A",
     "mappings": {
       "default": {
-        "default": "cap R underdot"
+        "default": "대문자 아랫점 R"
       },
       "mathspeak": {
-        "default": "modifying below upper R with dot",
-        "brief": "mod below upper R with dot",
-        "sbrief": "mod below upper R with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 R",
+        "brief": "아래에 마침표 부호가 있는 대문자 R",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 R"
       }
     }
   },
@@ -2048,12 +2048,12 @@
     "key": "1E5E",
     "mappings": {
       "default": {
-        "default": "cap R underbar"
+        "default": "대문자 언더바 R"
       },
       "mathspeak": {
-        "default": "upper R underbar",
-        "brief": "upper R underbar",
-        "sbrief": "upper R underbar"
+        "default": "언더바 부호가 있는 대문자 R",
+        "brief": "언더바 부호가 있는 대문자 R",
+        "sbrief": "언더바 부호가 있는 대문자 R"
       }
     }
   },
@@ -2062,12 +2062,12 @@
     "key": "1E60",
     "mappings": {
       "default": {
-        "default": "cap S overdot"
+        "default": "대문자 윗점 S"
       },
       "mathspeak": {
-        "default": "modifying above upper S with dot",
-        "brief": "mod above upper S with dot",
-        "sbrief": "mod above upper S with dot"
+        "default": "마침점 부호가 올려진 대문자 S",
+        "brief": "마침점 부호가 올려진 대문자 S",
+        "sbrief": "마침점 부호가 올려진 대문자 S"
       }
     }
   },
@@ -2076,12 +2076,12 @@
     "key": "1E62",
     "mappings": {
       "default": {
-        "default": "cap S underdot"
+        "default": "대문자 아랫점 S"
       },
       "mathspeak": {
-        "default": "modifying below upper S with dot",
-        "brief": "mod below upper S with dot",
-        "sbrief": "mod below upper S with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 S",
+        "brief": "아래에 마침표 부호가 있는 대문자 S",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 S"
       }
     }
   },
@@ -2090,12 +2090,12 @@
     "key": "1E6A",
     "mappings": {
       "default": {
-        "default": "cap T overdot"
+        "default": "대문자 윗점 T"
       },
       "mathspeak": {
-        "default": "modifying above upper T with dot",
-        "brief": "mod above upper T with dot",
-        "sbrief": "mod above upper T with dot"
+        "default": "마침점 부호가 올려진 대문자 T",
+        "brief": "마침점 부호가 올려진 대문자 T",
+        "sbrief": "마침점 부호가 올려진 대문자 T"
       }
     }
   },
@@ -2104,12 +2104,12 @@
     "key": "1E6C",
     "mappings": {
       "default": {
-        "default": "cap T underdot"
+        "default": "대문자 아랫점 T"
       },
       "mathspeak": {
-        "default": "modifying below upper T with dot",
-        "brief": "mod below upper T with dot",
-        "sbrief": "mod below upper T with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 T",
+        "brief": "아래에 마침표 부호가 있는 대문자 T",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 T"
       }
     }
   },
@@ -2118,12 +2118,12 @@
     "key": "1E6E",
     "mappings": {
       "default": {
-        "default": "cap T underbar"
+        "default": "대문자 언더바 T"
       },
       "mathspeak": {
-        "default": "upper T underbar",
-        "brief": "upper T underbar",
-        "sbrief": "upper T underbar"
+        "default": "언더바 부호가 있는 대문자 T",
+        "brief": "언더바 부호가 있는 대문자 T",
+        "sbrief": "언더바 부호가 있는 대문자 T"
       }
     }
   },
@@ -2132,12 +2132,12 @@
     "key": "1E70",
     "mappings": {
       "default": {
-        "default": "cap T underhat"
+        "default": "대문자 아래 곡절음 T"
       },
       "mathspeak": {
-        "default": "modifying below upper T with caret",
-        "brief": "mod below upper T with caret",
-        "sbrief": "mod below upper T with caret"
+        "default": "아래에 곡절음 부호가 있는 대문자 T",
+        "brief": "아래에 곡절음 부호가 있는 대문자 T",
+        "sbrief": "아래에 곡절음 부호가 있는 대문자 T"
       }
     }
   },
@@ -2146,12 +2146,12 @@
     "key": "1E72",
     "mappings": {
       "default": {
-        "default": "cap U double underdot"
+        "default": "대문자 아래 분음 부호표 U"
       },
       "mathspeak": {
-        "default": "modifying below upper U with double dot",
-        "brief": "mod below upper U with double dot",
-        "sbrief": "mod below upper U with double dot"
+        "default": "아래에 분음 부호가 있는 대문자 U",
+        "brief": "아래에 분음 부호가 있는 대문자 U",
+        "sbrief": "아래에 분음 부호가 있는 대문자 U"
       }
     }
   },
@@ -2160,12 +2160,12 @@
     "key": "1E74",
     "mappings": {
       "default": {
-        "default": "cap U tilde below"
+        "default": "대문자 아래 물결표 U"
       },
       "mathspeak": {
-        "default": "upper U undertilde",
-        "brief": "upper U undertilde",
-        "sbrief": "upper U undertilde"
+        "default": "아래에 물결표가 있는 대문자 U",
+        "brief": "아래에 물결표가 있는 대문자 U",
+        "sbrief": "아래에 물결표가 있는 대문자 U"
       }
     }
   },
@@ -2174,12 +2174,12 @@
     "key": "1E76",
     "mappings": {
       "default": {
-        "default": "cap U underhat"
+        "default": "대문자 아래 곡절음 U"
       },
       "mathspeak": {
-        "default": "modifying below upper U with caret",
-        "brief": "mod below upper U with caret",
-        "sbrief": "mod below upper U with caret"
+        "default": "아래에 곡절음 부호가 있는 대문자 U",
+        "brief": "아래에 곡절음 부호가 있는 대문자 U",
+        "sbrief": "아래에 곡절음 부호가 있는 대문자 U"
       }
     }
   },
@@ -2188,12 +2188,12 @@
     "key": "1E7C",
     "mappings": {
       "default": {
-        "default": "cap V tilde"
+        "default": "대문자 물결표 V"
       },
       "mathspeak": {
-        "default": "upper V overtilde",
-        "brief": "upper V overtilde",
-        "sbrief": "upper V overtilde"
+        "default": "물결표가 올려진 대문자 V",
+        "brief": "물결표가 올려진 대문자 V",
+        "sbrief": "물결표가 올려진 대문자 V"
       }
     }
   },
@@ -2202,12 +2202,12 @@
     "key": "1E7E",
     "mappings": {
       "default": {
-        "default": "cap V underdot"
+        "default": "대문자 아랫점 V"
       },
       "mathspeak": {
-        "default": "modifying below upper V with dot",
-        "brief": "mod below upper V with dot",
-        "sbrief": "mod below upper V with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 V",
+        "brief": "아래에 마침표 부호가 있는 대문자 V",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 V"
       }
     }
   },
@@ -2216,12 +2216,12 @@
     "key": "1E80",
     "mappings": {
       "default": {
-        "default": "cap W grave"
+        "default": "대문자 억음 W"
       },
       "mathspeak": {
-        "default": "modifying above upper W with grave",
-        "brief": "mod above upper W with grave",
-        "sbrief": "mod above upper W with grave"
+        "default": "억음 부호가 올려진 대문자 W",
+        "brief": "억음 부호가 올려진 대문자 W",
+        "sbrief": "억음 부호가 올려진 대문자 W"
       }
     }
   },
@@ -2230,12 +2230,12 @@
     "key": "1E82",
     "mappings": {
       "default": {
-        "default": "cap W acute"
+        "default": "대문자 양음 W"
       },
       "mathspeak": {
-        "default": "modifying above upper W with acute",
-        "brief": "mod above upper W with acute",
-        "sbrief": "mod above upper W with acute"
+        "default": "양음 부호가 올려진 대문자 W",
+        "brief": "양음 부호가 올려진 대문자 W",
+        "sbrief": "양음 부호가 올려진 대문자 W"
       }
     }
   },
@@ -2244,12 +2244,12 @@
     "key": "1E84",
     "mappings": {
       "default": {
-        "default": "cap W double overdot"
+        "default": "대문자 분음 부호표 W"
       },
       "mathspeak": {
-        "default": "modifying above upper W with double dot",
-        "brief": "mod above upper W with double dot",
-        "sbrief": "mod above upper W with double dot"
+        "default": "분음 부호가 올려진 대문자 W",
+        "brief": "분음 부호가 올려진 대문자 W",
+        "sbrief": "분음 부호가 올려진 대문자 W"
       }
     }
   },
@@ -2258,12 +2258,12 @@
     "key": "1E86",
     "mappings": {
       "default": {
-        "default": "cap W overdot"
+        "default": "대문자 윗점 W"
       },
       "mathspeak": {
-        "default": "modifying above upper W with dot",
-        "brief": "mod above upper W with dot",
-        "sbrief": "mod above upper W with dot"
+        "default": "마침점 부호가 올려진 대문자 W",
+        "brief": "마침점 부호가 올려진 대문자 W",
+        "sbrief": "마침점 부호가 올려진 대문자 W"
       }
     }
   },
@@ -2272,12 +2272,12 @@
     "key": "1E88",
     "mappings": {
       "default": {
-        "default": "cap W underdot"
+        "default": "대문자 아랫점 W"
       },
       "mathspeak": {
-        "default": "modifying below upper W with dot",
-        "brief": "mod below upper W with dot",
-        "sbrief": "mod below upper W with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 W",
+        "brief": "아래에 마침표 부호가 있는 대문자 W",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 W"
       }
     }
   },
@@ -2286,12 +2286,12 @@
     "key": "1E8A",
     "mappings": {
       "default": {
-        "default": "cap X overdot"
+        "default": "대문자 윗점 X"
       },
       "mathspeak": {
-        "default": "modifying above upper X with dot",
-        "brief": "mod above upper X with dot",
-        "sbrief": "mod above upper X with dot"
+        "default": "마침점 부호가 올려진 대문자 X",
+        "brief": "마침점 부호가 올려진 대문자 X",
+        "sbrief": "마침점 부호가 올려진 대문자 X"
       }
     }
   },
@@ -2300,12 +2300,12 @@
     "key": "1E8C",
     "mappings": {
       "default": {
-        "default": "cap X double overdot"
+        "default": "대문자 분음 부호표 X"
       },
       "mathspeak": {
-        "default": "modifying above upper X with double dot",
-        "brief": "mod above upper X with double dot",
-        "sbrief": "mod above upper X with double dot"
+        "default": "분음 부호가 올려진 대문자 X",
+        "brief": "분음 부호가 올려진 대문자 X",
+        "sbrief": "분음 부호가 올려진 대문자 X"
       }
     }
   },
@@ -2314,12 +2314,12 @@
     "key": "1E8E",
     "mappings": {
       "default": {
-        "default": "cap Y overdot"
+        "default": "대문자 윗점 Y"
       },
       "mathspeak": {
-        "default": "modifying above upper Y with dot",
-        "brief": "mod above upper Y with dot",
-        "sbrief": "mod above upper Y with dot"
+        "default": "마침점 부호가 올려진 대문자 Y",
+        "brief": "마침점 부호가 올려진 대문자 Y",
+        "sbrief": "마침점 부호가 올려진 대문자 Y"
       }
     }
   },
@@ -2328,12 +2328,12 @@
     "key": "1E90",
     "mappings": {
       "default": {
-        "default": "cap Z circumflex"
+        "default": "대문자 곡절 악센트 Z"
       },
       "mathspeak": {
-        "default": "modifying above upper Z with circumflex",
-        "brief": "mod above upper Z with circumflex",
-        "sbrief": "mod above upper Z with circumflex"
+        "default": "곡절 악센트 부호가 올려진 대문자 Z",
+        "brief": "곡절 악센트 부호가 올려진 대문자 Z",
+        "sbrief": "곡절 악센트 부호가 올려진 대문자 Z"
       }
     }
   },
@@ -2342,12 +2342,12 @@
     "key": "1E92",
     "mappings": {
       "default": {
-        "default": "cap Z underdot"
+        "default": "대문자 아랫점 Z"
       },
       "mathspeak": {
-        "default": "modifying below upper Z with dot",
-        "brief": "mod below upper Z with dot",
-        "sbrief": "mod below upper Z with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 Z",
+        "brief": "아래에 마침표 부호가 있는 대문자 Z",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 Z"
       }
     }
   },
@@ -2356,12 +2356,12 @@
     "key": "1E94",
     "mappings": {
       "default": {
-        "default": "cap Z underbar"
+        "default": "대문자 언더바 Z"
       },
       "mathspeak": {
-        "default": "upper Z underbar",
-        "brief": "upper Z underbar",
-        "sbrief": "upper Z underbar"
+        "default": "언더바 부호가 있는 대문자 Z",
+        "brief": "언더바 부호가 있는 대문자 Z",
+        "sbrief": "언더바 부호가 있는 대문자 Z"
       }
     }
   },
@@ -2370,12 +2370,12 @@
     "key": "1EA0",
     "mappings": {
       "default": {
-        "default": "cap A underdot"
+        "default": "대문자 아랫점 A"
       },
       "mathspeak": {
-        "default": "modifying below upper A with dot",
-        "brief": "mod below upper A with dot",
-        "sbrief": "mod below upper A with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 A",
+        "brief": "아래에 마침표 부호가 있는 대문자 A",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 A"
       }
     }
   },
@@ -2384,12 +2384,12 @@
     "key": "1EA2",
     "mappings": {
       "default": {
-        "default": "cap A hook"
+        "default": "대문자 후크 A"
       },
       "mathspeak": {
-        "default": "modifying above upper A with hook",
-        "brief": "mod above upper A with hook",
-        "sbrief": "mod above upper A with hook"
+        "default": "후크 부호가 올려진 대문자 A",
+        "brief": "후크 부호가 올려진 대문자 A",
+        "sbrief": "후크 부호가 올려진 대문자 A"
       }
     }
   },
@@ -2398,12 +2398,12 @@
     "key": "1EB8",
     "mappings": {
       "default": {
-        "default": "cap E underdot"
+        "default": "대문자 아랫점 E"
       },
       "mathspeak": {
-        "default": "modifying below upper E with dot",
-        "brief": "mod below upper E with dot",
-        "sbrief": "mod below upper E with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 E",
+        "brief": "아래에 마침표 부호가 있는 대문자 E",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 E"
       }
     }
   },
@@ -2412,12 +2412,12 @@
     "key": "1EBA",
     "mappings": {
       "default": {
-        "default": "cap E hook"
+        "default": "대문자 후크 E"
       },
       "mathspeak": {
-        "default": "modifying above upper E with hook",
-        "brief": "mod above upper E with hook",
-        "sbrief": "mod above upper E with hook"
+        "default": "후크 부호가 올려진 대문자 E",
+        "brief": "후크 부호가 올려진 대문자 E",
+        "sbrief": "후크 부호가 올려진 대문자 E"
       }
     }
   },
@@ -2426,12 +2426,12 @@
     "key": "1EBC",
     "mappings": {
       "default": {
-        "default": "cap E tilde"
+        "default": "대문자 물결표 E"
       },
       "mathspeak": {
-        "default": "upper E overtilde",
-        "brief": "upper E overtilde",
-        "sbrief": "upper E overtilde"
+        "default": "물결표가 올려진 대문자 E",
+        "brief": "물결표가 올려진 대문자 E",
+        "sbrief": "물결표가 올려진 대문자 E"
       }
     }
   },
@@ -2440,12 +2440,12 @@
     "key": "1EC8",
     "mappings": {
       "default": {
-        "default": "cap I hook"
+        "default": "대문자 후크 I"
       },
       "mathspeak": {
-        "default": "modifying above upper I with hook",
-        "brief": "mod above upper I with hook",
-        "sbrief": "mod above upper I with hook"
+        "default": "후크 부호가 올려진 대문자 I",
+        "brief": "후크 부호가 올려진 대문자 I",
+        "sbrief": "후크 부호가 올려진 대문자 I"
       }
     }
   },
@@ -2454,12 +2454,12 @@
     "key": "1ECA",
     "mappings": {
       "default": {
-        "default": "cap I underdot"
+        "default": "대문자 아랫점 I"
       },
       "mathspeak": {
-        "default": "modifying below upper I with dot",
-        "brief": "mod below upper I with dot",
-        "sbrief": "mod below upper I with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 I",
+        "brief": "아래에 마침표 부호가 있는 대문자 I",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 I"
       }
     }
   },
@@ -2468,12 +2468,12 @@
     "key": "1ECC",
     "mappings": {
       "default": {
-        "default": "cap O underdot"
+        "default": "대문자 아랫점 O"
       },
       "mathspeak": {
-        "default": "modifying below upper O with dot",
-        "brief": "mod below upper O with dot",
-        "sbrief": "mod below upper O with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 O",
+        "brief": "아래에 마침표 부호가 있는 대문자 O",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 O"
       }
     }
   },
@@ -2482,12 +2482,12 @@
     "key": "1ECE",
     "mappings": {
       "default": {
-        "default": "cap O hook"
+        "default": "대문자 후크 O"
       },
       "mathspeak": {
-        "default": "modifying above upper O with hook",
-        "brief": "mod above upper O with hook",
-        "sbrief": "mod above upper O with hook"
+        "default": "후크 부호가 올려진 대문자 O",
+        "brief": "후크 부호가 올려진 대문자 O",
+        "sbrief": "후크 부호가 올려진 대문자 O"
       }
     }
   },
@@ -2496,12 +2496,12 @@
     "key": "1EE4",
     "mappings": {
       "default": {
-        "default": "cap U underdot"
+        "default": "대문자 아랫점 U"
       },
       "mathspeak": {
-        "default": "modifying below upper U with dot",
-        "brief": "mod below upper U with dot",
-        "sbrief": "mod below upper U with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 U",
+        "brief": "아래에 마침표 부호가 있는 대문자 U",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 U"
       }
     }
   },
@@ -2510,12 +2510,12 @@
     "key": "1EE6",
     "mappings": {
       "default": {
-        "default": "cap U hook"
+        "default": "대문자 후크 U"
       },
       "mathspeak": {
-        "default": "modifying above upper U with hook",
-        "brief": "mod above upper U with hook",
-        "sbrief": "mod above upper U with hook"
+        "default": "후크 부호가 올려진 대문자 U",
+        "brief": "후크 부호가 올려진 대문자 U",
+        "sbrief": "후크 부호가 올려진 대문자 U"
       }
     }
   },
@@ -2524,12 +2524,12 @@
     "key": "1EF2",
     "mappings": {
       "default": {
-        "default": "cap Y grave"
+        "default": "대문자 억음 Y"
       },
       "mathspeak": {
-        "default": "modifying above upper Y with grave",
-        "brief": "mod above upper Y with grave",
-        "sbrief": "mod above upper Y with grave"
+        "default": "억음 부호가 올려진 대문자 Y",
+        "brief": "억음 부호가 올려진 대문자 Y",
+        "sbrief": "억음 부호가 올려진 대문자 Y"
       }
     }
   },
@@ -2538,12 +2538,12 @@
     "key": "1EF4",
     "mappings": {
       "default": {
-        "default": "cap Y underdot"
+        "default": "대문자 아랫점 Y"
       },
       "mathspeak": {
-        "default": "modifying below upper Y with dot",
-        "brief": "mod below upper Y with dot",
-        "sbrief": "mod below upper Y with dot"
+        "default": "아래에 마침표 부호가 있는 대문자 Y",
+        "brief": "아래에 마침표 부호가 있는 대문자 Y",
+        "sbrief": "아래에 마침표 부호가 있는 대문자 Y"
       }
     }
   },
@@ -2552,12 +2552,12 @@
     "key": "1EF6",
     "mappings": {
       "default": {
-        "default": "cap Y hook"
+        "default": "대문자 후크 Y"
       },
       "mathspeak": {
-        "default": "modifying above upper Y with hook",
-        "brief": "mod above upper Y with hook",
-        "sbrief": "mod above upper Y with hook"
+        "default": "후크 부호가 올려진 대문자 Y",
+        "brief": "후크 부호가 올려진 대문자 Y",
+        "sbrief": "후크 부호가 올려진 대문자 Y"
       }
     }
   },
@@ -2566,12 +2566,12 @@
     "key": "1EF8",
     "mappings": {
       "default": {
-        "default": "cap Y tilde"
+        "default": "대문자 물결표 Y"
       },
       "mathspeak": {
-        "default": "upper Y overtilde",
-        "brief": "upper Y overtilde",
-        "sbrief": "upper Y overtilde"
+        "default": "물결표가 올려진 대문자 Y",
+        "brief": "물결표가 올려진 대문자 Y",
+        "sbrief": "물결표가 올려진 대문자 Y"
       }
     }
   }

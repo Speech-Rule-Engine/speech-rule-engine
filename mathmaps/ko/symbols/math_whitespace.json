@@ -1,9 +1,9 @@
-[{"locale": "en"},
+[{"locale": "ko"},
   {
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "space"
+        "default": "공간"
       }
     },
     "key": "0020"
@@ -12,8 +12,8 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "no break space",
-        "alternative": "non breaking space"
+        "default": "중간 없는 공간",
+        "alternative": "중간 없는 공간"
       }
     },
     "key": "00A0"
@@ -22,7 +22,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "soft hyphen"
+        "default": "소프트 하이픈"
       }
     },
     "key": "00AD"
@@ -31,7 +31,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "en quad"
+        "default": "엔 쿼드"
       }
     },
     "key": "2000"
@@ -40,7 +40,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "em quad"
+        "default": "엠 쿼드"
       }
     },
     "key": "2001"
@@ -49,7 +49,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "en space"
+        "default": "엔 스페이스"
       }
     },
     "key": "2002"
@@ -58,7 +58,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "em space"
+        "default": "엠 스페이스"
       }
     },
     "key": "2003"
@@ -67,7 +67,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "three per em space"
+        "default": "3PM 공간"
       }
     },
     "key": "2004"
@@ -76,7 +76,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "four per em space"
+        "default": "4PM 공간"
       }
     },
     "key": "2005"
@@ -85,7 +85,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "six per em space"
+        "default": "6MP 공간간"
       }
     },
     "key": "2006"
@@ -94,7 +94,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "figure space"
+        "default": "그림 공간"
       }
     },
     "key": "2007"
@@ -103,7 +103,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "punctuation space"
+        "default": "구두점"
       }
     },
     "key": "2008"
@@ -112,7 +112,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "thin space"
+        "default": "얇은 공간"
       }
     },
     "key": "2009"
@@ -121,7 +121,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "hair space"
+        "default": "헤어 스페이스"
       }
     },
     "key": "200A"
@@ -130,7 +130,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "zero width space"
+        "default": "제로 너비 공간"
       }
     },
     "key": "200B"
@@ -139,7 +139,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "zero width non joiner"
+        "default": "제로 폭 비결합자"
       }
     },
     "key": "200C"
@@ -148,7 +148,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "zero width joiner"
+        "default": "제로 너비 결합자"
       }
     },
     "key": "200D"
@@ -157,7 +157,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "left to right mark"
+        "default": "왼쪽에서 오른쪽으로 표시"
       }
     },
     "key": "200E"
@@ -166,7 +166,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "right to left mark"
+        "default": "오른쪽에서 왼쪽으로 표시"
       }
     },
     "key": "200F"
@@ -175,7 +175,7 @@
     "category": "Zl",
     "mappings": {
       "default": {
-        "default": "line separator"
+        "default": "라인 구분 기호"
       }
     },
     "key": "2028"
@@ -184,7 +184,7 @@
     "category": "Zp",
     "mappings": {
       "default": {
-        "default": "paragraph separator"
+        "default": "단락 구분 기호"
       }
     },
     "key": "2029"
@@ -193,7 +193,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "left to right embedding"
+        "default": "왼쪽에서 오른쪽으로 포함"
       }
     },
     "key": "202A"
@@ -202,7 +202,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "right to left embedding"
+        "default": "오른쪽에서 왼쪽으로 임베딩"
       }
     },
     "key": "202B"
@@ -211,7 +211,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "pop directional formatting"
+        "default": "팝 방향 지정"
       }
     },
     "key": "202C"
@@ -220,7 +220,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "left to right override"
+        "default": "왼쪽에서 오른쪽으로 재정의"
       }
     },
     "key": "202D"
@@ -229,7 +229,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "right to left override"
+        "default": "오른쪽에서 왼쪽으로 재정의"
       }
     },
     "key": "202E"
@@ -238,7 +238,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "narrow no break space"
+        "default": "좁은 브레이크 공간 없음"
       }
     },
     "key": "202F"
@@ -247,7 +247,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": "medium mathematical space"
+        "default": "중간 수학 공간"
       }
     },
     "key": "205F"
@@ -256,7 +256,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "word joiner"
+        "default": "단어 결합 자"
       }
     },
     "key": "2060"
@@ -265,8 +265,8 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "of",
-        "alternative": "function application"
+        "default": "의", 
+        "alternative": "기능 응용"
       }
     },
     "key": "2061"
@@ -275,8 +275,8 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "times",
-        "alternative": "invisible times"
+        "default": "곱셈", 
+        "alternative": "보이지 않는 곱셈" 
       }
     },
     "key": "2062"
@@ -285,8 +285,8 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "separator",
-        "alternative": "invisible separator"
+        "default": "나눗셈", 
+        "alternative": "보이지 않는 구분 기호"
       }
     },
     "key": "2063"
@@ -295,8 +295,8 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "plus",
-        "alternative": "invisible plus"
+        "default": "플러스",
+        "alternative": "보이지 않는 플러스"
       }
     },
     "key": "2064"
@@ -305,7 +305,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "inhibit symmetric swapping"
+        "default": "대칭 스와핑 금지"
       }
     },
     "key": "206A"
@@ -314,7 +314,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "activate symmetric swapping"
+        "default": "대칭 교환 활성화"
       }
     },
     "key": "206B"
@@ -323,7 +323,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "national digit shapes"
+        "default": "내셔널 디지트 셰이프"
       }
     },
     "key": "206E"
@@ -332,7 +332,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "nominal digit shapes"
+        "default": "공칭 자리 모양" 
       }
     },
     "key": "206F"
@@ -341,7 +341,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "zero width no break space",
+        "default": "제로 너비 브레이크 공간 없음",
         "alternative": "byte order mark"
       }
     },
@@ -351,7 +351,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "interlinear annotation anchor"
+        "default": "선간 주석 앵커"
       }
     },
     "key": "FFF9"
@@ -360,7 +360,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "interlinear annotation separator"
+        "default": "선간 주석 구분 기호"
       }
     },
     "key": "FFFA"
@@ -369,7 +369,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "interlinear annotation terminator"
+        "default": "선간 주석 종결 기호"
       }
     },
     "key": "FFFB"

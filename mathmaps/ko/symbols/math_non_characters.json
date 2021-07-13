@@ -1,10 +1,10 @@
-[{"locale": "en"},
+[{"locale": "ko"},
   {
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "italic h over two pi",
-        "physics": "planck constant over two pi"
+        "default": "2 파이 분의 이텔릭체 h",
+        "physics": "디랙 상수"
       }
     },
     "key": "210F"
@@ -13,7 +13,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "l b bar"
+        "default": "L B 막대기 기호"
       }
     },
     "key": "2114"
@@ -22,7 +22,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "numero"
+        "default": "서수 기호"
       }
     },
     "key": "2116"
@@ -31,7 +31,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "sound recording copyright"
+        "default": "소리 녹음 저작권"
       }
     },
     "key": "2117"
@@ -40,7 +40,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "prescription take"
+        "default": "처방전"
       }
     },
     "key": "211E"
@@ -49,7 +49,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "response"
+        "default": "응답"
       }
     },
     "key": "211F"
@@ -58,7 +58,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "service mark"
+        "default": "서비스 마크"
       }
     },
     "key": "2120"
@@ -67,8 +67,8 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "telephone sign",
-        "alternative": "t e l symbol"
+        "default": "전화 사인", 
+        "alternative": "T E L 기호"
       }
     },
     "key": "2121"
@@ -77,7 +77,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "trade mark"
+        "default": "상표 표시"
       }
     },
     "key": "2122"
@@ -86,7 +86,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "versicle"
+        "default": "버시클"
       }
     },
     "key": "2123"
@@ -95,7 +95,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "ounce"
+        "default": "온스"
       }
     },
     "key": "2125"
@@ -104,7 +104,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "ohm"
+        "default": "옴"
       }
     },
     "key": "2126"
@@ -113,7 +113,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "inverted ohm"
+        "default": "거꾸로 된 옴 기호"
       }
     },
     "key": "2127"
@@ -122,7 +122,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "kelvin"
+        "default": "켈빈"
       }
     },
     "key": "212A"
@@ -131,7 +131,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "angstrom"
+        "default": "옹 스트롬"
       }
     },
     "key": "212B"
@@ -140,7 +140,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "estimated"
+        "default": "추정 가호"
       }
     },
     "key": "212E"
@@ -149,10 +149,10 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "turned cap F"
+        "default": "거꾸로 대문자 F"
       },
       "mathspeak": {
-        "default": "turned upper F"
+        "default": "거꾸로 윗쪽 f"
       }
     },
     "key": "2132"
@@ -161,7 +161,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "information source"
+        "default": "정보 출처"
       }
     },
     "key": "2139"
@@ -170,10 +170,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "rotated cap Q"
+        "default": "회전된 대문자 q"
       },
       "mathspeak": {
-        "default": "rotated upper Q"
+        "default": "회전된 대문자 q"
       }
     },
     "key": "213A"
@@ -182,7 +182,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "facsimile sign"
+        "default": "팩시밀리 사인"
       }
     },
     "key": "213B"
@@ -191,10 +191,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "turned sans serif cap G"
+        "default": "거꾸로된 산세리프 대문자 G"
       },
       "mathspeak": {
-        "default": "turned sans serif upper G"
+        "default": "거꾸로된 산세리프 대문자 G"
       }
     },
     "key": "2141"
@@ -203,10 +203,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "turned sans serif cap L"
+        "default": "거꾸로된 산세리프 대문자 L"
       },
       "mathspeak": {
-        "default": "turned sans serif upper L"
+        "default": "거꾸로된 산세리프 대문자 L"
       }
     },
     "key": "2142"
@@ -215,10 +215,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "reversed sans serif cap L"
+        "default": "반전된 산세리프 대문자 L"
       },
       "mathspeak": {
-        "default": "reversed sans serif upper L"
+        "default": "반전된 산세리프 대문자 L"
       }
     },
     "key": "2143"
@@ -227,10 +227,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "turned sans serif cap Y"
+        "default": "거꾸로된 산세리프 대문자 Y"
       },
       "mathspeak": {
-        "default": "turned sans serif upper Y"
+        "default": "거꾸로된 산세리프 대문자 Y"
       }
     },
     "key": "2144"

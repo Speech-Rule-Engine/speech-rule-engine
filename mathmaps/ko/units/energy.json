@@ -1,9 +1,9 @@
-[{"locale": "en"},
+[{"locale": "ko"},
   {"category": "energy",
    "si": true,
    "mappings": {
      "default": {
-       "default": "watt"
+       "default": "와트"
      }
    },
    "key": "W",
@@ -12,7 +12,7 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "kilowatt hour"
+       "default": "킬로와트시"
      }
    },
    "key": "kwh",
@@ -22,7 +22,7 @@
    "si": true,
    "mappings": {
      "default": {
-       "default": "joule"
+       "default": "줄"
      }
    },
    "key": "J",
@@ -32,7 +32,7 @@
    "si": true,
    "mappings": {
      "default": {
-       "default": "Newton"
+       "default": "뉴턴"
      }
    },
    "key": "N",
@@ -42,7 +42,7 @@
    "si": true,
    "mappings": {
      "default": {
-       "default": "ampere"
+       "default": "암페어"
      }
    },
    "key": "A",
@@ -52,7 +52,7 @@
    "si": true,
    "mappings": {
      "default": {
-       "default": "volt"
+       "default": "볼트"
      }
    },
    "key": "V",
@@ -61,7 +61,7 @@
   {"category": "energy",
    "mappings": {
      "default": {
-       "default": "ohm"
+       "default": "옴"
      }
    },
    "key": "ohm",
@@ -71,30 +71,10 @@
    "si": true,
    "mappings": {
      "default": {
-       "default": "ohm"
+       "default": "옴"
      }
    },
    "key": "\u03A9",
    "names": ["\u03A9"]
-  },
-  {"category": "energy",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "megohm"
-     }
-   },
-   "key": "M\u03A9",
-   "names": ["M\u03A9"]
-  },
-  {"category": "energy",
-   "si": true,
-   "mappings": {
-     "default": {
-       "default": "kilohm"
-     }
-   },
-   "key": "k\u03A9",
-   "names": ["k\u03A9"]
   }
 ]

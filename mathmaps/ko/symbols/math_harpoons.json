@@ -1,9 +1,9 @@
-[{"locale": "en"},
+[{"locale": "ko"},
   {
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb up"
+        "default": "바브 위 왼쪽으로 작살"
       }
     },
     "key": "21BC"
@@ -12,7 +12,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb down"
+        "default": "바브 아래 왼쪽으로 작살"
       }
     },
     "key": "21BD"
@@ -21,7 +21,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up harpoon with barb right"
+        "default": "바브 오른 위쪽으로 작살"
       }
     },
     "key": "21BE"
@@ -30,7 +30,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "up harpoon with barb left"
+        "default": "바브 왼 위쪽으로 작살"
       }
     },
     "key": "21BF"
@@ -39,7 +39,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb up"
+        "default": "바브 위 오른쪽으로 작살"
       }
     },
     "key": "21C0"
@@ -48,7 +48,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb down"
+        "default": "바브 아래 오른쪽으로 작살"
       }
     },
     "key": "21C1"
@@ -57,7 +57,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down harpoon with barb right"
+        "default": "바브 오른 아래쪽으로 작살"
       }
     },
     "key": "21C2"
@@ -66,7 +66,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "down harpoon with barb left"
+        "default": "바브 왼 아래쪽으로 작살"
       }
     },
     "key": "21C3"
@@ -75,7 +75,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left harpoon over right harpoon"
+        "default": "오른쪽 작살 위 왼쪽 작살"
       }
     },
     "key": "21CB"
@@ -84,7 +84,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right harpoon over left harpoon"
+        "default": "왼쪽 작살 위 오른쪽 작살"
       }
     },
     "key": "21CC"
@@ -93,7 +93,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left barb up right barb down harpoon"
+        "default": "왼쪽 바브 오른쪽 위로 바브 다운 하푼"
       }
     },
     "key": "294A"
@@ -102,7 +102,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left barb down right barb up harpoon"
+        "default": "왼쪽 미늘 왼쪽 미늘 미늘 위로"
       }
     },
     "key": "294B"
@@ -111,7 +111,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up barb right down barb left harpoon"
+        "default": "바브 바로 아래로 바브 왼쪽으로 작살"
       }
     },
     "key": "294C"
@@ -120,7 +120,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up barb left down barb right harpoon"
+        "default": "Up Barb 왼쪽 아래 Barb Right Harpoon"
       }
     },
     "key": "294D"
@@ -129,7 +129,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left barb up right barb up harpoon"
+        "default": "왼쪽 바브 오른쪽 위로 바브 위로 하푼"
       }
     },
     "key": "294E"
@@ -138,7 +138,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up barb right down barb right harpoon"
+        "default": "바브 바로 아래로 바브 라이트 하푼"
       }
     },
     "key": "294F"
@@ -147,7 +147,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left barb down right barb down harpoon"
+        "default": "왼쪽 미늘봉 아래로 오른쪽 미늘봉 아래로"
       }
     },
     "key": "2950"
@@ -156,7 +156,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up barb left down barb left harpoon"
+        "default": "바브 왼쪽 아래로 바브 왼쪽 하푼"
       }
     },
     "key": "2951"
@@ -165,7 +165,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb up to bar"
+        "default": "왼쪽으로 작살과 막대기까지 바브"
       }
     },
     "key": "2952"
@@ -174,7 +174,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb up to bar"
+        "default": "버프 업 바를 가진 오른쪽 하푼"
       }
     },
     "key": "2953"
@@ -183,7 +183,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up harpoon with barb right to bar"
+        "default": "바브 바로 가기 하푼"
       }
     },
     "key": "2954"

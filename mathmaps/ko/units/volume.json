@@ -1,9 +1,9 @@
 [
-  {"locale": "en"},
+  {"locale": "ko"},
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "cubic"
+       "default": "세제곱미터"
      }
    },
    "key": "cu",
@@ -12,8 +12,8 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "cubic inch",
-       "plural": "cubic inches"
+       "default": "세제곱인치",
+       "plural": "세제곱인치"
      }
    },
    "key": "cu inch",
@@ -22,8 +22,8 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "cubic foot",
-       "plural": "cubic feet"
+       "default": "세제곱피트",
+       "plural": "세제곱피트"
      }
    },
    "key": "cu ft",
@@ -32,7 +32,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "cubic yard"
+       "default": "세제곱야드"
      }
    },
    "key": "cu yd",
@@ -41,7 +41,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "barrel"
+       "default": "배럴"
      }
    },
    "key": "bbl",
@@ -50,7 +50,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "fluid ounce"
+       "default": "액량 온스"
      }
    },
    "key": "fl. oz.",
@@ -59,7 +59,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "gallon"
+       "default": "갤런"
      }
    },
    "key": "gal",
@@ -68,7 +68,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "pint"
+       "default": "파인트"
      }
    },
    "key": "pt",
@@ -77,7 +77,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "quart"
+       "default": "쿼트"
      }
    },
    "key": "qt",
@@ -87,7 +87,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "fluid dram"
+       "default": "액량 드램"
      }
    },
    "key": "fluid dram",
@@ -96,7 +96,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "tablespoon"
+       "default": "테이블스푼"
      }
    },
    "key": "tbsp",
@@ -105,7 +105,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "teaspoon"
+       "default": "티스푼"
      }
    },
    "key": "tsp",
@@ -114,7 +114,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "cup"
+       "default": "컵"
      }
    },
    "key": "cup",
@@ -124,7 +124,7 @@
   {"category": "volume",
    "mappings": {
      "default": {
-       "default": "cubic centimeter"
+       "default": "세제곱센티미터"
      }
    },
    "key": "cc",
@@ -134,7 +134,7 @@
    "si": true,
    "mappings": {
      "default": {
-       "default": "liter"
+       "default": "리터"
      }
    },
    "key": "l",

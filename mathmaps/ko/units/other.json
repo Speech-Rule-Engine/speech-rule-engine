@@ -1,11 +1,11 @@
-[{"locale": "en"},
- {"category": "other",
+[{"locale": "ko"},
+  {"category": "other",
   "mappings": {
     "default": {
-      "default": "dozen"
+      "default": "다스"
     }
   },
   "key": "doz",
   "names": ["doz", "doz.", "dz", "dz."]
- }
+}
 ]
