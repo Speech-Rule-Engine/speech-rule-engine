@@ -21,11 +21,6 @@
     ],
     [
       "Action",
-      "omit-font",
-      "[n] self::* (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
       "german-font",
       "[t] \"German\"; [n] self::* (grammar:ignoreFont=@font)"
     ],

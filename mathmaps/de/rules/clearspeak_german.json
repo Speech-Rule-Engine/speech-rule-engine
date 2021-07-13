@@ -6,23 +6,6 @@
   "rules": [
     [
       "Precondition",
-      "font",
-      "default",
-      "self::*",
-      "name(self::*)!=\"number\"",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font!=\"normal\""
-    ],
-    [
-      "Specialized",
-      "font",
-      "default",
-      "Caps_SayCaps"
-    ],
-
-    [
-      "Precondition",
       "font-number",
       "default",
       "self::number[@font!=\"normal\"]",
@@ -50,37 +33,6 @@
       "self::number[@font=\"double-struck\"]",
       "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))"
-    ],
-    [
-      "Precondition",
-      "font-identifier",
-      "default",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
-      "@font=\"normal\"",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@role!=\"unit\""
-    ],
-    [
-      "Specialized",
-      "font-identifier",
-      "default",
-      "Caps_SayCaps"
-    ],
-    [
-      "Precondition",
-      "omit-font",
-      "default",
-      "self::identifier[@font=\"italic\"]",
-      "string-length(text())=1",
-      "not(contains(@grammar, \"ignoreFont\"))"
-    ],
-    [
-      "Specialized",
-      "omit-font",
-      "default",
-      "Caps_SayCaps"
     ],
     [
       "Precondition",

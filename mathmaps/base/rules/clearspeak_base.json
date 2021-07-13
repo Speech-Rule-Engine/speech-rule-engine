@@ -45,11 +45,15 @@
       "omit-font",
       "default",
       "[n] self::* (grammar:ignoreFont=@font)",
-      "self::identifier",
+      "self::identifier[@font=\"italic\"]",
       "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"italic\""
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "SpecializedRule",
+      "omit-font",
+      "default",
+      "Caps_SayCaps"
     ],
     [
       "Rule",
@@ -129,25 +133,25 @@
       "@font!=\"normal\""
     ],
     [
+      "Specialized",
+      "font",
+      "default",
+      "Caps_SayCaps"
+    ],
+    [
       "Precondition",
       "font-identifier",
       "default",
-      "self::identifier",
+      "self::identifier[@font=\"normal\"]",
       "string-length(text())=1",
-      "@font",
-      "@font=\"normal\"",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@role!=\"unit\""
     ],
     [
-      "Precondition",
-      "omit-font",
+      "Specialized",
+      "font-identifier",
       "default",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"italic\""
+      "Caps_SayCaps"
     ],
     [
       "Precondition",

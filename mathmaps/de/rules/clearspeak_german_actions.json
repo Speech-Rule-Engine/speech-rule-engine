@@ -26,11 +26,6 @@
     ],
     [
       "Action",
-      "omit-font",
-      "[n] self::* (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
       "font-double-struck",
       "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
     ],

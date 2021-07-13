@@ -21,11 +21,6 @@
     ],
     [
       "Action",
-      "omit-font",
-      "[n] self::* (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
       "punctuation-lr",
       "[p] (pause:\"short\"); [n] text() (pause:\"short\")"
     ],
