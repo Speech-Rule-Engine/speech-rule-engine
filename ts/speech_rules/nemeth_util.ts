@@ -310,8 +310,6 @@ export function generateTensorRuleStrings_(constellation: string): string[] {
 export function generateTensorRules(store: MathStore) {
   // Constellations are built as bitvectors with the meaning:
   //  lsub lsuper base rsub rsuper
-  let defineRule = store.defineRule.bind(store);
-  let defineRulesAlias = store.defineRulesAlias.bind(store);
   let constellations = [
     '11111', '11110', '11101', '11100', '10111', '10110', '10101', '10100',
     '01111', '01110', '01101', '01100'
@@ -323,7 +321,7 @@ export function generateTensorRules(store: MathStore) {
     let verbList =
         [name, 'default', verbStr, 'self::tensor'].concat(components);
     // Rules without neighbour.
-    defineRule.apply(null, verbList);
+    store.defineRule.apply(store, verbList);
     // Rules with baseline.
     let baselineStr = componentString.get(2);
     verbStr += '; [t]' + baselineStr + 'Verbose';
@@ -331,16 +329,17 @@ export function generateTensorRules(store: MathStore) {
     verbList = [
       name, 'default', verbStr, 'self::tensor', 'following-sibling::*'
     ].concat(components);
-    defineRule.apply(null, verbList);
+    store.defineRule.apply(store, verbList);
     // Rules without neighbour but baseline.
     let aliasList = [
-      name, 'self::tensor', 'not(following-sibling::*)',
+      name, 'default', verbStr,
+      'self::tensor', 'not(following-sibling::*)',
       'ancestor::fraction|ancestor::punctuated|' +
           'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
           'ancestor::relseq|ancestor::multirel|' +
           '@embellished'
     ].concat(components);
-    defineRulesAlias.apply(null, aliasList);
+    store.defineRule.apply(store, aliasList);
   }
 }
 

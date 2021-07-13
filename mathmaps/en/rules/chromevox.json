@@ -204,19 +204,19 @@
       "self::punctuation[@role=\"openfence\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "fence-single",
       "self::punctuation",
       "self::punctuation[@role=\"closefence\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "fence-single",
       "self::punctuation",
       "self::punctuation[@role=\"vbar\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "fence-single",
       "self::punctuation",
       "self::punctuation[@role=\"application\"]"
@@ -348,7 +348,7 @@
       "self::row[@role=\"table\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "cases-cell",
       "self::cell[@role=\"table\"]"
     ],

@@ -529,8 +529,5 @@
       "reference-number",
       "[n] children/*[1]; [t] \"⠈⠻\"; [n] children/*[2]; [t] \"⠐\""
     ]
-  ],
-  "annotators": [
-    "number"
   ]
 }

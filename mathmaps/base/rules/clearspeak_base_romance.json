@@ -41,9 +41,5 @@
       "children/*[2]/children/*[1][text()=\"1\"]",
       "not(contains(@grammar, \"functions_none\"))"
     ]
-  ],
-  "annotators": [
-    "simple",
-    "unit"
   ]
 }

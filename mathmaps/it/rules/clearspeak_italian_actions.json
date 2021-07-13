@@ -1524,9 +1524,5 @@
       "currency-prefix",
       "[n] children/*[last()]; [m] children/*[position()<last()]"
     ]
-  ],
-  "annotators": [
-    "simple",
-    "unit"
   ]
 }

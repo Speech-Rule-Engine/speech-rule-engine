@@ -6,66 +6,27 @@
   "rules": [
     [
       "Precondition",
-      "font",
-      "default",
-      "self::*",
-      "name(self::*)!=\"number\"",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font!=\"normal\""
-    ],
-    [
-      "Precondition",
       "font-number",
       "default",
-      "self::number",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font!=\"normal\""
-    ],
-    [
-      "Precondition",
-      "font-identifier",
-      "default",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
-      "@font=\"normal\"",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@role!=\"unit\""
-    ],
-    [
-      "Rule",
-      "omit-font",
-      "default",
-      "[n] . (grammar:ignoreFont=@font)",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"italic\"",
-      "self::*"
+      "self::number[@font!=\"normal\"]",
+      "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
       "Precondition",
       "font-double-struck",
       "default",
-      "self::*",
+      "self::*[@font=\"double-struck\"]",
       "name(self::*)!=\"number\"",
       "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"double-struck\""
+      "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
       "Precondition",
       "font-number-double-struck",
       "default",
-      "self::number",
+      "self::number[@font=\"double-struck\"]",
       "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"double-struck\""
+      "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
       "Precondition",
@@ -192,13 +153,13 @@
       "children/*[2][text()=\"~\" or text()=\"˜\" or text()=\"∼\" or text()=\"～\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "overbar",
       "self::enclose",
       "@role=\"top\""
     ],
     [
-      "PAliases",
+      "Alias",
       "underbar",
       "self::enclose",
       "@role=\"bottom\""

@@ -207,10 +207,8 @@
       "Precondition",
       "number-baseline-font",
       "default",
-      "self::number",
-      "@font",
+      "self::number[@font!=\"normal\"]",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "@font!=\"normal\"",
       "preceding-sibling::identifier",
       "preceding-sibling::*[contains(@role,\"letter\")]",
       "parent::*/parent::infixop[@role=\"implicit\"]"
@@ -219,10 +217,8 @@
       "Precondition",
       "number-baseline-font-brief",
       "brief",
-      "self::number",
-      "@font",
+      "self::number[@font!=\"normal\"]",
       "not(contains(@grammar, \"ignoreFont\"))",
-      "@font!=\"normal\"",
       "preceding-sibling::identifier",
       "preceding-sibling::*[contains(@role,\"letter\")]",
       "parent::*/parent::infixop[@role=\"implicit\"]"
@@ -258,14 +254,14 @@
       "children/identifier"
     ],
     [
-      "PAliases",
+      "Alias",
       "negative-number",
       "self::prefixop",
       "@role=\"negative\"",
       "children/number"
     ],
     [
-      "PAliases",
+      "Alias",
       "negative-number",
       "self::prefixop",
       "@role=\"negative\"",
@@ -312,7 +308,7 @@
       "@role=\"implicit\""
     ],
     [
-      "PAliases",
+      "Alias",
       "implicit",
       "self::infixop",
       "@role=\"leftsuper\" or @role=\"leftsub\" or @role=\"rightsuper\" or @role=\"rightsub\""
@@ -583,7 +579,7 @@
       "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "limlower",
       "self::underscore",
       "@role=\"limit function\"",
@@ -591,7 +587,7 @@
       "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "limlower",
       "self::underscore",
       "children/*[2][@role!=\"underaccent\"]",
@@ -599,7 +595,7 @@
       "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "limupper",
       "self::overscore",
       "children/*[2][@role!=\"overaccent\"]",
@@ -625,18 +621,18 @@
       "self::limupper"
     ],
     [
-      "PAliases",
+      "Alias",
       "limlower-end",
       "self::underscore",
       "@role=\"limit function\""
     ],
     [
-      "PAliases",
+      "Alias",
       "limlower-end",
       "self::underscore"
     ],
     [
-      "PAliases",
+      "Alias",
       "limupper-end",
       "self::overscore"
     ],
@@ -765,7 +761,7 @@
       "sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-baseline",
       "self::subscript",
       "not(following-sibling::*)",
@@ -773,7 +769,7 @@
       "not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-baseline",
       "self::subscript",
       "not(following-sibling::*)",
@@ -781,14 +777,14 @@
       "CGFbaselineConstraint"
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-baseline",
       "self::subscript",
       "not(following-sibling::*)",
       "@embellished"
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-baseline-brief",
       "self::subscript",
       "not(following-sibling::*)",
@@ -796,7 +792,7 @@
       "not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-baseline-brief",
       "self::subscript",
       "not(following-sibling::*)",
@@ -804,7 +800,7 @@
       "CGFbaselineConstraint"
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-baseline-brief",
       "self::subscript",
       "not(following-sibling::*)",
@@ -832,7 +828,7 @@
       "sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-empty-sup",
       "self::subscript",
       "name(children/*[2])=\"superscript\"",
@@ -879,7 +875,7 @@
       "sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
@@ -887,14 +883,14 @@
       "ancestor::*/following-sibling::* and not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
       "ancestor::fraction|ancestor::fenced|ancestor::root|ancestor::sqrt"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
@@ -903,7 +899,7 @@
       "CGFbaselineConstraint"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
@@ -911,7 +907,7 @@
       "not(children/*[2][@role=\"prime\"])"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline-brief",
       "self::superscript",
       "not(following-sibling::*)",
@@ -919,14 +915,14 @@
       "ancestor::*/following-sibling::* and not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline-brief",
       "self::superscript",
       "not(following-sibling::*)",
       "ancestor::fraction|ancestor::fenced|ancestor::root|ancestor::sqrt"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline-brief",
       "self::superscript",
       "not(following-sibling::*)",
@@ -935,7 +931,7 @@
       "CGFbaselineConstraint"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline-brief",
       "self::superscript",
       "not(following-sibling::*)",
@@ -964,7 +960,7 @@
       "sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-empty-sub",
       "self::superscript",
       "name(children/*[2])=\"subscript\"",
@@ -994,7 +990,7 @@
       "sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "square",
       "self::superscript",
       "children/*[2]",
@@ -1026,7 +1022,7 @@
       "sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "cube",
       "self::superscript",
       "children/*[2]",
@@ -1063,7 +1059,7 @@
       "count(children/*)=2"
     ],
     [
-      "PAliases",
+      "Alias",
       "double-prime",
       "self::operator",
       "@role=\"prime\"",
@@ -1078,7 +1074,7 @@
       "count(children/*)=3"
     ],
     [
-      "PAliases",
+      "Alias",
       "triple-prime",
       "self::operator",
       "@role=\"prime\"",
@@ -1093,7 +1089,7 @@
       "count(children/*)=4"
     ],
     [
-      "PAliases",
+      "Alias",
       "quadruple-prime",
       "self::operator",
       "@role=\"prime\"",
@@ -1163,7 +1159,7 @@
       "sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "prime-subscript-baseline",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
@@ -1172,7 +1168,7 @@
       "@embellished"
     ],
     [
-      "PAliases",
+      "Alias",
       "prime-subscript-baseline-brief",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
@@ -1389,12 +1385,12 @@
       "self::matrix"
     ],
     [
-      "PAliases",
+      "Alias",
       "matrix",
       "self::vector"
     ],
     [
-      "PAliases",
+      "Alias",
       "matrix-sbrief",
       "self::vector"
     ],
@@ -1529,12 +1525,12 @@
       "self::cases"
     ],
     [
-      "PAliases",
+      "Alias",
       "layout",
       "self::multiline"
     ],
     [
-      "PAliases",
+      "Alias",
       "layout-sbrief",
       "self::multiline"
     ],
@@ -1621,13 +1617,13 @@
       "self::enclose"
     ],
     [
-      "PAliases",
+      "Alias",
       "overbar",
       "self::enclose",
       "@role=\"top\""
     ],
     [
-      "PAliases",
+      "Alias",
       "underbar",
       "self::enclose",
       "@role=\"bottom\""
@@ -1673,7 +1669,7 @@
       "sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel",
       "self::underscore",
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
@@ -1699,7 +1695,7 @@
       "sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel-reverse",
       "self::underscore",
       "name(children/*[2])=\"enclose\"",

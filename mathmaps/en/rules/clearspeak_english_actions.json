@@ -1594,9 +1594,5 @@
       "cancel-under-end",
       "[t] \"crossed out\"; [n] children/*[2]/children/*[1]; [t] \"with\"; [n] children/*[1]; [t] \"end crossout\""
     ]
-  ],
-  "annotators": [
-    "simple",
-    "unit"
   ]
 }

@@ -86,7 +86,7 @@
       "not(following-sibling::*)"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-power",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -94,7 +94,7 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-power",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -102,14 +102,14 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-power",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
       "name(children/superscript/children/*[1])=\"identifier\""
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-power",
       "self::superscript",
       "children/*[2][@role=\"implicit\"]",
@@ -128,7 +128,7 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-ordinal-power",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
@@ -169,7 +169,7 @@
       "not(following-sibling::*)"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exp",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -177,7 +177,7 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exp",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -185,14 +185,14 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exp",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
       "name(children/superscript/children/*[1])=\"identifier\""
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exp",
       "self::superscript",
       "children/*[2][@role=\"implicit\"]",

@@ -74,14 +74,25 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   public initialized: boolean = false;
 
+  /**
+   * Inheritance store. None if null.
+   */
   public inherits: BaseRuleStore = null;
 
+  /**
+   * Type of rule store: standard, abstract, actions.
+   */
   public kind: string = 'standard';
-  
+
   /**
    * Local transcriptions for special characters.
    */
   public customTranscriptions: {[key: string]: string} = {};
+
+  /**
+   * Set of Preconditions
+   */
+  protected preconditions: Map<string, Condition> = new Map();
 
   /**
    * Set of speech rules in the store.
@@ -139,10 +150,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
       'Rule': this.defineRule,
       'Generator': this.generateRules,
       'Action': this.defineAction,
-      'Precondition': this.definePrecondition,
-      'PAlias': this.defineAlias,
-      'PAliases': this.defineAliases,
-      'Specialized': this.defineSpecialized
+      'Precondition': this.definePrecondition
     };
   }
 
@@ -454,10 +462,10 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
 
 
   /**
-   * Set of Preconditions
+   * Returns a precondition from this or an inherited store, if one exists.
+   * @param name The name of the condition.
+   * @return The condition.
    */
-  private preconditions: Map<string, Condition> = new Map();
-
   public getFullPreconditions(name: string): Condition {
     let prec = this.preconditions.get(name);
     if (prec || !this.inherits) {
@@ -465,7 +473,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     }
     return this.inherits.getFullPreconditions(name);
   }
-  
+
+
   /**
    * @override
    */
@@ -479,53 +488,12 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     }
     fullPrec.rank = this.rank++;
     this.preconditions.set(name, new Condition(dynamicCstr, fullPrec));
-    // TODO: Maybe return something?
-  }
-
-  public defineAlias(name: string, prec: string, ...args: string[]) {
-    let fullPrec = this.parsePrecondition(prec, args);
-    if (!fullPrec) {
-      console.error(`Precondition Error: ${prec} ${args}`);
-      return;
-    }
-    let condition = this.preconditions.get(name);
-    if (!condition) {
-      console.error(`Alias Error: No precondition by the name of ${name}`);
-      return;
-    }
-    condition.addBaseCondition(fullPrec);
   }
 
 
-  public defineAliases(name: string, prec: string, ...args: string[]) {
-    let fullPrec = this.parsePrecondition(prec, args);
-    if (!fullPrec) {
-      console.error(`Precondition Error: ${prec} ${args}`);
-      return;
-    }
-    let condition = this.preconditions.get(name);
-    if (!condition) {
-      console.error(`Aliases Error: No precondition by the name of ${name}`);
-      return;
-    }
-    condition.addFullCondition(fullPrec);
-  }
-
-
-  public defineSpecialized(name: string, _old: string, dynamic: string) {
-    let cstr = this.parseCstr(dynamic);
-    if (!cstr) {
-      console.error(`Dynamic Constraint Error: ${dynamic}`);
-      return;
-    }
-    let condition = this.preconditions.get(name);
-    if (!condition) {
-      console.error(`Alias Error: No precondition by the name of ${name}`);
-      return;
-    }
-    condition.addConstraint(cstr);
-  }
-
+  /**
+   * Implements rule inheritance.
+   */
   public inheritRules() {
     if (!this.inherits || !this.inherits.getSpeechRules().length) {
       return;

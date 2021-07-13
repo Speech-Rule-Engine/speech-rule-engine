@@ -212,7 +212,7 @@
       "@role=\"implicit\""
     ],
     [
-      "PAliases",
+      "Alias",
       "implicit",
       "self::infixop",
       "@role=\"leftsuper\" or @role=\"leftsub\" or @role=\"rightsuper\" or @role=\"rightsub\""
@@ -378,7 +378,7 @@
       "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "limlower",
       "self::underscore",
       "@role=\"limit function\"",
@@ -386,7 +386,7 @@
       "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "limlower",
       "self::underscore",
       "children/*[2][@role!=\"underaccent\"]",
@@ -394,7 +394,7 @@
       "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "limupper",
       "self::overscore",
       "children/*[2][@role!=\"overaccent\"]",
@@ -420,18 +420,18 @@
       "self::limupper"
     ],
     [
-      "PAliases",
+      "Alias",
       "limlower-end",
       "self::underscore",
       "@role=\"limit function\""
     ],
     [
-      "PAliases",
+      "Alias",
       "limlower-end",
       "self::underscore"
     ],
     [
-      "PAliases",
+      "Alias",
       "limupper-end",
       "self::overscore"
     ],
@@ -497,7 +497,7 @@
       "not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-baseline",
       "self::subscript",
       "following::*",
@@ -507,14 +507,14 @@
       "not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-baseline",
       "self::subscript",
       "ancestor::fenced",
       "name(following::*[1])!=\"punctuation\""
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-baseline",
       "self::subscript",
       "following::*",
@@ -532,7 +532,7 @@
       "name(children/*[2]/children/*[1]/children/*[1])=\"empty\""
     ],
     [
-      "PAliases",
+      "Alias",
       "subscript-empty-sup",
       "self::subscript",
       "name(children/*[2])=\"superscript\"",
@@ -557,7 +557,7 @@
       "not(name(following-sibling::superscript/children/*[1])=\"empty\" or (name(following-sibling::infixop[@role=\"implicit\"]/children/*[1])=\"superscript\" and name(following-sibling::*/children/*[1]/children/*[1])=\"empty\")) and not(following-sibling::*[@role=\"rightsuper\" or @role=\"rightsub\" or @role=\"leftsub\" or @role=\"leftsub\"])"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
@@ -566,7 +566,7 @@
       "ancestor::*/following-sibling::* and not(ancestor::punctuated[@role=\"leftsuper\" or @role=\"rightsub\" or @role=\"rightsuper\" or @role=\"rightsub\"])"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
@@ -574,7 +574,7 @@
       "ancestor::fraction|ancestor::fenced|ancestor::root|ancestor::sqrt"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
@@ -585,7 +585,7 @@
       "CGFbaselineConstraint"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-baseline",
       "self::superscript",
       "not(following-sibling::*)",
@@ -603,7 +603,7 @@
       "name(children/*[2]/children/*[1]/children/*[1])=\"empty\""
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-empty-sub",
       "self::superscript",
       "name(children/*[2])=\"subscript\"",
@@ -636,7 +636,7 @@
       "following-sibling::*"
     ],
     [
-      "PAliases",
+      "Alias",
       "prime-subscript-baseline",
       "self::superscript",
       "children/*[2][@role=\"prime\"]",
@@ -711,7 +711,7 @@
       "self::matrix"
     ],
     [
-      "PAliases",
+      "Alias",
       "matrix",
       "self::vector"
     ],
@@ -722,13 +722,13 @@
       "self::row"
     ],
     [
-      "PAliases",
+      "Alias",
       "matrix-row",
       "self::line",
       "@role=\"vector\""
     ],
     [
-      "PAliases",
+      "Alias",
       "matrix-row",
       "self::line",
       "@role=\"binomial\""
@@ -766,7 +766,7 @@
       "self::cases"
     ],
     [
-      "PAliases",
+      "Alias",
       "layout",
       "self::multiline"
     ],
@@ -792,7 +792,7 @@
       "content"
     ],
     [
-      "PAliases",
+      "Alias",
       "row-with-label",
       "self::line",
       "content"
@@ -870,7 +870,7 @@
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel",
       "self::underscore",
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
@@ -884,7 +884,7 @@
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel-reverse",
       "self::underscore",
       "name(children/*[2])=\"enclose\"",

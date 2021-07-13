@@ -296,13 +296,13 @@
       "mathspeak.sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "abstr-multiplication",
       "self::infixop",
       "@role=\"implicit\""
     ],
     [
-      "PAliases",
+      "Alias",
       "abstr-multiplication-brief",
       "self::infixop",
       "@role=\"implicit\""
@@ -317,7 +317,7 @@
       "./children/punctuation[@role=\"ellipsis\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "abstr-multiplication-var",
       "self::infixop",
       "@role=\"implicit\"",
@@ -568,14 +568,14 @@
       "./children/punctuation[@role=\"ellipsis\"]"
     ],
     [
-      "PAlias",
+      "Alias",
       "abstr-relation",
       "self::multirel",
       "@role!=\"unknown\"",
       "count(./children/*)>2"
     ],
     [
-      "PAliases",
+      "Alias",
       "abstr-relation-var",
       "self::multirel",
       "@role!=\"unknown\"",

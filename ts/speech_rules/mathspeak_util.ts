@@ -706,7 +706,7 @@ export function determinantIsSimple(node: Element): Element[] {
   return [node];
 }
 /**
- * Generate constraints for the specialised baseline rules of relation
+ * Generate constraints for the specialized baseline rules of relation
  * sequences.
  * @return The constraint strings.
  */
@@ -815,8 +815,6 @@ export function generateTensorRuleStrings_(constellation: string): string[] {
 export function generateTensorRules(store: MathStore) {
   // Constellations are built as bitvectors with the meaning:
   //  lsub lsuper base rsub rsuper
-  let defineRule = store.defineRule.bind(store);
-  let defineSpecialisedRule = store.defineSpecialisedRule.bind(store);
   let constellations = [
     '11111', '11110', '11101', '11100', '10111', '10110', '10101', '10100',
     '01111', '01110', '01101', '01100'
@@ -831,9 +829,9 @@ export function generateTensorRules(store: MathStore) {
     let briefList =
         [name, 'brief', briefStr, 'self::tensor'].concat(components);
     // Rules without neighbour.
-    defineRule.apply(null, verbList);
-    defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'brief', 'sbrief');
+    store.defineRule.apply(store, verbList);
+    store.defineRule.apply(store, briefList);
+    store.defineSpecializedRule(name, 'brief', 'sbrief');
     // Rules with baseline.
     let baselineStr = componentString.get(2);
     verbStr += '; [t]' + baselineStr + 'Verbose';
@@ -846,9 +844,9 @@ export function generateTensorRules(store: MathStore) {
         [name, 'default', verbStr, 'self::tensor', cstr].concat(components);
     briefList =
         [name, 'brief', briefStr, 'self::tensor', cstr].concat(components);
-    defineRule.apply(null, verbList);
-    defineRule.apply(null, briefList);
-    defineSpecialisedRule(name, 'brief', 'sbrief');
+    store.defineRule.apply(store, verbList);
+    store.defineRule.apply(store, briefList);
+    store.defineSpecializedRule(name, 'brief', 'sbrief');
   }
 }
 

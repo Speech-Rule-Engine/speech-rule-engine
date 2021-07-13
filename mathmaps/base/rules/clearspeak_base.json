@@ -775,7 +775,7 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-prefix-function",
       "self::superscript[@role=\"prefix function\"]",
       "name(children/*[2])=\"identifier\""
@@ -813,7 +813,7 @@
       "not(following-sibling::*)"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exponent",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -821,7 +821,7 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exponent",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -829,14 +829,14 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exponent",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
       "name(children/superscript/children/*[1])=\"identifier\""
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exponent",
       "self::superscript",
       "children/*[2][@role=\"implicit\"]",
@@ -855,7 +855,7 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-ordinal",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
@@ -898,7 +898,7 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
-      "PAlias",
+      "Alias",
       "superscript-ordinal-number",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
@@ -1119,7 +1119,7 @@
       "Paren_Speak"
     ],
     [
-      "PAliases",
+      "Alias",
       "fences-open-close",
       "self::fenced",
       "@role=\"composed function\""
@@ -1291,7 +1291,7 @@
       "@role=\"set collection\""
     ],
     [
-      "PAliases",
+      "Alias",
       "set-collection",
       "self::fenced",
       "@role=\"set singleton\""
@@ -1367,7 +1367,7 @@
       "name(children/*[2])=\"text\""
     ],
     [
-      "PAliases",
+      "Alias",
       "simple-text-fraction",
       "self::fraction",
       "name(children/*[1])=\"infixop\"",
@@ -2195,7 +2195,7 @@
       "self::*"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))",
@@ -2210,7 +2210,7 @@
       "self::*"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-summary-none",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))",
@@ -2238,7 +2238,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines",
       "self::multiline"
     ],
@@ -2256,7 +2256,7 @@
       "@role=\"table\""
     ],
     [
-      "PAliases",
+      "Alias",
       "row-medium",
       "self::row",
       "@role=\"cases\""
@@ -2269,7 +2269,7 @@
       "@role=\"table\""
     ],
     [
-      "PAliases",
+      "Alias",
       "row-long",
       "self::row",
       "@role=\"cases\""
@@ -2282,7 +2282,7 @@
       "@role=\"table\""
     ],
     [
-      "PAliases",
+      "Alias",
       "row-short",
       "self::row",
       "@role=\"cases\""
@@ -2331,7 +2331,7 @@
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-cases-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))"
@@ -2343,7 +2343,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-cases",
       "self::multiline"
     ],
@@ -2355,7 +2355,7 @@
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-equations-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))"
@@ -2367,7 +2367,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-equations",
       "self::multiline"
     ],
@@ -2379,7 +2379,7 @@
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-steps-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))"
@@ -2391,7 +2391,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-steps",
       "self::multiline"
     ],
@@ -2403,7 +2403,7 @@
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-rows-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))"
@@ -2415,7 +2415,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-rows",
       "self::multiline"
     ],
@@ -2427,7 +2427,7 @@
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-constraints-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))"
@@ -2439,7 +2439,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-constraints",
       "self::multiline"
     ],
@@ -2451,13 +2451,13 @@
       "contains(@grammar, \"layoutSummary\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-none",
       "self::multiline",
       "contains(@grammar, \"layoutSummary\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-none",
       "self::cases",
       "contains(@grammar, \"layoutSummary\")"
@@ -2929,7 +2929,7 @@
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel-over",
       "self::underscore",
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
@@ -2943,7 +2943,7 @@
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel-under",
       "self::overscore",
       "name(children/*[2])=\"enclose\"",
@@ -2957,7 +2957,7 @@
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel-over-end",
       "self::underscore",
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
@@ -2971,7 +2971,7 @@
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel-under-end",
       "self::overscore",
       "name(children/*[2])=\"enclose\"",
