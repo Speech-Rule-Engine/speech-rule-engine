@@ -83,6 +83,14 @@ export class DynamicTrieNode extends AbstractTrieNode<string> {
   }
 }
 
+let comparator: {[operator: string]: ((x: number, y: number) => boolean)} = {
+  '=': (x: number, y: number) => x === y,
+  '!=': (x: number, y: number) => x !== y,
+  '<': (x: number, y: number) => x < y,
+  '>': (x: number, y: number) => x > y,
+  '<=': (x: number, y: number) => x <= y,
+  '>=': (x: number, y: number) => x >= y
+};
 
 /**
  * Generates more refined tests depending on the type of static constraint.
@@ -186,6 +194,25 @@ export function constraintTest_(constraint: string): ((p1: Node) => boolean)|
         return equality === '=' ? result === category : result !== category;
       }
       return false;
+    };
+  }
+  // string-length adapted for unicode.
+  // string-length(xpath)!?=<>\d
+  if (constraint.match(/^string-length\(.+\)\W+\d+/)) {
+    let [, select, comp, count] =
+      constraint.match(/^string-length\((.+)\)(\W+)(\d+)/);
+    let func = comparator[comp] || comparator['='];
+    let numb = parseInt(count, 10);
+    return (node: Element) => {
+      let xpath = XpathUtil.evalXPath(select, node)[0];
+      if (!xpath) {
+        return false;
+      }
+      // console.log(constraint);
+      // console.log(node.textContent);
+      // console.log(Array.from(xpath.textContent).length);
+      // console.log(func(Array.from(xpath.textContent).length, numb));
+      return func(Array.from(xpath.textContent).length, numb);
     };
   }
   return null;

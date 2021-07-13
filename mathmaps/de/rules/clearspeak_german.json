@@ -34,7 +34,7 @@
       "default",
       "self::*[@font=\"double-struck\"]",
       "name(self::*)!=\"number\"",
-      "string-length(text())=1 or string-length(text())=2",
+      "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
@@ -48,7 +48,7 @@
       "font-number-double-struck",
       "default",
       "self::number[@font=\"double-struck\"]",
-      "string-length(text())=1 or string-length(text())=2",
+      "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
@@ -56,7 +56,7 @@
       "font-identifier",
       "default",
       "self::identifier",
-      "string-length(text())=1 or string-length(text())=2",
+      "string-length(text())=1",
       "@font",
       "@font=\"normal\"",
       "not(contains(@grammar, \"ignoreFont\"))",
@@ -73,7 +73,7 @@
       "omit-font",
       "default",
       "self::identifier[@font=\"italic\"]",
-      "string-length(text())=1 or string-length(text())=2",
+      "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
