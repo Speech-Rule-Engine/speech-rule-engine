@@ -21,7 +21,6 @@
 
 import * as StoreUtil from '../rule_engine/store_util';
 import MathspeakFrenchUtil from './mathspeak_french_util';
-import MathspeakSpanishUtil from './mathspeak_spanish_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NumbersUtil from './numbers_util';
 import SpeechRules from './speech_rules';

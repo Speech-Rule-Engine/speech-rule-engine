@@ -8,14 +8,8 @@
       "collapsed",
       "default",
       "[t] \"collapsed\"; [n] . (engine:modality=summary,grammar:collapsed)",
-      "self::*",
-      "@alternative",
-      "not(contains(@grammar, \"collapsed\"))",
-      "self::*",
-      "self::*",
-      "self::*",
-      "self::*",
-      "self::*"
+      "self::*[@alternative]",
+      "not(contains(@grammar, \"collapsed\"))"
     ],
     [
       "Rule",
@@ -163,10 +157,8 @@
       "font",
       "default",
       "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)",
-      "self::*",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font!=\"normal\""
+      "self::*[@font!=\"normal\"]",
+      "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
       "Rule",
@@ -198,11 +190,9 @@
       "omit-font",
       "default",
       "[n] . (grammar:ignoreFont=@font)",
-      "self::identifier",
+      "self::identifier[@font=\"italic\"]",
       "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"italic\""
+      "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
       "Rule",
@@ -587,7 +577,7 @@
     ],
     [
       "Rule",
-      "reciprocal",
+      "per",
       "default",
       "[t] \"per\"; [n] children/*[1]",
       "self::superscript",

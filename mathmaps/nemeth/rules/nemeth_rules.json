@@ -222,7 +222,7 @@
     ],
     [
       "Rule",
-      "binary-operation",
+      "element",
       "default",
       "[m] children/* (sepFunc:CTFrelationIterator);",
       "self::infixop[@role=\"element\"]"
@@ -296,7 +296,7 @@
     ],
     [
       "Rule",
-      "factorial",
+      "factorial-space",
       "default",
       "[t] \"⠯⠀\"",
       "self::punctuation[text()=\"!\"]",
@@ -486,7 +486,7 @@
     ],
     [
       "Rule",
-      "integral",
+      "integral-index",
       "default",
       "[n] children/*[1]; [n] children/*[2]; [n] children/*[3];",
       "self::integral"
@@ -731,7 +731,7 @@
     ],
     [
       "Rule",
-      "overscore",
+      "overscore-modified",
       "default",
       "[n] children/*[1]; [t] \"⠣\"; [n] children/*[2]",
       "self::overscore",
@@ -758,7 +758,7 @@
     ],
     [
       "Rule",
-      "underscore",
+      "underscore-modified",
       "default",
       "[n] children/*[1]; [t] \"⠩\"; [n] children/*[2]",
       "self::underscore",

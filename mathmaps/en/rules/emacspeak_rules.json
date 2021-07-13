@@ -559,7 +559,7 @@
     ],
     [
       "Rule",
-      "reciprocal",
+      "per",
       "default",
       "[t] \"per\"; [n] children/*[1]",
       "self::superscript",
