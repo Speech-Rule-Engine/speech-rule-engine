@@ -1,0 +1,536 @@
+{
+  "locale": "nemeth",
+  "modality": "braille",
+  "domain": "default",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "stree",
+      "[n] ./*[1]"
+    ],
+    [
+      "Action",
+      "unknown",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "protected",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "omit-empty",
+      "[p] (pause:100)"
+    ],
+    [
+      "Action",
+      "blank-empty",
+      "[t] \"⠀\""
+    ],
+    [
+      "Action",
+      "font",
+      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "font-identifier-short",
+      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "font-identifier-english",
+      "[t] @font (grammar:localFont); [t] \"⠰\"; [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "multi-caps-english",
+      "[t] \"⠠⠠\"; [n] . (grammar:ignoreFont=\"⠠\");"
+    ],
+    [
+      "Action",
+      "font-identifier",
+      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "omit-font",
+      "[n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "number-indicator",
+      "[t] \"⠼\"; [n] text() (pause:10)"
+    ],
+    [
+      "Action",
+      "number",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "number-font-indicator",
+      "[t] \"⠼\"; [n] text() (pause:10)"
+    ],
+    [
+      "Action",
+      "mixed-number",
+      "[n] children/*[1]; [t] \"⠸⠹\"; [n] children/*[2]/children/*[1]; [t] \"⠌\"; [n] children/*[2]/children/*[2]; [t] \"⠸⠼\""
+    ],
+    [
+      "Action",
+      "number-with-chars",
+      "[t] \"⠼\"; [m] CQFspaceoutNumber"
+    ],
+    [
+      "Action",
+      "number-baseline",
+      "[t] \"⠐\"; [n] text()"
+    ],
+    [
+      "Action",
+      "number-baseline-font",
+      "[t] \"⠐\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "identifier",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "prefix",
+      "[n] text(); [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "prefix-geometry",
+      "[n] content/*[1]; [t] \"⠀\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "postfix",
+      "[n] children/*[1]; [n] text()"
+    ],
+    [
+      "Action",
+      "binary-operation",
+      "[m] children/* (sepFunc:CTFcontentIterator);"
+    ],
+    [
+      "Action",
+      "element",
+      "[m] children/* (sepFunc:CTFrelationIterator);"
+    ],
+    [
+      "Action",
+      "implicit",
+      "[m] children/* (sepFunc:CTFimplicitIterator);"
+    ],
+    [
+      "Action",
+      "function-named",
+      "[n] children/*[1]; [t] \"⠀\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "function-prefix",
+      "[n] content/*[1]; [t] \"⠀\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "function-infix",
+      "[n] children/*[1]; [n] content/*[1]; [t] \"⠀\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "function-simple",
+      "[n] children/*[1]; [n] children/*[2];"
+    ],
+    [
+      "Action",
+      "fences-open-close",
+      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
+    ],
+    [
+      "Action",
+      "fences-neutral",
+      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
+    ],
+    [
+      "Action",
+      "text",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "factorial-space",
+      "[t] \"⠯⠀\""
+    ],
+    [
+      "Action",
+      "factorial",
+      "[t] \"⠯\""
+    ],
+    [
+      "Action",
+      "single-prime",
+      "[t] \"⠄\""
+    ],
+    [
+      "Action",
+      "double-prime",
+      "[t] \"⠄⠄\""
+    ],
+    [
+      "Action",
+      "triple-prime",
+      "[t] \"⠄⠄⠄\""
+    ],
+    [
+      "Action",
+      "quadruple-prime",
+      "[t] \"⠄⠄⠄⠄\""
+    ],
+    [
+      "Action",
+      "fraction",
+      "[t] CSFopenFraction; [n] children/*[1]; [t] CSFoverFraction; [n] children/*[2]; [t] CSFcloseFraction"
+    ],
+    [
+      "Action",
+      "bevelled-fraction",
+      "[t] CSFopenFraction; [n] children/*[1]; [t] CSFoverBevFraction; [n] children/*[2]; [t] CSFcloseFraction"
+    ],
+    [
+      "Action",
+      "sqrt",
+      "[t] CSFopenRadical; [n] children/*[1]; [t] CSFcloseRadical"
+    ],
+    [
+      "Action",
+      "root",
+      "[t] CSFindexRadical; [n] children/*[1];[t] \"⠜\"; [n] children/*[2]; [t] CSFcloseRadical"
+    ],
+    [
+      "Action",
+      "arrow-underscore",
+      "[t] \"⠐\"; [t] \"⠫⠒⠒⠕\"; [t] CSFunderscript; [n] children/*[2]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "arrow-overscore",
+      "[t] \"⠐\"; [t] \"⠫⠒⠒⠕\"; [t] CSFoverscript; [n] children/*[2]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "limboth",
+      "[t] \"⠐\"; [n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]"
+    ],
+    [
+      "Action",
+      "limlower",
+      "[t] \"⠐\"; [n] children/*[1]; [t] CSFunderscript; [n] children/*[2];"
+    ],
+    [
+      "Action",
+      "limupper",
+      "[t] \"⠐\"; [n] children/*[1]; [t] CSFoverscript; [n] children/*[2];"
+    ],
+    [
+      "Action",
+      "limboth-end",
+      "[t] \"⠐\"; [n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "limlower-end",
+      "[t] \"⠐\"; [n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "limupper-end",
+      "[t] \"⠐\"; [n] children/*[1]; [t] CSFoverscript; [n] children/*[2]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "integral-index",
+      "[n] children/*[1]; [n] children/*[2]; [n] children/*[3];"
+    ],
+    [
+      "Action",
+      "integral",
+      "[n] children/*[1]; [t] \"⠰\"; [n] children/*[2];[t] \"⠘\"; [n] children/*[3]; [t] \"⠐\""
+    ],
+    [
+      "Action",
+      "bigop",
+      "[n] children/*[1]; [n] children/*[2];"
+    ],
+    [
+      "Action",
+      "relseq",
+      "[m] children/* (sepFunc:CTFrelationIterator)"
+    ],
+    [
+      "Action",
+      "multrel",
+      "[m] children/* (sepFunc:CTFrelationIterator)"
+    ],
+    [
+      "Action",
+      "subscript",
+      "[n] children/*[1]; [t] CSFsubscript; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "subscript-simple",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "subscript-baseline",
+      "[n] children/*[1]; [t] CSFsubscript; [n] children/*[2]; [t] CSFbaseline"
+    ],
+    [
+      "Action",
+      "subscript-empty-sup",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "superscript",
+      "[n] children/*[1]; [t] CSFsuperscript; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "superscript-baseline",
+      "[n] children/*[1]; [t] CSFsuperscript; [n] children/*[2];[t] CSFbaseline"
+    ],
+    [
+      "Action",
+      "superscript-empty-sub",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "prime",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "prime-subscript",
+      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscript; [n] children/*[1]/children/*[2]"
+    ],
+    [
+      "Action",
+      "prime-subscript-baseline",
+      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscript; [n] children/*[1]/children/*[2]; [t] CSFbaseline"
+    ],
+    [
+      "Action",
+      "prime-subscript-simple",
+      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [n] children/*[1]/children/*[2]"
+    ],
+    [
+      "Action",
+      "overscore",
+      "[t] \"⠐\"; [n] children/*[1]; [t] \"⠣\"; [n] children/*[2]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "overscore-modified",
+      "[n] children/*[1]; [t] \"⠣\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "double-overscore",
+      "[t] \"⠐\"; [n] children/*[1] (grammar:\"modified\"); [t] \"⠣\"; [n] children/*[2]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "underscore",
+      "[t] \"⠐\"; [n] children/*[1]; [t] \"⠩\"; [n] children/*[2]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "underscore-modified",
+      "[n] children/*[1]; [t] \"⠩\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "double-underscore",
+      "[t] \"⠐\"; [n] children/*[1] (grammar:\"modified\"); [t] \"⠩\"; [n] children/*[2]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "matrix",
+      "[m] children/* (separator:\"⠀\", join:\"\");"
+    ],
+    [
+      "Action",
+      "matrix-row",
+      "[n] ../../content/*[1] (grammar:enlargeFence); [m] children/* (separator:\"⠀\"); [n] ../../content/*[2] (grammar:enlargeFence); "
+    ],
+    [
+      "Action",
+      "empty-row",
+      "[t] \"⠀\" (pause:300)"
+    ],
+    [
+      "Action",
+      "matrix-cell",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-cell",
+      "[t] \"⠀\" (pause: 300)"
+    ],
+    [
+      "Action",
+      "layout",
+      "[m] children/* (separator:\"⠀\", join:\"\");"
+    ],
+    [
+      "Action",
+      "cases",
+      "[n] ../../content/*[1] (grammar:enlargeFence); [m] children/* (separator:\"⠀\"); [t] \"⠐\""
+    ],
+    [
+      "Action",
+      "line",
+      "[m] children/*"
+    ],
+    [
+      "Action",
+      "empty-line",
+      "[t] \"⠀\""
+    ],
+    [
+      "Action",
+      "row-with-label",
+      "[m] children/* (separator:\"⠀\"); [t] \"⠀⠀⠀\"; [m] content/*"
+    ],
+    [
+      "Action",
+      "cycle",
+      "[n] content/*[1]; [m] children/*[1]/children/* (separator:\"⠀\", join:\"\"); [n] content/*[2];"
+    ],
+    [
+      "Action",
+      "enclose",
+      "[t] \"⠫\"; [t] @role (grammar:localEnclose); [t] \"⠸⠫\"; [n] children/*[1]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "overbar",
+      "[t] \"⠐\"; [n] children/*[1]; [t] \"⠣⠱⠻\""
+    ],
+    [
+      "Action",
+      "bar-above",
+      "[n] children/*[1]; [t] \"⠱\""
+    ],
+    [
+      "Action",
+      "bar-below",
+      "[n] children/*[1]; [t] \"⠩⠱\""
+    ],
+    [
+      "Action",
+      "underbar",
+      "[t] \"⠐\"; [n] children/*[1]; [t] \"⠩⠱⠻\""
+    ],
+    [
+      "Action",
+      "leftbar",
+      "[t] \"⠳\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "rightbar",
+      "[n] children/*[1]; [t] \"⠳\""
+    ],
+    [
+      "Action",
+      "crossout",
+      "[t] \"⠪\"; [n] children/*[1]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "cancel",
+      "[t] \"⠪\"; [n] children/*[1]/children/*[1]; [t] \"⠪\"; [n] children/*[2]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "cancel-reverse",
+      "[t] \"⠪\"; [n] children/*[2]/children/*[1]; [t] \"⠪\"; [n] children/*[1]; [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "end-punct",
+      "[m] children/*"
+    ],
+    [
+      "Action",
+      "start-punct",
+      "[n] content/*[1]; [m] children/*[position()>1]"
+    ],
+    [
+      "Action",
+      "punctuation",
+      "[n] text(); [t] \"⠐\""
+    ],
+    [
+      "Action",
+      "punctuated",
+      "[m] children/*"
+    ],
+    [
+      "Action",
+      "punctuation-comma",
+      "[n] text(); [t] \"⠀\""
+    ],
+    [
+      "Action",
+      "punctuation-colon-mapping",
+      "[n] text(); [t] \"⠀\""
+    ],
+    [
+      "Action",
+      "punctuation-colon-ratio",
+      "[t] \"⠀⠐⠂⠀\""
+    ],
+    [
+      "Action",
+      "punctuation-ellipses-both",
+      "[t] \"⠀\"; [n] text(); [t] \"⠀\";"
+    ],
+    [
+      "Action",
+      "punctuation-ellipses-left",
+      "[t] \"⠀\"; [n] text();"
+    ],
+    [
+      "Action",
+      "punctuation-ellipses-right",
+      "[n] text(); [t] \"⠀\";"
+    ],
+    [
+      "Action",
+      "reference-sign",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "reference-number",
+      "[n] children/*[1]; [t] \"⠈⠻\"; [n] children/*[2]; [t] \"⠐\""
+    ]
+  ],
+  "annotators": [
+    "number"
+  ]
+}

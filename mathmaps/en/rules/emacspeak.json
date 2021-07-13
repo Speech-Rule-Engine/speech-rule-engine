@@ -4,146 +4,128 @@
   "modality": "speech",
   "rules": [
     [
-      "Rule",
+      "Precondition",
       "stree",
       "default",
-      "[n] ./*[1]",
       "self::stree"
     ],
     [
-      "Rule",
+      "Precondition",
       "multrel",
       "default",
-      "[t] \"multirelation\"; [m] children/* (sepFunc:CTFcontentIterator)",
       "self::multirel"
     ],
     [
-      "Rule",
+      "Precondition",
       "variable-equality",
       "default",
-      "[t] \"equation sequence\"; [m] children/* (context:\"part\",ctxtFunc:CTFnodeCounter,sepFunc:CTFcontentIterator)",
       "self::relseq[@role=\"equality\"]",
       "count(./children/*)>2",
       "./children/punctuation[@role=\"ellipsis\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "multi-equality",
       "default",
-      "[t] \"equation sequence\"; [m] children/* (context:\"part\",ctxtFunc:CTFnodeCounter,sepFunc:CTFcontentIterator)",
       "self::relseq[@role=\"equality\"]",
       "count(./children/*)>2"
     ],
     [
-      "Rule",
+      "Precondition",
       "equality",
       "default",
-      "[t] \"equation\"; [t] \"left hand side\"; [n] children/*[1] (pause:200); [n] content/*[1] (pause:200);[t] \"right hand side\"; [n] children/*[2]",
       "self::relseq[@role=\"equality\"]",
       "count(./children/*)=2"
     ],
     [
-      "Rule",
+      "Precondition",
       "simple-equality",
       "default",
-      "[n] children/*[1] (pause:200); [n] content/*[1] (pause:200);[n] children/*[2]",
       "self::relseq[@role=\"equality\"]",
       "count(./children/*)=2",
       "./children/identifier or ./children/number"
     ],
     [
-      "Rule",
+      "Precondition",
       "simple-equality2",
       "default",
-      "[n] children/*[1] (pause:200); [n] content/*[1] (pause:200);[n] children/*[2]",
       "self::relseq[@role=\"equality\"]",
       "count(./children/*)=2",
       "./children/function or ./children/appl"
     ],
     [
-      "Rule",
+      "Precondition",
       "relseq",
       "default",
-      "[m] children/* (sepFunc:CTFcontentIterator)",
       "self::relseq"
     ],
     [
-      "Rule",
+      "Precondition",
       "implicit",
       "default",
-      "[m] children/*",
       "self::infixop",
       "@role=\"implicit\"",
       "children/*[1][@role=\"latinletter\"] or children/*[1][@role=\"greekletter\"] or children/*[1][@role=\"otherletter\"] or name(children/*[1])=\"number\"",
       "children/*[2][@role=\"latinletter\"] or children/*[2][@role=\"greekletter\"] or children/*[2][@role=\"otherletter\"] or name(children/*[2])=\"number\""
     ],
     [
-      "Rule",
+      "Precondition",
       "binary-operation",
       "default",
-      "[p] (pause:100); [m] children/* (sepFunc:CTFcontentIterator, pause:100);",
       "self::infixop"
     ],
     [
-      "Rule",
+      "Precondition",
       "variable-addition",
       "default",
-      "[t] \"sum with variable number of summands\" (pause:400); [m] children/* (sepFunc:CTFcontentIterator)",
       "self::infixop[@role=\"addition\"]",
       "count(children/*)>2",
       "children/punctuation[@role=\"ellipsis\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "prefix",
       "default",
-      "[t] \"prefix\"; [n] text(); [t] \"of\" (pause 150);[n] children/*[1]",
       "self::prefixop"
     ],
     [
-      "Rule",
+      "Precondition",
       "negative",
       "default",
-      "[t] \"negative\"; [n] children/*[1]",
       "self::prefixop",
       "self::prefixop[@role=\"negative\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "postfix",
       "default",
-      "[n] children/*[1]; [t] \"postfix\"; [n] text() (pause 300)",
       "self::postfixop"
     ],
     [
-      "Rule",
+      "Precondition",
       "identifier",
       "default",
-      "[n] text()",
       "self::identifier"
     ],
     [
-      "Rule",
+      "Precondition",
       "number",
       "default",
-      "[n] text()",
       "self::number"
     ],
     [
-      "Rule",
+      "Precondition",
       "font",
       "default",
-      "[t] @font; [n] . (grammar:ignoreFont=@font)",
       "self::*",
       "@font",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@font!=\"normal\""
     ],
     [
-      "Rule",
+      "Precondition",
       "font-identifier-short",
       "default",
-      "[t] @font; [n] CQFhideFont; [t] CSFshowFont",
       "self::identifier",
       "string-length(text())=1",
       "@font",
@@ -152,10 +134,9 @@
       "@role!=\"unit\""
     ],
     [
-      "Rule",
+      "Precondition",
       "font-identifier",
       "default",
-      "[t] @font; [n] . (grammar:ignoreFont=@font)",
       "self::identifier",
       "string-length(text())=1",
       "@font",
@@ -164,10 +145,9 @@
       "@role!=\"unit\""
     ],
     [
-      "Rule",
+      "Precondition",
       "omit-font",
       "default",
-      "[n] . (grammar:ignoreFont=@font)",
       "self::identifier",
       "string-length(text())=1",
       "@font",
@@ -175,380 +155,333 @@
       "@font=\"italic\""
     ],
     [
-      "Rule",
+      "Precondition",
       "simple-fraction",
       "default",
-      "[p] (pause:100); [n] children/*[1] (rate:0.35); [t] \"over\";  [n] children/*[2] (rate:0.35, pause:100)",
       "self::fraction",
       "name(children/*[1])=\"number\" or name(children/*[1])=\"identifier\"",
       "name(children/*[2])=\"number\" or name(children/*[2])=\"identifier\""
     ],
     [
-      "Rule",
+      "Precondition",
       "vulgar-fraction",
       "default",
-      "[t] CSFvulgarFraction",
       "self::fraction",
       "@role=\"vulgar\"",
       "CQFvulgarFractionSmall"
     ],
     [
-      "Rule",
+      "Precondition",
       "fraction",
       "default",
-      "[p] (pause:250); [n] children/*[1] (rate:0.35, pause:250); [t] \"divided by\" (pause:250);  [n] children/*[2] (rate:0.35, pause:250)",
       "self::fraction"
     ],
     [
-      "Rule",
+      "Precondition",
       "superscript",
       "default",
-      "[n] children/*[1]; [t] \"super\"; [n] children/*[2] (pitch:0.35, pause:300)",
       "self::superscript"
     ],
     [
-      "Rule",
+      "Precondition",
       "subscript",
       "default",
-      "[n] children/*[1]; [t] \"sub\"; [n] children/*[2] (pitch:-0.35, pause:300)",
       "self::subscript"
     ],
     [
-      "Rule",
+      "Precondition",
       "ellipsis",
       "default",
-      "[p] (pause:200); [t] \"ellipsis\" (pause:300)",
       "self::punctuation",
       "self::punctuation[@role=\"ellipsis\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "fence-single",
       "default",
-      "[n] text()",
       "self::punctuation",
       "self::punctuation[@role=\"openfence\"]"
     ],
     [
-      "Alias",
+      "PAlias",
       "fence-single",
       "self::punctuation",
       "self::punctuation[@role=\"closefence\"]"
     ],
     [
-      "Alias",
+      "PAlias",
       "fence-single",
       "self::punctuation",
       "self::punctuation[@role=\"vbar\"]"
     ],
     [
-      "Alias",
+      "PAlias",
       "fence-single",
       "self::punctuation",
       "self::punctuation[@role=\"application\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "omit-empty",
       "default",
-      "[p] (pause:100)",
       "self::empty"
     ],
     [
-      "Rule",
+      "Precondition",
       "fences-open-close",
       "default",
-      "[p] (pause:200); [n] children/*[1] (rate:0.35, pause:200)",
       "self::fenced",
       "@role=\"leftright\""
     ],
     [
-      "Rule",
+      "Precondition",
       "fences-open-close-in-appl",
       "default",
-      "[p] (pause:200); [n] children/*[1] (pause:200);",
       "self::fenced[@role=\"leftright\"]",
       "./parent::children/parent::appl"
     ],
     [
-      "Rule",
+      "Precondition",
       "fences-neutral",
       "default",
-      "[p] (pause:100); [t] \"absolute value of\"; [n] children/*[1] (pause:350);",
       "self::fenced",
       "self::fenced[@role=\"neutral\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "omit-fences",
       "default",
-      "[p] (pause:500); [n] children/*[1] (pause:200);",
       "self::fenced"
     ],
     [
-      "Rule",
+      "Precondition",
       "matrix",
       "default",
-      "[t] \"matrix\"; [m] children/* (ctxtFunc:CTFnodeCounter,context:\"row\",pause:100)",
       "self::matrix"
     ],
     [
-      "Rule",
+      "Precondition",
       "matrix-row",
       "default",
-      "[m] children/* (ctxtFunc:CTFnodeCounter,context:\"column\",pause:100)",
       "self::row[@role=\"matrix\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "matrix-cell",
       "default",
-      "[n] children/*[1]",
       "self::cell[@role=\"matrix\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "vector",
       "default",
-      "[t] \"vector\"; [m] children/* (ctxtFunc:CTFnodeCounter,context:\"element\",pause:100)",
       "self::vector"
     ],
     [
-      "Rule",
+      "Precondition",
       "cases",
       "default",
-      "[t] \"case statement\"; [m] children/* (ctxtFunc:CTFnodeCounter,context:\"case\",pause:100)",
       "self::cases"
     ],
     [
-      "Rule",
+      "Precondition",
       "cases-row",
       "default",
-      "[m] children/*",
       "self::row[@role=\"cases\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "cases-cell",
       "default",
-      "[n] children/*[1]",
       "self::cell[@role=\"cases\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "row",
       "default",
-      "[m] ./* (ctxtFunc:CTFnodeCounter,context:\"column\",pause:100)",
       "self::row"
     ],
     [
-      "Rule",
+      "Precondition",
       "cases-end",
       "default",
-      "[t] \"case statement\"; [m] children/* (ctxtFunc:CTFnodeCounter,context:\"case\",pause:100);[t] \"end cases\"",
       "self::cases",
       "following-sibling::*"
     ],
     [
-      "Rule",
+      "Precondition",
       "multiline",
       "default",
-      "[t] \"multiline equation\";[m] children/* (ctxtFunc:CTFnodeCounter,context:\"line\",pause:100)",
       "self::multiline"
     ],
     [
-      "Rule",
+      "Precondition",
       "line",
       "default",
-      "[m] children/*",
       "self::line"
     ],
     [
-      "Rule",
+      "Precondition",
       "table",
       "default",
-      "[t] \"multiline equation\";[m] children/* (ctxtFunc:CTFnodeCounter,context:\"row\",pause:200)",
       "self::table"
     ],
     [
-      "Rule",
+      "Precondition",
       "table-row",
       "default",
-      "[m] children/* (pause:100)",
       "self::row[@role=\"table\"]"
     ],
     [
-      "Alias",
+      "PAlias",
       "cases-cell",
       "self::cell[@role=\"table\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "end-punct",
       "default",
-      "[m] children/* (pause:300)",
       "self::punctuated",
       "@role=\"endpunct\""
     ],
     [
-      "Rule",
+      "Precondition",
       "start-punct",
       "default",
-      "[n] content/*[1] (pause:200); [m] children/*[position()>1]",
       "self::punctuated",
       "@role=\"startpunct\""
     ],
     [
-      "Rule",
+      "Precondition",
       "punctuated",
       "default",
-      "[m] children/* (pause:100)",
       "self::punctuated"
     ],
     [
-      "Rule",
+      "Precondition",
       "function",
       "default",
-      "[n] text()",
       "self::function"
     ],
     [
-      "Rule",
+      "Precondition",
       "appl",
       "default",
-      "[n] children/*[1]; [n] content/*[1]; [n] children/*[2]",
       "self::appl"
     ],
     [
-      "Rule",
+      "Precondition",
       "sum-only",
       "default",
-      "[n] children/*[1]; [t] \"from\"; [n] children/*[2]; [t] \"to\";[n] children/*[3]",
       "self::limboth",
       "@role=\"sum\" or @role=\"integral\""
     ],
     [
-      "Rule",
+      "Precondition",
       "limboth",
       "default",
-      "[n] children/*[1] (pause 100); [t] \"over\"; [n] children/*[2];[t] \"under\"; [n] children/*[3] (pause 250);",
       "self::limboth"
     ],
     [
-      "Rule",
+      "Precondition",
       "limlower",
       "default",
-      "[n] children/*[1]; [t] \"over\"; [n] children/*[2];",
       "self::limlower"
     ],
     [
-      "Rule",
+      "Precondition",
       "limupper",
       "default",
-      "[n] children/*[1]; [t] \"under\"; [n] children/*[2];",
       "self::limupper"
     ],
     [
-      "Rule",
+      "Precondition",
       "largeop",
       "default",
-      "[n] text()",
       "self::largeop"
     ],
     [
-      "Rule",
+      "Precondition",
       "bigop",
       "default",
-      "[n] children/*[1] (pause 100); [t] \"over\"; [n] children/*[2] (pause 250);",
       "self::bigop"
     ],
     [
-      "Rule",
+      "Precondition",
       "integral",
       "default",
-      "[n] children/*[1] (pause 100); [n] children/*[2] (pause 200); [n] children/*[3] (rate:0.35);",
       "self::integral"
     ],
     [
-      "Rule",
+      "Precondition",
       "sqrt",
       "default",
-      "[t] \"Square root of\"; [n] children/*[1] (rate:0.35, pause:400)",
       "self::sqrt"
     ],
     [
-      "Rule",
+      "Precondition",
       "square",
       "default",
-      "[n] children/*[1]; [t] \"squared\" (pitch:0.35, pause:200)",
       "self::superscript",
       "children/*[2][text()=2]",
       "name(./children/*[1])!=\"text\""
     ],
     [
-      "Rule",
+      "Precondition",
       "cube",
       "default",
-      "[n] children/*[1]; [t] \"cubed\" (pitch:0.35, pause:200)",
       "self::superscript",
       "children/*[2][text()=3]",
       "name(./children/*[1])!=\"text\""
     ],
     [
-      "Rule",
+      "Precondition",
       "root",
       "default",
-      "[t] \"root of order\"; [n] children/*[1];[t] \"over\"; [n] children/*[1] (rate:0.35, pause:400)",
       "self::root"
     ],
     [
-      "Rule",
+      "Precondition",
       "text-no-mult",
       "default",
-      "[n] children/*[1] (pause:200); [n] children/*[2]",
       "self::infixop",
       "children/text"
     ],
     [
-      "Rule",
+      "Precondition",
       "text",
       "default",
-      "[n] text() (pause:200)",
       "self::text"
     ],
     [
-      "Rule",
+      "Precondition",
       "unit",
       "default",
-      "[t] text() (annotation:unit, preprocess)",
       "self::identifier",
       "@role=\"unit\""
     ],
     [
-      "Rule",
+      "Precondition",
       "unit-square",
       "default",
-      "[t] \"square\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"unit\"",
       "children/*[2][text()=2]",
       "name(children/*[1])=\"identifier\""
     ],
     [
-      "Rule",
+      "Precondition",
       "unit-cubic",
       "default",
-      "[t] \"cubic\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"unit\"",
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\""
     ],
     [
-      "Rule",
+      "Precondition",
       "reciprocal",
       "default",
-      "[t] \"reciprocal\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"unit\"",
       "name(children/*[1])=\"identifier\"",
@@ -558,10 +491,9 @@
       "count(preceding-sibling::*)=0 or preceding-sibling::*[@role!=\"unit\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "per",
       "default",
-      "[t] \"per\"; [n] children/*[1]",
       "self::superscript",
       "@role=\"unit\"",
       "name(children/*[1])=\"identifier\"",
@@ -571,18 +503,16 @@
       "preceding-sibling::*[@role=\"unit\"]"
     ],
     [
-      "Rule",
+      "Precondition",
       "unit-combine",
       "default",
-      "[m] children/*",
       "self::infixop",
       "@role=\"unit\""
     ],
     [
-      "Rule",
+      "Precondition",
       "unit-divide",
       "default",
-      "[n] children/*[1] (pitch:0.3); [t] \"per\"; [n] children/*[2] (pitch:-0.3)",
       "self::fraction",
       "@role=\"unit\""
     ]
