@@ -28,7 +28,7 @@ import * as tr from '../transformers';
 
 let locale: Locale = null;
 
-export function en(): Locale {
+export function ko(): Locale {
   if (!locale) {
     locale = create();
   }

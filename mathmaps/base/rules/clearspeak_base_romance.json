@@ -1,0 +1,49 @@
+{
+  "locale": "romance",
+  "domain": "clearspeak",
+  "modality": "speech",
+  "kind": "abstract",
+  "inherits": "base",
+  "rules": [
+        [
+      "Precondition",
+      "function-prefix-reciprocal",
+      "Trig_Reciprocal",
+      "self::appl",
+      "@role=\"prefix function\"",
+      "name(children/*[1])=\"superscript\"",
+      "name(children/*[1]/children/*[2])=\"prefixop\"",
+      "children/*[1]/children/*[2][@role=\"negative\"]",
+      "children/*[1]/children/*[2]/children/*[1][text()=\"1\"]",
+      "not(contains(@grammar, \"functions_none\"))"
+    ],
+    [
+      "Precondition",
+      "function-prefix-reciprocal-simple",
+      "Trig_Reciprocal",
+      "self::appl",
+      "@role=\"prefix function\"",
+      "name(children/*[1])=\"superscript\"",
+      "name(children/*[1]/children/*[2])=\"prefixop\"",
+      "contains(children/*[2]/@annotation, \"clearspeak:simple\")",
+      "children/*[1]/children/*[2][@role=\"negative\"]",
+      "children/*[1]/children/*[2]/children/*[1][text()=\"1\"]",
+      "not(contains(@grammar, \"functions_none\"))"
+    ],
+    [
+      "Precondition",
+      "function-reciprocal",
+      "Functions_Reciprocal",
+      "self::superscript",
+      "@role=\"prefix function\" or @role=\"simple function\"",
+      "name(children/*[2])=\"prefixop\"",
+      "children/*[2][@role=\"negative\"]",
+      "children/*[2]/children/*[1][text()=\"1\"]",
+      "not(contains(@grammar, \"functions_none\"))"
+    ]
+  ],
+  "annotators": [
+    "simple",
+    "unit"
+  ]
+}

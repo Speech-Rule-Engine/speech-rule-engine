@@ -44,8 +44,9 @@ export class MathStore extends BaseRuleStore {
 
     this.parseMethods['Alias'] = this.defineRuleAlias.bind(this);
     this.parseMethods['Aliases'] = this.defineRulesAlias.bind(this);
-    this.parseMethods['UniqueAlias'] = this.defineUniqueRuleAlias.bind(this);
     this.parseMethods['SpecializedRule'] =
+      this.defineSpecialisedRule.bind(this);
+    this.parseMethods['SpecializedAction'] =
       this.defineSpecialisedRule.bind(this);
   }
 
@@ -72,26 +73,6 @@ export class MathStore extends BaseRuleStore {
   }
 
 
-  /**
-   * Adds an alias for an existing rule.
-   * @param name The name of the rule.
-   * @param dynamic A math domain and style assignment.
-   * @param query Precondition query of the rule.
-   * @param args Additional static precondition constraints.
-   */
-  public defineUniqueRuleAlias(
-      name: string, dynamic: string, query: string, ...args: string[]) {
-    let dynamicCstr = this.parseCstr(dynamic);
-    let rule = this.findRule(
-        rule => rule.name === name && dynamicCstr.equal(rule.dynamicCstr));
-    if (!rule) {
-      throw new OutputError(
-          'Rule named ' + name + ' with style ' + dynamic + ' does not exist.');
-    }
-    this.addAlias_(rule, query, args);
-  }
-
-
   // TODO: Possibly defines a number of duplicate rules.
   // (E.g., superscript-baseline in Mathspeak)
   // These are automatically discarded in the Trie, but might still be
@@ -108,7 +89,7 @@ export class MathStore extends BaseRuleStore {
     });
     if (!rule) {
       throw new OutputError(
-          'Rule with named ' + name + ' does not exist.');
+          'Rule with name ' + name + ' does not exist.');
     }
     this.addAlias_(rule, query, args);
   }
@@ -163,12 +144,23 @@ export class MathStore extends BaseRuleStore {
     let dynamicCstr = this.parseCstr(oldDynamic);
     let rule = this.findRule(
       rule => rule.name === name && dynamicCstr.equal(rule.dynamicCstr));
-    if (!rule) {
+    let newCstr = this.parseCstr(newDynamic);
+
+    // TMP: What to do about the dynamicCstr? That should only be needed wrt. specializedActions.
+    // if (!rule && !opt_action) {
+    //   let precs = this.getPrecondition(name);
+    //   precs.forEach(([dyn, prec]) => {
+    //     if (dynamicCstr === dyn) {
+    //       this.addPrecondition(name, newCstr, prec);
+    //     }
+    //   });
+    //   return;
+    // }
+    if (!rule && opt_action) {
       throw new OutputError(
           'Rule named ' + name + ' with style ' + oldDynamic +
           ' does not exist.');
     }
-    let newCstr = this.parseCstr(newDynamic);
     let action =
         opt_action ? Action.fromString(opt_action) : rule.action;
     let newRule = new SpeechRule(rule.name, newCstr, rule.precondition, action);
@@ -279,4 +271,3 @@ export class MathStore extends BaseRuleStore {
   }
 
 }
-
