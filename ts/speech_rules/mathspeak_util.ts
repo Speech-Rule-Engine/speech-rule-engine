@@ -24,7 +24,7 @@ import SystemExternal from '../common/system_external';
 import XpathUtil from '../common/xpath_util';
 import {LOCALE} from '../l10n/locale';
 
-import {MathStore} from '../rule_engine/math_store';
+import {SpeechRuleStore} from '../rule_engine/speech_rule_store';
 import * as Semantic from '../semantic_tree/semantic';
 import {SemanticFont, SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
@@ -783,7 +783,7 @@ const childNumber: Map<number, number> = new Map([
  *     tensor rule, plus the strings for the verbose and brief rule, in that
  *     order.
  */
-export function generateTensorRuleStrings_(constellation: string): string[] {
+function generateTensorRuleStrings_(constellation: string): [string[], string, string] {
   let constraints = [];
   let verbString = '';
   let briefString = '';
@@ -802,9 +802,7 @@ export function generateTensorRuleStrings_(constellation: string): string[] {
     }
     constel >>= 1;
   }
-  constraints.push(verbString);
-  constraints.push(briefString);
-  return constraints;
+  return [constraints, verbString, briefString];
 }
 
 
@@ -812,7 +810,8 @@ export function generateTensorRuleStrings_(constellation: string): string[] {
  * Generator for tensor speech rules.
  * @param store The mathstore to which the rules are added.
  */
-export function generateTensorRules(store: MathStore) {
+export function generateTensorRules(store: SpeechRuleStore,
+                                    brief: boolean = true) {
   // Constellations are built as bitvectors with the meaning:
   //  lsub lsuper base rsub rsuper
   let constellations = [
@@ -821,17 +820,18 @@ export function generateTensorRules(store: MathStore) {
   ];
   for (let i = 0, constel; constel = constellations[i]; i++) {
     let name = 'tensor' + constel;
-    let components = generateTensorRuleStrings_(constel);
-    let briefStr = components.pop();
-    let verbStr = components.pop();
+    let [components, verbStr, briefStr] = generateTensorRuleStrings_(constel);
     let verbList =
         [name, 'default', verbStr, 'self::tensor'].concat(components);
-    let briefList =
-        [name, 'brief', briefStr, 'self::tensor'].concat(components);
     // Rules without neighbour.
     store.defineRule.apply(store, verbList);
-    store.defineRule.apply(store, briefList);
-    store.defineSpecializedRule(name, 'brief', 'sbrief');
+    if (brief) {
+      let briefList =
+        [name, 'brief', briefStr, 'self::tensor'].concat(components);
+      store.defineRule.apply(store, briefList);
+      briefList[1] = 'sbrief';
+      store.defineRule.apply(store, briefList);
+    }
     // Rules with baseline.
     let baselineStr = componentString.get(2);
     verbStr += '; [t]' + baselineStr + 'Verbose';
@@ -842,11 +842,14 @@ export function generateTensorRules(store: MathStore) {
         'ancestor::stree)[1]//*[not(*)])[last()]/@id)';
     verbList =
         [name, 'default', verbStr, 'self::tensor', cstr].concat(components);
-    briefList =
-        [name, 'brief', briefStr, 'self::tensor', cstr].concat(components);
     store.defineRule.apply(store, verbList);
-    store.defineRule.apply(store, briefList);
-    store.defineSpecializedRule(name, 'brief', 'sbrief');
+    if (brief) {
+      let briefList =
+        [name, 'brief', briefStr, 'self::tensor', cstr].concat(components);
+      store.defineRule.apply(store, briefList);
+      briefList[1] = 'sbrief';
+      store.defineRule.apply(store, briefList);
+    }
   }
 }
 
