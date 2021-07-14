@@ -40,6 +40,20 @@ export function ordinalCounter(_node: Node, context: string): () => string {
 }
 
 
+/**
+ * Simple counter function for counting ordinals.
+ * @param node The node for the context function.
+ * @param context The context string.
+ * @return The context function returning ordinals.
+ */
+export function wordCounter(_node: Element, context: string): () => string {
+  let counter = 0;
+  return function() {
+    return LOCALE.NUMBERS.numberToOrdinal(++counter, false) + ' ' + context;
+  };
+}
+
+
 interface Convertible {
   convertible: boolean;
   content?: string;

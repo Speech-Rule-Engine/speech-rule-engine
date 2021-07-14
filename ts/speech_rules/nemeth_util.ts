@@ -22,7 +22,6 @@ import {AuditoryDescription} from '../audio/auditory_description';
 import * as DomUtil from '../common/dom_util';
 import XpathUtil from '../common/xpath_util';
 import {Grammar} from '../rule_engine/grammar';
-import {MathStore} from '../rule_engine/math_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
 import {SemanticVisitor} from '../semantic_tree/semantic_annotator';
@@ -253,96 +252,6 @@ export function propagateNumber(
 
 SemanticAnnotations.register(
     new SemanticVisitor('nemeth', 'number', propagateNumber, {number: true}));
-
-
-/**
- * Component strings for tensor speech rules.
- */
-const componentString: Map<number, string> = new Map([
-  [2, 'CSFbaseline'],
-  [1, 'CSFsubscript'],
-  [0, 'CSFsuperscript']
-]);
-
-
-/**
- * Child number translation for tensor speech rules.
- */
-const childNumber: Map<number, number> = new Map([
-  [4, 2],
-  [3, 3],
-  [2, 1],
-  [1, 4],
-  [0, 0]
-]);
-
-
-/**
- * Generates the rule strings and constraints for tensor rules.
- * @param constellation Bitvector representing of possible tensor
- *     constellation.
- * @return A list consisting of additional constraints for the
- *     tensor rule plus the strings for the rule.
- */
-export function generateTensorRuleStrings_(constellation: string): string[] {
-  let constraints = [];
-  let verbString = '';
-  let constel = parseInt(constellation, 2);
-
-  for (let i = 0; i < 5; i++) {
-    let childString = 'children/*[' + childNumber.get(i) + ']';
-    if (constel & 1) {
-      let compString = componentString.get(i % 3);
-      verbString = '[t] ' + compString + 'Verbose; [n] ' + childString + ';' +
-          verbString;
-    } else {
-      constraints.unshift('name(' + childString + ')="empty"');
-    }
-    constel >>= 1;
-  }
-  constraints.push(verbString);
-  return constraints;
-}
-/**
- * Generator for tensor speech rules.
- * @param store The mathstore to which the rules are added.
- */
-export function generateTensorRules(store: MathStore) {
-  // Constellations are built as bitvectors with the meaning:
-  //  lsub lsuper base rsub rsuper
-  let defineRule = store.defineRule.bind(store);
-  let defineRulesAlias = store.defineRulesAlias.bind(store);
-  let constellations = [
-    '11111', '11110', '11101', '11100', '10111', '10110', '10101', '10100',
-    '01111', '01110', '01101', '01100'
-  ];
-  for (let i = 0, constel; constel = constellations[i]; i++) {
-    let name = 'tensor' + constel;
-    let components = generateTensorRuleStrings_(constel);
-    let verbStr = components.pop();
-    let verbList =
-        [name, 'default', verbStr, 'self::tensor'].concat(components);
-    // Rules without neighbour.
-    defineRule.apply(null, verbList);
-    // Rules with baseline.
-    let baselineStr = componentString.get(2);
-    verbStr += '; [t]' + baselineStr + 'Verbose';
-    name = name + '-baseline';
-    verbList = [
-      name, 'default', verbStr, 'self::tensor', 'following-sibling::*'
-    ].concat(components);
-    defineRule.apply(null, verbList);
-    // Rules without neighbour but baseline.
-    let aliasList = [
-      name, 'self::tensor', 'not(following-sibling::*)',
-      'ancestor::fraction|ancestor::punctuated|' +
-          'ancestor::fenced|ancestor::root|ancestor::sqrt|' +
-          'ancestor::relseq|ancestor::multirel|' +
-          '@embellished'
-    ].concat(components);
-    defineRulesAlias.apply(null, aliasList);
-  }
-}
 
 
 /**

@@ -41,26 +41,10 @@ export function ClearspeakRules() {
     'CQFcellsSimple': ClearspeakUtil.allCellsSimple,
     'CSFordinalExponent': ClearspeakUtil.ordinalExponent,
     'CSFwordOrdinal': ClearspeakUtil.wordOrdinal,
-    'CQFisCapital': ClearspeakUtil.isCapitalLetter,
     'CQFmatchingFences': ClearspeakUtil.matchingFences,
     'CSFnestingDepth': ClearspeakUtil.nestingDepth,
     'CQFfencedArguments': ClearspeakUtil.fencedArguments,
     'CQFsimpleArguments': ClearspeakUtil.simpleArguments,
-    'CQFisHyperbolic': ClearspeakUtil.isHyperbolic,
-    'CQFisLogarithm': ClearspeakUtil.isLogarithmWithBase,
     'CQFspaceoutNumber': MathspeakUtil.spaceoutNumber,
-    // Units.
-    'CQFisLengthUnit': ClearspeakUtil.isLengthUnit,
-    // Currency.
-    'CQFfirstCurrency': ClearspeakUtil.firstCurrency,
-    'CQFlastCurrency': ClearspeakUtil.lastCurrency
   });
-
-  // French
-  SpeechRules.addStore(
-      'fr.speech.clearspeak', 'en.speech.clearspeak', {});
-
-  // German
-  SpeechRules.addStore(
-      'de.speech.clearspeak', 'en.speech.clearspeak', {});
 }

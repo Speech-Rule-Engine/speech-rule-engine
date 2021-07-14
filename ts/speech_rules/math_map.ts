@@ -85,6 +85,7 @@ export namespace MathMap {
    */
   // TODO (TS): This will become the promise one day.
   export function getInstance(): {[key: string]: Function} {
+    loadLocale('base');
     loadLocale();
     return {lookupString, retrieveFiles, parseMaps};
   }
@@ -93,8 +94,7 @@ export namespace MathMap {
   /**
    * Loads a new locale if necessary.
    */
-  export function loadLocale() {
-    let locale = Engine.getInstance().locale;
+  export function loadLocale(locale = Engine.getInstance().locale) {
     if (loaded_.indexOf(locale) === -1) {
       SpeechRuleEngine.getInstance().prune = true;
       retrieveMaps(locale);

@@ -1,0 +1,352 @@
+{
+  "modality": "summary",
+  "locale": "de",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "abstr-identifier-long",
+      "[t] \"langer Bezeichner\""
+    ],
+    [
+      "Action",
+      "abstr-identifier",
+      "[t] \"Bezeichner\""
+    ],
+    [
+      "Action",
+      "abstr-number-long",
+      "[t] \"lange Zahl\""
+    ],
+    [
+      "Action",
+      "abstr-number",
+      "[t] \"Zahl\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number-long",
+      "[t] \"langer gemischter Bruch\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number",
+      "[t] \"gemischter Bruch\""
+    ],
+    [
+      "Action",
+      "abstr-text",
+      "[t] \"Text\""
+    ],
+    [
+      "Action",
+      "abstr-function",
+      "[t] \"Funktionsausdruck\""
+    ],
+    [
+      "Action",
+      "abstr-function-brief",
+      "[t] \"Funktion\""
+    ],
+    [
+      "Action",
+      "abstr-lim",
+      "[t] \"Grenzwertfunktion\""
+    ],
+    [
+      "Action",
+      "abstr-lim-brief",
+      "[t] \"Grenzwert\""
+    ],
+    [
+      "Action",
+      "abstr-fraction",
+      "[t] \"Bruch\""
+    ],
+    [
+      "Action",
+      "abstr-fraction-brief",
+      "[t] \"Bruch\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction",
+      "[t] \"Kettenbruch\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction-brief",
+      "[t] \"Kettenbruch\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt",
+      "[t] \"Quadratwurzel\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt-nested",
+      "[t] \"verschachtelte Quadratwurzel\""
+    ],
+    [
+      "Action",
+      "abstr-root-end",
+      "[t] \"Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=speech); [t] \"Ende Exponent\""
+    ],
+    [
+      "Action",
+      "abstr-root",
+      "[t] \"Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=speech)"
+    ],
+    [
+      "Action",
+      "abstr-root-brief",
+      "[t] \"Wurzel\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested-end",
+      "[t] \"verschachtelte Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=speech); [t] \"Ende Exponent\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested",
+      "[t] \"verschachtelte Wurzel mit Exponent\"; [n] children/*[1] (engine:modality=speech)"
+    ],
+    [
+      "Action",
+      "abstr-root-nested-brief",
+      "[t] \"verschachtelte Wurzel\""
+    ],
+    [
+      "Action",
+      "abstr-superscript",
+      "[t] \"Potenz\""
+    ],
+    [
+      "Action",
+      "abstr-subscript",
+      "[t] \"Index\""
+    ],
+    [
+      "Action",
+      "abstr-subsup",
+      "[t] \"Potenz mit Index\""
+    ],
+    [
+      "Action",
+      "abstr-infixop",
+      "[t] @role (grammar:localRole); [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\""
+    ],
+    [
+      "Action",
+      "abstr-infixop-var",
+      "[t] @role (grammar:localRole); [t] \"mit veränderlicher Anzahl an Elementen\""
+    ],
+    [
+      "Action",
+      "abstr-infixop-brief",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-addition",
+      "[t] \"Summe mit\"; [t] count(./children/*); [t] \"Summanden\""
+    ],
+    [
+      "Action",
+      "abstr-addition-brief",
+      "[t] \"Summe\""
+    ],
+    [
+      "Action",
+      "abstr-addition-var",
+      "[t] \"Summe mit veränderlicher Anzahl an Summanden\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication",
+      "[t] \"Produkt mit\"; [t] count(./children/*); [t] \"Faktoren\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-brief",
+      "[t] \"Produkt\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-var",
+      "[t] \"Produkt mit veränderlicher Anzahl an Faktoren\""
+    ],
+    [
+      "Action",
+      "abstr-vector",
+      "[t] count(./children/*) ; [t] \"dimensionaler Vektor\""
+    ],
+    [
+      "Action",
+      "abstr-vector-brief",
+      "[t] \"Vektor\""
+    ],
+    [
+      "Action",
+      "abstr-vector-var",
+      "[t] \"n dimensionaler Vektor\""
+    ],
+    [
+      "Action",
+      "abstr-binomial",
+      "[t] \"Binomialkoeffizient\""
+    ],
+    [
+      "Action",
+      "abstr-determinant",
+      "[t] count(./children/*); [t] \"dimensionale Determinante\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-brief",
+      "[t] \"Determinante\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-var",
+      "[t] \"n dimensionale Determinante\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix",
+      "[t] count(./children/*); [t] \"dimensionale quadratische Matrize\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix-brief",
+      "[t] \"quadratische Matrize\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector",
+      "[t] count(./children/row/children/*); [t] \"dimensionaler Zeilenvektor\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-brief",
+      "[t] \"Zeilenvektor\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-var",
+      "[t] \"n dimensionaler Zeilenvektor\""
+    ],
+    [
+      "Action",
+      "abstr-matrix",
+      "[t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Matrize\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-brief",
+      "[t] \"Matrize\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-var",
+      "[t] \"n mal m dimensionale Matrize\""
+    ],
+    [
+      "Action",
+      "abstr-cases",
+      "[t] \"Fallunterscheidung\";[t] \"mit\"; [t] count(children/*); [t] \"Fällen\""
+    ],
+    [
+      "Action",
+      "abstr-cases-brief",
+      "[t] \"Fallunterscheidung\""
+    ],
+    [
+      "Action",
+      "abstr-cases-var",
+      "[t] \"Fallunterscheidung mit veränderlicher Anzahl an Fällen\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated",
+      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste der Länge\"; [t] count(children/*) - count(content/*)"
+    ],
+    [
+      "Action",
+      "abstr-punctuated-brief",
+      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste\";"
+    ],
+    [
+      "Action",
+      "abstr-punctuated-var",
+      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste\";[t] \"veränderlicher Länge\""
+    ],
+    [
+      "Action",
+      "abstr-bigop",
+      "[n] content/*[1]"
+    ],
+    [
+      "Action",
+      "abstr-integral",
+      "[t] \"Integral\""
+    ],
+    [
+      "Action",
+      "abstr-relation",
+      "[t] @role (grammar:localRole);"
+    ],
+    [
+      "Action",
+      "abstr-relation-seq",
+      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\"; [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\""
+    ],
+    [
+      "Action",
+      "abstr-relation-seq-brief",
+      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\""
+    ],
+    [
+      "Action",
+      "abstr-relation-var",
+      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\";[t] \"mit veränderlicher Anzahl an Elementen\""
+    ],
+    [
+      "Action",
+      "abstr-multirel",
+      "[t] \"Relationsequenz\"; [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-brief",
+      "[t] \"Relationsequenz\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-var",
+      "[t] \"Relationsequenz mit veränderlicher Anzahl an Elementen\""
+    ],
+    [
+      "Action",
+      "abstr-table",
+      "[t] \"Tabelle mit\"; [t] count(children/*); [t] \"Zeilen und\";[t] count(children/*[1]/children/*); [t] \"Spalten\""
+    ],
+    [
+      "Action",
+      "abstr-line",
+      "[t] \"in\"; [t] @role (grammar:localRole);"
+    ],
+    [
+      "Action",
+      "abstr-row",
+      "[t] \"in\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"mit\";[t] count(children/*); [t] \"Spalten\""
+    ],
+    [
+      "Action",
+      "abstr-cell",
+      "[t] \"in\"; [t] @role (grammar:localRole);"
+    ]
+  ]
+}

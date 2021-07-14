@@ -42,11 +42,9 @@ export class MathStore extends BaseRuleStore {
   constructor() {
     super();
 
-    this.parseMethods['Alias'] = this.defineRuleAlias.bind(this);
-    this.parseMethods['Aliases'] = this.defineRulesAlias.bind(this);
-    this.parseMethods['UniqueAlias'] = this.defineUniqueRuleAlias.bind(this);
-    this.parseMethods['SpecializedRule'] =
-      this.defineSpecialisedRule.bind(this);
+    this.parseMethods['Alias'] = this.defineAlias;
+    this.parseMethods['SpecializedRule'] = this.defineSpecializedRule;
+    this.parseMethods['Specialized'] = this.defineSpecialized;
   }
 
 
@@ -73,44 +71,23 @@ export class MathStore extends BaseRuleStore {
 
 
   /**
-   * Adds an alias for an existing rule.
-   * @param name The name of the rule.
-   * @param dynamic A math domain and style assignment.
+   * Adds an alias for an existing precondition.
+   * @param name The name of the precondition.
    * @param query Precondition query of the rule.
    * @param args Additional static precondition constraints.
    */
-  public defineUniqueRuleAlias(
-      name: string, dynamic: string, query: string, ...args: string[]) {
-    let dynamicCstr = this.parseCstr(dynamic);
-    let rule = this.findRule(
-        rule => rule.name === name && dynamicCstr.equal(rule.dynamicCstr));
-    if (!rule) {
-      throw new OutputError(
-          'Rule named ' + name + ' with style ' + dynamic + ' does not exist.');
+  public defineAlias(name: string, prec: string, ...args: string[]) {
+    let fullPrec = this.parsePrecondition(prec, args);
+    if (!fullPrec) {
+      console.error(`Precondition Error: ${prec} ${args}`);
+      return;
     }
-    this.addAlias_(rule, query, args);
-  }
-
-
-  // TODO: Possibly defines a number of duplicate rules.
-  // (E.g., superscript-baseline in Mathspeak)
-  // These are automatically discarded in the Trie, but might still be
-  // worthwhile looking into the definition methods.
-  /**
-   * Adds an alias for an existing rule.
-   * @param name The name of the rule.
-   * @param query Precondition query of the rule.
-   * @param args Additional static precondition constraints.
-   */
-  public defineRuleAlias(name: string, query: string, ...args: string[]) {
-    let rule = this.findRule(function(rule) {
-      return rule.name === name;
-    });
-    if (!rule) {
-      throw new OutputError(
-          'Rule with named ' + name + ' does not exist.');
+    let condition = this.preconditions.get(name);
+    if (!condition) {
+      console.error(`Alias Error: No precondition by the name of ${name}`);
+      return;
     }
-    this.addAlias_(rule, query, args);
+    condition.addFullCondition(fullPrec);
   }
 
 
@@ -157,22 +134,43 @@ export class MathStore extends BaseRuleStore {
    * @param newDynamic The new math domain and style assignment.
    * @param opt_action String version of the speech rule.
    */
-  public defineSpecialisedRule(
+  public defineSpecializedRule(
       name: string, oldDynamic: string, newDynamic: string,
       opt_action?: string) {
     let dynamicCstr = this.parseCstr(oldDynamic);
     let rule = this.findRule(
       rule => rule.name === name && dynamicCstr.equal(rule.dynamicCstr));
-    if (!rule) {
+    let newCstr = this.parseCstr(newDynamic);
+    if (!rule && opt_action) {
       throw new OutputError(
           'Rule named ' + name + ' with style ' + oldDynamic +
           ' does not exist.');
     }
-    let newCstr = this.parseCstr(newDynamic);
     let action =
         opt_action ? Action.fromString(opt_action) : rule.action;
     let newRule = new SpeechRule(rule.name, newCstr, rule.precondition, action);
     this.addRule(newRule);
+  }
+
+
+  /**
+   * Adds a specialization for a given precondition.
+   * @param name The name of the rule.
+   * @param old The old dynamic constraint.
+   * @param dynamic The new dynamic constraint.
+   */
+  public defineSpecialized(name: string, _old: string, dynamic: string) {
+    let cstr = this.parseCstr(dynamic);
+    if (!cstr) {
+      console.error(`Dynamic Constraint Error: ${dynamic}`);
+      return;
+    }
+    let condition = this.preconditions.get(name);
+    if (!condition) {
+      console.error(`Alias Error: No precondition by the name of ${name}`);
+      return;
+    }
+    condition.addConstraint(cstr);
   }
 
 
@@ -269,14 +267,13 @@ export class MathStore extends BaseRuleStore {
       return locNum ? {number: locNum[0], length: locNum[0].length} : null;
     }
     let num =
-        enNum[0]
-          .replace(new RegExp(en().MESSAGES.regexp.DIGIT_GROUP, 'g'), 'X')
-            .replace(
-              new RegExp(en().MESSAGES.regexp.DECIMAL_MARK, 'g'),
-                LOCALE.MESSAGES.regexp.DECIMAL_MARK)
-            .replace(/X/g, LOCALE.MESSAGES.regexp.DIGIT_GROUP.replace(/\\/g, ''));
+      enNum[0]
+        .replace(new RegExp(en().MESSAGES.regexp.DIGIT_GROUP, 'g'), 'X')
+        .replace(
+          new RegExp(en().MESSAGES.regexp.DECIMAL_MARK, 'g'),
+          LOCALE.MESSAGES.regexp.DECIMAL_MARK)
+        .replace(/X/g, LOCALE.MESSAGES.regexp.DIGIT_GROUP.replace(/\\/g, ''));
     return {number: num, length: enNum[0].length};
   }
 
 }
-
