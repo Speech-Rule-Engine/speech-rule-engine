@@ -79,8 +79,7 @@ function numberToWords(num: number): string {
  * @param plural A flag indicating if the ordinal is in plural.
  * @return The ordinal of the number as string.
  */
-function numberToOrdinal(num: number, plural: boolean): string {
-  plural === true;
+function numberToOrdinal(num: number, _plural: boolean): string {
   return wordOrdinal(num);
 }
 
