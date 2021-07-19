@@ -80,6 +80,7 @@ function numberToWords(num: number): string {
  * @return The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, plural: boolean): string {
+  plural === true;
   return wordOrdinal(num);
 }
 
