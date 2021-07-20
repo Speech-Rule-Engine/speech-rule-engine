@@ -161,6 +161,11 @@
     ],
     [
       "Action",
+      "fences-parallel",
+      "[t] \"⠳⠳\"; [n] children/*[1]; [t] \"⠳⠳\""
+    ],
+    [
+      "Action",
       "text",
       "[n] text()"
     ],

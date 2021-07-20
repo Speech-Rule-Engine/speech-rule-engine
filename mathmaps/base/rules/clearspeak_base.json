@@ -1092,6 +1092,13 @@
       "@role=\"leftright\""
     ],
     [
+      "Specialized",
+      "fences-open-close",
+      "default",
+      "self::fenced",
+      "@role=\"metric\""
+    ],
+    [
       "Precondition",
       "paren-simple-nested-func-default",
       "default",
@@ -1910,32 +1917,42 @@
       "fences-neutral",
       "default",
       "self::fenced",
-      "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
+      "@role=\"neutral\""
     ],
     [
       "Precondition",
       "fences-neutral-absend",
       "AbsoluteValue_AbsEnd",
       "self::fenced",
-      "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
+      "@role=\"neutral\""
     ],
     [
       "Precondition",
       "fences-neutral-cardinality",
       "AbsoluteValue_Cardinality",
       "self::fenced",
-      "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
+      "@role=\"neutral\""
     ],
     [
       "Precondition",
       "fences-neutral-determinant",
       "AbsoluteValue_Determinant",
       "self::fenced",
-      "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
+      "@role=\"neutral\""
+    ],
+    [
+      "Precondition",
+      "fences-metric",
+      "default",
+      "self::fenced",
+      "@role=\"metric\""
+    ],
+    [
+      "Precondition",
+      "fences-metric-absend",
+      "AbsoluteValue_AbsEnd",
+      "self::fenced",
+      "@role=\"metric\""
     ],
     [
       "Precondition",

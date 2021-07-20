@@ -41,6 +41,7 @@ interface BoundsType {
 export default class SemanticProcessor {
 
   private static readonly FENCE_TO_PUNCT_: {[key: string]: SemanticRole} = {
+    [SemanticRole.METRIC]: SemanticRole.METRIC,
     [SemanticRole.NEUTRAL]: SemanticRole.VBAR,
     [SemanticRole.OPEN]: SemanticRole.OPENFENCE,
     [SemanticRole.CLOSE]: SemanticRole.CLOSEFENCE,
@@ -512,7 +513,7 @@ export default class SemanticProcessor {
    */
   private static tableToSquare_(node: SemanticNode) {
     let matrix = node.childNodes[0];
-    if (SemanticPred.isRole(node, SemanticRole.NEUTRAL)) {
+    if (SemanticPred.isNeutralFence(node)) {
       matrix.role = SemanticRole.DETERMINANT;
       return;
     }
@@ -2148,7 +2149,7 @@ export default class SemanticProcessor {
     // Either we have an open fence.
     if (firstRole === SemanticRole.OPEN ||
         // Or we have a neutral fence that does not have a counter part.
-        firstRole === SemanticRole.NEUTRAL &&
+        SemanticPred.isNeutralFence(fences[0]) &&
             !(lastOpen &&
               SemanticPred.compareNeutralFences(fences[0], lastOpen))) {
       openStack.push(fences.shift());
@@ -2192,7 +2193,7 @@ export default class SemanticProcessor {
     }
     // Closing with a neutral fence on the stack.
     if (lastOpen && firstRole === SemanticRole.CLOSE &&
-        lastOpen.role === SemanticRole.NEUTRAL &&
+        SemanticPred.isNeutralFence(lastOpen) &&
         openStack.some(openPred)) {
       // Steps of the algorithm:
       // 1. Split list at right most opening bracket.
@@ -2737,7 +2738,7 @@ export default class SemanticProcessor {
           //       reset to eliminate sets. Once we include bra-ket heuristics,
           //       this might be incorrect.
           let arg = rest.shift();
-          if (arg.role !== SemanticRole.NEUTRAL) {
+          if (!SemanticPred.isNeutralFence(arg)) {
             arg.role = SemanticRole.LEFTRIGHT;
           }
           funcNode = SemanticProcessor.getInstance().functionNode_(
@@ -2791,7 +2792,7 @@ export default class SemanticProcessor {
         }
         let firstArg = rest[0];
         if (firstArg.type === SemanticType.FENCED &&
-            firstArg.role !== SemanticRole.NEUTRAL &&
+            !SemanticPred.isNeutralFence(firstArg) &&
             SemanticPred.isSimpleFunctionScope(firstArg)) {
           // TODO: (MS2.3|simons) This needs to be made more robust!  Currently
           // we

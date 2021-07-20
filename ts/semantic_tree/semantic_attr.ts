@@ -175,6 +175,7 @@ export const enum SemanticRole {
   BOTTOM = 'bottom',
 
   NEUTRAL = 'neutral',
+  METRIC = 'metric',
   // Letters.
   LATINLETTER = 'latinletter',
   GREEKLETTER = 'greekletter',
@@ -466,7 +467,9 @@ export namespace SemanticAttr {
   const bottomFences: string[] = SemanticUtil.objectsToValues(topBottomPairs);
 
   const neutralFences: string[] =
-      ['|', '¦', '‖', '∣', '⏐', '⎸', '⎹', '∥', '❘', '⦀', '⫴', '｜', '￤'];
+      ['|', '¦', '∣', '⏐', '⎸', '⎹', '❘', '｜', '￤'];
+  const metricFences: string[] =
+      ['‖', '∥', '⦀', '⫴'];
   /**
    * Array of all fences.
    */
@@ -992,6 +995,11 @@ export namespace SemanticAttr {
         set: neutralFences,
         type: SemanticType.FENCE,
         role: SemanticRole.NEUTRAL
+      },
+      {
+        set: metricFences,
+        type: SemanticType.FENCE,
+        role: SemanticRole.METRIC
       },
       // Single characters.
       // Latin alphabets.
@@ -1557,21 +1565,19 @@ export namespace SemanticAttr {
     return functionApplication_;
   }
 
-
-  /**
-   * Decide when two fences match. Currently we match any right to left
-   * or bottom to top fence and neutral to neutral.
-   * @param open Opening fence.
-   * @param close Closing fence.
-   * @return True if the fences are matching.
-   */
-  export function isMatchingFenceRole(open: string, close: string): boolean {
-    return open === SemanticRole.OPEN &&
-      close === SemanticRole.CLOSE ||
-      open === SemanticRole.NEUTRAL &&
-      close === SemanticRole.NEUTRAL ||
-      open === SemanticRole.TOP && close === SemanticRole.BOTTOM;
-  }
+  // /**
+  //  * Decide when two fences match. Currently we match any right to left
+  //  * or bottom to top fence and neutral to neutral.
+  //  * @param open Opening fence.
+  //  * @param close Closing fence.
+  //  * @return True if the fences are matching.
+  //  */
+  // export function isMatchingFenceRole(open: string, close: string): boolean {
+  //   return open === SemanticRole.OPEN &&
+  //     close === SemanticRole.CLOSE ||
+  //     isNeutralFence(open) && isNeutralFence(close) ||
+  //     open === SemanticRole.TOP && close === SemanticRole.BOTTOM;
+  // }
 
   /**
    * Decide when opening and closing fences match. For neutral fences they have
@@ -1582,7 +1588,8 @@ export namespace SemanticAttr {
    * @return {boolean} True if the fences are matching.
    */
   export function isMatchingFence(open: string, close: string): boolean {
-    if (neutralFences.indexOf(open) !== -1) {
+    if (neutralFences.indexOf(open) !== -1 ||
+        metricFences.indexOf(open) !== -1) {
       return open === close;
     }
     return openClosePairs[open] === close ||
@@ -1590,26 +1597,24 @@ export namespace SemanticAttr {
   }
 
 
-  /**
-   * Determines if a fence is an opening fence.
-   * @param fence Opening fence.
-   * @return True if the fence is open or neutral.
-   */
-  export function isOpeningFence(fence: SemanticRole): boolean {
-    return fence === SemanticRole.OPEN ||
-        fence === SemanticRole.NEUTRAL;
-  }
+  // /**
+  //  * Determines if a fence is an opening fence.
+  //  * @param fence Opening fence.
+  //  * @return True if the fence is open or neutral.
+  //  */
+  // export function isOpeningFence(fence: SemanticRole): boolean {
+  //   return fence === SemanticRole.OPEN || isNeutralFence(fence);
+  // }
 
 
-  /**
-   * Determines if a fence is a closing fence.
-   * @param fence Closing fence.
-   * @return True if the fence is close or neutral.
-   */
-  export function isClosingFence(fence: SemanticRole): boolean {
-    return fence === SemanticRole.CLOSE ||
-        fence === SemanticRole.NEUTRAL;
-  }
+  // /**
+  //  * Determines if a fence is a closing fence.
+  //  * @param fence Closing fence.
+  //  * @return True if the fence is close or neutral.
+  //  */
+  // export function isClosingFence(fence: SemanticRole): boolean {
+  //   return fence === SemanticRole.CLOSE || isNeutralFence(fence);
+  // }
 
 
   /**

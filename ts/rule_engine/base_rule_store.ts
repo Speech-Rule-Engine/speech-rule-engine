@@ -307,6 +307,14 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
 
 
   /**
+   * @return All preconditions in the rule store. For analysis purposes.
+   */
+  public getPreconditions(): Map<string, Condition> {
+    return this.preconditions;
+  }
+
+
+  /**
    * Default constraint parser that adds the locale to the rest constraint
    * (generally, domain.style).
    * @param cstr The constraint string.

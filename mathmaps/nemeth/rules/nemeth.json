@@ -259,6 +259,13 @@
     ],
     [
       "Precondition",
+      "fences-parallel",
+      "default",
+      "self::fenced[@role=\"metric\"]",
+      "content/*[1][text()]=\"∥\""
+    ],
+    [
+      "Precondition",
       "text",
       "default",
       "self::text"

@@ -461,7 +461,8 @@ export class Parser extends DynamicCstrParser {
 // TODO (TS): Replace with a Map to partial meaning elements.
 const REVERSE_MAPPING: string[][] = [
   [
-    'AbsoluteValue', SemanticType.FENCED, SemanticRole.NEUTRAL
+    'AbsoluteValue', SemanticType.FENCED,
+    SemanticRole.NEUTRAL, SemanticRole.METRIC
   ],
   [
     'Bar', SemanticType.OVERSCORE,
