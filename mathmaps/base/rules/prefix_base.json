@@ -2,6 +2,7 @@
   "modality": "prefix",
   "domain": "default",
   "locale": "base",
+  "kind": "abstract",
   "rules": [
     [
       "Precondition",

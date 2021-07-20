@@ -345,23 +345,28 @@
       "fences-neutral",
       "default",
       "self::fenced",
-      "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
+      "@role=\"neutral\""
     ],
     [
       "Precondition",
       "fences-neutral-sbrief",
       "sbrief",
       "self::fenced",
-      "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
+      "@role=\"neutral\""
     ],
     [
       "Precondition",
       "fences-metric",
       "default",
       "self::fenced",
-      "@role=\"neutral\""
+      "@role=\"metric\""
+    ],
+    [
+      "Precondition",
+      "fences-metric-sbrief",
+      "sbrief",
+      "self::fenced",
+      "@role=\"metric\""
     ],
     [
       "Precondition",
