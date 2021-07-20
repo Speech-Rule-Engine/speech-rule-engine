@@ -4276,7 +4276,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "triple vertical bar delimiter"
+        "default": "triple vertical bar"
       }
     },
     "key": "2980"
@@ -7162,7 +7162,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "triple vertical bar binary relation"
+        "default": "triple vertical bar"
       }
     },
     "key": "2AF4"
@@ -7225,7 +7225,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "triple solidus binary relation"
+        "default": "triple solidus"
       }
     },
     "key": "2AFB"

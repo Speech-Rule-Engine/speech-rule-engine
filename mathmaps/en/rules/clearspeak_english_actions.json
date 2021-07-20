@@ -1026,6 +1026,16 @@
     ],
     [
       "Action",
+      "fences-metric",
+      "[p] (pause:short); [t] \"the metric of\" (span:.); [n] children/*[1] (pause: short)"
+    ],
+    [
+      "Action",
+      "fences-metric-absend",
+      "[p] (pause:short); [t] \"the metric of\" (span:content/*[1]); [n] children/*[1] (pause: short); [t] \"end metric\"  (span:content/*[1], pause: short)"
+    ],
+    [
+      "Action",
       "matrix",
       "[t] \"the\"; [t] count(children/*);  [t] \"by\";[t] count(children/*[1]/children/*); [t] \"matrix\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Row-:\", pause:long)"
     ],

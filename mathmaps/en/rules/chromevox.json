@@ -245,7 +245,6 @@
       "Precondition",
       "fences-neutral",
       "default",
-      "self::fenced",
       "self::fenced[@role=\"neutral\"]"
     ],
     [
