@@ -123,7 +123,7 @@
       "self::overscore",
       "contains(@role,\"letter\")",
       "children/*[2][@role=\"overaccent\"]",
-      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
+      "children/*[2][contains(@annotation, \"accent:bar\")]"
     ],
     [
       "Precondition",
@@ -132,7 +132,7 @@
       "self::underscore",
       "contains(@role,\"letter\")",
       "children/*[2][@role=\"underaccent\"]",
-      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
+      "children/*[2][contains(@annotation, \"accent:bar\")]"
     ],
     [
       "Precondition",
@@ -141,7 +141,7 @@
       "self::overscore",
       "children/*[2][@role=\"overaccent\"]",
       "contains(@role,\"letter\")",
-      "children/*[2][text()=\"~\" or text()=\"˜\" or text()=\"∼\" or text()=\"～\"]"
+      "children/*[2][contains(@annotation, \"accent:tilde\")]"
     ],
     [
       "Precondition",
@@ -150,7 +150,7 @@
       "self::underscore",
       "contains(@role,\"letter\")",
       "children/*[2][@role=\"underaccent\"]",
-      "children/*[2][text()=\"~\" or text()=\"˜\" or text()=\"∼\" or text()=\"～\"]"
+      "children/*[2][contains(@annotation, \"accent:tilde\")]"
     ],
     [
       "Alias",

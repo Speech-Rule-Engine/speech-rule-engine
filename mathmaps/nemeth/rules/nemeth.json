@@ -713,6 +713,13 @@
     ],
     [
       "Precondition",
+      "modifier-bar",
+      "default",
+      "self::punctuation[contains(@grammar, \"modifier\")]",
+      "contains(@annotation, \"accent:bar\")"
+    ],
+    [
+      "Precondition",
       "matrix",
       "default",
       "self::matrix"
@@ -830,7 +837,7 @@
       "self::overscore",
       "contains(@role,\"letter\") or contains(@role,\"integer\")",
       "string-length(children/*[1][text()])=1",
-      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
+      "children/*[2][contains(@annotation, \"accent:bar\")]"
     ],
     [
       "Precondition",
@@ -839,7 +846,7 @@
       "self::underscore",
       "contains(@role,\"letter\") or contains(@role,\"integer\")",
       "string-length(children/*[1][text()])=1",
-      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
+      "children/*[2][contains(@annotation, \"accent:bar\")]"
     ],
     [
       "Precondition",

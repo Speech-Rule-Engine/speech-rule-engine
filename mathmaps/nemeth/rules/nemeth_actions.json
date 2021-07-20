@@ -342,32 +342,37 @@
     [
       "Action",
       "overscore",
-      "[t] \"⠐\"; [n] children/*[1]; [t] \"⠣\"; [n] children/*[2]; [t] \"⠻\""
+      "[t] \"⠐\"; [n] children/*[1]; [t] \"⠣\"; [n] children/*[2] (grammar:modifier); [t] \"⠻\""
     ],
     [
       "Action",
       "overscore-modified",
-      "[n] children/*[1]; [t] \"⠣\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"⠣\"; [n] children/*[2] (grammar:modifier)"
     ],
     [
       "Action",
       "double-overscore",
-      "[t] \"⠐\"; [n] children/*[1] (grammar:\"modified\"); [t] \"⠣\"; [n] children/*[2]; [t] \"⠻\""
+      "[t] \"⠐\"; [n] children/*[1] (grammar:modified); [t] \"⠣\"; [n] children/*[2] (grammar:modifier); [t] \"⠻\""
     ],
     [
       "Action",
       "underscore",
-      "[t] \"⠐\"; [n] children/*[1]; [t] \"⠩\"; [n] children/*[2]; [t] \"⠻\""
+      "[t] \"⠐\"; [n] children/*[1]; [t] \"⠩\"; [n] children/*[2] (grammar:modifier); [t] \"⠻\""
     ],
     [
       "Action",
       "underscore-modified",
-      "[n] children/*[1]; [t] \"⠩\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"⠩\"; [n] children/*[2] (grammar:modifier)"
     ],
     [
       "Action",
       "double-underscore",
-      "[t] \"⠐\"; [n] children/*[1] (grammar:\"modified\"); [t] \"⠩\"; [n] children/*[2]; [t] \"⠻\""
+      "[t] \"⠐\"; [n] children/*[1] (grammar:modified); [t] \"⠩\"; [n] children/*[2] (grammar:modifier); [t] \"⠻\""
+    ],
+    [
+      "Action",
+      "modifier-bar",
+      "[t] \"⠱\""
     ],
     [
       "Action",
