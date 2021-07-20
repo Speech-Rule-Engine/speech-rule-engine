@@ -1630,7 +1630,7 @@
         "default": "presentation form for vertical right brace"
       },
       "mathspeak": {
-        "sbrief": "presentation form for vertical r brace"
+        "sbrief": "presentation form for vertical R brace"
       }
     },
     "key": "FE38"
@@ -1696,7 +1696,7 @@
         "default": "presentation form for vertical left angle bracket"
       },
       "mathspeak": {
-        "sbrief": "presentation form for vertical l angle bracket"
+        "sbrief": "presentation form for vertical L angle bracket"
       }
     },
     "key": "FE3F"
@@ -1708,7 +1708,7 @@
         "default": "presentation form for vertical right angle bracket"
       },
       "mathspeak": {
-        "sbrief": "presentation form for vertical r angle bracket"
+        "sbrief": "presentation form for vertical R angle bracket"
       }
     },
     "key": "FE40"
@@ -1770,7 +1770,7 @@
       },
       "mathspeak": {
         "brief": "presentation form for vertical right brack",
-        "sbrief": "presentation form for vertical r brack"
+        "sbrief": "presentation form for vertical R brack"
       }
     },
     "key": "FE48"
@@ -1820,7 +1820,7 @@
         "default": "small right brace"
       },
       "mathspeak": {
-        "sbrief": "small r brace"
+        "sbrief": "small R brace"
       }
     },
     "key": "FE5C"
@@ -1890,7 +1890,7 @@
       },
       "mathspeak": {
         "brief": "fullwidth right brack",
-        "sbrief": "fullwidth r brack"
+        "sbrief": "fullwidth R brack"
       }
     },
     "key": "FF3D"
@@ -1914,7 +1914,7 @@
         "default": "fullwidth right brace"
       },
       "mathspeak": {
-        "sbrief": "fullwidth r brace"
+        "sbrief": "fullwidth R brace"
       }
     },
     "key": "FF5D"

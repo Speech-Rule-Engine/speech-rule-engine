@@ -6,7 +6,7 @@
     "key": "00C0",
     "mappings": {
       "default": {
-        "default": "groß A mit Gravis"
+        "default": "großes A mit Gravis"
       }
     },
     "category": "Lu"
@@ -15,7 +15,7 @@
     "key": "00C1",
     "mappings": {
       "default": {
-        "default": "groß A mit Aigu"
+        "default": "großes A mit Aigu"
       }
     },
     "category": "Lu"
@@ -24,7 +24,7 @@
     "key": "00C2",
     "mappings": {
       "default": {
-        "default": "groß A mit Zirkumflex"
+        "default": "großes A mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -33,7 +33,7 @@
     "key": "00C3",
     "mappings": {
       "default": {
-        "default": "groß A mit Tilde"
+        "default": "großes A mit Tilde"
       }
     },
     "category": "Lu"
@@ -42,7 +42,7 @@
     "key": "00C4",
     "mappings": {
       "default": {
-        "default": "groß A mit Diärese"
+        "default": "großes A mit Diärese"
       }
     },
     "category": "Lu"
@@ -51,7 +51,7 @@
     "key": "00C5",
     "mappings": {
       "default": {
-        "default": "groß A mit Ring darüber"
+        "default": "großes A mit Ring darüber"
       }
     },
     "category": "Lu"
@@ -60,7 +60,7 @@
     "key": "00C7",
     "mappings": {
       "default": {
-        "default": "groß C mit Cedille"
+        "default": "großes C mit Cedille"
       }
     },
     "category": "Lu"
@@ -69,7 +69,7 @@
     "key": "00C8",
     "mappings": {
       "default": {
-        "default": "groß E mit Gravis"
+        "default": "großes E mit Gravis"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "00C9",
     "mappings": {
       "default": {
-        "default": "groß E mit Aigu"
+        "default": "großes E mit Aigu"
       }
     },
     "category": "Lu"
@@ -87,7 +87,7 @@
     "key": "00CA",
     "mappings": {
       "default": {
-        "default": "groß E mit Zirkumflex"
+        "default": "großes E mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -96,7 +96,7 @@
     "key": "00CB",
     "mappings": {
       "default": {
-        "default": "groß E mit Diärese"
+        "default": "großes E mit Diärese"
       }
     },
     "category": "Lu"
@@ -105,7 +105,7 @@
     "key": "00CC",
     "mappings": {
       "default": {
-        "default": "groß I mit Gravis"
+        "default": "großes I mit Gravis"
       }
     },
     "category": "Lu"
@@ -114,7 +114,7 @@
     "key": "00CD",
     "mappings": {
       "default": {
-        "default": "groß I mit Aigu"
+        "default": "großes I mit Aigu"
       }
     },
     "category": "Lu"
@@ -123,7 +123,7 @@
     "key": "00CE",
     "mappings": {
       "default": {
-        "default": "groß I mit Zirkumflex"
+        "default": "großes I mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -132,7 +132,7 @@
     "key": "00CF",
     "mappings": {
       "default": {
-        "default": "groß I mit Diärese"
+        "default": "großes I mit Diärese"
       }
     },
     "category": "Lu"
@@ -159,7 +159,7 @@
     "key": "00D3",
     "mappings": {
       "default": {
-        "default": "groß O mit Aigu"
+        "default": "großes O mit Aigu"
       }
     },
     "category": "Lu"
@@ -168,7 +168,7 @@
     "key": "00D4",
     "mappings": {
       "default": {
-        "default": "groß O mit Zirkumflex"
+        "default": "großes O mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -177,7 +177,7 @@
     "key": "00D5",
     "mappings": {
       "default": {
-        "default": "groß O mit Tilde"
+        "default": "großes O mit Tilde"
       }
     },
     "category": "Lu"
@@ -186,7 +186,7 @@
     "key": "00D6",
     "mappings": {
       "default": {
-        "default": "groß O mit Diärese"
+        "default": "großes O mit Diärese"
       }
     },
     "category": "Lu"
@@ -195,7 +195,7 @@
     "key": "00D9",
     "mappings": {
       "default": {
-        "default": "groß U mit Gravis"
+        "default": "großes U mit Gravis"
       }
     },
     "category": "Lu"
@@ -204,7 +204,7 @@
     "key": "00DA",
     "mappings": {
       "default": {
-        "default": "groß U mit Aigu"
+        "default": "großes U mit Aigu"
       }
     },
     "category": "Lu"
@@ -213,7 +213,7 @@
     "key": "00DB",
     "mappings": {
       "default": {
-        "default": "groß U mit Zirkumflex"
+        "default": "großes U mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -222,7 +222,7 @@
     "key": "00DC",
     "mappings": {
       "default": {
-        "default": "groß U mit Diärese"
+        "default": "großes U mit Diärese"
       }
     },
     "category": "Lu"
@@ -231,7 +231,7 @@
     "key": "00DD",
     "mappings": {
       "default": {
-        "default": "groß Y mit Aigu"
+        "default": "großes Y mit Aigu"
       }
     },
     "category": "Lu"
@@ -241,7 +241,7 @@
     "key": "0100",
     "mappings": {
       "default": {
-        "default": "groß A mit Makron"
+        "default": "großes A mit Makron"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "0102",
     "mappings": {
       "default": {
-        "default": "groß A mit Breve"
+        "default": "großes A mit Breve"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "0104",
     "mappings": {
       "default": {
-        "default": "groß A mit Ogonek"
+        "default": "großes A mit Ogonek"
       }
     }
   },
@@ -267,7 +267,7 @@
     "key": "0106",
     "mappings": {
       "default": {
-        "default": "groß C mit Aigu"
+        "default": "großes C mit Aigu"
       }
     },
     "category": "Lu"
@@ -276,7 +276,7 @@
     "key": "0108",
     "mappings": {
       "default": {
-        "default": "groß C mit Zirkumflex"
+        "default": "großes C mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -285,7 +285,7 @@
     "key": "010A",
     "mappings": {
       "default": {
-        "default": "groß C mit Punkt darüber"
+        "default": "großes C mit Punkt darüber"
       }
     },
     "category": "Lu"
@@ -295,7 +295,7 @@
     "key": "010C",
     "mappings": {
       "default": {
-        "default": "groß C mit Caron"
+        "default": "großes C mit Caron"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "010E",
     "mappings": {
       "default": {
-        "default": "groß D mit Caron"
+        "default": "großes D mit Caron"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "0112",
     "mappings": {
       "default": {
-        "default": "groß E mit Makron"
+        "default": "großes E mit Makron"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "0114",
     "mappings": {
       "default": {
-        "default": "groß E mit Breve"
+        "default": "großes E mit Breve"
       }
     }
   },
@@ -330,7 +330,7 @@
     "key": "0116",
     "mappings": {
       "default": {
-        "default": "groß E mit Punkt darüber"
+        "default": "großes E mit Punkt darüber"
       }
     },
     "category": "Lu"
@@ -340,7 +340,7 @@
     "key": "0118",
     "mappings": {
       "default": {
-        "default": "groß E mit Ogonek"
+        "default": "großes E mit Ogonek"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "011A",
     "mappings": {
       "default": {
-        "default": "groß E mit Caron"
+        "default": "großes E mit Caron"
       }
     }
   },
@@ -357,7 +357,7 @@
     "key": "011C",
     "mappings": {
       "default": {
-        "default": "groß G mit Zirkumflex"
+        "default": "großes G mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -367,7 +367,7 @@
     "key": "011E",
     "mappings": {
       "default": {
-        "default": "groß G mit Breve"
+        "default": "großes G mit Breve"
       }
     }
   },
@@ -375,7 +375,7 @@
     "key": "0120",
     "mappings": {
       "default": {
-        "default": "groß G mit Punkt darüber"
+        "default": "großes G mit Punkt darüber"
       }
     },
     "category": "Lu"
@@ -384,7 +384,7 @@
     "key": "0122",
     "mappings": {
       "default": {
-        "default": "groß G mit Cedille"
+        "default": "großes G mit Cedille"
       }
     },
     "category": "Lu"
@@ -393,7 +393,7 @@
     "key": "0124",
     "mappings": {
       "default": {
-        "default": "groß H mit Zirkumflex"
+        "default": "großes H mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -402,7 +402,7 @@
     "key": "0128",
     "mappings": {
       "default": {
-        "default": "groß I mit Tilde"
+        "default": "großes I mit Tilde"
       }
     },
     "category": "Lu"
@@ -412,7 +412,7 @@
     "key": "012A",
     "mappings": {
       "default": {
-        "default": "groß I mit Makron"
+        "default": "großes I mit Makron"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "012C",
     "mappings": {
       "default": {
-        "default": "groß I mit Breve"
+        "default": "großes I mit Breve"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "012E",
     "mappings": {
       "default": {
-        "default": "groß I mit Ogonek"
+        "default": "großes I mit Ogonek"
       }
     }
   },
@@ -438,7 +438,7 @@
     "key": "0130",
     "mappings": {
       "default": {
-        "default": "groß I mit Punkt darüber"
+        "default": "großes I mit Punkt darüber"
       }
     },
     "category": "Lu"
@@ -447,7 +447,7 @@
     "key": "0134",
     "mappings": {
       "default": {
-        "default": "groß J mit Zirkumflex"
+        "default": "großes J mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -456,7 +456,7 @@
     "key": "0136",
     "mappings": {
       "default": {
-        "default": "groß K mit Cedille"
+        "default": "großes K mit Cedille"
       }
     },
     "category": "Lu"
@@ -465,7 +465,7 @@
     "key": "0139",
     "mappings": {
       "default": {
-        "default": "groß L mit Aigu"
+        "default": "großes L mit Aigu"
       }
     },
     "category": "Lu"
@@ -474,7 +474,7 @@
     "key": "013B",
     "mappings": {
       "default": {
-        "default": "groß L mit Cedille"
+        "default": "großes L mit Cedille"
       }
     },
     "category": "Lu"
@@ -484,7 +484,7 @@
     "key": "013D",
     "mappings": {
       "default": {
-        "default": "groß L mit Caron"
+        "default": "großes L mit Caron"
       }
     }
   },
@@ -492,7 +492,7 @@
     "key": "013F",
     "mappings": {
       "default": {
-        "default": "groß L mit Punkt in der Mitte"
+        "default": "großes L mit Punkt in der Mitte"
       }
     },
     "category": "Lu"
@@ -501,7 +501,7 @@
     "key": "0143",
     "mappings": {
       "default": {
-        "default": "groß N mit Aigu"
+        "default": "großes N mit Aigu"
       }
     },
     "category": "Lu"
@@ -510,7 +510,7 @@
     "key": "0145",
     "mappings": {
       "default": {
-        "default": "groß N mit Cedille"
+        "default": "großes N mit Cedille"
       }
     },
     "category": "Lu"
@@ -520,7 +520,7 @@
     "key": "0147",
     "mappings": {
       "default": {
-        "default": "groß N mit Caron"
+        "default": "großes N mit Caron"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "014C",
     "mappings": {
       "default": {
-        "default": "groß O mit Makron"
+        "default": "großes O mit Makron"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "014E",
     "mappings": {
       "default": {
-        "default": "groß O mit Breve"
+        "default": "großes O mit Breve"
       }
     }
   },
@@ -546,7 +546,7 @@
     "key": "0150",
     "mappings": {
       "default": {
-        "default": "groß O mit doppeltem Aigu"
+        "default": "großes O mit doppeltem Aigu"
       }
     },
     "category": "Lu"
@@ -555,7 +555,7 @@
     "key": "0154",
     "mappings": {
       "default": {
-        "default": "groß R mit Aigu"
+        "default": "großes R mit Aigu"
       }
     },
     "category": "Lu"
@@ -564,7 +564,7 @@
     "key": "0156",
     "mappings": {
       "default": {
-        "default": "groß R mit Cedille"
+        "default": "großes R mit Cedille"
       }
     },
     "category": "Lu"
@@ -574,7 +574,7 @@
     "key": "0158",
     "mappings": {
       "default": {
-        "default": "groß R mit Caron"
+        "default": "großes R mit Caron"
       }
     }
   },
@@ -582,7 +582,7 @@
     "key": "015A",
     "mappings": {
       "default": {
-        "default": "groß S mit Aigu"
+        "default": "großes S mit Aigu"
       }
     },
     "category": "Lu"
@@ -591,7 +591,7 @@
     "key": "015C",
     "mappings": {
       "default": {
-        "default": "groß S mit Zirkumflex"
+        "default": "großes S mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -600,7 +600,7 @@
     "key": "015E",
     "mappings": {
       "default": {
-        "default": "groß S mit Cedille"
+        "default": "großes S mit Cedille"
       }
     },
     "category": "Lu"
@@ -610,7 +610,7 @@
     "key": "0160",
     "mappings": {
       "default": {
-        "default": "groß S mit Caron"
+        "default": "großes S mit Caron"
       }
     }
   },
@@ -618,7 +618,7 @@
     "key": "0162",
     "mappings": {
       "default": {
-        "default": "groß T mit Cedille"
+        "default": "großes T mit Cedille"
       }
     },
     "category": "Lu"
@@ -628,7 +628,7 @@
     "key": "0164",
     "mappings": {
       "default": {
-        "default": "groß T mit Caron"
+        "default": "großes T mit Caron"
       }
     }
   },
@@ -636,7 +636,7 @@
     "key": "0168",
     "mappings": {
       "default": {
-        "default": "groß U mit Tilde"
+        "default": "großes U mit Tilde"
       }
     },
     "category": "Lu"
@@ -646,7 +646,7 @@
     "key": "016A",
     "mappings": {
       "default": {
-        "default": "groß U mit Makron"
+        "default": "großes U mit Makron"
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "016C",
     "mappings": {
       "default": {
-        "default": "groß U mit Breve"
+        "default": "großes U mit Breve"
       }
     }
   },
@@ -663,7 +663,7 @@
     "key": "016E",
     "mappings": {
       "default": {
-        "default": "groß U mit Ring darüber"
+        "default": "großes U mit Ring darüber"
       }
     },
     "category": "Lu"
@@ -672,7 +672,7 @@
     "key": "0170",
     "mappings": {
       "default": {
-        "default": "groß U mit dopppeltem Aigu"
+        "default": "großes U mit dopppeltem Aigu"
       }
     },
     "category": "Lu"
@@ -682,7 +682,7 @@
     "key": "0172",
     "mappings": {
       "default": {
-        "default": "groß U mit Ogonek"
+        "default": "großes U mit Ogonek"
       }
     }
   },
@@ -690,7 +690,7 @@
     "key": "0174",
     "mappings": {
       "default": {
-        "default": "groß W mit Zirkumflex"
+        "default": "großes W mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -699,7 +699,7 @@
     "key": "0176",
     "mappings": {
       "default": {
-        "default": "groß Y mit Zirkumflex"
+        "default": "großes Y mit Zirkumflex"
       }
     },
     "category": "Lu"
@@ -708,7 +708,7 @@
     "key": "0178",
     "mappings": {
       "default": {
-        "default": "groß Y mit Diärese"
+        "default": "großes Y mit Diärese"
       }
     },
     "category": "Lu"
@@ -717,7 +717,7 @@
     "key": "0179",
     "mappings": {
       "default": {
-        "default": "groß Z mit Aigu"
+        "default": "großes Z mit Aigu"
       }
     },
     "category": "Lu"
@@ -726,7 +726,7 @@
     "key": "017B",
     "mappings": {
       "default": {
-        "default": "groß Z mit Punkt darüber"
+        "default": "großes Z mit Punkt darüber"
       }
     },
     "category": "Lu"
@@ -736,7 +736,7 @@
     "key": "017D",
     "mappings": {
       "default": {
-        "default": "groß Z mit Caron"
+        "default": "großes Z mit Caron"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "01CD",
     "mappings": {
       "default": {
-        "default": "groß A mit Caron"
+        "default": "großes A mit Caron"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "01CF",
     "mappings": {
       "default": {
-        "default": "groß I mit Caron"
+        "default": "großes I mit Caron"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "01D1",
     "mappings": {
       "default": {
-        "default": "groß O mit Caron"
+        "default": "großes O mit Caron"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "01D3",
     "mappings": {
       "default": {
-        "default": "groß U mit Caron"
+        "default": "großes U mit Caron"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "01E6",
     "mappings": {
       "default": {
-        "default": "groß G mit Caron"
+        "default": "großes G mit Caron"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "01E8",
     "mappings": {
       "default": {
-        "default": "groß K mit Caron"
+        "default": "großes K mit Caron"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "01EA",
     "mappings": {
       "default": {
-        "default": "groß O mit Ogonek"
+        "default": "großes O mit Ogonek"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "01F4",
     "mappings": {
       "default": {
-        "default": "groß G mit Akut"
+        "default": "großes G mit Akut"
       }
     }
   },
@@ -817,7 +817,7 @@
     "key": "01F8",
     "mappings": {
       "default": {
-        "default": "groß N mit Gravis"
+        "default": "großes N mit Gravis"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "0200",
     "mappings": {
       "default": {
-        "default": "groß A mit Doppelgravis"
+        "default": "großes A mit Doppelgravis"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "0202",
     "mappings": {
       "default": {
-        "default": "groß A mit umgekehrter Breve"
+        "default": "großes A mit umgekehrter Breve"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "0204",
     "mappings": {
       "default": {
-        "default": "groß E mit Doppelgravis"
+        "default": "großes E mit Doppelgravis"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0206",
     "mappings": {
       "default": {
-        "default": "groß E mit umgekehrter Breve"
+        "default": "großes E mit umgekehrter Breve"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0208",
     "mappings": {
       "default": {
-        "default": "groß I mit Doppelgravis"
+        "default": "großes I mit Doppelgravis"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "020A",
     "mappings": {
       "default": {
-        "default": "groß I mit umgekehrter Breve"
+        "default": "großes I mit umgekehrter Breve"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "020C",
     "mappings": {
       "default": {
-        "default": "groß O mit Doppelgravis"
+        "default": "großes O mit Doppelgravis"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "020E",
     "mappings": {
       "default": {
-        "default": "groß O mit umgekehrter Breve"
+        "default": "großes O mit umgekehrter Breve"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "0210",
     "mappings": {
       "default": {
-        "default": "groß R mit Doppelgravis"
+        "default": "großes R mit Doppelgravis"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0212",
     "mappings": {
       "default": {
-        "default": "groß R mit umgekehrter Breve"
+        "default": "großes R mit umgekehrter Breve"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0214",
     "mappings": {
       "default": {
-        "default": "groß U mit Doppelgravis"
+        "default": "großes U mit Doppelgravis"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "0216",
     "mappings": {
       "default": {
-        "default": "groß U mit umgekehrter Breve"
+        "default": "großes U mit umgekehrter Breve"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "0218",
     "mappings": {
       "default": {
-        "default": "groß S mit untenstehendem Komma"
+        "default": "großes S mit untenstehendem Komma"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "021A",
     "mappings": {
       "default": {
-        "default": "groß T mit untenstehendem Komma"
+        "default": "großes T mit untenstehendem Komma"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "021E",
     "mappings": {
       "default": {
-        "default": "groß H mit Caron"
+        "default": "großes H mit Caron"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "0226",
     "mappings": {
       "default": {
-        "default": "groß A mit Punkt oben"
+        "default": "großes A mit Punkt oben"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0228",
     "mappings": {
       "default": {
-        "default": "groß E mit Cedilla"
+        "default": "großes E mit Cedilla"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "022E",
     "mappings": {
       "default": {
-        "default": "groß O mit Punkt oben"
+        "default": "großes O mit Punkt oben"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "0232",
     "mappings": {
       "default": {
-        "default": "groß Y mit Makron"
+        "default": "großes Y mit Makron"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "1E00",
     "mappings": {
       "default": {
-        "default": "groß A mit Ring unten"
+        "default": "großes A mit Ring unten"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "1E02",
     "mappings": {
       "default": {
-        "default": "groß B mit Punkt oben"
+        "default": "großes B mit Punkt oben"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "key": "1E04",
     "mappings": {
       "default": {
-        "default": "groß B mit untenstehendem Punkt"
+        "default": "großes B mit untenstehendem Punkt"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "1E06",
     "mappings": {
       "default": {
-        "default": "groß B mit Zeile darunter"
+        "default": "großes B mit Zeile darunter"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "key": "1E0A",
     "mappings": {
       "default": {
-        "default": "groß D mit Punkt oben"
+        "default": "großes D mit Punkt oben"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "1E0C",
     "mappings": {
       "default": {
-        "default": "groß D mit untenstehendem Punkt"
+        "default": "großes D mit untenstehendem Punkt"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "key": "1E0E",
     "mappings": {
       "default": {
-        "default": "groß D mit Zeile darunter"
+        "default": "großes D mit Zeile darunter"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "1E10",
     "mappings": {
       "default": {
-        "default": "groß D mit Cedilla"
+        "default": "großes D mit Cedilla"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "1E12",
     "mappings": {
       "default": {
-        "default": "groß D mit darunterem Zirkumflex"
+        "default": "großes D mit darunterem Zirkumflex"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "1E18",
     "mappings": {
       "default": {
-        "default": "groß E mit darunterem Zirkumflex"
+        "default": "großes E mit darunterem Zirkumflex"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "key": "1E1A",
     "mappings": {
       "default": {
-        "default": "groß E mit darunterliegender Tilde"
+        "default": "großes E mit darunterliegender Tilde"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "key": "1E1E",
     "mappings": {
       "default": {
-        "default": "groß F mit Punkt oben"
+        "default": "großes F mit Punkt oben"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "1E20",
     "mappings": {
       "default": {
-        "default": "groß G mit Makron"
+        "default": "großes G mit Makron"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "1E22",
     "mappings": {
       "default": {
-        "default": "groß H mit Punkt oben"
+        "default": "großes H mit Punkt oben"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "1E24",
     "mappings": {
       "default": {
-        "default": "groß H mit untenstehendem Punkt"
+        "default": "großes H mit untenstehendem Punkt"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "key": "1E26",
     "mappings": {
       "default": {
-        "default": "groß H mit Diärese"
+        "default": "großes H mit Diärese"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "key": "1E28",
     "mappings": {
       "default": {
-        "default": "groß H mit Cedilla"
+        "default": "großes H mit Cedilla"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "1E2A",
     "mappings": {
       "default": {
-        "default": "groß H mit Breve unten"
+        "default": "großes H mit Breve unten"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "key": "1E2C",
     "mappings": {
       "default": {
-        "default": "groß I mit unten stehender Tilde"
+        "default": "großes I mit unten stehender Tilde"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "1E30",
     "mappings": {
       "default": {
-        "default": "groß K mit Akut"
+        "default": "großes K mit Akut"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "1E32",
     "mappings": {
       "default": {
-        "default": "groß K mit untenstehendem Punkt"
+        "default": "großes K mit untenstehendem Punkt"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "1E34",
     "mappings": {
       "default": {
-        "default": "groß K mit Zeile"
+        "default": "großes K mit Zeile"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "1E36",
     "mappings": {
       "default": {
-        "default": "groß L mit Punkt unten"
+        "default": "großes L mit Punkt unten"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "1E3A",
     "mappings": {
       "default": {
-        "default": "groß L mit Zeile darunter"
+        "default": "großes L mit Zeile darunter"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "key": "1E3C",
     "mappings": {
       "default": {
-        "default": "groß L mit darunterem Zirkumflex"
+        "default": "großes L mit darunterem Zirkumflex"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "1E3E",
     "mappings": {
       "default": {
-        "default": "groß M mit Akut"
+        "default": "großes M mit Akut"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "key": "1E40",
     "mappings": {
       "default": {
-        "default": "groß M mit Punkt oben"
+        "default": "großes M mit Punkt oben"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "key": "1E42",
     "mappings": {
       "default": {
-        "default": "groß M mit untenstehendem Punkt"
+        "default": "großes M mit untenstehendem Punkt"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "key": "1E44",
     "mappings": {
       "default": {
-        "default": "groß N mit Punkt oben"
+        "default": "großes N mit Punkt oben"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "key": "1E46",
     "mappings": {
       "default": {
-        "default": "groß N mit untenstehendem Punkt"
+        "default": "großes N mit untenstehendem Punkt"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "key": "1E48",
     "mappings": {
       "default": {
-        "default": "groß N mit Zeile darunter"
+        "default": "großes N mit Zeile darunter"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "key": "1E4A",
     "mappings": {
       "default": {
-        "default": "groß N mit darunterem Zirkumflex"
+        "default": "großes N mit darunterem Zirkumflex"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "key": "1E54",
     "mappings": {
       "default": {
-        "default": "groß P mit Akut"
+        "default": "großes P mit Akut"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "1E56",
     "mappings": {
       "default": {
-        "default": "groß P mit Punkt oben"
+        "default": "großes P mit Punkt oben"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "key": "1E58",
     "mappings": {
       "default": {
-        "default": "groß R mit Punkt oben"
+        "default": "großes R mit Punkt oben"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "key": "1E5A",
     "mappings": {
       "default": {
-        "default": "groß R mit untenstehendem Punkt"
+        "default": "großes R mit untenstehendem Punkt"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "key": "1E5E",
     "mappings": {
       "default": {
-        "default": "groß R mit Zeile darunter"
+        "default": "großes R mit Zeile darunter"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "key": "1E60",
     "mappings": {
       "default": {
-        "default": "groß S mit Punkt oben"
+        "default": "großes S mit Punkt oben"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "key": "1E62",
     "mappings": {
       "default": {
-        "default": "groß S mit untenstehendem Punkt"
+        "default": "großes S mit untenstehendem Punkt"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "key": "1E6A",
     "mappings": {
       "default": {
-        "default": "groß T mit Punkt oben"
+        "default": "großes T mit Punkt oben"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "key": "1E6C",
     "mappings": {
       "default": {
-        "default": "groß T mit untenstehendem Punkt"
+        "default": "großes T mit untenstehendem Punkt"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "key": "1E6E",
     "mappings": {
       "default": {
-        "default": "groß T mit Zeile darunter"
+        "default": "großes T mit Zeile darunter"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "key": "1E70",
     "mappings": {
       "default": {
-        "default": "groß T mit darunterem Zirkumflex"
+        "default": "großes T mit darunterem Zirkumflex"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "key": "1E72",
     "mappings": {
       "default": {
-        "default": "groß U mit untenstehender Diärese"
+        "default": "großes U mit untenstehender Diärese"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "key": "1E74",
     "mappings": {
       "default": {
-        "default": "groß U mit darunterliegender Tilde"
+        "default": "großes U mit darunterliegender Tilde"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "key": "1E76",
     "mappings": {
       "default": {
-        "default": "groß U mit darunterem Zirkumflex"
+        "default": "großes U mit darunterem Zirkumflex"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "key": "1E7C",
     "mappings": {
       "default": {
-        "default": "groß V mit Tilde"
+        "default": "großes V mit Tilde"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "key": "1E7E",
     "mappings": {
       "default": {
-        "default": "groß V mit untenstehendem Punkt"
+        "default": "großes V mit untenstehendem Punkt"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "key": "1E80",
     "mappings": {
       "default": {
-        "default": "groß W mit Gravis"
+        "default": "großes W mit Gravis"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "key": "1E82",
     "mappings": {
       "default": {
-        "default": "groß W mit Akut"
+        "default": "großes W mit Akut"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "key": "1E84",
     "mappings": {
       "default": {
-        "default": "groß W mit Diärese"
+        "default": "großes W mit Diärese"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "key": "1E86",
     "mappings": {
       "default": {
-        "default": "groß W mit Punkt oben"
+        "default": "großes W mit Punkt oben"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "key": "1E88",
     "mappings": {
       "default": {
-        "default": "groß W mit Punkt unten"
+        "default": "großes W mit Punkt unten"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "key": "1E8A",
     "mappings": {
       "default": {
-        "default": "groß X mit Punkt oben"
+        "default": "großes X mit Punkt oben"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "key": "1E8C",
     "mappings": {
       "default": {
-        "default": "groß X mit Diärese"
+        "default": "großes X mit Diärese"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "key": "1E8E",
     "mappings": {
       "default": {
-        "default": "groß Y mit Punkt oben"
+        "default": "großes Y mit Punkt oben"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "key": "1E90",
     "mappings": {
       "default": {
-        "default": "groß Z mit Zirkumflex"
+        "default": "großes Z mit Zirkumflex"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "1E92",
     "mappings": {
       "default": {
-        "default": "groß Z mit untenstehendem Punkt"
+        "default": "großes Z mit untenstehendem Punkt"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "key": "1E94",
     "mappings": {
       "default": {
-        "default": "groß Z mit Zeile darunter"
+        "default": "großes Z mit Zeile darunter"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "key": "1EA0",
     "mappings": {
       "default": {
-        "default": "groß A mit Punkt unten"
+        "default": "großes A mit Punkt unten"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "key": "1EA2",
     "mappings": {
       "default": {
-        "default": "groß A mit Haken oben"
+        "default": "großes A mit Haken oben"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "1EB8",
     "mappings": {
       "default": {
-        "default": "groß E mit untenstehendem Punkt"
+        "default": "großes E mit untenstehendem Punkt"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "key": "1EBA",
     "mappings": {
       "default": {
-        "default": "groß E mit Haken oben"
+        "default": "großes E mit Haken oben"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "key": "1EBC",
     "mappings": {
       "default": {
-        "default": "groß E mit Tilde"
+        "default": "großes E mit Tilde"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "key": "1EC8",
     "mappings": {
       "default": {
-        "default": "groß I mit Haken oben"
+        "default": "großes I mit Haken oben"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "key": "1ECA",
     "mappings": {
       "default": {
-        "default": "groß I mit untenstehendem Punkt"
+        "default": "großes I mit untenstehendem Punkt"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "key": "1ECC",
     "mappings": {
       "default": {
-        "default": "groß O mit untenstehendem Punkt"
+        "default": "großes O mit untenstehendem Punkt"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "key": "1ECE",
     "mappings": {
       "default": {
-        "default": "groß O mit Haken oben"
+        "default": "großes O mit Haken oben"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "key": "1EE4",
     "mappings": {
       "default": {
-        "default": "groß U mit untenstehendem Punkt"
+        "default": "großes U mit untenstehendem Punkt"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "key": "1EE6",
     "mappings": {
       "default": {
-        "default": "groß U mit Haken oben"
+        "default": "großes U mit Haken oben"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "key": "1EF2",
     "mappings": {
       "default": {
-        "default": "groß Y mit Gravis"
+        "default": "großes Y mit Gravis"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "key": "1EF4",
     "mappings": {
       "default": {
-        "default": "groß Y mit untenstehendem Punkt"
+        "default": "großes Y mit untenstehendem Punkt"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "key": "1EF6",
     "mappings": {
       "default": {
-        "default": "groß Y mit Haken oben"
+        "default": "großes Y mit Haken oben"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "key": "1EF8",
     "mappings": {
       "default": {
-        "default": "groß Y mit Tilde"
+        "default": "großes Y mit Tilde"
       }
     }
   }
