@@ -2580,7 +2580,7 @@
       "name(children/*[3])=\"overscore\"",
       "children/*[3][@role=\"integer\"]",
       "children/*[3]/children/*[2][@role=\"overaccent\"]",
-      "children/*[3]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
+      "children/*[3]/children/*[2][contains(@annotation, \"accent:bar\")]"
     ],
     [
       "Precondition",
@@ -2594,7 +2594,7 @@
       "name(children/*[2])=\"overscore\"",
       "children/*[2][@role=\"integer\"]",
       "children/*[2]/children/*[2][@role=\"overaccent\"]",
-      "children/*[2]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
+      "children/*[2]/children/*[2][contains(@annotation, \"accent:bar\")]"
     ],
     [
       "Precondition",
@@ -2609,7 +2609,7 @@
       "name(children/*[3])=\"overscore\"",
       "children/*[3][@role=\"integer\"]",
       "children/*[3]/children/*[2][@role=\"overaccent\"]",
-      "children/*[3]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]",
+      "children/*[3]/children/*[2][contains(@annotation, \"accent:bar\")]",
       "string-length(./children/*[3]/children/*[1]/text())=1"
     ],
     [
@@ -2624,7 +2624,7 @@
       "name(children/*[2])=\"overscore\"",
       "children/*[2][@role=\"integer\"]",
       "children/*[2]/children/*[2][@role=\"overaccent\"]",
-      "children/*[2]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]",
+      "children/*[2]/children/*[2][contains(@annotation, \"accent:bar\")]",
       "string-length(./children/*[2]/children/*[1]/text())=1"
     ],
     [
@@ -2649,7 +2649,7 @@
       "self::overscore",
       "@role=\"implicit\"",
       "children/*[2][@role=\"overaccent\"]",
-      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]",
+      "children/*[2][contains(@annotation, \"accent:bar\")]",
       "name(children/*[1])=\"infixop\"",
       "count(./children/*[1]/children/*)=2"
     ],
@@ -2659,7 +2659,7 @@
       "Bar_Conjugate",
       "self::overscore",
       "children/*[2][@role=\"overaccent\"]",
-      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
+      "children/*[2][contains(@annotation, \"accent:bar\")]"
     ],
     [
       "Precondition",
