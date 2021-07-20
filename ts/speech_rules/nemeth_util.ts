@@ -283,14 +283,10 @@ export function relationIterator(nodes: Element[], context: string): () =>
     if (!content) {
       return contextDescr;
     }
-    let base = leftChild ?
-        MathspeakUtil.nestedSubSuper(
-            leftChild, '', {sup: LOCALE.MESSAGES.MS.SUPER, sub: LOCALE.MESSAGES.MS.SUB}) :
-        '';
     let left = leftChild && DomUtil.tagName(leftChild) !== 'EMPTY' ||
             first && content.parentNode.parentNode &&
                 content.parentNode.parentNode.previousSibling ?
-        [AuditoryDescription.create({text: '⠀' + base}, {})] :
+        [AuditoryDescription.create({text: '⠀'}, {})] :
         [];
     let right = rightChild && DomUtil.tagName(rightChild) !== 'EMPTY' ||
             !contentNodes.length && content.parentNode.parentNode &&
