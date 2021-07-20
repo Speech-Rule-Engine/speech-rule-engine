@@ -149,7 +149,7 @@ export function isBigOpBoundary(node: SemanticNode): boolean {
 export function isIntegralDxBoundary(
     firstNode: SemanticNode, secondNode: SemanticNode): boolean {
   return !!secondNode && isType(secondNode, SemanticType.IDENTIFIER) &&
-      SemanticAttr.isCharacterD(firstNode.textContent);
+      SemanticAttr.lookupSecondary('d', firstNode.textContent);
 }
 
 
@@ -163,7 +163,7 @@ export function isIntegralDxBoundarySingle(node: SemanticNode): boolean {
   if (isType(node, SemanticType.IDENTIFIER)) {
     let firstChar = node.textContent[0];
     return firstChar && node.textContent[1] &&
-        SemanticAttr.isCharacterD(firstChar);
+      SemanticAttr.lookupSecondary('d', firstChar);
   }
   return false;
 }

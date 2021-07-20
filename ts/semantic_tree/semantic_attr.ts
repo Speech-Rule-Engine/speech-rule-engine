@@ -153,6 +153,7 @@ export const enum SemanticRole {
   ELLIPSIS = 'ellipsis',
   FULLSTOP = 'fullstop',
   DASH = 'dash',
+  TILDE = 'tilde',
   PRIME = 'prime',    // Superscript.
   DEGREE = 'degree',  // Superscript.
   VBAR = 'vbar',      // A vertical bar.
@@ -347,7 +348,9 @@ export namespace SemanticAttr {
   const commas: string[] = ['，', '﹐', ',', invisibleComma_];
   const ellipses: string[] = ['…', '⋮', '⋯', '⋰', '⋱', '︙'];
   const fullStops: string[] = ['.', '﹒', '．'];
-  const dashes: string[] = ['‒', '–', '—', '―', '〜', '︱', '︲', '﹘'];
+  const dashes: string[] = ['¯', '‒', '–', '—', '―', '﹘', '-', '⁻', '₋',
+                            '−', '➖', '﹣', '－', '‐', '‑', '‾', '_'];
+  const tildes: string[] = ['~', '̃', '∼', '˜', '∽', '˷', '̴', '̰'];
   const primes: string[] = ['\'', '′', '″', '‴', '‵', '‶', '‷', '⁗', 'ʹ', 'ʺ'];
   const degrees: string[] = ['°'];
 
@@ -467,7 +470,7 @@ export namespace SemanticAttr {
   const bottomFences: string[] = SemanticUtil.objectsToValues(topBottomPairs);
 
   const neutralFences: string[] =
-      ['|', '¦', '∣', '⏐', '⎸', '⎹', '❘', '｜', '￤'];
+      ['|', '¦', '∣', '⏐', '⎸', '⎹', '❘', '｜', '￤', '︱', '︲'];
   const metricFences: string[] =
       ['‖', '∥', '⦀', '⫴'];
   /**
@@ -716,7 +719,7 @@ export namespace SemanticAttr {
   multiplications.push(invisibleTimes_);
 
   const subtractions: string[] = [
-    '-', '⁒', '⁻', '₋', '−', '∖', '∸',  '≂',  '⊖', '⊟', '➖',
+    '¯', '-', '⁒', '⁻', '₋', '−', '∖', '∸',  '≂',  '⊖', '⊟', '➖',
     '⨩', '⨪', '⨫', '⨬', '⨺', '⩁', '﹣', '－', '‐', '‑'
   ];
   const divisions: string[] = ['/', '÷', '⁄', '∕', '⊘', '⟌', '⦼', '⨸'];
@@ -959,6 +962,11 @@ export namespace SemanticAttr {
         set: dashes,
         type: SemanticType.PUNCTUATION,
         role: SemanticRole.DASH
+      },
+      {
+        set: tildes,
+        type: SemanticType.PUNCTUATION,
+        role: SemanticRole.TILDE
       },
       {
         set: primes,
@@ -1631,16 +1639,55 @@ export namespace SemanticAttr {
   }
 
 
-  // TODO (sorge) Make this depended on position in the alphabets.
   /**
-   * Check if a character is a small 'd' in some font.
-   * @param chr The character string.
-   * @return True if the character is indeed a single small d.
+   * Secondary annotation facility. This allows to compute a special annotation,
+   * if desired.
    */
-  export function isCharacterD(chr: string): boolean {
-    let Ds =
-        ['d', 'ⅆ', 'ｄ', '𝐝', '𝑑', '𝒹', '𝓭', '𝔡', '𝕕', '𝖉', '𝖽', '𝗱', '𝘥', '𝚍'];
-    return Ds.indexOf(chr) !== -1;
+
+  /**
+   * The mapping for secondary annotations.
+   */
+  const secondary_ = new Map();
+
+
+  /**
+   * The key generator for secondary annotations.
+   * @param kind The kind of annotation.
+   * @param char The character to look up.
+   * @return The generated key.
+   */
+  function secKey(kind: string, char: string) {
+    return `${kind} ${char}`;
+  }
+
+
+  /**
+   * Builds the secondary annotation structure.
+   * @param kind The kind of annotation.
+   * @param char The characters to look up.
+   * @param annotation Optionally an annotation value. Default is `kind`.
+   */
+  function addSecondary_(kind: string, chars: string[],
+                         annotation: string = '') {
+    for (let char of chars) {
+      secondary_.set(secKey(kind, char), annotation || kind);
+    }
+  }
+
+  addSecondary_('d', ['d', 'ⅆ', 'ｄ', '𝐝', '𝑑', '𝒹',
+                      '𝓭', '𝔡', '𝕕', '𝖉', '𝖽', '𝗱', '𝘥', '𝚍']);
+  addSecondary_('bar', dashes);
+  addSecondary_('tilde', tildes);
+
+
+  /**
+   * Lookup of secondary annotation.
+   * @param kind The kind of annotation.
+   * @param char The character to look up.
+   * @return The annotation if it exists.
+   */
+  export function lookupSecondary(kind: string, char: string) {
+    return secondary_.get(secKey(kind, char));
   }
 
 }

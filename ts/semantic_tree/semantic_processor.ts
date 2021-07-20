@@ -2559,9 +2559,14 @@ export default class SemanticProcessor {
     if (!SemanticPred.isAccent(node)) {
       return false;
     }
+    // We save the original role of the node as accent annotation.
+    let content = node.textContent;
+    let role = SemanticAttr.lookupSecondary('bar', content) ||
+      SemanticAttr.lookupSecondary('tilde', content) || node.role;
     node.role = type === SemanticType.UNDERSCORE ?
         SemanticRole.UNDERACCENT :
         SemanticRole.OVERACCENT;
+    node.addAnnotation('accent', role);
     return true;
   }
 
@@ -2570,8 +2575,7 @@ export default class SemanticProcessor {
    * Creates an accent style node or sub/superscript depending on the given
    * type.
    * @param center The inner center node.
-   * @param children All children, where center is
-   *     first node.
+   * @param children All children, where center is first node.
    * @param type The new node type.
    * @param length The exact length for the given type. This is important
    *     in case not enough children exist, then the type has to be changed.
