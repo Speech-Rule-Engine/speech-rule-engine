@@ -272,7 +272,7 @@
     [
       "Action",
       "subscript-baseline-brief",
-      "[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]; [t] CSFbaselineBriefS"
+      "[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]; [t] CSFbaselineBrief"
     ],
     [
       "Action",
@@ -297,7 +297,7 @@
     [
       "Action",
       "superscript-baseline-brief",
-      "[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];[t] CSFbaselineBriefS"
+      "[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];[t] CSFbaselineBrief"
     ],
     [
       "Action",
@@ -362,7 +362,7 @@
     [
       "Action",
       "prime-subscript-baseline-brief",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2]; [t] CSFbaselineBriefS"
+      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2]; [t] CSFbaselineBrief"
     ],
     [
       "Action",
