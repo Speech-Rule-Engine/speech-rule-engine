@@ -191,21 +191,6 @@
     ],
     [
       "Action",
-      "fraction",
-      "[t] CSFopenFracVerbose; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracVerbose"
-    ],
-    [
-      "Action",
-      "fraction-brief",
-      "[t] CSFopenFracBrief; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracBrief"
-    ],
-    [
-      "Action",
-      "fraction-sbrief",
-      "[t] CSFopenFracSbrief; [n] children/*[1]; [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief"
-    ],
-    [
-      "Action",
       "vulgar-fraction",
       "[t] CSFvulgarFraction"
     ],
