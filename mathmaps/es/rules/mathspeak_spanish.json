@@ -4,7 +4,31 @@
   "modality": "speech",
   "inherits": "base",
   "rules": [
-        [
+    [
+      "Ignore",
+      "text"
+    ],
+    [
+      "Ignore",
+      "vulgar-fraction"
+    ],
+    [
+      "Ignore",
+      "subscript-simple"
+    ],
+    [
+      "Ignore",
+      "prime-subscript-simple"
+    ],
+    [
+      "Ignore",
+      "unit"
+    ],
+    [
+      "Ignore",
+      "unit-combine"
+    ],
+    [
       "Precondition",
       "unit-singular",
       "default",

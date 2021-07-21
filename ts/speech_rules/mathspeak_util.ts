@@ -861,6 +861,12 @@ export function generateTensorRules(store: SpeechRuleStore,
  *     small index.
  */
 export function smallRoot(node: Element): Element[] {
+  let max = Object.keys(LOCALE.MESSAGES.MSroots).length;
+  if (!max) {
+    return [];
+  } else {
+    max++;
+  }
   if (!node.childNodes || node.childNodes.length === 0 ||
       !node.childNodes[0].childNodes) {
     return [];
@@ -870,6 +876,5 @@ export function smallRoot(node: Element): Element[] {
     return [];
   }
   let num = parseInt(index, 10);
-  let max = Object.keys(LOCALE.MESSAGES.MSroots).length + 1;
   return num > 1 && num <= max ? [node] : [];
 }

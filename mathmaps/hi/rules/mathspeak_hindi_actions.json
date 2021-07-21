@@ -36,11 +36,6 @@
     ],
     [
       "Action",
-      "number",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "mixed-number",
       "[n] children/*[1]; [t] \"पूर्णांक\"; [n] children/*[2]"
     ],
@@ -81,16 +76,6 @@
     ],
     [
       "Action",
-      "identifier-spacing",
-      "[m] CQFspaceoutIdentifier"
-    ],
-    [
-      "Action",
-      "identifier",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "negative-number",
       "[t] \"ऋण\"; [n] children/*[1]"
     ],
@@ -101,48 +86,13 @@
     ],
     [
       "Action",
-      "prefix",
-      "[m] content/*; [n] children/*[1]"
-    ],
-    [
-      "Action",
-      "postfix",
-      "[n] children/*[1]; [m] content/*"
-    ],
-    [
-      "Action",
-      "binary-operation",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
       "division",
       "[n] children/*[1]; [t] \"divided by\"; [n] children/*[2]"
     ],
     [
       "Action",
-      "implicit",
-      "[m] children/*"
-    ],
-    [
-      "Action",
       "subtraction",
       "[m] children/* (separator:\"बाकी\")"
-    ],
-    [
-      "Action",
-      "function-unknown",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "function-prefix",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "fences-open-close",
-      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
     ],
     [
       "Action",
@@ -176,11 +126,6 @@
     ],
     [
       "Action",
-      "text",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "factorial",
       "[t] \"क्रमगुणित\""
     ],
@@ -188,26 +133,6 @@
       "Action",
       "minus",
       "[t] \"बाकी\""
-    ],
-    [
-      "Action",
-      "fraction",
-      "[t] CSFopenFracVerbose; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracVerbose"
-    ],
-    [
-      "Action",
-      "fraction-brief",
-      "[t] CSFopenFracBrief; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracBrief"
-    ],
-    [
-      "Action",
-      "fraction-sbrief",
-      "[t] CSFopenFracSbrief; [n] children/*[1]; [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief"
-    ],
-    [
-      "Action",
-      "vulgar-fraction",
-      "[t] CSFvulgarFraction"
     ],
     [
       "Action",
@@ -233,36 +158,6 @@
       "Action",
       "continued-fraction-inner-sbrief",
       "[t] \"भिन्न\"; [n] children/*[1]; [t] \"ऊपर\"; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "sqrt",
-      "[t] CSFopenRadicalVerbose; [n] children/*[1]; [t] CSFcloseRadicalVerbose"
-    ],
-    [
-      "Action",
-      "sqrt-brief",
-      "[t] CSFopenRadicalBrief; [n] children/*[1]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
-      "sqrt-sbrief",
-      "[t] CSFopenRadicalSbrief; [n] children/*[1]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
-      "root",
-      "[t] CSFindexRadicalVerbose; [n] children/*[1]; [t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose"
-    ],
-    [
-      "Action",
-      "root-brief",
-      "[t] CSFindexRadicalBrief; [n] children/*[1]; [t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
-      "root-sbrief",
-      "[t] CSFindexRadicalSbrief; [n] children/*[1]; [t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
     ],
     [
       "Action",
@@ -296,11 +191,6 @@
     ],
     [
       "Action",
-      "integral-index",
-      "[n] children/*[1]; [n] children/*[2]; [n] children/*[3]"
-    ],
-    [
-      "Action",
       "integral",
       "[n] children/*[1]; [t] \"पादांक\"; [n] children/*[2]; [t] \"उर्ध्वान्क\"; [n] children/*[3]; [t] \"आधार रेखा\""
     ],
@@ -308,86 +198,6 @@
       "Action",
       "integral-brief",
       "[n] children/*[1]; [t] \"अधो\"; [n] children/*[2]; [t] \"उर्ध्व\"; [n] children/*[3]; [t] \"आधार\""
-    ],
-    [
-      "Action",
-      "bigop",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "relseq",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "equality",
-      "[n] children/*[1]; [n] content/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "multi-equality",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "multrel",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "subscript",
-      "[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "subscript-brief",
-      "[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "subscript-simple",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "subscript-baseline",
-      "[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]; [t] CSFbaselineVerbose"
-    ],
-    [
-      "Action",
-      "subscript-baseline-brief",
-      "[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]; [t] CSFbaselineBrief"
-    ],
-    [
-      "Action",
-      "subscript-empty-sup",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "superscript",
-      "[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "superscript-brief",
-      "[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "superscript-baseline",
-      "[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2]; [t] CSFbaselineVerbose"
-    ],
-    [
-      "Action",
-      "superscript-baseline-brief",
-      "[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2]; [t] CSFbaselineBrief"
-    ],
-    [
-      "Action",
-      "superscript-empty-sub",
-      "[n] children/*[1]; [n] children/*[2]"
     ],
     [
       "Action",
@@ -428,31 +238,6 @@
       "Action",
       "counted-prime-multichar",
       "[t] string-length(text()) (grammar:numbers2alpha); [t] \"प्राइम\""
-    ],
-    [
-      "Action",
-      "prime-subscript",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]"
-    ],
-    [
-      "Action",
-      "prime-subscript-brief",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2]"
-    ],
-    [
-      "Action",
-      "prime-subscript-baseline",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]; [t] CSFbaselineVerbose"
-    ],
-    [
-      "Action",
-      "prime-subscript-baseline-brief",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2]; [t] CSFbaselineBrief"
-    ],
-    [
-      "Action",
-      "prime-subscript-simple",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [n] children/*[1]/children/*[2]"
     ],
     [
       "Action",
@@ -551,11 +336,6 @@
     ],
     [
       "Action",
-      "matrix-cell",
-      "[n] children/*[1] (pause:300)"
-    ],
-    [
-      "Action",
       "empty-cell",
       "[t] \"रिक्त\" (pause:300)"
     ],
@@ -578,11 +358,6 @@
       "Action",
       "determinant-simple-sbrief",
       "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
-    ],
-    [
-      "Action",
-      "row-simple",
-      "[m] children/*"
     ],
     [
       "Action",
@@ -613,11 +388,6 @@
       "Action",
       "cases-sbrief",
       "[t] \"खाका\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"खाका समाप्त\""
-    ],
-    [
-      "Action",
-      "line",
-      "[m] children/*"
     ],
     [
       "Action",
@@ -678,31 +448,6 @@
       "Action",
       "cancel-reverse",
       "[t] \"मिटाया हुआ\"; [n] children/*[2]/children/*[1]; [t] \"के साथ\"; [n] children/*[1]; [t] \"मिटाया हुआ समाप्त\""
-    ],
-    [
-      "Action",
-      "end-punct",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "start-punct",
-      "[n] content/*[1]; [m] children/*[position()>1]"
-    ],
-    [
-      "Action",
-      "punctuated",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "unit",
-      "[t] text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "unit-combine",
-      "[m] children/*"
     ],
     [
       "Action",
