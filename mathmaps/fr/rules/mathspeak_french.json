@@ -5,6 +5,10 @@
   "inherits": "romance",
   "rules": [
     [
+      "Ignore",
+      "subscript-simple"
+    ],
+    [
       "Precondition",
       "subscript-simple",
       "brief",

@@ -4,7 +4,11 @@
   "modality": "speech",
   "inherits": "base",
   "rules": [
-        [
+    [
+      "Ignore",
+      "subscript-simple"
+    ],
+    [
       "Precondition",
       "unit-singular",
       "default",

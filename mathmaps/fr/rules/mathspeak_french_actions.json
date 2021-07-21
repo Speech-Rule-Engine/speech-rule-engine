@@ -256,62 +256,12 @@
     ],
     [
       "Action",
-      "subscript",
-      "[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "subscript-brief",
-      "[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]"
-    ],
-    [
-      "Action",
       "logarithm-base",
       "[n] children/*[1]; [t] \"base\"; [n] children/*[2]"
     ],
     [
       "Action",
       "subscript-simple",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "subscript-baseline",
-      "[n] children/*[1]; [t] CSFsubscriptVerbose; [n] children/*[2]; [t] CSFbaselineVerbose"
-    ],
-    [
-      "Action",
-      "subscript-baseline-brief",
-      "[n] children/*[1]; [t] CSFsubscriptBrief; [n] children/*[2]; [t] CSFbaselineBrief"
-    ],
-    [
-      "Action",
-      "subscript-empty-sup",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "superscript",
-      "[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "superscript-brief",
-      "[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "superscript-baseline",
-      "[n] children/*[1]; [t] CSFsuperscriptVerbose; [n] children/*[2];[t] CSFbaselineVerbose"
-    ],
-    [
-      "Action",
-      "superscript-baseline-brief",
-      "[n] children/*[1]; [t] CSFsuperscriptBrief; [n] children/*[2];[t] CSFbaselineBrief"
-    ],
-    [
-      "Action",
-      "superscript-empty-sub",
       "[n] children/*[1]; [n] children/*[2]"
     ],
     [
