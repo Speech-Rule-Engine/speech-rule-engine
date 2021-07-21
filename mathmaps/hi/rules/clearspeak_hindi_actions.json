@@ -641,7 +641,7 @@
     ],
     [
       "Action",
-      "subscript-base",
+      "logarithm-base",
       "[n] children/*[1]; [t] \"आधार\"; [n] children/*[2]"
     ],
     [

@@ -7,7 +7,7 @@
   "rules": [
     [
       "Precondition",
-      "subscript-base",
+      "logarithm-base",
       "default",
       "self::subscript",
       "children/*[1][@category=\"Logarithm\"]",
@@ -17,13 +17,13 @@
     ],
     [
       "Specialized",
-      "subscript-base",
+      "logarithm-base",
       "default",
       "brief"
     ],
     [
       "Specialized",
-      "subscript-base",
+      "logarithm-base",
       "default",
       "sbrief"
     ]

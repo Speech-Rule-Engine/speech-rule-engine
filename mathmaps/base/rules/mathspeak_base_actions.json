@@ -1,0 +1,98 @@
+{
+  "domain": "mathspeak",
+  "locale": "base",
+  "modality": "speech",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "fraction",
+      "[t] CSFopenFracVerbose; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracVerbose"
+    ],
+    [
+      "Action",
+      "fraction-brief",
+      "[t] CSFopenFracBrief; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracBrief"
+    ],
+    [
+      "Action",
+      "fraction-sbrief",
+      "[t] CSFopenFracSbrief; [n] children/*[1]; [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief"
+    ],
+        [
+      "Action",
+      "sqrt",
+      "[t] CSFopenRadicalVerbose; [n] children/*[1]; [t] CSFcloseRadicalVerbose"
+    ],
+    [
+      "Action",
+      "sqrt-brief",
+      "[t] CSFopenRadicalBrief; [n] children/*[1]; [t] CSFcloseRadicalBrief"
+    ],
+    [
+      "Action",
+      "sqrt-sbrief",
+      "[t] CSFopenRadicalSbrief; [n] children/*[1]; [t] CSFcloseRadicalBrief"
+    ],
+    [
+      "Action",
+      "root-small",
+      "[t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose"
+    ],
+    [
+      "Action",
+      "root-small-brief",
+      "[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
+    ],
+    [
+      "Action",
+      "root-small-sbrief",
+      "[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
+    ],
+    [
+      "Action",
+      "root",
+      "[t] CSFindexRadicalVerbose; [n] children/*[1];[t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose"
+    ],
+    [
+      "Action",
+      "root-brief",
+      "[t] CSFindexRadicalBrief; [n] children/*[1];[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
+    ],
+    [
+      "Action",
+      "root-sbrief",
+      "[t] CSFindexRadicalSbrief; [n] children/*[1];[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
+    ],
+    [
+      "Action",
+      "integral-index",
+      "[n] children/*[1]; [n] children/*[2]; [n] children/*[3];"
+    ],
+    [
+      "Action",
+      "bigop",
+      "[n] children/*[1]; [n] children/*[2];"
+    ],
+    [
+      "Action",
+      "relseq",
+      "[m] children/* (sepFunc:CTFcontentIterator)"
+    ],
+    [
+      "Action",
+      "equality",
+      "[n] children/*[1]; [n] content/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "multi-equality",
+      "[m] children/* (sepFunc:CTFcontentIterator)"
+    ],
+    [
+      "Action",
+      "multrel",
+      "[m] children/* (sepFunc:CTFcontentIterator)"
+    ]
+  ]
+}

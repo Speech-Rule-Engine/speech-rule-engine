@@ -251,11 +251,6 @@
     ],
     [
       "Action",
-      "integral-index",
-      "[n] children/*[1]; [n] children/*[2]; [n] children/*[3]"
-    ],
-    [
-      "Action",
       "integral",
       "[n] children/*[1]; [t] \"पादांक\"; [n] children/*[2]; [t] \"उर्ध्वान्क\"; [n] children/*[3]; [t] \"आधार रेखा\""
     ],
@@ -263,31 +258,6 @@
       "Action",
       "integral-brief",
       "[n] children/*[1]; [t] \"अधो\"; [n] children/*[2]; [t] \"उर्ध्व\"; [n] children/*[3]; [t] \"आधार\""
-    ],
-    [
-      "Action",
-      "bigop",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "relseq",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "equality",
-      "[n] children/*[1]; [n] content/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "multi-equality",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "multrel",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
     ],
     [
       "Action",

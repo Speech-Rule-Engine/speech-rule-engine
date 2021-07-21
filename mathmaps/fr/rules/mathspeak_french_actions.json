@@ -246,11 +246,6 @@
     ],
     [
       "Action",
-      "integral-index",
-      "[n] children/*[1]; [n] children/*[2]; [n] children/*[3];"
-    ],
-    [
-      "Action",
       "integral",
       "[n] children/*[1]; [t] \"indice inférieur\"; [n] children/*[2];[t] \"indice supérieur\"; [n] children/*[3]; [t] \"position de base\";"
     ],
@@ -258,31 +253,6 @@
       "Action",
       "integral-brief",
       "[n] children/*[1]; [t] \"inf\"; [n] children/*[2];[t] \"sup\"; [n] children/*[3]; [t] \"position de base\";"
-    ],
-    [
-      "Action",
-      "bigop",
-      "[n] children/*[1]; [n] children/*[2];"
-    ],
-    [
-      "Action",
-      "relseq",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "equality",
-      "[n] children/*[1]; [n] content/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "multi-equality",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "multrel",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
     ],
     [
       "Action",
@@ -296,7 +266,7 @@
     ],
     [
       "Action",
-      "subscript-base",
+      "logarithm-base",
       "[n] children/*[1]; [t] \"base\"; [n] children/*[2]"
     ],
     [
