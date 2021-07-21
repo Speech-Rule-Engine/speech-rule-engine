@@ -88,8 +88,8 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
     SystemExternal.WGXpath = feature.xpath as string;
   }
   engine.setupBrowsers();
-  engine.setDynamicCstr();
   L10n.setLocale();
+  engine.setDynamicCstr();
   SpeechRuleEngine.getInstance().updateEngine();
 }
 
