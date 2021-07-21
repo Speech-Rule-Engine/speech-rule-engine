@@ -433,16 +433,6 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
 
 
   /**
-   * Resolves a single precondition constraint.
-   * @param cstr The precondition constraint.
-   * @return Array of constraints, possibly generated.
-   */
-  private parsePrecondition_(cstr: string): string[] {
-    let generator = this.context.customGenerators.lookup(cstr);
-    return generator ? generator() : [cstr];
-  }
-
-  /**
    * @override
    */
   public defineAction(name: string, action: string) {
@@ -520,9 +510,43 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     });
   }
 
-  public ignoreRules(name: string) {
+
+  /**
+   * Deletes rules from the current store. This is important for omitting
+   * inherited elements.
+   *
+   * @param name The name of the rule to be deleted.
+   */
+  public ignoreRules(name: string, ...cstrs: string[]) {
     let rules = this.findAllRules((r: SpeechRule)  => r.name === name);
-    rules.forEach(this.deleteRule.bind(this));
+    if (!cstrs.length) {
+      rules.forEach(this.deleteRule.bind(this));
+      return;
+    }
+    let rest = [];
+    for (let cstr of cstrs) {
+      let dynamic = this.parseCstr(cstr);
+      for (let rule of rules) {
+        if (dynamic.equal(rule.dynamicCstr)) {
+          this.deleteRule(rule);
+        } else {
+          rest.push(rule);
+        }
+      }
+      rules = rest;
+      rest = [];
+    }
+  }
+
+
+  /**
+   * Resolves a single precondition constraint.
+   * @param cstr The precondition constraint.
+   * @return Array of constraints, possibly generated.
+   */
+  private parsePrecondition_(cstr: string): string[] {
+    let generator = this.context.customGenerators.lookup(cstr);
+    return generator ? generator() : [cstr];
   }
 
 }

@@ -261,11 +261,6 @@
     ],
     [
       "Action",
-      "subscript-simple",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
       "square",
       "[n] children/*[1]; [t] \"au carré\""
     ],
@@ -303,11 +298,6 @@
       "Action",
       "counted-prime-multichar",
       "[t] string-length(text()) (grammar:numbers2alpha); [t] \"prime\""
-    ],
-    [
-      "Action",
-      "prime-subscript-simple",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2];[n] children/*[1]/children/*[2]"
     ],
     [
       "Action",

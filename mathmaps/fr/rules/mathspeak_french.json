@@ -6,45 +6,13 @@
   "rules": [
     [
       "Ignore",
-      "subscript-simple"
-    ],
-    [
-      "Precondition",
       "subscript-simple",
-      "brief",
-      "self::subscript",
-      "name(./children/*[1])=\"identifier\"",
-      "name(./children/*[2])=\"number\"",
-      "./children/*[2][@role!=\"mixed\"]",
-      "./children/*[2][@role!=\"othernumber\"]"
-    ],
-    [
-      "Specialized",
-      "subscript-simple",
-      "brief",
-      "sbrief"
+      "default"
     ],
     [
       "Ignore",
-      "prime-subscript-simple"
-    ],
-    [
-      "Precondition",
       "prime-subscript-simple",
-      "brief",
-      "self::superscript",
-      "children/*[2][@role=\"prime\"]",
-      "name(children/*[1])=\"subscript\"",
-      "name(children/*[1]/children/*[1])=\"identifier\"",
-      "name(children/*[1]/children/*[2])=\"number\"",
-      "children/*[1]/children/*[2][@role!=\"mixed\"]",
-      "children/*[1]/children/*[2][@role!=\"othernumber\"]"
-    ],
-    [
-      "Specialized",
-      "prime-subscript-simple",
-      "brief",
-      "sbrief"
+      "default"
     ],
     [
       "Precondition",
