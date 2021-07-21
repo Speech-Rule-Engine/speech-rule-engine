@@ -5,6 +5,10 @@
   "inherits": "base",
   "rules": [
     [
+      "Ignore",
+      "vulgar-fraction"
+    ],
+    [
       "Precondition",
       "font-number",
       "default",

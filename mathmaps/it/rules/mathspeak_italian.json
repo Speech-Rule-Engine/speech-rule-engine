@@ -5,6 +5,10 @@
   "inherits": "romance",
   "rules": [
     [
+      "Ignore",
+      "vulgar-fraction"
+    ],
+    [
       "Precondition",
       "squared-male",
       "default",

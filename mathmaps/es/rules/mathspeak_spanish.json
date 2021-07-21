@@ -6,6 +6,10 @@
   "rules": [
     [
       "Ignore",
+      "vulgar-fraction"
+    ],
+    [
+      "Ignore",
       "subscript-simple"
     ],
     [

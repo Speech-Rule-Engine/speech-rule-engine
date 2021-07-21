@@ -206,11 +206,6 @@
     ],
     [
       "Action",
-      "vulgar-fraction",
-      "[t] CSFvulgarFraction"
-    ],
-    [
-      "Action",
       "continued-fraction-outer",
       "[t] \"ContinuedFraction\"; [n] children/*[1];[t] \"Over\"; [n] children/*[2]"
     ],

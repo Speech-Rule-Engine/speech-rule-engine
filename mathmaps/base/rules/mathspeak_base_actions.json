@@ -19,7 +19,12 @@
       "fraction-sbrief",
       "[t] CSFopenFracSbrief; [n] children/*[1]; [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief"
     ],
-        [
+    [
+      "Action",
+      "vulgar-fraction",
+      "[t] CSFvulgarFraction"
+    ],
+    [
       "Action",
       "sqrt",
       "[t] CSFopenRadicalVerbose; [n] children/*[1]; [t] CSFcloseRadicalVerbose"
