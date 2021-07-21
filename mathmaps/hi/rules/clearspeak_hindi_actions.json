@@ -12,12 +12,12 @@
     [
       "Action",
       "font",
-      "[t] @font (grammar:localFont); [n] self::* (pause:\"short\", grammar:ignoreFont=@font)"
+      "[t] @font (grammar:localFont); [n] . (pause:\"short\", grammar:ignoreFont=@font)"
     ],
     [
       "Action",
       "font-identifier",
-      "[t] @font (grammar:localFont); [n] self::* (pause:\"short\", grammar:ignoreFont=@font)"
+      "[t] @font (grammar:localFont); [n] . (pause:\"short\", grammar:ignoreFont=@font)"
     ],
     [
       "Action",
@@ -847,7 +847,7 @@
     [
       "Action",
       "set-prefix-operators",
-      "[n] self::* (grammar:!prefix); [t] \"का फलन\""
+      "[n] . (grammar:!prefix); [t] \"का फलन\""
     ],
     [
       "Action",

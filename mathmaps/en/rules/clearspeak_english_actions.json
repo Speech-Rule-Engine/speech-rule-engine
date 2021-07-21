@@ -12,22 +12,22 @@
     [
       "Action",
       "font",
-      "[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:\"short\")"
+      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font,pause:\"short\")"
     ],
     [
       "Action",
       "font-identifier",
-      "[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:\"short\")"
+      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font,pause:\"short\")"
     ],
     [
       "Action",
       "german-font",
-      "[t] \"German\"; [n] self::* (grammar:ignoreFont=@font)"
+      "[t] \"German\"; [n] . (grammar:ignoreFont=@font)"
     ],
     [
       "Action",
       "german-font-bold",
-      "[t] \"bold German\"; [n] self::* (grammar:ignoreFont=@font)"
+      "[t] \"bold German\"; [n] . (grammar:ignoreFont=@font)"
     ],
     [
       "Action",
@@ -847,7 +847,7 @@
     [
       "Action",
       "set-prefix-operators",
-      "[n] self::* (grammar:!prefix:addArticle); [t] \"of\""
+      "[n] . (grammar:!prefix:addArticle); [t] \"of\""
     ],
     [
       "Action",

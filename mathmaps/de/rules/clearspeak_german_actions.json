@@ -12,7 +12,7 @@
     [
       "Action",
       "font",
-      "[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:\"short\")"
+      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font,pause:\"short\")"
     ],
     [
       "Action",
@@ -22,7 +22,7 @@
     [
       "Action",
       "font-identifier",
-      "[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:\"short\")"
+      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font,pause:\"short\")"
     ],
     [
       "Action",
@@ -822,12 +822,12 @@
     [
       "Action",
       "set-prefix-operators-masculine",
-      "[t] \"der\" (grammar:article); [n] self::* (grammar:!prefix); [t] \"von\""
+      "[t] \"der\" (grammar:article); [n] . (grammar:!prefix); [t] \"von\""
     ],
     [
       "Action",
       "set-prefix-operators-feminine",
-      "[t] \"die\" (grammar:article); [n] self::* (grammar:!prefix); [t] \"von\""
+      "[t] \"die\" (grammar:article); [n] . (grammar:!prefix); [t] \"von\""
     ],
     [
       "Action",
