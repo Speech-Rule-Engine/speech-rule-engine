@@ -216,51 +216,6 @@
     ],
     [
       "Action",
-      "sqrt",
-      "[t] CSFopenRadicalVerbose; [n] children/*[1]; [t] CSFcloseRadicalVerbose"
-    ],
-    [
-      "Action",
-      "sqrt-brief",
-      "[t] CSFopenRadicalBrief; [n] children/*[1]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
-      "sqrt-sbrief",
-      "[t] CSFopenRadicalSbrief; [n] children/*[1]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
-      "root-small",
-      "[t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose"
-    ],
-    [
-      "Action",
-      "root-small-brief",
-      "[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
-      "root-small-sbrief",
-      "[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
-      "root",
-      "[t] CSFindexRadicalVerbose; [n] children/*[1];[t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose"
-    ],
-    [
-      "Action",
-      "root-brief",
-      "[t] CSFindexRadicalBrief; [n] children/*[1];[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
-      "root-sbrief",
-      "[t] CSFindexRadicalSbrief; [n] children/*[1];[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
       "limboth",
       "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]"
     ],
