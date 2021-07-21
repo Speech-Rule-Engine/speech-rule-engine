@@ -150,7 +150,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
       'Rule': this.defineRule,
       'Generator': this.generateRules,
       'Action': this.defineAction,
-      'Precondition': this.definePrecondition
+      'Precondition': this.definePrecondition,
+      'Ignore': this.ignoreRules
     };
   }
 
@@ -397,6 +398,9 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     this.kind = ruleSet.kind || this.kind;
     // TODO (TS): Fix this to avoid casting!
     this.context.parse(ruleSet.functions as any || []);
+    if (this.kind !== 'actions') {
+      this.inheritRules();
+    }
     this.parseRules(ruleSet.rules || []);
   }
 
@@ -514,6 +518,11 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
       this.addRule(new SpeechRule(rule.name, newDynamic,
                                   rule.precondition, rule.action));
     });
+  }
+
+  public ignoreRules(name: string) {
+    let rules = this.findAllRules((r: SpeechRule)  => r.name === name);
+    rules.forEach(this.deleteRule.bind(this));
   }
 
 }

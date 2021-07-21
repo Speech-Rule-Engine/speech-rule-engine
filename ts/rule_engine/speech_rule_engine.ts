@@ -807,7 +807,6 @@ export namespace StoreFactory {
         `${set.inherits}.${set.modality}.${set.domain}`);
     }
     store.parse(set);
-    store.inheritRules();
     store.initialize();
     return store;
   }
