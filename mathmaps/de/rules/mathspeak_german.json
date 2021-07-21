@@ -34,26 +34,6 @@
     ],
     [
       "Precondition",
-      "overscore",
-      "default",
-      "self::overscore",
-      "children/*[2][@role=\"overaccent\"]"
-    ],
-    [
-      "Precondition",
-      "overscore-brief",
-      "brief",
-      "self::overscore",
-      "children/*[2][@role=\"overaccent\"]"
-    ],
-    [
-      "Specialized",
-      "overscore-brief",
-      "brief",
-      "sbrief"
-    ],
-    [
-      "Precondition",
       "double-overscore",
       "default",
       "self::overscore",
@@ -73,26 +53,6 @@
     [
       "Specialized",
       "double-overscore-brief",
-      "brief",
-      "sbrief"
-    ],
-    [
-      "Precondition",
-      "underscore",
-      "default",
-      "self::underscore",
-      "children/*[2][@role=\"underaccent\"]"
-    ],
-    [
-      "Precondition",
-      "underscore-brief",
-      "brief",
-      "self::underscore",
-      "children/*[2][@role=\"underaccent\"]"
-    ],
-    [
-      "Specialized",
-      "underscore-brief",
       "brief",
       "sbrief"
     ],
