@@ -9,6 +9,10 @@
       "subscript-simple"
     ],
     [
+      "Ignore",
+      "prime-subscript-simple"
+    ],
+    [
       "Precondition",
       "unit-singular",
       "default",

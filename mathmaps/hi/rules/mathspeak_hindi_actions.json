@@ -301,31 +301,6 @@
     ],
     [
       "Action",
-      "prime-subscript",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]"
-    ],
-    [
-      "Action",
-      "prime-subscript-brief",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2]"
-    ],
-    [
-      "Action",
-      "prime-subscript-baseline",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]; [t] CSFbaselineVerbose"
-    ],
-    [
-      "Action",
-      "prime-subscript-baseline-brief",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2]; [t] CSFbaselineBrief"
-    ],
-    [
-      "Action",
-      "prime-subscript-simple",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [n] children/*[1]/children/*[2]"
-    ],
-    [
-      "Action",
       "overscore",
       "[t] \"ऊपर संशोधित\"; [n] children/*[1]; [t] \"के साथ\"; [n] children/*[2]"
     ],

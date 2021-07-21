@@ -25,6 +25,10 @@
       "sbrief"
     ],
     [
+      "Ignore",
+      "prime-subscript-simple"
+    ],
+    [
       "Precondition",
       "prime-subscript-simple",
       "brief",

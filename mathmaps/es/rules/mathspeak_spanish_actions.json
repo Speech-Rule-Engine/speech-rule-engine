@@ -296,26 +296,6 @@
     ],
     [
       "Action",
-      "prime-subscript",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]"
-    ],
-    [
-      "Action",
-      "prime-subscript-brief",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2]"
-    ],
-    [
-      "Action",
-      "prime-subscript-baseline",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]; [t] CSFbaselineVerbose"
-    ],
-    [
-      "Action",
-      "prime-subscript-baseline-brief",
-      "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptBrief; [n] children/*[1]/children/*[2]; [t] CSFbaselineBrief"
-    ],
-    [
-      "Action",
       "overscore",
       "[t] \"modificando superior\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
     ],
