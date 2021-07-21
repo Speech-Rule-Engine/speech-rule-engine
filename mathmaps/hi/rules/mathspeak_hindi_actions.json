@@ -36,11 +36,6 @@
     ],
     [
       "Action",
-      "number",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "mixed-number",
       "[n] children/*[1]; [t] \"पूर्णांक\"; [n] children/*[2]"
     ],
@@ -81,16 +76,6 @@
     ],
     [
       "Action",
-      "identifier-spacing",
-      "[m] CQFspaceoutIdentifier"
-    ],
-    [
-      "Action",
-      "identifier",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "negative-number",
       "[t] \"ऋण\"; [n] children/*[1]"
     ],
@@ -101,48 +86,13 @@
     ],
     [
       "Action",
-      "prefix",
-      "[m] content/*; [n] children/*[1]"
-    ],
-    [
-      "Action",
-      "postfix",
-      "[n] children/*[1]; [m] content/*"
-    ],
-    [
-      "Action",
-      "binary-operation",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
       "division",
       "[n] children/*[1]; [t] \"divided by\"; [n] children/*[2]"
     ],
     [
       "Action",
-      "implicit",
-      "[m] children/*"
-    ],
-    [
-      "Action",
       "subtraction",
       "[m] children/* (separator:\"बाकी\")"
-    ],
-    [
-      "Action",
-      "function-unknown",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "function-prefix",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "fences-open-close",
-      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
     ],
     [
       "Action",
@@ -173,11 +123,6 @@
       "Action",
       "fences-set-sbrief",
       "[t] \"समुच्चय\"; [n] children/*[1]; [t] \"समुच्चय समाप्त\""
-    ],
-    [
-      "Action",
-      "text",
-      "[n] text()"
     ],
     [
       "Action",
@@ -391,11 +336,6 @@
     ],
     [
       "Action",
-      "matrix-cell",
-      "[n] children/*[1] (pause:300)"
-    ],
-    [
-      "Action",
       "empty-cell",
       "[t] \"रिक्त\" (pause:300)"
     ],
@@ -418,11 +358,6 @@
       "Action",
       "determinant-simple-sbrief",
       "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
-    ],
-    [
-      "Action",
-      "row-simple",
-      "[m] children/*"
     ],
     [
       "Action",
@@ -453,11 +388,6 @@
       "Action",
       "cases-sbrief",
       "[t] \"खाका\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"female\", context:\"पंक्ति \"); [t] \"खाका समाप्त\""
-    ],
-    [
-      "Action",
-      "line",
-      "[m] children/*"
     ],
     [
       "Action",
@@ -518,31 +448,6 @@
       "Action",
       "cancel-reverse",
       "[t] \"मिटाया हुआ\"; [n] children/*[2]/children/*[1]; [t] \"के साथ\"; [n] children/*[1]; [t] \"मिटाया हुआ समाप्त\""
-    ],
-    [
-      "Action",
-      "end-punct",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "start-punct",
-      "[n] content/*[1]; [m] children/*[position()>1]"
-    ],
-    [
-      "Action",
-      "punctuated",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "unit",
-      "[t] text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "unit-combine",
-      "[m] children/*"
     ],
     [
       "Action",

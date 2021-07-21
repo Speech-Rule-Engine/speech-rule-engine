@@ -6,6 +6,10 @@
   "rules": [
     [
       "Ignore",
+      "text"
+    ],
+    [
+      "Ignore",
       "vulgar-fraction"
     ],
     [
@@ -15,6 +19,14 @@
     [
       "Ignore",
       "prime-subscript-simple"
+    ],
+    [
+      "Ignore",
+      "unit"
+    ],
+    [
+      "Ignore",
+      "unit-combine"
     ],
     [
       "Precondition",

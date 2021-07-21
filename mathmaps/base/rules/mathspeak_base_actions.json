@@ -6,6 +6,91 @@
   "rules": [
     [
       "Action",
+      "number",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "identifier-spacing",
+      "[m] CQFspaceoutIdentifier"
+    ],
+    [
+      "Action",
+      "identifier",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "prefix",
+      "[m] content/*; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "postfix",
+      "[n] children/*[1]; [m] content/*"
+    ],
+    [
+      "Action",
+      "binary-operation",
+      "[m] children/* (sepFunc:CTFcontentIterator);"
+    ],
+    [
+      "Action",
+      "implicit",
+      "[m] children/*"
+    ],
+    [
+      "Action",
+      "function-unknown",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "function-prefix",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "fences-open-close",
+      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
+    ],
+    [
+      "Action",
+      "text",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "matrix-cell",
+      "[n] children/*[1] (pause: 300)"
+    ],
+    [
+      "Action",
+      "row-simple",
+      "[m] children/*;"
+    ],
+    [
+      "Action",
+      "line",
+      "[m] children/*"
+    ],
+    [
+      "Action",
+      "end-punct",
+      "[m] children/*"
+    ],
+    [
+      "Action",
+      "start-punct",
+      "[n] content/*[1]; [m] children/*[position()>1]"
+    ],
+    [
+      "Action",
+      "punctuated",
+      "[m] children/*"
+    ],
+    [
+      "Action",
       "fraction",
       "[t] CSFopenFracVerbose; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracVerbose"
     ],
@@ -178,6 +263,16 @@
       "Action",
       "prime-subscript-simple",
       "[n] children/*[1]/children/*[1]; [n] children/*[2];[n] children/*[1]/children/*[2]"
+    ],
+        [
+      "Action",
+      "unit",
+      "[t] text() (grammar:annotation=\"unit\":translate:plural)"
+    ],
+    [
+      "Action",
+      "unit-combine",
+      "[m] children/*"
     ]
   ]
 }

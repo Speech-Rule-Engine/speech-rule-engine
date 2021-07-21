@@ -36,11 +36,6 @@
     ],
     [
       "Action",
-      "number",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "mixed-number",
       "[n] children/*[1]; [t] \"et\"; [n] children/*[2]; "
     ],
@@ -76,16 +71,6 @@
     ],
     [
       "Action",
-      "identifier-spacing",
-      "[m] CQFspaceoutIdentifier"
-    ],
-    [
-      "Action",
-      "identifier",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "negative-number",
       "[t] \"négatif\"; [n] children/*[1]"
     ],
@@ -96,48 +81,13 @@
     ],
     [
       "Action",
-      "prefix",
-      "[m] content/*; [n] children/*[1]"
-    ],
-    [
-      "Action",
-      "postfix",
-      "[n] children/*[1]; [m] content/*"
-    ],
-    [
-      "Action",
-      "binary-operation",
-      "[m] children/* (sepFunc:CTFcontentIterator);"
-    ],
-    [
-      "Action",
       "division",
       "[n] children/*[1]; [t] \"divisé par\"; [n] children/*[2]"
     ],
     [
       "Action",
-      "implicit",
-      "[m] children/*"
-    ],
-    [
-      "Action",
       "subtraction",
       "[m] children/* (separator:\"moins\");"
-    ],
-    [
-      "Action",
-      "function-unknown",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "function-prefix",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "fences-open-close",
-      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
     ],
     [
       "Action",
@@ -168,11 +118,6 @@
       "Action",
       "fences-set-sbrief",
       "[t] \"ensemble\"; [n] children/*[1]; [t] \"fin ensemble\""
-    ],
-    [
-      "Action",
-      "text",
-      "[n] text()"
     ],
     [
       "Action",
@@ -351,11 +296,6 @@
     ],
     [
       "Action",
-      "matrix-cell",
-      "[n] children/*[1] (pause: 300)"
-    ],
-    [
-      "Action",
       "empty-cell",
       "[t] \"vide\" (pause: 300)"
     ],
@@ -378,11 +318,6 @@
       "Action",
       "determinant-simple-sbrief",
       "[t] \"déterminant\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée\",grammar:simpleDet); [t] \"fin déterminant\""
-    ],
-    [
-      "Action",
-      "row-simple",
-      "[m] children/*;"
     ],
     [
       "Action",
@@ -413,11 +348,6 @@
       "Action",
       "cases-sbrief",
       "[t] \"tableau\"; [n] content/*[1]; [t] \"élargie\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\""
-    ],
-    [
-      "Action",
-      "line",
-      "[m] children/*"
     ],
     [
       "Action",
@@ -491,26 +421,6 @@
     ],
     [
       "Action",
-      "end-punct",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "start-punct",
-      "[n] content/*[1]; [m] children/*[position()>1]"
-    ],
-    [
-      "Action",
-      "punctuated",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "unit",
-      "[t] text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
       "unit-square",
       "[n] children/*[1]; [t] \"carré\""
     ],
@@ -518,11 +428,6 @@
       "Action",
       "unit-cubic",
       "[n] children/*[1]; [t] \"cube\""
-    ],
-    [
-      "Action",
-      "unit-combine",
-      "[m] children/*"
     ]
   ]
 }

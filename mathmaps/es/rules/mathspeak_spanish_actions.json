@@ -36,11 +36,6 @@
     ],
     [
       "Action",
-      "number",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "mixed-number",
       "[n] children/*[1]; [t] \"más\"; [n] children/*[2]; "
     ],
@@ -81,16 +76,6 @@
     ],
     [
       "Action",
-      "identifier-spacing",
-      "[m] CQFspaceoutIdentifier"
-    ],
-    [
-      "Action",
-      "identifier",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "negative-number",
       "[t] \"menos\"; [n] children/*[1]"
     ],
@@ -101,48 +86,13 @@
     ],
     [
       "Action",
-      "prefix",
-      "[m] content/*; [n] children/*[1]"
-    ],
-    [
-      "Action",
-      "postfix",
-      "[n] children/*[1]; [m] content/*"
-    ],
-    [
-      "Action",
-      "binary-operation",
-      "[m] children/* (sepFunc:CTFcontentIterator);"
-    ],
-    [
-      "Action",
       "division",
       "[n] children/*[1]; [t] \"dividido\"; [n] children/*[2]"
     ],
     [
       "Action",
-      "implicit",
-      "[m] children/*"
-    ],
-    [
-      "Action",
       "subtraction",
       "[m] children/* (separator:\"menos\");"
-    ],
-    [
-      "Action",
-      "function-unknown",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "function-prefix",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "fences-open-close",
-      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
     ],
     [
       "Action",
@@ -391,11 +341,6 @@
     ],
     [
       "Action",
-      "matrix-cell",
-      "[n] children/*[1] (pause: 300)"
-    ],
-    [
-      "Action",
       "empty-cell",
       "[t] \"espacio\" (pause: 300)"
     ],
@@ -418,11 +363,6 @@
       "Action",
       "determinant-simple-sbrief",
       "[t] \"determinante\"; [t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila\",grammar:simpleDet); [t] \"finalizar determinante\""
-    ],
-    [
-      "Action",
-      "row-simple",
-      "[m] children/*;"
     ],
     [
       "Action",
@@ -453,11 +393,6 @@
       "Action",
       "cases-sbrief",
       "[t] \"esquema\"; [n] content/*[1]; [t] \"alargada\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"fila \"); [t] \"finalizar esquema\""
-    ],
-    [
-      "Action",
-      "line",
-      "[m] children/*"
     ],
     [
       "Action",
@@ -518,21 +453,6 @@
       "Action",
       "cancel-reverse",
       "[t] \"tachado\"; [n] children/*[2]/children/*[1]; [t] \"con\"; [n] children/*[1]; [t] \"finalizar tachado\""
-    ],
-    [
-      "Action",
-      "end-punct",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "start-punct",
-      "[n] content/*[1]; [m] children/*[position()>1]"
-    ],
-    [
-      "Action",
-      "punctuated",
-      "[m] children/*"
     ],
     [
       "Action",
