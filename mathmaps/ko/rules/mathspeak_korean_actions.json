@@ -77,17 +77,17 @@
     [
       "Action",
       "number-baseline-brief",
-      "[t] \"Base\"; [n] . (grammar:baseline)"
+      "[t] \"보류 : (Base) 기준\"; [n] . (grammar:baseline)"
     ],
     [
       "Action",
       "number-baseline-font",
-      "[t] \"Baseline\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
+      "[t] \"보류 : (Baseline) 기준\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
     ],
     [
       "Action",
       "number-baseline-font-brief",
-      "[t] \"Base\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
+      "[t] \"보류 : (Base) \"; [t] @font; [n] . (grammar:ignoreFont=@font)"
     ],
     [
       "Action",
@@ -157,12 +157,12 @@
     [
       "Action",
       "fences-neutral",
-      "[t] \"절댓값시작\"; [n] children/*[1]; [t] \"절댓값끝\""
+      "[t] \"절댓값 시작\"; [n] children/*[1]; [t] \"절댓값 끝\""
     ],
     [
       "Action",
       "fences-neutral-sbrief",
-      "[t] \"절댓값\"; [n] children/*[1]; [t] \"절댓값끝\""
+      "[t] \"절댓값\"; [n] children/*[1]; [t] \"절댓값 끝\""
     ],
     [
       "Action",
@@ -177,12 +177,12 @@
     [
       "Action",
       "fences-set",
-      "[t] \"집합시작\"; [n] children/*[1]; [t] \"집합끝\""
+      "[t] \"집합 시작\"; [n] children/*[1]; [t] \"집합 끝\""
     ],
     [
       "Action",
       "fences-set-sbrief",
-      "[t] \"집합\"; [n] children/*[1]; [t] \"집합끝\""
+      "[t] \"집합\"; [n] children/*[1]; [t] \"집합 끝\""
     ],
     [
       "Action",
@@ -232,12 +232,12 @@
     [
       "Action",
       "continued-fraction-inner",
-      "[t] \"분수시작\"; [n] children/*[2];[t] \"분의\"; [n] children/*[1]"
+      "[t] \"분수 시작\"; [n] children/*[2];[t] \"분의\"; [n] children/*[1]"
     ],
     [
       "Action",
       "continued-fraction-inner-brief",
-      "[t] \"분수시작\"; [n] children/*[2];[t] \"분의\"; [n] children/*[1]"
+      "[t] \"분수 시작\"; [n] children/*[2];[t] \"분의\"; [n] children/*[1]"
     ],
     [
       "Action",
@@ -292,17 +292,17 @@
     [
       "Action",
       "limboth-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]; [t] \"첨자끝\""
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]; [t] \"첨자 끝\""
     ],
     [
       "Action",
       "limlower-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] \"첨자끝\""
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] \"첨자 끝\""
     ],
     [
       "Action",
       "limupper-end",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]; [t] \"첨자끝\""
+      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]; [t] \"첨자 끝\""
     ],
     [
       "Action",
@@ -312,12 +312,12 @@
     [
       "Action",
       "integral",
-      "[n] children/*[1]; [t] \"아래첨자\"; [n] children/*[2];[t] \"위첨자\"; [n] children/*[3]; [t] \"Baseline\";"
+      "[n] children/*[1]; [t] \"아래 첨자\"; [n] children/*[2];[t] \"위 첨자\"; [n] children/*[3]; [t] \"보류 : (Baseline) : 기준\";"
     ],
     [
       "Action",
       "integral-brief",
-      "[n] children/*[1]; [t] \"아래\"; [n] children/*[2];[t] \"위\"; [n] children/*[3]; [t] \"Base\";"
+      "[n] children/*[1]; [t] \"아래\"; [n] children/*[2];[t] \"위\"; [n] children/*[3]; [t] \"보류 : (Base) : 기준\";"
     ],
     [
       "Action",
@@ -437,7 +437,7 @@
     [
       "Action",
       "counted-prime-multichar",
-      "[t] string-length(text()) (grammar:numbers2alpha); [t] \"prime\""
+      "[t] string-length(text()) (grammar:numbers2alpha); [t] \"프라임\""
     ],
     [
       "Action",
@@ -467,7 +467,7 @@
     [
       "Action",
       "overscore",
-      "[n] children/*[1]; [t] \"위에있는\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"위에 있는\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -487,7 +487,7 @@
     [
       "Action",
       "underscore",
-      "[n] children/*[1]; [t] \"아래에있는\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"아래에 있는\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -497,7 +497,7 @@
     [
       "Action",
       "double-underscore",
-      "[n] children/*[1]; [t] \"아래에있는\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"아래에 있는\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -507,7 +507,7 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"윗줄\""
+      "[n] children/*[1]; [t] \"윗 줄\""
     ],
     [
       "Action",
@@ -517,22 +517,22 @@
     [
       "Action",
       "overtilde",
-      "[n] children/*[1]; [t] \"윗물결\""
+      "[n] children/*[1]; [t] \"윗 물결\""
     ],
     [
       "Action",
       "undertilde",
-      "[n] children/*[1]; [t] \"밑물결\""
+      "[n] children/*[1]; [t] \"밑 물결\""
     ],
     [
       "Action",
       "matrix",
-      "[t] \"시작\"; [t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬끝\""
+      "[t] \"시작\"; [t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬 시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬 끝\""
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬끝\""
+      "[t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬 시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬 끝\""
     ],
     [
       "Action",
@@ -542,7 +542,7 @@
     [
       "Action",
       "row-with-label",
-      "[t] \"꼬리표시작\"; [n] content/*[1]; [t] \"꼬리표끝\" (pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"열\")"
+      "[t] \"꼬리표 시작\"; [n] content/*[1]; [t] \"꼬리표 끝\" (pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"열\")"
     ],
     [
       "Action",
@@ -557,7 +557,7 @@
     [
       "Action",
       "empty-row",
-      "[t] \"Blank\""
+      "[t] \"빈 칸\""
     ],
     [
       "Action",
@@ -567,27 +567,27 @@
     [
       "Action",
       "empty-cell",
-      "[t] \"빈칸\" (pause: 300)"
+      "[t] \"빈 칸\" (pause: 300)"
     ],
     [
       "Action",
       "determinant",
-      "[t] \"시작\"; [t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식끝\""
+      "[t] \"시작\"; [t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식 시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식 끝\""
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식끝\""
+      "[t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식 시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식 끝\""
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"시작\"; [t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행\",grammar:simpleDet); [t] \"행렬식끝\""
+      "[t] \"시작\"; [t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행\",grammar:simpleDet); [t] \"행렬식 끝\""
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행\",grammar:simpleDet); [t] \"행렬식끝\""
+      "[t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행\",grammar:simpleDet); [t] \"행렬식 끝\""
     ],
     [
       "Action",
@@ -597,32 +597,32 @@
     [
       "Action",
       "layout",
-      "[t] \"배열시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"배열끝\""
+      "[t] \"배열 시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"배열 끝\""
     ],
     [
       "Action",
       "layout-sbrief",
-      "[t] \"배열\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"배열끝\""
+      "[t] \"배열\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"배열 끝\""
     ],
     [
       "Action",
       "binomial",
-      "[t] \"이항계수시작 조합\"; [n] children/*[1]/children/*[1]; [t] \"씨\"; [n] children/*[2]/children/*[1];  [t] \"이항계수끝\""
+      "[t] \"이항계수 시작 조합\"; [n] children/*[1]/children/*[1]; [t] \"씨\"; [n] children/*[2]/children/*[1];  [t] \"이항계수 끝\""
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"이항계수\"; [n] children/*[1]/children/*[1]; [t] \"씨\"; [n] children/*[2]/children/*[1];  [t] \"이항계수끝\""
+      "[t] \"이항계수\"; [n] children/*[1]/children/*[1]; [t] \"씨\"; [n] children/*[2]/children/*[1];  [t] \"이항계수 끝\""
     ],
     [
       "Action",
       "cases",
-      "[t] \"배열시작\"; [t] \"확장된\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"배열끝\""
+      "[t] \"배열 시작\"; [t] \"확장된\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"배열 끝\""
     ],
     [
       "Action",
       "cases-sbrief",
-      "[t] \"배열\"; [t] \"큰\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"배열끝\""
+      "[t] \"배열\"; [t] \"큰\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"배열 끝\""
     ],
     [
       "Action",
@@ -632,7 +632,7 @@
     [
       "Action",
       "line-with-label",
-      "[t] \"꼬리표시작\"; [n] content/*[1]; [t] \"꼬리표끝\" (pause: 200); [m] children/*"
+      "[t] \"꼬리표 시작\"; [n] content/*[1]; [t] \"꼬리표 끝\" (pause: 200); [m] children/*"
     ],
     [
       "Action",
@@ -647,47 +647,47 @@
     [
       "Action",
       "empty-line",
-      "[t] \"빈칸\""
+      "[t] \"빈 칸\""
     ],
     [
       "Action",
       "empty-line-with-label",
-      "[t] \"꼬리표시작\"; [n] content/*[1]; [t] \"꼬리표끝\" (pause: 200); [t] \"빈칸\""
+      "[t] \"꼬리표 시작\"; [n] content/*[1]; [t] \"꼬리표 끝\" (pause: 200); [t] \"빈 칸\""
     ],
     [
       "Action",
       "empty-line-with-label-brief",
-      "[t] \"꼬리표\"; [n] content/*[1] (pause: 200); [t] \"빈칸\""
+      "[t] \"꼬리표\"; [n] content/*[1] (pause: 200); [t] \"빈 칸\""
     ],
     [
       "Action",
       "enclose",
-      "[t] \"인클로즈시작\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"인클로즈끝\""
+      "[t] \"인클로즈 시작\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"인클로즈 끝\""
     ],
     [
       "Action",
       "leftbar",
-      "[t] \"수직 선\"; [n] children/*[1]"
+      "[t] \"수직선\"; [n] children/*[1]"
     ],
     [
       "Action",
       "rightbar",
-      "[n] children/*[1]; [t] \"수직 선\""
+      "[n] children/*[1]; [t] \"수직선\""
     ],
     [
       "Action",
       "crossout",
-      "[t] \"소거시작\"; [n] children/*[1]; [t] \"소거끝\""
+      "[t] \"소거 시작\"; [n] children/*[1]; [t] \"소거 끝\""
     ],
     [
       "Action",
       "cancel",
-      "[t] \"소거\"; [n] children/*[1]/children/*[1]; [t] \"을(를)\"; [n] children/*[2]; [t] \"로(으로)\"; [t] \"소거끝\""
+      "[t] \"소거\"; [n] children/*[1]/children/*[1]; [t] \"을(를)\"; [n] children/*[2]; [t] \"로(으로)\"; [t] \"소거 끝\""
     ],
     [
       "Action",
       "cancel-reverse",
-      "[t] \"소거\"; [n] children/*[2]/children/*[1]; [t] \"을\"; [n] children/*[1]; [t] \"로 소거끝\""
+      "[t] \"소거\"; [n] children/*[2]/children/*[1]; [t] \"을\"; [n] children/*[1]; [t] \"로 소거 끝\""
     ],
     [
       "Action",
