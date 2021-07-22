@@ -62,7 +62,7 @@
     [
       "Action",
       "ellipsis-andsoon",
-      "[t] \"보류 (and so on up to)\""
+      "[t] \"보류 (and so on up to) :  ~부터 ~까지로 해석\""
     ],
     [
       "Action",
@@ -77,62 +77,62 @@
     [
       "Action",
       "vbar-such-that",
-      "[t] \"보류 (such that)\""
+      "[t] \"보류 (such that) : 을 만족하는\""
     ],
     [
       "Action",
       "vbar-divides",
-      "[t] \"보류 (divides)\""
+      "[t] \"보류 (divides) : 나누기 or 인수 or 약수\""
     ],
     [
       "Action",
       "vbar-always-divides",
-      "[t] \"보류 (divides)\""
+      "[t] \"보류 (divides) : 나누기 or 인수 or 약수\""
     ],
     [
       "Action",
       "vbar-given",
-      "[t] \"보류(조건부 확률) 바\""
+      "[t] \"보류(조건부 확률) 바 : (A | B) = 조건 B에 대한 A\""
     ],
     [
       "Action",
       "set-member",
-      "[t] \"보류 in\""
+      "[t] \"보류 in : x ㅌ A = x는 A의 원소이다\""
     ],
     [
       "Action",
       "set-member-member",
-      "[t] \"보류 member of\""
+      "[t] \"보류 member of : x ㅌ A = x는 A의 원소이다\""
     ],
     [
       "Action",
       "set-member-element",
-      "[t] \"보류 element of\""
+      "[t] \"보류 element of : x ㅌ A = x는 A의 원소이다\""
     ],
     [
       "Action",
       "set-member-belongs",
-      "[t] \"보류 belonging to\""
+      "[t] \"보류 belonging to : x ㅌ A = x는 A의 원소이다\""
     ],
     [
       "Action",
       "set-not-member",
-      "[t] \"보류 not in\""
+      "[t] \"보류 not in : x ㅌ/ A = x는 A의 원소가 아니다\""
     ],
     [
       "Action",
       "set-not-member-member",
-      "[t] \"보류 not member of\""
+      "[t] \"보류 not member of : x ㅌ/ A = x는 A의 원소가 아니다\""
     ],
     [
       "Action",
       "set-not-member-element",
-      "[t] \"보류 not element of\""
+      "[t] \"보류 not element of : x ㅌ/ A = x는 A의 원소가 아니다\""
     ],
     [
       "Action",
       "set-not-member-belongs",
-      "[t] \"보류 not belonging to\""
+      "[t] \"보류 not belonging to : x ㅌ/ A = x는 A의 원소가 아니다\""
     ],
     [
       "Action",
@@ -1402,7 +1402,7 @@
     [
       "Action",
       "defined-by",
-      "[t] \"의 정의는\" (pause:short)"
+      "[t] \"보류 : 의 정의는\" (pause:short)"
     ],
     [
       "Action",
@@ -1542,22 +1542,22 @@
     [
       "Action",
       "enclose",
-      "[t] \"enclosed with\"; [t] @role (grammar:localEnclose); [n] children/*[1]"
+      "[t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"보류 : (enclosed with) ~로 둘러싸인\""
     ],
     [
       "Action",
       "enclose-end",
-      "[t] \"enclosed with\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"end enclosed\""
+      "[t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"보류 : (enclosed with) ~로 둘러싸인\"; [t] \"보류 : (end enclosed) 생략\""
     ],
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"horizontal bar\""
+      "[n] children/*[1]; [t] \"윗 줄\""
     ],
     [
       "Action",
       "underbar",
-      "[n] children/*[1]; [t] \"over horizontal bar\""
+      "[n] children/*[1]; [t] \"아랫 줄\""
     ],
     [
       "Action",
@@ -1592,12 +1592,12 @@
     [
       "Action",
       "cancel-over-end",
-      "[t] \"crossed out\"; [n] children/*[1]/children/*[1]; [t] \"with\"; [n] children/*[2]; [t] \"end crossout\""
+      "[t] \"보류 : (crossed out) 생략\"; [n] children/*[1]/children/*[1]; [t] \"을(를)\"; [n] children/*[2]; [t] \"보류 : (end crossout) : 로 소거\""
     ],
     [
       "Action",
       "cancel-under-end",
-      "[t] \"crossed out\"; [n] children/*[2]/children/*[1]; [t] \"with\"; [n] children/*[1]; [t] \"end crossout\""
+      "[t] \"보류 : (crossed out) 생략\"; [n] children/*[2]/children/*[1]; [t] \"을(를)\"; [n] children/*[1]; [t] \"보류 : (end crossout) : 로 소거\""
     ]
   ],
   "annotators": [
