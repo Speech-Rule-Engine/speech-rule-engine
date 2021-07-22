@@ -1362,7 +1362,7 @@
     [
       "Action",
       "decimal-period",
-      "[t] \순환소수\"; [n] children/*[1] (grammar:spaceout); [t] \"점 순환마디\";  [n] children/*[3]/children/*[1] (grammar:spaceout)"
+      "[t] \"순환소수\"; [n] children/*[1] (grammar:spaceout); [t] \"점 순환마디\";  [n] children/*[3]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
