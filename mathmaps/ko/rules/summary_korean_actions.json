@@ -336,17 +336,17 @@
     [
       "Action",
       "abstr-line",
-      "[t] \"in\"; [t] @role (grammar:localRole);"
+      "[t] \"보류 : (in)\"; [t] @role (grammar:localRole);"
     ],
     [
       "Action",
       "abstr-row",
-      "[t] \"in\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"with\";[t] count(children/*); [t] \"columns\""
+      "[t] \"보류 : (in)\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"with\";[t] count(children/*); [t] \"columns\""
     ],
     [
       "Action",
       "abstr-cell",
-      "[t] \"in\"; [t] @role (grammar:localRole);"
+      "[t] \"보류 : (in)\"; [t] @role (grammar:localRole);"
     ]
   ]
 }
