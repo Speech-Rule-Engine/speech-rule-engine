@@ -507,7 +507,7 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"윗 줄\""
+      "[n] children/*[1]; [t] \"윗줄\""
     ],
     [
       "Action",
@@ -517,12 +517,12 @@
     [
       "Action",
       "overtilde",
-      "[n] children/*[1]; [t] \"윗 물결\""
+      "[n] children/*[1]; [t] \"윗물결\""
     ],
     [
       "Action",
       "undertilde",
-      "[n] children/*[1]; [t] \"밑 물결\""
+      "[n] children/*[1]; [t] \"밑물결\""
     ],
     [
       "Action",
