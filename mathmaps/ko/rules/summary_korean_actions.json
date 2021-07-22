@@ -136,12 +136,12 @@
     [
       "Action",
       "abstr-infixop",
-      "[t] count(./children/*); [t] \"개의 원소로 이루어진\"; [t] @role (grammar:localRole)""
+      "[t] count(./children/*); [t] \"개의 원소로 이루어진\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-infixop-var",
-      " [t] \"여러 개의 원소로 이루어진\; [t] @role (grammar:localRole)""
+      "[t] \"여러 개의 원소로 이루어진\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
