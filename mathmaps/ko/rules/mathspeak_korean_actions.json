@@ -202,17 +202,17 @@
     [
       "Action",
       "fraction",
-      "[t] CSFopenFracVerbose; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracVerbose"
+      "[t] CSFopenFracVerbose; [n] children/*[2]; [t] CSFoverFracVerbose; [n] children/*[1]; [t] CSFcloseFracVerbose"
     ],
     [
       "Action",
       "fraction-brief",
-      "[t] CSFopenFracBrief; [n] children/*[1]; [t] CSFoverFracVerbose; [n] children/*[2]; [t] CSFcloseFracBrief"
+      "[t] CSFopenFracBrief; [n] children/*[2]; [t] CSFoverFracVerbose; [n] children/*[1]; [t] CSFcloseFracBrief"
     ],
     [
       "Action",
       "fraction-sbrief",
-      "[t] CSFopenFracSbrief; [n] children/*[1]; [t] CSFoverFracSbrief; [n] children/*[2]; [t] CSFcloseFracSbrief"
+      "[t] CSFopenFracSbrief; [n] children/*[2]; [t] CSFoverFracSbrief; [n] children/*[1]; [t] CSFcloseFracSbrief"
     ],
     [
       "Action",
