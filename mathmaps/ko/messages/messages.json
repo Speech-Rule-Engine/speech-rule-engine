@@ -81,7 +81,7 @@
       "determinant": "행렬식", 
       "rowvector": "행 벡터",
       "binomial": "이항계수",
-      "squarematrix": "정방 행렬",
+      "squarematrix": "정방행렬",
       "multiline": "연립",
       "matrix": "행렬",
       "vector": "벡터",
