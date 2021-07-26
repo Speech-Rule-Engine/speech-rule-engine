@@ -80,7 +80,7 @@ function numberToWords(num: number): string {
  * @return The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, _plural: boolean): string {
-  return wordOrdinal(num);
+  return wordOrdinal(num) + '번째';
 }
 
 
@@ -99,7 +99,7 @@ function wordOrdinal(num: number): string {
   let label: string = tens + ones;
   ordinal = label ? ordinal.slice(0, -label.length + 1) + label : label;
 
-  return ordinal + '번째';
+  return ordinal;
 }
 
 
@@ -109,7 +109,7 @@ function wordOrdinal(num: number): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  return wordOrdinal(num);
+  return numberToOrdinal(num, false);
 }
 
 const NUMBERS: Numbers = NUMB();
