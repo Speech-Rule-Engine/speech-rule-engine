@@ -80,7 +80,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "플러스"
+        "default": "더하기"
       }
     },
     "key": "002B"
