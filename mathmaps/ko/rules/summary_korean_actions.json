@@ -216,7 +216,7 @@
     [
       "Action",
       "abstr-squarematrix",
-      "[t] count(./children/*); [t] \"차원 정사각행렬\""
+      "[t] count(./children/*); [t] \"차원 정방행렬\""
     ],
     [
       "Action",
