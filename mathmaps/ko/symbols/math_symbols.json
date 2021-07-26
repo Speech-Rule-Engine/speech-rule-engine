@@ -162,7 +162,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "동등한"
+        "default": "등호"
       }
     },
     "key": "003D"
@@ -2046,7 +2046,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "동등한"
+        "default": "등호"
       }
     },
     "key": "224D"
