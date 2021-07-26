@@ -12,7 +12,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "따옴표"
+        "default": "큰 따옴표"
       }
     },
     "key": "0022"
@@ -62,7 +62,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "따옴표"
+        "default": "프라임"
       }
     },
     "key": "0027"
@@ -80,7 +80,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "플러스 기호"
+        "default": "더하기"
       }
     },
     "key": "002B"
@@ -7643,7 +7643,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "따옴표"
+        "default": "큰 따옴표"
       }
     },
     "key": "FF02"
