@@ -36,11 +36,12 @@ export function ko(): Locale {
   return locale;
 }
 
+//return (/.*s$/.test(unit)) ? unit : unit + '들' => return (/.*s$/.test(unit)) ? unit : unit + ''
 function create(): Locale {
   let loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.FUNCTIONS.plural = function(unit: string) {
-    return (/.*s$/.test(unit)) ? unit : unit + '들';
+    return (/.*s$/.test(unit)) ? unit : unit + '';
   };
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;

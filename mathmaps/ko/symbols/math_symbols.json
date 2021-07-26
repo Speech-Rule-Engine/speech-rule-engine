@@ -12,7 +12,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "따옴표"
+        "default": "큰 따옴표"
       }
     },
     "key": "0022"
@@ -62,7 +62,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "따옴표"
+        "default": "프라임"
       }
     },
     "key": "0027"
@@ -80,7 +80,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "플러스 기호"
+        "default": "더하기"
       }
     },
     "key": "002B"
@@ -394,7 +394,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "각도"
+        "default": "도"
       },
       "clearspeak": {
         "default": "도"
@@ -935,7 +935,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "윗 줄"
+        "default": "윗줄"
       },
       "mathspeak": {
         "default": "바"
@@ -7643,7 +7643,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "따옴표"
+        "default": "큰 따옴표"
       }
     },
     "key": "FF02"
@@ -7706,7 +7706,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "플러스 기호"
+        "default": "더하기"
       }
     },
     "key": "FF0B"
@@ -7724,7 +7724,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "마이너스 기호"
+        "default": "빼기"
       }
     },
     "key": "FF0D"

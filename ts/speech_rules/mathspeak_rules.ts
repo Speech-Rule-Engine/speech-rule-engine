@@ -22,6 +22,7 @@
 import * as StoreUtil from '../rule_engine/store_util';
 import MathspeakFrenchUtil from './mathspeak_french_util';
 import MathspeakSpanishUtil from './mathspeak_spanish_util';
+import MathspeakKoreanUtil from './mathspeak_korean_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NumbersUtil from './numbers_util';
 import SpeechRules from './speech_rules';
@@ -118,4 +119,14 @@ export function MathspeakRules() {
         'CSFleftsubscriptBrief': MathspeakFrenchUtil.leftSubscriptBrief
       });
 
+  // Korean
+  SpeechRules.addStore(
+    'ko.speech.mathspeak', 'en.speech.mathspeak', {
+      //'CSFoverFracVerbose': MathspeakKoreanUtil.overFractionVerbose,
+      //'CSFoverFracSbrief': MathspeakUtil.overFractionSbrief,
+      'CSFopenFracVerbose': MathspeakKoreanUtil.openingFractionVerbose,
+      'CSFcloseFracVerbose': MathspeakKoreanUtil.closingFractionVerbose,
+      'CSFopenFracBrief': MathspeakKoreanUtil.openingFractionBrief,
+      'CSFcloseFracBrief': MathspeakKoreanUtil.closingFractionBrief
+    });
 }

@@ -1,0 +1,114 @@
+//
+// Copyright 2019-21 Volker Sorge
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+/**
+ * @fileoverview Utility functions for mathspeak rules.
+ * @author volker.sorge@gmail.com (Volker Sorge)
+ */
+
+//
+// This work was sponsored by TextHelp
+//
+
+import * as MathspeakUtil from './mathspeak_util';
+import {LOCALE} from '../l10n/locale';
+
+
+namespace MathspeakKoreanUtil {
+
+/**
+ * Computes disambiguations for nested fractions.
+ * @param node The fraction node.
+ * @param expr The disambiguating expression.
+ * @param opt_end Optional end expression.
+ * @return The disambiguating string.
+ */
+export function nestedFraction( node: Element, expr: string, opt_end?: string): string {
+  let depth = MathspeakUtil.fractionNestingDepth(node);
+  let annotation = Array.apply(null, Array(depth)).map((_x: string) => expr);
+  if (opt_end) {
+    annotation.unshift(opt_end);
+  }
+  return annotation.join(LOCALE.MESSAGES.regexp.JOINER_FRAC);
+}
+
+/**
+ * Opening string for fractions in Mathspeak verbose mode.
+ * @param node The fraction node.
+ * @return The opening string.
+ */
+export function openingFractionVerbose(node: Element): string {
+  return nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_V);
+}
+
+
+/**
+ * Closing string for fractions in Mathspeak verbose mode.
+ * @param node The fraction node.
+ * @return The closing string.
+ */
+export function closingFractionVerbose(node: Element): string {
+  return nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_V);
+}
+
+
+/**
+ * Opening string for fractions in Mathspeak brief mode.
+ * @param node The fraction node.
+ * @return The opening string.
+ */
+export function openingFractionBrief(node: Element): string {
+  return nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_B);
+}
+
+
+/**
+ * Closing string for fractions in Mathspeak brief mode.
+ * @param node The fraction node.
+ * @return The closing string.
+ */
+export function closingFractionBrief(node: Element): string {
+  return nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_B);
+}
+
+
+/**
+ * Middle string for fractions in Mathspeak verbose mode.
+ * @param node The fraction node.
+ * @return The middle string.
+ *
+export function overFractionVerbose(node: Element): string {
+  return nestedFraction(node, LOCALE.MESSAGES.MS.FRAC_OVER);
+}*/
+
+
+/**
+ * Middle string for fractions in Mathspeak superbrief mode.
+ * @param node The fraction node.
+ * @return The middle string.
+ *
+export function overFractionSbrief(node: Element): string {
+  let depth = fractionNestingDepth(node);
+  if (depth === 1) {
+    return LOCALE.MESSAGES.MS.FRAC_OVER;
+  }
+  return LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.MESSAGES.MS.FRAC_OVER);
+}*/
+
+
+}
+export default MathspeakKoreanUtil;

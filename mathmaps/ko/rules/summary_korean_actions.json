@@ -6,142 +6,142 @@
     [
       "Action",
       "abstr-identifier-long",
-      "[t] \"long identifier\""
+      "[t] \"긴 변수\""
     ],
     [
       "Action",
       "abstr-identifier",
-      "[t] \"identifier\""
+      "[t] \"변수\""
     ],
     [
       "Action",
       "abstr-number-long",
-      "[t] \"long number\""
+      "[t] \"긴 수\""
     ],
     [
       "Action",
       "abstr-number",
-      "[t] \"number\""
+      "[t] \"수\""
     ],
     [
       "Action",
       "abstr-mixed-number-long",
-      "[t] \"long mixed number\""
+      "[t] \"긴 대분수\""
     ],
     [
       "Action",
       "abstr-mixed-number",
-      "[t] \"mixed number\""
+      "[t] \"대분수\""
     ],
     [
       "Action",
       "abstr-text",
-      "[t] \"text\""
+      "[t] \"문자\""
     ],
     [
       "Action",
       "abstr-function",
-      "[t] \"functional expression\""
+      "[t] \"함수\""
     ],
     [
       "Action",
       "abstr-function-brief",
-      "[t] \"function\""
+      "[t] \"함수\""
     ],
     [
       "Action",
       "abstr-lim",
-      "[t] \"limit function\""
+      "[t] \"리미트\""
     ],
     [
       "Action",
       "abstr-lim-brief",
-      "[t] \"lim\""
+      "[t] \"리미트\""
     ],
     [
       "Action",
       "abstr-fraction",
-      "[t] \"fraction\""
+      "[t] \"분수\""
     ],
     [
       "Action",
       "abstr-fraction-brief",
-      "[t] \"frac\""
+      "[t] \"분수\""
     ],
     [
       "Action",
       "abstr-continued-fraction",
-      "[t] \"continued fraction\""
+      "[t] \"연분수\""
     ],
     [
       "Action",
       "abstr-continued-fraction-brief",
-      "[t] \"continued frac\""
+      "[t] \"연분수\""
     ],
     [
       "Action",
       "abstr-sqrt",
-      "[t] \"square root\""
+      "[t] \"루트t\""
     ],
     [
       "Action",
       "abstr-sqrt-nested",
-      "[t] \"nested square root\""
+      "[t] \"중첩 루트\""
     ],
     [
       "Action",
       "abstr-root-end",
-      "[t] \"root of index\"; [n] children/*[1] (engine:modality=speech); [t] \"endindex\""
+      "[t] \"루투의 제곱근 시작\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근 끝\""
     ],
     [
       "Action",
       "abstr-root",
-      "[t] \"root of index\"; [n] children/*[1] (engine:modality=speech)"
+      "[n] children/*[1] (engine:modality=speech); [t] \"제곱근\""
     ],
     [
       "Action",
       "abstr-root-brief",
-      "[t] \"root\""
+      "[t] \"루트\""
     ],
     [
       "Action",
       "abstr-root-nested-end",
-      "[t] \"nested root of index\"; [n] children/*[1] (engine:modality=speech); [t] \"endindex\""
+      "[t] \"중첩 루트의 제곱근 시작\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근 끝\""
     ],
     [
       "Action",
       "abstr-root-nested",
-      "[t] \"nested root of index\"; [n] children/*[1] (engine:modality=speech)"
+      "[t] \"중첩 루트의\"; [n] children/*[1] (engine:modality=speech)"
     ],
     [
       "Action",
       "abstr-root-nested-brief",
-      "[t] \"nested root\""
+      "[t] \"중첩 루트\""
     ],
     [
       "Action",
       "abstr-superscript",
-      "[t] \"power\""
+      "[t] \"제곱\""
     ],
     [
       "Action",
       "abstr-subscript",
-      "[t] \"subscript\""
+      "[t] \"아래 첨자\""
     ],
     [
       "Action",
       "abstr-subsup",
-      "[t] \"power with subscript\""
+      "[t] \"제곱과 아래 첨자\""
     ],
     [
       "Action",
       "abstr-infixop",
-      "[t] @role (grammar:localRole); [t] \"with\"; [t] count(./children/*); [t] \"elements\""
+      "[t] count(./children/*); [t] \"개의 원소로 이루어진\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-infixop-var",
-      "[t] @role (grammar:localRole); [t] \"with variable number of elements\""
+      "[t] \"여러 개의 원소로 이루어진\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -151,137 +151,137 @@
     [
       "Action",
       "abstr-addition",
-      "[t] \"sum with\"; [t] count(./children/*); [t] \"summands\""
+      "[t] count(./children/*); [t] \"피가수의 합\""
     ],
     [
       "Action",
       "abstr-addition-brief",
-      "[t] \"sum\""
+      "[t] \"합\""
     ],
     [
       "Action",
       "abstr-addition-var",
-      "[t] \"sum with variable number of summands\""
+      "[t] \"여러 개의 피가수의 합\""
     ],
     [
       "Action",
       "abstr-multiplication",
-      "[t] \"product with\"; [t] count(./children/*); [t] \"factors\""
+      "[t] count(./children/*); [t] \"개의 피연산자의 곱\""
     ],
     [
       "Action",
       "abstr-multiplication-brief",
-      "[t] \"product\""
+      "[t] \"곱\""
     ],
     [
       "Action",
       "abstr-multiplication-var",
-      "[t] \"product with variable number of factors\""
+      "[t] \"여러 개의 피연산자의 곱\""
     ],
     [
       "Action",
       "abstr-vector",
-      "[t] count(./children/*) ; [t] \"dimensional vector\""
+      "[t] count(./children/*) ; [t] \"차원 벡터\""
     ],
     [
       "Action",
       "abstr-vector-brief",
-      "[t] \"vector\""
+      "[t] \"벡터\""
     ],
     [
       "Action",
       "abstr-vector-var",
-      "[t] \"n dimensional vector\""
+      "[t] \"n 차원 벡터\""
     ],
     [
       "Action",
       "abstr-binomial",
-      "[t] \"binomial\""
+      "[t] \"이항식\""
     ],
     [
       "Action",
       "abstr-determinant",
-      "[t] count(./children/*); [t] \"dimensional determinant\""
+      "[t] count(./children/*); [t] \"차원 행렬식\""
     ],
     [
       "Action",
       "abstr-determinant-brief",
-      "[t] \"determinant\""
+      "[t] \"행렬식\""
     ],
     [
       "Action",
       "abstr-determinant-var",
-      "[t] \"n dimensional determinant\""
+      "[t] \"n 차원 행렬식\""
     ],
     [
       "Action",
       "abstr-squarematrix",
-      "[t] count(./children/*); [t] \"dimensional square matrix\""
+      "[t] count(./children/*); [t] \"차원 정사각행렬\""
     ],
     [
       "Action",
       "abstr-squarematrix-brief",
-      "[t] \"square matrix\""
+      "[t] \"정사각행렬\""
     ],
     [
       "Action",
       "abstr-rowvector",
-      "[t] count(./children/row/children/*); [t] \"dimensional row vector\""
+      "[t] count(./children/row/children/*); [t] \"차원 행 벡터\""
     ],
     [
       "Action",
       "abstr-rowvector-brief",
-      "[t] \"row vector\""
+      "[t] \"행 벡터\""
     ],
     [
       "Action",
       "abstr-rowvector-var",
-      "[t] \"n dimensional row vector\""
+      "[t] \"n 차원 행 벡터\""
     ],
     [
       "Action",
       "abstr-matrix",
-      "[t] count(children/*);  [t] \"by\";[t] count(children/*[1]/children/*); [t] \"matrix\""
+      "[t] count(children/*);  [t] \"행\";[t] count(children/*[1]/children/*); [t] \"열의 행렬\""
     ],
     [
       "Action",
       "abstr-matrix-brief",
-      "[t] \"matrix\""
+      "[t] \"행렬\""
     ],
     [
       "Action",
       "abstr-matrix-var",
-      "[t] \"n by m dimensional matrix\""
+      "[t] \"n 행 m 열의 행렬\""
     ],
     [
       "Action",
       "abstr-cases",
-      "[t] \"case statement\";[t] \"with\"; [t] count(children/*); [t] \"cases\""
+      "[t] \"총 케이스 수\"; [t] count(children/*); [t] \"으로 이루어진 조건문\""
     ],
     [
       "Action",
       "abstr-cases-brief",
-      "[t] \"case statement\""
+      "[t] \"조건문\""
     ],
     [
       "Action",
       "abstr-cases-var",
-      "[t] \"case statement with variable number of cases\""
+      "[t] \"여러 개의 케이스로 이루어진 조건문\""
     ],
     [
       "Action",
       "abstr-punctuated",
-      "[n] content/*[1]; [t] \"separated list\"; [t] \"of length\"; [t] count(children/*) - count(content/*)"
+      "[n] content/*[1]; [t] \"로 나누어진\"; [t] \"총 요소의 갯수가\"; [t] count(children/*) - count(content/*); [t] \"인 리스트\""
     ],
     [
       "Action",
       "abstr-punctuated-brief",
-      "[n] content/*[1]; [t] \"separated list\""
+      "[n] content/*[1]; [t] \"로 나누어진 리스트\""
     ],
     [
       "Action",
       "abstr-punctuated-var",
-      "[n] content/*[1]; [t] \"separated list\";[t] \"of variable length\""
+      "[t] \"여러 개의 요소가\"; [n] content/*[1]; [t] \"로 나누어진 리스트\""
     ],
     [
       "Action",
@@ -291,7 +291,7 @@
     [
       "Action",
       "abstr-integral",
-      "[t] \"integral\""
+      "[t] \"적분\""
     ],
     [
       "Action",
@@ -301,52 +301,52 @@
     [
       "Action",
       "abstr-relation-seq",
-      "[t] @role (grammar:localRole); [t] \"sequence\"; [t] \"with\"; [t] count(./children/*); [t] \"elements\""
+      "[t] count(./children/*)-1; [t] \"개의 연속된\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-relation-seq-brief",
-      "[t] @role (grammar:localRole); [t] \"sequence\""
+      "[t] \"연속된\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-relation-var",
-      "[t] @role (grammar:localRole); [t] \"sequence\"; [t] \"with variable number of elements\""
+      "[t] \"여러 개의 연속된\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-multirel",
-      "[t] \"relation sequence\"; [t] \"with\"; [t] count(./children/*); [t] \"elements\""
+      "[t] count(./children/*)-1; [t] \"의 연속된 관계식\""
     ],
     [
       "Action",
       "abstr-multirel-brief",
-      "[t] \"relation sequence\""
+      "[t] \"연속된 관계식\""
     ],
     [
       "Action",
       "abstr-multirel-var",
-      "[t] \"relation sequence with variable number of elements\""
+      "[t] \"여러 개의 연속된 관계식\""
     ],
     [
       "Action",
       "abstr-table",
-      "[t] \"table with\"; [t] count(children/*); [t] \"rows and\";[t] count(children/*[1]/children/*); [t] \"columns\""
+      "[t] count(children/*); [t] \"행\";[t] count(children/*[1]/children/*); [t] \"열로 이루어진 표\""
     ],
     [
       "Action",
       "abstr-line",
-      "[t] \"in\"; [t] @role (grammar:localRole);"
+      "[t] \"보류 : (in)\"; [t] @role (grammar:localRole);"
     ],
     [
       "Action",
       "abstr-row",
-      "[t] \"in\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"with\";[t] count(children/*); [t] \"columns\""
+      "[t] \"보류 : (in)\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"with\";[t] count(children/*); [t] \"columns\""
     ],
     [
       "Action",
       "abstr-cell",
-      "[t] \"in\"; [t] @role (grammar:localRole);"
+      "[t] \"보류 : (in)\"; [t] @role (grammar:localRole);"
     ]
   ]
 }
