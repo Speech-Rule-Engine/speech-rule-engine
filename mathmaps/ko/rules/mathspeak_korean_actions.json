@@ -667,12 +667,12 @@
     [
       "Action",
       "leftbar",
-      "[t] \"수직선\"; [n] children/*[1]"
+      "[t] \"세로선\"; [n] children/*[1]"
     ],
     [
       "Action",
       "rightbar",
-      "[n] children/*[1]; [t] \"수직선\""
+      "[n] children/*[1]; [t] \"세로선\""
     ],
     [
       "Action",
