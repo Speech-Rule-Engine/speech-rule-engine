@@ -382,7 +382,7 @@
     [
       "Action",
       "superscript",
-      "[n] children/*[1]; [t] \"지수 시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수 끝\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"지수시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수끝\" (pause:\"short\")"
     ],
     [
       "Action",
@@ -427,7 +427,7 @@
     [
       "Action",
       "superscript-ordinal-default",
-      "[n] children/*[1]; [t] \"지수 시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수 끝\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"지수시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수끝\" (pause:\"short\")"
     ],
     [
       "Action",
@@ -447,7 +447,7 @@
     [
       "Action",
       "superscript-ordinal-power-default",
-      "[n] children/*[1]; [t] \"지수 시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수 끝\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"지수시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수끝\" (pause:\"short\")"
     ],
     [
       "Action",
@@ -457,7 +457,7 @@
     [
       "Action",
       "superscript-power-default",
-      "[n] children/*[1]; [t] \"지수 시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수 끝\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"지수시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수끝\" (pause:\"short\")"
     ],
     [
       "Action",
@@ -692,7 +692,7 @@
     [
       "Action",
       "fraction-overendfrac",
-      "[p] (pause:short); [n] children/*[2]; [t] \"분의\"; [n] children/*[1] (pause:short); [t] \"분수 끝\" (pause:short)"
+      "[p] (pause:short); [n] children/*[2]; [t] \"분의\"; [n] children/*[1] (pause:short); [t] \"분수끝\" (pause:short)"
     ],
     [
       "Action",
@@ -707,7 +707,7 @@
     [
       "Action",
       "fraction-generalendfrac",
-      "[p] (pause:short); [t] \"분수 시작\"; [p] (pause:short); [t] \"분모가\"; [n] children/*[2] (pause:short); [t] \"이고 분자가\"; [n] children/*[1] (pause:short); [t] \"인 분수 끝\" (pause:short)"
+      "[p] (pause:short); [t] \"분수시작\"; [p] (pause:short); [t] \"분모가\"; [n] children/*[2] (pause:short); [t] \"이고 분자가\"; [n] children/*[1] (pause:short); [t] \"인 분수끝\" (pause:short)"
     ],
     [
       "Action",
@@ -722,7 +722,7 @@
     [
       "Action",
       "fraction-endfrac",
-      "[p] (pause:short); [n] . (grammar:endfrac); [t] \"분수 끝\" (pause:short)"
+      "[p] (pause:short); [n] . (grammar:endfrac); [t] \"분수끝\" (pause:short)"
     ],
     [
       "Action",
@@ -777,22 +777,22 @@
     [
       "Action",
       "sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"루트 끝\" (pause:short)"
+      "[n] . (grammar:EndRoot); [t] \"루트끝\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-endroot",
-      "[n] . (grammar:EndRoot); [t] \"루트 끝\" (pause:short)"
+      "[n] . (grammar:EndRoot); [t] \"루트끝\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"루트 끝\" (pause:short)"
+      "[n] . (grammar:EndRoot); [t] \"루트끝\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"루트 끝\" (pause:short)"
+      "[n] . (grammar:EndRoot); [t] \"루트끝\" (pause:short)"
     ],
     [
       "Action",
@@ -817,12 +817,12 @@
     [
       "Action",
       "root-endroot",
-      "[n] . (grammar:EndRoot); [t] \"루트 끝\" (pause:short)"
+      "[n] . (grammar:EndRoot); [t] \"루트끝\" (pause:short)"
     ],
     [
       "Action",
       "root-posnegsqrootend",
-      "[n] . (grammar:EndRoot); [t] \"루트 끝\" (pause:short)"
+      "[n] . (grammar:EndRoot); [t] \"루트끝\" (pause:short)"
     ],
     [
       "Action",
@@ -1017,7 +1017,7 @@
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"절댓값 시작\" (span:content/*[1]); [n] children/*[1] (pause: short); [t] \"절댓값 끝\"  (span:content/*[1], pause: short)"
+      "[p] (pause:short); [t] \"절댓값시작\" (span:content/*[1]); [n] children/*[1] (pause: short); [t] \"절댓값끝\"  (span:content/*[1], pause: short)"
     ],
     [
       "Action",
@@ -1112,17 +1112,17 @@
     [
       "Action",
       "matrix-end-matrix",
-      "[n] . (grammar:EndMatrix); [t] \"행렬 끝\""
+      "[n] . (grammar:EndMatrix); [t] \"행렬끝\""
     ],
     [
       "Action",
       "matrix-end-vector",
-      "[n] . (grammar:EndMatrix); [t] \"행렬 끝\""
+      "[n] . (grammar:EndMatrix); [t] \"행렬끝\""
     ],
     [
       "Action",
       "matrix-end-determinant",
-      "[n] . (grammar:EndMatrix); [t] \"행렬식 끝\""
+      "[n] . (grammar:EndMatrix); [t] \"행렬식끝\""
     ],
     [
       "Action",
@@ -1147,22 +1147,22 @@
     [
       "Action",
       "vector-end-matrix",
-      "[n] . (grammar:EndMatrix); [t] \"행렬 끝\""
+      "[n] . (grammar:EndMatrix); [t] \"행렬끝\""
     ],
     [
       "Action",
       "vector-end-vector",
-      "[n] . (grammar:EndMatrix); [t] \"벡터 끝\""
+      "[n] . (grammar:EndMatrix); [t] \"벡터끝\""
     ],
     [
       "Action",
       "vector-end-vector-endvector",
-      "[n] . (grammar:EndMatrix); [t] \"벡터 끝\""
+      "[n] . (grammar:EndMatrix); [t] \"벡터끝\""
     ],
     [
       "Action",
       "vector-end-determinant",
-      "[n] . (grammar:EndMatrix); [t] \"행렬식 끝\""
+      "[n] . (grammar:EndMatrix); [t] \"행렬식끝\""
     ],
     [
       "Action",
@@ -1577,7 +1577,7 @@
     [
       "Action",
       "crossout-end",
-      "[t] \"소거 시작\"; [n] children/*[1]; [t] \"소거 끝\""
+      "[t] \"소거시작\"; [n] children/*[1]; [t] \"소거끝\""
     ],
     [
       "Action",

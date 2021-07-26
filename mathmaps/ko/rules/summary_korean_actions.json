@@ -81,7 +81,7 @@
     [
       "Action",
       "abstr-sqrt",
-      "[t] \"루트t\""
+      "[t] \"루트\""
     ],
     [
       "Action",
@@ -91,7 +91,7 @@
     [
       "Action",
       "abstr-root-end",
-      "[t] \"루투의 제곱근 시작\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근 끝\""
+      "[t] \"루트의 제곱근시작\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근끝\""
     ],
     [
       "Action",
@@ -106,7 +106,7 @@
     [
       "Action",
       "abstr-root-nested-end",
-      "[t] \"중첩 루트의 제곱근 시작\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근 끝\""
+      "[t] \"중첩 루트의 제곱근시작\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근끝\""
     ],
     [
       "Action",
@@ -216,12 +216,12 @@
     [
       "Action",
       "abstr-squarematrix",
-      "[t] count(./children/*); [t] \"차원 정사각행렬\""
+      "[t] count(./children/*); [t] \"차원 정방행렬\""
     ],
     [
       "Action",
       "abstr-squarematrix-brief",
-      "[t] \"정사각행렬\""
+      "[t] \"정방행렬\""
     ],
     [
       "Action",
@@ -291,7 +291,7 @@
     [
       "Action",
       "abstr-integral",
-      "[t] \"적분\""
+      "[t] \"인테그럴\""
     ],
     [
       "Action",
