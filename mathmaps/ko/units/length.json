@@ -8,7 +8,7 @@
      }
    },
    "key": "ft",
-   "names": ["ft", "ft."]
+   "names": ["ft", "ft.", "feet"]
   },
   {"category": "length",
    "mappings": {
@@ -18,7 +18,7 @@
      }
    },
    "key": "in",
-   "names": ["in", "in."]
+   "names": ["in", "in.", "inch"]
   },
   {"category": "length",
    "mappings": {
@@ -27,7 +27,7 @@
      }
    },
    "key": "mi",
-   "names": ["mi", "mi."]
+   "names": ["mi", "mi.", "mile", "miles"]
   },
   {"category": "length",
    "mappings": {
@@ -36,7 +36,7 @@
      }
    },
    "key": "yd",
-   "names": ["yd", "yd."]
+   "names": ["yd", "yd.", "yard", "yards"]
   },
 
   {"category": "length",
@@ -94,6 +94,6 @@
      }
    },
    "key": "m",
-   "names": ["m"]
+   "names": ["m", "meter"]
   }
 ]
