@@ -137,7 +137,7 @@
     [
       "Action",
       "vulgar-fraction",
-      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")"
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"m\")"
     ],
     [
       "Action",
@@ -211,12 +211,12 @@
     ],
     [
       "Action",
-      "squared-male",
+      "squared-masculine",
       "[t] \"quadrato\""
     ],
     [
       "Action",
-      "squared-female",
+      "squared-feminine",
       "[t] \"quadrata\""
     ],
     [

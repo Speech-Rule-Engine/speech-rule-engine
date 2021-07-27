@@ -57,7 +57,7 @@
     [
       "Action",
       "leftsub-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"pedice sinistro\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"pedice sinistro\" (pause:200)"
     ],
     [
       "Action",
@@ -67,7 +67,7 @@
     [
       "Action",
       "leftsuper-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"apice sinistro\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"apice sinistro\" (pause:200)"
     ],
     [
       "Action",
@@ -77,7 +77,7 @@
     [
       "Action",
       "rightsub-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"pedice destro\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"pedice destro\" (pause:200)"
     ],
     [
       "Action",
@@ -87,7 +87,7 @@
     [
       "Action",
       "rightsuper-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"apice destro\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"apice destro\" (pause:200)"
     ],
     [
       "Action",
@@ -102,17 +102,17 @@
     [
       "Action",
       "row",
-      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"riga\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"riga\" (pause:200)"
     ],
     [
       "Action",
       "cell",
-      "[n] ../..; [t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"colonna\" (pause:200)"
+      "[n] ../..; [t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"colonna\" (pause:200)"
     ],
     [
       "Action",
       "cell-simple",
-      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"colonna\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"colonna\" (pause:200)"
     ]
   ]
 }

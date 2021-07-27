@@ -57,7 +57,7 @@
     [
       "Action",
       "leftsub-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"indice inférieur gauche\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"indice inférieur gauche\" (pause:200)"
     ],
     [
       "Action",
@@ -67,7 +67,7 @@
     [
       "Action",
       "leftsuper-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"indice supérieur gauche\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"indice supérieur gauche\" (pause:200)"
     ],
     [
       "Action",
@@ -77,7 +77,7 @@
     [
       "Action",
       "rightsub-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"indice inférieur droite\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"indice inférieur droite\" (pause:200)"
     ],
     [
       "Action",
@@ -87,7 +87,7 @@
     [
       "Action",
       "rightsuper-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"male\"); [t] \"indice supérieur droite\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"indice supérieur droite\" (pause:200)"
     ],
     [
       "Action",
@@ -102,17 +102,17 @@
     [
       "Action",
       "row",
-      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"rangée\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"rangée\" (pause:200)"
     ],
     [
       "Action",
       "cell",
-      "[n] ../..; [t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"colonne\" (pause:200)"
+      "[n] ../..; [t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"colonne\" (pause:200)"
     ],
     [
       "Action",
       "cell-simple",
-      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"colonne\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"colonne\" (pause:200)"
     ]
   ]
 }

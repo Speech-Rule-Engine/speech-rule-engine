@@ -486,12 +486,12 @@
     ],
     [
       "Action",
-      "squared-male",
+      "squared-masculine",
       "[t] \"quadrato\""
     ],
     [
       "Action",
-      "squared-female",
+      "squared-feminine",
       "[t] \"quadrata\""
     ],
     [
@@ -687,7 +687,7 @@
     [
       "Action",
       "vulgar-fraction",
-      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")"
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"m\")"
     ],
     [
       "Action",
@@ -722,7 +722,7 @@
     [
       "Action",
       "simple-vulgar-fraction-ordinal",
-      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")"
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"m\")"
     ],
     [
       "Action",
@@ -737,7 +737,7 @@
     [
       "Action",
       "simple-vulgar-fraction-endfrac",
-      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")"
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"m\")"
     ],
     [
       "Action",
@@ -812,12 +812,12 @@
     [
       "Action",
       "root",
-      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"female\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"female\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",

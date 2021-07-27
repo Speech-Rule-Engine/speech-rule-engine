@@ -9,7 +9,7 @@
       "collapsed-masculine",
       "default.default",
       "self::*[@grammar]",
-      "contains(@grammar, \"gender:male\")",
+      "contains(@grammar, \"gender:m\")",
       "contains(@grammar, \"collapsed\")"
     ],
     [
@@ -29,7 +29,7 @@
       "collapsed-feminine",
       "default.default",
       "self::*[@grammar]",
-      "contains(@grammar, \"gender:female\")",
+      "contains(@grammar, \"gender:f\")",
       "contains(@grammar, \"collapsed\")"
     ],
     [
