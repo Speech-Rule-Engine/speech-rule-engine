@@ -8,7 +8,7 @@
      }
    },
    "key": "ft",
-   "names": ["ft", "ft.", "feet"]
+   "names": ["ft", "ft.", "foot", "feet"]
   },
   {"category": "length",
    "mappings": {
@@ -18,7 +18,7 @@
      }
    },
    "key": "in",
-   "names": ["in", "in.", "inch"]
+   "names": ["in", "in.", "inch", "inches"]
   },
   {"category": "length",
    "mappings": {
@@ -94,6 +94,6 @@
      }
    },
    "key": "m",
-   "names": ["m", "meter"]
+   "names": ["m", "meter", "meters"]
   }
 ]

@@ -17,7 +17,7 @@
      }
    },
    "key": "sq inch",
-   "names": ["sq in", "sq. in.", "sq inch", "sq. inch"]
+   "names": ["sq in", "sq. in.", "sq inch", "sq. inch", "square inch", "square inches"]
   },
   {"category": "area",
    "mappings": {
@@ -26,7 +26,7 @@
      }
    },
    "key": "sq rd",
-   "names": ["sq rd", "sq. rd."]
+   "names": ["sq rd", "sq. rd.", "square rod"]
   },
   {"category": "area",
    "mappings": {
@@ -36,7 +36,7 @@
      }
    },
    "key": "sq ft",
-   "names": ["sq ft", "sq. ft."]
+   "names": ["sq ft", "sq. ft.", "square foot", "square feet"]
   },
   {"category": "area",
    "mappings": {
@@ -45,7 +45,7 @@
      }
    },
    "key": "sq yd",
-   "names": ["sq yd", "sq. yd."]
+   "names": ["sq yd", "sq. yd.", "square yard"]
   },
   {"category": "area",
    "mappings": {
@@ -54,7 +54,7 @@
      }
    },
    "key": "sq mi",
-   "names": ["sq mi", "sq. mi."]
+   "names": ["sq mi", "sq. mi.", "square mile"]
   },
   {"category": "area",
    "mappings": {
@@ -63,7 +63,7 @@
      }
    },
    "key": "acr",
-   "names": ["ac", "ac.", "acr", "acr."]
+   "names": ["ac", "ac.", "acr", "acr.", "acre"]
   },
 
   {"category": "area",
@@ -73,6 +73,6 @@
      }
    },
    "key": "ha",
-   "names": ["ha"]
+   "names": ["ha", "hectare"]
   }
 ]
