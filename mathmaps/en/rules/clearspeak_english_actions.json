@@ -652,12 +652,12 @@
     [
       "Action",
       "fraction",
-      "[p] (pause:short); [t] \"the\" (grammar:noarticle); [t] \"fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"the\" (grammar:article); [t] \"fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "fraction-none",
-      "[p] (pause:short); [t] \"the\" (grammar:noarticle); [t] \"fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"the\" (grammar:article); [t] \"fraction with numerator\"; [n] children/*[1] (pause:short); [t] \"and denominator\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",

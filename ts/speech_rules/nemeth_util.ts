@@ -162,7 +162,6 @@ export function enlargeFence(text: string): string {
   return text.slice(0, 1) + start + text.slice(1);
 }
 
-
 Grammar.getInstance().setCorrection('enlargeFence', enlargeFence);
 
 
