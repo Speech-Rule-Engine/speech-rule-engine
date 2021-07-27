@@ -12,17 +12,17 @@
     [
       "Action",
       "font",
-      "[t] @font (grammar:localFont); [n] . (pause:\"short\", grammar:ignoreFont=@font)"
+      "[t] @font (grammar:localFont); [n] . (pause:short, grammar:ignoreFont=@font)"
     ],
     [
       "Action",
       "font-identifier",
-      "[t] @font (grammar:localFont); [n] . (pause:\"short\", grammar:ignoreFont=@font)"
+      "[t] @font (grammar:localFont); [n] . (pause:short, grammar:ignoreFont=@font)"
     ],
     [
       "Action",
       "punctuation-lr",
-      "[p] (pause:\"short\"); [n] text() (pause:\"short\")"
+      "[p] (pause:short); [n] text() (pause:short)"
     ],
     [
       "Action",
@@ -32,12 +32,12 @@
     [
       "Action",
       "punctuation-l",
-      "[p] (pause:\"short\"); [n] text()"
+      "[p] (pause:short); [n] text()"
     ],
     [
       "Action",
       "punctuation-r",
-      "[n] text() (pause:\"short\")"
+      "[n] text() (pause:short)"
     ],
     [
       "Action",
@@ -52,12 +52,12 @@
     [
       "Action",
       "vbar-evaluated",
-      "[n] children/*[1] (pause:\"short\"); [n] content/*[1]/children/*[2]; [t] \"पर मूल्यांकित\" (pause:\"short\")"
+      "[n] children/*[1] (pause:short); [n] content/*[1]/children/*[2]; [t] \"पर मूल्यांकित\" (pause:short)"
     ],
     [
       "Action",
       "vbar-evaluated-both",
-      "[n] children/*[1] (pause:\"short\"); [n] content/*[1]/children/*[2]; [t] \"पर मूल्यांकित\" (pause:\"short\"); [t] \"घटाव का चिह्न उसी व्यंजक जो\"; [n] content/*[1]/children/*[1]/children/*[2]; [t] \"पर मूल्यांकित\" (pause:\"short\")"
+      "[n] children/*[1] (pause:short); [n] content/*[1]/children/*[2]; [t] \"पर मूल्यांकित\" (pause:short); [t] \"घटाव का चिह्न उसी व्यंजक जो\"; [n] content/*[1]/children/*[1]/children/*[2]; [t] \"पर मूल्यांकित\" (pause:short)"
     ],
     [
       "Action",
@@ -247,27 +247,27 @@
     [
       "Action",
       "appl",
-      "[p] (pause:\"short\"); [n] children/*[2]; [t] \"का फलन\"; [n] children/*[1] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[2]; [t] \"का फलन\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "appl-simple",
-      "[p] (pause:\"short\"); [n] children/*[2]; [t] \"का फलन\" (pause:\"short\"); [n] children/*[1] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[2]; [t] \"का फलन\" (pause:short); [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "appl-simple-fenced",
-      "[p] (pause:\"short\"); [n] children/*[2]; [t] \"का फलन\" (pause:\"short\"); [n] children/*[1] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[2]; [t] \"का फलन\" (pause:short); [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "appl-simple-inverse",
-      "[n] children/*[2]; [t] \"का प्रतिफलन\"; [n] children/*[1]/children/*[1] (pause:\"short\")"
+      "[n] children/*[2]; [t] \"का प्रतिफलन\"; [n] children/*[1]/children/*[1] (pause:short)"
     ],
     [
       "Action",
       "appl-times",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"गुना\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"गुना\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -277,7 +277,7 @@
     [
       "Action",
       "binary-operation",
-      "[n] . (pause:\"short\", grammar:impliedTimes)"
+      "[n] . (pause:short, grammar:impliedTimes)"
     ],
     [
       "Action",
@@ -287,17 +287,17 @@
     [
       "Action",
       "function-prefix-embell",
-      "[p] (pause:\"short\"); [n] children/*[1]; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-fenced-or-frac-arg",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-subscript",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"का फलन\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"का फलन\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -307,12 +307,12 @@
     [
       "Action",
       "function-ln-pause",
-      "[n] children/*[1]; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-ln-of",
-      "[n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -322,47 +322,47 @@
     [
       "Action",
       "function-ln-natlog-pause",
-      "[n] . (pause:\"short\", grammar:NatLog)"
+      "[n] . (pause:short, grammar:NatLog)"
     ],
     [
       "Action",
       "function-prefix-as-exp",
-      "[n] children/*[1]; [t] \"का फलन\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का फलन\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-subscript-as-exp",
-      "[n] children/*[1]; [t] \"का फलन\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का फलन\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-hyper",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-inverse",
-      "[p] (pause:\"short\"); [t] \"व्युत्क्रम\"; [n] children/*[1]/children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"व्युत्क्रम\"; [n] children/*[1]/children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "appl-triginverse",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc-simple",
-      "[p] (pause:\"short\"); [t] \"चाप\"; [n] children/*[1]/children/*[1]; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"चाप\"; [n] children/*[1]/children/*[1]; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc-simple-fenced",
-      "[p] (pause:\"short\"); [t] \"चाप\"; [n] children/*[1]/children/*[1] (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"चाप\"; [n] children/*[1]/children/*[1] (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc",
-      "[p] (pause:\"short\"); [t] \"चाप\"; [n] children/*[1]/children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"चाप\"; [n] children/*[1]/children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -382,12 +382,12 @@
     [
       "Action",
       "superscript",
-      "[n] children/*[1]; [t] \"का घात\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"घातांक समाप्त\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\" (pause:short); [n] children/*[2] (pause:short); [t] \"घातांक समाप्त\" (pause:short)"
     ],
     [
       "Action",
       "superscript-simple-exponent",
-      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2]; [t] \"घातांक\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2]; [t] \"घातांक\" (pause:short)"
     ],
     [
       "Action",
@@ -397,17 +397,17 @@
     [
       "Action",
       "superscript-ordinal",
-      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\" (pause:short)"
     ],
     [
       "Action",
       "superscript-non-ordinal",
-      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2]; [t] \"घातांक\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2]; [t] \"घातांक\" (pause:short)"
     ],
     [
       "Action",
       "superscript-simple-function",
-      "[n] children/*[1]; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\" (pause:\"short\")"
+      "[n] children/*[1]; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\" (pause:short)"
     ],
     [
       "Action",
@@ -417,47 +417,47 @@
     [
       "Action",
       "superscript-ordinal-number",
-      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (pause:\"short\", grammar:ordinal)"
+      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (pause:short, grammar:ordinal)"
     ],
     [
       "Action",
       "superscript-ordinal-negative",
-      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-default",
-      "[n] children/*[1]; [t] \"का घात\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"घातांक समाप्त\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\" (pause:short); [n] children/*[2] (pause:short); [t] \"घातांक समाप्त\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-number",
-      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-negative",
-      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2]; [t] \"घातांक\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2]; [t] \"घातांक\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-identifier",
-      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-default",
-      "[n] children/*[1]; [t] \"का घात\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"घातांक समाप्त\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\" (pause:short); [n] children/*[2] (pause:short); [t] \"घातांक समाप्त\" (pause:short)"
     ],
     [
       "Action",
       "superscript-power",
-      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (pause:\"short\", grammar:afterPower)"
+      "[n] children/*[1]; [t] \"का घात\"; [n] children/*[2] (pause:short, grammar:afterPower)"
     ],
     [
       "Action",
       "superscript-power-default",
-      "[n] children/*[1]; [t] \"का घात\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"घातांक समाप्त\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"का घात\" (pause:short); [n] children/*[2] (pause:short); [t] \"घातांक समाप्त\" (pause:short)"
     ],
     [
       "Action",
@@ -522,27 +522,27 @@
     [
       "Action",
       "fences-open-close",
-      "[p] (pause:\"short\"); [n] content/*[1] (pause:\"short\", grammar:spokenFence); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (pause:\"short\", grammar:spokenFence)"
+      "[p] (pause:short); [n] content/*[1] (pause:short, grammar:spokenFence); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short, grammar:spokenFence)"
     ],
     [
       "Action",
       "paren-simple-nested-func-default",
-      "[p] (pause:\"short\"); [n] content/*[1] (pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
     ],
     [
       "Action",
       "paren-simple-nested-func-none",
-      "[p] (pause:\"short\"); [n] content/*[1] (pause:\"short\", grammar:spokenFence); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (pause:\"short\", grammar:spokenFence)"
+      "[p] (pause:short); [n] content/*[1] (pause:short, grammar:spokenFence); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short, grammar:spokenFence)"
     ],
     [
       "Action",
       "fence-silent",
-      "[p] (pause:\"short\"); [n] children/*[1] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-open-close-none",
-      "[p] (pause:\"short\"); [n] content/*[1] (pause:\"short\", grammar:spokenFence); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (pause:\"short\", grammar:spokenFence)"
+      "[p] (pause:short); [n] content/*[1] (pause:short, grammar:spokenFence); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short, grammar:spokenFence)"
     ],
     [
       "Action",
@@ -562,7 +562,7 @@
     [
       "Action",
       "fences-interval",
-      "[n] children/*[1]/children/*[1]; [t] \"से\"; [n] children/*[1]/children/*[3]; [t] \"तक का अन्तराल\" (pause:\"short\"); [n] . (grammar:interval)"
+      "[n] children/*[1]/children/*[1]; [t] \"से\"; [n] children/*[1]/children/*[3]; [t] \"तक का अन्तराल\" (pause:short); [n] . (grammar:interval)"
     ],
     [
       "Action",
@@ -572,12 +572,12 @@
     [
       "Action",
       "interval-closed-open",
-      "[n] children/*[1]/children/*[1]; [t] \"सम्मिलित\" (pause:\"short\"); [t] \"परन्तु\"; [n] children/*[1]/children/*[3]; [t] \"असम्मिलित\""
+      "[n] children/*[1]/children/*[1]; [t] \"सम्मिलित\" (pause:short); [t] \"परन्तु\"; [n] children/*[1]/children/*[3]; [t] \"असम्मिलित\""
     ],
     [
       "Action",
       "interval-open-closed",
-      "[n] children/*[1]/children/*[1]; [t] \"असम्मिलित\" (pause:\"short\"); [t] \"परन्तु\"; [n] children/*[1]/children/*[3]; [t] \"सम्मिलित\""
+      "[n] children/*[1]/children/*[1]; [t] \"असम्मिलित\" (pause:short); [t] \"परन्तु\"; [n] children/*[1]/children/*[3]; [t] \"सम्मिलित\""
     ],
     [
       "Action",
@@ -612,7 +612,7 @@
     [
       "Action",
       "paren-nested-embellished-funcs",
-      "[p] (pause:\"short\"); [n] content/*[1] (pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -732,42 +732,42 @@
     [
       "Action",
       "sqrt",
-      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का वर्गमूल\" (pause:\"short\")"
+      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause: \"short\"); [n] children/*[1] (grammar:EndRoot=false); [t] \"का वर्गमूल\" (pause:\"short\")"
+      "[p] (pause: \"short\"); [n] children/*[1] (grammar:EndRoot=false); [t] \"का वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[n] children/*[1]/children/*[1] (grammar:EndRoot=false); [t] \"का ऋणात्मक वर्गमूल\" (pause:\"short\")"
+      "[n] children/*[1]/children/*[1] (grammar:EndRoot=false); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause: \"short\"); [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [t] \"का ऋणात्मक वर्गमूल\" (pause:\"short\")"
+      "[p] (pause: \"short\"); [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:\"short\")"
+      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:\"short\")"
+      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:\"short\")"
+      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:\"short\")"
+      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
