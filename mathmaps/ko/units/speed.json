@@ -6,7 +6,7 @@
       }
     },
   "key": "kt",
-  "names": ["kt", "kt."]
+  "names": ["kt", "kt.","knot"]
 },
 {"category": "speed",
   "mappings": {
@@ -15,7 +15,7 @@
       }
     },
   "key": "mph",
-  "names": ["mph"]
+  "names": ["mph", "miles per hour"]
 },
 {"category": "speed",
   "mappings": {
@@ -24,7 +24,7 @@
       }
     },
   "key": "rpm",
-  "names": ["rpm"]
+  "names": ["rpm", "revolutions per minute"]
 },
 {"category": "speed",
   "mappings": {
@@ -33,6 +33,6 @@
       }
     },
   "key": "kmh",
-  "names": ["kmh"]
+  "names": ["kmh", "kilometers per hour"]
 }
 ]
