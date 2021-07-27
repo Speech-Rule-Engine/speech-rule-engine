@@ -435,6 +435,18 @@ function addAnnotation_(text: string, annotation: string): string {
 }
 
 
+/**
+ * Translates a single non-negative integer into a word.
+ * @param text The text to translate.
+ * @return The translated text.
+ */
+export function numbersToAlpha(text: string): string {
+  return text.match(/\d+/) ?
+      LOCALE.NUMBERS.numberToWords(parseInt(text, 10)) :
+      text;
+}
+
+
 // TODO: Check if that is still necessary!
 /**
  * Method switches of translation of text elements if they match the regexp of
@@ -457,3 +469,4 @@ Grammar.getInstance().setCorrection('ignoreFont', correctFont_);
 Grammar.getInstance().setPreprocessor('annotation', addAnnotation_);
 Grammar.getInstance().setPreprocessor('noTranslateText', noTranslateText_);
 Grammar.getInstance().setCorrection('ignoreCaps', correctCaps_);
+Grammar.getInstance().setPreprocessor('numbers2alpha', numbersToAlpha);
