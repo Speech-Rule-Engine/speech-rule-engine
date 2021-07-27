@@ -1512,7 +1512,7 @@
     [
       "Action",
       "unit-reciprocal-singular",
-      "[t] \"per\"; [n] children/*[1] (grammar:singularUnit)"
+      "[t] \"per\"; [n] children/*[1] (grammar:singular)"
     ],
     [
       "Action",
@@ -1522,12 +1522,12 @@
     [
       "Action",
       "unit-combine-singular",
-      "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); [m] children/*[position()>2]"
+      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [m] children/*[position()>2]"
     ],
     [
       "Action",
       "unit-divide",
-      "[n] children/*[1]; [t] \"per\"; [n] children/*[2] (grammar:singularUnit)"
+      "[n] children/*[1]; [t] \"per\"; [n] children/*[2] (grammar:singular)"
     ],
     [
       "Action",

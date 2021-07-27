@@ -1502,7 +1502,7 @@
     [
       "Action",
       "unit-reciprocal-singular",
-      "[t] \"प्रति\"; [n] children/*[1] (grammar:singularUnit)"
+      "[t] \"प्रति\"; [n] children/*[1] (grammar:singular)"
     ],
     [
       "Action",
@@ -1512,12 +1512,12 @@
     [
       "Action",
       "unit-combine-singular",
-      "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); [m] children/*[position()>2]"
+      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [m] children/*[position()>2]"
     ],
     [
       "Action",
       "unit-divide",
-      "[n] children/*[1]; [t] \"प्रति\"; [n] children/*[2] (grammar:singularUnit)"
+      "[n] children/*[1]; [t] \"प्रति\"; [n] children/*[2] (grammar:singular)"
     ],
     [
       "Action",

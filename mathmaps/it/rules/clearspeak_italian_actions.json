@@ -1502,12 +1502,12 @@
     [
       "Action",
       "unit-combine-singular",
-      "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); [m] children/*[position()>2]"
+      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [m] children/*[position()>2]"
     ],
     [
       "Action",
       "unit-divide",
-      "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singularUnit)"
+      "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singular)"
     ],
     [
       "Action",

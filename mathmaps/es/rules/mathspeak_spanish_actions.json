@@ -497,22 +497,22 @@
     [
       "Action",
       "unit-combine-singular",
-      "[n] children/*[1]; [t] \"por\"; [m] children/*[position()>1] (grammar:!singularUnit, sepFunc:CTFunitMultipliers)"
+      "[n] children/*[1]; [t] \"por\"; [m] children/*[position()>1] (grammar:!singular, sepFunc:CTFunitMultipliers)"
     ],
     [
       "Action",
       "unit-combine-singular-first",
-      "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); [t] \"por\"; [m] children/*[position()>2] (sepFunc:CTFunitMultipliers)"
+      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [t] \"por\"; [m] children/*[position()>2] (sepFunc:CTFunitMultipliers)"
     ],
     [
       "Action",
       "unit-combine-singular-final",
-      "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); "
+      "[n] children/*[1]; [n] children/*[2] (grammar:singular); "
     ],
     [
       "Action",
       "unit-divide",
-      "[n] children/*[1]; [t] \"por\"; [n] children/*[2] (grammar:singularUnit)"
+      "[n] children/*[1]; [t] \"por\"; [n] children/*[2] (grammar:singular)"
     ]
   ]
 }

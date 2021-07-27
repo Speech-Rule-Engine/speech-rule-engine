@@ -2793,7 +2793,7 @@
       "unit-plural",
       "default",
       "self::identifier[@role=\"unit\"]",
-      "not(contains(@grammar, \"singularUnit\"))"
+      "not(contains(@grammar, \"singular\"))"
     ],
     [
       "Precondition",
