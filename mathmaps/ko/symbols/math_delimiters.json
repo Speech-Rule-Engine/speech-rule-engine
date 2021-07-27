@@ -524,7 +524,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upper left or lower right brace section"
+        "default": "상단 왼쪽 하단 오른쪽으로 굽혀진 중괄호"
       }
     },
     "key": "23B0"
@@ -533,7 +533,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "upper right or lower left brace section"
+        "default": "상단 오른쪽 하단 쪽으로 굽혀진 중괄호"
       }
     },
     "key": "23B1"
@@ -542,7 +542,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "summation top"
+        "default": "상단 절반 시그마"
       }
     },
     "key": "23B2"
@@ -551,7 +551,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "summation bottom"
+        "default": "하단 절반 시그마"
       }
     },
     "key": "23B3"
@@ -560,11 +560,11 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "top bracket"
+        "default": "시계방향으로 90도 돌린 중괄호"
       },
       "mathspeak": {
-        "brief": "top brack",
-        "sbrief": "T brack"
+        "brief": "시계방향으로 90도 돌린 중괄호",
+        "sbrief": "시계방향으로 90도 돌린 중괄호"
       }
     },
     "key": "23B4"
@@ -573,11 +573,11 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "bottom bracket"
+        "default": "반시계방향으로 90도 돌린 중괄호"
       },
       "mathspeak": {
-        "brief": "bottom brack",
-        "sbrief": "B brack"
+        "brief": "반시계방향으로 90도 돌린 중괄호",
+        "sbrief": "반시계방향으로 90도 돌린 중괄호"
       }
     },
     "key": "23B5"
@@ -599,7 +599,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "radical symbol bottom"
+        "default": "하단 절반 radical symbol"
       }
     },
     "key": "23B7"
@@ -608,7 +608,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "left vertical box line"
+        "default": "왼쪽 세로선"
       }
     },
     "key": "23B8"
@@ -617,7 +617,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "right vertical box line"
+        "default": "오른쪽 세로선"
       }
     },
     "key": "23B9"
@@ -626,11 +626,11 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "top parenthesis"
+        "default": "위쪽 괄호"
       },
       "mathspeak": {
-        "brief": "top p'ren",
-        "sbrief": "t p'ren"
+        "brief": "위쪽 괄호",
+        "sbrief": "위쪽 괄호"
       }
     },
     "key": "23DC"
@@ -639,11 +639,11 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "bottom parenthesis"
+        "default": "아래쪽 괄호"
       },
       "mathspeak": {
-        "brief": "bottom p'ren",
-        "sbrief": "b p'ren"
+        "brief": "아래쪽 괄호",
+        "sbrief": "아래쪽 괄호"
       }
     },
     "key": "23DD"
@@ -652,10 +652,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "top brace"
+        "default": "위쪽 중괄호"
       },
       "mathspeak": {
-        "sbrief": "T brace"
+        "sbrief": "위쪽 중괄호"
       }
     },
     "key": "23DE"
@@ -664,10 +664,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "bottom brace"
+        "default": "아래쪽 중괄호"
       },
       "mathspeak": {
-        "sbrief": "B brace"
+        "sbrief": "아래쪽 중괄호"
       }
     },
     "key": "23DF"
@@ -676,7 +676,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "top tortoise shell bracket"
+        "default": "상단 거북이 모양 중괄호"
       }
     },
     "key": "23E0"
@@ -685,7 +685,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "bottom tortoise shell bracket"
+        "default": "하단 거북이 모양 중괄호"
       }
     },
     "key": "23E1"
@@ -694,11 +694,11 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "medium left parenthesis ornament"
+        "default": "중 왼쪽 괄호 ornament"
       },
       "mathspeak": {
-        "brief": "medium left p'ren ornament",
-        "sbrief": "medium L p'ren ornament"
+        "brief": "중간 왼쪽 괄호 ornament",
+        "sbrief": "중간 왼쪽 괄호 ornament"
       }
     },
     "key": "2768"
@@ -707,11 +707,11 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "medium right parenthesis ornament"
+        "default": "중간 오른쪽 괄호 ornament"
       },
       "mathspeak": {
-        "brief": "medium right p'ren ornament",
-        "sbrief": "medium R p'ren ornament"
+        "brief": "중간 오른쪽 괄호 ornament",
+        "sbrief": "중간 오른쪽 괄호 ornament"
       }
     },
     "key": "2769"
@@ -720,11 +720,11 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "medium flattened left parenthesis ornament"
+        "default": "중간 평평한 왼쪽 괄호 ornament"
       },
       "mathspeak": {
-        "brief": "medium flattened left p'ren ornament",
-        "sbrief": "medium flattened L p'ren ornament"
+        "brief": "중간 평평한 왼쪽 괄호 ornament",
+        "sbrief": "중간 평평한 왼쪽 괄호 ornament"
       }
     },
     "key": "276A"
@@ -733,11 +733,11 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "medium flattened right parenthesis ornament"
+        "default": "중간 평평한 오른쪽 괄호 ornament"
       },
       "mathspeak": {
-        "brief": "medium flattened right p'ren ornament",
-        "sbrief": "medium flattened R p'ren ornament"
+        "brief": "중간 평평한 오른쪽 괄호 ornament",
+        "sbrief": "중간 평평한 오른쪽 괄호 ornament"
       }
     },
     "key": "276B"
@@ -746,7 +746,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "medium left pointing angle bracket ornament"
+        "default": "중간 왼쪽 포인팅 각도 중괄호 ornament"
       }
     },
     "key": "276C"
@@ -755,7 +755,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "medium right pointing angle bracket ornament"
+        "default": "중간 오른쪽 포인팅 각도 중괄호 ornament"
       }
     },
     "key": "276D"
@@ -764,7 +764,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "heavy left pointing angle quotation mark ornament"
+        "default": "두꺼운 왼쪽 포인팅 앵글 따옴표 ornament"
       }
     },
     "key": "276E"
@@ -773,7 +773,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "heavy right pointing angle quotation mark ornament"
+        "default": "두꺼운 오른쪽 각도 마크 ornament"
       }
     },
     "key": "276F"
@@ -782,7 +782,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "heavy left pointing angle bracket ornament"
+        "default": "두꺼운 왼쪽 포인팅 앵글 중괄호 ornament"
       }
     },
     "key": "2770"
@@ -791,7 +791,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "heavy right pointing angle bracket ornament"
+        "default": "두꺼운 오른쪽 포인팅 앵글 중괄호 ornament"
       }
     },
     "key": "2771"
@@ -809,7 +809,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "light right tortoise shell bracket ornament"
+        "default": "얇은 왼쪽 거북이 모양 중괄호 ornament"
       }
     },
     "key": "2773"
@@ -818,10 +818,10 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "medium left brace ornament"
+        "default": "중간 왼쪽 중괄호 ornament"
       },
       "mathspeak": {
-        "sbrief": "medium L brace ornament"
+        "sbrief": "중간 왼쪽 중괄호 ornament"
       }
     },
     "key": "2774"
@@ -830,10 +830,10 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "medium right brace ornament"
+        "default": "중간 오른쪽 중괄호 ornament"
       },
       "mathspeak": {
-        "sbrief": "medium R brace ornament"
+        "sbrief": "중간 오른쪽 중괄호 ornament"
       }
     },
     "key": "2775"
@@ -842,7 +842,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left s shaped bag delimiter"
+        "default": "왼쪽 S 자형 가방모양 구분 기호"
       }
     },
     "key": "27C5"
@@ -851,7 +851,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right s shaped bag delimiter"
+        "default": "오른쪽 S 자형 가방모양 구분 기호"
       }
     },
     "key": "27C6"
@@ -860,7 +860,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left white bracket"
+        "default": "왼쪽 두겹 대괄호"
       }
     },
     "key": "27E6"
@@ -869,7 +869,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right white bracket"
+        "default": "오른쪽 두겹 대괄호"
       }
     },
     "key": "27E7"
@@ -878,10 +878,10 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left angle bracket"
+        "default": "왼쪽 구부러진 대괄호"
       },
       "mathspeak": {
-        "sbrief": "l angle bracket"
+        "sbrief": "왼쪽 구부러진 대괄호"
       }
     },
     "key": "27E8"
@@ -890,10 +890,10 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right angle bracket"
+        "default": "오른쪽 구부러진 대괄호"
       },
       "mathspeak": {
-        "sbrief": "r angle bracket"
+        "sbrief": "오른쪽 구부러진 대괄호"
       }
     },
     "key": "27E9"
@@ -902,7 +902,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left double angle bracket"
+        "default": "두겹 왼쪽 구부러진 대괄호"
       }
     },
     "key": "27EA"
@@ -911,7 +911,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right double angle bracket"
+        "default": "두겹 오른쪽 구부러진 대괄호"
       }
     },
     "key": "27EB"
@@ -920,7 +920,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left white tortoise shell bracket"
+        "default": "두겹 왼쪽 구부러진 거북이 모양 대괄호"
       }
     },
     "key": "27EC"
@@ -929,7 +929,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right white tortoise shell bracket"
+        "default": "두겹 오른쪽 구부러진 거북이 모양 대괄호"
       }
     },
     "key": "27ED"
@@ -938,11 +938,11 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "flattened left parenthesis"
+        "default": "수학적 왼쪽 편평한 괄호"
       },
       "mathspeak": {
-        "brief": "flattened left p'ren",
-        "sbrief": "flattened L p'ren"
+        "brief": "수학적 왼쪽 편평한 괄호",
+        "sbrief": "수학적 왼쪽 편평한 괄호"
       }
     },
     "key": "27EE"
@@ -951,11 +951,11 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "flattened right parenthesis"
+        "default": "수학적 오른쪽 편평한 괄호"
       },
       "mathspeak": {
-        "brief": "flattened right p'ren",
-        "sbrief": "flattened R p'ren"
+        "brief": "수학적 오른쪽 편평한 괄호",
+        "sbrief": "수학적 오른쪽 편평한 괄호"
       }
     },
     "key": "27EF"
@@ -964,7 +964,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left white brace"
+        "default": "두겹 왼쪽 흰색 중괄호"
       }
     },
     "key": "2983"
@@ -973,7 +973,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right white brace"
+        "default": "두겹 오른쪽 흰색 중괄호"
       }
     },
     "key": "2984"
@@ -982,11 +982,11 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "white left parenthesis"
+        "default": "왼쪽 두겹 괄호"
       },
       "mathspeak": {
-        "brief": "white left p'ren",
-        "sbrief": "white L p'ren"
+        "brief": "왼쪽 두겹 괄호",
+        "sbrief": "왼쪽 두겹 괄호"
       }
     },
     "key": "2985"
@@ -995,11 +995,11 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "white right parenthesis"
+        "default": "오른쪽 두겹 괄호"
       },
       "mathspeak": {
-        "brief": "white right p'ren",
-        "sbrief": "white R p'ren"
+        "brief": "오른쪽 두겹 괄호",
+        "sbrief": "오른쪽 두겹 괄호"
       }
     },
     "key": "2986"
@@ -1008,7 +1008,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "z notation left image bracket"
+        "default": "Z 표기법 왼쪽 두겹 브래킷"
       }
     },
     "key": "2987"
@@ -1017,7 +1017,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "z notation right image bracket"
+        "default": "Z 표기법 오른쪽 두겹 브래킷"
       }
     },
     "key": "2988"
@@ -1026,7 +1026,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "z notation left binding bracket"
+        "default": "Z 표기법 왼쪽 삼각형 괄호"
       }
     },
     "key": "2989"
@@ -1035,7 +1035,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "z notation right binding bracket"
+        "default": "Z 표기법 오른쪽 삼각형 괄호"
       }
     },
     "key": "298A"
@@ -1044,11 +1044,11 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left bracket with underbar"
+        "default": "밑줄이있는 왼쪽 대괄호"
       },
       "mathspeak": {
-        "brief": "left brack with underbar",
-        "sbrief": "L brack with underbar"
+        "brief": "밑줄이있는 왼쪽 대괄호",
+        "sbrief": "밑줄이있는 왼쪽 대괄호"
       }
     },
     "key": "298B"
@@ -1057,11 +1057,11 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right bracket with underbar"
+        "default": "밑줄이있는 오른쪽 대괄호"
       },
       "mathspeak": {
-        "brief": "right brack with underbar",
-        "sbrief": "R brack with underbar"
+        "brief": "밑줄이있는 오른쪽 대괄호",
+        "sbrief": "밑줄이있는 오른쪽 대괄호"
       }
     },
     "key": "298C"
@@ -1070,11 +1070,11 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left bracket with tick in top corner"
+        "default": "상단 모서리에 대각선이 있는 왼쪽 대괄호"
       },
       "mathspeak": {
-        "brief": "left brack with tick in top corner",
-        "sbrief": "L brack with tick in top corner"
+        "brief": "상단 모서리에 대각선이 있는 왼쪽 대괄호",
+        "sbrief": "상단 모서리에 대각선이 있는 왼쪽 대괄호"
       }
     },
     "key": "298D"
@@ -1083,11 +1083,11 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right bracket with tick in bottom corner"
+        "default": "상단 모서리에 대각선이 있는 오른쪽 대괄호"
       },
       "mathspeak": {
-        "brief": "right brack with tick in bottom corner",
-        "sbrief": "R brack with tick in bottom corner"
+        "brief": "상단 모서리에 대각선이 있는 오른쪽 대괄호",
+        "sbrief": "상단 모서리에 대각선이 있는 오른쪽 대괄호"
       }
     },
     "key": "298E"
@@ -1096,11 +1096,11 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left bracket with tick in bottom corner"
+        "default": "하단 모서리에 대각선이 있는 왼쪽 대괄호"
       },
       "mathspeak": {
-        "brief": "left brack with tick in bottom corner",
-        "sbrief": "L brack with tick in bottom corner"
+        "brief": "하단 모서리에 대각선이 있는 왼쪽 대괄호",
+        "sbrief": "하단 모서리에 대각선이 있는 왼쪽 대괄호"
       }
     },
     "key": "298F"
@@ -1109,11 +1109,11 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right bracket with tick in top corner"
+        "default": "하단 모서리에 대각선이 있는 오른쪽 대괄호"
       },
       "mathspeak": {
-        "brief": "right brack with tick in top corner",
-        "sbrief": "R brack with tick in top corner"
+        "brief": "하단 모서리에 대각선이 있는 오른쪽 대괄호",
+        "sbrief": "하단 모서리에 대각선이 있는 오른쪽 대괄호"
       }
     },
     "key": "2990"
@@ -1122,10 +1122,10 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left angle bracket with dot"
+        "default": "점이 있는 왼쪽 방향 대괄호"
       },
       "mathspeak": {
-        "sbrief": "l angle bracket with dot"
+        "sbrief": "점이 있는 왼쪽 방향 대괄호"
       }
     },
     "key": "2991"
@@ -1134,10 +1134,10 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right angle bracket with dot"
+        "default": "점이 있는 오른쪽 방향 대괄호"
       },
       "mathspeak": {
-        "sbrief": "r angle bracket with dot"
+        "sbrief": "점이 있는 오른쪽 방향 대괄호"
       }
     },
     "key": "2992"
@@ -1146,7 +1146,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left arc less than bracket"
+        "default": "왼쪽 아치보다 작은 대괄호"
       }
     },
     "key": "2993"
@@ -1155,7 +1155,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right arc greater than bracket"
+        "default": "오른쪽 아치보다 큰 대괄호"
       }
     },
     "key": "2994"
@@ -1164,7 +1164,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "double left arc greater than bracket"
+        "default": "대괄호보다 큰 두개 왼쪽 방향 호"
       }
     },
     "key": "2995"
@@ -1173,7 +1173,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "double right arc less than bracket"
+        "default": "대괄호보다 작은 두개 왼쪽 방향 호"
       }
     },
     "key": "2996"
@@ -1182,7 +1182,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left black tortoise shell bracket"
+        "default": "왼쪽 검은 거북이 모양 브래킷"
       }
     },
     "key": "2997"
@@ -1191,7 +1191,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right black tortoise shell bracket"
+        "default": "오른쪽 검은 거북이 모양 브래킷"
       }
     },
     "key": "2998"
@@ -1200,7 +1200,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "left wiggly fence"
+        "default": "왼쪽 방향 흔들는 모양"
       }
     },
     "key": "29D8"
@@ -1209,7 +1209,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "right wiggly fence"
+        "default": "오른쪽 방향 흔들는 모양"
       }
     },
     "key": "29D9"
