@@ -3,8 +3,8 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": "first transfinite cardinal",
-        "alternative": "alef"
+        "default": "알레프",
+        "alternative": "알레프"
       }
     },
     "key": "2135"

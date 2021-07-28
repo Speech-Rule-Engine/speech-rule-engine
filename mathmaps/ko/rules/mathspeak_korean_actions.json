@@ -72,22 +72,22 @@
     [
       "Action",
       "number-baseline",
-      "[t] \"Baseline\"; [n] . (grammar:baseline)"
+      "[t] \"기준\"; [n] . (grammar:baseline)"
     ],
     [
       "Action",
       "number-baseline-brief",
-      "[t] \"보류 : (Base) 기준\"; [n] . (grammar:baseline)"
+      "[t] \"기준\"; [n] . (grammar:baseline)"
     ],
     [
       "Action",
       "number-baseline-font",
-      "[t] \"보류 : (Baseline) 기준\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
+      "[t] \"기준\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
     ],
     [
       "Action",
       "number-baseline-font-brief",
-      "[t] \"보류 : (Base) \"; [t] @font; [n] . (grammar:ignoreFont=@font)"
+      "[t] \"기준\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
     ],
     [
       "Action",
@@ -312,12 +312,12 @@
     [
       "Action",
       "integral",
-      "[n] children/*[1]; [t] \"아래 첨자\"; [n] children/*[2];[t] \"위 첨자\"; [n] children/*[3]; [t] \"보류 : (Baseline) : 기준\";"
+      "[n] children/*[1]; [t] \"아래 첨자\"; [n] children/*[2];[t] \"위 첨자\"; [n] children/*[3]; [t] \"기준\";"
     ],
     [
       "Action",
       "integral-brief",
-      "[n] children/*[1]; [t] \"아래\"; [n] children/*[2];[t] \"위\"; [n] children/*[3]; [t] \"보류 : (Base) : 기준\";"
+      "[n] children/*[1]; [t] \"아래\"; [n] children/*[2];[t] \"위\"; [n] children/*[3]; [t] \"기준\";"
     ],
     [
       "Action",
@@ -642,7 +642,7 @@
     [
       "Action",
       "line-with-text-label",
-      "[t] \"Label\"; [t] CSFRemoveParens; [m] children/*"
+      "[t] \"꼬리표\"; [t] CSFRemoveParens; [m] children/*"
     ],
     [
       "Action",
@@ -737,7 +737,7 @@
     [
       "Action",
       "label",
-      "[t] \"레이블\"; [n] children/*[1]"
+      "[t] \"꼬리표\"; [n] children/*[1]"
     ],
     [
       "Action",
