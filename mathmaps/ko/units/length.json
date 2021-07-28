@@ -46,7 +46,7 @@
      }
    },
    "key": "link",
-   "names": ["li", "li."]
+   "names": ["li", "li.", "link", "links"]
   },
   {"category": "length",
    "mappings": {
@@ -55,7 +55,7 @@
      }
    },
    "key": "rod",
-   "names": ["rd", "rd."]
+   "names": ["rd", "rd.", "rod", "rods"]
   },
   {"category": "length",
    "mappings": {
@@ -64,7 +64,7 @@
      }
    },
    "key": "chain",
-   "names": ["ch", "ch."]
+   "names": ["ch", "ch.", "chain"]
   },
   {"category": "length",
    "mappings": {
@@ -73,7 +73,7 @@
      }
    },
    "key": "furlong",
-   "names": ["fur", "fur."]
+   "names": ["fur", "fur.", "furlong", "furlongs"]
   },
 
   
@@ -84,7 +84,7 @@
      }
    },
    "key": "n.m.",
-   "names": ["n.m."]
+   "names": ["n.m.", "nautical mile"]
   },
   {"category": "length",
    "si": true,

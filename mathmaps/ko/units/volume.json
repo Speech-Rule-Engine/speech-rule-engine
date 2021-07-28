@@ -7,7 +7,7 @@
      }
    },
    "key": "cu",
-   "names": ["cu", "cu."]
+   "names": ["cu", "cu.", "cubic"]
   },
   {"category": "volume",
    "mappings": {
@@ -17,7 +17,7 @@
      }
    },
    "key": "cu inch",
-   "names": ["cu in", "cu. in."]
+   "names": ["cu in", "cu. in.", "cubic inch", "cubic inches"]
   },
   {"category": "volume",
    "mappings": {
@@ -27,7 +27,7 @@
      }
    },
    "key": "cu ft",
-   "names": ["cu ft", "cu. ft."]
+   "names": ["cu ft", "cu. ft.", "cubic foot", "cubic feet"]
   },
   {"category": "volume",
    "mappings": {
@@ -36,7 +36,7 @@
      }
    },
    "key": "cu yd",
-   "names": ["cu yd", "cu. yd."]
+   "names": ["cu yd", "cu. yd.", "cubic yard"]
   },
   {"category": "volume",
    "mappings": {
@@ -54,7 +54,7 @@
      }
    },
    "key": "fl. oz.",
-   "names": ["fl. oz.", "fl oz"]
+   "names": ["fl. oz.", "fl oz", "fluid ounce"]
   },
   {"category": "volume",
    "mappings": {
@@ -63,7 +63,7 @@
      }
    },
    "key": "gal",
-   "names": ["gal", "gal."]
+   "names": ["gal", "gal.", "gallon"]
   },
   {"category": "volume",
    "mappings": {
@@ -72,7 +72,7 @@
      }
    },
    "key": "pt",
-   "names": ["pt", "pt."]
+   "names": ["pt", "pt.", "pint"]
   },
   {"category": "volume",
    "mappings": {
@@ -81,7 +81,7 @@
      }
    },
    "key": "qt",
-   "names": ["qt", "qt."]
+   "names": ["qt", "qt.", "quart"]
   },
  
   {"category": "volume",
@@ -91,7 +91,7 @@
      }
    },
    "key": "fluid dram",
-   "names": ["fl dr", "fl. dr."]
+   "names": ["fl dr", "fl. dr.", "fluid dram"]
   },
   {"category": "volume",
    "mappings": {
@@ -100,7 +100,7 @@
      }
    },
    "key": "tbsp",
-   "names": ["tbsp", "tbsp.", "Tbsp", "Tbsp."]
+   "names": ["tbsp", "tbsp.", "Tbsp", "Tbsp.", "tablespoon"]
   },
   {"category": "volume",
    "mappings": {
@@ -109,7 +109,7 @@
      }
    },
    "key": "tsp",
-   "names": ["tsp", "tsp."]
+   "names": ["tsp", "tsp.", "teaspoon"]
   },
   {"category": "volume",
    "mappings": {
@@ -118,7 +118,7 @@
      }
    },
    "key": "cup",
-   "names": ["cp", "cp."]
+   "names": ["cp", "cp.", "cup"]
   },
 
   {"category": "volume",
@@ -128,7 +128,7 @@
      }
    },
    "key": "cc",
-   "names": ["cc", "ccm"]
+   "names": ["cc", "ccm", "cubic centimeter"]
   },
   {"category": "volume",
    "si": true,
@@ -138,6 +138,6 @@
      }
    },
    "key": "l",
-   "names": ["l"]
+   "names": ["l", "liter"]
   }
 ]

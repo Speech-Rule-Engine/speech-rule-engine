@@ -7,7 +7,7 @@
       }
     },
     "key": "s",
-   "names": ["s"]
+   "names": ["s", "second"]
   },
    {"category": "time",
     "mappings": {
@@ -16,7 +16,7 @@
       }
     },
     "key": "″",
-   "names": ["″"]
+   "names": ["″", "second"]
    },
    {"category": "time",
     "mappings": {
@@ -25,7 +25,7 @@
       }
     },
     "key": "min",
-    "names": ["min", "′"]
+    "names": ["min", "′", "minute"]
    },
   {"category": "time",
     "mappings": {
@@ -34,7 +34,7 @@
       }
     },
    "key": "°",
-   "names": ["°"]
+   "names": ["°", "degree"]
   },
   {"category": "time",
     "mappings": {
@@ -43,6 +43,6 @@
       }
     },
     "key": "h",
-    "names": ["h", "hr"]
+    "names": ["h", "hr", "hour"]
    }
  ]

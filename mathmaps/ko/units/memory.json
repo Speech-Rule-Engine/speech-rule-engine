@@ -6,7 +6,7 @@
      }
    },
    "key": "b",
-   "names": ["b"]
+   "names": ["b", "bit"]
   },
   {"category": "memory",
    "si": true,
@@ -16,7 +16,7 @@
      }
    },
    "key": "B",
-   "names": ["B"]
+   "names": ["B", "byte"]
   },
   {"category": "memory",
    "mappings": {
@@ -25,6 +25,6 @@
      }
    },
    "key": "KB",
-   "names": ["KB"]
+   "names": ["KB", "kilobyte"]
   }
 ]

@@ -6,7 +6,7 @@
     }
   },
   "key": "F",
-  "names": ["F", "F.", "\u00B0F"]
+  "names": ["F", "F.", "\u00B0F", "Fahrenheit"]
 },
  {"category": "temperature",
   "mappings": {
@@ -16,7 +16,7 @@
     }
   },
   "key": "C",
-  "names": ["C", "\u00B0C"]
+  "names": ["C", "\u00B0C", "Celsius", "Centigrade"]
 },
  {"category": "temperature",
   "mappings": {
@@ -25,7 +25,7 @@
     }
   },
   "key": "K",
-  "names": ["K", "\u00B0K"]
+  "names": ["K", "\u00B0K", "Kelvin"]
 }
 
 ]
