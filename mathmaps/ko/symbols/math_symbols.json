@@ -12,7 +12,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "큰 따옴표"
+        "default": "큰따옴표"
       }
     },
     "key": "0022"
@@ -22,7 +22,7 @@
     "mappings": {
       "default": {
         "default": "번호 기호",  
-        "alternative": "해쉬" 
+        "alternative": "해시" 
       },
       "mathspeak": {
         "brief": "숫자 기호", 
@@ -35,7 +35,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "달러 기호" 
+        "default": "달러" 
       }
     },
     "key": "0024"
@@ -44,7 +44,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "백분율 기호" 
+        "default": "퍼센트" 
       }
     },
     "key": "0025"
@@ -98,7 +98,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "마이너스"
+        "default": "빼기"
       },
       "mathspeak": {
         "default": "하이픈"
@@ -150,10 +150,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작은"
+        "default": "작다"
       },
       "clearspeak": {
-        "default": "보다 작다"
+        "default": "작다"
       }
     },
     "key": "003C"
@@ -162,7 +162,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "등호"
+        "default": "같다"
       }
     },
     "key": "003D"
@@ -171,10 +171,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "큰"
+        "default": "크다"
       },
       "clearspeak": {
-        "default": "보다 크다"
+        "default": "크다"
       }
     },
     "key": "003E"
@@ -201,7 +201,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "백 슬래시"
+        "default": "백슬래시"
       }
     },
     "key": "005C"
@@ -223,7 +223,7 @@
     "mappings": {
       "default": {
         "default": "바",
-        "alternative": "언더라인"
+        "alternative": "밑줄"
       }
     },
     "key": "005F"
@@ -232,10 +232,10 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "무덤 악센트"
+        "default": "억음 악센트"
       },
       "mathspeak": {
-        "default": "무덤 악센트"
+        "default": "억음 악센트"
       }
     },
     "key": "0060"
@@ -253,7 +253,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "물결표"
       }
     },
     "key": "007E"
@@ -271,7 +271,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "센트 기호"
+        "default": "센트"
       }
     },
     "key": "00A2"
@@ -280,7 +280,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "파운드 기호"
+        "default": "파운드"
       }
     },
     "key": "00A3"
@@ -298,7 +298,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "엔 기호"
+        "default": "엔"
       }
     },
     "key": "00A5"
@@ -307,7 +307,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "깨진 수직선"
+        "default": "끊어진 세로선"
       }
     },
     "key": "00A6"
@@ -352,7 +352,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": "왼쪽 길레메트"
+        "default": "왼쪽 겹화살괄호"
       }
     },
     "key": "00AB"
@@ -370,7 +370,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "등록 기호"
+        "default": "등록 상표 기호"
      },
       "mathspeak": {
         "default": "등록 상표 기호"
@@ -415,7 +415,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "급성 강조"
+        "default": "양음 악센트"
       }
     },
     "key": "00B4"
@@ -424,7 +424,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "마이크로 기호"
+        "default": "마이크로"
       }
     },
     "key": "00B5"
@@ -442,7 +442,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "점"
+        "default": "닷"
       },
       "clearspeak": {
         "default": "곱하기"
@@ -472,7 +472,7 @@
     "category": "Pf",
     "mappings": {
       "default": {
-        "default": "오른쪽 길레메트"
+        "default": "오른쪽 겹화살괄호"
       }
     },
     "key": "00BB"
@@ -493,7 +493,7 @@
         "default": "곱하기"
       },
       "clearspeak": {
-        "MultsymbolX_By": "의",
+        "MultsymbolX_By": "곱하기",
         "MultsymbolX_Cross": "외적"
       }
     },
@@ -503,7 +503,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "나눗셈 기호"
+        "default": "나누기"
       }
     },
     "key": "00F7"
@@ -512,7 +512,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "breve"
+        "default": "단음표"
       }
     },
     "key": "02D8"
@@ -551,7 +551,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "위의 반지"
+        "default": "위의 고리"
       }
     },
     "key": "02DA"
@@ -560,7 +560,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "오고네크"
+        "default": "아가뇩"
       }
     },
     "key": "02DB"
@@ -578,7 +578,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "이중 급성 강조"
+        "default": "이중 양음 악센트"
       }
     },
     "key": "02DD"
@@ -596,7 +596,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "끊기지 않은 하이픈"
+        "default": "하이픈"
       }
     },
     "key": "2011"
@@ -605,7 +605,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "숫자 대시"
+        "default": "대시"
       }
     },
     "key": "2012"
@@ -614,7 +614,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "엔 대쉬"
+        "default": "붙임표"
       }
     },
     "key": "2013"
@@ -623,7 +623,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "엠 대쉬"
+        "default": "긴줄표"
       }
     },
     "key": "2014"
@@ -653,7 +653,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "더블 로우 라인"
+        "default": "겹밑줄"
       }
     },
     "key": "2017"
@@ -662,7 +662,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": "왼쪽 작은 따옴표"
+        "default": "왼쪽 작은따옴표"
       }
     },
     "key": "2018"
@@ -671,7 +671,7 @@
     "category": "Pf",
     "mappings": {
       "default": {
-        "default": "오른쪽 작은 따옴표"
+        "default": "오른쪽 작은따옴표"
       }
     },
     "key": "2019"
@@ -680,7 +680,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "오른쪽 낮은 단일 쉼표 따옴표"
+        "default": "왼쪽 낮은 따옴표"
       }
     },
     "key": "201A"
@@ -689,7 +689,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": "왼쪽 단일 역쉼표 따옴표"
+        "default": "왼쪽 역 따옴표"
       }
     },
     "key": "201B"
@@ -698,7 +698,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": "왼쪽 이중 따옴표"
+        "default": "왼쪽 큰따옴표"
       }
     },
     "key": "201C"
@@ -707,7 +707,7 @@
     "category": "Pf",
     "mappings": {
       "default": {
-        "default": "오른쪽 이중 따옴표"
+        "default": "오른쪽 큰따옴표"
       }
     },
     "key": "201D"
@@ -716,7 +716,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "오른쪽 낮은 이중 쉼표 따옴표"
+        "default": "오른쪽 낮은 따옴표"
       }
     },
     "key": "201E"
@@ -725,7 +725,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": "왼쪽 이중 역쉼표 따옴표"
+        "default": "왼쪽 역 큰따옴표"
       }
     },
     "key": "201F"
@@ -752,7 +752,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "글머리 기호"
+        "default": "글머리표"
       }
     },
     "key": "2022"
@@ -761,7 +761,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "삼각형 글머리 기호"
+        "default": "삼각형 글머리표"
       }
     },
     "key": "2023"
@@ -770,7 +770,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "한 점 리더"
+        "default": "점"
       }
     },
     "key": "2024"
@@ -779,7 +779,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "가로 쌍점"
+        "default": "쌍점"
       }
     },
     "key": "2025"
@@ -788,7 +788,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "가로 줄임표"
+        "default": "줄임표"
       },
       "clearspeak": {
         "default": "점 점 점"
@@ -800,7 +800,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "하이픈 넣기 지점"
+        "default": "가운뎃점"
       }
     },
     "key": "2027"
@@ -890,7 +890,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": "왼쪽 단일 길레메트" 
+        "default": "왼쪽 홑화살괄호" 
       }
     },
     "key": "2039"
@@ -899,7 +899,7 @@
     "category": "Pf",
     "mappings": {
       "default": {
-        "default": "오른쪽 단일 길레메트"
+        "default": "오른쪽 홑화살괄호"
       }
     },
     "key": "203A"
@@ -965,7 +965,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "부호 넣음 위치"
+        "default": "부호 삽입점"
       }
     },
     "key": "2041"
@@ -983,7 +983,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "하이픈 글머리 기호"
+        "default": "하이픈 글머리표"
       }
     },
     "key": "2043"
@@ -1010,7 +1010,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "질문 느낌표"
+        "default": "물음표 느낌표"
       }
     },
     "key": "2048"
@@ -1037,7 +1037,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "검은 왼쪽 글머리 기호"
+        "default": "검은 왼쪽 글머리표"
       }
     },
     "key": "204C"
@@ -1046,7 +1046,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "검은 오른쪽 글머리 기호"
+        "default": "검은 오른쪽 글머리표"
       }
     },
     "key": "204D"
@@ -1073,7 +1073,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "닫다"
+        "default": "삭제 기호"
       }
     },
     "key": "2050"
@@ -1118,7 +1118,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "꽃 구두점"
+        "default": "꽃"
       }
     },
     "key": "2055"
@@ -1127,7 +1127,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "세점 구두점"
+        "default": "삼점"
       }
     },
     "key": "2056"
@@ -1136,7 +1136,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "쿼드러플 프라임"
+        "default": "쿼드 프라임"
       }
     },
     "key": "2057"
@@ -1145,7 +1145,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "네점 구두점"
+        "default": "사점"
       }
     },
     "key": "2058"
@@ -1154,7 +1154,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "다섯점 구두점"
+        "default": "오점"
       }
     },
     "key": "2059"
@@ -1163,7 +1163,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "두점 구두점"
+        "default": "이점"
       }
     },
     "key": "205A"
@@ -1172,7 +1172,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "사점 표시"
+        "default": "사점 기호"
       }
     },
     "key": "205B"
@@ -1181,7 +1181,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "도트 십자가"
+        "default": "사점 십자가"
       }
     },
     "key": "205C"
@@ -1199,7 +1199,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "세로 4 도트"
+        "default": "세로 사점"
       }
     },
     "key": "205E"
@@ -1208,7 +1208,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "위 스크립트 플러스"
+        "default": "위첨자 플러스"
       }
     },
     "key": "207A"
@@ -1217,7 +1217,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "위 첨자 마이너스"
+        "default": "위첨자 마이너스"
       }
     },
     "key": "207B"
@@ -1226,7 +1226,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "위 첨자와 같음"
+        "default": "위첨자 등호"
       }
     },
     "key": "207C"
@@ -1235,7 +1235,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "위 첨자 왼쪽 괄호"
+        "default": "위첨자 왼쪽 괄호"
       }
     },
     "key": "207D"
@@ -1244,7 +1244,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "위 첨자 오른쪽 괄호"
+        "default": "위첨자 오른쪽 괄호"
       }
     },
     "key": "207E"
@@ -1253,7 +1253,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "아래 첨자 플러스"
+        "default": "아래첨자 플러스"
       }
     },
     "key": "208A"
@@ -1262,7 +1262,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "아래 첨자 마이너스"
+        "default": "아래첨자 마이너스"
       }
     },
     "key": "208B"
@@ -1271,7 +1271,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "아래 첨자 등호"
+        "default": "아래첨자 등호"
       }
     },
     "key": "208C"
@@ -1280,7 +1280,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "아래 첨자 왼쪽 괄호"
+        "default": "아래첨자 왼쪽 괄호"
       }
     },
     "key": "208D"
@@ -1289,7 +1289,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "아래 첨자 오른쪽 괄호"
+        "default": "아래첨자 오른쪽 괄호"
       }
     },
     "key": "208E"
@@ -1307,7 +1307,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "뒤집힌 앰퍼샌드"
+        "default": "역 앰퍼샌드"
       }
     },
     "key": "214B"
@@ -1325,7 +1325,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "에이 에스 문자"
+        "default": "에이 에스 기호"
       }
     },
     "key": "214D"
@@ -1334,7 +1334,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "뒤집힌 작은 "
+        "default": "작은 역 에프"
       }
     },
     "key": "214E"
@@ -1388,7 +1388,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "증가"
+        "default": "델타"
       }
     },
     "key": "2206"
@@ -1397,12 +1397,12 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "요소"
+        "default": "다음의 원소이다"
       },
       "clearspeak": {
-        "default": "의 구성원이다.", 
-        "SetMemberSymbol_Member": "의 구성원이다.",
-        "SetMemberSymbol_Element": "의 요소다.",
+        "default": "의 구성원이다", 
+        "SetMemberSymbol_Member": "의 구성원이다",
+        "SetMemberSymbol_Element": "의 원소다",
         "SetMemberSymbol_In": "안에 있다", 
         "SetMemberSymbol_Belongs": "에 속해 있다"
       }
@@ -1413,12 +1413,12 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "요소가 아닌"
+        "default": "다음의 원소가 아니다"
       },
       "clearspeak": {
-        "default": "의 구성원이 아니다.", 
-        "SetMemberSymbol_Member": "의 구성원이 아니다.",
-        "SetMemberSymbol_Element": "의 요소가 아니다.",
+        "default": "의 구성원이 아니다", 
+        "SetMemberSymbol_Member": "의 구성원이 아니다",
+        "SetMemberSymbol_Element": "의 원소가 아니다",
         "SetMemberSymbol_In": "안에 없다", 
         "SetMemberSymbol_Belongs": "에 속해 있지 않다"
       }
@@ -1429,7 +1429,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작은 요소 중"
+        "default": "다음의 원소이다"
       },
       "clearspeak": {
         "default": "의 구성원이다.", 
@@ -1445,7 +1445,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "구성원으로 포함한다."
+        "default": "다음을 원소로 갖는다"
       }
     },
     "key": "220B"
@@ -1454,7 +1454,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "구성원으로 포함하지 않는다."
+        "default": "다음을 원소로 갖지 않는다"
       }
     },
     "key": "220C"
@@ -1463,7 +1463,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작은 구성원으로 포함한다."
+        "default": "다음을 원소로 갖는다"
       }
     },
     "key": "220D"
@@ -1472,7 +1472,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "증명 끝"
+        "default": "증명끝"
       }
     },
     "key": "220E"
@@ -1520,7 +1520,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "마이너스 플러스"
+        "default": "마이너스플러스"
       }
     },
     "key": "2213"
@@ -1529,7 +1529,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "도트 플러스"
+        "default": "닷 플러스"
       }
     },
     "key": "2214"
@@ -1538,7 +1538,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "나눗셈 연산자"
+        "default": "나누기 슬래시"
       }
     },
     "key": "2215"
@@ -1547,7 +1547,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "마이너스 설정"
+        "default": "마이너스"
       }
     },
     "key": "2216"
@@ -1568,7 +1568,7 @@
         "default": "고리"
       },
       "clearspeak": {
-        "default": "복합 함수"
+        "default": "합성 함수"
       }
     },
     "key": "2218"
@@ -1577,7 +1577,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "총알 연산"
+        "default": "닷"
       }
     },
     "key": "2219"
@@ -1668,7 +1668,7 @@
     "mappings": {
       "default": {
         "default": "세로선",
-        "alternative": "나누기"
+        "alternative": "다음의 약수이다"
       }
     },
     "key": "2223"
@@ -1677,7 +1677,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "나누지 않는다"
+        "default": "다음의 약수가 아니다"
       }
     },
     "key": "2224"
@@ -1686,7 +1686,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "와 평행한."
+        "default": "평행하다"
       }
     },
     "key": "2225"
@@ -1695,7 +1695,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "와 평행하지 않은."
+        "default": "평행하지 않다"
       }
     },
     "key": "2226"
@@ -1767,7 +1767,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "경로 적분"
+        "default": "경로적분"
       }
     },
     "key": "222E"
@@ -1839,7 +1839,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "비율"
+        "default": "대"
       }
     },
     "key": "2236"
@@ -1848,7 +1848,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "비율"
+        "default": "대"
       }
     },
     "key": "2237"
@@ -1857,7 +1857,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "도트 마이너스"
+        "default": "닷 마이너스"
       }
     },
     "key": "2238"
@@ -1884,7 +1884,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "중심-닮음 변환"
+        "default": "동조"
       }
     },
     "key": "223B"
@@ -1893,7 +1893,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "물결"
+        "default": "물결표"
       }
     },
     "key": "223C"
@@ -1902,7 +1902,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거꾸로된 물결"
+        "default": "역 물결표"
       }
     },
     "key": "223D"
@@ -1911,7 +1911,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거꾸로된 게으른 s"
+        "default": "누운 S"
       }
     },
     "key": "223E"
@@ -1920,7 +1920,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "사인파"
+        "default": "싸인파"
       }
     },
     "key": "223F"
@@ -1938,7 +1938,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "물결표 아님"
+        "default": "부정 물결표"
       }
     },
     "key": "2241"
@@ -1956,7 +1956,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "점근적으로 동일한"
+        "default": "점근적으로 같다"
       }
     },
     "key": "2243"
@@ -1965,7 +1965,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "점근적으로 동일하지 않은"
+        "default": "점근적으로 같지 않다"
       }
     },
     "key": "2244"
@@ -1974,7 +1974,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "대략같은"
+        "default": "거의 같다"
       }
     },
     "key": "2245"
@@ -1983,7 +1983,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "대략 같지만 동일하지 않음"
+        "default": "거의 같다"
       }
     },
     "key": "2246"
@@ -1992,7 +1992,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "대략적으로 실제적으로 같지 않음"
+        "default": "근사하지도 같지도 않다"
       }
     },
     "key": "2247"
@@ -2001,7 +2001,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같음"
+        "default": "거의 같다"
       }
     },
     "key": "2248"
@@ -2010,7 +2010,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같지 않음"
+        "default": "거의 같지 않다"
       }
     },
     "key": "2249"
@@ -2019,7 +2019,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같거나 같음"
+        "default": "근사하거나 같다"
       }
     },
     "key": "224A"
@@ -2037,7 +2037,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "모두 같음"
+        "default": "모두 같다"
       }
     },
     "key": "224C"
@@ -2046,7 +2046,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "등호"
+        "default": "동등하다"
       }
     },
     "key": "224D"
@@ -2055,7 +2055,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "기하학적으로 동등한"
+        "default": "기하학적으로 동등하다"
       }
     },
     "key": "224E"
@@ -2064,7 +2064,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "차이점"
+        "default": "차"
       }
     },
     "key": "224F"
@@ -2073,7 +2073,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "한계에 접근"
+        "default": "한계에 접근하다"
       }
     },
     "key": "2250"
@@ -2082,7 +2082,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "기하학적으로 같음"
+        "default": "기하학적으로 같다"
       }
     },
     "key": "2251"
@@ -2091,7 +2091,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 동등하거나 ~의 상"
+        "default": "거의 같다"
       }
     },
     "key": "2252"
@@ -2100,7 +2100,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "의 상 또는 대략 같은"
+        "default": "거의 같다"
       }
     },
     "key": "2253"
@@ -2127,7 +2127,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "등호 안에 고리점"
+        "default": "고리점이 들어간 등호"
       }
     },
     "key": "2256"
@@ -2136,7 +2136,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "등호 위의 고리점"
+        "default": "고리점이 붙은 등호"
       }
     },
     "key": "2257"
@@ -2145,7 +2145,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "에 해당"
+        "default": "일치하다"
       }
     },
     "key": "2258"
@@ -2154,7 +2154,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "추정"
+        "default": "추정하다"
       }
     },
     "key": "2259"
@@ -2166,7 +2166,7 @@
         "default": "등각"
       },
       "clearspeak": {
-        "default": "와 등각이다."
+        "default": "와 등각이다"
       }
     },
     "key": "225A"
@@ -2193,7 +2193,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정의에 의해 같다"
+        "default": "정의상 같다"
       },
       "clearspeak": {
         "default": "정의된다"
@@ -2205,7 +2205,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "측정"
+        "default": "측정된다"
       },
       "clearspeak": {
         "default": "측정된다"
@@ -2226,7 +2226,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같지 않음"
+        "default": "같지 않다"
       },
       "clearspeak": {
         "default": "같지 않다"
@@ -2238,10 +2238,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "동일하다"
+        "default": "합동이다"
       },
       "clearspeak": {
-        "default": "동일하다"
+        "default": "합동이다"
       }
     },
     "key": "2261"
@@ -2250,10 +2250,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "동일하지 않다"
+        "default": "합동이 아니다"
       },
       "clearspeak": {
-        "default": "동일하지 않다"
+        "default": "합동이 아니다"
       }
     },
     "key": "2262"
@@ -2262,10 +2262,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "엄밀하게 동등한"
+        "default": "매우 동등하다"
       },
       "clearspeak": {
-        "default": "엄밀하게 동등하다"
+        "default": "매우 동등하다"
       }
     },
     "key": "2263"
@@ -2274,7 +2274,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작거나 같은"
+        "default": "작거나 같다"
       },
       "clearspeak": {
         "default": "작거나 같다"
@@ -2286,7 +2286,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크거나 같음"
+        "default": "크거나 같다"
       },
       "clearspeak": {
         "default": "크거나 같다"
@@ -2298,7 +2298,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 작음"
+        "default": "같거나 작다"
       },
       "clearspeak": {
         "default": "같거나 작다"
@@ -2310,7 +2310,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크거나 같음"
+        "default": "크거나 같다"
       },
       "clearspeak": {
         "default": "크거나 같다"
@@ -2322,7 +2322,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작지만 같지 않음"
+        "default": "작지만 같지 않다"
       },
       "clearspeak": {
         "default": "작지만 같지 않다"
@@ -2334,7 +2334,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크지만 같지 않음"
+        "default": "크지만 같지 않다"
       },
       "clearspeak": {
         "default": "크지만 같지 않다"
@@ -2346,10 +2346,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "훨씬 적음"
+        "default": "훨씬 작다"
       },
       "clearspeak": {
-        "default": "훨씬 적다"
+        "default": "훨씬 작다"
       }
     },
     "key": "226A"
@@ -2358,10 +2358,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "훨씬 더 큼"
+        "default": "훨씬 크다"
       },
       "clearspeak": {
-        "default": "훨씬 더 크다"
+        "default": "훨씬 크다"
       }
     },
     "key": "226B"
@@ -2379,7 +2379,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "동등하지 않음"
+        "default": "동등하지 않다"
       },
       "clearspeak": {
         "default": "동등하지 않다"
@@ -2391,7 +2391,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작지 않음"
+        "default": "작지 않다"
       },
       "clearspeak": {
         "default": "작지 않다"
@@ -2403,10 +2403,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크지 않음"
+        "default": "크지 않다"
       },
       "clearspeak": {
-        "default": "크지 않음"
+        "default": "크지 않다"
       }
     },
     "key": "226F"
@@ -2415,10 +2415,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작거나 같지 않음"
+        "default": "작지도 같지도 않다"
       },
       "clearspeak": {
-        "default": "작거나 같지 않다"
+        "default": "작지도 같지도 않다"
       }
     },
     "key": "2270"
@@ -2427,10 +2427,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크거나 같지 않음"
+        "default": "크지도 같지도 않다"
       },
       "clearspeak": {
-        "default": "크거나 같지 않다"
+        "default": "크지도 같지도 않다"
       }
     },
     "key": "2271"
@@ -2439,7 +2439,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작거나 동등함"
+        "default": "작거나 동등하다"
       },
       "clearspeak": {
         "default": "작거나 동등하다"
@@ -2451,7 +2451,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크거나 동등함"
+        "default": "크거나 동등하다"
       },
       "clearspeak": {
         "default": "크거나 동등하다"
@@ -2463,7 +2463,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작지도 동등하지도 않음"
+        "default": "작지도 동등하지도 않다"
       },
       "clearspeak": {
         "default": "작지도 동등하지도 않다"
@@ -2475,7 +2475,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크지도 동등하지도 않음"
+        "default": "크지도 동등하지도 않다"
       },
       "clearspeak": {
         "default": "크지도 동등하지도 않다"
@@ -2487,7 +2487,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작거나 큼"
+        "default": "작거나 크다"
       },
       "clearspeak": {
         "default": "작거나 크다"
@@ -2499,7 +2499,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크거나 작음"
+        "default": "크거나 작다"
       },
       "clearspeak": {
         "default": "크거나 작다"
@@ -2511,7 +2511,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작지도 크지도 않음"
+        "default": "작지도 크지도 않다"
       },
       "clearspeak": {
         "default": "작지도 크지도 않다"
@@ -2523,7 +2523,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크지도 작지도 않음"
+        "default": "크지도 작지도 않다"
       },
       "clearspeak": {
         "default": "크지도 작지도 않다"
@@ -2535,7 +2535,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "선행하다"
+        "default": "선행한다"
       }
     },
     "key": "227A"
@@ -2544,7 +2544,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "뒤를 잇다"
+        "default": "후행한다"
       }
     },
     "key": "227B"
@@ -2562,7 +2562,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "뒤를 잇거나 같다"
+        "default": "후행하거나 같다"
       }
     },
     "key": "227D"
@@ -2580,7 +2580,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "뒤를 잇거나 동등하다"
+        "default": "후행하거나 동등하다"
       }
     },
     "key": "227F"
@@ -2598,7 +2598,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "뒤를 잇지 않는다"
+        "default": "후행하지 않는다"
       }
     },
     "key": "2281"
@@ -2607,7 +2607,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "하위집합"
+        "default": "부분집합"
       }
     },
     "key": "2282"
@@ -2625,7 +2625,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "하위집합이 아니다"
+        "default": "부분집합이 아니다"
       }
     },
     "key": "2284"
@@ -2643,7 +2643,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "하위 집합 또는 같음"
+        "default": "부분집합이거나 같다"
       }
     },
     "key": "2286"
@@ -2652,7 +2652,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "상위 집합 또는 같음"
+        "default": "상위집합이거나 같다"
       }
     },
     "key": "2287"
@@ -2661,7 +2661,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "하위집합도 아니고 같지도 않음"
+        "default": "부분집합이지도 같지도 않다"
       }
     },
     "key": "2288"
@@ -2670,7 +2670,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "상위집합도 아니고 같지도 않음"
+        "default": "상위집합이지도 같지도 않다"
       }
     },
     "key": "2289"
@@ -2679,7 +2679,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "하위 집합이거나 같지 않음"
+        "default": "부분집합이지만 같지 않다"
       }
     },
     "key": "228A"
@@ -2688,7 +2688,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "상위 집합이거나 같지 않음"
+        "default": "상위집합이지만 같지 않다"
       }
     },
     "key": "228B"
@@ -2697,7 +2697,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "다중 집합"
+        "default": "다중집합"
       }
     },
     "key": "228C"
@@ -2715,7 +2715,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "다중집합 유니온"
+        "default": "다중집합 덧셈"
       }
     },
     "key": "228E"
@@ -2724,7 +2724,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정방형 이미지의"
+        "default": "각진 부분집합"
       }
     },
     "key": "228F"
@@ -2733,7 +2733,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정방형 원본"
+        "default": "각진 상위집합"
       }
     },
     "key": "2290"
@@ -2742,7 +2742,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정방형 이미지 또는 같음"
+        "default": "각진 부분집합이거나 같다"
       }
     },
     "key": "2291"
@@ -2751,7 +2751,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정방형 원본 또는 같음"
+        "default": "각진 상위집합이거나 같다"
       }
     },
     "key": "2292"
@@ -2760,7 +2760,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "스퀘어 캡"
+        "default": "교집합"
       }
     },
     "key": "2293"
@@ -2769,7 +2769,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "스퀘어 컵"
+        "default": "합집합"
       }
     },
     "key": "2294"
@@ -2778,7 +2778,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 더하기"
+        "default": "원문자 더하기"
       }
     },
     "key": "2295"
@@ -2787,7 +2787,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 마이너스"
+        "default": "원문자 빼기"
       }
     },
     "key": "2296"
@@ -2796,7 +2796,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 벡터곱"
+        "default": "원문자 곱하기"
       }
     },
     "key": "2297"
@@ -2805,7 +2805,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 나누기"
+        "default": "원문자 나누기"
       }
     },
     "key": "2298"
@@ -2814,7 +2814,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 스칼라곱"
+        "default": "원문자 닷"
       }
     },
     "key": "2299"
@@ -2823,7 +2823,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 링"
+        "default": "원문자 고리"
       }
     },
     "key": "229A"
@@ -2832,7 +2832,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 별표"
+        "default": "원문자 별표"
       }
     },
     "key": "229B"
@@ -2841,7 +2841,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 등호"
+        "default": "원문자 등호"
       }
     },
     "key": "229C"
@@ -2850,7 +2850,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 대시"
+        "default": "원문자 대시"
       }
     },
     "key": "229D"
@@ -2859,7 +2859,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "사각형 더하기"
+        "default": "사각문자 더하기"
       }
     },
     "key": "229E"
@@ -2868,7 +2868,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "사각형 빼기"
+        "default": "사각문자 빼기"
       }
     },
     "key": "229F"
@@ -2877,7 +2877,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "사각형 벡터곱"
+        "default": "사각문자 곱하기"
       }
     },
     "key": "22A0"
@@ -2886,7 +2886,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "사각형 스칼라곱"
+        "default": "사각문자 닷"
       }
     },
     "key": "22A1"
@@ -2895,7 +2895,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른방향 압정"
+        "default": "오른 턴스틸"
       }
     },
     "key": "22A2"
@@ -2904,7 +2904,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼방향 압정"
+        "default": "왼 턴스틸"
       }
     },
     "key": "22A3"
@@ -2913,7 +2913,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "아래방향 압정"
+        "default": "참 기호"
       }
     },
     "key": "22A4"
@@ -2922,7 +2922,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "위방향 압정"
+        "default": "거짓 기호"
       }
     },
     "key": "22A5"
@@ -2949,7 +2949,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "사실이다"
+        "default": "참"
       }
     },
     "key": "22A8"
@@ -2958,7 +2958,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "강제하다"
+        "default": "강제"
       }
     },
     "key": "22A9"
@@ -2967,7 +2967,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "삼중 세로선 오른 개찰구"
+        "default": "삼중 세로선 오른 턴스틸"
       }
     },
     "key": "22AA"
@@ -2976,7 +2976,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이중 세로선 이중 오른 개찰구"
+        "default": "이중 세로선 이중 오른 턴스틸"
       }
     },
     "key": "22AB"
@@ -2994,7 +2994,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "사실이 아니다"
+        "default": "참이 아니다"
       }
     },
     "key": "22AD"
@@ -3012,7 +3012,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "부정 이중 세로선 이중 오른 "
+        "default": "부정 이중 세로선 이중 오른 턴스틸"
       }
     },
     "key": "22AF"
@@ -3021,7 +3021,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "관계상 선행"
+        "default": "관계상 선행한다"
       }
     },
     "key": "22B0"
@@ -3030,7 +3030,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "관계상 후행"
+        "default": "관계상 후행한다"
       }
     },
     "key": "22B1"
@@ -3039,7 +3039,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정상 상위 집단"
+        "default": "다음의 일반 하위그룹이다"
       }
     },
     "key": "22B2"
@@ -3048,7 +3048,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "일반 상위 그룹으로 포함"
+        "default": "다음을 일반 하위그룹으로 갖는다"
       }
     },
     "key": "22B3"
@@ -3057,7 +3057,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정상 상위 집단 또는 같음"
+        "default": "일반 하위그룹이거나 같다"
       }
     },
     "key": "22B4"
@@ -3066,7 +3066,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "일반 상위 그룹으로 포함 또는 같음"
+        "default": "일반 하위그룹으로 갖거나 같다"
       }
     },
     "key": "22B5"
@@ -3075,7 +3075,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "의 기원"
+        "default": "원본"
       }
     },
     "key": "22B6"
@@ -3084,7 +3084,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "의 이미지"
+        "default": "이미지"
       }
     },
     "key": "22B7"
@@ -3102,7 +3102,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "에르미트 수반 행령"
+        "default": "켤레 행렬"
       }
     },
     "key": "22B9"
@@ -3111,7 +3111,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "인터칼레이트"
+        "default": "층 구조"
       }
     },
     "key": "22BA"
@@ -3129,7 +3129,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "낸드 부정 논리곱" 
+        "default": "부정 논리곱" 
       }
     },
     "key": "22BC"
@@ -3138,7 +3138,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "노어 부정 논리합"
+        "default": "부정 논리합"
       }
     },
     "key": "22BD"
@@ -3147,7 +3147,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른 삼각형"
+        "default": "직삼각형"
       }
     },
     "key": "22BF"
@@ -3156,7 +3156,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "n 자 논리곱"
+        "default": "n 항 논리곱"
       },
       "mathspeak": {
         "default": "논리곱"
@@ -3168,7 +3168,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "n 자 논리합"
+        "default": "n 항 논리합"
       },
       "mathspeak": {
         "default": "논리합"
@@ -3180,7 +3180,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "n자 교집합"
+        "default": "n 항 교집합"
       },
       "mathspeak": {
         "default": "교집합"
@@ -3192,7 +3192,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "n자 합집합"
+        "default": "n 항 합집합"
       },
       "mathspeak": {
         "default": "합집합"
@@ -3204,7 +3204,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "다이아몬드"
+        "default": "다이아몬드 연산자"
       }
     },
     "key": "22C4"
@@ -3213,10 +3213,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곱하기"
+        "default": "닷"
       },
       "clearspeak": {
-        "default": "곱하기",
+        "default": "닷",
         "MultsymbolDot_Dot": "내적"
       }
     },
@@ -3235,7 +3235,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "나누기 곱"
+        "default": "나눗셈 곱셈"
       }
     },
     "key": "22C7"
@@ -3289,7 +3289,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "반전된 물결 등호"
+        "default": "역 물결 등호"
       }
     },
     "key": "22CD"
@@ -3298,7 +3298,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곱슬 논리합"
+        "default": "휜 논리합"
       }
     },
     "key": "22CE"
@@ -3307,7 +3307,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곱슬 논리곱"
+        "default": "휜 논리곱"
       }
     },
     "key": "22CF"
@@ -3361,7 +3361,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 평행"
+        "default": "같거나 평행하다"
       },
       "clearspeak": {
         "default": "같거나 평행하다"
@@ -3373,10 +3373,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "점보다 작은"
+        "default": "작다"
       },
       "clearspeak": {
-        "default": "점보다 작다"
+        "default": "작다"
       }
     },
     "key": "22D6"
@@ -3385,10 +3385,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "점보다 크은"
+        "default": "크다"
       },
       "clearspeak": {
-        "default": "점보다 크다"
+        "default": "크다"
       }
     },
     "key": "22D7"
@@ -3397,10 +3397,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "매우매우 작은"
+        "default": "훨씬훨씬 작다"
       },
       "clearspeak": {
-        "default": "매우매우 작다"
+        "default": "훨씬훨씬 작다"
       }
     },
     "key": "22D8"
@@ -3409,10 +3409,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "매우매우 큰"
+        "default": "훨씬훨씬 크다"
       },
       "clearspeak": {
-        "default": "매우매우 크다"
+        "default": "훨씬훨씬 크다"
       }
     },
     "key": "22D9"
@@ -3421,10 +3421,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 같거나 큼"
+        "default": "작거나 같거나 크다"
       },
       "clearspeak": {
-        "default": "보다 작거나 같거나 크다"
+        "default": "작거나 같거나 크다"
       }
     },
     "key": "22DA"
@@ -3433,10 +3433,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크거나 같거나 작음"
+        "default": "크거나 같거나 작다"
       },
       "clearspeak": {
-        "default": "크거나 같거나 작음"
+        "default": "크거나 같거나 작다"
       }
     },
     "key": "22DB"
@@ -3445,7 +3445,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 작음"
+        "default": "같거나 작다"
       },
       "clearspeak": {
         "default": "같거나 작다"
@@ -3457,7 +3457,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 큰"
+        "default": "같거나 크다"
       },
       "clearspeak": {
         "default": "같거나 크다"
@@ -3469,10 +3469,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 선행"
+        "default": "같거나 선행한다"
       },
       "clearspeak": {
-        "default": "같거나 선행하다"
+        "default": "같거나 선행한다"
       }
     },
     "key": "22DE"
@@ -3481,10 +3481,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 후행"
+        "default": "같거나 후행한다"
       },
       "clearspeak": {
-        "default": "같거나 후행하다"
+        "default": "같거나 후행한다"
       }
     },
     "key": "22DF"
@@ -3493,7 +3493,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "선행하지 않거나 같지 않음"
+        "default": "선행하지도 같지도 않다"
       }
     },
     "key": "22E0"
@@ -3502,7 +3502,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "후행하지 않거나 같지 않음"
+        "default": "후행하지도 같지도 않다"
       }
     },
     "key": "22E1"
@@ -3511,10 +3511,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형 이미지와 같음이 아닌"
+        "default": "각진 부분집합이지도 같지도 않다"
       },
       "clearspeak": {
-        "default": "정사각형 이미지와 같음이 아니다"
+        "default": "각진 부분집합이지도 같지도 않다"
       }
     },
     "key": "22E2"
@@ -3523,10 +3523,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형 원본 또는 같음이 아닌"
+        "default": "각진 상위집합이지도 같지도 않다"
       },
       "clearspeak": {
-        "default": "정사각형 원본 또는 같음이 아니다"
+        "default": "각진 상위집합이지도 같지도 않다"
       }
     },
     "key": "22E3"
@@ -3535,10 +3535,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형 이미지 또는 같지않음"
+        "default": "각진 부분집합이지만 같지 않다"
       },
       "clearspeak": {
-        "default": "정사각형 이미지 또는 같지않다"
+        "default": "각진 부분집합이지만 같지 않다"
       }
     },
     "key": "22E4"
@@ -3547,10 +3547,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형 원본 또는 같지 않음"
+        "default": "각진 상위집합이지만 같지 않다"
       },
       "clearspeak": {
-        "default": "정사각형 원본 또는 같지 않다"
+        "default": "각진 상위집합이지만 같지 않다"
       }
     },
     "key": "22E5"
@@ -3559,10 +3559,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작지만 같지 않음"
+        "default": "작지만 동등하지 않다"
       },
       "clearspeak": {
-        "default": "작지만 같지 않다"
+        "default": "작지만 동등하지 않다"
       }
     },
     "key": "22E6"
@@ -3571,10 +3571,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "크지만 같지 않음"
+        "default": "크지만 동등하지 않다"
       },
       "clearspeak": {
-        "default": "크지만 같지 않다"
+        "default": "크지만 동등하지 않다"
       }
     },
     "key": "22E7"
@@ -3583,7 +3583,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "선행하지만 같지 않다"
+        "default": "선행하지만 동등하지 않다"
       }
     },
     "key": "22E8"
@@ -3592,7 +3592,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "후행하지만 같지 않음"
+        "default": "후행하지만 동등하지 않다"
       }
     },
     "key": "22E9"
@@ -3601,10 +3601,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "일반 하위집합이 아닌"
+        "default": "다음의 일반 하위그룹이 아니다"
       },
       "clearspeak": {
-        "default": "일반 하위집합이 아니다"
+        "default": "다음의 일반 하위그룹이 아니다"
       }
     },
     "key": "22EA"
@@ -3613,7 +3613,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "일반 하위 그룹으로 포함하지 않음"
+        "default": "다음을 일반 하위그룹으로 갖지 않는다"
       }
     },
     "key": "22EB"
@@ -3622,10 +3622,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "일반 하위집합도 아니고 같지도 않음"
+        "default": "일반 하위그룹이지도 같지도 않다"
       },
       "clearspeak": {
-        "default": "일반 하위집합도 아니고 같지도 않다"
+        "default": "일반 하위그룹이지도 같지도 않다"
       }
     },
     "key": "22EC"
@@ -3634,7 +3634,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "일반 하위 그룹으로 포함하지 않고 같지 않다"
+        "default": "일반 하위그룹으로 갖지도 같지도 않다"
       }
     },
     "key": "22ED"
@@ -3652,7 +3652,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "중간선 수평 말줄임표"
+        "default": "줄임표"
       },
       "clearspeak": {
         "default": "점 점 점"
@@ -3664,7 +3664,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른위 대각선 말줄임표"
+        "default": "우상향 대각선 줄임표"
       }
     },
     "key": "22F0"
@@ -3673,7 +3673,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른아래 대각선 말줄임표"
+        "default": "우하향 대각선 줄임표"
       }
     },
     "key": "22F1"
@@ -3682,7 +3682,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "긴 수평 스트로크가 있는 원소 기호"
+        "default": "긴 가로선이 있는 원소 기호"
       }
     },
     "key": "22F2"
@@ -3691,7 +3691,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수평 스트로크 끝에 세로 막대가 있는 원소 기호"
+        "default": "가로선 끝에 세로 막대가 있는 원소 기호"
       }
     },
     "key": "22F3"
@@ -3700,7 +3700,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수평 스트로크 끝에 세로 막대가 있는 작은 원소 기호"
+        "default": "가로선 끝에 세로 막대가 있는 작은 원소 기호"
       }
     },
     "key": "22F4"
@@ -3709,7 +3709,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "위에 점이 있는 원소"
+        "default": "점이 붙은 원소 기호"
       }
     },
     "key": "22F5"
@@ -3718,7 +3718,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "윗줄이 있는 원소"
+        "default": "윗줄이 있는 원소 기호"
       }
     },
     "key": "22F6"
@@ -3727,7 +3727,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "윗줄이 있는 작은 원소"
+        "default": "윗줄이 있는 작은 원소 기호"
       }
     },
     "key": "22F7"
@@ -3736,7 +3736,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "밑줄이 있는 원소"
+        "default": "밑줄이 있는 원소 기호"
       }
     },
     "key": "22F8"
@@ -3745,7 +3745,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "두개의 수평 스트로크가 있는 원소"
+        "default": "두개의 가로선이 있는 원소 기호"
       }
     },
     "key": "22F9"
@@ -3754,7 +3754,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "긴 수평 스트로크가 있는 포함 기호"
+        "default": "긴 가로선이 있는 포함 기호"
       }
     },
     "key": "22FA"
@@ -3763,7 +3763,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수평 스트로크 끝에 세로 막대가 있는 포함 기호"
+        "default": "가로선 끝에 세로 막대가 있는 포함 기호"
       }
     },
     "key": "22FB"
@@ -3772,7 +3772,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수평 스트로크 끝에 세로 막대가 있는 작은 포함 기호"
+        "default": "가로선 끝에 세로 막대가 있는 작은 포함 기호"
       }
     },
     "key": "22FC"
@@ -3799,7 +3799,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "z 표기법"
+        "default": "Z 표기법"
       }
     },
     "key": "22FF"
@@ -3826,7 +3826,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "투영"
+        "default": "사영"
       }
     },
     "key": "2305"
@@ -3835,7 +3835,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "관점"
+        "default": "원근법"
       }
     },
     "key": "2306"
@@ -3844,7 +3844,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "세로 물결모양 선"
+        "default": "세로 톱니선"
       }
     },
     "key": "2307"
@@ -3853,7 +3853,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "역전된 부정 기호"
+        "default": "역 부정 기호"
       }
     },
     "key": "2310"
@@ -3862,7 +3862,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "정사각 마름모꼴"
+        "default": "사각 마름모꼴"
       }
     },
     "key": "2311"
@@ -3916,7 +3916,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "진한 나눗셈"
+        "default": "진한 나누기"
       }
     },
     "key": "2797"
@@ -3925,7 +3925,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "곱슬 루프"
+        "default": "루프"
       }
     },
     "key": "27B0"
@@ -3934,7 +3934,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "이중 곱슬 루프"
+        "default": "이중 루프"
       }
     },
     "key": "27BF"
@@ -3943,7 +3943,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작은 흰색 삼각형을 포함하는 흰색 삼각형"
+        "default": "겹세모"
       }
     },
     "key": "27C1"
@@ -3979,7 +3979,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "점이 안에 있는 논리합"
+        "default": "점이 들어간 논리합"
       }
     },
     "key": "27C7"
@@ -3988,7 +3988,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "하위집합 앞에 백슬래쉬"
+        "default": "하위집합 앞에 백슬래시"
       }
     },
     "key": "27C8"
@@ -3997,7 +3997,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "빗금 앞에 상위집합"
+        "default": "슬래시 앞에 상위집합"
       }
     },
     "key": "27C9"
@@ -4006,7 +4006,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수평 스트로크가 있는 세로막대"
+        "default": "가로 막대가 있는 세로선"
       }
     },
     "key": "27CA"
@@ -4015,7 +4015,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "우상하는 대각선"
+        "default": "우상향 대각선"
       }
     },
     "key": "27CB"
@@ -4024,7 +4024,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "긴 나누기기"
+        "default": "나눗셈법 기호"
       }
     },
     "key": "27CC"
@@ -4033,7 +4033,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "떨어지는 대각선"
+        "default": "우하향 대각선"
       }
     },
     "key": "27CD"
@@ -4042,7 +4042,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형으로 둘러쌓인 논리곱"
+        "default": "사각문자 논리곱"
       }
     },
     "key": "27CE"
@@ -4051,7 +4051,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형으로 둘러쌓인 논리합"
+        "default": "사각문자 논리합"
       }
     },
     "key": "27CF"
@@ -4060,7 +4060,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "중심에 점이 있는 다이아몬드"
+        "default": "점이 들어간 다이아몬드"
       }
     },
     "key": "27D0"
@@ -4069,7 +4069,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "안에 점이 있는 논리곱"
+        "default": "점이 들어간 논리곱"
       }
     },
     "key": "27D1"
@@ -4087,7 +4087,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "점이 있는 오른 아래 모서리"
+        "default": "점이 있는 오른쪽 아래 모서리"
       }
     },
     "key": "27D3"
@@ -4105,7 +4105,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "레프트 아우터 조인"
+        "default": "왼쪽 외부 조인"
       }
     },
     "key": "27D5"
@@ -4114,7 +4114,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "라이트 아우터 조인"
+        "default": "오른쪽 외부 조인"
       }
     },
     "key": "27D6"
@@ -4123,7 +4123,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "풀 아우터 조인"
+        "default": "양쪽 외부 조인"
       }
     },
     "key": "27D7"
@@ -4132,7 +4132,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "큰 윗방향 압정"
+        "default": "큰 거짓 기호"
       }
     },
     "key": "27D8"
@@ -4141,7 +4141,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "큰 아래방향 압정"
+        "default": "큰 참 기호"
       }
     },
     "key": "27D9"
@@ -4150,7 +4150,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 및 오른쪽 이중 개찰구"
+        "default": "양쪽 이중 턴스틸"
       }
     },
     "key": "27DA"
@@ -4159,7 +4159,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 및 오른쪽 압정"
+        "default": "양쪽 턴스틸"
       }
     },
     "key": "27DB"
@@ -4168,7 +4168,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 멀티 맵"
+        "default": "왼쪽 멀티맵"
       }
     },
     "key": "27DC"
@@ -4177,7 +4177,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "긴 오른쪽 압정"
+        "default": "긴 오른 턴스틸"
       }
     },
     "key": "27DD"
@@ -4186,7 +4186,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "긴 왼쪽 압정"
+        "default": "긴 왼 턴스틸"
       }
     },
     "key": "27DE"
@@ -4195,7 +4195,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "윗 압정 위에 원"
+        "default": "원이 붙은 윗 압정"
       }
     },
     "key": "27DF"
@@ -4204,7 +4204,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수평으로 나뉜 진한 마름모"
+        "default": "나침반"
       }
     },
     "key": "27E0"
@@ -4213,7 +4213,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "흰색 오목 다이아몬드"
+        "default": "하얀 오목한 다이아몬드"
       }
     },
     "key": "27E1"
@@ -4222,7 +4222,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽이 튀어나온 흰색 오목 다이아몬드"
+        "default": "왼쪽이 튀어나온 하얀 오목한 다이아몬드"
       }
     },
     "key": "27E2"
@@ -4231,7 +4231,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른쪽이 튀어나온 흰색 오목면 다이아몬드"
+        "default": "오른쪽이 튀어나온 하얀 오목한 다이아몬드"
       }
     },
     "key": "27E3"
@@ -4240,7 +4240,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "흰색 사각형과 왼쪽 틱"
+        "default": "하얀 사각형과 왼쪽 틱"
       }
     },
     "key": "27E4"
@@ -4249,7 +4249,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "흰색 사각형과 오른쪽 틱"
+        "default": "하얀 사각형과 오른쪽 틱"
       }
     },
     "key": "27E5"
@@ -4258,7 +4258,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "상승 대각선 밑으로 교차 하강 대각선"
+        "default": "우상향 대각선 밑으로 교차 우하향 대각선"
       }
     },
     "key": "292B"
@@ -4267,7 +4267,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "하강 대각선 밑으로 교차 상승 대각선"
+        "default": "우하향 대각선 밑으로 교차 우상향 대각선"
       }
     },
     "key": "292C"
@@ -4276,7 +4276,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "삼중 세로 구분문자"
+        "default": "삼중 세로선"
       }
     },
     "key": "2980"
@@ -4294,7 +4294,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "Z 표기 유형 콜론"
+        "default": "Z 표기법 하얀 콜론"
       }
     },
     "key": "2982"
@@ -4303,7 +4303,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "점선으로 된 울타리"
+        "default": "세로 사점"
       }
     },
     "key": "2999"
@@ -4312,7 +4312,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "세로 지그재그 선"
+        "default": "세로 지그재그선"
       }
     },
     "key": "299A"
@@ -4321,7 +4321,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "반전된 공집합"
+        "default": "역 공집합"
       }
     },
     "key": "29B0"
@@ -4339,7 +4339,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "위에 작은 원이 있는 공집합"
+        "default": "작은 원이 붙은 공집합"
       }
     },
     "key": "29B2"
@@ -4348,7 +4348,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수평선이 있는 원"
+        "default": "가로선이 있는 원"
       }
     },
     "key": "29B5"
@@ -4357,7 +4357,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "세로선이 있는 원"
+        "default": "원문자 세로선"
       }
     },
     "key": "29B6"
@@ -4366,7 +4366,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원  평행선 "
+        "default": "원문자 평행"
       }
     },
     "key": "29B7"
@@ -4375,7 +4375,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "백슬래쉬를 포함하는 원"
+        "default": "원문자 백슬래시"
       }
     },
     "key": "29B8"
@@ -4384,7 +4384,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수직기호를 포함하는 원"
+        "default": "원문자 수직"
       }
     },
     "key": "29B9"
@@ -4393,7 +4393,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수평선으로 나눠지고 위 반원은 세로로 나눠진 원"
+        "default": "가로선으로 나눠지고 위 반원은 세로선으로 나눠진 원"
       }
     },
     "key": "29BA"
@@ -4402,7 +4402,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "겹쳐진 x가 있는 원"
+        "default": "X가 겹쳐진 원"
       }
     },
     "key": "29BB"
@@ -4411,7 +4411,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 반시계로 회전한 나누기 기호"
+        "default": "원문자 반시계로 회전한 나누기 기호"
       }
     },
     "key": "29BC"
@@ -4420,7 +4420,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 흰 글머리기호"
+        "default": "원문자 하얀 글머리표"
       }
     },
     "key": "29BE"
@@ -4429,7 +4429,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 글머리기호"
+        "default": "원문자 글머리표"
       }
     },
     "key": "29BF"
@@ -4438,7 +4438,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 작다 기호"
+        "default": "원문자 작다"
       }
     },
     "key": "29C0"
@@ -4447,7 +4447,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원 문자 크다 기호"
+        "default": "원문자 크다"
       }
     },
     "key": "29C1"
@@ -4465,7 +4465,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른쪽에 두 개의 수평선이 있는 원"
+        "default": "오른쪽에 이중 가로선이 있는 원"
       }
     },
     "key": "29C3"
@@ -4474,7 +4474,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형 안에 상승 대각선"
+        "default": "사각문자 우상향 대각선"
       }
     },
     "key": "29C4"
@@ -4483,7 +4483,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형 안에 하강 대각선"
+        "default": "사각문자 우하향 대각선"
       }
     },
     "key": "29C5"
@@ -4492,7 +4492,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형 별표"
+        "default": "사각문자 별표"
       }
     },
     "key": "29C6"
@@ -4501,7 +4501,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형 안에 작은 원"
+        "default": "사각문자 작은 원"
       }
     },
     "key": "29C7"
@@ -4510,7 +4510,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "정사각형 안에 정사각형"
+        "default": "사각문자 정사각형"
       }
     },
     "key": "29C8"
@@ -4519,7 +4519,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "두 개의 결합된 정사각형"
+        "default": "두 개의 겹쳐진 정사각형"
       }
     },
     "key": "29C9"
@@ -4528,7 +4528,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "삼각형 위에 점"
+        "default": "점이 붙은 삼각형"
       }
     },
     "key": "29CA"
@@ -4546,7 +4546,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "삼각형 안에 s"
+        "default": "삼각형 안에 S"
       }
     },
     "key": "29CC"
@@ -4564,7 +4564,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른방향 삼각형 위에 왼방향 삼각형"
+        "default": "우향 삼각형 밑에 좌향 삼각형"
       }
     },
     "key": "29CE"
@@ -4573,7 +4573,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼방향 삼각형 오른쪽에 수직선"
+        "default": "좌향 삼각형 오른쪽에 세로선"
       }
     },
     "key": "29CF"
@@ -4582,7 +4582,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른방향 왼쪽에 수직선"
+        "default": "우향 삼각형 왼쪽에 세로선"
       }
     },
     "key": "29D0"
@@ -4591,7 +4591,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 절반이 검은 나비넥타이"
+        "default": "왼쪽 절반이 검은 나비 넥타이"
       }
     },
     "key": "29D1"
@@ -4654,7 +4654,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "불완전 무한"
+        "default": "불완전 무한대"
       }
     },
     "key": "29DC"
@@ -4663,7 +4663,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "무한 위에 묶음기호"
+        "default": "묶음기호가 붙은 무한대"
       }
     },
     "key": "29DD"
@@ -4672,7 +4672,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수직선으로 부정된 무한"
+        "default": "수직선으로 부정된 무한대"
       }
     },
     "key": "29DE"
@@ -4708,7 +4708,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "순열 곱"
+        "default": "셔플 곱"
       }
     },
     "key": "29E2"
@@ -4726,7 +4726,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "등호와 평행 기호 위에 물결 기호"
+        "default": "등호와 평행 기호 위에 물결표"
       }
     },
     "key": "29E4"
@@ -4735,7 +4735,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "동일함과 평행 기호"
+        "default": "합동과 평행 기호"
       }
     },
     "key": "29E5"
@@ -4789,7 +4789,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "흰 정사각형을 둘러싼 오차 기호"
+        "default": "에러 바 하얀 정사각형"
       }
     },
     "key": "29EE"
@@ -4798,7 +4798,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "검은 정사각형을 둘러싼 오차 기호"
+        "default": "에러 바 검은 사각형"
       }
     },
     "key": "29EF"
@@ -4807,7 +4807,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "흰 다이아몬드를 둘러싼 오차 기호"
+        "default": "에러 바 하얀 다이아몬드"
       }
     },
     "key": "29F0"
@@ -4816,7 +4816,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "검은 다이아몬드를 둘러싼 오차 기호"
+        "default": "에러 바 검은 다이아몬드"
       }
     },
     "key": "29F1"
@@ -4825,7 +4825,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "흰 원을 둘러싼 오차 기호"
+        "default": "에러 바 하얀 원"
       }
     },
     "key": "29F2"
@@ -4834,7 +4834,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "검은 원을 둘러싼 오차 기호"
+        "default": "에러 바 검은 원"
       }
     },
     "key": "29F3"
@@ -4843,7 +4843,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "규칙 지연된"
+        "default": "지연 규칙"
       }
     },
     "key": "29F4"
@@ -4870,7 +4870,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "수평 스트로크가 있는 역슬래시"
+        "default": "가로선이 있는 백슬래시"
       }
     },
     "key": "29F7"
@@ -4939,7 +4939,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "엔 항 원문자 내적"
+        "default": "n 항 원문자 내적"
       },
       "mathspeak": {
         "default": "원문자 내적"
@@ -4951,7 +4951,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "엔 항 원문자 더하기"
+        "default": "n 항 원문자 더하기"
       },
       "mathspeak": {
         "default": "원문자 더하기"
@@ -4963,7 +4963,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "엔 항 원문자 곱하기"
+        "default": "n 항 원문자 곱하기"
       },
       "mathspeak": {
         "default": "원문자 곱하기"
@@ -4975,7 +4975,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "닷이 붙은 엔 항 합집합"
+        "default": "닷이 붙은 n 항 합집합"
       },
       "mathspeak": {
         "default": "닷이 붙은 합집합"
@@ -4987,10 +4987,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "플러스 기호가 붙은 엔 항 합집합"
+        "default": "플러스가 붙은 n 항 합집합"
       },
       "mathspeak": {
-        "default": "플러스 기호가 붙은 합집합"
+        "default": "플러스가 붙은 합집합"
       }
     },
     "key": "2A04"
@@ -4999,7 +4999,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "엔 항 서로소 교집합"
+        "default": "n 항 서로소 교집합"
       },
       "mathspeak": {
         "default": "서로소 교집합"
@@ -5011,7 +5011,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "엔 항 서로소 합집합"
+        "default": "n 항 서로소 합집합"
       },
       "mathspeak": {
         "default": "서로소 합집합"
@@ -5023,7 +5023,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이중 논리곱 기호"
+        "default": "이중 논리곱"
       }
     },
     "key": "2A07"
@@ -5032,7 +5032,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이중 논리합 기호"
+        "default": "이중 논리합"
       }
     },
     "key": "2A08"
@@ -5041,10 +5041,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "엔 항 곱 기호"
+        "default": "n 항 곱하기"
       },
       "mathspeak": {
-        "default": "곱 연산자"
+        "default": "곱하기"
       }
     },
     "key": "2A09"
@@ -5062,7 +5062,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "리만합 기호"
+        "default": "리만합"
       }
     },
     "key": "2A0B"
@@ -5071,7 +5071,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "쿼드러플 인테그럴"
+        "default": "쿼드 인테그럴"
       }
     },
     "key": "2A0C"
@@ -5170,7 +5170,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곱셈 기호가 붙은 인테그럴"
+        "default": "곱하기가 붙은 인테그럴"
       }
     },
     "key": "2A18"
@@ -5233,7 +5233,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "지 노테이션에서 스키마 합성 기호"
+        "default": "Z 표기법에서 스키마 합성 기호"
       }
     },
     "key": "2A1F"
@@ -5242,7 +5242,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "지 노테이션에서 스키마 파이핑 기호"
+        "default": "Z 표기법에서 스키마 파이핑 기호"
       }
     },
     "key": "2A20"
@@ -5251,7 +5251,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "지 노테이션에서 스키마 사영 기호"
+        "default": "Z 표기법에서 스키마 사영 기호"
       }
     },
     "key": "2A21"
@@ -5260,7 +5260,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작은 원이 위에 붙은 플러스 기호"
+        "default": "작은 원이 붙은 플러스"
       }
     },
     "key": "2A22"
@@ -5269,7 +5269,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곡절 기호가 위에 붙은 플러스 기호"
+        "default": "곡절 기호가 붙은 플러스"
       }
     },
     "key": "2A23"
@@ -5278,7 +5278,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "물결표가 위에 붙은 플러스 기호"
+        "default": "물결표가 붙은 플러스"
       }
     },
     "key": "2A24"
@@ -5287,7 +5287,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "아래에 점이 붙은 플러스 기호"
+        "default": "아래에 점이 붙은 플러스"
       }
     },
     "key": "2A25"
@@ -5296,7 +5296,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "아래에 물결표가 붙은 플러스 기호"
+        "default": "아래에 물결표가 붙은 플러스"
       }
     },
     "key": "2A26"
@@ -5305,7 +5305,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "아래 첨자 2가 붙은 플러스 기호"
+        "default": "아래 첨자 2가 붙은 플러스"
       }
     },
     "key": "2A27"
@@ -5314,7 +5314,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "까만 삼각형이 붙은 플러스 기호"
+        "default": "검은 삼각형이 붙은 플러스"
       }
     },
     "key": "2A28"
@@ -5323,7 +5323,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "쉼표가 위에 붙은 마이너스 기호"
+        "default": "쉼표가 붙은 마이너스"
       }
     },
     "key": "2A29"
@@ -5332,7 +5332,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "아래에 점이 붙은 마이너스 기호"
+        "default": "아래에 점이 붙은 마이너스"
       }
     },
     "key": "2A2A"
@@ -5341,7 +5341,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "하락 점들이 붙은 마이너스 기호"
+        "default": "하락 점들이 붙은 마이너스"
       }
     },
     "key": "2A2B"
@@ -5350,7 +5350,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "상승 점들이 붙은 마이너스 기호"
+        "default": "상승 점들이 붙은 마이너스"
       }
     },
     "key": "2A2C"
@@ -5359,7 +5359,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 반원이 붙은 플러스 기호"
+        "default": "왼쪽 반원이 붙은 플러스"
       }
     },
     "key": "2A2D"
@@ -5368,7 +5368,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른쪽 반원이 붙은 플러스 기호"
+        "default": "오른쪽 반원이 붙은 플러스"
       }
     },
     "key": "2A2E"
@@ -5386,7 +5386,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "닷이 위에 붙은 곱셈 기호"
+        "default": "닷이 붙은 곱하기"
       }
     },
     "key": "2A30"
@@ -5395,7 +5395,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "밑줄이 붙은 곱셈 기호"
+        "default": "밑줄이 붙은 곱하기"
       }
     },
     "key": "2A31"
@@ -5404,7 +5404,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "아래가 닫힌 반직적"
+        "default": "아래가 닫힌 반직접곱"
       }
     },
     "key": "2A32"
@@ -5422,7 +5422,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 반원이 붙은 곱셈 기호"
+        "default": "왼쪽 반원이 붙은 곱하기"
       }
     },
     "key": "2A34"
@@ -5431,7 +5431,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른쪽 반원이 붙은 곱셈 기호"
+        "default": "오른쪽 반원이 붙은 곱하기"
       }
     },
     "key": "2A35"
@@ -5440,7 +5440,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곡절 기호가 붙고 곱셈 기호가 들어간 원"
+        "default": "곡절 악센트가 붙고 곱하기가 들어간 원"
       }
     },
     "key": "2A36"
@@ -5449,7 +5449,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곱셈 기호가 들어간 겹원"
+        "default": "겹원문자 곱하기"
       }
     },
     "key": "2A37"
@@ -5458,7 +5458,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "나눗셈 기호이 들어간 원"
+        "default": "원문자 나누기"
       }
     },
     "key": "2A38"
@@ -5485,7 +5485,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곱셈 기호가 들어간 삼각형"
+        "default": "곱하기가 들어간 삼각형"
       }
     },
     "key": "2A3B"
@@ -5503,7 +5503,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "뒤집힌 내부곱"
+        "default": "역 내부곱"
       }
     },
     "key": "2A3D"
@@ -5512,7 +5512,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "지 노테이션에서 이항관계식의 합성"
+        "default": "Z 표기법에서 이항관계식의 합성"
       }
     },
     "key": "2A3E"
@@ -5539,7 +5539,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "마이너스 기호가 들어간 합집합"
+        "default": "마이너스가 들어간 합집합"
       }
     },
     "key": "2A41"
@@ -5566,7 +5566,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "논리곱 기호가 들어간 교집합"
+        "default": "논리곱이 들어간 교집합"
       }
     },
     "key": "2A44"
@@ -5575,7 +5575,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "논리합 기호가 들어간 합집합"
+        "default": "논리합이 들어간 합집합"
       }
     },
     "key": "2A45"
@@ -5584,7 +5584,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "합집합이 위에 있는 교집합"
+        "default": "합집합이 붙은 교집합"
       }
     },
     "key": "2A46"
@@ -5593,7 +5593,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "교집합이 위에 있는 합집합"
+        "default": "교집합이 붙은 합집합"
       }
     },
     "key": "2A47"
@@ -5683,7 +5683,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "닷이 붙은 논리곱 연산자"
+        "default": "닷이 붙은 논리곱"
       }
     },
     "key": "2A51"
@@ -5692,7 +5692,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "닷이 붙은 논리합 연산자"
+        "default": "닷이 붙은 논리합"
       }
     },
     "key": "2A52"
@@ -5701,7 +5701,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이중 논리곱 연산자"
+        "default": "이중 논리곱"
       }
     },
     "key": "2A53"
@@ -5710,7 +5710,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이중 논리합 연산자"
+        "default": "이중 논리합"
       }
     },
     "key": "2A54"
@@ -5719,7 +5719,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "교차된 두 논리곱 연산자"
+        "default": "교차된 두 논리곱"
       }
     },
     "key": "2A55"
@@ -5728,7 +5728,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "교차된 두 논리합 연산자"
+        "default": "교차된 두 논리합"
       }
     },
     "key": "2A56"
@@ -5737,7 +5737,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "기울어진 논리합 연산자"
+        "default": "기울어진 논리합"
       }
     },
     "key": "2A57"
@@ -5746,7 +5746,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "기울어진 논리곱 연산자"
+        "default": "기울어진 논리곱"
       }
     },
     "key": "2A58"
@@ -5755,7 +5755,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "논리곱 연산자와 논리합 연산자의 교차"
+        "default": "논리곱과 논리합의 교차"
       }
     },
     "key": "2A59"
@@ -5764,7 +5764,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "세로선이 그어진 논리곱 연산자"
+        "default": "세로선이 그어진 논리곱"
       }
     },
     "key": "2A5A"
@@ -5773,7 +5773,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "세로선이 그어진 논리합 연산자"
+        "default": "세로선이 그어진 논리합"
       }
     },
     "key": "2A5B"
@@ -5782,7 +5782,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "가로선이 그어진 논리곱 연산자"
+        "default": "가로선이 그어진 논리곱"
       }
     },
     "key": "2A5C"
@@ -5791,7 +5791,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "가로선이 그어진 논리합 연산자"
+        "default": "가로선이 그어진 논리합"
       }
     },
     "key": "2A5D"
@@ -5800,7 +5800,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이중 윗줄이 그어진 논리곱 연산자"
+        "default": "이중 윗줄이 그어진 논리곱"
       }
     },
     "key": "2A5E"
@@ -5809,7 +5809,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "밑줄이 그어진 논리곱 연산자"
+        "default": "밑줄이 그어진 논리곱"
       }
     },
     "key": "2A5F"
@@ -5818,7 +5818,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이중 밑줄이 그어진 논리곱 연산자"
+        "default": "이중 밑줄이 그어진 논리곱"
       }
     },
     "key": "2A60"
@@ -5836,7 +5836,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이중 윗줄이 그어진 논리합 연산자"
+        "default": "이중 윗줄이 그어진 논리합"
       }
     },
     "key": "2A62"
@@ -5845,7 +5845,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이중 밑줄이 그어진 논리합 연산자"
+        "default": "이중 밑줄이 그어진 논리합"
       }
     },
     "key": "2A63"
@@ -5854,7 +5854,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "지 노테이션에서 정의역 비제한 기호"
+        "default": "Z 표기법에서 정의역 비제한 기호"
       }
     },
     "key": "2A64"
@@ -5863,7 +5863,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "지 노테이션에서 치역 비제한 기호"
+        "default": "Z 표기법에서 치역 비제한 기호"
       }
     },
     "key": "2A65"
@@ -5881,7 +5881,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "점근적으로 합동"
+        "default": "점이 붙은 합동"
       }
     },
     "key": "2A67"
@@ -5908,7 +5908,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "점근적으로 거의 같다"
+        "default": "점근적으로 근사하다"
       }
     },
     "key": "2A6A"
@@ -5917,7 +5917,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "애우 비슷하다"
+        "default": "매우 근사하다"
       }
     },
     "key": "2A6B"
@@ -5926,7 +5926,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "마이너스 기호가 사이에 있는 근사 기호"
+        "default": "마이너스가 사이에 있는 근사 기호"
       }
     },
     "key": "2A6C"
@@ -5935,7 +5935,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "점근적으로 합동"
+        "default": "점근적으로 합동이다"
       }
     },
     "key": "2A6D"
@@ -6025,7 +6025,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "위아래에 두 개씩 점이 붙은 동일 기호"
+        "default": "위아래에 두 개씩 점이 붙은 등호"
       }
     },
     "key": "2A77"
@@ -6034,7 +6034,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "위에 네 개의 점이 붙은 동일 기호"
+        "default": "위에 네 개의 점이 붙은 등호"
       }
     },
     "key": "2A78"
@@ -6043,7 +6043,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원이 들어간 미만 부등호"
+        "default": "원이 들어간 작다"
       }
     },
     "key": "2A79"
@@ -6052,7 +6052,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원이 들어간 초과 부등호"
+        "default": "원이 들어간 크다"
       }
     },
     "key": "2A7A"
@@ -6061,7 +6061,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "물음표가 붙은 미만 부등호"
+        "default": "물음표가 붙은 작다"
       }
     },
     "key": "2A7B"
@@ -6070,7 +6070,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "물음표가 붙은 초과 부등호"
+        "default": "물음표가 붙은 크다"
       }
     },
     "key": "2A7C"
@@ -6079,7 +6079,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이하 부등호"
+        "default": "작거나 같다"
       }
     },
     "key": "2A7D"
@@ -6088,7 +6088,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이상 부등호"
+        "default": "크거나 같다"
       }
     },
     "key": "2A7E"
@@ -6097,7 +6097,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "닷이 들어간 이하 부등호"
+        "default": "닷이 들어간 작거나 같다"
       }
     },
     "key": "2A7F"
@@ -6106,7 +6106,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "닷이 들어간 이상 부등호"
+        "default": "닷이 들어간 크거나 같다"
       }
     },
     "key": "2A80"
@@ -6115,7 +6115,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "위에 닷이 붙은 이하 부등호"
+        "default": "위에 닷이 붙은 작거나 같다"
       }
     },
     "key": "2A81"
@@ -6124,7 +6124,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "위에 닷이 붙은 이상 부등호"
+        "default": "위에 닷이 붙은 크거나 같다"
       }
     },
     "key": "2A82"
@@ -6133,7 +6133,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "오른쪽 상단에 닷이 붙은 이하 부등호"
+        "default": "오른쪽 상단에 닷이 붙은 작거나 같다"
       }
     },
     "key": "2A83"
@@ -6142,7 +6142,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 상단에 닷이 붙은 이상 부등호"
+        "default": "왼쪽 상단에 닷이 붙은 크거나 같다"
       }
     },
     "key": "2A84"
@@ -6151,7 +6151,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같은 미만 부등호"
+        "default": "거의 같거나 작다"
       }
     },
     "key": "2A85"
@@ -6160,7 +6160,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같은 초과 부등호"
+        "default": "거의 같거나 크다"
       }
     },
     "key": "2A86"
@@ -6169,7 +6169,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같지 않은 미만 부등호"
+        "default": "작다"
       }
     },
     "key": "2A87"
@@ -6178,7 +6178,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같지 않은 초과 부등호"
+        "default": "크다"
       }
     },
     "key": "2A88"
@@ -6187,7 +6187,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같지 않은 미만 부등호"
+        "default": "작지만 근사하지 않다"
       }
     },
     "key": "2A89"
@@ -6196,7 +6196,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같지 않은 초과 부등호"
+        "default": "크지만 근사하지 않다"
       }
     },
     "key": "2A8A"
@@ -6205,7 +6205,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 크거나 같다"
+        "default": "작거나 크거나 같다"
       }
     },
     "key": "2A8B"
@@ -6214,7 +6214,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 작거나 같다"
+        "default": "크거나 작거나 같다"
       }
     },
     "key": "2A8C"
@@ -6223,7 +6223,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 거의 같거나 같다"
+        "default": "작거나 거의 같거나 같다"
       }
     },
     "key": "2A8D"
@@ -6232,7 +6232,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 거의 같거나 같다"
+        "default": "크거나 거의 같거나 같다"
       }
     },
     "key": "2A8E"
@@ -6241,7 +6241,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 크거나 거의 같다"
+        "default": "작거나 크거나 거의 같다"
       }
     },
     "key": "2A8F"
@@ -6250,7 +6250,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 작거나 거의 같다"
+        "default": "크거나 작거나 거의 같다"
       }
     },
     "key": "2A90"
@@ -6259,7 +6259,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 크거나 같다"
+        "default": "작거나 크거나 같다"
       }
     },
     "key": "2A91"
@@ -6268,7 +6268,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 작거나 같다"
+        "default": "크거나 작거나 같다"
       }
     },
     "key": "2A92"
@@ -6277,7 +6277,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 크거나 같다"
+        "default": "작거나 크거나 같다"
       }
     },
     "key": "2A93"
@@ -6286,7 +6286,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 작거나 같다"
+        "default": "크거나 작거나 같다"
       }
     },
     "key": "2A94"
@@ -6295,7 +6295,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 같은"
+        "default": "크거나 같다"
       }
     },
     "key": "2A95"
@@ -6304,7 +6304,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 같은"
+        "default": "작거나 같다"
       }
     },
     "key": "2A96"
@@ -6313,7 +6313,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "닷이 들어간 이하 부등호"
+        "default": "닷이 들어간 작거나 같다"
       }
     },
     "key": "2A97"
@@ -6322,7 +6322,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "닷이 들어간 이상 부등호"
+        "default": "닷이 들어간 크거나 같다"
       }
     },
     "key": "2A98"
@@ -6331,7 +6331,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 같은"
+        "default": "크거나 같다"
       }
     },
     "key": "2A99"
@@ -6340,7 +6340,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 같은"
+        "default": "작거나 같다"
       }
     },
     "key": "2A9A"
@@ -6349,7 +6349,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 같은"
+        "default": "크거나 같다"
       }
     },
     "key": "2A9B"
@@ -6358,7 +6358,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 같은"
+        "default": "작거나 같다"
       }
     },
     "key": "2A9C"
@@ -6367,7 +6367,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 거의 같다"
+        "default": "작거나 거의 같다"
       }
     },
     "key": "2A9D"
@@ -6376,7 +6376,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 거의 같다"
+        "default": "크거나 거의 같다"
       }
     },
     "key": "2A9E"
@@ -6385,7 +6385,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 거의 같다"
+        "default": "작거나 거의 같다"
       }
     },
     "key": "2A9F"
@@ -6394,7 +6394,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 거의 같다"
+        "default": "크거나 거의 같다"
       }
     },
     "key": "2AA0"
@@ -6403,7 +6403,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 매우 큰"
+        "default": "훨씬 크다"
       }
     },
     "key": "2AA1"
@@ -6412,7 +6412,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 매우 작은"
+        "default": "훨씬 작다"
       }
     },
     "key": "2AA2"
@@ -6421,7 +6421,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 매우 크거나 같은"
+        "default": "훨씬 크거나 같다"
       }
     },
     "key": "2AA3"
@@ -6448,7 +6448,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "닫힌 미만 부등호"
+        "default": "닫힌 작다"
       }
     },
     "key": "2AA6"
@@ -6457,7 +6457,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "닫힌 초과 부등호"
+        "default": "닫힌 크다"
       }
     },
     "key": "2AA7"
@@ -6466,7 +6466,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 닫힌 미만"
+        "default": "같거나 닫힌 작다"
       }
     },
     "key": "2AA8"
@@ -6475,7 +6475,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 닫힌 초과"
+        "default": "같거나 닫힌 크다"
       }
     },
     "key": "2AA9"
@@ -6484,10 +6484,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 큰"
+        "default": "크다"
       },
       "clearspeak": {
-        "default": "보다 큰"
+        "default": "보다 크다"
       }
     },
     "key": "2AAA"
@@ -6496,10 +6496,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작은"
+        "default": "작다"
       },
       "clearspeak": {
-        "default": "보다 작은"
+        "default": "보다 작다"
       }
     },
     "key": "2AAB"
@@ -6508,10 +6508,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 크거나 같은"
+        "default": "크거나 같다"
       },
       "clearspeak": {
-        "default": "보다 크거나 같은"
+        "default": "보다 크거나 같다"
       }
     },
     "key": "2AAC"
@@ -6520,10 +6520,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "보다 작거나 같은"
+        "default": "작거나 같다"
       },
       "clearspeak": {
-        "default": "보다 작거나 같은"
+        "default": "보다 작거나 같다"
       }
     },
     "key": "2AAD"
@@ -6541,7 +6541,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 선행"
+        "default": "같거나 선행한다"
       }
     },
     "key": "2AAF"
@@ -6550,7 +6550,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 후행"
+        "default": "같거나 후행한다"
       }
     },
     "key": "2AB0"
@@ -6559,7 +6559,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같지 않은 선행"
+        "default": "같지 않고 선행한다"
       }
     },
     "key": "2AB1"
@@ -6568,7 +6568,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같지 않은 후행"
+        "default": "같지 않고 후행한다"
       }
     },
     "key": "2AB2"
@@ -6577,7 +6577,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 선행"
+        "default": "같거나 선행한다"
       }
     },
     "key": "2AB3"
@@ -6586,7 +6586,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같거나 후행"
+        "default": "같거나 후행한다"
       }
     },
     "key": "2AB4"
@@ -6595,7 +6595,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같지 않은 선행"
+        "default": "같지 않고 선행한다"
       }
     },
     "key": "2AB5"
@@ -6604,7 +6604,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같지 않은 후행"
+        "default": "같지 않고 후행한다"
       }
     },
     "key": "2AB6"
@@ -6613,7 +6613,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같은 선행"
+        "default": "거의 같거나 선행한다"
       }
     },
     "key": "2AB7"
@@ -6622,7 +6622,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같은 후행"
+        "default": "거의 같거나 후행한다"
       }
     },
     "key": "2AB8"
@@ -6631,7 +6631,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같지 않은 선행"
+        "default": "근사하지 않고 선행한다"
       }
     },
     "key": "2AB9"
@@ -6640,7 +6640,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같지 않은 후행"
+        "default": "근사하지 않고 후행한다"
       }
     },
     "key": "2ABA"
@@ -6649,7 +6649,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "매우 선행"
+        "default": "훨씬 선행한다"
       }
     },
     "key": "2ABB"
@@ -6658,7 +6658,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "매우 후행"
+        "default": "훨씬 후행한다"
       }
     },
     "key": "2ABC"
@@ -6685,7 +6685,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "플러스 기호가 붙은 부분집합"
+        "default": "플러스가 붙은 부분집합"
       }
     },
     "key": "2ABF"
@@ -6694,7 +6694,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "플러스 기호가 붙은 상위집합"
+        "default": "플러스가 붙은 상위집합"
       }
     },
     "key": "2AC0"
@@ -6703,7 +6703,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곱셈 기호가 붙은 부분집합"
+        "default": "곱하기가 붙은 부분집합"
       }
     },
     "key": "2AC1"
@@ -6712,7 +6712,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곱셈 기호가 붙은 상위집합"
+        "default": "곱하기가 붙은 상위집합"
       }
     },
     "key": "2AC2"
@@ -6757,7 +6757,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같은 부분집합"
+        "default": "거의 같거나 부분집합"
       }
     },
     "key": "2AC7"
@@ -6766,7 +6766,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같은 상위집합"
+        "default": "거의 같거나 상위집합"
       }
     },
     "key": "2AC8"
@@ -6775,7 +6775,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같은 부분집합"
+        "default": "거의 같거나 부분집합"
       }
     },
     "key": "2AC9"
@@ -6784,7 +6784,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거의 같은 상위집합"
+        "default": "거의 같거나 상위집합"
       }
     },
     "key": "2ACA"
@@ -6928,7 +6928,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "윗줄이 붙은 쇠스랑 기호"
+        "default": "윗줄이 붙은 피치포크"
       }
     },
     "key": "2ADA"
@@ -6991,7 +6991,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "에스 자가 추가된 직각"
+        "default": "수직 오른쪽에 S 자"
       }
     },
     "key": "2AE1"
@@ -7063,7 +7063,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "유계 부분 순서 집합"
+        "default": "참 거짓 기호"
       }
     },
     "key": "2AE9"
@@ -7099,7 +7099,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "뒤집힌 이중 부정 기호"
+        "default": "역 이중 부정 기호"
       }
     },
     "key": "2AED"
@@ -7108,7 +7108,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "인수가 아니다"
+        "default": "다음의 약수가 아니다"
       }
     },
     "key": "2AEE"
@@ -7117,7 +7117,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원이 붙은 세로선"
+        "default": "위에 원이 붙은 세로선"
       }
     },
     "key": "2AEF"
@@ -7126,7 +7126,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원이 붙은 세로선"
+        "default": "아래에 원이 붙은 세로선"
       }
     },
     "key": "2AF0"
@@ -7135,7 +7135,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "원이 붙은 아래쪽 압정"
+        "default": "원이 붙은 아랫 압정"
       }
     },
     "key": "2AF1"
@@ -7162,7 +7162,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이항관계 삼중 세로선"
+        "default": "삼중 세로선"
       }
     },
     "key": "2AF4"
@@ -7189,7 +7189,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "매우매우 미만 부등호"
+        "default": "훨씬훨씬 작다"
       }
     },
     "key": "2AF7"
@@ -7198,7 +7198,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "매우매우 초과 부등호"
+        "default": "훨씬훨씬 크다"
       }
     },
     "key": "2AF8"
@@ -7207,7 +7207,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "밑에 두 개의 선이 있는 이하 부등호"
+        "default": "작거나 같다"
       }
     },
     "key": "2AF9"
@@ -7216,7 +7216,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "밑에 두 개의 선이 있는 이상 부등호"
+        "default": "크거나 같다"
       }
     },
     "key": "2AFA"
@@ -7225,7 +7225,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "이항관계 삼중 사선"
+        "default": "삼중 사선"
       }
     },
     "key": "2AFB"
@@ -7261,7 +7261,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "엔항 하얀 세로선"
+        "default": "n 항 하얀 세로선"
       },
       "mathspeak": {
         "default": "하얀 세로선"
@@ -7336,7 +7336,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "세로쓰기용 두점 줄임표"
+        "default": "세로쓰기용 이점"
       }
     },
     "key": "FE30"
@@ -7354,7 +7354,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "세로쓰기용 짧은 줄표"
+        "default": "세로쓰기용 짧은줄표"
       }
     },
     "key": "FE32"
@@ -7552,7 +7552,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "작은 플러스 기호"
+        "default": "작은 플러스"
       }
     },
     "key": "FE62"
@@ -7561,7 +7561,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": "작은 마이너스 기호"
+        "default": "작은 마이너스"
       }
     },
     "key": "FE63"
@@ -7597,8 +7597,8 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "작은 백 슬래시",
-        "alternative": "반전된 작은 사선"
+        "default": "작은 백슬래시",
+        "alternative": "작은 역 사선"
       }
     },
     "key": "FE68"
@@ -7607,7 +7607,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "작은 달러 기호"
+        "default": "작은 달러"
       }
     },
     "key": "FE69"
@@ -7616,7 +7616,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "작은 퍼센트 기호"
+        "default": "작은 퍼센트"
       }
     },
     "key": "FE6A"
@@ -7643,7 +7643,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "큰 따옴표"
+        "default": "큰따옴표"
       }
     },
     "key": "FF02"
@@ -7661,7 +7661,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "달러 기호"
+        "default": "달러"
       }
     },
     "key": "FF04"
@@ -7670,7 +7670,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": "퍼센트 기호"
+        "default": "퍼센트"
       }
     },
     "key": "FF05"
@@ -7770,7 +7770,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "미만 부등호"
+        "default": "작다"
       }
     },
     "key": "FF1C"
@@ -7779,7 +7779,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "등호"
+        "default": "같다"
       }
     },
     "key": "FF1D"
@@ -7788,7 +7788,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "초과 부등호"
+        "default": "크다"
       }
     },
     "key": "FF1E"
@@ -7845,7 +7845,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": "무덤 악센트"
+        "default": "억음 악센트"
       }
     },
     "key": "FF40"
@@ -7872,7 +7872,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "센트 기호"
+        "default": "센트"
       }
     },
     "key": "FFE0"
@@ -7881,7 +7881,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "파운드 기호"
+        "default": "파운드"
       }
     },
     "key": "FFE1"
@@ -7920,7 +7920,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "엔 기호"
+        "default": "엔"
       }
     },
     "key": "FFE5"
@@ -7929,7 +7929,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": "원 기호"
+        "default": "원"
       }
     },
     "key": "FFE6"
@@ -7947,7 +7947,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "반각 까만 사각형"
+        "default": "반각 검은 사각형"
       }
     },
     "key": "FFED"

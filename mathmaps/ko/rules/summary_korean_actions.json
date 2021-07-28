@@ -271,7 +271,7 @@
     [
       "Action",
       "abstr-punctuated",
-      "[n] content/*[1]; [t] \"로 나누어진\"; [t] \"총 요소의 갯수가\"; [t] count(children/*) - count(content/*); [t] \"인 리스트\""
+      "[n] content/*[1]; [t] \"로 나누어진\"; [t] \"총 요소의 개수가\"; [t] count(children/*) - count(content/*); [t] \"인 리스트\""
     ],
     [
       "Action",
@@ -316,7 +316,7 @@
     [
       "Action",
       "abstr-multirel",
-      "[t] count(./children/*)-1; [t] \"의 연속된 관계식\""
+      "[t] count(./children/*)-1; [t] \"개의 연속된 관계식\""
     ],
     [
       "Action",
