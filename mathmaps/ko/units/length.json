@@ -64,7 +64,7 @@
      }
    },
    "key": "chain",
-   "names": ["ch", "ch.", "chain"]
+   "names": ["ch", "ch.", "chain", "chains"]
   },
   {"category": "length",
    "mappings": {
@@ -84,7 +84,7 @@
      }
    },
    "key": "n.m.",
-   "names": ["n.m.", "nautical mile"]
+   "names": ["n.m.", "nautical mile", "nautical miles"]
   },
   {"category": "length",
    "si": true,

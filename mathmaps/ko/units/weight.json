@@ -7,7 +7,7 @@
      }
    },
    "key": "dram",
-   "names": ["dr", "dr.", "dram"]
+   "names": ["dr", "dr.", "dram", "drams"]
   },
   {"category": "weight",
    "mappings": {
@@ -16,7 +16,7 @@
      }
    },
    "key": "oz",
-   "names": ["oz", "oz.","ounce"]
+   "names": ["oz", "oz.","ounce", "ounces"]
   },
   {"category": "weight",
    "mappings": {
@@ -25,7 +25,7 @@
      }
    },
    "key": "lb",
-   "names": ["lb", "lb.","pound"]
+   "names": ["lb", "lb.","pound", "pounds"]
   },
   {"category": "weight",
    "mappings": {
@@ -34,7 +34,7 @@
      }
    },
    "key": "st",
-   "names": ["st", "st.", "stone"]
+   "names": ["st", "st.", "stone", "stones"]
   },
   {"category": "weight",
    "mappings": {
@@ -43,7 +43,7 @@
      }
    },
    "key": "qtr",
-   "names": ["qtr", "qtr.", "quarter"]
+   "names": ["qtr", "qtr.", "quarter", "quarters"]
   },
   {"category": "weight",
    "mappings": {
@@ -52,7 +52,7 @@
      }
    },
    "key": "cwt",
-   "names": ["cwt", "cwt.", "hundredweight"]
+   "names": ["cwt", "cwt.", "hundredweight", "hundredweights"]
   },
   {"category": "weight",
    "mappings": {
@@ -61,7 +61,7 @@
      }
    },
    "key": "LT",
-   "names": ["LT", "L.T.", "long ton"]
+   "names": ["LT", "L.T.", "long ton", "long tons"]
   },
   {"category": "weight",
    "mappings": {
@@ -70,7 +70,7 @@
      }
    },
    "key": "gr",
-   "names": ["gr", "gram"]
+   "names": ["gr", "gram", "grams"]
   },
   {"category": "weight",
    "si": true,
@@ -80,7 +80,7 @@
      }
    },
    "key": "g",
-   "names": ["g", "gram"]
+   "names": ["g", "gram", "grams"]
   },
   {"category": "weight",
    "mappings": {
@@ -89,7 +89,7 @@
      }
    },
    "key": "mcg",
-   "names": ["mcg", "microgram"]
+   "names": ["mcg", "microgram", "micrograms"]
   },
   {"category": "weight",
    "mappings": {
@@ -98,6 +98,6 @@
      }
    },
    "key": "t",
-   "names": ["t", "T", "ton"]
+   "names": ["t", "T", "ton", "tons"]
   }
 ]

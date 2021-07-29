@@ -7,7 +7,7 @@
      }
    },
    "key": "W",
-   "names": ["W", "w", "watt"]
+   "names": ["W", "w", "watt", "watts"]
   },
   {"category": "energy",
    "mappings": {
@@ -16,7 +16,7 @@
      }
    },
    "key": "kwh",
-   "names": ["kwh", "kWh", "kilowatt hour"]
+   "names": ["kwh", "kWh", "kilowatt hour", "kilowatt hours"]
   },
   {"category": "energy",
    "si": true,
@@ -26,7 +26,7 @@
      }
    },
    "key": "J",
-   "names": ["J", "joule"]
+   "names": ["J", "joule", "joules"]
   },
   {"category": "energy",
    "si": true,
@@ -36,7 +36,7 @@
      }
    },
    "key": "N",
-   "names": ["N", "Newton"]
+   "names": ["N", "Newton", "Newtons"]
   },
   {"category": "energy",
    "si": true,
@@ -46,7 +46,7 @@
      }
    },
    "key": "A",
-   "names": ["A", "ampere"]
+   "names": ["A", "ampere", "amperes"]
   },
   {"category": "energy",
    "si": true,
@@ -56,7 +56,7 @@
      }
    },
    "key": "V",
-   "names": ["V", "volt"]
+   "names": ["V", "volt", "volts"]
   },
   {"category": "energy",
    "mappings": {
@@ -65,7 +65,7 @@
      }
    },
    "key": "ohm",
-   "names": ["Ohm", "ohm"]
+   "names": ["Ohm", "ohm", "ohms"]
   },
   {"category": "energy",
    "si": true,
@@ -85,7 +85,7 @@
      }
    },
    "key": "M\u03A9",
-   "names": ["M\u03A9", "megohm"]
+   "names": ["M\u03A9", "megohm", "megohms"]
   },
   {"category": "energy",
    "si": true,
@@ -95,6 +95,6 @@
      }
    },
    "key": "k\u03A9",
-   "names": ["k\u03A9", "kilohm"]
+   "names": ["k\u03A9", "kilohm", "kilohms"]
   }
 ]
