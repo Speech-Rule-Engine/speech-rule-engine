@@ -26,7 +26,7 @@
      }
    },
    "key": "sq rd",
-   "names": ["sq rd", "sq. rd.", "square rod"]
+   "names": ["sq rd", "sq. rd.", "square rod", "square rods"]
   },
   {"category": "area",
    "mappings": {
@@ -45,7 +45,7 @@
      }
    },
    "key": "sq yd",
-   "names": ["sq yd", "sq. yd.", "square yard"]
+   "names": ["sq yd", "sq. yd.", "square yard", "square yards"]
   },
   {"category": "area",
    "mappings": {
@@ -54,7 +54,7 @@
      }
    },
    "key": "sq mi",
-   "names": ["sq mi", "sq. mi.", "square mile"]
+   "names": ["sq mi", "sq. mi.", "square mile", "square miles"]
   },
   {"category": "area",
    "mappings": {
@@ -63,7 +63,7 @@
      }
    },
    "key": "acr",
-   "names": ["ac", "ac.", "acr", "acr.", "acre"]
+   "names": ["ac", "ac.", "acr", "acr.", "acre", "acres"]
   },
 
   {"category": "area",
@@ -73,6 +73,6 @@
      }
    },
    "key": "ha",
-   "names": ["ha", "hectare"]
+   "names": ["ha", "hectare", "hectares"]
   }
 ]
