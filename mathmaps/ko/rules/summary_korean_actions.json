@@ -151,7 +151,11 @@
     [
       "Action",
       "abstr-addition",
+<<<<<<< HEAD
       "[t] count(./children/*); [t] \"개의 피가수의 합\""
+=======
+      "[t] \"항이\"; [t] count(./children/*); [t] \"개인 덧셈\""
+>>>>>>> 2e04e9bf30ceec4e06b8378879da9c366e5fe129
     ],
     [
       "Action",
@@ -161,12 +165,12 @@
     [
       "Action",
       "abstr-addition-var",
-      "[t] \"여러 개의 피가수의 합\""
+      "[t] \"항이 여러 개인 덧셈\""
     ],
     [
       "Action",
       "abstr-multiplication",
-      "[t] count(./children/*); [t] \"개의 피연산자의 곱\""
+      "[t] \"인자가\"; [t] count(./children/*); [t] \"개인 곱셈\""
     ],
     [
       "Action",
@@ -176,7 +180,7 @@
     [
       "Action",
       "abstr-multiplication-var",
-      "[t] \"여러 개의 피연산자의 곱\""
+      "[t] \"인자가 여러 개인 곱셈\""
     ],
     [
       "Action",
