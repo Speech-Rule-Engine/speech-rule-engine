@@ -312,11 +312,7 @@
     [
       "Action",
       "integral",
-<<<<<<< HEAD
       "[n] children/*[1]; [t] \"아래첨자\"; [n] children/*[2];[t] \"위첨자\"; [n] children/*[3]; [t] \"기준\";"
-=======
-      "[n] children/*[1]; [t] \"아래 첨자\"; [n] children/*[2];[t] \"위 첨자\"; [n] children/*[3]; [t] \"기준\";"
->>>>>>> 2e04e9bf30ceec4e06b8378879da9c366e5fe129
     ],
     [
       "Action",

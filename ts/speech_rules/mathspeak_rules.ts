@@ -128,6 +128,16 @@ export function MathspeakRules() {
       'CSFcloseFracVerbose': MathspeakKoreanUtil.closingFractionVerbose,
       'CSFopenFracBrief': MathspeakKoreanUtil.openingFractionBrief,
       'CSFcloseFracBrief': MathspeakKoreanUtil.closingFractionBrief,
+
+      'CSFopenRadicalVerbose': MathspeakKoreanUtil.openingRadicalVerbose,
+      'CSFcloseRadicalVerbose': MathspeakKoreanUtil.closingRadicalVerbose,
+      'CSFindexRadicalVerbose': MathspeakKoreanUtil.indexRadicalVerbose,
+      'CSFopenRadicalBrief': MathspeakKoreanUtil.openingRadicalBrief,
+      'CSFcloseRadicalBrief': MathspeakKoreanUtil.closingRadicalBrief,
+      'CSFindexRadicalBrief': MathspeakKoreanUtil.indexRadicalBrief,
+      'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief,
+      'CSFindexRadicalSbrief': MathspeakKoreanUtil.indexRadicalSbrief,
+
       'CSFordinalNumber': MathspeakKoreanUtil.ordinalNumber
     });
 }

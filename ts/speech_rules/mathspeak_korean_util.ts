@@ -227,7 +227,8 @@ export function indexRadicalSbrief(node: Element): string {
  export function ordinalNumber(node: Node): string {
   let children = DomUtil.toArray(node.parentNode.childNodes);
   let index = children.length;
-  return LOCALE.NUMBERS.wordOrdinal(index).toString();
+  return index.toString();
+  //return LOCALE.NUMBERS.wordOrdinal(index).toString();
 }
 
 }
