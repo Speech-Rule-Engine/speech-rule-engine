@@ -118,7 +118,7 @@ export function nestedRadical(
   if (index === '3' || index === '4') {
   index = (index === '3') ? '세': '네';
   } 
-  postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
+  postfix = index ? (index + postfix) : postfix;
   if (depth === 1) {
     return postfix;
   }
