@@ -115,10 +115,7 @@ export function nestedRadical(
     node: Element, prefix: string, postfix: string): string {
   let depth = MathspeakUtil.radicalNestingDepth(node);
   let index = MathspeakUtil.getRootIndex(node);
-  if (index === '3' || index === '4') {
-  index = (index === '3') ? '세': '네';
-  } 
-  postfix = index ? (index + postfix) : postfix;
+  postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
   if (depth === 1) {
     return postfix;
   }
@@ -206,29 +203,14 @@ export function indexRadicalSbrief(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX);
 }
 
-
 /**
  * String function to turn a child position into an ordinal.
  * @param node The node for the string function.
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
- export function ordinalPosition(node: Node): string {
-  let children = DomUtil.toArray(node.parentNode.childNodes);
-  return LOCALE.NUMBERS.numberToOrdinal(children.indexOf(node) + 1, false).toString();
-}
-
-/**
- * String function to turn a child position into an ordinal.
- * @param node The node for the string function.
- * @return The ordinal string corresponding to the child position of
- *     the node.
- */
- export function ordinalNumber(node: Node): string {
-  let children = DomUtil.toArray(node.parentNode.childNodes);
-  let index = children.length;
-  return index.toString();
-  //return LOCALE.NUMBERS.wordOrdinal(index).toString();
+ export function ordinalNumber(count: number): string {
+  return LOCALE.NUMBERS.wordOrdinal(count);
 }
 
 }
