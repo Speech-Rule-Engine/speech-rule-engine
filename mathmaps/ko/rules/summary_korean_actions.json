@@ -150,7 +150,8 @@
     ],
     [
       "Action",
-      "abstr-addition", "[t] count(./children/*); [t] \"개의 피가수의 합\""
+      "abstr-addition",
+      "[t] \"항이\"; [t] count(./children/*); [t] \"개인 덧셈\""
     ],
     [
       "Action",

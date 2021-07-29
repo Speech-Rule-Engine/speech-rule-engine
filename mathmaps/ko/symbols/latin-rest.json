@@ -371,7 +371,7 @@
     "key": "2071",
     "mappings": {
       "default": {
-        "default": "위 첨자 i"
+        "default": "위첨자 i"
       }
     }
   },
@@ -380,7 +380,7 @@
     "key": "207F",
     "mappings": {
       "default": {
-        "default": "위 첨자 n"
+        "default": "위첨자 n"
       }
     }
   },

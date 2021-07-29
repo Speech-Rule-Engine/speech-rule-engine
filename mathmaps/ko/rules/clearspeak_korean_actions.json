@@ -1422,12 +1422,12 @@
     [
       "Action",
       "left-super",
-      "[t] \"왼쪽 위 첨자\"; [n] text()"
+      "[t] \"왼쪽 위첨자\"; [n] text()"
     ],
     [
       "Action",
       "left-super-list",
-      "[t] \"왼쪽 위 첨자\"; [m] children/*"
+      "[t] \"왼쪽 위첨자\"; [m] children/*"
     ],
     [
       "Action",
@@ -1442,12 +1442,12 @@
     [
       "Action",
       "right-super",
-      "[t] \"오른쪽 위 첨자\"; [n] text()"
+      "[t] \"오른쪽 위첨자\"; [n] text()"
     ],
     [
       "Action",
       "right-super-list",
-      "[t] \"오른쪽 위 첨자\"; [m] children/*"
+      "[t] \"오른쪽 위첨자\"; [m] children/*"
     ],
     [
       "Action",
