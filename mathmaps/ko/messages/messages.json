@@ -9,11 +9,7 @@
   	  "FRAC_S": "분수",
       "END": "끝",
       "FRAC_OVER": "분의",
-<<<<<<< HEAD
       "TWICE": "이",
-=======
-      "TWICE": "이 or 이중",
->>>>>>> e844089e96ee914e29a316a1a36e3940ddcad71c
       "NEST_FRAC": "중첩",
       "ENDFRAC": "분수끝",
       "SUPER": "위",
