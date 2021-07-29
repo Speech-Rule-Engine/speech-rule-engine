@@ -23,7 +23,6 @@
 //
 
 import * as MathspeakUtil from './mathspeak_util';
-import * as DomUtil from '../common/dom_util';
 import {LOCALE} from '../l10n/locale';
 
 
