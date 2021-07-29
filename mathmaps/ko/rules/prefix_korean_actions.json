@@ -52,7 +52,7 @@
     [
       "Action",
       "leftsub",
-      "[t] \"왼쪽 아래 첨자\" (pause:200)"
+      "[t] \"왼쪽 아래첨자\" (pause:200)"
     ],
     [
       "Action",
@@ -72,7 +72,7 @@
     [
       "Action",
       "rightsub",
-      "[t] \"오른쪽 아래 첨자\" (pause:200)"
+      "[t] \"오른쪽 아래첨자\" (pause:200)"
     ],
     [
       "Action",

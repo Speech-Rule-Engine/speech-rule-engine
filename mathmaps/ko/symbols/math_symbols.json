@@ -5305,7 +5305,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "아래 첨자 2가 붙은 플러스"
+        "default": "아래첨자 2가 붙은 플러스"
       }
     },
     "key": "2A27"

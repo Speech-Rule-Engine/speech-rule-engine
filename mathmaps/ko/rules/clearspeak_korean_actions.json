@@ -1432,12 +1432,12 @@
     [
       "Action",
       "left-sub",
-      "[t] \"왼쪽 아래 첨자\"; [n] text()"
+      "[t] \"왼쪽 아래첨자\"; [n] text()"
     ],
     [
       "Action",
       "left-sub-list",
-      "[t] \"왼쪽 아래 첨자\"; [m] children/*"
+      "[t] \"왼쪽 아래첨자\"; [m] children/*"
     ],
     [
       "Action",
@@ -1452,12 +1452,12 @@
     [
       "Action",
       "right-sub",
-      "[t] \"오른쪽 아래 첨자\"; [n] text()"
+      "[t] \"오른쪽 아래첨자\"; [n] text()"
     ],
     [
       "Action",
       "right-sub-list",
-      "[t] \"오른쪽 아래 첨자\"; [m] children/*"
+      "[t] \"오른쪽 아래첨자\"; [m] children/*"
     ],
     [
       "Action",
