@@ -72,22 +72,22 @@
     [
       "Action",
       "number-baseline",
-      "[t] \"Baseline\"; [n] . (grammar:baseline)"
+      "[t] \"기준\"; [n] . (grammar:baseline)"
     ],
     [
       "Action",
       "number-baseline-brief",
-      "[t] \"보류 : (Base) 기준\"; [n] . (grammar:baseline)"
+      "[t] \"기준\"; [n] . (grammar:baseline)"
     ],
     [
       "Action",
       "number-baseline-font",
-      "[t] \"보류 : (Baseline) 기준\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
+      "[t] \"기준\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
     ],
     [
       "Action",
       "number-baseline-font-brief",
-      "[t] \"보류 : (Base) \"; [t] @font; [n] . (grammar:ignoreFont=@font)"
+      "[t] \"기준\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
     ],
     [
       "Action",
@@ -312,12 +312,12 @@
     [
       "Action",
       "integral",
-      "[n] children/*[1]; [t] \"아래 첨자\"; [n] children/*[2];[t] \"위 첨자\"; [n] children/*[3]; [t] \"보류 : (Baseline) : 기준\";"
+      "[n] children/*[1]; [t] \"아래첨자\"; [n] children/*[2];[t] \"위첨자\"; [n] children/*[3]; [t] \"기준\";"
     ],
     [
       "Action",
       "integral-brief",
-      "[n] children/*[1]; [t] \"아래\"; [n] children/*[2];[t] \"위\"; [n] children/*[3]; [t] \"보류 : (Base) : 기준\";"
+      "[n] children/*[1]; [t] \"아래\"; [n] children/*[2];[t] \"위\"; [n] children/*[3]; [t] \"기준\";"
     ],
     [
       "Action",
@@ -408,6 +408,11 @@
       "Action",
       "cube",
       "[n] children/*[1]; [t] \"세제곱\""
+    ],
+    [
+      "Action",
+      "quad",
+      "[n] children/*[1]; [t] \"네제곱\""
     ],
     [
       "Action",
@@ -527,12 +532,12 @@
     [
       "Action",
       "matrix",
-      "[t] \"시작\"; [t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬끝\""
+      "[t] count(children/*);  [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬끝\""
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬끝\""
+      "[t] count(children/*);  [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬끝\""
     ],
     [
       "Action",
@@ -572,22 +577,22 @@
     [
       "Action",
       "determinant",
-      "[t] \"시작\"; [t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식끝\""
+      "[t] count(children/*);  [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식끝\""
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식끝\""
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"시작\"; [t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행\",grammar:simpleDet); [t] \"행렬식끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행\",grammar:simpleDet); [t] \"행렬식끝\""
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*);  [t] \"곱하기\";[t] count(children/*[1]/children/*); [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행\",grammar:simpleDet); [t] \"행렬식끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행\",grammar:simpleDet); [t] \"행렬식끝\""
     ],
     [
       "Action",
@@ -687,7 +692,7 @@
     [
       "Action",
       "cancel-reverse",
-      "[t] \"소거\"; [n] children/*[2]/children/*[1]; [t] \"을\"; [n] children/*[1]; [t] \"로 소거끝\""
+      "[t] \"소거\"; [n] children/*[2]/children/*[1]; [t] \"을\"; [n] children/*[1]; [t] \"으로 소거끝\""
     ],
     [
       "Action",
@@ -737,7 +742,7 @@
     [
       "Action",
       "label",
-      "[t] \"레이블\"; [n] children/*[1]"
+      "[t] \"꼬리표\"; [n] children/*[1]"
     ],
     [
       "Action",

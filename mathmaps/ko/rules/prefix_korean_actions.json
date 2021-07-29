@@ -27,17 +27,17 @@
     [
       "Action",
       "subscript",
-      "[t] \"아래 첨자\" (pause:200)"
+      "[t] \"아래첨자\" (pause:200)"
     ],
     [
       "Action",
       "overscript",
-      "[t] \"윗 첨자\" (pause:200)"
+      "[t] \"위첨자\" (pause:200)"
     ],
     [
       "Action",
       "underscript",
-      "[t] \"밑 첨자\" (pause:200)"
+      "[t] \"하단첨자\" (pause:200)"
     ],
     [
       "Action",
@@ -47,7 +47,7 @@
     [
       "Action",
       "index",
-      "[t] \"제곱근 수\" (pause:200)"
+      "[t] \"제곱근\" (pause:200)"
     ],
     [
       "Action",
@@ -57,17 +57,17 @@
     [
       "Action",
       "leftsub-counted",
-      "[t] CSFordinalPosition; [t] \"왼쪽 아래 첨자\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"왼쪽 아래첨자\" (pause:200)"
     ],
     [
       "Action",
       "leftsuper",
-      "[t] \"왼쪽 윗 첨자\" (pause:200)"
+      "[t] \"왼쪽 위첨자\" (pause:200)"
     ],
     [
       "Action",
       "leftsuper-counted",
-      "[t] CSFordinalPosition; [t] \"왼쪽 윗 첨자\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"왼쪽 위첨자\" (pause:200)"
     ],
     [
       "Action",
@@ -77,17 +77,17 @@
     [
       "Action",
       "rightsub-counted",
-      "[t] CSFordinalPosition; [t] \"오른쪽 아래 첨자\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"오른쪽 아래첨자\" (pause:200)"
     ],
     [
       "Action",
       "rightsuper",
-      "[t] \"오른쪽 윗 첨자\" (pause:200)"
+      "[t] \"오른쪽 위첨자\" (pause:200)"
     ],
     [
       "Action",
       "rightsuper-counted",
-      "[t] CSFordinalPosition; [t] \"오른쪽 윗 첨자\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"오른쪽 위첨자\" (pause:200)"
     ],
     [
       "Action",

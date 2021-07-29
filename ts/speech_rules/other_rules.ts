@@ -24,6 +24,7 @@ import * as StoreUtil from '../rule_engine/store_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NemethUtil from './nemeth_util';
 import * as NumbersUtil from './numbers_util';
+import MathspeakKoreanUtil from './mathspeak_korean_util';
 import SpeechRules from './speech_rules';
 
 
@@ -35,6 +36,10 @@ export function PrefixRules() {
   SpeechRules.addStore(
       'en.prefix.default', '',
       {'CSFordinalPosition': NumbersUtil.ordinalPosition});
+
+  SpeechRules.addStore(
+      'ko.prefix.default', 'en.prefix.default',
+      {'CSFordinalPosition': MathspeakKoreanUtil.ordinalPosition});
 }
 
 

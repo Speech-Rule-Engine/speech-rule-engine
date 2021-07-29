@@ -126,17 +126,17 @@
     [
       "Action",
       "abstr-subscript",
-      "[t] \"아래 첨자\""
+      "[t] \"아래첨자\""
     ],
     [
       "Action",
       "abstr-subsup",
-      "[t] \"제곱과 아래 첨자\""
+      "[t] \"제곱과 아래첨자\""
     ],
     [
       "Action",
       "abstr-infixop",
-      "[t] count(./children/*); [t] \"개의 원소로 이루어진\"; [t] @role (grammar:localRole)"
+      "[t] CSFordinalNumber; [t] \"개의 원소로 이루어진\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -151,7 +151,7 @@
     [
       "Action",
       "abstr-addition",
-      "[t] count(./children/*); [t] \"피가수의 합\""
+      "[t] count(./children/*); [t] \"개의 피가수의 합\""
     ],
     [
       "Action",

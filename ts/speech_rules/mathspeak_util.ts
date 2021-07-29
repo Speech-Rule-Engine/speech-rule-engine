@@ -515,6 +515,8 @@ export function getRootIndex(node: Element): string {
       XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
   return LOCALE.MESSAGES.MSroots[content] || '';
 }
+
+
 /**
  * Opening string for radicals in Mathspeak verbose mode.
  * @param node The radical node.

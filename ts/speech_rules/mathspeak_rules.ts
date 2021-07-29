@@ -127,6 +127,7 @@ export function MathspeakRules() {
       'CSFopenFracVerbose': MathspeakKoreanUtil.openingFractionVerbose,
       'CSFcloseFracVerbose': MathspeakKoreanUtil.closingFractionVerbose,
       'CSFopenFracBrief': MathspeakKoreanUtil.openingFractionBrief,
-      'CSFcloseFracBrief': MathspeakKoreanUtil.closingFractionBrief
+      'CSFcloseFracBrief': MathspeakKoreanUtil.closingFractionBrief,
+      'CSFordinalNumber': MathspeakKoreanUtil.ordinalNumber
     });
 }

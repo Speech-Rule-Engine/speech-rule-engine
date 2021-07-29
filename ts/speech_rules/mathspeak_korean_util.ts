@@ -23,6 +23,7 @@
 //
 
 import * as MathspeakUtil from './mathspeak_util';
+import * as DomUtil from '../common/dom_util';
 import {LOCALE} from '../l10n/locale';
 
 
@@ -109,6 +110,125 @@ export function overFractionSbrief(node: Element): string {
       LOCALE.MESSAGES.MS.FRAC_OVER);
 }*/
 
+
+export function nestedRadical(
+    node: Element, prefix: string, postfix: string): string {
+  let depth = MathspeakUtil.radicalNestingDepth(node);
+  let index = MathspeakUtil.getRootIndex(node);
+  if (index === '3' || index === '4') {
+  index = (index === '3') ? '세': '네';
+  } 
+  postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
+  if (depth === 1) {
+    return postfix;
+  }
+  return LOCALE.FUNCTIONS.combineNestedRadical(
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), prefix, postfix);
+}
+
+
+/**
+ * Opening string for radicals in Mathspeak verbose mode.
+ * @param node The radical node.
+ * @return The opening string.
+ */
+export function openingRadicalVerbose(node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.STARTROOT);
+}
+
+
+/**
+ * Closing string for radicals in Mathspeak verbose mode.
+ * @param node The radical node.
+ * @return The closing string.
+ */
+export function closingRadicalVerbose(node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ENDROOT);
+}
+
+
+/**
+ * Middle string for radicals in Mathspeak verbose mode.
+ * @param node The radical node.
+ * @return The middle string.
+ */
+export function indexRadicalVerbose(node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX);
+}
+
+
+/**
+ * Opening string for radicals in Mathspeak brief mode.
+ * @param node The radical node.
+ * @return The opening string.
+ */
+export function openingRadicalBrief(node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.STARTROOT);
+}
+
+
+/**
+ * Closing string for radicals in Mathspeak brief mode.
+ * @param node The radical node.
+ * @return The closing string.
+ */
+export function closingRadicalBrief(node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ENDROOT);
+}
+
+
+/**
+ * Middle string for radicals in Mathspeak superbrief mode.
+ * @param node The radical node.
+ * @return The middle string.
+ */
+export function indexRadicalBrief(node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX);
+}
+
+
+/**
+ * Opening string for radicals in Mathspeak superbrief mode.
+ * @param node The radical node.
+ * @return The opening string.
+ */
+export function openingRadicalSbrief(node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOT);
+}
+
+
+/**
+ * Middle string for radicals in Mathspeak superbrief mode.
+ * @param node The radical node.
+ * @return The middle string.
+ */
+export function indexRadicalSbrief(node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX);
+}
+
+
+/**
+ * String function to turn a child position into an ordinal.
+ * @param node The node for the string function.
+ * @return The ordinal string corresponding to the child position of
+ *     the node.
+ */
+ export function ordinalPosition(node: Node): string {
+  let children = DomUtil.toArray(node.parentNode.childNodes);
+  return LOCALE.NUMBERS.numberToOrdinal(children.indexOf(node) + 1, false).toString();
+}
+
+/**
+ * String function to turn a child position into an ordinal.
+ * @param node The node for the string function.
+ * @return The ordinal string corresponding to the child position of
+ *     the node.
+ */
+ export function ordinalNumber(node: Node): string {
+  let children = DomUtil.toArray(node.parentNode.childNodes);
+  let index = children.length;
+  return LOCALE.NUMBERS.wordOrdinal(index).toString();
+}
 
 }
 export default MathspeakKoreanUtil;
