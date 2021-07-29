@@ -611,7 +611,7 @@ export class SpeechRuleEngine {
       if (descrPersonality[p] && typeof descrPersonality[p] == 'number' &&
           typeof personality[p] == 'number') {
         descrPersonality[p] = descrPersonality[p] + personality[p];
-      } else {
+      } else if (!descrPersonality[p]) {
         descrPersonality[p] = personality[p];
       }
     }

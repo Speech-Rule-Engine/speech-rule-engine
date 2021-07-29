@@ -377,12 +377,17 @@
     [
       "Action",
       "matrix",
-      "[m] children/* (separator:\"⠀\", join:\"\");"
+      "[p] (layout:beginmatrix); [m] children/* (separator:\"⠀\", join:\"\"); [p] (layout:endmatrix);"
     ],
     [
       "Action",
       "matrix-row",
-      "[n] ../../content/*[1] (grammar:enlargeFence); [m] children/* (separator:\"⠀\"); [n] ../../content/*[2] (grammar:enlargeFence); "
+      "[p] (layout:beginrow); [n] ../../content/*[1] (grammar:enlargeFence, layout:fence); [m] children/* (separator:\"⠀\"); [n] ../../content/*[2] (grammar:enlargeFence, layout:fence); [p] (layout:endrow);"
+    ],
+    [
+      "Action",
+      "vector-line",
+      "[p] (layout:beginrow); [n] ../../content/*[1] (grammar:enlargeFence, layout:fence); [n] children/*[1] (separator:\"⠀\", layout:cell); [n] ../../content/*[2] (grammar:enlargeFence, layout:fence); [p] (layout:endrow);"
     ],
     [
       "Action",
@@ -392,7 +397,7 @@
     [
       "Action",
       "matrix-cell",
-      "[n] children/*[1]"
+      "[n] children/*[1] (layout:cell)"
     ],
     [
       "Action",
@@ -402,17 +407,17 @@
     [
       "Action",
       "layout",
-      "[m] children/* (separator:\"⠀\", join:\"\");"
+      "[p] (layout:beginmatrix); [m] children/* (separator:\"⠀\", join:\"\"); [p] (layout:endmatrix)"
     ],
     [
       "Action",
       "cases",
-      "[n] ../../content/*[1] (grammar:enlargeFence); [m] children/* (separator:\"⠀\"); [t] \"⠐\""
+      "[p] (layout:beginmatrix); [n] ../../content/*[1] (grammar:enlargeFence, layout:fence); [m] children/* (separator:\"⠀\"); [t] \"⠐\"; [p] (layout:endmatrix)"
     ],
     [
       "Action",
       "line",
-      "[m] children/*"
+      "[m] children/* (layout:cell)"
     ],
     [
       "Action",
@@ -513,6 +518,15 @@
       "Action",
       "punctuation-colon-ratio",
       "[t] \"⠀⠐⠂⠀\""
+    ],
+    [
+      "Rule",
+      "punctuation-ellipsis-cell",
+      "default",
+      "[t] \"⠄⠄⠄\"",
+      "self::punctuation[@role=\"ellipsis\"]",
+      "count(../*)=1",
+      "name(../..)=\"cell\" or name(../..)=\"line\""
     ],
     [
       "Action",

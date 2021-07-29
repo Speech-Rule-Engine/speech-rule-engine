@@ -736,14 +736,15 @@
       "self::row"
     ],
     [
-      "Alias",
-      "matrix-row",
+      "Precondition",
+      "vector-line",
+      "default",
       "self::line",
       "@role=\"vector\""
     ],
     [
       "Alias",
-      "matrix-row",
+      "vector-line",
       "self::line",
       "@role=\"binomial\""
     ],
