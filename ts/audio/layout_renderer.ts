@@ -126,7 +126,6 @@ function applyHandler(element: Element): string {
 function setTwoDim(str: string): string {
   twodExpr = '';
   let dom = DomUtil.parseInput(`<all>${str}</all>`);
-  console.log(DomUtil.formatXml(dom.toString()));
   twodExpr = recurseTree(dom);
   return twodExpr;
 }
@@ -203,7 +202,7 @@ function padWidth(str: string, width: number): string {
   let result = [];
   for (let line of lines) {
     let padding = width - line.length;
-    result.push(line + (padding > 0 ? new Array(padding + 1).join(' ') : ''));
+    result.push(line + (padding > 0 ? new Array(padding + 1).join('⠀') : ''));
   }
   return result.join('\n');
 }
@@ -230,7 +229,6 @@ declare type row = {
 };
 
 function handleMatrix(matrix: Element): string {
-  console.log(10);
   let children = Array.from(matrix.childNodes);
   let mat = [];
   for (let row of children) {
@@ -246,26 +244,47 @@ function handleMatrix(matrix: Element): string {
       mat.map(x => x.width[i]).reduce((max, x) => Math.max(max, x), 0)
     );
   }
+  let newMat = [];
   for (let row of mat) {
+    if (row.height === 0) {
+      continue;
+    }
     let newCells = [];
     for (let i = 0; i < row.cells.length; i++) {
       newCells.push(padCell(row.cells[i], row.height, maxWidth[i]));
     }
     row.cells = newCells;
+    newMat.push(row);
   }
+  mat = newMat;
   if (maxHeight === 1) {
-    console.log(mat);
     return mat.map(
       row => row.lfence + row.cells.join(row.sep) + row.rfence).join('\n');
   }
   let result = [];
   for (let row of mat) {
-    console.log(row);
+    let sep = verticalArrange(row.sep, row.height);
+    let str = row.cells.shift();
+    while (row.cells.length) {
+      str = combineContent(str, sep);
+      str = combineContent(str, row.cells.shift());
+    }
+    str = combineContent(verticalArrange(row.lfence, row.height), str);
+    str = combineContent(str, verticalArrange(row.rfence, row.height));
+    result.push(str);
     result.push(row.lfence +
-      row.cells.reduce((x, y) => combineContent(x, y), '') +
-      row.rfence);
+      new Array(strWidth(str) - 3).join(row.sep) + row.rfence);
   }
-  return result.join('\n');
+  return result.slice(0, -1).join('\n');
+}
+
+function verticalArrange(char: string, height: number) {
+  let str = '';
+  while (height) {
+    str += char + '\n';
+    height--;
+  }
+  return str.slice(0, -1);
 }
 
 function handleRow(row: Element): row {
@@ -301,7 +320,3 @@ function getFence(node: Node): string {
   }
   return '';
 }
-
-
-// Rewrite to use handlers for recursion
-//
