@@ -336,17 +336,17 @@
     [
       "Action",
       "abstr-line",
-      "[t] \"보류 : (in)\"; [t] @role (grammar:localRole);"
+      "[t] \"이 다음과 같은\"; [t] @role (grammar:localRole);"
     ],
     [
       "Action",
       "abstr-row",
-      "[t] \"보류 : (in)\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"with\";[t] count(children/*); [t] \"columns\""
+      "[t] \"이 다음과 같은\"; [t] count(children/*); [t] \"열의\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..)"
     ],
     [
       "Action",
       "abstr-cell",
-      "[t] \"보류 : (in)\"; [t] @role (grammar:localRole);"
+      "[t] \"이 다음과 같은\"; [t] @role (grammar:localRole);"
     ]
   ]
 }
