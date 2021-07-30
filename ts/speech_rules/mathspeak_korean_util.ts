@@ -23,6 +23,7 @@
 //
 
 import * as DomUtil from '../common/dom_util';
+import * as Semantic from '../semantic_tree/semantic';
 import * as MathspeakUtil from './mathspeak_util';
 import {LOCALE} from '../l10n/locale';
 
@@ -120,7 +121,7 @@ export function nestedRadical(
     return postfix;
   }
   
-  let index = node.firstChild.attributes[1].nodeValue;
+  let index = node.childNodes[0].firstChild.childNodes[0].nodeValue;
   let value = parseInt(index);
   if (value === 3 || value === 4) { postfix = LOCALE.NUMBERS.wordOrdinal(value) + postfix; }
   else if (value !== 2) { postfix += index + postfix; }
