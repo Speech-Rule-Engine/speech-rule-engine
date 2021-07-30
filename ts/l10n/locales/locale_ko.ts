@@ -40,9 +40,7 @@ export function ko(): Locale {
 function create(): Locale {
   let loc = createLocale();
   loc.NUMBERS = NUMBERS;
-  loc.FUNCTIONS.plural = function(unit: string) {
-    return (/.*s$/.test(unit)) ? unit : unit + '';
-  };
+  loc.FUNCTIONS.plural = function(unit: string) { return unit };
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
   return loc;

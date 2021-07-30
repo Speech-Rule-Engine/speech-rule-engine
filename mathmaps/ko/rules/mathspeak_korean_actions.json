@@ -587,7 +587,7 @@
     [
       "Action",
       "determinant-simple",
-      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/*; [t] \"행렬식끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식끝\""
     ],
     [
       "Action",
