@@ -128,6 +128,9 @@ export function MathspeakRules() {
       'CSFcloseFracVerbose': MathspeakKoreanUtil.closingFractionVerbose,
       'CSFopenFracBrief': MathspeakKoreanUtil.openingFractionBrief,
       'CSFcloseFracBrief': MathspeakKoreanUtil.closingFractionBrief,
+      'CSFopenFracSbrief': MathspeakKoreanUtil.openingFractionSbrief,
+      'CSFcloseFracSbrief': MathspeakKoreanUtil.closingFractionSbrief,
+      'CSFoverFracSbrief': MathspeakKoreanUtil.overFractionSbrief,
 
       'CSFopenRadicalVerbose': MathspeakKoreanUtil.openingRadicalVerbose,
       'CSFcloseRadicalVerbose': MathspeakKoreanUtil.closingRadicalVerbose,
