@@ -208,7 +208,7 @@ export function indexRadicalSbrief(node: Element): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
- export function ordinalNumber(count: number): string {
+export function ordinalNumber(count: number): string {
   return LOCALE.NUMBERS.wordOrdinal(count);
 }
 

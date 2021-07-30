@@ -138,6 +138,6 @@ export function MathspeakRules() {
       'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief,
       'CSFindexRadicalSbrief': MathspeakKoreanUtil.indexRadicalSbrief,
 
-      'CTFordinalNumber': MathspeakKoreanUtil.ordinalNumber,
+      'CTFordinalNumber': MathspeakKoreanUtil.ordinalNumber
     });
 }
