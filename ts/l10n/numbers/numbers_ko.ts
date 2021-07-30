@@ -80,6 +80,7 @@ function numberToWords(num: number): string {
  * @return The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, _plural: boolean): string {
+  if (num === 1) return '첫번째';
   return wordOrdinal(num) + '번째';
 }
 
@@ -91,11 +92,11 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  */
 function wordOrdinal(num: number): string {
   let ordinal = numberToWords(num);
-  let tens = NUMBERS.tens[10 + Math.floor(num % 100 / 10)];
-  let ones = NUMBERS.ones[10 + Math.floor(num % 10)];
+  num %= 100;
+  let tens = NUMBERS.tens[10 + Math.floor(num / 10)];
+  let ones = NUMBERS.ones[10 + Math.floor(num)];
 
-  if (num === 1) ones = '첫';
-  else if ((num % 100) === 20) tens = '스무';
+  if (num === 20) tens = '스무';
   let label: string = tens + ones;
   ordinal = label ? ordinal.slice(0, -label.length + 1) + label : label;
 

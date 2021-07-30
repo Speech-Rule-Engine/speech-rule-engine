@@ -124,7 +124,7 @@ export function nestedRadical(
   let index = node.childNodes[0].firstChild.childNodes[0].nodeValue;
   let value = parseInt(index);
   if (value === 3 || value === 4) { postfix = LOCALE.NUMBERS.wordOrdinal(value) + postfix; }
-  else if (value !== 2) { postfix += index + postfix; }
+  else if (value !== 2) { postfix = index + postfix; }
 
   return LOCALE.FUNCTIONS.combineNestedRadical(
       LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), prefix, postfix);
