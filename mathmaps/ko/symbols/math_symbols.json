@@ -352,7 +352,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": "왼쪽 겹화살괄호"
+        "default": "겹화살괄호 열고"
       }
     },
     "key": "00AB"
@@ -472,7 +472,7 @@
     "category": "Pf",
     "mappings": {
       "default": {
-        "default": "오른쪽 겹화살괄호"
+        "default": "겹화살괄호 닫고"
       }
     },
     "key": "00BB"
@@ -890,7 +890,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": "왼쪽 홑화살괄호" 
+        "default": "홑화살괄호 열고" 
       }
     },
     "key": "2039"
@@ -899,7 +899,7 @@
     "category": "Pf",
     "mappings": {
       "default": {
-        "default": "오른쪽 홑화살괄호"
+        "default": "홑화살괄호 닫고"
       }
     },
     "key": "203A"
@@ -1235,7 +1235,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "위첨자 왼쪽 괄호"
+        "default": "위첨자 괄호 열고"
       }
     },
     "key": "207D"
@@ -1244,7 +1244,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "위첨자 오른쪽 괄호"
+        "default": "위첨자 괄호 닫고"
       }
     },
     "key": "207E"
@@ -1280,7 +1280,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "아래첨자 왼쪽 괄호"
+        "default": "아래첨자 괄호 열고"
       }
     },
     "key": "208D"
@@ -1289,7 +1289,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "아래첨자 오른쪽 괄호"
+        "default": "아래첨자 괄호 닫고"
       }
     },
     "key": "208E"
