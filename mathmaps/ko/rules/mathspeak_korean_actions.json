@@ -262,17 +262,17 @@
     [
       "Action",
       "root",
-      "[t] CSFindexRadicalVerbose; [n] children/*[1];[t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose"
+      "[t] CSFindexRadicalVerbose; [t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose"
     ],
     [
       "Action",
       "root-brief",
-      "[t] CSFindexRadicalBrief; [n] children/*[1];[t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
+      "[t] CSFindexRadicalBrief; [t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
     ],
     [
       "Action",
       "root-sbrief",
-      "[t] CSFindexRadicalSbrief; [n] children/*[1];[t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
+      "[t] CSFindexRadicalSbrief; [t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
     ],
     [
       "Action",
@@ -577,7 +577,7 @@
     [
       "Action",
       "determinant",
-      "[t] count(children/*);  [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식끝\""
     ],
     [
       "Action",
@@ -587,7 +587,7 @@
     [
       "Action",
       "determinant-simple",
-      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행\",grammar:simpleDet); [t] \"행렬식끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"행 \"); [t] \"행렬식끝\""
     ],
     [
       "Action",

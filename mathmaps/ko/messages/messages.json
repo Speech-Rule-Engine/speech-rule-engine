@@ -31,7 +31,11 @@
       "OVER": "하단",
       "OVERSCRIPT": "상단첨자"
     },
-    "MSroots": {},
+    "MSroots": {
+      "2": "",
+      "3": "세",
+      "4": "네"
+    },
     "font": {
       "bold": "진한",
       "bold-fraktur": "진한 프락투어",

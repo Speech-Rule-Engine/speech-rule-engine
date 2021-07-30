@@ -22,7 +22,10 @@
 // This work was sponsored by TextHelp
 //
 
+//import * as DomUtil from '../common/dom_util';
+//import * as Semantic from '../semantic_tree/semantic';
 import * as MathspeakUtil from './mathspeak_util';
+import XpathUtil from '../common/xpath_util';
 import {LOCALE} from '../l10n/locale';
 
 
@@ -83,41 +86,79 @@ export function closingFractionBrief(node: Element): string {
   return nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_B);
 }
 
+/**
+ * Opening string for fractions in Mathspeak superbrief mode.
+ * @param node The fraction node.
+ * @return The opening string.
+ */
+ export function openingFractionSbrief(node: Element): string {
+  let depth = MathspeakUtil.fractionNestingDepth(node);
+  if (depth === 1) {
+    return LOCALE.MESSAGES.MS.FRAC_S;
+  }
+  return LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.MESSAGES.MS.FRAC_S);
+}
+
 
 /**
- * Middle string for fractions in Mathspeak verbose mode.
+ * Closing string for fractions in Mathspeak superbrief mode.
  * @param node The fraction node.
- * @return The middle string.
- *
-export function overFractionVerbose(node: Element): string {
-  return nestedFraction(node, LOCALE.MESSAGES.MS.FRAC_OVER);
-}*/
+ * @return The closing string.
+ */
+export function closingFractionSbrief(node: Element): string {
+  let depth = MathspeakUtil.fractionNestingDepth(node);
+  if (depth === 1) {
+    return LOCALE.MESSAGES.MS.ENDFRAC;
+  }
+  return LOCALE.FUNCTIONS.combineNestedFraction(
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS.NEST_FRAC,
+      LOCALE.MESSAGES.MS.ENDFRAC);
+}
 
 
 /**
  * Middle string for fractions in Mathspeak superbrief mode.
  * @param node The fraction node.
  * @return The middle string.
- *
+ */
 export function overFractionSbrief(node: Element): string {
-  let depth = fractionNestingDepth(node);
+  let depth = MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
     return LOCALE.MESSAGES.MS.FRAC_OVER;
   }
   return LOCALE.FUNCTIONS.combineNestedFraction(
-      LOCALE.MESSAGES.MS.NEST_FRAC, LOCALE.FUNCTIONS.radicalNestDepth(depth - 1),
+      LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS.NEST_FRAC,
       LOCALE.MESSAGES.MS.FRAC_OVER);
-}*/
+}
+
+
+/**
+ * A string indexing the root.
+ * @param node The radical node.
+ * @return The localised indexing string if it exists.
+ */
+export function getRootIndex(node: Element): string {
+  let content = node.tagName === 'sqrt' ? '2' :
+                                          // TODO (sorge): Make that safer?
+      XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
+  return LOCALE.MESSAGES.MSroots[content] || content;
+}
 
 
 export function nestedRadical(
     node: Element, prefix: string, postfix: string): string {
   let depth = MathspeakUtil.radicalNestingDepth(node);
-  let index = MathspeakUtil.getRootIndex(node);
-  postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
-  if (depth === 1) {
-    return postfix;
-  }
+  let isIndex = getRootIndex(node);
+  postfix = isIndex ? LOCALE.FUNCTIONS.combineRootIndex(isIndex, postfix) : postfix;
+  /*
+  let index = node.childNodes[0].firstChild.childNodes[0].nodeValue;
+  let value = parseInt(index);
+  if (value === 3 || value === 4) { postfix = LOCALE.NUMBERS.wordOrdinal(value) + postfix; }
+  else if (value !== 2) { postfix = index + postfix; }
+*/
+  if (depth === 1) { return postfix; }
   return LOCALE.FUNCTIONS.combineNestedRadical(
       LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), prefix, postfix);
 }
@@ -208,7 +249,7 @@ export function indexRadicalSbrief(node: Element): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
- export function ordinalNumber(count: number): string {
+export function ordinalNumber(count: number): string {
   return LOCALE.NUMBERS.wordOrdinal(count);
 }
 
