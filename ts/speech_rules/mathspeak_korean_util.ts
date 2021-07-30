@@ -120,7 +120,7 @@ export function nestedRadical(
     return postfix;
   }
   
-  let index = node.firstElementChild.attributes[1].nodeValue;
+  let index = node.firstChild.attributes[1].nodeValue;
   let value = parseInt(index);
   if (value === 3 || value === 4) { postfix = LOCALE.NUMBERS.wordOrdinal(value) + postfix; }
   else if (value !== 2) { postfix += index + postfix; }
