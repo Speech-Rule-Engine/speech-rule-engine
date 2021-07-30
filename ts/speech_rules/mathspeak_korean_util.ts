@@ -22,6 +22,8 @@
 // This work was sponsored by TextHelp
 //
 
+import * as DomUtil from '../common/dom_util';
+import * as Semantic from '../semantic_tree/semantic';
 import * as MathspeakUtil from './mathspeak_util';
 import {LOCALE} from '../l10n/locale';
 
@@ -113,11 +115,17 @@ export function overFractionSbrief(node: Element): string {
 export function nestedRadical(
     node: Element, prefix: string, postfix: string): string {
   let depth = MathspeakUtil.radicalNestingDepth(node);
-  let index = MathspeakUtil.getRootIndex(node);
-  postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
+  let root = MathspeakUtil.getRootIndex(node);
+  postfix = root ? LOCALE.FUNCTIONS.combineRootIndex(root, postfix) : postfix;
   if (depth === 1) {
     return postfix;
   }
+  
+  let index = node.childNodes[0].firstChild.childNodes[0].nodeValue;
+  let value = parseInt(index);
+  if (value === 3 || value === 4) { postfix = LOCALE.NUMBERS.wordOrdinal(value) + postfix; }
+  else if (value !== 2) { postfix = index + postfix; }
+
   return LOCALE.FUNCTIONS.combineNestedRadical(
       LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), prefix, postfix);
 }
@@ -208,7 +216,7 @@ export function indexRadicalSbrief(node: Element): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
- export function ordinalNumber(count: number): string {
+export function ordinalNumber(count: number): string {
   return LOCALE.NUMBERS.wordOrdinal(count);
 }
 
