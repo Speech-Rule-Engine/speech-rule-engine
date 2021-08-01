@@ -140,12 +140,11 @@ export function overFractionSbrief(node: Element): string {
  * @return The localised indexing string if it exists.
  */
 export function getRootIndex(node: Element): string {
-  let content = node.tagName === 'sqrt' ? '제곱' :
-                                          // TODO (sorge): Make that safer?
-      XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
-  console.log(XpathUtil.evalXPath('children/*[1]', node)[0]);
-  console.log(XpathUtil.evalXPath('children/*[1]', node)[0].textContent);
-  return LOCALE.MESSAGES.MSroots[content] || content;
+  let children = XpathUtil.evalXPath('children/*[1]', node);
+  let content = node.tagName === 'sqrt' ? '' :  // TODO (sorge): Make that safer?
+      children[0].textContent.trim();
+  
+  return LOCALE.MESSAGES.MSroots[content] || children.toString();
 }
 
 

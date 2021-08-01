@@ -6,8 +6,8 @@
         "default": "괄호 열고"
       },
       "mathspeak": {
-        "brief": "괄호 열고",
-        "sbrief": "괄호 열고"
+        "brief": "괄열",
+        "sbrief": "괄열"
       },
       "clearspeak": {
         "default": "괄호 열기"
@@ -22,8 +22,8 @@
         "default": "괄호 닫고"
       },
       "mathspeak": {
-        "brief": "괄호 닫고",
-        "sbrief": "괄호 닫고"
+        "brief": "괄닫",
+        "sbrief": "괄닫"
       },
       "clearspeak": {
         "default": "괄호 닫기"
@@ -38,8 +38,8 @@
         "default": "대괄호 열고"
       },
       "mathspeak": {
-        "brief": "대괄호 열고",
-        "sbrief": "대괄호 열고"
+        "brief": "대괄열",
+        "sbrief": "대괄열"
       },
       "clearspeak": {
         "default": "대괄호 열기"
@@ -54,8 +54,8 @@
         "default": "대괄호 닫고"
       },
       "mathspeak": {
-        "brief": "대괄호 닫고",
-        "sbrief": "대괄호 닫고"
+        "brief": "대괄닫",
+        "sbrief": "대괄닫"
       },
       "clearspeak": {
         "default": "대괄호 닫기"
@@ -70,7 +70,7 @@
         "default": "중괄호 열고"
       },
       "mathspeak": {
-        "sbrief": "중괄호 열고"
+        "sbrief": "중괄열"
       },
       "clearspeak": {
         "default": "중괄호 열기"
@@ -85,7 +85,7 @@
         "default": "중괄호 닫고"
       },
       "mathspeak": {
-        "sbrief": "중괄호 닫고"
+        "sbrief": "중괄닫"
       },
       "clearspeak": {
         "default": "중괄호 닫기"
@@ -100,8 +100,8 @@
         "default": "꺾쇠 괄호 열고"
       },
       "mathspeak": {
-        "brief": "꺾쇠 괄호 열고",
-        "sbrief": "꺾쇠 괄호 열고"
+        "brief": "꺾쇠 괄열",
+        "sbrief": "꺾쇠 괄열"
       }
     },
     "key": "2045"
@@ -113,8 +113,8 @@
         "default": "꺾쇠 괄호 닫고"
       },
       "mathspeak": {
-        "brief": "꺾쇠 괄호 닫고",
-        "sbrief": "꺾쇠 괄호 닫고"
+        "brief": "꺾쇠 괄닫",
+        "sbrief": "꺾쇠 괄닫"
       }
     },
     "key": "2046"
