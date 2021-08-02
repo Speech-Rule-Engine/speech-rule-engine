@@ -140,19 +140,37 @@ export function overFractionSbrief(node: Element): string {
  * @return The localised indexing string if it exists.
  */
 export function getRootIndex(node: Element): string {
-  let children = XpathUtil.evalXPath('children/*[1]', node);
+  let children = XpathUtil.evalXPath('children/*[1]', node)[0];
   let content = node.tagName === 'sqrt' ? '' :  // TODO (sorge): Make that safer?
-      children[0].textContent.trim();
+    children.textContent.trim();
+
+  let list = children.toString().match(/[^>]+<\/[^>]*>/g);
+  if (list.length === 1) return LOCALE.MESSAGES.MSroots[content] || content;
+
+  let result = []; let i = 0; let wasElement = false;
+  while (list.length > 0) {
+
+    if (!wasElement) {
+      wasElement = list.some((element: string) => {
+        if (element.includes('number') || element.includes('identifier')) {
+          return (i = list.indexOf(element));
+        } return false;
+      });
+      if (i <= 0 && list.length > i + 1) return content;
+    }
+    else { wasElement = false; i--; }
+    result.push(list.splice(i, 1).toString().replace(/<\/.*>/g, ''));
+  }
   
-  return LOCALE.MESSAGES.MSroots[content] || children.toString();
+  return list.length ? content : result.join(" ");
 }
 
 
 export function nestedRadical(
-    node: Element, prefix: string, postfix: string): string {
+    node: Element, prefix: string, postfix: string, fence: boolean): string {
   let depth = MathspeakUtil.radicalNestingDepth(node);
   let index = getRootIndex(node);
-  postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
+  postfix = (index && fence) ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
 
   if (depth === 1) { return postfix; }
   return LOCALE.FUNCTIONS.combineNestedRadical(
@@ -166,7 +184,7 @@ export function nestedRadical(
  * @return The opening string.
  */
 export function openingRadicalVerbose(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.STARTROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.STARTROOT, false);
 }
 
 
@@ -176,7 +194,7 @@ export function openingRadicalVerbose(node: Element): string {
  * @return The closing string.
  */
 export function closingRadicalVerbose(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ENDROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ENDROOT, false);
 }
 
 
@@ -186,7 +204,7 @@ export function closingRadicalVerbose(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalVerbose(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX, true);
 }
 
 
@@ -196,7 +214,7 @@ export function indexRadicalVerbose(node: Element): string {
  * @return The opening string.
  */
 export function openingRadicalBrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.STARTROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.STARTROOT, false);
 }
 
 
@@ -206,7 +224,7 @@ export function openingRadicalBrief(node: Element): string {
  * @return The closing string.
  */
 export function closingRadicalBrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ENDROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ENDROOT, false);
 }
 
 
@@ -216,7 +234,7 @@ export function closingRadicalBrief(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalBrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX, true);
 }
 
 
@@ -226,7 +244,7 @@ export function indexRadicalBrief(node: Element): string {
  * @return The opening string.
  */
 export function openingRadicalSbrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOT);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOT, false);
 }
 
 
@@ -236,7 +254,7 @@ export function openingRadicalSbrief(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalSbrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX, true);
 }
 
 /**
