@@ -146,42 +146,6 @@ export function isSimpleIndex(node: Element): Element[] {
 }
 
 
-/**
- * A string indexing the root.
- * @param node The radical node.
- * @return The localised indexing string if it exists.
- */
-export function getRootIndex(node: Element): string {
-  //let children = XpathUtil.evalXPath('children/*[1]', node)[0];
-  let content = node.tagName === 'sqrt' ? '' :  // TODO (sorge): Make that safer?
-    XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
-
-  return LOCALE.MESSAGES.MSroots[content] || content;
-
-  /*
-  let list = children.toString().match(/[^>⁢>]+<\/[^>]*>/g);
-  if (list.length === 1) return LOCALE.MESSAGES.MSroots[content] || content;
-
-  let result = []; let i = 0; let wasElement = false;
-  while (list.length > 0) {
-
-    if (!wasElement) {
-      wasElement = list.some((element: string) => {
-        if (element.includes('number') || element.includes('identifier')) {
-          return (i = list.indexOf(element));
-        } return false;
-      });
-      if (i <= 0 && list.length > i + 1) return content;
-    }
-    else { wasElement = false; i--; }
-    result.push(list.splice(i, 1).toString().replace(/<\/.*>/g, ''));
-  }
-
-  return list.length ? content : result.join(" ");
-  */
-}
-
-
 export function nestedRadical(
     node: Element, prefix: string, postfix: string): string {
   let depth = MathspeakUtil.radicalNestingDepth(node);
@@ -241,11 +205,23 @@ export function openingRadicalSbrief(node: Element): string {
 }
 
 
+/**
+ * A string indexing the root.
+ * @param node The radical node.
+ * @return The localised indexing string if it exists.
+ */
+ export function getRootIndex(node: Element): string {
+  let content = XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
+
+  return LOCALE.MESSAGES.MSroots[content] || content + "제곱근";
+}
+
+
 export function indexRadical(
     node: Element, postfix: string, fence: boolean): string {
   let index = getRootIndex(node);
 
-  return (index && fence) ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
+  return (index && fence) ? index : postfix;
 }
 
 
@@ -323,3 +299,26 @@ export function ordinalNumber(node: Element): string {
 
 }
 export default MathspeakKoreanUtil;
+
+
+/*
+  let list = children.toString().match(/[^>⁢>]+<\/[^>]*>/g);
+  if (list.length === 1) return LOCALE.MESSAGES.MSroots[content] || content;
+
+  let result = []; let i = 0; let wasElement = false;
+  while (list.length > 0) {
+
+    if (!wasElement) {
+      wasElement = list.some((element: string) => {
+        if (element.includes('number') || element.includes('identifier')) {
+          return (i = list.indexOf(element));
+        } return false;
+      });
+      if (i <= 0 && list.length > i + 1) return content;
+    }
+    else { wasElement = false; i--; }
+    result.push(list.splice(i, 1).toString().replace(/<\/.*>/g, ''));
+  }
+
+  return list.length ? content : result.join(" ");
+  */

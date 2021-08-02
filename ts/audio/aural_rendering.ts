@@ -105,7 +105,7 @@ namespace AuralRendering {
     let renderer = renderers.get(Engine.getInstance().markup);
 
     const pair = ["은", "는", "과", "와", "을", "를", "으로", "로"];
-    let final = str.split(/은\(|과\(|을\(|으로\(|\)/);
+    let final = str.split(/은\(|과\(|를\(|으로\(|\)/);
 
     if (final.length > 1) {
       for(let i = 1; i < final.length; i += 2) {

@@ -560,27 +560,6 @@
     ],
     [
       "Precondition",
-      "root-simple",
-      "default",
-      "self::root",
-      "CQFisSimpleIndex"
-    ],
-    [
-      "Precondition",
-      "root-simple-brief",
-      "brief",
-      "self::root",
-      "CQFisSimpleIndex"
-    ],
-    [
-      "Precondition",
-      "root-simple-sbrief",
-      "sbrief",
-      "self::root",
-      "CQFisSimpleIndex"
-    ],
-    [
-      "Precondition",
       "limboth",
       "default",
       "self::limboth",
@@ -1052,38 +1031,6 @@
       "self::superscript",
       "children/*[2]",
       "children/*[2][text()=3]",
-      "@embellished",
-      "children/*[1][@role=\"prefix operator\"]"
-    ],
-    [
-      "Precondition",
-      "quad",
-      "default",
-      "self::superscript",
-      "children/*[2]",
-      "children/*[2][text()=4]",
-      "name(children/*[1])!=\"text\" or not(name(children/*[1])=\"text\" and (name(../../../punctuated[@role=\"text\"]/..)=\"stree\" or name(..)=\"stree\"))",
-      "name(children/*[1])!=\"subscript\" or (name(children/*[1])=\"subscript\" and name(children/*[1]/children/*[1])=\"identifier\" and name(children/*[1]/children/*[2])=\"number\" and children/*[1]/children/*[2][@role!=\"mixed\"] and children/*[1]/children/*[2][@role!=\"othernumber\"])",
-      "not(@embellished)"
-    ],
-    [
-      "Specialized",
-      "quad",
-      "default",
-      "brief"
-    ],
-    [
-      "Specialized",
-      "quad",
-      "default",
-      "sbrief"
-    ],
-    [
-      "PAliases",
-      "quad",
-      "self::superscript",
-      "children/*[2]",
-      "children/*[2][text()=4]",
       "@embellished",
       "children/*[1][@role=\"prefix operator\"]"
     ],
