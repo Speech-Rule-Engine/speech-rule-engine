@@ -108,7 +108,7 @@ namespace AuralRendering {
     let final = str.split(/은\(|와\(|을\(|로\(|\)/);
 
     if (final.length > 1) {
-      for(let i = 0; i < final.length; i += 2) {
+      for(let i = 1; i < final.length; i += 2) {
         let index = pair.indexOf(final[i]) + checkPreviousChar(final[i-1]);
         final.splice(i, 1, pair[index]);
       }
@@ -121,7 +121,7 @@ namespace AuralRendering {
   }
 
   export function checkPreviousChar(char: string) : number {
-    const preChar = char.charCodeAt(0);
+    const preChar = char.charCodeAt(char.length - 2);
     const checkingResult = (preChar - 44032) % 28;
     if(char.match(/[a-z0-9]/i)) {
       return (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) ? -1 : 0;
