@@ -105,10 +105,10 @@ namespace AuralRendering {
     let renderer = renderers.get(Engine.getInstance().markup);
 
     const pair = ["은", "는", "과", "와", "을", "를", "으로", "로"];
-    let final = str.split(/은\(|과\(|를\(|으로\(|\)/);
+    let final = str.split(/은\(|과\(|을\(|으로\(|\)/);
 
     if (final.length > 1) {
-      for(let i = 1; i < final.length; i += 2) {
+      for (let i = 1; i < final.length; i += 2) {
         let index = pair.indexOf(final[i]) + checkPreviousChar(final[i-1]);
         final.splice(i, 1, pair[index]);
       }
@@ -124,7 +124,7 @@ namespace AuralRendering {
     const preChar = char.charCodeAt(char.length - 2);
     const checkingResult = (preChar - 44032) % 28;
     if(char.match(/[a-z0-9]/i)) {
-      return (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) ? -1 : 0;
+      return (char.match(/[r,l,n,m,1,3,6,7,8,0] $/i)) ? -1 : 0;
     }
     return (checkingResult !== 0) ? -1 : 0;
   }
