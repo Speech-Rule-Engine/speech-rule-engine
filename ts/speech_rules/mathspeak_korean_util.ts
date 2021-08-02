@@ -139,7 +139,7 @@ export function overFractionSbrief(node: Element): string {
  * @param node The determinant node.
  * @return List containing input node if true.
  */
-export function IsSimpleIndex(node: Element): Element[] {
+export function isSimpleIndex(node: Element): Element[] {
   let index = XpathUtil.evalXPath('children/*[1]', node)[0].toString().match(/[^>⁢>]+<\/[^>]*>/g);
 
   return (index.length === 1) ?  [node] : [];
@@ -187,7 +187,7 @@ export function nestedRadical(
   let depth = MathspeakUtil.radicalNestingDepth(node);
   let index = getRootIndex(node);
   postfix = (index && fence) ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
-
+ 
   if (depth === 1) { return postfix; }
   return LOCALE.FUNCTIONS.combineNestedRadical(
       LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), prefix, postfix);
@@ -220,7 +220,7 @@ export function closingRadicalVerbose(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalVerbose(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX, true);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX, false);
 }
 
 
@@ -250,7 +250,7 @@ export function closingRadicalBrief(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalBrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX, true);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX, false);
 }
 
 
@@ -270,8 +270,39 @@ export function openingRadicalSbrief(node: Element): string {
  * @return The middle string.
  */
 export function indexRadicalSbrief(node: Element): string {
-  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX, true);
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX, false);
 }
+
+
+/**
+ * Middle string for radicals in Mathspeak superbrief mode.
+ * @param node The radical node.
+ * @return The middle string.
+ */
+ export function simpleIndexRadicalVerbose (node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.STARTROOT, true);
+}
+
+
+/**
+ * Middle string for radicals in Mathspeak superbrief mode.
+ * @param node The radical node.
+ * @return The middle string.
+ */
+ export function simpleIndexRadicalBrief(node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX, true);
+}
+
+
+/**
+ * Middle string for radicals in Mathspeak superbrief mode.
+ * @param node The radical node.
+ * @return The middle string.
+ */
+ export function simpleIndexRadicalSbrief(node: Element): string {
+  return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX, true);
+}
+
 
 /**
  * String function to turn a child position into an ordinal.
