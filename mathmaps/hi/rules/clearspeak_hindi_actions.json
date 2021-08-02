@@ -21,26 +21,6 @@
     ],
     [
       "Action",
-      "punctuation-lr",
-      "[p] (pause:short); [n] text() (pause:short)"
-    ],
-    [
-      "Action",
-      "punctuation",
-      "[n] text()"
-    ],
-    [
-      "Action",
-      "punctuation-l",
-      "[p] (pause:short); [n] text()"
-    ],
-    [
-      "Action",
-      "punctuation-r",
-      "[n] text() (pause:short)"
-    ],
-    [
-      "Action",
       "ellipsis",
       "[t] \"आदि, आदि\""
     ],
@@ -136,116 +116,6 @@
     ],
     [
       "Action",
-      "prime",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "degrees",
-      "[m] children/* (grammar:degree)"
-    ],
-    [
-      "Action",
-      "feet",
-      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "foot",
-      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "inches",
-      "[n] children/*[1]; [t] \"in\" (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "inch",
-      "[n] children/*[1]; [t] \"in\" (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "minutes",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "minute",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "seconds",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "second",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "degrees-angle",
-      "[t] text() (pause:short, grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "degree-angle",
-      "[t] text() (pause:short, grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "minutes-angle",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "minute-angle",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "seconds-angle",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "second-angle",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "feet-length",
-      "[n] children/*[1]; [t] \"ft\" (pause:short, grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "foot-length",
-      "[n] children/*[1]; [t] \"ft\" (pause:short, grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "inches-length",
-      "[n] children/*[1]; [t] \"in\" (pause:short, grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "inch-length",
-      "[n] children/*[1]; [t] \"in\" (pause:short, grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "punctuated",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "function",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "appl",
       "[p] (pause:short); [n] children/*[2]; [t] \"का फलन\"; [n] children/*[1] (pause:short)"
     ],
@@ -273,11 +143,6 @@
       "Action",
       "function-prefix",
       "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "binary-operation",
-      "[n] . (pause:short, grammar:impliedTimes)"
     ],
     [
       "Action",
@@ -313,16 +178,6 @@
       "Action",
       "function-ln-of",
       "[n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:short)"
-    ],
-    [
-      "Action",
-      "function-ln-natlog",
-      "[n] . (grammar:NatLog)"
-    ],
-    [
-      "Action",
-      "function-ln-natlog-pause",
-      "[n] . (pause:short, grammar:NatLog)"
     ],
     [
       "Action",
@@ -373,11 +228,6 @@
       "Action",
       "superscript-prefix-function",
       "[n] children/*[1]; [n] children/*[2] (grammar:ordinal); [t] \"घातांक\""
-    ],
-    [
-      "Action",
-      "function-no-inverse",
-      "[n] . (grammar:functions_none)"
     ],
     [
       "Action",
@@ -501,61 +351,6 @@
     ],
     [
       "Action",
-      "paren-simple",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
-      "paren-simple-exp",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
-      "paren-simple-nested-func",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
-      "paren-simple-nested-func-no-bracket",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
-      "fences-open-close",
-      "[p] (pause:short); [n] content/*[1] (pause:short, grammar:spokenFence); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short, grammar:spokenFence)"
-    ],
-    [
-      "Action",
-      "paren-simple-nested-func-default",
-      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
-    ],
-    [
-      "Action",
-      "paren-simple-nested-func-none",
-      "[p] (pause:short); [n] content/*[1] (pause:short, grammar:spokenFence); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short, grammar:spokenFence)"
-    ],
-    [
-      "Action",
-      "fence-silent",
-      "[p] (pause:short); [n] children/*[1] (pause:short)"
-    ],
-    [
-      "Action",
-      "fences-open-close-none",
-      "[p] (pause:short); [n] content/*[1] (pause:short, grammar:spokenFence); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short, grammar:spokenFence)"
-    ],
-    [
-      "Action",
-      "fence-nesting",
-      "[n] text() (grammar:insertNesting=CSFnestingDepth)"
-    ],
-    [
-      "Action",
-      "fence-no-nesting",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "fences-points",
       "[t] \"निर्देशांक वाला बिंदु\"; [n] children/*[1]"
     ],
@@ -596,11 +391,6 @@
     ],
     [
       "Action",
-      "interval-open-inf-lr",
-      ""
-    ],
-    [
-      "Action",
       "interval-closed-open-inf",
       "[n] children/*[1]/children/*[1]; [t] \"सम्मिलित\""
     ],
@@ -608,11 +398,6 @@
       "Action",
       "interval-open-closed-inf",
       "[n] children/*[1]/children/*[3]; [t] \"सम्मिलित\""
-    ],
-    [
-      "Action",
-      "paren-nested-embellished-funcs",
-      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -628,11 +413,6 @@
       "Action",
       "set-collection",
       "[t] \"समुच्चय\"; [n] children/*[1]"
-    ],
-    [
-      "Action",
-      "set-collection-silentbracket",
-      "[n] children/*[1]"
     ],
     [
       "Action",
@@ -836,23 +616,8 @@
     ],
     [
       "Action",
-      "prefix",
-      "[m] content/* (grammar:prefix); [n] children/*[1]"
-    ],
-    [
-      "Action",
-      "postfix",
-      "[n] children/*[1]; [m] content/* (grammar:postfix)"
-    ],
-    [
-      "Action",
       "set-prefix-operators",
       "[n] . (grammar:!prefix); [t] \"का फलन\""
-    ],
-    [
-      "Action",
-      "binary-operation-default",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
     ],
     [
       "Action",
@@ -861,73 +626,8 @@
     ],
     [
       "Action",
-      "binary-operation-moreimpliedtimes",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "binary-operation-pause",
-      "[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "binary-operation-pause-r",
-      "[m] children/* (sepFunc:CTFcontentIterator, pause:short)"
-    ],
-    [
-      "Action",
-      "binary-operation-pause-lr",
-      "[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator, pause:short)"
-    ],
-    [
-      "Action",
-      "implicit-times",
-      "[p] (pause:short)"
-    ],
-    [
-      "Action",
-      "implicit-times-default",
-      ""
-    ],
-    [
-      "Action",
-      "implicit-times-simple",
-      "[n] text()"
-    ],
-    [
-      "Action",
-      "implicit-times-moreimpliedtimes",
-      "[n] text()"
-    ],
-    [
-      "Action",
-      "implicit-times-none",
-      ""
-    ],
-    [
-      "Action",
-      "binary-operation-simple",
-      "[m] children/* (rate:\"0.5\", pause:short)"
-    ],
-    [
-      "Action",
-      "simple-in-fraction",
-      "[n] . (rate:\"0.5\", grammar:inFrac)"
-    ],
-    [
-      "Action",
       "operators-after-power",
       "[m] children/* (rate:\"0.5\")"
-    ],
-    [
-      "Action",
-      "relseq",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "multrel",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
     ],
     [
       "Action",
@@ -1081,28 +781,8 @@
     ],
     [
       "Action",
-      "matrix-row-simple",
-      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")"
-    ],
-    [
-      "Action",
-      "matrix-row-simple-silentcolnum",
-      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")"
-    ],
-    [
-      "Action",
-      "line-simple",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
       "matrix-row",
       "[m] children/* (ctxtFunc:CTFnodeCounter, context:\"स्तंभ-,- \", sepFunc:CTFpauseSeparator, separator:\"medium\", pause:long)"
-    ],
-    [
-      "Action",
-      "matrix-cell",
-      "[n] children/*[1]"
     ],
     [
       "Action",
@@ -1171,43 +851,13 @@
     ],
     [
       "Action",
-      "lines-summary-none",
-      "[n] . (grammar:layoutSummary)"
-    ],
-    [
-      "Action",
       "cases-summary",
       "[p] (pause:short); [t] count(children/*); [t] \"फलन उपशर्त\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
-      "cases-summary-none",
-      "[n] . (grammar:layoutSummary)"
-    ],
-    [
-      "Action",
       "lines",
       "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"रेखा-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
-    ],
-    [
-      "Action",
-      "line",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
-      "row-medium",
-      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"medium\")"
-    ],
-    [
-      "Action",
-      "row-long",
-      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"long\")"
-    ],
-    [
-      "Action",
-      "row-short",
-      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")"
     ],
     [
       "Action",
@@ -1286,11 +936,6 @@
     ],
     [
       "Action",
-      "lines-none",
-      "[p] (pause:short); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
-    ],
-    [
-      "Action",
       "bigop",
       "[n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:short)"
     ],
@@ -1321,11 +966,6 @@
     ],
     [
       "Action",
-      "overscript-accent",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
       "overscript-limits",
       "[n] children/*[1]; [t] \"से\"; [n] children/*[2]"
     ],
@@ -1338,11 +978,6 @@
       "Action",
       "underscript-limits",
       "[n] children/*[1]; [t] \"से\"; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "number",
-      "[n] text()"
     ],
     [
       "Action",
@@ -1376,11 +1011,6 @@
     ],
     [
       "Action",
-      "number-with-spaces",
-      "[m] CQFspaceoutNumber (grammar:!spaceout:number)"
-    ],
-    [
-      "Action",
       "decimal-point",
       "[t] \"दशमलव\""
     ],
@@ -1408,11 +1038,6 @@
       "Action",
       "factorial",
       "[t] \"क्रमगुणित\""
-    ],
-    [
-      "Action",
-      "tensor-base",
-      "[n] children/*[2]; [n] children/*[3]; [n] children/*[1]; [n] children/*[4]; [n] children/*[5]"
     ],
     [
       "Action",
@@ -1456,16 +1081,6 @@
     ],
     [
       "Action",
-      "empty-index",
-      "[p] (pause:medium)"
-    ],
-    [
-      "Action",
-      "combinatorics",
-      "[n] children/*[2] (grammar:combinatorics); [n] children/*[1]; [n] children/*[4] (grammar:combinatorics)"
-    ],
-    [
-      "Action",
       "choose",
       "[n] children/*[2] (grammar:combinatorics); [t] \"चयन करें\"; [n] children/*[4] (grammar:combinatorics)"
     ],
@@ -1473,16 +1088,6 @@
       "Action",
       "permute",
       "[n] children/*[2] (grammar:combinatorics); [t] \"क्रमचय\"; [n] children/*[4] (grammar:combinatorics)"
-    ],
-    [
-      "Action",
-      "unit-singular",
-      "[t] text() (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "unit-plural",
-      "[t] text() (grammar:annotation=\"unit\":translate:plural)"
     ],
     [
       "Action",
@@ -1506,33 +1111,8 @@
     ],
     [
       "Action",
-      "unit-combine",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "unit-combine-singular",
-      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [m] children/*[position()>2]"
-    ],
-    [
-      "Action",
       "unit-divide",
       "[n] children/*[1]; [t] \"प्रति\"; [n] children/*[2] (grammar:singular)"
-    ],
-    [
-      "Action",
-      "currency",
-      "[m] children/*[position()>1]; [n] children/*[1]"
-    ],
-    [
-      "Action",
-      "currency-position",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "currency-prefix",
-      "[n] children/*[last()]; [m] children/*[position()<last()]"
     ]
   ]
 }
