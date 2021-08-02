@@ -242,11 +242,10 @@ export function openingRadicalSbrief(node: Element): string {
 
 
 export function indexRadical(
-  node: Element, prefix: string, postfix: string, fence: boolean): string {
-let index = getRootIndex(node);
-postfix = (index && fence) ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
+    node: Element, postfix: string, fence: boolean): string {
+  let index = getRootIndex(node);
 
-return LOCALE.FUNCTIONS.combineNestedRadical('', prefix, postfix);
+  return (index && fence) ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
 }
 
 
@@ -256,7 +255,7 @@ return LOCALE.FUNCTIONS.combineNestedRadical('', prefix, postfix);
  * @return The middle string.
  */
  export function indexRadicalVerbose(node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX, false);
+  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, false);
 }
 
 
@@ -267,7 +266,7 @@ return LOCALE.FUNCTIONS.combineNestedRadical('', prefix, postfix);
  * @return The middle string.
  */
  export function indexRadicalBrief(node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX, false);
+  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, false);
 }
 
 
@@ -277,7 +276,7 @@ return LOCALE.FUNCTIONS.combineNestedRadical('', prefix, postfix);
  * @return The middle string.
  */
 export function indexRadicalSbrief(node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.INDEX, false);
+  return indexRadical(node, LOCALE.MESSAGES.MS.INDEX, false);
 }
 
 
@@ -287,7 +286,7 @@ export function indexRadicalSbrief(node: Element): string {
  * @return The middle string.
  */
  export function simpleIndexRadicalVerbose (node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ROOTINDEX, true);
+  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, true);
 }
 
 
@@ -297,7 +296,7 @@ export function indexRadicalSbrief(node: Element): string {
  * @return The middle string.
  */
  export function simpleIndexRadicalBrief(node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX, true);
+  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, true);
 }
 
 
@@ -307,7 +306,7 @@ export function indexRadicalSbrief(node: Element): string {
  * @return The middle string.
  */
  export function simpleIndexRadicalSbrief(node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOTINDEX, true);
+  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, true);
 }
 
 
@@ -317,8 +316,8 @@ export function indexRadicalSbrief(node: Element): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
-export function ordinalNumber(node: Element): string {
-  return LOCALE.NUMBERS.wordOrdinal(node.childNodes.length);
+export function ordinalNumber(_node: Element, count: number): string {
+  return LOCALE.NUMBERS.wordOrdinal(count);
 }
 
 }
