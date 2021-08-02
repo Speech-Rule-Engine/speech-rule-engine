@@ -132,6 +132,7 @@ export function MathspeakRules() {
       'CSFcloseFracSbrief': MathspeakKoreanUtil.closingFractionSbrief,
       'CSFoverFracSbrief': MathspeakKoreanUtil.overFractionSbrief,
 
+      "CQFisSimpleIndex": MathspeakKoreanUtil.IsSimpleIndex,
       'CSFopenRadicalVerbose': MathspeakKoreanUtil.openingRadicalVerbose,
       'CSFcloseRadicalVerbose': MathspeakKoreanUtil.closingRadicalVerbose,
       'CSFindexRadicalVerbose': MathspeakKoreanUtil.indexRadicalVerbose,

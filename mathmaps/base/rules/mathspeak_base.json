@@ -560,6 +560,27 @@
     ],
     [
       "Precondition",
+      "root-simple",
+      "default",
+      "self::root",
+      "CQFisSimpleIndex"
+    ],
+    [
+      "Precondition",
+      "root-simple-brief",
+      "brief",
+      "self::root",
+      "CQFisSimpleIndex"
+    ],
+    [
+      "Precondition",
+      "root-simple-sbrief",
+      "sbrief",
+      "self::root",
+      "CQFisSimpleIndex"
+    ],
+    [
+      "Precondition",
       "limboth",
       "default",
       "self::limboth",

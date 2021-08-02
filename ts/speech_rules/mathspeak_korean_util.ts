@@ -133,6 +133,18 @@ export function overFractionSbrief(node: Element): string {
       LOCALE.MESSAGES.MS.FRAC_OVER);
 }
 
+/**
+ * Query function that Checks if we have a simple determinant in the sense that
+ * every cell only contains single letters or numbers.
+ * @param node The determinant node.
+ * @return List containing input node if true.
+ */
+export function IsSimpleIndex(node: Element): Element[] {
+  let index = XpathUtil.evalXPath('children/*[1]', node)[0].toString().match(/[^>⁢>]+<\/[^>]*>/g);
+
+  return (index.length === 1) ?  [node] : [];
+}
+
 
 /**
  * A string indexing the root.
@@ -140,11 +152,14 @@ export function overFractionSbrief(node: Element): string {
  * @return The localised indexing string if it exists.
  */
 export function getRootIndex(node: Element): string {
-  let children = XpathUtil.evalXPath('children/*[1]', node)[0];
+  //let children = XpathUtil.evalXPath('children/*[1]', node)[0];
   let content = node.tagName === 'sqrt' ? '' :  // TODO (sorge): Make that safer?
-    children.textContent.trim();
+    XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
 
-  let list = children.toString().match(/[^>]+<\/[^>]*>/g);
+  return LOCALE.MESSAGES.MSroots[content] || content;
+
+  /*
+  let list = children.toString().match(/[^>⁢>]+<\/[^>]*>/g);
   if (list.length === 1) return LOCALE.MESSAGES.MSroots[content] || content;
 
   let result = []; let i = 0; let wasElement = false;
@@ -163,6 +178,7 @@ export function getRootIndex(node: Element): string {
   }
 
   return list.length ? content : result.join(" ");
+  */
 }
 
 
