@@ -66,6 +66,7 @@ export class LayoutRenderer extends XmlRenderer {
    */
   public markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
+    console.log(descrs.forEach(x => console.log(`${x.personality.layout}: ${x.text}`)));
     let markup = AudioUtil.personalityMarkup(descrs);
     let result = [];
     let currentOpen: EngineConst.personalityProps[] = [];
@@ -112,7 +113,8 @@ let twodExpr = '';
 let handlers: {[key: string]: Function} = {
   MATRIX: handleMatrix,
   CELL: recurseTree,
-  FENCE: recurseTree
+  FENCE: recurseTree,
+  ROW: recurseTree
 };
 
 
@@ -126,6 +128,7 @@ function applyHandler(element: Element): string {
 function setTwoDim(str: string): string {
   twodExpr = '';
   let dom = DomUtil.parseInput(`<all>${str}</all>`);
+  console.log(DomUtil.formatXml(dom.toString()));
   twodExpr = recurseTree(dom);
   return twodExpr;
 }
