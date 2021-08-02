@@ -1352,7 +1352,7 @@
     [
       "Action",
       "mixed-number",
-      "[n] children/*[1]; [t] \"와(과)\"; [n] children/*[2]; "
+      "[n] children/*[1]; [t] \"과(와)\"; [n] children/*[2]; "
     ],
     [
       "Action",

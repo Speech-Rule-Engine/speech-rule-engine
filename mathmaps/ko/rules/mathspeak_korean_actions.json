@@ -52,7 +52,7 @@
     [
       "Action",
       "mixed-number",
-      "[n] children/*[1]; [t] \"와(과)\"; [n] children/*[2]; "
+      "[n] children/*[1]; [t] \"과(와)\"; [n] children/*[2]; "
     ],
     [
       "Action",
@@ -702,7 +702,7 @@
     [
       "Action",
       "cancel",
-      "[t] \"소거\"; [n] children/*[1]/children/*[1]; [t] \"을(를)\"; [n] children/*[2]; [t] \"로(으로)\"; [t] \"소거끝\""
+      "[t] \"소거\"; [n] children/*[1]/children/*[1]; [t] \"을(를)\"; [n] children/*[2]; [t] \"으로(로)\"; [t] \"소거끝\""
     ],
     [
       "Action",
