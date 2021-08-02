@@ -301,7 +301,7 @@
     [
       "Action",
       "abstr-relation-seq",
-      "[t] CSFordinalNumber (count: count(./children/*)); [t] \"개의 연속된\"; [t] @role (grammar:localRole)"
+      "[t] CSFordinalNumber; [t] \"개의 연속된\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -316,7 +316,7 @@
     [
       "Action",
       "abstr-multirel",
-      "[t] CSFordinalNumber (count: count(./children/*)); [t] \"개의 연속된 관계식\""
+      "[t] count(./children/*); [t] \"개의 연속된 관계식\""
     ],
     [
       "Action",

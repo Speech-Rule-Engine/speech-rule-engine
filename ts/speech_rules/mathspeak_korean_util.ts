@@ -316,8 +316,9 @@ export function indexRadicalSbrief(node: Element): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
-export function ordinalNumber(_node: Element, count: number): string {
-  return LOCALE.NUMBERS.wordOrdinal(count);
+export function ordinalNumber(node: Element): string {
+  let children = XpathUtil.evalXPath('../../children/*', node) as Element[];
+  return LOCALE.NUMBERS.wordOrdinal(children.length) + "히히";
 }
 
 }
