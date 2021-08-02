@@ -141,7 +141,7 @@ export function overFractionSbrief(node: Element): string {
  */
 export function getRootIndex(node: Element): string {
   let children = XpathUtil.evalXPath('children/*[1]', node)[0];
-  let content = node.tagName === 'sqrt' ? '' :  // TODO (sorge): Make that safer?
+  let content = node.tagName === 'sqrt' ? '2' :  // TODO (sorge): Make that safer?
     children.textContent.trim();
 
   let list = children.toString().match(/[^>]+<\/[^>]*>/g);
@@ -161,7 +161,7 @@ export function getRootIndex(node: Element): string {
     else { wasElement = false; i--; }
     result.push(list.splice(i, 1).toString().replace(/<\/.*>/g, ''));
   }
-  
+
   return list.length ? content : result.join(" ");
 }
 
