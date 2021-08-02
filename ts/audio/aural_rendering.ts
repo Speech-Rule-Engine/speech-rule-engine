@@ -104,30 +104,29 @@ namespace AuralRendering {
    export function finalize(str: string) {
     let renderer = renderers.get(Engine.getInstance().markup);
 
-    var equals = "은(는)";
-    let index = 0;
-    while (true) {
-        let found = str.indexOf(equals, index);
-        if (found == -1) break;
-        str = str.replace(equals, checkPreviousChar(str[found - 2]));
-        index = found + 1; 
+    const pair = ["은", "는", "과", "와", "을", "를", "으로", "로"];
+    let final = str.split(/은\(|와\(|을\(|로\(|\)/);
+
+    if (final.length > 1) {
+      for(let i = 0; i < final.length; i += 2) {
+        let index = pair.indexOf(final[i]) + checkPreviousChar(final[i-1]);
+        final.splice(i, 1, pair[index]);
+      }
+      str = final.join("");
     }
 
     if (!renderer) {
       return str;
-    }
-    return renderer.finalize(str);
+    } return renderer.finalize(str);
   }
 
-  export function checkPreviousChar(char: string) {
-    const preChar = char.charCodeAt(char.length - 1);
+  export function checkPreviousChar(char: string) : number {
+    const preChar = char.charCodeAt(0);
     const checkingResult = (preChar - 44032) % 28;
-    if(char.match(/[a-z]/i) || char.match(/[0-9]/i)){
-      if (char.match(/[r,l,n,m,1,3,6,7,8,0]/i))
-          return "은";
-      return "는";
+    if(char.match(/[a-z0-9]/i)) {
+      return (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) ? -1 : 0;
     }
-    return checkingResult !== 0 ? "은" : "는";
+    return (checkingResult !== 0) ? -1 : 0;
   }
 
 
