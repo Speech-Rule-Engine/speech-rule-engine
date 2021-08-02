@@ -137,7 +137,6 @@ export function MathspeakRules() {
       "CSFsimpleIndexRadicalBrief": MathspeakKoreanUtil.simpleIndexRadicalBrief,
       "CSFsimpleIndexRadicalSbrief": MathspeakKoreanUtil.simpleIndexRadicalSbrief,
       
-
       'CSFopenRadicalVerbose': MathspeakKoreanUtil.openingRadicalVerbose,
       'CSFcloseRadicalVerbose': MathspeakKoreanUtil.closingRadicalVerbose,
       'CSFindexRadicalVerbose': MathspeakKoreanUtil.indexRadicalVerbose,
@@ -147,6 +146,6 @@ export function MathspeakRules() {
       'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief,
       'CSFindexRadicalSbrief': MathspeakKoreanUtil.indexRadicalSbrief,
 
-      'CTFordinalNumber': MathspeakKoreanUtil.ordinalNumber
+      'CSFordinalNumber': MathspeakKoreanUtil.ordinalNumber
     });
 }

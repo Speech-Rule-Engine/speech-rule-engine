@@ -742,7 +742,7 @@
     [
       "Action",
       "inference",
-      "[t] \"추론 규칙\"; ; [m] content/*; [t] \"결론은\"; [n] children/*[1]; [t] \"이고 전제는\"; [t] count(children/*[2]/children/*); [t] \"개\""
+      "[t] \"추론 규칙\"; [m] content/*; [t] \"결론은\"; [n] children/*[1]; [t] \"이고 전제는\"; [t] count(children/*[2]/children/*); [t] \"개\""
     ],
     [
       "Action",
