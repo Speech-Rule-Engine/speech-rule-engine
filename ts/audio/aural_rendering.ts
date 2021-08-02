@@ -122,8 +122,8 @@ namespace AuralRendering {
   export function checkPreviousChar(char: string) {
     const preChar = char.charCodeAt(char.length - 1);
     const checkingResult = (preChar - 44032) % 28;
-    if(char.match(/[a-z]/i)){
-      if (char === 'r' || char === 'l' || char === 'n' || char === 'm')
+    if(char.match(/[a-z]/i) || char.match(/[0-9]/i)){
+      if (char.match(/[r,l,n,m,1,3,6,7,8,0]/i))
           return "은";
       return "는";
     }
