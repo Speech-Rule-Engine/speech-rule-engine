@@ -101,12 +101,33 @@ namespace AuralRendering {
   /**
    * @override
    */
-  export function finalize(str: string) {
+   export function finalize(str: string) {
     let renderer = renderers.get(Engine.getInstance().markup);
+
+    var equals = "은(는)";
+    let index = 0;
+    while (true) {
+        let found = str.indexOf(equals, index);
+        if (found == -1) break;
+        str = str.replace(equals, checkPreviousChar(str[found - 2]));
+        index = found + 1; 
+    }
+
     if (!renderer) {
       return str;
     }
     return renderer.finalize(str);
+  }
+
+  export function checkPreviousChar(char: string) {
+    const preChar = char.charCodeAt(char.length - 1);
+    const checkingResult = (preChar - 44032) % 28;
+    if(char.match(/[a-z]/i) || char.match(/[0-9]/i)){
+      if (char.match(/[r,l,n,m,1,3,6,7,8,0]/i))
+          return "은";
+      return "는";
+    }
+    return checkingResult !== 0 ? "은" : "는";
   }
 
 
