@@ -123,7 +123,7 @@ namespace AuralRendering {
   export function checkPreviousChar(char: string) : number {
     const preChar = char.charCodeAt(char.length - 2);
     const checkingResult = (preChar - 44032) % 28;
-    if(char.match(/[a-z0-9]/i)) {
+    if(char.match(/[a-z0-9] $/i)) {
       return (char.match(/[r,l,n,m,1,3,6,7,8,0] $/i)) ? -1 : 0;
     }
     return (checkingResult !== 0) ? -1 : 0;
