@@ -147,22 +147,22 @@
     [
       "Action",
       "feet",
-      "[n] children/*[1]; [t] \"फिट\" (grammar:annotation=\"unit\":translate:plural)"
+      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate:plural)"
     ],
     [
       "Action",
       "foot",
-      "[n] children/*[1]; [t] \"फुट\" (grammar:annotation=\"unit\":translate)"
+      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate)"
     ],
     [
       "Action",
       "inches",
-      "[n] children/*[1]; [t] \"इंच\" (grammar:annotation=\"unit\":translate:plural)"
+      "[n] children/*[1]; [t] \"in\" (grammar:annotation=\"unit\":translate:plural)"
     ],
     [
       "Action",
       "inch",
-      "[n] children/*[1]; [t] \"इंच\" (grammar:annotation=\"unit\":translate)"
+      "[n] children/*[1]; [t] \"in\" (grammar:annotation=\"unit\":translate)"
     ],
     [
       "Action",
@@ -217,22 +217,22 @@
     [
       "Action",
       "feet-length",
-      "[n] children/*[1]; [t] \"फिट\" (pause:short, grammar:annotation=\"unit\":translate:plural)"
+      "[n] children/*[1]; [t] \"ft\" (pause:short, grammar:annotation=\"unit\":translate:plural)"
     ],
     [
       "Action",
       "foot-length",
-      "[n] children/*[1]; [t] \"फुट\" (pause:short, grammar:annotation=\"unit\":translate)"
+      "[n] children/*[1]; [t] \"ft\" (pause:short, grammar:annotation=\"unit\":translate)"
     ],
     [
       "Action",
       "inches-length",
-      "[n] children/*[1]; [t] \"इंच\" (pause:short, grammar:annotation=\"unit\":translate:plural)"
+      "[n] children/*[1]; [t] \"in\" (pause:short, grammar:annotation=\"unit\":translate:plural)"
     ],
     [
       "Action",
       "inch-length",
-      "[n] children/*[1]; [t] \"इंच\" (pause:short, grammar:annotation=\"unit\":translate)"
+      "[n] children/*[1]; [t] \"in\" (pause:short, grammar:annotation=\"unit\":translate)"
     ],
     [
       "Action",
