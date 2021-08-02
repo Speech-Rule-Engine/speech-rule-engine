@@ -109,7 +109,7 @@ namespace AuralRendering {
 
     if (final.length > 1) {
       for (let i = 1; i < final.length; i += 2) {
-        let index = pair.indexOf(final[i]) + checkPreviousChar(final[i-1]);
+        let index = pair.indexOf(final[i]) + checkPreviousChar(final[i-1].slice(-2));
         final.splice(i, 1, pair[index]);
       }
       str = final.join("");
@@ -121,10 +121,10 @@ namespace AuralRendering {
   }
 
   export function checkPreviousChar(char: string) : number {
-    const preChar = char.charCodeAt(char.length - 2);
+    const preChar = char.charCodeAt(0);
     const checkingResult = (preChar - 44032) % 28;
-    if(char.match(/[a-z0-9] $/i)) {
-      return (char.match(/[r,l,n,m,1,3,6,7,8,0] $/i)) ? -1 : 0;
+    if(char.match(/[a-z0-9]/i)) {
+      return (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) ? -1 : 0;
     }
     return (checkingResult !== 0) ? -1 : 0;
   }
