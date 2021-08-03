@@ -656,31 +656,6 @@
     ],
     [
       "Action",
-      "natural-numbers-super",
-      "[t] \"एन\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "integers-super",
-      "[t] \"जेड\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "rational-numbers-super",
-      "[t] \"क्यु\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "real-numbers-super",
-      "[t] \"आर\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "complex-numbers-super",
-      "[t] \"सी\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
       "natural-numbers-with-zero",
       "[t] \"शून्य सहित प्राकृत संख्याएं\""
     ],

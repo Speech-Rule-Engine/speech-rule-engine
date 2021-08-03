@@ -656,31 +656,6 @@
     ],
     [
       "Action",
-      "natural-numbers-super",
-      "[t] \"n\" (join: \"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "integers-super",
-      "[t] \"z\" (join: \"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "rational-numbers-super",
-      "[t] \"q\" (join: \"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "real-numbers-super",
-      "[t] \"r\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "complex-numbers-super",
-      "[t] \"c\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
       "natural-numbers-with-zero",
       "[t] \"the natural numbers with zero\" (span:.)"
     ],

@@ -306,6 +306,31 @@
     ],
     [
       "Action",
+      "natural-numbers-super",
+      "[t] \"n\" (join:\"-\",grammar:translate); [n] children/*[2] (grammar:numbers2alpha)"
+    ],
+    [
+      "Action",
+      "integers-super",
+      "[t] \"z\" (join:\"-\",grammar:translate); [n] children/*[2] (grammar:numbers2alpha)"
+    ],
+    [
+      "Action",
+      "rational-numbers-super",
+      "[t] \"q\" (join:\"-\",grammar:translate); [n] children/*[2] (grammar:numbers2alpha)"
+    ],
+    [
+      "Action",
+      "real-numbers-super",
+      "[t] \"r\" (join:\"-\",grammar:translate); [n] children/*[2] (grammar:numbers2alpha)"
+    ],
+    [
+      "Action",
+      "complex-numbers-super",
+      "[t] \"c\" (join:\"-\",grammar:translate); [n] children/*[2] (grammar:numbers2alpha)"
+    ],
+    [
+      "Action",
       "matrix-row-simple",
       "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")"
     ],
