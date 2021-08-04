@@ -341,6 +341,11 @@
     ],
     [
       "Action",
+      "currency",
+      "[m] children/*[position()>1]; [n] children/*[1];"
+    ],
+    [
+      "Action",
       "relseq",
       "[m] children/* (sepFunc:CTFcontentIterator)"
     ],
