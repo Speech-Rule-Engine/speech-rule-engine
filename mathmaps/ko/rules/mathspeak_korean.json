@@ -76,7 +76,6 @@
       "currency",
       "default",
       "self::infixop",
-      "contains(@annotation, \"mathspeak:unit\")",
       "children/*[1][@role=\"unit\"]",
       "children/*[1][@category=\"unit:currency\"]"
     ]
