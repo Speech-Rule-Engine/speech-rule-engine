@@ -210,18 +210,18 @@ export function openingRadicalSbrief(node: Element): string {
  * @param node The radical node.
  * @return The localised indexing string if it exists.
  */
- export function getRootIndex(node: Element): string {
+export function getRootIndex(node: Element): string {
   let content = XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
 
-  return LOCALE.MESSAGES.MSroots[content] || content + "제곱근";
+  return LOCALE.MESSAGES.MSroots[content] || content;
 }
 
 
 export function indexRadical(
-    node: Element, postfix: string, fence: boolean): string {
+    node: Element, postfix: string, simple: boolean): string {
   let index = getRootIndex(node);
 
-  return (index && fence) ? index : postfix;
+  return (simple && index) ? LOCALE.FUNCTIONS.combineRootIndex(index, postfix) : postfix;
 }
 
 

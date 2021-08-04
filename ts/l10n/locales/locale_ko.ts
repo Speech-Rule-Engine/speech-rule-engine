@@ -42,7 +42,7 @@ function create(): Locale {
   loc.NUMBERS = NUMBERS;
   loc.FUNCTIONS.plural = function(unit: string) { return unit };
   loc.FUNCTIONS.combineRootIndex = function(index: string, postfix: string) {
-    return index + postfix;
+    return (index === postfix) ? '' : index + postfix;
   };
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
