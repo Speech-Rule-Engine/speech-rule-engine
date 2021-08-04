@@ -396,11 +396,6 @@
     ],
     [
       "Action",
-      "simple-text-fraction",
-      "[p] (pause:short); [n] children/*[1]; [t] \"sur\"; [n] children/*[2] (pause:short)"
-    ],
-    [
-      "Action",
       "vulgar-fraction",
       "[t] CSFvulgarFraction"
     ],
