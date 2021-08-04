@@ -522,42 +522,42 @@
     [
       "Action",
       "sqrt",
-      "[t] \"radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:short); [t] \"radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:short); [t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -582,22 +582,22 @@
     [
       "Action",
       "cubic",
-      "[t] \"radice cubica di\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[t] \"radice cubica di\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"radice cubica di\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"radice cubica di\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root",
-      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",

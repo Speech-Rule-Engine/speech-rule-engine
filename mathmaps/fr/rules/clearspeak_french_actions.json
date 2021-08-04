@@ -457,42 +457,42 @@
     [
       "Action",
       "sqrt",
-      "[t] \"la racine carrée de\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"la racine carrée de\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"la racine carrée de\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"la racine carrée de\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"la racine carrée négative de\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"la racine carrée négative de\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"la racine carrée négative de\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"la racine carrée négative de\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"la racine carrée positive de\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -517,22 +517,22 @@
     [
       "Action",
       "cubic",
-      "[t] \"la racine cubique de\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[t] \"la racine cubique de\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"la racine cubique de\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"la racine cubique de\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root",
-      "[t] \"la\"; [n] children/*[1] (grammar:ordinal); [t] \"racine de\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[t] \"la\"; [n] children/*[1] (grammar:ordinal); [t] \"racine de\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"la\"; [n] children/*[1] (grammar:ordinal); [t] \"racine de\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"la\"; [n] children/*[1] (grammar:ordinal); [t] \"racine de\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",

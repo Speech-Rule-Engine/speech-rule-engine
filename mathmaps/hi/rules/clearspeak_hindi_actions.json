@@ -512,42 +512,42 @@
     [
       "Action",
       "sqrt",
-      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का वर्गमूल\" (pause:short)"
+      "[n] children/*[1] (grammar:!EndRoot); [t] \"का वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [n] children/*[1] (grammar:EndRoot=false); [t] \"का वर्गमूल\" (pause:short)"
+      "[p] (pause:\"short\"); [n] children/*[1] (grammar:!EndRoot); [t] \"का वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[n] children/*[1]/children/*[1] (grammar:EndRoot=false); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
+      "[n] children/*[1]/children/*[1] (grammar:!EndRoot); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
+      "[p] (pause:\"short\"); [n] children/*[1]/children/*[1] (grammar:!EndRoot); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
+      "[n] children/*[1] (grammar:!EndRoot); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
+      "[n] children/*[1] (grammar:!EndRoot); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
+      "[n] children/*[1] (grammar:!EndRoot); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[n] children/*[1] (grammar:EndRoot=false); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
+      "[n] children/*[1] (grammar:!EndRoot); [t] \"का धनात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
@@ -572,22 +572,22 @@
     [
       "Action",
       "cubic",
-      "[n] children/*[2] (grammar:EndRoot=false); [t] \"का घनमूल\" (pause:short)"
+      "[n] children/*[2] (grammar:!EndRoot); [t] \"का घनमूल\" (pause:short)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[n] children/*[2] (grammar:EndRoot=false); [t] \"का घनमूल\" (pause:short)"
+      "[n] children/*[2] (grammar:!EndRoot); [t] \"का घनमूल\" (pause:short)"
     ],
     [
       "Action",
       "root",
-      "[n] children/*[2] (grammar:EndRoot=false); [n] children/*[1] (grammar:ordinal); [t] \"का मूल\" (pause:short)"
+      "[n] children/*[2] (grammar:!EndRoot); [n] children/*[1] (grammar:ordinal); [t] \"का मूल\" (pause:short)"
     ],
     [
       "Action",
       "root-nested",
-      "[n] children/*[2] (grammar:EndRoot=false); [n] children/*[1] (grammar:ordinal); [t] \"का मूल\" (pause:short)"
+      "[n] children/*[2] (grammar:!EndRoot); [n] children/*[1] (grammar:ordinal); [t] \"का मूल\" (pause:short)"
     ],
     [
       "Action",

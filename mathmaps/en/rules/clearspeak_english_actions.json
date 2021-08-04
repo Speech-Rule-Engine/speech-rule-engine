@@ -512,42 +512,42 @@
     [
       "Action",
       "sqrt",
-      "[t] \"the square root of\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"the square root of\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"the square root of\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"the square root of\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"the negative square root of\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"the negative square root of\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"the negative square root of\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"the negative square root of\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"the positive square root of\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"the positive square root of\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"the positive square root of\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"the positive square root of\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"the positive square root of\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"the positive square root of\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"the positive square root of\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"the positive square root of\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -572,22 +572,22 @@
     [
       "Action",
       "cubic",
-      "[t] \"the cube root of\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[t] \"the cube root of\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"the cube root of\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"the cube root of\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root",
-      "[n] children/*[1] (grammar:ordinal:addArticle); [t] \"root of\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[n] children/*[1] (grammar:ordinal:addArticle); [t] \"root of\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [n] children/*[1] (grammar:ordinal:addArticle); [t] \"root of\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [n] children/*[1] (grammar:ordinal:addArticle); [t] \"root of\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",

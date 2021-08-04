@@ -487,42 +487,42 @@
     [
       "Action",
       "sqrt",
-      "[t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -547,22 +547,22 @@
     [
       "Action",
       "cubic",
-      "[t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root",
-      "[t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
+      "[p] (pause:short); [t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
