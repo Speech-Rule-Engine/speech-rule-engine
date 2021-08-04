@@ -31,16 +31,6 @@
     ],
     [
       "Action",
-      "font-identifier-short",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
-      "font-identifier",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
       "font-double-struck",
       "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
     ],

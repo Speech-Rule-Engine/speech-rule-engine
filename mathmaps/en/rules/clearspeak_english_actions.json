@@ -16,11 +16,6 @@
     ],
     [
       "Action",
-      "font-identifier",
-      "[t] @font (grammar:localFont); [n] . (pause:short, grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
       "german-font",
       "[t] \"German\"; [n] . (grammar:ignoreFont=@font)"
     ],

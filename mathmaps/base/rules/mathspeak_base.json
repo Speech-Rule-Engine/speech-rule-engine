@@ -97,9 +97,8 @@
       "@font!=\"normal\""
     ],
     [
-      "Precondition",
-      "font-identifier-short",
-      "default",
+      "Alias",
+      "font",
       "self::identifier",
       "string-length(text())=1",
       "@font",
@@ -109,9 +108,8 @@
       "@role!=\"unit\""
     ],
     [
-      "Precondition",
-      "font-identifier",
-      "default",
+      "Alias",
+      "font",
       "self::identifier",
       "string-length(text())=1",
       "@font",

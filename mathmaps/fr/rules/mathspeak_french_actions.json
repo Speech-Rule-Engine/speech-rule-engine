@@ -26,16 +26,6 @@
     ],
     [
       "Action",
-      "font-identifier-short",
-      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
-    ],
-    [
-      "Action",
-      "font-identifier",
-      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
-    ],
-    [
-      "Action",
       "mixed-number",
       "[n] children/*[1]; [t] \"et\"; [n] children/*[2]"
     ],

@@ -16,11 +16,6 @@
     ],
     [
       "Action",
-      "font-identifier",
-      "[n] . (grammar:ignoreFont=@font); [t] @font (pause:short, grammar:localFont)"
-    ],
-    [
-      "Action",
       "ellipsis",
       "[t] \"et ainsi de suite\""
     ],

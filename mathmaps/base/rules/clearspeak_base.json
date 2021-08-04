@@ -139,19 +139,12 @@
       "Caps_SayCaps"
     ],
     [
-      "Precondition",
-      "font-identifier",
-      "default",
+      "Alias",
+      "font",
       "self::identifier[@font=\"normal\"]",
       "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@role!=\"unit\""
-    ],
-    [
-      "Specialized",
-      "font-identifier",
-      "default",
-      "Caps_SayCaps"
     ],
     [
       "Precondition",

@@ -16,11 +16,6 @@
     ],
     [
       "Action",
-      "font-identifier",
-      "[t] @font (grammar:localFont); [n] . (pause:short, grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
       "ellipsis",
       "[t] \"आदि, आदि\""
     ],

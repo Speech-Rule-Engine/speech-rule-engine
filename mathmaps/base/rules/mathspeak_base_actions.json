@@ -264,7 +264,7 @@
       "prime-subscript-simple",
       "[n] children/*[1]/children/*[1]; [n] children/*[2];[n] children/*[1]/children/*[2]"
     ],
-        [
+    [
       "Action",
       "unit",
       "[t] text() (grammar:annotation=\"unit\":translate:plural)"

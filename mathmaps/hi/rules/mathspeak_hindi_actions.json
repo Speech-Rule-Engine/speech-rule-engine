@@ -26,16 +26,6 @@
     ],
     [
       "Action",
-      "font-identifier-short",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
-      "font-identifier",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
       "mixed-number",
       "[n] children/*[1]; [t] \"पूर्णांक\"; [n] children/*[2]"
     ],
