@@ -67,12 +67,12 @@
     [
       "Action",
       "element-in-set",
-      "[n] children/*[2]; [n] content/*[1]; [t] \"सभीं\"; [n] children/*[1];"
+      "[n] children/*[2]; [n] content/*[1]; [t] \"सभीं\"; [n] children/*[1]"
     ],
     [
       "Action",
       "element-in-set-woall",
-      "[n] children/*[2]; [n] content/*[1]; [n] children/*[1];"
+      "[n] children/*[2]; [n] content/*[1]; [n] children/*[1]"
     ],
     [
       "Action",
@@ -517,7 +517,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause: \"short\"); [n] children/*[1] (grammar:EndRoot=false); [t] \"का वर्गमूल\" (pause:short)"
+      "[p] (pause:\"short\"); [n] children/*[1] (grammar:EndRoot=false); [t] \"का वर्गमूल\" (pause:short)"
     ],
     [
       "Action",
@@ -527,7 +527,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause: \"short\"); [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
+      "[p] (pause:\"short\"); [n] children/*[1]/children/*[1] (grammar:EndRoot=false); [t] \"का ऋणात्मक वर्गमूल\" (pause:short)"
     ],
     [
       "Action",

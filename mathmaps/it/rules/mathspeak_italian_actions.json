@@ -27,7 +27,7 @@
     [
       "Action",
       "font-identifier-short",
-      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont);"
+      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
     ],
     [
       "Action",
@@ -67,7 +67,7 @@
     [
       "Action",
       "number-baseline-font",
-      "[t] \"linea di base\"; [n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont);"
+      "[t] \"linea di base\"; [n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
     ],
     [
       "Action",
@@ -147,7 +147,7 @@
     [
       "Action",
       "continued-fraction-outer-brief",
-      "[t] \"continuo frazione\"; [n] children/*[1];[t] \"fratto\"; [n] children/*[2]"
+      "[t] \"continuo frazione\"; [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -157,12 +157,12 @@
     [
       "Action",
       "continued-fraction-inner-brief",
-      "[t] \"inizio frazione\"; [n] children/*[1];[t] \"fratto\"; [n] children/*[2]"
+      "[t] \"inizio frazione\"; [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner-sbrief",
-      "[t] \"frazione\"; [n] children/*[1];[t] \"fratto\"; [n] children/*[2]"
+      "[t] \"frazione\"; [n] children/*[1]; [t] \"fratto\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -202,7 +202,7 @@
     [
       "Action",
       "integral-brief",
-      "[n] children/*[1]; [t] \"sub\"; [n] children/*[2];[t] \"sup\"; [n] children/*[3]; [t] \"base\";"
+      "[n] children/*[1]; [t] \"sub\"; [n] children/*[2]; [t] \"sup\"; [n] children/*[3]; [t] \"base\""
     ],
     [
       "Action",
@@ -367,7 +367,7 @@
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*);  [t] \"per\";[t] count(children/*[1]/children/*); [t] \"determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"riga \"); [t] \"fine determinante\""
+      "[t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [t] \"determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"riga \"); [t] \"fine determinante\""
     ],
     [
       "Action",
@@ -377,7 +377,7 @@
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*);  [t] \"per\";[t] count(children/*[1]/children/*); [t] \"determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"riga\",grammar:simpleDet); [t] \"fine determinante\""
+      "[t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [t] \"determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"riga\", grammar:simpleDet); [t] \"fine determinante\""
     ],
     [
       "Action",
@@ -417,7 +417,7 @@
     [
       "Action",
       "line-with-label-brief",
-      "[t] \"etichetta\"; [n] content/*[1] (pause: 200); [m] children/*"
+      "[t] \"etichetta\"; [n] content/*[1] (pause:200); [m] children/*"
     ],
     [
       "Action",
@@ -437,7 +437,7 @@
     [
       "Action",
       "empty-line-with-label-brief",
-      "[t] \"etichetta\"; [n] content/*[1] (pause: 200); [t] \"vuoto\""
+      "[t] \"etichetta\"; [n] content/*[1] (pause:200); [t] \"vuoto\""
     ],
     [
       "Action",

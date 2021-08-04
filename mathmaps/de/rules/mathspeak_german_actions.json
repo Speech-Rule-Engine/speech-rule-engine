@@ -7,7 +7,7 @@
     [
       "Action",
       "collapsed",
-      "[n] . (engine:modality=summary,grammar:collapsed); [t] \"kollabiert\""
+      "[n] . (engine:modality=summary, grammar:collapsed); [t] \"kollabiert\""
     ],
     [
       "Action",
@@ -52,7 +52,7 @@
     [
       "Action",
       "mixed-number",
-      "[n] children/*[1]; [n] children/*[2]; "
+      "[n] children/*[1]; [n] children/*[2]"
     ],
     [
       "Action",
@@ -102,7 +102,7 @@
     [
       "Action",
       "subtraction",
-      "[m] children/* (separator:\"minus\");"
+      "[m] children/* (separator:\"minus\")"
     ],
     [
       "Action",
@@ -152,37 +152,37 @@
     [
       "Action",
       "continued-fraction-outer",
-      "[t] \"Kettenbruch\"; [n] children/*[1];[t] \"durch\"; [n] children/*[2]"
+      "[t] \"Kettenbruch\"; [n] children/*[1]; [t] \"durch\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner",
-      "[t] \"Anfang Bruch\"; [n] children/*[1];[t] \"durch\"; [n] children/*[2]"
+      "[t] \"Anfang Bruch\"; [n] children/*[1]; [t] \"durch\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner-sbrief",
-      "[t] \"Bruch\"; [n] children/*[1];[t] \"durch\"; [n] children/*[2]"
+      "[t] \"Bruch\"; [n] children/*[1]; [t] \"durch\"; [n] children/*[2]"
     ],
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]"
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]"
     ],
     [
       "Action",
       "limlower",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];"
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]"
     ],
     [
       "Action",
       "limupper",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2];"
+      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]"
     ],
     [
       "Action",
       "limboth-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]; [t] \"Ende Überschrift\""
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]; [t] \"Ende Überschrift\""
     ],
     [
       "Action",
@@ -197,12 +197,12 @@
     [
       "Action",
       "integral",
-      "[n] children/*[1]; [t] \"Index\"; [n] children/*[2];[t] \"Hoch\"; [n] children/*[3]; [t] \"Grundlinie\";"
+      "[n] children/*[1]; [t] \"Index\"; [n] children/*[2]; [t] \"Hoch\"; [n] children/*[3]; [t] \"Grundlinie\""
     ],
     [
       "Action",
       "integral-brief",
-      "[n] children/*[1]; [t] \"Index\"; [n] children/*[2];[t] \"Hoch\"; [n] children/*[3]; [t] \"Base\";"
+      "[n] children/*[1]; [t] \"Index\"; [n] children/*[2]; [t] \"Hoch\"; [n] children/*[3]; [t] \"Base\""
     ],
     [
       "Action",
@@ -307,32 +307,32 @@
     [
       "Action",
       "matrix",
-      "[t] \"Anfang\"; [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Matrize\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Matrize\""
+      "[t] \"Anfang\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Matrize\""
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Matrize\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Matrize\""
+      "[t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Matrize\""
     ],
     [
       "Action",
       "matrix-row",
-      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Spalte\", pause: 200)"
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"Spalte\", pause:200)"
     ],
     [
       "Action",
       "row-with-label",
-      "[t] \"mit Bezeichner\"; [n] content/*[1]; [t] \"Ende Bezeichner\" (pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Spalte\")"
+      "[t] \"mit Bezeichner\"; [n] content/*[1]; [t] \"Ende Bezeichner\" (pause:200); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Spalte\")"
     ],
     [
       "Action",
       "row-with-label-brief",
-      "[t] \"Bezeichner\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Spalte\")"
+      "[t] \"Bezeichner\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Spalte\")"
     ],
     [
       "Action",
       "row-with-text-label",
-      "[t] \"Bezeichner\"; [t] CSFRemoveParens;[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Spalte\")"
+      "[t] \"Bezeichner\"; [t] CSFRemoveParens; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Spalte\")"
     ],
     [
       "Action",
@@ -342,77 +342,77 @@
     [
       "Action",
       "empty-cell",
-      "[t] \"leer\" (pause: 300)"
+      "[t] \"leer\" (pause:300)"
     ],
     [
       "Action",
       "determinant",
-      "[t] \"Anfang\"; [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Determinante\""
+      "[t] \"Anfang\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Determinante\""
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Determinante\""
+      "[t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Determinante\""
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"Anfang\"; [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile\",grammar:simpleDet); [t] \"Ende Determinante\""
+      "[t] \"Anfang\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile\", grammar:simpleDet); [t] \"Ende Determinante\""
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile\",grammar:simpleDet); [t] \"Ende Determinante\""
+      "[t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Determinante\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile\", grammar:simpleDet); [t] \"Ende Determinante\""
     ],
     [
       "Action",
       "layout",
-      "[t] \"Anfang Anordnung\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Anordnung\""
+      "[t] \"Anfang Anordnung\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Anordnung\""
     ],
     [
       "Action",
       "layout-sbrief",
-      "[t] \"Anordnung\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Anordnung\""
+      "[t] \"Anordnung\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Anordnung\""
     ],
     [
       "Action",
       "binomial",
-      "[t] \"Anfang Binomialkoeffizient\"; [n] children/*[2]/children/*[1]; [t] \"aus\";  [n] children/*[1]/children/*[1]; [t] \"Ende Binomialkoeffizient\""
+      "[t] \"Anfang Binomialkoeffizient\"; [n] children/*[2]/children/*[1]; [t] \"aus\"; [n] children/*[1]/children/*[1]; [t] \"Ende Binomialkoeffizient\""
     ],
     [
       "Action",
       "binomial-brief",
-      "[t] \"Anfang Binomial\"; [n] children/*[2]/children/*[1]; [t] \"aus\";  [n] children/*[1]/children/*[1]; [t] \"Ende Binomial\""
+      "[t] \"Anfang Binomial\"; [n] children/*[2]/children/*[1]; [t] \"aus\"; [n] children/*[1]/children/*[1]; [t] \"Ende Binomial\""
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"Binomial\"; [n] children/*[2]/children/*[1]; [t] \"aus\";  [n] children/*[1]/children/*[1]; [t] \"Ende Binomial\""
+      "[t] \"Binomial\"; [n] children/*[2]/children/*[1]; [t] \"aus\"; [n] children/*[1]/children/*[1]; [t] \"Ende Binomial\""
     ],
     [
       "Action",
       "cases",
-      "[t] \"Anfang Fallunterscheidung\"; [t] \"große\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Fallunterscheidung\""
+      "[t] \"Anfang Fallunterscheidung\"; [t] \"große\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Fallunterscheidung\""
     ],
     [
       "Action",
       "cases-brief",
-      "[t] \"Anfang Fälle\"; [t] \"große\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Fälle\""
+      "[t] \"Anfang Fälle\"; [t] \"große\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Fälle\""
     ],
     [
       "Action",
       "cases-sbrief",
-      "[t] \"Fälle\"; [t] \"große\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Zeile \"); [t] \"Ende Fälle\""
+      "[t] \"Fälle\"; [t] \"große\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Zeile \"); [t] \"Ende Fälle\""
     ],
     [
       "Action",
       "line-with-label",
-      "[t] \"mit Bezeichner\"; [n] content/*[1]; [t] \"Ende Bezeichner\" (pause: 200); [m] children/*"
+      "[t] \"mit Bezeichner\"; [n] content/*[1]; [t] \"Ende Bezeichner\" (pause:200); [m] children/*"
     ],
     [
       "Action",
       "line-with-label-brief",
-      "[t] \"Bezeichner\"; [n] content/*[1] (pause: 200); [m] children/*"
+      "[t] \"Bezeichner\"; [n] content/*[1] (pause:200); [m] children/*"
     ],
     [
       "Action",
@@ -427,12 +427,12 @@
     [
       "Action",
       "empty-line-with-label",
-      "[t] \"mit Bezeichner\"; [n] content/*[1]; [t] \"Ende Bezeichner\" (pause: 200); [t] \"leer\""
+      "[t] \"mit Bezeichner\"; [n] content/*[1]; [t] \"Ende Bezeichner\" (pause:200); [t] \"leer\""
     ],
     [
       "Action",
       "empty-line-with-label-brief",
-      "[t] \"Bezeichner\"; [n] content/*[1] (pause: 200); [t] \"leer\""
+      "[t] \"Bezeichner\"; [n] content/*[1] (pause:200); [t] \"leer\""
     ],
     [
       "Action",
@@ -472,12 +472,12 @@
     [
       "Action",
       "inference",
-      "[t] \"Schlussregel\"; ; [m] content/*; [t] \"mit Folgerung\"; [n] children/*[1]; [t] \"aus\"; [t] count(children/*[2]/children/*); [t] \"Prämisse\""
+      "[t] \"Schlussregel\"; [m] content/*; [t] \"mit Folgerung\"; [n] children/*[1]; [t] \"aus\"; [t] count(children/*[2]/children/*); [t] \"Prämisse\""
     ],
     [
       "Action",
       "premise",
-      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Prämisse \");"
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"Prämisse \")"
     ],
     [
       "Action",
@@ -492,12 +492,12 @@
     [
       "Action",
       "axiom",
-      "[t] \"Axiom\"; [m] children/*[1];"
+      "[t] \"Axiom\"; [m] children/*[1]"
     ],
     [
       "Action",
       "empty-axiom",
-      "[t] \"leeres Axiom\";"
+      "[t] \"leeres Axiom\""
     ]
   ]
 }

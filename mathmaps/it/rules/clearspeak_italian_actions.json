@@ -7,17 +7,17 @@
     [
       "Action",
       "collapsed",
-      "[n] . (engine:modality=summary,grammar:collapsed)"
+      "[n] . (engine:modality=summary, grammar:collapsed)"
     ],
     [
       "Action",
       "font",
-      "[n] . (grammar:ignoreFont=@font);  [t] @font (grammar:localFont,pause:short)"
+      "[n] . (grammar:ignoreFont=@font); [t] @font (pause:short, grammar:localFont)"
     ],
     [
       "Action",
       "font-identifier",
-      "[n] . (grammar:ignoreFont=@font);  [t] @font (grammar:localFont,pause:short)"
+      "[n] . (grammar:ignoreFont=@font); [t] @font (pause:short, grammar:localFont)"
     ],
     [
       "Action",
@@ -182,7 +182,7 @@
     [
       "Action",
       "function-prefix-inverse",
-      "[p] (pause:short); [t] \"inverso del\";  [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"inverso del\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -262,7 +262,7 @@
     [
       "Action",
       "superscript-ordinal-number",
-      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal, pause:short)"
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (pause:short, grammar:ordinal)"
     ],
     [
       "Action",
@@ -297,7 +297,7 @@
     [
       "Action",
       "superscript-power",
-      "[n] children/*[1]; [t] \"elevato all'esponente\"; [n] children/*[2] (grammar:afterPower, pause:short)"
+      "[n] children/*[1]; [t] \"elevato all'esponente\"; [n] children/*[2] (pause:short, grammar:afterPower)"
     ],
     [
       "Action",
@@ -522,42 +522,42 @@
     [
       "Action",
       "sqrt",
-      "[t] \"radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:short); [t] \"radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:short); [t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
@@ -582,22 +582,22 @@
     [
       "Action",
       "cubic",
-      "[t] \"radice cubica di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[t] \"radice cubica di\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"radice cubica di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"radice cubica di\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "root",
-      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
@@ -717,7 +717,7 @@
     [
       "Action",
       "matrix-simple",
-      "[t] \"matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -727,7 +727,7 @@
     [
       "Action",
       "determinant",
-      "[t] \"determinante della matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet, pause:long)"
+      "[t] \"determinante della matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -737,32 +737,32 @@
     [
       "Action",
       "matrix-vector",
-      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-vector-simple",
-      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-vector-simple-silentcolnum",
-      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row-vector",
-      "[t] \"matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row-vector-simple",
-      "[t] \"matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row-vector-simple-silentcolnum",
-      "[t] \"matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -787,22 +787,22 @@
     [
       "Action",
       "vector",
-      "[t] \"vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet, pause:long)"
+      "[t] \"vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "vector-simple",
-      "[t] \"vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "row-vector",
-      "[t] \"vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", grammar:simpleDet, pause:long)"
+      "[t] \"vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "row-vector-simple",
-      "[t] \"vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -1007,7 +1007,7 @@
     [
       "Action",
       "adorned-sign",
-      "[t] \"segno\"; [n] children/*[1] ; [t] \"con\"; [n] children/*[2]; [t] \"sopra esso\""
+      "[t] \"segno\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]; [t] \"sopra esso\""
     ],
     [
       "Action",

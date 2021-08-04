@@ -7,12 +7,12 @@
     [
       "Action",
       "collapsed",
-      "[n] . (engine:modality=summary,grammar:collapsed); [t] \"kollabiert\""
+      "[n] . (engine:modality=summary, grammar:collapsed); [t] \"kollabiert\""
     ],
     [
       "Action",
       "font",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font,pause:short)"
+      "[t] @font (grammar:localFont); [n] . (pause:short, grammar:ignoreFont=@font)"
     ],
     [
       "Action",
@@ -22,7 +22,7 @@
     [
       "Action",
       "font-identifier",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font,pause:short)"
+      "[t] @font (grammar:localFont); [n] . (pause:short, grammar:ignoreFont=@font)"
     ],
     [
       "Action",
@@ -117,17 +117,17 @@
     [
       "Action",
       "appl",
-      "[n] children/*[1]; [t] \"von\"; [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[n] children/*[1]; [t] \"von\"; [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
       "appl-simple",
-      "[n] children/*[1]; [t] \"von\" (pause:short); [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[n] children/*[1]; [t] \"von\" (pause:short); [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
       "appl-simple-fenced",
-      "[n] children/*[1]; [t] \"von\" (pause:short); [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[n] children/*[1]; [t] \"von\" (pause:short); [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
@@ -147,17 +147,17 @@
     [
       "Action",
       "function-prefix-embell",
-      "[p] (pause:short); [n] children/*[1]; [n] children/*[2] (pause:short); "
+      "[p] (pause:short); [n] children/*[1]; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-fenced-or-frac-arg",
-      "[p] (pause:short); [n] children/*[1] (grammar:addArticle); [t] \"von\"; [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[p] (pause:short); [n] children/*[1] (grammar:addArticle); [t] \"von\"; [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
       "function-prefix-subscript",
-      "[p] (pause:short); [n] children/*[1] (grammar:addArticle); [t] \"von\" (pause:short); [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[p] (pause:short); [n] children/*[1] (grammar:addArticle); [t] \"von\" (pause:short); [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
@@ -172,32 +172,32 @@
     [
       "Action",
       "function-ln-of",
-      "[n] children/*[1]; [t] \"von\"; [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[n] children/*[1]; [t] \"von\"; [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
       "function-prefix-as-exp",
-      "[n] children/*[1]; [t] \"von\" (pause:short); [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[n] children/*[1]; [t] \"von\" (pause:short); [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
       "function-prefix-subscript-as-exp",
-      "[n] children/*[1]; [t] \"von\" (pause:short); [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[n] children/*[1]; [t] \"von\" (pause:short); [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
       "function-prefix-hyper",
-      "[p] (pause:short); [n] children/*[1]; [t] \"von\"; [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[p] (pause:short); [n] children/*[1]; [t] \"von\"; [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
       "function-prefix-inverse",
-      "[p] (pause:short); [t] \"der\" (grammar:article); [t] \"inverse\" (grammar:masculine); [n] children/*[1]/children/*[1]; [t] \"von\"; [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[p] (pause:short); [t] \"der\" (grammar:article); [t] \"inverse\" (grammar:masculine); [n] children/*[1]/children/*[1]; [t] \"von\"; [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
       "appl-triginverse",
-      "[p] (pause:short); [n] children/*[1]; [t] \"von\"; [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[p] (pause:short); [n] children/*[1]; [t] \"von\"; [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
@@ -207,12 +207,12 @@
     [
       "Action",
       "function-prefix-arc-simple-fenced",
-      "[p] (pause:short); [t] \"Arkus\" (join:\"\"); [n] children/*[1]/children/*[1] (grammar:lowercase, pause:short); [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"Arkus\" (join:\"\"); [n] children/*[1]/children/*[1] (pause:short, grammar:lowercase); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc",
-      "[p] (pause:short); [t] \"Arkus\" (join:\"\"); [n] children/*[1]/children/*[1] (grammar:lowercase); [t] \"von\"; [n] children/*[2] (grammar:case=\"dative\", pause:short)"
+      "[p] (pause:short); [t] \"Arkus\" (join:\"\"); [n] children/*[1]/children/*[1] (grammar:lowercase); [t] \"von\"; [n] children/*[2] (pause:short, grammar:case=\"dative\")"
     ],
     [
       "Action",
@@ -252,7 +252,7 @@
     [
       "Action",
       "superscript-simple-exponent-end",
-      "[n] children/*[1]; [t] \"hoch\"; [n] children/*[2]; "
+      "[n] children/*[1]; [t] \"hoch\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -262,17 +262,17 @@
     [
       "Action",
       "superscript-simple-power-end",
-      "[n] children/*[1]; [t] \"potenziert mit\"; [n] children/*[2]; "
+      "[n] children/*[1]; [t] \"potenziert mit\"; [n] children/*[2]"
     ],
     [
       "Action",
       "superscript-ordinal-power",
-      "[n] children/*[1]; [t] \"zur\"; [n] children/*[2] (grammar:ordinal,join:\"\"); [t] \"n Potenz\" (pause:short)"
+      "[n] children/*[1]; [t] \"zur\"; [n] children/*[2] (join:\"\", grammar:ordinal); [t] \"n Potenz\" (pause:short)"
     ],
     [
       "Action",
       "superscript-non-ordinal",
-      "[n] children/*[1]; [t] \"zur negativ\"; [n] children/*[2]/children/*[1] (grammar:ordinal, join:\"\"); [t] \"n Potenz\" (pause:short)"
+      "[n] children/*[1]; [t] \"zur negativ\"; [n] children/*[2]/children/*[1] (join:\"\", grammar:ordinal); [t] \"n Potenz\" (pause:short)"
     ],
     [
       "Action",
@@ -302,7 +302,7 @@
     [
       "Action",
       "superscript-simple-exp-end",
-      "[n] children/*[1]; [t] \"mit Exponent\"; [n] children/*[2]; "
+      "[n] children/*[1]; [t] \"mit Exponent\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -372,7 +372,7 @@
     [
       "Action",
       "set-empty",
-      "[t]  \"die leere Menge\""
+      "[t] \"die leere Menge\""
     ],
     [
       "Action",
@@ -487,42 +487,42 @@
     [
       "Action",
       "sqrt",
-      "[t] \"Quadratwurzel aus\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause: \"short\"); [t] \"Quadratwurzel aus\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:\"short\"); [t] \"Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause: \"short\"); [t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:\"short\"); [t] \"negative Quadratwurzel aus\"; [n] children/*[1]/children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause: \"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause: \"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:\"short\"); [t] \"positive Quadratwurzel aus\"; [n] children/*[1] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
@@ -547,22 +547,22 @@
     [
       "Action",
       "cubic",
-      "[t] \"Kubikwurzel aus\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"Kubikwurzel aus\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"Kubikwurzel aus\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "root",
-      "[t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"die\" (grammar:article); [n] children/*[1] (grammar:ordinal); [t] \"Wurzel aus\"; [n] children/*[2] (pause:short, grammar:EndRoot=false)"
     ],
     [
       "Action",
@@ -657,32 +657,32 @@
     [
       "Action",
       "fences-neutral",
-      "[p] (pause:short); [t] \"der Betrag von\"; [n] children/*[1] (pause: short)"
+      "[p] (pause:short); [t] \"der Betrag von\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-neutral-absend",
-      "[p] (pause:short); [t] \"der Betrag von\"; [n] children/*[1] (pause: short); [t] \"Ende Betrag\" (pause: short)"
+      "[p] (pause:short); [t] \"der Betrag von\"; [n] children/*[1] (pause:short); [t] \"Ende Betrag\" (pause:short)"
     ],
     [
       "Action",
       "fences-neutral-cardinality",
-      "[p] (pause:short); [t] \"die Mächtigkeit der Menge\"; [n] children/*[1] (pause: short)"
+      "[p] (pause:short); [t] \"die Mächtigkeit der Menge\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-neutral-determinant",
-      "[p] (pause:short); [t] \"die Determinante von\"; [n] children/*[1] (pause: short)"
+      "[p] (pause:short); [t] \"die Determinante von\"; [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "matrix",
-      "[t] \"die\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Matrize\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Zeile-:\", pause:long)"
+      "[t] \"die\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Zeile-:\", pause:long)"
     ],
     [
       "Action",
       "matrix-simple",
-      "[t] \"die\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Matrize\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Zeile-:\",grammar:simpleDet, pause:long)"
+      "[t] \"die\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Zeile-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -692,47 +692,47 @@
     [
       "Action",
       "determinant",
-      "[t] \"die\" (grammar:article); [t] \"Determinante der\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Zeile-:\",grammar:simpleDet, pause:long)"
+      "[t] \"die\" (grammar:article); [t] \"Determinante der\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Zeile-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"die\" (grammar:article); [t] \"Determinante der\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Zeile-:\", pause:long)"
+      "[t] \"die\" (grammar:article); [t] \"Determinante der\"; [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Zeile-:\", pause:long)"
     ],
     [
       "Action",
       "matrix-vector",
-      "[t] \"die\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Spaltenmatrize\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Zeile-:\",grammar:simpleDet, pause:long)"
+      "[t] \"die\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Spaltenmatrize\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Zeile-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-vector-simple",
-      "[t] \"die\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Spaltenmatrize\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet, pause:long)"
+      "[t] \"die\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Spaltenmatrize\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-vector-simple-silentcolnum",
-      "[t] \"die\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Spaltenmatrize\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet, pause:long)"
+      "[t] \"die\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Spaltenmatrize\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row-vector",
-      "[t] \"die\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Zeilenmatrize\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter,context:\"Spalte-:\",grammar:simpleDet, pause:long)"
+      "[t] \"die\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Zeilenmatrize\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Spalte-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row-vector-simple",
-      "[t] \"die\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Zeilenmatrize\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet, pause:long)"
+      "[t] \"die\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Zeilenmatrize\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row-vector-simple-silentcolnum",
-      "[t] \"die\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Zeilenmatrize\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet, pause:long)"
+      "[t] \"die\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Zeilenmatrize\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row",
-      "[m] children/* (ctxtFunc:CTFnodeCounter,context:\"Spalte-,- \",sepFunc:CTFpauseSeparator,separator:\"medium\", pause:long)"
+      "[m] children/* (ctxtFunc:CTFnodeCounter, context:\"Spalte-,- \", sepFunc:CTFpauseSeparator, separator:\"medium\", pause:long)"
     ],
     [
       "Action",
@@ -752,22 +752,22 @@
     [
       "Action",
       "vector",
-      "[t] \"der\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Spaltenvektor\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Zeile-:\",grammar:simpleDet, pause:long)"
+      "[t] \"der\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Spaltenvektor\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Zeile-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "vector-simple",
-      "[t] \"der\" (grammar:article); [t] count(children/*);  [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Spaltenvektor\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet, pause:long)"
+      "[t] \"der\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Spaltenvektor\" (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "row-vector",
-      "[t] \"der\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Zeilenvektor\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter,context:\"Spalte-:\",grammar:simpleDet, pause:long)"
+      "[t] \"der\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Zeilenvektor\" (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Spalte-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "row-vector-simple",
-      "[t] \"der\" (grammar:article); [t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Zeilenvektor\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator,separator:\"short\",grammar:simpleDet, pause:long)"
+      "[t] \"der\" (grammar:article); [t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Zeilenvektor\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -792,22 +792,22 @@
     [
       "Action",
       "binomial",
-      "[n] children/*[1]/children/*[1]; [t] \"über\"; [n] children/*[2]/children/*[1]; "
+      "[n] children/*[1]/children/*[1]; [t] \"über\"; [n] children/*[2]/children/*[1]"
     ],
     [
       "Action",
       "lines-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Zeilen\";  [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Zeilen\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
       "cases-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Fälle\";  [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Fälle\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
       "lines",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Zeile-:\",sepFunc:CTFpauseSeparator,separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Zeile-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
@@ -832,57 +832,57 @@
     [
       "Action",
       "cases",
-      "[p] (pause:short);  [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Fall-:\",sepFunc:CTFpauseSeparator,separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Fall-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
       "lines-cases-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Fälle\";  [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Fälle\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
       "lines-cases",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Fall-:\",sepFunc:CTFpauseSeparator,separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Fall-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
       "lines-equations-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Gleichungen\";  [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Gleichungen\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
       "lines-equations",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Gleichung-:\",sepFunc:CTFpauseSeparator,separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Gleichung-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
       "lines-steps-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Rechenschritte\";  [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Rechenschritte\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
       "lines-steps",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Schritt-:\",sepFunc:CTFpauseSeparator,separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Schritt-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
       "lines-rows-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Zeilen\";  [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Zeilen\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
       "lines-rows",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Zeile-:\",sepFunc:CTFpauseSeparator,separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Zeile-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
       "lines-constraints-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"Bedingungen\";  [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"Bedingungen\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
       "lines-constraints",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter,context:\"Bedingung-:\",sepFunc:CTFpauseSeparator,separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Bedingung-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
@@ -892,7 +892,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"von\"; [n] children/*[2];[t] \"bis\"; [n] children/*[3];"
+      "[n] children/*[1]; [t] \"von\"; [n] children/*[2]; [t] \"bis\"; [n] children/*[3]"
     ],
     [
       "Action",
@@ -932,7 +932,7 @@
     [
       "Action",
       "mixed-number",
-      "[n] children/*[1]; [n] children/*[2]; "
+      "[n] children/*[1]; [n] children/*[2]"
     ],
     [
       "Action",
@@ -942,22 +942,22 @@
     [
       "Action",
       "decimal-period",
-      "[t] \"Dezimalbruch\"; [n] children/*[1] (grammar:spaceout); [t] \"Komma mit Periode\";  [n] children/*[3]/children/*[1] (grammar:spaceout)"
+      "[t] \"Dezimalbruch\"; [n] children/*[1] (grammar:spaceout); [t] \"Komma mit Periode\"; [n] children/*[3]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
       "decimal-period-float",
-      "[t] \"Dezimalbruch\"; [n] children/*[1] (grammar:spaceout); [t] \"mit Periode\";  [n] children/*[2]/children/*[1] (grammar:spaceout);"
+      "[t] \"Dezimalbruch\"; [n] children/*[1] (grammar:spaceout); [t] \"mit Periode\"; [n] children/*[2]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
       "decimal-period-singular",
-      "[t] \"Dezimalbruch\"; [n] children/*[1] (grammar:spaceout); [t] \"Komma mit Periode\";  [n] children/*[3]/children/*[1] (grammar:spaceout)"
+      "[t] \"Dezimalbruch\"; [n] children/*[1] (grammar:spaceout); [t] \"Komma mit Periode\"; [n] children/*[3]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
       "decimal-period-singular-float",
-      "[t] \"Dezimalbruch\"; [n] children/*[1] (grammar:spaceout); [t] \"mit Periode\";  [n] children/*[2]/children/*[1] (grammar:spaceout);"
+      "[t] \"Dezimalbruch\"; [n] children/*[1] (grammar:spaceout); [t] \"mit Periode\"; [n] children/*[2]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
@@ -982,7 +982,7 @@
     [
       "Action",
       "adorned-sign",
-      "[n] children/*[1] ; [t] \"Zeichen mit darüberstehendem\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"Zeichen mit darüberstehendem\"; [n] children/*[2]"
     ],
     [
       "Action",

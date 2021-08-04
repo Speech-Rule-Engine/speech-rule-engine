@@ -7,7 +7,7 @@
     [
       "Action",
       "collapsed",
-      "[t] \"collapsed\"; [n] . (engine:modality=summary,grammar:collapsed)"
+      "[t] \"collapsed\"; [n] . (engine:modality=summary, grammar:collapsed)"
     ],
     [
       "Action",
@@ -47,7 +47,7 @@
     [
       "Action",
       "mixed-number",
-      "[n] children/*[1]; [t] \"and\"; [n] children/*[2]; "
+      "[n] children/*[1]; [t] \"and\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -102,7 +102,7 @@
     [
       "Action",
       "subtraction",
-      "[m] children/* (separator:\"minus\");"
+      "[m] children/* (separator:\"minus\")"
     ],
     [
       "Action",
@@ -152,47 +152,47 @@
     [
       "Action",
       "continued-fraction-outer",
-      "[t] \"ContinuedFraction\"; [n] children/*[1];[t] \"Over\"; [n] children/*[2]"
+      "[t] \"ContinuedFraction\"; [n] children/*[1]; [t] \"Over\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-outer-brief",
-      "[t] \"ContinuedFrac\"; [n] children/*[1];[t] \"Over\"; [n] children/*[2]"
+      "[t] \"ContinuedFrac\"; [n] children/*[1]; [t] \"Over\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner",
-      "[t] \"StartFraction\"; [n] children/*[1];[t] \"Over\"; [n] children/*[2]"
+      "[t] \"StartFraction\"; [n] children/*[1]; [t] \"Over\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner-brief",
-      "[t] \"StartFrac\"; [n] children/*[1];[t] \"Over\"; [n] children/*[2]"
+      "[t] \"StartFrac\"; [n] children/*[1]; [t] \"Over\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner-sbrief",
-      "[t] \"Frac\"; [n] children/*[1];[t] \"Over\"; [n] children/*[2]"
+      "[t] \"Frac\"; [n] children/*[1]; [t] \"Over\"; [n] children/*[2]"
     ],
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]"
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]"
     ],
     [
       "Action",
       "limlower",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];"
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]"
     ],
     [
       "Action",
       "limupper",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2];"
+      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]"
     ],
     [
       "Action",
       "limboth-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]; [t] \"Endscripts\""
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]; [t] \"Endscripts\""
     ],
     [
       "Action",
@@ -207,12 +207,12 @@
     [
       "Action",
       "integral",
-      "[n] children/*[1]; [t] \"Subscript\"; [n] children/*[2];[t] \"Superscript\"; [n] children/*[3]; [t] \"Baseline\";"
+      "[n] children/*[1]; [t] \"Subscript\"; [n] children/*[2]; [t] \"Superscript\"; [n] children/*[3]; [t] \"Baseline\""
     ],
     [
       "Action",
       "integral-brief",
-      "[n] children/*[1]; [t] \"Sub\"; [n] children/*[2];[t] \"Sup\"; [n] children/*[3]; [t] \"Base\";"
+      "[n] children/*[1]; [t] \"Sub\"; [n] children/*[2]; [t] \"Sup\"; [n] children/*[3]; [t] \"Base\""
     ],
     [
       "Action",
@@ -317,32 +317,32 @@
     [
       "Action",
       "matrix",
-      "[t] \"Start\"; [t] count(children/*);  [t] \"By\";[t] count(children/*[1]/children/*); [t] \"Matrix\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Row \"); [t] \"EndMatrix\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Matrix\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row \"); [t] \"EndMatrix\""
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*);  [t] \"By\";[t] count(children/*[1]/children/*); [t] \"Matrix\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Row \"); [t] \"EndMatrix\""
+      "[t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Matrix\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row \"); [t] \"EndMatrix\""
     ],
     [
       "Action",
       "matrix-row",
-      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Column\", pause: 200)"
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"Column\", pause:200)"
     ],
     [
       "Action",
       "row-with-label",
-      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\" (pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Column\")"
+      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\" (pause:200); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Column\")"
     ],
     [
       "Action",
       "row-with-label-brief",
-      "[t] \"Label\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Column\")"
+      "[t] \"Label\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Column\")"
     ],
     [
       "Action",
       "row-with-text-label",
-      "[t] \"Label\"; [t] CSFRemoveParens;[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Column\")"
+      "[t] \"Label\"; [t] CSFRemoveParens; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Column\")"
     ],
     [
       "Action",
@@ -352,67 +352,67 @@
     [
       "Action",
       "empty-cell",
-      "[t] \"Blank\" (pause: 300)"
+      "[t] \"Blank\" (pause:300)"
     ],
     [
       "Action",
       "determinant",
-      "[t] \"Start\"; [t] count(children/*);  [t] \"By\";[t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Row \"); [t] \"EndDeterminant\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row \"); [t] \"EndDeterminant\""
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*);  [t] \"By\";[t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Row \"); [t] \"EndDeterminant\""
+      "[t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row \"); [t] \"EndDeterminant\""
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"Start\"; [t] count(children/*);  [t] \"By\";[t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Row\",grammar:simpleDet); [t] \"EndDeterminant\""
+      "[t] \"Start\"; [t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row\", grammar:simpleDet); [t] \"EndDeterminant\""
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*);  [t] \"By\";[t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Row\",grammar:simpleDet); [t] \"EndDeterminant\""
+      "[t] count(children/*); [t] \"By\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row\", grammar:simpleDet); [t] \"EndDeterminant\""
     ],
     [
       "Action",
       "layout",
-      "[t] \"StartLayout\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Row \"); [t] \"EndLayout\""
+      "[t] \"StartLayout\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row \"); [t] \"EndLayout\""
     ],
     [
       "Action",
       "layout-sbrief",
-      "[t] \"Layout\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"Row \"); [t] \"EndLayout\""
+      "[t] \"Layout\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row \"); [t] \"EndLayout\""
     ],
     [
       "Action",
       "binomial",
-      "[t] \"StartBinomialOrMatrix\"; [n] children/*[1]/children/*[1]; [t] \"Choose\"; [n] children/*[2]/children/*[1];  [t] \"EndBinomialOrMatrix\""
+      "[t] \"StartBinomialOrMatrix\"; [n] children/*[1]/children/*[1]; [t] \"Choose\"; [n] children/*[2]/children/*[1]; [t] \"EndBinomialOrMatrix\""
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"BinomialOrMatrix\"; [n] children/*[1]/children/*[1]; [t] \"Choose\"; [n] children/*[2]/children/*[1];  [t] \"EndBinomialOrMatrix\""
+      "[t] \"BinomialOrMatrix\"; [n] children/*[1]/children/*[1]; [t] \"Choose\"; [n] children/*[2]/children/*[1]; [t] \"EndBinomialOrMatrix\""
     ],
     [
       "Action",
       "cases",
-      "[t] \"StartLayout\"; [t] \"Enlarged\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Row \"); [t] \"EndLayout\""
+      "[t] \"StartLayout\"; [t] \"Enlarged\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row \"); [t] \"EndLayout\""
     ],
     [
       "Action",
       "cases-sbrief",
-      "[t] \"Layout\"; [t] \"Enlarged\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFordinalCounter,context:\"Row \"); [t] \"EndLayout\""
+      "[t] \"Layout\"; [t] \"Enlarged\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row \"); [t] \"EndLayout\""
     ],
     [
       "Action",
       "line-with-label",
-      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\" (pause: 200); [m] children/*"
+      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\" (pause:200); [m] children/*"
     ],
     [
       "Action",
       "line-with-label-brief",
-      "[t] \"Label\"; [n] content/*[1] (pause: 200); [m] children/*"
+      "[t] \"Label\"; [n] content/*[1] (pause:200); [m] children/*"
     ],
     [
       "Action",
@@ -427,12 +427,12 @@
     [
       "Action",
       "empty-line-with-label",
-      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\" (pause: 200); [t] \"Blank\""
+      "[t] \"with Label\"; [n] content/*[1]; [t] \"EndLabel\" (pause:200); [t] \"Blank\""
     ],
     [
       "Action",
       "empty-line-with-label-brief",
-      "[t] \"Label\"; [n] content/*[1] (pause: 200); [t] \"Blank\""
+      "[t] \"Label\"; [n] content/*[1] (pause:200); [t] \"Blank\""
     ],
     [
       "Action",
@@ -472,12 +472,12 @@
     [
       "Action",
       "inference",
-      "[t] \"inference rule\"; ; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premise\""
+      "[t] \"inference rule\"; [m] content/*; [t] \"with conclusion\"; [n] children/*[1]; [t] \"and\"; [t] count(children/*[2]/children/*); [t] \"premise\""
     ],
     [
       "Action",
       "premise",
-      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"premise \");"
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise \")"
     ],
     [
       "Action",
@@ -492,12 +492,12 @@
     [
       "Action",
       "axiom",
-      "[t] \"axiom\"; [m] children/*[1];"
+      "[t] \"axiom\"; [m] children/*[1]"
     ],
     [
       "Action",
       "empty-axiom",
-      "[t] \"empty axiom\";"
+      "[t] \"empty axiom\""
     ]
   ]
 }

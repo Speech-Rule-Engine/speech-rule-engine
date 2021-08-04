@@ -241,7 +241,7 @@
     [
       "Action",
       "abstr-matrix",
-      "[t] count(children/*);  [t] \"por\";[t] count(children/*[1]/children/*); [t] \"matriz\""
+      "[t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [t] \"matriz\""
     ],
     [
       "Action",
@@ -256,7 +256,7 @@
     [
       "Action",
       "abstr-cases",
-      "[t] \"declaración de caso\";[t] \"con\"; [t] count(children/*); [t] \"casos\""
+      "[t] \"declaración de caso\"; [t] \"con\"; [t] count(children/*); [t] \"casos\""
     ],
     [
       "Action",
@@ -281,7 +281,7 @@
     [
       "Action",
       "abstr-punctuated-var",
-      "[t] \"lista separada por\"; [n] content/*[1];[t] \"de longitud variable\""
+      "[t] \"lista separada por\"; [n] content/*[1]; [t] \"de longitud variable\""
     ],
     [
       "Action",
@@ -296,7 +296,7 @@
     [
       "Action",
       "abstr-relation",
-      "[t] @role (grammar:localRole);"
+      "[t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -331,22 +331,22 @@
     [
       "Action",
       "abstr-table",
-      "[t] \"mesa con\"; [t] count(children/*); [t] \"filas y\";[t] count(children/*[1]/children/*); [t] \"columnas\""
+      "[t] \"mesa con\"; [t] count(children/*); [t] \"filas y\"; [t] count(children/*[1]/children/*); [t] \"columnas\""
     ],
     [
       "Action",
       "abstr-line",
-      "[t] \"en\"; [t] @role (grammar:localRole);"
+      "[t] \"en\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-row",
-      "[t] \"en\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"con\";[t] count(children/*); [t] \"columnas\""
+      "[t] \"en\"; [t] @role (grammar:localRole); [t] count(preceding-sibling::..); [t] \"con\"; [t] count(children/*); [t] \"columnas\""
     ],
     [
       "Action",
       "abstr-cell",
-      "[t] \"en\"; [t] @role (grammar:localRole);"
+      "[t] \"en\"; [t] @role (grammar:localRole)"
     ]
   ]
 }
