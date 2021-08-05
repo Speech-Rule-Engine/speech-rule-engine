@@ -1,6 +1,7 @@
 {
   "locale": "ko",
   "modality": "summary",
+  "domain": "default",
   "inherits": "base",
   "rules": []
 }
