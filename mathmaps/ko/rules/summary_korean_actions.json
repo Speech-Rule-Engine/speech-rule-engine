@@ -136,7 +136,7 @@
     [
       "Action",
       "abstr-infixop",
-      "[t] CSFordinalNumber; [t] \"개의 원소로 이루어진\"; [t] @role (grammar:localRole)"
+      "[t] CSFnumeralsConversion; [t] \"개의 원소로 이루어진\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -301,7 +301,7 @@
     [
       "Action",
       "abstr-relation-seq",
-      "[t] count(./children/*)-1; [t] \"개의 연속된\"; [t] @role (grammar:localRole)"
+      "[t] CSFdecreasedNumeralsConversion; [t] \"개의 연속된\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -316,7 +316,7 @@
     [
       "Action",
       "abstr-multirel",
-      "[t] count(./children/*)-1; [t] \"개의 연속된 관계식\""
+      "[t] CSFdecreasedNumeralsConversion; [t] \"개의 연속된 관계식\""
     ],
     [
       "Action",

@@ -155,7 +155,18 @@ export function ordinalPosition(node: Node): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
- export function ordinalNumber(node: Element): string {
-  let children2 = XpathUtil.evalXPath('children/*', node) as Element[];
-  return LOCALE.NUMBERS.ones[10 + children2.length];
+ export function numeralsConversion(node: Element): string {
+  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+  return LOCALE.NUMBERS.ones[10 + children.length];
+}
+
+/**
+ * String function to turn a child position into an ordinal.
+ * @param node The node for the string function.
+ * @return The ordinal string corresponding to the child position of
+ *     the node.
+ */
+ export function decreasedNumeralsConversion(node: Element): string {
+  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+  return LOCALE.NUMBERS.ones[9 + children.length];
 }

@@ -55,7 +55,8 @@ export function OtherRules() {
 
   SpeechRules.addStore(
       'ko.summary.', '', { 
-        'CSFordinalNumber': NumbersUtil.ordinalNumber
+        'CSFnumeralsConversion': NumbersUtil.numeralsConversion,
+        'CSFdecreasedNumeralsConversion': NumbersUtil.decreasedNumeralsConversion
       });
 }
 
