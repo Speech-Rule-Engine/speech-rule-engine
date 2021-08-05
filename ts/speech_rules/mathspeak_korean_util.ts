@@ -294,7 +294,7 @@ export function indexRadicalSbrief(node: Element): string {
  */
 export function ordinalNumber(node: Element): string {
   let children = XpathUtil.evalXPath('../../children/*', node) as Element[];
-  return LOCALE.NUMBERS.wordOrdinal(children.length) + "히히";
+  return children.length + "";
 }
 
 }
