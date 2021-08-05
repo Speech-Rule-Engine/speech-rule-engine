@@ -159,7 +159,7 @@ export function ordinalPosition(node: Node): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
 
   if(children.length < 100)
-    return LOCALE.NUMBERS.tens[10 + (children.length / 10)]
+    return LOCALE.NUMBERS.tens[10 + Math.floor(children.length/10)]
     + LOCALE.NUMBERS.ones[10 + children.length % 10];
   return children.length + "";
 }
