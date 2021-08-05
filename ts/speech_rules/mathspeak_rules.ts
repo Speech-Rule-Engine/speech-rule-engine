@@ -146,6 +146,6 @@ export function MathspeakRules() {
       'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief,
       'CSFindexRadicalSbrief': MathspeakKoreanUtil.indexRadicalSbrief,
 
-      'CSFordinalNumber': MathspeakKoreanUtil.ordinalNumber
+      'CSFordinalNumber': MathspeakKoreanUtil.indexRadicalSbrief
     });
 }
