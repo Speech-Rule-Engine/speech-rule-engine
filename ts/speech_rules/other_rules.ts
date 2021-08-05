@@ -53,11 +53,11 @@ export function OtherRules() {
         'CSFvulgarFraction': NumbersUtil.vulgarFraction
       });
 
-  SpeechRules.addStore('en.speech.summary', '', {
+  SpeechRules.addStore('en.summary.mathspeak', '', {
         'CSFordinalNumber': NumbersUtil.ordinalNumber
       });
   SpeechRules.addStore(
-      'ko.speech.summary', 'en.speech.summary', { 
+      'ko.summary.mathspeak', 'en.summary.mathspeak', { 
         'CSFordinalNumber': NumbersUtil.ordinalNumber
       });
 }
