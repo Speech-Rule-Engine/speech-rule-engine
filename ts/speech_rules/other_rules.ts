@@ -54,7 +54,7 @@ export function OtherRules() {
       });
 
   SpeechRules.addStore(
-      'ko.summary.', '', { 
+      'ko.summary', '', { 
         'CSFordinalNumber': NumbersUtil.ordinalNumber
       });
 }
