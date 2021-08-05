@@ -104,23 +104,29 @@ namespace AuralRendering {
    export function finalize(str: string) {
     let renderer = renderers.get(Engine.getInstance().markup);
 
-    const pair = ["은", "는", "과", "와", "을", "를", "으로", "로"];
-    let final = str.split(/은\(|과\(|을\(|으로\(|\)/);
-
-    if (final.length > 1) {
-      for (let i = 1; i < final.length; i += 2) {
-        let index = pair.indexOf(final[i]) + checkPreviousChar(final[i-1].slice(-2));
-        final.splice(i, 1, pair[index]);
-      }
-      str = final.join("");
-    }
+    str = Engine.getInstance().locale === 'ko' && ko_Conversion(str);
 
     if (!renderer) {
       return str;
     } return renderer.finalize(str);
   }
 
-  export function checkPreviousChar(char: string) : number {
+  export function ko_Conversion(str: string) : string {
+
+    const pair = ["은", "는", "과", "와", "을", "를", "으로", "로"];
+    let final = str.split(/은\(|과\(|을\(|으로\(|\)/);
+
+    if (final.length > 1) {
+      for (let i = 1; i < final.length; i += 2) {
+        let index = pair.indexOf(final[i]) + ko_CheckPreviousChar(final[i-1].slice(-2));
+        final.splice(i, 1, pair[index]);
+      }
+      str = final.join("");
+    }
+    return str;
+  }
+
+  export function ko_CheckPreviousChar(char: string) : number {
     const preChar = char.charCodeAt(0);
     const checkingResult = (preChar - 44032) % 28;
     if(char.match(/[a-z0-9]/i)) {
