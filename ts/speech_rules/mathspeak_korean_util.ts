@@ -294,7 +294,7 @@ export function indexRadicalSbrief(node: Element): string {
  */
 export function ordinalNumber(node: Element): string {
   //let children = XpathUtil.evalXPath('children/*', node);
-  return node + "";
+  return "123";
 }
 
 }
