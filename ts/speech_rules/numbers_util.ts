@@ -157,7 +157,11 @@ export function ordinalPosition(node: Node): string {
  */
  export function numeralsConversion(node: Element): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
-  return LOCALE.NUMBERS.tens[10 + (children.length / 10)] + LOCALE.NUMBERS.ones[10 + (children.length % 10)];
+
+  if(children.length < 100)
+    return LOCALE.NUMBERS.tens[10 + (children.length / 10)]
+    + LOCALE.NUMBERS.ones[10 + children.length % 10];
+  return children.length + "";
 }
 
 /**
@@ -168,5 +172,10 @@ export function ordinalPosition(node: Node): string {
  */
  export function decreasedNumeralsConversion(node: Element): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
-  return (children.length % 10 === 0 ? LOCALE.NUMBERS.tens[9+(children.length/10)] : LOCALE.NUMBERS.tens[10+(children.length/10)]) + LOCALE.NUMBERS.ones[10 + (children.length % 10)];
+
+  if(children.length < 100)
+    return (children.length % 10 === 0 ? 
+      LOCALE.NUMBERS.tens[9+Math.floor(children.length/10)] : LOCALE.NUMBERS.tens[10+Math.floor(children.length/10)]) 
+      + LOCALE.NUMBERS.ones[9 + children.length % 10];
+  return children.length + "";
 }
