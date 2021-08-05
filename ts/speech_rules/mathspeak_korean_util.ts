@@ -285,18 +285,6 @@ export function indexRadicalSbrief(node: Element): string {
   return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, true);
 }
 
-
-/**
- * String function to turn a child position into an ordinal.
- * @param node The node for the string function.
- * @return The ordinal string corresponding to the child position of
- *     the node.
- */
-export function ordinalNumber(node: Element): string {
-  //let children = XpathUtil.evalXPath('children/*', node);
-  return "123";
-}
-
 }
 export default MathspeakKoreanUtil;
 

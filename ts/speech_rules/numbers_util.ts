@@ -23,6 +23,7 @@ import {Span} from '../audio/span';
 import * as DomUtil from '../common/dom_util';
 import {LOCALE} from '../l10n/locale';
 import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
+import XpathUtil from '../common/xpath_util';
 
 
 // Number transformation
@@ -146,4 +147,15 @@ export function vulgarFractionSmall(
 export function ordinalPosition(node: Node): string {
   let children = DomUtil.toArray(node.parentNode.childNodes);
   return LOCALE.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
+}
+
+/**
+ * String function to turn a child position into an ordinal.
+ * @param node The node for the string function.
+ * @return The ordinal string corresponding to the child position of
+ *     the node.
+ */
+ export function ordinalNumber(node: Element): string {
+  let children = XpathUtil.evalXPath('../../children/*', node) as Element[];
+  return LOCALE.NUMBERS.wordOrdinal(children.length) + "히히";
 }
