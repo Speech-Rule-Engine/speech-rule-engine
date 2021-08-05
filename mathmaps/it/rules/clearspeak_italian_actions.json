@@ -706,6 +706,16 @@
     ],
     [
       "Action",
+      "fences-metric",
+      "[p] (pause:short); [t] \"metrica di\" (span:.); [n] children/*[1] (pause:short)"
+    ],
+    [
+      "Action",
+      "fences-metric-absend",
+      "[p] (pause:short); [t] \"metrica di\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fine metrica\" (span:content/*[1], pause:short)"
+    ],
+    [
+      "Action",
       "matrix",
       "[t] \"matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", pause:long)"
     ],

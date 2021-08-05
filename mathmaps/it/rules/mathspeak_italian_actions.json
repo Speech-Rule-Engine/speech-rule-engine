@@ -97,7 +97,12 @@
     [
       "Action",
       "fences-metric",
-      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
+      "[t] \"inizio metrica\"; [n] children/*[1]; [t] \"fine metrica\""
+    ],
+    [
+      "Action",
+      "fences-metric-sbrief",
+      "[t] \"metrica\"; [n] children/*[1]; [t] \"fine metrica\""
     ],
     [
       "Action",

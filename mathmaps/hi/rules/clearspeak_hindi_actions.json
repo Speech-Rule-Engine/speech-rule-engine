@@ -696,6 +696,16 @@
     ],
     [
       "Action",
+      "fences-metric",
+      "[p] (pause:short); [t] \"की दूरी फलन\" (span:.); [n] children/*[1] (pause:short)"
+    ],
+    [
+      "Action",
+      "fences-metric-absend",
+      "[p] (pause:short); [t] \"की दूरी फलन\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"दूरी फलन समाप्त\" (span:content/*[1], pause:short)"
+    ],
+    [
+      "Action",
       "matrix",
       "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"पंक्ति-:\", pause:long)"
     ],

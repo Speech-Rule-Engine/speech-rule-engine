@@ -97,7 +97,12 @@
     [
       "Action",
       "fences-metric",
-      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
+      "[t] \"दूरी फलन आरंभ\"; [n] children/*[1]; [t] \"दूरी फलन समाप्त\""
+    ],
+    [
+      "Action",
+      "fences-metric-sbrief",
+      "[t] \"दूरी फलन\"; [n] children/*[1]; [t] \"दूरी फलन समाप्त\""
     ],
     [
       "Action",
