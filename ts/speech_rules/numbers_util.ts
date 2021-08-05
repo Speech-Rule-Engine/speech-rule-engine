@@ -156,8 +156,6 @@ export function ordinalPosition(node: Node): string {
  *     the node.
  */
  export function ordinalNumber(node: Element): string {
-  let children = XpathUtil.evalXPath('../../children/*', node) as Element[];
-  let children1 = XpathUtil.evalXPath('../children/*', node) as Element[];
   let children2 = XpathUtil.evalXPath('children/*', node) as Element[];
-  return children.length + " / " + children1.length + " / " + children2.length;
+  return LOCALE.NUMBERS.ones[10 + children2.length];
 }
