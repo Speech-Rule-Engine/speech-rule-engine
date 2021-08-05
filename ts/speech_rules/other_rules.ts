@@ -52,6 +52,11 @@ export function OtherRules() {
         'CQFvulgarFractionSmall': MathspeakUtil.isSmallVulgarFraction,
         'CSFvulgarFraction': NumbersUtil.vulgarFraction
       });
+
+  SpeechRules.addStore(
+      'ko.summary.', '', { 
+        'CSFordinalNumber': NumbersUtil.ordinalNumber
+      });
 }
 
 
