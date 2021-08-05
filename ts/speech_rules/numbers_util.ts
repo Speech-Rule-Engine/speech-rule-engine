@@ -159,5 +159,5 @@ export function ordinalPosition(node: Node): string {
   let children = XpathUtil.evalXPath('../../children/*', node) as Element[];
   let children1 = XpathUtil.evalXPath('../children/*', node) as Element[];
   let children2 = XpathUtil.evalXPath('children/*', node) as Element[];
-  return children + " " + children1 + " " + children2;
+  return children.length + " / " + children1.length + " / " + children2.length;
 }
