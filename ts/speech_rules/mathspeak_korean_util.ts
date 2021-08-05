@@ -293,8 +293,8 @@ export function indexRadicalSbrief(node: Element): string {
  *     the node.
  */
 export function ordinalNumber(node: Element): string {
-  let children = XpathUtil.evalXPath('children/*', node);
-  return children.length + "";
+  //let children = XpathUtil.evalXPath('children/*', node);
+  return node + "";
 }
 
 }
