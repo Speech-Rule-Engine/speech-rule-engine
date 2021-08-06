@@ -136,12 +136,12 @@
     [
       "Action",
       "abstr-infixop",
-      "[t] CSFnumeralsConversion; [t] \"개의 원소로 이루어진\"; [t] @role (grammar:localRole)"
+      "[t] \"원소가\"; [t] CSFnumeralsConversion; [t] \"개인\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-infixop-var",
-      "[t] \"여러 개의 원소로 이루어진\"; [t] @role (grammar:localRole)"
+      "[t] \"원소가 여러 개인\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -166,7 +166,7 @@
     [
       "Action",
       "abstr-multiplication",
-      "[t] \"인자가\"; [t] count(./children/*); [t] \"개인 곱셈\""
+      "[t] \"인자가\"; [t] CSFnumeralsConversion; [t] \"개인 곱셈\""
     ],
     [
       "Action",
@@ -241,7 +241,7 @@
     [
       "Action",
       "abstr-matrix",
-      "[t] count(children/*);  [t] \"행\";[t] count(children/*[1]/children/*); [t] \"열의 행렬\""
+      "[t] count(children/*);  [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의 행렬\""
     ],
     [
       "Action",
@@ -256,7 +256,7 @@
     [
       "Action",
       "abstr-cases",
-      "[t] \"총 케이스 수\"; [t] count(children/*); [t] \"으로 이루어진 조건문\""
+      "[t] \"케이스가\"; [t] CSFnumeralsConversion; [t] \"개인 조건문\""
     ],
     [
       "Action",
@@ -266,12 +266,12 @@
     [
       "Action",
       "abstr-cases-var",
-      "[t] \"여러 개의 케이스로 이루어진 조건문\""
+      "[t] \"케이스가 여러 개인 조건문\""
     ],
     [
       "Action",
       "abstr-punctuated",
-      "[n] content/*[1]; [t] \"로 나누어진\"; [t] \"총 요소의 개수가\"; [t] count(children/*) - count(content/*); [t] \"인 리스트\""
+      "[t] CSFnumeralsConversion; [t] \"개의 원소가\"; [n] content/*[1]; [t] \"로 나누어진\"; [t] \"인 리스트\""
     ],
     [
       "Action",
@@ -281,7 +281,7 @@
     [
       "Action",
       "abstr-punctuated-var",
-      "[t] \"여러 개의 요소가\"; [n] content/*[1]; [t] \"로 나누어진 리스트\""
+      "[t] \"여러 개의 원소가\"; [n] content/*[1]; [t] \"로 나누어진 리스트\""
     ],
     [
       "Action",
