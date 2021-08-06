@@ -54,7 +54,7 @@ export function OtherRules() {
       });
 
   SpeechRules.addStore(
-      'ko.summary.', '', { 
+      'ko.summary.', 'ko.speech.mathspeak', { 
         'CSFnumeralsConversion': MathspeakKoreanUtil.numeralsConversion,
         'CSFdecreasedNumeralsConversion': MathspeakKoreanUtil.decreasedNumeralsConversion
       });

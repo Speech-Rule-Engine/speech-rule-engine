@@ -2,5 +2,75 @@
   "locale": "ko",
   "modality": "summary",
   "inherits": "base",
-  "rules": []
+  "rules": [
+    [
+      "Precondition",
+      "abstr-subtraction",
+      "default.default",
+      "self::infixop",
+      "@role=\"subtraction\""
+    ],
+    [
+      "Precondition",
+      "abstr-simple-root-end",
+      "default.default",
+      "self::root",
+      "contains(@grammar, \"collapsed\")",
+      "following-sibling::* or ancestor::*/following-sibling::*"
+    ],
+    [
+      "Precondition",
+      "abstr-simple-root",
+      "default.default",
+      "self::root",
+      "CQFisSimpleIndex"
+    ],
+    [
+      "Precondition",
+      "abstr-simple-root-brief",
+      "mathspeak.brief",
+      "self::root",
+      "CQFisSimpleIndex"
+    ],
+    [
+      "Specialized",
+      "abstr-simple-root-brief",
+      "mathspeak.brief",
+      "mathspeak.sbrief",
+      "CQFisSimpleIndex"
+    ],
+    [
+      "Precondition",
+      "abstr-simple-root-nested-end",
+      "default.default",
+      "self::root",
+      "contains(@grammar, \"collapsed\")",
+      "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
+      "following-sibling::* or ancestor::*/following-sibling::*",
+      "CQFisSimpleIndex"
+    ],
+    [
+      "Precondition",
+      "abstr-simple-root-nested",
+      "default.default",
+      "self::root",
+      "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
+      "CQFisSimpleIndex"
+    ],
+    [
+      "Precondition",
+      "abstr-simple-root-nested-brief",
+      "mathspeak.brief",
+      "self::root",
+      "children/*/descendant-or-self::sqrt or children/*/descendant-or-self::root",
+      "CQFisSimpleIndex"
+    ],
+    [
+      "Specialized",
+      "abstr-simple-root-nested-brief",
+      "mathspeak.brief",
+      "mathspeak.sbrief",
+      "CQFisSimpleIndex"
+    ]
+  ]
 }

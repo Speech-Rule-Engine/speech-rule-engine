@@ -91,7 +91,7 @@
     [
       "Action",
       "abstr-root-end",
-      "[t] \"루트의 제곱근시작\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근끝\""
+      "[n] children/*[1] (engine:modality=speech); [t] \"제곱근\""
     ],
     [
       "Action",
@@ -106,16 +106,46 @@
     [
       "Action",
       "abstr-root-nested-end",
-      "[t] \"중첩 루트의 제곱근시작\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근끝\""
+      "[t] \"중첩\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근\""
     ],
     [
       "Action",
       "abstr-root-nested",
-      "[t] \"중첩 루트의\"; [n] children/*[1] (engine:modality=speech)"
+      "[t] \"중첩\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근\""
     ],
     [
       "Action",
       "abstr-root-nested-brief",
+      "[t] \"중첩 루트\""
+    ],
+    [
+      "Action",
+      "abstr-simple-root-end",
+      "[n] CSFsimpleIndexRadicalVerbose"
+    ],
+    [
+      "Action",
+      "abstr-simple-root",
+      "[n] CSFsimpleIndexRadicalSbrief"
+    ],
+    [
+      "Action",
+      "abstr-simple-root-brief",
+      "[t] \"루트\""
+    ],
+    [
+      "Action",
+      "abstr-simple-root-nested-end",
+      "[t] \"중첩\"; [n] CSFsimpleIndexRadicalVerbose"
+    ],
+    [
+      "Action",
+      "abstr-simple-root-nested",
+      "[t] \"중첩\"; [n] CSFsimpleIndexRadicalSbrief"
+    ],
+    [
+      "Action",
+      "abstr-simple-root-nested-brief",
       "[t] \"중첩 루트\""
     ],
     [
@@ -136,12 +166,12 @@
     [
       "Action",
       "abstr-infixop",
-      "[t] \"원소가\"; [t] CSFnumeralsConversion; [t] \"개인\"; [t] @role (grammar:localRole)"
+      "[t] \"인자가\"; [t] CSFnumeralsConversion; [t] \"개인\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-infixop-var",
-      "[t] \"원소가 여러 개인\"; [t] @role (grammar:localRole)"
+      "[t] \"인자가 여러 개인\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -162,6 +192,21 @@
       "Action",
       "abstr-addition-var",
       "[t] \"항이 여러 개인 덧셈\""
+    ],
+    [
+      "Action",
+      "abstr-subtraction",
+      "[t] \"항이\"; [t] count(./children/*); [t] \"개인 뺄셈\""
+    ],
+    [
+      "Action",
+      "abstr-subtraction-brief",
+      "[t] \"차\""
+    ],
+    [
+      "Action",
+      "abstr-subtraction-var",
+      "[t] \"항이 여러 개인 뺄셈\""
     ],
     [
       "Action",
@@ -271,7 +316,7 @@
     [
       "Action",
       "abstr-punctuated",
-      "[t] CSFnumeralsConversion; [t] \"개의 원소가\"; [n] content/*[1]; [t] \"로 나누어진\"; [t] \"인 리스트\""
+      "[t] CSFnumeralsConversion; [t] \"개의 원소가\"; [n] content/*[1]; [t] \"로 나누어진\"; [t] \"리스트\""
     ],
     [
       "Action",
