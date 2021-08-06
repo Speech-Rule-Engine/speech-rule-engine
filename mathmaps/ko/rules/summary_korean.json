@@ -12,6 +12,28 @@
     ],
     [
       "Precondition",
+      "abstr-subtraction-brief",
+      "mathspeak.brief",
+      "self::infixop",
+      "@role=\"subtraction\""
+    ],
+    [
+      "Specialized",
+      "abstr-subtraction-brief",
+      "mathspeak.brief",
+      "mathspeak.sbrief"
+    ],
+    [
+      "Precondition",
+      "abstr-subtraction-var",
+      "default.default",
+      "self::infixop",
+      "@role=\"subtraction\"",
+      "count(./children/*)>2",
+      "./children/punctuation[@role=\"ellipsis\"]"
+    ],
+    [
+      "Precondition",
       "abstr-simple-root-end",
       "default.default",
       "self::root",
