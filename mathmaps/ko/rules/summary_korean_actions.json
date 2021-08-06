@@ -86,7 +86,7 @@
     [
       "Action",
       "abstr-sqrt-nested",
-      "[t] \"중첩 루트\""
+      "[t] \"중첩루트\""
     ],
     [
       "Action",
@@ -106,27 +106,27 @@
     [
       "Action",
       "abstr-root-nested-end",
-      "[t] \"중첩\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근\""
+      "[n] children/*[1] (engine:modality=speech); [t] \"제곱근\"; [t] \"중첩루트\""
     ],
     [
       "Action",
       "abstr-root-nested",
-      "[t] \"중첩\"; [n] children/*[1] (engine:modality=speech); [t] \"제곱근\""
+      "[n] children/*[1] (engine:modality=speech); [t] \"제곱근\"; [t] \"중첩루트\""
     ],
     [
       "Action",
       "abstr-root-nested-brief",
-      "[t] \"중첩 루트\""
+      "[t] \"중첩루트\""
     ],
     [
       "Action",
       "abstr-simple-root-end",
-      "[n] CSFsimpleIndexRadicalVerbose"
+      "[t] CSFindexRadicalVerbose; [t] \"루트\""
     ],
     [
       "Action",
       "abstr-simple-root",
-      "[n] CSFsimpleIndexRadicalSbrief"
+      "[t] CSFindexRadicalSbrief; [t] \"루트\""
     ],
     [
       "Action",
@@ -136,17 +136,17 @@
     [
       "Action",
       "abstr-simple-root-nested-end",
-      "[t] \"중첩\"; [n] CSFsimpleIndexRadicalVerbose"
+      "[t] CSFindexRadicalVerbose; [t] \"중첩루트\""
     ],
     [
       "Action",
       "abstr-simple-root-nested",
-      "[t] \"중첩\"; [n] CSFsimpleIndexRadicalSbrief"
+      "[t] CSFindexRadicalSbrief; [t] \"중첩루트\""
     ],
     [
       "Action",
       "abstr-simple-root-nested-brief",
-      "[t] \"중첩 루트\""
+      "[t] \"중첩루트\""
     ],
     [
       "Action",
@@ -166,7 +166,7 @@
     [
       "Action",
       "abstr-infixop",
-      "[t] \"인자가\"; [t] CSFnumeralsConversion; [t] \"개인\"; [t] @role (grammar:localRole)"
+      "[t] \"인자가\"; [t] CSFordinalConversion; [t] \"개인\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -181,7 +181,7 @@
     [
       "Action",
       "abstr-addition",
-      "[t] \"항이\"; [t] CSFnumeralsConversion (check:\"true\"); [t] \"개인 덧셈\""
+      "[t] \"항이\"; [t] CSFordinalConversion; [t] \"개인 덧셈\""
     ],
     [
       "Action",
@@ -196,7 +196,7 @@
     [
       "Action",
       "abstr-subtraction",
-      "[t] \"항이\"; [t] CSFnumeralsConversion; [t] \"개인 뺄셈\""
+      "[t] \"항이\"; [t] CSFordinalConversion; [t] \"개인 뺄셈\""
     ],
     [
       "Action",
@@ -211,7 +211,7 @@
     [
       "Action",
       "abstr-multiplication",
-      "[t] \"인자가\"; [t] CSFnumeralsConversion; [t] \"개인 곱셈\""
+      "[t] \"인자가\"; [t] CSFordinalConversion; [t] \"개인 곱셈\""
     ],
     [
       "Action",
@@ -301,7 +301,7 @@
     [
       "Action",
       "abstr-cases",
-      "[t] \"케이스가\"; [t] CSFnumeralsConversion; [t] \"개인 조건문\""
+      "[t] \"케이스가\"; [t] CSFordinalConversion; [t] \"개인 조건문\""
     ],
     [
       "Action",
@@ -316,7 +316,7 @@
     [
       "Action",
       "abstr-punctuated",
-      "[t] CSFnumeralsConversion; [t] \"개의 원소가\"; [n] content/*[1]; [t] \"로 나누어진\"; [t] \"리스트\""
+      "[t] CSFlistOrdinalConversion; [t] \"개의 원소가\"; [n] content/*[1]; [t] \"로 나누어진\"; [t] \"리스트\""
     ],
     [
       "Action",
@@ -346,7 +346,7 @@
     [
       "Action",
       "abstr-relation-seq",
-      "[t] CSFdecreasedNumeralsConversion; [t] \"개의 연속된\"; [t] @role (grammar:localRole)"
+      "[t] CSFdecreasedOrdinalConversion; [t] \"개의 연속된\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -361,7 +361,7 @@
     [
       "Action",
       "abstr-multirel",
-      "[t] CSFdecreasedNumeralsConversion; [t] \"개의 연속된 관계식\""
+      "[t] CSFdecreasedOrdinalConversion; [t] \"개의 연속된 관계식\""
     ],
     [
       "Action",

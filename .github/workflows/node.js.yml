@@ -5,7 +5,7 @@ name: Tests
 
 on:
   push:
-    branches: [ zorkow ]
+    branches: [ zorkwow ]
   pull_request:
     branches: [ develop ]
 

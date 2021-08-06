@@ -55,10 +55,9 @@ export function OtherRules() {
 
   SpeechRules.addStore(
       'ko.summary.', 'ko.speech.mathspeak', { 
-        'CSFnumeralsConversion': MathspeakKoreanUtil.numeralsConversion,
-        'CSFdecreasedNumeralsConversion': MathspeakKoreanUtil.decreasedNumeralsConversion,
-        "CQFisSimpleIndex": MathspeakKoreanUtil.isSimpleIndex,
-      "CSFsimpleIndexRadicalVerbose": MathspeakKoreanUtil.simpleIndexRadicalVerbose,
+        'CSFordinalConversion': MathspeakKoreanUtil.ordinalConversion,
+        'CSFdecreasedOrdinalConversion': MathspeakKoreanUtil.decreasedOrdinalConversion,
+        'CSFlistOrdinalConversion': MathspeakKoreanUtil.listOrdinalConversion
       });
 }
 

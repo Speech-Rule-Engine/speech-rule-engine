@@ -133,17 +133,14 @@ export function MathspeakRules() {
       'CSFoverFracSbrief': MathspeakKoreanUtil.overFractionSbrief,
 
       "CQFisSimpleIndex": MathspeakKoreanUtil.isSimpleIndex,
-      "CSFsimpleIndexRadicalVerbose": MathspeakKoreanUtil.simpleIndexRadicalVerbose,
-      "CSFsimpleIndexRadicalBrief": MathspeakKoreanUtil.simpleIndexRadicalBrief,
-      "CSFsimpleIndexRadicalSbrief": MathspeakKoreanUtil.simpleIndexRadicalSbrief,
+      "CSFindexRadicalVerbose": MathspeakKoreanUtil.indexRadicalVerbose,
+      "CSFindexRadicalBrief": MathspeakKoreanUtil.indexRadicalBrief,
+      "CSFindexRadicalSbrief": MathspeakKoreanUtil.indexRadicalSbrief,
       
       'CSFopenRadicalVerbose': MathspeakKoreanUtil.openingRadicalVerbose,
       'CSFcloseRadicalVerbose': MathspeakKoreanUtil.closingRadicalVerbose,
-      'CSFindexRadicalVerbose': MathspeakKoreanUtil.indexRadicalVerbose,
       'CSFopenRadicalBrief': MathspeakKoreanUtil.openingRadicalBrief,
       'CSFcloseRadicalBrief': MathspeakKoreanUtil.closingRadicalBrief,
-      'CSFindexRadicalBrief': MathspeakKoreanUtil.indexRadicalBrief,
       'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief,
-      'CSFindexRadicalSbrief': MathspeakKoreanUtil.indexRadicalSbrief,
     });
 }

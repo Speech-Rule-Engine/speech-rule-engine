@@ -38,7 +38,8 @@
       "default.default",
       "self::root",
       "contains(@grammar, \"collapsed\")",
-      "following-sibling::* or ancestor::*/following-sibling::*"
+      "following-sibling::* or ancestor::*/following-sibling::*",
+      "CQFisSimpleIndex"
     ],
     [
       "Precondition",

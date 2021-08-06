@@ -227,14 +227,13 @@ export function getRootIndex(node: Element): string {
  * Indexing string for radicals in Mathspeak mode putting together.
  * @param node The radical node.
  * @param postfix A postfix string.
- * @param simple True if simple index.
  * @return The indexing string.
  */
 export function indexRadical(
-    node: Element, postfix: string, simple: boolean): string {
+    node: Element, postfix: string): string {
   let index = getRootIndex(node);
 
-  return (simple && index) ? index : postfix;
+  return index ? index : postfix;
 }
 
 
@@ -244,7 +243,7 @@ export function indexRadical(
  * @return The indexing string.
  */
 export function indexRadicalVerbose(node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, false);
+  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX);
 }
 
 
@@ -255,7 +254,7 @@ export function indexRadicalVerbose(node: Element): string {
  * @return The indexing string.
  */
 export function indexRadicalBrief(node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, false);
+  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX);
 }
 
 
@@ -265,37 +264,7 @@ export function indexRadicalBrief(node: Element): string {
  * @return The indexing string.
  */
 export function indexRadicalSbrief(node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.INDEX, false);
-}
-
-
-/**
- * Simple indexing string for radicals in Mathspeak verbose mode.
- * @param node The radical node.
- * @return The indexing string.
- */
-export function simpleIndexRadicalVerbose (node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, true);
-}
-
-
-/**
- * Simple indexing string for radicals in Mathspeak brief mode.
- * @param node The radical node.
- * @return The indexing string.
- */
-export function simpleIndexRadicalBrief(node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, true);
-}
-
-
-/**
- * Simple indexing string for radicals in Mathspeak superbrief mode.
- * @param node The radical node.
- * @return The indexing string.
- */
-export function simpleIndexRadicalSbrief(node: Element): string {
-  return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, true);
+  return indexRadical(node, LOCALE.MESSAGES.MS.INDEX);
 }
 
 
@@ -305,11 +274,10 @@ export function simpleIndexRadicalSbrief(node: Element): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
-export function numeralsConversion(node: Element, check: string): string {
+export function ordinalConversion(node: Element): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
 
-  //return LOCALE.NUMBERS.wordOrdinal(children.length);
-  return check;
+  return LOCALE.NUMBERS.wordOrdinal(children.length);
 }
 
 
@@ -319,10 +287,24 @@ export function numeralsConversion(node: Element, check: string): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
-export function decreasedNumeralsConversion(node: Element): string {
+export function decreasedOrdinalConversion(node: Element): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
 
   return LOCALE.NUMBERS.wordOrdinal(children.length - 1);
+}
+
+
+/**
+ * String function to turn a child position into an ordinal.
+ * @param node The node for the string function.
+ * @return The ordinal string corresponding to the child position of
+ *     the node.
+ */
+ export function listOrdinalConversion(node: Element): string {
+  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+  let content = XpathUtil.evalXPath('content/*', node) as Element[];
+
+  return LOCALE.NUMBERS.wordOrdinal(children.length - content.length);
 }
 
 
