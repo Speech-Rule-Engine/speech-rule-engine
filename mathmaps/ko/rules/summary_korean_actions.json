@@ -151,7 +151,7 @@
     [
       "Action",
       "abstr-superscript",
-      "[t] \"제곱\""
+      "[t] \"거듭제곱\""
     ],
     [
       "Action",
@@ -161,7 +161,7 @@
     [
       "Action",
       "abstr-subsup",
-      "[t] \"제곱과 아래첨자\""
+      "[t] \"거듭제곱과 아래첨자\""
     ],
     [
       "Action",

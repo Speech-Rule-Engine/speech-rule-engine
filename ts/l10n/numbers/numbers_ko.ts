@@ -92,15 +92,15 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  */
 function wordOrdinal(num: number): string {
   let ordinal = numberToWords(num);
-  num %= 100;
+  
+  num %= 100; let label = numberToWords(num);
+  if (!label) return ordinal;
+
   let tens = NUMBERS.tens[10 + Math.floor(num / 10)];
   let ones = NUMBERS.ones[10 + Math.floor(num % 10)];
-
   if (num === 20) tens = '스무';
-  let label: string = tens + ones;
-  ordinal = label ? ordinal.slice(0, -label.length + 1) + label : label;
-
-  return ordinal;
+  
+  return ordinal.slice(0, -label.length + 1) + tens + ones;
 }
 
 
