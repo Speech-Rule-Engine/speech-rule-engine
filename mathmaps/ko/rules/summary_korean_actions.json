@@ -196,7 +196,7 @@
     [
       "Action",
       "abstr-subtraction",
-      "[t] \"항이\"; [t] count(./children/*); [t] \"개인 뺄셈\""
+      "[t] \"항이\"; [t] CSFnumeralsConversion; [t] \"개인 뺄셈\""
     ],
     [
       "Action",
