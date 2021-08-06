@@ -151,7 +151,7 @@
     [
       "Action",
       "abstr-addition",
-      "[t] \"항이\"; [t] count(./children/*); [t] \"개인 덧셈\""
+      "[t] \"항이\"; [t] CSFnumeralsConversion; [t] \"개인 덧셈\""
     ],
     [
       "Action",
