@@ -20,7 +20,7 @@
 
 
 import * as StoreUtil from '../rule_engine/store_util';
-
+import MathspeakKoreanUtil from './mathspeak_korean_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NemethUtil from './nemeth_util';
 import * as NumbersUtil from './numbers_util';
@@ -54,9 +54,9 @@ export function OtherRules() {
       });
 
   SpeechRules.addStore(
-      'ko.summary.', '', { 
-        'CSFnumeralsConversion': NumbersUtil.numeralsConversion,
-        'CSFdecreasedNumeralsConversion': NumbersUtil.decreasedNumeralsConversion
+      'ko.summary.default', '', { 
+        'CSFnumeralsConversion': MathspeakKoreanUtil.numeralsConversion,
+        'CSFdecreasedNumeralsConversion': MathspeakKoreanUtil.decreasedNumeralsConversion
       });
 }
 

@@ -22,8 +22,6 @@
 // This work was sponsored by TextHelp
 //
 
-//import * as DomUtil from '../common/dom_util';
-//import * as Semantic from '../semantic_tree/semantic';
 import * as MathspeakUtil from './mathspeak_util';
 import XpathUtil from '../common/xpath_util';
 import {LOCALE} from '../l10n/locale';
@@ -134,9 +132,9 @@ export function overFractionSbrief(node: Element): string {
 }
 
 /**
- * Query function that Checks if we have a simple determinant in the sense that
+ * Query function that Checks if we have a simple index in the sense that
  * every cell only contains single letters or numbers.
- * @param node The determinant node.
+ * @param node The root node.
  * @return List containing input node if true.
  */
 export function isSimpleIndex(node: Element): Element[] {
@@ -146,6 +144,14 @@ export function isSimpleIndex(node: Element): Element[] {
 }
 
 
+/**
+ * Nested string for radicals in Mathspeak mode putting together the nesting
+ * depth with a pre- and postfix string that depends on the speech style.
+ * @param node The radical node.
+ * @param prefix A prefix string.
+ * @param postfix A postfix string.
+ * @return The opening string.
+ */
 export function nestedRadical(
     node: Element, prefix: string, postfix: string): string {
   let depth = MathspeakUtil.radicalNestingDepth(node);
@@ -208,7 +214,7 @@ export function openingRadicalSbrief(node: Element): string {
 /**
  * A string indexing the root.
  * @param node The radical node.
- * @return The localised indexing string if it exists.
+ * @return The localised indexing string.
  */
 export function getRootIndex(node: Element): string {
   let content = XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
@@ -217,6 +223,13 @@ export function getRootIndex(node: Element): string {
 }
 
 
+/**
+ * Indexing string for radicals in Mathspeak mode putting together.
+ * @param node The radical node.
+ * @param postfix A postfix string.
+ * @param simple True if simple index.
+ * @return The indexing string.
+ */
 export function indexRadical(
     node: Element, postfix: string, simple: boolean): string {
   let index = getRootIndex(node);
@@ -226,30 +239,30 @@ export function indexRadical(
 
 
 /**
- * Middle string for radicals in Mathspeak verbose mode.
+ * Non-simple indexing string for radicals in Mathspeak verbose mode.
  * @param node The radical node.
- * @return The middle string.
+ * @return The indexing string.
  */
- export function indexRadicalVerbose(node: Element): string {
+export function indexRadicalVerbose(node: Element): string {
   return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, false);
 }
 
 
 
 /**
- * Middle string for radicals in Mathspeak superbrief mode.
+ * Non-simple indexing string for radicals in Mathspeak brief mode.
  * @param node The radical node.
- * @return The middle string.
+ * @return The indexing string.
  */
- export function indexRadicalBrief(node: Element): string {
+export function indexRadicalBrief(node: Element): string {
   return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, false);
 }
 
 
 /**
- * Middle string for radicals in Mathspeak superbrief mode.
+ * Non-simple indexing string for radicals in Mathspeak superbrief mode.
  * @param node The radical node.
- * @return The middle string.
+ * @return The indexing string.
  */
 export function indexRadicalSbrief(node: Element): string {
   return indexRadical(node, LOCALE.MESSAGES.MS.INDEX, false);
@@ -257,56 +270,60 @@ export function indexRadicalSbrief(node: Element): string {
 
 
 /**
- * Middle string for radicals in Mathspeak superbrief mode.
+ * Simple indexing string for radicals in Mathspeak verbose mode.
  * @param node The radical node.
- * @return The middle string.
+ * @return The indexing string.
  */
- export function simpleIndexRadicalVerbose (node: Element): string {
+export function simpleIndexRadicalVerbose (node: Element): string {
   return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, true);
 }
 
 
 /**
- * Middle string for radicals in Mathspeak superbrief mode.
+ * Simple indexing string for radicals in Mathspeak brief mode.
  * @param node The radical node.
- * @return The middle string.
+ * @return The indexing string.
  */
- export function simpleIndexRadicalBrief(node: Element): string {
+export function simpleIndexRadicalBrief(node: Element): string {
   return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, true);
 }
 
 
 /**
- * Middle string for radicals in Mathspeak superbrief mode.
+ * Simple indexing string for radicals in Mathspeak superbrief mode.
  * @param node The radical node.
- * @return The middle string.
+ * @return The indexing string.
  */
- export function simpleIndexRadicalSbrief(node: Element): string {
+export function simpleIndexRadicalSbrief(node: Element): string {
   return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX, true);
 }
+
+
+/**
+ * String function to turn a child position into an ordinal.
+ * @param node The node for the string function.
+ * @return The ordinal string corresponding to the child position of
+ *     the node.
+ */
+export function numeralsConversion(node: Element): string {
+  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+
+  return LOCALE.NUMBERS.wordOrdinal(children.length);
+}
+
+
+/**
+ * String function to turn a child position into an ordinal.
+ * @param node The node for the string function.
+ * @return The ordinal string corresponding to the child position of
+ *     the node.
+ */
+export function decreasedNumeralsConversion(node: Element): string {
+  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+
+  return LOCALE.NUMBERS.wordOrdinal(children.length - 1);
+}
+
 
 }
 export default MathspeakKoreanUtil;
-
-
-/*
-  let list = children.toString().match(/[^>⁢>]+<\/[^>]*>/g);
-  if (list.length === 1) return LOCALE.MESSAGES.MSroots[content] || content;
-
-  let result = []; let i = 0; let wasElement = false;
-  while (list.length > 0) {
-
-    if (!wasElement) {
-      wasElement = list.some((element: string) => {
-        if (element.includes('number') || element.includes('identifier')) {
-          return (i = list.indexOf(element));
-        } return false;
-      });
-      if (i <= 0 && list.length > i + 1) return content;
-    }
-    else { wasElement = false; i--; }
-    result.push(list.splice(i, 1).toString().replace(/<\/.*>/g, ''));
-  }
-
-  return list.length ? content : result.join(" ");
-  */
