@@ -100,7 +100,7 @@ function wordOrdinal(num: number): string {
   let ones = NUMBERS.ones[10 + Math.floor(num % 10)];
   if (num === 20) tens = '스무';
   
-  return ordinal.slice(0, -label.length + 1) + tens + ones;
+  return ordinal.slice(0, -label.length) + tens + ones;
 }
 
 

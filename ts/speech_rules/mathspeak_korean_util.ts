@@ -305,10 +305,11 @@ export function simpleIndexRadicalSbrief(node: Element): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
-export function numeralsConversion(node: Element): string {
+export function numeralsConversion(node: Element, check: string): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
 
-  return LOCALE.NUMBERS.wordOrdinal(children.length);
+  //return LOCALE.NUMBERS.wordOrdinal(children.length);
+  return check;
 }
 
 
