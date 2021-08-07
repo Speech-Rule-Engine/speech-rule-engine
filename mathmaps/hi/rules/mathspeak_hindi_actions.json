@@ -211,21 +211,6 @@
     ],
     [
       "Action",
-      "double-prime",
-      "[t] \"डबल प्राइम\""
-    ],
-    [
-      "Action",
-      "triple-prime",
-      "[t] \"तिगुना प्राइम\""
-    ],
-    [
-      "Action",
-      "quadruple-prime",
-      "[t] \"चौगुना प्राइम\""
-    ],
-    [
-      "Action",
       "counted-prime",
       "[t] count(children/*) (grammar:numbers2alpha); [t] \"प्राइम\""
     ],

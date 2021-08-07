@@ -216,21 +216,6 @@
     ],
     [
       "Action",
-      "double-prime",
-      "[t] \"zwei Strich\""
-    ],
-    [
-      "Action",
-      "triple-prime",
-      "[t] \"drei Strich\""
-    ],
-    [
-      "Action",
-      "quadruple-prime",
-      "[t] \"vier Strich\""
-    ],
-    [
-      "Action",
       "counted-prime",
       "[t] count(children/*) (grammar:numbers2alpha); [t] \"Strich\""
     ],

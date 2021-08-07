@@ -241,6 +241,21 @@
     ],
     [
       "Action",
+      "double-prime",
+      "[t] \"\u2033\" (grammar:translate)"
+    ],
+    [
+      "Action",
+      "triple-prime",
+      "[t] \"\u2034\" (grammar:translate)"
+    ],
+    [
+      "Action",
+      "quadruple-prime",
+      "[t] \"\u2057\" (grammar:translate)"
+    ],
+    [
+      "Action",
       "prime-subscript",
       "[n] children/*[1]/children/*[1]; [n] children/*[2]; [t] CSFsubscriptVerbose; [n] children/*[1]/children/*[2]"
     ],

@@ -216,21 +216,6 @@
     ],
     [
       "Action",
-      "double-prime",
-      "[t] \"dos prima\""
-    ],
-    [
-      "Action",
-      "triple-prime",
-      "[t] \"tres prima\""
-    ],
-    [
-      "Action",
-      "quadruple-prime",
-      "[t] \"cuatro prima\""
-    ],
-    [
-      "Action",
       "counted-prime",
       "[t] count(children/*) (grammar:numbers2alpha); [t] \"prima\""
     ],

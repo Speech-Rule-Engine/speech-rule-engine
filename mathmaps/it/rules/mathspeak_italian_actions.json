@@ -231,28 +231,13 @@
     ],
     [
       "Action",
-      "double-prime",
-      "[t] \"doppio primo\""
-    ],
-    [
-      "Action",
-      "triple-prime",
-      "[t] \"triplo primo\""
-    ],
-    [
-      "Action",
-      "quadruple-prime",
-      "[t] \"quattro volte primo\""
-    ],
-    [
-      "Action",
       "counted-prime",
-      "[t] count(children/*) (grammar:numbers2alpha); [t] \"primo\""
+      "[t] count(children/*) (grammar:numbers2alpha); [t] \"volte primo\""
     ],
     [
       "Action",
       "counted-prime-multichar",
-      "[t] string-length(text()) (grammar:numbers2alpha); [t] \"primo\""
+      "[t] string-length(text()) (grammar:numbers2alpha); [t] \"volte primo\""
     ],
     [
       "Action",
