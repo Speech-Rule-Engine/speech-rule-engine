@@ -627,7 +627,9 @@
       "Alias",
       "limlower-end",
       "self::underscore",
-      "@role=\"limit function\""
+      "@role=\"limit function\"",
+      "name(../..)=\"underscore\" or name(../..)=\"overscore\"",
+      "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
     ],
     [
       "Alias",

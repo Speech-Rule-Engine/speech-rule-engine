@@ -166,36 +166,6 @@
     ],
     [
       "Action",
-      "limboth",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]"
-    ],
-    [
-      "Action",
-      "limlower",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "limupper",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "limboth-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]; [t] \"Endscripts\""
-    ],
-    [
-      "Action",
-      "limlower-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] \"Endscripts\""
-    ],
-    [
-      "Action",
-      "limupper-end",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]; [t] \"Endscripts\""
-    ],
-    [
-      "Action",
       "integral",
       "[n] children/*[1]; [t] \"Subscript\"; [n] children/*[2]; [t] \"Superscript\"; [n] children/*[3]; [t] \"Baseline\""
     ],

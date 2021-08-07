@@ -15,6 +15,36 @@
       "default"
     ],
     [
+      "Ignore",
+      "limboth",
+      "default"
+    ],
+    [
+      "Ignore",
+      "limlower",
+      "default"
+    ],
+    [
+      "Ignore",
+      "limupper",
+      "default"
+    ],
+    [
+      "Ignore",
+      "limboth-end",
+      "default"
+    ],
+    [
+      "Ignore",
+      "limlower-end",
+      "default"
+    ],
+    [
+      "Ignore",
+      "limupper-end",
+      "default"
+    ],
+    [
       "Precondition",
       "overbar-enclose",
       "default",

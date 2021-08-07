@@ -242,17 +242,17 @@
     [
       "Action",
       "double-prime",
-      "[t] \"\u2033\" (grammar:translate)"
+      "[t] \"″\" (grammar:translate)"
     ],
     [
       "Action",
       "triple-prime",
-      "[t] \"\u2034\" (grammar:translate)"
+      "[t] \"‴\" (grammar:translate)"
     ],
     [
       "Action",
       "quadruple-prime",
-      "[t] \"\u2057\" (grammar:translate)"
+      "[t] \"⁗\" (grammar:translate)"
     ],
     [
       "Action",
@@ -288,6 +288,36 @@
       "Action",
       "unit-combine",
       "[m] children/*"
+    ],
+    [
+      "Action",
+      "limboth",
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]"
+    ],
+    [
+      "Action",
+      "limlower",
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "limupper",
+      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "limboth-end",
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]; [t] CSFendscripts"
+    ],
+    [
+      "Action",
+      "limlower-end",
+      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFendscripts"
+    ],
+    [
+      "Action",
+      "limupper-end",
+      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]; [t] CSFendscripts"
     ]
   ]
 }

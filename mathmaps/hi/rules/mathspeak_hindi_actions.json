@@ -156,36 +156,6 @@
     ],
     [
       "Action",
-      "limboth",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]"
-    ],
-    [
-      "Action",
-      "limlower",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "limupper",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "limboth-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]; [t] \"लिपि समाप्त\""
-    ],
-    [
-      "Action",
-      "limlower-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] \"लिपि समाप्त\""
-    ],
-    [
-      "Action",
-      "limupper-end",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]; [t] \"लिपि समाप्त\""
-    ],
-    [
-      "Action",
       "integral",
       "[n] children/*[1]; [t] \"पादांक\"; [n] children/*[2]; [t] \"उर्ध्वान्क\"; [n] children/*[3]; [t] \"आधार रेखा\""
     ],
