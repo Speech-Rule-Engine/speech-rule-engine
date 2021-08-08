@@ -9,21 +9,6 @@
       "vulgar-fraction"
     ],
     [
-      "Ignore",
-      "limboth-end",
-      "default"
-    ],
-    [
-      "Ignore",
-      "limlower-end",
-      "default"
-    ],
-    [
-      "Ignore",
-      "limupper-end",
-      "default"
-    ],
-    [
       "Precondition",
       "font-number",
       "default",
