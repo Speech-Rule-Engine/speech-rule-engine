@@ -5,6 +5,46 @@
   "inherits": "base",
   "rules": [
     [
+      "Ignore",
+      "fraction"
+    ],
+    [
+      "Ignore",
+      "fraction-brief"
+    ],
+    [
+      "Ignore",
+      "fraction-sbrief"
+    ],
+    [
+      "Ignore",
+      "vulgar-fraction"
+    ],
+    [
+      "Ignore",
+      "root-small"
+    ],
+    [
+      "Ignore",
+      "root-small-brief"
+    ],
+    [
+      "Ignore",
+      "root-small-sbrief"
+    ],
+    [
+      "Ignore",
+      "root"
+    ],
+    [
+      "Ignore",
+      "root-brief"
+    ],
+    [
+      "Ignore",
+      "root-sbrief"
+    ],
+    [
       "Precondition",
       "german-font",
       "default",
@@ -42,7 +82,7 @@
       "sbrief"
     ],
     [
-      "PAliases",
+      "Alias",
       "quad",
       "self::superscript",
       "children/*[2]",

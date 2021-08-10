@@ -5,7 +5,7 @@ name: Tests
 
 on:
   push:
-    branches: [ zorkow ]
+    branches: [ develop ]
   pull_request:
     branches: [ develop ]
 
@@ -30,7 +30,7 @@ jobs:
 
     strategy:
       matrix:
-        block: [ko/mathspeak]
+        block: [ko]
     needs: setup
     runs-on: ubuntu-latest
     name: SRE jests tests for ${{ matrix.block }}

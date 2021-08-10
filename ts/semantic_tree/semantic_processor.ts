@@ -41,6 +41,7 @@ interface BoundsType {
 export default class SemanticProcessor {
 
   private static readonly FENCE_TO_PUNCT_: {[key: string]: SemanticRole} = {
+    [SemanticRole.METRIC]: SemanticRole.METRIC,
     [SemanticRole.NEUTRAL]: SemanticRole.VBAR,
     [SemanticRole.OPEN]: SemanticRole.OPENFENCE,
     [SemanticRole.CLOSE]: SemanticRole.CLOSEFENCE,
@@ -512,7 +513,7 @@ export default class SemanticProcessor {
    */
   private static tableToSquare_(node: SemanticNode) {
     let matrix = node.childNodes[0];
-    if (SemanticPred.isRole(node, SemanticRole.NEUTRAL)) {
+    if (SemanticPred.isNeutralFence(node)) {
       matrix.role = SemanticRole.DETERMINANT;
       return;
     }
@@ -2148,7 +2149,7 @@ export default class SemanticProcessor {
     // Either we have an open fence.
     if (firstRole === SemanticRole.OPEN ||
         // Or we have a neutral fence that does not have a counter part.
-        firstRole === SemanticRole.NEUTRAL &&
+        SemanticPred.isNeutralFence(fences[0]) &&
             !(lastOpen &&
               SemanticPred.compareNeutralFences(fences[0], lastOpen))) {
       openStack.push(fences.shift());
@@ -2192,7 +2193,7 @@ export default class SemanticProcessor {
     }
     // Closing with a neutral fence on the stack.
     if (lastOpen && firstRole === SemanticRole.CLOSE &&
-        lastOpen.role === SemanticRole.NEUTRAL &&
+        SemanticPred.isNeutralFence(lastOpen) &&
         openStack.some(openPred)) {
       // Steps of the algorithm:
       // 1. Split list at right most opening bracket.
@@ -2558,9 +2559,14 @@ export default class SemanticProcessor {
     if (!SemanticPred.isAccent(node)) {
       return false;
     }
+    // We save the original role of the node as accent annotation.
+    let content = node.textContent;
+    let role = SemanticAttr.lookupSecondary('bar', content) ||
+      SemanticAttr.lookupSecondary('tilde', content) || node.role;
     node.role = type === SemanticType.UNDERSCORE ?
         SemanticRole.UNDERACCENT :
         SemanticRole.OVERACCENT;
+    node.addAnnotation('accent', role);
     return true;
   }
 
@@ -2569,8 +2575,7 @@ export default class SemanticProcessor {
    * Creates an accent style node or sub/superscript depending on the given
    * type.
    * @param center The inner center node.
-   * @param children All children, where center is
-   *     first node.
+   * @param children All children, where center is first node.
    * @param type The new node type.
    * @param length The exact length for the given type. This is important
    *     in case not enough children exist, then the type has to be changed.
@@ -2737,7 +2742,7 @@ export default class SemanticProcessor {
           //       reset to eliminate sets. Once we include bra-ket heuristics,
           //       this might be incorrect.
           let arg = rest.shift();
-          if (arg.role !== SemanticRole.NEUTRAL) {
+          if (!SemanticPred.isNeutralFence(arg)) {
             arg.role = SemanticRole.LEFTRIGHT;
           }
           funcNode = SemanticProcessor.getInstance().functionNode_(
@@ -2791,7 +2796,7 @@ export default class SemanticProcessor {
         }
         let firstArg = rest[0];
         if (firstArg.type === SemanticType.FENCED &&
-            firstArg.role !== SemanticRole.NEUTRAL &&
+            !SemanticPred.isNeutralFence(firstArg) &&
             SemanticPred.isSimpleFunctionScope(firstArg)) {
           // TODO: (MS2.3|simons) This needs to be made more robust!  Currently
           // we

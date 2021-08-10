@@ -102,7 +102,7 @@
     [
       "Action",
       "row",
-      "[t] CSFordinalPosition (grammar:gender=\"female\"); [t] \"पंक्ति\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"पंक्ति\" (pause:200)"
     ],
     [
       "Action",

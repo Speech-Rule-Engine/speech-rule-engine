@@ -6,23 +6,6 @@
   "rules": [
     [
       "Precondition",
-      "font",
-      "default",
-      "self::*",
-      "name(self::*)!=\"number\"",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font!=\"normal\""
-    ],
-    [
-      "Specialized",
-      "font",
-      "default",
-      "Caps_SayCaps"
-    ],
-
-    [
-      "Precondition",
       "font-number",
       "default",
       "self::number[@font!=\"normal\"]",
@@ -34,7 +17,7 @@
       "default",
       "self::*[@font=\"double-struck\"]",
       "name(self::*)!=\"number\"",
-      "string-length(text())=1 or string-length(text())=2",
+      "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))"
     ],
     [
@@ -48,39 +31,8 @@
       "font-number-double-struck",
       "default",
       "self::number[@font=\"double-struck\"]",
-      "string-length(text())=1 or string-length(text())=2",
+      "string-length(text())=1",
       "not(contains(@grammar, \"ignoreFont\"))"
-    ],
-    [
-      "Precondition",
-      "font-identifier",
-      "default",
-      "self::identifier",
-      "string-length(text())=1 or string-length(text())=2",
-      "@font",
-      "@font=\"normal\"",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@role!=\"unit\""
-    ],
-    [
-      "Specialized",
-      "font-identifier",
-      "default",
-      "Caps_SayCaps"
-    ],
-    [
-      "Precondition",
-      "omit-font",
-      "default",
-      "self::identifier[@font=\"italic\"]",
-      "string-length(text())=1 or string-length(text())=2",
-      "not(contains(@grammar, \"ignoreFont\"))"
-    ],
-    [
-      "Specialized",
-      "omit-font",
-      "default",
-      "Caps_SayCaps"
     ],
     [
       "Precondition",
@@ -134,7 +86,7 @@
       "not(following-sibling::*)"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-power",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -142,7 +94,7 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-power",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -150,14 +102,14 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-power",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
       "name(children/superscript/children/*[1])=\"identifier\""
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-power",
       "self::superscript",
       "children/*[2][@role=\"implicit\"]",
@@ -176,7 +128,7 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-ordinal-power",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
@@ -217,7 +169,7 @@
       "not(following-sibling::*)"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exp",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -225,7 +177,7 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exp",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -233,14 +185,14 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exp",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
       "name(children/superscript/children/*[1])=\"identifier\""
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exp",
       "self::superscript",
       "children/*[2][@role=\"implicit\"]",

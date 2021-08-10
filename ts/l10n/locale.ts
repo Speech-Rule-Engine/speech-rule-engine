@@ -20,7 +20,7 @@
  */
 
 import {Alphabets, ALPHABETS, Functions, FUNCTIONS,
-        Numbers, NUMBERS, Messages, MESSAGES} from './messages';
+        Messages, MESSAGES, Numbers, NUMBERS} from './messages';
 import * as tr from './transformers';
 
 
@@ -31,19 +31,20 @@ export interface Locale {
   ALPHABETS: Alphabets;
   NUMBERS: Numbers;
   COMBINERS?: {[key: string]: tr.Combiner};
+  CORRECTIONS?: {[key: string]: Function};
 }
 
 export const LOCALE: Locale = createLocale();
 
-export function createLocale(): Locale { 
+export function createLocale(): Locale {
   return {
 
   /**
    * Localisable parse functions
    */
   FUNCTIONS: FUNCTIONS(),
-  
-  /** 
+
+  /**
    * The messages content.
    */
   MESSAGES: MESSAGES(),
@@ -61,6 +62,13 @@ export function createLocale(): Locale {
   /**
    * Combiners that can be reference in Messages.
    */
-  COMBINERS: {}
-  }
+  COMBINERS: {},
+
+  /**
+   * Grammatical corrections for this locale.
+   */
+  CORRECTIONS: {}
+
+  };
+
 }

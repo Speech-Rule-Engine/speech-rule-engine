@@ -32,10 +32,7 @@
       "OVER": "sopra",
       "OVERSCRIPT": "soprascritto"
     },
-    "MSroots": {
-      "2": "",
-      "3": ""
-    },
+    "MSroots": {},
     "font": {
       "bold": "grassetto",
       "bold-fraktur": "grassetto gotico",

@@ -22,14 +22,14 @@
     ],
     [
       "Precondition",
-      "squared-male",
+      "squared-masculine",
       "default",
       "self::number[text()=2]",
       "contains(@grammar, \"squared\")"
     ],
     [
       "Precondition",
-      "squared-female",
+      "squared-feminine",
       "default",
       "self::number[text()=2]",
       "contains(@grammar, \"squared\")",

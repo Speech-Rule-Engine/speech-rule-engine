@@ -31,22 +31,6 @@ import {SemanticNode} from '../semantic_tree/semantic_node';
 import {vulgarFractionSmall} from './numbers_util';
 
 
-// TODO: remove
-/**
- * Translates a single non-negative integer into a word.
- * @param text The text to translate.
- * @return The translated text.
- */
-export function numbersToAlpha(text: string): string {
-  return text.match(/\d+/) ?
-      LOCALE.NUMBERS.numberToWords(parseInt(text, 10)) :
-      text;
-}
-
-
-Grammar.getInstance().setPreprocessor('numbers2alpha', numbersToAlpha);
-
-
 /**
  * Count list of nodes and concatenate this with the context string, adding a
  * colon at the end.

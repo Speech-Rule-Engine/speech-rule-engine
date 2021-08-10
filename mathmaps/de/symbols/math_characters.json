@@ -7,7 +7,7 @@
     "key": "2113",
     "mappings": {
       "default": {
-        "default": "Skript klein L"
+        "default": "Schreibschrift l"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "2118",
     "mappings": {
       "default": {
-        "default": "Skript groß P"
+        "default": "großes Schreibschrift P"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "213E",
     "mappings": {
       "default": {
-        "default": "groß Gamma mit Doppelstrich"
+        "default": "großes Gamma mit Doppelstrich"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "213F",
     "mappings": {
       "default": {
-        "default": "groß Pi mit Doppelstrich"
+        "default": "großes Pi mit Doppelstrich"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2145",
     "mappings": {
       "default": {
-        "default": "groß D kursiv mit Doppelstrich"
+        "default": "großes D kursiv mit Doppelstrich"
       }
     }
   },

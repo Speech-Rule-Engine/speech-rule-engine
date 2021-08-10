@@ -4,7 +4,31 @@
   "modality": "speech",
   "inherits": "base",
   "rules": [
-        [
+    [
+      "Ignore",
+      "text"
+    ],
+    [
+      "Ignore",
+      "vulgar-fraction"
+    ],
+    [
+      "Ignore",
+      "subscript-simple"
+    ],
+    [
+      "Ignore",
+      "prime-subscript-simple"
+    ],
+    [
+      "Ignore",
+      "unit"
+    ],
+    [
+      "Ignore",
+      "unit-combine"
+    ],
+    [
       "Precondition",
       "unit-singular",
       "default",
@@ -15,7 +39,7 @@
       "unit-plural",
       "default",
       "self::identifier[@role=\"unit\"]",
-      "not(contains(@grammar, \"singularUnit\"))"
+      "not(contains(@grammar, \"singular\"))"
     ],
     [
       "Precondition",
@@ -53,7 +77,7 @@
       "default",
       "self::infixop[@role=\"unit\"]",
       "name(children/*[1])!=\"number\"",
-      "contains(@grammar, \"singularUnit\")",
+      "contains(@grammar, \"singular\")",
       "count(children/*)>1"
     ],
     [

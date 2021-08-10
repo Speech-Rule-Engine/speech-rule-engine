@@ -21,6 +21,7 @@
 
 import {Engine} from '../common/engine';
 import {Variables} from '../common/variables';
+import {Grammar} from '../rule_engine/grammar';
 
 import {de} from './locales/locale_de';
 import {en} from './locales/locale_en';
@@ -53,6 +54,9 @@ export function setLocale() {
     for (let key of Object.getOwnPropertyNames(msgs)) {
       // TODO (TS): See if this is really an object structure.
       (LOCALE as any)[key] = (msgs as any)[key];
+    }
+    for (let [key, func] of Object.entries(msgs.CORRECTIONS)) {
+      Grammar.getInstance().setCorrection(key, func);
     }
     // TODO (Speech Rules): This is temporary until locales are handled in a
     // bespoke class.

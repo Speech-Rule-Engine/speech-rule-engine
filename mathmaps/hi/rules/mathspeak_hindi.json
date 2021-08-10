@@ -9,8 +9,7 @@
       "protected",
       "default",
       "[t] text()",
-      "self::number",
-      "contains(@grammar, \"protected\")"
+      "self::number[contains(@grammar, \"protected\")]"
     ]
   ]
 }

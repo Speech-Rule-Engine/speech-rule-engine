@@ -37,7 +37,7 @@
       "Rule",
       "omit-empty",
       "default",
-      "[p] (pause:\"short\")",
+      "[p] (pause:short)",
       "self::empty"
     ],
     [
@@ -45,11 +45,15 @@
       "omit-font",
       "default",
       "[n] self::* (grammar:ignoreFont=@font)",
-      "self::identifier",
+      "self::identifier[@font=\"italic\"]",
       "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"italic\""
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "SpecializedRule",
+      "omit-font",
+      "default",
+      "Caps_SayCaps"
     ],
     [
       "Rule",
@@ -80,7 +84,7 @@
       "Rule",
       "capital-cap-l",
       "Caps_SayCaps",
-      "[p] (pause:\"short\"); [n] text()",
+      "[p] (pause:short); [n] text()",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\"",
       ".[@category=\"Lu\"]",
@@ -92,7 +96,7 @@
       "Rule",
       "capital-cap-r",
       "Caps_SayCaps",
-      "[n] text() (pause:\"short\")",
+      "[n] text() (pause:short)",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\"",
       ".[@category=\"Lu\"]",
@@ -102,7 +106,7 @@
       "Rule",
       "capital-cap-lr",
       "Caps_SayCaps",
-      "[p] (pause:\"short\"); [n] text() (pause:\"short\")",
+      "[p] (pause:short); [n] text() (pause:short)",
       "self::identifier",
       "@role=\"latinletter\" or @role=\"greekletter\"",
       ".[@category=\"Lu\"]",
@@ -129,25 +133,25 @@
       "@font!=\"normal\""
     ],
     [
+      "Specialized",
+      "font",
+      "default",
+      "Caps_SayCaps"
+    ],
+    [
       "Precondition",
       "font-identifier",
       "default",
-      "self::identifier",
+      "self::identifier[@font=\"normal\"]",
       "string-length(text())=1",
-      "@font",
-      "@font=\"normal\"",
       "not(contains(@grammar, \"ignoreFont\"))",
       "@role!=\"unit\""
     ],
     [
-      "Precondition",
-      "omit-font",
+      "Specialized",
+      "font-identifier",
       "default",
-      "self::identifier",
-      "string-length(text())=1",
-      "@font",
-      "not(contains(@grammar, \"ignoreFont\"))",
-      "@font=\"italic\""
+      "Caps_SayCaps"
     ],
     [
       "Precondition",
@@ -771,7 +775,7 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-prefix-function",
       "self::superscript[@role=\"prefix function\"]",
       "name(children/*[2])=\"identifier\""
@@ -809,7 +813,7 @@
       "not(following-sibling::*)"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exponent",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -817,7 +821,7 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exponent",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
@@ -825,14 +829,14 @@
       "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exponent",
       "self::superscript",
       "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
       "name(children/superscript/children/*[1])=\"identifier\""
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-simple-exponent",
       "self::superscript",
       "children/*[2][@role=\"implicit\"]",
@@ -851,7 +855,7 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "superscript-ordinal",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
@@ -894,7 +898,7 @@
       "children/*[2][@role=\"integer\"]"
     ],
     [
-      "PAlias",
+      "Alias",
       "superscript-ordinal-number",
       "self::superscript",
       "name(children/*[2])=\"identifier\"",
@@ -1088,6 +1092,13 @@
       "@role=\"leftright\""
     ],
     [
+      "Specialized",
+      "fences-open-close",
+      "default",
+      "self::fenced",
+      "@role=\"metric\""
+    ],
+    [
       "Precondition",
       "paren-simple-nested-func-default",
       "default",
@@ -1115,7 +1126,7 @@
       "Paren_Speak"
     ],
     [
-      "PAliases",
+      "Alias",
       "fences-open-close",
       "self::fenced",
       "@role=\"composed function\""
@@ -1287,7 +1298,7 @@
       "@role=\"set collection\""
     ],
     [
-      "PAliases",
+      "Alias",
       "set-collection",
       "self::fenced",
       "@role=\"set singleton\""
@@ -1314,7 +1325,7 @@
     ],
     [
       "Precondition",
-      "subscript-base",
+      "logarithm-base",
       "default",
       "self::subscript",
       "children/*[1][@category=\"Logarithm\"]"
@@ -1363,7 +1374,7 @@
       "name(children/*[2])=\"text\""
     ],
     [
-      "PAliases",
+      "Alias",
       "simple-text-fraction",
       "self::fraction",
       "name(children/*[1])=\"infixop\"",
@@ -1906,32 +1917,42 @@
       "fences-neutral",
       "default",
       "self::fenced",
-      "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
+      "@role=\"neutral\""
     ],
     [
       "Precondition",
       "fences-neutral-absend",
       "AbsoluteValue_AbsEnd",
       "self::fenced",
-      "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
+      "@role=\"neutral\""
     ],
     [
       "Precondition",
       "fences-neutral-cardinality",
       "AbsoluteValue_Cardinality",
       "self::fenced",
-      "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
+      "@role=\"neutral\""
     ],
     [
       "Precondition",
       "fences-neutral-determinant",
       "AbsoluteValue_Determinant",
       "self::fenced",
-      "@role=\"neutral\"",
-      "content/*[1][text()]=\"|\" or content/*[1][text()]=\"❘\" or content/*[1][text()]=\"｜\" or content/*[1][text()]=\"∣\""
+      "@role=\"neutral\""
+    ],
+    [
+      "Precondition",
+      "fences-metric",
+      "default",
+      "self::fenced",
+      "@role=\"metric\""
+    ],
+    [
+      "Precondition",
+      "fences-metric-absend",
+      "AbsoluteValue_AbsEnd",
+      "self::fenced",
+      "@role=\"metric\""
     ],
     [
       "Precondition",
@@ -2191,7 +2212,7 @@
       "self::*"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))",
@@ -2206,7 +2227,7 @@
       "self::*"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-summary-none",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))",
@@ -2234,7 +2255,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines",
       "self::multiline"
     ],
@@ -2252,7 +2273,7 @@
       "@role=\"table\""
     ],
     [
-      "PAliases",
+      "Alias",
       "row-medium",
       "self::row",
       "@role=\"cases\""
@@ -2265,7 +2286,7 @@
       "@role=\"table\""
     ],
     [
-      "PAliases",
+      "Alias",
       "row-long",
       "self::row",
       "@role=\"cases\""
@@ -2278,7 +2299,7 @@
       "@role=\"table\""
     ],
     [
-      "PAliases",
+      "Alias",
       "row-short",
       "self::row",
       "@role=\"cases\""
@@ -2327,7 +2348,7 @@
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-cases-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))"
@@ -2339,7 +2360,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-cases",
       "self::multiline"
     ],
@@ -2351,7 +2372,7 @@
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-equations-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))"
@@ -2363,7 +2384,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-equations",
       "self::multiline"
     ],
@@ -2375,7 +2396,7 @@
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-steps-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))"
@@ -2387,7 +2408,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-steps",
       "self::multiline"
     ],
@@ -2399,7 +2420,7 @@
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-rows-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))"
@@ -2411,7 +2432,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-rows",
       "self::multiline"
     ],
@@ -2423,7 +2444,7 @@
       "not(contains(@grammar, \"layoutSummary\"))"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-constraints-summary",
       "self::table",
       "not(contains(@grammar, \"layoutSummary\"))"
@@ -2435,7 +2456,7 @@
       "self::table"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-constraints",
       "self::multiline"
     ],
@@ -2447,13 +2468,13 @@
       "contains(@grammar, \"layoutSummary\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-none",
       "self::multiline",
       "contains(@grammar, \"layoutSummary\")"
     ],
     [
-      "PAliases",
+      "Alias",
       "lines-none",
       "self::cases",
       "contains(@grammar, \"layoutSummary\")"
@@ -2559,7 +2580,7 @@
       "name(children/*[3])=\"overscore\"",
       "children/*[3][@role=\"integer\"]",
       "children/*[3]/children/*[2][@role=\"overaccent\"]",
-      "children/*[3]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
+      "children/*[3]/children/*[2][contains(@annotation, \"accent:bar\")]"
     ],
     [
       "Precondition",
@@ -2573,7 +2594,7 @@
       "name(children/*[2])=\"overscore\"",
       "children/*[2][@role=\"integer\"]",
       "children/*[2]/children/*[2][@role=\"overaccent\"]",
-      "children/*[2]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
+      "children/*[2]/children/*[2][contains(@annotation, \"accent:bar\")]"
     ],
     [
       "Precondition",
@@ -2588,7 +2609,7 @@
       "name(children/*[3])=\"overscore\"",
       "children/*[3][@role=\"integer\"]",
       "children/*[3]/children/*[2][@role=\"overaccent\"]",
-      "children/*[3]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]",
+      "children/*[3]/children/*[2][contains(@annotation, \"accent:bar\")]",
       "string-length(./children/*[3]/children/*[1]/text())=1"
     ],
     [
@@ -2603,7 +2624,7 @@
       "name(children/*[2])=\"overscore\"",
       "children/*[2][@role=\"integer\"]",
       "children/*[2]/children/*[2][@role=\"overaccent\"]",
-      "children/*[2]/children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]",
+      "children/*[2]/children/*[2][contains(@annotation, \"accent:bar\")]",
       "string-length(./children/*[2]/children/*[1]/text())=1"
     ],
     [
@@ -2628,7 +2649,7 @@
       "self::overscore",
       "@role=\"implicit\"",
       "children/*[2][@role=\"overaccent\"]",
-      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]",
+      "children/*[2][contains(@annotation, \"accent:bar\")]",
       "name(children/*[1])=\"infixop\"",
       "count(./children/*[1]/children/*)=2"
     ],
@@ -2638,7 +2659,7 @@
       "Bar_Conjugate",
       "self::overscore",
       "children/*[2][@role=\"overaccent\"]",
-      "children/*[2][text()=\"¯\" or text()=\"￣\" or text()=\"＿\" or text()=\"_\" or text()=\"‾\"]"
+      "children/*[2][contains(@annotation, \"accent:bar\")]"
     ],
     [
       "Precondition",
@@ -2772,7 +2793,7 @@
       "unit-plural",
       "default",
       "self::identifier[@role=\"unit\"]",
-      "not(contains(@grammar, \"singularUnit\"))"
+      "not(contains(@grammar, \"singular\"))"
     ],
     [
       "Precondition",
@@ -2925,7 +2946,7 @@
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel-over",
       "self::underscore",
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
@@ -2939,7 +2960,7 @@
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel-under",
       "self::overscore",
       "name(children/*[2])=\"enclose\"",
@@ -2953,7 +2974,7 @@
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel-over-end",
       "self::underscore",
       "@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\""
@@ -2967,7 +2988,7 @@
       "children/*[2][@role=\"updiagonalstrike\" or @role=\"downdiagonalstrike\" or @role=\"horizontalstrike\"]"
     ],
     [
-      "PAliases",
+      "Alias",
       "cancel-under-end",
       "self::overscore",
       "name(children/*[2])=\"enclose\"",

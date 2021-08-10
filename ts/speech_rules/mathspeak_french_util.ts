@@ -28,26 +28,6 @@ import * as MathspeakUtil from './mathspeak_util';
 namespace MathspeakFrenchUtil {
 
 /**
- * Predicate to decide if a root has a small index, i.e., between 1 and 10.
- * @param node The root node.
- * @return The list with the given node, if it is a root with a
- *     small index.
- */
-export function smallRoot(node: Element): Element[] {
-  if (!node.childNodes || node.childNodes.length === 0 ||
-      !node.childNodes[0].childNodes) {
-    return [];
-  }
-  let index = node.childNodes[0].childNodes[0].textContent;
-  if (!/^\d+$/.test(index)) {
-    return [];
-  }
-  let num = parseInt(index, 10);
-  return num > 1 && num <= 3 ? [node] : [];
-}
-
-
-/**
  * Computes baseline prefix in verbose mode.
  * @param node Subscript node.
  * @return The prefix string.

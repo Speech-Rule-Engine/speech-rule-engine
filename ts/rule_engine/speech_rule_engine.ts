@@ -803,12 +803,10 @@ export namespace StoreFactory {
     let store = factory(set.modality);
     stores.set(name, store);
     if (set.inherits) {
-      // TODO: Copy rules!
       store.inherits = stores.get(
         `${set.inherits}.${set.modality}.${set.domain}`);
     }
     store.parse(set);
-    store.inheritRules();
     store.initialize();
     return store;
   }

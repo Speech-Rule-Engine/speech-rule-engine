@@ -12,17 +12,12 @@
     [
       "Action",
       "font",
-      "[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:\"short\")"
+      "[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:short)"
     ],
     [
       "Action",
       "font-identifier",
-      "[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:\"short\")"
-    ],
-    [
-      "Action",
-      "omit-font",
-      "[n] self::* (grammar:ignoreFont=@font)"
+      "[t] @font (grammar:localFont); [n] self::* (grammar:ignoreFont=@font,pause:short)"
     ],
     [
       "Action",
@@ -37,7 +32,7 @@
     [
       "Action",
       "punctuation-lr",
-      "[p] (pause:\"short\"); [n] text() (pause:\"short\")"
+      "[p] (pause:short); [n] text() (pause:short)"
     ],
     [
       "Action",
@@ -47,12 +42,12 @@
     [
       "Action",
       "punctuation-l",
-      "[p] (pause:\"short\"); [n] text()"
+      "[p] (pause:short); [n] text()"
     ],
     [
       "Action",
       "punctuation-r",
-      "[n] text() (pause:\"short\")"
+      "[n] text() (pause:short)"
     ],
     [
       "Action",
@@ -67,12 +62,12 @@
     [
       "Action",
       "vbar-evaluated",
-      "[n] children/*[1] (pause:\"short\"); [t] \"조건\"; [n] content/*[1]/children/*[2] (pause:\"short\")"
+      "[n] children/*[1] (pause:short); [t] \"조건\"; [n] content/*[1]/children/*[2] (pause:short)"
     ],
     [
       "Action",
       "vbar-evaluated-both",
-      "[n] children/*[1] (pause:\"short\"); [t] \"일 때\"; [n] content/*[1]/children/*[2] (pause:\"short\"); [t] \"빼기 같은 수식\"; [n] content/*[1]/children/*[1]/children/*[2] (pause:\"short\")"
+      "[n] children/*[1] (pause:short); [t] \"일 때\"; [n] content/*[1]/children/*[2] (pause:short); [t] \"빼기 같은 수식\"; [n] content/*[1]/children/*[1]/children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -252,22 +247,22 @@
     [
       "Action",
       "appl",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "appl-simple",
-      "[n] children/*[1]; [t] \"의\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "appl-simple-fenced",
-      "[n] children/*[1]; [t] \"의\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "appl-times",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -277,7 +272,7 @@
     [
       "Action",
       "binary-operation",
-      "[n] . (grammar:impliedTimes, pause:\"short\")"
+      "[n] . (grammar:impliedTimes, pause:short)"
     ],
     [
       "Action",
@@ -287,17 +282,17 @@
     [
       "Action",
       "function-prefix-embell",
-      "[p] (pause:\"short\"); [n] children/*[1]; [n] children/*[2] (pause:\"short\"); "
+      "[p] (pause:short); [n] children/*[1]; [n] children/*[2] (pause:short); "
     ],
     [
       "Action",
       "function-prefix-fenced-or-frac-arg",
-      "[p] (pause:\"short\"); [n] children/*[1] (grammar:addArticle); [t] \"의\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1] (grammar:addArticle); [t] \"의\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-subscript",
-      "[p] (pause:\"short\"); [n] children/*[1] (grammar:addArticle); [t] \"의\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1] (grammar:addArticle); [t] \"의\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -307,12 +302,12 @@
     [
       "Action",
       "function-ln-pause",
-      "[n] children/*[1]; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-ln-of",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -322,47 +317,47 @@
     [
       "Action",
       "function-ln-natlog-pause",
-      "[n] . (grammar:NatLog, pause:\"short\")"
+      "[n] . (grammar:NatLog, pause:short)"
     ],
     [
       "Action",
       "function-prefix-as-exp",
-      "[n] children/*[2]; [t] \"의\" (pause:\"short\"); [n] children/*[1] (pause:\"short\")"
+      "[n] children/*[2]; [t] \"의\" (pause:short); [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-subscript-as-exp",
-      "[n] children/*[2]; [t] \"의\" (pause:\"short\"); [n] children/*[1] (pause:\"short\")"
+      "[n] children/*[2]; [t] \"의\" (pause:short); [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-hyper",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-inverse",
-      "[p] (pause:\"short\"); [t] \"역함수\"; [n] children/*[1]/children/*[1]; [t] \"of\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"역함수\"; [n] children/*[1]/children/*[1]; [t] \"of\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "appl-triginverse",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc-simple",
-      "[p] (pause:\"short\"); [t] \"아크\"; [n] children/*[1]/children/*[1]; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"아크\"; [n] children/*[1]/children/*[1]; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc-simple-fenced",
-      "[p] (pause:\"short\"); [t] \"아크\"; [n] children/*[1]/children/*[1] (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"아크\"; [n] children/*[1]/children/*[1] (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc",
-      "[p] (pause:\"short\"); [t] \"아크\"; [n] children/*[1]/children/*[1]; [t] \"of\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"아크\"; [n] children/*[1]/children/*[1]; [t] \"of\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -382,12 +377,12 @@
     [
       "Action",
       "superscript",
-      "[n] children/*[1]; [t] \"지수시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수끝\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"지수시작\" (pause:short); [n] children/*[2] (pause:short); [t] \"지수끝\" (pause:short)"
     ],
     [
       "Action",
       "superscript-simple-exponent",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:noArticle); [t] \"제곱\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:noArticle); [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
@@ -397,17 +392,17 @@
     [
       "Action",
       "superscript-ordinal",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"제곱\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
       "superscript-non-ordinal",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:noArticle); [t] \"제곱\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:noArticle); [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
       "superscript-simple-function",
-      "[n] children/*[1]; [n] children/*[2]; [t] \"제곱\" (pause:\"short\")"
+      "[n] children/*[1]; [n] children/*[2]; [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
@@ -417,47 +412,47 @@
     [
       "Action",
       "superscript-ordinal-number",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:\"short\"); [t] \"제곱\""
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:short); [t] \"제곱\""
     ],
     [
       "Action",
       "superscript-ordinal-negative",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:\"short\"); [t] \"제곱\""
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:short); [t] \"제곱\""
     ],
     [
       "Action",
       "superscript-ordinal-default",
-      "[n] children/*[1]; [t] \"지수시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수끝\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"지수시작\" (pause:short); [n] children/*[2] (pause:short); [t] \"지수끝\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-number",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"제곱\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-negative",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:noArticle); [t] \"제곱\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:noArticle); [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-identifier",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"제곱\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-default",
-      "[n] children/*[1]; [t] \"지수시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수끝\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"지수시작\" (pause:short); [n] children/*[2] (pause:short); [t] \"지수끝\" (pause:short)"
     ],
     [
       "Action",
       "superscript-power",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:afterPower, pause:\"short\")"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:afterPower, pause:short)"
     ],
     [
       "Action",
       "superscript-power-default",
-      "[n] children/*[1]; [t] \"지수시작\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"지수끝\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"지수시작\" (pause:short); [n] children/*[2] (pause:short); [t] \"지수끝\" (pause:short)"
     ],
     [
       "Action",
@@ -522,27 +517,27 @@
     [
       "Action",
       "fences-open-close",
-      "[p] (pause:\"short\"); [n] content/*[1] (grammar:spokenFence, pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (grammar:spokenFence, pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
     ],
     [
       "Action",
       "paren-simple-nested-func-default",
-      "[p] (pause:\"short\"); [n] content/*[1] (pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
     ],
     [
       "Action",
       "paren-simple-nested-func-none",
-      "[p] (pause:\"short\"); [n] content/*[1] (grammar:spokenFence, pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (grammar:spokenFence, pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
     ],
     [
       "Action",
       "fence-silent",
-      "[p] (pause:\"short\"); [n] children/*[1] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-open-close-none",
-      "[p] (pause:\"short\"); [n] content/*[1] (grammar:spokenFence, pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (grammar:spokenFence, pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
     ],
     [
       "Action",
@@ -562,7 +557,7 @@
     [
       "Action",
       "fences-interval",
-      "[t] \"구간\"; [n] children/*[1]/children/*[1]; [t] \"에서\"; [n] children/*[1]/children/*[3] (pause:\"short\"); [n] . (grammar:interval); [t] \"까지\""
+      "[t] \"구간\"; [n] children/*[1]/children/*[1]; [t] \"에서\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval); [t] \"까지\""
     ],
     [
       "Action",
@@ -572,12 +567,12 @@
     [
       "Action",
       "interval-closed-open",
-      "[t] \"반 열린 구간\"; [n] children/*[1]/children/*[1] (pause:\"short\"); [t] \"이상\"; [n] children/*[1]/children/*[3]; [t] \"미만\""
+      "[t] \"반 열린 구간\"; [n] children/*[1]/children/*[1] (pause:short); [t] \"이상\"; [n] children/*[1]/children/*[3]; [t] \"미만\""
     ],
     [
       "Action",
       "interval-open-closed",
-      "[t] \"반 열린 구간\"; [n] children/*[1]/children/*[1] (pause:\"short\"); [t] \"초과\"; [n] children/*[1]/children/*[3]; [t] \"이하\""
+      "[t] \"반 열린 구간\"; [n] children/*[1]/children/*[1] (pause:short); [t] \"초과\"; [n] children/*[1]/children/*[3]; [t] \"이하\""
     ],
     [
       "Action",
@@ -612,7 +607,7 @@
     [
       "Action",
       "paren-nested-embellished-funcs",
-      "[p] (pause:\"short\"); [n] content/*[1] (pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -646,7 +641,7 @@
     ],
     [
       "Action",
-      "subscript-base",
+      "logarithm-base",
       "[t] \"밑이\"; [n] children/*[2]; [t] \"인\"; [n] children/*[1]"
     ],
     [
@@ -1507,7 +1502,7 @@
     [
       "Action",
       "unit-reciprocal-singular",
-      "[t] \"퍼\"; [n] children/*[1] (grammar:singularUnit)"
+      "[t] \"퍼\"; [n] children/*[1] (grammar:singular)"
     ],
     [
       "Action",
@@ -1517,12 +1512,12 @@
     [
       "Action",
       "unit-combine-singular",
-      "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); [m] children/*[position()>2]"
+      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [m] children/*[position()>2]"
     ],
     [
       "Action",
       "unit-divide",
-      "[n] children/*[1]; [t] \"퍼\"; [n] children/*[2] (grammar:singularUnit)"
+      "[n] children/*[1]; [t] \"퍼\"; [n] children/*[2] (grammar:singular)"
     ],
     [
       "Action",

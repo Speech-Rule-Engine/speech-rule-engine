@@ -12,17 +12,17 @@
     [
       "Action",
       "font",
-      "[n] . (grammar:ignoreFont=@font);  [t] @font (grammar:localFont,pause:\"short\")"
+      "[n] . (grammar:ignoreFont=@font);  [t] @font (grammar:localFont,pause:short)"
     ],
     [
       "Action",
       "font-identifier",
-      "[n] . (grammar:ignoreFont=@font);  [t] @font (grammar:localFont,pause:\"short\")"
+      "[n] . (grammar:ignoreFont=@font);  [t] @font (grammar:localFont,pause:short)"
     ],
     [
       "Action",
       "punctuation-lr",
-      "[p] (pause:\"short\"); [n] text() (pause:\"short\")"
+      "[p] (pause:short); [n] text() (pause:short)"
     ],
     [
       "Action",
@@ -32,12 +32,12 @@
     [
       "Action",
       "punctuation-l",
-      "[p] (pause:\"short\"); [n] text()"
+      "[p] (pause:short); [n] text()"
     ],
     [
       "Action",
       "punctuation-r",
-      "[n] text() (pause:\"short\")"
+      "[n] text() (pause:short)"
     ],
     [
       "Action",
@@ -52,12 +52,12 @@
     [
       "Action",
       "vbar-evaluated",
-      "[n] children/*[1] (pause:\"short\"); [t] \"valutato a\"; [n] content/*[1]/children/*[2] (pause:\"short\")"
+      "[n] children/*[1] (pause:short); [t] \"valutato a\"; [n] content/*[1]/children/*[2] (pause:short)"
     ],
     [
       "Action",
       "vbar-evaluated-both",
-      "[n] children/*[1] (pause:\"short\"); [t] \"valutato a\"; [n] content/*[1]/children/*[2] (pause:\"short\"); [t] \"meno la stessa espressione valutata a\"; [n] content/*[1]/children/*[1]/children/*[2] (pause:\"short\")"
+      "[n] children/*[1] (pause:short); [t] \"valutato a\"; [n] content/*[1]/children/*[2] (pause:short); [t] \"meno la stessa espressione valutata a\"; [n] content/*[1]/children/*[1]/children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -232,22 +232,22 @@
     [
       "Action",
       "appl",
-      "[n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "appl-simple",
-      "[n] children/*[1]; [t] \"di\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"di\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "appl-simple-fenced",
-      "[n] children/*[1]; [t] \"di\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"di\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "appl-times",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"per\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"per\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -262,7 +262,7 @@
     [
       "Action",
       "binary-operation",
-      "[n] . (grammar:impliedTimes, pause:\"short\")"
+      "[n] . (grammar:impliedTimes, pause:short)"
     ],
     [
       "Action",
@@ -272,17 +272,17 @@
     [
       "Action",
       "function-prefix-embell",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-fenced-or-frac-arg",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-subscript",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"di\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"di\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -292,12 +292,12 @@
     [
       "Action",
       "function-ln-pause",
-      "[n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-ln-of",
-      "[n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -307,57 +307,57 @@
     [
       "Action",
       "function-ln-natlog-pause",
-      "[n] . (grammar:NatLog, pause:\"short\")"
+      "[n] . (grammar:NatLog, pause:short)"
     ],
     [
       "Action",
       "function-prefix-as-exp",
-      "[n] children/*[1]; [t] \"di\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"di\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-subscript-as-exp",
-      "[n] children/*[1]; [t] \"di\" (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"di\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-hyper",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-inverse",
-      "[p] (pause:\"short\"); [t] \"inverso del\";  [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"inverso del\";  [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-reciprocal",
-      "[p] (pause:\"short\"); [t] \"il reciproco del\"; [n] children/*[1]/children/*[1] (pause:\"short\"); [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"il reciproco del\"; [n] children/*[1]/children/*[1] (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-reciprocal-simple",
-      "[p] (pause:\"short\"); [t] \"il reciproco del\"; [n] children/*[1]/children/*[1]; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"il reciproco del\"; [n] children/*[1]/children/*[1]; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "appl-triginverse",
-      "[p] (pause:\"short\"); [n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc-simple",
-      "[p] (pause:\"short\"); [t] \"arco\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"arco\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc-simple-fenced",
-      "[p] (pause:\"short\"); [t] \"arco\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"arco\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc",
-      "[p] (pause:\"short\"); [t] \"arco\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:\"short\")"
+      "[p] (pause:short); [t] \"arco\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -382,27 +382,27 @@
     [
       "Action",
       "superscript",
-      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"fine esponente\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:short); [n] children/*[2] (pause:short); [t] \"fine esponente\" (pause:short)"
     ],
     [
       "Action",
       "superscript-simple-exponent",
-      "[n] children/*[1]; [t] \"elevato alla\"; [n] children/*[2] (pause:\"medium\")"
+      "[n] children/*[1]; [t] \"elevato alla\"; [n] children/*[2] (pause:medium)"
     ],
     [
       "Action",
       "superscript-simple-exponent-end",
-      "[n] children/*[1]; [t] \"elevato alla\"; [n] children/*[2] (pause:\"medium\")"
+      "[n] children/*[1]; [t] \"elevato alla\"; [n] children/*[2] (pause:medium)"
     ],
     [
       "Action",
       "superscript-ordinal",
-      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\" (pause:short)"
     ],
     [
       "Action",
       "superscript-non-ordinal",
-      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -412,47 +412,47 @@
     [
       "Action",
       "superscript-ordinal-number",
-      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal, pause:\"short\")"
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal, pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-negative",
-      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-default",
-      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"fine esponente\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:short); [n] children/*[2] (pause:short); [t] \"fine esponente\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-number",
-      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-negative",
-      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (pause:\"short\")"
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-identifier",
-      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal); [t] \"potenza\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-default",
-      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"fine esponente\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:short); [n] children/*[2] (pause:short); [t] \"fine esponente\" (pause:short)"
     ],
     [
       "Action",
       "superscript-power",
-      "[n] children/*[1]; [t] \"elevato all'esponente\"; [n] children/*[2] (grammar:afterPower, pause:\"short\")"
+      "[n] children/*[1]; [t] \"elevato all'esponente\"; [n] children/*[2] (grammar:afterPower, pause:short)"
     ],
     [
       "Action",
       "superscript-power-default",
-      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:\"short\"); [n] children/*[2] (pause:\"short\"); [t] \"fine esponente\" (pause:\"short\")"
+      "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:short); [n] children/*[2] (pause:short); [t] \"fine esponente\" (pause:short)"
     ],
     [
       "Action",
@@ -486,12 +486,12 @@
     ],
     [
       "Action",
-      "squared-male",
+      "squared-masculine",
       "[t] \"quadrato\""
     ],
     [
       "Action",
-      "squared-female",
+      "squared-feminine",
       "[t] \"quadrata\""
     ],
     [
@@ -527,27 +527,27 @@
     [
       "Action",
       "fences-open-close",
-      "[p] (pause:\"short\"); [n] content/*[1] (grammar:spokenFence, pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (grammar:spokenFence, pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
     ],
     [
       "Action",
       "paren-simple-nested-func-default",
-      "[p] (pause:\"short\"); [n] content/*[1] (pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
     ],
     [
       "Action",
       "paren-simple-nested-func-none",
-      "[p] (pause:\"short\"); [n] content/*[1] (grammar:spokenFence, pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (grammar:spokenFence, pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
     ],
     [
       "Action",
       "fence-silent",
-      "[p] (pause:\"short\"); [n] children/*[1] (pause:\"short\")"
+      "[p] (pause:short); [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-open-close-none",
-      "[p] (pause:\"short\"); [n] content/*[1] (grammar:spokenFence, pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (grammar:spokenFence, pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
     ],
     [
       "Action",
@@ -567,7 +567,7 @@
     [
       "Action",
       "fences-interval",
-      "[t] \"l'intervallo da\"; [n] children/*[1]/children/*[1]; [t] \"a\"; [n] children/*[1]/children/*[3] (pause:\"short\"); [n] . (grammar:interval)"
+      "[t] \"l'intervallo da\"; [n] children/*[1]/children/*[1]; [t] \"a\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
     ],
     [
       "Action",
@@ -577,12 +577,12 @@
     [
       "Action",
       "interval-closed-open",
-      "[t] \"che include\"; [n] children/*[1]/children/*[1] (pause:\"short\"); [t] \"ma che non include\"; [n] children/*[1]/children/*[3]"
+      "[t] \"che include\"; [n] children/*[1]/children/*[1] (pause:short); [t] \"ma che non include\"; [n] children/*[1]/children/*[3]"
     ],
     [
       "Action",
       "interval-open-closed",
-      "[t] \"che non include\"; [n] children/*[1]/children/*[1] (pause:\"short\"); [t] \"ma che comprende\"; [n] children/*[1]/children/*[3]"
+      "[t] \"che non include\"; [n] children/*[1]/children/*[1] (pause:short); [t] \"ma che comprende\"; [n] children/*[1]/children/*[3]"
     ],
     [
       "Action",
@@ -617,7 +617,7 @@
     [
       "Action",
       "paren-nested-embellished-funcs",
-      "[p] (pause:\"short\"); [n] content/*[1] (pause:\"short\"); [n] children/*[1] (pause:\"short\"); [n] content/*[2] (pause:\"short\")"
+      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -651,7 +651,7 @@
     ],
     [
       "Action",
-      "subscript-base",
+      "logarithm-base",
       "[n] children/*[1]; [t] \"base\"; [n] children/*[2]"
     ],
     [
@@ -687,7 +687,7 @@
     [
       "Action",
       "vulgar-fraction",
-      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")"
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"m\")"
     ],
     [
       "Action",
@@ -722,7 +722,7 @@
     [
       "Action",
       "simple-vulgar-fraction-ordinal",
-      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")"
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"m\")"
     ],
     [
       "Action",
@@ -737,7 +737,7 @@
     [
       "Action",
       "simple-vulgar-fraction-endfrac",
-      "[t] CSFvulgarFraction (grammar:fraction:gender=\"male\")"
+      "[t] CSFvulgarFraction (grammar:fraction:gender=\"m\")"
     ],
     [
       "Action",
@@ -747,7 +747,7 @@
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
@@ -757,7 +757,7 @@
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
@@ -767,7 +767,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
@@ -777,7 +777,7 @@
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
@@ -812,12 +812,12 @@
     [
       "Action",
       "root",
-      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"female\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"female\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
@@ -857,7 +857,7 @@
     [
       "Action",
       "set-prefix-operators",
-      "[t] \"il\"; [n] self::* (grammar:!prefix); [t] \"di\""
+      "[t] \"il\"; [n] . (grammar:!prefix); [t] \"di\""
     ],
     [
       "Action",
@@ -1502,12 +1502,12 @@
     [
       "Action",
       "unit-combine-singular",
-      "[n] children/*[1]; [n] children/*[2] (grammar:singularUnit); [m] children/*[position()>2]"
+      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [m] children/*[position()>2]"
     ],
     [
       "Action",
       "unit-divide",
-      "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singularUnit)"
+      "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singular)"
     ],
     [
       "Action",
@@ -1524,9 +1524,5 @@
       "currency-prefix",
       "[n] children/*[last()]; [m] children/*[position()<last()]"
     ]
-  ],
-  "annotators": [
-    "simple",
-    "unit"
   ]
 }

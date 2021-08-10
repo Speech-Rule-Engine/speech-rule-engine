@@ -21,7 +21,6 @@
 
 import * as StoreUtil from '../rule_engine/store_util';
 import MathspeakFrenchUtil from './mathspeak_french_util';
-import MathspeakSpanishUtil from './mathspeak_spanish_util';
 import MathspeakKoreanUtil from './mathspeak_korean_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NumbersUtil from './numbers_util';
@@ -61,6 +60,7 @@ export function MathspeakRules() {
     'CSFopenRadicalSbrief': MathspeakUtil.openingRadicalSbrief,
 
     'CSFindexRadicalSbrief': MathspeakUtil.indexRadicalSbrief,
+    'CQFisSmallRoot': MathspeakUtil.smallRoot,
     // Sub- Superscript.
     'CSFsuperscriptVerbose': MathspeakUtil.superscriptVerbose,
     'CSFsuperscriptBrief': MathspeakUtil.superscriptBrief,
@@ -80,11 +80,13 @@ export function MathspeakRules() {
     'CSFrightsubscriptBrief': MathspeakUtil.subscriptBrief,
     // Over- Underscore.
     'CSFunderscript': MathspeakUtil.nestedUnderscore,
-
     'CSFoverscript': MathspeakUtil.nestedOverscore,
-    'CTFordinalCounter': NumbersUtil.ordinalCounter,
 
+    // Iteratros and counters
+    'CTFordinalCounter': NumbersUtil.ordinalCounter,
+    'CTFwordCounter': NumbersUtil.wordCounter,
     'CTFcontentIterator': StoreUtil.contentIterator,
+
     // Layout related.
     'CQFdetIsSimple': MathspeakUtil.determinantIsSimple,
 
@@ -100,8 +102,6 @@ export function MathspeakRules() {
   // Spanish
   SpeechRules.addStore(
       'es.speech.mathspeak', 'en.speech.mathspeak', {
-        'CQFisSmallRoot': MathspeakSpanishUtil.smallRoot,
-        'CTFordinalCounter': MathspeakSpanishUtil.ordinalCounter,
         'CTFunitMultipliers': UnitUtil.unitMultipliers,
         'CQFoneLeft': UnitUtil.oneLeft
       });
@@ -109,7 +109,6 @@ export function MathspeakRules() {
   // French
   SpeechRules.addStore(
       'fr.speech.mathspeak', 'en.speech.mathspeak', {
-        'CQFisSmallRoot': MathspeakFrenchUtil.smallRoot,
         'CSFbaselineVerbose': MathspeakFrenchUtil.baselineVerbose,
         'CSFbaselineBrief': MathspeakFrenchUtil.baselineBrief,
         // Tensor specific:
@@ -118,12 +117,10 @@ export function MathspeakRules() {
         'CSFleftsuperscriptBrief': MathspeakFrenchUtil.leftSuperscriptBrief,
         'CSFleftsubscriptBrief': MathspeakFrenchUtil.leftSubscriptBrief
       });
-
+      
   // Korean
   SpeechRules.addStore(
     'ko.speech.mathspeak', 'en.speech.mathspeak', {
-      //'CSFoverFracVerbose': MathspeakKoreanUtil.overFractionVerbose,
-      //'CSFoverFracSbrief': MathspeakUtil.overFractionSbrief,
       'CSFopenFracVerbose': MathspeakKoreanUtil.openingFractionVerbose,
       'CSFcloseFracVerbose': MathspeakKoreanUtil.closingFractionVerbose,
       'CSFopenFracBrief': MathspeakKoreanUtil.openingFractionBrief,

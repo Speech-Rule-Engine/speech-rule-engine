@@ -2,6 +2,7 @@
   "modality": "prefix",
   "domain": "default",
   "locale": "base",
+  "kind": "abstract",
   "rules": [
     [
       "Precondition",
@@ -28,49 +29,49 @@
       "name(../..)=\"superscript\""
     ],
     [
-      "PAlias",
+      "Alias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"subscript\""
     ],
     [
-      "PAlias",
+      "Alias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"overscore\""
     ],
     [
-      "PAlias",
+      "Alias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"underscore\""
     ],
     [
-      "PAlias",
+      "Alias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"tensor\""
     ],
     [
-      "PAlias",
+      "Alias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"limlower\""
     ],
     [
-      "PAlias",
+      "Alias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
       "name(../..)=\"limupper\""
     ],
     [
-      "PAlias",
+      "Alias",
       "base",
       "self::*",
       "count(preceding-sibling::*)=0",
@@ -101,14 +102,14 @@
       "name(../..)=\"overscore\""
     ],
     [
-      "PAlias",
+      "Alias",
       "overscript",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"limupper\""
     ],
     [
-      "PAlias",
+      "Alias",
       "overscript",
       "self::*",
       "count(preceding-sibling::*)=2",
@@ -123,14 +124,14 @@
       "name(../..)=\"underscore\""
     ],
     [
-      "PAlias",
+      "Alias",
       "underscript",
       "self::*",
       "count(preceding-sibling::*)=1",
       "name(../..)=\"limlower\""
     ],
     [
-      "PAlias",
+      "Alias",
       "underscript",
       "self::*",
       "count(preceding-sibling::*)=1",
@@ -144,7 +145,7 @@
       "name(../..)=\"sqrt\""
     ],
     [
-      "PAlias",
+      "Alias",
       "radicand",
       "self::*",
       "name(../..)=\"root\"",
@@ -251,7 +252,7 @@
       "self::row"
     ],
     [
-      "PAliases",
+      "Alias",
       "row",
       "self::line"
     ],
