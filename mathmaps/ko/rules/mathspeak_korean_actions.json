@@ -117,12 +117,12 @@
     [
       "Action",
       "fences-metric",
-      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
+      "[t] \"메트릭시작\"; [n] children/*[1]; [t] \"메트릭끝\""
     ],
     [
       "Action",
       "fences-metric-sbrief",
-      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
+      "[t] \"메트릭\"; [n] children/*[1]; [t] \"메트릭끝\""
     ],
     [
       "Action",
