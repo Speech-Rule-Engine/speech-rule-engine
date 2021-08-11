@@ -3,7 +3,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "2 파이 분의 이텔릭체 h",
+        "default": "2 파이 분의 기울인 h",
         "physics": "디랙 상수"
       }
     },
@@ -113,7 +113,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "거꾸로 된 옴 기호"
+        "default": "반전된 옴 기호"
       }
     },
     "key": "2127"
@@ -149,10 +149,10 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "거꾸로 대문자 F"
+        "default": "반전된 대문자 F"
       },
       "mathspeak": {
-        "default": "거꾸로 윗쪽 f"
+        "default": "반전된 대문자 F"
       }
     },
     "key": "2132"
@@ -170,10 +170,10 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "회전된 대문자 q"
+        "default": "회전된 대문자 Q"
       },
       "mathspeak": {
-        "default": "회전된 대문자 q"
+        "default": "회전된 대문자 Q"
       }
     },
     "key": "213A"
@@ -191,10 +191,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거꾸로된 산세리프 대문자 G"
+        "default": "반전된 산세리프 대문자 G"
       },
       "mathspeak": {
-        "default": "거꾸로된 산세리프 대문자 G"
+        "default": "반전된 산세리프 대문자 G"
       }
     },
     "key": "2141"
@@ -203,10 +203,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거꾸로된 산세리프 대문자 L"
+        "default": "반전된 산세리프 대문자 L"
       },
       "mathspeak": {
-        "default": "거꾸로된 산세리프 대문자 L"
+        "default": "반전된 산세리프 대문자 L"
       }
     },
     "key": "2142"
@@ -227,10 +227,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "거꾸로된 산세리프 대문자 Y"
+        "default": "반전된 산세리프 대문자 Y"
       },
       "mathspeak": {
-        "default": "거꾸로된 산세리프 대문자 Y"
+        "default": "반전된 산세리프 대문자 Y"
       }
     },
     "key": "2144"
