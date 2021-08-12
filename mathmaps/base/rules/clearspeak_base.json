@@ -255,64 +255,64 @@
       "set-member",
       "default",
       "self::operator",
-      "@role=\"set extended\"",
-      "text()=\"∈\" or text()=\"∊\""
+      "contains(@role, \"element\")",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-member-member",
       "SetMemberSymbol_Member",
       "self::operator",
-      "@role=\"set extended\"",
-      "text()=\"∈\" or text()=\"∊\""
+      "contains(@role, \"element\")",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-member-element",
       "SetMemberSymbol_Element",
       "self::operator",
-      "@role=\"set extended\"",
-      "text()=\"∈\" or text()=\"∊\""
+      "contains(@role, \"element\")",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-member-belongs",
       "SetMemberSymbol_Belongs",
       "self::operator",
-      "@role=\"set extended\"",
-      "text()=\"∈\" or text()=\"∊\""
+      "contains(@role, \"element\")",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-not-member",
       "default",
       "self::operator",
-      "@role=\"set extended\"",
-      "text()=\"∉\""
+      "contains(@role, \"nonelement\")",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-not-member-member",
       "SetMemberSymbol_Member",
       "self::operator",
-      "@role=\"set extended\"",
-      "text()=\"∉\""
+      "contains(@role, \"nonelement\")",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-not-member-element",
       "SetMemberSymbol_Element",
       "self::operator",
-      "@role=\"set extended\"",
-      "text()=\"∉\""
+      "contains(@role, \"nonelement\")",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-not-member-belongs",
       "SetMemberSymbol_Belongs",
       "self::operator",
-      "@role=\"set extended\"",
-      "text()=\"∉\""
+      "contains(@role, \"nonelement\")",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",

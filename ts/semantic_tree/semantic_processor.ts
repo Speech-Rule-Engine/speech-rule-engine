@@ -2402,20 +2402,18 @@ export default class SemanticProcessor {
   }
 
 
-  // TODO: (MS2.3|simons) This is a rather crude heuristic. Should be improved
-  //       once we have improved triaging of symbols.
-  //       Also needs unit tests!
   /**
    * Classifies content in the extension part of a set. Only works if we have
-   * assured that a set is indeed and exteded set.
+   * assured that a set is indeed and extended set.
    * @param set A semantic node representing an extended set.
    */
   private setExtension_(set: SemanticNode) {
     let extender = set.childNodes[0].childNodes[0];
     if (extender && extender.type === SemanticType.INFIXOP &&
         extender.contentNodes.length === 1 &&
-        extender.contentNodes[0].role === SemanticRole.ELEMENT) {
-      extender.contentNodes[0].role = SemanticRole.SETEXT;
+        SemanticPred.isMembership(extender.contentNodes[0])) {
+      extender.addAnnotation('set', 'intensional');
+      extender.contentNodes[0].addAnnotation('set', 'intensional');
     }
   }
 
