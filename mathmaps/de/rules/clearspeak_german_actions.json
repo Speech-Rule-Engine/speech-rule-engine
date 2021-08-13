@@ -71,6 +71,46 @@
     ],
     [
       "Action",
+      "member",
+      "[t] \"ist Element von\""
+    ],
+    [
+      "Action",
+      "member-element",
+      "[t] \"ist Element von\""
+    ],
+    [
+      "Action",
+      "member-in",
+      "[t] \"in\""
+    ],
+    [
+      "Action",
+      "member-belongs",
+      "[t] \"gehört zu\""
+    ],
+    [
+      "Action",
+      "not-member",
+      "[t] \"is kein Element von\""
+    ],
+    [
+      "Action",
+      "not-member-element",
+      "[t] \"is kein Element von\""
+    ],
+    [
+      "Action",
+      "not-member-in",
+      "[t] \"ist nicht in\""
+    ],
+    [
+      "Action",
+      "not-member-belongs",
+      "[t] \"gehört nicht zu\""
+    ],
+    [
+      "Action",
       "set-member",
       "[t] \"in\""
     ],

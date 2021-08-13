@@ -56,13 +56,48 @@
     ],
     [
       "Action",
-      "set-member",
+      "member",
       "[t] \"est un\""
     ],
     [
       "Action",
-      "set-member-member",
+      "member-element",
+      "[t] \"est un élément de\""
+    ],
+    [
+      "Action",
+      "member-in",
+      "[t] \"est dans\""
+    ],
+    [
+      "Action",
+      "member-belongs",
       "[t] \"appartient à\""
+    ],
+    [
+      "Action",
+      "not-member",
+      "[t] \"n'est pas un\""
+    ],
+    [
+      "Action",
+      "not-member-element",
+      "[t] \"n'est pas un élément de\""
+    ],
+    [
+      "Action",
+      "not-member-in",
+      "[t] \"n'est pas dans\""
+    ],
+    [
+      "Action",
+      "not-member-belongs",
+      "[t] \"n'appartient pas à\""
+    ],
+    [
+      "Action",
+      "set-member",
+      "[t] \"est un\""
     ],
     [
       "Action",
@@ -71,8 +106,13 @@
     ],
     [
       "Action",
-      "set-member-belongs",
+      "set-member-in",
       "[t] \"est dans\""
+    ],
+    [
+      "Action",
+      "set-member-belongs",
+      "[t] \"appartient à\""
     ],
     [
       "Action",
@@ -81,8 +121,8 @@
     ],
     [
       "Action",
-      "set-not-member-member",
-      "[t] \"n'appartient pas à\""
+      "set-not-member-in",
+      "[t] \"n'est pas dans\""
     ],
     [
       "Action",
@@ -92,7 +132,7 @@
     [
       "Action",
       "set-not-member-belongs",
-      "[t] \"n'est pas dans\""
+      "[t] \"n'appartient pas à\""
     ],
     [
       "Action",
