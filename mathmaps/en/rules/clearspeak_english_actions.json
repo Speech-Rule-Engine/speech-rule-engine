@@ -66,6 +66,56 @@
     ],
     [
       "Action",
+      "member",
+      "[t] \"is a member of\""
+    ],
+    [
+      "Action",
+      "member-member",
+      "[t] \"is a member of\""
+    ],
+    [
+      "Action",
+      "member-element",
+      "[t] \"is an element of\""
+    ],
+    [
+      "Action",
+      "member-in",
+      "[t] \"is in\""
+    ],
+    [
+      "Action",
+      "member-belongs",
+      "[t] \"belongs to\""
+    ],
+    [
+      "Action",
+      "not-member",
+      "[t] \"is not a member of\""
+    ],
+    [
+      "Action",
+      "not-member-member",
+      "[t] \"is not a member of\""
+    ],
+    [
+      "Action",
+      "not-member-element",
+      "[t] \"is not an element of\""
+    ],
+    [
+      "Action",
+      "not-member-in",
+      "[t] \"is not in\""
+    ],
+    [
+      "Action",
+      "not-member-belongs",
+      "[t] \"does not belong to\""
+    ],
+    [
+      "Action",
       "set-member",
       "[t] \"in\""
     ],
@@ -81,6 +131,11 @@
     ],
     [
       "Action",
+      "set-member-in",
+      "[t] \"in\""
+    ],
+    [
+      "Action",
       "set-member-belongs",
       "[t] \"belonging to\""
     ],
@@ -92,12 +147,17 @@
     [
       "Action",
       "set-not-member-member",
-      "[t] \"not member of\""
+      "[t] \"not a member of\""
     ],
     [
       "Action",
       "set-not-member-element",
-      "[t] \"not element of\""
+      "[t] \"not an element of\""
+    ],
+    [
+      "Action",
+      "set-not-member-in",
+      "[t] \"not in\""
     ],
     [
       "Action",

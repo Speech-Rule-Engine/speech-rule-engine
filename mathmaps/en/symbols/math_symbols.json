@@ -1398,13 +1398,6 @@
     "mappings": {
       "default": {
         "default": "element of"
-      },
-      "clearspeak": {
-        "default": "is a member of",
-        "SetMemberSymbol_Member": "is a member of",
-        "SetMemberSymbol_Element": "is an element of",
-        "SetMemberSymbol_In": "is in",
-        "SetMemberSymbol_Belongs": "belongs to"
       }
     },
     "key": "2208"
@@ -1414,13 +1407,6 @@
     "mappings": {
       "default": {
         "default": "not an element of"
-      },
-      "clearspeak": {
-        "default": "is not a member of",
-        "SetMemberSymbol_Member": "is not a member of",
-        "SetMemberSymbol_Element": "is not an element of",
-        "SetMemberSymbol_In": "is not in",
-        "SetMemberSymbol_Belongs": "does not belong to"
       }
     },
     "key": "2209"
@@ -1430,13 +1416,6 @@
     "mappings": {
       "default": {
         "default": "small element of"
-      },
-      "clearspeak": {
-        "default": "is a member of",
-        "SetMemberSymbol_Member": "is a member of",
-        "SetMemberSymbol_Element": "is an element of",
-        "SetMemberSymbol_In": "is in",
-        "SetMemberSymbol_Belongs": "belongs to"
       }
     },
     "key": "220A"
@@ -1463,7 +1442,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small contains as member"
+        "default": "contains as member"
       }
     },
     "key": "220D"

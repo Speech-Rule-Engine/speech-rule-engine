@@ -252,10 +252,80 @@
     ],
     [
       "Precondition",
+      "member",
+      "default",
+      "self::operator",
+      "@role=\"element\""
+    ],
+    [
+      "Precondition",
+      "member-member",
+      "SetMemberSymbol_Member",
+      "self::operator",
+      "@role=\"element\""
+    ],
+    [
+      "Precondition",
+      "member-element",
+      "SetMemberSymbol_Element",
+      "self::operator",
+      "@role=\"element\""
+    ],
+    [
+      "Precondition",
+      "member-in",
+      "SetMemberSymbol_In",
+      "self::operator",
+      "@role=\"element\""
+    ],
+    [
+      "Precondition",
+      "member-belongs",
+      "SetMemberSymbol_Belongs",
+      "self::operator",
+      "@role=\"element\""
+    ],
+    [
+      "Precondition",
+      "not-member",
+      "default",
+      "self::operator",
+      "@role=\"nonelement\""
+    ],
+    [
+      "Precondition",
+      "not-member-member",
+      "SetMemberSymbol_Member",
+      "self::operator",
+      "@role=\"nonelement\""
+    ],
+    [
+      "Precondition",
+      "not-member-element",
+      "SetMemberSymbol_Element",
+      "self::operator",
+      "@role=\"nonelement\""
+    ],
+    [
+      "Precondition",
+      "not-member-in",
+      "SetMemberSymbol_In",
+      "self::operator",
+      "@role=\"nonelement\""
+    ],
+    [
+      "Precondition",
+      "not-member-belongs",
+      "SetMemberSymbol_Belongs",
+      "self::operator",
+      "@role=\"nonelement\""
+    ],
+    [
+      "Precondition",
       "set-member",
       "default",
       "self::operator",
-      "contains(@role, \"element\")",
+      "@role=\"element\"",
       "contains(@annotation, \"set:intensional\")"
     ],
     [
@@ -263,7 +333,7 @@
       "set-member-member",
       "SetMemberSymbol_Member",
       "self::operator",
-      "contains(@role, \"element\")",
+      "@role=\"element\"",
       "contains(@annotation, \"set:intensional\")"
     ],
     [
@@ -271,7 +341,15 @@
       "set-member-element",
       "SetMemberSymbol_Element",
       "self::operator",
-      "contains(@role, \"element\")",
+      "@role=\"element\"",
+      "contains(@annotation, \"set:intensional\")"
+    ],
+    [
+      "Precondition",
+      "set-member-in",
+      "SetMemberSymbol_In",
+      "self::operator",
+      "@role=\"element\"",
       "contains(@annotation, \"set:intensional\")"
     ],
     [
@@ -279,7 +357,7 @@
       "set-member-belongs",
       "SetMemberSymbol_Belongs",
       "self::operator",
-      "contains(@role, \"element\")",
+      "@role=\"element\"",
       "contains(@annotation, \"set:intensional\")"
     ],
     [
@@ -287,7 +365,7 @@
       "set-not-member",
       "default",
       "self::operator",
-      "contains(@role, \"nonelement\")",
+      "@role=\"nonelement\"",
       "contains(@annotation, \"set:intensional\")"
     ],
     [
@@ -295,7 +373,7 @@
       "set-not-member-member",
       "SetMemberSymbol_Member",
       "self::operator",
-      "contains(@role, \"nonelement\")",
+      "@role=\"nonelement\"",
       "contains(@annotation, \"set:intensional\")"
     ],
     [
@@ -303,7 +381,15 @@
       "set-not-member-element",
       "SetMemberSymbol_Element",
       "self::operator",
-      "contains(@role, \"nonelement\")",
+      "@role=\"nonelement\"",
+      "contains(@annotation, \"set:intensional\")"
+    ],
+    [
+      "Precondition",
+      "set-not-member-in",
+      "SetMemberSymbol_In",
+      "self::operator",
+      "@role=\"nonelement\"",
       "contains(@annotation, \"set:intensional\")"
     ],
     [
@@ -311,7 +397,7 @@
       "set-not-member-belongs",
       "SetMemberSymbol_Belongs",
       "self::operator",
-      "contains(@role, \"nonelement\")",
+      "@role=\"nonelement\"",
       "contains(@annotation, \"set:intensional\")"
     ],
     [
