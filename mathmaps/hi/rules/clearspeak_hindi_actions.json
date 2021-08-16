@@ -71,42 +71,12 @@
     ],
     [
       "Action",
-      "set-member",
+      "member",
       "[t] \"में\""
     ],
     [
       "Action",
-      "set-member-member",
-      "[t] \"में\""
-    ],
-    [
-      "Action",
-      "set-member-element",
-      "[t] \"में\""
-    ],
-    [
-      "Action",
-      "set-member-belongs",
-      "[t] \"में\""
-    ],
-    [
-      "Action",
-      "set-not-member",
-      "[t] \"में नही\""
-    ],
-    [
-      "Action",
-      "set-not-member-member",
-      "[t] \"में नही\""
-    ],
-    [
-      "Action",
-      "set-not-member-element",
-      "[t] \"में नही\""
-    ],
-    [
-      "Action",
-      "set-not-member-belongs",
+      "not-member",
       "[t] \"में नही\""
     ],
     [
