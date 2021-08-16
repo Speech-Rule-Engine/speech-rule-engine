@@ -71,12 +71,52 @@
     ],
     [
       "Action",
-      "member",
+      "set-member",
       "[t] \"में\""
     ],
     [
       "Action",
-      "not-member",
+      "set-member-member",
+      "[t] \"में\""
+    ],
+    [
+      "Action",
+      "set-member-element",
+      "[t] \"में\""
+    ],
+    [
+      "Action",
+      "set-member-in",
+      "[t] \"में\""
+    ],
+    [
+      "Action",
+      "set-member-belongs",
+      "[t] \"में\""
+    ],
+    [
+      "Action",
+      "set-not-member",
+      "[t] \"में नही\""
+    ],
+    [
+      "Action",
+      "set-not-member-member",
+      "[t] \"में नही\""
+    ],
+    [
+      "Action",
+      "set-not-member-element",
+      "[t] \"में नही\""
+    ],
+    [
+      "Action",
+      "set-not-member-in",
+      "[t] \"में नही\""
+    ],
+    [
+      "Action",
+      "set-not-member-belongs",
       "[t] \"में नही\""
     ],
     [
@@ -372,7 +412,7 @@
     [
       "Action",
       "set-extended",
-      "[n] children/*[1]/children/*[1] (grammar:setext); [t] \"का समुच्चय\"; [t] \"जिस में\"; [n] children/*[1]/children/*[3]"
+      "[n] children/*[1]/children/*[1]; [t] \"का समुच्चय\"; [t] \"जिस में\"; [n] children/*[1]/children/*[3]"
     ],
     [
       "Action",
