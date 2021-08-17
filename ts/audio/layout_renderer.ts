@@ -66,10 +66,33 @@ export class LayoutRenderer extends XmlRenderer {
    */
   public markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
-    console.log(descrs.forEach(x => console.log(`${x.personality.layout}: ${x.text}`)));
-    let markup = AudioUtil.personalityMarkup(descrs);
     let result = [];
-    let currentOpen: EngineConst.personalityProps[] = [];
+    let content: AuditoryDescription[] = [];
+    for (let descr of descrs) {
+      if (!descr.layout) {
+        content.push(descr);
+        continue;
+      }
+      result.push(this.processContent(content));
+      content = [];
+      let value = descr.layout;
+      if (value.match(/^begin/)) {
+        result.push('<' + value.replace(/^begin/, '') + '>');
+        continue;
+      }
+      if (value.match(/^end/)) {
+        result.push('</' + value.replace(/^end/, '') + '>');
+        continue;
+      }
+      console.warn('Something went wrong with layout markup: ' + value);
+    }
+    result.push(this.processContent(content));
+    return result.join('');
+  }
+
+  private processContent(content: AuditoryDescription[]) {
+    let result = [];
+    let markup = AudioUtil.personalityMarkup(content);
     for (let i = 0, descr: AudioUtil.Markup; descr = markup[i]; i++) {
       if (descr.span) {
         result.push(this.merge(descr.span));
@@ -77,28 +100,6 @@ export class LayoutRenderer extends XmlRenderer {
       }
       if (AudioUtil.isPauseElement(descr)) {
         continue;
-      }
-      if (descr.close.length &&
-        descr.close.indexOf(EngineConst.personalityProps.LAYOUT) !== -1) {
-        result.push(this.closeTag(currentOpen.pop()));
-      }
-      if (descr.open.length &&
-        descr.open.indexOf(EngineConst.personalityProps.LAYOUT) !== -1) {
-        let value = descr[EngineConst.personalityProps.LAYOUT];
-        if (value.match(/^end/)) {
-          value = value.replace(/^end/, '');
-          markup[i + 1].close = [];
-          result.push(this.closeTag(value));
-          currentOpen.pop();
-          continue;
-        }
-        if (value.match(/^begin/)) {
-          value = value.replace(/^begin/, '');
-          markup[i + 1].close = [];
-        }
-        result.push(this.prosodyElement(EngineConst.personalityProps.LAYOUT,
-                                        value));
-        currentOpen.push(value);
       }
     }
     return result.join('');  // this.merge(result);
@@ -128,7 +129,7 @@ function applyHandler(element: Element): string {
 function setTwoDim(str: string): string {
   twodExpr = '';
   let dom = DomUtil.parseInput(`<all>${str}</all>`);
-  console.log(DomUtil.formatXml(dom.toString()));
+  // console.log(DomUtil.formatXml(dom.toString()));
   twodExpr = recurseTree(dom);
   return twodExpr;
 }
@@ -294,6 +295,7 @@ function handleRow(row: Element): row {
   let children = Array.from(row.childNodes);
   let lfence = getFence(children[0]);
   let rfence = getFence(children[children.length - 1]);
+  // TODO: Fix for empty fences.
   if (lfence) {
     children.shift();
   }

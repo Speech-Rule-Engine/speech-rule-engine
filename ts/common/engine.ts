@@ -54,7 +54,7 @@ export namespace EngineConst {
 
   export const personalityPropList: personalityProps[] = [
     personalityProps.PITCH, personalityProps.RATE, personalityProps.VOLUME,
-    personalityProps.PAUSE, personalityProps.JOIN, personalityProps.LAYOUT
+    personalityProps.PAUSE, personalityProps.JOIN
   ];
 
   /**

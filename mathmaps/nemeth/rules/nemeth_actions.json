@@ -202,7 +202,7 @@
     [
       "Action",
       "fraction",
-      "[t] CSFopenFraction; [n] children/*[1]; [t] CSFoverFraction; [n] children/*[2]; [t] CSFcloseFraction"
+      "[p] (layout:beginfraction); [t] CSFopenFraction; [n] children/*[1] (layout:numerator); [t] CSFoverFraction; [n] children/*[2] (layout:denominator); [t] CSFcloseFraction; [p] (layout:endfraction)"
     ],
     [
       "Action",

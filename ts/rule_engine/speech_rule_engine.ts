@@ -455,6 +455,7 @@ export class SpeechRuleEngine {
           descrs[0]['annotation'] = attributes['annotation'];
         }
       }
+      this.addLayout(descrs, attributes, multi);
       if (component.grammar) {
         Grammar.getInstance().popState();
       }
@@ -514,6 +515,32 @@ export class SpeechRuleEngine {
       }
     }
     return result;
+  }
+
+
+  /**
+   * Adds layout annotations to the auditory descriptions
+   * @param descrs The auditory descriptions.
+   * @param props The properties.
+   * @param _multi Is is a multi node component. Currently ignored.
+   */
+  private addLayout(descrs: AuditoryDescription[],
+                    props: {[key: string]: string}, _multi: boolean) {
+    let layout = props.layout;
+    if (!layout) {
+      return;
+    }
+    if (layout.match(/^begin/)) {
+      descrs.unshift(new AuditoryDescription({text: '', layout: layout}));
+      return;
+    }
+    if (layout.match(/^end/)) {
+      descrs.push(new AuditoryDescription({text: '', layout: layout}));
+      return;
+    }
+    descrs.unshift(new AuditoryDescription(
+      {text: '', layout: `begin${layout}`}));
+    descrs.push(new AuditoryDescription({text: '', layout: `end${layout}`}));
   }
 
 
