@@ -13,7 +13,7 @@
     "pretest": "git submodule update --remote --merge; npm run compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
     "compile": "npx tsc",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; node --expose-gc ./node_modules/.bin/jest ",
-    "prepublishOnly": "make clean; make publish; npx tsc; npx webpack",
+    "prepublish": "make clean; make publish; npx tsc; npx webpack",
     "build": "make all"
   },
   "maintainers": [
