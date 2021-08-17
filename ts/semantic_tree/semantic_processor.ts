@@ -193,10 +193,51 @@ export default class SemanticProcessor {
    */
   public static classifyTable(table: SemanticNode) {
     let columns = SemanticProcessor.computeColumns_(table);
-    SemanticProcessor.classifyByColumns_(table, columns, SemanticRole.EQUALITY) ||
-        SemanticProcessor.classifyByColumns_(
-            table, columns, SemanticRole.INEQUALITY, [SemanticRole.EQUALITY]) ||
-        SemanticProcessor.classifyByColumns_(table, columns, SemanticRole.ARROW);
+    SemanticProcessor.classifyByColumns_(
+      table, columns, SemanticRole.EQUALITY) ||
+      SemanticProcessor.classifyByColumns_(
+        table, columns, SemanticRole.INEQUALITY, [SemanticRole.EQUALITY]) ||
+      SemanticProcessor.classifyByColumns_(
+        table, columns, SemanticRole.ARROW) ||
+      SemanticProcessor.detectCaleyTable(table);
+  }
+
+
+  /**
+   * Classifies a Cayley table.
+   * @param table The table.
+   * @return True if it is a Cayley table.
+   */
+  private static detectCaleyTable(table: SemanticNode) {
+    if (!table.mathmlTree) {
+      return false;
+    }
+    const tree = table.mathmlTree;
+    const cl = tree.getAttribute('columnlines');
+    const rl = tree.getAttribute('rowlines');
+    if (!cl || !rl) {
+      return false;
+    }
+    if (SemanticProcessor.cayleySpacing(cl) &&
+      SemanticProcessor.cayleySpacing(rl)) {
+      table.role = SemanticRole.CAYLEY;
+      return true;
+    }
+    return false;
+  }
+
+
+  /**
+   * Checks for the table if it has bars between first and second column and
+   * first and second row, only.
+   *
+   * @param lines The lines attribute string.
+   * @return True if the lines attribute indicate a Cayley table.
+   */
+  private static cayleySpacing(lines: string): boolean {
+    const list = lines.split(' ');
+    return (list[0] === 'solid' || list[0] === 'dashed') &&
+      list.slice(1).every(x => x === 'none');
   }
 
 

@@ -246,6 +246,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
     }
     let newNode = this.getFactory().makeBranchNode(
         SemanticType.TABLE, this.parseList(children), []);
+    newNode.mathmlTree = node;
     SemanticProcessor.tableToMultiline(newNode);
     return newNode;
   }

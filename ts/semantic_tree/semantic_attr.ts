@@ -277,6 +277,7 @@ export const enum SemanticRole {
   CASES = 'cases',
 
   TABLE = 'table',
+  CAYLEY = 'cayley',
   // Inference Roles
   PROOF = 'proof',
   LEFT = 'left',
