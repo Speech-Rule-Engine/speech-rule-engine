@@ -20,6 +20,7 @@
  */
 
 
+import {Debugger} from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
 import {EngineConst} from '../common/engine';
 import * as AudioUtil from './audio_util';
@@ -112,6 +113,8 @@ export class LayoutRenderer extends XmlRenderer {
 let twodExpr = '';
 
 let handlers: {[key: string]: Function} = {
+  TABLE: handleTable,
+  CASES: handleCases,
   CAYLEY: handleCayley,
   MATRIX: handleMatrix,
   CELL: recurseTree,
@@ -130,7 +133,7 @@ function applyHandler(element: Element): string {
 function setTwoDim(str: string): string {
   twodExpr = '';
   let dom = DomUtil.parseInput(`<all>${str}</all>`);
-  // console.log(DomUtil.formatXml(dom.toString()));
+  Debugger.getInstance().output(DomUtil.formatXml(dom.toString()));
   twodExpr = recurseTree(dom);
   return twodExpr;
 }
@@ -248,7 +251,7 @@ function assembleRows(matrix: Element): row[] {
 }
 
 
-  // Compute max height and width
+// Compute max height and width
 function getMaxParameters(mat: row[]): [number, number[]] {
   let maxHeight = mat.reduce((max, x) => Math.max(x.height, max), 0);
   let maxWidth = [];
@@ -279,8 +282,8 @@ function combineCells(mat: row[], maxWidth: number[]): row[] {
 }
 
 
+// Combine rows into matrix
 function combineRows(mat: row[], maxHeight: number): string {
-  // Combine rows into matrix
   // If all rows are of heigth 1 assemble them directly.
   if (maxHeight === 1) {
     return mat.map(
@@ -307,6 +310,31 @@ function combineRows(mat: row[], maxHeight: number): string {
 
 function handleMatrix(matrix: Element): string {
   let mat = assembleRows(matrix);
+  let [maxHeight, maxWidth] = getMaxParameters(mat);
+  mat = combineCells(mat, maxWidth);
+  return combineRows(mat, maxHeight);
+}
+
+
+function handleTable(matrix: Element): string {
+  let mat = assembleRows(matrix);
+  mat.forEach(row => {
+    row.cells = row.cells.slice(1).slice(0, -1);
+    row.width = row.width.slice(1).slice(0, -1);
+  });
+  let [maxHeight, maxWidth] = getMaxParameters(mat);
+  mat = combineCells(mat, maxWidth);
+  return combineRows(mat, maxHeight);
+}
+
+
+// TODO: Check with Michael why the number indicator is omitted (e.g., 16.4-1)
+function handleCases(matrix: Element): string {
+  let mat = assembleRows(matrix);
+  mat.forEach(row => {
+    row.cells = row.cells.slice(0, -1);
+    row.width = row.width.slice(0, -1);
+  });
   let [maxHeight, maxWidth] = getMaxParameters(mat);
   mat = combineCells(mat, maxWidth);
   return combineRows(mat, maxHeight);

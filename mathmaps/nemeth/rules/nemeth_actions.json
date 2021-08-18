@@ -412,12 +412,12 @@
     [
       "Action",
       "layout",
-      "[p] (layout:beginmatrix); [m] children/* (separator:\"⠀\", join:\"\"); [p] (layout:endmatrix)"
+      "[m] children/* (separator:\"⠀\", join:\"\", layout:table)"
     ],
     [
       "Action",
       "cases",
-      "[p] (layout:beginmatrix); [n] ../../content/*[1] (grammar:enlargeFence, layout:fence); [m] children/* (separator:\"⠀\"); [t] \"⠐\"; [p] (layout:endmatrix)"
+      "[p] (layout:begincases); [m] children/* (separator:\"⠀\"); [t] \"⠐\"; [p] (layout:endcases)"
     ],
     [
       "Action",
