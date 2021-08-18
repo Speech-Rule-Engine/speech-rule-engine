@@ -112,6 +112,7 @@ export class LayoutRenderer extends XmlRenderer {
 let twodExpr = '';
 
 let handlers: {[key: string]: Function} = {
+  CAYLEY: handleCayley,
   MATRIX: handleMatrix,
   CELL: recurseTree,
   FENCE: recurseTree,
@@ -232,15 +233,22 @@ declare type row = {
   width: number[]
 };
 
-function handleMatrix(matrix: Element): string {
+
+function handleCayley(matrix: Element): string {
+  return handleMatrix(matrix, true);
+}
+
+function handleMatrix(matrix: Element, cayley: boolean = false): string {
   let children = Array.from(matrix.childNodes);
   let mat = [];
+  // Clean row elements and assemble row structure.
   for (let row of children) {
     if (row.nodeType !== DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
-    mat.push(handleRow(row as Element));
+    mat.push(handleRow(row as Element, cayley));
   }
+  // Compute max height and width
   let maxHeight = mat.reduce((max, x) => Math.max(x.height, max), 0);
   let maxWidth = [];
   for (let i = 0; i < mat[0].width.length; i++) {
@@ -248,6 +256,7 @@ function handleMatrix(matrix: Element): string {
       mat.map(x => x.width[i]).reduce((max, x) => Math.max(max, x), 0)
     );
   }
+  // Pad cells and assemble rows.
   let newMat = [];
   for (let row of mat) {
     if (row.height === 0) {
@@ -261,11 +270,14 @@ function handleMatrix(matrix: Element): string {
     newMat.push(row);
   }
   mat = newMat;
+  // Combine rows into matrix
+  // If all rows are of heigth 1 assemble them directly.
   if (maxHeight === 1) {
     return mat.map(
       row => row.lfence + row.cells.join(row.sep) + row.rfence).join('\n');
   }
   let result = [];
+  // Otherwise insert extra empty rows if necessary
   for (let row of mat) {
     let sep = verticalArrange(row.sep, row.height);
     let str = row.cells.shift();
@@ -291,7 +303,7 @@ function verticalArrange(char: string, height: number) {
   return str.slice(0, -1);
 }
 
-function handleRow(row: Element): row {
+function handleRow(row: Element, cayley: boolean = false): row {
   let children = Array.from(row.childNodes);
   let lfence = getFence(children[0]);
   let rfence = getFence(children[children.length - 1]);
@@ -312,7 +324,8 @@ function handleRow(row: Element): row {
     let result = applyHandler(child as Element);
     cells.push(result);
   }
-  return {lfence: lfence, rfence: rfence, sep: sep, cells: cells,
+  return {lfence: lfence, rfence: rfence, sep: sep + (cayley ? sep : ''),
+          cells: cells,
           height: cells.reduce((max, x) => Math.max(strHeight(x), max), 0),
           width: cells.map(strWidth)
          };

@@ -776,6 +776,12 @@
     ],
     [
       "Precondition",
+      "cayley",
+      "default",
+      "self::table[@role=\"cayley\"]"
+    ],
+    [
+      "Precondition",
       "cases",
       "default",
       "self::cases"

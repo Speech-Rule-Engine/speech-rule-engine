@@ -377,7 +377,7 @@
     [
       "Action",
       "matrix",
-      "[p] (layout:beginmatrix); [m] children/* (separator:\"⠀\", join:\"\"); [p] (layout:endmatrix);"
+      "[m] children/* (separator:\"⠀\", join:\"\", layout:matrix)"
     ],
     [
       "Action",
@@ -403,6 +403,11 @@
       "Action",
       "empty-cell",
       "[t] \"⠀\" (pause: 300)"
+    ],
+    [
+      "Action",
+      "cayley",
+      "[m] children/* (separator:\"⠀\", join:\"\", layout:cayley)"
     ],
     [
       "Action",

@@ -489,7 +489,7 @@ export class SpeechRuleEngine {
       context: SpeechRuleContext, nodes: Element[], sepFunc: string,
       sepStr: string, ctxtFunc: string,
       ctxtStr: string): AuditoryDescription[] {
-    if (nodes == []) {
+    if (nodes === []) {
       return [];
     }
     let sep = sepStr || '';
@@ -524,8 +524,9 @@ export class SpeechRuleEngine {
    * @param props The properties.
    * @param _multi Is is a multi node component. Currently ignored.
    */
-  private addLayout(descrs: AuditoryDescription[],
-                    props: {[key: string]: string}, _multi: boolean) {
+  private addLayout(
+    descrs: AuditoryDescription[], props: {[key: string]: string},
+    _multi: boolean) {
     let layout = props.layout;
     if (!layout) {
       return;
@@ -554,8 +555,8 @@ export class SpeechRuleEngine {
    * @return The modified array.
    */
   private addPersonality_(
-      descrs: AuditoryDescription[], props: {[key: string]: string}, multi: boolean,
-      node: Node): AuditoryDescription[] {
+    descrs: AuditoryDescription[], props: {[key: string]: string},
+    multi: boolean, node: Node): AuditoryDescription[] {
     let personality: {[key: string]: string|number} = {};
     let pause = null;
     for (let key of EngineConst.personalityPropList) {
@@ -568,7 +569,7 @@ export class SpeechRuleEngine {
       //   personality[sre.Engine.personalityProps[key]] = numeral;
       // }
       let realValue = isNaN(numeral) ?
-          value.charAt(0) == '"' ? value.slice(1, -1) : value :
+          value.charAt(0) === '"' ? value.slice(1, -1) : value :
           numeral;
       if (key === EngineConst.personalityProps.PAUSE) {
         pause = realValue;
