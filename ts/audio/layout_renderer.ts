@@ -234,21 +234,22 @@ declare type row = {
 };
 
 
-function handleCayley(matrix: Element): string {
-  return handleMatrix(matrix, true);
-}
-
-function handleMatrix(matrix: Element, cayley: boolean = false): string {
+// Clean row elements and assemble row structure.
+function assembleRows(matrix: Element): row[] {
   let children = Array.from(matrix.childNodes);
   let mat = [];
-  // Clean row elements and assemble row structure.
   for (let row of children) {
     if (row.nodeType !== DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
-    mat.push(handleRow(row as Element, cayley));
+    mat.push(handleRow(row as Element));
   }
+  return mat;
+}
+
+
   // Compute max height and width
+function getMaxParameters(mat: row[]): [number, number[]] {
   let maxHeight = mat.reduce((max, x) => Math.max(x.height, max), 0);
   let maxWidth = [];
   for (let i = 0; i < mat[0].width.length; i++) {
@@ -256,7 +257,12 @@ function handleMatrix(matrix: Element, cayley: boolean = false): string {
       mat.map(x => x.width[i]).reduce((max, x) => Math.max(max, x), 0)
     );
   }
-  // Pad cells and assemble rows.
+  return [maxHeight, maxWidth];
+}
+
+
+// Pad cells and assemble rows.
+function combineCells(mat: row[], maxWidth: number[]): row[] {
   let newMat = [];
   for (let row of mat) {
     if (row.height === 0) {
@@ -269,7 +275,11 @@ function handleMatrix(matrix: Element, cayley: boolean = false): string {
     row.cells = newCells;
     newMat.push(row);
   }
-  mat = newMat;
+  return newMat;
+}
+
+
+function combineRows(mat: row[], maxHeight: number): string {
   // Combine rows into matrix
   // If all rows are of heigth 1 assemble them directly.
   if (maxHeight === 1) {
@@ -294,6 +304,36 @@ function handleMatrix(matrix: Element, cayley: boolean = false): string {
   return result.slice(0, -1).join('\n');
 }
 
+
+function handleMatrix(matrix: Element): string {
+  let mat = assembleRows(matrix);
+  let [maxHeight, maxWidth] = getMaxParameters(mat);
+  mat = combineCells(mat, maxWidth);
+  return combineRows(mat, maxHeight);
+}
+
+
+function handleCayley(matrix: Element): string {
+  let mat = assembleRows(matrix);
+  mat.forEach(row => {
+    row.cells = row.cells.slice(1).slice(0, -1);
+    row.width = row.width.slice(1).slice(0, -1);
+    row.sep = row.sep + row.sep;
+  });
+  let [maxHeight, maxWidth] = getMaxParameters(mat);
+  let bar = {
+    lfence: '', rfence: '',
+    cells: maxWidth.map(x => '⠐' + new Array(x).join('⠒')),
+    width: maxWidth,
+    height: 1,
+    sep: mat[0].sep
+  };
+  mat.splice(1, 0, bar);
+  mat = combineCells(mat, maxWidth);
+  return combineRows(mat, maxHeight);
+}
+
+
 function verticalArrange(char: string, height: number) {
   let str = '';
   while (height) {
@@ -303,7 +343,7 @@ function verticalArrange(char: string, height: number) {
   return str.slice(0, -1);
 }
 
-function handleRow(row: Element, cayley: boolean = false): row {
+function handleRow(row: Element): row {
   let children = Array.from(row.childNodes);
   let lfence = getFence(children[0]);
   let rfence = getFence(children[children.length - 1]);
@@ -324,7 +364,7 @@ function handleRow(row: Element, cayley: boolean = false): row {
     let result = applyHandler(child as Element);
     cells.push(result);
   }
-  return {lfence: lfence, rfence: rfence, sep: sep + (cayley ? sep : ''),
+  return {lfence: lfence, rfence: rfence, sep: sep,
           cells: cells,
           height: cells.reduce((max, x) => Math.max(strHeight(x), max), 0),
           width: cells.map(strWidth)
