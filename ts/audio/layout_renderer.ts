@@ -119,7 +119,10 @@ let handlers: {[key: string]: Function} = {
   MATRIX: handleMatrix,
   CELL: recurseTree,
   FENCE: recurseTree,
-  ROW: recurseTree
+  ROW: recurseTree,
+  FRACTION: handleFraction,
+  NUMERATOR: handleFractionPart,
+  DENOMINATOR: handleFractionPart
 };
 
 
@@ -156,7 +159,15 @@ function combineContent(str1: string, str2: string): string {
   return result.join('\n');
 }
 
-function recurseTree(dom: Element) {
+
+/**
+ * Recurses the children of the given node by applying handlers and assembling a
+ * layout element.
+ *
+ * @param dom A node.
+ * @return The resulting layout element.
+ */
+function recurseTree(dom: Element): string {
   let result = '';
   for (let child of Array.from(dom.childNodes)) {
     if (child.nodeType === DomUtil.NodeType.TEXT_NODE) {
@@ -375,7 +386,6 @@ function handleRow(row: Element): row {
   let children = Array.from(row.childNodes);
   let lfence = getFence(children[0]);
   let rfence = getFence(children[children.length - 1]);
-  // TODO: Fix for empty fences.
   if (lfence) {
     children.shift();
   }
@@ -405,4 +415,49 @@ function getFence(node: Node): string {
     return applyHandler(node as Element);
   }
   return '';
+}
+
+
+function centerCell(cell: string, width: number): string {
+  let cw = strWidth(cell);
+  let center = (width - cw) / 2;
+  let [lpad, rpad] = Math.floor(center) === center ? [center, center] :
+    [Math.floor(center), Math.ceil(center)];
+  let lines = cell.split(/\r\n|\r|\n/);
+  let result = [];
+  let [lstr, rstr] = [new Array(lpad + 1).join('⠀'),
+                      new Array(rpad + 1).join('⠀')];
+  for (let line of lines) {
+    result.push(lstr + line + rstr);
+  }
+  return result.join('\n');
+}
+
+
+function handleFraction(frac: Node): string {
+  let [open, num, , den, close] = Array.from(frac.childNodes);
+  let numerator = applyHandler(num as Element);
+  let denominator = applyHandler(den as Element);
+  let nwidth = strWidth(numerator);
+  let dwidth = strWidth(denominator);
+  let maxWidth = Math.max(nwidth, dwidth);
+  let bar = open + new Array(maxWidth + 1).join('⠒') + close;
+  maxWidth = bar.length;
+  return `${centerCell(numerator, maxWidth)}\n${bar}\n`
+    + `${centerCell(denominator, maxWidth)}`;
+}
+
+
+function handleFractionPart(prt: Element): string {
+  let fchild = prt.firstChild as Element;
+  let content = recurseTree(prt);
+  if (fchild && fchild.nodeType === DomUtil.NodeType.ELEMENT_NODE) {
+    if (DomUtil.tagName(fchild) === 'ENGLISH') {
+      return '⠰' + content;
+    }
+    if (DomUtil.tagName(fchild) === 'NUMBER') {
+      return '⠼' + content;
+    }
+  }
+  return content;
 }

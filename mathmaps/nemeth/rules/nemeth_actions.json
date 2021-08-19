@@ -62,12 +62,12 @@
     [
       "Action",
       "number-indicator",
-      "[t] \"⠼\"; [n] text() (pause:10)"
+      "[t] \"⠼\" (layout:numberIndicator); [n] text() (pause:10)"
     ],
     [
       "Action",
       "number",
-      "[n] text()"
+      "[n] text() (layout:number)"
     ],
     [
       "Action",
@@ -98,6 +98,11 @@
       "Action",
       "identifier",
       "[n] text()"
+    ],
+    [
+      "Action",
+      "english-letter",
+      "[n] text() (layout:english)"
     ],
     [
       "Action",

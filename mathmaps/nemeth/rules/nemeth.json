@@ -176,6 +176,13 @@
     ],
     [
       "Precondition",
+      "english-letter",
+      "default",
+      "self::identifier",
+      "@role=\"latinletter\""
+    ],
+    [
+      "Precondition",
       "prefix",
       "default",
       "self::prefixop"
