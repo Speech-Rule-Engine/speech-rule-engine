@@ -329,6 +329,7 @@ function handleMatrix(matrix: Element): string {
 
 function handleTable(matrix: Element): string {
   let mat = assembleRows(matrix);
+  // TODO: Adapt this so cells of length one will be retained!
   mat.forEach(row => {
     row.cells = row.cells.slice(1).slice(0, -1);
     row.width = row.width.slice(1).slice(0, -1);
