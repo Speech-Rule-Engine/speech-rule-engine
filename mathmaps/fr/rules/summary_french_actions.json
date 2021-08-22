@@ -176,7 +176,7 @@
     [
       "Action",
       "abstr-multiplication",
-      "[t] \"produit avec\"; [t] count(./children/*); [t] \"facteurs\"; [n] . (grammar:gender=\"m\");"
+      "[t] \"produit avec\"; [t] count(./children/*); [t] \"facteurs\"; [n] . (grammar:gender=\"m\")"
     ],
     [
       "Action",
@@ -251,7 +251,7 @@
     [
       "Action",
       "abstr-matrix",
-      "[t] \"matrice\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [n] . (grammar:gender=\"f\")"
+      "[t] \"matrice\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [n] . (grammar:gender=\"f\")"
     ],
     [
       "Action",
@@ -266,7 +266,7 @@
     [
       "Action",
       "abstr-cases",
-      "[t] \"déclaration de cas\";[t] \"avec\"; [t] count(children/*); [t] \"cas\"; [n] . (grammar:gender=\"f\")"
+      "[t] \"déclaration de cas\"; [t] \"avec\"; [t] count(children/*); [t] \"cas\"; [n] . (grammar:gender=\"f\")"
     ],
     [
       "Action",
@@ -341,7 +341,7 @@
     [
       "Action",
       "abstr-table",
-      "[t] \"table avec\"; [t] count(children/*); [t] \"lignes et\";[t] count(children/*[1]/children/*); [t] \"colonnes\"; [n] . (grammar:gender=\"f\")"
+      "[t] \"table avec\"; [t] count(children/*); [t] \"lignes et\"; [t] count(children/*[1]/children/*); [t] \"colonnes\"; [n] . (grammar:gender=\"f\")"
     ],
     [
       "Action",
@@ -351,7 +351,7 @@
     [
       "Action",
       "abstr-row",
-      "[t] \"dans\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"avec\";[t] count(children/*); [t] \"colonnes\"; [n] . (grammar:gender=\"f\")"
+      "[t] \"dans\"; [t] @role (grammar:localRole); [t] count(preceding-sibling::..); [t] \"avec\"; [t] count(children/*); [t] \"colonnes\"; [n] . (grammar:gender=\"f\")"
     ],
     [
       "Action",

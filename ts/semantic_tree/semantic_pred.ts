@@ -649,3 +649,17 @@ export function elligibleRightNeutral(fence: SemanticNode): boolean {
   }
   return true;
 }
+
+
+/**
+ * Tests if the node is a membership relation, i.e., has some
+ * element/non-element role.
+ *
+ * @param element The node to test.
+ * @return True if the role is an element role.
+ */
+export function isMembership(element: SemanticNode): boolean {
+  return [SemanticRole.ELEMENT, SemanticRole.NONELEMENT,
+          SemanticRole.REELEMENT, SemanticRole.RENONELEMENT].
+    includes(element.role);
+}

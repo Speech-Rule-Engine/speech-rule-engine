@@ -7,37 +7,12 @@
     [
       "Action",
       "collapsed",
-      "[n] . (engine:modality=summary,grammar:collapsed)"
+      "[n] . (engine:modality=summary, grammar:collapsed)"
     ],
     [
       "Action",
       "font",
-      "[n] . (grammar:ignoreFont=@font);  [t] @font (grammar:localFont,pause:short)"
-    ],
-    [
-      "Action",
-      "font-identifier",
-      "[n] . (grammar:ignoreFont=@font);  [t] @font (grammar:localFont,pause:short)"
-    ],
-    [
-      "Action",
-      "punctuation-lr",
-      "[p] (pause:short); [n] text() (pause:short)"
-    ],
-    [
-      "Action",
-      "punctuation",
-      "[n] text()"
-    ],
-    [
-      "Action",
-      "punctuation-l",
-      "[p] (pause:short); [n] text()"
-    ],
-    [
-      "Action",
-      "punctuation-r",
-      "[n] text() (pause:short)"
+      "[n] . (grammar:ignoreFont=@font); [t] @font (pause:short, grammar:localFont)"
     ],
     [
       "Action",
@@ -81,6 +56,56 @@
     ],
     [
       "Action",
+      "member",
+      "[t] \"appartiene ad\""
+    ],
+    [
+      "Action",
+      "member-member",
+      "[t] \"membro di\""
+    ],
+    [
+      "Action",
+      "member-element",
+      "[t] \"elemento di\""
+    ],
+    [
+      "Action",
+      "member-in",
+      "[t] \"in\""
+    ],
+    [
+      "Action",
+      "member-belongs",
+      "[t] \"appartiene ad\""
+    ],
+    [
+      "Action",
+      "not-member",
+      "[t] \"non appartiene ad\""
+    ],
+    [
+      "Action",
+      "not-member-member",
+      "[t] \"non membro di\""
+    ],
+    [
+      "Action",
+      "not-member-element",
+      "[t] \"non elemento di\""
+    ],
+    [
+      "Action",
+      "not-member-in",
+      "[t] \"non in\""
+    ],
+    [
+      "Action",
+      "not-member-belongs",
+      "[t] \"non appartiene ad\""
+    ],
+    [
+      "Action",
       "set-member",
       "[t] \"in\""
     ],
@@ -121,116 +146,6 @@
     ],
     [
       "Action",
-      "prime",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "degrees",
-      "[m] children/* (grammar:degree)"
-    ],
-    [
-      "Action",
-      "feet",
-      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "foot",
-      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "inches",
-      "[n] children/*[1]; [t] \"in\" (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "inch",
-      "[n] children/*[1]; [t] \"in\" (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "minutes",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "minute",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "seconds",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "second",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "degrees-angle",
-      "[t] text() (grammar:annotation=\"unit\":translate:plural, pause:short)"
-    ],
-    [
-      "Action",
-      "degree-angle",
-      "[t] text() (grammar:annotation=\"unit\":translate, pause:short)"
-    ],
-    [
-      "Action",
-      "minutes-angle",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "minute-angle",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "seconds-angle",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
-    ],
-    [
-      "Action",
-      "second-angle",
-      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "feet-length",
-      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate:plural, pause:short)"
-    ],
-    [
-      "Action",
-      "foot-length",
-      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate, pause:short)"
-    ],
-    [
-      "Action",
-      "inches-length",
-      "[n] children/*[1]; ; [t] \"in\" (grammar:annotation=\"unit\":translate:plural, pause:short)"
-    ],
-    [
-      "Action",
-      "inch-length",
-      "[n] children/*[1]; ; [t] \"in\" (grammar:annotation=\"unit\":translate, pause:short)"
-    ],
-    [
-      "Action",
-      "punctuated",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "function",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "appl",
       "[n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
@@ -258,11 +173,6 @@
       "Action",
       "function-prefix-det",
       "[n] children/*[1]; [t] \"della\"; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "binary-operation",
-      "[n] . (grammar:impliedTimes, pause:short)"
     ],
     [
       "Action",
@@ -301,16 +211,6 @@
     ],
     [
       "Action",
-      "function-ln-natlog",
-      "[n] . (grammar:NatLog)"
-    ],
-    [
-      "Action",
-      "function-ln-natlog-pause",
-      "[n] . (grammar:NatLog, pause:short)"
-    ],
-    [
-      "Action",
       "function-prefix-as-exp",
       "[n] children/*[1]; [t] \"di\" (pause:short); [n] children/*[2] (pause:short)"
     ],
@@ -327,7 +227,7 @@
     [
       "Action",
       "function-prefix-inverse",
-      "[p] (pause:short); [t] \"inverso del\";  [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"inverso del\"; [n] children/*[1]/children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -376,11 +276,6 @@
     ],
     [
       "Action",
-      "function-no-inverse",
-      "[n] . (grammar:functions_none)"
-    ],
-    [
-      "Action",
       "superscript",
       "[n] children/*[1]; [t] \"elevato all'esponente\" (pause:short); [n] children/*[2] (pause:short); [t] \"fine esponente\" (pause:short)"
     ],
@@ -412,7 +307,7 @@
     [
       "Action",
       "superscript-ordinal-number",
-      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (grammar:ordinal, pause:short)"
+      "[n] children/*[1]; [t] \"alla\"; [n] children/*[2] (pause:short, grammar:ordinal)"
     ],
     [
       "Action",
@@ -447,7 +342,7 @@
     [
       "Action",
       "superscript-power",
-      "[n] children/*[1]; [t] \"elevato all'esponente\"; [n] children/*[2] (grammar:afterPower, pause:short)"
+      "[n] children/*[1]; [t] \"elevato all'esponente\"; [n] children/*[2] (pause:short, grammar:afterPower)"
     ],
     [
       "Action",
@@ -506,61 +401,6 @@
     ],
     [
       "Action",
-      "paren-simple",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
-      "paren-simple-exp",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
-      "paren-simple-nested-func",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
-      "paren-simple-nested-func-no-bracket",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
-      "fences-open-close",
-      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
-    ],
-    [
-      "Action",
-      "paren-simple-nested-func-default",
-      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
-    ],
-    [
-      "Action",
-      "paren-simple-nested-func-none",
-      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
-    ],
-    [
-      "Action",
-      "fence-silent",
-      "[p] (pause:short); [n] children/*[1] (pause:short)"
-    ],
-    [
-      "Action",
-      "fences-open-close-none",
-      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
-    ],
-    [
-      "Action",
-      "fence-nesting",
-      "[n] text() (grammar:insertNesting=CSFnestingDepth)"
-    ],
-    [
-      "Action",
-      "fence-no-nesting",
-      "[n] text()"
-    ],
-    [
-      "Action",
       "fences-points",
       "[t] \"punto con coordinate\"; [n] children/*[1]"
     ],
@@ -601,11 +441,6 @@
     ],
     [
       "Action",
-      "interval-open-inf-lr",
-      ""
-    ],
-    [
-      "Action",
       "interval-closed-open-inf",
       "[t] \"che include\"; [n] children/*[1]/children/*[1]"
     ],
@@ -613,11 +448,6 @@
       "Action",
       "interval-open-closed-inf",
       "[t] \"che include\"; [n] children/*[1]/children/*[3]"
-    ],
-    [
-      "Action",
-      "paren-nested-embellished-funcs",
-      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -638,11 +468,6 @@
       "Action",
       "set-extended-woall",
       "[t] \"l'insieme di\"; [n] children/*[1]/children/*[1]; [t] \"tale che\"; [n] children/*[1]/children/*[3]"
-    ],
-    [
-      "Action",
-      "set-collection-silentbracket",
-      "[n] children/*[1]"
     ],
     [
       "Action",
@@ -742,42 +567,42 @@
     [
       "Action",
       "sqrt",
-      "[t] \"radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:short); [t] \"radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:short); [t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"meno radice quadrata di\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"più radice quadrata di\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -802,22 +627,22 @@
     [
       "Action",
       "cubic",
-      "[t] \"radice cubica di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[t] \"radice cubica di\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"radice cubica di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"radice cubica di\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root",
-      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [t] \"radice\"; [n] children/*[1] (grammar:ordinal:gender=\"f\"); [t] \"di\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -846,23 +671,8 @@
     ],
     [
       "Action",
-      "prefix",
-      "[m] content/* (grammar:prefix); [n] children/*[1]"
-    ],
-    [
-      "Action",
-      "postfix",
-      "[n] children/*[1]; [m] content/* (grammar:postfix)"
-    ],
-    [
-      "Action",
       "set-prefix-operators",
       "[t] \"il\"; [n] . (grammar:!prefix); [t] \"di\""
-    ],
-    [
-      "Action",
-      "binary-operation-default",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
     ],
     [
       "Action",
@@ -871,73 +681,8 @@
     ],
     [
       "Action",
-      "binary-operation-moreimpliedtimes",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "binary-operation-pause",
-      "[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "binary-operation-pause-r",
-      "[m] children/* (sepFunc:CTFcontentIterator, pause:short)"
-    ],
-    [
-      "Action",
-      "binary-operation-pause-lr",
-      "[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator, pause:short)"
-    ],
-    [
-      "Action",
-      "implicit-times",
-      "[p] (pause:short)"
-    ],
-    [
-      "Action",
-      "implicit-times-default",
-      ""
-    ],
-    [
-      "Action",
-      "implicit-times-simple",
-      "[n] text()"
-    ],
-    [
-      "Action",
-      "implicit-times-moreimpliedtimes",
-      "[n] text()"
-    ],
-    [
-      "Action",
-      "implicit-times-none",
-      ""
-    ],
-    [
-      "Action",
-      "binary-operation-simple",
-      "[m] children/* (rate:\"0.5\", pause:short)"
-    ],
-    [
-      "Action",
-      "simple-in-fraction",
-      "[n] . (rate:\"0.5\", grammar:inFrac)"
-    ],
-    [
-      "Action",
       "operators-after-power",
       "[m] children/* (rate:\"0.5\")"
-    ],
-    [
-      "Action",
-      "relseq",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
-    ],
-    [
-      "Action",
-      "multrel",
-      "[m] children/* (sepFunc:CTFcontentIterator)"
     ],
     [
       "Action",
@@ -963,31 +708,6 @@
       "Action",
       "complex-numbers",
       "[t] \"i numeri complessi\""
-    ],
-    [
-      "Action",
-      "natural-numbers-super",
-      "[t] \"n\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "integers-super",
-      "[t] \"z\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "rational-numbers-super",
-      "[t] \"q\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "real-numbers-super",
-      "[t] \"r\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
-    ],
-    [
-      "Action",
-      "complex-numbers-super",
-      "[t] \"c\" (join:\"-\"); [n] children/*[2] (grammar:numbers2alpha)"
     ],
     [
       "Action",
@@ -1036,13 +756,23 @@
     ],
     [
       "Action",
+      "fences-metric",
+      "[p] (pause:short); [t] \"metrica di\" (span:.); [n] children/*[1] (pause:short)"
+    ],
+    [
+      "Action",
+      "fences-metric-absend",
+      "[p] (pause:short); [t] \"metrica di\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"fine metrica\" (span:content/*[1], pause:short)"
+    ],
+    [
+      "Action",
       "matrix",
       "[t] \"matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", pause:long)"
     ],
     [
       "Action",
       "matrix-simple",
-      "[t] \"matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -1052,7 +782,7 @@
     [
       "Action",
       "determinant",
-      "[t] \"determinante della matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet, pause:long)"
+      "[t] \"determinante della matrice\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -1062,57 +792,37 @@
     [
       "Action",
       "matrix-vector",
-      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-vector-simple",
-      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-vector-simple-silentcolnum",
-      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row-vector",
-      "[t] \"matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row-vector-simple",
-      "[t] \"matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"matrice riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row-vector-simple-silentcolnum",
-      "[t] \"matrice riga\";; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
-    ],
-    [
-      "Action",
-      "matrix-row-simple",
-      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")"
-    ],
-    [
-      "Action",
-      "matrix-row-simple-silentcolnum",
-      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")"
-    ],
-    [
-      "Action",
-      "line-simple",
-      "[n] children/*[1]"
+      "[t] \"matrice riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "matrix-row",
       "[m] children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-,- \", sepFunc:CTFpauseSeparator, separator:\"medium\", pause:long)"
-    ],
-    [
-      "Action",
-      "matrix-cell",
-      "[n] children/*[1]"
     ],
     [
       "Action",
@@ -1132,22 +842,22 @@
     [
       "Action",
       "vector",
-      "[t] \"vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", grammar:simpleDet, pause:long)"
+      "[t] \"vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "vector-simple",
-      "[t] \"vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"vettore colonna\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "row-vector",
-      "[t] \"vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", grammar:simpleDet, pause:long)"
+      "[t] \"vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (ctxtFunc:CTFnodeCounter, context:\"Colonna-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "row-vector-simple",
-      "[t] \"vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", grammar:simpleDet, pause:long)"
+      "[t] \"vettore riga\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*) (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -1181,43 +891,13 @@
     ],
     [
       "Action",
-      "lines-summary-none",
-      "[n] . (grammar:layoutSummary)"
-    ],
-    [
-      "Action",
       "cases-summary",
       "[p] (pause:short); [t] count(children/*); [t] \"casi\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
-      "cases-summary-none",
-      "[n] . (grammar:layoutSummary)"
-    ],
-    [
-      "Action",
       "lines",
       "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Riga-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
-    ],
-    [
-      "Action",
-      "line",
-      "[n] children/*[1]"
-    ],
-    [
-      "Action",
-      "row-medium",
-      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"medium\")"
-    ],
-    [
-      "Action",
-      "row-long",
-      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"long\")"
-    ],
-    [
-      "Action",
-      "row-short",
-      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")"
     ],
     [
       "Action",
@@ -1296,11 +976,6 @@
     ],
     [
       "Action",
-      "lines-none",
-      "[p] (pause:short); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
-    ],
-    [
-      "Action",
       "bigop",
       "[t] \"il\"; [n] children/*[1]; [t] \"di\"; [n] children/*[2] (pause:short)"
     ],
@@ -1331,11 +1006,6 @@
     ],
     [
       "Action",
-      "overscript-accent",
-      "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
       "overscript-limits",
       "[n] children/*[1]; [t] \"a\"; [n] children/*[2]"
     ],
@@ -1348,11 +1018,6 @@
       "Action",
       "underscript-limits",
       "[n] children/*[1]; [t] \"da\"; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "number",
-      "[n] text()"
     ],
     [
       "Action",
@@ -1373,11 +1038,6 @@
       "Action",
       "decimal-period-float",
       "[t] \"decimale periodico\"; [n] children/*[1] (grammar:spaceout); [t] \"seguito da\"; [n] children/*[2]/children/*[1] (grammar:spaceout); [t] \"periodico\""
-    ],
-    [
-      "Action",
-      "number-with-spaces",
-      "[m] CQFspaceoutNumber (grammar:!spaceout:number)"
     ],
     [
       "Action",
@@ -1402,17 +1062,12 @@
     [
       "Action",
       "adorned-sign",
-      "[t] \"segno\"; [n] children/*[1] ; [t] \"con\"; [n] children/*[2]; [t] \"sopra esso\""
+      "[t] \"segno\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]; [t] \"sopra esso\""
     ],
     [
       "Action",
       "factorial",
       "[t] \"fattoriale\""
-    ],
-    [
-      "Action",
-      "tensor-base",
-      "[n] children/*[2]; [n] children/*[3]; [n] children/*[1]; [n] children/*[4]; [n] children/*[5]"
     ],
     [
       "Action",
@@ -1456,16 +1111,6 @@
     ],
     [
       "Action",
-      "empty-index",
-      "[p] (pause:medium)"
-    ],
-    [
-      "Action",
-      "combinatorics",
-      "[n] children/*[2] (grammar:combinatorics); [n] children/*[1]; [n] children/*[4] (grammar:combinatorics)"
-    ],
-    [
-      "Action",
       "choose",
       "[t] \"combinazione di\"; [n] children/*[2] (grammar:combinatorics); [t] \"per\"; [n] children/*[4] (grammar:combinatorics)"
     ],
@@ -1473,16 +1118,6 @@
       "Action",
       "permute",
       "[t] \"permutazione di\"; [n] children/*[2] (grammar:combinatorics); [t] \"per\"; [n] children/*[4] (grammar:combinatorics)"
-    ],
-    [
-      "Action",
-      "unit-singular",
-      "[t] text() (grammar:annotation=\"unit\":translate)"
-    ],
-    [
-      "Action",
-      "unit-plural",
-      "[t] text() (grammar:annotation=\"unit\":translate:plural)"
     ],
     [
       "Action",
@@ -1496,33 +1131,8 @@
     ],
     [
       "Action",
-      "unit-combine",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "unit-combine-singular",
-      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [m] children/*[position()>2]"
-    ],
-    [
-      "Action",
       "unit-divide",
       "[n] children/*[1]; [t] \"al\"; [n] children/*[2] (grammar:singular)"
-    ],
-    [
-      "Action",
-      "currency",
-      "[m] children/*[position()>1]; [n] children/*[1]"
-    ],
-    [
-      "Action",
-      "currency-position",
-      "[m] children/*"
-    ],
-    [
-      "Action",
-      "currency-prefix",
-      "[n] children/*[last()]; [m] children/*[position()<last()]"
     ]
   ]
 }

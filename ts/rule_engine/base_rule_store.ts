@@ -115,7 +115,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     if (cstr1.length !== cstr2.length) {
       return false;
     }
-    for (let i = 0, cstr; cstr = cstr1[i]; i++) {
+    for (let i = 0, cstr: string; cstr = cstr1[i]; i++) {
       if (cstr2.indexOf(cstr) === -1) {
         return false;
       }
@@ -453,6 +453,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
       console.error(`Action Error: No precondition for action ${name}`);
       return;
     }
+    // Overwrite previously defined rules!
+    this.ignoreRules(name);
     let regexp = new RegExp('^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : ''));
     prec.conditions.forEach(([dynamic, prec]) => {
       // TODO: Work this out wrt. domain.
