@@ -427,7 +427,7 @@
     [
       "Action",
       "line",
-      "[p] (layout:beginrow); [m] children/* (layout:cell); [p] (layout:endrow)"
+      "[p] (layout:beginrow); [p] (layout:fence); [m] children/* (layout:cell); [p] (layout:fence); [p] (layout:endrow)"
     ],
     [
       "Action",
