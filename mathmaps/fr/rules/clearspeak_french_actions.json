@@ -112,7 +112,7 @@
     [
       "Action",
       "set-member-belongs",
-      "[t] \"appartient à\""
+      "[t] \"appartenant à\""
     ],
     [
       "Action",
@@ -132,7 +132,7 @@
     [
       "Action",
       "set-not-member-belongs",
-      "[t] \"n'appartient pas à\""
+      "[t] \"n'appartenant pas à\""
     ],
     [
       "Action",

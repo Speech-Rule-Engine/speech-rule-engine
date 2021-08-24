@@ -1398,7 +1398,11 @@
     "mappings": {
       "default": {
         "default": "element of"
+      },
+      "clearspeak": {
+        "default": "is a member of"
       }
+
     },
     "key": "2208"
   },
@@ -1407,6 +1411,9 @@
     "mappings": {
       "default": {
         "default": "not an element of"
+      },
+      "clearspeak": {
+        "default": "is not a member of"
       }
     },
     "key": "2209"
@@ -1415,7 +1422,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small element of"
+        "default": "element of"
+      },
+      "clearspeak": {
+        "default": "is a member of"
       }
     },
     "key": "220A"
@@ -3679,7 +3689,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small element of with vertical bar at end of horizontal stroke"
+        "default": "element of with vertical bar at end of horizontal stroke"
       }
     },
     "key": "22F4"
@@ -3706,7 +3716,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small element of with overbar"
+        "default": "element of with overbar"
       }
     },
     "key": "22F7"
@@ -3751,7 +3761,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small contains with vertical bar at end of horizontal stroke"
+        "default": "contains with vertical bar at end of horizontal stroke"
       }
     },
     "key": "22FC"
@@ -3769,7 +3779,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small contains with overbar"
+        "default": "contains with overbar"
       }
     },
     "key": "22FE"
