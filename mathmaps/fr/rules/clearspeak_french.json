@@ -33,6 +33,24 @@
     ],
     [
       "Precondition",
+      "element-noarticle",
+      "default",
+      "self::infixop[contains(@role, \"element\")]"
+    ],
+    [
+      "Precondition",
+      "element",
+      "SetMemberSymbol_Element",
+      "self::infixop[contains(@role, \"element\")]"
+    ],
+    [
+      "Specialized",
+      "element",
+      "SetMemberSymbol_Element",
+      "SetMemberSymbol_Belongs"
+    ],
+    [
+      "Precondition",
       "unit-reciprocal-multi",
       "default",
       "self::superscript[@role=\"unit\"]",

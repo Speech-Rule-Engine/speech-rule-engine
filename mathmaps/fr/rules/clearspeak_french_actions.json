@@ -56,6 +56,16 @@
     ],
     [
       "Action",
+      "element-noarticle",
+      "[n] children/*[1]; [n] content/*[1]; [n] children/*[2] (grammar:noArticle)"
+    ],
+    [
+      "Action",
+      "element",
+      "[n] children/*[1]; [n] content/*[1]; [n] children/*[2] (grammar:!noArticle)"
+    ],
+    [
+      "Action",
       "member",
       "[t] \"est un\""
     ],
@@ -602,52 +612,52 @@
     [
       "Action",
       "natural-numbers",
-      "[t] \"les nombres entier naturel\""
+      "[t] \"les\" (grammar:article); [t] \"nombres entier naturel\""
     ],
     [
       "Action",
       "integers",
-      "[t] \"les nombres entiers\""
+      "[t] \"les\" (grammar:article); [t] \"nombres entiers\""
     ],
     [
       "Action",
       "rational-numbers",
-      "[t] \"les Nombres rationnels\""
+      "[t] \"les\" (grammar:article); [t] \"nombres rationnels\""
     ],
     [
       "Action",
       "real-numbers",
-      "[t] \"les nombres réels\""
+      "[t] \"les\" (grammar:article); [t] \"nombres réels\""
     ],
     [
       "Action",
       "complex-numbers",
-      "[t] \"les nombres complexes\""
+      "[t] \"les\" (grammar:article); [t] \"nombres complexes\""
     ],
     [
       "Action",
       "natural-numbers-with-zero",
-      "[t] \"les nombres entiers naturel avec zero\""
+      "[t] \"les\" (grammar:article); [t] \"nombres entiers naturel avec zero\""
     ],
     [
       "Action",
       "positive-integers",
-      "[t] \"les nombres entiers positif\""
+      "[t] \"les\" (grammar:article); [t] \"nombres entiers positif\""
     ],
     [
       "Action",
       "negative-integers",
-      "[t] \"les nombres entiers négatif\""
+      "[t] \"les\" (grammar:article); [t] \"nombres entiers négatif\""
     ],
     [
       "Action",
       "positive-rational-numbers",
-      "[t] \"les nombres rationnels positif\""
+      "[t] \"les\" (grammar:article); [t] \"nombres rationnels positif\""
     ],
     [
       "Action",
       "negative-rational-numbers",
-      "[t] \"les nombres rationnels négatif\""
+      "[t] \"les\" (grammar:article); [t] \"nombres rationnels négatif\""
     ],
     [
       "Action",

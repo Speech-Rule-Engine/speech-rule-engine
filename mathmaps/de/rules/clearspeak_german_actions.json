@@ -71,13 +71,23 @@
     ],
     [
       "Action",
+      "element-noprep",
+      "[n] children/*[1]; [n] content/*[1] (grammar:noPrep); [n] children/*[2] (grammar:case=\"dative\")"
+    ],
+    [
+      "Action",
+      "element",
+      "[n] children/*[1]; [n] content/*[1]; [n] children/*[2] (grammar:case=\"dative\")"
+    ],
+    [
+      "Action",
       "member",
-      "[t] \"ist Element von\""
+      "[t] \"Element von\""
     ],
     [
       "Action",
       "member-element",
-      "[t] \"ist Element von\""
+      "[t] \"Element von\""
     ],
     [
       "Action",
@@ -92,17 +102,17 @@
     [
       "Action",
       "not-member",
-      "[t] \"is kein Element von\""
+      "[t] \"ist kein Element von\""
     ],
     [
       "Action",
       "not-member-element",
-      "[t] \"is kein Element von\""
+      "[t] \"ist kein Element von\""
     ],
     [
       "Action",
       "not-member-in",
-      "[t] \"ist nicht in\""
+      "[t] \"nicht in\""
     ],
     [
       "Action",
@@ -407,7 +417,7 @@
     [
       "Action",
       "set-empty",
-      "[t] \"die leere Menge\""
+      "[t] \"die\" (grammar:article); [t] \"leere Menge\""
     ],
     [
       "Action",
@@ -642,52 +652,52 @@
     [
       "Action",
       "natural-numbers",
-      "[t] \"die natürlichen Zahlen\""
+      "[t] \"die\" (grammar:article); [t] \"natürlichen Zahlen\""
     ],
     [
       "Action",
       "integers",
-      "[t] \"die ganzen Zahlen\""
+      "[t] \"die\" (grammar:article); [t] \"ganzen Zahlen\""
     ],
     [
       "Action",
       "rational-numbers",
-      "[t] \"die rationalen Zahlen\""
+      "[t] \"die\" (grammar:article); [t] \"rationalen Zahlen\""
     ],
     [
       "Action",
       "real-numbers",
-      "[t] \"die reellen Zahlen\""
+      "[t] \"die\" (grammar:article); [t] \"reellen Zahlen\""
     ],
     [
       "Action",
       "complex-numbers",
-      "[t] \"die komplexen Zahlen\""
+      "[t] \"die\" (grammar:article); [t] \"komplexen Zahlen\""
     ],
     [
       "Action",
       "natural-numbers-with-zero",
-      "[t] \"die natürlichen Zahlen mit Null\""
+      "[t] \"die\" (grammar:article); [t] \"natürlichen Zahlen mit Null\""
     ],
     [
       "Action",
       "positive-integers",
-      "[t] \"die positiven ganzen Zahlen\""
+      "[t] \"die\" (grammar:article); [t] \"positiven ganzen Zahlen\""
     ],
     [
       "Action",
       "negative-integers",
-      "[t] \"die negativen ganzen Zahlen\""
+      "[t] \"die\" (grammar:article); [t] \"negativen ganzen Zahlen\""
     ],
     [
       "Action",
       "positive-rational-numbers",
-      "[t] \"die positiven rationalen Zahlen\""
+      "[t] \"die\" (grammar:article); [t] \"positiven rationalen Zahlen\""
     ],
     [
       "Action",
       "negative-rational-numbers",
-      "[t] \"die negativen rationalen Zahlen\""
+      "[t] \"die\" (grammar:article); [t] \"negativen rationalen Zahlen\""
     ],
     [
       "Action",
