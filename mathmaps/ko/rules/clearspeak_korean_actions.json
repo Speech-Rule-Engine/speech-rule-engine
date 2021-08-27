@@ -332,7 +332,7 @@
     [
       "Action",
       "function-prefix-inverse",
-      "[p] (pause:short); [t] \"역함수\"; [n] children/*[1]/children/*[1]; [t] \"of\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"역함수\"; [n] children/*[1]/children/*[1]; [t] \"의\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -352,7 +352,7 @@
     [
       "Action",
       "function-prefix-arc",
-      "[p] (pause:short); [t] \"아크\"; [n] children/*[1]/children/*[1]; [t] \"of\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"아크\"; [n] children/*[1]/children/*[1]; [t] \"의\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
