@@ -241,11 +241,6 @@
     ],
     [
       "Action",
-      "article",
-      "[t] \"the\"; [n] . (grammar:noArticle)"
-    ],
-    [
-      "Action",
       "appl",
       "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:short)"
     ],
@@ -677,7 +672,7 @@
     [
       "Action",
       "vulgar-fraction",
-      "[t] CSFvulgarFraction"
+      "[n] children/*[2]; [t] \"분의\"; [n] children/*[1]"
     ],
     [
       "Action",
@@ -712,7 +707,7 @@
     [
       "Action",
       "simple-vulgar-fraction-ordinal",
-      "[t] CSFvulgarFraction"
+      "[n] children/*[2]; [t] \"분의\"; [n] children/*[1]"
     ],
     [
       "Action",
@@ -727,7 +722,7 @@
     [
       "Action",
       "simple-vulgar-fraction-endfrac",
-      "[t] CSFvulgarFraction"
+      "[n] children/*[2]; [t] \"분의\"; [n] children/*[1]"
     ],
     [
       "Action",
