@@ -204,13 +204,6 @@
     ],
     [
       "Precondition",
-      "element-noprep",
-      "default",
-      "self::infixop[contains(@role, \"element\")]",
-      "children/*[2][@role=\"numbersetletter\"]"
-    ],
-    [
-      "Precondition",
       "element",
       "default",
       "self::infixop[contains(@role, \"element\")]"
