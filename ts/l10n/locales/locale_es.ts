@@ -23,8 +23,8 @@
 // This work was sponsored by TextHelp
 //
 
-import {combinePostfixIndex} from '../locale_util';
 import {createLocale, Locale} from '../locale';
+import {combinePostfixIndex} from '../locale_util';
 import NUMBERS from '../numbers/numbers_es';
 import {Combiners} from '../transformers';
 

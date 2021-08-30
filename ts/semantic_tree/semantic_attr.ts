@@ -153,6 +153,7 @@ export const enum SemanticRole {
   ELLIPSIS = 'ellipsis',
   FULLSTOP = 'fullstop',
   DASH = 'dash',
+  TILDE = 'tilde',
   PRIME = 'prime',    // Superscript.
   DEGREE = 'degree',  // Superscript.
   VBAR = 'vbar',      // A vertical bar.
@@ -175,6 +176,7 @@ export const enum SemanticRole {
   BOTTOM = 'bottom',
 
   NEUTRAL = 'neutral',
+  METRIC = 'metric',
   // Letters.
   LATINLETTER = 'latinletter',
   GREEKLETTER = 'greekletter',
@@ -254,8 +256,12 @@ export const enum SemanticRole {
   // Relations.
   EQUALITY = 'equality',
   INEQUALITY = 'inequality',
-  ELEMENT = 'element',
   ARROW = 'arrow',
+  // Membership relations
+  ELEMENT = 'element',
+  NONELEMENT = 'nonelement',
+  REELEMENT = 'reelement',
+  RENONELEMENT = 'renonelement',
 
   SET = 'set',
   // Roles of matrices or vectors.
@@ -275,6 +281,7 @@ export const enum SemanticRole {
   CASES = 'cases',
 
   TABLE = 'table',
+  CAYLEY = 'cayley',
   // Inference Roles
   PROOF = 'proof',
   LEFT = 'left',
@@ -346,7 +353,9 @@ export namespace SemanticAttr {
   const commas: string[] = ['，', '﹐', ',', invisibleComma_];
   const ellipses: string[] = ['…', '⋮', '⋯', '⋰', '⋱', '︙'];
   const fullStops: string[] = ['.', '﹒', '．'];
-  const dashes: string[] = ['‒', '–', '—', '―', '〜', '︱', '︲', '﹘'];
+  const dashes: string[] = ['¯', '‒', '–', '—', '―', '﹘', '-', '⁻', '₋',
+                            '−', '➖', '﹣', '－', '‐', '‑', '‾', '_'];
+  const tildes: string[] = ['~', '̃', '∼', '˜', '∽', '˷', '̴', '̰'];
   const primes: string[] = ['\'', '′', '″', '‴', '‵', '‶', '‷', '⁗', 'ʹ', 'ʺ'];
   const degrees: string[] = ['°'];
 
@@ -466,7 +475,9 @@ export namespace SemanticAttr {
   const bottomFences: string[] = SemanticUtil.objectsToValues(topBottomPairs);
 
   const neutralFences: string[] =
-      ['|', '¦', '‖', '∣', '⏐', '⎸', '⎹', '∥', '❘', '⦀', '⫴', '｜', '￤'];
+      ['|', '¦', '∣', '⏐', '⎸', '⎹', '❘', '｜', '￤', '︱', '︲'];
+  const metricFences: string[] =
+      ['‖', '∥', '⦀', '⫴'];
   /**
    * Array of all fences.
    */
@@ -713,7 +724,7 @@ export namespace SemanticAttr {
   multiplications.push(invisibleTimes_);
 
   const subtractions: string[] = [
-    '-', '⁒', '⁻', '₋', '−', '∖', '∸',  '≂',  '⊖', '⊟', '➖',
+    '¯', '-', '⁒', '⁻', '₋', '−', '∖', '∸',  '≂',  '⊖', '⊟', '➖',
     '⨩', '⨪', '⨫', '⨬', '⨺', '⩁', '﹣', '－', '‐', '‑'
   ];
   const divisions: string[] = ['/', '÷', '⁄', '∕', '⊘', '⟌', '⦼', '⨸'];
@@ -748,9 +759,13 @@ export namespace SemanticAttr {
     '⫕', '⫖', '⫗', '⫘', '⋐', '⋑', '⋪', '⋫', '⋬', '⋭', '⊲', '⊳', '⊴', '⊵'
   ];
   const elementRelations: string[] = [
-    '∈', '∉', '∊', '∋', '∌', '∍', '⋲', '⋳', '⋴', '⋵',
-    '⋶', '⋷', '⋸', '⋹', '⋺', '⋻', '⋼', '⋽', '⋾', '⋿',
+    '∈', '∊', '⋲', '⋳', '⋴', '⋵', '⋶', '⋷', '⋸', '⋹', '⋿'
   ];
+  const nonelementRelations: string[] = ['∉'];
+  const reelementRelations: string[] = [
+    '∋', '∍', '⋺', '⋻', '⋼', '⋽', '⋾',
+  ];
+  const renonelementRelations: string[] = ['∌'];
   const relations: string[] = [
     // TODO (sorge): Add all the other relations. Currently mainly tacks and
     // turnstyles.
@@ -958,6 +973,11 @@ export namespace SemanticAttr {
         role: SemanticRole.DASH
       },
       {
+        set: tildes,
+        type: SemanticType.PUNCTUATION,
+        role: SemanticRole.TILDE
+      },
+      {
         set: primes,
         type: SemanticType.PUNCTUATION,
         role: SemanticRole.PRIME
@@ -992,6 +1012,11 @@ export namespace SemanticAttr {
         set: neutralFences,
         type: SemanticType.FENCE,
         role: SemanticRole.NEUTRAL
+      },
+      {
+        set: metricFences,
+        type: SemanticType.FENCE,
+        role: SemanticRole.METRIC
       },
       // Single characters.
       // Latin alphabets.
@@ -1405,13 +1430,6 @@ export namespace SemanticAttr {
         role: SemanticRole.SET
       },
       {
-        set: elementRelations,
-        type: SemanticType.OPERATOR,
-        // TODO: Changes that to relation once speech rules are separated
-        //       as this has effects on clearspeak.
-        role: SemanticRole.ELEMENT
-      },
-      {
         set: relations,
         type: SemanticType.RELATION,
         role: SemanticRole.UNKNOWN
@@ -1420,6 +1438,27 @@ export namespace SemanticAttr {
         set: arrows,
         type: SemanticType.RELATION,
         role: SemanticRole.ARROW
+      },
+      // Membership. Currently treated as operator.
+      {
+        set: elementRelations,
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.ELEMENT
+      },
+      {
+        set: nonelementRelations,
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.NONELEMENT
+      },
+      {
+        set: reelementRelations,
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.REELEMENT
+      },
+      {
+        set: renonelementRelations,
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.RENONELEMENT
       },
       // Large operators
       {
@@ -1557,21 +1596,19 @@ export namespace SemanticAttr {
     return functionApplication_;
   }
 
-
-  /**
-   * Decide when two fences match. Currently we match any right to left
-   * or bottom to top fence and neutral to neutral.
-   * @param open Opening fence.
-   * @param close Closing fence.
-   * @return True if the fences are matching.
-   */
-  export function isMatchingFenceRole(open: string, close: string): boolean {
-    return open === SemanticRole.OPEN &&
-      close === SemanticRole.CLOSE ||
-      open === SemanticRole.NEUTRAL &&
-      close === SemanticRole.NEUTRAL ||
-      open === SemanticRole.TOP && close === SemanticRole.BOTTOM;
-  }
+  // /**
+  //  * Decide when two fences match. Currently we match any right to left
+  //  * or bottom to top fence and neutral to neutral.
+  //  * @param open Opening fence.
+  //  * @param close Closing fence.
+  //  * @return True if the fences are matching.
+  //  */
+  // export function isMatchingFenceRole(open: string, close: string): boolean {
+  //   return open === SemanticRole.OPEN &&
+  //     close === SemanticRole.CLOSE ||
+  //     isNeutralFence(open) && isNeutralFence(close) ||
+  //     open === SemanticRole.TOP && close === SemanticRole.BOTTOM;
+  // }
 
   /**
    * Decide when opening and closing fences match. For neutral fences they have
@@ -1582,7 +1619,8 @@ export namespace SemanticAttr {
    * @return {boolean} True if the fences are matching.
    */
   export function isMatchingFence(open: string, close: string): boolean {
-    if (neutralFences.indexOf(open) !== -1) {
+    if (neutralFences.indexOf(open) !== -1 ||
+        metricFences.indexOf(open) !== -1) {
       return open === close;
     }
     return openClosePairs[open] === close ||
@@ -1590,26 +1628,24 @@ export namespace SemanticAttr {
   }
 
 
-  /**
-   * Determines if a fence is an opening fence.
-   * @param fence Opening fence.
-   * @return True if the fence is open or neutral.
-   */
-  export function isOpeningFence(fence: SemanticRole): boolean {
-    return fence === SemanticRole.OPEN ||
-        fence === SemanticRole.NEUTRAL;
-  }
+  // /**
+  //  * Determines if a fence is an opening fence.
+  //  * @param fence Opening fence.
+  //  * @return True if the fence is open or neutral.
+  //  */
+  // export function isOpeningFence(fence: SemanticRole): boolean {
+  //   return fence === SemanticRole.OPEN || isNeutralFence(fence);
+  // }
 
 
-  /**
-   * Determines if a fence is a closing fence.
-   * @param fence Closing fence.
-   * @return True if the fence is close or neutral.
-   */
-  export function isClosingFence(fence: SemanticRole): boolean {
-    return fence === SemanticRole.CLOSE ||
-        fence === SemanticRole.NEUTRAL;
-  }
+  // /**
+  //  * Determines if a fence is a closing fence.
+  //  * @param fence Closing fence.
+  //  * @return True if the fence is close or neutral.
+  //  */
+  // export function isClosingFence(fence: SemanticRole): boolean {
+  //   return fence === SemanticRole.CLOSE || isNeutralFence(fence);
+  // }
 
 
   /**
@@ -1626,16 +1662,55 @@ export namespace SemanticAttr {
   }
 
 
-  // TODO (sorge) Make this depended on position in the alphabets.
   /**
-   * Check if a character is a small 'd' in some font.
-   * @param chr The character string.
-   * @return True if the character is indeed a single small d.
+   * Secondary annotation facility. This allows to compute a special annotation,
+   * if desired.
    */
-  export function isCharacterD(chr: string): boolean {
-    let Ds =
-        ['d', 'ⅆ', 'ｄ', '𝐝', '𝑑', '𝒹', '𝓭', '𝔡', '𝕕', '𝖉', '𝖽', '𝗱', '𝘥', '𝚍'];
-    return Ds.indexOf(chr) !== -1;
+
+  /**
+   * The mapping for secondary annotations.
+   */
+  const secondary_ = new Map();
+
+
+  /**
+   * The key generator for secondary annotations.
+   * @param kind The kind of annotation.
+   * @param char The character to look up.
+   * @return The generated key.
+   */
+  function secKey(kind: string, char: string) {
+    return `${kind} ${char}`;
+  }
+
+
+  /**
+   * Builds the secondary annotation structure.
+   * @param kind The kind of annotation.
+   * @param char The characters to look up.
+   * @param annotation Optionally an annotation value. Default is `kind`.
+   */
+  function addSecondary_(kind: string, chars: string[],
+                         annotation: string = '') {
+    for (let char of chars) {
+      secondary_.set(secKey(kind, char), annotation || kind);
+    }
+  }
+
+  addSecondary_('d', ['d', 'ⅆ', 'ｄ', '𝐝', '𝑑', '𝒹',
+                      '𝓭', '𝔡', '𝕕', '𝖉', '𝖽', '𝗱', '𝘥', '𝚍']);
+  addSecondary_('bar', dashes);
+  addSecondary_('tilde', tildes);
+
+
+  /**
+   * Lookup of secondary annotation.
+   * @param kind The kind of annotation.
+   * @param char The character to look up.
+   * @return The annotation if it exists.
+   */
+  export function lookupSecondary(kind: string, char: string) {
+    return secondary_.get(secKey(kind, char));
   }
 
 }

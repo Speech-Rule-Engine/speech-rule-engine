@@ -1,0 +1,31 @@
+{
+  "domain": "mathspeak",
+  "locale": "romance",
+  "modality": "speech",
+  "kind": "abstract",
+  "inherits": "base",
+  "rules": [
+    [
+      "Precondition",
+      "logarithm-base",
+      "default",
+      "self::subscript",
+      "children/*[1][@category=\"Logarithm\"]",
+      "name(./children/*[2])=\"identifier\" or name(./children/*[2])=\"number\"",
+      "./children/*[2][@role!=\"mixed\"]",
+      "./children/*[2][@role!=\"othernumber\"]"
+    ],
+    [
+      "Specialized",
+      "logarithm-base",
+      "default",
+      "brief"
+    ],
+    [
+      "Specialized",
+      "logarithm-base",
+      "default",
+      "sbrief"
+    ]
+  ]
+}

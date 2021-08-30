@@ -27,6 +27,7 @@
 import * as DomUtil from '../common/dom_util';
 import XpathUtil from '../common/xpath_util';
 import {Grammar} from '../rule_engine/grammar';
+import {MathCompoundStore} from '../rule_engine/math_simple_store';
 import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
 import {AbstractTrieNode} from './abstract_trie_node';
 import {StaticTrieNode} from './abstract_trie_node';
@@ -82,6 +83,14 @@ export class DynamicTrieNode extends AbstractTrieNode<string> {
   }
 }
 
+let comparator: {[operator: string]: ((x: number, y: number) => boolean)} = {
+  '=': (x: number, y: number) => x === y,
+  '!=': (x: number, y: number) => x !== y,
+  '<': (x: number, y: number) => x < y,
+  '>': (x: number, y: number) => x > y,
+  '<=': (x: number, y: number) => x <= y,
+  '>=': (x: number, y: number) => x >= y
+};
 
 /**
  * Generates more refined tests depending on the type of static constraint.
@@ -166,6 +175,45 @@ export function constraintTest_(constraint: string): ((p1: Node) => boolean)|
     let num = parseInt(split[1], 10);
     return ((node: Element) =>
       node.parentNode?.childNodes[num] === node);
+  }
+  // category constraint
+  // xpath[@constraint!?="xy"]
+  if (constraint.match(/^.+\[@category!?=\".+\"\]$/)) {
+    let [, query, equality, category] =
+        constraint.match(/^(.+)\[@category(!?=)\"(.+)\"\]$/);
+    let unit = category.match(/^unit:(.+)$/);
+    let add = '';
+    if (unit) {
+      category = unit[1];
+      add = ':unit';
+    }
+    return (node: Element) => {
+      let xpath = XpathUtil.evalXPath(query, node)[0];
+      if (xpath) {
+        let result = MathCompoundStore.lookupCategory(xpath.textContent + add);
+        return equality === '=' ? result === category : result !== category;
+      }
+      return false;
+    };
+  }
+  // string-length adapted for unicode.
+  // string-length(xpath)!?=<>\d
+  if (constraint.match(/^string-length\(.+\)\W+\d+/)) {
+    let [, select, comp, count] =
+      constraint.match(/^string-length\((.+)\)(\W+)(\d+)/);
+    let func = comparator[comp] || comparator['='];
+    let numb = parseInt(count, 10);
+    return (node: Element) => {
+      let xpath = XpathUtil.evalXPath(select, node)[0];
+      if (!xpath) {
+        return false;
+      }
+      // console.log(constraint);
+      // console.log(node.textContent);
+      // console.log(Array.from(xpath.textContent).length);
+      // console.log(func(Array.from(xpath.textContent).length, numb));
+      return func(Array.from(xpath.textContent).length, numb);
+    };
   }
   return null;
 }

@@ -1,0 +1,118 @@
+{
+  "modality": "prefix",
+  "domain": "default",
+  "locale": "hi",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "numerator",
+      "[t] \"अंश\" (pause:200)"
+    ],
+    [
+      "Action",
+      "denominator",
+      "[t] \"हर\" (pause:200)"
+    ],
+    [
+      "Action",
+      "base",
+      "[t] \"आधार\" (pause:200)"
+    ],
+    [
+      "Action",
+      "exponent",
+      "[t] \"घातांक\" (pause:200)"
+    ],
+    [
+      "Action",
+      "subscript",
+      "[t] \"पादांक\" (pause:200)"
+    ],
+    [
+      "Action",
+      "overscript",
+      "[t] \"उर्ध्वान्क\" (pause:200)"
+    ],
+    [
+      "Action",
+      "underscript",
+      "[t] \"निम्नांक\" (pause:200)"
+    ],
+    [
+      "Action",
+      "radicand",
+      "[t] \"करणीगत राशि\" (pause:200)"
+    ],
+    [
+      "Action",
+      "index",
+      "[t] \"मूलांक\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub",
+      "[t] \"वाम पादांक\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub-counted",
+      "[t] CSFordinalPosition; [t] \"वाम पादांक\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper",
+      "[t] \"वाम उर्ध्वान्क\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper-counted",
+      "[t] CSFordinalPosition; [t] \"वाम उर्ध्वान्क\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub",
+      "[t] \"दक्षिण पादांक\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub-counted",
+      "[t] CSFordinalPosition; [t] \"दक्षिण पादांक\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper",
+      "[t] \"दक्षिण उर्ध्वान्क\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper-counted",
+      "[t] CSFordinalPosition; [t] \"दक्षिण उर्ध्वान्क\" (pause:200)"
+    ],
+    [
+      "Action",
+      "choice",
+      "[t] \"विकल्प तादात\" (pause:200)"
+    ],
+    [
+      "Action",
+      "select",
+      "[t] \"चयन तादात\" (pause:200)"
+    ],
+    [
+      "Action",
+      "row",
+      "[t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"पंक्ति\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell",
+      "[n] ../..; [t] CSFordinalPosition; [t] \"स्तंभ\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple",
+      "[t] CSFordinalPosition; [t] \"स्तंभ\" (pause:200)"
+    ]
+  ]
+}

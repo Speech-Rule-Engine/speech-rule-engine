@@ -25,6 +25,7 @@ import {Engine, EngineConst} from '../common/engine';
 import {AcssRenderer} from './acss_renderer';
 import {AudioRenderer} from './audio_renderer';
 import {AuditoryDescription} from './auditory_description';
+import {LayoutRenderer} from './layout_renderer';
 import {PunctuationRenderer} from './punctuation_renderer';
 import {SableRenderer} from './sable_renderer';
 import {Span} from './span';
@@ -42,6 +43,7 @@ namespace AuralRendering {
   const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
     [EngineConst.Markup.NONE, new StringRenderer()],
     [EngineConst.Markup.PUNCTUATION, new PunctuationRenderer()],
+    [EngineConst.Markup.LAYOUT, new LayoutRenderer()],
     [EngineConst.Markup.ACSS, new AcssRenderer()],
     [EngineConst.Markup.SABLE, new SableRenderer()],
     [EngineConst.Markup.VOICEXML, xmlInstance],

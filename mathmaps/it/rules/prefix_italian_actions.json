@@ -1,0 +1,118 @@
+{
+  "modality": "prefix",
+  "domain": "default",
+  "locale": "it",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "numerator",
+      "[t] \"numeratore\" (pause:200)"
+    ],
+    [
+      "Action",
+      "denominator",
+      "[t] \"denominatore\" (pause:200)"
+    ],
+    [
+      "Action",
+      "base",
+      "[t] \"base\" (pause:200)"
+    ],
+    [
+      "Action",
+      "exponent",
+      "[t] \"esponente\" (pause:200)"
+    ],
+    [
+      "Action",
+      "subscript",
+      "[t] \"pedice\" (pause:200)"
+    ],
+    [
+      "Action",
+      "overscript",
+      "[t] \"apice\" (pause:200)"
+    ],
+    [
+      "Action",
+      "underscript",
+      "[t] \"sottoscritto\" (pause:200)"
+    ],
+    [
+      "Action",
+      "radicand",
+      "[t] \"radicando\" (pause:200)"
+    ],
+    [
+      "Action",
+      "index",
+      "[t] \"indice\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub",
+      "[t] \"pedice sinistro\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub-counted",
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"pedice sinistro\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper",
+      "[t] \"apice sinistro\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper-counted",
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"apice sinistro\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub",
+      "[t] \"pedice destro\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub-counted",
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"pedice destro\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper",
+      "[t] \"apice destro\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper-counted",
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"apice destro\" (pause:200)"
+    ],
+    [
+      "Action",
+      "choice",
+      "[t] \"quantità scelta\" (pause:200)"
+    ],
+    [
+      "Action",
+      "select",
+      "[t] \"quantità selezione\" (pause:200)"
+    ],
+    [
+      "Action",
+      "row",
+      "[t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"riga\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell",
+      "[n] ../..; [t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"colonna\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple",
+      "[t] CSFordinalPosition (grammar:gender=\"f\"); [t] \"colonna\" (pause:200)"
+    ]
+  ]
+}

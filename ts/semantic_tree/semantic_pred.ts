@@ -149,7 +149,7 @@ export function isBigOpBoundary(node: SemanticNode): boolean {
 export function isIntegralDxBoundary(
     firstNode: SemanticNode, secondNode: SemanticNode): boolean {
   return !!secondNode && isType(secondNode, SemanticType.IDENTIFIER) &&
-      SemanticAttr.isCharacterD(firstNode.textContent);
+      SemanticAttr.lookupSecondary('d', firstNode.textContent);
 }
 
 
@@ -163,7 +163,7 @@ export function isIntegralDxBoundarySingle(node: SemanticNode): boolean {
   if (isType(node, SemanticType.IDENTIFIER)) {
     let firstChar = node.textContent[0];
     return firstChar && node.textContent[1] &&
-        SemanticAttr.isCharacterD(firstChar);
+      SemanticAttr.lookupSecondary('d', firstChar);
   }
   return false;
 }
@@ -332,8 +332,7 @@ export function tableIsMatrixOrVector(node: SemanticNode): boolean {
  */
 export function isFencedElement(node: SemanticNode): boolean {
   return !!node && isType(node, SemanticType.FENCED) &&
-    (isRole(node, SemanticRole.LEFTRIGHT) ||
-      isRole(node, SemanticRole.NEUTRAL)) &&
+    (isRole(node, SemanticRole.LEFTRIGHT) || isNeutralFence(node)) &&
       node.childNodes.length === 1;
 }
 
@@ -578,6 +577,17 @@ export function isImplicitOp(node: SemanticNode): boolean {
 
 
 /**
+ * Determines if a fence is a neutral fence.
+ * @param fence Closing fence.
+ * @return True if the fence is neutral or metric.
+ */
+export function isNeutralFence(fence: SemanticNode): boolean {
+  return fence.role === SemanticRole.NEUTRAL ||
+    fence.role === SemanticRole.METRIC;
+}
+
+
+/**
  * Comparison operation for neutral fences depending on textual equality of the
  * (innermost for embellished) fences.
  * @param fence1 First fence to compare.
@@ -587,9 +597,8 @@ export function isImplicitOp(node: SemanticNode): boolean {
  */
 export function compareNeutralFences(
     fence1: SemanticNode, fence2: SemanticNode): boolean {
-  return fence1.role === SemanticRole.NEUTRAL &&
-      fence2.role === SemanticRole.NEUTRAL &&
-      getEmbellishedInner(fence1).textContent ==
+  return isNeutralFence(fence1) && isNeutralFence(fence2) &&
+      getEmbellishedInner(fence1).textContent ===
       getEmbellishedInner(fence2).textContent;
 }
 
@@ -601,7 +610,7 @@ export function compareNeutralFences(
  * @return True if fence is elligible.
  */
 export function elligibleLeftNeutral(fence: SemanticNode): boolean {
-  if (fence.role !== SemanticRole.NEUTRAL) {
+  if (!isNeutralFence(fence)) {
     return false;
   }
   if (!fence.embellished) {
@@ -627,7 +636,7 @@ export function elligibleLeftNeutral(fence: SemanticNode): boolean {
  * @return True if fence is elligible.
  */
 export function elligibleRightNeutral(fence: SemanticNode): boolean {
-  if (fence.role !== SemanticRole.NEUTRAL) {
+  if (!isNeutralFence(fence)) {
     return false;
   }
   if (!fence.embellished) {
@@ -639,4 +648,18 @@ export function elligibleRightNeutral(fence: SemanticNode): boolean {
     return false;
   }
   return true;
+}
+
+
+/**
+ * Tests if the node is a membership relation, i.e., has some
+ * element/non-element role.
+ *
+ * @param element The node to test.
+ * @return True if the role is an element role.
+ */
+export function isMembership(element: SemanticNode): boolean {
+  return [SemanticRole.ELEMENT, SemanticRole.NONELEMENT,
+          SemanticRole.REELEMENT, SemanticRole.RENONELEMENT].
+    includes(element.role);
 }

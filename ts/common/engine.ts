@@ -48,7 +48,8 @@ export namespace EngineConst {
     RATE = 'rate',
     VOLUME = 'volume',
     PAUSE = 'pause',
-    JOIN = 'join'
+    JOIN = 'join',
+    LAYOUT = 'layout'
   }
 
   export const personalityPropList: personalityProps[] = [
@@ -69,6 +70,7 @@ export namespace EngineConst {
    */
   export enum Markup {
     NONE = 'none',
+    LAYOUT = 'layout',
     PUNCTUATION = 'punctuation',
     SSML = 'ssml',
     SSML_STEP = 'ssml_step',

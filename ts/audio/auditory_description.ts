@@ -33,6 +33,7 @@ interface AudioDescr {
   annotation?: string;
   attributes?: {[key: string]: string};
   personality?: {[key: string]: string};
+  layout?: string;
 }
 
 interface AudioFlags {
@@ -75,6 +76,10 @@ export class AuditoryDescription {
    */
   public personality: {[key: string]: string};
 
+  /**
+   * A layout annotation. Always a single string!
+   */
+  public layout: string;
 
   /**
    * Create an auditory description from given components.
@@ -94,17 +99,19 @@ export class AuditoryDescription {
   /**
    * A class representing the description of navigation from one object to
    * another.
-   * @param {context, text, userValue, annotation, attributes, personality}
+   * @param {context, text, userValue, annotation, attributes,
+   *         personality, layout}
    * The arguments for this description.
    */
-  constructor({context, text, userValue, annotation, attributes, personality}:
-              AudioDescr) {
+  constructor({context, text, userValue, annotation, attributes,
+               personality, layout}: AudioDescr) {
     this.context = context || '';
     this.text = text || '';
     this.userValue = userValue || '';
     this.annotation = annotation || '';
     this.attributes = attributes || {};
     this.personality = personality || {};
+    this.layout = layout || '';
   }
 
 
@@ -142,7 +149,8 @@ export class AuditoryDescription {
       userValue: this.userValue,
       annotation: this.annotation,
       personality: personality,
-      attributes: attributes
+      attributes: attributes,
+      layout: this.layout
     });
   }
 
