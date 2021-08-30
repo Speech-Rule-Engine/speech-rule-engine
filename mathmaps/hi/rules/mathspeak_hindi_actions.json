@@ -26,16 +26,6 @@
     ],
     [
       "Action",
-      "font-identifier-short",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
-      "font-identifier",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
       "mixed-number",
       "[n] children/*[1]; [t] \"पूर्णांक\"; [n] children/*[2]"
     ],
@@ -107,7 +97,12 @@
     [
       "Action",
       "fences-metric",
-      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
+      "[t] \"दूरी फलन आरंभ\"; [n] children/*[1]; [t] \"दूरी फलन समाप्त\""
+    ],
+    [
+      "Action",
+      "fences-metric-sbrief",
+      "[t] \"दूरी फलन\"; [n] children/*[1]; [t] \"दूरी फलन समाप्त\""
     ],
     [
       "Action",
@@ -161,36 +156,6 @@
     ],
     [
       "Action",
-      "limboth",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]"
-    ],
-    [
-      "Action",
-      "limlower",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "limupper",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "limboth-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] CSFoverscript; [n] children/*[3]; [t] \"लिपि समाप्त\""
-    ],
-    [
-      "Action",
-      "limlower-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] \"लिपि समाप्त\""
-    ],
-    [
-      "Action",
-      "limupper-end",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]; [t] \"लिपि समाप्त\""
-    ],
-    [
-      "Action",
       "integral",
       "[n] children/*[1]; [t] \"पादांक\"; [n] children/*[2]; [t] \"उर्ध्वान्क\"; [n] children/*[3]; [t] \"आधार रेखा\""
     ],
@@ -213,21 +178,6 @@
       "Action",
       "prime",
       "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "double-prime",
-      "[t] \"डबल प्राइम\""
-    ],
-    [
-      "Action",
-      "triple-prime",
-      "[t] \"तिगुना प्राइम\""
-    ],
-    [
-      "Action",
-      "quadruple-prime",
-      "[t] \"चौगुना प्राइम\""
     ],
     [
       "Action",
@@ -302,12 +252,12 @@
     [
       "Action",
       "matrix",
-      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"f\", context:\"पंक्ति \"); [t] \"आव्यूह समाप्त\""
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"आव्यूह समाप्त\""
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"f\", context:\"पंक्ति \"); [t] \"आव्यूह समाप्त\""
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"आव्यूह समाप्त\""
     ],
     [
       "Action",
@@ -342,32 +292,32 @@
     [
       "Action",
       "determinant",
-      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"f\", context:\"पंक्ति \"); [t] \"सारणिक समाप्त\""
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"सारणिक समाप्त\""
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"f\", context:\"पंक्ति \"); [t] \"सारणिक समाप्त\""
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"सारणिक समाप्त\""
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"f\", context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"f\", context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
     ],
     [
       "Action",
       "layout",
-      "[t] \"खाका आरंभ\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"f\", context:\"पंक्ति \"); [t] \"खाका समाप्त\""
+      "[t] \"खाका आरंभ\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"खाका समाप्त\""
     ],
     [
       "Action",
       "layout-sbrief",
-      "[t] \"खाका\"; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"f\", context:\"पंक्ति \"); [t] \"खाका समाप्त\""
+      "[t] \"खाका\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"खाका समाप्त\""
     ],
     [
       "Action",
@@ -382,12 +332,12 @@
     [
       "Action",
       "cases",
-      "[t] \"खाका आरंभ\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"f\", context:\"पंक्ति \"); [t] \"खाका समाप्त\""
+      "[t] \"खाका आरंभ\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"खाका समाप्त\""
     ],
     [
       "Action",
       "cases-sbrief",
-      "[t] \"खाका\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, grammar:gender=\"f\", context:\"पंक्ति \"); [t] \"खाका समाप्त\""
+      "[t] \"खाका\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"खाका समाप्त\""
     ],
     [
       "Action",

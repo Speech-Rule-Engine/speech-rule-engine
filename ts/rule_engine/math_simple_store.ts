@@ -72,7 +72,9 @@ export class MathSimpleStore {
    */
   public category: string = '';
 
-
+  /**
+   * Maps locales to lists of simple rules.
+   */
   public rules: Map<string, SimpleRule[]> = new Map();
 
   /**
@@ -118,11 +120,17 @@ export class MathSimpleStore {
     for (let domain in mapping) {
       for (let style in mapping[domain]) {
         let content = mapping[domain][style];
-        this.defineRuleFromStrings(name, locale, modality, domain, style, str, content);
+        this.defineRuleFromStrings(
+            name, locale, modality, domain, style, str, content);
       }
     }
   }
 
+
+  /**
+   * Retrieves a store for a given locale string.
+   * @param key The locale key.
+   */
   public getRules(key: string) {
     let store = this.rules.get(key);
     if (!store) {
@@ -131,6 +139,7 @@ export class MathSimpleStore {
     }
     return store;
   }
+
 
   /**
    * Creates a single rule from strings.
@@ -148,11 +157,12 @@ export class MathSimpleStore {
     let comp = Engine.getInstance().comparators[domain];
     let cstr = `${locale}.${modality}.${domain}.${style}`;
     let dynamic = parser.parse(cstr);
+    // TODO: Simplify here. No need for comparator?
     let comparator = comp ? comp() : Engine.getInstance().comparator;
     let oldCstr = comparator.getReference();
-    comparator.setReference(dynamic)
+    comparator.setReference(dynamic);
     let rule = {cstr: dynamic, action: content};
-    store = store.filter(r => !comparator.match(r.cstr));
+    store = store.filter(r => !dynamic.equal(r.cstr));
     store.push(rule);
     this.rules.set(locale, store);
     comparator.setReference(oldCstr);

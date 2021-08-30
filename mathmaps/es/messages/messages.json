@@ -29,7 +29,8 @@
       "UNDER": "bajo",
       "UNDERSCRIPT": "bajoíndice",
       "OVER": "sobre",
-      "OVERSCRIPT": "sobreíndice"
+      "OVERSCRIPT": "sobreíndice",
+      "ENDSCRIPTS": "finalizar índices"
     },
     "MSroots": {
       "2": "cuadrada",

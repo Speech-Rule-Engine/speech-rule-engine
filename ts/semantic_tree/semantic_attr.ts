@@ -256,8 +256,12 @@ export const enum SemanticRole {
   // Relations.
   EQUALITY = 'equality',
   INEQUALITY = 'inequality',
-  ELEMENT = 'element',
   ARROW = 'arrow',
+  // Membership relations
+  ELEMENT = 'element',
+  NONELEMENT = 'nonelement',
+  REELEMENT = 'reelement',
+  RENONELEMENT = 'renonelement',
 
   SET = 'set',
   // Roles of matrices or vectors.
@@ -755,9 +759,13 @@ export namespace SemanticAttr {
     '⫕', '⫖', '⫗', '⫘', '⋐', '⋑', '⋪', '⋫', '⋬', '⋭', '⊲', '⊳', '⊴', '⊵'
   ];
   const elementRelations: string[] = [
-    '∈', '∉', '∊', '∋', '∌', '∍', '⋲', '⋳', '⋴', '⋵',
-    '⋶', '⋷', '⋸', '⋹', '⋺', '⋻', '⋼', '⋽', '⋾', '⋿',
+    '∈', '∊', '⋲', '⋳', '⋴', '⋵', '⋶', '⋷', '⋸', '⋹', '⋿'
   ];
+  const nonelementRelations: string[] = ['∉'];
+  const reelementRelations: string[] = [
+    '∋', '∍', '⋺', '⋻', '⋼', '⋽', '⋾',
+  ];
+  const renonelementRelations: string[] = ['∌'];
   const relations: string[] = [
     // TODO (sorge): Add all the other relations. Currently mainly tacks and
     // turnstyles.
@@ -1422,13 +1430,6 @@ export namespace SemanticAttr {
         role: SemanticRole.SET
       },
       {
-        set: elementRelations,
-        type: SemanticType.OPERATOR,
-        // TODO: Changes that to relation once speech rules are separated
-        //       as this has effects on clearspeak.
-        role: SemanticRole.ELEMENT
-      },
-      {
         set: relations,
         type: SemanticType.RELATION,
         role: SemanticRole.UNKNOWN
@@ -1437,6 +1438,27 @@ export namespace SemanticAttr {
         set: arrows,
         type: SemanticType.RELATION,
         role: SemanticRole.ARROW
+      },
+      // Membership. Currently treated as operator.
+      {
+        set: elementRelations,
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.ELEMENT
+      },
+      {
+        set: nonelementRelations,
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.NONELEMENT
+      },
+      {
+        set: reelementRelations,
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.REELEMENT
+      },
+      {
+        set: renonelementRelations,
+        type: SemanticType.OPERATOR,
+        role: SemanticRole.RENONELEMENT
       },
       // Large operators
       {

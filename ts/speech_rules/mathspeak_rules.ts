@@ -78,8 +78,9 @@ export function MathspeakRules() {
 
     'CSFrightsubscriptBrief': MathspeakUtil.subscriptBrief,
     // Over- Underscore.
-    'CSFunderscript': MathspeakUtil.nestedUnderscore,
-    'CSFoverscript': MathspeakUtil.nestedOverscore,
+    'CSFunderscript': MathspeakUtil.nestedUnderscript,
+    'CSFoverscript': MathspeakUtil.nestedOverscript,
+    'CSFendscripts': MathspeakUtil.endscripts,
 
     // Iteratros and counters
     'CTFordinalCounter': NumbersUtil.ordinalCounter,

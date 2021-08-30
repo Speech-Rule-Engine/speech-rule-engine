@@ -1331,7 +1331,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠸⠨⠁"
+        "default": "⠈⠢"
       }
     },
     "key": "220B"
@@ -1340,7 +1340,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "⠌⠸⠨⠁"
+        "default": "⠌⠈⠢"
       }
     },
     "key": "220C"
