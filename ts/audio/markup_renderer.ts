@@ -20,11 +20,19 @@
  */
 
 
+import {EngineConst} from '../common/engine';
 import {AbstractAudioRenderer} from './abstract_audio_renderer';
 import {Pause} from './audio_util';
 
 
 export abstract class MarkupRenderer extends AbstractAudioRenderer {
+
+  /**
+   * Properties to be ignored by a markup renderer.
+   */
+  protected ignoreElements: string[] = [
+    EngineConst.personalityProps.LAYOUT
+  ];
 
   /**
    *  A scale function.
@@ -77,6 +85,15 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
    */
   public applyScaleFunction(value: number): number {
     return this.scaleFunction ? this.scaleFunction(value) : value;
+  }
+
+
+  /**
+   * Check if a given property is to be ignore by a markup renderer.
+   * @param key The property key.
+   */
+  protected ignoreElement(key: string) {
+    return this.ignoreElements.indexOf(key) !== -1;
   }
 
 }

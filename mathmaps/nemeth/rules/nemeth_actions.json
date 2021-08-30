@@ -62,12 +62,12 @@
     [
       "Action",
       "number-indicator",
-      "[t] \"⠼\"; [n] text() (pause:10)"
+      "[t] \"⠼\" (layout:numberIndicator); [n] text() (pause:10)"
     ],
     [
       "Action",
       "number",
-      "[n] text()"
+      "[n] text() (layout:number)"
     ],
     [
       "Action",
@@ -98,6 +98,11 @@
       "Action",
       "identifier",
       "[n] text()"
+    ],
+    [
+      "Action",
+      "english-letter",
+      "[n] text() (layout:english)"
     ],
     [
       "Action",
@@ -202,7 +207,7 @@
     [
       "Action",
       "fraction",
-      "[t] CSFopenFraction; [n] children/*[1]; [t] CSFoverFraction; [n] children/*[2]; [t] CSFcloseFraction"
+      "[p] (layout:beginfraction); [t] CSFopenFraction; [n] children/*[1] (layout:numerator); [t] CSFoverFraction; [n] children/*[2] (layout:denominator); [t] CSFcloseFraction; [p] (layout:endfraction)"
     ],
     [
       "Action",
@@ -377,12 +382,17 @@
     [
       "Action",
       "matrix",
-      "[m] children/* (separator:\"⠀\", join:\"\");"
+      "[m] children/* (separator:\"⠀\", join:\"\", layout:matrix)"
     ],
     [
       "Action",
       "matrix-row",
-      "[n] ../../content/*[1] (grammar:enlargeFence); [m] children/* (separator:\"⠀\"); [n] ../../content/*[2] (grammar:enlargeFence); "
+      "[p] (layout:beginrow); [n] ../../content/*[1] (grammar:enlargeFence, layout:fence); [m] children/* (separator:\"⠀\"); [n] ../../content/*[2] (grammar:enlargeFence, layout:fence); [p] (layout:endrow);"
+    ],
+    [
+      "Action",
+      "vector-line",
+      "[p] (layout:beginrow); [n] ../../content/*[1] (grammar:enlargeFence, layout:fence); [n] children/*[1] (separator:\"⠀\", layout:cell); [n] ../../content/*[2] (grammar:enlargeFence, layout:fence); [p] (layout:endrow);"
     ],
     [
       "Action",
@@ -392,7 +402,7 @@
     [
       "Action",
       "matrix-cell",
-      "[n] children/*[1]"
+      "[n] children/*[1] (layout:cell)"
     ],
     [
       "Action",
@@ -401,18 +411,23 @@
     ],
     [
       "Action",
+      "cayley",
+      "[m] children/* (separator:\"⠀\", join:\"\", layout:cayley)"
+    ],
+    [
+      "Action",
       "layout",
-      "[m] children/* (separator:\"⠀\", join:\"\");"
+      "[m] children/* (separator:\"⠀\", join:\"\", layout:table)"
     ],
     [
       "Action",
       "cases",
-      "[n] ../../content/*[1] (grammar:enlargeFence); [m] children/* (separator:\"⠀\"); [t] \"⠐\""
+      "[p] (layout:begincases); [m] children/* (separator:\"⠀\"); [t] \"⠐\"; [p] (layout:endcases)"
     ],
     [
       "Action",
       "line",
-      "[m] children/*"
+      "[p] (layout:beginrow); [p] (layout:fence); [m] children/* (layout:cell); [p] (layout:fence); [p] (layout:endrow)"
     ],
     [
       "Action",
@@ -513,6 +528,15 @@
       "Action",
       "punctuation-colon-ratio",
       "[t] \"⠀⠐⠂⠀\""
+    ],
+    [
+      "Rule",
+      "punctuation-ellipsis-cell",
+      "default",
+      "[t] \"⠄⠄⠄\"",
+      "self::punctuation[@role=\"ellipsis\"]",
+      "count(../*)=1",
+      "name(../..)=\"cell\" or name(../..)=\"line\""
     ],
     [
       "Action",

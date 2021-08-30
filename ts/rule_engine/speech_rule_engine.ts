@@ -455,6 +455,7 @@ export class SpeechRuleEngine {
           descrs[0]['annotation'] = attributes['annotation'];
         }
       }
+      this.addLayout(descrs, attributes, multi);
       if (component.grammar) {
         Grammar.getInstance().popState();
       }
@@ -488,7 +489,7 @@ export class SpeechRuleEngine {
       context: SpeechRuleContext, nodes: Element[], sepFunc: string,
       sepStr: string, ctxtFunc: string,
       ctxtStr: string): AuditoryDescription[] {
-    if (nodes == []) {
+    if (nodes === []) {
       return [];
     }
     let sep = sepStr || '';
@@ -518,6 +519,33 @@ export class SpeechRuleEngine {
 
 
   /**
+   * Adds layout annotations to the auditory descriptions
+   * @param descrs The auditory descriptions.
+   * @param props The properties.
+   * @param _multi Is is a multi node component. Currently ignored.
+   */
+  private addLayout(
+    descrs: AuditoryDescription[], props: {[key: string]: string},
+    _multi: boolean) {
+    let layout = props.layout;
+    if (!layout) {
+      return;
+    }
+    if (layout.match(/^begin/)) {
+      descrs.unshift(new AuditoryDescription({text: '', layout: layout}));
+      return;
+    }
+    if (layout.match(/^end/)) {
+      descrs.push(new AuditoryDescription({text: '', layout: layout}));
+      return;
+    }
+    descrs.unshift(new AuditoryDescription(
+      {text: '', layout: `begin${layout}`}));
+    descrs.push(new AuditoryDescription({text: '', layout: `end${layout}`}));
+  }
+
+
+  /**
    * Adds personality to every Auditory Descriptions in input list.
    * @param descrs A list of Auditory
    *     descriptions.
@@ -527,8 +555,8 @@ export class SpeechRuleEngine {
    * @return The modified array.
    */
   private addPersonality_(
-      descrs: AuditoryDescription[], props: {[key: string]: string}, multi: boolean,
-      node: Node): AuditoryDescription[] {
+    descrs: AuditoryDescription[], props: {[key: string]: string},
+    multi: boolean, node: Node): AuditoryDescription[] {
     let personality: {[key: string]: string|number} = {};
     let pause = null;
     for (let key of EngineConst.personalityPropList) {
@@ -541,7 +569,7 @@ export class SpeechRuleEngine {
       //   personality[sre.Engine.personalityProps[key]] = numeral;
       // }
       let realValue = isNaN(numeral) ?
-          value.charAt(0) == '"' ? value.slice(1, -1) : value :
+          value.charAt(0) === '"' ? value.slice(1, -1) : value :
           numeral;
       if (key === EngineConst.personalityProps.PAUSE) {
         pause = realValue;
@@ -611,7 +639,7 @@ export class SpeechRuleEngine {
       if (descrPersonality[p] && typeof descrPersonality[p] == 'number' &&
           typeof personality[p] == 'number') {
         descrPersonality[p] = descrPersonality[p] + personality[p];
-      } else {
+      } else if (!descrPersonality[p]) {
         descrPersonality[p] = personality[p];
       }
     }

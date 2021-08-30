@@ -642,7 +642,7 @@ export function underscoreNestingDepth(node: Element): number {
  * @param node The underscore node.
  * @return The correct prefix string.
  */
-export function nestedUnderscore(node: Element): string {
+export function nestedUnderscript(node: Element): string {
   let depth = underscoreNestingDepth(node);
   return Array(depth).join(LOCALE.MESSAGES.MS.UNDER) +
       LOCALE.MESSAGES.MS.UNDERSCRIPT;
@@ -664,12 +664,17 @@ export function overscoreNestingDepth(node: Element): number {
 }
 
 
+export function endscripts(_node: Element) {
+  return LOCALE.MESSAGES.MS.ENDSCRIPTS;
+}
+
+
 /**
  * String function to construct and overscript prefix.
  * @param node The overscore node.
  * @return The correct prefix string.
  */
-export function nestedOverscore(node: Element): string {
+export function nestedOverscript(node: Element): string {
   let depth = overscoreNestingDepth(node);
   return Array(depth).join(LOCALE.MESSAGES.MS.OVER) +
       LOCALE.MESSAGES.MS.OVERSCRIPT;

@@ -30,7 +30,8 @@
       "UNDER": "sotto",
       "UNDERSCRIPT": "sottoscritto",
       "OVER": "sopra",
-      "OVERSCRIPT": "soprascritto"
+      "OVERSCRIPT": "soprascritto",
+      "ENDSCRIPTS": "fine script"
     },
     "MSroots": {},
     "font": {

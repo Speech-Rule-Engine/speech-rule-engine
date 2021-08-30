@@ -65,8 +65,8 @@ export abstract class XmlRenderer extends MarkupRenderer {
       if (descr.open.length) {
         let open = AudioUtil.sortClose(descr.open.slice(), markup.slice(i + 1));
         open.forEach(o => {
-          result.push(this.prosodyElement(o, descr[o]));
-          currentOpen.push(o);
+              result.push(this.prosodyElement(o, descr[o]));
+            currentOpen.push(o);
         });
       }
     }

@@ -176,6 +176,13 @@
     ],
     [
       "Precondition",
+      "english-letter",
+      "default",
+      "self::identifier",
+      "@role=\"latinletter\""
+    ],
+    [
+      "Precondition",
       "prefix",
       "default",
       "self::prefixop"
@@ -202,7 +209,7 @@
       "Precondition",
       "element",
       "default",
-      "self::infixop[@role=\"element\"]"
+      "self::infixop[contains(@role, \"element\")]"
     ],
     [
       "Precondition",
@@ -736,14 +743,15 @@
       "self::row"
     ],
     [
-      "Alias",
-      "matrix-row",
+      "Precondition",
+      "vector-line",
+      "default",
       "self::line",
       "@role=\"vector\""
     ],
     [
       "Alias",
-      "matrix-row",
+      "vector-line",
       "self::line",
       "@role=\"binomial\""
     ],
@@ -772,6 +780,12 @@
       "layout",
       "default",
       "self::table"
+    ],
+    [
+      "Precondition",
+      "cayley",
+      "default",
+      "self::table[@role=\"cayley\"]"
     ],
     [
       "Precondition",

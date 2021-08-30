@@ -20,8 +20,8 @@
 
 import {Engine, EngineConst} from '../common/engine';
 import {DynamicCstr} from '../rule_engine/dynamic_cstr';
-import {Axis, AxisMap, AxisProperties, DefaultComparator,
-        DynamicCstrParser, DynamicProperties} from '../rule_engine/dynamic_cstr';
+import {Axis, AxisMap, AxisProperties, DefaultComparator, DynamicCstrParser,
+        DynamicProperties} from '../rule_engine/dynamic_cstr';
 import {MathCompoundStore} from '../rule_engine/math_simple_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
@@ -354,11 +354,10 @@ export class Comparator extends DefaultComparator {
    * @override
    */
   public match(cstr: DynamicCstr) {
-    let top = super.match(cstr);
-    if (!top) {
-      return false;
-    }
     if (!(cstr instanceof ClearspeakPreferences)) {
+      return super.match(cstr);
+    }
+    if (cstr.getComponents()[Axis.STYLE] === 'default') {
       return true;
     }
     let keys = Object.keys(cstr.preference);
