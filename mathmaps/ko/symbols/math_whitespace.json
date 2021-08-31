@@ -277,6 +277,9 @@
       "default": {
         "default": "곱셈", 
         "alternative": "보이지 않는 곱셈" 
+      },
+      "clearspeak": {
+        "default": "곱하기" 
       }
     },
     "key": "2062"
