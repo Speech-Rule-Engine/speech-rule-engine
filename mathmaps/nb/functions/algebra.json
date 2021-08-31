@@ -13,9 +13,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "grad",
-        "singular": "",
-        "dual": ""
+        "default": "grad"
       }
     }
   },
@@ -27,9 +25,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "det",
-        "singular": "",
-        "dual": ""
+        "default": "det"
       }
     }
   },
@@ -41,9 +37,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "dimensjon",
-        "singular": "",
-        "dual": ""
+        "default": "dimensjon"
       }
     }
   },
@@ -56,9 +50,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "hom",
-        "singular": "",
-        "dual": ""
+        "default": "hom"
       }
     }
   },
@@ -70,9 +62,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "kjerne",
-        "singular": "",
-        "dual": ""
+        "default": "kjerne"
       }
     }
   },
@@ -85,9 +75,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "trase",
-        "singular": "",
-        "dual": ""
+        "default": "trase"
       }
     }
   }

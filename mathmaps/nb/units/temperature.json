@@ -6,9 +6,7 @@
     "key": "F",
     "mappings": {
       "default": {
-        "default": "farads",
-        "singular": "farad",
-        "dual": ""
+        "default": "Fahrenheit"
       }
     },
     "category": "temperature",
@@ -22,9 +20,7 @@
     "key": "C",
     "mappings": {
       "default": {
-        "default": "coulombs",
-        "singular": "coulomb",
-        "dual": ""
+        "default": "Celsius"
       }
     },
     "category": "temperature",
@@ -37,9 +33,7 @@
     "key": "K",
     "mappings": {
       "default": {
-        "default": "kelvins",
-        "singular": "kelvin",
-        "dual": ""
+        "default": "Kelvin"
       }
     },
     "category": "temperature",

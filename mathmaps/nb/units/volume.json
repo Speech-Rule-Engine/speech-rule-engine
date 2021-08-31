@@ -11,9 +11,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "kubikk"
       }
     }
   },
@@ -21,9 +19,8 @@
     "key": "cu in",
     "mappings": {
       "default": {
-        "default": "cubic inches",
-        "singular": "cubic inch",
-        "dual": ""
+        "default": "cubic inch",
+        "plural": "cubic inches"
       }
     },
     "category": "volume",
@@ -36,9 +33,7 @@
     "key": "cu ft",
     "mappings": {
       "default": {
-        "default": "cubic feet",
-        "singular": "cubic foot",
-        "dual": ""
+        "default": ""
       }
     },
     "category": "volume",
@@ -51,9 +46,7 @@
     "key": "cu yd",
     "mappings": {
       "default": {
-        "default": "cubic yards",
-        "singular": "cubic yard",
-        "dual": ""
+        "default": ""
       }
     },
     "category": "volume",
@@ -66,9 +59,7 @@
     "key": "bbl",
     "mappings": {
       "default": {
-        "default": "barrels",
-        "singular": "barrel",
-        "dual": ""
+        "default": ""
       }
     },
     "category": "volume",
@@ -81,9 +72,8 @@
     "key": "fl oz",
     "mappings": {
       "default": {
-        "default": "fluid ounces",
-        "singular": "fluid ounce",
-        "dual": ""
+        "default": "fluid ounce",
+        "plural": "fluid ounces"
       }
     },
     "category": "volume",
@@ -96,9 +86,7 @@
     "key": "gal",
     "mappings": {
       "default": {
-        "default": "gallons",
-        "singular": "gallon",
-        "dual": ""
+        "default": ""
       }
     },
     "category": "volume",
@@ -111,9 +99,7 @@
     "key": "pt",
     "mappings": {
       "default": {
-        "default": "pints",
-        "singular": "pint",
-        "dual": ""
+        "default": ""
       }
     },
     "category": "volume",
@@ -126,9 +112,7 @@
     "key": "qt",
     "mappings": {
       "default": {
-        "default": "quarts",
-        "singular": "quart",
-        "dual": ""
+        "default": ""
       }
     },
     "category": "volume",
@@ -141,9 +125,8 @@
     "key": "fl dr",
     "mappings": {
       "default": {
-        "default": "fluid drams",
-        "singular": "fluid dram",
-        "dual": ""
+        "default": "fluid dram",
+        "plural": "fluid drams"
       }
     },
     "category": "volume",
@@ -156,9 +139,7 @@
     "key": "tbsp",
     "mappings": {
       "default": {
-        "default": "tablespoons",
-        "singular": "tablespoon",
-        "dual": ""
+        "default": "spiseskje"
       }
     },
     "category": "volume",
@@ -173,9 +154,7 @@
     "key": "tsp",
     "mappings": {
       "default": {
-        "default": "teaspoons",
-        "singular": "teaspoon",
-        "dual": ""
+        "default": "teskje"
       }
     },
     "category": "volume",
@@ -188,9 +167,8 @@
     "key": "cp",
     "mappings": {
       "default": {
-        "default": "cups",
-        "singular": "cup",
-        "dual": ""
+        "default": "cup",
+        "plural": "cups"
       }
     },
     "category": "volume",
@@ -208,9 +186,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "kubikkcentimeter"
       }
     }
   },
@@ -218,9 +194,7 @@
     "key": "l",
     "mappings": {
       "default": {
-        "default": "liters",
-        "singular": "liter",
-        "dual": ""
+        "default": "liter"
       }
     },
     "category": "volume",

@@ -6,9 +6,7 @@
     "key": "W",
     "mappings": {
       "default": {
-        "default": "watts",
-        "singular": "watt",
-        "dual": ""
+        "default": "watt"
       }
     },
     "category": "energy",
@@ -27,9 +25,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "kilowattime"
       }
     }
   },
@@ -37,9 +33,7 @@
     "key": "J",
     "mappings": {
       "default": {
-        "default": "joules",
-        "singular": "joule",
-        "dual": ""
+        "default": "joule"
       }
     },
     "category": "energy",
@@ -52,9 +46,7 @@
     "key": "N",
     "mappings": {
       "default": {
-        "default": "newtons",
-        "singular": "newton",
-        "dual": ""
+        "default": "newton"
       }
     },
     "category": "energy",
@@ -67,9 +59,7 @@
     "key": "A",
     "mappings": {
       "default": {
-        "default": "amps",
-        "singular": "amp",
-        "dual": ""
+        "default": "ampere"
       }
     },
     "category": "energy",
@@ -82,9 +72,7 @@
     "key": "V",
     "mappings": {
       "default": {
-        "default": "volts",
-        "singular": "volt",
-        "dual": ""
+        "default": "volt"
       }
     },
     "category": "energy",
@@ -102,9 +90,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "ohm"
       }
     }
   },
@@ -112,9 +98,7 @@
     "key": "Ω",
     "mappings": {
       "default": {
-        "default": "ohms",
-        "singular": "ohm",
-        "dual": ""
+        "default": "ohm"
       }
     },
     "category": "energy",

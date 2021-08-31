@@ -14,9 +14,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "kvadrat"
       }
     }
   },
@@ -24,9 +22,8 @@
     "key": "sq in",
     "mappings": {
       "default": {
-        "default": "square inches",
-        "singular": "square inch",
-        "dual": ""
+        "default": "square inch",
+        "plural": "square inches"
       }
     },
     "category": "area",
@@ -46,9 +43,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -56,9 +51,7 @@
     "key": "sq ft",
     "mappings": {
       "default": {
-        "default": "square feet",
-        "singular": "square foot",
-        "dual": ""
+        "default": ""
       }
     },
     "category": "area",
@@ -71,9 +64,7 @@
     "key": "sq yd",
     "mappings": {
       "default": {
-        "default": "square yards",
-        "singular": "square yard",
-        "dual": ""
+        "default": "kvadratmeter"
       }
     },
     "category": "area",
@@ -86,9 +77,7 @@
     "key": "sq mi",
     "mappings": {
       "default": {
-        "default": "square miles",
-        "singular": "square mile",
-        "dual": ""
+        "default": "kvadratkilometer"
       }
     },
     "category": "area",
@@ -101,9 +90,8 @@
     "key": "ac",
     "mappings": {
       "default": {
-        "default": "acres",
-        "singular": "acre",
-        "dual": ""
+        "default": "acre",
+        "plural": "acres"
       }
     },
     "category": "area",
@@ -122,9 +110,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "hektar"
       }
     }
   }

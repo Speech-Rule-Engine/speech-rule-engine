@@ -6,9 +6,8 @@
     "key": "s",
     "mappings": {
       "default": {
-        "default": "seconds",
-        "singular": "second",
-        "dual": ""
+        "default": "sekund",
+        "plural": "sekunder"
       }
     },
     "category": "time",
@@ -25,9 +24,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "sekund",
+        "plural": "sekunder"
       }
     }
   },
@@ -40,9 +38,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "minutt",
+        "plural": "minutter"
       }
     }
   },
@@ -54,9 +51,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "grad",
+        "plural": "grader"
       }
     }
   },
@@ -69,9 +65,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "time",
+        "plural": "timer"
       }
     }
   }
