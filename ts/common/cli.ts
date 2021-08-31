@@ -266,7 +266,11 @@ export class Cli {
             set('rules'))
         .option(
             '-C, --prune [branch]', 'Prune trie [branch] for clean reload.',
-            set('prune'))
+          set('prune'))
+        .option(
+            '-N, --number', 'Translate number to word.', processor, 'number')
+        .option(
+            '-O, --ordinal', 'Translate number to ordinal.', processor, 'ordinal')
         .option('-v, --verbose', 'Verbose mode.')
         .option('-l, --log [name]', 'Log file [name].')
         .option('--opt', 'List engine setup options.')
