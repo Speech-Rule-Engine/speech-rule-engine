@@ -28,8 +28,8 @@ import {Numbers, NUMBERS as NUMB} from '../messages';
  * @param num number string.
  * @return If it is a one, it is made into prefix.
  */
-function onePrefix_(num: string): string {
-  return num === NUMBERS.ones[1] ? 'ein' : num;
+function onePrefix_(num: string, mill: boolean = false): string {
+  return num === NUMBERS.ones[1] ? (mill ? 'eine' : 'ein') : num;
 }
 
 
@@ -77,7 +77,15 @@ function numberToWords(num: number): string {
     let hundreds = num % 1000;
     if (hundreds) {
       let hund = hundredsToWords_(num % 1000);
-      str = onePrefix_(hund) + (pos ? NUMBERS.large[pos] : '') + str;
+      if (pos) {
+        let large = NUMBERS.large[pos];
+        // If this is million or above take care oaf the plural.
+        let plural = (pos > 1 && hundreds > 1 ?
+          (large.match(/e$/) ? 'n' : 'en') : '');
+        str = onePrefix_(hund, pos > 1) + large + plural + str;
+      } else {
+        str = onePrefix_(hund, pos > 1) + str;
+      }
     }
     num = Math.floor(num / 1000);
     pos++;
