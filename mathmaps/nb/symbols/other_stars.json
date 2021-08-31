@@ -7,7 +7,7 @@
     "key": "23E8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "desimaleksponent"
       }
     }
   },
@@ -15,7 +15,7 @@
     "key": "2605",
     "mappings": {
       "default": {
-        "default": "svart star"
+        "default": "svart stjerne"
       }
     },
     "category": "So"
@@ -24,7 +24,7 @@
     "key": "2606",
     "mappings": {
       "default": {
-        "default": "hvitt star"
+        "default": "hvit stjerne"
       }
     },
     "category": "So"
@@ -34,7 +34,7 @@
     "key": "26AA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvit sirkel"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "26AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart sirkel"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "2705",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvitt sjekkmerke"
       }
     }
   },
@@ -60,7 +60,7 @@
     "key": "2713",
     "mappings": {
       "default": {
-        "default": "check mark"
+        "default": "sjekkmerke"
       }
     },
     "category": "So"
@@ -70,7 +70,7 @@
     "key": "2714",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet sjekkmerke"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "2715",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multiplikasjon-x"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "2716",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet multiplikasjon-x"
       }
     }
   },
@@ -96,7 +96,7 @@
     "key": "2717",
     "mappings": {
       "default": {
-        "default": "ballot x"
+        "default": "håndskrift-x"
       }
     },
     "category": "So"
@@ -106,7 +106,7 @@
     "key": "2718",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet håndskrift-x"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "271B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kors med åpen midte"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "271C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet kors med åpen midte"
       }
     }
   },
@@ -132,7 +132,7 @@
     "key": "2720",
     "mappings": {
       "default": {
-        "default": "maltese cross"
+        "default": "maltesisk kors"
       }
     },
     "category": "So"
@@ -142,7 +142,7 @@
     "key": "2721",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "davidstjerne"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "2722",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med fire dråper"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "2723",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med fire ballonger"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "2724",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet asterisk med fire ballonger"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "2725",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med fire klubber"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "2726",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart firepunktsstjerne"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2727",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvit firepunktsstjerne"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "2728",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "blinkende stjerner"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "2729",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvit stjerne med kantlinje"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "272A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med hvit stjerne"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "272B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart stjerne med åpen midte"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "272C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvit stjerne med svart midte"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "272D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart stjerne med kantlinje"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "272E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet svart stjerne"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "272F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snurrehjulstjerne"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "2730",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvit stjerne med skygge"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "2731",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet asterisk"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "2732",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med åpen midte"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "2733",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med åtte hender"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "2734",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stjerne med åtte punkter"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "2735",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stjerne med åtte hjulpunkter"
       }
     }
   },
@@ -330,7 +330,7 @@
     "key": "2736",
     "mappings": {
       "default": {
-        "default": "six pointed svart star"
+        "default": "svart stjerne med seks hender"
       }
     },
     "category": "So"
@@ -340,7 +340,7 @@
     "key": "2739",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart stjerne med tolv hender"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "273A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med seksten hender"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "273B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med dråpehender"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "273C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med dråpepunkter og åpen midte"
       }
     }
   },
@@ -375,7 +375,7 @@
     "key": "273D",
     "mappings": {
       "default": {
-        "default": "heavy teardrop spoked asterisk"
+        "default": "fet asterisk med dråpepunkter"
       }
     },
     "category": "So"
@@ -385,7 +385,7 @@
     "key": "273E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten blomst med seksblad i svart og hvitt"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "273F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart liten blomst"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "2740",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvit liten blomst"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "2741",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "åttebladet svart florette med kantlinje"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "2742",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med åttehendet stjerne med åpen midte"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "2743",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet asterisk med dråpehjulpunkter"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "2744",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snøfnugg"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "2745",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tett trifoliert snøfnugg"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "2746",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet snøfnugg med fiskebeinsmønster"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "2747",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "glimrende"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "2748",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet glimrende"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "2749",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med ballonger"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "274A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "propellasterisk med åtte dråpehender"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "274B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fet propellasterisk med åtte dråpehender"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "274C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kryssmerke"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "274D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvit sirkel med skygge"
       }
     }
   }

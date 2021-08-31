@@ -6,7 +6,7 @@
     "key": "21BC",
     "mappings": {
       "default": {
-        "default": "venstre harpoon opp"
+        "default": "venstre-harpun opp"
       }
     },
     "category": "So"
@@ -15,7 +15,7 @@
     "key": "21BD",
     "mappings": {
       "default": {
-        "default": "venstre harpoon ned"
+        "default": "venstre-harpun ned"
       }
     },
     "category": "So"
@@ -24,7 +24,7 @@
     "key": "21BE",
     "mappings": {
       "default": {
-        "default": "opp harpoon høyre"
+        "default": "opp-harpun høyre"
       }
     },
     "category": "So"
@@ -33,7 +33,7 @@
     "key": "21BF",
     "mappings": {
       "default": {
-        "default": "opp harpoon venstre"
+        "default": "opp-harpun venstre"
       }
     },
     "category": "So"
@@ -42,7 +42,7 @@
     "key": "21C0",
     "mappings": {
       "default": {
-        "default": "høyre harpoon opp"
+        "default": "høyre-harpun opp"
       }
     },
     "category": "So"
@@ -51,7 +51,7 @@
     "key": "21C1",
     "mappings": {
       "default": {
-        "default": "høyre harpoon ned"
+        "default": "høyre-harpun ned"
       }
     },
     "category": "So"
@@ -60,7 +60,7 @@
     "key": "21C2",
     "mappings": {
       "default": {
-        "default": "ned harpoon høyre"
+        "default": "ned-harpun høyre"
       }
     },
     "category": "So"
@@ -69,7 +69,7 @@
     "key": "21C3",
     "mappings": {
       "default": {
-        "default": "ned harpoon venstre"
+        "default": "ned-harpun venstre"
       }
     },
     "category": "So"
@@ -78,7 +78,7 @@
     "key": "21CB",
     "mappings": {
       "default": {
-        "default": "venstre harpoon over høyre harpoon"
+        "default": "venstre-harpun over høyre-harpun"
       }
     },
     "category": "So"
@@ -87,7 +87,7 @@
     "key": "21CC",
     "mappings": {
       "default": {
-        "default": "høyre harpoon over venstre harpoon"
+        "default": "høyre-harpun over venstre-harpun"
       }
     },
     "category": "So"
@@ -96,7 +96,7 @@
     "key": "294A",
     "mappings": {
       "default": {
-        "default": "venstre barb opp høyre barb ned harpoon"
+        "default": "venstre pigg opp høyre pigg ned-harpun"
       }
     },
     "category": "Sm"
@@ -105,7 +105,7 @@
     "key": "294B",
     "mappings": {
       "default": {
-        "default": "venstre barb ned høyre barb opp harpoon"
+        "default": "venstre pigg ned høyre pigg opp-harpun"
       }
     },
     "category": "Sm"
@@ -115,7 +115,7 @@
     "key": "294C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høyre pigg opp venstre pigg ned-harpun"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "294D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre pigg opp høyre pigg ned-harpun"
       }
     }
   },
@@ -132,7 +132,7 @@
     "key": "294E",
     "mappings": {
       "default": {
-        "default": "venstre barb opp høyre barb opp harpoon"
+        "default": "venstre pigg opp høyre pigg opp-harpun"
       }
     },
     "category": "Sm"
@@ -141,7 +141,7 @@
     "key": "294F",
     "mappings": {
       "default": {
-        "default": "opp ned harpoon høyre"
+        "default": "opp ned-harpun høyre"
       }
     },
     "category": "Sm"
@@ -150,7 +150,7 @@
     "key": "2950",
     "mappings": {
       "default": {
-        "default": "venstre barb ned høyre barb ned harpoon"
+        "default": "venstre pigg ned høyre pigg ned-harpun"
       }
     },
     "category": "Sm"
@@ -159,7 +159,7 @@
     "key": "2951",
     "mappings": {
       "default": {
-        "default": "opp ned harpoon venstre"
+        "default": "opp ned-harpun venstre"
       }
     },
     "category": "Sm"
@@ -168,7 +168,7 @@
     "key": "2952",
     "mappings": {
       "default": {
-        "default": "venstrewards harpoon til strek with barb upwards"
+        "default": "venstre-harpun til strek med pigg oppover"
       }
     },
     "category": "Sm"
@@ -177,7 +177,7 @@
     "key": "2953",
     "mappings": {
       "default": {
-        "default": "høyrewards harpoon til strek with barb upwards"
+        "default": "høyre-harpun til strek med pigg oppover"
       }
     },
     "category": "Sm"
@@ -186,7 +186,7 @@
     "key": "2954",
     "mappings": {
       "default": {
-        "default": "upwards harpoon til strek with barb høyrewards"
+        "default": "oppover-harpun til strek med pigg høyre"
       }
     },
     "category": "Sm"
@@ -195,7 +195,7 @@
     "key": "2955",
     "mappings": {
       "default": {
-        "default": "downwards harpoon til strek with barb høyrewards"
+        "default": "nedover-harpun til strek med pigg høyre"
       }
     },
     "category": "Sm"
@@ -204,7 +204,7 @@
     "key": "2956",
     "mappings": {
       "default": {
-        "default": "venstrewards harpoon til strek with barb downwards"
+        "default": "venstre-harpun til strek med pigg nedover"
       }
     },
     "category": "Sm"
@@ -213,7 +213,7 @@
     "key": "2957",
     "mappings": {
       "default": {
-        "default": "høyrewards harpoon til strek with barb downwards"
+        "default": "høyre-harpun til strek med pigg nedover"
       }
     },
     "category": "Sm"
@@ -222,7 +222,7 @@
     "key": "2958",
     "mappings": {
       "default": {
-        "default": "upwards harpoon til strek with barb venstrewards"
+        "default": "oppover-harpun til strek med pigg venstre"
       }
     },
     "category": "Sm"
@@ -231,7 +231,7 @@
     "key": "2959",
     "mappings": {
       "default": {
-        "default": "downwards harpoon til strek with barb venstrewards"
+        "default": "nedover-harpun til strek med pigg venstre"
       }
     },
     "category": "Sm"
@@ -240,7 +240,7 @@
     "key": "295A",
     "mappings": {
       "default": {
-        "default": "venstrewards harpoon from strek with barb upwards"
+        "default": "venstre-harpun from strek med pigg oppover"
       }
     },
     "category": "Sm"
@@ -249,7 +249,7 @@
     "key": "295B",
     "mappings": {
       "default": {
-        "default": "høyrewards harpoon from strek with barb upwards"
+        "default": "høyre-harpun from strek med pigg oppover"
       }
     },
     "category": "Sm"
@@ -258,7 +258,7 @@
     "key": "295C",
     "mappings": {
       "default": {
-        "default": "upwards harpoon from strek with barb høyrewards"
+        "default": "oppover-harpun from strek med pigg høyre"
       }
     },
     "category": "Sm"
@@ -267,7 +267,7 @@
     "key": "295D",
     "mappings": {
       "default": {
-        "default": "downwards harpoon from strek with barb høyrewards"
+        "default": "nedover-harpun from strek med pigg høyre"
       }
     },
     "category": "Sm"
@@ -276,7 +276,7 @@
     "key": "295E",
     "mappings": {
       "default": {
-        "default": "venstrewards harpoon from strek with barb downwards"
+        "default": "venstre-harpun from strek med pigg nedover"
       }
     },
     "category": "Sm"
@@ -285,7 +285,7 @@
     "key": "295F",
     "mappings": {
       "default": {
-        "default": "høyrewards harpoon from strek with barb downwards"
+        "default": "høyre-harpun from strek med pigg nedover"
       }
     },
     "category": "Sm"
@@ -294,7 +294,7 @@
     "key": "2960",
     "mappings": {
       "default": {
-        "default": "upwards harpoon from strek with barb venstrewards"
+        "default": "oppover-harpun from strek med pigg venstre"
       }
     },
     "category": "Sm"
@@ -303,7 +303,7 @@
     "key": "2961",
     "mappings": {
       "default": {
-        "default": "downwards harpoon from strek with barb venstrewards"
+        "default": "nedover-harpun from strek med pigg venstre"
       }
     },
     "category": "Sm"
@@ -312,7 +312,7 @@
     "key": "2962",
     "mappings": {
       "default": {
-        "default": "venstrewards harpoon with barb opp above venstrewards harpoon with barb ned"
+        "default": "venstre-harpun med pigg opp above venstre-harpun med pigg ned"
       }
     },
     "category": "Sm"
@@ -321,7 +321,7 @@
     "key": "2963",
     "mappings": {
       "default": {
-        "default": "upwards harpoon with barb venstre beside upwards harpoon with barb høyre"
+        "default": "oppover-harpun med pigg venstre beside oppover-harpun med pigg høyre"
       }
     },
     "category": "Sm"
@@ -330,7 +330,7 @@
     "key": "2964",
     "mappings": {
       "default": {
-        "default": "høyrewards harpoon with barb opp above høyrewards harpoon with barb ned"
+        "default": "høyre-harpun med pigg opp above høyre-harpun med pigg ned"
       }
     },
     "category": "Sm"
@@ -339,7 +339,7 @@
     "key": "2965",
     "mappings": {
       "default": {
-        "default": "downwards harpoon with barb venstre beside downwards harpoon with barb høyre"
+        "default": "nedover-harpun med pigg venstre beside nedover-harpun med pigg høyre"
       }
     },
     "category": "Sm"
@@ -348,7 +348,7 @@
     "key": "2966",
     "mappings": {
       "default": {
-        "default": "venstrewards harpoon with barb opp above høyrewards harpoon with barb opp"
+        "default": "venstre-harpun med pigg opp above høyre-harpun med pigg opp"
       }
     },
     "category": "Sm"
@@ -357,7 +357,7 @@
     "key": "2967",
     "mappings": {
       "default": {
-        "default": "venstrewards harpoon with barb ned above høyrewards harpoon with barb ned"
+        "default": "venstre-harpun med pigg ned above høyre-harpun med pigg ned"
       }
     },
     "category": "Sm"
@@ -366,7 +366,7 @@
     "key": "2968",
     "mappings": {
       "default": {
-        "default": "høyrewards harpoon with barb opp above venstrewards harpoon with barb opp"
+        "default": "høyre-harpun med pigg opp above venstre-harpun med pigg opp"
       }
     },
     "category": "Sm"
@@ -375,7 +375,7 @@
     "key": "2969",
     "mappings": {
       "default": {
-        "default": "høyrewards harpoon with barb ned above venstrewards harpoon with barb ned"
+        "default": "høyre-harpun med pigg ned above venstre-harpun med pigg ned"
       }
     },
     "category": "Sm"
@@ -384,7 +384,7 @@
     "key": "296A",
     "mappings": {
       "default": {
-        "default": "venstrewards harpoon over strek"
+        "default": "venstre-harpun over strek"
       }
     },
     "category": "Sm"
@@ -393,7 +393,7 @@
     "key": "296B",
     "mappings": {
       "default": {
-        "default": "venstrewards harpoon under strek"
+        "default": "venstre-harpun under strek"
       }
     },
     "category": "Sm"
@@ -402,7 +402,7 @@
     "key": "296C",
     "mappings": {
       "default": {
-        "default": "høyrewards harpoon over strek"
+        "default": "høyre-harpun over strek"
       }
     },
     "category": "Sm"
@@ -411,7 +411,7 @@
     "key": "296D",
     "mappings": {
       "default": {
-        "default": "høyrewards harpoon under strek"
+        "default": "høyre-harpun under strek"
       }
     },
     "category": "Sm"
@@ -420,7 +420,7 @@
     "key": "296E",
     "mappings": {
       "default": {
-        "default": "upwards harpoon til the venstre av downwards harpoon"
+        "default": "oppover-harpun til the venstre av nedover-harpun"
       }
     },
     "category": "Sm"
@@ -429,7 +429,7 @@
     "key": "296F",
     "mappings": {
       "default": {
-        "default": "upwards harpoon til the høyre av downwards harpoon"
+        "default": "oppover-harpun til the høyre av nedover-harpun"
       }
     },
     "category": "Sm"
@@ -438,7 +438,7 @@
     "key": "297C",
     "mappings": {
       "default": {
-        "default": "venstre fish tail"
+        "default": "venstre fiskehale"
       }
     },
     "category": "Sm"
@@ -447,7 +447,7 @@
     "key": "297D",
     "mappings": {
       "default": {
-        "default": "høyre fish tail"
+        "default": "høyre fiskehale"
       }
     },
     "category": "Sm"
@@ -456,7 +456,7 @@
     "key": "297E",
     "mappings": {
       "default": {
-        "default": "vertikal strek with dobbel hook"
+        "default": "opp-fiskehale"
       }
     },
     "category": "Sm"
@@ -465,7 +465,7 @@
     "key": "297F",
     "mappings": {
       "default": {
-        "default": "ned fish tail"
+        "default": "ned-fiskehale"
       }
     },
     "category": "Sm"

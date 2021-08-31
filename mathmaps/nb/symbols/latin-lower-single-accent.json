@@ -6,7 +6,7 @@
     "key": "00E0",
     "mappings": {
       "default": {
-        "default": "a med grav akutt"
+        "default": "a med gravis"
       }
     },
     "category": "Ll"
@@ -15,7 +15,7 @@
     "key": "00E1",
     "mappings": {
       "default": {
-        "default": "a med akutt"
+        "default": "a med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -24,7 +24,7 @@
     "key": "00E2",
     "mappings": {
       "default": {
-        "default": "a med cirkumfleks"
+        "default": "a med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -69,7 +69,7 @@
     "key": "00E8",
     "mappings": {
       "default": {
-        "default": "e med grav akutt"
+        "default": "e med gravis"
       }
     },
     "category": "Ll"
@@ -78,7 +78,7 @@
     "key": "00E9",
     "mappings": {
       "default": {
-        "default": "e med akutt"
+        "default": "e med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -87,7 +87,7 @@
     "key": "00EA",
     "mappings": {
       "default": {
-        "default": "e med cirkumfleks"
+        "default": "e med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -105,7 +105,7 @@
     "key": "00EC",
     "mappings": {
       "default": {
-        "default": "i med grav akutt"
+        "default": "i med gravis"
       }
     },
     "category": "Ll"
@@ -114,7 +114,7 @@
     "key": "00ED",
     "mappings": {
       "default": {
-        "default": "i med akutt"
+        "default": "i med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -123,7 +123,7 @@
     "key": "00EE",
     "mappings": {
       "default": {
-        "default": "i med cirkumfleks"
+        "default": "i med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -150,7 +150,7 @@
     "key": "00F2",
     "mappings": {
       "default": {
-        "default": "o med grav akutt"
+        "default": "o med gravis"
       }
     },
     "category": "Ll"
@@ -159,7 +159,7 @@
     "key": "00F3",
     "mappings": {
       "default": {
-        "default": "o med akutt"
+        "default": "o med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -168,7 +168,7 @@
     "key": "00F4",
     "mappings": {
       "default": {
-        "default": "o med cirkumfleks"
+        "default": "o med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -195,7 +195,7 @@
     "key": "00F9",
     "mappings": {
       "default": {
-        "default": "u med grav akutt"
+        "default": "u med gravis"
       }
     },
     "category": "Ll"
@@ -204,7 +204,7 @@
     "key": "00FA",
     "mappings": {
       "default": {
-        "default": "u med akutt"
+        "default": "u med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -213,7 +213,7 @@
     "key": "00FB",
     "mappings": {
       "default": {
-        "default": "u med cirkumfleks"
+        "default": "u med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -231,7 +231,7 @@
     "key": "00FD",
     "mappings": {
       "default": {
-        "default": "y med akutt"
+        "default": "y med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -249,7 +249,7 @@
     "key": "0101",
     "mappings": {
       "default": {
-        "default": "a with macron"
+        "default": "a med makron"
       }
     },
     "category": "Ll"
@@ -258,7 +258,7 @@
     "key": "0103",
     "mappings": {
       "default": {
-        "default": "a with breve"
+        "default": "a med breve"
       }
     },
     "category": "Ll"
@@ -267,7 +267,7 @@
     "key": "0105",
     "mappings": {
       "default": {
-        "default": "a with ogonek"
+        "default": "a med ogonek"
       }
     },
     "category": "Ll"
@@ -276,7 +276,7 @@
     "key": "0107",
     "mappings": {
       "default": {
-        "default": "c med akutt"
+        "default": "c med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -285,7 +285,7 @@
     "key": "0109",
     "mappings": {
       "default": {
-        "default": "c med cirkumfleks"
+        "default": "c med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -294,7 +294,7 @@
     "key": "010B",
     "mappings": {
       "default": {
-        "default": "c with dot above"
+        "default": "c med prikk over"
       }
     },
     "category": "Ll"
@@ -303,7 +303,7 @@
     "key": "010D",
     "mappings": {
       "default": {
-        "default": "c with caron"
+        "default": "c med karon"
       }
     },
     "category": "Ll"
@@ -312,7 +312,7 @@
     "key": "010F",
     "mappings": {
       "default": {
-        "default": "d with caron"
+        "default": "d med karon"
       }
     },
     "category": "Ll"
@@ -321,7 +321,7 @@
     "key": "0113",
     "mappings": {
       "default": {
-        "default": "e with macron"
+        "default": "e med makron"
       }
     },
     "category": "Ll"
@@ -331,7 +331,7 @@
     "key": "0115",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med breve"
       }
     }
   },
@@ -339,7 +339,7 @@
     "key": "0117",
     "mappings": {
       "default": {
-        "default": "e with dot above"
+        "default": "e med prikk over"
       }
     },
     "category": "Ll"
@@ -348,7 +348,7 @@
     "key": "0119",
     "mappings": {
       "default": {
-        "default": "e with ogonek"
+        "default": "e med ogonek"
       }
     },
     "category": "Ll"
@@ -357,7 +357,7 @@
     "key": "011B",
     "mappings": {
       "default": {
-        "default": "e with caron"
+        "default": "e med karon"
       }
     },
     "category": "Ll"
@@ -366,7 +366,7 @@
     "key": "011D",
     "mappings": {
       "default": {
-        "default": "g med cirkumfleks"
+        "default": "g med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -375,7 +375,7 @@
     "key": "011F",
     "mappings": {
       "default": {
-        "default": "g with breve"
+        "default": "g med breve"
       }
     },
     "category": "Ll"
@@ -384,7 +384,7 @@
     "key": "0121",
     "mappings": {
       "default": {
-        "default": "g with dot above"
+        "default": "g med prikk over"
       }
     },
     "category": "Ll"
@@ -394,7 +394,7 @@
     "key": "0123",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "g med cedille"
       }
     }
   },
@@ -402,7 +402,7 @@
     "key": "0125",
     "mappings": {
       "default": {
-        "default": "h med cirkumfleks"
+        "default": "h med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -420,7 +420,7 @@
     "key": "012B",
     "mappings": {
       "default": {
-        "default": "i with macron"
+        "default": "i med makron"
       }
     },
     "category": "Ll"
@@ -430,7 +430,7 @@
     "key": "012D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med breve"
       }
     }
   },
@@ -438,7 +438,7 @@
     "key": "012F",
     "mappings": {
       "default": {
-        "default": "i with ogonek"
+        "default": "i med ogonek"
       }
     },
     "category": "Ll"
@@ -447,7 +447,7 @@
     "key": "0131",
     "mappings": {
       "default": {
-        "default": "dotless i"
+        "default": "i uten prikk"
       }
     },
     "category": "Ll"
@@ -456,7 +456,7 @@
     "key": "0135",
     "mappings": {
       "default": {
-        "default": "j med cirkumfleks"
+        "default": "j med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -474,7 +474,7 @@
     "key": "013A",
     "mappings": {
       "default": {
-        "default": "l med akutt"
+        "default": "l med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -492,7 +492,7 @@
     "key": "013E",
     "mappings": {
       "default": {
-        "default": "l with caron"
+        "default": "l med karon"
       }
     },
     "category": "Ll"
@@ -501,7 +501,7 @@
     "key": "0140",
     "mappings": {
       "default": {
-        "default": "l with middle dot"
+        "default": "l med middle prikk"
       }
     },
     "category": "Ll"
@@ -510,7 +510,7 @@
     "key": "0144",
     "mappings": {
       "default": {
-        "default": "n med akutt"
+        "default": "n med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -528,7 +528,7 @@
     "key": "0148",
     "mappings": {
       "default": {
-        "default": "n with caron"
+        "default": "n med karon"
       }
     },
     "category": "Ll"
@@ -537,7 +537,7 @@
     "key": "014D",
     "mappings": {
       "default": {
-        "default": "o with macron"
+        "default": "o med makron"
       }
     },
     "category": "Ll"
@@ -547,7 +547,7 @@
     "key": "014F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med breve"
       }
     }
   },
@@ -555,7 +555,7 @@
     "key": "0151",
     "mappings": {
       "default": {
-        "default": "o with dobbel acute"
+        "default": "o med dobbel akutt aksent"
       }
     },
     "category": "Ll"
@@ -564,7 +564,7 @@
     "key": "0155",
     "mappings": {
       "default": {
-        "default": "r med akutt"
+        "default": "r med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -582,7 +582,7 @@
     "key": "0159",
     "mappings": {
       "default": {
-        "default": "r with caron"
+        "default": "r med karon"
       }
     },
     "category": "Ll"
@@ -591,7 +591,7 @@
     "key": "015B",
     "mappings": {
       "default": {
-        "default": "s med akutt"
+        "default": "s med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -600,7 +600,7 @@
     "key": "015D",
     "mappings": {
       "default": {
-        "default": "s med cirkumfleks"
+        "default": "s med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -618,7 +618,7 @@
     "key": "0161",
     "mappings": {
       "default": {
-        "default": "s with caron"
+        "default": "s med karon"
       }
     },
     "category": "Ll"
@@ -636,7 +636,7 @@
     "key": "0165",
     "mappings": {
       "default": {
-        "default": "t with caron"
+        "default": "t med karon"
       }
     },
     "category": "Ll"
@@ -654,7 +654,7 @@
     "key": "016B",
     "mappings": {
       "default": {
-        "default": "u with macron"
+        "default": "u med makron"
       }
     },
     "category": "Ll"
@@ -663,7 +663,7 @@
     "key": "016D",
     "mappings": {
       "default": {
-        "default": "u with breve"
+        "default": "u med breve"
       }
     },
     "category": "Ll"
@@ -672,7 +672,7 @@
     "key": "016F",
     "mappings": {
       "default": {
-        "default": "u with ring above"
+        "default": "u med ring over"
       }
     },
     "category": "Ll"
@@ -681,7 +681,7 @@
     "key": "0171",
     "mappings": {
       "default": {
-        "default": "u with dobbel acute"
+        "default": "u med dobbel akutt aksent"
       }
     },
     "category": "Ll"
@@ -690,7 +690,7 @@
     "key": "0173",
     "mappings": {
       "default": {
-        "default": "u with ogonek"
+        "default": "u med ogonek"
       }
     },
     "category": "Ll"
@@ -699,7 +699,7 @@
     "key": "0175",
     "mappings": {
       "default": {
-        "default": "w med cirkumfleks"
+        "default": "w med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -708,7 +708,7 @@
     "key": "0177",
     "mappings": {
       "default": {
-        "default": "y med cirkumfleks"
+        "default": "y med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -717,7 +717,7 @@
     "key": "017A",
     "mappings": {
       "default": {
-        "default": "z med akutt"
+        "default": "z med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -726,7 +726,7 @@
     "key": "017C",
     "mappings": {
       "default": {
-        "default": "z with dot above"
+        "default": "z med prikk over"
       }
     },
     "category": "Ll"
@@ -735,7 +735,7 @@
     "key": "017E",
     "mappings": {
       "default": {
-        "default": "z with caron"
+        "default": "z med karon"
       }
     },
     "category": "Ll"
@@ -745,7 +745,7 @@
     "key": "01CE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a med karon"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "01D0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med karon"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "01D2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med karon"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "01D4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med karon"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "01E7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "g med karon"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "01E9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "k med karon"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "01EB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med ogonek"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "01F0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "j med karon"
       }
     }
   },
@@ -816,7 +816,7 @@
     "key": "01F5",
     "mappings": {
       "default": {
-        "default": "g med akutt"
+        "default": "g med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -826,7 +826,7 @@
     "key": "01F9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med gravis"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "0201",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a med dobbel gravis"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "0203",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a med omvendt breve"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0205",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med dobbel gravis"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0207",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med omvendt breve"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "0209",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med dobbel gravis"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "020B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med omvendt breve"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "020D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med dobbel gravis"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "020F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med omvendt breve"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0211",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med dobbel gravis"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0213",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med omvendt breve"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "0215",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med dobbel gravis"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "0217",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med omvendt breve"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "0219",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s med komma under"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "021B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med komma under"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "021F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "h med karon"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0227",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a med prikk"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "0229",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med cedille"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "022F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med prikk"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "0233",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "y med strek over"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "0237",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "j uten prikk"
       }
     }
   },
@@ -1014,7 +1014,7 @@
     "key": "1E01",
     "mappings": {
       "default": {
-        "default": "a with ring below"
+        "default": "a med ring under"
       }
     },
     "category": "Ll"
@@ -1023,7 +1023,7 @@
     "key": "1E03",
     "mappings": {
       "default": {
-        "default": "b with dot above"
+        "default": "b med prikk over"
       }
     },
     "category": "Ll"
@@ -1032,7 +1032,7 @@
     "key": "1E05",
     "mappings": {
       "default": {
-        "default": "b with dot below"
+        "default": "b med prikk under"
       }
     },
     "category": "Ll"
@@ -1041,7 +1041,7 @@
     "key": "1E07",
     "mappings": {
       "default": {
-        "default": "b with linje below"
+        "default": "b med linje under"
       }
     },
     "category": "Ll"
@@ -1050,7 +1050,7 @@
     "key": "1E0B",
     "mappings": {
       "default": {
-        "default": "d with dot above"
+        "default": "d med prikk over"
       }
     },
     "category": "Ll"
@@ -1059,7 +1059,7 @@
     "key": "1E0D",
     "mappings": {
       "default": {
-        "default": "d with dot below"
+        "default": "d med prikk under"
       }
     },
     "category": "Ll"
@@ -1068,7 +1068,7 @@
     "key": "1E0F",
     "mappings": {
       "default": {
-        "default": "d with linje below"
+        "default": "d med linje under"
       }
     },
     "category": "Ll"
@@ -1086,7 +1086,7 @@
     "key": "1E13",
     "mappings": {
       "default": {
-        "default": "d med cirkumfleks below"
+        "default": "d med sirkumfleks under"
       }
     },
     "category": "Ll"
@@ -1095,7 +1095,7 @@
     "key": "1E19",
     "mappings": {
       "default": {
-        "default": "e med cirkumfleks below"
+        "default": "e med sirkumfleks under"
       }
     },
     "category": "Ll"
@@ -1104,7 +1104,7 @@
     "key": "1E1B",
     "mappings": {
       "default": {
-        "default": "e med tilde below"
+        "default": "e med tilde under"
       }
     },
     "category": "Ll"
@@ -1113,7 +1113,7 @@
     "key": "1E1F",
     "mappings": {
       "default": {
-        "default": "f with dot above"
+        "default": "f med prikk over"
       }
     },
     "category": "Ll"
@@ -1122,7 +1122,7 @@
     "key": "1E21",
     "mappings": {
       "default": {
-        "default": "g with macron"
+        "default": "g med makron"
       }
     },
     "category": "Ll"
@@ -1131,7 +1131,7 @@
     "key": "1E23",
     "mappings": {
       "default": {
-        "default": "h with dot above"
+        "default": "h med prikk over"
       }
     },
     "category": "Ll"
@@ -1140,7 +1140,7 @@
     "key": "1E25",
     "mappings": {
       "default": {
-        "default": "h with dot below"
+        "default": "h med prikk under"
       }
     },
     "category": "Ll"
@@ -1167,7 +1167,7 @@
     "key": "1E2B",
     "mappings": {
       "default": {
-        "default": "h with breve below"
+        "default": "h med breve under"
       }
     },
     "category": "Ll"
@@ -1176,7 +1176,7 @@
     "key": "1E2D",
     "mappings": {
       "default": {
-        "default": "i med tilde below"
+        "default": "i med tilde under"
       }
     },
     "category": "Ll"
@@ -1185,7 +1185,7 @@
     "key": "1E31",
     "mappings": {
       "default": {
-        "default": "k med akutt"
+        "default": "k med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -1194,7 +1194,7 @@
     "key": "1E33",
     "mappings": {
       "default": {
-        "default": "k with dot below"
+        "default": "k med prikk under"
       }
     },
     "category": "Ll"
@@ -1203,7 +1203,7 @@
     "key": "1E35",
     "mappings": {
       "default": {
-        "default": "k with linje below"
+        "default": "k med linje under"
       }
     },
     "category": "Ll"
@@ -1212,7 +1212,7 @@
     "key": "1E37",
     "mappings": {
       "default": {
-        "default": "l with dot below"
+        "default": "l med prikk under"
       }
     },
     "category": "Ll"
@@ -1221,7 +1221,7 @@
     "key": "1E3B",
     "mappings": {
       "default": {
-        "default": "l with linje below"
+        "default": "l med linje under"
       }
     },
     "category": "Ll"
@@ -1230,7 +1230,7 @@
     "key": "1E3D",
     "mappings": {
       "default": {
-        "default": "l med cirkumfleks below"
+        "default": "l med sirkumfleks under"
       }
     },
     "category": "Ll"
@@ -1239,7 +1239,7 @@
     "key": "1E3F",
     "mappings": {
       "default": {
-        "default": "m med akutt"
+        "default": "m med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -1248,7 +1248,7 @@
     "key": "1E41",
     "mappings": {
       "default": {
-        "default": "m with dot above"
+        "default": "m med prikk over"
       }
     },
     "category": "Ll"
@@ -1257,7 +1257,7 @@
     "key": "1E43",
     "mappings": {
       "default": {
-        "default": "m with dot below"
+        "default": "m med prikk under"
       }
     },
     "category": "Ll"
@@ -1266,7 +1266,7 @@
     "key": "1E45",
     "mappings": {
       "default": {
-        "default": "n with dot above"
+        "default": "n med prikk over"
       }
     },
     "category": "Ll"
@@ -1275,7 +1275,7 @@
     "key": "1E47",
     "mappings": {
       "default": {
-        "default": "n with dot below"
+        "default": "n med prikk under"
       }
     },
     "category": "Ll"
@@ -1284,7 +1284,7 @@
     "key": "1E49",
     "mappings": {
       "default": {
-        "default": "n with linje below"
+        "default": "n med linje under"
       }
     },
     "category": "Ll"
@@ -1293,7 +1293,7 @@
     "key": "1E4B",
     "mappings": {
       "default": {
-        "default": "n med cirkumfleks below"
+        "default": "n med sirkumfleks under"
       }
     },
     "category": "Ll"
@@ -1302,7 +1302,7 @@
     "key": "1E55",
     "mappings": {
       "default": {
-        "default": "p med akutt"
+        "default": "p med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -1311,7 +1311,7 @@
     "key": "1E57",
     "mappings": {
       "default": {
-        "default": "p with dot above"
+        "default": "p med prikk over"
       }
     },
     "category": "Ll"
@@ -1320,7 +1320,7 @@
     "key": "1E59",
     "mappings": {
       "default": {
-        "default": "r with dot above"
+        "default": "r med prikk over"
       }
     },
     "category": "Ll"
@@ -1329,7 +1329,7 @@
     "key": "1E5B",
     "mappings": {
       "default": {
-        "default": "r with dot below"
+        "default": "r med prikk under"
       }
     },
     "category": "Ll"
@@ -1338,7 +1338,7 @@
     "key": "1E5F",
     "mappings": {
       "default": {
-        "default": "r with linje below"
+        "default": "r med linje under"
       }
     },
     "category": "Ll"
@@ -1347,7 +1347,7 @@
     "key": "1E61",
     "mappings": {
       "default": {
-        "default": "s with dot above"
+        "default": "s med prikk over"
       }
     },
     "category": "Ll"
@@ -1356,7 +1356,7 @@
     "key": "1E63",
     "mappings": {
       "default": {
-        "default": "s with dot below"
+        "default": "s med prikk under"
       }
     },
     "category": "Ll"
@@ -1365,7 +1365,7 @@
     "key": "1E6B",
     "mappings": {
       "default": {
-        "default": "t with dot above"
+        "default": "t med prikk over"
       }
     },
     "category": "Ll"
@@ -1374,7 +1374,7 @@
     "key": "1E6D",
     "mappings": {
       "default": {
-        "default": "t with dot below"
+        "default": "t med prikk under"
       }
     },
     "category": "Ll"
@@ -1383,7 +1383,7 @@
     "key": "1E6F",
     "mappings": {
       "default": {
-        "default": "t with linje below"
+        "default": "t med linje under"
       }
     },
     "category": "Ll"
@@ -1392,7 +1392,7 @@
     "key": "1E71",
     "mappings": {
       "default": {
-        "default": "t med cirkumfleks below"
+        "default": "t med sirkumfleks under"
       }
     },
     "category": "Ll"
@@ -1401,7 +1401,7 @@
     "key": "1E73",
     "mappings": {
       "default": {
-        "default": "u med tøddel below"
+        "default": "u med tøddel under"
       }
     },
     "category": "Ll"
@@ -1410,7 +1410,7 @@
     "key": "1E75",
     "mappings": {
       "default": {
-        "default": "u med tilde below"
+        "default": "u med tilde under"
       }
     },
     "category": "Ll"
@@ -1419,7 +1419,7 @@
     "key": "1E77",
     "mappings": {
       "default": {
-        "default": "u med cirkumfleks below"
+        "default": "u med sirkumfleks under"
       }
     },
     "category": "Ll"
@@ -1437,7 +1437,7 @@
     "key": "1E7F",
     "mappings": {
       "default": {
-        "default": "v with dot below"
+        "default": "v med prikk under"
       }
     },
     "category": "Ll"
@@ -1446,7 +1446,7 @@
     "key": "1E81",
     "mappings": {
       "default": {
-        "default": "w med grav akutt"
+        "default": "w med gravis"
       }
     },
     "category": "Ll"
@@ -1455,7 +1455,7 @@
     "key": "1E83",
     "mappings": {
       "default": {
-        "default": "w med akutt"
+        "default": "w med akutt aksent aksent"
       }
     },
     "category": "Ll"
@@ -1473,7 +1473,7 @@
     "key": "1E87",
     "mappings": {
       "default": {
-        "default": "w with dot above"
+        "default": "w med prikk over"
       }
     },
     "category": "Ll"
@@ -1482,7 +1482,7 @@
     "key": "1E89",
     "mappings": {
       "default": {
-        "default": "w with dot below"
+        "default": "w med prikk under"
       }
     },
     "category": "Ll"
@@ -1491,7 +1491,7 @@
     "key": "1E8B",
     "mappings": {
       "default": {
-        "default": "x with dot above"
+        "default": "x med prikk over"
       }
     },
     "category": "Ll"
@@ -1509,7 +1509,7 @@
     "key": "1E8F",
     "mappings": {
       "default": {
-        "default": "y with dot above"
+        "default": "y med prikk over"
       }
     },
     "category": "Ll"
@@ -1518,7 +1518,7 @@
     "key": "1E91",
     "mappings": {
       "default": {
-        "default": "z med cirkumfleks"
+        "default": "z med sirkumfleks"
       }
     },
     "category": "Ll"
@@ -1527,7 +1527,7 @@
     "key": "1E93",
     "mappings": {
       "default": {
-        "default": "z with dot below"
+        "default": "z med prikk under"
       }
     },
     "category": "Ll"
@@ -1536,7 +1536,7 @@
     "key": "1E95",
     "mappings": {
       "default": {
-        "default": "z with linje below"
+        "default": "z med linje under"
       }
     },
     "category": "Ll"
@@ -1545,7 +1545,7 @@
     "key": "1E96",
     "mappings": {
       "default": {
-        "default": "h with linje below"
+        "default": "h med linje under"
       }
     },
     "category": "Ll"
@@ -1563,7 +1563,7 @@
     "key": "1E98",
     "mappings": {
       "default": {
-        "default": "w with ring above"
+        "default": "w med ring over"
       }
     },
     "category": "Ll"
@@ -1572,7 +1572,7 @@
     "key": "1E99",
     "mappings": {
       "default": {
-        "default": "y with ring above"
+        "default": "y med ring over"
       }
     },
     "category": "Ll"
@@ -1581,7 +1581,7 @@
     "key": "1E9A",
     "mappings": {
       "default": {
-        "default": "a with høyre half ring"
+        "default": "a med høyre halv ring"
       }
     },
     "category": "Ll"
@@ -1590,7 +1590,7 @@
     "key": "1EA1",
     "mappings": {
       "default": {
-        "default": "a with dot below"
+        "default": "a med prikk under"
       }
     },
     "category": "Ll"
@@ -1599,7 +1599,7 @@
     "key": "1EA3",
     "mappings": {
       "default": {
-        "default": "a with hook above"
+        "default": "a med krok over"
       }
     },
     "category": "Ll"
@@ -1608,7 +1608,7 @@
     "key": "1EB9",
     "mappings": {
       "default": {
-        "default": "e with dot below"
+        "default": "e med prikk under"
       }
     },
     "category": "Ll"
@@ -1617,7 +1617,7 @@
     "key": "1EBB",
     "mappings": {
       "default": {
-        "default": "e with hook above"
+        "default": "e med krok over"
       }
     },
     "category": "Ll"
@@ -1635,7 +1635,7 @@
     "key": "1EC9",
     "mappings": {
       "default": {
-        "default": "i with hook above"
+        "default": "i med krok over"
       }
     },
     "category": "Ll"
@@ -1644,7 +1644,7 @@
     "key": "1ECB",
     "mappings": {
       "default": {
-        "default": "i with dot below"
+        "default": "i med prikk under"
       }
     },
     "category": "Ll"
@@ -1653,7 +1653,7 @@
     "key": "1ECD",
     "mappings": {
       "default": {
-        "default": "o with dot below"
+        "default": "o med prikk under"
       }
     },
     "category": "Ll"
@@ -1662,7 +1662,7 @@
     "key": "1ECF",
     "mappings": {
       "default": {
-        "default": "o with hook above"
+        "default": "o med krok over"
       }
     },
     "category": "Ll"
@@ -1671,7 +1671,7 @@
     "key": "1EE5",
     "mappings": {
       "default": {
-        "default": "u with dot below"
+        "default": "u med prikk under"
       }
     },
     "category": "Ll"
@@ -1680,7 +1680,7 @@
     "key": "1EE7",
     "mappings": {
       "default": {
-        "default": "u with hook above"
+        "default": "u med krok over"
       }
     },
     "category": "Ll"
@@ -1689,7 +1689,7 @@
     "key": "1EF3",
     "mappings": {
       "default": {
-        "default": "y med grav akutt"
+        "default": "y med gravis"
       }
     },
     "category": "Ll"
@@ -1698,7 +1698,7 @@
     "key": "1EF5",
     "mappings": {
       "default": {
-        "default": "y with dot below"
+        "default": "y med prikk under"
       }
     },
     "category": "Ll"
@@ -1707,7 +1707,7 @@
     "key": "1EF7",
     "mappings": {
       "default": {
-        "default": "y with hook above"
+        "default": "y med krok over"
       }
     },
     "category": "Ll"

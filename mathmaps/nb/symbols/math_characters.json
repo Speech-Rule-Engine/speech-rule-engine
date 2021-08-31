@@ -6,7 +6,7 @@
     "key": "2113",
     "mappings": {
       "default": {
-        "default": "script l"
+        "default": "skript-l"
       }
     },
     "category": "Ll"
@@ -15,7 +15,7 @@
     "key": "2118",
     "mappings": {
       "default": {
-        "default": "weierstrass p"
+        "default": "skript-P"
       }
     },
     "category": "Sm"
@@ -25,7 +25,7 @@
     "key": "213C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek pi"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "213D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek gamma"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "213E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek stor gamma"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "213F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek stor pi"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2140",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek sigma sum"
       }
     }
   },
@@ -69,7 +69,7 @@
     "key": "2145",
     "mappings": {
       "default": {
-        "default": "stor d"
+        "default": "dobbelstrek stor kursiv D"
       }
     },
     "category": "Lu"
@@ -78,7 +78,7 @@
     "key": "2146",
     "mappings": {
       "default": {
-        "default": "d"
+        "default": "dobbelstrek kursiv d"
       }
     },
     "category": "Ll"
@@ -87,7 +87,7 @@
     "key": "2147",
     "mappings": {
       "default": {
-        "default": "e"
+        "default": "dobbelstrek kursiv e"
       }
     },
     "category": "Ll"
@@ -96,7 +96,7 @@
     "key": "2148",
     "mappings": {
       "default": {
-        "default": "i"
+        "default": "dobbelstrek kursiv i"
       }
     },
     "category": "Ll"
@@ -106,7 +106,7 @@
     "key": "2149",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek kursiv j"
       }
     }
   },
@@ -114,7 +114,7 @@
     "key": "1D6A4",
     "mappings": {
       "default": {
-        "default": "dotless i"
+        "default": "kursiv i uten prikk"
       }
     },
     "category": "Ll"
@@ -123,7 +123,7 @@
     "key": "1D6A5",
     "mappings": {
       "default": {
-        "default": "dotless j"
+        "default": "kursiv j uten prikk"
       }
     },
     "category": "Ll"

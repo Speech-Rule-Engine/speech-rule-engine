@@ -10,7 +10,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "log",
         "singular": "",
         "dual": ""
       }
@@ -24,7 +24,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "ln",
         "singular": "",
         "dual": ""
       }
@@ -38,7 +38,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "lg",
         "singular": "",
         "dual": ""
       }
@@ -53,7 +53,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "eksponent",
         "singular": "",
         "dual": ""
       }
@@ -67,7 +67,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "største fellesnevner",
         "singular": "",
         "dual": ""
       }
@@ -81,7 +81,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "minste fellesnevner",
         "singular": "",
         "dual": ""
       }
@@ -95,7 +95,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "arg",
         "singular": "",
         "dual": ""
       }
@@ -137,7 +137,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "inf",
         "singular": "",
         "dual": ""
       }
@@ -151,7 +151,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "grense",
         "singular": "",
         "dual": ""
       }
@@ -166,7 +166,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "nedre grense",
         "singular": "",
         "dual": ""
       }
@@ -181,7 +181,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "øvre grense",
         "singular": "",
         "dual": ""
       }
@@ -195,7 +195,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "maks",
         "singular": "",
         "dual": ""
       }
@@ -209,7 +209,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "min",
         "singular": "",
         "dual": ""
       }
@@ -223,7 +223,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "sup",
         "singular": "",
         "dual": ""
       }
@@ -253,7 +253,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "omvendt grense",
         "singular": "",
         "dual": ""
       }
@@ -267,7 +267,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "mod",
         "singular": "",
         "dual": ""
       }
@@ -281,7 +281,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "sannsynlighet",
         "singular": "",
         "dual": ""
       }

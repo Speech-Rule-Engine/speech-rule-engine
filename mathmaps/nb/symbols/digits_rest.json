@@ -6,7 +6,7 @@
     "key": "00B2",
     "mappings": {
       "default": {
-        "default": "eksponent til"
+        "default": "andre potens"
       }
     },
     "category": "No"
@@ -15,7 +15,7 @@
     "key": "00B3",
     "mappings": {
       "default": {
-        "default": "eksponent tre"
+        "default": "tredje potens"
       }
     },
     "category": "No"
@@ -24,7 +24,7 @@
     "key": "00BC",
     "mappings": {
       "default": {
-        "default": "det rasjonelle tallet en fjerdedel"
+        "default": "en fjerdedel"
       }
     },
     "category": "No"
@@ -33,7 +33,7 @@
     "key": "00BD",
     "mappings": {
       "default": {
-        "default": "det rasjonelle tallet en halv"
+        "default": "en halv"
       }
     },
     "category": "No"
@@ -42,7 +42,7 @@
     "key": "00BE",
     "mappings": {
       "default": {
-        "default": "det rasjonelle tallet tre fjerdedeler"
+        "default": "tre fjerdedeler"
       }
     },
     "category": "No"
@@ -52,7 +52,7 @@
     "key": "2150",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en sjuendedel"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2151",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en niendedel"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2152",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en tiendedel"
       }
     }
   },
@@ -78,7 +78,7 @@
     "key": "2153",
     "mappings": {
       "default": {
-        "default": "vulgar fraction one third"
+        "default": "en tredjedel"
       }
     },
     "category": "No"
@@ -87,7 +87,7 @@
     "key": "2154",
     "mappings": {
       "default": {
-        "default": "vulgar fraction two thirds"
+        "default": "to tredjedeler"
       }
     },
     "category": "No"
@@ -96,7 +96,7 @@
     "key": "2155",
     "mappings": {
       "default": {
-        "default": "vulgar fraction one fifth"
+        "default": "en femtedel"
       }
     },
     "category": "No"
@@ -105,7 +105,7 @@
     "key": "2156",
     "mappings": {
       "default": {
-        "default": "vulgar fraction two fifths"
+        "default": "to femtedeler"
       }
     },
     "category": "No"
@@ -114,7 +114,7 @@
     "key": "2157",
     "mappings": {
       "default": {
-        "default": "vulgar fraction three fifths"
+        "default": "tre femtedeler"
       }
     },
     "category": "No"
@@ -123,7 +123,7 @@
     "key": "2158",
     "mappings": {
       "default": {
-        "default": "vulgar fraction four fifths"
+        "default": "fire femtedeler"
       }
     },
     "category": "No"
@@ -132,7 +132,7 @@
     "key": "2159",
     "mappings": {
       "default": {
-        "default": "vulgar fraction one sixth"
+        "default": "en sjettedel"
       }
     },
     "category": "No"
@@ -141,7 +141,7 @@
     "key": "215A",
     "mappings": {
       "default": {
-        "default": "vulgar fraction five sixths"
+        "default": "fem sjettedeler"
       }
     },
     "category": "No"
@@ -150,7 +150,7 @@
     "key": "215B",
     "mappings": {
       "default": {
-        "default": "vulgar fraction one eighth"
+        "default": "en åttendedel"
       }
     },
     "category": "No"
@@ -159,7 +159,7 @@
     "key": "215C",
     "mappings": {
       "default": {
-        "default": "vulgar fraction three eighths"
+        "default": "tre åttendedeler"
       }
     },
     "category": "No"
@@ -168,7 +168,7 @@
     "key": "215D",
     "mappings": {
       "default": {
-        "default": "vulgar fraction five eighths"
+        "default": "fem åttendedeler"
       }
     },
     "category": "No"
@@ -177,7 +177,7 @@
     "key": "215E",
     "mappings": {
       "default": {
-        "default": "vulgar fraction seven eighths"
+        "default": "sju åttendedeler"
       }
     },
     "category": "No"
@@ -187,7 +187,7 @@
     "key": "215F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en del"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2189",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "null trejdedeler"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "3248",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med ti på svart kvadrat"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "3249",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med tjue på svart kvadrat"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "324A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med tretti på svart kvadrat"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "324B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med førti på svart kvadrat"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "324C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med femti på svart kvadrat"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "324D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med seksti på svart kvadrat"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "324E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med søtti på svart kvadrat"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "324F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med åtti på svart kvadrat"
       }
     }
   }

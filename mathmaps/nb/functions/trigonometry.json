@@ -11,7 +11,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "cosinus",
         "singular": "",
         "dual": ""
       }
@@ -25,7 +25,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "cotangens",
         "singular": "",
         "dual": ""
       }
@@ -39,7 +39,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "cosekant",
         "singular": "",
         "dual": ""
       }
@@ -53,7 +53,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "sekant",
         "singular": "",
         "dual": ""
       }
@@ -68,7 +68,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "sinus",
         "singular": "",
         "dual": ""
       }
@@ -82,7 +82,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "tangens",
         "singular": "",
         "dual": ""
       }
@@ -96,7 +96,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "invers cosinus",
         "singular": "",
         "dual": ""
       }
@@ -110,7 +110,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "invers cotangens",
         "singular": "",
         "dual": ""
       }
@@ -124,7 +124,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "invers cosekant",
         "singular": "",
         "dual": ""
       }
@@ -138,7 +138,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "invers sekant",
         "singular": "",
         "dual": ""
       }
@@ -152,7 +152,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "invers sinus",
         "singular": "",
         "dual": ""
       }
@@ -166,7 +166,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
+        "default": "invers tangens",
         "singular": "",
         "dual": ""
       }

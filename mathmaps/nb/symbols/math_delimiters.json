@@ -861,7 +861,7 @@
     "key": "298B",
     "mappings": {
       "default": {
-        "default": "venstre bracket with underbar"
+        "default": "venstre bracket med underbar"
       }
     },
     "category": "Ps"
@@ -870,7 +870,7 @@
     "key": "298C",
     "mappings": {
       "default": {
-        "default": "høyre bracket with underbar"
+        "default": "høyre bracket med underbar"
       }
     },
     "category": "Pe"
@@ -879,7 +879,7 @@
     "key": "298D",
     "mappings": {
       "default": {
-        "default": "venstre bracket with tick i top hjørne"
+        "default": "venstre bracket med tick i top hjørne"
       }
     },
     "category": "Ps"
@@ -888,7 +888,7 @@
     "key": "298E",
     "mappings": {
       "default": {
-        "default": "høyre bracket with tick i bottom hjørne"
+        "default": "høyre bracket med tick i bottom hjørne"
       }
     },
     "category": "Pe"
@@ -897,7 +897,7 @@
     "key": "298F",
     "mappings": {
       "default": {
-        "default": "venstre bracket with tick i bottom hjørne"
+        "default": "venstre bracket med tick i bottom hjørne"
       }
     },
     "category": "Ps"
@@ -906,7 +906,7 @@
     "key": "2990",
     "mappings": {
       "default": {
-        "default": "høyre bracket with tick i top hjørne"
+        "default": "høyre bracket med tick i top hjørne"
       }
     },
     "category": "Pe"
@@ -915,7 +915,7 @@
     "key": "2991",
     "mappings": {
       "default": {
-        "default": "venstre vinkel bracket with dot"
+        "default": "venstre vinkel bracket med dot"
       }
     },
     "category": "Ps"
@@ -924,7 +924,7 @@
     "key": "2992",
     "mappings": {
       "default": {
-        "default": "høyre vinkel bracket with dot"
+        "default": "høyre vinkel bracket med dot"
       }
     },
     "category": "Pe"
