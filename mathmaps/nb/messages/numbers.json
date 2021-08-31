@@ -53,57 +53,11 @@
     ],
     "vulgarSep": " ",
     "numSep": " ",
-    "hundreds": [
-      "hundre",
-      "tohundre",
-      "trehundre",
-      "firehundre",
-      "femhundre",
-      "sekshundre",
-      "sjuhundre",
-      "åttehundre",
-      "nihundre"
-    ],
-    "twenties": {
-      "21": "tjueen",
-      "22": "tjueto",
-      "23": "tjuetre",
-      "24": "tjuefire",
-      "25": "tjuefem",
-      "26": "tjueseks",
-      "27": "tjuesyv",
-      "28": "tjueåtte",
-      "29": "tjueni"
-    },
-    "thirties": {
-      "31": "trettien",
-      "32": "trettito",
-      "33": "trettitre",
-      "34": "trettifire",
-      "35": "trettifem",
-      "36": "trettiseks",
-      "37": "trettisyv",
-      "38": "trettiåtte",
-      "39": "trettini"
-    },
-    "rest": {
-      "41": "førtien",
-      "47": "førtisju",
-      "51": "femtien",
-      "57": "femtisju",
-      "61": "sekstien",
-      "67": "sekstisju",
-      "71": "søttien",
-      "77": "syttisju",
-      "81": "åttien",
-      "87": "åttisju",
-      "91": "nittien",
-      "97": "nittisju",
-      "101": "hundreogen",
-      "2000": "to tusen",
-      "2000000": "to millioner",
-      "2000000000": "to milliarder",
-      " ": ""
+    "special": {
+      "smallOrdinals": [
+        "", "første", "andre", "tredje", "fjerde", "femte", "sjette",
+        "sjuende", "åttende", "niende", "tiende", "ellevte", "tolvte"
+      ]
     }
   }
 }

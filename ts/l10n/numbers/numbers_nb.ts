@@ -47,7 +47,7 @@ function hundredsToWords_(num: number, ordinal: boolean = false): string {
   if (n) {
     str += str ? 'og' : '';
     if (ordinal) {
-      let ord = smallOrdinals_(n);
+      let ord = NUMBERS.special.smallOrdinals[n];
       if (ord) {
         return str += ord;
       }
@@ -63,15 +63,6 @@ function hundredsToWords_(num: number, ordinal: boolean = false): string {
   }
   return (ordinal ? (str.match(/n$/) ? str + 'de' : str + 'nde') : str);
 }
-
-
-function smallOrdinals_(num: number) {
-  return [
-    '', 'første', 'andre', 'tredje', 'fjerde', 'femte', 'sjette',
-    'sjuende', 'åttende', 'niende', 'tiende', 'ellevte', 'tolvte'
-  ][num];
-}
-
 
 
 /**
