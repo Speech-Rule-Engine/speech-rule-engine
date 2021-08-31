@@ -3,13 +3,13 @@
     "a": "atto"
   },
   {
-    "c": "cente"
+    "c": "centi"
   },
   {
-    "da": "decka"
+    "da": "deka"
   },
   {
-    "d": "dessa"
+    "d": "desi"
   },
   {
     "E": "exa"
@@ -18,10 +18,10 @@
     "f": "femto"
   },
   {
-    "G": "gigga"
+    "G": "giga"
   },
   {
-    "h": "hecto"
+    "h": "hekto"
   },
   {
     "k": "kilo"
@@ -30,7 +30,7 @@
     "M": "mega"
   },
   {
-    "m": "millee"
+    "m": "milli"
   },
   {
     "n": "nano"
@@ -39,13 +39,13 @@
     "P": "peta"
   },
   {
-    "p": "pico"
+    "p": "piko"
   },
   {
     "T": "tera"
   },
   {
-    "y": "yocto"
+    "y": "yokto"
   },
   {
     "Y": "yotta"
@@ -57,9 +57,9 @@
     "Z": "zetta"
   },
   {
-    "µ": "micro"
+    "µ": "mikro"
   },
   {
-    "μ": "micro"
+    "μ": "mikro"
   }
 ]
