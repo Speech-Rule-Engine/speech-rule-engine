@@ -55,7 +55,7 @@
     "numSep": " ",
     "special": {
       "smallOrdinals": [
-        "", "første", "andre", "tredje", "fjerde", "femte", "sjette",
+        "nullte", "første", "andre", "tredje", "fjerde", "femte", "sjette",
         "sjuende", "åttende", "niende", "tiende", "ellevte", "tolvte"
       ]
     }

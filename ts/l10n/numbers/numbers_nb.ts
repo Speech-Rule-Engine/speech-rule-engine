@@ -24,6 +24,11 @@ import {Numbers, NUMBERS as NUMB} from '../messages';
 //
 
 /**
+ * Sub-ISO specification. Possible values: fr, be, sw.
+ */
+export let SUB_ISO: string = 'alt';
+
+/**
  * Changes number one 'eins' into a prefix.
  * @param num number string.
  * @return If it is a one, it is made into prefix.
@@ -72,7 +77,7 @@ function hundredsToWords_(num: number, ordinal: boolean = false): string {
  */
 function numberToWords(num: number, ordinal: boolean = false): string {
   if (num === 0) {
-    return NUMBERS.zero;
+    return ordinal ? NUMBERS.special.smallOrdinals[0] : NUMBERS.zero;
   }
   if (num >= Math.pow(10, 36)) {
     return num.toString();
