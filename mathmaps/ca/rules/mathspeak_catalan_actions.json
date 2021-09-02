@@ -1,5 +1,5 @@
 {
-  "locale": "es",
+  "locale": "ca",
   "domain": "mathspeak",
   "modality": "speech",
   "kind": "actions",
@@ -7,17 +7,17 @@
     [
       "Action",
       "collapsed",
-      "[n] . (engine:modality=summary, grammar:collapsed); [t] \"plegado\""
+      "[n] . (engine:modality=summary, grammar:collapsed); [t] \"plegat\""
     ],
     [
       "Action",
       "blank-cell-empty",
-      "[t] \"espacio\""
+      "[t] \"espai\""
     ],
     [
       "Action",
       "blank-line-empty",
-      "[t] \"espacio\""
+      "[t] \"espai\""
     ],
     [
       "Action",
@@ -27,7 +27,7 @@
     [
       "Action",
       "mixed-number",
-      "[n] children/*[1]; [t] \"más\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"més\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -42,12 +42,12 @@
     [
       "Action",
       "number-as-upper-word",
-      "[t] \"mayúscula\"; [t] CSFspaceoutText"
+      "[t] \"majúscula\"; [t] CSFspaceoutText"
     ],
     [
       "Action",
       "number-baseline",
-      "[t] \"línea base\"; [n] . (grammar:baseline)"
+      "[t] \"línia base\"; [n] . (grammar:baseline)"
     ],
     [
       "Action",
@@ -57,7 +57,7 @@
     [
       "Action",
       "number-baseline-font",
-      "[t] \"línea base\"; [t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
+      "[t] \"línia base\"; [t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
     ],
     [
       "Action",
@@ -67,17 +67,17 @@
     [
       "Action",
       "negative-number",
-      "[t] \"menos\"; [n] children/*[1]"
+      "[t] \"menys\"; [n] children/*[1]"
     ],
     [
       "Action",
       "negative",
-      "[t] \"menos\"; [n] children/*[1]"
+      "[t] \"menys\"; [n] children/*[1]"
     ],
     [
       "Action",
       "division",
-      "[n] children/*[1]; [t] \"dividido\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"dividit\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -87,37 +87,37 @@
     [
       "Action",
       "fences-neutral",
-      "[t] \"empezar valor absoluto\"; [n] children/*[1]; [t] \"finalizar valor absoluto\""
+      "[t] \"començar valor absolut\"; [n] children/*[1]; [t] \"finalitzar valor absolut\""
     ],
     [
       "Action",
       "fences-neutral-sbrief",
-      "[t] \"valor absoluto\"; [n] children/*[1]; [t] \"finalizar valor absoluto\""
+      "[t] \"valor absolut\"; [n] children/*[1]; [t] \"finalitzar valor absolut\""
     ],
     [
       "Action",
       "fences-metric",
-      "[t] \"empezar métrica\"; [n] children/*[1]; [t] \"finalizar métrica\""
+      "[t] \"començar mètrica\"; [n] children/*[1]; [t] \"finalitzar mètrica\""
     ],
     [
       "Action",
       "fences-metric-sbrief",
-      "[t] \"métrica\"; [n] children/*[1]; [t] \"finalizar métrica\""
+      "[t] \"mètrica\"; [n] children/*[1]; [t] \"finalitzar mètrica\""
     ],
     [
       "Action",
       "empty-set",
-      "[t] \"conjunto vacío\""
+      "[t] \"conjunt buit\""
     ],
     [
       "Action",
       "fences-set",
-      "[t] \"empezar llave\"; [n] children/*[1]; [t] \"finalizar llave\""
+      "[t] \"començar clau\"; [n] children/*[1]; [t] \"finalitzar clau\""
     ],
     [
       "Action",
       "fences-set-sbrief",
-      "[t] \"llave\"; [n] children/*[1]; [t] \"finalizar llave\""
+      "[t] \"clau\"; [n] children/*[1]; [t] \"finalitzar clau\""
     ],
     [
       "Action",
@@ -132,27 +132,27 @@
     [
       "Action",
       "minus",
-      "[t] \"menos\""
+      "[t] \"menys\""
     ],
     [
       "Action",
       "continued-fraction-outer",
-      "[t] \"fracción continua\"; [n] children/*[1]; [t] \"entre\"; [n] children/*[2]"
+      "[t] \"fracció contínua\"; [n] children/*[1]; [t] \"entre\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-outer-brief",
-      "[t] \"frac continua\"; [n] children/*[1]; [t] \"entre\"; [n] children/*[2]"
+      "[t] \"frac contínua\"; [n] children/*[1]; [t] \"entre\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner",
-      "[t] \"empezar fracción\"; [n] children/*[1]; [t] \"entre\"; [n] children/*[2]"
+      "[t] \"començar fracció\"; [n] children/*[1]; [t] \"entre\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner-brief",
-      "[t] \"empezar frac\"; [n] children/*[1]; [t] \"entre\"; [n] children/*[2]"
+      "[t] \"començar frac\"; [n] children/*[1]; [t] \"entre\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -162,7 +162,7 @@
     [
       "Action",
       "integral",
-      "[n] children/*[1]; [t] \"definida\"; [t] \"subíndice\"; [n] children/*[2]; [t] \"superíndice\"; [n] children/*[3]; [t] \"línea base\""
+      "[n] children/*[1]; [t] \"definida\"; [t] \"subíndex\"; [n] children/*[2]; [t] \"superíndex\"; [n] children/*[3]; [t] \"línia base\""
     ],
     [
       "Action",
@@ -172,12 +172,12 @@
     [
       "Action",
       "square",
-      "[n] children/*[1]; [t] \"al cuadrado\""
+      "[n] children/*[1]; [t] \"al quadrat\""
     ],
     [
       "Action",
       "cube",
-      "[n] children/*[1]; [t] \"al cubo\""
+      "[n] children/*[1]; [t] \"al cub\""
     ],
     [
       "Action",
@@ -197,42 +197,42 @@
     [
       "Action",
       "overscore",
-      "[t] \"modificando superior\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
+      "[t] \"modificand superior\"; [n] children/*[1]; [t] \"amb\"; [n] children/*[2]"
     ],
     [
       "Action",
       "overscore-brief",
-      "[t] \"mod superior\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
+      "[t] \"mod superior\"; [n] children/*[1]; [t] \"amb\"; [n] children/*[2]"
     ],
     [
       "Action",
       "double-overscore",
-      "[t] \"modificando superior superior\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
+      "[t] \"modificand superior superior\"; [n] children/*[1]; [t] \"amb\"; [n] children/*[2]"
     ],
     [
       "Action",
       "double-overscore-brief",
-      "[t] \"mod superior superior\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
+      "[t] \"mod superior superior\"; [n] children/*[1]; [t] \"amb\"; [n] children/*[2]"
     ],
     [
       "Action",
       "underscore",
-      "[t] \"modificando inferior\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
+      "[t] \"modificand inferior\"; [n] children/*[1]; [t] \"amb\"; [n] children/*[2]"
     ],
     [
       "Action",
       "underscore-brief",
-      "[t] \"mod inferior\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
+      "[t] \"mod inferior\"; [n] children/*[1]; [t] \"amb\"; [n] children/*[2]"
     ],
     [
       "Action",
       "double-underscore",
-      "[t] \"modificando inferior inferior\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
+      "[t] \"modificand inferior inferior\"; [n] children/*[1]; [t] \"amb\"; [n] children/*[2]"
     ],
     [
       "Action",
       "double-underscore-brief",
-      "[t] \"mod inferior inferior\"; [n] children/*[1]; [t] \"con\"; [n] children/*[2]"
+      "[t] \"mod inferior inferior\"; [n] children/*[1]; [t] \"amb\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -247,22 +247,22 @@
     [
       "Action",
       "overtilde",
-      "[n] children/*[1]; [t] \"tilde\""
+      "[n] children/*[1]; [t] \"titlla\""
     ],
     [
       "Action",
       "undertilde",
-      "[n] children/*[1]; [t] \"subtilde\""
+      "[n] children/*[1]; [t] \"subtitlla\""
     ],
     [
       "Action",
       "matrix",
-      "[t] \"empezar matriz\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar matriz\""
+      "[t] \"començar matriu\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalitzar matriu\""
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] \"matriz\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\" \"); [t] \"finalizar matriz\""
+      "[t] \"matriu\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\" \"); [t] \"finalitzar matriu\""
     ],
     [
       "Action",
@@ -272,7 +272,7 @@
     [
       "Action",
       "row-with-label",
-      "[t] \"con etiqueta\"; [n] content/*[1]; [t] \"finalizar etiqueta\" (pause:200); [m] children/* (ctxtFunc:CTFwordCounter, context:\"columna\")"
+      "[t] \"amb etiqueta\"; [n] content/*[1]; [t] \"finalitzar etiqueta\" (pause:200); [m] children/* (ctxtFunc:CTFwordCounter, context:\"columna\")"
     ],
     [
       "Action",
@@ -287,67 +287,67 @@
     [
       "Action",
       "empty-row",
-      "[t] \"espacio\""
+      "[t] \"espai\""
     ],
     [
       "Action",
       "empty-cell",
-      "[t] \"espacio\" (pause:300)"
+      "[t] \"espai\" (pause:300)"
     ],
     [
       "Action",
       "determinant",
-      "[t] \"empezar determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar determinante\""
+      "[t] \"començar determinant\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalitzar determinant\""
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] \"determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar determinante\""
+      "[t] \"determinant\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalitzar determinant\""
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"empezar determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila\", grammar:simpleDet); [t] \"finalizar determinante\""
+      "[t] \"començar determinant\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila\", grammar:simpleDet); [t] \"finalitzar determinant\""
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] \"determinante\"; [t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila\", grammar:simpleDet); [t] \"finalizar determinante\""
+      "[t] \"determinant\"; [t] count(children/*); [t] \"per\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila\", grammar:simpleDet); [t] \"finalitzar determinant\""
     ],
     [
       "Action",
       "layout",
-      "[t] \"empezar esquema\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar esquema\""
+      "[t] \"començar esquema\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalitzar esquema\""
     ],
     [
       "Action",
       "layout-sbrief",
-      "[t] \"esquema\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar esquema\""
+      "[t] \"esquema\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalitzar esquema\""
     ],
     [
       "Action",
       "binomial",
-      "[t] \"empezar binomial\"; [n] children/*[1]/children/*[1]; [t] \"en\"; [n] children/*[2]/children/*[1]; [t] \"finalizar binomial\""
+      "[t] \"començar binomial\"; [n] children/*[1]/children/*[1]; [t] \"en\"; [n] children/*[2]/children/*[1]; [t] \"finalitzar binomial\""
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"binomial\"; [n] children/*[1]/children/*[1]; [t] \"en\"; [n] children/*[2]/children/*[1]; [t] \"finalizar binomial\""
+      "[t] \"binomial\"; [n] children/*[1]/children/*[1]; [t] \"en\"; [n] children/*[2]/children/*[1]; [t] \"finalitzar binomial\""
     ],
     [
       "Action",
       "cases",
-      "[t] \"empezar esquema\"; [n] content/*[1]; [t] \"alargada\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar esquema\""
+      "[t] \"començar esquema\"; [n] content/*[1]; [t] \"allargada\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalitzar esquema\""
     ],
     [
       "Action",
       "cases-sbrief",
-      "[t] \"esquema\"; [n] content/*[1]; [t] \"alargada\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalizar esquema\""
+      "[t] \"esquema\"; [n] content/*[1]; [t] \"allargada\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"fila \"); [t] \"finalitzar esquema\""
     ],
     [
       "Action",
       "line-with-label",
-      "[t] \"con etiqueta\"; [n] content/*[1]; [t] \"finalizar etiqueta\" (pause:200); [m] children/*"
+      "[t] \"amb etiqueta\"; [n] content/*[1]; [t] \"finalitzar etiqueta\" (pause:200); [m] children/*"
     ],
     [
       "Action",
@@ -362,22 +362,22 @@
     [
       "Action",
       "empty-line",
-      "[t] \"espacio\""
+      "[t] \"espai\""
     ],
     [
       "Action",
       "empty-line-with-label",
-      "[t] \"con etiqueta\"; [n] content/*[1]; [t] \"finalizar etiqueta\" (pause:200); [t] \"espacio\""
+      "[t] \"amb etiqueta\"; [n] content/*[1]; [t] \"finalitzar etiqueta\" (pause:200); [t] \"espai\""
     ],
     [
       "Action",
       "empty-line-with-label-brief",
-      "[t] \"etiqueta\"; [n] content/*[1] (pause:200); [t] \"espacio\""
+      "[t] \"etiqueta\"; [n] content/*[1] (pause:200); [t] \"espai\""
     ],
     [
       "Action",
       "enclose",
-      "[t] \"empezar rodear\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"finalizar rodear\""
+      "[t] \"començar a encerclar\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"finalitzar encerclar\""
     ],
     [
       "Action",
@@ -392,17 +392,17 @@
     [
       "Action",
       "crossout",
-      "[t] \"tachado\"; [n] children/*[1]; [t] \"finalizar tachado\""
+      "[t] \"ratllada\"; [n] children/*[1]; [t] \"finalitzar ratllada\""
     ],
     [
       "Action",
       "cancel",
-      "[t] \"tachado\"; [n] children/*[1]/children/*[1]; [t] \"con\"; [n] children/*[2]; [t] \"finalizar tachado\""
+      "[t] \"ratllada\"; [n] children/*[1]/children/*[1]; [t] \"amb\"; [n] children/*[2]; [t] \"finalitzar ratllada\""
     ],
     [
       "Action",
       "cancel-reverse",
-      "[t] \"tachado\"; [n] children/*[2]/children/*[1]; [t] \"con\"; [n] children/*[1]; [t] \"finalizar tachado\""
+      "[t] \"ratllada\"; [n] children/*[2]/children/*[1]; [t] \"amb\"; [n] children/*[1]; [t] \"finalitzar ratllada\""
     ],
     [
       "Action",
@@ -417,22 +417,22 @@
     [
       "Action",
       "unit-square",
-      "[n] children/*[1]; [t] \"cuadrado\""
+      "[n] children/*[1]; [t] \"quadrat\""
     ],
     [
       "Action",
       "unit-cubic",
-      "[n] children/*[1]; [t] \"cúbico\""
+      "[n] children/*[1]; [t] \"cúbic\""
     ],
     [
       "Action",
       "reciprocal",
-      "[t] \"recíproco\"; [n] children/*[1]"
+      "[t] \"recíproc\"; [n] children/*[1]"
     ],
     [
       "Action",
       "per",
-      "[t] \"por\"; [n] children/*[1]"
+      "[t] \"per\"; [n] children/*[1]"
     ],
     [
       "Action",
@@ -447,12 +447,12 @@
     [
       "Action",
       "unit-combine-singular",
-      "[n] children/*[1]; [t] \"por\"; [m] children/*[position()>1] (sepFunc:CTFunitMultipliers, grammar:!singular)"
+      "[n] children/*[1]; [t] \"per\"; [m] children/*[position()>1] (sepFunc:CTFunitMultipliers, grammar:!singular)"
     ],
     [
       "Action",
       "unit-combine-singular-first",
-      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [t] \"por\"; [m] children/*[position()>2] (sepFunc:CTFunitMultipliers)"
+      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [t] \"per\"; [m] children/*[position()>2] (sepFunc:CTFunitMultipliers)"
     ],
     [
       "Action",
@@ -462,7 +462,7 @@
     [
       "Action",
       "unit-divide",
-      "[n] children/*[1]; [t] \"por\"; [n] children/*[2] (grammar:singular)"
+      "[n] children/*[1]; [t] \"per\"; [n] children/*[2] (grammar:singular)"
     ]
   ]
 }

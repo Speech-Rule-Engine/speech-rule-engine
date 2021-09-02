@@ -1,5 +1,5 @@
 {
-  "locale": "es",
+  "locale": "ca",
   "modality": "prefix",
   "domain": "default",
   "kind": "actions",
@@ -22,22 +22,22 @@
     [
       "Action",
       "exponent",
-      "[t] \"exponente\" (pause:200)"
+      "[t] \"exponent\" (pause:200)"
     ],
     [
       "Action",
       "subscript",
-      "[t] \"subíndice\" (pause:200)"
+      "[t] \"subíndex\" (pause:200)"
     ],
     [
       "Action",
       "overscript",
-      "[t] \"sobreíndice\" (pause:200)"
+      "[t] \"superíndex\" (pause:200)"
     ],
     [
       "Action",
       "underscript",
-      "[t] \"bajoíndice\" (pause:200)"
+      "[t] \"subíndex\" (pause:200)"
     ],
     [
       "Action",
@@ -47,57 +47,57 @@
     [
       "Action",
       "index",
-      "[t] \"índice\" (pause:200)"
+      "[t] \"índex\" (pause:200)"
     ],
     [
       "Action",
       "leftsub",
-      "[t] \"subíndice izquierdo\" (pause:200)"
+      "[t] \"subíndex esquerre\" (pause:200)"
     ],
     [
       "Action",
       "leftsub-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"subíndice izquierdo\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"subíndex esquerre\" (pause:200)"
     ],
     [
       "Action",
       "leftsuper",
-      "[t] \"superíndice izquierdo\" (pause:200)"
+      "[t] \"superíndex esquerre\" (pause:200)"
     ],
     [
       "Action",
       "leftsuper-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"superíndice izquierdo\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"superíndex esquerre\" (pause:200)"
     ],
     [
       "Action",
       "rightsub",
-      "[t] \"subíndice derecho\" (pause:200)"
+      "[t] \"subíndex dret\" (pause:200)"
     ],
     [
       "Action",
       "rightsub-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"subíndice derecho\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"subíndex dret\" (pause:200)"
     ],
     [
       "Action",
       "rightsuper",
-      "[t] \"superíndice derecho\" (pause:200)"
+      "[t] \"superíndex dret\" (pause:200)"
     ],
     [
       "Action",
       "rightsuper-counted",
-      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"superíndice derecho\" (pause:200)"
+      "[t] CSFordinalPosition (grammar:gender=\"m\"); [t] \"superíndex dret\" (pause:200)"
     ],
     [
       "Action",
       "choice",
-      "[t] \"cantidad de elección\" (pause:200)"
+      "[t] \"quantitat d'elecció\" (pause:200)"
     ],
     [
       "Action",
       "select",
-      "[t] \"cantidad de selección\" (pause:200)"
+      "[t] \"quantitat de selecció\" (pause:200)"
     ],
     [
       "Action",
