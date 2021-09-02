@@ -75,8 +75,8 @@ function create(): Locale {
   //   return unit + 'es';
   // },
   loc.FUNCTIONS.si = (prefix: string, unit: string) => {
-    if (unit.match(/^metro/)) {
-      prefix = prefix.replace(/a$/, 'á').replace(/o$/, 'ó').replace(/i$/, 'í');
+    if (unit.match(/^metre/)) {
+      prefix = prefix.replace(/a$/, 'à').replace(/o$/, 'ò').replace(/i$/, 'í');
     }
     return prefix + unit;
   };
@@ -84,5 +84,4 @@ function create(): Locale {
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;
 
   return loc;
-};
-
+}
