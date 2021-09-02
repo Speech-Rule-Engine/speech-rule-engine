@@ -149,7 +149,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  */
 function simpleOrdinal(num: number): string {
   let gender = (Grammar.getInstance().getParameter('gender') as string);
-  return num.toString() + (gender === 'female' ? 'a' : 'o');
+  return num.toString() + (gender === 'f' ? 'a' : 'o');
 }
 
 

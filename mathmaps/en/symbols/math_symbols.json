@@ -1400,12 +1400,9 @@
         "default": "element of"
       },
       "clearspeak": {
-        "default": "is a member of",
-        "SetMemberSymbol_Member": "is a member of",
-        "SetMemberSymbol_Element": "is an element of",
-        "SetMemberSymbol_In": "is in",
-        "SetMemberSymbol_Belongs": "belongs to"
+        "default": "is a member of"
       }
+
     },
     "key": "2208"
   },
@@ -1416,11 +1413,7 @@
         "default": "not an element of"
       },
       "clearspeak": {
-        "default": "is not a member of",
-        "SetMemberSymbol_Member": "is not a member of",
-        "SetMemberSymbol_Element": "is not an element of",
-        "SetMemberSymbol_In": "is not in",
-        "SetMemberSymbol_Belongs": "does not belong to"
+        "default": "is not a member of"
       }
     },
     "key": "2209"
@@ -1429,14 +1422,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small element of"
+        "default": "element of"
       },
       "clearspeak": {
-        "default": "is a member of",
-        "SetMemberSymbol_Member": "is a member of",
-        "SetMemberSymbol_Element": "is an element of",
-        "SetMemberSymbol_In": "is in",
-        "SetMemberSymbol_Belongs": "belongs to"
+        "default": "is a member of"
       }
     },
     "key": "220A"
@@ -1463,7 +1452,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small contains as member"
+        "default": "contains as member"
       }
     },
     "key": "220D"
@@ -3700,7 +3689,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small element of with vertical bar at end of horizontal stroke"
+        "default": "element of with vertical bar at end of horizontal stroke"
       }
     },
     "key": "22F4"
@@ -3727,7 +3716,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small element of with overbar"
+        "default": "element of with overbar"
       }
     },
     "key": "22F7"
@@ -3772,7 +3761,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small contains with vertical bar at end of horizontal stroke"
+        "default": "contains with vertical bar at end of horizontal stroke"
       }
     },
     "key": "22FC"
@@ -3790,7 +3779,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "small contains with overbar"
+        "default": "contains with overbar"
       }
     },
     "key": "22FE"
@@ -4276,7 +4265,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "triple vertical bar delimiter"
+        "default": "triple vertical bar"
       }
     },
     "key": "2980"
@@ -7162,7 +7151,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "triple vertical bar binary relation"
+        "default": "triple vertical bar"
       }
     },
     "key": "2AF4"
@@ -7225,7 +7214,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "triple solidus binary relation"
+        "default": "triple solidus"
       }
     },
     "key": "2AFB"

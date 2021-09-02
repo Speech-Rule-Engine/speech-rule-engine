@@ -1,0 +1,352 @@
+{
+  "locale": "es",
+  "modality": "summary",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "abstr-identifier-long",
+      "[t] \"identificador largo\""
+    ],
+    [
+      "Action",
+      "abstr-identifier",
+      "[t] \"identificador\""
+    ],
+    [
+      "Action",
+      "abstr-number-long",
+      "[t] \"número largo\""
+    ],
+    [
+      "Action",
+      "abstr-number",
+      "[t] \"número\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number-long",
+      "[t] \"número largo mixto\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number",
+      "[t] \"número mixto\""
+    ],
+    [
+      "Action",
+      "abstr-text",
+      "[t] \"texto\""
+    ],
+    [
+      "Action",
+      "abstr-function",
+      "[t] \"expresión funcional\""
+    ],
+    [
+      "Action",
+      "abstr-function-brief",
+      "[t] \"función\""
+    ],
+    [
+      "Action",
+      "abstr-lim",
+      "[t] \"función de límite\""
+    ],
+    [
+      "Action",
+      "abstr-lim-brief",
+      "[t] \"límite\""
+    ],
+    [
+      "Action",
+      "abstr-fraction",
+      "[t] \"fracción\""
+    ],
+    [
+      "Action",
+      "abstr-fraction-brief",
+      "[t] \"frac\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction",
+      "[t] \"fracción continua\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction-brief",
+      "[t] \"frac continua\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt",
+      "[t] \"raíz cuadrada\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt-nested",
+      "[t] \"raíz cuadrada anidada\""
+    ],
+    [
+      "Action",
+      "abstr-root-end",
+      "[t] \"raíz del índice\"; [n] children/*[1] (engine:modality=speech); [t] \"finalizar índice\""
+    ],
+    [
+      "Action",
+      "abstr-root",
+      "[t] \"raíz del índice\"; [n] children/*[1] (engine:modality=speech)"
+    ],
+    [
+      "Action",
+      "abstr-root-brief",
+      "[t] \"raíz\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested-end",
+      "[t] \"raíz anidada del índice\"; [n] children/*[1] (engine:modality=speech); [t] \"finalizar índice\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested",
+      "[t] \"raíz anidada del índice\"; [n] children/*[1] (engine:modality=speech)"
+    ],
+    [
+      "Action",
+      "abstr-root-nested-brief",
+      "[t] \"raíz anidada\""
+    ],
+    [
+      "Action",
+      "abstr-superscript",
+      "[t] \"potencia\""
+    ],
+    [
+      "Action",
+      "abstr-subscript",
+      "[t] \"subíndice\""
+    ],
+    [
+      "Action",
+      "abstr-subsup",
+      "[t] \"potencia con subíndice\""
+    ],
+    [
+      "Action",
+      "abstr-infixop",
+      "[t] @role (grammar:localRole); [t] \"con\"; [t] count(./children/*); [t] \"elementos\""
+    ],
+    [
+      "Action",
+      "abstr-infixop-var",
+      "[t] @role (grammar:localRole); [t] \"con una cantidad variable de elementos\""
+    ],
+    [
+      "Action",
+      "abstr-infixop-brief",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-addition",
+      "[t] \"suma con\"; [t] count(./children/*); [t] \"sumandos\""
+    ],
+    [
+      "Action",
+      "abstr-addition-brief",
+      "[t] \"suma\""
+    ],
+    [
+      "Action",
+      "abstr-addition-var",
+      "[t] \"suma con número variable de sumandos\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication",
+      "[t] \"producto con\"; [t] count(./children/*); [t] \"factores\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-brief",
+      "[t] \"producto\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-var",
+      "[t] \"producto con una cantidad variable de factores\""
+    ],
+    [
+      "Action",
+      "abstr-vector",
+      "[t] \"vector de dimensión\"; [t] count(./children/*)"
+    ],
+    [
+      "Action",
+      "abstr-vector-brief",
+      "[t] \"vector\""
+    ],
+    [
+      "Action",
+      "abstr-vector-var",
+      "[t] \"vector de dimensión n\""
+    ],
+    [
+      "Action",
+      "abstr-binomial",
+      "[t] \"binomio\""
+    ],
+    [
+      "Action",
+      "abstr-determinant",
+      "[t] \"determinante de dimensión\"; [t] count(./children/*)"
+    ],
+    [
+      "Action",
+      "abstr-determinant-brief",
+      "[t] \"determinante\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-var",
+      "[t] \"determinante de dimensión n\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix",
+      "[t] \"matriz cuadrada de dimensión\"; [t] count(./children/*)"
+    ],
+    [
+      "Action",
+      "abstr-squarematrix-brief",
+      "[t] \"matriz cuadrada\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector",
+      "[t] \"vector fila de dimensión\"; [t] count(./children/row/children/*)"
+    ],
+    [
+      "Action",
+      "abstr-rowvector-brief",
+      "[t] \"vector fila\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-var",
+      "[t] \"vector fila de dimensión n\""
+    ],
+    [
+      "Action",
+      "abstr-matrix",
+      "[t] count(children/*); [t] \"por\"; [t] count(children/*[1]/children/*); [t] \"matriz\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-brief",
+      "[t] \"matriz\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-var",
+      "[t] \"matriz de dimensión n por m\""
+    ],
+    [
+      "Action",
+      "abstr-cases",
+      "[t] \"declaración de caso\"; [t] \"con\"; [t] count(children/*); [t] \"casos\""
+    ],
+    [
+      "Action",
+      "abstr-cases-brief",
+      "[t] \"declaración de caso\""
+    ],
+    [
+      "Action",
+      "abstr-cases-var",
+      "[t] \"declaración de caso con número variable de casos\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated",
+      "[t] \"lista separada por\"; [n] content/*[1]; [t] \"de longitud\"; [t] count(children/*) - count(content/*)"
+    ],
+    [
+      "Action",
+      "abstr-punctuated-brief",
+      "[t] \"lista separada por\"; [n] content/*[1]"
+    ],
+    [
+      "Action",
+      "abstr-punctuated-var",
+      "[t] \"lista separada por\"; [n] content/*[1]; [t] \"de longitud variable\""
+    ],
+    [
+      "Action",
+      "abstr-bigop",
+      "[n] content/*[1]"
+    ],
+    [
+      "Action",
+      "abstr-integral",
+      "[t] \"integral\""
+    ],
+    [
+      "Action",
+      "abstr-relation",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-relation-seq",
+      "[t] \"secuencia de\"; [t] @role (grammar:localRole); [t] \"con\"; [t] count(./children/*); [t] \"elementos\""
+    ],
+    [
+      "Action",
+      "abstr-relation-seq-brief",
+      "[t] \"secuencia de\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-relation-var",
+      "[t] \"secuencia de\"; [t] @role (grammar:localRole); [t] \"con una cantidad variable de elementos\""
+    ],
+    [
+      "Action",
+      "abstr-multirel",
+      "[t] \"secuencia de relación\"; [t] \"con\"; [t] count(./children/*); [t] \"elementos\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-brief",
+      "[t] \"secuencia de relación\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-var",
+      "[t] \"secuencia de relación con número variable de elementos\""
+    ],
+    [
+      "Action",
+      "abstr-table",
+      "[t] \"mesa con\"; [t] count(children/*); [t] \"filas y\"; [t] count(children/*[1]/children/*); [t] \"columnas\""
+    ],
+    [
+      "Action",
+      "abstr-line",
+      "[t] \"en\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-row",
+      "[t] \"en\"; [t] @role (grammar:localRole); [t] count(preceding-sibling::..); [t] \"con\"; [t] count(children/*); [t] \"columnas\""
+    ],
+    [
+      "Action",
+      "abstr-cell",
+      "[t] \"en\"; [t] @role (grammar:localRole)"
+    ]
+  ]
+}

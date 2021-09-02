@@ -53,7 +53,7 @@ export function MESSAGES(): Messages {
     regexp: {},
     unitTimes: ''
   };
-};
+}
 
 
 /**
@@ -85,7 +85,7 @@ export interface Numbers {
    * Other special representations that are loaded via locale.
    */
   special?: {[key: string]: string|string[]};
-  
+
   // Constructor methods
   wordOrdinal: tr.Transformer;
   simpleOrdinal: tr.Transformer;
@@ -94,7 +94,7 @@ export interface Numbers {
 
   vulgarSep: string;
   numSep: string;
-};
+}
 
 
 export function NUMBERS(): Numbers {
@@ -111,8 +111,8 @@ export function NUMBERS(): Numbers {
     numberToOrdinal: tr.pluralCase,
     vulgarSep: ' ',
     numSep: ' '
-  }
-};
+  };
+}
 
 
 /**
@@ -176,7 +176,7 @@ export function ALPHABETS(): Alphabets {
     combiner: (letter: string, _font: string, _cap: string) => {
       return letter;
     }
-  }
+  };
 }
 
 
@@ -224,7 +224,7 @@ export interface Functions {
    * @return The unit in plural.
    */
   plural: tr.Transformer;
-};
+}
 
 
 export function FUNCTIONS(): Functions {
@@ -241,5 +241,5 @@ export function FUNCTIONS(): Functions {
     },
     si: tr.siCombiner,
     plural: tr.identityTransformer
-  }
+  };
 }

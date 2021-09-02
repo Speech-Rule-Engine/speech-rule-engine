@@ -46,6 +46,15 @@ DOCS_TESTS = $(DOCS)/tests
 
 JSON_MINIFY = npx json-minify
 
+### Intermediate minified locale files for faster building
+MINI_DIR = $(abspath ./minimaps)
+JSON_FILES = $(wildcard $(foreach fd, $(LOCALES), $(foreach gd, $(MAPS), $(JSON_SRC)/$(fd)/$(gd)/*.json)))
+MINI_SRC = $(foreach file, $(JSON_FILES), $(subst $(JSON_SRC)/, , $(file)))
+# MINI_DST = $(foreach file, $(MINI_SRC), $(patsubst %.json, %.min, $(addprefix $(MINI_DIR)/, $(subst $(JSON_SRC)/, , $(file)))))
+MINI_DST = $(patsubst %.json, %.min, $(JSON_FILES))
+
+
+
 #######################################################################3
 
 all: directories maps
@@ -80,14 +89,24 @@ clean_loc:
 		rm -f $(JSON_DST)/$(LOC).json; \
 	fi
 
-$(LOC_DST):
+clean_mini:
+	rm -f $(MINI_DST)
+
+%.min: %.json
+	@echo "Minifying " $@
+	@echo $<
+	@mkdir -p $(@D)
+	$(JSON_MINIFY) $(patsubst %.min, %.json, $@) > $@
+
+
+$(LOC_DST): $(MINI_DST)
 	@echo "Creating mappings for locale `basename $@ .json`."
 	@echo '{' > $@
 	@for dir in $(MAPS); do\
 		if [ -d $(JSON_SRC)/`basename $@ .json`/$$dir ]; then \
-			for i in $(JSON_SRC)/`basename $@ .json`/$$dir/*.json; do\
+			for i in $(JSON_SRC)/`basename $@ .json`/$$dir/*.min; do\
 				echo '"'`basename $@ .json`/$$dir/`basename $$i`'": '  >> $@; \
-				$(JSON_MINIFY) $$i >> $@; \
+				cat $$i >> $@; \
 				echo ','  >> $@; \
 			done; \
 		fi; \
@@ -99,16 +118,16 @@ $(LOC_DST):
 
 iemaps: $(JSON_DST) $(IEMAPS_FILE)
 
-$(IEMAPS_FILE):
+$(IEMAPS_FILE): $(MINI_DST)
 	@echo "Creating mappings for IE."
 	@echo 'sre.BrowserUtil.mapsForIE = {' > $(IEMAPS_FILE)
 	@for j in $(LOCALES); do\
 		for dir in $(MAPS); do\
 			echo $(JSON_SRC)/$$j/$$dir;\
 			if [ -d $(JSON_SRC)/$$j/$$dir ]; then\
-				for i in $(JSON_SRC)/$$j/$$dir/*.json; do\
+				for i in $(JSON_SRC)/$$j/$$dir/*.min; do\
 					echo '"'`basename $$j`/$$dir/`basename $$i`'": '  >> $(IEMAPS_FILE); \
-					$(JSON_MINIFY) $$i >> $(IEMAPS_FILE); \
+					cat $$i >> $@; \
 					echo ','  >> $(IEMAPS_FILE); \
 				done; \
 			fi; \

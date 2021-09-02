@@ -23,29 +23,12 @@ import {Engine} from '../common/engine';
 import XpathUtil from '../common/xpath_util';
 import {LOCALE} from '../l10n/locale';
 import {Grammar} from '../rule_engine/grammar';
-import {MathCompoundStore} from '../rule_engine/math_simple_store';
 import * as StoreUtil from '../rule_engine/store_util';
 import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
 import {SemanticAnnotator} from '../semantic_tree/semantic_annotator';
 import {SemanticAttr, SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
 import {SemanticNode} from '../semantic_tree/semantic_node';
 import {vulgarFractionSmall} from './numbers_util';
-
-
-// TODO: remove
-/**
- * Translates a single non-negative integer into a word.
- * @param text The text to translate.
- * @return The translated text.
- */
-export function numbersToAlpha(text: string): string {
-  return text.match(/\d+/) ?
-      LOCALE.NUMBERS.numberToWords(parseInt(text, 10)) :
-      text;
-}
-
-
-Grammar.getInstance().setPreprocessor('numbers2alpha', numbersToAlpha);
 
 
 /**
@@ -419,23 +402,12 @@ SemanticAnnotations.register(
  * @return The ordinal exponent as a word.
  */
 export function ordinalExponent(node: Element): string {
-  let number = parseInt(node.textContent, 10);
-  if (isNaN(number)) {
+  let num = parseInt(node.textContent, 10);
+  if (isNaN(num)) {
     return node.textContent;
   }
-  return number > 10 ? LOCALE.NUMBERS.simpleOrdinal(number) :
-                       LOCALE.NUMBERS.wordOrdinal(number);
-}
-
-
-/**
- * Tests for capital letters wrt. Unicode categories.
- * @param node The XML node.
- * @return True if the text is a capital letter.
- */
-export function isCapitalLetter(node: Element): Element[] {
-  let result = MathCompoundStore.lookupCategory(node.textContent) === 'Lu';
-  return result ? [node] : [];
+  return num > 10 ? LOCALE.NUMBERS.simpleOrdinal(num) :
+                       LOCALE.NUMBERS.wordOrdinal(num);
 }
 
 
@@ -597,39 +569,6 @@ export function layoutFactor_(node: Element): boolean {
 }
 
 
-/**
- * Tests for hyperbolic function application.
- * @param node The XML node.
- * @return True if application of a hyperbolic function.
- */
-export function isHyperbolic(node: Element): Element[] {
-  if (node.tagName === SemanticType.APPL) {
-    let func = XpathUtil.evalXPath('children/*[1]', node)[0] as Element;
-    if (func && func.tagName === SemanticType.FUNCTION &&
-        MathCompoundStore.lookupCategory(func.textContent) ===
-            'Hyperbolic') {
-      return [node];
-    }
-  }
-  return [];
-}
-/**
- * Tests for logarithm in subscript.
- * @param node The XML node.
- * @return True if logrithm with a basis in subscript.
- */
-export function isLogarithmWithBase(node: Element): Element[] {
-  if (node.tagName === SemanticType.SUBSCRIPT) {
-    let func = XpathUtil.evalXPath('children/*[1]', node)[0] as Element;
-    if (func && func.tagName === SemanticType.FUNCTION &&
-        MathCompoundStore.lookupCategory(func.textContent) ===
-            'Logarithm') {
-      return [node];
-    }
-  }
-  return [];
-}
-// TODO: (Simons) Add these into a category test constraint with xpath argument.
 // TODO: Move this into the number utils.
 /**
  * Translates a node into a word for an ordinal number.
@@ -638,42 +577,4 @@ export function isLogarithmWithBase(node: Element): Element[] {
  */
 export function wordOrdinal(node: Element): string {
   return LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10));
-}
-
-
-/**
- * Tests for currency.
- * @param node The XML node.
- * @return True if the text is a currency.
- */
-export function firstCurrency(node: Element): Element[] {
-  let first = XpathUtil.evalXPath('children/*[1]', node)[0];
-  let result = first &&
-      MathCompoundStore.lookupCategory(
-          first.textContent + ':unit') === 'currency';
-  return result ? [node] : [];
-}
-/**
- * Tests for currency.
- * @param node The XML node.
- * @return True if the text is a currency.
- */
-export function lastCurrency(node: Element): Element[] {
-  let last = XpathUtil.evalXPath('children/*[last()]', node)[0];
-  let result = last &&
-      MathCompoundStore.lookupCategory(
-          last.textContent + ':unit') === 'currency';
-  return result ? [node] : [];
-}
-/**
- * Tests for unit to be of category length.
- * @param node The XML node.
- * @return True if the text is a length unit.
- */
-export function isLengthUnit(node: Element): Element[] {
-  let first = XpathUtil.evalXPath('children/*[1]', node)[0];
-  let result = first &&
-      MathCompoundStore.lookupCategory(
-          first.textContent.trim() + ':unit') === 'length';
-  return result ? [node] : [];
 }

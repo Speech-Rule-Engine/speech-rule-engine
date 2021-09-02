@@ -411,6 +411,20 @@ function correctFont_(text: string, correction: string): string {
 
 
 /**
+ * Removes explicit caps from capital letters.
+ * @param text The original description text.
+ * @return The cleaned up string.
+ */
+function correctCaps_(text: string): string {
+  let cap = LOCALE.ALPHABETS.capPrefix[Engine.getInstance().domain];
+  if (typeof cap === 'undefined') {
+    cap = LOCALE.ALPHABETS.capPrefix['default'];
+  }
+  return correctFont_(text, cap);
+}
+
+
+/**
  * Attaches an annotation to a description.
  * @param text The original description text.
  * @param annotation The annotation string to be applied.
@@ -418,6 +432,18 @@ function correctFont_(text: string, correction: string): string {
  */
 function addAnnotation_(text: string, annotation: string): string {
   return text + ':' + annotation;
+}
+
+
+/**
+ * Translates a single non-negative integer into a word.
+ * @param text The text to translate.
+ * @return The translated text.
+ */
+export function numbersToAlpha(text: string): string {
+  return text.match(/\d+/) ?
+      LOCALE.NUMBERS.numberToWords(parseInt(text, 10)) :
+      text;
 }
 
 
@@ -442,4 +468,5 @@ Grammar.getInstance().setCorrection('localEnclose', LocaleUtil.localEnclose);
 Grammar.getInstance().setCorrection('ignoreFont', correctFont_);
 Grammar.getInstance().setPreprocessor('annotation', addAnnotation_);
 Grammar.getInstance().setPreprocessor('noTranslateText', noTranslateText_);
-Grammar.getInstance().setCorrection('ignoreCaps', correctFont_);
+Grammar.getInstance().setCorrection('ignoreCaps', correctCaps_);
+Grammar.getInstance().setPreprocessor('numbers2alpha', numbersToAlpha);

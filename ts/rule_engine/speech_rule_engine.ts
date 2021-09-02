@@ -117,22 +117,6 @@ export class SpeechRuleEngine {
 
 
   /**
-   * Factory method for generating rule stores by modality.
-   * @param modality The modality.
-   * @return The generated rule store.
-   */
-  public storeFactory(modality: string): BaseRuleStore {
-    // TODO (TS): Not sure how to get the constructors directly
-    // let constructors = {braille: BrailleStore, speech: MathStore};
-    // return new (constructors[modality] || MathStore)();
-    if (modality === 'braille') {
-      return new BrailleStore();
-    }
-    return new MathStore();
-  }
-
-
-  /**
    * Updates the evaluator method for the document of the given node. This is
    * particular important for XML documents in Firefox that generates a novel
    * object (plus evaluate method) for every document.
@@ -219,15 +203,10 @@ export class SpeechRuleEngine {
   public addStore(set: RulesJson) {
     // This line is important to setup the context functions for stores.
     // It has to run __before__ the first speech rule store is added.
-    SpeechRuleStores.init();
-    if (set && !set.functions) {
-      set.functions = SpeechRules.getStore(
-          set.locale, set.modality, set.domain);
+    let store = StoreFactory.get(set);
+    if (store.kind !== 'abstract') {
+      store.getSpeechRules().forEach(x => this.trie.addRule(x));
     }
-    let store = this.storeFactory(set.modality);
-    store.parse(set);
-    store.initialize();
-    store.getSpeechRules().forEach(x => this.trie.addRule(x));
     this.addEvaluator(store);
   }
 
@@ -476,6 +455,7 @@ export class SpeechRuleEngine {
           descrs[0]['annotation'] = attributes['annotation'];
         }
       }
+      this.addLayout(descrs, attributes, multi);
       if (component.grammar) {
         Grammar.getInstance().popState();
       }
@@ -509,7 +489,7 @@ export class SpeechRuleEngine {
       context: SpeechRuleContext, nodes: Element[], sepFunc: string,
       sepStr: string, ctxtFunc: string,
       ctxtStr: string): AuditoryDescription[] {
-    if (nodes == []) {
+    if (nodes === []) {
       return [];
     }
     let sep = sepStr || '';
@@ -539,6 +519,33 @@ export class SpeechRuleEngine {
 
 
   /**
+   * Adds layout annotations to the auditory descriptions
+   * @param descrs The auditory descriptions.
+   * @param props The properties.
+   * @param _multi Is is a multi node component. Currently ignored.
+   */
+  private addLayout(
+    descrs: AuditoryDescription[], props: {[key: string]: string},
+    _multi: boolean) {
+    let layout = props.layout;
+    if (!layout) {
+      return;
+    }
+    if (layout.match(/^begin/)) {
+      descrs.unshift(new AuditoryDescription({text: '', layout: layout}));
+      return;
+    }
+    if (layout.match(/^end/)) {
+      descrs.push(new AuditoryDescription({text: '', layout: layout}));
+      return;
+    }
+    descrs.unshift(new AuditoryDescription(
+      {text: '', layout: `begin${layout}`}));
+    descrs.push(new AuditoryDescription({text: '', layout: `end${layout}`}));
+  }
+
+
+  /**
    * Adds personality to every Auditory Descriptions in input list.
    * @param descrs A list of Auditory
    *     descriptions.
@@ -548,8 +555,8 @@ export class SpeechRuleEngine {
    * @return The modified array.
    */
   private addPersonality_(
-      descrs: AuditoryDescription[], props: {[key: string]: string}, multi: boolean,
-      node: Node): AuditoryDescription[] {
+    descrs: AuditoryDescription[], props: {[key: string]: string},
+    multi: boolean, node: Node): AuditoryDescription[] {
     let personality: {[key: string]: string|number} = {};
     let pause = null;
     for (let key of EngineConst.personalityPropList) {
@@ -562,7 +569,7 @@ export class SpeechRuleEngine {
       //   personality[sre.Engine.personalityProps[key]] = numeral;
       // }
       let realValue = isNaN(numeral) ?
-          value.charAt(0) == '"' ? value.slice(1, -1) : value :
+          value.charAt(0) === '"' ? value.slice(1, -1) : value :
           numeral;
       if (key === EngineConst.personalityProps.PAUSE) {
         pause = realValue;
@@ -632,7 +639,7 @@ export class SpeechRuleEngine {
       if (descrPersonality[p] && typeof descrPersonality[p] == 'number' &&
           typeof personality[p] == 'number') {
         descrPersonality[p] = descrPersonality[p] + personality[p];
-      } else {
+      } else if (!descrPersonality[p]) {
         descrPersonality[p] = personality[p];
       }
     }
@@ -784,6 +791,52 @@ export class SpeechRuleEngine {
     if (parent) {
       parent.removeChild(last);
     }
+  }
+
+}
+
+
+export namespace StoreFactory {
+
+  const stores: Map<string, BaseRuleStore> = new Map();
+
+  /**
+   * Factory method for generating rule stores by modality.
+   * @param modality The modality.
+   * @return The generated rule store.
+   */
+  function factory(modality: string): BaseRuleStore {
+    // TODO (TS): Not sure how to get the constructors directly
+    // let constructors = {braille: BrailleStore, speech: MathStore};
+    // return new (constructors[modality] || MathStore)();
+    if (modality === 'braille') {
+      return new BrailleStore();
+    }
+    return new MathStore();
+  }
+
+
+  export function get(set: RulesJson) {
+    let name = `${set.locale}.${set.modality}.${set.domain}`;
+    if (set.kind === 'actions') {
+      let store = stores.get(name);
+      store.parse(set);
+      return store;
+    }
+    SpeechRuleStores.init();
+    if (set && !set.functions) {
+      set.functions = SpeechRules.getStore(
+        set.locale, set.modality, set.domain);
+    }
+    let store = factory(set.modality);
+    stores.set(name, store);
+    if (set.inherits) {
+      store.inherits = stores.get(
+        `${set.inherits}.${set.modality}.${set.domain}`);
+    }
+    store.parse(set);
+    store.initialize();
+    return store;
   }
 
 }

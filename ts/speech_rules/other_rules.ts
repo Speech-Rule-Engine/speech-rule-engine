@@ -19,6 +19,7 @@
  */
 
 
+import {SpeechRuleStore} from '../rule_engine/speech_rule_store';
 import * as StoreUtil from '../rule_engine/store_util';
 
 import * as MathspeakUtil from './mathspeak_util';
@@ -77,7 +78,8 @@ export function BrailleRules() {
 
         'CSFbaseline': MathspeakUtil.baselineVerbose,
 
-        'CGFtensorRules': NemethUtil.generateTensorRules,
+        'CGFtensorRules': (st: SpeechRuleStore) =>
+             MathspeakUtil.generateTensorRules(st, false),
         'CTFrelationIterator': NemethUtil.relationIterator,
         'CTFimplicitIterator': NemethUtil.implicitIterator
       });

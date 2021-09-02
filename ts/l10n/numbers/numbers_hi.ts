@@ -106,11 +106,11 @@ function wordOrdinal(num: number): string {
     return num.toString();
   }
   if (num < 10) {
-    return gender === 'female' ? NUMBERS.special.ordinalsFeminine[num] :
+    return gender === 'f' ? NUMBERS.special.ordinalsFeminine[num] :
                                  NUMBERS.special.ordinalsMasculine[num];
   }
   let ordinal = numberToWords(num);
-  return ordinal + (gender === 'female' ? 'वीं' : 'वाँ');
+  return ordinal + (gender === 'f' ? 'वीं' : 'वाँ');
 }
 
 
@@ -123,8 +123,8 @@ function simpleOrdinal(num: number): string {
   let gender = (Grammar.getInstance().getParameter('gender') as string);
 
   if (num > 0 && num < 10) {
-    return gender === 'female' ? NUMBERS.special.simpleSmallOrdinalsFeminine[num] :
-                                 NUMBERS.special.simpleSmallOrdinalsMasculine[num];
+    return gender === 'f' ? NUMBERS.special.simpleSmallOrdinalsFeminine[num] :
+      NUMBERS.special.simpleSmallOrdinalsMasculine[num];
   }
   let ordinal = num.toString()
                     .split('')
@@ -133,7 +133,7 @@ function simpleOrdinal(num: number): string {
                       return isNaN(num) ? '' : NUMBERS.special.simpleNumbers[num];
                     })
                     .join('');
-  return ordinal + (gender === 'female' ? 'वीं' : 'वाँ');
+  return ordinal + (gender === 'f' ? 'वीं' : 'वाँ');
 }
 
 

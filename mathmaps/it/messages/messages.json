@@ -30,12 +30,10 @@
       "UNDER": "sotto",
       "UNDERSCRIPT": "sottoscritto",
       "OVER": "sopra",
-      "OVERSCRIPT": "soprascritto"
+      "OVERSCRIPT": "soprascritto",
+      "ENDSCRIPTS": "fine script"
     },
-    "MSroots": {
-      "2": "",
-      "3": ""
-    },
+    "MSroots": {},
     "font": {
       "bold": "grassetto",
       "bold-fraktur": "grassetto gotico",

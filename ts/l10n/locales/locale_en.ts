@@ -39,14 +39,14 @@ export function en(): Locale {
 function create(): Locale {
   let loc = createLocale();
   loc.NUMBERS = NUMBERS;
-  loc.FUNCTIONS.plural = function(unit: string) {
+  loc.FUNCTIONS.plural = (unit: string) => {
     return /.*s$/.test(unit) ? unit : unit + 's';
   };
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
+  loc.CORRECTIONS.article = (name: string) => {
+    return Grammar.getInstance().getParameter('noArticle') ? '' : name;
+  };
   return loc;
 }
 
-Grammar.getInstance().setCorrection('noarticle', (name: string) => {
-  return Grammar.getInstance().getParameter('noArticle') ? '' : name;
-});

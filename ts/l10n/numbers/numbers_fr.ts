@@ -164,7 +164,7 @@ function wordOrdinal(num: number): string {
  */
 function simpleOrdinal(num: number): string {
   let gender = (Grammar.getInstance().getParameter('gender') as string);
-  return num === 1 ? num.toString() + (gender === 'male' ? 'er' : 're') :
+  return num === 1 ? num.toString() + (gender === 'm' ? 'er' : 're') :
                         num.toString() + 'e';
 }
 

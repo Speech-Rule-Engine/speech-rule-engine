@@ -1,0 +1,438 @@
+{
+  "domain": "mathspeak",
+  "locale": "hi",
+  "modality": "speech",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "collapsed",
+      "[t] \"निपातित\"; [n] . (engine:modality=summary, grammar:collapsed)"
+    ],
+    [
+      "Action",
+      "blank-cell-empty",
+      "[t] \"रिक्त\""
+    ],
+    [
+      "Action",
+      "blank-line-empty",
+      "[t] \"रिक्त\""
+    ],
+    [
+      "Action",
+      "font",
+      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "mixed-number",
+      "[n] children/*[1]; [t] \"पूर्णांक\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "number-with-chars",
+      "[t] \"संख्या\"; [m] CQFspaceoutNumber (grammar:protected)"
+    ],
+    [
+      "Action",
+      "number-with-chars-brief",
+      "[t] \"संख्या\"; [m] CQFspaceoutNumber (grammar:protected)"
+    ],
+    [
+      "Action",
+      "number-as-upper-word",
+      "[t] \"ऊपर का शब्द\"; [m] CQFspaceoutNumber"
+    ],
+    [
+      "Action",
+      "number-baseline",
+      "[t] \"आधार रेखा\"; [n] . (grammar:baseline)"
+    ],
+    [
+      "Action",
+      "number-baseline-brief",
+      "[t] \"आधार\"; [n] . (grammar:baseline)"
+    ],
+    [
+      "Action",
+      "number-baseline-font",
+      "[t] \"आधार रेखा\"; [t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "number-baseline-font-brief",
+      "[t] \"आधार\"; [t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "negative-number",
+      "[t] \"ऋण\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "negative",
+      "[t] \"बाकी\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "division",
+      "[n] children/*[1]; [t] \"divided by\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "subtraction",
+      "[m] children/* (separator:\"बाकी\")"
+    ],
+    [
+      "Action",
+      "fences-neutral",
+      "[t] \"निरपेक्ष मान आरंभ\"; [n] children/*[1]; [t] \"निरपेक्ष मान समाप्त\""
+    ],
+    [
+      "Action",
+      "fences-neutral-sbrief",
+      "[t] \"निरपेक्ष मान\"; [n] children/*[1]; [t] \"निरपेक्ष मान समाप्त\""
+    ],
+    [
+      "Action",
+      "fences-metric",
+      "[t] \"दूरी फलन आरंभ\"; [n] children/*[1]; [t] \"दूरी फलन समाप्त\""
+    ],
+    [
+      "Action",
+      "fences-metric-sbrief",
+      "[t] \"दूरी फलन\"; [n] children/*[1]; [t] \"दूरी फलन समाप्त\""
+    ],
+    [
+      "Action",
+      "empty-set",
+      "[t] \"रिक्त समुच्चय\""
+    ],
+    [
+      "Action",
+      "fences-set",
+      "[t] \"समुच्चय आरंभ\"; [n] children/*[1]; [t] \"समुच्चय समाप्त\""
+    ],
+    [
+      "Action",
+      "fences-set-sbrief",
+      "[t] \"समुच्चय\"; [n] children/*[1]; [t] \"समुच्चय समाप्त\""
+    ],
+    [
+      "Action",
+      "factorial",
+      "[t] \"क्रमगुणित\""
+    ],
+    [
+      "Action",
+      "minus",
+      "[t] \"बाकी\""
+    ],
+    [
+      "Action",
+      "continued-fraction-outer",
+      "[t] \"भिन्न चालू\"; [n] children/*[1]; [t] \"ऊपर\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "continued-fraction-outer-brief",
+      "[t] \"भिन्न चालू\"; [n] children/*[1]; [t] \"ऊपर\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "continued-fraction-inner",
+      "[t] \"आरंभ भिन्न\"; [n] children/*[1]; [t] \"ऊपर\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "continued-fraction-inner-brief",
+      "[t] \"आरंभ भिन्न\"; [n] children/*[1]; [t] \"ऊपर\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "continued-fraction-inner-sbrief",
+      "[t] \"भिन्न\"; [n] children/*[1]; [t] \"ऊपर\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "integral",
+      "[n] children/*[1]; [t] \"पादांक\"; [n] children/*[2]; [t] \"उर्ध्वान्क\"; [n] children/*[3]; [t] \"आधार रेखा\""
+    ],
+    [
+      "Action",
+      "integral-brief",
+      "[n] children/*[1]; [t] \"अधो\"; [n] children/*[2]; [t] \"उर्ध्व\"; [n] children/*[3]; [t] \"आधार\""
+    ],
+    [
+      "Action",
+      "square",
+      "[n] children/*[1]; [t] \"वर्ग\""
+    ],
+    [
+      "Action",
+      "cube",
+      "[n] children/*[1]; [t] \"घन\""
+    ],
+    [
+      "Action",
+      "prime",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "counted-prime",
+      "[t] count(children/*) (grammar:numbers2alpha); [t] \"प्राइम\""
+    ],
+    [
+      "Action",
+      "counted-prime-multichar",
+      "[t] string-length(text()) (grammar:numbers2alpha); [t] \"प्राइम\""
+    ],
+    [
+      "Action",
+      "overscore",
+      "[t] \"ऊपर संशोधित\"; [n] children/*[1]; [t] \"के साथ\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "overscore-brief",
+      "[t] \"ऊपर संशोधित\"; [n] children/*[1]; [t] \"के साथ\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "double-overscore",
+      "[t] \"ऊपर के ऊपर संशोधित\"; [n] children/*[1]; [t] \"के साथ\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "double-overscore-brief",
+      "[t] \"ऊपर के ऊपर संशोधित\"; [n] children/*[1]; [t] \"के साथ\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "underscore",
+      "[t] \"निचे संशोधित\"; [n] children/*[1]; [t] \"के साथ\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "underscore-brief",
+      "[t] \"निचे संशोधित\"; [n] children/*[1]; [t] \"के साथ\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "double-underscore",
+      "[t] \"निचे के निचे संशोधित\"; [n] children/*[1]; [t] \"के साथ\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "double-underscore-brief",
+      "[t] \"निचे के निचे संशोधित\"; [n] children/*[1]; [t] \"के साथ\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "overbar",
+      "[n] children/*[1]; [t] \"उर्ध्व दंड\""
+    ],
+    [
+      "Action",
+      "underbar",
+      "[n] children/*[1]; [t] \"अधो दंड\""
+    ],
+    [
+      "Action",
+      "overtilde",
+      "[n] children/*[1]; [t] \"उर्ध्व अंतर-चिह्न\""
+    ],
+    [
+      "Action",
+      "undertilde",
+      "[n] children/*[1]; [t] \"अधो अंतर-चिह्न\""
+    ],
+    [
+      "Action",
+      "matrix",
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"आव्यूह समाप्त\""
+    ],
+    [
+      "Action",
+      "matrix-sbrief",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"आव्यूह\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"आव्यूह समाप्त\""
+    ],
+    [
+      "Action",
+      "matrix-row",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"स्तंभ\", pause:200)"
+    ],
+    [
+      "Action",
+      "row-with-label",
+      "[t] \"लेबल के साथ\"; [n] content/*[1]; [t] \"लेबल समाप्त\" (pause:200); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"स्तंभ\")"
+    ],
+    [
+      "Action",
+      "row-with-label-brief",
+      "[t] \"लेबल\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"स्तंभ\")"
+    ],
+    [
+      "Action",
+      "row-with-text-label",
+      "[t] \"लेबल\"; [t] CSFRemoveParens; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"स्तंभ\")"
+    ],
+    [
+      "Action",
+      "empty-row",
+      "[t] \"रिक्त\""
+    ],
+    [
+      "Action",
+      "empty-cell",
+      "[t] \"रिक्त\" (pause:300)"
+    ],
+    [
+      "Action",
+      "determinant",
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"सारणिक समाप्त\""
+    ],
+    [
+      "Action",
+      "determinant-sbrief",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"सारणिक समाप्त\""
+    ],
+    [
+      "Action",
+      "determinant-simple",
+      "[t] \"आरंभ\"; [t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
+    ],
+    [
+      "Action",
+      "determinant-simple-sbrief",
+      "[t] count(children/*); [t] \"बाय\"; [t] count(children/*[1]/children/*); [t] \"सारणिक\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति\", grammar:simpleDet); [t] \"सारणिक समाप्त\""
+    ],
+    [
+      "Action",
+      "layout",
+      "[t] \"खाका आरंभ\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"खाका समाप्त\""
+    ],
+    [
+      "Action",
+      "layout-sbrief",
+      "[t] \"खाका\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"खाका समाप्त\""
+    ],
+    [
+      "Action",
+      "binomial",
+      "[t] \"द्विपद अथवा आव्यूह आरंभ\"; [n] children/*[1]/children/*[1]; [t] \"चयन करें\"; [n] children/*[2]/children/*[1]; [t] \"द्विपद अथवा आव्यूह समाप्त\""
+    ],
+    [
+      "Action",
+      "binomial-sbrief",
+      "[t] \"द्विपद अथवा आव्यूह\"; [n] children/*[1]/children/*[1]; [t] \"चयन करें\"; [n] children/*[2]/children/*[1]; [t] \"द्विपद अथवा आव्यूह समाप्त\""
+    ],
+    [
+      "Action",
+      "cases",
+      "[t] \"खाका आरंभ\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"खाका समाप्त\""
+    ],
+    [
+      "Action",
+      "cases-sbrief",
+      "[t] \"खाका\"; [t] \"विस्तारित\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"पंक्ति \", grammar:gender=\"f\"); [t] \"खाका समाप्त\""
+    ],
+    [
+      "Action",
+      "line-with-label",
+      "[t] \"लेबल के साथ\"; [n] content/*[1]; [t] \"लेबल समाप्त\" (pause:200); [m] children/*"
+    ],
+    [
+      "Action",
+      "line-with-label-brief",
+      "[t] \"लेबल\"; [n] content/*[1] (pause:200); [m] children/*"
+    ],
+    [
+      "Action",
+      "line-with-text-label",
+      "[t] \"लेबल\"; [t] CSFRemoveParens; [m] children/*"
+    ],
+    [
+      "Action",
+      "empty-line",
+      "[t] \"रिक्त\""
+    ],
+    [
+      "Action",
+      "empty-line-with-label",
+      "[t] \"लेबल के साथ\"; [n] content/*[1]; [t] \"लेबल समाप्त\" (pause:200); [t] \"रिक्त\""
+    ],
+    [
+      "Action",
+      "empty-line-with-label-brief",
+      "[t] \"लेबल\"; [n] content/*[1] (pause:200); [t] \"रिक्त\""
+    ],
+    [
+      "Action",
+      "enclose",
+      "[t] \"घेरे का आरंभ\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"घेरा समाप्त\""
+    ],
+    [
+      "Action",
+      "leftbar",
+      "[t] \"ऊर्ध्वाधर दंड\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "rightbar",
+      "[n] children/*[1]; [t] \"ऊर्ध्वाधर दंड\""
+    ],
+    [
+      "Action",
+      "crossout",
+      "[t] \"मिटाया हुआ\"; [n] children/*[1]; [t] \"मिटाया हुआ समाप्त\""
+    ],
+    [
+      "Action",
+      "cancel",
+      "[t] \"मिटाया हुआ\"; [n] children/*[1]/children/*[1]; [t] \"के साथ\"; [n] children/*[2]; [t] \"मिटाया हुआ समाप्त\""
+    ],
+    [
+      "Action",
+      "cancel-reverse",
+      "[t] \"मिटाया हुआ\"; [n] children/*[2]/children/*[1]; [t] \"के साथ\"; [n] children/*[1]; [t] \"मिटाया हुआ समाप्त\""
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"अनुमान नियम\"; [m] content/*; [t] \"निष्कर्ष के साथ\"; [n] children/*[1]; [t] \"और\"; [t] count(children/*[2]/children/*); [t] \"पूर्वपक्ष\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"अनुमान नियम\"; [m] content/*; [t] \"निष्कर्ष के साथ\"; [n] children/*[1]; [t] \"और\"; [t] count(children/*[2]/children/*); [t] \"पूर्वपक्ष\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premise \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"सूचक पर्चा\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"अभिगृहीत\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"रिक्त अभिगृहीत\""
+    ]
+  ]
+}

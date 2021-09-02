@@ -30,7 +30,8 @@
       "UNDER": "sous",
       "UNDERSCRIPT": "souscript",
       "OVER": "sus",
-      "OVERSCRIPT": "suscript"
+      "OVERSCRIPT": "suscript",
+      "ENDSCRIPTS": "fin scripts"
     },
     "MSroots": {
       "2": "carrée",
