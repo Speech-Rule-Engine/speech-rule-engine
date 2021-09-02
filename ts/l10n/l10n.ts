@@ -23,6 +23,7 @@ import {Engine} from '../common/engine';
 import {Variables} from '../common/variables';
 import {Grammar} from '../rule_engine/grammar';
 
+import {ca} from './locales/locale_ca';
 import {de} from './locales/locale_de';
 import {en} from './locales/locale_en';
 import {es} from './locales/locale_es';
@@ -34,6 +35,7 @@ import {Locale, LOCALE} from './locale';
 
 
 export const locales: {[key: string]: () => Locale} = {
+  'ca': ca,
   'de': de,
   'en': en,
   'es': es,
