@@ -11,8 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "dracmes",
-        "singular": "dracma"
+        "default": "dracma",
+        "plural": "dracmes"
       }
     }
   },
@@ -25,8 +25,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "unces",
-        "singular": "unça"
+        "default": "unça",
+        "plural": "unces"
       }
     }
   },
@@ -39,8 +39,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "lliures",
-        "singular": "lliura"
+        "default": "lliura",
+        "plural": "lliures"
       }
     }
   },
@@ -53,8 +53,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "stones",
-        "singular": "stone"
+        "default": "stone",
+        "plural": "stones"
       }
     }
   },
@@ -67,8 +67,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "quarts curts",
-        "singular": "quart curt"
+        "default": "quart curt",
+        "plural": "quarts curts"
       }
     }
   },
@@ -81,8 +81,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "centenes",
-        "singular": "centena"
+        "default": "centena",
+        "plural": "centenes"
       }
     }
   },
@@ -95,8 +95,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "lliures imperials",
-        "singular": "lliura imperial"
+        "default": "lliura imperial",
+        "plural": "lliures imperials"
       }
     }
   },
@@ -108,8 +108,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "grams",
-        "singular": "gram"
+        "default": "gram",
+        "plural": "grams"
       }
     }
   },
@@ -122,8 +122,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "grams",
-        "singular": "gram"
+        "default": "gram",
+        "plural": "grams"
       }
     }
   },
@@ -135,8 +135,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "micrograms",
-        "singular": "microgram"
+        "default": "microgram",
+        "plural": "micrograms"
       }
     }
   },
@@ -149,8 +149,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "tones",
-        "singular": "tona"
+        "default": "tona",
+        "plural": "tones"
       }
     }
   }

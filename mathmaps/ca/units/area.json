@@ -14,8 +14,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "quadrats",
-        "singular": "quadrat"
+        "default": "quadrat",
+        "plural": "quadrats"
       }
     }
   },
@@ -30,8 +30,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "polzades quadrades",
-        "singular": "polzada quadrada"
+        "default": "polzada quadrada",
+        "plural": "polzades quadrades"
       }
     }
   },
@@ -44,8 +44,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "rods quadrats",
-        "singular": "rod quadrat"
+        "default": "rod quadrat",
+        "plural": "rods quadrats"
       }
     }
   },
@@ -58,8 +58,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "polzades quadrades",
-        "singular": "peu quadrat"
+        "default": "peu quadrat",
+        "plural": "polzades quadrades"
       }
     }
   },
@@ -72,8 +72,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "iardes quadrades",
-        "singular": "iarda quadrada"
+        "default": "iarda quadrada",
+        "plural": "iardes quadrades"
       }
     }
   },
@@ -86,8 +86,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "milles quadrades",
-        "singular": "milla quadrada"
+        "default": "milla quadrada",
+        "plural": "milles quadrades"
       }
     }
   },
@@ -102,8 +102,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "acres",
-        "singular": "acre"
+        "default": "acre",
+        "plural": "acres"
       }
     }
   },
@@ -115,8 +115,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "hectàrees",
-        "singular": "hectàrea"
+        "default": "hectàrea",
+        "plural": "hectàrees"
       }
     }
   }

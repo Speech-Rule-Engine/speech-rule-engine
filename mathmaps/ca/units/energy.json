@@ -12,8 +12,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "watts",
-        "singular": "watt"
+        "default": "watt",
+        "plural": "watts"
       }
     }
   },
@@ -26,8 +26,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "quilowatts hora",
-        "singular": "quilowatt hora"
+        "default": "quilowatt hora",
+        "plural": "quilowatts hora"
       }
     }
   },
@@ -40,8 +40,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "joules",
-        "singular": "joule"
+        "default": "joule",
+        "plural": "joules"
       }
     }
   },
@@ -54,8 +54,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "newtons",
-        "singular": "newton"
+        "default": "newton",
+        "plural": "newtons"
       }
     }
   },
@@ -68,8 +68,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "amperes",
-        "singular": "ampere"
+        "default": "ampere",
+        "plural": "amperes"
       }
     }
   },
@@ -82,8 +82,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "volts",
-        "singular": "volt"
+        "default": "volt",
+        "plural": "volts"
       }
     }
   },
@@ -109,8 +109,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "ohms",
-        "singular": "ohm"
+        "default": "ohm",
+        "plural": "ohms"
       }
     }
   }

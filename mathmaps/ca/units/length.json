@@ -11,8 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "peus",
-        "singular": "peu"
+        "default": "peu",
+        "plural": "peus"
       }
     }
   },
@@ -25,8 +25,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "polzades",
-        "singular": "polzada"
+        "default": "polzada",
+        "plural": "polzades"
       }
     }
   },
@@ -39,8 +39,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "milles",
-        "singular": "milla"
+        "default": "milla",
+        "plural": "milles"
       }
     }
   },
@@ -53,8 +53,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "iardes",
-        "singular": "iarda"
+        "default": "iarda",
+        "plural": "iardes"
       }
     }
   },
@@ -67,8 +67,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "links",
-        "singular": "link"
+        "default": "link",
+        "plural": "links"
       }
     }
   },
@@ -81,8 +81,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "rods",
-        "singular": "rod"
+        "default": "rod",
+        "plural": "rods"
       }
     }
   },
@@ -95,8 +95,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "cadenes",
-        "singular": "cadena"
+        "default": "cadena",
+        "plural": "cadenes"
       }
     }
   },
@@ -109,8 +109,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "furlongs",
-        "singular": "furlong"
+        "default": "furlong",
+        "plural": "furlongs"
       }
     }
   },
@@ -122,8 +122,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "milles nàutiques",
-        "singular": "milla nàutica"
+        "default": "milla nàutica",
+        "plural": "milles nàutiques"
       }
     }
   },
@@ -136,8 +136,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "metres",
-        "singular": "metre"
+        "default": "metre",
+        "plural": "metres"
       }
     }
   }

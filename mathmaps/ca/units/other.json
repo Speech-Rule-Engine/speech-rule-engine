@@ -13,8 +13,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "dotzenes",
-        "singular": "dotzena"
+        "default": "dotzena",
+        "plural": "dotzenes"
       }
     }
   }

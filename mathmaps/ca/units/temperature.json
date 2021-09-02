@@ -12,8 +12,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "graus Fahrenheit",
-        "singular": "grau Fahrenheit"
+        "default": "grau Fahrenheit",
+        "plural": "graus Fahrenheit"
       }
     }
   },
@@ -26,8 +26,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "centígrads",
-        "singular": "centígrad"
+        "default": "centígrad",
+        "plural": "centígrads"
       }
     }
   },
@@ -40,8 +40,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "kelvins",
-        "singular": "kelvin"
+        "default": "kelvin",
+        "plural": "kelvins"
       }
     }
   }
