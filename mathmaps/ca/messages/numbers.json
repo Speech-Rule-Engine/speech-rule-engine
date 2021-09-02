@@ -40,51 +40,27 @@
     "large": [
       "",
       "mil",
-      "un milió",
-      "mil milions",
-      "un bilió",
-      "mil bilions",
-      "un trilió",
-      "mil trilions",
-      "un quadrilió",
-      "mil quadrilions",
-      "quintilió",
-      "mil quintilions"
+      "milió",
+      "bilió",
+      "trilió",
+      "quadrilió",
+      "quintilió"
     ],
     "vulgarSep": " ",
-    "numSep": "",
-    "hundreds": [
-      "cent",
-      "dos-cents",
-      "tres-cents",
-      "quatre-cents",
-      "cinc-cents",
-      "sis-cents",
-      "set-cents",
-      "vuit-cents",
-      "nou-cents"
-    ],
-    "twenties": {
-      "21": "vint-i-un",
-      "22": "vint-i-dos",
-      "23": "vint-i-tres",
-      "24": "vint-i-quatre",
-      "25": "vint-i-cinc",
-      "26": "vint-i-sis",
-      "27": "vint-i-set",
-      "28": "vint-i-vuit",
-      "29": "vint-i-nou"
-    },
-    "thirties": {
-      "31": "trenta-un"
-    },
-    "rest": {
-      "0": "zero",
-      "101": "cent un",
-      "2000": "dos mil",
-      "2000000": "dos milions",
-      "2000000000": "dos mil milions",
-      " ": ""
+    "numSep": " ",
+    "special": {
+      "onesOrdinals": [
+        "primera",
+        "segona",
+        "tercera",
+        "quarta",
+        "cinquena",
+        "sisena",
+        "setena",
+        "vuitena",
+        "novena",
+        "desena"
+      ]
     }
   }
 }
