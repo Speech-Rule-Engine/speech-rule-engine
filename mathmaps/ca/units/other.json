@@ -13,9 +13,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "dotzenes",
+        "singular": "dotzena"
       }
     }
   }

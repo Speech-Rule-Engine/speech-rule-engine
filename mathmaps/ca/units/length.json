@@ -11,9 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "peus",
+        "singular": "peu"
       }
     }
   },
@@ -26,9 +25,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "polzades",
+        "singular": "polzada"
       }
     }
   },
@@ -41,9 +39,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "milles",
+        "singular": "milla"
       }
     }
   },
@@ -56,9 +53,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "iardes",
+        "singular": "iarda"
       }
     }
   },
@@ -71,9 +67,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "links",
+        "singular": "link"
       }
     }
   },
@@ -86,9 +81,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "rods",
+        "singular": "rod"
       }
     }
   },
@@ -101,9 +95,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "cadenes",
+        "singular": "cadena"
       }
     }
   },
@@ -116,9 +109,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "furlongs",
+        "singular": "furlong"
       }
     }
   },
@@ -130,9 +122,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "milles nàutiques",
+        "singular": "milla nàutica"
       }
     }
   },
@@ -145,9 +136,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "metres",
+        "singular": "metre"
       }
     }
   }

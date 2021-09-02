@@ -11,9 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "cúbics",
+        "singular": "cúbic"
       }
     }
   },
@@ -26,9 +25,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "plozades cúbiques",
+        "singular": "polzada cúbica"
       }
     }
   },
@@ -41,9 +39,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "peus cúbics",
+        "singular": "peu cúbic"
       }
     }
   },
@@ -56,9 +53,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "iardes cúbiques",
+        "singular": "iarda cúbica"
       }
     }
   },
@@ -71,9 +67,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "barrils",
+        "singular": "barril"
       }
     }
   },
@@ -86,9 +81,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "unces líquides",
+        "singular": "unça líquida"
       }
     }
   },
@@ -101,9 +95,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "galons",
+        "singular": "galó"
       }
     }
   },
@@ -116,9 +109,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "pintes",
+        "singular": "pinta"
       }
     }
   },
@@ -131,9 +123,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "quarts",
+        "singular": "quart"
       }
     }
   },
@@ -146,9 +137,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "dracmes líquides",
+        "singular": "dracma líquida"
       }
     }
   },
@@ -163,9 +153,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "cullerades",
+        "singular": "cullerada"
       }
     }
   },
@@ -178,9 +167,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "culleradetes",
+        "singular": "culleradeta"
       }
     }
   },
@@ -193,9 +181,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "tasses",
+        "singular": "tassa"
       }
     }
   },
@@ -208,9 +195,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "centímetres cúbics",
+        "singular": "centímetre cúbic"
       }
     }
   },
@@ -223,9 +209,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "litres",
+        "singular": "litre"
       }
     }
   }

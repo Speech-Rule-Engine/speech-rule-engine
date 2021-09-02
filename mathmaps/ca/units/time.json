@@ -11,9 +11,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "segons",
+        "singular": "segon"
       }
     }
   },
@@ -25,9 +24,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "segons",
+        "singular": "segon"
       }
     }
   },
@@ -40,9 +38,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "minuts",
+        "singular": "minut"
       }
     }
   },
@@ -54,9 +51,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "graus",
+        "singular": "grau"
       }
     }
   },
@@ -69,9 +65,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "hores",
+        "singular": "hora"
       }
     }
   }

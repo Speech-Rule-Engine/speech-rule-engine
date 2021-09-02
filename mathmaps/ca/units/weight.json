@@ -11,9 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "dracmes",
+        "singular": "dracma"
       }
     }
   },
@@ -26,9 +25,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "unces",
+        "singular": "unça"
       }
     }
   },
@@ -41,9 +39,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "lliures",
+        "singular": "lliura"
       }
     }
   },
@@ -56,9 +53,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "stones",
+        "singular": "stone"
       }
     }
   },
@@ -71,9 +67,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "quarts curts",
+        "singular": "quart curt"
       }
     }
   },
@@ -86,9 +81,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "centenes",
+        "singular": "centena"
       }
     }
   },
@@ -101,9 +95,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "lliures imperials",
+        "singular": "lliura imperial"
       }
     }
   },
@@ -115,9 +108,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "grams",
+        "singular": "gram"
       }
     }
   },
@@ -130,9 +122,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "grams",
+        "singular": "gram"
       }
     }
   },
@@ -144,9 +135,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "micrograms",
+        "singular": "microgram"
       }
     }
   },
@@ -159,9 +149,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "tones",
+        "singular": "tona"
       }
     }
   }

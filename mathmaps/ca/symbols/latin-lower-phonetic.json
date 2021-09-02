@@ -1,5 +1,1895 @@
 [
   {
     "locale": "ca"
+  },
+  {
+    "key": "00F8",
+    "mappings": {
+      "default": {
+        "default": "o barrada"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "0111",
+    "mappings": {
+      "default": {
+        "default": "d amb barra"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "0127",
+    "mappings": {
+      "default": {
+        "default": "h amb guió"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "0142",
+    "mappings": {
+      "default": {
+        "default": "l amb guió"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "0167",
+    "mappings": {
+      "default": {
+        "default": "t amb guió"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "0180",
+    "mappings": {
+      "default": {
+        "default": "b amb ratlleta"
+      }
+    }
+  },
+  {
+    "key": "019B",
+    "mappings": {
+      "default": {
+        "default": "lambda ratllada"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "01B6",
+    "mappings": {
+      "default": {
+        "default": "z amb ratlleta"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01BE",
+    "mappings": {
+      "default": {
+        "default": "parada glotal invertida amb ratlleta"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E5",
+    "mappings": {
+      "default": {
+        "default": "g amb ratlleta"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01FF",
+    "mappings": {
+      "default": {
+        "default": "o amb ratlleta i accent agut"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "023C",
+    "mappings": {
+      "default": {
+        "default": "c amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0247",
+    "mappings": {
+      "default": {
+        "default": "e petita amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0249",
+    "mappings": {
+      "default": {
+        "default": "j amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "024D",
+    "mappings": {
+      "default": {
+        "default": "amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "024F",
+    "mappings": {
+      "default": {
+        "default": "y amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "025F",
+    "mappings": {
+      "default": {
+        "default": "j petita sense punts amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0268",
+    "mappings": {
+      "default": {
+        "default": "i amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0284",
+    "mappings": {
+      "default": {
+        "default": "j petita sense punts amb traç i ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A1",
+    "mappings": {
+      "default": {
+        "default": "parada glotal amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A2",
+    "mappings": {
+      "default": {
+        "default": "parada invertida glotal amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D13",
+    "mappings": {
+      "default": {
+        "default": "O de costat amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D7C",
+    "mappings": {
+      "default": {
+        "default": "iota amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D7D",
+    "mappings": {
+      "default": {
+        "default": "p amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D7F",
+    "mappings": {
+      "default": {
+        "default": "ípsilon amb traç"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1E9C",
+    "mappings": {
+      "default": {
+        "default": "s llarga amb traç diagonal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1E9D",
+    "mappings": {
+      "default": {
+        "default": "s petita llarga amb traç alt"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "018D",
+    "mappings": {
+      "default": {
+        "default": "delta invertida"
+      }
+    }
+  },
+  {
+    "key": "1E9B",
+    "mappings": {
+      "default": {
+        "default": "s llarga amb punt a dalt"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "1E9F",
+    "mappings": {
+      "default": {
+        "default": "delta petita llatina"
+      }
+    }
+  },
+  {
+    "key": "0138",
+    "mappings": {
+      "default": {
+        "default": "kra"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "017F",
+    "mappings": {
+      "default": {
+        "default": "s llarga"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0183",
+    "mappings": {
+      "default": {
+        "default": "b amb barra a dalt"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0185",
+    "mappings": {
+      "default": {
+        "default": "to sis"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0188",
+    "mappings": {
+      "default": {
+        "default": "c amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "018C",
+    "mappings": {
+      "default": {
+        "default": "d amb barra a sobre"
+      }
+    }
+  },
+  {
+    "key": "0192",
+    "mappings": {
+      "default": {
+        "default": "f amb ganxo"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "0195",
+    "mappings": {
+      "default": {
+        "default": "hv"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0199",
+    "mappings": {
+      "default": {
+        "default": "k amb ganxo"
+      }
+    }
+  },
+  {
+    "key": "019A",
+    "mappings": {
+      "default": {
+        "default": "l amb barra"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "019E",
+    "mappings": {
+      "default": {
+        "default": "n amb cama dreta llarga"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01A1",
+    "mappings": {
+      "default": {
+        "default": "o amb banya"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01A3",
+    "mappings": {
+      "default": {
+        "default": "oi"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01A5",
+    "mappings": {
+      "default": {
+        "default": "p amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01A8",
+    "mappings": {
+      "default": {
+        "default": "dos tons"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01AA",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina invertida Esh bucle"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01AB",
+    "mappings": {
+      "default": {
+        "default": "t amb palatal ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01AD",
+    "mappings": {
+      "default": {
+        "default": "t amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01B0",
+    "mappings": {
+      "default": {
+        "default": "u amb banya"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01B4",
+    "mappings": {
+      "default": {
+        "default": "y amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01B9",
+    "mappings": {
+      "default": {
+        "default": "ezh invertit"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01BA",
+    "mappings": {
+      "default": {
+        "default": "ezh amb cua"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01BD",
+    "mappings": {
+      "default": {
+        "default": "to cinc"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01BF",
+    "mappings": {
+      "default": {
+        "default": "wynn"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01C6",
+    "mappings": {
+      "default": {
+        "default": "dz amb accent"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01C9",
+    "mappings": {
+      "default": {
+        "default": "lj"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01CC",
+    "mappings": {
+      "default": {
+        "default": "nj"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E3",
+    "mappings": {
+      "default": {
+        "default": "ae amb màcron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01EF",
+    "mappings": {
+      "default": {
+        "default": "ezh amb accent"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01F3",
+    "mappings": {
+      "default": {
+        "default": "dz"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "021D",
+    "mappings": {
+      "default": {
+        "default": "lletra petita llatina yogh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "026E",
+    "mappings": {
+      "default": {
+        "default": "lletra petita llatina lezh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0292",
+    "mappings": {
+      "default": {
+        "default": "ezh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0293",
+    "mappings": {
+      "default": {
+        "default": "lletra petita ezh amb bordó"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A4",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita dezh dígraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DD",
+    "mappings": {
+      "default": {
+        "default": "e invertida"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01FD",
+    "mappings": {
+      "default": {
+        "default": "ae amb accent agut"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0221",
+    "mappings": {
+      "default": {
+        "default": "d amb ris"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0223",
+    "mappings": {
+      "default": {
+        "default": "ou"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0225",
+    "mappings": {
+      "default": {
+        "default": "z amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0234",
+    "mappings": {
+      "default": {
+        "default": "l amb ris"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0235",
+    "mappings": {
+      "default": {
+        "default": "n amb ris"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0236",
+    "mappings": {
+      "default": {
+        "default": "t amb ris"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0238",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita db dígraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0239",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita qp dígraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "023F",
+    "mappings": {
+      "default": {
+        "default": "s amb cua encreuada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0240",
+    "mappings": {
+      "default": {
+        "default": "z amb cua swash"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0242",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita parada glotal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "024B",
+    "mappings": {
+      "default": {
+        "default": "q amb cua de ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0250",
+    "mappings": {
+      "default": {
+        "default": "a invertida"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0251",
+    "mappings": {
+      "default": {
+        "default": "alfa minúscula llatina"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0252",
+    "mappings": {
+      "default": {
+        "default": "alfa invertida"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0253",
+    "mappings": {
+      "default": {
+        "default": "b amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0254",
+    "mappings": {
+      "default": {
+        "default": "o oberta"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0255",
+    "mappings": {
+      "default": {
+        "default": "c amb ris"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0256",
+    "mappings": {
+      "default": {
+        "default": "d amb cua"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0257",
+    "mappings": {
+      "default": {
+        "default": "d amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0258",
+    "mappings": {
+      "default": {
+        "default": "e invertida"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0259",
+    "mappings": {
+      "default": {
+        "default": "schwa"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "025A",
+    "mappings": {
+      "default": {
+        "default": "schwa petita amb ganxo"
+      }
+    }
+  },
+  {
+    "key": "025B",
+    "mappings": {
+      "default": {
+        "default": "w oberta"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "025C",
+    "mappings": {
+      "default": {
+        "default": "e invertida oberta"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "025D",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita e invertida oberta amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "025E",
+    "mappings": {
+      "default": {
+        "default": "e tancada invertida oberta"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0260",
+    "mappings": {
+      "default": {
+        "default": "g amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0261",
+    "mappings": {
+      "default": {
+        "default": "escriptura llatina de lletres petites g"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0263",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita gamma"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0264",
+    "mappings": {
+      "default": {
+        "default": "banya de moltó de lletra petita llatina"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0265",
+    "mappings": {
+      "default": {
+        "default": "h girada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0266",
+    "mappings": {
+      "default": {
+        "default": "h amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0267",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita heng amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0269",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina minúscula iota"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "026B",
+    "mappings": {
+      "default": {
+        "default": "l amb titlla al mig"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "026C",
+    "mappings": {
+      "default": {
+        "default": "l amb cinturó"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "026D",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina l amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "026F",
+    "mappings": {
+      "default": {
+        "default": "m girada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0270",
+    "mappings": {
+      "default": {
+        "default": "m girada amb cama llarga"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0271",
+    "mappings": {
+      "default": {
+        "default": "m amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0272",
+    "mappings": {
+      "default": {
+        "default": "n amb ganxo esquerre"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0273",
+    "mappings": {
+      "default": {
+        "default": "n amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0275",
+    "mappings": {
+      "default": {
+        "default": "lletra minúscula omega"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0277",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita omega tancada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0278",
+    "mappings": {
+      "default": {
+        "default": "lletra petita llatina"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0279",
+    "mappings": {
+      "default": {
+        "default": "r girada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027A",
+    "mappings": {
+      "default": {
+        "default": "r girada amb cama llarga"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027B",
+    "mappings": {
+      "default": {
+        "default": "r girada amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027C",
+    "mappings": {
+      "default": {
+        "default": "r amb cama llarga"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027D",
+    "mappings": {
+      "default": {
+        "default": "r amb cua"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027E",
+    "mappings": {
+      "default": {
+        "default": "r amb ham"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027F",
+    "mappings": {
+      "default": {
+        "default": "r invertida amb ham"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0282",
+    "mappings": {
+      "default": {
+        "default": "s amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0283",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita esh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0285",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita a la gatzoneta invertida esh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0286",
+    "mappings": {
+      "default": {
+        "default": "esh minúscula llatina amb ris"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0287",
+    "mappings": {
+      "default": {
+        "default": "t girada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0288",
+    "mappings": {
+      "default": {
+        "default": "t amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0289",
+    "mappings": {
+      "default": {
+        "default": "u amb barra"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "028A",
+    "mappings": {
+      "default": {
+        "default": "ípsilon"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "028B",
+    "mappings": {
+      "default": {
+        "default": "v amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "028C",
+    "mappings": {
+      "default": {
+        "default": "v invertida"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "028D",
+    "mappings": {
+      "default": {
+        "default": "w girada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "028E",
+    "mappings": {
+      "default": {
+        "default": "y girada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0290",
+    "mappings": {
+      "default": {
+        "default": "z amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0291",
+    "mappings": {
+      "default": {
+        "default": "z amb ris"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0295",
+    "mappings": {
+      "default": {
+        "default": "faríngia amb veu fricativa"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0296",
+    "mappings": {
+      "default": {
+        "default": "invertida parada glotal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0297",
+    "mappings": {
+      "default": {
+        "default": "c estirada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0298",
+    "mappings": {
+      "default": {
+        "default": "carta bilabial click"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "029A",
+    "mappings": {
+      "default": {
+        "default": "e tancada oberta"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "029E",
+    "mappings": {
+      "default": {
+        "default": "k girada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A0",
+    "mappings": {
+      "default": {
+        "default": "q amb ganxo"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A3",
+    "mappings": {
+      "default": {
+        "default": "lletra petita dz dígraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A5",
+    "mappings": {
+      "default": {
+        "default": "lletra petita llatina dz dígraf amb bordó"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A6",
+    "mappings": {
+      "default": {
+        "default": "lletra petita llatina ts dígraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A7",
+    "mappings": {
+      "default": {
+        "default": "lletra petita llatina te-xeix dígraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A8",
+    "mappings": {
+      "default": {
+        "default": "lletra petita llatina tc dígraf amb bordó"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A9",
+    "mappings": {
+      "default": {
+        "default": "lletra petita llatina feng dígraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AA",
+    "mappings": {
+      "default": {
+        "default": "lletra petita ls dígraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AB",
+    "mappings": {
+      "default": {
+        "default": "lletra petita lz dígraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AC",
+    "mappings": {
+      "default": {
+        "default": "percussió bilabial"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AD",
+    "mappings": {
+      "default": {
+        "default": "de percurssió bidental"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AE",
+    "mappings": {
+      "default": {
+        "default": "h invertida amb ham"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AF",
+    "mappings": {
+      "default": {
+        "default": "h invertida amb ham i cua"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D02",
+    "mappings": {
+      "default": {
+        "default": "ae girades"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D08",
+    "mappings": {
+      "default": {
+        "default": "e invertida oberta"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D09",
+    "mappings": {
+      "default": {
+        "default": "i invertida"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D11",
+    "mappings": {
+      "default": {
+        "default": "o de costat"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D12",
+    "mappings": {
+      "default": {
+        "default": "o de costat obert"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D14",
+    "mappings": {
+      "default": {
+        "default": "oe girades"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D16",
+    "mappings": {
+      "default": {
+        "default": "o meitat superior"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D17",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina, lletra inferior, meitat inferior o"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D1D",
+    "mappings": {
+      "default": {
+        "default": "u cap als costats"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D1E",
+    "mappings": {
+      "default": {
+        "default": "u de costat amb dièresi"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D1F",
+    "mappings": {
+      "default": {
+        "default": "m girada cap als costats"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D24",
+    "mappings": {
+      "default": {
+        "default": "carta llatina expressada espirant laringi"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D25",
+    "mappings": {
+      "default": {
+        "default": "ain"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6B",
+    "mappings": {
+      "default": {
+        "default": "ue"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6C",
+    "mappings": {
+      "default": {
+        "default": "b amb titlla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6D",
+    "mappings": {
+      "default": {
+        "default": "d amb titlla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6E",
+    "mappings": {
+      "default": {
+        "default": "f amb titlla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6F",
+    "mappings": {
+      "default": {
+        "default": "m amb titlla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D70",
+    "mappings": {
+      "default": {
+        "default": "n amb titlla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D71",
+    "mappings": {
+      "default": {
+        "default": "p amb titlla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D72",
+    "mappings": {
+      "default": {
+        "default": "r amb titlla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D73",
+    "mappings": {
+      "default": {
+        "default": "r amb ham i tilla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D74",
+    "mappings": {
+      "default": {
+        "default": "s amb titlla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D75",
+    "mappings": {
+      "default": {
+        "default": "t amb titlla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D76",
+    "mappings": {
+      "default": {
+        "default": "z amb titlla mitjana"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D77",
+    "mappings": {
+      "default": {
+        "default": "g girada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D79",
+    "mappings": {
+      "default": {
+        "default": "g insular"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D7A",
+    "mappings": {
+      "default": {
+        "default": "th amb ratllada"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D80",
+    "mappings": {
+      "default": {
+        "default": "b amb ganxo palatal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D81",
+    "mappings": {
+      "default": {
+        "default": "d amb ganxo palatal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D82",
+    "mappings": {
+      "default": {
+        "default": "f amb ganxo palatí"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D83",
+    "mappings": {
+      "default": {
+        "default": "g amb ganxo palatal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D84",
+    "mappings": {
+      "default": {
+        "default": "k amb ganxo palatí"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D85",
+    "mappings": {
+      "default": {
+        "default": "l amb ganxo palatí"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D86",
+    "mappings": {
+      "default": {
+        "default": "m amb ganxo palatí"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D87",
+    "mappings": {
+      "default": {
+        "default": "n amb ganxo palatal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D88",
+    "mappings": {
+      "default": {
+        "default": "p amb ganxo palatí"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D89",
+    "mappings": {
+      "default": {
+        "default": "r amb ganxo palatal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8A",
+    "mappings": {
+      "default": {
+        "default": "s amb ganxo palatal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8B",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita esh amb ganxo palatal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8C",
+    "mappings": {
+      "default": {
+        "default": "v amb ganxo palatal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8D",
+    "mappings": {
+      "default": {
+        "default": "x amb ganxo palatal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8E",
+    "mappings": {
+      "default": {
+        "default": "z amb ganxo palatal"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8F",
+    "mappings": {
+      "default": {
+        "default": "a amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D90",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita alfa amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D91",
+    "mappings": {
+      "default": {
+        "default": "d amb ganxo i cua"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D92",
+    "mappings": {
+      "default": {
+        "default": "e petita amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D93",
+    "mappings": {
+      "default": {
+        "default": "e petita oberta amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D94",
+    "mappings": {
+      "default": {
+        "default": "e oberta invertida amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D95",
+    "mappings": {
+      "default": {
+        "default": "schwa petita amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D96",
+    "mappings": {
+      "default": {
+        "default": "i amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D97",
+    "mappings": {
+      "default": {
+        "default": "llatina petita o oberta amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D98",
+    "mappings": {
+      "default": {
+        "default": "lletra llatina petita esh amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D99",
+    "mappings": {
+      "default": {
+        "default": "u amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D9A",
+    "mappings": {
+      "default": {
+        "default": "ezh petita amb ganxo retroflex"
+      }
+    }
+  },
+  {
+    "key": "0149",
+    "mappings": {
+      "default": {
+        "default": "n precedida per apòstrof"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "014B",
+    "mappings": {
+      "default": {
+        "default": "eng"
+      }
+    },
+    "category": "Ll"
   }
 ]

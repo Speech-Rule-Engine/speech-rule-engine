@@ -11,9 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "nusos",
+        "singular": "nus"
       }
     }
   },
@@ -25,9 +24,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "milles per hora",
+        "singular": "milla per hora"
       }
     }
   },
@@ -39,9 +37,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "revolucions per minut",
+        "singular": "revolució per minut"
       }
     }
   },
@@ -53,9 +50,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": "quilòmetres per hora",
+        "singular": "quilòmetre per hora"
       }
     }
   }

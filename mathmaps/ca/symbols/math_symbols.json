@@ -1,5 +1,7684 @@
 [
   {
     "locale": "ca"
+  },
+  {
+    "key": "0021",
+    "mappings": {
+      "default": {
+        "default": "factorial"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "0022",
+    "mappings": {
+      "default": {
+        "default": "cometes"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "0023",
+    "mappings": {
+      "default": {
+        "default": "coixinet",
+        "defaultMP": "signo de número"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "0024",
+    "mappings": {
+      "default": {
+        "default": "dòlar"
+      }
+    },
+    "category": "Sc"
+  },
+  {
+    "key": "0025",
+    "mappings": {
+      "default": {
+        "default": "per cent"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "0026",
+    "mappings": {
+      "default": {
+        "default": "ampersand"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "0027",
+    "mappings": {
+      "default": {
+        "default": "prima",
+        "defaultMP": "apóstrofo"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "002A",
+    "mappings": {
+      "default": {
+        "default": "per"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "002B",
+    "mappings": {
+      "default": {
+        "default": "més"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "002C",
+    "mappings": {
+      "default": {
+        "default": "coma"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "002D",
+    "mappings": {
+      "default": {
+        "default": "menys"
+      }
+    },
+    "category": "Pd"
+  },
+  {
+    "key": "002E",
+    "mappings": {
+      "default": {
+        "default": "punt"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "002F",
+    "mappings": {
+      "default": {
+        "default": "barra obliqua"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "003A",
+    "mappings": {
+      "default": {
+        "default": "dos punts"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "003B",
+    "mappings": {
+      "default": {
+        "default": "punt i coma"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "003C",
+    "mappings": {
+      "default": {
+        "default": "menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "003D",
+    "mappings": {
+      "default": {
+        "default": "igual"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "003E",
+    "mappings": {
+      "default": {
+        "default": "ajor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "003F",
+    "mappings": {
+      "default": {
+        "default": "interrogació dreta",
+        "defaultMP": "cierra interrogación"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "0040",
+    "mappings": {
+      "default": {
+        "default": "arrova"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "005C",
+    "mappings": {
+      "default": {
+        "default": "contrabarra"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "005E",
+    "mappings": {
+      "default": {
+        "default": "circumflex"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "005F",
+    "mappings": {
+      "default": {
+        "default": "subratllat"
+      }
+    },
+    "category": "Pc"
+  },
+  {
+    "key": "0060",
+    "mappings": {
+      "default": {
+        "default": "accent greu"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "007C",
+    "mappings": {
+      "default": {
+        "default": "barra vertical"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "007E",
+    "mappings": {
+      "default": {
+        "default": "titlla"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "00A1",
+    "mappings": {
+      "default": {
+        "default": "admiració esquerra",
+        "defaultMP": "abre admiración"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "00A2",
+    "mappings": {
+      "default": {
+        "default": "cèntim"
+      }
+    },
+    "category": "Sc"
+  },
+  {
+    "key": "00A3",
+    "mappings": {
+      "default": {
+        "default": "lliura esterlina"
+      }
+    },
+    "category": "Sc"
+  },
+  {
+    "key": "00A4",
+    "mappings": {
+      "default": {
+        "default": "moneda"
+      }
+    },
+    "category": "Sc"
+  },
+  {
+    "key": "00A5",
+    "mappings": {
+      "default": {
+        "default": "ien"
+      }
+    },
+    "category": "Sc"
+  },
+  {
+    "key": "00A6",
+    "mappings": {
+      "default": {
+        "default": "barra vertical partida"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "00A7",
+    "mappings": {
+      "default": {
+        "default": "secció"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "00A8",
+    "mappings": {
+      "default": {
+        "default": "dièresi"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "00A9",
+    "mappings": {
+      "default": {
+        "default": "copyright"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "00AA",
+    "mappings": {
+      "default": {
+        "default": "ordinal femení"
+      }
+    },
+    "category": "Lo"
+  },
+  {
+    "key": "00AB",
+    "mappings": {
+      "default": {
+        "default": "cometes angulars esquerra",
+        "defaultMP": "abre comillas angulares"
+      }
+    },
+    "category": "Pi"
+  },
+  {
+    "key": "00AC",
+    "mappings": {
+      "default": {
+        "default": "negació"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "00AE",
+    "mappings": {
+      "default": {
+        "default": "registrat"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "00AF",
+    "mappings": {
+      "default": {
+        "default": "barra"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "00B0",
+    "mappings": {
+      "default": {
+        "default": "grau"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "00B1",
+    "mappings": {
+      "default": {
+        "default": "més menys"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "00B4",
+    "mappings": {
+      "default": {
+        "default": "accent agut"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "00B5",
+    "mappings": {
+      "default": {
+        "default": "micro"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "00B6",
+    "mappings": {
+      "default": {
+        "default": "paràgraf"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "00B7",
+    "mappings": {
+      "default": {
+        "default": "punt mitjà"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "00B8",
+    "mappings": {
+      "default": {
+        "default": "ce trencada"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "00BA",
+    "mappings": {
+      "default": {
+        "default": "ordinal masculí"
+      }
+    },
+    "category": "Lo"
+  },
+  {
+    "key": "00BB",
+    "mappings": {
+      "default": {
+        "default": "cometes angulars dreta",
+        "defaultMP": "cierra comillas angulares"
+      }
+    },
+    "category": "Pf"
+  },
+  {
+    "key": "00BF",
+    "mappings": {
+      "default": {
+        "default": "interrogació esquerra",
+        "defaultMP": "abre interrogación"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "00D7",
+    "mappings": {
+      "default": {
+        "default": "per"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "00F7",
+    "mappings": {
+      "default": {
+        "default": "dividit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "02B9",
+    "mappings": {
+      "default": {
+        "default": "prima"
+      }
+    },
+    "category": "Lm"
+  },
+  {
+    "key": "02BA",
+    "mappings": {
+      "default": {
+        "default": "dos prima"
+      }
+    },
+    "category": "Lm"
+  },
+  {
+    "key": "02D8",
+    "mappings": {
+      "default": {
+        "default": "breu"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "02D9",
+    "mappings": {
+      "default": {
+        "default": "punt en superescrit"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "02DA",
+    "mappings": {
+      "default": {
+        "default": "anell en superescrit"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "02DB",
+    "mappings": {
+      "default": {
+        "default": "ogonek"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "02DC",
+    "mappings": {
+      "default": {
+        "default": "titlla"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "02DD",
+    "mappings": {
+      "default": {
+        "default": "doble accent agut"
+      }
+    },
+    "category": "Sk"
+  },
+  {
+    "key": "2010",
+    "mappings": {
+      "default": {
+        "default": "menys"
+      }
+    },
+    "category": "Pd"
+  },
+  {
+    "category": "Pd",
+    "key": "2011",
+    "mappings": {
+      "default": {
+        "default": "guió no rompible"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "2012",
+    "mappings": {
+      "default": {
+        "default": "figura guió"
+      }
+    }
+  },
+  {
+    "key": "2013",
+    "mappings": {
+      "default": {
+        "default": "en ratlla"
+      }
+    },
+    "category": "Pd"
+  },
+  {
+    "key": "2014",
+    "mappings": {
+      "default": {
+        "default": "en ratlla"
+      }
+    },
+    "category": "Pd"
+  },
+  {
+    "key": "2015",
+    "mappings": {
+      "default": {
+        "default": "barra horitzontal"
+      }
+    },
+    "category": "Pd"
+  },
+  {
+    "key": "2016",
+    "mappings": {
+      "default": {
+        "default": "doble barra vertical"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "category": "Po",
+    "key": "2017",
+    "mappings": {
+      "default": {
+        "default": "línia baixa doble"
+      }
+    }
+  },
+  {
+    "key": "2018",
+    "mappings": {
+      "default": {
+        "default": "cometa esquerra"
+      }
+    },
+    "category": "Pi"
+  },
+  {
+    "key": "2019",
+    "mappings": {
+      "default": {
+        "default": "cometa dreta"
+      }
+    },
+    "category": "Pf"
+  },
+  {
+    "key": "201A",
+    "mappings": {
+      "default": {
+        "default": "cometa sota 9"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "category": "Pi",
+    "key": "201B",
+    "mappings": {
+      "default": {
+        "default": "marca de cometes simple amb inversió alta-9"
+      }
+    }
+  },
+  {
+    "key": "201C",
+    "mappings": {
+      "default": {
+        "default": "doble cometa"
+      }
+    },
+    "category": "Pi"
+  },
+  {
+    "key": "201D",
+    "mappings": {
+      "default": {
+        "default": "doble cometa dreta"
+      }
+    },
+    "category": "Pf"
+  },
+  {
+    "key": "201E",
+    "mappings": {
+      "default": {
+        "default": "doble cometa sota 9"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "category": "Pi",
+    "key": "201F",
+    "mappings": {
+      "default": {
+        "default": "doble alt-invertit-9 cometes"
+      }
+    }
+  },
+  {
+    "key": "2020",
+    "mappings": {
+      "default": {
+        "default": "daga"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2021",
+    "mappings": {
+      "default": {
+        "default": "doble daga"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2022",
+    "mappings": {
+      "default": {
+        "default": "bala"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "category": "Po",
+    "key": "2023",
+    "mappings": {
+      "default": {
+        "default": "bala triangular"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2024",
+    "mappings": {
+      "default": {
+        "default": "líder d'un punt"
+      }
+    }
+  },
+  {
+    "key": "2025",
+    "mappings": {
+      "default": {
+        "default": "dos punts líder"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2026",
+    "mappings": {
+      "default": {
+        "default": "punts suspensius"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "category": "Po",
+    "key": "2027",
+    "mappings": {
+      "default": {
+        "default": "punt de separació"
+      }
+    }
+  },
+  {
+    "key": "2030",
+    "mappings": {
+      "default": {
+        "default": "tant per miler"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2031",
+    "mappings": {
+      "default": {
+        "default": "tant per deu mil"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2032",
+    "mappings": {
+      "default": {
+        "default": "prima"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2033",
+    "mappings": {
+      "default": {
+        "default": "dos prima"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2034",
+    "mappings": {
+      "default": {
+        "default": "tres prima"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2035",
+    "mappings": {
+      "default": {
+        "default": "accent greu"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2036",
+    "mappings": {
+      "default": {
+        "default": "doble accent greu"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "category": "Po",
+    "key": "2037",
+    "mappings": {
+      "default": {
+        "default": "prima invertit"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2038",
+    "mappings": {
+      "default": {
+        "default": "signe d'intercalació"
+      }
+    }
+  },
+  {
+    "key": "2039",
+    "mappings": {
+      "default": {
+        "default": "cometes esquerra",
+        "defaultMP": "abre comillas"
+      }
+    },
+    "category": "Pi"
+  },
+  {
+    "key": "203A",
+    "mappings": {
+      "default": {
+        "default": "cometes dreta",
+        "defaultMP": "cierra comillas"
+      }
+    },
+    "category": "Pf"
+  },
+  {
+    "category": "Po",
+    "key": "203B",
+    "mappings": {
+      "default": {
+        "default": "marca de referència"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "203C",
+    "mappings": {
+      "default": {
+        "default": "doble signe d'exclamació"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "203D",
+    "mappings": {
+      "default": {
+        "default": "interrobang"
+      }
+    }
+  },
+  {
+    "key": "203E",
+    "mappings": {
+      "default": {
+        "default": "barra superior"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "category": "Pc",
+    "key": "203F",
+    "mappings": {
+      "default": {
+        "default": "undertie"
+      }
+    }
+  },
+  {
+    "key": "2040",
+    "mappings": {
+      "default": {
+        "default": "lligadura"
+      }
+    },
+    "category": "Pc"
+  },
+  {
+    "key": "2041",
+    "mappings": {
+      "default": {
+        "default": "punt d'inserció"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "category": "Po",
+    "key": "2042",
+    "mappings": {
+      "default": {
+        "default": "asterisme"
+      }
+    }
+  },
+  {
+    "key": "2043",
+    "mappings": {
+      "default": {
+        "default": "guió bala"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2044",
+    "mappings": {
+      "default": {
+        "default": "barra de fracció"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Po",
+    "key": "2047",
+    "mappings": {
+      "default": {
+        "default": "doble signe d'interrogació"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2048",
+    "mappings": {
+      "default": {
+        "default": "signes d'interrogació i exclamació"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2049",
+    "mappings": {
+      "default": {
+        "default": "signes d'exclamació i interrogació"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "204B",
+    "mappings": {
+      "default": {
+        "default": "signe de Pilcrow invertit"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "204C",
+    "mappings": {
+      "default": {
+        "default": "bala negra cap a l'esquerra"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "204D",
+    "mappings": {
+      "default": {
+        "default": "bala negra cap a la dreta"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "204E",
+    "mappings": {
+      "default": {
+        "default": "sota asterisc"
+      }
+    }
+  },
+  {
+    "key": "204F",
+    "mappings": {
+      "default": {
+        "default": "punt i coma invertit"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "key": "2050",
+    "mappings": {
+      "default": {
+        "default": "tancament superior"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "category": "Po",
+    "key": "2051",
+    "mappings": {
+      "default": {
+        "default": "dos asteriscs alineats verticalment"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2052",
+    "mappings": {
+      "default": {
+        "default": "signe de menys comercial"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2053",
+    "mappings": {
+      "default": {
+        "default": "guió swung"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "2054",
+    "mappings": {
+      "default": {
+        "default": "roba interior invertida"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2055",
+    "mappings": {
+      "default": {
+        "default": "signe de puntuació de la flor"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2056",
+    "mappings": {
+      "default": {
+        "default": "puntuació de tres punts"
+      }
+    }
+  },
+  {
+    "key": "2057",
+    "mappings": {
+      "default": {
+        "default": "quatre prima"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "category": "Po",
+    "key": "2058",
+    "mappings": {
+      "default": {
+        "default": "puntuació de quatre punts"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "2059",
+    "mappings": {
+      "default": {
+        "default": "puntuació de cinc punts"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "205A",
+    "mappings": {
+      "default": {
+        "default": "puntuació de dos punts"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "205B",
+    "mappings": {
+      "default": {
+        "default": "marca de quatre punts"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "205C",
+    "mappings": {
+      "default": {
+        "default": "creu puntejada"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "205D",
+    "mappings": {
+      "default": {
+        "default": "triple punt"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "205E",
+    "mappings": {
+      "default": {
+        "default": "quatre punts verticals"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "207A",
+    "mappings": {
+      "default": {
+        "default": "superíndex més"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "207B",
+    "mappings": {
+      "default": {
+        "default": "superíndex menys"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "207C",
+    "mappings": {
+      "default": {
+        "default": "superíndex signe igual"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "207D",
+    "mappings": {
+      "default": {
+        "default": "parèntesi esquerre superíndex"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "207E",
+    "mappings": {
+      "default": {
+        "default": "parèntesi dret superíndex"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "208A",
+    "mappings": {
+      "default": {
+        "default": "signe de subíndex més"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "208B",
+    "mappings": {
+      "default": {
+        "default": "subíndex menys"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "208C",
+    "mappings": {
+      "default": {
+        "default": "signe de subíndex igual"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "208D",
+    "mappings": {
+      "default": {
+        "default": "subíndex parèntesi esquerre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "208E",
+    "mappings": {
+      "default": {
+        "default": "subíndex de parèntesi dret"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "214A",
+    "mappings": {
+      "default": {
+        "default": "línia de propietat"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "214B",
+    "mappings": {
+      "default": {
+        "default": "ampersand convertit"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "214C",
+    "mappings": {
+      "default": {
+        "default": "per signe"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "214D",
+    "mappings": {
+      "default": {
+        "default": "aktieselskab"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "214E",
+    "mappings": {
+      "default": {
+        "default": "tornejat petit f"
+      }
+    }
+  },
+  {
+    "key": "2200",
+    "mappings": {
+      "default": {
+        "default": "per a tot"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2201",
+    "mappings": {
+      "default": {
+        "default": "complementari"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2203",
+    "mappings": {
+      "default": {
+        "default": "existeix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2204",
+    "mappings": {
+      "default": {
+        "default": "no existeix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2205",
+    "mappings": {
+      "default": {
+        "default": "conjunt buit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2206",
+    "mappings": {
+      "default": {
+        "default": "increment"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2208",
+    "mappings": {
+      "default": {
+        "default": "pertanyent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2209",
+    "mappings": {
+      "default": {
+        "default": "no pertanyent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "220A",
+    "mappings": {
+      "default": {
+        "default": "pertanyent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "220B",
+    "mappings": {
+      "default": {
+        "default": "comprèn"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "220C",
+    "mappings": {
+      "default": {
+        "default": "no comprèn"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "220D",
+    "mappings": {
+      "default": {
+        "default": "comprèn"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "220E",
+    "mappings": {
+      "default": {
+        "default": "fi de demostració"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "220F",
+    "mappings": {
+      "default": {
+        "default": "producte"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2210",
+    "mappings": {
+      "default": {
+        "default": "coproducte"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2211",
+    "mappings": {
+      "default": {
+        "default": "sumatori"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2212",
+    "mappings": {
+      "default": {
+        "default": "menys"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2213",
+    "mappings": {
+      "default": {
+        "default": "menys més"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2214",
+    "mappings": {
+      "default": {
+        "default": "punt més"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2215",
+    "mappings": {
+      "default": {
+        "default": "barra de divisió"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2216",
+    "mappings": {
+      "default": {
+        "default": "menys"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2217",
+    "mappings": {
+      "default": {
+        "default": "asterisc"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2218",
+    "mappings": {
+      "default": {
+        "default": "composició"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2219",
+    "mappings": {
+      "default": {
+        "default": "bala"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "221A",
+    "mappings": {
+      "default": {
+        "default": "arrel"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "221B",
+    "mappings": {
+      "default": {
+        "default": "arrel cúbica"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "221C",
+    "mappings": {
+      "default": {
+        "default": "arrel quarta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "221D",
+    "mappings": {
+      "default": {
+        "default": "proporcional a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "221E",
+    "mappings": {
+      "default": {
+        "default": "infinit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "221F",
+    "mappings": {
+      "default": {
+        "default": "angle recte"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2220",
+    "mappings": {
+      "default": {
+        "default": "angle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2221",
+    "mappings": {
+      "default": {
+        "default": "angle mesurat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2222",
+    "mappings": {
+      "default": {
+        "default": "angle esfèric"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2223",
+    "mappings": {
+      "default": {
+        "default": "divideix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2224",
+    "mappings": {
+      "default": {
+        "default": "no divideix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2225",
+    "mappings": {
+      "default": {
+        "default": "paral·lela a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2226",
+    "mappings": {
+      "default": {
+        "default": "no paral·lela a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2227",
+    "mappings": {
+      "default": {
+        "default": "i"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2228",
+    "mappings": {
+      "default": {
+        "default": "o"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2229",
+    "mappings": {
+      "default": {
+        "default": "intersecció"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "222A",
+    "mappings": {
+      "default": {
+        "default": "unió"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "222B",
+    "mappings": {
+      "default": {
+        "default": "integral"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "222C",
+    "mappings": {
+      "default": {
+        "default": "integral doble"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "222D",
+    "mappings": {
+      "default": {
+        "default": "integral triple"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "222E",
+    "mappings": {
+      "default": {
+        "default": "integral de contorn"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "222F",
+    "mappings": {
+      "default": {
+        "default": "integral de superfície"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2230",
+    "mappings": {
+      "default": {
+        "default": "integral de volum"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2231",
+    "mappings": {
+      "default": {
+        "default": "integral de contorn en sentit horari"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2232",
+    "mappings": {
+      "default": {
+        "default": "integral de contorn en sentit horari"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2233",
+    "mappings": {
+      "default": {
+        "default": "integral de contorn en sentit antihorari"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2234",
+    "mappings": {
+      "default": {
+        "default": "per tant"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2235",
+    "mappings": {
+      "default": {
+        "default": "perquè"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2236",
+    "mappings": {
+      "default": {
+        "default": "raó"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2237",
+    "mappings": {
+      "default": {
+        "default": "proporció"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2238",
+    "mappings": {
+      "default": {
+        "default": "punt menys"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2239",
+    "mappings": {
+      "default": {
+        "default": "excés"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "223A",
+    "mappings": {
+      "default": {
+        "default": "proporció geomètrica"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "223B",
+    "mappings": {
+      "default": {
+        "default": "homotècia"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "223C",
+    "mappings": {
+      "default": {
+        "default": "titlla"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "223D",
+    "mappings": {
+      "default": {
+        "default": "titlla invertida"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "223E",
+    "mappings": {
+      "default": {
+        "default": "s horitzontal invertida"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "223F",
+    "mappings": {
+      "default": {
+        "default": "sinusoide"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2240",
+    "mappings": {
+      "default": {
+        "default": "producte de garlanda"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2241",
+    "mappings": {
+      "default": {
+        "default": "no titlla"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2242",
+    "mappings": {
+      "default": {
+        "default": "menys accent"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2243",
+    "mappings": {
+      "default": {
+        "default": "asimptòticament igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2244",
+    "mappings": {
+      "default": {
+        "default": "no asimptòticament igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2245",
+    "mappings": {
+      "default": {
+        "default": "aproximadament igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2246",
+    "mappings": {
+      "default": {
+        "default": "aproximat però no igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2247",
+    "mappings": {
+      "default": {
+        "default": "no aproximat a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2248",
+    "mappings": {
+      "default": {
+        "default": "aproximat",
+        "defaultMP": "casi igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2249",
+    "mappings": {
+      "default": {
+        "default": "no és gairebé igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "224A",
+    "mappings": {
+      "default": {
+        "default": "igual o gairebé igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "224B",
+    "mappings": {
+      "default": {
+        "default": "triple titlla"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "224C",
+    "mappings": {
+      "default": {
+        "default": "tot igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "224D",
+    "mappings": {
+      "default": {
+        "default": "equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "224E",
+    "mappings": {
+      "default": {
+        "default": "geomètricament equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "224F",
+    "mappings": {
+      "default": {
+        "default": "diferència entre"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2250",
+    "mappings": {
+      "default": {
+        "default": "s'acosta al límit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2251",
+    "mappings": {
+      "default": {
+        "default": "geomètricament igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2252",
+    "mappings": {
+      "default": {
+        "default": "aproximadament igual a o imatge de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2253",
+    "mappings": {
+      "default": {
+        "default": "imatge d'o aproximadament igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2254",
+    "mappings": {
+      "default": {
+        "default": "dos punts igual"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2255",
+    "mappings": {
+      "default": {
+        "default": "igual dos punts"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2256",
+    "mappings": {
+      "default": {
+        "default": "igual incloent-hi anell"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2257",
+    "mappings": {
+      "default": {
+        "default": "igual anell a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2258",
+    "mappings": {
+      "default": {
+        "default": "correspon a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2259",
+    "mappings": {
+      "default": {
+        "default": "estima a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "225A",
+    "mappings": {
+      "default": {
+        "default": "equiangular amb"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "225B",
+    "mappings": {
+      "default": {
+        "default": "igual amb estrella"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "225C",
+    "mappings": {
+      "default": {
+        "default": "igual amb delta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "225D",
+    "mappings": {
+      "default": {
+        "default": "igual per definició a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "225E",
+    "mappings": {
+      "default": {
+        "default": "mesurat per"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "225F",
+    "mappings": {
+      "default": {
+        "default": "igual amb interrogant"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2260",
+    "mappings": {
+      "default": {
+        "default": "no és igual a",
+        "defaultMP": "distinto de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2261",
+    "mappings": {
+      "default": {
+        "default": "idèntic a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2262",
+    "mappings": {
+      "default": {
+        "default": "no és idèntic a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2263",
+    "mappings": {
+      "default": {
+        "default": "estrictament equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2264",
+    "mappings": {
+      "default": {
+        "default": "menor o igual que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2265",
+    "mappings": {
+      "default": {
+        "default": "major o igual que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2266",
+    "mappings": {
+      "default": {
+        "default": "menor o igual que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2267",
+    "mappings": {
+      "default": {
+        "default": "major o igual que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2268",
+    "mappings": {
+      "default": {
+        "default": "estrictament menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2269",
+    "mappings": {
+      "default": {
+        "default": "estrictament més gran que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "226A",
+    "mappings": {
+      "default": {
+        "default": "molt menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "226B",
+    "mappings": {
+      "default": {
+        "default": "molt més gran que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "226C",
+    "mappings": {
+      "default": {
+        "default": "entre"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "226D",
+    "mappings": {
+      "default": {
+        "default": "no equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "226E",
+    "mappings": {
+      "default": {
+        "default": "no menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "226F",
+    "mappings": {
+      "default": {
+        "default": "no més gran que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2270",
+    "mappings": {
+      "default": {
+        "default": "no menor ni igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2271",
+    "mappings": {
+      "default": {
+        "default": "no major ni igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2272",
+    "mappings": {
+      "default": {
+        "default": "menor o equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2273",
+    "mappings": {
+      "default": {
+        "default": "major o equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2274",
+    "mappings": {
+      "default": {
+        "default": "no menor ni equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2275",
+    "mappings": {
+      "default": {
+        "default": "no major ni equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2276",
+    "mappings": {
+      "default": {
+        "default": "menor o major que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2277",
+    "mappings": {
+      "default": {
+        "default": "major o menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2278",
+    "mappings": {
+      "default": {
+        "default": "no menor ni més gran que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2279",
+    "mappings": {
+      "default": {
+        "default": "no major ni menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "227A",
+    "mappings": {
+      "default": {
+        "default": "precedeix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "227B",
+    "mappings": {
+      "default": {
+        "default": "segueix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "227C",
+    "mappings": {
+      "default": {
+        "default": "precedeix o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "227D",
+    "mappings": {
+      "default": {
+        "default": "segueix o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "227E",
+    "mappings": {
+      "default": {
+        "default": "precedeix o és equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "227F",
+    "mappings": {
+      "default": {
+        "default": "segueix o és equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2280",
+    "mappings": {
+      "default": {
+        "default": "no precedeix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2281",
+    "mappings": {
+      "default": {
+        "default": "no segueix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2282",
+    "mappings": {
+      "default": {
+        "default": "inclòs a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2283",
+    "mappings": {
+      "default": {
+        "default": "conté"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2284",
+    "mappings": {
+      "default": {
+        "default": "no inclòs en"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2285",
+    "mappings": {
+      "default": {
+        "default": "no conté"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2286",
+    "mappings": {
+      "default": {
+        "default": "inclòs o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2287",
+    "mappings": {
+      "default": {
+        "default": "conté o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2288",
+    "mappings": {
+      "default": {
+        "default": "no inclòs ni igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2289",
+    "mappings": {
+      "default": {
+        "default": "no conté ni és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "228A",
+    "mappings": {
+      "default": {
+        "default": "inclòs estrictament en"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "228B",
+    "mappings": {
+      "default": {
+        "default": "conté estrictament"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "228C",
+    "mappings": {
+      "default": {
+        "default": "família de conjunts"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "228D",
+    "mappings": {
+      "default": {
+        "default": "producte de família de conjunts"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "228E",
+    "mappings": {
+      "default": {
+        "default": "unió de família de conjunts"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "228F",
+    "mappings": {
+      "default": {
+        "default": "imatge quadrada de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2290",
+    "mappings": {
+      "default": {
+        "default": "original quadrat de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2291",
+    "mappings": {
+      "default": {
+        "default": "imatge quadrada d'o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2292",
+    "mappings": {
+      "default": {
+        "default": "original quadrat d'o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2293",
+    "mappings": {
+      "default": {
+        "default": "intersecció quadrada"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2294",
+    "mappings": {
+      "default": {
+        "default": "unió quadrada"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2295",
+    "mappings": {
+      "default": {
+        "default": "més en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2296",
+    "mappings": {
+      "default": {
+        "default": "menys en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2297",
+    "mappings": {
+      "default": {
+        "default": "per en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2298",
+    "mappings": {
+      "default": {
+        "default": "barra en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2299",
+    "mappings": {
+      "default": {
+        "default": "punt en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "229A",
+    "mappings": {
+      "default": {
+        "default": "anell en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "229B",
+    "mappings": {
+      "default": {
+        "default": "asterisc en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "229C",
+    "mappings": {
+      "default": {
+        "default": "igual en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "229D",
+    "mappings": {
+      "default": {
+        "default": "menys en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "229E",
+    "mappings": {
+      "default": {
+        "default": "més en quadrat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "229F",
+    "mappings": {
+      "default": {
+        "default": "menys en quadrat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22A0",
+    "mappings": {
+      "default": {
+        "default": "vegades en quadrat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22A1",
+    "mappings": {
+      "default": {
+        "default": "punt en quadrat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22A2",
+    "mappings": {
+      "default": {
+        "default": "t horitzontal cap a l'esquerra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22A3",
+    "mappings": {
+      "default": {
+        "default": "t horitzontal cap a la dreta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22A4",
+    "mappings": {
+      "default": {
+        "default": "perpendicular"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22A5",
+    "mappings": {
+      "default": {
+        "default": "perpendicular invertida"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22A6",
+    "mappings": {
+      "default": {
+        "default": "afirmació"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22A7",
+    "mappings": {
+      "default": {
+        "default": "modela"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22A8",
+    "mappings": {
+      "default": {
+        "default": "veritable"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22A9",
+    "mappings": {
+      "default": {
+        "default": "obliga"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22AA",
+    "mappings": {
+      "default": {
+        "default": "triple barra vertical torniquet dret"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22AB",
+    "mappings": {
+      "default": {
+        "default": "doble barra vertical doble torniquet dret"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22AC",
+    "mappings": {
+      "default": {
+        "default": "no prova"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22AD",
+    "mappings": {
+      "default": {
+        "default": "0"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22AE",
+    "mappings": {
+      "default": {
+        "default": "no obliga"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22AF",
+    "mappings": {
+      "default": {
+        "default": "doble barra vertical doble torniquet dret negada"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22B0",
+    "mappings": {
+      "default": {
+        "default": "precedeix respecte de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22B1",
+    "mappings": {
+      "default": {
+        "default": "segueix respecte de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22B2",
+    "mappings": {
+      "default": {
+        "default": "subgrup normal de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22B3",
+    "mappings": {
+      "default": {
+        "default": "conté com a subgrup normal"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22B4",
+    "mappings": {
+      "default": {
+        "default": "subgrup normal o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22B5",
+    "mappings": {
+      "default": {
+        "default": "conté com a subgrup normal o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22B6",
+    "mappings": {
+      "default": {
+        "default": "original de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22B7",
+    "mappings": {
+      "default": {
+        "default": "imatge de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22B8",
+    "mappings": {
+      "default": {
+        "default": "multifunció"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22B9",
+    "mappings": {
+      "default": {
+        "default": "matriu hermitiana conjugada"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22BA",
+    "mappings": {
+      "default": {
+        "default": "interpola"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22BB",
+    "mappings": {
+      "default": {
+        "default": "o excloent"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22BC",
+    "mappings": {
+      "default": {
+        "default": "no i"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22BD",
+    "mappings": {
+      "default": {
+        "default": "no o"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22BF",
+    "mappings": {
+      "default": {
+        "default": "triangle rectangle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22C0",
+    "mappings": {
+      "default": {
+        "default": "i"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22C1",
+    "mappings": {
+      "default": {
+        "default": "o"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22C2",
+    "mappings": {
+      "default": {
+        "default": "intersecció"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22C3",
+    "mappings": {
+      "default": {
+        "default": "unió"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22C4",
+    "mappings": {
+      "default": {
+        "default": "operador diamant"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22C5",
+    "mappings": {
+      "default": {
+        "default": "punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22C6",
+    "mappings": {
+      "default": {
+        "default": "estrella"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22C7",
+    "mappings": {
+      "default": {
+        "default": "dividit per"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22C8",
+    "mappings": {
+      "default": {
+        "default": "monyo"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22C9",
+    "mappings": {
+      "default": {
+        "default": "factor normal esquerre producte semidirecte"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22CA",
+    "mappings": {
+      "default": {
+        "default": "factor normal dret producte semidirecte"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22CB",
+    "mappings": {
+      "default": {
+        "default": "producte semidirecte esquerre"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22CC",
+    "mappings": {
+      "default": {
+        "default": "producte semidirecte dret"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22CD",
+    "mappings": {
+      "default": {
+        "default": "titlla invertida igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22CE",
+    "mappings": {
+      "default": {
+        "default": "o arrissada"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22CF",
+    "mappings": {
+      "default": {
+        "default": "i arrissada"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22D0",
+    "mappings": {
+      "default": {
+        "default": "doble inclòs"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22D1",
+    "mappings": {
+      "default": {
+        "default": "doble conté"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22D2",
+    "mappings": {
+      "default": {
+        "default": "doble intersecció"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22D3",
+    "mappings": {
+      "default": {
+        "default": "doble unió"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22D4",
+    "mappings": {
+      "default": {
+        "default": "forca"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22D5",
+    "mappings": {
+      "default": {
+        "default": "paral·lela o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22D6",
+    "mappings": {
+      "default": {
+        "default": "menor que amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22D7",
+    "mappings": {
+      "default": {
+        "default": "major que amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22D8",
+    "mappings": {
+      "default": {
+        "default": "molt menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22D9",
+    "mappings": {
+      "default": {
+        "default": "molt més gran que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22DA",
+    "mappings": {
+      "default": {
+        "default": "menor igual o major que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22DB",
+    "mappings": {
+      "default": {
+        "default": "major igual o inferior que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22DC",
+    "mappings": {
+      "default": {
+        "default": "menor o igual que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22DD",
+    "mappings": {
+      "default": {
+        "default": "major o igual que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22DE",
+    "mappings": {
+      "default": {
+        "default": "precedeix o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22DF",
+    "mappings": {
+      "default": {
+        "default": "segueix o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22E0",
+    "mappings": {
+      "default": {
+        "default": "no precedeix ni és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22E1",
+    "mappings": {
+      "default": {
+        "default": "no segueix ni és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22E2",
+    "mappings": {
+      "default": {
+        "default": "no és imatge quadrada ni igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22E3",
+    "mappings": {
+      "default": {
+        "default": "no és original quadrada ni igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22E4",
+    "mappings": {
+      "default": {
+        "default": "imatge quadrada estricta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22E5",
+    "mappings": {
+      "default": {
+        "default": "original quadrada estricta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22E6",
+    "mappings": {
+      "default": {
+        "default": "menor que no equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22E7",
+    "mappings": {
+      "default": {
+        "default": "més gran que no equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22E8",
+    "mappings": {
+      "default": {
+        "default": "precedeix no equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22E9",
+    "mappings": {
+      "default": {
+        "default": "segueix no equivalent a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22EA",
+    "mappings": {
+      "default": {
+        "default": "no subgrup normal de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22EB",
+    "mappings": {
+      "default": {
+        "default": "no conté com a subgrup normal"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22EC",
+    "mappings": {
+      "default": {
+        "default": "no és subgrup normal ni igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22ED",
+    "mappings": {
+      "default": {
+        "default": "no conté com a subgrup normal ni és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22EE",
+    "mappings": {
+      "default": {
+        "default": "punts suspensius verticals"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22EF",
+    "mappings": {
+      "default": {
+        "default": "punts suspensius alts"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22F0",
+    "mappings": {
+      "default": {
+        "default": "punts suspensius diagonals pujant"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22F1",
+    "mappings": {
+      "default": {
+        "default": "punts suspensius diagonals baixant"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22F2",
+    "mappings": {
+      "default": {
+        "default": "pertany amb traç horitzontal"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22F3",
+    "mappings": {
+      "default": {
+        "default": "pertany amb barra vertical a la fi de ratlla horitzontal"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22F4",
+    "mappings": {
+      "default": {
+        "default": "pertany en petit amb traç vertical"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22F5",
+    "mappings": {
+      "default": {
+        "default": "pertany amb punt amunt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22F6",
+    "mappings": {
+      "default": {
+        "default": "pertany amb barra dalt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22F7",
+    "mappings": {
+      "default": {
+        "default": "pertanyent subratllat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22F8",
+    "mappings": {
+      "default": {
+        "default": "pertanyent subratllat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22F9",
+    "mappings": {
+      "default": {
+        "default": "pertany amb dos traços horitzontals"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22FA",
+    "mappings": {
+      "default": {
+        "default": "conté o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22FB",
+    "mappings": {
+      "default": {
+        "default": "conté amb marca"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22FC",
+    "mappings": {
+      "default": {
+        "default": "conté amb marca"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22FD",
+    "mappings": {
+      "default": {
+        "default": "conté amb barra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22FE",
+    "mappings": {
+      "default": {
+        "default": "pertanyent amb barra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "22FF",
+    "mappings": {
+      "default": {
+        "default": "z anotació associació de bossa"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2300",
+    "mappings": {
+      "default": {
+        "default": "diàmetre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2302",
+    "mappings": {
+      "default": {
+        "default": "casa"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2305",
+    "mappings": {
+      "default": {
+        "default": "en projectivitat amb"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2306",
+    "mappings": {
+      "default": {
+        "default": "en perspectivitat amb"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2307",
+    "mappings": {
+      "default": {
+        "default": "línia ondulada"
+      }
+    }
+  },
+  {
+    "key": "2310",
+    "mappings": {
+      "default": {
+        "default": "no invertit"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2311",
+    "mappings": {
+      "default": {
+        "default": "pastilles quadrades"
+      }
+    }
+  },
+  {
+    "key": "2312",
+    "mappings": {
+      "default": {
+        "default": "arc"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2313",
+    "mappings": {
+      "default": {
+        "default": "segment"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2314",
+    "mappings": {
+      "default": {
+        "default": "sector"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2795",
+    "mappings": {
+      "default": {
+        "default": "signe més pesant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2796",
+    "mappings": {
+      "default": {
+        "default": "signe menys pesant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2797",
+    "mappings": {
+      "default": {
+        "default": "signe de la divisió pesant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27B0",
+    "mappings": {
+      "default": {
+        "default": "bucle arrissat"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "27BF",
+    "mappings": {
+      "default": {
+        "default": "doble bucle arrissat"
+      }
+    }
+  },
+  {
+    "key": "27C1",
+    "mappings": {
+      "default": {
+        "default": "triangle tancant triangle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27C2",
+    "mappings": {
+      "default": {
+        "default": "perpendicular"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27C3",
+    "mappings": {
+      "default": {
+        "default": "inclòs a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27C4",
+    "mappings": {
+      "default": {
+        "default": "conté"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27C7",
+    "mappings": {
+      "default": {
+        "default": "punt en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27C8",
+    "mappings": {
+      "default": {
+        "default": "enrere tall abans de subconjunt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27C9",
+    "mappings": {
+      "default": {
+        "default": "sobreconjunt abans de tall"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27CA",
+    "mappings": {
+      "default": {
+        "default": "barra vertical amb cop horitzontal"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "27CB",
+    "mappings": {
+      "default": {
+        "default": "diagonal matemàtic d'aixecament"
+      }
+    }
+  },
+  {
+    "key": "27CC",
+    "mappings": {
+      "default": {
+        "default": "divisió llarga"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "27CD",
+    "mappings": {
+      "default": {
+        "default": "diagonal descendent matemàtica"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27CE",
+    "mappings": {
+      "default": {
+        "default": "quadrat lògic Y"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27CF",
+    "mappings": {
+      "default": {
+        "default": "quadrat lògic O"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "27D0",
+    "mappings": {
+      "default": {
+        "default": "diamant blanc amb punt centrat"
+      }
+    }
+  },
+  {
+    "key": "27D1",
+    "mappings": {
+      "default": {
+        "default": "y amb punt interior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27D2",
+    "mappings": {
+      "default": {
+        "default": "element d'obertura cap amunt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27D3",
+    "mappings": {
+      "default": {
+        "default": "angle inferior dret amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27D4",
+    "mappings": {
+      "default": {
+        "default": "angle inferior esquerre amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27D5",
+    "mappings": {
+      "default": {
+        "default": "esquerre exterior uneix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27D6",
+    "mappings": {
+      "default": {
+        "default": "dret exterior uneix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27D7",
+    "mappings": {
+      "default": {
+        "default": "ple exterior uneix"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27D8",
+    "mappings": {
+      "default": {
+        "default": "perpendicular inversa"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27D9",
+    "mappings": {
+      "default": {
+        "default": "perpendicular"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27DA",
+    "mappings": {
+      "default": {
+        "default": "esquerre i dret doble torniquet"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27DB",
+    "mappings": {
+      "default": {
+        "default": "doble T horitzontal"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27DC",
+    "mappings": {
+      "default": {
+        "default": "multifunció per l'esquerra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27DD",
+    "mappings": {
+      "default": {
+        "default": "t horitzontal dreta llarga"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27DE",
+    "mappings": {
+      "default": {
+        "default": "t horitzontal esquerra llarga"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27DF",
+    "mappings": {
+      "default": {
+        "default": "perpendicular inversa amb cercle a dalt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27E0",
+    "mappings": {
+      "default": {
+        "default": "pastilla dividida per regla horitzontal"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27E1",
+    "mappings": {
+      "default": {
+        "default": "diamant còncau buit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27E2",
+    "mappings": {
+      "default": {
+        "default": "diamant còncau amb tic-tac cap a esquerra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27E3",
+    "mappings": {
+      "default": {
+        "default": "diamant còncau amb tic-tac cap a dreta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27E4",
+    "mappings": {
+      "default": {
+        "default": "quadrat amb tic-tac cap esquerra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27E5",
+    "mappings": {
+      "default": {
+        "default": "quadrat amb tic-tac cap a dreta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "292B",
+    "mappings": {
+      "default": {
+        "default": "encreuament en diagonal cruïlla en diagonal caiguda en diagonal"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "292C",
+    "mappings": {
+      "default": {
+        "default": "diagonal descendent cruïlla diagonal ascendent"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2980",
+    "mappings": {
+      "default": {
+        "default": "delimitador de barra vertical triple"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2981",
+    "mappings": {
+      "default": {
+        "default": "punt de notació Z"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2982",
+    "mappings": {
+      "default": {
+        "default": "tipus de notació Z doble punt"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2999",
+    "mappings": {
+      "default": {
+        "default": "tanca puntejada"
+      }
+    }
+  },
+  {
+    "key": "299A",
+    "mappings": {
+      "default": {
+        "default": "ziga-zaga en vertical"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29B0",
+    "mappings": {
+      "default": {
+        "default": "conjunt buit invertit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29B1",
+    "mappings": {
+      "default": {
+        "default": "conjunt buit amb barra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29B2",
+    "mappings": {
+      "default": {
+        "default": "conjunt buit amb cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29B5",
+    "mappings": {
+      "default": {
+        "default": "cercle amb barra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29B6",
+    "mappings": {
+      "default": {
+        "default": "barra en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29B7",
+    "mappings": {
+      "default": {
+        "default": "paral·leles en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29B8",
+    "mappings": {
+      "default": {
+        "default": "cercle invers solidus"
+      }
+    }
+  },
+  {
+    "key": "29B9",
+    "mappings": {
+      "default": {
+        "default": "perpendicular en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29BA",
+    "mappings": {
+      "default": {
+        "default": "cercle dividit per barra horitzontal i meitat superior dividit per barra vertical"
+      }
+    }
+  },
+  {
+    "key": "29BB",
+    "mappings": {
+      "default": {
+        "default": "x superimpresa en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29BC",
+    "mappings": {
+      "default": {
+        "default": "divisió girada en sentit antihorari en un cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29BE",
+    "mappings": {
+      "default": {
+        "default": "bala buida en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29BF",
+    "mappings": {
+      "default": {
+        "default": "bala en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29C0",
+    "mappings": {
+      "default": {
+        "default": "menor que en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29C1",
+    "mappings": {
+      "default": {
+        "default": "major que en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29C2",
+    "mappings": {
+      "default": {
+        "default": "cercle amb cercle a la dreta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29C3",
+    "mappings": {
+      "default": {
+        "default": "cercle amb dos traços horitzontals a la dreta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29C4",
+    "mappings": {
+      "default": {
+        "default": "quadrat amb diagonal ascendent"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29C5",
+    "mappings": {
+      "default": {
+        "default": "quadrat amb diagonal descendent"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29C6",
+    "mappings": {
+      "default": {
+        "default": "asterisc quadrat"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29C7",
+    "mappings": {
+      "default": {
+        "default": "petit cercle quadrat"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29C8",
+    "mappings": {
+      "default": {
+        "default": "quadrat quadrat"
+      }
+    }
+  },
+  {
+    "key": "29C9",
+    "mappings": {
+      "default": {
+        "default": "dos quadrats units"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29CA",
+    "mappings": {
+      "default": {
+        "default": "triangle amb punt amunt"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29CB",
+    "mappings": {
+      "default": {
+        "default": "triangle amb barra inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29CC",
+    "mappings": {
+      "default": {
+        "default": "s en triangle"
+      }
+    }
+  },
+  {
+    "key": "29CD",
+    "mappings": {
+      "default": {
+        "default": "triangle amb serifs a la part inferior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29CE",
+    "mappings": {
+      "default": {
+        "default": "triangle cap a la dreta sobre triangle cap a l'esquerra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29CF",
+    "mappings": {
+      "default": {
+        "default": "subgrup normal o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29D0",
+    "mappings": {
+      "default": {
+        "default": "conté com a subgrup normal o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29D1",
+    "mappings": {
+      "default": {
+        "default": "llacet amb meitat esquerra negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D2",
+    "mappings": {
+      "default": {
+        "default": "llacet amb meitat dreta negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D3",
+    "mappings": {
+      "default": {
+        "default": "llacet negre"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D4",
+    "mappings": {
+      "default": {
+        "default": "temps amb meitat esquerra negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D5",
+    "mappings": {
+      "default": {
+        "default": "temps amb la meitat dreta negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D6",
+    "mappings": {
+      "default": {
+        "default": "rellotge de sorra blanc"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29D7",
+    "mappings": {
+      "default": {
+        "default": "rellotge de sorra negre"
+      }
+    }
+  },
+  {
+    "key": "29DC",
+    "mappings": {
+      "default": {
+        "default": "infinit incomplet"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29DD",
+    "mappings": {
+      "default": {
+        "default": "empat sobre l'infinit"
+      }
+    }
+  },
+  {
+    "key": "29DE",
+    "mappings": {
+      "default": {
+        "default": "no infinit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29DF",
+    "mappings": {
+      "default": {
+        "default": "multimapa de doble extrem"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E0",
+    "mappings": {
+      "default": {
+        "default": "quadrat amb contorn contornejat"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E1",
+    "mappings": {
+      "default": {
+        "default": "augmenta com"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E2",
+    "mappings": {
+      "default": {
+        "default": "shuffle product"
+      }
+    }
+  },
+  {
+    "key": "29E3",
+    "mappings": {
+      "default": {
+        "default": "igual ratllat doble"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29E4",
+    "mappings": {
+      "default": {
+        "default": "igual amb accent, amb doble ratllat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29E5",
+    "mappings": {
+      "default": {
+        "default": "idèntic a amb doble ratllat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29E6",
+    "mappings": {
+      "default": {
+        "default": "gleich Stark"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E7",
+    "mappings": {
+      "default": {
+        "default": "termodinamica"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E8",
+    "mappings": {
+      "default": {
+        "default": "triangle que apunta cap avall amb la meitat esquerra negra"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29E9",
+    "mappings": {
+      "default": {
+        "default": "triangle que apunta cap avall amb la meitat dreta negra"
+      }
+    }
+  },
+  {
+    "key": "29EB",
+    "mappings": {
+      "default": {
+        "default": "rombe farcit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29EE",
+    "mappings": {
+      "default": {
+        "default": "plaça blanca amb error"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29EF",
+    "mappings": {
+      "default": {
+        "default": "plaça negra amb error"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F0",
+    "mappings": {
+      "default": {
+        "default": "diamant barrat blanc amb error"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F1",
+    "mappings": {
+      "default": {
+        "default": "dimanant barrat negre amb error"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F2",
+    "mappings": {
+      "default": {
+        "default": "cercle blanc amb error"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F3",
+    "mappings": {
+      "default": {
+        "default": "cercle negre amb barres d'error"
+      }
+    }
+  },
+  {
+    "key": "29F4",
+    "mappings": {
+      "default": {
+        "default": "rule delayed"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29F5",
+    "mappings": {
+      "default": {
+        "default": "operador de sòlid invers"
+      }
+    }
+  },
+  {
+    "key": "29F6",
+    "mappings": {
+      "default": {
+        "default": "sòlid amb barra superior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "29F7",
+    "mappings": {
+      "default": {
+        "default": "sòlid invers amb traç horitzontal"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F8",
+    "mappings": {
+      "default": {
+        "default": "sòlid gran"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29F9",
+    "mappings": {
+      "default": {
+        "default": "sòlid invers gran"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29FA",
+    "mappings": {
+      "default": {
+        "default": "doble plus"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29FB",
+    "mappings": {
+      "default": {
+        "default": "triple plus"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29FE",
+    "mappings": {
+      "default": {
+        "default": "minúscul"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29FF",
+    "mappings": {
+      "default": {
+        "default": "miny"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A00",
+    "mappings": {
+      "default": {
+        "default": "operador de punts circulars N-Ary"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A01",
+    "mappings": {
+      "default": {
+        "default": "operador N-Ary més encerclat"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A02",
+    "mappings": {
+      "default": {
+        "default": "operador dels temps en cercle de N-Ary"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A03",
+    "mappings": {
+      "default": {
+        "default": "operador de la unió N-Ary amb punt"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A04",
+    "mappings": {
+      "default": {
+        "default": "operador de la unió N-Ary amb més"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A05",
+    "mappings": {
+      "default": {
+        "default": "operador d'interseccions quadrades N-Ary"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A06",
+    "mappings": {
+      "default": {
+        "default": "operador n-Ary square union"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A07",
+    "mappings": {
+      "default": {
+        "default": "dos lògic i operador"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A08",
+    "mappings": {
+      "default": {
+        "default": "dos lògic o operador"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A09",
+    "mappings": {
+      "default": {
+        "default": "operador de N-Ary times"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A0A",
+    "mappings": {
+      "default": {
+        "default": "mòdul dues sumes"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A0B",
+    "mappings": {
+      "default": {
+        "default": "suma amb Integral"
+      }
+    }
+  },
+  {
+    "key": "2A0C",
+    "mappings": {
+      "default": {
+        "default": "operador integral quàdruple"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A0D",
+    "mappings": {
+      "default": {
+        "default": "finit part integral"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A0E",
+    "mappings": {
+      "default": {
+        "default": "integral amb doble traç"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A0F",
+    "mappings": {
+      "default": {
+        "default": "mitjana Integral amb slash"
+      }
+    }
+  },
+  {
+    "key": "2A10",
+    "mappings": {
+      "default": {
+        "default": "funció de circulació"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A11",
+    "mappings": {
+      "default": {
+        "default": "integral en sentit antihorari"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A12",
+    "mappings": {
+      "default": {
+        "default": "integral lineal per rectangle en pol"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A13",
+    "mappings": {
+      "default": {
+        "default": "integral lineal per semicercle en pol"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A14",
+    "mappings": {
+      "default": {
+        "default": "integral lineal excloent el pol"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A15",
+    "mappings": {
+      "default": {
+        "default": "integral al voltant d'un punt operador"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A16",
+    "mappings": {
+      "default": {
+        "default": "operador integral per quaternions"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A18",
+    "mappings": {
+      "default": {
+        "default": "integral amb signe de temps"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A19",
+    "mappings": {
+      "default": {
+        "default": "integral amb intersecció"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1A",
+    "mappings": {
+      "default": {
+        "default": "integral amb unió"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1B",
+    "mappings": {
+      "default": {
+        "default": "integral amb barra superior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1C",
+    "mappings": {
+      "default": {
+        "default": "integral amb barra inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1D",
+    "mappings": {
+      "default": {
+        "default": "unir-se"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1E",
+    "mappings": {
+      "default": {
+        "default": "operador de triangle esquerre gran"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A1F",
+    "mappings": {
+      "default": {
+        "default": "composició d'esquemes de notació Z"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A20",
+    "mappings": {
+      "default": {
+        "default": "esquema de notació Z"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A21",
+    "mappings": {
+      "default": {
+        "default": "projecció de l'esquema de notació Z"
+      }
+    }
+  },
+  {
+    "key": "2A22",
+    "mappings": {
+      "default": {
+        "default": "més amb cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A23",
+    "mappings": {
+      "default": {
+        "default": "més amb angle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A24",
+    "mappings": {
+      "default": {
+        "default": "titlla amb més subscrit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A25",
+    "mappings": {
+      "default": {
+        "default": "més amb punt inferior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A26",
+    "mappings": {
+      "default": {
+        "default": "titlla amb més"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A27",
+    "mappings": {
+      "default": {
+        "default": "més amb 2 subscrit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A28",
+    "mappings": {
+      "default": {
+        "default": "signe més amb triangle negre"
+      }
+    }
+  },
+  {
+    "key": "2A29",
+    "mappings": {
+      "default": {
+        "default": "menys amb coma"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A2A",
+    "mappings": {
+      "default": {
+        "default": "menys amb punt inferior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A2B",
+    "mappings": {
+      "default": {
+        "default": "signe menys amb punts que cauen"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A2C",
+    "mappings": {
+      "default": {
+        "default": "signe menys amb punts creixents"
+      }
+    }
+  },
+  {
+    "key": "2A2D",
+    "mappings": {
+      "default": {
+        "default": "més en semicercle esquerre"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A2E",
+    "mappings": {
+      "default": {
+        "default": "més en semicercle dret"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A2F",
+    "mappings": {
+      "default": {
+        "default": "producte vectorial"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A30",
+    "mappings": {
+      "default": {
+        "default": "per amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A31",
+    "mappings": {
+      "default": {
+        "default": "per amb subratllat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A32",
+    "mappings": {
+      "default": {
+        "default": "producte semidirecte amb fons tancat"
+      }
+    }
+  },
+  {
+    "key": "2A33",
+    "mappings": {
+      "default": {
+        "default": "smash product"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A34",
+    "mappings": {
+      "default": {
+        "default": "per en semicercle esquerre"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A35",
+    "mappings": {
+      "default": {
+        "default": "per en semicercle dret"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A36",
+    "mappings": {
+      "default": {
+        "default": "per en cercle amb angle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A37",
+    "mappings": {
+      "default": {
+        "default": "per en anell"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A38",
+    "mappings": {
+      "default": {
+        "default": "divisió en cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A39",
+    "mappings": {
+      "default": {
+        "default": "més en triangle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A3A",
+    "mappings": {
+      "default": {
+        "default": "menys en triangle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A3B",
+    "mappings": {
+      "default": {
+        "default": "per en triangle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A3C",
+    "mappings": {
+      "default": {
+        "default": "producte interior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A3D",
+    "mappings": {
+      "default": {
+        "default": "producte interior dret"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A3E",
+    "mappings": {
+      "default": {
+        "default": "notació Z composició relacional"
+      }
+    }
+  },
+  {
+    "key": "2A3F",
+    "mappings": {
+      "default": {
+        "default": "coproducte"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A40",
+    "mappings": {
+      "default": {
+        "default": "intersecció amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A41",
+    "mappings": {
+      "default": {
+        "default": "unió amb signe de menys"
+      }
+    }
+  },
+  {
+    "key": "2A42",
+    "mappings": {
+      "default": {
+        "default": "unió amb barra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A43",
+    "mappings": {
+      "default": {
+        "default": "intersecció amb barra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A44",
+    "mappings": {
+      "default": {
+        "default": "intersecció amb and"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A45",
+    "mappings": {
+      "default": {
+        "default": "unió amb or"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A46",
+    "mappings": {
+      "default": {
+        "default": "unió sobre intersecció"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A47",
+    "mappings": {
+      "default": {
+        "default": "intersecció sobre unió"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A48",
+    "mappings": {
+      "default": {
+        "default": "unió sobre barra, sobre intersecció"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A49",
+    "mappings": {
+      "default": {
+        "default": "intersecció sobre barra, sobre unió"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A4A",
+    "mappings": {
+      "default": {
+        "default": "unió i unió"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A4B",
+    "mappings": {
+      "default": {
+        "default": "intersecció i intersecció"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A4C",
+    "mappings": {
+      "default": {
+        "default": "unió tancada"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A4D",
+    "mappings": {
+      "default": {
+        "default": "intersecció tancada"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A4E",
+    "mappings": {
+      "default": {
+        "default": "intersecció quadrada doble"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A4F",
+    "mappings": {
+      "default": {
+        "default": "unió quadrada doble"
+      }
+    }
+  },
+  {
+    "key": "2A50",
+    "mappings": {
+      "default": {
+        "default": "unió tancada amb per"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A51",
+    "mappings": {
+      "default": {
+        "default": "lògic i amb punt amunt"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A52",
+    "mappings": {
+      "default": {
+        "default": "lògic o amb punt amunt"
+      }
+    }
+  },
+  {
+    "key": "2A53",
+    "mappings": {
+      "default": {
+        "default": "i"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A54",
+    "mappings": {
+      "default": {
+        "default": "o"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A55",
+    "mappings": {
+      "default": {
+        "default": "doble interesecció lògica i"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A56",
+    "mappings": {
+      "default": {
+        "default": "doble interesecció lògica o"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A57",
+    "mappings": {
+      "default": {
+        "default": "inclinació gran o"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A58",
+    "mappings": {
+      "default": {
+        "default": "inclinació gran i"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A59",
+    "mappings": {
+      "default": {
+        "default": "lògica o superposada, lògica i"
+      }
+    }
+  },
+  {
+    "key": "2A5A",
+    "mappings": {
+      "default": {
+        "default": "lògic i amb tija mitjana"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A5B",
+    "mappings": {
+      "default": {
+        "default": "lògic o amb tija mitjana"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A5C",
+    "mappings": {
+      "default": {
+        "default": "lògic i amb guió horitzontal"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A5D",
+    "mappings": {
+      "default": {
+        "default": "lògic o amb guió horitzontal"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A5E",
+    "mappings": {
+      "default": {
+        "default": "lògic i amb doble barra superior"
+      }
+    }
+  },
+  {
+    "key": "2A5F",
+    "mappings": {
+      "default": {
+        "default": "logic i amb barra inferior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A60",
+    "mappings": {
+      "default": {
+        "default": "lògic i amb doble barra inferior."
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A61",
+    "mappings": {
+      "default": {
+        "default": "ve petita amb barra inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A62",
+    "mappings": {
+      "default": {
+        "default": "lògic o amb doble barra."
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A63",
+    "mappings": {
+      "default": {
+        "default": "lògic o amb doble barra inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A64",
+    "mappings": {
+      "default": {
+        "default": "notació Z domini antirestricció"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A65",
+    "mappings": {
+      "default": {
+        "default": "rang de notació Z antirestricció"
+      }
+    }
+  },
+  {
+    "key": "2A66",
+    "mappings": {
+      "default": {
+        "default": "igual amb punt subscrit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A67",
+    "mappings": {
+      "default": {
+        "default": "idèntic amb punt amunt"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A68",
+    "mappings": {
+      "default": {
+        "default": "triple barra horitzontal amb doble moviment vertical"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A69",
+    "mappings": {
+      "default": {
+        "default": "triple barra horitzontal amb triple moviment vertical"
+      }
+    }
+  },
+  {
+    "key": "2A6A",
+    "mappings": {
+      "default": {
+        "default": "titlla amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A6B",
+    "mappings": {
+      "default": {
+        "default": "operador de titlla amb punts creixents"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A6C",
+    "mappings": {
+      "default": {
+        "default": "similars menys similars"
+      }
+    }
+  },
+  {
+    "key": "2A6D",
+    "mappings": {
+      "default": {
+        "default": "congruent amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A6E",
+    "mappings": {
+      "default": {
+        "default": "igual a asterisc"
+      }
+    }
+  },
+  {
+    "key": "2A6F",
+    "mappings": {
+      "default": {
+        "default": "gairebé igual amb angle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A70",
+    "mappings": {
+      "default": {
+        "default": "aproximadament igual o igual a"
+      }
+    }
+  },
+  {
+    "key": "2A71",
+    "mappings": {
+      "default": {
+        "default": "igual amb més subscrit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A72",
+    "mappings": {
+      "default": {
+        "default": "igual amb més"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A73",
+    "mappings": {
+      "default": {
+        "default": "igual amb operador accent"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A74",
+    "mappings": {
+      "default": {
+        "default": "igual amb dos punts"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A75",
+    "mappings": {
+      "default": {
+        "default": "igual doble"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A76",
+    "mappings": {
+      "default": {
+        "default": "tres signes d'igualtat consecutius"
+      }
+    }
+  },
+  {
+    "key": "2A77",
+    "mappings": {
+      "default": {
+        "default": "igual entre quatre punts"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A78",
+    "mappings": {
+      "default": {
+        "default": "equivalent amb quatre punts"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A79",
+    "mappings": {
+      "default": {
+        "default": "menor que amb cercle interior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A7A",
+    "mappings": {
+      "default": {
+        "default": "més gran que amb cercle interior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A7B",
+    "mappings": {
+      "default": {
+        "default": "menor que amb interrogant"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A7C",
+    "mappings": {
+      "default": {
+        "default": "més gran que amb interrogant"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A7D",
+    "mappings": {
+      "default": {
+        "default": "estrictament menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A7E",
+    "mappings": {
+      "default": {
+        "default": "estrictament més gran que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A7F",
+    "mappings": {
+      "default": {
+        "default": "estrictament menor que amb punt interior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A80",
+    "mappings": {
+      "default": {
+        "default": "estrictament més gran que amb punt interior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A81",
+    "mappings": {
+      "default": {
+        "default": "estrictament menor que amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A82",
+    "mappings": {
+      "default": {
+        "default": "estrictament més gran que amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A83",
+    "mappings": {
+      "default": {
+        "default": "estrictament menor que amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A84",
+    "mappings": {
+      "default": {
+        "default": "estrictament més gran que amb punt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A85",
+    "mappings": {
+      "default": {
+        "default": "menor que o aproximat"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A86",
+    "mappings": {
+      "default": {
+        "default": "més gran que o aproximat"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A87",
+    "mappings": {
+      "default": {
+        "default": "menor que una línia no és igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A88",
+    "mappings": {
+      "default": {
+        "default": "majors i una sola línia no són iguals a"
+      }
+    }
+  },
+  {
+    "key": "2A89",
+    "mappings": {
+      "default": {
+        "default": "menor que, però no aproximat a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A8A",
+    "mappings": {
+      "default": {
+        "default": "més gran que, però no aproximat a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A8B",
+    "mappings": {
+      "default": {
+        "default": "menys que a dalt de la doble línia igual per sobre de major que"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A8C",
+    "mappings": {
+      "default": {
+        "default": "més que a dalt de la línia doble igual sobre menys que"
+      }
+    }
+  },
+  {
+    "key": "2A8D",
+    "mappings": {
+      "default": {
+        "default": "menor, similar o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A8E",
+    "mappings": {
+      "default": {
+        "default": "major, similar o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A8F",
+    "mappings": {
+      "default": {
+        "default": "menor, similar o més gran que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A90",
+    "mappings": {
+      "default": {
+        "default": "major, similar o menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A91",
+    "mappings": {
+      "default": {
+        "default": "menor, major o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A92",
+    "mappings": {
+      "default": {
+        "default": "major, menor o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A93",
+    "mappings": {
+      "default": {
+        "default": "estrictament menor o major que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A94",
+    "mappings": {
+      "default": {
+        "default": "estrictament major o menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A95",
+    "mappings": {
+      "default": {
+        "default": "inclinat igual o inferior a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A96",
+    "mappings": {
+      "default": {
+        "default": "inclinat igual o més gran que"
+      }
+    }
+  },
+  {
+    "key": "2A97",
+    "mappings": {
+      "default": {
+        "default": "estrictament menor que amb punt interior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A98",
+    "mappings": {
+      "default": {
+        "default": "estrictament més gran que amb punt interior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A99",
+    "mappings": {
+      "default": {
+        "default": "menor o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A9A",
+    "mappings": {
+      "default": {
+        "default": "major o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2A9B",
+    "mappings": {
+      "default": {
+        "default": "doble línia inclinada igual o inferior a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2A9C",
+    "mappings": {
+      "default": {
+        "default": "doble línia inclinada igual o més gran que"
+      }
+    }
+  },
+  {
+    "key": "2A9D",
+    "mappings": {
+      "default": {
+        "default": "equivalent o menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A9E",
+    "mappings": {
+      "default": {
+        "default": "major o semblant a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2A9F",
+    "mappings": {
+      "default": {
+        "default": "similar, menor o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AA0",
+    "mappings": {
+      "default": {
+        "default": "similar, major o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AA1",
+    "mappings": {
+      "default": {
+        "default": "molt menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AA2",
+    "mappings": {
+      "default": {
+        "default": "molt més gran que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AA3",
+    "mappings": {
+      "default": {
+        "default": "doble imbricat menor que amb barra inferior"
+      }
+    }
+  },
+  {
+    "key": "2AA4",
+    "mappings": {
+      "default": {
+        "default": "menor que, major que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AA5",
+    "mappings": {
+      "default": {
+        "default": "major o menor que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AA6",
+    "mappings": {
+      "default": {
+        "default": "menor que tancat amb corba"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AA7",
+    "mappings": {
+      "default": {
+        "default": "més gran que tancat amb corba"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AA8",
+    "mappings": {
+      "default": {
+        "default": "estrictament menor que tancat amb corba"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AA9",
+    "mappings": {
+      "default": {
+        "default": "estrictament més gran que tancat amb corba"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AAA",
+    "mappings": {
+      "default": {
+        "default": "més reduït que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AAB",
+    "mappings": {
+      "default": {
+        "default": "més ampli que"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AAC",
+    "mappings": {
+      "default": {
+        "default": "més reduït o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AAD",
+    "mappings": {
+      "default": {
+        "default": "més ampli o igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AAE",
+    "mappings": {
+      "default": {
+        "default": "diferència entre"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AAF",
+    "mappings": {
+      "default": {
+        "default": "precedeix o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AB0",
+    "mappings": {
+      "default": {
+        "default": "segueix per sobre de la línia d'igual signe"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB1",
+    "mappings": {
+      "default": {
+        "default": "precedeix per sobre d'una línia no és igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB2",
+    "mappings": {
+      "default": {
+        "default": "segueix per sobre d'una línia no és igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB3",
+    "mappings": {
+      "default": {
+        "default": "precedeix a dalt de el signe igual"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB4",
+    "mappings": {
+      "default": {
+        "default": "segueix per sobre del signe igual"
+      }
+    }
+  },
+  {
+    "key": "2AB5",
+    "mappings": {
+      "default": {
+        "default": "precedeix estrictament a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AB6",
+    "mappings": {
+      "default": {
+        "default": "segueix estrictament a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AB7",
+    "mappings": {
+      "default": {
+        "default": "precedeix per sobre de gairebé igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB8",
+    "mappings": {
+      "default": {
+        "default": "segueix per sobre de gairebé igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AB9",
+    "mappings": {
+      "default": {
+        "default": "precedeix dalt no és igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ABA",
+    "mappings": {
+      "default": {
+        "default": "segueix per sobre de no gairebé igual a"
+      }
+    }
+  },
+  {
+    "key": "2ABB",
+    "mappings": {
+      "default": {
+        "default": "precedeix molt abans"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2ABC",
+    "mappings": {
+      "default": {
+        "default": "segueix molt després"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2ABD",
+    "mappings": {
+      "default": {
+        "default": "subrelació de"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2ABE",
+    "mappings": {
+      "default": {
+        "default": "conté com a subrelació a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2ABF",
+    "mappings": {
+      "default": {
+        "default": "inclòs amb més subscrit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AC0",
+    "mappings": {
+      "default": {
+        "default": "conté amb més subscrit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AC1",
+    "mappings": {
+      "default": {
+        "default": "inclòs amb per subscrit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AC2",
+    "mappings": {
+      "default": {
+        "default": "conté amb per subscrit"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AC3",
+    "mappings": {
+      "default": {
+        "default": "inclòs amb punt o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AC4",
+    "mappings": {
+      "default": {
+        "default": "conté amb punt o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AC5",
+    "mappings": {
+      "default": {
+        "default": "subconjunt de signe igual a dalt"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AC6",
+    "mappings": {
+      "default": {
+        "default": "superconjunt de signe igual a dalt"
+      }
+    }
+  },
+  {
+    "key": "2AC7",
+    "mappings": {
+      "default": {
+        "default": "inclòs aproximadament en"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AC8",
+    "mappings": {
+      "default": {
+        "default": "conté aproximadament a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AC9",
+    "mappings": {
+      "default": {
+        "default": "subconjunt de dalt gairebé igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ACA",
+    "mappings": {
+      "default": {
+        "default": "superconjunt de dalt gairebé igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ACB",
+    "mappings": {
+      "default": {
+        "default": "subconjunt de l'anterior no és igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ACC",
+    "mappings": {
+      "default": {
+        "default": "superconjunt de dalt no és igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ACD",
+    "mappings": {
+      "default": {
+        "default": "operador de caixa oberta a l'esquerra quadrada"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ACE",
+    "mappings": {
+      "default": {
+        "default": "operador de caixa oberta a la dreta quadrada"
+      }
+    }
+  },
+  {
+    "key": "2ACF",
+    "mappings": {
+      "default": {
+        "default": "inclòs amb tancament en"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AD0",
+    "mappings": {
+      "default": {
+        "default": "conté al tancament del subconjunt"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AD1",
+    "mappings": {
+      "default": {
+        "default": "inclòs el tancament o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AD2",
+    "mappings": {
+      "default": {
+        "default": "conté al tancament del subconjunt o és igual a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AD3",
+    "mappings": {
+      "default": {
+        "default": "està inclòs o conté a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AD4",
+    "mappings": {
+      "default": {
+        "default": "conté o està inclòs a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AD5",
+    "mappings": {
+      "default": {
+        "default": "inclòs doblement en"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AD6",
+    "mappings": {
+      "default": {
+        "default": "conté doblement a"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AD7",
+    "mappings": {
+      "default": {
+        "default": "conté o està inclòs en"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AD8",
+    "mappings": {
+      "default": {
+        "default": "conté o està inclòs en"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AD9",
+    "mappings": {
+      "default": {
+        "default": "pertanyent dirigit cap avall"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2ADA",
+    "mappings": {
+      "default": {
+        "default": "pitchfork with tee top"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2ADB",
+    "mappings": {
+      "default": {
+        "default": "intersecció transversal"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2ADC",
+    "mappings": {
+      "default": {
+        "default": "bifurcació"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ADD",
+    "mappings": {
+      "default": {
+        "default": "nonforking"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ADE",
+    "mappings": {
+      "default": {
+        "default": "tatxa esquerra curta"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2ADF",
+    "mappings": {
+      "default": {
+        "default": "tatxa curta cap avall"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AE0",
+    "mappings": {
+      "default": {
+        "default": "short up tack"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AE1",
+    "mappings": {
+      "default": {
+        "default": "perpendicular amb s"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AE2",
+    "mappings": {
+      "default": {
+        "default": "barra vertical torniquet a la dreta"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AE3",
+    "mappings": {
+      "default": {
+        "default": "barra vertical doble torniquet esquerre"
+      }
+    }
+  },
+  {
+    "key": "2AE4",
+    "mappings": {
+      "default": {
+        "default": "barra vertical de torniquet doble esquerra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AE5",
+    "mappings": {
+      "default": {
+        "default": "doble barra vertical doble torniquet esquerre"
+      }
+    }
+  },
+  {
+    "key": "2AE6",
+    "mappings": {
+      "default": {
+        "default": "guió llarg des del membre esquerre de doble vertical"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AE7",
+    "mappings": {
+      "default": {
+        "default": "taca curta cap avall amb barra superior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AE8",
+    "mappings": {
+      "default": {
+        "default": "barra amb perpendicular"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AE9",
+    "mappings": {
+      "default": {
+        "default": "short up tack above short down tack"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AEA",
+    "mappings": {
+      "default": {
+        "default": "tatxa doble amunt"
+      }
+    }
+  },
+  {
+    "key": "2AEB",
+    "mappings": {
+      "default": {
+        "default": "tatxa doble avall"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AEC",
+    "mappings": {
+      "default": {
+        "default": "doble traç sense signe"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AED",
+    "mappings": {
+      "default": {
+        "default": "doble traç invertit sense signe"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AEE",
+    "mappings": {
+      "default": {
+        "default": "no es divideix amb la barra de negació invertida"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AEF",
+    "mappings": {
+      "default": {
+        "default": "barra vertical amb cercle"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AF0",
+    "mappings": {
+      "default": {
+        "default": "barra amb cercle inferior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AF1",
+    "mappings": {
+      "default": {
+        "default": "tatxa avall amb cercle a sota"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AF2",
+    "mappings": {
+      "default": {
+        "default": "paral·lela amb marca"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2AF3",
+    "mappings": {
+      "default": {
+        "default": "paral·lela amb accent"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "2AF4",
+    "mappings": {
+      "default": {
+        "default": "relació binària de barra vertical triple"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AF5",
+    "mappings": {
+      "default": {
+        "default": "barra vertical triple amb traç horitzontal"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AF6",
+    "mappings": {
+      "default": {
+        "default": "operador triple punt"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AF7",
+    "mappings": {
+      "default": {
+        "default": "triple imbricat menys que"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AF8",
+    "mappings": {
+      "default": {
+        "default": "triple imbricat més gran que"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AF9",
+    "mappings": {
+      "default": {
+        "default": "doble línia inclinada menor o igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFA",
+    "mappings": {
+      "default": {
+        "default": "doble línia inclinada major o igual a"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFB",
+    "mappings": {
+      "default": {
+        "default": "relació binària triple sòlida"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFC",
+    "mappings": {
+      "default": {
+        "default": "operador de barra vertical triple gran"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFD",
+    "mappings": {
+      "default": {
+        "default": "operador doble sòlid"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFE",
+    "mappings": {
+      "default": {
+        "default": "barra vertical blanca"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2AFF",
+    "mappings": {
+      "default": {
+        "default": "barra vertical blanca N-Ary"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "301C",
+    "mappings": {
+      "default": {
+        "default": "guió ondulat"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE10",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per coma vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE13",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per a dos punts vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE14",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per a punt i coma vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE15",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al signe d'exclamació vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE16",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al signe d'interrogació vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE19",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per a el·lipsis horitzontal vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE30",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per a líder vertical de dos punts"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "FE31",
+    "mappings": {
+      "default": {
+        "default": "glif de guió vertical em"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "FE32",
+    "mappings": {
+      "default": {
+        "default": "glif de guió vertical en"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FE33",
+    "mappings": {
+      "default": {
+        "default": "glif de línia vertical baixa"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FE34",
+    "mappings": {
+      "default": {
+        "default": "glif de línia baixa ondulada vertical"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE45",
+    "mappings": {
+      "default": {
+        "default": "punt de sèsam"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE46",
+    "mappings": {
+      "default": {
+        "default": "punt de sèsam blanc"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE49",
+    "mappings": {
+      "default": {
+        "default": "línia discontínua"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE4A",
+    "mappings": {
+      "default": {
+        "default": "sentinellasubratllat"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE4B",
+    "mappings": {
+      "default": {
+        "default": "ondulat subratllat"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE4C",
+    "mappings": {
+      "default": {
+        "default": "doble ondulat"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FE4D",
+    "mappings": {
+      "default": {
+        "default": "línia baixa discontínua"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FE4E",
+    "mappings": {
+      "default": {
+        "default": "línia baixa de línia central"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FE4F",
+    "mappings": {
+      "default": {
+        "default": "línia baixa ondulada"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE50",
+    "mappings": {
+      "default": {
+        "default": "comes petites"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE52",
+    "mappings": {
+      "default": {
+        "default": "parada completa petita"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE54",
+    "mappings": {
+      "default": {
+        "default": "petit punt i coma"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE55",
+    "mappings": {
+      "default": {
+        "default": "doble punt petit"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE56",
+    "mappings": {
+      "default": {
+        "default": "signe d'interrogació petit"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE57",
+    "mappings": {
+      "default": {
+        "default": "signe d'exclamació petit"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "FE58",
+    "mappings": {
+      "default": {
+        "default": "guió petit em"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE5F",
+    "mappings": {
+      "default": {
+        "default": "signe de nombre petit"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE60",
+    "mappings": {
+      "default": {
+        "default": "ampersand petit"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE61",
+    "mappings": {
+      "default": {
+        "default": "petit asterisc"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FE62",
+    "mappings": {
+      "default": {
+        "default": "signe més petit"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "FE63",
+    "mappings": {
+      "default": {
+        "default": "guió petit menys"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FE64",
+    "mappings": {
+      "default": {
+        "default": "signe menor que petit"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FE65",
+    "mappings": {
+      "default": {
+        "default": "signe més gran que petit"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FE66",
+    "mappings": {
+      "default": {
+        "default": "signe petit igual"
+      }
+    }
+  },
+  {
+    "key": "FE68",
+    "mappings": {
+      "default": {
+        "default": "divisió entera"
+      }
+    },
+    "category": "Po"
+  },
+  {
+    "category": "Sc",
+    "key": "FE69",
+    "mappings": {
+      "default": {
+        "default": "signe de dòlar petit"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE6A",
+    "mappings": {
+      "default": {
+        "default": "signe de percentatge petit"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FE6B",
+    "mappings": {
+      "default": {
+        "default": "petit comercial en"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF01",
+    "mappings": {
+      "default": {
+        "default": "signe d'exclamació d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF02",
+    "mappings": {
+      "default": {
+        "default": "cometes d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF03",
+    "mappings": {
+      "default": {
+        "default": "nombre de signe d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sc",
+    "key": "FF04",
+    "mappings": {
+      "default": {
+        "default": "signe de dòlar d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF05",
+    "mappings": {
+      "default": {
+        "default": "signe de percentatge d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF06",
+    "mappings": {
+      "default": {
+        "default": "ampersand d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF07",
+    "mappings": {
+      "default": {
+        "default": "apòstrof d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF0A",
+    "mappings": {
+      "default": {
+        "default": "asterisc d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FF0B",
+    "mappings": {
+      "default": {
+        "default": "signe d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF0C",
+    "mappings": {
+      "default": {
+        "default": "coma d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Pd",
+    "key": "FF0D",
+    "mappings": {
+      "default": {
+        "default": "ample d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF0E",
+    "mappings": {
+      "default": {
+        "default": "punt d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF0F",
+    "mappings": {
+      "default": {
+        "default": "sòlid d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF1A",
+    "mappings": {
+      "default": {
+        "default": "doble punt d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF1B",
+    "mappings": {
+      "default": {
+        "default": "punt i coma d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FF1C",
+    "mappings": {
+      "default": {
+        "default": "signe menys d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FF1D",
+    "mappings": {
+      "default": {
+        "default": "signe igual d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FF1E",
+    "mappings": {
+      "default": {
+        "default": "signe mé gran que d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF1F",
+    "mappings": {
+      "default": {
+        "default": "signe d'interrogació d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF20",
+    "mappings": {
+      "default": {
+        "default": "comercial d'amplada complet en"
+      }
+    }
+  },
+  {
+    "category": "Po",
+    "key": "FF3C",
+    "mappings": {
+      "default": {
+        "default": "sòlid invers d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sk",
+    "key": "FF3E",
+    "mappings": {
+      "default": {
+        "default": "accent circumflex d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Pc",
+    "key": "FF3F",
+    "mappings": {
+      "default": {
+        "default": "línia baixa d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sk",
+    "key": "FF40",
+    "mappings": {
+      "default": {
+        "default": "accent greu d'amplada completa"
+      }
+    }
+  },
+  {
+    "key": "FF5C",
+    "mappings": {
+      "default": {
+        "default": "barra vertical"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "FF5E",
+    "mappings": {
+      "default": {
+        "default": "titlla d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sc",
+    "key": "FFE0",
+    "mappings": {
+      "default": {
+        "default": "signe de cèntim d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sc",
+    "key": "FFE1",
+    "mappings": {
+      "default": {
+        "default": "signe de lliura d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "FFE2",
+    "mappings": {
+      "default": {
+        "default": "amplada completa sense signar"
+      }
+    }
+  },
+  {
+    "category": "Sk",
+    "key": "FFE3",
+    "mappings": {
+      "default": {
+        "default": "màcron d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "FFE4",
+    "mappings": {
+      "default": {
+        "default": "barra trencada d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sc",
+    "key": "FFE5",
+    "mappings": {
+      "default": {
+        "default": "signe ien d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Sc",
+    "key": "FFE6",
+    "mappings": {
+      "default": {
+        "default": "signe guanyat d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "FFE8",
+    "mappings": {
+      "default": {
+        "default": "formes de mitja amplada llum vertical"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "FFED",
+    "mappings": {
+      "default": {
+        "default": "mig ample quadrat negre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "FFEE",
+    "mappings": {
+      "default": {
+        "default": "cercle blanc de mig ample"
+      }
+    }
   }
 ]

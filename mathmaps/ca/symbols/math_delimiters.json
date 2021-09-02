@@ -1,5 +1,1651 @@
 [
   {
     "locale": "ca"
+  },
+  {
+    "key": "0028",
+    "mappings": {
+      "default": {
+        "default": "parèntesi esquerre",
+        "defaultMP": "paréntesis"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "0029",
+    "mappings": {
+      "default": {
+        "default": "parèntesi dret",
+        "defaultMP": "cierra paréntesis"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "005B",
+    "mappings": {
+      "default": {
+        "default": "claudàtor esquerre",
+        "defaultMP": "abre corchetes"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "005D",
+    "mappings": {
+      "default": {
+        "default": "claudàtor dret",
+        "defaultMP": "cierra corchetes"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "007B",
+    "mappings": {
+      "default": {
+        "default": "clau esquerra",
+        "defaultMP": "abre llaves"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "007D",
+    "mappings": {
+      "default": {
+        "default": "clau dreta",
+        "defaultMP": "cierra llaves"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "2045",
+    "mappings": {
+      "default": {
+        "default": "suport quadrat esquerre amb ploma"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2046",
+    "mappings": {
+      "default": {
+        "default": "suport quadrat dret amb ploma"
+      }
+    }
+  },
+  {
+    "key": "2308",
+    "mappings": {
+      "default": {
+        "default": "cantonada superior esquerra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2309",
+    "mappings": {
+      "default": {
+        "default": "cantonada superior dreta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "230A",
+    "mappings": {
+      "default": {
+        "default": "cantonada inferior esquerra"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "230B",
+    "mappings": {
+      "default": {
+        "default": "cantonada inferior dreta"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "230C",
+    "mappings": {
+      "default": {
+        "default": "tall inferior dret"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "230D",
+    "mappings": {
+      "default": {
+        "default": "tall inferior esquerre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "230E",
+    "mappings": {
+      "default": {
+        "default": "tall superior dret"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "230F",
+    "mappings": {
+      "default": {
+        "default": "tall superior esquerre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "231C",
+    "mappings": {
+      "default": {
+        "default": "angle superior esquerre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "231D",
+    "mappings": {
+      "default": {
+        "default": "angle superior dret"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "231E",
+    "mappings": {
+      "default": {
+        "default": "angle inferior esquerre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "231F",
+    "mappings": {
+      "default": {
+        "default": "angle inferior dret"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2320",
+    "mappings": {
+      "default": {
+        "default": "meitat superior d'integral"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2321",
+    "mappings": {
+      "default": {
+        "default": "meitat inferior d'integral"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "2329",
+    "mappings": {
+      "default": {
+        "default": "parèntesi angular esquerre"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "232A",
+    "mappings": {
+      "default": {
+        "default": "parèntesi angular dret"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Sm",
+    "key": "239B",
+    "mappings": {
+      "default": {
+        "default": "parèntesi esquerre ganxo superior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "239C",
+    "mappings": {
+      "default": {
+        "default": "extensió del parèntesi esquerre"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "239D",
+    "mappings": {
+      "default": {
+        "default": "parèntesi inferior ganxo inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "239E",
+    "mappings": {
+      "default": {
+        "default": "parèntesi dret ganxo superior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "239F",
+    "mappings": {
+      "default": {
+        "default": "extensió del parèntesi dret"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A0",
+    "mappings": {
+      "default": {
+        "default": "parèntesi inferior ganxo inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A1",
+    "mappings": {
+      "default": {
+        "default": "cantonada quadrada esquerra cantonada superior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A2",
+    "mappings": {
+      "default": {
+        "default": "extensió del suport quadrat esquerre"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A3",
+    "mappings": {
+      "default": {
+        "default": "cantonada quadrada esquerra cantonada inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A4",
+    "mappings": {
+      "default": {
+        "default": "cantonada quadrada dreta cantonada superior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A5",
+    "mappings": {
+      "default": {
+        "default": "extensió de suport quadrat dret"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A6",
+    "mappings": {
+      "default": {
+        "default": "cantonada quadrada dreta cantonada inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A7",
+    "mappings": {
+      "default": {
+        "default": "ganxo superior arrissat esquerre"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A8",
+    "mappings": {
+      "default": {
+        "default": "tros mig arrissat esquerre"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23A9",
+    "mappings": {
+      "default": {
+        "default": "suport esquerre arrissat ganxo inferior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AA",
+    "mappings": {
+      "default": {
+        "default": "extensió de suport arrissat"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AB",
+    "mappings": {
+      "default": {
+        "default": "ganxo superior arrissat dret"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AC",
+    "mappings": {
+      "default": {
+        "default": "tros mitjà de suport arrissat dret"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AD",
+    "mappings": {
+      "default": {
+        "default": "brida inferior dreta arrissada"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AE",
+    "mappings": {
+      "default": {
+        "default": "extensió integral"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23AF",
+    "mappings": {
+      "default": {
+        "default": "extensió de línia horitzontal"
+      }
+    }
+  },
+  {
+    "key": "23B0",
+    "mappings": {
+      "default": {
+        "default": "esquerra amunt o dret sota secció clau"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "23B1",
+    "mappings": {
+      "default": {
+        "default": "dreta amunt o esquerre sota secció clau"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "23B2",
+    "mappings": {
+      "default": {
+        "default": "suma superior"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "23B3",
+    "mappings": {
+      "default": {
+        "default": "part inferior de la suma"
+      }
+    }
+  },
+  {
+    "key": "23B4",
+    "mappings": {
+      "default": {
+        "default": "claudàtor superior"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "23B5",
+    "mappings": {
+      "default": {
+        "default": "claudàtor inferior"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "23B6",
+    "mappings": {
+      "default": {
+        "default": "suport quadrat inferior sobre suport quadrat superior"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "23B7",
+    "mappings": {
+      "default": {
+        "default": "part inferior del símbol radical"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "23B8",
+    "mappings": {
+      "default": {
+        "default": "línia de caixa vertical esquerra"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "23B9",
+    "mappings": {
+      "default": {
+        "default": "línia de caixa vertical dreta"
+      }
+    }
+  },
+  {
+    "key": "23DC",
+    "mappings": {
+      "default": {
+        "default": "parèntesi superior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "23DD",
+    "mappings": {
+      "default": {
+        "default": "parèntesi inferior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "23DE",
+    "mappings": {
+      "default": {
+        "default": "claudàtor arrissat superior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "23DF",
+    "mappings": {
+      "default": {
+        "default": "claudàtor arrissat inferior"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "23E0",
+    "mappings": {
+      "default": {
+        "default": "claudàtor superior en tortuga"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "23E1",
+    "mappings": {
+      "default": {
+        "default": "claudàtor inferior en tortuga"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Ps",
+    "key": "2768",
+    "mappings": {
+      "default": {
+        "default": "ornament de parèntesi esquerre mig"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2769",
+    "mappings": {
+      "default": {
+        "default": "adorn de parèntesi mig dret"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "276A",
+    "mappings": {
+      "default": {
+        "default": "adorn parèntesi esquerre aplanat mitjà"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "276B",
+    "mappings": {
+      "default": {
+        "default": "adorn parèntesi dret mitjà aplanat"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "276C",
+    "mappings": {
+      "default": {
+        "default": "adorn de suport d'angle mig apuntant cap a l'esquerra"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "276D",
+    "mappings": {
+      "default": {
+        "default": "adorn de suport d'angle mig apuntant cap a la dreta"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "276E",
+    "mappings": {
+      "default": {
+        "default": "ornament de cometes en l'angle que apunta cap a l'esquerra"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "276F",
+    "mappings": {
+      "default": {
+        "default": "ornament de cometes en angle recte que apunta cap a la dreta"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2770",
+    "mappings": {
+      "default": {
+        "default": "ornament pesant de el suport de l'angle que assenyala a l'esquerra"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2771",
+    "mappings": {
+      "default": {
+        "default": "ornament pesant de el suport de l'angle que assenyala cap a la dreta"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2772",
+    "mappings": {
+      "default": {
+        "default": "ornament de suport de petxina de tortuga esquerra lleugera"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2773",
+    "mappings": {
+      "default": {
+        "default": "ornament de claudàtor dret tortuga dreta"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2774",
+    "mappings": {
+      "default": {
+        "default": "ornament de suport arrissat esquerre mitjà"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2775",
+    "mappings": {
+      "default": {
+        "default": "ornament de suport arrissat dret mitjà"
+      }
+    }
+  },
+  {
+    "key": "27C5",
+    "mappings": {
+      "default": {
+        "default": "símbol delimitador esquerre de bossa en forma de s"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "27C6",
+    "mappings": {
+      "default": {
+        "default": "símbol delimitador dret de bossa en forma de s"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "27E6",
+    "mappings": {
+      "default": {
+        "default": "claudàtor buit esquerre"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "27E7",
+    "mappings": {
+      "default": {
+        "default": "claudàtor buit dret"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "27E8",
+    "mappings": {
+      "default": {
+        "default": "claudàtor agut esquerre"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "27E9",
+    "mappings": {
+      "default": {
+        "default": "claudàtor agut dret"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "27EA",
+    "mappings": {
+      "default": {
+        "default": "doble claudàtor agut esquerre"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "27EB",
+    "mappings": {
+      "default": {
+        "default": "doble claudàtor agut dret"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "27EC",
+    "mappings": {
+      "default": {
+        "default": "claudàtor de tortuga buit esquerre"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "27ED",
+    "mappings": {
+      "default": {
+        "default": "claudàtor de tortuga buit dret"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "27EE",
+    "mappings": {
+      "default": {
+        "default": "parèntesi pla esquerre"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "27EF",
+    "mappings": {
+      "default": {
+        "default": "parèntesi pla dret"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "2983",
+    "mappings": {
+      "default": {
+        "default": "suport arrissat blanc esquerre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2984",
+    "mappings": {
+      "default": {
+        "default": "dreta arrissat blanc suport"
+      }
+    }
+  },
+  {
+    "key": "2985",
+    "mappings": {
+      "default": {
+        "default": "parèntesi esquerre blanc"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "2986",
+    "mappings": {
+      "default": {
+        "default": "parèntesi dret blanc"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "2987",
+    "mappings": {
+      "default": {
+        "default": "notació Z esquerra suport d'imatge"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2988",
+    "mappings": {
+      "default": {
+        "default": "claudàtor d'imatge dreta de notació Z"
+      }
+    }
+  },
+  {
+    "key": "2989",
+    "mappings": {
+      "default": {
+        "default": "notació z claudàtor d’unió esquerre"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "298A",
+    "mappings": {
+      "default": {
+        "default": "z notation right binding bracket"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "298B",
+    "mappings": {
+      "default": {
+        "default": "claudàtor esquerre amb barra inferior"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "298C",
+    "mappings": {
+      "default": {
+        "default": "claudàtor dret amb barra inferior"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "298D",
+    "mappings": {
+      "default": {
+        "default": "claudàtor esquerre amb la marca a l'extrem superior"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "298E",
+    "mappings": {
+      "default": {
+        "default": "claudàtor dret amb la marca a l'extrem inferior"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "298F",
+    "mappings": {
+      "default": {
+        "default": "claudàtor esquerre amb la marca a l'extrem inferior"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "2990",
+    "mappings": {
+      "default": {
+        "default": "claudàtor dret amb una marca a l'extrem superior"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "2991",
+    "mappings": {
+      "default": {
+        "default": "claudàtor esquerra amb punt"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "2992",
+    "mappings": {
+      "default": {
+        "default": "claudàtor angular amb punt"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "2993",
+    "mappings": {
+      "default": {
+        "default": "arc esquerre inferior al claudàtor"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "2994",
+    "mappings": {
+      "default": {
+        "default": "arc dret superior al claudàtor"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "2995",
+    "mappings": {
+      "default": {
+        "default": "arc doble esquerre superior al claudàtor"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "2996",
+    "mappings": {
+      "default": {
+        "default": "arc doble dret inferior al claudàtor"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "2997",
+    "mappings": {
+      "default": {
+        "default": "suport de petxina de tortuga negra esquerra"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2998",
+    "mappings": {
+      "default": {
+        "default": "brida de petxina de tortuga negra dreta"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "29D8",
+    "mappings": {
+      "default": {
+        "default": "tanca esquerra ondulada"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "29D9",
+    "mappings": {
+      "default": {
+        "default": "tanca dreta ondulada"
+      }
+    }
+  },
+  {
+    "key": "29DA",
+    "mappings": {
+      "default": {
+        "default": "doble tanca esquerra ondulada"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "29DB",
+    "mappings": {
+      "default": {
+        "default": "doble tanca dreta ondulada"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "29FC",
+    "mappings": {
+      "default": {
+        "default": "brida d'angle corb a l'esquerra"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "29FD",
+    "mappings": {
+      "default": {
+        "default": "brida d'angle corb orientada cap a la dreta"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2E22",
+    "mappings": {
+      "default": {
+        "default": "suport superior esquerre superior"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2E23",
+    "mappings": {
+      "default": {
+        "default": "mitjà suport superior dret"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2E24",
+    "mappings": {
+      "default": {
+        "default": "brida inferior esquerra"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2E25",
+    "mappings": {
+      "default": {
+        "default": "mitjà suport inferior dret"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2E26",
+    "mappings": {
+      "default": {
+        "default": "suport U lateral esquerre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2E27",
+    "mappings": {
+      "default": {
+        "default": "suport U lateral dret"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "2E28",
+    "mappings": {
+      "default": {
+        "default": "doble parèntesi esquerre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "2E29",
+    "mappings": {
+      "default": {
+        "default": "parèntesi doble dret"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "3008",
+    "mappings": {
+      "default": {
+        "default": "suport d'angle esquerre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "3009",
+    "mappings": {
+      "default": {
+        "default": "suport d'angle recte"
+      }
+    }
+  },
+  {
+    "key": "300A",
+    "mappings": {
+      "default": {
+        "default": "parèntesi angular doble"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "300B",
+    "mappings": {
+      "default": {
+        "default": "parèntesi angular doble dret",
+        "defaultMP": "cierra paréntesis angular doble"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "300C",
+    "mappings": {
+      "default": {
+        "default": "suport de la cantonada esquerra"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "300D",
+    "mappings": {
+      "default": {
+        "default": "suport de cantonada dreta"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "300E",
+    "mappings": {
+      "default": {
+        "default": "suport de cantonada blanc esquerre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "300F",
+    "mappings": {
+      "default": {
+        "default": "suport de cantonada blanc dret"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "3010",
+    "mappings": {
+      "default": {
+        "default": "suport lenticular esquerre negre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "3011",
+    "mappings": {
+      "default": {
+        "default": "suport lenticular negre dret"
+      }
+    }
+  },
+  {
+    "key": "3014",
+    "mappings": {
+      "default": {
+        "default": "mènsula esquerra de closca de tortuga"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "3015",
+    "mappings": {
+      "default": {
+        "default": "mènsula de closca de tortuga dreta"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "3016",
+    "mappings": {
+      "default": {
+        "default": "suport lenticular blanc esquerre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "3017",
+    "mappings": {
+      "default": {
+        "default": "suport lenticular blanc dret"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "3018",
+    "mappings": {
+      "default": {
+        "default": "suport de closca de tortuga blanca esquerra"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "3019",
+    "mappings": {
+      "default": {
+        "default": "suport de petxina de tortuga blanca dreta"
+      }
+    }
+  },
+  {
+    "key": "301A",
+    "mappings": {
+      "default": {
+        "default": "claudàtor buit"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "301B",
+    "mappings": {
+      "default": {
+        "default": "claudàtor buit dret",
+        "defaultMP": "cierra corchete vacío"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "301D",
+    "mappings": {
+      "default": {
+        "default": "cometa doble invertida"
+      }
+    }
+  },
+  {
+    "key": "301E",
+    "mappings": {
+      "default": {
+        "default": "segona"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Pe",
+    "key": "301F",
+    "mappings": {
+      "default": {
+        "default": "cometes baixes dobles"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FD3E",
+    "mappings": {
+      "default": {
+        "default": "parèntesi esquerre adornat"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FD3F",
+    "mappings": {
+      "default": {
+        "default": "parèntesi dret adornat"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE17",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per a suport lenticular blanc esquerre vertical"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE18",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per a suport lenticular blanc vertical dret"
+      }
+    }
+  },
+  {
+    "key": "FE35",
+    "mappings": {
+      "default": {
+        "default": "parèntesi superior"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "FE36",
+    "mappings": {
+      "default": {
+        "default": "parèntesi inferior"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "key": "FE37",
+    "mappings": {
+      "default": {
+        "default": "clau superior"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "FE38",
+    "mappings": {
+      "default": {
+        "default": "clau inferior"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "FE39",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport vertical de petxina de tortuga esquerra"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE3A",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport vertical de petxina de tortuga dreta"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE3B",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport lenticular negre esquerre vertical"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE3C",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport lenticular negre dret vertical"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE3D",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport vertical doble angle esquerre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE3E",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport d'angle recte doble vertical"
+      }
+    }
+  },
+  {
+    "key": "FE3F",
+    "mappings": {
+      "default": {
+        "default": "parèntesi angular superior"
+      }
+    },
+    "category": "Ps"
+  },
+  {
+    "key": "FE40",
+    "mappings": {
+      "default": {
+        "default": "parèntesi angular inferior"
+      }
+    },
+    "category": "Pe"
+  },
+  {
+    "category": "Ps",
+    "key": "FE41",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport de cantonada vertical esquerra"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE42",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport de cantonada vertical dreta"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE43",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport de cantonada blanc vertical esquerre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE44",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport de cantonada vertical dreta blanca"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE47",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport quadrat vertical esquerre"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE48",
+    "mappings": {
+      "default": {
+        "default": "formulari de presentació per al suport quadrat vertical dret"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE59",
+    "mappings": {
+      "default": {
+        "default": "parèntesi esquerre petit"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE5A",
+    "mappings": {
+      "default": {
+        "default": "parèntesi dret petit"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE5B",
+    "mappings": {
+      "default": {
+        "default": "claudàtor arrissat esquerre petit"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE5C",
+    "mappings": {
+      "default": {
+        "default": "claudàtor dret arrissat petit"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FE5D",
+    "mappings": {
+      "default": {
+        "default": "petit suport esquerre de closca de tortuga"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FE5E",
+    "mappings": {
+      "default": {
+        "default": "petit suport dret de closca de tortuga"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FF08",
+    "mappings": {
+      "default": {
+        "default": "parèntesi esquerre d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FF09",
+    "mappings": {
+      "default": {
+        "default": "parèntesi dret d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FF3B",
+    "mappings": {
+      "default": {
+        "default": "suport quadrat esquerre d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FF3D",
+    "mappings": {
+      "default": {
+        "default": "suport quadrat dret d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FF5B",
+    "mappings": {
+      "default": {
+        "default": "claudàtor arrissat esquerre d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FF5D",
+    "mappings": {
+      "default": {
+        "default": "claudàtor dret d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FF5F",
+    "mappings": {
+      "default": {
+        "default": "parèntesi blanc esquerre d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FF60",
+    "mappings": {
+      "default": {
+        "default": "parèntesi blanc dret d'amplada completa"
+      }
+    }
+  },
+  {
+    "category": "Ps",
+    "key": "FF62",
+    "mappings": {
+      "default": {
+        "default": "claudàtor de cantonada esquerra de mig ample"
+      }
+    }
+  },
+  {
+    "category": "Pe",
+    "key": "FF63",
+    "mappings": {
+      "default": {
+        "default": "suport de cantonada dreta de mig ample"
+      }
+    }
   }
 ]

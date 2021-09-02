@@ -1,5 +1,131 @@
 [
   {
     "locale": "ca"
+  },
+  {
+    "key": "2113",
+    "mappings": {
+      "default": {
+        "default": "script l"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "2118",
+    "mappings": {
+      "default": {
+        "default": "p de weierstrass"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Ll",
+    "key": "213C",
+    "mappings": {
+      "default": {
+        "default": "negreta de pissarra pi"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "213D",
+    "mappings": {
+      "default": {
+        "default": "negreta de pissarra gamma"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "213E",
+    "mappings": {
+      "default": {
+        "default": "negreta de pissarra majúscula gamma"
+      }
+    }
+  },
+  {
+    "category": "Lu",
+    "key": "213F",
+    "mappings": {
+      "default": {
+        "default": "negreta de pissarra majúscula pi"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2140",
+    "mappings": {
+      "default": {
+        "default": "negreta de pissarra suma de n-ary"
+      }
+    }
+  },
+  {
+    "key": "2145",
+    "mappings": {
+      "default": {
+        "default": "majúscula D"
+      }
+    },
+    "category": "Lu"
+  },
+  {
+    "key": "2146",
+    "mappings": {
+      "default": {
+        "default": "d"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "2147",
+    "mappings": {
+      "default": {
+        "default": "e"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "2148",
+    "mappings": {
+      "default": {
+        "default": "i"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "2149",
+    "mappings": {
+      "default": {
+        "default": "negreta de ppissarra cursiva j"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "cursiva sense punt i"
+      }
+    },
+    "key": "1D6A4"
+  },
+  {
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "cursiva sense punt j"
+      }
+    },
+    "key": "1D6A5"
   }
 ]
