@@ -124,7 +124,7 @@
       "default": "majúscula"
     },
     "smallPrefix": {
-      "default": "Small character"
+      "default": ""
     },
     "digitPrefix": {
       "default": ""
