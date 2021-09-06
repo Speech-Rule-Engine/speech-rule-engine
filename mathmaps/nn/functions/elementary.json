@@ -10,9 +10,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "log"
       }
     }
   },
@@ -24,9 +22,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "ln"
       }
     }
   },
@@ -38,9 +34,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "lg"
       }
     }
   },
@@ -53,9 +47,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "eksponent"
       }
     }
   },
@@ -67,9 +59,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "største fellesnemnar"
       }
     }
   },
@@ -81,9 +71,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "minste fellesnemnar"
       }
     }
   },
@@ -95,9 +83,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "arg"
       }
     }
   },
@@ -109,9 +95,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -123,9 +107,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -137,9 +119,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "inf"
       }
     }
   },
@@ -151,9 +131,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "grense"
       }
     }
   },
@@ -166,9 +144,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "nedre grense"
       }
     }
   },
@@ -181,9 +157,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "øvre grense"
       }
     }
   },
@@ -195,9 +169,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "maks"
       }
     }
   },
@@ -209,9 +181,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "min"
       }
     }
   },
@@ -223,9 +193,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "sup"
       }
     }
   },
@@ -238,9 +206,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -253,9 +219,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "omvendt grense"
       }
     }
   },
@@ -267,9 +231,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "mod"
       }
     }
   },
@@ -281,9 +243,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "sannsyn"
       }
     }
   }

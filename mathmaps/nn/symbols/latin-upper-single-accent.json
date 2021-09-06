@@ -7,7 +7,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med gravis"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med akutt aksent"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med sirkumfleks"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med tilde"
       }
     }
   },
@@ -43,7 +43,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med tøddel"
       }
     }
   },
@@ -52,7 +52,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Å"
       }
     }
   },
@@ -61,7 +61,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor C med cedille"
       }
     }
   },
@@ -70,7 +70,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med gravis"
       }
     }
   },
@@ -79,7 +79,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med akutt aksent"
       }
     }
   },
@@ -88,7 +88,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med sirkumfleks"
       }
     }
   },
@@ -97,7 +97,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med tøddel"
       }
     }
   },
@@ -106,7 +106,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med gravis"
       }
     }
   },
@@ -115,7 +115,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med akutt aksent"
       }
     }
   },
@@ -124,7 +124,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med sirkumfleks"
       }
     }
   },
@@ -133,7 +133,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med tøddel"
       }
     }
   },
@@ -142,7 +142,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor N med tilde"
       }
     }
   },
@@ -151,7 +151,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med gravis"
       }
     }
   },
@@ -160,7 +160,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med akutt aksent"
       }
     }
   },
@@ -169,7 +169,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med sirkumfleks"
       }
     }
   },
@@ -178,7 +178,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med tilde"
       }
     }
   },
@@ -187,7 +187,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med tøddel"
       }
     }
   },
@@ -196,7 +196,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med gravis"
       }
     }
   },
@@ -205,7 +205,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med akutt aksent"
       }
     }
   },
@@ -214,7 +214,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med sirkumfleks"
       }
     }
   },
@@ -223,7 +223,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med tøddel"
       }
     }
   },
@@ -232,7 +232,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Y med akutt aksent"
       }
     }
   },
@@ -241,7 +241,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med makron"
       }
     }
   },
@@ -250,7 +250,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med breve"
       }
     }
   },
@@ -259,7 +259,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med ogonek"
       }
     }
   },
@@ -268,7 +268,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor C med akutt aksent"
       }
     }
   },
@@ -277,7 +277,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor C med sirkumfleks"
       }
     }
   },
@@ -286,7 +286,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor C med prikk over"
       }
     }
   },
@@ -295,7 +295,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor C med karon"
       }
     }
   },
@@ -304,7 +304,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor D med karon"
       }
     }
   },
@@ -313,7 +313,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med makron"
       }
     }
   },
@@ -322,7 +322,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med breve"
       }
     }
   },
@@ -331,7 +331,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med prikk over"
       }
     }
   },
@@ -340,7 +340,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med ogonek"
       }
     }
   },
@@ -349,7 +349,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med karon"
       }
     }
   },
@@ -358,7 +358,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor G med sirkumfleks"
       }
     }
   },
@@ -367,7 +367,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor G med breve"
       }
     }
   },
@@ -376,7 +376,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor G med prikk over"
       }
     }
   },
@@ -385,7 +385,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor G med cedille"
       }
     }
   },
@@ -394,7 +394,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor H med sirkumfleks"
       }
     }
   },
@@ -403,7 +403,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med tilde"
       }
     }
   },
@@ -412,7 +412,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med makron"
       }
     }
   },
@@ -421,7 +421,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med breve"
       }
     }
   },
@@ -430,7 +430,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med ogonek"
       }
     }
   },
@@ -439,7 +439,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med prikk over"
       }
     }
   },
@@ -448,7 +448,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor J med sirkumfleks"
       }
     }
   },
@@ -457,7 +457,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor K med cedille"
       }
     }
   },
@@ -466,7 +466,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor L med akutt aksent"
       }
     }
   },
@@ -475,7 +475,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor L med cedille"
       }
     }
   },
@@ -484,7 +484,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor L med karon"
       }
     }
   },
@@ -493,7 +493,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor L med prikk i midten"
       }
     }
   },
@@ -502,7 +502,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor N med akutt aksent"
       }
     }
   },
@@ -511,7 +511,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor N med cedille"
       }
     }
   },
@@ -520,7 +520,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor N med karon"
       }
     }
   },
@@ -529,7 +529,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med makron"
       }
     }
   },
@@ -538,7 +538,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med breve"
       }
     }
   },
@@ -547,7 +547,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med dobbel akutt aksent"
       }
     }
   },
@@ -556,7 +556,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor R med akutt aksent"
       }
     }
   },
@@ -565,7 +565,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor R med cedille"
       }
     }
   },
@@ -574,7 +574,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor R med karon"
       }
     }
   },
@@ -583,7 +583,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor S med akutt aksent"
       }
     }
   },
@@ -592,7 +592,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor S med sirkumfleks"
       }
     }
   },
@@ -601,7 +601,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor S med cedille"
       }
     }
   },
@@ -610,7 +610,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor S med karon"
       }
     }
   },
@@ -619,7 +619,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor T med cedille"
       }
     }
   },
@@ -628,7 +628,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor T med karon"
       }
     }
   },
@@ -637,7 +637,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med tilde"
       }
     }
   },
@@ -646,7 +646,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med makron"
       }
     }
   },
@@ -655,7 +655,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med breve"
       }
     }
   },
@@ -664,7 +664,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med sirkel over"
       }
     }
   },
@@ -673,7 +673,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med dobbel akutt aksent"
       }
     }
   },
@@ -682,7 +682,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med ogonek"
       }
     }
   },
@@ -691,7 +691,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor W med sirkumfleks"
       }
     }
   },
@@ -700,7 +700,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Y med sirkumfleks"
       }
     }
   },
@@ -709,7 +709,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Y med tøddel"
       }
     }
   },
@@ -718,7 +718,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Z med akutt aksent"
       }
     }
   },
@@ -727,7 +727,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Z med prikk over"
       }
     }
   },
@@ -736,7 +736,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Z med karon"
       }
     }
   },
@@ -745,7 +745,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med karon"
       }
     }
   },
@@ -754,7 +754,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med karon"
       }
     }
   },
@@ -763,7 +763,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med karon"
       }
     }
   },
@@ -772,7 +772,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med karon"
       }
     }
   },
@@ -781,7 +781,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor G med karon"
       }
     }
   },
@@ -790,7 +790,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor K med karon"
       }
     }
   },
@@ -799,7 +799,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med ogonek"
       }
     }
   },
@@ -808,7 +808,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor G med akutt aksent"
       }
     }
   },
@@ -817,7 +817,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor G med gravis"
       }
     }
   },
@@ -826,7 +826,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med dobbel gravis"
       }
     }
   },
@@ -835,7 +835,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med omvendt breve"
       }
     }
   },
@@ -844,7 +844,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med dobbel gravis"
       }
     }
   },
@@ -853,7 +853,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med omvendt breve"
       }
     }
   },
@@ -862,7 +862,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med dobbel gravis"
       }
     }
   },
@@ -871,7 +871,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med omvendt breve"
       }
     }
   },
@@ -880,7 +880,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med dobbel gravis"
       }
     }
   },
@@ -889,7 +889,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med omvendt breve"
       }
     }
   },
@@ -898,7 +898,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor R med dobbel gravis"
       }
     }
   },
@@ -907,7 +907,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor R med omvendt breve"
       }
     }
   },
@@ -916,7 +916,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med dobbel gravis"
       }
     }
   },
@@ -925,7 +925,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med omvendt breve"
       }
     }
   },
@@ -934,7 +934,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor S med komma under"
       }
     }
   },
@@ -943,7 +943,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor T med komma under"
       }
     }
   },
@@ -952,7 +952,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor H med karon"
       }
     }
   },
@@ -961,7 +961,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med prikk"
       }
     }
   },
@@ -970,7 +970,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med cedille"
       }
     }
   },
@@ -979,7 +979,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med prikk"
       }
     }
   },
@@ -988,7 +988,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Y med strek over"
       }
     }
   },
@@ -997,7 +997,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med ring under"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor B med prikk over"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor B med prikk under"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor B med linje under"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor D med prikk over"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor D med prikk under"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor D med linje under"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor D med cedille"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor D med sirkumfleks under"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med sirkumfleks under"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med tilde under"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor F med prikk over"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor G med makron"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor H med prikk over"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor H med prikk under"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor H med tøddel"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor H med cedille"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor H med breve under"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med tilde under"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor K med akutt aksent"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor K med prikk under"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor K med linje under"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor L med prikk under"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor L med linje under"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor L med sirkumfleks under"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor M med akutt aksent"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor M med prikk over"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor M med prikk under"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor N med prikk over"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor N med prikk under"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor N med linje under"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor N med sirkumfleks under"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor P med akutt aksent"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor P med prikk over"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor R med prikk over"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor R med prikk under"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor R med linje under"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor S med prikk over"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor S med prikk under"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor T med prikk over"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor T med prikk under"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor T med linje under"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor T med sirkumfleks under"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med tøddel under"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med tilde under"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med sirkumfleks under"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor V med tilde"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor V med prikk under"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor W med gravis"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor W med akutt aksent"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor W med tøddel"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor W med prikk over"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor W med prikk under"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor X med prikk over"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor X med tøddel"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Y med prikk over"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Z med sirkumfleks"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Z med prikk under"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Z med linje under"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med prikk under"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor A med krok over"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med prikk under"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med krok over"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor E med tilde"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med krok over"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor I med prikk under"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med prikk under"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor O med krok over"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med prikk under"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor U med krok over"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Y med gravis"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Y med prikk under"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Y med krok over"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor Y med tilde"
       }
     }
   }

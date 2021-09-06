@@ -7,7 +7,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ø"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med gjennomstreking"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "h med gjennomstreking"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med gjennomstreking"
       }
     }
   },
@@ -43,7 +43,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med gjennomstreking"
       }
     }
   },
@@ -52,7 +52,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "b med gjennomstreking"
       }
     }
   },
@@ -61,7 +61,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lambda med gjennomstreking"
       }
     }
   },
@@ -70,7 +70,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med gjennomstreking"
       }
     }
   },
@@ -79,7 +79,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav omvendt glottal lukkelyd med gjennomstreking"
       }
     }
   },
@@ -88,7 +88,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "g med gjennomstreking"
       }
     }
   },
@@ -97,7 +97,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ø med akutt aksent"
       }
     }
   },
@@ -106,7 +106,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "c med gjennomstreking"
       }
     }
   },
@@ -115,7 +115,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med gjennomstreking"
       }
     }
   },
@@ -124,7 +124,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "j med gjennomstreking"
       }
     }
   },
@@ -133,7 +133,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med gjennomstreking"
       }
     }
   },
@@ -142,7 +142,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "y med gjennomstreking"
       }
     }
   },
@@ -151,7 +151,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "j utan prikk med gjennomstreking"
       }
     }
   },
@@ -160,7 +160,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med gjennomstreking"
       }
     }
   },
@@ -169,7 +169,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "j utan prikk med gjennomstreking og krok"
       }
     }
   },
@@ -178,7 +178,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav glottal lukkelyd med gjennomstreking"
       }
     }
   },
@@ -187,7 +187,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav snudd glottal lukkelyd med gjennomstreking"
       }
     }
   },
@@ -196,7 +196,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liggende ø"
       }
     }
   },
@@ -205,7 +205,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "iota med gjennomstreking"
       }
     }
   },
@@ -214,7 +214,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "p med gjennomstreking"
       }
     }
   },
@@ -223,7 +223,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ypsilon med gjennomstreking"
       }
     }
   },
@@ -232,7 +232,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang s med diagonal gjennomstreking"
       }
     }
   },
@@ -241,7 +241,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang s med høy gjennomstreking"
       }
     }
   },
@@ -250,7 +250,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt delta"
       }
     }
   },
@@ -259,7 +259,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang s med prikk over"
       }
     }
   },
@@ -268,7 +268,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "delta"
       }
     }
   },
@@ -277,7 +277,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kra"
       }
     }
   },
@@ -286,7 +286,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang s"
       }
     }
   },
@@ -295,7 +295,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "b med strek over"
       }
     }
   },
@@ -304,7 +304,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tone seks"
       }
     }
   },
@@ -313,7 +313,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "c med krok"
       }
     }
   },
@@ -322,7 +322,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med strek over"
       }
     }
   },
@@ -331,7 +331,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "f med krok"
       }
     }
   },
@@ -340,7 +340,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hv"
       }
     }
   },
@@ -349,7 +349,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "k med krok"
       }
     }
   },
@@ -358,7 +358,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med strek"
       }
     }
   },
@@ -367,7 +367,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med langt høgrebein"
       }
     }
   },
@@ -376,7 +376,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med horn"
       }
     }
   },
@@ -385,7 +385,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oi"
       }
     }
   },
@@ -394,7 +394,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "p med krok"
       }
     }
   },
@@ -403,7 +403,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tone to"
       }
     }
   },
@@ -412,7 +412,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav omvendt esh-løkke"
       }
     }
   },
@@ -421,7 +421,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med palatal krok"
       }
     }
   },
@@ -430,7 +430,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med krok"
       }
     }
   },
@@ -439,7 +439,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med horn"
       }
     }
   },
@@ -448,7 +448,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "y med krok"
       }
     }
   },
@@ -457,7 +457,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt ezh"
       }
     }
   },
@@ -466,7 +466,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh med hale"
       }
     }
   },
@@ -475,7 +475,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tone fem"
       }
     }
   },
@@ -484,7 +484,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav wynn"
       }
     }
   },
@@ -493,7 +493,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dz med karon"
       }
     }
   },
@@ -502,7 +502,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lj"
       }
     }
   },
@@ -511,7 +511,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nj"
       }
     }
   },
@@ -520,7 +520,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "æ med makron"
       }
     }
   },
@@ -529,7 +529,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh med karon"
       }
     }
   },
@@ -538,7 +538,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dz med karon"
       }
     }
   },
@@ -547,7 +547,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "yogh"
       }
     }
   },
@@ -556,7 +556,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lezh"
       }
     }
   },
@@ -565,7 +565,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh"
       }
     }
   },
@@ -574,7 +574,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh med krøll"
       }
     }
   },
@@ -583,7 +583,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dezh digraf"
       }
     }
   },
@@ -592,7 +592,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd e"
       }
     }
   },
@@ -601,7 +601,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "æ med akutt aksent"
       }
     }
   },
@@ -610,7 +610,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med krøll"
       }
     }
   },
@@ -619,7 +619,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ou"
       }
     }
   },
@@ -628,7 +628,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med krok"
       }
     }
   },
@@ -637,7 +637,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med krøll"
       }
     }
   },
@@ -646,7 +646,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med krøll"
       }
     }
   },
@@ -655,7 +655,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med krøll"
       }
     }
   },
@@ -664,7 +664,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "db digraf"
       }
     }
   },
@@ -673,7 +673,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "qp digraf"
       }
     }
   },
@@ -682,7 +682,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s med nedoverhale"
       }
     }
   },
@@ -691,7 +691,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med nedoverhale"
       }
     }
   },
@@ -700,7 +700,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "glottal lukkelyd"
       }
     }
   },
@@ -709,7 +709,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "q med krokhale"
       }
     }
   },
@@ -718,7 +718,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd a"
       }
     }
   },
@@ -727,7 +727,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "alfa"
       }
     }
   },
@@ -736,7 +736,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd alfa"
       }
     }
   },
@@ -745,7 +745,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "b med krok"
       }
     }
   },
@@ -754,7 +754,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "open o"
       }
     }
   },
@@ -763,7 +763,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "c med krøll"
       }
     }
   },
@@ -772,7 +772,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med hale"
       }
     }
   },
@@ -781,7 +781,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med krok"
       }
     }
   },
@@ -790,7 +790,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt e"
       }
     }
   },
@@ -799,7 +799,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "schwa"
       }
     }
   },
@@ -808,7 +808,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "schwa med krok"
       }
     }
   },
@@ -817,7 +817,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "open e"
       }
     }
   },
@@ -826,7 +826,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt open e"
       }
     }
   },
@@ -835,7 +835,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt open e med krok"
       }
     }
   },
@@ -844,7 +844,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka omvendt open e"
       }
     }
   },
@@ -853,7 +853,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "g med krok"
       }
     }
   },
@@ -862,7 +862,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skript g"
       }
     }
   },
@@ -871,7 +871,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gamma"
       }
     }
   },
@@ -880,7 +880,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bukkehorn"
       }
     }
   },
@@ -889,7 +889,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd h"
       }
     }
   },
@@ -898,7 +898,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "h med krok"
       }
     }
   },
@@ -907,7 +907,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "heng med krok"
       }
     }
   },
@@ -916,7 +916,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "iota"
       }
     }
   },
@@ -925,7 +925,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med tilde i midten"
       }
     }
   },
@@ -934,7 +934,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med belte"
       }
     }
   },
@@ -943,7 +943,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med retrofleks krok"
       }
     }
   },
@@ -952,7 +952,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd m"
       }
     }
   },
@@ -961,7 +961,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd m med langt bein"
       }
     }
   },
@@ -970,7 +970,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "m med krok"
       }
     }
   },
@@ -979,7 +979,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med venstrekrok"
       }
     }
   },
@@ -988,7 +988,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med retrofleks krok"
       }
     }
   },
@@ -997,7 +997,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med gjennomstreking"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka omega"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pi"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd r"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd r med langt bein"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd r med krok"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med langt bein"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med hale"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med fiskekrok"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt r med fiskekrok"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s med krok"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "esh"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "krøket omvendt esh"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "esh med krøll"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd t"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med retrofleks krok"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med gjennomstreking"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ypsilon"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "v med krok"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd v"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd w"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd y"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med retrofleks krok"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med krøll"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav faryngal stemt frikativ"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav omvendt glottal lukkelyd"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav strukket c"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav bilabialt klikk"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka open e"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd k"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "q med krok"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dz digraf"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dz digraf med krøll"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ts digraf"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tesh digraf"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tc digraf med krøll"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feng digraf"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ls digraf"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lz digraf"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav bilabial perkussiv"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav bidental perkussiv"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd h med fiskekrok"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd h med fiskekrok og hale"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd æ"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd open e"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd i"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liggende o"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liggende open o"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd oe"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øverste halvdel av o"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nederste halvdel av o"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liggende u"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liggende u med tøddel"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liggende snudd m"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav stemt laryngal spirant"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bokstav ain"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ue"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "b med tilde i midten"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med tilde i midten"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "f med tilde i midten"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "m med tilde i midten"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med tilde i midten"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "p med tilde i midten"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med tilde i midten"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med fiskekrok og tilde i midten"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s med tilde i midten"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med tilde i midten"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med tilde i midten"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd g"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "insulær g"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "th med skrå gjennomstreking"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "b med palatal krok"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med palatal krok"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "f med palatal krok"
       }
     }
   },
@@ -1663,7 +1663,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "g med palatal krok"
       }
     }
   },
@@ -1672,7 +1672,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "k med palatal krok"
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med palata krok"
       }
     }
   },
@@ -1690,7 +1690,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "m med palatal krok"
       }
     }
   },
@@ -1699,7 +1699,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med palatal krok"
       }
     }
   },
@@ -1708,7 +1708,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "p med palatal krok"
       }
     }
   },
@@ -1717,7 +1717,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med palatal krok"
       }
     }
   },
@@ -1726,7 +1726,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s med palatal krok"
       }
     }
   },
@@ -1735,7 +1735,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "esh med palatal krok"
       }
     }
   },
@@ -1744,7 +1744,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "v med palatal krok"
       }
     }
   },
@@ -1753,7 +1753,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "x med palatal krok"
       }
     }
   },
@@ -1762,7 +1762,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med palatal krok"
       }
     }
   },
@@ -1771,7 +1771,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a med retrofleks krok"
       }
     }
   },
@@ -1780,7 +1780,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "alfa med retrofleks krok"
       }
     }
   },
@@ -1789,7 +1789,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med krok og hale"
       }
     }
   },
@@ -1798,7 +1798,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med retrofleks krok"
       }
     }
   },
@@ -1807,7 +1807,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "open e med retrofleks krok"
       }
     }
   },
@@ -1816,7 +1816,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt open e med retrofleks krok"
       }
     }
   },
@@ -1825,7 +1825,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "schwa med retrofleks krok"
       }
     }
   },
@@ -1834,7 +1834,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med retrofleks krok"
       }
     }
   },
@@ -1843,7 +1843,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "open o med retrofleks krok"
       }
     }
   },
@@ -1852,7 +1852,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "esh med retrofleks krok"
       }
     }
   },
@@ -1861,7 +1861,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med retrofleks krok"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh med retrofleks krok"
       }
     }
   },
@@ -1879,7 +1879,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med apostrof foran"
       }
     }
   },
@@ -1888,7 +1888,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eng"
       }
     }
   }

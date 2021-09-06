@@ -7,7 +7,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "beta"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kai"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt epsilon"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit hevet digamma"
       }
     }
   },
@@ -43,7 +43,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit digamma"
       }
     }
   }

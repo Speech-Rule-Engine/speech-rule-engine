@@ -10,7 +10,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "litein øvre gamma"
       }
     }
   },
@@ -19,7 +19,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "litein øvre lambda"
       }
     }
   },
@@ -28,7 +28,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "litein øvre pi"
       }
     }
   },
@@ -37,7 +37,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "litein øvre rho"
       }
     }
   },
@@ -46,7 +46,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "litein øvre psi"
       }
     }
   },
@@ -55,7 +55,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "superskript gamma"
       }
     }
   },
@@ -64,7 +64,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "superskript pi"
       }
     }
   },
@@ -73,7 +73,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript beta"
       }
     }
   },
@@ -82,7 +82,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript gamma"
       }
     }
   },
@@ -91,7 +91,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript rho"
       }
     }
   },
@@ -100,7 +100,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript pi"
       }
     }
   },
@@ -109,7 +109,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript khi"
       }
     }
   }

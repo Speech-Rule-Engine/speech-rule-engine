@@ -11,9 +11,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "knop"
       }
     }
   },
@@ -25,9 +23,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -39,9 +35,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "omdreiing per minutt"
       }
     }
   },
@@ -53,9 +47,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "kilometer per time"
       }
     }
   }

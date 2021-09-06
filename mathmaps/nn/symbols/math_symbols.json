@@ -7,7 +7,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "utropsteikn"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sitat-teikn"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tallteikn"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dollarteikn"
       }
     }
   },
@@ -43,7 +43,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prosent"
       }
     }
   },
@@ -52,7 +52,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ampersand"
       }
     }
   },
@@ -61,7 +61,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "apostrof"
       }
     }
   },
@@ -70,7 +70,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk"
       }
     }
   },
@@ -79,7 +79,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss"
       }
     }
   },
@@ -88,7 +88,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "komma"
       }
     }
   },
@@ -97,7 +97,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minus"
       }
     }
   },
@@ -106,7 +106,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "punktum"
       }
     }
   },
@@ -115,7 +115,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skråstrek"
       }
     }
   },
@@ -124,7 +124,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kolon"
       }
     }
   },
@@ -133,7 +133,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "semikolon"
       }
     }
   },
@@ -142,7 +142,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn"
       }
     }
   },
@@ -151,7 +151,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik"
       }
     }
   },
@@ -160,7 +160,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn"
       }
     }
   },
@@ -169,7 +169,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "spørsmålsteikn"
       }
     }
   },
@@ -178,7 +178,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "krøllalfa"
       }
     }
   },
@@ -187,7 +187,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bakstrek"
       }
     }
   },
@@ -196,7 +196,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkumfleks"
       }
     }
   },
@@ -205,7 +205,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "understrek"
       }
     }
   },
@@ -214,7 +214,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gravis"
       }
     }
   },
@@ -223,7 +223,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikalstrek"
       }
     }
   },
@@ -232,7 +232,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde"
       }
     }
   },
@@ -241,7 +241,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt utropsteikn"
       }
     }
   },
@@ -250,7 +250,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "cent-teikn"
       }
     }
   },
@@ -259,7 +259,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pund-teikn"
       }
     }
   },
@@ -268,7 +268,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "valutateikn"
       }
     }
   },
@@ -277,7 +277,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "yen-teikn"
       }
     }
   },
@@ -286,7 +286,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "brutt vertikalstrek"
       }
     }
   },
@@ -295,7 +295,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "paragrafteikn"
       }
     }
   },
@@ -304,7 +304,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tøddel"
       }
     }
   },
@@ -313,7 +313,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kopirettigheter"
       }
     }
   },
@@ -322,7 +322,7 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feminint ordenstall"
       }
     }
   },
@@ -331,7 +331,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre sitatteikn"
       }
     }
   },
@@ -340,7 +340,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje-teikn"
       }
     }
   },
@@ -349,7 +349,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "registert-teikn"
       }
     }
   },
@@ -358,7 +358,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "strek"
       }
     }
   },
@@ -367,7 +367,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "grader"
       }
     }
   },
@@ -376,7 +376,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss minus"
       }
     }
   },
@@ -385,7 +385,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "akutt aksent"
       }
     }
   },
@@ -394,7 +394,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "my"
       }
     }
   },
@@ -403,7 +403,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "avsnittsteikn"
       }
     }
   },
@@ -412,7 +412,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prikk"
       }
     }
   },
@@ -421,7 +421,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "cedille"
       }
     }
   },
@@ -430,7 +430,7 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "maskulint ordenstall"
       }
     }
   },
@@ -439,7 +439,7 @@
     "category": "Pf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre sitatteikn"
       }
     }
   },
@@ -448,7 +448,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt spørsmålsteikn"
       }
     }
   },
@@ -457,7 +457,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gangeteikn"
       }
     }
   },
@@ -466,7 +466,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "deleteikn"
       }
     }
   },
@@ -475,7 +475,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "breve"
       }
     }
   },
@@ -484,7 +484,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prim"
       }
     }
   },
@@ -493,7 +493,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelt prim"
       }
     }
   },
@@ -502,7 +502,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prikk over"
       }
     }
   },
@@ -511,7 +511,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel over"
       }
     }
   },
@@ -520,7 +520,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ogonek"
       }
     }
   },
@@ -529,7 +529,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde"
       }
     }
   },
@@ -538,7 +538,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel akutt aksent"
       }
     }
   },
@@ -547,7 +547,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minus"
       }
     }
   },
@@ -556,7 +556,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje-delelig minus"
       }
     }
   },
@@ -565,7 +565,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bindstrek"
       }
     }
   },
@@ -574,7 +574,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang bindestrek"
       }
     }
   },
@@ -583,7 +583,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tankestrek"
       }
     }
   },
@@ -592,7 +592,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang tankestrek"
       }
     }
   },
@@ -601,7 +601,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel vertikal strek"
       }
     }
   },
@@ -610,7 +610,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel understreking"
       }
     }
   },
@@ -619,7 +619,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre hermeteikn"
       }
     }
   },
@@ -628,7 +628,7 @@
     "category": "Pf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre hermeteikn"
       }
     }
   },
@@ -637,7 +637,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lavt høgre enkelt sitatteikn"
       }
     }
   },
@@ -646,7 +646,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre reversert enkelt sitatteikn"
       }
     }
   },
@@ -655,7 +655,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre dobbelt sitatteikn"
       }
     }
   },
@@ -664,7 +664,7 @@
     "category": "Pf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre dobbelt sitatteikn"
       }
     }
   },
@@ -673,7 +673,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lavt høgre dobbelt sitatteikn"
       }
     }
   },
@@ -682,7 +682,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre reversert dobbelt sitatteikn"
       }
     }
   },
@@ -691,7 +691,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dolk"
       }
     }
   },
@@ -700,7 +700,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbeldolk"
       }
     }
   },
@@ -709,7 +709,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "punkt"
       }
     }
   },
@@ -718,7 +718,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trekantpunkt"
       }
     }
   },
@@ -727,7 +727,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ettpunktsinnledning"
       }
     }
   },
@@ -736,7 +736,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "topunktsinnledning"
       }
     }
   },
@@ -745,7 +745,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prikk prikk prikk"
       }
     }
   },
@@ -754,7 +754,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skilleteikn"
       }
     }
   },
@@ -763,7 +763,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "promille"
       }
     }
   },
@@ -772,7 +772,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "per titusen"
       }
     }
   },
@@ -781,7 +781,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prim"
       }
     }
   },
@@ -790,7 +790,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel prim"
       }
     }
   },
@@ -799,7 +799,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel prim"
       }
     }
   },
@@ -808,7 +808,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt prim"
       }
     }
   },
@@ -817,7 +817,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt dobbel prim"
       }
     }
   },
@@ -826,7 +826,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt trippel prim"
       }
     }
   },
@@ -835,7 +835,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "innsetting"
       }
     }
   },
@@ -844,7 +844,7 @@
     "category": "Pi",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "singel venstre-vendt sjevron"
       }
     }
   },
@@ -853,7 +853,7 @@
     "category": "Pf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "enkelt sitatteikn som peker mot høgre"
       }
     }
   },
@@ -862,7 +862,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "referansemerke"
       }
     }
   },
@@ -871,7 +871,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelt utropsteikn"
       }
     }
   },
@@ -880,7 +880,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interrobang"
       }
     }
   },
@@ -889,7 +889,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "overstrek"
       }
     }
   },
@@ -898,7 +898,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "underboge"
       }
     }
   },
@@ -907,7 +907,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "teikn-samanføying"
       }
     }
   },
@@ -916,7 +916,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "innsettingspunkt"
       }
     }
   },
@@ -925,7 +925,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisme"
       }
     }
   },
@@ -934,7 +934,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "strekpunkt"
       }
     }
   },
@@ -943,7 +943,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "divisjonsteikn"
       }
     }
   },
@@ -952,7 +952,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelt spørsmålsteikn"
       }
     }
   },
@@ -961,7 +961,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "spørsmålsteikn utropsteikn"
       }
     }
   },
@@ -970,7 +970,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "utropsteikn spørsmålsteikn"
       }
     }
   },
@@ -979,7 +979,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt avsnittsteikn"
       }
     }
   },
@@ -988,7 +988,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart venstrevendt punkt"
       }
     }
   },
@@ -997,7 +997,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart høgrevendt punkt"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lav asterisk"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt semikolon"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nært til"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "to asterisker vertikalt på kvarandre"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kommersiell minus"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "?"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "blomepunktum"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre prikkjer punktum"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadruppel prim"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fire prikkjer punktum"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fem prikkjer punktum"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "toprikks punktum"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fire punkter-teikn"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kryss med prikkjer"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trikolon"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fire vertikale prikkjer"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "superskript pluss"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "superskript minus"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "superskript er lik"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "superskript venstreparentes"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "superskript høgreparentes"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript pluss"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript minus"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript er lik"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript venstreparentes"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript høgreparentes"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eiendomslinje"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd ampersand"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "per"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "aksjeselskap"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snudd liten stor F"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "for alle"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "komplement"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "det eksisterer"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "det eksisterer ikkje"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tomt sett"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inkrement"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "element av"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje et element av"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er et medlem av"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld som medlem"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld ikkje som medlem"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld som medlem"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "slutt på bevis"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "produkt"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "koprodukt"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sum"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minus"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minus pluss"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "punktum pluss"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "deleteikn"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sett minus"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "grad"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "punkt"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratrot"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kubikkrot"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fjerderot"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "proporsjonal med"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "uendeleg"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre vinkel"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vinkel"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "målt vinkel"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sfærisk vinkel"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikalstrek"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje delbar"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "parallell til"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje parallell til"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "og"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eller"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kryss"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "union"
       }
     }
   },
@@ -1663,7 +1663,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral"
       }
     }
   },
@@ -1672,7 +1672,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel integral"
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel integral"
       }
     }
   },
@@ -1690,7 +1690,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "konturintegral"
       }
     }
   },
@@ -1699,7 +1699,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka overflateintegral"
       }
     }
   },
@@ -1708,7 +1708,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "volumintegral"
       }
     }
   },
@@ -1717,7 +1717,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral med klokka"
       }
     }
   },
@@ -1726,7 +1726,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka kontur med klokka"
       }
     }
   },
@@ -1735,7 +1735,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka kontur mot klokka"
       }
     }
   },
@@ -1744,7 +1744,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "derfor"
       }
     }
   },
@@ -1753,7 +1753,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fordi"
       }
     }
   },
@@ -1762,7 +1762,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ratio"
       }
     }
   },
@@ -1771,7 +1771,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "proposjon"
       }
     }
   },
@@ -1780,7 +1780,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "punkt minus"
       }
     }
   },
@@ -1789,7 +1789,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "overflødig"
       }
     }
   },
@@ -1798,7 +1798,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "geometrisk proposjon"
       }
     }
   },
@@ -1807,7 +1807,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "homotetisk"
       }
     }
   },
@@ -1816,7 +1816,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde"
       }
     }
   },
@@ -1825,7 +1825,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt tilde"
       }
     }
   },
@@ -1834,7 +1834,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt liggande S"
       }
     }
   },
@@ -1843,7 +1843,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sinusbølge"
       }
     }
   },
@@ -1852,7 +1852,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kransprodukt"
       }
     }
   },
@@ -1861,7 +1861,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje tilde"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minus tilde"
       }
     }
   },
@@ -1879,7 +1879,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asymptomatisk lik"
       }
     }
   },
@@ -1888,7 +1888,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje asymptomatisk lik"
       }
     }
   },
@@ -1897,7 +1897,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilnærma lik"
       }
     }
   },
@@ -1906,7 +1906,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilnærma men ikkje faktisk lik"
       }
     }
   },
@@ -1915,7 +1915,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hverken tilnærma eller faktisk lik"
       }
     }
   },
@@ -1924,7 +1924,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilnærma lik"
       }
     }
   },
@@ -1933,7 +1933,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje tilnærma lik"
       }
     }
   },
@@ -1942,7 +1942,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nesten lik eller er lik"
       }
     }
   },
@@ -1951,7 +1951,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippeltilde"
       }
     }
   },
@@ -1960,7 +1960,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "alle er lik"
       }
     }
   },
@@ -1969,7 +1969,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ekvivalent med"
       }
     }
   },
@@ -1978,7 +1978,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "geometrisk ekvivalent med"
       }
     }
   },
@@ -1987,7 +1987,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forskjellein mellom"
       }
     }
   },
@@ -1996,7 +1996,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "går mot grensa"
       }
     }
   },
@@ -2005,7 +2005,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "geometrisk lik"
       }
     }
   },
@@ -2014,7 +2014,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilnærma lik eller bildet av"
       }
     }
   },
@@ -2023,7 +2023,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bildet av eller tilnærma lik"
       }
     }
   },
@@ -2032,7 +2032,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kolon er lik"
       }
     }
   },
@@ -2041,7 +2041,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik kolon"
       }
     }
   },
@@ -2050,7 +2050,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ring i lik"
       }
     }
   },
@@ -2059,7 +2059,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ring lik"
       }
     }
   },
@@ -2068,7 +2068,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "korresponderer til"
       }
     }
   },
@@ -2077,7 +2077,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "estimert"
       }
     }
   },
@@ -2086,7 +2086,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "likevektet med"
       }
     }
   },
@@ -2095,7 +2095,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stjerne er lik"
       }
     }
   },
@@ -2104,7 +2104,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "delta er lik"
       }
     }
   },
@@ -2113,7 +2113,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er definert å være"
       }
     }
   },
@@ -2122,7 +2122,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er målt per"
       }
     }
   },
@@ -2131,7 +2131,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "spurt om er lik"
       }
     }
   },
@@ -2140,7 +2140,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er ikkje lik"
       }
     }
   },
@@ -2149,7 +2149,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er identisk lik"
       }
     }
   },
@@ -2158,7 +2158,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er ikkje identisk lik"
       }
     }
   },
@@ -2167,7 +2167,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er strengt ekvivalent med"
       }
     }
   },
@@ -2176,7 +2176,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn eller er lik"
       }
     }
   },
@@ -2185,7 +2185,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn eller er lik"
       }
     }
   },
@@ -2194,7 +2194,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn over er lik"
       }
     }
   },
@@ -2203,7 +2203,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn over er lik"
       }
     }
   },
@@ -2212,7 +2212,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn men ikkje lik"
       }
     }
   },
@@ -2221,7 +2221,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn men ikkje lik"
       }
     }
   },
@@ -2230,7 +2230,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mye mindre enn"
       }
     }
   },
@@ -2239,7 +2239,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mye større enn"
       }
     }
   },
@@ -2248,7 +2248,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellom"
       }
     }
   },
@@ -2257,7 +2257,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er ikkje ekvivalent med"
       }
     }
   },
@@ -2266,7 +2266,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er ikkje mindre enn"
       }
     }
   },
@@ -2275,7 +2275,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er ikkje større enn"
       }
     }
   },
@@ -2284,7 +2284,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er hverken mindre enn eller lik"
       }
     }
   },
@@ -2293,7 +2293,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er hverken større enn eller er lik"
       }
     }
   },
@@ -2302,7 +2302,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn eller ekvivalent med"
       }
     }
   },
@@ -2311,7 +2311,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn eller ekvivalent med"
       }
     }
   },
@@ -2320,7 +2320,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er hverken mindre enn eller ekvivalent med"
       }
     }
   },
@@ -2329,7 +2329,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er hverken større enn eller ekvivalent med"
       }
     }
   },
@@ -2338,7 +2338,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn eller større enn"
       }
     }
   },
@@ -2347,7 +2347,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn eller mindre enn"
       }
     }
   },
@@ -2356,7 +2356,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er hverken mindre enn eller større enn"
       }
     }
   },
@@ -2365,7 +2365,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er hverken større enn eller mindre enn"
       }
     }
   },
@@ -2374,7 +2374,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forut for"
       }
     }
   },
@@ -2383,7 +2383,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølger"
       }
     }
   },
@@ -2392,7 +2392,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forut for eller er lik"
       }
     }
   },
@@ -2401,7 +2401,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølger eller er lik"
       }
     }
   },
@@ -2410,7 +2410,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forut for eller er ekvivalent med"
       }
     }
   },
@@ -2419,7 +2419,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølger eller er ekvivalent med"
       }
     }
   },
@@ -2428,7 +2428,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "står ikkje foran"
       }
     }
   },
@@ -2437,7 +2437,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "står ikkje etter"
       }
     }
   },
@@ -2446,7 +2446,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett av"
       }
     }
   },
@@ -2455,7 +2455,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett av"
       }
     }
   },
@@ -2464,7 +2464,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje et subsett av"
       }
     }
   },
@@ -2473,7 +2473,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje et supersett av"
       }
     }
   },
@@ -2482,7 +2482,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett av eller er lik"
       }
     }
   },
@@ -2491,7 +2491,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett av eller er lik"
       }
     }
   },
@@ -2500,7 +2500,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hverken subsett av eller er lik"
       }
     }
   },
@@ -2509,7 +2509,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hverken supersett av eller er lik"
       }
     }
   },
@@ -2518,7 +2518,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett av eller er ikkje lik"
       }
     }
   },
@@ -2527,7 +2527,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett av eller er ikkje lik"
       }
     }
   },
@@ -2536,7 +2536,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multisett"
       }
     }
   },
@@ -2545,7 +2545,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multisett-multiplikasjon"
       }
     }
   },
@@ -2554,7 +2554,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multisett union"
       }
     }
   },
@@ -2563,7 +2563,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratbildet av"
       }
     }
   },
@@ -2572,7 +2572,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "originalkvadrat av"
       }
     }
   },
@@ -2581,7 +2581,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratbilde av eller er lik"
       }
     }
   },
@@ -2590,7 +2590,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratoriginal av eller er lik"
       }
     }
   },
@@ -2599,7 +2599,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrattopp"
       }
     }
   },
@@ -2608,7 +2608,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratkopp"
       }
     }
   },
@@ -2617,7 +2617,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkla pluss"
       }
     }
   },
@@ -2626,7 +2626,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkla minus"
       }
     }
   },
@@ -2635,7 +2635,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkla ganger"
       }
     }
   },
@@ -2644,7 +2644,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkla delt på"
       }
     }
   },
@@ -2653,7 +2653,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkla punkt"
       }
     }
   },
@@ -2662,7 +2662,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "innsirkla ring"
       }
     }
   },
@@ -2671,7 +2671,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "innsirkla asterisk"
       }
     }
   },
@@ -2680,7 +2680,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel er lik"
       }
     }
   },
@@ -2689,7 +2689,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkelstrek"
       }
     }
   },
@@ -2698,7 +2698,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratpluss"
       }
     }
   },
@@ -2707,7 +2707,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratminus"
       }
     }
   },
@@ -2716,7 +2716,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratganger"
       }
     }
   },
@@ -2725,7 +2725,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratprikk"
       }
     }
   },
@@ -2734,7 +2734,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrestift"
       }
     }
   },
@@ -2743,7 +2743,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrestift"
       }
     }
   },
@@ -2752,7 +2752,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverstift"
       }
     }
   },
@@ -2761,7 +2761,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverstift"
       }
     }
   },
@@ -2770,7 +2770,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "påstand"
       }
     }
   },
@@ -2779,7 +2779,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "modellerer"
       }
     }
   },
@@ -2788,7 +2788,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sant"
       }
     }
   },
@@ -2797,7 +2797,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tvinger"
       }
     }
   },
@@ -2806,7 +2806,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel vertikalstrek høgrerotert"
       }
     }
   },
@@ -2815,7 +2815,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel vertikalstrek dobbel høgrerotert"
       }
     }
   },
@@ -2824,7 +2824,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "beviser ikkje"
       }
     }
   },
@@ -2833,7 +2833,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje sant"
       }
     }
   },
@@ -2842,7 +2842,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tvinger ikkje"
       }
     }
   },
@@ -2851,7 +2851,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "negert dobbel vertikalstrek dobbel høgrerotert"
       }
     }
   },
@@ -2860,7 +2860,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forut for under forhold"
       }
     }
   },
@@ -2869,7 +2869,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølger under forhold"
       }
     }
   },
@@ -2878,7 +2878,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "normal undergruppe av"
       }
     }
   },
@@ -2887,7 +2887,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld som normal undergruppe"
       }
     }
   },
@@ -2896,7 +2896,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "normal undergruppe av eller er lik"
       }
     }
   },
@@ -2905,7 +2905,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld som normal undergruppe eller er lik"
       }
     }
   },
@@ -2914,7 +2914,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "original av"
       }
     }
   },
@@ -2923,7 +2923,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bilde av"
       }
     }
   },
@@ -2932,7 +2932,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multikart"
       }
     }
   },
@@ -2941,7 +2941,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hermitisk bøyingsmatrise"
       }
     }
   },
@@ -2950,7 +2950,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interkalatere"
       }
     }
   },
@@ -2959,7 +2959,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "xor"
       }
     }
   },
@@ -2968,7 +2968,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nand"
       }
     }
   },
@@ -2977,7 +2977,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "og heller ikkje"
       }
     }
   },
@@ -2986,7 +2986,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre triangel"
       }
     }
   },
@@ -2995,7 +2995,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "logisk og"
       }
     }
   },
@@ -3004,7 +3004,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "logisk eller"
       }
     }
   },
@@ -3013,7 +3013,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interseksjon"
       }
     }
   },
@@ -3022,7 +3022,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "union"
       }
     }
   },
@@ -3031,7 +3031,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diamant"
       }
     }
   },
@@ -3040,7 +3040,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ganger"
       }
     }
   },
@@ -3049,7 +3049,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stjerne"
       }
     }
   },
@@ -3058,7 +3058,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "divisjon ganger"
       }
     }
   },
@@ -3067,7 +3067,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sløyfe"
       }
     }
   },
@@ -3076,7 +3076,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre normalfaktor semidirekte produkt"
       }
     }
   },
@@ -3085,7 +3085,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre normalfaktor semidirekte produkt"
       }
     }
   },
@@ -3094,7 +3094,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre semidirekte produkt"
       }
     }
   },
@@ -3103,7 +3103,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre semidirekte produkt"
       }
     }
   },
@@ -3112,7 +3112,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt tilde er lik"
       }
     }
   },
@@ -3121,7 +3121,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "krøllete logisk eller"
       }
     }
   },
@@ -3130,7 +3130,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "krøllete logisk og"
       }
     }
   },
@@ -3139,7 +3139,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelt subsett"
       }
     }
   },
@@ -3148,7 +3148,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelt supersett"
       }
     }
   },
@@ -3157,7 +3157,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel interseksjon"
       }
     }
   },
@@ -3166,7 +3166,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel union"
       }
     }
   },
@@ -3175,7 +3175,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høygaffel"
       }
     }
   },
@@ -3184,7 +3184,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik og parallel til"
       }
     }
   },
@@ -3193,7 +3193,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn med prikk"
       }
     }
   },
@@ -3202,7 +3202,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn med prikk"
       }
     }
   },
@@ -3211,7 +3211,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er veldig mye mindre enn"
       }
     }
   },
@@ -3220,7 +3220,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er veldig mye større enn"
       }
     }
   },
@@ -3229,7 +3229,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn er lik eller større enn"
       }
     }
   },
@@ -3238,7 +3238,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn er lik eller mindre enn"
       }
     }
   },
@@ -3247,7 +3247,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik eller mindre enn"
       }
     }
   },
@@ -3256,7 +3256,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik eller større enn"
       }
     }
   },
@@ -3265,7 +3265,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik eller går forut for"
       }
     }
   },
@@ -3274,7 +3274,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik eller etterfølger"
       }
     }
   },
@@ -3283,7 +3283,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "går ikkje forut for eller er ikkje lik"
       }
     }
   },
@@ -3292,7 +3292,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "følger ikkje etter eller er ikkje lik"
       }
     }
   },
@@ -3301,7 +3301,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er ikkje kvadratbilde av eller er ikkje lik"
       }
     }
   },
@@ -3310,7 +3310,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er ikkje kvadratoriginal av eller er ikkje lik"
       }
     }
   },
@@ -3319,7 +3319,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er kvadratbilde av eller er ikkje lik"
       }
     }
   },
@@ -3328,7 +3328,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er kvadratoriginal av eller er ikkje lik"
       }
     }
   },
@@ -3337,7 +3337,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn men ikkje ekvivalent med"
       }
     }
   },
@@ -3346,7 +3346,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn men ikkje ekvivalent med"
       }
     }
   },
@@ -3355,7 +3355,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "går forut for men er ikkje ekvivalent med"
       }
     }
   },
@@ -3364,7 +3364,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølger men er ikkje ekvivalent med"
       }
     }
   },
@@ -3373,7 +3373,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er ikkje normal undergruppe av"
       }
     }
   },
@@ -3382,7 +3382,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld ikkje som normal undergruppe"
       }
     }
   },
@@ -3391,7 +3391,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er ikkje normal undergruppe av eller lik"
       }
     }
   },
@@ -3400,7 +3400,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld ikkje som normal undergruppe eller lik"
       }
     }
   },
@@ -3409,7 +3409,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal ellipse"
       }
     }
   },
@@ -3418,7 +3418,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prikk prikk prikk"
       }
     }
   },
@@ -3427,7 +3427,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diagonal ellipse oppover mot høgre"
       }
     }
   },
@@ -3436,7 +3436,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diagonal ellipse nedover mot høgre"
       }
     }
   },
@@ -3445,7 +3445,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "element av med lang horisontal strek"
       }
     }
   },
@@ -3454,7 +3454,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "element av med vertikal strek ved sluttein av horisontal strek"
       }
     }
   },
@@ -3463,7 +3463,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite element av med vertikal strek ved sluttein av horisontal strek"
       }
     }
   },
@@ -3472,7 +3472,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "element av med prikk over"
       }
     }
   },
@@ -3481,7 +3481,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "element av med strek over"
       }
     }
   },
@@ -3490,7 +3490,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite element av med strek over"
       }
     }
   },
@@ -3499,7 +3499,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "element av med understrek"
       }
     }
   },
@@ -3508,7 +3508,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "element av med to horisontale strek"
       }
     }
   },
@@ -3517,7 +3517,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld med lang horisontal strek"
       }
     }
   },
@@ -3526,7 +3526,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld med vertikal strek ved slutt av horisontal strek"
       }
     }
   },
@@ -3535,7 +3535,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld med vertikal strek ved slutt av horisontal strek"
       }
     }
   },
@@ -3544,7 +3544,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inneheld med strek over"
       }
     }
   },
@@ -3553,7 +3553,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten inneheld med strek over"
       }
     }
   },
@@ -3562,7 +3562,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z-notasjon sekkemedlemskap"
       }
     }
   },
@@ -3571,7 +3571,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diameter"
       }
     }
   },
@@ -3580,7 +3580,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hus"
       }
     }
   },
@@ -3589,7 +3589,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "projektiv"
       }
     }
   },
@@ -3598,7 +3598,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "perspektiv"
       }
     }
   },
@@ -3607,7 +3607,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bølga linje"
       }
     }
   },
@@ -3616,7 +3616,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt ikkje"
       }
     }
   },
@@ -3625,7 +3625,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "firkantet ruter"
       }
     }
   },
@@ -3634,7 +3634,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boge"
       }
     }
   },
@@ -3643,7 +3643,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "segment"
       }
     }
   },
@@ -3652,7 +3652,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sektor"
       }
     }
   },
@@ -3661,7 +3661,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit pluss"
       }
     }
   },
@@ -3670,7 +3670,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit minus"
       }
     }
   },
@@ -3679,7 +3679,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit delt på"
       }
     }
   },
@@ -3688,7 +3688,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "krøllete løkke"
       }
     }
   },
@@ -3697,7 +3697,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel krøllete løkke"
       }
     }
   },
@@ -3706,7 +3706,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt triangel med lite kvitt triangel"
       }
     }
   },
@@ -3715,7 +3715,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vinkelrett"
       }
     }
   },
@@ -3724,7 +3724,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opent subsett"
       }
     }
   },
@@ -3733,7 +3733,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opent supersett"
       }
     }
   },
@@ -3742,7 +3742,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eller med prikk i"
       }
     }
   },
@@ -3751,7 +3751,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bakoverstrek foran subsett"
       }
     }
   },
@@ -3760,7 +3760,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett foran skråstrek"
       }
     }
   },
@@ -3769,7 +3769,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal strek med horisontal strek"
       }
     }
   },
@@ -3778,7 +3778,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stigande diagonal"
       }
     }
   },
@@ -3787,7 +3787,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang utregning"
       }
     }
   },
@@ -3796,7 +3796,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "synkande diagonal"
       }
     }
   },
@@ -3805,7 +3805,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opphøyd i andre potens og"
       }
     }
   },
@@ -3814,7 +3814,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opphøyd i andre potens eller"
       }
     }
   },
@@ -3823,7 +3823,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit diamant med prikk"
       }
     }
   },
@@ -3832,7 +3832,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "og med prikk"
       }
     }
   },
@@ -3841,7 +3841,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "element av med opning i toppen"
       }
     }
   },
@@ -3850,7 +3850,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre høgre hjørne med prikk"
       }
     }
   },
@@ -3859,7 +3859,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre venstre hjørne med prikk"
       }
     }
   },
@@ -3868,7 +3868,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre ytre ledd"
       }
     }
   },
@@ -3877,7 +3877,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre ytre ledd"
       }
     }
   },
@@ -3886,7 +3886,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fullt ytre ledd"
       }
     }
   },
@@ -3895,7 +3895,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor stift oppover"
       }
     }
   },
@@ -3904,7 +3904,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor stift nedover"
       }
     }
   },
@@ -3913,7 +3913,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre og høgre dobbel rotasjon"
       }
     }
   },
@@ -3922,7 +3922,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre og høgre stift"
       }
     }
   },
@@ -3931,7 +3931,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre multikart"
       }
     }
   },
@@ -3940,7 +3940,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang høgrestift"
       }
     }
   },
@@ -3949,7 +3949,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang venstrestift"
       }
     }
   },
@@ -3958,7 +3958,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverstift med sirkel over"
       }
     }
   },
@@ -3967,7 +3967,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ruter delt horisontalt"
       }
     }
   },
@@ -3976,7 +3976,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit diamant med konkave sider"
       }
     }
   },
@@ -3985,7 +3985,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit diamant med konkave sider og venstrestift"
       }
     }
   },
@@ -3994,7 +3994,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit diamant med konkave sider og høgrestift"
       }
     }
   },
@@ -4003,7 +4003,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt kvadrat med venstrestift"
       }
     }
   },
@@ -4012,7 +4012,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt kvadrat med høgrestift"
       }
     }
   },
@@ -4021,7 +4021,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stigande diagonal som krysser synkande diagonal"
       }
     }
   },
@@ -4030,7 +4030,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "synkande diagonal som krysser stigande diagonal"
       }
     }
   },
@@ -4039,7 +4039,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel vertikalstrek-avgrensing"
       }
     }
   },
@@ -4048,7 +4048,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z-notasjonssted"
       }
     }
   },
@@ -4057,7 +4057,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z-notasjonsstypekolon"
       }
     }
   },
@@ -4066,7 +4066,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prikkstrek"
       }
     }
   },
@@ -4075,7 +4075,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal sikksakklinje"
       }
     }
   },
@@ -4084,7 +4084,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt tomt sett"
       }
     }
   },
@@ -4093,7 +4093,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tomt sett med strek over"
       }
     }
   },
@@ -4102,7 +4102,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tomt sett med sirkel over"
       }
     }
   },
@@ -4111,7 +4111,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med horisontal strek"
       }
     }
   },
@@ -4120,7 +4120,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med vertikal strek"
       }
     }
   },
@@ -4129,7 +4129,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med parallelle strekar"
       }
     }
   },
@@ -4138,7 +4138,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med bakoverstrek"
       }
     }
   },
@@ -4147,7 +4147,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med vinkelrett stift"
       }
     }
   },
@@ -4156,7 +4156,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med horisontal strek og øvre halvdel med vertikal strek"
       }
     }
   },
@@ -4165,7 +4165,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med x lagt over"
       }
     }
   },
@@ -4174,7 +4174,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med deleteikn rotert mot klokka"
       }
     }
   },
@@ -4183,7 +4183,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med kvitt punkt"
       }
     }
   },
@@ -4192,7 +4192,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med punkt"
       }
     }
   },
@@ -4201,7 +4201,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med mindre enn"
       }
     }
   },
@@ -4210,7 +4210,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med større enn"
       }
     }
   },
@@ -4219,7 +4219,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med liten sirkel på høgre side"
       }
     }
   },
@@ -4228,7 +4228,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med to horisontale strekar på høgre side"
       }
     }
   },
@@ -4237,7 +4237,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med stigande diagonal strek"
       }
     }
   },
@@ -4246,7 +4246,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med fallende diagonal strek"
       }
     }
   },
@@ -4255,7 +4255,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med asterisk"
       }
     }
   },
@@ -4264,7 +4264,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med liten sirkel"
       }
     }
   },
@@ -4273,7 +4273,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med kvadrat"
       }
     }
   },
@@ -4282,7 +4282,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "to sammenhengande kvadrat"
       }
     }
   },
@@ -4291,7 +4291,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "triangel med prikk over"
       }
     }
   },
@@ -4300,7 +4300,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "triangel med strek under"
       }
     }
   },
@@ -4309,7 +4309,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "triangel med s"
       }
     }
   },
@@ -4318,7 +4318,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "triangel med seriffer i botnen"
       }
     }
   },
@@ -4327,7 +4327,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgretriangel over venstretriangel"
       }
     }
   },
@@ -4336,7 +4336,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstretriangel ved siden av vertikal strek"
       }
     }
   },
@@ -4345,7 +4345,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal strek ved siden av høgretriangel"
       }
     }
   },
@@ -4354,7 +4354,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sløyfe med svart venstreside"
       }
     }
   },
@@ -4363,7 +4363,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sløyfe med svart høgreside"
       }
     }
   },
@@ -4372,7 +4372,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart sløyfe"
       }
     }
   },
@@ -4381,7 +4381,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ganger med svart venstreside"
       }
     }
   },
@@ -4390,7 +4390,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ganger med svart høgreside"
       }
     }
   },
@@ -4399,7 +4399,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt timeglass"
       }
     }
   },
@@ -4408,7 +4408,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart timeglass"
       }
     }
   },
@@ -4417,7 +4417,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ukomplett uendeleg"
       }
     }
   },
@@ -4426,7 +4426,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boge over uendeleg"
       }
     }
   },
@@ -4435,7 +4435,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "uendeleg negert med vertikal strek"
       }
     }
   },
@@ -4444,7 +4444,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multikart med doble ender"
       }
     }
   },
@@ -4453,7 +4453,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med konturkant"
       }
     }
   },
@@ -4462,7 +4462,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øker som"
       }
     }
   },
@@ -4471,7 +4471,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "blandet produkt"
       }
     }
   },
@@ -4480,7 +4480,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik og skrå parallell"
       }
     }
   },
@@ -4489,7 +4489,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik og skrå parallell med tilde over"
       }
     }
   },
@@ -4498,7 +4498,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "identisk med med dobbel skråstrek"
       }
     }
   },
@@ -4507,7 +4507,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sterk er lik"
       }
     }
   },
@@ -4516,7 +4516,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "termodynamisk"
       }
     }
   },
@@ -4525,7 +4525,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "triangel som peker ned med svart venstre halvdel"
       }
     }
   },
@@ -4534,7 +4534,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "triangel som peker ned med svart høgre halvdel"
       }
     }
   },
@@ -4543,7 +4543,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart ruter"
       }
     }
   },
@@ -4552,7 +4552,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feil sperret kvitt kvadrat"
       }
     }
   },
@@ -4561,7 +4561,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feil sperret svart kvadrat"
       }
     }
   },
@@ -4570,7 +4570,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feil sperret kvit diamant"
       }
     }
   },
@@ -4579,7 +4579,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feil sperret svart diamant"
       }
     }
   },
@@ -4588,7 +4588,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feil sperret kvit sirkel"
       }
     }
   },
@@ -4597,7 +4597,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feil sperret svart sirkel"
       }
     }
   },
@@ -4606,7 +4606,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forsinket regel"
       }
     }
   },
@@ -4615,7 +4615,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bakoverstrek"
       }
     }
   },
@@ -4624,7 +4624,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skråstrek med strek over"
       }
     }
   },
@@ -4633,7 +4633,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bakoverstrek med horisontal strek"
       }
     }
   },
@@ -4642,7 +4642,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skråstrek"
       }
     }
   },
@@ -4651,7 +4651,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bakoverstrek"
       }
     }
   },
@@ -4660,7 +4660,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelt plussteikn"
       }
     }
   },
@@ -4669,7 +4669,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippelt plussteikn"
       }
     }
   },
@@ -4678,7 +4678,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite plussteikn"
       }
     }
   },
@@ -4687,7 +4687,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite minusteikn"
       }
     }
   },
@@ -4696,7 +4696,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med punkt"
       }
     }
   },
@@ -4705,7 +4705,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med pluss"
       }
     }
   },
@@ -4714,7 +4714,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med gangeteikn"
       }
     }
   },
@@ -4723,7 +4723,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "union med prikk"
       }
     }
   },
@@ -4732,7 +4732,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "union med pluss"
       }
     }
   },
@@ -4741,7 +4741,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratisk interseksjon"
       }
     }
   },
@@ -4750,7 +4750,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratisk union"
       }
     }
   },
@@ -4759,7 +4759,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "to og"
       }
     }
   },
@@ -4768,7 +4768,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "to eller"
       }
     }
   },
@@ -4777,7 +4777,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ganger"
       }
     }
   },
@@ -4786,7 +4786,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sum av to"
       }
     }
   },
@@ -4795,7 +4795,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "summering med integral"
       }
     }
   },
@@ -4804,7 +4804,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadruppelt integral"
       }
     }
   },
@@ -4813,7 +4813,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "finitt integral"
       }
     }
   },
@@ -4822,7 +4822,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral med dobbeltstrek"
       }
     }
   },
@@ -4831,7 +4831,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral med skråstrek"
       }
     }
   },
@@ -4840,7 +4840,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkuleringsfunksjon"
       }
     }
   },
@@ -4849,7 +4849,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkuleringsfunksjon mot klokka"
       }
     }
   },
@@ -4858,7 +4858,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "linjeintegrasjon med rektangulær sti rundt punkt"
       }
     }
   },
@@ -4867,7 +4867,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "linjeintegrasjon med semisiruklær sti rundt punkt"
       }
     }
   },
@@ -4876,7 +4876,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "linjeintegrasjon som ikkje inkluderer punkt"
       }
     }
   },
@@ -4885,7 +4885,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral rundt eit punkt"
       }
     }
   },
@@ -4894,7 +4894,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral med kvadrat"
       }
     }
   },
@@ -4903,7 +4903,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral med ganger"
       }
     }
   },
@@ -4912,7 +4912,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral med interseksjon"
       }
     }
   },
@@ -4921,7 +4921,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral med union"
       }
     }
   },
@@ -4930,7 +4930,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral med strek over"
       }
     }
   },
@@ -4939,7 +4939,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral med strek under"
       }
     }
   },
@@ -4948,7 +4948,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sammenføy"
       }
     }
   },
@@ -4957,7 +4957,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort venstretriangel"
       }
     }
   },
@@ -4966,7 +4966,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z-notasjon skjemakomposisjon"
       }
     }
   },
@@ -4975,7 +4975,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z-notasjon skjemalaging"
       }
     }
   },
@@ -4984,7 +4984,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z-notasjon skjemaprojeksjon"
       }
     }
   },
@@ -4993,7 +4993,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss med sirkel over"
       }
     }
   },
@@ -5002,7 +5002,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss med hatt"
       }
     }
   },
@@ -5011,7 +5011,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss med tilde"
       }
     }
   },
@@ -5020,7 +5020,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss med prikk under"
       }
     }
   },
@@ -5029,7 +5029,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss med tilde under"
       }
     }
   },
@@ -5038,7 +5038,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss med subskript to"
       }
     }
   },
@@ -5047,7 +5047,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss med svart triangel"
       }
     }
   },
@@ -5056,7 +5056,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minus med komma over"
       }
     }
   },
@@ -5065,7 +5065,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minus med punkt under"
       }
     }
   },
@@ -5074,7 +5074,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minus med synkande punkter"
       }
     }
   },
@@ -5083,7 +5083,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minus med stigande punkter"
       }
     }
   },
@@ -5092,7 +5092,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss i venstre halvsirkel"
       }
     }
   },
@@ -5101,7 +5101,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss i høgre halvsirkel"
       }
     }
   },
@@ -5110,7 +5110,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vektor eller kryssprodukt"
       }
     }
   },
@@ -5119,7 +5119,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multiplikasjon med punkt over"
       }
     }
   },
@@ -5128,7 +5128,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multiplikasjon med strek under"
       }
     }
   },
@@ -5137,7 +5137,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "semidireksjonalt produkt med lukka botn"
       }
     }
   },
@@ -5146,7 +5146,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "smashprodukt"
       }
     }
   },
@@ -5155,7 +5155,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multiplikasjon i venstre halvsirkel"
       }
     }
   },
@@ -5164,7 +5164,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multiplikasjon i høgre halvsirkel"
       }
     }
   },
@@ -5173,7 +5173,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med multiplikasjonsteikn med sirkumfleks"
       }
     }
   },
@@ -5182,7 +5182,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelsirkel med multiplikasjonsteikn"
       }
     }
   },
@@ -5191,7 +5191,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med divisjonsteikn"
       }
     }
   },
@@ -5200,7 +5200,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "triangel med pluss"
       }
     }
   },
@@ -5209,7 +5209,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "triangel med minus"
       }
     }
   },
@@ -5218,7 +5218,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "triangel med multiplikasjonsteikn"
       }
     }
   },
@@ -5227,7 +5227,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "internt produkt"
       }
     }
   },
@@ -5236,7 +5236,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "internt produkt høgre side"
       }
     }
   },
@@ -5245,7 +5245,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z-notasjon forholdskomposisjon"
       }
     }
   },
@@ -5254,7 +5254,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "amalgamasjon eller coprodukt"
       }
     }
   },
@@ -5263,7 +5263,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interseksjon med prikk"
       }
     }
   },
@@ -5272,7 +5272,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "union med minus"
       }
     }
   },
@@ -5281,7 +5281,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "union med strek over"
       }
     }
   },
@@ -5290,7 +5290,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interseksjon med strek over"
       }
     }
   },
@@ -5299,7 +5299,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interseksjon med og"
       }
     }
   },
@@ -5308,7 +5308,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "union med eller"
       }
     }
   },
@@ -5317,7 +5317,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "union over interseksjon"
       }
     }
   },
@@ -5326,7 +5326,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interseksjon over union"
       }
     }
   },
@@ -5335,7 +5335,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "union over strek over interseksjon"
       }
     }
   },
@@ -5344,7 +5344,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interseksjon over strek over union"
       }
     }
   },
@@ -5353,7 +5353,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "union ved siden av og sammenhengande med union"
       }
     }
   },
@@ -5362,7 +5362,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interseksjon ved siden av og sammenhengande med interseksjon"
       }
     }
   },
@@ -5371,7 +5371,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka union med seriffer"
       }
     }
   },
@@ -5380,7 +5380,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka interseksjon med seriffer"
       }
     }
   },
@@ -5389,7 +5389,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel kvadratisk interseksjon"
       }
     }
   },
@@ -5398,7 +5398,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel kvadratisk union"
       }
     }
   },
@@ -5407,7 +5407,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka union med seriffer og smashprodukt"
       }
     }
   },
@@ -5416,7 +5416,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "og med prikk over"
       }
     }
   },
@@ -5425,7 +5425,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eller med prikk over"
       }
     }
   },
@@ -5434,7 +5434,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel logisk og"
       }
     }
   },
@@ -5443,7 +5443,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel logisk eller"
       }
     }
   },
@@ -5452,7 +5452,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "to overlappende og"
       }
     }
   },
@@ -5461,7 +5461,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "to overlappende eller"
       }
     }
   },
@@ -5470,7 +5470,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skrånende stor eller"
       }
     }
   },
@@ -5479,7 +5479,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skrånende stor og"
       }
     }
   },
@@ -5488,7 +5488,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eller overlappende og"
       }
     }
   },
@@ -5497,7 +5497,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "og med midtstamme"
       }
     }
   },
@@ -5506,7 +5506,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eller med midtstamme"
       }
     }
   },
@@ -5515,7 +5515,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "og med horisontal strek"
       }
     }
   },
@@ -5524,7 +5524,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eller med horisontal strek"
       }
     }
   },
@@ -5533,7 +5533,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "og med dobbel strek over"
       }
     }
   },
@@ -5542,7 +5542,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "og med strek under"
       }
     }
   },
@@ -5551,7 +5551,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "og med dobbel strek under"
       }
     }
   },
@@ -5560,7 +5560,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten v med strek under"
       }
     }
   },
@@ -5569,7 +5569,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eller med dobbel strek over"
       }
     }
   },
@@ -5578,7 +5578,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eller med dobbel strek under"
       }
     }
   },
@@ -5587,7 +5587,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z-notasjon med domene-antirestriksjon"
       }
     }
   },
@@ -5596,7 +5596,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z-notasjon med område-antirestriksjon"
       }
     }
   },
@@ -5605,7 +5605,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik med prikk under"
       }
     }
   },
@@ -5614,7 +5614,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "identisk med med prikk over"
       }
     }
   },
@@ -5623,7 +5623,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel horisontal strek med dobbel vertikal strek"
       }
     }
   },
@@ -5632,7 +5632,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel horisontal strek med trippel vertikal strek"
       }
     }
   },
@@ -5641,7 +5641,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde med prikk"
       }
     }
   },
@@ -5650,7 +5650,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde med stigande prikkjer"
       }
     }
   },
@@ -5659,7 +5659,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ligner minus ligner"
       }
     }
   },
@@ -5668,7 +5668,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kongruent med prikk over"
       }
     }
   },
@@ -5677,7 +5677,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik med asterisk"
       }
     }
   },
@@ -5686,7 +5686,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nesten er lik med hatt"
       }
     }
   },
@@ -5695,7 +5695,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omtrent lik eller lik"
       }
     }
   },
@@ -5704,7 +5704,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik med pluss under"
       }
     }
   },
@@ -5713,7 +5713,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik med pluss over"
       }
     }
   },
@@ -5722,7 +5722,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde med er lik over"
       }
     }
   },
@@ -5731,7 +5731,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel kolon er lik"
       }
     }
   },
@@ -5740,7 +5740,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "to etterfølgande er lik"
       }
     }
   },
@@ -5749,7 +5749,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre etterfølgande er lik"
       }
     }
   },
@@ -5758,7 +5758,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik med to prikkjer over og to prikkjer under"
       }
     }
   },
@@ -5767,7 +5767,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ekvivalent med fire prikkjer over"
       }
     }
   },
@@ -5776,7 +5776,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn med sirkel inni"
       }
     }
   },
@@ -5785,7 +5785,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn med sirkel inni"
       }
     }
   },
@@ -5794,7 +5794,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn med spørsmålsteikn over"
       }
     }
   },
@@ -5803,7 +5803,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn med spørsmålsteikn over"
       }
     }
   },
@@ -5812,7 +5812,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn eller skrå er lik"
       }
     }
   },
@@ -5821,7 +5821,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn eller skrå er lik"
       }
     }
   },
@@ -5830,7 +5830,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn eller skrå er lik med prikk inni"
       }
     }
   },
@@ -5839,7 +5839,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn eller skrå er lik med prikk inni"
       }
     }
   },
@@ -5848,7 +5848,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn eller skrå er lik med prikk over"
       }
     }
   },
@@ -5857,7 +5857,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn eller skrå er lik med prikk over"
       }
     }
   },
@@ -5866,7 +5866,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn eller skrå er lik med prikk over høgre"
       }
     }
   },
@@ -5875,7 +5875,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn eller skrå er lik med prikk over venstre"
       }
     }
   },
@@ -5884,7 +5884,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn eller tilnærma lik"
       }
     }
   },
@@ -5893,7 +5893,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn eller tilnærma lik"
       }
     }
   },
@@ -5902,7 +5902,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn og enkel strek er ikkje lik"
       }
     }
   },
@@ -5911,7 +5911,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn og enkel strek er ikkje lik"
       }
     }
   },
@@ -5920,7 +5920,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn men ikkje tilnærma lik"
       }
     }
   },
@@ -5929,7 +5929,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn men ikkje tilnærma lik"
       }
     }
   },
@@ -5938,7 +5938,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn over dobbel strek er lik over større enn"
       }
     }
   },
@@ -5947,7 +5947,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn over dobbel strek er lik over mindre enn"
       }
     }
   },
@@ -5956,7 +5956,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn over er tilnærma lik eller er lik"
       }
     }
   },
@@ -5965,7 +5965,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn over er tilnærma lik eller er lik"
       }
     }
   },
@@ -5974,7 +5974,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn over tilnærma lik over større enn"
       }
     }
   },
@@ -5983,7 +5983,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn over tilnærma lik over mindre enn"
       }
     }
   },
@@ -5992,7 +5992,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn større enn eller lik"
       }
     }
   },
@@ -6001,7 +6001,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn mindre enn eller lik"
       }
     }
   },
@@ -6010,7 +6010,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn over skrå er lik over større enn over skrå er lik"
       }
     }
   },
@@ -6019,7 +6019,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn over skrå er lik over mindre enn over skrå er lik"
       }
     }
   },
@@ -6028,7 +6028,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skrå er lik eller mindre enn"
       }
     }
   },
@@ -6037,7 +6037,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skrå er lik eller større enn"
       }
     }
   },
@@ -6046,7 +6046,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skrå er lik eller mindre enn med prikk inni"
       }
     }
   },
@@ -6055,7 +6055,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skrå er lik eller større enn med prikk inni"
       }
     }
   },
@@ -6064,7 +6064,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik eller mindre enn"
       }
     }
   },
@@ -6073,7 +6073,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er like eller større enn"
       }
     }
   },
@@ -6082,7 +6082,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skrå er lik eller mindre enn"
       }
     }
   },
@@ -6091,7 +6091,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skrå er lik eller større enn"
       }
     }
   },
@@ -6100,7 +6100,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilnærma lik eller mindre enn"
       }
     }
   },
@@ -6109,7 +6109,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilnærma lik eller større enn"
       }
     }
   },
@@ -6118,7 +6118,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilnærma over mindre enn over er lik"
       }
     }
   },
@@ -6127,7 +6127,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilnærma lik over større enn over er lik"
       }
     }
   },
@@ -6136,7 +6136,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel mindre enn"
       }
     }
   },
@@ -6145,7 +6145,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel større enn"
       }
     }
   },
@@ -6154,7 +6154,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel mindre enn med strek under"
       }
     }
   },
@@ -6163,7 +6163,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn som overlapper mindre enn"
       }
     }
   },
@@ -6172,7 +6172,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn ved siden av mindre enn"
       }
     }
   },
@@ -6181,7 +6181,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn lukka med boge"
       }
     }
   },
@@ -6190,7 +6190,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn lukka med boge"
       }
     }
   },
@@ -6199,7 +6199,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn lukka med boge over skrå er lik"
       }
     }
   },
@@ -6208,7 +6208,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn lukka med boge over skrå er lik"
       }
     }
   },
@@ -6217,7 +6217,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn"
       }
     }
   },
@@ -6226,7 +6226,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn"
       }
     }
   },
@@ -6235,7 +6235,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er mindre enn eller lik"
       }
     }
   },
@@ -6244,7 +6244,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er større enn eller er lik"
       }
     }
   },
@@ -6253,7 +6253,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik med fartsdump"
       }
     }
   },
@@ -6262,7 +6262,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "foregående over enkel er lik"
       }
     }
   },
@@ -6271,7 +6271,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølgande over enkel er lik"
       }
     }
   },
@@ -6280,7 +6280,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "foregående over enkel er ikkje lik"
       }
     }
   },
@@ -6289,7 +6289,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølgande over enkel er ikkje lik"
       }
     }
   },
@@ -6298,7 +6298,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "foregående over er lik"
       }
     }
   },
@@ -6307,7 +6307,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølgande over er lik"
       }
     }
   },
@@ -6316,7 +6316,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "foregående over er ikkje lik"
       }
     }
   },
@@ -6325,7 +6325,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølgande over er ikkje lik"
       }
     }
   },
@@ -6334,7 +6334,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "foregående over er tilnærma lik"
       }
     }
   },
@@ -6343,7 +6343,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølgande over er tilnærma lik"
       }
     }
   },
@@ -6352,7 +6352,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "foregående over er ikkje tilnærma lik"
       }
     }
   },
@@ -6361,7 +6361,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "etterfølgande over er ikkje tilnærma lik"
       }
     }
   },
@@ -6370,7 +6370,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel foregående"
       }
     }
   },
@@ -6379,7 +6379,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel etterfølgande"
       }
     }
   },
@@ -6388,7 +6388,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett med prikk"
       }
     }
   },
@@ -6397,7 +6397,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett med prikk"
       }
     }
   },
@@ -6406,7 +6406,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett med pluss under"
       }
     }
   },
@@ -6415,7 +6415,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett med pluss under"
       }
     }
   },
@@ -6424,7 +6424,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett med multiplikasjonsteikn under"
       }
     }
   },
@@ -6433,7 +6433,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett med multiplikasjonsteikn under"
       }
     }
   },
@@ -6442,7 +6442,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett av eller er lik med prikk over"
       }
     }
   },
@@ -6451,7 +6451,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett av eller er lik med prikk over"
       }
     }
   },
@@ -6460,7 +6460,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett av over er lik"
       }
     }
   },
@@ -6469,7 +6469,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett av over er lik"
       }
     }
   },
@@ -6478,7 +6478,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett av over tilde"
       }
     }
   },
@@ -6487,7 +6487,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett av over tilde"
       }
     }
   },
@@ -6496,7 +6496,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett av over tilnærma lik"
       }
     }
   },
@@ -6505,7 +6505,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett av over tilnærma lik"
       }
     }
   },
@@ -6514,7 +6514,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett av over er ikkje lik"
       }
     }
   },
@@ -6523,7 +6523,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett av over er ikkje lik"
       }
     }
   },
@@ -6532,7 +6532,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratisk venstre open boks"
       }
     }
   },
@@ -6541,7 +6541,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadratisk høgre open boks"
       }
     }
   },
@@ -6550,7 +6550,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka subsett"
       }
     }
   },
@@ -6559,7 +6559,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka supersett"
       }
     }
   },
@@ -6568,7 +6568,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka subsett eller lik"
       }
     }
   },
@@ -6577,7 +6577,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka supersett eller lik"
       }
     }
   },
@@ -6586,7 +6586,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett over supersett"
       }
     }
   },
@@ -6595,7 +6595,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett over subsett"
       }
     }
   },
@@ -6604,7 +6604,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subsett over subsett"
       }
     }
   },
@@ -6613,7 +6613,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett over supersett"
       }
     }
   },
@@ -6622,7 +6622,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett beside subsett"
       }
     }
   },
@@ -6631,7 +6631,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett ved siden av og sammenføyd med strek med subsett"
       }
     }
   },
@@ -6640,7 +6640,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "element av som er open nedover"
       }
     }
   },
@@ -6649,7 +6649,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høygaffel med strek over"
       }
     }
   },
@@ -6658,7 +6658,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "transversal interseksjon"
       }
     }
   },
@@ -6667,7 +6667,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gafling"
       }
     }
   },
@@ -6676,7 +6676,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje-gafling"
       }
     }
   },
@@ -6685,7 +6685,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kort venstre stift"
       }
     }
   },
@@ -6694,7 +6694,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kort nedoverstift"
       }
     }
   },
@@ -6703,7 +6703,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kort oppoverstift"
       }
     }
   },
@@ -6712,7 +6712,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vinkelrett på s"
       }
     }
   },
@@ -6721,7 +6721,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal strek med trippel høgre rotasjon"
       }
     }
   },
@@ -6730,7 +6730,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel vertikal strek med venstre rotasjon"
       }
     }
   },
@@ -6739,7 +6739,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal strek med dobbel venstre rotasjon"
       }
     }
   },
@@ -6748,7 +6748,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel vertikal strek med dobbel venstre rotasjon"
       }
     }
   },
@@ -6757,7 +6757,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang strek frå venstre medlem av dobbel vertikal"
       }
     }
   },
@@ -6766,7 +6766,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kort stift nedover med strek over"
       }
     }
   },
@@ -6775,7 +6775,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kort oppoverstift med strek under"
       }
     }
   },
@@ -6784,7 +6784,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kort oppoverstift over kort nedoverstift"
       }
     }
   },
@@ -6793,7 +6793,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel nedoverstift"
       }
     }
   },
@@ -6802,7 +6802,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel oppoverstift"
       }
     }
   },
@@ -6811,7 +6811,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel strek ikkje-teikn"
       }
     }
   },
@@ -6820,7 +6820,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt dobbel strek ikkje-teikn"
       }
     }
   },
@@ -6829,7 +6829,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje delbar med omvendt negasjonsstrek"
       }
     }
   },
@@ -6838,7 +6838,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "veritkal linje med sirkel over"
       }
     }
   },
@@ -6847,7 +6847,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "veritkal linje med sirkel under"
       }
     }
   },
@@ -6856,7 +6856,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverstift med sirkel under"
       }
     }
   },
@@ -6865,7 +6865,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "parallell med horisontal strek"
       }
     }
   },
@@ -6874,7 +6874,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "parallell med tilde"
       }
     }
   },
@@ -6883,7 +6883,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel vertikalstrek med horisontal strek"
       }
     }
   },
@@ -6892,7 +6892,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel vertikalstrek med horisontal strek"
       }
     }
   },
@@ -6901,7 +6901,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel kolon"
       }
     }
   },
@@ -6910,7 +6910,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel nøstet mindre enn"
       }
     }
   },
@@ -6919,7 +6919,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel nøstet større enn"
       }
     }
   },
@@ -6928,7 +6928,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel skråstrek mindre enn eller er lik"
       }
     }
   },
@@ -6937,7 +6937,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel skråstrek større enn eller er lik"
       }
     }
   },
@@ -6946,7 +6946,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel skråstrek binær relasjon"
       }
     }
   },
@@ -6955,7 +6955,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor trippel vertikalstrek"
       }
     }
   },
@@ -6964,7 +6964,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel skråstrek"
       }
     }
   },
@@ -6973,7 +6973,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit vertikal strek"
       }
     }
   },
@@ -6982,7 +6982,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit vertikal strek"
       }
     }
   },
@@ -6991,7 +6991,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bølgestrek"
       }
     }
   },
@@ -7000,7 +7000,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "presentasjonsform av vertikalt komma"
       }
     }
   },
@@ -7009,7 +7009,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "presentasjonsform av vertikalt kolon"
       }
     }
   },
@@ -7018,7 +7018,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "presentasjonsform av vertikalt semikolon"
       }
     }
   },
@@ -7027,7 +7027,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "presentasjonsform av vertikalt utropsteikn"
       }
     }
   },
@@ -7036,7 +7036,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "presentasjonsform av vertikalt spørsmålsteikn"
       }
     }
   },
@@ -7045,7 +7045,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "presentasjonsform av vertikal horisontal ellipse"
       }
     }
   },
@@ -7054,7 +7054,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal topunkts innledning"
       }
     }
   },
@@ -7063,7 +7063,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal em strek"
       }
     }
   },
@@ -7072,7 +7072,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal en strek"
       }
     }
   },
@@ -7081,7 +7081,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal understreking"
       }
     }
   },
@@ -7090,7 +7090,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal bølga understreking"
       }
     }
   },
@@ -7099,7 +7099,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sesamprikk"
       }
     }
   },
@@ -7108,7 +7108,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit sesamprikk"
       }
     }
   },
@@ -7117,7 +7117,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stiplet overlinje"
       }
     }
   },
@@ -7126,7 +7126,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stiplet overlinje med punkter"
       }
     }
   },
@@ -7135,7 +7135,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bølga overlinje"
       }
     }
   },
@@ -7144,7 +7144,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel bølga overlinje"
       }
     }
   },
@@ -7153,7 +7153,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stiplet underlinje"
       }
     }
   },
@@ -7162,7 +7162,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stilpete underlinje med punkter"
       }
     }
   },
@@ -7171,7 +7171,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bølga underlinje"
       }
     }
   },
@@ -7180,7 +7180,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite komma"
       }
     }
   },
@@ -7189,7 +7189,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite punktum"
       }
     }
   },
@@ -7198,7 +7198,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite semikolon"
       }
     }
   },
@@ -7207,7 +7207,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite kolon"
       }
     }
   },
@@ -7216,7 +7216,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite spørsmålsteikn"
       }
     }
   },
@@ -7225,7 +7225,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite utropsteikn"
       }
     }
   },
@@ -7234,7 +7234,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten em-strek"
       }
     }
   },
@@ -7243,7 +7243,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite nummerteikn"
       }
     }
   },
@@ -7252,7 +7252,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten ampersand"
       }
     }
   },
@@ -7261,7 +7261,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten asterisk"
       }
     }
   },
@@ -7270,7 +7270,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite plussteikn"
       }
     }
   },
@@ -7279,7 +7279,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite minusteikn"
       }
     }
   },
@@ -7288,7 +7288,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite mindre enn-teikn"
       }
     }
   },
@@ -7297,7 +7297,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite større enn-teikn"
       }
     }
   },
@@ -7306,7 +7306,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite er lik-teikn"
       }
     }
   },
@@ -7315,7 +7315,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten bakoverstrek"
       }
     }
   },
@@ -7324,7 +7324,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite dollarteikn"
       }
     }
   },
@@ -7333,7 +7333,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lite prosentteikn"
       }
     }
   },
@@ -7342,7 +7342,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten krøllalfa"
       }
     }
   },
@@ -7351,7 +7351,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "utropsteikn"
       }
     }
   },
@@ -7360,7 +7360,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "anførselsteikn"
       }
     }
   },
@@ -7369,7 +7369,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nummerteikn"
       }
     }
   },
@@ -7378,7 +7378,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dollarteikn"
       }
     }
   },
@@ -7387,7 +7387,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prosentteikn"
       }
     }
   },
@@ -7396,7 +7396,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ampersand"
       }
     }
   },
@@ -7405,7 +7405,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "apostrof"
       }
     }
   },
@@ -7414,7 +7414,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk"
       }
     }
   },
@@ -7423,7 +7423,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "plussteikn"
       }
     }
   },
@@ -7432,7 +7432,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "komma"
       }
     }
   },
@@ -7441,7 +7441,7 @@
     "category": "Pd",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minusteikn"
       }
     }
   },
@@ -7450,7 +7450,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "punktum"
       }
     }
   },
@@ -7459,7 +7459,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skråstrek"
       }
     }
   },
@@ -7468,7 +7468,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kolon"
       }
     }
   },
@@ -7477,7 +7477,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "semikolon"
       }
     }
   },
@@ -7486,7 +7486,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn"
       }
     }
   },
@@ -7495,7 +7495,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er lik"
       }
     }
   },
@@ -7504,7 +7504,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn"
       }
     }
   },
@@ -7513,7 +7513,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "spørsmålsteikn"
       }
     }
   },
@@ -7522,7 +7522,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "krøllalfa"
       }
     }
   },
@@ -7531,7 +7531,7 @@
     "category": "Po",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bakoverstrek"
       }
     }
   },
@@ -7540,7 +7540,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hatt"
       }
     }
   },
@@ -7549,7 +7549,7 @@
     "category": "Pc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "strek"
       }
     }
   },
@@ -7558,7 +7558,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gravis"
       }
     }
   },
@@ -7567,7 +7567,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal strek"
       }
     }
   },
@@ -7576,7 +7576,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde"
       }
     }
   },
@@ -7585,7 +7585,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "cent-teikn"
       }
     }
   },
@@ -7594,7 +7594,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pund-teikn"
       }
     }
   },
@@ -7603,7 +7603,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ikkje-teikn"
       }
     }
   },
@@ -7612,7 +7612,7 @@
     "category": "Sk",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "strek"
       }
     }
   },
@@ -7621,7 +7621,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "brutt vertikal strek"
       }
     }
   },
@@ -7630,7 +7630,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "yen-teikn"
       }
     }
   },
@@ -7639,7 +7639,7 @@
     "category": "Sc",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "won-teikn"
       }
     }
   },
@@ -7648,7 +7648,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal strek halv bredde"
       }
     }
   },
@@ -7657,7 +7657,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart kvadrat halv bredde"
       }
     }
   },
@@ -7666,7 +7666,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit sirkel halv bredde"
       }
     }
   }

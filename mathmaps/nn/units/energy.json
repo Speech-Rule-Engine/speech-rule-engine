@@ -12,9 +12,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "watt"
       }
     }
   },
@@ -27,9 +25,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "kilowattime"
       }
     }
   },
@@ -42,9 +38,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "joule"
       }
     }
   },
@@ -57,9 +51,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "newton"
       }
     }
   },
@@ -72,9 +64,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "ampere"
       }
     }
   },
@@ -87,9 +77,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "volt"
       }
     }
   },
@@ -102,9 +90,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "ohm"
       }
     }
   },
@@ -117,9 +103,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "ohm"
       }
     }
   },
@@ -132,9 +116,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -147,9 +129,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": ""
       }
     }
   }

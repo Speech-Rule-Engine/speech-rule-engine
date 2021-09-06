@@ -11,9 +11,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -26,9 +24,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -41,9 +37,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -56,9 +50,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -71,9 +63,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -86,9 +76,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -101,9 +89,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -115,9 +101,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "gram"
       }
     }
   },
@@ -130,9 +114,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "gram"
       }
     }
   },
@@ -144,9 +126,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "mikrogram"
       }
     }
   },
@@ -159,9 +139,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "tonn"
       }
     }
   }

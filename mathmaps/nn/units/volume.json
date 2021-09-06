@@ -11,9 +11,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "kubikk"
       }
     }
   },
@@ -26,9 +24,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -41,9 +37,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -56,9 +50,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -71,9 +63,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -86,9 +76,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -101,9 +89,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -116,9 +102,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -131,9 +115,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -146,9 +128,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -163,9 +143,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "spiseskje"
       }
     }
   },
@@ -178,9 +156,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "teskje"
       }
     }
   },
@@ -193,9 +169,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "N/A"
       }
     }
   },
@@ -208,9 +182,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "kubikkcentimeter"
       }
     }
   },
@@ -223,9 +195,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "liter"
       }
     }
   }

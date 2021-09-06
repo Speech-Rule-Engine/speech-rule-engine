@@ -7,7 +7,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverpil"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverpil"
       }
     }
   },
@@ -43,7 +43,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-høgrepil"
       }
     }
   },
@@ -52,7 +52,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opp-nedpil"
       }
     }
   },
@@ -61,7 +61,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover til venstrepil"
       }
     }
   },
@@ -70,7 +70,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover til høgre-pil"
       }
     }
   },
@@ -79,7 +79,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedover til høgre-pil"
       }
     }
   },
@@ -88,7 +88,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedover til venstre-pil"
       }
     }
   },
@@ -97,7 +97,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med strek"
       }
     }
   },
@@ -106,7 +106,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med strek"
       }
     }
   },
@@ -115,7 +115,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre bølgepil"
       }
     }
   },
@@ -124,7 +124,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre bølgepil"
       }
     }
   },
@@ -133,7 +133,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda venstrepil"
       }
     }
   },
@@ -142,7 +142,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda oppoverpil"
       }
     }
   },
@@ -151,7 +151,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda høgrepil"
       }
     }
   },
@@ -160,7 +160,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda nedoverpil"
       }
     }
   },
@@ -169,7 +169,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med hale"
       }
     }
   },
@@ -178,7 +178,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med hale"
       }
     }
   },
@@ -187,7 +187,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil frå strek"
       }
     }
   },
@@ -196,7 +196,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverpil frå strek"
       }
     }
   },
@@ -205,7 +205,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil frå strek"
       }
     }
   },
@@ -214,7 +214,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverpil frå strek"
       }
     }
   },
@@ -223,7 +223,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opp-nedpil med basis"
       }
     }
   },
@@ -232,7 +232,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med krok"
       }
     }
   },
@@ -241,7 +241,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med krok"
       }
     }
   },
@@ -250,7 +250,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med løkke"
       }
     }
   },
@@ -259,7 +259,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med løkke"
       }
     }
   },
@@ -268,7 +268,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-høgre bølgepil"
       }
     }
   },
@@ -277,7 +277,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-høgrepil med strek"
       }
     }
   },
@@ -286,7 +286,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sikksakk nedoverpil"
       }
     }
   },
@@ -295,7 +295,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverpil som bauger til venstre"
       }
     }
   },
@@ -304,7 +304,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverpil som bauger til høgre"
       }
     }
   },
@@ -313,7 +313,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverpil som bauger til venstre"
       }
     }
   },
@@ -322,7 +322,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverpil som bauger til høgre"
       }
     }
   },
@@ -331,7 +331,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med hjørne nedover"
       }
     }
   },
@@ -340,7 +340,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverpil med venstrehjørne"
       }
     }
   },
@@ -349,7 +349,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "topphalvsirkelpil mot klokka"
       }
     }
   },
@@ -358,7 +358,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "topphalvsirkelpil med klokka"
       }
     }
   },
@@ -367,7 +367,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil oppver til lang strek"
       }
     }
   },
@@ -376,7 +376,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstepil til strek over høgrepil til strek"
       }
     }
   },
@@ -385,7 +385,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "open sirkelpil mot klokka"
       }
     }
   },
@@ -394,7 +394,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "open sirkelpil med klokka"
       }
     }
   },
@@ -403,7 +403,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil over venstrepil"
       }
     }
   },
@@ -412,7 +412,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverpil til venstre for nedoverpil"
       }
     }
   },
@@ -421,7 +421,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil over høgrepil"
       }
     }
   },
@@ -430,7 +430,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre parpiler"
       }
     }
   },
@@ -439,7 +439,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "parpiler oppover"
       }
     }
   },
@@ -448,7 +448,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre parpiler"
       }
     }
   },
@@ -457,7 +457,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "parpiler nedover"
       }
     }
   },
@@ -466,7 +466,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre dobbelpilar med strek"
       }
     }
   },
@@ -475,7 +475,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-høgre dobbeltpil med strek"
       }
     }
   },
@@ -484,7 +484,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre dobbeltpil med strek"
       }
     }
   },
@@ -493,7 +493,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre dobbeltpil"
       }
     }
   },
@@ -502,7 +502,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbeltpil oppover"
       }
     }
   },
@@ -511,7 +511,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbeltpil mot høgre"
       }
     }
   },
@@ -520,7 +520,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbeltpil nedover"
       }
     }
   },
@@ -529,7 +529,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-høgre dobbeltpil"
       }
     }
   },
@@ -538,7 +538,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opp-ned dobbeltpil"
       }
     }
   },
@@ -547,7 +547,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbeltpil opp mot venstre"
       }
     }
   },
@@ -556,7 +556,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbeltpil opp mot høgre"
       }
     }
   },
@@ -565,7 +565,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbeltpil ned mot høgre"
       }
     }
   },
@@ -574,7 +574,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbeltpil ned mot venstre"
       }
     }
   },
@@ -583,7 +583,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippelpil mot venstre"
       }
     }
   },
@@ -592,7 +592,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippelpil mot høgre"
       }
     }
   },
@@ -601,7 +601,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "krusepil mot venstre"
       }
     }
   },
@@ -610,7 +610,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "krusepil mot høgre"
       }
     }
   },
@@ -619,7 +619,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverpil med dobbeltstrek"
       }
     }
   },
@@ -628,7 +628,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverpil med dobbeltstrek"
       }
     }
   },
@@ -637,7 +637,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stipla venstrepil"
       }
     }
   },
@@ -646,7 +646,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stipla oppoverpil"
       }
     }
   },
@@ -655,7 +655,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stipla høgrepil"
       }
     }
   },
@@ -664,7 +664,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stipla nedoverpil"
       }
     }
   },
@@ -673,7 +673,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil mot strek"
       }
     }
   },
@@ -682,7 +682,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil mot strek"
       }
     }
   },
@@ -691,7 +691,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit venstrepil"
       }
     }
   },
@@ -700,7 +700,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit oppoverpil"
       }
     }
   },
@@ -709,7 +709,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit høgrepil"
       }
     }
   },
@@ -718,7 +718,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit nedoverpil"
       }
     }
   },
@@ -727,7 +727,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit oppoverpil frå strek"
       }
     }
   },
@@ -736,7 +736,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit oppoverpil på pidestall"
       }
     }
   },
@@ -745,7 +745,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit oppoverpil på pidestall med horisontal strek"
       }
     }
   },
@@ -754,7 +754,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit oppoverpil på pidestall med vertikal strek"
       }
     }
   },
@@ -763,7 +763,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit dobbeltpil oppover"
       }
     }
   },
@@ -772,7 +772,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit dobbeltpil oppover på pidestall"
       }
     }
   },
@@ -781,7 +781,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit høgrepil frå vegg"
       }
     }
   },
@@ -790,7 +790,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nord-vest-pil til hjørne"
       }
     }
   },
@@ -799,7 +799,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sør-aust-pil til hjørne"
       }
     }
   },
@@ -808,7 +808,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit oppover-nedover-pil"
       }
     }
   },
@@ -817,7 +817,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med liten sirkel"
       }
     }
   },
@@ -826,7 +826,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverpil til venstre for oppoverpil"
       }
     }
   },
@@ -835,7 +835,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre høgrepilar"
       }
     }
   },
@@ -844,7 +844,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med vertikalstrek"
       }
     }
   },
@@ -853,7 +853,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med vertikalstrek"
       }
     }
   },
@@ -862,7 +862,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-høgrepil med dobbel vertikalstrek"
       }
     }
   },
@@ -871,7 +871,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med dobbel vertikalstrek"
       }
     }
   },
@@ -880,7 +880,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med dobbel vertikalstrek"
       }
     }
   },
@@ -889,7 +889,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-høgrepil med dobbel vertikalstrek"
       }
     }
   },
@@ -898,7 +898,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med opent pilhode"
       }
     }
   },
@@ -907,7 +907,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med opent pilhode"
       }
     }
   },
@@ -916,7 +916,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-høgrepil med opent pilhode"
       }
     }
   },
@@ -925,7 +925,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "elektrisk pil"
       }
     }
   },
@@ -934,7 +934,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pilhode opp"
       }
     }
   },
@@ -943,7 +943,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pilhode ned"
       }
     }
   },
@@ -952,7 +952,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pilhode opp mellom to horisontale streker"
       }
     }
   },
@@ -961,7 +961,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "brutt sirkel med nord-vestpil"
       }
     }
   },
@@ -970,7 +970,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit bredhoda høgrepil"
       }
     }
   },
@@ -979,7 +979,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit nedoverpil til høgre"
       }
     }
   },
@@ -988,7 +988,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit høgrepil"
       }
     }
   },
@@ -997,7 +997,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftig pil på skrå mot høgre"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "spisshoda høgrepil"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftig rundhoda høgrepil"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "triangelhoda høgrepil"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftig triangelhoda høgrepil"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stipla triangelhoda høgrepil"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stipla kraftig triangelhoda høgrepil"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart høgrepil"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "3D-høgrepilhode med lys overside"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "3D-høgrepilhode med lys underside"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart høgrepilhode"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart kraftig høgrepil som svinger nedover"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart kraftig høgrepil som svinger oppover"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "klemt svart høgrepil"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "konkav kraftig spisshoda høgrepil"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit høgrepil med skygge til høgre"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit høgrepil med skygge til venstre"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit høgrepil bakovervippet med skygge"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit høgrepil fråmovervippet med skygge"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit kraftig høgrepil med skygge nede til høgre"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit kraftig høgrepil med skygge oppe til høgre"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "innhuka kvit høgrepil med skygge nede til høgre"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "innhuka kvit høgrepil med skygge oppe til høgre"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftig kvit høgrepil i sirkel"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit høgrepil med fjær"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil ned mot høgre med fjær"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med fjær"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil opp mot høgre med fjær"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftig høgrepil ned mot høgre med fjær"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftig høgrepil med fjær"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftig høgrepil opp mot høgre med fjær"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dråpeformet høgrepil"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftig klubbeformet høgrepil"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med splittet hale"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftig høgrepil med splittet hale"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "open omriss-høgrepil"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadruppel oppoverpil"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadruppel nedoverpil"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "open sirkelpil mot klokka"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "open sirkelpil med klokka"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil gjennom sirkel med plussteikn"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang venstrepil"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang høgrepil"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang venstre-høgrepil"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang venstrepil med to strek i halen"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang høgrepil med to strek i halen"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang venstre-høgrepil med to strek i halen"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang venstrepil frå strek"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang høgrepil frå strek"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang venstrepil med to strek i halen frå strek"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang høgrepil med to strek i halen frå strek"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang krusepil mot høgre"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda høgrepil med vertikal strek"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda høgrepil med dobbel vertikal strek"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel venstrepil med vertikal strek"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel høgrepil med vertikal strek"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel venstre-høgrepil med vertikal strek"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda høgrepil frå strek"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel venstrepil frå strek"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel høgrepil frå strek"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil ned med horisontal strek"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverpil med horisontal strek"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel oppoverpil"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "trippel nedoverpil"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "to-stipla venstrepil"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "to-stipla høgrepil"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre-stipla venstrepil"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre-stipla høgrepil"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda trepunktspil mot høgre"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med punkter"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverpil til strek"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverpil til strek"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med hale med vertikal strek"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med hale med dobbel vertikal strek"
       }
     }
   },
@@ -1663,7 +1663,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda høgrepil med hale"
       }
     }
   },
@@ -1672,7 +1672,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda høgrepil med hale med vertikal strek"
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda høgrepil med hale med dobbel vertikal strek"
       }
     }
   },
@@ -1690,7 +1690,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepilhale"
       }
     }
   },
@@ -1699,7 +1699,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepilhale"
       }
     }
   },
@@ -1708,7 +1708,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel venstrepilhale"
       }
     }
   },
@@ -1717,7 +1717,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbel høgrepilhale"
       }
     }
   },
@@ -1726,7 +1726,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil mot svart diamant"
       }
     }
   },
@@ -1735,7 +1735,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil mot svart diamant"
       }
     }
   },
@@ -1744,7 +1744,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil frå strek til svart diamant"
       }
     }
   },
@@ -1753,7 +1753,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil frå strek til sort diamant"
       }
     }
   },
@@ -1762,7 +1762,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nord-vest og sør-austpil"
       }
     }
   },
@@ -1771,7 +1771,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nord-aust og sør-vestpil"
       }
     }
   },
@@ -1780,7 +1780,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nord-vestpil med krok"
       }
     }
   },
@@ -1789,7 +1789,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nord-austpil med krok"
       }
     }
   },
@@ -1798,7 +1798,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sør-austpil med krok"
       }
     }
   },
@@ -1807,7 +1807,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sør-vestpil med krok"
       }
     }
   },
@@ -1816,7 +1816,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nord-vestpil og nord-austpil"
       }
     }
   },
@@ -1825,7 +1825,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nord-austpil og sør-austpil"
       }
     }
   },
@@ -1834,7 +1834,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sør-austpil og sør-vestpil"
       }
     }
   },
@@ -1843,7 +1843,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sør-vestpil og nord-vestpil"
       }
     }
   },
@@ -1852,7 +1852,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sør-austpil som krysser nord-austpil"
       }
     }
   },
@@ -1861,7 +1861,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nord-austpil som krysser sør-austpil"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "synkende diagonal som krysser nord-austpil"
       }
     }
   },
@@ -1879,7 +1879,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stigende diagonal som krysser sør-austpil"
       }
     }
   },
@@ -1888,7 +1888,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nord-austpil som krysser nord-vestpil"
       }
     }
   },
@@ -1897,7 +1897,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nord-vestpil som krysser nord-austpil"
       }
     }
   },
@@ -1906,7 +1906,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bølgepil som peikar rett mot høgre"
       }
     }
   },
@@ -1915,7 +1915,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil som peikar til høgre og deretter svinger opp"
       }
     }
   },
@@ -1924,7 +1924,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil som peikar til høgre og deretter svinger ned"
       }
     }
   },
@@ -1933,7 +1933,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil som peikar nedover og deretter svinger til venstre"
       }
     }
   },
@@ -1942,7 +1942,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil som peikar nedover og deretter svinger til høgre"
       }
     }
   },
@@ -1951,7 +1951,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "buet pil med klokka"
       }
     }
   },
@@ -1960,7 +1960,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "buet pil mot klokka"
       }
     }
   },
@@ -1969,7 +1969,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "topp-buet pil mot klokka"
       }
     }
   },
@@ -1978,7 +1978,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "botn-buet pil mot klokka"
       }
     }
   },
@@ -1987,7 +1987,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "topp-buet pil med klokka med minusteikn"
       }
     }
   },
@@ -1996,7 +1996,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "topp-buet pil mot klokka med plussteikn"
       }
     }
   },
@@ -2005,7 +2005,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "halvsirkelpil som peikar nedover mot høgre med klokka"
       }
     }
   },
@@ -2014,7 +2014,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "halvsirkelpil som peikar ned mot venstre mot klokka"
       }
     }
   },
@@ -2023,7 +2023,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka sirkelpil mot klokka"
       }
     }
   },
@@ -2032,7 +2032,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukka sirkelpil med klokka"
       }
     }
   },
@@ -2041,7 +2041,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil over kort venstrepil"
       }
     }
   },
@@ -2050,7 +2050,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil over kort høgrepil"
       }
     }
   },
@@ -2059,7 +2059,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kort høgrepil over venstrepil"
       }
     }
   },
@@ -2068,7 +2068,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med plussteikn under"
       }
     }
   },
@@ -2077,7 +2077,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med plussteikn under"
       }
     }
   },
@@ -2086,7 +2086,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil gjennom x"
       }
     }
   },
@@ -2095,7 +2095,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil gjennom liten sirkel"
       }
     }
   },
@@ -2104,7 +2104,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda oppoverpil frå liten sirkel"
       }
     }
   },
@@ -2113,7 +2113,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre dobbelpil med rundt hode"
       }
     }
   },
@@ -2122,7 +2122,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er-lik-teikn over høgrepil"
       }
     }
   },
@@ -2131,7 +2131,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde over høgrepil"
       }
     }
   },
@@ -2140,7 +2140,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil over tilde"
       }
     }
   },
@@ -2149,7 +2149,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil over tilde"
       }
     }
   },
@@ -2158,7 +2158,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre pil over omtrent-lik-teikn"
       }
     }
   },
@@ -2167,7 +2167,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindre enn over venstrepil"
       }
     }
   },
@@ -2176,7 +2176,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil gjennom mindre enn"
       }
     }
   },
@@ -2185,7 +2185,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "større enn over høgrepil"
       }
     }
   },
@@ -2194,7 +2194,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "delsett over høgrepil"
       }
     }
   },
@@ -2203,7 +2203,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil gjennom delsett"
       }
     }
   },
@@ -2212,7 +2212,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supersett over venstrepil"
       }
     }
   },
@@ -2221,7 +2221,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tomt sett med høgrepil over"
       }
     }
   },
@@ -2230,7 +2230,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tomt sett med venstrepil over"
       }
     }
   },
@@ -2239,7 +2239,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverpil gjennom sirkel"
       }
     }
   },
@@ -2248,7 +2248,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart diamant med nedoverpil"
       }
     }
   },
@@ -2257,7 +2257,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit sirkel med nedoverpil"
       }
     }
   },
@@ -2266,7 +2266,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart sirkel med nedoverpil"
       }
     }
   },
@@ -2275,7 +2275,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integral med venstrepil med krok"
       }
     }
   },
@@ -2284,7 +2284,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit nord-austpil"
       }
     }
   },
@@ -2293,7 +2293,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit nord-vestpil"
       }
     }
   },
@@ -2302,7 +2302,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit sør-austpil"
       }
     }
   },
@@ -2311,7 +2311,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit sør-vestpil"
       }
     }
   },
@@ -2320,7 +2320,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit venstre-høgrepil"
       }
     }
   },
@@ -2329,7 +2329,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart venstrepil"
       }
     }
   },
@@ -2338,7 +2338,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart oppoverpil"
       }
     }
   },
@@ -2347,7 +2347,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart nedoverpil"
       }
     }
   },
@@ -2356,7 +2356,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart nord-austpil"
       }
     }
   },
@@ -2365,7 +2365,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart nord-vestpil"
       }
     }
   },
@@ -2374,7 +2374,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart sør-austpil"
       }
     }
   },
@@ -2383,7 +2383,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart sør-vestpil"
       }
     }
   },
@@ -2392,7 +2392,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart venstre-høgrepil"
       }
     }
   },
@@ -2401,7 +2401,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart opp-nedpil"
       }
     }
   },
@@ -2410,7 +2410,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med spissen nedover"
       }
     }
   },
@@ -2419,7 +2419,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med spissen oppover"
       }
     }
   },
@@ -2428,7 +2428,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med spissen nedover"
       }
     }
   },
@@ -2437,7 +2437,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med spissen oppover"
       }
     }
   },
@@ -2446,7 +2446,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med liten sirkel"
       }
     }
   },
@@ -2455,7 +2455,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre venstrepilar"
       }
     }
   },
@@ -2464,7 +2464,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil gjennom sirkel med plussteikn"
       }
     }
   },
@@ -2473,7 +2473,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang krusepil mot venstre"
       }
     }
   },
@@ -2482,7 +2482,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda venstrepil med vertikalstrek"
       }
     }
   },
@@ -2491,7 +2491,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda venstrepil med dobbel vertikalstrek"
       }
     }
   },
@@ -2500,7 +2500,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda venstrepil frå strek"
       }
     }
   },
@@ -2509,7 +2509,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda tre-stipla venstrepil"
       }
     }
   },
@@ -2518,7 +2518,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med prikker"
       }
     }
   },
@@ -2527,7 +2527,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med hale med vertikalstrek"
       }
     }
   },
@@ -2536,7 +2536,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med hale med dobbel vertikalstrek"
       }
     }
   },
@@ -2545,7 +2545,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda venstrepil med hale"
       }
     }
   },
@@ -2554,7 +2554,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda venstrepil med hale med vertikalstrek"
       }
     }
   },
@@ -2563,7 +2563,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tohoda venstrepil med hale med dobbel vertikalstrek"
       }
     }
   },
@@ -2572,7 +2572,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil gjennom x"
       }
     }
   },
@@ -2581,7 +2581,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bølgepil som peikar rett mot venstre"
       }
     }
   },
@@ -2590,7 +2590,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "er-lik-teikn over venstrepil"
       }
     }
   },
@@ -2599,7 +2599,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde over venstrepil"
       }
     }
   },
@@ -2608,7 +2608,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil over omvendt nesten-lik-teikn"
       }
     }
   },
@@ -2617,7 +2617,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil gjennom større enn"
       }
     }
   },
@@ -2626,7 +2626,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil gjennom supersett"
       }
     }
   },
@@ -2635,7 +2635,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadruppel venstrepil"
       }
     }
   },
@@ -2644,7 +2644,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadruppel høgrepil"
       }
     }
   },
@@ -2653,7 +2653,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde over høgrepil"
       }
     }
   },
@@ -2662,7 +2662,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil over omvendt nesten-lik-teikn"
       }
     }
   },
@@ -2671,7 +2671,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde over venstrepil"
       }
     }
   },
@@ -2680,7 +2680,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil over nesten-lik-teikn"
       }
     }
   },
@@ -2689,7 +2689,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil over omvendt tilde"
       }
     }
   },
@@ -2698,7 +2698,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil over omvendt tilde"
       }
     }
   },
@@ -2707,7 +2707,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrepil med halv bredde"
       }
     }
   },
@@ -2716,7 +2716,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppoverpil med halv bredde"
       }
     }
   },
@@ -2725,7 +2725,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgrepil med halv bredde"
       }
     }
   },
@@ -2734,7 +2734,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedoverpil med halv bredde"
       }
     }
   }

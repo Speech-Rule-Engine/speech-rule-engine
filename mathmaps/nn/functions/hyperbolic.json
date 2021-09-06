@@ -10,9 +10,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "hyperbolsk cosinus"
       }
     }
   },
@@ -24,9 +22,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "hyperbolsk cotangens"
       }
     }
   },
@@ -38,9 +34,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "hyperbolsk cosecans"
       }
     }
   },
@@ -52,9 +46,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "hyperbolsk secans"
       }
     }
   },
@@ -66,9 +58,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "hyperbolsk sinus"
       }
     }
   },
@@ -80,9 +70,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "hyperbolsk tangens"
       }
     }
   },
@@ -95,9 +83,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "arealfunksjon for hyperbolsk cosinus"
       }
     }
   },
@@ -110,9 +96,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "arealfunksjon for hyperbolsk cotangens"
       }
     }
   },
@@ -125,9 +109,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "arealfunksjon for hyperbolsk cosecans"
       }
     }
   },
@@ -140,9 +122,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "arealfunksjon for hyperbolsk secans"
       }
     }
   },
@@ -155,9 +135,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "arealfunksjon for hyperbolsk sinus"
       }
     }
   },
@@ -170,9 +148,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "arealfunksjon for hyperbolsk tangens"
       }
     }
   }

@@ -7,7 +7,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kursiv h"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande a"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande e"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande i"
       }
     }
   },
@@ -43,7 +43,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande o"
       }
     }
   },
@@ -52,7 +52,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande u"
       }
     }
   },
@@ -61,7 +61,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande c"
       }
     }
   },
@@ -70,7 +70,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande d"
       }
     }
   },
@@ -79,7 +79,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande h"
       }
     }
   },
@@ -88,7 +88,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande m"
       }
     }
   },
@@ -97,7 +97,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande r"
       }
     }
   },
@@ -106,7 +106,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande t"
       }
     }
   },
@@ -115,7 +115,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande v"
       }
     }
   },
@@ -124,7 +124,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande x"
       }
     }
   },
@@ -133,7 +133,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript i"
       }
     }
   },
@@ -142,7 +142,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript r"
       }
     }
   },
@@ -151,7 +151,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript u"
       }
     }
   },
@@ -160,7 +160,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript v"
       }
     }
   },
@@ -169,7 +169,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande r under"
       }
     }
   },
@@ -178,7 +178,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande utflata open a over"
       }
     }
   },
@@ -187,7 +187,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande ae"
       }
     }
   },
@@ -196,7 +196,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande ao"
       }
     }
   },
@@ -205,7 +205,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande av"
       }
     }
   },
@@ -214,7 +214,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande c cedille"
       }
     }
   },
@@ -223,7 +223,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande insulær d"
       }
     }
   },
@@ -232,7 +232,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande eth"
       }
     }
   },
@@ -241,7 +241,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande g"
       }
     }
   },
@@ -250,7 +250,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande liten heva G"
       }
     }
   },
@@ -259,7 +259,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande k"
       }
     }
   },
@@ -268,7 +268,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande l"
       }
     }
   },
@@ -277,7 +277,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande liten heva L"
       }
     }
   },
@@ -286,7 +286,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande liten heva M"
       }
     }
   },
@@ -295,7 +295,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande n"
       }
     }
   },
@@ -304,7 +304,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande liten heva N"
       }
     }
   },
@@ -313,7 +313,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande liten heva R"
       }
     }
   },
@@ -322,7 +322,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande r rotunda"
       }
     }
   },
@@ -331,7 +331,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande s"
       }
     }
   },
@@ -340,7 +340,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande lang s"
       }
     }
   },
@@ -349,7 +349,7 @@
     "category": "Mn",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kombinerande z"
       }
     }
   },
@@ -358,7 +358,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "superskript i"
       }
     }
   },
@@ -367,7 +367,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "superskript n"
       }
     }
   },
@@ -376,7 +376,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript a"
       }
     }
   },
@@ -385,7 +385,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript e"
       }
     }
   },
@@ -394,7 +394,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript o"
       }
     }
   },
@@ -403,7 +403,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript x"
       }
     }
   },
@@ -412,7 +412,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript schwa"
       }
     }
   },
@@ -421,7 +421,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript h"
       }
     }
   },
@@ -430,7 +430,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript k"
       }
     }
   },
@@ -439,7 +439,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript l"
       }
     }
   },
@@ -448,7 +448,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript m"
       }
     }
   },
@@ -457,7 +457,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript n"
       }
     }
   },
@@ -466,7 +466,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript p"
       }
     }
   },
@@ -475,7 +475,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript s"
       }
     }
   },
@@ -484,7 +484,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript t"
       }
     }
   },
@@ -493,7 +493,7 @@
     "category": "Lm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "subskript j"
       }
     }
   },
@@ -502,7 +502,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skilpaddeskall-klammeparentes heva S"
       }
     }
   },
@@ -511,7 +511,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "innsirkla kursiv heva C"
       }
     }
   },
@@ -520,7 +520,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "innsirkla kursiv heva R"
       }
     }
   },
@@ -529,7 +529,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "negativ firkantkryss heva P"
       }
     }
   }

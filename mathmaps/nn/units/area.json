@@ -14,9 +14,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "kvadrat"
       }
     }
   },
@@ -31,9 +29,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "kvadratcentimeter"
       }
     }
   },
@@ -46,9 +42,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -61,9 +55,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -76,9 +68,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "kvadratmeter"
       }
     }
   },
@@ -91,9 +81,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "kvadratkilometer"
       }
     }
   },
@@ -108,9 +96,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "mål"
       }
     }
   },
@@ -122,9 +108,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "hektar"
       }
     }
   }

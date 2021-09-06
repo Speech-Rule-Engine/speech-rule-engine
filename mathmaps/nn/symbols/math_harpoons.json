@@ -7,7 +7,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun opp"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun ned"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opp-harpun høgre"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opp-harpun venstre"
       }
     }
   },
@@ -43,7 +43,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun opp"
       }
     }
   },
@@ -52,7 +52,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun ned"
       }
     }
   },
@@ -61,7 +61,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ned-harpun høgre"
       }
     }
   },
@@ -70,7 +70,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ned-harpun venstre"
       }
     }
   },
@@ -79,7 +79,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun over høgre-harpun"
       }
     }
   },
@@ -88,7 +88,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun over venstre-harpun"
       }
     }
   },
@@ -97,7 +97,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre pigg opp høgre pigg ned-harpun"
       }
     }
   },
@@ -106,7 +106,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre pigg ned høgre pigg opp-harpun"
       }
     }
   },
@@ -115,7 +115,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre pigg opp venstre pigg ned-harpun"
       }
     }
   },
@@ -124,7 +124,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre pigg opp høgre pigg ned-harpun"
       }
     }
   },
@@ -133,7 +133,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre pigg opp høgre pigg opp-harpun"
       }
     }
   },
@@ -142,7 +142,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opp ned-harpun høgre"
       }
     }
   },
@@ -151,7 +151,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre pigg ned høgre pigg ned-harpun"
       }
     }
   },
@@ -160,7 +160,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opp pigg venstre ned pigg venstre-harpun"
       }
     }
   },
@@ -169,7 +169,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun til strek med pigg oppover"
       }
     }
   },
@@ -178,7 +178,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun til strek med pigg oppover"
       }
     }
   },
@@ -187,7 +187,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover-harpun til strek med pigg høgre"
       }
     }
   },
@@ -196,7 +196,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedover-harpun til strek med pigg høgre"
       }
     }
   },
@@ -205,7 +205,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun til strek med pigg nedover"
       }
     }
   },
@@ -214,7 +214,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun til strek med pigg nedover"
       }
     }
   },
@@ -223,7 +223,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover-harpun til strek med pigg venstre"
       }
     }
   },
@@ -232,7 +232,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedover-harpun til strek med pigg venstre"
       }
     }
   },
@@ -241,7 +241,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun frå strek med pigg oppover"
       }
     }
   },
@@ -250,7 +250,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun frå strek med pigg oppover"
       }
     }
   },
@@ -259,7 +259,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover-harpun frå strek med pigg høgre"
       }
     }
   },
@@ -268,7 +268,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedover-harpun frå strek med pigg høgre"
       }
     }
   },
@@ -277,7 +277,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun frå strek med pigg nedover"
       }
     }
   },
@@ -286,7 +286,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun frå strek med pigg nedover"
       }
     }
   },
@@ -295,7 +295,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover-harpun frå strek med pigg venstre"
       }
     }
   },
@@ -304,7 +304,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedover-harpun frå strek med pigg venstre"
       }
     }
   },
@@ -313,7 +313,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun med pigg opp over venstre-harpun med pigg ned"
       }
     }
   },
@@ -322,7 +322,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover-harpun med pigg venstre ved siden av oppover-harpun med pigg høyre"
       }
     }
   },
@@ -331,7 +331,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun med pigg opp over høgre-harpun med pigg ned"
       }
     }
   },
@@ -340,7 +340,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedover-harpun med pigg venstre ved sida av nedover-harpun med pigg høgre"
       }
     }
   },
@@ -349,7 +349,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun med pigg opp over høgre-harpun med pigg opp"
       }
     }
   },
@@ -358,7 +358,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun med pigg ned over høgre-harpun med pigg ned"
       }
     }
   },
@@ -367,7 +367,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun med pigg opp over venstre-harpun med pigg opp"
       }
     }
   },
@@ -376,7 +376,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun med pigg ned over venstre-harpun med pigg ned"
       }
     }
   },
@@ -385,7 +385,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun over strek"
       }
     }
   },
@@ -394,7 +394,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre-harpun under strek"
       }
     }
   },
@@ -403,7 +403,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun over strek"
       }
     }
   },
@@ -412,7 +412,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre-harpun under strek"
       }
     }
   },
@@ -421,7 +421,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover-harpun til the venstre for nedover-harpun"
       }
     }
   },
@@ -430,7 +430,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover-harpun til the høgre for nedover-harpun"
       }
     }
   },
@@ -439,7 +439,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre fiskehale"
       }
     }
   },
@@ -448,7 +448,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre fiskehale"
       }
     }
   },
@@ -457,7 +457,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opp-fiskehale"
       }
     }
   },
@@ -466,7 +466,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ned-fiskehale"
       }
     }
   }

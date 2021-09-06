@@ -13,9 +13,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "dusin"
       }
     }
   }

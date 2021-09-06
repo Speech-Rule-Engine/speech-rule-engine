@@ -7,7 +7,7 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "alef"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bet"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gimel"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dalet"
       }
     }
   }

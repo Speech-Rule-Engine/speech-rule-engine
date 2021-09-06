@@ -7,7 +7,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skript-l"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skript-P"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek pi"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek gamma"
       }
     }
   },
@@ -43,7 +43,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek stor gamma"
       }
     }
   },
@@ -52,7 +52,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek stor pi"
       }
     }
   },
@@ -61,7 +61,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek sigma sum"
       }
     }
   },
@@ -70,7 +70,7 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek stor kursiv D"
       }
     }
   },
@@ -79,7 +79,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek kursiv d"
       }
     }
   },
@@ -88,7 +88,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek kursiv e"
       }
     }
   },
@@ -97,7 +97,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek kursiv i"
       }
     }
   },
@@ -106,7 +106,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelstrek kursiv j"
       }
     }
   },
@@ -115,7 +115,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kursiv i utan prikk"
       }
     }
   },
@@ -124,7 +124,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kursiv j utan prikk"
       }
     }
   }

@@ -17,9 +17,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "dollar",
+        "plural": ""
       }
     }
   },
@@ -33,9 +32,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "pund",
+        "plural": ""
       }
     }
   },
@@ -49,9 +47,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "yen",
+        "plural": ""
       }
     }
   },
@@ -64,9 +61,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "euro",
+        "plural": ""
       }
     }
   },
@@ -79,9 +75,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "colón",
+        "plural": ""
       }
     }
   },
@@ -93,9 +88,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "cruzeiro",
+        "plural": ""
       }
     }
   },
@@ -107,9 +101,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "franc",
+        "plural": ""
       }
     }
   },
@@ -121,9 +114,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "lire",
+        "plural": ""
       }
     }
   },
@@ -135,9 +127,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "mill",
+        "plural": ""
       }
     }
   },
@@ -150,9 +141,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "naira",
+        "plural": ""
       }
     }
   },
@@ -164,9 +154,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "peseta",
+        "plural": ""
       }
     }
   },
@@ -183,9 +172,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "rupi",
+        "plural": ""
       }
     }
   },
@@ -199,9 +187,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "won",
+        "plural": ""
       }
     }
   },
@@ -213,9 +200,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "shekel",
+        "plural": ""
       }
     }
   },
@@ -227,9 +213,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "dong",
+        "plural": ""
       }
     }
   },
@@ -241,9 +226,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "kip",
+        "plural": ""
       }
     }
   },
@@ -255,9 +239,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "tugrik",
+        "plural": ""
       }
     }
   },
@@ -269,9 +252,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "drakme",
+        "plural": "drakmar"
       }
     }
   },
@@ -283,9 +265,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "pfennig",
+        "plural": ""
       }
     }
   },
@@ -297,9 +278,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "peso",
+        "plural": "pesos"
       }
     }
   },
@@ -311,9 +291,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "guaranis",
+        "plural": ""
       }
     }
   },
@@ -325,9 +304,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "australsk dollar",
+        "plural": "australske dollar"
       }
     }
   },
@@ -340,9 +318,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "hryvnia",
+        "plural": ""
       }
     }
   },
@@ -355,9 +332,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "cedis",
+        "plural": ""
       }
     }
   },
@@ -369,9 +345,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "livre tournois",
+        "plural": ""
       }
     }
   },
@@ -383,9 +358,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "spesmilo",
+        "plural": ""
       }
     }
   },
@@ -398,9 +372,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "tenge",
+        "plural": ""
       }
     }
   },
@@ -413,9 +386,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "tyrkisk lire",
+        "plural": "tyrkiske lire"
       }
     }
   },
@@ -427,9 +399,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "yuan",
+        "plural": ""
       }
     }
   },
@@ -442,9 +413,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "cent",
+        "plural": ""
       }
     }
   }

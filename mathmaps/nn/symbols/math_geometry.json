@@ -7,7 +7,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett horisontal"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit horisontal"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett vertikal"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit vertikal"
       }
     }
   },
@@ -43,7 +43,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett trippelstrek horisontal"
       }
     }
   },
@@ -52,7 +52,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit trippelstrek horisontal"
       }
     }
   },
@@ -61,7 +61,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett trippelstrek vertikal"
       }
     }
   },
@@ -70,7 +70,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit trippelstrek vertikal"
       }
     }
   },
@@ -79,7 +79,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett kvadruppelstrek horisontal"
       }
     }
   },
@@ -88,7 +88,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit kvadruppelstrek horisontal"
       }
     }
   },
@@ -97,7 +97,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett kvadruppelstrek vertikal"
       }
     }
   },
@@ -106,7 +106,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit kvadruppelstrek vertikal"
       }
     }
   },
@@ -115,7 +115,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett ned og høgre"
       }
     }
   },
@@ -124,7 +124,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned lett og høgre feit"
       }
     }
   },
@@ -133,7 +133,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned feit og høgre lett"
       }
     }
   },
@@ -142,7 +142,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit ned og høgre"
       }
     }
   },
@@ -151,7 +151,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett ned og venstre"
       }
     }
   },
@@ -160,7 +160,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned lett og venstre feit"
       }
     }
   },
@@ -169,7 +169,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned feit og venstre lett"
       }
     }
   },
@@ -178,7 +178,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit ned og venstre"
       }
     }
   },
@@ -187,7 +187,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett opp og høgre"
       }
     }
   },
@@ -196,7 +196,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp lett og høgre feit"
       }
     }
   },
@@ -205,7 +205,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp feit og høgre lett"
       }
     }
   },
@@ -214,7 +214,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit opp og høgre"
       }
     }
   },
@@ -223,7 +223,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett opp og venstre"
       }
     }
   },
@@ -232,7 +232,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp lett og venstre feit"
       }
     }
   },
@@ -241,7 +241,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp feit og venstre lett"
       }
     }
   },
@@ -250,7 +250,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit opp og venstre"
       }
     }
   },
@@ -259,7 +259,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett vertikal og høgre"
       }
     }
   },
@@ -268,7 +268,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal lett og høgre feit"
       }
     }
   },
@@ -277,7 +277,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp feit og høgre ned lett"
       }
     }
   },
@@ -286,7 +286,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned feit og høgre opp lett"
       }
     }
   },
@@ -295,7 +295,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal feit og høgre lett"
       }
     }
   },
@@ -304,7 +304,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned lett og høgre opp feit"
       }
     }
   },
@@ -313,7 +313,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp lett og høgre ned feit"
       }
     }
   },
@@ -322,7 +322,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit vertikal og høgre"
       }
     }
   },
@@ -331,7 +331,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett vertikal og venstre"
       }
     }
   },
@@ -340,7 +340,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal lett og venstre feit"
       }
     }
   },
@@ -349,7 +349,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp feit og venstre ned lett"
       }
     }
   },
@@ -358,7 +358,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned feit og venstre opp lett"
       }
     }
   },
@@ -367,7 +367,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal feit og venstre lett"
       }
     }
   },
@@ -376,7 +376,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned lett og venstre opp feit"
       }
     }
   },
@@ -385,7 +385,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp lett og venstre ned feit"
       }
     }
   },
@@ -394,7 +394,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit vertikal og venstre"
       }
     }
   },
@@ -403,7 +403,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett ned og horisontal"
       }
     }
   },
@@ -412,7 +412,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar venstre feit og høgre ned lett"
       }
     }
   },
@@ -421,7 +421,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar høgre feit og venstre ned lett"
       }
     }
   },
@@ -430,7 +430,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned lett og horisontal feit"
       }
     }
   },
@@ -439,7 +439,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned feit og horisontal lett"
       }
     }
   },
@@ -448,7 +448,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar høgre lett og venstre ned feit"
       }
     }
   },
@@ -457,7 +457,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar venstre lett og høgre ned feit"
       }
     }
   },
@@ -466,7 +466,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit ned og horisontal"
       }
     }
   },
@@ -475,7 +475,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett opp og horisontal"
       }
     }
   },
@@ -484,7 +484,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar venstre feit og høgre opp lett"
       }
     }
   },
@@ -493,7 +493,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar høgre feit og venstre opp lett"
       }
     }
   },
@@ -502,7 +502,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp lett og horisontal feit"
       }
     }
   },
@@ -511,7 +511,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp feit og horisontal lett"
       }
     }
   },
@@ -520,7 +520,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar høgre lett og venstre opp feit"
       }
     }
   },
@@ -529,7 +529,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar venstre lett og høgre opp feit"
       }
     }
   },
@@ -538,7 +538,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit opp og horisontal"
       }
     }
   },
@@ -547,7 +547,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett vertikal og horisontal"
       }
     }
   },
@@ -556,7 +556,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar venstre feit og høgre vertikal lett"
       }
     }
   },
@@ -565,7 +565,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar høgre feit og venstre vertikal lett"
       }
     }
   },
@@ -574,7 +574,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal lett og horisontal feit"
       }
     }
   },
@@ -583,7 +583,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp feit og ned horisontal lett"
       }
     }
   },
@@ -592,7 +592,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned feit og opp horisontal lett"
       }
     }
   },
@@ -601,7 +601,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal feit og horisontal lett"
       }
     }
   },
@@ -610,7 +610,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar venstre opp feit og høgre ned lett"
       }
     }
   },
@@ -619,7 +619,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar høgre opp feit og venstre ned lett"
       }
     }
   },
@@ -628,7 +628,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar venstre ned feit og høgre opp lett"
       }
     }
   },
@@ -637,7 +637,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar høgre ned feit og venstre opp lett"
       }
     }
   },
@@ -646,7 +646,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned lett og opp horisontal feit"
       }
     }
   },
@@ -655,7 +655,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp lett og ned horisontal feit"
       }
     }
   },
@@ -664,7 +664,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar høgre lett og venstre vertikal feit"
       }
     }
   },
@@ -673,7 +673,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar venstre lett og høgre vertikal feit"
       }
     }
   },
@@ -682,7 +682,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit vertikal og horisontal"
       }
     }
   },
@@ -691,7 +691,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett dobbelstrek horisontal"
       }
     }
   },
@@ -700,7 +700,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit dobbelstrek horisontal"
       }
     }
   },
@@ -709,7 +709,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett dobbelstrek vertikal"
       }
     }
   },
@@ -718,7 +718,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit dobbelstrek vertikal"
       }
     }
   },
@@ -727,7 +727,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel horisontal"
       }
     }
   },
@@ -736,7 +736,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel vertikal"
       }
     }
   },
@@ -745,7 +745,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned singel og høgre dobbel"
       }
     }
   },
@@ -754,7 +754,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned dobbel og høgre singel"
       }
     }
   },
@@ -763,7 +763,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel ned og høgre"
       }
     }
   },
@@ -772,7 +772,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned singel og venstre dobbel"
       }
     }
   },
@@ -781,7 +781,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned dobbel og venstre singel"
       }
     }
   },
@@ -790,7 +790,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel ned og venstre"
       }
     }
   },
@@ -799,7 +799,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp singel og høgre dobbel"
       }
     }
   },
@@ -808,7 +808,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp dobbel og høgre singel"
       }
     }
   },
@@ -817,7 +817,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel opp og høgre"
       }
     }
   },
@@ -826,7 +826,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp singel og venstre dobbel"
       }
     }
   },
@@ -835,7 +835,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp dobbel og venstre singel"
       }
     }
   },
@@ -844,7 +844,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel opp og venstre"
       }
     }
   },
@@ -853,7 +853,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal singel og høgre dobbel"
       }
     }
   },
@@ -862,7 +862,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal dobbel og høgre singel"
       }
     }
   },
@@ -871,7 +871,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel vertikal og høgre"
       }
     }
   },
@@ -880,7 +880,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal singel og venstre dobbel"
       }
     }
   },
@@ -889,7 +889,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal dobbel og venstre singel"
       }
     }
   },
@@ -898,7 +898,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel vertikal og venstre"
       }
     }
   },
@@ -907,7 +907,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned singel og horisontal dobbel"
       }
     }
   },
@@ -916,7 +916,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar ned dobbel og horisontal singel"
       }
     }
   },
@@ -925,7 +925,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel ned og horisontal"
       }
     }
   },
@@ -934,7 +934,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp singel og horisontal dobbel"
       }
     }
   },
@@ -943,7 +943,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar opp dobbel og horisontal singel"
       }
     }
   },
@@ -952,7 +952,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel opp og horisontal"
       }
     }
   },
@@ -961,7 +961,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal singel og horisontal dobbel"
       }
     }
   },
@@ -970,7 +970,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar vertikal dobbel og horisontal singel"
       }
     }
   },
@@ -979,7 +979,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar dobbel vertikal og horisontal"
       }
     }
   },
@@ -988,7 +988,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett bue ned og høgre"
       }
     }
   },
@@ -997,7 +997,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett bue ned og venstre"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett bue opp og venstre"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett bue opp og høgre"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett diagonal øvre høgre til nedre venstre"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett diagonal øvre venstre til nedre høgre"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett diagonal kryss"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett venstre"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett opp"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett høgre"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett ned"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit venstre"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit opp"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit høgre"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit ned"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett venstre og feit høgre"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar lett opp og feit ned"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit venstre og lett høgre"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "boksteikningar feit opp og lett ned"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øvre halv blokk"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre ein åttandedels blokk"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre ein fjerdedels blokk"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre tre åttandedels blokk"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre halv blokk"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre fem åttandedels blokk"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre tre fjerdedels blokk"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre sju åttandedels blokk"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "full blokk"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre sju åttandedels blokk"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre tre fjerdedels blokk"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre fem åttandedels blokk"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre halv blokk"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre tre åttandedels blokk"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre ein fjerdedels blokk"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre ein åttandedels blokk"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre halv blokk"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lett skygge"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "medium skygge"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mørk skygge"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øvre ein åttandedels blokk"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre ein åttandedels blokk"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant nedre venstre"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant nedre høgre"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant øvre venstre"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant øvre venstre og nedre venstre og nedre høgre"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant øvre venstre og nedre høgre"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant øvre venstre og øvre høgre og nedre venstre"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant øvre venstre og øvre høgre og nedre høgre"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant øvre høgre"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant øvre høgre og nedre venstre"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant øvre høgre og nedre venstre og nedre høgre"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart kvadrat"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt kvadrat"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt kvadrat med avrunda hjørner"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt kvadrat med svart lite kvadrat"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med horisontalt fyll"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med vertikalt fyll"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med ortogonal kryssmønster fyll"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med øvre venstre til nedre høgre fyll"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med øvre høgre til nedre venstre fyll"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med diagonal kryssmønster fyll"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart lite kvadrat"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt lite kvadrat"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart rektangel"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt rektangel"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart vertikalt rektangel"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt vertikalt rektangel"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart parallelogram"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt parallelogram"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart oppover-vendt triangel"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt oppover-vendt triangel"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart oppover-vendt triangel"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt oppover-vendt lite triangel"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart høgre-vendt triangel"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt høgre-vendt triangel"
       }
     }
   },
@@ -1663,7 +1663,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart høgre-vendt lite triangel"
       }
     }
   },
@@ -1672,7 +1672,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt høgre-vendt lite triangel"
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart høgre-vendt peker"
       }
     }
   },
@@ -1690,7 +1690,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit høgre-vendt peker"
       }
     }
   },
@@ -1699,7 +1699,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart nedover-vendt triangel"
       }
     }
   },
@@ -1708,7 +1708,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt nedover-vendt triangel"
       }
     }
   },
@@ -1717,7 +1717,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart nedover-vendt lite triangel"
       }
     }
   },
@@ -1726,7 +1726,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt nedover-vendt lite triangel"
       }
     }
   },
@@ -1735,7 +1735,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart venstre-vendt triangel"
       }
     }
   },
@@ -1744,7 +1744,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt venstre-vendt triangel"
       }
     }
   },
@@ -1753,7 +1753,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart venstre-vendt lite triangel"
       }
     }
   },
@@ -1762,7 +1762,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt venstre-vendt lite triangel"
       }
     }
   },
@@ -1771,7 +1771,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart venstre-vendt peker"
       }
     }
   },
@@ -1780,7 +1780,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit venstre-vendt peker"
       }
     }
   },
@@ -1789,7 +1789,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart diamant"
       }
     }
   },
@@ -1798,7 +1798,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit diamant"
       }
     }
   },
@@ -1807,7 +1807,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit diamant med svart liten diamant"
       }
     }
   },
@@ -1816,7 +1816,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fiskeauge"
       }
     }
   },
@@ -1825,7 +1825,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ruter"
       }
     }
   },
@@ -1834,7 +1834,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit sirkel"
       }
     }
   },
@@ -1843,7 +1843,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med prikker"
       }
     }
   },
@@ -1852,7 +1852,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med vertikalt fyll"
       }
     }
   },
@@ -1861,7 +1861,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "blink"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart sirkel"
       }
     }
   },
@@ -1879,7 +1879,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med venstre halvdel svart"
       }
     }
   },
@@ -1888,7 +1888,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med høgre halvdel svart"
       }
     }
   },
@@ -1897,7 +1897,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med nedre halvdel svart"
       }
     }
   },
@@ -1906,7 +1906,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med øvre halvdel svart"
       }
     }
   },
@@ -1915,7 +1915,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med øvre høgre kvadrant svart"
       }
     }
   },
@@ -1924,7 +1924,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sirkel med øvre venstre kvadrant svart"
       }
     }
   },
@@ -1933,7 +1933,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre halvdel svart sirkel"
       }
     }
   },
@@ -1942,7 +1942,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre halvdel svart sirkel"
       }
     }
   },
@@ -1951,7 +1951,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt prikk"
       }
     }
   },
@@ -1960,7 +1960,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt kvit sirkel"
       }
     }
   },
@@ -1969,7 +1969,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øvre halvdel omvendt kvit sirkel"
       }
     }
   },
@@ -1978,7 +1978,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre halvdel omvendt kvit sirkel"
       }
     }
   },
@@ -1987,7 +1987,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øvre venstre kvadrant sirkulær bue"
       }
     }
   },
@@ -1996,7 +1996,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øvre høgre kvadrant sirkulær bue"
       }
     }
   },
@@ -2005,7 +2005,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre høgre kvadrant sirkulær bue"
       }
     }
   },
@@ -2014,7 +2014,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre venstre kvadrant sirkulær bue"
       }
     }
   },
@@ -2023,7 +2023,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øvre halvdel sirkel"
       }
     }
   },
@@ -2032,7 +2032,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre halvdel sirkel"
       }
     }
   },
@@ -2041,7 +2041,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart nedre høgre triangel"
       }
     }
   },
@@ -2050,7 +2050,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart nedre venstre triangel"
       }
     }
   },
@@ -2059,7 +2059,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart øvre venstre triangel"
       }
     }
   },
@@ -2068,7 +2068,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart øvre høgre triangel"
       }
     }
   },
@@ -2077,7 +2077,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit prikk"
       }
     }
   },
@@ -2086,7 +2086,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med venstre halvdel svart"
       }
     }
   },
@@ -2095,7 +2095,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med høgre halvdel svart"
       }
     }
   },
@@ -2104,7 +2104,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med øvre venstre diagonal halv svart"
       }
     }
   },
@@ -2113,7 +2113,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med nedre høgre diagonal halv svart"
       }
     }
   },
@@ -2122,7 +2122,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt kvadrat med vertikal linje som delar i to"
       }
     }
   },
@@ -2131,7 +2131,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt oppover-vendt triangel med prikk"
       }
     }
   },
@@ -2140,7 +2140,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover-vendt triangel med venstre halvdel svart"
       }
     }
   },
@@ -2149,7 +2149,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oppover-vendt triangel med høgre halvdel svart"
       }
     }
   },
@@ -2158,7 +2158,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor sirkel"
       }
     }
   },
@@ -2167,7 +2167,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt kvadrat med øvre venstre kvadrant"
       }
     }
   },
@@ -2176,7 +2176,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt kvadrat med nedre venstre kvadrant"
       }
     }
   },
@@ -2185,7 +2185,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt kvadrat med nedre høgre kvadrant"
       }
     }
   },
@@ -2194,7 +2194,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt kvadrat med øvre høgre kvadrant"
       }
     }
   },
@@ -2203,7 +2203,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit sirkel med øvre venstre kvadrant"
       }
     }
   },
@@ -2212,7 +2212,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit sirkel med nedre venstre kvadrant"
       }
     }
   },
@@ -2221,7 +2221,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit sirkel med nedre høgre kvadrant"
       }
     }
   },
@@ -2230,7 +2230,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit sirkel med øvre høgre kvadrant"
       }
     }
   },
@@ -2239,7 +2239,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øvre venstre triangel"
       }
     }
   },
@@ -2248,7 +2248,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øvre høgre triangel"
       }
     }
   },
@@ -2257,7 +2257,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre venstre triangel"
       }
     }
   },
@@ -2266,7 +2266,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt medium kvadrat"
       }
     }
   },
@@ -2275,7 +2275,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart medium kvadrat"
       }
     }
   },
@@ -2284,7 +2284,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt medium lite kvadrat"
       }
     }
   },
@@ -2293,7 +2293,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart medium lite kvadrat"
       }
     }
   },
@@ -2302,7 +2302,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre høgre triangel"
       }
     }
   },
@@ -2311,7 +2311,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med top halv svart"
       }
     }
   },
@@ -2320,7 +2320,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med bunn halv svart"
       }
     }
   },
@@ -2329,7 +2329,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med øvre høgre diagonal halv svart"
       }
     }
   },
@@ -2338,7 +2338,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med nedre venstre diagonal halv svart"
       }
     }
   },
@@ -2347,7 +2347,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diamant med venstre halvdel svart"
       }
     }
   },
@@ -2356,7 +2356,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diamant med høgre halvdel svart"
       }
     }
   },
@@ -2365,7 +2365,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diamant med topp halv svart"
       }
     }
   },
@@ -2374,7 +2374,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diamant med botn halv svart"
       }
     }
   },
@@ -2383,7 +2383,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prikka kvadrat"
       }
     }
   },
@@ -2392,7 +2392,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart stort kvadrat"
       }
     }
   },
@@ -2401,7 +2401,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit stort kvadrat"
       }
     }
   },
@@ -2410,7 +2410,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart veldig lite kvadrat"
       }
     }
   },
@@ -2419,7 +2419,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt veldig lite kvadrat"
       }
     }
   },
@@ -2428,7 +2428,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart pentagon"
       }
     }
   },
@@ -2437,7 +2437,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt pentagon"
       }
     }
   },
@@ -2446,7 +2446,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt heksagon"
       }
     }
   },
@@ -2455,7 +2455,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart heksagon"
       }
     }
   },
@@ -2464,7 +2464,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "horisontalt svart heksagon"
       }
     }
   },
@@ -2473,7 +2473,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart stor sirkel"
       }
     }
   },
@@ -2482,7 +2482,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart medium diamant"
       }
     }
   },
@@ -2491,7 +2491,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit medium diamant"
       }
     }
   },
@@ -2500,7 +2500,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart medium ruter"
       }
     }
   },
@@ -2509,7 +2509,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit medium ruter"
       }
     }
   },
@@ -2518,7 +2518,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart liten diamant"
       }
     }
   },
@@ -2527,7 +2527,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart liten ruter"
       }
     }
   },
@@ -2536,7 +2536,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit liten ruter"
       }
     }
   },
@@ -2545,7 +2545,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart horisontal ellipse"
       }
     }
   },
@@ -2554,7 +2554,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit horisontal ellipse"
       }
     }
   },
@@ -2563,7 +2563,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart vertikal ellipse"
       }
     }
   },
@@ -2572,7 +2572,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit vertikal ellipse"
       }
     }
   },
@@ -2581,7 +2581,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit medium stjerne"
       }
     }
   },
@@ -2590,7 +2590,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart liten stjerne"
       }
     }
   },
@@ -2599,7 +2599,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvit liten stjerne"
       }
     }
   },
@@ -2608,7 +2608,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart høgre-vendt pentagon"
       }
     }
   },
@@ -2617,7 +2617,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvitt høgre-vendt pentagon"
       }
     }
   },
@@ -2626,7 +2626,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit stor sirkel"
       }
     }
   },
@@ -2635,7 +2635,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit oval med oval inni"
       }
     }
   },
@@ -2644,7 +2644,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit sirkel med sirkel inni"
       }
     }
   },
@@ -2653,7 +2653,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit sirkel"
       }
     }
   },
@@ -2662,7 +2662,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "feit innsirkla saltire"
       }
     }
   }

@@ -12,9 +12,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "Fahrenheit"
       }
     }
   },
@@ -27,9 +25,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "Celsius"
       }
     }
   },
@@ -42,9 +38,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "Kelvin"
       }
     }
   }

@@ -11,9 +11,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "sekund",
+        "plural": "sekunder"
       }
     }
   },
@@ -25,9 +24,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "sekund",
+        "plural": "sekunder"
       }
     }
   },
@@ -40,9 +38,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "minutt",
+        "plural": "minutter"
       }
     }
   },
@@ -54,9 +51,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "grad",
+        "plural": "grader"
       }
     }
   },
@@ -69,9 +65,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "plural": "",
-        "dual": ""
+        "default": "time",
+        "plural": "timer"
       }
     }
   }

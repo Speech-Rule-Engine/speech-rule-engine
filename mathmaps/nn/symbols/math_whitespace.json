@@ -7,7 +7,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellomrom"
       }
     }
   },
@@ -16,7 +16,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellomrom utan skille"
       }
     }
   },
@@ -25,7 +25,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "myk bindestrek"
       }
     }
   },
@@ -34,7 +34,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en kvad"
       }
     }
   },
@@ -43,7 +43,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "em kvad"
       }
     }
   },
@@ -52,7 +52,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en mellomrom"
       }
     }
   },
@@ -61,7 +61,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "em mellomrom"
       }
     }
   },
@@ -70,7 +70,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre per em mellomrom"
       }
     }
   },
@@ -79,7 +79,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fire per em mellomrom"
       }
     }
   },
@@ -88,7 +88,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "seks per em mellomrom"
       }
     }
   },
@@ -97,7 +97,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "figurmellomrom"
       }
     }
   },
@@ -106,7 +106,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tegnsettingsmellomrom"
       }
     }
   },
@@ -115,7 +115,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tynt mellomrom"
       }
     }
   },
@@ -124,7 +124,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hårfint mellomrom"
       }
     }
   },
@@ -133,7 +133,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "null bredde mellomrom"
       }
     }
   },
@@ -142,7 +142,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "null bredde ikke sammenføyd"
       }
     }
   },
@@ -151,7 +151,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "null bredde sammenføyd"
       }
     }
   },
@@ -160,7 +160,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre til høgre-merke"
       }
     }
   },
@@ -169,7 +169,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre til venstre-merke"
       }
     }
   },
@@ -178,7 +178,7 @@
     "category": "Zl",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "linjeskille"
       }
     }
   },
@@ -187,7 +187,7 @@
     "category": "Zp",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "avsnittsskille"
       }
     }
   },
@@ -196,7 +196,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre til høgre-embedding"
       }
     }
   },
@@ -205,7 +205,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre til venstre-embedding"
       }
     }
   },
@@ -214,7 +214,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vis retningsformatering"
       }
     }
   },
@@ -223,7 +223,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre til høgre-overstyring"
       }
     }
   },
@@ -232,7 +232,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "høgre til venstre-overstyring"
       }
     }
   },
@@ -241,7 +241,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "smalt mellomrom utan skille"
       }
     }
   },
@@ -250,7 +250,7 @@
     "category": "Zs",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "medium matematisk mellomrom"
       }
     }
   },
@@ -259,7 +259,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ordsamanføying"
       }
     }
   },
@@ -268,7 +268,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "av"
       }
     }
   },
@@ -277,7 +277,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ganger"
       }
     }
   },
@@ -286,7 +286,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skille"
       }
     }
   },
@@ -295,7 +295,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pluss"
       }
     }
   },
@@ -304,7 +304,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forhindre symmetrisk ombytte"
       }
     }
   },
@@ -313,7 +313,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "aktiver symmetrisk ombytte"
       }
     }
   },
@@ -322,7 +322,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nasjonale nummerformer"
       }
     }
   },
@@ -331,7 +331,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nominale nummerformer"
       }
     }
   },
@@ -340,7 +340,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "null bredde mellomrom utan skille"
       }
     }
   },
@@ -349,7 +349,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interlineær annoteringsanker"
       }
     }
   },
@@ -358,7 +358,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interlineær annoteringsseparator"
       }
     }
   },
@@ -367,7 +367,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interlineær annoteringsterminator"
       }
     }
   }
