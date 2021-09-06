@@ -34,7 +34,10 @@ export let SUB_ISO: string = 'alt';
  * @return If it is a one, it is made into prefix.
  */
 function onePrefix_(num: string, thd: boolean = false): string {
-  return num === NUMBERS.ones[1] ? (thd ? 'et' : 'ett') : num;
+  let numOne = NUMBERS.ones[1];
+  return num === numOne ?
+    (num === 'ein' ? 'eitt ' : (thd ? 'et' : 'ett'))
+    : num;
 }
 
 
@@ -66,7 +69,23 @@ function hundredsToWords_(num: number, ordinal: boolean = false): string {
       str += ones ? ones + 'og' + tens : tens;
     }
   }
-  return (ordinal ? (str.match(/n$/) ? str + 'de' : str + 'nde') : str);
+  return (ordinal ? replaceOrdinal(str) : str);
+}
+
+
+/**
+ * Adds the ordinal ending for numbers up to numbers < 1000.
+ * @param str The number.
+ * @return Number with ordinal ending.
+ */
+function replaceOrdinal(str: string): string {
+  if (str.match(/i$/)) {
+    return str + 'ende';
+  }
+  if (str.match(/(e|n)$/)) {
+    return str + 'de';
+  }
+  return str + 'nde';
 }
 
 
@@ -88,6 +107,9 @@ function numberToWords(num: number, ordinal: boolean = false): string {
     let hundreds = num % 1000;
     if (hundreds) {
       let hund = hundredsToWords_(num % 1000, (pos ? false : ordinal));
+      if (!pos && ordinal) {
+        ordinal = !ordinal;
+      }
       str = (pos === 1 ? onePrefix_(hund, true) : hund) +
         (pos > 1 ? NUMBERS.numSep : '') +
         (pos ?
@@ -99,7 +121,7 @@ function numberToWords(num: number, ordinal: boolean = false): string {
     num = Math.floor(num / 1000);
     pos++;
   }
-  return str;
+  return ordinal ? (str + (str.match(/tusen$/) ? 'de' : 'te')) : str;
 }
 
 

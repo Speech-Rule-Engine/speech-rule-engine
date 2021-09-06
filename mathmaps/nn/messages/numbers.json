@@ -40,8 +40,8 @@
     "large": [
       "",
       "tusen",
-      "ein million",
-      "ein milliard",
+      "million",
+      "milliard",
       "billion",
       "billiard",
       "trillion",
@@ -52,36 +52,12 @@
       "kvintilliard"
     ],
     "vulgarSep": " ",
-    "numSep": "",
-    "hundreds": [
-      "hundre",
-      "tohundre",
-      "trehundre",
-      "firehundre",
-      "femhundre",
-      "sekshundre",
-      "sjuhundre",
-      "åttehundre",
-      "nihundre"
-    ],
-    "twenties": {
-      "21": "tjueein",
-      "22": "tjueto",
-      "23": "tjuetre",
-      "24": "tjuefire",
-      "25": "tjuefem",
-      "26": "tjueseks",
-      "27": "tjuesju",
-      "28": "tjueåtte",
-      "29": "tjueni"
-    },
-    "thirties": {},
-    "rest": {
-      "101": "hundreogein",
-      "2000": "to tusen",
-      "2000000": "to millionar",
-      "2000000000": "to milliardar",
-      " ": ""
+    "numSep": " ",
+    "special": {
+      "smallOrdinals": [
+        "nullte", "første", "andre", "tredje", "fjerde", "femte", "sjette",
+        "sjuende", "åttende", "niende", "tiende", "ellevte", "tolvte"
+      ]
     }
   }
 }
