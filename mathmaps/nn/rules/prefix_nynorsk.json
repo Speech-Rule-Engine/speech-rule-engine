@@ -1,7 +1,7 @@
 {
   "inherits": "base",
   "locale": "nn",
-  "domain": "prefix",
-  "modality": "speech",
+  "domain": "default",
+  "modality": "prefix",
   "rules": []
 }

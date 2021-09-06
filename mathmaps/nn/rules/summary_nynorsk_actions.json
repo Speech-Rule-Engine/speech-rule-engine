@@ -1,8 +1,7 @@
 {
   "kind": "actions",
   "locale": "nn",
-  "domain": "summary",
-  "modality": "speech",
+  "modality": "summary",
   "rules": [
     [
       "Action",

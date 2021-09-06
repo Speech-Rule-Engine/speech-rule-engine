@@ -124,7 +124,7 @@
       "default": "stor bokstav"
     },
     "smallPrefix": {
-      "default": "liten bokstav"
+      "default": ""
     },
     "digitPrefix": {
       "default": ""

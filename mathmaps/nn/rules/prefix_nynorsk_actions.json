@@ -1,8 +1,8 @@
 {
   "kind": "actions",
   "locale": "nn",
-  "domain": "prefix",
-  "modality": "speech",
+  "domain": "default",
+  "modality": "prefix",
   "rules": [
     [
       "Action",
