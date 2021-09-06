@@ -14,7 +14,7 @@
     "mappings": {
       "default": {
         "default": "",
-        "singular": "",
+        "plural": "",
         "dual": ""
       }
     }
