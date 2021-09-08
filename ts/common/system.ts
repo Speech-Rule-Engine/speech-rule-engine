@@ -91,6 +91,20 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
   L10n.setLocale();
   engine.setDynamicCstr();
   SpeechRuleEngine.getInstance().updateEngine();
+  return new Promise<void>((res, rej) => {
+    function checkSRE() {
+      let count = 0;
+      if (engineReady()) {
+        res();
+      } else if (count < 30) {
+        count++;
+        setTimeout(checkSRE, 200);
+      } else {
+        rej();
+      }
+    }
+    checkSRE();
+  });
 }
 
 
