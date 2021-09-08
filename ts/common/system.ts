@@ -25,7 +25,7 @@ import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 
 import * as BaseUtil from './base_util';
 import {Debugger} from './debugger';
-import {Engine, EngineConst} from './engine';
+import {Engine, EngineConst, EnginePromise} from './engine';
 import {SREError} from './engine';
 import {KeyCode} from './event_util';
 import {ProcessorFactory} from './processors';
@@ -45,6 +45,7 @@ let files_: number = 0;
 
 Engine.registerTest(() => !!!files_);
 
+
 /**
  *  Setup Methods functionality.
  */
@@ -58,6 +59,11 @@ Engine.registerTest(() => !!!files_);
  *     setup features.
  */
 export function setupEngine(feature: {[key: string]: boolean|string}) {
+  _setupEngine(feature);
+  return EnginePromise.get();
+}
+
+function _setupEngine(feature: {[key: string]: boolean|string}) {
   let engine = Engine.getInstance() as any;
   // This preserves the possibility to specify default as domain.
   // < 3.2  this lead to the use of chromevox rules in English.
@@ -91,20 +97,6 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
   L10n.setLocale();
   engine.setDynamicCstr();
   SpeechRuleEngine.getInstance().updateEngine();
-  return new Promise<void>((res, rej) => {
-    function checkSRE() {
-      let count = 0;
-      if (engineReady()) {
-        res();
-      } else if (count < 30) {
-        count++;
-        setTimeout(checkSRE, 200);
-      } else {
-        rej();
-      }
-    }
-    checkSRE();
-  });
 }
 
 
@@ -171,8 +163,8 @@ export function engineSetup(): {[key: string]: boolean|string} {
  * @return True if engine is ready, i.e., unicode file for the current
  *     locale has been loaded.
  */
-export function engineReady(): boolean {
-  return Engine.isReady();
+export function engineReady(): Promise<any> {
+  return EnginePromise.get();
 }
 
 
@@ -443,16 +435,15 @@ export function move(direction: KeyCode|string): string|null {
  */
 export function exit(opt_value?: number) {
   let value = opt_value || 0;
-  if (!value && !Engine.isReady()) {
-    setTimeout(() => exit(value), 100);
-    return;
-  }
-  process.exit(value);
+  EnginePromise.get().then(() => process.exit(value));
 }
 
+
+// Check here for custom method!
 if (SystemExternal.documentSupported) {
   setupEngine({'mode': EngineConst.Mode.HTTP});
 } else {
   // Currently we only allow for sync.
-  setupEngine({'mode': EngineConst.Mode.SYNC});
+  setupEngine({'mode': EngineConst.Mode.SYNC}).
+    then(() =>  setupEngine({'mode': EngineConst.Mode.ASYNC}));
 }

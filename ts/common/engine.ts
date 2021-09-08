@@ -367,3 +367,29 @@ export class Engine {
   }
 
 }
+
+
+export namespace EnginePromise {
+
+  let promises: Promise<any>[] = [];
+
+  let currentPromise = Promise.allSettled(promises);
+
+
+  /**
+   * Adds a new promise.
+   * @param promise The promise to add.
+   */
+  export function set(promise: Promise<any>) {
+    promises.push(promise);
+    currentPromise = Promise.allSettled(promises);
+  }
+
+  /**
+   * @return The promises to wait on.
+   */
+  export function get(): Promise<any> {
+    return currentPromise;
+  }
+
+}

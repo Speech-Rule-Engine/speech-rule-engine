@@ -25,7 +25,7 @@ import {MathCompoundStore} from '../rule_engine/math_simple_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
 import {Debugger} from './debugger';
-import {EngineConst, SREError} from './engine';
+import {EngineConst, EnginePromise, SREError} from './engine';
 import {ProcessorFactory} from './processors';
 import * as System from './system';
 import SystemExternal from './system_external';
@@ -43,6 +43,7 @@ export class Cli {
   public dp: DOMParser;
   constructor() {
     this.setup = {'mode': EngineConst.Mode.SYNC};
+    System.setupEngine(this.setup);
     this.dp = new SystemExternal.xmldom.DOMParser({
       errorHandler: function(_key: string, _msg: string) {
         throw new SREError('XML DOM error!');
@@ -82,6 +83,7 @@ export class Cli {
         System.setupEngine({locale: loc});
       }
     }
+    EnginePromise.get().then(() => {
     let length = DynamicCstr.DEFAULT_ORDER.map(x => x.length);
     let maxLength = (obj: any, index: number) => {
       length[index] = Math.max.apply(
@@ -147,6 +149,7 @@ export class Cli {
     output += '========================\n';
     output += table.map((x) => x.join(' | ')).join('\n');
     console.info(output);
+    });
   }
 
 

@@ -24,7 +24,7 @@
 
 import * as BaseUtil from '../common/base_util';
 import * as BrowserUtil from '../common/browser_util';
-import {Engine, EngineConst} from '../common/engine';
+import {Engine, EngineConst, EnginePromise} from '../common/engine';
 import SystemExternal from '../common/system_external';
 import {RulesJson} from '../rule_engine/base_rule_store';
 import {DynamicCstr} from '../rule_engine/dynamic_cstr';
@@ -75,6 +75,7 @@ export namespace MathMap {
     MathCompoundStore.siPrefixes = json;
   }
 
+
   export function lookupString(node: string, dynamic: DynamicCstr) {
     return MathCompoundStore.lookupString(node, dynamic);
   }
@@ -102,42 +103,33 @@ export namespace MathMap {
     }
   }
 
+  // Custom loader of file
+  // Gets the name of the locale.
+  // Returns a promise that resolves once the file is loaded.
 
   /**
    * Retrieves JSON rule mappings for a given locale.
-   * @param file The target locale.
+   * @param locale The target locale.
    * @param parse Method adding the rules.
    */
-  export function retrieveFiles(
-      file: string, parse: (p1: string) => MathMapJson) {
-    let async = Engine.getInstance().mode === EngineConst.Mode.ASYNC;
-    if (async) {
-      Engine.getInstance().mode = EngineConst.Mode.SYNC;
-    }
+  export function retrieveFiles(locale: string) {
+    let promise = Promise.resolve('');
     switch (Engine.getInstance().mode) {
       case EngineConst.Mode.ASYNC:
-        MathMap.toFetch_++;
-        fromFile_(file, (err: Error, json: string) => {
-          MathMap.toFetch_--;
-          if (err) {
-            return;
-          }
-          parse(json);
-        });
+        promise = loadFile(locale);
+        promise.then((str: string) => parseMaps(str));
         break;
       case EngineConst.Mode.HTTP:
-        MathMap.toFetch_++;
-        getJsonAjax_(file, parse);
+        promise = loadAjax(locale);
+        promise.then((str: string) => parseMaps(str));
         break;
       case EngineConst.Mode.SYNC:
       default:
-        let strs = loadFile(file);
-        parse(strs);
+        promise = loadFileSync(locale);
         break;
     }
-    if (async) {
-      Engine.getInstance().mode = EngineConst.Mode.ASYNC;
-    }
+    promise.then((str: string) => parseMaps(str));
+    EnginePromise.set(promise);
   }
 
 
@@ -190,9 +182,7 @@ export namespace MathMap {
       getJsonIE_(locale);
       return;
     }
-    let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
-    let parse = parseMaps.bind(this);
-    retrieveFiles(file, parse);
+    retrieveFiles(locale);
   }
 
 
@@ -219,54 +209,62 @@ export namespace MathMap {
    * @param func Method adding the rules.
    * @return JSON.
    */
-  function fromFile_(path: string, func: (p1: Error, p2: string) => any):
-      string {
-    return SystemExternal.fs.readFile(path, 'utf8', func);
+  function loadFile(locale: string): Promise<string> {
+    console.log(locale);
+    let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
+    return new Promise((res) => {
+      SystemExternal.fs.readFile(
+        file, 'utf8',
+        (err: Error, json: string) => {
+          if (err) {
+            return res('{}');
+          }
+          res(json);
+        });
+    });
   }
 
 
   /**
    * Loads JSON for a given file name.
-   * @param file A valid filename.
+   * @param locale The locale to retrieve.
    * @return A string representing a JSON array.
    */
-  export function loadFile(file: string): string {
-    try {
-      return readJSON_(file);
-    } catch (x) {
-      console.error('Unable to load file: ' + file + '\n' + x);
-    }
-    return '{}';
-  }
-
-
-  /**
-   * Takes path to a JSON file and returns a JSON object.
-   * @param path Contains the path to a JSON file.
-   * @return JSON.
-   */
-  function readJSON_(path: string): string {
-    return SystemExternal.fs.readFileSync(path);
+  export function loadFileSync(locale: string): Promise<string> {
+    // TODO: Put this into a API function.
+    let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
+    return new Promise((res) => {
+      let str = '{}';
+      try {
+        str = SystemExternal.fs.readFileSync(file, 'utf8');
+      } catch (x) {
+        console.error('Unable to load file: ' + file + '\n' + x);
+      }
+      res(str);
+    });
   }
 
 
   /**
    * Sents AJAX request to retrieve a JSON rule file.
-   * @param file The file to retrieve.
+   * @param locale The locale to retrieve.
    * @param parse Method adding the rules.
    */
-  function getJsonAjax_(file: string, parse: (p1: string) => any) {
+  function loadAjax(locale: string): Promise<string> {
+    // TODO: Put this into a API function.
+    let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
     let httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === 4) {
-        MathMap.toFetch_--;
-        if (httpRequest.status === 200) {
-          parse(httpRequest.responseText);
+    return new Promise((res) => {
+      httpRequest.onreadystatechange = function() {
+        if (httpRequest.readyState === 4) {
+          if (httpRequest.status === 200) {
+            res(httpRequest.responseText);
+          }
         }
-      }
-    };
-    httpRequest.open('GET', file, true);
-    httpRequest.send();
+      };
+      httpRequest.open('GET', file, true);
+      httpRequest.send();
+    });
   }
 
 }
