@@ -60,7 +60,7 @@ Engine.registerTest(() => !!!files_);
  */
 export function setupEngine(feature: {[key: string]: boolean|string}) {
   _setupEngine(feature);
-  return EnginePromise.get();
+  return EnginePromise.get(Engine.getInstance().locale);
 }
 
 function _setupEngine(feature: {[key: string]: boolean|string}) {
@@ -68,8 +68,7 @@ function _setupEngine(feature: {[key: string]: boolean|string}) {
   // This preserves the possibility to specify default as domain.
   // < 3.2  this lead to the use of chromevox rules in English.
   // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
-  // we
-  //        get a meaningful output.
+  // we get a meaningful output.
   if (feature.domain === 'default' &&
     (feature.modality === 'speech' ||
       (!feature.modality || engine.modality === 'speech'))) {
@@ -129,17 +128,6 @@ function configBlocks_(feature: {[key: string]: boolean|string}) {
 
 
 /**
- * Setting engine to async mode once it is ready.
- */
-export function setAsync() {
-  if (!Engine.isReady()) {
-    setTimeout(setAsync, 500);
-  }
-  setupEngine({'mode': EngineConst.Mode.ASYNC});
-}
-
-
-/**
  * Query the engine setup.
  * @return Object vector with all engine feature
  *     values.
@@ -164,7 +152,7 @@ export function engineSetup(): {[key: string]: boolean|string} {
  *     locale has been loaded.
  */
 export function engineReady(): Promise<any> {
-  return EnginePromise.get();
+  return EnginePromise.getall();
 }
 
 
@@ -435,7 +423,7 @@ export function move(direction: KeyCode|string): string|null {
  */
 export function exit(opt_value?: number) {
   let value = opt_value || 0;
-  EnginePromise.get().then(() => process.exit(value));
+  EnginePromise.getall().then(() => process.exit(value));
 }
 
 

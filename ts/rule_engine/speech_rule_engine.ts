@@ -303,9 +303,9 @@ export class SpeechRuleEngine {
    */
   public getEvaluator(locale: string, modality: string):
       (p1: Node) => AuditoryDescription[] {
-    let loc = this.evaluators_[locale];
-    // TODO: Do we need a fallback here?
-    return loc[modality];
+    let loc = this.evaluators_[locale] ||
+      this.evaluators_[DynamicCstr.DEFAULT_VALUES[Axis.LOCALE]];
+    return loc[modality] || loc[DynamicCstr.DEFAULT_VALUES[Axis.MODALITY]];
   }
 
 

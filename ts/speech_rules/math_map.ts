@@ -46,15 +46,6 @@ export namespace MathMap {
   /**
    * The compund store for symbol and function mappings.
    */
-
-
-  /**
-   * Files left to fetch in asynchronous mode.
-   */
-  export let toFetch_: number = 0;
-
-  let loaded_: string[] = [];
-
   export let store = MathCompoundStore;
 
   /**
@@ -96,10 +87,10 @@ export namespace MathMap {
    * Loads a new locale if necessary.
    */
   export function loadLocale(locale = Engine.getInstance().locale) {
-    if (loaded_.indexOf(locale) === -1) {
+    if (!EnginePromise.loaded[locale]) {
       SpeechRuleEngine.getInstance().prune = true;
+      EnginePromise.loaded[locale] = [false, false];
       retrieveMaps(locale);
-      loaded_.push(locale);
     }
   }
 
@@ -107,30 +98,46 @@ export namespace MathMap {
   // Gets the name of the locale.
   // Returns a promise that resolves once the file is loaded.
 
+  function loadMethod() {
+    switch (Engine.getInstance().mode) {
+      case EngineConst.Mode.ASYNC:
+        return loadFile;
+      case EngineConst.Mode.HTTP:
+        return loadAjax;
+      case EngineConst.Mode.SYNC:
+        // TODO: Custom loader here.
+      default:
+        return loadFileSync;
+    }
+  }
+  
   /**
    * Retrieves JSON rule mappings for a given locale.
    * @param locale The target locale.
    * @param parse Method adding the rules.
    */
   export function retrieveFiles(locale: string) {
-    let promise = Promise.resolve('');
-    switch (Engine.getInstance().mode) {
-      case EngineConst.Mode.ASYNC:
-        promise = loadFile(locale);
-        promise.then((str: string) => parseMaps(str));
-        break;
-      case EngineConst.Mode.HTTP:
-        promise = loadAjax(locale);
-        promise.then((str: string) => parseMaps(str));
-        break;
-      case EngineConst.Mode.SYNC:
-      default:
-        promise = loadFileSync(locale);
-        break;
-    }
-    promise.then((str: string) => parseMaps(str));
-    EnginePromise.set(promise);
+    let loader = loadMethod();
+    let promise = new Promise<string>(res => {
+      let inner = loader(locale);
+      console.log('INNER');
+      console.log(inner);
+      inner.then((str: string) => {
+        console.log('Parsing for locale ' + locale);
+        parseMaps(str);
+        EnginePromise.loaded[locale] = [true, true];
+        res(locale);
+      }, (_err: string) => {
+        console.log(22);
+        EnginePromise.loaded[locale] = [true, false];
+        console.error(`Unable to load locale: ${locale}`);
+        Engine.getInstance().locale = 'en';
+        res(locale);
+      });
+    });
+    EnginePromise.promises[locale] = promise;
   }
+    
 
 
   /**
@@ -210,14 +217,14 @@ export namespace MathMap {
    * @return JSON.
    */
   function loadFile(locale: string): Promise<string> {
-    console.log(locale);
+    // TODO: Put this into a API function.
     let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
-    return new Promise((res) => {
+    return new Promise((res, rej) => {
       SystemExternal.fs.readFile(
         file, 'utf8',
         (err: Error, json: string) => {
           if (err) {
-            return res('{}');
+            return rej(err);
           }
           res(json);
         });
@@ -233,12 +240,12 @@ export namespace MathMap {
   export function loadFileSync(locale: string): Promise<string> {
     // TODO: Put this into a API function.
     let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
-    return new Promise((res) => {
+    return new Promise((res, rej) => {
       let str = '{}';
       try {
         str = SystemExternal.fs.readFileSync(file, 'utf8');
-      } catch (x) {
-        console.error('Unable to load file: ' + file + '\n' + x);
+      } catch (err) {
+        return rej(err);
       }
       res(str);
     });
@@ -254,11 +261,14 @@ export namespace MathMap {
     // TODO: Put this into a API function.
     let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
     let httpRequest = new XMLHttpRequest();
-    return new Promise((res) => {
+    return new Promise((res, rej) => {
       httpRequest.onreadystatechange = function() {
         if (httpRequest.readyState === 4) {
-          if (httpRequest.status === 200) {
+          let status = httpRequest.status;
+          if (status === 0 || (status >= 200 && status < 400)) {
             res(httpRequest.responseText);
+          } else {
+            rej(status);
           }
         }
       };
@@ -268,5 +278,3 @@ export namespace MathMap {
   }
 
 }
-
-Engine.registerTest(() => MathMap.getInstance() && !MathMap.toFetch_);

@@ -371,25 +371,45 @@ export class Engine {
 
 export namespace EnginePromise {
 
-  let promises: Promise<any>[] = [];
+  /**
+   * Records if a locale is loaded or failed to load. Value one indicates that
+   * loading has been attempted and finished, while value two indicates if it
+   * was successful or not.
+   */
+  export let loaded: {[locale: string]: [boolean, boolean]} = {};
 
-  let currentPromise = Promise.allSettled(promises);
+  /**
+   * Records the loading promises for each locale.
+   */
+  export let promises: {[locale: string]: Promise<string>} = {};
+
+  // let promises: Promise<any>[] = [];
+
+  // let currentPromise = Promise.allSettled(promises);
 
 
   /**
    * Adds a new promise.
    * @param promise The promise to add.
    */
-  export function set(promise: Promise<any>) {
-    promises.push(promise);
-    currentPromise = Promise.allSettled(promises);
-  }
+  // export function set(promise: Promise<any>) {
+  //   promises.push(promise);
+  //   currentPromise = Promise.allSettled(promises);
+  // }
 
   /**
    * @return The promises to wait on.
    */
-  export function get(): Promise<any> {
-    return currentPromise;
+  export function get(locale: string = Engine.getInstance().locale): Promise<string> {
+    console.log(locale);
+    console.log(loaded);
+    console.log(promises[locale]);
+    return promises[locale] || Promise.resolve('');
   }
 
+
+  export function getall() {
+    return Promise.allSettled(Object.values(promises));
+  }
+  
 }
