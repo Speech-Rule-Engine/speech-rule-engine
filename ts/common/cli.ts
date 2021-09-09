@@ -83,7 +83,7 @@ export class Cli {
         System.setupEngine({locale: loc});
       }
     }
-    EnginePromise.get().then(() => {
+    EnginePromise.getall().then(() => {
     let length = DynamicCstr.DEFAULT_ORDER.map(x => x.length);
     let maxLength = (obj: any, index: number) => {
       length[index] = Math.max.apply(
@@ -159,9 +159,11 @@ export class Cli {
    */
   public execute(input: string) {
     let options = SystemExternal.commander.opts();
-    this.runProcessors_((proc, file) => {
-      System.file.processFile(proc, file, options.output);
-    }, input);
+    EnginePromise.getall().then(() => {
+      this.runProcessors_((proc, file) => {
+        System.file.processFileSync(proc, file, options.output);
+      }, input);
+    });
   }
 
 

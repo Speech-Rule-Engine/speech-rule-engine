@@ -102,7 +102,6 @@ namespace SystemExternal {
   export const fs =
     SystemExternal.documentSupported ? null : SystemExternal.extRequire('fs');
 
-
   /**
    * The URL for SRE resources.
    */

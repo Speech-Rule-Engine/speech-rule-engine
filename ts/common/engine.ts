@@ -383,33 +383,21 @@ export namespace EnginePromise {
    */
   export let promises: {[locale: string]: Promise<string>} = {};
 
-  // let promises: Promise<any>[] = [];
-
-  // let currentPromise = Promise.allSettled(promises);
-
 
   /**
-   * Adds a new promise.
-   * @param promise The promise to add.
+   * @return The promise for a locale.
    */
-  // export function set(promise: Promise<any>) {
-  //   promises.push(promise);
-  //   currentPromise = Promise.allSettled(promises);
-  // }
-
-  /**
-   * @return The promises to wait on.
-   */
-  export function get(locale: string = Engine.getInstance().locale): Promise<string> {
-    console.log(locale);
-    console.log(loaded);
-    console.log(promises[locale]);
+  export function get(locale: string =
+    Engine.getInstance().locale): Promise<string> {
     return promises[locale] || Promise.resolve('');
   }
 
 
+  /**
+   * @return All promises combined into one.
+   */
   export function getall() {
     return Promise.allSettled(Object.values(promises));
   }
-  
+
 }

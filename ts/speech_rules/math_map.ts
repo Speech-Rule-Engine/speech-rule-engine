@@ -22,9 +22,9 @@
  */
 
 
-import * as BaseUtil from '../common/base_util';
 import * as BrowserUtil from '../common/browser_util';
 import {Engine, EngineConst, EnginePromise} from '../common/engine';
+import {localePath} from '../common/system';
 import SystemExternal from '../common/system_external';
 import {RulesJson} from '../rule_engine/base_rule_store';
 import {DynamicCstr} from '../rule_engine/dynamic_cstr';
@@ -97,20 +97,24 @@ export namespace MathMap {
   // Custom loader of file
   // Gets the name of the locale.
   // Returns a promise that resolves once the file is loaded.
-
+  /**
+   * @return The load method for the given mode. If a custom load method is
+   *     provided it is returned instead.
+   */
   function loadMethod() {
+    // TODO: Custom loader here.
     switch (Engine.getInstance().mode) {
       case EngineConst.Mode.ASYNC:
         return loadFile;
       case EngineConst.Mode.HTTP:
         return loadAjax;
       case EngineConst.Mode.SYNC:
-        // TODO: Custom loader here.
       default:
         return loadFileSync;
     }
   }
-  
+
+
   /**
    * Retrieves JSON rule mappings for a given locale.
    * @param locale The target locale.
@@ -120,15 +124,11 @@ export namespace MathMap {
     let loader = loadMethod();
     let promise = new Promise<string>(res => {
       let inner = loader(locale);
-      console.log('INNER');
-      console.log(inner);
       inner.then((str: string) => {
-        console.log('Parsing for locale ' + locale);
         parseMaps(str);
         EnginePromise.loaded[locale] = [true, true];
         res(locale);
       }, (_err: string) => {
-        console.log(22);
         EnginePromise.loaded[locale] = [true, false];
         console.error(`Unable to load locale: ${locale}`);
         Engine.getInstance().locale = 'en';
@@ -137,7 +137,6 @@ export namespace MathMap {
     });
     EnginePromise.promises[locale] = promise;
   }
-    
 
 
   /**
@@ -217,8 +216,7 @@ export namespace MathMap {
    * @return JSON.
    */
   function loadFile(locale: string): Promise<string> {
-    // TODO: Put this into a API function.
-    let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
+    let file = localePath(locale);
     return new Promise((res, rej) => {
       SystemExternal.fs.readFile(
         file, 'utf8',
@@ -238,8 +236,7 @@ export namespace MathMap {
    * @return A string representing a JSON array.
    */
   export function loadFileSync(locale: string): Promise<string> {
-    // TODO: Put this into a API function.
-    let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
+    let file = localePath(locale);
     return new Promise((res, rej) => {
       let str = '{}';
       try {
@@ -258,8 +255,7 @@ export namespace MathMap {
    * @param parse Method adding the rules.
    */
   function loadAjax(locale: string): Promise<string> {
-    // TODO: Put this into a API function.
-    let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
+    let file = localePath(locale);
     let httpRequest = new XMLHttpRequest();
     return new Promise((res, rej) => {
       httpRequest.onreadystatechange = function() {

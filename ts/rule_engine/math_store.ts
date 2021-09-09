@@ -266,9 +266,6 @@ export class MathStore extends BaseRuleStore {
     if (isLoc) {
       return locNum ? {number: locNum[0], length: locNum[0].length} : null;
     }
-    console.log(enNum);
-    console.log(en().MESSAGES.regexp.DIGIT_GROUP);
-    console.log(LOCALE.MESSAGES.regexp.DECIMAL_MARK);
     let num =
       enNum[0]
         .replace(new RegExp(en().MESSAGES.regexp.DIGIT_GROUP, 'g'), 'X')
