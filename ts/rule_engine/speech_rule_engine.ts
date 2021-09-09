@@ -125,13 +125,13 @@ export class SpeechRuleEngine {
    */
   private static updateEvaluator(node: Element) {
     let parent = node as any as Document;
-    while(parent && !parent.evaluate) {
+    while (parent && !parent.evaluate) {
       parent = parent.parentNode as Document;
     }
     if (parent.evaluate) {
       XpathUtil.currentDocument = /** @type{Document} */(parent);
     }
-  };
+  }
 
 
   // Dispatch functionality.
@@ -148,7 +148,13 @@ export class SpeechRuleEngine {
       SpeechRuleEngine.updateEvaluator(node);
     }
     let timeIn = (new Date()).getTime();
-    let result = this.evaluateNode_(node);
+    let result: AuditoryDescription[] = [];
+    try {
+      result = this.evaluateNode_(node);
+    } catch (err) {
+      console.error('Something went wrong computing speech.');
+      Debugger.getInstance().output(err);
+    }
     let timeOut = (new Date()).getTime();
     Debugger.getInstance().output('Time:', timeOut - timeIn);
     return result;
@@ -228,7 +234,8 @@ export class SpeechRuleEngine {
       this.adjustEngine();
     }
     // TODO: Rewrite this to use MathCompoundStore
-    Engine.getInstance().evaluator = maps.lookupString as (p1: string, p2: DynamicCstr) => string;
+    Engine.getInstance().evaluator =
+      maps.lookupString as (p1: string, p2: DynamicCstr) => string;
       // maps.store.lookupString.bind(maps.store);
   }
 

@@ -130,8 +130,15 @@ export class Engine {
     'rate', 'rules', 'prune'
   ];
 
+
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Engine;
+
+  /**
+   * Custom loader. Promise resolves after load, rejects when something goes
+   * wrong.
+   */
+  public customLoader: (locale: string) => Promise<string> = null;
 
   public evaluator: (p1: string, p2: Dcstr.DynamicCstr) => string | null;
 

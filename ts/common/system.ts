@@ -69,7 +69,7 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
     engine[feat] = feature[feat] || engine[feat];
   };
   setMulti('mode');
-  configBlocks_(feature);
+  config(feature);
   Engine.BINARY_FEATURES.forEach(setIf);
   Engine.STRING_FEATURES.forEach(setMulti);
   if (feature.json) {
@@ -78,6 +78,7 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
   if (feature.xpath) {
     SystemExternal.WGXpath = feature.xpath as string;
   }
+  setCustomLoader(feature.custom);
   engine.setupBrowsers();
   L10n.setLocale();
   engine.setDynamicCstr();
@@ -86,17 +87,38 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
 }
 
 
+function config(feature: {[key: string]: boolean|string}) {
+  if (Engine.getInstance().config ||
+    Engine.getInstance().mode !== EngineConst.Mode.HTTP) {
+    return;
+  }
+  configBlocks(feature);
+  configFeature(feature);
+  Engine.getInstance().config = true;
+}
+
+declare const SREfeature: {[key: string]: any};
+
 /**
  * Reads configuration blocks and adds them to the feature vector.
  * @param feature An object describing some
  *     setup features.
  */
-function configBlocks_(feature: {[key: string]: boolean|string}) {
-  if (Engine.getInstance().config ||
-    Engine.getInstance().mode !== EngineConst.Mode.HTTP) {
-    return;
+function configFeature(feature: {[key: string]: boolean|string}) {
+  if (typeof SREfeature !== 'undefined') {
+    for (let [name, feat] of Object.entries(SREfeature)) {
+      feature[name] = feat;
+    }
   }
-  Engine.getInstance().config = true;
+}
+
+
+/**
+ * Reads configuration blocks and adds them to the feature vector.
+ * @param feature An object describing some
+ *     setup features.
+ */
+function configBlocks(feature: {[key: string]: boolean|string}) {
   let scripts = document.documentElement.querySelectorAll(
     'script[type="text/x-sre-config"]');
   for (let i = 0, m = scripts.length; i < m; i++) {
@@ -406,6 +428,17 @@ export function exit(opt_value?: number) {
 export function localePath(locale: string, ext: string = 'json') {
   return BaseUtil.makePath(SystemExternal.jsonPath) + locale +
     (ext.match(/^\./) ? ext : '.' + ext);
+}
+
+
+/**
+ * Sets the custom loader.
+ * @param fn A custom loader function.
+ */
+export function setCustomLoader(fn: any) {
+  if (fn) {
+    Engine.getInstance().customLoader = fn;
+  }
 }
 
 

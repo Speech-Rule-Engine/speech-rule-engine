@@ -103,6 +103,9 @@ export namespace MathMap {
    */
   function loadMethod() {
     // TODO: Custom loader here.
+    if (Engine.getInstance().customLoader) {
+      return Engine.getInstance().customLoader;
+    }
     switch (Engine.getInstance().mode) {
       case EngineConst.Mode.ASYNC:
         return loadFile;
