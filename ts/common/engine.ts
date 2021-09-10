@@ -22,7 +22,6 @@
 
 
 import * as Dcstr from '../rule_engine/dynamic_cstr';
-import * as BrowserUtil from './browser_util';
 
 
 /**
@@ -294,15 +293,6 @@ export class Engine {
     return Engine.getInstance().setupTests_.every(function(pred) {
       return pred();
     });
-  }
-
-
-  /**
-   * Sets up browser specific functionality.
-   */
-  public setupBrowsers() {
-    this.isIE = BrowserUtil.detectIE();
-    this.isEdge = BrowserUtil.detectEdge();
   }
 
 

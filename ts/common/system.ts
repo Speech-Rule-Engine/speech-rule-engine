@@ -23,6 +23,7 @@ import {AuditoryDescription} from '../audio/auditory_description';
 import * as L10n from '../l10n/l10n';
 import {MathMap} from '../speech_rules/math_map';
 
+import * as BrowserUtil from './browser_util';
 import {Debugger} from './debugger';
 import {Engine, EngineConst, EnginePromise} from './engine';
 import {SREError} from './engine';
@@ -79,7 +80,7 @@ export async function setupEngine(feature: {[key: string]: boolean|string}) {
     SystemExternal.WGXpath = feature.xpath as string;
   }
   setCustomLoader(feature.custom);
-  engine.setupBrowsers();
+  setupBrowsers();
   L10n.setLocale();
   engine.setDynamicCstr();
   return MathMap.init().then(
@@ -440,6 +441,15 @@ export function setCustomLoader(fn: any) {
   if (fn) {
     Engine.getInstance().customLoader = fn;
   }
+}
+
+
+/**
+ * Sets up browser specific functionality.
+ */
+function setupBrowsers() {
+  Engine.getInstance().isIE = BrowserUtil.detectIE();
+  Engine.getInstance().isEdge = BrowserUtil.detectEdge();
 }
 
 
