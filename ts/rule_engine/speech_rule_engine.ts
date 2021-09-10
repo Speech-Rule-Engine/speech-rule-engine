@@ -60,11 +60,6 @@ export class SpeechRuleEngine {
   public trie: Trie = null;
 
   /**
-   * Flag indicating if the engine is ready. Not ready while it is updating!
-   */
-  private ready_: boolean = true;
-
-  /**
    * Default evaluators collated by locale and modality.
    */
   private evaluators_:
@@ -271,7 +266,7 @@ export class SpeechRuleEngine {
   /**
    * Collates information on dynamic constraint values of the current state of
    * the trie of the engine.
-   * 
+   *
    * @param opt_info Initial dynamic constraint information.
    * @return The collated information.
    */
@@ -279,12 +274,14 @@ export class SpeechRuleEngine {
     return this.trie.enumerate(opt_info);
   }
 
+  /**
+   * The central speech rule engine.
+   */
   private constructor() {
     /**
      * Initialised the trie.
      */
     this.trie = new Trie();
-    Engine.registerTest(() => this.ready_);
   }
 
 
@@ -708,7 +705,7 @@ export class SpeechRuleEngine {
     return this.trie.lookupRules(node, dynamic.allProperties());
   }
 
-  
+
   /**
    * Picks the result of the most constraint rule by prefering those:
    * 1) that best match the dynamic constraints.
@@ -727,7 +724,7 @@ export class SpeechRuleEngine {
           // 1. Computed priority value
           // 2. length of static constraints,
           // 3. Rank in the definition. Note that later rules
-          //    supersede earlier ones. 
+          //    supersede earlier ones.
           r2.precondition.priority - r1.precondition.priority ||
           r2.precondition.constraints.length -
           r1.precondition.constraints.length ||

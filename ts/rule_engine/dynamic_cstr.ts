@@ -204,18 +204,7 @@ export class DynamicCstr extends DynamicProperties {
     [Axis.MODALITY]: 'speech'
   };
 
-  private static Values_: any;
-
   private components: AxisMap;
-
-  /**
-   * @return The sets of values
-   *     for all constraint attributes.
-   */
-  public static getAxisValues(): AxisProperties {
-    return DynamicCstr.Values_.getInstance().get();
-  }
-
 
   /**
    * Convenience method to create a standard dynamic constraint, that follows a

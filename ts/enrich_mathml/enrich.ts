@@ -22,7 +22,7 @@
 
 import {Debugger} from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
-import {Engine} from '../common/engine';
+import {EnginePromise} from '../common/engine';
 import * as Semantic from '../semantic_tree/semantic';
 
 import * as EnrichMathml from './enrich_mathml';
@@ -57,14 +57,10 @@ export function semanticMathmlSync(expr: string): Element {
  * @param callback Function to apply on the result.
  */
 export function semanticMathml(expr: string, callback: (p1: Element) => any) {
-  if (!Engine.isReady()) {
-    setTimeout(function() {
-      semanticMathml(expr, callback);
-    }, 500);
-    return;
-  }
-  let mml = DomUtil.parseInput(expr);
-  callback(semanticMathmlNode(mml));
+  EnginePromise.getall().then(() => {
+    let mml = DomUtil.parseInput(expr);
+    callback(semanticMathmlNode(mml));
+  });
 }
 
 

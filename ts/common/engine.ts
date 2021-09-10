@@ -247,11 +247,6 @@ export class Engine {
   public prune: string = '';
 
   /**
-   * List of predicates for checking if the engine is set up.
-   */
-  private setupTests_: (() => boolean)[] = [];
-
-  /**
    * @return The Engine object.
    */
   public static getInstance(): Engine {
@@ -268,40 +263,6 @@ export class Engine {
   public static defaultEvaluator(
     str: string, _cstr: Dcstr.DynamicCstr): string {
     return str;
-  }
-
-
-  /**
-   * Registers a predicate to test whether the setup of the engine is complete.
-   * The basic idea is that different parts of the system that run
-   * asynchronously can register a test here and the engine can check if it is
-   * set up without the need to know which bits actually run asynchronously.
-   * @param pred A predicate that takes no input and returns
-   *     a boolean value.
-   */
-  public static registerTest(pred: () => boolean) {
-    Engine.getInstance().setupTests_.push(pred);
-  }
-
-
-  /**
-   * Test to see if the engine is fully setup. Important for async and http
-   * mode.
-   * @return True if the engine has completed its setup.
-   */
-  public static isReady(): boolean {
-    return Engine.getInstance().setupTests_.every(function(pred) {
-      return pred();
-    });
-  }
-
-
-  /**
-   * @return The sets of values
-   *     for all constraint attributes.
-   */
-  public getAxisValues(): Dcstr.AxisProperties {
-    return Dcstr.DynamicCstr.getAxisValues();
   }
 
 
