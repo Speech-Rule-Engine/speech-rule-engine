@@ -24,7 +24,7 @@
 //
 
 import {createLocale, Locale} from '../locale';
-import NUMBERS from '../numbers/numbers_nb';
+import NUMBERS from '../numbers/numbers_nn';
 import * as tr from '../transformers';
 
 let locale: Locale = null;
