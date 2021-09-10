@@ -23,11 +23,11 @@ import {AuditoryDescription} from '../audio/auditory_description';
 import * as L10n from '../l10n/l10n';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 
-import * as BaseUtil from './base_util';
 import {Debugger} from './debugger';
 import {Engine, EngineConst, EnginePromise} from './engine';
 import {SREError} from './engine';
 import {KeyCode} from './event_util';
+import * as FileUtil from './file_util';
 import {ProcessorFactory} from './processors';
 import SystemExternal from './system_external';
 import {Variables} from './variables';
@@ -73,7 +73,7 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
   Engine.BINARY_FEATURES.forEach(setIf);
   Engine.STRING_FEATURES.forEach(setMulti);
   if (feature.json) {
-    SystemExternal.jsonPath = BaseUtil.makePath(feature.json as string);
+    SystemExternal.jsonPath = FileUtil.makePath(feature.json as string);
   }
   if (feature.xpath) {
     SystemExternal.WGXpath = feature.xpath as string;
@@ -83,7 +83,7 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
   L10n.setLocale();
   engine.setDynamicCstr();
   SpeechRuleEngine.getInstance().updateEngine();
-  return EnginePromise.get(Engine.getInstance().locale);
+  return EnginePromise.get();
 }
 
 
@@ -425,10 +425,7 @@ export function exit(opt_value?: number) {
  * @param locale The locale iso.
  * @param ext An optional file extension. Defaults to json.
  */
-export function localePath(locale: string, ext: string = 'json') {
-  return BaseUtil.makePath(SystemExternal.jsonPath) + locale +
-    (ext.match(/^\./) ? ext : '.' + ext);
-}
+export const localePath = FileUtil.localePath;
 
 
 /**

@@ -48,6 +48,7 @@ import {Grammar, State as GrammarState} from './grammar';
 import {MathStore} from './math_store';
 import {ActionType, SpeechRule} from './speech_rule';
 import {SpeechRuleContext} from './speech_rule_context';
+import {MathCompoundStore} from './math_simple_store';
 
 import {Trie} from '../indexing/trie';
 
@@ -234,7 +235,7 @@ export class SpeechRuleEngine {
       this.adjustEngine();
     }
     // TODO: Rewrite this to use MathCompoundStore
-    Engine.getInstance().evaluator =
+    Engine.getInstance().evaluator = MathCompoundStore.lookupString;
       maps.lookupString as (p1: string, p2: DynamicCstr) => string;
       // maps.store.lookupString.bind(maps.store);
   }

@@ -15,6 +15,7 @@
 
 /**
  * @fileoverview A collection of basic JavaScript utility functions.
+ *    Those are independent of any other module.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -75,14 +76,4 @@ export function union(a: any[], b: any[]): any[] {
     return a || b || [];
   }
   return a.concat(setdifference(b, a));
-}
-
-
-/**
- * Corrects pathnames to have trailing slashes.
- * @param path The original path.
- * @return The path that has definitely a trailing slash.
- */
-export function makePath(path: string): string {
-  return path.match('/$') ? path : path + '/';
 }

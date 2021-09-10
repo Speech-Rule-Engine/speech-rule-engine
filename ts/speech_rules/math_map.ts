@@ -24,10 +24,10 @@
 
 import * as BrowserUtil from '../common/browser_util';
 import {Engine, EngineConst, EnginePromise} from '../common/engine';
-import {localePath} from '../common/system';
+import * as FileUtil from '../common/file_util';
 import SystemExternal from '../common/system_external';
 import {RulesJson} from '../rule_engine/base_rule_store';
-import {DynamicCstr} from '../rule_engine/dynamic_cstr';
+// import {DynamicCstr} from '../rule_engine/dynamic_cstr';
 import {MathCompoundStore, SiJson, UnicodeJson} from '../rule_engine/math_simple_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 
@@ -67,11 +67,6 @@ export namespace MathMap {
   }
 
 
-  export function lookupString(node: string, dynamic: DynamicCstr) {
-    return MathCompoundStore.lookupString(node, dynamic);
-  }
-
-
   /**
    * @return The instance of the MathMap singleton.
    */
@@ -79,7 +74,7 @@ export namespace MathMap {
   export function getInstance(): {[key: string]: Function} {
     loadLocale('base');
     loadLocale();
-    return {lookupString, retrieveFiles, parseMaps};
+    return {retrieveFiles, parseMaps};
   }
 
 
@@ -88,7 +83,6 @@ export namespace MathMap {
    */
   export function loadLocale(locale = Engine.getInstance().locale) {
     if (!EnginePromise.loaded[locale]) {
-      SpeechRuleEngine.getInstance().prune = true;
       EnginePromise.loaded[locale] = [false, false];
       retrieveMaps(locale);
     }
@@ -218,8 +212,8 @@ export namespace MathMap {
    * @param func Method adding the rules.
    * @return JSON.
    */
-  function loadFile(locale: string): Promise<string> {
-    let file = localePath(locale);
+  export function loadFile(locale: string): Promise<string> {
+    let file = FileUtil.localePath(locale);
     return new Promise((res, rej) => {
       SystemExternal.fs.readFile(
         file, 'utf8',
@@ -239,7 +233,7 @@ export namespace MathMap {
    * @return A string representing a JSON array.
    */
   export function loadFileSync(locale: string): Promise<string> {
-    let file = localePath(locale);
+    let file = FileUtil.localePath(locale);
     return new Promise((res, rej) => {
       let str = '{}';
       try {
@@ -257,8 +251,8 @@ export namespace MathMap {
    * @param locale The locale to retrieve.
    * @param parse Method adding the rules.
    */
-  function loadAjax(locale: string): Promise<string> {
-    let file = localePath(locale);
+  export function loadAjax(locale: string): Promise<string> {
+    let file = FileUtil.localePath(locale);
     let httpRequest = new XMLHttpRequest();
     return new Promise((res, rej) => {
       httpRequest.onreadystatechange = function() {
