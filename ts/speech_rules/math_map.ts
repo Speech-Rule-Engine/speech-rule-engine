@@ -27,7 +27,6 @@ import {Engine, EngineConst, EnginePromise} from '../common/engine';
 import * as FileUtil from '../common/file_util';
 import SystemExternal from '../common/system_external';
 import {RulesJson} from '../rule_engine/base_rule_store';
-// import {DynamicCstr} from '../rule_engine/dynamic_cstr';
 import {MathCompoundStore, SiJson, UnicodeJson} from '../rule_engine/math_simple_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 
@@ -66,15 +65,18 @@ export namespace MathMap {
     MathCompoundStore.siPrefixes = json;
   }
 
+  let _init = false;
 
   /**
    * @return The instance of the MathMap singleton.
    */
   // TODO (TS): This will become the promise one day.
-  export function getInstance(): {[key: string]: Function} {
-    loadLocale('base');
-    loadLocale();
-    return {retrieveFiles, parseMaps};
+  export function init() {
+    if (!_init) {
+      loadLocale('base');
+      _init = true;
+    }
+    return EnginePromise.promises['base'];
   }
 
 

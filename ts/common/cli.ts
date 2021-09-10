@@ -270,8 +270,9 @@ export class Cli {
             '-f, --rules [name]', 'Loads a local rule file [name].',
             set('rules'))
         .option(
-            '-C, --prune [branch]', 'Prune trie [branch] for clean reload.',
-            set('prune'))
+            '-C, --subiso [name]',
+            'Suplementary iso (or similar) for the given locale.',
+            set('subiso'))
         .option('-v, --verbose', 'Verbose mode.')
         .option('-l, --log [name]', 'Log file [name].')
         .option('--opt', 'List engine setup options.')

@@ -29,15 +29,13 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
 import {AuditoryDescription} from '../audio/auditory_description';
 import {Span} from '../audio/span';
 import {Debugger} from '../common/debugger';
+import * as DomUtil from '../common/dom_util';
 import {Engine, EngineConst} from '../common/engine';
-import SystemExternal from '../common/system_external';
 import XpathUtil from '../common/xpath_util';
 import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
-import {MathMap} from '../speech_rules/math_map';
 import SpeechRules from '../speech_rules/speech_rules';
 import * as SpeechRuleStores from '../speech_rules/speech_rule_stores';
 import {BaseRuleStore} from './base_rule_store';
@@ -48,7 +46,6 @@ import {Grammar, State as GrammarState} from './grammar';
 import {MathStore} from './math_store';
 import {ActionType, SpeechRule} from './speech_rule';
 import {SpeechRuleContext} from './speech_rule_context';
-import {MathCompoundStore} from './math_simple_store';
 
 import {Trie} from '../indexing/trie';
 
@@ -56,8 +53,6 @@ export class SpeechRuleEngine {
 
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: SpeechRuleEngine;
-
-  public prune = true;
 
   /**
    * Trie for indexing speech rules in this store.
@@ -215,50 +210,6 @@ export class SpeechRuleEngine {
       store.getSpeechRules().forEach(x => this.trie.addRule(x));
     }
     this.addEvaluator(store);
-  }
-
-
-  /**
-   * Updates adminstrative info in the base Engine.
-   * During update the engine is not ready!
-   */
-  public updateEngine() {
-    this.ready_ = true;
-    let maps = MathMap.getInstance();
-    if (!Engine.isReady()) {
-      this.ready_ = false;
-      setTimeout(this.updateEngine.bind(this), 250);
-      return;
-    }
-    if (this.prune) {
-      this.prune = false;
-      this.adjustEngine();
-    }
-    // TODO: Rewrite this to use MathCompoundStore
-    Engine.getInstance().evaluator = MathCompoundStore.lookupString;
-      maps.lookupString as (p1: string, p2: DynamicCstr) => string;
-      // maps.store.lookupString.bind(maps.store);
-  }
-
-
-  /**
-   * Adjust Engine with local rule files.
-   */
-  public adjustEngine() {
-    let engine = Engine.getInstance();
-    if (engine.prune) {
-      let cstr = engine.prune.split('.');
-      this.pruneTrie(cstr);
-    }
-    if (engine.rules) {
-      // TODO: This needs to be made more robust.
-      let path =
-          SystemExternal.jsonPath.replace('/lib/mathmaps', '/mathmaps');
-      let parse = (json: string) =>
-        MathMap.getInstance().parseMaps(`{"${engine.rules}":${json}}`);
-      MathMap.getInstance().retrieveFiles(path + engine.rules, parse);
-    }
-    setTimeout(this.updateEngine.bind(this), 100);
   }
 
 
@@ -786,19 +737,6 @@ export class SpeechRuleEngine {
       return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
     }).bind(this));
     return rules[0];
-  }
-
-
-  /**
-   * Prunes the trie of the store for a given constraint.
-   * @param constraints A list of constraints.
-   */
-  public pruneTrie(constraints: string[]) {
-    let last = constraints.pop();
-    let parent = this.trie.byConstraint(constraints);
-    if (parent) {
-      parent.removeChild(last);
-    }
   }
 
 }

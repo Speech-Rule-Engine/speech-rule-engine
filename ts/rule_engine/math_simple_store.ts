@@ -362,7 +362,7 @@ export namespace MathCompoundStore {
     }
     return rule.action;
   }
-
+  Engine.getInstance().evaluator = MathCompoundStore.lookupString;
 
   /**
    * Collates information on dynamic constraint values of the currently active

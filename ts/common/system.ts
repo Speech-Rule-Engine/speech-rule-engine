@@ -21,7 +21,7 @@
 
 import {AuditoryDescription} from '../audio/auditory_description';
 import * as L10n from '../l10n/l10n';
-import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
+import {MathMap} from '../speech_rules/math_map';
 
 import {Debugger} from './debugger';
 import {Engine, EngineConst, EnginePromise} from './engine';
@@ -49,7 +49,7 @@ export const version: string = Variables.VERSION;
  * @param feature An object describing some
  *     setup features.
  */
-export function setupEngine(feature: {[key: string]: boolean|string}) {
+export async function setupEngine(feature: {[key: string]: boolean|string}) {
   let engine = Engine.getInstance() as any;
   // This preserves the possibility to specify default as domain.
   // < 3.2  this lead to the use of chromevox rules in English.
@@ -82,8 +82,12 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
   engine.setupBrowsers();
   L10n.setLocale();
   engine.setDynamicCstr();
-  SpeechRuleEngine.getInstance().updateEngine();
-  return EnginePromise.get();
+  return MathMap.init().then(
+    () => {
+      MathMap.loadLocale();
+      return EnginePromise.get();
+    }
+  );
 }
 
 
