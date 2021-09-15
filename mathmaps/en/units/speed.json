@@ -11,7 +11,8 @@
 {"category": "speed",
  "mappings": {
    "default": {
-     "default": "miles per hour"
+     "default": "mile per hour",
+     "plural": "miles per hour"
      }
    },
  "key": "mph",
@@ -20,7 +21,8 @@
 {"category": "speed",
  "mappings": {
    "default": {
-     "default": "revolutions per minute"
+     "default": "revolution per minute",
+     "plural": "revolutions per minute"
      }
    },
  "key": "rpm",
@@ -29,10 +31,11 @@
 {"category": "speed",
  "mappings": {
    "default": {
-     "default": "kilometers per hour"
+     "default": "kilometer per hour",
+     "plural": "kilometers per hour"
      }
    },
  "key": "kmh",
- "names": ["kmh"]
+ "names": ["kmh", "kph"]
 }
 ]
