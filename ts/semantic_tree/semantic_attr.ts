@@ -969,12 +969,12 @@ export namespace SemanticAttr {
       },
       {
         set: dashes,
-        type: SemanticType.PUNCTUATION,
+        type: SemanticType.OPERATOR,
         role: SemanticRole.DASH
       },
       {
         set: tildes,
-        type: SemanticType.PUNCTUATION,
+        type: SemanticType.OPERATOR,
         role: SemanticRole.TILDE
       },
       {

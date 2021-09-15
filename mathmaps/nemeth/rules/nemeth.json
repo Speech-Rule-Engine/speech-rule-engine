@@ -722,7 +722,7 @@
       "Precondition",
       "modifier-bar",
       "default",
-      "self::punctuation[contains(@grammar, \"modifier\")]",
+      "self::operator[contains(@grammar, \"modifier\")]",
       "contains(@annotation, \"accent:bar\")"
     ],
     [
