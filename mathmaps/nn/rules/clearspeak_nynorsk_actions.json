@@ -1,5 +1,5 @@
 {
-  "locale": "nb",
+  "locale": "nn",
   "domain": "clearspeak",
   "modality": "speech",
   "kind": "actions",
@@ -7,22 +7,22 @@
     [
       "Action",
       "collapsed",
-      "[t] \"kollapset\"; [n] . (engine:modality=summary, grammar:collapsed)"
+      "[t] \"kollapsa\"; [n] . (engine:modality=summary, grammar:collapsed)"
     ],
     [
       "Action",
       "font",
-      "[t] @font (grammar:localFont); [n] . (pause:kort, grammar:ignoreFont=@font)"
+      "[t] @font (grammar:localFont); [n] . (pause:short, grammar:ignoreFont=@font)"
     ],
     [
       "Action",
       "ellipsis",
-      "[t] \"og så videre\""
+      "[t] \"og så vidare\""
     ],
     [
       "Action",
       "ellipsis-andsoon",
-      "[t] \"og så videre til\""
+      "[t] \"og så vidare til\""
     ],
     [
       "Action",
@@ -32,7 +32,7 @@
     [
       "Action",
       "vbar-evaluated-both",
-      "[n] children/*[1] (pause:short); [t] \"evaluert for\"; [n] content/*[1]/children/*[2] (pause:short); [t] \"minus det samme uttrykket evaluert for\"; [n] content/*[1]/children/*[1]/children/*[2] (pause:short)"
+      "[n] children/*[1] (pause:short); [t] \"evaluert for\"; [n] content/*[1]/children/*[2] (pause:short); [t] \"minus det same uttrykket evaluert for\"; [n] content/*[1]/children/*[1]/children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -57,17 +57,17 @@
     [
       "Action",
       "member",
-      "[t] \"er et element av\""
+      "[t] \"er eit element av\""
     ],
     [
       "Action",
       "member-member",
-      "[t] \"er et element av\""
+      "[t] \"er eit element av\""
     ],
     [
       "Action",
       "member-element",
-      "[t] \"er et element av\""
+      "[t] \"er eit element av\""
     ],
     [
       "Action",
@@ -77,27 +77,27 @@
     [
       "Action",
       "member-belongs",
-      "[t] \"tilhører\""
+      "[t] \"tilhøyrer\""
     ],
     [
       "Action",
       "not-member",
-      "[t] \"er ikke et element av\""
+      "[t] \"er ikkje eit element av\""
     ],
     [
       "Action",
       "not-member-member",
-      "[t] \"er ikke et element av\""
+      "[t] \"er ikkje eit element av\""
     ],
     [
       "Action",
       "not-member-element",
-      "[t] \"er ikke et element av\""
+      "[t] \"er ikkje eit element av\""
     ],
     [
       "Action",
       "not-member-in",
-      "[t] \"er ikke i\""
+      "[t] \"er ikkje i\""
     ],
     [
       "Action",
@@ -127,32 +127,32 @@
     [
       "Action",
       "set-member-belongs",
-      "[t] \"tilhørende\""
+      "[t] \"tilhøyrande\""
     ],
     [
       "Action",
       "set-not-member",
-      "[t] \"ikke i\""
+      "[t] \"ikkje i\""
     ],
     [
       "Action",
       "set-not-member-member",
-      "[t] \"ikke et element av\""
+      "[t] \"ikkje eit element av\""
     ],
     [
       "Action",
       "set-not-member-element",
-      "[t] \"ikke et element av\""
+      "[t] \"ikkje eit element av\""
     ],
     [
       "Action",
       "set-not-member-in",
-      "[t] \"ikke i\""
+      "[t] \"ikkje i\""
     ],
     [
       "Action",
       "set-not-member-belongs",
-      "[t] \"tilhører ikke\""
+      "[t] \"tilhøyrer ikkje\""
     ],
     [
       "Action",
@@ -242,17 +242,17 @@
     [
       "Action",
       "function-prefix-arc-simple",
-      "[p] (pause:short); [t] \"bue\"; [n] children/*[1]/children/*[1]; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"boge\"; [n] children/*[1]/children/*[1]; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc-simple-fenced",
-      "[p] (pause:short); [t] \"bue\"; [n] children/*[1]/children/*[1] (pause:short); [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"boge\"; [n] children/*[1]/children/*[1] (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-arc",
-      "[p] (pause:short); [t] \"bue\"; [n] children/*[1]/children/*[1]; [t] \"av\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"boge\"; [n] children/*[1]/children/*[1]; [t] \"av\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -267,17 +267,17 @@
     [
       "Action",
       "superscript",
-      "[n] children/*[1]; [t] \"hevet til eksponenten\" (pause:short); [n] children/*[2] (pause:short); [t] \"end exponent\" (pause:short)"
+      "[n] children/*[1]; [t] \"heva til eksponenten\" (pause:short); [n] children/*[2] (pause:short); [t] \"end exponent\" (pause:short)"
     ],
     [
       "Action",
       "superscript-simple-exponent",
-      "[n] children/*[1]; [t] \"hevet til\"; [n] children/*[2] (pause:short, grammar:noArticle)"
+      "[n] children/*[1]; [t] \"heva til\"; [n] children/*[2] (pause:short, grammar:noArticle)"
     ],
     [
       "Action",
       "superscript-simple-exponent-end",
-      "[n] children/*[1]; [t] \"hevet til\"; [n] children/*[2] (pause:short, grammar:noArticle)"
+      "[n] children/*[1]; [t] \"heva til\"; [n] children/*[2] (pause:short, grammar:noArticle)"
     ],
     [
       "Action",
@@ -302,12 +302,12 @@
     [
       "Action",
       "superscript-ordinal-number",
-      "[n] children/*[1]; [t] \"opphøyd i\"; [n] children/*[2] (pause:short, grammar:ordinal:noArticle)"
+      "[n] children/*[1]; [t] \"opphøgd i\"; [n] children/*[2] (pause:short, grammar:ordinal:noArticle)"
     ],
     [
       "Action",
       "superscript-ordinal-negative",
-      "[n] children/*[1]; [t] \"opphøyd i\"; [n] children/*[2] (pause:short, grammar:noArticle)"
+      "[n] children/*[1]; [t] \"opphøgd i\"; [n] children/*[2] (pause:short, grammar:noArticle)"
     ],
     [
       "Action",
@@ -317,32 +317,32 @@
     [
       "Action",
       "superscript-ordinal-power-number",
-      "[n] children/*[1]; [t] \"opphøyd i\"; [n] children/*[2] (pause:short, grammar:ordinal:noArticle)"
+      "[n] children/*[1]; [t] \"opphøgd i\"; [n] children/*[2] (pause:short, grammar:ordinal:noArticle)"
     ],
     [
       "Action",
       "superscript-ordinal-power-negative",
-      "[n] children/*[1]; [t] \"opphøyd i\"; [n] children/*[2] (pause:short, grammar:noArticle)"
+      "[n] children/*[1]; [t] \"opphøgd i\"; [n] children/*[2] (pause:short, grammar:noArticle)"
     ],
     [
       "Action",
       "superscript-ordinal-power-identifier",
-      "[n] children/*[1]; [t] \"opphøyd i\"; [n] children/*[2] (pause:short, grammar:ordinal:noArticle)"
+      "[n] children/*[1]; [t] \"opphøgd i\"; [n] children/*[2] (pause:short, grammar:ordinal:noArticle)"
     ],
     [
       "Action",
       "superscript-ordinal-power-default",
-      "[n] children/*[1]; [t] \"opphøyd til eksponenten\" (pause:short); [n] children/*[2] (pause:short); [t] \"slutt eksponent\" (pause:short)"
+      "[n] children/*[1]; [t] \"opphøgd til eksponenten\" (pause:short); [n] children/*[2] (pause:short); [t] \"slutt eksponent\" (pause:short)"
     ],
     [
       "Action",
       "superscript-power",
-      "[n] children/*[1]; [t] \"opphøyd i\"; [n] children/*[2] (pause:short, grammar:afterPower)"
+      "[n] children/*[1]; [t] \"opphøgd i\"; [n] children/*[2] (pause:short, grammar:afterPower)"
     ],
     [
       "Action",
       "superscript-power-default",
-      "[n] children/*[1]; [t] \"opphøyd til eksponenten\" (pause:short); [n] children/*[2] (pause:short); [t] \"slutt eksponent\" (pause:short)"
+      "[n] children/*[1]; [t] \"opphøgd til eksponenten\" (pause:short); [n] children/*[2] (pause:short); [t] \"slutt eksponent\" (pause:short)"
     ],
     [
       "Action",
@@ -387,27 +387,27 @@
     [
       "Action",
       "fences-points",
-      "[t] \"punktet med koordinater\"; [n] children/*[1]"
+      "[t] \"punktet med koordinatar\"; [n] children/*[1]"
     ],
     [
       "Action",
       "fences-interval",
-      "[t] \"intervallet fra\"; [n] children/*[1]/children/*[1]; [t] \"til\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
+      "[t] \"intervallet frå\"; [n] children/*[1]/children/*[1]; [t] \"til\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval)"
     ],
     [
       "Action",
       "interval-open",
-      "[t] \"uten\"; [n] children/*[1]/children/*[1]; [t] \"eller\"; [n] children/*[1]/children/*[3]"
+      "[t] \"utan\"; [n] children/*[1]/children/*[1]; [t] \"eller\"; [n] children/*[1]/children/*[3]"
     ],
     [
       "Action",
       "interval-closed-open",
-      "[t] \"inkludert\"; [n] children/*[1]/children/*[1] (pause:short); [t] \"men uten\"; [n] children/*[1]/children/*[3]"
+      "[t] \"inkludert\"; [n] children/*[1]/children/*[1] (pause:short); [t] \"men utan\"; [n] children/*[1]/children/*[3]"
     ],
     [
       "Action",
       "interval-open-closed",
-      "[t] \"uten\"; [n] children/*[1]/children/*[1] (pause:short); [t] \"men inkludert\"; [n] children/*[1]/children/*[3]"
+      "[t] \"utan\"; [n] children/*[1]/children/*[1] (pause:short); [t] \"men inkludert\"; [n] children/*[1]/children/*[3]"
     ],
     [
       "Action",
@@ -417,12 +417,12 @@
     [
       "Action",
       "interval-open-inf-r",
-      "[t] \"uten\"; [n] children/*[1]/children/*[1]"
+      "[t] \"utan\"; [n] children/*[1]/children/*[1]"
     ],
     [
       "Action",
       "interval-open-inf-l",
-      "[t] \"uten\"; [n] children/*[1]/children/*[3]"
+      "[t] \"utan\"; [n] children/*[1]/children/*[3]"
     ],
     [
       "Action",
@@ -437,22 +437,22 @@
     [
       "Action",
       "set-empty",
-      "[t] \"den tomme mengden\""
+      "[t] \"den tomme mengda\""
     ],
     [
       "Action",
       "set-extended",
-      "[t] \"hele mengden\"; [n] children/*[1]/children/*[1]; [t] \"med\"; [n] children/*[1]/children/*[3]"
+      "[t] \"heile mengda\"; [n] children/*[1]/children/*[1]; [t] \"med\"; [n] children/*[1]/children/*[3]"
     ],
     [
       "Action",
       "set-collection",
-      "[t] \"mengden\"; [n] children/*[1]"
+      "[t] \"mengda\"; [n] children/*[1]"
     ],
     [
       "Action",
       "set-extended-woall",
-      "[t] \"mengden av\"; [n] children/*[1]/children/*[1]; [t] \"med\"; [n] children/*[1]/children/*[3]"
+      "[t] \"mengda av\"; [n] children/*[1]/children/*[1]; [t] \"med\"; [n] children/*[1]/children/*[3]"
     ],
     [
       "Action",
@@ -472,12 +472,12 @@
     [
       "Action",
       "fraction",
-      "[p] (pause:short); [t] \"brøk med teller\"; [n] children/*[1] (pause:short); [t] \"og nevner\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"brøk med tellar\"; [n] children/*[1] (pause:short); [t] \"og nemnar\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "fraction-none",
-      "[p] (pause:short); [t] \"brøk med teller\"; [n] children/*[1] (pause:short); [t] \"og nevner\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"brøk med tellar\"; [n] children/*[1] (pause:short); [t] \"og nemnar\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -522,12 +522,12 @@
     [
       "Action",
       "fraction-generalendfrac",
-      "[p] (pause:short); [t] \"brøk med teller\"; [n] children/*[1] (pause:short); [t] \"og nevner\"; [n] children/*[2] (pause:short); [t] \"slutt brøk\" (pause:short)"
+      "[p] (pause:short); [t] \"brøk med tellar\"; [n] children/*[1] (pause:short); [t] \"og nemnar\"; [n] children/*[2] (pause:short); [t] \"slutt brøk\" (pause:short)"
     ],
     [
       "Action",
       "fraction-general",
-      "[p] (pause:short); [t] \"brøk med teller\"; [n] children/*[1] (pause:short); [t] \"og nevner\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [t] \"brøk med tellar\"; [n] children/*[1] (pause:short); [t] \"og nemnar\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -552,42 +552,42 @@
     [
       "Action",
       "sqrt",
-      "[t] \"kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"kvadratrota av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested",
-      "[p] (pause:\"short\"); [t] \"kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"kvadratrota av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt",
-      "[t] \"den negative kvadratroten av\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"den negative kvadratrota av\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "negative-sqrt-default",
-      "[p] (pause:\"short\"); [t] \"den negative kvadratroten av\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"den negative kvadratrota av\"; [n] children/*[1]/children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus",
-      "[t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"den positive kvadratrota av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus",
-      "[p] (pause:\"short\"); [t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"den positive kvadratrota av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-plus-minus-posnegsqrootend",
-      "[t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[t] \"den positive kvadratrota av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "sqrt-nested-plus-minus-posnegsqrootend",
-      "[p] (pause:\"short\"); [t] \"den positive kvadratroten av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:\"short\"); [t] \"den positive kvadratrota av\"; [n] children/*[1] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -612,22 +612,22 @@
     [
       "Action",
       "cubic",
-      "[t] \"kubikkroten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[t] \"kubikkrota av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "cubic-nested",
-      "[p] (pause:short); [t] \"kubikkroten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"kubikkrota av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root",
-      "[t] \"roten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[t] \"rota av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"roten av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [t] \"rota av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
@@ -672,52 +672,52 @@
     [
       "Action",
       "natural-numbers",
-      "[t] \"de naturlige tallene\" (span:.)"
+      "[t] \"dei naturlege tala\" (span:.)"
     ],
     [
       "Action",
       "integers",
-      "[t] \"heltallene\" (span:.)"
+      "[t] \"heiltala\" (span:.)"
     ],
     [
       "Action",
       "rational-numbers",
-      "[t] \"de rasjonale tallene\" (span:.)"
+      "[t] \"dei rasjonale tala\" (span:.)"
     ],
     [
       "Action",
       "real-numbers",
-      "[t] \"de reelle tallene\" (span:.)"
+      "[t] \"dei reelle tala\" (span:.)"
     ],
     [
       "Action",
       "complex-numbers",
-      "[t] \"de komplekse tallene\" (span:.)"
+      "[t] \"dei komplekse tala\" (span:.)"
     ],
     [
       "Action",
       "natural-numbers-with-zero",
-      "[t] \"de naturlige tallene med null\" (span:.)"
+      "[t] \"dei naturlege tala med null\" (span:.)"
     ],
     [
       "Action",
       "positive-integers",
-      "[t] \"de positive heltallene\" (span:.)"
+      "[t] \"dei positive heiltala\" (span:.)"
     ],
     [
       "Action",
       "negative-integers",
-      "[t] \"de negative heltallene\" (span:.)"
+      "[t] \"dei negative heltala\" (span:.)"
     ],
     [
       "Action",
       "positive-rational-numbers",
-      "[t] \"de positive rasjonale tallene\" (span:.)"
+      "[t] \"de positive rasjonale tala\" (span:.)"
     ],
     [
       "Action",
       "negative-rational-numbers",
-      "[t] \"de negative rasjonale tallene\" (span:.)"
+      "[t] \"de negative rasjonale tala\" (span:.)"
     ],
     [
       "Action",
@@ -742,17 +742,17 @@
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [t] \"beregningen av\" (span:.); [n] children/*[1] (pause:short)"
+      "[p] (pause:short); [t] \"berekninga av\" (span:.); [n] children/*[1] (pause:short)"
     ],
     [
       "Action",
       "fences-metric-absend",
-      "[p] (pause:short); [t] \"beregningen av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutt beregning\" (span:content/*[1], pause:short)"
+      "[p] (pause:short); [t] \"berekninga av\" (span:content/*[1]); [n] children/*[1] (pause:short); [t] \"slutt berekning\" (span:content/*[1], pause:short)"
     ],
     [
       "Action",
       "matrix",
-      "[t] count(children/*); [t] \"ganger\"; [t] count(children/*[1]/children/*); [t] \"matrisen\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"rad-:\", pause:long)"
+      "[t] count(children/*); [t] \"ganger\"; [t] count(children/*[1]/children/*); [t] \"matrisa\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"rad-:\", pause:long)"
     ],
     [
       "Action",
@@ -762,17 +762,17 @@
     [
       "Action",
       "matrix-trivial",
-      "[t] \"1 ganger 1 matrisen med element\"; [n] children/*[1] (pause:long)"
+      "[t] \"1 ganger 1 matrisa med element\"; [n] children/*[1] (pause:long)"
     ],
     [
       "Action",
       "determinant",
-      "[t] \"determinanten til\"; [t] count(children/*); [t] \"ganger\"; [t] count(children/*[1]/children/*); [t] \"matrisen\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"rad-:\", pause:long, grammar:simpleDet)"
+      "[t] \"determinanten til\"; [t] count(children/*); [t] \"ganger\"; [t] count(children/*[1]/children/*); [t] \"matrisa\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"rad-:\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"determinanten til\"; [t] count(children/*); [t] \"ganger\"; [t] count(children/*[1]/children/*); [t] \"matrisen\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"rad-:\", pause:long)"
+      "[t] \"determinanten til\"; [t] count(children/*); [t] \"ganger\"; [t] count(children/*[1]/children/*); [t] \"matrisa\" (pause:long); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"rad-:\", pause:long)"
     ],
     [
       "Action",
@@ -877,7 +877,7 @@
     [
       "Action",
       "cases-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"tilfeller\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"tilfelle\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
@@ -912,7 +912,7 @@
     [
       "Action",
       "lines-cases-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"tilfeller\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"tilfelle\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
@@ -922,7 +922,7 @@
     [
       "Action",
       "lines-equations-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"ligninger\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"likningar\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
@@ -952,7 +952,7 @@
     [
       "Action",
       "lines-constraints-summary",
-      "[p] (pause:short); [t] count(children/*); [t] \"betingelser\"; [n] . (grammar:layoutSummary)"
+      "[p] (pause:short); [t] count(children/*); [t] \"føresetnadar\"; [n] . (grammar:layoutSummary)"
     ],
     [
       "Action",
@@ -967,7 +967,7 @@
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"fra\"; [n] children/*[2]; [t] \"til\"; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"frå\"; [n] children/*[2]; [t] \"til\"; [n] children/*[3]"
     ],
     [
       "Action",
@@ -1002,7 +1002,7 @@
     [
       "Action",
       "underscript-limits",
-      "[n] children/*[1]; [t] \"fra\"; [n] children/*[2]"
+      "[n] children/*[1]; [t] \"frå\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -1012,27 +1012,27 @@
     [
       "Action",
       "number-with-chars",
-      "[t] \"tall\"; [m] CQFspaceoutNumber (grammar:protected)"
+      "[t] \"tal\"; [m] CQFspaceoutNumber (grammar:protected)"
     ],
     [
       "Action",
       "decimal-period",
-      "[t] \"desimalbrøk\"; [n] children/*[1] (grammar:spaceout); [t] \"komma etterfulgt av gjentatte siffer\"; [n] children/*[3]/children/*[1] (grammar:spaceout)"
+      "[t] \"desimalbrøk\"; [n] children/*[1] (grammar:spaceout); [t] \"komma etterfølgt av gjentatte siffer\"; [n] children/*[3]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
       "decimal-period-float",
-      "[t] \"desimalbrøk\"; [n] children/*[1] (grammar:spaceout); [t] \"etterfulgt av gjentatte siffer\"; [n] children/*[2]/children/*[1] (grammar:spaceout)"
+      "[t] \"desimalbrøk\"; [n] children/*[1] (grammar:spaceout); [t] \"etterfølgt av gjentatte siffer\"; [n] children/*[2]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
       "decimal-period-singular",
-      "[t] \"desimalbrøk\"; [n] children/*[1] (grammar:spaceout); [t] \"komma etterfulgt av gjentatt siffer\"; [n] children/*[3]/children/*[1] (grammar:spaceout)"
+      "[t] \"desimalbrøk\"; [n] children/*[1] (grammar:spaceout); [t] \"komma etterfølgt av gjentatt siffer\"; [n] children/*[3]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
       "decimal-period-singular-float",
-      "[t] \"desimalbrøk\"; [n] children/*[1] (grammar:spaceout); [t] \"etterfulgt av gjentatt siffer\"; [n] children/*[2]/children/*[1] (grammar:spaceout)"
+      "[t] \"desimalbrøk\"; [n] children/*[1] (grammar:spaceout); [t] \"etterfølgt av gjentatt siffer\"; [n] children/*[2]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
@@ -1057,7 +1057,7 @@
     [
       "Action",
       "adorned-sign",
-      "[n] children/*[1]; [t] \"tegn med\"; [n] children/*[2]; [t] \"over\""
+      "[n] children/*[1]; [t] \"teikn med\"; [n] children/*[2]; [t] \"over\""
     ],
     [
       "Action",
@@ -1087,22 +1087,22 @@
     [
       "Action",
       "right-super",
-      "[t] \"høyre øvre indeks\"; [n] text()"
+      "[t] \"høgre øvre indeks\"; [n] text()"
     ],
     [
       "Action",
       "right-super-list",
-      "[t] \"høyre øvre indeks\"; [m] children/*"
+      "[t] \"høgre øvre indeks\"; [m] children/*"
     ],
     [
       "Action",
       "right-sub",
-      "[t] \"høyre nedre indeks\"; [n] text()"
+      "[t] \"høgre nedre indeks\"; [n] text()"
     ],
     [
       "Action",
       "right-sub-list",
-      "[t] \"høyre nedre indeks\"; [m] children/*"
+      "[t] \"høgre nedre indeks\"; [m] children/*"
     ],
     [
       "Action",
@@ -1142,12 +1142,12 @@
     [
       "Action",
       "enclose",
-      "[t] \"omsluttet av\"; [t] @role (grammar:localEnclose); [n] children/*[1]"
+      "[t] \"omslutta av\"; [t] @role (grammar:localEnclose); [n] children/*[1]"
     ],
     [
       "Action",
       "enclose-end",
-      "[t] \"omsluttet av\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"slutt omsluttet\""
+      "[t] \"omslutta av\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"slutt omslutta\""
     ],
     [
       "Action",
@@ -1172,32 +1172,32 @@
     [
       "Action",
       "crossout",
-      "[t] \"utkrysset\"; [n] children/*[1]"
+      "[t] \"utkryssa\"; [n] children/*[1]"
     ],
     [
       "Action",
       "crossout-end",
-      "[t] \"utkrysset\"; [n] children/*[1]; [t] \"slutt utkrysset\""
+      "[t] \"utkryssa\"; [n] children/*[1]; [t] \"slutt utkryssa\""
     ],
     [
       "Action",
       "cancel-over",
-      "[n] children/*[1]/children/*[1]; [t] \"utkrysset med\"; [n] children/*[2]"
+      "[n] children/*[1]/children/*[1]; [t] \"utkryssa med\"; [n] children/*[2]"
     ],
     [
       "Action",
       "cancel-under",
-      "[n] children/*[2]/children/*[1]; [t] \"utkrysset med\"; [n] children/*[1]"
+      "[n] children/*[2]/children/*[1]; [t] \"utkryssa med\"; [n] children/*[1]"
     ],
     [
       "Action",
       "cancel-over-end",
-      "[n] children/*[1]/children/*[1]; [t] \"utkrysset med\"; [n] children/*[2]; [t] \"slutt utkrysset\""
+      "[n] children/*[1]/children/*[1]; [t] \"utkryssa med\"; [n] children/*[2]; [t] \"slutt utkryssa\""
     ],
     [
       "Action",
       "cancel-under-end",
-      "[n] children/*[2]/children/*[1]; [t] \"utkrysset med\"; [n] children/*[1]; [t] \"slutt utkrysset\""
+      "[n] children/*[2]/children/*[1]; [t] \"utkrysset med\"; [n] children/*[1]; [t] \"slutt utkryssa\""
     ]
   ]
 }
