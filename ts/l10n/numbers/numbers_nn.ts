@@ -77,7 +77,7 @@ function numberToWords(num: number, ordinal: boolean = false): string {
       }
       str = hund + (pos ? ' ' +
         (NUMBERS.large[pos] + (pos > 1 && hundreds > 1 ? 'er' : ''))
-          + ' ' : '') + str;
+          + (str ? ' ' : '') : '') + str;
     }
     num = Math.floor(num / 1000);
     pos++;
