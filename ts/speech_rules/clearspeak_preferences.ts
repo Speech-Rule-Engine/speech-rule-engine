@@ -125,15 +125,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     if (!loc) {
       return [];
     }
-    let explorer = item['explorers'];
-    if (!explorer) {
-      return [{
-        type: 'radio',
-        content: 'Standard',
-        id: 'clearspeak-default',
-        variable: 'speechRules'
-      }];
-    }
+    let explorer = item['explorers']['speech'];
     let smart = ClearspeakPreferences.relevantPreferences(
         explorer.walker.getFocus().getSemanticPrimary());
     // var smart = 'Bar'; // TODO: Lookup the right preference.
