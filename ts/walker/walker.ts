@@ -28,6 +28,9 @@ import {RebuildStree} from './rebuild_stree';
 
 
 export interface Walker {
+
+  modifier: boolean;
+
   /**
    * Indicator if the walker is active.
    * @return True if walker is active.
@@ -103,6 +106,12 @@ export interface Walker {
    * @param options The dynamic constraint.
    */
   update(options: AxisMap): void;
+
+  /**
+   * Refocuses in case levels have been altered outside the walker's control.
+   */
+  refocus(): void;
+
 }
 
 
@@ -157,4 +166,5 @@ export namespace WalkerState {
   export function getState(id: string): string {
     return STATE[id];
   }
+
 }

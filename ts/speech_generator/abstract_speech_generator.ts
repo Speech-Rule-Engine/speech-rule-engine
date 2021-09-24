@@ -96,10 +96,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
 
 
   /**
-   * Generates speech string for a sub tree of the xml element.
-   * @param node The target element of the event.
-   * @param xml The base xml element belonging to node.
-   * @return The generated speech string.
+   * @override
    */
   public generateSpeech(_node: Node, xml: Element): string {
     if (!this.rebuilt_) {

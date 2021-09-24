@@ -42,6 +42,14 @@ export interface SpeechGenerator {
 
 
   /**
+   * Generates speech string for a sub tree of the xml element.
+   * @param node The target element of the event.
+   * @param xml The base xml element belonging to node.
+   * @return The generated speech string.
+   */
+  generateSpeech(_node: Node, xml: Element): string;
+
+  /**
    * Returns the semantic tree rebuilt from the base xml element.
    * @return The reconstructed semantic tree.
    */

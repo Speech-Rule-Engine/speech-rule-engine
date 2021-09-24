@@ -137,10 +137,9 @@ export abstract class AbstractHighlighter implements Highlighter {
 
 
   /**
-   * Turns the current color into a string representation.
-   * @return The color string, by default as rgba.
+   * @override
    */
-  protected colorString(): StringColor {
+  public colorString(): StringColor {
     return this.color.rgba();
   }
 

@@ -39,8 +39,6 @@ export class TableWalker extends SyntaxWalker {
 
   public static ELIGIBLE_TABLE_TYPES: SemanticType[];
 
-  public modifier: boolean = false;
-
   public firstJump: Focus = null;
   public moved: any;
 
