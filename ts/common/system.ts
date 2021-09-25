@@ -94,10 +94,9 @@ export async function setupEngine(feature: {[key: string]: boolean|string}) {
 
 function config(feature: {[key: string]: boolean|string}) {
   if (Engine.getInstance().config ||
-    Engine.getInstance().mode !== EngineConst.Mode.HTTP) {
-    return;
+    Engine.getInstance().mode === EngineConst.Mode.HTTP) {
+    configBlocks(feature);
   }
-  configBlocks(feature);
   configFeature(feature);
   Engine.getInstance().config = true;
 }
