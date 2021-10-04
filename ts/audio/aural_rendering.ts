@@ -104,7 +104,7 @@ namespace AuralRendering {
    export function finalize(str: string) {
     let renderer = renderers.get(Engine.getInstance().markup);
 
-    str = Engine.getInstance().locale === 'ko' && ko_Conversion(str);
+    Engine.getInstance().locale === 'ko' ? str = ko_Conversion(str) : str;
 
     if (!renderer) {
       return str;
