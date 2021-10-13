@@ -9,6 +9,9 @@
       "FRAC_S": "frac",
       "END": "finalitzar",
       "FRAC_OVER": "entre",
+      "TWICE": "",
+      "NEST_FRAC": "",
+      "ENDFRAC": "",
       "SUPER": "súper",
       "SUB": "sub",
       "SUP": "sup",
@@ -21,12 +24,22 @@
       "ROOTINDEX": "índex d'arrel",
       "ROOT": "arrel",
       "INDEX": "índex",
-      "UNDER": "sub-/sota",
-      "UNDERSCRIPT": "subíndex",
-      "OVER": "super-/sobre",
-      "OVERSCRIPT": "superíndex"
+      "UNDER": "sota",
+      "UNDERSCRIPT": "sotaíndex",
+      "OVER": "sobre",
+      "OVERSCRIPT": "sobreíndex"
     },
-    "MSroots": {},
+    "MSroots": {
+      "2": "quadrada",
+      "3": "cúbica",
+      "4": "a la quarta",
+      "5": "a la cinquena",
+      "6": "a la sisena",
+      "7": "a la setena",
+      "8": "a la vuitena",
+      "9": "a la novena",
+      "10": "a la desena"
+    },
     "font": {
       "bold": "negreta",
       "bold-fraktur": "negreta Fraktur",

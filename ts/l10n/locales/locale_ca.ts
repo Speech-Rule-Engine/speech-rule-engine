@@ -56,24 +56,6 @@ function create(): Locale {
   loc.FUNCTIONS.combineRootIndex = combinePostfixIndex,
   loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c;
   loc.FUNCTIONS.fontRegexp = font => RegExp('^' + font + ' ');
-  // loc.FUNCTIONS.plural = (unit: string) => {
-  //   if (/.*(a|e|i|o|u)$/.test(unit)) {
-  //     return unit + 's';
-  //   }
-  //   if (/.*z$/.test(unit)) {
-  //     return unit.slice(0, -1) + 'ces';
-  //   }
-  //   if (/.*c$/.test(unit)) {
-  //     return unit.slice(0, -1) + 'ques';
-  //   }
-  //   if (/.*g$/.test(unit)) {
-  //     return unit + 'ues';
-  //   }
-  //   if (/.*\u00f3n$/.test(unit)) {
-  //     return unit.slice(0, -2) + 'ones';
-  //   }
-  //   return unit + 'es';
-  // },
   loc.FUNCTIONS.si = (prefix: string, unit: string) => {
     if (unit.match(/^metre/)) {
       prefix = prefix.replace(/a$/, 'à').replace(/o$/, 'ò').replace(/i$/, 'í');
