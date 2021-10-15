@@ -1,0 +1,250 @@
+[
+  {
+    "locale": "ca"
+  },
+  {
+    "key": "log",
+    "category": "Logarithm",
+    "names": [
+      "log"
+    ],
+    "mappings": {
+      "default": {
+        "default": "logaritme"
+      }
+    }
+  },
+  {
+    "key": "ln",
+    "category": "Logarithm",
+    "names": [
+      "ln"
+    ],
+    "mappings": {
+      "default": {
+        "default": "logaritme neperià"
+      }
+    }
+  },
+  {
+    "key": "lg",
+    "category": "Logarithm",
+    "names": [
+      "lg"
+    ],
+    "mappings": {
+      "default": {
+        "default": "logaritme base 10"
+      }
+    }
+  },
+  {
+    "key": "exp",
+    "category": "Elementary",
+    "names": [
+      "exp",
+      "expt"
+    ],
+    "mappings": {
+      "default": {
+        "default": "exponent"
+      }
+    }
+  },
+  {
+    "key": "gcd",
+    "category": "Elementary",
+    "names": [
+      "gcd"
+    ],
+    "mappings": {
+      "default": {
+        "default": "MCD"
+      }
+    }
+  },
+  {
+    "key": "lcm",
+    "category": "Elementary",
+    "names": [
+      "lcm"
+    ],
+    "mappings": {
+      "default": {
+        "default": "mcm"
+      }
+    }
+  },
+  {
+    "key": "arg",
+    "category": "Complex",
+    "names": [
+      "arg"
+    ],
+    "mappings": {
+      "default": {
+        "default": "argument"
+      }
+    }
+  },
+  {
+    "key": "im",
+    "category": "Complex",
+    "names": [
+      "im"
+    ],
+    "mappings": {
+      "default": {
+        "default": "part imaginària"
+      }
+    }
+  },
+  {
+    "key": "re",
+    "category": "Complex",
+    "names": [
+      "re"
+    ],
+    "mappings": {
+      "default": {
+        "default": "residu"
+      }
+    }
+  },
+  {
+    "key": "inf",
+    "category": "Limits",
+    "names": [
+      "inf"
+    ],
+    "mappings": {
+      "default": {
+        "default": "extrem inferior"
+      }
+    }
+  },
+  {
+    "key": "lim",
+    "category": "Limits",
+    "names": [
+      "lim"
+    ],
+    "mappings": {
+      "default": {
+        "default": "límit"
+      }
+    }
+  },
+  {
+    "key": "liminf",
+    "category": "Limits",
+    "names": [
+      "lim inf",
+      "liminf"
+    ],
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "limsup",
+    "category": "Limits",
+    "names": [
+      "lim sup",
+      "limsup"
+    ],
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "max",
+    "category": "Limits",
+    "names": [
+      "max"
+    ],
+    "mappings": {
+      "default": {
+        "default": "màxim"
+      }
+    }
+  },
+  {
+    "key": "min",
+    "category": "Limits",
+    "names": [
+      "min"
+    ],
+    "mappings": {
+      "default": {
+        "default": "mínim"
+      }
+    }
+  },
+  {
+    "key": "sup",
+    "category": "Limits",
+    "names": [
+      "sup"
+    ],
+    "mappings": {
+      "default": {
+        "default": "superior"
+      }
+    }
+  },
+  {
+    "key": "injlim",
+    "category": "Limits",
+    "names": [
+      "injlim",
+      "inj lim"
+    ],
+    "mappings": {
+      "default": {
+        "default": "límit directe"
+      }
+    }
+  },
+  {
+    "key": "projlim",
+    "category": "Limits",
+    "names": [
+      "projlim",
+      "proj lim"
+    ],
+    "mappings": {
+      "default": {
+        "default": "límit invers"
+      }
+    }
+  },
+  {
+    "key": "mod",
+    "category": "Elementary",
+    "names": [
+      "mod"
+    ],
+    "mappings": {
+      "default": {
+        "default": "mòdul"
+      }
+    }
+  },
+  {
+    "key": "Pr",
+    "category": "Probability",
+    "names": [
+      "Pr"
+    ],
+    "mappings": {
+      "default": {
+        "default": "probabilitat"
+      }
+    }
+  }
+]

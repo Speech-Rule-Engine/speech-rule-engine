@@ -32,7 +32,7 @@ export class Variables {
    * List of locales to load.
    */
   public static readonly LOCALES: string[] =
-      ['en', 'de', 'fr', 'es', 'hi', 'it', 'nb', 'nn', 'nemeth'];
+      ['en', 'ca', 'de', 'fr', 'es', 'hi', 'it', 'nb', 'nn', 'nemeth'];
 
 
   /**
