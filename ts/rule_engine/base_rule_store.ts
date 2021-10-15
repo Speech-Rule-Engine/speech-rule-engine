@@ -99,6 +99,10 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   private speechRules_: SpeechRule[] = [];
 
+  /**
+   * Rank in the rule store definition. This informs the secondary rank for
+   * speech rules and takes order of definitions into account.
+   */
   private rank: number = 0;
 
   // TODO (sorge) Define the following methods directly on the precondition
@@ -553,6 +557,8 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
 
 }
 
+// Conditions are clusters of preconditions that are used to define rules via
+// actions.
 export class Condition {
 
   private _conditions: [DynamicCstr, Precondition][] = [];
@@ -576,6 +582,8 @@ export class Condition {
   }
 
   /**
+   * Adds a dynamic constraint to a condition. This simply inherits the already
+   * given preconditions.
    *
    * @param {DynamicCstr} dynamic
    */

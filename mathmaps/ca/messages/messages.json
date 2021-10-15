@@ -19,6 +19,8 @@
       "SUBSCRIPT": "subíndex",
       "BASELINE": "línia base",
       "BASE": "base",
+      "NESTED": "",
+      "NEST_ROOT": "",
       "STARTROOT": "començar arrel",
       "ENDROOT": "finalitzar arrel",
       "ROOTINDEX": "índex d'arrel",
