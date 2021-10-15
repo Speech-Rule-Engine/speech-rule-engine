@@ -1,0 +1,123 @@
+[
+  {
+    "locale": "ca"
+  },
+  {
+    "locale": "ca"
+  },
+  {
+    "key": "sq",
+    "category": "other",
+    "names": [
+      "sq",
+      "sq."
+    ],
+    "mappings": {
+      "default": {
+        "default": "quadrat",
+        "plural": "quadrats"
+      }
+    }
+  },
+  {
+    "key": "sq inch",
+    "category": "area",
+    "names": [
+      "sq in",
+      "sq. in.",
+      "sq inch",
+      "sq. inch"
+    ],
+    "mappings": {
+      "default": {
+        "default": "polzada quadrada",
+        "plural": "polzades quadrades"
+      }
+    }
+  },
+  {
+    "key": "sq rd",
+    "category": "area",
+    "names": [
+      "sq rd",
+      "sq. rd."
+    ],
+    "mappings": {
+      "default": {
+        "default": "rod quadrat",
+        "plural": "rods quadrats"
+      }
+    }
+  },
+  {
+    "key": "sq ft",
+    "category": "area",
+    "names": [
+      "sq ft",
+      "sq. ft."
+    ],
+    "mappings": {
+      "default": {
+        "default": "peu quadrat",
+        "plural": "polzades quadrades"
+      }
+    }
+  },
+  {
+    "key": "sq yd",
+    "category": "area",
+    "names": [
+      "sq yd",
+      "sq. yd."
+    ],
+    "mappings": {
+      "default": {
+        "default": "iarda quadrada",
+        "plural": "iardes quadrades"
+      }
+    }
+  },
+  {
+    "key": "sq mi",
+    "category": "area",
+    "names": [
+      "sq mi",
+      "sq. mi."
+    ],
+    "mappings": {
+      "default": {
+        "default": "milla quadrada",
+        "plural": "milles quadrades"
+      }
+    }
+  },
+  {
+    "key": "acr",
+    "category": "area",
+    "names": [
+      "ac",
+      "ac.",
+      "acr",
+      "acr."
+    ],
+    "mappings": {
+      "default": {
+        "default": "acre",
+        "plural": "acres"
+      }
+    }
+  },
+  {
+    "key": "ha",
+    "category": "area",
+    "names": [
+      "ha"
+    ],
+    "mappings": {
+      "default": {
+        "default": "hectàrea",
+        "plural": "hectàrees"
+      }
+    }
+  }
+]

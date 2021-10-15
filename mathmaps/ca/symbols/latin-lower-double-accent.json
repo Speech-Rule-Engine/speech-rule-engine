@@ -1,0 +1,518 @@
+[
+  {
+    "locale": "ca"
+  },
+  {
+    "category": "Ll",
+    "key": "01D6",
+    "mappings": {
+      "default": {
+        "default": "u amb dièresi i màcron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01D8",
+    "mappings": {
+      "default": {
+        "default": "u amb dièresi i accent agut"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DA",
+    "mappings": {
+      "default": {
+        "default": "u amb dièresi i accent"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DC",
+    "mappings": {
+      "default": {
+        "default": "u amb dièresi i accent greu"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DF",
+    "mappings": {
+      "default": {
+        "default": "a amb dièresi i màcron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E1",
+    "mappings": {
+      "default": {
+        "default": "a amb punt a dalt i màcron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01ED",
+    "mappings": {
+      "default": {
+        "default": "o amb pecíol i màcron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01FB",
+    "mappings": {
+      "default": {
+        "default": "a amb anell a sobre i accent agut"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "022B",
+    "mappings": {
+      "default": {
+        "default": "o amb dièresi i màcron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "022D",
+    "mappings": {
+      "default": {
+        "default": "o amb titlla i màcron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0231",
+    "mappings": {
+      "default": {
+        "default": "o amb punt a sobre i màcron"
+      }
+    }
+  },
+  {
+    "key": "1E09",
+    "mappings": {
+      "default": {
+        "default": "ce trencada i accent agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E15",
+    "mappings": {
+      "default": {
+        "default": "e amb màcron i greu"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E17",
+    "mappings": {
+      "default": {
+        "default": "e amb màcron i agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E1D",
+    "mappings": {
+      "default": {
+        "default": "e amb diacrític i breu"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E2F",
+    "mappings": {
+      "default": {
+        "default": "i amb dièresi i agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E39",
+    "mappings": {
+      "default": {
+        "default": "l amb punt a sota i màcron"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E4D",
+    "mappings": {
+      "default": {
+        "default": "o amb tilla i accent agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E4F",
+    "mappings": {
+      "default": {
+        "default": "o amb titlla i dièresi"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E51",
+    "mappings": {
+      "default": {
+        "default": "o amb màcron i greu"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E53",
+    "mappings": {
+      "default": {
+        "default": "o amb màcron i agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E5D",
+    "mappings": {
+      "default": {
+        "default": "r amb punt a sota i màcron"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E65",
+    "mappings": {
+      "default": {
+        "default": "s amb agut i punt a dalt"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E67",
+    "mappings": {
+      "default": {
+        "default": "s amb hàtxek i punt a dalt"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E69",
+    "mappings": {
+      "default": {
+        "default": "s amb punt a sota i punt a dalt"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E79",
+    "mappings": {
+      "default": {
+        "default": "u amb titlla i agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1E7B",
+    "mappings": {
+      "default": {
+        "default": "u amb màcron i dièresi"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EA5",
+    "mappings": {
+      "default": {
+        "default": "a amb accent circumflex i agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EA7",
+    "mappings": {
+      "default": {
+        "default": "a amb accent circumflex i greu"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EA9",
+    "mappings": {
+      "default": {
+        "default": "a amb accent circumflex i ganxo a dalt"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EAB",
+    "mappings": {
+      "default": {
+        "default": "a amb accent circumflex i titlla"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EAD",
+    "mappings": {
+      "default": {
+        "default": "a amb accent circumflex i punt a sota"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EAF",
+    "mappings": {
+      "default": {
+        "default": "a amb breu i accent agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EB1",
+    "mappings": {
+      "default": {
+        "default": "a amb breu i accent greu"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EB3",
+    "mappings": {
+      "default": {
+        "default": "a amb breu i ganxo a dalt"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EB5",
+    "mappings": {
+      "default": {
+        "default": "a amb breu i titlla"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EB7",
+    "mappings": {
+      "default": {
+        "default": "a amb breu i punt a sota"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EBF",
+    "mappings": {
+      "default": {
+        "default": "e amb accent circumflex i agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EC1",
+    "mappings": {
+      "default": {
+        "default": "e amb accent circumflex i greu"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EC3",
+    "mappings": {
+      "default": {
+        "default": "e amb accent circumflex i ganxo a dalt"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EC5",
+    "mappings": {
+      "default": {
+        "default": "e amb accent circumflex i titlla"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EC7",
+    "mappings": {
+      "default": {
+        "default": "e amb accent circumflex i punt a sota"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1ED1",
+    "mappings": {
+      "default": {
+        "default": "o amb accent circumflex i agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1ED3",
+    "mappings": {
+      "default": {
+        "default": "o amb accent circumflex i greu"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1ED5",
+    "mappings": {
+      "default": {
+        "default": "o amb accent circumflex i ganxo a dalt"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1ED7",
+    "mappings": {
+      "default": {
+        "default": "o amb accent circumflex i titlla"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1ED9",
+    "mappings": {
+      "default": {
+        "default": "o amb accent circumflex i punt a sota"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EDB",
+    "mappings": {
+      "default": {
+        "default": "o amb banya i accent agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EDD",
+    "mappings": {
+      "default": {
+        "default": "o amb banya i accent greu"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EDF",
+    "mappings": {
+      "default": {
+        "default": "o amb banya i ganxo a sobre"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EE1",
+    "mappings": {
+      "default": {
+        "default": "o amb banya i titlla"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EE3",
+    "mappings": {
+      "default": {
+        "default": "o amb banya i punt a sota"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EE9",
+    "mappings": {
+      "default": {
+        "default": "u amb banya i agut"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EEB",
+    "mappings": {
+      "default": {
+        "default": "u amb banya i accent greu"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EED",
+    "mappings": {
+      "default": {
+        "default": "u amb banya i ganxo a sobre"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EEF",
+    "mappings": {
+      "default": {
+        "default": "u amb banya i titlla"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "1EF1",
+    "mappings": {
+      "default": {
+        "default": "u amb banya i punt a sota"
+      }
+    },
+    "category": "Ll"
+  }
+]
