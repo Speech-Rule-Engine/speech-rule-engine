@@ -282,12 +282,12 @@
     [
       "Action",
       "function-prefix-fenced-or-frac-arg",
-      "[p] (pause:short); [n] children/*[1] (grammar:addArticle); [t] \"의\"; [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [n] children/*[1]; [t] \"의\"; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-subscript",
-      "[p] (pause:short); [n] children/*[1] (grammar:addArticle); [t] \"의\" (pause:short); [n] children/*[2] (pause:short)"
+      "[p] (pause:short); [n] children/*[1]; [t] \"의\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -362,7 +362,7 @@
     [
       "Action",
       "superscript-prefix-function",
-      "[n] children/*[2] (grammar:ordinal:addArticle); [t] \"제곱\"; [n] children/*[1]"
+      "[n] children/*[2] (grammar:ordinal); [t] \"제곱\"; [n] children/*[1]"
     ],
     [
       "Action",
@@ -377,22 +377,22 @@
     [
       "Action",
       "superscript-simple-exponent",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:noArticle); [t] \"제곱\" (pause:short)"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2]; [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
       "superscript-simple-exponent-end",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:noArticle); [t] \"제곱\""
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2]; [t] \"제곱\""
     ],
     [
       "Action",
       "superscript-ordinal",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"제곱\" (pause:short)"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal); [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
       "superscript-non-ordinal",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:noArticle); [t] \"제곱\" (pause:short)"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2]; [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
@@ -407,12 +407,12 @@
     [
       "Action",
       "superscript-ordinal-number",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:short); [t] \"제곱\""
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal, pause:short); [t] \"제곱\""
     ],
     [
       "Action",
       "superscript-ordinal-negative",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle, pause:short); [t] \"제곱\""
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal, pause:short); [t] \"제곱\""
     ],
     [
       "Action",
@@ -422,17 +422,17 @@
     [
       "Action",
       "superscript-ordinal-power-number",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"제곱\" (pause:short)"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal); [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-negative",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:noArticle); [t] \"제곱\" (pause:short)"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2]; [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
       "superscript-ordinal-power-identifier",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal:noArticle); [t] \"제곱\" (pause:short)"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal); [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
@@ -797,12 +797,12 @@
     [
       "Action",
       "root",
-      "[n] children/*[1] (grammar:ordinal:addArticle); [t] \"제곱근\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[n] children/*[1] (grammar:ordinal); [t] \"제곱근\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [n] children/*[1] (grammar:ordinal:addArticle); [t] \"제곱근\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [n] children/*[1] (grammar:ordinal); [t] \"제곱근\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
@@ -842,7 +842,7 @@
     [
       "Action",
       "set-prefix-operators",
-      "[n] self::* (grammar:!prefix:addArticle);"
+      "[n] self::* (grammar:!prefix);"
     ],
     [
       "Action",
@@ -1287,7 +1287,7 @@
     [
       "Action",
       "bigop",
-      "[n] children/*[1] (grammar:addArticle); [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -1307,7 +1307,7 @@
     [
       "Action",
       "integral",
-      "[n] children/*[1] (grammar:addArticle); [n] children/*[2] (pause:short)"
+      "[n] children/*[1]; [n] children/*[2] (pause:short)"
     ],
     [
       "Action",

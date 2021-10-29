@@ -54,13 +54,13 @@ function create(): Locale {
     if (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = 'true';
     Grammar.getInstance().setParameter('postposition', result);
 
-    return name;
+    return name+result;
   }
   loc.CORRECTIONS.article = (name: string) => {
     let last = Grammar.getInstance().getParameter('postposition');
     if (last === 'true') name = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
     
-    return name;
+    return last+name;
   }
   /*
   loc.CORRECTIONS.postposition = (name: string) => {
