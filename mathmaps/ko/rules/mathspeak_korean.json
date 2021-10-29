@@ -120,6 +120,10 @@
       "children/*[1][@category=\"unit:currency\"]"
     ],
     [
+      "Ignore",
+      "equality"
+    ],
+    [
       "Precondition",
       "greater-equal",
       "default",
