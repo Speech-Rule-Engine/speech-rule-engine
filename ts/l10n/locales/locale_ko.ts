@@ -58,10 +58,9 @@ function create(): Locale {
     let zosa = Grammar.getInstance().getParameter('postposition');
 
     if (existLast) {
-      zosa = {'는': '은', '와': '과', '를': '을', '로': '으로'}[String(zosa)];
-      return name + zosa;
+      zosa = {'는': '은', '와': '과', '를': '을', '로': '으로'}[zosa];
     }
-    return name;
+    return name + zosa;
   };
   
   return loc;
