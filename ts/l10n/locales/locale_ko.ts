@@ -46,20 +46,30 @@ function create(): Locale {
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
 
-  loc.CORRECTIONS.lastConsonant = (last: string) => {
-    let result = (last.charCodeAt(0)- 44032) % 28;
-    if (last.match(/[a-z0-9]/i)) {
-      return (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) ? true : false;
-    }
-    return (result !== 0) ? true : false;
+  loc.CORRECTIONS.postposition = (name: string) => {
+    let last = name.slice(-1);
+    let char = (last.charCodeAt(0) - 44032) % 28;
+
+    let result = (char !== 0) ? true : false;
+    if (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
+
+    Grammar.getInstance().setParameter('postposition', result);
   }
+  loc.CORRECTIONS.article = (name: string) => {
+    let last = Grammar.getInstance().getParameter('postposition');
+    if (last) name = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
+    
+    return name;
+  }
+  /*
   loc.CORRECTIONS.postposition = (name: string) => {
     let existLast = loc.CORRECTIONS.lastConsonant(name.slice(-1));
     let zosa = Grammar.getInstance().getParameter('postposition');
-
+    
     if (existLast) zosa = {'는': '은', '와': '과', '를': '을', '로': '으로'}[zosa];
     return name + zosa;
+    
   };
-  
+  */
   return loc;
 }
