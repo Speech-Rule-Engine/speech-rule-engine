@@ -20,7 +20,7 @@
  */
 
 
-//import {Grammar} from '../../rule_engine/grammar';
+import {Grammar} from '../../rule_engine/grammar';
 import {createLocale, Locale} from '../locale';
 import NUMBERS from '../numbers/numbers_ko';
 import * as tr from '../transformers';
@@ -36,7 +36,6 @@ export function ko(): Locale {
   return locale;
 }
 
-//return (/.*s$/.test(unit)) ? unit : unit + '들' => return (/.*s$/.test(unit)) ? unit : unit + ''
 function create(): Locale {
   let loc = createLocale();
   loc.NUMBERS = NUMBERS;
@@ -46,5 +45,24 @@ function create(): Locale {
   };
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
+
+  loc.CORRECTIONS.lastConsonant = (last: string) => {
+    let result = (last.charCodeAt(0)- 44032) % 28;
+    if (last.match(/[a-z0-9]/i)) {
+      return (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) ? true : false;
+    }
+    return (result !== 0) ? true : false;
+  }
+  loc.CORRECTIONS.postposition = (name: string) => {
+    let existLast = loc.CORRECTIONS.lastConsonant(name.slice(-1));
+    let zosa = Grammar.getInstance().getParameter('postposition');
+
+    if (existLast) {
+      zosa = {'는': '은', '와': '과', '를': '을', '로': '으로'}[String(zosa)];
+      return name + zosa;
+    }
+    return name;
+  };
+  
   return loc;
 }
