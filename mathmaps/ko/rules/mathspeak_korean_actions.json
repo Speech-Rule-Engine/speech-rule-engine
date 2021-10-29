@@ -47,7 +47,7 @@
     [
       "Action",
       "mixed-number",
-      "[n] children/*[1] (grammar:postposition=\"과\"); [n] children/*[2];"
+      "[n] children/*[1] (grammar:postposition=\"와\"); [n] children/*[2];"
     ],
     [
       "Action",
