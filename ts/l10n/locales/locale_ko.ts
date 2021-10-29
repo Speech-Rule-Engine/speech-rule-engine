@@ -52,8 +52,9 @@ function create(): Locale {
 
     let result = (char !== 0) ? true : false;
     if (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
-
     Grammar.getInstance().setParameter('postposition', result);
+    
+    return name;
   }
   loc.CORRECTIONS.article = (name: string) => {
     let last = Grammar.getInstance().getParameter('postposition');
