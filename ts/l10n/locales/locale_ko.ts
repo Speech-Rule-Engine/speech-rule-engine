@@ -57,9 +57,7 @@ function create(): Locale {
     let existLast = loc.CORRECTIONS.lastConsonant(name.slice(-1));
     let zosa = Grammar.getInstance().getParameter('postposition');
 
-    if (existLast) {
-      zosa = {'는': '은', '와': '과', '를': '을', '로': '으로'}[zosa];
-    }
+    if (existLast) zosa = {'는': '은', '와': '과', '를': '을', '로': '으로'}[zosa];
     return name + zosa;
   };
   
