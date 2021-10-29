@@ -577,12 +577,7 @@
     [
       "Action",
       "equality",
-      "[n] children/*[1] (grammar:postposition=\"는\"); [n] children/*[2];"
-    ],
-    [
-      "Action",
-      "multi-equality",
-      "[m] children/* (sepFunc:CTFcontentIterator,grammar:postposition=\"는\")"
+      "[n] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition=\"는\"); [n] children/*[2];"
     ],
     [
       "Action",

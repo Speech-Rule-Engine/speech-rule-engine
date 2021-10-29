@@ -124,10 +124,6 @@
       "equality"
     ],
     [
-      "Ignore",
-      "multi-equality"
-    ],
-    [
       "Precondition",
       "greater-equal",
       "default",
