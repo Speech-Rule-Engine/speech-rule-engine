@@ -587,17 +587,17 @@
     [
       "Action",
       "smaller-equal",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작거나 같다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작거나 같다\""
     ],
     [
       "Action",
       "greater",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 크다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 크다\""
     ],
     [
       "Action",
       "smaller",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"보다 작다\""
     ],
     [
       "Action",
@@ -612,47 +612,47 @@
     [
       "Action",
       "subset-of",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"에 포함된다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"에 포함된다\""
     ],
     [
       "Action",
       "not-equal-to",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"와 같지 않다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"와 같지 않다\""
     ],
     [
       "Action",
       "not-set-member",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"에 속하지 않는다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"에 속하지 않는다\""
     ],
     [
       "Action",
       "not-contain-member",
-      "[m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"에 속하지 않는다\""
+      "[m] children/*[2] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"에 속하지 않는다\""
     ],
     [
       "Action",
       "parallel-to",
-      "[n] children/*[1] (sepFunc:CTFcontentIterator); [t] \"과(와)\"; [n] children/*[3] (sepFunc:CTFcontentIterator); [t] \"은(는) 평행하다\""
+      "[n] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[3] (sepFunc:CTFcontentIterator); [t] \"은(는) 평행하다\""
     ],
     [
       "Action",
       "vertical",
-      "[n] children/*[1] (sepFunc:CTFcontentIterator); [t] \"과(와)\"; [n] children/*[2] (sepFunc:CTFcontentIterator); [t] \"은(는) 수직이다\""
+      "[n] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[2] (sepFunc:CTFcontentIterator); [t] \"은(는) 수직이다\""
     ],
     [
       "Action",
       "necessary-condition",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"이기 위한 필요조건\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"이기 위한 필요조건\""
     ],
     [
       "Action",
       "sufficient-condition",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"이기 위한 충분조건\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"이기 위한 충분조건\""
     ],
     [
       "Action",
       "necessary-sufficient-condition",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"이기 위한 필요충분조건\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"이기 위한 필요충분조건\""
     ]
   ]
 }
