@@ -139,5 +139,7 @@ export function MathspeakRules() {
       'CSFopenRadicalBrief': MathspeakKoreanUtil.openingRadicalBrief,
       'CSFcloseRadicalBrief': MathspeakKoreanUtil.closingRadicalBrief,
       'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief,
+
+      'CTFcontentIteratorArticle': MathspeakKoreanUtil.contentIteratorArticle,
     });
 }

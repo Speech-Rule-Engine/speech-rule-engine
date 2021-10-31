@@ -23,8 +23,10 @@
 //
 
 import * as MathspeakUtil from './mathspeak_util';
-import XpathUtil from '../common/xpath_util';
 import {LOCALE} from '../l10n/locale';
+import {AuditoryDescription} from '../audio/auditory_description';
+import XpathUtil from '../common/xpath_util';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 
 
 namespace MathspeakKoreanUtil {
@@ -300,11 +302,42 @@ export function decreasedOrdinalConversion(node: Element): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
- export function listOrdinalConversion(node: Element): string {
+export function listOrdinalConversion(node: Element): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
   let content = XpathUtil.evalXPath('content/*', node) as Element[];
 
   return LOCALE.NUMBERS.wordOrdinal(children.length - content.length);
+}
+
+
+/**
+ * Iterates over the list of content nodes of the parent of the given nodes.
+ * @param nodes A node array.
+ * @param context A context string.
+ * @return A closure that returns
+ *     the content of the next content node. Returns only context string if list
+ *     is exhausted.
+ */
+export function contentIteratorArticle(nodes: Element[]): () =>
+    AuditoryDescription[] {
+  
+  let contentNodes: Element[];
+  if (nodes.length > 0) {
+    contentNodes =
+        XpathUtil.evalXPath('../../content/*', nodes[0]) as Element[];
+  } else {
+    contentNodes = [];
+  }
+  return function() {
+    let content = contentNodes.shift();
+    let contextDescr = [AuditoryDescription.create({text: ''}, {translate: true})];
+    if (!content) {
+      return contextDescr;
+    }
+    let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
+    LOCALE.CORRECTIONS.article(descrs[0].text);
+    return contextDescr.concat(descrs);
+  };
 }
 
 

@@ -316,17 +316,17 @@
     [
       "Action",
       "abstr-punctuated",
-      "[t] CSFlistOrdinalConversion; [t] \"개의 원소가\"; [n] content/*[1] (grammar:postposition=\"로\"); [t] \"나누어진\"; [t] \"리스트\""
+      "[t] CSFlistOrdinalConversion; [t] \"개의 원소가\"; [n] content/*[1] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"나누어진\"; [t] \"리스트\""
     ],
     [
       "Action",
       "abstr-punctuated-brief",
-      "[n] content/*[1] (grammar:postposition=\"로\"); [t] \"나누어진 리스트\""
+      "[n] content/*[1] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"나누어진 리스트\""
     ],
     [
       "Action",
       "abstr-punctuated-var",
-      "[t] \"여러 개의 원소가\"; [n] content/*[1] (grammar:postposition=\"로\"); [t] \"나누어진 리스트\""
+      "[t] \"여러 개의 원소가\"; [n] content/*[1] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"나누어진 리스트\""
     ],
     [
       "Action",

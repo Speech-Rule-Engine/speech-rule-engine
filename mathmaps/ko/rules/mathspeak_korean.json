@@ -121,7 +121,7 @@
     ],
     [
       "Ignore",
-      "equality"
+      "multi-equality"
     ],
     [
       "Precondition",

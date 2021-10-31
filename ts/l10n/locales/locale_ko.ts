@@ -52,25 +52,15 @@ function create(): Locale {
 
     let result = (char > 0) ? true : false;
     if (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
-    Grammar.getInstance().setParameter('post', result);
+    Grammar.getInstance().setParameter('last', result);
 
-    return name+result;
+    return name;
   }
   loc.CORRECTIONS.article = (name: string) => {
-    let post = Grammar.getInstance().getParameter('post');
-    if (post) name = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
+    let last = Grammar.getInstance().getParameter('last');
+    if (last) name = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
     
     return name;
   }
-  /*
-  loc.CORRECTIONS.postposition = (name: string) => {
-    let existLast = loc.CORRECTIONS.lastConsonant(name.slice(-1));
-    let zosa = Grammar.getInstance().getParameter('postposition');
-    
-    if (existLast) zosa = {'는': '은', '와': '과', '를': '을', '로': '으로'}[zosa];
-    return name + zosa;
-    
-  };
-  */
   return loc;
 }

@@ -532,12 +532,12 @@
     [
       "Action",
       "cancel",
-      "[t] \"소거\"; [n] children/*[1]/children/*[1]; [t] \"을(를)\"; [n] children/*[2]; [t] \"으로(로)\"; [t] \"소거끝\""
+      "[t] \"소거\"; [n] children/*[1]/children/*[1] (grammar:postposition); [t] \"를\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"소거끝\""
     ],
     [
       "Action",
       "cancel-reverse",
-      "[t] \"소거\"; [n] children/*[2]/children/*[1]; [t] \"을\"; [n] children/*[1]; [t] \"으로 소거끝\""
+      "[t] \"소거\"; [n] children/*[2]/children/*[1] (grammar:postposition); [t] \"를\" (grammar:article); [n] children/*[1] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"소거끝\""
     ],
     [
       "Action",
@@ -573,6 +573,11 @@
       "Action",
       "empty-axiom",
       "[t] \"빈 공리\";"
+    ],
+    [
+      "Action",
+      "multi-equality",
+      "[m] children/* (sepFunc:CTFcontentIteratorArticle,grammar:postposition)"
     ],
     [
       "Action",
