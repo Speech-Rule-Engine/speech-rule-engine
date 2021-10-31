@@ -648,6 +648,11 @@
       "Action",
       "necessary-sufficient-condition",
       "[m] children/*[1] (sepFunc:CTFcontentIterator); [t] \"은(는)\"; [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"이기 위한 필요충분조건\""
+    ],
+    [
+      "Action",
+      "line-segment",
+      "[t] \"선분\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2] (pause:short)"
     ]
   ]
 }

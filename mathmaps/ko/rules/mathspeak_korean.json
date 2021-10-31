@@ -238,6 +238,17 @@
       "self::relseq",
       "count(./children/*)=2",
       "text()=\"⇔\""
+    ],
+    [
+      "Precondition",
+      "line-segment",
+      "default",
+      "self::overscore",
+      "@role=\"implicit\"",
+      "children/*[2][@role=\"overaccent\"]",
+      "children/*[2][contains(@annotation, \"accent:bar\")]",
+      "name(children/*[1])=\"infixop\"",
+      "count(./children/*[1]/children/*)=2"
     ]
   ]
 }
