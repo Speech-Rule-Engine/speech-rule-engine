@@ -50,6 +50,23 @@ function create(): Locale {
     let last = name.slice(-1);
     let char = (last.charCodeAt(0) - 44032) % 28;
 
+    let result = (char > 0) ? name : 'false';
+    if (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = name;
+    Grammar.getInstance().setParameter('last', result);
+
+    return name;//+result;
+  }
+  loc.CORRECTIONS.article = (name: string) => {
+    let last = Grammar.getInstance().getParameter('last');
+    if (!!last) name = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
+    
+    return name+last;
+  }
+  /*
+  loc.CORRECTIONS.postposition = (name: string) => {
+    let last = name.slice(-1);
+    let char = (last.charCodeAt(0) - 44032) % 28;
+
     let result = (char > 0) ? true : false;
     if (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
     Grammar.getInstance().setParameter('last', result);
@@ -61,6 +78,6 @@ function create(): Locale {
     if (last) name = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
     
     return name+last;
-  }
+  }*/
   return loc;
 }
