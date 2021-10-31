@@ -50,7 +50,7 @@ function create(): Locale {
     let last = name.slice(-1);
     let char = (last.charCodeAt(0) - 44032) % 28;
 
-    let result = (char > 0) ? name : 'false';
+    let result = (char > 0) ? name : '';
     if (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = name;
     Grammar.getInstance().setParameter('last', result);
 
@@ -60,7 +60,7 @@ function create(): Locale {
     let last = Grammar.getInstance().getParameter('last');
     if (!!last) name = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
     
-    return name+last;
+    return name+'('+last+')';
   }
   /*
   loc.CORRECTIONS.postposition = (name: string) => {
