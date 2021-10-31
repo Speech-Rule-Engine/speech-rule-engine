@@ -121,6 +121,10 @@
     ],
     [
       "Ignore",
+      "equality"
+    ],
+    [
+      "Ignore",
       "multi-equality"
     ],
     [

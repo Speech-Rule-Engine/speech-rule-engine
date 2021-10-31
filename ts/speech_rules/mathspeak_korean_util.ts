@@ -336,9 +336,8 @@ export function contentIteratorArticle(nodes: Element[]): () =>
       return contextDescr;
     }
     Grammar.getInstance().setParameter('postposition', false);
-    Grammar.getInstance().setParameter('article', true);
     let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
-    //descrs[0].text = LOCALE.CORRECTIONS.article(descrs[0].text);
+    descrs[0].text = LOCALE.CORRECTIONS.article(descrs[0].text);
 
     return contextDescr.concat(descrs);
   };

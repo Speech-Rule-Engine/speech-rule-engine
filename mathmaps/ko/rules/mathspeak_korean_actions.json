@@ -576,6 +576,11 @@
     ],
     [
       "Action",
+      "equality",
+      "[n] children/*[1] (grammar:postposition); [n] content/*[1] (grammar:article); [n] children/*[2]"
+    ],
+    [
+      "Action",
       "multi-equality",
       "[m] children/* (sepFunc:CTFcontentIteratorArticle,grammar:postposition)"
     ],
