@@ -336,7 +336,7 @@ export function contentIteratorArticle(nodes: Element[]): () =>
     }
     let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
     for (let i = 0; i < descrs.length; i++) {
-      descrs[i].text = LOCALE.CORRECTIONS.article(descrs[i].text);
+      descrs[i].text = LOCALE.CORRECTIONS.article(descrs[i].text) + i.toString();
     }
     return contextDescr.concat(descrs);
   };
