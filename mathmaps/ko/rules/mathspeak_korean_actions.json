@@ -622,7 +622,7 @@
     [
       "Action",
       "not-equal-to",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator); [t] \"와 같지 않다\""
+      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"와\" (grammar:article); [t] \"같지 않다\""
     ],
     [
       "Action",
