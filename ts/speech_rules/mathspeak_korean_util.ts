@@ -27,6 +27,7 @@ import {LOCALE} from '../l10n/locale';
 import {AuditoryDescription} from '../audio/auditory_description';
 import XpathUtil from '../common/xpath_util';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
+import { Grammar } from '../rule_engine/grammar';
 
 
 namespace MathspeakKoreanUtil {
@@ -334,6 +335,7 @@ export function contentIteratorArticle(nodes: Element[]): () =>
     if (!content) {
       return contextDescr;
     }
+    Grammar.getInstance().setParameter('postposition', false);
     let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
     descrs[0].text = LOCALE.CORRECTIONS.article(descrs[0].text);
 

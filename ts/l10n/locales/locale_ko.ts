@@ -54,7 +54,7 @@ function create(): Locale {
     if (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = name;
     Grammar.getInstance().setParameter('last', result);
 
-    return name;//+result;
+    return name+result;
   }
   loc.CORRECTIONS.article = (name: string) => {
     let last = Grammar.getInstance().getParameter('last');
