@@ -1,0 +1,73 @@
+[
+  {
+    "locale": "ca"
+  },
+  {
+    "key": "s",
+    "category": "time",
+    "names": [
+      "s"
+    ],
+    "si": true,
+    "mappings": {
+      "default": {
+        "default": "segon",
+        "plural": "segons"
+      }
+    }
+  },
+  {
+    "key": "″",
+    "category": "time",
+    "names": [
+      "″"
+    ],
+    "mappings": {
+      "default": {
+        "default": "segon",
+        "plural": "segons"
+      }
+    }
+  },
+  {
+    "key": "min",
+    "category": "time",
+    "names": [
+      "min",
+      "′"
+    ],
+    "mappings": {
+      "default": {
+        "default": "minut",
+        "plural": "minuts"
+      }
+    }
+  },
+  {
+    "key": "°",
+    "category": "time",
+    "names": [
+      "°"
+    ],
+    "mappings": {
+      "default": {
+        "default": "grau",
+        "plural": "graus"
+      }
+    }
+  },
+  {
+    "key": "h",
+    "category": "time",
+    "names": [
+      "h",
+      "hr"
+    ],
+    "mappings": {
+      "default": {
+        "default": "hora",
+        "plural": "hores"
+      }
+    }
+  }
+]

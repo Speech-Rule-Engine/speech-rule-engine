@@ -1,0 +1,113 @@
+[
+  {
+    "locale": "ca"
+  },
+  {
+    "category": "Ll",
+    "key": "1D26",
+    "mappings": {
+      "default": {
+        "default": "majúscula petita gamma"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D27",
+    "mappings": {
+      "default": {
+        "default": "majúscula petita lambda"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D28",
+    "mappings": {
+      "default": {
+        "default": "majúscula petita pi"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D29",
+    "mappings": {
+      "default": {
+        "default": "majúscula petita ro"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D2A",
+    "mappings": {
+      "default": {
+        "default": "majúscula petita psi"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D5E",
+    "mappings": {
+      "default": {
+        "default": "modificador petit gamma"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D60",
+    "mappings": {
+      "default": {
+        "default": "modificador petit fi"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D66",
+    "mappings": {
+      "default": {
+        "default": "subscripció petita beta"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D67",
+    "mappings": {
+      "default": {
+        "default": "subíndex petit gamma"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D68",
+    "mappings": {
+      "default": {
+        "default": "subíndex ro"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D69",
+    "mappings": {
+      "default": {
+        "default": "subíndex fi"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D6A",
+    "mappings": {
+      "default": {
+        "default": "subscripció khi"
+      }
+    }
+  }
+]
