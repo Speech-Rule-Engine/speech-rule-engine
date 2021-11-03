@@ -326,6 +326,14 @@
     ],
     [
       "Precondition",
+      "degrees-baseline",
+      "default",
+      "self::punctuation[@role=\"degree\"]",
+      "parent::*/parent::punctuated[@role=\"sequence\"]",
+      "following-sibling::*"
+    ],
+    [
+      "Precondition",
       "fraction",
       "default",
       "self::fraction"
