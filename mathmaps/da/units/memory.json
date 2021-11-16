@@ -10,9 +10,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -25,9 +23,7 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -39,9 +35,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   }

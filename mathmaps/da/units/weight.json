@@ -6,9 +6,8 @@
     "key": "dr",
     "mappings": {
       "default": {
-        "default": "drams",
-        "singular": "dram",
-        "dual": ""
+        "default": "dram",
+        "plural": "drams"
       }
     },
     "category": "weight",
@@ -21,9 +20,8 @@
     "key": "oz",
     "mappings": {
       "default": {
-        "default": "ounces",
-        "singular": "ounce",
-        "dual": ""
+        "default": "ounce",
+        "plural": "ounces"
       }
     },
     "category": "weight",
@@ -37,8 +35,7 @@
     "mappings": {
       "default": {
         "default": "pund",
-        "singular": "pund",
-        "dual": ""
+        "plural": "pund"
       }
     },
     "category": "weight",
@@ -56,9 +53,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -71,9 +66,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -81,9 +74,7 @@
     "key": "cwt",
     "mappings": {
       "default": {
-        "default": "hundredweight",
-        "singular": "",
-        "dual": ""
+        "default": "hundredweight"
       }
     },
     "category": "weight",
@@ -101,9 +92,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -111,9 +100,8 @@
     "key": "gr",
     "mappings": {
       "default": {
-        "default": "grains",
-        "singular": "grain",
-        "dual": ""
+        "default": "grain",
+        "plural": "grains"
       }
     },
     "category": "weight",
@@ -126,8 +114,7 @@
     "mappings": {
       "default": {
         "default": "gram",
-        "singular": "gram",
-        "dual": ""
+        "plural": "gram"
       }
     },
     "category": "weight",
@@ -144,9 +131,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -154,9 +139,8 @@
     "key": "t",
     "mappings": {
       "default": {
-        "default": "tons",
-        "singular": "ton",
-        "dual": ""
+        "default": "ton",
+        "plural": "tons"
       }
     },
     "category": "weight",

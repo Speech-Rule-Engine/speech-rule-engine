@@ -14,9 +14,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -25,8 +23,7 @@
     "mappings": {
       "default": {
         "default": "kvadrat tum",
-        "singular": "kvadrat tum",
-        "dual": ""
+        "plural": "kvadrat tum"
       }
     },
     "category": "area",
@@ -46,9 +43,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -57,8 +52,7 @@
     "mappings": {
       "default": {
         "default": "kvadrat fot",
-        "singular": "kvadrat fot",
-        "dual": ""
+        "plural": "kvadrat fot"
       }
     },
     "category": "area",
@@ -71,9 +65,8 @@
     "key": "sq yd",
     "mappings": {
       "default": {
-        "default": "kvadrat yards",
-        "singular": "kvadrat yard",
-        "dual": ""
+        "default": "kvadrat yard",
+        "plural": "kvadrat yards"
       }
     },
     "category": "area",
@@ -86,9 +79,8 @@
     "key": "sq mi",
     "mappings": {
       "default": {
-        "default": "kvadrat miles",
-        "singular": "kvadrat mile",
-        "dual": ""
+        "default": "kvadrat mile",
+        "plural": "kvadrat miles"
       }
     },
     "category": "area",
@@ -101,9 +93,8 @@
     "key": "ac",
     "mappings": {
       "default": {
-        "default": "acres",
-        "singular": "acre",
-        "dual": ""
+        "default": "acre",
+        "plural": "acres"
       }
     },
     "category": "area",
@@ -122,9 +113,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   }

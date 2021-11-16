@@ -7,8 +7,7 @@
     "mappings": {
       "default": {
         "default": "watt",
-        "singular": "watt",
-        "dual": ""
+        "plural": "watt"
       }
     },
     "category": "energy",
@@ -27,9 +26,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -38,8 +35,7 @@
     "mappings": {
       "default": {
         "default": "joule",
-        "singular": "joule",
-        "dual": ""
+        "plural": "joule"
       }
     },
     "category": "energy",
@@ -53,8 +49,7 @@
     "mappings": {
       "default": {
         "default": "newton",
-        "singular": "newton",
-        "dual": ""
+        "plural": "newton"
       }
     },
     "category": "energy",
@@ -68,8 +63,7 @@
     "mappings": {
       "default": {
         "default": "ampere",
-        "singular": "ampere",
-        "dual": ""
+        "plural": "ampere"
       }
     },
     "category": "energy",
@@ -83,8 +77,7 @@
     "mappings": {
       "default": {
         "default": "volt",
-        "singular": "volt",
-        "dual": ""
+        "plural": "volt"
       }
     },
     "category": "energy",
@@ -102,9 +95,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -113,8 +104,7 @@
     "mappings": {
       "default": {
         "default": "ohm",
-        "singular": "ohm",
-        "dual": ""
+        "plural": "ohm"
       }
     },
     "category": "energy",

@@ -11,9 +11,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -22,8 +20,7 @@
     "mappings": {
       "default": {
         "default": "mil i timen",
-        "singular": "mil i timen",
-        "dual": ""
+        "plural": "mil i timen"
       }
     },
     "category": "speed",
@@ -39,9 +36,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -53,9 +48,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   }

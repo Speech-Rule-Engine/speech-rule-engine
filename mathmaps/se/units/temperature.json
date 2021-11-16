@@ -6,9 +6,8 @@
     "key": "F",
     "mappings": {
       "default": {
-        "default": "farader",
-        "singular": "farad",
-        "dual": ""
+        "default": "farad",
+        "plural": "farader"
       }
     },
     "category": "temperature",
@@ -23,8 +22,7 @@
     "mappings": {
       "default": {
         "default": "coulomb",
-        "singular": "coulomb",
-        "dual": ""
+        "plural": "coulomb"
       }
     },
     "category": "temperature",
@@ -38,8 +36,7 @@
     "mappings": {
       "default": {
         "default": "kelvin",
-        "singular": "kelvin",
-        "dual": ""
+        "plural": "kelvin"
       }
     },
     "category": "temperature",

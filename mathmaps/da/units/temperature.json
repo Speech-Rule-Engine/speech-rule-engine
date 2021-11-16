@@ -7,8 +7,7 @@
     "mappings": {
       "default": {
         "default": "farad",
-        "singular": "farad",
-        "dual": ""
+        "plural": "farad"
       }
     },
     "category": "temperature",
@@ -22,9 +21,8 @@
     "key": "C",
     "mappings": {
       "default": {
-        "default": "coulombs",
-        "singular": "coulomb",
-        "dual": ""
+        "default": "coulomb",
+        "plural": "coulombs"
       }
     },
     "category": "temperature",
@@ -38,8 +36,7 @@
     "mappings": {
       "default": {
         "default": "kelvin",
-        "singular": "kelvin",
-        "dual": ""
+        "plural": "kelvin"
       }
     },
     "category": "temperature",

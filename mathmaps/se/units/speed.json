@@ -11,9 +11,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -21,9 +19,8 @@
     "key": "mph",
     "mappings": {
       "default": {
-        "default": "miles per timme",
-        "singular": "mile per timme",
-        "dual": ""
+        "default": "mile per timme",
+        "plural": "miles per timme"
       }
     },
     "category": "speed",
@@ -39,9 +36,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -53,9 +48,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   }

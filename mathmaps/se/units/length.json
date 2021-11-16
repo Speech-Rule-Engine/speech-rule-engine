@@ -7,8 +7,7 @@
     "mappings": {
       "default": {
         "default": "fot",
-        "singular": "fot",
-        "dual": ""
+        "plural": "fot"
       }
     },
     "category": "length",
@@ -22,8 +21,7 @@
     "mappings": {
       "default": {
         "default": "tum",
-        "singular": "tum",
-        "dual": ""
+        "plural": "tum"
       }
     },
     "category": "length",
@@ -36,9 +34,8 @@
     "key": "mi",
     "mappings": {
       "default": {
-        "default": "miles",
-        "singular": "mile",
-        "dual": ""
+        "default": "mile",
+        "plural": "miles"
       }
     },
     "category": "length",
@@ -51,9 +48,8 @@
     "key": "yd",
     "mappings": {
       "default": {
-        "default": "yards",
-        "singular": "yard",
-        "dual": ""
+        "default": "yard",
+        "plural": "yards"
       }
     },
     "category": "length",
@@ -66,9 +62,8 @@
     "key": "li",
     "mappings": {
       "default": {
-        "default": "links",
-        "singular": "link",
-        "dual": ""
+        "default": "link",
+        "plural": "links"
       }
     },
     "category": "length",
@@ -81,9 +76,8 @@
     "key": "rd",
     "mappings": {
       "default": {
-        "default": "rods",
-        "singular": "rod",
-        "dual": ""
+        "default": "rod",
+        "plural": "rods"
       }
     },
     "category": "length",
@@ -96,9 +90,8 @@
     "key": "ch",
     "mappings": {
       "default": {
-        "default": "chains",
-        "singular": "chain",
-        "dual": ""
+        "default": "chain",
+        "plural": "chains"
       }
     },
     "category": "length",
@@ -116,9 +109,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -130,9 +121,7 @@
     ],
     "mappings": {
       "default": {
-        "default": "",
-        "singular": "",
-        "dual": ""
+        "default": ""
       }
     }
   },
@@ -141,8 +130,7 @@
     "mappings": {
       "default": {
         "default": "meter",
-        "singular": "meter",
-        "dual": ""
+        "plural": "meter"
       }
     },
     "category": "length",
