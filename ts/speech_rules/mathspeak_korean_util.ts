@@ -139,7 +139,6 @@ export function overFractionSbrief(node: Element): string {
  */
 export function isSimpleIndex(node: Element): Element[] {
   let index = XpathUtil.evalXPath('children/*[1]', node)[0].toString().match(/[^>⁢>]+<\/[^>]*>/g);
-
   return (index.length === 1) ?  [node] : [];
 }
 
@@ -155,7 +154,6 @@ export function isSimpleIndex(node: Element): Element[] {
 export function nestedRadical(
     node: Element, prefix: string, postfix: string): string {
   let depth = MathspeakUtil.radicalNestingDepth(node);
- 
   if (depth === 1) { return postfix; }
   return LOCALE.FUNCTIONS.combineNestedRadical(
       LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), prefix, postfix);
@@ -218,7 +216,6 @@ export function openingRadicalSbrief(node: Element): string {
  */
 export function getRootIndex(node: Element): string {
   let content = XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
-
   return LOCALE.MESSAGES.MSroots[content] || content + "제곱근";
 }
 
@@ -232,7 +229,6 @@ export function getRootIndex(node: Element): string {
 export function indexRadical(
     node: Element, postfix: string): string {
   let index = getRootIndex(node);
-
   return index ? index : postfix;
 }
 
@@ -276,7 +272,6 @@ export function indexRadicalSbrief(node: Element): string {
  */
 export function ordinalConversion(node: Element): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
-
   return LOCALE.NUMBERS.wordOrdinal(children.length);
 }
 
@@ -289,7 +284,6 @@ export function ordinalConversion(node: Element): string {
  */
 export function decreasedOrdinalConversion(node: Element): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
-
   return LOCALE.NUMBERS.wordOrdinal(children.length - 1);
 }
 
@@ -303,10 +297,50 @@ export function decreasedOrdinalConversion(node: Element): string {
  export function listOrdinalConversion(node: Element): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
   let content = XpathUtil.evalXPath('content/*', node) as Element[];
-
   return LOCALE.NUMBERS.wordOrdinal(children.length - content.length);
 }
 
+/**
+ * Query function to check if the child depth of the current node
+ * is above a certain standard value.
+ * TODO: use as a custom function if needed.
+ * @param node The root node.
+ * @return List containing input node if true.
+ */
+ export function checkDepth(node: Element): Element[] {
+  // additional option to check the number of roles.
+  let roleList: string[] = [];
+  let depth = getDepthValue(node, roleList);
+  // TODO: determine the standard value.
+  return (depth > 3) ? [] : [node];
+}
+
+/**
+ * DFS function to calculate the child depth of the current node
+ * and determine the number of roles.
+ * TODO: use as a custom function if needed.
+ * @param node The root node.
+ * @param roleList The list of role.
+ * @return The child depth.
+ */
+ export function getDepthValue(node: Element, roleList: string[]): number {
+  let role = node.getAttribute('role');
+  var index = roleList.indexOf(role) > -1;
+  if (!index) {
+    roleList.push(role);
+  }
+  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+  let max = 0;
+  let cur = 0;
+  if(children.length){
+    children.forEach(function (x) {
+      cur = getDepthValue(x, roleList);
+      cur > max ? max = cur : max;
+    });
+    return 1 + max;
+  }
+  return 0;
+}
 
 }
 export default MathspeakKoreanUtil;
