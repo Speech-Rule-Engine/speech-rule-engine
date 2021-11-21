@@ -84,6 +84,7 @@ export function closingFractionBrief(node: Element): string {
   return nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_B);
 }
 
+
 /**
  * Opening string for fractions in Mathspeak superbrief mode.
  * @param node The fraction node.
@@ -130,6 +131,7 @@ export function overFractionSbrief(node: Element): string {
       LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), LOCALE.MESSAGES.MS.NEST_FRAC,
       LOCALE.MESSAGES.MS.FRAC_OVER);
 }
+
 
 /**
  * Query function that Checks if we have a simple index in the sense that
@@ -243,7 +245,6 @@ export function indexRadicalVerbose(node: Element): string {
 }
 
 
-
 /**
  * Non-simple indexing string for radicals in Mathspeak brief mode.
  * @param node The radical node.
@@ -300,6 +301,7 @@ export function decreasedOrdinalConversion(node: Element): string {
   return LOCALE.NUMBERS.wordOrdinal(children.length - content.length);
 }
 
+
 /**
  * Query function to check if the child depth of the current node
  * is above a certain standard value.
@@ -314,6 +316,7 @@ export function decreasedOrdinalConversion(node: Element): string {
   // TODO: determine the standard value.
   return (depth > 3) ? [] : [node];
 }
+
 
 /**
  * DFS function to calculate the child depth of the current node
@@ -330,8 +333,7 @@ export function decreasedOrdinalConversion(node: Element): string {
     roleList.push(role);
   }
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
-  let max = 0;
-  let cur = 0;
+  let max = 0, cur = 0;
   if(children.length){
     children.forEach(function (x) {
       cur = getDepthValue(x, roleList);
@@ -343,4 +345,5 @@ export function decreasedOrdinalConversion(node: Element): string {
 }
 
 }
+
 export default MathspeakKoreanUtil;

@@ -138,6 +138,6 @@ export function MathspeakRules() {
       'CSFcloseRadicalVerbose': MathspeakKoreanUtil.closingRadicalVerbose,
       'CSFopenRadicalBrief': MathspeakKoreanUtil.openingRadicalBrief,
       'CSFcloseRadicalBrief': MathspeakKoreanUtil.closingRadicalBrief,
-      'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief,
+      'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief
     });
 }
