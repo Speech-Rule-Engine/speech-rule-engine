@@ -577,7 +577,7 @@
     [
       "Action",
       "equality",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator)"
+      "[n] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]"
     ],
     [
       "Action",
@@ -617,12 +617,12 @@
     [
       "Action",
       "parallel-to",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"와\" (grammar:article); [m] children/*[3] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [t] \"평행하다\""
+      "[n] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[3] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [t] \"평행하다\""
     ],
     [
       "Action",
       "vertical",
-      "[m] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"와\" (grammar:article); [m] children/*[2] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [t] \"수직이다\""
+      "[n] children/*[1] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[2] (sepFunc:CTFcontentIterator,grammar:postposition); [t] \"는\" (grammar:article); [t] \"수직이다\""
     ],
     [
       "Action",
