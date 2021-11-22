@@ -125,35 +125,10 @@
     ],
     [
       "Precondition",
-      "greater-equal",
+      "simple-relseq",
       "default",
       "self::relseq",
-      "count(./children/*)=2",
-      "content/*[1]=\"≥\""
-    ],
-    [
-      "Precondition",
-      "smaller-equal",
-      "default",
-      "self::relseq",
-      "count(./children/*)=2",
-      "text()=\"≤\""
-    ],
-    [
-      "Precondition",
-      "greater",
-      "default",
-      "self::relseq",
-      "count(./children/*)=2",
-      "text()=\">\""
-    ],
-    [
-      "Precondition",
-      "smaller",
-      "default",
-      "self::relseq",
-      "count(./children/*)=2",
-      "text()=\"<\""
+      "count(./children/*)=2"
     ],
     [
       "Precondition",
