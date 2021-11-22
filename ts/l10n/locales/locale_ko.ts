@@ -46,22 +46,28 @@ function create(): Locale {
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
 
+  /**
+   * Find if there exists final consonant
+   *    and therefore needs adjustment of postposition.
+   * @param name The string that needs to be check.
+   * @returns The string unchanged.
+   */
   loc.CORRECTIONS.postposition = (name: string) => {
-    let last = name.slice(-1);
-    let char = (last.charCodeAt(0) - 44032) % 28;
+    let final = name.slice(-1);
+    let char = (final.charCodeAt(0) - 44032) % 28;
 
     let result = (char > 0) ? true : false;
-    if (last.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
-    Grammar.getInstance().setParameter('last', result);
+    if (final.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
+    Grammar.getInstance().setParameter('final', result);
 
     return name;
   }
   loc.CORRECTIONS.article = (name: string) => {
-    let last = Grammar.getInstance().getParameter('last');
+    let final = Grammar.getInstance().getParameter('final');
     
-    let temp = name;
-    if (last) name = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
-    return (name !== undefined) ? name : temp;
+    if (name === '같다') name = '는';
+    if (final) return {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
+    return name;
   }
   
   return loc;
