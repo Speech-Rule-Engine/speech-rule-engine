@@ -104,7 +104,7 @@ namespace AuralRendering {
    export function finalize(str: string) {
     let renderer = renderers.get(Engine.getInstance().markup);
 
-    Engine.getInstance().locale === 'ko' ? str = ko_Conversion(str) : str;
+    //Engine.getInstance().locale === 'ko' ? str = ko_Conversion(str) : str;
 
     if (!renderer) {
       return str;
@@ -141,9 +141,11 @@ namespace AuralRendering {
   export function isXml(): boolean {
     return renderers.get(Engine.getInstance().markup) instanceof XmlRenderer;
   }
-
+  
   export function ko_Conversion(str: string) : string {
-
+    return str;
+  }
+  /*
     const pair = ["은", "는", "과", "와", "을", "를", "으로", "로"];
     let final = str.split(/은\(|과\(|을\(|으로\(|\)/);
   
@@ -165,6 +167,7 @@ namespace AuralRendering {
     }
     return (checkingResult !== 0) ? -1 : 0;
   }
+  */
 
 }
 

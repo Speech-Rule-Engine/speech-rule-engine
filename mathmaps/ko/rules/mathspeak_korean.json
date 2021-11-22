@@ -120,36 +120,16 @@
       "children/*[1][@category=\"unit:currency\"]"
     ],
     [
-      "Precondition",
-      "greater-equal",
-      "default",
-      "self::relseq",
-      "count(./children/*)=2",
-      "content/*[1]=\"≥\""
+      "Ignore",
+      "equality"
     ],
     [
       "Precondition",
-      "smaller-equal",
+      "simple-relseq",
       "default",
       "self::relseq",
       "count(./children/*)=2",
-      "text()=\"≤\"'"
-    ],
-    [
-      "Precondition",
-      "greater",
-      "default",
-      "self::relseq",
-      "count(./children/*)=2",
-      "text()=\">\""
-    ],
-    [
-      "Precondition",
-      "smaller",
-      "default",
-      "self::relseq",
-      "count(./children/*)=2",
-      "text()=\"<\""
+      "text()=\"≥\" or text()=\">\" or text()=\"≤\" or text()=\"<\""
     ],
     [
       "Precondition",

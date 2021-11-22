@@ -162,7 +162,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "은(는)"
+        "default": "같다"
       }
     },
     "key": "003D"
@@ -7779,7 +7779,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "은(는)"
+        "default": "같다"
       }
     },
     "key": "FF1D"

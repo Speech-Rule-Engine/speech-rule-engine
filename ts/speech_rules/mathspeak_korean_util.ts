@@ -23,8 +23,8 @@
 //
 
 import * as MathspeakUtil from './mathspeak_util';
-import XpathUtil from '../common/xpath_util';
 import {LOCALE} from '../l10n/locale';
+import XpathUtil from '../common/xpath_util';
 
 
 namespace MathspeakKoreanUtil {
@@ -134,14 +134,15 @@ export function overFractionSbrief(node: Element): string {
 
 
 /**
- * Query function that Checks if we have a simple index in the sense that
+ * Query function that checks if we have a simple index in the sense that
  * every cell only contains single letters or numbers.
  * @param node The root node.
  * @return List containing input node if true.
  */
 export function isSimpleIndex(node: Element): Element[] {
   let index = XpathUtil.evalXPath('children/*[1]', node)[0].toString().match(/[^>⁢>]+<\/[^>]*>/g);
-  return (index.length === 1) ?  [node] : [];
+
+  return (index.length === 1) ? [node] : [];
 }
 
 
@@ -295,7 +296,7 @@ export function decreasedOrdinalConversion(node: Element): string {
  * @return The ordinal string corresponding to the child position of
  *     the node.
  */
- export function listOrdinalConversion(node: Element): string {
+export function listOrdinalConversion(node: Element): string {
   let children = XpathUtil.evalXPath('children/*', node) as Element[];
   let content = XpathUtil.evalXPath('content/*', node) as Element[];
   return LOCALE.NUMBERS.wordOrdinal(children.length - content.length);
