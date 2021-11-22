@@ -24,10 +24,7 @@
 
 import * as MathspeakUtil from './mathspeak_util';
 import {LOCALE} from '../l10n/locale';
-import {AuditoryDescription} from '../audio/auditory_description';
 import XpathUtil from '../common/xpath_util';
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
-import { Grammar } from '../rule_engine/grammar';
 
 
 namespace MathspeakKoreanUtil {
@@ -135,7 +132,7 @@ export function overFractionSbrief(node: Element): string {
 }
 
 /**
- * Query function that Checks if we have a simple index in the sense that
+ * Query function that checks if we have a simple index in the sense that
  * every cell only contains single letters or numbers.
  * @param node The root node.
  * @return List containing input node if true.
@@ -143,7 +140,7 @@ export function overFractionSbrief(node: Element): string {
 export function isSimpleIndex(node: Element): Element[] {
   let index = XpathUtil.evalXPath('children/*[1]', node)[0].toString().match(/[^>⁢>]+<\/[^>]*>/g);
 
-  return (index.length === 1) ?  [node] : [];
+  return (index.length === 1) ? [node] : [];
 }
 
 
@@ -308,41 +305,6 @@ export function listOrdinalConversion(node: Element): string {
   let content = XpathUtil.evalXPath('content/*', node) as Element[];
 
   return LOCALE.NUMBERS.wordOrdinal(children.length - content.length);
-}
-
-
-/**
- * Iterates over the list of content nodes of the parent of the given nodes.
- * @param nodes A node array.
- * @param context A context string.
- * @return A closure that returns
- *     the content of the next content node. Returns only context string if list
- *     is exhausted.
- */
-export function contentIteratorArticle(nodes: Element[]): () =>
-    AuditoryDescription[] {
-  
-  let contentNodes: Element[];
-  if (nodes.length > 0) {
-    contentNodes =
-        XpathUtil.evalXPath('../../content/*', nodes[0]) as Element[];
-  } else {
-    contentNodes = [];
-  }
-  return function() {
-    let content = contentNodes.shift();
-    let contextDescr = [AuditoryDescription.create({text: ''}, {translate: true})];
-    if (!content) {
-      return contextDescr;
-    }
-    Grammar.getInstance().setParameter('postposition', false);
-    //Grammar.getInstance().setCorrection('article', LOCALE.CORRECTIONS.article);
-    let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
-    descrs[0].text = LOCALE.CORRECTIONS.article(descrs[0].text);
-    //Grammar.getInstance().setParameter('postposition', true);
-
-    return contextDescr.concat(descrs);
-  };
 }
 
 

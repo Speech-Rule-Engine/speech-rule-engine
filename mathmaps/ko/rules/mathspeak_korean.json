@@ -124,10 +124,6 @@
       "equality"
     ],
     [
-      "Ignore",
-      "multi-equality"
-    ],
-    [
       "Precondition",
       "greater-equal",
       "default",
@@ -141,7 +137,7 @@
       "default",
       "self::relseq",
       "count(./children/*)=2",
-      "text()=\"≤\"'"
+      "text()=\"≤\""
     ],
     [
       "Precondition",
