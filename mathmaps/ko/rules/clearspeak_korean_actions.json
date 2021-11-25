@@ -846,6 +846,11 @@
     ],
     [
       "Action",
+      "parallel-to",
+      "[n] children/*[1] (grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[3] (grammar:postposition); [t] \"는\" (grammar:article); [t] \"평행하다\""
+    ],
+    [
+      "Action",
       "binary-operation-default",
       "[m] children/* (sepFunc:CTFcontentIterator);"
     ],
