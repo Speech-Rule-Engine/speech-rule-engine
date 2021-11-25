@@ -577,72 +577,17 @@
     [
       "Action",
       "equality",
-      "[n] children/*[1] (grammar:postposition); [n] content/*[1] (grammar:article:postposition); [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "simple-relseq",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"보다\"; [n] content/*[1]"
-    ],
-    [
-      "Action",
-      "set-member",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"에 속한다\""
-    ],
-    [
-      "Action",
-      "contain-member",
-      "[n] children/*[2] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[1]; [t] \"에 속한다\""
-    ],
-    [
-      "Action",
-      "subset-of",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"에 포함된다\""
-    ],
-    [
-      "Action",
-      "not-equal-to",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"와\" (grammar:article); [t] \"같지 않다\""
-    ],
-    [
-      "Action",
-      "not-set-member",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"에 속하지 않는다\""
-    ],
-    [
-      "Action",
-      "not-contain-member",
-      "[n] children/*[2] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[1]; [t] \"에 속하지 않는다\""
-    ],
-    [
-      "Action",
-      "parallel-to",
-      "[n] children/*[1] (grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[3] (grammar:postposition); [t] \"는\" (grammar:article); [t] \"평행하다\""
-    ],
-    [
-      "Action",
-      "vertical",
-      "[n] children/*[1] (grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"는\" (grammar:article); [t] \"수직이다\""
-    ],
-    [
-      "Action",
-      "necessary-condition",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"이기 위한 필요조건\""
-    ],
-    [
-      "Action",
-      "sufficient-condition",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"이기 위한 충분조건\""
-    ],
-    [
-      "Action",
-      "necessary-sufficient-condition",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"이기 위한 필요충분조건\""
+      "[n] children/*[1] (grammar:postposition); [n] content/*[1] (grammar:article); [n] children/*[2]"
     ],
     [
       "Action",
       "line-segment",
       "[t] \"선분\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2] (pause:short)"
+    ],
+    [
+      "Action",
+      "multi-equality",
+      "[m] children/* (sepFunc:CTFcontentIterator)"
     ]
   ]
 }

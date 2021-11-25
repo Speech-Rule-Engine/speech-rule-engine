@@ -35,6 +35,21 @@
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\"",
       "children/*[1][@category=\"unit:length\"]"
+    ],
+    [
+      "Precondition",
+      "simple-relation",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2"
+    ],
+    [
+      "Precondition",
+      "binary-operation-twochild",
+      "default",
+      "self::infixop",
+      "count(./children/*)=2",
+      "text()=\"∈\" or text()=\"∊\" or text()=\"∋\" or text()=\"∍\" or text()=\"∉\" or text()=\"∌\""
     ]
   ]
 }
