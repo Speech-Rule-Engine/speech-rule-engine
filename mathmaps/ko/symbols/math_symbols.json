@@ -153,7 +153,7 @@
         "default": "작다"
       },
       "clearspeak": {
-        "default": "작다"
+        "default": "보다 작다"
       }
     },
     "key": "003C"
@@ -162,7 +162,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같다"
+        "default": "는"
+      },
+      "clearspeak": {
+        "default": "와 같다"
       }
     },
     "key": "003D"
@@ -174,7 +177,7 @@
         "default": "크다"
       },
       "clearspeak": {
-        "default": "크다"
+        "default": "보다 크다"
       }
     },
     "key": "003E"
@@ -1400,9 +1403,9 @@
         "default": "다음의 원소이다"
       },
       "clearspeak": {
-        "default": "의 구성원이다", 
+        "default": "의 원소이다", 
         "SetMemberSymbol_Member": "의 구성원이다",
-        "SetMemberSymbol_Element": "의 원소다",
+        "SetMemberSymbol_Element": "의 요소다",
         "SetMemberSymbol_In": "안에 있다", 
         "SetMemberSymbol_Belongs": "에 속해 있다"
       }
@@ -1416,9 +1419,9 @@
         "default": "다음의 원소가 아니다"
       },
       "clearspeak": {
-        "default": "의 구성원이 아니다", 
+        "default": "의 원소가 아니다", 
         "SetMemberSymbol_Member": "의 구성원이 아니다",
-        "SetMemberSymbol_Element": "의 원소가 아니다",
+        "SetMemberSymbol_Element": "의 요소가 아니다",
         "SetMemberSymbol_In": "안에 없다", 
         "SetMemberSymbol_Belongs": "에 속해 있지 않다"
       }
@@ -1432,7 +1435,7 @@
         "default": "다음의 원소이다"
       },
       "clearspeak": {
-        "default": "의 구성원이다.", 
+        "default": "의 원소이다.", 
         "SetMemberSymbol_Member": "의 구성원이다.",
         "SetMemberSymbol_Element": "의 요소다.",
         "SetMemberSymbol_In": "안에 있다", 
@@ -1445,7 +1448,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "다음을 원소로 갖는다"
+        "default": "다음을 포함한다"
+      },
+      "clearspeak": {
+        "default": "를 포함한다"
       }
     },
     "key": "220B"
@@ -1454,7 +1460,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "다음을 원소로 갖지 않는다"
+        "default": "다음을 포함하지 않는다"
+      },
+      "clearspeak": {
+        "default": "를 포함하지 않는다"
       }
     },
     "key": "220C"
@@ -1463,7 +1472,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "다음을 원소로 갖는다"
+        "default": "다음을 포함한다"
+      },
+      "clearspeak": {
+        "default": "를 포함한다"
       }
     },
     "key": "220D"
@@ -1687,6 +1699,9 @@
     "mappings": {
       "default": {
         "default": "평행하다"
+      },
+      "clearspeak": {
+        "default": "와 평행하다"
       }
     },
     "key": "2225"
@@ -1696,6 +1711,9 @@
     "mappings": {
       "default": {
         "default": "평행하지 않다"
+      },
+      "clearspeak": {
+        "default": "와 평행하지 않다"
       }
     },
     "key": "2226"
@@ -1957,6 +1975,9 @@
     "mappings": {
       "default": {
         "default": "점근적으로 같다"
+      },
+      "clearspeak": {
+        "default": "와 점근적으로 같다"
       }
     },
     "key": "2243"
@@ -1966,6 +1987,9 @@
     "mappings": {
       "default": {
         "default": "점근적으로 같지 않다"
+      },
+      "clearspeak": {
+        "default": "와 점근적으로 같지않다"
       }
     },
     "key": "2244"
@@ -1975,6 +1999,9 @@
     "mappings": {
       "default": {
         "default": "거의 같다"
+      },
+      "clearspeak": {
+        "default": "와 거의 같다"
       }
     },
     "key": "2245"
@@ -1984,6 +2011,9 @@
     "mappings": {
       "default": {
         "default": "거의 같다"
+      },
+      "clearspeak": {
+        "default": "와 거의 같다"
       }
     },
     "key": "2246"
@@ -1993,6 +2023,9 @@
     "mappings": {
       "default": {
         "default": "근사하지도 같지도 않다"
+      },
+      "clearspeak": {
+        "default": "와 근사하지도 같지도 않다"
       }
     },
     "key": "2247"
@@ -2002,6 +2035,9 @@
     "mappings": {
       "default": {
         "default": "거의 같다"
+      },
+      "clearspeak": {
+        "default": "와 거의 같다"
       }
     },
     "key": "2248"
@@ -2011,6 +2047,9 @@
     "mappings": {
       "default": {
         "default": "거의 같지 않다"
+      },
+      "clearspeak": {
+        "default": "와 거의 같지 않다"
       }
     },
     "key": "2249"
@@ -2020,6 +2059,9 @@
     "mappings": {
       "default": {
         "default": "근사하거나 같다"
+      },
+      "clearspeak": {
+        "default": "와 근사하거나 같다"
       }
     },
     "key": "224A"
@@ -2038,6 +2080,9 @@
     "mappings": {
       "default": {
         "default": "모두 같다"
+      },
+      "clearspeak": {
+        "default": "와 모두 같다"
       }
     },
     "key": "224C"
@@ -2047,6 +2092,9 @@
     "mappings": {
       "default": {
         "default": "동등하다"
+      },
+      "clearspeak": {
+        "default": "와 동등하다"
       }
     },
     "key": "224D"
@@ -2056,6 +2104,9 @@
     "mappings": {
       "default": {
         "default": "기하학적으로 동등하다"
+      },
+      "clearspeak": {
+        "default": "와 기하학적으로 동등하다"
       }
     },
     "key": "224E"
@@ -2083,6 +2134,9 @@
     "mappings": {
       "default": {
         "default": "기하학적으로 같다"
+      },
+      "clearspeak": {
+        "default": "기하학적으로 같다"
       }
     },
     "key": "2251"
@@ -2092,6 +2146,9 @@
     "mappings": {
       "default": {
         "default": "거의 같다"
+      },
+      "clearspeak": {
+        "default": "와 거의 같다"
       }
     },
     "key": "2252"
@@ -2101,6 +2158,9 @@
     "mappings": {
       "default": {
         "default": "거의 같다"
+      },
+      "clearspeak": {
+        "default": "와 거의 같다"
       }
     },
     "key": "2253"
@@ -2146,6 +2206,9 @@
     "mappings": {
       "default": {
         "default": "일치하다"
+      },
+      "clearspeak": {
+        "default": "와 일치하다"
       }
     },
     "key": "2258"
@@ -2229,7 +2292,7 @@
         "default": "같지 않다"
       },
       "clearspeak": {
-        "default": "같지 않다"
+        "default": "와 같지 않다"
       }
     },
     "key": "2260"
@@ -2241,7 +2304,7 @@
         "default": "합동이다"
       },
       "clearspeak": {
-        "default": "합동이다"
+        "default": "와 합동이다"
       }
     },
     "key": "2261"
@@ -2253,7 +2316,7 @@
         "default": "합동이 아니다"
       },
       "clearspeak": {
-        "default": "합동이 아니다"
+        "default": "와 합동이 아니다"
       }
     },
     "key": "2262"
@@ -2265,7 +2328,7 @@
         "default": "매우 동등하다"
       },
       "clearspeak": {
-        "default": "매우 동등하다"
+        "default": "와 매우 동등하다"
       }
     },
     "key": "2263"
@@ -2277,7 +2340,7 @@
         "default": "작거나 같다"
       },
       "clearspeak": {
-        "default": "작거나 같다"
+        "default": "보다 작거나 같다"
       }
     },
     "key": "2264"
@@ -2289,7 +2352,7 @@
         "default": "크거나 같다"
       },
       "clearspeak": {
-        "default": "크거나 같다"
+        "default": "보다 크거나 같다"
       }
     },
     "key": "2265"
@@ -2301,7 +2364,7 @@
         "default": "같거나 작다"
       },
       "clearspeak": {
-        "default": "같거나 작다"
+        "default": "보다 같거나 작다"
       }
     },
     "key": "2266"
@@ -2313,7 +2376,7 @@
         "default": "크거나 같다"
       },
       "clearspeak": {
-        "default": "크거나 같다"
+        "default": "보다 크거나 같다"
       }
     },
     "key": "2267"
@@ -2325,7 +2388,7 @@
         "default": "작지만 같지 않다"
       },
       "clearspeak": {
-        "default": "작지만 같지 않다"
+        "default": "보다 작지만 같지 않다"
       }
     },
     "key": "2268"
@@ -2337,7 +2400,7 @@
         "default": "크지만 같지 않다"
       },
       "clearspeak": {
-        "default": "크지만 같지 않다"
+        "default": "보다 크지만 같지 않다"
       }
     },
     "key": "2269"
@@ -2349,7 +2412,7 @@
         "default": "훨씬 작다"
       },
       "clearspeak": {
-        "default": "훨씬 작다"
+        "default": "보다 훨씬 작다"
       }
     },
     "key": "226A"
@@ -2361,7 +2424,7 @@
         "default": "훨씬 크다"
       },
       "clearspeak": {
-        "default": "훨씬 크다"
+        "default": "보다 훨씬 크다"
       }
     },
     "key": "226B"
@@ -2382,7 +2445,7 @@
         "default": "동등하지 않다"
       },
       "clearspeak": {
-        "default": "동등하지 않다"
+        "default": "와 동등하지 않다"
       }
     },
     "key": "226D"
@@ -2394,7 +2457,7 @@
         "default": "작지 않다"
       },
       "clearspeak": {
-        "default": "작지 않다"
+        "default": "보다 작지 않다"
       }
     },
     "key": "226E"
@@ -2406,7 +2469,7 @@
         "default": "크지 않다"
       },
       "clearspeak": {
-        "default": "크지 않다"
+        "default": "보다 크지 않다"
       }
     },
     "key": "226F"
@@ -2418,7 +2481,7 @@
         "default": "작지도 같지도 않다"
       },
       "clearspeak": {
-        "default": "작지도 같지도 않다"
+        "default": "보다 작지도 같지도 않다"
       }
     },
     "key": "2270"
@@ -2430,7 +2493,7 @@
         "default": "크지도 같지도 않다"
       },
       "clearspeak": {
-        "default": "크지도 같지도 않다"
+        "default": "보다 크지도 같지도 않다"
       }
     },
     "key": "2271"
@@ -2442,7 +2505,7 @@
         "default": "작거나 동등하다"
       },
       "clearspeak": {
-        "default": "작거나 동등하다"
+        "default": "보다 작거나 동등하다"
       }
     },
     "key": "2272"
@@ -2454,7 +2517,7 @@
         "default": "크거나 동등하다"
       },
       "clearspeak": {
-        "default": "크거나 동등하다"
+        "default": "보다 크거나 동등하다"
       }
     },
     "key": "2273"
@@ -2466,7 +2529,7 @@
         "default": "작지도 동등하지도 않다"
       },
       "clearspeak": {
-        "default": "작지도 동등하지도 않다"
+        "default": "보다 작지도 동등하지도 않다"
       }
     },
     "key": "2274"
@@ -2478,7 +2541,7 @@
         "default": "크지도 동등하지도 않다"
       },
       "clearspeak": {
-        "default": "크지도 동등하지도 않다"
+        "default": "보다 크지도 동등하지도 않다"
       }
     },
     "key": "2275"
@@ -2490,7 +2553,7 @@
         "default": "작거나 크다"
       },
       "clearspeak": {
-        "default": "작거나 크다"
+        "default": "보다 작거나 크다"
       }
     },
     "key": "2276"
@@ -2502,7 +2565,7 @@
         "default": "크거나 작다"
       },
       "clearspeak": {
-        "default": "크거나 작다"
+        "default": "보다 크거나 작다"
       }
     },
     "key": "2277"
@@ -2514,7 +2577,7 @@
         "default": "작지도 크지도 않다"
       },
       "clearspeak": {
-        "default": "작지도 크지도 않다"
+        "default": "보다 작지도 크지도 않다"
       }
     },
     "key": "2278"
@@ -2526,7 +2589,7 @@
         "default": "크지도 작지도 않다"
       },
       "clearspeak": {
-        "default": "크지도 작지도 않다"
+        "default": "보다 크지도 작지도 않다"
       }
     },
     "key": "2279"
@@ -2608,6 +2671,9 @@
     "mappings": {
       "default": {
         "default": "부분집합"
+      },
+      "clearspaek": {
+        "default": "의 부분집합"
       }
     },
     "key": "2282"
@@ -2617,6 +2683,9 @@
     "mappings": {
       "default": {
         "default": "상위집합"
+      },
+      "clearspaek": {
+        "default": "의 상위집합"
       }
     },
     "key": "2283"
@@ -2626,6 +2695,9 @@
     "mappings": {
       "default": {
         "default": "부분집합이 아니다"
+      },
+      "clearspaek": {
+        "default": "의 부분집합이 아니다"
       }
     },
     "key": "2284"
@@ -2635,6 +2707,9 @@
     "mappings": {
       "default": {
         "default": "상위집합이 아니다"
+      },
+      "clearspaek": {
+        "default": "의 상위집합이 아니다"
       }
     },
     "key": "2285"
@@ -2644,6 +2719,9 @@
     "mappings": {
       "default": {
         "default": "부분집합이거나 같다"
+      },
+      "clearspeak": {
+        "default": "의 부분집합이거나 같다"
       }
     },
     "key": "2286"
@@ -2653,6 +2731,9 @@
     "mappings": {
       "default": {
         "default": "상위집합이거나 같다"
+      },
+      "clearspeak": {
+        "default": "의 상위집합이거나 같다"
       }
     },
     "key": "2287"
@@ -2662,6 +2743,9 @@
     "mappings": {
       "default": {
         "default": "부분집합이지도 같지도 않다"
+      },
+      "clearspeak": {
+        "default": "의 부분집합이지도 같지도 않다"
       }
     },
     "key": "2288"
@@ -2671,6 +2755,9 @@
     "mappings": {
       "default": {
         "default": "상위집합이지도 같지도 않다"
+      },
+      "clearspeak": {
+        "default": "의 상위집합이지도 같지도 않다"
       }
     },
     "key": "2289"
@@ -2680,6 +2767,9 @@
     "mappings": {
       "default": {
         "default": "부분집합이지만 같지 않다"
+      },
+      "clearspeak": {
+        "default": "의 부분집합이지만 같지 않다"
       }
     },
     "key": "228A"
@@ -2689,6 +2779,9 @@
     "mappings": {
       "default": {
         "default": "상위집합이지만 같지 않다"
+      },
+      "clearspeak": {
+        "default": "의 상위집합이지만 같지 않다"
       }
     },
     "key": "228B"
@@ -3364,7 +3457,7 @@
         "default": "같거나 평행하다"
       },
       "clearspeak": {
-        "default": "같거나 평행하다"
+        "default": "와 같거나 평행하다"
       }
     },
     "key": "22D5"
@@ -3376,7 +3469,7 @@
         "default": "작다"
       },
       "clearspeak": {
-        "default": "작다"
+        "default": "보다 작다"
       }
     },
     "key": "22D6"
@@ -3388,7 +3481,7 @@
         "default": "크다"
       },
       "clearspeak": {
-        "default": "크다"
+        "default": "보다 크다"
       }
     },
     "key": "22D7"
@@ -3400,7 +3493,7 @@
         "default": "훨씬훨씬 작다"
       },
       "clearspeak": {
-        "default": "훨씬훨씬 작다"
+        "default": "보다 훨씬훨씬 작다"
       }
     },
     "key": "22D8"
@@ -3412,7 +3505,7 @@
         "default": "훨씬훨씬 크다"
       },
       "clearspeak": {
-        "default": "훨씬훨씬 크다"
+        "default": "보다 훨씬훨씬 크다"
       }
     },
     "key": "22D9"
@@ -3424,7 +3517,7 @@
         "default": "작거나 같거나 크다"
       },
       "clearspeak": {
-        "default": "작거나 같거나 크다"
+        "default": "보다 작거나 같거나 크다"
       }
     },
     "key": "22DA"
@@ -3436,7 +3529,7 @@
         "default": "크거나 같거나 작다"
       },
       "clearspeak": {
-        "default": "크거나 같거나 작다"
+        "default": "보다 크거나 같거나 작다"
       }
     },
     "key": "22DB"
@@ -3448,7 +3541,7 @@
         "default": "같거나 작다"
       },
       "clearspeak": {
-        "default": "같거나 작다"
+        "default": "와 같거나 작다"
       }
     },
     "key": "22DC"
@@ -3460,7 +3553,7 @@
         "default": "같거나 크다"
       },
       "clearspeak": {
-        "default": "같거나 크다"
+        "default": "와 같거나 크다"
       }
     },
     "key": "22DD"
@@ -3472,7 +3565,7 @@
         "default": "같거나 선행한다"
       },
       "clearspeak": {
-        "default": "같거나 선행한다"
+        "default": "와 같거나 선행한다"
       }
     },
     "key": "22DE"
@@ -3484,7 +3577,7 @@
         "default": "같거나 후행한다"
       },
       "clearspeak": {
-        "default": "같거나 후행한다"
+        "default": "와 같거나 후행한다"
       }
     },
     "key": "22DF"
@@ -3562,7 +3655,7 @@
         "default": "작지만 동등하지 않다"
       },
       "clearspeak": {
-        "default": "작지만 동등하지 않다"
+        "default": "보다 작지만 동등하지 않다"
       }
     },
     "key": "22E6"
@@ -3574,7 +3667,7 @@
         "default": "크지만 동등하지 않다"
       },
       "clearspeak": {
-        "default": "크지만 동등하지 않다"
+        "default": "보다 크지만 동등하지 않다"
       }
     },
     "key": "22E7"
@@ -3953,6 +4046,9 @@
     "mappings": {
       "default": {
         "default": "수직"
+      },
+      "clearspeak": {
+        "default": "와 수직하다"
       }
     },
     "key": "27C2"
@@ -6740,6 +6836,9 @@
     "mappings": {
       "default": {
         "default": "부분집합"
+      },
+      "clearspeak": {
+        "default": "의 부분집합"
       }
     },
     "key": "2AC5"
@@ -6749,6 +6848,9 @@
     "mappings": {
       "default": {
         "default": "상위집합"
+      },
+      "clearspeak": {
+        "default": "의 상위집합"
       }
     },
     "key": "2AC6"
@@ -7779,7 +7881,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "같다"
+        "default": "는"
       }
     },
     "key": "FF1D"
