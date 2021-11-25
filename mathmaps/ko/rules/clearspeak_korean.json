@@ -50,6 +50,14 @@
       "self::infixop",
       "count(./children/*)=2",
       "text()=\"∈\" or text()=\"∊\" or text()=\"∋\" or text()=\"∍\" or text()=\"∉\" or text()=\"∌\""
+    ],
+    [
+      "Precondition",
+      "parallel-to",
+      "default",
+      "self::punctuated",
+      "count(./children/*)=3",
+      "content/*[1][text()]=\"∥\""
     ]
   ]
 }
