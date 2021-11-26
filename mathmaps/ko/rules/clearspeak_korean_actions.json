@@ -952,7 +952,12 @@
     [
       "Action",
       "equality",
-      "[n] children/*[1] (grammar:postposition); [n] content/*[1] (grammar:article:postposition); [t] \"와\" (grammar:article); [n] children/*[2]"
+      "[n] children/*[1] (grammar:postposition); [n] content/*[1] (grammar:article:postposition); [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "not-equal",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"와\" (grammar:article); [n] content/*[1]"
     ],
     [
       "Action",
