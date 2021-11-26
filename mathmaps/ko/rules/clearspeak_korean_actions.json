@@ -612,7 +612,7 @@
     [
       "Action",
       "set-extended",
-      "[n] children/*[1]/children/*[3] (grammar:postposition); [t] \"를 만족하는 모든\"(grammar:article); [n] children/*[1]/children/*[1]; [t] \"의 집합\""
+      "[n] children/*[1]/children/*[3] (grammar:postposition); [t] \"를\"(grammar:article); [t] \"만족하는 모든\"; [n] children/*[1]/children/*[1]; [t] \"의 집합\""
     ],
     [
       "Action",
@@ -622,7 +622,7 @@
     [
       "Action",
       "set-extended-woall",
-      "[n] children/*[1]/children/*[3] (grammar:postposition); [t] \"를 만족하는\" (grammar:article); [n] children/*[1]/children/*[1]; [t] \"의 집합\""
+      "[n] children/*[1]/children/*[3] (grammar:postposition); [t] \"를\"(grammar:article); [t] \"만족하는 모든\"; [n] children/*[1]/children/*[1]; [t] \"의 집합\""
     ],
     [
       "Action",
@@ -851,48 +851,33 @@
     ],
     [
       "Action",
-      "contain-member",
-      "[n] children/*[2] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[1]; [t] \"에 속한다\""
+      "simple-set-member",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [n] content/*[1]"
     ],
     [
       "Action",
-      "subset-of",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"에 포함된다\""
+      "simple-contain-member",
+      "[n] children/*[2] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[1] (grammar:postposition); [t] \"를\" (grammar:article); [n] content/*[1]"
     ],
     [
       "Action",
-      "not-set-member",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"에 속하지 않는다\""
+      "simple-subset",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [n] content/*[1]"
     ],
     [
       "Action",
-      "not-contain-member",
-      "[n] children/*[2] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[1]; [t] \"에 속하지 않는다\""
+      "simple-parallel",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[3] (grammar:postposition); [t] \"와\" (grammar:article); [n] content/*[1]"
     ],
     [
       "Action",
-      "parallel-to",
-      "[n] children/*[1] (grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[3] (grammar:postposition); [t] \"는\" (grammar:article); [t] \"평행하다\""
+      "simple-vertical",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"와\" (grammar:article); [n] content/*[1]"
     ],
     [
       "Action",
-      "vertical",
-      "[n] children/*[1] (grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"는\" (grammar:article); [t] \"수직이다\""
-    ],
-    [
-      "Action",
-      "necessary-condition",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"이기 위한 필요조건\""
-    ],
-    [
-      "Action",
-      "sufficient-condition",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"이기 위한 충분조건\""
-    ],
-    [
-      "Action",
-      "necessary-sufficient-condition",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"이기 위한 필요충분조건\""
+      "simple-condition",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"이기 위한\"; [n] content/*[1]"
     ],
     [
       "Action",
@@ -967,12 +952,7 @@
     [
       "Action",
       "equality",
-      "[n] children/*[1] (grammar:postposition); [n] content/*[1] (grammar:article:postposition); [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "not-equal-to",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"와\" (grammar:article); [t] \"같지 않다\""
+      "[n] children/*[1] (grammar:postposition); [n] content/*[1] (grammar:article:postposition); [t] \"와\" (grammar:article); [n] children/*[2]"
     ],
     [
       "Action",

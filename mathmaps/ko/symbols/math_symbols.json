@@ -1400,9 +1400,9 @@
         "default": "다음의 원소이다"
       },
       "clearspeak": {
-        "default": "의 구성원이다", 
+        "default": "의 원소이다", 
         "SetMemberSymbol_Member": "의 구성원이다",
-        "SetMemberSymbol_Element": "의 원소다",
+        "SetMemberSymbol_Element": "의 원소이다",
         "SetMemberSymbol_In": "안에 있다", 
         "SetMemberSymbol_Belongs": "에 속해 있다"
       }
@@ -1416,7 +1416,7 @@
         "default": "다음의 원소가 아니다"
       },
       "clearspeak": {
-        "default": "의 구성원이 아니다", 
+        "default": "의 원소가 아니다", 
         "SetMemberSymbol_Member": "의 구성원이 아니다",
         "SetMemberSymbol_Element": "의 원소가 아니다",
         "SetMemberSymbol_In": "안에 없다", 
@@ -1432,7 +1432,7 @@
         "default": "다음의 원소이다"
       },
       "clearspeak": {
-        "default": "의 구성원이다.", 
+        "default": "의 원소이다.", 
         "SetMemberSymbol_Member": "의 구성원이다.",
         "SetMemberSymbol_Element": "의 요소다.",
         "SetMemberSymbol_In": "안에 있다", 
@@ -1445,7 +1445,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "다음을 원소로 갖는다"
+        "default": "다음을 포함한다"
+      },
+      "clearspeak": {
+        "default": "포함한다"
       }
     },
     "key": "220B"
@@ -1454,7 +1457,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "다음을 원소로 갖지 않는다"
+        "default": "다음을 포함하지 않는다"
+      },
+      "clearspeak": {
+        "default": "포함하지 않는다"
       }
     },
     "key": "220C"
@@ -1463,7 +1469,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "다음을 원소로 갖는다"
+        "default": "다음을 포함한다"
+      },
+      "clearspeak": {
+        "default": "포함한다"
       }
     },
     "key": "220D"
@@ -2146,6 +2155,9 @@
     "mappings": {
       "default": {
         "default": "일치하다"
+      },
+      "clearspeak": {
+        "default": "일치하다"
       }
     },
     "key": "2258"
@@ -2608,6 +2620,9 @@
     "mappings": {
       "default": {
         "default": "부분집합"
+      },
+      "clearspaek": {
+        "default": "의 부분집합"
       }
     },
     "key": "2282"
@@ -2617,6 +2632,9 @@
     "mappings": {
       "default": {
         "default": "상위집합"
+      },
+      "clearspaek": {
+        "default": "의 상위집합"
       }
     },
     "key": "2283"
@@ -2626,6 +2644,9 @@
     "mappings": {
       "default": {
         "default": "부분집합이 아니다"
+      },
+      "clearspaek": {
+        "default": "의 부분집합이 아니다"
       }
     },
     "key": "2284"
@@ -2635,6 +2656,9 @@
     "mappings": {
       "default": {
         "default": "상위집합이 아니다"
+      },
+      "clearspaek": {
+        "default": "의 상위집합이 아니다"
       }
     },
     "key": "2285"
@@ -2644,6 +2668,9 @@
     "mappings": {
       "default": {
         "default": "부분집합이거나 같다"
+      },
+      "clearspeak": {
+        "default": "의 부분집합이거나 같다"
       }
     },
     "key": "2286"
@@ -2653,6 +2680,9 @@
     "mappings": {
       "default": {
         "default": "상위집합이거나 같다"
+      },
+      "clearspeak": {
+        "default": "의 상위집합이거나 같다"
       }
     },
     "key": "2287"
@@ -2662,6 +2692,9 @@
     "mappings": {
       "default": {
         "default": "부분집합이지도 같지도 않다"
+      },
+      "clearspeak": {
+        "default": "의 부분집합이지도 같지도 않다"
       }
     },
     "key": "2288"
@@ -2671,6 +2704,9 @@
     "mappings": {
       "default": {
         "default": "상위집합이지도 같지도 않다"
+      },
+      "clearspeak": {
+        "default": "의 상위집합이지도 같지도 않다"
       }
     },
     "key": "2289"
@@ -2680,6 +2716,9 @@
     "mappings": {
       "default": {
         "default": "부분집합이지만 같지 않다"
+      },
+      "clearspeak": {
+        "default": "의 부분집합이지만 같지 않다"
       }
     },
     "key": "228A"
@@ -2689,6 +2728,9 @@
     "mappings": {
       "default": {
         "default": "상위집합이지만 같지 않다"
+      },
+      "clearspeak": {
+        "default": "의 상위집합이지만 같지 않다"
       }
     },
     "key": "228B"
@@ -3953,6 +3995,9 @@
     "mappings": {
       "default": {
         "default": "수직"
+      },
+      "clearspeak": {
+        "default": "수직이다"
       }
     },
     "key": "27C2"
@@ -6740,6 +6785,9 @@
     "mappings": {
       "default": {
         "default": "부분집합"
+      },
+      "clearspeak": {
+        "default": "의 부분집합"
       }
     },
     "key": "2AC5"
@@ -6749,6 +6797,9 @@
     "mappings": {
       "default": {
         "default": "상위집합"
+      },
+      "clearspeak": {
+        "default": "의 상위집합"
       }
     },
     "key": "2AC6"
