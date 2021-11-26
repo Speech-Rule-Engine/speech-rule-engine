@@ -117,4 +117,3 @@ NUMBERS.numberToWords = numberToWords;
 NUMBERS.numberToOrdinal = numberToOrdinal;
 
 export default NUMBERS;
-// TODO: For simple speech output this should be different.

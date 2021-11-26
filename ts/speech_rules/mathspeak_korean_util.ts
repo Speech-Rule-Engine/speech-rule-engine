@@ -148,7 +148,7 @@ export function isSimpleIndex(node: Element): Element[] {
 
 /**
  * Nested string for radicals in Mathspeak mode putting together the nesting
- * depth with a pre- and postfix string that depends on the speech style.
+ * depth with a pre/postfix string that depends on the speech style.
  * @param node The radical node.
  * @param prefix A prefix string.
  * @param postfix A postfix string.
@@ -229,8 +229,7 @@ export function getRootIndex(node: Element): string {
  * @param postfix A postfix string.
  * @return The indexing string.
  */
-export function indexRadical(
-    node: Element, postfix: string): string {
+export function indexRadical(node: Element, postfix: string): string {
   let index = getRootIndex(node);
   return index ? index : postfix;
 }
@@ -279,7 +278,7 @@ export function ordinalConversion(node: Element): string {
 
 
 /**
- * String function to turn a child position into an ordinal.
+ * String function to convert a child position into an ordinal.
  * @param node The node for the string function.
  * @return The ordinal string corresponding to the child position of
  *     the node.
@@ -291,7 +290,7 @@ export function decreasedOrdinalConversion(node: Element): string {
 
 
 /**
- * String function to turn a child position into an ordinal.
+ * String function to convert a child position into an ordinal.
  * @param node The node for the string function.
  * @return The ordinal string corresponding to the child position of
  *     the node.
@@ -306,28 +305,27 @@ export function listOrdinalConversion(node: Element): string {
 /**
  * Query function to check if the child depth of the current node
  * is above a certain standard value.
- * TODO: use as a custom function if needed.
  * @param node The root node.
  * @return List containing input node if true.
  */
- export function checkDepth(node: Element): Element[] {
+export function checkDepth(node: Element): Element[] {
   // additional option to check the number of roles.
   let roleList: string[] = [];
   let depth = getDepthValue(node, roleList);
   // TODO: determine the standard value.
   return (depth > 3) ? [] : [node];
 }
+//TODO: use as a custom function if needed.
 
 
 /**
  * DFS function to calculate the child depth of the current node
  * and determine the number of roles.
- * TODO: use as a custom function if needed.
  * @param node The root node.
  * @param roleList The list of role.
  * @return The child depth.
  */
- export function getDepthValue(node: Element, roleList: string[]): number {
+export function getDepthValue(node: Element, roleList: string[]): number {
   let role = node.getAttribute('role');
   var index = roleList.indexOf(role) > -1;
   if (!index) {
@@ -344,6 +342,7 @@ export function listOrdinalConversion(node: Element): string {
   }
   return 0;
 }
+//TODO: use as a custom function if needed.
 
 }
 

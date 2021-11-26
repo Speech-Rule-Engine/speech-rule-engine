@@ -47,8 +47,8 @@ function create(): Locale {
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
 
   /**
-   * Find if there exists final consonant
-   *    and therefore needs adjustment of postposition.
+   * Find if there exists final consonant in the last syllable
+   * and therefore needs adjustment of postposition.
    * @param name The string that needs to be check.
    * @returns The string unchanged.
    */

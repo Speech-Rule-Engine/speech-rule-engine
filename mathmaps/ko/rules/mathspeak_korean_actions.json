@@ -576,6 +576,11 @@
     ],
     [
       "Action",
+      "line-segment",
+      "[t] \"선분\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2] (pause:short)"
+    ],
+    [
+      "Action",
       "equality",
       "[n] children/*[1] (grammar:postposition); [n] content/*[1] (grammar:article:postposition); [n] children/*[2]"
     ],
@@ -638,11 +643,6 @@
       "Action",
       "necessary-sufficient-condition",
       "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"이기 위한 필요충분조건\""
-    ],
-    [
-      "Action",
-      "line-segment",
-      "[t] \"선분\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2] (pause:short)"
     ]
   ]
 }
