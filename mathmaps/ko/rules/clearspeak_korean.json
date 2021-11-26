@@ -50,7 +50,8 @@
       "simple-relation",
       "default",
       "self::relseq",
-      "count(./children/*)=2"
+      "count(./children/*)=2",
+      "text()=\"∈\" or text()=\"∊\" or text()=\"∋\" or text()=\"∍\" or text()=\"∉\" or text()=\"∌\""
     ],
     [
       "Precondition",
