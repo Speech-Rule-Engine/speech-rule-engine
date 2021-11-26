@@ -55,21 +55,28 @@ function create(): Locale {
   loc.CORRECTIONS.postposition = (name: string) => {
     let final = name.slice(-1);
     let char = (final.charCodeAt(0) - 44032) % 28;
-
     let result = (char > 0) ? true : false;
     if (final.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
     Grammar.getInstance().setParameter('final', result);
-
     return name;
   }
   loc.CORRECTIONS.article = (name: string) => {
     let final = Grammar.getInstance().getParameter('final');
-    
-    let temp = name;
-    if (name === '같다') name = '는';
-    if (final) name = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
-    
-    return (name !== undefined) ? name : temp;
+    let temp = name.split(" ");
+
+    if (temp[0] === '같다') temp[0] = '는';
+    if (final) temp[0] = {'는': '은', '와': '과', '를': '을', '로': '으로'}[temp[0]];
+    return (temp[0] !== undefined) ? temp.join(" ") : name;
+  }
+  loc.CORRECTIONS.noArticle = (name: string) => {
+    let temp = name.split(" ");
+    let art = ['는', '은', '와', '과', '를', '을', '로', '으로', '보다'];
+    for (let i = 0; i < temp.length; i++){
+      if (art.indexOf(temp[i]) != -1){
+        temp.splice(i,1);
+      }
+    }
+    return (temp[0] !== undefined)? temp.join(" ") : name;
   }
   
   return loc;

@@ -35,6 +35,37 @@
       "children/*[2][text()=3]",
       "name(children/*[1])=\"identifier\"",
       "children/*[1][@category=\"unit:length\"]"
+    ],
+    [
+      "Precondition",
+      "unit-quad",
+      "default",
+      "self::superscript[@role=\"unit\"]",
+      "children/*[2][text()=4]",
+      "name(children/*[1])=\"identifier\"",
+      "children/*[1][@category=\"unit:length\"]"
+    ],
+    [
+      "Precondition",
+      "simple-relation",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2"
+    ],
+    [
+      "Precondition",
+      "member-operation-simple",
+      "default",
+      "self::infixop",
+      "count(./children/*)=2"
+    ],
+    [
+      "Precondition",
+      "parallel-to",
+      "default",
+      "self::punctuated",
+      "count(./children/*)=3",
+      "content/*[1][text()]=\"∥\""
     ]
   ]
 }
