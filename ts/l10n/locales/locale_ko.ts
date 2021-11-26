@@ -63,11 +63,11 @@ function create(): Locale {
   }
   loc.CORRECTIONS.article = (name: string) => {
     let final = Grammar.getInstance().getParameter('final');
-    let temp = name.split(" ");
+    let temp = name;
 
-    if (temp[0] === '같다') temp[0] = '는';
-    if (final) temp[0] = {'는': '은', '와': '과', '를': '을', '로': '으로'}[temp[0]];
-    return (temp[0] !== undefined) ? temp.join(" ") : name;
+    if (temp === '같다') temp = '는';
+    if (final) temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[temp];
+    return (temp !== undefined) ? temp : name;
   }
   /*
   loc.CORRECTIONS.noArticle = (name: string) => {
