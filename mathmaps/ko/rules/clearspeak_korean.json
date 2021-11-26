@@ -46,18 +46,64 @@
       "children/*[1][@category=\"unit:length\"]"
     ],
     [
-      "Precondition",
-      "simple-relation",
-      "default",
-      "self::relseq",
-      "count(./children/*)=2"
+      "Ignore",
+      "equality"
     ],
     [
       "Precondition",
-      "member-operation-simple",
+      "simple-relseq",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"≥\" or text()=\">\" or text()=\"≤\" or text()=\"<\""
+    ],
+    [
+      "Precondition",
+      "set-member",
       "default",
       "self::infixop",
-      "count(./children/*)=2"
+      "count(./children/*)=2",
+      "text()=\"∈\" or text()=\"∊\""
+    ],
+    [
+      "Precondition",
+      "contain-member",
+      "default",
+      "self::infixop",
+      "count(./children/*)=2",
+      "text()=\"∋\" or text()=\"∍\"" 
+    ],
+    [
+      "Precondition",
+      "subset-of",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"⊂\""
+    ],
+    [
+      "Precondition",
+      "not-equal-to",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"≠\""
+    ],
+    [
+      "Precondition",
+      "not-set-member",
+      "default",
+      "self::infixop",
+      "count(./children/*)=2",
+      "text()=\"∉\""
+    ],
+    [
+      "Precondition",
+      "not-contain-member",
+      "default",
+      "self::infixop",
+      "count(./children/*)=2",
+      "text()=\"∌\""
     ],
     [
       "Precondition",
@@ -66,6 +112,49 @@
       "self::punctuated",
       "count(./children/*)=3",
       "content/*[1][text()]=\"∥\""
+    ],
+    [
+      "Precondition",
+      "vertical",
+      "default",
+      "self::infixop",
+      "count(./children/*)=2",
+      "text()=\"⊥\""
+    ],
+    [
+      "Precondition",
+      "necessary-condition",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"⇐\""
+    ],
+    [
+      "Precondition",
+      "sufficient-condition",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"⇒\""
+    ],
+    [
+      "Precondition",
+      "necessary-sufficient-condition",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"⇔\""
+    ],
+    [
+      "Precondition",
+      "line-segment",
+      "default",
+      "self::overscore",
+      "@role=\"implicit\"",
+      "children/*[2][@role=\"overaccent\"]",
+      "children/*[2][contains(@annotation, \"accent:bar\")]",
+      "name(children/*[1])=\"infixop\"",
+      "count(./children/*[1]/children/*)=2"
     ]
   ]
 }

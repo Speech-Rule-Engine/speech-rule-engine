@@ -68,6 +68,7 @@ function create(): Locale {
     if (final) temp[0] = {'는': '은', '와': '과', '를': '을', '로': '으로'}[temp[0]];
     return (temp[0] !== undefined) ? temp.join(" ") : name;
   }
+  /*
   loc.CORRECTIONS.noArticle = (name: string) => {
     let temp = name.split(" ");
     let art = ['는', '은', '와', '과', '를', '을', '로', '으로', '보다'];
@@ -77,7 +78,7 @@ function create(): Locale {
       }
     }
     return (temp[0] !== undefined)? temp.join(" ") : name;
-  }
+  }*/
   
   return loc;
 }

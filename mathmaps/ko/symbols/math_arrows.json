@@ -665,8 +665,8 @@
       "default": {
         "default": "오른쪽 이중 화살표"
       },
-      "clearspeak": {
-        "sbrief": "이기 위한 충분조건"
+      "mathspeak": {
+        "sbrief": "오른쪽 이중 화살표"
       }
     },
     "key": "21D2"
@@ -677,8 +677,8 @@
       "default": {
         "default": "아래쪽 이중 화살표"
       },
-      "clearspeak": {
-        "sbrief": "이기 위한 필요조건"
+      "mathspeak": {
+        "sbrief": "아래쪽 이중 화살표"
       }
     },
     "key": "21D3"
@@ -689,8 +689,8 @@
       "default": {
         "default": "좌우 이중 화살표"
       },
-      "clearspeak": {
-        "sbrief": "이기 위한 필요충분조건"
+      "mathspeak": {
+        "sbrief": "좌우 이중 화살표"
       }
     },
     "key": "21D4"
