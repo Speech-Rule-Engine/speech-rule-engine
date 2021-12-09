@@ -1,0 +1,64 @@
+{
+  "kind": "numbers",
+  "locale": "nb",
+  "messages": {
+    "zero": "null",
+    "ones": [
+      "",
+      "en",
+      "to",
+      "tre",
+      "fire",
+      "fem",
+      "seks",
+      "sju",
+      "åtte",
+      "ni",
+      "ti",
+      "elleve",
+      "tolv",
+      "tretten",
+      "fjorten",
+      "femten",
+      "seksten",
+      "søtten",
+      "atten",
+      "nitten"
+    ],
+    "tens": [
+      "",
+      "",
+      "tjue",
+      "tretti",
+      "førti",
+      "femti",
+      "seksti",
+      "søtti",
+      "åtti",
+      "nitti"
+    ],
+    "large": [
+      "",
+      "tusen",
+      "million",
+      "milliard",
+      "billion",
+      "billiard",
+      "trillion",
+      "trilliard",
+      "kvadrillion",
+      "kvadrilliard",
+      "kvintillion",
+      "kvintilliard"
+    ],
+    "vulgarSep": " ",
+    "numSep": " ",
+    "special": {
+      "smallOrdinals": [
+        "nullte", "første", "andre", "tredje", "fjerde", "femte", "sjette",
+        "sjuende", "åttende", "niende", "tiende", "ellevte", "tolvte"
+      ],
+      "endOrdinal": "ende"
+    }
+  }
+}

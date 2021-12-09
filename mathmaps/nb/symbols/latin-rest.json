@@ -1,0 +1,536 @@
+[
+  {
+    "locale": "nb"
+  },
+  {
+    "key": "210E",
+    "mappings": {
+      "default": {
+        "default": "planck constant"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Mn",
+    "key": "0363",
+    "mappings": {
+      "default": {
+        "default": "kombinerende a"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0364",
+    "mappings": {
+      "default": {
+        "default": "kombinerende e"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0365",
+    "mappings": {
+      "default": {
+        "default": "kombinerende i"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0366",
+    "mappings": {
+      "default": {
+        "default": "kombinerende o"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0367",
+    "mappings": {
+      "default": {
+        "default": "kombinerende u"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0368",
+    "mappings": {
+      "default": {
+        "default": "kombinerende c"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0369",
+    "mappings": {
+      "default": {
+        "default": "kombinerende d"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036A",
+    "mappings": {
+      "default": {
+        "default": "kombinerende h"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036B",
+    "mappings": {
+      "default": {
+        "default": "kombinerende m"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036C",
+    "mappings": {
+      "default": {
+        "default": "kombinerende r"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036D",
+    "mappings": {
+      "default": {
+        "default": "kombinerende t"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036E",
+    "mappings": {
+      "default": {
+        "default": "kombinerende v"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036F",
+    "mappings": {
+      "default": {
+        "default": "kombinerende x"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D62",
+    "mappings": {
+      "default": {
+        "default": "subskript i"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D63",
+    "mappings": {
+      "default": {
+        "default": "subskript r"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D64",
+    "mappings": {
+      "default": {
+        "default": "subskript u"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D65",
+    "mappings": {
+      "default": {
+        "default": "subskript v"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DCA",
+    "mappings": {
+      "default": {
+        "default": "kombinerende r under"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD3",
+    "mappings": {
+      "default": {
+        "default": "kombinerende utflatet åpen a over"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD4",
+    "mappings": {
+      "default": {
+        "default": "kombinerende ae"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD5",
+    "mappings": {
+      "default": {
+        "default": "kombinerende ao"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD6",
+    "mappings": {
+      "default": {
+        "default": "kombinerende av"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD7",
+    "mappings": {
+      "default": {
+        "default": "kombinerende c cedille"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD8",
+    "mappings": {
+      "default": {
+        "default": "kombinerende insulær d"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD9",
+    "mappings": {
+      "default": {
+        "default": "kombinerende eth"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDA",
+    "mappings": {
+      "default": {
+        "default": "kombinerende g"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDB",
+    "mappings": {
+      "default": {
+        "default": "kombinerende liten hevet G"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDC",
+    "mappings": {
+      "default": {
+        "default": "kombinerende k"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDD",
+    "mappings": {
+      "default": {
+        "default": "kombinerende l"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDE",
+    "mappings": {
+      "default": {
+        "default": "kombinerende liten hevet L"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDF",
+    "mappings": {
+      "default": {
+        "default": "kombinerende liten hevet M"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE0",
+    "mappings": {
+      "default": {
+        "default": "kombinerende n"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE1",
+    "mappings": {
+      "default": {
+        "default": "kombinerende liten hevet N"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE2",
+    "mappings": {
+      "default": {
+        "default": "kombinerende liten hevet R"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE3",
+    "mappings": {
+      "default": {
+        "default": "kombinerende r rotunda"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE4",
+    "mappings": {
+      "default": {
+        "default": "kombinerende s"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE5",
+    "mappings": {
+      "default": {
+        "default": "kombinerende lang s"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE6",
+    "mappings": {
+      "default": {
+        "default": "kombinerende z"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2071",
+    "mappings": {
+      "default": {
+        "default": "superskript i"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "207F",
+    "mappings": {
+      "default": {
+        "default": "superskript n"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2090",
+    "mappings": {
+      "default": {
+        "default": "subskript a"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2091",
+    "mappings": {
+      "default": {
+        "default": "subskript e"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2092",
+    "mappings": {
+      "default": {
+        "default": "subskript o"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2093",
+    "mappings": {
+      "default": {
+        "default": "subskript x"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2094",
+    "mappings": {
+      "default": {
+        "default": "subskript schwa"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2095",
+    "mappings": {
+      "default": {
+        "default": "subskript h"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2096",
+    "mappings": {
+      "default": {
+        "default": "subskript k"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2097",
+    "mappings": {
+      "default": {
+        "default": "subskript l"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2098",
+    "mappings": {
+      "default": {
+        "default": "subskript m"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2099",
+    "mappings": {
+      "default": {
+        "default": "subskript n"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209A",
+    "mappings": {
+      "default": {
+        "default": "subskript p"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209B",
+    "mappings": {
+      "default": {
+        "default": "subskript s"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209C",
+    "mappings": {
+      "default": {
+        "default": "subskript t"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2C7C",
+    "mappings": {
+      "default": {
+        "default": "subskript j"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12A",
+    "mappings": {
+      "default": {
+        "default": "skilpaddeskall-klammeparentes hevet S"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12B",
+    "mappings": {
+      "default": {
+        "default": "innsirklet kursiv hevet C"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12C",
+    "mappings": {
+      "default": {
+        "default": "innsirklet kursiv hevet R"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F18A",
+    "mappings": {
+      "default": {
+        "default": "negativ firkantkryss hevet P"
+      }
+    }
+  }
+]

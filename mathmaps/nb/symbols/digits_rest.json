@@ -1,0 +1,275 @@
+[
+  {
+    "locale": "nb"
+  },
+  {
+    "key": "00B2",
+    "mappings": {
+      "default": {
+        "default": "andre potens"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "00B3",
+    "mappings": {
+      "default": {
+        "default": "tredje potens"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "00BC",
+    "mappings": {
+      "default": {
+        "default": "en fjerdedel"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "00BD",
+    "mappings": {
+      "default": {
+        "default": "en halv"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "00BE",
+    "mappings": {
+      "default": {
+        "default": "tre fjerdedeler"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "category": "No",
+    "key": "2150",
+    "mappings": {
+      "default": {
+        "default": "en sjuendedel"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "2151",
+    "mappings": {
+      "default": {
+        "default": "en niendedel"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "2152",
+    "mappings": {
+      "default": {
+        "default": "en tiendedel"
+      }
+    }
+  },
+  {
+    "key": "2153",
+    "mappings": {
+      "default": {
+        "default": "en tredjedel"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "2154",
+    "mappings": {
+      "default": {
+        "default": "to tredjedeler"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "2155",
+    "mappings": {
+      "default": {
+        "default": "en femtedel"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "2156",
+    "mappings": {
+      "default": {
+        "default": "to femtedeler"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "2157",
+    "mappings": {
+      "default": {
+        "default": "tre femtedeler"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "2158",
+    "mappings": {
+      "default": {
+        "default": "fire femtedeler"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "2159",
+    "mappings": {
+      "default": {
+        "default": "en sjettedel"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "215A",
+    "mappings": {
+      "default": {
+        "default": "fem sjettedeler"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "215B",
+    "mappings": {
+      "default": {
+        "default": "en åttendedel"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "215C",
+    "mappings": {
+      "default": {
+        "default": "tre åttendedeler"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "215D",
+    "mappings": {
+      "default": {
+        "default": "fem åttendedeler"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "key": "215E",
+    "mappings": {
+      "default": {
+        "default": "sju åttendedeler"
+      }
+    },
+    "category": "No"
+  },
+  {
+    "category": "No",
+    "key": "215F",
+    "mappings": {
+      "default": {
+        "default": "en del"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "2189",
+    "mappings": {
+      "default": {
+        "default": "null trejdedeler"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "3248",
+    "mappings": {
+      "default": {
+        "default": "sirkel med ti på svart kvadrat"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "3249",
+    "mappings": {
+      "default": {
+        "default": "sirkel med tjue på svart kvadrat"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "324A",
+    "mappings": {
+      "default": {
+        "default": "sirkel med tretti på svart kvadrat"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "324B",
+    "mappings": {
+      "default": {
+        "default": "sirkel med førti på svart kvadrat"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "324C",
+    "mappings": {
+      "default": {
+        "default": "sirkel med femti på svart kvadrat"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "324D",
+    "mappings": {
+      "default": {
+        "default": "sirkel med seksti på svart kvadrat"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "324E",
+    "mappings": {
+      "default": {
+        "default": "sirkel med søtti på svart kvadrat"
+      }
+    }
+  },
+  {
+    "category": "No",
+    "key": "324F",
+    "mappings": {
+      "default": {
+        "default": "sirkel med åtti på svart kvadrat"
+      }
+    }
+  }
+]

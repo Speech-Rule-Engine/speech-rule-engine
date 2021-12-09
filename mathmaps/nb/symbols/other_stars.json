@@ -1,0 +1,527 @@
+[
+  {
+    "locale": "nb"
+  },
+  {
+    "category": "So",
+    "key": "23E8",
+    "mappings": {
+      "default": {
+        "default": "desimaleksponent"
+      }
+    }
+  },
+  {
+    "key": "2605",
+    "mappings": {
+      "default": {
+        "default": "svart stjerne"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2606",
+    "mappings": {
+      "default": {
+        "default": "hvit stjerne"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "26AA",
+    "mappings": {
+      "default": {
+        "default": "hvit sirkel"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "26AB",
+    "mappings": {
+      "default": {
+        "default": "svart sirkel"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2705",
+    "mappings": {
+      "default": {
+        "default": "hvitt sjekkmerke"
+      }
+    }
+  },
+  {
+    "key": "2713",
+    "mappings": {
+      "default": {
+        "default": "sjekkmerke"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2714",
+    "mappings": {
+      "default": {
+        "default": "fet sjekkmerke"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2715",
+    "mappings": {
+      "default": {
+        "default": "multiplikasjon-x"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2716",
+    "mappings": {
+      "default": {
+        "default": "fet multiplikasjon-x"
+      }
+    }
+  },
+  {
+    "key": "2717",
+    "mappings": {
+      "default": {
+        "default": "håndskrift-x"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2718",
+    "mappings": {
+      "default": {
+        "default": "fet håndskrift-x"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "271B",
+    "mappings": {
+      "default": {
+        "default": "kors med åpen midte"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "271C",
+    "mappings": {
+      "default": {
+        "default": "fet kors med åpen midte"
+      }
+    }
+  },
+  {
+    "key": "2720",
+    "mappings": {
+      "default": {
+        "default": "maltesisk kors"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2721",
+    "mappings": {
+      "default": {
+        "default": "davidstjerne"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2722",
+    "mappings": {
+      "default": {
+        "default": "asterisk med fire dråper"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2723",
+    "mappings": {
+      "default": {
+        "default": "asterisk med fire ballonger"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2724",
+    "mappings": {
+      "default": {
+        "default": "fet asterisk med fire ballonger"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2725",
+    "mappings": {
+      "default": {
+        "default": "asterisk med fire klubber"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2726",
+    "mappings": {
+      "default": {
+        "default": "svart firepunktsstjerne"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2727",
+    "mappings": {
+      "default": {
+        "default": "hvit firepunktsstjerne"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2728",
+    "mappings": {
+      "default": {
+        "default": "blinkende stjerner"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2729",
+    "mappings": {
+      "default": {
+        "default": "hvit stjerne med kantlinje"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "272A",
+    "mappings": {
+      "default": {
+        "default": "sirkel med hvit stjerne"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "272B",
+    "mappings": {
+      "default": {
+        "default": "svart stjerne med åpen midte"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "272C",
+    "mappings": {
+      "default": {
+        "default": "hvit stjerne med svart midte"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "272D",
+    "mappings": {
+      "default": {
+        "default": "svart stjerne med kantlinje"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "272E",
+    "mappings": {
+      "default": {
+        "default": "fet svart stjerne"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "272F",
+    "mappings": {
+      "default": {
+        "default": "snurrehjulstjerne"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2730",
+    "mappings": {
+      "default": {
+        "default": "hvit stjerne med skygge"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2731",
+    "mappings": {
+      "default": {
+        "default": "fet asterisk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2732",
+    "mappings": {
+      "default": {
+        "default": "asterisk med åpen midte"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2733",
+    "mappings": {
+      "default": {
+        "default": "asterisk med åtte hender"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2734",
+    "mappings": {
+      "default": {
+        "default": "stjerne med åtte punkter"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2735",
+    "mappings": {
+      "default": {
+        "default": "stjerne med åtte hjulpunkter"
+      }
+    }
+  },
+  {
+    "key": "2736",
+    "mappings": {
+      "default": {
+        "default": "svart stjerne med seks hender"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2739",
+    "mappings": {
+      "default": {
+        "default": "svart stjerne med tolv hender"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "273A",
+    "mappings": {
+      "default": {
+        "default": "asterisk med seksten hender"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "273B",
+    "mappings": {
+      "default": {
+        "default": "asterisk med dråpehender"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "273C",
+    "mappings": {
+      "default": {
+        "default": "asterisk med dråpepunkter og åpen midte"
+      }
+    }
+  },
+  {
+    "key": "273D",
+    "mappings": {
+      "default": {
+        "default": "fet asterisk med dråpepunkter"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "273E",
+    "mappings": {
+      "default": {
+        "default": "liten blomst med seksblad i svart og hvitt"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "273F",
+    "mappings": {
+      "default": {
+        "default": "svart liten blomst"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2740",
+    "mappings": {
+      "default": {
+        "default": "hvit liten blomst"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2741",
+    "mappings": {
+      "default": {
+        "default": "åttebladet svart florette med kantlinje"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2742",
+    "mappings": {
+      "default": {
+        "default": "sirkel med åttehendet stjerne med åpen midte"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2743",
+    "mappings": {
+      "default": {
+        "default": "fet asterisk med dråpehjulpunkter"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2744",
+    "mappings": {
+      "default": {
+        "default": "snøfnugg"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2745",
+    "mappings": {
+      "default": {
+        "default": "tett trifoliert snøfnugg"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2746",
+    "mappings": {
+      "default": {
+        "default": "fet snøfnugg med fiskebeinsmønster"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2747",
+    "mappings": {
+      "default": {
+        "default": "glimrende"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2748",
+    "mappings": {
+      "default": {
+        "default": "fet glimrende"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2749",
+    "mappings": {
+      "default": {
+        "default": "asterisk med ballonger"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "274A",
+    "mappings": {
+      "default": {
+        "default": "propellasterisk med åtte dråpehender"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "274B",
+    "mappings": {
+      "default": {
+        "default": "fet propellasterisk med åtte dråpehender"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "274C",
+    "mappings": {
+      "default": {
+        "default": "kryssmerke"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "274D",
+    "mappings": {
+      "default": {
+        "default": "hvit sirkel med skygge"
+      }
+    }
+  }
+]

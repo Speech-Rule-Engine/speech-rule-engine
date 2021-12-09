@@ -1,0 +1,42 @@
+[
+  {
+    "locale": "nn"
+  },
+  {
+    "key": "b",
+    "category": "memory",
+    "names": [
+      "b"
+    ],
+    "mappings": {
+      "default": {
+        "default": "bit"
+      }
+    }
+  },
+  {
+    "key": "B",
+    "category": "memory",
+    "names": [
+      "B"
+    ],
+    "si": true,
+    "mappings": {
+      "default": {
+        "default": "byte"
+      }
+    }
+  },
+  {
+    "key": "KB",
+    "category": "memory",
+    "names": [
+      "KB"
+    ],
+    "mappings": {
+      "default": {
+        "default": "kilobyte"
+      }
+    }
+  }
+]
