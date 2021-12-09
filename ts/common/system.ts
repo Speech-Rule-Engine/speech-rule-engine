@@ -93,12 +93,12 @@ export async function setupEngine(feature: {[key: string]: boolean|string}) {
 
 
 function config(feature: {[key: string]: boolean|string}) {
-  if (Engine.getInstance().config ||
-    Engine.getInstance().mode === EngineConst.Mode.HTTP) {
+  if (Engine.getInstance().mode === EngineConst.Mode.HTTP &&
+    !Engine.getInstance().config) {
     configBlocks(feature);
+    Engine.getInstance().config = true;
   }
   configFeature(feature);
-  Engine.getInstance().config = true;
 }
 
 declare const SREfeature: {[key: string]: any};
