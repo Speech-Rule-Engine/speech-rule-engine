@@ -24,7 +24,7 @@ import {Numbers, NUMBERS as NUMB} from '../messages';
 //
 
 /**
- * Sub-ISO specification. Possible values: fr, be, sw.
+ * Sub-ISO specification. Possible values: alt.
  */
 export let SUB_ISO: string = 'alt';
 

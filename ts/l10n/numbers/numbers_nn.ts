@@ -118,7 +118,7 @@ function replaceOrdinal(str: string): string {
     return str.slice(0, -1) + NUMBERS.special.endOrdinal;
   }
   if (str.match(/e$/)) {
-    return str + 'nde'; 
+    return str + 'nde';
  }
   return str + 'nde';
 }
