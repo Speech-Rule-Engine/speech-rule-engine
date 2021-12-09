@@ -22,6 +22,7 @@ jobs:
         with:
           name: sre-library
           path: |
+                mathmaps
                 lib
                 js
                 package.json
@@ -30,7 +31,7 @@ jobs:
 
     strategy:
       matrix:
-        block: [base, walker, semantic, en, ca, de, fr, es, it, hi, nemeth]
+        block: [base, walker, semantic, en, ca, de, fr, es, it, hi, nb, no, nemeth]
     needs: setup
     runs-on: ubuntu-latest
     name: SRE jests tests for ${{ matrix.block }}
