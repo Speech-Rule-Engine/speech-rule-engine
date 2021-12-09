@@ -1,0 +1,5 @@
+files:
+  - source: mathmaps/en/*/*.json
+    ignore:
+      - mathmaps/en/rules
+    translation: mathmaps/%two_letters_code%/%original_path%/%original_file_name%

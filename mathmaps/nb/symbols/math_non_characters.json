@@ -1,0 +1,221 @@
+[
+  {
+    "locale": "nb"
+  },
+  {
+    "key": "210F",
+    "mappings": {
+      "default": {
+        "default": "h med strek gjennom halsen"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "So",
+    "key": "2114",
+    "mappings": {
+      "default": {
+        "default": "l b strek"
+      }
+    }
+  },
+  {
+    "key": "2116",
+    "mappings": {
+      "default": {
+        "default": "numerotegn"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2117",
+    "mappings": {
+      "default": {
+        "default": "lydopptak copyright"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "211E",
+    "mappings": {
+      "default": {
+        "default": "reseptuttak"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "211F",
+    "mappings": {
+      "default": {
+        "default": "respons"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2120",
+    "mappings": {
+      "default": {
+        "default": "servicemerke"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2121",
+    "mappings": {
+      "default": {
+        "default": "telefontegn"
+      }
+    }
+  },
+  {
+    "key": "2122",
+    "mappings": {
+      "default": {
+        "default": "trade mark-tegn"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2123",
+    "mappings": {
+      "default": {
+        "default": "versikkel"
+      }
+    }
+  },
+  {
+    "key": "2125",
+    "mappings": {
+      "default": {
+        "default": "unse-tegn"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2126",
+    "mappings": {
+      "default": {
+        "default": "ohm"
+      }
+    },
+    "category": "Lu"
+  },
+  {
+    "key": "2127",
+    "mappings": {
+      "default": {
+        "default": "invertert ohm"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "212A",
+    "mappings": {
+      "default": {
+        "default": "grader kelvin"
+      }
+    },
+    "category": "Lu"
+  },
+  {
+    "key": "212B",
+    "mappings": {
+      "default": {
+        "default": "Ångstrøm"
+      }
+    },
+    "category": "Lu"
+  },
+  {
+    "category": "So",
+    "key": "212E",
+    "mappings": {
+      "default": {
+        "default": "estimert"
+      }
+    }
+  },
+  {
+    "key": "2132",
+    "mappings": {
+      "default": {
+        "default": "snudd stor F"
+      }
+    },
+    "category": "Lu"
+  },
+  {
+    "category": "Ll",
+    "key": "2139",
+    "mappings": {
+      "default": {
+        "default": "informasjonskilde"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "213A",
+    "mappings": {
+      "default": {
+        "default": "rotert stor Q"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "213B",
+    "mappings": {
+      "default": {
+        "default": "faksimile-tegn"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2141",
+    "mappings": {
+      "default": {
+        "default": "snudd stor G sans serif"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2142",
+    "mappings": {
+      "default": {
+        "default": "snudd stor L sans serif"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2143",
+    "mappings": {
+      "default": {
+        "default": "invertert stor L sans serif"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "2144",
+    "mappings": {
+      "default": {
+        "default": "snudd stor Y sans serif"
+      }
+    }
+  }
+]

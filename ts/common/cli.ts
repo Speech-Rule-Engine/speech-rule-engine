@@ -273,6 +273,10 @@ export class Cli {
             '-C, --subiso [name]',
             'Suplementary iso (or similar) for the given locale.',
             set('subiso'))
+        .option(
+            '-N, --number', 'Translate number to word.', processor, 'number')
+        .option(
+            '-O, --ordinal', 'Translate number to ordinal.', processor, 'ordinal')
         .option('-v, --verbose', 'Verbose mode.')
         .option('-l, --log [name]', 'Log file [name].')
         .option('--opt', 'List engine setup options.')

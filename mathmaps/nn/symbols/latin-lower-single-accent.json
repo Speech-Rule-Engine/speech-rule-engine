@@ -1,0 +1,1724 @@
+[
+  {
+    "locale": "nn"
+  },
+  {
+    "key": "00E0",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med gravis"
+      }
+    }
+  },
+  {
+    "key": "00E1",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "00E2",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "00E3",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med tilde"
+      }
+    }
+  },
+  {
+    "key": "00E4",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med tøddel"
+      }
+    }
+  },
+  {
+    "key": "00E5",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "å"
+      }
+    }
+  },
+  {
+    "key": "00E7",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "c med cedille"
+      }
+    }
+  },
+  {
+    "key": "00E8",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med gravis"
+      }
+    }
+  },
+  {
+    "key": "00E9",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "00EA",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "00EB",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med tøddel"
+      }
+    }
+  },
+  {
+    "key": "00EC",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med gravis"
+      }
+    }
+  },
+  {
+    "key": "00ED",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "00EE",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "00EF",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med tøddel"
+      }
+    }
+  },
+  {
+    "key": "00F1",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "n med tilde"
+      }
+    }
+  },
+  {
+    "key": "00F2",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med gravis"
+      }
+    }
+  },
+  {
+    "key": "00F3",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "00F4",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "00F5",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med tilde"
+      }
+    }
+  },
+  {
+    "key": "00F6",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med tøddel"
+      }
+    }
+  },
+  {
+    "key": "00F9",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med gravis"
+      }
+    }
+  },
+  {
+    "key": "00FA",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "00FB",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "00FC",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med tøddel"
+      }
+    }
+  },
+  {
+    "key": "00FD",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "y med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "00FF",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "y med tøddel"
+      }
+    }
+  },
+  {
+    "key": "0101",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med makron"
+      }
+    }
+  },
+  {
+    "key": "0103",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med breve"
+      }
+    }
+  },
+  {
+    "key": "0105",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med ogonek"
+      }
+    }
+  },
+  {
+    "key": "0107",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "c med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "0109",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "c med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "010B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "c med prikk over"
+      }
+    }
+  },
+  {
+    "key": "010D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "c med karon"
+      }
+    }
+  },
+  {
+    "key": "010F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "d med karon"
+      }
+    }
+  },
+  {
+    "key": "0113",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med makron"
+      }
+    }
+  },
+  {
+    "key": "0115",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med breve"
+      }
+    }
+  },
+  {
+    "key": "0117",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med prikk over"
+      }
+    }
+  },
+  {
+    "key": "0119",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med ogonek"
+      }
+    }
+  },
+  {
+    "key": "011B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med karon"
+      }
+    }
+  },
+  {
+    "key": "011D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "g med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "011F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "g med breve"
+      }
+    }
+  },
+  {
+    "key": "0121",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "g med prikk over"
+      }
+    }
+  },
+  {
+    "key": "0123",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "g med cedille"
+      }
+    }
+  },
+  {
+    "key": "0125",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "h med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "0129",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med tilde"
+      }
+    }
+  },
+  {
+    "key": "012B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med makron"
+      }
+    }
+  },
+  {
+    "key": "012D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med breve"
+      }
+    }
+  },
+  {
+    "key": "012F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med ogonek"
+      }
+    }
+  },
+  {
+    "key": "0131",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i utan prikk"
+      }
+    }
+  },
+  {
+    "key": "0135",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "j med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "0137",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "k med cedille"
+      }
+    }
+  },
+  {
+    "key": "013A",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "l med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "013C",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "l med cedille"
+      }
+    }
+  },
+  {
+    "key": "013E",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "l med karon"
+      }
+    }
+  },
+  {
+    "key": "0140",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "l med middle prikk"
+      }
+    }
+  },
+  {
+    "key": "0144",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "n med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "0146",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "n med cedille"
+      }
+    }
+  },
+  {
+    "key": "0148",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "n med karon"
+      }
+    }
+  },
+  {
+    "key": "014D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med makron"
+      }
+    }
+  },
+  {
+    "key": "014F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med breve"
+      }
+    }
+  },
+  {
+    "key": "0151",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med dobbel akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "0155",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "r med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "0157",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "r med cedille"
+      }
+    }
+  },
+  {
+    "key": "0159",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "r med karon"
+      }
+    }
+  },
+  {
+    "key": "015B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "s med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "015D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "s med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "015F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "s med cedille"
+      }
+    }
+  },
+  {
+    "key": "0161",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "s med karon"
+      }
+    }
+  },
+  {
+    "key": "0163",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "t med cedille"
+      }
+    }
+  },
+  {
+    "key": "0165",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "t med karon"
+      }
+    }
+  },
+  {
+    "key": "0169",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med tilde"
+      }
+    }
+  },
+  {
+    "key": "016B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med makron"
+      }
+    }
+  },
+  {
+    "key": "016D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med breve"
+      }
+    }
+  },
+  {
+    "key": "016F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med ring over"
+      }
+    }
+  },
+  {
+    "key": "0171",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med dobbel akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "0173",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med ogonek"
+      }
+    }
+  },
+  {
+    "key": "0175",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "w med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "0177",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "y med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "017A",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "z med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "017C",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "z med prikk over"
+      }
+    }
+  },
+  {
+    "key": "017E",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "z med karon"
+      }
+    }
+  },
+  {
+    "key": "01CE",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med karon"
+      }
+    }
+  },
+  {
+    "key": "01D0",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med karon"
+      }
+    }
+  },
+  {
+    "key": "01D2",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med karon"
+      }
+    }
+  },
+  {
+    "key": "01D4",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med karon"
+      }
+    }
+  },
+  {
+    "key": "01E7",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "g med karon"
+      }
+    }
+  },
+  {
+    "key": "01E9",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "k med karon"
+      }
+    }
+  },
+  {
+    "key": "01EB",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med ogonek"
+      }
+    }
+  },
+  {
+    "key": "01F0",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "j med karon"
+      }
+    }
+  },
+  {
+    "key": "01F5",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "g med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "01F9",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "n med gravis"
+      }
+    }
+  },
+  {
+    "key": "0201",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med dobbel gravis"
+      }
+    }
+  },
+  {
+    "key": "0203",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med omvendt breve"
+      }
+    }
+  },
+  {
+    "key": "0205",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med dobbel gravis"
+      }
+    }
+  },
+  {
+    "key": "0207",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med omvendt breve"
+      }
+    }
+  },
+  {
+    "key": "0209",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med dobbel gravis"
+      }
+    }
+  },
+  {
+    "key": "020B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med omvendt breve"
+      }
+    }
+  },
+  {
+    "key": "020D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med dobbel gravis"
+      }
+    }
+  },
+  {
+    "key": "020F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med omvendt breve"
+      }
+    }
+  },
+  {
+    "key": "0211",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "r med dobbel gravis"
+      }
+    }
+  },
+  {
+    "key": "0213",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "r med omvendt breve"
+      }
+    }
+  },
+  {
+    "key": "0215",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med dobbel gravis"
+      }
+    }
+  },
+  {
+    "key": "0217",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med omvendt breve"
+      }
+    }
+  },
+  {
+    "key": "0219",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "s med komma under"
+      }
+    }
+  },
+  {
+    "key": "021B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "t med komma under"
+      }
+    }
+  },
+  {
+    "key": "021F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "h med karon"
+      }
+    }
+  },
+  {
+    "key": "0227",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med prikk"
+      }
+    }
+  },
+  {
+    "key": "0229",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med cedille"
+      }
+    }
+  },
+  {
+    "key": "022F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med prikk"
+      }
+    }
+  },
+  {
+    "key": "0233",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "y med strek over"
+      }
+    }
+  },
+  {
+    "key": "0237",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "j utan prikk"
+      }
+    }
+  },
+  {
+    "key": "1E01",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med ring under"
+      }
+    }
+  },
+  {
+    "key": "1E03",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "b med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E05",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "b med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E07",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "b med linje under"
+      }
+    }
+  },
+  {
+    "key": "1E0B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "d med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E0D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "d med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E0F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "d med linje under"
+      }
+    }
+  },
+  {
+    "key": "1E11",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "d med cedille"
+      }
+    }
+  },
+  {
+    "key": "1E13",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "d med sirkumfleks under"
+      }
+    }
+  },
+  {
+    "key": "1E19",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med sirkumfleks under"
+      }
+    }
+  },
+  {
+    "key": "1E1B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med tilde under"
+      }
+    }
+  },
+  {
+    "key": "1E1F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "f med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E21",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "g med makron"
+      }
+    }
+  },
+  {
+    "key": "1E23",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "h med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E25",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "h med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E27",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "h med tøddel"
+      }
+    }
+  },
+  {
+    "key": "1E29",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "h med cedille"
+      }
+    }
+  },
+  {
+    "key": "1E2B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "h med breve under"
+      }
+    }
+  },
+  {
+    "key": "1E2D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med tilde under"
+      }
+    }
+  },
+  {
+    "key": "1E31",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "k med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1E33",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "k med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E35",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "k med linje under"
+      }
+    }
+  },
+  {
+    "key": "1E37",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "l med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E3B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "l med linje under"
+      }
+    }
+  },
+  {
+    "key": "1E3D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "l med sirkumfleks under"
+      }
+    }
+  },
+  {
+    "key": "1E3F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "m med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1E41",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "m med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E43",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "m med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E45",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "n med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E47",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "n med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E49",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "n med linje under"
+      }
+    }
+  },
+  {
+    "key": "1E4B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "n med sirkumfleks under"
+      }
+    }
+  },
+  {
+    "key": "1E55",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "p med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1E57",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "p med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E59",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "r med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E5B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "r med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E5F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "r med linje under"
+      }
+    }
+  },
+  {
+    "key": "1E61",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "s med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E63",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "s med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E6B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "t med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E6D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "t med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E6F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "t med linje under"
+      }
+    }
+  },
+  {
+    "key": "1E71",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "t med sirkumfleks under"
+      }
+    }
+  },
+  {
+    "key": "1E73",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med tøddel under"
+      }
+    }
+  },
+  {
+    "key": "1E75",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med tilde under"
+      }
+    }
+  },
+  {
+    "key": "1E77",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med sirkumfleks under"
+      }
+    }
+  },
+  {
+    "key": "1E7D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "v med tilde"
+      }
+    }
+  },
+  {
+    "key": "1E7F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "v med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E81",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "w med gravis"
+      }
+    }
+  },
+  {
+    "key": "1E83",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "w med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1E85",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "w med tøddel"
+      }
+    }
+  },
+  {
+    "key": "1E87",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "w med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E89",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "w med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E8B",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "x med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E8D",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "x med tøddel"
+      }
+    }
+  },
+  {
+    "key": "1E8F",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "y med prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E91",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "z med sirkumfleks"
+      }
+    }
+  },
+  {
+    "key": "1E93",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "z med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1E95",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "z med linje under"
+      }
+    }
+  },
+  {
+    "key": "1E96",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "h med linje under"
+      }
+    }
+  },
+  {
+    "key": "1E97",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "t med tøddel"
+      }
+    }
+  },
+  {
+    "key": "1E98",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "w med ring over"
+      }
+    }
+  },
+  {
+    "key": "1E99",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "y med ring over"
+      }
+    }
+  },
+  {
+    "key": "1E9A",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med høgre halv ring"
+      }
+    }
+  },
+  {
+    "key": "1EA1",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1EA3",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "a med krok over"
+      }
+    }
+  },
+  {
+    "key": "1EB9",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1EBB",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med krok over"
+      }
+    }
+  },
+  {
+    "key": "1EBD",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "e med tilde"
+      }
+    }
+  },
+  {
+    "key": "1EC9",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med krok over"
+      }
+    }
+  },
+  {
+    "key": "1ECB",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "i med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1ECD",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1ECF",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "o med krok over"
+      }
+    }
+  },
+  {
+    "key": "1EE5",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1EE7",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "u med krok over"
+      }
+    }
+  },
+  {
+    "key": "1EF3",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "y med gravis"
+      }
+    }
+  },
+  {
+    "key": "1EF5",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "y med prikk under"
+      }
+    }
+  },
+  {
+    "key": "1EF7",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "y med krok over"
+      }
+    }
+  },
+  {
+    "key": "1EF9",
+    "category": "Ll",
+    "mappings": {
+      "default": {
+        "default": "y med tilde"
+      }
+    }
+  }
+]

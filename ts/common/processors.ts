@@ -24,6 +24,7 @@ import AuralRendering from '../audio/aural_rendering';
 import * as Enrich from '../enrich_mathml/enrich';
 import {Highlighter} from '../highlighter/highlighter';
 import * as HighlighterFactory from '../highlighter/highlighter_factory';
+import {LOCALE} from '../l10n/locale';
 import * as Semantic from '../semantic_tree/semantic';
 import {SpeechGenerator} from '../speech_generator/speech_generator';
 import * as SpeechGeneratorFactory from
@@ -417,5 +418,21 @@ new KeyProcessor('move', {
     let move = Processor.LocalState.walker.move(direction as any);
     return move === false ? AuralRendering.error(direction) :
                             Processor.LocalState.walker.speech();
+  }
+});
+
+
+new Processor('number', {
+  processor: function(numb) {
+    let num = parseInt(numb, 10);
+    return isNaN(num) ? '' : LOCALE.NUMBERS.numberToWords(num);
+  }
+});
+
+
+new Processor('ordinal', {
+  processor: function(numb) {
+    let num = parseInt(numb, 10);
+    return isNaN(num) ? '' : LOCALE.NUMBERS.numberToOrdinal(num, false);
   }
 });

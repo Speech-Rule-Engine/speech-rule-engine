@@ -1,0 +1,518 @@
+[
+  {
+    "locale": "nn"
+  },
+  {
+    "key": "01D5",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med tøddel og strek over"
+      }
+    }
+  },
+  {
+    "key": "01D7",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med tøddel og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "01D9",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med tøddel og karon"
+      }
+    }
+  },
+  {
+    "key": "01DB",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med tøddel og gravis"
+      }
+    }
+  },
+  {
+    "key": "01DE",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med tøddel og strek over"
+      }
+    }
+  },
+  {
+    "key": "01E0",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med strek over"
+      }
+    }
+  },
+  {
+    "key": "01EC",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med ogonek og strek over"
+      }
+    }
+  },
+  {
+    "key": "01FA",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor Å med akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "022A",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med tøddel og strek over"
+      }
+    }
+  },
+  {
+    "key": "022C",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med tilde og strek over"
+      }
+    }
+  },
+  {
+    "key": "0230",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med prikk og strek over"
+      }
+    }
+  },
+  {
+    "key": "1E08",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor C med cedille og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1E14",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor E med makron og gravis"
+      }
+    }
+  },
+  {
+    "key": "1E16",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor E med makron og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1E1C",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor E med cedille og breve"
+      }
+    }
+  },
+  {
+    "key": "1E2E",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor I med tøddel og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1E38",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor L med prikk under og makron"
+      }
+    }
+  },
+  {
+    "key": "1E4C",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med tilde og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1E4E",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med tilde og tøddel"
+      }
+    }
+  },
+  {
+    "key": "1E50",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med makron og gravis"
+      }
+    }
+  },
+  {
+    "key": "1E52",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med makron og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1E5C",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor R med prikk under og makron"
+      }
+    }
+  },
+  {
+    "key": "1E64",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor S med akutt aksent og prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E66",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor S med karon og prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E68",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor S med prikk under og prikk over"
+      }
+    }
+  },
+  {
+    "key": "1E78",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med tilde og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1E7A",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med makron og tøddel"
+      }
+    }
+  },
+  {
+    "key": "1EA4",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med sirkumfleks og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1EA6",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med sirkumfleks og gravis"
+      }
+    }
+  },
+  {
+    "key": "1EA8",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med sirkumfleks og krok over"
+      }
+    }
+  },
+  {
+    "key": "1EAA",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med sirkumfleks og tilde"
+      }
+    }
+  },
+  {
+    "key": "1EAC",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med sirkumfleks og prikk under"
+      }
+    }
+  },
+  {
+    "key": "1EAE",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med breve og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1EB0",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med breve og gravis"
+      }
+    }
+  },
+  {
+    "key": "1EB2",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med breve og krok over"
+      }
+    }
+  },
+  {
+    "key": "1EB4",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med breve og tilde"
+      }
+    }
+  },
+  {
+    "key": "1EB6",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor A med breve og prikk under"
+      }
+    }
+  },
+  {
+    "key": "1EBE",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor E med sirkumfleks og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1EC0",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor E med sirkumfleks og gravis"
+      }
+    }
+  },
+  {
+    "key": "1EC2",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor E med sirkumfleks og krok over"
+      }
+    }
+  },
+  {
+    "key": "1EC4",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor E med sirkumfleks og tilde"
+      }
+    }
+  },
+  {
+    "key": "1EC6",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor E med sirkumfleks og prikk under"
+      }
+    }
+  },
+  {
+    "key": "1ED0",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med sirkumfleks og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1ED2",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med sirkumfleks og gravis"
+      }
+    }
+  },
+  {
+    "key": "1ED4",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med sirkumfleks og krok over"
+      }
+    }
+  },
+  {
+    "key": "1ED6",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med sirkumfleks og tilde"
+      }
+    }
+  },
+  {
+    "key": "1ED8",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med sirkumfleks og prikk under"
+      }
+    }
+  },
+  {
+    "key": "1EDA",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med horn og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1EDC",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med horn og gravis"
+      }
+    }
+  },
+  {
+    "key": "1EDE",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med horn og krok over"
+      }
+    }
+  },
+  {
+    "key": "1EE0",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med horn og tilde"
+      }
+    }
+  },
+  {
+    "key": "1EE2",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor O med horn og prikk under"
+      }
+    }
+  },
+  {
+    "key": "1EE8",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med horn og akutt aksent"
+      }
+    }
+  },
+  {
+    "key": "1EEA",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med horn og gravis"
+      }
+    }
+  },
+  {
+    "key": "1EEC",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med horn og krok over"
+      }
+    }
+  },
+  {
+    "key": "1EEE",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med horn og tilde"
+      }
+    }
+  },
+  {
+    "key": "1EF0",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "stor U med horn og prikk under"
+      }
+    }
+  }
+]
