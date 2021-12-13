@@ -319,7 +319,15 @@ export function toEnriched(input: string, opt_output?: string) {
  */
 export function processFile(
   processor: string, input: string, opt_output?: string) {
-  return processFileAsync(processor, input, opt_output);
+  switch (Engine.getInstance().mode) {
+    case EngineConst.Mode.ASYNC:
+      return processFileAsync(processor, input, opt_output);
+    case EngineConst.Mode.SYNC:
+      return processFileSync(processor, input, opt_output);
+    default:
+      throw new SREError(
+        `Can process files in ${Engine.getInstance().mode} mode`);
+  }
 }
 
 /**
@@ -335,15 +343,14 @@ export function processFileSync(
   processor: string, input: string, opt_output?: string) {
   let expr = inputFileSync_(input);
   let result = ProcessorFactory.output(processor, expr);
-  if (!opt_output) {
-    console.info(result);
-    return;
+  if (opt_output) {
+    try {
+      SystemExternal.fs.writeFileSync(opt_output, result);
+    } catch (err) {
+      throw new SREError('Can not write to file: ' + opt_output);
+    }
   }
-  try {
-    SystemExternal.fs.writeFileSync(opt_output, result);
-  } catch (err) {
-    throw new SREError('Can not write to file: ' + opt_output);
-  }
+  return result;
 }
 
 }
@@ -378,15 +385,14 @@ async function processFileAsync(
   let expr = await SystemExternal.fs.promises.readFile(
       file, {encoding: 'utf8'});
   let result = ProcessorFactory.output(processor, expr);
-  if (!output) {
-    console.info(result);
-    return;
+  if (output) {
+    try {
+      SystemExternal.fs.promises.writeFile(output, result);
+    } catch (_err) {
+      throw new SREError('Can not write to file: ' + output);
+    }
   }
-  try {
-    return SystemExternal.fs.promises.writeFile(output, result);
-  } catch (_err) {
-    throw new SREError('Can not write to file: ' + output);
-  }
+  return result;
 }
 
 

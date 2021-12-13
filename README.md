@@ -80,13 +80,19 @@ Current API functions are divided into three categories.
 | `toEnriched(mathml)` | The semantically enriched MathML expression. |
 
 **Note that in asynchronous operation mode for these methods to work correctly,
-it is necessary to ensure that the Engine is ready for processing. See the
-engineReady flag below.**
+it is necessary to ensure that the Engine is ready for processing. In other
+words, you need to wait for the setup promise to resolve. See documentation of
+`engineReady` and `setupEngine` below.**
 
 #### Methods that take an input filename and optionally an output filename:
 
-If the output filename is not provided, output will be written to stdout. _Note
-that the file methods only work in Node!_
+_Note that the file methods only work in Node!_
+
+These methods load the given file, process its content and return the result.
+In asynchronous mode they return a promise that resolves to the result.  If the
+output filename is given the result will also be written to this file. Note,
+that this will overwrite the existing file.
+
 
 | Method | Return Value |
 | ---- | ---- |
@@ -101,8 +107,8 @@ that the file methods only work in Node!_
 | Method | Return Value |
 | ---- | ---- |
 | `version` | Returns SRE's version number. |
-| `engineReady()` | Returns flag indicating that the engine is ready for procssing (i.e., all necessary rule files have been loaded, the engine is done updating, etc.). **This is important in asynchronous settings.** |
-| `setupEngine(options)` | Takes an [options feature vector](#options) to parameterise the Speech Rule Engine. |
+| `engineReady()` | Returns a promise that resolves as soon as the engine is ready for processing (i.e., all necessary rule files have been loaded and the engine is done updating). **This is important in asynchronous settings.** |
+| `setupEngine(options)` | Takes an [options feature vector](#options) to parameterise the Speech Rule Engine. Returns a promise that resolves as soon as the engine is ready for processing. |
 | `engineSetup()` | Returns the current setup of the engine as an  [options feature vector](#options). |
 
 
@@ -170,15 +176,54 @@ given in decreasing order of interestingness.
 | *json* | URL where to pull the json speech rule files from. |
 | *xpath* | URL where to pull an xpath library from. This is important for environments not supporting xpath, e.g., IE or Edge. |
 | *rate* | Base value for speech rate in ```ssml_step``` markup |
-| *cache* | Boolean flag to switch expression caching during speech generation. Default is ```true```. |
 | *strict* | Boolean flag indicating if only a directly matching rule should be used. I.e., no default rules are used in case a rule is not available for a particular domain, style, etc. Default is ```false```. |
 | *mode* | The running mode for SRE: ```sync```, ```async```, ```http``` |
 | | By default SRE in node is in `async`, in browser in `http`, and on CLI in `sync` mode. |
+| *custom* | Provide a custom method for locale loading. See below for more informaton. |
+
+### Custom Loading Method ####
+
+SRE loads its locales and rule sets via loading methods specific for the
+particular environment and mode. I.e., it loads json files from the file system
+in node or via XML HTTP requests in the browser. These methods can be customised
+via passing a new method to the engine via the feature vector. A loader method
+should take the locale string as input and return a promise that resolves to the
+string containing the JSON structure of the locale file once loading is
+successful. In other words it should be of type
+
+``` typescript
+(locale: string) => Promise<string>
+```
+
+In node the method can be directly set by passing it to the `setupEngine` method
+via the feature vector. As an example this method loads locales from a locale 
+directory `/tmp/mymaps` folder.
+
+``` javascript
+sre.setupEngine({
+  custom: loc => {
+    let file = `/tmp/mymaps/${loc}.json`;
+    return new Promise((res, rej) => {
+      try {
+        res(fs.readFileSync(file));
+        console.log(`Loading of locale ${loc} succeeded`);
+      } catch (_) {
+        console.log(`Loading of locale ${loc} failed`);
+        rej('');
+      }
+    });
+  }
+});
+```
+
+
 
 ### Deprecated Options
 
 | Option | Value |
 | ---- | ---- |
+| *cache* | Boolean flag to switch expression caching during speech generation. Default is ```true```. |
+|| Expression caching has been removed and the option has no longer any effect. |
 | *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** |
 || **Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes.** |
 | *walker* | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table``` |
@@ -220,7 +265,7 @@ either a list of input files or a inputting an XML expression manually.
 
 For example running
 
-    bin/sre -j -p resources/samples/sample1.xml resources/samples/sample2.xml
+    bin/sre -j -p PATH_TO_SRE_RESOURCES/samples/sample1.xml resources/samples/sample2.xml
 
 will return the semantic tree in JSON as well as the speech translation for the
 expressions in the two sample files.
@@ -233,7 +278,7 @@ SRE also enables direct input from command line. For example, running
 will wait for a complete XML expression to be input for translation. Similarly,
 shell piping is allowed:
 
-    bin/sre -j -p < resources/samples/sample1.xml
+    bin/sre -j -p < PATH_TO_SRE_RESOURCES/samples/sample1.xml
 
 Note, that when providing the `-o outfile` option output is saved into the given file.
 However, when processing from file only the very last output is saved, while when
@@ -247,7 +292,7 @@ __Note that the `-i` option is deprecated and will be removed in future releases
 
 As an example run
 
-    bin/sre -i resources/samples/sample1.xml -o sample1.txt
+    bin/sre -i PATH_TO_SRE_RESOURCES/samples/sample1.xml -o sample1.txt
 
 ### Run interactively ############
 
@@ -327,7 +372,8 @@ important API functions are also available in ``SRE``.
 ### Configuration ####
 
 In addition to programmatically configuring SRE using the ``setupEngine``
-method, you can also include a configuration element in a website, that can take the same options as ``setupEngine``.
+method, you can also include a configuration element in a website, that can take
+the same options as ``setupEngine``.
 
 For example the configuration element
 ``` html
@@ -345,6 +391,43 @@ will cause SRE to load JSON files from rawgit and for IE or Edge it will also lo
 
 **Make sure the configuration element comes before the script tag loading SRE in your website!**
 
+
+### Custom Loading Methods ####
+
+Providing a custom loading method for locale loading in browser mode is very
+similar to its use in node. However, note that since we now want to define a
+function, it can not simply be given in the JSON configuration element in the
+`x-sre-config` script tag.  Instead we need to define the special `SREfeature`
+variable in the header of the file. Again **make sure this script tag comes
+before the script tag loading SRE in your website!**
+
+Here is an example of a custom function to load locales from localhost:
+
+``` javascript
+<script>
+var SREfeature = {
+"custom": function(loc) {
+    let file = 'http://localhost/sre/lib/mathmaps/' + loc + '.json';
+    let httpRequest = new XMLHttpRequest();
+    return new Promise((res, rej) => {
+      httpRequest.onreadystatechange = function() {
+        if (httpRequest.readyState === 4) {
+          console.log('Using my custom loader');
+          let status = httpRequest.status;
+          if (status === 0 || (status >= 200 && status < 400)) {
+            res(httpRequest.responseText);
+          } else {
+            rej(status);
+          }
+        }
+      };
+      httpRequest.open('GET', file, true);
+      httpRequest.send();
+    });
+  }
+}
+</script>
+```
 
 
 MathJax Library
