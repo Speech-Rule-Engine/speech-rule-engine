@@ -399,10 +399,10 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     this.modality = ruleSet.modality || this.modality;
     this.locale = ruleSet.locale || this.locale;
     this.domain = ruleSet.domain || this.domain;
-    this.kind = ruleSet.kind || this.kind;
     // TODO (TS): Fix this to avoid casting!
     this.context.parse(ruleSet.functions as any || []);
-    if (this.kind !== 'actions') {
+    if (ruleSet.kind !== 'actions') {
+      this.kind = ruleSet.kind || this.kind;
       this.inheritRules();
     }
     this.parseRules(ruleSet.rules || []);

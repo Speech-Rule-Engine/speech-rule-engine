@@ -29,15 +29,13 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
 import {AuditoryDescription} from '../audio/auditory_description';
 import {Span} from '../audio/span';
 import {Debugger} from '../common/debugger';
+import * as DomUtil from '../common/dom_util';
 import {Engine, EngineConst} from '../common/engine';
-import SystemExternal from '../common/system_external';
 import XpathUtil from '../common/xpath_util';
 import {ClearspeakPreferences} from '../speech_rules/clearspeak_preferences';
-import {MathMap} from '../speech_rules/math_map';
 import SpeechRules from '../speech_rules/speech_rules';
 import * as SpeechRuleStores from '../speech_rules/speech_rule_stores';
 import {BaseRuleStore} from './base_rule_store';
@@ -56,17 +54,10 @@ export class SpeechRuleEngine {
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: SpeechRuleEngine;
 
-  public prune = true;
-
   /**
    * Trie for indexing speech rules in this store.
    */
   public trie: Trie = null;
-
-  /**
-   * Flag indicating if the engine is ready. Not ready while it is updating!
-   */
-  private ready_: boolean = true;
 
   /**
    * Default evaluators collated by locale and modality.
@@ -125,13 +116,13 @@ export class SpeechRuleEngine {
    */
   private static updateEvaluator(node: Element) {
     let parent = node as any as Document;
-    while(parent && !parent.evaluate) {
+    while (parent && !parent.evaluate) {
       parent = parent.parentNode as Document;
     }
     if (parent.evaluate) {
       XpathUtil.currentDocument = /** @type{Document} */(parent);
     }
-  };
+  }
 
 
   // Dispatch functionality.
@@ -148,7 +139,13 @@ export class SpeechRuleEngine {
       SpeechRuleEngine.updateEvaluator(node);
     }
     let timeIn = (new Date()).getTime();
-    let result = this.evaluateNode_(node);
+    let result: AuditoryDescription[] = [];
+    try {
+      result = this.evaluateNode_(node);
+    } catch (err) {
+      console.error('Something went wrong computing speech.');
+      Debugger.getInstance().output(err);
+    }
     let timeOut = (new Date()).getTime();
     Debugger.getInstance().output('Time:', timeOut - timeIn);
     return result;
@@ -212,49 +209,6 @@ export class SpeechRuleEngine {
 
 
   /**
-   * Updates adminstrative info in the base Engine.
-   * During update the engine is not ready!
-   */
-  public updateEngine() {
-    this.ready_ = true;
-    let maps = MathMap.getInstance();
-    if (!Engine.isReady()) {
-      this.ready_ = false;
-      setTimeout(this.updateEngine.bind(this), 250);
-      return;
-    }
-    if (this.prune) {
-      this.prune = false;
-      this.adjustEngine();
-    }
-    // TODO: Rewrite this to use MathCompoundStore
-    Engine.getInstance().evaluator = maps.lookupString as (p1: string, p2: DynamicCstr) => string;
-      // maps.store.lookupString.bind(maps.store);
-  }
-
-
-  /**
-   * Adjust Engine with local rule files.
-   */
-  public adjustEngine() {
-    let engine = Engine.getInstance();
-    if (engine.prune) {
-      let cstr = engine.prune.split('.');
-      this.pruneTrie(cstr);
-    }
-    if (engine.rules) {
-      // TODO: This needs to be made more robust.
-      let path =
-          SystemExternal.jsonPath.replace('/lib/mathmaps', '/mathmaps');
-      let parse = (json: string) =>
-        MathMap.getInstance().parseMaps(`{"${engine.rules}":${json}}`);
-      MathMap.getInstance().retrieveFiles(path + engine.rules, parse);
-    }
-    setTimeout(this.updateEngine.bind(this), 100);
-  }
-
-
-  /**
    * Processes the grammar annotations of a rule.
    * @param context The function context in which to
    *     evaluate the grammar expression.
@@ -303,16 +257,16 @@ export class SpeechRuleEngine {
    */
   public getEvaluator(locale: string, modality: string):
       (p1: Node) => AuditoryDescription[] {
-    let loc = this.evaluators_[locale];
-    // TODO: Do we need a fallback here?
-    return loc[modality];
+    let loc = this.evaluators_[locale] ||
+      this.evaluators_[DynamicCstr.DEFAULT_VALUES[Axis.LOCALE]];
+    return loc[modality] || loc[DynamicCstr.DEFAULT_VALUES[Axis.MODALITY]];
   }
 
 
   /**
    * Collates information on dynamic constraint values of the current state of
    * the trie of the engine.
-   * 
+   *
    * @param opt_info Initial dynamic constraint information.
    * @return The collated information.
    */
@@ -320,12 +274,14 @@ export class SpeechRuleEngine {
     return this.trie.enumerate(opt_info);
   }
 
+  /**
+   * The central speech rule engine.
+   */
   private constructor() {
     /**
      * Initialised the trie.
      */
     this.trie = new Trie();
-    Engine.registerTest(() => this.ready_);
   }
 
 
@@ -749,7 +705,7 @@ export class SpeechRuleEngine {
     return this.trie.lookupRules(node, dynamic.allProperties());
   }
 
-  
+
   /**
    * Picks the result of the most constraint rule by prefering those:
    * 1) that best match the dynamic constraints.
@@ -768,7 +724,7 @@ export class SpeechRuleEngine {
           // 1. Computed priority value
           // 2. length of static constraints,
           // 3. Rank in the definition. Note that later rules
-          //    supersede earlier ones. 
+          //    supersede earlier ones.
           r2.precondition.priority - r1.precondition.priority ||
           r2.precondition.constraints.length -
           r1.precondition.constraints.length ||
@@ -778,19 +734,6 @@ export class SpeechRuleEngine {
       return rules.map((x) => x.name + '(' + x.dynamicCstr.toString() + ')');
     }).bind(this));
     return rules[0];
-  }
-
-
-  /**
-   * Prunes the trie of the store for a given constraint.
-   * @param constraints A list of constraints.
-   */
-  public pruneTrie(constraints: string[]) {
-    let last = constraints.pop();
-    let parent = this.trie.byConstraint(constraints);
-    if (parent) {
-      parent.removeChild(last);
-    }
   }
 
 }

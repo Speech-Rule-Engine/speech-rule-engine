@@ -62,6 +62,8 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   public static SRE_ID_ATTR: string = 'sre-explorer-id';
 
+  public modifier: boolean = false;
+
   public id: any;
 
   public rootNode: Element;
@@ -657,9 +659,9 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   public update(options: AxisMap) {
     this.generator.setOptions(options);
-    System.setupEngine(options);
-    SpeechGeneratorFactory.generator('Tree').getSpeech(
-      this.node, this.getXml());
+    System.setupEngine(options).then(() =>
+      SpeechGeneratorFactory.generator('Tree').getSpeech(
+        this.node, this.getXml()));
   }
 
 
@@ -745,7 +747,7 @@ export abstract class AbstractWalker<T> implements Walker {
 
 
   /**
-   * Refocuses in case levels have been altered outside the walker's control.
+   * @override
    */
   public refocus() {
     let focus = this.getFocus();

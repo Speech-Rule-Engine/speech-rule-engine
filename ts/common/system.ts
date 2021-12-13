@@ -21,13 +21,14 @@
 
 import {AuditoryDescription} from '../audio/auditory_description';
 import * as L10n from '../l10n/l10n';
-import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
+import {MathMap} from '../speech_rules/math_map';
 
-import * as BaseUtil from './base_util';
+import * as BrowserUtil from './browser_util';
 import {Debugger} from './debugger';
-import {Engine, EngineConst} from './engine';
+import {Engine, EngineConst, EnginePromise} from './engine';
 import {SREError} from './engine';
 import {KeyCode} from './event_util';
+import * as FileUtil from './file_util';
 import {ProcessorFactory} from './processors';
 import SystemExternal from './system_external';
 import {Variables} from './variables';
@@ -39,17 +40,9 @@ import {Variables} from './variables';
 export const version: string = Variables.VERSION;
 
 /**
- * Number of open files.
- */
-let files_: number = 0;
-
-Engine.registerTest(() => !!!files_);
-
-/**
  *  Setup Methods functionality.
  */
-// These are all API interface functions. Therefore, avoid any usage of "this"
-// in the code.
+
 /**
  * Method to setup and initialize the speech rule engine. Currently the
  * feature parameter is ignored, however, this could be used to fine tune the
@@ -57,13 +50,12 @@ Engine.registerTest(() => !!!files_);
  * @param feature An object describing some
  *     setup features.
  */
-export function setupEngine(feature: {[key: string]: boolean|string}) {
+export async function setupEngine(feature: {[key: string]: boolean|string}) {
   let engine = Engine.getInstance() as any;
   // This preserves the possibility to specify default as domain.
   // < 3.2  this lead to the use of chromevox rules in English.
   // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
-  // we
-  //        get a meaningful output.
+  // we get a meaningful output.
   if (feature.domain === 'default' &&
     (feature.modality === 'speech' ||
       (!feature.modality || engine.modality === 'speech'))) {
@@ -78,19 +70,50 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
     engine[feat] = feature[feat] || engine[feat];
   };
   setMulti('mode');
-  configBlocks_(feature);
+  config(feature);
   Engine.BINARY_FEATURES.forEach(setIf);
   Engine.STRING_FEATURES.forEach(setMulti);
   if (feature.json) {
-    SystemExternal.jsonPath = BaseUtil.makePath(feature.json as string);
+    SystemExternal.jsonPath = FileUtil.makePath(feature.json as string);
   }
   if (feature.xpath) {
     SystemExternal.WGXpath = feature.xpath as string;
   }
-  engine.setupBrowsers();
+  setCustomLoader(feature.custom);
+  setupBrowsers();
   L10n.setLocale();
   engine.setDynamicCstr();
-  SpeechRuleEngine.getInstance().updateEngine();
+  return MathMap.init().then(
+    () => {
+      MathMap.loadLocale();
+      return EnginePromise.get();
+    }
+  );
+}
+
+
+function config(feature: {[key: string]: boolean|string}) {
+  if (Engine.getInstance().mode === EngineConst.Mode.HTTP &&
+    !Engine.getInstance().config) {
+    configBlocks(feature);
+    Engine.getInstance().config = true;
+  }
+  configFeature(feature);
+}
+
+declare const SREfeature: {[key: string]: any};
+
+/**
+ * Reads configuration blocks and adds them to the feature vector.
+ * @param feature An object describing some
+ *     setup features.
+ */
+function configFeature(feature: {[key: string]: boolean|string}) {
+  if (typeof SREfeature !== 'undefined') {
+    for (let [name, feat] of Object.entries(SREfeature)) {
+      feature[name] = feat;
+    }
+  }
 }
 
 
@@ -99,12 +122,7 @@ export function setupEngine(feature: {[key: string]: boolean|string}) {
  * @param feature An object describing some
  *     setup features.
  */
-function configBlocks_(feature: {[key: string]: boolean|string}) {
-  if (Engine.getInstance().config ||
-    Engine.getInstance().mode !== EngineConst.Mode.HTTP) {
-    return;
-  }
-  Engine.getInstance().config = true;
+function configBlocks(feature: {[key: string]: boolean|string}) {
   let scripts = document.documentElement.querySelectorAll(
     'script[type="text/x-sre-config"]');
   for (let i = 0, m = scripts.length; i < m; i++) {
@@ -119,17 +137,6 @@ function configBlocks_(feature: {[key: string]: boolean|string}) {
       Debugger.getInstance().output('Illegal configuration ', inner);
     }
   }
-}
-
-
-/**
- * Setting engine to async mode once it is ready.
- */
-export function setAsync() {
-  if (!Engine.isReady()) {
-    setTimeout(setAsync, 500);
-  }
-  setupEngine({'mode': EngineConst.Mode.ASYNC});
 }
 
 
@@ -157,8 +164,8 @@ export function engineSetup(): {[key: string]: boolean|string} {
  * @return True if engine is ready, i.e., unicode file for the current
  *     locale has been loaded.
  */
-export function engineReady(): boolean {
-  return Engine.isReady();
+export function engineReady(): Promise<any> {
+  return EnginePromise.getall();
 }
 
 
@@ -239,76 +246,111 @@ export namespace file {
 /**
  * Reads an xml expression from a file and returns its aural rendering to a
  * file.
+ *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
+ * @return Promise that resolves on completion of the file operations.
  */
 export function toSpeech(input: string, opt_output?: string) {
-  processFile('speech', input, opt_output);
+  return processFile('speech', input, opt_output);
 }
 
 
 /**
  * Reads an xml expression from a file and returns the XML for the semantic
  * tree to a file.
+ *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
+ * @return Promise that resolves on completion of the file operations.
  */
 export function toSemantic(input: string, opt_output?: string) {
-  processFile('semantic', input, opt_output);
+  return processFile('semantic', input, opt_output);
 }
 
 
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree
  * to a file.
+ *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
+ * @return Promise that resolves on completion of the file operations.
  */
 export function toJson(input: string, opt_output?: string) {
-  processFile('json', input, opt_output);
+  return processFile('json', input, opt_output);
 }
 
 
 /**
  * Main function to translate expressions into auditory descriptions
  * a file.
+ *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
+ * @return Promise that resolves on completion of the file operations.
  */
 export function toDescription(input: string, opt_output?: string) {
-  processFile('description', input, opt_output);
+  return processFile('description', input, opt_output);
 }
 
 
 /**
  * Function to translate MathML string into semantically enriched MathML in a
  * file.
+ *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
+ * @return Promise that resolves on completion of the file operations.
  */
 export function toEnriched(input: string, opt_output?: string) {
-  processFile('enriched', input, opt_output);
+  return processFile('enriched', input, opt_output);
 }
 
 
 /**
  * Reads an xml expression from a file, processes with the given function and
  * returns the result either to a file or to stdout.
+ *
  * @param processor The name of the processor to call.
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
+ * @return The promise for the file process to complete.
  */
 export function processFile(
   processor: string, input: string, opt_output?: string) {
-  if (!Engine.isReady()) {
-    setTimeout(() => processFile(processor, input, opt_output), 100);
-    return;
+  switch (Engine.getInstance().mode) {
+    case EngineConst.Mode.ASYNC:
+      return processFileAsync(processor, input, opt_output);
+    case EngineConst.Mode.SYNC:
+      return processFileSync(processor, input, opt_output);
+    default:
+      throw new SREError(
+        `Can process files in ${Engine.getInstance().mode} mode`);
   }
-  if (Engine.getInstance().mode === EngineConst.Mode.SYNC) {
-    processFileSync_(processor, input, opt_output);
-    return;
+}
+
+/**
+ * Synchronously reads an xml expression from a file, processes with the given
+ * function and returns the result either to a file or to stdout in synchronous
+ * mode.
+ *
+ * @param processor The name of the processor.
+ * @param input The input filename.
+ * @param opt_output The output filename if one is given.
+ */
+export function processFileSync(
+  processor: string, input: string, opt_output?: string) {
+  let expr = inputFileSync_(input);
+  let result = ProcessorFactory.output(processor, expr);
+  if (opt_output) {
+    try {
+      SystemExternal.fs.writeFileSync(opt_output, result);
+    } catch (err) {
+      throw new SREError('Can not write to file: ' + opt_output);
+    }
   }
-  processFileAsync_(processor, input, opt_output);
+  return result;
 }
 
 }
@@ -333,70 +375,24 @@ function inputFileSync_(file: string): string {
 
 /**
  * Reads an xml expression from a file, processes with the given function and
- * returns the result either to a file or to stdout in synchronous mode.
- * @param processor The name of the processor.
- * @param input The input filename.
- * @param opt_output The output filename if one is given.
- */
-function processFileSync_(
-  processor: string, input: string, opt_output?: string) {
-  let expr = inputFileSync_(input);
-  let result = ProcessorFactory.output(processor, expr);
-  if (!opt_output) {
-    console.info(result);
-    return;
-  }
-  try {
-    SystemExternal.fs.writeFileSync(opt_output, result);
-  } catch (err) {
-    throw new SREError('Can not write to file: ' + opt_output);
-  }
-}
-
-
-/**
- * Reads an xml expression from a file. Throws exception if file does not
- * exist.
- * @param file The input filename.
- * @param callback The callback to apply to the input.
- */
-function inputFileAsync_(file: string, callback: (p1: string) => any) {
-  SystemExternal.fs.readFile(
-    file, {encoding: 'utf8'}, (err: Error, data: any) => {
-      if (err) {
-        throw new SREError('Can not open file: ' + file);
-      }
-      callback(data);
-    });
-}
-
-
-/**
- * Reads an xml expression from a file, processes with the given function and
  * returns the result either to a file or to stdout in asynchronous mode.
  * @param processor The name of the processor.
- * @param input The input filename.
+ * @param file The input filename.
  * @param opt_output The output filename if one is given.
  */
-function processFileAsync_(
-  processor: string, input: string, opt_output?: string) {
-  files_++;
-  inputFileAsync_(
-    input, (expr) => {
-      let result = ProcessorFactory.output(processor, expr);
-      if (!opt_output) {
-        console.info(result);
-        files_--;
-        return;
-      }
-      SystemExternal.fs.writeFile(opt_output, result, (err: Error) => {
-        if (err) {
-          files_--;
-          throw new SREError('Can not write to file: ' + opt_output);
-        }
-      });
-      files_--;
-    });
+async function processFileAsync(
+  processor: string, file: string, output?: string) {
+  let expr = await SystemExternal.fs.promises.readFile(
+      file, {encoding: 'utf8'});
+  let result = ProcessorFactory.output(processor, expr);
+  if (output) {
+    try {
+      SystemExternal.fs.promises.writeFile(output, result);
+    } catch (_err) {
+      throw new SREError('Can not write to file: ' + output);
+    }
+  }
+  return result;
 }
 
 
@@ -429,16 +425,43 @@ export function move(direction: KeyCode|string): string|null {
  */
 export function exit(opt_value?: number) {
   let value = opt_value || 0;
-  if (!value && !Engine.isReady()) {
-    setTimeout(() => exit(value), 100);
-    return;
-  }
-  process.exit(value);
+  EnginePromise.getall().then(() => process.exit(value));
 }
 
+
+/**
+ * Returns the default locale path, depending on the mode of operation.
+ *
+ * @param locale The locale iso.
+ * @param ext An optional file extension. Defaults to json.
+ */
+export const localePath = FileUtil.localePath;
+
+
+/**
+ * Sets the custom loader.
+ * @param fn A custom loader function.
+ */
+export function setCustomLoader(fn: any) {
+  if (fn) {
+    Engine.getInstance().customLoader = fn;
+  }
+}
+
+
+/**
+ * Sets up browser specific functionality.
+ */
+function setupBrowsers() {
+  Engine.getInstance().isIE = BrowserUtil.detectIE();
+  Engine.getInstance().isEdge = BrowserUtil.detectEdge();
+}
+
+
+// Check here for custom method!
 if (SystemExternal.documentSupported) {
   setupEngine({'mode': EngineConst.Mode.HTTP});
 } else {
-  // Currently we only allow for sync.
-  setupEngine({'mode': EngineConst.Mode.SYNC});
+  setupEngine({'mode': EngineConst.Mode.SYNC}).
+    then(() => setupEngine({'mode': EngineConst.Mode.ASYNC}));
 }

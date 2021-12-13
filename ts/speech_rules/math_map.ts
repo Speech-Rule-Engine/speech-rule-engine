@@ -22,12 +22,11 @@
  */
 
 
-import * as BaseUtil from '../common/base_util';
 import * as BrowserUtil from '../common/browser_util';
-import {Engine, EngineConst} from '../common/engine';
+import {Engine, EngineConst, EnginePromise} from '../common/engine';
+import * as FileUtil from '../common/file_util';
 import SystemExternal from '../common/system_external';
 import {RulesJson} from '../rule_engine/base_rule_store';
-import {DynamicCstr} from '../rule_engine/dynamic_cstr';
 import {MathCompoundStore, SiJson, UnicodeJson} from '../rule_engine/math_simple_store';
 import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
 
@@ -46,15 +45,6 @@ export namespace MathMap {
   /**
    * The compund store for symbol and function mappings.
    */
-
-
-  /**
-   * Files left to fetch in asynchronous mode.
-   */
-  export let toFetch_: number = 0;
-
-  let loaded_: string[] = [];
-
   export let store = MathCompoundStore;
 
   /**
@@ -75,19 +65,18 @@ export namespace MathMap {
     MathCompoundStore.siPrefixes = json;
   }
 
-  export function lookupString(node: string, dynamic: DynamicCstr) {
-    return MathCompoundStore.lookupString(node, dynamic);
-  }
-
+  let _init = false;
 
   /**
    * @return The instance of the MathMap singleton.
    */
   // TODO (TS): This will become the promise one day.
-  export function getInstance(): {[key: string]: Function} {
-    loadLocale('base');
-    loadLocale();
-    return {lookupString, retrieveFiles, parseMaps};
+  export function init() {
+    if (!_init) {
+      loadLocale('base');
+      _init = true;
+    }
+    return EnginePromise.promises['base'];
   }
 
 
@@ -95,49 +84,57 @@ export namespace MathMap {
    * Loads a new locale if necessary.
    */
   export function loadLocale(locale = Engine.getInstance().locale) {
-    if (loaded_.indexOf(locale) === -1) {
-      SpeechRuleEngine.getInstance().prune = true;
+    if (!EnginePromise.loaded[locale]) {
+      EnginePromise.loaded[locale] = [false, false];
       retrieveMaps(locale);
-      loaded_.push(locale);
+    }
+  }
+
+  // Custom loader of file
+  // Gets the name of the locale.
+  // Returns a promise that resolves once the file is loaded.
+  /**
+   * @return The load method for the given mode. If a custom load method is
+   *     provided it is returned instead.
+   */
+  function loadMethod() {
+    // TODO: Custom loader here.
+    if (Engine.getInstance().customLoader) {
+      return Engine.getInstance().customLoader;
+    }
+    switch (Engine.getInstance().mode) {
+      case EngineConst.Mode.ASYNC:
+        return loadFile;
+      case EngineConst.Mode.HTTP:
+        return loadAjax;
+      case EngineConst.Mode.SYNC:
+      default:
+        return loadFileSync;
     }
   }
 
 
   /**
    * Retrieves JSON rule mappings for a given locale.
-   * @param file The target locale.
+   * @param locale The target locale.
    * @param parse Method adding the rules.
    */
-  export function retrieveFiles(
-      file: string, parse: (p1: string) => MathMapJson) {
-    let async = Engine.getInstance().mode === EngineConst.Mode.ASYNC;
-    if (async) {
-      Engine.getInstance().mode = EngineConst.Mode.SYNC;
-    }
-    switch (Engine.getInstance().mode) {
-      case EngineConst.Mode.ASYNC:
-        MathMap.toFetch_++;
-        fromFile_(file, (err: Error, json: string) => {
-          MathMap.toFetch_--;
-          if (err) {
-            return;
-          }
-          parse(json);
-        });
-        break;
-      case EngineConst.Mode.HTTP:
-        MathMap.toFetch_++;
-        getJsonAjax_(file, parse);
-        break;
-      case EngineConst.Mode.SYNC:
-      default:
-        let strs = loadFile(file);
-        parse(strs);
-        break;
-    }
-    if (async) {
-      Engine.getInstance().mode = EngineConst.Mode.ASYNC;
-    }
+  export function retrieveFiles(locale: string) {
+    let loader = loadMethod();
+    let promise = new Promise<string>(res => {
+      let inner = loader(locale);
+      inner.then((str: string) => {
+        parseMaps(str);
+        EnginePromise.loaded[locale] = [true, true];
+        res(locale);
+      }, (_err: string) => {
+        EnginePromise.loaded[locale] = [true, false];
+        console.error(`Unable to load locale: ${locale}`);
+        Engine.getInstance().locale = 'en';
+        res(locale);
+      });
+    });
+    EnginePromise.promises[locale] = promise;
   }
 
 
@@ -190,9 +187,7 @@ export namespace MathMap {
       getJsonIE_(locale);
       return;
     }
-    let file = BaseUtil.makePath(SystemExternal.jsonPath) + locale + '.json';
-    let parse = parseMaps.bind(this);
-    retrieveFiles(file, parse);
+    retrieveFiles(locale);
   }
 
 
@@ -219,56 +214,62 @@ export namespace MathMap {
    * @param func Method adding the rules.
    * @return JSON.
    */
-  function fromFile_(path: string, func: (p1: Error, p2: string) => any):
-      string {
-    return SystemExternal.fs.readFile(path, 'utf8', func);
+  export function loadFile(locale: string): Promise<string> {
+    let file = FileUtil.localePath(locale);
+    return new Promise((res, rej) => {
+      SystemExternal.fs.readFile(
+        file, 'utf8',
+        (err: Error, json: string) => {
+          if (err) {
+            return rej(err);
+          }
+          res(json);
+        });
+    });
   }
 
 
   /**
    * Loads JSON for a given file name.
-   * @param file A valid filename.
+   * @param locale The locale to retrieve.
    * @return A string representing a JSON array.
    */
-  export function loadFile(file: string): string {
-    try {
-      return readJSON_(file);
-    } catch (x) {
-      console.error('Unable to load file: ' + file + '\n' + x);
-    }
-    return '{}';
-  }
-
-
-  /**
-   * Takes path to a JSON file and returns a JSON object.
-   * @param path Contains the path to a JSON file.
-   * @return JSON.
-   */
-  function readJSON_(path: string): string {
-    return SystemExternal.fs.readFileSync(path);
+  export function loadFileSync(locale: string): Promise<string> {
+    let file = FileUtil.localePath(locale);
+    return new Promise((res, rej) => {
+      let str = '{}';
+      try {
+        str = SystemExternal.fs.readFileSync(file, 'utf8');
+      } catch (err) {
+        return rej(err);
+      }
+      res(str);
+    });
   }
 
 
   /**
    * Sents AJAX request to retrieve a JSON rule file.
-   * @param file The file to retrieve.
+   * @param locale The locale to retrieve.
    * @param parse Method adding the rules.
    */
-  function getJsonAjax_(file: string, parse: (p1: string) => any) {
+  export function loadAjax(locale: string): Promise<string> {
+    let file = FileUtil.localePath(locale);
     let httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-      if (httpRequest.readyState === 4) {
-        MathMap.toFetch_--;
-        if (httpRequest.status === 200) {
-          parse(httpRequest.responseText);
+    return new Promise((res, rej) => {
+      httpRequest.onreadystatechange = function() {
+        if (httpRequest.readyState === 4) {
+          let status = httpRequest.status;
+          if (status === 0 || (status >= 200 && status < 400)) {
+            res(httpRequest.responseText);
+          } else {
+            rej(status);
+          }
         }
-      }
-    };
-    httpRequest.open('GET', file, true);
-    httpRequest.send();
+      };
+      httpRequest.open('GET', file, true);
+      httpRequest.send();
+    });
   }
 
 }
-
-Engine.registerTest(() => MathMap.getInstance() && !MathMap.toFetch_);

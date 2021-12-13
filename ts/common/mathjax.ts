@@ -21,7 +21,7 @@
  */
 
 
-import {Engine, EngineConst} from './engine';
+import {EnginePromise, EngineConst} from './engine';
 import * as System from './system';
 
 
@@ -38,15 +38,13 @@ MathJax.Extension.Sre = {
 
   signal: SIGNAL,
   ConfigSre: function() {
-    if (!Engine.isReady()) {
-      setTimeout(MathJax.Extension.Sre.ConfigSre, 500);
-      return;
-    }
-    MathJax.Callback.Queue(
+    EnginePromise.getall().then(
+      () => MathJax.Callback.Queue(
         // Wait until mml Jax is ready.
         // This is not strictly necessary for SRE but for the semantic lab.
         MathJax.Hub.Register.StartupHook('mml Jax Ready', {}),
-        ['Post', MathJax.Hub.Startup.signal, 'Sre Ready']);
+        ['Post', MathJax.Hub.Startup.signal, 'Sre Ready'])
+    );
   }
 };
 

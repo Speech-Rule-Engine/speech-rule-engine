@@ -22,7 +22,6 @@
 
 
 import * as Dcstr from '../rule_engine/dynamic_cstr';
-import * as BrowserUtil from './browser_util';
 
 
 /**
@@ -130,8 +129,15 @@ export class Engine {
     'rate', 'rules', 'prune'
   ];
 
+
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Engine;
+
+  /**
+   * Custom loader. Promise resolves after load, rejects when something goes
+   * wrong.
+   */
+  public customLoader: (locale: string) => Promise<string> = null;
 
   public evaluator: (p1: string, p2: Dcstr.DynamicCstr) => string | null;
 
@@ -241,11 +247,6 @@ export class Engine {
   public prune: string = '';
 
   /**
-   * List of predicates for checking if the engine is set up.
-   */
-  private setupTests_: (() => boolean)[] = [];
-
-  /**
    * @return The Engine object.
    */
   public static getInstance(): Engine {
@@ -262,49 +263,6 @@ export class Engine {
   public static defaultEvaluator(
     str: string, _cstr: Dcstr.DynamicCstr): string {
     return str;
-  }
-
-
-  /**
-   * Registers a predicate to test whether the setup of the engine is complete.
-   * The basic idea is that different parts of the system that run
-   * asynchronously can register a test here and the engine can check if it is
-   * set up without the need to know which bits actually run asynchronously.
-   * @param pred A predicate that takes no input and returns
-   *     a boolean value.
-   */
-  public static registerTest(pred: () => boolean) {
-    Engine.getInstance().setupTests_.push(pred);
-  }
-
-
-  /**
-   * Test to see if the engine is fully setup. Important for async and http
-   * mode.
-   * @return True if the engine has completed its setup.
-   */
-  public static isReady(): boolean {
-    return Engine.getInstance().setupTests_.every(function(pred) {
-      return pred();
-    });
-  }
-
-
-  /**
-   * Sets up browser specific functionality.
-   */
-  public setupBrowsers() {
-    this.isIE = BrowserUtil.detectIE();
-    this.isEdge = BrowserUtil.detectEdge();
-  }
-
-
-  /**
-   * @return The sets of values
-   *     for all constraint attributes.
-   */
-  public getAxisValues(): Dcstr.AxisProperties {
-    return Dcstr.DynamicCstr.getAxisValues();
   }
 
 
@@ -364,6 +322,40 @@ export class Engine {
         new Dcstr.DynamicCstrParser(Dcstr.DynamicCstr.DEFAULT_ORDER);
     this.parser = this.defaultParser;
     this.dynamicCstr = Dcstr.DynamicCstr.defaultCstr();
+  }
+
+}
+
+
+export namespace EnginePromise {
+
+  /**
+   * Records if a locale is loaded or failed to load. Value one indicates that
+   * loading has been attempted and finished, while value two indicates if it
+   * was successful or not.
+   */
+  export let loaded: {[locale: string]: [boolean, boolean]} = {};
+
+  /**
+   * Records the loading promises for each locale.
+   */
+  export let promises: {[locale: string]: Promise<string>} = {};
+
+
+  /**
+   * @return The promise for a locale.
+   */
+  export function get(locale: string =
+    Engine.getInstance().locale): Promise<string> {
+    return promises[locale] || Promise.resolve('');
+  }
+
+
+  /**
+   * @return All promises combined into one.
+   */
+  export function getall() {
+    return Promise.allSettled(Object.values(promises));
   }
 
 }

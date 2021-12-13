@@ -20,7 +20,7 @@
  */
 
 
-import {ColorPicker} from './color_picker';
+import {ColorPicker, StringColor} from './color_picker';
 
 
 export interface Highlighter {
@@ -62,6 +62,13 @@ export interface Highlighter {
    * @param color The new color to use.
    */
   setColor(color: ColorPicker): void;
+
+
+  /**
+   * Turns the current color into a string representation.
+   * @return The color string, by default as rgba.
+   */
+  colorString(): StringColor;
 
 
   /**
