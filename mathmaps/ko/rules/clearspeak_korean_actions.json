@@ -77,12 +77,12 @@
     [
       "Action",
       "vbar-divides",
-      "[n] children/*[1]; [t] \"는\" (grammar:article); [n] children/*[3]; [t] \"의 약수이다\";"
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[3]; [t] \"의 약수이다\";"
     ],
     [
       "Action",
       "vbar-always-divides",
-      "[n] children/*[1]; [t] \"는\" (grammar:article); [n] children/*[3]; [t] \"의 약수이다\";"
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[3]; [t] \"의 약수이다\";"
     ],
     [
       "Action",
