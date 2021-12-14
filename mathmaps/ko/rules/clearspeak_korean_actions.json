@@ -72,62 +72,62 @@
     [
       "Action",
       "vbar-such-that",
-      "[t] \"보류 (such that) : 을 만족하는\""
+      "[t] \"다음을 만족한다\""
     ],
     [
       "Action",
       "vbar-divides",
-      "[t] \"보류 (divides) : 나누기 or 인수 or 약수\""
+      "[n] children/*[1]; [t] \"는\"; [n] children/*[3] [t]; \"의 약수이다\";"
     ],
     [
       "Action",
       "vbar-always-divides",
-      "[t] \"보류 (divides) : 나누기 or 인수 or 약수\""
+      "[n] children/*[1]; [t] \"는\"; [n] children/*[3] [t]; \"의 약수이다\";"
     ],
     [
       "Action",
       "vbar-given",
-      "[t] \"보류(조건부 확률) 바 : (A | B) = 조건 B에 대한 A\""
+      "[t] \"바\""
     ],
     [
       "Action",
       "set-member",
-      "[t] \"보류 in : x ㅌ A = x는 A의 원소이다\""
+      ""
     ],
     [
       "Action",
       "set-member-member",
-      "[t] \"보류 member of : x ㅌ A = x는 A의 원소이다\""
+      ""
     ],
     [
       "Action",
       "set-member-element",
-      "[t] \"보류 element of : x ㅌ A = x는 A의 원소이다\""
+      ""
     ],
     [
       "Action",
       "set-member-belongs",
-      "[t] \"보류 belonging to : x ㅌ A = x는 A의 원소이다\""
+      ""
     ],
     [
       "Action",
       "set-not-member",
-      "[t] \"보류 not in : x ㅌ/ A = x는 A의 원소가 아니다\""
+      ""
     ],
     [
       "Action",
       "set-not-member-member",
-      "[t] \"보류 not member of : x ㅌ/ A = x는 A의 원소가 아니다\""
+      ""
     ],
     [
       "Action",
       "set-not-member-element",
-      "[t] \"보류 not element of : x ㅌ/ A = x는 A의 원소가 아니다\""
+      ""
     ],
     [
       "Action",
       "set-not-member-belongs",
-      "[t] \"보류 not belonging to : x ㅌ/ A = x는 A의 원소가 아니다\""
+      ""
     ],
     [
       "Action",
@@ -1417,7 +1417,7 @@
     [
       "Action",
       "defined-by",
-      "[t] \"보류 : 의 정의는\" (pause:short)"
+      "[t] \"의 정의는\" (pause:short)"
     ],
     [
       "Action",
@@ -1558,16 +1558,6 @@
       "Action",
       "currency-prefix",
       "[n] children/*[last()]; [m] children/*[position()<last()]; "
-    ],
-    [
-      "Action",
-      "enclose",
-      "[t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"보류 : (enclosed with) ~로 둘러싸인\""
-    ],
-    [
-      "Action",
-      "enclose-end",
-      "[t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"보류 : (enclosed with) ~로 둘러싸인\"; [t] \"보류 : (end enclosed) 생략\""
     ],
     [
       "Action",
