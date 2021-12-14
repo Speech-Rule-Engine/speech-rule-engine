@@ -51,7 +51,7 @@
       "default",
       "self::relseq",
       "count(./children/*)=2",
-      "text()=\"∈\" or text()=\"∊\" or text()=\"∋\" or text()=\"∍\" or text()=\"∉\" or text()=\"∌\" or text()=\"=\" or text()=\"<\" or text()=\">\" or text()=\"≤\" or text()=\"≥\"
+      "text()=\"∈\" or text()=\"∊\" or text()=\"∋\" or text()=\"∍\" or text()=\"∉\" or text()=\"∌\" or text()=\"=\" or text()=\"<\" or text()=\">\" or text()=\"≤\" or text()=\"≥\""
     ],
     [
       "Precondition",
