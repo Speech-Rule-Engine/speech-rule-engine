@@ -229,17 +229,12 @@ export class CaseEmbellished extends AbstractEnrichCase {
 
       // Reordering the nodes in the tree.
       let dummy = DomUtil.createElement('dummy');
-      let saveParent = newNode.parentNode;
       let saveChild = mml.childNodes[0];
 
       DomUtil.replaceNode(mml, dummy);
       DomUtil.replaceNode(newNode, mml);
       DomUtil.replaceNode(mml.childNodes[0], newNode);
       DomUtil.replaceNode(dummy, saveChild);
-      // TODO (TS):  What to do here? Readonly property!
-      (mml as any).parentNode = saveParent;
-
-      newNode = (mml.childNodes[0] as Element);
       if (!result) {
         result = mml;
       }
