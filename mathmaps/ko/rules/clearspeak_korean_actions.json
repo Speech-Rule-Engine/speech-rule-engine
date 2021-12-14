@@ -57,7 +57,7 @@
     [
       "Action",
       "ellipsis-andsoon",
-      "[t] \"보류 (and so on up to) :  ~부터 ~까지로 해석\""
+      "[t] \"부터\""
     ],
     [
       "Action",
@@ -551,8 +551,18 @@
     ],
     [
       "Action",
+      "fences-metric",
+      "[p] (pause:short); [t] \"메트릭\" (span:.); [n] children/*[1] (pause: short)"
+    ],
+    [
+      "Action",
+      "fences-metric-absend",
+      "[p] (pause:short); [t] \"메트릭시작\" (span:content/*[1]); [n] children/*[1] (pause: short); [t] \"메트릭끝\"  (span:content/*[1], pause: short)"
+    ],
+    [
+      "Action",
       "fences-interval",
-      "[t] \"구간\"; [n] children/*[1]/children/*[1]; [t] \"에서\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval); [t] \"까지\""
+      ""
     ],
     [
       "Action",
@@ -587,7 +597,7 @@
     [
       "Action",
       "interval-open-inf-lr",
-      "[t] \"전 구간\""
+      "[t] \"\""
     ],
     [
       "Action",

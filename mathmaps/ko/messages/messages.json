@@ -47,7 +47,7 @@
       "double-struck-italic": "기울인 칠판볼드체",
       "fraktur": "프락투어",
       "fullwidth": "전각",
-      "italic": "기울인",
+      "italic": "이탤릭체",
       "monospace": "고정폭",
       "normal": "기본",
       "oldstyle": "옛체",
@@ -56,7 +56,7 @@
       "sans-serif": "고딕",
       "sans-serif-italic": "기울인 고딕",
       "sans-serif-bold": "진한 고딕",
-      "sans-serif-bold-italic": "진한 고딕 기울임체",
+      "sans-serif-bold-italic": "진한 고딕 이탤릭체",
       "unknown": "알 수 없음"
     },
     "embellish": {
