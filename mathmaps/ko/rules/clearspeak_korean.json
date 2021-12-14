@@ -51,14 +51,15 @@
       "default",
       "self::relseq",
       "count(./children/*)=2",
-      "text()=\"∈\" or text()=\"∊\" or text()=\"∋\" or text()=\"∍\" or text()=\"∉\" or text()=\"∌\" or text()=\"=\" or text()=\"<\" or text()=\">\" or text()=\"≤\" or text()=\"≥\""
+      "text()=\"=\" or text()=\"<\" or text()=\">\" or text()=\"≤\" or text()=\"≥\" or text()=\"⊂\" or text()=\"≠\" or text()=\"⇐\" or text()=\"⇒\" or text()=\"⇔\""
     ],
     [
       "Precondition",
       "member-operation-simple",
       "default",
       "self::infixop",
-      "count(./children/*)=2"
+      "count(./children/*)=2",
+      "text()=\"∈\" or text()=\"∊\" or text()=\"∋\" or text()=\"∍\" or text()=\"∉\" or text()=\"∌\""
     ],
     [
       "Precondition",

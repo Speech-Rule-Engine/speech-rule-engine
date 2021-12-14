@@ -362,7 +362,7 @@
     [
       "Action",
       "superscript-prefix-function",
-      "[n] children/*[2] (grammar:ordinal); [t] \"제곱\"; [n] children/*[1]"
+      "[n] children/*[2]; [t] \"제곱\"; [n] children/*[1]"
     ],
     [
       "Action",
@@ -387,7 +387,7 @@
     [
       "Action",
       "superscript-ordinal",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal); [t] \"제곱\" (pause:short)"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2]; [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
@@ -407,12 +407,12 @@
     [
       "Action",
       "superscript-ordinal-number",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal, pause:short); [t] \"제곱\""
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2]; [t] \"제곱\""
     ],
     [
       "Action",
       "superscript-ordinal-negative",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal, pause:short); [t] \"제곱\""
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2]; [t] \"제곱\""
     ],
     [
       "Action",
@@ -422,7 +422,7 @@
     [
       "Action",
       "superscript-ordinal-power-number",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal); [t] \"제곱\" (pause:short)"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2]; [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
@@ -432,7 +432,7 @@
     [
       "Action",
       "superscript-ordinal-power-identifier",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:ordinal); [t] \"제곱\" (pause:short)"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2]; [t] \"제곱\" (pause:short)"
     ],
     [
       "Action",
@@ -562,7 +562,7 @@
     [
       "Action",
       "fences-interval",
-      ""
+      "[t] \"\"; [n] children/*[1]/children/*[1]; [t] \"\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval); [t] \"\""
     ],
     [
       "Action",
@@ -807,12 +807,12 @@
     [
       "Action",
       "root",
-      "[n] children/*[1] (grammar:ordinal); [t] \"제곱근\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[n] children/*[1]; [t] \"제곱근\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [n] children/*[1] (grammar:ordinal); [t] \"제곱근\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
+      "[p] (pause:short); [n] children/*[1]; [t] \"제곱근\"; [n] children/*[2] (grammar:EndRoot=false, pause:short)"
     ],
     [
       "Action",
