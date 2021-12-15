@@ -59,7 +59,7 @@ function create(): Locale {
     let result = (char > 0) ? true : false;
     if (final.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
     Grammar.getInstance().setParameter('final', result);
-    return name+result;
+    return name;
   }
   loc.CORRECTIONS.article = (name: string) => {
     let final = Grammar.getInstance().getParameter('final');
