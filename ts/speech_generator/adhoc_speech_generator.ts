@@ -27,7 +27,7 @@ export class AdhocSpeechGenerator extends AbstractSpeechGenerator {
    * @override
    */
   public getSpeech(node: Element, xml: Element) {
-    let speech = this.generateSpeech(node, xml);
+    const speech = this.generateSpeech(node, xml);
     node.setAttribute(this.modality, speech);
     return speech;
   }

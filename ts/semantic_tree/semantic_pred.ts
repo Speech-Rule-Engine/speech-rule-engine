@@ -91,14 +91,14 @@ export function isAccent(node: SemanticNode): boolean {
  * @return True if the node meets the boundary criteria.
  */
 export function isSimpleFunctionScope(node: SemanticNode): boolean {
-  let children = node.childNodes;
+  const children = node.childNodes;
   if (children.length === 0) {
     return true;
   }
   if (children.length > 1) {
     return false;
   }
-  let child = children[0];
+  const child = children[0];
   if (child.type === SemanticType.INFIXOP) {
     if (child.role !== SemanticRole.IMPLICIT) {
       return false;
@@ -165,7 +165,7 @@ export function isIntegralDxBoundary(
  */
 export function isIntegralDxBoundarySingle(node: SemanticNode): boolean {
   if (isType(node, SemanticType.IDENTIFIER)) {
-    let firstChar = node.textContent[0];
+    const firstChar = node.textContent[0];
     return (
       firstChar &&
       node.textContent[1] &&
@@ -372,7 +372,7 @@ export function tableIsCases(
  */
 export function tableIsMultiline(table: SemanticNode): boolean {
   return table.childNodes.every(function (row) {
-    let length = row.childNodes.length;
+    const length = row.childNodes.length;
     return length <= 1;
   });
 }
@@ -474,7 +474,7 @@ export function isSimpleFunction(node: SemanticNode): boolean {
  * @return True if the node is a left brace.
  */
 export function isLeftBrace(node: SemanticNode): boolean {
-  let leftBrace = ['{', '﹛', '｛'];
+  const leftBrace = ['{', '﹛', '｛'];
   // ['0x007B', '0xFE5B', '0xFF5B'];
   return !!node && leftBrace.indexOf(node.textContent) !== -1;
 }
@@ -485,7 +485,7 @@ export function isLeftBrace(node: SemanticNode): boolean {
  * @return True if the node is a right brace.
  */
 export function isRightBrace(node: SemanticNode): boolean {
-  let rightBrace = ['}', '﹜', '｝'];
+  const rightBrace = ['}', '﹜', '｝'];
   // ['0x007D', '0xFE5C', '0xFF5D'];
   return !!node && rightBrace.indexOf(node.textContent) !== -1;
 }
@@ -530,7 +530,7 @@ export const scriptedElement_: SemanticType[] = [
  * @return True if the node is a set.
  */
 export function isSingletonSetContent(node: SemanticNode): boolean {
-  let type = node.type;
+  const type = node.type;
   if (
     illegalSingleton_.indexOf(type) !== -1 ||
     (type === SemanticType.INFIXOP && node.role !== SemanticRole.IMPLICIT)
@@ -583,7 +583,7 @@ export function isUnitCounter(node: SemanticNode): boolean {
  * @return True if the node is a pure unit expression.
  */
 export function isPureUnit(node: SemanticNode): boolean {
-  let children = node.childNodes;
+  const children = node.childNodes;
   return (
     node.role === SemanticRole.UNIT &&
     (!children.length || children[0].role === SemanticRole.UNIT)

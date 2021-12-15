@@ -33,7 +33,7 @@ import { identityTransformer } from '../transformers';
  * @param letter The letter with indicator.
  * @return The cleaned letter if it was English without font.
  */
-let simpleEnglish = function (letter: string): string {
+const simpleEnglish = function (letter: string): string {
   return letter.match(RegExp('^' + locale.ALPHABETS.languagePrefix.english))
     ? letter.slice(1)
     : letter;
@@ -44,21 +44,21 @@ let simpleEnglish = function (letter: string): string {
 
 // there is no font indicator. For the parenthesised fonts we don't need number
 // indicator either.
-let postfixCombiner = function (letter: string, font: string, _number: string) {
+const postfixCombiner = function (letter: string, font: string, _number: string) {
   letter = simpleEnglish(letter);
   return font ? letter + font : letter;
 };
 
-let germanCombiner = function (letter: string, font: string, _cap: string) {
+const germanCombiner = function (letter: string, font: string, _cap: string) {
   return font + simpleEnglish(letter);
 };
 
-let embellishCombiner = function (letter: string, font: string, num: string) {
+const embellishCombiner = function (letter: string, font: string, num: string) {
   letter = simpleEnglish(letter);
   return font + (num ? num : '') + letter + '⠻';
 };
 
-let doubleEmbellishCombiner = function (
+const doubleEmbellishCombiner = function (
   letter: string,
   font: string,
   num: string
@@ -70,7 +70,7 @@ let doubleEmbellishCombiner = function (
 // Font is the start parenthesis.
 // Number is the number indicator which is ignored.
 // English characters have language indicator removed.
-let parensCombiner = function (letter: string, font: string, _number: string) {
+const parensCombiner = function (letter: string, font: string, _number: string) {
   letter = simpleEnglish(letter);
   return font + letter + '⠾';
 };
@@ -86,7 +86,7 @@ export function nemeth(): Locale {
 }
 
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.COMBINERS = {
     postfixCombiner: postfixCombiner,

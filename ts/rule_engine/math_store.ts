@@ -19,6 +19,7 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
+import { AuditoryDescription } from '../audio/auditory_description';
 import * as BaseUtil from '../common/base_util';
 // TODO: This should not really load the locale constructor.
 import { en } from '../l10n/locales/locale_en';
@@ -71,12 +72,12 @@ export class MathStore extends BaseRuleStore {
    * @param args Additional static precondition constraints.
    */
   public defineAlias(name: string, prec: string, ...args: string[]) {
-    let fullPrec = this.parsePrecondition(prec, args);
+    const fullPrec = this.parsePrecondition(prec, args);
     if (!fullPrec) {
       console.error(`Precondition Error: ${prec} ${args}`);
       return;
     }
-    let condition = this.preconditions.get(name);
+    const condition = this.preconditions.get(name);
     if (!condition) {
       console.error(`Alias Error: No precondition by the name of ${name}`);
       return;
@@ -91,16 +92,16 @@ export class MathStore extends BaseRuleStore {
    * @param args Additional static precondition constraints.
    */
   public defineRulesAlias(name: string, query: string, ...args: string[]) {
-    let rules = this.findAllRules(function (rule) {
+    const rules = this.findAllRules(function (rule) {
       return rule.name === name;
     });
     if (rules.length === 0) {
       throw new OutputError('Rule with name ' + name + ' does not exist.');
     }
-    let keep: { cstr: string; action: string }[] = [];
-    let findKeep = (rule: SpeechRule) => {
-      let cstr = rule.dynamicCstr.toString();
-      let action = rule.action.toString();
+    const keep: { cstr: string; action: string }[] = [];
+    const findKeep = (rule: SpeechRule) => {
+      const cstr = rule.dynamicCstr.toString();
+      const action = rule.action.toString();
       for (let i = 0, k; (k = keep[i]); i++) {
         if (k.action === action && k.cstr === cstr) {
           return false;
@@ -131,18 +132,18 @@ export class MathStore extends BaseRuleStore {
     newDynamic: string,
     opt_action?: string
   ) {
-    let dynamicCstr = this.parseCstr(oldDynamic);
-    let rule = this.findRule(
+    const dynamicCstr = this.parseCstr(oldDynamic);
+    const rule = this.findRule(
       (rule) => rule.name === name && dynamicCstr.equal(rule.dynamicCstr)
     );
-    let newCstr = this.parseCstr(newDynamic);
+    const newCstr = this.parseCstr(newDynamic);
     if (!rule && opt_action) {
       throw new OutputError(
         'Rule named ' + name + ' with style ' + oldDynamic + ' does not exist.'
       );
     }
-    let action = opt_action ? Action.fromString(opt_action) : rule.action;
-    let newRule = new SpeechRule(rule.name, newCstr, rule.precondition, action);
+    const action = opt_action ? Action.fromString(opt_action) : rule.action;
+    const newRule = new SpeechRule(rule.name, newCstr, rule.precondition, action);
     this.addRule(newRule);
   }
 
@@ -153,12 +154,12 @@ export class MathStore extends BaseRuleStore {
    * @param dynamic The new dynamic constraint.
    */
   public defineSpecialized(name: string, _old: string, dynamic: string) {
-    let cstr = this.parseCstr(dynamic);
+    const cstr = this.parseCstr(dynamic);
     if (!cstr) {
       console.error(`Dynamic Constraint Error: ${dynamic}`);
       return;
     }
-    let condition = this.preconditions.get(name);
+    const condition = this.preconditions.get(name);
     if (!condition) {
       console.error(`Alias Error: No precondition by the name of ${name}`);
       return;
@@ -174,7 +175,7 @@ export class MathStore extends BaseRuleStore {
    * @override
    */
   public evaluateString(str: string) {
-    let descs = new Array();
+    const descs: AuditoryDescription[] = [];
     if (str.match(/^\s+$/)) {
       // Nothing but whitespace: Ignore.
       return descs;
@@ -185,7 +186,7 @@ export class MathStore extends BaseRuleStore {
       descs.push(this.evaluateCharacter(num.number));
       return descs;
     }
-    let split = BaseUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
+    const split = BaseUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
     for (let i = 0, s; (s = split[i]); i++) {
       if (s.length === 1) {
         descs.push(this.evaluateCharacter(s));
@@ -198,7 +199,7 @@ export class MathStore extends BaseRuleStore {
         let rest = s;
         while (rest) {
           num = this.matchNumber_(rest);
-          let alpha = rest.match(
+          const alpha = rest.match(
             new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+')
           );
           if (num) {
@@ -208,8 +209,8 @@ export class MathStore extends BaseRuleStore {
             descs.push(this.evaluateCharacter(alpha[0]));
             rest = rest.substring(alpha[0].length);
           } else {
-            let chars = Array.from(rest);
-            let chr = chars[0];
+            const chars = Array.from(rest);
+            const chr = chars[0];
             descs.push(this.evaluateCharacter(chr));
             rest = chars.slice(1).join('');
           }
@@ -234,8 +235,8 @@ export class MathStore extends BaseRuleStore {
    * @param cstrList List of additional constraints.
    */
   private addAlias_(rule: SpeechRule, query: string, cstrList: string[]) {
-    let prec = this.parsePrecondition(query, cstrList);
-    let newRule = new SpeechRule(
+    const prec = this.parsePrecondition(query, cstrList);
+    const newRule = new SpeechRule(
       rule.name,
       rule.dynamicCstr,
       prec,
@@ -252,17 +253,17 @@ export class MathStore extends BaseRuleStore {
    * @return The number and its length.
    */
   private matchNumber_(str: string): { number: string; length: number } | null {
-    let locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp.NUMBER));
-    let enNum = str.match(new RegExp('^' + en().MESSAGES.regexp.NUMBER));
+    const locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp.NUMBER));
+    const enNum = str.match(new RegExp('^' + en().MESSAGES.regexp.NUMBER));
     if (!locNum && !enNum) {
       return null;
     }
-    let isEn = enNum && enNum[0] === str;
-    let isLoc = (locNum && locNum[0] === str) || !isEn;
+    const isEn = enNum && enNum[0] === str;
+    const isLoc = (locNum && locNum[0] === str) || !isEn;
     if (isLoc) {
       return locNum ? { number: locNum[0], length: locNum[0].length } : null;
     }
-    let num = enNum[0]
+    const num = enNum[0]
       .replace(new RegExp(en().MESSAGES.regexp.DIGIT_GROUP, 'g'), 'X')
       .replace(
         new RegExp(en().MESSAGES.regexp.DECIMAL_MARK, 'g'),

@@ -22,6 +22,7 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
+import { AuditoryDescription } from '../audio/auditory_description';
 import { SemanticAnnotations } from '../semantic_tree/semantic_annotations';
 import { MathStore } from './math_store';
 
@@ -43,8 +44,8 @@ export class BrailleStore extends MathStore {
    * @override
    */
   public evaluateString(str: string) {
-    let descs = [];
-    let text = Array.from(str);
+    const descs: AuditoryDescription[] = [];
+    const text = Array.from(str);
     for (let i = 0; i < text.length; i++) {
       descs.push(this.evaluateCharacter(text[i]));
     }

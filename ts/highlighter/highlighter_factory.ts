@@ -44,14 +44,14 @@ export function highlighter(
   fore: Color,
   rendererInfo: { renderer: string; browser?: string }
 ): Highlighter {
-  let colorPicker = new ColorPicker(back, fore);
-  let renderer =
+  const colorPicker = new ColorPicker(back, fore);
+  const renderer =
     rendererInfo.renderer === 'NativeMML' && rendererInfo.browser === 'Safari'
       ? 'MML-CSS'
       : rendererInfo.renderer === 'SVG' && rendererInfo.browser === 'v3'
       ? 'SVG-V3'
       : rendererInfo.renderer;
-  let highlighter = new (highlighterMapping_[renderer] ||
+  const highlighter = new (highlighterMapping_[renderer] ||
     highlighterMapping_['NativeMML'])();
   highlighter.setColor(colorPicker);
   return highlighter;
@@ -70,7 +70,7 @@ export function addEvents(
   events: { [key: string]: EventListener },
   rendererInfo: { renderer: string; browser?: string }
 ) {
-  let highlight = highlighterMapping_[rendererInfo.renderer];
+  const highlight = highlighterMapping_[rendererInfo.renderer];
   if (highlight) {
     new highlight().addEvents(node, events);
   }

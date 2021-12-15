@@ -52,7 +52,7 @@ export const version: string = Variables.VERSION;
 export async function setupEngine(feature: {
   [key: string]: boolean | string;
 }) {
-  let engine = Engine.getInstance() as any;
+  const engine = Engine.getInstance() as any;
   // This preserves the possibility to specify default as domain.
   // < 3.2  this lead to the use of chromevox rules in English.
   // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
@@ -65,12 +65,12 @@ export async function setupEngine(feature: {
   ) {
     feature.domain = 'mathspeak';
   }
-  let setIf = (feat: string) => {
+  const setIf = (feat: string) => {
     if (typeof feature[feat] !== 'undefined') {
       engine[feat] = !!feature[feat];
     }
   };
-  let setMulti = (feat: string) => {
+  const setMulti = (feat: string) => {
     engine[feat] = feature[feat] || engine[feat];
   };
   setMulti('mode');
@@ -113,7 +113,7 @@ declare const SREfeature: { [key: string]: any };
  */
 function configFeature(feature: { [key: string]: boolean | string }) {
   if (typeof SREfeature !== 'undefined') {
-    for (let [name, feat] of Object.entries(SREfeature)) {
+    for (const [name, feat] of Object.entries(SREfeature)) {
       feature[name] = feat;
     }
   }
@@ -125,15 +125,15 @@ function configFeature(feature: { [key: string]: boolean | string }) {
  *     setup features.
  */
 function configBlocks(feature: { [key: string]: boolean | string }) {
-  let scripts = document.documentElement.querySelectorAll(
+  const scripts = document.documentElement.querySelectorAll(
     'script[type="text/x-sre-config"]'
   );
   for (let i = 0, m = scripts.length; i < m; i++) {
     let inner;
     try {
       inner = scripts[i].innerHTML;
-      let config = JSON.parse(inner);
-      for (let f in config) {
+      const config = JSON.parse(inner);
+      for (const f in config) {
         feature[f] = config[f];
       }
     } catch (err) {
@@ -148,12 +148,12 @@ function configBlocks(feature: { [key: string]: boolean | string }) {
  *     values.
  */
 export function engineSetup(): { [key: string]: boolean | string } {
-  let engineFeatures = ['mode'].concat(
+  const engineFeatures = ['mode'].concat(
     Engine.STRING_FEATURES,
     Engine.BINARY_FEATURES
   );
-  let engine = Engine.getInstance() as any;
-  let features: { [key: string]: string | boolean } = {};
+  const engine = Engine.getInstance() as any;
+  const features: { [key: string]: string | boolean } = {};
   engineFeatures.forEach(function (x) {
     features[x] = engine[x];
   });
@@ -338,8 +338,8 @@ export namespace file {
     input: string,
     opt_output?: string
   ) {
-    let expr = inputFileSync_(input);
-    let result = ProcessorFactory.output(processor, expr);
+    const expr = inputFileSync_(input);
+    const result = ProcessorFactory.output(processor, expr);
     if (opt_output) {
       try {
         SystemExternal.fs.writeFileSync(opt_output, result);
@@ -379,10 +379,10 @@ async function processFileAsync(
   file: string,
   output?: string
 ) {
-  let expr = await SystemExternal.fs.promises.readFile(file, {
+  const expr = await SystemExternal.fs.promises.readFile(file, {
     encoding: 'utf8'
   });
-  let result = ProcessorFactory.output(processor, expr);
+  const result = ProcessorFactory.output(processor, expr);
   if (output) {
     try {
       SystemExternal.fs.promises.writeFile(output, result);
@@ -419,7 +419,7 @@ export function move(direction: KeyCode | string): string | null {
  * @param opt_value The exit value. Defaults to 0.
  */
 export function exit(opt_value?: number) {
-  let value = opt_value || 0;
+  const value = opt_value || 0;
   EnginePromise.getall().then(() => process.exit(value));
 }
 

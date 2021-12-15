@@ -166,7 +166,7 @@ export class Engine {
   /**
    * Current domain.
    */
-  public domain: string = 'mathspeak';
+  public domain = 'mathspeak';
 
   /**
    * Current style.
@@ -197,12 +197,12 @@ export class Engine {
   /**
    * Current walker mode.
    */
-  public walker: string = 'Table';
+  public walker = 'Table';
 
   /**
    * Indicates if skeleton structure attributes are added to enriched elements
    */
-  public structure: boolean = false;
+  public structure = false;
 
   /**
    * List of rule sets given as the constructor functions.
@@ -212,43 +212,43 @@ export class Engine {
   /**
    * Strict interpretations of rules and constraints.
    */
-  public strict: boolean = false;
+  public strict = false;
 
   /**
    * Current browser is MS Internet Explorer but not Edge.
    */
-  public isIE: boolean = false;
+  public isIE = false;
 
   /**
    * Current browser is MS Edge.
    */
-  public isEdge: boolean = false;
+  public isEdge = false;
 
   /**
    * Percentage of default rate used by external TTS. This can be used to scale
    * pauses.
    */
-  public rate: string = '100';
+  public rate = '100';
 
   /**
    * Pretty Print mode.
    */
-  public pprint: boolean = false;
+  public pprint = false;
 
   /**
    * True if configuration block has been applied in HTTP mode.
    */
-  public config: boolean = false;
+  public config = false;
 
   /**
    * Rules file to load.
    */
-  public rules: string = '';
+  public rules = '';
 
   /**
    * Constraints to prune given dot separated.
    */
-  public prune: string = '';
+  public prune = '';
 
   /**
    * @return The Engine object.
@@ -276,7 +276,7 @@ export class Engine {
    * @return The current base rate.
    */
   public getRate(): number {
-    let numeric = parseInt(this.rate, 10);
+    const numeric = parseInt(this.rate, 10);
     return isNaN(numeric) ? 100 : numeric;
   }
 
@@ -288,29 +288,29 @@ export class Engine {
    */
   public setDynamicCstr(opt_dynamic?: Dcstr.AxisMap) {
     if (opt_dynamic) {
-      let keys = Object.keys(opt_dynamic);
+      const keys = Object.keys(opt_dynamic);
       for (let i = 0; i < keys.length; i++) {
-        let feature = keys[i] as Dcstr.Axis;
+        const feature = keys[i] as Dcstr.Axis;
         // Checks that we only have correct components.
         if (Dcstr.DynamicCstr.DEFAULT_ORDER.indexOf(feature) !== -1) {
-          let value = opt_dynamic[feature];
+          const value = opt_dynamic[feature];
           // TODO (TS): Make these features cleaner.
           (this as any)[feature] = value;
         }
       }
     }
     EngineConst.DOMAIN_TO_STYLES[this.domain] = this.style;
-    let dynamic = [this.locale, this.modality, this.domain, this.style].join(
+    const dynamic = [this.locale, this.modality, this.domain, this.style].join(
       '.'
     );
-    let fallback = Dcstr.DynamicProperties.createProp(
+    const fallback = Dcstr.DynamicProperties.createProp(
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.DOMAIN]],
       [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]]
     );
-    let comparator = this.comparators[this.domain];
-    let parser = this.parsers[this.domain];
+    const comparator = this.comparators[this.domain];
+    const parser = this.parsers[this.domain];
     this.parser = parser ? parser : this.defaultParser;
     this.dynamicCstr = this.parser.parse(dynamic);
     this.dynamicCstr.updateProperties(fallback.getProperties());
@@ -338,12 +338,12 @@ export namespace EnginePromise {
    * loading has been attempted and finished, while value two indicates if it
    * was successful or not.
    */
-  export let loaded: { [locale: string]: [boolean, boolean] } = {};
+  export const loaded: { [locale: string]: [boolean, boolean] } = {};
 
   /**
    * Records the loading promises for each locale.
    */
-  export let promises: { [locale: string]: Promise<string> } = {};
+  export const promises: { [locale: string]: Promise<string> } = {};
 
   /**
    * @return The promise for a locale.

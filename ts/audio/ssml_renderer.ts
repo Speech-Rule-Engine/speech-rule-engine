@@ -58,7 +58,7 @@ export class SsmlRenderer extends XmlRenderer {
    */
   public prosodyElement(attr: string, value: number) {
     value = Math.floor(this.applyScaleFunction(value));
-    let valueStr = value < 0 ? value.toString() : '+' + value.toString();
+    const valueStr = value < 0 ? value.toString() : '+' + value.toString();
     return (
       '<prosody ' +
       attr.toLowerCase() +

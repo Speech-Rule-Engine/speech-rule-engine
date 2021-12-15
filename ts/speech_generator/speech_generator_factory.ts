@@ -35,7 +35,7 @@ import { TreeSpeechGenerator } from './tree_speech_generator';
  * @return The newly generated speech generator.
  */
 export function generator(type: string): SpeechGenerator {
-  let constructor = generatorMapping_[type] || generatorMapping_.Direct;
+  const constructor = generatorMapping_[type] || generatorMapping_.Direct;
   return constructor();
 }
 

@@ -50,7 +50,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
    * @override
    */
   public initLevels(): Levels<Focus> {
-    let levels = new Levels();
+    const levels = new Levels();
     levels.push([this.getFocus()]);
     return levels as Levels<Focus>;
   }
@@ -60,12 +60,12 @@ export class SemanticWalker extends AbstractWalker<Focus> {
    */
   public up() {
     super.up();
-    let parent = this.previousLevel();
+    const parent = this.previousLevel();
     if (!parent) {
       return null;
     }
     this.levels.pop();
-    let found = this.levels.find(function (focus) {
+    const found = this.levels.find(function (focus) {
       return focus.getSemanticNodes().some(function (node) {
         return node.id.toString() === parent;
       });
@@ -78,7 +78,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
    */
   public down() {
     super.down();
-    let children = this.nextLevel();
+    const children = this.nextLevel();
     if (children.length === 0) {
       return null;
     }
@@ -120,7 +120,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
         if (children.length === content.length) {
           return content.map(this.singletonFocus.bind(this));
         }
-        let focusList = this.combinePunctuations(children, content, [], []);
+        const focusList = this.combinePunctuations(children, content, [], []);
         return focusList;
       case SemanticType.APPL:
         return [
@@ -154,8 +154,8 @@ export class SemanticWalker extends AbstractWalker<Focus> {
     if (children.length === 0) {
       return acc;
     }
-    let child = children.shift();
-    let cont = content.shift();
+    const child = children.shift();
+    const cont = content.shift();
     // Case first child element is punctuation.
     // We have a prefix punctuation.
     if (child === cont) {
@@ -190,7 +190,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
     if (children.length === 1) {
       return [this.singletonFocus(children[0])];
     }
-    let result = [this.singletonFocus(children.shift())];
+    const result = [this.singletonFocus(children.shift())];
     for (let i = 0, l = children.length; i < l; i++) {
       result.push(this.focusFromId(children[i], [content[i], children[i]]));
     }
@@ -202,11 +202,11 @@ export class SemanticWalker extends AbstractWalker<Focus> {
    */
   public left() {
     super.left();
-    let index = this.levels.indexOf(this.getFocus());
+    const index = this.levels.indexOf(this.getFocus());
     if (index === null) {
       return null;
     }
-    let ids = this.levels.get(index - 1);
+    const ids = this.levels.get(index - 1);
     return ids ? ids : null;
   }
 
@@ -215,11 +215,11 @@ export class SemanticWalker extends AbstractWalker<Focus> {
    */
   public right() {
     super.right();
-    let index = this.levels.indexOf(this.getFocus());
+    const index = this.levels.indexOf(this.getFocus());
     if (index === null) {
       return null;
     }
-    let ids = this.levels.get(index + 1);
+    const ids = this.levels.get(index + 1);
     return ids ? ids : null;
   }
 
@@ -227,8 +227,8 @@ export class SemanticWalker extends AbstractWalker<Focus> {
    * @override
    */
   public findFocusOnLevel(id: number) {
-    let focus = this.levels.find((x) => {
-      let pid = x.getSemanticPrimary().id;
+    const focus = this.levels.find((x) => {
+      const pid = x.getSemanticPrimary().id;
       return pid === id;
     });
     return focus;

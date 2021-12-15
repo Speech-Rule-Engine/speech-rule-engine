@@ -49,12 +49,12 @@ export class CaseTensor extends CaseMultiindex {
    */
   public getMathml() {
     EnrichMathml.walkTree(this.semantic.childNodes[0] as SemanticNode);
-    let lsub = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
-    let lsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[2]);
-    let rsub = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[3]);
-    let rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[4]);
+    const lsub = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
+    const lsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[2]);
+    const rsub = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[3]);
+    const rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[4]);
     EnrichMathml.setAttributes(this.mml, this.semantic);
-    let collapsed = [
+    const collapsed = [
       this.semantic.id,
       this.semantic.childNodes[0].id,
       lsub,
@@ -63,7 +63,7 @@ export class CaseTensor extends CaseMultiindex {
       rsup
     ];
     EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
-    let childIds = SemanticSkeleton.collapsedLeafs(lsub, lsup, rsub, rsup);
+    const childIds = SemanticSkeleton.collapsedLeafs(lsub, lsup, rsub, rsup);
     childIds.unshift(this.semantic.childNodes[0].id);
     this.mml.setAttribute(EnrichMathml.Attribute.CHILDREN, childIds.join(','));
     this.completeMultiscript(

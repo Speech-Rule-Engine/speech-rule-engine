@@ -54,14 +54,14 @@ export class Focus {
     rebuilt: RebuildStree,
     dom: Element
   ): Focus {
-    let idFunc = (id: string) => WalkerUtil.getBySemanticId(dom, id);
-    let dict = rebuilt.nodeDict;
-    let node = idFunc(primaryId);
-    let nodes = nodeIds.map(idFunc);
-    let snodes = nodeIds.map(function (primaryId) {
+    const idFunc = (id: string) => WalkerUtil.getBySemanticId(dom, id);
+    const dict = rebuilt.nodeDict;
+    const node = idFunc(primaryId);
+    const nodes = nodeIds.map(idFunc);
+    const snodes = nodeIds.map(function (primaryId) {
       return dict[primaryId];
     });
-    let focus = new Focus(snodes, dict[primaryId]);
+    const focus = new Focus(snodes, dict[primaryId]);
     focus.domNodes = nodes;
     focus.domPrimary_ = node;
     focus.allNodes = Focus.generateAllVisibleNodes_(nodeIds, nodes, dict, dom);
@@ -84,21 +84,21 @@ export class Focus {
     dict: { [key: string]: SemanticNode },
     domNode: Element
   ): Element[] {
-    let idFunc = (id: string) => WalkerUtil.getBySemanticId(domNode, id);
+    const idFunc = (id: string) => WalkerUtil.getBySemanticId(domNode, id);
     let result: Element[] = [];
     for (let i = 0, l = ids.length; i < l; i++) {
       if (nodes[i]) {
         result.push(nodes[i]);
         continue;
       }
-      let virtual = dict[ids[i]];
+      const virtual = dict[ids[i]];
       if (!virtual) {
         continue;
       }
-      let childIds = virtual.childNodes.map(function (x) {
+      const childIds = virtual.childNodes.map(function (x) {
         return x.id.toString();
       });
-      let children = childIds.map(idFunc) as Element[];
+      const children = childIds.map(idFunc) as Element[];
       result = result.concat(
         Focus.generateAllVisibleNodes_(childIds, children, dict, domNode)
       );
@@ -159,7 +159,7 @@ export class Focus {
    * @return The new focus, containing the same component as this.
    */
   public clone(): Focus {
-    let focus = new Focus(this.nodes, this.primary);
+    const focus = new Focus(this.nodes, this.primary);
     focus.domNodes = this.domNodes;
     focus.domPrimary_ = this.domPrimary_;
     focus.allNodes = this.allNodes;

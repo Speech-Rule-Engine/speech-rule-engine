@@ -23,7 +23,7 @@ import { ClearspeakRules } from './clearspeak_rules';
 import { MathspeakRules } from './mathspeak_rules';
 import { BrailleRules, OtherRules, PrefixRules } from './other_rules';
 
-export let INIT_: boolean = false;
+export let INIT_ = false;
 
 /**
  * Initializes the context function mappings for speech rule stores.

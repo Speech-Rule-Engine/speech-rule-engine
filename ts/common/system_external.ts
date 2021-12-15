@@ -72,8 +72,8 @@ namespace SystemExternal {
   export const xpath: any = SystemExternal.documentSupported
     ? document
     : (function () {
-        let window = { document: {}, XPathResult: {} };
-        let wgx = SystemExternal.extRequire('wicked-good-xpath');
+        const window = { document: {}, XPathResult: {} };
+        const wgx = SystemExternal.extRequire('wicked-good-xpath');
         wgx.install(window);
         (window.document as any).XPathResult = window.XPathResult;
         return window.document;

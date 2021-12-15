@@ -63,15 +63,15 @@ export function spaceoutNodes(
   node: Element,
   correction: (p1: SemanticNode) => any
 ): Element[] {
-  let content = Array.from(node.textContent);
-  let result = [];
-  let processor = SemanticProcessor.getInstance();
-  let doc = node.ownerDocument;
+  const content = Array.from(node.textContent);
+  const result = [];
+  const processor = SemanticProcessor.getInstance();
+  const doc = node.ownerDocument;
   for (let i = 0, chr; (chr = content[i]); i++) {
-    let leaf = processor
+    const leaf = processor
       .getNodeFactory()
       .makeLeafNode(chr, SemanticFont.UNKNOWN);
-    let sn = processor.identifierNode(leaf, SemanticFont.UNKNOWN, '');
+    const sn = processor.identifierNode(leaf, SemanticFont.UNKNOWN, '');
     correction(sn);
     result.push(sn.xml(doc));
   }
@@ -165,7 +165,7 @@ export function getNestingDepth(
     function (_node) {
       return false;
     };
-  let xmlText = new SystemExternal.xmldom.XMLSerializer().serializeToString(
+  const xmlText = new SystemExternal.xmldom.XMLSerializer().serializeToString(
     node
   );
   if (!nestingDepth[type]) {
@@ -177,7 +177,7 @@ export function getNestingDepth(
   if (opt_func(node) || tags.indexOf(node.tagName) < 0) {
     return 0;
   }
-  let depth = computeNestingDepth_(
+  const depth = computeNestingDepth_(
     node,
     tags,
     BaseUtil.setdifference(opt_barrierTags, tags),
@@ -203,7 +203,7 @@ export function containsAttr(
   if (!node.attributes) {
     return false;
   }
-  let attributes = DomUtil.toArray(node.attributes);
+  const attributes = DomUtil.toArray(node.attributes);
   for (let i = 0, attr; (attr = attributes[i]); i++) {
     if (attrs[attr.nodeName] === attr.nodeValue) {
       return true;
@@ -247,7 +247,7 @@ export function computeNestingDepth_(
   if (!node.childNodes || node.childNodes.length === 0) {
     return depth;
   }
-  let children = DomUtil.toArray(node.childNodes);
+  const children = DomUtil.toArray(node.childNodes);
   return Math.max.apply(
     null,
     children.map(function (subNode) {
@@ -286,8 +286,8 @@ export function nestedFraction(
   expr: string,
   opt_end?: string
 ): string {
-  let depth = fractionNestingDepth(node);
-  let annotation = Array.apply(null, Array(depth)).map((_x: string) => expr);
+  const depth = fractionNestingDepth(node);
+  const annotation = Array.apply(null, Array(depth)).map((_x: string) => expr);
   if (opt_end) {
     annotation.push(opt_end);
   }
@@ -361,7 +361,7 @@ export function closingFractionBrief(node: Element): string {
  * @return The opening string.
  */
 export function openingFractionSbrief(node: Element): string {
-  let depth = fractionNestingDepth(node);
+  const depth = fractionNestingDepth(node);
   if (depth === 1) {
     return LOCALE.MESSAGES.MS.FRAC_S;
   }
@@ -378,7 +378,7 @@ export function openingFractionSbrief(node: Element): string {
  * @return The closing string.
  */
 export function closingFractionSbrief(node: Element): string {
-  let depth = fractionNestingDepth(node);
+  const depth = fractionNestingDepth(node);
   if (depth === 1) {
     return LOCALE.MESSAGES.MS.ENDFRAC;
   }
@@ -395,7 +395,7 @@ export function closingFractionSbrief(node: Element): string {
  * @return The middle string.
  */
 export function overFractionSbrief(node: Element): string {
-  let depth = fractionNestingDepth(node);
+  const depth = fractionNestingDepth(node);
   if (depth === 1) {
     return LOCALE.MESSAGES.MS.FRAC_OVER;
   }
@@ -431,12 +431,12 @@ export function nestedSubSuper(
   replace: { sup: string; sub: string }
 ): string {
   while (node.parentNode) {
-    let children = node.parentNode;
-    let parent = children.parentNode as Element;
+    const children = node.parentNode;
+    const parent = children.parentNode as Element;
     if (!parent) {
       break;
     }
-    let nodeRole = node.getAttribute && node.getAttribute('role');
+    const nodeRole = node.getAttribute && node.getAttribute('role');
     if (
       (parent.tagName === SemanticType.SUBSCRIPT &&
         node === children.childNodes[1]) ||
@@ -516,7 +516,7 @@ export function superscriptBrief(node: Element): string {
  * @return The prefix string.
  */
 export function baselineVerbose(node: Element): string {
-  let baseline = nestedSubSuper(node, '', {
+  const baseline = nestedSubSuper(node, '', {
     sup: LOCALE.MESSAGES.MS.SUPER,
     sub: LOCALE.MESSAGES.MS.SUB
   });
@@ -540,7 +540,7 @@ export function baselineVerbose(node: Element): string {
  * @return The prefix string.
  */
 export function baselineBrief(node: Element): string {
-  let baseline = nestedSubSuper(node, '', {
+  const baseline = nestedSubSuper(node, '', {
     sup: LOCALE.MESSAGES.MS.SUP,
     sub: LOCALE.MESSAGES.MS.SUB
   });
@@ -576,8 +576,8 @@ export function nestedRadical(
   prefix: string,
   postfix: string
 ): string {
-  let depth = radicalNestingDepth(node);
-  let index = getRootIndex(node);
+  const depth = radicalNestingDepth(node);
+  const index = getRootIndex(node);
   postfix = index ? LOCALE.FUNCTIONS.combineRootIndex(postfix, index) : postfix;
   if (depth === 1) {
     return postfix;
@@ -595,7 +595,7 @@ export function nestedRadical(
  * @return The localised indexing string if it exists.
  */
 export function getRootIndex(node: Element): string {
-  let content =
+  const content =
     node.tagName === 'sqrt'
       ? '2'
       : // TODO (sorge): Make that safer?
@@ -735,7 +735,7 @@ export function underscoreNestingDepth(node: Element): number {
  * @return The correct prefix string.
  */
 export function nestedUnderscript(node: Element): string {
-  let depth = underscoreNestingDepth(node);
+  const depth = underscoreNestingDepth(node);
   return (
     Array(depth).join(LOCALE.MESSAGES.MS.UNDER) + LOCALE.MESSAGES.MS.UNDERSCRIPT
   );
@@ -774,7 +774,7 @@ export function endscripts(_node: Element) {
  * @return The correct prefix string.
  */
 export function nestedOverscript(node: Element): string {
-  let depth = overscoreNestingDepth(node);
+  const depth = overscoreNestingDepth(node);
   return (
     Array(depth).join(LOCALE.MESSAGES.MS.OVER) + LOCALE.MESSAGES.MS.OVERSCRIPT
   );
@@ -793,7 +793,7 @@ export function determinantIsSimple(node: Element): Element[] {
   ) {
     return [];
   }
-  let cells = XpathUtil.evalXPath(
+  const cells = XpathUtil.evalXPath(
     'children/row/children/cell/children/*',
     node
   ) as Element[];
@@ -802,7 +802,7 @@ export function determinantIsSimple(node: Element): Element[] {
       continue;
     }
     if (cell.tagName === SemanticType.IDENTIFIER) {
-      let role = cell.getAttribute('role');
+      const role = cell.getAttribute('role');
       if (
         role === SemanticRole.LATINLETTER ||
         role === SemanticRole.GREEKLETTER ||
@@ -821,19 +821,19 @@ export function determinantIsSimple(node: Element): Element[] {
  * @return The constraint strings.
  */
 export function generateBaselineConstraint(): string[] {
-  let ignoreElems = ['subscript', 'superscript', 'tensor'];
-  let mainElems = ['relseq', 'multrel'];
-  let breakElems = ['fraction', 'punctuation', 'fenced', 'sqrt', 'root'];
+  const ignoreElems = ['subscript', 'superscript', 'tensor'];
+  const mainElems = ['relseq', 'multrel'];
+  const breakElems = ['fraction', 'punctuation', 'fenced', 'sqrt', 'root'];
 
-  let ancestrify = (elemList: string[]) =>
+  const ancestrify = (elemList: string[]) =>
     elemList.map((elem) => 'ancestor::' + elem);
 
-  let notify = (elem: string) => 'not(' + elem + ')';
+  const notify = (elem: string) => 'not(' + elem + ')';
 
-  let prefix = 'ancestor::*/following-sibling::*';
-  let middle = notify(ancestrify(ignoreElems).join(' or '));
-  let mainList = ancestrify(mainElems);
-  let breakList = ancestrify(breakElems);
+  const prefix = 'ancestor::*/following-sibling::*';
+  const middle = notify(ancestrify(ignoreElems).join(' or '));
+  const mainList = ancestrify(mainElems);
+  const breakList = ancestrify(breakElems);
   let breakCstrs: string[] = [];
   for (let i = 0, brk: string; (brk = breakList[i]); i++) {
     breakCstrs = breakCstrs.concat(
@@ -842,7 +842,7 @@ export function generateBaselineConstraint(): string[] {
       })
     );
   }
-  let postfix = notify(breakCstrs.join(' | '));
+  const postfix = notify(breakCstrs.join(' | '));
   return [[prefix, middle, postfix].join(' and ')];
 }
 
@@ -859,7 +859,7 @@ export function removeParens(node: Element): string {
   ) {
     return '';
   }
-  let content = node.childNodes[0].childNodes[0].childNodes[0].textContent;
+  const content = node.childNodes[0].childNodes[0].childNodes[0].textContent;
   return content.match(/^\(.+\)$/) ? content.slice(1, -1) : content;
 }
 
@@ -897,15 +897,15 @@ const childNumber: Map<number, number> = new Map([
 function generateTensorRuleStrings_(
   constellation: string
 ): [string[], string, string] {
-  let constraints = [];
+  const constraints = [];
   let verbString = '';
   let briefString = '';
   let constel = parseInt(constellation, 2);
 
   for (let i = 0; i < 5; i++) {
-    let childString = 'children/*[' + childNumber.get(i) + ']';
+    const childString = 'children/*[' + childNumber.get(i) + ']';
     if (constel & 1) {
-      let compString = componentString.get(i % 5);
+      const compString = componentString.get(i % 5);
       verbString =
         '[t] ' + compString + 'Verbose; [n] ' + childString + ';' + verbString;
       briefString =
@@ -924,11 +924,11 @@ function generateTensorRuleStrings_(
  */
 export function generateTensorRules(
   store: SpeechRuleStore,
-  brief: boolean = true
+  brief = true
 ) {
   // Constellations are built as bitvectors with the meaning:
   //  lsub lsuper base rsub rsuper
-  let constellations = [
+  const constellations = [
     '11111',
     '11110',
     '11101',
@@ -951,7 +951,7 @@ export function generateTensorRules(
     // Rules without neighbour.
     store.defineRule.apply(store, verbList);
     if (brief) {
-      let briefList = [name, 'brief', briefStr, 'self::tensor'].concat(
+      const briefList = [name, 'brief', briefStr, 'self::tensor'].concat(
         components
       );
       store.defineRule.apply(store, briefList);
@@ -959,11 +959,11 @@ export function generateTensorRules(
       store.defineRule.apply(store, briefList);
     }
     // Rules with baseline.
-    let baselineStr = componentString.get(2);
+    const baselineStr = componentString.get(2);
     verbStr += '; [t]' + baselineStr + 'Verbose';
     briefStr += '; [t]' + baselineStr + 'Brief';
     name = name + '-baseline';
-    let cstr =
+    const cstr =
       '((.//*[not(*)])[last()]/@id)!=(((.//ancestor::fraction|' +
       'ancestor::root|ancestor::sqrt|ancestor::cell|ancestor::line|' +
       'ancestor::stree)[1]//*[not(*)])[last()]/@id)';
@@ -972,7 +972,7 @@ export function generateTensorRules(
     );
     store.defineRule.apply(store, verbList);
     if (brief) {
-      let briefList = [name, 'brief', briefStr, 'self::tensor', cstr].concat(
+      const briefList = [name, 'brief', briefStr, 'self::tensor', cstr].concat(
         components
       );
       store.defineRule.apply(store, briefList);
@@ -1002,10 +1002,10 @@ export function smallRoot(node: Element): Element[] {
   ) {
     return [];
   }
-  let index = node.childNodes[0].childNodes[0].textContent;
+  const index = node.childNodes[0].childNodes[0].textContent;
   if (!/^\d+$/.test(index)) {
     return [];
   }
-  let num = parseInt(index, 10);
+  const num = parseInt(index, 10);
   return num > 1 && num <= max ? [node] : [];
 }

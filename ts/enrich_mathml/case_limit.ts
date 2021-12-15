@@ -42,8 +42,8 @@ export class CaseLimit extends AbstractEnrichCase {
     if (!semantic.mathmlTree || !semantic.childNodes.length) {
       return false;
     }
-    let mmlTag = DomUtil.tagName(semantic.mathmlTree);
-    let type = semantic.type;
+    const mmlTag = DomUtil.tagName(semantic.mathmlTree);
+    const type = semantic.type;
     return (
       ((type === SemanticType.LIMUPPER || type === SemanticType.LIMLOWER) &&
         (mmlTag === 'MSUBSUP' || mmlTag === 'MUNDEROVER')) ||
@@ -78,7 +78,7 @@ export class CaseLimit extends AbstractEnrichCase {
    * @override
    */
   public getMathml() {
-    let children = this.semantic.childNodes;
+    const children = this.semantic.childNodes;
     if (
       this.semantic.type !== SemanticType.LIMBOTH &&
       this.mml.childNodes.length >= 3

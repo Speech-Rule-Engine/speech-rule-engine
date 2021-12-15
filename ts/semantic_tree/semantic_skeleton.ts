@@ -112,7 +112,7 @@ export class SemanticSkeleton {
    * @return The leafs of the structure annotations.
    */
   public static collapsedLeafs(...args: Sexp[]): number[] {
-    let collapseStructure = (coll: any) => {
+    const collapseStructure = (coll: any) => {
       if (SemanticSkeleton.simpleCollapseStructure(coll)) {
         return [coll];
       }
@@ -223,17 +223,17 @@ export class SemanticSkeleton {
     if (!node) {
       return [];
     }
-    let content = node.contentNodes;
+    const content = node.contentNodes;
     let contentStructure;
     if (content.length) {
       contentStructure = content.map(SemanticSkeleton.fromNode_) as any;
       contentStructure.unshift('c');
     }
-    let children = node.childNodes;
+    const children = node.childNodes;
     if (!children.length) {
       return content.length ? [node.id, contentStructure] : node.id;
     }
-    let structure = children.map(SemanticSkeleton.fromNode_);
+    const structure = children.map(SemanticSkeleton.fromNode_);
     if (content.length) {
       structure.unshift(contentStructure);
     }
@@ -256,13 +256,13 @@ export class SemanticSkeleton {
     if (!node.childNodes.length) {
       return node.id;
     }
-    let id = node.id;
-    let skeleton = [id];
-    let mmlChild = XpathUtil.evalXPath(
+    const id = node.id;
+    const skeleton = [id];
+    const mmlChild = XpathUtil.evalXPath(
       `.//self::*[@${EnrichAttribute.ID}=${id}]`,
       mml
     )[0];
-    let children = SemanticSkeleton.combineContentChildren<SemanticNode>(
+    const children = SemanticSkeleton.combineContentChildren<SemanticNode>(
       node,
       node.contentNodes.map(function (x) {
         return x;
@@ -287,8 +287,8 @@ export class SemanticSkeleton {
    *     already interspersed.
    */
   private static addOwns_(node: Element, children: SemanticNode[]) {
-    let collapsed = node.getAttribute(EnrichAttribute.COLLAPSED);
-    let leafs = collapsed
+    const collapsed = node.getAttribute(EnrichAttribute.COLLAPSED);
+    const leafs = collapsed
       ? SemanticSkeleton.realLeafs_(
           SemanticSkeleton.fromString(collapsed).array
         )
@@ -357,12 +357,12 @@ export class SemanticSkeleton {
       return;
     }
     // TODO (TS): Add slice method to Sexp.
-    let newElement = SemanticSkeleton.contentCollapseStructure(element)
+    const newElement = SemanticSkeleton.contentCollapseStructure(element)
       ? (element as any).slice(1)
       : element;
-    let newParents = [newElement[0]].concat(parents);
+    const newParents = [newElement[0]].concat(parents);
     for (let i = 0, l = newElement.length; i < l; i++) {
-      let current = newElement[i];
+      const current = newElement[i];
       this.populate_(current, element, newParents);
     }
   }

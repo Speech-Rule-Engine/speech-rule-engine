@@ -34,7 +34,7 @@ import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 
 export class ClearspeakPreferences extends DynamicCstr {
-  private static AUTO: string = 'Auto';
+  private static AUTO = 'Auto';
 
   /**
    * Exports the Clearspeak comparator with default settings.
@@ -59,16 +59,16 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @return The preference settings.
    */
   public static fromPreference(pref: string): AxisMap {
-    let pairs = pref.split(':');
-    let preferences: AxisMap = {};
-    let properties = PREFERENCES.getProperties();
-    let validKeys = Object.keys(properties);
+    const pairs = pref.split(':');
+    const preferences: AxisMap = {};
+    const properties = PREFERENCES.getProperties();
+    const validKeys = Object.keys(properties);
     for (let i = 0, key; (key = pairs[i]); i++) {
-      let pair = key.split('_');
+      const pair = key.split('_');
       if (validKeys.indexOf(pair[0]) === -1) {
         continue;
       }
-      let value = pair[1];
+      const value = pair[1];
       if (
         value &&
         value !== ClearspeakPreferences.AUTO &&
@@ -88,8 +88,8 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @return A style string created from the preferences.
    */
   public static toPreference(pref: AxisMap): string {
-    let keys = Object.keys(pref);
-    let str = [];
+    const keys = Object.keys(pref);
+    const str = [];
     for (let i = 0; i < keys.length; i++) {
       str.push(keys[i] + '_' + pref[keys[i]]);
     }
@@ -105,7 +105,7 @@ export class ClearspeakPreferences extends DynamicCstr {
   public static getLocalePreferences(opt_dynamic?: Object): {
     [key: string]: AxisProperties;
   } {
-    let dynamic =
+    const dynamic =
       opt_dynamic ||
       MathCompoundStore.enumerate(SpeechRuleEngine.getInstance().enumerate());
     return ClearspeakPreferences.getLocalePreferences_(dynamic);
@@ -124,18 +124,18 @@ export class ClearspeakPreferences extends DynamicCstr {
    */
   // TODO (TS): item should get MathJax type MathItem
   public static smartPreferences(item: any, locale: string): AxisMap[] {
-    let prefs = ClearspeakPreferences.getLocalePreferences();
-    let loc = prefs[locale];
+    const prefs = ClearspeakPreferences.getLocalePreferences();
+    const loc = prefs[locale];
     if (!loc) {
       return [];
     }
-    let explorer = item['explorers']['speech'];
-    let smart = ClearspeakPreferences.relevantPreferences(
+    const explorer = item['explorers']['speech'];
+    const smart = ClearspeakPreferences.relevantPreferences(
       explorer.walker.getFocus().getSemanticPrimary()
     );
     // var smart = 'Bar'; // TODO: Lookup the right preference.
-    let previous = EngineConst.DOMAIN_TO_STYLES['clearspeak'];
-    let items = [
+    const previous = EngineConst.DOMAIN_TO_STYLES['clearspeak'];
+    const items = [
       {
         type: 'radio',
         content: 'No Preferences',
@@ -154,7 +154,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     ];
     return items.concat(
       loc[smart].map(function (x) {
-        let pair = x.split('_');
+        const pair = x.split('_');
         return {
           type: 'radio',
           content: pair[1],
@@ -174,7 +174,7 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @return The preference that fits the node's type and role.
    */
   public static relevantPreferences(node: SemanticNode): string {
-    let roles = SEMANTIC_MAPPING_[node.type];
+    const roles = SEMANTIC_MAPPING_[node.type];
     if (!roles) {
       return 'ImpliedTimes';
     }
@@ -192,7 +192,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     if (prefs === 'default') {
       return ClearspeakPreferences.AUTO;
     }
-    let parsed = ClearspeakPreferences.fromPreference(prefs);
+    const parsed = ClearspeakPreferences.fromPreference(prefs);
     return parsed[kind] || ClearspeakPreferences.AUTO;
   }
 
@@ -211,7 +211,7 @@ export class ClearspeakPreferences extends DynamicCstr {
     if (prefs === 'default') {
       return kind + '_' + value;
     }
-    let parsed = ClearspeakPreferences.fromPreference(prefs);
+    const parsed = ClearspeakPreferences.fromPreference(prefs);
     parsed[kind] = value;
     return ClearspeakPreferences.toPreference(parsed);
   }
@@ -225,21 +225,21 @@ export class ClearspeakPreferences extends DynamicCstr {
   private static getLocalePreferences_(dynamic: any): {
     [key: string]: AxisProperties;
   } {
-    let result: { [key: string]: AxisProperties } = {};
-    for (let locale in dynamic) {
+    const result: { [key: string]: AxisProperties } = {};
+    for (const locale in dynamic) {
       if (
         !dynamic[locale]['speech'] ||
         !dynamic[locale]['speech']['clearspeak']
       ) {
         continue;
       }
-      let locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
-      let prefs: AxisProperties = (result[locale] = {});
-      for (let axis in PREFERENCES.getProperties()) {
-        let allSty = PREFERENCES.getProperties()[axis];
-        let values = [axis + '_Auto'];
+      const locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
+      const prefs: AxisProperties = (result[locale] = {});
+      for (const axis in PREFERENCES.getProperties()) {
+        const allSty = PREFERENCES.getProperties()[axis];
+        const values = [axis + '_Auto'];
         if (allSty) {
-          for (let sty of allSty) {
+          for (const sty of allSty) {
             if (locPrefs.indexOf(axis + '_' + sty) !== -1) {
               values.push(axis + '_' + sty);
             }
@@ -263,12 +263,12 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @override
    */
   public equal(cstr: ClearspeakPreferences) {
-    let top = super.equal(cstr);
+    const top = super.equal(cstr);
     if (!top) {
       return false;
     }
-    let keys = Object.keys(this.preference);
-    let preference = cstr.preference;
+    const keys = Object.keys(this.preference);
+    const preference = cstr.preference;
     if (keys.length !== Object.keys(preference).length) {
       return false;
     }
@@ -388,7 +388,7 @@ export class Comparator extends DefaultComparator {
     if (cstr.getComponents()[Axis.STYLE] === 'default') {
       return true;
     }
-    let keys = Object.keys(cstr.preference);
+    const keys = Object.keys(cstr.preference);
     for (let i = 0, key; (key = keys[i]); i++) {
       if (this.preference[key] !== cstr.preference[key]) {
         return false;
@@ -401,12 +401,12 @@ export class Comparator extends DefaultComparator {
    * @override
    */
   public compare(cstr1: DynamicCstr, cstr2: DynamicCstr) {
-    let top = super.compare(cstr1, cstr2);
+    const top = super.compare(cstr1, cstr2);
     if (top !== 0) {
       return top as 0 | 1 | -1;
     }
-    let pref1 = cstr1 instanceof ClearspeakPreferences;
-    let pref2 = cstr2 instanceof ClearspeakPreferences;
+    const pref1 = cstr1 instanceof ClearspeakPreferences;
+    const pref2 = cstr2 instanceof ClearspeakPreferences;
     if (!pref1 && pref2) {
       return 1;
     }
@@ -416,10 +416,10 @@ export class Comparator extends DefaultComparator {
     if (!pref1 && !pref2) {
       return 0;
     }
-    let length1 = Object.keys(
+    const length1 = Object.keys(
       (cstr1 as ClearspeakPreferences).preference
     ).length;
-    let length2 = Object.keys(
+    const length2 = Object.keys(
       (cstr2 as ClearspeakPreferences).preference
     ).length;
     return length1 > length2 ? -1 : length1 < length2 ? 1 : 0;
@@ -438,10 +438,10 @@ export class Parser extends DynamicCstrParser {
    * @override
    */
   public parse(str: string) {
-    let initial = super.parse(str);
+    const initial = super.parse(str);
     let style = initial.getValue(Axis.STYLE);
-    let locale = initial.getValue(Axis.LOCALE);
-    let modality = initial.getValue(Axis.MODALITY);
+    const locale = initial.getValue(Axis.LOCALE);
+    const modality = initial.getValue(Axis.MODALITY);
     let pref = {};
     if (style !== DynamicCstr.DEFAULT_VALUE) {
       pref = this.fromPreference(style);
@@ -525,9 +525,9 @@ const REVERSE_MAPPING: string[][] = [
 ];
 
 const SEMANTIC_MAPPING_: { [key: string]: AxisMap } = (function () {
-  let result: { [key: string]: AxisMap } = {};
+  const result: { [key: string]: AxisMap } = {};
   for (let i = 0, triple; (triple = REVERSE_MAPPING[i]); i++) {
-    let pref = triple[0];
+    const pref = triple[0];
     let role = result[triple[1]];
     if (!role) {
       role = {};

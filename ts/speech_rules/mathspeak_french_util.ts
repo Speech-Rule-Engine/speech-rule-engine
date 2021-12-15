@@ -31,7 +31,7 @@ namespace MathspeakFrenchUtil {
    * @return The prefix string.
    */
   export function baselineVerbose(node: Element): string {
-    let baseline = MathspeakUtil.baselineVerbose(node);
+    const baseline = MathspeakUtil.baselineVerbose(node);
     return baseline.replace(/\-$/, '');
   }
 
@@ -41,7 +41,7 @@ namespace MathspeakFrenchUtil {
    * @return The prefix string.
    */
   export function baselineBrief(node: Element): string {
-    let baseline = MathspeakUtil.baselineBrief(node);
+    const baseline = MathspeakUtil.baselineBrief(node);
     return baseline.replace(/\-$/, '');
   }
 
@@ -51,7 +51,7 @@ namespace MathspeakFrenchUtil {
    * @return The prefix string.
    */
   export function leftSuperscriptVerbose(node: Element): string {
-    let leftIndex = MathspeakUtil.superscriptVerbose(node);
+    const leftIndex = MathspeakUtil.superscriptVerbose(node);
     return leftIndex.replace(/^exposant/, 'exposant gauche');
   }
 
@@ -61,7 +61,7 @@ namespace MathspeakFrenchUtil {
    * @return The prefix string.
    */
   export function leftSubscriptVerbose(node: Element): string {
-    let leftIndex = MathspeakUtil.subscriptVerbose(node);
+    const leftIndex = MathspeakUtil.subscriptVerbose(node);
     return leftIndex.replace(/^indice/, 'indice gauche');
   }
 
@@ -71,7 +71,7 @@ namespace MathspeakFrenchUtil {
    * @return The prefix string.
    */
   export function leftSuperscriptBrief(node: Element): string {
-    let leftIndex = MathspeakUtil.superscriptBrief(node);
+    const leftIndex = MathspeakUtil.superscriptBrief(node);
     return leftIndex.replace(/^sup/, 'sup gauche');
   }
 
@@ -81,7 +81,7 @@ namespace MathspeakFrenchUtil {
    * @return The prefix string.
    */
   export function leftSubscriptBrief(node: Element): string {
-    let leftIndex = MathspeakUtil.subscriptBrief(node);
+    const leftIndex = MathspeakUtil.subscriptBrief(node);
     return leftIndex.replace(/^sub/, 'sub gauche');
   }
 }

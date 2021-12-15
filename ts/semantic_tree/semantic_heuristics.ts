@@ -83,7 +83,7 @@ export namespace SemanticHeuristics {
     root: SemanticHeuristicTypes,
     opt_alternative?: (p1: SemanticHeuristicTypes) => SemanticHeuristicTypes
   ): SemanticHeuristicTypes | void {
-    let heuristic = SemanticHeuristics.lookup(name);
+    const heuristic = SemanticHeuristics.lookup(name);
     return heuristic &&
       !blacklist[name] &&
       (flags[name] || heuristic.applicable(root))
@@ -238,7 +238,7 @@ new SemanticTreeHeuristic(
 new SemanticTreeHeuristic(
   'simpleNamedFunction',
   (node) => {
-    let specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
+    const specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
     if (
       node.role !== SemanticRole.UNIT &&
       specialFunctions.indexOf(node.textContent) !== -1
@@ -278,9 +278,9 @@ new SemanticTreeHeuristic('multioperator', (node) => {
     return;
   }
   // TODO: Combine with lines in numberRole_/exprFont_?
-  let content = SemanticUtil.splitUnicode(node.textContent);
-  let meaning = content.map(SemanticAttr.lookupMeaning);
-  let singleRole = meaning.reduce(function (prev, curr) {
+  const content = SemanticUtil.splitUnicode(node.textContent);
+  const meaning = content.map(SemanticAttr.lookupMeaning);
+  const singleRole = meaning.reduce(function (prev, curr) {
     if (
       !prev ||
       !curr.role ||
@@ -370,7 +370,7 @@ new SemanticTreeHeuristic(
     // TODO: Test for simple elements?
     node.type = SemanticType.MATRIX;
     node.role = SemanticRole.CYCLE;
-    let row = node.childNodes[0];
+    const row = node.childNodes[0];
     row.type = SemanticType.ROW;
     row.role = SemanticRole.CYCLE;
     row.contentNodes = [];
@@ -400,8 +400,8 @@ new SemanticTreeHeuristic(
 function juxtapositionPrePost(
   partition: SemanticUtil.Partition
 ): SemanticUtil.Partition {
-  let rels = [];
-  let comps = [];
+  const rels = [];
+  const comps = [];
   let next = partition.comp.shift();
   let rel = null;
   let collect = [];
@@ -453,10 +453,10 @@ function convertPrePost(
   if (!collect.length) {
     return rel;
   }
-  let prev = comps[comps.length - 1];
-  let prevExists = prev && prev.length;
-  let nextExists = next && next.length;
-  let processor = SemanticProcessor.getInstance();
+  const prev = comps[comps.length - 1];
+  const prevExists = prev && prev.length;
+  const nextExists = next && next.length;
+  const processor = SemanticProcessor.getInstance();
   if (prevExists && nextExists) {
     if (
       next[0].type === SemanticType.INFIXOP &&
@@ -467,7 +467,7 @@ function convertPrePost(
       return rel;
     }
     rel = collect.shift();
-    let result = processor['prefixNode_'](next.shift(), collect);
+    const result = processor['prefixNode_'](next.shift(), collect);
     next.unshift(result);
     // next.unshift(processor['prefixNode_'](next.shift(), collect));
     return rel;
@@ -508,26 +508,26 @@ function recurseJuxtaposition(
   if (!ops.length) {
     return acc;
   }
-  let left = acc.pop();
-  let op = ops.shift();
-  let first = elements.shift();
+  const left = acc.pop();
+  const op = ops.shift();
+  const first = elements.shift();
   if (SemanticPred.isImplicitOp(op)) {
     Debugger.getInstance().output('Juxta Heuristic Case 2');
     // In case we have a tree as operator, move on.
-    let right = (left ? [left, op] : [op]).concat(first);
+    const right = (left ? [left, op] : [op]).concat(first);
     return recurseJuxtaposition(acc.concat(right), ops, elements);
   }
   if (!left) {
     Debugger.getInstance().output('Juxta Heuristic Case 3');
     return recurseJuxtaposition([op].concat(first), ops, elements);
   }
-  let right = first.shift();
+  const right = first.shift();
   if (!right) {
     Debugger.getInstance().output('Juxta Heuristic Case 9');
     // Attach to the next operator, which must be an infix operation, As there
     // are no more double operators. Left also exists. Cases that left is an
     // implicit infix or simple.
-    let newOp = SemanticHeuristics.factory.makeBranchNode(
+    const newOp = SemanticHeuristics.factory.makeBranchNode(
       SemanticType.INFIXOP,
       [left, ops.shift()],
       [op],

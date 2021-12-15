@@ -54,7 +54,7 @@ export namespace ProcessorFactory {
    * @return The processor.
    */
   function get_<T>(name: string): Processor<T> {
-    let processor = PROCESSORS.get(name.toLowerCase());
+    const processor = PROCESSORS.get(name.toLowerCase());
     if (!processor) {
       throw new SREError('Unknown processor ' + name);
     }
@@ -68,7 +68,7 @@ export namespace ProcessorFactory {
    * @return The data structure resulting from the processing the expression.
    */
   export function process<T>(name: string, expr: string): T {
-    let processor = get_(name);
+    const processor = get_(name);
     return processor.processor(expr) as T;
   }
 
@@ -79,7 +79,7 @@ export namespace ProcessorFactory {
    * @return The data structure resulting from the processing the expression.
    */
   export function processOnly<T>(name: string, expr: string): T {
-    let processor = get_(name);
+    const processor = get_(name);
     return processor.process(expr) as T;
   }
 
@@ -90,7 +90,7 @@ export namespace ProcessorFactory {
    * @return A string representation of the result.
    */
   export function print<T>(name: string, data: T): string {
-    let processor = get_(name);
+    const processor = get_(name);
     return Engine.getInstance().pprint
       ? processor.pprint(data)
       : processor.print(data);
@@ -103,8 +103,8 @@ export namespace ProcessorFactory {
    * @return A string representation of the result.
    */
   export function output(name: string, expr: string): string {
-    let processor = get_(name);
-    let data = processor.processor(expr);
+    const processor = get_(name);
+    const data = processor.processor(expr);
     return Engine.getInstance().pprint
       ? processor.pprint(data)
       : processor.print(data);
@@ -117,9 +117,9 @@ export namespace ProcessorFactory {
    * @return A string representation of the result.
    */
   export function keypress(name: string, expr: KeyCode | string): string {
-    let processor = get_(name);
-    let key = processor instanceof KeyProcessor ? processor.key(expr) : expr;
-    let data = processor.processor(key as string);
+    const processor = get_(name);
+    const key = processor instanceof KeyProcessor ? processor.key(expr) : expr;
+    const data = processor.processor(key as string);
     return Engine.getInstance().pprint
       ? processor.pprint(data)
       : processor.print(data);
@@ -251,24 +251,24 @@ export class KeyProcessor<T> extends Processor<T> {
 //  semantic: XML of semantic tree.
 new Processor<Element>('semantic', {
   processor: function (expr) {
-    let mml = DomUtil.parseInput(expr);
+    const mml = DomUtil.parseInput(expr);
     return Semantic.xmlTree(mml) as Element;
   },
   postprocessor: function (xml, _expr) {
-    let setting = Engine.getInstance().speech;
+    const setting = Engine.getInstance().speech;
     if (setting === EngineConst.Speech.NONE) {
       return xml;
     }
     // This avoids temporary attributes (e.g., for grammar) to bleed into
     // the tree.
-    let clone = xml.cloneNode(true) as Element;
+    const clone = xml.cloneNode(true) as Element;
     let speech = SpeechGeneratorUtil.computeMarkup(clone);
     if (setting === EngineConst.Speech.SHALLOW) {
       xml.setAttribute('speech', AuralRendering.finalize(speech));
       return xml;
     }
-    let nodesXml = XpathUtil.evalXPath('.//*[@id]', xml) as Element[];
-    let nodesClone = XpathUtil.evalXPath('.//*[@id]', clone) as Element[];
+    const nodesXml = XpathUtil.evalXPath('.//*[@id]', xml) as Element[];
+    const nodesClone = XpathUtil.evalXPath('.//*[@id]', clone) as Element[];
     for (
       let i = 0, orig, node;
       (orig = nodesXml[i]), (node = nodesClone[i]);
@@ -287,13 +287,13 @@ new Processor<Element>('semantic', {
 //  speech: Aural rendering string.
 new Processor('speech', {
   processor: function (expr) {
-    let mml = DomUtil.parseInput(expr);
-    let xml = Semantic.xmlTree(mml);
-    let descrs = SpeechGeneratorUtil.computeSpeech(xml);
+    const mml = DomUtil.parseInput(expr);
+    const xml = Semantic.xmlTree(mml);
+    const descrs = SpeechGeneratorUtil.computeSpeech(xml);
     return AuralRendering.finalize(AuralRendering.markup(descrs));
   },
   pprint: function (speech) {
-    let str = speech.toString();
+    const str = speech.toString();
     // Pretty Printing wrt. markup renderer.
     return AuralRendering.isXml() ? DomUtil.formatXml(str) : str;
   }
@@ -302,25 +302,25 @@ new Processor('speech', {
 //  json: Json version of the semantic tree.
 new Processor('json', {
   processor: function (expr) {
-    let mml = DomUtil.parseInput(expr);
-    let stree = Semantic.getTree(mml);
+    const mml = DomUtil.parseInput(expr);
+    const stree = Semantic.getTree(mml);
     return stree.toJson();
   },
   postprocessor: function (json: any, expr) {
-    let setting = Engine.getInstance().speech;
+    const setting = Engine.getInstance().speech;
     if (setting === EngineConst.Speech.NONE) {
       return json;
     }
-    let mml = DomUtil.parseInput(expr);
-    let xml = Semantic.xmlTree(mml);
-    let speech = SpeechGeneratorUtil.computeMarkup(xml);
+    const mml = DomUtil.parseInput(expr);
+    const xml = Semantic.xmlTree(mml);
+    const speech = SpeechGeneratorUtil.computeMarkup(xml);
     if (setting === EngineConst.Speech.SHALLOW) {
       json.stree.speech = AuralRendering.finalize(speech);
       return json;
     }
-    let addRec = (json: any) => {
-      let node = XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0] as Element;
-      let speech = SpeechGeneratorUtil.computeMarkup(node);
+    const addRec = (json: any) => {
+      const node = XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0] as Element;
+      const speech = SpeechGeneratorUtil.computeMarkup(node);
       json.speech = AuralRendering.finalize(speech);
       if (json.children) {
         json.children.forEach(addRec);
@@ -340,9 +340,9 @@ new Processor('json', {
 //  description: List of auditory descriptions.
 new Processor('description', {
   processor: function (expr) {
-    let mml = DomUtil.parseInput(expr);
-    let xml = Semantic.xmlTree(mml);
-    let descrs = SpeechGeneratorUtil.computeSpeech(xml);
+    const mml = DomUtil.parseInput(expr);
+    const xml = Semantic.xmlTree(mml);
+    const descrs = SpeechGeneratorUtil.computeSpeech(xml);
     return descrs;
   },
   print: function (descrs) {
@@ -359,7 +359,7 @@ new Processor<Element>('enriched', {
     return Enrich.semanticMathmlSync(expr);
   },
   postprocessor: function (enr, _expr) {
-    let root = WalkerUtil.getSemanticRoot(enr);
+    const root = WalkerUtil.getSemanticRoot(enr);
     switch (Engine.getInstance().speech) {
       case EngineConst.Speech.NONE:
         break;
@@ -383,15 +383,15 @@ new Processor<Element>('enriched', {
 
 new Processor('walker', {
   processor: function (expr) {
-    let generator = SpeechGeneratorFactory.generator('Node');
+    const generator = SpeechGeneratorFactory.generator('Node');
     Processor.LocalState.speechGenerator = generator;
     Processor.LocalState.highlighter = HighlighterFactory.highlighter(
       { color: 'black' },
       { color: 'white' },
       { renderer: 'NativeMML' }
     );
-    let node = ProcessorFactory.process('enriched', expr) as Element;
-    let eml = ProcessorFactory.print('enriched', node);
+    const node = ProcessorFactory.process('enriched', expr) as Element;
+    const eml = ProcessorFactory.print('enriched', node);
     Processor.LocalState.walker = WalkerFactory.walker(
       Engine.getInstance().walker,
       node,
@@ -412,7 +412,7 @@ new KeyProcessor('move', {
     if (!Processor.LocalState.walker) {
       return null;
     }
-    let move = Processor.LocalState.walker.move(direction as any);
+    const move = Processor.LocalState.walker.move(direction as any);
     return move === false
       ? AuralRendering.error(direction)
       : Processor.LocalState.walker.speech();
@@ -421,14 +421,14 @@ new KeyProcessor('move', {
 
 new Processor('number', {
   processor: function (numb) {
-    let num = parseInt(numb, 10);
+    const num = parseInt(numb, 10);
     return isNaN(num) ? '' : LOCALE.NUMBERS.numberToWords(num);
   }
 });
 
 new Processor('ordinal', {
   processor: function (numb) {
-    let num = parseInt(numb, 10);
+    const num = parseInt(numb, 10);
     return isNaN(num) ? '' : LOCALE.NUMBERS.numberToOrdinal(num, false);
   }
 });

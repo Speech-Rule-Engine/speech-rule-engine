@@ -57,7 +57,7 @@ export function siCombiner(prefix: string, unit: string) {
 }
 
 // Namespaces
-export let Combiners: Record<string, Combiner> = {};
+export const Combiners: Record<string, Combiner> = {};
 
 Combiners.identityCombiner = function (a: string, b: string, c: string) {
   return a + b + c;

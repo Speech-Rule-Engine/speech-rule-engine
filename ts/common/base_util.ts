@@ -36,7 +36,7 @@ export function removeEmpty(strs: string[]): string[] {
  * @return The combined list.
  */
 export function interleaveLists(list1: any[], list2: any[]): any[] {
-  let result = [];
+  const result = [];
   while (list1.length || list2.length) {
     list1.length && result.push(list1.shift());
     list2.length && result.push(list2.shift());

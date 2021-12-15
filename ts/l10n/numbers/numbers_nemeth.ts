@@ -30,7 +30,7 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
  * @return The Braille representation of that number.
  */
 function numberToWords(num: number): string {
-  let digits = num.toString().split('');
+  const digits = num.toString().split('');
   return digits
     .map(function (digit) {
       return NUMBERS.ones[parseInt(digit, 10)];

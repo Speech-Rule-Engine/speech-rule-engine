@@ -32,15 +32,15 @@ export class TreeSpeechGenerator extends AbstractSpeechGenerator {
    * @override
    */
   public getSpeech(node: Element, xml: Element) {
-    let speech = this.generateSpeech(node, xml);
+    const speech = this.generateSpeech(node, xml);
     node.setAttribute(this.modality, speech);
-    let nodes = this.getRebuilt().nodeDict;
-    for (let key in nodes) {
+    const nodes = this.getRebuilt().nodeDict;
+    for (const key in nodes) {
       // TODO: Refactor with setting the base semantic tree in the enrich mathml
       //      object.
-      let snode = nodes[key];
-      let innerMml = WalkerUtil.getBySemanticId(xml, key) as Element;
-      let innerNode = WalkerUtil.getBySemanticId(node, key) as Element;
+      const snode = nodes[key];
+      const innerMml = WalkerUtil.getBySemanticId(xml, key) as Element;
+      const innerNode = WalkerUtil.getBySemanticId(node, key) as Element;
       if (!innerMml || !innerNode) {
         continue;
       }

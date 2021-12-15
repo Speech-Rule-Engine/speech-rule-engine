@@ -80,8 +80,8 @@ export class SpeechRuleEngine {
    * @param node DOM node to test applicability of the rule.
    */
   public static debugSpeechRule(rule: SpeechRule, node: Node) {
-    let prec = rule.precondition;
-    let queryResult = rule.context.applyQuery(node, prec.query);
+    const prec = rule.precondition;
+    const queryResult = rule.context.applyQuery(node, prec.query);
     Debugger.getInstance().output(
       prec.query,
       queryResult ? queryResult.toString() : queryResult
@@ -100,8 +100,8 @@ export class SpeechRuleEngine {
    * @param node DOM node to test applicability of the rule.
    */
   public static debugNamedSpeechRule(name: string, node: Node) {
-    let rules = SpeechRuleEngine.getInstance().trie.collectRules();
-    let allRules = rules.filter((rule) => rule.name == name);
+    const rules = SpeechRuleEngine.getInstance().trie.collectRules();
+    const allRules = rules.filter((rule) => rule.name == name);
     for (let i = 0, rule; (rule = allRules[i]); i++) {
       Debugger.getInstance().output(
         'Rule',
@@ -145,7 +145,7 @@ export class SpeechRuleEngine {
     if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
       SpeechRuleEngine.updateEvaluator(node);
     }
-    let timeIn = new Date().getTime();
+    const timeIn = new Date().getTime();
     let result: AuditoryDescription[] = [];
     try {
       result = this.evaluateNode_(node);
@@ -153,7 +153,7 @@ export class SpeechRuleEngine {
       console.error('Something went wrong computing speech.');
       Debugger.getInstance().output(err);
     }
-    let timeOut = new Date().getTime();
+    const timeOut = new Date().getTime();
     Debugger.getInstance().output('Time:', timeOut - timeIn);
     return result;
   }
@@ -164,7 +164,7 @@ export class SpeechRuleEngine {
    *     engine.
    */
   public toString(): string {
-    let allRules = this.trie.collectRules();
+    const allRules = this.trie.collectRules();
     return allRules.map((rule) => rule.toString()).join('\n');
   }
 
@@ -182,15 +182,15 @@ export class SpeechRuleEngine {
     settings: { [feature: string]: string | boolean },
     callback: () => AuditoryDescription[]
   ): AuditoryDescription[] {
-    let engine = Engine.getInstance() as any;
-    let save: { [feature: string]: string | boolean } = {};
-    for (let key in settings) {
+    const engine = Engine.getInstance() as any;
+    const save: { [feature: string]: string | boolean } = {};
+    for (const key in settings) {
       save[key] = engine[key];
       engine[key] = settings[key];
     }
     engine.setDynamicCstr();
-    let result = callback();
-    for (let key in save) {
+    const result = callback();
+    for (const key in save) {
       engine[key] = save[key];
     }
     engine.setDynamicCstr();
@@ -205,7 +205,7 @@ export class SpeechRuleEngine {
   public addStore(set: RulesJson) {
     // This line is important to setup the context functions for stores.
     // It has to run __before__ the first speech rule store is added.
-    let store = StoreFactory.get(set);
+    const store = StoreFactory.get(set);
     if (store.kind !== 'abstract') {
       store.getSpeechRules().forEach((x) => this.trie.addRule(x));
     }
@@ -224,9 +224,9 @@ export class SpeechRuleEngine {
     node: Node,
     grammar: GrammarState
   ) {
-    let assignment: GrammarState = {};
-    for (let key in grammar) {
-      let value = grammar[key];
+    const assignment: GrammarState = {};
+    for (const key in grammar) {
+      const value = grammar[key];
       assignment[key] =
         typeof value === 'string'
           ? // TODO (TS): This could be a span!
@@ -242,13 +242,13 @@ export class SpeechRuleEngine {
    *     added.
    */
   public addEvaluator(store: BaseRuleStore) {
-    let fun = store.evaluateDefault.bind(store);
-    let loc = this.evaluators_[store.locale];
+    const fun = store.evaluateDefault.bind(store);
+    const loc = this.evaluators_[store.locale];
     if (loc) {
       loc[store.modality] = fun;
       return;
     }
-    let mod: { [key: string]: (p1: Node) => AuditoryDescription[] } = {};
+    const mod: { [key: string]: (p1: Node) => AuditoryDescription[] } = {};
     mod[store.modality] = fun;
     this.evaluators_[store.locale] = mod;
   }
@@ -265,7 +265,7 @@ export class SpeechRuleEngine {
     locale: string,
     modality: string
   ): (p1: Node) => AuditoryDescription[] {
-    let loc =
+    const loc =
       this.evaluators_[locale] ||
       this.evaluators_[DynamicCstr.DEFAULT_VALUES[Axis.LOCALE]];
     return loc[modality] || loc[DynamicCstr.DEFAULT_VALUES[Axis.MODALITY]];
@@ -314,13 +314,13 @@ export class SpeechRuleEngine {
    * @return A list of Auditory descriptions.
    */
   private evaluateTree_(node: Element): AuditoryDescription[] {
-    let engine = Engine.getInstance();
+    const engine = Engine.getInstance();
     let result: AuditoryDescription[];
     Debugger.getInstance().output(
       engine.mode !== EngineConst.Mode.HTTP ? node.toString() : node
     );
     Grammar.getInstance().setAttribute(node);
-    let rule = this.lookupRule(node, engine.dynamicCstr);
+    const rule = this.lookupRule(node, engine.dynamicCstr);
     if (!rule) {
       if (engine.strict) {
         return [];
@@ -337,13 +337,13 @@ export class SpeechRuleEngine {
       rule.dynamicCstr.toString(),
       (engine.mode !== EngineConst.Mode.HTTP ? node : node).toString()
     ]);
-    let context = rule.context;
-    let components = rule.action.components;
+    const context = rule.context;
+    const components = rule.action.components;
     result = [];
     for (let i = 0, component; (component = components[i]); i++) {
       let descrs: AuditoryDescription[] = [];
-      let content = component.content || '';
-      let attributes = component.attributes || {};
+      const content = component.content || '';
+      const attributes = component.attributes || {};
       let multi = false;
       if (component.grammar) {
         this.processGrammar(context, node, component.grammar);
@@ -352,19 +352,19 @@ export class SpeechRuleEngine {
       // Retooling the engine
       if (attributes.engine) {
         saveEngine = Engine.getInstance().dynamicCstr.getComponents();
-        let features = Grammar.parseInput(attributes.engine);
+        const features = Grammar.parseInput(attributes.engine);
         Engine.getInstance().setDynamicCstr(features as AxisMap);
       }
       switch (component.type) {
         case ActionType.NODE:
-          let selected = context.applyQuery(node, content) as Element;
+          const selected = context.applyQuery(node, content) as Element;
           if (selected) {
             descrs = this.evaluateTree_(selected);
           }
           break;
         case ActionType.MULTI:
           multi = true;
-          let selects = context.applySelector(node, content) as Element[];
+          const selects = context.applySelector(node, content) as Element[];
           if (selects.length > 0) {
             descrs = this.evaluateNodeList_(
               context,
@@ -380,10 +380,10 @@ export class SpeechRuleEngine {
         case ActionType.TEXT:
           // TODO (span): We need the span concept here as a parameter with
           // xpath.
-          let xpath = attributes['span'];
-          let attrs: { [key: string]: string } = {};
+          const xpath = attributes['span'];
+          const attrs: { [key: string]: string } = {};
           if (xpath) {
-            let nodes = XpathUtil.evalXPath(xpath, node);
+            const nodes = XpathUtil.evalXPath(xpath, node);
             // TODO: Those could be multiple nodes!
             //       We need the right xpath expression and combine their
             //       attributes.
@@ -392,7 +392,7 @@ export class SpeechRuleEngine {
               attrs.extid = (nodes[0] as Element).getAttribute('extid');
             }
           }
-          let str = context.constructString(node, content) as string | Span[];
+          const str = context.constructString(node, content) as string | Span[];
           if (str) {
             if (Array.isArray(str)) {
               descrs = str.map(function (span) {
@@ -467,16 +467,16 @@ export class SpeechRuleEngine {
     if (nodes === []) {
       return [];
     }
-    let sep = sepStr || '';
-    let cont = ctxtStr || '';
-    let cFunc = context.contextFunctions.lookup(ctxtFunc);
-    let ctxtClosure = cFunc
+    const sep = sepStr || '';
+    const cont = ctxtStr || '';
+    const cFunc = context.contextFunctions.lookup(ctxtFunc);
+    const ctxtClosure = cFunc
       ? cFunc(nodes, cont)
       : function () {
           return cont;
         };
-    let sFunc = context.contextFunctions.lookup(sepFunc);
-    let sepClosure = sFunc
+    const sFunc = context.contextFunctions.lookup(sepFunc);
+    const sepClosure = sFunc
       ? sFunc(nodes, sep)
       : function () {
           return [
@@ -485,12 +485,12 @@ export class SpeechRuleEngine {
         };
     let result: AuditoryDescription[] = [];
     for (let i = 0, node; (node = nodes[i]); i++) {
-      let descrs = this.evaluateTree_(node);
+      const descrs = this.evaluateTree_(node);
       if (descrs.length > 0) {
         descrs[0]['context'] = ctxtClosure() + (descrs[0]['context'] || '');
         result = result.concat(descrs);
         if (i < nodes.length - 1) {
-          let text = sepClosure() as AuditoryDescription[];
+          const text = sepClosure() as AuditoryDescription[];
           result = result.concat(text);
         }
       }
@@ -509,7 +509,7 @@ export class SpeechRuleEngine {
     props: { [key: string]: string },
     _multi: boolean
   ) {
-    let layout = props.layout;
+    const layout = props.layout;
     if (!layout) {
       return;
     }
@@ -542,18 +542,18 @@ export class SpeechRuleEngine {
     multi: boolean,
     node: Node
   ): AuditoryDescription[] {
-    let personality: { [key: string]: string | number } = {};
+    const personality: { [key: string]: string | number } = {};
     let pause = null;
-    for (let key of EngineConst.personalityPropList) {
-      let value = props[key];
+    for (const key of EngineConst.personalityPropList) {
+      const value = props[key];
       if (typeof value === 'undefined') {
         continue;
       }
-      let numeral = parseFloat(value);
+      const numeral = parseFloat(value);
       // if (!isNaN(numeral)) {
       //   personality[sre.Engine.personalityProps[key]] = numeral;
       // }
-      let realValue = isNaN(numeral)
+      const realValue = isNaN(numeral)
         ? value.charAt(0) === '"'
           ? value.slice(1, -1)
           : value
@@ -581,7 +581,7 @@ export class SpeechRuleEngine {
     }
     // Adds pause if there was one.
     if (pause && descrs.length) {
-      let last = descrs[descrs.length - 1];
+      const last = descrs[descrs.length - 1];
       if (last.text || Object.keys(last.personality).length) {
         descrs.push(
           AuditoryDescription.create({
@@ -603,9 +603,9 @@ export class SpeechRuleEngine {
    */
   private addExternalAttributes_(descr: AuditoryDescription, node: Element) {
     if (node.hasAttributes()) {
-      let attrs = node.attributes;
+      const attrs = node.attributes;
       for (let i = attrs.length - 1; i >= 0; i--) {
-        let key = attrs[i].name;
+        const key = attrs[i].name;
         if (!descr.attributes[key] && key.match(/^ext/)) {
           descr.attributes[key] = attrs[i].value;
         }
@@ -628,8 +628,8 @@ export class SpeechRuleEngine {
       descr['personality'] = personality;
       return descr;
     }
-    let descrPersonality = descr['personality'];
-    for (let p in personality) {
+    const descrPersonality = descr['personality'];
+    for (const p in personality) {
       // This could be capped by some upper and lower bound.
       if (
         descrPersonality[p] &&
@@ -654,10 +654,10 @@ export class SpeechRuleEngine {
   //       orders.
   //       Try to make this dependent on the order of the dynamicCstr.
   private updateConstraint_() {
-    let dynamic = Engine.getInstance().dynamicCstr;
-    let strict = Engine.getInstance().strict;
-    let trie = this.trie;
-    let props: { [key: string]: string[] } = {};
+    const dynamic = Engine.getInstance().dynamicCstr;
+    const strict = Engine.getInstance().strict;
+    const trie = this.trie;
+    const props: { [key: string]: string[] } = {};
     let locale = dynamic.getValue(Axis.LOCALE);
     let modality = dynamic.getValue(Axis.MODALITY);
     let domain = dynamic.getValue(Axis.DOMAIN);
@@ -682,15 +682,15 @@ export class SpeechRuleEngine {
     props[Axis.DOMAIN] = [
       modality !== 'speech' ? DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN] : domain
     ];
-    let order = dynamic.getOrder();
+    const order = dynamic.getOrder();
     for (let i = 0, axis; (axis = order[i]); i++) {
       if (!props[axis]) {
-        let value = dynamic.getValue(axis);
-        let valueSet = this.makeSet_(
+        const value = dynamic.getValue(axis);
+        const valueSet = this.makeSet_(
           value,
           (dynamic as ClearspeakPreferences).preference
         );
-        let def = DynamicCstr.DEFAULT_VALUES[axis];
+        const def = DynamicCstr.DEFAULT_VALUES[axis];
         if (!strict && value !== def) {
           valueSet.push(def);
         }
@@ -732,7 +732,7 @@ export class SpeechRuleEngine {
     ) {
       return null;
     }
-    let matchingRules = this.lookupRules(node, dynamic);
+    const matchingRules = this.lookupRules(node, dynamic);
     return matchingRules.length > 0
       ? this.pickMostConstraint_(dynamic, matchingRules)
       : null;
@@ -761,7 +761,7 @@ export class SpeechRuleEngine {
     _dynamic: DynamicCstr,
     rules: SpeechRule[]
   ): SpeechRule {
-    let comparator = Engine.getInstance().comparator;
+    const comparator = Engine.getInstance().comparator;
     rules.sort(function (r1, r2) {
       return (
         comparator.compare(r1.dynamicCstr, r2.dynamicCstr) ||
@@ -805,9 +805,9 @@ export namespace StoreFactory {
   }
 
   export function get(set: RulesJson) {
-    let name = `${set.locale}.${set.modality}.${set.domain}`;
+    const name = `${set.locale}.${set.modality}.${set.domain}`;
     if (set.kind === 'actions') {
-      let store = stores.get(name);
+      const store = stores.get(name);
       store.parse(set);
       return store;
     }
@@ -819,7 +819,7 @@ export namespace StoreFactory {
         set.domain
       );
     }
-    let store = factory(set.modality);
+    const store = factory(set.modality);
     stores.set(name, store);
     if (set.inherits) {
       store.inherits = stores.get(

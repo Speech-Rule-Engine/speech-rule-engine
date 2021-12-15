@@ -60,11 +60,11 @@ export class CaseBinomial extends AbstractEnrichCase {
     if (!this.semantic.childNodes.length) {
       return this.mml;
     }
-    let child = this.semantic.childNodes[0];
+    const child = this.semantic.childNodes[0];
     this.mml = EnrichMathml.walkTree(child as SemanticNode);
     // Adds a redundant mrow to include the line information.
     if (this.mml.hasAttribute(EnrichMathml.Attribute.TYPE)) {
-      let mrow = DomUtil.createElement('mrow');
+      const mrow = DomUtil.createElement('mrow');
       mrow.setAttribute(EnrichMathml.Attribute.ADDED, 'true');
       DomUtil.replaceNode(this.mml, mrow);
       mrow.appendChild(this.mml);

@@ -40,7 +40,7 @@ export class TableWalker extends SyntaxWalker {
 
   private key_: KeyCode | null = null;
 
-  private row_: number = 0;
+  private row_ = 0;
 
   private currentTable_: SemanticNode | null = null;
 
@@ -72,7 +72,7 @@ export class TableWalker extends SyntaxWalker {
    */
   public move(key: KeyCode) {
     this.key_ = key;
-    let result = super.move(key);
+    const result = super.move(key);
     this.modifier = false;
     return result;
   }
@@ -102,13 +102,13 @@ export class TableWalker extends SyntaxWalker {
     }
     if (this.moved === WalkerMoves.ROW) {
       this.moved = WalkerMoves.CELL;
-      let column = this.key_ - KeyCode.ZERO;
+      const column = this.key_ - KeyCode.ZERO;
       if (!this.isLegalJump_(this.row_, column)) {
         return this.getFocus();
       }
       return this.jumpCell_(this.row_, column);
     }
-    let row = this.key_ - KeyCode.ZERO;
+    const row = this.key_ - KeyCode.ZERO;
     if (row > this.currentTable_.childNodes.length) {
       return this.getFocus();
     }
@@ -121,7 +121,7 @@ export class TableWalker extends SyntaxWalker {
    * @override
    */
   public undo() {
-    let focus = super.undo();
+    const focus = super.undo();
     if (focus === this.firstJump) {
       this.firstJump = null;
     }
@@ -132,7 +132,7 @@ export class TableWalker extends SyntaxWalker {
    * @return True if the focused is an eligible table cell.
    */
   private eligibleCell_(): boolean {
-    let primary = this.getFocus().getSemanticPrimary();
+    const primary = this.getFocus().getSemanticPrimary();
     return (
       this.modifier &&
       primary.type === SemanticType.CELL &&
@@ -146,15 +146,15 @@ export class TableWalker extends SyntaxWalker {
    * @return The new focus.
    */
   private verticalMove_(direction: boolean): Focus | null {
-    let parent = this.previousLevel();
+    const parent = this.previousLevel();
     if (!parent) {
       return null;
     }
-    let origFocus = this.getFocus();
-    let origIndex = this.levels.indexOf(this.primaryId()) as number;
-    let origLevel = this.levels.pop();
-    let parentIndex = this.levels.indexOf(parent) as number;
-    let row = this.levels.get(
+    const origFocus = this.getFocus();
+    const origIndex = this.levels.indexOf(this.primaryId()) as number;
+    const origLevel = this.levels.pop();
+    const parentIndex = this.levels.indexOf(parent) as number;
+    const row = this.levels.get(
       direction ? parentIndex + 1 : parentIndex - 1
     ) as string;
     if (!row) {
@@ -162,8 +162,8 @@ export class TableWalker extends SyntaxWalker {
       return null;
     }
     this.setFocus(this.singletonFocus(row));
-    let children = this.nextLevel();
-    let newNode = children[origIndex];
+    const children = this.nextLevel();
+    const newNode = children[origIndex];
     if (!newNode) {
       this.setFocus(origFocus);
       this.levels.push(origLevel);
@@ -187,7 +187,7 @@ export class TableWalker extends SyntaxWalker {
       this.virtualize(false);
     }
     // We know the cell position exists!
-    let id = this.currentTable_.id.toString();
+    const id = this.currentTable_.id.toString();
     let level;
     // Pop foci until we have reached the table.
     do {
@@ -197,7 +197,7 @@ export class TableWalker extends SyntaxWalker {
     this.levels.push(level);
     this.setFocus(this.singletonFocus(id));
     this.levels.push(this.nextLevel());
-    let semRow = this.currentTable_.childNodes[row - 1];
+    const semRow = this.currentTable_.childNodes[row - 1];
     this.setFocus(this.singletonFocus(semRow.id.toString()));
     this.levels.push(this.nextLevel());
     return this.singletonFocus(semRow.childNodes[column - 1].id.toString());
@@ -211,7 +211,7 @@ export class TableWalker extends SyntaxWalker {
    * @return True if the cell exists.
    */
   private isLegalJump_(row: number, column: number): boolean {
-    let xmlTable = DomUtil.querySelectorAllByAttrValue(
+    const xmlTable = DomUtil.querySelectorAllByAttrValue(
       this.getRebuilt().xml,
       'id',
       this.currentTable_.id.toString()
@@ -219,11 +219,11 @@ export class TableWalker extends SyntaxWalker {
     if (!xmlTable || xmlTable.hasAttribute('alternative')) {
       return false;
     }
-    let rowNode = this.currentTable_.childNodes[row - 1];
+    const rowNode = this.currentTable_.childNodes[row - 1];
     if (!rowNode) {
       return false;
     }
-    let xmlRow = DomUtil.querySelectorAllByAttrValue(
+    const xmlRow = DomUtil.querySelectorAllByAttrValue(
       xmlTable,
       'id',
       rowNode.id.toString()

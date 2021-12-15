@@ -60,7 +60,7 @@ const namedColors: { [key: string]: ChannelColor } = {
  * @return The augmented color definition.
  */
 function getChannelColor(color: Color, deflt: string): ChannelColor {
-  let col = color || { color: deflt };
+  const col = color || { color: deflt };
   let channel = col.hasOwnProperty('color')
     ? namedColors[(col as NamedColor).color]
     : col;
@@ -77,7 +77,7 @@ function getChannelColor(color: Color, deflt: string): ChannelColor {
  * @return The normalized color definition.
  */
 function normalizeColor(color: ChannelColor): ChannelColor {
-  let normalizeCol = (col: number) => {
+  const normalizeCol = (col: number) => {
     col = Math.max(col, 0);
     col = Math.min(255, col);
     return Math.round(col);
@@ -94,12 +94,12 @@ export class ColorPicker {
   /**
    * The default background color if a none existing color is provided.
    */
-  private static DEFAULT_BACKGROUND_: string = 'blue';
+  private static DEFAULT_BACKGROUND_ = 'blue';
 
   /**
    * The default color if a none existing color is provided.
    */
-  private static DEFAULT_FOREGROUND_: string = 'black';
+  private static DEFAULT_FOREGROUND_ = 'black';
 
   /**
    * The foreground color in RGBa.
@@ -117,7 +117,7 @@ export class ColorPicker {
    * @return The hex string.
    */
   private static toHex(num: number): string {
-    let hex = num.toString(16);
+    const hex = num.toString(16);
     return hex.length === 1 ? '0' + hex : hex;
   }
 
@@ -142,7 +142,7 @@ export class ColorPicker {
    * @return The color in RGBa format.
    */
   public rgba(): StringColor {
-    let rgba = function (col: ChannelColor) {
+    const rgba = function (col: ChannelColor) {
       return (
         'rgba(' +
         col.red +
@@ -166,7 +166,7 @@ export class ColorPicker {
    * @return The color in Rgb format.
    */
   public rgb(): StringColor {
-    let rgb = function (col: ChannelColor) {
+    const rgb = function (col: ChannelColor) {
       return 'rgb(' + col.red + ',' + col.green + ',' + col.blue + ')';
     };
     return {
@@ -182,7 +182,7 @@ export class ColorPicker {
    * @return The color in Hex format.
    */
   public hex(): StringColor {
-    let hex = function (col: ChannelColor) {
+    const hex = function (col: ChannelColor) {
       return (
         '#' +
         ColorPicker.toHex(col.red) +
@@ -213,9 +213,9 @@ function hsl2rgb(
 ): { red: number; green: number; blue: number } {
   s = s > 1 ? s / 100 : s;
   l = l > 1 ? l / 100 : l;
-  let c = (1 - Math.abs(2 * l - 1)) * s;
-  let x = c * (1 - Math.abs(((h / 60) % 2) - 1));
-  let m = l - c / 2;
+  const c = (1 - Math.abs(2 * l - 1)) * s;
+  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+  const m = l - c / 2;
   let r = 0,
     g = 0,
     b = 0;

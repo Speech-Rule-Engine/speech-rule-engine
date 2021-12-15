@@ -68,8 +68,8 @@ namespace CstrValues {
    *     for all constraint attributes.
    */
   export function get(): AxisProperties {
-    let result: AxisProperties = {};
-    for (let [key, values] of Object.entries(axisToValues)) {
+    const result: AxisProperties = {};
+    for (const [key, values] of Object.entries(axisToValues)) {
       result[key] = Object.keys(values);
     }
     return result;
@@ -83,8 +83,8 @@ export class DynamicProperties {
    * @param cstrList Dynamic property lists for the Axes.
    */
   public static createProp(...cstrList: string[][]): DynamicProperties {
-    let axes = DynamicCstr.DEFAULT_ORDER;
-    let dynamicCstr: AxisProperties = {};
+    const axes = DynamicCstr.DEFAULT_ORDER;
+    const dynamicCstr: AxisProperties = {};
     for (let i = 0, l = cstrList.length, k = axes.length; i < l && i < k; i++) {
       dynamicCstr[axes[i]] = cstrList[i];
     }
@@ -147,7 +147,7 @@ export class DynamicProperties {
    * @return Ordered list of lists of constraint values.
    */
   public allProperties(): string[][] {
-    let propLists: string[][] = [];
+    const propLists: string[][] = [];
     this.order.forEach((key) => propLists.push(this.getProperty(key).slice()));
     return propLists;
   }
@@ -156,7 +156,7 @@ export class DynamicProperties {
    * @override
    */
   public toString() {
-    let cstrStrings: string[] = [];
+    const cstrStrings: string[] = [];
     this.order.forEach((key) =>
       cstrStrings.push(key + ': ' + this.getProperty(key).toString())
     );
@@ -179,7 +179,7 @@ export class DynamicCstr extends DynamicProperties {
   /**
    *  Default values for to assign. Value is default.
    */
-  public static DEFAULT_VALUE: string = 'default';
+  public static DEFAULT_VALUE = 'default';
 
   /**
    *  Default values for axes.
@@ -200,8 +200,8 @@ export class DynamicCstr extends DynamicProperties {
    * @param cstrList Dynamic constraint values for the Axes.
    */
   public static createCstr(...cstrList: string[]): DynamicCstr {
-    let axes = DynamicCstr.DEFAULT_ORDER;
-    let dynamicCstr: AxisMap = {};
+    const axes = DynamicCstr.DEFAULT_ORDER;
+    const dynamicCstr: AxisMap = {};
     for (let i = 0, l = cstrList.length, k = axes.length; i < l && i < k; i++) {
       dynamicCstr[axes[i]] = cstrList[i];
     }
@@ -226,9 +226,9 @@ export class DynamicCstr extends DynamicProperties {
    * @return True if the order only contains valid axis descriptions.
    */
   public static validOrder(order: AxisOrder): boolean {
-    let axes = DynamicCstr.DEFAULT_ORDER.slice();
+    const axes = DynamicCstr.DEFAULT_ORDER.slice();
     return order.every((x) => {
-      let index = axes.indexOf(x);
+      const index = axes.indexOf(x);
       return index !== -1 && axes.splice(index, 1);
     });
   }
@@ -240,8 +240,8 @@ export class DynamicCstr extends DynamicProperties {
    * @param opt_order A parse order of the keys.
    */
   constructor(components_: AxisMap, order?: AxisOrder) {
-    let properties: AxisProperties = {};
-    for (let [key, value] of Object.entries(components_)) {
+    const properties: AxisProperties = {};
+    for (const [key, value] of Object.entries(components_)) {
       properties[key] = [value];
       CstrValues.add(key as Axis, value);
     }
@@ -278,13 +278,13 @@ export class DynamicCstr extends DynamicProperties {
    * @override
    */
   public allProperties() {
-    let propLists = super.allProperties();
+    const propLists = super.allProperties();
     for (
       let i = 0, props, key;
       (props = propLists[i]), (key = this.order[i]);
       i++
     ) {
-      let value = this.getValue(key);
+      const value = this.getValue(key);
       if (props.indexOf(value) === -1) {
         props.unshift(value);
       }
@@ -305,12 +305,12 @@ export class DynamicCstr extends DynamicProperties {
    * @return True if the preconditions apply to the node.
    */
   public equal(cstr: DynamicCstr): boolean {
-    let keys1 = cstr.getAxes();
+    const keys1 = cstr.getAxes();
     if (this.order.length !== keys1.length) {
       return false;
     }
     for (let j = 0, key; (key = keys1[j]); j++) {
-      let comp2 = this.getValue(key);
+      const comp2 = this.getValue(key);
       if (!comp2 || cstr.getValue(key) !== comp2) {
         return false;
       }
@@ -334,14 +334,14 @@ export class DynamicCstrParser {
    * @return The dynamic constraint.
    */
   public parse(str: string): DynamicCstr {
-    let order = str.split('.');
-    let cstr: AxisMap = {};
+    const order = str.split('.');
+    const cstr: AxisMap = {};
     if (order.length > this.order.length) {
       throw new Error('Invalid dynamic constraint: ' + cstr);
     }
     let j = 0;
     for (let i = 0, key; (key = this.order[i]), order.length; i++, j++) {
-      let value = order.shift();
+      const value = order.shift();
       cstr[key] = value;
     }
     return new DynamicCstr(cstr, this.order.slice(0, j));
@@ -425,11 +425,11 @@ export class DefaultComparator implements Comparator {
    * @override
    */
   public match(cstr: DynamicCstr) {
-    let keys1 = cstr.getAxes();
+    const keys1 = cstr.getAxes();
     return (
       keys1.length === this.reference.getAxes().length &&
       keys1.every((key) => {
-        let value = cstr.getValue(key);
+        const value = cstr.getValue(key);
         return (
           value === this.reference.getValue(key) ||
           this.fallback.getProperty(key).indexOf(value) !== -1
@@ -444,13 +444,13 @@ export class DefaultComparator implements Comparator {
   public compare(cstr1: DynamicCstr, cstr2: DynamicCstr) {
     let ignore = false;
     for (let i = 0, key; (key = this.order[i]); i++) {
-      let value1 = cstr1.getValue(key);
-      let value2 = cstr2.getValue(key);
+      const value1 = cstr1.getValue(key);
+      const value2 = cstr2.getValue(key);
       // As long as the constraint values are the same as the reference value,
       // we continue to compare them, otherwise we ignore them, to go for the
       // best matching fallback rule, wrt. priority order.
       if (!ignore) {
-        let ref = this.reference.getValue(key);
+        const ref = this.reference.getValue(key);
         if (ref === value1 && ref !== value2) {
           return -1;
         }
@@ -464,9 +464,9 @@ export class DefaultComparator implements Comparator {
           ignore = true;
         }
       }
-      let prop = this.fallback.getProperty(key);
-      let index1 = prop.indexOf(value1);
-      let index2 = prop.indexOf(value2);
+      const prop = this.fallback.getProperty(key);
+      const index1 = prop.indexOf(value1);
+      const index2 = prop.indexOf(value2);
       if (index1 < index2) {
         return -1;
       }

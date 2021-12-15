@@ -49,7 +49,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
    * @override
    */
   public initLevels() {
-    let levels = new Levels();
+    const levels = new Levels();
     levels.push([this.primaryId()]);
     return levels as Levels<string>;
   }
@@ -59,7 +59,7 @@ export class SyntaxWalker extends AbstractWalker<string> {
    */
   public up() {
     super.up();
-    let parent = this.previousLevel();
+    const parent = this.previousLevel();
     if (!parent) {
       return null;
     }
@@ -72,11 +72,11 @@ export class SyntaxWalker extends AbstractWalker<string> {
    */
   public down() {
     super.down();
-    let children = this.nextLevel();
+    const children = this.nextLevel();
     if (children.length === 0) {
       return null;
     }
-    let focus = this.singletonFocus(children[0]);
+    const focus = this.singletonFocus(children[0]);
     if (focus) {
       this.levels.push(children);
     }
@@ -129,11 +129,11 @@ export class SyntaxWalker extends AbstractWalker<string> {
    */
   public left() {
     super.left();
-    let index = this.levels.indexOf(this.primaryId());
+    const index = this.levels.indexOf(this.primaryId());
     if (index === null) {
       return null;
     }
-    let id = this.levels.get(index - 1);
+    const id = this.levels.get(index - 1);
     return id ? this.singletonFocus(id) : null;
   }
 
@@ -142,11 +142,11 @@ export class SyntaxWalker extends AbstractWalker<string> {
    */
   public right() {
     super.right();
-    let index = this.levels.indexOf(this.primaryId());
+    const index = this.levels.indexOf(this.primaryId());
     if (index === null) {
       return null;
     }
-    let id = this.levels.get(index + 1);
+    const id = this.levels.get(index + 1);
     return id ? this.singletonFocus(id) : null;
   }
 

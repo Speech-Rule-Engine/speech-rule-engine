@@ -40,7 +40,7 @@ export function fr(): Locale {
 }
 
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
 
   loc.FUNCTIONS.fracNestDepth = (_node) => false;

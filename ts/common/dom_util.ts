@@ -32,7 +32,7 @@ import XpathUtil from './xpath_util';
  * @return The array of nodes in the nodeList.
  */
 export function toArray(nodeList: NodeList | NamedNodeMap): any[] {
-  let nodeArray = [];
+  const nodeArray = [];
   for (let i = 0, m = nodeList.length; i < m; i++) {
     nodeArray.push(nodeList[i]);
   }
@@ -67,15 +67,15 @@ export const XML_ENTITIES: { [key: string]: boolean } = {
  * @return The XML document structure corresponding to the node.
  */
 export function parseInput(input: string): Element {
-  let dp = new SystemExternal.xmldom.DOMParser();
-  let clean_input = trimInput_(input);
-  let allValues = clean_input.match(/&(?!lt|gt|amp|quot|apos)\w+;/g);
-  let html = !!allValues;
+  const dp = new SystemExternal.xmldom.DOMParser();
+  const clean_input = trimInput_(input);
+  const allValues = clean_input.match(/&(?!lt|gt|amp|quot|apos)\w+;/g);
+  const html = !!allValues;
   if (!clean_input) {
     throw new Error('Empty input!');
   }
   try {
-    let doc = dp.parseFromString(clean_input, html ? 'text/html' : 'text/xml');
+    const doc = dp.parseFromString(clean_input, html ? 'text/html' : 'text/xml');
     if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
       XpathUtil.currentDocument = doc;
       return html ? doc.body.childNodes[0] : doc.documentElement;
@@ -182,7 +182,7 @@ export function formatXml(xml: string): string {
     let indent = 0;
     if (node.match(/^<\w[^>\/]*>[^>]+$/)) {
       // Start node with trailing content.
-      let match = matchingStartEnd_(node, split[0]);
+      const match = matchingStartEnd_(node, split[0]);
       if (match[0]) {
         // Combine with end node
         if (match[1]) {
@@ -210,8 +210,8 @@ export function formatXml(xml: string): string {
       indent = 1;
     } else if (node.match(/^<\w[^>]*\/>.+$/)) {
       // Empty tag node with trailing mixed content.
-      let position = node.indexOf('>') + 1;
-      let rest = node.slice(position);
+      const position = node.indexOf('>') + 1;
+      const rest = node.slice(position);
       if (
         // In case of trailing spaces.
         rest.trim()
@@ -242,8 +242,8 @@ export function matchingStartEnd_(
   if (!end) {
     return [false, ''];
   }
-  let tag1 = start.match(/^<([^> ]+).*>/);
-  let tag2 = end.match(/^<\/([^>]+)>(.*)/);
+  const tag1 = start.match(/^<([^> ]+).*>/);
+  const tag2 = end.match(/^<\/([^>]+)>(.*)/);
   return tag1 && tag2 && tag1[1] === tag2[1] ? [true, tag2[2]] : [false, ''];
 }
 

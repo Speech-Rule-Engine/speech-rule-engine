@@ -66,11 +66,11 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
     b: number,
     c: number,
     d: number,
-    decimals: number = 0
+    decimals = 0
   ) {
     this.scaleFunction = (x) => {
-      let delta = (x - a) / (b - a);
-      let num = c * (1 - delta) + d * delta;
+      const delta = (x - a) / (b - a);
+      const num = c * (1 - delta) + d * delta;
       /// TODO (TS): Avoid all that casting!
       return +(
         Math.round((num + 'e+' + decimals) as any as number) +

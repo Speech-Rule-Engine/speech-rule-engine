@@ -33,9 +33,9 @@ export class AcssRenderer extends MarkupRenderer {
   public markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
     this.setScaleFunction(-2, 2, 0, 10, 0);
-    let markup = AudioUtil.personalityMarkup(descrs);
-    let result = [];
-    let currentPers: AudioUtil.Tags = { open: [] };
+    const markup = AudioUtil.personalityMarkup(descrs);
+    const result = [];
+    const currentPers: AudioUtil.Tags = { open: [] };
     let pause = null;
     let isString = false;
     for (let i = 0, descr; (descr = markup[i]); i++) {
@@ -54,7 +54,7 @@ export class AcssRenderer extends MarkupRenderer {
         }
         continue;
       }
-      let str = '"' + this.merge(descr.span) + '"';
+      const str = '"' + this.merge(descr.span) + '"';
       // var str = '"' + descr.span.join(this.getSeparator()) + '"';
       // var str = '"' + descr.string.join(this.getSeparator()) + '"';
       isString = true;
@@ -62,7 +62,7 @@ export class AcssRenderer extends MarkupRenderer {
         result.push(this.pause(pause));
         pause = null;
       }
-      let prosody = this.prosody_(currentPers);
+      const prosody = this.prosody_(currentPers);
       result.push(prosody ? '(text (' + prosody + ') ' + str + ')' : str);
     }
     return '(exp ' + result.join(' ') + ')';
@@ -108,8 +108,8 @@ export class AcssRenderer extends MarkupRenderer {
    * @return The S-expression.
    */
   private prosody_(pros: AudioUtil.Tags): string {
-    let keys: EngineConst.personalityProps[] = pros.open;
-    let result = [];
+    const keys: EngineConst.personalityProps[] = pros.open;
+    const result = [];
     for (let i = 0, key; (key = keys[i]); i++) {
       result.push(this.prosodyElement(key, pros[key]));
     }

@@ -36,22 +36,22 @@ export class HtmlHighlighter extends AbstractHighlighter {
    * @override
    */
   public highlightNode(node: HTMLElement) {
-    let info: Highlight = {
+    const info: Highlight = {
       node: node,
       foreground: node.style.color,
       position: node.style.position
     };
-    let color = this.color.rgb();
+    const color = this.color.rgb();
     node.style.color = color.foreground;
     node.style.position = 'relative';
     // TODO (TS): Work out what this is for.
-    let bbox = (node as any).bbox;
+    const bbox = (node as any).bbox;
     if (bbox && bbox.w) {
       // vertical and horizontal padding
-      let vpad = 0.05;
-      let hpad = 0;
-      let span = DomUtil.createElement('span') as HTMLElement;
-      let left = parseFloat(node.style.paddingLeft || '0');
+      const vpad = 0.05;
+      const hpad = 0;
+      const span = DomUtil.createElement('span') as HTMLElement;
+      const left = parseFloat(node.style.paddingLeft || '0');
       span.style.backgroundColor = color.background;
       span.style.opacity = color.alphaback.toString();
       span.style.display = 'inline-block';
@@ -71,7 +71,7 @@ export class HtmlHighlighter extends AbstractHighlighter {
    * @override
    */
   public unhighlightNode(info: Highlight) {
-    let node = info.node;
+    const node = info.node;
     node.style.color = info.foreground;
     node.style.position = info.position;
     if (info.box) {

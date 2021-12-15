@@ -38,10 +38,10 @@ namespace UnitUtil {
     nodes: Element[],
     _context: string
   ): () => AuditoryDescription[] {
-    let children = nodes;
+    const children = nodes;
     let counter = 0;
     return function () {
-      let descr = AuditoryDescription.create(
+      const descr = AuditoryDescription.create(
         {
           text:
             rightMostUnit(children[counter]) &&
@@ -73,8 +73,8 @@ namespace UnitUtil {
       if (node.getAttribute('role') === 'unit') {
         return true;
       }
-      let tag = node.tagName;
-      let children = XpathUtil.evalXPath('children/*', node);
+      const tag = node.tagName;
+      const children = XpathUtil.evalXPath('children/*', node);
       node = (
         SCRIPT_ELEMENTS.indexOf(tag) !== -1
           ? children[0]
@@ -93,7 +93,7 @@ namespace UnitUtil {
       if (node.getAttribute('role') === 'unit') {
         return true;
       }
-      let children = XpathUtil.evalXPath('children/*', node);
+      const children = XpathUtil.evalXPath('children/*', node);
       node = children[0] as Element;
     }
     return false;

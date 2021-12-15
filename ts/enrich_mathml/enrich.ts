@@ -32,8 +32,8 @@ import * as EnrichMathml from './enrich_mathml';
  * @return Semantically enriched MathML node.
  */
 export function semanticMathmlNode(mml: Element): Element {
-  let clone = mml.cloneNode(true) as Element;
-  let tree = Semantic.getTree(clone);
+  const clone = mml.cloneNode(true) as Element;
+  const tree = Semantic.getTree(clone);
   return EnrichMathml.enrich(clone, tree);
 }
 
@@ -43,7 +43,7 @@ export function semanticMathmlNode(mml: Element): Element {
  * @return The modified MathML element.
  */
 export function semanticMathmlSync(expr: string): Element {
-  let mml = DomUtil.parseInput(expr);
+  const mml = DomUtil.parseInput(expr);
   return semanticMathmlNode(mml);
 }
 
@@ -54,7 +54,7 @@ export function semanticMathmlSync(expr: string): Element {
  */
 export function semanticMathml(expr: string, callback: (p1: Element) => any) {
   EnginePromise.getall().then(() => {
-    let mml = DomUtil.parseInput(expr);
+    const mml = DomUtil.parseInput(expr);
     callback(semanticMathmlNode(mml));
   });
 }
@@ -67,7 +67,7 @@ export function semanticMathml(expr: string, callback: (p1: Element) => any) {
 export function testTranslation__(expr: string): string {
   // dummy call
   Debugger.getInstance().init();
-  let mml = semanticMathmlSync(prepareMmlString(expr)).toString();
+  const mml = semanticMathmlSync(prepareMmlString(expr)).toString();
   EnrichMathml.removeAttributePrefix(mml);
   Debugger.getInstance().exit();
   return mml;

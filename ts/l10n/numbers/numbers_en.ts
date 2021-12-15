@@ -57,7 +57,7 @@ function numberToWords(num: number): string {
   let pos = 0;
   let str = '';
   while (num > 0) {
-    let hundreds = num % 1000;
+    const hundreds = num % 1000;
     if (hundreds) {
       str =
         hundredsToWords_(num % 1000) +
@@ -84,7 +84,7 @@ function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 2) {
     return plural ? 'halves' : 'half';
   }
-  let ordinal = wordOrdinal(num);
+  const ordinal = wordOrdinal(num);
   return plural ? ordinal + 's' : ordinal;
 }
 
@@ -123,8 +123,8 @@ function wordOrdinal(num: number): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let tens = num % 100;
-  let numStr = num.toString();
+  const tens = num % 100;
+  const numStr = num.toString();
   if (tens > 10 && tens < 20) {
     return numStr + 'th';
   }

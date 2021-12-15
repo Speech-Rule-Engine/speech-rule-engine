@@ -47,7 +47,7 @@ abstract class FunctionsStore<S> {
    * @param store A speech rule store.
    */
   public addStore(store: FunctionsStore<S>) {
-    let keys = Object.keys(store.store);
+    const keys = Object.keys(store.store);
     for (let i = 0, key; (key = keys[i]); i++) {
       this.add(key, store.store[key] as S);
     }
@@ -68,7 +68,7 @@ abstract class FunctionsStore<S> {
    * @return True if the name is valid.
    */
   private checkCustomFunctionSyntax_(name: string): boolean {
-    let reg = new RegExp('^' + this.prefix);
+    const reg = new RegExp('^' + this.prefix);
     if (!name.match(reg)) {
       console.error(
         'FunctionError: Invalid function name. Expected prefix ' + this.prefix
@@ -86,7 +86,7 @@ export class CustomQueries extends FunctionsStore<CustomQuery> {
    * Constructs custom queries for precondition constraints.
    */
   constructor() {
-    let store = {} as { [key: string]: CustomQuery };
+    const store = {} as { [key: string]: CustomQuery };
     super('CQF', store);
   }
 }
@@ -98,7 +98,7 @@ export class CustomStrings extends FunctionsStore<CustomString> {
    * Constructs custom strings for text elements in actions.
    */
   constructor() {
-    let store = {} as { [key: string]: CustomString };
+    const store = {} as { [key: string]: CustomString };
     super('CSF', store);
   }
 }
@@ -110,7 +110,7 @@ export class ContextFunctions extends FunctionsStore<ContextFunction> {
    * Constructs context functions for separators or contexts.
    */
   constructor() {
-    let store = {} as { [key: string]: ContextFunction };
+    const store = {} as { [key: string]: ContextFunction };
     super('CTF', store);
   }
 }
@@ -122,7 +122,7 @@ export class CustomGenerators extends FunctionsStore<CustomGenerator> {
    * Constructs generators for generating JSON for entire speech rules.
    */
   constructor() {
-    let store = {} as { [key: string]: CustomGenerator };
+    const store = {} as { [key: string]: CustomGenerator };
     super('CGF', store);
   }
 }

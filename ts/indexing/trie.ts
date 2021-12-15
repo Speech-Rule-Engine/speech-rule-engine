@@ -46,15 +46,15 @@ export class Trie {
    * @return Set of speech rules in the trie.
    */
   public static collectRules_(root: TrieNode): SpeechRule[] {
-    let rules = [];
+    const rules = [];
     let explore = [root];
     while (explore.length) {
-      let node = explore.shift();
+      const node = explore.shift();
       if (
         node.getKind() === TrieNodeKind.QUERY ||
         node.getKind() === TrieNodeKind.BOOLEAN
       ) {
-        let rule = (node as StaticTrieNode).getRule();
+        const rule = (node as StaticTrieNode).getRule();
         if (rule) {
           rules.unshift(rule);
         }
@@ -75,9 +75,9 @@ export class Trie {
     depth: number,
     str: string
   ): string {
-    let prefix = new Array(depth + 2).join(depth.toString()) + ': ';
+    const prefix = new Array(depth + 2).join(depth.toString()) + ': ';
     str += prefix + node.toString() + '\n';
-    let children = node.getChildren();
+    const children = node.getChildren();
     for (let i = 0, child; (child = children[i]); i++) {
       str = Trie.printWithDepth_(child, depth + 1, str);
     }
@@ -90,11 +90,11 @@ export class Trie {
    * @return The order of the trie.
    */
   private static order_(node: TrieNode): number {
-    let children = node.getChildren();
+    const children = node.getChildren();
     if (!children.length) {
       return 0;
     }
-    let max = Math.max.apply(null, children.map(Trie.order_));
+    const max = Math.max.apply(null, children.map(Trie.order_));
     return Math.max(children.length, max);
   }
 
@@ -111,8 +111,8 @@ export class Trie {
    */
   public addRule(rule: SpeechRule) {
     let node = this.root;
-    let context = rule.context;
-    let dynamicCstr = rule.dynamicCstr.getValues();
+    const context = rule.context;
+    const dynamicCstr = rule.dynamicCstr.getValues();
     for (let i = 0, l = dynamicCstr.length; i < l; i++) {
       node = this.addNode_(node, dynamicCstr[i], TrieNodeKind.DYNAMIC, context);
     }
@@ -122,7 +122,7 @@ export class Trie {
       TrieNodeKind.QUERY,
       context
     );
-    let booleans = rule.precondition.constraints;
+    const booleans = rule.precondition.constraints;
     for (let i = 0, l = booleans.length; i < l; i++) {
       node = this.addNode_(node, booleans[i], TrieNodeKind.BOOLEAN, context);
     }
@@ -139,18 +139,18 @@ export class Trie {
    */
   public lookupRules(xml: Node, dynamic: string[][]): SpeechRule[] {
     let nodes = [this.root];
-    let rules = [];
+    const rules = [];
     // Algorithm:
     // Pop node, get children,
     // add child if constraint is correct.
     // add rule if child has a rule.
     // First deal with dynamic constraints.
     while (dynamic.length) {
-      let dynamicSet = dynamic.shift();
-      let newNodes: TrieNode[] = [];
+      const dynamicSet = dynamic.shift();
+      const newNodes: TrieNode[] = [];
       while (nodes.length) {
-        let node = nodes.shift();
-        let children = node.getChildren();
+        const node = nodes.shift();
+        const children = node.getChildren();
         children.forEach((child: TrieNode) => {
           if (
             child.getKind() !== TrieNodeKind.DYNAMIC ||
@@ -164,14 +164,14 @@ export class Trie {
     }
     // Then we deal with static constraints, while collecting rules.
     while (nodes.length) {
-      let node = nodes.shift() as StaticTrieNode;
+      const node = nodes.shift() as StaticTrieNode;
       if (node.getRule) {
-        let rule = node.getRule();
+        const rule = node.getRule();
         if (rule) {
           rules.push(rule);
         }
       }
-      let children = node.findChildren(xml);
+      const children = node.findChildren(xml);
       nodes = nodes.concat(children);
     }
     return rules;
@@ -185,7 +185,7 @@ export class Trie {
   public hasSubtrie(cstrs: string[]): boolean {
     let subtrie = this.root;
     for (let i = 0, l = cstrs.length; i < l; i++) {
-      let cstr = cstrs[i];
+      const cstr = cstrs[i];
       subtrie = subtrie.getChild(cstr);
       if (!subtrie) {
         return false;
@@ -234,7 +234,7 @@ export class Trie {
   public byConstraint(constraint: string[]): TrieNode {
     let node = this.root;
     while (constraint.length && node) {
-      let cstr = constraint.shift();
+      const cstr = constraint.shift();
       node = node.getChild(cstr);
     }
     return node || null;
@@ -251,7 +251,7 @@ export class Trie {
     info: { [key: string]: any }
   ): { [key: string]: any } {
     info = info || {};
-    let children = node.getChildren();
+    const children = node.getChildren();
     for (let i = 0, child; (child = children[i]); i++) {
       if (child.kind !== TrieNodeKind.DYNAMIC) {
         continue;

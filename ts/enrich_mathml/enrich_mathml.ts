@@ -49,7 +49,7 @@ export const SETTINGS: { collapsed: boolean; implicit: boolean } = {
 /**
  * Prefix for semantic attributes.
  */
-export const ATTRIBUTE_PREFIX_: string = 'data-semantic-';
+export const ATTRIBUTE_PREFIX_ = 'data-semantic-';
 
 // TODO (TS): Do something about the prefix computation.
 /**
@@ -111,7 +111,7 @@ export const EnrichAttributes: string[] = [
 export function enrich(mml: Element, semantic: SemanticTree): Element {
   // The first line is only to preserve output. This should eventually be
   // deleted.
-  let oldMml = mml.cloneNode(true) as Element;
+  const oldMml = mml.cloneNode(true) as Element;
   walkTree(semantic.root);
   if (Engine.getInstance().structure) {
     mml.setAttribute(
@@ -135,7 +135,7 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
  * @return The enriched MathML element.
  */
 export function walkTree(semantic: SemanticNode): Element {
-  let specialCase = EnrichCaseFactory.getCase(semantic);
+  const specialCase = EnrichCaseFactory.getCase(semantic);
   let newNode: Element;
   if (specialCase) {
     newNode = specialCase.getMathml();
@@ -157,10 +157,10 @@ export function walkTree(semantic: SemanticNode): Element {
     return ascendNewNode(newNode);
   }
 
-  let newContent = semantic.contentNodes.map(cloneContentNode);
+  const newContent = semantic.contentNodes.map(cloneContentNode);
   setOperatorAttribute_(semantic, newContent);
-  let newChildren = semantic.childNodes.map(walkTree);
-  let childrenList = SemanticSkeleton.combineContentChildren<Element>(
+  const newChildren = semantic.childNodes.map(walkTree);
+  const childrenList = SemanticSkeleton.combineContentChildren<Element>(
     semantic,
     newContent,
     newChildren
@@ -170,7 +170,7 @@ export function walkTree(semantic: SemanticNode): Element {
     Debugger.getInstance().output('Walktree Case 1');
     newNode = introduceNewLayer(childrenList, semantic);
   } else {
-    let attached = attachedElement_(childrenList);
+    const attached = attachedElement_(childrenList);
     Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       Debugger.getInstance().output('Walktree Case 2.1');
@@ -213,9 +213,9 @@ export function introduceNewLayer(
   children: Element[],
   semantic: SemanticNode
 ): Element {
-  let lca = mathmlLca_(children);
+  const lca = mathmlLca_(children);
   let newNode = lca.node;
-  let info = lca.type;
+  const info = lca.type;
   if (info !== lcaType.VALID || !SemanticUtil.hasEmptyTag(newNode)) {
     Debugger.getInstance().output('Walktree Case 1.1');
     newNode = DomUtil.createElement('mrow');
@@ -224,8 +224,8 @@ export function introduceNewLayer(
       newNode = introduceLayerAboveLca(newNode, lca.node as Element, children);
     } else if (children[0]) {
       Debugger.getInstance().output('Walktree Case 1.1.1');
-      let node = attachedElement_(children);
-      let oldChildren = childrenSubset_(node.parentNode as Element, children);
+      const node = attachedElement_(children);
+      const oldChildren = childrenSubset_(node.parentNode as Element, children);
       DomUtil.replaceNode(node, newNode);
       oldChildren.forEach(function (x) {
         newNode.appendChild(x);
@@ -260,11 +260,11 @@ export function introduceLayerAboveLca(
     DomUtil.toArray(innerNode.childNodes).forEach(function (x) {
       mrow.appendChild(x);
     });
-    let auxNode = mrow;
+    const auxNode = mrow;
     mrow = innerNode;
     innerNode = auxNode;
   }
-  let index = children.indexOf(lca);
+  const index = children.indexOf(lca);
   children[index] = innerNode;
   DomUtil.replaceNode(innerNode, mrow);
   mrow.appendChild(innerNode);
@@ -280,7 +280,7 @@ export function introduceLayerAboveLca(
  * @param newNode The node which receives the semantic attributes.
  */
 export function moveSemanticAttributes_(oldNode: Element, newNode: Element) {
-  for (let attr of EnrichAttributes) {
+  for (const attr of EnrichAttributes) {
     if (oldNode.hasAttribute(attr)) {
       newNode.setAttribute(attr, oldNode.getAttribute(attr));
       oldNode.removeAttribute(attr);
@@ -300,11 +300,11 @@ export function childrenSubset_(
   node: Element,
   newChildren: Element[]
 ): Element[] {
-  let oldChildren = DomUtil.toArray(node.childNodes);
+  const oldChildren = DomUtil.toArray(node.childNodes);
   let leftIndex = +Infinity;
   let rightIndex = -Infinity;
   newChildren.forEach(function (child) {
-    let index = oldChildren.indexOf(child);
+    const index = oldChildren.indexOf(child);
     if (index !== -1) {
       leftIndex = Math.min(leftIndex, index);
       rightIndex = Math.max(rightIndex, index);
@@ -327,16 +327,16 @@ export function collateChildNodes_(
   children: Element[],
   semantic: SemanticNode
 ): Element[] {
-  let oldChildren = [];
+  const oldChildren = [];
   let newChildren = DomUtil.toArray(node.childNodes);
   let notFirst = false;
   while (newChildren.length) {
-    let child = newChildren.shift();
+    const child = newChildren.shift();
     if (child.hasAttribute(Attribute.TYPE)) {
       oldChildren.push(child);
       continue;
     }
-    let collect = collectChildNodes_(child);
+    const collect = collectChildNodes_(child);
     if (collect.length === 0) {
       continue;
     }
@@ -352,12 +352,12 @@ export function collateChildNodes_(
     newChildren = collect.concat(newChildren);
   }
   // If there is a trailing row with further factors.
-  let rear = [];
-  let semChildren = semantic.childNodes.map(function (x) {
+  const rear = [];
+  const semChildren = semantic.childNodes.map(function (x) {
     return x.mathmlTree;
   });
   while (semChildren.length) {
-    let schild = semChildren.pop();
+    const schild = semChildren.pop();
     if (!schild) {
       continue;
     }
@@ -379,10 +379,10 @@ export function collateChildNodes_(
  * @return The lower level children.
  */
 export function collectChildNodes_(node: Element): Element[] {
-  let collect = [];
+  const collect = [];
   let newChildren = DomUtil.toArray(node.childNodes);
   while (newChildren.length) {
-    let child = newChildren.shift();
+    const child = newChildren.shift();
     if (child.nodeType !== DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
@@ -407,7 +407,7 @@ export function mergeChildren_(
   newChildren: Element[],
   semantic: SemanticNode
 ) {
-  let oldChildren =
+  const oldChildren =
     semantic.role === SemanticRole.IMPLICIT &&
     SemanticHeuristics.flags.combine_juxtaposition
       ? collateChildNodes_(node, newChildren, semantic)
@@ -420,7 +420,7 @@ export function mergeChildren_(
   }
   let oldCounter = 0;
   while (newChildren.length) {
-    let newChild = newChildren[0] as Element;
+    const newChild = newChildren[0] as Element;
     if (
       oldChildren[oldCounter] === newChild ||
       functionApplication_(oldChildren[oldCounter], newChild)
@@ -513,7 +513,7 @@ export function functionApplication_(
   oldNode: Element,
   newNode: Element
 ): boolean {
-  let appl = SemanticAttr.functionApplication();
+  const appl = SemanticAttr.functionApplication();
   if (
     oldNode &&
     newNode &&
@@ -552,21 +552,21 @@ export function mathmlLca_(children: Element[]): {
   node: Element;
 } {
   // Need to avoid newly created children (invisible operators).
-  let leftMost = attachedElement_(children);
+  const leftMost = attachedElement_(children);
   if (!leftMost) {
     return { type: lcaType.INVALID, node: null };
   }
-  let rightMost = attachedElement_(children.slice().reverse()) as Element;
+  const rightMost = attachedElement_(children.slice().reverse()) as Element;
   if (leftMost === rightMost) {
     return { type: lcaType.VALID, node: leftMost };
   }
-  let leftPath = pathToRoot_(leftMost);
-  let newLeftPath = prunePath_(leftPath, children);
-  let rightPath = pathToRoot_(rightMost, function (x) {
+  const leftPath = pathToRoot_(leftMost);
+  const newLeftPath = prunePath_(leftPath, children);
+  const rightPath = pathToRoot_(rightMost, function (x) {
     return newLeftPath.indexOf(x) !== -1;
   });
-  let lca = rightPath[0];
-  let lIndex = newLeftPath.indexOf(lca);
+  const lca = rightPath[0];
+  const lIndex = newLeftPath.indexOf(lca);
   if (lIndex === -1) {
     return { type: lcaType.INVALID, node: null };
   }
@@ -626,8 +626,8 @@ export function pathToRoot_(
   node: Element,
   opt_test?: (p1: Element) => boolean
 ): Element[] {
-  let test = opt_test || ((_x) => false);
-  let path = [node];
+  const test = opt_test || ((_x) => false);
+  const path = [node];
   while (!test(node) && !SemanticUtil.hasMathTag(node) && node.parentNode) {
     node = parentNode_(node);
     path.unshift(node);
@@ -671,11 +671,11 @@ export function ascendNewNode(newNode: Element): Element {
  *    annotations.
  */
 export function descendNode_(node: Element): Element {
-  let children = DomUtil.toArray(node.childNodes);
+  const children = DomUtil.toArray(node.childNodes);
   if (!children) {
     return node;
   }
-  let remainder = children.filter(function (child) {
+  const remainder = children.filter(function (child) {
     return (
       child.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
       !SemanticUtil.hasIgnoreTag(child)
@@ -698,7 +698,7 @@ export function descendNode_(node: Element): Element {
  * @return True if node is a legal unit child.
  */
 export function unitChild_(node: Element): boolean {
-  let parent = parentNode_(node);
+  const parent = parentNode_(node);
   if (!parent || !SemanticUtil.hasEmptyTag(parent)) {
     return false;
   }
@@ -720,7 +720,7 @@ export function isIgnorable_(node: Element): boolean {
   if (!node || SemanticUtil.hasIgnoreTag(node)) {
     return true;
   }
-  let children = DomUtil.toArray(node.childNodes);
+  const children = DomUtil.toArray(node.childNodes);
   if (
     (!SemanticUtil.hasEmptyTag(node) && children.length) ||
     SemanticUtil.hasDisplayTag(node) ||
@@ -749,7 +749,7 @@ export function parentNode_(element: Element): Element {
  *    annotations.
  */
 export function addCollapsedAttribute(node: Element, collapsed: Sexp) {
-  let skeleton = new SemanticSkeleton(collapsed);
+  const skeleton = new SemanticSkeleton(collapsed);
   node.setAttribute(Attribute.COLLAPSED, skeleton.toString());
 }
 
@@ -762,7 +762,7 @@ export function cloneContentNode(content: SemanticNode): Element {
   if (content.mathml.length) {
     return walkTree(content);
   }
-  let clone = SETTINGS.implicit
+  const clone = SETTINGS.implicit
     ? createInvisibleOperator_(content)
     : DomUtil.createElement('mrow');
   content.mathml = [clone];
@@ -789,7 +789,7 @@ export function makeIdList(nodes: SemanticNode[]): string {
  */
 export function setAttributes(mml: Element, semantic: SemanticNode) {
   mml.setAttribute(Attribute.TYPE, semantic.type);
-  let attributes = semantic.allAttributes();
+  const attributes = semantic.allAttributes();
   for (let i = 0, attr; (attr = attributes[i]); i++) {
     mml.setAttribute(ATTRIBUTE_PREFIX_ + attr[0].toLowerCase(), attr[1]);
   }
@@ -812,7 +812,7 @@ export function setAttributes(mml: Element, semantic: SemanticNode) {
  * @param semantic The semantic tree node.
  */
 export function setPostfix(mml: Element, semantic: SemanticNode) {
-  let postfix = [];
+  const postfix = [];
   if (semantic.role === SemanticRole.MGLYPH) {
     postfix.push('image');
   }
@@ -833,7 +833,7 @@ export function rewriteMfenced(mml: Element): Element {
   if (DomUtil.tagName(mml) !== 'MFENCED') {
     return mml;
   }
-  let newNode = DomUtil.createElement('mrow');
+  const newNode = DomUtil.createElement('mrow');
   for (let i = 0, attr; (attr = mml.attributes[i]); i++) {
     if (['open', 'close', 'separators'].indexOf(attr.name) === -1) {
       newNode.setAttribute(attr.name, attr.value);
@@ -853,8 +853,8 @@ export function rewriteMfenced(mml: Element): Element {
  * @return The newly created MathML element.
  */
 export function createInvisibleOperator_(operator: SemanticNode): Element {
-  let moNode = DomUtil.createElement('mo');
-  let text = DomUtil.createTextNode(operator.textContent);
+  const moNode = DomUtil.createElement('mo');
+  const text = DomUtil.createTextNode(operator.textContent);
   moNode.appendChild(text);
   setAttributes(moNode, operator);
   moNode.setAttribute(Attribute.ADDED, 'true');
@@ -870,7 +870,7 @@ export function setOperatorAttribute_(
   semantic: SemanticNode,
   content: Element[]
 ) {
-  let operator =
+  const operator =
     semantic.type + (semantic.textContent ? ',' + semantic.textContent : '');
   content.forEach(function (c) {
     getInnerNode(c).setAttribute(Attribute.OPERATOR, operator);
@@ -887,17 +887,17 @@ export function setOperatorAttribute_(
  *     itself.
  */
 export function getInnerNode(node: Element): Element {
-  let children = DomUtil.toArray(node.childNodes);
+  const children = DomUtil.toArray(node.childNodes);
   if (!children) {
     return node;
   }
-  let remainder = children.filter(function (child) {
+  const remainder = children.filter(function (child) {
     return !isIgnorable_(child);
   });
-  let result = [];
+  const result = [];
   for (let i = 0, remain; (remain = remainder[i]); i++) {
     if (SemanticUtil.hasEmptyTag(remain)) {
-      let nextInner = getInnerNode(remain);
+      const nextInner = getInnerNode(remain);
       if (nextInner && nextInner !== remain) {
         result.push(nextInner);
       }
@@ -925,7 +925,7 @@ export function formattedOutput(
   tree: SemanticTree,
   opt_wiki?: boolean
 ) {
-  let wiki = opt_wiki || false;
+  const wiki = opt_wiki || false;
   formattedOutput_(mml, 'Original MathML', wiki);
   formattedOutput_(tree, 'Semantic Tree', wiki);
   formattedOutput_(expr, 'Semantically enriched MathML', wiki);
@@ -944,7 +944,7 @@ export function formattedOutput_(
   name: string,
   wiki: boolean
 ) {
-  let output = DomUtil.formatXml(element.toString());
+  const output = DomUtil.formatXml(element.toString());
   if (!wiki) {
     console.info(output);
     return;
@@ -994,19 +994,19 @@ export function collapsePunctuated(
   semantic: SemanticNode,
   opt_children?: Element[]
 ): Sexp {
-  let optional = !!opt_children;
-  let children = opt_children || [];
-  let parent = semantic.parent;
-  let contentIds = semantic.contentNodes.map(function (x) {
+  const optional = !!opt_children;
+  const children = opt_children || [];
+  const parent = semantic.parent;
+  const contentIds = semantic.contentNodes.map(function (x) {
     return x.id;
   });
   // TODO (TS):  work out the type for Sexp properly.
   (contentIds as any).unshift('c');
-  let childIds = [semantic.id, contentIds];
+  const childIds = [semantic.id, contentIds];
   for (let i = 0, child; (child = semantic.childNodes[i]); i++) {
-    let mmlChild = walkTree(child);
+    const mmlChild = walkTree(child);
     children.push(mmlChild);
-    let innerNode = getInnerNode(mmlChild);
+    const innerNode = getInnerNode(mmlChild);
     if (parent && !optional) {
       innerNode.setAttribute(Attribute.PARENT, parent.id.toString());
     }

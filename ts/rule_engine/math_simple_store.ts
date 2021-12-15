@@ -65,7 +65,7 @@ export class MathSimpleStore {
   /**
    * The category of the character/function/unit.
    */
-  public category: string = '';
+  public category = '';
 
   /**
    * Maps locales to lists of simple rules.
@@ -79,7 +79,7 @@ export class MathSimpleStore {
    * @return The unicode character.
    */
   public static parseUnicode(num: string): string {
-    let keyValue = parseInt(num, 16);
+    const keyValue = parseInt(num, 16);
     return String.fromCodePoint(keyValue);
   }
 
@@ -116,9 +116,9 @@ export class MathSimpleStore {
     str: string,
     mapping: MappingsJson
   ) {
-    for (let domain in mapping) {
-      for (let style in mapping[domain]) {
-        let content = mapping[domain][style];
+    for (const domain in mapping) {
+      for (const style in mapping[domain]) {
+        const content = mapping[domain][style];
         this.defineRuleFromStrings(
           name,
           locale,
@@ -163,17 +163,17 @@ export class MathSimpleStore {
     content: string
   ) {
     let store = this.getRules(locale);
-    let parser =
+    const parser =
       Engine.getInstance().parsers[domain] ||
       Engine.getInstance().defaultParser;
-    let comp = Engine.getInstance().comparators[domain];
-    let cstr = `${locale}.${modality}.${domain}.${style}`;
-    let dynamic = parser.parse(cstr);
+    const comp = Engine.getInstance().comparators[domain];
+    const cstr = `${locale}.${modality}.${domain}.${style}`;
+    const dynamic = parser.parse(cstr);
     // TODO: Simplify here. No need for comparator?
-    let comparator = comp ? comp() : Engine.getInstance().comparator;
-    let oldCstr = comparator.getReference();
+    const comparator = comp ? comp() : Engine.getInstance().comparator;
+    const oldCstr = comparator.getReference();
     comparator.setReference(dynamic);
-    let rule = { cstr: dynamic, action: content };
+    const rule = { cstr: dynamic, action: content };
     store = store.filter((r) => !dynamic.equal(r.cstr));
     store.push(rule);
     this.rules.set(locale, store);
@@ -239,7 +239,7 @@ export namespace MathCompoundStore {
     cat: string,
     mappings: MappingsJson
   ) {
-    let store = getSubStore_(str);
+    const store = getSubStore_(str);
     setupStore_(store, cat);
     store.defineRulesFromMappings(name, locale, modality, str, mappings);
   }
@@ -261,7 +261,7 @@ export namespace MathCompoundStore {
     str: string,
     content: string
   ) {
-    let store = getSubStore_(str);
+    const store = getSubStore_(str);
     setupStore_(store, cat);
     store.defineRuleFromStrings(
       name,
@@ -282,7 +282,7 @@ export namespace MathCompoundStore {
     if (changeLocale_(json)) {
       return;
     }
-    let key = MathSimpleStore.parseUnicode(json['key']);
+    const key = MathSimpleStore.parseUnicode(json['key']);
     defineRules(json['key'], key, json['category'], json['mappings']);
   }
 
@@ -294,9 +294,9 @@ export namespace MathCompoundStore {
     if (changeLocale_(json)) {
       return;
     }
-    let names = json['names'];
-    let mappings = json['mappings'];
-    let category = json['category'];
+    const names = json['names'];
+    const mappings = json['mappings'];
+    const category = json['category'];
     for (let j = 0, name; (name = names[j]); j++) {
       defineRules(name, name, category, mappings);
     }
@@ -323,17 +323,17 @@ export namespace MathCompoundStore {
    * @param json JSON object of the base speech rules.
    */
   export function addSiUnitRules(json: UnicodeJson) {
-    for (let key of Object.keys(siPrefixes)) {
-      let newJson = Object.assign({}, json);
+    for (const key of Object.keys(siPrefixes)) {
+      const newJson = Object.assign({}, json);
       newJson.mappings = {} as MappingsJson;
-      let prefix = siPrefixes[key];
+      const prefix = siPrefixes[key];
       newJson['key'] = key + newJson['key'];
       newJson['names'] = newJson['names'].map(function (name) {
         return key + name;
       });
-      for (let domain of Object.keys(json['mappings'])) {
+      for (const domain of Object.keys(json['mappings'])) {
         newJson.mappings[domain] = {};
-        for (let style of Object.keys(json['mappings'][domain])) {
+        for (const style of Object.keys(json['mappings'][domain])) {
           // TODO: This should not really call the locale method.
           newJson['mappings'][domain][style] = locales[locale]().FUNCTIONS.si(
             prefix,
@@ -354,7 +354,7 @@ export namespace MathCompoundStore {
    * @return The speech rule if it exists.
    */
   export function lookupRule(node: string, dynamic: DynamicCstr): SimpleRule {
-    let store = subStores_[node];
+    const store = subStores_[node];
     return store ? store.lookupRule(null, dynamic) : null;
   }
 
@@ -364,7 +364,7 @@ export namespace MathCompoundStore {
    * @return The category if it exists.
    */
   export function lookupCategory(character: string): string {
-    let store = subStores_[character];
+    const store = subStores_[character];
     return store ? store.category : '';
   }
 
@@ -376,7 +376,7 @@ export namespace MathCompoundStore {
    * @return The string resulting from the action of speech rule.
    */
   export function lookupString(text: string, dynamic: DynamicCstr): string {
-    let rule = lookupRule(text, dynamic);
+    const rule = lookupRule(text, dynamic);
     if (!rule) {
       return null;
     }
@@ -391,9 +391,9 @@ export namespace MathCompoundStore {
    * @return The collated information.
    */
   export function enumerate(info: Object = {}): Object {
-    for (let store of Object.values(subStores_)) {
-      for (let [_locale, rules] of store.rules.entries()) {
-        for (let { cstr: dynamic } of rules) {
+    for (const store of Object.values(subStores_)) {
+      for (const [_locale, rules] of store.rules.entries()) {
+        for (const { cstr: dynamic } of rules) {
           info = enumerate_(dynamic.getValues(), info);
         }
       }
@@ -419,7 +419,7 @@ export namespace MathCompoundStore {
    * @param json JSON object of the speech rules.
    */
   function addUnitRules_(json: UnicodeJson) {
-    let names = json['names'];
+    const names = json['names'];
     if (names) {
       json['names'] = names.map(function (name) {
         return name + ':' + 'unit';

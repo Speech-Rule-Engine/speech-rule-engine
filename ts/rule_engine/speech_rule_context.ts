@@ -51,7 +51,7 @@ export class SpeechRuleContext {
    * @return The list of resulting nodes.
    */
   public applyCustomQuery(node: Node, funcName: string): Node[] {
-    let func = this.customQueries.lookup(funcName);
+    const func = this.customQueries.lookup(funcName);
     return func ? func(node) : null;
   }
 
@@ -64,7 +64,7 @@ export class SpeechRuleContext {
    * @return The list of resulting nodes.
    */
   public applySelector(node: Node, expr: string): Node[] {
-    let result = this.applyCustomQuery(node, expr);
+    const result = this.applyCustomQuery(node, expr);
     return result || XpathUtil.evalXPath(expr, node);
   }
 
@@ -77,7 +77,7 @@ export class SpeechRuleContext {
    * @return The resulting node.
    */
   public applyQuery(node: Node, expr: string): Node {
-    let results = this.applySelector(node, expr);
+    const results = this.applySelector(node, expr);
     if (results.length > 0) {
       return results[0];
     }
@@ -93,7 +93,7 @@ export class SpeechRuleContext {
    * @return True if application was successful.
    */
   public applyConstraint(node: Node, expr: string): boolean {
-    let result = this.applyQuery(node, expr);
+    const result = this.applyQuery(node, expr);
     return !!result || XpathUtil.evaluateBoolean(expr, node);
   }
 
@@ -111,7 +111,7 @@ export class SpeechRuleContext {
     if (expr.charAt(0) === '"') {
       return expr.slice(1, -1);
     }
-    let func = this.customStrings.lookup(expr);
+    const func = this.customStrings.lookup(expr);
     if (func) {
       // We always return the result of the custom function, in case it
       // deliberately computes the empty string!
@@ -132,11 +132,11 @@ export class SpeechRuleContext {
       | [string, srf.SpeechRuleFunction][]
       | { [key: string]: srf.SpeechRuleFunction }
   ) {
-    let functs = Array.isArray(functions)
+    const functs = Array.isArray(functions)
       ? functions
       : Object.entries(functions);
     for (let i = 0, func; (func = functs[i]); i++) {
-      let kind = func[0].slice(0, 3);
+      const kind = func[0].slice(0, 3);
       switch (kind) {
         case 'CQF':
           this.customQueries.add(func[0], func[1] as srf.CustomQuery);

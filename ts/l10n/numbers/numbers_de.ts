@@ -28,7 +28,7 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
  * @param num number string.
  * @return If it is a one, it is made into prefix.
  */
-function onePrefix_(num: string, mill: boolean = false): string {
+function onePrefix_(num: string, mill = false): string {
   return num === NUMBERS.ones[1] ? (mill ? 'eine' : 'ein') : num;
 }
 
@@ -49,7 +49,7 @@ function hundredsToWords_(num: number): string {
     if (ones) {
       str += ones;
     } else {
-      let tens = NUMBERS.tens[Math.floor(n / 10)];
+      const tens = NUMBERS.tens[Math.floor(n / 10)];
       ones = NUMBERS.ones[n % 10];
       str += ones ? onePrefix_(ones) + 'und' + tens : tens;
     }
@@ -72,13 +72,13 @@ function numberToWords(num: number): string {
   let pos = 0;
   let str = '';
   while (num > 0) {
-    let hundreds = num % 1000;
+    const hundreds = num % 1000;
     if (hundreds) {
-      let hund = hundredsToWords_(num % 1000);
+      const hund = hundredsToWords_(num % 1000);
       if (pos) {
-        let large = NUMBERS.large[pos];
+        const large = NUMBERS.large[pos];
         // If this is million or above take care oaf the plural.
-        let plural =
+        const plural =
           pos > 1 && hundreds > 1 ? (large.match(/e$/) ? 'n' : 'en') : '';
         str = onePrefix_(hund, pos > 1) + large + plural + str;
       } else {
@@ -126,7 +126,7 @@ function wordOrdinal(num: number): string {
   if (num === 8) {
     return 'achte';
   }
-  let ordinal = numberToWords(num);
+  const ordinal = numberToWords(num);
   return ordinal + (num < 19 ? 'te' : 'ste');
 }
 

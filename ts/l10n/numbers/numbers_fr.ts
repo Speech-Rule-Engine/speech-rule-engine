@@ -28,7 +28,7 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
 /**
  * Sub-ISO specification. Possible values: fr, be, sw.
  */
-export let SUB_ISO: string = 'fr';
+export const SUB_ISO = 'fr';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -49,7 +49,7 @@ function hundredsToWords_(num: number): string {
       str += ones;
     } else {
       // -dix case!
-      let tens = NUMBERS.tens[Math.floor(n / 10)];
+      const tens = NUMBERS.tens[Math.floor(n / 10)];
       if (tens.match(/\-dix$/)) {
         ones = NUMBERS.ones[(n % 10) + 10];
         str += tens.replace(/\-dix$/, '') + '-' + ones;
@@ -58,7 +58,7 @@ function hundredsToWords_(num: number): string {
       }
     }
   }
-  let match = str.match(/s\-\w+$/);
+  const match = str.match(/s\-\w+$/);
   return match
     ? str.replace(/s\-\w+$/, match[0].slice(1))
     : str.replace(/\-un$/, '-et-un');
@@ -82,12 +82,12 @@ function numberToWords(num: number): string {
   let pos = 0;
   let str = '';
   while (num > 0) {
-    let hundreds = num % 1000;
+    const hundreds = num % 1000;
     if (hundreds) {
       let large = NUMBERS.large[pos];
-      let huns = hundredsToWords_(hundreds);
+      const huns = hundredsToWords_(hundreds);
       if (large && large.match(/^mille /)) {
-        let rest = large.replace(/^mille /, '');
+        const rest = large.replace(/^mille /, '');
         if (str.match(RegExp(rest))) {
           str = huns + (pos ? '-mille-' : '') + str;
         } else if (str.match(RegExp(rest.replace(/s$/, '')))) {
@@ -125,7 +125,7 @@ const SMALL_ORDINAL: { [key: string]: string } = {
  * @return The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, plural: boolean): string {
-  let ordinal = SMALL_ORDINAL[num] || wordOrdinal(num);
+  const ordinal = SMALL_ORDINAL[num] || wordOrdinal(num);
   return num === 3 ? ordinal : plural ? ordinal + 's' : ordinal;
 }
 
@@ -158,7 +158,7 @@ function wordOrdinal(num: number): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = Grammar.getInstance().getParameter('gender') as string;
+  const gender = Grammar.getInstance().getParameter('gender') as string;
   return num === 1
     ? num.toString() + (gender === 'm' ? 'er' : 're')
     : num.toString() + 'e';

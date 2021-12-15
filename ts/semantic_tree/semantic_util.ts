@@ -71,7 +71,7 @@ export const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
  * @return Array of all keys of the objects.
  */
 export function objectsToKeys(...args: { [key: string]: string }[]): string[] {
-  let keys: string[] = [];
+  const keys: string[] = [];
   return keys.concat.apply(keys, args.map(Object.keys));
 }
 
@@ -83,9 +83,9 @@ export function objectsToKeys(...args: { [key: string]: string }[]): string[] {
 export function objectsToValues(
   ...args: { [key: string]: string }[]
 ): string[] {
-  let result: string[] = [];
+  const result: string[] = [];
   args.forEach((obj: { [key: string]: string }) => {
-    for (let key in obj) {
+    for (const key in obj) {
       result.push(obj[key]);
     }
   });
@@ -104,8 +104,8 @@ export function unicodeToNumber(unicode: string): number | null {
   }
   // Treating surrogate pairs.
   if (unicode.length === 2) {
-    let hi = unicode.charCodeAt(0);
-    let low = unicode.charCodeAt(1);
+    const hi = unicode.charCodeAt(0);
+    const low = unicode.charCodeAt(1);
     if (0xd800 <= hi && hi <= 0xdbff && !isNaN(low)) {
       return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
     }
@@ -132,8 +132,8 @@ export function numberToUnicode(num: number): string {
  * @return List of single characters.
  */
 export function splitUnicode(str: string): string[] {
-  let split = str.split('');
-  let result = [];
+  const split = str.split('');
+  const result = [];
   for (let i = 0, chr; (chr = split[i]); i++) {
     if ('\uD800' <= chr && chr <= '\uDBFF' && split[i + 1]) {
       result.push(chr + split[++i]);
@@ -211,12 +211,12 @@ export function isOrphanedGlyph(node: Element): boolean {
  * @return The cleansed list.
  */
 export function purgeNodes(nodes: Element[]): Element[] {
-  let nodeArray = [];
+  const nodeArray = [];
   for (let i = 0, node; (node = nodes[i]); i++) {
     if (node.nodeType !== DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
-    let tagName = DomUtil.tagName(node);
+    const tagName = DomUtil.tagName(node);
     if (IGNORETAGS.indexOf(tagName) !== -1) {
       continue;
     }
@@ -237,7 +237,7 @@ export function isZeroLength(length: string): boolean {
   if (!length) {
     return false;
   }
-  let negativeNamedSpaces = [
+  const negativeNamedSpaces = [
     'negativeveryverythinmathspace',
     'negativeverythinmathspace',
     'negativethinmathspace',
@@ -249,7 +249,7 @@ export function isZeroLength(length: string): boolean {
   if (negativeNamedSpaces.indexOf(length) !== -1) {
     return true;
   }
-  let value = length.match(/[0-9\.]+/);
+  const value = length.match(/[0-9\.]+/);
   if (!value) {
     return false;
   }
@@ -267,9 +267,9 @@ export function addAttributes(to: SemanticNode, from: Element) {
   // Propagate external attributes from singleton mrow-like elements.
   // Cleaner dealing with no breaking attributes.
   if (from.hasAttributes()) {
-    let attrs = from.attributes;
+    const attrs = from.attributes;
     for (let i = attrs.length - 1; i >= 0; i--) {
-      let key = attrs[i].name;
+      const key = attrs[i].name;
       if (key.match(/^ext/)) {
         to.attributes[key] = attrs[i].value;
         to.nobreaking = true;
@@ -323,7 +323,7 @@ export function sliceNodes(
   if (opt_reverse) {
     nodes.reverse();
   }
-  let head = [];
+  const head = [];
   for (let i = 0, node; (node = nodes[i]); i++) {
     if (pred(node)) {
       if (opt_reverse) {
@@ -367,8 +367,8 @@ export function partitionNodes(
   pred: (p1: SemanticNode) => boolean
 ): Partition {
   let restNodes = nodes;
-  let rel = [];
-  let comp = [];
+  const rel = [];
+  const comp = [];
   let result: Slice = null;
 
   do {

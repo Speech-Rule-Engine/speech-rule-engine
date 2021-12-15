@@ -31,4 +31,4 @@ System.setupEngine({
   style: 'default'
 });
 
-export let SRE = System;
+export const SRE = System;

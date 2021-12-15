@@ -60,14 +60,14 @@ function numberToWords(num: number): string {
   }
   let pos = 0;
   let str = '';
-  let hundreds = num % 1000;
-  let hundredsWords = hundredsToWords_(hundreds);
+  const hundreds = num % 1000;
+  const hundredsWords = hundredsToWords_(hundreds);
   num = Math.floor(num / 1000);
   if (!num) {
     return hundredsWords;
   }
   while (num > 0) {
-    let thousands = num % 100;
+    const thousands = num % 100;
     if (thousands) {
       str =
         NUMBERS.ones[thousands] +
@@ -101,7 +101,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let gender = Grammar.getInstance().getParameter('gender') as string;
+  const gender = Grammar.getInstance().getParameter('gender') as string;
   if (num <= 0) {
     return num.toString();
   }
@@ -110,7 +110,7 @@ function wordOrdinal(num: number): string {
       ? NUMBERS.special.ordinalsFeminine[num]
       : NUMBERS.special.ordinalsMasculine[num];
   }
-  let ordinal = numberToWords(num);
+  const ordinal = numberToWords(num);
   return ordinal + (gender === 'f' ? 'वीं' : 'वाँ');
 }
 
@@ -120,18 +120,18 @@ function wordOrdinal(num: number): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = Grammar.getInstance().getParameter('gender') as string;
+  const gender = Grammar.getInstance().getParameter('gender') as string;
 
   if (num > 0 && num < 10) {
     return gender === 'f'
       ? NUMBERS.special.simpleSmallOrdinalsFeminine[num]
       : NUMBERS.special.simpleSmallOrdinalsMasculine[num];
   }
-  let ordinal = num
+  const ordinal = num
     .toString()
     .split('')
     .map(function (x) {
-      let num = parseInt(x, 10);
+      const num = parseInt(x, 10);
       return isNaN(num) ? '' : NUMBERS.special.simpleNumbers[num];
     })
     .join('');

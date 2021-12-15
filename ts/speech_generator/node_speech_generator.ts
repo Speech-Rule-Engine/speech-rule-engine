@@ -30,7 +30,7 @@ export class NodeSpeechGenerator extends TreeSpeechGenerator {
    * @override
    */
   public getSpeech(node: Element, xml: Element) {
-    let speech = WalkerUtil.getAttribute(node, this.modality);
+    const speech = WalkerUtil.getAttribute(node, this.modality);
     if (speech) {
       return speech;
     }

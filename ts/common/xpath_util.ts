@@ -134,7 +134,7 @@ namespace XpathUtil {
     } catch (err) {
       return [];
     }
-    let results = [];
+    const results = [];
     // Convert result to JS array
     for (
       let xpathNode = iterator.iterateNext();

@@ -46,13 +46,13 @@ export function nodeCounter(
   nodes: Node[],
   context: string | null
 ): () => string {
-  let split = context.split('-');
-  let func = StoreUtil.nodeCounter(nodes, split[0] || '');
-  let sep = split[1] || '';
-  let init = split[2] || '';
+  const split = context.split('-');
+  const func = StoreUtil.nodeCounter(nodes, split[0] || '');
+  const sep = split[1] || '';
+  const init = split[2] || '';
   let first = true;
   return function () {
-    let result = func();
+    const result = func();
     if (first) {
       first = false;
       return init + result + sep;
@@ -255,8 +255,8 @@ export function isSimpleFraction_(node: SemanticNode): boolean {
   if (hasPreference('Fraction_Ordinal')) {
     return true;
   }
-  let enumerator = parseInt(node.childNodes[0].textContent, 10);
-  let denominator = parseInt(node.childNodes[1].textContent, 10);
+  const enumerator = parseInt(node.childNodes[0].textContent, 10);
+  const denominator = parseInt(node.childNodes[1].textContent, 10);
   return (
     enumerator > 0 && enumerator < 20 && denominator > 0 && denominator < 11
   );
@@ -286,7 +286,7 @@ export function simpleNode(node: Element): boolean {
   if (!node.hasAttribute('annotation')) {
     return false;
   }
-  let annotation = node.getAttribute('annotation');
+  const annotation = node.getAttribute('annotation');
   return !!/clearspeak:simple$|clearspeak:simple;/.exec(annotation);
 }
 
@@ -306,8 +306,8 @@ export function simpleCell_(node: Element): boolean {
   if (node.tagName !== SemanticType.SUBSCRIPT) {
     return false;
   }
-  let children = node.childNodes[0].childNodes;
-  let index = children[1] as Element;
+  const children = node.childNodes[0].childNodes;
+  const index = children[1] as Element;
   return (
     (children[0] as Element).tagName === SemanticType.IDENTIFIER &&
     (isInteger_(index) ||
@@ -337,7 +337,7 @@ export function isInteger_(node: Element): boolean {
  * @return True if the node is an index.
  */
 export function allIndices_(node: Element): boolean {
-  let nodes = XpathUtil.evalXPath('children/*', node);
+  const nodes = XpathUtil.evalXPath('children/*', node);
   return nodes.every(
     (x: Element) => isInteger_(x) || x.tagName === SemanticType.IDENTIFIER
   );
@@ -349,12 +349,12 @@ export function allIndices_(node: Element): boolean {
  * @return The node if the table only has simple cells.
  */
 export function allCellsSimple(node: Element): Element[] {
-  let xpath =
+  const xpath =
     node.tagName === SemanticType.MATRIX
       ? 'children/row/children/cell/children/*'
       : 'children/line/children/*';
-  let nodes = XpathUtil.evalXPath(xpath, node);
-  let result = nodes.every(simpleCell_);
+  const nodes = XpathUtil.evalXPath(xpath, node);
+  const result = nodes.every(simpleCell_);
   return result ? [node] : [];
 }
 /**
@@ -414,7 +414,7 @@ SemanticAnnotations.register(
  * @return The ordinal exponent as a word.
  */
 export function ordinalExponent(node: Element): string {
-  let num = parseInt(node.textContent, 10);
+  const num = parseInt(node.textContent, 10);
   if (isNaN(num)) {
     return node.textContent;
   }
@@ -432,8 +432,8 @@ export let NESTING_DEPTH: string | null = null;
  */
 export function nestingDepth(node: Element): string | null {
   let count = 0;
-  let fence = (node as Element).textContent;
-  let index = node.getAttribute('role') === 'open' ? 0 : 1;
+  const fence = (node as Element).textContent;
+  const index = node.getAttribute('role') === 'open' ? 0 : 1;
   let parent = node.parentNode as Element;
   while (parent) {
     if (
@@ -454,7 +454,7 @@ export function nestingDepth(node: Element): string | null {
  * @return The node if it has matching fences.
  */
 export function matchingFences(node: Element): Element[] {
-  let sibling = node.previousSibling;
+  const sibling = node.previousSibling;
   let left, right;
   if (sibling) {
     left = sibling;
@@ -483,7 +483,7 @@ export function insertNesting(text: string, correction: string): string {
   if (!correction || !text) {
     return text;
   }
-  let start = text.match(/^(open|close) /);
+  const start = text.match(/^(open|close) /);
   if (!start) {
     return correction + ' ' + text;
   }
@@ -499,9 +499,9 @@ Grammar.getInstance().setCorrection('insertNesting', insertNesting);
  * @return The node if it has fenced arguments only.
  */
 export function fencedArguments(node: Element): Element[] {
-  let content = DomUtil.toArray(node.parentNode.childNodes);
-  let children = XpathUtil.evalXPath('../../children/*', node) as Element[];
-  let index = content.indexOf(node);
+  const content = DomUtil.toArray(node.parentNode.childNodes);
+  const children = XpathUtil.evalXPath('../../children/*', node) as Element[];
+  const index = content.indexOf(node);
   return fencedFactor_(children[index]) || fencedFactor_(children[index + 1])
     ? [node]
     : [];
@@ -513,9 +513,9 @@ export function fencedArguments(node: Element): Element[] {
  * @return The node if it has at most three simple arguments.
  */
 export function simpleArguments(node: Element): Element[] {
-  let content = DomUtil.toArray(node.parentNode.childNodes);
-  let children = XpathUtil.evalXPath('../../children/*', node) as Element[];
-  let index = content.indexOf(node);
+  const content = DomUtil.toArray(node.parentNode.childNodes);
+  const children = XpathUtil.evalXPath('../../children/*', node) as Element[];
+  const index = content.indexOf(node);
   return simpleFactor_(children[index]) &&
     children[index + 1] &&
     (simpleFactor_(children[index + 1]) ||

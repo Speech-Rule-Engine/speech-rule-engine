@@ -59,7 +59,7 @@ export function getSemanticRoot(node: Element): Element {
     return node;
   }
 
-  let semanticNodes = DomUtil.querySelectorAllByAttr(
+  const semanticNodes = DomUtil.querySelectorAllByAttr(
     node,
     EnrichMathml.Attribute.TYPE
   );

@@ -27,7 +27,7 @@ import XpathUtil from './xpath_util';
  * @return True if the browser is IE.
  */
 export function detectIE(): boolean {
-  let isIE =
+  const isIE =
     typeof window !== 'undefined' &&
     'ActiveXObject' in window &&
     'clipboardData' in window;
@@ -45,7 +45,7 @@ export function detectIE(): boolean {
  * @return True if the browser is Edge.
  */
 export function detectEdge(): boolean {
-  let isEdge =
+  const isEdge =
     typeof window !== 'undefined' &&
     'MSGestureEvent' in window &&
     (window as any).chrome?.loadTimes === null;
@@ -72,7 +72,7 @@ export function loadWGXpath_(opt_isEdge?: boolean) {
   installWGXpath_(opt_isEdge);
 }
 
-declare var wgxpath: any;
+declare let wgxpath: any;
 
 /**
  * Loads all JSON mappings for IE using a script tag.
@@ -112,7 +112,7 @@ export function loadMapsForIE_() {
  * @param src The source of the script to load.
  */
 export function loadScript(src: string) {
-  let scr = SystemExternal.document.createElement('script');
+  const scr = SystemExternal.document.createElement('script');
   scr.type = 'text/javascript';
   scr.src = src;
   SystemExternal.document.head

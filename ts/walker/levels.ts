@@ -55,7 +55,7 @@ export class Levels<T> {
    * @return The index, -1 if element is not contained.
    */
   public indexOf(element: T): number | null {
-    let last = this.peek();
+    const last = this.peek();
     return !last ? null : last.indexOf(element);
   }
 
@@ -66,7 +66,7 @@ export class Levels<T> {
    * @return The element matching the predicate.
    */
   public find(pred: (p1: T) => boolean): T | null {
-    let last = this.peek();
+    const last = this.peek();
     if (!last) {
       return null;
     }
@@ -85,7 +85,7 @@ export class Levels<T> {
    * @return The element at the position.
    */
   public get(index: number): T | null {
-    let last = this.peek();
+    const last = this.peek();
     return !last || index < 0 || index >= last.length ? null : last[index];
   }
 
@@ -100,7 +100,7 @@ export class Levels<T> {
    * @return The clone of this object.
    */
   public clone(): Levels<T> {
-    let levels = new Levels<T>();
+    const levels = new Levels<T>();
     levels.level_ = this.level_.slice(0);
     return levels;
   }

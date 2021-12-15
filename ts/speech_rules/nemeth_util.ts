@@ -37,7 +37,7 @@ import * as MathspeakUtil from './mathspeak_util';
  * @return The opening string.
  */
 export function openingFraction(node: Element): string {
-  let depth = MathspeakUtil.fractionNestingDepth(node);
+  const depth = MathspeakUtil.fractionNestingDepth(node);
   return (
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
     LOCALE.MESSAGES.MS.FRACTION_START
@@ -50,7 +50,7 @@ export function openingFraction(node: Element): string {
  * @return The closing string.
  */
 export function closingFraction(node: Element): string {
-  let depth = MathspeakUtil.fractionNestingDepth(node);
+  const depth = MathspeakUtil.fractionNestingDepth(node);
   return (
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
     LOCALE.MESSAGES.MS.FRACTION_END
@@ -63,7 +63,7 @@ export function closingFraction(node: Element): string {
  * @return The middle string.
  */
 export function overFraction(node: Element): string {
-  let depth = MathspeakUtil.fractionNestingDepth(node);
+  const depth = MathspeakUtil.fractionNestingDepth(node);
   return (
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
     LOCALE.MESSAGES.MS.FRACTION_OVER
@@ -76,7 +76,7 @@ export function overFraction(node: Element): string {
  * @return The middle string.
  */
 export function overBevelledFraction(node: Element): string {
-  let depth = MathspeakUtil.fractionNestingDepth(node);
+  const depth = MathspeakUtil.fractionNestingDepth(node);
   return (
     new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
     '⠸' +
@@ -92,7 +92,7 @@ export function overBevelledFraction(node: Element): string {
  * @return The opening string.
  */
 export function nestedRadical(node: Element, postfix: string): string {
-  let depth = radicalNestingDepth(node);
+  const depth = radicalNestingDepth(node);
   if (depth === 1) {
     return postfix;
   }
@@ -106,7 +106,7 @@ export function nestedRadical(node: Element, postfix: string): string {
  * @return The nesting depth. 0 if the node is not a radical.
  */
 export function radicalNestingDepth(node: Element, opt_depth?: number): number {
-  let depth = opt_depth || 0;
+  const depth = opt_depth || 0;
   if (!node.parentNode) {
     return depth;
   }
@@ -150,12 +150,12 @@ export function indexRadical(node: Element): string {
  * @return The fence with the enlargment indicator.
  */
 export function enlargeFence(text: string): string {
-  let start = '⠠';
+  const start = '⠠';
   if (text.length === 1) {
     return start + text;
   }
-  let neut = '⠳';
-  let split = text.split('');
+  const neut = '⠳';
+  const split = text.split('');
   if (
     split.every(function (x) {
       return x === neut;
@@ -195,11 +195,11 @@ export function checkParent_(
   node: SemanticNode,
   info: { [key: string]: boolean }
 ): boolean {
-  let parent = node.parent;
+  const parent = node.parent;
   if (!parent) {
     return false;
   }
-  let type = parent.type;
+  const type = parent.type;
   if (
     NUMBER_PROPAGATORS_.indexOf(type) !== -1 ||
     (type === SemanticType.PREFIXOP &&
@@ -276,7 +276,7 @@ export function relationIterator(
   nodes: Element[],
   context: string
 ): () => AuditoryDescription[] {
-  let childNodes = nodes.slice(0);
+  const childNodes = nodes.slice(0);
   let first = true;
   let contentNodes: Element[];
   if (nodes.length > 0) {
@@ -288,36 +288,36 @@ export function relationIterator(
     contentNodes = [];
   }
   return function () {
-    let content = contentNodes.shift();
-    let leftChild = childNodes.shift();
-    let rightChild = childNodes[0];
-    let contextDescr = context
+    const content = contentNodes.shift();
+    const leftChild = childNodes.shift();
+    const rightChild = childNodes[0];
+    const contextDescr = context
       ? [AuditoryDescription.create({ text: context }, { translate: true })]
       : [];
     if (!content) {
       return contextDescr;
     }
-    let base = leftChild
+    const base = leftChild
       ? MathspeakUtil.nestedSubSuper(leftChild, '', {
           sup: LOCALE.MESSAGES.MS.SUPER,
           sub: LOCALE.MESSAGES.MS.SUB
         })
       : '';
-    let left =
+    const left =
       (leftChild && DomUtil.tagName(leftChild) !== 'EMPTY') ||
       (first &&
         content.parentNode.parentNode &&
         content.parentNode.parentNode.previousSibling)
         ? [AuditoryDescription.create({ text: '⠀' + base }, {})]
         : [];
-    let right =
+    const right =
       (rightChild && DomUtil.tagName(rightChild) !== 'EMPTY') ||
       (!contentNodes.length &&
         content.parentNode.parentNode &&
         content.parentNode.parentNode.nextSibling)
         ? [AuditoryDescription.create({ text: '⠀' }, {})]
         : [];
-    let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
+    const descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
     first = false;
     return contextDescr.concat(left, descrs, right);
   };
@@ -335,7 +335,7 @@ export function implicitIterator(
   nodes: Element[],
   context: string
 ): () => AuditoryDescription[] {
-  let childNodes = nodes.slice(0);
+  const childNodes = nodes.slice(0);
   let contentNodes: Element[];
   if (nodes.length > 0) {
     contentNodes = XpathUtil.evalXPath(
@@ -346,17 +346,17 @@ export function implicitIterator(
     contentNodes = [];
   }
   return function () {
-    let leftChild = childNodes.shift();
-    let rightChild = childNodes[0];
-    let content = contentNodes.shift();
-    let contextDescr = context
+    const leftChild = childNodes.shift();
+    const rightChild = childNodes[0];
+    const content = contentNodes.shift();
+    const contextDescr = context
       ? [AuditoryDescription.create({ text: context }, { translate: true })]
       : [];
     if (!content) {
       return contextDescr;
     }
-    let left = leftChild && DomUtil.tagName(leftChild) === 'NUMBER';
-    let right = rightChild && DomUtil.tagName(rightChild) === 'NUMBER';
+    const left = leftChild && DomUtil.tagName(leftChild) === 'NUMBER';
+    const right = rightChild && DomUtil.tagName(rightChild) === 'NUMBER';
     return contextDescr.concat(
       left && right && content.getAttribute('role') === SemanticRole.SPACE
         ? [AuditoryDescription.create({ text: '⠀' }, {})]

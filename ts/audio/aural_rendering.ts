@@ -52,7 +52,7 @@ namespace AuralRendering {
    * @override
    */
   export function setSeparator(sep: string) {
-    let renderer = renderers.get(Engine.getInstance().markup);
+    const renderer = renderers.get(Engine.getInstance().markup);
     if (renderer) {
       renderer.setSeparator(sep);
     }
@@ -62,7 +62,7 @@ namespace AuralRendering {
    * @override
    */
   export function getSeparator() {
-    let renderer = renderers.get(Engine.getInstance().markup);
+    const renderer = renderers.get(Engine.getInstance().markup);
     return renderer ? renderer.getSeparator() : '';
   }
 
@@ -70,7 +70,7 @@ namespace AuralRendering {
    * @override
    */
   export function markup(descrs: AuditoryDescription[]) {
-    let renderer = renderers.get(Engine.getInstance().markup);
+    const renderer = renderers.get(Engine.getInstance().markup);
     if (!renderer) {
       return '';
     }
@@ -82,10 +82,10 @@ namespace AuralRendering {
    */
   export function merge(strs: (Span | string)[]) {
     // TODO (TS): Ensure that these are all spans!
-    let span = strs.map((s) => {
+    const span = strs.map((s) => {
       return typeof s === 'string' ? new Span(s, {}) : s;
     });
-    let renderer = renderers.get(Engine.getInstance().markup);
+    const renderer = renderers.get(Engine.getInstance().markup);
     if (!renderer) {
       return strs.join();
     }
@@ -96,7 +96,7 @@ namespace AuralRendering {
    * @override
    */
   export function finalize(str: string) {
-    let renderer = renderers.get(Engine.getInstance().markup);
+    const renderer = renderers.get(Engine.getInstance().markup);
     if (!renderer) {
       return str;
     }
@@ -107,7 +107,7 @@ namespace AuralRendering {
    * @override
    */
   export function error(key: string) {
-    let renderer = renderers.get(Engine.getInstance().markup);
+    const renderer = renderers.get(Engine.getInstance().markup);
     if (!renderer) {
       return '';
     }

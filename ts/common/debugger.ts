@@ -26,7 +26,7 @@ export class Debugger {
   /**
    * Whether the debugger is active.
    */
-  private isActive_: boolean = false;
+  private isActive_ = false;
   private outputFunction_: (p1: string) => any = console.info;
 
   /**
@@ -81,7 +81,7 @@ export class Debugger {
    *     debugger.
    */
   public exit(opt_callback?: () => any) {
-    let callback = opt_callback || function () {};
+    const callback = opt_callback || function () {};
     if (this.isActive_ && this.stream_) {
       this.stream_.end('', '', callback);
     }

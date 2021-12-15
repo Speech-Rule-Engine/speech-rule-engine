@@ -46,7 +46,7 @@ export namespace MathMap {
   /**
    * The compund store for symbol and function mappings.
    */
-  export let store = MathCompoundStore;
+  export const store = MathCompoundStore;
 
   /**
    * Methods for parsing json structures.
@@ -119,9 +119,9 @@ export namespace MathMap {
    * @param parse Method adding the rules.
    */
   export function retrieveFiles(locale: string) {
-    let loader = loadMethod();
-    let promise = new Promise<string>((res) => {
-      let inner = loader(locale);
+    const loader = loadMethod();
+    const promise = new Promise<string>((res) => {
+      const inner = loader(locale);
       inner.then(
         (str: string) => {
           parseMaps(str);
@@ -144,7 +144,7 @@ export namespace MathMap {
    * @param json The json mappings string.
    */
   export function parseMaps(json: string) {
-    let js = JSON.parse(json) as { [key: string]: any[] };
+    const js = JSON.parse(json) as { [key: string]: any[] };
     addMaps(js);
   }
 
@@ -157,7 +157,7 @@ export namespace MathMap {
   function addMaps(json: MathMapJson, opt_locale?: string) {
     let generate = true;
     for (let i = 0, key; (key = Object.keys(json)[i]); i++) {
-      let info = key.split('/');
+      const info = key.split('/');
       if (opt_locale && opt_locale !== info[0]) {
         continue;
       }
@@ -213,7 +213,7 @@ export namespace MathMap {
    * @return JSON.
    */
   export function loadFile(locale: string): Promise<string> {
-    let file = FileUtil.localePath(locale);
+    const file = FileUtil.localePath(locale);
     return new Promise((res, rej) => {
       SystemExternal.fs.readFile(file, 'utf8', (err: Error, json: string) => {
         if (err) {
@@ -230,7 +230,7 @@ export namespace MathMap {
    * @return A string representing a JSON array.
    */
   export function loadFileSync(locale: string): Promise<string> {
-    let file = FileUtil.localePath(locale);
+    const file = FileUtil.localePath(locale);
     return new Promise((res, rej) => {
       let str = '{}';
       try {
@@ -248,12 +248,12 @@ export namespace MathMap {
    * @param parse Method adding the rules.
    */
   export function loadAjax(locale: string): Promise<string> {
-    let file = FileUtil.localePath(locale);
-    let httpRequest = new XMLHttpRequest();
+    const file = FileUtil.localePath(locale);
+    const httpRequest = new XMLHttpRequest();
     return new Promise((res, rej) => {
       httpRequest.onreadystatechange = function () {
         if (httpRequest.readyState === 4) {
-          let status = httpRequest.status;
+          const status = httpRequest.status;
           if (status === 0 || (status >= 200 && status < 400)) {
             res(httpRequest.responseText);
           } else {

@@ -23,14 +23,14 @@
 import { EnginePromise, EngineConst } from './engine';
 import * as System from './system';
 
-declare var MathJax: any;
+declare let MathJax: any;
 
 /**
  * Integration function into MathJax.
  * This is written in MathJax <=2.6 style.
  */
 (function () {
-  let SIGNAL = MathJax.Callback.Signal('Sre');
+  const SIGNAL = MathJax.Callback.Signal('Sre');
   MathJax.Extension.Sre = {
     version: System.version,
 

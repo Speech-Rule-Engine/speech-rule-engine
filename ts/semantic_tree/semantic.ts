@@ -64,6 +64,6 @@ export function getTree(mml: Element): SemanticTree {
  * @return Semantic tree for input string as XML node.
  */
 export function getTreeFromString(expr: string): SemanticTree {
-  let mml = DomUtil.parseInput(expr);
+  const mml = DomUtil.parseInput(expr);
   return getTree(mml);
 }

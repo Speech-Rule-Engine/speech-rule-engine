@@ -70,16 +70,16 @@ export class Cli {
   /**
    * Prints information on axes values.
    */
-  public enumerate(all: boolean = false) {
+  public enumerate(all = false) {
     System.setupEngine(this.setup);
     if (all) {
-      for (let loc of Variables.LOCALES) {
+      for (const loc of Variables.LOCALES) {
         System.setupEngine({ locale: loc });
       }
     }
     EnginePromise.getall().then(() => {
-      let length = DynamicCstr.DEFAULT_ORDER.map((x) => x.length);
-      let maxLength = (obj: any, index: number) => {
+      const length = DynamicCstr.DEFAULT_ORDER.map((x) => x.length);
+      const maxLength = (obj: any, index: number) => {
         length[index] = Math.max.apply(
           null,
           Object.keys(obj)
@@ -89,28 +89,28 @@ export class Cli {
             .concat(length[index])
         );
       };
-      let compStr = (str: string, length: number) =>
+      const compStr = (str: string, length: number) =>
         str + new Array(length - str.length + 1).join(' ');
       // TODO (TS): Sort out the any type.
       let dynamic: any = SpeechRuleEngine.getInstance().enumerate();
       dynamic = MathCompoundStore.enumerate(dynamic);
-      let table = [];
+      const table = [];
       maxLength(dynamic, 0);
-      for (let ax1 in dynamic) {
+      for (const ax1 in dynamic) {
         let clear1 = true;
-        let dyna1 = dynamic[ax1];
+        const dyna1 = dynamic[ax1];
         maxLength(dyna1, 1);
-        for (let ax2 in dyna1) {
+        for (const ax2 in dyna1) {
           let clear2 = true;
-          let dyna2 = dyna1[ax2];
+          const dyna2 = dyna1[ax2];
           maxLength(dyna2, 2);
-          for (let ax3 in dyna2) {
-            let styles = Object.keys(dyna2[ax3]).sort();
+          for (const ax3 in dyna2) {
+            const styles = Object.keys(dyna2[ax3]).sort();
             if (ax3 === 'clearspeak') {
               let clear3 = true;
-              let prefs =
+              const prefs =
                 ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
-              for (let ax4 in prefs) {
+              for (const ax4 in prefs) {
                 table.push([
                   compStr(clear1 ? ax1 : '', length[0]),
                   compStr(clear2 ? ax2 : '', length[1]),
@@ -155,7 +155,7 @@ export class Cli {
    * @param input The name of the input file.
    */
   public execute(input: string) {
-    let options = SystemExternal.commander.opts();
+    const options = SystemExternal.commander.opts();
     EnginePromise.getall().then(() => {
       this.runProcessors_((proc, file) => {
         console.info(System.file.processFile(proc, file, options.output));
@@ -169,9 +169,9 @@ export class Cli {
    * to the given output file.
    */
   public readline() {
-    let options = SystemExternal.commander.opts();
+    const options = SystemExternal.commander.opts();
     this.process.stdin.setEncoding('utf8');
-    let inter = SystemExternal.extRequire('readline').createInterface({
+    const inter = SystemExternal.extRequire('readline').createInterface({
       input: this.process.stdin,
       output: options.output
         ? SystemExternal.fs.createWriteStream(options.output)
@@ -201,12 +201,12 @@ export class Cli {
    * Method for the command line interface of the Speech Rule Engine
    */
   public commandLine() {
-    let commander = SystemExternal.commander;
-    let system = System;
-    let set = ((key: string) => {
+    const commander = SystemExternal.commander;
+    const system = System;
+    const set = ((key: string) => {
       return (val: string, def: string) => this.set(key, val, def);
     }).bind(this);
-    let processor = this.processor.bind(this);
+    const processor = this.processor.bind(this);
 
     commander
       .version(system.version)
@@ -331,7 +331,7 @@ export class Cli {
       })
       .parse(this.process.argv);
     System.setupEngine(this.setup);
-    let options = commander.opts();
+    const options = commander.opts();
     if (options.verbose) {
       Debugger.getInstance().init(options.log);
     }
@@ -381,7 +381,7 @@ export class Cli {
    */
   private readExpression_(input: string): boolean {
     try {
-      let testInput = input.replace(/(&|#|;)/g, '');
+      const testInput = input.replace(/(&|#|;)/g, '');
       this.dp.parseFromString(testInput, 'text/xml');
     } catch (err) {
       return false;

@@ -41,8 +41,8 @@ export class CaseDoubleScript extends AbstractEnrichCase {
     if (!semantic.mathmlTree || !semantic.childNodes.length) {
       return false;
     }
-    let mmlTag = DomUtil.tagName(semantic.mathmlTree);
-    let role = semantic.childNodes[0].role;
+    const mmlTag = DomUtil.tagName(semantic.mathmlTree);
+    const role = semantic.childNodes[0].role;
     return (
       (mmlTag === 'MSUBSUP' && role === SemanticRole.SUBSUP) ||
       (mmlTag === 'MUNDEROVER' && role === SemanticRole.UNDEROVER)
@@ -62,13 +62,13 @@ export class CaseDoubleScript extends AbstractEnrichCase {
    * @override
    */
   public getMathml() {
-    let ignore = this.semantic.childNodes[0];
-    let baseSem = ignore.childNodes[0] as SemanticNode;
-    let supSem = this.semantic.childNodes[1] as SemanticNode;
-    let subSem = ignore.childNodes[1] as SemanticNode;
-    let supMml = EnrichMathml.walkTree(supSem);
-    let baseMml = EnrichMathml.walkTree(baseSem);
-    let subMml = EnrichMathml.walkTree(subSem);
+    const ignore = this.semantic.childNodes[0];
+    const baseSem = ignore.childNodes[0] as SemanticNode;
+    const supSem = this.semantic.childNodes[1] as SemanticNode;
+    const subSem = ignore.childNodes[1] as SemanticNode;
+    const supMml = EnrichMathml.walkTree(supSem);
+    const baseMml = EnrichMathml.walkTree(baseSem);
+    const subMml = EnrichMathml.walkTree(subSem);
     EnrichMathml.setAttributes(this.mml, this.semantic);
     this.mml.setAttribute(
       EnrichMathml.Attribute.CHILDREN,

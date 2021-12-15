@@ -28,7 +28,7 @@ import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_it';
 import { Combiners } from '../transformers';
 
-let italianPostfixCombiner = function (
+const italianPostfixCombiner = function (
   letter: string,
   font: string,
   cap: string
@@ -51,7 +51,7 @@ export function it(): Locale {
 }
 
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
 
   loc.COMBINERS['italianPostfix'] = italianPostfixCombiner;

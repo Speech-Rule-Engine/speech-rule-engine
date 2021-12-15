@@ -31,12 +31,12 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
  * @return The word for the tens position.
  */
 function tensToWords_(num: number): string {
-  let n = num % 100;
+  const n = num % 100;
   if (n < 30) {
     return NUMBERS.ones[n];
   }
-  let tens = NUMBERS.tens[Math.floor(n / 10)];
-  let ones = NUMBERS.ones[n % 10];
+  const tens = NUMBERS.tens[Math.floor(n / 10)];
+  const ones = NUMBERS.ones[n % 10];
   return tens && ones ? tens + ' y ' + ones : tens || ones;
 }
 
@@ -46,10 +46,10 @@ function tensToWords_(num: number): string {
  * @return The string representation of that number.
  */
 function hundredsToWords_(num: number): string {
-  let n = num % 1000;
-  let hundred = Math.floor(n / 100);
-  let hundreds = NUMBERS.special.hundreds[hundred];
-  let tens = tensToWords_(n % 100);
+  const n = num % 1000;
+  const hundred = Math.floor(n / 100);
+  const hundreds = NUMBERS.special.hundreds[hundred];
+  const tens = tensToWords_(n % 100);
   if (hundred === 1) {
     if (!tens) {
       return hundreds;
@@ -75,10 +75,10 @@ function numberToWords(num: number): string {
   let pos = 0;
   let str = '';
   while (num > 0) {
-    let hundreds = num % 1000;
+    const hundreds = num % 1000;
     if (hundreds) {
       let large = NUMBERS.large[pos];
-      let huns = hundredsToWords_(hundreds);
+      const huns = hundredsToWords_(hundreds);
       if (!pos) {
         str = huns;
       } else if (hundreds === 1) {
@@ -108,7 +108,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
   if (num <= 12) {
     return NUMBERS.special.onesOrdinals[num - 1];
   }
-  let result = [];
+  const result = [];
   if (num >= 1000) {
     num = num - 1000;
     result.push('milésima');
@@ -143,7 +143,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = Grammar.getInstance().getParameter('gender') as string;
+  const gender = Grammar.getInstance().getParameter('gender') as string;
   return num.toString() + (gender === 'f' ? 'a' : 'o');
 }
 

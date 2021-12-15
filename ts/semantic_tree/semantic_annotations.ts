@@ -24,16 +24,16 @@ import { SemanticNode } from './semantic_node';
 
 export namespace SemanticAnnotations {
   // TODO (TS): Replace this with maps. Exported for tests only.
-  export let annotators: { [key: string]: SemanticAnnotator } = {};
+  export const annotators: { [key: string]: SemanticAnnotator } = {};
 
-  export let visitors: { [key: string]: SemanticVisitor } = {};
+  export const visitors: { [key: string]: SemanticVisitor } = {};
 
   /**
    * Registers an annotator.
    * @param annotator The annotator.
    */
   export function register(annotator: SemanticAnnotator | SemanticVisitor) {
-    let name = annotator.domain + ':' + annotator.name;
+    const name = annotator.domain + ':' + annotator.name;
     (annotator instanceof SemanticAnnotator ? annotators : visitors)[name] =
       annotator;
   }
@@ -44,8 +44,8 @@ export namespace SemanticAnnotations {
    * @param name The name of the annotator.
    */
   export function activate(domain: string, name: string) {
-    let key = domain + ':' + name;
-    let annotator = annotators[key] || visitors[key];
+    const key = domain + ':' + name;
+    const annotator = annotators[key] || visitors[key];
     if (annotator) {
       annotator.active = true;
     }
@@ -56,14 +56,14 @@ export namespace SemanticAnnotations {
    * @param node The semantic node to annotate.
    */
   export function annotate(node: SemanticNode) {
-    for (let key of Object.keys(annotators)) {
-      let annotator = annotators[key];
+    for (const key of Object.keys(annotators)) {
+      const annotator = annotators[key];
       if (annotator.active) {
         annotators[key].annotate(node);
       }
     }
-    for (let name of Object.keys(visitors)) {
-      let visitor = visitors[name];
+    for (const name of Object.keys(visitors)) {
+      const visitor = visitors[name];
       if (visitor.active) {
         visitors[name].visit(node, Object.assign({}, visitors[name].def));
       }

@@ -60,16 +60,16 @@ export class LayoutRenderer extends XmlRenderer {
    */
   public markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
-    let result = [];
+    const result = [];
     let content: AuditoryDescription[] = [];
-    for (let descr of descrs) {
+    for (const descr of descrs) {
       if (!descr.layout) {
         content.push(descr);
         continue;
       }
       result.push(this.processContent(content));
       content = [];
-      let value = descr.layout;
+      const value = descr.layout;
       if (value.match(/^begin/)) {
         result.push('<' + value.replace(/^begin/, '') + '>');
         continue;
@@ -85,8 +85,8 @@ export class LayoutRenderer extends XmlRenderer {
   }
 
   private processContent(content: AuditoryDescription[]) {
-    let result = [];
-    let markup = AudioUtil.personalityMarkup(content);
+    const result = [];
+    const markup = AudioUtil.personalityMarkup(content);
     for (let i = 0, descr: AudioUtil.Markup; (descr = markup[i]); i++) {
       if (descr.span) {
         result.push(this.merge(descr.span));
@@ -103,7 +103,7 @@ export class LayoutRenderer extends XmlRenderer {
 // Postprocessing
 let twodExpr = '';
 
-let handlers: { [key: string]: Function } = {
+const handlers: { [key: string]: Function } = {
   TABLE: handleTable,
   CASES: handleCases,
   CAYLEY: handleCayley,
@@ -117,14 +117,14 @@ let handlers: { [key: string]: Function } = {
 };
 
 function applyHandler(element: Element): string {
-  let tag = DomUtil.tagName(element as Element);
-  let handler = handlers[tag];
+  const tag = DomUtil.tagName(element as Element);
+  const handler = handlers[tag];
   return handler ? handler(element) : element.textContent;
 }
 
 function setTwoDim(str: string): string {
   twodExpr = '';
-  let dom = DomUtil.parseInput(`<all>${str}</all>`);
+  const dom = DomUtil.parseInput(`<all>${str}</all>`);
   Debugger.getInstance().output(DomUtil.formatXml(dom.toString()));
   twodExpr = recurseTree(dom);
   return twodExpr;
@@ -134,14 +134,14 @@ function combineContent(str1: string, str2: string): string {
   if (!str1 || !str2) {
     return str1 + str2;
   }
-  let height1 = strHeight(str1);
-  let height2 = strHeight(str2);
-  let diff = height1 - height2;
+  const height1 = strHeight(str1);
+  const height2 = strHeight(str2);
+  const diff = height1 - height2;
   str1 = diff < 0 ? padCell(str1, height2, strWidth(str1)) : str1;
   str2 = diff > 0 ? padCell(str2, height1, strWidth(str2)) : str2;
-  let lines1 = str1.split(/\r\n|\r|\n/);
-  let lines2 = str2.split(/\r\n|\r|\n/);
-  let result = [];
+  const lines1 = str1.split(/\r\n|\r|\n/);
+  const lines2 = str2.split(/\r\n|\r|\n/);
+  const result = [];
   for (let i = 0; i < lines1.length; i++) {
     result.push(lines1[i] + lines2[i]);
   }
@@ -157,7 +157,7 @@ function combineContent(str1: string, str2: string): string {
  */
 function recurseTree(dom: Element): string {
   let result = '';
-  for (let child of Array.from(dom.childNodes)) {
+  for (const child of Array.from(dom.childNodes)) {
     if (child.nodeType === DomUtil.NodeType.TEXT_NODE) {
       result = combineContent(result, child.textContent);
       continue;
@@ -189,7 +189,7 @@ function strWidth(str: string) {
  * @param {number} height
  */
 function padHeight(str: string, height: number): string {
-  let padding = height - strHeight(str);
+  const padding = height - strHeight(str);
   return str + (padding > 0 ? new Array(padding + 1).join('\n') : '');
 }
 
@@ -199,10 +199,10 @@ function padHeight(str: string, height: number): string {
  * @param {number} width
  */
 function padWidth(str: string, width: number): string {
-  let lines = str.split(/\r\n|\r|\n/);
-  let result = [];
-  for (let line of lines) {
-    let padding = width - line.length;
+  const lines = str.split(/\r\n|\r|\n/);
+  const result = [];
+  for (const line of lines) {
+    const padding = width - line.length;
     result.push(line + (padding > 0 ? new Array(padding + 1).join('⠀') : ''));
   }
   return result.join('\n');
@@ -230,9 +230,9 @@ declare type row = {
 
 // Clean row elements and assemble row structure.
 function assembleRows(matrix: Element): row[] {
-  let children = Array.from(matrix.childNodes);
-  let mat = [];
-  for (let row of children) {
+  const children = Array.from(matrix.childNodes);
+  const mat = [];
+  for (const row of children) {
     if (row.nodeType !== DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
@@ -243,8 +243,8 @@ function assembleRows(matrix: Element): row[] {
 
 // Compute max height and width
 function getMaxParameters(mat: row[]): [number, number[]] {
-  let maxHeight = mat.reduce((max, x) => Math.max(x.height, max), 0);
-  let maxWidth = [];
+  const maxHeight = mat.reduce((max, x) => Math.max(x.height, max), 0);
+  const maxWidth = [];
   for (let i = 0; i < mat[0].width.length; i++) {
     maxWidth.push(
       mat.map((x) => x.width[i]).reduce((max, x) => Math.max(max, x), 0)
@@ -255,12 +255,12 @@ function getMaxParameters(mat: row[]): [number, number[]] {
 
 // Pad cells and assemble rows.
 function combineCells(mat: row[], maxWidth: number[]): row[] {
-  let newMat = [];
-  for (let row of mat) {
+  const newMat = [];
+  for (const row of mat) {
     if (row.height === 0) {
       continue;
     }
-    let newCells = [];
+    const newCells = [];
     for (let i = 0; i < row.cells.length; i++) {
       newCells.push(padCell(row.cells[i], row.height, maxWidth[i]));
     }
@@ -278,10 +278,10 @@ function combineRows(mat: row[], maxHeight: number): string {
       .map((row) => row.lfence + row.cells.join(row.sep) + row.rfence)
       .join('\n');
   }
-  let result = [];
+  const result = [];
   // Otherwise insert extra empty rows if necessary
-  for (let row of mat) {
-    let sep = verticalArrange(row.sep, row.height);
+  for (const row of mat) {
+    const sep = verticalArrange(row.sep, row.height);
     let str = row.cells.shift();
     while (row.cells.length) {
       str = combineContent(str, sep);
@@ -299,7 +299,7 @@ function combineRows(mat: row[], maxHeight: number): string {
 
 function handleMatrix(matrix: Element): string {
   let mat = assembleRows(matrix);
-  let [maxHeight, maxWidth] = getMaxParameters(mat);
+  const [maxHeight, maxWidth] = getMaxParameters(mat);
   mat = combineCells(mat, maxWidth);
   return combineRows(mat, maxHeight);
 }
@@ -311,7 +311,7 @@ function handleTable(matrix: Element): string {
     row.cells = row.cells.slice(1).slice(0, -1);
     row.width = row.width.slice(1).slice(0, -1);
   });
-  let [maxHeight, maxWidth] = getMaxParameters(mat);
+  const [maxHeight, maxWidth] = getMaxParameters(mat);
   mat = combineCells(mat, maxWidth);
   return combineRows(mat, maxHeight);
 }
@@ -323,7 +323,7 @@ function handleCases(matrix: Element): string {
     row.cells = row.cells.slice(0, -1);
     row.width = row.width.slice(0, -1);
   });
-  let [maxHeight, maxWidth] = getMaxParameters(mat);
+  const [maxHeight, maxWidth] = getMaxParameters(mat);
   mat = combineCells(mat, maxWidth);
   return combineRows(mat, maxHeight);
 }
@@ -335,8 +335,8 @@ function handleCayley(matrix: Element): string {
     row.width = row.width.slice(1).slice(0, -1);
     row.sep = row.sep + row.sep;
   });
-  let [maxHeight, maxWidth] = getMaxParameters(mat);
-  let bar = {
+  const [maxHeight, maxWidth] = getMaxParameters(mat);
+  const bar = {
     lfence: '',
     rfence: '',
     cells: maxWidth.map((x) => '⠐' + new Array(x).join('⠒')),
@@ -359,9 +359,9 @@ function verticalArrange(char: string, height: number) {
 }
 
 function handleRow(row: Element): row {
-  let children = Array.from(row.childNodes);
-  let lfence = getFence(children[0]);
-  let rfence = getFence(children[children.length - 1]);
+  const children = Array.from(row.childNodes);
+  const lfence = getFence(children[0]);
+  const rfence = getFence(children[children.length - 1]);
   if (lfence) {
     children.shift();
   }
@@ -369,13 +369,13 @@ function handleRow(row: Element): row {
     children.pop();
   }
   let sep = '';
-  let cells = [];
-  for (let child of children) {
+  const cells = [];
+  for (const child of children) {
     if (child.nodeType === DomUtil.NodeType.TEXT_NODE) {
       sep = child.textContent;
       continue;
     }
-    let result = applyHandler(child as Element);
+    const result = applyHandler(child as Element);
     cells.push(result);
   }
   return {
@@ -399,32 +399,32 @@ function getFence(node: Node): string {
 }
 
 function centerCell(cell: string, width: number): string {
-  let cw = strWidth(cell);
-  let center = (width - cw) / 2;
-  let [lpad, rpad] =
+  const cw = strWidth(cell);
+  const center = (width - cw) / 2;
+  const [lpad, rpad] =
     Math.floor(center) === center
       ? [center, center]
       : [Math.floor(center), Math.ceil(center)];
-  let lines = cell.split(/\r\n|\r|\n/);
-  let result = [];
-  let [lstr, rstr] = [
+  const lines = cell.split(/\r\n|\r|\n/);
+  const result = [];
+  const [lstr, rstr] = [
     new Array(lpad + 1).join('⠀'),
     new Array(rpad + 1).join('⠀')
   ];
-  for (let line of lines) {
+  for (const line of lines) {
     result.push(lstr + line + rstr);
   }
   return result.join('\n');
 }
 
 function handleFraction(frac: Node): string {
-  let [open, num, , den, close] = Array.from(frac.childNodes);
-  let numerator = applyHandler(num as Element);
-  let denominator = applyHandler(den as Element);
-  let nwidth = strWidth(numerator);
-  let dwidth = strWidth(denominator);
+  const [open, num, , den, close] = Array.from(frac.childNodes);
+  const numerator = applyHandler(num as Element);
+  const denominator = applyHandler(den as Element);
+  const nwidth = strWidth(numerator);
+  const dwidth = strWidth(denominator);
   let maxWidth = Math.max(nwidth, dwidth);
-  let bar = open + new Array(maxWidth + 1).join('⠒') + close;
+  const bar = open + new Array(maxWidth + 1).join('⠒') + close;
   maxWidth = bar.length;
   return (
     `${centerCell(numerator, maxWidth)}\n${bar}\n` +
@@ -433,8 +433,8 @@ function handleFraction(frac: Node): string {
 }
 
 function handleFractionPart(prt: Element): string {
-  let fchild = prt.firstChild as Element;
-  let content = recurseTree(prt);
+  const fchild = prt.firstChild as Element;
+  const content = recurseTree(prt);
   if (fchild && fchild.nodeType === DomUtil.NodeType.ELEMENT_NODE) {
     if (DomUtil.tagName(fchild) === 'ENGLISH') {
       return '⠰' + content;

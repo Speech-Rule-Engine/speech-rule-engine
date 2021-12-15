@@ -47,7 +47,7 @@ export function computeSpeech(xml: Element): AuditoryDescription[] {
  *     for the node.
  */
 export function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
-  let tree = SemanticTree.fromNode(semantic);
+  const tree = SemanticTree.fromNode(semantic);
   return computeSpeech(tree.xml());
 }
 
@@ -57,7 +57,7 @@ export function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
  * @return The speech string.
  */
 export function computeMarkup(tree: Element): string {
-  let descrs = computeSpeech(tree);
+  const descrs = computeSpeech(tree);
   return AuralRendering.markup(descrs);
 }
 
@@ -67,7 +67,7 @@ export function computeMarkup(tree: Element): string {
  * @return The speech string.
  */
 export function recomputeMarkup(semantic: SemanticNode): string {
-  let descrs = recomputeSpeech(semantic);
+  const descrs = recomputeSpeech(semantic);
   return AuralRendering.markup(descrs);
 }
 
@@ -82,12 +82,12 @@ export function addSpeech(
   semantic: SemanticNode,
   snode: Element
 ) {
-  let sxml = DomUtil.querySelectorAllByAttrValue(
+  const sxml = DomUtil.querySelectorAllByAttrValue(
     snode,
     'id',
     semantic.id.toString()
   )[0];
-  let speech = sxml
+  const speech = sxml
     ? AuralRendering.markup(computeSpeech(sxml))
     : recomputeMarkup(semantic);
   mml.setAttribute(Attribute.SPEECH, speech);
@@ -105,7 +105,7 @@ export function addModality(
   semantic: SemanticNode,
   modality: string
 ) {
-  let markup = recomputeMarkup(semantic);
+  const markup = recomputeMarkup(semantic);
   mml.setAttribute(modality, markup);
 }
 
@@ -115,7 +115,7 @@ export function addModality(
  * @param semantic The semantic tree node.
  */
 export function addPrefix(mml: Element, semantic: SemanticNode) {
-  let speech = retrievePrefix(semantic);
+  const speech = retrievePrefix(semantic);
   if (speech) {
     mml.setAttribute(Attribute.PREFIX, speech);
   }
@@ -127,7 +127,7 @@ export function addPrefix(mml: Element, semantic: SemanticNode) {
  * @return The prefix speech string.
  */
 export function retrievePrefix(semantic: SemanticNode): string {
-  let descrs = computePrefix_(semantic);
+  const descrs = computePrefix_(semantic);
   return AuralRendering.markup(descrs);
 }
 
@@ -138,8 +138,8 @@ export function retrievePrefix(semantic: SemanticNode): string {
  *     for the prefix.
  */
 export function computePrefix_(semantic: SemanticNode): AuditoryDescription[] {
-  let tree = SemanticTree.fromRoot(semantic);
-  let nodes = XpathUtil.evalXPath(
+  const tree = SemanticTree.fromRoot(semantic);
+  const nodes = XpathUtil.evalXPath(
     './/*[@id="' + semantic.id + '"]',
     tree.xml()
   ) as Element[];
@@ -177,16 +177,16 @@ export function nodeAtPosition_(
   semantic: SemanticNode,
   nodes: Element[]
 ): Element {
-  let node = nodes[0];
+  const node = nodes[0];
   if (!semantic.parent) {
     return node;
   }
-  let path = [];
+  const path = [];
   while (semantic) {
     path.push(semantic.id);
     semantic = semantic.parent;
   }
-  let pathEquals = function (xml: Element, path: number[]) {
+  const pathEquals = function (xml: Element, path: number[]) {
     while (
       path.length &&
       path.shift().toString() === xml.getAttribute('id') &&
@@ -213,17 +213,17 @@ export function nodeAtPosition_(
  * @param stree The XML for the semantic tree.
  */
 export function connectMactions(node: Element, mml: Element, stree: Element) {
-  let mactions = DomUtil.querySelectorAll(mml, 'maction');
+  const mactions = DomUtil.querySelectorAll(mml, 'maction');
   for (let i = 0, maction; (maction = mactions[i]); i++) {
     // Get the span with the maction id in node.
-    let aid = maction.getAttribute('id');
-    let span = DomUtil.querySelectorAllByAttrValue(node, 'id', aid)[0];
+    const aid = maction.getAttribute('id');
+    const span = DomUtil.querySelectorAllByAttrValue(node, 'id', aid)[0];
     if (!span) {
       continue;
     }
     // Get id of uncollapse maction child.
-    let lchild = maction.childNodes[1] as Element;
-    let mid = lchild.getAttribute(Attribute.ID);
+    const lchild = maction.childNodes[1] as Element;
+    const mid = lchild.getAttribute(Attribute.ID);
     // Find the corresponding span in node.
     let cspan = WalkerUtil.getBySemanticId(node, mid);
     // If the span exists, the maction is not collapsed and does not need to be
@@ -242,7 +242,7 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
       continue;
     }
     // Set parent pointer if necessary.
-    let pid = lchild.getAttribute(Attribute.PARENT);
+    const pid = lchild.getAttribute(Attribute.PARENT);
     if (pid) {
       cspan.setAttribute(Attribute.PARENT, pid);
     }
@@ -250,7 +250,7 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
     cspan.setAttribute(Attribute.TYPE, 'dummy');
     cspan.setAttribute(Attribute.ID, mid);
     // Indicate the alternative in the semantic tree.
-    let cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
+    const cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', mid);
   }
 }
@@ -261,11 +261,11 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
  * @param stree The XML for the semantic tree.
  */
 export function connectAllMactions(mml: Element, stree: Element) {
-  let mactions = DomUtil.querySelectorAll(mml, 'maction');
+  const mactions = DomUtil.querySelectorAll(mml, 'maction');
   for (let i = 0, maction; (maction = mactions[i]); i++) {
-    let lchild = maction.childNodes[1] as Element;
-    let mid = lchild.getAttribute(Attribute.ID);
-    let cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
+    const lchild = maction.childNodes[1] as Element;
+    const mid = lchild.getAttribute(Attribute.ID);
+    const cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', mid);
   }
 }
@@ -276,7 +276,7 @@ export function connectAllMactions(mml: Element, stree: Element) {
  * @return The summary speech string.
  */
 export function retrieveSummary(node: Element): string {
-  let descrs = computeSummary_(node);
+  const descrs = computeSummary_(node);
   return AuralRendering.markup(descrs);
 }
 

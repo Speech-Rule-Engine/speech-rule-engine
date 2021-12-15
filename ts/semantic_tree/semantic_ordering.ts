@@ -48,7 +48,7 @@ export namespace SemanticOrdering {
     meaning2: SemanticMeaning
   ): number {
     for (let i = 0, comparator; (comparator = comparators[i]); i++) {
-      let result = comparator.compare(meaning1, meaning2);
+      const result = comparator.compare(meaning1, meaning2);
       if (result !== 0) {
         return result;
       }
@@ -73,9 +73,9 @@ export namespace SemanticOrdering {
     if (meanings.length <= 1) {
       return meanings;
     }
-    let copy = meanings.slice();
+    const copy = meanings.slice();
     this.sort(copy);
-    let result = [];
+    const result = [];
     let last;
     do {
       last = copy.pop();

@@ -40,9 +40,9 @@ namespace SpeechRules {
     inherit: string,
     store: { [key: string]: Function }
   ) {
-    let values = {};
+    const values = {};
     if (inherit) {
-      let inherits = this.store[inherit] || {};
+      const inherits = this.store[inherit] || {};
       Object.assign(values, inherits);
     }
     this.store[constr] = Object.assign(values, store);

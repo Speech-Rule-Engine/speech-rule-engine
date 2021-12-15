@@ -41,7 +41,7 @@ export class SemanticNodeFactory {
   /**
    * ID counter.
    */
-  private idCounter_: number = -1;
+  private idCounter_ = -1;
 
   /**
    * Creates a new node object with a given id.
@@ -58,7 +58,7 @@ export class SemanticNodeFactory {
    * @return The new node.
    */
   public makeUnprocessed(mml: Element): SemanticNode {
-    let node = this.createNode_();
+    const node = this.createNode_();
     node.mathml = [mml];
     node.mathmlTree = mml;
     return node;
@@ -69,7 +69,7 @@ export class SemanticNodeFactory {
    * @return The new node.
    */
   public makeEmptyNode(): SemanticNode {
-    let node = this.createNode_();
+    const node = this.createNode_();
     node.type = SemanticType.EMPTY;
     return node;
   }
@@ -81,7 +81,7 @@ export class SemanticNodeFactory {
    * @return The new node.
    */
   public makeContentNode(content: string): SemanticNode {
-    let node = this.createNode_();
+    const node = this.createNode_();
     node.updateContent(content);
     return node;
   }
@@ -96,7 +96,7 @@ export class SemanticNodeFactory {
     num: number,
     content: string
   ): SemanticNode[] {
-    let nodes = [];
+    const nodes = [];
     for (let i = 0; i < num; i++) {
       nodes.push(this.makeContentNode(content));
     }
@@ -113,10 +113,10 @@ export class SemanticNodeFactory {
     if (!content) {
       return this.makeEmptyNode();
     }
-    let node = this.makeContentNode(content);
+    const node = this.makeContentNode(content);
     node.font = font || node.font;
     // Lookup alternative meaning here!
-    let meaning = this.defaultMap.retrieveNode(node);
+    const meaning = this.defaultMap.retrieveNode(node);
     if (meaning) {
       node.type = meaning.type;
       node.role = meaning.role;
@@ -140,7 +140,7 @@ export class SemanticNodeFactory {
     contentNodes: SemanticNode[],
     opt_content?: string
   ): SemanticNode {
-    let node = this.createNode_();
+    const node = this.createNode_();
     if (opt_content) {
       node.updateContent(opt_content);
     }

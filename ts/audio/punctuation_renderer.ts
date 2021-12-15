@@ -39,7 +39,7 @@ export class PunctuationRenderer extends AbstractAudioRenderer {
    * @override
    */
   public markup(descrs: AuditoryDescription[]) {
-    let markup = AudioUtil.personalityMarkup(descrs);
+    const markup = AudioUtil.personalityMarkup(descrs);
     let str = '';
     let pause = null;
     let span = false;

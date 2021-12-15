@@ -71,8 +71,8 @@ export class AbstractTrieNode<T> implements TrieNode {
    * @override
    */
   public addChild(node: TrieNode) {
-    let constraint = node.getConstraint();
-    let child = this.children_[constraint];
+    const constraint = node.getConstraint();
+    const child = this.children_[constraint];
     this.children_[constraint] = node;
     return child;
   }
@@ -88,8 +88,8 @@ export class AbstractTrieNode<T> implements TrieNode {
    * @override
    */
   public getChildren() {
-    let children = [];
-    for (let key in this.children_) {
+    const children = [];
+    for (const key in this.children_) {
       children.push(this.children_[key]);
     }
     return children;
@@ -99,9 +99,9 @@ export class AbstractTrieNode<T> implements TrieNode {
    * @override
    */
   public findChildren(object: T) {
-    let children = [];
-    for (let key in this.children_) {
-      let child = this.children_[key];
+    const children = [];
+    for (const key in this.children_) {
+      const child = this.children_[key];
       if (child.applyTest(object)) {
         children.push(child);
       }
@@ -159,7 +159,7 @@ export class StaticTrieNode extends AbstractTrieNode<Node> {
    * @override
    */
   public toString() {
-    let rule = this.getRule();
+    const rule = this.getRule();
     return rule
       ? this.constraint + '\n' + '==> ' + this.getRule().action
       : this.constraint;

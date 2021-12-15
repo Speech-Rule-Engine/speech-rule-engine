@@ -26,15 +26,15 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
 /**
  * Sub-ISO specification. Possible values: alt.
  */
-export let SUB_ISO: string = 'alt';
+export const SUB_ISO = 'alt';
 
 /**
  * Changes number one 'eins' into a prefix.
  * @param num number string.
  * @return If it is a one, it is made into prefix.
  */
-function onePrefix_(num: string, thd: boolean = false): string {
-  let numOne = NUMBERS.ones[1];
+function onePrefix_(num: string, thd = false): string {
+  const numOne = NUMBERS.ones[1];
   return num === numOne ? (num === 'ein' ? 'eitt ' : thd ? 'et' : 'ett') : num;
 }
 
@@ -43,7 +43,7 @@ function onePrefix_(num: string, thd: boolean = false): string {
  * @param num The number to translate.
  * @return The string representation of that number.
  */
-function hundredsToWords_(num: number, ordinal: boolean = false): string {
+function hundredsToWords_(num: number, ordinal = false): string {
   let n = num % 1000;
   let str = '';
   let ones = NUMBERS.ones[Math.floor(n / 100)];
@@ -52,7 +52,7 @@ function hundredsToWords_(num: number, ordinal: boolean = false): string {
   if (n) {
     str += str ? 'og' : '';
     if (ordinal) {
-      let ord = NUMBERS.special.smallOrdinals[n];
+      const ord = NUMBERS.special.smallOrdinals[n];
       if (ord) {
         return (str += ord);
       }
@@ -61,7 +61,7 @@ function hundredsToWords_(num: number, ordinal: boolean = false): string {
     if (ones) {
       str += ones;
     } else {
-      let tens = NUMBERS.tens[Math.floor(n / 10)];
+      const tens = NUMBERS.tens[Math.floor(n / 10)];
       ones = NUMBERS.ones[n % 10];
       str += ones ? ones + 'og' + tens : tens;
     }
@@ -75,7 +75,7 @@ function hundredsToWords_(num: number, ordinal: boolean = false): string {
  * @return Number with ordinal ending.
  */
 function replaceOrdinal(str: string): string {
-  let letOne = NUMBERS.special.endOrdinal[0];
+  const letOne = NUMBERS.special.endOrdinal[0];
   if (letOne === 'a' && str.match(/en$/)) {
     return str.slice(0, -2) + NUMBERS.special.endOrdinal;
   }
@@ -99,7 +99,7 @@ function replaceOrdinal(str: string): string {
  * @param num The number to translate.
  * @return The string representation of that number.
  */
-function numberToWords(num: number, ordinal: boolean = false): string {
+function numberToWords(num: number, ordinal = false): string {
   if (num === 0) {
     return ordinal ? NUMBERS.special.smallOrdinals[0] : NUMBERS.zero;
   }
@@ -109,9 +109,9 @@ function numberToWords(num: number, ordinal: boolean = false): string {
   let pos = 0;
   let str = '';
   while (num > 0) {
-    let hundreds = num % 1000;
+    const hundreds = num % 1000;
     if (hundreds) {
-      let hund = hundredsToWords_(num % 1000, pos ? false : ordinal);
+      const hund = hundredsToWords_(num % 1000, pos ? false : ordinal);
       if (!pos && ordinal) {
         ordinal = !ordinal;
       }
@@ -148,7 +148,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let ordinal = numberToWords(num, true);
+  const ordinal = numberToWords(num, true);
   return ordinal;
 }
 

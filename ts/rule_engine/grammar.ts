@@ -41,7 +41,7 @@ interface Flags {
   translate?: boolean;
 }
 
-export const ATTRIBUTE: string = 'grammar';
+export const ATTRIBUTE = 'grammar';
 
 export class Grammar {
   // TODO (TS): Keeping this as a singleton for the time being.
@@ -84,11 +84,11 @@ export class Grammar {
    * @return The grammar structure.
    */
   public static parseInput(grammar: string): State {
-    let attributes: State = {};
-    let components = grammar.split(':');
+    const attributes: State = {};
+    const components = grammar.split(':');
     for (let i = 0, l = components.length; i < l; i++) {
-      let comp = components[i].split('=');
-      let key = comp[0].trim();
+      const comp = components[i].split('=');
+      const key = comp[0].trim();
       if (comp[1]) {
         attributes[key] = comp[1].trim();
         continue;
@@ -106,12 +106,12 @@ export class Grammar {
    * @return The grammar structure.
    */
   public static parseState(stateStr: string): State {
-    let state: State = {};
-    let corrections = stateStr.split(' ');
+    const state: State = {};
+    const corrections = stateStr.split(' ');
     for (let i = 0, l = corrections.length; i < l; i++) {
-      let corr = corrections[i].split(':');
-      let key = corr[0];
-      let value = corr[1];
+      const corr = corrections[i].split(':');
+      const key = corr[0];
+      const value = corr[1];
       state[key] = value ? value : true;
     }
     return state;
@@ -126,8 +126,8 @@ export class Grammar {
     if (text.match(/:unit$/)) {
       return Grammar.translateUnit_(text);
     }
-    let engine = Engine.getInstance();
-    let result = engine.evaluator(text, engine.dynamicCstr);
+    const engine = Engine.getInstance();
+    const result = engine.evaluator(text, engine.dynamicCstr);
     return result === null ? text : result;
   }
 
@@ -138,10 +138,10 @@ export class Grammar {
    */
   private static translateUnit_(text: string): string {
     text = Grammar.prepareUnit_(text);
-    let engine = Engine.getInstance();
-    let plural = Grammar.getInstance().getParameter('plural');
-    let strict = engine.strict;
-    let baseCstr = `${engine.locale}.${engine.modality}.default`;
+    const engine = Engine.getInstance();
+    const plural = Grammar.getInstance().getParameter('plural');
+    const strict = engine.strict;
+    const baseCstr = `${engine.locale}.${engine.modality}.default`;
     engine.strict = true;
     let cstr: DynamicCstr;
     let result: string;
@@ -171,7 +171,7 @@ export class Grammar {
    * @return The cleaned string.
    */
   private static prepareUnit_(text: string): string {
-    let match = text.match(/:unit$/);
+    const match = text.match(/:unit$/);
     return match
       ? text.slice(0, match.index).replace(/\s+/g, ' ') +
           text.slice(match.index)
@@ -205,7 +205,7 @@ export class Grammar {
    * @return The old value if it existed.
    */
   public setParameter(parameter: string, value: Value): Value {
-    let oldValue = this.parameters_[parameter];
+    const oldValue = this.parameters_[parameter];
     value
       ? (this.parameters_[parameter] = value)
       : delete this.parameters_[parameter];
@@ -252,9 +252,9 @@ export class Grammar {
    * @return A string version of the grammatical state.
    */
   public getState(): string {
-    let pairs = [];
-    for (let key in this.parameters_) {
-      let value = this.parameters_[key];
+    const pairs = [];
+    for (const key in this.parameters_) {
+      const value = this.parameters_[key];
       pairs.push(typeof value === 'string' ? key + ':' + value : key);
     }
     return pairs.join(' ');
@@ -266,7 +266,7 @@ export class Grammar {
    *     pairs.
    */
   public pushState(assignment: { [key: string]: Value }) {
-    for (let key in assignment) {
+    for (const key in assignment) {
       assignment[key] = this.setParameter(key, assignment[key]);
     }
     this.stateStack_.push(assignment);
@@ -276,8 +276,8 @@ export class Grammar {
    * Saves the current state of the grammar object.
    */
   public popState() {
-    let assignment = this.stateStack_.pop();
-    for (let key in assignment) {
+    const assignment = this.stateStack_.pop();
+    for (const key in assignment) {
       this.setParameter(key, assignment[key]);
     }
   }
@@ -288,7 +288,7 @@ export class Grammar {
    */
   public setAttribute(node: Element) {
     if (node && node.nodeType === DomUtil.NodeType.ELEMENT_NODE) {
-      let state = this.getState();
+      const state = this.getState();
       if (state) {
         node.setAttribute(ATTRIBUTE, state);
       }
@@ -357,12 +357,12 @@ export class Grammar {
     text: string,
     funcs: { [key: string]: Function }
   ): string {
-    for (let key in this.parameters_) {
-      let func = funcs[key];
+    for (const key in this.parameters_) {
+      const func = funcs[key];
       if (!func) {
         continue;
       }
-      let value = this.parameters_[key];
+      const value = this.parameters_[key];
       text = value === true ? func(text) : func(text, value);
     }
     return text;
@@ -385,7 +385,7 @@ function correctFont_(text: string, correction: string): string {
   if (!correction || !text) {
     return text;
   }
-  let regexp = LOCALE.FUNCTIONS.fontRegexp(LocaleUtil.localFont(correction));
+  const regexp = LOCALE.FUNCTIONS.fontRegexp(LocaleUtil.localFont(correction));
   return text.replace(regexp, '');
 }
 

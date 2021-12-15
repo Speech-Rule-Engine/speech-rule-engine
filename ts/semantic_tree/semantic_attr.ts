@@ -3656,7 +3656,7 @@ export namespace SemanticAttr {
    *     semantic attributes.
    */
   const meaning_: { [key: string]: SemanticMeaning } = (function () {
-    let result: { [key: string]: SemanticMeaning } = {};
+    const result: { [key: string]: SemanticMeaning } = {};
     for (let i = 0, st: MeaningSet; (st = symbolSetToSemantic_[i]); i++) {
       st.set.forEach(function (symbol) {
         result[symbol] = {
@@ -3845,9 +3845,9 @@ export namespace SemanticAttr {
   function addSecondary_(
     kind: string,
     chars: string[],
-    annotation: string = ''
+    annotation = ''
   ) {
-    for (let char of chars) {
+    for (const char of chars) {
       secondary_.set(secKey(kind, char), annotation || kind);
     }
   }

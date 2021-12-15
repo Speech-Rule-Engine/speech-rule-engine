@@ -29,12 +29,12 @@ export class StringRenderer extends AbstractAudioRenderer {
    */
   public markup(descrs: AuditoryDescription[]) {
     let str = '';
-    let markup = personalityMarkup(descrs);
-    let clean = markup.filter((x) => x.span);
+    const markup = personalityMarkup(descrs);
+    const clean = markup.filter((x) => x.span);
     if (!clean.length) {
       return str;
     }
-    let len = clean.length - 1;
+    const len = clean.length - 1;
     for (let i = 0, descr; (descr = clean[i]); i++) {
       if (descr.span) {
         str += this.merge(descr.span);
@@ -42,7 +42,7 @@ export class StringRenderer extends AbstractAudioRenderer {
       if (i >= len) {
         continue;
       }
-      let join = descr.join;
+      const join = descr.join;
       str += typeof join === 'undefined' ? this.getSeparator() : join;
     }
     return str;

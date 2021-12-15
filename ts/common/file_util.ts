@@ -37,7 +37,7 @@ export function makePath(path: string): string {
  * @param locale The locale iso.
  * @param ext An optional file extension. Defaults to json.
  */
-export function localePath(locale: string, ext: string = 'json') {
+export function localePath(locale: string, ext = 'json') {
   return (
     makePath(SystemExternal.jsonPath) +
     locale +

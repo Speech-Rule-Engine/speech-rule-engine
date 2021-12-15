@@ -85,10 +85,10 @@ export function convertVulgarFraction_(node: Element): Convertible {
   ) {
     return { convertible: false, content: node.textContent };
   }
-  let denStr = node.childNodes[0].childNodes[1].textContent;
-  let enumStr = node.childNodes[0].childNodes[0].textContent;
-  let denominator = Number(denStr);
-  let enumerator = Number(enumStr);
+  const denStr = node.childNodes[0].childNodes[1].textContent;
+  const enumStr = node.childNodes[0].childNodes[0].textContent;
+  const denominator = Number(denStr);
+  const enumerator = Number(enumStr);
   if (isNaN(denominator) || isNaN(enumerator)) {
     return {
       convertible: false,
@@ -110,7 +110,7 @@ export function convertVulgarFraction_(node: Element): Convertible {
  *     vulgar fraction.
  */
 export function vulgarFraction(node: Element): string | Span[] {
-  let conversion = convertVulgarFraction_(node);
+  const conversion = convertVulgarFraction_(node);
   if (
     conversion.convertible &&
     conversion.enumerator &&
@@ -155,10 +155,10 @@ export function vulgarFractionSmall(
   enumer: number,
   denom: number
 ): boolean {
-  let conversion = convertVulgarFraction_(node);
+  const conversion = convertVulgarFraction_(node);
   if (conversion.convertible) {
-    let enumerator = conversion.enumerator;
-    let denominator = conversion.denominator;
+    const enumerator = conversion.enumerator;
+    const denominator = conversion.denominator;
     return (
       enumerator > 0 &&
       enumerator < enumer &&
@@ -176,6 +176,6 @@ export function vulgarFractionSmall(
  *     the node.
  */
 export function ordinalPosition(node: Node): string {
-  let children = DomUtil.toArray(node.parentNode.childNodes);
+  const children = DomUtil.toArray(node.parentNode.childNodes);
   return LOCALE.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
 }

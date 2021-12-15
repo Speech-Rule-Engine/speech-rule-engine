@@ -38,7 +38,7 @@ export function hi(): Locale {
 }
 
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;
 

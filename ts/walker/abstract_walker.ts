@@ -50,15 +50,15 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * Unique id counter for walkers. Needed to regain states on rerendering.
    */
-  public static ID_COUNTER: number = 0;
+  public static ID_COUNTER = 0;
 
   /**
    * Attribute that saves the explorer id in a node when we have multiple
    * explorers.
    */
-  public static SRE_ID_ATTR: string = 'sre-explorer-id';
+  public static SRE_ID_ATTR = 'sre-explorer-id';
 
-  public modifier: boolean = false;
+  public modifier = false;
 
   public id: any;
 
@@ -110,7 +110,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   private focus_: Focus = null;
 
-  private active_: boolean = false;
+  private active_ = false;
 
   /**
    * Finds the focus on the current level for a given semantic node id.
@@ -278,11 +278,11 @@ export abstract class AbstractWalker<T> implements Walker {
    * @override
    */
   public speech() {
-    let nodes = this.getFocus().getDomNodes();
+    const nodes = this.getFocus().getDomNodes();
     if (!nodes.length) {
       return '';
     }
-    let special = this.specialMove();
+    const special = this.specialMove();
     if (special !== null) {
       return special;
     }
@@ -294,11 +294,11 @@ export abstract class AbstractWalker<T> implements Walker {
       case WalkerMoves.DETAIL:
         return this.detail_();
       default:
-        let speech = [];
-        let snodes = this.getFocus().getSemanticNodes();
+        const speech = [];
+        const snodes = this.getFocus().getSemanticNodes();
         for (let i = 0, l = nodes.length; i < l; i++) {
-          let node = nodes[i];
-          let snode = snodes[i] as SemanticNode;
+          const node = nodes[i];
+          const snode = snodes[i] as SemanticNode;
           speech.push(
             node
               ? this.generator.getSpeech(node, this.getXml())
@@ -313,11 +313,11 @@ export abstract class AbstractWalker<T> implements Walker {
    * @override
    */
   public move(key: KeyCode) {
-    let direction = this.keyMapping.get(key);
+    const direction = this.keyMapping.get(key);
     if (!direction) {
       return null;
     }
-    let focus = direction();
+    const focus = direction();
     if (!focus || focus === this.getFocus()) {
       return false;
     }
@@ -381,7 +381,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   protected home(): Focus | null {
     this.moved = WalkerMoves.HOME;
-    let focus = Focus.factory(
+    const focus = Focus.factory(
       this.rootId,
       [this.rootId],
       this.getRebuilt(),
@@ -411,8 +411,8 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return New focus element if actionable. O/w old focus.
    */
   public expand(): Focus {
-    let primary = this.getFocus().getDomPrimary();
-    let expandable = this.actionable_(primary);
+    const primary = this.getFocus().getDomPrimary();
+    const expandable = this.actionable_(primary);
     if (!expandable) {
       return this.getFocus();
     }
@@ -427,7 +427,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return True if the node is expandable.
    */
   public expandable(node: Element): boolean {
-    let parent = !!this.actionable_(node);
+    const parent = !!this.actionable_(node);
     return parent && node.childNodes.length === 0;
   }
 
@@ -437,7 +437,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return True if the node is collapsible.
    */
   public collapsible(node: Element): boolean {
-    let parent = !!this.actionable_(node);
+    const parent = !!this.actionable_(node);
     return parent && node.childNodes.length > 0;
   }
 
@@ -448,12 +448,12 @@ export abstract class AbstractWalker<T> implements Walker {
     if (!this.highlighter) {
       return;
     }
-    let state = WalkerState.getState(this.id);
+    const state = WalkerState.getState(this.id);
     if (!state) {
       return;
     }
     let node = this.getRebuilt().nodeDict[state];
-    let path = [];
+    const path = [];
     while (node) {
       path.push(node.id);
       node = node.parent;
@@ -461,8 +461,8 @@ export abstract class AbstractWalker<T> implements Walker {
     path.pop();
     while (path.length > 0) {
       this.down();
-      let id = path.pop();
-      let focus = this.findFocusOnLevel(id);
+      const id = path.pop();
+      const focus = this.findFocusOnLevel(id);
       if (!focus) {
         break;
       }
@@ -493,7 +493,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The reconstructed semantic tree.
    */
   protected rebuildStree(): RebuildStree {
-    let rebuilt = new RebuildStree(this.getXml());
+    const rebuilt = new RebuildStree(this.getXml());
     this.rootId = rebuilt.stree.root.id.toString();
     this.generator.setRebuilt(rebuilt);
     this.focus_ = Focus.factory(this.rootId, [this.rootId], rebuilt, this.node);
@@ -507,7 +507,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The previous level.
    */
   public previousLevel(): string | null {
-    let dnode = this.getFocus().getDomPrimary();
+    const dnode = this.getFocus().getDomPrimary();
     return dnode
       ? WalkerUtil.getAttribute(dnode, Attribute.PARENT)
       : this.getFocus().getSemanticPrimary().parent.id.toString();
@@ -518,18 +518,18 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The next lower level.
    */
   public nextLevel(): T[] {
-    let dnode = this.getFocus().getDomPrimary();
+    const dnode = this.getFocus().getDomPrimary();
     let children;
     let content;
     if (dnode) {
       children = WalkerUtil.splitAttribute(
         WalkerUtil.getAttribute(dnode, Attribute.CHILDREN)
       );
-      let content = WalkerUtil.splitAttribute(
+      const content = WalkerUtil.splitAttribute(
         WalkerUtil.getAttribute(dnode, Attribute.CONTENT)
       );
-      let type = WalkerUtil.getAttribute(dnode, Attribute.TYPE);
-      let role = WalkerUtil.getAttribute(dnode, Attribute.ROLE);
+      const type = WalkerUtil.getAttribute(dnode, Attribute.TYPE);
+      const role = WalkerUtil.getAttribute(dnode, Attribute.ROLE);
       return this.combineContentChildren(
         type as SemanticType,
         role as SemanticRole,
@@ -537,8 +537,8 @@ export abstract class AbstractWalker<T> implements Walker {
         children
       );
     }
-    let toIds = (x: SemanticNode) => x.id.toString();
-    let snode = this.getRebuilt().nodeDict[this.primaryId()];
+    const toIds = (x: SemanticNode) => x.id.toString();
+    const snode = this.getRebuilt().nodeDict[this.primaryId()];
     children = snode.childNodes.map(toIds);
     content = snode.contentNodes.map(toIds);
     if (children.length === 0) {
@@ -617,7 +617,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The previous focus.
    */
   public previous(): Focus {
-    let previous = this.cursors.pop();
+    const previous = this.cursors.pop();
     if (!previous) {
       return this.getFocus();
     }
@@ -662,7 +662,7 @@ export abstract class AbstractWalker<T> implements Walker {
    *     possible a cloned focus.
    */
   public nextRules(): Focus {
-    let options = this.generator.getOptions();
+    const options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();
     }
@@ -684,34 +684,34 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   public nextStyle(domain: string, style: string): string {
     if (domain === 'mathspeak') {
-      let styles = ['default', 'brief', 'sbrief'];
-      let index = styles.indexOf(style);
+      const styles = ['default', 'brief', 'sbrief'];
+      const index = styles.indexOf(style);
       if (index === -1) {
         return style;
       }
       return index >= styles.length - 1 ? styles[0] : styles[index + 1];
     }
     if (domain === 'clearspeak') {
-      let prefs = ClearspeakPreferences.getLocalePreferences();
-      let loc = prefs['en'];
+      const prefs = ClearspeakPreferences.getLocalePreferences();
+      const loc = prefs['en'];
       // TODO: use correct locale.
       if (!loc) {
         return 'default';
       }
       // TODO: return the previous one?
-      let smart = ClearspeakPreferences.relevantPreferences(
+      const smart = ClearspeakPreferences.relevantPreferences(
         this.getFocus().getSemanticPrimary()
       );
-      let current = ClearspeakPreferences.findPreference(style, smart);
-      let options = loc[smart].map(function (x) {
+      const current = ClearspeakPreferences.findPreference(style, smart);
+      const options = loc[smart].map(function (x) {
         return x.split('_')[1];
       });
-      let index = options.indexOf(current);
+      const index = options.indexOf(current);
       if (index === -1) {
         return style;
       }
-      let next = index >= options.length - 1 ? options[0] : options[index + 1];
-      let result = ClearspeakPreferences.addPreference(style, smart, next);
+      const next = index >= options.length - 1 ? options[0] : options[index + 1];
+      const result = ClearspeakPreferences.addPreference(style, smart, next);
       return result;
     }
     return style;
@@ -723,7 +723,7 @@ export abstract class AbstractWalker<T> implements Walker {
    *     possible a cloned focus.
    */
   public previousRules(): Focus {
-    let options = this.generator.getOptions();
+    const options = this.generator.getOptions();
     if (options.modality !== 'speech') {
       return this.getFocus();
     }
@@ -741,7 +741,7 @@ export abstract class AbstractWalker<T> implements Walker {
     let last;
     while (!focus.getNodes().length) {
       last = this.levels.peek();
-      let up = this.up();
+      const up = this.up();
       if (!up) {
         break;
       }
@@ -767,11 +767,11 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The merged speech string.
    */
   private mergePrefix_(speech: string[], pre: string[] = []): string {
-    let prefix = this.isSpeech() ? this.prefix_() : '';
+    const prefix = this.isSpeech() ? this.prefix_() : '';
     if (prefix) {
       speech.unshift(prefix);
     }
-    let postfix = this.isSpeech() ? this.postfix_() : '';
+    const postfix = this.isSpeech() ? this.postfix_() : '';
     if (postfix) {
       speech.push(postfix);
     }
@@ -785,8 +785,8 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The prefix of the currently focused element.
    */
   private prefix_(): string {
-    let nodes = this.getFocus().getDomNodes();
-    let snodes = this.getFocus().getSemanticNodes();
+    const nodes = this.getFocus().getDomNodes();
+    const snodes = this.getFocus().getSemanticNodes();
     return nodes[0]
       ? WalkerUtil.getAttribute(nodes[0] as Element, Attribute.PREFIX)
       : SpeechGeneratorUtil.retrievePrefix(snodes[0]);
@@ -799,7 +799,7 @@ export abstract class AbstractWalker<T> implements Walker {
    */
   private postfix_(): string {
     // TODO: Style this differently for usage with auditory markup.
-    let nodes = this.getFocus().getDomNodes();
+    const nodes = this.getFocus().getDomNodes();
     return nodes[0]
       ? WalkerUtil.getAttribute(nodes[0] as Element, Attribute.POSTFIX)
       : '';
@@ -809,18 +809,18 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The depth announcement for the currently focused element.
    */
   private depth_(): string {
-    let oldDepth = Grammar.getInstance().getParameter('depth');
+    const oldDepth = Grammar.getInstance().getParameter('depth');
     Grammar.getInstance().setParameter('depth', true);
-    let primary = this.getFocus().getDomPrimary();
-    let expand = this.expandable(primary)
+    const primary = this.getFocus().getDomPrimary();
+    const expand = this.expandable(primary)
       ? LOCALE.MESSAGES.navigate.EXPANDABLE
       : this.collapsible(primary)
       ? LOCALE.MESSAGES.navigate.COLLAPSIBLE
       : '';
-    let level = LOCALE.MESSAGES.navigate.LEVEL + ' ' + this.getDepth();
-    let snodes = this.getFocus().getSemanticNodes();
-    let prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);
-    let audio = [
+    const level = LOCALE.MESSAGES.navigate.LEVEL + ' ' + this.getDepth();
+    const snodes = this.getFocus().getSemanticNodes();
+    const prefix = SpeechGeneratorUtil.retrievePrefix(snodes[0]);
+    const audio = [
       new AuditoryDescription({ text: level, personality: {} }),
       new AuditoryDescription({ text: prefix, personality: {} }),
       new AuditoryDescription({ text: expand, personality: {} })
@@ -836,7 +836,7 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The node corresponding to an maction element.
    */
   private actionable_(node: Element): Element {
-    let parent = node?.parentNode as Element;
+    const parent = node?.parentNode as Element;
     return parent && this.highlighter.isMactionNode(parent) ? parent : null;
   }
 
@@ -844,9 +844,9 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The virtual summary of an element.
    */
   private summary_(): string {
-    let sprimary = this.getFocus().getSemanticPrimary();
-    let sid = sprimary.id.toString();
-    let snode =
+    const sprimary = this.getFocus().getSemanticPrimary();
+    const sid = sprimary.id.toString();
+    const snode =
       this.getRebuilt().xml.getAttribute('id') === sid
         ? this.getRebuilt().xml
         : DomUtil.querySelectorAllByAttrValue(
@@ -854,8 +854,8 @@ export abstract class AbstractWalker<T> implements Walker {
             'id',
             sid
           )[0];
-    let summary = SpeechGeneratorUtil.retrieveSummary(snode);
-    let speech = this.mergePrefix_([summary]);
+    const summary = SpeechGeneratorUtil.retrieveSummary(snode);
+    const speech = this.mergePrefix_([summary]);
     return speech;
   }
 
@@ -863,9 +863,9 @@ export abstract class AbstractWalker<T> implements Walker {
    * @return The virtual detail of a collapsed element.
    */
   private detail_(): string {
-    let sprimary = this.getFocus().getSemanticPrimary();
-    let sid = sprimary.id.toString();
-    let snode =
+    const sprimary = this.getFocus().getSemanticPrimary();
+    const sid = sprimary.id.toString();
+    const snode =
       this.getRebuilt().xml.getAttribute('id') === sid
         ? this.getRebuilt().xml
         : DomUtil.querySelectorAllByAttrValue(
@@ -873,10 +873,10 @@ export abstract class AbstractWalker<T> implements Walker {
             'id',
             sid
           )[0];
-    let oldAlt = snode.getAttribute('alternative');
+    const oldAlt = snode.getAttribute('alternative');
     snode.removeAttribute('alternative');
-    let detail = SpeechGeneratorUtil.computeMarkup(snode as Element);
-    let speech = this.mergePrefix_([detail]);
+    const detail = SpeechGeneratorUtil.computeMarkup(snode as Element);
+    const speech = this.mergePrefix_([detail]);
     snode.setAttribute('alternative', oldAlt);
     return speech;
   }

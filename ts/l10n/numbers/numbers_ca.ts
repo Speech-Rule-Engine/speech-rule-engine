@@ -31,13 +31,13 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
  * @return The word for the tens position.
  */
 function tensToWords_(num: number): string {
-  let n = num % 100;
+  const n = num % 100;
   if (n < 20) {
     return NUMBERS.ones[n];
   }
-  let ten = Math.floor(n / 10);
-  let tens = NUMBERS.tens[ten];
-  let ones = NUMBERS.ones[n % 10];
+  const ten = Math.floor(n / 10);
+  const tens = NUMBERS.tens[ten];
+  const ones = NUMBERS.ones[n % 10];
   return tens && ones ? tens + (ten === 2 ? '-i-' : '-') + ones : tens || ones;
 }
 
@@ -47,14 +47,14 @@ function tensToWords_(num: number): string {
  * @return The string representation of that number.
  */
 function hundredsToWords_(num: number): string {
-  let n = num % 1000;
-  let hundred = Math.floor(n / 100);
-  let hundreds = hundred
+  const n = num % 1000;
+  const hundred = Math.floor(n / 100);
+  const hundreds = hundred
     ? hundred === 1
       ? 'cent'
       : NUMBERS.ones[hundred] + '-cents'
     : '';
-  let tens = tensToWords_(n % 100);
+  const tens = tensToWords_(n % 100);
   return hundreds && tens ? hundreds + NUMBERS.numSep + tens : hundreds || tens;
 }
 
@@ -75,7 +75,7 @@ function numberToWords(num: number): string {
   while (num > 0) {
     // For the large numbers we go in million steps as the are "mil milions",
     // "mil bilions", "mil trilions", "mil quadrilions", "mil quintilions"
-    let hundreds = num % (pos > 1 ? 1000000 : 1000);
+    const hundreds = num % (pos > 1 ? 1000000 : 1000);
     if (hundreds) {
       let large = NUMBERS.large[pos];
       if (!pos) {
@@ -88,7 +88,7 @@ function numberToWords(num: number): string {
           large +
           (str ? NUMBERS.numSep + str : '');
       } else {
-        let thousands = numberToWords(hundreds);
+        const thousands = numberToWords(hundreds);
         large = hundreds === 1 ? large : large.replace(/\u00f3$/, 'ons');
         str =
           thousands +
@@ -116,7 +116,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
   if (num <= 10) {
     return NUMBERS.special.onesOrdinals[num - 1];
   }
-  let result = numberToWords(num);
+  const result = numberToWords(num);
   if (result.match(/mil$/)) {
     return result.replace(/mil$/, 'mil·lèsima');
   }
@@ -135,7 +135,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = Grammar.getInstance().getParameter('gender') as string;
+  const gender = Grammar.getInstance().getParameter('gender') as string;
   return num.toString() + (gender === 'f' ? 'a' : 'n');
 }
 

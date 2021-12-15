@@ -26,7 +26,7 @@ import { AuditoryDescription } from './auditory_description';
 import { Span } from './span';
 
 export abstract class AbstractAudioRenderer implements AudioRenderer {
-  private separator_: string = ' ';
+  private separator_ = ' ';
 
   /**
    * @override
@@ -60,11 +60,11 @@ export abstract class AbstractAudioRenderer implements AudioRenderer {
    */
   public merge(spans: Span[]): string {
     let str = '';
-    let len = spans.length - 1;
+    const len = spans.length - 1;
     for (let i = 0, span; (span = spans[i]); i++) {
       str += span.speech;
       if (i < len) {
-        let sep = span.attributes['separator'];
+        const sep = span.attributes['separator'];
         str += sep !== undefined ? sep : this.getSeparator();
       }
     }

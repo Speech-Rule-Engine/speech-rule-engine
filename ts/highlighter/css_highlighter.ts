@@ -34,12 +34,12 @@ export class CssHighlighter extends AbstractHighlighter {
    * @override
    */
   public highlightNode(node: HTMLElement) {
-    let info = {
+    const info = {
       node: node,
       background: node.style.backgroundColor,
       foreground: node.style.color
     };
-    let color = this.colorString();
+    const color = this.colorString();
     node.style.backgroundColor = color.background;
     node.style.color = color.foreground;
     return info;

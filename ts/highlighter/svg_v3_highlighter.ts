@@ -57,18 +57,18 @@ export class SvgV3Highlighter extends SvgHighlighter {
       node.style.color = this.colorString().foreground;
       return info;
     }
-    let rect = DomUtil.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    const rect = DomUtil.createElementNS('http://www.w3.org/2000/svg', 'rect');
     rect.setAttribute(
       'sre-highlighter-added', // Mark highlighting rect.
       'true'
     );
-    let padding = 40;
-    let bbox: SVGRect = (node as any as SVGGraphicsElement).getBBox();
+    const padding = 40;
+    const bbox: SVGRect = (node as any as SVGGraphicsElement).getBBox();
     rect.setAttribute('x', (bbox.x - padding).toString());
     rect.setAttribute('y', (bbox.y - padding).toString());
     rect.setAttribute('width', (bbox.width + 2 * padding).toString());
     rect.setAttribute('height', (bbox.height + 2 * padding).toString());
-    let transform = node.getAttribute('transform');
+    const transform = node.getAttribute('transform');
     if (transform) {
       rect.setAttribute('transform', transform);
     }
@@ -77,7 +77,7 @@ export class SvgV3Highlighter extends SvgHighlighter {
     node.parentNode.insertBefore(rect, node);
     info = { node: node, foreground: node.getAttribute('fill') };
     if (node.nodeName === 'rect') {
-      let picker = new ColorPicker({ alpha: 0, color: 'black' });
+      const picker = new ColorPicker({ alpha: 0, color: 'black' });
       node.setAttribute('fill', picker.rgba().foreground);
     } else {
       node.setAttribute('fill', this.colorString().foreground);
@@ -89,7 +89,7 @@ export class SvgV3Highlighter extends SvgHighlighter {
    * @override
    */
   public unhighlightNode(info: Highlight) {
-    let previous = info.node.previousSibling as HTMLElement;
+    const previous = info.node.previousSibling as HTMLElement;
     if (previous && previous.hasAttribute('sre-highlighter-added')) {
       info.foreground
         ? info.node.setAttribute('fill', info.foreground)

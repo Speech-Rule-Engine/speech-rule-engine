@@ -95,12 +95,12 @@ export const Domains_: { [key: string]: string[] } = {
  * Generates the domain combinations for the given locale.
  */
 export function makeDomains_() {
-  let alph = LOCALE.ALPHABETS;
-  let combineKeys = (
+  const alph = LOCALE.ALPHABETS;
+  const combineKeys = (
     obj1: { [key: string]: any },
     obj2: { [key: string]: any }
   ) => {
-    let result: { [key: string]: boolean } = {};
+    const result: { [key: string]: boolean } = {};
     Object.keys(obj1).forEach((k) => (result[k] = true));
     Object.keys(obj2).forEach((k) => (result[k] = true));
     return Object.keys(result);
@@ -116,21 +116,21 @@ export function makeDomains_() {
  * @param store The current speech rule store.
  */
 export function generate(locale: string) {
-  let oldLocale = Engine.getInstance().locale;
+  const oldLocale = Engine.getInstance().locale;
   Engine.getInstance().locale = locale;
   L10n.setLocale();
   MathCompoundStore.addSymbolRules({ locale: locale } as UnicodeJson);
   makeDomains_();
-  let intervals = INTERVALS;
+  const intervals = INTERVALS;
   for (let i = 0, int; (int = intervals[i]); i++) {
-    let keys = makeInterval(int.interval, int.subst);
-    let letters = keys.map(function (x) {
+    const keys = makeInterval(int.interval, int.subst);
+    const letters = keys.map(function (x) {
       return SemanticUtil.numberToUnicode(parseInt(x, 16));
     });
     if ('offset' in int) {
       numberRules(keys, letters, int.font, int.category, int.offset || 0);
     } else {
-      let alphabet = (LOCALE.ALPHABETS as any)[int.base];
+      const alphabet = (LOCALE.ALPHABETS as any)[int.base];
       alphabetRules(
         keys,
         letters,
@@ -151,7 +151,7 @@ export function generate(locale: string) {
  * @return The resulting string padded with 0 if necessary.
  */
 function num2str(num: number): string {
-  let str = num.toString(16).toUpperCase();
+  const str = num.toString(16).toUpperCase();
   return str.length > 3 ? str : ('000' + str).slice(-4);
 }
 
@@ -167,12 +167,12 @@ export function makeInterval(
   [a, b]: [string, string],
   subst: { [key: string]: string | boolean }
 ): string[] {
-  let start = parseInt(a, 16);
-  let end = parseInt(b, 16);
-  let result = [];
+  const start = parseInt(a, 16);
+  const end = parseInt(b, 16);
+  const result = [];
   for (let i = start; i <= end; i++) {
     let key = num2str(i);
-    let sub = subst[key];
+    const sub = subst[key];
     // TODO (TS): Check if this can be simplified by removing the boolean case.
     if (sub === false) {
       continue;
@@ -189,7 +189,7 @@ export function makeInterval(
  * @return The localised font value plus a combiner.
  */
 export function getFont(font: string): { font: string; combiner: Combiner } {
-  let realFont =
+  const realFont =
     font === 'normal' || font === 'fullwidth'
       ? ''
       : LOCALE.MESSAGES.font[font] || LOCALE.MESSAGES.embellish[font] || '';
@@ -216,16 +216,16 @@ export function alphabetRules(
   category: string,
   cap: boolean
 ) {
-  let realFont = getFont(font);
+  const realFont = getFont(font);
   for (
     let i = 0, key, unicode, letter;
     (key = keys[i]), (unicode = unicodes[i]), (letter = letters[i]);
     i++
   ) {
-    let prefixes = cap
+    const prefixes = cap
       ? LOCALE.ALPHABETS.capPrefix
       : LOCALE.ALPHABETS.smallPrefix;
-    let domains = cap ? Domains_.capital : Domains_.small;
+    const domains = cap ? Domains_.capital : Domains_.small;
     makeLetter(
       realFont.combiner,
       key,
@@ -257,10 +257,10 @@ export function numberRules(
   category: string,
   offset: number
 ) {
-  let realFont = getFont(font);
+  const realFont = getFont(font);
   for (let i = 0, key, unicode; (key = keys[i]), (unicode = unicodes[i]); i++) {
-    let prefixes = LOCALE.ALPHABETS.digitPrefix;
-    let num = i + offset;
+    const prefixes = LOCALE.ALPHABETS.digitPrefix;
+    const num = i + offset;
     makeLetter(
       realFont.combiner,
       key,
@@ -305,9 +305,9 @@ export function makeLetter(
   domains: string[]
 ) {
   for (let i = 0, domain; (domain = domains[i]); i++) {
-    let transformer =
+    const transformer =
       domain in transformers ? transformers[domain] : transformers['default'];
-    let prefix = domain in prefixes ? prefixes[domain] : prefixes['default'];
+    const prefix = domain in prefixes ? prefixes[domain] : prefixes['default'];
     MathCompoundStore.defineRule(
       key.toString(),
       domain,

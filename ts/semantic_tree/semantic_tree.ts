@@ -58,8 +58,8 @@ export class SemanticTree {
    * @return The empty semantic tree.
    */
   public static empty(): SemanticTree {
-    let empty = DomUtil.parseInput('<math/>');
-    let stree = new SemanticTree(empty);
+    const empty = DomUtil.parseInput('<math/>');
+    const stree = new SemanticTree(empty);
     stree.mathml = empty;
     return stree;
   }
@@ -76,7 +76,7 @@ export class SemanticTree {
     semantic: SemanticNode,
     opt_mathml?: Element
   ): SemanticTree {
-    let stree = SemanticTree.empty();
+    const stree = SemanticTree.empty();
     stree.root = semantic;
     if (opt_mathml) {
       stree.mathml = opt_mathml;
@@ -100,7 +100,7 @@ export class SemanticTree {
     while (root.parent) {
       root = root.parent;
     }
-    let stree = SemanticTree.fromNode(root);
+    const stree = SemanticTree.fromNode(root);
     if (opt_mathml) {
       stree.mathml = opt_mathml;
     }
@@ -113,7 +113,7 @@ export class SemanticTree {
    * @return The generated semantic tree.
    */
   public static fromXml(xml: Element): SemanticTree {
-    let stree = SemanticTree.empty();
+    const stree = SemanticTree.empty();
     if (xml.childNodes[0]) {
       stree.root = SemanticNode.fromXml(xml.childNodes[0] as Element);
     }
@@ -128,7 +128,7 @@ export class SemanticTree {
     this.root = this.parser.parse(mathml);
     this.collator = this.parser.getFactory().leafMap.collateMeaning();
 
-    let newDefault = this.collator.newDefault();
+    const newDefault = this.collator.newDefault();
     if (newDefault) {
       // Reparse!
       this.parser = new SemanticMathml();
@@ -146,8 +146,8 @@ export class SemanticTree {
    * @return The XML representation of the tree.
    */
   public xml(opt_brief?: boolean): Element {
-    let xml = DomUtil.parseInput('<stree></stree>');
-    let xmlRoot = this.root.xml(xml.ownerDocument, opt_brief);
+    const xml = DomUtil.parseInput('<stree></stree>');
+    const xmlRoot = this.root.xml(xml.ownerDocument, opt_brief);
     xml.appendChild(xmlRoot);
     return xml;
   }
@@ -158,7 +158,7 @@ export class SemanticTree {
    * @return Serialized string.
    */
   public toString(opt_brief?: boolean): string {
-    let xmls = new SystemExternal.xmldom.XMLSerializer();
+    const xmls = new SystemExternal.xmldom.XMLSerializer();
     return xmls.serializeToString(this.xml(opt_brief));
   }
 
@@ -168,7 +168,7 @@ export class SemanticTree {
    * @return The formatted string.
    */
   public formatXml(opt_brief?: boolean): string {
-    let xml = this.toString(opt_brief);
+    const xml = this.toString(opt_brief);
     return DomUtil.formatXml(xml);
   }
 
@@ -185,7 +185,7 @@ export class SemanticTree {
    * @param newNode The new node.
    */
   public replaceNode(oldNode: SemanticNode, newNode: SemanticNode) {
-    let parent = oldNode.parent;
+    const parent = oldNode.parent;
     if (!parent) {
       this.root = newNode;
       return;
@@ -199,7 +199,7 @@ export class SemanticTree {
    */
   // TODO (TS): JSON type.
   public toJson(): any {
-    let json = {} as any;
+    const json = {} as any;
     json['stree'] = this.root.toJson();
     return json;
   }
@@ -214,7 +214,7 @@ const unitVisitor = new SemanticVisitor('general', 'unit', (node, _info) => {
     (node.role === SemanticRole.MULTIPLICATION ||
       node.role === SemanticRole.IMPLICIT)
   ) {
-    let children = node.childNodes;
+    const children = node.childNodes;
     if (
       children.length &&
       (SemanticPred.isPureUnit(children[0]) ||

@@ -48,7 +48,7 @@ export function walker(
   highlighter: Highlighter,
   xml: string
 ): Walker {
-  let constructor =
+  const constructor =
     walkerMapping_[type.toLowerCase()] || walkerMapping_['dummy'];
   return constructor(node, generator, highlighter, xml);
 }

@@ -108,7 +108,7 @@ export class RebuildStree {
       snode.textContent = node.textContent;
       return;
     }
-    let operator = WalkerUtil.splitAttribute(
+    const operator = WalkerUtil.splitAttribute(
       WalkerUtil.getAttribute(node, Attribute.OPERATOR)
     );
     if (operator.length > 1) {
@@ -154,11 +154,11 @@ export class RebuildStree {
    * @return The corresponding semantic tree node.
    */
   public assembleTree(node: Element): SemanticNode {
-    let snode = this.makeNode(node);
-    let children = WalkerUtil.splitAttribute(
+    const snode = this.makeNode(node);
+    const children = WalkerUtil.splitAttribute(
       WalkerUtil.getAttribute(node, Attribute.CHILDREN)
     );
-    let content = WalkerUtil.splitAttribute(
+    const content = WalkerUtil.splitAttribute(
       WalkerUtil.getAttribute(node, Attribute.CONTENT)
     );
     RebuildStree.addAttributes(
@@ -171,14 +171,14 @@ export class RebuildStree {
       return snode;
     }
     if (content.length > 0) {
-      let fcontent = WalkerUtil.getBySemanticId(this.mathml, content[0]);
+      const fcontent = WalkerUtil.getBySemanticId(this.mathml, content[0]);
       if (fcontent) {
         RebuildStree.textContent(snode, fcontent, true);
       }
     }
     snode.contentNodes = content.map((id) => this.setParent(id, snode));
     snode.childNodes = children.map((id) => this.setParent(id, snode));
-    let collapsed = WalkerUtil.getAttribute(node, Attribute.COLLAPSED);
+    const collapsed = WalkerUtil.getAttribute(node, Attribute.COLLAPSED);
     return collapsed ? this.postProcess(snode, collapsed) : snode;
   }
 
@@ -188,14 +188,14 @@ export class RebuildStree {
    * @return The reconstructed semantic tree node.
    */
   public makeNode(node: Element): SemanticNode {
-    let type = WalkerUtil.getAttribute(node, Attribute.TYPE);
-    let role = WalkerUtil.getAttribute(node, Attribute.ROLE);
-    let font = WalkerUtil.getAttribute(node, Attribute.FONT);
-    let annotation = WalkerUtil.getAttribute(node, Attribute.ANNOTATION) || '';
-    let id = WalkerUtil.getAttribute(node, Attribute.ID);
-    let embellished = WalkerUtil.getAttribute(node, Attribute.EMBELLISHED);
-    let fencepointer = WalkerUtil.getAttribute(node, Attribute.FENCEPOINTER);
-    let snode = this.createNode(parseInt(id, 10));
+    const type = WalkerUtil.getAttribute(node, Attribute.TYPE);
+    const role = WalkerUtil.getAttribute(node, Attribute.ROLE);
+    const font = WalkerUtil.getAttribute(node, Attribute.FONT);
+    const annotation = WalkerUtil.getAttribute(node, Attribute.ANNOTATION) || '';
+    const id = WalkerUtil.getAttribute(node, Attribute.ID);
+    const embellished = WalkerUtil.getAttribute(node, Attribute.EMBELLISHED);
+    const fencepointer = WalkerUtil.getAttribute(node, Attribute.FENCEPOINTER);
+    const snode = this.createNode(parseInt(id, 10));
     snode.type = type as SemanticType;
     snode.role = role as SemanticRole;
     snode.font = font ? (font as SemanticFont) : SemanticFont.UNKNOWN;
@@ -215,7 +215,7 @@ export class RebuildStree {
    * @return The newly created punctuation node.
    */
   public makePunctuation(id: number): SemanticNode {
-    let node = this.createNode(id);
+    const node = this.createNode(id);
     node.updateContent(SemanticAttr.invisibleComma());
     node.role = SemanticRole.DUMMY;
     return node;
@@ -233,12 +233,12 @@ export class RebuildStree {
     collapsed: any,
     role: SemanticRole
   ) {
-    let punctuated = this.createNode(collapsed[0]);
+    const punctuated = this.createNode(collapsed[0]);
     punctuated.type = SemanticType.PUNCTUATED;
     punctuated.embellished = snode.embellished;
     punctuated.fencePointer = snode.fencePointer;
     punctuated.role = role;
-    let cont = collapsed.splice(1, 1)[0].slice(1);
+    const cont = collapsed.splice(1, 1)[0].slice(1);
     punctuated.contentNodes = cont.map(this.makePunctuation.bind(this));
     this.collapsedChildren_(collapsed);
   }
@@ -250,7 +250,7 @@ export class RebuildStree {
    * @param role The role of the new index node.
    */
   public makeEmpty(snode: SemanticNode, collapsed: number, role: SemanticRole) {
-    let empty = this.createNode(collapsed);
+    const empty = this.createNode(collapsed);
     empty.type = SemanticType.EMPTY;
     empty.embellished = snode.embellished;
     empty.fencePointer = snode.fencePointer;
@@ -284,10 +284,10 @@ export class RebuildStree {
    * @return The semantic node.
    */
   public postProcess(snode: SemanticNode, collapsed: string): SemanticNode {
-    let array = SemanticSkeleton.fromString(collapsed).array as any;
+    const array = SemanticSkeleton.fromString(collapsed).array as any;
     // TODO (TS): Semantic types used as roles.
     if ((snode.type as any as SemanticRole) === SemanticRole.SUBSUP) {
-      let subscript = this.createNode(array[1][0]);
+      const subscript = this.createNode(array[1][0]);
       subscript.type = SemanticType.SUBSCRIPT;
       subscript.role = SemanticRole.SUBSUP;
       snode.type = SemanticType.SUPERSCRIPT;
@@ -318,13 +318,13 @@ export class RebuildStree {
     }
     if (snode.type === SemanticType.PUNCTUATED) {
       if (RebuildStree.isPunctuated(array)) {
-        let cont = array.splice(1, 1)[0].slice(1);
+        const cont = array.splice(1, 1)[0].slice(1);
         snode.contentNodes = cont.map(this.makePunctuation.bind(this));
       }
       return snode;
     }
     if ((snode.type as any as SemanticRole) === SemanticRole.UNDEROVER) {
-      let score = this.createNode(array[1][0]);
+      const score = this.createNode(array[1][0]);
       if (snode.childNodes[1].role === SemanticRole.OVERACCENT) {
         score.type = SemanticType.OVERSCORE;
         snode.type = SemanticType.UNDERSCORE;
@@ -347,7 +347,7 @@ export class RebuildStree {
    * @return The newly created node.
    */
   public createNode(id: number): SemanticNode {
-    let node = this.factory.makeNode(id);
+    const node = this.factory.makeNode(id);
     this.nodeDict[id.toString()] = node;
     return node;
   }
@@ -358,11 +358,11 @@ export class RebuildStree {
    * @param collapsed Array of integer arrays.
    */
   private collapsedChildren_(collapsed: Sexp) {
-    let recurseCollapsed = (coll: any) => {
-      let parent = this.nodeDict[coll[0]];
+    const recurseCollapsed = (coll: any) => {
+      const parent = this.nodeDict[coll[0]];
       parent.childNodes = [];
       for (let j = 1, l = coll.length; j < l; j++) {
-        let id = coll[j];
+        const id = coll[j];
         parent.childNodes.push(
           SemanticSkeleton.simpleCollapseStructure(id)
             ? this.nodeDict[id]
@@ -380,8 +380,8 @@ export class RebuildStree {
    * @param {SemanticNode} snode The parent node.
    */
   private setParent(id: string, snode: SemanticNode) {
-    let mml = WalkerUtil.getBySemanticId(this.mathml, id);
-    let sn = this.assembleTree(mml);
+    const mml = WalkerUtil.getBySemanticId(this.mathml, id);
+    const sn = this.assembleTree(mml);
     sn.parent = snode;
     return sn;
   }

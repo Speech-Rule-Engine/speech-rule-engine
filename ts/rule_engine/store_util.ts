@@ -34,7 +34,7 @@ export function nodeCounter(
   context: string | null
 ): () => string {
   // Local state.
-  let localLength = nodes.length;
+  const localLength = nodes.length;
   let localCounter = 0;
   let localContext = context;
   if (!context) {
@@ -59,8 +59,8 @@ export function pauseSeparator(
   _nodes: Node[],
   context: string
 ): () => AuditoryDescription[] {
-  let numeral = parseFloat(context);
-  let value = isNaN(numeral) ? context : numeral;
+  const numeral = parseFloat(context);
+  const value = isNaN(numeral) ? context : numeral;
   return function () {
     return [
       AuditoryDescription.create({
@@ -94,14 +94,14 @@ export function contentIterator(
     contentNodes = [];
   }
   return function () {
-    let content = contentNodes.shift();
-    let contextDescr = context
+    const content = contentNodes.shift();
+    const contextDescr = context
       ? [AuditoryDescription.create({ text: context }, { translate: true })]
       : [];
     if (!content) {
       return contextDescr;
     }
-    let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
+    const descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
     return contextDescr.concat(descrs);
   };
 }

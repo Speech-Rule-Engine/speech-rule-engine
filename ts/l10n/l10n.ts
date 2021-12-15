@@ -52,13 +52,13 @@ export const locales: { [key: string]: () => Locale } = {
  * The basic method for setting the localized messages.
  */
 export function setLocale() {
-  let msgs = getLocale();
+  const msgs = getLocale();
   if (msgs) {
-    for (let key of Object.getOwnPropertyNames(msgs)) {
+    for (const key of Object.getOwnPropertyNames(msgs)) {
       // TODO (TS): See if this is really an object structure.
       (LOCALE as any)[key] = (msgs as any)[key];
     }
-    for (let [key, func] of Object.entries(msgs.CORRECTIONS)) {
+    for (const [key, func] of Object.entries(msgs.CORRECTIONS)) {
       Grammar.getInstance().setCorrection(key, func);
     }
     // TODO (Speech Rules): This is temporary until locales are handled in a
@@ -73,7 +73,7 @@ export function setLocale() {
  * @return A message object.
  */
 export function getLocale(): Locale {
-  let locale = Engine.getInstance().locale;
+  const locale = Engine.getInstance().locale;
   if (Variables.LOCALES.indexOf(locale) === -1) {
     console.error('Locale ' + locale + ' does not exist! Using en instead.');
     Engine.getInstance().locale = 'en';
@@ -86,16 +86,16 @@ export function getLocale(): Locale {
  * @param json The JSON of the locale map.
  */
 export function completeLocale(json: any) {
-  let locale = locales[json.locale];
+  const locale = locales[json.locale];
   if (!locale) {
     console.error('Locale ' + json.locale + ' does not exist!');
     return;
   }
-  let kind = json.kind.toUpperCase();
-  let messages = json.messages;
+  const kind = json.kind.toUpperCase();
+  const messages = json.messages;
   if (!messages) return;
-  let loc = locale() as any;
-  for (let [key, value] of Object.entries(messages)) {
+  const loc = locale() as any;
+  for (const [key, value] of Object.entries(messages)) {
     // TODO (TS): See if this is really an object structure.
     loc[kind][key] = value;
   }

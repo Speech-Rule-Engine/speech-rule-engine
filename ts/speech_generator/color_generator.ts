@@ -67,10 +67,10 @@ export class ColorGenerator extends AbstractSpeechGenerator {
     }
     if (tree.childNodes.length) {
       if (tree.role === 'implicit') {
-        let factors = [];
+        const factors = [];
         let rest: number[] = [];
-        for (let child of tree.childNodes) {
-          let tt: number[] = [];
+        for (const child of tree.childNodes) {
+          const tt: number[] = [];
           ColorGenerator.visitStree_(child, tt, ignore);
           if (tt.length <= 2) {
             factors.push(tt.shift());
@@ -110,10 +110,10 @@ export class ColorGenerator extends AbstractSpeechGenerator {
    * @param node The root node.
    */
   private colorLeaves_(node: Element) {
-    let leaves: number[] = [];
+    const leaves: number[] = [];
     ColorGenerator.visitStree_(this.getRebuilt().streeRoot, leaves, {});
-    for (let id of leaves) {
-      let color = this.contrast.generate();
+    for (const id of leaves) {
+      const color = this.contrast.generate();
       let success = false;
       if (Array.isArray(id)) {
         success = id
@@ -136,7 +136,7 @@ export class ColorGenerator extends AbstractSpeechGenerator {
    * @return Returns true if successful.
    */
   private colorLeave_(node: Element, id: string, color: string): boolean {
-    let aux = WalkerUtil.getBySemanticId(node, id);
+    const aux = WalkerUtil.getBySemanticId(node, id);
     if (aux) {
       aux.setAttribute(this.modality, color);
       return true;

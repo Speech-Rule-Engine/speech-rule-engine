@@ -24,7 +24,7 @@ import { Span } from './span';
 import { SsmlRenderer } from './ssml_renderer';
 
 export class SsmlStepRenderer extends SsmlRenderer {
-  private static CHARACTER_ATTR: string = 'character';
+  private static CHARACTER_ATTR = 'character';
 
   /**
    * Record for remembering mark ids.
@@ -43,10 +43,10 @@ export class SsmlStepRenderer extends SsmlRenderer {
    * @override
    */
   public merge(spans: Span[]): string {
-    let result = [];
+    const result = [];
     for (let i = 0; i < spans.length; i++) {
-      let span = spans[i];
-      let id = span.attributes['extid'];
+      const span = spans[i];
+      const id = span.attributes['extid'];
       if (id && !SsmlStepRenderer.MARKS[id]) {
         result.push('<mark name="' + id + '"/>');
         SsmlStepRenderer.MARKS[id] = true;

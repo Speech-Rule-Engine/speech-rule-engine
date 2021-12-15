@@ -39,12 +39,12 @@ function hundredsToWords_(num: number): string {
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
-    let ones = NUMBERS.ones[n];
+    const ones = NUMBERS.ones[n];
     if (ones) {
       str += ones;
     } else {
       let tens = NUMBERS.tens[Math.floor(n / 10)];
-      let rest = n % 10;
+      const rest = n % 10;
       if (rest === 1 || rest === 8) {
         tens = tens.slice(0, -1);
       }
@@ -73,7 +73,7 @@ function numberToWords(num: number): string {
   let pos = 0;
   let str = '';
   while (num > 0) {
-    let hundreds = num % 1000;
+    const hundreds = num % 1000;
     if (hundreds) {
       str =
         hundredsToWords_(num % 1000) +
@@ -97,11 +97,11 @@ function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 2) {
     return plural ? 'mezzi' : 'mezzo';
   }
-  let ordinal = wordOrdinal(num);
+  const ordinal = wordOrdinal(num);
   if (!plural) {
     return ordinal;
   }
-  let gender = ordinal.match(/o$/) ? 'i' : 'e';
+  const gender = ordinal.match(/o$/) ? 'i' : 'e';
   return ordinal.slice(0, -1) + gender;
 }
 
@@ -111,8 +111,8 @@ function numberToOrdinal(num: number, plural: boolean): string {
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let gender = Grammar.getInstance().getParameter('gender') as string;
-  let postfix = gender === 'm' ? 'o' : 'a';
+  const gender = Grammar.getInstance().getParameter('gender') as string;
+  const postfix = gender === 'm' ? 'o' : 'a';
   let ordinal = NUMBERS.special.onesOrdinals[num];
   if (ordinal) {
     return ordinal.slice(0, -1) + postfix;
@@ -127,7 +127,7 @@ function wordOrdinal(num: number): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = Grammar.getInstance().getParameter('gender') as string;
+  const gender = Grammar.getInstance().getParameter('gender') as string;
   return num.toString() + (gender === 'm' ? 'o' : 'a');
 }
 

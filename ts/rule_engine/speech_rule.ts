@@ -168,7 +168,7 @@ export class Component {
    */
   public static fromString(input: string): Component {
     // The output JSON; initialized with action type.
-    let output: ComponentType = {
+    const output: ComponentType = {
       type: actionFromString(input.substring(0, 3))
     };
     // Prep the rest of the parsing.
@@ -180,7 +180,7 @@ export class Component {
     switch (output.type) {
       case ActionType.TEXT:
         if (rest[0] === '"') {
-          let quotedString = splitString(rest, '\\(')[0].trim();
+          const quotedString = splitString(rest, '\\(')[0].trim();
           if (quotedString.slice(-1) !== '"') {
             throw new OutputError('Invalid string syntax.');
           }
@@ -195,7 +195,7 @@ export class Component {
         }
       case ActionType.NODE:
       case ActionType.MULTI:
-        let bracket = rest.indexOf(' (');
+        const bracket = rest.indexOf(' (');
         if (bracket === -1) {
           output.content = rest.trim();
           rest = '';
@@ -206,7 +206,7 @@ export class Component {
         break;
     }
     if (rest) {
-      let attributes = Component.attributesFromString(rest);
+      const attributes = Component.attributesFromString(rest);
       if (attributes.grammar) {
         output.grammar = attributes.grammar as Grammar.State;
         delete attributes.grammar;
@@ -230,16 +230,16 @@ export class Component {
     if (attrs[0] !== '(' || attrs.slice(-1) !== ')') {
       throw new OutputError('Invalid attribute expression: ' + attrs);
     }
-    let attributes: { [key: string]: string | Grammar.State } = {};
-    let attribs = splitString(attrs.slice(1, -1), ',');
+    const attributes: { [key: string]: string | Grammar.State } = {};
+    const attribs = splitString(attrs.slice(1, -1), ',');
     for (let i = 0, m = attribs.length; i < m; i++) {
-      let attr = attribs[i];
-      let colon = attr.indexOf(':');
+      const attr = attribs[i];
+      const colon = attr.indexOf(':');
       if (colon === -1) {
         attributes[attr.trim()] = 'true';
       } else {
-        let key = attr.substring(0, colon).trim();
-        let value = attr.slice(colon + 1).trim();
+        const key = attr.substring(0, colon).trim();
+        const value = attr.slice(colon + 1).trim();
         attributes[key] =
           key === Grammar.ATTRIBUTE
             ? Component.grammarFromString(value)
@@ -269,7 +269,7 @@ export class Component {
     let strs = '';
     strs += actionToString(this.type);
     strs += this.content ? ' ' + this.content : '';
-    let attrs = this.attributesToString();
+    const attrs = this.attributesToString();
     strs += attrs ? ' ' + attrs : '';
     return strs;
   }
@@ -286,8 +286,8 @@ export class Component {
    * @return List of translated attribute:value strings.
    */
   public getGrammar(): string[] {
-    let attribs = [];
-    for (let key in this.grammar) {
+    const attribs = [];
+    for (const key in this.grammar) {
       if (this.grammar[key] === true) {
         attribs.push(key);
       } else if (this.grammar[key] === false) {
@@ -303,8 +303,8 @@ export class Component {
    * @return String representation of the attributes.
    */
   public attributesToString(): string {
-    let attribs = this.getAttributes();
-    let grammar = this.grammarToString();
+    const attribs = this.getAttributes();
+    const grammar = this.grammarToString();
     if (grammar) {
       attribs.push('grammar:' + grammar);
     }
@@ -316,9 +316,9 @@ export class Component {
    * @return List of translated attribute:value strings.
    */
   public getAttributes(): string[] {
-    let attribs = [];
-    for (let key in this.attributes) {
-      let value = this.attributes[key];
+    const attribs = [];
+    for (const key in this.attributes) {
+      const value = this.attributes[key];
       value === 'true' ? attribs.push(key) : attribs.push(key + ':' + value);
     }
     return attribs;
@@ -337,16 +337,16 @@ export class Action {
    * @return The resulting object.
    */
   public static fromString(input: string): Action {
-    let comps = splitString(input, ';')
+    const comps = splitString(input, ';')
       .filter(function (x) {
         return x.match(/\S/);
       })
       .map(function (x) {
         return x.trim();
       });
-    let newComps = [];
+    const newComps = [];
     for (let i = 0, m = comps.length; i < m; i++) {
-      let comp = Component.fromString(comps[i]);
+      const comp = Component.fromString(comps[i]);
       if (comp) {
         newComps.push(comp);
       }
@@ -364,7 +364,7 @@ export class Action {
    * @override
    */
   public toString() {
-    let comps = this.components.map(function (c) {
+    const comps = this.components.map(function (c) {
       return c.toString();
     });
     return comps.join('; ');
@@ -434,7 +434,7 @@ export class Precondition {
    * @override
    */
   public toString() {
-    let constrs = this.constraints.join(', ');
+    const constrs = this.constraints.join(', ');
     return `${this.query}, ${constrs} (${this.priority}, ${this.rank})`;
   }
 
@@ -459,15 +459,15 @@ export class Precondition {
    * @return The priority.
    */
   private calculatePriority(): number {
-    let query = Precondition.constraintValue(
+    const query = Precondition.constraintValue(
       this.query,
       Precondition.queryPriorities
     );
     if (!query) {
       return 0;
     }
-    let inner = this.query.match(/^self::.+\[(.+)\]/)[1];
-    let attr = Precondition.constraintValue(
+    const inner = this.query.match(/^self::.+\[(.+)\]/)[1];
+    const attr = Precondition.constraintValue(
       inner,
       Precondition.attributePriorities
     );
@@ -504,11 +504,11 @@ export class OutputError extends SREError {
  * @return A list of single component strings.
  */
 function splitString(str: string, sep: string): string[] {
-  let strList = [];
+  const strList = [];
   let prefix = '';
 
   while (str !== '') {
-    let sepPos = str.search(sep);
+    const sepPos = str.search(sep);
     if (sepPos === -1) {
       if ((str.match(/"/g) || []).length % 2 !== 0) {
         throw new OutputError('Invalid string in expression: ' + str);
@@ -521,7 +521,7 @@ function splitString(str: string, sep: string): string[] {
       prefix = '';
       str = str.substring(sepPos + 1);
     } else {
-      let nextQuot = str.substring(sepPos).search('"');
+      const nextQuot = str.substring(sepPos).search('"');
       if (nextQuot === -1) {
         throw new OutputError('Invalid string in expression: ' + str);
       } else {

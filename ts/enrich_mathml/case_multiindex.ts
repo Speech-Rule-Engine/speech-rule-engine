@@ -58,7 +58,7 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
    * @return The corresponding MathML <None/> node.
    */
   private static createNone_(semantic: SemanticNode): Element {
-    let newNode = DomUtil.createElement('none');
+    const newNode = DomUtil.createElement('none');
     if (semantic) {
       EnrichMathml.setAttributes(newNode, semantic);
     }
@@ -83,11 +83,11 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
    *     nodes of the left indices.
    */
   protected completeMultiscript(rightIndices: Sexp, leftIndices: Sexp) {
-    let children = DomUtil.toArray(this.mml.childNodes).slice(1);
+    const children = DomUtil.toArray(this.mml.childNodes).slice(1);
     let childCounter = 0;
-    let completeIndices = (indices: number[]) => {
+    const completeIndices = (indices: number[]) => {
       for (let i = 0, index: number; (index = indices[i]); i++) {
-        let child = children[childCounter];
+        const child = children[childCounter];
         if (
           !child ||
           index !==
@@ -97,7 +97,7 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
               )
             )
         ) {
-          let query = this.semantic.querySelectorAll((x) => x.id === index);
+          const query = this.semantic.querySelectorAll((x) => x.id === index);
           this.mml.insertBefore(
             CaseMultiindex.createNone_(query[0]),
             child || null

@@ -56,8 +56,8 @@ export class CaseText extends AbstractEnrichCase {
    * @override
    */
   public getMathml() {
-    let children: Element[] = [];
-    let collapsed = EnrichMathml.collapsePunctuated(this.semantic, children);
+    const children: Element[] = [];
+    const collapsed = EnrichMathml.collapsePunctuated(this.semantic, children);
     this.mml = EnrichMathml.introduceNewLayer(children, this.semantic);
     EnrichMathml.setAttributes(this.mml, this.semantic);
     this.mml.removeAttribute(EnrichMathml.Attribute.CONTENT);

@@ -103,8 +103,8 @@ export class CaseEmbellished extends AbstractEnrichCase {
    * @return The new empty node.
    */
   private static makeEmptyNode_(id: number): SemanticNode {
-    let mrow = DomUtil.createElement('mrow');
-    let empty = new SemanticNode(id);
+    const mrow = DomUtil.createElement('mrow');
+    const empty = new SemanticNode(id);
     empty.type = SemanticType.EMPTY;
     empty.mathmlTree = mrow;
     return empty;
@@ -149,7 +149,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
       this.cfenceMml.parentNode.insertBefore(this.fencedMml, this.cfenceMml);
     }
     this.getFencedMml_();
-    let rewrite = this.rewrite_();
+    const rewrite = this.rewrite_();
     return rewrite;
   }
 
@@ -186,8 +186,8 @@ export class CaseEmbellished extends AbstractEnrichCase {
    */
   private getFencesMml_() {
     let currentNode = this.semantic;
-    let ofenceIds = Object.keys(this.ofenceMap);
-    let cfenceIds = Object.keys(this.cfenceMap);
+    const ofenceIds = Object.keys(this.ofenceMap);
+    const cfenceIds = Object.keys(this.cfenceMap);
     while (
       (!this.ofenceMml || !this.cfenceMml) &&
       currentNode !== this.fenced
@@ -227,19 +227,19 @@ export class CaseEmbellished extends AbstractEnrichCase {
   private rewrite_(): Element {
     let currentNode = this.semantic;
     let result = null;
-    let newNode = this.introduceNewLayer_();
+    const newNode = this.introduceNewLayer_();
     // Sets the basics composition.
     EnrichMathml.setAttributes(newNode, this.fenced.parent as SemanticNode);
 
     while (currentNode.type !== SemanticType.FENCED) {
       // Outer embellished node is the one with the fence pointer.
-      let mml = currentNode.mathmlTree as Element;
-      let specialCase = this.specialCase_(currentNode, mml);
+      const mml = currentNode.mathmlTree as Element;
+      const specialCase = this.specialCase_(currentNode, mml);
       if (specialCase) {
         currentNode = specialCase;
       } else {
         EnrichMathml.setAttributes(mml, currentNode);
-        let mmlChildren = [];
+        const mmlChildren = [];
         // The base node is rewritten. Walk the remaining nodes.
         for (let i = 1, child; (child = currentNode.childNodes[i]); i++) {
           mmlChildren.push(EnrichMathml.walkTree(child));
@@ -248,8 +248,8 @@ export class CaseEmbellished extends AbstractEnrichCase {
       }
 
       // Reordering the nodes in the tree.
-      let dummy = DomUtil.createElement('dummy');
-      let saveChild = mml.childNodes[0];
+      const dummy = DomUtil.createElement('dummy');
+      const saveChild = mml.childNodes[0];
 
       DomUtil.replaceNode(mml, dummy);
       DomUtil.replaceNode(newNode, mml);
@@ -276,7 +276,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
    *     the original semantic node was a special case.
    */
   private specialCase_(semantic: SemanticNode, mml: Element): SemanticNode {
-    let mmlTag = DomUtil.tagName(mml);
+    const mmlTag = DomUtil.tagName(mml);
     let parent = null;
     let caller;
     if (mmlTag === 'MSUBSUP') {
@@ -304,8 +304,8 @@ export class CaseEmbellished extends AbstractEnrichCase {
     if (!parent) {
       return null;
     }
-    let base = parent.childNodes[0];
-    let empty = CaseEmbellished.makeEmptyNode_(base.id);
+    const base = parent.childNodes[0];
+    const empty = CaseEmbellished.makeEmptyNode_(base.id);
     parent.childNodes[0] = empty;
     mml = new caller(semantic).getMathml();
     parent.childNodes[0] = base;
@@ -318,8 +318,8 @@ export class CaseEmbellished extends AbstractEnrichCase {
    * @return The node representing the active layer.
    */
   private introduceNewLayer_(): Element {
-    let fullOfence = this.fullFence(this.ofenceMml);
-    let fullCfence = this.fullFence(this.cfenceMml);
+    const fullOfence = this.fullFence(this.ofenceMml);
+    const fullCfence = this.fullFence(this.cfenceMml);
     // Introduce a definite new layer.
     let newNode = DomUtil.createElement('mrow');
     DomUtil.replaceNode(this.fencedMml as Element, newNode);
@@ -328,7 +328,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
     newNode.appendChild(fullCfence);
     // The case of top element math.
     if (!newNode.parentNode) {
-      let mrow = DomUtil.createElement('mrow');
+      const mrow = DomUtil.createElement('mrow');
       while (newNode.childNodes.length > 0) {
         mrow.appendChild(newNode.childNodes[0]);
       }
@@ -345,7 +345,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
    *     itself if it was not embellished.
    */
   private fullFence(fence: Element): Element {
-    let parent = this.fencedMml.parentNode;
+    const parent = this.fencedMml.parentNode;
     let currentFence = fence;
     while (currentFence.parentNode && currentFence.parentNode !== parent) {
       currentFence = currentFence.parentNode as Element;
@@ -360,7 +360,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
    */
   private cleanupParents_() {
     this.parentCleanup.forEach(function (x) {
-      let parent = (x.childNodes[1] as Element).getAttribute(
+      const parent = (x.childNodes[1] as Element).getAttribute(
         EnrichMathml.Attribute.PARENT
       );
       (x.childNodes[0] as Element).setAttribute(

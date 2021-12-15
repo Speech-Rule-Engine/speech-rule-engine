@@ -25,17 +25,17 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
  * @param num The number to translate.
  * @return The string representation of that number.
  */
-function hundredsToWords_(num: number, ordinal: boolean = false): string {
+function hundredsToWords_(num: number, ordinal = false): string {
   let n = num % 1000;
   let str = '';
-  let count = Math.floor(n / 100);
-  let ones = NUMBERS.ones[count];
+  const count = Math.floor(n / 100);
+  const ones = NUMBERS.ones[count];
   str += ones ? (count === 1 ? '' : ones) + 'hundre' : '';
   n = n % 100;
   if (n) {
     str += str ? 'og' : '';
     if (ordinal) {
-      let ord = NUMBERS.special.smallOrdinals[n];
+      const ord = NUMBERS.special.smallOrdinals[n];
       if (ord) {
         return str + ord;
       }
@@ -59,7 +59,7 @@ function hundredsToWords_(num: number, ordinal: boolean = false): string {
  * @param num The number to translate.
  * @return The string representation of that number.
  */
-function numberToWords(num: number, ordinal: boolean = false): string {
+function numberToWords(num: number, ordinal = false): string {
   if (num === 0) {
     return NUMBERS.zero;
   }
@@ -69,9 +69,9 @@ function numberToWords(num: number, ordinal: boolean = false): string {
   let pos = 0;
   let str = '';
   while (num > 0) {
-    let hundreds = num % 1000;
+    const hundreds = num % 1000;
     if (hundreds) {
-      let hund = hundredsToWords_(num % 1000, pos ? false : ordinal);
+      const hund = hundredsToWords_(num % 1000, pos ? false : ordinal);
       if (!pos && ordinal) {
         ordinal = !ordinal;
       }
@@ -107,7 +107,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
  * @return Number with ordinal ending.
  */
 function replaceOrdinal(str: string): string {
-  let letOne = NUMBERS.special.endOrdinal[0];
+  const letOne = NUMBERS.special.endOrdinal[0];
   if (letOne === 'a' && str.match(/en$/)) {
     return str.slice(0, -2) + NUMBERS.special.endOrdinal;
   }
@@ -132,7 +132,7 @@ function replaceOrdinal(str: string): string {
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let ordinal = numberToWords(num, true);
+  const ordinal = numberToWords(num, true);
   return ordinal;
 }
 

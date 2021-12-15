@@ -62,10 +62,10 @@ export class CaseTable extends AbstractEnrichCase {
    * @override
    */
   public getMathml() {
-    let lfence = EnrichMathml.cloneContentNode(
+    const lfence = EnrichMathml.cloneContentNode(
       this.semantic.contentNodes[0] as SemanticNode
     );
-    let rfence = this.semantic.contentNodes[1]
+    const rfence = this.semantic.contentNodes[1]
       ? EnrichMathml.cloneContentNode(
           this.semantic.contentNodes[1] as SemanticNode
         )
@@ -78,12 +78,12 @@ export class CaseTable extends AbstractEnrichCase {
         this.semantic
       );
     } else if (DomUtil.tagName(this.mml) === 'MFENCED') {
-      let children = this.mml.childNodes;
+      const children = this.mml.childNodes;
       this.mml.insertBefore(lfence, children[0] || null);
       rfence && this.mml.appendChild(rfence);
       this.mml = EnrichMathml.rewriteMfenced(this.mml);
     } else {
-      let newChildren = [lfence, this.mml];
+      const newChildren = [lfence, this.mml];
       rfence && newChildren.push(rfence);
       this.mml = EnrichMathml.introduceNewLayer(newChildren, this.semantic);
     }

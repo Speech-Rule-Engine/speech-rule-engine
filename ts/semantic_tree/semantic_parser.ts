@@ -94,7 +94,7 @@ export abstract class SemanticAbstractParser<T> implements SemanticParser<T> {
    * @override
    */
   public parseList(list: T[]) {
-    let result = [];
+    const result = [];
     for (let i = 0, element; (element = list[i]); i++) {
       result.push(this.parse(element));
     }

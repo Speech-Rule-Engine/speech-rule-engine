@@ -72,7 +72,7 @@ function mergePause_(
   newPause: PauseValue,
   opt_merge?: (p1: PauseValue, p2: PauseValue) => PauseValue
 ): PauseValue {
-  let merge =
+  const merge =
     opt_merge ||
     function (x, y) {
       // TODO (TS): Changes this from || to &&.
@@ -99,7 +99,7 @@ export function mergeMarkup(oldPers: Tags, newPers: Tags) {
   delete oldPers.open;
   newPers.close.forEach((x) => delete oldPers[x]);
   newPers.open.forEach((x) => (oldPers[x] = newPers[x]));
-  let keys = Object.keys(oldPers);
+  const keys = Object.keys(oldPers);
   oldPers.open = keys as EngineConst.personalityProps[];
 }
 
@@ -118,13 +118,13 @@ export function sortClose(
   if (open.length <= 1) {
     return open;
   }
-  let result: EngineConst.personalityProps[] = [];
+  const result: EngineConst.personalityProps[] = [];
   for (let i = 0, descr; (descr = descrs[i]), open.length; i++) {
     if (!descr.close || !descr.close.length) {
       continue;
     }
     descr.close.forEach(function (x) {
-      let index = open.indexOf(x);
+      const index = open.indexOf(x);
       if (index !== -1) {
         result.unshift(x);
         open.splice(index, 1);
@@ -155,12 +155,12 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   PersonalityRanges_ = {};
   LastOpen_ = [];
   let result: Markup[] = [];
-  let currentPers = {};
+  const currentPers = {};
   for (let i = 0, descr; (descr = descrs[i]); i++) {
     let pause: Pause = null;
-    let span = descr.descriptionSpan();
-    let pers: Markup = descr.personality;
-    let join = pers[EngineConst.personalityProps.JOIN];
+    const span = descr.descriptionSpan();
+    const pers: Markup = descr.personality;
+    const join = pers[EngineConst.personalityProps.JOIN];
     delete pers[EngineConst.personalityProps.JOIN];
     if (typeof pers[EngineConst.personalityProps.PAUSE] !== 'undefined') {
       pause = {
@@ -170,7 +170,7 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
       // TODO (TS): Look at that once more!
       delete pers[EngineConst.personalityProps.PAUSE];
     }
-    let diff = personalityDiff_(pers, currentPers);
+    const diff = personalityDiff_(pers, currentPers);
     // TODO: Replace last parameter by global parameter, depending on format.
     appendMarkup_(result, span, diff, join, pause, true);
   }
@@ -187,7 +187,7 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
  * @param element A single markup element.
  */
 function appendElement_(markup: Markup[], element: Markup) {
-  let last = markup[markup.length - 1];
+  const last = markup[markup.length - 1];
   if (!last) {
     markup.push(element);
     return;
@@ -197,8 +197,8 @@ function appendElement_(markup: Markup[], element: Markup) {
       last.span = last.span.concat(element.span);
       return;
     }
-    let lstr = last['span'].pop();
-    let fstr = element['span'].shift();
+    const lstr = last['span'].pop();
+    const fstr = element['span'].shift();
     last['span'].push(lstr + last.join + fstr);
     last['span'] = last['span'].concat(element.span);
     last.join = element.join;
@@ -217,8 +217,8 @@ function appendElement_(markup: Markup[], element: Markup) {
  * @return Simplified markup list.
  */
 function simplifyMarkup_(markup: Markup[]): Markup[] {
-  let lastPers: Markup = {};
-  let result = [];
+  const lastPers: Markup = {};
+  const result = [];
   for (let i = 0, element; (element = markup[i]); i++) {
     if (!isMarkupElement(element)) {
       appendElement_(result, element);
@@ -235,7 +235,7 @@ function simplifyMarkup_(markup: Markup[]): Markup[] {
       result.push(element);
       continue;
     }
-    let pauseElement = isPauseElement(nextElement) ? nextElement : null;
+    const pauseElement = isPauseElement(nextElement) ? nextElement : null;
     if (pauseElement) {
       nextElement = markup[i + 2];
     }
@@ -282,13 +282,13 @@ function copyValues_(from: Markup, to: Markup) {
  * @return Markup list.
  */
 function finaliseMarkup_(): Markup[] {
-  let final = [];
+  const final = [];
   for (let i = LastOpen_.length - 1; i >= 0; i--) {
-    let pers = LastOpen_[i];
+    const pers = LastOpen_[i];
     if (pers.length) {
-      let markup: Markup = { open: [], close: [] };
+      const markup: Markup = { open: [], close: [] };
       for (let j = 0; j < pers.length; j++) {
-        let per = pers[j];
+        const per = pers[j];
         markup.close.push(per);
         markup[per] = 0;
       }
@@ -326,7 +326,7 @@ export function isPauseElement(element: Markup): boolean {
  * @return True if this is a span element.
  */
 export function isSpanElement(element: Markup): boolean {
-  let keys = Object.keys(element);
+  const keys = Object.keys(element);
   return (
     typeof element === 'object' &&
     ((keys.length === 1 && keys[0] === 'span') ||
@@ -352,16 +352,16 @@ function appendMarkup_(
   pers: { [key: string]: number },
   join: string,
   pause: Pause,
-  merge: boolean = false
+  merge = false
 ) {
   if (merge) {
-    let last = markup[markup.length - 1];
+    const last = markup[markup.length - 1];
     let oldJoin;
     if (last) {
       oldJoin = last[EngineConst.personalityProps.JOIN];
     }
     if (last && !span.speech && pause && isPauseElement(last)) {
-      let pauseProp = EngineConst.personalityProps.PAUSE;
+      const pauseProp = EngineConst.personalityProps.PAUSE;
       // Merging could be done using max or min or plus.
       last[pauseProp] = mergePause_(last[pauseProp], pause[pauseProp]);
       pause = null;
@@ -374,7 +374,7 @@ function appendMarkup_(
     ) {
       // TODO: Check that out if this works with spans.
       if (typeof oldJoin !== 'undefined') {
-        let lastSpan = last['span'].pop();
+        const lastSpan = last['span'].pop();
         span = new Span(
           lastSpan.speech + oldJoin + span.speech,
           lastSpan.attributes
@@ -409,17 +409,17 @@ function personalityDiff_(
   if (!old) {
     return current;
   }
-  let result: Markup = {};
-  for (let prop of EngineConst.personalityPropList) {
-    let currentValue = current[prop];
-    let oldValue = old[prop];
+  const result: Markup = {};
+  for (const prop of EngineConst.personalityPropList) {
+    const currentValue = current[prop];
+    const oldValue = old[prop];
     if (
       (!currentValue && !oldValue) ||
       (currentValue && oldValue && currentValue === oldValue)
     ) {
       continue;
     }
-    let value = currentValue || 0;
+    const value = currentValue || 0;
     // TODO: Simplify
     if (!isMarkupElement(result)) {
       result.open = [];
@@ -459,7 +459,7 @@ function personalityDiff_(
     let c = result.close.slice();
     while (c.length > 0) {
       let lo = LastOpen_.pop();
-      let loNew = setdifference(lo, c);
+      const loNew = setdifference(lo, c);
       c = setdifference(c, lo);
       lo = loNew;
       if (c.length === 0) {

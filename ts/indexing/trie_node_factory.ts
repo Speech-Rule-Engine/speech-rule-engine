@@ -78,7 +78,7 @@ export class DynamicTrieNode extends AbstractTrieNode<string> {
   }
 }
 
-let comparator: { [operator: string]: (x: number, y: number) => boolean } = {
+const comparator: { [operator: string]: (x: number, y: number) => boolean } = {
   '=': (x: number, y: number) => x === y,
   '!=': (x: number, y: number) => x !== y,
   '<': (x: number, y: number) => x < y,
@@ -108,12 +108,12 @@ export function constraintTest_(
   }
   // @self::namespace:tagname
   if (constraint.match(/^self::\w+:\w+$/)) {
-    let inter = constraint.split(':');
-    let namespace = XpathUtil.resolveNameSpace(inter[2]);
+    const inter = constraint.split(':');
+    const namespace = XpathUtil.resolveNameSpace(inter[2]);
     if (!namespace) {
       return null;
     }
-    let tag = inter[3].toUpperCase();
+    const tag = inter[3].toUpperCase();
     return (node: Element) =>
       node.localName &&
       node.localName.toUpperCase() === tag &&
@@ -121,14 +121,14 @@ export function constraintTest_(
   }
   // @attr
   if (constraint.match(/^@\w+$/)) {
-    let attr = constraint.slice(1);
+    const attr = constraint.slice(1);
     return (node: Element) => node.hasAttribute && node.hasAttribute(attr);
   }
   // @attr="value"
   if (constraint.match(/^@\w+="[\w\d ]+"$/)) {
-    let split = constraint.split('=');
-    let attr = split[0].slice(1);
-    let value = split[1].slice(1, -1);
+    const split = constraint.split('=');
+    const attr = split[0].slice(1);
+    const value = split[1].slice(1, -1);
     return (node: Element) =>
       node.hasAttribute &&
       node.hasAttribute(attr) &&
@@ -136,9 +136,9 @@ export function constraintTest_(
   }
   // @attr!="value"
   if (constraint.match(/^@\w+!="[\w\d ]+"$/)) {
-    let split = constraint.split('!=');
-    let attr = split[0].slice(1);
-    let value = split[1].slice(1, -1);
+    const split = constraint.split('!=');
+    const attr = split[0].slice(1);
+    const value = split[1].slice(1, -1);
     return (node: Element) =>
       !node.hasAttribute ||
       !node.hasAttribute(attr) ||
@@ -146,8 +146,8 @@ export function constraintTest_(
   }
   // contains(@grammar, "something")
   if (constraint.match(/^contains\(\s*@grammar\s*,\s*"[\w\d ]+"\s*\)$/)) {
-    let split = constraint.split('"');
-    let value = split[1];
+    const split = constraint.split('"');
+    const value = split[1];
     return (_node: Element) => !!Grammar.getInstance().getParameter(value);
   }
   // not(contains(@grammar, "something"))
@@ -156,22 +156,22 @@ export function constraintTest_(
       /^not\(\s*contains\(\s*@grammar\s*,\s*"[\w\d ]+"\s*\)\s*\)$/
     )
   ) {
-    let split = constraint.split('"');
-    let value = split[1];
+    const split = constraint.split('"');
+    const value = split[1];
     return (_node: Element) => !Grammar.getInstance().getParameter(value);
   }
   // name(../..)="something"
   if (constraint.match(/^name\(\.\.\/\.\.\)="\w+"$/)) {
-    let split = constraint.split('"');
-    let tag = split[1].toUpperCase();
+    const split = constraint.split('"');
+    const tag = split[1].toUpperCase();
     return (node: Element) =>
       (node.parentNode?.parentNode as Element)?.tagName &&
       DomUtil.tagName(node.parentNode.parentNode as Element) === tag;
   }
   // count(preceding-sibling::*)=n
   if (constraint.match(/^count\(preceding-sibling::\*\)=\d+$/)) {
-    let split = constraint.split('=');
-    let num = parseInt(split[1], 10);
+    const split = constraint.split('=');
+    const num = parseInt(split[1], 10);
     return (node: Element) => node.parentNode?.childNodes[num] === node;
   }
   // category constraint
@@ -180,16 +180,16 @@ export function constraintTest_(
     let [, query, equality, category] = constraint.match(
       /^(.+)\[@category(!?=)\"(.+)\"\]$/
     );
-    let unit = category.match(/^unit:(.+)$/);
+    const unit = category.match(/^unit:(.+)$/);
     let add = '';
     if (unit) {
       category = unit[1];
       add = ':unit';
     }
     return (node: Element) => {
-      let xpath = XpathUtil.evalXPath(query, node)[0];
+      const xpath = XpathUtil.evalXPath(query, node)[0];
       if (xpath) {
-        let result = MathCompoundStore.lookupCategory(xpath.textContent + add);
+        const result = MathCompoundStore.lookupCategory(xpath.textContent + add);
         return equality === '=' ? result === category : result !== category;
       }
       return false;
@@ -198,13 +198,13 @@ export function constraintTest_(
   // string-length adapted for unicode.
   // string-length(xpath)!?=<>\d
   if (constraint.match(/^string-length\(.+\)\W+\d+/)) {
-    let [, select, comp, count] = constraint.match(
+    const [, select, comp, count] = constraint.match(
       /^string-length\((.+)\)(\W+)(\d+)/
     );
-    let func = comparator[comp] || comparator['='];
-    let numb = parseInt(count, 10);
+    const func = comparator[comp] || comparator['='];
+    const numb = parseInt(count, 10);
     return (node: Element) => {
-      let xpath = XpathUtil.evalXPath(select, node)[0];
+      const xpath = XpathUtil.evalXPath(select, node)[0];
       if (!xpath) {
         return false;
       }

@@ -28,7 +28,7 @@ import { combinePostfixIndex } from '../locale_util';
 import NUMBERS from '../numbers/numbers_es';
 import { Combiners } from '../transformers';
 
-let sansserifCombiner = function (letter: string, font: string, cap: string) {
+const sansserifCombiner = function (letter: string, font: string, cap: string) {
   letter = 'sans serif ' + (cap ? cap + ' ' + letter : letter);
   return font ? letter + ' ' + font : letter;
 };
@@ -44,7 +44,7 @@ export function es(): Locale {
 }
 
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
 
   loc.COMBINERS['sansserif'] = sansserifCombiner;
