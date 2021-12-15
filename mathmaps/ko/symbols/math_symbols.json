@@ -2178,7 +2178,7 @@
         "default": "등각"
       },
       "clearspeak": {
-        "default": "와 등각이다"
+        "default": "등각이다"
       }
     },
     "key": "225A"
@@ -6532,7 +6532,7 @@
         "default": "크다"
       },
       "clearspeak": {
-        "default": "보다 크다"
+        "default": "크다"
       }
     },
     "key": "2AAA"
@@ -6544,7 +6544,7 @@
         "default": "작다"
       },
       "clearspeak": {
-        "default": "보다 작다"
+        "default": "작다"
       }
     },
     "key": "2AAB"
@@ -6556,7 +6556,7 @@
         "default": "크거나 같다"
       },
       "clearspeak": {
-        "default": "보다 크거나 같다"
+        "default": "크거나 같다"
       }
     },
     "key": "2AAC"
@@ -6568,7 +6568,7 @@
         "default": "작거나 같다"
       },
       "clearspeak": {
-        "default": "보다 작거나 같다"
+        "default": "작거나 같다"
       }
     },
     "key": "2AAD"

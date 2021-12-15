@@ -53,8 +53,8 @@ function create(): Locale {
    * @returns The string unchanged.
    */
   loc.CORRECTIONS.postposition = (name: string) => {
-    let article = Grammar.getInstance().getParameter('article');
-    if (article) return name;
+    if (Grammar.getInstance().getParameter('article');
+) return name;
     
     let final = name.slice(-1);
     let char = (final.charCodeAt(0) - 44032) % 28;
@@ -62,25 +62,28 @@ function create(): Locale {
     let result = (char > 0) ? true : false;
     if (final.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
     Grammar.getInstance().setParameter('final', result);
-    return name+result;
+    return name;
   }
   loc.CORRECTIONS.article = (name: string) => {
     let final = Grammar.getInstance().getParameter('final');
     let temp = name;
-
+    
     if (temp === '같다') temp = '는';
     if (final) temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[temp];
     return (temp !== undefined) ? temp : name;
   }
   loc.CORRECTIONS.noArticle = (name: string) => {
+    /*
     let temp = name.split(" ");
-    let art = ['는', '은', '와', '과', '를', '을', '로', '으로', '보다'];
+    let art = ['는', '와', '를', '보다'];
     for (let i = 0; i < temp.length; i++){
       if (art.indexOf(temp[i]) != -1){
         temp.splice(i,1);
       }
     }
     return (temp[0] !== undefined)? temp.join(" ") : name;
+    */
+   return name;
   }
   
   return loc;
