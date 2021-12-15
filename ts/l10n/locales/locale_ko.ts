@@ -53,8 +53,7 @@ function create(): Locale {
    * @returns The string unchanged.
    */
   loc.CORRECTIONS.postposition = (name: string) => {
-    if (Grammar.getInstance().getParameter('article');
-) return name;
+    if (Grammar.getInstance().getParameter('article')) return name;
     
     let final = name.slice(-1);
     let char = (final.charCodeAt(0) - 44032) % 28;
