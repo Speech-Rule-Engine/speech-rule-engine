@@ -44,6 +44,11 @@ export class CaseEmbellished extends AbstractEnrichCase {
   public fencedMml: Element = null;
 
   /**
+   * List of all fenced mml nodes. `fencedMml` is the first.
+   */
+  public fencedMmlNodes: Element[] = [];
+
+  /**
    * Open Fenced semantic node.
    */
   public ofence: SemanticNode = null;
@@ -136,6 +141,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
    */
   public getMathml() {
     this.getFenced_();
+    // This is the first fenced node, but there can be more than one!
     this.fencedMml = EnrichMathml.walkTree((this.fenced as SemanticNode));
     this.getFencesMml_();
     if (this.fenced.type === SemanticType.EMPTY &&
@@ -145,7 +151,9 @@ export class CaseEmbellished extends AbstractEnrichCase {
       this.fencedMml.setAttribute(EnrichMathml.Attribute.ADDED, 'true');
       this.cfenceMml.parentNode.insertBefore(this.fencedMml, this.cfenceMml);
     }
-    return this.rewrite_();
+    this.getFencedMml_();
+    let rewrite = this.rewrite_();
+    return rewrite;
   }
 
 
@@ -162,6 +170,19 @@ export class CaseEmbellished extends AbstractEnrichCase {
     this.cfence = currentNode.contentNodes[1];
     CaseEmbellished.fencedMap_(this.ofence, this.ofenceMap);
     CaseEmbellished.fencedMap_(this.cfence, this.cfenceMap);
+  }
+
+
+  /**
+   * Retrieve the list of MathMl elements that are fenced.
+   */
+  private getFencedMml_() {
+    let sibling = this.ofenceMml.nextSibling;
+    sibling = sibling === this.fencedMml ? sibling : this.fencedMml;
+    while (sibling && sibling !== this.cfenceMml) {
+      this.fencedMmlNodes.push(sibling as Element);
+      sibling = sibling.nextSibling;
+    }
   }
 
 
@@ -300,7 +321,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
     // Introduce a definite new layer.
     let newNode = DomUtil.createElement('mrow');
     DomUtil.replaceNode((this.fencedMml as Element), newNode);
-    newNode.appendChild(this.fencedMml);
+    this.fencedMmlNodes.forEach(node => newNode.appendChild(node));
     newNode.insertBefore(fullOfence, this.fencedMml);
     newNode.appendChild(fullCfence);
     // The case of top element math.
