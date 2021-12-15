@@ -23,22 +23,22 @@
 // This work was sponsored by TextHelp
 //
 
-
-import {combinePostfixIndex} from '../locale_util';
-import {createLocale, Locale} from '../locale';
+import { combinePostfixIndex } from '../locale_util';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_it';
-import {Combiners} from '../transformers';
+import { Combiners } from '../transformers';
 
-
-let italianPostfixCombiner = function(
-  letter: string, font: string, cap: string) {
+let italianPostfixCombiner = function (
+  letter: string,
+  font: string,
+  cap: string
+) {
   if (letter.match(/^[a-zA-Z]$/)) {
     font = font.replace('cerchiato', 'cerchiata');
   }
   letter = cap ? letter + ' ' + cap : letter;
   return font ? letter + ' ' + font : letter;
 };
-
 
 let locale: Locale = null;
 
@@ -56,12 +56,12 @@ function create(): Locale {
 
   loc.COMBINERS['italianPostfix'] = italianPostfixCombiner;
 
-  loc.FUNCTIONS.fracNestDepth = _node => false;
+  loc.FUNCTIONS.fracNestDepth = (_node) => false;
   loc.FUNCTIONS.combineRootIndex = combinePostfixIndex;
-  loc.FUNCTIONS.combineNestedFraction =
-      (a, b, c) => c.replace(/ $/g, '') + b + a;
+  loc.FUNCTIONS.combineNestedFraction = (a, b, c) =>
+    c.replace(/ $/g, '') + b + a;
   loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => c + ' ' + a;
-  loc.FUNCTIONS.fontRegexp = font => RegExp(' (en |)' + font + '$');
+  loc.FUNCTIONS.fontRegexp = (font) => RegExp(' (en |)' + font + '$');
 
   loc.ALPHABETS.combiner = Combiners.romanceCombiner;
 

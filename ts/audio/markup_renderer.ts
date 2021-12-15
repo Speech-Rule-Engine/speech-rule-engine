@@ -19,25 +19,20 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {EngineConst} from '../common/engine';
-import {AbstractAudioRenderer} from './abstract_audio_renderer';
-import {Pause} from './audio_util';
-
+import { EngineConst } from '../common/engine';
+import { AbstractAudioRenderer } from './abstract_audio_renderer';
+import { Pause } from './audio_util';
 
 export abstract class MarkupRenderer extends AbstractAudioRenderer {
-
   /**
    * Properties to be ignored by a markup renderer.
    */
-  protected ignoreElements: string[] = [
-    EngineConst.personalityProps.LAYOUT
-  ];
+  protected ignoreElements: string[] = [EngineConst.personalityProps.LAYOUT];
 
   /**
    *  A scale function.
    */
-  private scaleFunction: ((p1: number) => number) = null;
+  private scaleFunction: (p1: number) => number = null;
 
   /**
    * Translates a pause into its corresponding markup.
@@ -67,16 +62,23 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
    * @param opt_decimals Number of digits after the decimal point.
    */
   public setScaleFunction(
-      a: number, b: number, c: number, d: number, decimals: number = 0) {
-    this.scaleFunction = x => {
+    a: number,
+    b: number,
+    c: number,
+    d: number,
+    decimals: number = 0
+  ) {
+    this.scaleFunction = (x) => {
       let delta = (x - a) / (b - a);
       let num = c * (1 - delta) + d * delta;
       /// TODO (TS): Avoid all that casting!
-      return +(Math.round(((num + 'e+' + decimals) as any) as number) +
-        'e-' + decimals);
+      return +(
+        Math.round((num + 'e+' + decimals) as any as number) +
+        'e-' +
+        decimals
+      );
     };
   }
-
 
   /**
    * Applies the current scale function that can be set by the previous method.
@@ -87,7 +89,6 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
     return this.scaleFunction ? this.scaleFunction(value) : value;
   }
 
-
   /**
    * Check if a given property is to be ignore by a markup renderer.
    * @param key The property key.
@@ -95,5 +96,4 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
   protected ignoreElement(key: string) {
     return this.ignoreElements.indexOf(key) !== -1;
   }
-
 }

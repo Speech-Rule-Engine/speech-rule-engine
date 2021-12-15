@@ -20,17 +20,15 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {RebuildStree} from './rebuild_stree';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { RebuildStree } from './rebuild_stree';
 import * as WalkerUtil from './walker_util';
 
-
 export class Focus {
-
   /**
    * The DOM nodes of the focus.
    */
-  private domNodes: (Element|null)[] = [];
+  private domNodes: (Element | null)[] = [];
 
   /**
    * The primary DOM component of the focus.
@@ -40,8 +38,7 @@ export class Focus {
   /**
    * The DOM nodes of the focus.
    */
-  private allNodes: (Element|null)[] = [];
-
+  private allNodes: (Element | null)[] = [];
 
   /**
    * Factory method to create focus structures from semantic and DOM nodes.
@@ -52,13 +49,16 @@ export class Focus {
    * @return The new focus.
    */
   public static factory(
-      primaryId: string, nodeIds: string[], rebuilt: RebuildStree,
-      dom: Element): Focus {
+    primaryId: string,
+    nodeIds: string[],
+    rebuilt: RebuildStree,
+    dom: Element
+  ): Focus {
     let idFunc = (id: string) => WalkerUtil.getBySemanticId(dom, id);
     let dict = rebuilt.nodeDict;
     let node = idFunc(primaryId);
     let nodes = nodeIds.map(idFunc);
-    let snodes = nodeIds.map(function(primaryId) {
+    let snodes = nodeIds.map(function (primaryId) {
       return dict[primaryId];
     });
     let focus = new Focus(snodes, dict[primaryId]);
@@ -67,7 +67,6 @@ export class Focus {
     focus.allNodes = Focus.generateAllVisibleNodes_(nodeIds, nodes, dict, dom);
     return focus;
   }
-
 
   /**
    * Generates all existing nodes in the DOM structure corresponding to the
@@ -80,8 +79,11 @@ export class Focus {
    * @return The list of existing nodes in the DOM tree.
    */
   private static generateAllVisibleNodes_(
-    ids: string[], nodes: (Element|null)[],
-    dict: {[key: string]: SemanticNode}, domNode: Element): Element[] {
+    ids: string[],
+    nodes: (Element | null)[],
+    dict: { [key: string]: SemanticNode },
+    domNode: Element
+  ): Element[] {
     let idFunc = (id: string) => WalkerUtil.getBySemanticId(domNode, id);
     let result: Element[] = [];
     for (let i = 0, l = ids.length; i < l; i++) {
@@ -93,24 +95,22 @@ export class Focus {
       if (!virtual) {
         continue;
       }
-      let childIds = virtual.childNodes.map(function(x) {
+      let childIds = virtual.childNodes.map(function (x) {
         return x.id.toString();
       });
       let children = childIds.map(idFunc) as Element[];
       result = result.concat(
-          Focus.generateAllVisibleNodes_(childIds, children, dict, domNode));
+        Focus.generateAllVisibleNodes_(childIds, children, dict, domNode)
+      );
     }
     return result;
   }
-
 
   /**
    * @param nodes The semantic nodes of the focus.
    * @param primary The primary component of the focus.
    */
-  constructor(private nodes: SemanticNode[],
-              private primary: SemanticNode) { }
-
+  constructor(private nodes: SemanticNode[], private primary: SemanticNode) {}
 
   /**
    * @return The nodes of the focus.
@@ -119,14 +119,12 @@ export class Focus {
     return this.primary;
   }
 
-
   /**
    * @return The nodes of the focus.
    */
   public getSemanticNodes(): SemanticNode[] {
     return this.nodes;
   }
-
 
   /**
    * @return The nodes of the focus.
@@ -135,14 +133,12 @@ export class Focus {
     return this.allNodes;
   }
 
-
   /**
    * @return The nodes of the focus.
    */
-  public getDomNodes(): (Element|null)[] {
+  public getDomNodes(): (Element | null)[] {
     return this.domNodes;
   }
-
 
   /**
    * @return The primary node of the focus. Can be empty.
@@ -151,14 +147,12 @@ export class Focus {
     return this.domPrimary_;
   }
 
-
   /**
    * @override
    */
   public toString() {
     return 'Primary:' + this.domPrimary_ + ' Nodes:' + this.domNodes;
   }
-
 
   /**
    * Clones the focus.
@@ -171,5 +165,4 @@ export class Focus {
     focus.allNodes = this.allNodes;
     return focus;
   }
-
 }

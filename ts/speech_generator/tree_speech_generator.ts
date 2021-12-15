@@ -21,16 +21,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
 import * as WalkerUtil from '../walker/walker_util';
 
-import {AbstractSpeechGenerator} from './abstract_speech_generator';
+import { AbstractSpeechGenerator } from './abstract_speech_generator';
 import * as SpeechGeneratorUtil from './speech_generator_util';
 
-
 export class TreeSpeechGenerator extends AbstractSpeechGenerator {
-
   /**
    * @override
    */
@@ -42,13 +39,12 @@ export class TreeSpeechGenerator extends AbstractSpeechGenerator {
       // TODO: Refactor with setting the base semantic tree in the enrich mathml
       //      object.
       let snode = nodes[key];
-      let innerMml = (WalkerUtil.getBySemanticId(xml, key) as Element);
-      let innerNode = (WalkerUtil.getBySemanticId(node, key) as Element);
+      let innerMml = WalkerUtil.getBySemanticId(xml, key) as Element;
+      let innerNode = WalkerUtil.getBySemanticId(node, key) as Element;
       if (!innerMml || !innerNode) {
         continue;
       }
-      if (!this.modality ||
-          this.modality === EnrichMathml.Attribute.SPEECH) {
+      if (!this.modality || this.modality === EnrichMathml.Attribute.SPEECH) {
         SpeechGeneratorUtil.addSpeech(innerNode, snode, this.getRebuilt().xml);
       } else {
         SpeechGeneratorUtil.addModality(innerNode, snode, this.modality);

@@ -19,12 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {SemanticNode} from './semantic_node';
-
+import { SemanticNode } from './semantic_node';
 
 export class SemanticAnnotator {
-
   /**
    * Activation flag.
    */
@@ -36,9 +33,10 @@ export class SemanticAnnotator {
    * @param func The annotation function.
    */
   constructor(
-      public domain: string, public name: string,
-      public func: (p1: SemanticNode) => any) {}
-
+    public domain: string,
+    public name: string,
+    public func: (p1: SemanticNode) => any
+  ) {}
 
   /**
    * Annotates the tree bottom up.
@@ -48,12 +46,9 @@ export class SemanticAnnotator {
     node.childNodes.forEach(this.annotate.bind(this));
     node.addAnnotation(this.domain, this.func(node));
   }
-
 }
 
-
 export class SemanticVisitor {
-
   /**
    * Activation flag.
    */
@@ -67,11 +62,11 @@ export class SemanticVisitor {
    * @param def The initial object that is used for annotation.
    */
   constructor(
-    public domain: string, public name: string,
-    public func: (p1: SemanticNode, p2: {[key: string]: any}) => any,
-    public def: {[key: string]: any} = {}) {
-  }
-
+    public domain: string,
+    public name: string,
+    public func: (p1: SemanticNode, p2: { [key: string]: any }) => any,
+    public def: { [key: string]: any } = {}
+  ) {}
 
   /**
    * Visits the tree top down, depth-first and propagates the information.
@@ -79,13 +74,12 @@ export class SemanticVisitor {
    * @param info The information to propagate.
    * @return The result with updated information.
    */
-  public visit(node: SemanticNode, info: {[key: string]: any}): any {
+  public visit(node: SemanticNode, info: { [key: string]: any }): any {
     let result = this.func(node, info);
     node.addAnnotation(this.domain, result[0]);
-    for (let i = 0, child; child = node.childNodes[i]; i++) {
-      result = this.visit(child, (result[1] as {[key: string]: any}));
+    for (let i = 0, child; (child = node.childNodes[i]); i++) {
+      result = this.visit(child, result[1] as { [key: string]: any });
     }
     return result;
   }
-
 }

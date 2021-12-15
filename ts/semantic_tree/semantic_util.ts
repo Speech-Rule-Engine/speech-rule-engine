@@ -21,31 +21,38 @@
 
 import * as DomUtil from '../common/dom_util';
 
-import {SemanticNode} from './semantic_node';
-
+import { SemanticNode } from './semantic_node';
 
 /**
  * List of MathML Tags that are considered to be leafs.
  */
-export const LEAFTAGS: string[] =
-  ['MO', 'MI', 'MN', 'MTEXT', 'MS', 'MSPACE'];
-
+export const LEAFTAGS: string[] = ['MO', 'MI', 'MN', 'MTEXT', 'MS', 'MSPACE'];
 
 /**
  * List of MathML Tags that are to be ignored.
  */
 export const IGNORETAGS: string[] = [
-  'MERROR', 'MPHANTOM', 'MALIGNGROUP', 'MALIGNMARK', 'MPRESCRIPTS',
-  'ANNOTATION', 'ANNOTATION-XML'
+  'MERROR',
+  'MPHANTOM',
+  'MALIGNGROUP',
+  'MALIGNMARK',
+  'MPRESCRIPTS',
+  'ANNOTATION',
+  'ANNOTATION-XML'
 ];
-
 
 /**
  * List of MathML Tags to be ignore if they have no children.
  */
-export const EMPTYTAGS: string[] =
-  ['MATH', 'MROW', 'MPADDED', 'MACTION', 'NONE', 'MSTYLE', 'SEMANTICS'];
-
+export const EMPTYTAGS: string[] = [
+  'MATH',
+  'MROW',
+  'MPADDED',
+  'MACTION',
+  'NONE',
+  'MSTYLE',
+  'SEMANTICS'
+];
 
 /**
  * List of MathML Tags that draw something and can therefore not be ignored if
@@ -53,19 +60,17 @@ export const EMPTYTAGS: string[] =
  */
 export const DISPLAYTAGS: string[] = ['MROOT', 'MSQRT'];
 
-
 /**
  * List of potential attributes that should be used as speech directly.
  */
 export const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
-
 
 /**
  * Merges keys of objects into an array.
  * @param args Optional objects.
  * @return Array of all keys of the objects.
  */
-export function objectsToKeys(...args: ({[key: string]: string})[]): string[] {
+export function objectsToKeys(...args: { [key: string]: string }[]): string[] {
   let keys: string[] = [];
   return keys.concat.apply(keys, args.map(Object.keys));
 }
@@ -76,9 +81,10 @@ export function objectsToKeys(...args: ({[key: string]: string})[]): string[] {
  * @return Array of all values of the objects.
  */
 export function objectsToValues(
-  ...args: ({[key: string]: string})[]): string[] {
+  ...args: { [key: string]: string }[]
+): string[] {
   let result: string[] = [];
-  args.forEach((obj: {[key: string]: string}) => {
+  args.forEach((obj: { [key: string]: string }) => {
     for (let key in obj) {
       result.push(obj[key]);
     }
@@ -86,14 +92,13 @@ export function objectsToValues(
   return result;
 }
 
-
 /**
  * Transforms a unicode character into numeric representation. Returns null if
  * the input string is not a valid unicode character.
  * @param unicode Character.
  * @return The decimal representation if it exists.
  */
-export function unicodeToNumber(unicode: string): number|null {
+export function unicodeToNumber(unicode: string): number | null {
   if (!unicode || unicode.length > 2) {
     return null;
   }
@@ -101,14 +106,13 @@ export function unicodeToNumber(unicode: string): number|null {
   if (unicode.length === 2) {
     let hi = unicode.charCodeAt(0);
     let low = unicode.charCodeAt(1);
-    if (0xD800 <= hi && hi <= 0xDBFF && !isNaN(low)) {
-      return (hi - 0xD800) * 0x400 + (low - 0xDC00) + 0x10000;
+    if (0xd800 <= hi && hi <= 0xdbff && !isNaN(low)) {
+      return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
     }
     return null;
   }
   return unicode.charCodeAt(0);
 }
-
 
 // TODO: Refactor with similar function in MathSimpleStore.
 /**
@@ -121,7 +125,6 @@ export function numberToUnicode(num: number): string {
   return String.fromCodePoint(num);
 }
 
-
 /**
  * Splits a unicode string into array of characters. In particular deals
  * properly with surrogate pairs.
@@ -131,7 +134,7 @@ export function numberToUnicode(num: number): string {
 export function splitUnicode(str: string): string[] {
   let split = str.split('');
   let result = [];
-  for (let i = 0, chr; chr = split[i]; i++) {
+  for (let i = 0, chr; (chr = split[i]); i++) {
     if ('\uD800' <= chr && chr <= '\uDBFF' && split[i + 1]) {
       result.push(chr + split[++i]);
     } else {
@@ -140,7 +143,6 @@ export function splitUnicode(str: string): string[] {
   }
   return result;
 }
-
 
 /**
  * Checks if an element is a node with a math tag.
@@ -151,17 +153,14 @@ export function hasMathTag(node: Element): boolean {
   return !!node && DomUtil.tagName(node) === 'MATH';
 }
 
-
 /**
  * Checks if an element is a node with leaf tag.
  * @param node The node to check.
  * @return True if element is an leaf node.
  */
 export function hasLeafTag(node: Element): boolean {
-  return !!node &&
-    LEAFTAGS.indexOf(DomUtil.tagName(node)) !== -1;
+  return !!node && LEAFTAGS.indexOf(DomUtil.tagName(node)) !== -1;
 }
-
 
 /**
  * Checks if an element is a node with ignore tag.
@@ -169,10 +168,8 @@ export function hasLeafTag(node: Element): boolean {
  * @return True if element is an ignore node.
  */
 export function hasIgnoreTag(node: Element): boolean {
-  return !!node &&
-    IGNORETAGS.indexOf(DomUtil.tagName(node)) !== -1;
+  return !!node && IGNORETAGS.indexOf(DomUtil.tagName(node)) !== -1;
 }
-
 
 /**
  * Checks if an element is a node with empty tag.
@@ -180,10 +177,8 @@ export function hasIgnoreTag(node: Element): boolean {
  * @return True if element is an empty node.
  */
 export function hasEmptyTag(node: Element): boolean {
-  return !!node &&
-    EMPTYTAGS.indexOf(DomUtil.tagName(node)) !== -1;
+  return !!node && EMPTYTAGS.indexOf(DomUtil.tagName(node)) !== -1;
 }
-
 
 /**
  * Checks if an element is a node with display tag.
@@ -191,10 +186,8 @@ export function hasEmptyTag(node: Element): boolean {
  * @return True if element is an display node.
  */
 export function hasDisplayTag(node: Element): boolean {
-  return !!node &&
-    DISPLAYTAGS.indexOf(DomUtil.tagName(node)) !== -1;
+  return !!node && DISPLAYTAGS.indexOf(DomUtil.tagName(node)) !== -1;
 }
-
 
 /**
  * Checks if an element is a node a glyph node that is not in a leaf.
@@ -202,11 +195,12 @@ export function hasDisplayTag(node: Element): boolean {
  * @return True if element is an orphaned glyph.
  */
 export function isOrphanedGlyph(node: Element): boolean {
-  return !!node &&
-    (DomUtil.tagName(node) === 'MGLYPH' &&
-      !hasLeafTag((node.parentNode as Element)));
+  return (
+    !!node &&
+    DomUtil.tagName(node) === 'MGLYPH' &&
+    !hasLeafTag(node.parentNode as Element)
+  );
 }
-
 
 /**
  * Removes elements from a list of MathML nodes that are either to be ignored
@@ -218,7 +212,7 @@ export function isOrphanedGlyph(node: Element): boolean {
  */
 export function purgeNodes(nodes: Element[]): Element[] {
   let nodeArray = [];
-  for (let i = 0, node; node = nodes[i]; i++) {
+  for (let i = 0, node; (node = nodes[i]); i++) {
     if (node.nodeType !== DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
@@ -226,15 +220,13 @@ export function purgeNodes(nodes: Element[]): Element[] {
     if (IGNORETAGS.indexOf(tagName) !== -1) {
       continue;
     }
-    if (EMPTYTAGS.indexOf(tagName) !== -1 &&
-      node.childNodes.length === 0) {
+    if (EMPTYTAGS.indexOf(tagName) !== -1 && node.childNodes.length === 0) {
       continue;
     }
     nodeArray.push(node);
   }
   return nodeArray;
 }
-
 
 /**
  * Determines if an attribute represents zero or negative length.
@@ -246,9 +238,12 @@ export function isZeroLength(length: string): boolean {
     return false;
   }
   let negativeNamedSpaces = [
-    'negativeveryverythinmathspace', 'negativeverythinmathspace',
-    'negativethinmathspace', 'negativemediummathspace',
-    'negativethickmathspace', 'negativeverythickmathspace',
+    'negativeveryverythinmathspace',
+    'negativeverythinmathspace',
+    'negativethinmathspace',
+    'negativemediummathspace',
+    'negativethickmathspace',
+    'negativeverythickmathspace',
     'negativeveryverythickmathspace'
   ];
   if (negativeNamedSpaces.indexOf(length) !== -1) {
@@ -261,7 +256,6 @@ export function isZeroLength(length: string): boolean {
   // TODO (TS):  Check if this is correct!
   return parseFloat(value[0]) === 0 ? true : false;
 }
-
 
 /**
  * Retains external attributes from the source node to the semantic node.
@@ -295,7 +289,6 @@ export function addAttributes(to: SemanticNode, from: Element) {
   }
 }
 
-
 /**
  * Finds the innermost element of an embellished operator node.
  * @param node The embellished node.
@@ -323,13 +316,15 @@ export interface Slice {
  * @return The split list as a slice structure.
  */
 export function sliceNodes(
-  nodes: SemanticNode[], pred: (p1: SemanticNode) => boolean,
-  opt_reverse?: boolean): Slice {
+  nodes: SemanticNode[],
+  pred: (p1: SemanticNode) => boolean,
+  opt_reverse?: boolean
+): Slice {
   if (opt_reverse) {
     nodes.reverse();
   }
   let head = [];
-  for (let i = 0, node; node = nodes[i]; i++) {
+  for (let i = 0, node; (node = nodes[i]); i++) {
     if (pred(node)) {
       if (opt_reverse) {
         return {
@@ -338,16 +333,15 @@ export function sliceNodes(
           tail: head.reverse()
         };
       }
-      return {head: head, div: node, tail: nodes.slice(i + 1)};
+      return { head: head, div: node, tail: nodes.slice(i + 1) };
     }
     head.push(node);
   }
   if (opt_reverse) {
-    return {head: [], div: null, tail: head.reverse()};
+    return { head: [], div: null, tail: head.reverse() };
   }
-  return {head: head, div: null, tail: []};
+  return { head: head, div: null, tail: [] };
 }
-
 
 export interface Partition {
   rel: SemanticNode[];
@@ -370,7 +364,8 @@ export interface Partition {
  */
 export function partitionNodes(
   nodes: SemanticNode[],
-  pred: (p1: SemanticNode) => boolean): Partition {
+  pred: (p1: SemanticNode) => boolean
+): Partition {
   let restNodes = nodes;
   let rel = [];
   let comp = [];
@@ -383,5 +378,5 @@ export function partitionNodes(
     restNodes = result.tail;
   } while (result.div);
   rel.pop();
-  return {rel: rel, comp: comp};
+  return { rel: rel, comp: comp };
 }

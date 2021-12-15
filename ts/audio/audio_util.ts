@@ -19,11 +19,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {setdifference} from '../common/base_util';
-import {EngineConst} from '../common/engine';
-import {AuditoryDescription} from './auditory_description';
-import {Span} from './span';
-
+import { setdifference } from '../common/base_util';
+import { EngineConst } from '../common/engine';
+import { AuditoryDescription } from './auditory_description';
+import { Span } from './span';
 
 export interface Tags {
   open?: EngineConst.personalityProps[];
@@ -50,14 +49,15 @@ export type Markup = Pause | Tags;
  *     pause values.
  */
 export function mergePause(
-    oldPause: Pause|null, newPause: Pause,
-    opt_merge?: (p1: PauseValue, p2: PauseValue) => PauseValue): Pause {
+  oldPause: Pause | null,
+  newPause: Pause,
+  opt_merge?: (p1: PauseValue, p2: PauseValue) => PauseValue
+): Pause {
   if (!oldPause) {
     return newPause;
   }
-  return {pause: mergePause_(oldPause.pause, newPause.pause, opt_merge)};
+  return { pause: mergePause_(oldPause.pause, newPause.pause, opt_merge) };
 }
-
 
 /**
  * Merges pause personality annotations.
@@ -68,24 +68,27 @@ export function mergePause(
  *     values.
  */
 function mergePause_(
-    oldPause: PauseValue, newPause: PauseValue,
-    opt_merge?: (p1: PauseValue, p2: PauseValue) => PauseValue): PauseValue {
-  let merge = opt_merge || function(x, y) {
-    // TODO (TS): Changes this from || to &&.
-    if (typeof x === 'number' && typeof y === 'number') {
-      return x + y;
-    }
-    if (typeof x === 'number') {
-      return y;
-    }
-    if (typeof y === 'number') {
-      return x;
-    }
-    return [oldPause, newPause].sort()[0];
-  };
+  oldPause: PauseValue,
+  newPause: PauseValue,
+  opt_merge?: (p1: PauseValue, p2: PauseValue) => PauseValue
+): PauseValue {
+  let merge =
+    opt_merge ||
+    function (x, y) {
+      // TODO (TS): Changes this from || to &&.
+      if (typeof x === 'number' && typeof y === 'number') {
+        return x + y;
+      }
+      if (typeof x === 'number') {
+        return y;
+      }
+      if (typeof y === 'number') {
+        return x;
+      }
+      return [oldPause, newPause].sort()[0];
+    };
   return merge.call(null, oldPause, newPause);
 }
-
 
 /**
  * Merges new personality into the old personality markup.
@@ -94,12 +97,11 @@ function mergePause_(
  */
 export function mergeMarkup(oldPers: Tags, newPers: Tags) {
   delete oldPers.open;
-  newPers.close.forEach(x => delete oldPers[x]);
-  newPers.open.forEach(x => oldPers[x] = newPers[x]);
+  newPers.close.forEach((x) => delete oldPers[x]);
+  newPers.open.forEach((x) => (oldPers[x] = newPers[x]));
   let keys = Object.keys(oldPers);
   oldPers.open = keys as EngineConst.personalityProps[];
 }
-
 
 /**
  * Sorts a list of opening tags by order of which is closed last.
@@ -110,17 +112,18 @@ export function mergeMarkup(oldPers: Tags, newPers: Tags) {
  * @return The sorted array.
  */
 export function sortClose(
-    open: EngineConst.personalityProps[],
-    descrs: Tags[]): EngineConst.personalityProps[] {
+  open: EngineConst.personalityProps[],
+  descrs: Tags[]
+): EngineConst.personalityProps[] {
   if (open.length <= 1) {
     return open;
   }
   let result: EngineConst.personalityProps[] = [];
-  for (let i = 0, descr; descr = descrs[i], open.length; i++) {
+  for (let i = 0, descr; (descr = descrs[i]), open.length; i++) {
     if (!descr.close || !descr.close.length) {
       continue;
     }
-    descr.close.forEach(function(x) {
+    descr.close.forEach(function (x) {
       let index = open.indexOf(x);
       if (index !== -1) {
         result.unshift(x);
@@ -131,19 +134,17 @@ export function sortClose(
   return result;
 }
 
-
 // The procedure transforms lists of descriptions into the internal format of
 // markup elements.
 /**
  * The range of personality annotations in the current list of descriptions.
  */
-let PersonalityRanges_: {[key: string]: number[]} = {};
+let PersonalityRanges_: { [key: string]: number[] } = {};
 
 /**
  * The range of personality annotations.
  */
 let LastOpen_: EngineConst.personalityProps[][] = [];
-
 
 /**
  * Computes a markup list. Careful this is destructive on the description list.
@@ -155,15 +156,17 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   LastOpen_ = [];
   let result: Markup[] = [];
   let currentPers = {};
-  for (let i = 0, descr; descr = descrs[i]; i++) {
+  for (let i = 0, descr; (descr = descrs[i]); i++) {
     let pause: Pause = null;
     let span = descr.descriptionSpan();
     let pers: Markup = descr.personality;
     let join = pers[EngineConst.personalityProps.JOIN];
     delete pers[EngineConst.personalityProps.JOIN];
     if (typeof pers[EngineConst.personalityProps.PAUSE] !== 'undefined') {
-      pause = {[EngineConst.personalityProps.PAUSE]:
-               pers[EngineConst.personalityProps.PAUSE]};
+      pause = {
+        [EngineConst.personalityProps.PAUSE]:
+          pers[EngineConst.personalityProps.PAUSE]
+      };
       // TODO (TS): Look at that once more!
       delete pers[EngineConst.personalityProps.PAUSE];
     }
@@ -175,7 +178,6 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   result = simplifyMarkup_(result);
   return result;
 }
-
 
 /**
  * Appends an element to the partial markup list. If the last markup entry and
@@ -209,7 +211,6 @@ function appendElement_(markup: Markup[], element: Markup) {
   markup.push(element);
 }
 
-
 /**
  * Simplification of markup sequence. Currently uses one technique only.
  * @param markup Markup list.
@@ -218,7 +219,7 @@ function appendElement_(markup: Markup[], element: Markup) {
 function simplifyMarkup_(markup: Markup[]): Markup[] {
   let lastPers: Markup = {};
   let result = [];
-  for (let i = 0, element; element = markup[i]; i++) {
+  for (let i = 0, element; (element = markup[i]); i++) {
     if (!isMarkupElement(element)) {
       appendElement_(result, element);
       continue;
@@ -238,9 +239,13 @@ function simplifyMarkup_(markup: Markup[]): Markup[] {
     if (pauseElement) {
       nextElement = markup[i + 2];
     }
-    if (nextElement && isMarkupElement(nextElement) &&
-        nextElement.open[0] === element.close[0] && !nextElement.close.length &&
-        nextElement[nextElement.open[0]] === lastPers[nextElement.open[0]]) {
+    if (
+      nextElement &&
+      isMarkupElement(nextElement) &&
+      nextElement.open[0] === element.close[0] &&
+      !nextElement.close.length &&
+      nextElement[nextElement.open[0]] === lastPers[nextElement.open[0]]
+    ) {
       if (pauseElement) {
         appendElement_(result, pauseElement);
         i = i + 2;
@@ -254,7 +259,6 @@ function simplifyMarkup_(markup: Markup[]): Markup[] {
   }
   return result;
 }
-
 
 /**
  * Copies values from one markup object to the other.
@@ -273,7 +277,6 @@ function copyValues_(from: Markup, to: Markup) {
   }
 }
 
-
 /**
  * Computes the final markup elements, if necessary.
  * @return Markup list.
@@ -283,7 +286,7 @@ function finaliseMarkup_(): Markup[] {
   for (let i = LastOpen_.length - 1; i >= 0; i--) {
     let pers = LastOpen_[i];
     if (pers.length) {
-      let markup: Markup = {open: [], close: []};
+      let markup: Markup = { open: [], close: [] };
       for (let j = 0; j < pers.length; j++) {
         let per = pers[j];
         markup.close.push(per);
@@ -295,7 +298,6 @@ function finaliseMarkup_(): Markup[] {
   return final;
 }
 
-
 /**
  * Predicate to check if the markup element is a pause.
  * @param element An element of the markup list.
@@ -305,17 +307,18 @@ export function isMarkupElement(element: Markup): boolean {
   return typeof element === 'object' && element.open;
 }
 
-
 /**
  * Predicate to check if the markup element is a pause.
  * @param element An element of the markup list.
  * @return True if this is a pause element.
  */
 export function isPauseElement(element: Markup): boolean {
-  return typeof element === 'object' && Object.keys(element).length === 1 &&
-      Object.keys(element)[0] === EngineConst.personalityProps.PAUSE;
+  return (
+    typeof element === 'object' &&
+    Object.keys(element).length === 1 &&
+    Object.keys(element)[0] === EngineConst.personalityProps.PAUSE
+  );
 }
-
 
 /**
  * Predicate to check if the markup element is a span.
@@ -324,13 +327,14 @@ export function isPauseElement(element: Markup): boolean {
  */
 export function isSpanElement(element: Markup): boolean {
   let keys = Object.keys(element);
-  return typeof element === 'object' &&
-      (keys.length === 1 && keys[0] === 'span' ||
-       keys.length === 2 &&
-           (keys[0] === 'span' && keys[1] === 'join' ||
-            keys[1] === 'span' && keys[0] === 'join'));
+  return (
+    typeof element === 'object' &&
+    ((keys.length === 1 && keys[0] === 'span') ||
+      (keys.length === 2 &&
+        ((keys[0] === 'span' && keys[1] === 'join') ||
+          (keys[1] === 'span' && keys[0] === 'join'))))
+  );
 }
-
 
 /**
  * Appends content to the current markup list.
@@ -343,8 +347,13 @@ export function isSpanElement(element: Markup): boolean {
  *     merged.
  */
 function appendMarkup_(
-    markup: Markup[], span: Span, pers: {[key: string]: number},
-    join: string, pause: Pause, merge: boolean = false) {
+  markup: Markup[],
+  span: Span,
+  pers: { [key: string]: number },
+  join: string,
+  pause: Pause,
+  merge: boolean = false
+) {
   if (merge) {
     let last = markup[markup.length - 1];
     let oldJoin;
@@ -357,13 +366,19 @@ function appendMarkup_(
       last[pauseProp] = mergePause_(last[pauseProp], pause[pauseProp]);
       pause = null;
     }
-    if (last && span.speech && Object.keys(pers).length === 0 &&
-        isSpanElement(last)) {
+    if (
+      last &&
+      span.speech &&
+      Object.keys(pers).length === 0 &&
+      isSpanElement(last)
+    ) {
       // TODO: Check that out if this works with spans.
       if (typeof oldJoin !== 'undefined') {
         let lastSpan = last['span'].pop();
         span = new Span(
-            lastSpan.speech + oldJoin + span.speech, lastSpan.attributes);
+          lastSpan.speech + oldJoin + span.speech,
+          lastSpan.attributes
+        );
       }
       last['span'].push(span);
       span = new Span('', {});
@@ -374,13 +389,12 @@ function appendMarkup_(
     markup.push(pers);
   }
   if (span.speech) {
-    markup.push({span: [span], join: join});
+    markup.push({ span: [span], join: join });
   }
   if (pause) {
     markup.push(pause);
   }
 }
-
 
 /**
  * Compute the difference of two personality annotations.
@@ -389,8 +403,9 @@ function appendMarkup_(
  * @return The difference between the two annotations.
  */
 function personalityDiff_(
-  current: {[key: string]: number}, old: {[key: string]: number}):
-  {[key: string]: number} {
+  current: { [key: string]: number },
+  old: { [key: string]: number }
+): { [key: string]: number } {
   if (!old) {
     return current;
   }
@@ -398,8 +413,10 @@ function personalityDiff_(
   for (let prop of EngineConst.personalityPropList) {
     let currentValue = current[prop];
     let oldValue = old[prop];
-    if (!currentValue && !oldValue ||
-        currentValue && oldValue && currentValue === oldValue) {
+    if (
+      (!currentValue && !oldValue) ||
+      (currentValue && oldValue && currentValue === oldValue)
+    ) {
       continue;
     }
     let value = currentValue || 0;
@@ -420,8 +437,9 @@ function personalityDiff_(
     }
     old[prop] = value;
     result[prop] = value;
-    PersonalityRanges_[prop] ? PersonalityRanges_[prop].push(value) :
-                               PersonalityRanges_[prop] = [value];
+    PersonalityRanges_[prop]
+      ? PersonalityRanges_[prop].push(value)
+      : (PersonalityRanges_[prop] = [value]);
   }
   if (isMarkupElement(result)) {
     // Cases:
@@ -455,7 +473,7 @@ function personalityDiff_(
       }
       result.close = result.close.concat(lo);
       result.open = result.open.concat(lo);
-      for (let i = 0, open; open = lo[i]; i++) {
+      for (let i = 0, open; (open = lo[i]); i++) {
         result[open] = old[open];
       }
     }

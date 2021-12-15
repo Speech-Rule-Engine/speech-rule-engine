@@ -28,16 +28,12 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-
-import {SREError} from '../common/engine';
-import {DynamicCstr} from './dynamic_cstr';
+import { SREError } from '../common/engine';
+import { DynamicCstr } from './dynamic_cstr';
 import * as Grammar from './grammar';
-import {SpeechRuleContext} from './speech_rule_context';
-
+import { SpeechRuleContext } from './speech_rule_context';
 
 export class SpeechRule {
-
-
   /**
    *  The context of the speech rule.
    */
@@ -51,20 +47,27 @@ export class SpeechRule {
    * @param action Action of the speech rule.
    */
   constructor(
-    public name: string, public dynamicCstr: DynamicCstr,
+    public name: string,
+    public dynamicCstr: DynamicCstr,
     public precondition: Precondition,
-    public action: Action) { }
+    public action: Action
+  ) {}
 
   /**
    * @override
    */
   public toString() {
-    return this.name + ' | ' + this.dynamicCstr.toString() + ' | ' +
-        this.precondition.toString() + ' ==> ' + this.action.toString();
+    return (
+      this.name +
+      ' | ' +
+      this.dynamicCstr.toString() +
+      ' | ' +
+      this.precondition.toString() +
+      ' ==> ' +
+      this.action.toString()
+    );
   }
-
 }
-
 
 /**
  * Mapping for types of speech rule action components.
@@ -75,7 +78,6 @@ export enum ActionType {
   TEXT = 'TEXT',
   PERSONALITY = 'PERSONALITY'
 }
-
 
 // TODO (TS):
 /**
@@ -97,7 +99,6 @@ function actionFromString(str: string): ActionType {
   }
 }
 
-
 /**
  * Maps a speech rule type to a human-readable string.
  * @return Output string.
@@ -117,7 +118,6 @@ function actionToString(speechType: ActionType): string {
   }
 }
 
-
 /**
  *  The type of single components.
  */
@@ -128,9 +128,7 @@ export interface ComponentType {
   grammar?: Grammar.State;
 }
 
-
 export class Component {
-
   /**
    * Component's action type.
    */
@@ -160,7 +158,6 @@ export class Component {
   public static grammarFromString(grammar: string): Grammar.State {
     return Grammar.Grammar.parseInput(grammar);
   }
-
 
   /**
    * Parses a valid string representation of an action component into a
@@ -211,16 +208,15 @@ export class Component {
     if (rest) {
       let attributes = Component.attributesFromString(rest);
       if (attributes.grammar) {
-        output.grammar = (attributes.grammar as Grammar.State);
+        output.grammar = attributes.grammar as Grammar.State;
         delete attributes.grammar;
       }
       if (Object.keys(attributes).length) {
-        output.attributes = (attributes as Attributes);
+        output.attributes = attributes as Attributes;
       }
     }
     return new Component(output);
   }
-
 
   /**
    * Adds a single attribute to the component.
@@ -229,12 +225,12 @@ export class Component {
    *     attributes, possibly containing the grammar.
    */
   public static attributesFromString(attrs: string): {
-    [key: string]: string|Grammar.State} {
+    [key: string]: string | Grammar.State;
+  } {
     if (attrs[0] !== '(' || attrs.slice(-1) !== ')') {
-      throw new OutputError(
-          'Invalid attribute expression: ' + attrs);
+      throw new OutputError('Invalid attribute expression: ' + attrs);
     }
-    let attributes: {[key: string]: string|Grammar.State} = {};
+    let attributes: { [key: string]: string | Grammar.State } = {};
     let attribs = splitString(attrs.slice(1, -1), ',');
     for (let i = 0, m = attribs.length; i < m; i++) {
       let attr = attribs[i];
@@ -244,13 +240,14 @@ export class Component {
       } else {
         let key = attr.substring(0, colon).trim();
         let value = attr.slice(colon + 1).trim();
-        attributes[key] = key === Grammar.ATTRIBUTE ?
-            Component.grammarFromString(value) : value;
+        attributes[key] =
+          key === Grammar.ATTRIBUTE
+            ? Component.grammarFromString(value)
+            : value;
       }
     }
     return attributes;
   }
-
 
   /**
    * Defines a component within a speech rule.
@@ -258,13 +255,12 @@ export class Component {
    * @param {type, content, attributes, grammar} The input component in JSON
    *     format.
    */
-  constructor({type, content, attributes, grammar}: ComponentType) {
+  constructor({ type, content, attributes, grammar }: ComponentType) {
     this.type = type;
     this.content = content;
     this.attributes = attributes;
     this.grammar = grammar;
   }
-
 
   /**
    * @override
@@ -278,14 +274,12 @@ export class Component {
     return strs;
   }
 
-
   /**
    * @return String representation of the grammar.
    */
   public grammarToString(): string {
     return this.getGrammar().join(':');
   }
-
 
   /**
    * Transforms the grammar of an object into a list of strings.
@@ -305,7 +299,6 @@ export class Component {
     return attribs;
   }
 
-
   /**
    * @return String representation of the attributes.
    */
@@ -317,7 +310,6 @@ export class Component {
     }
     return attribs.length > 0 ? '(' + attribs.join(', ') + ')' : '';
   }
-
 
   /**
    * Transforms the attributes of an object into a list of strings.
@@ -331,18 +323,14 @@ export class Component {
     }
     return attribs;
   }
-
 }
-
 
 /**
  * Defines attributes for a component of a speech rule.
  */
-type Attributes = {[key: string]: string};
-
+type Attributes = { [key: string]: string };
 
 export class Action {
-
   /**
    * Parses an input string into a speech rule class object.
    * @param input The input string.
@@ -350,12 +338,12 @@ export class Action {
    */
   public static fromString(input: string): Action {
     let comps = splitString(input, ';')
-                    .filter(function(x) {
-                      return x.match(/\S/);
-                    })
-                    .map(function(x) {
-                      return x.trim();
-                    });
+      .filter(function (x) {
+        return x.match(/\S/);
+      })
+      .map(function (x) {
+        return x.trim();
+      });
     let newComps = [];
     for (let i = 0, m = comps.length; i < m; i++) {
       let comp = Component.fromString(comps[i]);
@@ -366,29 +354,24 @@ export class Action {
     return new Action(newComps);
   }
 
-
   /**
    * A speech rule is a collection of speech components.
    * @param components The input rule.
    */
   constructor(public components: Component[]) {}
 
-
   /**
    * @override
    */
   public toString() {
-    let comps = this.components.map(function(c) {
+    let comps = this.components.map(function (c) {
       return c.toString();
     });
     return comps.join('; ');
   }
-
 }
 
-
 export class Precondition {
-
   /**
    * 1. Any self
    * 2. Specific self
@@ -397,9 +380,9 @@ export class Precondition {
    */
   private static queryPriorities: RegExp[] = [
     // /^self::\*$/, /^self::[\w-]+$/,
-    /^self::\*\[.+\]$/, /^self::[\w-]+\[.+\]$/
+    /^self::\*\[.+\]$/,
+    /^self::[\w-]+\[.+\]$/
   ];
-
 
   /**
    * 1: Attribute not equal to
@@ -409,8 +392,11 @@ export class Precondition {
    * 5: Attribute has precise value
    */
   private static attributePriorities: RegExp[] = [
-    /^@[\w-]+$/, /^@[\w-]+!=".+"$/, /^not\(contains\(@[\w-]+,\s*".+"\)\)$/,
-    /^contains\(@[\w-]+,".+"\)$/, /^@[\w-]+=".+"$/
+    /^@[\w-]+$/,
+    /^@[\w-]+!=".+"$/,
+    /^not\(contains\(@[\w-]+,\s*".+"\)\)$/,
+    /^contains\(@[\w-]+,".+"\)$/,
+    /^@[\w-]+=".+"$/
   ];
 
   /**
@@ -435,9 +421,8 @@ export class Precondition {
    * @param priorities The list of regular expressions.
    * @return The computer priority.
    */
-  private static constraintValue(constr: string, priorities: RegExp[]):
-      number {
-    for (let i = 0, regexp; regexp = priorities[i]; i++) {
+  private static constraintValue(constr: string, priorities: RegExp[]): number {
+    for (let i = 0, regexp; (regexp = priorities[i]); i++) {
       if (constr.match(regexp)) {
         return ++i;
       }
@@ -463,7 +448,6 @@ export class Precondition {
     this.priority = this.calculatePriority();
   }
 
-
   /**
    * Computes a default priority for a rule from the query constraint. Currently
    * we only consider "string queries". That is query constraints that contain a
@@ -476,25 +460,26 @@ export class Precondition {
    */
   private calculatePriority(): number {
     let query = Precondition.constraintValue(
-        this.query, Precondition.queryPriorities);
+      this.query,
+      Precondition.queryPriorities
+    );
     if (!query) {
       return 0;
     }
     let inner = this.query.match(/^self::.+\[(.+)\]/)[1];
     let attr = Precondition.constraintValue(
-        inner, Precondition.attributePriorities);
+      inner,
+      Precondition.attributePriorities
+    );
     return query * 100 + attr * 10;
   }
-
 }
-
 
 /**
  * Error object for signaling parsing errors.
  * @param msg The error message.
  */
 export class OutputError extends SREError {
-
   /**
    * @override
    */
@@ -507,9 +492,7 @@ export class OutputError extends SREError {
   constructor(msg: string) {
     super(msg);
   }
-
 }
-
 
 /**
  * Split a string wrt. a given separator symbol while not splitting inside of
@@ -528,8 +511,7 @@ function splitString(str: string, sep: string): string[] {
     let sepPos = str.search(sep);
     if (sepPos === -1) {
       if ((str.match(/"/g) || []).length % 2 !== 0) {
-        throw new OutputError(
-          'Invalid string in expression: ' + str);
+        throw new OutputError('Invalid string in expression: ' + str);
       }
       strList.push(prefix + str);
       prefix = '';
@@ -541,8 +523,7 @@ function splitString(str: string, sep: string): string[] {
     } else {
       let nextQuot = str.substring(sepPos).search('"');
       if (nextQuot === -1) {
-        throw new OutputError(
-          'Invalid string in expression: ' + str);
+        throw new OutputError('Invalid string in expression: ' + str);
       } else {
         prefix = prefix + str.substring(0, sepPos + nextQuot + 1);
         str = str.substring(sepPos + nextQuot + 1);

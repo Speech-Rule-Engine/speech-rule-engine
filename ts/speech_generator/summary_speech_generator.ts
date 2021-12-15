@@ -21,13 +21,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AbstractSpeechGenerator} from './abstract_speech_generator';
+import { AbstractSpeechGenerator } from './abstract_speech_generator';
 import * as SpeechGeneratorUtil from './speech_generator_util';
 
-
 export class SummarySpeechGenerator extends AbstractSpeechGenerator {
-
   /**
    * @override
    */
@@ -35,6 +32,4 @@ export class SummarySpeechGenerator extends AbstractSpeechGenerator {
     SpeechGeneratorUtil.connectAllMactions(xml, this.getRebuilt().xml);
     return this.generateSpeech(node, xml);
   }
-
 }
-

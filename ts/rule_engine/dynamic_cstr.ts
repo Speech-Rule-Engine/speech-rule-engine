@@ -21,7 +21,6 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 /**
  * Attributes for dynamic constraints.
  * We define one default attribute as style. Speech rule stores can add other
@@ -35,27 +34,25 @@ export enum Axis {
   MODALITY = 'modality'
 }
 
-export type AxisProperties = {[key: string]: string[]};
+export type AxisProperties = { [key: string]: string[] };
 
 export type AxisOrder = Axis[];
 
-export type AxisValues = {[key: string]: boolean};
+export type AxisValues = { [key: string]: boolean };
 
-export type AxisMap = {[key: string]: string};
+export type AxisMap = { [key: string]: string };
 
 namespace CstrValues {
-
   /**
    * Initialises an object for collecting all values per axis.
    */
-  const axisToValues: {[key: string]: AxisValues} = {
+  const axisToValues: { [key: string]: AxisValues } = {
     [Axis.DOMAIN]: {},
     [Axis.STYLE]: {},
     [Axis.LOCALE]: {},
     [Axis.TOPIC]: {},
     [Axis.MODALITY]: {}
   };
-
 
   /**
    * Registers a constraint value for a given axis
@@ -65,7 +62,6 @@ namespace CstrValues {
   export function add(axis: Axis, value: string) {
     axisToValues[axis][value] = true;
   }
-
 
   /**
    * @return The sets of values
@@ -78,12 +74,9 @@ namespace CstrValues {
     }
     return result;
   }
-
 }
 
-
 export class DynamicProperties {
-
   /**
    * Convenience method to create a standard dynamic constraint, that follows a
    * pre-prescribed order of the axes.
@@ -103,10 +96,10 @@ export class DynamicProperties {
    *     property mapping.
    * @param opt_order A parse order of the keys.
    */
-  constructor(private properties: AxisProperties,
-              protected order: AxisOrder = Object.keys(properties) as Axis[]) {
-  }
-
+  constructor(
+    private properties: AxisProperties,
+    protected order: AxisOrder = Object.keys(properties) as Axis[]
+  ) {}
 
   /**
    * @return The components of
@@ -116,7 +109,6 @@ export class DynamicProperties {
     return this.properties;
   }
 
-
   /**
    * @return The priority order of constraint attributes
    *     in the comparator.
@@ -125,14 +117,12 @@ export class DynamicProperties {
     return this.order;
   }
 
-
   /**
    * @return The components of the constraint.
    */
   public getAxes(): AxisOrder {
     return this.order;
   }
-
 
   /**
    * Returns the value of the constraint for a particular attribute key.
@@ -143,7 +133,6 @@ export class DynamicProperties {
     return this.properties[key];
   }
 
-
   /**
    * Updates the dynamic properties from another one.
    * @param props A second
@@ -153,45 +142,44 @@ export class DynamicProperties {
     this.properties = props;
   }
 
-
   /**
    * Convenience method to return the ordered list of properties.
    * @return Ordered list of lists of constraint values.
    */
   public allProperties(): string[][] {
     let propLists: string[][] = [];
-    this.order.forEach(key =>
-      propLists.push(this.getProperty(key).slice()));
+    this.order.forEach((key) => propLists.push(this.getProperty(key).slice()));
     return propLists;
   }
-
 
   /**
    * @override
    */
   public toString() {
     let cstrStrings: string[] = [];
-    this.order.forEach(key =>
-      cstrStrings.push(key + ': ' + this.getProperty(key).toString()));
+    this.order.forEach((key) =>
+      cstrStrings.push(key + ': ' + this.getProperty(key).toString())
+    );
     return cstrStrings.join('\n');
   }
-
 }
 
-
 export class DynamicCstr extends DynamicProperties {
-
   /**
    *  Default order of constraints.
    */
-  public static DEFAULT_ORDER: AxisOrder =
-    [Axis.LOCALE, Axis.MODALITY, Axis.DOMAIN, Axis.STYLE, Axis.TOPIC];
+  public static DEFAULT_ORDER: AxisOrder = [
+    Axis.LOCALE,
+    Axis.MODALITY,
+    Axis.DOMAIN,
+    Axis.STYLE,
+    Axis.TOPIC
+  ];
 
   /**
    *  Default values for to assign. Value is default.
    */
   public static DEFAULT_VALUE: string = 'default';
-
 
   /**
    *  Default values for axes.
@@ -220,17 +208,17 @@ export class DynamicCstr extends DynamicProperties {
     return new DynamicCstr(dynamicCstr);
   }
 
-
   /**
    * @return A default constraint of maximal order.
    */
   public static defaultCstr(): DynamicCstr {
     return DynamicCstr.createCstr.apply(
-      null, DynamicCstr.DEFAULT_ORDER.map(function(x) {
+      null,
+      DynamicCstr.DEFAULT_ORDER.map(function (x) {
         return DynamicCstr.DEFAULT_VALUES[x];
-      }));
+      })
+    );
   }
-
 
   /**
    * Checks explicitly if a dynamic constraint order is indeed valid.
@@ -239,12 +227,11 @@ export class DynamicCstr extends DynamicProperties {
    */
   public static validOrder(order: AxisOrder): boolean {
     let axes = DynamicCstr.DEFAULT_ORDER.slice();
-    return order.every(x => {
+    return order.every((x) => {
       let index = axes.indexOf(x);
       return index !== -1 && axes.splice(index, 1);
     });
   }
-
 
   /**
    * Dynamic constraints are a means to specialize rules that can be changed
@@ -262,7 +249,6 @@ export class DynamicCstr extends DynamicProperties {
     this.components = components_;
   }
 
-
   /**
    * @return The components of the
    *     constraint.
@@ -270,7 +256,6 @@ export class DynamicCstr extends DynamicProperties {
   public getComponents(): AxisMap {
     return this.components;
   }
-
 
   /**
    * Returns the value of the constraint for a particular attribute key.
@@ -281,23 +266,24 @@ export class DynamicCstr extends DynamicProperties {
     return this.components[key];
   }
 
-
   /**
    * Convenience method to return the ordered list of constraint values.
    * @return Ordered list of constraint values.
    */
   public getValues(): string[] {
-    return this.order.map(key => this.getValue(key));
+    return this.order.map((key) => this.getValue(key));
   }
-
 
   /**
    * @override
    */
   public allProperties() {
     let propLists = super.allProperties();
-    for (let i = 0, props, key; props = propLists[i], key = this.order[i];
-         i++) {
+    for (
+      let i = 0, props, key;
+      (props = propLists[i]), (key = this.order[i]);
+      i++
+    ) {
       let value = this.getValue(key);
       if (props.indexOf(value) === -1) {
         props.unshift(value);
@@ -306,14 +292,12 @@ export class DynamicCstr extends DynamicProperties {
     return propLists;
   }
 
-
   /**
    * @override
    */
   public toString() {
     return this.getValues().join('.');
   }
-
 
   /**
    * Tests whether the dynamic constraint is equal to a given one.
@@ -325,7 +309,7 @@ export class DynamicCstr extends DynamicProperties {
     if (this.order.length !== keys1.length) {
       return false;
     }
-    for (let j = 0, key; key = keys1[j]; j++) {
+    for (let j = 0, key; (key = keys1[j]); j++) {
       let comp2 = this.getValue(key);
       if (!comp2 || cstr.getValue(key) !== comp2) {
         return false;
@@ -333,12 +317,9 @@ export class DynamicCstr extends DynamicProperties {
     }
     return true;
   }
-
 }
 
-
 export class DynamicCstrParser {
-
   /**
    * A parser for dynamic constraint representations.
    * @param order The order of attributes in the
@@ -359,7 +340,7 @@ export class DynamicCstrParser {
       throw new Error('Invalid dynamic constraint: ' + cstr);
     }
     let j = 0;
-    for (let i = 0, key; key = this.order[i], order.length; i++, j++) {
+    for (let i = 0, key; (key = this.order[i]), order.length; i++, j++) {
       let value = order.shift();
       cstr[key] = value;
     }
@@ -367,14 +348,11 @@ export class DynamicCstrParser {
   }
 }
 
-
 export interface Comparator {
-
   /**
    * @return The current reference constraint in the comparator.
    */
   getReference(): DynamicCstr;
-
 
   /**
    * Sets the reference constraint in the comparator.
@@ -384,7 +362,6 @@ export interface Comparator {
    */
   setReference(cstr: DynamicCstr, opt_props?: DynamicProperties): void;
 
-
   /**
    * Checks if dynamic constraints matches the reference constraint.
    * @param cstr The dynamic constraint to match.
@@ -392,7 +369,6 @@ export interface Comparator {
    *     of the reference constraint.
    */
   match(cstr: DynamicCstr): boolean;
-
 
   /**
    * Compares two dynamic constraints for order with respect to the reference
@@ -405,9 +381,7 @@ export interface Comparator {
   compare(cstr1: DynamicCstr, cstr2: DynamicCstr): number;
 }
 
-
 export class DefaultComparator implements Comparator {
-
   private order: AxisOrder;
 
   /**
@@ -418,12 +392,15 @@ export class DefaultComparator implements Comparator {
    * @param fallback An optional properties element for matching.  This is a
    *    preference order, if more than one property value are given.
    */
-  constructor(private reference: DynamicCstr,
-              private fallback: DynamicProperties =
-    new DynamicProperties(reference.getProperties(), reference.getOrder())) {
+  constructor(
+    private reference: DynamicCstr,
+    private fallback: DynamicProperties = new DynamicProperties(
+      reference.getProperties(),
+      reference.getOrder()
+    )
+  ) {
     this.order = this.reference.getOrder();
   }
-
 
   /**
    * @override
@@ -433,39 +410,40 @@ export class DefaultComparator implements Comparator {
     return this.reference;
   }
 
-
   /**
    * @override
    * @final
    */
   public setReference(cstr: DynamicCstr, props?: DynamicProperties) {
     this.reference = cstr;
-    this.fallback = props ||
-        new DynamicProperties(cstr.getProperties(), cstr.getOrder());
+    this.fallback =
+      props || new DynamicProperties(cstr.getProperties(), cstr.getOrder());
     this.order = this.reference.getOrder();
   }
-
 
   /**
    * @override
    */
   public match(cstr: DynamicCstr) {
     let keys1 = cstr.getAxes();
-    return keys1.length === this.reference.getAxes().length &&
-      keys1.every(key => {
-          let value = cstr.getValue(key);
-          return value === this.reference.getValue(key) ||
-              this.fallback.getProperty(key).indexOf(value) !== -1;
-      });
+    return (
+      keys1.length === this.reference.getAxes().length &&
+      keys1.every((key) => {
+        let value = cstr.getValue(key);
+        return (
+          value === this.reference.getValue(key) ||
+          this.fallback.getProperty(key).indexOf(value) !== -1
+        );
+      })
+    );
   }
-
 
   /**
    * @override
    */
   public compare(cstr1: DynamicCstr, cstr2: DynamicCstr) {
     let ignore = false;
-    for (let i = 0, key; key = this.order[i]; i++) {
+    for (let i = 0, key; (key = this.order[i]); i++) {
       let value1 = cstr1.getValue(key);
       let value2 = cstr2.getValue(key);
       // As long as the constraint values are the same as the reference value,
@@ -499,12 +477,10 @@ export class DefaultComparator implements Comparator {
     return 0;
   }
 
-
   /**
    * @override
    */
   public toString() {
     return this.reference.toString() + '\n' + this.fallback.toString();
   }
-
 }

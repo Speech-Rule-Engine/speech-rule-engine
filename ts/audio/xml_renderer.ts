@@ -19,15 +19,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {EngineConst, SREError} from '../common/engine';
+import { EngineConst, SREError } from '../common/engine';
 import * as AudioUtil from './audio_util';
-import {AuditoryDescription} from './auditory_description';
-import {MarkupRenderer} from './markup_renderer';
-
+import { AuditoryDescription } from './auditory_description';
+import { MarkupRenderer } from './markup_renderer';
 
 export abstract class XmlRenderer extends MarkupRenderer {
-
   /**
    * Computes the closing tag for a personality property.
    * @param tag The tagname.
@@ -44,13 +41,13 @@ export abstract class XmlRenderer extends MarkupRenderer {
     let markup = AudioUtil.personalityMarkup(descrs);
     let result = [];
     let currentOpen: EngineConst.personalityProps[] = [];
-    for (let i = 0, descr: AudioUtil.Markup; descr = markup[i]; i++) {
+    for (let i = 0, descr: AudioUtil.Markup; (descr = markup[i]); i++) {
       if (descr.span) {
         result.push(this.merge(descr.span));
         continue;
       }
       if (AudioUtil.isPauseElement(descr)) {
-        result.push(this.pause((descr as {pause: number})));
+        result.push(this.pause(descr as { pause: number }));
         continue;
       }
       if (descr.close.length) {
@@ -64,12 +61,12 @@ export abstract class XmlRenderer extends MarkupRenderer {
       }
       if (descr.open.length) {
         let open = AudioUtil.sortClose(descr.open.slice(), markup.slice(i + 1));
-        open.forEach(o => {
-              result.push(this.prosodyElement(o, descr[o]));
-            currentOpen.push(o);
+        open.forEach((o) => {
+          result.push(this.prosodyElement(o, descr[o]));
+          currentOpen.push(o);
         });
       }
     }
-    return result.join(' ');  // this.merge(result);
+    return result.join(' '); // this.merge(result);
   }
 }

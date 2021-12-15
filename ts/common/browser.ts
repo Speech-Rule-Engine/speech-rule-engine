@@ -19,15 +19,16 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {EngineConst} from './engine';
+import { EngineConst } from './engine';
 import * as System from './system';
-
 
 /**
  * Default setup of the Engine.
  */
-System.setupEngine(
-    {mode: EngineConst.Mode.HTTP, domain: 'mathspeak', style: 'default'});
+System.setupEngine({
+  mode: EngineConst.Mode.HTTP,
+  domain: 'mathspeak',
+  style: 'default'
+});
 
 export let SRE = System;

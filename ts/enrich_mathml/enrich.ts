@@ -19,14 +19,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Debugger} from '../common/debugger';
+import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
-import {EnginePromise} from '../common/engine';
+import { EnginePromise } from '../common/engine';
 import * as Semantic from '../semantic_tree/semantic';
 
 import * as EnrichMathml from './enrich_mathml';
-
 
 /**
  * Semantically enriches a MathML node.
@@ -39,7 +37,6 @@ export function semanticMathmlNode(mml: Element): Element {
   return EnrichMathml.enrich(clone, tree);
 }
 
-
 /**
  * Reads a MathML element from a string and semantically enriches its.
  * @param expr The MathML expression as a string without math tags.
@@ -49,7 +46,6 @@ export function semanticMathmlSync(expr: string): Element {
   let mml = DomUtil.parseInput(expr);
   return semanticMathmlNode(mml);
 }
-
 
 /**
  * Reads a MathML element from a string and semantically enriches its.
@@ -62,7 +58,6 @@ export function semanticMathml(expr: string, callback: (p1: Element) => any) {
     callback(semanticMathmlNode(mml));
   });
 }
-
 
 /**
  * Tests for an expression with debugger output.
@@ -77,7 +72,6 @@ export function testTranslation__(expr: string): string {
   Debugger.getInstance().exit();
   return mml;
 }
-
 
 /**
  * Adds Math tags to a MathML string, if necessary.

@@ -20,16 +20,14 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {Sexp} from '../semantic_tree/semantic_skeleton';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { Sexp } from '../semantic_tree/semantic_skeleton';
 
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export abstract class CaseMultiindex extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
@@ -44,14 +42,15 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
    *     strings for the collapsed structure is returned, otherwise the node id.
    */
   public static multiscriptIndex(index: SemanticNode): Sexp {
-    if (index.type === SemanticType.PUNCTUATED &&
-        index.contentNodes[0].role === SemanticRole.DUMMY) {
+    if (
+      index.type === SemanticType.PUNCTUATED &&
+      index.contentNodes[0].role === SemanticRole.DUMMY
+    ) {
       return EnrichMathml.collapsePunctuated(index);
     }
     EnrichMathml.walkTree(index);
     return index.id;
   }
-
 
   /**
    * Creates a None node.
@@ -67,7 +66,6 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
     return newNode;
   }
 
-
   /**
    * @override
    */
@@ -75,7 +73,6 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
     super(semantic);
     this.mml = semantic.mathmlTree;
   }
-
 
   /**
    * Completes the mmultiscript by adding missing None nodes and sorting out the
@@ -89,17 +86,27 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
     let children = DomUtil.toArray(this.mml.childNodes).slice(1);
     let childCounter = 0;
     let completeIndices = (indices: number[]) => {
-      for (let i = 0, index: number; index = indices[i]; i++) {
+      for (let i = 0, index: number; (index = indices[i]); i++) {
         let child = children[childCounter];
-        if (!child || index !==
-              parseInt(EnrichMathml.getInnerNode(child).getAttribute(
-                EnrichMathml.Attribute.ID))) {
-          let query = this.semantic.querySelectorAll(x => x.id === index);
+        if (
+          !child ||
+          index !==
+            parseInt(
+              EnrichMathml.getInnerNode(child).getAttribute(
+                EnrichMathml.Attribute.ID
+              )
+            )
+        ) {
+          let query = this.semantic.querySelectorAll((x) => x.id === index);
           this.mml.insertBefore(
-              CaseMultiindex.createNone_(query[0]), child || null);
+            CaseMultiindex.createNone_(query[0]),
+            child || null
+          );
         } else {
           EnrichMathml.getInnerNode(child).setAttribute(
-            EnrichMathml.Attribute.PARENT, this.semantic.id.toString());
+            EnrichMathml.Attribute.PARENT,
+            this.semantic.id.toString()
+          );
           childCounter++;
         }
       }
@@ -107,15 +114,18 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
     // right sub and superscripts
     completeIndices(rightIndices as number[]);
     // mprescripts
-    if (children[childCounter] &&
-        DomUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
+    if (
+      children[childCounter] &&
+      DomUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS'
+    ) {
       this.mml.insertBefore(
-          children[childCounter], DomUtil.createElement('mprescripts'));
+        children[childCounter],
+        DomUtil.createElement('mprescripts')
+      );
     } else {
       childCounter++;
     }
     // left sub and superscripts
     completeIndices(leftIndices as number[]);
   }
-
 }

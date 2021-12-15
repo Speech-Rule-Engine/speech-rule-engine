@@ -28,20 +28,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SpeechRule} from '../rule_engine/speech_rule';
-import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
-import {StaticTrieNode} from './abstract_trie_node';
-import {TrieNode, TrieNodeKind} from './trie_node';
-import {getNode} from './trie_node_factory';
-
+import { SpeechRule } from '../rule_engine/speech_rule';
+import { SpeechRuleContext } from '../rule_engine/speech_rule_context';
+import { StaticTrieNode } from './abstract_trie_node';
+import { TrieNode, TrieNodeKind } from './trie_node';
+import { getNode } from './trie_node_factory';
 
 export class Trie {
-
   /**
    *  The root of the trie.
    */
   public root: TrieNode;
-
 
   /**
    * Compiles set of speech rules below a given node.
@@ -53,8 +50,10 @@ export class Trie {
     let explore = [root];
     while (explore.length) {
       let node = explore.shift();
-      if (node.getKind() === TrieNodeKind.QUERY ||
-          node.getKind() === TrieNodeKind.BOOLEAN) {
+      if (
+        node.getKind() === TrieNodeKind.QUERY ||
+        node.getKind() === TrieNodeKind.BOOLEAN
+      ) {
         let rule = (node as StaticTrieNode).getRule();
         if (rule) {
           rules.unshift(rule);
@@ -71,17 +70,19 @@ export class Trie {
    * @param depth The current depth of the node.
    * @param str The string that has already been assembled.
    */
-  private static printWithDepth_(node: TrieNode, depth: number, str: string):
-      string {
-    let prefix = (new Array(depth + 2)).join(depth.toString()) + ': ';
+  private static printWithDepth_(
+    node: TrieNode,
+    depth: number,
+    str: string
+  ): string {
+    let prefix = new Array(depth + 2).join(depth.toString()) + ': ';
     str += prefix + node.toString() + '\n';
     let children = node.getChildren();
-    for (let i = 0, child; child = children[i]; i++) {
+    for (let i = 0, child; (child = children[i]); i++) {
       str = Trie.printWithDepth_(child, depth + 1, str);
     }
     return str;
   }
-
 
   /**
    * Computes the maximal order of the trie beneath the given node.
@@ -97,14 +98,12 @@ export class Trie {
     return Math.max(children.length, max);
   }
 
-
   /**
    * @param store The store the trie belongs to.
    */
   constructor() {
     this.root = getNode(TrieNodeKind.ROOT, '', null);
   }
-
 
   /**
    * Inserts a speech rule into the trie.
@@ -115,19 +114,20 @@ export class Trie {
     let context = rule.context;
     let dynamicCstr = rule.dynamicCstr.getValues();
     for (let i = 0, l = dynamicCstr.length; i < l; i++) {
-      node = this.addNode_(
-          node, dynamicCstr[i], TrieNodeKind.DYNAMIC, context);
+      node = this.addNode_(node, dynamicCstr[i], TrieNodeKind.DYNAMIC, context);
     }
     node = this.addNode_(
-        node, rule.precondition.query, TrieNodeKind.QUERY, context);
+      node,
+      rule.precondition.query,
+      TrieNodeKind.QUERY,
+      context
+    );
     let booleans = rule.precondition.constraints;
     for (let i = 0, l = booleans.length; i < l; i++) {
-      node = this.addNode_(
-          node, booleans[i], TrieNodeKind.BOOLEAN, context);
+      node = this.addNode_(node, booleans[i], TrieNodeKind.BOOLEAN, context);
     }
     (node as StaticTrieNode).setRule(rule);
   }
-
 
   /**
    * Retrieves a set of speech rules that are applicable to a given XML node
@@ -152,8 +152,10 @@ export class Trie {
         let node = nodes.shift();
         let children = node.getChildren();
         children.forEach((child: TrieNode) => {
-          if (child.getKind() !== TrieNodeKind.DYNAMIC ||
-              dynamicSet.indexOf(child.getConstraint()) !== -1) {
+          if (
+            child.getKind() !== TrieNodeKind.DYNAMIC ||
+            dynamicSet.indexOf(child.getConstraint()) !== -1
+          ) {
             newNodes.push(child);
           }
         });
@@ -175,7 +177,6 @@ export class Trie {
     return rules;
   }
 
-
   /**
    * Checks if the trie contains sub-trie for the given constraint list.
    * @param cstrs The list of constraints.
@@ -193,14 +194,12 @@ export class Trie {
     return true;
   }
 
-
   /**
    * @override
    */
   public toString() {
     return Trie.printWithDepth_(this.root, 0, '');
   }
-
 
   /**
    * @return Set of speech rules in the trie.
@@ -209,14 +208,12 @@ export class Trie {
     return Trie.collectRules_(this.root);
   }
 
-
   /**
    * @return The order of the trie.
    */
   public order(): number {
     return Trie.order_(this.root);
   }
-
 
   /**
    * Collates information on dynamic constraint values of this trie.
@@ -226,7 +223,6 @@ export class Trie {
   public enumerate(opt_info?: Object): Object {
     return this.enumerate_(this.root, opt_info);
   }
-
 
   /**
    * Retrieves a node for a given sequence of constraints.
@@ -244,7 +240,6 @@ export class Trie {
     return node || null;
   }
 
-
   /**
    * Collates information on dynamic constraint values of this trie.
    * @param node The trie node from where to start.
@@ -252,15 +247,19 @@ export class Trie {
    * @return The collated information.
    */
   private enumerate_(
-    node: TrieNode, info: {[key: string]: any}): {[key: string]: any} {
+    node: TrieNode,
+    info: { [key: string]: any }
+  ): { [key: string]: any } {
     info = info || {};
     let children = node.getChildren();
-    for (let i = 0, child; child = children[i]; i++) {
+    for (let i = 0, child; (child = children[i]); i++) {
       if (child.kind !== TrieNodeKind.DYNAMIC) {
         continue;
       }
-      info[child.getConstraint()] =
-          this.enumerate_(child, info[child.getConstraint()]);
+      info[child.getConstraint()] = this.enumerate_(
+        child,
+        info[child.getConstraint()]
+      );
     }
     return info;
   }
@@ -274,8 +273,11 @@ export class Trie {
    * @return The trie node corresponding to the constraint.
    */
   private addNode_(
-      node: TrieNode, constraint: string, kind: TrieNodeKind,
-      context: SpeechRuleContext): TrieNode {
+    node: TrieNode,
+    constraint: string,
+    kind: TrieNodeKind,
+    context: SpeechRuleContext
+  ): TrieNode {
     let nextNode = node.getChild(constraint);
     if (!nextNode) {
       nextNode = getNode(kind, constraint, context);
@@ -283,5 +285,4 @@ export class Trie {
     }
     return nextNode;
   }
-
 }

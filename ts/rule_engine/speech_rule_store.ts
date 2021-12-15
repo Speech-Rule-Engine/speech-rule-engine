@@ -24,12 +24,10 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import {SpeechRule} from './speech_rule';
-import {SpeechRuleContext} from './speech_rule_context';
-
+import { SpeechRule } from './speech_rule';
+import { SpeechRuleContext } from './speech_rule_context';
 
 export interface SpeechRuleStore {
-
   /**
    * Context for custom functions of this rule store.
    */
@@ -41,13 +39,11 @@ export interface SpeechRuleStore {
    */
   addRule(rule: SpeechRule): void;
 
-
   /**
    * Deletes a speech rule if it exists.
    * @param rule The speech rule to be deleted.
    */
   deleteRule(rule: SpeechRule): void;
-
 
   /**
    * Retrieves the first rule satisfying a given predicate.
@@ -56,7 +52,6 @@ export interface SpeechRuleStore {
    */
   findRule(pred: (rule: SpeechRule) => boolean): SpeechRule;
 
-
   /**
    * Retrieves all rules satisfying a given predicate.
    * @param pred A predicate on speech rules.
@@ -64,7 +59,6 @@ export interface SpeechRuleStore {
    *     pred.
    */
   findAllRules(pred: (rule: SpeechRule) => boolean): SpeechRule[];
-
 
   /**
    * Defines a new speech rule from given components.
@@ -75,7 +69,11 @@ export interface SpeechRuleStore {
    * @param var_args Additional constraints.
    * @return The newly defined rule.
    */
-  defineRule(name: string, dynamic: string, action: string,
-             pre: string, ...args: string[]): SpeechRule;
-
+  defineRule(
+    name: string,
+    dynamic: string,
+    action: string,
+    pre: string,
+    ...args: string[]
+  ): SpeechRule;
 }

@@ -22,10 +22,8 @@
 // This work was sponsored by TextHelp
 //
 
-
-import {Grammar} from '../../rule_engine/grammar';
-import {Numbers, NUMBERS as NUMB} from '../messages';
-
+import { Grammar } from '../../rule_engine/grammar';
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Sub-ISO specification. Possible values: fr, be, sw.
@@ -40,9 +38,9 @@ export let SUB_ISO: string = 'fr';
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  str += NUMBERS.ones[Math.floor(n / 100)] ?
-      NUMBERS.ones[Math.floor(n / 100)] + '-cent' :
-      '';
+  str += NUMBERS.ones[Math.floor(n / 100)]
+    ? NUMBERS.ones[Math.floor(n / 100)] + '-cent'
+    : '';
   n = n % 100;
   if (n) {
     str += str ? '-' : '';
@@ -53,7 +51,7 @@ function hundredsToWords_(num: number): string {
       // -dix case!
       let tens = NUMBERS.tens[Math.floor(n / 10)];
       if (tens.match(/\-dix$/)) {
-        ones = NUMBERS.ones[n % 10 + 10];
+        ones = NUMBERS.ones[(n % 10) + 10];
         str += tens.replace(/\-dix$/, '') + '-' + ones;
       } else {
         str += tens + (n % 10 ? '-' + NUMBERS.ones[n % 10] : '');
@@ -61,10 +59,10 @@ function hundredsToWords_(num: number): string {
     }
   }
   let match = str.match(/s\-\w+$/);
-  return match ? str.replace(/s\-\w+$/, match[0].slice(1)) :
-                 str.replace(/\-un$/, '-et-un');
+  return match
+    ? str.replace(/s\-\w+$/, match[0].slice(1))
+    : str.replace(/\-un$/, '-et-un');
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -79,8 +77,7 @@ function numberToWords(num: number): string {
     return num.toString();
   }
   if (NUMBERS.special['tens-' + SUB_ISO]) {
-    NUMBERS.tens =
-      NUMBERS.special['tens-' + SUB_ISO] as string[];
+    NUMBERS.tens = NUMBERS.special['tens-' + SUB_ISO] as string[];
   }
   let pos = 0;
   let str = '';
@@ -94,8 +91,10 @@ function numberToWords(num: number): string {
         if (str.match(RegExp(rest))) {
           str = huns + (pos ? '-mille-' : '') + str;
         } else if (str.match(RegExp(rest.replace(/s$/, '')))) {
-          str = huns + (pos ? '-mille-' : '') +
-              str.replace(rest.replace(/s$/, ''), rest);
+          str =
+            huns +
+            (pos ? '-mille-' : '') +
+            str.replace(rest.replace(/s$/, ''), rest);
         } else {
           str = huns + (pos ? '-' + large + '-' : '') + str;
         }
@@ -110,15 +109,13 @@ function numberToWords(num: number): string {
   return str.replace(/-$/, '');
 }
 
-
 // Ordinals
-const SMALL_ORDINAL: {[key: string]: string} = {
+const SMALL_ORDINAL: { [key: string]: string } = {
   1: 'unième',
   2: 'demi',
   3: 'tiers',
   4: 'quart'
 };
-
 
 /**
  * Translates a number of up to twelve digits into a string representation of
@@ -131,7 +128,6 @@ function numberToOrdinal(num: number, plural: boolean): string {
   let ordinal = SMALL_ORDINAL[num] || wordOrdinal(num);
   return num === 3 ? ordinal : plural ? ordinal + 's' : ordinal;
 }
-
 
 /**
  * Creates a word ordinal string from a number.
@@ -156,18 +152,17 @@ function wordOrdinal(num: number): string {
   return ordinal;
 }
 
-
 /**
  * Creates a simple ordinal string from a number.
  * @param num The number to be converted.
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = (Grammar.getInstance().getParameter('gender') as string);
-  return num === 1 ? num.toString() + (gender === 'm' ? 'er' : 're') :
-                        num.toString() + 'e';
+  let gender = Grammar.getInstance().getParameter('gender') as string;
+  return num === 1
+    ? num.toString() + (gender === 'm' ? 'er' : 're')
+    : num.toString() + 'e';
 }
-
 
 const NUMBERS: Numbers = NUMB();
 NUMBERS.wordOrdinal = wordOrdinal;

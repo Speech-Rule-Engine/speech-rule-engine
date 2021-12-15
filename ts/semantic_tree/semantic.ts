@@ -19,31 +19,26 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as DomUtil from '../common/dom_util';
-import {SemanticFont, SemanticRole, SemanticType} from './semantic_attr';
-import {SemanticTree} from './semantic_tree';
-
+import { SemanticFont, SemanticRole, SemanticType } from './semantic_attr';
+import { SemanticTree } from './semantic_tree';
 
 /**
  * Exports font attributes.
  */
 export type Font = SemanticFont;
 
-
 /**
  * Exports role attributes.
  */
 export type Role = SemanticRole;
 
-
 /**
  * Exports type attributes.
  */
 export type Type = SemanticType;
-type Attr = Font|Role|Type;
-export {Attr};
-
+type Attr = Font | Role | Type;
+export { Attr };
 
 /**
  * Creates the semantic tree for a given MathML node.
@@ -54,7 +49,6 @@ export function xmlTree(mml: Element): Element {
   return getTree(mml).xml();
 }
 
-
 /**
  * Creates the semantic tree for a given MathML node.
  * @param mml The MathML node.
@@ -63,7 +57,6 @@ export function xmlTree(mml: Element): Element {
 export function getTree(mml: Element): SemanticTree {
   return new SemanticTree(mml);
 }
-
 
 /**
  * Creates the semantic tree for a MathML string.

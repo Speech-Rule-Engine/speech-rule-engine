@@ -22,10 +22,14 @@
 
 import * as DomUtil from '../common/dom_util';
 import SystemExternal from '../common/system_external';
-import {SemanticMeaning} from './semantic_attr';
-import {SemanticAttr, SemanticFont, SemanticRole, SemanticType} from './semantic_attr';
+import { SemanticMeaning } from './semantic_attr';
+import {
+  SemanticAttr,
+  SemanticFont,
+  SemanticRole,
+  SemanticType
+} from './semantic_attr';
 import * as SemanticUtil from './semantic_util';
-
 
 /**
  * The attributes of a semantic node.
@@ -43,12 +47,10 @@ const enum Attribute {
   TEXT = '$t'
 }
 
-
 /**
  * @param id Node id.
  */
 export class SemanticNode {
-
   /**
    * MathML nodes of the node.
    */
@@ -108,19 +110,18 @@ export class SemanticNode {
   /**
    * The annotations of the note.
    */
-  public annotation: {[key: string]: string[]} = {};
+  public annotation: { [key: string]: string[] } = {};
 
   /**
    * Collection of external attributes.
    */
-  public attributes: {[key: string]: string} = {};
+  public attributes: { [key: string]: string } = {};
 
   /**
    * Is the node non-breaking, i.e., external attributes are so important that
    * no heuristic should ignore them.
    */
   public nobreaking: boolean = false;
-
 
   /**
    * Generates a semantic node from its XML representation.
@@ -130,7 +131,7 @@ export class SemanticNode {
   public static fromXml(xml: Element): SemanticNode {
     let id = parseInt(xml.getAttribute('id'), 10);
     let node = new SemanticNode(id);
-    node.type = (xml.tagName as SemanticType);
+    node.type = xml.tagName as SemanticType;
     SemanticNode.setAttribute(node, xml, 'role');
     SemanticNode.setAttribute(node, xml, 'font');
     SemanticNode.setAttribute(node, xml, 'embellished');
@@ -143,7 +144,6 @@ export class SemanticNode {
     return node;
   }
 
-
   /**
    * Adds the given attributed to the semantic node if it exists.
    * @param node The semantic node.
@@ -153,7 +153,11 @@ export class SemanticNode {
    *     semantic node if it differs.
    */
   private static setAttribute(
-      node: SemanticNode, xml: Element, attribute: string, opt_name?: string) {
+    node: SemanticNode,
+    xml: Element,
+    attribute: string,
+    opt_name?: string
+  ) {
     opt_name = opt_name || attribute;
     let value = xml.getAttribute(attribute);
     if (value) {
@@ -161,7 +165,6 @@ export class SemanticNode {
       (node as any)[opt_name] = value;
     }
   }
-
 
   /**
    * Processes the children of the XML node to set text content, child nodes and
@@ -175,9 +178,10 @@ export class SemanticNode {
         node.textContent = child.textContent;
         continue;
       }
-      let children =
-          DomUtil.toArray(child.childNodes).map(SemanticNode.fromXml);
-      children.forEach(x => x.parent = node);
+      let children = DomUtil.toArray(child.childNodes).map(
+        SemanticNode.fromXml
+      );
+      children.forEach((x) => (x.parent = node));
       if (DomUtil.tagName(child) === 'CONTENT') {
         node.contentNodes = children;
       } else {
@@ -200,10 +204,10 @@ export class SemanticNode {
    */
   public querySelectorAll(pred: (p1: SemanticNode) => boolean): SemanticNode[] {
     let result: SemanticNode[] = [];
-    for (let i = 0, child; child = this.childNodes[i]; i++) {
+    for (let i = 0, child; (child = this.childNodes[i]); i++) {
       result = result.concat(child.querySelectorAll(pred));
     }
-    for (let i = 0, content; content = this.contentNodes[i]; i++) {
+    for (let i = 0, content; (content = this.contentNodes[i]); i++) {
       result = result.concat(content.querySelectorAll(pred));
     }
     if (pred(this)) {
@@ -225,12 +229,12 @@ export class SemanticNode {
      * @param nodes A list of nodes.
      * @return An XML representation of the node list.
      */
-    let xmlNodeList = function(tag: string, nodes: SemanticNode[]): Node {
-      let xmlNodes = nodes.map(function(x) {
+    let xmlNodeList = function (tag: string, nodes: SemanticNode[]): Node {
+      let xmlNodes = nodes.map(function (x) {
         return x.xml(xml, brief);
       });
       let tagNode = xml.createElementNS('', tag);
-      for (let i = 0, child; child = xmlNodes[i]; i++) {
+      for (let i = 0, child; (child = xmlNodes[i]); i++) {
         tagNode.appendChild(child);
       }
       return tagNode;
@@ -241,12 +245,10 @@ export class SemanticNode {
     }
     node.textContent = this.textContent;
     if (this.contentNodes.length > 0) {
-      node.appendChild(
-          xmlNodeList(Attribute.CONTENT, this.contentNodes));
+      node.appendChild(xmlNodeList(Attribute.CONTENT, this.contentNodes));
     }
     if (this.childNodes.length > 0) {
-      node.appendChild(
-          xmlNodeList(Attribute.CHILDREN, this.childNodes));
+      node.appendChild(xmlNodeList(Attribute.CHILDREN, this.childNodes));
     }
     return node;
   }
@@ -275,8 +277,7 @@ export class SemanticNode {
       attributes.push([Attribute.FONT, this.font]);
     }
     if (Object.keys(this.annotation).length) {
-      attributes.push(
-          [Attribute.ANNOTATION, this.xmlAnnotation()]);
+      attributes.push([Attribute.ANNOTATION, this.xmlAnnotation()]);
     }
     if (this.embellished) {
       attributes.push([Attribute.EMBELLISHED, this.embellished]);
@@ -295,7 +296,7 @@ export class SemanticNode {
   public xmlAnnotation(): string {
     let result: string[] = [];
     for (let key in this.annotation) {
-      this.annotation[key].forEach(function(mean) {
+      this.annotation[key].forEach(function (mean) {
         result.push(key + ':' + mean);
       });
     }
@@ -307,26 +308,24 @@ export class SemanticNode {
    * @return The JSON object for the node.
    */
   public toJson(): any {
-    let json = ({} as any);
+    let json = {} as any;
     json[Attribute.TYPE] = this.type;
     let attributes = this.allAttributes();
-    for (let i = 0, attr; attr = attributes[i]; i++) {
+    for (let i = 0, attr; (attr = attributes[i]); i++) {
       json[attr[0]] = attr[1].toString();
     }
     if (this.textContent) {
       json[Attribute.TEXT] = this.textContent;
     }
     if (this.childNodes.length) {
-      json[Attribute.CHILDREN] =
-          this.childNodes.map(function(child) {
-            return child.toJson();
-          });
+      json[Attribute.CHILDREN] = this.childNodes.map(function (child) {
+        return child.toJson();
+      });
     }
     if (this.contentNodes.length) {
-      json[Attribute.CONTENT] =
-          this.contentNodes.map(function(child) {
-            return child.toJson();
-          });
+      json[Attribute.CONTENT] = this.contentNodes.map(function (child) {
+        return child.toJson();
+      });
     }
     return json;
   }
@@ -340,9 +339,11 @@ export class SemanticNode {
   public updateContent(content: string, text?: boolean) {
     // Remove superfluous whitespace only if it is not the only content!
     // But without removing non-breaking spaces if we have a text.
-    let newContent = text ? content.replace(/^[ \f\n\r\t\v\u200b]*/, '')
-                                    .replace(/[ \f\n\r\t\v\u200b]*$/, '') :
-                                content.trim();
+    let newContent = text
+      ? content
+          .replace(/^[ \f\n\r\t\v\u200b]*/, '')
+          .replace(/[ \f\n\r\t\v\u200b]*$/, '')
+      : content.trim();
     // TODO (simons): If content contains a space, then assume type to be text.
     content = content && !newContent ? content : newContent;
     if (this.textContent === content) {
@@ -362,7 +363,7 @@ export class SemanticNode {
    * @param mmlNodes List of MathML nodes.
    */
   public addMathmlNodes(mmlNodes: Element[]) {
-    for (let i = 0, mml; mml = mmlNodes[i]; i++) {
+    for (let i = 0, mml; (mml = mmlNodes[i]); i++) {
       if (this.mathml.indexOf(mml) === -1) {
         this.mathml.push(mml);
       }
@@ -395,10 +396,10 @@ export class SemanticNode {
     // To not mess up the order of MathML elements more than necessary, we only
     // remove and add difference lists. The hope is that we might end up with
     // little change.
-    let removeMathml = oldNode.mathml.filter(function(x) {
+    let removeMathml = oldNode.mathml.filter(function (x) {
       return newNode.mathml.indexOf(x) === -1;
     });
-    let addMathml = newNode.mathml.filter(function(x) {
+    let addMathml = newNode.mathml.filter(function (x) {
       return oldNode.mathml.indexOf(x) === -1;
     });
     this.removeMathmlNodes(removeMathml);
@@ -440,21 +441,29 @@ export class SemanticNode {
     if (!node) {
       return false;
     }
-    if (this.type !== node.type || this.role !== node.role ||
-        this.textContent !== node.textContent ||
-        this.childNodes.length !== node.childNodes.length ||
-        this.contentNodes.length !== node.contentNodes.length) {
+    if (
+      this.type !== node.type ||
+      this.role !== node.role ||
+      this.textContent !== node.textContent ||
+      this.childNodes.length !== node.childNodes.length ||
+      this.contentNodes.length !== node.contentNodes.length
+    ) {
       return false;
     }
-    for (let i = 0, node1, node2;
-         node1 = this.childNodes[i], node2 = node.childNodes[i]; i++) {
+    for (
+      let i = 0, node1, node2;
+      (node1 = this.childNodes[i]), (node2 = node.childNodes[i]);
+      i++
+    ) {
       if (!node1.equals(node2)) {
         return false;
       }
     }
-    for (let i = 0, node1, node2;
-         node1 = this.contentNodes[i], node2 = node.contentNodes[i];
-         i++) {
+    for (
+      let i = 0, node1, node2;
+      (node1 = this.contentNodes[i]), (node2 = node.contentNodes[i]);
+      i++
+    ) {
       if (!node1.equals(node2)) {
         return false;
       }
@@ -462,14 +471,12 @@ export class SemanticNode {
     return true;
   }
 
-
   /**
    * Convenience method to display the whole tree and its elements.
    */
   public displayTree() {
     console.info(this.displayTree_(0));
   }
-
 
   /**
    * Adds a new annotation annotation if annotation is not empty.
@@ -482,7 +489,6 @@ export class SemanticNode {
     }
   }
 
-
   /**
    * Retrieves the annotation annotations for a particular domain.
    * @param domain The domain.
@@ -492,7 +498,6 @@ export class SemanticNode {
     let content = this.annotation[domain];
     return content ? content : [];
   }
-
 
   /**
    * Checks if a node has a particular annotation.
@@ -508,7 +513,6 @@ export class SemanticNode {
     return content.indexOf(annotation) !== -1;
   }
 
-
   /**
    * Parses a annotation string as given, for example, in an attribute.
    * @param stateStr The state string for the annotation.
@@ -521,14 +525,12 @@ export class SemanticNode {
     }
   }
 
-
   /**
    * @return The semantic meaning of the node.
    */
   public meaning(): SemanticMeaning {
-    return {type: this.type, role: this.role, font: this.font};
+    return { type: this.type, role: this.role, font: this.font };
   }
-
 
   /**
    * Adds attributes to the XML representation of the current node.
@@ -536,7 +538,7 @@ export class SemanticNode {
    */
   private xmlAttributes(node: Element) {
     let attributes = this.allAttributes();
-    for (let i = 0, attr; attr = attributes[i]; i++) {
+    for (let i = 0, attr; (attr = attributes[i]); i++) {
       node.setAttribute(attr[0], attr[1]);
     }
     this.addExternalAttributes(node);
@@ -558,7 +560,7 @@ export class SemanticNode {
    */
   private removeMathmlNodes(mmlNodes: Element[]) {
     let mmlList = this.mathml;
-    for (let i = 0, mml; mml = mmlNodes[i]; i++) {
+    for (let i = 0, mml; (mml = mmlNodes[i]); i++) {
       let index = mmlList.indexOf(mml);
       if (index !== -1) {
         mmlList.splice(index, 1);
@@ -580,22 +582,21 @@ export class SemanticNode {
     result += '\n' + depthString + 'MathmlTree:';
     result += '\n' + depthString + this.mathmlTreeString();
     result += '\n' + depthString + 'MathML:';
-    for (let i = 0, mml; mml = this.mathml[i]; i++) {
+    for (let i = 0, mml; (mml = this.mathml[i]); i++) {
       result += '\n' + depthString + mml.toString();
     }
     result += '\n' + depthString + 'Begin Content';
-    this.contentNodes.forEach(function(x) {
+    this.contentNodes.forEach(function (x) {
       result += x.displayTree_(depth);
     });
     result += '\n' + depthString + 'End Content';
     result += '\n' + depthString + 'Begin Children';
-    this.childNodes.forEach(function(x) {
+    this.childNodes.forEach(function (x) {
       result += x.displayTree_(depth);
     });
     result += '\n' + depthString + 'End Children';
     return result;
   }
-
 
   /**
    * Returns a display version of the node's associated MathML tree.
@@ -604,7 +605,6 @@ export class SemanticNode {
   private mathmlTreeString(): string {
     return this.mathmlTree ? this.mathmlTree.toString() : 'EMPTY';
   }
-
 
   /**
    * Adds a new annotation annotation.

@@ -22,15 +22,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {SemanticFont, SemanticType} from './semantic_attr';
-import {SemanticDefault} from './semantic_default';
-import {SemanticNodeCollator} from './semantic_default';
-import {SemanticNode} from './semantic_node';
-
+import { SemanticFont, SemanticType } from './semantic_attr';
+import { SemanticDefault } from './semantic_default';
+import { SemanticNodeCollator } from './semantic_default';
+import { SemanticNode } from './semantic_node';
 
 export class SemanticNodeFactory {
-
   /**
    * Collator for leaf nodes.
    */
@@ -46,7 +43,6 @@ export class SemanticNodeFactory {
    */
   private idCounter_: number = -1;
 
-
   /**
    * Creates a new node object with a given id.
    * @param id The node id.
@@ -55,7 +51,6 @@ export class SemanticNodeFactory {
   public makeNode(id: number): SemanticNode {
     return this.createNode_(id);
   }
-
 
   /**
    * Create a node that is to be processed at a later point in time.
@@ -69,7 +64,6 @@ export class SemanticNodeFactory {
     return node;
   }
 
-
   /**
    * Create an empty leaf node.
    * @return The new node.
@@ -79,7 +73,6 @@ export class SemanticNodeFactory {
     node.type = SemanticType.EMPTY;
     return node;
   }
-
 
   /**
    * Create a node with the given text content. The content is semantically
@@ -93,7 +86,6 @@ export class SemanticNodeFactory {
     return node;
   }
 
-
   /**
    * Create a list of content nodes all with the same content.
    * @param num The number of nodes to create.
@@ -101,14 +93,15 @@ export class SemanticNodeFactory {
    * @return The list of new nodes.
    */
   public makeMultipleContentNodes(
-      num: number, content: string): SemanticNode[] {
+    num: number,
+    content: string
+  ): SemanticNode[] {
     let nodes = [];
     for (let i = 0; i < num; i++) {
       nodes.push(this.makeContentNode(content));
     }
     return nodes;
   }
-
 
   /**
    * Create a leaf node.
@@ -133,7 +126,6 @@ export class SemanticNodeFactory {
     return node;
   }
 
-
   /**
    * Create a branching node.
    * @param type The type of the node.
@@ -143,8 +135,11 @@ export class SemanticNodeFactory {
    * @return The new node.
    */
   public makeBranchNode(
-      type: SemanticType, children: SemanticNode[],
-      contentNodes: SemanticNode[], opt_content?: string): SemanticNode {
+    type: SemanticType,
+    children: SemanticNode[],
+    contentNodes: SemanticNode[],
+    opt_content?: string
+  ): SemanticNode {
     let node = this.createNode_();
     if (opt_content) {
       node.updateContent(opt_content);
@@ -152,7 +147,7 @@ export class SemanticNodeFactory {
     node.type = type;
     node.childNodes = children;
     node.contentNodes = contentNodes;
-    children.concat(contentNodes).forEach(function(x) {
+    children.concat(contentNodes).forEach(function (x) {
       x.parent = node;
       node.addMathmlNodes(x.mathml);
     });
@@ -172,5 +167,4 @@ export class SemanticNodeFactory {
     }
     return new SemanticNode(id);
   }
-
 }

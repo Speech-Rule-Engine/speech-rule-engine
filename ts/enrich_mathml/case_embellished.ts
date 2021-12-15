@@ -19,20 +19,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as DomUtil from '../common/dom_util';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
-import {AbstractEnrichCase} from './abstract_enrich_case';
-import {CaseDoubleScript} from './case_double_script';
-import {CaseMultiscripts} from './case_multiscripts';
-import {CaseTensor} from './case_tensor';
+import { AbstractEnrichCase } from './abstract_enrich_case';
+import { CaseDoubleScript } from './case_double_script';
+import { CaseMultiscripts } from './case_multiscripts';
+import { CaseTensor } from './case_tensor';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseEmbellished extends AbstractEnrichCase {
-
   /**
    * Fenced semantic node.
    */
@@ -61,7 +58,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
   /**
    * Open Fenced node map.
    */
-  public ofenceMap: {[key: number]: Element} = {};
+  public ofenceMap: { [key: number]: Element } = {};
 
   /**
    * Closed Fenced semantic node.
@@ -76,7 +73,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
   /**
    * Closed Fenced semantic node.
    */
-  public cfenceMap: {[key: number]: Element} = {};
+  public cfenceMap: { [key: number]: Element } = {};
 
   /**
    * List of elements that need to get the parents reset.
@@ -92,9 +89,11 @@ export class CaseEmbellished extends AbstractEnrichCase {
    */
   public static test(semantic: SemanticNode): boolean {
     return !!(
-        semantic.mathmlTree && semantic.fencePointer &&
-        // TODO: This needs a cleaner solution at some point.
-        !semantic.mathmlTree.getAttribute('data-semantic-type'));
+      semantic.mathmlTree &&
+      semantic.fencePointer &&
+      // TODO: This needs a cleaner solution at some point.
+      !semantic.mathmlTree.getAttribute('data-semantic-type')
+    );
   }
 
   /**
@@ -111,21 +110,21 @@ export class CaseEmbellished extends AbstractEnrichCase {
     return empty;
   }
 
-
   /**
    * Collates the id numbers of the fenced node.
    * @param fence The fence expression.
    * @param ids The list of id numbers.
    */
   private static fencedMap_(
-      fence: SemanticNode, ids: {[key: number]: Element}) {
+    fence: SemanticNode,
+    ids: { [key: number]: Element }
+  ) {
     ids[fence.id] = fence.mathmlTree;
     if (!fence.embellished) {
       return;
     }
     CaseEmbellished.fencedMap_(fence.childNodes[0], ids);
   }
-
 
   /**
    * @override
@@ -135,17 +134,15 @@ export class CaseEmbellished extends AbstractEnrichCase {
     super(semantic);
   }
 
-
   /**
    * @override
    */
   public getMathml() {
     this.getFenced_();
     // This is the first fenced node, but there can be more than one!
-    this.fencedMml = EnrichMathml.walkTree((this.fenced as SemanticNode));
+    this.fencedMml = EnrichMathml.walkTree(this.fenced as SemanticNode);
     this.getFencesMml_();
-    if (this.fenced.type === SemanticType.EMPTY &&
-        !this.fencedMml.parentNode) {
+    if (this.fenced.type === SemanticType.EMPTY && !this.fencedMml.parentNode) {
       // Fenced element is empty and new. Insert it before the closing fence so
       // it can be walked as usual.
       this.fencedMml.setAttribute(EnrichMathml.Attribute.ADDED, 'true');
@@ -155,7 +152,6 @@ export class CaseEmbellished extends AbstractEnrichCase {
     let rewrite = this.rewrite_();
     return rewrite;
   }
-
 
   /**
    * Computes the components of the actual fenced node.
@@ -172,7 +168,6 @@ export class CaseEmbellished extends AbstractEnrichCase {
     CaseEmbellished.fencedMap_(this.cfence, this.cfenceMap);
   }
 
-
   /**
    * Retrieve the list of MathMl elements that are fenced.
    */
@@ -185,7 +180,6 @@ export class CaseEmbellished extends AbstractEnrichCase {
     }
   }
 
-
   /**
    * Retrieve the actual MathMl element that forms the outermost layer of the
    * fences.
@@ -194,14 +188,20 @@ export class CaseEmbellished extends AbstractEnrichCase {
     let currentNode = this.semantic;
     let ofenceIds = Object.keys(this.ofenceMap);
     let cfenceIds = Object.keys(this.cfenceMap);
-    while ((!this.ofenceMml || !this.cfenceMml) &&
-           currentNode !== this.fenced) {
-      if (ofenceIds.indexOf(currentNode.fencePointer) !== -1 &&
-          !this.ofenceMml) {
+    while (
+      (!this.ofenceMml || !this.cfenceMml) &&
+      currentNode !== this.fenced
+    ) {
+      if (
+        ofenceIds.indexOf(currentNode.fencePointer) !== -1 &&
+        !this.ofenceMml
+      ) {
         this.ofenceMml = currentNode.mathmlTree;
       }
-      if (cfenceIds.indexOf(currentNode.fencePointer) !== -1 &&
-          !this.cfenceMml) {
+      if (
+        cfenceIds.indexOf(currentNode.fencePointer) !== -1 &&
+        !this.cfenceMml
+      ) {
         this.cfenceMml = currentNode.mathmlTree;
       }
       currentNode = currentNode.childNodes[0];
@@ -220,7 +220,6 @@ export class CaseEmbellished extends AbstractEnrichCase {
     }
   }
 
-
   /**
    * Rewrites the MathML node with embellished fences.
    * @return The new MathML element.
@@ -230,11 +229,11 @@ export class CaseEmbellished extends AbstractEnrichCase {
     let result = null;
     let newNode = this.introduceNewLayer_();
     // Sets the basics composition.
-    EnrichMathml.setAttributes(newNode, (this.fenced.parent as SemanticNode));
+    EnrichMathml.setAttributes(newNode, this.fenced.parent as SemanticNode);
 
     while (currentNode.type !== SemanticType.FENCED) {
       // Outer embellished node is the one with the fence pointer.
-      let mml = (currentNode.mathmlTree as Element);
+      let mml = currentNode.mathmlTree as Element;
       let specialCase = this.specialCase_(currentNode, mml);
       if (specialCase) {
         currentNode = specialCase;
@@ -242,7 +241,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
         EnrichMathml.setAttributes(mml, currentNode);
         let mmlChildren = [];
         // The base node is rewritten. Walk the remaining nodes.
-        for (let i = 1, child; child = currentNode.childNodes[i]; i++) {
+        for (let i = 1, child; (child = currentNode.childNodes[i]); i++) {
           mmlChildren.push(EnrichMathml.walkTree(child));
         }
         currentNode = currentNode.childNodes[0];
@@ -262,13 +261,12 @@ export class CaseEmbellished extends AbstractEnrichCase {
     }
 
     // Walk the actual fences.
-    EnrichMathml.walkTree((this.ofence as SemanticNode));
-    EnrichMathml.walkTree((this.cfence as SemanticNode));
+    EnrichMathml.walkTree(this.ofence as SemanticNode);
+    EnrichMathml.walkTree(this.cfence as SemanticNode);
 
     this.cleanupParents_();
     return result || newNode;
   }
-
 
   /**
    * Treatment of special cases like msubsup and rewritten mmultiscripts.
@@ -285,14 +283,19 @@ export class CaseEmbellished extends AbstractEnrichCase {
       parent = semantic.childNodes[0];
       caller = CaseDoubleScript;
     } else if (mmlTag === 'MMULTISCRIPTS') {
-      if (semantic.type === SemanticType.SUPERSCRIPT ||
-          semantic.type === SemanticType.SUBSCRIPT) {
+      if (
+        semantic.type === SemanticType.SUPERSCRIPT ||
+        semantic.type === SemanticType.SUBSCRIPT
+      ) {
         caller = CaseMultiscripts;
       } else if (semantic.type === SemanticType.TENSOR) {
         caller = CaseTensor;
       }
-      if (caller && semantic.childNodes[0] &&
-          semantic.childNodes[0].role === SemanticRole.SUBSUP) {
+      if (
+        caller &&
+        semantic.childNodes[0] &&
+        semantic.childNodes[0].role === SemanticRole.SUBSUP
+      ) {
         parent = semantic.childNodes[0];
       } else {
         parent = semantic;
@@ -304,12 +307,11 @@ export class CaseEmbellished extends AbstractEnrichCase {
     let base = parent.childNodes[0];
     let empty = CaseEmbellished.makeEmptyNode_(base.id);
     parent.childNodes[0] = empty;
-    mml = (new caller(semantic)).getMathml();
+    mml = new caller(semantic).getMathml();
     parent.childNodes[0] = base;
     this.parentCleanup.push(mml);
     return parent.childNodes[0];
   }
-
 
   /**
    * Introduces a new layer if necessary before rewriting the fence.
@@ -320,8 +322,8 @@ export class CaseEmbellished extends AbstractEnrichCase {
     let fullCfence = this.fullFence(this.cfenceMml);
     // Introduce a definite new layer.
     let newNode = DomUtil.createElement('mrow');
-    DomUtil.replaceNode((this.fencedMml as Element), newNode);
-    this.fencedMmlNodes.forEach(node => newNode.appendChild(node));
+    DomUtil.replaceNode(this.fencedMml as Element, newNode);
+    this.fencedMmlNodes.forEach((node) => newNode.appendChild(node));
     newNode.insertBefore(fullOfence, this.fencedMml);
     newNode.appendChild(fullCfence);
     // The case of top element math.
@@ -336,7 +338,6 @@ export class CaseEmbellished extends AbstractEnrichCase {
     return newNode;
   }
 
-
   /**
    * Retrieves the original embellished fence for the given fence.
    * @param fence A simple fence.
@@ -349,9 +350,8 @@ export class CaseEmbellished extends AbstractEnrichCase {
     while (currentFence.parentNode && currentFence.parentNode !== parent) {
       currentFence = currentFence.parentNode as Element;
     }
-    return (currentFence as Element);
+    return currentFence as Element;
   }
-
 
   /**
    * Sets the correct parent pointer for MathML nodes treated and collated in
@@ -359,12 +359,14 @@ export class CaseEmbellished extends AbstractEnrichCase {
    * node to the parent of the remaining children.
    */
   private cleanupParents_() {
-    this.parentCleanup.forEach(function(x) {
+    this.parentCleanup.forEach(function (x) {
       let parent = (x.childNodes[1] as Element).getAttribute(
-          EnrichMathml.Attribute.PARENT);
+        EnrichMathml.Attribute.PARENT
+      );
       (x.childNodes[0] as Element).setAttribute(
-          EnrichMathml.Attribute.PARENT, parent);
+        EnrichMathml.Attribute.PARENT,
+        parent
+      );
     });
   }
-
 }

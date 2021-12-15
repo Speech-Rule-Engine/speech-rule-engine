@@ -19,22 +19,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AuditoryDescription} from './auditory_description';
-import {Span} from './span';
-import {SsmlRenderer} from './ssml_renderer';
-
+import { AuditoryDescription } from './auditory_description';
+import { Span } from './span';
+import { SsmlRenderer } from './ssml_renderer';
 
 export class SsmlStepRenderer extends SsmlRenderer {
-
-
   private static CHARACTER_ATTR: string = 'character';
 
   /**
    * Record for remembering mark ids.
    */
-  private static MARKS: {[key: string]: boolean} = {};
-
+  private static MARKS: { [key: string]: boolean } = {};
 
   /**
    * @override
@@ -43,7 +38,6 @@ export class SsmlStepRenderer extends SsmlRenderer {
     SsmlStepRenderer.MARKS = {};
     return super.markup(descrs);
   }
-
 
   /**
    * @override
@@ -59,13 +53,16 @@ export class SsmlStepRenderer extends SsmlRenderer {
       }
       if (span.speech.length === 1 && span.speech.match(/[a-zA-Z]/)) {
         result.push(
-            '<say-as interpret-as="' + SsmlStepRenderer.CHARACTER_ATTR + '">' +
-            span.speech + '</say-as>');
+          '<say-as interpret-as="' +
+            SsmlStepRenderer.CHARACTER_ATTR +
+            '">' +
+            span.speech +
+            '</say-as>'
+        );
       } else {
         result.push(span.speech);
       }
     }
     return result.join(this.getSeparator());
   }
-
 }

@@ -19,21 +19,27 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 export class Variables {
-
   /**
    * SRE version.
    */
   public static readonly VERSION: string = '4.0.0-beta.3';
 
-
   /**
    * List of locales to load.
    */
-  public static readonly LOCALES: string[] =
-      ['en', 'ca', 'de', 'fr', 'es', 'hi', 'it', 'nb', 'nn', 'nemeth'];
-
+  public static readonly LOCALES: string[] = [
+    'en',
+    'ca',
+    'de',
+    'fr',
+    'es',
+    'hi',
+    'it',
+    'nb',
+    'nn',
+    'nemeth'
+  ];
 
   /**
    * MathJax version. This is useful for paths depending on MathJax
@@ -41,18 +47,17 @@ export class Variables {
    */
   public static readonly mathjaxVersion: string = '3.0.0';
 
-
   /**
    * The URL for SRE resources.
    */
   public static readonly url: string =
-      'https://cdn.jsdelivr.net/npm/speech-rule-engine@' + Variables.VERSION +
-      '/lib/mathmaps';
-
+    'https://cdn.jsdelivr.net/npm/speech-rule-engine@' +
+    Variables.VERSION +
+    '/lib/mathmaps';
 
   /**
    * Path to Xpath library file.
    */
   public static readonly WGXpath: string =
-      'https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js';
+    'https://cdn.jsdelivr.net/npm/wicked-good-xpath@1.3.0/dist/wgxpath.install.js';
 }

@@ -20,15 +20,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {EngineConst} from '../common/engine';
-import {AbstractAudioRenderer} from './abstract_audio_renderer';
+import { EngineConst } from '../common/engine';
+import { AbstractAudioRenderer } from './abstract_audio_renderer';
 import * as AudioUtil from './audio_util';
-import {AuditoryDescription} from './auditory_description';
-
+import { AuditoryDescription } from './auditory_description';
 
 export class PunctuationRenderer extends AbstractAudioRenderer {
-
   /**
    * Alpha values for pauses.
    */
@@ -46,14 +43,17 @@ export class PunctuationRenderer extends AbstractAudioRenderer {
     let str = '';
     let pause = null;
     let span = false;
-    for (let i = 0, descr; descr = markup[i]; i++) {
+    for (let i = 0, descr; (descr = markup[i]); i++) {
       if (AudioUtil.isMarkupElement(descr)) {
         continue;
       }
       if (AudioUtil.isPauseElement(descr)) {
         if (span) {
           pause = AudioUtil.mergePause(
-              pause, (descr as {pause: number}), Math.max);
+            pause,
+            descr as { pause: number },
+            Math.max
+          );
         }
         continue;
       }
@@ -66,7 +66,6 @@ export class PunctuationRenderer extends AbstractAudioRenderer {
     }
     return str;
   }
-
 
   /**
    * Transforms numeric pauses into alpha versions.

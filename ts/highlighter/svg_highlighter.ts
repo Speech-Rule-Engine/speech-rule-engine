@@ -19,14 +19,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as DomUtil from '../common/dom_util';
 
-import {AbstractHighlighter, Highlight} from './abstract_highlighter';
-
+import { AbstractHighlighter, Highlight } from './abstract_highlighter';
 
 export class SvgHighlighter extends AbstractHighlighter {
-
   /**
    * @override
    */
@@ -34,7 +31,6 @@ export class SvgHighlighter extends AbstractHighlighter {
     super();
     this.mactionName = 'mjx-svg-maction';
   }
-
 
   /**
    * @override
@@ -69,13 +65,15 @@ export class SvgHighlighter extends AbstractHighlighter {
       //  so we temporarily wrap the <use> in a <g> and use getBBox() on that.
       //  TODO: Check if this is still necessary.
       let g = DomUtil.createElementNS(
-          'http://www.w3.org/2000/svg', 'g') as SVGGraphicsElement;
+        'http://www.w3.org/2000/svg',
+        'g'
+      ) as SVGGraphicsElement;
       node.parentNode.insertBefore(g, node);
       g.appendChild(node);
       bbox = g.getBBox();
       g.parentNode.replaceChild(node, g);
     } else {
-      bbox = ((node as any) as SVGGraphicsElement).getBBox();
+      bbox = (node as any as SVGGraphicsElement).getBBox();
     }
     rect.setAttribute('x', (bbox.x - padding).toString());
     rect.setAttribute('y', (bbox.y - padding).toString());
@@ -88,11 +86,10 @@ export class SvgHighlighter extends AbstractHighlighter {
     rect.setAttribute('fill', this.colorString().background);
     rect.setAttribute(AbstractHighlighter.ATTR, 'true');
     node.parentNode.insertBefore(rect, node);
-    info  = {node: rect as HTMLElement, foreground: node.getAttribute('fill')};
+    info = { node: rect as HTMLElement, foreground: node.getAttribute('fill') };
     node.setAttribute('fill', this.colorString().foreground);
     return info;
   }
-
 
   /**
    * @override
@@ -103,7 +100,6 @@ export class SvgHighlighter extends AbstractHighlighter {
     }
   }
 
-
   /**
    * @override
    */
@@ -113,21 +109,24 @@ export class SvgHighlighter extends AbstractHighlighter {
       info.node.style.color = info.foreground;
       return;
     }
-    info.foreground ?
-       (info.node.nextSibling as HTMLElement).setAttribute(
-          'fill', info.foreground) :
-       (info.node.nextSibling as HTMLElement).removeAttribute('fill');
+    info.foreground
+      ? (info.node.nextSibling as HTMLElement).setAttribute(
+          'fill',
+          info.foreground
+        )
+      : (info.node.nextSibling as HTMLElement).removeAttribute('fill');
     info.node.parentNode.removeChild(info.node);
   }
-
 
   /**
    * @override
    */
   public isMactionNode(node: HTMLElement) {
     let className = node.className || node.getAttribute('class');
-    className = (className as any).baseVal !== undefined ?
-        (className as any).baseVal : className;
+    className =
+      (className as any).baseVal !== undefined
+        ? (className as any).baseVal
+        : className;
     return className ? !!className.match(new RegExp(this.mactionName)) : false;
   }
 }

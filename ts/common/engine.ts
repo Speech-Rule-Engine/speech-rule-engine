@@ -20,15 +20,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as Dcstr from '../rule_engine/dynamic_cstr';
-
 
 /**
  *  Namespace for all Engine enum constants.
  */
 export namespace EngineConst {
-
   /**
    * Defines the modes in which the engine can run.
    */
@@ -52,16 +49,22 @@ export namespace EngineConst {
   }
 
   export const personalityPropList: personalityProps[] = [
-    personalityProps.PITCH, personalityProps.RATE, personalityProps.VOLUME,
-    personalityProps.PAUSE, personalityProps.JOIN
+    personalityProps.PITCH,
+    personalityProps.RATE,
+    personalityProps.VOLUME,
+    personalityProps.PAUSE,
+    personalityProps.JOIN
   ];
 
   /**
    * Defines to what level the engine enriches expressions with speech string
    * attributes.
    */
-  export enum Speech {NONE = 'none', SHALLOW = 'shallow', DEEP = 'deep'}
-
+  export enum Speech {
+    NONE = 'none',
+    SHALLOW = 'shallow',
+    DEEP = 'deep'
+  }
 
   /**
    * Different markup formats for the speech output.
@@ -81,20 +84,17 @@ export namespace EngineConst {
   /**
    * Maps domains to their default style.
    */
-  export const DOMAIN_TO_STYLES: {[key: string]: string} = {
-    'mathspeak': 'default',
-    'clearspeak': 'default'
+  export const DOMAIN_TO_STYLES: { [key: string]: string } = {
+    mathspeak: 'default',
+    clearspeak: 'default'
   };
-
 }
-
 
 /**
  * The base error class for signaling SRE errors.
  * @param msg The error message.
  */
 export class SREError extends Error {
-
   /**
    * @override
    */
@@ -106,7 +106,6 @@ export class SREError extends Error {
   constructor(public message: string = '') {
     super();
   }
-
 }
 
 /**
@@ -114,21 +113,26 @@ export class SREError extends Error {
  *
  */
 export class Engine {
-
   /**
    * Binary feature vector.
    */
   public static BINARY_FEATURES: string[] = ['strict', 'structure', 'pprint'];
 
-
   /**
    * String feature vector.
    */
   public static STRING_FEATURES: string[] = [
-    'markup', 'style', 'domain', 'speech', 'walker', 'locale', 'modality',
-    'rate', 'rules', 'prune'
+    'markup',
+    'style',
+    'domain',
+    'speech',
+    'walker',
+    'locale',
+    'modality',
+    'rate',
+    'rules',
+    'prune'
   ];
-
 
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Engine;
@@ -143,7 +147,7 @@ export class Engine {
 
   public defaultParser: Dcstr.DynamicCstrParser;
   public parser: Dcstr.DynamicCstrParser;
-  public parsers: {[key: string]: Dcstr.DynamicCstrParser} = {};
+  public parsers: { [key: string]: Dcstr.DynamicCstrParser } = {};
 
   public dynamicCstr: Dcstr.DynamicCstr;
 
@@ -157,7 +161,7 @@ export class Engine {
   /**
    * Maps domains to comparators.
    */
-  public comparators: {[key: string]: () => Dcstr.Comparator} = {};
+  public comparators: { [key: string]: () => Dcstr.Comparator } = {};
 
   /**
    * Current domain.
@@ -261,10 +265,11 @@ export class Engine {
    * @return The evaluated string.
    */
   public static defaultEvaluator(
-    str: string, _cstr: Dcstr.DynamicCstr): string {
+    str: string,
+    _cstr: Dcstr.DynamicCstr
+  ): string {
     return str;
   }
-
 
   // TODO: This might need a better place.
   /**
@@ -274,7 +279,6 @@ export class Engine {
     let numeric = parseInt(this.rate, 10);
     return isNaN(numeric) ? 100 : numeric;
   }
-
 
   /**
    * Sets the dynamic constraint for the engine.
@@ -286,7 +290,7 @@ export class Engine {
     if (opt_dynamic) {
       let keys = Object.keys(opt_dynamic);
       for (let i = 0; i < keys.length; i++) {
-        let feature = (keys[i] as Dcstr.Axis);
+        let feature = keys[i] as Dcstr.Axis;
         // Checks that we only have correct components.
         if (Dcstr.DynamicCstr.DEFAULT_ORDER.indexOf(feature) !== -1) {
           let value = opt_dynamic[feature];
@@ -296,21 +300,23 @@ export class Engine {
       }
     }
     EngineConst.DOMAIN_TO_STYLES[this.domain] = this.style;
-    let dynamic =
-        [this.locale, this.modality, this.domain, this.style].join('.');
+    let dynamic = [this.locale, this.modality, this.domain, this.style].join(
+      '.'
+    );
     let fallback = Dcstr.DynamicProperties.createProp(
-        [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
-        [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
-        [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.DOMAIN]],
-        [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]]);
+      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
+      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
+      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.DOMAIN]],
+      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]]
+    );
     let comparator = this.comparators[this.domain];
     let parser = this.parsers[this.domain];
     this.parser = parser ? parser : this.defaultParser;
     this.dynamicCstr = this.parser.parse(dynamic);
     this.dynamicCstr.updateProperties(fallback.getProperties());
-    this.comparator = comparator ?
-        comparator() :
-        new Dcstr.DefaultComparator(this.dynamicCstr);
+    this.comparator = comparator
+      ? comparator()
+      : new Dcstr.DefaultComparator(this.dynamicCstr);
   }
 
   /**
@@ -318,38 +324,35 @@ export class Engine {
    */
   private constructor() {
     this.evaluator = Engine.defaultEvaluator;
-    this.defaultParser =
-        new Dcstr.DynamicCstrParser(Dcstr.DynamicCstr.DEFAULT_ORDER);
+    this.defaultParser = new Dcstr.DynamicCstrParser(
+      Dcstr.DynamicCstr.DEFAULT_ORDER
+    );
     this.parser = this.defaultParser;
     this.dynamicCstr = Dcstr.DynamicCstr.defaultCstr();
   }
-
 }
 
-
 export namespace EnginePromise {
-
   /**
    * Records if a locale is loaded or failed to load. Value one indicates that
    * loading has been attempted and finished, while value two indicates if it
    * was successful or not.
    */
-  export let loaded: {[locale: string]: [boolean, boolean]} = {};
+  export let loaded: { [locale: string]: [boolean, boolean] } = {};
 
   /**
    * Records the loading promises for each locale.
    */
-  export let promises: {[locale: string]: Promise<string>} = {};
-
+  export let promises: { [locale: string]: Promise<string> } = {};
 
   /**
    * @return The promise for a locale.
    */
-  export function get(locale: string =
-    Engine.getInstance().locale): Promise<string> {
+  export function get(
+    locale: string = Engine.getInstance().locale
+  ): Promise<string> {
     return promises[locale] || Promise.resolve('');
   }
-
 
   /**
    * @return All promises combined into one.
@@ -357,5 +360,4 @@ export namespace EnginePromise {
   export function getall() {
     return Promise.allSettled(Object.values(promises));
   }
-
 }

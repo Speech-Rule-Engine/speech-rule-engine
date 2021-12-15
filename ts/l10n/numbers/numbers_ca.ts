@@ -18,13 +18,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Grammar} from '../../rule_engine/grammar';
-import {Numbers, NUMBERS as NUMB} from '../messages';
+import { Grammar } from '../../rule_engine/grammar';
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 //
-// This work was sponsored by 
+// This work was sponsored by
 //
-
 
 /**
  * Turns a tens position in a number into words.
@@ -39,10 +38,8 @@ function tensToWords_(num: number): string {
   let ten = Math.floor(n / 10);
   let tens = NUMBERS.tens[ten];
   let ones = NUMBERS.ones[n % 10];
-  return tens && ones ?
-    tens + ((ten === 2) ? '-i-' : '-') + ones : tens || ones;
+  return tens && ones ? tens + (ten === 2 ? '-i-' : '-') + ones : tens || ones;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -52,12 +49,14 @@ function tensToWords_(num: number): string {
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let hundred = Math.floor(n / 100);
-  let hundreds = hundred ?
-    (hundred === 1 ? 'cent' : NUMBERS.ones[hundred] + '-cents') : '';
+  let hundreds = hundred
+    ? hundred === 1
+      ? 'cent'
+      : NUMBERS.ones[hundred] + '-cents'
+    : '';
   let tens = tensToWords_(n % 100);
   return hundreds && tens ? hundreds + NUMBERS.numSep + tens : hundreds || tens;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -84,13 +83,17 @@ function numberToWords(num: number): string {
         str = hundredsToWords_(hundreds);
       } else if (pos === 1) {
         // Thousands to 999999
-        str = ((hundreds === 1) ?
-          '' : hundredsToWords_(hundreds) + NUMBERS.numSep) +
-          large + (str ? NUMBERS.numSep + str : '');
+        str =
+          (hundreds === 1 ? '' : hundredsToWords_(hundreds) + NUMBERS.numSep) +
+          large +
+          (str ? NUMBERS.numSep + str : '');
       } else {
         let thousands = numberToWords(hundreds);
         large = hundreds === 1 ? large : large.replace(/\u00f3$/, 'ons');
-        str =  thousands + NUMBERS.numSep + large +
+        str =
+          thousands +
+          NUMBERS.numSep +
+          large +
           (str ? NUMBERS.numSep + str : '');
       }
     }
@@ -126,22 +129,19 @@ function numberToOrdinal(num: number, _plural: boolean): string {
   return result + (result.match(/e$/) ? 'na' : 'ena');
 }
 
-
 /**
  * Creates a simple ordinal string from a number.
  * @param num The number to be converted.
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  let gender = Grammar.getInstance().getParameter('gender') as string;
   return num.toString() + (gender === 'f' ? 'a' : 'n');
 }
-
 
 const NUMBERS: Numbers = NUMB();
 NUMBERS.simpleOrdinal = simpleOrdinal;
 NUMBERS.numberToWords = numberToWords;
 NUMBERS.numberToOrdinal = numberToOrdinal;
-
 
 export default NUMBERS;

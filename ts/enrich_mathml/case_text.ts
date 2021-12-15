@@ -19,14 +19,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseText extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
@@ -38,12 +36,12 @@ export class CaseText extends AbstractEnrichCase {
    * @return True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
-    return semantic.type === SemanticType.PUNCTUATED &&
-        (semantic.role === SemanticRole.TEXT ||
-          semantic.contentNodes.every(
-            x => x.role === SemanticRole.DUMMY));
+    return (
+      semantic.type === SemanticType.PUNCTUATED &&
+      (semantic.role === SemanticRole.TEXT ||
+        semantic.contentNodes.every((x) => x.role === SemanticRole.DUMMY))
+    );
   }
-
 
   /**
    * @override
@@ -53,7 +51,6 @@ export class CaseText extends AbstractEnrichCase {
     super(semantic);
     this.mml = semantic.mathmlTree;
   }
-
 
   /**
    * @override

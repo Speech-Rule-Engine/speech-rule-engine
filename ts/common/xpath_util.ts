@@ -22,13 +22,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Engine, EngineConst} from './engine';
+import { Engine, EngineConst } from './engine';
 import SystemExternal from './system_external';
 
-
 namespace XpathUtil {
-
   /**
    * Returns whether or not xpath is supported.
    * @return True if xpath is supported.
@@ -45,30 +42,33 @@ namespace XpathUtil {
    */
   export let currentDocument: Document = null;
 
+  export let xpathEvaluate: (
+    x: string,
+    node: Node,
+    nsr: Resolver,
+    rt: number,
+    result: XPathResult
+  ) => XPathResult = xpathSupported()
+    ? document.evaluate
+    : SystemExternal.xpath.evaluate;
 
-  export let xpathEvaluate: (x: string, node: Node, nsr: Resolver, rt: number, result: XPathResult) => XPathResult =
-    xpathSupported() ? document.evaluate : SystemExternal.xpath.evaluate;
+  export let xpathResult: any = xpathSupported()
+    ? XPathResult
+    : SystemExternal.xpath.XPathResult;
 
-
-  export let xpathResult: any  =
-    xpathSupported() ? XPathResult : SystemExternal.xpath.XPathResult;
-
-
-  export let createNSResolver: Function = xpathSupported() ?
-    document.createNSResolver :
-    SystemExternal.xpath.createNSResolver;
-
+  export let createNSResolver: Function = xpathSupported()
+    ? document.createNSResolver
+    : SystemExternal.xpath.createNSResolver;
 
   /**
    * Mapping for some default namespaces.
    */
-  const nameSpaces: {[key: string]: string} = {
-    'xhtml': 'http://www.w3.org/1999/xhtml',
-    'mathml': 'http://www.w3.org/1998/Math/MathML',
-    'mml': 'http://www.w3.org/1998/Math/MathML',
-    'svg': 'http://www.w3.org/2000/svg'
+  const nameSpaces: { [key: string]: string } = {
+    xhtml: 'http://www.w3.org/1999/xhtml',
+    mathml: 'http://www.w3.org/1998/Math/MathML',
+    mml: 'http://www.w3.org/1998/Math/MathML',
+    svg: 'http://www.w3.org/2000/svg'
   };
-
 
   /**
    * Resolve some default name spaces.
@@ -78,7 +78,6 @@ namespace XpathUtil {
   export function resolveNameSpace(prefix: string): string {
     return nameSpaces[prefix] || null;
   }
-
 
   /**
    * Resolver to work with xpath in node and wgxpath in IE/Edge.
@@ -90,7 +89,6 @@ namespace XpathUtil {
     }
   }
 
-
   /**
    * Executes an xpath evaluation.
    *
@@ -100,14 +98,22 @@ namespace XpathUtil {
    * @return The result of the xpath computation.
    */
   export function evaluateXpath_(
-    expression: string, rootNode: Node, type: number): XPathResult {
+    expression: string,
+    rootNode: Node,
+    type: number
+  ): XPathResult {
     return Engine.getInstance().mode === EngineConst.Mode.HTTP &&
-      !Engine.getInstance().isIE && !Engine.getInstance().isEdge ?
-      currentDocument.evaluate(
-        expression, rootNode, resolveNameSpace, type, null) :
-      xpathEvaluate(expression, rootNode, new Resolver(), type, null);
+      !Engine.getInstance().isIE &&
+      !Engine.getInstance().isEdge
+      ? currentDocument.evaluate(
+          expression,
+          rootNode,
+          resolveNameSpace,
+          type,
+          null
+        )
+      : xpathEvaluate(expression, rootNode, new Resolver(), type, null);
   }
-
 
   /**
    * Given an XPath expression and rootNode, it returns an array of children
@@ -121,19 +127,24 @@ namespace XpathUtil {
     let iterator: XPathResult;
     try {
       iterator = evaluateXpath_(
-        expression, rootNode, xpathResult.ORDERED_NODE_ITERATOR_TYPE);
+        expression,
+        rootNode,
+        xpathResult.ORDERED_NODE_ITERATOR_TYPE
+      );
     } catch (err) {
       return [];
     }
     let results = [];
     // Convert result to JS array
-    for (let xpathNode = iterator.iterateNext(); xpathNode;
-         xpathNode = iterator.iterateNext()) {
+    for (
+      let xpathNode = iterator.iterateNext();
+      xpathNode;
+      xpathNode = iterator.iterateNext()
+    ) {
       results.push(xpathNode);
     }
     return results;
   }
-
 
   /**
    * Given a rootNode, it returns an array of all its leaf nodes.
@@ -162,7 +173,6 @@ namespace XpathUtil {
     return result.booleanValue;
   }
 
-
   /**
    * Given an XPath expression and rootNode, it evaluates the XPath expression
    * as a string type and returns the result.
@@ -173,14 +183,13 @@ namespace XpathUtil {
    */
   export function evaluateString(expression: string, rootNode: Node): string {
     let result: XPathResult;
-      try {
-        result = evaluateXpath_(expression, rootNode, xpathResult.STRING_TYPE);
+    try {
+      result = evaluateXpath_(expression, rootNode, xpathResult.STRING_TYPE);
     } catch (err) {
       return '';
     }
     return result.stringValue;
   }
-
 }
 
 export default XpathUtil;

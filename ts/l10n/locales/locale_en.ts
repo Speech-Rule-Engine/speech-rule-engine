@@ -19,12 +19,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Grammar} from '../../rule_engine/grammar';
-import {createLocale, Locale} from '../locale';
+import { Grammar } from '../../rule_engine/grammar';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_en';
 import * as tr from '../transformers';
-
 
 let locale: Locale = null;
 
@@ -49,4 +47,3 @@ function create(): Locale {
   };
   return loc;
 }
-

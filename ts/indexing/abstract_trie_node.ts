@@ -23,29 +23,28 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Debugger} from '../common/debugger';
-import {SpeechRule} from '../rule_engine/speech_rule';
-import {TrieNode, TrieNodeKind} from './trie_node';
-
+import { Debugger } from '../common/debugger';
+import { SpeechRule } from '../rule_engine/speech_rule';
+import { TrieNode, TrieNodeKind } from './trie_node';
 
 export class AbstractTrieNode<T> implements TrieNode {
-
   /**
    * @override
    */
   public kind: TrieNodeKind;
 
-  private children_: {[key: string]: TrieNode} = {};
+  private children_: { [key: string]: TrieNode } = {};
 
   /**
    * @param constraint The constraint the node represents.
    * @param test The constraint test of this node.
    */
   constructor(
-    public constraint: string, public test: ((p1: T) => boolean)|null) {
+    public constraint: string,
+    public test: ((p1: T) => boolean) | null
+  ) {
     this.kind = TrieNodeKind.ROOT;
   }
-
 
   /**
    * @override
@@ -54,7 +53,6 @@ export class AbstractTrieNode<T> implements TrieNode {
     return this.constraint;
   }
 
-
   /**
    * @override
    */
@@ -62,14 +60,12 @@ export class AbstractTrieNode<T> implements TrieNode {
     return this.kind;
   }
 
-
   /**
    * @override
    */
   public applyTest(object: T) {
     return this.test(object);
   }
-
 
   /**
    * @override
@@ -81,14 +77,12 @@ export class AbstractTrieNode<T> implements TrieNode {
     return child;
   }
 
-
   /**
    * @override
    */
   public getChild(constraint: string) {
     return this.children_[constraint];
   }
-
 
   /**
    * @override
@@ -100,7 +94,6 @@ export class AbstractTrieNode<T> implements TrieNode {
     }
     return children;
   }
-
 
   /**
    * @override
@@ -116,14 +109,12 @@ export class AbstractTrieNode<T> implements TrieNode {
     return children;
   }
 
-
   /**
    * @override
    */
   public removeChild(constraint: string) {
     delete this.children_[constraint];
   }
-
 
   /**
    * @override
@@ -133,28 +124,24 @@ export class AbstractTrieNode<T> implements TrieNode {
   }
 }
 
-
 export class StaticTrieNode extends AbstractTrieNode<Node> {
-
-  private rule_: SpeechRule|null = null;
+  private rule_: SpeechRule | null = null;
 
   /**
    * @param constraint The constraint the node represents.
    * @param test The constraint test of this node.
    */
-  constructor(constraint: string, test: ((p1: Node) => boolean)|null) {
+  constructor(constraint: string, test: ((p1: Node) => boolean) | null) {
     super(constraint, test);
     this.kind = TrieNodeKind.STATIC;
   }
 
-
   /**
    * @return The speech rule of the node.
    */
-  public getRule(): SpeechRule|null {
+  public getRule(): SpeechRule | null {
     return this.rule_;
   }
-
 
   /**
    * @param rule speech rule of the node.
@@ -162,19 +149,19 @@ export class StaticTrieNode extends AbstractTrieNode<Node> {
   public setRule(rule: SpeechRule) {
     if (this.rule_) {
       Debugger.getInstance().output(
-          'Replacing rule ' + this.rule_ + ' with ' + rule);
+        'Replacing rule ' + this.rule_ + ' with ' + rule
+      );
     }
     this.rule_ = rule;
   }
-
 
   /**
    * @override
    */
   public toString() {
     let rule = this.getRule();
-    return rule ? this.constraint + '\n' +
-            '==> ' + this.getRule().action :
-                  this.constraint;
+    return rule
+      ? this.constraint + '\n' + '==> ' + this.getRule().action
+      : this.constraint;
   }
 }

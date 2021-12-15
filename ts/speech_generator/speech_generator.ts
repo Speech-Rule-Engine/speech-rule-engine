@@ -19,14 +19,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
-import {AxisMap} from '../rule_engine/dynamic_cstr';
-import {RebuildStree} from '../walker/rebuild_stree';
-
+import { AxisMap } from '../rule_engine/dynamic_cstr';
+import { RebuildStree } from '../walker/rebuild_stree';
 
 export interface SpeechGenerator {
-
   /**
    * The modality of this speech generator.
    */
@@ -39,7 +36,6 @@ export interface SpeechGenerator {
    * @return The speech string computed for this element.
    */
   getSpeech(node: Element, xml: Element): string;
-
 
   /**
    * Generates speech string for a sub tree of the xml element.
@@ -55,13 +51,11 @@ export interface SpeechGenerator {
    */
   getRebuilt(): RebuildStree;
 
-
   /**
    * Sets the rebuilt semantic tree object of the speech generator.
    * @param rebuilt The reconstructed semantic tree.
    */
   setRebuilt(rebuilt: RebuildStree): void;
-
 
   /**
    * Sets dynamic constraint options for the speech engine.
@@ -69,18 +63,15 @@ export interface SpeechGenerator {
    */
   setOptions(options: AxisMap): void;
 
-
   /**
    * @return Dynamic constraint options of the generator.
    */
   getOptions(): AxisMap;
 
-
   /**
    * Sets up or resets the speech generator.
    */
   start(): void;
-
 
   /**
    * Cleans up after ending speech generation.

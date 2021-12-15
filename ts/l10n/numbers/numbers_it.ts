@@ -22,10 +22,8 @@
 // This work was sponsored by TextHelp
 //
 
-
-import {Grammar} from '../../rule_engine/grammar';
-import {Numbers, NUMBERS as NUMB} from '../messages';
-
+import { Grammar } from '../../rule_engine/grammar';
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -35,9 +33,9 @@ import {Numbers, NUMBERS as NUMB} from '../messages';
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  str += NUMBERS.ones[Math.floor(n / 100)] ?
-      NUMBERS.ones[Math.floor(n / 100)] + NUMBERS.numSep + 'cento' :
-      '';
+  str += NUMBERS.ones[Math.floor(n / 100)]
+    ? NUMBERS.ones[Math.floor(n / 100)] + NUMBERS.numSep + 'cento'
+    : '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
@@ -56,7 +54,6 @@ function hundredsToWords_(num: number): string {
   }
   return str;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -78,15 +75,16 @@ function numberToWords(num: number): string {
   while (num > 0) {
     let hundreds = num % 1000;
     if (hundreds) {
-      str = hundredsToWords_(num % 1000) +
-          (pos ? '-' + NUMBERS.large[pos] + '-' : '') + str;
+      str =
+        hundredsToWords_(num % 1000) +
+        (pos ? '-' + NUMBERS.large[pos] + '-' : '') +
+        str;
     }
     num = Math.floor(num / 1000);
     pos++;
   }
   return str.replace(/-$/, '');
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation of
@@ -107,14 +105,13 @@ function numberToOrdinal(num: number, plural: boolean): string {
   return ordinal.slice(0, -1) + gender;
 }
 
-
 /**
  * Creates a word ordinal string from a number.
  * @param num The number to be converted.
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  let gender = Grammar.getInstance().getParameter('gender') as string;
   let postfix = gender === 'm' ? 'o' : 'a';
   let ordinal = NUMBERS.special.onesOrdinals[num];
   if (ordinal) {
@@ -124,14 +121,13 @@ function wordOrdinal(num: number): string {
   return ordinal.slice(0, -1) + 'esim' + postfix;
 }
 
-
 /**
  * Creates a simple ordinal string from a number.
  * @param num The number to be converted.
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  let gender = Grammar.getInstance().getParameter('gender') as string;
   return num.toString() + (gender === 'm' ? 'o' : 'a');
 }
 

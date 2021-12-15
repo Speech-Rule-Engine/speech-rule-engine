@@ -22,9 +22,7 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-
-import {Numbers, NUMBERS as NUMB} from '../messages';
-
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Translates a number of into a Braille string representation.
@@ -34,12 +32,11 @@ import {Numbers, NUMBERS as NUMB} from '../messages';
 function numberToWords(num: number): string {
   let digits = num.toString().split('');
   return digits
-      .map(function(digit) {
-        return NUMBERS.ones[parseInt(digit, 10)];
-      })
-      .join('');
+    .map(function (digit) {
+      return NUMBERS.ones[parseInt(digit, 10)];
+    })
+    .join('');
 }
-
 
 const NUMBERS: Numbers = NUMB();
 NUMBERS.numberToWords = numberToWords;

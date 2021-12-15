@@ -22,33 +22,34 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Debugger} from '../common/debugger';
+import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
-import {Engine} from '../common/engine';
-import {SemanticAttr, SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticHeuristics} from '../semantic_tree/semantic_heuristics';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticSkeleton, Sexp} from '../semantic_tree/semantic_skeleton';
-import {SemanticTree} from '../semantic_tree/semantic_tree';
+import { Engine } from '../common/engine';
+import {
+  SemanticAttr,
+  SemanticRole,
+  SemanticType
+} from '../semantic_tree/semantic_attr';
+import { SemanticHeuristics } from '../semantic_tree/semantic_heuristics';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton';
+import { SemanticTree } from '../semantic_tree/semantic_tree';
 import * as SemanticUtil from '../semantic_tree/semantic_util';
 
 import EnrichCaseFactory from './enrich_case_factory';
 
-
 /**
  * Object containing settings for the semantic enrichment.
  */
-export const SETTINGS: {collapsed: boolean, implicit: boolean} = {
+export const SETTINGS: { collapsed: boolean; implicit: boolean } = {
   collapsed: true,
   implicit: true
 };
-
 
 /**
  * Prefix for semantic attributes.
  */
 export const ATTRIBUTE_PREFIX_: string = 'data-semantic-';
-
 
 // TODO (TS): Do something about the prefix computation.
 /**
@@ -114,16 +115,16 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
   walkTree(semantic.root);
   if (Engine.getInstance().structure) {
     mml.setAttribute(
-        Attribute.STRUCTURE,
-        SemanticSkeleton.fromStructure(mml, semantic).toString());
+      Attribute.STRUCTURE,
+      SemanticSkeleton.fromStructure(mml, semantic).toString()
+    );
   }
-  Debugger.getInstance().generateOutput(function() {
+  Debugger.getInstance().generateOutput(function () {
     formattedOutput(oldMml, mml, semantic, true);
     return [];
   });
   return mml;
 }
-
 
 /**
  * Walks the semantic tree and reassembles a new semantically enriched MathML
@@ -142,12 +143,12 @@ export function walkTree(semantic: SemanticNode): Element {
   }
   if (semantic.mathml.length === 1) {
     Debugger.getInstance().output('Walktree Case 0');
-    newNode = (semantic.mathml[0] as Element);
+    newNode = semantic.mathml[0] as Element;
     setAttributes(newNode, semantic);
     if (semantic.childNodes.length) {
       // These children should all be empty.
       Debugger.getInstance().output('Walktree Case 0.1');
-      semantic.childNodes.forEach(function(child) {
+      semantic.childNodes.forEach(function (child) {
         if (child.type === SemanticType.EMPTY) {
           newNode.appendChild(walkTree(child));
         }
@@ -160,7 +161,10 @@ export function walkTree(semantic: SemanticNode): Element {
   setOperatorAttribute_(semantic, newContent);
   let newChildren = semantic.childNodes.map(walkTree);
   let childrenList = SemanticSkeleton.combineContentChildren<Element>(
-      semantic, newContent, newChildren);
+    semantic,
+    newContent,
+    newChildren
+  );
   newNode = semantic.mathmlTree;
   if (newNode === null) {
     Debugger.getInstance().output('Walktree Case 1');
@@ -170,7 +174,7 @@ export function walkTree(semantic: SemanticNode): Element {
     Debugger.getInstance().output('Walktree Case 2');
     if (attached) {
       Debugger.getInstance().output('Walktree Case 2.1');
-      newNode = (attached.parentNode as Element);
+      newNode = attached.parentNode as Element;
     } else {
       Debugger.getInstance().output('Walktree Case 2.2');
       newNode = getInnerNode(newNode);
@@ -181,7 +185,6 @@ export function walkTree(semantic: SemanticNode): Element {
   setAttributes(newNode, semantic);
   return ascendNewNode(newNode);
 }
-
 
 /**
  * Sorts a list of children into the MathML tree. It introduces a new layer into
@@ -207,7 +210,9 @@ export function walkTree(semantic: SemanticNode): Element {
  * @return The node containing the children.
  */
 export function introduceNewLayer(
-    children: Element[], semantic: SemanticNode): Element {
+  children: Element[],
+  semantic: SemanticNode
+): Element {
   let lca = mathmlLca_(children);
   let newNode = lca.node;
   let info = lca.type;
@@ -216,14 +221,13 @@ export function introduceNewLayer(
     newNode = DomUtil.createElement('mrow');
     if (info === lcaType.PRUNED) {
       Debugger.getInstance().output('Walktree Case 1.1.0');
-      newNode =
-          introduceLayerAboveLca(newNode, (lca.node as Element), children);
+      newNode = introduceLayerAboveLca(newNode, lca.node as Element, children);
     } else if (children[0]) {
       Debugger.getInstance().output('Walktree Case 1.1.1');
       let node = attachedElement_(children);
-      let oldChildren = childrenSubset_((node.parentNode as Element), children);
+      let oldChildren = childrenSubset_(node.parentNode as Element, children);
       DomUtil.replaceNode(node, newNode);
-      oldChildren.forEach(function(x) {
+      oldChildren.forEach(function (x) {
         newNode.appendChild(x);
       });
     }
@@ -231,9 +235,8 @@ export function introduceNewLayer(
   if (!semantic.mathmlTree) {
     semantic.mathmlTree = newNode;
   }
-  return (newNode as Element);
+  return newNode as Element;
 }
-
 
 /**
  * Introduces a new layer above an LCA, in case the path to root was pruned due
@@ -245,13 +248,16 @@ export function introduceNewLayer(
  * @return The new introduced mrow node, or possibly the math node.
  */
 export function introduceLayerAboveLca(
-    mrow: Element, lca: Element, children: Element[]): Element {
+  mrow: Element,
+  lca: Element,
+  children: Element[]
+): Element {
   let innerNode = descendNode_(lca);
   // Case if lca is actually the MathML root node.
   if (SemanticUtil.hasMathTag(innerNode)) {
     Debugger.getInstance().output('Walktree Case 1.1.0.0');
     moveSemanticAttributes_(innerNode, mrow);
-    DomUtil.toArray(innerNode.childNodes).forEach(function(x) {
+    DomUtil.toArray(innerNode.childNodes).forEach(function (x) {
       mrow.appendChild(x);
     });
     let auxNode = mrow;
@@ -262,12 +268,11 @@ export function introduceLayerAboveLca(
   children[index] = innerNode;
   DomUtil.replaceNode(innerNode, mrow);
   mrow.appendChild(innerNode);
-  children.forEach(function(x) {
+  children.forEach(function (x) {
     mrow.appendChild(x);
   });
   return mrow;
 }
-
 
 /**
  * Moves semantic attributes from one node to another.
@@ -283,7 +288,6 @@ export function moveSemanticAttributes_(oldNode: Element, newNode: Element) {
   }
 }
 
-
 /**
  * Retrieves a minimal subset of children of the node that contain all the nodes
  * in the newChildren list. If there are elements in newChildren not in the
@@ -293,11 +297,13 @@ export function moveSemanticAttributes_(oldNode: Element, newNode: Element) {
  * @return The minimal subset.
  */
 export function childrenSubset_(
-    node: Element, newChildren: Element[]): Element[] {
+  node: Element,
+  newChildren: Element[]
+): Element[] {
   let oldChildren = DomUtil.toArray(node.childNodes);
   let leftIndex = +Infinity;
   let rightIndex = -Infinity;
-  newChildren.forEach(function(child) {
+  newChildren.forEach(function (child) {
     let index = oldChildren.indexOf(child);
     if (index !== -1) {
       leftIndex = Math.min(leftIndex, index);
@@ -306,7 +312,6 @@ export function childrenSubset_(
   });
   return oldChildren.slice(leftIndex, rightIndex + 1);
 }
-
 
 /**
  * Collates the childnodes in the light of potential contractions of the combine
@@ -318,7 +323,10 @@ export function childrenSubset_(
  * @return The collated list of children to be merged.
  */
 export function collateChildNodes_(
-    node: Element, children: Element[], semantic: SemanticNode): Element[] {
+  node: Element,
+  children: Element[],
+  semantic: SemanticNode
+): Element[] {
   let oldChildren = [];
   let newChildren = DomUtil.toArray(node.childNodes);
   let notFirst = false;
@@ -345,7 +353,7 @@ export function collateChildNodes_(
   }
   // If there is a trailing row with further factors.
   let rear = [];
-  let semChildren = semantic.childNodes.map(function(x) {
+  let semChildren = semantic.childNodes.map(function (x) {
     return x.mathmlTree;
   });
   while (semChildren.length) {
@@ -362,7 +370,6 @@ export function collateChildNodes_(
   }
   return oldChildren.concat(rear);
 }
-
 
 /**
  * Collects child nodes that belong to a juxtaposition tree, but that are
@@ -388,7 +395,6 @@ export function collectChildNodes_(node: Element): Element[] {
   return collect;
 }
 
-
 /**
  * Merges a list of new children with the children of the given node.
  * @param node The node whose children are merged.
@@ -397,29 +403,37 @@ export function collectChildNodes_(node: Element): Element[] {
  *     merged.
  */
 export function mergeChildren_(
-    node: Element, newChildren: Element[], semantic: SemanticNode) {
-  let oldChildren = semantic.role === SemanticRole.IMPLICIT &&
-          SemanticHeuristics.flags.combine_juxtaposition ?
-      collateChildNodes_(node, newChildren, semantic) :
-      DomUtil.toArray(node.childNodes);
+  node: Element,
+  newChildren: Element[],
+  semantic: SemanticNode
+) {
+  let oldChildren =
+    semantic.role === SemanticRole.IMPLICIT &&
+    SemanticHeuristics.flags.combine_juxtaposition
+      ? collateChildNodes_(node, newChildren, semantic)
+      : DomUtil.toArray(node.childNodes);
   if (!oldChildren.length) {
-    newChildren.forEach(function(x) {
+    newChildren.forEach(function (x) {
       node.appendChild(x);
     });
     return;
   }
   let oldCounter = 0;
   while (newChildren.length) {
-    let newChild = (newChildren[0] as Element);
-    if (oldChildren[oldCounter] === newChild ||
-        functionApplication_(oldChildren[oldCounter], newChild)) {
+    let newChild = newChildren[0] as Element;
+    if (
+      oldChildren[oldCounter] === newChild ||
+      functionApplication_(oldChildren[oldCounter], newChild)
+    ) {
       // newChild same as oldChild. Advance both.
       newChildren.shift();
       oldCounter++;
       continue;
     }
-    if (oldChildren[oldCounter] &&
-        newChildren.indexOf(oldChildren[oldCounter]) === -1) {
+    if (
+      oldChildren[oldCounter] &&
+      newChildren.indexOf(oldChildren[oldCounter]) === -1
+    ) {
       // oldChild not related to the current semantic node is skipped.
       oldCounter++;
       continue;
@@ -436,7 +450,6 @@ export function mergeChildren_(
   }
 }
 
-
 /**
  * Inserts a new child into the mml tree at the right position.
  * @param node The parent node.
@@ -444,15 +457,22 @@ export function mergeChildren_(
  * @param newChild The new child to be inserted.
  */
 export function insertNewChild_(
-    node: Element, oldChild: Element, newChild: Element) {
+  node: Element,
+  oldChild: Element,
+  newChild: Element
+) {
   if (!oldChild) {
     node.insertBefore(newChild, null);
     return;
   }
   let parent = oldChild;
   let next = parentNode_(parent);
-  while (next && next.firstChild === parent &&
-         !parent.hasAttribute('AuxiliaryImplicit') && next !== node) {
+  while (
+    next &&
+    next.firstChild === parent &&
+    !parent.hasAttribute('AuxiliaryImplicit') &&
+    next !== node
+  ) {
     parent = next;
     next = parentNode_(parent);
   }
@@ -461,7 +481,6 @@ export function insertNewChild_(
     parent.removeAttribute('AuxiliaryImplicit');
   }
 }
-
 
 /**
  * Checks if one node is a proper descendant of another.
@@ -482,7 +501,6 @@ export function isDescendant_(child: Node, node: Node): boolean {
   return false;
 }
 
-
 /**
  * Checks if both old and new Node are invisible function applications and if
  * the new node has been explicitly added. If true it replaces the old for the
@@ -492,12 +510,20 @@ export function isDescendant_(child: Node, node: Node): boolean {
  * @return True if condition holds.
  */
 export function functionApplication_(
-    oldNode: Element, newNode: Element): boolean {
+  oldNode: Element,
+  newNode: Element
+): boolean {
   let appl = SemanticAttr.functionApplication();
-  if (oldNode && newNode && oldNode.textContent && newNode.textContent &&
-      oldNode.textContent === appl && newNode.textContent === appl &&
-      newNode.getAttribute(Attribute.ADDED) === 'true') {
-    for (let i = 0, attr; attr = oldNode.attributes[i]; i++) {
+  if (
+    oldNode &&
+    newNode &&
+    oldNode.textContent &&
+    newNode.textContent &&
+    oldNode.textContent === appl &&
+    newNode.textContent === appl &&
+    newNode.getAttribute(Attribute.ADDED) === 'true'
+  ) {
+    for (let i = 0, attr; (attr = oldNode.attributes[i]); i++) {
       if (!newNode.hasAttribute(attr.nodeName)) {
         newNode.setAttribute(attr.nodeName, attr.nodeValue);
       }
@@ -508,13 +534,11 @@ export function functionApplication_(
   return false;
 }
 
-
 export enum lcaType {
   VALID = 'valid',
   INVALID = 'invalid',
   PRUNED = 'pruned'
 }
-
 
 /**
  * Finds the least common ancestor for a list of MathML nodes in the MathML
@@ -523,36 +547,39 @@ export enum lcaType {
  * @return Structure indicating if the node representing the LCA is valid and
  *     the least common ancestor if it exits.
  */
-export function mathmlLca_(children: Element[]):
-    {type: lcaType, node: Element} {
+export function mathmlLca_(children: Element[]): {
+  type: lcaType;
+  node: Element;
+} {
   // Need to avoid newly created children (invisible operators).
   let leftMost = attachedElement_(children);
   if (!leftMost) {
-    return {type: lcaType.INVALID, node: null};
+    return { type: lcaType.INVALID, node: null };
   }
-  let rightMost = (attachedElement_(children.slice().reverse()) as Element);
+  let rightMost = attachedElement_(children.slice().reverse()) as Element;
   if (leftMost === rightMost) {
-    return {type: lcaType.VALID, node: leftMost};
+    return { type: lcaType.VALID, node: leftMost };
   }
   let leftPath = pathToRoot_(leftMost);
   let newLeftPath = prunePath_(leftPath, children);
-  let rightPath = pathToRoot_(rightMost, function(x) {
+  let rightPath = pathToRoot_(rightMost, function (x) {
     return newLeftPath.indexOf(x) !== -1;
   });
   let lca = rightPath[0];
   let lIndex = newLeftPath.indexOf(lca);
   if (lIndex === -1) {
-    return {type: lcaType.INVALID, node: null};
+    return { type: lcaType.INVALID, node: null };
   }
   return {
-    type: newLeftPath.length !== leftPath.length ?
-        lcaType.PRUNED :
-        validLca_(newLeftPath[lIndex + 1], rightPath[1]) ? lcaType.VALID :
-                                                           lcaType.INVALID,
+    type:
+      newLeftPath.length !== leftPath.length
+        ? lcaType.PRUNED
+        : validLca_(newLeftPath[lIndex + 1], rightPath[1])
+        ? lcaType.VALID
+        : lcaType.INVALID,
     node: lca
   };
 }
-
 
 /**
  * Prunes a path from a child element to the root node (where the root node is
@@ -568,7 +595,6 @@ export function prunePath_(path: Element[], children: Element[]): Element[] {
   }
   return path.slice(0, i + 1);
 }
-
 
 /**
  * Finds the first elements in a list of nodes that has a parent pointer.
@@ -587,7 +613,6 @@ export function attachedElement_(nodes: Element[]): Element {
   return attached;
 }
 
-
 /**
  * Computes the path from a node in the MathML tree to the root or until the
  * optional test fires.
@@ -598,7 +623,9 @@ export function attachedElement_(nodes: Element[]): Element {
  *     element in the array and array contains at least the original node.
  */
 export function pathToRoot_(
-    node: Element, opt_test?: (p1: Element) => boolean): Element[] {
+  node: Element,
+  opt_test?: (p1: Element) => boolean
+): Element[] {
   let test = opt_test || ((_x) => false);
   let path = [node];
   while (!test(node) && !SemanticUtil.hasMathTag(node) && node.parentNode) {
@@ -607,7 +634,6 @@ export function pathToRoot_(
   }
   return path;
 }
-
 
 /**
  * Checks if a LCA of two nodes is valid. It takes the penultimate node in the
@@ -624,7 +650,6 @@ export function validLca_(left: Element, right: Element): boolean {
   return !!(left && right && !left.previousSibling && !right.nextSibling);
 }
 
-
 /**
  * Computes the empty layout node that is the highest parent of the given node
  * and that only has one child.
@@ -638,7 +663,6 @@ export function ascendNewNode(newNode: Element): Element {
   return newNode;
 }
 
-
 /**
  * Descends a node as long as it only contains single empty tags, that do not
  * have semantic annotations already, while ignoring tags like merror, etc.
@@ -651,17 +675,21 @@ export function descendNode_(node: Element): Element {
   if (!children) {
     return node;
   }
-  let remainder = children.filter(function(child) {
-    return child.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
-        !SemanticUtil.hasIgnoreTag(child);
+  let remainder = children.filter(function (child) {
+    return (
+      child.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
+      !SemanticUtil.hasIgnoreTag(child)
+    );
   });
-  if (remainder.length === 1 && SemanticUtil.hasEmptyTag(remainder[0]) &&
-      !remainder[0].hasAttribute(Attribute.TYPE)) {
+  if (
+    remainder.length === 1 &&
+    SemanticUtil.hasEmptyTag(remainder[0]) &&
+    !remainder[0].hasAttribute(Attribute.TYPE)
+  ) {
     return descendNode_(remainder[0]);
   }
   return node;
 }
-
 
 /**
  * Checks if the node is a unit child, annotation it is the only child of its
@@ -674,11 +702,10 @@ export function unitChild_(node: Element): boolean {
   if (!parent || !SemanticUtil.hasEmptyTag(parent)) {
     return false;
   }
-  return DomUtil.toArray(parent.childNodes).every(function(child) {
+  return DomUtil.toArray(parent.childNodes).every(function (child) {
     return child === node || isIgnorable_(child);
   });
 }
-
 
 /**
  * Checks recursively if the node is an element that can be ignored, i.e., only
@@ -694,14 +721,16 @@ export function isIgnorable_(node: Element): boolean {
     return true;
   }
   let children = DomUtil.toArray(node.childNodes);
-  if (!SemanticUtil.hasEmptyTag(node) && children.length ||
-      SemanticUtil.hasDisplayTag(node) || node.hasAttribute(Attribute.TYPE) ||
-      SemanticUtil.isOrphanedGlyph(node)) {
+  if (
+    (!SemanticUtil.hasEmptyTag(node) && children.length) ||
+    SemanticUtil.hasDisplayTag(node) ||
+    node.hasAttribute(Attribute.TYPE) ||
+    SemanticUtil.isOrphanedGlyph(node)
+  ) {
     return false;
   }
   return DomUtil.toArray(node.childNodes).every(isIgnorable_);
 }
-
 
 /**
  * Returns the parent node of the element in the correct type.
@@ -709,9 +738,8 @@ export function isIgnorable_(node: Element): boolean {
  * @return Parent element.
  */
 export function parentNode_(element: Element): Element {
-  return (element.parentNode as Element);
+  return element.parentNode as Element;
 }
-
 
 /**
  * Adds a collapsed attribute to the given node, according to the collapsed
@@ -725,7 +753,6 @@ export function addCollapsedAttribute(node: Element, collapsed: Sexp) {
   node.setAttribute(Attribute.COLLAPSED, skeleton.toString());
 }
 
-
 /**
  * Clones a content node.
  * @param content The content node.
@@ -735,12 +762,12 @@ export function cloneContentNode(content: SemanticNode): Element {
   if (content.mathml.length) {
     return walkTree(content);
   }
-  let clone = SETTINGS.implicit ? createInvisibleOperator_(content) :
-                                  DomUtil.createElement('mrow');
+  let clone = SETTINGS.implicit
+    ? createInvisibleOperator_(content)
+    : DomUtil.createElement('mrow');
   content.mathml = [clone];
   return clone;
 }
-
 
 /**
  * Concatenates node ids into a comma separated lists.
@@ -749,12 +776,11 @@ export function cloneContentNode(content: SemanticNode): Element {
  */
 export function makeIdList(nodes: SemanticNode[]): string {
   return nodes
-      .map(function(node) {
-        return node.id;
-      })
-      .join(',');
+    .map(function (node) {
+      return node.id;
+    })
+    .join(',');
 }
-
 
 /**
  * Sets semantic attributes in a MathML node.
@@ -764,7 +790,7 @@ export function makeIdList(nodes: SemanticNode[]): string {
 export function setAttributes(mml: Element, semantic: SemanticNode) {
   mml.setAttribute(Attribute.TYPE, semantic.type);
   let attributes = semantic.allAttributes();
-  for (let i = 0, attr; attr = attributes[i]; i++) {
+  for (let i = 0, attr; (attr = attributes[i]); i++) {
     mml.setAttribute(ATTRIBUTE_PREFIX_ + attr[0].toLowerCase(), attr[1]);
   }
   if (semantic.childNodes.length) {
@@ -778,7 +804,6 @@ export function setAttributes(mml: Element, semantic: SemanticNode) {
   }
   setPostfix(mml, semantic);
 }
-
 
 /**
  * Sets postfix attributes to surface properties via suffixes. Examples: link,
@@ -799,7 +824,6 @@ export function setPostfix(mml: Element, semantic: SemanticNode) {
   }
 }
 
-
 /**
  * Rewrites an mfenced node to an mrow node.
  * @param mml The MathML node.
@@ -810,18 +834,17 @@ export function rewriteMfenced(mml: Element): Element {
     return mml;
   }
   let newNode = DomUtil.createElement('mrow');
-  for (let i = 0, attr; attr = mml.attributes[i]; i++) {
+  for (let i = 0, attr; (attr = mml.attributes[i]); i++) {
     if (['open', 'close', 'separators'].indexOf(attr.name) === -1) {
       newNode.setAttribute(attr.name, attr.value);
     }
   }
-  DomUtil.toArray(mml.childNodes).forEach(function(x) {
+  DomUtil.toArray(mml.childNodes).forEach(function (x) {
     newNode.appendChild(x);
   });
   DomUtil.replaceNode(mml, newNode);
   return newNode;
 }
-
 
 /**
  * Makes a new MathML element for an invisible operator or one added
@@ -838,21 +861,21 @@ export function createInvisibleOperator_(operator: SemanticNode): Element {
   return moNode;
 }
 
-
 /**
  * Adds a relevant operator attribute to the a list of content nodes.
  * @param semantic The semantic tree node.
  * @param content The list of content nodes.
  */
 export function setOperatorAttribute_(
-    semantic: SemanticNode, content: Element[]) {
+  semantic: SemanticNode,
+  content: Element[]
+) {
   let operator =
-      semantic.type + (semantic.textContent ? ',' + semantic.textContent : '');
-  content.forEach(function(c) {
+    semantic.type + (semantic.textContent ? ',' + semantic.textContent : '');
+  content.forEach(function (c) {
     getInnerNode(c).setAttribute(Attribute.OPERATOR, operator);
   });
 }
-
 
 /**
  * Recursively computes the innermost element node. That is for an element it
@@ -868,11 +891,11 @@ export function getInnerNode(node: Element): Element {
   if (!children) {
     return node;
   }
-  let remainder = children.filter(function(child) {
+  let remainder = children.filter(function (child) {
     return !isIgnorable_(child);
   });
   let result = [];
-  for (let i = 0, remain; remain = remainder[i]; i++) {
+  for (let i = 0, remain; (remain = remainder[i]); i++) {
     if (SemanticUtil.hasEmptyTag(remain)) {
       let nextInner = getInnerNode(remain);
       if (nextInner && nextInner !== remain) {
@@ -888,7 +911,6 @@ export function getInnerNode(node: Element): Element {
   return node;
 }
 
-
 /**
  * Creates formatted output  for MathML and semantic tree expression.
  * REMARK: Helper function.
@@ -898,13 +920,16 @@ export function getInnerNode(node: Element): Element {
  * @param opt_wiki Flag to specify wiki output.
  */
 export function formattedOutput(
-    mml: Element, expr: Element, tree: SemanticTree, opt_wiki?: boolean) {
+  mml: Element,
+  expr: Element,
+  tree: SemanticTree,
+  opt_wiki?: boolean
+) {
   let wiki = opt_wiki || false;
   formattedOutput_(mml, 'Original MathML', wiki);
   formattedOutput_(tree, 'Semantic Tree', wiki);
   formattedOutput_(expr, 'Semantically enriched MathML', wiki);
 }
-
 
 /**
  * Prints formatted output for MathML and semantic tree expression. Depending on
@@ -915,16 +940,19 @@ export function formattedOutput(
  * @param wiki Flag to specify wiki output.
  */
 export function formattedOutput_(
-    element: Element|SemanticTree, name: string, wiki: boolean) {
+  element: Element | SemanticTree,
+  name: string,
+  wiki: boolean
+) {
   let output = DomUtil.formatXml(element.toString());
   if (!wiki) {
     console.info(output);
     return;
   }
   console.info(
-      name + ':\n```html\n' + removeAttributePrefix(output) + '\n```\n');
+    name + ':\n```html\n' + removeAttributePrefix(output) + '\n```\n'
+  );
 }
-
 
 /**
  * Removes the semantic prefix from the attributes of an enriched MathML element
@@ -943,7 +971,6 @@ export function removeAttributePrefix(mml: string): string {
   return mml.toString().replace(new RegExp(ATTRIBUTE_PREFIX_, 'g'), '');
 }
 
-
 /**
  * Creates an data semantic attribute by adding the correct prefix.
  * @param attr The attribute.
@@ -951,9 +978,8 @@ export function removeAttributePrefix(mml: string): string {
  */
 // TODO (TS): Again this should have been return time Attribute
 export function addPrefix(attr: string): Attribute {
-  return ATTRIBUTE_PREFIX_ + attr as Attribute;
+  return (ATTRIBUTE_PREFIX_ + attr) as Attribute;
 }
-
 
 /**
  * Collapses a punctuated node that only contains invisible separators.
@@ -965,17 +991,19 @@ export function addPrefix(attr: string): Attribute {
  *     strings for the collapsed structure is returned, otherwise the node id.
  */
 export function collapsePunctuated(
-    semantic: SemanticNode, opt_children?: Element[]): Sexp {
+  semantic: SemanticNode,
+  opt_children?: Element[]
+): Sexp {
   let optional = !!opt_children;
   let children = opt_children || [];
   let parent = semantic.parent;
-  let contentIds = semantic.contentNodes.map(function(x) {
+  let contentIds = semantic.contentNodes.map(function (x) {
     return x.id;
   });
   // TODO (TS):  work out the type for Sexp properly.
   (contentIds as any).unshift('c');
   let childIds = [semantic.id, contentIds];
-  for (let i = 0, child; child = semantic.childNodes[i]; i++) {
+  for (let i = 0, child; (child = semantic.childNodes[i]); i++) {
     let mmlChild = walkTree(child);
     children.push(mmlChild);
     let innerNode = getInnerNode(mmlChild);
@@ -987,7 +1015,6 @@ export function collapsePunctuated(
   return childIds;
 }
 
-
 /**
  * Prints a list of nodes.
  * @param title A string to print first.
@@ -995,7 +1022,7 @@ export function collapsePunctuated(
  */
 export function printNodeList__(title: string, nodes: NodeList) {
   console.info(title);
-  DomUtil.toArray(nodes).forEach(function(x) {
+  DomUtil.toArray(nodes).forEach(function (x) {
     console.info(x.toString());
   });
   console.info('<<<<<<<<<<<<<<<<<');

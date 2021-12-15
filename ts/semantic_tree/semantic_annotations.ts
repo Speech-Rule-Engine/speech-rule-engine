@@ -19,29 +19,24 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {SemanticAnnotator, SemanticVisitor} from './semantic_annotator';
-import {SemanticNode} from './semantic_node';
-
+import { SemanticAnnotator, SemanticVisitor } from './semantic_annotator';
+import { SemanticNode } from './semantic_node';
 
 export namespace SemanticAnnotations {
-
   // TODO (TS): Replace this with maps. Exported for tests only.
-  export let annotators: {[key: string]: SemanticAnnotator} = {};
+  export let annotators: { [key: string]: SemanticAnnotator } = {};
 
-  export let visitors: {[key: string]: SemanticVisitor} = {};
-
+  export let visitors: { [key: string]: SemanticVisitor } = {};
 
   /**
    * Registers an annotator.
    * @param annotator The annotator.
    */
-  export function register(annotator: SemanticAnnotator|SemanticVisitor) {
+  export function register(annotator: SemanticAnnotator | SemanticVisitor) {
     let name = annotator.domain + ':' + annotator.name;
-    (annotator instanceof SemanticAnnotator ? annotators :
-                                              visitors)[name] = annotator;
+    (annotator instanceof SemanticAnnotator ? annotators : visitors)[name] =
+      annotator;
   }
-
 
   /**
    * Activates a particular annotator.
@@ -55,7 +50,6 @@ export namespace SemanticAnnotations {
       annotator.active = true;
     }
   }
-
 
   /**
    * Annotates the given semantic node recursively.
@@ -71,8 +65,7 @@ export namespace SemanticAnnotations {
     for (let name of Object.keys(visitors)) {
       let visitor = visitors[name];
       if (visitor.active) {
-        visitors[name].visit(
-            node, Object.assign({}, visitors[name].def));
+        visitors[name].visit(node, Object.assign({}, visitors[name].def));
       }
     }
   }

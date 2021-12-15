@@ -18,13 +18,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Grammar} from '../../rule_engine/grammar';
-import {Numbers, NUMBERS as NUMB} from '../messages';
+import { Grammar } from '../../rule_engine/grammar';
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 //
 // This work was sponsored by TextHelp
 //
-
 
 /**
  * Turns a tens position in a number into words.
@@ -41,7 +40,6 @@ function tensToWords_(num: number): string {
   return tens && ones ? tens + ' y ' + ones : tens || ones;
 }
 
-
 /**
  * Translates a number of up to twelve digits into a string representation.
  * @param num The number to translate.
@@ -57,12 +55,10 @@ function hundredsToWords_(num: number): string {
       return hundreds;
     }
     // Creates ciento.
-    return hundreds + 'to' +
-        ' ' + tens;
+    return hundreds + 'to' + ' ' + tens;
   }
   return hundreds && tens ? hundreds + ' ' + tens : hundreds || tens;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -141,22 +137,19 @@ function numberToOrdinal(num: number, _plural: boolean): string {
   return result.join(' ');
 }
 
-
 /**
  * Creates a simple ordinal string from a number.
  * @param num The number to be converted.
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  let gender = Grammar.getInstance().getParameter('gender') as string;
   return num.toString() + (gender === 'f' ? 'a' : 'o');
 }
-
 
 const NUMBERS: Numbers = NUMB();
 NUMBERS.simpleOrdinal = simpleOrdinal;
 NUMBERS.numberToWords = numberToWords;
 NUMBERS.numberToOrdinal = numberToOrdinal;
-
 
 export default NUMBERS;

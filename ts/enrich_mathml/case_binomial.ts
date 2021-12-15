@@ -20,14 +20,12 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseBinomial extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
@@ -39,10 +37,12 @@ export class CaseBinomial extends AbstractEnrichCase {
    * @return True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
-    return !semantic.mathmlTree && semantic.type === SemanticType.LINE &&
-        semantic.role === SemanticRole.BINOMIAL;
+    return (
+      !semantic.mathmlTree &&
+      semantic.type === SemanticType.LINE &&
+      semantic.role === SemanticRole.BINOMIAL
+    );
   }
-
 
   /**
    * @override
@@ -53,7 +53,6 @@ export class CaseBinomial extends AbstractEnrichCase {
     this.mml = semantic.mathmlTree;
   }
 
-
   /**
    * @override
    */
@@ -62,7 +61,7 @@ export class CaseBinomial extends AbstractEnrichCase {
       return this.mml;
     }
     let child = this.semantic.childNodes[0];
-    this.mml = EnrichMathml.walkTree((child as SemanticNode));
+    this.mml = EnrichMathml.walkTree(child as SemanticNode);
     // Adds a redundant mrow to include the line information.
     if (this.mml.hasAttribute(EnrichMathml.Attribute.TYPE)) {
       let mrow = DomUtil.createElement('mrow');

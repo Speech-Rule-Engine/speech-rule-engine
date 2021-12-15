@@ -19,14 +19,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {interleaveLists} from '../common/base_util';
-import {Highlighter} from '../highlighter/highlighter';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SpeechGenerator} from '../speech_generator/speech_generator';
-import {AbstractWalker} from './abstract_walker';
-import {Levels} from './levels';
-
+import { interleaveLists } from '../common/base_util';
+import { Highlighter } from '../highlighter/highlighter';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SpeechGenerator } from '../speech_generator/speech_generator';
+import { AbstractWalker } from './abstract_walker';
+import { Levels } from './levels';
 
 /**
  * @override
@@ -37,13 +35,15 @@ export class SyntaxWalker extends AbstractWalker<string> {
    */
   public levels: Levels<string> = null;
   constructor(
-      public node: Element, public generator: SpeechGenerator,
-      public highlighter: Highlighter, xml: string) {
+    public node: Element,
+    public generator: SpeechGenerator,
+    public highlighter: Highlighter,
+    xml: string
+  ) {
     super(node, generator, highlighter, xml);
 
     this.restoreState();
   }
-
 
   /**
    * @override
@@ -53,7 +53,6 @@ export class SyntaxWalker extends AbstractWalker<string> {
     levels.push([this.primaryId()]);
     return levels as Levels<string>;
   }
-
 
   /**
    * @override
@@ -67,7 +66,6 @@ export class SyntaxWalker extends AbstractWalker<string> {
     this.levels.pop();
     return this.singletonFocus(parent);
   }
-
 
   /**
    * @override
@@ -85,11 +83,15 @@ export class SyntaxWalker extends AbstractWalker<string> {
     return focus;
   }
 
-
   /**
    * @override
    */
-  public combineContentChildren(type: SemanticType, role: SemanticRole, content: string[], children: string[]): string[] {
+  public combineContentChildren(
+    type: SemanticType,
+    role: SemanticRole,
+    content: string[],
+    children: string[]
+  ): string[] {
     switch (type) {
       case SemanticType.RELSEQ:
       case SemanticType.INFIXOP:
@@ -122,7 +124,6 @@ export class SyntaxWalker extends AbstractWalker<string> {
     }
   }
 
-
   /**
    * @override
    */
@@ -136,7 +137,6 @@ export class SyntaxWalker extends AbstractWalker<string> {
     return id ? this.singletonFocus(id) : null;
   }
 
-
   /**
    * @override
    */
@@ -149,7 +149,6 @@ export class SyntaxWalker extends AbstractWalker<string> {
     let id = this.levels.get(index + 1);
     return id ? this.singletonFocus(id) : null;
   }
-
 
   /**
    * @override

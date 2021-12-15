@@ -20,16 +20,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AdhocSpeechGenerator} from './adhoc_speech_generator';
-import {ColorGenerator} from './color_generator';
-import {DirectSpeechGenerator} from './direct_speech_generator';
-import {DummySpeechGenerator} from './dummy_speech_generator';
-import {NodeSpeechGenerator} from './node_speech_generator';
-import {SpeechGenerator} from './speech_generator';
-import {SummarySpeechGenerator} from './summary_speech_generator';
-import {TreeSpeechGenerator} from './tree_speech_generator';
-
+import { AdhocSpeechGenerator } from './adhoc_speech_generator';
+import { ColorGenerator } from './color_generator';
+import { DirectSpeechGenerator } from './direct_speech_generator';
+import { DummySpeechGenerator } from './dummy_speech_generator';
+import { NodeSpeechGenerator } from './node_speech_generator';
+import { SpeechGenerator } from './speech_generator';
+import { SummarySpeechGenerator } from './summary_speech_generator';
+import { TreeSpeechGenerator } from './tree_speech_generator';
 
 /**
  * Produces a speech generator that corresponds to the given type.
@@ -41,8 +39,7 @@ export function generator(type: string): SpeechGenerator {
   return constructor();
 }
 
-
-export const generatorMapping_: {[key: string]: () => SpeechGenerator} = {
+export const generatorMapping_: { [key: string]: () => SpeechGenerator } = {
   Adhoc: () => new AdhocSpeechGenerator(),
   Color: () => new ColorGenerator(),
   Direct: () => new DirectSpeechGenerator(),

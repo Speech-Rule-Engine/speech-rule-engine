@@ -20,15 +20,13 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
+import { SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseTable extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
@@ -45,11 +43,12 @@ export class CaseTable extends AbstractEnrichCase {
    * @return True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
-    return semantic.type === SemanticType.MATRIX ||
-        semantic.type === SemanticType.VECTOR ||
-        semantic.type === SemanticType.CASES;
+    return (
+      semantic.type === SemanticType.MATRIX ||
+      semantic.type === SemanticType.VECTOR ||
+      semantic.type === SemanticType.CASES
+    );
   }
-
 
   /**
    * @override
@@ -59,23 +58,25 @@ export class CaseTable extends AbstractEnrichCase {
     this.mml = semantic.mathmlTree;
   }
 
-
   /**
    * @override
    */
   public getMathml() {
     let lfence = EnrichMathml.cloneContentNode(
-        (this.semantic.contentNodes[0] as SemanticNode));
-    let rfence = this.semantic.contentNodes[1] ?
-        EnrichMathml.cloneContentNode(
-            (this.semantic.contentNodes[1] as SemanticNode)) :
-        null;
-    this.inner =
-        this.semantic.childNodes.map(EnrichMathml.walkTree);
+      this.semantic.contentNodes[0] as SemanticNode
+    );
+    let rfence = this.semantic.contentNodes[1]
+      ? EnrichMathml.cloneContentNode(
+          this.semantic.contentNodes[1] as SemanticNode
+        )
+      : null;
+    this.inner = this.semantic.childNodes.map(EnrichMathml.walkTree);
     if (!this.mml) {
       this.mml = EnrichMathml.introduceNewLayer(
         // TODO (TS): changed this here to create a single list!
-        [lfence].concat(this.inner, [rfence]), this.semantic);
+        [lfence].concat(this.inner, [rfence]),
+        this.semantic
+      );
     } else if (DomUtil.tagName(this.mml) === 'MFENCED') {
       let children = this.mml.childNodes;
       this.mml.insertBefore(lfence, children[0] || null);

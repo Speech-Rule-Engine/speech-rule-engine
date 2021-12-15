@@ -23,17 +23,15 @@
 // This work was sponsored by
 //
 
-import {createLocale, Locale} from '../locale';
-import {combinePostfixIndex} from '../locale_util';
+import { createLocale, Locale } from '../locale';
+import { combinePostfixIndex } from '../locale_util';
 import NUMBERS from '../numbers/numbers_ca';
-import {Combiners} from '../transformers';
+import { Combiners } from '../transformers';
 
-
-let sansserifCombiner = function(letter: string, font: string, cap: string) {
+let sansserifCombiner = function (letter: string, font: string, cap: string) {
   letter = 'sans serif ' + (cap ? cap + ' ' + letter : letter);
   return font ? letter + ' ' + font : letter;
 };
-
 
 let locale: Locale = null;
 
@@ -51,11 +49,11 @@ function create(): Locale {
 
   loc.COMBINERS['sansserif'] = sansserifCombiner;
 
-  loc.FUNCTIONS.fracNestDepth = _node => false;
-  loc.FUNCTIONS.radicalNestDepth = _count => '';
-  loc.FUNCTIONS.combineRootIndex = combinePostfixIndex,
-  loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c;
-  loc.FUNCTIONS.fontRegexp = font => RegExp('^' + font + ' ');
+  loc.FUNCTIONS.fracNestDepth = (_node) => false;
+  loc.FUNCTIONS.radicalNestDepth = (_count) => '';
+  (loc.FUNCTIONS.combineRootIndex = combinePostfixIndex),
+    (loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c);
+  loc.FUNCTIONS.fontRegexp = (font) => RegExp('^' + font + ' ');
   loc.FUNCTIONS.si = (prefix: string, unit: string) => {
     if (unit.match(/^metre/)) {
       prefix = prefix.replace(/a$/, 'à').replace(/o$/, 'ò').replace(/i$/, 'í');

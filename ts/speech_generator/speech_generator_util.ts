@@ -20,17 +20,15 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AuditoryDescription} from '../audio/auditory_description';
+import { AuditoryDescription } from '../audio/auditory_description';
 import AuralRendering from '../audio/aural_rendering';
 import * as DomUtil from '../common/dom_util';
 import XpathUtil from '../common/xpath_util';
-import {Attribute} from '../enrich_mathml/enrich_mathml';
-import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticTree} from '../semantic_tree/semantic_tree';
+import { Attribute } from '../enrich_mathml/enrich_mathml';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { SemanticTree } from '../semantic_tree/semantic_tree';
 import * as WalkerUtil from '../walker/walker_util';
-
 
 /**
  * Compute speech string for the xml version of the semantic tree.
@@ -41,7 +39,6 @@ import * as WalkerUtil from '../walker/walker_util';
 export function computeSpeech(xml: Element): AuditoryDescription[] {
   return SpeechRuleEngine.getInstance().evaluateNode(xml);
 }
-
 
 /**
  * Computes speech descriptions for a single semantic node.
@@ -54,7 +51,6 @@ export function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
   return computeSpeech(tree.xml());
 }
 
-
 /**
  * Computes speech markup for the xml version of the semantic tree.
  * @param tree The semantic node as XML.
@@ -64,7 +60,6 @@ export function computeMarkup(tree: Element): string {
   let descrs = computeSpeech(tree);
   return AuralRendering.markup(descrs);
 }
-
 
 /**
  * Computes speech markup for a single semantic node.
@@ -76,21 +71,27 @@ export function recomputeMarkup(semantic: SemanticNode): string {
   return AuralRendering.markup(descrs);
 }
 
-
 /**
  * Add speech as a semantic attributes in a MathML node.
  * @param mml The MathML node.
  * @param semantic The semantic tree node.
  * @param snode The XML node representing the semantic tree.
  */
-export function addSpeech(mml: Element, semantic: SemanticNode, snode: Element) {
+export function addSpeech(
+  mml: Element,
+  semantic: SemanticNode,
+  snode: Element
+) {
   let sxml = DomUtil.querySelectorAllByAttrValue(
-      snode, 'id', semantic.id.toString())[0];
-  let speech = sxml ? AuralRendering.markup(computeSpeech(sxml)) :
-                      recomputeMarkup(semantic);
+    snode,
+    'id',
+    semantic.id.toString()
+  )[0];
+  let speech = sxml
+    ? AuralRendering.markup(computeSpeech(sxml))
+    : recomputeMarkup(semantic);
   mml.setAttribute(Attribute.SPEECH, speech);
 }
-
 
 /**
  * Add markup for the given modality (generally other than speech) in a MathML
@@ -100,11 +101,13 @@ export function addSpeech(mml: Element, semantic: SemanticNode, snode: Element) 
  * @param modality The speech modality.
  */
 export function addModality(
-    mml: Element, semantic: SemanticNode, modality: string) {
+  mml: Element,
+  semantic: SemanticNode,
+  modality: string
+) {
   let markup = recomputeMarkup(semantic);
   mml.setAttribute(modality, markup);
 }
-
 
 /**
  * Adds a speech prefix if necessary.
@@ -118,7 +121,6 @@ export function addPrefix(mml: Element, semantic: SemanticNode) {
   }
 }
 
-
 /**
  * Computes a speech prefix if it exists.
  * @param semantic The semantic tree node.
@@ -129,7 +131,6 @@ export function retrievePrefix(semantic: SemanticNode): string {
   return AuralRendering.markup(descrs);
 }
 
-
 /**
  * Adds a speech prefix if necessary.
  * @param semantic The semantic tree node.
@@ -138,8 +139,10 @@ export function retrievePrefix(semantic: SemanticNode): string {
  */
 export function computePrefix_(semantic: SemanticNode): AuditoryDescription[] {
   let tree = SemanticTree.fromRoot(semantic);
-  let nodes =
-      XpathUtil.evalXPath('.//*[@id="' + semantic.id + '"]', tree.xml()) as Element[];
+  let nodes = XpathUtil.evalXPath(
+    './/*[@id="' + semantic.id + '"]',
+    tree.xml()
+  ) as Element[];
   let node = nodes[0];
   if (nodes.length > 1) {
     // Find the node we actually want. Here the problem is that our semantic
@@ -148,18 +151,20 @@ export function computePrefix_(semantic: SemanticNode): AuditoryDescription[] {
     // therefore not create unique ids.
     node = nodeAtPosition_(semantic, nodes) || node;
   }
-  return node ? SpeechRuleEngine.getInstance().runInSetting(
-                    {
-                      'modality': 'prefix',
-                      'domain': 'default',
-                      'style': 'default',
-                      'strict': true,
-                      'speech': true
-                    },
-                    function() {
-                      return SpeechRuleEngine.getInstance().evaluateNode(node);
-                    }) :
-                [];
+  return node
+    ? SpeechRuleEngine.getInstance().runInSetting(
+        {
+          modality: 'prefix',
+          domain: 'default',
+          style: 'default',
+          strict: true,
+          speech: true
+        },
+        function () {
+          return SpeechRuleEngine.getInstance().evaluateNode(node);
+        }
+      )
+    : [];
 }
 /**
  * Finds the nodes at the same position as the semantic node in a list of XML
@@ -169,7 +174,9 @@ export function computePrefix_(semantic: SemanticNode): AuditoryDescription[] {
  * @return The node at the exact tree position of the semantic node.
  */
 export function nodeAtPosition_(
-    semantic: SemanticNode, nodes: Element[]): Element {
+  semantic: SemanticNode,
+  nodes: Element[]
+): Element {
   let node = nodes[0];
   if (!semantic.parent) {
     return node;
@@ -179,21 +186,24 @@ export function nodeAtPosition_(
     path.push(semantic.id);
     semantic = semantic.parent;
   }
-  let pathEquals = function(xml: Element, path: number[]) {
-    while (path.length && path.shift().toString() === xml.getAttribute('id') &&
-           xml.parentNode && xml.parentNode.parentNode) {
+  let pathEquals = function (xml: Element, path: number[]) {
+    while (
+      path.length &&
+      path.shift().toString() === xml.getAttribute('id') &&
+      xml.parentNode &&
+      xml.parentNode.parentNode
+    ) {
       xml = xml.parentNode.parentNode as Element;
     }
     return !path.length;
   };
-  for (let i = 0, xml; xml = nodes[i]; i++) {
+  for (let i = 0, xml; (xml = nodes[i]); i++) {
     if (pathEquals(xml, path.slice())) {
       return xml;
     }
   }
   return node;
 }
-
 
 /**
  * Connects maction nodes as alternatives if they are collapsed in the actual
@@ -204,7 +214,7 @@ export function nodeAtPosition_(
  */
 export function connectMactions(node: Element, mml: Element, stree: Element) {
   let mactions = DomUtil.querySelectorAll(mml, 'maction');
-  for (let i = 0, maction; maction = mactions[i]; i++) {
+  for (let i = 0, maction; (maction = mactions[i]); i++) {
     // Get the span with the maction id in node.
     let aid = maction.getAttribute('id');
     let span = DomUtil.querySelectorAllByAttrValue(node, 'id', aid)[0];
@@ -245,7 +255,6 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
   }
 }
 
-
 /**
  * Connects all maction nodes as alternatives.
  * @param mml The mathml element.
@@ -253,14 +262,13 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
  */
 export function connectAllMactions(mml: Element, stree: Element) {
   let mactions = DomUtil.querySelectorAll(mml, 'maction');
-  for (let i = 0, maction; maction = mactions[i]; i++) {
+  for (let i = 0, maction; (maction = mactions[i]); i++) {
     let lchild = maction.childNodes[1] as Element;
     let mid = lchild.getAttribute(Attribute.ID);
     let cst = DomUtil.querySelectorAllByAttrValue(stree, 'id', mid)[0];
     cst.setAttribute('alternative', mid);
   }
 }
-
 
 /**
  * Computes a speech summary if it exists.
@@ -272,7 +280,6 @@ export function retrieveSummary(node: Element): string {
   return AuralRendering.markup(descrs);
 }
 
-
 /**
  * Adds a speech summary if necessary.
  * @param node The XML node.
@@ -280,10 +287,12 @@ export function retrieveSummary(node: Element): string {
  *     for the summary.
  */
 export function computeSummary_(node: Element): AuditoryDescription[] {
-  return node ? SpeechRuleEngine.getInstance().runInSetting(
-                    {'modality': 'summary', 'strict': false, 'speech': true},
-                    function() {
-                      return SpeechRuleEngine.getInstance().evaluateNode(node);
-                    }) :
-                [];
+  return node
+    ? SpeechRuleEngine.getInstance().runInSetting(
+        { modality: 'summary', strict: false, speech: true },
+        function () {
+          return SpeechRuleEngine.getInstance().evaluateNode(node);
+        }
+      )
+    : [];
 }

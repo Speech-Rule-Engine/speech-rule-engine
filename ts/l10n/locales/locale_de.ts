@@ -23,31 +23,37 @@
 // This work was sponsored by ETH Zurich
 //
 
-import {Grammar} from '../../rule_engine/grammar';
-import {localFont} from '../locale_util';
-import {createLocale, Locale} from '../locale';
+import { Grammar } from '../../rule_engine/grammar';
+import { localFont } from '../locale_util';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_de';
 
-let germanPrefixCombiner = function(letter: string, font: string, cap: string) {
+let germanPrefixCombiner = function (
+  letter: string,
+  font: string,
+  cap: string
+) {
   if (cap === 's') {
-    font = font.split(' ')
-               .map(function(x) {
-                 return x.replace(/s$/, '');
-               })
-               .join(' ');
+    font = font
+      .split(' ')
+      .map(function (x) {
+        return x.replace(/s$/, '');
+      })
+      .join(' ');
     cap = '';
   }
   letter = cap ? cap + ' ' + letter : letter;
   return font ? font + ' ' + letter : letter;
 };
 
-
-let germanPostfixCombiner = function(
-  letter: string, font: string, cap: string) {
+let germanPostfixCombiner = function (
+  letter: string,
+  font: string,
+  cap: string
+) {
   letter = !cap || cap === 's' ? letter : cap + ' ' + letter;
   return font ? letter + ' ' + font : letter;
 };
-
 
 let locale: Locale = null;
 
@@ -76,9 +82,10 @@ function create(): Locale {
     let count = (b ? b + ' ' : '') + a;
     return c.match(/ /) ? c.replace(/ /, ' ' + count + ' ') : count + ' ' + c;
   };
-  loc.FUNCTIONS.fontRegexp = function(font: string) {
-    font = font.split(' ')
-      .map(function(x) {
+  loc.FUNCTIONS.fontRegexp = function (font: string) {
+    font = font
+      .split(' ')
+      .map(function (x) {
         return x.replace(/s$/, '(|s)');
       })
       .join(' ');
@@ -87,8 +94,9 @@ function create(): Locale {
   loc.CORRECTIONS.correctOne = (num: string) => num.replace(/^eins$/, 'ein');
   loc.CORRECTIONS.localFontNumber = (font: string) => {
     let realFont = localFont(font);
-    return realFont.split(' ')
-      .map(function(x) {
+    return realFont
+      .split(' ')
+      .map(function (x) {
         return x.replace(/s$/, '');
       })
       .join(' ');
@@ -98,9 +106,7 @@ function create(): Locale {
     let decl = Grammar.getInstance().getParameter('case');
     let plural = Grammar.getInstance().getParameter('plural');
     if (decl === 'dative') {
-      return {'der': 'dem',
-              'die': (plural ? 'den' : 'der'),
-              'das': 'dem'}[name];
+      return { der: 'dem', die: plural ? 'den' : 'der', das: 'dem' }[name];
     }
     return name;
   };

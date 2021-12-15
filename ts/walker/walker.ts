@@ -19,16 +19,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { KeyCode } from '../common/event_util';
+import { AxisMap } from '../rule_engine/dynamic_cstr';
 
-import {KeyCode} from '../common/event_util';
-import {AxisMap} from '../rule_engine/dynamic_cstr';
-
-import {Focus} from './focus';
-import {RebuildStree} from './rebuild_stree';
-
+import { Focus } from './focus';
+import { RebuildStree } from './rebuild_stree';
 
 export interface Walker {
-
   modifier: boolean;
 
   /**
@@ -37,18 +34,15 @@ export interface Walker {
    */
   isActive(): boolean;
 
-
   /**
    * Activates the walker.
    */
   activate(): void;
 
-
   /**
    * Deactivates the walker.
    */
   deactivate(): void;
-
 
   /**
    * Computes the speech string of the currently examined node.
@@ -56,18 +50,15 @@ export interface Walker {
    */
   speech(): string;
 
-
   /**
    * @return The XML element.
    */
   getXml(): Element;
 
-
   /**
    * @return The rebuilt semantic tree for the walker.
    */
   getRebuilt(): RebuildStree;
-
 
   /**
    * The node the walker currently sits on.
@@ -78,12 +69,10 @@ export interface Walker {
    */
   getFocus(opt_update?: boolean): Focus;
 
-
   /**
    * @param focus The new focus.
    */
   setFocus(focus: Focus): void;
-
 
   /**
    * Returns the current depth of the walker, starting at 0.
@@ -91,15 +80,13 @@ export interface Walker {
    */
   getDepth(): number;
 
-
   /**
    * Performs the next move depending on the key event.
    * @param key The input key code.
    * @return True if the move was successful, false, if it was not, and
    *     null if there was no move of the key.
    */
-  move(key: KeyCode): boolean|null;
-
+  move(key: KeyCode): boolean | null;
 
   /**
    * Updates speech in case of option changes.
@@ -111,9 +98,7 @@ export interface Walker {
    * Refocuses in case levels have been altered outside the walker's control.
    */
   refocus(): void;
-
 }
-
 
 /**
  * Enumerator for different types of moves.
@@ -134,10 +119,9 @@ export enum WalkerMoves {
   CELL = 'cell'
 }
 
-
 export namespace WalkerState {
   // TODO (ts): Replace with a Map.
-  const STATE: {[id: string]: string} = {};
+  const STATE: { [id: string]: string } = {};
 
   /**
    * Removes a state for a particular node.
@@ -146,7 +130,6 @@ export namespace WalkerState {
   export function resetState(id: string) {
     delete STATE[id];
   }
-
 
   /**
    * Sets a state value for a particular node.
@@ -157,7 +140,6 @@ export namespace WalkerState {
     STATE[id] = value;
   }
 
-
   /**
    * Returns the state a particular node if it exists.
    * @param id The node id.
@@ -166,5 +148,4 @@ export namespace WalkerState {
   export function getState(id: string): string {
     return STATE[id];
   }
-
 }

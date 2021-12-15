@@ -19,13 +19,11 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import {Span} from '../audio/span';
+import { Span } from '../audio/span';
 import XpathUtil from '../common/xpath_util';
 import * as srf from './speech_rule_functions';
 
-
 export class SpeechRuleContext {
-
   /**
    * Set of custom query functions for the store.
    */
@@ -46,7 +44,6 @@ export class SpeechRuleContext {
    */
   public customGenerators: srf.CustomGenerators = new srf.CustomGenerators();
 
-
   /**
    * Checks if we have a custom query and applies it. Otherwise returns null.
    * @param node The initial node.
@@ -57,7 +54,6 @@ export class SpeechRuleContext {
     let func = this.customQueries.lookup(funcName);
     return func ? func(node) : null;
   }
-
 
   /**
    * Applies either an Xpath selector or a custom query to the node
@@ -71,7 +67,6 @@ export class SpeechRuleContext {
     let result = this.applyCustomQuery(node, expr);
     return result || XpathUtil.evalXPath(expr, node);
   }
-
 
   /**
    * Applies either an Xpath selector or a custom query to the node
@@ -89,7 +84,6 @@ export class SpeechRuleContext {
     return null;
   }
 
-
   /**
    * Applies either an Xpath selector or a custom query to the node and returns
    * true if the application yields a non-empty result.
@@ -103,7 +97,6 @@ export class SpeechRuleContext {
     return !!result || XpathUtil.evaluateBoolean(expr, node);
   }
 
-
   /**
    * Constructs a string from the node and the given expression.
    * @param node The initial node.
@@ -111,7 +104,7 @@ export class SpeechRuleContext {
    *     function or a string.
    * @return The result of applying expression to node.
    */
-  public constructString(node: Node, expr: string): string|Span[] {
+  public constructString(node: Node, expr: string): string | Span[] {
     if (!expr) {
       return '';
     }
@@ -129,17 +122,20 @@ export class SpeechRuleContext {
     return XpathUtil.evaluateString(expr, node);
   }
 
-
   /**
    * Parses a list of context functions.
    * @param functions The list of
    *     context function assignments.
    */
-  public parse(functions: [string, srf.SpeechRuleFunction][]|
-    {[key: string]: srf.SpeechRuleFunction}) {
-    let functs =
-        Array.isArray(functions) ? functions : Object.entries(functions);
-    for (let i = 0, func; func = functs[i]; i++) {
+  public parse(
+    functions:
+      | [string, srf.SpeechRuleFunction][]
+      | { [key: string]: srf.SpeechRuleFunction }
+  ) {
+    let functs = Array.isArray(functions)
+      ? functions
+      : Object.entries(functions);
+    for (let i = 0, func; (func = functs[i]); i++) {
       let kind = func[0].slice(0, 3);
       switch (kind) {
         case 'CQF':

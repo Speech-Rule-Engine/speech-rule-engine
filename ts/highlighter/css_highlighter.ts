@@ -19,12 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AbstractHighlighter, Highlight} from './abstract_highlighter';
-
+import { AbstractHighlighter, Highlight } from './abstract_highlighter';
 
 export class CssHighlighter extends AbstractHighlighter {
-
   /**
    * @override
    */
@@ -32,7 +29,6 @@ export class CssHighlighter extends AbstractHighlighter {
     super();
     this.mactionName = 'mjx-maction';
   }
-
 
   /**
    * @override
@@ -48,7 +44,6 @@ export class CssHighlighter extends AbstractHighlighter {
     node.style.color = color.foreground;
     return info;
   }
-
 
   /**
    * @override

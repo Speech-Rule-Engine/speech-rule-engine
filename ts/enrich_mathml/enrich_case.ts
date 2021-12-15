@@ -18,7 +18,6 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 export interface EnrichCase {
   /**
    * Retrieves the MathML node that is the result of the computation.

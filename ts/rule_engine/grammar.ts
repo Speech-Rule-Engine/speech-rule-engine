@@ -22,18 +22,16 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as DomUtil from '../common/dom_util';
-import {Engine} from '../common/engine';
-import * as LocaleUtil  from '../l10n/locale_util';
-import {LOCALE} from '../l10n/locale';
-import {DynamicCstr} from './dynamic_cstr';
+import { Engine } from '../common/engine';
+import * as LocaleUtil from '../l10n/locale_util';
+import { LOCALE } from '../l10n/locale';
+import { DynamicCstr } from './dynamic_cstr';
 
-
-type Value = boolean|string;
+type Value = boolean | string;
 
 export type State = {
-  [key: string]: Value
+  [key: string]: Value;
 };
 
 interface Flags {
@@ -46,7 +44,6 @@ interface Flags {
 export const ATTRIBUTE: string = 'grammar';
 
 export class Grammar {
-
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Grammar;
 
@@ -64,15 +61,14 @@ export class Grammar {
   /**
    * Maps grammatical annotations to correction functions.
    */
-  private corrections_: {[key: string]: Function} = {};
+  private corrections_: { [key: string]: Function } = {};
 
   /**
    * Maps grammatical annotations to preprocessor functions.
    */
-  private preprocessors_: {[key: string]: Function} = {};
+  private preprocessors_: { [key: string]: Function } = {};
 
   private stateStack_: State[] = [];
-
 
   /**
    * @return The Grammar object.
@@ -81,7 +77,6 @@ export class Grammar {
     Grammar.instance = Grammar.instance || new Grammar();
     return Grammar.instance;
   }
-
 
   /**
    * Processes the grammar annotations of a rule.
@@ -98,12 +93,12 @@ export class Grammar {
         attributes[key] = comp[1].trim();
         continue;
       }
-      key.match(/^!/) ? attributes[key.slice(1)] = false :
-                        attributes[key] = true;
+      key.match(/^!/)
+        ? (attributes[key.slice(1)] = false)
+        : (attributes[key] = true);
     }
     return attributes;
   }
-
 
   /**
    * Parses a state string that can be passed to the grammar.
@@ -122,7 +117,6 @@ export class Grammar {
     return state;
   }
 
-
   /**
    * Process a math expression into a string suitable for a speech engine.
    * @param text Text representing a math expression.
@@ -136,7 +130,6 @@ export class Grammar {
     let result = engine.evaluator(text, engine.dynamicCstr);
     return result === null ? text : result;
   }
-
 
   /**
    * Unit translation using grammatical numbering from mappings directly.
@@ -172,7 +165,6 @@ export class Grammar {
     return result;
   }
 
-
   /**
    * Prepares a unit expression for matching.
    * @param text The text to test.
@@ -180,11 +172,11 @@ export class Grammar {
    */
   private static prepareUnit_(text: string): string {
     let match = text.match(/:unit$/);
-    return match ? text.slice(0, match.index).replace(/\s+/g, ' ') +
-            text.slice(match.index) :
-                   text;
+    return match
+      ? text.slice(0, match.index).replace(/\s+/g, ' ') +
+          text.slice(match.index)
+      : text;
   }
-
 
   /**
    * Removes unit suffix in case no unit with this name was found.
@@ -198,7 +190,6 @@ export class Grammar {
     return text;
   }
 
-
   /**
    * Clears the grammar object.
    */
@@ -206,7 +197,6 @@ export class Grammar {
     this.parameters_ = {};
     this.stateStack_ = [];
   }
-
 
   /**
    * Sets a grammar parameter.
@@ -216,11 +206,11 @@ export class Grammar {
    */
   public setParameter(parameter: string, value: Value): Value {
     let oldValue = this.parameters_[parameter];
-    value ? this.parameters_[parameter] = value :
-            delete this.parameters_[parameter];
+    value
+      ? (this.parameters_[parameter] = value)
+      : delete this.parameters_[parameter];
     return oldValue;
   }
-
 
   /**
    * Returns the value for a parameter.
@@ -231,7 +221,6 @@ export class Grammar {
     return this.parameters_[parameter];
   }
 
-
   /**
    * Sets a grammar correction.
    * @param correction The correction name.
@@ -240,7 +229,6 @@ export class Grammar {
   public setCorrection(correction: string, func: Function) {
     this.corrections_[correction] = func;
   }
-
 
   /**
    * Sets a grammar preprocessor.
@@ -251,7 +239,6 @@ export class Grammar {
     this.preprocessors_[preprocessor] = func;
   }
 
-
   /**
    * Returns a grammar correction function if it exists.
    * @param correction The grammar annotation.
@@ -260,7 +247,6 @@ export class Grammar {
   public getCorrection(correction: string): Function {
     return this.corrections_[correction];
   }
-
 
   /**
    * @return A string version of the grammatical state.
@@ -274,19 +260,17 @@ export class Grammar {
     return pairs.join(' ');
   }
 
-
   /**
    * Saves the current state of the grammar object.
    * @param assignment A list of key value
    *     pairs.
    */
-  public pushState(assignment: {[key: string]: Value}) {
+  public pushState(assignment: { [key: string]: Value }) {
     for (let key in assignment) {
       assignment[key] = this.setParameter(key, assignment[key]);
     }
     this.stateStack_.push(assignment);
   }
-
 
   /**
    * Saves the current state of the grammar object.
@@ -297,7 +281,6 @@ export class Grammar {
       this.setParameter(key, assignment[key]);
     }
   }
-
 
   /**
    * Adds the grammatical state as attributed to an XML node.
@@ -312,7 +295,6 @@ export class Grammar {
     }
   }
 
-
   /**
    * Applies a grammatical preprocessors to a given description text.
    * @param text The original description text.
@@ -322,7 +304,6 @@ export class Grammar {
     return this.runProcessors_(text, this.preprocessors_);
   }
 
-
   /**
    * Applies a grammatical corrections to a given description text.
    * @param text The original description text.
@@ -331,7 +312,6 @@ export class Grammar {
   public correct(text: string): string {
     return this.runProcessors_(text, this.corrections_);
   }
-
 
   /**
    * Apply grammatical adjustments of the current state to a text string.
@@ -352,19 +332,20 @@ export class Grammar {
    */
   public apply(text: string, opt_flags?: Flags): string {
     this.currentFlags = opt_flags || {};
-    text = this.currentFlags.adjust || this.currentFlags.preprocess ?
-        Grammar.getInstance().preprocess(text) :
-        text;
+    text =
+      this.currentFlags.adjust || this.currentFlags.preprocess
+        ? Grammar.getInstance().preprocess(text)
+        : text;
     if (this.parameters_['translate'] || this.currentFlags.translate) {
       text = Grammar.translateString_(text);
     }
-    text = this.currentFlags.adjust || this.currentFlags.correct ?
-        Grammar.getInstance().correct(text) :
-        text;
+    text =
+      this.currentFlags.adjust || this.currentFlags.correct
+        ? Grammar.getInstance().correct(text)
+        : text;
     this.currentFlags = {};
     return text;
   }
-
 
   /**
    * Applies a grammatical processors to a given description text.
@@ -373,7 +354,9 @@ export class Grammar {
    * @return The grammatically corrected string.
    */
   private runProcessors_(
-      text: string, funcs: {[key: string]: Function}): string {
+    text: string,
+    funcs: { [key: string]: Function }
+  ): string {
     for (let key in this.parameters_) {
       let func = funcs[key];
       if (!func) {
@@ -385,12 +368,10 @@ export class Grammar {
     return text;
   }
 
-
   /**
    * Private constructor.
    */
   private constructor() {}
-
 }
 
 // TODO: The following is temporary and needs a better place.
@@ -404,11 +385,9 @@ function correctFont_(text: string, correction: string): string {
   if (!correction || !text) {
     return text;
   }
-  let regexp =
-    LOCALE.FUNCTIONS.fontRegexp(LocaleUtil.localFont(correction));
+  let regexp = LOCALE.FUNCTIONS.fontRegexp(LocaleUtil.localFont(correction));
   return text.replace(regexp, '');
 }
-
 
 /**
  * Removes explicit caps from capital letters.
@@ -423,7 +402,6 @@ function correctCaps_(text: string): string {
   return correctFont_(text, cap);
 }
 
-
 /**
  * Attaches an annotation to a description.
  * @param text The original description text.
@@ -434,18 +412,16 @@ function addAnnotation_(text: string, annotation: string): string {
   return text + ':' + annotation;
 }
 
-
 /**
  * Translates a single non-negative integer into a word.
  * @param text The text to translate.
  * @return The translated text.
  */
 export function numbersToAlpha(text: string): string {
-  return text.match(/\d+/) ?
-      LOCALE.NUMBERS.numberToWords(parseInt(text, 10)) :
-      text;
+  return text.match(/\d+/)
+    ? LOCALE.NUMBERS.numberToWords(parseInt(text, 10))
+    : text;
 }
-
 
 // TODO: Check if that is still necessary!
 /**

@@ -18,9 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Numbers, NUMBERS as NUMB} from '../messages';
-
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -30,19 +28,19 @@ import {Numbers, NUMBERS as NUMB} from '../messages';
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  str += NUMBERS.ones[Math.floor(n / 100)] ?
-      NUMBERS.ones[Math.floor(n / 100)] + NUMBERS.numSep + 'hundred' :
-      '';
+  str += NUMBERS.ones[Math.floor(n / 100)]
+    ? NUMBERS.ones[Math.floor(n / 100)] + NUMBERS.numSep + 'hundred'
+    : '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
-    str += NUMBERS.ones[n] ||
-        NUMBERS.tens[Math.floor(n / 10)] +
-            (n % 10 ? NUMBERS.numSep + NUMBERS.ones[n % 10] : '');
+    str +=
+      NUMBERS.ones[n] ||
+      NUMBERS.tens[Math.floor(n / 10)] +
+        (n % 10 ? NUMBERS.numSep + NUMBERS.ones[n % 10] : '');
   }
   return str;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -61,15 +59,16 @@ function numberToWords(num: number): string {
   while (num > 0) {
     let hundreds = num % 1000;
     if (hundreds) {
-      str = hundredsToWords_(num % 1000) +
-          (pos ? '-' + NUMBERS.large[pos] + '-' : '') + str;
+      str =
+        hundredsToWords_(num % 1000) +
+        (pos ? '-' + NUMBERS.large[pos] + '-' : '') +
+        str;
     }
     num = Math.floor(num / 1000);
     pos++;
   }
   return str.replace(/-$/, '');
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation of
@@ -88,7 +87,6 @@ function numberToOrdinal(num: number, plural: boolean): string {
   let ordinal = wordOrdinal(num);
   return plural ? ordinal + 's' : ordinal;
 }
-
 
 /**
  * Creates a word ordinal string from a number.
@@ -118,7 +116,6 @@ function wordOrdinal(num: number): string {
   }
   return ordinal;
 }
-
 
 /**
  * Creates a simple ordinal string from a number.

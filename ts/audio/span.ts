@@ -20,14 +20,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 export class Span {
-
   /**
    * @param string The textual content of the span.
    * @param attributes Annotations for the textual content.
    */
-  constructor(public speech: string,
-              public attributes: {[key: string]: string}) { }
-
+  constructor(
+    public speech: string,
+    public attributes: { [key: string]: string }
+  ) {}
 }

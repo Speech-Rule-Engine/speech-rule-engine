@@ -19,20 +19,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as DomUtil from '../common/dom_util';
 import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
-
 
 /**
  * A comma separated list of attribute values.
  * @param attr The attribute value.
  * @return A list of values.
  */
-export function splitAttribute(attr: string|null): string[] {
+export function splitAttribute(attr: string | null): string[] {
   return !attr ? [] : attr.split(/,/);
 }
-
 
 /**
  * Retrieves a data attribute from a given node. Tries using microdata access if
@@ -41,11 +38,12 @@ export function splitAttribute(attr: string|null): string[] {
  * @param attr The semantic data attribute.
  * @return The value for that attribute.
  */
-export function getAttribute(node: Element,
-                             attr: EnrichMathml.Attribute): string {
+export function getAttribute(
+  node: Element,
+  attr: EnrichMathml.Attribute
+): string {
   return DomUtil.getDataAttribute(node, attr);
 }
-
 
 /**
  * Retrieves the node containing the embedding of the root of a semantic tree.
@@ -54,21 +52,24 @@ export function getAttribute(node: Element,
  *     input node is returned.
  */
 export function getSemanticRoot(node: Element): Element {
-  if (node.hasAttribute(EnrichMathml.Attribute.TYPE) &&
-      !node.hasAttribute(EnrichMathml.Attribute.PARENT)) {
+  if (
+    node.hasAttribute(EnrichMathml.Attribute.TYPE) &&
+    !node.hasAttribute(EnrichMathml.Attribute.PARENT)
+  ) {
     return node;
   }
 
-  let semanticNodes =
-      DomUtil.querySelectorAllByAttr(node, EnrichMathml.Attribute.TYPE);
-  for (let i = 0, semanticNode; semanticNode = semanticNodes[i]; i++) {
+  let semanticNodes = DomUtil.querySelectorAllByAttr(
+    node,
+    EnrichMathml.Attribute.TYPE
+  );
+  for (let i = 0, semanticNode; (semanticNode = semanticNodes[i]); i++) {
     if (!semanticNode.hasAttribute(EnrichMathml.Attribute.PARENT)) {
       return semanticNode;
     }
   }
   return node;
 }
-
 
 /**
  * Retrieves a node containing a given semantic id starting from the given root.
@@ -81,5 +82,8 @@ export function getBySemanticId(root: Element, id: string): Element {
     return root;
   }
   return DomUtil.querySelectorAllByAttrValue(
-      root, EnrichMathml.Attribute.ID, id)[0];
+    root,
+    EnrichMathml.Attribute.ID,
+    id
+  )[0];
 }

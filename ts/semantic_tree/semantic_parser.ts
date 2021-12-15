@@ -19,10 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticNode} from './semantic_node';
+import { SemanticNode } from './semantic_node';
 
-import {SemanticNodeFactory} from './semantic_node_factory';
-
+import { SemanticNodeFactory } from './semantic_node_factory';
 
 export interface SemanticParser<T> {
   /**
@@ -33,7 +32,6 @@ export interface SemanticParser<T> {
    */
   parse(representation: T): SemanticNode;
 
-
   /**
    * Parse a list of element into a list of semantic nodes.
    * @param list A list of elements.
@@ -42,18 +40,15 @@ export interface SemanticParser<T> {
    */
   parseList(list: T[]): SemanticNode[];
 
-
   /**
    * @return The node factory of the parser.
    */
   getFactory(): SemanticNodeFactory;
 
-
   /**
    * @param factory A new node factory for the parser.
    */
   setFactory(factory: SemanticNodeFactory): void;
-
 
   /**
    * @return The type of the parser.
@@ -61,22 +56,18 @@ export interface SemanticParser<T> {
   getType(): string;
 }
 
-
 export abstract class SemanticAbstractParser<T> implements SemanticParser<T> {
-
   private factory_: SemanticNodeFactory = new SemanticNodeFactory();
 
   /**
    * @param type The type of the parser.
    */
-  constructor(private type: string) { }
-
+  constructor(private type: string) {}
 
   /**
    * @override
    */
   public abstract parse(representation: T): SemanticNode;
-
 
   /**
    * @override
@@ -85,14 +76,12 @@ export abstract class SemanticAbstractParser<T> implements SemanticParser<T> {
     return this.factory_;
   }
 
-
   /**
    * @override
    */
   public setFactory(factory: SemanticNodeFactory) {
     this.factory_ = factory;
   }
-
 
   /**
    * @override
@@ -101,16 +90,14 @@ export abstract class SemanticAbstractParser<T> implements SemanticParser<T> {
     return this.type;
   }
 
-
   /**
    * @override
    */
   public parseList(list: T[]) {
     let result = [];
-    for (let i = 0, element; element = list[i]; i++) {
+    for (let i = 0, element; (element = list[i]); i++) {
       result.push(this.parse(element));
     }
     return result;
   }
-
 }

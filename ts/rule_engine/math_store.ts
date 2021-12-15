@@ -19,18 +19,15 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-
 import * as BaseUtil from '../common/base_util';
 // TODO: This should not really load the locale constructor.
-import {en} from '../l10n/locales/locale_en';
-import {LOCALE} from '../l10n/locale';
-import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
-import {BaseRuleStore, RulesJson} from './base_rule_store';
-import {Action, OutputError, SpeechRule} from './speech_rule';
-
+import { en } from '../l10n/locales/locale_en';
+import { LOCALE } from '../l10n/locale';
+import { SemanticAnnotations } from '../semantic_tree/semantic_annotations';
+import { BaseRuleStore, RulesJson } from './base_rule_store';
+import { Action, OutputError, SpeechRule } from './speech_rule';
 
 export class MathStore extends BaseRuleStore {
-
   /**
    * A list of annotators and visitors.
    */
@@ -47,7 +44,6 @@ export class MathStore extends BaseRuleStore {
     this.parseMethods['Specialized'] = this.defineSpecialized;
   }
 
-
   /**
    * @override
    */
@@ -59,16 +55,14 @@ export class MathStore extends BaseRuleStore {
     this.initialized = true;
   }
 
-
   /**
    * Activates annotators.
    */
   public annotations() {
-    for (let i = 0, annotator; annotator = this.annotators[i]; i++) {
+    for (let i = 0, annotator; (annotator = this.annotators[i]); i++) {
       SemanticAnnotations.activate(this.domain, annotator);
     }
   }
-
 
   /**
    * Adds an alias for an existing precondition.
@@ -90,7 +84,6 @@ export class MathStore extends BaseRuleStore {
     condition.addFullCondition(fullPrec);
   }
 
-
   /**
    * Adds an alias for an existing rule.
    * @param name The name of the rule.
@@ -98,23 +91,22 @@ export class MathStore extends BaseRuleStore {
    * @param args Additional static precondition constraints.
    */
   public defineRulesAlias(name: string, query: string, ...args: string[]) {
-    let rules = this.findAllRules(function(rule) {
+    let rules = this.findAllRules(function (rule) {
       return rule.name === name;
     });
     if (rules.length === 0) {
-      throw new OutputError(
-          'Rule with name ' + name + ' does not exist.');
+      throw new OutputError('Rule with name ' + name + ' does not exist.');
     }
-    let keep: {cstr: string, action: string}[] = [];
+    let keep: { cstr: string; action: string }[] = [];
     let findKeep = (rule: SpeechRule) => {
       let cstr = rule.dynamicCstr.toString();
       let action = rule.action.toString();
-      for (let i = 0, k; k = keep[i]; i++) {
+      for (let i = 0, k; (k = keep[i]); i++) {
         if (k.action === action && k.cstr === cstr) {
           return false;
         }
       }
-      keep.push({cstr: cstr, action: action});
+      keep.push({ cstr: cstr, action: action });
       return true;
     };
     rules.forEach((rule) => {
@@ -123,7 +115,6 @@ export class MathStore extends BaseRuleStore {
       }
     });
   }
-
 
   /**
    * Duplicates a speech rule for the old dynamic constraint for a new dynamic
@@ -135,23 +126,25 @@ export class MathStore extends BaseRuleStore {
    * @param opt_action String version of the speech rule.
    */
   public defineSpecializedRule(
-      name: string, oldDynamic: string, newDynamic: string,
-      opt_action?: string) {
+    name: string,
+    oldDynamic: string,
+    newDynamic: string,
+    opt_action?: string
+  ) {
     let dynamicCstr = this.parseCstr(oldDynamic);
     let rule = this.findRule(
-      rule => rule.name === name && dynamicCstr.equal(rule.dynamicCstr));
+      (rule) => rule.name === name && dynamicCstr.equal(rule.dynamicCstr)
+    );
     let newCstr = this.parseCstr(newDynamic);
     if (!rule && opt_action) {
       throw new OutputError(
-          'Rule named ' + name + ' with style ' + oldDynamic +
-          ' does not exist.');
+        'Rule named ' + name + ' with style ' + oldDynamic + ' does not exist.'
+      );
     }
-    let action =
-        opt_action ? Action.fromString(opt_action) : rule.action;
+    let action = opt_action ? Action.fromString(opt_action) : rule.action;
     let newRule = new SpeechRule(rule.name, newCstr, rule.precondition, action);
     this.addRule(newRule);
   }
-
 
   /**
    * Adds a specialization for a given precondition.
@@ -173,7 +166,6 @@ export class MathStore extends BaseRuleStore {
     condition.addConstraint(cstr);
   }
 
-
   // Evaluator
   /**
    * Evaluates a single string of a math expressions. The method splits the
@@ -194,18 +186,21 @@ export class MathStore extends BaseRuleStore {
       return descs;
     }
     let split = BaseUtil.removeEmpty(str.replace(/\s/g, ' ').split(' '));
-    for (let i = 0, s; s = split[i]; i++) {
+    for (let i = 0, s; (s = split[i]); i++) {
       if (s.length === 1) {
         descs.push(this.evaluateCharacter(s));
-      } else if (s.match(new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+$'))) {
+      } else if (
+        s.match(new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+$'))
+      ) {
         descs.push(this.evaluateCharacter(s));
       } else {
         // Break up string even further wrt. symbols vs alphanum substrings.
         let rest = s;
         while (rest) {
           num = this.matchNumber_(rest);
-          let alpha =
-              rest.match(new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+'));
+          let alpha = rest.match(
+            new RegExp('^[' + LOCALE.MESSAGES.regexp.TEXT + ']+')
+          );
           if (num) {
             descs.push(this.evaluateCharacter(num.number));
             rest = rest.substring(num.length);
@@ -224,15 +219,13 @@ export class MathStore extends BaseRuleStore {
     return descs;
   }
 
-
   /**
    * @override
    */
   public parse(ruleSet: RulesJson) {
     super.parse(ruleSet);
-    this.annotators = (ruleSet['annotators'] || [] as string[]);
+    this.annotators = ruleSet['annotators'] || ([] as string[]);
   }
-
 
   /**
    * Adds a new speech rule as alias of the given rule.
@@ -242,12 +235,15 @@ export class MathStore extends BaseRuleStore {
    */
   private addAlias_(rule: SpeechRule, query: string, cstrList: string[]) {
     let prec = this.parsePrecondition(query, cstrList);
-    let newRule =
-        new SpeechRule(rule.name, rule.dynamicCstr, prec, rule.action);
+    let newRule = new SpeechRule(
+      rule.name,
+      rule.dynamicCstr,
+      prec,
+      rule.action
+    );
     newRule.name = rule.name;
     this.addRule(newRule);
   }
-
 
   /**
    * Matches a number with respect to locale. If it discovers it is a number in
@@ -255,25 +251,24 @@ export class MathStore extends BaseRuleStore {
    * @param str The string to match.
    * @return The number and its length.
    */
-  private matchNumber_(str: string): {number: string, length: number}|null {
+  private matchNumber_(str: string): { number: string; length: number } | null {
     let locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp.NUMBER));
     let enNum = str.match(new RegExp('^' + en().MESSAGES.regexp.NUMBER));
     if (!locNum && !enNum) {
       return null;
     }
     let isEn = enNum && enNum[0] === str;
-    let isLoc = locNum && locNum[0] === str || !isEn;
+    let isLoc = (locNum && locNum[0] === str) || !isEn;
     if (isLoc) {
-      return locNum ? {number: locNum[0], length: locNum[0].length} : null;
+      return locNum ? { number: locNum[0], length: locNum[0].length } : null;
     }
-    let num =
-      enNum[0]
-        .replace(new RegExp(en().MESSAGES.regexp.DIGIT_GROUP, 'g'), 'X')
-        .replace(
-          new RegExp(en().MESSAGES.regexp.DECIMAL_MARK, 'g'),
-          LOCALE.MESSAGES.regexp.DECIMAL_MARK)
-        .replace(/X/g, LOCALE.MESSAGES.regexp.DIGIT_GROUP.replace(/\\/g, ''));
-    return {number: num, length: enNum[0].length};
+    let num = enNum[0]
+      .replace(new RegExp(en().MESSAGES.regexp.DIGIT_GROUP, 'g'), 'X')
+      .replace(
+        new RegExp(en().MESSAGES.regexp.DECIMAL_MARK, 'g'),
+        LOCALE.MESSAGES.regexp.DECIMAL_MARK
+      )
+      .replace(/X/g, LOCALE.MESSAGES.regexp.DIGIT_GROUP.replace(/\\/g, ''));
+    return { number: num, length: enNum[0].length };
   }
-
 }

@@ -22,11 +22,9 @@
  * @author dtseng@google.com (David Tseng)
  */
 
-import {AuditoryDescription} from '../audio/auditory_description';
-
+import { AuditoryDescription } from '../audio/auditory_description';
 
 export interface SpeechRuleEvaluator {
-
   /**
    * Default evaluation of a node if no speech rule is applicable.
    * @param node The target node (or root of subtree).
@@ -61,5 +59,4 @@ export interface SpeechRuleEvaluator {
    * @return The resulting description.
    */
   evaluateCharacter(str: string): AuditoryDescription;
-
 }

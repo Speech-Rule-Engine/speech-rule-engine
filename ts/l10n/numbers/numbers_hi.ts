@@ -22,10 +22,8 @@
 // This work was supported by British Council UKIERI SPARC Project #P1161
 //
 
-
-import {Grammar} from '../../rule_engine/grammar';
-import {Numbers, NUMBERS as NUMB} from '../messages';
-
+import { Grammar } from '../../rule_engine/grammar';
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -35,9 +33,11 @@ import {Numbers, NUMBERS as NUMB} from '../messages';
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  str += NUMBERS.ones[Math.floor(n / 100)] ?
-      NUMBERS.ones[Math.floor(n / 100)] + NUMBERS.numSep + NUMBERS.special.hundred :
-      '';
+  str += NUMBERS.ones[Math.floor(n / 100)]
+    ? NUMBERS.ones[Math.floor(n / 100)] +
+      NUMBERS.numSep +
+      NUMBERS.special.hundred
+    : '';
   n = n % 100;
   if (n) {
     str += str ? NUMBERS.numSep : '';
@@ -45,7 +45,6 @@ function hundredsToWords_(num: number): string {
   }
   return str;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -70,15 +69,17 @@ function numberToWords(num: number): string {
   while (num > 0) {
     let thousands = num % 100;
     if (thousands) {
-      str = NUMBERS.ones[thousands] + NUMBERS.numSep + NUMBERS.large[pos] +
-          (str ? NUMBERS.numSep + str : '');
+      str =
+        NUMBERS.ones[thousands] +
+        NUMBERS.numSep +
+        NUMBERS.large[pos] +
+        (str ? NUMBERS.numSep + str : '');
     }
     num = Math.floor(num / 100);
     pos++;
   }
   return hundredsWords ? str + NUMBERS.numSep + hundredsWords : str;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation of
@@ -94,25 +95,24 @@ function numberToOrdinal(num: number, _plural: boolean): string {
   return wordOrdinal(num) + ' अंश';
 }
 
-
 /**
  * Creates a word ordinal string from a number.
  * @param num The number to be converted.
  * @return The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  let gender = Grammar.getInstance().getParameter('gender') as string;
   if (num <= 0) {
     return num.toString();
   }
   if (num < 10) {
-    return gender === 'f' ? NUMBERS.special.ordinalsFeminine[num] :
-                                 NUMBERS.special.ordinalsMasculine[num];
+    return gender === 'f'
+      ? NUMBERS.special.ordinalsFeminine[num]
+      : NUMBERS.special.ordinalsMasculine[num];
   }
   let ordinal = numberToWords(num);
   return ordinal + (gender === 'f' ? 'वीं' : 'वाँ');
 }
-
 
 /**
  * Creates a simple ordinal string from a number.
@@ -120,22 +120,23 @@ function wordOrdinal(num: number): string {
  * @return The ordinal string.
  */
 function simpleOrdinal(num: number): string {
-  let gender = (Grammar.getInstance().getParameter('gender') as string);
+  let gender = Grammar.getInstance().getParameter('gender') as string;
 
   if (num > 0 && num < 10) {
-    return gender === 'f' ? NUMBERS.special.simpleSmallOrdinalsFeminine[num] :
-      NUMBERS.special.simpleSmallOrdinalsMasculine[num];
+    return gender === 'f'
+      ? NUMBERS.special.simpleSmallOrdinalsFeminine[num]
+      : NUMBERS.special.simpleSmallOrdinalsMasculine[num];
   }
-  let ordinal = num.toString()
-                    .split('')
-                    .map(function(x) {
-                      let num = parseInt(x, 10);
-                      return isNaN(num) ? '' : NUMBERS.special.simpleNumbers[num];
-                    })
-                    .join('');
+  let ordinal = num
+    .toString()
+    .split('')
+    .map(function (x) {
+      let num = parseInt(x, 10);
+      return isNaN(num) ? '' : NUMBERS.special.simpleNumbers[num];
+    })
+    .join('');
   return ordinal + (gender === 'f' ? 'वीं' : 'वाँ');
 }
-
 
 const NUMBERS: Numbers = NUMB();
 NUMBERS.wordOrdinal = wordOrdinal;

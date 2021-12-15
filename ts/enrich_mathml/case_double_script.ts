@@ -20,20 +20,17 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticRole} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
+import { SemanticRole } from '../semantic_tree/semantic_attr';
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseDoubleScript extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
   public mml: Element;
-
 
   /**
    * Applicability test of the case.
@@ -46,10 +43,11 @@ export class CaseDoubleScript extends AbstractEnrichCase {
     }
     let mmlTag = DomUtil.tagName(semantic.mathmlTree);
     let role = semantic.childNodes[0].role;
-    return mmlTag === 'MSUBSUP' && role === SemanticRole.SUBSUP ||
-        mmlTag === 'MUNDEROVER' && role === SemanticRole.UNDEROVER;
+    return (
+      (mmlTag === 'MSUBSUP' && role === SemanticRole.SUBSUP) ||
+      (mmlTag === 'MUNDEROVER' && role === SemanticRole.UNDEROVER)
+    );
   }
-
 
   /**
    * @override
@@ -60,30 +58,34 @@ export class CaseDoubleScript extends AbstractEnrichCase {
     this.mml = semantic.mathmlTree;
   }
 
-
   /**
    * @override
    */
   public getMathml() {
     let ignore = this.semantic.childNodes[0];
-    let baseSem = (ignore.childNodes[0] as SemanticNode);
-    let supSem = (this.semantic.childNodes[1] as SemanticNode);
-    let subSem = (ignore.childNodes[1] as SemanticNode);
+    let baseSem = ignore.childNodes[0] as SemanticNode;
+    let supSem = this.semantic.childNodes[1] as SemanticNode;
+    let subSem = ignore.childNodes[1] as SemanticNode;
     let supMml = EnrichMathml.walkTree(supSem);
     let baseMml = EnrichMathml.walkTree(baseSem);
     let subMml = EnrichMathml.walkTree(subSem);
     EnrichMathml.setAttributes(this.mml, this.semantic);
     this.mml.setAttribute(
-        EnrichMathml.Attribute.CHILDREN,
-        EnrichMathml.makeIdList([baseSem, subSem, supSem]));
+      EnrichMathml.Attribute.CHILDREN,
+      EnrichMathml.makeIdList([baseSem, subSem, supSem])
+    );
     [baseMml, subMml, supMml].forEach((child) =>
       EnrichMathml.getInnerNode(child).setAttribute(
-          EnrichMathml.Attribute.PARENT,
-        this.mml.getAttribute(EnrichMathml.Attribute.ID)));
+        EnrichMathml.Attribute.PARENT,
+        this.mml.getAttribute(EnrichMathml.Attribute.ID)
+      )
+    );
     this.mml.setAttribute(EnrichMathml.Attribute.TYPE, ignore.role);
-    EnrichMathml.addCollapsedAttribute(
-        this.mml,
-        [this.semantic.id, [ignore.id, baseSem.id, subSem.id], supSem.id]);
+    EnrichMathml.addCollapsedAttribute(this.mml, [
+      this.semantic.id,
+      [ignore.id, baseSem.id, subSem.id],
+      supSem.id
+    ]);
     return this.mml;
   }
 }

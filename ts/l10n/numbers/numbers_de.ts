@@ -17,7 +17,7 @@
  * @fileoverview Translating numbers into German.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-import {Numbers, NUMBERS as NUMB} from '../messages';
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 //
 // This work was sponsored by ETH Zurich
@@ -31,7 +31,6 @@ import {Numbers, NUMBERS as NUMB} from '../messages';
 function onePrefix_(num: string, mill: boolean = false): string {
   return num === NUMBERS.ones[1] ? (mill ? 'eine' : 'ein') : num;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -58,7 +57,6 @@ function hundredsToWords_(num: number): string {
   return str;
 }
 
-
 /**
  * Translates a number of up to twelve digits into a string representation.
  * @param num The number to translate.
@@ -80,8 +78,8 @@ function numberToWords(num: number): string {
       if (pos) {
         let large = NUMBERS.large[pos];
         // If this is million or above take care oaf the plural.
-        let plural = (pos > 1 && hundreds > 1 ?
-          (large.match(/e$/) ? 'n' : 'en') : '');
+        let plural =
+          pos > 1 && hundreds > 1 ? (large.match(/e$/) ? 'n' : 'en') : '';
         str = onePrefix_(hund, pos > 1) + large + plural + str;
       } else {
         str = onePrefix_(hund, pos > 1) + str;
@@ -92,7 +90,6 @@ function numberToWords(num: number): string {
   }
   return str.replace(/ein$/, 'eins');
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation of
@@ -110,7 +107,6 @@ function numberToOrdinal(num: number, plural: boolean): string {
   }
   return wordOrdinal(num) + 'l';
 }
-
 
 /**
  * Creates a word ordinal string from a number.
@@ -134,7 +130,6 @@ function wordOrdinal(num: number): string {
   return ordinal + (num < 19 ? 'te' : 'ste');
 }
 
-
 /**
  * Creates a simple ordinal string from a number.
  * @param num The number to be converted.
@@ -143,7 +138,6 @@ function wordOrdinal(num: number): string {
 function simpleOrdinal(num: number): string {
   return num.toString() + '.';
 }
-
 
 const NUMBERS: Numbers = NUMB();
 NUMBERS.wordOrdinal = wordOrdinal;

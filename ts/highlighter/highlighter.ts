@@ -19,9 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {ColorPicker, StringColor} from './color_picker';
-
+import { ColorPicker, StringColor } from './color_picker';
 
 export interface Highlighter {
   /**
@@ -30,12 +28,10 @@ export interface Highlighter {
    */
   highlight(nodes: HTMLElement[]): void;
 
-
   /**
    * Unhighlights the last node that highlighted.
    */
   unhighlight(): void;
-
 
   /**
    * Sets highlighting on all maction-like sub nodes of the given node.
@@ -43,12 +39,10 @@ export interface Highlighter {
    */
   highlightAll(node: HTMLElement): void;
 
-
   /**
    * Unhighlights all currently highlighted nodes.
    */
   unhighlightAll(): void;
-
 
   /**
    * Predicate to check if a node is an maction node.
@@ -63,13 +57,11 @@ export interface Highlighter {
    */
   setColor(color: ColorPicker): void;
 
-
   /**
    * Turns the current color into a string representation.
    * @return The color string, by default as rgba.
    */
   colorString(): StringColor;
-
 
   /**
    * Adds events to the nodes that can by highlighted.
@@ -77,5 +69,5 @@ export interface Highlighter {
    * @param events The events to attach given as event
    *     type and function to execute
    */
-  addEvents(node: HTMLElement, events: {[key: string]: EventListener}): void;
+  addEvents(node: HTMLElement, events: { [key: string]: EventListener }): void;
 }

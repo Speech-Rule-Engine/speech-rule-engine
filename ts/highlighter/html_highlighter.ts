@@ -19,14 +19,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as DomUtil from '../common/dom_util';
 
-import {AbstractHighlighter, Highlight} from './abstract_highlighter';
-
+import { AbstractHighlighter, Highlight } from './abstract_highlighter';
 
 export class HtmlHighlighter extends AbstractHighlighter {
-
   /**
    * @override
    */
@@ -34,7 +31,6 @@ export class HtmlHighlighter extends AbstractHighlighter {
     super();
     this.mactionName = 'maction';
   }
-
 
   /**
    * @override
@@ -70,7 +66,6 @@ export class HtmlHighlighter extends AbstractHighlighter {
     }
     return info;
   }
-
 
   /**
    * @override

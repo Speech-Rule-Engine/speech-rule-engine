@@ -21,14 +21,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as WalkerUtil from '../walker/walker_util';
 
-import {TreeSpeechGenerator} from './tree_speech_generator';
-
+import { TreeSpeechGenerator } from './tree_speech_generator';
 
 export class NodeSpeechGenerator extends TreeSpeechGenerator {
-
   /**
    * @override
    */
@@ -39,6 +36,4 @@ export class NodeSpeechGenerator extends TreeSpeechGenerator {
     }
     return super.getSpeech(node, xml);
   }
-
 }
-

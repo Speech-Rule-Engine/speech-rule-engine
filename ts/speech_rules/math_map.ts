@@ -21,18 +21,20 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-
 import * as BrowserUtil from '../common/browser_util';
-import {Engine, EngineConst, EnginePromise} from '../common/engine';
+import { Engine, EngineConst, EnginePromise } from '../common/engine';
 import * as FileUtil from '../common/file_util';
 import SystemExternal from '../common/system_external';
-import {RulesJson} from '../rule_engine/base_rule_store';
-import {MathCompoundStore, SiJson, UnicodeJson} from '../rule_engine/math_simple_store';
-import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
+import { RulesJson } from '../rule_engine/base_rule_store';
+import {
+  MathCompoundStore,
+  SiJson,
+  UnicodeJson
+} from '../rule_engine/math_simple_store';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 
-import {completeLocale} from '../l10n/l10n';
+import { completeLocale } from '../l10n/l10n';
 import * as AlphabetGenerator from './alphabet_generator';
-
 
 declare type MathMapType = UnicodeJson[] | [SiJson] | RulesJson;
 
@@ -41,7 +43,6 @@ interface MathMapJson {
 }
 
 export namespace MathMap {
-
   /**
    * The compund store for symbol and function mappings.
    */
@@ -50,12 +51,12 @@ export namespace MathMap {
   /**
    * Methods for parsing json structures.
    */
-  const addSymbols: {[key: string]: (p1: MathMapType) => any} = {
-      functions: MathCompoundStore.addFunctionRules,
-      symbols: MathCompoundStore.addSymbolRules,
-      units: MathCompoundStore.addUnitRules,
-      si: addSiPrefixes
-    };
+  const addSymbols: { [key: string]: (p1: MathMapType) => any } = {
+    functions: MathCompoundStore.addFunctionRules,
+    symbols: MathCompoundStore.addSymbolRules,
+    units: MathCompoundStore.addUnitRules,
+    si: addSiPrefixes
+  };
 
   /**
    * Adds the Si prefix mapping.
@@ -78,7 +79,6 @@ export namespace MathMap {
     }
     return EnginePromise.promises['base'];
   }
-
 
   /**
    * Loads a new locale if necessary.
@@ -113,7 +113,6 @@ export namespace MathMap {
     }
   }
 
-
   /**
    * Retrieves JSON rule mappings for a given locale.
    * @param locale The target locale.
@@ -121,32 +120,33 @@ export namespace MathMap {
    */
   export function retrieveFiles(locale: string) {
     let loader = loadMethod();
-    let promise = new Promise<string>(res => {
+    let promise = new Promise<string>((res) => {
       let inner = loader(locale);
-      inner.then((str: string) => {
-        parseMaps(str);
-        EnginePromise.loaded[locale] = [true, true];
-        res(locale);
-      }, (_err: string) => {
-        EnginePromise.loaded[locale] = [true, false];
-        console.error(`Unable to load locale: ${locale}`);
-        Engine.getInstance().locale = 'en';
-        res(locale);
-      });
+      inner.then(
+        (str: string) => {
+          parseMaps(str);
+          EnginePromise.loaded[locale] = [true, true];
+          res(locale);
+        },
+        (_err: string) => {
+          EnginePromise.loaded[locale] = [true, false];
+          console.error(`Unable to load locale: ${locale}`);
+          Engine.getInstance().locale = 'en';
+          res(locale);
+        }
+      );
     });
     EnginePromise.promises[locale] = promise;
   }
-
 
   /**
    * Parses JSON mappings from a string and them to the MathStore.
    * @param json The json mappings string.
    */
   export function parseMaps(json: string) {
-    let js = (JSON.parse(json) as {[key: string]: any[]});
+    let js = JSON.parse(json) as { [key: string]: any[] };
     addMaps(js);
   }
-
 
   /**
    * Adds JSON mappings to the mathmap store.
@@ -156,7 +156,7 @@ export namespace MathMap {
    */
   function addMaps(json: MathMapJson, opt_locale?: string) {
     let generate = true;
-    for (let i = 0, key; key = Object.keys(json)[i]; i++) {
+    for (let i = 0, key; (key = Object.keys(json)[i]); i++) {
       let info = key.split('/');
       if (opt_locale && opt_locale !== info[0]) {
         continue;
@@ -165,8 +165,7 @@ export namespace MathMap {
         SpeechRuleEngine.getInstance().addStore(json[key] as RulesJson);
       } else if (info[1] === 'messages') {
         completeLocale(json[key]);
-      }
-      else {
+      } else {
         if (generate) {
           AlphabetGenerator.generate(info[0]);
           generate = false;
@@ -176,20 +175,20 @@ export namespace MathMap {
     }
   }
 
-
   /**
    * Retrieves mappings and adds them to the respective stores.
    * @param locale The target locale.
    */
   function retrieveMaps(locale: string) {
-    if (Engine.getInstance().isIE &&
-      Engine.getInstance().mode === EngineConst.Mode.HTTP) {
+    if (
+      Engine.getInstance().isIE &&
+      Engine.getInstance().mode === EngineConst.Mode.HTTP
+    ) {
       getJsonIE_(locale);
       return;
     }
     retrieveFiles(locale);
   }
-
 
   /**
    * Gets JSON elements from the global JSON object in case of IE browsers.
@@ -207,7 +206,6 @@ export namespace MathMap {
     addMaps(BrowserUtil.mapsForIE as MathMapJson, locale);
   }
 
-
   /**
    * Takes path to a JSON file and returns a JSON object.
    * @param path Contains the path to a JSON file.
@@ -217,17 +215,14 @@ export namespace MathMap {
   export function loadFile(locale: string): Promise<string> {
     let file = FileUtil.localePath(locale);
     return new Promise((res, rej) => {
-      SystemExternal.fs.readFile(
-        file, 'utf8',
-        (err: Error, json: string) => {
-          if (err) {
-            return rej(err);
-          }
-          res(json);
-        });
+      SystemExternal.fs.readFile(file, 'utf8', (err: Error, json: string) => {
+        if (err) {
+          return rej(err);
+        }
+        res(json);
+      });
     });
   }
-
 
   /**
    * Loads JSON for a given file name.
@@ -247,7 +242,6 @@ export namespace MathMap {
     });
   }
 
-
   /**
    * Sents AJAX request to retrieve a JSON rule file.
    * @param locale The locale to retrieve.
@@ -257,7 +251,7 @@ export namespace MathMap {
     let file = FileUtil.localePath(locale);
     let httpRequest = new XMLHttpRequest();
     return new Promise((res, rej) => {
-      httpRequest.onreadystatechange = function() {
+      httpRequest.onreadystatechange = function () {
         if (httpRequest.readyState === 4) {
           let status = httpRequest.status;
           if (status === 0 || (status >= 200 && status < 400)) {
@@ -271,5 +265,4 @@ export namespace MathMap {
       httpRequest.send();
     });
   }
-
 }

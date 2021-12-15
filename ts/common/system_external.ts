@@ -22,11 +22,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Variables} from './variables';
+import { Variables } from './variables';
 
 namespace SystemExternal {
-
   declare var global: any;
   declare var require: (name: string) => any;
   declare var process: any;
@@ -44,63 +42,64 @@ namespace SystemExternal {
     return null;
   }
 
-  export const windowSupported: boolean = (
-    () => !(typeof window === 'undefined')
-  )();
+  export const windowSupported: boolean = (() =>
+    !(typeof window === 'undefined'))();
 
   /**
    * Check if DOM document is already supported in this JS.
    * @return True if document is defined.
    */
-  export const documentSupported: boolean =
-    (() => windowSupported && !(typeof window.document === 'undefined'))();
+  export const documentSupported: boolean = (() =>
+    windowSupported && !(typeof window.document === 'undefined'))();
 
   /**
    * Xmldom library.
    */
-  export const xmldom = SystemExternal.documentSupported ?
-    window :
-    SystemExternal.extRequire('xmldom-sre');
+  export const xmldom = SystemExternal.documentSupported
+    ? window
+    : SystemExternal.extRequire('xmldom-sre');
 
   /**
    * DOM document implementation.
    */
-  export const document: Document = SystemExternal.documentSupported ?
-    window.document :
-    (new SystemExternal.xmldom.DOMImplementation()).createDocument('', '', 0);
+  export const document: Document = SystemExternal.documentSupported
+    ? window.document
+    : new SystemExternal.xmldom.DOMImplementation().createDocument('', '', 0);
 
   /**
    * Xpath library.
    */
-  export const xpath: any =
-    SystemExternal.documentSupported ? document : function() {
-      let window = {document: {}, XPathResult: {}};
-      let wgx = SystemExternal.extRequire('wicked-good-xpath');
-      wgx.install(window);
-      (window.document as any).XPathResult = window.XPathResult;
-      return window.document;
-    }();
+  export const xpath: any = SystemExternal.documentSupported
+    ? document
+    : (function () {
+        let window = { document: {}, XPathResult: {} };
+        let wgx = SystemExternal.extRequire('wicked-good-xpath');
+        wgx.install(window);
+        (window.document as any).XPathResult = window.XPathResult;
+        return window.document;
+      })();
 
   /**
    * The URL for Mathmaps for IE.
    */
   export const mathmapsIePath =
     'https://cdn.jsdelivr.net/npm/sre-mathmaps-ie@' +
-    Variables.VERSION + 'mathmaps_ie.js';
-
+    Variables.VERSION +
+    'mathmaps_ie.js';
 
   /**
    * Commander library.
    */
-  export const commander = SystemExternal.documentSupported ?
-    null :
-    SystemExternal.extRequire('commander');
+  export const commander = SystemExternal.documentSupported
+    ? null
+    : SystemExternal.extRequire('commander');
 
   /**
    * Filesystem library.
    */
-  export const fs =
-    SystemExternal.documentSupported ? null : SystemExternal.extRequire('fs');
+  export const fs = SystemExternal.documentSupported
+    ? null
+    : SystemExternal.extRequire('fs');
 
   /**
    * The URL for SRE resources.
@@ -110,26 +109,27 @@ namespace SystemExternal {
   /**
    * Path to JSON files.
    */
-  export let jsonPath = function() {
-    return (SystemExternal.documentSupported ? SystemExternal.url :
-      (process.env.SRE_JSON_PATH ||
-      global.SRE_JSON_PATH || (typeof __dirname !== 'undefined' ?
-        __dirname + '/mathmaps' : process.cwd()))) +
-      '/';
-  }();
+  export let jsonPath = (function () {
+    return (
+      (SystemExternal.documentSupported
+        ? SystemExternal.url
+        : process.env.SRE_JSON_PATH ||
+          global.SRE_JSON_PATH ||
+          (typeof __dirname !== 'undefined'
+            ? __dirname + '/mathmaps'
+            : process.cwd())) + '/'
+    );
+  })();
 
   /**
    * Path to Xpath library file.
    */
   export let WGXpath = Variables.WGXpath;
 
-
   /**
    * WGXpath library.
    */
   export let wgxpath: any = null;
-
-
 }
 
 export default SystemExternal;

@@ -20,22 +20,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {AbstractWalker} from './abstract_walker';
-import {Focus} from './focus';
-import {Levels} from './levels';
-
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { AbstractWalker } from './abstract_walker';
+import { Focus } from './focus';
+import { Levels } from './levels';
 
 export class DummyWalker extends AbstractWalker<void> {
-
   /**
    * @override
    */
   public up(): Focus {
     return null;
   }
-
 
   /**
    * @override
@@ -44,14 +40,12 @@ export class DummyWalker extends AbstractWalker<void> {
     return null;
   }
 
-
   /**
    * @override
    */
   public left(): Focus {
     return null;
   }
-
 
   /**
    * @override
@@ -60,14 +54,12 @@ export class DummyWalker extends AbstractWalker<void> {
     return null;
   }
 
-
   /**
    * @override
    */
   public repeat(): Focus {
     return null;
   }
-
 
   /**
    * @override
@@ -76,14 +68,12 @@ export class DummyWalker extends AbstractWalker<void> {
     return null;
   }
 
-
   /**
    * @override
    */
   public home(): Focus {
     return null;
   }
-
 
   /**
    * @override
@@ -92,7 +82,6 @@ export class DummyWalker extends AbstractWalker<void> {
     return 0;
   }
 
-
   /**
    * @override
    */
@@ -100,16 +89,17 @@ export class DummyWalker extends AbstractWalker<void> {
     return null;
   }
 
-
   /**
    * @override
    */
   public combineContentChildren(
-    _type: SemanticType, _role: SemanticRole,
-    _content: string[], _children: string[]): void[] {
+    _type: SemanticType,
+    _role: SemanticRole,
+    _content: string[],
+    _children: string[]
+  ): void[] {
     return [];
   }
-
 
   /**
    * @override
@@ -117,5 +107,4 @@ export class DummyWalker extends AbstractWalker<void> {
   public findFocusOnLevel(_id: number): Focus {
     return null;
   }
-
 }

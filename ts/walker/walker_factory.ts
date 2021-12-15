@@ -20,16 +20,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { Highlighter } from '../highlighter/highlighter';
+import { SpeechGenerator } from '../speech_generator/speech_generator';
 
-import {Highlighter} from '../highlighter/highlighter';
-import {SpeechGenerator} from '../speech_generator/speech_generator';
-
-import {DummyWalker} from './dummy_walker';
-import {SemanticWalker} from './semantic_walker';
-import {SyntaxWalker} from './syntax_walker';
-import {TableWalker} from './table_walker';
-import {Walker} from './walker';
-
+import { DummyWalker } from './dummy_walker';
+import { SemanticWalker } from './semantic_walker';
+import { SyntaxWalker } from './syntax_walker';
+import { TableWalker } from './table_walker';
+import { Walker } from './walker';
 
 /**
  * Produces a walker that corresponds to the given type.
@@ -44,25 +42,32 @@ import {Walker} from './walker';
  * @return The newly generated walker.
  */
 export function walker(
-    type: string, node: Element, generator: SpeechGenerator,
-    highlighter: Highlighter, xml: string): Walker {
+  type: string,
+  node: Element,
+  generator: SpeechGenerator,
+  highlighter: Highlighter,
+  xml: string
+): Walker {
   let constructor =
-      walkerMapping_[type.toLowerCase()] || walkerMapping_['dummy'];
+    walkerMapping_[type.toLowerCase()] || walkerMapping_['dummy'];
   return constructor(node, generator, highlighter, xml);
 }
 
-
 export const walkerMapping_: {
-  [key: string]: (p1: Element, p2: SpeechGenerator,
-                  p3: Highlighter, p4: string) => Walker
+  [key: string]: (
+    p1: Element,
+    p2: SpeechGenerator,
+    p3: Highlighter,
+    p4: string
+  ) => Walker;
 } = {
-  'dummy': (p1: Element, p2: SpeechGenerator, p3: Highlighter, p4: string) =>
+  dummy: (p1: Element, p2: SpeechGenerator, p3: Highlighter, p4: string) =>
     new DummyWalker(p1, p2, p3, p4),
-  'semantic': (p1: Element, p2: SpeechGenerator, p3: Highlighter, p4: string) =>
+  semantic: (p1: Element, p2: SpeechGenerator, p3: Highlighter, p4: string) =>
     new SemanticWalker(p1, p2, p3, p4),
-  'syntax': (p1: Element, p2: SpeechGenerator, p3: Highlighter, p4: string) =>
+  syntax: (p1: Element, p2: SpeechGenerator, p3: Highlighter, p4: string) =>
     new SyntaxWalker(p1, p2, p3, p4),
-  'table': (p1: Element, p2: SpeechGenerator, p3: Highlighter, p4: string) =>
+  table: (p1: Element, p2: SpeechGenerator, p3: Highlighter, p4: string) =>
     new TableWalker(p1, p2, p3, p4)
 };
 // This is temporary.

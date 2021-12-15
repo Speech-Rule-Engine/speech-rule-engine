@@ -19,24 +19,20 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Debugger} from '../common/debugger';
+import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
-import {EngineConst} from '../common/engine';
+import { EngineConst } from '../common/engine';
 import * as AudioUtil from './audio_util';
-import {AuditoryDescription} from './auditory_description';
-import {XmlRenderer} from './xml_renderer';
-
+import { AuditoryDescription } from './auditory_description';
+import { XmlRenderer } from './xml_renderer';
 
 export class LayoutRenderer extends XmlRenderer {
-
   /**
    * @override
    */
   public finalize(str: string) {
     return setTwoDim(str);
   }
-
 
   /**
    * @override
@@ -45,15 +41,12 @@ export class LayoutRenderer extends XmlRenderer {
     return '';
   }
 
-
   /**
    * @override
    */
   public prosodyElement(attr: string, value: number) {
-    return attr === EngineConst.personalityProps.LAYOUT ?
-      `<${value}>` : '';
+    return attr === EngineConst.personalityProps.LAYOUT ? `<${value}>` : '';
   }
-
 
   /**
    * @override
@@ -94,7 +87,7 @@ export class LayoutRenderer extends XmlRenderer {
   private processContent(content: AuditoryDescription[]) {
     let result = [];
     let markup = AudioUtil.personalityMarkup(content);
-    for (let i = 0, descr: AudioUtil.Markup; descr = markup[i]; i++) {
+    for (let i = 0, descr: AudioUtil.Markup; (descr = markup[i]); i++) {
       if (descr.span) {
         result.push(this.merge(descr.span));
         continue;
@@ -103,16 +96,14 @@ export class LayoutRenderer extends XmlRenderer {
         continue;
       }
     }
-    return result.join('');  // this.merge(result);
+    return result.join(''); // this.merge(result);
   }
-
 }
-
 
 // Postprocessing
 let twodExpr = '';
 
-let handlers: {[key: string]: Function} = {
+let handlers: { [key: string]: Function } = {
   TABLE: handleTable,
   CASES: handleCases,
   CAYLEY: handleCayley,
@@ -125,13 +116,11 @@ let handlers: {[key: string]: Function} = {
   DENOMINATOR: handleFractionPart
 };
 
-
 function applyHandler(element: Element): string {
   let tag = DomUtil.tagName(element as Element);
   let handler = handlers[tag];
   return handler ? handler(element) : element.textContent;
 }
-
 
 function setTwoDim(str: string): string {
   twodExpr = '';
@@ -159,7 +148,6 @@ function combineContent(str1: string, str2: string): string {
   return result.join('\n');
 }
 
-
 /**
  * Recurses the children of the given node by applying handlers and assembling a
  * layout element.
@@ -179,42 +167,36 @@ function recurseTree(dom: Element): string {
   return result;
 }
 
-
-
 /**
- * 
- * @param {string} str 
+ *
+ * @param {string} str
  */
 function strHeight(str: string) {
   return str.split(/\r\n|\r|\n/).length;
 }
 
-
 /**
- * 
- * @param {string} str 
+ *
+ * @param {string} str
  */
 function strWidth(str: string) {
-  return str.split(/\r\n|\r|\n/).reduce(
-    (max, x) => Math.max(x.length, max), 0);
+  return str.split(/\r\n|\r|\n/).reduce((max, x) => Math.max(x.length, max), 0);
 }
 
-
 /**
- * 
- * @param {string} str 
- * @param {number} height 
+ *
+ * @param {string} str
+ * @param {number} height
  */
 function padHeight(str: string, height: number): string {
   let padding = height - strHeight(str);
   return str + (padding > 0 ? new Array(padding + 1).join('\n') : '');
 }
 
-
 /**
- * 
- * @param {string} str 
- * @param {number} width 
+ *
+ * @param {string} str
+ * @param {number} width
  */
 function padWidth(str: string, width: number): string {
   let lines = str.split(/\r\n|\r|\n/);
@@ -226,12 +208,11 @@ function padWidth(str: string, width: number): string {
   return result.join('\n');
 }
 
-
 /**
- * 
- * @param {string} str 
- * @param {number} heigth 
- * @param {number} width 
+ *
+ * @param {string} str
+ * @param {number} heigth
+ * @param {number} width
  */
 function padCell(str: string, height: number, width: number): string {
   str = padHeight(str, height);
@@ -239,14 +220,13 @@ function padCell(str: string, height: number, width: number): string {
 }
 
 declare type row = {
-  lfence: string,
-  rfence: string,
-  sep: string,
-  cells: string[],
-  height: number,
-  width: number[]
+  lfence: string;
+  rfence: string;
+  sep: string;
+  cells: string[];
+  height: number;
+  width: number[];
 };
-
 
 // Clean row elements and assemble row structure.
 function assembleRows(matrix: Element): row[] {
@@ -261,19 +241,17 @@ function assembleRows(matrix: Element): row[] {
   return mat;
 }
 
-
 // Compute max height and width
 function getMaxParameters(mat: row[]): [number, number[]] {
   let maxHeight = mat.reduce((max, x) => Math.max(x.height, max), 0);
   let maxWidth = [];
   for (let i = 0; i < mat[0].width.length; i++) {
     maxWidth.push(
-      mat.map(x => x.width[i]).reduce((max, x) => Math.max(max, x), 0)
+      mat.map((x) => x.width[i]).reduce((max, x) => Math.max(max, x), 0)
     );
   }
   return [maxHeight, maxWidth];
 }
-
 
 // Pad cells and assemble rows.
 function combineCells(mat: row[], maxWidth: number[]): row[] {
@@ -292,13 +270,13 @@ function combineCells(mat: row[], maxWidth: number[]): row[] {
   return newMat;
 }
 
-
 // Combine rows into matrix
 function combineRows(mat: row[], maxHeight: number): string {
   // If all rows are of heigth 1 assemble them directly.
   if (maxHeight === 1) {
-    return mat.map(
-      row => row.lfence + row.cells.join(row.sep) + row.rfence).join('\n');
+    return mat
+      .map((row) => row.lfence + row.cells.join(row.sep) + row.rfence)
+      .join('\n');
   }
   let result = [];
   // Otherwise insert extra empty rows if necessary
@@ -312,12 +290,12 @@ function combineRows(mat: row[], maxHeight: number): string {
     str = combineContent(verticalArrange(row.lfence, row.height), str);
     str = combineContent(str, verticalArrange(row.rfence, row.height));
     result.push(str);
-    result.push(row.lfence +
-      new Array(strWidth(str) - 3).join(row.sep) + row.rfence);
+    result.push(
+      row.lfence + new Array(strWidth(str) - 3).join(row.sep) + row.rfence
+    );
   }
   return result.slice(0, -1).join('\n');
 }
-
 
 function handleMatrix(matrix: Element): string {
   let mat = assembleRows(matrix);
@@ -326,11 +304,10 @@ function handleMatrix(matrix: Element): string {
   return combineRows(mat, maxHeight);
 }
 
-
 function handleTable(matrix: Element): string {
   let mat = assembleRows(matrix);
   // TODO: Adapt this so cells of length one will be retained!
-  mat.forEach(row => {
+  mat.forEach((row) => {
     row.cells = row.cells.slice(1).slice(0, -1);
     row.width = row.width.slice(1).slice(0, -1);
   });
@@ -339,11 +316,10 @@ function handleTable(matrix: Element): string {
   return combineRows(mat, maxHeight);
 }
 
-
 // TODO: Check with Michael why the number indicator is omitted (e.g., 16.4-1)
 function handleCases(matrix: Element): string {
   let mat = assembleRows(matrix);
-  mat.forEach(row => {
+  mat.forEach((row) => {
     row.cells = row.cells.slice(0, -1);
     row.width = row.width.slice(0, -1);
   });
@@ -352,18 +328,18 @@ function handleCases(matrix: Element): string {
   return combineRows(mat, maxHeight);
 }
 
-
 function handleCayley(matrix: Element): string {
   let mat = assembleRows(matrix);
-  mat.forEach(row => {
+  mat.forEach((row) => {
     row.cells = row.cells.slice(1).slice(0, -1);
     row.width = row.width.slice(1).slice(0, -1);
     row.sep = row.sep + row.sep;
   });
   let [maxHeight, maxWidth] = getMaxParameters(mat);
   let bar = {
-    lfence: '', rfence: '',
-    cells: maxWidth.map(x => '⠐' + new Array(x).join('⠒')),
+    lfence: '',
+    rfence: '',
+    cells: maxWidth.map((x) => '⠐' + new Array(x).join('⠒')),
     width: maxWidth,
     height: 1,
     sep: mat[0].sep
@@ -372,7 +348,6 @@ function handleCayley(matrix: Element): string {
   mat = combineCells(mat, maxWidth);
   return combineRows(mat, maxHeight);
 }
-
 
 function verticalArrange(char: string, height: number) {
   let str = '';
@@ -403,37 +378,44 @@ function handleRow(row: Element): row {
     let result = applyHandler(child as Element);
     cells.push(result);
   }
-  return {lfence: lfence, rfence: rfence, sep: sep,
-          cells: cells,
-          height: cells.reduce((max, x) => Math.max(strHeight(x), max), 0),
-          width: cells.map(strWidth)
-         };
+  return {
+    lfence: lfence,
+    rfence: rfence,
+    sep: sep,
+    cells: cells,
+    height: cells.reduce((max, x) => Math.max(strHeight(x), max), 0),
+    width: cells.map(strWidth)
+  };
 }
 
 function getFence(node: Node): string {
-  if (node.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
-    DomUtil.tagName(node as Element) === 'FENCE') {
+  if (
+    node.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
+    DomUtil.tagName(node as Element) === 'FENCE'
+  ) {
     return applyHandler(node as Element);
   }
   return '';
 }
 
-
 function centerCell(cell: string, width: number): string {
   let cw = strWidth(cell);
   let center = (width - cw) / 2;
-  let [lpad, rpad] = Math.floor(center) === center ? [center, center] :
-    [Math.floor(center), Math.ceil(center)];
+  let [lpad, rpad] =
+    Math.floor(center) === center
+      ? [center, center]
+      : [Math.floor(center), Math.ceil(center)];
   let lines = cell.split(/\r\n|\r|\n/);
   let result = [];
-  let [lstr, rstr] = [new Array(lpad + 1).join('⠀'),
-                      new Array(rpad + 1).join('⠀')];
+  let [lstr, rstr] = [
+    new Array(lpad + 1).join('⠀'),
+    new Array(rpad + 1).join('⠀')
+  ];
   for (let line of lines) {
     result.push(lstr + line + rstr);
   }
   return result.join('\n');
 }
-
 
 function handleFraction(frac: Node): string {
   let [open, num, , den, close] = Array.from(frac.childNodes);
@@ -444,10 +426,11 @@ function handleFraction(frac: Node): string {
   let maxWidth = Math.max(nwidth, dwidth);
   let bar = open + new Array(maxWidth + 1).join('⠒') + close;
   maxWidth = bar.length;
-  return `${centerCell(numerator, maxWidth)}\n${bar}\n`
-    + `${centerCell(denominator, maxWidth)}`;
+  return (
+    `${centerCell(numerator, maxWidth)}\n${bar}\n` +
+    `${centerCell(denominator, maxWidth)}`
+  );
 }
-
 
 function handleFractionPart(prt: Element): string {
   let fchild = prt.firstChild as Element;

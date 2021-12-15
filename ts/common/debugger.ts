@@ -19,12 +19,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import SystemExternal from './system_external';
 
-
 export class Debugger {
-
   private static instance: Debugger;
   /**
    * Whether the debugger is active.
@@ -56,7 +53,6 @@ export class Debugger {
     this.isActive_ = true;
   }
 
-
   /**
    * Give debug output.
    * @param var_args Rest elements of debug output.
@@ -66,7 +62,6 @@ export class Debugger {
       this.output_(args);
     }
   }
-
 
   /**
    * Give debug output by compiling executing a function. The main idea is that
@@ -80,14 +75,13 @@ export class Debugger {
     }
   }
 
-
   /**
    * Gracefully exits the debugger.
    * @param opt_callback Function to be executed after exiting the
    *     debugger.
    */
   public exit(opt_callback?: () => any) {
-    let callback = opt_callback || function() {};
+    let callback = opt_callback || function () {};
     if (this.isActive_ && this.stream_) {
       this.stream_.end('', '', callback);
     }
@@ -96,8 +90,7 @@ export class Debugger {
   /**
    * Private constructor.
    */
-  private constructor() { }
-
+  private constructor() {}
 
   /**
    * Initialises the debug file.
@@ -106,19 +99,21 @@ export class Debugger {
    */
   private startDebugFile_(filename: string) {
     this.stream_ = SystemExternal.fs.createWriteStream(filename);
-    this.outputFunction_ = function(...args: string[]) {
+    this.outputFunction_ = function (...args: string[]) {
       this.stream_.write(args.join(' '));
       this.stream_.write('\n');
     }.bind(this);
-    this.stream_.on('error', function(_error: Error) {
-      console.info('Invalid log file. Debug information sent to console.');
-      this.outputFunction_ = console.info;
-    }.bind(this));
-    this.stream_.on('finish', function() {
+    this.stream_.on(
+      'error',
+      function (_error: Error) {
+        console.info('Invalid log file. Debug information sent to console.');
+        this.outputFunction_ = console.info;
+      }.bind(this)
+    );
+    this.stream_.on('finish', function () {
       console.info('Finalizing debug file.');
     });
   }
-
 
   /**
    * Writes the debug output to the debuggers current stream.
@@ -126,8 +121,8 @@ export class Debugger {
    */
   private output_(outputList: string[]) {
     this.outputFunction_.apply(
-        console.info === this.outputFunction_ ? console : this.outputFunction_,
-        ['Speech Rule Engine Debugger:'].concat(outputList));
+      console.info === this.outputFunction_ ? console : this.outputFunction_,
+      ['Speech Rule Engine Debugger:'].concat(outputList)
+    );
   }
 }
-

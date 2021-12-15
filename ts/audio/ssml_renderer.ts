@@ -19,35 +19,39 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Engine, EngineConst} from '../common/engine';
-import {Pause} from './audio_util';
-import {XmlRenderer} from './xml_renderer';
-
+import { Engine, EngineConst } from '../common/engine';
+import { Pause } from './audio_util';
+import { XmlRenderer } from './xml_renderer';
 
 export class SsmlRenderer extends XmlRenderer {
-
   /**
    * @override
    */
   public finalize(str: string) {
-    return '<?xml version="1.0"?><speak version="1.1"' +
-        ' xmlns="http://www.w3.org/2001/10/synthesis">' +
-        '<prosody rate="' + Engine.getInstance().getRate() + '%">' +
-        this.getSeparator() + str + this.getSeparator() + '</prosody></speak>';
+    return (
+      '<?xml version="1.0"?><speak version="1.1"' +
+      ' xmlns="http://www.w3.org/2001/10/synthesis">' +
+      '<prosody rate="' +
+      Engine.getInstance().getRate() +
+      '%">' +
+      this.getSeparator() +
+      str +
+      this.getSeparator() +
+      '</prosody></speak>'
+    );
   }
-
 
   /**
    * @override
    */
   public pause(pause: Pause) {
-    return '<break ' +
+    return (
+      '<break ' +
       'time="' +
       this.pauseValue(pause[EngineConst.personalityProps.PAUSE] as string) +
-      'ms"/>';
+      'ms"/>'
+    );
   }
-
 
   /**
    * @override
@@ -55,10 +59,14 @@ export class SsmlRenderer extends XmlRenderer {
   public prosodyElement(attr: string, value: number) {
     value = Math.floor(this.applyScaleFunction(value));
     let valueStr = value < 0 ? value.toString() : '+' + value.toString();
-    return '<prosody ' + attr.toLowerCase() + '="' + valueStr +
-        (attr === EngineConst.personalityProps.VOLUME ? '>' : '%">');
+    return (
+      '<prosody ' +
+      attr.toLowerCase() +
+      '="' +
+      valueStr +
+      (attr === EngineConst.personalityProps.VOLUME ? '>' : '%">')
+    );
   }
-
 
   /**
    * @override
@@ -66,5 +74,4 @@ export class SsmlRenderer extends XmlRenderer {
   public closeTag(_tag: string) {
     return '</prosody>';
   }
-
 }

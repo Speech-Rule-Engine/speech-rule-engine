@@ -19,16 +19,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as DomUtil from '../common/dom_util';
 import XpathUtil from '../common/xpath_util';
-import {AbstractHighlighter, Highlight} from './abstract_highlighter';
-import {ColorPicker} from './color_picker';
-import {SvgHighlighter} from './svg_highlighter';
-
+import { AbstractHighlighter, Highlight } from './abstract_highlighter';
+import { ColorPicker } from './color_picker';
+import { SvgHighlighter } from './svg_highlighter';
 
 export class SvgV3Highlighter extends SvgHighlighter {
-
   /**
    * @override
    */
@@ -36,7 +33,6 @@ export class SvgV3Highlighter extends SvgHighlighter {
     super();
     this.mactionName = 'maction';
   }
-
 
   /**
    * @override
@@ -63,10 +59,11 @@ export class SvgV3Highlighter extends SvgHighlighter {
     }
     let rect = DomUtil.createElementNS('http://www.w3.org/2000/svg', 'rect');
     rect.setAttribute(
-        'sre-highlighter-added',  // Mark highlighting rect.
-        'true');
+      'sre-highlighter-added', // Mark highlighting rect.
+      'true'
+    );
     let padding = 40;
-    let bbox: SVGRect = ((node as any) as SVGGraphicsElement).getBBox();
+    let bbox: SVGRect = (node as any as SVGGraphicsElement).getBBox();
     rect.setAttribute('x', (bbox.x - padding).toString());
     rect.setAttribute('y', (bbox.y - padding).toString());
     rect.setAttribute('width', (bbox.width + 2 * padding).toString());
@@ -78,9 +75,9 @@ export class SvgV3Highlighter extends SvgHighlighter {
     rect.setAttribute('fill', this.colorString().background);
     node.setAttribute(AbstractHighlighter.ATTR, 'true');
     node.parentNode.insertBefore(rect, node);
-    info = {node: node, foreground: node.getAttribute('fill')};
+    info = { node: node, foreground: node.getAttribute('fill') };
     if (node.nodeName === 'rect') {
-      let picker = new ColorPicker({alpha: 0, color: 'black'});
+      let picker = new ColorPicker({ alpha: 0, color: 'black' });
       node.setAttribute('fill', picker.rgba().foreground);
     } else {
       node.setAttribute('fill', this.colorString().foreground);
@@ -88,22 +85,21 @@ export class SvgV3Highlighter extends SvgHighlighter {
     return info;
   }
 
-
   /**
    * @override
    */
   public unhighlightNode(info: Highlight) {
     let previous = info.node.previousSibling as HTMLElement;
     if (previous && previous.hasAttribute('sre-highlighter-added')) {
-      info.foreground ? info.node.setAttribute('fill', info.foreground) :
-                        info.node.removeAttribute('fill');
+      info.foreground
+        ? info.node.setAttribute('fill', info.foreground)
+        : info.node.removeAttribute('fill');
       info.node.parentNode.removeChild(previous);
       return;
     }
     info.node.style.backgroundColor = info.background;
     info.node.style.color = info.foreground;
   }
-
 
   /**
    * @override
@@ -112,13 +108,12 @@ export class SvgV3Highlighter extends SvgHighlighter {
     return node.getAttribute('data-mml-node') === this.mactionName;
   }
 
-
   /**
    * @override
    */
   public getMactionNodes(node: HTMLElement) {
-    return Array.from(XpathUtil.evalXPath(
-        `.//*[@data-mml-node="${this.mactionName}"]`, node)) as HTMLElement[];
+    return Array.from(
+      XpathUtil.evalXPath(`.//*[@data-mml-node="${this.mactionName}"]`, node)
+    ) as HTMLElement[];
   }
 }
-

@@ -19,29 +19,24 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import AuralRendering from '../audio/aural_rendering';
 import * as Enrich from '../enrich_mathml/enrich';
-import {Highlighter} from '../highlighter/highlighter';
+import { Highlighter } from '../highlighter/highlighter';
 import * as HighlighterFactory from '../highlighter/highlighter_factory';
-import {LOCALE} from '../l10n/locale';
+import { LOCALE } from '../l10n/locale';
 import * as Semantic from '../semantic_tree/semantic';
-import {SpeechGenerator} from '../speech_generator/speech_generator';
-import * as SpeechGeneratorFactory from
-   '../speech_generator/speech_generator_factory';
-import * as SpeechGeneratorUtil from
-   '../speech_generator/speech_generator_util';
-import {Walker} from '../walker/walker';
+import { SpeechGenerator } from '../speech_generator/speech_generator';
+import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory';
+import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
+import { Walker } from '../walker/walker';
 import * as WalkerFactory from '../walker/walker_factory';
 import * as WalkerUtil from '../walker/walker_util';
 import * as DomUtil from './dom_util';
-import {Engine, EngineConst, SREError} from './engine';
-import {KeyCode} from './event_util';
+import { Engine, EngineConst, SREError } from './engine';
+import { KeyCode } from './event_util';
 import XpathUtil from './xpath_util';
 
-
 export namespace ProcessorFactory {
-
   const PROCESSORS = new Map();
 
   /**
@@ -66,7 +61,6 @@ export namespace ProcessorFactory {
     return processor;
   }
 
-
   /**
    * Processes an expression with the given processor.
    * @param name The name of the processor.
@@ -77,7 +71,6 @@ export namespace ProcessorFactory {
     let processor = get_(name);
     return processor.processor(expr) as T;
   }
-
 
   /**
    * Processes an expression with the given processor.
@@ -90,7 +83,6 @@ export namespace ProcessorFactory {
     return processor.process(expr) as T;
   }
 
-
   /**
    * Prints a processed expression with given processor.
    * @param name The name of the processor.
@@ -99,10 +91,10 @@ export namespace ProcessorFactory {
    */
   export function print<T>(name: string, data: T): string {
     let processor = get_(name);
-    return Engine.getInstance().pprint ? processor.pprint(data) :
-      processor.print(data);
+    return Engine.getInstance().pprint
+      ? processor.pprint(data)
+      : processor.print(data);
   }
-
 
   /**
    * Convenience method that combines processing and printing.
@@ -113,10 +105,10 @@ export namespace ProcessorFactory {
   export function output(name: string, expr: string): string {
     let processor = get_(name);
     let data = processor.processor(expr);
-    return Engine.getInstance().pprint ? processor.pprint(data) :
-      processor.print(data);
+    return Engine.getInstance().pprint
+      ? processor.pprint(data)
+      : processor.print(data);
   }
-
 
   /**
    * Convenience method that combines key processing, processing and printing.
@@ -124,27 +116,25 @@ export namespace ProcessorFactory {
    * @param expr The key stroke to process.
    * @return A string representation of the result.
    */
-  export function keypress(name: string, expr: KeyCode|string): string {
+  export function keypress(name: string, expr: KeyCode | string): string {
     let processor = get_(name);
-    let key = (processor instanceof KeyProcessor) ? processor.key(expr) : expr;
+    let key = processor instanceof KeyProcessor ? processor.key(expr) : expr;
     let data = processor.processor(key as string);
-    return Engine.getInstance().pprint ? processor.pprint(data) :
-      processor.print(data);
+    return Engine.getInstance().pprint
+      ? processor.pprint(data)
+      : processor.print(data);
   }
-
 }
 
-
 export class Processor<T> {
-
   /**
    * A state object for stateful processors.
    */
   public static LocalState: {
-    walker: Walker,
-    speechGenerator: SpeechGenerator,
-    highlighter: Highlighter
-  } = {walker: null, speechGenerator: null, highlighter: null};
+    walker: Walker;
+    speechGenerator: SpeechGenerator;
+    highlighter: Highlighter;
+  } = { walker: null, speechGenerator: null, highlighter: null };
 
   /**
    * processor The actual processing method.
@@ -178,7 +168,7 @@ export class Processor<T> {
    * @return Resulting string.
    */
   private static stringify_<T>(x: T): string {
-    return x ? x.toString() : (x as any) as string;
+    return x ? x.toString() : (x as any as string);
   }
 
   /**
@@ -189,33 +179,35 @@ export class Processor<T> {
    *          print: (undefined|function(T): string),
    *          pprint: (undefined|function(T): string)}} methods
    */
-  constructor(public name: string, methods: {
-    processor: (p1: string) => T,
-    postprocessor?: ((p1: T, p2: string) => T),
-    print?: ((p1: T) => string),
-    pprint?: ((p1: T) => string)
-  }) {
+  constructor(
+    public name: string,
+    methods: {
+      processor: (p1: string) => T;
+      postprocessor?: (p1: T, p2: string) => T;
+      print?: (p1: T) => string;
+      pprint?: (p1: T) => string;
+    }
+  ) {
     this.process = methods.processor;
-    this.postprocess = methods.postprocessor ||
-      ((x, _y) => x) as (p1: T, p2: string) => T;
-    this.processor = this.postprocess ? (function(x) {
-      return this.postprocess(this.process(x), x);
-    } as (p1: string) => T) : this.process;
+    this.postprocess =
+      methods.postprocessor || (((x, _y) => x) as (p1: T, p2: string) => T);
+    this.processor = this.postprocess
+      ? (function (x) {
+          return this.postprocess(this.process(x), x);
+        } as (p1: string) => T)
+      : this.process;
     this.print = methods.print || Processor.stringify_;
     this.pprint = methods.pprint || this.print;
 
     ProcessorFactory.set(this.name, this);
   }
-
 }
 
 export class KeyProcessor<T> extends Processor<T> {
-
   /**
    * The method handling the keypress.
    */
-  public key: (p1: KeyCode|string) => KeyCode;
-
+  public key: (p1: KeyCode | string) => KeyCode;
 
   /**
    * Default method to stringify input key codes. If the key code is already a
@@ -223,11 +215,11 @@ export class KeyProcessor<T> extends Processor<T> {
    * @param key The key code.
    * @return The corresponding string.
    */
-  private static getKey_(key: KeyCode|string): KeyCode {
-    return typeof key === 'string' ?
-      // TODO (TS): Check if this really works!
-      KeyCode[key.toUpperCase() as keyof typeof KeyCode] :
-      key;
+  private static getKey_(key: KeyCode | string): KeyCode {
+    return typeof key === 'string'
+      ? // TODO (TS): Check if this really works!
+        KeyCode[key.toUpperCase() as keyof typeof KeyCode]
+      : key;
   }
 
   /**
@@ -239,29 +231,30 @@ export class KeyProcessor<T> extends Processor<T> {
    *          pprint: (undefined|function(T): string)}} methods
    * @override
    */
-  constructor(name: string, methods: {
-    processor: (p1: string) => T,
-    key?: ((p1: KeyCode|string) => KeyCode),
-    print?: ((p1: T) => string),
-    pprint?: ((p1: T) => string)
-  }) {
+  constructor(
+    name: string,
+    methods: {
+      processor: (p1: string) => T;
+      key?: (p1: KeyCode | string) => KeyCode;
+      print?: (p1: T) => string;
+      pprint?: (p1: T) => string;
+    }
+  ) {
     super(name, methods);
     /**
      * Transforms key values into strings.
      */
     this.key = methods.key || KeyProcessor.getKey_;
   }
-
 }
-
 
 //  semantic: XML of semantic tree.
 new Processor<Element>('semantic', {
-  processor: function(expr) {
+  processor: function (expr) {
     let mml = DomUtil.parseInput(expr);
     return Semantic.xmlTree(mml) as Element;
   },
-  postprocessor: function(xml, _expr) {
+  postprocessor: function (xml, _expr) {
     let setting = Engine.getInstance().speech;
     if (setting === EngineConst.Speech.NONE) {
       return xml;
@@ -276,44 +269,44 @@ new Processor<Element>('semantic', {
     }
     let nodesXml = XpathUtil.evalXPath('.//*[@id]', xml) as Element[];
     let nodesClone = XpathUtil.evalXPath('.//*[@id]', clone) as Element[];
-    for (let i = 0, orig, node; orig = nodesXml[i], node = nodesClone[i]; i++) {
+    for (
+      let i = 0, orig, node;
+      (orig = nodesXml[i]), (node = nodesClone[i]);
+      i++
+    ) {
       speech = SpeechGeneratorUtil.computeMarkup(node);
       orig.setAttribute('speech', AuralRendering.finalize(speech));
     }
     return xml;
   },
-  pprint: function(tree) {
+  pprint: function (tree) {
     return DomUtil.formatXml(tree.toString());
   }
 });
 
-
 //  speech: Aural rendering string.
 new Processor('speech', {
-  processor: function(expr) {
+  processor: function (expr) {
     let mml = DomUtil.parseInput(expr);
     let xml = Semantic.xmlTree(mml);
     let descrs = SpeechGeneratorUtil.computeSpeech(xml);
     return AuralRendering.finalize(AuralRendering.markup(descrs));
   },
-  pprint: function(speech) {
+  pprint: function (speech) {
     let str = speech.toString();
     // Pretty Printing wrt. markup renderer.
-    return AuralRendering.isXml() ?
-        DomUtil.formatXml(str) :
-        str;
+    return AuralRendering.isXml() ? DomUtil.formatXml(str) : str;
   }
 });
 
-
 //  json: Json version of the semantic tree.
 new Processor('json', {
-  processor: function(expr) {
+  processor: function (expr) {
     let mml = DomUtil.parseInput(expr);
     let stree = Semantic.getTree(mml);
     return stree.toJson();
   },
-  postprocessor: function(json: any, expr) {
+  postprocessor: function (json: any, expr) {
     let setting = Engine.getInstance().speech;
     if (setting === EngineConst.Speech.NONE) {
       return json;
@@ -326,8 +319,7 @@ new Processor('json', {
       return json;
     }
     let addRec = (json: any) => {
-      let node =
-        XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0] as Element;
+      let node = XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0] as Element;
       let speech = SpeechGeneratorUtil.computeMarkup(node);
       json.speech = AuralRendering.finalize(speech);
       if (json.children) {
@@ -337,38 +329,36 @@ new Processor('json', {
     addRec(json.stree);
     return json;
   },
-  print: function(json) {
+  print: function (json) {
     return JSON.stringify(json);
   },
-  pprint: function(json) {
+  pprint: function (json) {
     return JSON.stringify(json, null, 2);
   }
 });
 
-
 //  description: List of auditory descriptions.
 new Processor('description', {
-  processor: function(expr) {
+  processor: function (expr) {
     let mml = DomUtil.parseInput(expr);
     let xml = Semantic.xmlTree(mml);
     let descrs = SpeechGeneratorUtil.computeSpeech(xml);
     return descrs;
   },
-  print: function(descrs) {
+  print: function (descrs) {
     return JSON.stringify(descrs);
   },
-  pprint: function(descrs) {
+  pprint: function (descrs) {
     return JSON.stringify(descrs, null, 2);
   }
 });
 
-
 //  enriched: Enriched MathML node.
 new Processor<Element>('enriched', {
-  processor: function(expr) {
+  processor: function (expr) {
     return Enrich.semanticMathmlSync(expr);
   },
-  postprocessor: function(enr, _expr) {
+  postprocessor: function (enr, _expr) {
     let root = WalkerUtil.getSemanticRoot(enr);
     switch (Engine.getInstance().speech) {
       case EngineConst.Speech.NONE:
@@ -386,52 +376,58 @@ new Processor<Element>('enriched', {
     }
     return enr;
   },
-  pprint: function(tree) {
+  pprint: function (tree) {
     return DomUtil.formatXml(tree.toString());
   }
 });
 
 new Processor('walker', {
-  processor: function(expr) {
+  processor: function (expr) {
     let generator = SpeechGeneratorFactory.generator('Node');
     Processor.LocalState.speechGenerator = generator;
     Processor.LocalState.highlighter = HighlighterFactory.highlighter(
-        {color: 'black'}, {color: 'white'}, {renderer: 'NativeMML'});
+      { color: 'black' },
+      { color: 'white' },
+      { renderer: 'NativeMML' }
+    );
     let node = ProcessorFactory.process('enriched', expr) as Element;
     let eml = ProcessorFactory.print('enriched', node);
     Processor.LocalState.walker = WalkerFactory.walker(
-        Engine.getInstance().walker, node, generator,
-        Processor.LocalState.highlighter, eml);
+      Engine.getInstance().walker,
+      node,
+      generator,
+      Processor.LocalState.highlighter,
+      eml
+    );
     return Processor.LocalState.walker;
   },
-  print: function(_walker) {
+  print: function (_walker) {
     return Processor.LocalState.walker.speech();
   }
 });
 
 // TODO: This one should probably return the now highlighted node.
 new KeyProcessor('move', {
-  processor: function(direction) {
+  processor: function (direction) {
     if (!Processor.LocalState.walker) {
       return null;
     }
     let move = Processor.LocalState.walker.move(direction as any);
-    return move === false ? AuralRendering.error(direction) :
-                            Processor.LocalState.walker.speech();
+    return move === false
+      ? AuralRendering.error(direction)
+      : Processor.LocalState.walker.speech();
   }
 });
 
-
 new Processor('number', {
-  processor: function(numb) {
+  processor: function (numb) {
     let num = parseInt(numb, 10);
     return isNaN(num) ? '' : LOCALE.NUMBERS.numberToWords(num);
   }
 });
 
-
 new Processor('ordinal', {
-  processor: function(numb) {
+  processor: function (numb) {
     let num = parseInt(numb, 10);
     return isNaN(num) ? '' : LOCALE.NUMBERS.numberToOrdinal(num, false);
   }

@@ -21,20 +21,17 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
+import { SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseLimit extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
   public mml: Element;
-
 
   /**
    * Applicability test of the case.
@@ -47,14 +44,16 @@ export class CaseLimit extends AbstractEnrichCase {
     }
     let mmlTag = DomUtil.tagName(semantic.mathmlTree);
     let type = semantic.type;
-    return (type === SemanticType.LIMUPPER ||
-            type === SemanticType.LIMLOWER) &&
-        (mmlTag === 'MSUBSUP' || mmlTag === 'MUNDEROVER') ||
-        type === SemanticType.LIMBOTH &&
-        (mmlTag === 'MSUB' || mmlTag === 'MUNDER' || mmlTag === 'MSUP' ||
-         mmlTag === 'MOVER');
+    return (
+      ((type === SemanticType.LIMUPPER || type === SemanticType.LIMLOWER) &&
+        (mmlTag === 'MSUBSUP' || mmlTag === 'MUNDEROVER')) ||
+      (type === SemanticType.LIMBOTH &&
+        (mmlTag === 'MSUB' ||
+          mmlTag === 'MUNDER' ||
+          mmlTag === 'MSUP' ||
+          mmlTag === 'MOVER'))
+    );
   }
-
 
   /**
    * Enriches a semantic node if it is given.
@@ -62,10 +61,9 @@ export class CaseLimit extends AbstractEnrichCase {
    */
   private static walkTree_(node: SemanticNode) {
     if (node) {
-      EnrichMathml.walkTree((node as SemanticNode));
+      EnrichMathml.walkTree(node as SemanticNode);
     }
   }
-
 
   /**
    * @override
@@ -76,14 +74,15 @@ export class CaseLimit extends AbstractEnrichCase {
     this.mml = semantic.mathmlTree;
   }
 
-
   /**
    * @override
    */
   public getMathml() {
     let children = this.semantic.childNodes;
-    if (this.semantic.type !== SemanticType.LIMBOTH &&
-        this.mml.childNodes.length >= 3) {
+    if (
+      this.semantic.type !== SemanticType.LIMBOTH &&
+      this.mml.childNodes.length >= 3
+    ) {
       // Extra layer only necessary if a split upper/lower script. Second
       // condition excludes incomplete elements.
       this.mml = EnrichMathml.introduceNewLayer([this.mml], this.semantic);
@@ -95,6 +94,4 @@ export class CaseLimit extends AbstractEnrichCase {
     children.forEach(CaseLimit.walkTree_);
     return this.mml;
   }
-
 }
-

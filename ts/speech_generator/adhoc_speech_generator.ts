@@ -20,12 +20,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AbstractSpeechGenerator} from './abstract_speech_generator';
-
+import { AbstractSpeechGenerator } from './abstract_speech_generator';
 
 export class AdhocSpeechGenerator extends AbstractSpeechGenerator {
-
   /**
    * @override
    */

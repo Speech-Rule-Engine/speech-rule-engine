@@ -20,10 +20,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticAttr, SemanticRole, SemanticType} from './semantic_attr';
-import {SemanticNode} from './semantic_node';
-import {getEmbellishedInner} from './semantic_util';
-
+import { SemanticAttr, SemanticRole, SemanticType } from './semantic_attr';
+import { SemanticNode } from './semantic_node';
+import { getEmbellishedInner } from './semantic_util';
 
 // TODO (TS): Converted old isAttribute to three predicates. Make sure they are
 //            sound!
@@ -37,18 +36,18 @@ export function isType(node: SemanticNode, attr: SemanticType): boolean {
   return node.type === attr;
 }
 
-
 /**
  * Checks if a node is of the given embellished type.
  * @param node The node.
  * @param attr The embellished attribute.
  * @return True if node has that embellished type.
  */
-export function embellishedType(node: SemanticNode,
-                                attr: SemanticType): boolean {
+export function embellishedType(
+  node: SemanticNode,
+  attr: SemanticType
+): boolean {
   return node.embellished === attr;
 }
-
 
 /**
  * Checks if a node is of the given role.
@@ -60,26 +59,27 @@ export function isRole(node: SemanticNode, attr: SemanticRole): boolean {
   return node.role === attr;
 }
 
-
 /**
  * Checks whether a character can be considered as accent.
  * @param node The node to be tested.
  * @return True if the node is a punctuation, fence or operator.
  */
 export function isAccent(node: SemanticNode): boolean {
-  return isType(node, SemanticType.FENCE) ||
-      isType(node, SemanticType.PUNCTUATION) ||
-      // TODO (sorge) Simplify this once meaning of all characters is fully
-      // defined. Improve dealing with Infinity.
-      isType(node, SemanticType.OPERATOR) &&
-      !node.textContent.match(new RegExp('∞|᪲')) ||
-      isType(node, SemanticType.RELATION) ||
-      isType(node, SemanticType.IDENTIFIER) &&
+  return (
+    isType(node, SemanticType.FENCE) ||
+    isType(node, SemanticType.PUNCTUATION) ||
+    // TODO (sorge) Simplify this once meaning of all characters is fully
+    // defined. Improve dealing with Infinity.
+    (isType(node, SemanticType.OPERATOR) &&
+      !node.textContent.match(new RegExp('∞|᪲'))) ||
+    isType(node, SemanticType.RELATION) ||
+    (isType(node, SemanticType.IDENTIFIER) &&
       isRole(node, SemanticRole.UNKNOWN) &&
-      !node.textContent.match(new RegExp(
-          SemanticAttr.allLetters.join('|') + '|∞|᪲'));
+      !node.textContent.match(
+        new RegExp(SemanticAttr.allLetters.join('|') + '|∞|᪲')
+      ))
+  );
 }
-
 
 /**
  * Predicate implementing the boundary criteria for detecting simple functions:
@@ -103,13 +103,12 @@ export function isSimpleFunctionScope(node: SemanticNode): boolean {
     if (child.role !== SemanticRole.IMPLICIT) {
       return false;
     }
-    if (child.childNodes.some(x => isType(x, SemanticType.INFIXOP))) {
+    if (child.childNodes.some((x) => isType(x, SemanticType.INFIXOP))) {
       return false;
     }
   }
   return true;
 }
-
 
 /**
  * Predicate implementing the boundary criteria for prefix functions.
@@ -121,10 +120,12 @@ export function isSimpleFunctionScope(node: SemanticNode): boolean {
  * @return True if the node meets the boundary criteria.
  */
 export function isPrefixFunctionBoundary(node: SemanticNode): boolean {
-  return isOperator(node) && !isRole(node, SemanticRole.DIVISION) ||
-    isType(node, SemanticType.APPL) || isGeneralFunctionBoundary(node);
+  return (
+    (isOperator(node) && !isRole(node, SemanticRole.DIVISION)) ||
+    isType(node, SemanticType.APPL) ||
+    isGeneralFunctionBoundary(node)
+  );
 }
-
 
 /**
  * Predicate implementing the boundary criteria for big operators:
@@ -138,7 +139,6 @@ export function isBigOpBoundary(node: SemanticNode): boolean {
   return isOperator(node) || isGeneralFunctionBoundary(node);
 }
 
-
 /**
  * Predicate implementing the boundary criteria for integrals dx on two nodes.
  * @param firstNode A semantic node.
@@ -147,11 +147,15 @@ export function isBigOpBoundary(node: SemanticNode): boolean {
  * @return True if the second node exists and the first node is a 'd'.
  */
 export function isIntegralDxBoundary(
-    firstNode: SemanticNode, secondNode: SemanticNode): boolean {
-  return !!secondNode && isType(secondNode, SemanticType.IDENTIFIER) &&
-      SemanticAttr.lookupSecondary('d', firstNode.textContent);
+  firstNode: SemanticNode,
+  secondNode: SemanticNode
+): boolean {
+  return (
+    !!secondNode &&
+    isType(secondNode, SemanticType.IDENTIFIER) &&
+    SemanticAttr.lookupSecondary('d', firstNode.textContent)
+  );
 }
-
 
 /**
  * Predicate implementing the boundary criteria for integrals dx on a single
@@ -162,12 +166,14 @@ export function isIntegralDxBoundary(
 export function isIntegralDxBoundarySingle(node: SemanticNode): boolean {
   if (isType(node, SemanticType.IDENTIFIER)) {
     let firstChar = node.textContent[0];
-    return firstChar && node.textContent[1] &&
-      SemanticAttr.lookupSecondary('d', firstChar);
+    return (
+      firstChar &&
+      node.textContent[1] &&
+      SemanticAttr.lookupSecondary('d', firstChar)
+    );
   }
   return false;
 }
-
 
 /**
  * Predicate implementing the general boundary criteria for function operators:
@@ -180,13 +186,12 @@ export function isGeneralFunctionBoundary(node: SemanticNode): boolean {
   return isRelation(node) || isPunctuation(node);
 }
 
-
 /**
  * Determines if a node is embellished and returns its type in case it is.
  * @param node A node to test.
  * @return The type of the node that is embellished.
  */
-export function isEmbellished(node: SemanticNode): SemanticType|null {
+export function isEmbellished(node: SemanticNode): SemanticType | null {
   if (node.embellished) {
     return node.embellished;
   }
@@ -196,17 +201,17 @@ export function isEmbellished(node: SemanticNode): SemanticType|null {
   return null;
 }
 
-
 /**
  * Determines if a node is an operator, regular or embellished.
  * @param node A node to test.
  * @return True if the node is considered as operator.
  */
 export function isOperator(node: SemanticNode): boolean {
-  return isType(node, SemanticType.OPERATOR) ||
-    embellishedType(node, SemanticType.OPERATOR);
+  return (
+    isType(node, SemanticType.OPERATOR) ||
+    embellishedType(node, SemanticType.OPERATOR)
+  );
 }
-
 
 /**
  * Determines if a node is an relation, regular or embellished.
@@ -214,10 +219,11 @@ export function isOperator(node: SemanticNode): boolean {
  * @return True if the node is considered as relation.
  */
 export function isRelation(node: SemanticNode): boolean {
-  return isType(node, SemanticType.RELATION) ||
-    embellishedType(node, SemanticType.RELATION);
+  return (
+    isType(node, SemanticType.RELATION) ||
+    embellishedType(node, SemanticType.RELATION)
+  );
 }
-
 
 /**
  * Determines if a node is an punctuation, regular or embellished.
@@ -225,10 +231,11 @@ export function isRelation(node: SemanticNode): boolean {
  * @return True if the node is considered as punctuation.
  */
 export function isPunctuation(node: SemanticNode): boolean {
-  return isType(node, SemanticType.PUNCTUATION) ||
-    embellishedType(node, SemanticType.PUNCTUATION);
+  return (
+    isType(node, SemanticType.PUNCTUATION) ||
+    embellishedType(node, SemanticType.PUNCTUATION)
+  );
 }
-
 
 /**
  * Determines if a node is an fence, regular or embellished.
@@ -236,10 +243,11 @@ export function isPunctuation(node: SemanticNode): boolean {
  * @return True if the node is considered as fence.
  */
 export function isFence(node: SemanticNode): boolean {
-  return isType(node, SemanticType.FENCE) ||
-    embellishedType(node, SemanticType.FENCE);
+  return (
+    isType(node, SemanticType.FENCE) ||
+    embellishedType(node, SemanticType.FENCE)
+  );
 }
-
 
 /**
  * Determines if a fence is eligible.
@@ -260,20 +268,20 @@ export function isElligibleEmbellishedFence(node: SemanticNode): boolean {
   return recurseBaseNode(node);
 }
 
-
 /**
  * Predicate to check if indexes either side of a tensor node are empty.
  * @param node The tensor node.
  * @return True if tensor node with both sides having content.
  */
 function bothSide(node: SemanticNode): boolean {
-  return isType(node, SemanticType.TENSOR) &&
+  return (
+    isType(node, SemanticType.TENSOR) &&
     (!isType(node.childNodes[1], SemanticType.EMPTY) ||
       !isType(node.childNodes[2], SemanticType.EMPTY)) &&
     (!isType(node.childNodes[3], SemanticType.EMPTY) ||
-      !isType(node.childNodes[4], SemanticType.EMPTY));
+      !isType(node.childNodes[4], SemanticType.EMPTY))
+  );
 }
-
 
 /**
  * Recursively checks a node if it is an eligible fence node.
@@ -285,20 +293,20 @@ function recurseBaseNode(node: SemanticNode): boolean {
     return true;
   }
   if (bothSide(node)) {
-      return false;
-  }
-  if (isRole(node, SemanticRole.CLOSE) &&
-    isType(node, SemanticType.TENSOR)) {
     return false;
   }
-  if (isRole(node, SemanticRole.OPEN) &&
+  if (isRole(node, SemanticRole.CLOSE) && isType(node, SemanticType.TENSOR)) {
+    return false;
+  }
+  if (
+    isRole(node, SemanticRole.OPEN) &&
     (isType(node, SemanticType.SUBSCRIPT) ||
-      isType(node, SemanticType.SUPERSCRIPT))) {
+      isType(node, SemanticType.SUPERSCRIPT))
+  ) {
     return false;
-    }
+  }
   return recurseBaseNode(node.childNodes[0]);
 }
-
 
 /**
  * Decides if a node is a table or multiline element.
@@ -306,11 +314,11 @@ function recurseBaseNode(node: SemanticNode): boolean {
  * @return True if node is either table or multiline.
  */
 export function isTableOrMultiline(node: SemanticNode): boolean {
-  return !!node &&
-    (isType(node, SemanticType.TABLE) ||
-      isType(node, SemanticType.MULTILINE));
+  return (
+    !!node &&
+    (isType(node, SemanticType.TABLE) || isType(node, SemanticType.MULTILINE))
+  );
 }
-
 
 /**
  * Heuristic to decide if we have a matrix: An expression fenced on both sides
@@ -319,10 +327,10 @@ export function isTableOrMultiline(node: SemanticNode): boolean {
  * @return True if we believe we have a matrix.
  */
 export function tableIsMatrixOrVector(node: SemanticNode): boolean {
-  return !!node && isFencedElement(node) &&
-      isTableOrMultiline(node.childNodes[0]);
+  return (
+    !!node && isFencedElement(node) && isTableOrMultiline(node.childNodes[0])
+  );
 }
-
 
 /**
  * Decides if a node is a single, simply fenced element.
@@ -331,11 +339,13 @@ export function tableIsMatrixOrVector(node: SemanticNode): boolean {
  *     single contained element.
  */
 export function isFencedElement(node: SemanticNode): boolean {
-  return !!node && isType(node, SemanticType.FENCED) &&
+  return (
+    !!node &&
+    isType(node, SemanticType.FENCED) &&
     (isRole(node, SemanticRole.LEFTRIGHT) || isNeutralFence(node)) &&
-      node.childNodes.length === 1;
+    node.childNodes.length === 1
+  );
 }
-
 
 /**
  * Heuristic to decide if we have a case statement: An expression with a
@@ -345,11 +355,14 @@ export function isFencedElement(node: SemanticNode): boolean {
  * @return True if we believe we have a case statement.
  */
 export function tableIsCases(
-    _table: SemanticNode, prevNodes: SemanticNode[]): boolean {
-  return prevNodes.length > 0 &&
-    isRole(prevNodes[prevNodes.length - 1], SemanticRole.OPENFENCE);
+  _table: SemanticNode,
+  prevNodes: SemanticNode[]
+): boolean {
+  return (
+    prevNodes.length > 0 &&
+    isRole(prevNodes[prevNodes.length - 1], SemanticRole.OPENFENCE)
+  );
 }
-
 
 /**
  * Heuristic to decide if we have a multiline formula. A table is considered a
@@ -358,12 +371,11 @@ export function tableIsCases(
  * @return True if we believe we have a mulitline formula.
  */
 export function tableIsMultiline(table: SemanticNode): boolean {
-  return table.childNodes.every(function(row) {
+  return table.childNodes.every(function (row) {
     let length = row.childNodes.length;
     return length <= 1;
   });
 }
-
 
 /**
  * Determines if this is a labelled line.
@@ -371,11 +383,12 @@ export function tableIsMultiline(table: SemanticNode): boolean {
  * @return True if the element is a line and has a label as a content node.
  */
 export function lineIsLabelled(line: SemanticNode): boolean {
-  return isType(line, SemanticType.LINE) &&
+  return (
+    isType(line, SemanticType.LINE) &&
     line.contentNodes.length &&
-    isRole(line.contentNodes[0], SemanticRole.LABEL);
+    isRole(line.contentNodes[0], SemanticRole.LABEL)
+  );
 }
-
 
 /**
  * Heuristic to decide if a table has a binomial form.
@@ -386,7 +399,6 @@ export function isBinomial(table: SemanticNode): boolean {
   return table.childNodes.length === 2;
 }
 
-
 /**
  * Heuristic to decide if a node is a suitable center of a limit node.
  * @param node The center node.
@@ -394,17 +406,18 @@ export function isBinomial(table: SemanticNode): boolean {
  *    limit function.
  */
 export function isLimitBase(node: SemanticNode): boolean {
-  return isType(node, SemanticType.LARGEOP) ||
+  return (
+    isType(node, SemanticType.LARGEOP) ||
     isType(node, SemanticType.LIMBOTH) ||
     isType(node, SemanticType.LIMLOWER) ||
     isType(node, SemanticType.LIMUPPER) ||
-    isType(node, SemanticType.FUNCTION) &&
-    isRole(node, SemanticRole.LIMFUNC) ||
-    (isType(node, SemanticType.OVERSCORE) ||
+    (isType(node, SemanticType.FUNCTION) &&
+      isRole(node, SemanticRole.LIMFUNC)) ||
+    ((isType(node, SemanticType.OVERSCORE) ||
       isType(node, SemanticType.UNDERSCORE)) &&
-      isLimitBase((node.childNodes[0] as SemanticNode));
+      isLimitBase(node.childNodes[0] as SemanticNode))
+  );
 }
-
 
 /**
  * Predicate deciding whether a symbol is the head of a simple function.
@@ -412,12 +425,13 @@ export function isLimitBase(node: SemanticNode): boolean {
  * @return True if node is an identifier or a simple letter.
  */
 export function isSimpleFunctionHead(node: SemanticNode): boolean {
-  return node.type === SemanticType.IDENTIFIER ||
-      node.role === SemanticRole.LATINLETTER ||
-      node.role === SemanticRole.GREEKLETTER ||
-      node.role === SemanticRole.OTHERLETTER;
+  return (
+    node.type === SemanticType.IDENTIFIER ||
+    node.role === SemanticRole.LATINLETTER ||
+    node.role === SemanticRole.GREEKLETTER ||
+    node.role === SemanticRole.OTHERLETTER
+  );
 }
-
 
 /**
  * Given a list of punctuated node and their containing puncutations, decides if
@@ -430,13 +444,17 @@ export function isSimpleFunctionHead(node: SemanticNode): boolean {
  *     punctuation at the given position.
  */
 export function singlePunctAtPosition(
-    nodes: SemanticNode[], puncts: SemanticNode[], position: number): boolean {
-  return puncts.length === 1 &&
-      (nodes[position].type === SemanticType.PUNCTUATION ||
-       nodes[position].embellished === SemanticType.PUNCTUATION) &&
-      nodes[position] === puncts[0];
+  nodes: SemanticNode[],
+  puncts: SemanticNode[],
+  position: number
+): boolean {
+  return (
+    puncts.length === 1 &&
+    (nodes[position].type === SemanticType.PUNCTUATION ||
+      nodes[position].embellished === SemanticType.PUNCTUATION) &&
+    nodes[position] === puncts[0]
+  );
 }
-
 
 /**
  * Is the node a simple function?
@@ -444,10 +462,11 @@ export function singlePunctAtPosition(
  * @return True if node is an identifier with role simple function.
  */
 export function isSimpleFunction(node: SemanticNode): boolean {
-  return isType(node, SemanticType.IDENTIFIER) &&
-    isRole(node, SemanticRole.SIMPLEFUNC);
+  return (
+    isType(node, SemanticType.IDENTIFIER) &&
+    isRole(node, SemanticRole.SIMPLEFUNC)
+  );
 }
-
 
 /**
  * Is the node a left brace?
@@ -460,7 +479,6 @@ export function isLeftBrace(node: SemanticNode): boolean {
   return !!node && leftBrace.indexOf(node.textContent) !== -1;
 }
 
-
 /**
  * Is the node a right brace?
  * @param node The node.
@@ -472,34 +490,39 @@ export function isRightBrace(node: SemanticNode): boolean {
   return !!node && rightBrace.indexOf(node.textContent) !== -1;
 }
 
-
 /**
  * Is the node a set like node, i.e., a fenced node with braces.
  * @param node The node.
  * @return True if the node is a set.
  */
 export function isSetNode(node: SemanticNode): boolean {
-  return isLeftBrace(node.contentNodes[0]) &&
-      isRightBrace(node.contentNodes[1]);
+  return (
+    isLeftBrace(node.contentNodes[0]) && isRightBrace(node.contentNodes[1])
+  );
 }
-
 
 // TODO: Rewrite as dictionary or map!
 export const illegalSingleton_: SemanticType[] = [
-  SemanticType.PUNCTUATION, SemanticType.PUNCTUATED,
-  SemanticType.RELSEQ, SemanticType.MULTIREL, SemanticType.TABLE,
-  SemanticType.MULTILINE, SemanticType.CASES,
+  SemanticType.PUNCTUATION,
+  SemanticType.PUNCTUATED,
+  SemanticType.RELSEQ,
+  SemanticType.MULTIREL,
+  SemanticType.TABLE,
+  SemanticType.MULTILINE,
+  SemanticType.CASES,
   SemanticType.INFERENCE
 ];
 
-
 export const scriptedElement_: SemanticType[] = [
-  SemanticType.LIMUPPER, SemanticType.LIMLOWER,
-  SemanticType.LIMBOTH, SemanticType.SUBSCRIPT,
-  SemanticType.SUPERSCRIPT, SemanticType.UNDERSCORE,
-  SemanticType.OVERSCORE, SemanticType.TENSOR
+  SemanticType.LIMUPPER,
+  SemanticType.LIMLOWER,
+  SemanticType.LIMBOTH,
+  SemanticType.SUBSCRIPT,
+  SemanticType.SUPERSCRIPT,
+  SemanticType.UNDERSCORE,
+  SemanticType.OVERSCORE,
+  SemanticType.TENSOR
 ];
-
 
 /**
  * Is the node a likely candidate for a singleton set element.
@@ -508,15 +531,16 @@ export const scriptedElement_: SemanticType[] = [
  */
 export function isSingletonSetContent(node: SemanticNode): boolean {
   let type = node.type;
-  if (illegalSingleton_.indexOf(type) !== -1 ||
-      type === SemanticType.INFIXOP &&
-          node.role !== SemanticRole.IMPLICIT) {
+  if (
+    illegalSingleton_.indexOf(type) !== -1 ||
+    (type === SemanticType.INFIXOP && node.role !== SemanticRole.IMPLICIT)
+  ) {
     return false;
   }
   if (type === SemanticType.FENCED) {
-    return node.role === SemanticRole.LEFTRIGHT ?
-        isSingletonSetContent(node.childNodes[0]) :
-        true;
+    return node.role === SemanticRole.LEFTRIGHT
+      ? isSingletonSetContent(node.childNodes[0])
+      : true;
   }
   if (scriptedElement_.indexOf(type) !== -1) {
     return isSingletonSetContent(node.childNodes[0]);
@@ -524,18 +548,17 @@ export function isSingletonSetContent(node: SemanticNode): boolean {
   return true;
 }
 
-
 /**
  * Tests if a number an integer or a decimal.
  * @param node The semantic node.
  * @return True if the number is an integer or a decimal.
  */
 export function isNumber(node: SemanticNode): boolean {
-  return node.type === SemanticType.NUMBER &&
-      (node.role === SemanticRole.INTEGER ||
-       node.role === SemanticRole.FLOAT);
+  return (
+    node.type === SemanticType.NUMBER &&
+    (node.role === SemanticRole.INTEGER || node.role === SemanticRole.FLOAT)
+  );
 }
-
 
 /**
  * Tests if a node is elligible as a unit counter. I.e., an integer or a
@@ -546,10 +569,12 @@ export function isNumber(node: SemanticNode): boolean {
  * @return True if the number is an integer or a decimal.
  */
 export function isUnitCounter(node: SemanticNode): boolean {
-  return isNumber(node) || node.role === SemanticRole.VULGAR ||
-      node.role === SemanticRole.MIXED;
+  return (
+    isNumber(node) ||
+    node.role === SemanticRole.VULGAR ||
+    node.role === SemanticRole.MIXED
+  );
 }
-
 
 /**
  * Tests if a node is pure unit, i.e., a singleton unit or a unit expression
@@ -559,10 +584,11 @@ export function isUnitCounter(node: SemanticNode): boolean {
  */
 export function isPureUnit(node: SemanticNode): boolean {
   let children = node.childNodes;
-  return node.role === SemanticRole.UNIT &&
-      (!children.length || children[0].role === SemanticRole.UNIT);
+  return (
+    node.role === SemanticRole.UNIT &&
+    (!children.length || children[0].role === SemanticRole.UNIT)
+  );
 }
-
 
 /**
  * Tests if a node is an implicit node or a unit node representing an implicit
@@ -571,11 +597,13 @@ export function isPureUnit(node: SemanticNode): boolean {
  * @return True if the node is considered an implicit node.
  */
 export function isImplicit(node: SemanticNode): boolean {
-  return node.role === SemanticRole.IMPLICIT ||
-      node.role === SemanticRole.UNIT && !!node.contentNodes.length &&
-      node.contentNodes[0].textContent === SemanticAttr.invisibleTimes();
+  return (
+    node.role === SemanticRole.IMPLICIT ||
+    (node.role === SemanticRole.UNIT &&
+      !!node.contentNodes.length &&
+      node.contentNodes[0].textContent === SemanticAttr.invisibleTimes())
+  );
 }
-
 
 /**
  * Tests if a node is an implicit operator node only.
@@ -583,10 +611,10 @@ export function isImplicit(node: SemanticNode): boolean {
  * @return True if the node is a true implicit operator node.
  */
 export function isImplicitOp(node: SemanticNode): boolean {
-  return node.type === SemanticType.INFIXOP &&
-      node.role === SemanticRole.IMPLICIT;
+  return (
+    node.type === SemanticType.INFIXOP && node.role === SemanticRole.IMPLICIT
+  );
 }
-
 
 /**
  * Determines if a fence is a neutral fence.
@@ -594,10 +622,10 @@ export function isImplicitOp(node: SemanticNode): boolean {
  * @return True if the fence is neutral or metric.
  */
 export function isNeutralFence(fence: SemanticNode): boolean {
-  return fence.role === SemanticRole.NEUTRAL ||
-    fence.role === SemanticRole.METRIC;
+  return (
+    fence.role === SemanticRole.NEUTRAL || fence.role === SemanticRole.METRIC
+  );
 }
-
 
 /**
  * Comparison operation for neutral fences depending on textual equality of the
@@ -608,12 +636,16 @@ export function isNeutralFence(fence: SemanticNode): boolean {
  *     content.
  */
 export function compareNeutralFences(
-    fence1: SemanticNode, fence2: SemanticNode): boolean {
-  return isNeutralFence(fence1) && isNeutralFence(fence2) &&
-      getEmbellishedInner(fence1).textContent ===
-      getEmbellishedInner(fence2).textContent;
+  fence1: SemanticNode,
+  fence2: SemanticNode
+): boolean {
+  return (
+    isNeutralFence(fence1) &&
+    isNeutralFence(fence2) &&
+    getEmbellishedInner(fence1).textContent ===
+      getEmbellishedInner(fence2).textContent
+  );
 }
-
 
 /**
  * Fence is ellibigle as a left neutral fence, if it is either not embellished
@@ -628,18 +660,21 @@ export function elligibleLeftNeutral(fence: SemanticNode): boolean {
   if (!fence.embellished) {
     return true;
   }
-  if (fence.type === SemanticType.SUPERSCRIPT ||
-      fence.type === SemanticType.SUBSCRIPT) {
+  if (
+    fence.type === SemanticType.SUPERSCRIPT ||
+    fence.type === SemanticType.SUBSCRIPT
+  ) {
     return false;
   }
-  if (fence.type === SemanticType.TENSOR &&
-      (fence.childNodes[3].type !== SemanticType.EMPTY ||
-       fence.childNodes[4].type !== SemanticType.EMPTY)) {
+  if (
+    fence.type === SemanticType.TENSOR &&
+    (fence.childNodes[3].type !== SemanticType.EMPTY ||
+      fence.childNodes[4].type !== SemanticType.EMPTY)
+  ) {
     return false;
   }
   return true;
 }
-
 
 /**
  * Fence is ellibigle as a right neutral fence, if it is either not embellished
@@ -654,14 +689,15 @@ export function elligibleRightNeutral(fence: SemanticNode): boolean {
   if (!fence.embellished) {
     return true;
   }
-  if (fence.type === SemanticType.TENSOR &&
-      (fence.childNodes[1].type !== SemanticType.EMPTY ||
-       fence.childNodes[2].type !== SemanticType.EMPTY)) {
+  if (
+    fence.type === SemanticType.TENSOR &&
+    (fence.childNodes[1].type !== SemanticType.EMPTY ||
+      fence.childNodes[2].type !== SemanticType.EMPTY)
+  ) {
     return false;
   }
   return true;
 }
-
 
 /**
  * Tests if the node is a membership relation, i.e., has some
@@ -671,7 +707,10 @@ export function elligibleRightNeutral(fence: SemanticNode): boolean {
  * @return True if the role is an element role.
  */
 export function isMembership(element: SemanticNode): boolean {
-  return [SemanticRole.ELEMENT, SemanticRole.NONELEMENT,
-          SemanticRole.REELEMENT, SemanticRole.RENONELEMENT].
-    includes(element.role);
+  return [
+    SemanticRole.ELEMENT,
+    SemanticRole.NONELEMENT,
+    SemanticRole.REELEMENT,
+    SemanticRole.RENONELEMENT
+  ].includes(element.role);
 }

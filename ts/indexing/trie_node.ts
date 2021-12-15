@@ -23,26 +23,21 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 export interface TrieNode {
-
   /**
    * The kind of node.
    */
   kind: TrieNodeKind;
-
 
   /**
    * @return The constraint the node represents.
    */
   getConstraint(): string;
 
-
   /**
    * @return The kind of trie node.
    */
   getKind(): TrieNodeKind;
-
 
   /**
    * @param object The object.
@@ -50,29 +45,25 @@ export interface TrieNode {
    */
   applyTest(object: any): boolean;
 
-
   /**
    * Adds a child to this node.
    * @param node A new child node for this node.
    * @return The old node if one was replaced.
    */
-  addChild(node: TrieNode): TrieNode|null;
-
+  addChild(node: TrieNode): TrieNode | null;
 
   /**
    * Get the child registered in the node for the given constraint.
    * @param constraint The constraint string.
    * @return The child node if it exists.
    */
-  getChild(constraint: string): TrieNode|null;
-
+  getChild(constraint: string): TrieNode | null;
 
   /**
    * Get a list of children of the node.
    * @return The children of the node.
    */
   getChildren(): TrieNode[];
-
 
   /**
    * Select children of the node by applying the constraint test.
@@ -81,14 +72,12 @@ export interface TrieNode {
    */
   findChildren(object: any): TrieNode[];
 
-
   /**
    * Remove the child registered in the node for the given constraint.
    * @param constraint The constraint string.
    */
   removeChild(constraint: string): void;
 }
-
 
 export enum TrieNodeKind {
   ROOT = 'root',

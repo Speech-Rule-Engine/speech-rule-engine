@@ -20,9 +20,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import SystemExternal from './system_external';
-
 
 /**
  * Corrects pathnames to have trailing slashes.
@@ -33,7 +31,6 @@ export function makePath(path: string): string {
   return path.match('/$') ? path : path + '/';
 }
 
-
 /**
  * Returns the default locale path, depending on the mode of operation.
  *
@@ -41,6 +38,9 @@ export function makePath(path: string): string {
  * @param ext An optional file extension. Defaults to json.
  */
 export function localePath(locale: string, ext: string = 'json') {
-  return makePath(SystemExternal.jsonPath) + locale +
-    (ext.match(/^\./) ? ext : '.' + ext);
+  return (
+    makePath(SystemExternal.jsonPath) +
+    locale +
+    (ext.match(/^\./) ? ext : '.' + ext)
+  );
 }

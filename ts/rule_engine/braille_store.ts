@@ -22,16 +22,13 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-
-import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
-import {MathStore} from './math_store';
-
+import { SemanticAnnotations } from '../semantic_tree/semantic_annotations';
+import { MathStore } from './math_store';
 
 /**
  * Braille rule store.
  */
 export class BrailleStore extends MathStore {
-
   /**
    * @override
    */
@@ -40,7 +37,7 @@ export class BrailleStore extends MathStore {
   /**
    * @override
    */
-  public customTranscriptions = {'\u22ca': '⠈⠡⠳'};
+  public customTranscriptions = { '\u22ca': '⠈⠡⠳' };
 
   /**
    * @override
@@ -54,12 +51,11 @@ export class BrailleStore extends MathStore {
     return descs;
   }
 
-
   /**
    * @override
    */
   public annotations() {
-    for (let i = 0, annotator; annotator = this.annotators[i]; i++) {
+    for (let i = 0, annotator; (annotator = this.annotators[i]); i++) {
       SemanticAnnotations.activate(this.locale, annotator);
     }
   }

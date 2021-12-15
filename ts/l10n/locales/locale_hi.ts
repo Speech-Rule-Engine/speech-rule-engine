@@ -19,15 +19,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 //
 // This work was supported by British Council UKIERI SPARC Project #P1161
 //
 
-import {createLocale, Locale} from '../locale';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_hi';
-import {Combiners} from '../transformers';
-
+import { Combiners } from '../transformers';
 
 let locale: Locale = null;
 
@@ -45,5 +43,4 @@ function create(): Locale {
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;
 
   return loc;
-};
-
+}

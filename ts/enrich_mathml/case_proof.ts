@@ -19,20 +19,17 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
+import { SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseProof extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
   public mml: Element;
-
 
   /**
    * Applicability test of the case.
@@ -40,9 +37,11 @@ export class CaseProof extends AbstractEnrichCase {
    * @return True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
-    return !!semantic.mathmlTree &&
-        (semantic.type === SemanticType.INFERENCE ||
-         semantic.type === SemanticType.PREMISES);
+    return (
+      !!semantic.mathmlTree &&
+      (semantic.type === SemanticType.INFERENCE ||
+        semantic.type === SemanticType.PREMISES)
+    );
   }
 
   /**
@@ -53,7 +52,6 @@ export class CaseProof extends AbstractEnrichCase {
     this.mml = semantic.mathmlTree;
   }
 
-
   /**
    * @override
    */
@@ -61,18 +59,20 @@ export class CaseProof extends AbstractEnrichCase {
     if (!this.semantic.childNodes.length) {
       return this.mml;
     }
-    this.semantic.contentNodes.forEach(function(x) {
-      EnrichMathml.walkTree((x as SemanticNode));
+    this.semantic.contentNodes.forEach(function (x) {
+      EnrichMathml.walkTree(x as SemanticNode);
       // TODO: This needs to be done more principled.
-      EnrichMathml.setAttributes((x.mathmlTree as Element), x);
+      EnrichMathml.setAttributes(x.mathmlTree as Element, x);
     });
-    this.semantic.childNodes.forEach(function(x) {
-      EnrichMathml.walkTree((x as SemanticNode));
+    this.semantic.childNodes.forEach(function (x) {
+      EnrichMathml.walkTree(x as SemanticNode);
     });
     EnrichMathml.setAttributes(this.mml, this.semantic);
     // TODO: The obsolete parent pointer is related to the issue above.
-    if (this.mml.getAttribute('data-semantic-id') ===
-        this.mml.getAttribute('data-semantic-parent')) {
+    if (
+      this.mml.getAttribute('data-semantic-id') ===
+      this.mml.getAttribute('data-semantic-parent')
+    ) {
       this.mml.removeAttribute('data-semantic-parent');
     }
     return this.mml;

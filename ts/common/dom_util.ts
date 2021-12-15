@@ -22,25 +22,22 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Engine, EngineConst, SREError} from './engine';
+import { Engine, EngineConst, SREError } from './engine';
 import SystemExternal from './system_external';
 import XpathUtil from './xpath_util';
-
 
 /**
  * Converts a NodeList into an array
  * @param nodeList The nodeList.
  * @return The array of nodes in the nodeList.
  */
-export function toArray(nodeList: NodeList|NamedNodeMap): any[] {
+export function toArray(nodeList: NodeList | NamedNodeMap): any[] {
   let nodeArray = [];
   for (let i = 0, m = nodeList.length; i < m; i++) {
     nodeArray.push(nodeList[i]);
   }
   return nodeArray;
 }
-
 
 /**
  * Trims the whitespace in an XML input string.
@@ -52,18 +49,16 @@ export function trimInput_(input: string): string {
   return input.replace(/>[ \f\n\r\t\v\u200b]+</g, '><').trim();
 }
 
-
 /**
  * Set of XML entities.
  */
-export const XML_ENTITIES: {[key: string]: boolean} = {
+export const XML_ENTITIES: { [key: string]: boolean } = {
   '&lt;': true,
   '&gt;': true,
   '&amp;': true,
   '&quot;': true,
   '&apos;': true
 };
-
 
 /**
  * Parses the XML input string into an XML structure.
@@ -91,7 +86,6 @@ export function parseInput(input: string): Element {
   }
 }
 
-
 /**
  * Missing Node interface.
  */
@@ -111,7 +105,6 @@ export enum NodeType {
   NOTATION_NODE
 }
 
-
 /**
  * Cleanly replaces child nodes in a parent.
  * @param oldNode The node to be replaced.
@@ -125,7 +118,6 @@ export function replaceNode(oldNode: Node, newNode: Node) {
   oldNode.parentNode.removeChild(oldNode);
 }
 
-
 /**
  * Creates a node in the current document. This is a wrapper function that
  * ensures that a node is created in the correct document tree.
@@ -135,7 +127,6 @@ export function replaceNode(oldNode: Node, newNode: Node) {
 export function createElement(tag: string): Element {
   return SystemExternal.document.createElement(tag);
 }
-
 
 /**
  * Creates a node in the current document in a given namespace. This is a
@@ -149,7 +140,6 @@ export function createElementNS(url: string, tag: string): Element {
   return SystemExternal.document.createElementNS(url, tag);
 }
 
-
 /**
  * Creates a text node in the current document. This is a wrapper function that
  * ensures that a node is created in the correct document tree.
@@ -159,7 +149,6 @@ export function createElementNS(url: string, tag: string): Element {
 export function createTextNode(content: string): Text {
   return SystemExternal.document.createTextNode(content);
 }
-
 
 /**
  * Pretty prints an XML representation while dealing with mixed content:
@@ -182,8 +171,9 @@ export function formatXml(xml: string): string {
   let split = xml.split('\r\n');
   reg = /(\.)*(<)(\/*)/g;
   // Separate at any remaining tags.
-  split = split.map((x) => x.replace(reg, '$1\r\n$2$3').split('\r\n'))
-              .reduce((x, y) => x.concat(y), []);
+  split = split
+    .map((x) => x.replace(reg, '$1\r\n$2$3').split('\r\n'))
+    .reduce((x, y) => x.concat(y), []);
   while (split.length) {
     let node = split.shift();
     if (!node) {
@@ -198,8 +188,10 @@ export function formatXml(xml: string): string {
         if (match[1]) {
           // Trailing mixed content after end node.
           node = node + split.shift().slice(0, -match[1].length);
-          if (  // In case of trailing spaces.
-              match[1].trim()) {
+          if (
+            // In case of trailing spaces.
+            match[1].trim()
+          ) {
             split.unshift(match[1]);
           }
         } else {
@@ -220,8 +212,10 @@ export function formatXml(xml: string): string {
       // Empty tag node with trailing mixed content.
       let position = node.indexOf('>') + 1;
       let rest = node.slice(position);
-      if (  // In case of trailing spaces.
-          rest.trim()) {
+      if (
+        // In case of trailing spaces.
+        rest.trim()
+      ) {
         split.unshift();
       }
       node = node.slice(0, position);
@@ -229,7 +223,7 @@ export function formatXml(xml: string): string {
       // Empty tag node
       indent = 0;
     }
-    formatted += (new Array(pad + 1)).join('  ') + node + '\r\n';
+    formatted += new Array(pad + 1).join('  ') + node + '\r\n';
     pad += indent;
   }
   return formatted;
@@ -242,7 +236,9 @@ export function formatXml(xml: string): string {
  *     remainder after the end tag, in case it is followed by mixed content.
  */
 export function matchingStartEnd_(
-  start: string, end: string): [boolean, string] {
+  start: string,
+  end: string
+): [boolean, string] {
   if (!end) {
     return [false, ''];
   }
@@ -250,7 +246,6 @@ export function matchingStartEnd_(
   let tag2 = end.match(/^<\/([^>]+)>(.*)/);
   return tag1 && tag2 && tag1[1] === tag2[1] ? [true, tag2[2]] : [false, ''];
 }
-
 
 /**
  * Transforms a data attribute name into its camel cased version.
@@ -263,7 +258,6 @@ export function dataAttribute(attr: string): string {
   }
   return attr.replace(/-([a-z])/g, (_, index) => index.toUpperCase());
 }
-
 
 /**
  * Retrieves a data attribute from a given node. Tries using microdata access if
@@ -280,7 +274,6 @@ export function getDataAttribute(node: Element, attr: string): string {
   return node.getAttribute(attr);
 }
 
-
 /**
  * A wrapper function for query selector on a node wrt. to an attribute. If
  * query selectors are not implemented on that node it reverts to Xpath.
@@ -289,9 +282,9 @@ export function getDataAttribute(node: Element, attr: string): string {
  * @return The list of result nodes.
  */
 export function querySelectorAllByAttr(node: Element, attr: string): Element[] {
-  return node.querySelectorAll ?
-      toArray(node.querySelectorAll(`[${attr}]`)) :
-    XpathUtil.evalXPath(`.//*[@${attr}]`, node);
+  return node.querySelectorAll
+    ? toArray(node.querySelectorAll(`[${attr}]`))
+    : XpathUtil.evalXPath(`.//*[@${attr}]`, node);
 }
 
 /**
@@ -303,10 +296,13 @@ export function querySelectorAllByAttr(node: Element, attr: string): Element[] {
  * @return The list of result nodes.
  */
 export function querySelectorAllByAttrValue(
-    node: Element, attr: string, value: string): Element[] {
-  return node.querySelectorAll ?
-      toArray(node.querySelectorAll(`[${attr}="${value}"]`)) :
-      XpathUtil.evalXPath(`.//*[@${attr}="${value}"]`, node);
+  node: Element,
+  attr: string,
+  value: string
+): Element[] {
+  return node.querySelectorAll
+    ? toArray(node.querySelectorAll(`[${attr}="${value}"]`))
+    : XpathUtil.evalXPath(`.//*[@${attr}="${value}"]`, node);
 }
 
 /**
@@ -317,10 +313,10 @@ export function querySelectorAllByAttrValue(
  * @return The list of result nodes.
  */
 export function querySelectorAll(node: Element, tag: string): Element[] {
-  return node.querySelectorAll ? toArray(node.querySelectorAll(tag)) :
-                                 XpathUtil.evalXPath(`.//${tag}`, node);
+  return node.querySelectorAll
+    ? toArray(node.querySelectorAll(tag))
+    : XpathUtil.evalXPath(`.//${tag}`, node);
 }
-
 
 /**
  * Returns the tagname of an element node in upper case.

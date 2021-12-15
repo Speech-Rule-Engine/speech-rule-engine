@@ -18,9 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Numbers, NUMBERS as NUMB} from '../messages';
-
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -42,17 +40,19 @@ function hundredsToWords_(num: number, ordinal: boolean = false): string {
         return str + ord;
       }
       if (n % 10) {
-        return str + NUMBERS.tens[Math.floor(n / 10)] +
-          NUMBERS.special.smallOrdinals[n % 10];
+        return (
+          str +
+          NUMBERS.tens[Math.floor(n / 10)] +
+          NUMBERS.special.smallOrdinals[n % 10]
+        );
       }
     }
-    str += NUMBERS.ones[n] ||
-        NUMBERS.tens[Math.floor(n / 10)] +
-            (n % 10 ? NUMBERS.ones[n % 10] : '');
+    str +=
+      NUMBERS.ones[n] ||
+      NUMBERS.tens[Math.floor(n / 10)] + (n % 10 ? NUMBERS.ones[n % 10] : '');
   }
-  return (ordinal ? replaceOrdinal(str) : str);
+  return ordinal ? replaceOrdinal(str) : str;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -71,20 +71,24 @@ function numberToWords(num: number, ordinal: boolean = false): string {
   while (num > 0) {
     let hundreds = num % 1000;
     if (hundreds) {
-      let hund = hundredsToWords_(num % 1000, (pos ? false : ordinal));
+      let hund = hundredsToWords_(num % 1000, pos ? false : ordinal);
       if (!pos && ordinal) {
         ordinal = !ordinal;
       }
-      str = hund + (pos ? ' ' +
-        (NUMBERS.large[pos] + (pos > 1 && hundreds > 1 ? 'er' : ''))
-          + (str ? ' ' : '') : '') + str;
+      str =
+        hund +
+        (pos
+          ? ' ' +
+            (NUMBERS.large[pos] + (pos > 1 && hundreds > 1 ? 'er' : '')) +
+            (str ? ' ' : '')
+          : '') +
+        str;
     }
     num = Math.floor(num / 1000);
     pos++;
   }
-  return ordinal ? (str + (str.match(/tusen$/) ? 'de' : 'te')) : str;
+  return ordinal ? str + (str.match(/tusen$/) ? 'de' : 'te') : str;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation of
@@ -96,7 +100,6 @@ function numberToWords(num: number, ordinal: boolean = false): string {
 function numberToOrdinal(num: number, _plural: boolean): string {
   return wordOrdinal(num);
 }
-
 
 /**
  * Adds the ordinal ending for numbers up to numbers < 1000.
@@ -119,10 +122,9 @@ function replaceOrdinal(str: string): string {
   }
   if (str.match(/e$/)) {
     return str + 'nde';
- }
+  }
   return str + 'nde';
 }
-
 
 /**
  * Creates a word ordinal string from a number.
@@ -133,7 +135,6 @@ function wordOrdinal(num: number): string {
   let ordinal = numberToWords(num, true);
   return ordinal;
 }
-
 
 /**
  * Creates a simple ordinal string from a number.

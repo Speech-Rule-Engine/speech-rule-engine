@@ -19,16 +19,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 /**
  * Removes all empty strings from an array of strings.
  * @param strs An array of strings.
  * @return The cleaned array.
  */
 export function removeEmpty(strs: string[]): string[] {
-  return strs.filter(str => str);
+  return strs.filter((str) => str);
 }
-
 
 /**
  * Interleaves two lists, starting with the first. If either list is longer, it
@@ -46,7 +44,6 @@ export function interleaveLists(list1: any[], list2: any[]): any[] {
   return result;
 }
 
-
 /**
  * Computes the difference of two arrays.
  * @param a An array.
@@ -60,9 +57,8 @@ export function setdifference(a: any[], b: any[]): any[] {
   if (!b) {
     return a;
   }
-  return a.filter(x => b.indexOf(x) < 0);
+  return a.filter((x) => b.indexOf(x) < 0);
 }
-
 
 /**
  * Computes the union of two arrays (not in a strictly set theoretical sense

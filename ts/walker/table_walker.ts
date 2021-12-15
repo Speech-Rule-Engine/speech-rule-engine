@@ -19,41 +19,40 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as DomUtil from '../common/dom_util';
-import {KeyCode} from '../common/event_util';
-import {Highlighter} from '../highlighter/highlighter';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SpeechGenerator} from '../speech_generator/speech_generator';
+import { KeyCode } from '../common/event_util';
+import { Highlighter } from '../highlighter/highlighter';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { SpeechGenerator } from '../speech_generator/speech_generator';
 
-import {Focus} from './focus';
-import {SyntaxWalker} from './syntax_walker';
-import {WalkerMoves} from './walker';
-
+import { Focus } from './focus';
+import { SyntaxWalker } from './syntax_walker';
+import { WalkerMoves } from './walker';
 
 export class TableWalker extends SyntaxWalker {
-
   public static ELIGIBLE_CELL_ROLES: SemanticRole[];
-
 
   public static ELIGIBLE_TABLE_TYPES: SemanticType[];
 
   public firstJump: Focus = null;
   public moved: any;
 
-  private key_: KeyCode|null = null;
+  private key_: KeyCode | null = null;
 
   private row_: number = 0;
 
-  private currentTable_: SemanticNode|null = null;
+  private currentTable_: SemanticNode | null = null;
 
   /**
    * @override
    */
   constructor(
-      public node: Element, public generator: SpeechGenerator,
-      public highlighter: Highlighter, xml: string) {
+    public node: Element,
+    public generator: SpeechGenerator,
+    public highlighter: Highlighter,
+    xml: string
+  ) {
     super(node, generator, highlighter, xml);
 
     this.keyMapping.set(KeyCode.ZERO, this.jumpCell.bind(this));
@@ -68,7 +67,6 @@ export class TableWalker extends SyntaxWalker {
     this.keyMapping.set(KeyCode.NINE, this.jumpCell.bind(this));
   }
 
-
   /**
    * @override
    */
@@ -79,7 +77,6 @@ export class TableWalker extends SyntaxWalker {
     return result;
   }
 
-
   /**
    * @override
    */
@@ -87,7 +84,6 @@ export class TableWalker extends SyntaxWalker {
     this.moved = WalkerMoves.UP;
     return this.eligibleCell_() ? this.verticalMove_(false) : super.up();
   }
-
 
   /**
    * @override
@@ -97,11 +93,10 @@ export class TableWalker extends SyntaxWalker {
     return this.eligibleCell_() ? this.verticalMove_(true) : super.down();
   }
 
-
   /**
    * Jumps directly to a table cell if possible.
    */
-  protected jumpCell(): Focus|null {
+  protected jumpCell(): Focus | null {
     if (!this.isInTable_() || this.key_ === null) {
       return this.getFocus();
     }
@@ -133,34 +128,35 @@ export class TableWalker extends SyntaxWalker {
     return focus;
   }
 
-
   /**
    * @return True if the focused is an eligible table cell.
    */
   private eligibleCell_(): boolean {
     let primary = this.getFocus().getSemanticPrimary();
-    return this.modifier && primary.type === SemanticType.CELL &&
-        TableWalker.ELIGIBLE_CELL_ROLES.indexOf(primary.role) !== -1;
+    return (
+      this.modifier &&
+      primary.type === SemanticType.CELL &&
+      TableWalker.ELIGIBLE_CELL_ROLES.indexOf(primary.role) !== -1
+    );
   }
-
 
   /**
    * Performs a vertical move in a table.
    * @param direction If true walk down, o/w up.
    * @return The new focus.
    */
-  private verticalMove_(direction: boolean): Focus|null {
+  private verticalMove_(direction: boolean): Focus | null {
     let parent = this.previousLevel();
     if (!parent) {
       return null;
     }
     let origFocus = this.getFocus();
-    let origIndex = (this.levels.indexOf(this.primaryId()) as number);
+    let origIndex = this.levels.indexOf(this.primaryId()) as number;
     let origLevel = this.levels.pop();
-    let parentIndex = (this.levels.indexOf(parent) as number);
-    let row =
-        (this.levels.get(direction ? parentIndex + 1 : parentIndex - 1) as
-         string);
+    let parentIndex = this.levels.indexOf(parent) as number;
+    let row = this.levels.get(
+      direction ? parentIndex + 1 : parentIndex - 1
+    ) as string;
     if (!row) {
       this.levels.push(origLevel);
       return null;
@@ -176,7 +172,6 @@ export class TableWalker extends SyntaxWalker {
     this.levels.push(children);
     return this.singletonFocus(children[origIndex]);
   }
-
 
   /**
    * Jumps to the cell at the given row column position.
@@ -208,7 +203,6 @@ export class TableWalker extends SyntaxWalker {
     return this.singletonFocus(semRow.childNodes[column - 1].id.toString());
   }
 
-
   /**
    * Checks if a jump to a given row column position is possible in the current
    * table.
@@ -218,7 +212,10 @@ export class TableWalker extends SyntaxWalker {
    */
   private isLegalJump_(row: number, column: number): boolean {
     let xmlTable = DomUtil.querySelectorAllByAttrValue(
-        this.getRebuilt().xml, 'id', this.currentTable_.id.toString())[0];
+      this.getRebuilt().xml,
+      'id',
+      this.currentTable_.id.toString()
+    )[0];
     if (!xmlTable || xmlTable.hasAttribute('alternative')) {
       return false;
     }
@@ -227,13 +224,15 @@ export class TableWalker extends SyntaxWalker {
       return false;
     }
     let xmlRow = DomUtil.querySelectorAllByAttrValue(
-        xmlTable, 'id', rowNode.id.toString())[0];
+      xmlTable,
+      'id',
+      rowNode.id.toString()
+    )[0];
     if (!xmlRow || xmlRow.hasAttribute('alternative')) {
       return false;
     }
     return !!(rowNode && rowNode.childNodes[column - 1]);
   }
-
 
   /**
    * @return True if we are inside a table.
@@ -252,14 +251,20 @@ export class TableWalker extends SyntaxWalker {
 }
 
 TableWalker.ELIGIBLE_CELL_ROLES = [
-  SemanticRole.DETERMINANT, SemanticRole.ROWVECTOR,
-  SemanticRole.BINOMIAL, SemanticRole.SQUAREMATRIX,
-  SemanticRole.MULTILINE, SemanticRole.MATRIX,
-  SemanticRole.VECTOR, SemanticRole.CASES,
+  SemanticRole.DETERMINANT,
+  SemanticRole.ROWVECTOR,
+  SemanticRole.BINOMIAL,
+  SemanticRole.SQUAREMATRIX,
+  SemanticRole.MULTILINE,
+  SemanticRole.MATRIX,
+  SemanticRole.VECTOR,
+  SemanticRole.CASES,
   SemanticRole.TABLE
 ];
 TableWalker.ELIGIBLE_TABLE_TYPES = [
-  SemanticType.MULTILINE, SemanticType.MATRIX,
-  SemanticType.VECTOR, SemanticType.CASES,
+  SemanticType.MULTILINE,
+  SemanticType.MATRIX,
+  SemanticType.VECTOR,
+  SemanticType.CASES,
   SemanticType.TABLE
 ];

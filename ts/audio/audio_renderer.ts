@@ -19,26 +19,22 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {KeyCode} from '../common/event_util';
-import {AuditoryDescription} from './auditory_description';
-import {Span} from './span';
-
+import { KeyCode } from '../common/event_util';
+import { AuditoryDescription } from './auditory_description';
+import { Span } from './span';
 
 export interface AudioRenderer {
-
   /**
    * Sets the separator for merging markup description strings.
    * @param sep The separator string.
    */
   setSeparator(sep: string): void;
 
-
   /**
    * Gets the separator for merging markup description strings.
    * @return The separator string.
    */
   getSeparator(): string;
-
 
   /**
    * Turns a set of auditory descriptions into a markup string.
@@ -47,14 +43,12 @@ export interface AudioRenderer {
    */
   markup(descrs: AuditoryDescription[]): string;
 
-
   /**
    * Generates an error message in the markup of the audio renderer.
    * @param key A keycode or error message.
    * @return The error message or null.
    */
-  error(key: KeyCode|string): string|null;
-
+  error(key: KeyCode | string): string | null;
 
   /**
    * Merges markup strings.
@@ -63,7 +57,6 @@ export interface AudioRenderer {
    * @return A single string.
    */
   merge(strs: Span[]): string;
-
 
   /**
    * Finalizes a markup string. E.g., adds enclosing XML tags.

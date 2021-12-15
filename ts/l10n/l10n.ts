@@ -19,34 +19,33 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Engine} from '../common/engine';
-import {Variables} from '../common/variables';
-import {Grammar} from '../rule_engine/grammar';
+import { Engine } from '../common/engine';
+import { Variables } from '../common/variables';
+import { Grammar } from '../rule_engine/grammar';
 
-import {ca} from './locales/locale_ca';
-import {de} from './locales/locale_de';
-import {en} from './locales/locale_en';
-import {es} from './locales/locale_es';
-import {fr} from './locales/locale_fr';
-import {hi} from './locales/locale_hi';
-import {it} from './locales/locale_it';
-import {nb} from './locales/locale_nb';
-import {nemeth} from './locales/locale_nemeth';
-import {nn} from './locales/locale_nn';
-import {Locale, LOCALE} from './locale';
+import { ca } from './locales/locale_ca';
+import { de } from './locales/locale_de';
+import { en } from './locales/locale_en';
+import { es } from './locales/locale_es';
+import { fr } from './locales/locale_fr';
+import { hi } from './locales/locale_hi';
+import { it } from './locales/locale_it';
+import { nb } from './locales/locale_nb';
+import { nemeth } from './locales/locale_nemeth';
+import { nn } from './locales/locale_nn';
+import { Locale, LOCALE } from './locale';
 
-
-export const locales: {[key: string]: () => Locale} = {
-  'ca': ca,
-  'de': de,
-  'en': en,
-  'es': es,
-  'fr': fr,
-  'hi': hi,
-  'it': it,
-  'nb': nb,
-  'nn': nn,
-  'nemeth': nemeth
+export const locales: { [key: string]: () => Locale } = {
+  ca: ca,
+  de: de,
+  en: en,
+  es: es,
+  fr: fr,
+  hi: hi,
+  it: it,
+  nb: nb,
+  nn: nn,
+  nemeth: nemeth
 };
 
 /**
@@ -68,7 +67,6 @@ export function setLocale() {
   }
 }
 
-
 /**
  * Gets locale message object. If the currently set locale does not exist, it
  * defaults to English.
@@ -82,7 +80,6 @@ export function getLocale(): Locale {
   }
   return (locales[Engine.getInstance().locale] || locales['en'])();
 }
-
 
 /**
  * Locale completion with loaded mathmaps.

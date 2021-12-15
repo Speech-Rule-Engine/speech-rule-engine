@@ -18,19 +18,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {AuditoryDescription} from '../audio/auditory_description';
+import { AuditoryDescription } from '../audio/auditory_description';
 import * as DomUtil from '../common/dom_util';
 import XpathUtil from '../common/xpath_util';
-import {Grammar} from '../rule_engine/grammar';
-import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
-import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
-import {SemanticVisitor} from '../semantic_tree/semantic_annotator';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
+import { Grammar } from '../rule_engine/grammar';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
+import { SemanticAnnotations } from '../semantic_tree/semantic_annotations';
+import { SemanticVisitor } from '../semantic_tree/semantic_annotator';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
-import {LOCALE} from '../l10n/locale';
+import { LOCALE } from '../l10n/locale';
 import * as MathspeakUtil from './mathspeak_util';
-
 
 /**
  * Opening string for fractions in linear Nemeth.
@@ -39,10 +38,11 @@ import * as MathspeakUtil from './mathspeak_util';
  */
 export function openingFraction(node: Element): string {
   let depth = MathspeakUtil.fractionNestingDepth(node);
-  return (new Array(depth)).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
-      LOCALE.MESSAGES.MS.FRACTION_START;
+  return (
+    new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
+    LOCALE.MESSAGES.MS.FRACTION_START
+  );
 }
-
 
 /**
  * Closing string for fractions in linear Nemeth.
@@ -51,9 +51,11 @@ export function openingFraction(node: Element): string {
  */
 export function closingFraction(node: Element): string {
   let depth = MathspeakUtil.fractionNestingDepth(node);
-  return (new Array(depth)).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) + LOCALE.MESSAGES.MS.FRACTION_END;
+  return (
+    new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
+    LOCALE.MESSAGES.MS.FRACTION_END
+  );
 }
-
 
 /**
  * Middle string for fractions in linear Nemeth.
@@ -62,9 +64,11 @@ export function closingFraction(node: Element): string {
  */
 export function overFraction(node: Element): string {
   let depth = MathspeakUtil.fractionNestingDepth(node);
-  return (new Array(depth)).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) + LOCALE.MESSAGES.MS.FRACTION_OVER;
+  return (
+    new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
+    LOCALE.MESSAGES.MS.FRACTION_OVER
+  );
 }
-
 
 /**
  * Middle string for bevelled fractions in Nemeth.
@@ -73,10 +77,12 @@ export function overFraction(node: Element): string {
  */
 export function overBevelledFraction(node: Element): string {
   let depth = MathspeakUtil.fractionNestingDepth(node);
-  return (new Array(depth)).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) + '⠸' +
-      LOCALE.MESSAGES.MS.FRACTION_OVER;
+  return (
+    new Array(depth).join(LOCALE.MESSAGES.MS.FRACTION_REPEAT) +
+    '⠸' +
+    LOCALE.MESSAGES.MS.FRACTION_OVER
+  );
 }
-
 
 /**
  * Nested Braille radicals in Nemeth putting together the nesting counter with
@@ -90,9 +96,8 @@ export function nestedRadical(node: Element, postfix: string): string {
   if (depth === 1) {
     return postfix;
   }
-  return (new Array(depth)).join(LOCALE.MESSAGES.MS.NESTED) + postfix;
+  return new Array(depth).join(LOCALE.MESSAGES.MS.NESTED) + postfix;
 }
-
 
 /**
  * Computes and returns the nesting depth of radical nodes.
@@ -106,10 +111,10 @@ export function radicalNestingDepth(node: Element, opt_depth?: number): number {
     return depth;
   }
   return radicalNestingDepth(
-      node.parentNode as Element,
-      node.tagName === 'root' || node.tagName === 'sqrt' ? depth + 1 : depth);
+    node.parentNode as Element,
+    node.tagName === 'root' || node.tagName === 'sqrt' ? depth + 1 : depth
+  );
 }
-
 
 /**
  * Opening string for radicals in Nemeth.
@@ -120,7 +125,6 @@ export function openingRadical(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.STARTROOT);
 }
 
-
 /**
  * Closing string for radicals in Nemeth.
  * @param node The radical node.
@@ -130,7 +134,6 @@ export function closingRadical(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.ENDROOT);
 }
 
-
 /**
  * Middle string for radicals in Nemeth.
  * @param node The radical node.
@@ -139,7 +142,6 @@ export function closingRadical(node: Element): string {
 export function indexRadical(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX);
 }
-
 
 /**
  * Enlarges a fence operator. The enlargement indicator might need to be
@@ -154,9 +156,11 @@ export function enlargeFence(text: string): string {
   }
   let neut = '⠳';
   let split = text.split('');
-  if (split.every(function(x) {
-        return x === neut;
-      })) {
+  if (
+    split.every(function (x) {
+      return x === neut;
+    })
+  ) {
     return start + split.join(start);
   }
   return text.slice(0, -1) + start + text.slice(-1);
@@ -164,19 +168,20 @@ export function enlargeFence(text: string): string {
 
 Grammar.getInstance().setCorrection('enlargeFence', enlargeFence);
 
-
 export const NUMBER_PROPAGATORS_: SemanticType[] = [
-  SemanticType.MULTIREL, SemanticType.RELSEQ,
-  SemanticType.APPL, SemanticType.ROW,
+  SemanticType.MULTIREL,
+  SemanticType.RELSEQ,
+  SemanticType.APPL,
+  SemanticType.ROW,
   SemanticType.LINE
 ];
 
-
 export const NUMBER_INHIBITORS_: SemanticType[] = [
-  SemanticType.SUBSCRIPT, SemanticType.SUPERSCRIPT,
-  SemanticType.OVERSCORE, SemanticType.UNDERSCORE
+  SemanticType.SUBSCRIPT,
+  SemanticType.SUPERSCRIPT,
+  SemanticType.OVERSCORE,
+  SemanticType.UNDERSCORE
 ];
-
 
 /**
  * Checks if a Nemeth number indicator has to be propagated beyond the node's
@@ -187,19 +192,24 @@ export const NUMBER_INHIBITORS_: SemanticType[] = [
  *     a negative sign.
  */
 export function checkParent_(
-    node: SemanticNode, info: {[key: string]: boolean}): boolean {
+  node: SemanticNode,
+  info: { [key: string]: boolean }
+): boolean {
   let parent = node.parent;
   if (!parent) {
     return false;
   }
   let type = parent.type;
-  if (NUMBER_PROPAGATORS_.indexOf(type) !== -1 ||
-      type === SemanticType.PREFIXOP &&
-          parent.role === SemanticRole.NEGATIVE && !info.script ||
-      type === SemanticType.PREFIXOP &&
-          // TODO: This needs to be rewritten once there is a better treatment
-          // of prefixop.
-          parent.role === SemanticRole.GEOMETRY) {
+  if (
+    NUMBER_PROPAGATORS_.indexOf(type) !== -1 ||
+    (type === SemanticType.PREFIXOP &&
+      parent.role === SemanticRole.NEGATIVE &&
+      !info.script) ||
+    (type === SemanticType.PREFIXOP &&
+      // TODO: This needs to be rewritten once there is a better treatment
+      // of prefixop.
+      parent.role === SemanticRole.GEOMETRY)
+  ) {
     return true;
   }
   if (type === SemanticType.PUNCTUATED) {
@@ -210,7 +220,6 @@ export function checkParent_(
   return false;
 }
 
-
 /**
  * Propagates annotation for the Nemeth number indicator.
  * @param node The semantic node.
@@ -219,7 +228,9 @@ export function checkParent_(
  *     information object.
  */
 export function propagateNumber(
-    node: SemanticNode, info: {[key: string]: any}): any[] {
+  node: SemanticNode,
+  info: { [key: string]: any }
+): any[] {
   // TODO: Font indicator followed by number.
   // TODO: Check for enclosed list
   if (!node.childNodes.length) {
@@ -230,7 +241,7 @@ export function propagateNumber(
     }
     return [
       info['number'] ? 'number' : '',
-      {number: false, enclosed: info.enclosed, script: info.script}
+      { number: false, enclosed: info.enclosed, script: info.script }
     ];
   }
   if (NUMBER_INHIBITORS_.indexOf(node.type) !== -1) {
@@ -248,10 +259,9 @@ export function propagateNumber(
   return ['', info];
 }
 
-
 SemanticAnnotations.register(
-    new SemanticVisitor('nemeth', 'number', propagateNumber, {number: true}));
-
+  new SemanticVisitor('nemeth', 'number', propagateNumber, { number: true })
+);
 
 /**
  * Iterates over the list of relation nodes and intersperses Braille spaces if
@@ -262,40 +272,51 @@ SemanticAnnotations.register(
  *     the content of the next content node. Returns only context string if list
  *     is exhausted.
  */
-export function relationIterator(nodes: Element[], context: string): () =>
-    AuditoryDescription[] {
+export function relationIterator(
+  nodes: Element[],
+  context: string
+): () => AuditoryDescription[] {
   let childNodes = nodes.slice(0);
   let first = true;
   let contentNodes: Element[];
   if (nodes.length > 0) {
-    contentNodes = XpathUtil.evalXPath('../../content/*', nodes[0]) as Element[];
+    contentNodes = XpathUtil.evalXPath(
+      '../../content/*',
+      nodes[0]
+    ) as Element[];
   } else {
     contentNodes = [];
   }
-  return function() {
+  return function () {
     let content = contentNodes.shift();
     let leftChild = childNodes.shift();
     let rightChild = childNodes[0];
-    let contextDescr = context ?
-        [AuditoryDescription.create({text: context}, {translate: true})] :
-        [];
+    let contextDescr = context
+      ? [AuditoryDescription.create({ text: context }, { translate: true })]
+      : [];
     if (!content) {
       return contextDescr;
     }
-    let base = leftChild ?
-        MathspeakUtil.nestedSubSuper(
-            leftChild, '', {sup: LOCALE.MESSAGES.MS.SUPER,
-                            sub: LOCALE.MESSAGES.MS.SUB}) : '';
-    let left = leftChild && DomUtil.tagName(leftChild) !== 'EMPTY' ||
-            first && content.parentNode.parentNode &&
-                content.parentNode.parentNode.previousSibling ?
-        [AuditoryDescription.create({text: '⠀' + base}, {})] :
-        [];
-    let right = rightChild && DomUtil.tagName(rightChild) !== 'EMPTY' ||
-            !contentNodes.length && content.parentNode.parentNode &&
-                content.parentNode.parentNode.nextSibling ?
-        [AuditoryDescription.create({text: '⠀'}, {})] :
-        [];
+    let base = leftChild
+      ? MathspeakUtil.nestedSubSuper(leftChild, '', {
+          sup: LOCALE.MESSAGES.MS.SUPER,
+          sub: LOCALE.MESSAGES.MS.SUB
+        })
+      : '';
+    let left =
+      (leftChild && DomUtil.tagName(leftChild) !== 'EMPTY') ||
+      (first &&
+        content.parentNode.parentNode &&
+        content.parentNode.parentNode.previousSibling)
+        ? [AuditoryDescription.create({ text: '⠀' + base }, {})]
+        : [];
+    let right =
+      (rightChild && DomUtil.tagName(rightChild) !== 'EMPTY') ||
+      (!contentNodes.length &&
+        content.parentNode.parentNode &&
+        content.parentNode.parentNode.nextSibling)
+        ? [AuditoryDescription.create({ text: '⠀' }, {})]
+        : [];
     let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
     first = false;
     return contextDescr.concat(left, descrs, right);
@@ -310,31 +331,36 @@ export function relationIterator(nodes: Element[], context: string): () =>
  *     the content of the next content node. Returns only context string if list
  *     is exhausted.
  */
-export function implicitIterator(nodes: Element[], context: string): () =>
-    AuditoryDescription[] {
+export function implicitIterator(
+  nodes: Element[],
+  context: string
+): () => AuditoryDescription[] {
   let childNodes = nodes.slice(0);
   let contentNodes: Element[];
   if (nodes.length > 0) {
-    contentNodes = XpathUtil.evalXPath('../../content/*', nodes[0]) as Element[];
+    contentNodes = XpathUtil.evalXPath(
+      '../../content/*',
+      nodes[0]
+    ) as Element[];
   } else {
     contentNodes = [];
   }
-  return function() {
+  return function () {
     let leftChild = childNodes.shift();
     let rightChild = childNodes[0];
     let content = contentNodes.shift();
-    let contextDescr = context ?
-        [AuditoryDescription.create({text: context}, {translate: true})] :
-        [];
+    let contextDescr = context
+      ? [AuditoryDescription.create({ text: context }, { translate: true })]
+      : [];
     if (!content) {
       return contextDescr;
     }
     let left = leftChild && DomUtil.tagName(leftChild) === 'NUMBER';
     let right = rightChild && DomUtil.tagName(rightChild) === 'NUMBER';
     return contextDescr.concat(
-        left && right &&
-                content.getAttribute('role') === SemanticRole.SPACE ?
-            [AuditoryDescription.create({text: '⠀'}, {})] :
-            []);
+      left && right && content.getAttribute('role') === SemanticRole.SPACE
+        ? [AuditoryDescription.create({ text: '⠀' }, {})]
+        : []
+    );
   };
 }

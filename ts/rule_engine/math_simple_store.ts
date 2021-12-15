@@ -25,16 +25,14 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-
-import {Debugger} from '../common/debugger';
-import {Engine} from '../common/engine';
-import {locales} from '../l10n/l10n';
-import {Axis, DynamicCstr} from './dynamic_cstr';
-
+import { Debugger } from '../common/debugger';
+import { Engine } from '../common/engine';
+import { locales } from '../l10n/l10n';
+import { Axis, DynamicCstr } from './dynamic_cstr';
 
 export interface MappingsJson {
-  default: {[key: string]: string};
-  [domainName: string]: {[key: string]: string};
+  default: { [key: string]: string };
+  [domainName: string]: { [key: string]: string };
 }
 
 export interface UnicodeJson {
@@ -51,7 +49,6 @@ export interface UnicodeJson {
   domain?: string;
 }
 
-
 export interface SiJson {
   [key: string]: string;
 }
@@ -61,12 +58,10 @@ export interface SimpleRule {
   action: string;
 }
 
-
 /**
  * A base store for simple Math objects.
  */
 export class MathSimpleStore {
-
   /**
    * The category of the character/function/unit.
    */
@@ -88,7 +83,6 @@ export class MathSimpleStore {
     return String.fromCodePoint(keyValue);
   }
 
-
   /**
    * Tests whether a speech rule satisfies a set of dynamic constraints.  Unless
    * the engine is in strict mode, the dynamic constraints can be "relaxed",
@@ -98,13 +92,14 @@ export class MathSimpleStore {
    * @return True if the preconditions apply to the node.
    */
   private static testDynamicConstraints_(
-      dynamic: DynamicCstr, rule: SimpleRule): boolean {
+    dynamic: DynamicCstr,
+    rule: SimpleRule
+  ): boolean {
     if (Engine.getInstance().strict) {
       return rule.cstr.equal(dynamic);
     }
     return Engine.getInstance().comparator.match(rule.cstr);
   }
-
 
   /**
    * Turns a domain mapping from its JSON representation containing simple
@@ -115,17 +110,27 @@ export class MathSimpleStore {
    *     mapping.
    */
   public defineRulesFromMappings(
-    name: string, locale: string, modality: string, str: string,
-    mapping: MappingsJson) {
+    name: string,
+    locale: string,
+    modality: string,
+    str: string,
+    mapping: MappingsJson
+  ) {
     for (let domain in mapping) {
       for (let style in mapping[domain]) {
         let content = mapping[domain][style];
         this.defineRuleFromStrings(
-            name, locale, modality, domain, style, str, content);
+          name,
+          locale,
+          modality,
+          domain,
+          style,
+          str,
+          content
+        );
       }
     }
   }
-
 
   /**
    * Retrieves a store for a given locale string.
@@ -140,7 +145,6 @@ export class MathSimpleStore {
     return store;
   }
 
-
   /**
    * Creates a single rule from strings.
    * @param name Name of the rule.
@@ -150,10 +154,18 @@ export class MathSimpleStore {
    * @param content The content for the postcondition.
    */
   public defineRuleFromStrings(
-    _name: string, locale: string, modality: string, domain: string,
-    style: string, _str: string, content: string) {
+    _name: string,
+    locale: string,
+    modality: string,
+    domain: string,
+    style: string,
+    _str: string,
+    content: string
+  ) {
     let store = this.getRules(locale);
-    let parser = Engine.getInstance().parsers[domain] || Engine.getInstance().defaultParser;
+    let parser =
+      Engine.getInstance().parsers[domain] ||
+      Engine.getInstance().defaultParser;
     let comp = Engine.getInstance().comparators[domain];
     let cstr = `${locale}.${modality}.${domain}.${style}`;
     let dynamic = parser.parse(cstr);
@@ -161,38 +173,36 @@ export class MathSimpleStore {
     let comparator = comp ? comp() : Engine.getInstance().comparator;
     let oldCstr = comparator.getReference();
     comparator.setReference(dynamic);
-    let rule = {cstr: dynamic, action: content};
-    store = store.filter(r => !dynamic.equal(r.cstr));
+    let rule = { cstr: dynamic, action: content };
+    store = store.filter((r) => !dynamic.equal(r.cstr));
     store.push(rule);
     this.rules.set(locale, store);
     comparator.setReference(oldCstr);
   }
-
 
   /**
    * @override
    */
   public lookupRule(_node: Node, dynamic: DynamicCstr) {
     let rules = this.getRules(dynamic.getValue(Axis.LOCALE));
-    rules = rules.filter(function(rule) {
+    rules = rules.filter(function (rule) {
       return MathSimpleStore.testDynamicConstraints_(dynamic, rule);
     });
     if (rules.length === 1) {
       return rules[0];
     }
-    return rules.length ? rules.sort(
-      (r1, r2) =>
-        Engine.getInstance().comparator.compare(r1.cstr, r2.cstr))[0] :  null;
+    return rules.length
+      ? rules.sort((r1, r2) =>
+          Engine.getInstance().comparator.compare(r1.cstr, r2.cstr)
+        )[0]
+      : null;
   }
-
 }
-
 
 /**
  * A compound store for simple Math objects.
  */
 export namespace MathCompoundStore {
-
   /**
    * The locale for the store.
    */
@@ -211,8 +221,7 @@ export namespace MathCompoundStore {
   /**
    * A set of efficient substores.
    */
-  const subStores_: {[key: string]: MathSimpleStore} = {};
-
+  const subStores_: { [key: string]: MathSimpleStore } = {};
 
   /**
    * Function creates a rule store in the compound store for a particular
@@ -224,13 +233,16 @@ export namespace MathCompoundStore {
    * @param mappings JSON representation of mappings from styles and
    *     domains to strings, from which the speech rules will be computed.
    */
-  export function defineRules(name: string, str: string, cat: string,
-                     mappings: MappingsJson) {
+  export function defineRules(
+    name: string,
+    str: string,
+    cat: string,
+    mappings: MappingsJson
+  ) {
     let store = getSubStore_(str);
     setupStore_(store, cat);
     store.defineRulesFromMappings(name, locale, modality, str, mappings);
   }
-
 
   /**
    * Creates a single rule from strings.
@@ -242,13 +254,25 @@ export namespace MathCompoundStore {
    * @param content The content for the postcondition.
    */
   export function defineRule(
-      name: string, domain: string, style: string, cat: string, str: string,
-      content: string) {
+    name: string,
+    domain: string,
+    style: string,
+    cat: string,
+    str: string,
+    content: string
+  ) {
     let store = getSubStore_(str);
     setupStore_(store, cat);
-    store.defineRuleFromStrings(name, locale, modality, domain, style, str, content);
+    store.defineRuleFromStrings(
+      name,
+      locale,
+      modality,
+      domain,
+      style,
+      str,
+      content
+    );
   }
-
 
   /**
    * Makes a speech rule for Unicode characters from its JSON representation.
@@ -262,7 +286,6 @@ export namespace MathCompoundStore {
     defineRules(json['key'], key, json['category'], json['mappings']);
   }
 
-
   /**
    * Makes a speech rule for Function names from its JSON representation.
    * @param json JSON object of the speech rules.
@@ -274,11 +297,10 @@ export namespace MathCompoundStore {
     let names = json['names'];
     let mappings = json['mappings'];
     let category = json['category'];
-    for (let j = 0, name; name = names[j]; j++) {
+    for (let j = 0, name; (name = names[j]); j++) {
       defineRules(name, name, category, mappings);
     }
   }
-
 
   /**
    * Makes speech rules for Unit descriptors from its JSON representation.
@@ -295,7 +317,6 @@ export namespace MathCompoundStore {
     addUnitRules_(json);
   }
 
-
   /**
    * Makes speech rules for SI units from the JSON representation of the base
    * unit.
@@ -307,7 +328,7 @@ export namespace MathCompoundStore {
       newJson.mappings = {} as MappingsJson;
       let prefix = siPrefixes[key];
       newJson['key'] = key + newJson['key'];
-      newJson['names'] = newJson['names'].map(function(name) {
+      newJson['names'] = newJson['names'].map(function (name) {
         return key + name;
       });
       for (let domain of Object.keys(json['mappings'])) {
@@ -315,14 +336,15 @@ export namespace MathCompoundStore {
         for (let style of Object.keys(json['mappings'][domain])) {
           // TODO: This should not really call the locale method.
           newJson['mappings'][domain][style] = locales[locale]().FUNCTIONS.si(
-              prefix, json['mappings'][domain][style]);
+            prefix,
+            json['mappings'][domain][style]
+          );
         }
       }
       addUnitRules_(newJson);
     }
     addUnitRules_(json);
   }
-
 
   /**
    * Retrieves a rule for the given node if one exists.
@@ -336,7 +358,6 @@ export namespace MathCompoundStore {
     return store ? store.lookupRule(null, dynamic) : null;
   }
 
-
   /**
    * Retrieves the category of a character or string if it has one.
    * @param character The character or string.
@@ -346,7 +367,6 @@ export namespace MathCompoundStore {
     let store = subStores_[character];
     return store ? store.category : '';
   }
-
 
   /**
    * Looks up a rule for a given string and executes its actions.
@@ -373,7 +393,7 @@ export namespace MathCompoundStore {
   export function enumerate(info: Object = {}): Object {
     for (let store of Object.values(subStores_)) {
       for (let [_locale, rules] of store.rules.entries()) {
-        for (let {cstr: dynamic} of rules) {
+        for (let { cstr: dynamic } of rules) {
           info = enumerate_(dynamic.getValues(), info);
         }
       }
@@ -381,8 +401,10 @@ export namespace MathCompoundStore {
     return info;
   }
 
-  function enumerate_(dynamic: string[],
-                      info: {[key: string]: any}): {[key: string]: any} {
+  function enumerate_(
+    dynamic: string[],
+    info: { [key: string]: any }
+  ): { [key: string]: any } {
     info = info || {};
     if (!dynamic.length) {
       return info;
@@ -399,9 +421,8 @@ export namespace MathCompoundStore {
   function addUnitRules_(json: UnicodeJson) {
     let names = json['names'];
     if (names) {
-      json['names'] = names.map(function(name) {
-        return name + ':' +
-            'unit';
+      json['names'] = names.map(function (name) {
+        return name + ':' + 'unit';
       });
     }
     addFunctionRules(json);
@@ -438,7 +459,6 @@ export namespace MathCompoundStore {
     return store;
   }
 
-
   /**
    * Transfers parameters of the compound store to a substore.
    * @param opt_cat The category if it exists.
@@ -448,5 +468,4 @@ export namespace MathCompoundStore {
       store.category = opt_cat;
     }
   }
-
 }

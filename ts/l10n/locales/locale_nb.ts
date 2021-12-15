@@ -23,7 +23,7 @@
 // This work was sponsored by TextHelp
 //
 
-import {createLocale, Locale} from '../locale';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_nn';
 import * as tr from '../transformers';
 
