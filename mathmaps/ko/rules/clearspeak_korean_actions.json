@@ -562,7 +562,7 @@
     [
       "Action",
       "fences-interval",
-      "[t] \"\"; [n] children/*[1]/children/*[1]; [t] \"\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval); [t] \"\""
+      "[n] . (grammar:interval); [t] \"\""
     ],
     [
       "Action",
