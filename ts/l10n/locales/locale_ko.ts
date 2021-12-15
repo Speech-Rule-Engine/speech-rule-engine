@@ -82,7 +82,7 @@ function create(): Locale {
     }
     return (temp[0] !== undefined)? temp.join(" ") : name;
     */
-   return name;
+    return name;
   }
   
   return loc;
