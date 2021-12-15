@@ -187,17 +187,17 @@ SRE loads its locales and rule sets via loading methods specific for the
 particular environment and mode. I.e., it loads json files from the file system
 in node or via XML HTTP requests in the browser. These methods can be customised
 via passing a new method to the engine via the feature vector. A loader method
-should take the locale string as input and return a promise that resolves to the
+takes the locale string as input and return a promise that resolves to the
 string containing the JSON structure of the locale file once loading is
-successful. In other words it should be of type
+successfully completed. In other words it should be of type
 
 ``` typescript
 (locale: string) => Promise<string>
 ```
 
 In node the method can be directly set by passing it to the `setupEngine` method
-via the feature vector. As an example this method loads locales from a locale 
-directory `/tmp/mymaps` folder.
+via the feature vector. As an example the following method loads locales from a
+local folder at `/tmp/mymaps`.
 
 ``` javascript
 sre.setupEngine({
@@ -217,14 +217,13 @@ sre.setupEngine({
 ```
 
 
-
 ### Deprecated Options
 
-| Option | Value |
-| ---- | ---- |
-| *cache* | Boolean flag to switch expression caching during speech generation. Default is ```true```. |
+| Option | Value | Release |
+| ---- | ---- | ---- |
+| *cache* | Boolean flag to switch expression caching during speech generation. Default is ```true```. | Deprecated in v3.2.0 |
 || Expression caching has been removed and the option has no longer any effect. |
-| *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** |
+| *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** | Deprecated in v4.0.0 |
 || **Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes.** |
 | *walker* | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table``` |
 
