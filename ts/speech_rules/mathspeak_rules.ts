@@ -120,24 +120,24 @@ export function MathspeakRules() {
       
   // Korean
   SpeechRules.addStore(
-    'ko.speech.mathspeak', 'en.speech.mathspeak', {
-      'CSFopenFracVerbose': MathspeakKoreanUtil.openingFractionVerbose,
-      'CSFcloseFracVerbose': MathspeakKoreanUtil.closingFractionVerbose,
-      'CSFopenFracBrief': MathspeakKoreanUtil.openingFractionBrief,
-      'CSFcloseFracBrief': MathspeakKoreanUtil.closingFractionBrief,
-      'CSFopenFracSbrief': MathspeakKoreanUtil.openingFractionSbrief,
-      'CSFcloseFracSbrief': MathspeakKoreanUtil.closingFractionSbrief,
-      'CSFoverFracSbrief': MathspeakKoreanUtil.overFractionSbrief,
+      'ko.speech.mathspeak', 'en.speech.mathspeak', {
+        'CSFopenFracVerbose': MathspeakKoreanUtil.openingFractionVerbose,
+        'CSFcloseFracVerbose': MathspeakKoreanUtil.closingFractionVerbose,
+        'CSFopenFracBrief': MathspeakKoreanUtil.openingFractionBrief,
+        'CSFcloseFracBrief': MathspeakKoreanUtil.closingFractionBrief,
+        'CSFopenFracSbrief': MathspeakKoreanUtil.openingFractionSbrief,
+        'CSFcloseFracSbrief': MathspeakKoreanUtil.closingFractionSbrief,
+        'CSFoverFracSbrief': MathspeakKoreanUtil.overFractionSbrief,
 
-      'CQFisSimpleIndex': MathspeakKoreanUtil.isSimpleIndex,
-      'CSFindexRadicalVerbose': MathspeakKoreanUtil.indexRadicalVerbose,
-      'CSFindexRadicalBrief': MathspeakKoreanUtil.indexRadicalBrief,
-      'CSFindexRadicalSbrief': MathspeakKoreanUtil.indexRadicalSbrief,
+        'CQFisSimpleIndex': MathspeakKoreanUtil.isSimpleIndex,
+        'CSFindexRadicalVerbose': MathspeakKoreanUtil.indexRadicalVerbose,
+        'CSFindexRadicalBrief': MathspeakKoreanUtil.indexRadicalBrief,
+        'CSFindexRadicalSbrief': MathspeakKoreanUtil.indexRadicalSbrief,
       
-      'CSFopenRadicalVerbose': MathspeakKoreanUtil.openingRadicalVerbose,
-      'CSFcloseRadicalVerbose': MathspeakKoreanUtil.closingRadicalVerbose,
-      'CSFopenRadicalBrief': MathspeakKoreanUtil.openingRadicalBrief,
-      'CSFcloseRadicalBrief': MathspeakKoreanUtil.closingRadicalBrief,
-      'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief
-    });
+        'CSFopenRadicalVerbose': MathspeakKoreanUtil.openingRadicalVerbose,
+        'CSFcloseRadicalVerbose': MathspeakKoreanUtil.closingRadicalVerbose,
+        'CSFopenRadicalBrief': MathspeakKoreanUtil.openingRadicalBrief,
+        'CSFcloseRadicalBrief': MathspeakKoreanUtil.closingRadicalBrief,
+        'CSFopenRadicalSbrief': MathspeakKoreanUtil.openingRadicalSbrief
+      });
 }

@@ -1481,7 +1481,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "곱하기"
+        "default": "파이"
       }
     },
     "key": "220F"

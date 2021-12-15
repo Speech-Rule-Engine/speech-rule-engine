@@ -10,7 +10,7 @@
         "sbrief": "괄열"
       },
       "clearspeak": {
-        "default": "괄호 열기"
+        "default": "괄호 열고"
       }
     },
     "key": "0028"
@@ -26,7 +26,7 @@
         "sbrief": "괄닫"
       },
       "clearspeak": {
-        "default": "괄호 닫기"
+        "default": "괄호 닫고"
       }
     },
     "key": "0029"
@@ -42,7 +42,7 @@
         "sbrief": "대괄열"
       },
       "clearspeak": {
-        "default": "대괄호 열기"
+        "default": "대괄호 열고"
       }
     },
     "key": "005B"
@@ -58,7 +58,7 @@
         "sbrief": "대괄닫"
       },
       "clearspeak": {
-        "default": "대괄호 닫기"
+        "default": "대괄호 닫고"
       }
     },
     "key": "005D"
@@ -73,7 +73,7 @@
         "sbrief": "중괄열"
       },
       "clearspeak": {
-        "default": "중괄호 열기"
+        "default": "중괄호 열고"
       }
     },
     "key": "007B"
@@ -88,7 +88,7 @@
         "sbrief": "중괄닫"
       },
       "clearspeak": {
-        "default": "중괄호 닫기"
+        "default": "중괄호 닫고"
       }
     },
     "key": "007D"

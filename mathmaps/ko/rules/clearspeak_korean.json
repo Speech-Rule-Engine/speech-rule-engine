@@ -45,6 +45,25 @@
       "name(children/*[1])=\"identifier\"",
       "children/*[1][@category=\"unit:length\"]"
     ],
+    
+    [
+      "Precondition",
+      "vbar-divides",
+      "default",
+      "self::punctuated",
+      "@role=\"sequence\"",
+      "count(./children/*)=3",
+      "children/*[2][@role=\"vbar\"]"
+    ],
+    [
+      "Precondition",
+      "vbar-always-divides",
+      "VerticalLine_Divides",
+      "self::punctuated",
+      "@role=\"sequence\"",
+      "count(./children/*)=3",
+      "children/*[2][@role=\"vbar\"]"
+    ],
     [
       "Ignore",
       "equality"
@@ -79,7 +98,7 @@
       "default",
       "self::relseq",
       "count(./children/*)=2",
-      "text()=\"⊂\""
+      "text()=\"=\" or text()=\"<\" or text()=\">\" or text()=\"≤\" or text()=\"≥\" or text()=\"⊂\" or text()=\"≠\" or text()=\"⇐\" or text()=\"⇒\" or text()=\"⇔\""
     ],
     [
       "Precondition",
@@ -95,15 +114,7 @@
       "default",
       "self::infixop",
       "count(./children/*)=2",
-      "text()=\"∉\""
-    ],
-    [
-      "Precondition",
-      "not-contain-member",
-      "default",
-      "self::infixop",
-      "count(./children/*)=2",
-      "text()=\"∌\""
+      "text()=\"∈\" or text()=\"∊\" or text()=\"∋\" or text()=\"∍\" or text()=\"∉\" or text()=\"∌\""
     ],
     [
       "Precondition",
