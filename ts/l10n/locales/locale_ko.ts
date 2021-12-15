@@ -62,15 +62,15 @@ function create(): Locale {
     let result = (char > 0) ? true : false;
     if (final.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
     Grammar.getInstance().setParameter('final', result);
-    return name;
+    return name+result;
   }
   loc.CORRECTIONS.article = (name: string) => {
     let final = Grammar.getInstance().getParameter('final');
-    let temp = name.split(" ");
+    let temp = name;
 
-    if (temp[0] === '같다') temp[0] = '는';
-    if (final) temp[0] = {'는': '은', '와': '과', '를': '을', '로': '으로'}[temp[0]];
-    return (temp[0] !== undefined) ? temp.join(" ") : name;
+    if (temp === '같다') temp = '는';
+    if (final) temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[temp];
+    return (temp !== undefined) ? temp : name;
   }
   loc.CORRECTIONS.noArticle = (name: string) => {
     let temp = name.split(" ");

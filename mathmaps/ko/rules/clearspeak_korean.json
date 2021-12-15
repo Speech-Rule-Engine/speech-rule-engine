@@ -65,44 +65,16 @@
       "children/*[2][@role=\"vbar\"]"
     ],
     [
-      "Ignore",
-      "equality"
-    ],
-    [
       "Precondition",
-      "simple-relseq",
+      "equality",
       "default",
       "self::relseq",
       "count(./children/*)=2",
-      "text()=\"≥\" or text()=\">\" or text()=\"≤\" or text()=\"<\""
+      "text()=\"=\" or text()=\"＝\""
     ],
     [
       "Precondition",
-      "set-member",
-      "default",
-      "self::infixop",
-      "count(./children/*)=2",
-      "text()=\"∈\" or text()=\"∊\""
-    ],
-    [
-      "Precondition",
-      "contain-member",
-      "default",
-      "self::infixop",
-      "count(./children/*)=2",
-      "text()=\"∋\" or text()=\"∍\"" 
-    ],
-    [
-      "Precondition",
-      "subset-of",
-      "default",
-      "self::relseq",
-      "count(./children/*)=2",
-      "text()=\"=\" or text()=\"<\" or text()=\">\" or text()=\"≤\" or text()=\"≥\" or text()=\"⊂\" or text()=\"≠\" or text()=\"⇐\" or text()=\"⇒\" or text()=\"⇔\""
-    ],
-    [
-      "Precondition",
-      "not-equal-to",
+      "not-equal",
       "default",
       "self::relseq",
       "count(./children/*)=2",
@@ -110,7 +82,23 @@
     ],
     [
       "Precondition",
-      "not-set-member",
+      "simple-relseq",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"=\" or text()=\"<\" or text()=\">\" or text()=\"≤\" or text()=\"≥\" or text()=\"⊂\" or text()=\"≠\" or text()=\"⇐\" or text()=\"⇒\" or text()=\"⇔\""
+    ],
+    [
+      "Precondition",
+      "simple-set-member",
+      "default",
+      "self::infixop",
+      "count(./children/*)=2",
+      "text()=\"∈\" or text()=\"∊\" or text()=\"∉\""
+    ],
+    [
+      "Precondition",
+      "simple-contain-member",
       "default",
       "self::infixop",
       "count(./children/*)=2",
@@ -118,7 +106,7 @@
     ],
     [
       "Precondition",
-      "parallel-to",
+      "simple-parallel",
       "default",
       "self::punctuated",
       "count(./children/*)=3",
@@ -126,7 +114,7 @@
     ],
     [
       "Precondition",
-      "vertical",
+      "simple-vertical",
       "default",
       "self::infixop",
       "count(./children/*)=2",
@@ -134,27 +122,11 @@
     ],
     [
       "Precondition",
-      "necessary-condition",
+      "simple-condition",
       "default",
       "self::relseq",
       "count(./children/*)=2",
-      "text()=\"⇐\""
-    ],
-    [
-      "Precondition",
-      "sufficient-condition",
-      "default",
-      "self::relseq",
-      "count(./children/*)=2",
-      "text()=\"⇒\""
-    ],
-    [
-      "Precondition",
-      "necessary-sufficient-condition",
-      "default",
-      "self::relseq",
-      "count(./children/*)=2",
-      "text()=\"⇔\""
+      "text()=\"⇐\" or text()=\"⇒\" or text()=\"⇔\""
     ],
     [
       "Precondition",
