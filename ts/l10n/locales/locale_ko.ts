@@ -53,13 +53,15 @@ function create(): Locale {
    * @returns The string unchanged.
    */
   loc.CORRECTIONS.postposition = (name: string) => {
-    if (Grammar.getInstance().getParameter('article')) return name;
+    let article = ['같다', '는', '와', '를', '로'];
+    if (article.includes(name)) return name;
     
     let final = name.slice(-1);
-    let char = (final.charCodeAt(0) - 44032) % 28;
     
+    let char = (final.charCodeAt(0) - 44032) % 28;
     let result = (char > 0) ? true : false;
     if (final.match(/[r,l,n,m,1,3,6,7,8,0]/i)) result = true;
+    
     Grammar.getInstance().setParameter('final', result);
     return name;
   }
