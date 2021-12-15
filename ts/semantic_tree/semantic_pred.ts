@@ -366,6 +366,18 @@ export function tableIsMultiline(table: SemanticNode): boolean {
 
 
 /**
+ * Determines if this is a labelled line.
+ * @param line The line element.
+ * @return True if the element is a line and has a label as a content node.
+ */
+export function lineIsLabelled(line: SemanticNode): boolean {
+  return isType(line, SemanticType.LINE) &&
+    line.contentNodes.length &&
+    isRole(line.contentNodes[0], SemanticRole.LABEL);
+}
+
+
+/**
  * Heuristic to decide if a table has a binomial form.
  * @param table A table node.
  * @return True if it is a binomial form.

@@ -133,6 +133,7 @@ export default class SemanticProcessor {
       SemanticProcessor.rowToLine_(row, SemanticRole.MULTILINE);
     }
     if (table.childNodes.length === 1 &&
+        !SemanticPred.lineIsLabelled(table.childNodes[0]) &&
         SemanticPred.isFencedElement(table.childNodes[0].childNodes[0])) {
       SemanticProcessor.tableToMatrixOrVector_(
           SemanticProcessor.rewriteFencedLine_(table));
