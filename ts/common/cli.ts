@@ -67,17 +67,19 @@ export class Cli {
     this.processors.push(processor);
   }
 
+  private async loadLocales() {
+    for await (const loc of Variables.LOCALES) {
+      System.setupEngine({ locale: loc });
+    }
+  }
+
   /**
    * Prints information on axes values.
    */
   public enumerate(all = false) {
-    System.setupEngine(this.setup);
-    if (all) {
-      for (const loc of Variables.LOCALES) {
-        System.setupEngine({ locale: loc });
-      }
-    }
-    EnginePromise.getall().then(() => {
+    let promise = System.setupEngine(this.setup);
+    return (all ? this.loadLocales() : promise).then(() =>
+      EnginePromise.getall().then(() => {
       const length = DynamicCstr.DEFAULT_ORDER.map((x) => x.length);
       const maxLength = (obj: any, index: number) => {
         length[index] = Math.max.apply(
@@ -147,7 +149,7 @@ export class Cli {
       output += '========================\n';
       output += table.map((x) => x.join(' | ')).join('\n');
       console.info(output);
-    });
+      }));
   }
 
   /**
@@ -322,12 +324,10 @@ export class Cli {
         'List engine setup options for all available locales.'
       )
       .on('option:opt', () => {
-        this.enumerate();
-        System.exit(0);
+        this.enumerate().then(() => System.exit(0));
       })
       .on('option:opt-all', () => {
-        this.enumerate(true);
-        System.exit(0);
+        this.enumerate(true).then(() => System.exit(0));
       })
       .parse(this.process.argv);
     System.setupEngine(this.setup);
