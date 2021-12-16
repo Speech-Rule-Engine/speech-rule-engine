@@ -119,16 +119,16 @@ export enum WalkerMoves {
   CELL = 'cell'
 }
 
-export namespace WalkerState {
+export class WalkerState {
   // TODO (ts): Replace with a Map.
-  const STATE: { [id: string]: string } = {};
+  private static STATE: { [id: string]: string } = {};
 
   /**
    * Removes a state for a particular node.
    * @param id A node id.
    */
-  export function resetState(id: string) {
-    delete STATE[id];
+  public static resetState(id: string) {
+    delete WalkerState.STATE[id];
   }
 
   /**
@@ -136,8 +136,8 @@ export namespace WalkerState {
    * @param id A node id.
    * @param value The state value.
    */
-  export function setState(id: string, value: string) {
-    STATE[id] = value;
+  public static setState(id: string, value: string) {
+    WalkerState.STATE[id] = value;
   }
 
   /**
@@ -145,7 +145,7 @@ export namespace WalkerState {
    * @param id The node id.
    * @return The state value.
    */
-  export function getState(id: string): string {
-    return STATE[id];
+  public static getState(id: string): string {
+    return WalkerState.STATE[id];
   }
 }
