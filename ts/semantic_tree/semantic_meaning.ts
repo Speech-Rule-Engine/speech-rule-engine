@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic definitions of semantic meaning for Math expressions.
- *
+ * @file Basic definitions of semantic meaning for Math expressions.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -111,6 +110,7 @@ export const enum SemanticType {
 /**
  * Mapping for roles of nodes.
  * Roles are more specific than types.
+ *
  * @final
  */
 export const enum SemanticRole {

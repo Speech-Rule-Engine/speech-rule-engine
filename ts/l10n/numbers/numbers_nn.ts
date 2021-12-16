@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers into Nynorsk.
+ * @file Translating numbers into Nynorsk.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -22,8 +22,10 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @param ordinal
+ * @returns The string representation of that number.
  */
 function hundredsToWords_(num: number, ordinal = false): string {
   let n = num % 1000;
@@ -56,8 +58,10 @@ function hundredsToWords_(num: number, ordinal = false): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @param ordinal
+ * @returns The string representation of that number.
  */
 function numberToWords(num: number, ordinal = false): string {
   if (num === 0) {
@@ -93,9 +97,11 @@ function numberToWords(num: number, ordinal = false): string {
 /**
  * Translates a number of up to twelve digits into a string representation of
  * its ordinal.
+ *
  * @param num The number to translate.
  * @param plural A flag indicating if the ordinal is in plural.
- * @return The ordinal of the number as string.
+ * @param _plural
+ * @returns The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, _plural: boolean): string {
   return wordOrdinal(num);
@@ -103,8 +109,9 @@ function numberToOrdinal(num: number, _plural: boolean): string {
 
 /**
  * Adds the ordinal ending for numbers up to numbers < 1000.
+ *
  * @param str The number.
- * @return Number with ordinal ending.
+ * @returns Number with ordinal ending.
  */
 function replaceOrdinal(str: string): string {
   const letOne = NUMBERS.special.endOrdinal[0];
@@ -128,8 +135,9 @@ function replaceOrdinal(str: string): string {
 
 /**
  * Creates a word ordinal string from a number.
+ *
  * @param num The number to be converted.
- * @return The ordinal string.
+ * @returns The ordinal string.
  */
 function wordOrdinal(num: number): string {
   const ordinal = numberToWords(num, true);
@@ -138,8 +146,9 @@ function wordOrdinal(num: number): string {
 
 /**
  * Creates a simple ordinal string from a number.
+ *
  * @param num The number to be converted.
- * @return The ordinal string.
+ * @returns The ordinal string.
  */
 function simpleOrdinal(num: number): string {
   return num.toString() + '.';

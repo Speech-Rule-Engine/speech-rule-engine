@@ -14,11 +14,10 @@
 // limitations under the License.
 
 /**
- * @fileoverview A processor for building semantic trees.
+ * @file A processor for building semantic trees.
  *
  * This implements the basic heuristics for generating semantic trees from
  * already existing semantic nodes.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -101,7 +100,7 @@ export default class SemanticProcessor {
   private factory_: SemanticNodeFactory;
 
   /**
-   * @return The SemanticProcessor object.
+   * @returns The SemanticProcessor object.
    */
   public static getInstance(): SemanticProcessor {
     SemanticProcessor.instance =
@@ -112,6 +111,7 @@ export default class SemanticProcessor {
   /**
    * Rewrites a table to multiline structure, simplifying it by getting rid of
    * the cell hierarchy level.
+   *
    * @param table The node to be rewritten a multiline.
    */
   public static tableToMultiline(table: SemanticNode) {
@@ -138,6 +138,7 @@ export default class SemanticProcessor {
 
   /**
    * Processes a number node and adapts its role and font if necessary.
+   *
    * @param node The semantic tree node.
    */
   public static number(node: SemanticNode) {
@@ -155,6 +156,7 @@ export default class SemanticProcessor {
   /**
    * Semantically classifies a multiline table in terms of equation system it
    * might be.
+   *
    * @param multiline A multiline expression.
    */
   public static classifyMultiline(multiline: SemanticNode) {
@@ -189,6 +191,7 @@ export default class SemanticProcessor {
 
   /**
    * Semantically classifies a table in terms of equation system it might be.
+   *
    * @param table The table node.
    */
   public static classifyTable(table: SemanticNode) {
@@ -214,8 +217,9 @@ export default class SemanticProcessor {
 
   /**
    * Classifies a Cayley table.
+   *
    * @param table The table.
-   * @return True if it is a Cayley table.
+   * @returns True if it is a Cayley table.
    */
   private static detectCaleyTable(table: SemanticNode) {
     if (!table.mathmlTree) {
@@ -242,7 +246,7 @@ export default class SemanticProcessor {
    * first and second row, only.
    *
    * @param lines The lines attribute string.
-   * @return True if the lines attribute indicate a Cayley table.
+   * @returns True if the lines attribute indicate a Cayley table.
    */
   private static cayleySpacing(lines: string): boolean {
     const list = lines.split(' ');
@@ -257,11 +261,12 @@ export default class SemanticProcessor {
   // available.
   /**
    * Parses a proof node.
+   *
    * @param node The node.
    * @param semantics Its semantics attribute value.
    * @param parse The
    *     current semantic parser for list of nodes.
-   * @return The semantic node.
+   * @returns The semantic node.
    */
   public static proof(
     node: Element,
@@ -279,7 +284,7 @@ export default class SemanticProcessor {
    * @param node The mml node.
    * @param attr The attribute name.
    * @param opt_value The attribute value.
-   * @return True if the semantic attribute is in the node.
+   * @returns True if the semantic attribute is in the node.
    */
   public static findSemantics(
     node: Element,
@@ -300,8 +305,9 @@ export default class SemanticProcessor {
   /**
    * Retrieves the content of a semantic attribute in a node as an association
    * list.
+   *
    * @param node The mml node.
-   * @return The association list.
+   * @returns The association list.
    */
   public static getSemantics(node: Element): { [key: string]: string } {
     const semantics = node.getAttribute('semantics');
@@ -313,8 +319,9 @@ export default class SemanticProcessor {
 
   /**
    * Removes prefix from a semantic attribute.
+   *
    * @param name The semantic attribute.
-   * @return Name with prefix removed.
+   * @returns Name with prefix removed.
    */
   public static removePrefix(name: string): string {
     const [, ...rest] = name.split('_');
@@ -323,8 +330,9 @@ export default class SemanticProcessor {
 
   /**
    * Separates a semantic attribute into it's components.
+   *
    * @param attr Content of the semantic attribute.
-   * @return Association list of semantic attributes.
+   * @returns Association list of semantic attributes.
    */
   public static separateSemantics(attr: string): { [key: string]: string } {
     const result: { [key: string]: string } = {};
@@ -340,6 +348,7 @@ export default class SemanticProcessor {
    * space elements as mathmlTree elements. This has the effect that newly
    * introduced invisible times operators will enrich the spaces rather than add
    * new empty elements.
+   *
    * @param nodes The operands.
    * @param ops A list of invisible times operators.
    */
@@ -367,8 +376,9 @@ export default class SemanticProcessor {
   // TODO (TS): Make this optional conditions.
   /**
    * Recursively retrieves an embedded space element.
+   *
    * @param node The mml element.
-   * @return The space element if it exists.
+   * @returns The space element if it exists.
    */
   private static getSpacer_(node: Element): Element {
     if (DomUtil.tagName(node) === 'MSPACE') {
@@ -385,6 +395,7 @@ export default class SemanticProcessor {
 
   /**
    * Rewrite fences into punctuation. This is done with any "leftover" fence.
+   *
    * @param fence Fence.
    */
   private static fenceToPunct_(fence: SemanticNode) {
@@ -410,11 +421,12 @@ export default class SemanticProcessor {
 
   /**
    * Classifies a function wrt. the heuristic that should be applied.
+   *
    * @param funcNode The node to be classified.
    * @param restNodes The remainder list of
    *     nodes. They can be useful to look ahead if there is an explicit
    * function application. If there is one, it will be destructively removed!
-   * @return The string specifying the heuristic.
+   * @returns The string specifying the heuristic.
    */
   private static classifyFunction_(
     funcNode: SemanticNode,
@@ -460,6 +472,7 @@ export default class SemanticProcessor {
 
   /**
    * Propagates a function role in a node.
+   *
    * @param funcNode The node whose role is to be
    *     rewritten.
    * @param tag The function role to be inserted.
@@ -486,10 +499,11 @@ export default class SemanticProcessor {
 
   /**
    * Finds the function operator in a partial semantic tree if it exists.
+   *
    * @param tree The partial tree.
    * @param pred Predicate for the
    *    function operator.
-   * @return The function operator.
+   * @returns The function operator.
    */
   private static getFunctionOp_(
     tree: SemanticNode,
@@ -510,8 +524,9 @@ export default class SemanticProcessor {
   /**
    * Replaces a fenced node by a matrix or vector node and possibly specialises
    * it's role.
+   *
    * @param node The fenced node to be rewritten.
-   * @return The matrix or vector node.
+   * @returns The matrix or vector node.
    */
   private static tableToMatrixOrVector_(node: SemanticNode): SemanticNode {
     const matrix = node.childNodes[0];
@@ -531,6 +546,7 @@ export default class SemanticProcessor {
 
   /**
    * Assigns a specialised roles to a vector node inside the given fenced node.
+   *
    * @param node The fenced node containing the vector.
    */
   private static tableToVector_(node: SemanticNode) {
@@ -545,6 +561,7 @@ export default class SemanticProcessor {
 
   /**
    * Assigns a binomial role if a table consists of two lines only.
+   *
    * @param node The table node.
    */
   private static binomialForm_(node: SemanticNode) {
@@ -557,6 +574,7 @@ export default class SemanticProcessor {
 
   /**
    * Assigns a specialised roles to a matrix node inside the given fenced node.
+   *
    * @param node The fenced node containing the matrix.
    */
   private static tableToMatrix_(node: SemanticNode) {
@@ -578,6 +596,7 @@ export default class SemanticProcessor {
 
   /**
    * Assigns a role to a square, fenced table.
+   *
    * @param node The fenced node containing a square
    *     table.
    */
@@ -593,8 +612,9 @@ export default class SemanticProcessor {
   /**
    * Cmoputes the role for the components of a matrix. It is either the role of
    * that matrix or its type.
+   *
    * @param node The matrix or vector node.
-   * @return The role to be assigned to the components.
+   * @returns The role to be assigned to the components.
    */
   private static getComponentRoles_(node: SemanticNode): SemanticRole {
     const role = node.role;
@@ -606,10 +626,11 @@ export default class SemanticProcessor {
 
   /**
    * Makes case node out of a table and a fence.
+   *
    * @param table The table containing the cases.
    * @param openFence The left delimiter of the case
    *     statement.
-   * @return The cases node.
+   * @returns The cases node.
    */
   private static tableToCases_(
     table: SemanticNode,
@@ -629,8 +650,9 @@ export default class SemanticProcessor {
   // TODO: (Simons) Is this heuristic really what we want? Make it selectable?
   /**
    * Heuristic to rewrite a single fenced line in a table into a square matrix.
+   *
    * @param table The node to be rewritten.
-   * @return The rewritten node.
+   * @returns The rewritten node.
    */
   private static rewriteFencedLine_(table: SemanticNode): SemanticNode {
     const line = table.childNodes[0];
@@ -646,6 +668,7 @@ export default class SemanticProcessor {
 
   /**
    * Converts a row that only contains one cell into a single line.
+   *
    * @param row The row to convert.
    * @param opt_role The new role for the line.
    */
@@ -668,6 +691,7 @@ export default class SemanticProcessor {
 
   /**
    * Assign a row and its contained cells a new role value.
+   *
    * @param row The row to be updated.
    * @param role The new role for the row and its cells.
    */
@@ -693,8 +717,9 @@ export default class SemanticProcessor {
    * until the final element is used as the default.
    * Example: a b c d e  and separators [+,-,*]
    * would result in a + b - c * d * e.
+   *
    * @param separators String representing a list of mfenced separators.
-   * @return A closure that returns the next separator
+   * @returns A closure that returns the next separator
    * for an mfenced expression starting with the first node in nodes.
    */
   private static nextSeparatorFunction_(
@@ -728,6 +753,7 @@ export default class SemanticProcessor {
 
   /**
    * Compute the role of a number if it does not have one already.
+   *
    * @param node The semantic tree node.
    */
   private static numberRole_(node: SemanticNode) {
@@ -766,6 +792,7 @@ export default class SemanticProcessor {
 
   /**
    * Updates the font of a node if a single font can be determined.
+   *
    * @param node The semantic tree node.
    */
   private static exprFont_(node: SemanticNode) {
@@ -797,10 +824,13 @@ export default class SemanticProcessor {
    * Rewrites a fences partition to remove non-eligible embellished fences.
    * It rewrites all other fences into punctuations.
    * For eligibility see sre.SemanticPred.isElligibleEmbellishedFence
+   *
    * @param {{rel: !Array.<sre.SemanticNode>,
    *          comp: !Array.<!Array.<sre.SemanticNode>>}} partition A partition
    * for fences.
-   * @return {{rel: !Array.<sre.SemanticNode>,
+   * @param partition.rel
+   * @param partition.comp
+   * @returns {{rel: !Array.<sre.SemanticNode>,
    *           comp: !Array.<!Array.<sre.SemanticNode>>}} The cleansed
    * partition.
    */
@@ -833,8 +863,9 @@ export default class SemanticProcessor {
   /**
    * Rewrites a fenced node by pulling some embellishments from fences to the
    * outside.
+   *
    * @param fenced The fenced node.
-   * @return The rewritten node.
+   * @returns The rewritten node.
    */
   private static rewriteFencedNode_(fenced: SemanticNode): SemanticNode {
     const ofence = fenced.contentNodes[0] as SemanticNode;
@@ -853,9 +884,10 @@ export default class SemanticProcessor {
    * Rewrites a fence by removing embellishments and putting them around the
    * node. The only embellishments that are not pulled out are overscore and
    * underscore.
+   *
    * @param node The original fenced node.
    * @param fence The fence node.
-   * @return {{node: !sre.SemanticNode,
+   * @returns {{node: !sre.SemanticNode,
    *           fence: !sre.SemanticNode}} The rewritten node and fence.
    */
   // TODO (sorge) Maybe remove the superfluous MathML element.
@@ -896,6 +928,7 @@ export default class SemanticProcessor {
    * actual fence it embellishes. If the link is valid on the new node, the old
    * node will point to that link as well. Note, that this fence might still be
    * embellished itself, e.g. with under or overscore.
+   *
    * @param oldNode The old embellished node.
    * @param newNode The new embellished node.
    */
@@ -909,12 +942,14 @@ export default class SemanticProcessor {
 
   /**
    * Classifies table by columns and a given relation.
+   *
    * @param table The table node.
    * @param columns The columns.
    * @param relation The main relation to classify.
    * @param alternatives Alternative relations that are
    *     permitted in addition to the main relation.
-   * @return True if classification was successful.
+   * @param _alternatives
+   * @returns True if classification was successful.
    */
   private static classifyByColumns_(
     table: SemanticNode,
@@ -949,10 +984,11 @@ export default class SemanticProcessor {
   /**
    * Check for a particular end relations, i.e., either a sole relation symbols
    * or the relation ends in an side.
+   *
    * @param node The node.
    * @param relation The relation to be tested.
    * @param opt_right From the right side?
-   * @return True if the node is an end relation.
+   * @returns True if the node is an end relation.
    */
   private static isEndRelation_(
     node: SemanticNode,
@@ -969,9 +1005,10 @@ export default class SemanticProcessor {
 
   /**
    * Check for a particular relations.
+   *
    * @param node The node.
    * @param relation The relation to be tested.
-   * @return True if the node is an end relation.
+   * @returns True if the node is an end relation.
    */
   private static isPureRelation_(
     node: SemanticNode,
@@ -988,8 +1025,9 @@ export default class SemanticProcessor {
    * empty cells are simply omitted. Consequently, rows are not preserved, i.e.,
    * elements at the same index in different columns are not necessarily in the
    * same row in the original table!
+   *
    * @param table The table node.
-   * @return The columns.
+   * @returns The columns.
    */
   private static computeColumns_(table: SemanticNode): SemanticNode[][] {
     const columns = [];
@@ -1004,10 +1042,11 @@ export default class SemanticProcessor {
 
   /**
    * Test if all elements in the i-th column have the same property.
+   *
    * @param columns The columns.
    * @param index The column to be tested.
    * @param pred Predicate to test against.
-   * @return True if all elements of the given column satisfy pred.
+   * @returns True if all elements of the given column satisfy pred.
    */
   private static testColumns_(
     columns: SemanticNode[][],
@@ -1032,6 +1071,7 @@ export default class SemanticProcessor {
 
   /**
    * Sets the node factory the processor is using.
+   *
    * @param factory New node factory.
    */
   public setNodeFactory(factory: SemanticNodeFactory) {
@@ -1041,7 +1081,8 @@ export default class SemanticProcessor {
 
   /**
    * Getter for the node factory.
-   * @return The node factory.
+   *
+   * @returns The node factory.
    */
   public getNodeFactory(): SemanticNodeFactory {
     return SemanticProcessor.getInstance().factory_;
@@ -1050,12 +1091,13 @@ export default class SemanticProcessor {
   /**
    * Processes an identifier node, with particular emphasis on font
    * disambiguation.
+   *
    * @param leaf The identifier node.
    * @param font The original mml font for the
    *     identifier. Could be empty if not font was given.
    * @param unit The class of the identifier which is important if it is
    *     a unit.
-   * @return The semantic identifier node.
+   * @returns The semantic identifier node.
    */
   public identifierNode(
     leaf: SemanticNode,
@@ -1092,8 +1134,9 @@ export default class SemanticProcessor {
    * Process a list of nodes and create a node for implicit operations,
    * currently assumed to be of multiplicative type. Determines mixed numbers
    * and unit elements.
+   *
    * @param nodes The operands.
-   * @return The new branch node.
+   * @returns The new branch node.
    */
   public implicitNode(nodes: SemanticNode[]): SemanticNode {
     nodes = SemanticProcessor.getInstance().getMixedNumbers_(nodes);
@@ -1110,9 +1153,10 @@ export default class SemanticProcessor {
 
   /**
    * Create an text node, keeping string notation correct.
+   *
    * @param leaf The text node.
    * @param type The type of the text node.
-   * @return The new semantic text node.
+   * @returns The new semantic text node.
    */
   public text(leaf: SemanticNode, type: string): SemanticNode {
     // TODO (simons): Here check if there is already a type or if we can compute
@@ -1139,8 +1183,9 @@ export default class SemanticProcessor {
    *
    * This is the main heuristic to rewrite a flat row of terms into a meaningful
    * term tree.
+   *
    * @param nodes The list of nodes.
-   * @return The root node of the syntax tree.
+   * @returns The root node of the syntax tree.
    */
   public row(nodes: SemanticNode[]): SemanticNode {
     nodes = nodes.filter(function (x) {
@@ -1161,10 +1206,11 @@ export default class SemanticProcessor {
    * Creates a limit node from a sub/superscript or over/under node if the
    * central element is a big operator. Otherwise it creates the standard
    * elements.
+   *
    * @param mmlTag The tag name of the original node.
    * @param children The children of the
    *     original node.
-   * @return The newly created limit node.
+   * @returns The newly created limit node.
    */
   public limitNode(mmlTag: string, children: SemanticNode[]): SemanticNode {
     if (!children.length) {
@@ -1264,8 +1310,9 @@ export default class SemanticProcessor {
   // Maybe labels, interspersed text etc.
   /**
    * Rewrites tables into matrices or case statements in a list of nodes.
+   *
    * @param nodes List of nodes to rewrite.
-   * @return The new list of nodes.
+   * @returns The new list of nodes.
    */
   public tablesInRow(nodes: SemanticNode[]): SemanticNode[] {
     // First we process all matrices:
@@ -1298,12 +1345,13 @@ export default class SemanticProcessor {
 
   /**
    * Process an fenced node, effectively given in an mfenced style.
+   *
    * @param open Textual representation of the opening fence.
    * @param close Textual representation of the closing fence.
    * @param sepValue Textual representation of separators.
    * @param children List of already translated
    *     children.
-   * @return The semantic node.
+   * @returns The semantic node.
    */
   public mfenced(
     open: string | null,
@@ -1350,11 +1398,12 @@ export default class SemanticProcessor {
 
   /**
    * Creates a fraction node with the appropriate role.
+   *
    * @param denom The denominator node.
    * @param enume The enumerator node.
    * @param linethickness The line thickness attribute value.
    * @param bevelled Is it a bevelled fraction?
-   * @return The new fraction node.
+   * @returns The new fraction node.
    */
   public fractionLikeNode(
     denom: SemanticNode,
@@ -1395,12 +1444,13 @@ export default class SemanticProcessor {
 
   /**
    * Create a tensor node.
+   *
    * @param base The base node.
    * @param lsub The left subscripts.
    * @param lsup The left superscripts.
    * @param rsub The right subscripts.
    * @param rsup The right superscripts.
-   * @return The semantic tensor node.
+   * @returns The semantic tensor node.
    */
   public tensor(
     base: SemanticNode,
@@ -1437,10 +1487,11 @@ export default class SemanticProcessor {
   /**
    * Creates a limit node from an original mmultiscript node, that only has
    * non-empty right sub and superscript elements.
+   *
    * @param base The base node.
    * @param sub The subscripts.
    * @param sup The superscripts.
-   * @return The semantic tensor node.
+   * @returns The semantic tensor node.
    */
   public pseudoTensor(
     base: SemanticNode,
@@ -1479,8 +1530,9 @@ export default class SemanticProcessor {
 
   /**
    * Cleans font names of potential MathJax prefixes.
+   *
    * @param font The font name.
-   * @return The clean name.
+   * @returns The clean name.
    */
   public font(font: string): SemanticFont {
     const mathjaxFont = SemanticProcessor.MATHJAX_FONTS[font];
@@ -1489,11 +1541,12 @@ export default class SemanticProcessor {
 
   /**
    * Parses a proof node.
+   *
    * @param node The node.
    * @param semantics Association of semantic keys to values.
    * @param parse The
    *     current semantic parser for list of nodes.
-   * @return The semantic node for the proof.
+   * @returns The semantic node for the proof.
    */
   public proof(
     node: Element,
@@ -1535,11 +1588,12 @@ export default class SemanticProcessor {
 
   /**
    * Parses a single inference node.
+   *
    * @param node The node.
    * @param semantics Association of semantic keys to values.
    * @param parse The
    *     current semantic parser for list of nodes.
-   * @return The semantic node for the inference.
+   * @returns The semantic node for the inference.
    */
   public inference(
     node: Element,
@@ -1600,12 +1654,14 @@ export default class SemanticProcessor {
 
   /**
    * Parses the label of an inference rule.
+   *
    * @param node The inference node.
+   * @param _node
    * @param children The node's children containing the label.
    * @param parse The
    *     current semantic parser for list of nodes.
    * @param side The side the label is on.
-   * @return The semantic node for the label.
+   * @returns The semantic node for the label.
    */
   public getLabel(
     _node: Element,
@@ -1630,11 +1686,12 @@ export default class SemanticProcessor {
 
   /**
    * Retrieves and parses premises and conclusion of an inference rule.
+   *
    * @param node The inference rule node.
    * @param children The node's children containing.
    * @param parse The
    *     current semantic parser for list of nodes.
-   * @return A pair
+   * @returns A pair
    *       of conclusion and premises.
    */
   public getFormulas(
@@ -1679,10 +1736,11 @@ export default class SemanticProcessor {
 
   /**
    * Find a inference element nested in a row.
+   *
    * @param nodes A node list.
    * @param semantic A semantic key.
    * @param opt_value Optionally the semantic value.
-   * @return The first element in that row that contains the semantic
+   * @returns The first element in that row that contains the semantic
    *     key (and has its value if the latter is given.)
    */
   public findNestedRow(
@@ -1700,8 +1758,9 @@ export default class SemanticProcessor {
 
   /**
    * Removes mspaces in a row.
+   *
    * @param nodes The list of nodes.
-   * @return The list with all space elements removed.
+   * @returns The list with all space elements removed.
    */
   public cleanInference(nodes: NodeList): Element[] {
     return DomUtil.toArray(nodes).filter(function (x) {
@@ -1711,8 +1770,9 @@ export default class SemanticProcessor {
 
   /**
    * Switches unknown to operator node and runs multioperator heuristics.
+   *
    * @param node The node to retype.
-   * @return The node resulting from applying the heuristic.
+   * @returns The node resulting from applying the heuristic.
    */
   public operatorNode(node: SemanticNode): SemanticNode {
     if (node.type === SemanticType.UNKNOWN) {
@@ -1732,8 +1792,9 @@ export default class SemanticProcessor {
   /**
    * Create a branching node for an implicit operation, currently assumed to be
    * of multiplicative type.
+   *
    * @param nodes The operands.
-   * @return The new branch node.
+   * @returns The new branch node.
    */
   private implicitNode_(nodes: SemanticNode[]): SemanticNode {
     const operators =
@@ -1757,9 +1818,10 @@ export default class SemanticProcessor {
 
   /**
    * Create a branching node for an infix operation.
+   *
    * @param children The operands.
    * @param opNode The operator.
-   * @return The new branch node.
+   * @returns The new branch node.
    */
   private infixNode_(
     children: SemanticNode[],
@@ -1780,8 +1842,9 @@ export default class SemanticProcessor {
 
   /**
    * Finds mixed numbers that are explicitly given with invisible plus.
+   *
    * @param nodes The list of nodes.
-   * @return The new list of nodes.
+   * @returns The new list of nodes.
    */
   private explicitMixed_(nodes: SemanticNode[]): SemanticNode[] {
     const partition = SemanticUtil.partitionNodes(nodes, function (x) {
@@ -1823,10 +1886,11 @@ export default class SemanticProcessor {
    * Creates a node of the specified type by collapsing the given node list into
    * one content (thereby concatenating the content of each node into a single
    * content string) with the inner node as a child.
+   *
    * @param inner The inner node.
    * @param nodeList List of nodes.
    * @param type The new type of the node.
-   * @return The new branch node.
+   * @returns The new branch node.
    */
   private concatNode_(
     inner: SemanticNode,
@@ -1860,10 +1924,11 @@ export default class SemanticProcessor {
    * Wraps a node into prefix operators.
    * Example: + - a becomes (+ (- (a)))
    * Input: a  [+, -] ->  Output: content: '+ -', child: a
+   *
    * @param node The inner node.
    * @param prefixes Prefix operators
    * from the outermost to the innermost.
-   * @return The new branch node.
+   * @returns The new branch node.
    */
   private prefixNode_(
     node: SemanticNode,
@@ -1904,10 +1969,11 @@ export default class SemanticProcessor {
    * Wraps a node into postfix operators.
    * Example: a - + becomes (((a) -) +)
    * Input: a  [-, +] ->  Output: content: '- +', child: a
+   *
    * @param node The inner node.
    * @param postfixes Postfix operators from
    * innermost to outermost.
-   * @return The new branch node.
+   * @returns The new branch node.
    */
   private postfixNode_(
     node: SemanticNode,
@@ -1925,8 +1991,9 @@ export default class SemanticProcessor {
 
   /**
    * Combines adjacent units in
+   *
    * @param nodes The list of nodes.
-   * @return The new list of nodes.
+   * @returns The new list of nodes.
    */
   private combineUnits_(nodes: SemanticNode[]): SemanticNode[] {
     const partition = SemanticUtil.partitionNodes(nodes, function (x) {
@@ -1971,8 +2038,9 @@ export default class SemanticProcessor {
   /**
    * Finds mixed numbers in a list of single nodes. A mixed number is an integer
    * followed by a vulgar fraction.
+   *
    * @param nodes The list of nodes.
-   * @return The new list of nodes.
+   * @returns The new list of nodes.
    */
   // Change that to compute mixed fractions.
   private getMixedNumbers_(nodes: SemanticNode[]): SemanticNode[] {
@@ -2014,8 +2082,9 @@ export default class SemanticProcessor {
   /**
    * Separates text from math content and combines them into a punctuated node,
    * with dummy punctuation invisible comma.
+   *
    * @param nodes The list of nodes.
-   * @return The new list of nodes.
+   * @returns The new list of nodes.
    */
   private getTextInRow_(nodes: SemanticNode[]): SemanticNode[] {
     if (nodes.length <= 1) {
@@ -2049,8 +2118,9 @@ export default class SemanticProcessor {
   /**
    * Constructs a syntax tree with relation and operator precedence from a list
    * of nodes.
+   *
    * @param nodes The list of nodes.
-   * @return The root node of the syntax tree.
+   * @returns The root node of the syntax tree.
    */
   private relationsInRow_(nodes: SemanticNode[]): SemanticNode {
     const partition = SemanticUtil.partitionNodes(
@@ -2100,8 +2170,9 @@ export default class SemanticProcessor {
 
   /**
    * Constructs a syntax tree with operator precedence from a list nodes.
+   *
    * @param nodes The list of nodes.
-   * @return The root node of the syntax tree.
+   * @returns The root node of the syntax tree.
    */
   private operationsInRow_(nodes: SemanticNode[]): SemanticNode {
     if (nodes.length === 0) {
@@ -2153,6 +2224,7 @@ export default class SemanticProcessor {
   /**
    * Recursively constructs syntax tree with operator precedence from a list
    * nodes given a initial root node.
+   *
    * @param nodes The list of nodes.
    * @param root Initial tree.
    * @param lastop Last operator that has not been
@@ -2160,7 +2232,7 @@ export default class SemanticProcessor {
    * @param opt_prefixes Operator nodes that
    * will become prefix operation (or postfix in case they come after last
    * operand).
-   * @return The root node of the syntax tree.
+   * @returns The root node of the syntax tree.
    */
   private operationsTree_(
     nodes: SemanticNode[],
@@ -2223,10 +2295,11 @@ export default class SemanticProcessor {
   // a single one. Currently it is clearer the way it is, though.
   /**
    * Appends an operand at the right place in an operator tree.
+   *
    * @param root The operator tree.
    * @param op The operator node.
    * @param node The node to be added.
-   * @return The modified root node.
+   * @returns The modified root node.
    */
   private appendOperand_(
     root: SemanticNode,
@@ -2258,10 +2331,11 @@ export default class SemanticProcessor {
 
   /**
    * Appends an operand to a divsion operator.
+   *
    * @param root The root node.
    * @param op The operator node.
    * @param node The operand node to be added.
-   * @return The modified root node or null.
+   * @returns The modified root node or null.
    */
   private appendDivisionOp_(
     root: SemanticNode,
@@ -2281,10 +2355,11 @@ export default class SemanticProcessor {
 
   /**
    * Appends an operand as rightmost child of an infix operator.
+   *
    * @param root The root node.
    * @param op The operator node.
    * @param node The operand node to be added.
-   * @return The modified root node.
+   * @returns The modified root node.
    */
   private appendLastOperand_(
     root: SemanticNode,
@@ -2311,10 +2386,11 @@ export default class SemanticProcessor {
 
   /**
    * Appends a multiplicative operator and operand.
+   *
    * @param root The root node.
    * @param op The operator node.
    * @param node The operand node to be added.
-   * @return The modified root node.
+   * @returns The modified root node.
    */
   private appendMultiplicativeOp_(
     root: SemanticNode,
@@ -2346,10 +2422,11 @@ export default class SemanticProcessor {
 
   /**
    * Appends an additive/substractive operator and operand.
+   *
    * @param root The old root node.
    * @param op The operator node.
    * @param node The operand node to be added.
-   * @return The new root node.
+   * @returns The new root node.
    */
   private appendAdditiveOp_(
     root: SemanticNode,
@@ -2362,10 +2439,11 @@ export default class SemanticProcessor {
   /**
    * Adds an operand to an operator node if it is the continuation of an
    * existing operation.
+   *
    * @param root The root node.
    * @param op The operator node.
    * @param node The operand node to be added.
-   * @return True if operator was successfully appended.
+   * @returns True if operator was successfully appended.
    */
   private appendExistingOperator_(
     root: SemanticNode,
@@ -2407,8 +2485,9 @@ export default class SemanticProcessor {
    *    number of matching fences. E.g. || a|b || would be turned into a fenced
    *    node with fences || and content a|b.
    * 4. Any remaining unmatched delimiters are turned into punctuation nodes.
+   *
    * @param nodes The list of nodes.
-   * @return The new list of nodes.
+   * @returns The new list of nodes.
    */
   private getFencesInRow_(nodes: SemanticNode[]): SemanticNode[] {
     let partition = SemanticUtil.partitionNodes(nodes, SemanticPred.isFence);
@@ -2426,13 +2505,14 @@ export default class SemanticProcessor {
    * Recursively processes a list of nodes and combines all the fenced
    * expressions into single nodes. It also processes singular fences, building
    * expressions that are only fenced left or right.
+   *
    * @param fences FIFO queue of fence nodes.
    * @param content FIFO queue content
    *     between fences.
    * @param openStack LIFO stack of open fences.
    * @param contentStack LIFO stack of
    *     content between fences yet to be processed.
-   * @return A list of nodes with all fenced
+   * @returns A list of nodes with all fenced
    *     expressions processed.
    */
   private fences_(
@@ -2622,10 +2702,11 @@ export default class SemanticProcessor {
   // TODO (sorge) The following could be done with linear programming.
   /**
    * Trys to combine neutral fences as much as possible.
+   *
    * @param fences A list of neutral fences.
    * @param content Intermediate
    *     content. Observe that |content| = |fences| - 1
-   * @return List of node with fully fenced
+   * @returns List of node with fully fenced
    *     nodes.
    */
   private neutralFences_(
@@ -2688,6 +2769,7 @@ export default class SemanticProcessor {
    * Example: leftFence: [, rightFence: ], midFences: |, |
    *          content: c1, c2, c3, c4, ... cn
    *          return: [c1 | c2 | c3 ], c4, ... cn
+   *
    * @param leftFence The left fence.
    * @param rightFence The right fence.
    * @param midFences A list of intermediate
@@ -2695,7 +2777,7 @@ export default class SemanticProcessor {
    * @param content Intermediate
    *     content. Observe that |content| = |fences| - 1 + k where k >= 0 is the
    *     remainder.
-   * @return List of content nodes
+   * @returns List of content nodes
    *     where the first is the fully fenced node wrt. the given left and right
    *     fence.
    */
@@ -2745,11 +2827,12 @@ export default class SemanticProcessor {
 
   /**
    * Create a fenced node.
+   *
    * @param ofence Opening fence.
    * @param cfence Closing fence.
    * @param content The content
    *     between the fences.
-   * @return The new node.
+   * @returns The new node.
    */
   private horizontalFencedNode_(
     ofence: SemanticNode,
@@ -2779,6 +2862,7 @@ export default class SemanticProcessor {
   /**
    * Classifies a horizontally fenced semantic node, using heuristics to
    * determine certain set types, intervals etc.
+   *
    * @param node A fenced semantic node.
    */
   private classifyHorizontalFence_(node: SemanticNode) {
@@ -2822,6 +2906,7 @@ export default class SemanticProcessor {
   /**
    * Classifies content in the extension part of a set. Only works if we have
    * assured that a set is indeed and extended set.
+   *
    * @param set A semantic node representing an extended set.
    */
   private setExtension_(set: SemanticNode) {
@@ -2839,8 +2924,9 @@ export default class SemanticProcessor {
 
   /**
    * Combines sequences of punctuated expressions in a list of nodes.
+   *
    * @param nodes The list of nodes.
-   * @return The new list of nodes.
+   * @returns The new list of nodes.
    */
   private getPunctuationInRow_(nodes: SemanticNode[]): SemanticNode[] {
     // For now we just make a punctuation node with a particular role. This is
@@ -2917,6 +3003,7 @@ export default class SemanticProcessor {
   // elements and separate those out or at least rewrite ellipses.
   /**
    * Create a punctuated node.
+   *
    * @param nodes List of all nodes separated
    * by punctuations.
    * @param punctuations List of all separating
@@ -2965,9 +3052,10 @@ export default class SemanticProcessor {
 
   /**
    * Create an dummy punctuated node.
+   *
    * @param children The child nodes to be
    *     separated by invisible comma.
-   * @return The new node.
+   * @returns The new node.
    */
   private dummyNode_(children: SemanticNode[]): SemanticNode {
     const commata =
@@ -2984,9 +3072,10 @@ export default class SemanticProcessor {
   /**
    * Checks if a node is legal accent in a stacked node and sets the accent role
    * wrt. to the parent type.
+   *
    * @param node The semantic node.
    * @param type The semantic type of the parent node.
-   * @return True if node is a legal accent.
+   * @returns True if node is a legal accent.
    */
   private accentRole_(node: SemanticNode, type: SemanticType): boolean {
     if (!SemanticPred.isAccent(node)) {
@@ -3009,13 +3098,14 @@ export default class SemanticProcessor {
   /**
    * Creates an accent style node or sub/superscript depending on the given
    * type.
+   *
    * @param center The inner center node.
    * @param children All children, where center is first node.
    * @param type The new node type.
    * @param length The exact length for the given type. This is important
    *     in case not enough children exist, then the type has to be changed.
    * @param accent Is this an accent node?
-   * @return The newly created node.
+   * @returns The newly created node.
    */
   private accentNode_(
     center: SemanticNode,
@@ -3080,13 +3170,14 @@ export default class SemanticProcessor {
 
   /**
    * Creates the actual limit node.
+   *
    * @param center The inner center node.
    * @param children All children, where center is
    *     first node.
    * @param innerNode The innermost node if it
    *     exists.
    * @param type The new node type.
-   * @return The newly created limit node.
+   * @returns The newly created limit node.
    */
   private makeLimitNode_(
     center: SemanticNode,
@@ -3144,10 +3235,11 @@ export default class SemanticProcessor {
    * function symbol. If we have an explicit function application symbol
    *           following the expression we turn into a prefix function.
    * Otherwise we decide heuristically if we could have a function application.
+   *
    * @param restNodes The remainder list of
    *     nodes.
    * @param opt_result The result node list.
-   * @return The fully processed list.
+   * @returns The fully processed list.
    */
   private getFunctionsInRow_(
     restNodes: SemanticNode[],
@@ -3184,11 +3276,12 @@ export default class SemanticProcessor {
   /**
    * Computes the arguments for a function from a list of nodes depending on the
    * given heuristic.
+   *
    * @param func A function node.
    * @param rest List of nodes to choose
    *     arguments from.
    * @param heuristic The heuristic to follow.
-   * @return The function and the remainder of
+   * @returns The function and the remainder of
    *     the rest list.
    */
   private getFunctionArgs_(
@@ -3310,10 +3403,11 @@ export default class SemanticProcessor {
 
   /**
    * Tail recursive function to obtain integral arguments.
+   *
    * @param nodes List of nodes to take
    * arguments from.
    * @param opt_args List of integral arguments.
-   * @return {{integrand: !Array.<sre.SemanticNode>,
+   * @returns {{integrand: !Array.<sre.SemanticNode>,
    *     intvar: sre.SemanticNode,
    *     rest: !Array.<sre.SemanticNode>}} Result split into integrand, integral
    * variable and the remaining elements.
@@ -3348,9 +3442,10 @@ export default class SemanticProcessor {
 
   /**
    * Create a function node.
+   *
    * @param func The function operator.
    * @param arg The argument.
-   * @return The new function node.
+   * @returns The new function node.
    */
   private functionNode_(func: SemanticNode, arg: SemanticNode): SemanticNode {
     const applNode = SemanticProcessor.getInstance().factory_.makeContentNode(
@@ -3384,9 +3479,10 @@ export default class SemanticProcessor {
 
   /**
    * Create a big operator node.
+   *
    * @param bigOp The big operator.
    * @param arg The argument.
-   * @return The new big operator node.
+   * @returns The new big operator node.
    */
   private bigOpNode_(bigOp: SemanticNode, arg: SemanticNode): SemanticNode {
     const largeop = SemanticProcessor.getFunctionOp_(bigOp, (x) =>
@@ -3403,10 +3499,11 @@ export default class SemanticProcessor {
   /**
    * Create an integral node. It has three children: integral, integrand and
    * integration variable. The latter two can be omitted.
+   *
    * @param integral The integral operator.
    * @param integrand The integrand.
    * @param intvar The integral variable.
-   * @return The new integral node.
+   * @returns The new integral node.
    */
   private integralNode_(
     integral: SemanticNode,
@@ -3435,6 +3532,7 @@ export default class SemanticProcessor {
    *
    * Example: Function application sin^2(x). The pointer from sin should remain
    * to the superscript node, although sin is given as a content node.
+   *
    * @param type The type of the node.
    * @param children The children of the
    *     functional node. The first child must be given is understood to be the
@@ -3443,7 +3541,7 @@ export default class SemanticProcessor {
    *     case of embellished functions or operators with limits).
    * @param content The list of additional
    *     content nodes.
-   * @return The new functional node.
+   * @returns The new functional node.
    */
   private functionalNode_(
     type: SemanticType,
@@ -3471,9 +3569,10 @@ export default class SemanticProcessor {
 
   /**
    * Creates a fraction node with the appropriate role.
+   *
    * @param denom The denominator node.
    * @param enume The enumerator node.
-   * @return The new fraction node.
+   * @returns The new fraction node.
    */
   private fractionNode_(
     denom: SemanticNode,
@@ -3503,12 +3602,13 @@ export default class SemanticProcessor {
   /**
    * Creates a script node for a tensor, which is effectively a dummy
    * punctuation.
+   *
    * @param nodes A list of unprocessed nodes for
    *      that script.
    * @param role The role of the dummy node.
    * @param opt_noSingle Flag indicating whether role should be set
    *      for a single node.
-   * @return The semantic tensor node.
+   * @returns The semantic tensor node.
    */
   private scriptNode_(
     nodes: SemanticNode[],
@@ -3537,11 +3637,12 @@ export default class SemanticProcessor {
    * Searches the given row of elements for first element with the given
    * semantic key or key/value pair if a value is not null. Ignores space
    * elements and descents at most 3 levels.
+   *
    * @param nodes A node list.
    * @param semantic A semantic key.
    * @param level The maximum level to search.
    * @param value Optionally the semantic value.
-   * @return The first matching element in the row.
+   * @returns The first matching element in the row.
    */
   private findNestedRow_(
     nodes: Element[],

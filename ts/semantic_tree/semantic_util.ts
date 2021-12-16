@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for semantic tree computations.
+ * @file Utility functions for semantic tree computations.
  * @author sorge@google.com (Volker Sorge)
  */
 
@@ -67,8 +67,9 @@ export const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
 
 /**
  * Merges keys of objects into an array.
+ *
  * @param args Optional objects.
- * @return Array of all keys of the objects.
+ * @returns Array of all keys of the objects.
  */
 export function objectsToKeys(...args: { [key: string]: string }[]): string[] {
   const keys: string[] = [];
@@ -77,8 +78,9 @@ export function objectsToKeys(...args: { [key: string]: string }[]): string[] {
 
 /**
  * Merges values of objects into an array.
+ *
  * @param args Optional objects.
- * @return Array of all values of the objects.
+ * @returns Array of all values of the objects.
  */
 export function objectsToValues(
   ...args: { [key: string]: string }[]
@@ -95,8 +97,9 @@ export function objectsToValues(
 /**
  * Transforms a unicode character into numeric representation. Returns null if
  * the input string is not a valid unicode character.
+ *
  * @param unicode Character.
- * @return The decimal representation if it exists.
+ * @returns The decimal representation if it exists.
  */
 export function unicodeToNumber(unicode: string): number | null {
   if (!unicode || unicode.length > 2) {
@@ -118,8 +121,10 @@ export function unicodeToNumber(unicode: string): number | null {
 /**
  * Transforms a numberic representation of a unicode character into its
  * corresponding string.
+ *
  * @param number Unicode point.
- * @return The string representation.
+ * @param num
+ * @returns The string representation.
  */
 export function numberToUnicode(num: number): string {
   return String.fromCodePoint(num);
@@ -128,8 +133,9 @@ export function numberToUnicode(num: number): string {
 /**
  * Splits a unicode string into array of characters. In particular deals
  * properly with surrogate pairs.
+ *
  * @param str The string to split.
- * @return List of single characters.
+ * @returns List of single characters.
  */
 export function splitUnicode(str: string): string[] {
   const split = str.split('');
@@ -146,8 +152,9 @@ export function splitUnicode(str: string): string[] {
 
 /**
  * Checks if an element is a node with a math tag.
+ *
  * @param node The node to check.
- * @return True if element is an math node.
+ * @returns True if element is an math node.
  */
 export function hasMathTag(node: Element): boolean {
   return !!node && DomUtil.tagName(node) === 'MATH';
@@ -155,8 +162,9 @@ export function hasMathTag(node: Element): boolean {
 
 /**
  * Checks if an element is a node with leaf tag.
+ *
  * @param node The node to check.
- * @return True if element is an leaf node.
+ * @returns True if element is an leaf node.
  */
 export function hasLeafTag(node: Element): boolean {
   return !!node && LEAFTAGS.indexOf(DomUtil.tagName(node)) !== -1;
@@ -164,8 +172,9 @@ export function hasLeafTag(node: Element): boolean {
 
 /**
  * Checks if an element is a node with ignore tag.
+ *
  * @param node The node to check.
- * @return True if element is an ignore node.
+ * @returns True if element is an ignore node.
  */
 export function hasIgnoreTag(node: Element): boolean {
   return !!node && IGNORETAGS.indexOf(DomUtil.tagName(node)) !== -1;
@@ -173,8 +182,9 @@ export function hasIgnoreTag(node: Element): boolean {
 
 /**
  * Checks if an element is a node with empty tag.
+ *
  * @param node The node to check.
- * @return True if element is an empty node.
+ * @returns True if element is an empty node.
  */
 export function hasEmptyTag(node: Element): boolean {
   return !!node && EMPTYTAGS.indexOf(DomUtil.tagName(node)) !== -1;
@@ -182,8 +192,9 @@ export function hasEmptyTag(node: Element): boolean {
 
 /**
  * Checks if an element is a node with display tag.
+ *
  * @param node The node to check.
- * @return True if element is an display node.
+ * @returns True if element is an display node.
  */
 export function hasDisplayTag(node: Element): boolean {
   return !!node && DISPLAYTAGS.indexOf(DomUtil.tagName(node)) !== -1;
@@ -191,8 +202,9 @@ export function hasDisplayTag(node: Element): boolean {
 
 /**
  * Checks if an element is a node a glyph node that is not in a leaf.
+ *
  * @param node The node to check.
- * @return True if element is an orphaned glyph.
+ * @returns True if element is an orphaned glyph.
  */
 export function isOrphanedGlyph(node: Element): boolean {
   return (
@@ -207,8 +219,9 @@ export function isOrphanedGlyph(node: Element): boolean {
  * or ignored if they have empty children. Observe that this is currently not
  * recursive, i.e. will not take care of pathological cases, where content is
  * hidden in incorrectly used tags!
+ *
  * @param nodes The node list to be cleaned.
- * @return The cleansed list.
+ * @returns The cleansed list.
  */
 export function purgeNodes(nodes: Element[]): Element[] {
   const nodeArray = [];
@@ -230,8 +243,9 @@ export function purgeNodes(nodes: Element[]): Element[] {
 
 /**
  * Determines if an attribute represents zero or negative length.
+ *
  * @param length The lenght value.
- * @return True if the attribute represents zero length.
+ * @returns True if the attribute represents zero length.
  */
 export function isZeroLength(length: string): boolean {
   if (!length) {
@@ -259,6 +273,7 @@ export function isZeroLength(length: string): boolean {
 
 /**
  * Retains external attributes from the source node to the semantic node.
+ *
  * @param to The target node.
  * @param from The source node.
  */
@@ -291,8 +306,9 @@ export function addAttributes(to: SemanticNode, from: Element) {
 
 /**
  * Finds the innermost element of an embellished operator node.
+ *
  * @param node The embellished node.
- * @return The innermost node.
+ * @returns The innermost node.
  */
 export function getEmbellishedInner(node: SemanticNode): SemanticNode {
   if (node && node.embellished && node.childNodes.length > 0) {
@@ -309,11 +325,12 @@ export interface Slice {
 
 /**
  * Splits a list of nodes wrt. to a given predicate.
+ *
  * @param nodes A list of nodes.
  * @param pred Predicate for the
  *    partitioning relation.
  * @param opt_reverse If true slicing is done from the end.
- * @return The split list as a slice structure.
+ * @returns The split list as a slice structure.
  */
 export function sliceNodes(
   nodes: SemanticNode[],
@@ -351,10 +368,11 @@ export interface Partition {
 /**
  * Partitions a list of nodes wrt. to a given predicate. Effectively works
  * like a PER on the ordered set of nodes.
+ *
  * @param nodes A list of nodes.
  * @param pred Predicate for the
  *    partitioning relation.
- * @return The partitioning given in terms of a collection of elements
+ * @returns The partitioning given in terms of a collection of elements
  *     satisfying
  *    the predicate and a collection of complementary sets lying inbetween the
  *    related elements. Observe that we always have |comp| = |rel| + 1.

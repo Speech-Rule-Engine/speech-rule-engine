@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract procedure for special cases in semantic enrichment of
+ * @file Abstract procedure for special cases in semantic enrichment of
  *     MathML.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */

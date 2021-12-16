@@ -14,10 +14,9 @@
 // limitations under the License.
 
 /**
- * @fileoverview Node speech generator that computes a new speech string for a
+ * @file Node speech generator that computes a new speech string for a
  *     single node and its subtree, if it does not yet have a speech string
  *     attached.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

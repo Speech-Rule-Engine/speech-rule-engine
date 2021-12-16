@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview An audio CSS renderer with prosody markup mainly aimed at Emacs
+ * @file An audio CSS renderer with prosody markup mainly aimed at Emacs
  *     speak.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -104,8 +103,9 @@ export class AcssRenderer extends MarkupRenderer {
 
   /**
    * Transforms a prosody element into an S-expression.
+   *
    * @param pros The prosody element.
-   * @return The S-expression.
+   * @returns The S-expression.
    */
   private prosody_(pros: AudioUtil.Tags): string {
     const keys: EngineConst.personalityProps[] = pros.open;

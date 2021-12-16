@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Combines all implemented and available speech rules.
- *
+ * @file Combines all implemented and available speech rules.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

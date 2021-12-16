@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers into German.
+ * @file Translating numbers into German.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 import { Numbers, NUMBERS as NUMB } from '../messages';
@@ -25,8 +25,10 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Changes number one 'eins' into a prefix.
+ *
  * @param num number string.
- * @return If it is a one, it is made into prefix.
+ * @param mill
+ * @returns If it is a one, it is made into prefix.
  */
 function onePrefix_(num: string, mill = false): string {
   return num === NUMBERS.ones[1] ? (mill ? 'eine' : 'ein') : num;
@@ -34,8 +36,9 @@ function onePrefix_(num: string, mill = false): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @returns The string representation of that number.
  */
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
@@ -59,8 +62,9 @@ function hundredsToWords_(num: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @returns The string representation of that number.
  */
 function numberToWords(num: number): string {
   if (num === 0) {
@@ -94,9 +98,10 @@ function numberToWords(num: number): string {
 /**
  * Translates a number of up to twelve digits into a string representation of
  * its ordinal.
+ *
  * @param num The number to translate.
  * @param plural A flag indicating if the ordinal is in plural.
- * @return The ordinal of the number as string.
+ * @returns The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 1) {
@@ -110,8 +115,10 @@ function numberToOrdinal(num: number, plural: boolean): string {
 
 /**
  * Creates a word ordinal string from a number.
+ *
  * @param number The number to be converted.
- * @return The ordinal string.
+ * @param num
+ * @returns The ordinal string.
  */
 function wordOrdinal(num: number): string {
   if (num === 1) {
@@ -132,8 +139,9 @@ function wordOrdinal(num: number): string {
 
 /**
  * Creates a simple ordinal string from a number.
+ *
  * @param num The number to be converted.
- * @return The ordinal string.
+ * @returns The ordinal string.
  */
 function simpleOrdinal(num: number): string {
   return num.toString() + '.';

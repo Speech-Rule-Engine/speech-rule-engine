@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview English message file.
- *
+ * @file English message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -26,6 +25,9 @@ import * as tr from '../transformers';
 
 let locale: Locale = null;
 
+/**
+ *
+ */
 export function en(): Locale {
   if (!locale) {
     locale = create();
@@ -34,6 +36,9 @@ export function en(): Locale {
   return locale;
 }
 
+/**
+ *
+ */
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;

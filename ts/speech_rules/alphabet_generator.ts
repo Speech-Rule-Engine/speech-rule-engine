@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Generator for simple speech rules wrt. symbol intervals of
+ * @file Generator for simple speech rules wrt. symbol intervals of
  *     Unicode mappings.
- *
  */
 
 import Engine from '../common/engine';
@@ -110,6 +109,7 @@ export function makeDomains_() {
 
 /**
  * Generates alphabet rules for the locale and adds them to the given store.
+ *
  * @param locale The current locale.
  * @param store The current speech rule store.
  */
@@ -145,8 +145,9 @@ export function generate(locale: string) {
 
 /**
  * Translate number to string with at least four characters.
+ *
  * @param num The number.
- * @return The resulting string padded with 0 if necessary.
+ * @returns The resulting string padded with 0 if necessary.
  */
 function num2str(num: number): string {
   const str = num.toString(16).toUpperCase();
@@ -155,11 +156,14 @@ function num2str(num: number): string {
 
 /**
  * Creates a list of unicode charactars from an interval specification.
+ *
  * @param int Pair of strings that represent the Unicode value
  *      of the start and end character in the interval.
  * @param subst Substitutions of characters in the
  *      above interval.
- * @return The generated interval of Unicode characters.
+ * @param int."0"
+ * @param int."1"
+ * @returns The generated interval of Unicode characters.
  */
 export function makeInterval(
   [a, b]: [string, string],
@@ -183,8 +187,9 @@ export function makeInterval(
 
 /**
  * Retrieves font value for the current locale.
+ *
  * @param font The font of an alphabet.
- * @return The localised font value plus a combiner.
+ * @returns The localised font value plus a combiner.
  */
 export function getFont(font: string): { font: string; combiner: Combiner } {
   const realFont =
@@ -197,6 +202,7 @@ export function getFont(font: string): { font: string; combiner: Combiner } {
 
 /**
  * Generates rules for letters.
+ *
  * @param store The compound store.
  * @param keys The unicode values to add.
  * @param unicodes The actual unicode characters corrsponding
@@ -240,6 +246,7 @@ export function alphabetRules(
 
 /**
  * Generates rules for numbers.
+ *
  * @param store The compound store.
  * @param keys The unicode values to add.
  * @param unicodes The actual unicode characters corrsponding
@@ -275,6 +282,7 @@ export function numberRules(
 
 /**
  * Makes all rules for a single character.
+ *
  * @param store The compound store.
  * @param combiner The combining
  *     function for generating the rule action.

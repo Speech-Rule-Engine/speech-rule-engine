@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for clearspeak rules.
+ * @file Utility functions for clearspeak rules.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -37,7 +37,7 @@ import { vulgarFractionSmall } from './numbers_util';
  *
  * @param nodes A node array.
  * @param context A context string.
- * @return A function returning a string.
+ * @returns A function returning a string.
  */
 export function nodeCounter(
   nodes: Node[],
@@ -81,7 +81,7 @@ export function nodeCounter(
  * argument that is a simple expression (e.g., sin 2x , log y , f (x))
  *
  * @param node The semantic node.
- * @return True if the node is a simple expression.
+ * @returns True if the node is a simple expression.
  */
 export function isSimpleExpression(node: SemanticNode): boolean {
   return (
@@ -98,8 +98,9 @@ export function isSimpleExpression(node: SemanticNode): boolean {
  * argument that is a simple expression.
  *
  * (5, including nested functions and also embellished function symbols).
+ *
  * @param node The semantic node.
- * @return True if the node is a simple function.
+ * @returns True if the node is a simple function.
  */
 export function isSimpleFunction_(node: SemanticNode): boolean {
   return (
@@ -123,8 +124,9 @@ export function isSimpleFunction_(node: SemanticNode): boolean {
  * The negation of simple expression defined in item 1, 2, 4.
  *
  * (1 + 2 + 4, including negation).
+ *
  * @param node The semantic node.
- * @return True if the node is negated simple expression.
+ * @returns True if the node is negated simple expression.
  */
 export function isSimpleNegative_(node: SemanticNode): boolean {
   return (
@@ -142,8 +144,9 @@ export function isSimpleNegative_(node: SemanticNode): boolean {
  * the degree sign.
  *
  * (3, including negation).
+ *
  * @param node The semantic node.
- * @return True if the node is simple degree expression.
+ * @returns True if the node is simple degree expression.
  */
 export function isSimpleDegree_(node: SemanticNode): boolean {
   return (
@@ -166,8 +169,9 @@ export function isSimpleDegree_(node: SemanticNode): boolean {
  * is followed by a letter or pair of juxtaposed letters.
  *
  * (2 + 4 without negation).
+ *
  * @param node The semantic node.
- * @return True if the node is simple non-negative letter expression.
+ * @returns True if the node is simple non-negative letter expression.
  */
 export function isSimpleLetters_(node: SemanticNode): boolean {
   return (
@@ -187,8 +191,9 @@ export function isSimpleLetters_(node: SemanticNode): boolean {
 
 /**
  * Node has a annotation indicating that it is a simple expression.
+ *
  * @param node The semantic node.
- * @return True if the node is already annotated as simple.
+ * @returns True if the node is already annotated as simple.
  */
 export function isSimple_(node: SemanticNode): boolean {
   return node.hasAnnotation('clearspeak', 'simple');
@@ -196,8 +201,9 @@ export function isSimple_(node: SemanticNode): boolean {
 
 /**
  * Test for single letter.
+ *
  * @param node The semantic node.
- * @return True if the node is a single letter from any alphabet.
+ * @returns True if the node is a single letter from any alphabet.
  */
 export function isLetter_(node: SemanticNode): boolean {
   return (
@@ -213,8 +219,9 @@ export function isLetter_(node: SemanticNode): boolean {
  * Tests if a number an integer or a decimal?
  *
  * (1 without negation).
+ *
  * @param node The semantic node.
- * @return True if the number is an integer or a decimal.
+ * @returns True if the number is an integer or a decimal.
  */
 export function isNumber_(node: SemanticNode): boolean {
   return (
@@ -226,8 +233,9 @@ export function isNumber_(node: SemanticNode): boolean {
 /**
  * A number that is an integer, a decimal, or a fraction that is spoken as an
  * ordinal, but not negative.
+ *
  * @param node The semantic node.
- * @return True if node is number or a vulgar fraction.
+ * @returns True if node is number or a vulgar fraction.
  */
 export function isSimpleNumber_(node: SemanticNode): boolean {
   return isNumber_(node) || isSimpleFraction_(node);
@@ -235,8 +243,9 @@ export function isSimpleNumber_(node: SemanticNode): boolean {
 
 /**
  * A fraction that is spoken as an ordinal.
+ *
  * @param node The semantic node.
- * @return True if node is a vulgar fraction that would be spoken as
+ * @returns True if node is a vulgar fraction that would be spoken as
  *   ordinal for the current preference settings.
  */
 export function isSimpleFraction_(node: SemanticNode): boolean {
@@ -261,8 +270,9 @@ export function isSimpleFraction_(node: SemanticNode): boolean {
 
 /**
  * Checks for a preference setting.
+ *
  * @param pref The preference.
- * @return True of the given preference is set.
+ * @returns True of the given preference is set.
  */
 export function hasPreference(pref: string): boolean {
   return Engine.getInstance().style === pref;
@@ -276,8 +286,9 @@ register(
 
 /**
  * Decides if node has markup of simple node in clearspeak.
+ *
  * @param node The node in question.
- * @return True if the node has a annotation entry of simple.
+ * @returns True if the node has a annotation entry of simple.
  */
 export function simpleNode(node: Element): boolean {
   if (!node.hasAttribute('annotation')) {
@@ -289,8 +300,9 @@ export function simpleNode(node: Element): boolean {
 
 /**
  * Predicate to decide if a node is a simple cell in a table.
+ *
  * @param node The node in question.
- * @return True if the node is a simple cell.
+ * @returns True if the node is a simple cell.
  */
 export function simpleCell_(node: Element): boolean {
   if (simpleNode(node)) {
@@ -317,8 +329,9 @@ export function simpleCell_(node: Element): boolean {
 
 /**
  * Decides if a node is an integer.
+ *
  * @param node The node in question.
- * @return True if the node is an integer.
+ * @returns True if the node is an integer.
  */
 export function isInteger_(node: Element): boolean {
   return (
@@ -330,8 +343,9 @@ export function isInteger_(node: Element): boolean {
 
 /**
  * Decides if a node is an index structure, i.e., identifier or integer.
+ *
  * @param node The node in question.
- * @return True if the node is an index.
+ * @returns True if the node is an index.
  */
 export function allIndices_(node: Element): boolean {
   const nodes = XpathUtil.evalXPath('children/*', node);
@@ -342,8 +356,9 @@ export function allIndices_(node: Element): boolean {
 
 /**
  * Query function that decides if a table has only simple cells.
+ *
  * @param node The table node.
- * @return The node if the table only has simple cells.
+ * @returns The node if the table only has simple cells.
  */
 export function allCellsSimple(node: Element): Element[] {
   const xpath =
@@ -357,8 +372,9 @@ export function allCellsSimple(node: Element): Element[] {
 /**
  * Custom query function to check if a vulgar fraction is small enough to be
  * spoken as numbers in MathSpeak.
+ *
  * @param node Fraction node to be tested.
- * @return List containing the node if it is eligible. Otherwise
+ * @returns List containing the node if it is eligible. Otherwise
  *     empty.
  */
 export function isSmallVulgarFraction(node: Element): Element[] {
@@ -367,8 +383,9 @@ export function isSmallVulgarFraction(node: Element): Element[] {
 
 /**
  * Checks if a semantic subtree represents a unit expression.
+ *
  * @param node The semantic node in question.
- * @return True if the node is a unit expression.
+ * @returns True if the node is a unit expression.
  */
 export function isUnitExpression(node: SemanticNode): boolean {
   return (
@@ -387,8 +404,9 @@ export function isUnitExpression(node: SemanticNode): boolean {
 
 /**
  * Tests if all nodes a text nodes but only the last can be non-empty.
+ *
  * @param nodes A list of semantic nodes.
- * @return True if condition holds.
+ * @returns True if condition holds.
  */
 export function allTextLastContent_(nodes: SemanticNode[]): boolean {
   for (let i = 0; i < nodes.length - 1; i++) {
@@ -407,8 +425,9 @@ register(
 
 /**
  * Translates a node into a word for an ordinal exponent.
+ *
  * @param node The node to translate.
- * @return The ordinal exponent as a word.
+ * @returns The ordinal exponent as a word.
  */
 export function ordinalExponent(node: Element): string {
   const num = parseInt(node.textContent, 10);
@@ -424,8 +443,9 @@ export let NESTING_DEPTH: string | null = null;
 
 /**
  * Computes the nesting depth of a fenced expressions.
+ *
  * @param node The fenced node.
- * @return The nesting depth as an ordinal number.
+ * @returns The nesting depth as an ordinal number.
  */
 export function nestingDepth(node: Element): string | null {
   let count = 0;
@@ -447,8 +467,9 @@ export function nestingDepth(node: Element): string | null {
 
 /**
  * Query function for matching fences.
+ *
  * @param node The node to test.
- * @return The node if it has matching fences.
+ * @returns The node if it has matching fences.
  */
 export function matchingFences(node: Element): Element[] {
   const sibling = node.previousSibling;
@@ -472,9 +493,10 @@ export function matchingFences(node: Element): Element[] {
 /**
  * Correction function for inserting nesting depth (second, third, etc.) between
  * open and close fence indicator.
+ *
  * @param text The original text, e.g., open paren, close paren.
  * @param correction The nesting depth as correction text.
- * @return The corrected text. E.g., open second paren.
+ * @returns The corrected text. E.g., open second paren.
  */
 export function insertNesting(text: string, correction: string): string {
   if (!correction || !text) {
@@ -492,8 +514,9 @@ Grammar.getInstance().setCorrection('insertNesting', insertNesting);
 /**
  * Query function that decides for an implicit times node, if it has fenced
  * arguments only.
+ *
  * @param node The implicit times node.
- * @return The node if it has fenced arguments only.
+ * @returns The node if it has fenced arguments only.
  */
 export function fencedArguments(node: Element): Element[] {
   const content = DomUtil.toArray(node.parentNode.childNodes);
@@ -506,8 +529,9 @@ export function fencedArguments(node: Element): Element[] {
 /**
  * Query function that decides for an implicit times node, if it has simple (in
  * the clearspeak sense) arguments only.
+ *
  * @param node The implicit times node.
- * @return The node if it has at most three simple arguments.
+ * @returns The node if it has at most three simple arguments.
  */
 export function simpleArguments(node: Element): Element[] {
   const content = DomUtil.toArray(node.parentNode.childNodes);
@@ -531,8 +555,9 @@ export function simpleArguments(node: Element): Element[] {
 }
 /**
  * Decides if node has a simple factor.
+ *
  * @param node The node in question.
- * @return True if the node is a number, identifier, function or
+ * @returns True if the node is a number, identifier, function or
  *     applicatio or a fraction.
  */
 export function simpleFactor_(node: Element): boolean {
@@ -550,8 +575,9 @@ export function simpleFactor_(node: Element): boolean {
 
 /**
  * Decides if node has a fenced factor expression.
+ *
  * @param node The node in question.
- * @return True if the node is a fenced on both sides or a matrix or
+ * @returns True if the node is a fenced on both sides or a matrix or
  *     vector.
  */
 export function fencedFactor_(node: Element): boolean {
@@ -566,8 +592,9 @@ export function fencedFactor_(node: Element): boolean {
 
 /**
  * Decides if node has a layout factor, i.e., matrix or vector.
+ *
  * @param node The node in question.
- * @return True if the node is a matrix or vector.
+ * @returns True if the node is a matrix or vector.
  */
 export function layoutFactor_(node: Element): boolean {
   return (
@@ -580,8 +607,9 @@ export function layoutFactor_(node: Element): boolean {
 // TODO: Move this into the number utils.
 /**
  * Translates a node into a word for an ordinal number.
+ *
  * @param node The node to translate.
- * @return The ordinal as a word.
+ * @returns The ordinal as a word.
  */
 export function wordOrdinal(node: Element): string {
   return LOCALE.NUMBERS.wordOrdinal(parseInt(node.textContent, 10));

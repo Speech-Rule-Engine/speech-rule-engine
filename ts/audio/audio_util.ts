@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for audio renderers.
- *
+ * @file Utility functions for audio renderers.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -42,10 +41,11 @@ export type Markup = Pause | Tags;
 // TODO: Refactor into dedicated personality/markup data structure.
 /**
  * Merges pause personality annotations.
+ *
  * @param oldPause Previous pause annotation.
  * @param newPause New pause annotation.
  * @param opt_merge Function to combine pauses. By default we add them.
- * @return A personality annotation with the merged
+ * @returns A personality annotation with the merged
  *     pause values.
  */
 export function mergePause(
@@ -61,10 +61,11 @@ export function mergePause(
 
 /**
  * Merges pause personality annotations.
+ *
  * @param oldPause Previous pause annotation.
  * @param newPause New pause annotation.
  * @param opt_merge Function to combine pauses. By default we add them.
- * @return A personality annotation with the merged pause
+ * @returns A personality annotation with the merged pause
  *     values.
  */
 function mergePause_(
@@ -92,6 +93,7 @@ function mergePause_(
 
 /**
  * Merges new personality into the old personality markup.
+ *
  * @param oldPers Old personality markup.
  * @param newPers New personality markup.
  */
@@ -107,9 +109,10 @@ export function mergeMarkup(oldPers: Tags, newPers: Tags) {
  * Sorts a list of opening tags by order of which is closed last.
  * If more than two elements are opened at the same, we need to look ahead in
  * which order they will be closed.
+ *
  * @param open The list of opening tags.
  * @param descrs The rest descriptions.
- * @return The sorted array.
+ * @returns The sorted array.
  */
 export function sortClose(
   open: EngineConst.personalityProps[],
@@ -148,8 +151,9 @@ let LastOpen_: EngineConst.personalityProps[][] = [];
 
 /**
  * Computes a markup list. Careful this is destructive on the description list.
+ *
  * @param descrs The list of descriptions.
- * @return Markup list.
+ * @returns Markup list.
  */
 export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
   PersonalityRanges_ = {};
@@ -183,6 +187,7 @@ export function personalityMarkup(descrs: AuditoryDescription[]): Markup[] {
  * Appends an element to the partial markup list. If the last markup entry and
  * the new element are either both span or pause elements it joins
  * them. Otherwise the new element is appended.
+ *
  * @param markup The markup list.
  * @param element A single markup element.
  */
@@ -213,8 +218,9 @@ function appendElement_(markup: Markup[], element: Markup) {
 
 /**
  * Simplification of markup sequence. Currently uses one technique only.
+ *
  * @param markup Markup list.
- * @return Simplified markup list.
+ * @returns Simplified markup list.
  */
 function simplifyMarkup_(markup: Markup[]): Markup[] {
   const lastPers: Markup = {};
@@ -262,6 +268,7 @@ function simplifyMarkup_(markup: Markup[]): Markup[] {
 
 /**
  * Copies values from one markup object to the other.
+ *
  * @param from Source element.
  * @param to Target element.
  */
@@ -279,7 +286,8 @@ function copyValues_(from: Markup, to: Markup) {
 
 /**
  * Computes the final markup elements, if necessary.
- * @return Markup list.
+ *
+ * @returns Markup list.
  */
 function finaliseMarkup_(): Markup[] {
   const final = [];
@@ -300,8 +308,9 @@ function finaliseMarkup_(): Markup[] {
 
 /**
  * Predicate to check if the markup element is a pause.
+ *
  * @param element An element of the markup list.
- * @return True if this is a pause element.
+ * @returns True if this is a pause element.
  */
 export function isMarkupElement(element: Markup): boolean {
   return typeof element === 'object' && element.open;
@@ -309,8 +318,9 @@ export function isMarkupElement(element: Markup): boolean {
 
 /**
  * Predicate to check if the markup element is a pause.
+ *
  * @param element An element of the markup list.
- * @return True if this is a pause element.
+ * @returns True if this is a pause element.
  */
 export function isPauseElement(element: Markup): boolean {
   return (
@@ -322,8 +332,9 @@ export function isPauseElement(element: Markup): boolean {
 
 /**
  * Predicate to check if the markup element is a span.
+ *
  * @param element An element of the markup list.
- * @return True if this is a span element.
+ * @returns True if this is a span element.
  */
 export function isSpanElement(element: Markup): boolean {
   const keys = Object.keys(element);
@@ -338,6 +349,7 @@ export function isSpanElement(element: Markup): boolean {
 
 /**
  * Appends content to the current markup list.
+ *
  * @param markup The markup list.
  * @param span A content span.
  * @param pers A personality annotation.
@@ -345,6 +357,7 @@ export function isSpanElement(element: Markup): boolean {
  * @param pause A pause annotation.
  * @param opt_merge Flag that specifies subsequent pauses are to be
  *     merged.
+ * @param merge
  */
 function appendMarkup_(
   markup: Markup[],
@@ -398,9 +411,10 @@ function appendMarkup_(
 
 /**
  * Compute the difference of two personality annotations.
+ *
  * @param current The current personality annotation.
  * @param old The previous personality annotation.
- * @return The difference between the two annotations.
+ * @returns The difference between the two annotations.
  */
 function personalityDiff_(
   current: { [key: string]: number },

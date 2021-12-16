@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview An abstract class for audio renderer with prosody markup.
- *
+ * @file An abstract class for audio renderer with prosody markup.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -36,16 +35,18 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
 
   /**
    * Translates a pause into its corresponding markup.
+   *
    * @param pause A pause element.
-   * @return The markup for the pause.
+   * @returns The markup for the pause.
    */
   public abstract pause(pause: Pause): void;
 
   /**
    * Transforms a prosody key value pair into a markup element.
+   *
    * @param key The prosody name.
    * @param value The prosody value.
-   * @return The markup element.
+   * @returns The markup element.
    */
   public abstract prosodyElement(key: string, value: number): void;
 
@@ -60,6 +61,7 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
    * @param c Lower boundary of target interval.
    * @param d Upper boundary of target interval.
    * @param opt_decimals Number of digits after the decimal point.
+   * @param decimals
    */
   public setScaleFunction(
     a: number,
@@ -82,8 +84,9 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
 
   /**
    * Applies the current scale function that can be set by the previous method.
+   *
    * @param value The value to be scaled.
-   * @return The scaled value.
+   * @returns The scaled value.
    */
   public applyScaleFunction(value: number): number {
     return this.scaleFunction ? this.scaleFunction(value) : value;
@@ -91,6 +94,7 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
 
   /**
    * Check if a given property is to be ignore by a markup renderer.
+   *
    * @param key The property key.
    */
   protected ignoreElement(key: string) {

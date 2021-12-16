@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview A dummy walker. It effectively on speaks the top most speech
+ * @file A dummy walker. It effectively on speaks the top most speech
  *     string.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

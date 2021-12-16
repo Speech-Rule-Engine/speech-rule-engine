@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic message file for l10n.
- *
+ * @file Basic message file for l10n.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -70,7 +69,8 @@ export function setLocale() {
 /**
  * Gets locale message object. If the currently set locale does not exist, it
  * defaults to English.
- * @return A message object.
+ *
+ * @returns A message object.
  */
 export function getLocale(): Locale {
   const locale = Engine.getInstance().locale;
@@ -83,6 +83,7 @@ export function getLocale(): Locale {
 
 /**
  * Locale completion with loaded mathmaps.
+ *
  * @param json The JSON of the locale map.
  */
 export function completeLocale(json: any) {

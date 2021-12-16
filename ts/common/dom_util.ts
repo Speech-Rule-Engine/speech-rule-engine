@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview A collection of JavaScript utilities used to simplify working
+ * @file A collection of JavaScript utilities used to simplify working
  * with DOM nodes.
  * Currently minimized for the standalone speech rule engine.
  * @author clchen@google.com (Charles L. Chen)
@@ -29,8 +29,9 @@ import * as XpathUtil from './xpath_util';
 
 /**
  * Converts a NodeList into an array
+ *
  * @param nodeList The nodeList.
- * @return The array of nodes in the nodeList.
+ * @returns The array of nodes in the nodeList.
  */
 export function toArray(nodeList: NodeList | NamedNodeMap): any[] {
   const nodeArray = [];
@@ -42,8 +43,9 @@ export function toArray(nodeList: NodeList | NamedNodeMap): any[] {
 
 /**
  * Trims the whitespace in an XML input string.
+ *
  * @param input The XML input string.
- * @return The string with whitespace removed between tags.
+ * @returns The string with whitespace removed between tags.
  */
 export function trimInput_(input: string): string {
   input = input.replace(/&nbsp;/g, ' ');
@@ -63,9 +65,10 @@ export const XML_ENTITIES: { [key: string]: boolean } = {
 
 /**
  * Parses the XML input string into an XML structure.
+ *
  * @param input The XML input string.
  * @param opt_error Optional error function.
- * @return The XML document structure corresponding to the node.
+ * @returns The XML document structure corresponding to the node.
  */
 export function parseInput(input: string): Element {
   const dp = new SystemExternal.xmldom.DOMParser();
@@ -111,6 +114,7 @@ export enum NodeType {
 
 /**
  * Cleanly replaces child nodes in a parent.
+ *
  * @param oldNode The node to be replaced.
  * @param newNode The replacement node.
  */
@@ -125,8 +129,9 @@ export function replaceNode(oldNode: Node, newNode: Node) {
 /**
  * Creates a node in the current document. This is a wrapper function that
  * ensures that a node is created in the correct document tree.
+ *
  * @param tag The tagname of the node.
- * @return The newly create node.
+ * @returns The newly create node.
  */
 export function createElement(tag: string): Element {
   return SystemExternal.document.createElement(tag);
@@ -136,9 +141,10 @@ export function createElement(tag: string): Element {
  * Creates a node in the current document in a given namespace. This is a
  * wrapper function that ensures that a node is created in the correct document
  * tree.
+ *
  * @param url The namespace url for the node.
  * @param tag The tagname of the node.
- * @return The newly create node.
+ * @returns The newly create node.
  */
 export function createElementNS(url: string, tag: string): Element {
   return SystemExternal.document.createElementNS(url, tag);
@@ -147,8 +153,9 @@ export function createElementNS(url: string, tag: string): Element {
 /**
  * Creates a text node in the current document. This is a wrapper function that
  * ensures that a node is created in the correct document tree.
+ *
  * @param content The text content for the node.
- * @return The newly create node.
+ * @returns The newly create node.
  */
 export function createTextNode(content: string): Text {
   return SystemExternal.document.createTextNode(content);
@@ -163,8 +170,9 @@ export function createTextNode(content: string): Text {
  *   <b>B</b>
  *    C
  * </a>
+ *
  * @param xml The serialised XML string.
- * @return The formatted string.
+ * @returns The formatted string.
  */
 export function formatXml(xml: string): string {
   let formatted = '';
@@ -234,9 +242,10 @@ export function formatXml(xml: string): string {
 }
 /**
  * Checks for two tags if the second is a matching end tag for the first.
+ *
  * @param start The start tag.
  * @param end The next, possible end tag.
- * @return A pair indicating success and the possible
+ * @returns A pair indicating success and the possible
  *     remainder after the end tag, in case it is followed by mixed content.
  */
 export function matchingStartEnd_(
@@ -253,8 +262,9 @@ export function matchingStartEnd_(
 
 /**
  * Transforms a data attribute name into its camel cased version.
+ *
  * @param attr Micro data attributes.
- * @return The camel cased attribute.
+ * @returns The camel cased attribute.
  */
 export function dataAttribute(attr: string): string {
   if (attr.match(/^data-/)) {
@@ -266,9 +276,10 @@ export function dataAttribute(attr: string): string {
 /**
  * Retrieves a data attribute from a given node. Tries using microdata access if
  * possible.
+ *
  * @param node A DOM node.
  * @param attr The data attribute.
- * @return The value for that attribute.
+ * @returns The value for that attribute.
  */
 export function getDataAttribute(node: Element, attr: string): string {
   // TODO (TS): Get this on the HTML side without crashing in node.
@@ -281,9 +292,10 @@ export function getDataAttribute(node: Element, attr: string): string {
 /**
  * A wrapper function for query selector on a node wrt. to an attribute. If
  * query selectors are not implemented on that node it reverts to Xpath.
+ *
  * @param node A DOM node.
  * @param attr The data attribute.
- * @return The list of result nodes.
+ * @returns The list of result nodes.
  */
 export function querySelectorAllByAttr(node: Element, attr: string): Element[] {
   return node.querySelectorAll
@@ -294,10 +306,11 @@ export function querySelectorAllByAttr(node: Element, attr: string): Element[] {
 /**
  * A wrapper function for query selector on a node wrt. to an attribute. If
  * query selectors are not implemented on that node it reverts to Xpath.
+ *
  * @param node A DOM node.
  * @param attr The data attribute.
  * @param value The value of the data attribute.
- * @return The list of result nodes.
+ * @returns The list of result nodes.
  */
 export function querySelectorAllByAttrValue(
   node: Element,
@@ -312,9 +325,10 @@ export function querySelectorAllByAttrValue(
 /**
  * A wrapper function for query selector on a node wrt. to a tag name. If
  * query selectors are not implemented on that node it reverts to Xpath.
+ *
  * @param node A DOM node.
  * @param tag The tag name.
- * @return The list of result nodes.
+ * @returns The list of result nodes.
  */
 export function querySelectorAll(node: Element, tag: string): Element[] {
   return node.querySelectorAll
@@ -324,8 +338,9 @@ export function querySelectorAll(node: Element, tag: string): Element[] {
 
 /**
  * Returns the tagname of an element node in upper case.
+ *
  * @param node The node.
- * @return The node's tagname.
+ * @returns The node's tagname.
  */
 export function tagName(node: Element): string {
   return node.tagName.toUpperCase();

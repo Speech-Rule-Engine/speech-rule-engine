@@ -14,10 +14,9 @@
 // limitations under the License.
 
 /**
- * @fileoverview Summary speech generator that computes speech strings a for
+ * @file Summary speech generator that computes speech strings a for
  *     elements in their maximally collapsed state, regardless of the actual
  *     state of rendering.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview German message file.
- *
+ * @file German message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -57,6 +56,9 @@ const germanPostfixCombiner = function (
 
 let locale: Locale = null;
 
+/**
+ *
+ */
 export function de(): Locale {
   if (!locale) {
     locale = create();
@@ -65,6 +67,9 @@ export function de(): Locale {
   return locale;
 }
 
+/**
+ *
+ */
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;

@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Context for custom functions of a speech rule.
- *
+ * @file Context for custom functions of a speech rule.
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
@@ -46,9 +45,10 @@ export class SpeechRuleContext {
 
   /**
    * Checks if we have a custom query and applies it. Otherwise returns null.
+   *
    * @param node The initial node.
    * @param funcName A function name.
-   * @return The list of resulting nodes.
+   * @returns The list of resulting nodes.
    */
   public applyCustomQuery(node: Node, funcName: string): Node[] {
     const func = this.customQueries.lookup(funcName);
@@ -58,10 +58,11 @@ export class SpeechRuleContext {
   /**
    * Applies either an Xpath selector or a custom query to the node
    * and returns the resulting node list.
+   *
    * @param node The initial node.
    * @param expr An Xpath expression string or a name of a custom
    *     query.
-   * @return The list of resulting nodes.
+   * @returns The list of resulting nodes.
    */
   public applySelector(node: Node, expr: string): Node[] {
     const result = this.applyCustomQuery(node, expr);
@@ -71,10 +72,11 @@ export class SpeechRuleContext {
   /**
    * Applies either an Xpath selector or a custom query to the node
    * and returns the first result.
+   *
    * @param node The initial node.
    * @param expr An Xpath expression string or a name of a custom
    *     query.
-   * @return The resulting node.
+   * @returns The resulting node.
    */
   public applyQuery(node: Node, expr: string): Node {
     const results = this.applySelector(node, expr);
@@ -87,10 +89,11 @@ export class SpeechRuleContext {
   /**
    * Applies either an Xpath selector or a custom query to the node and returns
    * true if the application yields a non-empty result.
+   *
    * @param node The initial node.
    * @param expr An Xpath expression string or a name of a custom
    *     query.
-   * @return True if application was successful.
+   * @returns True if application was successful.
    */
   public applyConstraint(node: Node, expr: string): boolean {
     const result = this.applyQuery(node, expr);
@@ -99,10 +102,11 @@ export class SpeechRuleContext {
 
   /**
    * Constructs a string from the node and the given expression.
+   *
    * @param node The initial node.
    * @param expr An Xpath expression string, a name of a custom
    *     function or a string.
-   * @return The result of applying expression to node.
+   * @returns The result of applying expression to node.
    */
   public constructString(node: Node, expr: string): string | Span[] {
     if (!expr) {
@@ -124,6 +128,7 @@ export class SpeechRuleContext {
 
   /**
    * Parses a list of context functions.
+   *
    * @param functions The list of
    *     context function assignments.
    */

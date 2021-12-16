@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Norsk Nynorsk message file.
- *
+ * @file Norsk Nynorsk message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -29,6 +28,9 @@ import * as tr from '../transformers';
 
 let locale: Locale = null;
 
+/**
+ *
+ */
 export function nn(): Locale {
   if (!locale) {
     locale = create();
@@ -37,6 +39,9 @@ export function nn(): Locale {
   return locale;
 }
 
+/**
+ *
+ */
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;

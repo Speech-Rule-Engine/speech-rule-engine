@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Browser sniffing utilities.
- *
+ * @file Browser sniffing utilities.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -24,7 +23,8 @@ import {xpath} from './xpath_util';
 
 /**
  * Predicate to check for MS Internet Explorer but not Edge.
- * @return True if the browser is IE.
+ *
+ * @returns True if the browser is IE.
  */
 export function detectIE(): boolean {
   const isIE =
@@ -42,7 +42,8 @@ export function detectIE(): boolean {
 // TODO (TS): This can probably go in 4.0
 /**
  * Predicate to check for MS Edge.
- * @return True if the browser is Edge.
+ *
+ * @returns True if the browser is Edge.
  */
 export function detectEdge(): boolean {
   const isEdge =
@@ -65,6 +66,7 @@ export const mapsForIE: { [key: string]: any } = null;
 
 /**
  * Loads all JSON mappings for IE using a script tag.
+ *
  * @param opt_isEdge Optional boolean if browser is Edge.
  */
 export function loadWGXpath_(opt_isEdge?: boolean) {
@@ -76,6 +78,7 @@ declare let wgxpath: any;
 
 /**
  * Loads all JSON mappings for IE using a script tag.
+ *
  * @param opt_isEdge Optional boolean if browser is Edge.
  * @param opt_count Optional counter argument for callback.
  */
@@ -109,6 +112,7 @@ export function loadMapsForIE_() {
 
 /**
  * Loads a script in a browser page.
+ *
  * @param src The source of the script to load.
  */
 export function loadScript(src: string) {

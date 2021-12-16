@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Interface for Math Element Walkers.
- *
+ * @file Interface for Math Element Walkers.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -30,7 +29,8 @@ export interface Walker {
 
   /**
    * Indicator if the walker is active.
-   * @return True if walker is active.
+   *
+   * @returns True if walker is active.
    */
   isActive(): boolean;
 
@@ -46,26 +46,28 @@ export interface Walker {
 
   /**
    * Computes the speech string of the currently examined node.
-   * @return The current speech string.
+   *
+   * @returns The current speech string.
    */
   speech(): string;
 
   /**
-   * @return The XML element.
+   * @returns The XML element.
    */
   getXml(): Element;
 
   /**
-   * @return The rebuilt semantic tree for the walker.
+   * @returns The rebuilt semantic tree for the walker.
    */
   getRebuilt(): RebuildStree;
 
   /**
    * The node the walker currently sits on.
+   *
    * @param opt_update Flag indicating if the state should be
    *     updated. This can be useful if the underlying DOM elements might have
    *     changed.
-   * @return The current focus.
+   * @returns The current focus.
    */
   getFocus(opt_update?: boolean): Focus;
 
@@ -76,20 +78,23 @@ export interface Walker {
 
   /**
    * Returns the current depth of the walker, starting at 0.
-   * @return The current depth of the walker.
+   *
+   * @returns The current depth of the walker.
    */
   getDepth(): number;
 
   /**
    * Performs the next move depending on the key event.
+   *
    * @param key The input key code.
-   * @return True if the move was successful, false, if it was not, and
+   * @returns True if the move was successful, false, if it was not, and
    *     null if there was no move of the key.
    */
   move(key: KeyCode): boolean | null;
 
   /**
    * Updates speech in case of option changes.
+   *
    * @param options The dynamic constraint.
    */
   update(options: AxisMap): void;
@@ -125,6 +130,7 @@ export class WalkerState {
 
   /**
    * Removes a state for a particular node.
+   *
    * @param id A node id.
    */
   public static resetState(id: string) {
@@ -133,6 +139,7 @@ export class WalkerState {
 
   /**
    * Sets a state value for a particular node.
+   *
    * @param id A node id.
    * @param value The state value.
    */
@@ -142,8 +149,9 @@ export class WalkerState {
 
   /**
    * Returns the state a particular node if it exists.
+   *
    * @param id The node id.
-   * @return The state value.
+   * @returns The state value.
    */
   public static getState(id: string): string {
     return WalkerState.STATE[id];

@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Debug facility for the speech rule engine.
- *
+ * @file Debug facility for the speech rule engine.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -35,7 +34,7 @@ export class Debugger {
   private stream_: any | null = null;
 
   /**
-   * @return The debugger object.
+   * @returns The debugger object.
    */
   public static getInstance(): Debugger {
     Debugger.instance = Debugger.instance || new Debugger();
@@ -44,6 +43,7 @@ export class Debugger {
 
   /**
    * Flag for the debug mode of the speech rule engine.
+   *
    * @param opt_file A filename to log the debug information.
    */
   public init(opt_file?: string) {
@@ -55,7 +55,9 @@ export class Debugger {
 
   /**
    * Give debug output.
+   *
    * @param var_args Rest elements of debug output.
+   * @param {...any} args
    */
   public output(...args: any[]) {
     if (this.isActive_) {
@@ -66,6 +68,7 @@ export class Debugger {
   /**
    * Give debug output by compiling executing a function. The main idea is that
    * costly output is only generated when the debug mode is indeed active.
+   *
    * @param func The function that generates the
    *      debug output.
    */
@@ -77,6 +80,7 @@ export class Debugger {
 
   /**
    * Gracefully exits the debugger.
+   *
    * @param callback Optional function to be executed after exiting the
    *     debugger.
    */
@@ -94,6 +98,7 @@ export class Debugger {
   /**
    * Initialises the debug file.
    * This is handled asynchronously.
+   *
    * @param filename The filename to route debug output to.
    */
   private startDebugFile_(filename: string) {
@@ -116,6 +121,7 @@ export class Debugger {
 
   /**
    * Writes the debug output to the debuggers current stream.
+   *
    * @param outputList List of output strings.
    */
   private output_(outputList: string[]) {

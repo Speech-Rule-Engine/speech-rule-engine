@@ -15,8 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview A fake speech generator to compute color annotations.
- *
+ * @file A fake speech generator to compute color annotations.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -41,6 +40,7 @@ export class ColorGenerator extends AbstractSpeechGenerator {
 
   /**
    * Visits semantic tree depth-first and collates leaves.
+   *
    * @param tree The semantic root node of the current tree.
    * @param leaves Ids or id lists of leaves. This
    *     is array is a collator for tail recursion.
@@ -107,6 +107,7 @@ export class ColorGenerator extends AbstractSpeechGenerator {
 
   /**
    * Colors the leave nodes of an XML tree.
+   *
    * @param node The root node.
    */
   private colorLeaves_(node: Element) {
@@ -130,10 +131,11 @@ export class ColorGenerator extends AbstractSpeechGenerator {
 
   /**
    * Colors a single leave node in an XML tree.
+   *
    * @param node The node to color.
    * @param id The ID of the node.
    * @param color The color string.
-   * @return Returns true if successful.
+   * @returns Returns true if successful.
    */
   private colorLeave_(node: Element, id: string, color: string): boolean {
     const aux = WalkerUtil.getBySemanticId(node, id);

@@ -15,13 +15,12 @@
 // limitations under the License.
 
 /**
- * @fileoverview A semantic tree for MathML expressions.
+ * @file A semantic tree for MathML expressions.
  *
  * This file contains functionality to compute a semantic interpretation from a
  * given MathML expression. This is a very heuristic approach that assumes a
  * fairly simple default semantic which is suitable for K-12 and simple UG
  * mathematics.
- *
  * @author sorge@google.com (Volker Sorge)
  */
 
@@ -56,7 +55,8 @@ export class SemanticTree {
 
   /**
    * Generate an empty semantic tree.
-   * @return The empty semantic tree.
+   *
+   * @returns The empty semantic tree.
    */
   public static empty(): SemanticTree {
     const empty = DomUtil.parseInput('<math/>');
@@ -67,11 +67,12 @@ export class SemanticTree {
 
   /**
    * Generate a semantic tree for a given node.
+   *
    * @param semantic The semantic node that will become
    *     the root.
    * @param opt_mathml Optionally a MathML node corresponding to the
    *     semantic node.
-   * @return The empty semantic tree.
+   * @returns The empty semantic tree.
    */
   public static fromNode(
     semantic: SemanticNode,
@@ -87,11 +88,12 @@ export class SemanticTree {
 
   /**
    * Generate a semantic tree for a given node
+   *
    * @param semantic The semantic node that will become
    *     the root.
    * @param opt_mathml Optionally a MathML node corresponding to the
    *     semantic node.
-   * @return The empty semantic tree.
+   * @returns The empty semantic tree.
    */
   public static fromRoot(
     semantic: SemanticNode,
@@ -110,8 +112,9 @@ export class SemanticTree {
 
   /**
    * Generates a semantic tree from its XML representation.
+   *
    * @param xml The XML representation.
-   * @return The generated semantic tree.
+   * @returns The generated semantic tree.
    */
   public static fromXml(xml: Element): SemanticTree {
     const stree = SemanticTree.empty();
@@ -123,6 +126,7 @@ export class SemanticTree {
 
   /**
    * Create an initial semantic tree.
+   *
    * @param mathml The original MathML node.
    */
   constructor(public mathml: Element) {
@@ -143,8 +147,9 @@ export class SemanticTree {
 
   /**
    * Returns an XML representation of the tree.
+   *
    * @param opt_brief If set attributes are omitted.
-   * @return The XML representation of the tree.
+   * @returns The XML representation of the tree.
    */
   public xml(opt_brief?: boolean): Element {
     const xml = DomUtil.parseInput('<stree></stree>');
@@ -155,8 +160,9 @@ export class SemanticTree {
 
   /**
    * Serializes the XML representation of the tree.
+   *
    * @param opt_brief If set attributes are omitted.
-   * @return Serialized string.
+   * @returns Serialized string.
    */
   public toString(opt_brief?: boolean): string {
     const xmls = new SystemExternal.xmldom.XMLSerializer();
@@ -165,8 +171,9 @@ export class SemanticTree {
 
   /**
    * Pretty print the XML representation of the tree.
+   *
    * @param opt_brief If set attributes are omitted.
-   * @return The formatted string.
+   * @returns The formatted string.
    */
   public formatXml(opt_brief?: boolean): string {
     const xml = this.toString(opt_brief);
@@ -182,6 +189,7 @@ export class SemanticTree {
 
   /**
    * Replaces a node in the tree. Updates the root node if necessary.
+   *
    * @param oldNode The node to be replaced.
    * @param newNode The new node.
    */
@@ -196,7 +204,8 @@ export class SemanticTree {
 
   /**
    * Turns tree into JSON format.
-   * @return The JSON object for the tree.
+   *
+   * @returns The JSON object for the tree.
    */
   // TODO (TS): JSON type.
   public toJson(): any {

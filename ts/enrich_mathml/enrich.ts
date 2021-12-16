@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview An API for the enrichment of MathML elements.
- *
+ * @file An API for the enrichment of MathML elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -28,8 +27,9 @@ import * as EnrichMathml from './enrich_mathml';
 
 /**
  * Semantically enriches a MathML node.
+ *
  * @param mml The original MathML node.
- * @return Semantically enriched MathML node.
+ * @returns Semantically enriched MathML node.
  */
 export function semanticMathmlNode(mml: Element): Element {
   const clone = mml.cloneNode(true) as Element;
@@ -39,8 +39,9 @@ export function semanticMathmlNode(mml: Element): Element {
 
 /**
  * Reads a MathML element from a string and semantically enriches its.
+ *
  * @param expr The MathML expression as a string without math tags.
- * @return The modified MathML element.
+ * @returns The modified MathML element.
  */
 export function semanticMathmlSync(expr: string): Element {
   const mml = DomUtil.parseInput(expr);
@@ -49,6 +50,7 @@ export function semanticMathmlSync(expr: string): Element {
 
 /**
  * Reads a MathML element from a string and semantically enriches its.
+ *
  * @param expr The MathML expression as a string without math tags.
  * @param callback Function to apply on the result.
  */
@@ -61,8 +63,9 @@ export function semanticMathml(expr: string, callback: (p1: Element) => any) {
 
 /**
  * Tests for an expression with debugger output.
+ *
  * @param expr MathML expression.
- * @return The enriched MathML expression.
+ * @returns The enriched MathML expression.
  */
 export function testTranslation__(expr: string): string {
   // dummy call
@@ -75,8 +78,9 @@ export function testTranslation__(expr: string): string {
 
 /**
  * Adds Math tags to a MathML string, if necessary.
+ *
  * @param expr MathML string.
- * @return The augmented expression.
+ * @returns The augmented expression.
  */
 export function prepareMmlString(expr: string): string {
   if (!expr.match(/^<math/)) {

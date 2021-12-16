@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Rule store for braille rules.
+ * @file Rule store for braille rules.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

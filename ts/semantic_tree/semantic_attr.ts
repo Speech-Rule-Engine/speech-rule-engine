@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Semantic attributes of Math symbols and expressions.
+ * @file Semantic attributes of Math symbols and expressions.
  *
  * This file contains the basic functionality to lookup and assign semantic
  * attributes for mathematical expressions. Since there is no such thing as a
@@ -44,7 +44,6 @@
  *
  * This file is part of the content script as we do not want to call out to the
  * background page every time we need to look up the semantic of a symbol.
- *
  * @author sorge@google.com (Volker Sorge)
  */
 
@@ -3379,7 +3378,8 @@ const symbolSetToSemantic_: MeaningSet[] = [
 
 /**
  * Initializes the dictionary mapping strings to meaning.
- * @return The dictionary mapping strings to
+ *
+ * @returns The dictionary mapping strings to
  *     semantic attributes.
  */
 const meaning_: { [key: string]: SemanticMeaning } = (function () {
@@ -3398,9 +3398,10 @@ const meaning_: { [key: string]: SemanticMeaning } = (function () {
 
 /**
  * Equality on meaning objects.
+ *
  * @param meaning1 First meaning.
  * @param meaning2 Second meaning.
- * @return True if both contain the same field entries.
+ * @returns True if both contain the same field entries.
  */
 export function equal(
   meaning1: SemanticMeaning,
@@ -3415,8 +3416,9 @@ export function equal(
 
 /**
  * Lookup the semantic type of a symbol.
+ *
  * @param symbol The symbol to which we want to determine the type.
- * @return The semantic type of the symbol.
+ * @returns The semantic type of the symbol.
  */
 export function lookupType(symbol: string): SemanticType {
   return meaning_[symbol]?.type || SemanticType.UNKNOWN;
@@ -3424,8 +3426,9 @@ export function lookupType(symbol: string): SemanticType {
 
 /**
  * Lookup the semantic role of a symbol.
+ *
  * @param symbol The symbol to which we want to determine the role.
- * @return The semantic role of the symbol.
+ * @returns The semantic role of the symbol.
  */
 export function lookupRole(symbol: string): SemanticRole {
   return meaning_[symbol]?.role || SemanticRole.UNKNOWN;
@@ -3433,8 +3436,9 @@ export function lookupRole(symbol: string): SemanticRole {
 
 /**
  * Lookup the semantic meaning of a symbol in terms of type and role.
+ *
  * @param symbol The symbol to which we want to determine the meaning.
- * @return The semantic meaning of the symbol.
+ * @returns The semantic meaning of the symbol.
  */
 export function lookupMeaning(symbol: string): SemanticMeaning {
   return (
@@ -3448,7 +3452,8 @@ export function lookupMeaning(symbol: string): SemanticMeaning {
 
 /**
  * String representation of the invisible times unicode character.
- * @return The invisible times character.
+ *
+ * @returns The invisible times character.
  */
 export function invisibleTimes(): string {
   return invisibleTimes_;
@@ -3456,7 +3461,8 @@ export function invisibleTimes(): string {
 
 /**
  * String representation of the invisible plus unicode character.
- * @return The invisible plus character.
+ *
+ * @returns The invisible plus character.
  */
 export function invisiblePlus(): string {
   return invisiblePlus_;
@@ -3464,7 +3470,8 @@ export function invisiblePlus(): string {
 
 /**
  * String representation of the invisible comma unicode character.
- * @return The invisible comma character.
+ *
+ * @returns The invisible comma character.
  */
 export function invisibleComma(): string {
   return invisibleComma_;
@@ -3472,7 +3479,8 @@ export function invisibleComma(): string {
 
 /**
  * String representation of the function application character.
- * @return The invisible function application character.
+ *
+ * @returns The invisible function application character.
  */
 export function functionApplication(): string {
   return functionApplication_;
@@ -3498,7 +3506,7 @@ export function functionApplication(): string {
  *
  * @param {string} open Opening fence.
  * @param {string} close Closing fence.
- * @return {boolean} True if the fences are matching.
+ * @returns {boolean} True if the fences are matching.
  */
 export function isMatchingFence(open: string, close: string): boolean {
   if (
@@ -3531,8 +3539,9 @@ export function isMatchingFence(open: string, close: string): boolean {
 /**
  * Determines if a symbol type can be embellished. Primitives that can be
  * embellished are operators, punctuations, relations, and fences.
+ *
  * @param type The type.
- * @return True if the type can be embellished.
+ * @returns True if the type can be embellished.
  */
 export function isEmbellishedType(type: SemanticType): boolean {
   return (
@@ -3555,9 +3564,10 @@ const secondary_ = new Map();
 
 /**
  * The key generator for secondary annotations.
+ *
  * @param kind The kind of annotation.
  * @param char The character to look up.
- * @return The generated key.
+ * @returns The generated key.
  */
 function secKey(kind: string, char: string) {
   return `${kind} ${char}`;
@@ -3565,8 +3575,10 @@ function secKey(kind: string, char: string) {
 
 /**
  * Builds the secondary annotation structure.
+ *
  * @param kind The kind of annotation.
  * @param char The characters to look up.
+ * @param chars
  * @param annotation Optionally an annotation value. Default is `kind`.
  */
 function addSecondary_(kind: string, chars: string[], annotation = '') {
@@ -3596,9 +3608,10 @@ addSecondary_('tilde', tildes);
 
 /**
  * Lookup of secondary annotation.
+ *
  * @param kind The kind of annotation.
  * @param char The character to look up.
- * @return The annotation if it exists.
+ * @returns The annotation if it exists.
  */
 export function lookupSecondary(kind: string, char: string) {
   return secondary_.get(secKey(kind, char));

@@ -15,8 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for speech generators.
- *
+ * @file Utility functions for speech generators.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -32,8 +31,9 @@ import * as WalkerUtil from '../walker/walker_util';
 
 /**
  * Compute speech string for the xml version of the semantic tree.
+ *
  * @param xml The xml element.
- * @return A list of auditory descriptions
+ * @returns A list of auditory descriptions
  *     for the node.
  */
 export function computeSpeech(xml: Element): AuditoryDescription[] {
@@ -42,8 +42,9 @@ export function computeSpeech(xml: Element): AuditoryDescription[] {
 
 /**
  * Computes speech descriptions for a single semantic node.
+ *
  * @param semantic The semantic tree node.
- * @return A list of auditory descriptions
+ * @returns A list of auditory descriptions
  *     for the node.
  */
 export function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
@@ -53,8 +54,9 @@ export function recomputeSpeech(semantic: SemanticNode): AuditoryDescription[] {
 
 /**
  * Computes speech markup for the xml version of the semantic tree.
+ *
  * @param tree The semantic node as XML.
- * @return The speech string.
+ * @returns The speech string.
  */
 export function computeMarkup(tree: Element): string {
   const descrs = computeSpeech(tree);
@@ -63,8 +65,9 @@ export function computeMarkup(tree: Element): string {
 
 /**
  * Computes speech markup for a single semantic node.
+ *
  * @param semantic The semantic tree node.
- * @return The speech string.
+ * @returns The speech string.
  */
 export function recomputeMarkup(semantic: SemanticNode): string {
   const descrs = recomputeSpeech(semantic);
@@ -73,6 +76,7 @@ export function recomputeMarkup(semantic: SemanticNode): string {
 
 /**
  * Add speech as a semantic attributes in a MathML node.
+ *
  * @param mml The MathML node.
  * @param semantic The semantic tree node.
  * @param snode The XML node representing the semantic tree.
@@ -96,6 +100,7 @@ export function addSpeech(
 /**
  * Add markup for the given modality (generally other than speech) in a MathML
  * node.
+ *
  * @param mml The MathML node.
  * @param semantic The semantic tree node.
  * @param modality The speech modality.
@@ -111,6 +116,7 @@ export function addModality(
 
 /**
  * Adds a speech prefix if necessary.
+ *
  * @param mml The MathML node.
  * @param semantic The semantic tree node.
  */
@@ -123,8 +129,9 @@ export function addPrefix(mml: Element, semantic: SemanticNode) {
 
 /**
  * Computes a speech prefix if it exists.
+ *
  * @param semantic The semantic tree node.
- * @return The prefix speech string.
+ * @returns The prefix speech string.
  */
 export function retrievePrefix(semantic: SemanticNode): string {
   const descrs = computePrefix_(semantic);
@@ -133,8 +140,9 @@ export function retrievePrefix(semantic: SemanticNode): string {
 
 /**
  * Adds a speech prefix if necessary.
+ *
  * @param semantic The semantic tree node.
- * @return A list of auditory descriptions
+ * @returns A list of auditory descriptions
  *     for the prefix.
  */
 export function computePrefix_(semantic: SemanticNode): AuditoryDescription[] {
@@ -169,9 +177,10 @@ export function computePrefix_(semantic: SemanticNode): AuditoryDescription[] {
 /**
  * Finds the nodes at the same position as the semantic node in a list of XML
  * nodes. We define position via the path to root.
+ *
  * @param semantic The semantic tree node.
  * @param nodes The XML nodes.
- * @return The node at the exact tree position of the semantic node.
+ * @returns The node at the exact tree position of the semantic node.
  */
 export function nodeAtPosition_(
   semantic: SemanticNode,
@@ -208,6 +217,7 @@ export function nodeAtPosition_(
 /**
  * Connects maction nodes as alternatives if they are collapsed in the actual
  * node.
+ *
  * @param node The actual DOM node.
  * @param mml The mathml element for the node.
  * @param stree The XML for the semantic tree.
@@ -257,6 +267,7 @@ export function connectMactions(node: Element, mml: Element, stree: Element) {
 
 /**
  * Connects all maction nodes as alternatives.
+ *
  * @param mml The mathml element.
  * @param stree The XML for the semantic tree.
  */
@@ -272,8 +283,9 @@ export function connectAllMactions(mml: Element, stree: Element) {
 
 /**
  * Computes a speech summary if it exists.
+ *
  * @param node The XML node.
- * @return The summary speech string.
+ * @returns The summary speech string.
  */
 export function retrieveSummary(node: Element): string {
   const descrs = computeSummary_(node);
@@ -282,8 +294,9 @@ export function retrieveSummary(node: Element): string {
 
 /**
  * Adds a speech summary if necessary.
+ *
  * @param node The XML node.
- * @return A list of auditory descriptions
+ * @returns A list of auditory descriptions
  *     for the summary.
  */
 export function computeSummary_(node: Element): AuditoryDescription[] {

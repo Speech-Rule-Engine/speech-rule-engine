@@ -14,10 +14,9 @@
 // limitations under the License.
 
 /**
- * @fileoverview A simple container object for the auditory description of an
+ * @file A simple container object for the auditory description of an
  * object. This is modelled after the navigation descriptions of ChromeVox,
  * originally authored by dmazzoni@google.com (Dominic Mazzoni)
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -79,11 +78,12 @@ export class AuditoryDescription {
 
   /**
    * Create an auditory description from given components.
+   *
    * @param args The arguments for this
    *  description.
    * @param flags Flags to force grammar
    *      processing options.
-   * @return The newly created auditory description.
+   * @returns The newly created auditory description.
    */
   public static create(
     args: AudioDescr,
@@ -96,7 +96,15 @@ export class AuditoryDescription {
   /**
    * A class representing the description of navigation from one object to
    * another.
-   * @param {context, text, userValue, annotation, attributes,
+   *
+   * @param root0
+   * @param root0.context
+   * @param root0.text
+   * @param root0.userValue
+   * @param root0.annotation
+   * @param root0.attributes
+   * @param root0.personality
+   * @param root0.layout
    *         personality, layout}
    * The arguments for this description.
    */
@@ -119,7 +127,7 @@ export class AuditoryDescription {
   }
 
   /**
-   * @return true if this description is empty.
+   * @returns true if this description is empty.
    */
   public isEmpty(): boolean {
     return (
@@ -132,7 +140,8 @@ export class AuditoryDescription {
 
   /**
    * Clones the Auditory description.
-   * @return The new description.
+   *
+   * @returns The new description.
    */
   public clone(): AuditoryDescription {
     let personality: { [key: string]: string };
@@ -161,7 +170,7 @@ export class AuditoryDescription {
   }
 
   /**
-   * @return A string representation of this object.
+   * @returns A string representation of this object.
    */
   public toString(): string {
     return (
@@ -181,7 +190,7 @@ export class AuditoryDescription {
   }
 
   /**
-   * @return A string representation of this object.
+   * @returns A string representation of this object.
    */
   public descriptionString(): string {
     return this.context && this.text
@@ -190,7 +199,7 @@ export class AuditoryDescription {
   }
 
   /**
-   * @return A span representation
+   * @returns A span representation
    *     of this object.
    */
   public descriptionSpan(): Span {
@@ -199,8 +208,9 @@ export class AuditoryDescription {
 
   /**
    * Compares two AuditoryDescriptions.
+   *
    * @param that An auditory description.
-   * @return True if equal.
+   * @returns True if equal.
    */
   public equals(that: AuditoryDescription): boolean {
     return (

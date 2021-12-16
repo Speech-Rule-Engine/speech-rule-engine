@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Adds context function mappings to the global store.
+ * @file Adds context function mappings to the global store.
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 

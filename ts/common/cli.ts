@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Command line interface for the speech rule engine.
- *
+ * @file Command line interface for the speech rule engine.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -51,9 +50,11 @@ export class Cli {
 
   /**
    * Sets parameters for the speech rule engine.
+   *
    * @param arg The option to set.
    * @param value The cli option value.
    * @param def The default for the option.
+   * @param _def
    */
   public set(arg: string, value: string | boolean, _def: string) {
     this.setup[arg] = typeof value === 'undefined' ? true : value;
@@ -61,7 +62,9 @@ export class Cli {
 
   /**
    * Registers processors for input files.
+   *
    * @param v Unused parameter.
+   * @param _v
    * @param processor A processor method.
    */
   public processor(_v: string, processor: string) {
@@ -76,6 +79,8 @@ export class Cli {
 
   /**
    * Prints information on axes values.
+   *
+   * @param all
    */
   public async enumerate(all = false) {
     const promise = System.setupEngine(this.setup);
@@ -155,6 +160,7 @@ export class Cli {
 
   /**
    * Executes all processors on a single file.
+   *
    * @param input The name of the input file.
    */
   public execute(input: string) {
@@ -351,6 +357,7 @@ export class Cli {
 
   /**
    * Runs processor methods on the given input.
+   *
    * @param processor Name of a processor.
    * @param input The input expression or file name
    */
@@ -377,8 +384,9 @@ export class Cli {
 
   /**
    * Checks if the input expression is already complete.
+   *
    * @param input The current input on the CLI.
-   * @return True if input is a complete XML expression.
+   * @returns True if input is a complete XML expression.
    */
   private readExpression_(input: string): boolean {
     try {

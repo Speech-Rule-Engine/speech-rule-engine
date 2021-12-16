@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Implementation of the speech rule engine.
+ * @file Implementation of the speech rule engine.
  *
  * The speech rule engine chooses and applies speech rules. Rules are chosen
  * from a set of rule stores wrt. their applicability to a node in a particular
@@ -67,7 +67,7 @@ export class SpeechRuleEngine {
   } = {};
 
   /**
-   * @return The Engine object.
+   * @returns The Engine object.
    */
   public static getInstance(): SpeechRuleEngine {
     SpeechRuleEngine.instance =
@@ -77,6 +77,7 @@ export class SpeechRuleEngine {
 
   /**
    * Test the precondition of a speech rule in debugging mode.
+   *
    * @param rule A speech rule.
    * @param node DOM node to test applicability of the rule.
    */
@@ -97,6 +98,7 @@ export class SpeechRuleEngine {
 
   /**
    * Test the precondition of a speech rule in debugging mode.
+   *
    * @param name Rule to debug.
    * @param node DOM node to test applicability of the rule.
    */
@@ -138,8 +140,9 @@ export class SpeechRuleEngine {
   /**
    * Computes a speech object for a given node. Returns the empty list if
    * no node is given.
+   *
    * @param node The node to be evaluated.
-   * @return A list of auditory descriptions
+   * @returns A list of auditory descriptions
    *   for that node.
    */
   public evaluateNode(node: Element): AuditoryDescription[] {
@@ -161,7 +164,8 @@ export class SpeechRuleEngine {
 
   /**
    * Prints the list of all current rules in ChromeVox to the console.
-   * @return A textual representation of all rules in the speech rule
+   *
+   * @returns A textual representation of all rules in the speech rule
    *     engine.
    */
   public toString(): string {
@@ -173,11 +177,12 @@ export class SpeechRuleEngine {
   //            this way. Currently we mess about with a lot of casting!
   /**
    * Runs a function in the temporary context of the speech rule engine.
+   *
    * @param settings The temporary settings for the speech rule
    *     engine. They can contain the usual features.
    * @param callback The runnable
    *     function that computes speech results.
-   * @return The result of the callback.
+   * @returns The result of the callback.
    */
   public runInSetting(
     settings: { [feature: string]: string | boolean },
@@ -201,6 +206,7 @@ export class SpeechRuleEngine {
   /**
    * Adds a speech rule store to the speech rule engine. This method is called
    * when loading a rule set.
+   *
    * @param set The definition of a speech rule set.
    */
   public addStore(set: RulesJson) {
@@ -215,6 +221,7 @@ export class SpeechRuleEngine {
 
   /**
    * Processes the grammar annotations of a rule.
+   *
    * @param context The function context in which to
    *     evaluate the grammar expression.
    * @param node The node to which the rule is applied.
@@ -239,6 +246,7 @@ export class SpeechRuleEngine {
 
   /**
    * Adds an evaluation method by locale and modality.
+   *
    * @param store The store whose evaluation method is
    *     added.
    */
@@ -257,9 +265,10 @@ export class SpeechRuleEngine {
   /**
    * Selects a default evaluation method by locale and modality. If none exists
    * it takes the default evaluation method of the active combined store.
+   *
    * @param locale The locale.
    * @param modality The modality.
-   * @return The evaluation
+   * @returns The evaluation
    *     method.
    */
   public getEvaluator(
@@ -277,7 +286,7 @@ export class SpeechRuleEngine {
    * the trie of the engine.
    *
    * @param opt_info Initial dynamic constraint information.
-   * @return The collated information.
+   * @returns The collated information.
    */
   public enumerate(opt_info?: { [key: string]: any }): { [key: string]: any } {
     return this.trie.enumerate(opt_info);
@@ -296,8 +305,9 @@ export class SpeechRuleEngine {
   /**
    * Computes a speech object for a given node. Returns the empty list if
    * no node is given.
+   *
    * @param node The node to be evaluated.
-   * @return A list of auditory descriptions
+   * @returns A list of auditory descriptions
    *   for that node.
    */
   private evaluateNode_(node: Element): AuditoryDescription[] {
@@ -311,8 +321,9 @@ export class SpeechRuleEngine {
 
   /**
    * Applies rules recursively to compute the final speech object.
+   *
    * @param node Node to apply the speech rule to.
-   * @return A list of Auditory descriptions.
+   * @returns A list of Auditory descriptions.
    */
   private evaluateTree_(node: Element): AuditoryDescription[] {
     const engine = Engine.getInstance();
@@ -455,6 +466,7 @@ export class SpeechRuleEngine {
 
   /**
    * Evaluates a list of nodes into a list of auditory descriptions.
+   *
    * @param context The function context in which to
    *     evaluate the nodes.
    * @param nodes Array of nodes.
@@ -466,7 +478,7 @@ export class SpeechRuleEngine {
    *     for every element in the list.
    * @param ctxtStr Additional context string that is given to the
    *     ctxtFunc function or used directly if ctxtFunc is not supplied.
-   * @return A list of Auditory descriptions.
+   * @returns A list of Auditory descriptions.
    */
   private evaluateNodeList_(
     context: SpeechRuleContext,
@@ -512,6 +524,7 @@ export class SpeechRuleEngine {
 
   /**
    * Adds layout annotations to the auditory descriptions
+   *
    * @param descrs The auditory descriptions.
    * @param props The properties.
    * @param _multi Is is a multi node component. Currently ignored.
@@ -541,12 +554,13 @@ export class SpeechRuleEngine {
 
   /**
    * Adds personality to every Auditory Descriptions in input list.
+   *
    * @param descrs A list of Auditory
    *     descriptions.
    * @param props Property dictionary.
    * @param multi Multinode flag.
    * @param node The original XML node.
-   * @return The modified array.
+   * @returns The modified array.
    */
   private addPersonality_(
     descrs: AuditoryDescription[],
@@ -610,6 +624,7 @@ export class SpeechRuleEngine {
 
   /**
    * Adds external attributes if some are in the node
+   *
    * @param descr An Auditory descriptions.
    * @param node The XML node.
    */
@@ -628,9 +643,10 @@ export class SpeechRuleEngine {
   /**
    * Adds relative personality entries to the personality of a Auditory
    * Description.
+   *
    * @param descr Auditory Description.
    * @param personality Dictionary with relative personality entries.
-   * @return Updated description.
+   * @returns Updated description.
    */
   private addRelativePersonality_(
     descr: AuditoryDescription,
@@ -714,9 +730,10 @@ export class SpeechRuleEngine {
 
   /**
    * Splits preference form style names into set of preference settings.
+   *
    * @param value The value of the style setting.
    * @param preferences Set of Clearspeak preferences or null.
-   * @return The style settings. Either a single element or a
+   * @returns The style settings. Either a single element or a
    *      pair associating a Clearspeak preference with a value.
    */
   private makeSet_(
@@ -731,10 +748,11 @@ export class SpeechRuleEngine {
 
   /**
    * Retrieves a rule for the given node if one exists.
+   *
    * @param node A node.
    * @param dynamic Additional dynamic
    *     constraints. These are matched against properties of a rule.
-   * @return The speech rule if an applicable one exists.
+   * @returns The speech rule if an applicable one exists.
    */
   public lookupRule(node: Node, dynamic: DynamicCstr) {
     if (
@@ -752,10 +770,11 @@ export class SpeechRuleEngine {
 
   /**
    * Retrieves a list of applicable rule for the given node.
+   *
    * @param node A node.
    * @param dynamic Additional dynamic
    *     constraints. These are matched against properties of a rule.
-   * @return All applicable speech rules.
+   * @returns All applicable speech rules.
    */
   public lookupRules(node: Node, dynamic: DynamicCstr): SpeechRule[] {
     return this.trie.lookupRules(node, dynamic.allProperties());
@@ -765,9 +784,11 @@ export class SpeechRuleEngine {
    * Picks the result of the most constraint rule by prefering those:
    * 1) that best match the dynamic constraints.
    * 2) with the most additional constraints.
+   *
    * @param dynamic Dynamic constraints.
+   * @param _dynamic
    * @param rules An array of rules.
-   * @return The most constraint rule.
+   * @returns The most constraint rule.
    */
   private pickMostConstraint_(
     _dynamic: DynamicCstr,
@@ -802,8 +823,9 @@ const stores: Map<string, BaseRuleStore> = new Map();
 
 /**
  * Factory method for generating rule stores by modality.
+ *
  * @param modality The modality.
- * @return The generated rule store.
+ * @returns The generated rule store.
  */
 function getStore(modality: string): BaseRuleStore {
   // TODO (TS): Not sure how to get the constructors directly
@@ -815,6 +837,9 @@ function getStore(modality: string): BaseRuleStore {
   return new MathStore();
 }
 
+/**
+ * @param set
+ */
 export function storeFactory(set: RulesJson) {
   const name = `${set.locale}.${set.modality}.${set.domain}`;
   if (set.kind === 'actions') {

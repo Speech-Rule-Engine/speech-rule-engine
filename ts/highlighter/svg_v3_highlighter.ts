@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Class highlighting SVG elements in MJ V3.
- *
+ * @file Class highlighting SVG elements in MJ V3.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

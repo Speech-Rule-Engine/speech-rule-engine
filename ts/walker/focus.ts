@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Focus elements contain a collection of focused nodes and
+ * @file Focus elements contain a collection of focused nodes and
  *     additional information, like colors etc.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -42,11 +41,12 @@ export class Focus {
 
   /**
    * Factory method to create focus structures from semantic and DOM nodes.
+   *
    * @param primaryId The semantic id of the primary node.
    * @param nodeIds The semantic ids of the node list.
    * @param rebuilt A rebuilt semantic tree structure.
    * @param dom The original DOM node.
-   * @return The new focus.
+   * @returns The new focus.
    */
   public static factory(
     primaryId: string,
@@ -71,12 +71,13 @@ export class Focus {
   /**
    * Generates all existing nodes in the DOM structure corresponding to the
    * semantic ids.
+   *
    * @param ids The semantic ids.
    * @param nodes The DOM nodes corresponding to the ids, some of
    *      which might not exist.
    * @param dict A semantic node dictionary.
    * @param domNode The original DOM node.
-   * @return The list of existing nodes in the DOM tree.
+   * @returns The list of existing nodes in the DOM tree.
    */
   private static generateAllVisibleNodes_(
     ids: string[],
@@ -113,35 +114,35 @@ export class Focus {
   constructor(private nodes: SemanticNode[], private primary: SemanticNode) {}
 
   /**
-   * @return The nodes of the focus.
+   * @returns The nodes of the focus.
    */
   public getSemanticPrimary(): SemanticNode {
     return this.primary;
   }
 
   /**
-   * @return The nodes of the focus.
+   * @returns The nodes of the focus.
    */
   public getSemanticNodes(): SemanticNode[] {
     return this.nodes;
   }
 
   /**
-   * @return The nodes of the focus.
+   * @returns The nodes of the focus.
    */
   public getNodes(): Element[] {
     return this.allNodes;
   }
 
   /**
-   * @return The nodes of the focus.
+   * @returns The nodes of the focus.
    */
   public getDomNodes(): (Element | null)[] {
     return this.domNodes;
   }
 
   /**
-   * @return The primary node of the focus. Can be empty.
+   * @returns The primary node of the focus. Can be empty.
    */
   public getDomPrimary(): Element {
     return this.domPrimary_;
@@ -156,7 +157,8 @@ export class Focus {
 
   /**
    * Clones the focus.
-   * @return The new focus, containing the same component as this.
+   *
+   * @returns The new focus, containing the same component as this.
    */
   public clone(): Focus {
     const focus = new Focus(this.nodes, this.primary);

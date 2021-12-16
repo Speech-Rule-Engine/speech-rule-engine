@@ -14,10 +14,9 @@
 // limitations under the License.
 
 /**
- * @fileoverview Highlighter for pure (or poor) MathML implementations, using
+ * @file Highlighter for pure (or poor) MathML implementations, using
  * mathcolor and mathbackground instead of CSS style attributes. For example,
  * Firefox with native MathML.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Hindi message file.
- *
+ * @file Hindi message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -29,6 +28,9 @@ import { Combiners } from '../transformers';
 
 let locale: Locale = null;
 
+/**
+ *
+ */
 export function hi(): Locale {
   if (!locale) {
     locale = create();
@@ -37,6 +39,9 @@ export function hi(): Locale {
   return locale;
 }
 
+/**
+ *
+ */
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;

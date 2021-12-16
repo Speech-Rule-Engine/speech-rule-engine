@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for nemeth rules.
+ * @file Utility functions for nemeth rules.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -33,8 +33,9 @@ import * as MathspeakUtil from './mathspeak_util';
 
 /**
  * Opening string for fractions in linear Nemeth.
+ *
  * @param node The fraction node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingFraction(node: Element): string {
   const depth = MathspeakUtil.fractionNestingDepth(node);
@@ -46,8 +47,9 @@ export function openingFraction(node: Element): string {
 
 /**
  * Closing string for fractions in linear Nemeth.
+ *
  * @param node The fraction node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingFraction(node: Element): string {
   const depth = MathspeakUtil.fractionNestingDepth(node);
@@ -59,8 +61,9 @@ export function closingFraction(node: Element): string {
 
 /**
  * Middle string for fractions in linear Nemeth.
+ *
  * @param node The fraction node.
- * @return The middle string.
+ * @returns The middle string.
  */
 export function overFraction(node: Element): string {
   const depth = MathspeakUtil.fractionNestingDepth(node);
@@ -72,8 +75,9 @@ export function overFraction(node: Element): string {
 
 /**
  * Middle string for bevelled fractions in Nemeth.
+ *
  * @param node The fraction node.
- * @return The middle string.
+ * @returns The middle string.
  */
 export function overBevelledFraction(node: Element): string {
   const depth = MathspeakUtil.fractionNestingDepth(node);
@@ -87,9 +91,10 @@ export function overBevelledFraction(node: Element): string {
 /**
  * Nested Braille radicals in Nemeth putting together the nesting counter with
  * the correct indicator string as postfix.
+ *
  * @param node The radical node.
  * @param postfix A postfix string.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function nestedRadical(node: Element, postfix: string): string {
   const depth = radicalNestingDepth(node);
@@ -101,9 +106,10 @@ export function nestedRadical(node: Element, postfix: string): string {
 
 /**
  * Computes and returns the nesting depth of radical nodes.
+ *
  * @param node The radical node.
  * @param opt_depth The optional depth.
- * @return The nesting depth. 0 if the node is not a radical.
+ * @returns The nesting depth. 0 if the node is not a radical.
  */
 export function radicalNestingDepth(node: Element, opt_depth?: number): number {
   const depth = opt_depth || 0;
@@ -118,8 +124,9 @@ export function radicalNestingDepth(node: Element, opt_depth?: number): number {
 
 /**
  * Opening string for radicals in Nemeth.
+ *
  * @param node The radical node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingRadical(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.STARTROOT);
@@ -127,8 +134,9 @@ export function openingRadical(node: Element): string {
 
 /**
  * Closing string for radicals in Nemeth.
+ *
  * @param node The radical node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingRadical(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.ENDROOT);
@@ -136,8 +144,9 @@ export function closingRadical(node: Element): string {
 
 /**
  * Middle string for radicals in Nemeth.
+ *
  * @param node The radical node.
- * @return The middle string.
+ * @returns The middle string.
  */
 export function indexRadical(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX);
@@ -146,8 +155,9 @@ export function indexRadical(node: Element): string {
 /**
  * Enlarges a fence operator. The enlargement indicator might need to be
  * interspersed if multiple neutral fences are used.
+ *
  * @param text The text representing the fence.
- * @return The fence with the enlargment indicator.
+ * @returns The fence with the enlargment indicator.
  */
 export function enlargeFence(text: string): string {
   const start = '⠠';
@@ -186,9 +196,10 @@ export const NUMBER_INHIBITORS_: SemanticType[] = [
 /**
  * Checks if a Nemeth number indicator has to be propagated beyond the node's
  * parent.
+ *
  * @param node The node which can get a number indicator.
  * @param info True if we are in an enclosed list.
- * @return True if parent is a relation, punctuation or application or
+ * @returns True if parent is a relation, punctuation or application or
  *     a negative sign.
  */
 export function checkParent_(
@@ -222,9 +233,10 @@ export function checkParent_(
 
 /**
  * Propagates annotation for the Nemeth number indicator.
+ *
  * @param node The semantic node.
  * @param.
- * @return Info pair consisting of a string and the updated
+ * @returns Info pair consisting of a string and the updated
  *     information object.
  */
 export function propagateNumber(
@@ -266,9 +278,10 @@ register(
 /**
  * Iterates over the list of relation nodes and intersperses Braille spaces if
  * necessary.
+ *
  * @param nodes A node array.
  * @param context A context string.
- * @return A closure that returns
+ * @returns A closure that returns
  *     the content of the next content node. Returns only context string if list
  *     is exhausted.
  */
@@ -325,9 +338,10 @@ export function relationIterator(
 /**
  * Iterates over the list of juxtapositions and inserts spaces between two
  * numbers.
+ *
  * @param nodes A node array.
  * @param context A context string.
- * @return A closure that returns
+ * @returns A closure that returns
  *     the content of the next content node. Returns only context string if list
  *     is exhausted.
  */

@@ -18,8 +18,7 @@
 //
 
 /**
- * @fileoverview Abstract classes of generalised trie nodes.
- *
+ * @file Abstract classes of generalised trie nodes.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -137,7 +136,7 @@ export class StaticTrieNode extends AbstractTrieNode<Node> {
   }
 
   /**
-   * @return The speech rule of the node.
+   * @returns The speech rule of the node.
    */
   public getRule(): SpeechRule | null {
     return this.rule_;

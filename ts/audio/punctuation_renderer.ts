@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview A simple audio renderer that interprets pauses of varying
+ * @file A simple audio renderer that interprets pauses of varying
  *     length as punctuation.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -69,8 +68,9 @@ export class PunctuationRenderer extends AbstractAudioRenderer {
 
   /**
    * Transforms numeric pauses into alpha versions.
+   *
    * @param pause The pause length.
-   * @return The alpha equivalent.
+   * @returns The alpha equivalent.
    */
   public pause(pause: AudioUtil.PauseValue): string {
     let newPause;

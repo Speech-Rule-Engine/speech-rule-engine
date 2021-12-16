@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Highlighter for native MathML implementations that fully
+ * @file Highlighter for native MathML implementations that fully
  * support CSS.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

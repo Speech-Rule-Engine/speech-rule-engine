@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with embellished fences.
- *
+ * @file Specialist computations to deal with embellished fences.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -84,8 +83,9 @@ export class CaseEmbellished extends AbstractEnrichCase {
    * Applicability test of the case. This method also prevents walking
    * embellished punctuations twice as they might have already been walked as
    * content nodes.
+   *
    * @param semantic The semantic node.
-   * @return True if case is applicable.
+   * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
     return !!(
@@ -99,8 +99,9 @@ export class CaseEmbellished extends AbstractEnrichCase {
   /**
    * Creates an empty semantic node with an associated empty mrow MathML
    * element.
+   *
    * @param id The id number of the node.
-   * @return The new empty node.
+   * @returns The new empty node.
    */
   private static makeEmptyNode_(id: number): SemanticNode {
     const mrow = DomUtil.createElement('mrow');
@@ -112,6 +113,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
 
   /**
    * Collates the id numbers of the fenced node.
+   *
    * @param fence The fence expression.
    * @param ids The list of id numbers.
    */
@@ -222,7 +224,8 @@ export class CaseEmbellished extends AbstractEnrichCase {
 
   /**
    * Rewrites the MathML node with embellished fences.
-   * @return The new MathML element.
+   *
+   * @returns The new MathML element.
    */
   private rewrite_(): Element {
     let currentNode = this.semantic;
@@ -270,9 +273,10 @@ export class CaseEmbellished extends AbstractEnrichCase {
 
   /**
    * Treatment of special cases like msubsup and rewritten mmultiscripts.
+   *
    * @param semantic The current semantic node.
    * @param mml The MathML node associated with the semantic node.
-   * @return The next semantic node to be rewritten, if
+   * @returns The next semantic node to be rewritten, if
    *     the original semantic node was a special case.
    */
   private specialCase_(semantic: SemanticNode, mml: Element): SemanticNode {
@@ -315,7 +319,8 @@ export class CaseEmbellished extends AbstractEnrichCase {
 
   /**
    * Introduces a new layer if necessary before rewriting the fence.
-   * @return The node representing the active layer.
+   *
+   * @returns The node representing the active layer.
    */
   private introduceNewLayer_(): Element {
     const fullOfence = this.fullFence(this.ofenceMml);
@@ -340,8 +345,9 @@ export class CaseEmbellished extends AbstractEnrichCase {
 
   /**
    * Retrieves the original embellished fence for the given fence.
+   *
    * @param fence A simple fence.
-   * @return The embellished version of that fence. Can be the fence
+   * @returns The embellished version of that fence. Can be the fence
    *     itself if it was not embellished.
    */
   private fullFence(fence: Element): Element {

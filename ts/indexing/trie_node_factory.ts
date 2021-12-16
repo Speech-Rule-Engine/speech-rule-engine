@@ -18,8 +18,7 @@
 //
 
 /**
- * @fileoverview Factory for trie nodes and concrete classes of trie nodes.
- *
+ * @file Factory for trie nodes and concrete classes of trie nodes.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -34,10 +33,11 @@ import { TrieNode, TrieNodeKind } from './trie_node';
 
 /**
  * Generates a trie node of a given kind in the given rule store.
+ *
  * @param kind The kind of trie nodes.
  * @param constraint The constraint the trie node is generated for.
  * @param context A function context.
- * @return The newly generated trie node.
+ * @returns The newly generated trie node.
  */
 export function getNode(
   kind: TrieNodeKind,
@@ -89,8 +89,9 @@ const comparator: { [operator: string]: (x: number, y: number) => boolean } = {
 
 /**
  * Generates more refined tests depending on the type of static constraint.
+ *
  * @param constraint A static constraint.
- * @return An efficient test function in lieu of the
+ * @returns An efficient test function in lieu of the
  *    xpath expression.
  */
 // TODO (TS): Improve methods by testing for Element type.

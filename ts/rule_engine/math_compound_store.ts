@@ -15,10 +15,9 @@
 // limitations under the License.
 
 /**
- * @fileoverview Compound rule store that provides a single entry for all the
+ * @file Compound rule store that provides a single entry for all the
  *    simple stores holding the basic components of math expressions: Unicode
  *    symbols and functions.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -45,6 +44,7 @@ let siPrefixes: SiJson = {};
 
 /**
  * Sets the current Si Prefixes.
+ *
  * @param prefixes The prefixes.
  */
 export function setSiPrefixes(prefixes: SiJson) {
@@ -59,6 +59,7 @@ const subStores_: { [key: string]: MathSimpleStore } = {};
 /**
  * Function creates a rule store in the compound store for a particular
  * string, and populates it with a set of rules.
+ *
  * @param name Name of the rule.
  * @param str String used as key to refer to the rule store
  * precondition and constr
@@ -79,6 +80,7 @@ export function defineRules(
 
 /**
  * Creates a single rule from strings.
+ *
  * @param name Name of the rule.
  * @param domain The domain axis.
  * @param style The style axis.
@@ -109,6 +111,7 @@ export function defineRule(
 
 /**
  * Makes a speech rule for Unicode characters from its JSON representation.
+ *
  * @param json JSON object of the speech rules.
  */
 export function addSymbolRules(json: UnicodeJson) {
@@ -121,6 +124,7 @@ export function addSymbolRules(json: UnicodeJson) {
 
 /**
  * Makes a speech rule for Function names from its JSON representation.
+ *
  * @param json JSON object of the speech rules.
  */
 export function addFunctionRules(json: UnicodeJson) {
@@ -137,6 +141,7 @@ export function addFunctionRules(json: UnicodeJson) {
 
 /**
  * Makes speech rules for Unit descriptors from its JSON representation.
+ *
  * @param json JSON object of the speech rules.
  */
 export function addUnitRules(json: UnicodeJson) {
@@ -153,6 +158,7 @@ export function addUnitRules(json: UnicodeJson) {
 /**
  * Makes speech rules for SI units from the JSON representation of the base
  * unit.
+ *
  * @param json JSON object of the base speech rules.
  */
 export function addSiUnitRules(json: UnicodeJson) {
@@ -181,10 +187,11 @@ export function addSiUnitRules(json: UnicodeJson) {
 
 /**
  * Retrieves a rule for the given node if one exists.
+ *
  * @param node A node.
  * @param dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
- * @return The speech rule if it exists.
+ * @returns The speech rule if it exists.
  */
 export function lookupRule(node: string, dynamic: DynamicCstr): SimpleRule {
   const store = subStores_[node];
@@ -193,8 +200,9 @@ export function lookupRule(node: string, dynamic: DynamicCstr): SimpleRule {
 
 /**
  * Retrieves the category of a character or string if it has one.
+ *
  * @param character The character or string.
- * @return The category if it exists.
+ * @returns The category if it exists.
  */
 export function lookupCategory(character: string): string {
   const store = subStores_[character];
@@ -203,10 +211,11 @@ export function lookupCategory(character: string): string {
 
 /**
  * Looks up a rule for a given string and executes its actions.
+ *
  * @param text The text to be translated.
  * @param dynamic Additional dynamic
  *     constraints. These are matched against properties of a rule.
- * @return The string resulting from the action of speech rule.
+ * @returns The string resulting from the action of speech rule.
  */
 export function lookupString(text: string, dynamic: DynamicCstr): string {
   const rule = lookupRule(text, dynamic);
@@ -220,8 +229,9 @@ Engine.getInstance().evaluator = lookupString;
 /**
  * Collates information on dynamic constraint values of the currently active
  * trie of the engine.
+ *
  * @param opt_info Initial dynamic constraint information.
- * @return The collated information.
+ * @returns The collated information.
  */
 export function enumerate(info: { [key: string]: any } = {}): {
   [key: string]: any;
@@ -236,6 +246,9 @@ export function enumerate(info: { [key: string]: any } = {}): {
   return info;
 }
 
+/**
+ * @param dynamic
+ */
 function enumerate_(
   dynamic: string[],
   info: { [key: string]: any }
@@ -251,6 +264,7 @@ function enumerate_(
 /**
  * Adds a single speech rule for Unit descriptors from its JSON
  * representation.
+ *
  * @param json JSON object of the speech rules.
  */
 function addUnitRules_(json: UnicodeJson) {
@@ -266,8 +280,9 @@ function addUnitRules_(json: UnicodeJson) {
 /**
  * Changes the internal locale for the rule definitions if the given JSON
  * element is a locale instruction.
+ *
  * @param json JSON object of a speech rules.
- * @return True if the locale was changed.
+ * @returns True if the locale was changed.
  */
 function changeLocale_(json: UnicodeJson): boolean {
   if (!json['locale'] && !json['modality']) {
@@ -280,8 +295,9 @@ function changeLocale_(json: UnicodeJson): boolean {
 
 /**
  * Retrieves a substore for a key. Creates a new one if it does not exist.
+ *
  * @param key The key for the store.
- * @return The rule store.
+ * @returns The rule store.
  */
 function getSubStore_(key: string): MathSimpleStore {
   let store = subStores_[key];
@@ -296,6 +312,8 @@ function getSubStore_(key: string): MathSimpleStore {
 
 /**
  * Transfers parameters of the compound store to a substore.
+ *
+ * @param store
  * @param opt_cat The category if it exists.
  */
 function setupStore_(store: MathSimpleStore, opt_cat?: string) {

@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Class for SSML rendering of descriptions.
- *
+ * @file Class for SSML rendering of descriptions.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

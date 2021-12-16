@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview An interface definition of a speech rule.
+ * @file An interface definition of a speech rule.
  *
  * A speech rule is a data structure along with supporting methods that
  * stipulates how to transform a tree structure such as XML, a browser DOM, or
@@ -41,9 +41,12 @@ export class SpeechRule {
 
   /**
    * Creates a speech rule with precondition, actions and admin information.
+   *
    * @param name The name of the rule.
    * @param dynamic Dynamic constraint annotations of the rule.
    * @param prec Precondition of the rule.
+   * @param dynamicCstr
+   * @param precondition
    * @param action Action of the speech rule.
    */
   constructor(
@@ -82,6 +85,7 @@ export enum ActionType {
 // TODO (TS):
 /**
  * Maps a string to a valid speech rule type.
+ *
  * @param str Input string.
  */
 function actionFromString(str: string): ActionType {
@@ -101,7 +105,9 @@ function actionFromString(str: string): ActionType {
 
 /**
  * Maps a speech rule type to a human-readable string.
- * @return Output string.
+ *
+ * @param speechType
+ * @returns Output string.
  */
 function actionToString(speechType: ActionType): string {
   switch (speechType) {
@@ -152,8 +158,9 @@ export class Component {
   // TODO (MOSS) remove!
   /**
    * Processes the grammar annotations of a rule.
+   *
    * @param grammar The grammar annotations.
-   * @return The grammar structure.
+   * @returns The grammar structure.
    */
   public static grammarFromString(grammar: string): Grammar.State {
     return Grammar.Grammar.parseInput(grammar);
@@ -164,7 +171,7 @@ export class Component {
    * Component object.
    *
    * @param input The input string.
-   * @return The resulting component.
+   * @returns The resulting component.
    */
   public static fromString(input: string): Component {
     // The output JSON; initialized with action type.
@@ -223,8 +230,9 @@ export class Component {
 
   /**
    * Adds a single attribute to the component.
+   *
    * @param attrs String representation of an attribute.
-   * @return The parsed
+   * @returns The parsed
    *     attributes, possibly containing the grammar.
    */
   public static attributesFromString(attrs: string): {
@@ -278,7 +286,7 @@ export class Component {
   }
 
   /**
-   * @return String representation of the grammar.
+   * @returns String representation of the grammar.
    */
   public grammarToString(): string {
     return this.getGrammar().join(':');
@@ -286,7 +294,8 @@ export class Component {
 
   /**
    * Transforms the grammar of an object into a list of strings.
-   * @return List of translated attribute:value strings.
+   *
+   * @returns List of translated attribute:value strings.
    */
   public getGrammar(): string[] {
     const attribs = [];
@@ -303,7 +312,7 @@ export class Component {
   }
 
   /**
-   * @return String representation of the attributes.
+   * @returns String representation of the attributes.
    */
   public attributesToString(): string {
     const attribs = this.getAttributes();
@@ -316,7 +325,8 @@ export class Component {
 
   /**
    * Transforms the attributes of an object into a list of strings.
-   * @return List of translated attribute:value strings.
+   *
+   * @returns List of translated attribute:value strings.
    */
   public getAttributes(): string[] {
     const attribs = [];
@@ -336,8 +346,9 @@ type Attributes = { [key: string]: string };
 export class Action {
   /**
    * Parses an input string into a speech rule class object.
+   *
    * @param input The input string.
-   * @return The resulting object.
+   * @returns The resulting object.
    */
   public static fromString(input: string): Action {
     const comps = splitString(input, ';')
@@ -359,6 +370,7 @@ export class Action {
 
   /**
    * A speech rule is a collection of speech components.
+   *
    * @param components The input rule.
    */
   constructor(public components: Component[]) {}
@@ -420,9 +432,10 @@ export class Precondition {
   /**
    * Computes a base priority of a constraint by matching against an ordered
    * list of regular expressions.
+   *
    * @param constr The constraint.
    * @param priorities The list of regular expressions.
-   * @return The computer priority.
+   * @returns The computer priority.
    */
   private static constraintValue(constr: string, priorities: RegExp[]): number {
     for (let i = 0, regexp; (regexp = priorities[i]); i++) {
@@ -443,6 +456,7 @@ export class Precondition {
 
   /**
    * Constructs a valid precondition for a speech rule.
+   *
    * @param query A node selector function or xpath expression.
    * @param cstr A rest list of constraint functions.
    */
@@ -459,7 +473,7 @@ export class Precondition {
    *
    *       Query strength * 100 + Specialisation strength * 10.
    *
-   * @return The priority.
+   * @returns The priority.
    */
   private calculatePriority(): number {
     const query = Precondition.constraintValue(
@@ -480,6 +494,7 @@ export class Precondition {
 
 /**
  * Error object for signaling parsing errors.
+ *
  * @param msg The error message.
  */
 export class OutputError extends SREError {
@@ -502,9 +517,10 @@ export class OutputError extends SREError {
  * a double quoted string. For example, splitting
  * '[t] "matrix; 3 by 3"; [n] ./*[1]' with separators ';' would yield
  * ['[t] "matrix; 3 by 3"', ' [n] ./*[1]'].
+ *
  * @param str String to be split.
  * @param sep Separator symbol.
- * @return A list of single component strings.
+ * @returns A list of single component strings.
  */
 function splitString(str: string, sep: string): string[] {
   const strList = [];

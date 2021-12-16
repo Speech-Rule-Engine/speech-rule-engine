@@ -14,10 +14,9 @@
 // limitations under the License.
 
 /**
- * @fileoverview Outsourcing of heuristics that the processor can call depending
+ * @file Outsourcing of heuristics that the processor can call depending
  *     on the selected settings. This is effectively a namespace for optional
  *     heuristics.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -39,6 +38,9 @@ import * as SemanticUtil from './semantic_util';
 SemanticHeuristics.add(
   new SemanticTreeHeuristic('combine_juxtaposition', combineJuxtaposition)); 
 
+/**
+ * @param root
+ */
 function combineJuxtaposition(root: SemanticNode) {
   for (
     let i = root.childNodes.length - 1, child;
@@ -247,9 +249,10 @@ new SemanticTreeHeuristic(
 /**
  * Rewrites a partition with respect to explicit juxtapositions into one where
  * all multiple operators are combined to post or prefix operators.
+ *
  * @param partition The partition wrt. invisible
  *     times.
- * @return The partition with collated pre/postfix
+ * @returns The partition with collated pre/postfix
  *     operators.
  */
 function juxtapositionPrePost(
@@ -293,11 +296,12 @@ function juxtapositionPrePost(
 
 /**
  * Converts lists of invisible times operators into pre/postfix operatiors.
+ *
  * @param collect The collected list of invisible
  *     times.
  * @param next The next component element.
  * @param comps The previous components.
- * @return The operator that needs to be taken care of.
+ * @returns The operator that needs to be taken care of.
  */
 function convertPrePost(
   collect: SemanticNode[],
@@ -352,7 +356,7 @@ function convertPrePost(
  * @param elements The list of elements
  *     between the operators in ops. These are lists of not yet combined
  *     elements.
- * @return The resulting lists where implicit and
+ * @returns The resulting lists where implicit and
  *     explicitly given invisible times are combined as much as possible.
  */
 function recurseJuxtaposition(

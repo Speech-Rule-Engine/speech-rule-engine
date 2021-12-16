@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Default mappings for semantic interpretation.
- *
+ * @file Default mappings for semantic interpretation.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -33,9 +32,10 @@ export class SemanticDefault {
 
   /**
    * Generates the key from symbol and font.
+   *
    * @param symbol The symbol or text content of a node.
    * @param font The name of its font if it exists.
-   * @return A uniform key for the default mapping.
+   * @returns A uniform key for the default mapping.
    */
   public static key(symbol: string, font: SemanticFont): string {
     return font ? symbol + ':' + font : symbol;
@@ -44,6 +44,7 @@ export class SemanticDefault {
   /**
    * Adds a semantic meaning to the structure. It will overwrite existing
    * content.
+   *
    * @param symbol A symbol.
    * @param meaning It's semantic meaning.
    */
@@ -53,6 +54,7 @@ export class SemanticDefault {
 
   /**
    * Adds a semantic node to the default structure.
+   *
    * @param node A semantic node.
    */
   public addNode(node: SemanticNode) {
@@ -61,9 +63,10 @@ export class SemanticDefault {
 
   /**
    * Retrieves a semantic meaning for a symbol and its font.
+   *
    * @param symbol A symbol.
    * @param font The font of the symbol.
-   * @return The semantic meaning of the symbol if it is in
+   * @returns The semantic meaning of the symbol if it is in
    *     the structure.
    */
   public retrieve(symbol: string, font: SemanticFont): SemanticMeaning {
@@ -72,8 +75,9 @@ export class SemanticDefault {
 
   /**
    * Retrieves a semantic node to the default structure.
+   *
    * @param node A semantic node.
-   * @return The semantic meaning of the symbol if it is in
+   * @returns The semantic meaning of the symbol if it is in
    *     the structure.
    */
   public retrieveNode(node: SemanticNode): SemanticMeaning {
@@ -81,7 +85,7 @@ export class SemanticDefault {
   }
 
   /**
-   * @return Size of the default mapping.
+   * @returns Size of the default mapping.
    */
   public size(): number {
     return Object.keys(this.map).length;
@@ -95,13 +99,14 @@ abstract class SemanticCollator<T> {
   public map: { [key: string]: T[] } = {};
 
   /**
-   * @return An empty copy of the collator.
+   * @returns An empty copy of the collator.
    */
   public abstract copyCollator(): SemanticCollator<T>;
 
   /**
    * Adds a semantic node to the structure by appending it to the already
    * existing one for a particular symbol.
+   *
    * @param symbol A symbol.
    * @param entry A semantic entry.
    */
@@ -116,15 +121,17 @@ abstract class SemanticCollator<T> {
 
   /**
    * Adds a semantic node to the default structure.
+   *
    * @param node A semantic node.
    */
   public abstract addNode(node: SemanticNode): void;
 
   /**
    * Retrieves a semantic meaning for a symbol and its font.
+   *
    * @param symbol A symbol.
    * @param font The font of the symbol.
-   * @return A list of semantic nodes.
+   * @returns A list of semantic nodes.
    */
   public retrieve(symbol: string, font: SemanticFont): T[] {
     return this.map[SemanticDefault.key(symbol, font)];
@@ -132,8 +139,9 @@ abstract class SemanticCollator<T> {
 
   /**
    * Retrieves a semantic node to the default structure.
+   *
    * @param node A semantic node.
-   * @return The semantic meaning of the symbol if it is in
+   * @returns The semantic meaning of the symbol if it is in
    *     the structure.
    */
   public retrieveNode(node: SemanticNode): T[] {
@@ -141,7 +149,7 @@ abstract class SemanticCollator<T> {
   }
 
   /**
-   * @return A copy of the collator. Note, this is NOT a
+   * @returns A copy of the collator. Note, this is NOT a
    *     deep copy!
    */
   public copy(): SemanticCollator<T> {
@@ -166,7 +174,8 @@ abstract class SemanticCollator<T> {
   /**
    * Minimizes a semantic collator, removing every non-ambiguous entry.
    * As opposed to minimize this is non-destructive.
-   * @return The new collator.
+   *
+   * @returns The new collator.
    */
   public minimalCollator(): SemanticCollator<T> {
     const collator = this.copy();
@@ -179,7 +188,7 @@ abstract class SemanticCollator<T> {
   }
 
   /**
-   * @return True if the collator is multi-valued.
+   * @returns True if the collator is multi-valued.
    */
   public isMultiValued(): boolean {
     for (const key in this.map) {
@@ -191,7 +200,7 @@ abstract class SemanticCollator<T> {
   }
 
   /**
-   * @return True if the collator is empty.
+   * @returns True if the collator is empty.
    */
   public isEmpty(): boolean {
     return !Object.keys(this.map).length;
@@ -240,7 +249,7 @@ export class SemanticNodeCollator extends SemanticCollator<SemanticNode> {
   }
 
   /**
-   * @return Collation of the meaning of the nodes.
+   * @returns Collation of the meaning of the nodes.
    */
   public collateMeaning(): SemanticMeaningCollator {
     const collator = new SemanticMeaningCollator();
@@ -322,7 +331,8 @@ export class SemanticMeaningCollator extends SemanticCollator<SemanticMeaning> {
 
   /**
    * Derives a default mapping from the collator.
-   * @return The unambiguous default mapping.
+   *
+   * @returns The unambiguous default mapping.
    */
   public default(): SemanticDefault {
     const def = new SemanticDefault();
@@ -337,7 +347,8 @@ export class SemanticMeaningCollator extends SemanticCollator<SemanticMeaning> {
   /**
    * Derives a default mapping from the collator if there is a possible
    * reduction.
-   * @return The unambiguous default mapping. Null, if no
+   *
+   * @returns The unambiguous default mapping. Null, if no
    *     reduction can be achieved.
    */
   public newDefault(): SemanticDefault | null {

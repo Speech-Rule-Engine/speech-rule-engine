@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for mathspeak rules.
+ * @file Utility functions for mathspeak rules.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -26,8 +26,9 @@ import * as MathspeakUtil from './mathspeak_util';
 
 /**
  * Computes baseline prefix in verbose mode.
+ *
  * @param node Subscript node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function baselineVerbose(node: Element): string {
   const baseline = MathspeakUtil.baselineVerbose(node);
@@ -36,8 +37,9 @@ export function baselineVerbose(node: Element): string {
 
 /**
  * Computes baseline prefix in brief mode.
+ *
  * @param node Subscript node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function baselineBrief(node: Element): string {
   const baseline = MathspeakUtil.baselineBrief(node);
@@ -46,8 +48,9 @@ export function baselineBrief(node: Element): string {
 
 /**
  * Computes left superscript prefix in verbose mode.
+ *
  * @param node Tensor node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function leftSuperscriptVerbose(node: Element): string {
   const leftIndex = MathspeakUtil.superscriptVerbose(node);
@@ -56,8 +59,9 @@ export function leftSuperscriptVerbose(node: Element): string {
 
 /**
  * Computes left subscript prefix in verbose mode.
+ *
  * @param node Tensor node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function leftSubscriptVerbose(node: Element): string {
   const leftIndex = MathspeakUtil.subscriptVerbose(node);
@@ -66,8 +70,9 @@ export function leftSubscriptVerbose(node: Element): string {
 
 /**
  * Computes left superscript prefix in brief mode.
+ *
  * @param node Tensor node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function leftSuperscriptBrief(node: Element): string {
   const leftIndex = MathspeakUtil.superscriptBrief(node);
@@ -76,8 +81,9 @@ export function leftSuperscriptBrief(node: Element): string {
 
 /**
  * Computes left subscript prefix in brief mode.
+ *
  * @param node Tensor node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function leftSubscriptBrief(node: Element): string {
   const leftIndex = MathspeakUtil.subscriptBrief(node);

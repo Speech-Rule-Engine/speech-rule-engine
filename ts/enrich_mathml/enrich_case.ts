@@ -14,14 +14,15 @@
 // limitations under the License.
 
 /**
- * @fileoverview Procedure for special case in semantic enrichment of MathML.
+ * @file Procedure for special case in semantic enrichment of MathML.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
 export interface EnrichCase {
   /**
    * Retrieves the MathML node that is the result of the computation.
-   * @return The enriched MathML node.
+   *
+   * @returns The enriched MathML node.
    */
   getMathml(): Element;
 }

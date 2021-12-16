@@ -14,11 +14,10 @@
 // limitations under the License.
 
 /**
- * @fileoverview Inject semantic information into MathML
+ * @file Inject semantic information into MathML
  *
  * Take a MathML element, compute the semantic tree and reinject the semantic
  * information into the MathML.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -101,9 +100,10 @@ export const EnrichAttributes: string[] = [
  *
  * NOTE: This is destructive on the MathML expression underlying the semantic
  *     tree! Make sure to copy the original, if necessary!
+ *
  * @param mml The MathML element.
  * @param semantic The semantic tree.
- * @return The modified MathML element.
+ * @returns The modified MathML element.
  */
 export function enrich(mml: Element, semantic: SemanticTree): Element {
   // The first line is only to preserve output. This should eventually be
@@ -128,8 +128,9 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
  * expression.
  *
  * Note that the original MathML nodes are cloned!
+ *
  * @param semantic The semantic tree.
- * @return The enriched MathML element.
+ * @returns The enriched MathML element.
  */
 export function walkTree(semantic: SemanticNode): Element {
   const specialCase = getCase(semantic);
@@ -204,7 +205,7 @@ export function walkTree(semantic: SemanticNode): Element {
  *     element.
  * @param semantic The semantic node for which a new layer
  *     is introduced.
- * @return The node containing the children.
+ * @returns The node containing the children.
  */
 export function introduceNewLayer(
   children: Element[],
@@ -239,10 +240,11 @@ export function introduceNewLayer(
  * Introduces a new layer above an LCA, in case the path to root was pruned due
  * to LCA being an actual inner child node.
  * Possibly rewrites the root node (math tag) in case it is the lca.
+ *
  * @param mrow The empty mrow node for the new layer.
  * @param lca The actual lca.
  * @param children The children that contain the lca.
- * @return The new introduced mrow node, or possibly the math node.
+ * @returns The new introduced mrow node, or possibly the math node.
  */
 export function introduceLayerAboveLca(
   mrow: Element,
@@ -273,6 +275,7 @@ export function introduceLayerAboveLca(
 
 /**
  * Moves semantic attributes from one node to another.
+ *
  * @param oldNode The node whose semantic attributes are removed.
  * @param newNode The node which receives the semantic attributes.
  */
@@ -289,9 +292,10 @@ export function moveSemanticAttributes_(oldNode: Element, newNode: Element) {
  * Retrieves a minimal subset of children of the node that contain all the nodes
  * in the newChildren list. If there are elements in newChildren not in the
  * children of node, these are ignored.
+ *
  * @param node The node whose children are picked.
  * @param newChildren The list of new children.
- * @return The minimal subset.
+ * @returns The minimal subset.
  */
 export function childrenSubset_(
   node: Element,
@@ -314,10 +318,11 @@ export function childrenSubset_(
  * Collates the childnodes in the light of potential contractions of the combine
  * juxtaposition heuristic. This extends the list of know children by those
  * deeper in the tree.
+ *
  * @param node The node whose children are picked.
  * @param children The current list of children to be merged.
  * @param semantic The semantic node.
- * @return The collated list of children to be merged.
+ * @returns The collated list of children to be merged.
  */
 export function collateChildNodes_(
   node: Element,
@@ -372,8 +377,9 @@ export function collateChildNodes_(
  * Collects child nodes that belong to a juxtaposition tree, but that are
  * embedded deeper in the tree. The algorithm descends through nodes that are
  * not semantically enriched.
+ *
  * @param node The top level node.
- * @return The lower level children.
+ * @returns The lower level children.
  */
 export function collectChildNodes_(node: Element): Element[] {
   const collect = [];
@@ -394,6 +400,7 @@ export function collectChildNodes_(node: Element): Element[] {
 
 /**
  * Merges a list of new children with the children of the given node.
+ *
  * @param node The node whose children are merged.
  * @param newChildren The list of children to be merged.
  * @param semantic The semantic node whose children are
@@ -449,6 +456,7 @@ export function mergeChildren_(
 
 /**
  * Inserts a new child into the mml tree at the right position.
+ *
  * @param node The parent node.
  * @param oldChild The reference where newChild is inserted.
  * @param newChild The new child to be inserted.
@@ -481,9 +489,10 @@ export function insertNewChild_(
 
 /**
  * Checks if one node is a proper descendant of another.
+ *
  * @param child The potential descendant node.
  * @param node The potential ancestor node.
- * @return True if child is a descendant of node.
+ * @returns True if child is a descendant of node.
  */
 export function isDescendant_(child: Node, node: Node): boolean {
   if (!child) {
@@ -502,9 +511,10 @@ export function isDescendant_(child: Node, node: Node): boolean {
  * Checks if both old and new Node are invisible function applications and if
  * the new node has been explicitly added. If true it replaces the old for the
  * new node destructively.
+ *
  * @param oldNode The old node.
  * @param newNode The new, possibly added node.
- * @return True if condition holds.
+ * @returns True if condition holds.
  */
 export function functionApplication_(
   oldNode: Element,
@@ -540,8 +550,9 @@ export enum lcaType {
 /**
  * Finds the least common ancestor for a list of MathML nodes in the MathML
  * expression.
+ *
  * @param children A list of MathML nodes.
- * @return Structure indicating if the node representing the LCA is valid and
+ * @returns Structure indicating if the node representing the LCA is valid and
  *     the least common ancestor if it exits.
  */
 export function mathmlLca_(children: Element[]): {
@@ -583,7 +594,10 @@ export function mathmlLca_(children: Element[]): {
  * first in the list), if the LCA is actually an member of the children list.
  * It then returns the shortend path, from the root element to the potential
  * LCA.
- * @return The pruned path.
+ *
+ * @param path
+ * @param children
+ * @returns The pruned path.
  */
 export function prunePath_(path: Element[], children: Element[]): Element[] {
   let i = 0;
@@ -595,8 +609,9 @@ export function prunePath_(path: Element[], children: Element[]): Element[] {
 
 /**
  * Finds the first elements in a list of nodes that has a parent pointer.
+ *
  * @param nodes A list of elements.
- * @return The first element node with a parent pointer if it exists.
+ * @returns The first element node with a parent pointer if it exists.
  */
 export function attachedElement_(nodes: Element[]): Element {
   let count = 0;
@@ -613,10 +628,11 @@ export function attachedElement_(nodes: Element[]): Element {
 /**
  * Computes the path from a node in the MathML tree to the root or until the
  * optional test fires.
+ *
  * @param node The tree node from where to start.
  * @param opt_test The optional test that
  *     stops path computation if it fires.
- * @return Path from root to node. That is, node is the last
+ * @returns Path from root to node. That is, node is the last
  *     element in the array and array contains at least the original node.
  */
 export function pathToRoot_(
@@ -637,9 +653,10 @@ export function pathToRoot_(
  * paths of the original nodes to the LCA and sees if they have no siblings.  In
  * case they have siblings, we can not simply replace the LCA with the node
  * comprising the children.
+ *
  * @param left Left path element.
  * @param right Right path element.
- * @return True if valid LCA. False if either left or right empty or
+ * @returns True if valid LCA. False if either left or right empty or
  *     there exist siblings further to the left or right.
  */
 export function validLca_(left: Element, right: Element): boolean {
@@ -650,8 +667,9 @@ export function validLca_(left: Element, right: Element): boolean {
 /**
  * Computes the empty layout node that is the highest parent of the given node
  * and that only has one child.
+ *
  * @param newNode The node currently under consideration.
- * @return The parent node.
+ * @returns The parent node.
  */
 export function ascendNewNode(newNode: Element): Element {
   while (!SemanticUtil.hasMathTag(newNode) && unitChild_(newNode)) {
@@ -663,8 +681,9 @@ export function ascendNewNode(newNode: Element): Element {
 /**
  * Descends a node as long as it only contains single empty tags, that do not
  * have semantic annotations already, while ignoring tags like merror, etc.
+ *
  * @param node The node from which to descend.
- * @return The inner most node with empty tag without semantic
+ * @returns The inner most node with empty tag without semantic
  *    annotations.
  */
 export function descendNode_(node: Element): Element {
@@ -691,8 +710,9 @@ export function descendNode_(node: Element): Element {
 /**
  * Checks if the node is a unit child, annotation it is the only child of its
  * parent modulo ignored nodes.
+ *
  * @param node The node to be tested.
- * @return True if node is a legal unit child.
+ * @returns True if node is a legal unit child.
  */
 export function unitChild_(node: Element): boolean {
   const parent = parentNode_(node);
@@ -707,8 +727,9 @@ export function unitChild_(node: Element): boolean {
 /**
  * Checks recursively if the node is an element that can be ignored, i.e., only
  * has empty and ignored tags.
+ *
  * @param node The node to be tested.
- * @return True if the node is ignorable.
+ * @returns True if the node is ignorable.
  */
 export function isIgnorable_(node: Element): boolean {
   if (node.nodeType !== DomUtil.NodeType.ELEMENT_NODE) {
@@ -731,8 +752,9 @@ export function isIgnorable_(node: Element): boolean {
 
 /**
  * Returns the parent node of the element in the correct type.
+ *
  * @param element The parent of the element.
- * @return Parent element.
+ * @returns Parent element.
  */
 export function parentNode_(element: Element): Element {
   return element.parentNode as Element;
@@ -741,6 +763,7 @@ export function parentNode_(element: Element): Element {
 /**
  * Adds a collapsed attribute to the given node, according to the collapsed
  * structure.
+ *
  * @param node The MathML node.
  * @param collapsed The collapsed structure
  *    annotations.
@@ -752,8 +775,9 @@ export function addCollapsedAttribute(node: Element, collapsed: Sexp) {
 
 /**
  * Clones a content node.
+ *
  * @param content The content node.
- * @return The corresponding MathML node.
+ * @returns The corresponding MathML node.
  */
 export function cloneContentNode(content: SemanticNode): Element {
   if (content.mathml.length) {
@@ -768,8 +792,9 @@ export function cloneContentNode(content: SemanticNode): Element {
 
 /**
  * Concatenates node ids into a comma separated lists.
+ *
  * @param nodes The list of nodes.
- * @return The comma separated lists.
+ * @returns The comma separated lists.
  */
 export function makeIdList(nodes: SemanticNode[]): string {
   return nodes
@@ -781,6 +806,7 @@ export function makeIdList(nodes: SemanticNode[]): string {
 
 /**
  * Sets semantic attributes in a MathML node.
+ *
  * @param mml The MathML node.
  * @param semantic The semantic tree node.
  */
@@ -805,6 +831,7 @@ export function setAttributes(mml: Element, semantic: SemanticNode) {
 /**
  * Sets postfix attributes to surface properties via suffixes. Examples: link,
  * image, etc.
+ *
  * @param mml The MathML node.
  * @param semantic The semantic tree node.
  */
@@ -823,8 +850,9 @@ export function setPostfix(mml: Element, semantic: SemanticNode) {
 
 /**
  * Rewrites an mfenced node to an mrow node.
+ *
  * @param mml The MathML node.
- * @return The rewritten element.
+ * @returns The rewritten element.
  */
 export function rewriteMfenced(mml: Element): Element {
   if (DomUtil.tagName(mml) !== 'MFENCED') {
@@ -846,8 +874,9 @@ export function rewriteMfenced(mml: Element): Element {
 /**
  * Makes a new MathML element for an invisible operator or one added
  * by mfenced.
+ *
  * @param operator The semantic node with the operator.
- * @return The newly created MathML element.
+ * @returns The newly created MathML element.
  */
 export function createInvisibleOperator_(operator: SemanticNode): Element {
   const moNode = DomUtil.createElement('mo');
@@ -860,6 +889,7 @@ export function createInvisibleOperator_(operator: SemanticNode): Element {
 
 /**
  * Adds a relevant operator attribute to the a list of content nodes.
+ *
  * @param semantic The semantic tree node.
  * @param content The list of content nodes.
  */
@@ -879,8 +909,9 @@ export function setOperatorAttribute_(
  * descends empty tags like mrow, ignoring ignore tags like merror, etc. as long
  * as there is a single non-trivial node. Returns the non-trivial node lowest in
  * the tree.
+ *
  * @param node The MathML element to process.
- * @return The innermost element node, which can be the original node
+ * @returns The innermost element node, which can be the original node
  *     itself.
  */
 export function getInnerNode(node: Element): Element {
@@ -911,6 +942,7 @@ export function getInnerNode(node: Element): Element {
 /**
  * Creates formatted output  for MathML and semantic tree expression.
  * REMARK: Helper function.
+ *
  * @param mml The original MathML expression.
  * @param expr The enriched MathML expression.
  * @param tree The semantic tree.
@@ -932,6 +964,7 @@ export function formattedOutput(
  * Prints formatted output for MathML and semantic tree expression. Depending on
  * the wiki flag it might wrap it into markup useful for GitHub wikis.
  * REMARK: Helper function.
+ *
  * @param element The original MathML expression.
  * @param name The name of the expression to be printed in the wiki.
  * @param wiki Flag to specify wiki output.
@@ -961,8 +994,9 @@ export function formattedOutput_(
  * overwrite or be shadowed by other attributes already in the node. For
  * example, with both PREFIX-attr and attr present, the latter is overwritten by
  * the operation.
+ *
  * @param mml The MathML node.
- * @return The MathML node with rewritten attributes.
+ * @returns The MathML node with rewritten attributes.
  */
 export function removeAttributePrefix(mml: string): string {
   return mml.toString().replace(new RegExp(ATTRIBUTE_PREFIX_, 'g'), '');
@@ -970,8 +1004,9 @@ export function removeAttributePrefix(mml: string): string {
 
 /**
  * Creates an data semantic attribute by adding the correct prefix.
+ *
  * @param attr The attribute.
- * @return The completed attribute.
+ * @returns The completed attribute.
  */
 // TODO (TS): Again this should have been return time Attribute
 export function addPrefix(attr: string): Attribute {
@@ -980,10 +1015,11 @@ export function addPrefix(attr: string): Attribute {
 
 /**
  * Collapses a punctuated node that only contains invisible separators.
+ *
  * @param semantic The punctuated node.
  * @param opt_children A list of children where the child
  * elements of the MathML are appended.
- * @return If the index node was a
+ * @returns If the index node was a
  *     dummy punctuation, i.e. consisted of more than one index, a list of
  *     strings for the collapsed structure is returned, otherwise the node id.
  */
@@ -1014,6 +1050,7 @@ export function collapsePunctuated(
 
 /**
  * Prints a list of nodes.
+ *
  * @param title A string to print first.
  * @param nodes A list of nodes.
  */

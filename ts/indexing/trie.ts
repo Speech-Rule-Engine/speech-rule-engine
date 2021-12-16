@@ -18,13 +18,12 @@
 //
 
 /**
- * @fileoverview Generalised trie for indexing speech rule.
+ * @file Generalised trie for indexing speech rule.
  *
  * As trie is a pure indexing structure, we currently assume that we will not
  * remove rules from the trie. I.e., if a rule is removed from a speech rule
  * store, we have to rebuild the trie. This is the same worst case complexity as
  * removing a single rule.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -42,8 +41,9 @@ export class Trie {
 
   /**
    * Compiles set of speech rules below a given node.
+   *
    * @param root The node considered as root.
-   * @return Set of speech rules in the trie.
+   * @returns Set of speech rules in the trie.
    */
   public static collectRules_(root: TrieNode): SpeechRule[] {
     const rules = [];
@@ -66,6 +66,7 @@ export class Trie {
 
   /**
    * Prints tree to a string.
+   *
    * @param node The current try node to print.
    * @param depth The current depth of the node.
    * @param str The string that has already been assembled.
@@ -86,8 +87,9 @@ export class Trie {
 
   /**
    * Computes the maximal order of the trie beneath the given node.
+   *
    * @param node The trie node considered as root.
-   * @return The order of the trie.
+   * @returns The order of the trie.
    */
   private static order_(node: TrieNode): number {
     const children = node.getChildren();
@@ -107,6 +109,7 @@ export class Trie {
 
   /**
    * Inserts a speech rule into the trie.
+   *
    * @param rule The speech rule to add.
    */
   public addRule(rule: SpeechRule) {
@@ -132,9 +135,10 @@ export class Trie {
   /**
    * Retrieves a set of speech rules that are applicable to a given XML node
    * wrt. to a dynamic constraint.
+   *
    * @param xml An XML node.
    * @param dynamic A dynamic properties list.
-   * @return The speech rules that can be applied to the
+   * @returns The speech rules that can be applied to the
    *     given node.
    */
   public lookupRules(xml: Node, dynamic: string[][]): SpeechRule[] {
@@ -179,8 +183,9 @@ export class Trie {
 
   /**
    * Checks if the trie contains sub-trie for the given constraint list.
+   *
    * @param cstrs The list of constraints.
-   * @return True if the trie contains elements for cstrs.
+   * @returns True if the trie contains elements for cstrs.
    */
   public hasSubtrie(cstrs: string[]): boolean {
     let subtrie = this.root;
@@ -202,14 +207,14 @@ export class Trie {
   }
 
   /**
-   * @return Set of speech rules in the trie.
+   * @returns Set of speech rules in the trie.
    */
   public collectRules(): SpeechRule[] {
     return Trie.collectRules_(this.root);
   }
 
   /**
-   * @return The order of the trie.
+   * @returns The order of the trie.
    */
   public order(): number {
     return Trie.order_(this.root);
@@ -217,8 +222,9 @@ export class Trie {
 
   /**
    * Collates information on dynamic constraint values of this trie.
+   *
    * @param opt_info Initial dynamic constraint information.
-   * @return The collated information.
+   * @returns The collated information.
    */
   public enumerate(opt_info?: { [key: string]: any }): { [key: string]: any } {
     return this.enumerate_(this.root, opt_info);
@@ -228,7 +234,7 @@ export class Trie {
    * Retrieves a node for a given sequence of constraints.
    *
    * @param constraint A list of constraints.
-   * @return The speech rule or null.
+   * @returns The speech rule or null.
    * What if multiple rules exist?
    */
   public byConstraint(constraint: string[]): TrieNode {
@@ -242,9 +248,10 @@ export class Trie {
 
   /**
    * Collates information on dynamic constraint values of this trie.
+   *
    * @param node The trie node from where to start.
    * @param info Initial dynamic constraint information.
-   * @return The collated information.
+   * @returns The collated information.
    */
   private enumerate_(
     node: TrieNode,
@@ -266,11 +273,12 @@ export class Trie {
 
   /**
    * Retrieves node for the given constraint. Adds a new node if necessary.
+   *
    * @param node The current node in the trie.
    * @param constraint The constraint string.
    * @param kind The kind of node.
    * @param context The context of the speech rule to add.
-   * @return The trie node corresponding to the constraint.
+   * @returns The trie node corresponding to the constraint.
    */
   private addNode_(
     node: TrieNode,

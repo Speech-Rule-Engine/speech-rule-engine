@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic interface functionality for the Speech Rule Engine.
- *
+ * @file Basic interface functionality for the Speech Rule Engine.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -46,6 +45,7 @@ export const version: string = Variables.VERSION;
  * Method to setup and initialize the speech rule engine. Currently the
  * feature parameter is ignored, however, this could be used to fine tune the
  * setup.
+ *
  * @param feature An object describing some
  *     setup features.
  */
@@ -93,6 +93,9 @@ export async function setupEngine(feature: {
   });
 }
 
+/**
+ *
+ */
 function config(feature: { [key: string]: boolean | string }) {
   if (
     Engine.getInstance().mode === EngineConst.Mode.HTTP &&
@@ -108,6 +111,7 @@ declare const SREfeature: { [key: string]: any };
 
 /**
  * Reads configuration blocks and adds them to the feature vector.
+ *
  * @param feature An object describing some
  *     setup features.
  */
@@ -121,6 +125,7 @@ function configFeature(feature: { [key: string]: boolean | string }) {
 
 /**
  * Reads configuration blocks and adds them to the feature vector.
+ *
  * @param feature An object describing some
  *     setup features.
  */
@@ -144,7 +149,8 @@ function configBlocks(feature: { [key: string]: boolean | string }) {
 
 /**
  * Query the engine setup.
- * @return Object vector with all engine feature
+ *
+ * @returns Object vector with all engine feature
  *     values.
  */
 export function engineSetup(): { [key: string]: boolean | string } {
@@ -164,7 +170,7 @@ export function engineSetup(): { [key: string]: boolean | string } {
 }
 
 /**
- * @return True if engine is ready, i.e., unicode file for the current
+ * @returns True if engine is ready, i.e., unicode file for the current
  *     locale has been loaded.
  */
 export function engineReady(): Promise<any> {
@@ -183,8 +189,9 @@ export function engineReady(): Promise<any> {
 // TODO: (sorge) Need an async versions of these.
 /**
  * Main function to translate expressions into auditory descriptions.
+ *
  * @param expr Processes a given XML expression for translation.
- * @return The aural rendering of the expression.
+ * @returns The aural rendering of the expression.
  */
 export function toSpeech(expr: string): string {
   return processString('speech', expr);
@@ -192,8 +199,9 @@ export function toSpeech(expr: string): string {
 
 /**
  * Function to translate MathML string into Semantic Tree.
+ *
  * @param expr Processes a given MathML expression for translation.
- * @return The semantic tree as Xml.
+ * @returns The semantic tree as Xml.
  */
 export function toSemantic(expr: string): Node {
   return processString('semantic', expr);
@@ -201,8 +209,9 @@ export function toSemantic(expr: string): Node {
 
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree.
+ *
  * @param expr Processes a given MathML expression for translation.
- * @return The semantic tree as Json.
+ * @returns The semantic tree as Json.
  */
 // TODO (TS): Define the correct JSONType somewhere.
 export function toJson(expr: string): any {
@@ -211,8 +220,9 @@ export function toJson(expr: string): any {
 
 /**
  * Main function to translate expressions into auditory descriptions.
+ *
  * @param expr Processes a given Xml expression for translation.
- * @return The auditory descriptions.
+ * @returns The auditory descriptions.
  */
 export function toDescription(expr: string): AuditoryDescription[] {
   return processString('description', expr);
@@ -220,8 +230,9 @@ export function toDescription(expr: string): AuditoryDescription[] {
 
 /**
  * Function to translate MathML string into semantically enriched MathML.
+ *
  * @param expr Processes a given MathML expression for translation.
- * @return The enriched MathML node.
+ * @returns The enriched MathML node.
  */
 export function toEnriched(expr: string): Element {
   return processString('enriched', expr);
@@ -229,9 +240,10 @@ export function toEnriched(expr: string): Element {
 
 /**
  * Processes an input string with the given processor.
+ *
  * @param processor The name of the processor to call.
  * @param input The input string.
- * @return The computed data structure.
+ * @returns The computed data structure.
  */
 function processString<T>(processor: string, input: string): T {
   return ProcessorFactory.process(processor, input);
@@ -248,7 +260,7 @@ export const file: Record<string, (input: string, output?: string) => any> = {};
  *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return Promise that resolves on completion of the file operations.
+ * @returns Promise that resolves on completion of the file operations.
  */
 file.toSpeech = function(input: string, opt_output?: string) {
   return processFile('speech', input, opt_output);
@@ -260,7 +272,7 @@ file.toSpeech = function(input: string, opt_output?: string) {
  *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return Promise that resolves on completion of the file operations.
+ * @returns Promise that resolves on completion of the file operations.
  */
 file.toSemantic= function(input: string, opt_output?: string) {
   return processFile('semantic', input, opt_output);
@@ -272,7 +284,7 @@ file.toSemantic= function(input: string, opt_output?: string) {
  *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return Promise that resolves on completion of the file operations.
+ * @returns Promise that resolves on completion of the file operations.
  */
 file.toJson= function(input: string, opt_output?: string) {
   return processFile('json', input, opt_output);
@@ -284,7 +296,7 @@ file.toJson= function(input: string, opt_output?: string) {
  *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return Promise that resolves on completion of the file operations.
+ * @returns Promise that resolves on completion of the file operations.
  */
 file.toDescription= function(input: string, opt_output?: string) {
   return processFile('description', input, opt_output);
@@ -296,7 +308,7 @@ file.toDescription= function(input: string, opt_output?: string) {
  *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return Promise that resolves on completion of the file operations.
+ * @returns Promise that resolves on completion of the file operations.
  */
 file.toEnriched= function(input: string, opt_output?: string) {
   return processFile('enriched', input, opt_output);
@@ -309,7 +321,7 @@ file.toEnriched= function(input: string, opt_output?: string) {
  * @param processor The name of the processor to call.
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return The promise for the file process to complete.
+ * @returns The promise for the file process to complete.
  */
 export function processFile(
   processor: string,
@@ -357,8 +369,9 @@ export function processFileSync(
 /**
  * Reads an xml expression from a file. Throws exception if file does not
  * exist.
+ *
  * @param file The input filename.
- * @return The input string read from file.
+ * @returns The input string read from file.
  */
 function inputFileSync_(file: string): string {
   let expr;
@@ -373,9 +386,11 @@ function inputFileSync_(file: string): string {
 /**
  * Reads an xml expression from a file, processes with the given function and
  * returns the result either to a file or to stdout in asynchronous mode.
+ *
  * @param processor The name of the processor.
  * @param file The input filename.
  * @param opt_output The output filename if one is given.
+ * @param output
  */
 async function processFileAsync(
   processor: string,
@@ -399,8 +414,9 @@ async function processFileAsync(
 // These are still considered experimental.
 /**
  * Walk a math expression provided by an external system.
+ *
  * @param expr The string containing a MathML representation.
- * @return The initial speech string for that expression.
+ * @returns The initial speech string for that expression.
  */
 export function walk(expr: string): string {
   return ProcessorFactory.output('walker', expr);
@@ -408,9 +424,10 @@ export function walk(expr: string): string {
 
 /**
  * Moves in the math expression that is currently being walked.
+ *
  * @param direction The direction of the move
  *     given either as string or keycode.
- * @return The speech string generated by the walk. Null if a boundary
+ * @returns The speech string generated by the walk. Null if a boundary
  *     is hit.
  */
 export function move(direction: KeyCode | string): string | null {
@@ -419,6 +436,7 @@ export function move(direction: KeyCode | string): string | null {
 
 /**
  * A clean exit method, that ensures all file processes are completed.
+ *
  * @param opt_value The exit value. Defaults to 0.
  */
 export function exit(opt_value?: number) {
@@ -436,6 +454,7 @@ export const localePath = FileUtil.localePath;
 
 /**
  * Sets the custom loader.
+ *
  * @param fn A custom loader function.
  */
 export function setCustomLoader(fn: any) {

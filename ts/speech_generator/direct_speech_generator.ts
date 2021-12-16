@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Direct speech generator that simply picks up the speech
+ * @file Direct speech generator that simply picks up the speech
  *     attribute if it exists.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

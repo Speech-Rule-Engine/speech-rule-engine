@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Interface for Math Speech Generators.
- *
+ * @file Interface for Math Speech Generators.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -31,40 +30,45 @@ export interface SpeechGenerator {
 
   /**
    * Returns the speech string for math node.
+   *
    * @param node The target element of the event.
    * @param xml The base xml element belonging to node.
-   * @return The speech string computed for this element.
+   * @returns The speech string computed for this element.
    */
   getSpeech(node: Element, xml: Element): string;
 
   /**
    * Generates speech string for a sub tree of the xml element.
+   *
    * @param node The target element of the event.
    * @param xml The base xml element belonging to node.
-   * @return The generated speech string.
+   * @returns The generated speech string.
    */
   generateSpeech(_node: Node, xml: Element): string;
 
   /**
    * Returns the semantic tree rebuilt from the base xml element.
-   * @return The reconstructed semantic tree.
+   *
+   * @returns The reconstructed semantic tree.
    */
   getRebuilt(): RebuildStree;
 
   /**
    * Sets the rebuilt semantic tree object of the speech generator.
+   *
    * @param rebuilt The reconstructed semantic tree.
    */
   setRebuilt(rebuilt: RebuildStree): void;
 
   /**
    * Sets dynamic constraint options for the speech engine.
+   *
    * @param options The dynamic constraint.
    */
   setOptions(options: AxisMap): void;
 
   /**
-   * @return Dynamic constraint options of the generator.
+   * @returns Dynamic constraint options of the generator.
    */
   getOptions(): AxisMap;
 

@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview A collection of utilities dealing with file handling. These
+ * @file A collection of utilities dealing with file handling. These
  *     only depend on system external to handle different load methods.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -24,8 +23,9 @@ import SystemExternal from './system_external';
 
 /**
  * Corrects pathnames to have trailing slashes.
+ *
  * @param path The original path.
- * @return The path that has definitely a trailing slash.
+ * @returns The path that has definitely a trailing slash.
  */
 export function makePath(path: string): string {
   return path.match('/$') ? path : path + '/';

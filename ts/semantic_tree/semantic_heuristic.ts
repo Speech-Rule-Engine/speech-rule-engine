@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Classes for optional semantic heuristics that can be called
+ * @file Classes for optional semantic heuristics that can be called
  *     depending on the setting of the semantic pattern recognition.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -49,9 +48,13 @@ export abstract class SemanticAbstractHeuristic<
 
   /**
    * Abstract class of heuristics.
+   *
    * @param {{predicate: ((function(T): boolean)|undefined),
    *          method: function(T): sre.SemanticNode} } heuristic The predicate and
    * method of the heuristic
+   * @param name
+   * @param method
+   * @param predicate
    */
   constructor(
     public name: string,
@@ -65,12 +68,14 @@ export abstract class SemanticAbstractHeuristic<
 
 /**
  * Heuristics work on the root of a subtree.
+ *
  * @override
  */
 export class SemanticTreeHeuristic extends SemanticAbstractHeuristic<SemanticNode> {}
 
 /**
  * Heuristics work on a list of nodes.
+ *
  * @override
  */
 export class SemanticMultiHeuristic extends SemanticAbstractHeuristic<

@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Spanish message file.
- *
+ * @file Spanish message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -35,6 +34,9 @@ const sansserifCombiner = function (letter: string, font: string, cap: string) {
 
 let locale: Locale = null;
 
+/**
+ *
+ */
 export function es(): Locale {
   if (!locale) {
     locale = create();
@@ -43,6 +45,9 @@ export function es(): Locale {
   return locale;
 }
 
+/**
+ *
+ */
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;

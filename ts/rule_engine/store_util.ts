@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview General utility functions for rule stores.
+ * @file General utility functions for rule stores.
  * @author sorge@google.com (Volker Sorge)
  */
 import { AuditoryDescription } from '../audio/auditory_description';
@@ -25,9 +25,10 @@ import { SpeechRuleEngine } from './speech_rule_engine';
 /**
  * Count list of nodes and concatenate this with the context string.
  * Returns a closure with a local state.
+ *
  * @param nodes A node array.
  * @param context A context string.
- * @return A function returning a string.
+ * @returns A function returning a string.
  */
 export function nodeCounter(
   nodes: Node[],
@@ -50,9 +51,11 @@ export function nodeCounter(
 
 /**
  * Returns a separating pause element.
+ *
  * @param nodes A node array.
+ * @param _nodes
  * @param context A pause value string.
- * @return A closure that
+ * @returns A closure that
  *     returns a personality description of a single pause.
  */
 export function pauseSeparator(
@@ -74,9 +77,10 @@ export function pauseSeparator(
 
 /**
  * Iterates over the list of content nodes of the parent of the given nodes.
+ *
  * @param nodes A node array.
  * @param context A context string.
- * @return A closure that returns
+ * @returns A closure that returns
  *     the content of the next content node. Returns only context string if list
  *     is exhausted.
  */

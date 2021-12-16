@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview A semantic walker.
- *
+ * @file A semantic walker.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -138,11 +137,12 @@ export class SemanticWalker extends AbstractWalker<Focus> {
 
   /**
    * Makes a focus list from children of a punctuated element.
+   *
    * @param children Child node ids.
    * @param content Content node ids.
    * @param prepunct List of prefix punctuations.
    * @param acc Result accumulator.
-   * @return The list of focuses with paired nodes.
+   * @returns The list of focuses with paired nodes.
    */
   public combinePunctuations(
     children: string[],
@@ -178,9 +178,10 @@ export class SemanticWalker extends AbstractWalker<Focus> {
 
   /**
    * Makes pairwise focus structures from two lists.
+   *
    * @param children Child nodes of length n.
    * @param content Content nodes of length n - 1.
-   * @return The list of focuses with paired nodes.
+   * @returns The list of focuses with paired nodes.
    */
   public makePairList(children: string[], content: string[]): Focus[] {
     if (children.length === 0) {

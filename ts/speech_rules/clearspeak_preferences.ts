@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Handling of Clearspeak preferences.
+ * @file Handling of Clearspeak preferences.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -39,7 +39,8 @@ export class ClearspeakPreferences extends DynamicCstr {
 
   /**
    * Exports the Clearspeak comparator with default settings.
-   * @return The clearspeak comparator.
+   *
+   * @returns The clearspeak comparator.
    */
   public static comparator(): Comparator {
     return new Comparator(
@@ -56,8 +57,9 @@ export class ClearspeakPreferences extends DynamicCstr {
   /**
    * Parse the preferences from a string of the form:
    * preference1_setting1:preference2_setting2:....:preferenceN_settingN
+   *
    * @param pref The preference string.
-   * @return The preference settings.
+   * @returns The preference settings.
    */
   public static fromPreference(pref: string): AxisMap {
     const pairs = pref.split(':');
@@ -85,8 +87,9 @@ export class ClearspeakPreferences extends DynamicCstr {
    * Creates a style string from a set of preference mappings, by joining them
    * via underscore and colon in the form:
    * preference1_setting1:preference2_setting2:....:preferenceN_settingN
+   *
    * @param pref A preference mapping.
-   * @return A style string created from the preferences.
+   * @returns A style string created from the preferences.
    */
   public static toPreference(pref: AxisMap): string {
     const keys = Object.keys(pref);
@@ -99,9 +102,10 @@ export class ClearspeakPreferences extends DynamicCstr {
 
   /**
    * Computes the clearspeak preferences per locale and caches them.
+   *
    * @param opt_dynamic Optionally a tree structure with the dynamic
    *     constraints.
-   * @return Mapping of locale to preferences.
+   * @returns Mapping of locale to preferences.
    */
   public static getLocalePreferences(opt_dynamic?: {
     [key: string]: AxisProperties;
@@ -120,9 +124,10 @@ export class ClearspeakPreferences extends DynamicCstr {
   /**
    * Computes a selection of clearspeak preferences for the MathJax context menu
    * wrt. currently focused subexpression.
+   *
    * @param item A Math Item.
    * @param locale The current locale.
-   * @return The menu settings for a new radio button
+   * @returns The menu settings for a new radio button
    *    sub menu.
    */
   // TODO (TS): item should get MathJax type MathItem
@@ -173,8 +178,9 @@ export class ClearspeakPreferences extends DynamicCstr {
   /**
    * Computes a clearspeak preference that should be changed given the type of
    * the node.
+   *
    * @param node A semantic node.
-   * @return The preference that fits the node's type and role.
+   * @returns The preference that fits the node's type and role.
    */
   public static relevantPreferences(node: SemanticNode): string {
     const roles = SEMANTIC_MAPPING_[node.type];
@@ -186,9 +192,10 @@ export class ClearspeakPreferences extends DynamicCstr {
 
   /**
    * Look up the setting of a preference in a preference settings sting.
+   *
    * @param prefs Preference settings.
    * @param kind The preference to look up.
-   * @return The setting of that preference. If it does not exist,
+   * @returns The setting of that preference. If it does not exist,
    *     returns Auto.
    */
   public static findPreference(prefs: string, kind: string): string {
@@ -201,10 +208,11 @@ export class ClearspeakPreferences extends DynamicCstr {
 
   /**
    * Adds or updates a value in a preference settings.
+   *
    * @param prefs Preference settings.
    * @param kind New preference name.
    * @param value New preference value.
-   * @return The updated preference settings.
+   * @returns The updated preference settings.
    */
   public static addPreference(
     prefs: string,
@@ -221,9 +229,10 @@ export class ClearspeakPreferences extends DynamicCstr {
 
   /**
    * Computes the clearspeak preferences per locale and caches them.
+   *
    * @param dynamic Optionally a tree structure with the dynamic
    *     constraints.
-   * @return Mapping of locale to preferences.
+   * @returns Mapping of locale to preferences.
    */
   private static getLocalePreferences_(dynamic: any): {
     [key: string]: AxisProperties;
@@ -464,8 +473,9 @@ export class Parser extends DynamicCstrParser {
   /**
    * Parse the preferences from a string of the form:
    * preference1_setting1:preference2_setting2:....:preferenceN_settingN
+   *
    * @param pref The preference string.
-   * @return The preference settings.
+   * @returns The preference settings.
    */
   public fromPreference(pref: string): { [key: string]: string } {
     return ClearspeakPreferences.fromPreference(pref);
@@ -475,8 +485,9 @@ export class Parser extends DynamicCstrParser {
    * Creates a style string from a set of preference mappings, by joining them
    * via underscore and colon in the form:
    * preference1_setting1:preference2_setting2:....:preferenceN_settingN
+   *
    * @param pref A preference mapping.
-   * @return A style string created from the preferences.
+   * @returns A style string created from the preferences.
    */
   public toPreference(pref: { [key: string]: string }): string {
     return ClearspeakPreferences.toPreference(pref);

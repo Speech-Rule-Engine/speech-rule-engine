@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract class for audio renderers.
- *
+ * @file Abstract class for audio renderers.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -80,8 +79,9 @@ export abstract class AbstractAudioRenderer implements AudioRenderer {
 
   /**
    * Maps named pauses to numerical values.
+   *
    * @param value The alpha value for the pause.
-   * @return The corresponding numerical value.
+   * @returns The corresponding numerical value.
    */
   public pauseValue(value: string): number {
     let numeric;

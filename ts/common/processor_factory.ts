@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Processor factory for common input output streams.
- *
+ * @file Processor factory for common input output streams.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -39,6 +38,7 @@ const PROCESSORS = new Map();
 
 /**
  * Adds a processor to the processor map.
+ *
  * @param name The name of the processor.
  * @param processor The processor object.
  */
@@ -48,8 +48,9 @@ export function set<T>(processor: Processor<T>) {
 
 /**
  * Gets the named processor. Throws an error if the processor does not exist!
+ *
  * @param name The name of the processor.
- * @return The processor.
+ * @returns The processor.
  */
 function get_<T>(name: string): Processor<T> {
   const processor = PROCESSORS.get(name.toLowerCase());
@@ -61,9 +62,10 @@ function get_<T>(name: string): Processor<T> {
 
 /**
  * Processes an expression with the given processor.
+ *
  * @param name The name of the processor.
  * @param expr The expression to process.
- * @return The data structure resulting from the processing the expression.
+ * @returns The data structure resulting from the processing the expression.
  */
 export function process<T>(name: string, expr: string): T {
   const processor = get_(name);
@@ -72,9 +74,10 @@ export function process<T>(name: string, expr: string): T {
 
 /**
  * Processes an expression with the given processor.
+ *
  * @param name The name of the processor.
  * @param expr The expression to process.
- * @return The data structure resulting from the processing the expression.
+ * @returns The data structure resulting from the processing the expression.
  */
 export function processOnly<T>(name: string, expr: string): T {
   const processor = get_(name);
@@ -83,9 +86,10 @@ export function processOnly<T>(name: string, expr: string): T {
 
 /**
  * Prints a processed expression with given processor.
+ *
  * @param name The name of the processor.
  * @param data The data structure that's the result of this processor.
- * @return A string representation of the result.
+ * @returns A string representation of the result.
  */
 export function print<T>(name: string, data: T): string {
   const processor = get_(name);
@@ -96,9 +100,10 @@ export function print<T>(name: string, data: T): string {
 
 /**
  * Convenience method that combines processing and printing.
+ *
  * @param name The name of the processor.
  * @param expr The expression to process.
- * @return A string representation of the result.
+ * @returns A string representation of the result.
  */
 export function output(name: string, expr: string): string {
   const processor = get_(name);
@@ -110,9 +115,10 @@ export function output(name: string, expr: string): string {
 
 /**
  * Convenience method that combines key processing, processing and printing.
+ *
  * @param name The name of the processor.
  * @param expr The key stroke to process.
- * @return A string representation of the result.
+ * @returns A string representation of the result.
  */
 export function keypress(name: string, expr: KeyCode | string): string {
   const processor = get_(name);

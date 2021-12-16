@@ -14,11 +14,10 @@
 // limitations under the License.
 
 /**
- * @fileoverview This is the file that takes care of some of the underlying
+ * @file This is the file that takes care of some of the underlying
  * system dependencies.  In particular, any dependency on NodeJS, like require
  * statements, should go in this file.  Ideally only this file should depend on
  * extern.js.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -32,8 +31,9 @@ export default class SystemExternal {
 
   /**
    * The local require function for NodeJS.
+   *
    * @param library A library name.
-   * @return The library object that has been loaded.
+   * @returns The library object that has been loaded.
    */
   public static extRequire(library: string): any {
     if (typeof process !== 'undefined' && typeof require !== 'undefined') {
@@ -48,7 +48,8 @@ export default class SystemExternal {
 
   /**
    * Check if DOM document is already supported in this JS.
-   * @return True if document is defined.
+   *
+   * @returns True if document is defined.
    */
   public static documentSupported: boolean = (() =>
     SystemExternal.windowSupported &&

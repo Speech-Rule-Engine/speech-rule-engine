@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Class for SABLE rendering of descriptions.
- *
+ * @file Class for SABLE rendering of descriptions.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

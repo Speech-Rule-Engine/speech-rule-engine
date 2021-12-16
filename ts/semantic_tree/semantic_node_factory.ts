@@ -14,11 +14,10 @@
 // limitations under the License.
 
 /**
- * @fileoverview Factory for semantic nodes.
+ * @file Factory for semantic nodes.
  *
  * Basic functionality to create different types of semantic nodes and keep an
  * active counter. Every semantic tree has its own node factory.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -45,8 +44,9 @@ export class SemanticNodeFactory {
 
   /**
    * Creates a new node object with a given id.
+   *
    * @param id The node id.
-   * @return The newly created node.
+   * @returns The newly created node.
    */
   public makeNode(id: number): SemanticNode {
     return this.createNode_(id);
@@ -54,8 +54,9 @@ export class SemanticNodeFactory {
 
   /**
    * Create a node that is to be processed at a later point in time.
+   *
    * @param mml The MathML tree.
-   * @return The new node.
+   * @returns The new node.
    */
   public makeUnprocessed(mml: Element): SemanticNode {
     const node = this.createNode_();
@@ -66,7 +67,8 @@ export class SemanticNodeFactory {
 
   /**
    * Create an empty leaf node.
-   * @return The new node.
+   *
+   * @returns The new node.
    */
   public makeEmptyNode(): SemanticNode {
     const node = this.createNode_();
@@ -77,8 +79,9 @@ export class SemanticNodeFactory {
   /**
    * Create a node with the given text content. The content is semantically
    * interpreted.
+   *
    * @param content The text content of the node.
-   * @return The new node.
+   * @returns The new node.
    */
   public makeContentNode(content: string): SemanticNode {
     const node = this.createNode_();
@@ -88,9 +91,10 @@ export class SemanticNodeFactory {
 
   /**
    * Create a list of content nodes all with the same content.
+   *
    * @param num The number of nodes to create.
    * @param content The text content of the node.
-   * @return The list of new nodes.
+   * @returns The list of new nodes.
    */
   public makeMultipleContentNodes(
     num: number,
@@ -105,9 +109,10 @@ export class SemanticNodeFactory {
 
   /**
    * Create a leaf node.
+   *
    * @param content The MathML tree.
    * @param font The font name.
-   * @return The new node.
+   * @returns The new node.
    */
   public makeLeafNode(content: string, font: SemanticFont): SemanticNode {
     if (!content) {
@@ -128,11 +133,12 @@ export class SemanticNodeFactory {
 
   /**
    * Create a branching node.
+   *
    * @param type The type of the node.
    * @param children The child nodes.
    * @param contentNodes The content Nodes.
    * @param opt_content Content string if there is any.
-   * @return The new node.
+   * @returns The new node.
    */
   public makeBranchNode(
     type: SemanticType,
@@ -156,8 +162,10 @@ export class SemanticNodeFactory {
 
   /**
    * Creates a new node object.
+   *
    * @param opt_id Optional ID. It will be maxed with the current id.
-   * @return The newly created node.
+   * @param id
+   * @returns The newly created node.
    */
   private createNode_(id?: number): SemanticNode {
     if (typeof id !== 'undefined') {

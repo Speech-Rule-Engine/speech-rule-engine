@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers into Italian.
+ * @file Translating numbers into Italian.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -27,8 +27,9 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @returns The string representation of that number.
  */
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
@@ -57,8 +58,9 @@ function hundredsToWords_(num: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @returns The string representation of that number.
  */
 function numberToWords(num: number): string {
   if (num === 0) {
@@ -89,9 +91,10 @@ function numberToWords(num: number): string {
 /**
  * Translates a number of up to twelve digits into a string representation of
  * its ordinal.
+ *
  * @param num The number to translate.
  * @param plural A flag indicating if the ordinal is in plural.
- * @return The ordinal of the number as string.
+ * @returns The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 2) {
@@ -107,8 +110,9 @@ function numberToOrdinal(num: number, plural: boolean): string {
 
 /**
  * Creates a word ordinal string from a number.
+ *
  * @param num The number to be converted.
- * @return The ordinal string.
+ * @returns The ordinal string.
  */
 function wordOrdinal(num: number): string {
   const gender = Grammar.getInstance().getParameter('gender') as string;
@@ -123,8 +127,9 @@ function wordOrdinal(num: number): string {
 
 /**
  * Creates a simple ordinal string from a number.
+ *
  * @param num The number to be converted.
- * @return The ordinal string.
+ * @returns The ordinal string.
  */
 function simpleOrdinal(num: number): string {
   const gender = Grammar.getInstance().getParameter('gender') as string;

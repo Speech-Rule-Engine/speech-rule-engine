@@ -14,10 +14,9 @@
 // limitations under the License.
 
 /**
- * @fileoverview Tree speech generator that computes speech strings for
+ * @file Tree speech generator that computes speech strings for
  *     elements of an entire expression tree, even if it has already speech
  *     strings attached.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

@@ -15,9 +15,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Procedure to reassemble the semantic tree from an enriched
+ * @file Procedure to reassemble the semantic tree from an enriched
  *    MathML expression.
- *
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
@@ -73,6 +72,7 @@ export class RebuildStree {
   /**
    * Adds external attributes if they exists. Recurses one level if we have a
    * leaf element with a none-text child.
+   *
    * @param snode The semantic node.
    * @param node The mml node.
    * @param leaf True if it is a leaf node.
@@ -95,6 +95,7 @@ export class RebuildStree {
   /**
    * Sets the text content of the semantic node. If no text content is available
    * or it is ignored, but an operator is given, it uses that.
+   *
    * @param snode The semantic node.
    * @param node The mml node.
    * @param ignore Ignores using text content.
@@ -118,8 +119,9 @@ export class RebuildStree {
 
   /**
    * Tests if a collapsed attribute belongs to a punctuated index.
+   *
    * @param collapsed A skeleton structure.
-   * @return True if the skeleton indicates a collapsed punctuated
+   * @returns True if the skeleton indicates a collapsed punctuated
    *     element.
    */
   public static isPunctuated(collapsed: Sexp): boolean {
@@ -142,7 +144,7 @@ export class RebuildStree {
   }
 
   /**
-   * @return The rebuilt semantic tree.
+   * @returns The rebuilt semantic tree.
    */
   public getTree(): SemanticTree {
     return this.stree;
@@ -150,8 +152,9 @@ export class RebuildStree {
 
   /**
    * Assembles the semantic tree from the data attributes of the MathML node.
+   *
    * @param node The MathML node.
-   * @return The corresponding semantic tree node.
+   * @returns The corresponding semantic tree node.
    */
   public assembleTree(node: Element): SemanticNode {
     const snode = this.makeNode(node);
@@ -184,8 +187,9 @@ export class RebuildStree {
 
   /**
    * Creates a new semantic node from the data in the MathML node.
+   *
    * @param node The enriched MathML node.
-   * @return The reconstructed semantic tree node.
+   * @returns The reconstructed semantic tree node.
    */
   public makeNode(node: Element): SemanticNode {
     const type = WalkerUtil.getAttribute(node, Attribute.TYPE);
@@ -212,8 +216,9 @@ export class RebuildStree {
 
   /**
    * Creates a punctuation node containing an invisible comma.
+   *
    * @param id The id of the new node.
-   * @return The newly created punctuation node.
+   * @returns The newly created punctuation node.
    */
   public makePunctuation(id: number): SemanticNode {
     const node = this.createNode(id);
@@ -224,6 +229,7 @@ export class RebuildStree {
 
   /**
    * Creates a punctuated node that serves as an index.
+   *
    * @param snode The semantic node that is being rebuilt.
    * @param collapsed A skeleton structure.
    * @param role The role of the new index node.
@@ -246,6 +252,7 @@ export class RebuildStree {
 
   /**
    * Creates an empty node that serves as an index.
+   *
    * @param snode The semantic node that is being rebuilt.
    * @param collapsed A skeleton structure.
    * @param role The role of the new index node.
@@ -260,6 +267,7 @@ export class RebuildStree {
 
   /**
    * Creates an index node.
+   *
    * @param snode The semantic node that is being rebuilt.
    * @param collapsed A skeleton structure.
    * @param role The role of the new index node.
@@ -280,9 +288,10 @@ export class RebuildStree {
 
   /**
    * Rearranges semantic node if there is a collapse structure.
+   *
    * @param snode The semantic node.
    * @param collapsed The collapse structure.
-   * @return The semantic node.
+   * @returns The semantic node.
    */
   public postProcess(snode: SemanticNode, collapsed: string): SemanticNode {
     const array = SemanticSkeleton.fromString(collapsed).array as any;
@@ -344,8 +353,9 @@ export class RebuildStree {
 
   /**
    * Creates a new semantic tree node and stores it.
+   *
    * @param id The id for that node.
-   * @return The newly created node.
+   * @returns The newly created node.
    */
   public createNode(id: number): SemanticNode {
     const node = this.factory.makeNode(id);
@@ -356,6 +366,7 @@ export class RebuildStree {
   /**
    * Recombines semantic nodes and children according to a given skeleton
    * structure.
+   *
    * @param collapsed Array of integer arrays.
    */
   private collapsedChildren_(collapsed: Sexp) {
@@ -377,6 +388,7 @@ export class RebuildStree {
 
   /**
    * Sets a parent for a node.
+   *
    * @param {string} id of the node.
    * @param {SemanticNode} snode The parent node.
    */

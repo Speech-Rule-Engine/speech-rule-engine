@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract class implementation of the walker interface.
- *
+ * @file Abstract class implementation of the walker interface.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -44,6 +43,7 @@ import * as WalkerUtil from './walker_util';
 
 /**
  * The abstract walker class.
+ *
  * @template T
  */
 export abstract class AbstractWalker<T> implements Walker {
@@ -114,24 +114,27 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Finds the focus on the current level for a given semantic node id.
+   *
    * @param id The id number.
-   * @return The focus on a particular level.
+   * @returns The focus on a particular level.
    */
   public abstract findFocusOnLevel(id: number): Focus;
 
   /**
    * Returns a new, initialised level structure suitable for the walker.
-   * @return The new level structure initialised with root focus.
+   *
+   * @returns The new level structure initialised with root focus.
    */
   public abstract initLevels(): Levels<T>;
 
   /**
    * Combines content and children lists depending on semantic type and role.
+   *
    * @param type The semantic type.
    * @param role The semantic role.
    * @param content The list of content nodes.
    * @param children The list of child nodes.
-   * @return The list of focus elements.
+   * @returns The list of focus elements.
    */
   public abstract combineContentChildren(
     type: SemanticType,
@@ -268,7 +271,7 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   /**
-   * @return True if modality of walker's speech generator is speech.
+   * @returns True if modality of walker's speech generator is speech.
    */
   public isSpeech(): boolean {
     return this.generator.modality === Attribute.SPEECH;
@@ -393,15 +396,16 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Retrieves a node containing a given semantic id.
+   *
    * @param id The id of a semantic node.
-   * @return The node for that id.
+   * @returns The node for that id.
    */
   public getBySemanticId(id: string): Element {
     return WalkerUtil.getBySemanticId(this.node, id);
   }
 
   /**
-   * @return The id of the primary node of the current focus.
+   * @returns The id of the primary node of the current focus.
    */
   public primaryId(): string {
     return this.getFocus().getSemanticPrimary().id.toString();
@@ -409,7 +413,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Expands or collapses a node if it is actionable.
-   * @return New focus element if actionable. O/w old focus.
+   *
+   * @returns New focus element if actionable. O/w old focus.
    */
   public expand(): Focus {
     const primary = this.getFocus().getDomPrimary();
@@ -424,8 +429,9 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Checks if a node is expandable.
+   *
    * @param node The (rendered) node under consideration.
-   * @return True if the node is expandable.
+   * @returns True if the node is expandable.
    */
   public expandable(node: Element): boolean {
     const parent = !!this.actionable_(node);
@@ -434,8 +440,9 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Checks if a node can be collapsed.
+   *
    * @param node The (rendered) node under consideration.
-   * @return True if the node is collapsible.
+   * @returns True if the node is collapsible.
    */
   public collapsible(node: Element): boolean {
     const parent = !!this.actionable_(node);
@@ -491,7 +498,8 @@ export abstract class AbstractWalker<T> implements Walker {
   /**
    * Rebuilds the semantic tree given in the input xml element fully connected
    * with maction elements.
-   * @return The reconstructed semantic tree.
+   *
+   * @returns The reconstructed semantic tree.
    */
   protected rebuildStree(): RebuildStree {
     const rebuilt = new RebuildStree(this.getXml());
@@ -505,7 +513,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Computes the previous level by Returning the id of the parent.
-   * @return The previous level.
+   *
+   * @returns The previous level.
    */
   public previousLevel(): string | null {
     const dnode = this.getFocus().getDomPrimary();
@@ -516,7 +525,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Computes the next lower level from children and content.
-   * @return The next lower level.
+   *
+   * @returns The next lower level.
    */
   public nextLevel(): T[] {
     const dnode = this.getFocus().getDomPrimary();
@@ -555,8 +565,9 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Creates a simple focus for a solitary node.
+   *
    * @param id The semantic id of the focus node.
-   * @return A focus containing only this node and the other
+   * @returns A focus containing only this node and the other
    *     properties of the old focus.
    */
   public singletonFocus(id: string): Focus {
@@ -565,9 +576,10 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Makes a focus for a primary node and a node list, all given by their ids.
+   *
    * @param id The semantic id of the primary node.
    * @param ids The semantic id of the node list.
-   * @return The new focus.
+   * @returns The new focus.
    */
   public focusFromId(id: string, ids: string[]): Focus {
     return Focus.factory(id, ids, this.getRebuilt(), this.node);
@@ -591,7 +603,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * This methods can contain special moves for specialised walkers.
-   * @return The result of the special move.
+   *
+   * @returns The result of the special move.
    */
   protected specialMove(): string | null {
     return null;
@@ -600,8 +613,9 @@ export abstract class AbstractWalker<T> implements Walker {
   // Virtual Cursors:
   /**
    * Initialises a new virtual cursor.
+   *
    * @param opt_undo Flag specifying if this is an undo jump point.
-   * @return The new focus.
+   * @returns The new focus.
    */
   public virtualize(opt_undo?: boolean): Focus {
     this.cursors.push({
@@ -615,7 +629,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Returns to previous cursor setting.
-   * @return The previous focus.
+   *
+   * @returns The previous focus.
    */
   public previous(): Focus {
     const previous = this.cursors.pop();
@@ -628,7 +643,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Undoes a series of virtual cursor generations.
-   * @return A previous focus.
+   *
+   * @returns A previous focus.
    */
   public undo(): Focus {
     let previous;
@@ -659,7 +675,8 @@ export abstract class AbstractWalker<T> implements Walker {
   // TODO: Refactor this into the speech generators.
   /**
    * Cycles to next speech rule set if possible.
-   * @return The current focus. Either the old one or if cycling was
+   *
+   * @returns The current focus. Either the old one or if cycling was
    *     possible a cloned focus.
    */
   public nextRules(): Focus {
@@ -679,9 +696,10 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Cycles to next style or preference of the speech rule set if possible.
+   *
    * @param domain The current speech rule set name.
    * @param style The current style name.
-   * @return The new style name.
+   * @returns The new style name.
    */
   public nextStyle(domain: string, style: string): string {
     if (domain === 'mathspeak') {
@@ -721,7 +739,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Cycles to previous speech rule set if possible.
-   * @return The current focus. Either the old one or if cycling was
+   *
+   * @returns The current focus. Either the old one or if cycling was
    *     possible a cloned focus.
    */
   public previousRules(): Focus {
@@ -766,7 +785,7 @@ export abstract class AbstractWalker<T> implements Walker {
    *
    * @param speech The speech strings.
    * @param pre An optional list of strings that should precede the prefix.
-   * @return The merged speech string.
+   * @returns The merged speech string.
    */
   private mergePrefix_(speech: string[], pre: string[] = []): string {
     const prefix = this.isSpeech() ? this.prefix_() : '';
@@ -784,7 +803,7 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   /**
-   * @return The prefix of the currently focused element.
+   * @returns The prefix of the currently focused element.
    */
   private prefix_(): string {
     const nodes = this.getFocus().getDomNodes();
@@ -795,7 +814,7 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   /**
-   * @return The postfix of the currently focused element. Postfixes
+   * @returns The postfix of the currently focused element. Postfixes
    *    cannot be recomputed and therefore are only looked up on the actual
    * node.
    */
@@ -808,7 +827,7 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   /**
-   * @return The depth announcement for the currently focused element.
+   * @returns The depth announcement for the currently focused element.
    */
   private depth_(): string {
     const oldDepth = Grammar.getInstance().getParameter('depth');
@@ -834,8 +853,9 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Checks if a node is actionable, i.e., corresponds to an maction.
+   *
    * @param node The (rendered) node under consideration.
-   * @return The node corresponding to an maction element.
+   * @returns The node corresponding to an maction element.
    */
   private actionable_(node: Element): Element {
     const parent = node?.parentNode as Element;
@@ -843,7 +863,7 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   /**
-   * @return The virtual summary of an element.
+   * @returns The virtual summary of an element.
    */
   private summary_(): string {
     const sprimary = this.getFocus().getSemanticPrimary();
@@ -862,7 +882,7 @@ export abstract class AbstractWalker<T> implements Walker {
   }
 
   /**
-   * @return The virtual detail of a collapsed element.
+   * @returns The virtual detail of a collapsed element.
    */
   private detail_(): string {
     const sprimary = this.getFocus().getSemanticPrimary();

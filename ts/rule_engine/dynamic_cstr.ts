@@ -14,10 +14,9 @@
 // limitations under the License.
 
 /**
- * @fileoverview Datastructure for handling dynamic constraints. Dynamic
+ * @file Datastructure for handling dynamic constraints. Dynamic
  *     constraints separate the different axes for customisation of speech rule
  *     sets.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -46,6 +45,7 @@ export class DynamicProperties {
   /**
    * Convenience method to create a standard dynamic constraint, that follows a
    * pre-prescribed order of the axes.
+   *
    * @param cstrList Dynamic property lists for the Axes.
    */
   public static createProp(...cstrList: string[][]): DynamicProperties {
@@ -61,6 +61,7 @@ export class DynamicProperties {
    * @param properties The
    *     property mapping.
    * @param opt_order A parse order of the keys.
+   * @param order
    */
   constructor(
     private properties: AxisProperties,
@@ -68,7 +69,7 @@ export class DynamicProperties {
   ) {}
 
   /**
-   * @return The components of
+   * @returns The components of
    *     the constraint.
    */
   public getProperties(): AxisProperties {
@@ -76,7 +77,7 @@ export class DynamicProperties {
   }
 
   /**
-   * @return The priority order of constraint attributes
+   * @returns The priority order of constraint attributes
    *     in the comparator.
    */
   public getOrder(): AxisOrder {
@@ -84,7 +85,7 @@ export class DynamicProperties {
   }
 
   /**
-   * @return The components of the constraint.
+   * @returns The components of the constraint.
    */
   public getAxes(): AxisOrder {
     return this.order;
@@ -92,8 +93,9 @@ export class DynamicProperties {
 
   /**
    * Returns the value of the constraint for a particular attribute key.
+   *
    * @param key The attribute key.
-   * @return The component value of the constraint.
+   * @returns The component value of the constraint.
    */
   public getProperty(key: Axis): string[] {
     return this.properties[key];
@@ -101,6 +103,7 @@ export class DynamicProperties {
 
   /**
    * Updates the dynamic properties from another one.
+   *
    * @param props A second
    *     properties element.
    */
@@ -110,7 +113,8 @@ export class DynamicProperties {
 
   /**
    * Convenience method to return the ordered list of properties.
-   * @return Ordered list of lists of constraint values.
+   *
+   * @returns Ordered list of lists of constraint values.
    */
   public allProperties(): string[][] {
     const propLists: string[][] = [];
@@ -163,6 +167,7 @@ export class DynamicCstr extends DynamicProperties {
   /**
    * Convenience method to create a standard dynamic constraint, that follows a
    * pre-prescribed order of the axes.
+   *
    * @param cstrList Dynamic constraint values for the Axes.
    */
   public static createCstr(...cstrList: string[]): DynamicCstr {
@@ -175,7 +180,7 @@ export class DynamicCstr extends DynamicProperties {
   }
 
   /**
-   * @return A default constraint of maximal order.
+   * @returns A default constraint of maximal order.
    */
   public static defaultCstr(): DynamicCstr {
     return DynamicCstr.createCstr.apply(
@@ -188,8 +193,9 @@ export class DynamicCstr extends DynamicProperties {
 
   /**
    * Checks explicitly if a dynamic constraint order is indeed valid.
+   *
    * @param order The order to check.
-   * @return True if the order only contains valid axis descriptions.
+   * @returns True if the order only contains valid axis descriptions.
    */
   public static validOrder(order: AxisOrder): boolean {
     const axes = DynamicCstr.DEFAULT_ORDER.slice();
@@ -202,8 +208,11 @@ export class DynamicCstr extends DynamicProperties {
   /**
    * Dynamic constraints are a means to specialize rules that can be changed
    * dynamically by the user, for example by choosing different styles, etc.
+   *
    * @param cstr The constraint mapping.
    * @param opt_order A parse order of the keys.
+   * @param components_
+   * @param order
    */
   constructor(components_: AxisMap, order?: AxisOrder) {
     const properties: AxisProperties = {};
@@ -215,7 +224,7 @@ export class DynamicCstr extends DynamicProperties {
   }
 
   /**
-   * @return The components of the
+   * @returns The components of the
    *     constraint.
    */
   public getComponents(): AxisMap {
@@ -224,8 +233,9 @@ export class DynamicCstr extends DynamicProperties {
 
   /**
    * Returns the value of the constraint for a particular attribute key.
+   *
    * @param key The attribute key.
-   * @return The component value of the constraint.
+   * @returns The component value of the constraint.
    */
   public getValue(key: Axis): string {
     return this.components[key];
@@ -233,7 +243,8 @@ export class DynamicCstr extends DynamicProperties {
 
   /**
    * Convenience method to return the ordered list of constraint values.
-   * @return Ordered list of constraint values.
+   *
+   * @returns Ordered list of constraint values.
    */
   public getValues(): string[] {
     return this.order.map((key) => this.getValue(key));
@@ -266,8 +277,9 @@ export class DynamicCstr extends DynamicProperties {
 
   /**
    * Tests whether the dynamic constraint is equal to a given one.
+   *
    * @param cstr Dynamic constraints.
-   * @return True if the preconditions apply to the node.
+   * @returns True if the preconditions apply to the node.
    */
   public equal(cstr: DynamicCstr): boolean {
     const keys1 = cstr.getAxes();
@@ -287,6 +299,7 @@ export class DynamicCstr extends DynamicProperties {
 export class DynamicCstrParser {
   /**
    * A parser for dynamic constraint representations.
+   *
    * @param order The order of attributes in the
    *     dynamic constraint string.
    */
@@ -295,8 +308,9 @@ export class DynamicCstrParser {
   /**
    * Parses the dynamic constraint for math rules, consisting of a domain and
    * style information, given as 'domain.style'.
+   *
    * @param str A string representation of the dynamic constraint.
-   * @return The dynamic constraint.
+   * @returns The dynamic constraint.
    */
   public parse(str: string): DynamicCstr {
     const order = str.split('.');
@@ -315,12 +329,13 @@ export class DynamicCstrParser {
 
 export interface Comparator {
   /**
-   * @return The current reference constraint in the comparator.
+   * @returns The current reference constraint in the comparator.
    */
   getReference(): DynamicCstr;
 
   /**
    * Sets the reference constraint in the comparator.
+   *
    * @param cstr A new reference constraint.
    * @param opt_props An optional properties element
    *    for matching.
@@ -329,8 +344,9 @@ export interface Comparator {
 
   /**
    * Checks if dynamic constraints matches the reference constraint.
+   *
    * @param cstr The dynamic constraint to match.
-   * @return True if the constraint matches a possibly relaxed version
+   * @returns True if the constraint matches a possibly relaxed version
    *     of the reference constraint.
    */
   match(cstr: DynamicCstr): boolean;
@@ -338,9 +354,10 @@ export interface Comparator {
   /**
    * Compares two dynamic constraints for order with respect to the reference
    * constraint and the priority order of the comparator.
+   *
    * @param cstr1 First dynamic constraint.
    * @param cstr2 Second dynamic constraint.
-   * @return A negative integer, zero, or a positive integer as the first
+   * @returns A negative integer, zero, or a positive integer as the first
    *     argument is less than, equal to, or greater than the second.
    */
   compare(cstr1: DynamicCstr, cstr2: DynamicCstr): number;

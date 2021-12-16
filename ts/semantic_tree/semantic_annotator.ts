@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Annotates semantic trees.
- *
+ * @file Annotates semantic trees.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -40,6 +39,7 @@ export class SemanticAnnotator {
 
   /**
    * Annotates the tree bottom up.
+   *
    * @param node The semantic node.
    */
   public annotate(node: SemanticNode) {
@@ -70,9 +70,10 @@ export class SemanticVisitor {
 
   /**
    * Visits the tree top down, depth-first and propagates the information.
+   *
    * @param node The semantic node.
    * @param info The information to propagate.
-   * @return The result with updated information.
+   * @returns The result with updated information.
    */
   public visit(node: SemanticNode, info: { [key: string]: any }): any {
     let result = this.func(node, info);

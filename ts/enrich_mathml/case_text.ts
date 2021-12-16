@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with double script elements.
- *
+ * @file Specialist computations to deal with double script elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -32,8 +31,9 @@ export class CaseText extends AbstractEnrichCase {
 
   /**
    * Applicability test of the case.
+   *
    * @param semantic The semantic node.
-   * @return True if case is applicable.
+   * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
     return (

@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Ad hoc speech generator that computes a new speech string for
+ * @file Ad hoc speech generator that computes a new speech string for
  *     an element, non-recursively, every time.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

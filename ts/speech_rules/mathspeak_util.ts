@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for mathspeak rules.
+ * @file Utility functions for mathspeak rules.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -44,8 +44,9 @@ let nestingDepth: { [k1: string]: { [k2: string]: number } } = {};
 /**
  * String function to separate text into single characters by adding
  * intermittent spaces.
+ *
  * @param node The node to be processed.
- * @return The spaced out text.
+ * @returns The spaced out text.
  */
 export function spaceoutText(node: Element): string {
   return Array.from(node.textContent).join(' ');
@@ -54,10 +55,11 @@ export function spaceoutText(node: Element): string {
 /**
  * Spaces out content of the given node into new elements with single character
  * content.
+ *
  * @param node The node to be processed.
  * @param correction A correction function applied
  *     to the newly created semantic node with single characters.
- * @return List of single nodes.
+ * @returns List of single nodes.
  */
 export function spaceoutNodes(
   node: Element,
@@ -80,8 +82,9 @@ export function spaceoutNodes(
 
 /**
  * Query function that splits into number nodes and content nodes.
+ *
  * @param node The node to be processed.
- * @return List of single number nodes.
+ * @returns List of single number nodes.
  */
 export function spaceoutNumber(node: Element): Element[] {
   return spaceoutNodes(node, function (sn) {
@@ -93,8 +96,9 @@ export function spaceoutNumber(node: Element): Element[] {
 
 /**
  * Query function that splits into number nodes and content nodes.
+ *
  * @param node The node to be processed.
- * @return List of single identifier nodes.
+ * @returns List of single identifier nodes.
  */
 export function spaceoutIdentifier(node: Element): Element[] {
   return spaceoutNodes(node, function (sn) {
@@ -127,8 +131,9 @@ export const nestingBarriers: SemanticType[] = [
 /**
  * Resets the nesting depth parameters. Method should be used on every new
  * expression.
+ *
  * @param node The node to translate.
- * @return Array containing the original node only.
+ * @returns Array containing the original node only.
  */
 export function resetNestingDepth(node: Element): Element[] {
   nestingDepth = {};
@@ -138,6 +143,7 @@ export function resetNestingDepth(node: Element): Element[] {
 /**
  * Computes the depth of nested descendants of a particular set of tags for a
  * node.
+ *
  * @param type The type of nesting depth.
  * @param node The XML node to check.
  * @param tags The tags to be considered for the nesting depth.
@@ -148,7 +154,7 @@ export function resetNestingDepth(node: Element): Element[] {
  * @param opt_func A function that overrides both
  *     tags and attribute barriers, i.e., if function returns true it will be
  *     considered as barrier, otherwise tags and attributes will be considered.
- * @return The nesting depth.
+ * @returns The nesting depth.
  */
 export function getNestingDepth(
   type: string,
@@ -191,9 +197,10 @@ export function getNestingDepth(
 
 /**
  * Checks if a node contains given attribute value pairs.
+ *
  * @param node The XML node to check.
  * @param attrs Attribute value pairs.
- * @return True if all attributes are contained and have the given
+ * @returns True if all attributes are contained and have the given
  *     values.
  */
 export function containsAttr(
@@ -215,6 +222,7 @@ export function containsAttr(
 /**
  * Computes the depth of nested descendants of a particular set of tags for a
  * node recursively.
+ *
  * @param node The XML node to process.
  * @param tags The tags to be considered for the nesting depth.
  * @param barriers List of tags that serve as barrier.
@@ -224,7 +232,7 @@ export function containsAttr(
  *     and attribute barriers, i.e., if function returns true it will be
  *     considered as barrier, otherwise tags and attributes will be considered.
  * @param depth Accumulator for the nesting depth that is computed.
- * @return The nesting depth.
+ * @returns The nesting depth.
  */
 export function computeNestingDepth_(
   node: Element,
@@ -259,8 +267,9 @@ export function computeNestingDepth_(
 // TODO (sorge) Refactor the following to functions wrt. style attribute.
 /**
  * Computes and returns the nesting depth of fraction nodes.
+ *
  * @param node The fraction node.
- * @return The nesting depth. 0 if the node is not a fraction.
+ * @returns The nesting depth. 0 if the node is not a fraction.
  */
 export function fractionNestingDepth(node: Element): number {
   return getNestingDepth(
@@ -276,10 +285,11 @@ export function fractionNestingDepth(node: Element): number {
 
 /**
  * Computes disambiguations for nested fractions.
+ *
  * @param node The fraction node.
  * @param expr The disambiguating expression.
  * @param opt_end Optional end expression.
- * @return The disambiguating string.
+ * @returns The disambiguating string.
  */
 export function nestedFraction(
   node: Element,
@@ -296,8 +306,9 @@ export function nestedFraction(
 
 /**
  * Opening string for fractions in Mathspeak verbose mode.
+ *
  * @param node The fraction node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingFractionVerbose(node: Element): string {
   return nestedFraction(
@@ -309,8 +320,9 @@ export function openingFractionVerbose(node: Element): string {
 
 /**
  * Closing string for fractions in Mathspeak verbose mode.
+ *
  * @param node The fraction node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingFractionVerbose(node: Element): string {
   return nestedFraction(
@@ -322,8 +334,9 @@ export function closingFractionVerbose(node: Element): string {
 
 /**
  * Middle string for fractions in Mathspeak verbose mode.
+ *
  * @param node The fraction node.
- * @return The middle string.
+ * @returns The middle string.
  */
 export function overFractionVerbose(node: Element): string {
   return nestedFraction(node, LOCALE.MESSAGES.MS.FRAC_OVER);
@@ -331,8 +344,9 @@ export function overFractionVerbose(node: Element): string {
 
 /**
  * Opening string for fractions in Mathspeak brief mode.
+ *
  * @param node The fraction node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingFractionBrief(node: Element): string {
   return nestedFraction(
@@ -344,8 +358,9 @@ export function openingFractionBrief(node: Element): string {
 
 /**
  * Closing string for fractions in Mathspeak brief mode.
+ *
  * @param node The fraction node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingFractionBrief(node: Element): string {
   return nestedFraction(
@@ -357,8 +372,9 @@ export function closingFractionBrief(node: Element): string {
 
 /**
  * Opening string for fractions in Mathspeak superbrief mode.
+ *
  * @param node The fraction node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingFractionSbrief(node: Element): string {
   const depth = fractionNestingDepth(node);
@@ -374,8 +390,9 @@ export function openingFractionSbrief(node: Element): string {
 
 /**
  * Closing string for fractions in Mathspeak superbrief mode.
+ *
  * @param node The fraction node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingFractionSbrief(node: Element): string {
   const depth = fractionNestingDepth(node);
@@ -391,8 +408,9 @@ export function closingFractionSbrief(node: Element): string {
 
 /**
  * Middle string for fractions in Mathspeak superbrief mode.
+ *
  * @param node The fraction node.
- * @return The middle string.
+ * @returns The middle string.
  */
 export function overFractionSbrief(node: Element): string {
   const depth = fractionNestingDepth(node);
@@ -409,8 +427,9 @@ export function overFractionSbrief(node: Element): string {
 /**
  * Custom query function to check if a vulgar fraction is small enough to be
  * spoken as numbers in MathSpeak.
+ *
  * @param node Fraction node to be tested.
- * @return List containing the node if it is eligible. Otherwise
+ * @returns List containing the node if it is eligible. Otherwise
  *     empty.
  */
 export function isSmallVulgarFraction(node: Element): Element[] {
@@ -419,11 +438,14 @@ export function isSmallVulgarFraction(node: Element): Element[] {
 
 /**
  * Computes prefix for sub and superscript nodes.
+ *
  * @param node Subscript node.
  * @param init Initial prefix string.
  * @param replace Prefix strings for sub and
  *     superscript.
- * @return The complete prefix string.
+ * @param replace.sup
+ * @param replace.sub
+ * @returns The complete prefix string.
  */
 export function nestedSubSuper(
   node: Element,
@@ -464,8 +486,9 @@ export function nestedSubSuper(
 
 /**
  * Computes subscript prefix in verbose mode.
+ *
  * @param node Subscript node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function subscriptVerbose(node: Element): string {
   return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUBSCRIPT, {
@@ -476,8 +499,9 @@ export function subscriptVerbose(node: Element): string {
 
 /**
  * Computes subscript prefix in brief mode.
+ *
  * @param node Subscript node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function subscriptBrief(node: Element): string {
   return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUB, {
@@ -488,8 +512,9 @@ export function subscriptBrief(node: Element): string {
 
 /**
  * Computes subscript prefix in verbose mode.
+ *
  * @param node Subscript node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function superscriptVerbose(node: Element): string {
   return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUPERSCRIPT, {
@@ -500,8 +525,9 @@ export function superscriptVerbose(node: Element): string {
 
 /**
  * Computes subscript prefix in brief mode.
+ *
  * @param node Subscript node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function superscriptBrief(node: Element): string {
   return nestedSubSuper(node, LOCALE.MESSAGES.MS.SUP, {
@@ -512,8 +538,9 @@ export function superscriptBrief(node: Element): string {
 
 /**
  * Computes subscript prefix in verbose mode.
+ *
  * @param node Subscript node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function baselineVerbose(node: Element): string {
   const baseline = nestedSubSuper(node, '', {
@@ -536,8 +563,9 @@ export function baselineVerbose(node: Element): string {
 
 /**
  * Computes subscript prefix in brief mode.
+ *
  * @param node Subscript node.
- * @return The prefix string.
+ * @returns The prefix string.
  */
 export function baselineBrief(node: Element): string {
   const baseline = nestedSubSuper(node, '', {
@@ -550,8 +578,9 @@ export function baselineBrief(node: Element): string {
 // TODO (sorge) Refactor the following to functions wrt. style attribute.
 /**
  * Computes and returns the nesting depth of radical nodes.
+ *
  * @param node The radical node.
- * @return The nesting depth. 0 if the node is not a radical.
+ * @returns The nesting depth. 0 if the node is not a radical.
  */
 export function radicalNestingDepth(node: Element): number {
   return getNestingDepth(
@@ -566,10 +595,11 @@ export function radicalNestingDepth(node: Element): number {
 /**
  * Nested string for radicals in Mathspeak mode putting together the nesting
  * depth with a pre- and postfix string that depends on the speech style.
+ *
  * @param node The radical node.
  * @param prefix A prefix string.
  * @param postfix A postfix string.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function nestedRadical(
   node: Element,
@@ -591,8 +621,9 @@ export function nestedRadical(
 
 /**
  * A string indexing the root.
+ *
  * @param node The radical node.
- * @return The localised indexing string if it exists.
+ * @returns The localised indexing string if it exists.
  */
 export function getRootIndex(node: Element): string {
   const content =
@@ -604,8 +635,9 @@ export function getRootIndex(node: Element): string {
 }
 /**
  * Opening string for radicals in Mathspeak verbose mode.
+ *
  * @param node The radical node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingRadicalVerbose(node: Element): string {
   return nestedRadical(
@@ -617,8 +649,9 @@ export function openingRadicalVerbose(node: Element): string {
 
 /**
  * Closing string for radicals in Mathspeak verbose mode.
+ *
  * @param node The radical node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingRadicalVerbose(node: Element): string {
   return nestedRadical(
@@ -630,8 +663,9 @@ export function closingRadicalVerbose(node: Element): string {
 
 /**
  * Middle string for radicals in Mathspeak verbose mode.
+ *
  * @param node The radical node.
- * @return The middle string.
+ * @returns The middle string.
  */
 export function indexRadicalVerbose(node: Element): string {
   return nestedRadical(
@@ -643,8 +677,9 @@ export function indexRadicalVerbose(node: Element): string {
 
 /**
  * Opening string for radicals in Mathspeak brief mode.
+ *
  * @param node The radical node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingRadicalBrief(node: Element): string {
   return nestedRadical(
@@ -656,8 +691,9 @@ export function openingRadicalBrief(node: Element): string {
 
 /**
  * Closing string for radicals in Mathspeak brief mode.
+ *
  * @param node The radical node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingRadicalBrief(node: Element): string {
   return nestedRadical(
@@ -669,8 +705,9 @@ export function closingRadicalBrief(node: Element): string {
 
 /**
  * Middle string for radicals in Mathspeak superbrief mode.
+ *
  * @param node The radical node.
- * @return The middle string.
+ * @returns The middle string.
  */
 export function indexRadicalBrief(node: Element): string {
   return nestedRadical(
@@ -682,8 +719,9 @@ export function indexRadicalBrief(node: Element): string {
 
 /**
  * Opening string for radicals in Mathspeak superbrief mode.
+ *
  * @param node The radical node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingRadicalSbrief(node: Element): string {
   return nestedRadical(
@@ -695,8 +733,9 @@ export function openingRadicalSbrief(node: Element): string {
 
 /**
  * Middle string for radicals in Mathspeak superbrief mode.
+ *
  * @param node The radical node.
- * @return The middle string.
+ * @returns The middle string.
  */
 export function indexRadicalSbrief(node: Element): string {
   return nestedRadical(
@@ -708,8 +747,9 @@ export function indexRadicalSbrief(node: Element): string {
 
 /**
  * Computes and returns the nesting depth of underscore nodes.
+ *
  * @param node The underscore node.
- * @return The nesting depth. 0 if the node is not an underscore.
+ * @returns The nesting depth. 0 if the node is not an underscore.
  */
 export function underscoreNestingDepth(node: Element): number {
   return getNestingDepth(
@@ -731,8 +771,9 @@ export function underscoreNestingDepth(node: Element): number {
 
 /**
  * String function to construct and underscript prefix.
+ *
  * @param node The underscore node.
- * @return The correct prefix string.
+ * @returns The correct prefix string.
  */
 export function nestedUnderscript(node: Element): string {
   const depth = underscoreNestingDepth(node);
@@ -743,8 +784,9 @@ export function nestedUnderscript(node: Element): string {
 
 /**
  * Computes and returns the nesting depth of overscore nodes.
+ *
  * @param node The overscore node.
- * @return The nesting depth. 0 if the node is not an overscore.
+ * @returns The nesting depth. 0 if the node is not an overscore.
  */
 export function overscoreNestingDepth(node: Element): number {
   return getNestingDepth(
@@ -764,14 +806,18 @@ export function overscoreNestingDepth(node: Element): number {
   );
 }
 
+/**
+ * @param _node
+ */
 export function endscripts(_node: Element) {
   return LOCALE.MESSAGES.MS.ENDSCRIPTS;
 }
 
 /**
  * String function to construct and overscript prefix.
+ *
  * @param node The overscore node.
- * @return The correct prefix string.
+ * @returns The correct prefix string.
  */
 export function nestedOverscript(node: Element): string {
   const depth = overscoreNestingDepth(node);
@@ -783,8 +829,9 @@ export function nestedOverscript(node: Element): string {
 /**
  * Query function that Checks if we have a simple determinant in the sense that
  * every cell only contains single letters or numbers.
+ *
  * @param node The determinant node.
- * @return List containing input node if true.
+ * @returns List containing input node if true.
  */
 export function determinantIsSimple(node: Element): Element[] {
   if (
@@ -818,7 +865,8 @@ export function determinantIsSimple(node: Element): Element[] {
 /**
  * Generate constraints for the specialized baseline rules of relation
  * sequences.
- * @return The constraint strings.
+ *
+ * @returns The constraint strings.
  */
 export function generateBaselineConstraint(): string[] {
   const ignoreElems = ['subscript', 'superscript', 'tensor'];
@@ -848,8 +896,9 @@ export function generateBaselineConstraint(): string[] {
 
 /**
  * Removes parentheses around a label.
+ *
  * @param node The label to be processed.
- * @return The text of the label.
+ * @returns The text of the label.
  */
 export function removeParens(node: Element): string {
   if (
@@ -888,9 +937,10 @@ const childNumber: Map<number, number> = new Map([
 
 /**
  * Generates the rule strings and constraints for tensor rules.
+ *
  * @param constellation Bitvector representing of possible tensor
  *     constellation.
- * @return A list consisting of additional constraints for the
+ * @returns A list consisting of additional constraints for the
  *     tensor rule, plus the strings for the verbose and brief rule, in that
  *     order.
  */
@@ -920,7 +970,9 @@ function generateTensorRuleStrings_(
 
 /**
  * Generator for tensor speech rules.
+ *
  * @param store The mathstore to which the rules are added.
+ * @param brief
  */
 export function generateTensorRules(store: SpeechRuleStore, brief = true) {
   // Constellations are built as bitvectors with the meaning:
@@ -988,8 +1040,9 @@ export function generateTensorRules(store: SpeechRuleStore, brief = true) {
 
 /**
  * Predicate to decide if a root has a small index, i.e., between 1 and 10.
+ *
  * @param node The root node.
- * @return The list with the given node, if it is a root with a
+ * @returns The list with the given node, if it is a root with a
  *     small index.
  */
 export function smallRoot(node: Element): Element[] {

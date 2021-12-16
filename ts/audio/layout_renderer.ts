@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Class for SSML rendering of descriptions.
- *
+ * @file Class for SSML rendering of descriptions.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -116,12 +115,18 @@ const handlers: { [key: string]: (node: Element) => string } = {
   DENOMINATOR: handleFractionPart
 };
 
+/**
+ * @param element
+ */
 function applyHandler(element: Element): string {
   const tag = DomUtil.tagName(element as Element);
   const handler = handlers[tag];
   return handler ? handler(element) : element.textContent;
 }
 
+/**
+ * @param str
+ */
 function setTwoDim(str: string): string {
   twodExpr = '';
   const dom = DomUtil.parseInput(`<all>${str}</all>`);
@@ -130,6 +135,10 @@ function setTwoDim(str: string): string {
   return twodExpr;
 }
 
+/**
+ * @param str1
+ * @param str2
+ */
 function combineContent(str1: string, str2: string): string {
   if (!str1 || !str2) {
     return str1 + str2;
@@ -153,7 +162,7 @@ function combineContent(str1: string, str2: string): string {
  * layout element.
  *
  * @param dom A node.
- * @return The resulting layout element.
+ * @returns The resulting layout element.
  */
 function recurseTree(dom: Element): string {
   let result = '';
@@ -212,6 +221,7 @@ function padWidth(str: string, width: number): string {
  *
  * @param {string} str
  * @param {number} heigth
+ * @param height
  * @param {number} width
  */
 function padCell(str: string, height: number, width: number): string {
@@ -229,6 +239,9 @@ declare type row = {
 };
 
 // Clean row elements and assemble row structure.
+/**
+ * @param matrix
+ */
 function assembleRows(matrix: Element): row[] {
   const children = Array.from(matrix.childNodes);
   const mat = [];
@@ -242,6 +255,9 @@ function assembleRows(matrix: Element): row[] {
 }
 
 // Compute max height and width
+/**
+ * @param mat
+ */
 function getMaxParameters(mat: row[]): [number, number[]] {
   const maxHeight = mat.reduce((max, x) => Math.max(x.height, max), 0);
   const maxWidth = [];
@@ -254,6 +270,10 @@ function getMaxParameters(mat: row[]): [number, number[]] {
 }
 
 // Pad cells and assemble rows.
+/**
+ * @param mat
+ * @param maxWidth
+ */
 function combineCells(mat: row[], maxWidth: number[]): row[] {
   const newMat = [];
   for (const row of mat) {
@@ -271,6 +291,10 @@ function combineCells(mat: row[], maxWidth: number[]): row[] {
 }
 
 // Combine rows into matrix
+/**
+ * @param mat
+ * @param maxHeight
+ */
 function combineRows(mat: row[], maxHeight: number): string {
   // If all rows are of heigth 1 assemble them directly.
   if (maxHeight === 1) {
@@ -297,6 +321,9 @@ function combineRows(mat: row[], maxHeight: number): string {
   return result.slice(0, -1).join('\n');
 }
 
+/**
+ * @param matrix
+ */
 function handleMatrix(matrix: Element): string {
   let mat = assembleRows(matrix);
   const [maxHeight, maxWidth] = getMaxParameters(mat);
@@ -304,6 +331,9 @@ function handleMatrix(matrix: Element): string {
   return combineRows(mat, maxHeight);
 }
 
+/**
+ * @param matrix
+ */
 function handleTable(matrix: Element): string {
   let mat = assembleRows(matrix);
   // TODO: Adapt this so cells of length one will be retained!
@@ -317,6 +347,9 @@ function handleTable(matrix: Element): string {
 }
 
 // TODO: Check with Michael why the number indicator is omitted (e.g., 16.4-1)
+/**
+ * @param matrix
+ */
 function handleCases(matrix: Element): string {
   let mat = assembleRows(matrix);
   mat.forEach((row) => {
@@ -328,6 +361,9 @@ function handleCases(matrix: Element): string {
   return combineRows(mat, maxHeight);
 }
 
+/**
+ * @param matrix
+ */
 function handleCayley(matrix: Element): string {
   let mat = assembleRows(matrix);
   mat.forEach((row) => {
@@ -349,6 +385,10 @@ function handleCayley(matrix: Element): string {
   return combineRows(mat, maxHeight);
 }
 
+/**
+ * @param char
+ * @param height
+ */
 function verticalArrange(char: string, height: number) {
   let str = '';
   while (height) {
@@ -358,6 +398,9 @@ function verticalArrange(char: string, height: number) {
   return str.slice(0, -1);
 }
 
+/**
+ * @param row
+ */
 function handleRow(row: Element): row {
   const children = Array.from(row.childNodes);
   const lfence = getFence(children[0]);
@@ -388,6 +431,9 @@ function handleRow(row: Element): row {
   };
 }
 
+/**
+ * @param node
+ */
 function getFence(node: Node): string {
   if (
     node.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
@@ -398,6 +444,10 @@ function getFence(node: Node): string {
   return '';
 }
 
+/**
+ * @param cell
+ * @param width
+ */
 function centerCell(cell: string, width: number): string {
   const cw = strWidth(cell);
   const center = (width - cw) / 2;
@@ -417,6 +467,9 @@ function centerCell(cell: string, width: number): string {
   return result.join('\n');
 }
 
+/**
+ * @param frac
+ */
 function handleFraction(frac: Node): string {
   const [open, num, , den, close] = Array.from(frac.childNodes);
   const numerator = applyHandler(num as Element);
@@ -432,6 +485,9 @@ function handleFraction(frac: Node): string {
   );
 }
 
+/**
+ * @param prt
+ */
 function handleFractionPart(prt: Element): string {
   const fchild = prt.firstChild as Element;
   const content = recurseTree(prt);

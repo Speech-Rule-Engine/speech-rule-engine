@@ -15,8 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview A factory for generating walkers.
- *
+ * @file A factory for generating walkers.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -31,6 +30,7 @@ import { Walker } from './walker';
 
 /**
  * Produces a walker that corresponds to the given type.
+ *
  * @param type The type of walker.
  * @param node The (rendered) node on which the walker is called.
  * @param generator The speech generator for
@@ -39,7 +39,7 @@ import { Walker } from './walker';
  *     highlighter.
  * @param xml The original xml/mathml node on which the walker is
  *      called as a string.
- * @return The newly generated walker.
+ * @returns The newly generated walker.
  */
 export function walker(
   type: string,

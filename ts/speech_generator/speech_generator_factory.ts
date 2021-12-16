@@ -15,8 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Dummy file to pull together all the speech generators.
- *
+ * @file Dummy file to pull together all the speech generators.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -31,8 +30,9 @@ import { TreeSpeechGenerator } from './tree_speech_generator';
 
 /**
  * Produces a speech generator that corresponds to the given type.
+ *
  * @param type The type of speech generator.
- * @return The newly generated speech generator.
+ * @returns The newly generated speech generator.
  */
 export function generator(type: string): SpeechGenerator {
   const constructor = generatorMapping_[type] || generatorMapping_.Direct;

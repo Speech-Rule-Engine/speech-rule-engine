@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic messages for localisation.
+ * @file Basic messages for localisation.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -39,7 +39,7 @@ export interface Messages {
 }
 
 /**
- * @return A basic message structure.
+ * @returns A basic message structure.
  */
 export function MESSAGES(): Messages {
   return {
@@ -95,6 +95,9 @@ export interface Numbers {
   numSep: string;
 }
 
+/**
+ *
+ */
 export function NUMBERS(): Numbers {
   return {
     zero: 'zero',
@@ -141,16 +144,17 @@ export interface Alphabets {
 
   /**
    * A default combiner for alphabet.
+   *
    * @param letter The letter.
    * @param font The font name.
    * @param cap Capitalisation expression.
-   * @return The speech string as `letter`.
+   * @returns The speech string as `letter`.
    */
   combiner: tr.Combiner;
 }
 
 /**
- * @return A localisable alphabet structure
+ * @returns A localisable alphabet structure
  */
 export function ALPHABETS(): Alphabets {
   return {
@@ -180,16 +184,18 @@ export function ALPHABETS(): Alphabets {
 export interface Functions {
   /**
    * Method to determine end of nesting depth for nested fraction.
+   *
    * @param node A node.
-   * @return True if current element should not be considered for
+   * @returns True if current element should not be considered for
    *     nesting depth.
    */
   fracNestDepth: (node: Element) => boolean;
 
   /**
    * Translation for count word nesting description of radicals.
+   *
    * @param count The counting parameter.
-   * @return The corresponding string.
+   * @returns The corresponding string.
    */
   radicalNestDepth: (count: number) => string;
 
@@ -199,7 +205,7 @@ export interface Functions {
    *
    * @param postfix The postfix.
    * @param index The index.
-   * @return The combined string, postfix plus index.
+   * @returns The combined string, postfix plus index.
    */
   combineRootIndex: (name: string, index: string) => string;
 
@@ -214,12 +220,16 @@ export interface Functions {
 
   /**
    * Function to build regular plurals for units.
+   *
    * @param unit A unit expression.
-   * @return The unit in plural.
+   * @returns The unit in plural.
    */
   plural: tr.Transformer;
 }
 
+/**
+ *
+ */
 export function FUNCTIONS(): Functions {
   return {
     fracNestDepth: LocaleUtil.vulgarNestingDepth,

@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract class implementing highlighters.
- *
+ * @file Abstract class implementing highlighters.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -62,12 +61,13 @@ export abstract class AbstractHighlighter implements Highlighter {
    * Highlights a single node.
    *
    * @param node The node to be highlighted.
-   * @return The old node information.
+   * @returns The old node information.
    */
   protected abstract highlightNode(node: HTMLElement): Highlight;
 
   /**
    * Unhighlights a single node.
+   *
    * @param highlight The highlight info for the node to be unhighlighted.
    */
   protected abstract unhighlightNode(highlight: Highlight): void;
@@ -151,8 +151,9 @@ export abstract class AbstractHighlighter implements Highlighter {
 
   /**
    * Returns the maction sub nodes of a given node.
+   *
    * @param node The root node.
-   * @return The list of maction sub nodes.
+   * @returns The list of maction sub nodes.
    */
   public getMactionNodes(node: HTMLElement): HTMLElement[] {
     return Array.from(
@@ -170,8 +171,9 @@ export abstract class AbstractHighlighter implements Highlighter {
 
   /**
    * Check if a node is already highlighted.
+   *
    * @param node The node.
-   * @return True if already highlighted.
+   * @returns True if already highlighted.
    */
   public isHighlighted(node: HTMLElement): boolean {
     return node.hasAttribute(AbstractHighlighter.ATTR);
@@ -179,6 +181,7 @@ export abstract class AbstractHighlighter implements Highlighter {
 
   /**
    * Sets the indicator attribute that node is already highlighted.
+   *
    * @param node The node.
    */
   public setHighlighted(node: HTMLElement) {
@@ -187,6 +190,7 @@ export abstract class AbstractHighlighter implements Highlighter {
 
   /**
    * Removes the indicator attribute that node is already highlighted.
+   *
    * @param node The node.
    */
   public unsetHighlighted(node: HTMLElement) {
@@ -195,6 +199,7 @@ export abstract class AbstractHighlighter implements Highlighter {
 
   /**
    * Tree colorization method for all sub-expressions.
+   *
    * @param node The node.
    */
   public colorizeAll(node: HTMLElement) {
@@ -207,6 +212,7 @@ export abstract class AbstractHighlighter implements Highlighter {
 
   /**
    * Removes tree colorization.
+   *
    * @param node The node.
    */
   public uncolorizeAll(node: HTMLElement) {
@@ -219,6 +225,7 @@ export abstract class AbstractHighlighter implements Highlighter {
 
   /**
    * Tree colors a single node.
+   *
    * @param node The node.
    */
   // TODO: Generalise this to use the highlighter method and background.
@@ -232,6 +239,7 @@ export abstract class AbstractHighlighter implements Highlighter {
 
   /**
    * Removes tree coloring from a single node.
+   *
    * @param node The node.
    */
   public uncolorize(node: HTMLElement) {

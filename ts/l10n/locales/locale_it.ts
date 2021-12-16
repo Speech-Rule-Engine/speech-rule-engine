@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Italian message file.
- *
+ * @file Italian message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -42,6 +41,9 @@ const italianPostfixCombiner = function (
 
 let locale: Locale = null;
 
+/**
+ *
+ */
 export function it(): Locale {
   if (!locale) {
     locale = create();
@@ -50,6 +52,9 @@ export function it(): Locale {
   return locale;
 }
 
+/**
+ *
+ */
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;

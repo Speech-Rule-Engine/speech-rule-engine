@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Factory for generating highlighters.
- *
+ * @file Factory for generating highlighters.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -32,12 +31,15 @@ import { SvgV3Highlighter } from './svg_v3_highlighter';
 /**
  * Produces a highlighter that goes with the current Mathjax renderer if
  * highlighting is possible.
+ *
  * @param back A background color specification.
  * @param fore A foreground color specification.
  * @param {{renderer: string,
  *          browser: (undefined|string)}} rendererInfo Information on renderer,
  * browser. Has to at least contain the renderer field.
- * @return A new highlighter.
+ * @param rendererInfo.renderer
+ * @param rendererInfo.browser
+ * @returns A new highlighter.
  */
 export function highlighter(
   back: Color,
@@ -59,11 +61,14 @@ export function highlighter(
 
 /**
  * Adds highlighter specific events depending on the current Mathjax renderer.
+ *
  * @param node  The base node for highlighting.
  * @param events The events to attach given as event
  *     type and function to execute
  * @param rendererInfo Information on renderer,
  * browser. Has to at least contain the renderer field.
+ * @param rendererInfo.renderer
+ * @param rendererInfo.browser
  */
 export function addEvents(
   node: HTMLElement,

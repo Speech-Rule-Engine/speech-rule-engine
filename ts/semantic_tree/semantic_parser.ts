@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Interface and abstract class for semantic tree parsers.
- *
+ * @file Interface and abstract class for semantic tree parsers.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -26,22 +25,24 @@ import { SemanticNodeFactory } from './semantic_node_factory';
 export interface SemanticParser<T> {
   /**
    * The parse method of this parser.
+   *
    * @param representation The representation from which a semantic
    * interpretation is constructed.
-   * @return The root of the constructed semantic tree.
+   * @returns The root of the constructed semantic tree.
    */
   parse(representation: T): SemanticNode;
 
   /**
    * Parse a list of element into a list of semantic nodes.
+   *
    * @param list A list of elements.
-   * @return The list of resulting semantic
+   * @returns The list of resulting semantic
    *     node.
    */
   parseList(list: T[]): SemanticNode[];
 
   /**
-   * @return The node factory of the parser.
+   * @returns The node factory of the parser.
    */
   getFactory(): SemanticNodeFactory;
 
@@ -51,7 +52,7 @@ export interface SemanticParser<T> {
   setFactory(factory: SemanticNodeFactory): void;
 
   /**
-   * @return The type of the parser.
+   * @returns The type of the parser.
    */
   getType(): string;
 }

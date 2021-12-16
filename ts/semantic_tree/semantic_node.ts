@@ -15,8 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Nodes in the semantic tree.
- *
+ * @file Nodes in the semantic tree.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -125,8 +124,9 @@ export class SemanticNode {
 
   /**
    * Generates a semantic node from its XML representation.
+   *
    * @param xml The XML representation.
-   * @return The generated semantic node.
+   * @returns The generated semantic node.
    */
   public static fromXml(xml: Element): SemanticNode {
     const id = parseInt(xml.getAttribute('id'), 10);
@@ -146,6 +146,7 @@ export class SemanticNode {
 
   /**
    * Adds the given attributed to the semantic node if it exists.
+   *
    * @param node The semantic node.
    * @param xml The XML element representation of the node.
    * @param attribute The name of the attribute.
@@ -169,6 +170,7 @@ export class SemanticNode {
   /**
    * Processes the children of the XML node to set text content, child nodes and
    * content nodes of the semantic node.
+   *
    * @param node The semantic node.
    * @param xml The XML element representation of the node.
    */
@@ -198,8 +200,9 @@ export class SemanticNode {
   /**
    * Retrieve all subnodes (including the node itself) that satisfy a given
    * predicate.
+   *
    * @param pred The predicate.
-   * @return The nodes in the tree for which the
+   * @returns The nodes in the tree for which the
    *     predicate holds.
    */
   public querySelectorAll(pred: (p1: SemanticNode) => boolean): SemanticNode[] {
@@ -218,16 +221,18 @@ export class SemanticNode {
 
   /**
    * An XML tree representation of the current node.
+   *
    * @param xml The XML document.
    * @param brief If set attributes are omitted.
-   * @return The XML representation of the node.
+   * @returns The XML representation of the node.
    */
   public xml(xml: Document, brief?: boolean): Node {
     /**
      * Translates a list of nodes into XML representation.
+     *
      * @param tag Name of the enclosing tag.
      * @param nodes A list of nodes.
-     * @return An XML representation of the node list.
+     * @returns An XML representation of the node list.
      */
     const xmlNodeList = function (tag: string, nodes: SemanticNode[]): Node {
       const xmlNodes = nodes.map(function (x) {
@@ -255,8 +260,9 @@ export class SemanticNode {
 
   /**
    * Serializes the XML representation of a node.
+   *
    * @param brief If attributes are to be omitted.
-   * @return Serialized string.
+   * @returns Serialized string.
    */
   public toString(brief = false): string {
     const xmls = new SystemExternal.xmldom.XMLSerializer();
@@ -267,7 +273,8 @@ export class SemanticNode {
 
   /**
    * Computes a list of attributes of the semantic node.
-   * @return A list of
+   *
+   * @returns A list of
    *     pairs.
    */
   public allAttributes(): [Attribute, string][] {
@@ -291,7 +298,8 @@ export class SemanticNode {
 
   /**
    * Turns annotation structure into an attribute.
-   * @return XML string for annotation.
+   *
+   * @returns XML string for annotation.
    */
   public xmlAnnotation(): string {
     const result: string[] = [];
@@ -305,7 +313,8 @@ export class SemanticNode {
 
   /**
    * Turns node into JSON format.
-   * @return The JSON object for the node.
+   *
+   * @returns The JSON object for the node.
    */
   public toJson(): any {
     const json = {} as any;
@@ -332,9 +341,11 @@ export class SemanticNode {
 
   /**
    * Updates the content of the node thereby possibly changing type and role.
+   *
    * @param content The new content string.
    * @param opt_text Text indicator. If true non-breaking spaces are
    *     retained.
+   * @param text
    */
   public updateContent(content: string, text?: boolean) {
     // Remove superfluous whitespace only if it is not the only content!
@@ -360,6 +371,7 @@ export class SemanticNode {
    * Adds MathML nodes to the node's store of MathML nodes if necessary only, as
    * we can not necessarily assume that the MathML of the content nodes and
    * children are all disjoint.
+   *
    * @param mmlNodes List of MathML nodes.
    */
   public addMathmlNodes(mmlNodes: Element[]) {
@@ -372,6 +384,7 @@ export class SemanticNode {
 
   /**
    * Appends a child to the node.
+   *
    * @param child The new child.
    */
   public appendChild(child: SemanticNode) {
@@ -382,6 +395,7 @@ export class SemanticNode {
 
   /**
    * Replaces a child node of the node.
+   *
    * @param oldNode The node to be replaced.
    * @param newNode The new node.
    */
@@ -408,6 +422,7 @@ export class SemanticNode {
 
   /**
    * Appends a content node to the node.
+   *
    * @param node The new content node.
    */
   public appendContentNode(node: SemanticNode) {
@@ -420,6 +435,7 @@ export class SemanticNode {
 
   /**
    * Removes a content node from the node.
+   *
    * @param node The content node to be removed.
    */
   public removeContentNode(node: SemanticNode) {
@@ -434,8 +450,9 @@ export class SemanticNode {
   /**
    * Tests if node is equal to the given node. Two nodes are considered equal if
    * they have the same type, role, content and all its children are equal.
+   *
    * @param node The node to test against.
-   * @return True if nodes are equal wrt. structure and content.
+   * @returns True if nodes are equal wrt. structure and content.
    */
   public equals(node: SemanticNode): boolean {
     if (!node) {
@@ -480,6 +497,7 @@ export class SemanticNode {
 
   /**
    * Adds a new annotation annotation if annotation is not empty.
+   *
    * @param domain The domain.
    * @param annotation The annotation.
    */
@@ -491,8 +509,9 @@ export class SemanticNode {
 
   /**
    * Retrieves the annotation annotations for a particular domain.
+   *
    * @param domain The domain.
-   * @return The annotation annotations.
+   * @returns The annotation annotations.
    */
   public getAnnotation(domain: string): string[] {
     const content = this.annotation[domain];
@@ -501,9 +520,10 @@ export class SemanticNode {
 
   /**
    * Checks if a node has a particular annotation.
+   *
    * @param domain The domain.
    * @param annotation The annotation.
-   * @return True if the annotation is contained.
+   * @returns True if the annotation is contained.
    */
   public hasAnnotation(domain: string, annotation: string): boolean {
     const content = this.annotation[domain];
@@ -515,6 +535,7 @@ export class SemanticNode {
 
   /**
    * Parses a annotation string as given, for example, in an attribute.
+   *
    * @param stateStr The state string for the annotation.
    */
   public parseAnnotation(stateStr: string) {
@@ -526,7 +547,7 @@ export class SemanticNode {
   }
 
   /**
-   * @return The semantic meaning of the node.
+   * @returns The semantic meaning of the node.
    */
   public meaning(): SemanticMeaning {
     return { type: this.type, role: this.role, font: this.font };
@@ -534,6 +555,7 @@ export class SemanticNode {
 
   /**
    * Adds attributes to the XML representation of the current node.
+   *
    * @param node The XML node.
    */
   private xmlAttributes(node: Element) {
@@ -546,6 +568,7 @@ export class SemanticNode {
 
   /**
    * Adds the external attributes for this node to its XML representation.
+   *
    * @param node The XML node.
    */
   private addExternalAttributes(node: Element) {
@@ -556,6 +579,7 @@ export class SemanticNode {
 
   /**
    * Removes MathML nodes from the node's store of MathML nodes.
+   *
    * @param mmlNodes List of MathML nodes.
    */
   private removeMathmlNodes(mmlNodes: Element[]) {
@@ -571,8 +595,9 @@ export class SemanticNode {
 
   /**
    * Convenience method to display the whole tree and its elements.
+   *
    * @param depth The depth of the tree.
-   * @return String with nested tree display.
+   * @returns String with nested tree display.
    */
   private displayTree_(depth: number): string {
     depth++;
@@ -600,7 +625,8 @@ export class SemanticNode {
 
   /**
    * Returns a display version of the node's associated MathML tree.
-   * @return The MathML tree as string or EMPTY.
+   *
+   * @returns The MathML tree as string or EMPTY.
    */
   private mathmlTreeString(): string {
     return this.mathmlTree ? this.mathmlTree.toString() : 'EMPTY';
@@ -608,6 +634,7 @@ export class SemanticNode {
 
   /**
    * Adds a new annotation annotation.
+   *
    * @param domain The domain.
    * @param annotation The annotation.
    */

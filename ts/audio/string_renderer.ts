@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview A simple audio renderer that ignores all prosody.
- *
+ * @file A simple audio renderer that ignores all prosody.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

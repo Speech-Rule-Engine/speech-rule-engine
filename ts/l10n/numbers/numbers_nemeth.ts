@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers to Nemeth.
+ * @file Translating numbers to Nemeth.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -26,8 +26,9 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Translates a number of into a Braille string representation.
+ *
  * @param num The number to translate.
- * @return The Braille representation of that number.
+ * @returns The Braille representation of that number.
  */
 function numberToWords(num: number): string {
   const digits = num.toString().split('');

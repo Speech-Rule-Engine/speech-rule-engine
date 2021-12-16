@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview A simple syntax walker.
- *
+ * @file A simple syntax walker.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

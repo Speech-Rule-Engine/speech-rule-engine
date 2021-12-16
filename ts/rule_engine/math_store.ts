@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Rule store for math syntax tree nodes.
+ * @file Rule store for math syntax tree nodes.
  * @author sorge@google.com (Volker Sorge)
  */
 
@@ -67,8 +67,10 @@ export class MathStore extends BaseRuleStore {
 
   /**
    * Adds an alias for an existing precondition.
+   *
    * @param name The name of the precondition.
    * @param query Precondition query of the rule.
+   * @param prec
    * @param args Additional static precondition constraints.
    */
   public defineAlias(name: string, prec: string, ...args: string[]) {
@@ -87,6 +89,7 @@ export class MathStore extends BaseRuleStore {
 
   /**
    * Adds an alias for an existing rule.
+   *
    * @param name The name of the rule.
    * @param query Precondition query of the rule.
    * @param args Additional static precondition constraints.
@@ -121,6 +124,7 @@ export class MathStore extends BaseRuleStore {
    * Duplicates a speech rule for the old dynamic constraint for a new dynamic
    * constraint, keeping the same precondition, while possibly adding a new
    * action.
+   *
    * @param name The name of the rule.
    * @param oldDynamic The old math domain and style assignment.
    * @param newDynamic The new math domain and style assignment.
@@ -154,8 +158,10 @@ export class MathStore extends BaseRuleStore {
 
   /**
    * Adds a specialization for a given precondition.
+   *
    * @param name The name of the rule.
    * @param old The old dynamic constraint.
+   * @param _old
    * @param dynamic The new dynamic constraint.
    */
   public defineSpecialized(name: string, _old: string, dynamic: string) {
@@ -177,6 +183,7 @@ export class MathStore extends BaseRuleStore {
    * Evaluates a single string of a math expressions. The method splits the
    * given string into components such as single characters, function names or
    * words, numbers, etc. and creates the appropriate auditory descriptions.
+   *
    * @override
    */
   public evaluateString(str: string) {
@@ -235,6 +242,7 @@ export class MathStore extends BaseRuleStore {
 
   /**
    * Adds a new speech rule as alias of the given rule.
+   *
    * @param rule The existing rule.
    * @param query Precondition query of the rule.
    * @param cstrList List of additional constraints.
@@ -254,8 +262,9 @@ export class MathStore extends BaseRuleStore {
   /**
    * Matches a number with respect to locale. If it discovers it is a number in
    * English writing, it will attempt to translate it.
+   *
    * @param str The string to match.
-   * @return The number and its length.
+   * @returns The number and its length.
    */
   private matchNumber_(str: string): { number: string; length: number } | null {
     const locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp.NUMBER));

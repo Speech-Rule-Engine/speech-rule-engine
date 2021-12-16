@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for events.
- *
+ * @file Utility functions for events.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -165,6 +164,7 @@ export enum EventType {
 export class Event {
   /**
    * The type of events.
+   *
    * @param src The target element of the event.
    * @param type The event type.
    * @param callback The event handler function.

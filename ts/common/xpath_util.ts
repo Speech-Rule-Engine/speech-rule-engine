@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview A collection of JavaScript utilities used to simplify working
+ * @file A collection of JavaScript utilities used to simplify working
  * with xpaths.
  * The nodejs file depends on the xpath library.
  * @author clchen@google.com (Charles L. Chen)
@@ -28,7 +28,8 @@ import SystemExternal from './system_external';
 
 /**
  * Returns whether or not xpath is supported.
- * @return True if xpath is supported.
+ *
+ * @returns True if xpath is supported.
  */
 function xpathSupported(): boolean {
   if (typeof XPathResult === 'undefined') {
@@ -85,8 +86,9 @@ const nameSpaces: { [key: string]: string } = {
 
 /**
  * Resolve some default name spaces.
+ *
  * @param prefix Namespace prefix.
- * @return The corresponding namespace URI.
+ * @returns The corresponding namespace URI.
  */
 export function resolveNameSpace(prefix: string): string {
   return nameSpaces[prefix] || null;
@@ -108,7 +110,7 @@ class Resolver {
  * @param expression The XPath expression to evaluate.
  * @param rootNode The HTML node to start evaluating the XPath from.
  * @param type The xpath result type.
- * @return The result of the xpath computation.
+ * @returns The result of the xpath computation.
  */
 function evaluateXpath(
   expression: string,
@@ -135,7 +137,7 @@ function evaluateXpath(
  *
  * @param expression The XPath expression to evaluate.
  * @param rootNode The HTML node to start evaluating the XPath from.
- * @return The array of children nodes that match.
+ * @returns The array of children nodes that match.
  */
 export function evalXPath(expression: string, rootNode: Node): Node[] {
   let iterator: XPathResult;
@@ -164,7 +166,7 @@ export function evalXPath(expression: string, rootNode: Node): Node[] {
  * Given a rootNode, it returns an array of all its leaf nodes.
  *
  * @param rootNode The node to get the leaf nodes from.
- * @return The array of leaf nodes for the given rootNode.
+ * @returns The array of leaf nodes for the given rootNode.
  */
 export function getLeafNodes(rootNode: Node): Node[] {
   return evalXPath('.//*[count(*)=0]', rootNode);
@@ -175,7 +177,7 @@ export function getLeafNodes(rootNode: Node): Node[] {
  *
  * @param expression The XPath expression to evaluate.
  * @param rootNode The HTML node to start evaluating the XPath from.
- * @return The result of evaluating the xpath expression.
+ * @returns The result of evaluating the xpath expression.
  */
 export function evaluateBoolean(expression: string, rootNode: Node): boolean {
   let result: XPathResult;
@@ -193,7 +195,7 @@ export function evaluateBoolean(expression: string, rootNode: Node): boolean {
  *
  * @param expression The XPath expression to evaluate.
  * @param rootNode The HTML node to start evaluating the XPath from.
- * @return The result of evaluating the Xpath expression.
+ * @returns The result of evaluating the Xpath expression.
  */
 export function evaluateString(expression: string, rootNode: Node): string {
   let result: XPathResult;

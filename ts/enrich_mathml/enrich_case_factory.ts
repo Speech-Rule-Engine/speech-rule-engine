@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Factory class for executing case splits.
+ * @file Factory class for executing case splits.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -78,8 +78,9 @@ interface Case {
 
 /**
  * Returns the embellished case analysis.
+ *
  * @param node The semantic node.
- * @return The case analysis.
+ * @returns The case analysis.
  */
 export default function getCase(node: SemanticNode): EnrichCase {
   for (let i = 0, enrich; (enrich = cases[i]); i++) {

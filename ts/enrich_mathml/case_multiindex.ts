@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract class for cases of multiindex structures.
- *
+ * @file Abstract class for cases of multiindex structures.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -36,8 +35,9 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
   /**
    * Treats the index nodes of a multiscript tensor, possibly collapsing dummy
    * punctuations.
+   *
    * @param index The index node of a tensor.
-   * @return If the index node was a
+   * @returns If the index node was a
    *     dummy punctuation, i.e. consisted of more than one index, a list of
    *     strings for the collapsed structure is returned, otherwise the node id.
    */
@@ -54,8 +54,9 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
 
   /**
    * Creates a None node.
+   *
    * @param semantic An empty semantic node.
-   * @return The corresponding MathML <None/> node.
+   * @returns The corresponding MathML <None/> node.
    */
   private static createNone_(semantic: SemanticNode): Element {
     const newNode = DomUtil.createElement('none');
@@ -77,6 +78,7 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
   /**
    * Completes the mmultiscript by adding missing None nodes and sorting out the
    * right order of children.
+   *
    * @param rightIndices The ids of the leaf
    *     nodes of the right indices.
    * @param leftIndices The ids of the leaf

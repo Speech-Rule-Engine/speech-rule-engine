@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview An abstract class for audio renderer with XML markup.
- *
+ * @file An abstract class for audio renderer with XML markup.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -28,6 +27,7 @@ import { MarkupRenderer } from './markup_renderer';
 export abstract class XmlRenderer extends MarkupRenderer {
   /**
    * Computes the closing tag for a personality property.
+   *
    * @param tag The tagname.
    */
   public abstract closeTag(tag: EngineConst.personalityProps): void;

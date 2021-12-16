@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview A factory for rendering speech output depending on the selected
+ * @file A factory for rendering speech output depending on the selected
  *     markup.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -114,6 +113,7 @@ export function error(key: string) {
 
 /**
  * Registers a new renderer.
+ *
  * @param type The markup type.
  * @param renderer The audio renderer.
  */
@@ -126,7 +126,8 @@ export function registerRenderer(
 
 /**
  * Checks if the current renderer is of a given type.
- * @return True if it is an instance of the given type.
+ *
+ * @returns True if it is an instance of the given type.
  */
 export function isXml(): boolean {
   return renderers.get(Engine.getInstance().markup) instanceof XmlRenderer;

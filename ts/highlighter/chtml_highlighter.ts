@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Class highlighting CSS elements.
- *
+ * @file Class highlighting CSS elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

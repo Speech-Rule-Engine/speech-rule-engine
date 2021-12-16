@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic parameters and global machinery for the Speech Rule
+ * @file Basic parameters and global machinery for the Speech Rule
  *     Engine.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -25,6 +24,7 @@ import * as EngineConst from './engine_const';
 
 /**
  * The base error class for signaling SRE errors.
+ *
  * @param msg The error message.
  */
 export class SREError extends Error {
@@ -184,7 +184,7 @@ export default class Engine {
   public prune = '';
 
   /**
-   * @return The Engine object.
+   * @returns The Engine object.
    */
   public static getInstance(): Engine {
     Engine.instance = Engine.instance || new Engine();
@@ -193,9 +193,11 @@ export default class Engine {
 
   /**
    * A dummy string evaluator.
+   *
    * @param str A string.
    * @param cstr A dynamic constraint.
-   * @return The evaluated string.
+   * @param _cstr
+   * @returns The evaluated string.
    */
   public static defaultEvaluator(
     str: string,
@@ -206,7 +208,7 @@ export default class Engine {
 
   // TODO: This might need a better place.
   /**
-   * @return The current base rate.
+   * @returns The current base rate.
    */
   public getRate(): number {
     const numeric = parseInt(this.rate, 10);
@@ -215,6 +217,7 @@ export default class Engine {
 
   /**
    * Sets the dynamic constraint for the engine.
+   *
    * @param opt_dynamic An optional
    *    constraint mapping. If given it is parsed into the engines constraint
    *    parameters.
@@ -279,7 +282,8 @@ export class EnginePromise {
   public static promises: { [locale: string]: Promise<string> } = {};
 
   /**
-   * @return The promise for a locale.
+   * @param locale
+   * @returns The promise for a locale.
    */
   public static get(
     locale: string = Engine.getInstance().locale
@@ -288,7 +292,7 @@ export class EnginePromise {
   }
 
   /**
-   * @return All promises combined into one.
+   * @returns All promises combined into one.
    */
   public static getall() {
     return Promise.allSettled(Object.values(EnginePromise.promises));

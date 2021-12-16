@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Setup for browser integration of speech rule engine.
- *
+ * @file Setup for browser integration of speech rule engine.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

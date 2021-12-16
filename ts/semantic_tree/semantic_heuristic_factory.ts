@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview A factory for semantic heuristics. Effectively a mapping to
+ * @file A factory for semantic heuristics. Effectively a mapping to
  * functions that can optionally be run.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -27,6 +26,7 @@ export let factory: SemanticNodeFactory = null;
 
 /**
  * Updates the semantic node factory.
+ *
  * @param nodeFactory The new semantic node factory.
  */
 export function updateFactory(nodeFactory: SemanticNodeFactory) {
@@ -54,6 +54,7 @@ export const blacklist: { [key: string]: boolean } = {};
 
 /**
  * Register a heuristic with the handler.
+ *
  * @param name The name of the heuristic.
  * @param heuristic The heuristic.
  */
@@ -70,11 +71,12 @@ export function add(
 
 /**
  * Runs a heuristic if its predicate evaluates to true.
+ *
  * @param name The name of the heuristic.
  * @param root The root node of the subtree.
  * @param opt_alternative An
  *       optional method to run if the heuristic is not applicable.
- * @return The resulting subtree.
+ * @returns The resulting subtree.
  */
 export function run(
   name: string,
@@ -93,8 +95,9 @@ export function run(
 
 /**
  * Looks up the named heuristic.
+ *
  * @param name The name of the heuristic.
- * @return The heuristic.
+ * @returns The heuristic.
  */
 export function lookup(
   name: string

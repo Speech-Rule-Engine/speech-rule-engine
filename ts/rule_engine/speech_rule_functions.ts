@@ -15,8 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Classes for custom functions for the speech rule engine.
- *
+ * @file Classes for custom functions for the speech rule engine.
  * @author sorge@google.com (Volker Sorge)
  */
 
@@ -26,6 +25,7 @@ import { Span } from '../audio/span';
 abstract class FunctionsStore<S> {
   /**
    * Private superclass of all the custom function stores.
+   *
    * @param prefix A prefix string for the function names.
    * @param store Storage object.
    */
@@ -36,6 +36,7 @@ abstract class FunctionsStore<S> {
 
   /**
    * Adds a new function for the function store.
+   *
    * @param name A name.
    * @param func A function.
    */
@@ -47,6 +48,7 @@ abstract class FunctionsStore<S> {
 
   /**
    * Adds the functions of another store.
+   *
    * @param store A speech rule store.
    */
   public addStore(store: FunctionsStore<S>) {
@@ -58,8 +60,9 @@ abstract class FunctionsStore<S> {
 
   /**
    * Retrieves a function with the given name if one exists.
+   *
    * @param name A name.
-   * @return The function if it exists.
+   * @returns The function if it exists.
    */
   public lookup(name: string): S {
     return this.store[name];
@@ -67,8 +70,9 @@ abstract class FunctionsStore<S> {
 
   /**
    * Checks validity for a custom function name.
+   *
    * @param name The name of the custom function.
-   * @return True if the name is valid.
+   * @returns True if the name is valid.
    */
   private checkCustomFunctionSyntax_(name: string): boolean {
     const reg = new RegExp('^' + this.prefix);

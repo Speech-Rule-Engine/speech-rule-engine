@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Nemeth message file.
+ * @file Nemeth message file.
  *     (This should eventually move from being a locale!)
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -30,8 +29,9 @@ import { identityTransformer } from '../transformers';
 
 /**
  * Removes English indicator from a simple letter.
+ *
  * @param letter The letter with indicator.
- * @return The cleaned letter if it was English without font.
+ * @returns The cleaned letter if it was English without font.
  */
 const simpleEnglish = function (letter: string): string {
   return letter.match(RegExp('^' + locale.ALPHABETS.languagePrefix.english))
@@ -85,6 +85,9 @@ const parensCombiner = function (
 
 let locale: Locale = null;
 
+/**
+ *
+ */
 export function nemeth(): Locale {
   if (!locale) {
     locale = create();
@@ -93,6 +96,9 @@ export function nemeth(): Locale {
   return locale;
 }
 
+/**
+ *
+ */
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;

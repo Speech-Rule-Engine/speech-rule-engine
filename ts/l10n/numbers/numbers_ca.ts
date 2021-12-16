@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers into Spanish.
+ * @file Translating numbers into Spanish.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -27,8 +27,9 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
 
 /**
  * Turns a tens position in a number into words.
+ *
  * @param num The number to translate.
- * @return The word for the tens position.
+ * @returns The word for the tens position.
  */
 function tensToWords_(num: number): string {
   const n = num % 100;
@@ -43,8 +44,9 @@ function tensToWords_(num: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @returns The string representation of that number.
  */
 function hundredsToWords_(num: number): string {
   const n = num % 1000;
@@ -60,8 +62,9 @@ function hundredsToWords_(num: number): string {
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @returns The string representation of that number.
  */
 function numberToWords(num: number): string {
   if (num === 0) {
@@ -105,9 +108,11 @@ function numberToWords(num: number): string {
 
 /**
  * Translates a number into Spanish ordinal
+ *
  * @param num The number to translate.
  * @param plural A flag indicating if the ordinal is in plural.
- * @return The ordinal of the number as string.
+ * @param _plural
+ * @returns The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, _plural: boolean): string {
   if (num > 1999) {
@@ -131,8 +136,9 @@ function numberToOrdinal(num: number, _plural: boolean): string {
 
 /**
  * Creates a simple ordinal string from a number.
+ *
  * @param num The number to be converted.
- * @return The ordinal string.
+ * @returns The ordinal string.
  */
 function simpleOrdinal(num: number): string {
   const gender = Grammar.getInstance().getParameter('gender') as string;

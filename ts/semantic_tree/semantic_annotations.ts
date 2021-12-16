@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Annotates semantic trees.
- *
+ * @file Annotates semantic trees.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -29,6 +28,7 @@ export const visitors: Map<string, SemanticVisitor> = new Map();
 
 /**
  * Registers an annotator.
+ *
  * @param annotator The annotator.
  */
 export function register(annotator: SemanticAnnotator | SemanticVisitor) {
@@ -40,6 +40,7 @@ export function register(annotator: SemanticAnnotator | SemanticVisitor) {
 
 /**
  * Activates a particular annotator.
+ *
  * @param domain The domain.
  * @param name The name of the annotator.
  */
@@ -53,6 +54,7 @@ export function activate(domain: string, name: string) {
 
 /**
  * Annotates the given semantic node recursively.
+ *
  * @param node The semantic node to annotate.
  */
 export function annotate(node: SemanticNode) {

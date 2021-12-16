@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview A class for loading and storing the maps for math atoms from
+ * @file A class for loading and storing the maps for math atoms from
  * JSON files. The class (and entries) can then be used as via the
  * background page.
  * @author sorge@google.com (Volker Sorge)
@@ -61,7 +61,7 @@ let _init = false;
  * Init method for the mathmaps. Loads the base locale when called for the
  * first time.
  *
- * @return Promise that resolves once base is loaded.
+ * @returns Promise that resolves once base is loaded.
  */
 export function init() {
   if (!_init) {
@@ -73,6 +73,8 @@ export function init() {
 
 /**
  * Loads a new locale if necessary.
+ *
+ * @param locale
  */
 export function loadLocale(locale = Engine.getInstance().locale) {
   if (!EnginePromise.loaded[locale]) {
@@ -85,7 +87,7 @@ export function loadLocale(locale = Engine.getInstance().locale) {
 // Gets the name of the locale.
 // Returns a promise that resolves once the file is loaded.
 /**
- * @return The load method for the given mode. If a custom load method is
+ * @returns The load method for the given mode. If a custom load method is
  *     provided it is returned instead.
  */
 function loadMethod() {
@@ -106,6 +108,7 @@ function loadMethod() {
 
 /**
  * Retrieves JSON rule mappings for a given locale.
+ *
  * @param locale The target locale.
  * @param parse Method adding the rules.
  */
@@ -132,6 +135,7 @@ export function retrieveFiles(locale: string) {
 
 /**
  * Parses JSON mappings from a string and them to the MathStore.
+ *
  * @param json The json mappings string.
  */
 export function parseMaps(json: string) {
@@ -141,6 +145,7 @@ export function parseMaps(json: string) {
 
 /**
  * Adds JSON mappings to the mathmap store.
+ *
  * @param json The json mappings.
  * @param opt_locale Optionally the locale for the mappings to
  *     add. This is necessary for the single IE dictionary.
@@ -168,6 +173,7 @@ function addMaps(json: MathMapJson, opt_locale?: string) {
 
 /**
  * Retrieves mappings and adds them to the respective stores.
+ *
  * @param locale The target locale.
  */
 function retrieveMaps(locale: string) {
@@ -183,6 +189,7 @@ function retrieveMaps(locale: string) {
 
 /**
  * Gets JSON elements from the global JSON object in case of IE browsers.
+ *
  * @param locale The target locale.
  * @param opt_count Optional counter argument for callback.
  */
@@ -199,9 +206,11 @@ function getJsonIE_(locale: string, opt_count?: number) {
 
 /**
  * Takes path to a JSON file and returns a JSON object.
+ *
  * @param path Contains the path to a JSON file.
  * @param func Method adding the rules.
- * @return JSON.
+ * @param locale
+ * @returns JSON.
  */
 export function loadFile(locale: string): Promise<string> {
   const file = FileUtil.localePath(locale);
@@ -217,8 +226,9 @@ export function loadFile(locale: string): Promise<string> {
 
 /**
  * Loads JSON for a given file name.
+ *
  * @param locale The locale to retrieve.
- * @return A string representing a JSON array.
+ * @returns A string representing a JSON array.
  */
 export function loadFileSync(locale: string): Promise<string> {
   const file = FileUtil.localePath(locale);
@@ -235,6 +245,7 @@ export function loadFileSync(locale: string): Promise<string> {
 
 /**
  * Sents AJAX request to retrieve a JSON rule file.
+ *
  * @param locale The locale to retrieve.
  * @param parse Method adding the rules.
  */

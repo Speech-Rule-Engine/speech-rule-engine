@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for translating numbers.
+ * @file Utility functions for translating numbers.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -26,9 +26,11 @@ import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 // Number transformation
 /**
  * Simple counter function for counting ordinals.
+ *
  * @param node The node for the context function.
+ * @param _node
  * @param context The context string.
- * @return The context function returning ordinals.
+ * @returns The context function returning ordinals.
  */
 export function ordinalCounter(_node: Node, context: string): () => string {
   let counter = 0;
@@ -39,9 +41,11 @@ export function ordinalCounter(_node: Node, context: string): () => string {
 
 /**
  * Simple counter function for counting ordinals.
+ *
  * @param node The node for the context function.
+ * @param _node
  * @param context The context string.
- * @return The context function returning ordinals.
+ * @returns The context function returning ordinals.
  */
 export function wordCounter(_node: Element, context: string): () => string {
   let counter = 0;
@@ -60,8 +64,9 @@ interface Convertible {
 /**
  * Checks if a fraction is a convertible vulgar fraction. In this case it
  * translates enumerator and the denominator.
+ *
  * @param node Fraction node to be translated.
- * @return {{convertible: boolean,
+ * @returns {{convertible: boolean,
  *           content: string} | {convertible: boolean,
  *           denominator: number,
  *           enumerator: number}} If convertible denominator and
@@ -105,8 +110,9 @@ export function convertVulgarFraction_(node: Element): Convertible {
 /**
  * Converts a vulgar fraction into string representation of enumerator and
  * denominator as ordinal.
+ *
  * @param node Fraction node to be translated.
- * @return The string representation if it is a valid
+ * @returns The string representation if it is a valid
  *     vulgar fraction.
  */
 export function vulgarFraction(node: Element): string | Span[] {
@@ -145,10 +151,11 @@ export function vulgarFraction(node: Element): string | Span[] {
 /**
  * Checks if a vulgar fraction is small enough to be convertible to string in
  * MathSpeak, i.e. enumerator in [1..9] and denominator in [1..99].
+ *
  * @param node Fraction node to be tested.
  * @param enumer Enumerator maximum.
  * @param denom Denominator maximum.
- * @return True if it is a valid, small enough fraction.
+ * @returns True if it is a valid, small enough fraction.
  */
 export function vulgarFractionSmall(
   node: Element,
@@ -171,8 +178,9 @@ export function vulgarFractionSmall(
 
 /**
  * String function to turn a child position into an ordinal.
+ *
  * @param node The node for the string function.
- * @return The ordinal string corresponding to the child position of
+ * @returns The ordinal string corresponding to the child position of
  *     the node.
  */
 export function ordinalPosition(node: Node): string {

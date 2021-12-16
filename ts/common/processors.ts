@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Processors acting on input/output streams.
- *
+ * @file Processors acting on input/output streams.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -62,8 +61,9 @@ export class Processor<T> {
 
   /**
    * Default method to stringify processed data.
+   *
    * @param x Input data.
-   * @return Resulting string.
+   * @returns Resulting string.
    */
   private static stringify_<T>(x: T): string {
     return x ? x.toString() : (x as any as string);
@@ -71,11 +71,16 @@ export class Processor<T> {
 
   /**
    * Processors bundles a processing method with a collection of output methods.
+   *
    * @param name The name of the processor.
    * @param {{processor: function(string): T,
    *          postprocessor: (undefined|function(T, string): T),
    *          print: (undefined|function(T): string),
    *          pprint: (undefined|function(T): string)}} methods
+   * @param methods.processor
+   * @param methods.postprocessor
+   * @param methods.print
+   * @param methods.pprint
    */
   constructor(
     public name: string,
@@ -108,8 +113,9 @@ export class KeyProcessor<T> extends Processor<T> {
   /**
    * Default method to stringify input key codes. If the key code is already a
    * string, it is returned.
+   *
    * @param key The key code.
-   * @return The corresponding string.
+   * @returns The corresponding string.
    */
   private static getKey_(key: KeyCode | string): KeyCode {
     return typeof key === 'string'

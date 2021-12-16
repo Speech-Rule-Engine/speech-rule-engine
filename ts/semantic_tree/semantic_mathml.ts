@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview A mathml parser for building semantic trees.
- *
+ * @file A mathml parser for building semantic trees.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -35,10 +34,11 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * Get an attribute from a node and provide a default if it does not exist. It
    * returns null if attribute is empty string or whitespace only.
+   *
    * @param node The node from which to retrieve the attribute.
    * @param attr The attribute.
    * @param def The default return value.
-   * @return The value of the attribute or null.
+   * @returns The value of the attribute or null.
    */
   private static getAttribute_(
     node: Element,
@@ -141,9 +141,11 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses semantics elements.
+   *
    * @param node A MathML node.
+   * @param _node
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private semantics_(_node: Element, children: Element[]): SemanticNode {
     return children.length
@@ -153,9 +155,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses inferred row elements.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private rows_(node: Element, children: Element[]): SemanticNode {
     // Special cases:
@@ -187,9 +190,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses fraction like elements.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private fraction_(node: Element, children: Element[]): SemanticNode {
     if (!children.length) {
@@ -210,9 +214,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses an expression with bounds.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private limits_(node: Element, children: Element[]): SemanticNode {
     return SemanticProcessor.getInstance().limitNode(
@@ -223,9 +228,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a general root element.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private root_(node: Element, children: Element[]): SemanticNode {
     if (!children[1]) {
@@ -240,9 +246,11 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a square root element.
+   *
    * @param node A MathML node.
+   * @param _node
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private sqrt_(_node: Element, children: Element[]): SemanticNode {
     const semNodes = this.parseList(SemanticUtil.purgeNodes(children));
@@ -255,9 +263,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a table structure.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private table_(node: Element, children: Element[]): SemanticNode {
     const semantics = node.getAttribute('semantics');
@@ -280,9 +289,11 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a row of a table.
+   *
    * @param node A MathML node.
+   * @param _node
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private tableRow_(_node: Element, children: Element[]): SemanticNode {
     const newNode = this.getFactory().makeBranchNode(
@@ -296,9 +307,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a row of a table.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private tableLabeledRow_(node: Element, children: Element[]): SemanticNode {
     if (!children.length) {
@@ -317,9 +329,11 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a table cell.
+   *
    * @param node A MathML node.
+   * @param _node
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private tableCell_(_node: Element, children: Element[]): SemanticNode {
     const semNodes = this.parseList(SemanticUtil.purgeNodes(children));
@@ -349,9 +363,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * Parse a space element. If sufficiently wide, create an empty text element.
    * alpha only: ignore, em pc >= .5, cm >= .4, ex >= 1, in >= .15, pt mm >= 5.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private space_(node: Element, children: Element[]): SemanticNode {
     const width = node.getAttribute('width');
@@ -380,9 +395,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a text element.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private text_(node: Element, children: Element[]): SemanticNode {
     const newNode = this.leaf_(node, children);
@@ -395,9 +411,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Create an identifier node, with particular emphasis on font disambiguation.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The new semantic identifier node.
+   * @returns The new semantic identifier node.
    */
   private identifier_(node: Element, children: Element[]): SemanticNode {
     const newNode = this.leaf_(node, children);
@@ -410,9 +427,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a number.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private number_(node: Element, children: Element[]): SemanticNode {
     const newNode = this.leaf_(node, children);
@@ -422,9 +440,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses an operator.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private operator_(node: Element, children: Element[]): SemanticNode {
     const newNode = this.leaf_(node, children);
@@ -434,9 +453,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a fenced element.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private fenced_(node: Element, children: Element[]): SemanticNode {
     const semNodes = this.parseList(SemanticUtil.purgeNodes(children));
@@ -455,9 +475,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses an enclosed element.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private enclosed_(node: Element, children: Element[]): SemanticNode {
     const semNodes = this.parseList(SemanticUtil.purgeNodes(children));
@@ -473,9 +494,11 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a mmultiscript node into a tensor representation.
+   *
    * @param node A MathML node.
+   * @param _node
    * @param children The nodes children.
-   * @return The semantic tensor node.
+   * @returns The semantic tensor node.
    */
   private multiscripts_(_node: Element, children: Element[]): SemanticNode {
     // Empty node. Illegal MathML markup, but valid in MathJax.
@@ -532,9 +555,12 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses an empty element.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @param _node
+   * @param _children
+   * @returns The newly created semantic node.
    */
   private empty_(_node: Element, _children: Element[]): SemanticNode {
     return this.getFactory().makeEmptyNode();
@@ -542,9 +568,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses an actionable element.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @returns The newly created semantic node.
    */
   private action_(node: Element, children: Element[]): SemanticNode {
     // This here is currently geared towards our collapse actions!
@@ -555,9 +582,11 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Parses a dummy element for which no other case is known.
+   *
    * @param node A MathML node.
    * @param children The children of the node.
-   * @return The newly created semantic node.
+   * @param _children
+   * @returns The newly created semantic node.
    */
   private dummy_(node: Element, _children: Element[]): SemanticNode {
     const unknown = this.getFactory().makeUnprocessed(node);
@@ -568,9 +597,10 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
 
   /**
    * Creates a leaf node from MathML node.
+   *
    * @param mml The MathML node.
    * @param children Its child nodes.
-   * @return The new node.
+   * @returns The new node.
    */
   private leaf_(mml: Element, children: Element[]): SemanticNode {
     if (

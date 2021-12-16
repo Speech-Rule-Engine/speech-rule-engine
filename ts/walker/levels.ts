@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility class for caching levels during tree walking.
- *
+ * @file Utility class for caching levels during tree walking.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -27,6 +26,7 @@ export class Levels<T> {
 
   /**
    * Pushes a new level onto the stack.
+   *
    * @param level The new level.
    */
   public push(level: T[]) {
@@ -35,7 +35,8 @@ export class Levels<T> {
 
   /**
    * Pops a level off the stack.
-   * @return The old top level.
+   *
+   * @returns The old top level.
    */
   public pop(): T[] {
     return this.level_.pop();
@@ -43,7 +44,8 @@ export class Levels<T> {
 
   /**
    * Peeks at the top level off the stack without popping it.
-   * @return The top level.
+   *
+   * @returns The top level.
    */
   public peek(): T[] {
     return this.level_[this.level_.length - 1] || null;
@@ -51,8 +53,9 @@ export class Levels<T> {
 
   /**
    * Retrieves the index of an element on the top most level of the stack.
+   *
    * @param element The element to look up.
-   * @return The index, -1 if element is not contained.
+   * @returns The index, -1 if element is not contained.
    */
   public indexOf(element: T): number | null {
     const last = this.peek();
@@ -62,8 +65,9 @@ export class Levels<T> {
   /**
    * Checks for an element that satisfies the given predicate on the top most
    * level of the stack.  In ES6 this should be simply an array.find!
+   *
    * @param pred A predicate for testing.
-   * @return The element matching the predicate.
+   * @returns The element matching the predicate.
    */
   public find(pred: (p1: T) => boolean): T | null {
     const last = this.peek();
@@ -81,8 +85,9 @@ export class Levels<T> {
   /**
    * Retrieves an element at specified index from the top level of the stack if
    * it exists.
+   *
    * @param index The index of the element to retrieves.
-   * @return The element at the position.
+   * @returns The element at the position.
    */
   public get(index: number): T | null {
     const last = this.peek();
@@ -90,14 +95,14 @@ export class Levels<T> {
   }
 
   /**
-   * @return The current depth of the levels.
+   * @returns The current depth of the levels.
    */
   public depth(): number {
     return this.level_.length;
   }
 
   /**
-   * @return The clone of this object.
+   * @returns The clone of this object.
    */
   public clone(): Levels<T> {
     const levels = new Levels<T>();

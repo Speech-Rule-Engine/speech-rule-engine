@@ -15,13 +15,12 @@
 // limitations under the License.
 
 /**
- * @fileoverview Rule stores for the basic components of math expressions:
+ * @file Rule stores for the basic components of math expressions:
  *    Unicode symbols and functions.
  *
  *    The idea of these stores is to provide a more efficient data structure to
  *    look up rules in the background page than the usual flat array of rules
  *    implemented by other stores.
- *
  * @author sorge@google.com (Volker Sorge)
  */
 
@@ -73,8 +72,9 @@ export class MathSimpleStore {
   /**
    * Parses a string with a hex representation of a unicode code point into the
    * corresponding unicode character.
+   *
    * @param num The code point to be parsed.
-   * @return The unicode character.
+   * @returns The unicode character.
    */
   public static parseUnicode(num: string): string {
     const keyValue = parseInt(num, 16);
@@ -85,9 +85,10 @@ export class MathSimpleStore {
    * Tests whether a speech rule satisfies a set of dynamic constraints.  Unless
    * the engine is in strict mode, the dynamic constraints can be "relaxed",
    * that is, a default value can also be choosen.
+   *
    * @param dynamic Dynamic constraints.
    * @param rule The rule.
-   * @return True if the preconditions apply to the node.
+   * @returns True if the preconditions apply to the node.
    */
   private static testDynamicConstraints_(
     dynamic: DynamicCstr,
@@ -102,7 +103,10 @@ export class MathSimpleStore {
   /**
    * Turns a domain mapping from its JSON representation containing simple
    * strings only into a list of speech rules.
+   *
    * @param name Name for the rules.
+   * @param locale
+   * @param modality
    * @param str String for precondition and constraints.
    * @param mapping Simple string
    *     mapping.
@@ -132,6 +136,7 @@ export class MathSimpleStore {
 
   /**
    * Retrieves a store for a given locale string.
+   *
    * @param key The locale key.
    */
   public getRules(key: string) {
@@ -145,10 +150,15 @@ export class MathSimpleStore {
 
   /**
    * Creates a single rule from strings.
+   *
    * @param name Name of the rule.
+   * @param _name
+   * @param locale
+   * @param modality
    * @param domain The domain axis.
    * @param style The style axis.
    * @param str String for precondition and constraints.
+   * @param _str
    * @param content The content for the postcondition.
    */
   public defineRuleFromStrings(

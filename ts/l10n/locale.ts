@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic message file for l10n.
- *
+ * @file Basic message file for l10n.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -43,6 +42,9 @@ export interface Locale {
 
 export const LOCALE: Locale = createLocale();
 
+/**
+ *
+ */
 export function createLocale(): Locale {
   return {
     /**

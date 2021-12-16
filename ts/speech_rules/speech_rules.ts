@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Storage facility for context functions.
+ * @file Storage facility for context functions.
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
@@ -31,6 +31,7 @@ export const store: { [key: string]: { [key: string]: SpeechRuleFunction } } =
 
 /**
  * Adds functions to the store potentially inheriting from another store.
+ *
  * @param constr Constraint string for the store.
  * @param inherit The store from which to inherit.
  * @param store An individual mapping of names to context
@@ -51,10 +52,11 @@ export function addStore(
 
 /**
  * Retrieves a function store by three constraint values.
+ *
  * @param locale The locale.
  * @param modality The modality.
  * @param domain The rule set or domain.
- * @return The store for the given constraints.
+ * @returns The store for the given constraints.
  */
 // TODO: Make this robust with dynamic constraints and defaults.
 export function getStore(

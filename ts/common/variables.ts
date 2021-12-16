@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Variables for sre.
- *
+ * @file Variables for sre.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

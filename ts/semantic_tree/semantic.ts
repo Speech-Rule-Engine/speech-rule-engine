@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview An API for the semantic translation of MathML.
- *
+ * @file An API for the semantic translation of MathML.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -42,8 +41,9 @@ export { Attr };
 
 /**
  * Creates the semantic tree for a given MathML node.
+ *
  * @param mml The MathML node.
- * @return Semantic tree for input node as XML node.
+ * @returns Semantic tree for input node as XML node.
  */
 export function xmlTree(mml: Element): Element {
   return getTree(mml).xml();
@@ -51,8 +51,9 @@ export function xmlTree(mml: Element): Element {
 
 /**
  * Creates the semantic tree for a given MathML node.
+ *
  * @param mml The MathML node.
- * @return Semantic tree for input node.
+ * @returns Semantic tree for input node.
  */
 export function getTree(mml: Element): SemanticTree {
   return new SemanticTree(mml);
@@ -60,8 +61,9 @@ export function getTree(mml: Element): SemanticTree {
 
 /**
  * Creates the semantic tree for a MathML string.
+ *
  * @param expr The string representing the MathML expression.
- * @return Semantic tree for input string as XML node.
+ * @returns Semantic tree for input string as XML node.
  */
 export function getTreeFromString(expr: string): SemanticTree {
   const mml = DomUtil.parseInput(expr);

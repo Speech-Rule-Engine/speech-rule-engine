@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for dealing with units.
+ * @file Utility functions for dealing with units.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -27,9 +27,11 @@ import { SemanticType } from '../semantic_tree/semantic_meaning';
  * Iterates over the list of content nodes of a multiplication of units and
  * ensures that a multiplication operator is put between proper unit
  * expressions.
+ *
  * @param nodes A node array.
  * @param context A context string.
- * @return A closure that returns
+ * @param _context
+ * @returns A closure that returns
  *     the unit multiplied between two proper unit expressions, otherwise the
  *     empty string.
  */
@@ -64,8 +66,9 @@ const SCRIPT_ELEMENTS: string[] = [
 
 /**
  * Tests if node is a right most unit element in a sub-expression.
+ *
  * @param node The node to test.
- * @return True if it is the right most unit in that subtree.
+ * @returns True if it is the right most unit in that subtree.
  */
 export function rightMostUnit(node: Element): boolean {
   while (node) {
@@ -84,8 +87,9 @@ export function rightMostUnit(node: Element): boolean {
 }
 /**
  * Tests if node is a left most unit element in a sub-expression.
+ *
  * @param node The node to test.
- * @return True if it is the left most unit in that subtree.
+ * @returns True if it is the left most unit in that subtree.
  */
 export function leftMostUnit(node: Element): boolean {
   while (node) {
@@ -100,8 +104,9 @@ export function leftMostUnit(node: Element): boolean {
 /**
  * Checks if a given node is preceded by a 1. This is useful to decide if the
  * next text element is singular or plural.
+ *
  * @param node The base node.
- * @return List with the base node if the preceding node (the
+ * @returns List with the base node if the preceding node (the
  *     next left in the subexpression containing node) is 1. Otherwise empty
  *     list.
  */

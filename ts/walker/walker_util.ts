@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for walkers.
- *
+ * @file Utility functions for walkers.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -24,8 +23,9 @@ import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
 
 /**
  * A comma separated list of attribute values.
+ *
  * @param attr The attribute value.
- * @return A list of values.
+ * @returns A list of values.
  */
 export function splitAttribute(attr: string | null): string[] {
   return !attr ? [] : attr.split(/,/);
@@ -34,9 +34,10 @@ export function splitAttribute(attr: string | null): string[] {
 /**
  * Retrieves a data attribute from a given node. Tries using microdata access if
  * possible.
+ *
  * @param node A DOM node.
  * @param attr The semantic data attribute.
- * @return The value for that attribute.
+ * @returns The value for that attribute.
  */
 export function getAttribute(
   node: Element,
@@ -47,8 +48,9 @@ export function getAttribute(
 
 /**
  * Retrieves the node containing the embedding of the root of a semantic tree.
+ *
  * @param node The math node.
- * @return The node with the embedded root. If we cannot find one, the
+ * @returns The node with the embedded root. If we cannot find one, the
  *     input node is returned.
  */
 export function getSemanticRoot(node: Element): Element {
@@ -73,9 +75,10 @@ export function getSemanticRoot(node: Element): Element {
 
 /**
  * Retrieves a node containing a given semantic id starting from the given root.
+ *
  * @param root Root node for the query.
  * @param id The id of a semantic node.
- * @return The node for that id.
+ * @returns The node for that id.
  */
 export function getBySemanticId(root: Element, id: string): Element {
   if (root.getAttribute(EnrichMathml.Attribute.ID) === id) {

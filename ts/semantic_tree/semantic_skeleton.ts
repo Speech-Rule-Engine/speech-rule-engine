@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Skeleton structure for a tree that consists only of a nested
+ * @file Skeleton structure for a tree that consists only of a nested
  *     array of node ids.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -42,8 +41,9 @@ export class SemanticSkeleton {
 
   /**
    * Compute a skeleton structure for a semantic tree.
+   *
    * @param tree The semantic tree.
-   * @return The new skeleton structure object.
+   * @returns The new skeleton structure object.
    */
   public static fromTree(tree: SemanticTree): SemanticSkeleton {
     return SemanticSkeleton.fromNode(tree.root);
@@ -51,8 +51,9 @@ export class SemanticSkeleton {
 
   /**
    * Compute a skeleton structure for a semantic tree.
+   *
    * @param node The root node of the tree.
-   * @return The new skeleton structure object.
+   * @returns The new skeleton structure object.
    */
   public static fromNode(node: SemanticNode): SemanticSkeleton {
     return new SemanticSkeleton(SemanticSkeleton.fromNode_(node));
@@ -60,8 +61,9 @@ export class SemanticSkeleton {
 
   /**
    * Compute a skeleton structure from a string representation.
+   *
    * @param skel The skeleton string.
-   * @return The new skeleton structure object.
+   * @returns The new skeleton structure object.
    */
   public static fromString(skel: string): SemanticSkeleton {
     return new SemanticSkeleton(SemanticSkeleton.fromString_(skel));
@@ -69,8 +71,9 @@ export class SemanticSkeleton {
 
   /**
    * Checks if the structure is simple, i.e., a single id number.
+   *
    * @param strct The structure.
-   * @return True if a simple number.
+   * @returns True if a simple number.
    */
   public static simpleCollapseStructure(strct: Sexp): boolean {
     return typeof strct === 'number';
@@ -79,8 +82,9 @@ export class SemanticSkeleton {
   /**
    * Checks if the structure represents collapsed content nodes, i.e., it starts
    * with a c.
+   *
    * @param strct The structure.
-   * @return True if a content structure.
+   * @returns True if a content structure.
    */
   public static contentCollapseStructure(strct: Sexp): boolean {
     return (
@@ -92,11 +96,12 @@ export class SemanticSkeleton {
 
   /**
    * Interleaves the ids of two index lists.
+   *
    * @param first A structured list of
    *     ids.
    * @param second A structured list of
    *     ids.
-   * @return A simple list of ids.
+   * @returns A simple list of ids.
    */
   public static interleaveIds(first: Sexp, second: Sexp): Sexp {
     return BaseUtil.interleaveLists(
@@ -107,9 +112,11 @@ export class SemanticSkeleton {
 
   /**
    * Returns a list of the leaf ids for the given collapsed structures.
+   *
    * @param var_args The collapsed structure
    *     annotations.
-   * @return The leafs of the structure annotations.
+   * @param {...any} args
+   * @returns The leafs of the structure annotations.
    */
   public static collapsedLeafs(...args: Sexp[]): number[] {
     const collapseStructure = (coll: any) => {
@@ -126,9 +133,10 @@ export class SemanticSkeleton {
   /**
    * Computes skeletal structure for a semantic tree folding together content
    * and child nodes in a "syntactic" manner.
+   *
    * @param mml A mml node to add a structure to.
    * @param tree A semantic tree.
-   * @return The skeletal structure.
+   * @returns The skeletal structure.
    */
   public static fromStructure(
     mml: Element,
@@ -140,10 +148,11 @@ export class SemanticSkeleton {
   /**
    * Combines content and children lists depending on the type of the semantic
    * node.
+   *
    * @param semantic The semantic tree node.
    * @param content The list of content nodes.
    * @param children The list of child nodes.
-   * @return The combined list.
+   * @returns The combined list.
    */
   public static combineContentChildren<T>(
     semantic: SemanticNode,
@@ -180,8 +189,9 @@ export class SemanticSkeleton {
 
   /**
    * Turns collapsed element into an sexp like string.
+   *
    * @param struct Collapse structure.
-   * @return The structure as string.
+   * @returns The structure as string.
    */
   private static makeSexp_(struct: Sexp): string {
     if (SemanticSkeleton.simpleCollapseStructure(struct)) {
@@ -202,8 +212,9 @@ export class SemanticSkeleton {
 
   /**
    * Parses the skeleton structure into an array of integer arrays.
+   *
    * @param skeleton String containing the skeleton structure.
-   * @return The array of integer arrays.
+   * @returns The array of integer arrays.
    */
   private static fromString_(skeleton: string): Sexp {
     let str = skeleton.replace(/\(/g, '[');
@@ -215,8 +226,9 @@ export class SemanticSkeleton {
 
   /**
    * Compute a skeleton structure for a semantic tree.
+   *
    * @param node The root node of the tree.
-   * @return The collapsed structure annotation
+   * @returns The collapsed structure annotation
    *     representing the skeleton of the tree.
    */
   private static fromNode_(node: SemanticNode): Sexp {
@@ -245,9 +257,10 @@ export class SemanticSkeleton {
    * Recursively computes skeletal structure for a semantic tree starting at the
    * given node; folding together content and child nodes in a "syntactic"
    * manner.
+   *
    * @param mml A mml node to add a structure to.
    * @param node A semantic node.
-   * @return The sexp structure.
+   * @returns The sexp structure.
    */
   private static tree_(mml: Element, node: SemanticNode): Sexp {
     if (!node) {
@@ -282,6 +295,7 @@ export class SemanticSkeleton {
 
   /**
    * Adds an aria owns attribute to a given node.
+   *
    * @param node An mml node to add the owns attribute to.
    * @param children Its semantic children with content nodes
    *     already interspersed.
@@ -298,8 +312,9 @@ export class SemanticSkeleton {
 
   /**
    * Computes the existing leafs from a collapse skeleton structure.
+   *
    * @param sexp The sexpression.
-   * @return The actual leaf ids.
+   * @returns The actual leaf ids.
    */
   // TODO (TS): this used to be Sexp. Sort out all those any types!
   private static realLeafs_(sexp: any): number[] {
@@ -343,6 +358,7 @@ export class SemanticSkeleton {
 
   /**
    * Traverses the skeleton tree and composes the parents and layer mappings.
+   *
    * @param element The current element to traverse.
    * @param layer The layer of which the element is a
    *     member.

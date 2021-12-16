@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Class for MathLive's SSML rendering of descriptions.
- *
+ * @file Class for MathLive's SSML rendering of descriptions.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

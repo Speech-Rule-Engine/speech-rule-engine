@@ -15,7 +15,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Base interface for all speech rule stores.
+ * @file Base interface for all speech rule stores.
  *
  * A speech rule store exposes the minimal set of methods a speech rule
  * author needs for a particular markup type such as MathML or HTML
@@ -35,39 +35,44 @@ export interface SpeechRuleStore {
 
   /**
    * Adds a new speech rule.
+   *
    * @param rule The speech rule to be added.
    */
   addRule(rule: SpeechRule): void;
 
   /**
    * Deletes a speech rule if it exists.
+   *
    * @param rule The speech rule to be deleted.
    */
   deleteRule(rule: SpeechRule): void;
 
   /**
    * Retrieves the first rule satisfying a given predicate.
+   *
    * @param pred A predicate on speech rules.
-   * @return The first speech rule in the store satisfying pred.
+   * @returns The first speech rule in the store satisfying pred.
    */
   findRule(pred: (rule: SpeechRule) => boolean): SpeechRule;
 
   /**
    * Retrieves all rules satisfying a given predicate.
+   *
    * @param pred A predicate on speech rules.
-   * @return All speech rules in the store satisfying
+   * @returns All speech rules in the store satisfying
    *     pred.
    */
   findAllRules(pred: (rule: SpeechRule) => boolean): SpeechRule[];
 
   /**
    * Defines a new speech rule from given components.
+   *
    * @param name Name of the rule. It does not have to be unique.
    * @param dynamic Dynamic constraint annotation of the rule.
    * @param action String version of the speech rule.
    * @param prec Precondition of the rule.
    * @param var_args Additional constraints.
-   * @return The newly defined rule.
+   * @returns The newly defined rule.
    */
   defineRule(
     name: string,

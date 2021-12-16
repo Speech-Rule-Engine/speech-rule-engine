@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract speech generator for classes that work on the rebuilt
+ * @file Abstract speech generator for classes that work on the rebuilt
  *     semantic tree.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Class highlighting SVG elements.
- *
+ * @file Class highlighting SVG elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 

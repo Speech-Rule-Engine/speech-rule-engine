@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview French message file.
- *
+ * @file French message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -31,6 +30,9 @@ import { Combiners } from '../transformers';
 
 let locale: Locale = null;
 
+/**
+ *
+ */
 export function fr(): Locale {
   if (!locale) {
     locale = create();
@@ -39,6 +41,9 @@ export function fr(): Locale {
   return locale;
 }
 
+/**
+ *
+ */
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;

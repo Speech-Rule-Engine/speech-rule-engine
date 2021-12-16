@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview A table walker.
- *
+ * @file A table walker.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -129,7 +128,7 @@ export class TableWalker extends SyntaxWalker {
   }
 
   /**
-   * @return True if the focused is an eligible table cell.
+   * @returns True if the focused is an eligible table cell.
    */
   private eligibleCell_(): boolean {
     const primary = this.getFocus().getSemanticPrimary();
@@ -142,8 +141,9 @@ export class TableWalker extends SyntaxWalker {
 
   /**
    * Performs a vertical move in a table.
+   *
    * @param direction If true walk down, o/w up.
-   * @return The new focus.
+   * @returns The new focus.
    */
   private verticalMove_(direction: boolean): Focus | null {
     const parent = this.previousLevel();
@@ -175,9 +175,10 @@ export class TableWalker extends SyntaxWalker {
 
   /**
    * Jumps to the cell at the given row column position.
+   *
    * @param row The row coordinate.
    * @param column The column coordinate.
-   * @return The newly focused cell.
+   * @returns The newly focused cell.
    */
   private jumpCell_(row: number, column: number): Focus {
     if (!this.firstJump) {
@@ -206,9 +207,10 @@ export class TableWalker extends SyntaxWalker {
   /**
    * Checks if a jump to a given row column position is possible in the current
    * table.
+   *
    * @param row The row coordinate.
    * @param column The column coordinate.
-   * @return True if the cell exists.
+   * @returns True if the cell exists.
    */
   private isLegalJump_(row: number, column: number): boolean {
     const xmlTable = DomUtil.querySelectorAllByAttrValue(
@@ -235,7 +237,7 @@ export class TableWalker extends SyntaxWalker {
   }
 
   /**
-   * @return True if we are inside a table.
+   * @returns True if we are inside a table.
    */
   private isInTable_(): boolean {
     let snode = this.getFocus().getSemanticPrimary();

@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with tensor elements.
- *
+ * @file Specialist computations to deal with tensor elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -29,8 +28,9 @@ import * as EnrichMathml from './enrich_mathml';
 export class CaseTensor extends CaseMultiindex {
   /**
    * Applicability test of the case.
+   *
    * @param semantic The semantic node.
-   * @return True if case is applicable.
+   * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
     return !!semantic.mathmlTree && semantic.type === SemanticType.TENSOR;
