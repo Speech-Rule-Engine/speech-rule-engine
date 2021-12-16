@@ -23,12 +23,12 @@
 
 import * as DomUtil from '../common/dom_util';
 import { Attribute } from '../enrich_mathml/enrich_mathml';
+import { invisibleComma } from '../semantic_tree/semantic_attr';
 import {
-  SemanticAttr,
   SemanticFont,
   SemanticRole,
   SemanticType
-} from '../semantic_tree/semantic_attr';
+} from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import { SemanticNodeFactory } from '../semantic_tree/semantic_node_factory';
 import SemanticProcessor from '../semantic_tree/semantic_processor';
@@ -217,7 +217,7 @@ export class RebuildStree {
    */
   public makePunctuation(id: number): SemanticNode {
     const node = this.createNode(id);
-    node.updateContent(SemanticAttr.invisibleComma());
+    node.updateContent(invisibleComma());
     node.role = SemanticRole.DUMMY;
     return node;
   }

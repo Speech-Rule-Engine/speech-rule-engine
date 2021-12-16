@@ -20,7 +20,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import { Sexp } from '../semantic_tree/semantic_skeleton';
 

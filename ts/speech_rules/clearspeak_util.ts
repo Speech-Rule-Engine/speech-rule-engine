@@ -26,11 +26,8 @@ import { Grammar } from '../rule_engine/grammar';
 import * as StoreUtil from '../rule_engine/store_util';
 import { SemanticAnnotations } from '../semantic_tree/semantic_annotations';
 import { SemanticAnnotator } from '../semantic_tree/semantic_annotator';
-import {
-  SemanticAttr,
-  SemanticRole,
-  SemanticType
-} from '../semantic_tree/semantic_attr';
+import { isMatchingFence } from '../semantic_tree/semantic_attr';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import { vulgarFractionSmall } from './numbers_util';
 
@@ -467,7 +464,7 @@ export function matchingFences(node: Element): Element[] {
     // this case should not happen!
     return [];
   }
-  return SemanticAttr.isMatchingFence(left.textContent, right.textContent)
+  return isMatchingFence(left.textContent, right.textContent)
     ? [node]
     : [];
 }

@@ -20,7 +20,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import { SemanticFont, SemanticRole, SemanticType } from './semantic_attr';
+import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
 import { SemanticAbstractParser } from './semantic_parser';
 import * as SemanticPred from './semantic_pred';

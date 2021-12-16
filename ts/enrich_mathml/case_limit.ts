@@ -21,7 +21,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import { SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 
 import { AbstractEnrichCase } from './abstract_enrich_case';

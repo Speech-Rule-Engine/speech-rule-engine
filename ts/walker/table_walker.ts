@@ -22,7 +22,7 @@
 import * as DomUtil from '../common/dom_util';
 import { KeyCode } from '../common/event_util';
 import { Highlighter } from '../highlighter/highlighter';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import { SpeechGenerator } from '../speech_generator/speech_generator';
 

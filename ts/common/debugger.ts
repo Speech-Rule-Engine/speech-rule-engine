@@ -77,11 +77,10 @@ export class Debugger {
 
   /**
    * Gracefully exits the debugger.
-   * @param opt_callback Function to be executed after exiting the
+   * @param callback Optional function to be executed after exiting the
    *     debugger.
    */
-  public exit(opt_callback?: () => any) {
-    const callback = opt_callback || function () {};
+  public exit(callback: () => any = () => {}) {
     if (this.isActive_ && this.stream_) {
       this.stream_.end('', '', callback);
     }

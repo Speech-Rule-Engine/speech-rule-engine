@@ -23,12 +23,8 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import {
-  SemanticAttr,
-  SemanticFont,
-  SemanticRole,
-  SemanticType
-} from './semantic_attr';
+import * as SemanticAttr from './semantic_attr';
+import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
 import { SemanticHeuristics } from './semantic_heuristics';
 import { SemanticNode } from './semantic_node';
 import { SemanticNodeFactory } from './semantic_node_factory';

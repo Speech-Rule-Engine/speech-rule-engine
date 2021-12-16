@@ -21,7 +21,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticMeaning, SemanticRole, SemanticType } from './semantic_attr';
+import { SemanticMeaning, SemanticRole, SemanticType } from './semantic_meaning';
 
 // TODO: Have some better ordering mechanism than array order.
 /**

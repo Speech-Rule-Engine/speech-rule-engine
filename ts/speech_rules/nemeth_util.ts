@@ -25,7 +25,7 @@ import { Grammar } from '../rule_engine/grammar';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 import { SemanticAnnotations } from '../semantic_tree/semantic_annotations';
 import { SemanticVisitor } from '../semantic_tree/semantic_annotator';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 
 import { LOCALE } from '../l10n/locale';

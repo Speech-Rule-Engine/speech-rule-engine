@@ -22,7 +22,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticFont, SemanticType } from './semantic_attr';
+import { SemanticFont, SemanticType } from './semantic_meaning';
 import { SemanticDefault } from './semantic_default';
 import { SemanticNodeCollator } from './semantic_default';
 import { SemanticNode } from './semantic_node';

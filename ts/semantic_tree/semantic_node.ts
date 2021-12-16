@@ -22,13 +22,13 @@
 
 import * as DomUtil from '../common/dom_util';
 import SystemExternal from '../common/system_external';
-import { SemanticMeaning } from './semantic_attr';
+import { lookupMeaning } from './semantic_attr';
 import {
-  SemanticAttr,
+  SemanticMeaning,
   SemanticFont,
   SemanticRole,
   SemanticType
-} from './semantic_attr';
+} from './semantic_meaning';
 import * as SemanticUtil from './semantic_util';
 
 /**
@@ -349,7 +349,7 @@ export class SemanticNode {
     if (this.textContent === content) {
       return;
     }
-    const meaning = SemanticAttr.lookupMeaning(content);
+    const meaning = lookupMeaning(content);
     this.textContent = content;
     this.role = meaning.role;
     this.type = meaning.type;

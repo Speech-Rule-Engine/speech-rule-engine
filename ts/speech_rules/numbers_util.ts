@@ -21,7 +21,7 @@
 import { Span } from '../audio/span';
 import * as DomUtil from '../common/dom_util';
 import { LOCALE } from '../l10n/locale';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 
 // Number transformation
 /**

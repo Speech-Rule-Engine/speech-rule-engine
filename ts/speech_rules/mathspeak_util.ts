@@ -30,7 +30,7 @@ import {
   SemanticFont,
   SemanticRole,
   SemanticType
-} from '../semantic_tree/semantic_attr';
+} from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import SemanticProcessor from '../semantic_tree/semantic_processor';
 

@@ -23,7 +23,8 @@
 
 import { Debugger } from '../common/debugger';
 import { Engine } from '../common/engine';
-import { SemanticAttr, SemanticRole, SemanticType } from './semantic_attr';
+import * as SemanticAttr from './semantic_attr';
+import { SemanticRole, SemanticType } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
 import { SemanticNodeFactory } from './semantic_node_factory';
 import * as SemanticPred from './semantic_pred';

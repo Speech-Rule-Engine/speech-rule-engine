@@ -19,7 +19,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticAttr, SemanticFont, SemanticMeaning } from './semantic_attr';
+import * as SemanticAttr from './semantic_attr';
+import { SemanticFont, SemanticMeaning } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
 import { SemanticOrdering } from './semantic_ordering';
 

@@ -30,7 +30,7 @@ import SystemExternal from '../common/system_external';
 
 import { SemanticAnnotations } from './semantic_annotations';
 import { SemanticVisitor } from './semantic_annotator';
-import { SemanticRole, SemanticType } from './semantic_attr';
+import { SemanticRole, SemanticType } from './semantic_meaning';
 import { SemanticMeaningCollator } from './semantic_default';
 import { SemanticMathml } from './semantic_mathml';
 import { SemanticNode } from './semantic_node';

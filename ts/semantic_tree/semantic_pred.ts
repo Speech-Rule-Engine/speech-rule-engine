@@ -20,7 +20,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticAttr, SemanticRole, SemanticType } from './semantic_attr';
+import * as SemanticAttr from './semantic_attr';
+import { SemanticRole, SemanticType } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
 import { getEmbellishedInner } from './semantic_util';
 
@@ -65,19 +66,19 @@ export function isRole(node: SemanticNode, attr: SemanticRole): boolean {
  * @return True if the node is a punctuation, fence or operator.
  */
 export function isAccent(node: SemanticNode): boolean {
+  const inftyReg = new RegExp('∞|᪲');
   return (
     isType(node, SemanticType.FENCE) ||
     isType(node, SemanticType.PUNCTUATION) ||
     // TODO (sorge) Simplify this once meaning of all characters is fully
     // defined. Improve dealing with Infinity.
     (isType(node, SemanticType.OPERATOR) &&
-      !node.textContent.match(new RegExp('∞|᪲'))) ||
+      !node.textContent.match(inftyReg)) ||
     isType(node, SemanticType.RELATION) ||
     (isType(node, SemanticType.IDENTIFIER) &&
       isRole(node, SemanticRole.UNKNOWN) &&
-      !node.textContent.match(
-        new RegExp(SemanticAttr.allLetters.join('|') + '|∞|᪲')
-      ))
+      !node.textContent.match(SemanticAttr.allLettersRegExp) &&
+      !node.textContent.match(inftyReg))
   );
 }
 

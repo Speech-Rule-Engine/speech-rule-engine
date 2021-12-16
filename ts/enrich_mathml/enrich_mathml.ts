@@ -25,11 +25,8 @@
 import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
 import { Engine } from '../common/engine';
-import {
-  SemanticAttr,
-  SemanticRole,
-  SemanticType
-} from '../semantic_tree/semantic_attr';
+import * as SemanticAttr from '../semantic_tree/semantic_attr';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticHeuristics } from '../semantic_tree/semantic_heuristics';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton';

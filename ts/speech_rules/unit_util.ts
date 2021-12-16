@@ -21,7 +21,7 @@
 import { AuditoryDescription } from '../audio/auditory_description';
 import XpathUtil from '../common/xpath_util';
 import { LOCALE } from '../l10n/locale';
-import { SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticType } from '../semantic_tree/semantic_meaning';
 
 namespace UnitUtil {
   /**

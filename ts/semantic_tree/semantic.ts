@@ -20,7 +20,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import { SemanticFont, SemanticRole, SemanticType } from './semantic_attr';
+import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
 import { SemanticTree } from './semantic_tree';
 
 /**

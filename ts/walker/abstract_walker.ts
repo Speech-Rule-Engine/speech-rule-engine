@@ -30,7 +30,7 @@ import { Highlighter } from '../highlighter/highlighter';
 import { LOCALE } from '../l10n/locale';
 import { AxisMap } from '../rule_engine/dynamic_cstr';
 import { Grammar } from '../rule_engine/grammar';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import { SpeechGenerator } from '../speech_generator/speech_generator';
 import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory';

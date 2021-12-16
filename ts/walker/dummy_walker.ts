@@ -20,7 +20,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { AbstractWalker } from './abstract_walker';
 import { Focus } from './focus';
 import { Levels } from './levels';

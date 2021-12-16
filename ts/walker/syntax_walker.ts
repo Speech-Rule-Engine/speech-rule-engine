@@ -21,7 +21,7 @@
 
 import { interleaveLists } from '../common/base_util';
 import { Highlighter } from '../highlighter/highlighter';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_attr';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SpeechGenerator } from '../speech_generator/speech_generator';
 import { AbstractWalker } from './abstract_walker';
 import { Levels } from './levels';
