@@ -161,7 +161,7 @@ export class Cli {
     const options = SystemExternal.commander.opts();
     EnginePromise.getall().then(() => {
       this.runProcessors_((proc, file) => {
-        console.info(System.file.processFile(proc, file, options.output));
+        console.info(System.processFile(proc, file, options.output));
       }, input);
     });
   }
