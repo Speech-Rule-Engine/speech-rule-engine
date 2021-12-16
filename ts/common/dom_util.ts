@@ -180,7 +180,7 @@ export function formatXml(xml: string): string {
       continue;
     }
     let indent = 0;
-    if (node.match(/^<\w[^>\/]*>[^>]+$/)) {
+    if (node.match(/^<\w[^>/]*>[^>]+$/)) {
       // Start node with trailing content.
       const match = matchingStartEnd_(node, split[0]);
       if (match[0]) {
@@ -205,7 +205,7 @@ export function formatXml(xml: string): string {
       if (pad !== 0) {
         pad -= 1;
       }
-    } else if (node.match(/^<\w[^>]*[^\/]>.*$/)) {
+    } else if (node.match(/^<\w[^>]*[^/]>.*$/)) {
       // Simple start node.
       indent = 1;
     } else if (node.match(/^<\w[^>]*\/>.+$/)) {

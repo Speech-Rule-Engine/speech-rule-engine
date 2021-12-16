@@ -50,18 +50,18 @@ function hundredsToWords_(num: number): string {
     } else {
       // -dix case!
       const tens = NUMBERS.tens[Math.floor(n / 10)];
-      if (tens.match(/\-dix$/)) {
+      if (tens.match(/-dix$/)) {
         ones = NUMBERS.ones[(n % 10) + 10];
-        str += tens.replace(/\-dix$/, '') + '-' + ones;
+        str += tens.replace(/-dix$/, '') + '-' + ones;
       } else {
         str += tens + (n % 10 ? '-' + NUMBERS.ones[n % 10] : '');
       }
     }
   }
-  const match = str.match(/s\-\w+$/);
+  const match = str.match(/s-\w+$/);
   return match
-    ? str.replace(/s\-\w+$/, match[0].slice(1))
-    : str.replace(/\-un$/, '-et-un');
+    ? str.replace(/s-\w+$/, match[0].slice(1))
+    : str.replace(/-un$/, '-et-un');
 }
 
 /**
@@ -144,7 +144,7 @@ function wordOrdinal(num: number): string {
   } else if (ordinal.match(/cinq$/)) {
     ordinal = ordinal + 'u';
   } else if (ordinal.match(/trois$/)) {
-    ordinal = ordinal;
+    ordinal = ordinal + '';
   } else if (ordinal.match(/e$/) || ordinal.match(/s$/)) {
     ordinal = ordinal.slice(0, -1);
   }

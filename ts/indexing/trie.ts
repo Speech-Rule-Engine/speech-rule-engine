@@ -220,7 +220,7 @@ export class Trie {
    * @param opt_info Initial dynamic constraint information.
    * @return The collated information.
    */
-  public enumerate(opt_info?: Object): Object {
+  public enumerate(opt_info?: { [key: string]: any }): { [key: string]: any } {
     return this.enumerate_(this.root, opt_info);
   }
 

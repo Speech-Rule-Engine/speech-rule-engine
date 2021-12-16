@@ -360,11 +360,12 @@ new Processor<Element>('enriched', {
   },
   postprocessor: function (enr, _expr) {
     const root = WalkerUtil.getSemanticRoot(enr);
+    let generator;
     switch (Engine.getInstance().speech) {
       case EngineConst.Speech.NONE:
         break;
       case EngineConst.Speech.SHALLOW:
-        let generator = SpeechGeneratorFactory.generator('Adhoc');
+        generator = SpeechGeneratorFactory.generator('Adhoc');
         generator.getSpeech(root, enr);
         break;
       case EngineConst.Speech.DEEP:

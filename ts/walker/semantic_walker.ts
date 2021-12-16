@@ -120,8 +120,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
         if (children.length === content.length) {
           return content.map(this.singletonFocus.bind(this));
         }
-        const focusList = this.combinePunctuations(children, content, [], []);
-        return focusList;
+        return this.combinePunctuations(children, content, [], []);
       case SemanticType.APPL:
         return [
           this.focusFromId(children[0], [children[0], content[0]]),

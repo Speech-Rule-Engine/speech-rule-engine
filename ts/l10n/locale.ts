@@ -38,7 +38,7 @@ export interface Locale {
   ALPHABETS: Alphabets;
   NUMBERS: Numbers;
   COMBINERS?: { [key: string]: tr.Combiner };
-  CORRECTIONS?: { [key: string]: Function };
+  CORRECTIONS?: { [key: string]: (a: string) => string };
 }
 
 export const LOCALE: Locale = createLocale();

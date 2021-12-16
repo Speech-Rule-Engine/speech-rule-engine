@@ -61,13 +61,14 @@ const namedColors: { [key: string]: ChannelColor } = {
  */
 function getChannelColor(color: Color, deflt: string): ChannelColor {
   const col = color || { color: deflt };
-  let channel = col.hasOwnProperty('color')
+  let channel = Object.prototype.hasOwnProperty.call(col, 'color')
     ? namedColors[(col as NamedColor).color]
     : col;
   if (!channel) {
     channel = namedColors[deflt];
   }
-  channel.alpha = col.hasOwnProperty('alpha') ? col.alpha : 1;
+  channel.alpha = Object.prototype.hasOwnProperty.call(col, 'alpha') ?
+    col.alpha : 1;
   return normalizeColor(channel as ChannelColor);
 }
 

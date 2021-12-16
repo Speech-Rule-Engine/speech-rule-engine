@@ -61,7 +61,7 @@ export function detectEdge(): boolean {
 /**
  * JSON object with mappings for IE.
  */
-export const mapsForIE: Object = null;
+export const mapsForIE: {[key: string]: any} = null;
 
 /**
  * Loads all JSON mappings for IE using a script tag.

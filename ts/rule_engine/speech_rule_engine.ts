@@ -278,7 +278,7 @@ export class SpeechRuleEngine {
    * @param opt_info Initial dynamic constraint information.
    * @return The collated information.
    */
-  public enumerate(opt_info?: Object): Object {
+  public enumerate(opt_info?: { [key: string]: any }): { [key: string]: any } {
     return this.trie.enumerate(opt_info);
   }
 
@@ -356,13 +356,13 @@ export class SpeechRuleEngine {
         Engine.getInstance().setDynamicCstr(features as AxisMap);
       }
       switch (component.type) {
-        case ActionType.NODE:
+        case ActionType.NODE: {
           const selected = context.applyQuery(node, content) as Element;
           if (selected) {
             descrs = this.evaluateTree_(selected);
-          }
+          }}
           break;
-        case ActionType.MULTI:
+        case ActionType.MULTI: {
           multi = true;
           const selects = context.applySelector(node, content) as Element[];
           if (selects.length > 0) {
@@ -375,9 +375,9 @@ export class SpeechRuleEngine {
               attributes['ctxtFunc'],
               context.constructString(node, attributes['context']) as string
             );
-          }
+          }}
           break;
-        case ActionType.TEXT:
+        case ActionType.TEXT: {
           // TODO (span): We need the span concept here as a parameter with
           // xpath.
           const xpath = attributes['span'];
@@ -409,7 +409,7 @@ export class SpeechRuleEngine {
                 )
               ];
             }
-          }
+          }}
           break;
         case ActionType.PERSONALITY:
         default:

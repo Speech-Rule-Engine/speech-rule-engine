@@ -287,7 +287,7 @@ export function nestedFraction(
   opt_end?: string
 ): string {
   const depth = fractionNestingDepth(node);
-  const annotation = Array.apply(null, Array(depth)).map((_x: string) => expr);
+  const annotation = Array(depth).fill(expr);
   if (opt_end) {
     annotation.push(opt_end);
   }
@@ -945,18 +945,11 @@ export function generateTensorRules(
   for (let i = 0, constel; (constel = constellations[i]); i++) {
     let name = 'tensor' + constel;
     let [components, verbStr, briefStr] = generateTensorRuleStrings_(constel);
-    let verbList = [name, 'default', verbStr, 'self::tensor'].concat(
-      components
-    );
     // Rules without neighbour.
-    store.defineRule.apply(store, verbList);
+    store.defineRule(name, 'default', verbStr, 'self::tensor', ...components);
     if (brief) {
-      const briefList = [name, 'brief', briefStr, 'self::tensor'].concat(
-        components
-      );
-      store.defineRule.apply(store, briefList);
-      briefList[1] = 'sbrief';
-      store.defineRule.apply(store, briefList);
+      store.defineRule(name, 'brief', briefStr, 'self::tensor', ...components);
+      store.defineRule(name, 'sbrief', briefStr, 'self::tensor', ...components);
     }
     // Rules with baseline.
     const baselineStr = componentString.get(2);
@@ -967,17 +960,13 @@ export function generateTensorRules(
       '((.//*[not(*)])[last()]/@id)!=(((.//ancestor::fraction|' +
       'ancestor::root|ancestor::sqrt|ancestor::cell|ancestor::line|' +
       'ancestor::stree)[1]//*[not(*)])[last()]/@id)';
-    verbList = [name, 'default', verbStr, 'self::tensor', cstr].concat(
-      components
-    );
-    store.defineRule.apply(store, verbList);
+    store.defineRule(
+      name, 'default', verbStr, 'self::tensor', cstr, ...components);
     if (brief) {
-      const briefList = [name, 'brief', briefStr, 'self::tensor', cstr].concat(
-        components
-      );
-      store.defineRule.apply(store, briefList);
-      briefList[1] = 'sbrief';
-      store.defineRule.apply(store, briefList);
+      store.defineRule(
+        name, 'brief', briefStr, 'self::tensor', cstr, ...components);
+      store.defineRule(
+        name, 'sbrief', briefStr, 'self::tensor', cstr, ...components);
     }
   }
 }

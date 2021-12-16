@@ -390,7 +390,8 @@ export namespace MathCompoundStore {
    * @param opt_info Initial dynamic constraint information.
    * @return The collated information.
    */
-  export function enumerate(info: Object = {}): Object {
+  export function enumerate(info: { [key: string]: any } = {}):
+  { [key: string]: any } {
     for (const store of Object.values(subStores_)) {
       for (const [_locale, rules] of store.rules.entries()) {
         for (const { cstr: dynamic } of rules) {

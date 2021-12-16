@@ -25,9 +25,9 @@
 import { Variables } from './variables';
 
 namespace SystemExternal {
-  declare var global: any;
-  declare var require: (name: string) => any;
-  declare var process: any;
+  declare let global: any;
+  declare let require: (name: string) => any;
+  declare let process: any;
 
   /**
    * The local require function for NodeJS.

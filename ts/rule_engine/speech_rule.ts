@@ -194,7 +194,7 @@ export class Component {
           break;
         }
       case ActionType.NODE:
-      case ActionType.MULTI:
+      case ActionType.MULTI: {
         const bracket = rest.indexOf(' (');
         if (bracket === -1) {
           output.content = rest.trim();
@@ -203,6 +203,7 @@ export class Component {
         }
         output.content = rest.substring(0, bracket).trim();
         rest = rest.slice(bracket).trim();
+      }
         break;
     }
     if (rest) {

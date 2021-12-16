@@ -293,7 +293,7 @@ export abstract class AbstractWalker<T> implements Walker {
         return this.summary_();
       case WalkerMoves.DETAIL:
         return this.detail_();
-      default:
+      default: {
         const speech = [];
         const snodes = this.getFocus().getSemanticNodes();
         for (let i = 0, l = nodes.length; i < l; i++) {
@@ -306,6 +306,7 @@ export abstract class AbstractWalker<T> implements Walker {
           );
         }
         return this.mergePrefix_(speech);
+      }
     }
   }
 
@@ -525,7 +526,7 @@ export abstract class AbstractWalker<T> implements Walker {
       children = WalkerUtil.splitAttribute(
         WalkerUtil.getAttribute(dnode, Attribute.CHILDREN)
       );
-      const content = WalkerUtil.splitAttribute(
+      content = WalkerUtil.splitAttribute(
         WalkerUtil.getAttribute(dnode, Attribute.CONTENT)
       );
       const type = WalkerUtil.getAttribute(dnode, Attribute.TYPE);

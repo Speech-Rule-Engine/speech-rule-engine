@@ -32,7 +32,7 @@ namespace MathspeakFrenchUtil {
    */
   export function baselineVerbose(node: Element): string {
     const baseline = MathspeakUtil.baselineVerbose(node);
-    return baseline.replace(/\-$/, '');
+    return baseline.replace(/-$/, '');
   }
 
   /**
@@ -42,7 +42,7 @@ namespace MathspeakFrenchUtil {
    */
   export function baselineBrief(node: Element): string {
     const baseline = MathspeakUtil.baselineBrief(node);
-    return baseline.replace(/\-$/, '');
+    return baseline.replace(/-$/, '');
   }
 
   /**

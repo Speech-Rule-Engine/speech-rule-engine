@@ -72,7 +72,7 @@ export const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
  */
 export function objectsToKeys(...args: { [key: string]: string }[]): string[] {
   const keys: string[] = [];
-  return keys.concat.apply(keys, args.map(Object.keys));
+  return keys.concat(...args.map(Object.keys));
 }
 
 /**
@@ -249,7 +249,7 @@ export function isZeroLength(length: string): boolean {
   if (negativeNamedSpaces.indexOf(length) !== -1) {
     return true;
   }
-  const value = length.match(/[0-9\.]+/);
+  const value = length.match(/[0-9.]+/);
   if (!value) {
     return false;
   }

@@ -2479,14 +2479,14 @@ export default class SemanticProcessor {
           );
           contentStack = contentStack.slice(cutLength);
           // var rightContent = contentStack.shift();
-          result.push.apply(result, innerNodes);
+          result.push(...innerNodes);
           // result.push.apply(result, rightContent);
           if (split.div) {
             split.tail.unshift(split.div);
           }
           openStack = split.tail;
         }
-        result.push.apply(result, contentStack.shift());
+        result.push(...contentStack.shift());
       }
       return result;
     }
@@ -2729,8 +2729,8 @@ export default class SemanticProcessor {
       midFences,
       midContent
     );
-    leftContent.push.apply(leftContent, innerNodes);
-    leftContent.push.apply(leftContent, rightContent);
+    leftContent.push(...innerNodes);
+    leftContent.push(...rightContent);
     const fenced = SemanticProcessor.getInstance().horizontalFencedNode_(
       leftFence,
       rightFence,
@@ -3197,10 +3197,9 @@ export default class SemanticProcessor {
     rest: SemanticNode[],
     heuristic: string
   ): SemanticNode[] {
-    let partition;
-    let arg;
+    let partition, arg, funcNode;
     switch (heuristic) {
-      case 'integral':
+      case 'integral': {
         const components = SemanticProcessor.getInstance().getIntegralArgs_(rest);
         if (!components.intvar && !components.integrand.length) {
           components.rest.unshift(func);
@@ -3209,15 +3208,15 @@ export default class SemanticProcessor {
         const integrand = SemanticProcessor.getInstance().row(
           components.integrand
         );
-        let funcNode = SemanticProcessor.getInstance().integralNode_(
+        funcNode = SemanticProcessor.getInstance().integralNode_(
           func,
           integrand,
           components.intvar
         );
         components.rest.unshift(funcNode);
         return components.rest;
-        break;
-      case 'prefix':
+      }
+      case 'prefix': {
         if (rest[0] && rest[0].type === SemanticType.FENCED) {
           // TODO: (MS2.3|simons) This needs to be made more robust!  Currently
           // we
@@ -3261,8 +3260,8 @@ export default class SemanticProcessor {
         funcNode = SemanticProcessor.getInstance().functionNode_(func, arg);
         partition.tail.unshift(funcNode);
         return partition.tail;
-        break;
-      case 'bigop':
+      }
+      case 'bigop': {
         partition = SemanticUtil.sliceNodes(rest, SemanticPred.isBigOpBoundary);
         if (!partition.head.length) {
           rest.unshift(func);
@@ -3275,9 +3274,9 @@ export default class SemanticProcessor {
         }
         partition.tail.unshift(funcNode);
         return partition.tail;
-        break;
-      case 'simple':
-      default:
+      }
+      case 'simple': 
+      default: {
         if (rest.length === 0) {
           return [func];
         }
@@ -3305,7 +3304,7 @@ export default class SemanticProcessor {
         }
         rest.unshift(func);
         return rest;
-        break;
+      }
     }
   }
 

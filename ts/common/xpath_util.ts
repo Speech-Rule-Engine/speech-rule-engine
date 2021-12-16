@@ -56,7 +56,8 @@ namespace XpathUtil {
     ? XPathResult
     : SystemExternal.xpath.XPathResult;
 
-  export let createNSResolver: Function = xpathSupported()
+  export let createNSResolver:
+  (nodeResolver: Node) => XPathNSResolver = xpathSupported()
     ? document.createNSResolver
     : SystemExternal.xpath.createNSResolver;
 

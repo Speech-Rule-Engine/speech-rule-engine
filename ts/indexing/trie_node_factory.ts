@@ -176,9 +176,9 @@ export function constraintTest_(
   }
   // category constraint
   // xpath[@constraint!?="xy"]
-  if (constraint.match(/^.+\[@category!?=\".+\"\]$/)) {
+  if (constraint.match(/^.+\[@category!?=".+"\]$/)) {
     let [, query, equality, category] = constraint.match(
-      /^(.+)\[@category(!?=)\"(.+)\"\]$/
+      /^(.+)\[@category(!?=)"(.+)"\]$/
     );
     const unit = category.match(/^unit:(.+)$/);
     let add = '';

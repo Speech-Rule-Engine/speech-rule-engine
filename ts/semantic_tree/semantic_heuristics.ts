@@ -194,15 +194,8 @@ function combineJuxtaposition(root: SemanticNode) {
     if (!SemanticPred.isImplicitOp(child) || child.nobreaking) {
       continue;
     }
-    // TODO (TS): Cleanup those any types.
-    root.childNodes.splice.apply(
-      root.childNodes,
-      [i, 1].concat(child.childNodes as any)
-    );
-    root.contentNodes.splice.apply(
-      root.contentNodes,
-      [i, 0].concat(child.contentNodes as any)
-    );
+    root.childNodes.splice(i, 1, ...child.childNodes);
+    root.contentNodes.splice(i, 0, ...child.contentNodes);
     child.childNodes.concat(child.contentNodes).forEach(function (x) {
       x.parent = root;
     });

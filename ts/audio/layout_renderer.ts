@@ -103,7 +103,7 @@ export class LayoutRenderer extends XmlRenderer {
 // Postprocessing
 let twodExpr = '';
 
-const handlers: { [key: string]: Function } = {
+const handlers: { [key: string]: (node: Element) => string } = {
   TABLE: handleTable,
   CASES: handleCases,
   CAYLEY: handleCayley,
