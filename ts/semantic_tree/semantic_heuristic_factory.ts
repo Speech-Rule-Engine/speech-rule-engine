@@ -60,7 +60,7 @@ export const blacklist: { [key: string]: boolean } = {};
 export function add(
   heuristic: SemanticHeuristic<SemanticHeuristicTypes>
 ) {
-  let name = heuristic.name;
+  const name = heuristic.name;
   heuristics.set(name, heuristic);
   // Registered switched off, unless it is set by default.
   if (!flags[name]) {

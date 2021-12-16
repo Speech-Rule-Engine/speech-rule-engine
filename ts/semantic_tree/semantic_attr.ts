@@ -1552,7 +1552,7 @@ const allLetters: string[] = capitalLatin.concat(
   hebrewLetters
 );
 
-export const allLettersRegExp: RegExp = new RegExp(allLetters.join('|'));
+export const allLettersRegExp = new RegExp(allLetters.join('|'));
 
 // Operator symbols
 const additions: string[] = [

@@ -22,7 +22,7 @@
 import * as SemanticAttr from './semantic_attr';
 import { SemanticFont, SemanticMeaning } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
-import { SemanticOrdering } from './semantic_ordering';
+import { reduce } from './semantic_ordering';
 
 // TODO: Combine default and collator with a common superclass mapping.
 export class SemanticDefault {
@@ -315,7 +315,7 @@ export class SemanticMeaningCollator extends SemanticCollator<SemanticMeaning> {
   public reduce() {
     for (const key in this.map) {
       if (this.map[key].length !== 1) {
-        this.map[key] = SemanticOrdering.reduce(this.map[key]);
+        this.map[key] = reduce(this.map[key]);
       }
     }
   }

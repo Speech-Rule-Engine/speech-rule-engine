@@ -27,82 +27,60 @@ import { SemanticMeaning, SemanticRole, SemanticType } from './semantic_meaning'
 /**
  * A structure for ordering semantic comparators.
  */
-export namespace SemanticOrdering {
-  const comparators: SemanticComparator[] = [];
+const comparators: SemanticComparator[] = [];
 
-  /**
-   * @param comparator Adds the comparator
-   */
-  export function add(comparator: SemanticComparator) {
-    comparators.push(comparator);
-  }
+/**
+ * @param comparator Adds the comparator
+ */
+export function add(comparator: SemanticComparator) {
+  comparators.push(comparator);
+}
 
-  /**
-   * Apply the list of ordered comparators to two meaning elements.
-   * @param meaning1 The first meaning.
-   * @param meaning2 The second meaning.
-   * @return 0, 1, -1 depending on the partial order.
-   */
-  export function apply(
-    meaning1: SemanticMeaning,
-    meaning2: SemanticMeaning
-  ): number {
-    for (let i = 0, comparator; (comparator = comparators[i]); i++) {
-      const result = comparator.compare(meaning1, meaning2);
-      if (result !== 0) {
-        return result;
-      }
+/**
+ * Apply the list of ordered comparators to two meaning elements.
+ * @param meaning1 The first meaning.
+ * @param meaning2 The second meaning.
+ * @return 0, 1, -1 depending on the partial order.
+ */
+export function apply(
+  meaning1: SemanticMeaning,
+  meaning2: SemanticMeaning
+): number {
+  for (let i = 0, comparator; (comparator = comparators[i]); i++) {
+    const result = comparator.compare(meaning1, meaning2);
+    if (result !== 0) {
+      return result;
     }
-    return 0;
   }
+  return 0;
+}
 
-  /**
-   * Sorts a list of semantic meaning elements.
-   * @param meanings List of meaning elements.
-   */
-  export function sort(meanings: SemanticMeaning[]) {
-    meanings.sort(apply);
-  }
+/**
+ * Sorts a list of semantic meaning elements.
+ * @param meanings List of meaning elements.
+ */
+export function sort(meanings: SemanticMeaning[]) {
+  meanings.sort(apply);
+}
 
-  /**
-   * Get a list of priority meanings.
-   * @param meanings A list of semantic meanings.
-   * @return A priority list of semantic meanings.
-   */
-  export function reduce(meanings: SemanticMeaning[]): SemanticMeaning[] {
-    if (meanings.length <= 1) {
-      return meanings;
-    }
-    const copy = meanings.slice();
-    this.sort(copy);
-    const result = [];
-    let last;
-    do {
-      last = copy.pop();
-      result.push(last);
-    } while (last && copy.length && apply(copy[copy.length - 1], last) === 0);
-    return result;
+/**
+ * Get a list of priority meanings.
+ * @param meanings A list of semantic meanings.
+ * @return A priority list of semantic meanings.
+ */
+export function reduce(meanings: SemanticMeaning[]): SemanticMeaning[] {
+  if (meanings.length <= 1) {
+    return meanings;
   }
-
-  /**
-   * Comparator expressing preference for simple function roles over others in a
-   * semantic meaning.
-   * @param meaning1 The first meaning.
-   * @param meaning2 The second meaning.
-   * @return 0, 1, -1 depending on the partial order.
-   */
-  export function simpleFunction(
-    meaning1: SemanticMeaning,
-    meaning2: SemanticMeaning
-  ): number {
-    if (meaning1.role === SemanticRole.SIMPLEFUNC) {
-      return 1;
-    }
-    if (meaning2.role === SemanticRole.SIMPLEFUNC) {
-      return -1;
-    }
-    return 0;
-  }
+  const copy = meanings.slice();
+  sort(copy);
+  const result = [];
+  let last;
+  do {
+    last = copy.pop();
+    result.push(last);
+  } while (last && copy.length && apply(copy[copy.length - 1], last) === 0);
+  return result;
 }
 
 export class SemanticComparator {
@@ -115,7 +93,7 @@ export class SemanticComparator {
     public comparator: (p1: SemanticMeaning, p2: SemanticMeaning) => number,
     public type: SemanticType = null
   ) {
-    SemanticOrdering.add(this);
+    add(this);
   }
 
   /**
@@ -133,7 +111,27 @@ export class SemanticComparator {
   }
 }
 
+/**
+ * Comparator expressing preference for simple function roles over others in a
+ * semantic meaning.
+ * @param meaning1 The first meaning.
+ * @param meaning2 The second meaning.
+ * @return 0, 1, -1 depending on the partial order.
+ */
+function simpleFunction(
+  meaning1: SemanticMeaning,
+  meaning2: SemanticMeaning
+): number {
+  if (meaning1.role === SemanticRole.SIMPLEFUNC) {
+    return 1;
+  }
+  if (meaning2.role === SemanticRole.SIMPLEFUNC) {
+    return -1;
+  }
+  return 0;
+}
+
 new SemanticComparator(
-  SemanticOrdering.simpleFunction,
+  simpleFunction,
   SemanticType.IDENTIFIER
 );
