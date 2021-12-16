@@ -42,40 +42,6 @@ export type AxisValues = { [key: string]: boolean };
 
 export type AxisMap = { [key: string]: string };
 
-namespace CstrValues {
-  /**
-   * Initialises an object for collecting all values per axis.
-   */
-  const axisToValues: { [key: string]: AxisValues } = {
-    [Axis.DOMAIN]: {},
-    [Axis.STYLE]: {},
-    [Axis.LOCALE]: {},
-    [Axis.TOPIC]: {},
-    [Axis.MODALITY]: {}
-  };
-
-  /**
-   * Registers a constraint value for a given axis
-   * @param axis The axis.
-   * @param value The value for the axis.
-   */
-  export function add(axis: Axis, value: string) {
-    axisToValues[axis][value] = true;
-  }
-
-  /**
-   * @return The sets of values
-   *     for all constraint attributes.
-   */
-  export function get(): AxisProperties {
-    const result: AxisProperties = {};
-    for (const [key, values] of Object.entries(axisToValues)) {
-      result[key] = Object.keys(values);
-    }
-    return result;
-  }
-}
-
 export class DynamicProperties {
   /**
    * Convenience method to create a standard dynamic constraint, that follows a
@@ -243,7 +209,6 @@ export class DynamicCstr extends DynamicProperties {
     const properties: AxisProperties = {};
     for (const [key, value] of Object.entries(components_)) {
       properties[key] = [value];
-      CstrValues.add(key as Axis, value);
     }
     super(properties, order);
     this.components = components_;
