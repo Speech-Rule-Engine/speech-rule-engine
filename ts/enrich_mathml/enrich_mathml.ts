@@ -27,7 +27,7 @@ import * as DomUtil from '../common/dom_util';
 import { Engine } from '../common/engine';
 import * as SemanticAttr from '../semantic_tree/semantic_attr';
 import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticHeuristics } from '../semantic_tree/semantic_heuristics';
+import * as SemanticHeuristics from '../semantic_tree/semantic_heuristic_factory';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton';
 import { SemanticTree } from '../semantic_tree/semantic_tree';

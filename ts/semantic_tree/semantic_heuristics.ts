@@ -24,167 +24,20 @@
 import { Debugger } from '../common/debugger';
 import { Engine } from '../common/engine';
 import * as SemanticAttr from './semantic_attr';
+import * as SemanticHeuristics from './semantic_heuristic_factory';
+import { SemanticTreeHeuristic, SemanticMultiHeuristic } from './semantic_heuristic';
 import { SemanticRole, SemanticType } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
-import { SemanticNodeFactory } from './semantic_node_factory';
 import * as SemanticPred from './semantic_pred';
 import SemanticProcessor from './semantic_processor';
 import * as SemanticUtil from './semantic_util';
-
-declare type SemanticHeuristicTypes = SemanticNode | SemanticNode[];
-
-export namespace SemanticHeuristics {
-  export let factory: SemanticNodeFactory = null;
-
-  export const heuristics: Map<
-    string,
-    SemanticHeuristic<SemanticHeuristicTypes>
-  > = new Map();
-
-  /**
-   * Heuristics that are run by default.
-   */
-  export const flags: { [key: string]: boolean } = {
-    combine_juxtaposition: true,
-    convert_juxtaposition: true,
-    multioperator: true
-  };
-
-  /**
-   * Heuristics that are permanently switched off.
-   */
-  export const blacklist: { [key: string]: boolean } = {};
-
-  /**
-   * Register a heuristic with the handler.
-   * @param name The name of the heuristic.
-   * @param heuristic The heuristic.
-   */
-  export function add(
-    name: string,
-    heuristic: SemanticHeuristic<SemanticHeuristicTypes>
-  ) {
-    heuristics.set(name, heuristic);
-    // Registered switched off, unless it is set by default.
-    if (!flags[name]) {
-      flags[name] = false;
-    }
-  }
-
-  /**
-   * Runs a heuristic if its predicate evaluates to true.
-   * @param name The name of the heuristic.
-   * @param root The root node of the subtree.
-   * @param opt_alternative An
-   *       optional method to run if the heuristic is not applicable.
-   * @return The resulting subtree.
-   */
-  export function run(
-    name: string,
-    root: SemanticHeuristicTypes,
-    opt_alternative?: (p1: SemanticHeuristicTypes) => SemanticHeuristicTypes
-  ): SemanticHeuristicTypes | void {
-    const heuristic = SemanticHeuristics.lookup(name);
-    return heuristic &&
-      !blacklist[name] &&
-      (flags[name] || heuristic.applicable(root))
-      ? heuristic.apply(root)
-      : opt_alternative
-      ? opt_alternative(root)
-      : root;
-  }
-
-  // /**
-  //  * Runs a multi heuristic if its predicate evaluates to true.
-  //  * @param name The name of the heuristic.
-  //  * @param root The list of root nodes.
-  //  * @param opt_alternative An optional method to run if the heuristic is not
-  //  *       applicable.
-  //  * @return The resulting subtree.
-  //  */
-  // export function runMulti(
-  //     name: string, root: SemanticNode[],
-  //     opt_alternative?: (p1: SemanticNode[]) => SemanticNode[]):
-  //     SemanticNode[] {
-  //   let heuristic = SemanticHeuristics.lookup(name);
-  //   return heuristic &&
-  //           (flags[name] ||
-  //            heuristic.applicable(root)) ?
-  //       heuristic.apply(root) :
-  //       opt_alternative ? opt_alternative(root) : root;
-  // }
-
-  /**
-   * Looks up the named heuristic.
-   * @param name The name of the heuristic.
-   * @return The heuristic.
-   */
-  export function lookup(
-    name: string
-  ): SemanticHeuristic<SemanticHeuristicTypes> {
-    return heuristics.get(name);
-  }
-}
-
-// TODO: Heuristic paths have to be included in the tests.
-/**
- * All heuristic methods get a method to manipulate nodes and have a predicate
- * that either switches them on automatically (e.g., on selection of a domain),
- * or they can be switched on manually via a flag. Currently these flags are
- * hard coded.
- */
-export interface SemanticHeuristic<T> {
-  name: string;
-
-  apply: (node: T) => void;
-
-  applicable: (node: T) => boolean;
-}
-
-export abstract class SemanticAbstractHeuristic<
-  T extends SemanticHeuristicTypes
-> implements SemanticHeuristic<T>
-{
-  public apply: (node: T) => void;
-
-  public applicable: (_node: T) => boolean;
-
-  /**
-   * Abstract class of heuristics.
-   * @param {{predicate: ((function(T): boolean)|undefined),
-   *          method: function(T): sre.SemanticNode} } heuristic The predicate and
-   * method of the heuristic
-   */
-  constructor(
-    public name: string,
-    method: (node: T) => void,
-    predicate: (node: T) => boolean = (_x: T) => false
-  ) {
-    this.apply = method;
-    this.applicable = predicate;
-    SemanticHeuristics.add(name, this);
-  }
-}
-
-/**
- * Heuristics work on the root of a subtree.
- * @override
- */
-export class SemanticTreeHeuristic extends SemanticAbstractHeuristic<SemanticNode> {}
-
-/**
- * Heuristics work on a list of nodes.
- * @override
- */
-export class SemanticMultiHeuristic extends SemanticAbstractHeuristic<
-  SemanticNode[]
-> {}
 
 /**
  * Recursively combines implicit nodes as much as possible for the given root
  * node of a subtree.
  */
-new SemanticTreeHeuristic('combine_juxtaposition', combineJuxtaposition);
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic('combine_juxtaposition', combineJuxtaposition)); 
 
 function combineJuxtaposition(root: SemanticNode) {
   for (
@@ -210,25 +63,28 @@ function combineJuxtaposition(root: SemanticNode) {
  * with an infix operation or fraction and rewrites their role accordingly.
  * Currently restricted to Clearspeak!
  */
-new SemanticTreeHeuristic(
-  'propagateSimpleFunction',
-  (node) => {
-    if (
-      (node.type === SemanticType.INFIXOP ||
-        node.type === SemanticType.FRACTION) &&
-      node.childNodes.every(SemanticPred.isSimpleFunction)
-    ) {
-      node.role = SemanticRole.COMPFUNC;
-    }
-    return node;
-  },
-  (_node) => Engine.getInstance().domain === 'clearspeak'
+SemanticHeuristics.add(
+  new SemanticTreeHeuristic(
+    'propagateSimpleFunction',
+    (node) => {
+      if (
+        (node.type === SemanticType.INFIXOP ||
+          node.type === SemanticType.FRACTION) &&
+          node.childNodes.every(SemanticPred.isSimpleFunction)
+      ) {
+        node.role = SemanticRole.COMPFUNC;
+      }
+      return node;
+    },
+    (_node) => Engine.getInstance().domain === 'clearspeak'
+  )
 );
 
 /**
  * Naive name based heuristic for identifying simple functions. This is used in
  * clearspeak only.
  */
+SemanticHeuristics.add(
 new SemanticTreeHeuristic(
   'simpleNamedFunction',
   (node) => {
@@ -242,12 +98,13 @@ new SemanticTreeHeuristic(
     return node;
   },
   (_node) => Engine.getInstance().domain === 'clearspeak'
-);
+));
 
 /**
  * Propagates the role of composed function to surrounding fences.
  * Currently restricted to Clearspeak!
  */
+SemanticHeuristics.add(
 new SemanticTreeHeuristic(
   'propagateComposedFunction',
   (node) => {
@@ -260,13 +117,14 @@ new SemanticTreeHeuristic(
     return node;
   },
   (_node) => Engine.getInstance().domain === 'clearspeak'
-);
+));
 
 /**
  * Heuristic to compute a meaningful role for multi character operators (e.g.,
  * as in a++). If all operators have the same role (ignoring unknown) that role
  * is used.
  */
+SemanticHeuristics.add(
 new SemanticTreeHeuristic('multioperator', (node) => {
   if (node.role !== SemanticRole.UNKNOWN || node.textContent.length <= 1) {
     return;
@@ -291,11 +149,12 @@ new SemanticTreeHeuristic('multioperator', (node) => {
   if (singleRole) {
     node.role = singleRole;
   }
-});
+}));
 
 /**
  * Combines explicitly given juxtapositions.
  */
+SemanticHeuristics.add(
 new SemanticMultiHeuristic('convert_juxtaposition', (nodes) => {
   let partition = SemanticUtil.partitionNodes(nodes, function (x) {
     return (
@@ -331,12 +190,13 @@ new SemanticMultiHeuristic('convert_juxtaposition', (nodes) => {
     partition.rel,
     partition.comp
   );
-});
+}));
 
 /**
  * Rewrites a simple function to a prefix function if it consists of multiple
  * letters. (Currently restricted to Braille!)
  */
+SemanticHeuristics.add(
 new SemanticTreeHeuristic(
   'simple2prefix',
   (node) => {
@@ -352,12 +212,13 @@ new SemanticTreeHeuristic(
   (node) =>
     Engine.getInstance().modality === 'braille' &&
     node.type === SemanticType.IDENTIFIER
-);
+));
 
 /**
  *  Rewrites space separated lists of numbers into of cycles.
  *  (Currently only used in Nemeth.)
  */
+SemanticHeuristics.add(
 new SemanticTreeHeuristic(
   'detect_cycle',
   (node) => {
@@ -381,7 +242,7 @@ new SemanticTreeHeuristic(
     node.childNodes[0].contentNodes.every(function (x) {
       return x.role === SemanticRole.SPACE;
     })
-);
+));
 
 /**
  * Rewrites a partition with respect to explicit juxtapositions into one where

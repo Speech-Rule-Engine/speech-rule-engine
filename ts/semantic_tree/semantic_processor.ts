@@ -25,7 +25,7 @@
 import * as DomUtil from '../common/dom_util';
 import * as SemanticAttr from './semantic_attr';
 import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticHeuristics } from './semantic_heuristics';
+import * as SemanticHeuristics from './semantic_heuristic_factory';
 import { SemanticNode } from './semantic_node';
 import { SemanticNodeFactory } from './semantic_node_factory';
 import * as SemanticPred from './semantic_pred';
@@ -1036,7 +1036,7 @@ export default class SemanticProcessor {
    */
   public setNodeFactory(factory: SemanticNodeFactory) {
     SemanticProcessor.getInstance().factory_ = factory;
-    SemanticHeuristics.factory = SemanticProcessor.getInstance().factory_;
+    SemanticHeuristics.updateFactory(SemanticProcessor.getInstance().factory_);
   }
 
   /**
@@ -1726,7 +1726,7 @@ export default class SemanticProcessor {
    */
   private constructor() {
     this.factory_ = new SemanticNodeFactory();
-    SemanticHeuristics.factory = this.factory_;
+    SemanticHeuristics.updateFactory(this.factory_);
   }
 
   /**

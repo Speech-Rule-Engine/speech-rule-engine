@@ -36,6 +36,7 @@ import { SemanticMathml } from './semantic_mathml';
 import { SemanticNode } from './semantic_node';
 import { SemanticParser } from './semantic_parser';
 import * as SemanticPred from './semantic_pred';
+import './semantic_heuristics';
 
 export class SemanticTree {
   /**
