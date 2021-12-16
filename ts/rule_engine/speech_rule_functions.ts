@@ -20,6 +20,9 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
+import { AuditoryDescription } from '../audio/auditory_description';
+import { Span } from '../audio/span';
+
 abstract class FunctionsStore<S> {
   /**
    * Private superclass of all the custom function stores.
@@ -91,7 +94,7 @@ export class CustomQueries extends FunctionsStore<CustomQuery> {
   }
 }
 
-export type CustomString = (p1: Node) => string;
+export type CustomString = (p1: Node) => (string | Span[]);
 
 export class CustomStrings extends FunctionsStore<CustomString> {
   /**
@@ -103,7 +106,7 @@ export class CustomStrings extends FunctionsStore<CustomString> {
   }
 }
 
-export type ContextFunction = (p1: Node[], p2: string | null) => () => string;
+export type ContextFunction = (p1: Node[] | Node, p2: string | null) => () => (string | AuditoryDescription[]);
 
 export class ContextFunctions extends FunctionsStore<ContextFunction> {
   /**
@@ -115,7 +118,7 @@ export class ContextFunctions extends FunctionsStore<ContextFunction> {
   }
 }
 
-export type CustomGenerator = (store?: any) => string[];
+export type CustomGenerator = (store?: any, flag?: boolean) => (string[] | void);
 
 export class CustomGenerators extends FunctionsStore<CustomGenerator> {
   /**

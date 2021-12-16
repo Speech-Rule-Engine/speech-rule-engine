@@ -393,7 +393,7 @@ export namespace MathCompoundStore {
   export function enumerate(info: { [key: string]: any } = {}):
   { [key: string]: any } {
     for (const store of Object.values(subStores_)) {
-      for (const [_locale, rules] of store.rules.entries()) {
+      for (const [ , rules] of store.rules.entries()) {
         for (const { cstr: dynamic } of rules) {
           info = enumerate_(dynamic.getValues(), info);
         }

@@ -41,6 +41,8 @@ interface Flags {
   translate?: boolean;
 }
 
+export type Correction = (text: string, parameter?: Value) => string;
+
 export const ATTRIBUTE = 'grammar';
 
 export class Grammar {
@@ -61,12 +63,12 @@ export class Grammar {
   /**
    * Maps grammatical annotations to correction functions.
    */
-  private corrections_: { [key: string]: Function } = {};
+  private corrections_: { [key: string]: Correction } = {};
 
   /**
    * Maps grammatical annotations to preprocessor functions.
    */
-  private preprocessors_: { [key: string]: Function } = {};
+  private preprocessors_: { [key: string]: Correction } = {};
 
   private stateStack_: State[] = [];
 
@@ -226,7 +228,7 @@ export class Grammar {
    * @param correction The correction name.
    * @param func The correction function.
    */
-  public setCorrection(correction: string, func: Function) {
+  public setCorrection(correction: string, func: Correction) {
     this.corrections_[correction] = func;
   }
 
@@ -235,7 +237,7 @@ export class Grammar {
    * @param preprocessor The preprocessor name.
    * @param func The preprocessor function.
    */
-  public setPreprocessor(preprocessor: string, func: Function) {
+  public setPreprocessor(preprocessor: string, func: Correction) {
     this.preprocessors_[preprocessor] = func;
   }
 
@@ -244,7 +246,7 @@ export class Grammar {
    * @param correction The grammar annotation.
    * @return The correction function.
    */
-  public getCorrection(correction: string): Function {
+  public getCorrection(correction: string): Correction {
     return this.corrections_[correction];
   }
 
@@ -355,7 +357,7 @@ export class Grammar {
    */
   private runProcessors_(
     text: string,
-    funcs: { [key: string]: Function }
+    funcs: { [key: string]: Correction }
   ): string {
     for (const key in this.parameters_) {
       const func = funcs[key];

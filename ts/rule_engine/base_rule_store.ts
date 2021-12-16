@@ -32,6 +32,7 @@ import {
 import { Action, Precondition, SpeechRule } from './speech_rule';
 import { SpeechRuleContext } from './speech_rule_context';
 import { SpeechRuleEvaluator } from './speech_rule_evaluator';
+import { SpeechRuleFunction } from './speech_rule_functions';
 import { SpeechRuleStore } from './speech_rule_store';
 
 export abstract class BaseRuleStore
@@ -567,7 +568,7 @@ export abstract class BaseRuleStore
    */
   private parsePrecondition_(cstr: string): string[] {
     const generator = this.context.customGenerators.lookup(cstr);
-    return generator ? generator() : [cstr];
+    return generator ? (generator() as string[]) : [cstr];
   }
 }
 
@@ -638,7 +639,7 @@ export interface RulesJson {
   locale?: string;
   kind?: string;
   inherits?: string;
-  functions?: { [key: string]: Function };
+  functions?: { [key: string]: SpeechRuleFunction };
   rules?: any[];
   annotators?: any[];
 }
