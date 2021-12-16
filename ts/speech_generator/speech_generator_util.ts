@@ -21,7 +21,7 @@
  */
 
 import { AuditoryDescription } from '../audio/auditory_description';
-import AuralRendering from '../audio/aural_rendering';
+import * as AuralRendering from '../audio/aural_rendering';
 import * as DomUtil from '../common/dom_util';
 import XpathUtil from '../common/xpath_util';
 import { Attribute } from '../enrich_mathml/enrich_mathml';

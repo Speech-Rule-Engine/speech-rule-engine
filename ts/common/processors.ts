@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import AuralRendering from '../audio/aural_rendering';
+import * as AuralRendering from '../audio/aural_rendering';
 import * as Enrich from '../enrich_mathml/enrich';
 import { Highlighter } from '../highlighter/highlighter';
 import * as HighlighterFactory from '../highlighter/highlighter_factory';

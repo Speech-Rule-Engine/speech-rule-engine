@@ -20,7 +20,7 @@
  */
 
 import { AuditoryDescription } from '../audio/auditory_description';
-import AuralRendering from '../audio/aural_rendering';
+import * as AuralRendering from '../audio/aural_rendering';
 import * as DomUtil from '../common/dom_util';
 import { EngineConst } from '../common/engine';
 import { KeyCode } from '../common/event_util';
