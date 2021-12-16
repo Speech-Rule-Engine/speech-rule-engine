@@ -191,7 +191,8 @@ export class RebuildStree {
     const type = WalkerUtil.getAttribute(node, Attribute.TYPE);
     const role = WalkerUtil.getAttribute(node, Attribute.ROLE);
     const font = WalkerUtil.getAttribute(node, Attribute.FONT);
-    const annotation = WalkerUtil.getAttribute(node, Attribute.ANNOTATION) || '';
+    const annotation =
+      WalkerUtil.getAttribute(node, Attribute.ANNOTATION) || '';
     const id = WalkerUtil.getAttribute(node, Attribute.ID);
     const embellished = WalkerUtil.getAttribute(node, Attribute.EMBELLISHED);
     const fencepointer = WalkerUtil.getAttribute(node, Attribute.FENCEPOINTER);

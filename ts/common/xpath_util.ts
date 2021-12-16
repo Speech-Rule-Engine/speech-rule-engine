@@ -56,10 +56,10 @@ namespace XpathUtil {
     ? XPathResult
     : SystemExternal.xpath.XPathResult;
 
-  export let createNSResolver:
-  (nodeResolver: Node) => XPathNSResolver = xpathSupported()
-    ? document.createNSResolver
-    : SystemExternal.xpath.createNSResolver;
+  export let createNSResolver: (nodeResolver: Node) => XPathNSResolver =
+    xpathSupported()
+      ? document.createNSResolver
+      : SystemExternal.xpath.createNSResolver;
 
   /**
    * Mapping for some default namespaces.

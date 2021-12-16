@@ -319,7 +319,10 @@ new Processor('json', {
       return json;
     }
     const addRec = (json: any) => {
-      const node = XpathUtil.evalXPath(`.//*[@id=${json.id}]`, xml)[0] as Element;
+      const node = XpathUtil.evalXPath(
+        `.//*[@id=${json.id}]`,
+        xml
+      )[0] as Element;
       const speech = SpeechGeneratorUtil.computeMarkup(node);
       json.speech = AuralRendering.finalize(speech);
       if (json.children) {

@@ -193,18 +193,19 @@ export class Component {
           // string, it can be treated like node and multi type.
           break;
         }
-        // eslint-disable no-fallthrough
+      // eslint-disable no-fallthrough
       case ActionType.NODE:
-      case ActionType.MULTI: {
-        const bracket = rest.indexOf(' (');
-        if (bracket === -1) {
-          output.content = rest.trim();
-          rest = '';
-          break;
+      case ActionType.MULTI:
+        {
+          const bracket = rest.indexOf(' (');
+          if (bracket === -1) {
+            output.content = rest.trim();
+            rest = '';
+            break;
+          }
+          output.content = rest.substring(0, bracket).trim();
+          rest = rest.slice(bracket).trim();
         }
-        output.content = rest.substring(0, bracket).trim();
-        rest = rest.slice(bracket).trim();
-      }
         break;
     }
     if (rest) {

@@ -143,7 +143,12 @@ export class MathStore extends BaseRuleStore {
       );
     }
     const action = opt_action ? Action.fromString(opt_action) : rule.action;
-    const newRule = new SpeechRule(rule.name, newCstr, rule.precondition, action);
+    const newRule = new SpeechRule(
+      rule.name,
+      newCstr,
+      rule.precondition,
+      action
+    );
     this.addRule(newRule);
   }
 

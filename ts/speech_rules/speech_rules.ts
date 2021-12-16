@@ -27,7 +27,8 @@ namespace SpeechRules {
    * Mapping for context functions: The store maps constraint strings to
    * dictionaries of context functions.
    */
-  export const store: { [key: string]: { [key: string]: SpeechRuleFunction } } = {};
+  export const store: { [key: string]: { [key: string]: SpeechRuleFunction } } =
+    {};
 
   /**
    * Adds functions to the store potentially inheriting from another store.

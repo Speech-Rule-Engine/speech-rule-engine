@@ -3842,11 +3842,7 @@ export namespace SemanticAttr {
    * @param char The characters to look up.
    * @param annotation Optionally an annotation value. Default is `kind`.
    */
-  function addSecondary_(
-    kind: string,
-    chars: string[],
-    annotation = ''
-  ) {
+  function addSecondary_(kind: string, chars: string[], annotation = '') {
     for (const char of chars) {
       secondary_.set(secKey(kind, char), annotation || kind);
     }

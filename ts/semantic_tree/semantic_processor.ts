@@ -2057,7 +2057,10 @@ export default class SemanticProcessor {
    * @return The root node of the syntax tree.
    */
   private relationsInRow_(nodes: SemanticNode[]): SemanticNode {
-    const partition = SemanticUtil.partitionNodes(nodes, SemanticPred.isRelation);
+    const partition = SemanticUtil.partitionNodes(
+      nodes,
+      SemanticPred.isRelation
+    );
     const firstRel = partition.rel[0];
 
     if (!firstRel) {
@@ -3200,7 +3203,8 @@ export default class SemanticProcessor {
     let partition, arg, funcNode;
     switch (heuristic) {
       case 'integral': {
-        const components = SemanticProcessor.getInstance().getIntegralArgs_(rest);
+        const components =
+          SemanticProcessor.getInstance().getIntegralArgs_(rest);
         if (!components.intvar && !components.integrand.length) {
           components.rest.unshift(func);
           return components.rest;
@@ -3275,7 +3279,7 @@ export default class SemanticProcessor {
         partition.tail.unshift(funcNode);
         return partition.tail;
       }
-      case 'simple': 
+      case 'simple':
       default: {
         if (rest.length === 0) {
           return [func];

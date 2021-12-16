@@ -44,7 +44,11 @@ const simpleEnglish = function (letter: string): string {
 
 // there is no font indicator. For the parenthesised fonts we don't need number
 // indicator either.
-const postfixCombiner = function (letter: string, font: string, _number: string) {
+const postfixCombiner = function (
+  letter: string,
+  font: string,
+  _number: string
+) {
   letter = simpleEnglish(letter);
   return font ? letter + font : letter;
 };
@@ -70,7 +74,11 @@ const doubleEmbellishCombiner = function (
 // Font is the start parenthesis.
 // Number is the number indicator which is ignored.
 // English characters have language indicator removed.
-const parensCombiner = function (letter: string, font: string, _number: string) {
+const parensCombiner = function (
+  letter: string,
+  font: string,
+  _number: string
+) {
   letter = simpleEnglish(letter);
   return font + letter + '⠾';
 };

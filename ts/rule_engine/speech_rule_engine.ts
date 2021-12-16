@@ -356,60 +356,71 @@ export class SpeechRuleEngine {
         Engine.getInstance().setDynamicCstr(features as AxisMap);
       }
       switch (component.type) {
-        case ActionType.NODE: {
-          const selected = context.applyQuery(node, content) as Element;
-          if (selected) {
-            descrs = this.evaluateTree_(selected);
-          }}
-          break;
-        case ActionType.MULTI: {
-          multi = true;
-          const selects = context.applySelector(node, content) as Element[];
-          if (selects.length > 0) {
-            descrs = this.evaluateNodeList_(
-              context,
-              selects,
-              attributes['sepFunc'],
-              // TODO (span): Sort out those types better.
-              context.constructString(node, attributes['separator']) as string,
-              attributes['ctxtFunc'],
-              context.constructString(node, attributes['context']) as string
-            );
-          }}
-          break;
-        case ActionType.TEXT: {
-          // TODO (span): We need the span concept here as a parameter with
-          // xpath.
-          const xpath = attributes['span'];
-          const attrs: { [key: string]: string } = {};
-          if (xpath) {
-            const nodes = XpathUtil.evalXPath(xpath, node);
-            // TODO: Those could be multiple nodes!
-            //       We need the right xpath expression and combine their
-            //       attributes.
-            // Generalise the following:
-            if (nodes.length) {
-              attrs.extid = (nodes[0] as Element).getAttribute('extid');
+        case ActionType.NODE:
+          {
+            const selected = context.applyQuery(node, content) as Element;
+            if (selected) {
+              descrs = this.evaluateTree_(selected);
             }
           }
-          const str = context.constructString(node, content) as string | Span[];
-          if (str) {
-            if (Array.isArray(str)) {
-              descrs = str.map(function (span) {
-                return AuditoryDescription.create(
-                  { text: span.speech, attributes: span.attributes },
-                  { adjust: true }
-                );
-              });
-            } else {
-              descrs = [
-                AuditoryDescription.create(
-                  { text: str, attributes: attrs },
-                  { adjust: true }
-                )
-              ];
+          break;
+        case ActionType.MULTI:
+          {
+            multi = true;
+            const selects = context.applySelector(node, content) as Element[];
+            if (selects.length > 0) {
+              descrs = this.evaluateNodeList_(
+                context,
+                selects,
+                attributes['sepFunc'],
+                // TODO (span): Sort out those types better.
+                context.constructString(
+                  node,
+                  attributes['separator']
+                ) as string,
+                attributes['ctxtFunc'],
+                context.constructString(node, attributes['context']) as string
+              );
             }
-          }}
+          }
+          break;
+        case ActionType.TEXT:
+          {
+            // TODO (span): We need the span concept here as a parameter with
+            // xpath.
+            const xpath = attributes['span'];
+            const attrs: { [key: string]: string } = {};
+            if (xpath) {
+              const nodes = XpathUtil.evalXPath(xpath, node);
+              // TODO: Those could be multiple nodes!
+              //       We need the right xpath expression and combine their
+              //       attributes.
+              // Generalise the following:
+              if (nodes.length) {
+                attrs.extid = (nodes[0] as Element).getAttribute('extid');
+              }
+            }
+            const str = context.constructString(node, content) as
+              | string
+              | Span[];
+            if (str) {
+              if (Array.isArray(str)) {
+                descrs = str.map(function (span) {
+                  return AuditoryDescription.create(
+                    { text: span.speech, attributes: span.attributes },
+                    { adjust: true }
+                  );
+                });
+              } else {
+                descrs = [
+                  AuditoryDescription.create(
+                    { text: str, attributes: attrs },
+                    { adjust: true }
+                  )
+                ];
+              }
+            }
+          }
           break;
         case ActionType.PERSONALITY:
         default:

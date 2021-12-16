@@ -475,7 +475,9 @@ export abstract class BaseRuleStore
     }
     // Overwrite previously defined rules!
     this.ignoreRules(name);
-    const regexp = new RegExp('^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : ''));
+    const regexp = new RegExp(
+      '^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : '')
+    );
     prec.conditions.forEach(([dynamic, prec]) => {
       // TODO: Work this out wrt. domain.
       const newDynamic = this.parseCstr(dynamic.toString().replace(regexp, ''));
@@ -522,7 +524,9 @@ export abstract class BaseRuleStore
     if (!this.inherits || !this.inherits.getSpeechRules().length) {
       return;
     }
-    const regexp = new RegExp('^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : ''));
+    const regexp = new RegExp(
+      '^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : '')
+    );
     this.inherits.getSpeechRules().forEach((rule) => {
       // TODO: Work this out wrt. domain.
       const newDynamic = this.parseCstr(

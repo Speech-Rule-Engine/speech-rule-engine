@@ -67,8 +67,9 @@ function getChannelColor(color: Color, deflt: string): ChannelColor {
   if (!channel) {
     channel = namedColors[deflt];
   }
-  channel.alpha = Object.prototype.hasOwnProperty.call(col, 'alpha') ?
-    col.alpha : 1;
+  channel.alpha = Object.prototype.hasOwnProperty.call(col, 'alpha')
+    ? col.alpha
+    : 1;
   return normalizeColor(channel as ChannelColor);
 }
 

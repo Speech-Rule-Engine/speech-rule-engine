@@ -75,7 +75,10 @@ export function parseInput(input: string): Element {
     throw new Error('Empty input!');
   }
   try {
-    const doc = dp.parseFromString(clean_input, html ? 'text/html' : 'text/xml');
+    const doc = dp.parseFromString(
+      clean_input,
+      html ? 'text/html' : 'text/xml'
+    );
     if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
       XpathUtil.currentDocument = doc;
       return html ? doc.body.childNodes[0] : doc.documentElement;

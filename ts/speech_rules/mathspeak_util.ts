@@ -922,10 +922,7 @@ function generateTensorRuleStrings_(
  * Generator for tensor speech rules.
  * @param store The mathstore to which the rules are added.
  */
-export function generateTensorRules(
-  store: SpeechRuleStore,
-  brief = true
-) {
+export function generateTensorRules(store: SpeechRuleStore, brief = true) {
   // Constellations are built as bitvectors with the meaning:
   //  lsub lsuper base rsub rsuper
   const constellations = [
@@ -961,12 +958,30 @@ export function generateTensorRules(
       'ancestor::root|ancestor::sqrt|ancestor::cell|ancestor::line|' +
       'ancestor::stree)[1]//*[not(*)])[last()]/@id)';
     store.defineRule(
-      name, 'default', verbStr, 'self::tensor', cstr, ...components);
+      name,
+      'default',
+      verbStr,
+      'self::tensor',
+      cstr,
+      ...components
+    );
     if (brief) {
       store.defineRule(
-        name, 'brief', briefStr, 'self::tensor', cstr, ...components);
+        name,
+        'brief',
+        briefStr,
+        'self::tensor',
+        cstr,
+        ...components
+      );
       store.defineRule(
-        name, 'sbrief', briefStr, 'self::tensor', cstr, ...components);
+        name,
+        'sbrief',
+        briefStr,
+        'self::tensor',
+        cstr,
+        ...components
+      );
     }
   }
 }

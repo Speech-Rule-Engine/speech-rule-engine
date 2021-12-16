@@ -102,8 +102,9 @@ export class ClearspeakPreferences extends DynamicCstr {
    *     constraints.
    * @return Mapping of locale to preferences.
    */
-  public static getLocalePreferences(
-    opt_dynamic?: { [key: string]: AxisProperties }): {
+  public static getLocalePreferences(opt_dynamic?: {
+    [key: string]: AxisProperties;
+  }): {
     [key: string]: AxisProperties;
   } {
     const dynamic =

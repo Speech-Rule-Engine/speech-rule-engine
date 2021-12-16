@@ -189,7 +189,9 @@ export function constraintTest_(
     return (node: Element) => {
       const xpath = XpathUtil.evalXPath(query, node)[0];
       if (xpath) {
-        const result = MathCompoundStore.lookupCategory(xpath.textContent + add);
+        const result = MathCompoundStore.lookupCategory(
+          xpath.textContent + add
+        );
         return equality === '=' ? result === category : result !== category;
       }
       return false;

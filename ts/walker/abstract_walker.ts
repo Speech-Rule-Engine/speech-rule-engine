@@ -711,7 +711,8 @@ export abstract class AbstractWalker<T> implements Walker {
       if (index === -1) {
         return style;
       }
-      const next = index >= options.length - 1 ? options[0] : options[index + 1];
+      const next =
+        index >= options.length - 1 ? options[0] : options[index + 1];
       const result = ClearspeakPreferences.addPreference(style, smart, next);
       return result;
     }
