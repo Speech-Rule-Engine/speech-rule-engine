@@ -29,7 +29,7 @@ import { Engine, EngineConst, EnginePromise } from './engine';
 import { SREError } from './engine';
 import { KeyCode } from './event_util';
 import * as FileUtil from './file_util';
-import { ProcessorFactory } from './processors';
+import * as ProcessorFactory from './processor_factory';
 import SystemExternal from './system_external';
 import { Variables } from './variables';
 

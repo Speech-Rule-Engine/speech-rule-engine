@@ -25,7 +25,7 @@ import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
 import { Debugger } from './debugger';
 import { EngineConst, EnginePromise, SREError } from './engine';
-import { ProcessorFactory } from './processors';
+import * as ProcessorFactory from './processor_factory';
 import * as System from './system';
 import SystemExternal from './system_external';
 import { Variables } from './variables';
