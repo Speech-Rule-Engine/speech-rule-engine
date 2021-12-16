@@ -21,7 +21,7 @@
 
 import { AuditoryDescription } from '../audio/auditory_description';
 import * as L10n from '../l10n/l10n';
-import { MathMap } from '../speech_rules/math_map';
+import * as MathMap from '../speech_rules/math_map';
 
 import * as BrowserUtil from './browser_util';
 import { Debugger } from './debugger';
