@@ -27,11 +27,8 @@ import * as  EngineConst from '../common/engine_const';
 import * as FileUtil from '../common/file_util';
 import SystemExternal from '../common/system_external';
 import { RulesJson } from '../rule_engine/base_rule_store';
-import {
-  MathCompoundStore,
-  SiJson,
-  UnicodeJson
-} from '../rule_engine/math_simple_store';
+import * as MathCompoundStore from '../rule_engine/math_compound_store';
+import { SiJson, UnicodeJson } from '../rule_engine/math_simple_store';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 
 import { completeLocale } from '../l10n/l10n';
@@ -55,16 +52,8 @@ const addSymbols: { [key: string]: (p1: MathMapType) => any } = {
   functions: MathCompoundStore.addFunctionRules,
   symbols: MathCompoundStore.addSymbolRules,
   units: MathCompoundStore.addUnitRules,
-  si: addSiPrefixes
+  si: MathCompoundStore.setSiPrefixes
 };
-
-/**
- * Adds the Si prefix mapping.
- * @param json Single dictionary object.
- */
-function addSiPrefixes(json: SiJson) {
-  MathCompoundStore.siPrefixes = json;
-}
 
 let _init = false;
 

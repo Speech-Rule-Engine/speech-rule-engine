@@ -20,7 +20,7 @@
  */
 
 import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr';
-import { MathCompoundStore } from '../rule_engine/math_simple_store';
+import * as MathCompoundStore from '../rule_engine/math_compound_store';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
 import { Debugger } from './debugger';

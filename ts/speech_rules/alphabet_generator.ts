@@ -24,10 +24,8 @@ import * as L10n from '../l10n/l10n';
 import { LOCALE } from '../l10n/locale';
 import { localeFontCombiner } from '../l10n/locale_util';
 import { Combiner, Transformer } from '../l10n/transformers';
-import {
-  MathCompoundStore,
-  UnicodeJson
-} from '../rule_engine/math_simple_store';
+import * as MathCompoundStore from '../rule_engine/math_compound_store';
+import { UnicodeJson } from '../rule_engine/math_simple_store';
 import * as SemanticUtil from '../semantic_tree/semantic_util';
 
 /**

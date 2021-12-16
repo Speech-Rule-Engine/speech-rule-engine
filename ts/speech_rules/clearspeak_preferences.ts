@@ -29,7 +29,7 @@ import {
   DynamicCstrParser,
   DynamicProperties
 } from '../rule_engine/dynamic_cstr';
-import { MathCompoundStore } from '../rule_engine/math_simple_store';
+import * as MathCompoundStore from '../rule_engine/math_compound_store';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
