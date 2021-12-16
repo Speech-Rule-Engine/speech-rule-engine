@@ -34,7 +34,7 @@ import { Span } from '../audio/span';
 import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
 import { Engine, EngineConst } from '../common/engine';
-import XpathUtil from '../common/xpath_util';
+import { xpath, evalXPath } from '../common/xpath_util';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
 import SpeechRules from '../speech_rules/speech_rules';
 import * as SpeechRuleStores from '../speech_rules/speech_rule_stores';
@@ -128,7 +128,7 @@ export class SpeechRuleEngine {
       parent = parent.parentNode as Document;
     }
     if (parent.evaluate) {
-      XpathUtil.currentDocument = /** @type{Document} */ parent;
+      xpath.currentDocument = /** @type{Document} */ parent;
     }
   }
 
@@ -391,7 +391,7 @@ export class SpeechRuleEngine {
             const xpath = attributes['span'];
             const attrs: { [key: string]: string } = {};
             if (xpath) {
-              const nodes = XpathUtil.evalXPath(xpath, node);
+              const nodes = evalXPath(xpath, node);
               // TODO: Those could be multiple nodes!
               //       We need the right xpath expression and combine their
               //       attributes.

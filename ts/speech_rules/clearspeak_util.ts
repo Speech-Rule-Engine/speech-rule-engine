@@ -20,7 +20,7 @@
 
 import * as DomUtil from '../common/dom_util';
 import { Engine } from '../common/engine';
-import XpathUtil from '../common/xpath_util';
+import * as XpathUtil from '../common/xpath_util';
 import { LOCALE } from '../l10n/locale';
 import { Grammar } from '../rule_engine/grammar';
 import * as StoreUtil from '../rule_engine/store_util';

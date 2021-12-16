@@ -20,7 +20,7 @@
  */
 
 import SystemExternal from './system_external';
-import XpathUtil from './xpath_util';
+import {xpath} from './xpath_util';
 
 /**
  * Predicate to check for MS Internet Explorer but not Edge.
@@ -95,9 +95,9 @@ export function installWGXpath_(opt_isEdge?: boolean, opt_count?: number) {
   opt_isEdge
     ? SystemExternal.wgxpath.install({ document: document })
     : SystemExternal.wgxpath.install();
-  XpathUtil.xpathEvaluate = document.evaluate;
-  XpathUtil.xpathResult = XPathResult;
-  XpathUtil.createNSResolver = document.createNSResolver;
+  xpath.evaluate = document.evaluate;
+  xpath.result = XPathResult;
+  xpath.createNSResolver = document.createNSResolver;
 }
 
 /**

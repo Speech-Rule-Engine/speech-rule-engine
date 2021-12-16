@@ -24,7 +24,7 @@
 
 import { Engine, EngineConst, SREError } from './engine';
 import SystemExternal from './system_external';
-import XpathUtil from './xpath_util';
+import * as XpathUtil from './xpath_util';
 
 /**
  * Converts a NodeList into an array
@@ -80,7 +80,7 @@ export function parseInput(input: string): Element {
       html ? 'text/html' : 'text/xml'
     );
     if (Engine.getInstance().mode === EngineConst.Mode.HTTP) {
-      XpathUtil.currentDocument = doc;
+      XpathUtil.xpath.currentDocument = doc;
       return html ? doc.body.childNodes[0] : doc.documentElement;
     }
     return doc.documentElement;

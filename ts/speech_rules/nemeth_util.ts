@@ -20,7 +20,7 @@
 
 import { AuditoryDescription } from '../audio/auditory_description';
 import * as DomUtil from '../common/dom_util';
-import XpathUtil from '../common/xpath_util';
+import * as XpathUtil from '../common/xpath_util';
 import { Grammar } from '../rule_engine/grammar';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 import { SemanticAnnotations } from '../semantic_tree/semantic_annotations';

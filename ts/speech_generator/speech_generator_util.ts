@@ -23,7 +23,7 @@
 import { AuditoryDescription } from '../audio/auditory_description';
 import * as AuralRendering from '../audio/aural_rendering';
 import * as DomUtil from '../common/dom_util';
-import XpathUtil from '../common/xpath_util';
+import * as XpathUtil from '../common/xpath_util';
 import { Attribute } from '../enrich_mathml/enrich_mathml';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 import { SemanticNode } from '../semantic_tree/semantic_node';

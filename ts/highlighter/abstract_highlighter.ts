@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import XpathUtil from '../common/xpath_util';
+import * as XpathUtil from '../common/xpath_util';
 import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
 import { ColorPicker, StringColor } from './color_picker';
 import { Highlighter } from './highlighter';

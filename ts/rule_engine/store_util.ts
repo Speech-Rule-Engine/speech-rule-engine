@@ -19,7 +19,7 @@
  * @author sorge@google.com (Volker Sorge)
  */
 import { AuditoryDescription } from '../audio/auditory_description';
-import XpathUtil from '../common/xpath_util';
+import * as XpathUtil from '../common/xpath_util';
 import { SpeechRuleEngine } from './speech_rule_engine';
 
 /**

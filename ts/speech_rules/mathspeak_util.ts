@@ -21,7 +21,7 @@
 import * as BaseUtil from '../common/base_util';
 import * as DomUtil from '../common/dom_util';
 import SystemExternal from '../common/system_external';
-import XpathUtil from '../common/xpath_util';
+import * as XpathUtil from '../common/xpath_util';
 import { LOCALE } from '../l10n/locale';
 
 import { SpeechRuleStore } from '../rule_engine/speech_rule_store';

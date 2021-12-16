@@ -24,7 +24,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import XpathUtil from '../common/xpath_util';
+import * as XpathUtil from '../common/xpath_util';
 import { Grammar } from '../rule_engine/grammar';
 import { MathCompoundStore } from '../rule_engine/math_simple_store';
 import { SpeechRuleContext } from '../rule_engine/speech_rule_context';

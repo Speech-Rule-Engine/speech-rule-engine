@@ -20,7 +20,7 @@
  */
 
 import { Span } from '../audio/span';
-import XpathUtil from '../common/xpath_util';
+import * as XpathUtil from '../common/xpath_util';
 import * as srf from './speech_rule_functions';
 
 export class SpeechRuleContext {
