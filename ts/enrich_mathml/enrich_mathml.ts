@@ -33,7 +33,7 @@ import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton';
 import { SemanticTree } from '../semantic_tree/semantic_tree';
 import * as SemanticUtil from '../semantic_tree/semantic_util';
 
-import EnrichCaseFactory from './enrich_case_factory';
+import getCase from './enrich_case_factory';
 
 /**
  * Object containing settings for the semantic enrichment.
@@ -132,7 +132,7 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
  * @return The enriched MathML element.
  */
 export function walkTree(semantic: SemanticNode): Element {
-  const specialCase = EnrichCaseFactory.getCase(semantic);
+  const specialCase = getCase(semantic);
   let newNode: Element;
   if (specialCase) {
     newNode = specialCase.getMathml();

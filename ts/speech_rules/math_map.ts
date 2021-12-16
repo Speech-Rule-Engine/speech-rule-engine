@@ -69,9 +69,11 @@ export namespace MathMap {
   let _init = false;
 
   /**
-   * @return The instance of the MathMap singleton.
+   * Init method for the mathmaps. Loads the base locale when called for the
+   * first time.
+   *
+   * @return Promise that resolves once base is loaded.
    */
-  // TODO (TS): This will become the promise one day.
   export function init() {
     if (!_init) {
       loadLocale('base');

@@ -24,66 +24,62 @@
 
 import * as MathspeakUtil from './mathspeak_util';
 
-namespace MathspeakFrenchUtil {
-  /**
-   * Computes baseline prefix in verbose mode.
-   * @param node Subscript node.
-   * @return The prefix string.
-   */
-  export function baselineVerbose(node: Element): string {
-    const baseline = MathspeakUtil.baselineVerbose(node);
-    return baseline.replace(/-$/, '');
-  }
-
-  /**
-   * Computes baseline prefix in brief mode.
-   * @param node Subscript node.
-   * @return The prefix string.
-   */
-  export function baselineBrief(node: Element): string {
-    const baseline = MathspeakUtil.baselineBrief(node);
-    return baseline.replace(/-$/, '');
-  }
-
-  /**
-   * Computes left superscript prefix in verbose mode.
-   * @param node Tensor node.
-   * @return The prefix string.
-   */
-  export function leftSuperscriptVerbose(node: Element): string {
-    const leftIndex = MathspeakUtil.superscriptVerbose(node);
-    return leftIndex.replace(/^exposant/, 'exposant gauche');
-  }
-
-  /**
-   * Computes left subscript prefix in verbose mode.
-   * @param node Tensor node.
-   * @return The prefix string.
-   */
-  export function leftSubscriptVerbose(node: Element): string {
-    const leftIndex = MathspeakUtil.subscriptVerbose(node);
-    return leftIndex.replace(/^indice/, 'indice gauche');
-  }
-
-  /**
-   * Computes left superscript prefix in brief mode.
-   * @param node Tensor node.
-   * @return The prefix string.
-   */
-  export function leftSuperscriptBrief(node: Element): string {
-    const leftIndex = MathspeakUtil.superscriptBrief(node);
-    return leftIndex.replace(/^sup/, 'sup gauche');
-  }
-
-  /**
-   * Computes left subscript prefix in brief mode.
-   * @param node Tensor node.
-   * @return The prefix string.
-   */
-  export function leftSubscriptBrief(node: Element): string {
-    const leftIndex = MathspeakUtil.subscriptBrief(node);
-    return leftIndex.replace(/^sub/, 'sub gauche');
-  }
+/**
+ * Computes baseline prefix in verbose mode.
+ * @param node Subscript node.
+ * @return The prefix string.
+ */
+export function baselineVerbose(node: Element): string {
+  const baseline = MathspeakUtil.baselineVerbose(node);
+  return baseline.replace(/-$/, '');
 }
 
-export default MathspeakFrenchUtil;
+/**
+ * Computes baseline prefix in brief mode.
+ * @param node Subscript node.
+ * @return The prefix string.
+ */
+export function baselineBrief(node: Element): string {
+  const baseline = MathspeakUtil.baselineBrief(node);
+  return baseline.replace(/-$/, '');
+}
+
+/**
+ * Computes left superscript prefix in verbose mode.
+ * @param node Tensor node.
+ * @return The prefix string.
+ */
+export function leftSuperscriptVerbose(node: Element): string {
+  const leftIndex = MathspeakUtil.superscriptVerbose(node);
+  return leftIndex.replace(/^exposant/, 'exposant gauche');
+}
+
+/**
+ * Computes left subscript prefix in verbose mode.
+ * @param node Tensor node.
+ * @return The prefix string.
+ */
+export function leftSubscriptVerbose(node: Element): string {
+  const leftIndex = MathspeakUtil.subscriptVerbose(node);
+  return leftIndex.replace(/^indice/, 'indice gauche');
+}
+
+/**
+ * Computes left superscript prefix in brief mode.
+ * @param node Tensor node.
+ * @return The prefix string.
+ */
+export function leftSuperscriptBrief(node: Element): string {
+  const leftIndex = MathspeakUtil.superscriptBrief(node);
+  return leftIndex.replace(/^sup/, 'sup gauche');
+}
+
+/**
+ * Computes left subscript prefix in brief mode.
+ * @param node Tensor node.
+ * @return The prefix string.
+ */
+export function leftSubscriptBrief(node: Element): string {
+  const leftIndex = MathspeakUtil.subscriptBrief(node);
+  return leftIndex.replace(/^sub/, 'sub gauche');
+}

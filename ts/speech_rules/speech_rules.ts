@@ -21,56 +21,52 @@
 import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr';
 import { SpeechRuleFunction } from '../rule_engine/speech_rule_functions';
 
-namespace SpeechRules {
-  // TODO (TS): Move this to Map.
-  /**
-   * Mapping for context functions: The store maps constraint strings to
-   * dictionaries of context functions.
-   */
-  export const store: { [key: string]: { [key: string]: SpeechRuleFunction } } =
-    {};
+// TODO (TS): Move this to Map.
+/**
+ * Mapping for context functions: The store maps constraint strings to
+ * dictionaries of context functions.
+ */
+export const store: { [key: string]: { [key: string]: SpeechRuleFunction } } =
+  {};
 
-  /**
-   * Adds functions to the store potentially inheriting from another store.
-   * @param constr Constraint string for the store.
-   * @param inherit The store from which to inherit.
-   * @param store An individual mapping of names to context
-   *     functions.
-   */
-  export function addStore(
-    constr: string,
-    inherit: string,
-    store: { [key: string]: SpeechRuleFunction }
-  ) {
-    const values = {};
-    if (inherit) {
-      const inherits = this.store[inherit] || {};
-      Object.assign(values, inherits);
-    }
-    this.store[constr] = Object.assign(values, store);
+/**
+ * Adds functions to the store potentially inheriting from another store.
+ * @param constr Constraint string for the store.
+ * @param inherit The store from which to inherit.
+ * @param store An individual mapping of names to context
+ *     functions.
+ */
+export function addStore(
+  constr: string,
+  inherit: string,
+  store: { [key: string]: SpeechRuleFunction }
+) {
+  const values = {};
+  if (inherit) {
+    const inherits = this.store[inherit] || {};
+    Object.assign(values, inherits);
   }
+  this.store[constr] = Object.assign(values, store);
+}
 
-  /**
-   * Retrieves a function store by three constraint values.
-   * @param locale The locale.
-   * @param modality The modality.
-   * @param domain The rule set or domain.
-   * @return The store for the given constraints.
-   */
-  // TODO: Make this robust with dynamic constraints and defaults.
-  export function getStore(
-    locale: string,
-    modality: string,
-    domain: string
-  ): { [key: string]: SpeechRuleFunction } {
-    return (
-      this.store[[locale, modality, domain].join('.')] ||
+/**
+ * Retrieves a function store by three constraint values.
+ * @param locale The locale.
+ * @param modality The modality.
+ * @param domain The rule set or domain.
+ * @return The store for the given constraints.
+ */
+// TODO: Make this robust with dynamic constraints and defaults.
+export function getStore(
+  locale: string,
+  modality: string,
+  domain: string
+): { [key: string]: SpeechRuleFunction } {
+  return (
+    this.store[[locale, modality, domain].join('.')] ||
       this.store[
         [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE], modality, domain].join('.')
       ] ||
       {}
-    );
-  }
+  );
 }
-
-export default SpeechRules;

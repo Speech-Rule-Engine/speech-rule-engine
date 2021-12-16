@@ -36,7 +36,7 @@ import * as DomUtil from '../common/dom_util';
 import { Engine, EngineConst } from '../common/engine';
 import { xpath, evalXPath } from '../common/xpath_util';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
-import SpeechRules from '../speech_rules/speech_rules';
+import * as SpeechRules from '../speech_rules/speech_rules';
 import * as SpeechRuleStores from '../speech_rules/speech_rule_stores';
 import { BaseRuleStore } from './base_rule_store';
 import { RulesJson } from './base_rule_store';

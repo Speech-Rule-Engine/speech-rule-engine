@@ -33,8 +33,8 @@ import { vulgarFractionSmall } from './numbers_util';
 
 /**
  * Count list of nodes and concatenate this with the context string, adding a
- * colon at the end.
- * Returns a closure with a local state.
+ * colon at the end. Returns a closure with a local state.
+ *
  * @param nodes A node array.
  * @param context A context string.
  * @return A function returning a string.

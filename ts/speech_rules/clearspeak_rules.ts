@@ -23,7 +23,7 @@ import * as StoreUtil from '../rule_engine/store_util';
 import * as ClearspeakUtil from './clearspeak_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NumbersUtil from './numbers_util';
-import SpeechRules from './speech_rules';
+import * as SpeechRules from './speech_rules';
 
 /**
  * Adds the custom functions for the clearspeak rules.

@@ -19,11 +19,11 @@
  */
 
 import * as StoreUtil from '../rule_engine/store_util';
-import MathspeakFrenchUtil from './mathspeak_french_util';
+import * as MathspeakFrenchUtil from './mathspeak_french_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NumbersUtil from './numbers_util';
-import SpeechRules from './speech_rules';
-import UnitUtil from './unit_util';
+import * as SpeechRules from './speech_rules';
+import * as UnitUtil from './unit_util';
 
 /**
  * Adds the custom functions for the mathspeak rules.
