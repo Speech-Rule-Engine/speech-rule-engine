@@ -19,7 +19,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import { Engine } from '../common/engine';
+import Engine from '../common/engine';
 import * as XpathUtil from '../common/xpath_util';
 import { LOCALE } from '../l10n/locale';
 import { Grammar } from '../rule_engine/grammar';

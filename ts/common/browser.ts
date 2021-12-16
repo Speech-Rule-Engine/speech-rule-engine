@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { EngineConst } from './engine';
+import * as  EngineConst from '../common/engine_const';
 import * as System from './system';
 
 /**

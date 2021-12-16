@@ -24,7 +24,7 @@
 
 import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
-import { Engine } from '../common/engine';
+import Engine from '../common/engine';
 import * as SemanticAttr from '../semantic_tree/semantic_attr';
 import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import * as SemanticHeuristics from '../semantic_tree/semantic_heuristic_factory';

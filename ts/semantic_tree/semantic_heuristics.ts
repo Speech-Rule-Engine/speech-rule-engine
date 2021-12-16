@@ -22,7 +22,7 @@
  */
 
 import { Debugger } from '../common/debugger';
-import { Engine } from '../common/engine';
+import Engine from '../common/engine';
 import * as SemanticAttr from './semantic_attr';
 import * as SemanticHeuristics from './semantic_heuristic_factory';
 import { SemanticTreeHeuristic, SemanticMultiHeuristic } from './semantic_heuristic';

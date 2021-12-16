@@ -23,7 +23,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import { Engine } from '../common/engine';
+import Engine from '../common/engine';
 import * as LocaleUtil from '../l10n/locale_util';
 import { LOCALE } from '../l10n/locale';
 import { DynamicCstr } from './dynamic_cstr';

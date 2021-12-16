@@ -19,7 +19,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { EngineConst, SREError } from '../common/engine';
+import { SREError } from '../common/engine';
+import * as  EngineConst from '../common/engine_const';
 import * as AudioUtil from './audio_util';
 import { AuditoryDescription } from './auditory_description';
 import { MarkupRenderer } from './markup_renderer';

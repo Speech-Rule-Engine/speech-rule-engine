@@ -18,7 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Engine, EngineConst } from '../common/engine';
+import Engine from '../common/engine';
+import * as  EngineConst from '../common/engine_const';
 import { DynamicCstr } from '../rule_engine/dynamic_cstr';
 import {
   Axis,

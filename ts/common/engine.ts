@@ -21,74 +21,7 @@
  */
 
 import * as Dcstr from '../rule_engine/dynamic_cstr';
-
-/**
- *  Namespace for all Engine enum constants.
- */
-export namespace EngineConst {
-  /**
-   * Defines the modes in which the engine can run.
-   */
-  export enum Mode {
-    SYNC = 'sync',
-    ASYNC = 'async',
-    HTTP = 'http'
-  }
-
-  // TODO (TS): Moves those to auditory_descriptions.
-  /**
-   * Defines the basic personality Properties available.
-   */
-  export enum personalityProps {
-    PITCH = 'pitch',
-    RATE = 'rate',
-    VOLUME = 'volume',
-    PAUSE = 'pause',
-    JOIN = 'join',
-    LAYOUT = 'layout'
-  }
-
-  export const personalityPropList: personalityProps[] = [
-    personalityProps.PITCH,
-    personalityProps.RATE,
-    personalityProps.VOLUME,
-    personalityProps.PAUSE,
-    personalityProps.JOIN
-  ];
-
-  /**
-   * Defines to what level the engine enriches expressions with speech string
-   * attributes.
-   */
-  export enum Speech {
-    NONE = 'none',
-    SHALLOW = 'shallow',
-    DEEP = 'deep'
-  }
-
-  /**
-   * Different markup formats for the speech output.
-   * Not all are supported yet.
-   */
-  export enum Markup {
-    NONE = 'none',
-    LAYOUT = 'layout',
-    PUNCTUATION = 'punctuation',
-    SSML = 'ssml',
-    SSML_STEP = 'ssml_step',
-    ACSS = 'acss',
-    SABLE = 'sable',
-    VOICEXML = 'voicexml'
-  }
-
-  /**
-   * Maps domains to their default style.
-   */
-  export const DOMAIN_TO_STYLES: { [key: string]: string } = {
-    mathspeak: 'default',
-    clearspeak: 'default'
-  };
-}
+import * as EngineConst from './engine_const';
 
 /**
  * The base error class for signaling SRE errors.
@@ -112,7 +45,7 @@ export class SREError extends Error {
  * Initializes the basic Speech engine and contains some global context.
  *
  */
-export class Engine {
+export default class Engine {
   /**
    * Binary feature vector.
    */
@@ -246,7 +179,7 @@ export class Engine {
   public rules = '';
 
   /**
-   * Constraints to prune given dot separated.
+   * EngineConstraints to prune given dot separated.
    */
   public prune = '';
 
@@ -332,32 +265,32 @@ export class Engine {
   }
 }
 
-export namespace EnginePromise {
+export class EnginePromise {
   /**
    * Records if a locale is loaded or failed to load. Value one indicates that
    * loading has been attempted and finished, while value two indicates if it
    * was successful or not.
    */
-  export const loaded: { [locale: string]: [boolean, boolean] } = {};
+  public static loaded: { [locale: string]: [boolean, boolean] } = {};
 
   /**
    * Records the loading promises for each locale.
    */
-  export const promises: { [locale: string]: Promise<string> } = {};
+  public static promises: { [locale: string]: Promise<string> } = {};
 
   /**
    * @return The promise for a locale.
    */
-  export function get(
+  public static get(
     locale: string = Engine.getInstance().locale
   ): Promise<string> {
-    return promises[locale] || Promise.resolve('');
+    return EnginePromise.promises[locale] || Promise.resolve('');
   }
 
   /**
    * @return All promises combined into one.
    */
-  export function getall() {
-    return Promise.allSettled(Object.values(promises));
+  public static getall() {
+    return Promise.allSettled(Object.values(EnginePromise.promises));
   }
 }

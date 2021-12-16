@@ -26,7 +26,7 @@
  */
 
 import { Debugger } from '../common/debugger';
-import { Engine } from '../common/engine';
+import Engine from '../common/engine';
 import { locales } from '../l10n/l10n';
 import { Axis, DynamicCstr } from './dynamic_cstr';
 

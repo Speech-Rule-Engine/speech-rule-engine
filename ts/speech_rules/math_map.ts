@@ -22,7 +22,8 @@
  */
 
 import * as BrowserUtil from '../common/browser_util';
-import { Engine, EngineConst, EnginePromise } from '../common/engine';
+import Engine, { EnginePromise } from '../common/engine';
+import * as  EngineConst from '../common/engine_const';
 import * as FileUtil from '../common/file_util';
 import SystemExternal from '../common/system_external';
 import { RulesJson } from '../rule_engine/base_rule_store';

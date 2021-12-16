@@ -19,7 +19,7 @@
  *
  */
 
-import { Engine } from '../common/engine';
+import Engine from '../common/engine';
 import * as L10n from '../l10n/l10n';
 import { LOCALE } from '../l10n/locale';
 import { localeFontCombiner } from '../l10n/locale_util';

@@ -29,7 +29,8 @@ import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util'
 import * as WalkerFactory from '../walker/walker_factory';
 import * as WalkerUtil from '../walker/walker_util';
 import * as DomUtil from './dom_util';
-import { Engine, EngineConst, SREError } from './engine';
+import Engine, { SREError } from './engine';
+import * as  EngineConst from '../common/engine_const';
 import { KeyCode } from './event_util';
 import { Processor, KeyProcessor } from './processors';
 import * as XpathUtil from './xpath_util';

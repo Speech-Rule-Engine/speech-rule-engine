@@ -20,7 +20,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { EngineConst } from '../common/engine';
+import * as EngineConst from '../common/engine_const';
 import * as EventUtil from '../common/event_util';
 import * as AudioUtil from './audio_util';
 import { AuditoryDescription } from './auditory_description';

@@ -22,7 +22,7 @@
 import { AuditoryDescription } from '../audio/auditory_description';
 import * as AuralRendering from '../audio/aural_rendering';
 import * as DomUtil from '../common/dom_util';
-import { EngineConst } from '../common/engine';
+import * as EngineConst from '../common/engine_const';
 import { KeyCode } from '../common/event_util';
 import * as System from '../common/system';
 import { Attribute } from '../enrich_mathml/enrich_mathml';

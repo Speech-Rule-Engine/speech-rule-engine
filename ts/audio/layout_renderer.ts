@@ -21,7 +21,7 @@
 
 import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
-import { EngineConst } from '../common/engine';
+import * as EngineConst from '../common/engine_const';
 import * as AudioUtil from './audio_util';
 import { AuditoryDescription } from './auditory_description';
 import { XmlRenderer } from './xml_renderer';

@@ -24,7 +24,8 @@ import { MathCompoundStore } from '../rule_engine/math_simple_store';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
 import { Debugger } from './debugger';
-import { EngineConst, EnginePromise, SREError } from './engine';
+import { EnginePromise, SREError } from './engine';
+import * as  EngineConst from './engine_const';
 import * as ProcessorFactory from './processor_factory';
 import * as System from './system';
 import SystemExternal from './system_external';
@@ -76,8 +77,8 @@ export class Cli {
   /**
    * Prints information on axes values.
    */
-  public enumerate(all = false) {
-    let promise = System.setupEngine(this.setup);
+  public async enumerate(all = false) {
+    const promise = System.setupEngine(this.setup);
     return (all ? this.loadLocales() : promise).then(() =>
       EnginePromise.getall().then(() => {
       const length = DynamicCstr.DEFAULT_ORDER.map((x) => x.length);

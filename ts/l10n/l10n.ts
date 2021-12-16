@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Engine } from '../common/engine';
+import Engine from '../common/engine';
 import { Variables } from '../common/variables';
 import { Grammar } from '../rule_engine/grammar';
 

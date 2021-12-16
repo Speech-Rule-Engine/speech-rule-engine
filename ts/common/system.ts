@@ -25,8 +25,8 @@ import * as MathMap from '../speech_rules/math_map';
 
 import * as BrowserUtil from './browser_util';
 import { Debugger } from './debugger';
-import { Engine, EngineConst, EnginePromise } from './engine';
-import { SREError } from './engine';
+import Engine, { EnginePromise, SREError } from './engine';
+import * as  EngineConst from './engine_const';
 import { KeyCode } from './event_util';
 import * as FileUtil from './file_util';
 import * as ProcessorFactory from './processor_factory';

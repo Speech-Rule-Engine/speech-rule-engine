@@ -22,7 +22,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Engine, EngineConst } from './engine';
+import Engine from './engine';
+import * as  EngineConst from '../common/engine_const';
 import SystemExternal from './system_external';
 
 /**

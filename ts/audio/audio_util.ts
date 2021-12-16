@@ -20,7 +20,7 @@
  */
 
 import { setdifference } from '../common/base_util';
-import { EngineConst } from '../common/engine';
+import * as EngineConst from '../common/engine_const';
 import { AuditoryDescription } from './auditory_description';
 import { Span } from './span';
 
