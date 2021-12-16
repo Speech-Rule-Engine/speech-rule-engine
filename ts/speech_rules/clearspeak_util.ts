@@ -24,7 +24,7 @@ import * as XpathUtil from '../common/xpath_util';
 import { LOCALE } from '../l10n/locale';
 import { Grammar } from '../rule_engine/grammar';
 import * as StoreUtil from '../rule_engine/store_util';
-import { SemanticAnnotations } from '../semantic_tree/semantic_annotations';
+import { register } from '../semantic_tree/semantic_annotations';
 import { SemanticAnnotator } from '../semantic_tree/semantic_annotator';
 import { isMatchingFence } from '../semantic_tree/semantic_attr';
 import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
@@ -268,7 +268,7 @@ export function hasPreference(pref: string): boolean {
   return Engine.getInstance().style === pref;
 }
 
-SemanticAnnotations.register(
+register(
   new SemanticAnnotator('clearspeak', 'simple', function (node) {
     return isSimpleExpression(node) ? 'simple' : '';
   })
@@ -399,7 +399,7 @@ export function allTextLastContent_(nodes: SemanticNode[]): boolean {
   return nodes[nodes.length - 1].type === SemanticType.TEXT;
 }
 
-SemanticAnnotations.register(
+register(
   new SemanticAnnotator('clearspeak', 'unit', function (node) {
     return isUnitExpression(node) ? 'unit' : '';
   })

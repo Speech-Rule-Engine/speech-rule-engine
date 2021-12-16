@@ -24,7 +24,7 @@ import * as BaseUtil from '../common/base_util';
 // TODO: This should not really load the locale constructor.
 import { en } from '../l10n/locales/locale_en';
 import { LOCALE } from '../l10n/locale';
-import { SemanticAnnotations } from '../semantic_tree/semantic_annotations';
+import { activate } from '../semantic_tree/semantic_annotations';
 import { BaseRuleStore, RulesJson } from './base_rule_store';
 import { Action, OutputError, SpeechRule } from './speech_rule';
 
@@ -61,7 +61,7 @@ export class MathStore extends BaseRuleStore {
    */
   public annotations() {
     for (let i = 0, annotator; (annotator = this.annotators[i]); i++) {
-      SemanticAnnotations.activate(this.domain, annotator);
+      activate(this.domain, annotator);
     }
   }
 

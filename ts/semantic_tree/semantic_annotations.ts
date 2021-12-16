@@ -22,51 +22,48 @@
 import { SemanticAnnotator, SemanticVisitor } from './semantic_annotator';
 import { SemanticNode } from './semantic_node';
 
-export namespace SemanticAnnotations {
-  // TODO (TS): Replace this with maps. Exported for tests only.
-  export let annotators: { [key: string]: SemanticAnnotator } = {};
 
-  export let visitors: { [key: string]: SemanticVisitor } = {};
+export const annotators: Map<string, SemanticAnnotator> = new Map();
 
-  /**
-   * Registers an annotator.
-   * @param annotator The annotator.
-   */
-  export function register(annotator: SemanticAnnotator | SemanticVisitor) {
-    const name = annotator.domain + ':' + annotator.name;
-    (annotator instanceof SemanticAnnotator ? annotators : visitors)[name] =
-      annotator;
+export const visitors: Map<string, SemanticVisitor> = new Map();
+
+/**
+ * Registers an annotator.
+ * @param annotator The annotator.
+ */
+export function register(annotator: SemanticAnnotator | SemanticVisitor) {
+  const name = annotator.domain + ':' + annotator.name;
+  annotator instanceof SemanticAnnotator ?
+    annotators.set(name, annotator) :
+    visitors.set(name, annotator);
+}
+
+/**
+ * Activates a particular annotator.
+ * @param domain The domain.
+ * @param name The name of the annotator.
+ */
+export function activate(domain: string, name: string) {
+  const key = domain + ':' + name;
+  const annotator = annotators.get(key) || visitors.get(key);
+  if (annotator) {
+    annotator.active = true;
   }
+}
 
-  /**
-   * Activates a particular annotator.
-   * @param domain The domain.
-   * @param name The name of the annotator.
-   */
-  export function activate(domain: string, name: string) {
-    const key = domain + ':' + name;
-    const annotator = annotators[key] || visitors[key];
-    if (annotator) {
-      annotator.active = true;
+/**
+ * Annotates the given semantic node recursively.
+ * @param node The semantic node to annotate.
+ */
+export function annotate(node: SemanticNode) {
+  for (const annotator of annotators.values()) {
+    if (annotator.active) {
+      annotator.annotate(node);
     }
   }
-
-  /**
-   * Annotates the given semantic node recursively.
-   * @param node The semantic node to annotate.
-   */
-  export function annotate(node: SemanticNode) {
-    for (const key of Object.keys(annotators)) {
-      const annotator = annotators[key];
-      if (annotator.active) {
-        annotators[key].annotate(node);
-      }
-    }
-    for (const name of Object.keys(visitors)) {
-      const visitor = visitors[name];
-      if (visitor.active) {
-        visitors[name].visit(node, Object.assign({}, visitors[name].def));
-      }
+  for (const visitor of visitors.values()) {
+    if (visitor.active) {
+      visitor.visit(node, Object.assign({}, visitor.def));
     }
   }
 }

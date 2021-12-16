@@ -48,7 +48,7 @@ function xpathSupported(): boolean {
  *
  * createNSResolver: Creates a new namespace resolver for a XML document.
  */
-export let xpath: {
+export const xpath: {
   currentDocument: Document,
   evaluate: (
   x: string,

@@ -23,7 +23,7 @@
 //
 
 import { AuditoryDescription } from '../audio/auditory_description';
-import { SemanticAnnotations } from '../semantic_tree/semantic_annotations';
+import { activate } from '../semantic_tree/semantic_annotations';
 import { MathStore } from './math_store';
 
 /**
@@ -57,7 +57,7 @@ export class BrailleStore extends MathStore {
    */
   public annotations() {
     for (let i = 0, annotator; (annotator = this.annotators[i]); i++) {
-      SemanticAnnotations.activate(this.locale, annotator);
+      activate(this.locale, annotator);
     }
   }
 }

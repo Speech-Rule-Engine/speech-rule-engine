@@ -28,7 +28,7 @@
 import * as DomUtil from '../common/dom_util';
 import SystemExternal from '../common/system_external';
 
-import { SemanticAnnotations } from './semantic_annotations';
+import { annotate } from './semantic_annotations';
 import { SemanticVisitor } from './semantic_annotator';
 import { SemanticRole, SemanticType } from './semantic_meaning';
 import { SemanticMeaningCollator } from './semantic_default';
@@ -137,7 +137,7 @@ export class SemanticTree {
     }
     unitVisitor.visit(this.root, {});
 
-    SemanticAnnotations.annotate(this.root);
+    annotate(this.root);
   }
 
   /**
