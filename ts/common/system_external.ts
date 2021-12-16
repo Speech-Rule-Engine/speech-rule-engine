@@ -24,17 +24,18 @@
 
 import { Variables } from './variables';
 
-namespace SystemExternal {
-  declare let global: any;
-  declare let require: (name: string) => any;
-  declare let process: any;
+declare let global: any;
+declare let require: (name: string) => any;
+declare let process: any;
+
+export default class SystemExternal {
 
   /**
    * The local require function for NodeJS.
    * @param library A library name.
    * @return The library object that has been loaded.
    */
-  export function extRequire(library: string): any {
+  public static extRequire(library: string): any {
     if (typeof process !== 'undefined' && typeof require !== 'undefined') {
       const nodeRequire = eval('require');
       return nodeRequire(library);
@@ -42,34 +43,35 @@ namespace SystemExternal {
     return null;
   }
 
-  export const windowSupported: boolean = (() =>
+  public static windowSupported: boolean = (() =>
     !(typeof window === 'undefined'))();
 
   /**
    * Check if DOM document is already supported in this JS.
    * @return True if document is defined.
    */
-  export const documentSupported: boolean = (() =>
-    windowSupported && !(typeof window.document === 'undefined'))();
+  public static documentSupported: boolean = (() =>
+    SystemExternal.windowSupported &&
+    !(typeof window.document === 'undefined'))();
 
   /**
    * Xmldom library.
    */
-  export const xmldom = SystemExternal.documentSupported
+  public static xmldom = SystemExternal.documentSupported
     ? window
     : SystemExternal.extRequire('xmldom-sre');
 
   /**
    * DOM document implementation.
    */
-  export const document: Document = SystemExternal.documentSupported
+  public static document: Document = SystemExternal.documentSupported
     ? window.document
     : new SystemExternal.xmldom.DOMImplementation().createDocument('', '', 0);
 
   /**
    * Xpath library.
    */
-  export const xpath: any = SystemExternal.documentSupported
+  public static xpath: any = SystemExternal.documentSupported
     ? document
     : (function () {
         const window = { document: {}, XPathResult: {} };
@@ -82,7 +84,7 @@ namespace SystemExternal {
   /**
    * The URL for Mathmaps for IE.
    */
-  export const mathmapsIePath =
+  public static mathmapsIePath =
     'https://cdn.jsdelivr.net/npm/sre-mathmaps-ie@' +
     Variables.VERSION +
     'mathmaps_ie.js';
@@ -90,26 +92,26 @@ namespace SystemExternal {
   /**
    * Commander library.
    */
-  export const commander = SystemExternal.documentSupported
+  public static commander = SystemExternal.documentSupported
     ? null
     : SystemExternal.extRequire('commander');
 
   /**
    * Filesystem library.
    */
-  export const fs = SystemExternal.documentSupported
+  public static fs = SystemExternal.documentSupported
     ? null
     : SystemExternal.extRequire('fs');
 
   /**
    * The URL for SRE resources.
    */
-  export const url: string = Variables.url;
+  public static url: string = Variables.url;
 
   /**
    * Path to JSON files.
    */
-  export let jsonPath = (function () {
+  public static jsonPath = (function () {
     return (
       (SystemExternal.documentSupported
         ? SystemExternal.url
@@ -124,12 +126,11 @@ namespace SystemExternal {
   /**
    * Path to Xpath library file.
    */
-  export let WGXpath = Variables.WGXpath;
+  public static WGXpath = Variables.WGXpath;
 
   /**
    * WGXpath library.
    */
-  export let wgxpath: any = null;
+  public static wgxpath: any = null;
 }
 
-export default SystemExternal;
