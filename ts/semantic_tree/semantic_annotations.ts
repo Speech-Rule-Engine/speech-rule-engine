@@ -21,7 +21,6 @@
 import { SemanticAnnotator, SemanticVisitor } from './semantic_annotator';
 import { SemanticNode } from './semantic_node';
 
-
 export const annotators: Map<string, SemanticAnnotator> = new Map();
 
 export const visitors: Map<string, SemanticVisitor> = new Map();
@@ -33,9 +32,9 @@ export const visitors: Map<string, SemanticVisitor> = new Map();
  */
 export function register(annotator: SemanticAnnotator | SemanticVisitor) {
   const name = annotator.domain + ':' + annotator.name;
-  annotator instanceof SemanticAnnotator ?
-    annotators.set(name, annotator) :
-    visitors.set(name, annotator);
+  annotator instanceof SemanticAnnotator
+    ? annotators.set(name, annotator)
+    : visitors.set(name, annotator);
 }
 
 /**

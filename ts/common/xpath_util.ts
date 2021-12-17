@@ -23,7 +23,7 @@
  */
 
 import Engine from './engine';
-import * as  EngineConst from '../common/engine_const';
+import * as EngineConst from '../common/engine_const';
 import SystemExternal from './system_external';
 
 /**
@@ -38,12 +38,11 @@ function xpathSupported(): boolean {
   return true;
 }
 
-
 /**
  * Holds variables that might need to be adjusted during document evaluation.
- * 
+ *
  * currentDocument:  Current XML Document inside a browser.
- * 
+ *
  * evaluate: Current evaluation method. Needs to be updated when running browser.
  *
  * result: Xpathresult enum.
@@ -51,28 +50,26 @@ function xpathSupported(): boolean {
  * createNSResolver: Creates a new namespace resolver for a XML document.
  */
 export const xpath: {
-  currentDocument: Document,
+  currentDocument: Document;
   evaluate: (
-  x: string,
-  node: Node,
-  nsr: Resolver,
-  rt: number,
+    x: string,
+    node: Node,
+    nsr: Resolver,
+    rt: number,
     result: XPathResult
-  ) => XPathResult,
-  result: any,
-  createNSResolver: (nodeResolver: Node) => XPathNSResolver
+  ) => XPathResult;
+  result: any;
+  createNSResolver: (nodeResolver: Node) => XPathNSResolver;
 } = {
   currentDocument: null,
   evaluate: xpathSupported()
     ? document.evaluate
     : SystemExternal.xpath.evaluate,
-  result: xpathSupported()
-    ? XPathResult
-    : SystemExternal.xpath.XPathResult,
+  result: xpathSupported() ? XPathResult : SystemExternal.xpath.XPathResult,
   createNSResolver: xpathSupported()
     ? document.createNSResolver
     : SystemExternal.xpath.createNSResolver
-}
+};
 
 /**
  * Mapping for some default namespaces.
@@ -121,14 +118,13 @@ function evaluateXpath(
     !Engine.getInstance().isIE &&
     !Engine.getInstance().isEdge
     ? xpath.currentDocument.evaluate(
-      expression,
-      rootNode,
-      resolveNameSpace,
-      type,
-      null
-    )
-    : xpath.evaluate(
-      expression, rootNode, new Resolver(), type, null);
+        expression,
+        rootNode,
+        resolveNameSpace,
+        type,
+        null
+      )
+    : xpath.evaluate(expression, rootNode, new Resolver(), type, null);
 }
 
 /**

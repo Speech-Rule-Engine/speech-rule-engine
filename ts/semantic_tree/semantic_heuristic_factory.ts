@@ -19,7 +19,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticHeuristic, SemanticHeuristicTypes } from './semantic_heuristic';
+import {
+  SemanticHeuristic,
+  SemanticHeuristicTypes
+} from './semantic_heuristic';
 import { SemanticNodeFactory } from './semantic_node_factory';
 
 export let factory: SemanticNodeFactory = null;
@@ -35,8 +38,8 @@ export function updateFactory(nodeFactory: SemanticNodeFactory) {
 
 const heuristics: Map<
   string,
-SemanticHeuristic<SemanticHeuristicTypes>
-  > = new Map();
+  SemanticHeuristic<SemanticHeuristicTypes>
+> = new Map();
 
 /**
  * Heuristics that are run by default.
@@ -57,9 +60,7 @@ export const blacklist: { [key: string]: boolean } = {};
  *
  * @param heuristic The heuristic.
  */
-export function add(
-  heuristic: SemanticHeuristic<SemanticHeuristicTypes>
-) {
+export function add(heuristic: SemanticHeuristic<SemanticHeuristicTypes>) {
   const name = heuristic.name;
   heuristics.set(name, heuristic);
   // Registered switched off, unless it is set by default.
@@ -103,5 +104,3 @@ export function lookup(
 ): SemanticHeuristic<SemanticHeuristicTypes> {
   return heuristics.get(name);
 }
-
-

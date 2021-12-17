@@ -78,4 +78,3 @@ export class SemanticTreeHeuristic extends SemanticAbstractHeuristic<SemanticNod
 export class SemanticMultiHeuristic extends SemanticAbstractHeuristic<
   SemanticNode[]
 > {}
-

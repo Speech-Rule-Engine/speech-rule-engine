@@ -23,7 +23,7 @@
 
 import * as BrowserUtil from '../common/browser_util';
 import Engine, { EnginePromise } from '../common/engine';
-import * as  EngineConst from '../common/engine_const';
+import * as EngineConst from '../common/engine_const';
 import * as FileUtil from '../common/file_util';
 import SystemExternal from '../common/system_external';
 import { RulesJson } from '../rule_engine/base_rule_store';
@@ -179,7 +179,7 @@ function addMaps(json: MathMapJson, opt_locale?: string) {
 function retrieveMaps(locale: string) {
   if (
     Engine.getInstance().isIE &&
-      Engine.getInstance().mode === EngineConst.Mode.HTTP
+    Engine.getInstance().mode === EngineConst.Mode.HTTP
   ) {
     getJsonIE_(locale);
     return;
@@ -265,4 +265,3 @@ export function loadAjax(locale: string): Promise<string> {
     httpRequest.send();
   });
 }
-

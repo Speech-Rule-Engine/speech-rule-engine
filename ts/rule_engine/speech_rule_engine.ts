@@ -34,7 +34,7 @@ import { Span } from '../audio/span';
 import { Debugger } from '../common/debugger';
 import * as DomUtil from '../common/dom_util';
 import Engine from '../common/engine';
-import * as  EngineConst from '../common/engine_const';
+import * as EngineConst from '../common/engine_const';
 import { xpath, evalXPath } from '../common/xpath_util';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
 import * as SpeechRules from '../speech_rules/speech_rules';
@@ -851,11 +851,7 @@ export function storeFactory(set: RulesJson) {
   }
   SpeechRuleStores.init();
   if (set && !set.functions) {
-    set.functions = SpeechRules.getStore(
-      set.locale,
-      set.modality,
-      set.domain
-    );
+    set.functions = SpeechRules.getStore(set.locale, set.modality, set.domain);
   }
   const store = getStore(set.modality);
   stores.set(name, store);

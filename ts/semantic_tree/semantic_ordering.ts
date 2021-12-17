@@ -20,7 +20,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticMeaning, SemanticRole, SemanticType } from './semantic_meaning';
+import {
+  SemanticMeaning,
+  SemanticRole,
+  SemanticType
+} from './semantic_meaning';
 
 // TODO: Have some better ordering mechanism than array order.
 /**
@@ -134,7 +138,4 @@ function simpleFunction(
   return 0;
 }
 
-new SemanticComparator(
-  simpleFunction,
-  SemanticType.IDENTIFIER
-);
+new SemanticComparator(simpleFunction, SemanticType.IDENTIFIER);

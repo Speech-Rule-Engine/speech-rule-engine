@@ -19,7 +19,7 @@
  */
 
 import Engine from '../common/engine';
-import * as  EngineConst from '../common/engine_const';
+import * as EngineConst from '../common/engine_const';
 import { Pause } from './audio_util';
 import { XmlRenderer } from './xml_renderer';
 

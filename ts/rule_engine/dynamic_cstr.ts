@@ -42,7 +42,6 @@ export type AxisValues = { [key: string]: boolean };
 export type AxisMap = { [key: string]: string };
 
 export class DynamicProperties {
-
   /**
    * Convenience method to create a standard dynamic constraint, that follows a
    * pre-prescribed order of the axes.

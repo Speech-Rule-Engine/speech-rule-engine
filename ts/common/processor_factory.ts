@@ -29,7 +29,7 @@ import * as WalkerFactory from '../walker/walker_factory';
 import * as WalkerUtil from '../walker/walker_util';
 import * as DomUtil from './dom_util';
 import Engine, { SREError } from './engine';
-import * as  EngineConst from '../common/engine_const';
+import * as EngineConst from '../common/engine_const';
 import { KeyCode } from './event_util';
 import { Processor, KeyProcessor } from './processors';
 import * as XpathUtil from './xpath_util';
@@ -129,190 +129,208 @@ export function keypress(name: string, expr: KeyCode | string): string {
 }
 
 //  semantic: XML of semantic tree.
-set(new Processor<Element>('semantic', {
-  processor: function (expr) {
-    const mml = DomUtil.parseInput(expr);
-    return Semantic.xmlTree(mml) as Element;
-  },
-  postprocessor: function (xml, _expr) {
-    const setting = Engine.getInstance().speech;
-    if (setting === EngineConst.Speech.NONE) {
+set(
+  new Processor<Element>('semantic', {
+    processor: function (expr) {
+      const mml = DomUtil.parseInput(expr);
+      return Semantic.xmlTree(mml) as Element;
+    },
+    postprocessor: function (xml, _expr) {
+      const setting = Engine.getInstance().speech;
+      if (setting === EngineConst.Speech.NONE) {
+        return xml;
+      }
+      // This avoids temporary attributes (e.g., for grammar) to bleed into
+      // the tree.
+      const clone = xml.cloneNode(true) as Element;
+      let speech = SpeechGeneratorUtil.computeMarkup(clone);
+      if (setting === EngineConst.Speech.SHALLOW) {
+        xml.setAttribute('speech', AuralRendering.finalize(speech));
+        return xml;
+      }
+      const nodesXml = XpathUtil.evalXPath('.//*[@id]', xml) as Element[];
+      const nodesClone = XpathUtil.evalXPath('.//*[@id]', clone) as Element[];
+      for (
+        let i = 0, orig, node;
+        (orig = nodesXml[i]), (node = nodesClone[i]);
+        i++
+      ) {
+        speech = SpeechGeneratorUtil.computeMarkup(node);
+        orig.setAttribute('speech', AuralRendering.finalize(speech));
+      }
       return xml;
+    },
+    pprint: function (tree) {
+      return DomUtil.formatXml(tree.toString());
     }
-    // This avoids temporary attributes (e.g., for grammar) to bleed into
-    // the tree.
-    const clone = xml.cloneNode(true) as Element;
-    let speech = SpeechGeneratorUtil.computeMarkup(clone);
-    if (setting === EngineConst.Speech.SHALLOW) {
-      xml.setAttribute('speech', AuralRendering.finalize(speech));
-      return xml;
-    }
-    const nodesXml = XpathUtil.evalXPath('.//*[@id]', xml) as Element[];
-    const nodesClone = XpathUtil.evalXPath('.//*[@id]', clone) as Element[];
-    for (
-      let i = 0, orig, node;
-      (orig = nodesXml[i]), (node = nodesClone[i]);
-      i++
-    ) {
-      speech = SpeechGeneratorUtil.computeMarkup(node);
-      orig.setAttribute('speech', AuralRendering.finalize(speech));
-    }
-    return xml;
-  },
-  pprint: function (tree) {
-    return DomUtil.formatXml(tree.toString());
-  }
-}));
+  })
+);
 
 //  speech: Aural rendering string.
-set(new Processor('speech', {
-  processor: function (expr) {
-    const mml = DomUtil.parseInput(expr);
-    const xml = Semantic.xmlTree(mml);
-    const descrs = SpeechGeneratorUtil.computeSpeech(xml);
-    return AuralRendering.finalize(AuralRendering.markup(descrs));
-  },
-  pprint: function (speech) {
-    const str = speech.toString();
-    // Pretty Printing wrt. markup renderer.
-    return AuralRendering.isXml() ? DomUtil.formatXml(str) : str;
-  }
-}));
+set(
+  new Processor('speech', {
+    processor: function (expr) {
+      const mml = DomUtil.parseInput(expr);
+      const xml = Semantic.xmlTree(mml);
+      const descrs = SpeechGeneratorUtil.computeSpeech(xml);
+      return AuralRendering.finalize(AuralRendering.markup(descrs));
+    },
+    pprint: function (speech) {
+      const str = speech.toString();
+      // Pretty Printing wrt. markup renderer.
+      return AuralRendering.isXml() ? DomUtil.formatXml(str) : str;
+    }
+  })
+);
 
 //  json: Json version of the semantic tree.
-set(new Processor('json', {
-  processor: function (expr) {
-    const mml = DomUtil.parseInput(expr);
-    const stree = Semantic.getTree(mml);
-    return stree.toJson();
-  },
-  postprocessor: function (json: any, expr) {
-    const setting = Engine.getInstance().speech;
-    if (setting === EngineConst.Speech.NONE) {
-      return json;
-    }
-    const mml = DomUtil.parseInput(expr);
-    const xml = Semantic.xmlTree(mml);
-    const speech = SpeechGeneratorUtil.computeMarkup(xml);
-    if (setting === EngineConst.Speech.SHALLOW) {
-      json.stree.speech = AuralRendering.finalize(speech);
-      return json;
-    }
-    const addRec = (json: any) => {
-      const node = XpathUtil.evalXPath(
-        `.//*[@id=${json.id}]`,
-        xml
-      )[0] as Element;
-      const speech = SpeechGeneratorUtil.computeMarkup(node);
-      json.speech = AuralRendering.finalize(speech);
-      if (json.children) {
-        json.children.forEach(addRec);
+set(
+  new Processor('json', {
+    processor: function (expr) {
+      const mml = DomUtil.parseInput(expr);
+      const stree = Semantic.getTree(mml);
+      return stree.toJson();
+    },
+    postprocessor: function (json: any, expr) {
+      const setting = Engine.getInstance().speech;
+      if (setting === EngineConst.Speech.NONE) {
+        return json;
       }
-    };
-    addRec(json.stree);
-    return json;
-  },
-  print: function (json) {
-    return JSON.stringify(json);
-  },
-  pprint: function (json) {
-    return JSON.stringify(json, null, 2);
-  }
-}));
+      const mml = DomUtil.parseInput(expr);
+      const xml = Semantic.xmlTree(mml);
+      const speech = SpeechGeneratorUtil.computeMarkup(xml);
+      if (setting === EngineConst.Speech.SHALLOW) {
+        json.stree.speech = AuralRendering.finalize(speech);
+        return json;
+      }
+      const addRec = (json: any) => {
+        const node = XpathUtil.evalXPath(
+          `.//*[@id=${json.id}]`,
+          xml
+        )[0] as Element;
+        const speech = SpeechGeneratorUtil.computeMarkup(node);
+        json.speech = AuralRendering.finalize(speech);
+        if (json.children) {
+          json.children.forEach(addRec);
+        }
+      };
+      addRec(json.stree);
+      return json;
+    },
+    print: function (json) {
+      return JSON.stringify(json);
+    },
+    pprint: function (json) {
+      return JSON.stringify(json, null, 2);
+    }
+  })
+);
 
 //  description: List of auditory descriptions.
-set(new Processor('description', {
-  processor: function (expr) {
-    const mml = DomUtil.parseInput(expr);
-    const xml = Semantic.xmlTree(mml);
-    const descrs = SpeechGeneratorUtil.computeSpeech(xml);
-    return descrs;
-  },
-  print: function (descrs) {
-    return JSON.stringify(descrs);
-  },
-  pprint: function (descrs) {
-    return JSON.stringify(descrs, null, 2);
-  }
-}));
+set(
+  new Processor('description', {
+    processor: function (expr) {
+      const mml = DomUtil.parseInput(expr);
+      const xml = Semantic.xmlTree(mml);
+      const descrs = SpeechGeneratorUtil.computeSpeech(xml);
+      return descrs;
+    },
+    print: function (descrs) {
+      return JSON.stringify(descrs);
+    },
+    pprint: function (descrs) {
+      return JSON.stringify(descrs, null, 2);
+    }
+  })
+);
 
 //  enriched: Enriched MathML node.
-set(new Processor<Element>('enriched', {
-  processor: function (expr) {
-    return Enrich.semanticMathmlSync(expr);
-  },
-  postprocessor: function (enr, _expr) {
-    const root = WalkerUtil.getSemanticRoot(enr);
-    let generator;
-    switch (Engine.getInstance().speech) {
-      case EngineConst.Speech.NONE:
-        break;
-      case EngineConst.Speech.SHALLOW:
-        generator = SpeechGeneratorFactory.generator('Adhoc');
-        generator.getSpeech(root, enr);
-        break;
-      case EngineConst.Speech.DEEP:
-        generator = SpeechGeneratorFactory.generator('Tree');
-        generator.getSpeech(root, enr);
-        break;
-      default:
-        break;
+set(
+  new Processor<Element>('enriched', {
+    processor: function (expr) {
+      return Enrich.semanticMathmlSync(expr);
+    },
+    postprocessor: function (enr, _expr) {
+      const root = WalkerUtil.getSemanticRoot(enr);
+      let generator;
+      switch (Engine.getInstance().speech) {
+        case EngineConst.Speech.NONE:
+          break;
+        case EngineConst.Speech.SHALLOW:
+          generator = SpeechGeneratorFactory.generator('Adhoc');
+          generator.getSpeech(root, enr);
+          break;
+        case EngineConst.Speech.DEEP:
+          generator = SpeechGeneratorFactory.generator('Tree');
+          generator.getSpeech(root, enr);
+          break;
+        default:
+          break;
+      }
+      return enr;
+    },
+    pprint: function (tree) {
+      return DomUtil.formatXml(tree.toString());
     }
-    return enr;
-  },
-  pprint: function (tree) {
-    return DomUtil.formatXml(tree.toString());
-  }
-}));
+  })
+);
 
-set(new Processor('walker', {
-  processor: function (expr) {
-    const generator = SpeechGeneratorFactory.generator('Node');
-    Processor.LocalState.speechGenerator = generator;
-    Processor.LocalState.highlighter = HighlighterFactory.highlighter(
-      { color: 'black' },
-      { color: 'white' },
-      { renderer: 'NativeMML' }
-    );
-    const node = process('enriched', expr) as Element;
-    const eml = print('enriched', node);
-    Processor.LocalState.walker = WalkerFactory.walker(
-      Engine.getInstance().walker,
-      node,
-      generator,
-      Processor.LocalState.highlighter,
-      eml
-    );
-    return Processor.LocalState.walker;
-  },
-  print: function (_walker) {
-    return Processor.LocalState.walker.speech();
-  }
-}));
+set(
+  new Processor('walker', {
+    processor: function (expr) {
+      const generator = SpeechGeneratorFactory.generator('Node');
+      Processor.LocalState.speechGenerator = generator;
+      Processor.LocalState.highlighter = HighlighterFactory.highlighter(
+        { color: 'black' },
+        { color: 'white' },
+        { renderer: 'NativeMML' }
+      );
+      const node = process('enriched', expr) as Element;
+      const eml = print('enriched', node);
+      Processor.LocalState.walker = WalkerFactory.walker(
+        Engine.getInstance().walker,
+        node,
+        generator,
+        Processor.LocalState.highlighter,
+        eml
+      );
+      return Processor.LocalState.walker;
+    },
+    print: function (_walker) {
+      return Processor.LocalState.walker.speech();
+    }
+  })
+);
 
 // TODO: This one should probably return the now highlighted node.
-set(new KeyProcessor('move', {
-  processor: function (direction) {
-    if (!Processor.LocalState.walker) {
-      return null;
+set(
+  new KeyProcessor('move', {
+    processor: function (direction) {
+      if (!Processor.LocalState.walker) {
+        return null;
+      }
+      const move = Processor.LocalState.walker.move(direction as any);
+      return move === false
+        ? AuralRendering.error(direction)
+        : Processor.LocalState.walker.speech();
     }
-    const move = Processor.LocalState.walker.move(direction as any);
-    return move === false
-      ? AuralRendering.error(direction)
-      : Processor.LocalState.walker.speech();
-  }
-}));
+  })
+);
 
-set(new Processor('number', {
-  processor: function (numb) {
-    const num = parseInt(numb, 10);
-    return isNaN(num) ? '' : LOCALE.NUMBERS.numberToWords(num);
-  }
-}));
+set(
+  new Processor('number', {
+    processor: function (numb) {
+      const num = parseInt(numb, 10);
+      return isNaN(num) ? '' : LOCALE.NUMBERS.numberToWords(num);
+    }
+  })
+);
 
-set(new Processor('ordinal', {
-  processor: function (numb) {
-    const num = parseInt(numb, 10);
-    return isNaN(num) ? '' : LOCALE.NUMBERS.numberToOrdinal(num, false);
-  }
-}));
+set(
+  new Processor('ordinal', {
+    processor: function (numb) {
+      const num = parseInt(numb, 10);
+      return isNaN(num) ? '' : LOCALE.NUMBERS.numberToOrdinal(num, false);
+    }
+  })
+);

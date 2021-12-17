@@ -66,9 +66,9 @@ export function getStore(
 ): { [key: string]: SpeechRuleFunction } {
   return (
     this.store[[locale, modality, domain].join('.')] ||
-      this.store[
-        [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE], modality, domain].join('.')
-      ] ||
-      {}
+    this.store[
+      [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE], modality, domain].join('.')
+    ] ||
+    {}
   );
 }

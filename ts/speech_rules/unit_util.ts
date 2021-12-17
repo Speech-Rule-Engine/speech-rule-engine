@@ -44,10 +44,10 @@ export function unitMultipliers(
     const descr = AuditoryDescription.create(
       {
         text:
-        rightMostUnit(children[counter]) &&
+          rightMostUnit(children[counter]) &&
           leftMostUnit(children[counter + 1])
-          ? LOCALE.MESSAGES.unitTimes
-          : ''
+            ? LOCALE.MESSAGES.unitTimes
+            : ''
       },
       {}
     );
@@ -116,8 +116,8 @@ export function oneLeft(node: Element): Element[] {
     }
     if (
       node.tagName !== 'infixop' ||
-        (node.getAttribute('role') !== 'multiplication' &&
-          node.getAttribute('role') !== 'implicit')
+      (node.getAttribute('role') !== 'multiplication' &&
+        node.getAttribute('role') !== 'implicit')
     ) {
       return [];
     }

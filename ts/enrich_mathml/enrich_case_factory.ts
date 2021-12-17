@@ -90,4 +90,3 @@ export default function getCase(node: SemanticNode): EnrichCase {
   }
   return null;
 }
-

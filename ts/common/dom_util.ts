@@ -23,7 +23,7 @@
  */
 
 import Engine, { SREError } from './engine';
-import * as  EngineConst from '../common/engine_const';
+import * as EngineConst from '../common/engine_const';
 import SystemExternal from './system_external';
 import * as XpathUtil from './xpath_util';
 

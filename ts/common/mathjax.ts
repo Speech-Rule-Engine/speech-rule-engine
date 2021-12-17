@@ -20,7 +20,7 @@
  */
 
 import { EnginePromise } from './engine';
-import * as  EngineConst from '../common/engine_const';
+import * as EngineConst from '../common/engine_const';
 import * as System from './system';
 
 declare let MathJax: any;

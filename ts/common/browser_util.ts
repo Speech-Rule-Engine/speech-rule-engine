@@ -19,7 +19,7 @@
  */
 
 import SystemExternal from './system_external';
-import {xpath} from './xpath_util';
+import { xpath } from './xpath_util';
 
 /**
  * Predicate to check for MS Internet Explorer but not Edge.

@@ -25,7 +25,7 @@ import * as MathMap from '../speech_rules/math_map';
 import * as BrowserUtil from './browser_util';
 import { Debugger } from './debugger';
 import Engine, { EnginePromise, SREError } from './engine';
-import * as  EngineConst from './engine_const';
+import * as EngineConst from './engine_const';
 import { KeyCode } from './event_util';
 import * as FileUtil from './file_util';
 import * as ProcessorFactory from './processor_factory';
@@ -59,9 +59,9 @@ export async function setupEngine(feature: {
   // we get a meaningful output.
   if (
     feature.domain === 'default' &&
-      (feature.modality === 'speech' ||
-        !feature.modality ||
-        engine.modality === 'speech')
+    (feature.modality === 'speech' ||
+      !feature.modality ||
+      engine.modality === 'speech')
   ) {
     feature.domain = 'mathspeak';
   }
@@ -94,14 +94,14 @@ export async function setupEngine(feature: {
 }
 
 /**
- * The actual configuration method. 
+ * The actual configuration method.
  *
  * @param feature An object describing some setup features.
  */
 function config(feature: { [key: string]: boolean | string }) {
   if (
     Engine.getInstance().mode === EngineConst.Mode.HTTP &&
-      !Engine.getInstance().config
+    !Engine.getInstance().config
   ) {
     configBlocks(feature);
     Engine.getInstance().config = true;
@@ -262,9 +262,9 @@ export const file: Record<string, (input: string, output?: string) => any> = {};
  * @param opt_output The output filename if one is given.
  * @returns Promise that resolves on completion of the file operations.
  */
-file.toSpeech = function(input: string, opt_output?: string) {
+file.toSpeech = function (input: string, opt_output?: string) {
   return processFile('speech', input, opt_output);
-}
+};
 
 /**
  * Reads an xml expression from a file and returns the XML for the semantic
@@ -274,9 +274,9 @@ file.toSpeech = function(input: string, opt_output?: string) {
  * @param opt_output The output filename if one is given.
  * @returns Promise that resolves on completion of the file operations.
  */
-file.toSemantic= function(input: string, opt_output?: string) {
+file.toSemantic = function (input: string, opt_output?: string) {
   return processFile('semantic', input, opt_output);
-}
+};
 
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree
@@ -286,9 +286,9 @@ file.toSemantic= function(input: string, opt_output?: string) {
  * @param opt_output The output filename if one is given.
  * @returns Promise that resolves on completion of the file operations.
  */
-file.toJson= function(input: string, opt_output?: string) {
+file.toJson = function (input: string, opt_output?: string) {
   return processFile('json', input, opt_output);
-}
+};
 
 /**
  * Main function to translate expressions into auditory descriptions
@@ -298,9 +298,9 @@ file.toJson= function(input: string, opt_output?: string) {
  * @param opt_output The output filename if one is given.
  * @returns Promise that resolves on completion of the file operations.
  */
-file.toDescription= function(input: string, opt_output?: string) {
+file.toDescription = function (input: string, opt_output?: string) {
   return processFile('description', input, opt_output);
-}
+};
 
 /**
  * Function to translate MathML string into semantically enriched MathML in a
@@ -310,9 +310,9 @@ file.toDescription= function(input: string, opt_output?: string) {
  * @param opt_output The output filename if one is given.
  * @returns Promise that resolves on completion of the file operations.
  */
-file.toEnriched= function(input: string, opt_output?: string) {
+file.toEnriched = function (input: string, opt_output?: string) {
   return processFile('enriched', input, opt_output);
-}
+};
 
 /**
  * Reads an xml expression from a file, processes with the given function and
@@ -478,5 +478,5 @@ if (SystemExternal.documentSupported) {
 } else {
   setupEngine({ mode: EngineConst.Mode.SYNC }).then(() =>
     setupEngine({ mode: EngineConst.Mode.ASYNC })
-                                                   );
+  );
 }

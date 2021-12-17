@@ -24,7 +24,7 @@ import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
 import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
 import { Debugger } from './debugger';
 import { EnginePromise, SREError } from './engine';
-import * as  EngineConst from './engine_const';
+import * as EngineConst from './engine_const';
 import * as ProcessorFactory from './processor_factory';
 import * as System from './system';
 import SystemExternal from './system_external';
@@ -85,76 +85,77 @@ export class Cli {
     const promise = System.setupEngine(this.setup);
     return (all ? this.loadLocales() : promise).then(() =>
       EnginePromise.getall().then(() => {
-      const length = DynamicCstr.DEFAULT_ORDER.map((x) => x.length);
-      const maxLength = (obj: any, index: number) => {
-        length[index] = Math.max.apply(
-          null,
-          Object.keys(obj)
-            .map(function (x) {
-              return x.length;
-            })
-            .concat(length[index])
-        );
-      };
-      const compStr = (str: string, length: number) =>
-        str + new Array(length - str.length + 1).join(' ');
-      // TODO (TS): Sort out the any type.
-      let dynamic: any = SpeechRuleEngine.getInstance().enumerate();
-      dynamic = MathCompoundStore.enumerate(dynamic);
-      const table = [];
-      maxLength(dynamic, 0);
-      for (const ax1 in dynamic) {
-        let clear1 = true;
-        const dyna1 = dynamic[ax1];
-        maxLength(dyna1, 1);
-        for (const ax2 in dyna1) {
-          let clear2 = true;
-          const dyna2 = dyna1[ax2];
-          maxLength(dyna2, 2);
-          for (const ax3 in dyna2) {
-            const styles = Object.keys(dyna2[ax3]).sort();
-            if (ax3 === 'clearspeak') {
-              let clear3 = true;
-              const prefs =
-                ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
-              for (const ax4 in prefs) {
+        const length = DynamicCstr.DEFAULT_ORDER.map((x) => x.length);
+        const maxLength = (obj: any, index: number) => {
+          length[index] = Math.max.apply(
+            null,
+            Object.keys(obj)
+              .map(function (x) {
+                return x.length;
+              })
+              .concat(length[index])
+          );
+        };
+        const compStr = (str: string, length: number) =>
+          str + new Array(length - str.length + 1).join(' ');
+        // TODO (TS): Sort out the any type.
+        let dynamic: any = SpeechRuleEngine.getInstance().enumerate();
+        dynamic = MathCompoundStore.enumerate(dynamic);
+        const table = [];
+        maxLength(dynamic, 0);
+        for (const ax1 in dynamic) {
+          let clear1 = true;
+          const dyna1 = dynamic[ax1];
+          maxLength(dyna1, 1);
+          for (const ax2 in dyna1) {
+            let clear2 = true;
+            const dyna2 = dyna1[ax2];
+            maxLength(dyna2, 2);
+            for (const ax3 in dyna2) {
+              const styles = Object.keys(dyna2[ax3]).sort();
+              if (ax3 === 'clearspeak') {
+                let clear3 = true;
+                const prefs =
+                  ClearspeakPreferences.getLocalePreferences(dynamic)[ax1];
+                for (const ax4 in prefs) {
+                  table.push([
+                    compStr(clear1 ? ax1 : '', length[0]),
+                    compStr(clear2 ? ax2 : '', length[1]),
+                    compStr(clear3 ? ax3 : '', length[2]),
+                    prefs[ax4].join(', ')
+                  ]);
+                  clear1 = false;
+                  clear2 = false;
+                  clear3 = false;
+                }
+              } else {
                 table.push([
                   compStr(clear1 ? ax1 : '', length[0]),
                   compStr(clear2 ? ax2 : '', length[1]),
-                  compStr(clear3 ? ax3 : '', length[2]),
-                  prefs[ax4].join(', ')
+                  compStr(ax3, length[2]),
+                  styles.join(', ')
                 ]);
-                clear1 = false;
-                clear2 = false;
-                clear3 = false;
               }
-            } else {
-              table.push([
-                compStr(clear1 ? ax1 : '', length[0]),
-                compStr(clear2 ? ax2 : '', length[1]),
-                compStr(ax3, length[2]),
-                styles.join(', ')
-              ]);
+              clear1 = false;
+              clear2 = false;
             }
-            clear1 = false;
-            clear2 = false;
           }
         }
-      }
-      let i = 0;
-      let output = '';
-      output += DynamicCstr.DEFAULT_ORDER.slice(
-        0, // No topics yet.
-        -1
-      )
-        .map((x: string) => compStr(x, length[i++]))
-        .join(' | ');
-      output += '\n';
-      length.forEach((x: number) => (output += new Array(x + 3).join('=')));
-      output += '========================\n';
-      output += table.map((x) => x.join(' | ')).join('\n');
-      console.info(output);
-      }));
+        let i = 0;
+        let output = '';
+        output += DynamicCstr.DEFAULT_ORDER.slice(
+          0, // No topics yet.
+          -1
+        )
+          .map((x: string) => compStr(x, length[i++]))
+          .join(' | ');
+        output += '\n';
+        length.forEach((x: number) => (output += new Array(x + 3).join('=')));
+        output += '========================\n';
+        output += table.map((x) => x.join(' | ')).join('\n');
+        console.info(output);
+      })
+    );
   }
 
   /**

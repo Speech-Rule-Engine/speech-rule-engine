@@ -24,7 +24,13 @@
 import { Debugger } from '../common/debugger';
 import Engine from '../common/engine';
 import { locales } from '../l10n/l10n';
-import { MathSimpleStore, SiJson, MappingsJson, SimpleRule, UnicodeJson } from './math_simple_store';
+import {
+  MathSimpleStore,
+  SiJson,
+  MappingsJson,
+  SimpleRule,
+  UnicodeJson
+} from './math_simple_store';
 import { Axis, DynamicCstr } from './dynamic_cstr';
 
 /**

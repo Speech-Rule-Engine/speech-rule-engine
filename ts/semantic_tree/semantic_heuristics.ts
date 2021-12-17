@@ -24,7 +24,10 @@ import { Debugger } from '../common/debugger';
 import Engine from '../common/engine';
 import * as SemanticAttr from './semantic_attr';
 import * as SemanticHeuristics from './semantic_heuristic_factory';
-import { SemanticTreeHeuristic, SemanticMultiHeuristic } from './semantic_heuristic';
+import {
+  SemanticTreeHeuristic,
+  SemanticMultiHeuristic
+} from './semantic_heuristic';
 import { SemanticRole, SemanticType } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
 import * as SemanticPred from './semantic_pred';
@@ -36,7 +39,8 @@ import * as SemanticUtil from './semantic_util';
  * node of a subtree.
  */
 SemanticHeuristics.add(
-  new SemanticTreeHeuristic('combine_juxtaposition', combineJuxtaposition)); 
+  new SemanticTreeHeuristic('combine_juxtaposition', combineJuxtaposition)
+);
 
 /**
  * Combines juxtapositions as much as possible.
@@ -75,7 +79,7 @@ SemanticHeuristics.add(
       if (
         (node.type === SemanticType.INFIXOP ||
           node.type === SemanticType.FRACTION) &&
-          node.childNodes.every(SemanticPred.isSimpleFunction)
+        node.childNodes.every(SemanticPred.isSimpleFunction)
       ) {
         node.role = SemanticRole.COMPFUNC;
       }
@@ -90,39 +94,41 @@ SemanticHeuristics.add(
  * clearspeak only.
  */
 SemanticHeuristics.add(
-new SemanticTreeHeuristic(
-  'simpleNamedFunction',
-  (node: SemanticNode) => {
-    const specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
-    if (
-      node.role !== SemanticRole.UNIT &&
-      specialFunctions.indexOf(node.textContent) !== -1
-    ) {
-      node.role = SemanticRole.SIMPLEFUNC;
-    }
-    return node;
-  },
-  (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
-));
+  new SemanticTreeHeuristic(
+    'simpleNamedFunction',
+    (node: SemanticNode) => {
+      const specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
+      if (
+        node.role !== SemanticRole.UNIT &&
+        specialFunctions.indexOf(node.textContent) !== -1
+      ) {
+        node.role = SemanticRole.SIMPLEFUNC;
+      }
+      return node;
+    },
+    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+  )
+);
 
 /**
  * Propagates the role of composed function to surrounding fences.
  * Currently restricted to Clearspeak!
  */
 SemanticHeuristics.add(
-new SemanticTreeHeuristic(
-  'propagateComposedFunction',
-  (node: SemanticNode) => {
-    if (
-      node.type === SemanticType.FENCED &&
-      node.childNodes[0].role === SemanticRole.COMPFUNC
-    ) {
-      node.role = SemanticRole.COMPFUNC;
-    }
-    return node;
-  },
-  (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
-));
+  new SemanticTreeHeuristic(
+    'propagateComposedFunction',
+    (node: SemanticNode) => {
+      if (
+        node.type === SemanticType.FENCED &&
+        node.childNodes[0].role === SemanticRole.COMPFUNC
+      ) {
+        node.role = SemanticRole.COMPFUNC;
+      }
+      return node;
+    },
+    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
+  )
+);
 
 /**
  * Heuristic to compute a meaningful role for multi character operators (e.g.,
@@ -130,124 +136,128 @@ new SemanticTreeHeuristic(
  * is used.
  */
 SemanticHeuristics.add(
-new SemanticTreeHeuristic('multioperator', (node: SemanticNode) => {
-  if (node.role !== SemanticRole.UNKNOWN || node.textContent.length <= 1) {
-    return;
-  }
-  // TODO: Combine with lines in numberRole_/exprFont_?
-  const content = SemanticUtil.splitUnicode(node.textContent);
-  const meaning = content.map(SemanticAttr.lookupMeaning);
-  const singleRole = meaning.reduce(function (prev, curr) {
-    if (
-      !prev ||
-      !curr.role ||
-      curr.role === SemanticRole.UNKNOWN ||
-      curr.role === prev
-    ) {
-      return prev;
+  new SemanticTreeHeuristic('multioperator', (node: SemanticNode) => {
+    if (node.role !== SemanticRole.UNKNOWN || node.textContent.length <= 1) {
+      return;
     }
-    if (prev === SemanticRole.UNKNOWN) {
-      return curr.role;
+    // TODO: Combine with lines in numberRole_/exprFont_?
+    const content = SemanticUtil.splitUnicode(node.textContent);
+    const meaning = content.map(SemanticAttr.lookupMeaning);
+    const singleRole = meaning.reduce(function (prev, curr) {
+      if (
+        !prev ||
+        !curr.role ||
+        curr.role === SemanticRole.UNKNOWN ||
+        curr.role === prev
+      ) {
+        return prev;
+      }
+      if (prev === SemanticRole.UNKNOWN) {
+        return curr.role;
+      }
+      return null;
+    }, SemanticRole.UNKNOWN);
+    if (singleRole) {
+      node.role = singleRole;
     }
-    return null;
-  }, SemanticRole.UNKNOWN);
-  if (singleRole) {
-    node.role = singleRole;
-  }
-}));
+  })
+);
 
 /**
  * Combines explicitly given juxtapositions.
  */
 SemanticHeuristics.add(
-new SemanticMultiHeuristic('convert_juxtaposition', (nodes) => {
-  let partition = SemanticUtil.partitionNodes(nodes, function (x) {
-    return (
-      x.textContent === SemanticAttr.invisibleTimes() &&
-      x.type === SemanticType.OPERATOR
+  new SemanticMultiHeuristic('convert_juxtaposition', (nodes) => {
+    let partition = SemanticUtil.partitionNodes(nodes, function (x) {
+      return (
+        x.textContent === SemanticAttr.invisibleTimes() &&
+        x.type === SemanticType.OPERATOR
+      );
+    });
+    // Preprocessing pre and postfixes.
+    partition = partition.rel.length
+      ? juxtapositionPrePost(partition)
+      : partition;
+    // TODO: Move to Util
+    nodes = partition.comp[0];
+    for (
+      let i = 1, c, r;
+      (c = partition.comp[i]), (r = partition.rel[i - 1]);
+      i++
+    ) {
+      nodes.push(r);
+      nodes = nodes.concat(c);
+    }
+    partition = SemanticUtil.partitionNodes(nodes, function (x) {
+      return (
+        x.textContent === SemanticAttr.invisibleTimes() &&
+        (x.type === SemanticType.OPERATOR || x.type === SemanticType.INFIXOP)
+      );
+    });
+    if (!partition.rel.length) {
+      return nodes;
+    }
+    return recurseJuxtaposition(
+      partition.comp.shift(),
+      partition.rel,
+      partition.comp
     );
-  });
-  // Preprocessing pre and postfixes.
-  partition = partition.rel.length
-    ? juxtapositionPrePost(partition)
-    : partition;
-  // TODO: Move to Util
-  nodes = partition.comp[0];
-  for (
-    let i = 1, c, r;
-    (c = partition.comp[i]), (r = partition.rel[i - 1]);
-    i++
-  ) {
-    nodes.push(r);
-    nodes = nodes.concat(c);
-  }
-  partition = SemanticUtil.partitionNodes(nodes, function (x) {
-    return (
-      x.textContent === SemanticAttr.invisibleTimes() &&
-      (x.type === SemanticType.OPERATOR || x.type === SemanticType.INFIXOP)
-    );
-  });
-  if (!partition.rel.length) {
-    return nodes;
-  }
-  return recurseJuxtaposition(
-    partition.comp.shift(),
-    partition.rel,
-    partition.comp
-  );
-}));
+  })
+);
 
 /**
  * Rewrites a simple function to a prefix function if it consists of multiple
  * letters. (Currently restricted to Braille!)
  */
 SemanticHeuristics.add(
-new SemanticTreeHeuristic(
-  'simple2prefix',
-  (node: SemanticNode) => {
-    if (
-      node.textContent.length > 1 &&
-      // TODO: Discuss this line!
-      !node.textContent[0].match(/[A-Z]/)
-    ) {
-      node.role = SemanticRole.PREFIXFUNC;
-    }
-    return node;
-  },
-  (node: SemanticNode) =>
-    Engine.getInstance().modality === 'braille' &&
-    node.type === SemanticType.IDENTIFIER
-));
+  new SemanticTreeHeuristic(
+    'simple2prefix',
+    (node: SemanticNode) => {
+      if (
+        node.textContent.length > 1 &&
+        // TODO: Discuss this line!
+        !node.textContent[0].match(/[A-Z]/)
+      ) {
+        node.role = SemanticRole.PREFIXFUNC;
+      }
+      return node;
+    },
+    (node: SemanticNode) =>
+      Engine.getInstance().modality === 'braille' &&
+      node.type === SemanticType.IDENTIFIER
+  )
+);
 
 /**
  *  Rewrites space separated lists of numbers into of cycles.
  *  (Currently only used in Nemeth.)
  */
 SemanticHeuristics.add(
-new SemanticTreeHeuristic(
-  'detect_cycle',
-  (node: SemanticNode) => {
-    // TODO: Test for simple elements?
-    node.type = SemanticType.MATRIX;
-    node.role = SemanticRole.CYCLE;
-    const row = node.childNodes[0];
-    row.type = SemanticType.ROW;
-    row.role = SemanticRole.CYCLE;
-    row.contentNodes = [];
-    return node;
-  },
-  (node: SemanticNode) =>
-    Engine.getInstance().modality === 'braille' &&
-    node.type === SemanticType.FENCED &&
-    node.childNodes[0].type === SemanticType.INFIXOP &&
-    node.childNodes[0].role === SemanticRole.IMPLICIT &&
-    node.childNodes[0].childNodes.every(function (x) {
-      return x.type === SemanticType.NUMBER;
-    }) &&
-    node.childNodes[0].contentNodes.every(function (x) {
-      return x.role === SemanticRole.SPACE;
-    })
-));
+  new SemanticTreeHeuristic(
+    'detect_cycle',
+    (node: SemanticNode) => {
+      // TODO: Test for simple elements?
+      node.type = SemanticType.MATRIX;
+      node.role = SemanticRole.CYCLE;
+      const row = node.childNodes[0];
+      row.type = SemanticType.ROW;
+      row.role = SemanticRole.CYCLE;
+      row.contentNodes = [];
+      return node;
+    },
+    (node: SemanticNode) =>
+      Engine.getInstance().modality === 'braille' &&
+      node.type === SemanticType.FENCED &&
+      node.childNodes[0].type === SemanticType.INFIXOP &&
+      node.childNodes[0].role === SemanticRole.IMPLICIT &&
+      node.childNodes[0].childNodes.every(function (x) {
+        return x.type === SemanticType.NUMBER;
+      }) &&
+      node.childNodes[0].contentNodes.every(function (x) {
+        return x.role === SemanticRole.SPACE;
+      })
+  )
+);
 
 /**
  * Rewrites a partition with respect to explicit juxtapositions into one where

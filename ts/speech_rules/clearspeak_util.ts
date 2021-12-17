@@ -485,9 +485,7 @@ export function matchingFences(node: Element): Element[] {
     // this case should not happen!
     return [];
   }
-  return isMatchingFence(left.textContent, right.textContent)
-    ? [node]
-    : [];
+  return isMatchingFence(left.textContent, right.textContent) ? [node] : [];
 }
 
 /**

@@ -20,7 +20,6 @@
  */
 
 export class Span {
-
   /**
    * @param speech The textual content of the span.
    * @param attributes Annotations for the textual content.

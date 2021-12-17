@@ -48,7 +48,12 @@
  */
 
 import * as SemanticUtil from './semantic_util';
-import { SemanticMeaning, SemanticRole, SemanticType, SemanticFont } from './semantic_meaning';
+import {
+  SemanticMeaning,
+  SemanticRole,
+  SemanticType,
+  SemanticFont
+} from './semantic_meaning';
 
 /**
  * Contains the basic mappings of characters/symbols and functions to semantic
@@ -2419,18 +2424,7 @@ const digitsFullWidth: string[] = [
   '８',
   '９'
 ];
-const digitsBold: string[] = [
-  '𝟎',
-  '𝟏',
-  '𝟐',
-  '𝟑',
-  '𝟒',
-  '𝟓',
-  '𝟔',
-  '𝟕',
-  '𝟖',
-  '𝟗'
-];
+const digitsBold: string[] = ['𝟎', '𝟏', '𝟐', '𝟑', '𝟒', '𝟓', '𝟔', '𝟕', '𝟖', '𝟗'];
 const digitsDoubleStruck: string[] = [
   '𝟘',
   '𝟙',
@@ -3409,8 +3403,8 @@ export function equal(
 ): boolean {
   return (
     meaning1.type === meaning2.type &&
-      meaning1.role === meaning2.role &&
-      meaning1.font === meaning2.font
+    meaning1.role === meaning2.role &&
+    meaning1.font === meaning2.font
   );
 }
 
@@ -3509,10 +3503,7 @@ export function functionApplication(): string {
  * @returns {boolean} True if the fences are matching.
  */
 export function isMatchingFence(open: string, close: string): boolean {
-  if (
-    neutralFences.indexOf(open) !== -1 ||
-      metricFences.indexOf(open) !== -1
-  ) {
+  if (neutralFences.indexOf(open) !== -1 || metricFences.indexOf(open) !== -1) {
     return open === close;
   }
   return openClosePairs[open] === close || topBottomPairs[open] === close;
@@ -3546,9 +3537,9 @@ export function isMatchingFence(open: string, close: string): boolean {
 export function isEmbellishedType(type: SemanticType): boolean {
   return (
     type === SemanticType.OPERATOR ||
-      type === SemanticType.RELATION ||
-      type === SemanticType.FENCE ||
-      type === SemanticType.PUNCTUATION
+    type === SemanticType.RELATION ||
+    type === SemanticType.FENCE ||
+    type === SemanticType.PUNCTUATION
   );
 }
 

@@ -83,7 +83,7 @@ export enum ActionType {
 /**
  * Maps a string to a valid speech rule type.
  *
- * @param str The action string. 
+ * @param str The action string.
  * @returns The action type.
  */
 function actionFromString(str: string): ActionType {
