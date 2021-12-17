@@ -488,7 +488,7 @@ export class SpeechRuleEngine {
     ctxtFunc: string,
     ctxtStr: string
   ): AuditoryDescription[] {
-    if (nodes === []) {
+    if (!nodes.length) {
       return [];
     }
     const sep = sepStr || '';

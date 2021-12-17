@@ -21,13 +21,12 @@
 import { Axis, DynamicCstr } from '../rule_engine/dynamic_cstr';
 import { SpeechRuleFunction } from '../rule_engine/speech_rule_functions';
 
-// TODO (TS): Move this to Map.
 /**
  * Mapping for context functions: The store maps constraint strings to
  * dictionaries of context functions.
  */
-export const store: { [key: string]: { [key: string]: SpeechRuleFunction } } =
-  {};
+export const funcStore: Map<string, { [key: string]: SpeechRuleFunction }> =
+  new Map();
 
 /**
  * Adds functions to the store potentially inheriting from another store.
@@ -44,10 +43,10 @@ export function addStore(
 ) {
   const values = {};
   if (inherit) {
-    const inherits = this.store[inherit] || {};
+    const inherits = funcStore.get(inherit) || {};
     Object.assign(values, inherits);
   }
-  this.store[constr] = Object.assign(values, store);
+  funcStore.set(constr, Object.assign(values, store));
 }
 
 /**
@@ -65,10 +64,10 @@ export function getStore(
   domain: string
 ): { [key: string]: SpeechRuleFunction } {
   return (
-    this.store[[locale, modality, domain].join('.')] ||
-    this.store[
+    funcStore.get([locale, modality, domain].join('.')) ||
+    funcStore.get(
       [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE], modality, domain].join('.')
-    ] ||
+    ) ||
     {}
   );
 }
