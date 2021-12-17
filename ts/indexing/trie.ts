@@ -70,6 +70,7 @@ export class Trie {
    * @param node The current try node to print.
    * @param depth The current depth of the node.
    * @param str The string that has already been assembled.
+   * @returns The string representation of the trie with indentation markers.
    */
   private static printWithDepth_(
     node: TrieNode,
@@ -100,9 +101,6 @@ export class Trie {
     return Math.max(children.length, max);
   }
 
-  /**
-   * @param store The store the trie belongs to.
-   */
   constructor() {
     this.root = getNode(TrieNodeKind.ROOT, '', null);
   }

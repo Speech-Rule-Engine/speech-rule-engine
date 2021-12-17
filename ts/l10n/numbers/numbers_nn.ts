@@ -24,7 +24,7 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
  * Translates a number of up to twelve digits into a string representation.
  *
  * @param num The number to translate.
- * @param ordinal
+ * @param ordinal Flag indicating if we construct an ordinal.
  * @returns The string representation of that number.
  */
 function hundredsToWords_(num: number, ordinal = false): string {
@@ -60,7 +60,7 @@ function hundredsToWords_(num: number, ordinal = false): string {
  * Translates a number of up to twelve digits into a string representation.
  *
  * @param num The number to translate.
- * @param ordinal
+ * @param ordinal Flag indicating if we construct an ordinal.
  * @returns The string representation of that number.
  */
 function numberToWords(num: number, ordinal = false): string {
@@ -99,8 +99,7 @@ function numberToWords(num: number, ordinal = false): string {
  * its ordinal.
  *
  * @param num The number to translate.
- * @param plural A flag indicating if the ordinal is in plural.
- * @param _plural
+ * @param _plural A flag indicating if the ordinal is in plural.
  * @returns The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, _plural: boolean): string {

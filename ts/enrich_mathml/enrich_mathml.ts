@@ -595,8 +595,8 @@ export function mathmlLca_(children: Element[]): {
  * It then returns the shortend path, from the root element to the potential
  * LCA.
  *
- * @param path
- * @param children
+ * @param path The list of elements representing the path to be pruned.
+ * @param children The child nodes that are being dropped from the tree.
  * @returns The pruned path.
  */
 export function prunePath_(path: Element[], children: Element[]): Element[] {

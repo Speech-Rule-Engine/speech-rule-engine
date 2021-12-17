@@ -29,7 +29,7 @@ import * as tr from '../transformers';
 let locale: Locale = null;
 
 /**
- *
+ * @returns The Bokmal Locale.
  */
 export function nb(): Locale {
   if (!locale) {
@@ -40,7 +40,7 @@ export function nb(): Locale {
 }
 
 /**
- *
+ * @returns The Bokmal Locale.
  */
 function create(): Locale {
   const loc = createLocale();

@@ -20,10 +20,10 @@
  */
 
 export class Span {
+
   /**
-   * @param string The textual content of the span.
+   * @param speech The textual content of the span.
    * @param attributes Annotations for the textual content.
-   * @param speech
    */
   constructor(
     public speech: string,

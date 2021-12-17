@@ -117,8 +117,7 @@ export class ColorPicker {
   /**
    * Turns a decimal number into a two digit hex string.
    *
-   * @param number The decimal.
-   * @param num
+   * @param num The decimal.
    * @returns The hex string.
    */
   private static toHex(num: number): string {
@@ -128,9 +127,7 @@ export class ColorPicker {
 
   /**
    * @param background The background color definition.
-   * @param opt_foreground The optional foreground color
-   *      definition.
-   * @param foreground
+   * @param foreground The optional foreground color definition.
    */
   constructor(background: Color, foreground?: Color) {
     this.foreground = getChannelColor(
@@ -249,9 +246,9 @@ function hsl2rgb(
  * Translates an rgb value triple into an RGB values (0..255).
  *
  * @param rgb The rgb values.
- * @param rgb.red
- * @param rgb.green
- * @param rgb.blue
+ * @param rgb.red The red value.
+ * @param rgb.green The green value.
+ * @param rgb.blue The blue vaue.
  * @returns The RGB triple.
  */
 function rgb2RGB(rgb: { red: number; green: number; blue: number }): {

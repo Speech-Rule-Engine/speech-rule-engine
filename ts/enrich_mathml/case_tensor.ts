@@ -38,7 +38,6 @@ export class CaseTensor extends CaseMultiindex {
 
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);

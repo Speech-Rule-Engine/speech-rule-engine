@@ -32,8 +32,7 @@ export type Processor = Transformer | Combiner | GrammarCase | SiCombiner;
  * A trivial translator of numbers with plural.
  *
  * @param num A number.
- * @param plural A flag indicating plural.
- * @param _plural
+ * @param _plural A flag indicating plural.
  * @returns The number as a string.
  */
 export function pluralCase(num: number, _plural: boolean): string {
@@ -55,6 +54,7 @@ export function identityTransformer(input: string | number): string {
  *
  * @param  prefix The prefix.
  * @param  unit The main part.
+ * @returns The si unit name composed of prefix and base unit.
  */
 export function siCombiner(prefix: string, unit: string) {
   return prefix + unit.toLowerCase();

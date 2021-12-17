@@ -195,8 +195,7 @@ export default class Engine {
    * A dummy string evaluator.
    *
    * @param str A string.
-   * @param cstr A dynamic constraint.
-   * @param _cstr
+   * @param _cstr A dynamic constraint.
    * @returns The evaluated string.
    */
   public static defaultEvaluator(
@@ -282,7 +281,9 @@ export class EnginePromise {
   public static promises: { [locale: string]: Promise<string> } = {};
 
   /**
-   * @param locale
+   * Gets a promise for a locale.
+   *
+   * @param locale The locale to retrieve.
    * @returns The promise for a locale.
    */
   public static get(

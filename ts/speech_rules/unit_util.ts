@@ -29,8 +29,7 @@ import { SemanticType } from '../semantic_tree/semantic_meaning';
  * expressions.
  *
  * @param nodes A node array.
- * @param context A context string.
- * @param _context
+ * @param _context A context string.
  * @returns A closure that returns
  *     the unit multiplied between two proper unit expressions, otherwise the
  *     empty string.

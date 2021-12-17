@@ -46,7 +46,6 @@ export class CaseMultiscripts extends CaseMultiindex {
 
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);

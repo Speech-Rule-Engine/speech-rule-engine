@@ -49,12 +49,9 @@ export abstract class SemanticAbstractHeuristic<
   /**
    * Abstract class of heuristics.
    *
-   * @param {{predicate: ((function(T): boolean)|undefined),
-   *          method: function(T): sre.SemanticNode} } heuristic The predicate and
-   * method of the heuristic
-   * @param name
-   * @param method
-   * @param predicate
+   * @param name The name of the heuristic.
+   * @param method The method of the heuristic
+   * @param predicate The predicate to determine applicability of the heuristic.
    */
   constructor(
     public name: string,

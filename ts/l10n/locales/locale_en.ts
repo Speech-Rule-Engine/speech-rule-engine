@@ -26,7 +26,7 @@ import * as tr from '../transformers';
 let locale: Locale = null;
 
 /**
- *
+ * @returns The English locale.
  */
 export function en(): Locale {
   if (!locale) {
@@ -37,7 +37,7 @@ export function en(): Locale {
 }
 
 /**
- *
+ * @returns The English locale.
  */
 function create(): Locale {
   const loc = createLocale();

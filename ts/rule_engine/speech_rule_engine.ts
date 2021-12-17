@@ -131,7 +131,7 @@ export class SpeechRuleEngine {
       parent = parent.parentNode as Document;
     }
     if (parent.evaluate) {
-      xpath.currentDocument = /** @type{Document} */ parent;
+      xpath.currentDocument = parent;
     }
   }
 
@@ -785,8 +785,7 @@ export class SpeechRuleEngine {
    * 1) that best match the dynamic constraints.
    * 2) with the most additional constraints.
    *
-   * @param dynamic Dynamic constraints.
-   * @param _dynamic
+   * @param _dynamic Dynamic constraints.
    * @param rules An array of rules.
    * @returns The most constraint rule.
    */
@@ -838,7 +837,10 @@ function getStore(modality: string): BaseRuleStore {
 }
 
 /**
- * @param set
+ * Generates a new speech rule store.
+ *
+ * @param set The JSON structure of the rule set.
+ * @returns The newly create store.
  */
 export function storeFactory(set: RulesJson) {
   const name = `${set.locale}.${set.modality}.${set.domain}`;

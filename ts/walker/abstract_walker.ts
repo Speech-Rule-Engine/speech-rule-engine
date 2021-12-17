@@ -334,6 +334,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Moves up from the current node if possible.
+   *
+   * @returns The new focus.
    */
   protected up(): Focus | null {
     this.moved = WalkerMoves.UP;
@@ -342,6 +344,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Moves down from the current node if possible.
+   *
+   * @returns The new focus.
    */
   protected down(): Focus | null {
     this.moved = WalkerMoves.DOWN;
@@ -350,6 +354,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Moves left from the current node if possible.
+   *
+   * @returns The new focus.
    */
   protected left(): Focus | null {
     this.moved = WalkerMoves.LEFT;
@@ -358,6 +364,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Moves right from the current node if possible.
+   *
+   * @returns The new focus.
    */
   protected right(): Focus | null {
     this.moved = WalkerMoves.RIGHT;
@@ -366,6 +374,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Stays on the current node and repeats it.
+   *
+   * @returns The cloned focus.
    */
   protected repeat(): Focus | null {
     this.moved = WalkerMoves.REPEAT;
@@ -374,6 +384,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Makes a depth announcement.
+   *
+   * @returns The cloned focus.
    */
   protected depth(): Focus | null {
     this.moved = this.isSpeech() ? WalkerMoves.DEPTH : WalkerMoves.REPEAT;
@@ -382,6 +394,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Moving to the home position.
+   *
+   * @returns The new focus.
    */
   protected home(): Focus | null {
     this.moved = WalkerMoves.HOME;
@@ -587,6 +601,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Voicing a virtual summary.
+   *
+   * @returns The cloned focus.
    */
   protected summary(): Focus | null {
     this.moved = this.isSpeech() ? WalkerMoves.SUMMARY : WalkerMoves.REPEAT;
@@ -595,6 +611,8 @@ export abstract class AbstractWalker<T> implements Walker {
 
   /**
    * Voices details of a collapsed element without expansion.
+   *
+   * @returns The cloned focus.
    */
   protected detail(): Focus | null {
     this.moved = this.isSpeech() ? WalkerMoves.DETAIL : WalkerMoves.REPEAT;

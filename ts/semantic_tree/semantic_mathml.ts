@@ -142,8 +142,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * Parses semantics elements.
    *
-   * @param node A MathML node.
-   * @param _node
+   * @param _node A MathML node.
    * @param children The children of the node.
    * @returns The newly created semantic node.
    */
@@ -247,8 +246,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * Parses a square root element.
    *
-   * @param node A MathML node.
-   * @param _node
+   * @param _node A MathML node.
    * @param children The children of the node.
    * @returns The newly created semantic node.
    */
@@ -290,8 +288,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * Parses a row of a table.
    *
-   * @param node A MathML node.
-   * @param _node
+   * @param _node A MathML node.
    * @param children The children of the node.
    * @returns The newly created semantic node.
    */
@@ -330,8 +327,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * Parses a table cell.
    *
-   * @param node A MathML node.
-   * @param _node
+   * @param _node A MathML node.
    * @param children The children of the node.
    * @returns The newly created semantic node.
    */
@@ -495,8 +491,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * Parses a mmultiscript node into a tensor representation.
    *
-   * @param node A MathML node.
-   * @param _node
+   * @param _node A MathML node.
    * @param children The nodes children.
    * @returns The semantic tensor node.
    */
@@ -556,10 +551,8 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
   /**
    * Parses an empty element.
    *
-   * @param node A MathML node.
-   * @param children The children of the node.
-   * @param _node
-   * @param _children
+   * @param _node A MathML node.
+   * @param _children The children of the node.
    * @returns The newly created semantic node.
    */
   private empty_(_node: Element, _children: Element[]): SemanticNode {
@@ -584,8 +577,7 @@ export class SemanticMathml extends SemanticAbstractParser<Element> {
    * Parses a dummy element for which no other case is known.
    *
    * @param node A MathML node.
-   * @param children The children of the node.
-   * @param _children
+   * @param _children The children of the node.
    * @returns The newly created semantic node.
    */
   private dummy_(node: Element, _children: Element[]): SemanticNode {

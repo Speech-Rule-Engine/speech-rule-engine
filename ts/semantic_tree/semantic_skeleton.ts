@@ -113,9 +113,7 @@ export class SemanticSkeleton {
   /**
    * Returns a list of the leaf ids for the given collapsed structures.
    *
-   * @param var_args The collapsed structure
-   *     annotations.
-   * @param {...any} args
+   * @param args The collapsed structure annotations.
    * @returns The leafs of the structure annotations.
    */
   public static collapsedLeafs(...args: Sexp[]): number[] {

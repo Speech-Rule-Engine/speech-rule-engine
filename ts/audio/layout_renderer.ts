@@ -116,7 +116,10 @@ const handlers: { [key: string]: (node: Element) => string } = {
 };
 
 /**
- * @param element
+ * Applies a handler to the text element.
+ *
+ * @param element The element.
+ * @returns The text content possibly altered by a layout handler.
  */
 function applyHandler(element: Element): string {
   const tag = DomUtil.tagName(element as Element);
@@ -125,7 +128,10 @@ function applyHandler(element: Element): string {
 }
 
 /**
- * @param str
+ * Sets into 2D.
+ *
+ * @param str The str to be set in 2D.
+ * @returns The 2D expression.
  */
 function setTwoDim(str: string): string {
   twodExpr = '';
@@ -136,8 +142,11 @@ function setTwoDim(str: string): string {
 }
 
 /**
- * @param str1
- * @param str2
+ * Combines content of two strings, preserving the 2D layout.
+ *
+ * @param str1 String 1.
+ * @param str2 String 2.
+ * @returns The combined strings.
  */
 function combineContent(str1: string, str2: string): string {
   if (!str1 || !str2) {
@@ -177,25 +186,31 @@ function recurseTree(dom: Element): string {
 }
 
 /**
+ * Computes the 2D height of the string.
  *
- * @param {string} str
+ * @param {string} str The input string.
+ * @returns The height of the string.
  */
-function strHeight(str: string) {
+function strHeight(str: string): number {
   return str.split(/\r\n|\r|\n/).length;
 }
 
 /**
+ * Computes the max 2D width of the string.
  *
- * @param {string} str
+ * @param {string} str The input string.
+ * @returns The width of the string.
  */
-function strWidth(str: string) {
+function strWidth(str: string): number {
   return str.split(/\r\n|\r|\n/).reduce((max, x) => Math.max(x.length, max), 0);
 }
 
 /**
+ * Pads a string to the given height.
  *
- * @param {string} str
- * @param {number} height
+ * @param {string} str The input string.
+ * @param {number} height The height.
+ * @returns The padded string.
  */
 function padHeight(str: string, height: number): string {
   const padding = height - strHeight(str);
@@ -203,9 +218,11 @@ function padHeight(str: string, height: number): string {
 }
 
 /**
+ * Pads a string to the given width.
  *
- * @param {string} str
- * @param {number} width
+ * @param {string} str The input string.
+ * @param {number} width The width.
+ * @returns The padded string.
  */
 function padWidth(str: string, width: number): string {
   const lines = str.split(/\r\n|\r|\n/);
@@ -218,11 +235,12 @@ function padWidth(str: string, width: number): string {
 }
 
 /**
+ * Pads a cell to the necessary height and width.
  *
- * @param {string} str
- * @param {number} heigth
- * @param height
- * @param {number} width
+ * @param str The input string.
+ * @param height The height.
+ * @param width The width.
+ * @returns The padded cell.
  */
 function padCell(str: string, height: number, width: number): string {
   str = padHeight(str, height);
@@ -238,9 +256,11 @@ declare type row = {
   width: number[];
 };
 
-// Clean row elements and assemble row structure.
 /**
- * @param matrix
+ * Clean row elements and assemble row structure of a matrix.
+ *
+ * @param matrix The matrix element.
+ * @returns List of matrix rows.
  */
 function assembleRows(matrix: Element): row[] {
   const children = Array.from(matrix.childNodes);
@@ -254,9 +274,11 @@ function assembleRows(matrix: Element): row[] {
   return mat;
 }
 
-// Compute max height and width
 /**
- * @param mat
+ * Compute max height and width of a matrix structure.
+ *
+ * @param mat Matrix as a list of rows.
+ * @returns Pair of max height and width.
  */
 function getMaxParameters(mat: row[]): [number, number[]] {
   const maxHeight = mat.reduce((max, x) => Math.max(x.height, max), 0);
@@ -269,10 +291,12 @@ function getMaxParameters(mat: row[]): [number, number[]] {
   return [maxHeight, maxWidth];
 }
 
-// Pad cells and assemble rows.
 /**
- * @param mat
- * @param maxWidth
+ * Pad cells and assemble rows of a matrix structure.
+ *
+ * @param mat The matrix structure as a list of rows.
+ * @param maxWidth The maximum width.
+ * @returns The combined and padded rows.
  */
 function combineCells(mat: row[], maxWidth: number[]): row[] {
   const newMat = [];
@@ -290,10 +314,12 @@ function combineCells(mat: row[], maxWidth: number[]): row[] {
   return newMat;
 }
 
-// Combine rows into matrix
 /**
- * @param mat
- * @param maxHeight
+ * Combine rows into matrix.
+ *
+ * @param mat The matrix structure as a list of rows.
+ * @param maxHeight The maximum height.
+ * @returns The single string with combined and padded columns.
  */
 function combineRows(mat: row[], maxHeight: number): string {
   // If all rows are of heigth 1 assemble them directly.
@@ -322,7 +348,42 @@ function combineRows(mat: row[], maxHeight: number): string {
 }
 
 /**
- * @param matrix
+ * Vertically arranges characters in a matrix or table.
+ *
+ * @param char The characters.
+ * @param height The height of the matrix.
+ * @returns The newly arranged line.
+ */
+function verticalArrange(char: string, height: number) {
+  let str = '';
+  while (height) {
+    str += char + '\n';
+    height--;
+  }
+  return str.slice(0, -1);
+}
+
+/**
+ * Retrieves the fence in the xml element.
+ *
+ * @param node The node.
+ * @returns The string representing the fence.
+ */
+function getFence(node: Node): string {
+  if (
+    node.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
+    DomUtil.tagName(node as Element) === 'FENCE'
+  ) {
+    return applyHandler(node as Element);
+  }
+  return '';
+}
+
+/**
+ * Handler that transforms matrix into 2D layout.
+ *
+ * @param matrix The matrix element.
+ * @returns The tranformed string.
  */
 function handleMatrix(matrix: Element): string {
   let mat = assembleRows(matrix);
@@ -332,10 +393,13 @@ function handleMatrix(matrix: Element): string {
 }
 
 /**
- * @param matrix
+ * Handler that transforms a table into 2D layout.
+ *
+ * @param table The table element.
+ * @returns The transformed string.
  */
-function handleTable(matrix: Element): string {
-  let mat = assembleRows(matrix);
+function handleTable(table: Element): string {
+  let mat = assembleRows(table);
   // TODO: Adapt this so cells of length one will be retained!
   mat.forEach((row) => {
     row.cells = row.cells.slice(1).slice(0, -1);
@@ -348,10 +412,13 @@ function handleTable(matrix: Element): string {
 
 // TODO: Check with Michael why the number indicator is omitted (e.g., 16.4-1)
 /**
- * @param matrix
+ * Handler that transforms a case statement into 2D layout.
+ *
+ * @param cases The cases element.
+ * @returns The transformed string.
  */
-function handleCases(matrix: Element): string {
-  let mat = assembleRows(matrix);
+function handleCases(cases: Element): string {
+  let mat = assembleRows(cases);
   mat.forEach((row) => {
     row.cells = row.cells.slice(0, -1);
     row.width = row.width.slice(0, -1);
@@ -362,10 +429,13 @@ function handleCases(matrix: Element): string {
 }
 
 /**
- * @param matrix
+ * Handler that transforms a Cayley table into 2D layout.
+ *
+ * @param cayley The table element.
+ * @returns The transformed string.
  */
-function handleCayley(matrix: Element): string {
-  let mat = assembleRows(matrix);
+function handleCayley(cayley: Element): string {
+  let mat = assembleRows(cayley);
   mat.forEach((row) => {
     row.cells = row.cells.slice(1).slice(0, -1);
     row.width = row.width.slice(1).slice(0, -1);
@@ -386,20 +456,10 @@ function handleCayley(matrix: Element): string {
 }
 
 /**
- * @param char
- * @param height
- */
-function verticalArrange(char: string, height: number) {
-  let str = '';
-  while (height) {
-    str += char + '\n';
-    height--;
-  }
-  return str.slice(0, -1);
-}
-
-/**
- * @param row
+ * Handler for transforming a table row.
+ *
+ * @param row The row element.
+ * @returns The internal row representation to pass to the next handler.
  */
 function handleRow(row: Element): row {
   const children = Array.from(row.childNodes);
@@ -432,21 +492,11 @@ function handleRow(row: Element): row {
 }
 
 /**
- * @param node
- */
-function getFence(node: Node): string {
-  if (
-    node.nodeType === DomUtil.NodeType.ELEMENT_NODE &&
-    DomUtil.tagName(node as Element) === 'FENCE'
-  ) {
-    return applyHandler(node as Element);
-  }
-  return '';
-}
-
-/**
- * @param cell
- * @param width
+ * Centers the cell of a fraction.
+ *
+ * @param cell The cell.
+ * @param width The width of the fraction line.
+ * @returns The padded and centered cell.
  */
 function centerCell(cell: string, width: number): string {
   const cw = strWidth(cell);
@@ -468,7 +518,10 @@ function centerCell(cell: string, width: number): string {
 }
 
 /**
- * @param frac
+ * Handler for transforming a fraction into 2D layout.
+ *
+ * @param frac The fraction node.
+ * @returns The transformed string.
  */
 function handleFraction(frac: Node): string {
   const [open, num, , den, close] = Array.from(frac.childNodes);
@@ -486,7 +539,11 @@ function handleFraction(frac: Node): string {
 }
 
 /**
- * @param prt
+ * Handler for denominator or numerator of a fraction. Ensures that indicators
+ * are correctly set.
+ *
+ * @param prt The element representing numerator or denominator.
+ * @returns The transformed string.
  */
 function handleFractionPart(prt: Element): string {
   const fchild = prt.firstChild as Element;

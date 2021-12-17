@@ -29,7 +29,7 @@ import { Combiners } from '../transformers';
 let locale: Locale = null;
 
 /**
- *
+ * @returns The Hindi Locale.
  */
 export function hi(): Locale {
   if (!locale) {
@@ -40,7 +40,7 @@ export function hi(): Locale {
 }
 
 /**
- *
+ * @returns The Hindi Locale.
  */
 function create(): Locale {
   const loc = createLocale();

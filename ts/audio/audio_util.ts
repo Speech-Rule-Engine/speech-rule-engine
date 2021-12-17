@@ -355,9 +355,7 @@ export function isSpanElement(element: Markup): boolean {
  * @param pers A personality annotation.
  * @param join An optional joiner string.
  * @param pause A pause annotation.
- * @param opt_merge Flag that specifies subsequent pauses are to be
- *     merged.
- * @param merge
+ * @param merge Flag that specifies subsequent pauses are to be merged.
  */
 function appendMarkup_(
   markup: Markup[],

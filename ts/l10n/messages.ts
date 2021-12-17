@@ -96,7 +96,7 @@ export interface Numbers {
 }
 
 /**
- *
+ * @returns A numbers structure.
  */
 export function NUMBERS(): Numbers {
   return {
@@ -228,7 +228,7 @@ export interface Functions {
 }
 
 /**
- *
+ * @returns A functions structure.
  */
 export function FUNCTIONS(): Functions {
   return {

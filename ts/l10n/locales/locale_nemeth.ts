@@ -86,7 +86,7 @@ const parensCombiner = function (
 let locale: Locale = null;
 
 /**
- *
+ * @returns The Nemeth locale.
  */
 export function nemeth(): Locale {
   if (!locale) {
@@ -97,7 +97,7 @@ export function nemeth(): Locale {
 }
 
 /**
- *
+ * @returns The Nemeth locale.
  */
 function create(): Locale {
   const loc = createLocale();

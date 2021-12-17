@@ -73,14 +73,11 @@ export class Processor<T> {
    * Processors bundles a processing method with a collection of output methods.
    *
    * @param name The name of the processor.
-   * @param {{processor: function(string): T,
-   *          postprocessor: (undefined|function(T, string): T),
-   *          print: (undefined|function(T): string),
-   *          pprint: (undefined|function(T): string)}} methods
-   * @param methods.processor
-   * @param methods.postprocessor
-   * @param methods.print
-   * @param methods.pprint
+   * @param methods The set of methods for the processor.
+   * @param methods.processor The core processor.
+   * @param methods.postprocessor The post processor.
+   * @param methods.print Print method.
+   * @param methods.pprint Pretty print method.
    */
   constructor(
     public name: string,
@@ -125,12 +122,6 @@ export class KeyProcessor<T> extends Processor<T> {
   }
 
   /**
-   * @param name The name of the processor.
-   * @param {{processor: function(string): T,
-   *          key: (undefined|function((sre.EventUtil.KeyCode|string)):
-   *                              sre.EventUtil.KeyCode),
-   *          print: (undefined|function(T): string),
-   *          pprint: (undefined|function(T): string)}} methods
    * @override
    */
   constructor(

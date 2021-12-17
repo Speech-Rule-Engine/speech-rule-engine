@@ -69,8 +69,7 @@ export class MathStore extends BaseRuleStore {
    * Adds an alias for an existing precondition.
    *
    * @param name The name of the precondition.
-   * @param query Precondition query of the rule.
-   * @param prec
+   * @param prec Precondition query of the rule.
    * @param args Additional static precondition constraints.
    */
   public defineAlias(name: string, prec: string, ...args: string[]) {
@@ -160,8 +159,7 @@ export class MathStore extends BaseRuleStore {
    * Adds a specialization for a given precondition.
    *
    * @param name The name of the rule.
-   * @param old The old dynamic constraint.
-   * @param _old
+   * @param _old The old dynamic constraint.
    * @param dynamic The new dynamic constraint.
    */
   public defineSpecialized(name: string, _old: string, dynamic: string) {

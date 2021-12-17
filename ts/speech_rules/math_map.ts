@@ -74,7 +74,8 @@ export function init() {
 /**
  * Loads a new locale if necessary.
  *
- * @param locale
+ * @param locale The locale to be loaded. Defaults to current locale of the
+ *     engine.
  */
 export function loadLocale(locale = Engine.getInstance().locale) {
   if (!EnginePromise.loaded[locale]) {
@@ -110,7 +111,6 @@ function loadMethod() {
  * Retrieves JSON rule mappings for a given locale.
  *
  * @param locale The target locale.
- * @param parse Method adding the rules.
  */
 export function retrieveFiles(locale: string) {
   const loader = loadMethod();
@@ -205,12 +205,10 @@ function getJsonIE_(locale: string, opt_count?: number) {
 }
 
 /**
- * Takes path to a JSON file and returns a JSON object.
+ * Computes path to a JSON file from the locale and returns a JSON object.
  *
- * @param path Contains the path to a JSON file.
- * @param func Method adding the rules.
- * @param locale
- * @returns JSON.
+ * @param locale The locale to be loaded.
+ * @returns A promise the resolves to the JSON string.
  */
 export function loadFile(locale: string): Promise<string> {
   const file = FileUtil.localePath(locale);
@@ -247,7 +245,7 @@ export function loadFileSync(locale: string): Promise<string> {
  * Sents AJAX request to retrieve a JSON rule file.
  *
  * @param locale The locale to retrieve.
- * @param parse Method adding the rules.
+ * @returns A promise the resolves to the JSON string.
  */
 export function loadAjax(locale: string): Promise<string> {
   const file = FileUtil.localePath(locale);

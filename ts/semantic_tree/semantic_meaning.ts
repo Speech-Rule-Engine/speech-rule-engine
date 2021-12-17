@@ -110,8 +110,6 @@ export const enum SemanticType {
 /**
  * Mapping for roles of nodes.
  * Roles are more specific than types.
- *
- * @final
  */
 export const enum SemanticRole {
   // Punctuation.

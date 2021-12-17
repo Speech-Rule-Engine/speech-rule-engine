@@ -111,7 +111,6 @@ export function makeDomains_() {
  * Generates alphabet rules for the locale and adds them to the given store.
  *
  * @param locale The current locale.
- * @param store The current speech rule store.
  */
 export function generate(locale: string) {
   const oldLocale = Engine.getInstance().locale;
@@ -159,10 +158,10 @@ function num2str(num: number): string {
  *
  * @param int Pair of strings that represent the Unicode value
  *      of the start and end character in the interval.
+ * @param int."0" Start of range.
+ * @param int."1" End of range.
  * @param subst Substitutions of characters in the
  *      above interval.
- * @param int."0"
- * @param int."1"
  * @returns The generated interval of Unicode characters.
  */
 export function makeInterval(
@@ -203,7 +202,6 @@ export function getFont(font: string): { font: string; combiner: Combiner } {
 /**
  * Generates rules for letters.
  *
- * @param store The compound store.
  * @param keys The unicode values to add.
  * @param unicodes The actual unicode characters corrsponding
  *     to the values in keys.
@@ -247,7 +245,6 @@ export function alphabetRules(
 /**
  * Generates rules for numbers.
  *
- * @param store The compound store.
  * @param keys The unicode values to add.
  * @param unicodes The actual unicode characters corrsponding
  *     to the values in keys.
@@ -283,7 +280,6 @@ export function numberRules(
 /**
  * Makes all rules for a single character.
  *
- * @param store The compound store.
  * @param combiner The combining
  *     function for generating the rule action.
  * @param key The unicode value of the character.

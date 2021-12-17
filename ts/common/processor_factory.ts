@@ -39,7 +39,6 @@ const PROCESSORS = new Map();
 /**
  * Adds a processor to the processor map.
  *
- * @param name The name of the processor.
  * @param processor The processor object.
  */
 export function set<T>(processor: Processor<T>) {

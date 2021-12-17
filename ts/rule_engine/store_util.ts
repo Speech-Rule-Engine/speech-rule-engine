@@ -52,8 +52,7 @@ export function nodeCounter(
 /**
  * Returns a separating pause element.
  *
- * @param nodes A node array.
- * @param _nodes
+ * @param _nodes A node array.
  * @param context A pause value string.
  * @returns A closure that
  *     returns a personality description of a single pause.

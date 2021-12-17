@@ -57,7 +57,7 @@ const germanPostfixCombiner = function (
 let locale: Locale = null;
 
 /**
- *
+ * @returns The German locale.
  */
 export function de(): Locale {
   if (!locale) {
@@ -68,7 +68,7 @@ export function de(): Locale {
 }
 
 /**
- *
+ * @returns The German locale.
  */
 function create(): Locale {
   const loc = createLocale();

@@ -163,8 +163,7 @@ export class SemanticNodeFactory {
   /**
    * Creates a new node object.
    *
-   * @param opt_id Optional ID. It will be maxed with the current id.
-   * @param id
+   * @param id Optional ID. It will be maxed with the current id.
    * @returns The newly created node.
    */
   private createNode_(id?: number): SemanticNode {

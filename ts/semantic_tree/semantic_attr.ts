@@ -3577,8 +3577,7 @@ function secKey(kind: string, char: string) {
  * Builds the secondary annotation structure.
  *
  * @param kind The kind of annotation.
- * @param char The characters to look up.
- * @param chars
+ * @param chars The characters to look up.
  * @param annotation Optionally an annotation value. Default is `kind`.
  */
 function addSecondary_(kind: string, chars: string[], annotation = '') {

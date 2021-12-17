@@ -441,10 +441,9 @@ export function isSmallVulgarFraction(node: Element): Element[] {
  *
  * @param node Subscript node.
  * @param init Initial prefix string.
- * @param replace Prefix strings for sub and
- *     superscript.
- * @param replace.sup
- * @param replace.sub
+ * @param replace Prefix strings for sub and superscript.
+ * @param replace.sup Superscript prefixes.
+ * @param replace.sub Subscript prefixes.
  * @returns The complete prefix string.
  */
 export function nestedSubSuper(
@@ -807,7 +806,8 @@ export function overscoreNestingDepth(node: Element): number {
 }
 
 /**
- * @param _node
+ * @param _node The node, which is ignored.
+ * @returns The endscripts message for the current locale.
  */
 export function endscripts(_node: Element) {
   return LOCALE.MESSAGES.MS.ENDSCRIPTS;
@@ -972,7 +972,7 @@ function generateTensorRuleStrings_(
  * Generator for tensor speech rules.
  *
  * @param store The mathstore to which the rules are added.
- * @param brief
+ * @param brief Flag for brief style rule.
  */
 export function generateTensorRules(store: SpeechRuleStore, brief = true) {
   // Constellations are built as bitvectors with the meaning:

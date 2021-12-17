@@ -67,7 +67,6 @@ export const XML_ENTITIES: { [key: string]: boolean } = {
  * Parses the XML input string into an XML structure.
  *
  * @param input The XML input string.
- * @param opt_error Optional error function.
  * @returns The XML document structure corresponding to the node.
  */
 export function parseInput(input: string): Element {

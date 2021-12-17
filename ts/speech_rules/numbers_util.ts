@@ -27,8 +27,7 @@ import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 /**
  * Simple counter function for counting ordinals.
  *
- * @param node The node for the context function.
- * @param _node
+ * @param _node The node for the context function.
  * @param context The context string.
  * @returns The context function returning ordinals.
  */
@@ -42,8 +41,7 @@ export function ordinalCounter(_node: Node, context: string): () => string {
 /**
  * Simple counter function for counting ordinals.
  *
- * @param node The node for the context function.
- * @param _node
+ * @param _node The node for the context function.
  * @param context The context string.
  * @returns The context function returning ordinals.
  */

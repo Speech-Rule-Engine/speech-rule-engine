@@ -230,7 +230,7 @@ Engine.getInstance().evaluator = lookupString;
  * Collates information on dynamic constraint values of the currently active
  * trie of the engine.
  *
- * @param opt_info Initial dynamic constraint information.
+ * @param info Initial dynamic constraint information.
  * @returns The collated information.
  */
 export function enumerate(info: { [key: string]: any } = {}): {
@@ -247,7 +247,11 @@ export function enumerate(info: { [key: string]: any } = {}): {
 }
 
 /**
- * @param dynamic
+ * Adds information from dynamic constraints to the existing info.
+ *
+ * @param dynamic The dynamic constraint.
+ * @param info The dynamic constraint information so far.
+ * @returns The completed info.
  */
 function enumerate_(
   dynamic: string[],
@@ -313,7 +317,7 @@ function getSubStore_(key: string): MathSimpleStore {
 /**
  * Transfers parameters of the compound store to a substore.
  *
- * @param store
+ * @param store A simple math store.
  * @param opt_cat The category if it exists.
  */
 function setupStore_(store: MathSimpleStore, opt_cat?: string) {

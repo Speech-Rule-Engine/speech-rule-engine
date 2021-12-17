@@ -45,7 +45,6 @@ export class CaseText extends AbstractEnrichCase {
 
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);

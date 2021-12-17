@@ -31,7 +31,7 @@ import { Combiners } from '../transformers';
 let locale: Locale = null;
 
 /**
- *
+ * @returns The French locale.
  */
 export function fr(): Locale {
   if (!locale) {
@@ -42,7 +42,7 @@ export function fr(): Locale {
 }
 
 /**
- *
+ * @returns The French locale.
  */
 function create(): Locale {
   const loc = createLocale();

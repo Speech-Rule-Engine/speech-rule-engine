@@ -68,7 +68,6 @@ export class CaseLimit extends AbstractEnrichCase {
 
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);

@@ -130,7 +130,6 @@ export class CaseEmbellished extends AbstractEnrichCase {
 
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);

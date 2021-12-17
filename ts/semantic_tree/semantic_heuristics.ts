@@ -39,7 +39,10 @@ SemanticHeuristics.add(
   new SemanticTreeHeuristic('combine_juxtaposition', combineJuxtaposition)); 
 
 /**
- * @param root
+ * Combines juxtapositions as much as possible.
+ *
+ * @param root The root of the juxtaposition tree.
+ * @returns The updated node.
  */
 function combineJuxtaposition(root: SemanticNode) {
   for (
@@ -68,7 +71,7 @@ function combineJuxtaposition(root: SemanticNode) {
 SemanticHeuristics.add(
   new SemanticTreeHeuristic(
     'propagateSimpleFunction',
-    (node) => {
+    (node: SemanticNode) => {
       if (
         (node.type === SemanticType.INFIXOP ||
           node.type === SemanticType.FRACTION) &&
@@ -78,7 +81,7 @@ SemanticHeuristics.add(
       }
       return node;
     },
-    (_node) => Engine.getInstance().domain === 'clearspeak'
+    (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
   )
 );
 
@@ -89,7 +92,7 @@ SemanticHeuristics.add(
 SemanticHeuristics.add(
 new SemanticTreeHeuristic(
   'simpleNamedFunction',
-  (node) => {
+  (node: SemanticNode) => {
     const specialFunctions = ['f', 'g', 'h', 'F', 'G', 'H'];
     if (
       node.role !== SemanticRole.UNIT &&
@@ -99,7 +102,7 @@ new SemanticTreeHeuristic(
     }
     return node;
   },
-  (_node) => Engine.getInstance().domain === 'clearspeak'
+  (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
 ));
 
 /**
@@ -109,7 +112,7 @@ new SemanticTreeHeuristic(
 SemanticHeuristics.add(
 new SemanticTreeHeuristic(
   'propagateComposedFunction',
-  (node) => {
+  (node: SemanticNode) => {
     if (
       node.type === SemanticType.FENCED &&
       node.childNodes[0].role === SemanticRole.COMPFUNC
@@ -118,7 +121,7 @@ new SemanticTreeHeuristic(
     }
     return node;
   },
-  (_node) => Engine.getInstance().domain === 'clearspeak'
+  (_node: SemanticNode) => Engine.getInstance().domain === 'clearspeak'
 ));
 
 /**
@@ -127,7 +130,7 @@ new SemanticTreeHeuristic(
  * is used.
  */
 SemanticHeuristics.add(
-new SemanticTreeHeuristic('multioperator', (node) => {
+new SemanticTreeHeuristic('multioperator', (node: SemanticNode) => {
   if (node.role !== SemanticRole.UNKNOWN || node.textContent.length <= 1) {
     return;
   }
@@ -201,7 +204,7 @@ new SemanticMultiHeuristic('convert_juxtaposition', (nodes) => {
 SemanticHeuristics.add(
 new SemanticTreeHeuristic(
   'simple2prefix',
-  (node) => {
+  (node: SemanticNode) => {
     if (
       node.textContent.length > 1 &&
       // TODO: Discuss this line!
@@ -211,7 +214,7 @@ new SemanticTreeHeuristic(
     }
     return node;
   },
-  (node) =>
+  (node: SemanticNode) =>
     Engine.getInstance().modality === 'braille' &&
     node.type === SemanticType.IDENTIFIER
 ));
@@ -223,7 +226,7 @@ new SemanticTreeHeuristic(
 SemanticHeuristics.add(
 new SemanticTreeHeuristic(
   'detect_cycle',
-  (node) => {
+  (node: SemanticNode) => {
     // TODO: Test for simple elements?
     node.type = SemanticType.MATRIX;
     node.role = SemanticRole.CYCLE;
@@ -233,7 +236,7 @@ new SemanticTreeHeuristic(
     row.contentNodes = [];
     return node;
   },
-  (node) =>
+  (node: SemanticNode) =>
     Engine.getInstance().modality === 'braille' &&
     node.type === SemanticType.FENCED &&
     node.childNodes[0].type === SemanticType.INFIXOP &&

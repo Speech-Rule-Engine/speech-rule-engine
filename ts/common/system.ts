@@ -46,8 +46,8 @@ export const version: string = Variables.VERSION;
  * feature parameter is ignored, however, this could be used to fine tune the
  * setup.
  *
- * @param feature An object describing some
- *     setup features.
+ * @param feature An object describing some setup features.
+ * @returns The promise that resolves once setup is complete.
  */
 export async function setupEngine(feature: {
   [key: string]: boolean | string;
@@ -94,7 +94,9 @@ export async function setupEngine(feature: {
 }
 
 /**
+ * The actual configuration method. 
  *
+ * @param feature An object describing some setup features.
  */
 function config(feature: { [key: string]: boolean | string }) {
   if (
@@ -112,8 +114,7 @@ declare const SREfeature: { [key: string]: any };
 /**
  * Reads configuration blocks and adds them to the feature vector.
  *
- * @param feature An object describing some
- *     setup features.
+ * @param feature An object describing some setup features.
  */
 function configFeature(feature: { [key: string]: boolean | string }) {
   if (typeof SREfeature !== 'undefined') {
@@ -126,8 +127,7 @@ function configFeature(feature: { [key: string]: boolean | string }) {
 /**
  * Reads configuration blocks and adds them to the feature vector.
  *
- * @param feature An object describing some
- *     setup features.
+ * @param feature An object describing some setup features.
  */
 function configBlocks(feature: { [key: string]: boolean | string }) {
   const scripts = document.documentElement.querySelectorAll(
@@ -348,6 +348,7 @@ export function processFile(
  * @param processor The name of the processor.
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
+ * @returns The result that has been written to the file.
  */
 export function processFileSync(
   processor: string,
@@ -389,8 +390,8 @@ function inputFileSync_(file: string): string {
  *
  * @param processor The name of the processor.
  * @param file The input filename.
- * @param opt_output The output filename if one is given.
- * @param output
+ * @param output The output filename if one is given.
+ * @returns The result of that is written to the file.
  */
 async function processFileAsync(
   processor: string,

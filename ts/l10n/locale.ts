@@ -43,7 +43,7 @@ export interface Locale {
 export const LOCALE: Locale = createLocale();
 
 /**
- *
+ * @returns Creates a locale structure.
  */
 export function createLocale(): Locale {
   return {

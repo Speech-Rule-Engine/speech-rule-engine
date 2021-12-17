@@ -391,8 +391,9 @@ export class RebuildStree {
    *
    * @param {string} id of the node.
    * @param {SemanticNode} snode The parent node.
+   * @returns The newly assembled child node.
    */
-  private setParent(id: string, snode: SemanticNode) {
+  private setParent(id: string, snode: SemanticNode): SemanticNode {
     const mml = WalkerUtil.getBySemanticId(this.mathml, id);
     const sn = this.assembleTree(mml);
     sn.parent = snode;

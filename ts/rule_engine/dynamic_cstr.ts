@@ -42,11 +42,13 @@ export type AxisValues = { [key: string]: boolean };
 export type AxisMap = { [key: string]: string };
 
 export class DynamicProperties {
+
   /**
    * Convenience method to create a standard dynamic constraint, that follows a
    * pre-prescribed order of the axes.
    *
    * @param cstrList Dynamic property lists for the Axes.
+   * @returns The dynamic property object created.
    */
   public static createProp(...cstrList: string[][]): DynamicProperties {
     const axes = DynamicCstr.DEFAULT_ORDER;
@@ -58,10 +60,8 @@ export class DynamicProperties {
   }
 
   /**
-   * @param properties The
-   *     property mapping.
-   * @param opt_order A parse order of the keys.
-   * @param order
+   * @param properties The property mapping.
+   * @param order A parse order of the keys.
    */
   constructor(
     private properties: AxisProperties,
@@ -169,6 +169,7 @@ export class DynamicCstr extends DynamicProperties {
    * pre-prescribed order of the axes.
    *
    * @param cstrList Dynamic constraint values for the Axes.
+   * @returns The newly created dynamic constraint.
    */
   public static createCstr(...cstrList: string[]): DynamicCstr {
     const axes = DynamicCstr.DEFAULT_ORDER;
@@ -209,10 +210,8 @@ export class DynamicCstr extends DynamicProperties {
    * Dynamic constraints are a means to specialize rules that can be changed
    * dynamically by the user, for example by choosing different styles, etc.
    *
-   * @param cstr The constraint mapping.
-   * @param opt_order A parse order of the keys.
-   * @param components_
-   * @param order
+   * @param components_ The constraint mapping.
+   * @param order A parse order of the keys.
    */
   constructor(components_: AxisMap, order?: AxisOrder) {
     const properties: AxisProperties = {};
@@ -386,7 +385,6 @@ export class DefaultComparator implements Comparator {
 
   /**
    * @override
-   * @final
    */
   public getReference() {
     return this.reference;
@@ -394,7 +392,6 @@ export class DefaultComparator implements Comparator {
 
   /**
    * @override
-   * @final
    */
   public setReference(cstr: DynamicCstr, props?: DynamicProperties) {
     this.reference = cstr;

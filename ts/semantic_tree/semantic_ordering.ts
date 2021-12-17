@@ -88,9 +88,7 @@ export function reduce(meanings: SemanticMeaning[]): SemanticMeaning[] {
 export class SemanticComparator {
   /**
    * @param comparator The actual comparator function.
-   * @param opt_type Type restriction for a comparator to
-   *      work on. If not given it works on any type.
-   * @param type
+   * @param type Type restriction for a comparator to work on. If not given it works on any type.
    */
   constructor(
     public comparator: (p1: SemanticMeaning, p2: SemanticMeaning) => number,

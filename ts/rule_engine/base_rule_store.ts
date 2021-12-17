@@ -554,7 +554,7 @@ export abstract class BaseRuleStore
    * inherited elements.
    *
    * @param name The name of the rule to be deleted.
-   * @param {...any} cstrs
+   * @param cstrs The rest constraints of the rule.
    */
   public ignoreRules(name: string, ...cstrs: string[]) {
     let rules = this.findAllRules((r: SpeechRule) => r.name === name);
@@ -599,10 +599,10 @@ export class Condition {
   private allCstr: { [cond: string]: boolean } = {};
 
   /**
+   * Constructs a rule condition.
    *
-   * @param {DynamicCstr} dynamic
-   * @param base
-   * @param {Precondition} condition
+   * @param base The dynamic base constraint.
+   * @param condition The remaining precondition constraints.
    */
   constructor(private base: DynamicCstr, condition: Precondition) {
     this.constraints.push(base);
@@ -617,7 +617,7 @@ export class Condition {
    * Adds a dynamic constraint to a condition. This simply inherits the already
    * given preconditions.
    *
-   * @param {DynamicCstr} dynamic
+   * @param dynamic The dynamic constraint.
    */
   public addConstraint(dynamic: DynamicCstr) {
     if (this.constraints.filter((cstr) => cstr.equal(dynamic)).length) {

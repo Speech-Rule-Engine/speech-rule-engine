@@ -105,8 +105,8 @@ export class MathSimpleStore {
    * strings only into a list of speech rules.
    *
    * @param name Name for the rules.
-   * @param locale
-   * @param modality
+   * @param locale The locale of the rule.
+   * @param modality The modality of the rule.
    * @param str String for precondition and constraints.
    * @param mapping Simple string
    *     mapping.
@@ -138,6 +138,7 @@ export class MathSimpleStore {
    * Retrieves a store for a given locale string.
    *
    * @param key The locale key.
+   * @returns The corresponding store.
    */
   public getRules(key: string) {
     let store = this.rules.get(key);
@@ -151,14 +152,12 @@ export class MathSimpleStore {
   /**
    * Creates a single rule from strings.
    *
-   * @param name Name of the rule.
-   * @param _name
-   * @param locale
-   * @param modality
+   * @param _name Name of the rule.
+   * @param locale The locale of the rule.
+   * @param modality The modality of the rule.
    * @param domain The domain axis.
    * @param style The style axis.
-   * @param str String for precondition and constraints.
-   * @param _str
+   * @param _str String for precondition and constraints.
    * @param content The content for the postcondition.
    */
   public defineRuleFromStrings(

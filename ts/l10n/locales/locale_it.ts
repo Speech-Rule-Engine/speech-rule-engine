@@ -42,7 +42,7 @@ const italianPostfixCombiner = function (
 let locale: Locale = null;
 
 /**
- *
+ * @returns The Italian Locale.
  */
 export function it(): Locale {
   if (!locale) {
@@ -53,7 +53,7 @@ export function it(): Locale {
 }
 
 /**
- *
+ * @returns The Italian Locale.
  */
 function create(): Locale {
   const loc = createLocale();

@@ -122,8 +122,7 @@ export function unicodeToNumber(unicode: string): number | null {
  * Transforms a numberic representation of a unicode character into its
  * corresponding string.
  *
- * @param number Unicode point.
- * @param num
+ * @param num Unicode point.
  * @returns The string representation.
  */
 export function numberToUnicode(num: number): string {

@@ -55,7 +55,6 @@ export const blacklist: { [key: string]: boolean } = {};
 /**
  * Register a heuristic with the handler.
  *
- * @param name The name of the heuristic.
  * @param heuristic The heuristic.
  */
 export function add(

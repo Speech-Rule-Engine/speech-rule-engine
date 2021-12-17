@@ -60,8 +60,7 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
    * @param b Upper boundary of source interval.
    * @param c Lower boundary of target interval.
    * @param d Upper boundary of target interval.
-   * @param opt_decimals Number of digits after the decimal point.
-   * @param decimals
+   * @param decimals Number of digits after the decimal point.
    */
   public setScaleFunction(
     a: number,
@@ -96,6 +95,7 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
    * Check if a given property is to be ignore by a markup renderer.
    *
    * @param key The property key.
+   * @returns True if the element is to be ignored.
    */
   protected ignoreElement(key: string) {
     return this.ignoreElements.indexOf(key) !== -1;

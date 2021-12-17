@@ -51,7 +51,6 @@ export class CaseDoubleScript extends AbstractEnrichCase {
 
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);

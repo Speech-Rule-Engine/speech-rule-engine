@@ -34,11 +34,10 @@ import { SvgV3Highlighter } from './svg_v3_highlighter';
  *
  * @param back A background color specification.
  * @param fore A foreground color specification.
- * @param {{renderer: string,
- *          browser: (undefined|string)}} rendererInfo Information on renderer,
+ * @param rendererInfo Information on renderer,
  * browser. Has to at least contain the renderer field.
- * @param rendererInfo.renderer
- * @param rendererInfo.browser
+ * @param rendererInfo.renderer The renderer name.
+ * @param rendererInfo.browser The browser name.
  * @returns A new highlighter.
  */
 export function highlighter(
@@ -67,8 +66,8 @@ export function highlighter(
  *     type and function to execute
  * @param rendererInfo Information on renderer,
  * browser. Has to at least contain the renderer field.
- * @param rendererInfo.renderer
- * @param rendererInfo.browser
+ * @param rendererInfo.renderer The renderer name.
+ * @param rendererInfo.browser The browser name.
  */
 export function addEvents(
   node: HTMLElement,

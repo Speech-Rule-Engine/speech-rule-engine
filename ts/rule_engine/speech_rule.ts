@@ -43,10 +43,8 @@ export class SpeechRule {
    * Creates a speech rule with precondition, actions and admin information.
    *
    * @param name The name of the rule.
-   * @param dynamic Dynamic constraint annotations of the rule.
-   * @param prec Precondition of the rule.
-   * @param dynamicCstr
-   * @param precondition
+   * @param dynamicCstr Dynamic constraint annotations of the rule.
+   * @param precondition Precondition of the rule.
    * @param action Action of the speech rule.
    */
   constructor(
@@ -82,11 +80,11 @@ export enum ActionType {
   PERSONALITY = 'PERSONALITY'
 }
 
-// TODO (TS):
 /**
  * Maps a string to a valid speech rule type.
  *
- * @param str Input string.
+ * @param str The action string. 
+ * @returns The action type.
  */
 function actionFromString(str: string): ActionType {
   switch (str) {
@@ -106,8 +104,8 @@ function actionFromString(str: string): ActionType {
 /**
  * Maps a speech rule type to a human-readable string.
  *
- * @param speechType
- * @returns Output string.
+ * @param speechType The action type.
+ * @returns The action string.
  */
 function actionToString(speechType: ActionType): string {
   switch (speechType) {
@@ -263,8 +261,11 @@ export class Component {
   /**
    * Defines a component within a speech rule.
    *
-   * @param {type, content, attributes, grammar} The input component in JSON
-   *     format.
+   * @param comp input component in JSON format.
+   * @param comp.type The type of the component.
+   * @param comp.content Its content.
+   * @param comp.attributes The additional attributes.
+   * @param comp.grammar Grammar annotations.
    */
   constructor({ type, content, attributes, grammar }: ComponentType) {
     this.type = type;

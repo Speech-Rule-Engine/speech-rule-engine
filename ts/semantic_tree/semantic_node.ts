@@ -343,9 +343,7 @@ export class SemanticNode {
    * Updates the content of the node thereby possibly changing type and role.
    *
    * @param content The new content string.
-   * @param opt_text Text indicator. If true non-breaking spaces are
-   *     retained.
-   * @param text
+   * @param text Text indicator. If true non-breaking spaces are retained.
    */
   public updateContent(content: string, text?: boolean) {
     // Remove superfluous whitespace only if it is not the only content!

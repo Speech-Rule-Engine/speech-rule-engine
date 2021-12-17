@@ -98,8 +98,8 @@ export function localEnclose(enclose: string): string {
  * Extracts a string from a combined message entry.
  *
  * @param combiner The combined message
- * @param fallback
- * @returns The name
+ * @param fallback The fallback if no string can be extracted.
+ * @returns The name.
  */
 export function extractString(
   combiner: string | [string, string],

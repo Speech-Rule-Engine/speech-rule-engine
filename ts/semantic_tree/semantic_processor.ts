@@ -825,14 +825,10 @@ export default class SemanticProcessor {
    * It rewrites all other fences into punctuations.
    * For eligibility see sre.SemanticPred.isElligibleEmbellishedFence
    *
-   * @param {{rel: !Array.<sre.SemanticNode>,
-   *          comp: !Array.<!Array.<sre.SemanticNode>>}} partition A partition
-   * for fences.
-   * @param partition.rel
-   * @param partition.comp
-   * @returns {{rel: !Array.<sre.SemanticNode>,
-   *           comp: !Array.<!Array.<sre.SemanticNode>>}} The cleansed
-   * partition.
+   * @param partition A partition for fences.
+   * @param partition.rel The list of relations.
+   * @param partition.comp The list of intermediate expressions.
+   * @returns The cleansed partition.
    */
   private static purgeFences_(partition: {
     rel: SemanticNode[];
@@ -887,8 +883,7 @@ export default class SemanticProcessor {
    *
    * @param node The original fenced node.
    * @param fence The fence node.
-   * @returns {{node: !sre.SemanticNode,
-   *           fence: !sre.SemanticNode}} The rewritten node and fence.
+   * @returns The rewritten node and fence.
    */
   // TODO (sorge) Maybe remove the superfluous MathML element.
   private static rewriteFence_(
@@ -946,9 +941,8 @@ export default class SemanticProcessor {
    * @param table The table node.
    * @param columns The columns.
    * @param relation The main relation to classify.
-   * @param alternatives Alternative relations that are
+   * @param _alternatives Alternative relations that are
    *     permitted in addition to the main relation.
-   * @param _alternatives
    * @returns True if classification was successful.
    */
   private static classifyByColumns_(
@@ -1655,8 +1649,7 @@ export default class SemanticProcessor {
   /**
    * Parses the label of an inference rule.
    *
-   * @param node The inference node.
-   * @param _node
+   * @param _node The inference node.
    * @param children The node's children containing the label.
    * @param parse The
    *     current semantic parser for list of nodes.
@@ -3004,10 +2997,10 @@ export default class SemanticProcessor {
   /**
    * Create a punctuated node.
    *
-   * @param nodes List of all nodes separated
-   * by punctuations.
-   * @param punctuations List of all separating
-   * punctations. Observe that punctations is a subset of nodes.
+   * @param nodes List of all nodes separated by punctuations.
+   * @param punctuations List of all separating punctations. Observe that
+   *     punctations is a subset of nodes.
+   * @returns The newly create node.
    */
   private punctuatedNode_(
     nodes: SemanticNode[],
@@ -3404,19 +3397,14 @@ export default class SemanticProcessor {
   /**
    * Tail recursive function to obtain integral arguments.
    *
-   * @param nodes List of nodes to take
-   * arguments from.
-   * @param opt_args List of integral arguments.
-   * @returns {{integrand: !Array.<sre.SemanticNode>,
-   *     intvar: sre.SemanticNode,
-   *     rest: !Array.<sre.SemanticNode>}} Result split into integrand, integral
-   * variable and the remaining elements.
+   * @param nodes List of nodes to take arguments from.
+   * @param args List of integral arguments.
+   * @returns Result split into integrand, integral variable and the remaining elements.
    */
   private getIntegralArgs_(
     nodes: SemanticNode[],
-    opt_args?: SemanticNode[]
+    args: SemanticNode[] = []
   ): { integrand: SemanticNode[]; intvar: SemanticNode; rest: SemanticNode[] } {
-    const args = opt_args || [];
     if (nodes.length === 0) {
       return { integrand: args, intvar: null, rest: nodes };
     }

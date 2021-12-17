@@ -53,8 +53,7 @@ export class Cli {
    *
    * @param arg The option to set.
    * @param value The cli option value.
-   * @param def The default for the option.
-   * @param _def
+   * @param _def The default for the option.
    */
   public set(arg: string, value: string | boolean, _def: string) {
     this.setup[arg] = typeof value === 'undefined' ? true : value;
@@ -63,8 +62,7 @@ export class Cli {
   /**
    * Registers processors for input files.
    *
-   * @param v Unused parameter.
-   * @param _v
+   * @param _v Unused parameter.
    * @param processor A processor method.
    */
   public processor(_v: string, processor: string) {
@@ -80,7 +78,8 @@ export class Cli {
   /**
    * Prints information on axes values.
    *
-   * @param all
+   * @param all Flag indicating if options for all locales should printed.
+   * @returns The promise waiting on locales to be loaded.
    */
   public async enumerate(all = false) {
     const promise = System.setupEngine(this.setup);

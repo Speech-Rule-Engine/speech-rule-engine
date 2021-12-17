@@ -371,8 +371,7 @@ export function isFencedElement(node: SemanticNode): boolean {
  * Heuristic to decide if we have a case statement: An expression with a
  * singular open fence before it.
  *
- * @param table A table node.
- * @param _table
+ * @param _table A table node.
  * @param prevNodes A list of previous nodes.
  * @returns True if we believe we have a case statement.
  */

@@ -35,7 +35,7 @@ const sansserifCombiner = function (letter: string, font: string, cap: string) {
 let locale: Locale = null;
 
 /**
- *
+ * @returns The Catalan locale.
  */
 export function ca(): Locale {
   if (!locale) {
@@ -46,7 +46,7 @@ export function ca(): Locale {
 }
 
 /**
- *
+ * @returns The Catalan locale.
  */
 function create(): Locale {
   const loc = createLocale();

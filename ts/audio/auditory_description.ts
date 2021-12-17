@@ -97,16 +97,14 @@ export class AuditoryDescription {
    * A class representing the description of navigation from one object to
    * another.
    *
-   * @param root0
-   * @param root0.context
-   * @param root0.text
-   * @param root0.userValue
-   * @param root0.annotation
-   * @param root0.attributes
-   * @param root0.personality
-   * @param root0.layout
-   *         personality, layout}
-   * The arguments for this description.
+   * @param root0 The arguments for this description.
+   * @param root0.context Context of the utterance.
+   * @param root0.text Text of the utterance
+   * @param root0.userValue A use defined value.
+   * @param root0.annotation An annotation.
+   * @param root0.attributes Additional attributes to preserve.
+   * @param root0.personality The personality annotation.
+   * @param root0.layout A layout annotation.
    */
   constructor({
     context,

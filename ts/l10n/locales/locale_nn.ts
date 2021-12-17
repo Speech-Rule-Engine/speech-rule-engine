@@ -29,7 +29,7 @@ import * as tr from '../transformers';
 let locale: Locale = null;
 
 /**
- *
+ * @returns The Nynorsk locale.
  */
 export function nn(): Locale {
   if (!locale) {
@@ -40,7 +40,7 @@ export function nn(): Locale {
 }
 
 /**
- *
+ * @returns The Nynorsk locale.
  */
 function create(): Locale {
   const loc = createLocale();

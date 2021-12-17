@@ -26,8 +26,8 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
 /**
  * Changes number one 'eins' into a prefix.
  *
- * @param num number string.
- * @param mill
+ * @param num Number string.
+ * @param mill Flag indicating if this million or above.
  * @returns If it is a one, it is made into prefix.
  */
 function onePrefix_(num: string, mill = false): string {
@@ -116,8 +116,7 @@ function numberToOrdinal(num: number, plural: boolean): string {
 /**
  * Creates a word ordinal string from a number.
  *
- * @param number The number to be converted.
- * @param num
+ * @param num The number to be converted.
  * @returns The ordinal string.
  */
 function wordOrdinal(num: number): string {

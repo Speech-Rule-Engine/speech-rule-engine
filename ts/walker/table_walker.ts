@@ -94,6 +94,8 @@ export class TableWalker extends SyntaxWalker {
 
   /**
    * Jumps directly to a table cell if possible.
+   *
+   * @returns The new focus if successful.
    */
   protected jumpCell(): Focus | null {
     if (!this.isInTable_() || this.key_ === null) {

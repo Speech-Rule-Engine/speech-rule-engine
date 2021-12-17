@@ -56,8 +56,7 @@ export class Debugger {
   /**
    * Give debug output.
    *
-   * @param var_args Rest elements of debug output.
-   * @param {...any} args
+   * @param args Rest elements of debug output.
    */
   public output(...args: any[]) {
     if (this.isActive_) {

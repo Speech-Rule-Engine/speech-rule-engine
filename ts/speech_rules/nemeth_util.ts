@@ -235,7 +235,7 @@ export function checkParent_(
  * Propagates annotation for the Nemeth number indicator.
  *
  * @param node The semantic node.
- * @param.
+ * @param info The info structure on the type of number.
  * @returns Info pair consisting of a string and the updated
  *     information object.
  */
