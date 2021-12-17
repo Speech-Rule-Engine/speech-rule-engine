@@ -117,10 +117,11 @@ export class SemanticSkeleton {
    * @returns The leafs of the structure annotations.
    */
   public static collapsedLeafs(...args: Sexp[]): number[] {
-    const collapseStructure = (coll: any) => {
+    const collapseStructure = (coll: Sexp) => {
       if (SemanticSkeleton.simpleCollapseStructure(coll)) {
         return [coll];
       }
+      coll = coll as Sexp[];
       return SemanticSkeleton.contentCollapseStructure(coll[1])
         ? coll.slice(2)
         : coll.slice(1);
@@ -199,12 +200,12 @@ export class SemanticSkeleton {
       return (
         '(' +
         'c ' +
-        (struct as any).slice(1).map(SemanticSkeleton.makeSexp_).join(' ') +
+        (struct as Sexp[]).slice(1).map(SemanticSkeleton.makeSexp_).join(' ') +
         ')'
       );
     }
     return (
-      '(' + (struct as any).map(SemanticSkeleton.makeSexp_).join(' ') + ')'
+      '(' + (struct as Sexp[]).map(SemanticSkeleton.makeSexp_).join(' ') + ')'
     );
   }
 
@@ -219,7 +220,7 @@ export class SemanticSkeleton {
     str = str.replace(/\)/g, ']');
     str = str.replace(/ /g, ',');
     str = str.replace(/c/g, '"c"');
-    return JSON.parse(str) as any[];
+    return JSON.parse(str) as Sexp[];
   }
 
   /**
@@ -314,14 +315,14 @@ export class SemanticSkeleton {
    * @param sexp The sexpression.
    * @returns The actual leaf ids.
    */
-  // TODO (TS): this used to be Sexp. Sort out all those any types!
-  private static realLeafs_(sexp: any): number[] {
+  private static realLeafs_(sexp: Sexp): number[] {
     if (SemanticSkeleton.simpleCollapseStructure(sexp)) {
       return [sexp as number];
     }
     if (SemanticSkeleton.contentCollapseStructure(sexp)) {
       return [];
     }
+    sexp = sexp as Sexp[];
     let result: number[] = [];
     for (let i = 1; i < sexp.length; i++) {
       result = result.concat(SemanticSkeleton.realLeafs_(sexp[i]));

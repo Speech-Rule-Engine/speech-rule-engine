@@ -71,7 +71,6 @@ interface Convertible {
  *     enumerator are set. Otherwise only the text content is given.
  */
 export function convertVulgarFraction_(node: Element): Convertible {
-  // TODO (TS): Optional chaining.
   if (
     !node.childNodes ||
     !node.childNodes[0] ||

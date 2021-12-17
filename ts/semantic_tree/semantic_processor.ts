@@ -89,7 +89,7 @@ export default class SemanticProcessor {
     '-tex-mathit': SemanticFont.ITALIC
   };
 
-  // TODO (TS): Keeping this as a singleton for the time being.
+  // TODO (TS): This should be rewritten into a fully static class.
   private static instance: SemanticProcessor;
 
   /**
@@ -373,7 +373,6 @@ export default class SemanticProcessor {
     }
   }
 
-  // TODO (TS): Make this optional conditions.
   /**
    * Recursively retrieves an embedded space element.
    *

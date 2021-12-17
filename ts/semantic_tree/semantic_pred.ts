@@ -24,8 +24,6 @@ import { SemanticRole, SemanticType } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
 import { getEmbellishedInner } from './semantic_util';
 
-// TODO (TS): Converted old isAttribute to three predicates. Make sure they are
-//            sound!
 /**
  * Checks if a node is of the given type.
  *

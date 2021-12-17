@@ -266,8 +266,7 @@ export function isZeroLength(length: string): boolean {
   if (!value) {
     return false;
   }
-  // TODO (TS):  Check if this is correct!
-  return parseFloat(value[0]) === 0 ? true : false;
+  return parseFloat(value[0]) === 0;
 }
 
 /**

@@ -219,7 +219,7 @@ export class SemanticNodeCollator extends SemanticCollator<SemanticNode> {
    * @override
    */
   public add(symbol: string, entry: SemanticNode) {
-    /// TODO (TS):  Sort out this .font field access.
+    /// TODO:  Handle the font better?
     const key = SemanticDefault.key(symbol, entry.font);
     super.add(key, entry);
   }
