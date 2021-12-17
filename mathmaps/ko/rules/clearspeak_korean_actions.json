@@ -622,7 +622,7 @@
     [
       "Action",
       "set-extended",
-      "[n] children/*[1]/children/*[3] (grammar:postposition); [t] \"를 만족하는 모든\"(grammar:article); [n] children/*[1]/children/*[1]; [t] \"의 집합\""
+      "[n] children/*[1]/children/*[3] (grammar:postposition); [t] \"를\"(grammar:article); [t] \"만족하는 모든\"; [n] children/*[1]/children/*[1]; [t] \"의 집합\""
     ],
     [
       "Action",
@@ -632,7 +632,7 @@
     [
       "Action",
       "set-extended-woall",
-      "[n] children/*[1]/children/*[3] (grammar:postposition); [t] \"를 만족하는\" (grammar:article); [n] children/*[1]/children/*[1]; [t] \"의 집합\""
+      "[n] children/*[1]/children/*[3] (grammar:postposition); [t] \"를\"(grammar:article); [t] \"만족하는 모든\"; [n] children/*[1]/children/*[1]; [t] \"의 집합\""
     ],
     [
       "Action",
@@ -856,18 +856,43 @@
     ],
     [
       "Action",
-      "parallel-to",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[3] (grammar:postposition); [t] \"와\" (grammar:article);  [t] \"평행하다\""
-    ],
-    [
-      "Action",
       "binary-operation-default",
       "[m] children/* (sepFunc:CTFcontentIterator);"
     ],
     [
       "Action",
-      "member-operation-simple",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2] (grammar:postposition); [n] content/*[1] (grammar:article)"
+      "simple-set-member",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [n] content/*[1]"
+    ],
+    [
+      "Action",
+      "simple-contain-member",
+      "[n] children/*[2] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[1] (grammar:postposition); [t] \"를\" (grammar:article); [n] content/*[1]"
+    ],
+    [
+      "Action",
+      "simple-subset",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [n] content/*[1]"
+    ],
+    [
+      "Action",
+      "simple-parallel",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[3] (grammar:postposition); [t] \"와\" (grammar:article); [n] content/*[1]"
+    ],
+    [
+      "Action",
+      "simple-vertical",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"와\" (grammar:article); [n] content/*[1]"
+    ],
+    [
+      "Action",
+      "simple-condition",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"이기 위한\"; [n] content/*[1]"
+    ],
+    [
+      "Action",
+      "line-segment",
+      "[t] \"선분\"; [n] children/*[1]/children/*[1]; [n] children/*[1]/children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -936,6 +961,21 @@
     ],
     [
       "Action",
+      "equality",
+      "[n] children/*[1] (grammar:postposition); [n] content/*[1] (grammar:postposition:article); [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "not-equal",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"와\" (grammar:article); [n] content/*[1]"
+    ],
+    [
+      "Action",
+      "simple-relseq",
+      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2]; [t] \"보다\"; [n] content/*[1]"
+    ],
+    [
+      "Action",
       "relseq",
       "[m] children/* (sepFunc:CTFcontentIterator, grammar:noArticle)"
     ],
@@ -944,11 +984,7 @@
       "multrel",
       "[m] children/* (sepFunc:CTFcontentIterator, grammar:noArticle)"
     ],
-    [
-      "Action",
-      "simple-relation",
-      "[n] children/*[1] (grammar:postposition); [t] \"는\" (grammar:article); [n] children/*[2] (grammar:postposition); [n] content/*[1] (grammar:article)"
-    ],
+    
     [
       "Action",
       "natural-numbers",
@@ -1367,7 +1403,7 @@
     [
       "Action",
       "mixed-number",
-      "[n] children/*[1] (grammar:postposition); [t] \"와\" (grammar:article:postposition); [n] children/*[2]; "
+      "[n] children/*[1] (grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[2]; "
     ],
     [
       "Action",

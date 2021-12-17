@@ -66,7 +66,23 @@
     ],
     [
       "Precondition",
-      "simple-relation",
+      "equality",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"=\" or text()=\"＝\""
+    ],
+    [
+      "Precondition",
+      "not-equal",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"≠\""
+    ],
+    [
+      "Precondition",
+      "simple-relseq",
       "default",
       "self::relseq",
       "count(./children/*)=2",
@@ -74,7 +90,15 @@
     ],
     [
       "Precondition",
-      "member-operation-simple",
+      "simple-set-member",
+      "default",
+      "self::infixop",
+      "count(./children/*)=2",
+      "text()=\"∈\" or text()=\"∊\" or text()=\"∉\""
+    ],
+    [
+      "Precondition",
+      "simple-contain-member",
       "default",
       "self::infixop",
       "count(./children/*)=2",
@@ -82,11 +106,38 @@
     ],
     [
       "Precondition",
-      "parallel-to",
+      "simple-parallel",
       "default",
       "self::punctuated",
       "count(./children/*)=3",
       "content/*[1][text()]=\"∥\""
+    ],
+    [
+      "Precondition",
+      "simple-vertical",
+      "default",
+      "self::infixop",
+      "count(./children/*)=2",
+      "text()=\"⊥\""
+    ],
+    [
+      "Precondition",
+      "simple-condition",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"⇐\" or text()=\"⇒\" or text()=\"⇔\""
+    ],
+    [
+      "Precondition",
+      "line-segment",
+      "default",
+      "self::overscore",
+      "@role=\"implicit\"",
+      "children/*[2][@role=\"overaccent\"]",
+      "children/*[2][contains(@annotation, \"accent:bar\")]",
+      "name(children/*[1])=\"infixop\"",
+      "count(./children/*[1]/children/*)=2"
     ]
   ]
 }
