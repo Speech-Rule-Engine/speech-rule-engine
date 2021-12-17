@@ -14,87 +14,20 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic parameters and global machinery for the Speech Rule
+ * @file Basic parameters and global machinery for the Speech Rule
  *     Engine.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as Dcstr from '../rule_engine/dynamic_cstr';
-
-
-/**
- *  Namespace for all Engine enum constants.
- */
-export namespace EngineConst {
-
-  /**
-   * Defines the modes in which the engine can run.
-   */
-  export enum Mode {
-    SYNC = 'sync',
-    ASYNC = 'async',
-    HTTP = 'http'
-  }
-
-  // TODO (TS): Moves those to auditory_descriptions.
-  /**
-   * Defines the basic personality Properties available.
-   */
-  export enum personalityProps {
-    PITCH = 'pitch',
-    RATE = 'rate',
-    VOLUME = 'volume',
-    PAUSE = 'pause',
-    JOIN = 'join',
-    LAYOUT = 'layout'
-  }
-
-  export const personalityPropList: personalityProps[] = [
-    personalityProps.PITCH, personalityProps.RATE, personalityProps.VOLUME,
-    personalityProps.PAUSE, personalityProps.JOIN
-  ];
-
-  /**
-   * Defines to what level the engine enriches expressions with speech string
-   * attributes.
-   */
-  export enum Speech {NONE = 'none', SHALLOW = 'shallow', DEEP = 'deep'}
-
-
-  /**
-   * Different markup formats for the speech output.
-   * Not all are supported yet.
-   */
-  export enum Markup {
-    NONE = 'none',
-    LAYOUT = 'layout',
-    PUNCTUATION = 'punctuation',
-    SSML = 'ssml',
-    SSML_STEP = 'ssml_step',
-    ACSS = 'acss',
-    SABLE = 'sable',
-    VOICEXML = 'voicexml'
-  }
-
-  /**
-   * Maps domains to their default style.
-   */
-  export const DOMAIN_TO_STYLES: {[key: string]: string} = {
-    'mathspeak': 'default',
-    'clearspeak': 'default'
-  };
-
-}
-
+import * as EngineConst from './engine_const';
 
 /**
  * The base error class for signaling SRE errors.
+ *
  * @param msg The error message.
  */
 export class SREError extends Error {
-
   /**
    * @override
    */
@@ -106,29 +39,33 @@ export class SREError extends Error {
   constructor(public message: string = '') {
     super();
   }
-
 }
 
 /**
  * Initializes the basic Speech engine and contains some global context.
  *
  */
-export class Engine {
-
+export default class Engine {
   /**
    * Binary feature vector.
    */
   public static BINARY_FEATURES: string[] = ['strict', 'structure', 'pprint'];
 
-
   /**
    * String feature vector.
    */
   public static STRING_FEATURES: string[] = [
-    'markup', 'style', 'domain', 'speech', 'walker', 'locale', 'modality',
-    'rate', 'rules', 'prune'
+    'markup',
+    'style',
+    'domain',
+    'speech',
+    'walker',
+    'locale',
+    'modality',
+    'rate',
+    'rules',
+    'prune'
   ];
-
 
   // TODO (TS): Keeping this as a singleton for the time being.
   private static instance: Engine;
@@ -143,7 +80,7 @@ export class Engine {
 
   public defaultParser: Dcstr.DynamicCstrParser;
   public parser: Dcstr.DynamicCstrParser;
-  public parsers: {[key: string]: Dcstr.DynamicCstrParser} = {};
+  public parsers: { [key: string]: Dcstr.DynamicCstrParser } = {};
 
   public dynamicCstr: Dcstr.DynamicCstr;
 
@@ -157,12 +94,12 @@ export class Engine {
   /**
    * Maps domains to comparators.
    */
-  public comparators: {[key: string]: () => Dcstr.Comparator} = {};
+  public comparators: { [key: string]: () => Dcstr.Comparator } = {};
 
   /**
    * Current domain.
    */
-  public domain: string = 'mathspeak';
+  public domain = 'mathspeak';
 
   /**
    * Current style.
@@ -193,12 +130,12 @@ export class Engine {
   /**
    * Current walker mode.
    */
-  public walker: string = 'Table';
+  public walker = 'Table';
 
   /**
    * Indicates if skeleton structure attributes are added to enriched elements
    */
-  public structure: boolean = false;
+  public structure = false;
 
   /**
    * List of rule sets given as the constructor functions.
@@ -208,46 +145,46 @@ export class Engine {
   /**
    * Strict interpretations of rules and constraints.
    */
-  public strict: boolean = false;
+  public strict = false;
 
   /**
    * Current browser is MS Internet Explorer but not Edge.
    */
-  public isIE: boolean = false;
+  public isIE = false;
 
   /**
    * Current browser is MS Edge.
    */
-  public isEdge: boolean = false;
+  public isEdge = false;
 
   /**
    * Percentage of default rate used by external TTS. This can be used to scale
    * pauses.
    */
-  public rate: string = '100';
+  public rate = '100';
 
   /**
    * Pretty Print mode.
    */
-  public pprint: boolean = false;
+  public pprint = false;
 
   /**
    * True if configuration block has been applied in HTTP mode.
    */
-  public config: boolean = false;
+  public config = false;
 
   /**
    * Rules file to load.
    */
-  public rules: string = '';
+  public rules = '';
 
   /**
-   * Constraints to prune given dot separated.
+   * EngineConstraints to prune given dot separated.
    */
-  public prune: string = '';
+  public prune = '';
 
   /**
-   * @return The Engine object.
+   * @returns The Engine object.
    */
   public static getInstance(): Engine {
     Engine.instance = Engine.instance || new Engine();
@@ -256,61 +193,65 @@ export class Engine {
 
   /**
    * A dummy string evaluator.
+   *
    * @param str A string.
-   * @param cstr A dynamic constraint.
-   * @return The evaluated string.
+   * @param _cstr A dynamic constraint.
+   * @returns The evaluated string.
    */
   public static defaultEvaluator(
-    str: string, _cstr: Dcstr.DynamicCstr): string {
+    str: string,
+    _cstr: Dcstr.DynamicCstr
+  ): string {
     return str;
   }
 
-
   // TODO: This might need a better place.
   /**
-   * @return The current base rate.
+   * @returns The current base rate.
    */
   public getRate(): number {
-    let numeric = parseInt(this.rate, 10);
+    const numeric = parseInt(this.rate, 10);
     return isNaN(numeric) ? 100 : numeric;
   }
 
-
   /**
    * Sets the dynamic constraint for the engine.
+   *
    * @param opt_dynamic An optional
    *    constraint mapping. If given it is parsed into the engines constraint
    *    parameters.
    */
   public setDynamicCstr(opt_dynamic?: Dcstr.AxisMap) {
     if (opt_dynamic) {
-      let keys = Object.keys(opt_dynamic);
+      const keys = Object.keys(opt_dynamic);
       for (let i = 0; i < keys.length; i++) {
-        let feature = (keys[i] as Dcstr.Axis);
+        const feature = keys[i] as Dcstr.Axis;
         // Checks that we only have correct components.
         if (Dcstr.DynamicCstr.DEFAULT_ORDER.indexOf(feature) !== -1) {
-          let value = opt_dynamic[feature];
+          const value = opt_dynamic[feature];
           // TODO (TS): Make these features cleaner.
           (this as any)[feature] = value;
         }
       }
     }
     EngineConst.DOMAIN_TO_STYLES[this.domain] = this.style;
-    let dynamic =
-        [this.locale, this.modality, this.domain, this.style].join('.');
-    let fallback = Dcstr.DynamicProperties.createProp(
-        [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
-        [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
-        [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.DOMAIN]],
-        [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]]);
-    let comparator = this.comparators[this.domain];
-    let parser = this.parsers[this.domain];
+    const dynamic = [this.locale, this.modality, this.domain, this.style].join(
+      '.'
+    );
+    const fallback = Dcstr.DynamicProperties.createProp(
+      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE]],
+      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.MODALITY]],
+      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.DOMAIN]],
+      [Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE]]
+    );
+    const comparator = this.comparators[this.domain];
+    const parser = this.parsers[this.domain];
     this.parser = parser ? parser : this.defaultParser;
     this.dynamicCstr = this.parser.parse(dynamic);
     this.dynamicCstr.updateProperties(fallback.getProperties());
-    this.comparator = comparator ?
-        comparator() :
-        new Dcstr.DefaultComparator(this.dynamicCstr);
+    this.comparator = comparator
+      ? comparator()
+      : new Dcstr.DefaultComparator(this.dynamicCstr);
   }
 
   /**
@@ -318,44 +259,43 @@ export class Engine {
    */
   private constructor() {
     this.evaluator = Engine.defaultEvaluator;
-    this.defaultParser =
-        new Dcstr.DynamicCstrParser(Dcstr.DynamicCstr.DEFAULT_ORDER);
+    this.defaultParser = new Dcstr.DynamicCstrParser(
+      Dcstr.DynamicCstr.DEFAULT_ORDER
+    );
     this.parser = this.defaultParser;
     this.dynamicCstr = Dcstr.DynamicCstr.defaultCstr();
   }
-
 }
 
-
-export namespace EnginePromise {
-
+export class EnginePromise {
   /**
    * Records if a locale is loaded or failed to load. Value one indicates that
    * loading has been attempted and finished, while value two indicates if it
    * was successful or not.
    */
-  export let loaded: {[locale: string]: [boolean, boolean]} = {};
+  public static loaded: { [locale: string]: [boolean, boolean] } = {};
 
   /**
    * Records the loading promises for each locale.
    */
-  export let promises: {[locale: string]: Promise<string>} = {};
-
-
-  /**
-   * @return The promise for a locale.
-   */
-  export function get(locale: string =
-    Engine.getInstance().locale): Promise<string> {
-    return promises[locale] || Promise.resolve('');
-  }
-
+  public static promises: { [locale: string]: Promise<string> } = {};
 
   /**
-   * @return All promises combined into one.
+   * Gets a promise for a locale.
+   *
+   * @param locale The locale to retrieve.
+   * @returns The promise for a locale.
    */
-  export function getall() {
-    return Promise.allSettled(Object.values(promises));
+  public static get(
+    locale: string = Engine.getInstance().locale
+  ): Promise<string> {
+    return EnginePromise.promises[locale] || Promise.resolve('');
   }
 
+  /**
+   * @returns All promises combined into one.
+   */
+  public static getall() {
+    return Promise.allSettled(Object.values(EnginePromise.promises));
+  }
 }

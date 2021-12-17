@@ -14,73 +14,67 @@
 // limitations under the License.
 
 /**
- * @fileoverview Adds context function mappings to the global store.
+ * @file Adds context function mappings to the global store.
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-
-import {SpeechRuleStore} from '../rule_engine/speech_rule_store';
+import { SpeechRuleStore } from '../rule_engine/speech_rule_store';
 import * as StoreUtil from '../rule_engine/store_util';
 
 import * as MathspeakUtil from './mathspeak_util';
 import * as NemethUtil from './nemeth_util';
 import * as NumbersUtil from './numbers_util';
-import SpeechRules from './speech_rules';
-
+import * as SpeechRules from './speech_rules';
 
 /**
  * Adds the custom functions for the prefix rules.
  */
 export function PrefixRules() {
   // Basic English
-  SpeechRules.addStore(
-      'en.prefix.default', '',
-      {'CSFordinalPosition': NumbersUtil.ordinalPosition});
+  SpeechRules.addStore('en.prefix.default', '', {
+    CSFordinalPosition: NumbersUtil.ordinalPosition
+  });
 }
-
 
 /**
  * Adds the custom functions for non-standard rule sets.
  */
 export function OtherRules() {
   SpeechRules.addStore('en.speech.chromevox', '', {
-    'CTFnodeCounter': StoreUtil.nodeCounter,
-    'CTFcontentIterator': StoreUtil.contentIterator
+    CTFnodeCounter: StoreUtil.nodeCounter,
+    CTFcontentIterator: StoreUtil.contentIterator
   });
 
-  SpeechRules.addStore(
-      'en.speech.emacspeak', 'en.speech.chromevox', {
-        'CQFvulgarFractionSmall': MathspeakUtil.isSmallVulgarFraction,
-        'CSFvulgarFraction': NumbersUtil.vulgarFraction
-      });
+  SpeechRules.addStore('en.speech.emacspeak', 'en.speech.chromevox', {
+    CQFvulgarFractionSmall: MathspeakUtil.isSmallVulgarFraction,
+    CSFvulgarFraction: NumbersUtil.vulgarFraction
+  });
 }
-
 
 /**
  * Adds the custom functions for the braille modality rules.
  */
 export function BrailleRules() {
   // Basic Nemeth
-  SpeechRules.addStore(
-      'nemeth.braille.default', 'en.speech.mathspeak', {
-        'CSFopenFraction': NemethUtil.openingFraction,
-        'CSFcloseFraction': NemethUtil.closingFraction,
-        'CSFoverFraction': NemethUtil.overFraction,
+  SpeechRules.addStore('nemeth.braille.default', 'en.speech.mathspeak', {
+    CSFopenFraction: NemethUtil.openingFraction,
+    CSFcloseFraction: NemethUtil.closingFraction,
+    CSFoverFraction: NemethUtil.overFraction,
 
-        'CSFoverBevFraction': NemethUtil.overBevelledFraction,
-        // Radical function.
-        'CSFopenRadical': NemethUtil.openingRadical,
-        'CSFcloseRadical': NemethUtil.closingRadical,
+    CSFoverBevFraction: NemethUtil.overBevelledFraction,
+    // Radical function.
+    CSFopenRadical: NemethUtil.openingRadical,
+    CSFcloseRadical: NemethUtil.closingRadical,
 
-        'CSFindexRadical': NemethUtil.indexRadical,
-        'CSFsubscript': MathspeakUtil.subscriptVerbose,
-        'CSFsuperscript': MathspeakUtil.superscriptVerbose,
+    CSFindexRadical: NemethUtil.indexRadical,
+    CSFsubscript: MathspeakUtil.subscriptVerbose,
+    CSFsuperscript: MathspeakUtil.superscriptVerbose,
 
-        'CSFbaseline': MathspeakUtil.baselineVerbose,
+    CSFbaseline: MathspeakUtil.baselineVerbose,
 
-        'CGFtensorRules': (st: SpeechRuleStore) =>
-             MathspeakUtil.generateTensorRules(st, false),
-        'CTFrelationIterator': NemethUtil.relationIterator,
-        'CTFimplicitIterator': NemethUtil.implicitIterator
-      });
+    CGFtensorRules: (st: SpeechRuleStore) =>
+      MathspeakUtil.generateTensorRules(st, false),
+    CTFrelationIterator: NemethUtil.relationIterator,
+    CTFimplicitIterator: NemethUtil.implicitIterator
+  });
 }

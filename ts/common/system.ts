@@ -14,25 +14,23 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic interface functionality for the Speech Rule Engine.
- *
+ * @file Basic interface functionality for the Speech Rule Engine.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {AuditoryDescription} from '../audio/auditory_description';
+import { AuditoryDescription } from '../audio/auditory_description';
 import * as L10n from '../l10n/l10n';
-import {MathMap} from '../speech_rules/math_map';
+import * as MathMap from '../speech_rules/math_map';
 
 import * as BrowserUtil from './browser_util';
-import {Debugger} from './debugger';
-import {Engine, EngineConst, EnginePromise} from './engine';
-import {SREError} from './engine';
-import {KeyCode} from './event_util';
+import { Debugger } from './debugger';
+import Engine, { EnginePromise, SREError } from './engine';
+import * as EngineConst from './engine_const';
+import { KeyCode } from './event_util';
 import * as FileUtil from './file_util';
-import {ProcessorFactory} from './processors';
+import * as ProcessorFactory from './processor_factory';
 import SystemExternal from './system_external';
-import {Variables} from './variables';
-
+import { Variables } from './variables';
 
 /**
  * Version number.
@@ -47,26 +45,32 @@ export const version: string = Variables.VERSION;
  * Method to setup and initialize the speech rule engine. Currently the
  * feature parameter is ignored, however, this could be used to fine tune the
  * setup.
- * @param feature An object describing some
- *     setup features.
+ *
+ * @param feature An object describing some setup features.
+ * @returns The promise that resolves once setup is complete.
  */
-export async function setupEngine(feature: {[key: string]: boolean|string}) {
-  let engine = Engine.getInstance() as any;
+export async function setupEngine(feature: {
+  [key: string]: boolean | string;
+}) {
+  const engine = Engine.getInstance() as any;
   // This preserves the possibility to specify default as domain.
   // < 3.2  this lead to the use of chromevox rules in English.
   // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
   // we get a meaningful output.
-  if (feature.domain === 'default' &&
+  if (
+    feature.domain === 'default' &&
     (feature.modality === 'speech' ||
-      (!feature.modality || engine.modality === 'speech'))) {
+      !feature.modality ||
+      engine.modality === 'speech')
+  ) {
     feature.domain = 'mathspeak';
   }
-  let setIf = (feat: string) => {
+  const setIf = (feat: string) => {
     if (typeof feature[feat] !== 'undefined') {
       engine[feat] = !!feature[feat];
     }
   };
-  let setMulti = (feat: string) => {
+  const setMulti = (feat: string) => {
     engine[feat] = feature[feat] || engine[feat];
   };
   setMulti('mode');
@@ -83,54 +87,58 @@ export async function setupEngine(feature: {[key: string]: boolean|string}) {
   setupBrowsers();
   L10n.setLocale();
   engine.setDynamicCstr();
-  return MathMap.init().then(
-    () => {
-      MathMap.loadLocale();
-      return EnginePromise.get();
-    }
-  );
+  return MathMap.init().then(() => {
+    MathMap.loadLocale();
+    return EnginePromise.get();
+  });
 }
 
-
-function config(feature: {[key: string]: boolean|string}) {
-  if (Engine.getInstance().mode === EngineConst.Mode.HTTP &&
-    !Engine.getInstance().config) {
+/**
+ * The actual configuration method.
+ *
+ * @param feature An object describing some setup features.
+ */
+function config(feature: { [key: string]: boolean | string }) {
+  if (
+    Engine.getInstance().mode === EngineConst.Mode.HTTP &&
+    !Engine.getInstance().config
+  ) {
     configBlocks(feature);
     Engine.getInstance().config = true;
   }
   configFeature(feature);
 }
 
-declare const SREfeature: {[key: string]: any};
+declare const SREfeature: { [key: string]: any };
 
 /**
  * Reads configuration blocks and adds them to the feature vector.
- * @param feature An object describing some
- *     setup features.
+ *
+ * @param feature An object describing some setup features.
  */
-function configFeature(feature: {[key: string]: boolean|string}) {
+function configFeature(feature: { [key: string]: boolean | string }) {
   if (typeof SREfeature !== 'undefined') {
-    for (let [name, feat] of Object.entries(SREfeature)) {
+    for (const [name, feat] of Object.entries(SREfeature)) {
       feature[name] = feat;
     }
   }
 }
 
-
 /**
  * Reads configuration blocks and adds them to the feature vector.
- * @param feature An object describing some
- *     setup features.
+ *
+ * @param feature An object describing some setup features.
  */
-function configBlocks(feature: {[key: string]: boolean|string}) {
-  let scripts = document.documentElement.querySelectorAll(
-    'script[type="text/x-sre-config"]');
+function configBlocks(feature: { [key: string]: boolean | string }) {
+  const scripts = document.documentElement.querySelectorAll(
+    'script[type="text/x-sre-config"]'
+  );
   for (let i = 0, m = scripts.length; i < m; i++) {
     let inner;
     try {
       inner = scripts[i].innerHTML;
-      let config = JSON.parse(inner);
-      for (let f in config) {
+      const config = JSON.parse(inner);
+      for (const f in config) {
         feature[f] = config[f];
       }
     } catch (err) {
@@ -139,18 +147,20 @@ function configBlocks(feature: {[key: string]: boolean|string}) {
   }
 }
 
-
 /**
  * Query the engine setup.
- * @return Object vector with all engine feature
+ *
+ * @returns Object vector with all engine feature
  *     values.
  */
-export function engineSetup(): {[key: string]: boolean|string} {
-  let engineFeatures =
-    ['mode'].concat(Engine.STRING_FEATURES, Engine.BINARY_FEATURES);
-  let engine = Engine.getInstance() as any;
-  let features: {[key: string]: string|boolean} = {};
-  engineFeatures.forEach(function(x) {
+export function engineSetup(): { [key: string]: boolean | string } {
+  const engineFeatures = ['mode'].concat(
+    Engine.STRING_FEATURES,
+    Engine.BINARY_FEATURES
+  );
+  const engine = Engine.getInstance() as any;
+  const features: { [key: string]: string | boolean } = {};
+  engineFeatures.forEach(function (x) {
     features[x] = engine[x];
   });
   features.json = SystemExternal.jsonPath;
@@ -159,15 +169,13 @@ export function engineSetup(): {[key: string]: boolean|string} {
   return features;
 }
 
-
 /**
- * @return True if engine is ready, i.e., unicode file for the current
+ * @returns True if engine is ready, i.e., unicode file for the current
  *     locale has been loaded.
  */
 export function engineReady(): Promise<any> {
   return EnginePromise.getall();
 }
-
 
 // Naming convention:
 // Input is either an XML expression as a string or from a file.
@@ -181,67 +189,70 @@ export function engineReady(): Promise<any> {
 // TODO: (sorge) Need an async versions of these.
 /**
  * Main function to translate expressions into auditory descriptions.
+ *
  * @param expr Processes a given XML expression for translation.
- * @return The aural rendering of the expression.
+ * @returns The aural rendering of the expression.
  */
 export function toSpeech(expr: string): string {
   return processString('speech', expr);
 }
 
-
 /**
  * Function to translate MathML string into Semantic Tree.
+ *
  * @param expr Processes a given MathML expression for translation.
- * @return The semantic tree as Xml.
+ * @returns The semantic tree as Xml.
  */
 export function toSemantic(expr: string): Node {
   return processString('semantic', expr);
 }
 
-
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree.
+ *
  * @param expr Processes a given MathML expression for translation.
- * @return The semantic tree as Json.
+ * @returns The semantic tree as Json.
  */
 // TODO (TS): Define the correct JSONType somewhere.
 export function toJson(expr: string): any {
   return processString('json', expr);
 }
 
-
 /**
  * Main function to translate expressions into auditory descriptions.
+ *
  * @param expr Processes a given Xml expression for translation.
- * @return The auditory descriptions.
+ * @returns The auditory descriptions.
  */
 export function toDescription(expr: string): AuditoryDescription[] {
   return processString('description', expr);
 }
 
-
 /**
  * Function to translate MathML string into semantically enriched MathML.
+ *
  * @param expr Processes a given MathML expression for translation.
- * @return The enriched MathML node.
+ * @returns The enriched MathML node.
  */
 export function toEnriched(expr: string): Element {
   return processString('enriched', expr);
 }
 
-
 /**
  * Processes an input string with the given processor.
+ *
  * @param processor The name of the processor to call.
  * @param input The input string.
- * @return The computed data structure.
+ * @returns The computed data structure.
  */
 function processString<T>(processor: string, input: string): T {
   return ProcessorFactory.process(processor, input);
 }
 
-
-export namespace file {
+/**
+ * Namespace for file processing methods.
+ */
+export const file: Record<string, (input: string, output?: string) => any> = {};
 
 /**
  * Reads an xml expression from a file and returns its aural rendering to a
@@ -249,12 +260,11 @@ export namespace file {
  *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return Promise that resolves on completion of the file operations.
+ * @returns Promise that resolves on completion of the file operations.
  */
-export function toSpeech(input: string, opt_output?: string) {
+file.toSpeech = function (input: string, opt_output?: string) {
   return processFile('speech', input, opt_output);
-}
-
+};
 
 /**
  * Reads an xml expression from a file and returns the XML for the semantic
@@ -262,12 +272,11 @@ export function toSpeech(input: string, opt_output?: string) {
  *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return Promise that resolves on completion of the file operations.
+ * @returns Promise that resolves on completion of the file operations.
  */
-export function toSemantic(input: string, opt_output?: string) {
+file.toSemantic = function (input: string, opt_output?: string) {
   return processFile('semantic', input, opt_output);
-}
-
+};
 
 /**
  * Function to translate MathML string into JSON version of the Semantic Tree
@@ -275,12 +284,11 @@ export function toSemantic(input: string, opt_output?: string) {
  *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return Promise that resolves on completion of the file operations.
+ * @returns Promise that resolves on completion of the file operations.
  */
-export function toJson(input: string, opt_output?: string) {
+file.toJson = function (input: string, opt_output?: string) {
   return processFile('json', input, opt_output);
-}
-
+};
 
 /**
  * Main function to translate expressions into auditory descriptions
@@ -288,12 +296,11 @@ export function toJson(input: string, opt_output?: string) {
  *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return Promise that resolves on completion of the file operations.
+ * @returns Promise that resolves on completion of the file operations.
  */
-export function toDescription(input: string, opt_output?: string) {
+file.toDescription = function (input: string, opt_output?: string) {
   return processFile('description', input, opt_output);
-}
-
+};
 
 /**
  * Function to translate MathML string into semantically enriched MathML in a
@@ -301,12 +308,11 @@ export function toDescription(input: string, opt_output?: string) {
  *
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return Promise that resolves on completion of the file operations.
+ * @returns Promise that resolves on completion of the file operations.
  */
-export function toEnriched(input: string, opt_output?: string) {
+file.toEnriched = function (input: string, opt_output?: string) {
   return processFile('enriched', input, opt_output);
-}
-
+};
 
 /**
  * Reads an xml expression from a file, processes with the given function and
@@ -315,10 +321,13 @@ export function toEnriched(input: string, opt_output?: string) {
  * @param processor The name of the processor to call.
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
- * @return The promise for the file process to complete.
+ * @returns The promise for the file process to complete.
  */
 export function processFile(
-  processor: string, input: string, opt_output?: string) {
+  processor: string,
+  input: string,
+  opt_output?: string
+) {
   switch (Engine.getInstance().mode) {
     case EngineConst.Mode.ASYNC:
       return processFileAsync(processor, input, opt_output);
@@ -326,7 +335,8 @@ export function processFile(
       return processFileSync(processor, input, opt_output);
     default:
       throw new SREError(
-        `Can process files in ${Engine.getInstance().mode} mode`);
+        `Can process files in ${Engine.getInstance().mode} mode`
+      );
   }
 }
 
@@ -338,11 +348,15 @@ export function processFile(
  * @param processor The name of the processor.
  * @param input The input filename.
  * @param opt_output The output filename if one is given.
+ * @returns The result that has been written to the file.
  */
 export function processFileSync(
-  processor: string, input: string, opt_output?: string) {
-  let expr = inputFileSync_(input);
-  let result = ProcessorFactory.output(processor, expr);
+  processor: string,
+  input: string,
+  opt_output?: string
+) {
+  const expr = inputFileSync_(input);
+  const result = ProcessorFactory.output(processor, expr);
   if (opt_output) {
     try {
       SystemExternal.fs.writeFileSync(opt_output, result);
@@ -353,38 +367,41 @@ export function processFileSync(
   return result;
 }
 
-}
-
-
 /**
  * Reads an xml expression from a file. Throws exception if file does not
  * exist.
+ *
  * @param file The input filename.
- * @return The input string read from file.
+ * @returns The input string read from file.
  */
 function inputFileSync_(file: string): string {
   let expr;
   try {
-    expr = SystemExternal.fs.readFileSync(file, {encoding: 'utf8'});
+    expr = SystemExternal.fs.readFileSync(file, { encoding: 'utf8' });
   } catch (err) {
     throw new SREError('Can not open file: ' + file);
   }
   return expr;
 }
 
-
 /**
  * Reads an xml expression from a file, processes with the given function and
  * returns the result either to a file or to stdout in asynchronous mode.
+ *
  * @param processor The name of the processor.
  * @param file The input filename.
- * @param opt_output The output filename if one is given.
+ * @param output The output filename if one is given.
+ * @returns The result of that is written to the file.
  */
 async function processFileAsync(
-  processor: string, file: string, output?: string) {
-  let expr = await SystemExternal.fs.promises.readFile(
-      file, {encoding: 'utf8'});
-  let result = ProcessorFactory.output(processor, expr);
+  processor: string,
+  file: string,
+  output?: string
+) {
+  const expr = await SystemExternal.fs.promises.readFile(file, {
+    encoding: 'utf8'
+  });
+  const result = ProcessorFactory.output(processor, expr);
   if (output) {
     try {
       SystemExternal.fs.promises.writeFile(output, result);
@@ -395,39 +412,38 @@ async function processFileAsync(
   return result;
 }
 
-
 // These are still considered experimental.
 /**
  * Walk a math expression provided by an external system.
+ *
  * @param expr The string containing a MathML representation.
- * @return The initial speech string for that expression.
+ * @returns The initial speech string for that expression.
  */
 export function walk(expr: string): string {
   return ProcessorFactory.output('walker', expr);
 }
 
-
 /**
  * Moves in the math expression that is currently being walked.
+ *
  * @param direction The direction of the move
  *     given either as string or keycode.
- * @return The speech string generated by the walk. Null if a boundary
+ * @returns The speech string generated by the walk. Null if a boundary
  *     is hit.
  */
-export function move(direction: KeyCode|string): string|null {
+export function move(direction: KeyCode | string): string | null {
   return ProcessorFactory.keypress('move', direction);
 }
 
-
 /**
  * A clean exit method, that ensures all file processes are completed.
+ *
  * @param opt_value The exit value. Defaults to 0.
  */
 export function exit(opt_value?: number) {
-  let value = opt_value || 0;
+  const value = opt_value || 0;
   EnginePromise.getall().then(() => process.exit(value));
 }
-
 
 /**
  * Returns the default locale path, depending on the mode of operation.
@@ -437,9 +453,9 @@ export function exit(opt_value?: number) {
  */
 export const localePath = FileUtil.localePath;
 
-
 /**
  * Sets the custom loader.
+ *
  * @param fn A custom loader function.
  */
 export function setCustomLoader(fn: any) {
@@ -447,7 +463,6 @@ export function setCustomLoader(fn: any) {
     Engine.getInstance().customLoader = fn;
   }
 }
-
 
 /**
  * Sets up browser specific functionality.
@@ -457,11 +472,11 @@ function setupBrowsers() {
   Engine.getInstance().isEdge = BrowserUtil.detectEdge();
 }
 
-
 // Check here for custom method!
 if (SystemExternal.documentSupported) {
-  setupEngine({'mode': EngineConst.Mode.HTTP});
+  setupEngine({ mode: EngineConst.Mode.HTTP });
 } else {
-  setupEngine({'mode': EngineConst.Mode.SYNC}).
-    then(() => setupEngine({'mode': EngineConst.Mode.ASYNC}));
+  setupEngine({ mode: EngineConst.Mode.SYNC }).then(() =>
+    setupEngine({ mode: EngineConst.Mode.ASYNC })
+  );
 }

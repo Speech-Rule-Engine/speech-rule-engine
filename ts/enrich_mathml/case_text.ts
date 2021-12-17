@@ -14,19 +14,16 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with double script elements.
- *
+ * @file Specialist computations to deal with double script elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseText extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
@@ -34,33 +31,32 @@ export class CaseText extends AbstractEnrichCase {
 
   /**
    * Applicability test of the case.
+   *
    * @param semantic The semantic node.
-   * @return True if case is applicable.
+   * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
-    return semantic.type === SemanticType.PUNCTUATED &&
-        (semantic.role === SemanticRole.TEXT ||
-          semantic.contentNodes.every(
-            x => x.role === SemanticRole.DUMMY));
+    return (
+      semantic.type === SemanticType.PUNCTUATED &&
+      (semantic.role === SemanticRole.TEXT ||
+        semantic.contentNodes.every((x) => x.role === SemanticRole.DUMMY))
+    );
   }
-
 
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);
     this.mml = semantic.mathmlTree;
   }
 
-
   /**
    * @override
    */
   public getMathml() {
-    let children: Element[] = [];
-    let collapsed = EnrichMathml.collapsePunctuated(this.semantic, children);
+    const children: Element[] = [];
+    const collapsed = EnrichMathml.collapsePunctuated(this.semantic, children);
     this.mml = EnrichMathml.introduceNewLayer(children, this.semantic);
     EnrichMathml.setAttributes(this.mml, this.semantic);
     this.mml.removeAttribute(EnrichMathml.Attribute.CONTENT);

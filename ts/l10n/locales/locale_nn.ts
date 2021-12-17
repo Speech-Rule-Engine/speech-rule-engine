@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Norsk Nynorsk message file.
- *
+ * @file Norsk Nynorsk message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -23,12 +22,15 @@
 // This work was sponsored by TextHelp
 //
 
-import {createLocale, Locale} from '../locale';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_nn';
 import * as tr from '../transformers';
 
 let locale: Locale = null;
 
+/**
+ * @returns The Nynorsk locale.
+ */
 export function nn(): Locale {
   if (!locale) {
     locale = create();
@@ -37,8 +39,11 @@ export function nn(): Locale {
   return locale;
 }
 
+/**
+ * @returns The Nynorsk locale.
+ */
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;

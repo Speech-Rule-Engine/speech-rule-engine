@@ -14,19 +14,15 @@
 // limitations under the License.
 
 /**
- * @fileoverview Combines all implemented and available speech rules.
- *
+ * @file Combines all implemented and available speech rules.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { ClearspeakRules } from './clearspeak_rules';
+import { MathspeakRules } from './mathspeak_rules';
+import { BrailleRules, OtherRules, PrefixRules } from './other_rules';
 
-import {ClearspeakRules} from './clearspeak_rules';
-import {MathspeakRules} from './mathspeak_rules';
-import {BrailleRules, OtherRules, PrefixRules} from './other_rules';
-
-
-export let INIT_: boolean = false;
-
+export let INIT_ = false;
 
 /**
  * Initializes the context function mappings for speech rule stores.

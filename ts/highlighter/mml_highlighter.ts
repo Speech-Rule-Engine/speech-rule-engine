@@ -14,19 +14,15 @@
 // limitations under the License.
 
 /**
- * @fileoverview Highlighter for pure (or poor) MathML implementations, using
+ * @file Highlighter for pure (or poor) MathML implementations, using
  * mathcolor and mathbackground instead of CSS style attributes. For example,
  * Firefox with native MathML.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AbstractHighlighter, Highlight} from './abstract_highlighter';
-
+import { AbstractHighlighter, Highlight } from './abstract_highlighter';
 
 export class MmlHighlighter extends AbstractHighlighter {
-
   /**
    * @override
    */
@@ -34,7 +30,6 @@ export class MmlHighlighter extends AbstractHighlighter {
     super();
     this.mactionName = 'maction';
   }
-
 
   /**
    * @override
@@ -44,9 +39,8 @@ export class MmlHighlighter extends AbstractHighlighter {
     style += ';background-color: ' + this.colorString().background;
     style += ';color: ' + this.colorString().foreground;
     node.setAttribute('style', style);
-    return {node: node};
+    return { node: node };
   }
-
 
   /**
    * @override
@@ -54,11 +48,12 @@ export class MmlHighlighter extends AbstractHighlighter {
   public unhighlightNode(info: Highlight) {
     let style = info.node.getAttribute('style');
     style = style.replace(
-        ';background-color: ' + this.colorString().background, '');
+      ';background-color: ' + this.colorString().background,
+      ''
+    );
     style = style.replace(';color: ' + this.colorString().foreground, '');
     info.node.setAttribute('style', style);
   }
-
 
   /**
    * @override
@@ -67,15 +62,14 @@ export class MmlHighlighter extends AbstractHighlighter {
     return this.color.rgba();
   }
 
-
   /**
    * @override
    */
   public getMactionNodes(node: HTMLElement) {
     return Array.from(
-        node.getElementsByTagName(this.mactionName)) as HTMLElement[];
+      node.getElementsByTagName(this.mactionName)
+    ) as HTMLElement[];
   }
-
 
   /**
    * @override
@@ -83,6 +77,4 @@ export class MmlHighlighter extends AbstractHighlighter {
   public isMactionNode(node: HTMLElement) {
     return node.tagName === this.mactionName;
   }
-
 }
-

@@ -15,51 +15,53 @@
 // limitations under the License.
 
 /**
- * @fileoverview Interface definition for a class which evaluates speech rules.
+ * @file Interface definition for a class which evaluates speech rules.
  *
  * A speech rule evaluator knows how to generate a description given a node and
  * a speech rule.
  * @author dtseng@google.com (David Tseng)
  */
 
-import {AuditoryDescription} from '../audio/auditory_description';
-
+import { AuditoryDescription } from '../audio/auditory_description';
 
 export interface SpeechRuleEvaluator {
-
   /**
    * Default evaluation of a node if no speech rule is applicable.
+   *
    * @param node The target node (or root of subtree).
-   * @return The resulting description.
+   * @returns The resulting description.
    */
   evaluateDefault(node: Node): void;
 
   /**
    * Default evaluation of a whitespace string.
+   *
    * @param str The string.
-   * @return The resulting description.
+   * @returns The resulting description.
    */
   evaluateWhitespace(str: string): AuditoryDescription[];
 
   /**
    * Default evaluation of a string string.
+   *
    * @param str The string.
-   * @return The resulting description.
+   * @returns The resulting description.
    */
   evaluateString(str: string): AuditoryDescription[];
 
   /**
    * Custom evaluation of a string.
+   *
    * @param str The string.
-   * @return The resulting description.
+   * @returns The resulting description.
    */
   evaluateCustom(str: string): AuditoryDescription;
 
   /**
    * Default evaluation of a character.
+   *
    * @param chr The character.
-   * @return The resulting description.
+   * @returns The resulting description.
    */
   evaluateCharacter(str: string): AuditoryDescription;
-
 }

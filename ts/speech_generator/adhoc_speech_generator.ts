@@ -14,23 +14,19 @@
 // limitations under the License.
 
 /**
- * @fileoverview Ad hoc speech generator that computes a new speech string for
+ * @file Ad hoc speech generator that computes a new speech string for
  *     an element, non-recursively, every time.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AbstractSpeechGenerator} from './abstract_speech_generator';
-
+import { AbstractSpeechGenerator } from './abstract_speech_generator';
 
 export class AdhocSpeechGenerator extends AbstractSpeechGenerator {
-
   /**
    * @override
    */
   public getSpeech(node: Element, xml: Element) {
-    let speech = this.generateSpeech(node, xml);
+    const speech = this.generateSpeech(node, xml);
     node.setAttribute(this.modality, speech);
     return speech;
   }

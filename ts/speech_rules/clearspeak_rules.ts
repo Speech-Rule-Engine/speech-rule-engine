@@ -14,18 +14,16 @@
 // limitations under the License.
 
 /**
- * @fileoverview Adds context function mappings to the global store.
+ * @file Adds context function mappings to the global store.
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
-
 
 import * as StoreUtil from '../rule_engine/store_util';
 
 import * as ClearspeakUtil from './clearspeak_util';
 import * as MathspeakUtil from './mathspeak_util';
 import * as NumbersUtil from './numbers_util';
-import SpeechRules from './speech_rules';
-
+import * as SpeechRules from './speech_rules';
 
 /**
  * Adds the custom functions for the clearspeak rules.
@@ -33,18 +31,18 @@ import SpeechRules from './speech_rules';
 export function ClearspeakRules() {
   // Basic English
   SpeechRules.addStore('en.speech.clearspeak', '', {
-    'CTFpauseSeparator': StoreUtil.pauseSeparator,
-    'CTFnodeCounter': ClearspeakUtil.nodeCounter,
-    'CTFcontentIterator': StoreUtil.contentIterator,
-    'CSFvulgarFraction': NumbersUtil.vulgarFraction,
-    'CQFvulgarFractionSmall': ClearspeakUtil.isSmallVulgarFraction,
-    'CQFcellsSimple': ClearspeakUtil.allCellsSimple,
-    'CSFordinalExponent': ClearspeakUtil.ordinalExponent,
-    'CSFwordOrdinal': ClearspeakUtil.wordOrdinal,
-    'CQFmatchingFences': ClearspeakUtil.matchingFences,
-    'CSFnestingDepth': ClearspeakUtil.nestingDepth,
-    'CQFfencedArguments': ClearspeakUtil.fencedArguments,
-    'CQFsimpleArguments': ClearspeakUtil.simpleArguments,
-    'CQFspaceoutNumber': MathspeakUtil.spaceoutNumber,
+    CTFpauseSeparator: StoreUtil.pauseSeparator,
+    CTFnodeCounter: ClearspeakUtil.nodeCounter,
+    CTFcontentIterator: StoreUtil.contentIterator,
+    CSFvulgarFraction: NumbersUtil.vulgarFraction,
+    CQFvulgarFractionSmall: ClearspeakUtil.isSmallVulgarFraction,
+    CQFcellsSimple: ClearspeakUtil.allCellsSimple,
+    CSFordinalExponent: ClearspeakUtil.ordinalExponent,
+    CSFwordOrdinal: ClearspeakUtil.wordOrdinal,
+    CQFmatchingFences: ClearspeakUtil.matchingFences,
+    CSFnestingDepth: ClearspeakUtil.nestingDepth,
+    CQFfencedArguments: ClearspeakUtil.fencedArguments,
+    CQFsimpleArguments: ClearspeakUtil.simpleArguments,
+    CQFspaceoutNumber: MathspeakUtil.spaceoutNumber
   });
 }

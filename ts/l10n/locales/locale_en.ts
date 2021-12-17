@@ -14,20 +14,20 @@
 // limitations under the License.
 
 /**
- * @fileoverview English message file.
- *
+ * @file English message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Grammar} from '../../rule_engine/grammar';
-import {createLocale, Locale} from '../locale';
+import { Grammar } from '../../rule_engine/grammar';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_en';
 import * as tr from '../transformers';
 
-
 let locale: Locale = null;
 
+/**
+ * @returns The English locale.
+ */
 export function en(): Locale {
   if (!locale) {
     locale = create();
@@ -36,8 +36,11 @@ export function en(): Locale {
   return locale;
 }
 
+/**
+ * @returns The English locale.
+ */
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.FUNCTIONS.plural = (unit: string) => {
     return /.*s$/.test(unit) ? unit : unit + 's';
@@ -49,4 +52,3 @@ function create(): Locale {
   };
   return loc;
 }
-

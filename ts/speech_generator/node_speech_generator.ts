@@ -14,31 +14,25 @@
 // limitations under the License.
 
 /**
- * @fileoverview Node speech generator that computes a new speech string for a
+ * @file Node speech generator that computes a new speech string for a
  *     single node and its subtree, if it does not yet have a speech string
  *     attached.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as WalkerUtil from '../walker/walker_util';
 
-import {TreeSpeechGenerator} from './tree_speech_generator';
-
+import { TreeSpeechGenerator } from './tree_speech_generator';
 
 export class NodeSpeechGenerator extends TreeSpeechGenerator {
-
   /**
    * @override
    */
   public getSpeech(node: Element, xml: Element) {
-    let speech = WalkerUtil.getAttribute(node, this.modality);
+    const speech = WalkerUtil.getAttribute(node, this.modality);
     if (speech) {
       return speech;
     }
     return super.getSpeech(node, xml);
   }
-
 }
-

@@ -14,12 +14,11 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic transformer functions for locales.
+ * @file Basic transformer functions for locales.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-export type Transformer = (p1: string|number) => string;
+export type Transformer = (p1: string | number) => string;
 
 export type Combiner = (p1: string, p2: string, p3: string) => string;
 
@@ -29,12 +28,12 @@ export type GrammarCase = (p1: number, p2: boolean) => string;
 
 export type Processor = Transformer | Combiner | GrammarCase | SiCombiner;
 
-
 /**
  * A trivial translator of numbers with plural.
+ *
  * @param num A number.
- * @param plural A flag indicating plural.
- * @return The number as a string.
+ * @param _plural A flag indicating plural.
+ * @returns The number as a string.
  */
 export function pluralCase(num: number, _plural: boolean): string {
   return num.toString();
@@ -42,68 +41,79 @@ export function pluralCase(num: number, _plural: boolean): string {
 
 /**
  * A trivial transformer.
+ *
  * @param input A number or string.
- * @return The input as a string.
+ * @returns The input as a string.
  */
-export function identityTransformer(input: string|number): string {
+export function identityTransformer(input: string | number): string {
   return input.toString();
 }
 
-
 /**
  * Combines a prefix and unit.
+ *
  * @param  prefix The prefix.
  * @param  unit The main part.
+ * @returns The si unit name composed of prefix and base unit.
  */
 export function siCombiner(prefix: string, unit: string) {
   return prefix + unit.toLowerCase();
 }
 
-
 // Namespaces
-export let Combiners: Record<string, Combiner> = {};
+export const Combiners: Record<string, Combiner> = {};
 
-Combiners.identityCombiner = function(a: string, b: string, c: string) {
+Combiners.identityCombiner = function (a: string, b: string, c: string) {
   return a + b + c;
-}
+};
 
 /**
  * A combiner adding the font name before the letter. Empty strings are ignored.
+ *
  * @param letter The letter.
  * @param font The font name.
  * @param cap Capitalisation expression.
- * @return The speech string as `font cap letter`.
+ * @returns The speech string as `font cap letter`.
  */
-Combiners.prefixCombiner = function(
-    letter: string, font: string, cap: string): string {
+Combiners.prefixCombiner = function (
+  letter: string,
+  font: string,
+  cap: string
+): string {
   letter = cap ? cap + ' ' + letter : letter;
   return font ? font + ' ' + letter : letter;
-}
-
+};
 
 /**
  * A combiner adding the font name after the letter. Empty strings are ignored.
+ *
  * @param letter The letter.
  * @param font The font name.
  * @param cap Capitalisation expression.
- * @return The speech string as `cap letter font`.
+ * @returns The speech string as `cap letter font`.
  */
-Combiners.postfixCombiner = function(
-    letter: string, font: string, cap: string): string {
+Combiners.postfixCombiner = function (
+  letter: string,
+  font: string,
+  cap: string
+): string {
   letter = cap ? cap + ' ' + letter : letter;
   return font ? letter + ' ' + font : letter;
-}
-
+};
 
 /**
  * A combiner used in a number of romance languages.
+ *
  * @param letter The letter.
  * @param font The font name.
  * @param cap Capitalisation expression.
- * @return The speech string as `letter cap font`.
+ * @returns The speech string as `letter cap font`.
  */
 Combiners.romanceCombiner = function (
-    letter: string, font: string, cap: string): string {
+  letter: string,
+  font: string,
+  cap: string
+): string {
   letter = cap ? letter + ' ' + cap : letter;
   return font ? letter + ' ' + font : letter;
 };

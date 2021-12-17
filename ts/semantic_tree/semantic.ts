@@ -14,63 +14,58 @@
 // limitations under the License.
 
 /**
- * @fileoverview An API for the semantic translation of MathML.
- *
+ * @file An API for the semantic translation of MathML.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as DomUtil from '../common/dom_util';
-import {SemanticFont, SemanticRole, SemanticType} from './semantic_attr';
-import {SemanticTree} from './semantic_tree';
-
+import { SemanticFont, SemanticRole, SemanticType } from './semantic_meaning';
+import { SemanticTree } from './semantic_tree';
 
 /**
  * Exports font attributes.
  */
 export type Font = SemanticFont;
 
-
 /**
  * Exports role attributes.
  */
 export type Role = SemanticRole;
 
-
 /**
  * Exports type attributes.
  */
 export type Type = SemanticType;
-type Attr = Font|Role|Type;
-export {Attr};
-
+type Attr = Font | Role | Type;
+export { Attr };
 
 /**
  * Creates the semantic tree for a given MathML node.
+ *
  * @param mml The MathML node.
- * @return Semantic tree for input node as XML node.
+ * @returns Semantic tree for input node as XML node.
  */
 export function xmlTree(mml: Element): Element {
   return getTree(mml).xml();
 }
 
-
 /**
  * Creates the semantic tree for a given MathML node.
+ *
  * @param mml The MathML node.
- * @return Semantic tree for input node.
+ * @returns Semantic tree for input node.
  */
 export function getTree(mml: Element): SemanticTree {
   return new SemanticTree(mml);
 }
 
-
 /**
  * Creates the semantic tree for a MathML string.
+ *
  * @param expr The string representing the MathML expression.
- * @return Semantic tree for input string as XML node.
+ * @returns Semantic tree for input string as XML node.
  */
 export function getTreeFromString(expr: string): SemanticTree {
-  let mml = DomUtil.parseInput(expr);
+  const mml = DomUtil.parseInput(expr);
   return getTree(mml);
 }

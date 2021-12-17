@@ -14,10 +14,10 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers into Bokmal.
+ * @file Translating numbers into Bokmal.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-import {Numbers, NUMBERS as NUMB} from '../messages';
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 //
 // This work was sponsored by TextHelp
@@ -26,27 +26,28 @@ import {Numbers, NUMBERS as NUMB} from '../messages';
 /**
  * Sub-ISO specification. Possible values: alt.
  */
-export let SUB_ISO: string = 'alt';
+export const SUB_ISO = 'alt';
 
 /**
  * Changes number one 'eins' into a prefix.
- * @param num number string.
- * @return If it is a one, it is made into prefix.
+ *
+ * @param num Number string.
+ * @param thd Flag indicating if this a thousand or above.
+ * @returns If it is a one, it is made into prefix.
  */
-function onePrefix_(num: string, thd: boolean = false): string {
-  let numOne = NUMBERS.ones[1];
-  return num === numOne ?
-    (num === 'ein' ? 'eitt ' : (thd ? 'et' : 'ett'))
-    : num;
+function onePrefix_(num: string, thd = false): string {
+  const numOne = NUMBERS.ones[1];
+  return num === numOne ? (num === 'ein' ? 'eitt ' : thd ? 'et' : 'ett') : num;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @param ordinal Flag indicating if we construct an ordinal.
+ * @returns The string representation of that number.
  */
-function hundredsToWords_(num: number, ordinal: boolean = false): string {
+function hundredsToWords_(num: number, ordinal = false): string {
   let n = num % 1000;
   let str = '';
   let ones = NUMBERS.ones[Math.floor(n / 100)];
@@ -55,31 +56,31 @@ function hundredsToWords_(num: number, ordinal: boolean = false): string {
   if (n) {
     str += str ? 'og' : '';
     if (ordinal) {
-      let ord = NUMBERS.special.smallOrdinals[n];
+      const ord = NUMBERS.special.smallOrdinals[n];
       if (ord) {
-        return str += ord;
+        return (str += ord);
       }
     }
     ones = NUMBERS.ones[n];
     if (ones) {
       str += ones;
     } else {
-      let tens = NUMBERS.tens[Math.floor(n / 10)];
+      const tens = NUMBERS.tens[Math.floor(n / 10)];
       ones = NUMBERS.ones[n % 10];
       str += ones ? ones + 'og' + tens : tens;
     }
   }
-  return (ordinal ? replaceOrdinal(str) : str);
+  return ordinal ? replaceOrdinal(str) : str;
 }
-
 
 /**
  * Adds the ordinal ending for numbers up to numbers < 1000.
+ *
  * @param str The number.
- * @return Number with ordinal ending.
+ * @returns Number with ordinal ending.
  */
 function replaceOrdinal(str: string): string {
-  let letOne = NUMBERS.special.endOrdinal[0];
+  const letOne = NUMBERS.special.endOrdinal[0];
   if (letOne === 'a' && str.match(/en$/)) {
     return str.slice(0, -2) + NUMBERS.special.endOrdinal;
   }
@@ -98,13 +99,14 @@ function replaceOrdinal(str: string): string {
   return str + 'nde';
 }
 
-
 /**
  * Translates a number of up to twelve digits into a string representation.
+ *
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @param ordinal Flag indicating if we construct an ordinal.
+ * @returns The string representation of that number.
  */
-function numberToWords(num: number, ordinal: boolean = false): string {
+function numberToWords(num: number, ordinal = false): string {
   if (num === 0) {
     return ordinal ? NUMBERS.special.smallOrdinals[0] : NUMBERS.zero;
   }
@@ -114,59 +116,60 @@ function numberToWords(num: number, ordinal: boolean = false): string {
   let pos = 0;
   let str = '';
   while (num > 0) {
-    let hundreds = num % 1000;
+    const hundreds = num % 1000;
     if (hundreds) {
-      let hund = hundredsToWords_(num % 1000, (pos ? false : ordinal));
+      const hund = hundredsToWords_(num % 1000, pos ? false : ordinal);
       if (!pos && ordinal) {
         ordinal = !ordinal;
       }
-      str = (pos === 1 ? onePrefix_(hund, true) : hund) +
+      str =
+        (pos === 1 ? onePrefix_(hund, true) : hund) +
         (pos > 1 ? NUMBERS.numSep : '') +
-        (pos ?
-          // If this is million or above take care oaf the plural.
-          (NUMBERS.large[pos] + (pos > 1 && hundreds > 1 ? 'er' : '')) :
-          '') +
-        (pos > 1 && str ? NUMBERS.numSep : '') + str;
+        (pos
+          ? // If this is million or above take care oaf the plural.
+            NUMBERS.large[pos] + (pos > 1 && hundreds > 1 ? 'er' : '')
+          : '') +
+        (pos > 1 && str ? NUMBERS.numSep : '') +
+        str;
     }
     num = Math.floor(num / 1000);
     pos++;
   }
-  return ordinal ? (str + (str.match(/tusen$/) ? 'de' : 'te')) : str;
+  return ordinal ? str + (str.match(/tusen$/) ? 'de' : 'te') : str;
 }
-
 
 /**
  * Translates a number of up to twelve digits into a string representation of
  * its ordinal.
+ *
  * @param num The number to translate.
- * @param plural A flag indicating if the ordinal is in plural.
- * @return The ordinal of the number as string.
+ * @param _plural A flag indicating if the ordinal is in plural.
+ * @returns The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, _plural: boolean): string {
   return wordOrdinal(num);
 }
 
-
 /**
  * Creates a word ordinal string from a number.
+ *
  * @param num The number to be converted.
- * @return The ordinal string.
+ * @returns The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let ordinal = numberToWords(num, true);
+  const ordinal = numberToWords(num, true);
   return ordinal;
 }
 
-
 /**
  * Creates a simple ordinal string from a number.
+ *
  * @param num The number to be converted.
- * @return The ordinal string.
+ * @returns The ordinal string.
  */
 function simpleOrdinal(num: number): string {
   return num.toString() + '.';
 }
-
 
 const NUMBERS: Numbers = NUMB();
 NUMBERS.wordOrdinal = wordOrdinal;

@@ -14,33 +14,34 @@
 // limitations under the License.
 
 /**
- * @fileoverview A collection of utilities dealing with file handling. These
+ * @file A collection of utilities dealing with file handling. These
  *     only depend on system external to handle different load methods.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import SystemExternal from './system_external';
-
 
 /**
  * Corrects pathnames to have trailing slashes.
+ *
  * @param path The original path.
- * @return The path that has definitely a trailing slash.
+ * @returns The path that has definitely a trailing slash.
  */
 export function makePath(path: string): string {
   return path.match('/$') ? path : path + '/';
 }
-
 
 /**
  * Returns the default locale path, depending on the mode of operation.
  *
  * @param locale The locale iso.
  * @param ext An optional file extension. Defaults to json.
+ * @returns The full path or URL to the locale.
  */
-export function localePath(locale: string, ext: string = 'json') {
-  return makePath(SystemExternal.jsonPath) + locale +
-    (ext.match(/^\./) ? ext : '.' + ext);
+export function localePath(locale: string, ext = 'json') {
+  return (
+    makePath(SystemExternal.jsonPath) +
+    locale +
+    (ext.match(/^\./) ? ext : '.' + ext)
+  );
 }

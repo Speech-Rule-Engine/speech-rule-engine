@@ -14,21 +14,18 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with table elements.
- *
+ * @file Specialist computations to deal with table elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
+import { SemanticType } from '../semantic_tree/semantic_meaning';
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseTable extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
@@ -41,15 +38,17 @@ export class CaseTable extends AbstractEnrichCase {
 
   /**
    * Applicability test of the case.
+   *
    * @param semantic The semantic node.
-   * @return True if case is applicable.
+   * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
-    return semantic.type === SemanticType.MATRIX ||
-        semantic.type === SemanticType.VECTOR ||
-        semantic.type === SemanticType.CASES;
+    return (
+      semantic.type === SemanticType.MATRIX ||
+      semantic.type === SemanticType.VECTOR ||
+      semantic.type === SemanticType.CASES
+    );
   }
-
 
   /**
    * @override
@@ -59,30 +58,32 @@ export class CaseTable extends AbstractEnrichCase {
     this.mml = semantic.mathmlTree;
   }
 
-
   /**
    * @override
    */
   public getMathml() {
-    let lfence = EnrichMathml.cloneContentNode(
-        (this.semantic.contentNodes[0] as SemanticNode));
-    let rfence = this.semantic.contentNodes[1] ?
-        EnrichMathml.cloneContentNode(
-            (this.semantic.contentNodes[1] as SemanticNode)) :
-        null;
-    this.inner =
-        this.semantic.childNodes.map(EnrichMathml.walkTree);
+    const lfence = EnrichMathml.cloneContentNode(
+      this.semantic.contentNodes[0] as SemanticNode
+    );
+    const rfence = this.semantic.contentNodes[1]
+      ? EnrichMathml.cloneContentNode(
+          this.semantic.contentNodes[1] as SemanticNode
+        )
+      : null;
+    this.inner = this.semantic.childNodes.map(EnrichMathml.walkTree);
     if (!this.mml) {
       this.mml = EnrichMathml.introduceNewLayer(
         // TODO (TS): changed this here to create a single list!
-        [lfence].concat(this.inner, [rfence]), this.semantic);
+        [lfence].concat(this.inner, [rfence]),
+        this.semantic
+      );
     } else if (DomUtil.tagName(this.mml) === 'MFENCED') {
-      let children = this.mml.childNodes;
+      const children = this.mml.childNodes;
       this.mml.insertBefore(lfence, children[0] || null);
       rfence && this.mml.appendChild(rfence);
       this.mml = EnrichMathml.rewriteMfenced(this.mml);
     } else {
-      let newChildren = [lfence, this.mml];
+      const newChildren = [lfence, this.mml];
       rfence && newChildren.push(rfence);
       this.mml = EnrichMathml.introduceNewLayer(newChildren, this.semantic);
     }

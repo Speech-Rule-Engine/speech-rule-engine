@@ -15,31 +15,29 @@
 // limitations under the License.
 
 /**
- * @fileoverview A semantic tree for MathML expressions.
+ * @file A semantic tree for MathML expressions.
  *
  * This file contains functionality to compute a semantic interpretation from a
  * given MathML expression. This is a very heuristic approach that assumes a
  * fairly simple default semantic which is suitable for K-12 and simple UG
  * mathematics.
- *
  * @author sorge@google.com (Volker Sorge)
  */
 
 import * as DomUtil from '../common/dom_util';
 import SystemExternal from '../common/system_external';
 
-import {SemanticAnnotations} from './semantic_annotations';
-import {SemanticVisitor} from './semantic_annotator';
-import {SemanticRole, SemanticType} from './semantic_attr';
-import {SemanticMeaningCollator} from './semantic_default';
-import {SemanticMathml} from './semantic_mathml';
-import {SemanticNode} from './semantic_node';
-import {SemanticParser} from './semantic_parser';
+import { annotate } from './semantic_annotations';
+import { SemanticVisitor } from './semantic_annotator';
+import { SemanticRole, SemanticType } from './semantic_meaning';
+import { SemanticMeaningCollator } from './semantic_default';
+import { SemanticMathml } from './semantic_mathml';
+import { SemanticNode } from './semantic_node';
+import { SemanticParser } from './semantic_parser';
 import * as SemanticPred from './semantic_pred';
-
+import './semantic_heuristics';
 
 export class SemanticTree {
-
   /**
    * The root of the tree.
    */
@@ -55,30 +53,32 @@ export class SemanticTree {
    */
   public collator: SemanticMeaningCollator;
 
-
   /**
    * Generate an empty semantic tree.
-   * @return The empty semantic tree.
+   *
+   * @returns The empty semantic tree.
    */
   public static empty(): SemanticTree {
-    let empty = DomUtil.parseInput('<math/>');
-    let stree = new SemanticTree(empty);
+    const empty = DomUtil.parseInput('<math/>');
+    const stree = new SemanticTree(empty);
     stree.mathml = empty;
     return stree;
   }
 
-
   /**
    * Generate a semantic tree for a given node.
+   *
    * @param semantic The semantic node that will become
    *     the root.
    * @param opt_mathml Optionally a MathML node corresponding to the
    *     semantic node.
-   * @return The empty semantic tree.
+   * @returns The empty semantic tree.
    */
   public static fromNode(
-      semantic: SemanticNode, opt_mathml?: Element): SemanticTree {
-    let stree = SemanticTree.empty();
+    semantic: SemanticNode,
+    opt_mathml?: Element
+  ): SemanticTree {
+    const stree = SemanticTree.empty();
     stree.root = semantic;
     if (opt_mathml) {
       stree.mathml = opt_mathml;
@@ -86,52 +86,54 @@ export class SemanticTree {
     return stree;
   }
 
-
   /**
    * Generate a semantic tree for a given node
+   *
    * @param semantic The semantic node that will become
    *     the root.
    * @param opt_mathml Optionally a MathML node corresponding to the
    *     semantic node.
-   * @return The empty semantic tree.
+   * @returns The empty semantic tree.
    */
   public static fromRoot(
-      semantic: SemanticNode, opt_mathml?: Element): SemanticTree {
+    semantic: SemanticNode,
+    opt_mathml?: Element
+  ): SemanticTree {
     let root = semantic;
     while (root.parent) {
       root = root.parent;
     }
-    let stree = SemanticTree.fromNode(root);
+    const stree = SemanticTree.fromNode(root);
     if (opt_mathml) {
       stree.mathml = opt_mathml;
     }
     return stree;
   }
 
-
   /**
    * Generates a semantic tree from its XML representation.
+   *
    * @param xml The XML representation.
-   * @return The generated semantic tree.
+   * @returns The generated semantic tree.
    */
   public static fromXml(xml: Element): SemanticTree {
-    let stree = SemanticTree.empty();
+    const stree = SemanticTree.empty();
     if (xml.childNodes[0]) {
-      stree.root = SemanticNode.fromXml((xml.childNodes[0] as Element));
+      stree.root = SemanticNode.fromXml(xml.childNodes[0] as Element);
     }
     return stree;
   }
 
-
   /**
    * Create an initial semantic tree.
+   *
    * @param mathml The original MathML node.
    */
   constructor(public mathml: Element) {
     this.root = this.parser.parse(mathml);
     this.collator = this.parser.getFactory().leafMap.collateMeaning();
 
-    let newDefault = this.collator.newDefault();
+    const newDefault = this.collator.newDefault();
     if (newDefault) {
       // Reparse!
       this.parser = new SemanticMathml();
@@ -140,44 +142,43 @@ export class SemanticTree {
     }
     unitVisitor.visit(this.root, {});
 
-    SemanticAnnotations.annotate(this.root);
+    annotate(this.root);
   }
-
 
   /**
    * Returns an XML representation of the tree.
+   *
    * @param opt_brief If set attributes are omitted.
-   * @return The XML representation of the tree.
+   * @returns The XML representation of the tree.
    */
   public xml(opt_brief?: boolean): Element {
-    let xml = DomUtil.parseInput('<stree></stree>');
-    let xmlRoot = this.root.xml(xml.ownerDocument, opt_brief);
+    const xml = DomUtil.parseInput('<stree></stree>');
+    const xmlRoot = this.root.xml(xml.ownerDocument, opt_brief);
     xml.appendChild(xmlRoot);
     return xml;
   }
 
-
   /**
    * Serializes the XML representation of the tree.
+   *
    * @param opt_brief If set attributes are omitted.
-   * @return Serialized string.
+   * @returns Serialized string.
    */
   public toString(opt_brief?: boolean): string {
-    let xmls = new SystemExternal.xmldom.XMLSerializer();
+    const xmls = new SystemExternal.xmldom.XMLSerializer();
     return xmls.serializeToString(this.xml(opt_brief));
   }
 
-
   /**
    * Pretty print the XML representation of the tree.
+   *
    * @param opt_brief If set attributes are omitted.
-   * @return The formatted string.
+   * @returns The formatted string.
    */
   public formatXml(opt_brief?: boolean): string {
-    let xml = this.toString(opt_brief);
+    const xml = this.toString(opt_brief);
     return DomUtil.formatXml(xml);
   }
-
 
   /**
    * Convenience method to display the whole tree and its elements.
@@ -186,14 +187,14 @@ export class SemanticTree {
     this.root.displayTree();
   }
 
-
   /**
    * Replaces a node in the tree. Updates the root node if necessary.
+   *
    * @param oldNode The node to be replaced.
    * @param newNode The new node.
    */
   public replaceNode(oldNode: SemanticNode, newNode: SemanticNode) {
-    let parent = oldNode.parent;
+    const parent = oldNode.parent;
     if (!parent) {
       this.root = newNode;
       return;
@@ -201,36 +202,37 @@ export class SemanticTree {
     parent.replaceChild(oldNode, newNode);
   }
 
-
   /**
    * Turns tree into JSON format.
-   * @return The JSON object for the tree.
+   *
+   * @returns The JSON object for the tree.
    */
   // TODO (TS): JSON type.
   public toJson(): any {
-    let json = ({} as any);
+    const json = {} as any;
     json['stree'] = this.root.toJson();
     return json;
   }
-
 }
-
 
 /**
  * Visitor to propagate unit expressions if possible.
  */
-const unitVisitor =
-    new SemanticVisitor('general', 'unit', (node, _info) => {
-      if (node.type === SemanticType.INFIXOP &&
-          (node.role === SemanticRole.MULTIPLICATION ||
-           node.role === SemanticRole.IMPLICIT)) {
-        let children = node.childNodes;
-        if (children.length &&
-            (SemanticPred.isPureUnit(children[0]) ||
-             SemanticPred.isUnitCounter(children[0])) &&
-            node.childNodes.slice(1).every(SemanticPred.isPureUnit)) {
-          node.role = SemanticRole.UNIT;
-        }
-      }
-      return false;
-    });
+const unitVisitor = new SemanticVisitor('general', 'unit', (node, _info) => {
+  if (
+    node.type === SemanticType.INFIXOP &&
+    (node.role === SemanticRole.MULTIPLICATION ||
+      node.role === SemanticRole.IMPLICIT)
+  ) {
+    const children = node.childNodes;
+    if (
+      children.length &&
+      (SemanticPred.isPureUnit(children[0]) ||
+        SemanticPred.isUnitCounter(children[0])) &&
+      node.childNodes.slice(1).every(SemanticPred.isPureUnit)
+    ) {
+      node.role = SemanticRole.UNIT;
+    }
+  }
+  return false;
+});

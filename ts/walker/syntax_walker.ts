@@ -14,19 +14,16 @@
 // limitations under the License.
 
 /**
- * @fileoverview A simple syntax walker.
- *
+ * @file A simple syntax walker.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {interleaveLists} from '../common/base_util';
-import {Highlighter} from '../highlighter/highlighter';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SpeechGenerator} from '../speech_generator/speech_generator';
-import {AbstractWalker} from './abstract_walker';
-import {Levels} from './levels';
-
+import { interleaveLists } from '../common/base_util';
+import { Highlighter } from '../highlighter/highlighter';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
+import { SpeechGenerator } from '../speech_generator/speech_generator';
+import { AbstractWalker } from './abstract_walker';
+import { Levels } from './levels';
 
 /**
  * @override
@@ -37,30 +34,31 @@ export class SyntaxWalker extends AbstractWalker<string> {
    */
   public levels: Levels<string> = null;
   constructor(
-      public node: Element, public generator: SpeechGenerator,
-      public highlighter: Highlighter, xml: string) {
+    public node: Element,
+    public generator: SpeechGenerator,
+    public highlighter: Highlighter,
+    xml: string
+  ) {
     super(node, generator, highlighter, xml);
 
     this.restoreState();
   }
 
-
   /**
    * @override
    */
   public initLevels() {
-    let levels = new Levels();
+    const levels = new Levels();
     levels.push([this.primaryId()]);
     return levels as Levels<string>;
   }
-
 
   /**
    * @override
    */
   public up() {
     super.up();
-    let parent = this.previousLevel();
+    const parent = this.previousLevel();
     if (!parent) {
       return null;
     }
@@ -68,28 +66,31 @@ export class SyntaxWalker extends AbstractWalker<string> {
     return this.singletonFocus(parent);
   }
 
-
   /**
    * @override
    */
   public down() {
     super.down();
-    let children = this.nextLevel();
+    const children = this.nextLevel();
     if (children.length === 0) {
       return null;
     }
-    let focus = this.singletonFocus(children[0]);
+    const focus = this.singletonFocus(children[0]);
     if (focus) {
       this.levels.push(children);
     }
     return focus;
   }
 
-
   /**
    * @override
    */
-  public combineContentChildren(type: SemanticType, role: SemanticRole, content: string[], children: string[]): string[] {
+  public combineContentChildren(
+    type: SemanticType,
+    role: SemanticRole,
+    content: string[],
+    children: string[]
+  ): string[] {
     switch (type) {
       case SemanticType.RELSEQ:
       case SemanticType.INFIXOP:
@@ -122,34 +123,31 @@ export class SyntaxWalker extends AbstractWalker<string> {
     }
   }
 
-
   /**
    * @override
    */
   public left() {
     super.left();
-    let index = this.levels.indexOf(this.primaryId());
+    const index = this.levels.indexOf(this.primaryId());
     if (index === null) {
       return null;
     }
-    let id = this.levels.get(index - 1);
+    const id = this.levels.get(index - 1);
     return id ? this.singletonFocus(id) : null;
   }
-
 
   /**
    * @override
    */
   public right() {
     super.right();
-    let index = this.levels.indexOf(this.primaryId());
+    const index = this.levels.indexOf(this.primaryId());
     if (index === null) {
       return null;
     }
-    let id = this.levels.get(index + 1);
+    const id = this.levels.get(index + 1);
     return id ? this.singletonFocus(id) : null;
   }
-
 
   /**
    * @override

@@ -14,41 +14,36 @@
 // limitations under the License.
 
 /**
- * @fileoverview Tree speech generator that computes speech strings for
+ * @file Tree speech generator that computes speech strings for
  *     elements of an entire expression tree, even if it has already speech
  *     strings attached.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-
 
 import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
 import * as WalkerUtil from '../walker/walker_util';
 
-import {AbstractSpeechGenerator} from './abstract_speech_generator';
+import { AbstractSpeechGenerator } from './abstract_speech_generator';
 import * as SpeechGeneratorUtil from './speech_generator_util';
 
-
 export class TreeSpeechGenerator extends AbstractSpeechGenerator {
-
   /**
    * @override
    */
   public getSpeech(node: Element, xml: Element) {
-    let speech = this.generateSpeech(node, xml);
+    const speech = this.generateSpeech(node, xml);
     node.setAttribute(this.modality, speech);
-    let nodes = this.getRebuilt().nodeDict;
-    for (let key in nodes) {
+    const nodes = this.getRebuilt().nodeDict;
+    for (const key in nodes) {
       // TODO: Refactor with setting the base semantic tree in the enrich mathml
       //      object.
-      let snode = nodes[key];
-      let innerMml = (WalkerUtil.getBySemanticId(xml, key) as Element);
-      let innerNode = (WalkerUtil.getBySemanticId(node, key) as Element);
+      const snode = nodes[key];
+      const innerMml = WalkerUtil.getBySemanticId(xml, key) as Element;
+      const innerNode = WalkerUtil.getBySemanticId(node, key) as Element;
       if (!innerMml || !innerNode) {
         continue;
       }
-      if (!this.modality ||
-          this.modality === EnrichMathml.Attribute.SPEECH) {
+      if (!this.modality || this.modality === EnrichMathml.Attribute.SPEECH) {
         SpeechGeneratorUtil.addSpeech(innerNode, snode, this.getRebuilt().xml);
       } else {
         SpeechGeneratorUtil.addModality(innerNode, snode, this.modality);

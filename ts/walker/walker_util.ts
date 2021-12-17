@@ -14,54 +14,58 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for walkers.
- *
+ * @file Utility functions for walkers.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-
 
 import * as DomUtil from '../common/dom_util';
 import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
 
-
 /**
  * A comma separated list of attribute values.
+ *
  * @param attr The attribute value.
- * @return A list of values.
+ * @returns A list of values.
  */
-export function splitAttribute(attr: string|null): string[] {
+export function splitAttribute(attr: string | null): string[] {
   return !attr ? [] : attr.split(/,/);
 }
-
 
 /**
  * Retrieves a data attribute from a given node. Tries using microdata access if
  * possible.
+ *
  * @param node A DOM node.
  * @param attr The semantic data attribute.
- * @return The value for that attribute.
+ * @returns The value for that attribute.
  */
-export function getAttribute(node: Element,
-                             attr: EnrichMathml.Attribute): string {
+export function getAttribute(
+  node: Element,
+  attr: EnrichMathml.Attribute
+): string {
   return DomUtil.getDataAttribute(node, attr);
 }
 
-
 /**
  * Retrieves the node containing the embedding of the root of a semantic tree.
+ *
  * @param node The math node.
- * @return The node with the embedded root. If we cannot find one, the
+ * @returns The node with the embedded root. If we cannot find one, the
  *     input node is returned.
  */
 export function getSemanticRoot(node: Element): Element {
-  if (node.hasAttribute(EnrichMathml.Attribute.TYPE) &&
-      !node.hasAttribute(EnrichMathml.Attribute.PARENT)) {
+  if (
+    node.hasAttribute(EnrichMathml.Attribute.TYPE) &&
+    !node.hasAttribute(EnrichMathml.Attribute.PARENT)
+  ) {
     return node;
   }
 
-  let semanticNodes =
-      DomUtil.querySelectorAllByAttr(node, EnrichMathml.Attribute.TYPE);
-  for (let i = 0, semanticNode; semanticNode = semanticNodes[i]; i++) {
+  const semanticNodes = DomUtil.querySelectorAllByAttr(
+    node,
+    EnrichMathml.Attribute.TYPE
+  );
+  for (let i = 0, semanticNode; (semanticNode = semanticNodes[i]); i++) {
     if (!semanticNode.hasAttribute(EnrichMathml.Attribute.PARENT)) {
       return semanticNode;
     }
@@ -69,17 +73,20 @@ export function getSemanticRoot(node: Element): Element {
   return node;
 }
 
-
 /**
  * Retrieves a node containing a given semantic id starting from the given root.
+ *
  * @param root Root node for the query.
  * @param id The id of a semantic node.
- * @return The node for that id.
+ * @returns The node for that id.
  */
 export function getBySemanticId(root: Element, id: string): Element {
   if (root.getAttribute(EnrichMathml.Attribute.ID) === id) {
     return root;
   }
   return DomUtil.querySelectorAllByAttrValue(
-      root, EnrichMathml.Attribute.ID, id)[0];
+    root,
+    EnrichMathml.Attribute.ID,
+    id
+  )[0];
 }

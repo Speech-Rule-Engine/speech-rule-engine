@@ -14,46 +14,45 @@
 // limitations under the License.
 
 /**
- * @fileoverview Setup for loading the speech rule engine as MathJax extension.
+ * @file Setup for loading the speech rule engine as MathJax extension.
  *               This is for MathJax versions >=2.7 and <3.0.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {EnginePromise, EngineConst} from './engine';
+import { EnginePromise } from './engine';
+import * as EngineConst from '../common/engine_const';
 import * as System from './system';
 
-
-declare var MathJax: any;
+declare let MathJax: any;
 
 /**
  * Integration function into MathJax.
  * This is written in MathJax <=2.6 style.
  */
-(function() {
-let SIGNAL = MathJax.Callback.Signal('Sre');
-MathJax.Extension.Sre = {
-  version: System.version,
+(function () {
+  const SIGNAL = MathJax.Callback.Signal('Sre');
+  MathJax.Extension.Sre = {
+    version: System.version,
 
-  signal: SIGNAL,
-  ConfigSre: function() {
-    EnginePromise.getall().then(
-      () => MathJax.Callback.Queue(
-        // Wait until mml Jax is ready.
-        // This is not strictly necessary for SRE but for the semantic lab.
-        MathJax.Hub.Register.StartupHook('mml Jax Ready', {}),
-        ['Post', MathJax.Hub.Startup.signal, 'Sre Ready'])
-    );
-  }
-};
+    signal: SIGNAL,
+    ConfigSre: function () {
+      EnginePromise.getall().then(() =>
+        MathJax.Callback.Queue(
+          // Wait until mml Jax is ready.
+          // This is not strictly necessary for SRE but for the semantic lab.
+          MathJax.Hub.Register.StartupHook('mml Jax Ready', {}),
+          ['Post', MathJax.Hub.Startup.signal, 'Sre Ready']
+        )
+      );
+    }
+  };
 
-System.setupEngine({
-  mode: EngineConst.Mode.HTTP,
-  json: MathJax.Ajax.config.path['SRE'] + '/mathmaps',
-  xpath: MathJax.Ajax.config.path['SRE'] + '/wgxpath.install.js',
-  semantics: true
-});
+  System.setupEngine({
+    mode: EngineConst.Mode.HTTP,
+    json: MathJax.Ajax.config.path['SRE'] + '/mathmaps',
+    xpath: MathJax.Ajax.config.path['SRE'] + '/wgxpath.install.js',
+    semantics: true
+  });
 
-MathJax.Extension.Sre.ConfigSre();
+  MathJax.Extension.Sre.ConfigSre();
 })();

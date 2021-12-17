@@ -14,9 +14,8 @@
 // limitations under the License.
 
 /**
- * @fileoverview Nemeth message file.
+ * @file Nemeth message file.
  *     (This should eventually move from being a locale!)
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -24,64 +23,71 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import {createLocale, Locale} from '../locale';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_nemeth';
-import {identityTransformer} from '../transformers';
-
+import { identityTransformer } from '../transformers';
 
 /**
  * Removes English indicator from a simple letter.
+ *
  * @param letter The letter with indicator.
- * @return The cleaned letter if it was English without font.
+ * @returns The cleaned letter if it was English without font.
  */
-let simpleEnglish = function(letter: string): string {
-  return letter.match(
-             RegExp('^' + locale.ALPHABETS.languagePrefix.english)) ?
-      letter.slice(1) :
-      letter;
+const simpleEnglish = function (letter: string): string {
+  return letter.match(RegExp('^' + locale.ALPHABETS.languagePrefix.english))
+    ? letter.slice(1)
+    : letter;
 };
-
 
 // Note that the cap here is a number indicator as caps are already included in
 // the alphabets. All we need to do is remove the English indicator in case
 
 // there is no font indicator. For the parenthesised fonts we don't need number
 // indicator either.
-let postfixCombiner = function(letter: string, font: string, _number: string) {
+const postfixCombiner = function (
+  letter: string,
+  font: string,
+  _number: string
+) {
   letter = simpleEnglish(letter);
   return font ? letter + font : letter;
 };
 
-
-let germanCombiner = function(letter: string, font: string, _cap: string) {
+const germanCombiner = function (letter: string, font: string, _cap: string) {
   return font + simpleEnglish(letter);
 };
 
-
-let embellishCombiner = function(letter: string, font: string, num: string) {
+const embellishCombiner = function (letter: string, font: string, num: string) {
   letter = simpleEnglish(letter);
   return font + (num ? num : '') + letter + '⠻';
 };
 
-
-let doubleEmbellishCombiner = function(
-  letter: string, font: string, num: string) {
+const doubleEmbellishCombiner = function (
+  letter: string,
+  font: string,
+  num: string
+) {
   letter = simpleEnglish(letter);
   return font + (num ? num : '') + letter + '⠻⠻';
 };
 
-
 // Font is the start parenthesis.
 // Number is the number indicator which is ignored.
 // English characters have language indicator removed.
-let parensCombiner = function(letter: string, font: string, _number: string) {
+const parensCombiner = function (
+  letter: string,
+  font: string,
+  _number: string
+) {
   letter = simpleEnglish(letter);
   return font + letter + '⠾';
 };
 
-
 let locale: Locale = null;
 
+/**
+ * @returns The Nemeth locale.
+ */
 export function nemeth(): Locale {
   if (!locale) {
     locale = create();
@@ -90,29 +96,32 @@ export function nemeth(): Locale {
   return locale;
 }
 
+/**
+ * @returns The Nemeth locale.
+ */
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.COMBINERS = {
-    'postfixCombiner': postfixCombiner,
-    'germanCombiner': germanCombiner,
-    'embellishCombiner': embellishCombiner,
-    'doubleEmbellishCombiner': doubleEmbellishCombiner,
-    'parensCombiner': parensCombiner
+    postfixCombiner: postfixCombiner,
+    germanCombiner: germanCombiner,
+    embellishCombiner: embellishCombiner,
+    doubleEmbellishCombiner: doubleEmbellishCombiner,
+    parensCombiner: parensCombiner
   };
 
-  loc.FUNCTIONS.fracNestDepth = _node => false;
-  loc.FUNCTIONS.radicalNestDepth = _count => '';
-  loc.FUNCTIONS.fontRegexp = font => RegExp('^' + font);
-  loc.FUNCTIONS.si = identityTransformer,
-  loc.ALPHABETS.combiner = (letter, font, num) => {
-    return font ? font + num + letter : simpleEnglish(letter);
-  }
-  loc.ALPHABETS.digitTrans = {default: NUMBERS.numberToWords};
+  loc.FUNCTIONS.fracNestDepth = (_node) => false;
+  loc.FUNCTIONS.radicalNestDepth = (_count) => '';
+  loc.FUNCTIONS.fontRegexp = (font) => RegExp('^' + font);
+  (loc.FUNCTIONS.si = identityTransformer),
+    (loc.ALPHABETS.combiner = (letter, font, num) => {
+      return font ? font + num + letter : simpleEnglish(letter);
+    });
+  loc.ALPHABETS.digitTrans = { default: NUMBERS.numberToWords };
 
   return loc;
 }
-  
+
 // TODO: Some font translations:
 // Caligraphic: Currently translated as script. Caligraphic bold as script
 //              bold (vs. bold-script)

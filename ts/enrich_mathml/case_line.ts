@@ -14,21 +14,17 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with line elements.
- *
+ * @file Specialist computations to deal with line elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
+import { SemanticType } from '../semantic_tree/semantic_meaning';
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseLine extends AbstractEnrichCase {
-
-
   /**
    * The actual mml tree.
    */
@@ -36,33 +32,31 @@ export class CaseLine extends AbstractEnrichCase {
 
   /**
    * Applicability test of the case.
+   *
    * @param semantic The semantic node.
-   * @return True if case is applicable.
+   * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
     return !!semantic.mathmlTree && semantic.type === SemanticType.LINE;
   }
 
-
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);
     this.mml = semantic.mathmlTree;
   }
 
-
   /**
    * @override
    */
   public getMathml() {
     if (this.semantic.contentNodes.length) {
-      EnrichMathml.walkTree((this.semantic.contentNodes[0] as SemanticNode));
+      EnrichMathml.walkTree(this.semantic.contentNodes[0] as SemanticNode);
     }
     if (this.semantic.childNodes.length) {
-      EnrichMathml.walkTree((this.semantic.childNodes[0] as SemanticNode));
+      EnrichMathml.walkTree(this.semantic.childNodes[0] as SemanticNode);
     }
     EnrichMathml.setAttributes(this.mml, this.semantic);
     return this.mml;

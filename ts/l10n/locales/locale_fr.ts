@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview French message file.
- *
+ * @file French message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -23,15 +22,17 @@
 // This work was sponsored by TextHelp
 //
 
-import {Grammar} from '../../rule_engine/grammar';
-import {createLocale, Locale} from '../locale';
-import {combinePostfixIndex} from '../locale_util';
+import { Grammar } from '../../rule_engine/grammar';
+import { createLocale, Locale } from '../locale';
+import { combinePostfixIndex } from '../locale_util';
 import NUMBERS from '../numbers/numbers_fr';
-import {Combiners} from '../transformers';
-
+import { Combiners } from '../transformers';
 
 let locale: Locale = null;
 
+/**
+ * @returns The French locale.
+ */
 export function fr(): Locale {
   if (!locale) {
     locale = create();
@@ -40,16 +41,19 @@ export function fr(): Locale {
   return locale;
 }
 
+/**
+ * @returns The French locale.
+ */
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
 
-  loc.FUNCTIONS.fracNestDepth = _node => false;
+  loc.FUNCTIONS.fracNestDepth = (_node) => false;
   loc.FUNCTIONS.combineRootIndex = combinePostfixIndex;
-  loc.FUNCTIONS.combineNestedFraction =
-      (a, b, c) => c.replace(/ $/g, '') + b + a;
+  loc.FUNCTIONS.combineNestedFraction = (a, b, c) =>
+    c.replace(/ $/g, '') + b + a;
   loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => c + ' ' + a;
-  loc.FUNCTIONS.fontRegexp = font => RegExp(' (en |)' + font + '$');
+  loc.FUNCTIONS.fontRegexp = (font) => RegExp(' (en |)' + font + '$');
   loc.FUNCTIONS.plural = (unit: string) => {
     return /.*s$/.test(unit) ? unit : unit + 's';
   };
@@ -59,6 +63,4 @@ function create(): Locale {
   loc.ALPHABETS.combiner = Combiners.romanceCombiner;
 
   return loc;
-};
-
-
+}

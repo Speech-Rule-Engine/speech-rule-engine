@@ -15,24 +15,29 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract base class for all speech rule stores.
+ * @file Abstract base class for all speech rule stores.
  *
  * The base rule store implements some basic functionality that is common to
  * most speech rule stores.
  * @author sorge@google.com (Volker Sorge)
  */
 
+import { AuditoryDescription } from '../audio/auditory_description';
+import {
+  Axis,
+  AxisOrder,
+  DynamicCstr,
+  DynamicCstrParser
+} from './dynamic_cstr';
+import { Action, Precondition, SpeechRule } from './speech_rule';
+import { SpeechRuleContext } from './speech_rule_context';
+import { SpeechRuleEvaluator } from './speech_rule_evaluator';
+import { SpeechRuleFunction } from './speech_rule_functions';
+import { SpeechRuleStore } from './speech_rule_store';
 
-import {AuditoryDescription} from '../audio/auditory_description';
-import {Axis, AxisOrder, DynamicCstr, DynamicCstrParser} from './dynamic_cstr';
-import {Action, Precondition, SpeechRule} from './speech_rule';
-import {SpeechRuleContext} from './speech_rule_context';
-import {SpeechRuleEvaluator} from './speech_rule_evaluator';
-import {SpeechRuleStore} from './speech_rule_store';
-
-
-export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleStore {
-
+export abstract class BaseRuleStore
+  implements SpeechRuleEvaluator, SpeechRuleStore
+{
   /**
    * Context for custom functions of this rule store.
    */
@@ -61,7 +66,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
   /**
    * Default domain.
    */
-  public domain: string = '';
+  public domain = '';
 
   // TODO (TS): Sort out this type!
   /**
@@ -72,7 +77,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
   /**
    * Initialisation flag.
    */
-  public initialized: boolean = false;
+  public initialized = false;
 
   /**
    * Inheritance store. None if null.
@@ -82,12 +87,12 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
   /**
    * Type of rule store: standard, abstract, actions.
    */
-  public kind: string = 'standard';
+  public kind = 'standard';
 
   /**
    * Local transcriptions for special characters.
    */
-  public customTranscriptions: {[key: string]: string} = {};
+  public customTranscriptions: { [key: string]: string } = {};
 
   /**
    * Set of Preconditions
@@ -103,23 +108,26 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    * Rank in the rule store definition. This informs the secondary rank for
    * speech rules and takes order of definitions into account.
    */
-  private rank: number = 0;
+  private rank = 0;
 
   // TODO (sorge) Define the following methods directly on the precondition
   //     classes.
   /**
    * Compares two static constraints (i.e., lists of precondition constraints)
    * and returns true if they are equal.
+   *
    * @param cstr1 First static constraints.
    * @param cstr2 Second static constraints.
-   * @return True if the static constraints are equal.
+   * @returns True if the static constraints are equal.
    */
-  private static compareStaticConstraints_(cstr1: string[], cstr2: string[]):
-      boolean {
+  private static compareStaticConstraints_(
+    cstr1: string[],
+    cstr2: string[]
+  ): boolean {
     if (cstr1.length !== cstr2.length) {
       return false;
     }
-    for (let i = 0, cstr: string; cstr = cstr1[i]; i++) {
+    for (let i = 0, cstr: string; (cstr = cstr1[i]); i++) {
       if (cstr2.indexOf(cstr) === -1) {
         return false;
       }
@@ -127,57 +135,63 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     return true;
   }
 
-
   /**
    * Compares the preconditions of two speech rules.
+   *
    * @param rule1 The first speech rule.
    * @param rule2 The second speech rule.
-   * @return True if the preconditions are equal.
+   * @returns True if the preconditions are equal.
    */
-  private static comparePreconditions_(rule1: SpeechRule, rule2: SpeechRule):
-      boolean {
-    let prec1 = rule1.precondition;
-    let prec2 = rule2.precondition;
+  private static comparePreconditions_(
+    rule1: SpeechRule,
+    rule2: SpeechRule
+  ): boolean {
+    const prec1 = rule1.precondition;
+    const prec2 = rule2.precondition;
     if (prec1.query !== prec2.query) {
       return false;
     }
     return BaseRuleStore.compareStaticConstraints_(
-        prec1.constraints, prec2.constraints);
+      prec1.constraints,
+      prec2.constraints
+    );
   }
-
 
   /**
    * @override
    */
   constructor() {
     this.parseMethods = {
-      'Rule': this.defineRule,
-      'Generator': this.generateRules,
-      'Action': this.defineAction,
-      'Precondition': this.definePrecondition,
-      'Ignore': this.ignoreRules
+      Rule: this.defineRule,
+      Generator: this.generateRules,
+      Action: this.defineAction,
+      Precondition: this.definePrecondition,
+      Ignore: this.ignoreRules
     };
   }
-
 
   /**
    * @override
    */
-  public defineRule(name: string, dynamic: string, action: string,
-             prec: string, ...args: string[]) {
-    let postc = this.parseAction(action);
-    let fullPrec = this.parsePrecondition(prec, args);
-    let dynamicCstr = this.parseCstr(dynamic);
+  public defineRule(
+    name: string,
+    dynamic: string,
+    action: string,
+    prec: string,
+    ...args: string[]
+  ) {
+    const postc = this.parseAction(action);
+    const fullPrec = this.parsePrecondition(prec, args);
+    const dynamicCstr = this.parseCstr(dynamic);
     if (!(postc && fullPrec && dynamicCstr)) {
       console.error(`Rule Error: ${prec}, (${dynamic}): ${action}`);
       return null;
     }
-    let rule = new SpeechRule(name, dynamicCstr, fullPrec, postc);
+    const rule = new SpeechRule(name, dynamicCstr, fullPrec, postc);
     rule.precondition.rank = this.rank++;
     this.addRule(rule);
     return rule;
   }
-
 
   /**
    * @override
@@ -187,30 +201,27 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     this.speechRules_.unshift(rule);
   }
 
-
   /**
    * @override
    */
   public deleteRule(rule: SpeechRule) {
-    let index = this.speechRules_.indexOf(rule);
+    const index = this.speechRules_.indexOf(rule);
     if (index !== -1) {
       this.speechRules_.splice(index, 1);
     }
   }
 
-
   /**
    * @override
    */
   public findRule(pred: (rule: SpeechRule) => boolean) {
-    for (let i = 0, rule; rule = this.speechRules_[i]; i++) {
+    for (let i = 0, rule; (rule = this.speechRules_[i]); i++) {
       if (pred(rule)) {
         return rule;
       }
     }
     return null;
   }
-
 
   /**
    * @override
@@ -219,19 +230,17 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     return this.speechRules_.filter(pred);
   }
 
-
   /**
    * @override
    */
   public evaluateDefault(node: Node) {
-    let rest = node.textContent.slice(0);
+    const rest = node.textContent.slice(0);
     if (rest.match(/^\s+$/)) {
       // Nothing but whitespace: Ignore.
       return this.evaluateWhitespace(rest);
     }
     return this.evaluateString(rest);
   }
-
 
   /**
    * @override
@@ -240,28 +249,31 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     return [];
   }
 
-
   /**
    * @override
    */
   public evaluateCustom(str: string) {
-    let trans = this.customTranscriptions[str];
-    return trans !== undefined ?
-        AuditoryDescription.create(
-            {'text': trans}, {adjust: true, translate: false}) :
-        null;
+    const trans = this.customTranscriptions[str];
+    return trans !== undefined
+      ? AuditoryDescription.create(
+          { text: trans },
+          { adjust: true, translate: false }
+        )
+      : null;
   }
-
 
   /**
    * @override
    */
   public evaluateCharacter(str: string) {
-    return this.evaluateCustom(str) ||
-        AuditoryDescription.create(
-            {'text': str}, {adjust: true, translate: true});
+    return (
+      this.evaluateCustom(str) ||
+      AuditoryDescription.create(
+        { text: str },
+        { adjust: true, translate: true }
+      )
+    );
   }
-
 
   /**
    * @override
@@ -277,64 +289,77 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
    */
   public abstract initialize(): void;
 
-
   /**
    * Removes duplicates of the given rule from the rule store. Thereby
    * duplicates are identified by having the same precondition and dynamic
    * constraint.
+   *
    * @param rule The rule.
    */
   public removeDuplicates(rule: SpeechRule) {
-    for (let i = this.speechRules_.length - 1, oldRule;
-         oldRule = this.speechRules_[i]; i--) {
-      if (oldRule !== rule && rule.dynamicCstr.equal(oldRule.dynamicCstr) &&
-          BaseRuleStore.comparePreconditions_(oldRule, rule)) {
+    for (
+      let i = this.speechRules_.length - 1, oldRule;
+      (oldRule = this.speechRules_[i]);
+      i--
+    ) {
+      if (
+        oldRule !== rule &&
+        rule.dynamicCstr.equal(oldRule.dynamicCstr) &&
+        BaseRuleStore.comparePreconditions_(oldRule, rule)
+      ) {
         this.speechRules_.splice(i, 1);
       }
     }
   }
 
   /**
-   * @return Set of all speech rules in the store.
+   * @returns Set of all speech rules in the store.
    */
   public getSpeechRules(): SpeechRule[] {
     return this.speechRules_;
   }
 
-
   /**
    * Sets the speech rule set of the store.
+   *
    * @param rules New rule set.
    */
   public setSpeechRules(rules: SpeechRule[]) {
     this.speechRules_ = rules;
   }
 
-
   /**
-   * @return All preconditions in the rule store. For analysis purposes.
+   * @returns All preconditions in the rule store. For analysis purposes.
    */
   public getPreconditions(): Map<string, Condition> {
     return this.preconditions;
   }
 
-
   /**
    * Default constraint parser that adds the locale to the rest constraint
    * (generally, domain.style).
+   *
    * @param cstr The constraint string.
-   * @return The parsed constraint including locale.
+   * @returns The parsed constraint including locale.
    */
   public parseCstr(cstr: string): DynamicCstr {
     try {
       // TODO: Have a parser that respects generators.
       return this.parser.parse(
-        this.locale + '.' + this.modality +
-          (this.domain ? '.' + this.domain : '') + '.' + cstr);
+        this.locale +
+          '.' +
+          this.modality +
+          (this.domain ? '.' + this.domain : '') +
+          '.' +
+          cstr
+      );
     } catch (err) {
       if (err.name === 'RuleError') {
         console.error(
-          'Rule Error ', `Illegal Dynamic Constraint: ${cstr}.`, err.message);
+          'Rule Error ',
+          `Illegal Dynamic Constraint: ${cstr}.`,
+          err.message
+        );
         return null;
       } else {
         throw err;
@@ -342,26 +367,29 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     }
   }
 
-
   /**
    * Parses precondition by resolving generator rules.
+   *
    * @param query The query constraint.
    * @param rest The rest constraints.
-   * @return The new precondition.
+   * @returns The new precondition.
    */
   public parsePrecondition(query: string, rest: string[]): Precondition {
     try {
-      let queryCstr = this.parsePrecondition_(query);
+      const queryCstr = this.parsePrecondition_(query);
       query = queryCstr[0];
       let restCstr = queryCstr.slice(1);
-      for (let cstr of rest) {
+      for (const cstr of rest) {
         restCstr = restCstr.concat(this.parsePrecondition_(cstr));
       }
       return new Precondition(query, ...restCstr);
     } catch (err) {
       if (err.name === 'RuleError') {
-        console.error('Rule Error ',
-                      `Illegal preconditions: ${query}, ${rest}.`, err.message);
+        console.error(
+          'Rule Error ',
+          `Illegal preconditions: ${query}, ${rest}.`,
+          err.message
+        );
         return null;
       } else {
         throw err;
@@ -369,19 +397,18 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     }
   }
 
-
   /**
    * Parses a speech rule action.
+   *
    * @param action The action string.
-   * @return The new action.
+   * @returns The new action.
    */
   public parseAction(action: string) {
     try {
       return Action.fromString(action);
     } catch (err) {
       if (err.name === 'RuleError') {
-        console.error('Rule Error ',
-                      `Illegal action: ${action}.`, err.message);
+        console.error('Rule Error ', `Illegal action: ${action}.`, err.message);
         return null;
       } else {
         throw err;
@@ -389,9 +416,9 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     }
   }
 
-
   /**
    * Parses a rule set definition.
+   *
    * @param ruleSet The
    *     definition object.
    */
@@ -400,7 +427,7 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     this.locale = ruleSet.locale || this.locale;
     this.domain = ruleSet.domain || this.domain;
     // TODO (TS): Fix this to avoid casting!
-    this.context.parse(ruleSet.functions as any || []);
+    this.context.parse((ruleSet.functions as any) || []);
     if (ruleSet.kind !== 'actions') {
       this.kind = ruleSet.kind || this.kind;
       this.inheritRules();
@@ -408,33 +435,32 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     this.parseRules(ruleSet.rules || []);
   }
 
-
   /**
    * Parse a list of rules, each given as a list of strings.
+   *
    * @param rules The list of rules.
    */
   public parseRules(rules: string[][]) {
-    for (let i = 0, rule; rule = rules[i]; i++) {
-      let type = rule[0];
-      let method = this.parseMethods[type];
+    for (let i = 0, rule; (rule = rules[i]); i++) {
+      const type = rule[0];
+      const method = this.parseMethods[type];
       if (type && method) {
         method.apply(this, rule.slice(1));
       }
     }
   }
 
-
   /**
    * Parses rules generated by the given generator function.
+   *
    * @param generator Name of the generator function.
    */
   public generateRules(generator: string) {
-    let method = this.context.customGenerators.lookup(generator);
+    const method = this.context.customGenerators.lookup(generator);
     if (method) {
       method(this);
     }
   }
-
 
   /**
    * @override
@@ -452,44 +478,48 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
         throw err;
       }
     }
-    let prec = this.getFullPreconditions(name);
+    const prec = this.getFullPreconditions(name);
     if (!prec) {
       console.error(`Action Error: No precondition for action ${name}`);
       return;
     }
     // Overwrite previously defined rules!
     this.ignoreRules(name);
-    let regexp = new RegExp('^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : ''));
+    const regexp = new RegExp(
+      '^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : '')
+    );
     prec.conditions.forEach(([dynamic, prec]) => {
       // TODO: Work this out wrt. domain.
-      let newDynamic = this.parseCstr(
-        dynamic.toString().replace(regexp, ''));
+      const newDynamic = this.parseCstr(dynamic.toString().replace(regexp, ''));
       this.addRule(new SpeechRule(name, newDynamic, prec, postc));
     });
   }
 
-
   /**
    * Returns a precondition from this or an inherited store, if one exists.
+   *
    * @param name The name of the condition.
-   * @return The condition.
+   * @returns The condition.
    */
   public getFullPreconditions(name: string): Condition {
-    let prec = this.preconditions.get(name);
+    const prec = this.preconditions.get(name);
     if (prec || !this.inherits) {
       return prec;
     }
     return this.inherits.getFullPreconditions(name);
   }
 
-
   /**
    * @override
    */
-  public definePrecondition(name: string, dynamic: string,
-                            prec: string, ...args: string[]) {
-    let fullPrec = this.parsePrecondition(prec, args);
-    let dynamicCstr = this.parseCstr(dynamic);
+  public definePrecondition(
+    name: string,
+    dynamic: string,
+    prec: string,
+    ...args: string[]
+  ) {
+    const fullPrec = this.parsePrecondition(prec, args);
+    const dynamicCstr = this.parseCstr(dynamic);
     if (!(fullPrec && dynamicCstr)) {
       console.error(`Precondition Error: ${prec}, (${dynamic})`);
       return;
@@ -498,7 +528,6 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     this.preconditions.set(name, new Condition(dynamicCstr, fullPrec));
   }
 
-
   /**
    * Implements rule inheritance.
    */
@@ -506,33 +535,37 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     if (!this.inherits || !this.inherits.getSpeechRules().length) {
       return;
     }
-    let regexp = new RegExp('^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : ''));
-    this.inherits.getSpeechRules().forEach(rule => {
+    const regexp = new RegExp(
+      '^\\w+\\.\\w+\\.' + (this.domain ? '\\w+\\.' : '')
+    );
+    this.inherits.getSpeechRules().forEach((rule) => {
       // TODO: Work this out wrt. domain.
-      let newDynamic = this.parseCstr(
-        rule.dynamicCstr.toString().replace(regexp, ''));
-      this.addRule(new SpeechRule(rule.name, newDynamic,
-                                  rule.precondition, rule.action));
+      const newDynamic = this.parseCstr(
+        rule.dynamicCstr.toString().replace(regexp, '')
+      );
+      this.addRule(
+        new SpeechRule(rule.name, newDynamic, rule.precondition, rule.action)
+      );
     });
   }
-
 
   /**
    * Deletes rules from the current store. This is important for omitting
    * inherited elements.
    *
    * @param name The name of the rule to be deleted.
+   * @param cstrs The rest constraints of the rule.
    */
   public ignoreRules(name: string, ...cstrs: string[]) {
-    let rules = this.findAllRules((r: SpeechRule)  => r.name === name);
+    let rules = this.findAllRules((r: SpeechRule) => r.name === name);
     if (!cstrs.length) {
       rules.forEach(this.deleteRule.bind(this));
       return;
     }
     let rest = [];
-    for (let cstr of cstrs) {
-      let dynamic = this.parseCstr(cstr);
-      for (let rule of rules) {
+    for (const cstr of cstrs) {
+      const dynamic = this.parseCstr(cstr);
+      for (const rule of rules) {
         if (dynamic.equal(rule.dynamicCstr)) {
           this.deleteRule(rule);
         } else {
@@ -544,33 +577,32 @@ export abstract class BaseRuleStore implements SpeechRuleEvaluator, SpeechRuleSt
     }
   }
 
-
   /**
    * Resolves a single precondition constraint.
+   *
    * @param cstr The precondition constraint.
-   * @return Array of constraints, possibly generated.
+   * @returns Array of constraints, possibly generated.
    */
   private parsePrecondition_(cstr: string): string[] {
-    let generator = this.context.customGenerators.lookup(cstr);
-    return generator ? generator() : [cstr];
+    const generator = this.context.customGenerators.lookup(cstr);
+    return generator ? (generator() as string[]) : [cstr];
   }
-
 }
 
 // Conditions are clusters of preconditions that are used to define rules via
 // actions.
 export class Condition {
-
   private _conditions: [DynamicCstr, Precondition][] = [];
 
   private constraints: DynamicCstr[] = [];
 
-  private allCstr: {[cond: string]: boolean} = {};
+  private allCstr: { [cond: string]: boolean } = {};
 
   /**
+   * Constructs a rule condition.
    *
-   * @param {DynamicCstr} dynamic
-   * @param {Precondition} condition
+   * @param base The dynamic base constraint.
+   * @param condition The remaining precondition constraints.
    */
   constructor(private base: DynamicCstr, condition: Precondition) {
     this.constraints.push(base);
@@ -585,15 +617,15 @@ export class Condition {
    * Adds a dynamic constraint to a condition. This simply inherits the already
    * given preconditions.
    *
-   * @param {DynamicCstr} dynamic
+   * @param dynamic The dynamic constraint.
    */
   public addConstraint(dynamic: DynamicCstr) {
-    if (this.constraints.filter(cstr => cstr.equal(dynamic)).length) {
+    if (this.constraints.filter((cstr) => cstr.equal(dynamic)).length) {
       return;
     }
     this.constraints.push(dynamic);
-    let newConds: [DynamicCstr, Precondition][] = [];
-    for (let [dyn, pre] of this.conditions) {
+    const newConds: [DynamicCstr, Precondition][] = [];
+    for (const [dyn, pre] of this.conditions) {
       if (this.base.equal(dyn)) {
         newConds.push([dynamic, pre]);
       }
@@ -606,19 +638,17 @@ export class Condition {
   }
 
   public addFullCondition(cond: Precondition) {
-    this.constraints.forEach(cstr =>
-      this.addCondition(cstr, cond));
+    this.constraints.forEach((cstr) => this.addCondition(cstr, cond));
   }
 
   private addCondition(dynamic: DynamicCstr, cond: Precondition) {
-    let condStr = dynamic.toString() + ' ' + cond.toString();
+    const condStr = dynamic.toString() + ' ' + cond.toString();
     if (this.allCstr.condStr) {
       return;
     }
     this.allCstr[condStr] = true;
     this._conditions.push([dynamic, cond]);
   }
-
 }
 
 export interface RulesJson {
@@ -627,7 +657,7 @@ export interface RulesJson {
   locale?: string;
   kind?: string;
   inherits?: string;
-  functions?: {[key: string]: Function};
+  functions?: { [key: string]: SpeechRuleFunction };
   rules?: any[];
   annotators?: any[];
 }

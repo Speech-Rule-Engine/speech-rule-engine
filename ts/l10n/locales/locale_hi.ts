@@ -14,23 +14,23 @@
 // limitations under the License.
 
 /**
- * @fileoverview Hindi message file.
- *
+ * @file Hindi message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-
 
 //
 // This work was supported by British Council UKIERI SPARC Project #P1161
 //
 
-import {createLocale, Locale} from '../locale';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_hi';
-import {Combiners} from '../transformers';
-
+import { Combiners } from '../transformers';
 
 let locale: Locale = null;
 
+/**
+ * @returns The Hindi Locale.
+ */
 export function hi(): Locale {
   if (!locale) {
     locale = create();
@@ -39,11 +39,13 @@ export function hi(): Locale {
   return locale;
 }
 
+/**
+ * @returns The Hindi Locale.
+ */
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;
 
   return loc;
-};
-
+}

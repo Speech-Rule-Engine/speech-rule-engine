@@ -14,41 +14,36 @@
 // limitations under the License.
 
 /**
- * @fileoverview A simple audio renderer that ignores all prosody.
- *
+ * @file A simple audio renderer that ignores all prosody.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AbstractAudioRenderer} from './abstract_audio_renderer';
-import {personalityMarkup} from './audio_util';
-import {AuditoryDescription} from './auditory_description';
-
+import { AbstractAudioRenderer } from './abstract_audio_renderer';
+import { personalityMarkup } from './audio_util';
+import { AuditoryDescription } from './auditory_description';
 
 export class StringRenderer extends AbstractAudioRenderer {
-
   /**
    * @override
    */
   public markup(descrs: AuditoryDescription[]) {
     let str = '';
-    let markup = personalityMarkup(descrs);
-    let clean = markup.filter(x => x.span);
+    const markup = personalityMarkup(descrs);
+    const clean = markup.filter((x) => x.span);
     if (!clean.length) {
       return str;
     }
-    let len = clean.length - 1;
-    for (let i = 0, descr; descr = clean[i]; i++) {
+    const len = clean.length - 1;
+    for (let i = 0, descr; (descr = clean[i]); i++) {
       if (descr.span) {
         str += this.merge(descr.span);
       }
       if (i >= len) {
         continue;
       }
-      let join = descr.join;
+      const join = descr.join;
       str += typeof join === 'undefined' ? this.getSeparator() : join;
     }
     return str;
   }
-
 }

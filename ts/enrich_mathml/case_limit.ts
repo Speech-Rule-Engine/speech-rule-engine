@@ -14,76 +14,75 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with restructured limit
+ * @file Specialist computations to deal with restructured limit
  *     elements.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
+import { SemanticType } from '../semantic_tree/semantic_meaning';
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
 
-
 export class CaseLimit extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
   public mml: Element;
 
-
   /**
    * Applicability test of the case.
+   *
    * @param semantic The semantic node.
-   * @return True if case is applicable.
+   * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
     if (!semantic.mathmlTree || !semantic.childNodes.length) {
       return false;
     }
-    let mmlTag = DomUtil.tagName(semantic.mathmlTree);
-    let type = semantic.type;
-    return (type === SemanticType.LIMUPPER ||
-            type === SemanticType.LIMLOWER) &&
-        (mmlTag === 'MSUBSUP' || mmlTag === 'MUNDEROVER') ||
-        type === SemanticType.LIMBOTH &&
-        (mmlTag === 'MSUB' || mmlTag === 'MUNDER' || mmlTag === 'MSUP' ||
-         mmlTag === 'MOVER');
+    const mmlTag = DomUtil.tagName(semantic.mathmlTree);
+    const type = semantic.type;
+    return (
+      ((type === SemanticType.LIMUPPER || type === SemanticType.LIMLOWER) &&
+        (mmlTag === 'MSUBSUP' || mmlTag === 'MUNDEROVER')) ||
+      (type === SemanticType.LIMBOTH &&
+        (mmlTag === 'MSUB' ||
+          mmlTag === 'MUNDER' ||
+          mmlTag === 'MSUP' ||
+          mmlTag === 'MOVER'))
+    );
   }
-
 
   /**
    * Enriches a semantic node if it is given.
+   *
    * @param node The semantic node.
    */
   private static walkTree_(node: SemanticNode) {
     if (node) {
-      EnrichMathml.walkTree((node as SemanticNode));
+      EnrichMathml.walkTree(node as SemanticNode);
     }
   }
 
-
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);
     this.mml = semantic.mathmlTree;
   }
 
-
   /**
    * @override
    */
   public getMathml() {
-    let children = this.semantic.childNodes;
-    if (this.semantic.type !== SemanticType.LIMBOTH &&
-        this.mml.childNodes.length >= 3) {
+    const children = this.semantic.childNodes;
+    if (
+      this.semantic.type !== SemanticType.LIMBOTH &&
+      this.mml.childNodes.length >= 3
+    ) {
       // Extra layer only necessary if a split upper/lower script. Second
       // condition excludes incomplete elements.
       this.mml = EnrichMathml.introduceNewLayer([this.mml], this.semantic);
@@ -95,6 +94,4 @@ export class CaseLimit extends AbstractEnrichCase {
     children.forEach(CaseLimit.walkTree_);
     return this.mml;
   }
-
 }
-

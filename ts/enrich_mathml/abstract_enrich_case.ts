@@ -14,17 +14,15 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract procedure for special cases in semantic enrichment of
+ * @file Abstract procedure for special cases in semantic enrichment of
  *     MathML.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {EnrichCase} from './enrich_case';
-
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { EnrichCase } from './enrich_case';
 
 export abstract class AbstractEnrichCase implements EnrichCase {
-
   /**
    * @override
    */
@@ -34,5 +32,4 @@ export abstract class AbstractEnrichCase implements EnrichCase {
    * @param semantic The semantic node that is enriched.
    */
   constructor(public semantic: SemanticNode) {}
-
 }

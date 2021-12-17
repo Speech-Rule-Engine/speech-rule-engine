@@ -14,52 +14,50 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic message file for l10n.
- *
+ * @file Basic message file for l10n.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Engine} from '../common/engine';
-import {Variables} from '../common/variables';
-import {Grammar} from '../rule_engine/grammar';
+import Engine from '../common/engine';
+import { Variables } from '../common/variables';
+import { Grammar } from '../rule_engine/grammar';
 
-import {ca} from './locales/locale_ca';
-import {de} from './locales/locale_de';
-import {en} from './locales/locale_en';
-import {es} from './locales/locale_es';
-import {fr} from './locales/locale_fr';
-import {hi} from './locales/locale_hi';
-import {it} from './locales/locale_it';
-import {nb} from './locales/locale_nb';
-import {nemeth} from './locales/locale_nemeth';
-import {nn} from './locales/locale_nn';
-import {Locale, LOCALE} from './locale';
+import { ca } from './locales/locale_ca';
+import { de } from './locales/locale_de';
+import { en } from './locales/locale_en';
+import { es } from './locales/locale_es';
+import { fr } from './locales/locale_fr';
+import { hi } from './locales/locale_hi';
+import { it } from './locales/locale_it';
+import { nb } from './locales/locale_nb';
+import { nemeth } from './locales/locale_nemeth';
+import { nn } from './locales/locale_nn';
+import { Locale, LOCALE } from './locale';
 
-
-export const locales: {[key: string]: () => Locale} = {
-  'ca': ca,
-  'de': de,
-  'en': en,
-  'es': es,
-  'fr': fr,
-  'hi': hi,
-  'it': it,
-  'nb': nb,
-  'nn': nn,
-  'nemeth': nemeth
+export const locales: { [key: string]: () => Locale } = {
+  ca: ca,
+  de: de,
+  en: en,
+  es: es,
+  fr: fr,
+  hi: hi,
+  it: it,
+  nb: nb,
+  nn: nn,
+  nemeth: nemeth
 };
 
 /**
  * The basic method for setting the localized messages.
  */
 export function setLocale() {
-  let msgs = getLocale();
+  const msgs = getLocale();
   if (msgs) {
-    for (let key of Object.getOwnPropertyNames(msgs)) {
+    for (const key of Object.getOwnPropertyNames(msgs)) {
       // TODO (TS): See if this is really an object structure.
       (LOCALE as any)[key] = (msgs as any)[key];
     }
-    for (let [key, func] of Object.entries(msgs.CORRECTIONS)) {
+    for (const [key, func] of Object.entries(msgs.CORRECTIONS)) {
       Grammar.getInstance().setCorrection(key, func);
     }
     // TODO (Speech Rules): This is temporary until locales are handled in a
@@ -68,14 +66,14 @@ export function setLocale() {
   }
 }
 
-
 /**
  * Gets locale message object. If the currently set locale does not exist, it
  * defaults to English.
- * @return A message object.
+ *
+ * @returns A message object.
  */
 export function getLocale(): Locale {
-  let locale = Engine.getInstance().locale;
+  const locale = Engine.getInstance().locale;
   if (Variables.LOCALES.indexOf(locale) === -1) {
     console.error('Locale ' + locale + ' does not exist! Using en instead.');
     Engine.getInstance().locale = 'en';
@@ -83,22 +81,22 @@ export function getLocale(): Locale {
   return (locales[Engine.getInstance().locale] || locales['en'])();
 }
 
-
 /**
  * Locale completion with loaded mathmaps.
+ *
  * @param json The JSON of the locale map.
  */
 export function completeLocale(json: any) {
-  let locale = locales[json.locale];
+  const locale = locales[json.locale];
   if (!locale) {
     console.error('Locale ' + json.locale + ' does not exist!');
     return;
   }
-  let kind = json.kind.toUpperCase();
-  let messages = json.messages;
+  const kind = json.kind.toUpperCase();
+  const messages = json.messages;
   if (!messages) return;
-  let loc = locale() as any;
-  for (let [key, value] of Object.entries(messages)) {
+  const loc = locale() as any;
+  for (const [key, value] of Object.entries(messages)) {
     // TODO (TS): See if this is really an object structure.
     loc[kind][key] = value;
   }

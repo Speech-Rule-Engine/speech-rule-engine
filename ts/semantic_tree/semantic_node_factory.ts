@@ -14,23 +14,19 @@
 // limitations under the License.
 
 /**
- * @fileoverview Factory for semantic nodes.
+ * @file Factory for semantic nodes.
  *
  * Basic functionality to create different types of semantic nodes and keep an
  * active counter. Every semantic tree has its own node factory.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {SemanticFont, SemanticType} from './semantic_attr';
-import {SemanticDefault} from './semantic_default';
-import {SemanticNodeCollator} from './semantic_default';
-import {SemanticNode} from './semantic_node';
-
+import { SemanticFont, SemanticType } from './semantic_meaning';
+import { SemanticDefault } from './semantic_default';
+import { SemanticNodeCollator } from './semantic_default';
+import { SemanticNode } from './semantic_node';
 
 export class SemanticNodeFactory {
-
   /**
    * Collator for leaf nodes.
    */
@@ -44,86 +40,88 @@ export class SemanticNodeFactory {
   /**
    * ID counter.
    */
-  private idCounter_: number = -1;
-
+  private idCounter_ = -1;
 
   /**
    * Creates a new node object with a given id.
+   *
    * @param id The node id.
-   * @return The newly created node.
+   * @returns The newly created node.
    */
   public makeNode(id: number): SemanticNode {
     return this.createNode_(id);
   }
 
-
   /**
    * Create a node that is to be processed at a later point in time.
+   *
    * @param mml The MathML tree.
-   * @return The new node.
+   * @returns The new node.
    */
   public makeUnprocessed(mml: Element): SemanticNode {
-    let node = this.createNode_();
+    const node = this.createNode_();
     node.mathml = [mml];
     node.mathmlTree = mml;
     return node;
   }
 
-
   /**
    * Create an empty leaf node.
-   * @return The new node.
+   *
+   * @returns The new node.
    */
   public makeEmptyNode(): SemanticNode {
-    let node = this.createNode_();
+    const node = this.createNode_();
     node.type = SemanticType.EMPTY;
     return node;
   }
 
-
   /**
    * Create a node with the given text content. The content is semantically
    * interpreted.
+   *
    * @param content The text content of the node.
-   * @return The new node.
+   * @returns The new node.
    */
   public makeContentNode(content: string): SemanticNode {
-    let node = this.createNode_();
+    const node = this.createNode_();
     node.updateContent(content);
     return node;
   }
 
-
   /**
    * Create a list of content nodes all with the same content.
+   *
    * @param num The number of nodes to create.
    * @param content The text content of the node.
-   * @return The list of new nodes.
+   * @returns The list of new nodes.
    */
   public makeMultipleContentNodes(
-      num: number, content: string): SemanticNode[] {
-    let nodes = [];
+    num: number,
+    content: string
+  ): SemanticNode[] {
+    const nodes = [];
     for (let i = 0; i < num; i++) {
       nodes.push(this.makeContentNode(content));
     }
     return nodes;
   }
 
-
   /**
    * Create a leaf node.
+   *
    * @param content The MathML tree.
    * @param font The font name.
-   * @return The new node.
+   * @returns The new node.
    */
   public makeLeafNode(content: string, font: SemanticFont): SemanticNode {
     if (!content) {
       return this.makeEmptyNode();
     }
-    let node = this.makeContentNode(content);
+    const node = this.makeContentNode(content);
     node.font = font || node.font;
     // Lookup alternative meaning here!
-    let meaning = this.defaultMap.retrieveNode(node);
+    const meaning = this.defaultMap.retrieveNode(node);
     if (meaning) {
       node.type = meaning.type;
       node.role = meaning.role;
@@ -133,26 +131,29 @@ export class SemanticNodeFactory {
     return node;
   }
 
-
   /**
    * Create a branching node.
+   *
    * @param type The type of the node.
    * @param children The child nodes.
    * @param contentNodes The content Nodes.
    * @param opt_content Content string if there is any.
-   * @return The new node.
+   * @returns The new node.
    */
   public makeBranchNode(
-      type: SemanticType, children: SemanticNode[],
-      contentNodes: SemanticNode[], opt_content?: string): SemanticNode {
-    let node = this.createNode_();
+    type: SemanticType,
+    children: SemanticNode[],
+    contentNodes: SemanticNode[],
+    opt_content?: string
+  ): SemanticNode {
+    const node = this.createNode_();
     if (opt_content) {
       node.updateContent(opt_content);
     }
     node.type = type;
     node.childNodes = children;
     node.contentNodes = contentNodes;
-    children.concat(contentNodes).forEach(function(x) {
+    children.concat(contentNodes).forEach(function (x) {
       x.parent = node;
       node.addMathmlNodes(x.mathml);
     });
@@ -161,8 +162,9 @@ export class SemanticNodeFactory {
 
   /**
    * Creates a new node object.
-   * @param opt_id Optional ID. It will be maxed with the current id.
-   * @return The newly created node.
+   *
+   * @param id Optional ID. It will be maxed with the current id.
+   * @returns The newly created node.
    */
   private createNode_(id?: number): SemanticNode {
     if (typeof id !== 'undefined') {
@@ -172,5 +174,4 @@ export class SemanticNodeFactory {
     }
     return new SemanticNode(id);
   }
-
 }

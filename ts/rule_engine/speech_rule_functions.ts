@@ -15,26 +15,28 @@
 // limitations under the License.
 
 /**
- * @fileoverview Classes for custom functions for the speech rule engine.
- *
+ * @file Classes for custom functions for the speech rule engine.
  * @author sorge@google.com (Volker Sorge)
  */
 
+import { AuditoryDescription } from '../audio/auditory_description';
+import { Span } from '../audio/span';
 
 abstract class FunctionsStore<S> {
-
   /**
    * Private superclass of all the custom function stores.
+   *
    * @param prefix A prefix string for the function names.
    * @param store Storage object.
    */
-  protected constructor(private prefix: string,
-                        private store: {[key: string]: S}) {
-  }
-
+  protected constructor(
+    private prefix: string,
+    private store: { [key: string]: S }
+  ) {}
 
   /**
    * Adds a new function for the function store.
+   *
    * @param name A name.
    * @param func A function.
    */
@@ -44,106 +46,105 @@ abstract class FunctionsStore<S> {
     }
   }
 
-
   /**
    * Adds the functions of another store.
+   *
    * @param store A speech rule store.
    */
   public addStore(store: FunctionsStore<S>) {
-    let keys = Object.keys(store.store);
-    for (let i = 0, key; key = keys[i]; i++) {
-      this.add(key, (store.store[key] as S));
+    const keys = Object.keys(store.store);
+    for (let i = 0, key; (key = keys[i]); i++) {
+      this.add(key, store.store[key] as S);
     }
   }
 
-
   /**
    * Retrieves a function with the given name if one exists.
+   *
    * @param name A name.
-   * @return The function if it exists.
+   * @returns The function if it exists.
    */
   public lookup(name: string): S {
     return this.store[name];
   }
 
-
   /**
    * Checks validity for a custom function name.
+   *
    * @param name The name of the custom function.
-   * @return True if the name is valid.
+   * @returns True if the name is valid.
    */
   private checkCustomFunctionSyntax_(name: string): boolean {
-    let reg = new RegExp('^' + this.prefix);
+    const reg = new RegExp('^' + this.prefix);
     if (!name.match(reg)) {
       console.error(
-          'FunctionError: Invalid function name. Expected prefix ' +
-          this.prefix);
+        'FunctionError: Invalid function name. Expected prefix ' + this.prefix
+      );
       return false;
     }
     return true;
   }
-
 }
 
 export type CustomQuery = (p1: Node) => Node[];
 
 export class CustomQueries extends FunctionsStore<CustomQuery> {
-
   /**
    * Constructs custom queries for precondition constraints.
    */
   constructor() {
-    let store = ({} as {[key: string]: CustomQuery});
+    const store = {} as { [key: string]: CustomQuery };
     super('CQF', store);
   }
-
 }
 
-
-export type CustomString = (p1: Node) => string;
+export type CustomString = (p1: Node) => string | Span[];
 
 export class CustomStrings extends FunctionsStore<CustomString> {
-
   /**
    * Constructs custom strings for text elements in actions.
    */
   constructor() {
-    let store = ({} as {[key: string]: CustomString});
+    const store = {} as { [key: string]: CustomString };
     super('CSF', store);
   }
-
 }
 
-export type ContextFunction = (p1: Node[], p2: string|null) => () => string;
+export type ContextFunction = (
+  p1: Node[] | Node,
+  p2: string | null
+) => () => string | AuditoryDescription[];
 
 export class ContextFunctions extends FunctionsStore<ContextFunction> {
-
   /**
    * Constructs context functions for separators or contexts.
    */
   constructor() {
-    let store = ({} as {[key: string]: ContextFunction});
+    const store = {} as { [key: string]: ContextFunction };
     super('CTF', store);
   }
-
 }
 
-export type CustomGenerator = (store?: any) => string[];
+export type CustomGenerator = (store?: any, flag?: boolean) => string[] | void;
 
 export class CustomGenerators extends FunctionsStore<CustomGenerator> {
-
   /**
    * Constructs generators for generating JSON for entire speech rules.
    */
   constructor() {
-    let store = ({} as {[key: string]: CustomGenerator});
+    const store = {} as { [key: string]: CustomGenerator };
     super('CGF', store);
   }
-
 }
 
 export type SpeechRuleStore =
-  CustomQueries | CustomStrings | ContextFunctions | CustomGenerators;
+  | CustomQueries
+  | CustomStrings
+  | ContextFunctions
+  | CustomGenerators;
 
 export type SpeechRuleFunction =
-  CustomQuery | CustomString | ContextFunction | CustomGenerator;
+  | CustomQuery
+  | CustomString
+  | ContextFunction
+  | CustomGenerator;
