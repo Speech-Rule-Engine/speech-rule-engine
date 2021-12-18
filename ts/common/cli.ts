@@ -31,7 +31,7 @@ import SystemExternal from './system_external';
 import { Variables } from './variables';
 
 export class Cli {
-  public process: any = SystemExternal.extRequire('process');
+  public process = SystemExternal.extRequire('process');
 
   public setup: { [key: string]: string | boolean };
 
@@ -69,9 +69,12 @@ export class Cli {
     this.processors.push(processor);
   }
 
+  /**
+   * Loads all possible locales asynchronously.
+   */
   private async loadLocales() {
-    for await (const loc of Variables.LOCALES) {
-      System.setupEngine({ locale: loc });
+    for (const loc of Variables.LOCALES) {
+      await System.setupEngine({ locale: loc });
     }
   }
 

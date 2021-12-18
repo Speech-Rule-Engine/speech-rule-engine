@@ -34,7 +34,7 @@ export default class SystemExternal {
    * @param library A library name.
    * @returns The library object that has been loaded.
    */
-  public static extRequire(library: string): any {
+  public static extRequire(library: string) {
     if (typeof process !== 'undefined' && typeof require !== 'undefined') {
       const nodeRequire = eval('require');
       return nodeRequire(library);
