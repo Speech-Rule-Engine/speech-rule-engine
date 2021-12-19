@@ -22,7 +22,7 @@
 import * as BaseUtil from '../common/base_util';
 
 import * as XpathUtil from '../common/xpath_util';
-import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_mathml';
+import { Attribute as EnrichAttribute } from '../enrich_mathml/enrich_attr';
 import { SemanticType } from './semantic_meaning';
 import { SemanticNode } from './semantic_node';
 import { SemanticTree } from './semantic_tree';

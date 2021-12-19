@@ -19,7 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
+import { addPrefix } from '../enrich_mathml/enrich_attr';
 import { ContrastPicker } from '../highlighter/color_picker';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import { RebuildStree } from '../walker/rebuild_stree';
@@ -31,7 +31,7 @@ export class ColorGenerator extends AbstractSpeechGenerator {
   /**
    * @override
    */
-  public modality: any = EnrichMathml.addPrefix('foreground');
+  public modality: any = addPrefix('foreground');
 
   /**
    * Contrast value.

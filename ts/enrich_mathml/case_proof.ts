@@ -23,6 +23,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node';
 
 import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
+import { setAttributes } from './enrich_attr';
 
 export class CaseProof extends AbstractEnrichCase {
   /**
@@ -62,12 +63,12 @@ export class CaseProof extends AbstractEnrichCase {
     this.semantic.contentNodes.forEach(function (x) {
       EnrichMathml.walkTree(x as SemanticNode);
       // TODO: This needs to be done more principled.
-      EnrichMathml.setAttributes(x.mathmlTree as Element, x);
+      setAttributes(x.mathmlTree as Element, x);
     });
     this.semantic.childNodes.forEach(function (x) {
       EnrichMathml.walkTree(x as SemanticNode);
     });
-    EnrichMathml.setAttributes(this.mml, this.semantic);
+    setAttributes(this.mml, this.semantic);
     // TODO: The obsolete parent pointer is related to the issue above.
     if (
       this.mml.getAttribute('data-semantic-id') ===
