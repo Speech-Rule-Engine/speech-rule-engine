@@ -28,11 +28,8 @@ export class NodeSpeechGenerator extends TreeSpeechGenerator {
   /**
    * @override
    */
-  public getSpeech(node: Element, xml: Element) {
-    const speech = WalkerUtil.getAttribute(node, this.modality);
-    if (speech) {
-      return speech;
-    }
-    return super.getSpeech(node, xml);
+  public getSpeech(node: Element, _xml: Element) {
+    super.getSpeech(node, _xml);
+    return WalkerUtil.getAttribute(node, this.modality);
   }
 }
