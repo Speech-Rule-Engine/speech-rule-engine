@@ -32,7 +32,7 @@ import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton';
 import { SemanticTree } from '../semantic_tree/semantic_tree';
 import * as SemanticUtil from '../semantic_tree/semantic_util';
 
-import getCase from './enrich_case_factory';
+import { getCase } from './enrich_case';
 
 /**
  * Object containing settings for the semantic enrichment.

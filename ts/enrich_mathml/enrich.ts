@@ -24,6 +24,7 @@ import { EnginePromise } from '../common/engine';
 import * as Semantic from '../semantic_tree/semantic';
 
 import * as EnrichMathml from './enrich_mathml';
+import './enrich_case_factory';
 
 /**
  * Semantically enriches a MathML node.
