@@ -22,7 +22,7 @@ import { AuditoryDescription } from '../audio/auditory_description';
 import * as DomUtil from '../common/dom_util';
 import * as XpathUtil from '../common/xpath_util';
 import { Grammar } from '../rule_engine/grammar';
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
+import Engine from '../common/engine';
 import { register } from '../semantic_tree/semantic_annotations';
 import { SemanticVisitor } from '../semantic_tree/semantic_annotator';
 import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
@@ -330,7 +330,7 @@ export function relationIterator(
         content.parentNode.parentNode.nextSibling)
         ? [AuditoryDescription.create({ text: '⠀' }, {})]
         : [];
-    const descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
+    const descrs = Engine.evaluateNode(content);
     first = false;
     return contextDescr.concat(left, descrs, right);
   };

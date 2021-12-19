@@ -20,7 +20,7 @@
  */
 import { AuditoryDescription } from '../audio/auditory_description';
 import * as XpathUtil from '../common/xpath_util';
-import { SpeechRuleEngine } from './speech_rule_engine';
+import Engine from '../common/engine';
 
 /**
  * Count list of nodes and concatenate this with the context string.
@@ -104,7 +104,7 @@ export function contentIterator(
     if (!content) {
       return contextDescr;
     }
-    const descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
+    const descrs = Engine.evaluateNode(content);
     return contextDescr.concat(descrs);
   };
 }
