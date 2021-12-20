@@ -23,6 +23,7 @@
 //
 
 import { createLocale, Locale } from '../locale';
+import { nestingToString } from '../locale_util';
 import NUMBERS from '../numbers/numbers_nn';
 import * as tr from '../transformers';
 
@@ -47,5 +48,6 @@ function create(): Locale {
   loc.NUMBERS = NUMBERS;
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
+  loc.FUNCTIONS.radicalNestDepth = nestingToString;
   return loc;
 }

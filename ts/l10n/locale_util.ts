@@ -18,7 +18,6 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as MathspeakUtil from '../speech_rules/mathspeak_util';
 import { LOCALE } from './locale';
 import { Combiner, Combiners } from './transformers';
 
@@ -37,16 +36,6 @@ export function nestingToString(count: number): string {
     default:
       return count.toString();
   }
-}
-
-/**
- * Sets the nesting depth of a fraction to end at vulgar fraction.
- *
- * @param node The node to check.
- * @returns True if a vulgar fraction.
- */
-export function vulgarNestingDepth(node: Element): boolean {
-  return !!MathspeakUtil.isSmallVulgarFraction(node).length;
 }
 
 /**

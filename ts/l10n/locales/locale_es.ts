@@ -55,7 +55,6 @@ function create(): Locale {
   loc.COMBINERS['sansserif'] = sansserifCombiner;
 
   loc.FUNCTIONS.fracNestDepth = (_node) => false;
-  loc.FUNCTIONS.radicalNestDepth = (_count) => '';
   (loc.FUNCTIONS.combineRootIndex = combinePostfixIndex),
     (loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c);
   loc.FUNCTIONS.fontRegexp = (font) => RegExp('^' + font + ' ');
