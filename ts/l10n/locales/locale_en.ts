@@ -20,6 +20,7 @@
 
 import { Grammar } from '../../rule_engine/grammar';
 import { createLocale, Locale } from '../locale';
+import { nestingToString } from '../locale_util';
 import NUMBERS from '../numbers/numbers_en';
 import * as tr from '../transformers';
 
@@ -42,6 +43,7 @@ export function en(): Locale {
 function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
+  loc.FUNCTIONS.radicalNestDepth = nestingToString;
   loc.FUNCTIONS.plural = (unit: string) => {
     return /.*s$/.test(unit) ? unit : unit + 's';
   };
