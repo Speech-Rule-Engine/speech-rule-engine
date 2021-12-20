@@ -19,7 +19,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
+import { Attribute } from '../enrich_mathml/enrich_attr';
 
 /**
  * A comma separated list of attribute values.
@@ -41,7 +41,7 @@ export function splitAttribute(attr: string | null): string[] {
  */
 export function getAttribute(
   node: Element,
-  attr: EnrichMathml.Attribute
+  attr: Attribute
 ): string {
   return DomUtil.getDataAttribute(node, attr);
 }
@@ -55,18 +55,18 @@ export function getAttribute(
  */
 export function getSemanticRoot(node: Element): Element {
   if (
-    node.hasAttribute(EnrichMathml.Attribute.TYPE) &&
-    !node.hasAttribute(EnrichMathml.Attribute.PARENT)
+    node.hasAttribute(Attribute.TYPE) &&
+    !node.hasAttribute(Attribute.PARENT)
   ) {
     return node;
   }
 
   const semanticNodes = DomUtil.querySelectorAllByAttr(
     node,
-    EnrichMathml.Attribute.TYPE
+    Attribute.TYPE
   );
   for (let i = 0, semanticNode; (semanticNode = semanticNodes[i]); i++) {
-    if (!semanticNode.hasAttribute(EnrichMathml.Attribute.PARENT)) {
+    if (!semanticNode.hasAttribute(Attribute.PARENT)) {
       return semanticNode;
     }
   }
@@ -81,12 +81,12 @@ export function getSemanticRoot(node: Element): Element {
  * @returns The node for that id.
  */
 export function getBySemanticId(root: Element, id: string): Element {
-  if (root.getAttribute(EnrichMathml.Attribute.ID) === id) {
+  if (root.getAttribute(Attribute.ID) === id) {
     return root;
   }
   return DomUtil.querySelectorAllByAttrValue(
     root,
-    EnrichMathml.Attribute.ID,
+    Attribute.ID,
     id
   )[0];
 }

@@ -22,6 +22,7 @@ import * as DomUtil from '../common/dom_util';
 import Engine from '../common/engine';
 import * as XpathUtil from '../common/xpath_util';
 import { LOCALE } from '../l10n/locale';
+import { vulgarFractionSmall } from '../l10n/transformers';
 import { Grammar } from '../rule_engine/grammar';
 import * as StoreUtil from '../rule_engine/store_util';
 import { register } from '../semantic_tree/semantic_annotations';
@@ -29,7 +30,6 @@ import { SemanticAnnotator } from '../semantic_tree/semantic_annotator';
 import { isMatchingFence } from '../semantic_tree/semantic_attr';
 import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
-import { vulgarFractionSmall } from './numbers_util';
 
 /**
  * Count list of nodes and concatenate this with the context string, adding a

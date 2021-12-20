@@ -24,6 +24,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node';
 
 import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
+import { makeIdList, setAttributes, Attribute } from './enrich_attr';
 
 export class CaseDoubleScript extends AbstractEnrichCase {
   /**
@@ -68,18 +69,18 @@ export class CaseDoubleScript extends AbstractEnrichCase {
     const supMml = EnrichMathml.walkTree(supSem);
     const baseMml = EnrichMathml.walkTree(baseSem);
     const subMml = EnrichMathml.walkTree(subSem);
-    EnrichMathml.setAttributes(this.mml, this.semantic);
+    setAttributes(this.mml, this.semantic);
     this.mml.setAttribute(
-      EnrichMathml.Attribute.CHILDREN,
-      EnrichMathml.makeIdList([baseSem, subSem, supSem])
+      Attribute.CHILDREN,
+      makeIdList([baseSem, subSem, supSem])
     );
     [baseMml, subMml, supMml].forEach((child) =>
       EnrichMathml.getInnerNode(child).setAttribute(
-        EnrichMathml.Attribute.PARENT,
-        this.mml.getAttribute(EnrichMathml.Attribute.ID)
+        Attribute.PARENT,
+        this.mml.getAttribute(Attribute.ID)
       )
     );
-    this.mml.setAttribute(EnrichMathml.Attribute.TYPE, ignore.role);
+    this.mml.setAttribute(Attribute.TYPE, ignore.role);
     EnrichMathml.addCollapsedAttribute(this.mml, [
       this.semantic.id,
       [ignore.id, baseSem.id, subSem.id],

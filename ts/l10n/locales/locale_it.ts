@@ -22,7 +22,7 @@
 // This work was sponsored by TextHelp
 //
 
-import { combinePostfixIndex } from '../locale_util';
+import { combinePostfixIndex, nestingToString } from '../locale_util';
 import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_it';
 import { Combiners } from '../transformers';
@@ -61,7 +61,8 @@ function create(): Locale {
 
   loc.COMBINERS['italianPostfix'] = italianPostfixCombiner;
 
-  loc.FUNCTIONS.fracNestDepth = (_node) => false;
+  // loc.FUNCTIONS.fracNestDepth = (_node) => false;
+  loc.FUNCTIONS.radicalNestDepth = nestingToString;
   loc.FUNCTIONS.combineRootIndex = combinePostfixIndex;
   loc.FUNCTIONS.combineNestedFraction = (a, b, c) =>
     c.replace(/ $/g, '') + b + a;

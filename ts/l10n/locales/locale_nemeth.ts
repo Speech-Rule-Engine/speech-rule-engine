@@ -111,7 +111,6 @@ function create(): Locale {
   };
 
   loc.FUNCTIONS.fracNestDepth = (_node) => false;
-  loc.FUNCTIONS.radicalNestDepth = (_count) => '';
   loc.FUNCTIONS.fontRegexp = (font) => RegExp('^' + font);
   (loc.FUNCTIONS.si = identityTransformer),
     (loc.ALPHABETS.combiner = (letter, font, num) => {

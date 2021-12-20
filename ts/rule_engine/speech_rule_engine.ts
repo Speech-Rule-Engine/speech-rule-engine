@@ -864,3 +864,6 @@ export function storeFactory(set: RulesJson) {
   store.initialize();
   return store;
 }
+
+Engine.nodeEvaluator = SpeechRuleEngine.getInstance().
+  evaluateNode.bind(SpeechRuleEngine.getInstance());

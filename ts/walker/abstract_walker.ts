@@ -24,7 +24,7 @@ import * as DomUtil from '../common/dom_util';
 import * as EngineConst from '../common/engine_const';
 import { setup as EngineSetup } from '../common/engine_setup';
 import { KeyCode } from '../common/event_util';
-import { Attribute } from '../enrich_mathml/enrich_mathml';
+import { Attribute } from '../enrich_mathml/enrich_attr';
 import { Highlighter } from '../highlighter/highlighter';
 import { LOCALE } from '../l10n/locale';
 import { AxisMap } from '../rule_engine/dynamic_cstr';

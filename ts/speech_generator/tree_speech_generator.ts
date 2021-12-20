@@ -20,7 +20,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
+import { Attribute } from '../enrich_mathml/enrich_attr';
 import * as WalkerUtil from '../walker/walker_util';
 
 import { AbstractSpeechGenerator } from './abstract_speech_generator';
@@ -43,12 +43,12 @@ export class TreeSpeechGenerator extends AbstractSpeechGenerator {
       if (!innerMml || !innerNode) {
         continue;
       }
-      if (!this.modality || this.modality === EnrichMathml.Attribute.SPEECH) {
+      if (!this.modality || this.modality === Attribute.SPEECH) {
         SpeechGeneratorUtil.addSpeech(innerNode, snode, this.getRebuilt().xml);
       } else {
         SpeechGeneratorUtil.addModality(innerNode, snode, this.modality);
       }
-      if (this.modality === EnrichMathml.Attribute.SPEECH) {
+      if (this.modality === Attribute.SPEECH) {
         SpeechGeneratorUtil.addPrefix(innerNode, snode);
       }
     }

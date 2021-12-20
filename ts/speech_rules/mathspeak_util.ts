@@ -34,7 +34,7 @@ import {
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import SemanticProcessor from '../semantic_tree/semantic_processor';
 
-import * as NumbersUtil from './numbers_util';
+// import * as NumbersUtil from './numbers_util';
 
 /**
  * Dictionary to store the nesting depth of each node.
@@ -433,7 +433,7 @@ export function overFractionSbrief(node: Element): string {
  *     empty.
  */
 export function isSmallVulgarFraction(node: Element): Element[] {
-  return NumbersUtil.vulgarFractionSmall(node, 10, 100) ? [node] : [];
+  return LOCALE.FUNCTIONS.fracNestDepth(node) ? [node] : [];
 }
 
 /**

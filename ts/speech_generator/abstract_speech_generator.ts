@@ -20,7 +20,7 @@
  */
 
 import { setup as EngineSetup } from '../common/engine_setup';
-import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
+import * as EnrichAttr from '../enrich_mathml/enrich_attr';
 import { AxisMap } from '../rule_engine/dynamic_cstr';
 import { RebuildStree } from '../walker/rebuild_stree';
 import { SpeechGenerator } from './speech_generator';
@@ -30,7 +30,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
    * @override
    */
-  public modality: EnrichMathml.Attribute = EnrichMathml.addPrefix('speech');
+  public modality: EnrichAttr.Attribute = EnrichAttr.addPrefix('speech');
 
   private rebuilt_: RebuildStree = null;
 
@@ -60,7 +60,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
    */
   public setOptions(options: AxisMap) {
     this.options_ = options || {};
-    this.modality = EnrichMathml.addPrefix(this.options_.modality || 'speech');
+    this.modality = EnrichAttr.addPrefix(this.options_.modality || 'speech');
   }
 
   /**

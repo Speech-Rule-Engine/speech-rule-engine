@@ -29,12 +29,12 @@ import { CaseProof } from './case_proof';
 import { CaseTable } from './case_table';
 import { CaseTensor } from './case_tensor';
 import { CaseText } from './case_text';
-import { EnrichCase } from './enrich_case';
+import { factory } from './enrich_case';
 
 /**
  * The cases of the factory can provide.
  */
-const cases: Case[] = [
+factory.push(...[
   {
     test: CaseLimit.test,
     constr: (node: SemanticNode) => new CaseLimit(node)
@@ -69,24 +69,4 @@ const cases: Case[] = [
     constr: (node: SemanticNode) => new CaseTable(node)
   },
   { test: CaseText.test, constr: (node: SemanticNode) => new CaseText(node) }
-];
-
-interface Case {
-  test: (p1: SemanticNode) => boolean;
-  constr: (p1: SemanticNode) => EnrichCase;
-}
-
-/**
- * Returns the embellished case analysis.
- *
- * @param node The semantic node.
- * @returns The case analysis.
- */
-export default function getCase(node: SemanticNode): EnrichCase {
-  for (let i = 0, enrich; (enrich = cases[i]); i++) {
-    if (enrich.test(node)) {
-      return enrich.constr(node);
-    }
-  }
-  return null;
-}
+]);

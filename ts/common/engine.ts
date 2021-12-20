@@ -19,6 +19,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { AuditoryDescription } from '../audio/auditory_description';
 import * as Dcstr from '../rule_engine/dynamic_cstr';
 import * as EngineConst from './engine_const';
 
@@ -207,6 +208,13 @@ export default class Engine {
     _cstr: Dcstr.DynamicCstr
   ): string {
     return str;
+  }
+
+  public static nodeEvaluator:(node: Element) => AuditoryDescription[]
+    = function(_node: Element) { return []; }
+
+  public static evaluateNode(node: Element) {
+    return Engine.nodeEvaluator(node);
   }
 
   // TODO: This might need a better place.

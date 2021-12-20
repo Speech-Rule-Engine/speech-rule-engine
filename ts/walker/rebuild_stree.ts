@@ -21,7 +21,7 @@
  */
 
 import * as DomUtil from '../common/dom_util';
-import { Attribute } from '../enrich_mathml/enrich_mathml';
+import { Attribute } from '../enrich_mathml/enrich_attr';
 import { invisibleComma } from '../semantic_tree/semantic_attr';
 import {
   SemanticFont,
