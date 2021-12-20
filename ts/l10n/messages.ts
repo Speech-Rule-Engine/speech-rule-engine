@@ -232,7 +232,7 @@ export interface Functions {
 export function FUNCTIONS(): Functions {
   return {
     fracNestDepth: (n: Element) => tr.vulgarFractionSmall(n, 10, 100),
-    radicalNestDepth:  (_count: number) => '',
+    radicalNestDepth: (_count: number) => '',
     combineRootIndex: function (postfix: string, _index: string) {
       return postfix;
     },

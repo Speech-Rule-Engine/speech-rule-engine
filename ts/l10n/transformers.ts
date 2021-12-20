@@ -139,7 +139,9 @@ interface Convertible {
  *    Otherwise only the text content is given.
  */
 export function convertVulgarFraction(
-  node: Element, over: string = ''): Convertible {
+  node: Element,
+  over = ''
+): Convertible {
   if (
     !node.childNodes ||
     !node.childNodes[0] ||

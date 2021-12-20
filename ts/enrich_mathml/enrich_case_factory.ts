@@ -34,39 +34,41 @@ import { factory } from './enrich_case';
 /**
  * The cases of the factory can provide.
  */
-factory.push(...[
-  {
-    test: CaseLimit.test,
-    constr: (node: SemanticNode) => new CaseLimit(node)
-  },
-  {
-    test: CaseEmbellished.test,
-    constr: (node: SemanticNode) => new CaseEmbellished(node)
-  },
-  {
-    test: CaseDoubleScript.test,
-    constr: (node: SemanticNode) => new CaseDoubleScript(node)
-  },
-  {
-    test: CaseTensor.test,
-    constr: (node: SemanticNode) => new CaseTensor(node)
-  },
-  {
-    test: CaseMultiscripts.test,
-    constr: (node: SemanticNode) => new CaseMultiscripts(node)
-  },
-  { test: CaseLine.test, constr: (node: SemanticNode) => new CaseLine(node) },
-  {
-    test: CaseBinomial.test,
-    constr: (node: SemanticNode) => new CaseBinomial(node)
-  },
-  {
-    test: CaseProof.test,
-    constr: (node: SemanticNode) => new CaseProof(node)
-  },
-  {
-    test: CaseTable.test,
-    constr: (node: SemanticNode) => new CaseTable(node)
-  },
-  { test: CaseText.test, constr: (node: SemanticNode) => new CaseText(node) }
-]);
+factory.push(
+  ...[
+    {
+      test: CaseLimit.test,
+      constr: (node: SemanticNode) => new CaseLimit(node)
+    },
+    {
+      test: CaseEmbellished.test,
+      constr: (node: SemanticNode) => new CaseEmbellished(node)
+    },
+    {
+      test: CaseDoubleScript.test,
+      constr: (node: SemanticNode) => new CaseDoubleScript(node)
+    },
+    {
+      test: CaseTensor.test,
+      constr: (node: SemanticNode) => new CaseTensor(node)
+    },
+    {
+      test: CaseMultiscripts.test,
+      constr: (node: SemanticNode) => new CaseMultiscripts(node)
+    },
+    { test: CaseLine.test, constr: (node: SemanticNode) => new CaseLine(node) },
+    {
+      test: CaseBinomial.test,
+      constr: (node: SemanticNode) => new CaseBinomial(node)
+    },
+    {
+      test: CaseProof.test,
+      constr: (node: SemanticNode) => new CaseProof(node)
+    },
+    {
+      test: CaseTable.test,
+      constr: (node: SemanticNode) => new CaseTable(node)
+    },
+    { test: CaseText.test, constr: (node: SemanticNode) => new CaseText(node) }
+  ]
+);

@@ -210,8 +210,10 @@ export default class Engine {
     return str;
   }
 
-  public static nodeEvaluator:(node: Element) => AuditoryDescription[]
-    = function(_node: Element) { return []; }
+  public static nodeEvaluator: (node: Element) => AuditoryDescription[] =
+    function (_node: Element) {
+      return [];
+    };
 
   public static evaluateNode(node: Element) {
     return Engine.nodeEvaluator(node);
@@ -284,10 +286,7 @@ export default class Engine {
    * @param feature An object describing some setup features.
    */
   public configurate(feature: { [key: string]: boolean | string }) {
-    if (
-      this.mode === EngineConst.Mode.HTTP &&
-        !this.config
-    ) {
+    if (this.mode === EngineConst.Mode.HTTP && !this.config) {
       configBlocks(feature);
       this.config = true;
     }
@@ -304,7 +303,6 @@ export default class Engine {
       this.customLoader = fn;
     }
   }
-
 }
 
 /**

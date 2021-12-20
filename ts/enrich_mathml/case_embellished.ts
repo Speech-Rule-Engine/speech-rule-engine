@@ -369,10 +369,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
       const parent = (x.childNodes[1] as Element).getAttribute(
         Attribute.PARENT
       );
-      (x.childNodes[0] as Element).setAttribute(
-        Attribute.PARENT,
-        parent
-      );
+      (x.childNodes[0] as Element).setAttribute(Attribute.PARENT, parent);
     });
   }
 }

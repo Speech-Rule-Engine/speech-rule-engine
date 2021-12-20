@@ -95,9 +95,7 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
           !child ||
           index !==
             parseInt(
-              EnrichMathml.getInnerNode(child).getAttribute(
-                Attribute.ID
-              )
+              EnrichMathml.getInnerNode(child).getAttribute(Attribute.ID)
             )
         ) {
           const query = this.semantic.querySelectorAll((x) => x.id === index);
