@@ -229,7 +229,7 @@ SemanticHeuristics.add(
 );
 
 /**
- *  Rewrites space separated lists of numbers into of cycles.
+ *  Rewrites space separated lists of numbers into cycles.
  *  (Currently only used in Nemeth.)
  */
 SemanticHeuristics.add(
@@ -246,7 +246,6 @@ SemanticHeuristics.add(
       return node;
     },
     (node: SemanticNode) =>
-      Engine.getInstance().modality === 'braille' &&
       node.type === SemanticType.FENCED &&
       node.childNodes[0].type === SemanticType.INFIXOP &&
       node.childNodes[0].role === SemanticRole.IMPLICIT &&
