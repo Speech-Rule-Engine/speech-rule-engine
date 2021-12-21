@@ -156,11 +156,22 @@ export class CaseEmbellished extends AbstractEnrichCase {
   }
 
   /**
+   * Checks if the node is fenced, including vectors, matrices etc.
+   * @param node A semantic node.
+   * @returns True if the node is a fenced elementd type.
+   */
+  private fencedElement(node: SemanticNode) {
+    return node.type === SemanticType.FENCED ||
+      node.type === SemanticType.MATRIX ||
+      node.type === SemanticType.VECTOR;
+  }
+
+  /**
    * Computes the components of the actual fenced node.
    */
   private getFenced_() {
     let currentNode = this.semantic;
-    while (currentNode.type !== SemanticType.FENCED) {
+    while (!this.fencedElement(currentNode)) {
       currentNode = currentNode.childNodes[0];
     }
     this.fenced = currentNode.childNodes[0];
@@ -234,7 +245,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
     // Sets the basics composition.
     setAttributes(newNode, this.fenced.parent as SemanticNode);
 
-    while (currentNode.type !== SemanticType.FENCED) {
+    while (!this.fencedElement(currentNode)) {
       // Outer embellished node is the one with the fence pointer.
       const mml = currentNode.mathmlTree as Element;
       const specialCase = this.specialCase_(currentNode, mml);
