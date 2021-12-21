@@ -442,7 +442,7 @@
     [
       "Action",
       "superscript-power",
-      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:afterPower, pause:short)"
+      "[n] children/*[1]; [t] \"의\"; [n] children/*[2] (grammar:afterPower, pause:short); [t] \"제곱\""
     ],
     [
       "Action",
