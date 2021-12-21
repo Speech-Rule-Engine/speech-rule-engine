@@ -242,6 +242,7 @@ SemanticHeuristics.add(
       const row = node.childNodes[0];
       row.type = SemanticType.ROW;
       row.role = SemanticRole.CYCLE;
+      row.textContent = '';
       row.contentNodes = [];
       return node;
     },
