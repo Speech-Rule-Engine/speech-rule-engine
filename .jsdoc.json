@@ -1,9 +1,0 @@
-{
-  "source": {
-    "exclude": ["src/common/api.js", "src/semantic_tree/semantic_api.js"],
-    "excludePattern": "externs.js"
-  },
-  "tags": {
-    "dictionaries": ["closure", "jsdoc"]
-  }
-}

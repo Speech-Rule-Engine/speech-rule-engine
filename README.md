@@ -34,10 +34,10 @@ strings.
 There are three ways of using SRE:
 
 1. [**Node Module:**](#node-module) Download via npm or yarn. This is the easiest way to use the speech
-rule engine via its Api and is the preferred option if you just want to include
+rule engine via its API and is the preferred option if you just want to include
 it in your project.
 
-2. [**Standalone Tool:**](#standalone-tool) Download via github and build with make. This is useful
+2. [**Standalone Tool:**](#standalone-tool) Download via github and build. This is useful
 if you want to use the speech rule engine in batch mode or interactivley to add
 your own code. Or simply run it with ```npx```, for example to get all SRE
 options anywhere without local installation run:
@@ -112,10 +112,10 @@ that this will overwrite the existing file.
 | `engineSetup()` | Returns the current setup of the engine as an  [options feature vector](#options). |
 
 
-#### Experimental methods for navigating math expressions:
+#### Methods for navigating math expressions:
 
 For the following methods SRE maintains an internal state, hence they are only
-really useful when running in browser or in a Node REPL. Therefore, they are not
+useful when running in browser or in a Node REPL. Therefore, they are not
 exposed via the command line interface.
 
 | Method | Return Value |
@@ -216,91 +216,52 @@ sre.setupEngine({
 });
 ```
 
-
-### Deprecated Options
-
-| Option | Value | Release |
-| ---- | ---- | ---- |
-| *cache* | Boolean flag to switch expression caching during speech generation. Default is ```true```. | Deprecated in v3.2.0 |
-|| Expression caching has been removed and the option has no longer any effect. |
-| *rules* | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** | Deprecated in v4.0.0 |
-|| **Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes.** |
-| *walker* | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table``` |
-
-
-
 Standalone Tool
 ---------------
 
-Install dependencies either by running:
+Install the library using `npm`:
 
-     npm install
+     npm install speech-rule-engine
 
-Or install them manually. SRE depends on the following libraries:
+Or add it with yarn:
 
-     google-closure-compiler
-     google-closure-library
-     xmldom-sre
-     wicked-good-xpath
-     commander
-     xml-mapping
+     yarn add speech-rule-engine
 
-
-### Build #############
-
-Depending on your setup you might need to adapt the NODEJS and NODE_MODULES
-variable in the Makefile.  Then simply run
-
-    make
-
-This will make both the command line executable and the interactive load script.
 
 ### Run on command line ############
 
 SRE can be run on the command line by providing a set of processing options and
 either a list of input files or a inputting an XML expression manually.
 
-    bin/sre [options] infile1 infile2 infile3 ...
+    ./node_modules/.bin/sre [options] infile1 infile2 infile3 ...
 
 For example running
 
-    bin/sre -j -p PATH_TO_SRE_RESOURCES/samples/sample1.xml resources/samples/sample2.xml
+    ./node_modules/.bin/sre -j -p PATH_TO_SRE_RESOURCES/samples/sample1.xml PATH_TO_SRE_RESOURCES/samples/sample2.xml
 
 will return the semantic tree in JSON as well as the speech translation for the
 expressions in the two sample files.
 (Note, that `-p` is the default option if no processing options are given).
 
-SRE also enables direct input from command line. For example, running
+If you have `npx` installed simply use this to run it from within the `speech-rule-engine` folder with
 
-    bin/sre -j -p
+    npx sre
+
+This works equivalently with all options and file input. 
+
+SRE also enables direct input from command line using `stdin`. For example,
+running
+
+    npx sre -j -p
 
 will wait for a complete XML expression to be input for translation. Similarly,
 shell piping is allowed:
 
-    bin/sre -j -p < PATH_TO_SRE_RESOURCES/samples/sample1.xml
+    npx sre -j -p < PATH_TO_SRE_RESOURCES/samples/sample1.xml
 
 Note, that when providing the `-o outfile` option output is saved into the given file.
-However, when processing from file only the very last output is saved, while when
+However, when processing from file only the very last output is reliably saved, while when
 processing via pipes or command line input all output is saved.
-
-### Run on command line (old) ############
-
-__Note that the `-i` option is deprecated and will be removed in future releases.__
-
-    bin/sre -i infile -o outfile
-
-As an example run
-
-    bin/sre -i PATH_TO_SRE_RESOURCES/samples/sample1.xml -o sample1.txt
-
-### Run interactively ############
-
-Import into a running node process
-
-    require('./lib/sre4node.js');
-
-Note, that this will import the full functionality of the speech rule engine in
-the sre namespace and of the closure library in the goog namespace.
 
 
 ### Command Line Options ###########
@@ -309,7 +270,6 @@ The following is a list of command line options for the speech rule engine.
 
 | Short | Long | Meaning |
 | ----- | ---- | :------- |
-| -i | --input [name]  | Input file [name]. **This option is deprecated!** |
 | -o | --output [name] | Output file [name].
 ||| If not given output is printed to stdout. |
 | | |
@@ -340,6 +300,12 @@ The following is a list of command line options for the speech rule engine.
 | | |
 | | |
 | | |
+| -N | --number | Translate number to words. |
+| -O | --ordinal | Translate number to word ordinal. |
+| -C | --subiso | Subcategory of the locale given with -c. |
+| | |
+| | |
+| | |
 | -v | --verbose       | Verbose mode. Print additional information, useful for debugging. |
 | -l | --log [name]    | Log file [name]. Verbose output is redirected to this file. |
 ||| If not given verbose output is printed to stdout. |
@@ -347,26 +313,61 @@ The following is a list of command line options for the speech rule engine.
 |    | --opt    | Enumerates all available options for locale, modality, domain and style. |
 | -V | --version  |  Outputs the version number |
 
+
+Building from Source 
+--------------------
+
+Clone from github and install dependencies either by running:
+
+     npm install
+
+Or install them manually. SRE depends on the following libraries:
+
+     xmldom-sre
+     wicked-good-xpath
+     commander
+
+This will build the single JavaScript modules, webpack the bundle file in
+`lib/sre.js` as well as assemble the locale files in `lib/mathmaps`. For more
+details on the build process as well as how to use different bundlers see the
+[developers documentation below](#developers-documentation).
+
+### Run interactively ############
+
+You can work with SRE interactively in node or use it as a batch processor, by
+loading JavaScript modules directly. For the generation of speech make sure to
+set the `SRE_JSON_PATH` environment variable to the folder where your locale
+files reside. For example, set
+
+    export SRE_JSON_PATH ./lib/mathmaps
+
+before in the shell before running node in the `speech-rule-engine` directory.
+You can then load the individual modules simply with node's `require`:
+
+``` javascript
+let sre = require('./js/index.js');
+```
+will give you the full API in the sre variable. On the other hand,
+
+``` javascript
+semantic = require('./js/semantic_tree/semantic.js');
+```
+will let you work with the semantic tree module only.
+
+
 Browser Library
 ---------------
 
 SRE can be used as a browser ready library giving you the option of loading it
-in a browser and use its full functionality on your webesites.
-
-### Usage #############
-
-Build SRE with
-
-    make browser
-
-Then include the resulting file ``sre_browser.js`` in your website in a script tag
+in a browser and use its full functionality on your webesites. Since version 4
+SRE the same bundle file works both in node and in a browser.  Simply include
+the file ``sre.js`` in your website in a script tag
 
 ``` html
-<script src="[URL]/sre_browser.js"></script>
+<script src="[URL]/sre.js"></script>
 ```
 
-The full functionality is now available in the ``sre`` namespace.  The most
-important API functions are also available in ``SRE``.
+The API will now be available in the ``SRE`` namespace.
 
 ### Configuration ####
 
@@ -428,47 +429,223 @@ var SREfeature = {
 </script>
 ```
 
+# Developers Documentation
 
-MathJax Library
---------------
 
-This is only relevant for MathJax distributins version 2.7.X. As of version 3.0
-MathJax use `sre_browser.js` library distributed in the `npm` release.
+Building
+--------
 
-    make mathjax
+By default the build process consists of three steps:
 
-generates a build specific for [MathJax](https://mathjax.org) in ``mathjax_sre.js``.
+1. Creating Locale files in 'lib/mathmaps'
+1. Transpiling typescript from sources in 'ts/' to 'js/'
+1. Webpacking the bundle in 'lib/sre.js'
+
+Locales are created from the sources in `mathmaps` by combining the topically
+split `.json` files into a single, minimized `.json` file, one for each
+language. Note, that for ease of development JSON minimization is done via an
+intermediate step to generate `.min` files, which is handles in the `Makefile` and ensures that only update
+files have to be minimized.
+
+While the entire build is best cleaned with `make clean`, this does not clean
+the `.min` files. These should be cleaned with `make clean_min`.
+
+
+Alternative Builds
+------------------
+
+### MathJax Library
+
+This is only relevant for MathJax distributions version 2.7.X. As of version 3.0
+MathJax uses sre directly via its `npm` release. The MathJax specific build can
+be created using the `mjConfig` goal for webpack
+
+    npx webpack
+
+then generates a build specific for [MathJax](https://mathjax.org) in ``mathjax_sre.js``.
 SRE can then be configured locally on webpages as described above.
 
 
+### Other Entry Points
 
-Developers Notes
-----------------
+For particular projects it might be useful and sufficient to create bespoke
+bundles of SRE submodules. Depending on the bundler 
 
-### Build Options
+Examples of entry points that provide separate API functionality to SRE
+submodules are 
 
-Other make targets useful during development are:
-
-    make test
-
-Runs all the tests using Node's assert module. Output is pretty printed to stdout.
-
-    make lint
-
-Runs the closure linter tool. To use this option, you need to install the node package
-
-    npm install closure-linter-wrapper
-
-To automatically fix some of linting errors run:
-
-    make fixjsstyle
-
-Note, that all JavaScript code in this repository is fully linted and compiles error free with respect to the strictest possible closure compiler settings, however, not using the ``newCheckTypes`` option.
-
-When creating a pull request, please make sure that your code compiles and is fully linted.
+| Module     | Javascript entry point         | Typescript entry point         | Comments                                           |
+|------------|--------------------------------|--------------------------------|----------------------------------------------------|
+| `semantic` | `js/semantic_tree/semantic.js` | `ts/semantic_tree/semantic.ts` | API for semantic tree generation                   |
+| `enrich`   | `js/enrich_mathml/enrich.js`   | `ts/enrich_mathml/enrich.ts`   | API for semantic enrichment of MathML expressions. |
+| `mathjax`  | `js/common/mathjax.js`         | `ts/common/mathjax.ts`         | API for MathJax version 2.7.X                      |
 
 
-### Node Package
+
+Using Bundlers
+--------------
+
+By default SRE works with webpack. But you can use a number of other bundlers to build.
+Note, that for all bundlers the JSON locale files need to be build as usual.
+
+### WebPack
+
+The default webpack of SRE generates the `sre.js` library that can be used both
+in node and the browser. Other goals are `mjConfig` that is defined in
+`webpack.config.js` or alternative entry points as discussed in more detail in
+the [Alternative Builds section](#alternative-builds).
+
+### Rollupjs
+
+Creates bundles similar to webpack, that can be used pretty much as
+replacement. Rollup bundles are build from the Javascript modules in `js`, so
+make sure to transpile first with `npx tsc`.
+
+#### Build
+
+Install the required packages:
+
+``` shell
+npm install --no-save rollup
+npm install --no-save @rollup/plugin-commonjs
+npm install --no-save @rollup/plugin-node-resolve
+npm install --no-save rollup-plugin-terser
+```
+
+Add a `rollup.config.js` file of the form:
+
+``` json
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import { terser } from "rollup-plugin-terser";
+import pkg from './package.json';
+
+export default [
+  {
+    input: 'js/index.js',
+    output: {
+      name: 'SRE',
+      file: pkg.browser,
+      format: 'umd'
+    },
+    plugins: [
+      resolve(), 
+      commonjs(),
+      terser()
+    ]
+  }
+];
+```
+
+The resulting file in `./lib/sre.js` works us usual for both browser and node.
+
+_Note, that in the Browser version there is currently an issue with Unicode
+Braille Spaces that are being garbled._
+
+
+### Esbuild
+
+Creates small builds very fast, but has some backward compatibility issues, in
+that it can work with ES6 modules only.
+
+#### Build
+
+
+Install the required packages:
+
+``` shell
+npm install --no-save esbuild
+```
+
+Build using the following command line:
+
+
+``` shell
+npx esbuild ./ts/index.ts --bundle --outfile=lib/sre.js --format=esm --minify
+```
+
+
+#### Node
+
+To run in node you need ES6 modules enabled.
+
+``` shell
+npx install --no-save esm
+```
+
+Then start node with `node -r esm`. If you want to use the CLI interface, adapt
+the `./bin/sre` script as follows:
+
+``` javascript
+#!/usr/bin/env -S node -r esm 
+let sre = require('../lib/sre.js');
+(new sre.cli()).commandLine();
+```
+
+#### Browser
+
+Import the SRE library as ES6 module into the browser, e.g.,
+
+``` html
+<script type="module">
+  import * as SRE from 'http://localhost/sre/speech-rule-engine/lib/sre.js'
+  ...
+</script>
+```
+
+### Parcel
+
+SRE currently does not support bundling with `parcel`.
+
+
+Coding Style
+------------
+
+SRE is implemented using coding format enforced by
+[prettier](https://prettier.io/) and [eslint](https://eslint.org/). In addition
+it requires full documentation using [JSDOC](https://jsdoc.app/).  When creating
+a pull request, please make sure that your code compiles and is fully linted.
+
+### Code Formatting
+
+We use [prettier](https://prettier.io/) for formatting code. Run
+
+    npm format
+    
+to see which files contain format violations. Use
+
+    npm format-fix
+    
+to automatically fix those format violations.
+
+
+### Code Hygiene
+
+We use [eslint](https://eslint.org/) for enforcing code style and
+documentation. Run
+
+    npm lint
+    
+to see a list of linting errors and warnings. Use
+
+    npm lint-fix
+    
+to automatically fix those violations as much as possible.
+
+### Documentation
+
+Full [JSDOC](https://jsdoc.app/) documentation is required and enforced via the
+`eslint jsdoc plugin`(https://www.npmjs.com/package/eslint-plugin-jsdoc). To
+generate documentation from the [JSDOC](https://jsdoc.app/), simply run
+
+    npm run docs
+
+This will generate documentation using [typedoc](http://typedoc.org) for the
+source code in the directory ``docs/``.
+
+
+Node Package
+------------
 
 The speech rule engine is published as a node package in fully compiled form, together with the JSON libraries for translating atomic expressions. All relevant files are in the lib subdirectory.
 
@@ -476,50 +653,48 @@ To publish the node package run
 
     npm publish
 
-This first builds the package by executing
-
-    make publish
-
-This make command is also useful for local testing of the package.
-
-### Documentation
-
-To generate documentation from the [JSDOC](https://jsdoc.app/), simply run
-
-    make docs
-
-This will generate documentation for the source coude and test code in the directories ``docs/src`` and ``docs/tests``, respectively.
+For manually going through the build steps see the `prepublish` script in `package.json`.
 
 
-Removed in v3.0
----------------
 
-The following has been removed with the release of version 3.0. You will have
-to adapt your code, in case you have been using this functionality.
+Removed or Deprecated Functionality
+-----------------------------------
 
-#### Removed Engine Setup Options
+The following is an overview of functionality and options that were available at
+some point in SRE. Depending on the version you are using they might still work,
+do nothing or throw an error. Even if they still work they are strongly
+discouraged to use.
 
 
-| Option | Value |
-| ---- | ---- |
-| *semantics* | Boolean flag to switch **OFF** semantic interpretation. **Non-semantic rule sets have been removed since v3.0.** |
+### Removed or Deprecated Engine Setup Options
+
+The following options are either deprecated or have been removed. Having them in
+the feature vector for `setupEngine` should not throw an exception but will have
+no effect.
+
+
+| Option      | Value                                                                                                                                                                                                                           | Release                   | Comments                                                                                                                         |   |   |
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------|---|---|
+| *cache*     | Boolean flag to switch expression caching during speech generation. Default is ```true```.                                                                                                                                      | *Removed in v3.2.0*       | Expression caching has been removed and the option has no longer any effect.                                                     |   |   |
+| *rules*     | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** | *Deprecated in v4.0.0*    | Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes. |   |   |
+| *walker*    | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table```                                                                                                                              | *Deprecated since v4.0.0* | Defaults to Table walker. Other walkers are no longer maintained!                                                                |   |   |
+| *semantics* | Boolean flag to switch **OFF** semantic interpretation.                                                                                                                                                                         | *Removed in v3.0*         | Non-semantic rule sets have been removed since v3.0.                                                                             |   |   |
+
 
 #### Removed API functions #########
 
-| Method | Return Value |
-| ---- | ---- |
-| `pprintXML(string)` | Returns pretty printed version of a serialised XML string. |
-| | *Use the `pprint` option instead.` |
+| Method | Return Value | Release | Comments |
+| ---- | ---- | ---- | ---- |
+| `pprintXML(string)` | Returns pretty printed version of a serialised XML string. | *Removed v3.0* | Use the `pprint` option instead.` |
 
 
 #### Removed Command Line Options #########
 
 
-| Short | Long | Meaning |
-| ----- | ---- | :------- |
-| -s | --semantics     | Switch on semantics interpretation. |
-||| **This option is now removed.** |
-||| There is no longer support for non-semantic rule sets. |
+| Short | Long | Meaning | Release | Comments |
+| ----- | ---- | :------- | :------- | :------- |
+| -i | --input [name]  | Input file [name]. | *Deprecated since v3.0. Removed in v4.0!* | Use standard input file handling or stdio piping instead |
+| -s | --semantics     | Switch **OFF** semantics interpretation. | *Removed in v3.0* | There is no longer support for non-semantic rule sets. |
 
 
 ## Breaking Change
