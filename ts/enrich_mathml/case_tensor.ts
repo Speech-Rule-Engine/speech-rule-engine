@@ -24,6 +24,7 @@ import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton';
 
 import { CaseMultiindex } from './case_multiindex';
 import * as EnrichMathml from './enrich_mathml';
+import { setAttributes, Attribute } from './enrich_attr';
 
 export class CaseTensor extends CaseMultiindex {
   /**
@@ -52,7 +53,7 @@ export class CaseTensor extends CaseMultiindex {
     const lsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[2]);
     const rsub = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[3]);
     const rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[4]);
-    EnrichMathml.setAttributes(this.mml, this.semantic);
+    setAttributes(this.mml, this.semantic);
     const collapsed = [
       this.semantic.id,
       this.semantic.childNodes[0].id,
@@ -64,7 +65,7 @@ export class CaseTensor extends CaseMultiindex {
     EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
     const childIds = SemanticSkeleton.collapsedLeafs(lsub, lsup, rsub, rsup);
     childIds.unshift(this.semantic.childNodes[0].id);
-    this.mml.setAttribute(EnrichMathml.Attribute.CHILDREN, childIds.join(','));
+    this.mml.setAttribute(Attribute.CHILDREN, childIds.join(','));
     this.completeMultiscript(
       SemanticSkeleton.interleaveIds(rsub, rsup),
       SemanticSkeleton.interleaveIds(lsub, lsup)

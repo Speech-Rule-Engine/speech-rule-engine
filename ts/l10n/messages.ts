@@ -18,7 +18,6 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as LocaleUtil from './locale_util';
 import * as tr from './transformers';
 
 /**
@@ -232,8 +231,8 @@ export interface Functions {
  */
 export function FUNCTIONS(): Functions {
   return {
-    fracNestDepth: LocaleUtil.vulgarNestingDepth,
-    radicalNestDepth: LocaleUtil.nestingToString,
+    fracNestDepth: (n: Element) => tr.vulgarFractionSmall(n, 10, 100),
+    radicalNestDepth: (_count: number) => '',
     combineRootIndex: function (postfix: string, _index: string) {
       return postfix;
     },

@@ -19,7 +19,7 @@
  */
 
 import * as XpathUtil from '../common/xpath_util';
-import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
+import { addPrefix, Attribute } from '../enrich_mathml/enrich_attr';
 import { ColorPicker, StringColor } from './color_picker';
 import { Highlighter } from './highlighter';
 
@@ -203,10 +203,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public colorizeAll(node: HTMLElement) {
-    const allNodes = XpathUtil.evalXPath(
-      `.//*[@${EnrichMathml.Attribute.ID}]`,
-      node
-    );
+    const allNodes = XpathUtil.evalXPath(`.//*[@${Attribute.ID}]`, node);
     allNodes.forEach((x: Element) => this.colorize(x as HTMLElement));
   }
 
@@ -216,10 +213,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public uncolorizeAll(node: HTMLElement) {
-    const allNodes = XpathUtil.evalXPath(
-      `.//*[@${EnrichMathml.Attribute.ID}]`,
-      node
-    );
+    const allNodes = XpathUtil.evalXPath(`.//*[@${Attribute.ID}]`, node);
     allNodes.forEach((x) => this.uncolorize(x as HTMLElement));
   }
 
@@ -230,7 +224,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    */
   // TODO: Generalise this to use the highlighter method and background.
   public colorize(node: HTMLElement) {
-    const fore = EnrichMathml.addPrefix('foreground');
+    const fore = addPrefix('foreground');
     if (node.hasAttribute(fore)) {
       node.setAttribute(fore + '-old', node.style.color);
       node.style.color = node.getAttribute(fore);
@@ -243,7 +237,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public uncolorize(node: HTMLElement) {
-    const fore = EnrichMathml.addPrefix('foreground') + '-old';
+    const fore = addPrefix('foreground') + '-old';
     if (node.hasAttribute(fore)) {
       node.style.color = node.getAttribute(fore);
     }

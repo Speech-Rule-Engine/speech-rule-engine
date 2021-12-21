@@ -22,6 +22,7 @@ import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
+import { setAttributes, Attribute } from './enrich_attr';
 
 export class CaseText extends AbstractEnrichCase {
   /**
@@ -58,8 +59,8 @@ export class CaseText extends AbstractEnrichCase {
     const children: Element[] = [];
     const collapsed = EnrichMathml.collapsePunctuated(this.semantic, children);
     this.mml = EnrichMathml.introduceNewLayer(children, this.semantic);
-    EnrichMathml.setAttributes(this.mml, this.semantic);
-    this.mml.removeAttribute(EnrichMathml.Attribute.CONTENT);
+    setAttributes(this.mml, this.semantic);
+    this.mml.removeAttribute(Attribute.CONTENT);
     EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
     return this.mml;
   }

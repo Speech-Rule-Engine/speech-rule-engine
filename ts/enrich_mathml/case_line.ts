@@ -23,6 +23,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node';
 
 import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
+import { setAttributes } from './enrich_attr';
 
 export class CaseLine extends AbstractEnrichCase {
   /**
@@ -58,7 +59,7 @@ export class CaseLine extends AbstractEnrichCase {
     if (this.semantic.childNodes.length) {
       EnrichMathml.walkTree(this.semantic.childNodes[0] as SemanticNode);
     }
-    EnrichMathml.setAttributes(this.mml, this.semantic);
+    setAttributes(this.mml, this.semantic);
     return this.mml;
   }
 }

@@ -24,6 +24,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node';
 
 import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
+import { setAttributes } from './enrich_attr';
 
 export class CaseTable extends AbstractEnrichCase {
   /**
@@ -87,7 +88,7 @@ export class CaseTable extends AbstractEnrichCase {
       rfence && newChildren.push(rfence);
       this.mml = EnrichMathml.introduceNewLayer(newChildren, this.semantic);
     }
-    EnrichMathml.setAttributes(this.mml, this.semantic);
+    setAttributes(this.mml, this.semantic);
     return this.mml;
   }
 }

@@ -25,7 +25,7 @@ import { SemanticNode } from '../semantic_tree/semantic_node';
 
 import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
-
+import { setAttributes } from './enrich_attr';
 export class CaseLimit extends AbstractEnrichCase {
   /**
    * The actual mml tree.
@@ -87,7 +87,7 @@ export class CaseLimit extends AbstractEnrichCase {
       // condition excludes incomplete elements.
       this.mml = EnrichMathml.introduceNewLayer([this.mml], this.semantic);
     }
-    EnrichMathml.setAttributes(this.mml, this.semantic);
+    setAttributes(this.mml, this.semantic);
     if (!children[0].mathmlTree) {
       children[0].mathmlTree = this.semantic.mathmlTree;
     }

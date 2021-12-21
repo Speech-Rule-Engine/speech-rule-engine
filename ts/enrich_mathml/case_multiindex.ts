@@ -25,6 +25,7 @@ import { Sexp } from '../semantic_tree/semantic_skeleton';
 
 import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
+import { setAttributes, Attribute } from './enrich_attr';
 
 export abstract class CaseMultiindex extends AbstractEnrichCase {
   /**
@@ -61,9 +62,9 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
   private static createNone_(semantic: SemanticNode): Element {
     const newNode = DomUtil.createElement('none');
     if (semantic) {
-      EnrichMathml.setAttributes(newNode, semantic);
+      setAttributes(newNode, semantic);
     }
-    newNode.setAttribute(EnrichMathml.Attribute.ADDED, 'true');
+    newNode.setAttribute(Attribute.ADDED, 'true');
     return newNode;
   }
 
@@ -94,9 +95,7 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
           !child ||
           index !==
             parseInt(
-              EnrichMathml.getInnerNode(child).getAttribute(
-                EnrichMathml.Attribute.ID
-              )
+              EnrichMathml.getInnerNode(child).getAttribute(Attribute.ID)
             )
         ) {
           const query = this.semantic.querySelectorAll((x) => x.id === index);
@@ -106,7 +105,7 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
           );
         } else {
           EnrichMathml.getInnerNode(child).setAttribute(
-            EnrichMathml.Attribute.PARENT,
+            Attribute.PARENT,
             this.semantic.id.toString()
           );
           childCounter++;

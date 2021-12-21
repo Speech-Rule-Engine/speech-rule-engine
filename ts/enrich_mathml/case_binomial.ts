@@ -22,7 +22,8 @@ import * as DomUtil from '../common/dom_util';
 import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
 import { SemanticNode } from '../semantic_tree/semantic_node';
 import { AbstractEnrichCase } from './abstract_enrich_case';
-import * as EnrichMathml from './enrich_mathml';
+import { walkTree } from './enrich_mathml';
+import { setAttributes, Attribute } from './enrich_attr';
 
 export class CaseBinomial extends AbstractEnrichCase {
   /**
@@ -60,16 +61,16 @@ export class CaseBinomial extends AbstractEnrichCase {
       return this.mml;
     }
     const child = this.semantic.childNodes[0];
-    this.mml = EnrichMathml.walkTree(child as SemanticNode);
+    this.mml = walkTree(child as SemanticNode);
     // Adds a redundant mrow to include the line information.
-    if (this.mml.hasAttribute(EnrichMathml.Attribute.TYPE)) {
+    if (this.mml.hasAttribute(Attribute.TYPE)) {
       const mrow = DomUtil.createElement('mrow');
-      mrow.setAttribute(EnrichMathml.Attribute.ADDED, 'true');
+      mrow.setAttribute(Attribute.ADDED, 'true');
       DomUtil.replaceNode(this.mml, mrow);
       mrow.appendChild(this.mml);
       this.mml = mrow;
     }
-    EnrichMathml.setAttributes(this.mml, this.semantic);
+    setAttributes(this.mml, this.semantic);
     return this.mml;
   }
 }

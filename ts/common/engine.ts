@@ -19,8 +19,13 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { AuditoryDescription } from '../audio/auditory_description';
 import * as Dcstr from '../rule_engine/dynamic_cstr';
 import * as EngineConst from './engine_const';
+
+import { Debugger } from './debugger';
+
+declare const SREfeature: { [key: string]: any };
 
 /**
  * The base error class for signaling SRE errors.
@@ -205,6 +210,15 @@ export default class Engine {
     return str;
   }
 
+  public static nodeEvaluator: (node: Element) => AuditoryDescription[] =
+    function (_node: Element) {
+      return [];
+    };
+
+  public static evaluateNode(node: Element) {
+    return Engine.nodeEvaluator(node);
+  }
+
   // TODO: This might need a better place.
   /**
    * @returns The current base rate.
@@ -264,6 +278,66 @@ export default class Engine {
     );
     this.parser = this.defaultParser;
     this.dynamicCstr = Dcstr.DynamicCstr.defaultCstr();
+  }
+
+  /**
+   * The actual configuration method.
+   *
+   * @param feature An object describing some setup features.
+   */
+  public configurate(feature: { [key: string]: boolean | string }) {
+    if (this.mode === EngineConst.Mode.HTTP && !this.config) {
+      configBlocks(feature);
+      this.config = true;
+    }
+    configFeature(feature);
+  }
+
+  /**
+   * Sets the custom loader.
+   *
+   * @param fn A custom loader function.
+   */
+  public setCustomLoader(fn: any) {
+    if (fn) {
+      this.customLoader = fn;
+    }
+  }
+}
+
+/**
+ * Reads configuration blocks and adds them to the feature vector.
+ *
+ * @param feature An object describing some setup features.
+ */
+function configFeature(feature: { [key: string]: boolean | string }) {
+  if (typeof SREfeature !== 'undefined') {
+    for (const [name, feat] of Object.entries(SREfeature)) {
+      feature[name] = feat;
+    }
+  }
+}
+
+/**
+ * Reads configuration blocks and adds them to the feature vector.
+ *
+ * @param feature An object describing some setup features.
+ */
+function configBlocks(feature: { [key: string]: boolean | string }) {
+  const scripts = document.documentElement.querySelectorAll(
+    'script[type="text/x-sre-config"]'
+  );
+  for (let i = 0, m = scripts.length; i < m; i++) {
+    let inner;
+    try {
+      inner = scripts[i].innerHTML;
+      const config = JSON.parse(inner);
+      for (const f in config) {
+        feature[f] = config[f];
+      }
+    } catch (err) {
+      Debugger.getInstance().output('Illegal configuration ', inner);
+    }
   }
 }
 

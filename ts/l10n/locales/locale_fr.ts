@@ -24,7 +24,7 @@
 
 import { Grammar } from '../../rule_engine/grammar';
 import { createLocale, Locale } from '../locale';
-import { combinePostfixIndex } from '../locale_util';
+import { combinePostfixIndex, nestingToString } from '../locale_util';
 import NUMBERS from '../numbers/numbers_fr';
 import { Combiners } from '../transformers';
 
@@ -48,7 +48,8 @@ function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
 
-  loc.FUNCTIONS.fracNestDepth = (_node) => false;
+  //loc.FUNCTIONS.fracNestDepth = (_node) => false;
+  loc.FUNCTIONS.radicalNestDepth = nestingToString;
   loc.FUNCTIONS.combineRootIndex = combinePostfixIndex;
   loc.FUNCTIONS.combineNestedFraction = (a, b, c) =>
     c.replace(/ $/g, '') + b + a;

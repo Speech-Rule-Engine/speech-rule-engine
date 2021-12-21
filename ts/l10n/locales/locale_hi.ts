@@ -25,6 +25,7 @@
 import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_hi';
 import { Combiners } from '../transformers';
+import { nestingToString } from '../locale_util';
 
 let locale: Locale = null;
 
@@ -46,6 +47,7 @@ function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;
+  loc.FUNCTIONS.radicalNestDepth = nestingToString;
 
   return loc;
 }

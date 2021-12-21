@@ -19,12 +19,9 @@
  */
 
 import { AuditoryDescription } from '../audio/auditory_description';
-import * as L10n from '../l10n/l10n';
-import * as MathMap from '../speech_rules/math_map';
 
-import * as BrowserUtil from './browser_util';
-import { Debugger } from './debugger';
 import Engine, { EnginePromise, SREError } from './engine';
+import { setup } from './engine_setup';
 import * as EngineConst from './engine_const';
 import { KeyCode } from './event_util';
 import * as FileUtil from './file_util';
@@ -52,99 +49,7 @@ export const version: string = Variables.VERSION;
 export async function setupEngine(feature: {
   [key: string]: boolean | string;
 }) {
-  const engine = Engine.getInstance() as any;
-  // This preserves the possibility to specify default as domain.
-  // < 3.2  this lead to the use of chromevox rules in English.
-  // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
-  // we get a meaningful output.
-  if (
-    feature.domain === 'default' &&
-    (feature.modality === 'speech' ||
-      !feature.modality ||
-      engine.modality === 'speech')
-  ) {
-    feature.domain = 'mathspeak';
-  }
-  const setIf = (feat: string) => {
-    if (typeof feature[feat] !== 'undefined') {
-      engine[feat] = !!feature[feat];
-    }
-  };
-  const setMulti = (feat: string) => {
-    engine[feat] = feature[feat] || engine[feat];
-  };
-  setMulti('mode');
-  config(feature);
-  Engine.BINARY_FEATURES.forEach(setIf);
-  Engine.STRING_FEATURES.forEach(setMulti);
-  if (feature.json) {
-    SystemExternal.jsonPath = FileUtil.makePath(feature.json as string);
-  }
-  if (feature.xpath) {
-    SystemExternal.WGXpath = feature.xpath as string;
-  }
-  setCustomLoader(feature.custom);
-  setupBrowsers();
-  L10n.setLocale();
-  engine.setDynamicCstr();
-  return MathMap.init().then(() => {
-    MathMap.loadLocale();
-    return EnginePromise.get();
-  });
-}
-
-/**
- * The actual configuration method.
- *
- * @param feature An object describing some setup features.
- */
-function config(feature: { [key: string]: boolean | string }) {
-  if (
-    Engine.getInstance().mode === EngineConst.Mode.HTTP &&
-    !Engine.getInstance().config
-  ) {
-    configBlocks(feature);
-    Engine.getInstance().config = true;
-  }
-  configFeature(feature);
-}
-
-declare const SREfeature: { [key: string]: any };
-
-/**
- * Reads configuration blocks and adds them to the feature vector.
- *
- * @param feature An object describing some setup features.
- */
-function configFeature(feature: { [key: string]: boolean | string }) {
-  if (typeof SREfeature !== 'undefined') {
-    for (const [name, feat] of Object.entries(SREfeature)) {
-      feature[name] = feat;
-    }
-  }
-}
-
-/**
- * Reads configuration blocks and adds them to the feature vector.
- *
- * @param feature An object describing some setup features.
- */
-function configBlocks(feature: { [key: string]: boolean | string }) {
-  const scripts = document.documentElement.querySelectorAll(
-    'script[type="text/x-sre-config"]'
-  );
-  for (let i = 0, m = scripts.length; i < m; i++) {
-    let inner;
-    try {
-      inner = scripts[i].innerHTML;
-      const config = JSON.parse(inner);
-      for (const f in config) {
-        feature[f] = config[f];
-      }
-    } catch (err) {
-      Debugger.getInstance().output('Illegal configuration ', inner);
-    }
-  }
+  return setup(feature);
 }
 
 /**
@@ -452,25 +357,6 @@ export function exit(opt_value?: number) {
  * @param ext An optional file extension. Defaults to json.
  */
 export const localePath = FileUtil.localePath;
-
-/**
- * Sets the custom loader.
- *
- * @param fn A custom loader function.
- */
-export function setCustomLoader(fn: any) {
-  if (fn) {
-    Engine.getInstance().customLoader = fn;
-  }
-}
-
-/**
- * Sets up browser specific functionality.
- */
-function setupBrowsers() {
-  Engine.getInstance().isIE = BrowserUtil.detectIE();
-  Engine.getInstance().isEdge = BrowserUtil.detectEdge();
-}
 
 // Check here for custom method!
 if (SystemExternal.documentSupported) {

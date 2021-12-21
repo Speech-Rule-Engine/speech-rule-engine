@@ -27,6 +27,7 @@ import { CaseDoubleScript } from './case_double_script';
 import { CaseMultiscripts } from './case_multiscripts';
 import { CaseTensor } from './case_tensor';
 import * as EnrichMathml from './enrich_mathml';
+import { setAttributes, Attribute } from './enrich_attr';
 
 export class CaseEmbellished extends AbstractEnrichCase {
   /**
@@ -146,7 +147,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
     if (this.fenced.type === SemanticType.EMPTY && !this.fencedMml.parentNode) {
       // Fenced element is empty and new. Insert it before the closing fence so
       // it can be walked as usual.
-      this.fencedMml.setAttribute(EnrichMathml.Attribute.ADDED, 'true');
+      this.fencedMml.setAttribute(Attribute.ADDED, 'true');
       this.cfenceMml.parentNode.insertBefore(this.fencedMml, this.cfenceMml);
     }
     this.getFencedMml_();
@@ -231,7 +232,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
     let result = null;
     const newNode = this.introduceNewLayer_();
     // Sets the basics composition.
-    EnrichMathml.setAttributes(newNode, this.fenced.parent as SemanticNode);
+    setAttributes(newNode, this.fenced.parent as SemanticNode);
 
     while (currentNode.type !== SemanticType.FENCED) {
       // Outer embellished node is the one with the fence pointer.
@@ -240,7 +241,7 @@ export class CaseEmbellished extends AbstractEnrichCase {
       if (specialCase) {
         currentNode = specialCase;
       } else {
-        EnrichMathml.setAttributes(mml, currentNode);
+        setAttributes(mml, currentNode);
         const mmlChildren = [];
         // The base node is rewritten. Walk the remaining nodes.
         for (let i = 1, child; (child = currentNode.childNodes[i]); i++) {
@@ -366,12 +367,9 @@ export class CaseEmbellished extends AbstractEnrichCase {
   private cleanupParents_() {
     this.parentCleanup.forEach(function (x) {
       const parent = (x.childNodes[1] as Element).getAttribute(
-        EnrichMathml.Attribute.PARENT
+        Attribute.PARENT
       );
-      (x.childNodes[0] as Element).setAttribute(
-        EnrichMathml.Attribute.PARENT,
-        parent
-      );
+      (x.childNodes[0] as Element).setAttribute(Attribute.PARENT, parent);
     });
   }
 }

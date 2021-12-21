@@ -19,8 +19,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as System from '../common/system';
-import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
+import { setup as EngineSetup } from '../common/engine_setup';
+import * as EnrichAttr from '../enrich_mathml/enrich_attr';
 import { AxisMap } from '../rule_engine/dynamic_cstr';
 import { RebuildStree } from '../walker/rebuild_stree';
 import { SpeechGenerator } from './speech_generator';
@@ -30,7 +30,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**
    * @override
    */
-  public modality: EnrichMathml.Attribute = EnrichMathml.addPrefix('speech');
+  public modality: EnrichAttr.Attribute = EnrichAttr.addPrefix('speech');
 
   private rebuilt_: RebuildStree = null;
 
@@ -60,7 +60,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
    */
   public setOptions(options: AxisMap) {
     this.options_ = options || {};
-    this.modality = EnrichMathml.addPrefix(this.options_.modality || 'speech');
+    this.modality = EnrichAttr.addPrefix(this.options_.modality || 'speech');
   }
 
   /**
@@ -87,7 +87,7 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     if (!this.rebuilt_) {
       this.rebuilt_ = new RebuildStree(xml);
     }
-    System.setupEngine(this.options_);
+    EngineSetup(this.options_);
     return SpeechGeneratorUtil.computeMarkup(this.getRebuilt().xml);
   }
 }

@@ -280,6 +280,12 @@ set(
     processor: function (expr) {
       const generator = SpeechGeneratorFactory.generator('Node');
       Processor.LocalState.speechGenerator = generator;
+      generator.setOptions({
+        modality: Engine.getInstance().modality,
+        locale: Engine.getInstance().locale,
+        domain: Engine.getInstance().domain,
+        style: Engine.getInstance().style
+      });
       Processor.LocalState.highlighter = HighlighterFactory.highlighter(
         { color: 'black' },
         { color: 'white' },

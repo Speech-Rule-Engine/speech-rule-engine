@@ -32,7 +32,8 @@ import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton';
 import { SemanticTree } from '../semantic_tree/semantic_tree';
 import * as SemanticUtil from '../semantic_tree/semantic_util';
 
-import getCase from './enrich_case_factory';
+import * as EnrichAttr from './enrich_attr';
+import { getCase } from './enrich_case';
 
 /**
  * Object containing settings for the semantic enrichment.
@@ -41,59 +42,6 @@ export const SETTINGS: { collapsed: boolean; implicit: boolean } = {
   collapsed: true,
   implicit: true
 };
-
-/**
- * Prefix for semantic attributes.
- */
-export const ATTRIBUTE_PREFIX_ = 'data-semantic-';
-
-// TODO (TS): Do something about the prefix computation.
-/**
- * Mapping for attributes used in semantic enrichment.
- */
-export enum Attribute {
-  ADDED = 'data-semantic-added',
-  ALTERNATIVE = 'data-semantic-alternative',
-  CHILDREN = 'data-semantic-children',
-  COLLAPSED = 'data-semantic-collapsed',
-  CONTENT = 'data-semantic-content',
-  EMBELLISHED = 'data-semantic-embellished',
-  FENCEPOINTER = 'data-semantic-fencepointer',
-  FONT = 'data-semantic-font',
-  ID = 'data-semantic-id',
-  ANNOTATION = 'data-semantic-annotation',
-  OPERATOR = 'data-semantic-operator',
-  OWNS = 'data-semantic-owns',
-  PARENT = 'data-semantic-parent',
-  POSTFIX = 'data-semantic-postfix',
-  PREFIX = 'data-semantic-prefix',
-  ROLE = 'data-semantic-role',
-  SPEECH = 'data-semantic-speech',
-  STRUCTURE = 'data-semantic-structure',
-  TYPE = 'data-semantic-type'
-}
-
-export const EnrichAttributes: string[] = [
-  Attribute.ADDED,
-  Attribute.ALTERNATIVE,
-  Attribute.CHILDREN,
-  Attribute.COLLAPSED,
-  Attribute.CONTENT,
-  Attribute.EMBELLISHED,
-  Attribute.FENCEPOINTER,
-  Attribute.FONT,
-  Attribute.ID,
-  Attribute.ANNOTATION,
-  Attribute.OPERATOR,
-  Attribute.OWNS,
-  Attribute.PARENT,
-  Attribute.POSTFIX,
-  Attribute.PREFIX,
-  Attribute.ROLE,
-  Attribute.SPEECH,
-  Attribute.STRUCTURE,
-  Attribute.TYPE
-];
 
 /**
  * Enriches a MathML element with semantics from the tree.
@@ -112,7 +60,7 @@ export function enrich(mml: Element, semantic: SemanticTree): Element {
   walkTree(semantic.root);
   if (Engine.getInstance().structure) {
     mml.setAttribute(
-      Attribute.STRUCTURE,
+      EnrichAttr.Attribute.STRUCTURE,
       SemanticSkeleton.fromStructure(mml, semantic).toString()
     );
   }
@@ -142,7 +90,7 @@ export function walkTree(semantic: SemanticNode): Element {
   if (semantic.mathml.length === 1) {
     Debugger.getInstance().output('Walktree Case 0');
     newNode = semantic.mathml[0] as Element;
-    setAttributes(newNode, semantic);
+    EnrichAttr.setAttributes(newNode, semantic);
     if (semantic.childNodes.length) {
       // These children should all be empty.
       Debugger.getInstance().output('Walktree Case 0.1');
@@ -180,7 +128,7 @@ export function walkTree(semantic: SemanticNode): Element {
   }
   newNode = rewriteMfenced(newNode);
   mergeChildren_(newNode, childrenList, semantic);
-  setAttributes(newNode, semantic);
+  EnrichAttr.setAttributes(newNode, semantic);
   return ascendNewNode(newNode);
 }
 
@@ -280,7 +228,7 @@ export function introduceLayerAboveLca(
  * @param newNode The node which receives the semantic attributes.
  */
 export function moveSemanticAttributes_(oldNode: Element, newNode: Element) {
-  for (const attr of EnrichAttributes) {
+  for (const attr of EnrichAttr.EnrichAttributes) {
     if (oldNode.hasAttribute(attr)) {
       newNode.setAttribute(attr, oldNode.getAttribute(attr));
       oldNode.removeAttribute(attr);
@@ -334,7 +282,7 @@ export function collateChildNodes_(
   let notFirst = false;
   while (newChildren.length) {
     const child = newChildren.shift();
-    if (child.hasAttribute(Attribute.TYPE)) {
+    if (child.hasAttribute(EnrichAttr.Attribute.TYPE)) {
       oldChildren.push(child);
       continue;
     }
@@ -389,7 +337,7 @@ export function collectChildNodes_(node: Element): Element[] {
     if (child.nodeType !== DomUtil.NodeType.ELEMENT_NODE) {
       continue;
     }
-    if (child.hasAttribute(Attribute.TYPE)) {
+    if (child.hasAttribute(EnrichAttr.Attribute.TYPE)) {
       collect.push(child);
       continue;
     }
@@ -528,7 +476,7 @@ export function functionApplication_(
     newNode.textContent &&
     oldNode.textContent === appl &&
     newNode.textContent === appl &&
-    newNode.getAttribute(Attribute.ADDED) === 'true'
+    newNode.getAttribute(EnrichAttr.Attribute.ADDED) === 'true'
   ) {
     for (let i = 0, attr; (attr = oldNode.attributes[i]); i++) {
       if (!newNode.hasAttribute(attr.nodeName)) {
@@ -700,7 +648,7 @@ export function descendNode_(node: Element): Element {
   if (
     remainder.length === 1 &&
     SemanticUtil.hasEmptyTag(remainder[0]) &&
-    !remainder[0].hasAttribute(Attribute.TYPE)
+    !remainder[0].hasAttribute(EnrichAttr.Attribute.TYPE)
   ) {
     return descendNode_(remainder[0]);
   }
@@ -742,7 +690,7 @@ export function isIgnorable_(node: Element): boolean {
   if (
     (!SemanticUtil.hasEmptyTag(node) && children.length) ||
     SemanticUtil.hasDisplayTag(node) ||
-    node.hasAttribute(Attribute.TYPE) ||
+    node.hasAttribute(EnrichAttr.Attribute.TYPE) ||
     SemanticUtil.isOrphanedGlyph(node)
   ) {
     return false;
@@ -770,7 +718,7 @@ export function parentNode_(element: Element): Element {
  */
 export function addCollapsedAttribute(node: Element, collapsed: Sexp) {
   const skeleton = new SemanticSkeleton(collapsed);
-  node.setAttribute(Attribute.COLLAPSED, skeleton.toString());
+  node.setAttribute(EnrichAttr.Attribute.COLLAPSED, skeleton.toString());
 }
 
 /**
@@ -788,64 +736,6 @@ export function cloneContentNode(content: SemanticNode): Element {
     : DomUtil.createElement('mrow');
   content.mathml = [clone];
   return clone;
-}
-
-/**
- * Concatenates node ids into a comma separated lists.
- *
- * @param nodes The list of nodes.
- * @returns The comma separated lists.
- */
-export function makeIdList(nodes: SemanticNode[]): string {
-  return nodes
-    .map(function (node) {
-      return node.id;
-    })
-    .join(',');
-}
-
-/**
- * Sets semantic attributes in a MathML node.
- *
- * @param mml The MathML node.
- * @param semantic The semantic tree node.
- */
-export function setAttributes(mml: Element, semantic: SemanticNode) {
-  mml.setAttribute(Attribute.TYPE, semantic.type);
-  const attributes = semantic.allAttributes();
-  for (let i = 0, attr; (attr = attributes[i]); i++) {
-    mml.setAttribute(ATTRIBUTE_PREFIX_ + attr[0].toLowerCase(), attr[1]);
-  }
-  if (semantic.childNodes.length) {
-    mml.setAttribute(Attribute.CHILDREN, makeIdList(semantic.childNodes));
-  }
-  if (semantic.contentNodes.length) {
-    mml.setAttribute(Attribute.CONTENT, makeIdList(semantic.contentNodes));
-  }
-  if (semantic.parent) {
-    mml.setAttribute(Attribute.PARENT, semantic.parent.id.toString());
-  }
-  setPostfix(mml, semantic);
-}
-
-/**
- * Sets postfix attributes to surface properties via suffixes. Examples: link,
- * image, etc.
- *
- * @param mml The MathML node.
- * @param semantic The semantic tree node.
- */
-export function setPostfix(mml: Element, semantic: SemanticNode) {
-  const postfix = [];
-  if (semantic.role === SemanticRole.MGLYPH) {
-    postfix.push('image');
-  }
-  if (semantic.attributes['href']) {
-    postfix.push('link');
-  }
-  if (postfix.length) {
-    mml.setAttribute(Attribute.POSTFIX, postfix.join(' '));
-  }
 }
 
 /**
@@ -882,8 +772,8 @@ export function createInvisibleOperator_(operator: SemanticNode): Element {
   const moNode = DomUtil.createElement('mo');
   const text = DomUtil.createTextNode(operator.textContent);
   moNode.appendChild(text);
-  setAttributes(moNode, operator);
-  moNode.setAttribute(Attribute.ADDED, 'true');
+  EnrichAttr.setAttributes(moNode, operator);
+  moNode.setAttribute(EnrichAttr.Attribute.ADDED, 'true');
   return moNode;
 }
 
@@ -900,7 +790,7 @@ export function setOperatorAttribute_(
   const operator =
     semantic.type + (semantic.textContent ? ',' + semantic.textContent : '');
   content.forEach(function (c) {
-    getInnerNode(c).setAttribute(Attribute.OPERATOR, operator);
+    getInnerNode(c).setAttribute(EnrichAttr.Attribute.OPERATOR, operator);
   });
 }
 
@@ -980,37 +870,8 @@ export function formattedOutput_(
     return;
   }
   console.info(
-    name + ':\n```html\n' + removeAttributePrefix(output) + '\n```\n'
+    name + ':\n```html\n' + EnrichAttr.removeAttributePrefix(output) + '\n```\n'
   );
-}
-
-/**
- * Removes the semantic prefix from the attributes of an enriched MathML element
- * given as a serialised string. This is useful for more concise display.
- *
- * NOTE THAT THIS METHOD IS FRAGILE!
- *
- * The result is not necessarily a meaningful XML expression. Attributes might
- * overwrite or be shadowed by other attributes already in the node. For
- * example, with both PREFIX-attr and attr present, the latter is overwritten by
- * the operation.
- *
- * @param mml The MathML node.
- * @returns The MathML node with rewritten attributes.
- */
-export function removeAttributePrefix(mml: string): string {
-  return mml.toString().replace(new RegExp(ATTRIBUTE_PREFIX_, 'g'), '');
-}
-
-/**
- * Creates an data semantic attribute by adding the correct prefix.
- *
- * @param attr The attribute.
- * @returns The completed attribute.
- */
-// TODO (TS): Again this should have been return time Attribute
-export function addPrefix(attr: string): Attribute {
-  return (ATTRIBUTE_PREFIX_ + attr) as Attribute;
 }
 
 /**
@@ -1041,7 +902,7 @@ export function collapsePunctuated(
     children.push(mmlChild);
     const innerNode = getInnerNode(mmlChild);
     if (parent && !optional) {
-      innerNode.setAttribute(Attribute.PARENT, parent.id.toString());
+      innerNode.setAttribute(EnrichAttr.Attribute.PARENT, parent.id.toString());
     }
     childIds.push(child.id);
   }
