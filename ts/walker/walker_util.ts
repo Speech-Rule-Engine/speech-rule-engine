@@ -39,10 +39,7 @@ export function splitAttribute(attr: string | null): string[] {
  * @param attr The semantic data attribute.
  * @returns The value for that attribute.
  */
-export function getAttribute(
-  node: Element,
-  attr: Attribute
-): string {
+export function getAttribute(node: Element, attr: Attribute): string {
   return DomUtil.getDataAttribute(node, attr);
 }
 
@@ -61,10 +58,7 @@ export function getSemanticRoot(node: Element): Element {
     return node;
   }
 
-  const semanticNodes = DomUtil.querySelectorAllByAttr(
-    node,
-    Attribute.TYPE
-  );
+  const semanticNodes = DomUtil.querySelectorAllByAttr(node, Attribute.TYPE);
   for (let i = 0, semanticNode; (semanticNode = semanticNodes[i]); i++) {
     if (!semanticNode.hasAttribute(Attribute.PARENT)) {
       return semanticNode;
@@ -84,9 +78,5 @@ export function getBySemanticId(root: Element, id: string): Element {
   if (root.getAttribute(Attribute.ID) === id) {
     return root;
   }
-  return DomUtil.querySelectorAllByAttrValue(
-    root,
-    Attribute.ID,
-    id
-  )[0];
+  return DomUtil.querySelectorAllByAttrValue(root, Attribute.ID, id)[0];
 }

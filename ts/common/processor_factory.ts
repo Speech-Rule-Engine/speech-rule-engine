@@ -284,7 +284,7 @@ set(
         modality: Engine.getInstance().modality,
         locale: Engine.getInstance().locale,
         domain: Engine.getInstance().domain,
-        style: Engine.getInstance().style,
+        style: Engine.getInstance().style
       });
       Processor.LocalState.highlighter = HighlighterFactory.highlighter(
         { color: 'black' },

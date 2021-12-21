@@ -15,7 +15,6 @@
 
 /**
  * @file Functionality for setting up the engine internally.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -26,7 +25,6 @@ import Engine, { EnginePromise } from './engine';
 import * as FileUtil from './file_util';
 import SystemExternal from './system_external';
 
-
 // Engine setup method.
 /**
  * Method to setup and initialize the speech rule engine. Currently the
@@ -36,19 +34,17 @@ import SystemExternal from './system_external';
  * @param feature An object describing some setup features.
  * @returns The promise that resolves once setup is complete.
  */
-export async function setup(feature: {
-  [key: string]: boolean | string;
-}) {
-  let engine = Engine.getInstance() as any;
+export async function setup(feature: { [key: string]: boolean | string }) {
+  const engine = Engine.getInstance() as any;
   // This preserves the possibility to specify default as domain.
   // < 3.2  this lead to the use of chromevox rules in English.
   // >= 3.2 this defaults to Mathspeak. It also ensures that in other locales
   // we get a meaningful output.
   if (
     feature.domain === 'default' &&
-      (feature.modality === 'speech' ||
-        !feature.modality ||
-        engine.modality === 'speech')
+    (feature.modality === 'speech' ||
+      !feature.modality ||
+      engine.modality === 'speech')
   ) {
     feature.domain = 'mathspeak';
   }
@@ -82,6 +78,8 @@ export async function setup(feature: {
 
 /**
  * Sets up browser specific functionality.
+ *
+ * @param engine The Engine object.
  * @deprecated
  */
 function setupBrowsers(engine: Engine) {

@@ -203,10 +203,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public colorizeAll(node: HTMLElement) {
-    const allNodes = XpathUtil.evalXPath(
-      `.//*[@${Attribute.ID}]`,
-      node
-    );
+    const allNodes = XpathUtil.evalXPath(`.//*[@${Attribute.ID}]`, node);
     allNodes.forEach((x: Element) => this.colorize(x as HTMLElement));
   }
 
@@ -216,10 +213,7 @@ export abstract class AbstractHighlighter implements Highlighter {
    * @param node The node.
    */
   public uncolorizeAll(node: HTMLElement) {
-    const allNodes = XpathUtil.evalXPath(
-      `.//*[@${Attribute.ID}]`,
-      node
-    );
+    const allNodes = XpathUtil.evalXPath(`.//*[@${Attribute.ID}]`, node);
     allNodes.forEach((x) => this.uncolorize(x as HTMLElement));
   }
 

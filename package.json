@@ -14,6 +14,7 @@
     "lint": "eslint ts/ --ext .ts,.tsx",
     "lint-fix": "eslint ts/ --ext .ts,.tsx --fix",
     "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
+    "docs": "npx typedoc --entryPointStrategy ts/",
     "pretest": "git submodule update --remote --merge; npm run compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
     "compile": "npx tsc",
     "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; node --expose-gc ./node_modules/.bin/jest ",
@@ -44,26 +45,35 @@
     "xmldom-sre": "0.1.31"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.28.2",
-    "@typescript-eslint/parser": "^4.28.2",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
     "circular-dependency-plugin": "^5.2.2",
-    "eslint": "^7.30.0",
+    "esbuild": "^0.14.6",
+    "eslint": "^8.5.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jsdoc": "^37.2.2",
+    "eslint-plugin-jsdoc": "^37.4.0",
     "json-minify": "1.0.0",
-    "prettier": "^2.3.0",
-    "terser-webpack-plugin": "5.2.5",
+    "prettier": "^2.5.1",
+    "rollup": "^2.61.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "terser-webpack-plugin": "5.3.0",
     "ts-loader": "9.2.6",
-    "typescript": "4.5.2",
+    "typedoc": "^0.22.10",
+    "typescript": "4.5.4",
     "webpack": "5.65.0",
-    "webpack-cli": "4.9.1"
+    "webpack-cli": "^4.9.1"
   },
   "files": [
     "index.js",
     "LICENSE",
     "README.md",
     "lib/",
-    "bin/"
+    "bin/",
+    "js/"
   ],
-  "main": "index.js"
+  "main": "lin/sre.js",
+  "source": "ts/index.ts",
+  "browser": "lib/sre.js"
 }

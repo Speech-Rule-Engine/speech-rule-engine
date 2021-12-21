@@ -52,7 +52,7 @@ export async function setupEngine(feature: {
   return setup(feature);
 }
 
-  /**
+/**
  * Query the engine setup.
  *
  * @returns Object vector with all engine feature
