@@ -3,7 +3,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "beta"
+        "default": "베타"
       }
     },
     "key": "03D0"
@@ -12,7 +12,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "kai"
+        "default": "카이"
       }
     },
     "key": "03D7"
@@ -21,7 +21,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "reversed epsilon"
+        "default": "거꾸로된 입실론"
       }
     },
     "key": "03F6"
@@ -30,10 +30,10 @@
     "category": "Lu",
     "mappings": {
       "default": {
-        "default": "bold cap Digamma"
+        "default": "진한 대문자 디감마"
       },
       "mathspeak": {
-        "default": "bold upper Digamma"
+        "default": "진한 대문자 디감마"
       }
     },
     "key": "1D7CA"
@@ -42,7 +42,7 @@
     "category": "Ll",
     "mappings": {
       "default": {
-        "default": "bold digamma"
+        "default": "진한 디감마"
       }
     },
     "key": "1D7CB"

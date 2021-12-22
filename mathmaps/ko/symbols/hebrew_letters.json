@@ -13,8 +13,8 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": "second transfinite cardinal",
-        "alternative": "bet"
+        "default": "벳",
+        "alternative": "벳"
       }
     },
     "key": "2136"
@@ -23,8 +23,8 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": "third transfinite cardinal",
-        "alternative": "gimel"
+        "default": "기멜",
+        "alternative": "기멜"
       }
     },
     "key": "2137"
@@ -33,8 +33,8 @@
     "category": "Lo",
     "mappings": {
       "default": {
-        "default": "fourth transfinite cardinal",
-        "alternative": "dalet"
+        "default": "달렛",
+        "alternative": "달렛"
       }
     },
     "key": "2138"
