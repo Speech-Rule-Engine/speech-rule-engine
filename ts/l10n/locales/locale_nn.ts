@@ -49,5 +49,10 @@ function create(): Locale {
   loc.ALPHABETS.combiner = tr.Combiners.prefixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
   loc.FUNCTIONS.radicalNestDepth = nestingToString;
+  loc.SUBISO = {
+    default: '',
+    current: '',
+    all: ['', 'alt']
+  }
   return loc;
 }
