@@ -556,6 +556,16 @@
     ],
     [
       "Action",
+      "fences-metric",
+      "[p] (pause:short); [n] children/*[1] (pause: short)"
+    ],
+    [
+      "Action",
+      "fences-metric-absend",
+      "[p] (pause:short); [t] \"메트릭시작\" (span:content/*[1]); [n] children/*[1] (pause: short); [t] \"메트릭끝\" (span:content/*[1], pause: short)"
+    ],
+    [
+      "Action",
       "fences-interval",
       "[t] \"구간\"; [n] children/*[1]/children/*[1]; [t] \"부터\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval); [t] \"까지\""
     ],
@@ -592,7 +602,7 @@
     [
       "Action",
       "interval-open-inf-lr",
-      "[t] \"전 구간\""
+      ""
     ],
     [
       "Action",
