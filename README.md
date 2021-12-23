@@ -525,7 +525,7 @@ npm install --no-save rollup-plugin-terser
 
 Add a `rollup.config.js` file of the form:
 
-``` json
+``` javascript
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import { terser } from "rollup-plugin-terser";
