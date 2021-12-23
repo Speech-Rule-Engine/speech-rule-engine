@@ -316,7 +316,7 @@ export class Cli {
       )
       .option(
         '-C, --subiso [name]',
-        'Suplementary iso (or similar) for the given locale.',
+        'Supplementary country code (or similar) for the given locale.',
         set('subiso')
       )
       .option('-N, --number', 'Translate number to word.', processor, 'number')

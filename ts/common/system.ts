@@ -144,6 +144,26 @@ export function toEnriched(expr: string): Element {
 }
 
 /**
+ * Translates a number into its word form for the current locale.
+ *
+ * @param expr The number
+ * @return The word form of the number.
+ */
+export function number(expr: string): string {
+  return processString('number', expr);
+}
+
+/**
+ * Translates a number into its word ordinal for the current locale.
+ *
+ * @param expr The number
+ * @return The word ordinal of the number.
+ */
+export function ordinal(expr: string): string {
+  return processString('ordinal', expr);
+}
+
+/**
  * Processes an input string with the given processor.
  *
  * @param processor The name of the processor to call.

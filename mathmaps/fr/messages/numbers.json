@@ -25,18 +25,6 @@
       "dix-huit",
       "dix-neuf"
     ],
-    "tens": [
-      "",
-      "",
-      "vingt",
-      "trente",
-      "quarante",
-      "cinquante",
-      "soixante",
-      "soixante-dix",
-      "quatre-vingts",
-      "quatre-vingt-dix"
-    ],
     "large": [
       "",
       "mille",
@@ -76,7 +64,7 @@
         "quatre-vingts",
         "nonante"
       ],
-      "tens-sw": [
+      "tens-ch": [
         "",
         "",
         "vingt",

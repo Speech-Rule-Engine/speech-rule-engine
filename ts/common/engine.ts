@@ -69,6 +69,7 @@ export default class Engine {
     'modality',
     'rate',
     'rules',
+    'subiso',
     'prune'
   ];
 
@@ -115,6 +116,11 @@ export default class Engine {
    * Current locale.
    */
   public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+
+  /**
+   * Current subiso for the locale.
+   */
+  public subiso = '';
 
   /**
    * Current modality.

@@ -62,6 +62,11 @@ function create(): Locale {
     return Grammar.getInstance().getParameter('noArticle') ? '' : name;
   };
   loc.ALPHABETS.combiner = Combiners.romanceCombiner;
+  loc.SUBISO = {
+    default: 'fr',
+    current: 'fr',
+    all: ['fr', 'be', 'ch']
+  }
 
   return loc;
 }

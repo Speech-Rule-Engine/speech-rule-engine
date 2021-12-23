@@ -52,6 +52,7 @@ export const locales: { [key: string]: () => Locale } = {
  */
 export function setLocale() {
   const msgs = getLocale();
+  setSubiso(msgs);
   if (msgs) {
     for (const key of Object.getOwnPropertyNames(msgs)) {
       // TODO (TS): See if this is really an object structure.
@@ -64,6 +65,18 @@ export function setLocale() {
     // bespoke class.
     // Locale.ALPHABETS.digitTrans.default = msgs.NUMBERS.numberToWords;
   }
+}
+
+/**
+ * Sets the current subiso code if one exists.
+ * @param msg The current locale message structure.
+ */
+function setSubiso(msg: Locale) {
+  const subiso = Engine.getInstance().subiso;
+  if (msg.SUBISO.all.indexOf(subiso) === -1) {
+    Engine.getInstance().subiso = msg.SUBISO.default;
+  }
+  msg.SUBISO.current = Engine.getInstance().subiso;
 }
 
 /**
