@@ -2,7 +2,7 @@
   "kind": "numbers",
   "locale": "nn",
   "messages": {
-    "zero": "",
+    "zero": "null",
     "ones": [
       "",
       "ein",

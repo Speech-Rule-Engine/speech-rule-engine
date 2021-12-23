@@ -26,7 +26,9 @@ import {
   Messages,
   MESSAGES,
   Numbers,
-  NUMBERS
+  NUMBERS,
+  SubIso,
+  SUBISO
 } from './messages';
 import * as tr from './transformers';
 
@@ -38,6 +40,7 @@ export interface Locale {
   NUMBERS: Numbers;
   COMBINERS?: { [key: string]: tr.Combiner };
   CORRECTIONS?: { [key: string]: (a: string) => string };
+  SUBISO: SubIso;
 }
 
 export const LOCALE: Locale = createLocale();
@@ -75,6 +78,13 @@ export function createLocale(): Locale {
     /**
      * Grammatical corrections for this locale.
      */
-    CORRECTIONS: {}
+    CORRECTIONS: {},
+
+   /**
+    * Supplementary iso country codes or similar country specific speech,
+    * numbers, etc.
+    */
+    SUBISO: SUBISO()
+
   };
 }

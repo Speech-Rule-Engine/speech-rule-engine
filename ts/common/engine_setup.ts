@@ -54,7 +54,9 @@ export async function setup(feature: { [key: string]: boolean | string }) {
     }
   };
   const setMulti = (feat: string) => {
-    engine[feat] = feature[feat] || engine[feat];
+    if (typeof feature[feat] !== 'undefined') {
+      engine[feat] = feature[feat];
+    }
   };
   setMulti('mode');
   engine.configurate(feature);

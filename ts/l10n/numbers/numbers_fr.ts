@@ -22,13 +22,9 @@
 // This work was sponsored by TextHelp
 //
 
+import Engine from '../../common/engine';
 import { Grammar } from '../../rule_engine/grammar';
 import { Numbers, NUMBERS as NUMB } from '../messages';
-
-/**
- * Sub-ISO specification. Possible values: fr, be, sw.
- */
-export const SUB_ISO = 'fr';
 
 /**
  * Translates a number of up to twelve digits into a string representation.
@@ -78,8 +74,8 @@ function numberToWords(num: number): string {
   if (num >= Math.pow(10, 36)) {
     return num.toString();
   }
-  if (NUMBERS.special['tens-' + SUB_ISO]) {
-    NUMBERS.tens = NUMBERS.special['tens-' + SUB_ISO] as string[];
+  if (NUMBERS.special['tens-' + Engine.getInstance().subiso]) {
+    NUMBERS.tens = NUMBERS.special['tens-' + Engine.getInstance().subiso] as string[];
   }
   let pos = 0;
   let str = '';

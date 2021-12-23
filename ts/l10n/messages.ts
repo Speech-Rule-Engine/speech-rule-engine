@@ -245,3 +245,20 @@ export function FUNCTIONS(): Functions {
     plural: tr.identityTransformer
   };
 }
+
+/**
+ * Fixed functions needed for generating localised messages.
+ */
+export interface SubIso {
+  default: string;
+  current: string;
+  all: string[];
+}
+
+export function SUBISO(): SubIso {
+  return {
+    default: '',
+    current: '',
+    all: []
+  };
+}
