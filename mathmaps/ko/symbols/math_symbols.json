@@ -1400,11 +1400,11 @@
         "default": "다음의 원소이다"
       },
       "clearspeak": {
-        "default": "의 원소이다", 
-        "SetMemberSymbol_Member": "의 구성원이다",
-        "SetMemberSymbol_Element": "의 원소이다",
-        "SetMemberSymbol_In": "안에 있다", 
-        "SetMemberSymbol_Belongs": "에 속해 있다"
+        "default": "다음의 원소이다", 
+        "SetMemberSymbol_Member": "다음의 구성원이다",
+        "SetMemberSymbol_Element": "다음의 원소이다",
+        "SetMemberSymbol_In": "다음의 안에 있다", 
+        "SetMemberSymbol_Belongs": "다음에 속해 있다"
       }
     },
     "key": "2208"
@@ -1416,11 +1416,11 @@
         "default": "다음의 원소가 아니다"
       },
       "clearspeak": {
-        "default": "의 원소가 아니다", 
-        "SetMemberSymbol_Member": "의 구성원이 아니다",
-        "SetMemberSymbol_Element": "의 원소가 아니다",
-        "SetMemberSymbol_In": "안에 없다", 
-        "SetMemberSymbol_Belongs": "에 속해 있지 않다"
+        "default": "다음의 원소가 아니다", 
+        "SetMemberSymbol_Member": "다음의 구성원이 아니다",
+        "SetMemberSymbol_Element": "다음의 원소가 아니다",
+        "SetMemberSymbol_In": "다음의 안에 없다", 
+        "SetMemberSymbol_Belongs": "다음에 속해 있지 않다"
       }
     },
     "key": "2209"
@@ -1432,11 +1432,11 @@
         "default": "다음의 원소이다"
       },
       "clearspeak": {
-        "default": "의 원소이다.", 
-        "SetMemberSymbol_Member": "의 구성원이다.",
-        "SetMemberSymbol_Element": "의 요소다.",
-        "SetMemberSymbol_In": "안에 있다", 
-        "SetMemberSymbol_Belongs": "에 속해 있다"
+        "default": "다음의 원소이다.", 
+        "SetMemberSymbol_Member": "다음의 구성원이다.",
+        "SetMemberSymbol_Element": "다음의 원소이다.",
+        "SetMemberSymbol_In": "다음의 안에 있다", 
+        "SetMemberSymbol_Belongs": "다음에 속해 있다"
       }
     },
     "key": "220A"
@@ -2622,7 +2622,7 @@
         "default": "부분집합"
       },
       "clearspaek": {
-        "default": "의 부분집합"
+        "default": "부분집합"
       }
     },
     "key": "2282"
@@ -2634,7 +2634,7 @@
         "default": "상위집합"
       },
       "clearspaek": {
-        "default": "의 상위집합"
+        "default": "상위집합"
       }
     },
     "key": "2283"
@@ -2646,7 +2646,7 @@
         "default": "부분집합이 아니다"
       },
       "clearspaek": {
-        "default": "의 부분집합이 아니다"
+        "default": "부분집합이 아니다"
       }
     },
     "key": "2284"
@@ -2658,7 +2658,7 @@
         "default": "상위집합이 아니다"
       },
       "clearspaek": {
-        "default": "의 상위집합이 아니다"
+        "default": "상위집합이 아니다"
       }
     },
     "key": "2285"
@@ -2670,7 +2670,7 @@
         "default": "부분집합이거나 같다"
       },
       "clearspeak": {
-        "default": "의 부분집합이거나 같다"
+        "default": "부분집합이거나 같다"
       }
     },
     "key": "2286"
@@ -2682,7 +2682,7 @@
         "default": "상위집합이거나 같다"
       },
       "clearspeak": {
-        "default": "의 상위집합이거나 같다"
+        "default": "상위집합이거나 같다"
       }
     },
     "key": "2287"
@@ -2694,7 +2694,7 @@
         "default": "부분집합이지도 같지도 않다"
       },
       "clearspeak": {
-        "default": "의 부분집합이지도 같지도 않다"
+        "default": "부분집합이지도 같지도 않다"
       }
     },
     "key": "2288"
@@ -2706,7 +2706,7 @@
         "default": "상위집합이지도 같지도 않다"
       },
       "clearspeak": {
-        "default": "의 상위집합이지도 같지도 않다"
+        "default": "상위집합이지도 같지도 않다"
       }
     },
     "key": "2289"
@@ -2718,7 +2718,7 @@
         "default": "부분집합이지만 같지 않다"
       },
       "clearspeak": {
-        "default": "의 부분집합이지만 같지 않다"
+        "default": "부분집합이지만 같지 않다"
       }
     },
     "key": "228A"
@@ -2730,7 +2730,7 @@
         "default": "상위집합이지만 같지 않다"
       },
       "clearspeak": {
-        "default": "의 상위집합이지만 같지 않다"
+        "default": "상위집합이지만 같지 않다"
       }
     },
     "key": "228B"
@@ -6787,7 +6787,7 @@
         "default": "부분집합"
       },
       "clearspeak": {
-        "default": "의 부분집합"
+        "default": "부분집합"
       }
     },
     "key": "2AC5"
@@ -6799,7 +6799,7 @@
         "default": "상위집합"
       },
       "clearspeak": {
-        "default": "의 상위집합"
+        "default": "상위집합"
       }
     },
     "key": "2AC6"
