@@ -102,6 +102,16 @@ that this will overwrite the existing file.
 | `file.toDescription(input, output)` | The array of auditory description objects of the MathML expression. |
 | `file.toEnriched(input, output)` | The semantically enriched MathML expression. |
 
+#### Methods for computing textual representations of numbers
+
+These methods take a non-negative integer (either as string or number) as input
+an return the number as text in the currently active locale.
+
+| Method | Return Value |
+| ---- | ---- |
+| number | The number as text. |
+| ordinal | The word ordinal. |
+
 #### Methods for querying and controlling the engine behaviour:
 
 | Method | Return Value |
@@ -143,7 +153,8 @@ internal to SRE and are therefore not exposed via the command line interface.
 | *domain* | Domain or subject area of speech rules (e.g., mathspeak, clearspeak).|
 | *style* | Style or preference setting of speech rules (e.g., brief).|
 | | In case of clearspeak, multiple preferences can be chosen using `:` as separator.|
-| *locale* | Language locale in 639-1. Currently available: en, es, fr |
+| *locale* | Language locale in 639-1. |
+| *subiso* | More fine grained specification of locale. E.g., for French fr, be, or ch |
 | *markup*| Set output markup for speech: ```none```, ```ssml```, ```sable```, ```voicexml```, ```acss```, ```ssml_step``` |
 | *modality* | Set the modality SRE returns. E.g., ```speech```, ```braille```, ```prefix```, ```summary``` |
 
