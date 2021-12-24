@@ -4,8 +4,8 @@
     "key": "0394",
     "mappings": {
       "clearspeak": {
-        "default": "triangle",
-        "TriangleSymbol_Delta": "cap Delta"
+        "default": "삼각형",
+        "TriangleSymbol_Delta": "델타"
       }
     }
   }

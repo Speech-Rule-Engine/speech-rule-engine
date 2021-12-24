@@ -4,7 +4,7 @@
     "key": "00F8",
     "mappings": {
       "default": {
-        "default": "o with stroke"
+        "default": "획을 그은 o"
       }
     }
   },
@@ -13,7 +13,7 @@
     "key": "0111",
     "mappings": {
       "default": {
-        "default": "d with stroke"
+        "default": "획을 그은 d"
       }
     }
   },
@@ -22,7 +22,7 @@
     "key": "0127",
     "mappings": {
       "default": {
-        "default": "h with stroke"
+        "default": "획을 그은 a치"
       }
     }
   },
@@ -31,7 +31,7 @@
     "key": "0142",
     "mappings": {
       "default": {
-        "default": "l with stroke"
+        "default": "획을 그은 l"
       }
     }
   },
@@ -40,7 +40,7 @@
     "key": "0167",
     "mappings": {
       "default": {
-        "default": "t with stroke"
+        "default": "획을 그은 t"
       }
     }
   },
@@ -49,7 +49,7 @@
     "key": "0180",
     "mappings": {
       "default": {
-        "default": "b with stroke"
+        "default": "획을 그은 b"
       }
     }
   },
@@ -58,7 +58,7 @@
     "key": "019B",
     "mappings": {
       "default": {
-        "default": "lambda with stroke"
+        "default": "획을 그은 람다"
       }
     }
   },
@@ -67,7 +67,7 @@
     "key": "01B6",
     "mappings": {
       "default": {
-        "default": "z with stroke"
+        "default": "획을 그은 z"
       }
     }
   },
@@ -76,7 +76,7 @@
     "key": "01BE",
     "mappings": {
       "default": {
-        "default": "latin letter inverted glottal stop with stroke"
+        "default": "획을 그은 성문 파열음"
       }
     }
   },
@@ -85,7 +85,7 @@
     "key": "01E5",
     "mappings": {
       "default": {
-        "default": "g with stroke"
+        "default": "획을 그은 g"
       }
     }
   },
@@ -94,7 +94,7 @@
     "key": "01FF",
     "mappings": {
       "default": {
-        "default": "o with stroke and acute"
+        "default": "획을 그은 양음부호 o"
       }
     }
   },
@@ -103,7 +103,7 @@
     "key": "023C",
     "mappings": {
       "default": {
-        "default": "c with stroke"
+        "default": "획을 그은 c"
       }
     }
   },
@@ -112,7 +112,7 @@
     "key": "0247",
     "mappings": {
       "default": {
-        "default": "e with stroke"
+        "default": "획을 그은 이"
       }
     }
   },
@@ -121,7 +121,7 @@
     "key": "0249",
     "mappings": {
       "default": {
-        "default": "j with stroke"
+        "default": "획을 그은 j"
       }
     }
   },
@@ -130,7 +130,7 @@
     "key": "024D",
     "mappings": {
       "default": {
-        "default": "r with stroke"
+        "default": "획을 그은 r"
       }
     }
   },
@@ -139,7 +139,7 @@
     "key": "024F",
     "mappings": {
       "default": {
-        "default": "y with stroke"
+        "default": "획을 그은 y"
       }
     }
   },
@@ -148,7 +148,7 @@
     "key": "025F",
     "mappings": {
       "default": {
-        "default": "dotless j with stroke"
+        "default": "획을 그은 점이 없는 j"
       }
     }
   },
@@ -157,7 +157,7 @@
     "key": "0268",
     "mappings": {
       "default": {
-        "default": "i with stroke"
+        "default": "획을 그은 i"
       }
     }
   },
@@ -166,7 +166,7 @@
     "key": "0284",
     "mappings": {
       "default": {
-        "default": "dotless j with stroke and hook"
+        "default": "획과 후크가 있는 점없는 j"
       }
     }
   },
@@ -175,7 +175,7 @@
     "key": "02A1",
     "mappings": {
       "default": {
-        "default": "latin letter glottal stop with stroke"
+        "default": "획이 있는 라틴 문자 성문 파열음"
       }
     }
   },
@@ -184,7 +184,7 @@
     "key": "02A2",
     "mappings": {
       "default": {
-        "default": "latin letter reversed glottal stop with stroke"
+        "default": "거꾸로된 획이 있는 라틴 문자 성문 파열음"
       }
     }
   },
@@ -193,7 +193,7 @@
     "key": "1D13",
     "mappings": {
       "default": {
-        "default": "sideways o with stroke"
+        "default": "획을 그은 옆으로 누운 o"
       }
     }
   },
@@ -202,7 +202,7 @@
     "key": "1D7C",
     "mappings": {
       "default": {
-        "default": "iota with stroke"
+        "default": "획을 그은 이오타"
       }
     }
   },
@@ -211,7 +211,7 @@
     "key": "1D7D",
     "mappings": {
       "default": {
-        "default": "p with stroke"
+        "default": "획을 그은 p"
       }
     }
   },
@@ -220,7 +220,7 @@
     "key": "1D7F",
     "mappings": {
       "default": {
-        "default": "upsilon with stroke"
+        "default": "획을 그은 입실론"
       }
     }
   },
@@ -229,7 +229,7 @@
     "key": "1E9C",
     "mappings": {
       "default": {
-        "default": "long s with diagonal stroke"
+        "default": "대각선 획이 있는 긴 s"
       }
     }
   },
@@ -238,7 +238,7 @@
     "key": "1E9D",
     "mappings": {
       "default": {
-        "default": "long s with high stroke"
+        "default": "높은 획이 있는 긴 s"
       }
     }
   },
@@ -247,7 +247,7 @@
     "key": "018D",
     "mappings": {
       "default": {
-        "default": "turned delta"
+        "default": "뒤집힌 델타"
       }
     }
   },
@@ -256,7 +256,7 @@
     "key": "1E9B",
     "mappings": {
       "default": {
-        "default": "long s with dot above"
+        "default": "위에 점이 있는 긴 s"
       }
     }
   },
@@ -265,7 +265,7 @@
     "key": "1E9F",
     "mappings": {
       "default": {
-        "default": "delta"
+        "default": "델타"
       }
     }
   },
@@ -274,7 +274,7 @@
     "key": "0138",
     "mappings": {
       "default": {
-        "default": "kra"
+        "default": "크라"
       }
     }
   },
@@ -283,7 +283,7 @@
     "key": "017F",
     "mappings": {
       "default": {
-        "default": "long s"
+        "default": "긴 s"
       }
     }
   },
@@ -292,7 +292,7 @@
     "key": "0183",
     "mappings": {
       "default": {
-        "default": "b with topbar"
+        "default": "위에 막대가 있는 b"
       }
     }
   },
@@ -301,7 +301,7 @@
     "key": "0185",
     "mappings": {
       "default": {
-        "default": "tone six"
+        "default": "톤 식스"
       }
     }
   },
@@ -310,7 +310,7 @@
     "key": "0188",
     "mappings": {
       "default": {
-        "default": "c with hook"
+        "default": "고리가 있는 c"
       }
     }
   },
@@ -319,7 +319,7 @@
     "key": "018C",
     "mappings": {
       "default": {
-        "default": "d with topbar"
+        "default": "상단막대가 있는 d"
       }
     }
   },
@@ -328,7 +328,7 @@
     "key": "0192",
     "mappings": {
       "default": {
-        "default": "f with hook"
+        "default": "고리가 있는 f"
       }
     }
   },
@@ -346,7 +346,7 @@
     "key": "0199",
     "mappings": {
       "default": {
-        "default": "k with hook"
+        "default": "고리가 있는 k"
       }
     }
   },
@@ -355,7 +355,7 @@
     "key": "019A",
     "mappings": {
       "default": {
-        "default": "l with bar"
+        "default": "막대가 있는 l"
       }
     }
   },
@@ -364,7 +364,7 @@
     "key": "019E",
     "mappings": {
       "default": {
-        "default": "n with long right leg"
+        "default": "오른쪽 다리가 긴 n"
       }
     }
   },
@@ -373,7 +373,7 @@
     "key": "01A1",
     "mappings": {
       "default": {
-        "default": "o with horn"
+        "default": "뿔이 있는 o"
       }
     }
   },
@@ -391,7 +391,7 @@
     "key": "01A5",
     "mappings": {
       "default": {
-        "default": "p with hook"
+        "default": "고리가 있는 p"
       }
     }
   },
@@ -400,7 +400,7 @@
     "key": "01A8",
     "mappings": {
       "default": {
-        "default": "tone two"
+        "default": "톤 투"
       }
     }
   },
@@ -409,7 +409,7 @@
     "key": "01AA",
     "mappings": {
       "default": {
-        "default": "latin letter reversed esh loop"
+        "default": "라틴문자 반전된 esh 루프"
       }
     }
   },
@@ -418,7 +418,7 @@
     "key": "01AB",
     "mappings": {
       "default": {
-        "default": "t with palatal hook"
+        "default": "구개음 고리가 있는 t"
       }
     }
   },
@@ -427,7 +427,7 @@
     "key": "01AD",
     "mappings": {
       "default": {
-        "default": "t with hook"
+        "default": "고리가 있는 t"
       }
     }
   },
@@ -436,7 +436,7 @@
     "key": "01B0",
     "mappings": {
       "default": {
-        "default": "u with horn"
+        "default": "뿔이 있는 u"
       }
     }
   },
@@ -445,7 +445,7 @@
     "key": "01B4",
     "mappings": {
       "default": {
-        "default": "y with hook"
+        "default": "뿔이 있는 왕;"
       }
     }
   },
@@ -454,7 +454,7 @@
     "key": "01B9",
     "mappings": {
       "default": {
-        "default": "ezh reversed"
+        "default": "반전된 ezh"
       }
     }
   },
@@ -463,7 +463,7 @@
     "key": "01BA",
     "mappings": {
       "default": {
-        "default": "ezh with tail"
+        "default": "꼬리가 있는 ezh"
       }
     }
   },
@@ -472,7 +472,7 @@
     "key": "01BD",
     "mappings": {
       "default": {
-        "default": "tone five"
+        "default": "톤 파이브"
       }
     }
   },
@@ -481,7 +481,7 @@
     "key": "01BF",
     "mappings": {
       "default": {
-        "default": "latin letter wynn"
+        "default": "라틴문자 wynn"
       }
     }
   },
@@ -490,7 +490,7 @@
     "key": "01C6",
     "mappings": {
       "default": {
-        "default": "dz with caron"
+        "default": "반대 곡절 부호가 있는 dz"
       }
     }
   },
@@ -517,7 +517,7 @@
     "key": "01E3",
     "mappings": {
       "default": {
-        "default": "ae with macron"
+        "default": "장음기호가 있는 ae"
       }
     }
   },
@@ -526,7 +526,7 @@
     "key": "01EF",
     "mappings": {
       "default": {
-        "default": "ezh with caron"
+        "default": "반대 곡절 부호가 있는 ezh"
       }
     }
   },
@@ -544,7 +544,7 @@
     "key": "021D",
     "mappings": {
       "default": {
-        "default": "yogh"
+        "default": "요흐"
       }
     }
   },
@@ -571,7 +571,7 @@
     "key": "0293",
     "mappings": {
       "default": {
-        "default": "ezh with curl"
+        "default": "컬이 있는 ezh"
       }
     }
   },
@@ -580,7 +580,7 @@
     "key": "02A4",
     "mappings": {
       "default": {
-        "default": "dezh digraph"
+        "default": "이중문자 dezh"
       }
     }
   },
@@ -589,7 +589,7 @@
     "key": "01DD",
     "mappings": {
       "default": {
-        "default": "turned e"
+        "default": "거꾸로된 e"
       }
     }
   },
@@ -598,7 +598,7 @@
     "key": "01FD",
     "mappings": {
       "default": {
-        "default": "ae with acute"
+        "default": "양음부호 ae"
       }
     }
   },
@@ -607,7 +607,7 @@
     "key": "0221",
     "mappings": {
       "default": {
-        "default": "d with curl"
+        "default": "컬이 있는 d"
       }
     }
   },
@@ -625,7 +625,7 @@
     "key": "0225",
     "mappings": {
       "default": {
-        "default": "z with hook"
+        "default": "고리가 있는 z"
       }
     }
   },
@@ -634,7 +634,7 @@
     "key": "0234",
     "mappings": {
       "default": {
-        "default": "l with curl"
+        "default": "컬이 있는 l"
       }
     }
   },
@@ -643,7 +643,7 @@
     "key": "0235",
     "mappings": {
       "default": {
-        "default": "n with curl"
+        "default": "컬이 있는 n"
       }
     }
   },
@@ -652,7 +652,7 @@
     "key": "0236",
     "mappings": {
       "default": {
-        "default": "t with curl"
+        "default": "컬이 있는 t"
       }
     }
   },
@@ -661,7 +661,7 @@
     "key": "0238",
     "mappings": {
       "default": {
-        "default": "db digraph"
+        "default": "이중문자 db"
       }
     }
   },
@@ -670,7 +670,7 @@
     "key": "0239",
     "mappings": {
       "default": {
-        "default": "qp digraph"
+        "default": "이중문자 qp"
       }
     }
   },
@@ -679,7 +679,7 @@
     "key": "023F",
     "mappings": {
       "default": {
-        "default": "s with swash tail"
+        "default": "스와시 테일이 있는 s"
       }
     }
   },
@@ -688,7 +688,7 @@
     "key": "0240",
     "mappings": {
       "default": {
-        "default": "z with swash tail"
+        "default": "스와시 테일이 있는 z"
       }
     }
   },
@@ -697,7 +697,7 @@
     "key": "0242",
     "mappings": {
       "default": {
-        "default": "glottal stop"
+        "default": "성문 파열음"
       }
     }
   },
@@ -706,7 +706,7 @@
     "key": "024B",
     "mappings": {
       "default": {
-        "default": "q with hook tail"
+        "default": "후크 꼬리가 있는 q"
       }
     }
   },
@@ -715,7 +715,7 @@
     "key": "0250",
     "mappings": {
       "default": {
-        "default": "turned a"
+        "default": "거꾸로된 a"
       }
     }
   },
@@ -724,7 +724,7 @@
     "key": "0251",
     "mappings": {
       "default": {
-        "default": "alpha"
+        "default": "알파"
       }
     }
   },
@@ -733,7 +733,7 @@
     "key": "0252",
     "mappings": {
       "default": {
-        "default": "turned alpha"
+        "default": "거꾸로된 알파"
       }
     }
   },
@@ -742,7 +742,7 @@
     "key": "0253",
     "mappings": {
       "default": {
-        "default": "b with hook"
+        "default": "후크가 있는 b"
       }
     }
   },
@@ -751,7 +751,7 @@
     "key": "0254",
     "mappings": {
       "default": {
-        "default": "open o"
+        "default": "열린 o"
       }
     }
   },
@@ -760,7 +760,7 @@
     "key": "0255",
     "mappings": {
       "default": {
-        "default": "c with curl"
+        "default": "컬이 있는 c"
       }
     }
   },
@@ -769,7 +769,7 @@
     "key": "0256",
     "mappings": {
       "default": {
-        "default": "d with tail"
+        "default": "꼬리가 있는 d"
       }
     }
   },
@@ -778,7 +778,7 @@
     "key": "0257",
     "mappings": {
       "default": {
-        "default": "d with hook"
+        "default": "후크가 있는 d"
       }
     }
   },
@@ -787,7 +787,7 @@
     "key": "0258",
     "mappings": {
       "default": {
-        "default": "reversed e"
+        "default": "반전된 e"
       }
     }
   },
@@ -796,7 +796,7 @@
     "key": "0259",
     "mappings": {
       "default": {
-        "default": "schwa"
+        "default": "슈와"
       }
     }
   },
@@ -805,7 +805,7 @@
     "key": "025A",
     "mappings": {
       "default": {
-        "default": "schwa with hook"
+        "default": "후크가 있는 슈와"
       }
     }
   },
@@ -814,7 +814,7 @@
     "key": "025B",
     "mappings": {
       "default": {
-        "default": "open e"
+        "default": "열린 e"
       }
     }
   },
@@ -823,7 +823,7 @@
     "key": "025C",
     "mappings": {
       "default": {
-        "default": "reversed open e"
+        "default": "반전된 열린 e"
       }
     }
   },
@@ -832,7 +832,7 @@
     "key": "025D",
     "mappings": {
       "default": {
-        "default": "reversed open e with hook"
+        "default": "후크가 있는 반전된 열린 e"
       }
     }
   },
@@ -841,7 +841,7 @@
     "key": "025E",
     "mappings": {
       "default": {
-        "default": "closed reversed open e"
+        "default": "닫힌 반전된 열린 e"
       }
     }
   },
@@ -850,7 +850,7 @@
     "key": "0260",
     "mappings": {
       "default": {
-        "default": "g with hook"
+        "default": "후크가 있는 g"
       }
     }
   },
@@ -859,7 +859,7 @@
     "key": "0261",
     "mappings": {
       "default": {
-        "default": "script g"
+        "default": "스크립트 g"
       }
     }
   },
@@ -868,7 +868,7 @@
     "key": "0263",
     "mappings": {
       "default": {
-        "default": "gamma"
+        "default": "감마"
       }
     }
   },
@@ -877,7 +877,7 @@
     "key": "0264",
     "mappings": {
       "default": {
-        "default": "rams horn"
+        "default": "아기 감마"
       }
     }
   },
@@ -886,7 +886,7 @@
     "key": "0265",
     "mappings": {
       "default": {
-        "default": "turned h"
+        "default": "거꾸로된 a치"
       }
     }
   },
@@ -895,7 +895,7 @@
     "key": "0266",
     "mappings": {
       "default": {
-        "default": "h with hook"
+        "default": "후크가 있는 a치"
       }
     }
   },
@@ -904,7 +904,7 @@
     "key": "0267",
     "mappings": {
       "default": {
-        "default": "heng with hook"
+        "default": "후크가 있는 heng"
       }
     }
   },
@@ -913,7 +913,7 @@
     "key": "0269",
     "mappings": {
       "default": {
-        "default": "iota"
+        "default": "이오타"
       }
     }
   },
@@ -922,7 +922,7 @@
     "key": "026B",
     "mappings": {
       "default": {
-        "default": "l with middle tilde"
+        "default": "가운데 물결표가 있는 l"
       }
     }
   },
@@ -931,7 +931,7 @@
     "key": "026C",
     "mappings": {
       "default": {
-        "default": "l with belt"
+        "default": "벨트가 있는 l"
       }
     }
   },
@@ -940,7 +940,7 @@
     "key": "026D",
     "mappings": {
       "default": {
-        "default": "l with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 l"
       }
     }
   },
@@ -949,7 +949,7 @@
     "key": "026F",
     "mappings": {
       "default": {
-        "default": "turned m"
+        "default": "거꾸로된 m"
       }
     }
   },
@@ -958,7 +958,7 @@
     "key": "0270",
     "mappings": {
       "default": {
-        "default": "turned m with long leg"
+        "default": "긴 다리가 있는 거꾸로된 m"
       }
     }
   },
@@ -967,7 +967,7 @@
     "key": "0271",
     "mappings": {
       "default": {
-        "default": "m with hook"
+        "default": "후크가 있는 m"
       }
     }
   },
@@ -976,7 +976,7 @@
     "key": "0272",
     "mappings": {
       "default": {
-        "default": "n with left hook"
+        "default": "왼쪽 후크가 있는 n"
       }
     }
   },
@@ -985,7 +985,7 @@
     "key": "0273",
     "mappings": {
       "default": {
-        "default": "n with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 n"
       }
     }
   },
@@ -994,7 +994,7 @@
     "key": "0275",
     "mappings": {
       "default": {
-        "default": "barred o"
+        "default": "막힌 o"
       }
     }
   },
@@ -1003,7 +1003,7 @@
     "key": "0277",
     "mappings": {
       "default": {
-        "default": "closed omega"
+        "default": "닫힌 오메가"
       }
     }
   },
@@ -1012,7 +1012,7 @@
     "key": "0278",
     "mappings": {
       "default": {
-        "default": "phi"
+        "default": "파이"
       }
     }
   },
@@ -1021,7 +1021,7 @@
     "key": "0279",
     "mappings": {
       "default": {
-        "default": "turned r"
+        "default": "거꾸로된 r"
       }
     }
   },
@@ -1030,7 +1030,7 @@
     "key": "027A",
     "mappings": {
       "default": {
-        "default": "turned r with long leg"
+        "default": "긴 다리가 있는 거꾸로된 r"
       }
     }
   },
@@ -1039,7 +1039,7 @@
     "key": "027B",
     "mappings": {
       "default": {
-        "default": "turned r with hook"
+        "default": "후크가 있는 거꾸로된 r"
       }
     }
   },
@@ -1048,7 +1048,7 @@
     "key": "027C",
     "mappings": {
       "default": {
-        "default": "r with long leg"
+        "default": "긴 다리가 있는 r"
       }
     }
   },
@@ -1057,7 +1057,7 @@
     "key": "027D",
     "mappings": {
       "default": {
-        "default": "r with tail"
+        "default": "꼬리가 있는 r"
       }
     }
   },
@@ -1066,7 +1066,7 @@
     "key": "027E",
     "mappings": {
       "default": {
-        "default": "r with fishhook"
+        "default": "낚시후크가 있는 r"
       }
     }
   },
@@ -1075,7 +1075,7 @@
     "key": "027F",
     "mappings": {
       "default": {
-        "default": "reversed r with fishhook"
+        "default": "낚시후크가 있는 반전된 r"
       }
     }
   },
@@ -1084,7 +1084,7 @@
     "key": "0282",
     "mappings": {
       "default": {
-        "default": "s with hook"
+        "default": "후크가 있는 s"
       }
     }
   },
@@ -1102,7 +1102,7 @@
     "key": "0285",
     "mappings": {
       "default": {
-        "default": "squat reversed esh"
+        "default": "쪼그린 반전된 esh"
       }
     }
   },
@@ -1111,7 +1111,7 @@
     "key": "0286",
     "mappings": {
       "default": {
-        "default": "esh with curl"
+        "default": "컬이 있는 esh"
       }
     }
   },
@@ -1120,7 +1120,7 @@
     "key": "0287",
     "mappings": {
       "default": {
-        "default": "turned t"
+        "default": "거꾸로된 t"
       }
     }
   },
@@ -1129,7 +1129,7 @@
     "key": "0288",
     "mappings": {
       "default": {
-        "default": "t with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 t"
       }
     }
   },
@@ -1138,7 +1138,7 @@
     "key": "0289",
     "mappings": {
       "default": {
-        "default": "u bar"
+        "default": "u 바"
       }
     }
   },
@@ -1147,7 +1147,7 @@
     "key": "028A",
     "mappings": {
       "default": {
-        "default": "upsilon"
+        "default": "입실론"
       }
     }
   },
@@ -1156,7 +1156,7 @@
     "key": "028B",
     "mappings": {
       "default": {
-        "default": "v with hook"
+        "default": "후크가 있는 v"
       }
     }
   },
@@ -1165,7 +1165,7 @@
     "key": "028C",
     "mappings": {
       "default": {
-        "default": "turned v"
+        "default": "거꾸로된 v"
       }
     }
   },
@@ -1174,7 +1174,7 @@
     "key": "028D",
     "mappings": {
       "default": {
-        "default": "turned w"
+        "default": "거꾸로된 w"
       }
     }
   },
@@ -1183,7 +1183,7 @@
     "key": "028E",
     "mappings": {
       "default": {
-        "default": "turned y"
+        "default": "거꾸로된 y"
       }
     }
   },
@@ -1192,7 +1192,7 @@
     "key": "0290",
     "mappings": {
       "default": {
-        "default": "z with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 z"
       }
     }
   },
@@ -1201,7 +1201,7 @@
     "key": "0291",
     "mappings": {
       "default": {
-        "default": "z with curl"
+        "default": "컬이 있는 z"
       }
     }
   },
@@ -1210,7 +1210,7 @@
     "key": "0295",
     "mappings": {
       "default": {
-        "default": "latin letter pharyngeal voiced fricative"
+        "default": "라틴문자 인두 음성 마찰음"
       }
     }
   },
@@ -1219,7 +1219,7 @@
     "key": "0296",
     "mappings": {
       "default": {
-        "default": "latin letter inverted glottal stop"
+        "default": "라틴문자 역성문 파열음"
       }
     }
   },
@@ -1228,7 +1228,7 @@
     "key": "0297",
     "mappings": {
       "default": {
-        "default": "latin letter stretched c"
+        "default": "라틴문자 늘어난 c"
       }
     }
   },
@@ -1237,7 +1237,7 @@
     "key": "0298",
     "mappings": {
       "default": {
-        "default": "latin letter bilabial click"
+        "default": "라틴문자 양순 흡착음"
       }
     }
   },
@@ -1246,7 +1246,7 @@
     "key": "029A",
     "mappings": {
       "default": {
-        "default": "closed open e"
+        "default": "닫힌 열린 e"
       }
     }
   },
@@ -1255,7 +1255,7 @@
     "key": "029E",
     "mappings": {
       "default": {
-        "default": "turned k"
+        "default": "거꾸로된 k"
       }
     }
   },
@@ -1264,7 +1264,7 @@
     "key": "02A0",
     "mappings": {
       "default": {
-        "default": "q with hook"
+        "default": "후크가 있는 q"
       }
     }
   },
@@ -1273,7 +1273,7 @@
     "key": "02A3",
     "mappings": {
       "default": {
-        "default": "dz digraph"
+        "default": "이중문자 dz"
       }
     }
   },
@@ -1282,7 +1282,7 @@
     "key": "02A5",
     "mappings": {
       "default": {
-        "default": "dz digraph with curl"
+        "default": "컬이 있는 이중문자 dz"
       }
     }
   },
@@ -1291,7 +1291,7 @@
     "key": "02A6",
     "mappings": {
       "default": {
-        "default": "ts digraph"
+        "default": "이중문자 ts"
       }
     }
   },
@@ -1300,7 +1300,7 @@
     "key": "02A7",
     "mappings": {
       "default": {
-        "default": "tesh digraph"
+        "default": "이중문자 tesh"
       }
     }
   },
@@ -1309,7 +1309,7 @@
     "key": "02A8",
     "mappings": {
       "default": {
-        "default": "tc digraph with curl"
+        "default": "컬이 있는 이중문자 tc"
       }
     }
   },
@@ -1318,7 +1318,7 @@
     "key": "02A9",
     "mappings": {
       "default": {
-        "default": "feng digraph"
+        "default": "이중문자 feng"
       }
     }
   },
@@ -1327,7 +1327,7 @@
     "key": "02AA",
     "mappings": {
       "default": {
-        "default": "ls digraph"
+        "default": "이중문자 ls"
       }
     }
   },
@@ -1336,7 +1336,7 @@
     "key": "02AB",
     "mappings": {
       "default": {
-        "default": "lz digraph"
+        "default": "이중문자 lz"
       }
     }
   },
@@ -1345,7 +1345,7 @@
     "key": "02AC",
     "mappings": {
       "default": {
-        "default": "latin letter bilabial percussive"
+        "default": "라틴문자 양순 충격음"
       }
     }
   },
@@ -1354,7 +1354,7 @@
     "key": "02AD",
     "mappings": {
       "default": {
-        "default": "latin letter bidental percussive"
+        "default": "라틴문자 양치 충격음"
       }
     }
   },
@@ -1363,7 +1363,7 @@
     "key": "02AE",
     "mappings": {
       "default": {
-        "default": "turned h with fishhook"
+        "default": "낚시후크가 있는 거꾸로된 h"
       }
     }
   },
@@ -1372,7 +1372,7 @@
     "key": "02AF",
     "mappings": {
       "default": {
-        "default": "turned h with fishhook and tail"
+        "default": "낚시후크와 꼬리가 있는 거꾸로된 h"
       }
     }
   },
@@ -1381,7 +1381,7 @@
     "key": "1D02",
     "mappings": {
       "default": {
-        "default": "turned ae"
+        "default": "거꾸로된 ae"
       }
     }
   },
@@ -1390,7 +1390,7 @@
     "key": "1D08",
     "mappings": {
       "default": {
-        "default": "turned open e"
+        "default": "거꾸로된 열린 e"
       }
     }
   },
@@ -1399,7 +1399,7 @@
     "key": "1D09",
     "mappings": {
       "default": {
-        "default": "turned i"
+        "default": "거꾸로된 i"
       }
     }
   },
@@ -1408,7 +1408,7 @@
     "key": "1D11",
     "mappings": {
       "default": {
-        "default": "sideways o"
+        "default": "옆으로 누운 o"
       }
     }
   },
@@ -1417,7 +1417,7 @@
     "key": "1D12",
     "mappings": {
       "default": {
-        "default": "sideways open o"
+        "default": "옆으로 누운 열린 o"
       }
     }
   },
@@ -1426,7 +1426,7 @@
     "key": "1D14",
     "mappings": {
       "default": {
-        "default": "turned oe"
+        "default": "거꾸로된 oe"
       }
     }
   },
@@ -1435,7 +1435,7 @@
     "key": "1D16",
     "mappings": {
       "default": {
-        "default": "top half o"
+        "default": "위 절반 o"
       }
     }
   },
@@ -1444,7 +1444,7 @@
     "key": "1D17",
     "mappings": {
       "default": {
-        "default": "bottom half o"
+        "default": "아래 절반 o"
       }
     }
   },
@@ -1453,7 +1453,7 @@
     "key": "1D1D",
     "mappings": {
       "default": {
-        "default": "sideways u"
+        "default": "옆으로 누운 u"
       }
     }
   },
@@ -1462,7 +1462,7 @@
     "key": "1D1E",
     "mappings": {
       "default": {
-        "default": "sideways diaeresized u"
+        "default": "옆으로 누운 diaeresized u"
       }
     }
   },
@@ -1471,7 +1471,7 @@
     "key": "1D1F",
     "mappings": {
       "default": {
-        "default": "sideways turned m"
+        "default": "옆으로 누운 거꾸로된 m"
       }
     }
   },
@@ -1480,7 +1480,7 @@
     "key": "1D24",
     "mappings": {
       "default": {
-        "default": "latin letter voiced laryngeal spirant"
+        "default": "라틴문자 유성 후두 마찰음"
       }
     }
   },
@@ -1489,7 +1489,7 @@
     "key": "1D25",
     "mappings": {
       "default": {
-        "default": "latin letter ain"
+        "default": "라틴문자 ain"
       }
     }
   },
@@ -1507,7 +1507,7 @@
     "key": "1D6C",
     "mappings": {
       "default": {
-        "default": "b with middle tilde"
+        "default": "중간 물결표가 있는 b"
       }
     }
   },
@@ -1516,7 +1516,7 @@
     "key": "1D6D",
     "mappings": {
       "default": {
-        "default": "d with middle tilde"
+        "default": "중간 물결표가 있는 d"
       }
     }
   },
@@ -1525,7 +1525,7 @@
     "key": "1D6E",
     "mappings": {
       "default": {
-        "default": "f with middle tilde"
+        "default": "중간 물결표가 있는 f"
       }
     }
   },
@@ -1534,7 +1534,7 @@
     "key": "1D6F",
     "mappings": {
       "default": {
-        "default": "m with middle tilde"
+        "default": "중간 물결표가 있는 m"
       }
     }
   },
@@ -1543,7 +1543,7 @@
     "key": "1D70",
     "mappings": {
       "default": {
-        "default": "n with middle tilde"
+        "default": "중간 물결표가 있는 n"
       }
     }
   },
@@ -1552,7 +1552,7 @@
     "key": "1D71",
     "mappings": {
       "default": {
-        "default": "p with middle tilde"
+        "default": "중간 물결표가 있는 p"
       }
     }
   },
@@ -1561,7 +1561,7 @@
     "key": "1D72",
     "mappings": {
       "default": {
-        "default": "r with middle tilde"
+        "default": "중간 물결표가 있는 r"
       }
     }
   },
@@ -1570,7 +1570,7 @@
     "key": "1D73",
     "mappings": {
       "default": {
-        "default": "r with fishhook and middle tilde"
+        "default": "낚시후크와 중간 물결표가 있는 r"
       }
     }
   },
@@ -1579,7 +1579,7 @@
     "key": "1D74",
     "mappings": {
       "default": {
-        "default": "s with middle tilde"
+        "default": "중간 물결표가 있는 s"
       }
     }
   },
@@ -1588,7 +1588,7 @@
     "key": "1D75",
     "mappings": {
       "default": {
-        "default": "t with middle tilde"
+        "default": "중간 물결표가 있는 t"
       }
     }
   },
@@ -1597,7 +1597,7 @@
     "key": "1D76",
     "mappings": {
       "default": {
-        "default": "z with middle tilde"
+        "default": "중간 물결표가 있는 케트"
       }
     }
   },
@@ -1606,7 +1606,7 @@
     "key": "1D77",
     "mappings": {
       "default": {
-        "default": "turned g"
+        "default": "거꾸로된 g"
       }
     }
   },
@@ -1624,7 +1624,7 @@
     "key": "1D7A",
     "mappings": {
       "default": {
-        "default": "th with strikethrough"
+        "default": "취소선이 있는 th"
       }
     }
   },
@@ -1633,7 +1633,7 @@
     "key": "1D80",
     "mappings": {
       "default": {
-        "default": "b with palatal hook"
+        "default": "구강음 후크가 있는 b"
       }
     }
   },
@@ -1642,7 +1642,7 @@
     "key": "1D81",
     "mappings": {
       "default": {
-        "default": "d with palatal hook"
+        "default": "구개음 후크가 있는 d"
       }
     }
   },
@@ -1651,7 +1651,7 @@
     "key": "1D82",
     "mappings": {
       "default": {
-        "default": "f with palatal hook"
+        "default": "구개음 후크가 있는 f"
       }
     }
   },
@@ -1660,7 +1660,7 @@
     "key": "1D83",
     "mappings": {
       "default": {
-        "default": "g with palatal hook"
+        "default": "구개음 후크가 있는 g"
       }
     }
   },
@@ -1669,7 +1669,7 @@
     "key": "1D84",
     "mappings": {
       "default": {
-        "default": "k with palatal hook"
+        "default": "구개음 후크가 있는 k"
       }
     }
   },
@@ -1678,7 +1678,7 @@
     "key": "1D85",
     "mappings": {
       "default": {
-        "default": "l with palatal hook"
+        "default": "구개음 후크가 있는 l"
       }
     }
   },
@@ -1687,7 +1687,7 @@
     "key": "1D86",
     "mappings": {
       "default": {
-        "default": "m with palatal hook"
+        "default": "구개음 후크가 있는 m"
       }
     }
   },
@@ -1696,7 +1696,7 @@
     "key": "1D87",
     "mappings": {
       "default": {
-        "default": "n with palatal hook"
+        "default": "구개음 후크가 있는 n"
       }
     }
   },
@@ -1705,7 +1705,7 @@
     "key": "1D88",
     "mappings": {
       "default": {
-        "default": "p with palatal hook"
+        "default": "구개음 후크가 있는 p"
       }
     }
   },
@@ -1714,7 +1714,7 @@
     "key": "1D89",
     "mappings": {
       "default": {
-        "default": "r with palatal hook"
+        "default": "구개음 후크가 있는 r"
       }
     }
   },
@@ -1723,7 +1723,7 @@
     "key": "1D8A",
     "mappings": {
       "default": {
-        "default": "s with palatal hook"
+        "default": "구개음 후크가 있는 s"
       }
     }
   },
@@ -1732,7 +1732,7 @@
     "key": "1D8B",
     "mappings": {
       "default": {
-        "default": "esh with palatal hook"
+        "default": "구개음 후크가 있는 esh"
       }
     }
   },
@@ -1741,7 +1741,7 @@
     "key": "1D8C",
     "mappings": {
       "default": {
-        "default": "v with palatal hook"
+        "default": "구개음 후크가 있는 v"
       }
     }
   },
@@ -1750,7 +1750,7 @@
     "key": "1D8D",
     "mappings": {
       "default": {
-        "default": "x with palatal hook"
+        "default": "구개음 후크가 있는 x"
       }
     }
   },
@@ -1759,7 +1759,7 @@
     "key": "1D8E",
     "mappings": {
       "default": {
-        "default": "z with palatal hook"
+        "default": "구개음 후크가 있는 z"
       }
     }
   },
@@ -1768,7 +1768,7 @@
     "key": "1D8F",
     "mappings": {
       "default": {
-        "default": "a with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 a"
       }
     }
   },
@@ -1777,7 +1777,7 @@
     "key": "1D90",
     "mappings": {
       "default": {
-        "default": "alpha with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 알파"
       }
     }
   },
@@ -1786,7 +1786,7 @@
     "key": "1D91",
     "mappings": {
       "default": {
-        "default": "d with hook and tail"
+        "default": "꼬리와 후크가 있는 d"
       }
     }
   },
@@ -1795,7 +1795,7 @@
     "key": "1D92",
     "mappings": {
       "default": {
-        "default": "e with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 e"
       }
     }
   },
@@ -1804,7 +1804,7 @@
     "key": "1D93",
     "mappings": {
       "default": {
-        "default": "open e with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 열린 e"
       }
     }
   },
@@ -1813,7 +1813,7 @@
     "key": "1D94",
     "mappings": {
       "default": {
-        "default": "reversed open e with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 반전된 열린 e"
       }
     }
   },
@@ -1822,7 +1822,7 @@
     "key": "1D95",
     "mappings": {
       "default": {
-        "default": "schwa with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 슈와"
       }
     }
   },
@@ -1831,7 +1831,7 @@
     "key": "1D96",
     "mappings": {
       "default": {
-        "default": "i with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 i"
       }
     }
   },
@@ -1840,7 +1840,7 @@
     "key": "1D97",
     "mappings": {
       "default": {
-        "default": "open o with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 열린 o"
       }
     }
   },
@@ -1849,7 +1849,7 @@
     "key": "1D98",
     "mappings": {
       "default": {
-        "default": "esh with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 esh"
       }
     }
   },
@@ -1858,7 +1858,7 @@
     "key": "1D99",
     "mappings": {
       "default": {
-        "default": "u with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 u"
       }
     }
   },
@@ -1867,7 +1867,7 @@
     "key": "1D9A",
     "mappings": {
       "default": {
-        "default": "ezh with retroflex hook"
+        "default": "뒤로 휜 후크가 있는 ezh"
       }
     }
   },
@@ -1876,7 +1876,7 @@
     "key": "0149",
     "mappings": {
       "default": {
-        "default": "n preceded by apostrophe"
+        "default": "아포스트로피 앞에 n"
       }
     }
   },

@@ -122,7 +122,8 @@
       ],
       "capPrefix": {
         "default": "대문자",
-        "mathspeak": "대문자"
+        "mathspeak": "대문자",
+        "clearspeak": "대문자"
       },
       "smallPrefix": {
         "default": ""

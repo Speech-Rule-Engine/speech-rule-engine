@@ -3,7 +3,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "바브 위 왼쪽으로 작살"
+        "default": "바브가 위쪽인 왼쪽 작살"
       }
     },
     "key": "21BC"
@@ -12,7 +12,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "바브 아래 왼쪽으로 작살"
+        "default": "바브가 아래쪽인 왼쪽 작살"
       }
     },
     "key": "21BD"
@@ -21,7 +21,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "바브 오른 위쪽으로 작살"
+        "default": "바브가 오른쪽인 위쪽 작살"
       }
     },
     "key": "21BE"
@@ -30,7 +30,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "바브 왼 위쪽으로 작살"
+        "default": "바브가 왼쪽인 위쪽 작살"
       }
     },
     "key": "21BF"
@@ -39,7 +39,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "바브 위 오른쪽으로 작살"
+        "default": "바브 위쪽인 오른쪽 작살"
       }
     },
     "key": "21C0"
@@ -48,7 +48,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "바브 아래 오른쪽으로 작살"
+        "default": "바브 아래쪽인 오른쪽 작살"
       }
     },
     "key": "21C1"
@@ -57,7 +57,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "바브 오른 아래쪽으로 작살"
+        "default": "바브가 오른쪽인 아래쪽 작살"
       }
     },
     "key": "21C2"
@@ -66,7 +66,7 @@
     "category": "So",
     "mappings": {
       "default": {
-        "default": "바브 왼 아래쪽으로 작살"
+        "default": "바브가 왼쪽인 아래쪽 작살"
       }
     },
     "key": "21C3"
@@ -93,7 +93,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 바브 오른쪽 위로 바브 다운 하푼"
+        "default": "왼쪽 바브는 위쪽, 오른쪽 바브는 아래쪽인 작살"
       }
     },
     "key": "294A"
@@ -102,7 +102,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 미늘 왼쪽 미늘 미늘 위로"
+        "default": "왼쪽 바브는 아래쪽, 오른쪽 바브는 위쪽인 작살"
       }
     },
     "key": "294B"
@@ -111,7 +111,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "바브 바로 아래로 바브 왼쪽으로 작살"
+        "default": "위쪽 바브는 오른쪽, 아래쪽 바브는 왼쪽인 작살"
       }
     },
     "key": "294C"
@@ -120,7 +120,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "Up Barb 왼쪽 아래 Barb Right Harpoon"
+        "default": "위쪽 바브는 왼쪽, 아래쪽 바브는 오른쪽인 작살"
       }
     },
     "key": "294D"
@@ -129,7 +129,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 바브 오른쪽 위로 바브 위로 하푼"
+        "default": "왼쪽 바브는 위쪽, 오른쪽 바브도 위쪽인 하푼"
       }
     },
     "key": "294E"
@@ -138,7 +138,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "바브 바로 아래로 바브 라이트 하푼"
+        "default": "위쪽 바브는 오른쪽, 아래쪽 바브도 오른쪽인 작살"
       }
     },
     "key": "294F"
@@ -147,7 +147,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽 미늘봉 아래로 오른쪽 미늘봉 아래로"
+        "default": "왼쪽 바브는 아래쪽, 오른쪽 바브도 아래쪽인 작살"
       }
     },
     "key": "2950"
@@ -156,7 +156,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "바브 왼쪽 아래로 바브 왼쪽 하푼"
+        "default": "위쪽 바브는 왼쪽, 아래쪽 바브도 왼쪽인 작살"
       }
     },
     "key": "2951"
@@ -165,7 +165,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "왼쪽으로 작살과 막대기까지 바브"
+        "default": "바로 향하는 바브가 위쪽인 왼쪽 작살"
       }
     },
     "key": "2952"
@@ -174,7 +174,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "버프 업 바를 가진 오른쪽 하푼"
+        "default": "바로 향하는 바브가 위쪽인 오른쪽 작살"
       }
     },
     "key": "2953"
@@ -183,7 +183,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "바브 바로 가기 하푼"
+        "default": "바로 향하는 바브가 오른쪽인 위쪽 작살"
       }
     },
     "key": "2954"
@@ -192,7 +192,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down harpoon with barb right to bar"
+        "default": "바로 향하는 바브가 오른쪽인 아래쪽 작살"
       }
     },
     "key": "2955"
@@ -201,7 +201,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb down to bar"
+        "default": "바로 향하는 바브가 아래쪽인 왼쪽 작살"
       }
     },
     "key": "2956"
@@ -210,7 +210,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb down to bar"
+        "default": "바로 향하는 바브가 아래쪽인 오른쪽 작살"
       }
     },
     "key": "2957"
@@ -219,7 +219,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up harpoon with barb left to bar"
+        "default": "바로 향하는 바브가 왼쪽인 위쪽 작살"
       }
     },
     "key": "2958"
@@ -228,7 +228,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down harpoon with barb left to bar"
+        "default": "바로 향하는 바브가 왼쪽인 아래쪽 작살"
       }
     },
     "key": "2959"
@@ -237,7 +237,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb up from bar"
+        "default": "바로 향하는 바브가 위쪽인 왼쪽 작살"
       }
     },
     "key": "295A"
@@ -246,7 +246,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb up from bar"
+        "default": "바로 향하는 바브가 위쪽인 오른쪽 작살"
       }
     },
     "key": "295B"
@@ -255,7 +255,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up harpoon with barb right from bar"
+        "default": "바로 향하는 바브가 오른쪽인 위쪽 작살"
       }
     },
     "key": "295C"
@@ -264,7 +264,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down harpoon with barb right from bar"
+        "default": "바로 향하는 바브가 오른쪽인 아래쪽 작살"
       }
     },
     "key": "295D"
@@ -273,7 +273,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb down from bar"
+        "default": "바로 향하는 바브가 아래쪽인 왼쪽 작살"
       }
     },
     "key": "295E"
@@ -282,7 +282,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb down from bar"
+        "default": "바로 향하는 바브가 아래쪽인 오른쪽 작살"
       }
     },
     "key": "295F"
@@ -291,7 +291,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up harpoon with barb left from bar"
+        "default": "바로 향하는 바브가 왼쪽인 위쪽 작살"
       }
     },
     "key": "2960"
@@ -300,7 +300,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down harpoon with barb left from bar"
+        "default": "바로 향하는 바브가 왼쪽인 아래쪽 작살"
       }
     },
     "key": "2961"
@@ -309,7 +309,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb up above left harpoon with barb down"
+        "default": "바브가 아래쪽인 왼쪽 작살 위에 바브가 위쪽인 왼쪽 작살"
       }
     },
     "key": "2962"
@@ -318,7 +318,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up harpoon with barb left beside up harpoon with barb right"
+        "default": "바브가 왼쪽인 위쪽 작살 옆에 바브가 오른쪽인 위쪽 작살"
       }
     },
     "key": "2963"
@@ -327,7 +327,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb up above right harpoon with barb down"
+        "default": "바브가 아래쪽인 오른쪽 작살 위에 바브가 위쪽인 오른쪽 작살"
       }
     },
     "key": "2964"
@@ -336,7 +336,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down harpoon with barb left beside down harpoon with barb right"
+        "default": "바브가 왼쪽인 아래쪽 작살 옆에 바브가 오른쪽인 아래쪽 작살"
       }
     },
     "key": "2965"
@@ -345,7 +345,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb up above right harpoon with barb up"
+        "default": "바브가 위쪽인 오른쪽 작살 위에 바브가 위쪽인 왼쪽 작살"
       }
     },
     "key": "2966"
@@ -354,7 +354,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb down above right harpoon with barb down"
+        "default": "바브가 아래쪽인 오른쪽 작살 위에 바브가 아래쪽인 왼쪽 작살"
       }
     },
     "key": "2967"
@@ -363,7 +363,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb up above left harpoon with barb up"
+        "default": "바브가 위쪽인 왼쪽 작살 위에 바브가 위쪽인 오른쪽 작살"
       }
     },
     "key": "2968"
@@ -372,7 +372,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb down above left harpoon with barb down"
+        "default": "바브가 아래쪽인 왼쪽 작살 위에 바브가 아래쪽인 오른쪽 작살"
       }
     },
     "key": "2969"
@@ -381,7 +381,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb up above long dash"
+        "default": "긴 직선 위에 바브가 위쪽인 왼쪽 작살"
       }
     },
     "key": "296A"
@@ -390,7 +390,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left harpoon with barb down below long dash"
+        "default": "긴 직선 위에 바브가 아래쪽인 왼쪽 작살"
       }
     },
     "key": "296B"
@@ -399,7 +399,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb up above long dash"
+        "default": "긴 직선 위에 바브가 위쪽인 오른쪽 작살"
       }
     },
     "key": "296C"
@@ -408,7 +408,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right harpoon with barb down below long dash"
+        "default": "긴 직선 위에 바브가 아래쪽인 오른쪽 작살"
       }
     },
     "key": "296D"
@@ -417,7 +417,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up harpoon with barb left beside down harpoon with barb right"
+        "default": "바브가 왼쪽인 위쪽 작살 옆에 바브가 오른쪽인 아래쪽 작살"
       }
     },
     "key": "296E"
@@ -426,7 +426,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down harpoon with barb left beside up harpoon with barb right"
+        "default": "바브가 왼쪽인 아래쪽 작살 옆에 바브가 오른쪽인 위쪽 작살"
       }
     },
     "key": "296F"
@@ -435,7 +435,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "left fish tail"
+        "default": "왼쪽 물고기 꼬리"
       }
     },
     "key": "297C"
@@ -444,7 +444,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "right fish tail"
+        "default": "오른쪽 물고기 꼬리"
       }
     },
     "key": "297D"
@@ -453,7 +453,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "up fish tail"
+        "default": "위쪽 물고기 꼬리"
       }
     },
     "key": "297E"
@@ -462,7 +462,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "down fish tail"
+        "default": "아래쪽 물고기 꼬리"
       }
     },
     "key": "297F"
