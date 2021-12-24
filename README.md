@@ -109,8 +109,8 @@ an return the number as text in the currently active locale.
 
 | Method | Return Value |
 | ---- | ---- |
-| number | The number as text. |
-| ordinal | The word ordinal. |
+| `number(input)` | The number as text. |
+| `ordinal(input)` | The word ordinal. |
 
 #### Methods for querying and controlling the engine behaviour:
 
@@ -646,7 +646,7 @@ to automatically fix those violations as much as possible.
 ### Documentation
 
 Full [JSDOC](https://jsdoc.app/) documentation is required and enforced via the
-`eslint jsdoc plugin`(https://www.npmjs.com/package/eslint-plugin-jsdoc). To
+[`eslint jsdoc plugin`](https://www.npmjs.com/package/eslint-plugin-jsdoc). To
 generate documentation from the [JSDOC](https://jsdoc.app/), simply run
 
     npm run docs
@@ -684,12 +684,12 @@ the feature vector for `setupEngine` should not throw an exception but will have
 no effect.
 
 
-| Option      | Value                                                                                                                                                                                                                           | Release                   | Comments                                                                                                                         |   |   |
-|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------|---|---|
-| *cache*     | Boolean flag to switch expression caching during speech generation. Default is ```true```.                                                                                                                                      | *Removed in v3.2.0*       | Expression caching has been removed and the option has no longer any effect.                                                     |   |   |
-| *rules*     | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** | *Deprecated in v4.0.0*    | Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes. |   |   |
-| *walker*    | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table```                                                                                                                              | *Deprecated since v4.0.0* | Defaults to Table walker. Other walkers are no longer maintained!                                                                |   |   |
-| *semantics* | Boolean flag to switch **OFF** semantic interpretation.                                                                                                                                                                         | *Removed in v3.0*         | Non-semantic rule sets have been removed since v3.0.                                                                             |   |   |
+| Option      | Value                                                                                                                                                                                                                           | Release                   | Comments                                                                                                                         | 
+|-------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| *cache*     | Boolean flag to switch expression caching during speech generation. Default is ```true```.                                                                                                                                      | *Removed in v3.2.0*       | Expression caching has been removed and the option has no longer any effect.                                                     |
+| *rules*     | A list of rulesets to use by SRE. This allows to artificially restrict available speech rules, which can be useful for testing and during rule development. ***Always expects a list, even if only one rule set is supplied!*** | *Deprecated in v4.0.0*    | Note that setting rule sets is no longer useful with the new rule indexing structures. It is only retained for testing purposes. |
+| *walker*    | A walker to use for interactive exploration: ```None```, ```Syntax```, ```Semantic```, ```Table```                                                                                                                              | *Deprecated since v4.0.0* | Defaults to Table walker. Other walkers are no longer maintained!                                                                |
+| *semantics* | Boolean flag to switch **OFF** semantic interpretation.                                                                                                                                                                         | *Removed in v3.0*         | Non-semantic rule sets have been removed since v3.0.                                                                             |
 
 
 #### Removed API functions #########

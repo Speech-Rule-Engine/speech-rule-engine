@@ -275,7 +275,7 @@ export function processFile(
  * @param opt_output The output filename if one is given.
  * @returns The result that has been written to the file.
  */
-export function processFileSync(
+function processFileSync(
   processor: string,
   input: string,
   opt_output?: string
