@@ -20,6 +20,70 @@
     ],
     [
       "Precondition",
+      "set-member-parent",
+      "default",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+    ],
+    [
+      "Precondition",
+      "set-member-member-parent",
+      "SetMemberSymbol_Member",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+    ],
+    [
+      "Precondition",
+      "set-member-element-parent",
+      "SetMemberSymbol_Element",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+    ],
+    [
+      "Precondition",
+      "set-member-belongs-parent",
+      "SetMemberSymbol_Belongs",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+    ],
+    [
+      "Precondition",
+      "set-not-member-parent",
+      "default",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∉\"]"
+    ],
+    [
+      "Precondition",
+      "set-not-member-member-parent",
+      "SetMemberSymbol_Member",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∉\"]"
+    ],
+    [
+      "Precondition",
+      "set-not-member-element-parent",
+      "SetMemberSymbol_Element",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∉\"]"
+    ],
+    [
+      "Precondition",
+      "set-not-member-belongs-parent",
+      "SetMemberSymbol_Belongs",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∉\"]"
+    ],
+    [
+      "Precondition",
       "unit-square",
       "default",
       "self::superscript[@role=\"unit\"]",
@@ -45,7 +109,32 @@
       "name(children/*[1])=\"identifier\"",
       "children/*[1][@category=\"unit:length\"]"
     ],
-    
+    [
+      "Precondition",
+      "quad",
+      "default",
+      "self::superscript",
+      "@role!=\"unit\"",
+      "children/*[2][text()=\"4\"]",
+      "name(children/*[1])!=\"text\" or not(name(children/*[1])=\"text\" and (name(../../../punctuated[@role=\"text\"]/..)=\"stree\" or name(..)=\"stree\"))",
+      "self::*"
+    ],
+    [
+      "Precondition",
+      "quadric",
+      "default",
+      "self::root",
+      "children/*[1][text()=\"4\"]"
+    ],
+    [
+      "Precondition",
+      "quadric-nested",
+      "default",
+      "self::root",
+      "children/*[1][text()=\"4\"]",
+      "not(preceding-sibling::*)",
+      "ancestor::sqrt|ancestor::root"
+    ],
     [
       "Precondition",
       "vbar-divides",
@@ -74,7 +163,7 @@
     ],
     [
       "Precondition",
-      "not-equal",
+      "not-equal-to",
       "default",
       "self::relseq",
       "count(./children/*)=2",
@@ -90,19 +179,42 @@
     ],
     [
       "Precondition",
+      "simple-member-set",
+      "default",
+      "self::infixop",
+      "text()=\"∈\" or text()=\"∊\""
+    ],
+    [
+      "Precondition",
       "simple-set-member",
       "default",
       "self::infixop",
       "count(./children/*)=2",
-      "text()=\"∈\" or text()=\"∊\" or text()=\"∉\""
+      "text()=\"∋\" or text()=\"∍\""
     ],
     [
       "Precondition",
-      "simple-contain-member",
+      "simple-not-member-set",
       "default",
       "self::infixop",
       "count(./children/*)=2",
-      "text()=\"∈\" or text()=\"∊\" or text()=\"∋\" or text()=\"∍\" or text()=\"∉\" or text()=\"∌\""
+      "text()=\"∉\""
+    ],
+    [
+      "Precondition",
+      "simple-not-set-member",
+      "default",
+      "self::infixop",
+      "count(./children/*)=2",
+      "text()=\"∌\""
+    ],
+    [
+      "Precondition",
+      "simple-relset",
+      "default",
+      "self::relseq",
+      "count(./children/*)=2",
+      "text()=\"⊂\" or text()=\"⊃\""
     ],
     [
       "Precondition",
@@ -126,7 +238,7 @@
       "default",
       "self::relseq",
       "count(./children/*)=2",
-      "text()=\"⇐\" or text()=\"⇒\" or text()=\"⇔\""
+      "text()=\"⇒\" or text()=\"⇐\" or text()=\"⇔\""
     ],
     [
       "Precondition",
