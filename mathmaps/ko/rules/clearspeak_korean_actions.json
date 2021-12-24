@@ -607,7 +607,7 @@
     [
       "Action",
       "fences-interval",
-      "[t] \"구간\"; [n] children/*[1]/children/*[1]; [t] \"부터\"; [n] children/*[1]/children/*[3] (pause:short); [n] . (grammar:interval); [t] \"까지\""
+      "[n] . (grammar:interval)"
     ],
     [
       "Action",
@@ -642,7 +642,7 @@
     [
       "Action",
       "interval-open-inf-lr",
-      ""
+      "전 구간"
     ],
     [
       "Action",
