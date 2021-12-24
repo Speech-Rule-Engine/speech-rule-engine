@@ -1,0 +1,55 @@
+[
+  {
+    "locale": "se"
+  },
+  {
+    "key": "kt",
+    "category": "speed",
+    "names": [
+      "kt",
+      "kt."
+    ],
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "mph",
+    "mappings": {
+      "default": {
+        "default": "mile per timme",
+        "plural": "miles per timme"
+      }
+    },
+    "category": "speed",
+    "names": [
+      "mph"
+    ]
+  },
+  {
+    "key": "rpm",
+    "category": "speed",
+    "names": [
+      "rpm"
+    ],
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "kmh",
+    "category": "speed",
+    "names": [
+      "kmh"
+    ],
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  }
+]
