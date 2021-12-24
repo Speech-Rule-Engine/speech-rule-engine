@@ -96,28 +96,48 @@
     ],
     [
       "Action",
-      "set-member-inserted",
-      "[n] children/*[2]; [t] \"내의\" (grammar:article); [n] children/*[1]"
+      "set-member-parent",
+      "[n] children/*[2]; [t] \"내의\"; [n] children/*[1]"
     ],
     [
       "Action",
       "set-member-member",
-      "[t] \"다음의 구성원이다\""
+      ""
+    ],
+    [
+      "Action",
+      "set-member-member-parent",
+      "[n] children/*[2]; [t] \"를\" (grammar:article); [t] \"구성하는\"; [n] children/*[1]"
     ],
     [
       "Action",
       "set-member-element",
-      "[t] \"다음의 원소이다\""
+      ""
+    ],
+    [
+      "Action",
+      "set-member-element-parent",
+      "[n] children/*[2]; [t] \"의 원소인\"; [n] children/*[1]"
     ],
     [
       "Action",
       "set-member-belongs",
-      "[t] \"다음에 속해 있다\""
+      ""
+    ],
+    [
+      "Action",
+      "set-member-belongs-parent",
+      "[n] children/*[2]; [t] \"에 속하는\"; [n] children/*[1]"
     ],
     [
       "Action",
       "set-not-member",
-      "[t] \"다음의 원소가 아니다\""
+      ""
+    ],
+    [
+      "Action",
+      "set-not-member-parent",
+      "[n] children/*[2]; [t] \"내에 없는\"; [n] children/*[1]"
     ],
     [
       "Action",
@@ -126,13 +146,28 @@
     ],
     [
       "Action",
+      "set-not-member-member-parent",
+      "[n] children/*[2]; [t] \"를\" (grammar:article); [t] \"구성하지 않는\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
       "set-not-member-element",
-      "[t] \"다음의 원소가 아니다\""
+      ""
+    ],
+    [
+      "Action",
+      "set-not-member-member-parent",
+      "[n] children/*[2]; [t] \"의 원소가 아닌\"; [n] children/*[1]"
     ],
     [
       "Action",
       "set-not-member-belongs",
-      "[t] \"다음에 속하지 않는다\""
+      ""
+    ],
+    [
+      "Action",
+      "set-not-member-belongs-parent",
+      "[n] children/*[2]; [t] \"에 속하지 않는\"; [n] children/*[1]"
     ],
     [
       "Action",
