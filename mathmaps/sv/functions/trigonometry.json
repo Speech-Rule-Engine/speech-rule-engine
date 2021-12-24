@@ -68,7 +68,7 @@
     "key": "tan",
     "mappings": {
       "default": {
-        "default": "tangent"
+        "default": "tangens"
       }
     },
     "category": "Trigonometric",
@@ -84,7 +84,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "arcus cosinus"
       }
     }
   },
@@ -96,7 +96,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "arcus cotangens"
       }
     }
   },
@@ -108,7 +108,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "arcus cosecans"
       }
     }
   },
@@ -120,7 +120,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "arcus secans"
       }
     }
   },
@@ -132,7 +132,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "arcus sinus"
       }
     }
   },
@@ -144,7 +144,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "arcus tangens"
       }
     }
   }

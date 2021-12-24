@@ -34,7 +34,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tiologaritmen"
       }
     }
   },
@@ -47,7 +47,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "exponentiell"
       }
     }
   },
@@ -59,7 +59,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "största gemensamma nämnare"
       }
     }
   },
@@ -71,7 +71,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minsta gemensamma multipel"
       }
     }
   },
@@ -83,7 +83,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "argument"
       }
     }
   },
@@ -95,7 +95,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "imaginär del"
       }
     }
   },
@@ -107,7 +107,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "reell del"
       }
     }
   },
@@ -119,7 +119,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "infimum"
       }
     }
   },
@@ -127,7 +127,7 @@
     "key": "lim",
     "mappings": {
       "default": {
-        "default": "limit"
+        "default": "gränsvärde"
       }
     },
     "category": "Limits",
@@ -144,7 +144,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre gränsvärde"
       }
     }
   },
@@ -157,7 +157,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "övre gränsvärde"
       }
     }
   },
@@ -169,7 +169,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "maximum"
       }
     }
   },
@@ -181,7 +181,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minimum"
       }
     }
   },
@@ -193,7 +193,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supremum"
       }
     }
   },
@@ -206,7 +206,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kolimes"
       }
     }
   },
@@ -219,7 +219,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inverterat gränsvärde"
       }
     }
   },
@@ -231,7 +231,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "modulo"
       }
     }
   },
@@ -243,7 +243,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sannolikhet"
       }
     }
   }

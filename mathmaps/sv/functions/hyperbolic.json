@@ -83,7 +83,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "areacosinus hyperbolicus"
       }
     }
   },
@@ -96,7 +96,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "areacotangens hyperbolicus"
       }
     }
   },
@@ -109,7 +109,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "areakosekant hyperbolicus"
       }
     }
   },
@@ -122,7 +122,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "areasekant hyperbolicus"
       }
     }
   },
@@ -135,7 +135,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "areasinus hyperbolicus"
       }
     }
   },
@@ -148,7 +148,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "areatangens hyperbolicus"
       }
     }
   }
