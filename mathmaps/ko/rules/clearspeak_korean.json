@@ -20,6 +20,70 @@
     ],
     [
       "Precondition",
+      "set-member-parent",
+      "default",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+    ],
+    [
+      "Precondition",
+      "set-member-member-parent",
+      "SetMemberSymbol_Member",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+    ],
+    [
+      "Precondition",
+      "set-member-element-parent",
+      "SetMemberSymbol_Element",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+    ],
+    [
+      "Precondition",
+      "set-member-belongs-parent",
+      "SetMemberSymbol_Belongs",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+    ],
+    [
+      "Precondition",
+      "set-not-member-parent",
+      "default",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∉\"]"
+    ],
+    [
+      "Precondition",
+      "set-not-member-member-parent",
+      "SetMemberSymbol_Member",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∉\"]"
+    ],
+    [
+      "Precondition",
+      "set-not-member-element-parent",
+      "SetMemberSymbol_Element",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∉\"]"
+    ],
+    [
+      "Precondition",
+      "set-not-member-belongs-parent",
+      "SetMemberSymbol_Belongs",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∉\"]"
+    ],
+    [
+      "Precondition",
       "unit-square",
       "default",
       "self::superscript[@role=\"unit\"]",
@@ -112,70 +176,6 @@
       "self::relseq",
       "count(./children/*)=2",
       "text()=\"≥\" or text()=\">\" or text()=\"≤\" or text()=\"<\""
-    ],
-    [
-      "Precondition",
-      "set-member-parent",
-      "default",
-      "self::infixop",
-      "@role=\"set extended\"",
-      "text()=\"∈\" or text()=\"∊\""
-    ],
-    [
-      "Precondition",
-      "set-member-member-parent",
-      "SetMemberSymbol_Member",
-      "self::infixop",
-      "@role=\"set extended\"",
-      "text()=\"∈\" or text()=\"∊\""
-    ],
-    [
-      "Precondition",
-      "set-member-element-parent",
-      "SetMemberSymbol_Element",
-      "self::infixop",
-      "@role=\"set extended\"",
-      "text()=\"∈\" or text()=\"∊\""
-    ],
-    [
-      "Precondition",
-      "set-member-belongs-parent",
-      "SetMemberSymbol_Belongs",
-      "self::infixop",
-      "@role=\"set extended\"",
-      "text()=\"∈\" or text()=\"∊\""
-    ],
-    [
-      "Precondition",
-      "set-not-member-parent",
-      "default",
-      "self::infixop",
-      "@role=\"set extended\"",
-      "text()=\"∉\""
-    ],
-    [
-      "Precondition",
-      "set-not-member-member-parent",
-      "SetMemberSymbol_Member",
-      "self::infixop",
-      "@role=\"set extended\"",
-      "text()=\"∉\""
-    ],
-    [
-      "Precondition",
-      "set-not-member-element-parent",
-      "SetMemberSymbol_Element",
-      "self::infixop",
-      "@role=\"set extended\"",
-      "text()=\"∉\""
-    ],
-    [
-      "Precondition",
-      "set-not-member-belongs-parent",
-      "SetMemberSymbol_Belongs",
-      "self::infixop",
-      "@role=\"set extended\"",
-      "text()=\"∉\""
     ],
     [
       "Precondition",
