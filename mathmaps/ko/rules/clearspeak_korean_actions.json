@@ -92,7 +92,12 @@
     [
       "Action",
       "set-member",
-      "[t] \"다음의 원소이다\""
+      ""
+    ],
+    [
+      "Action",
+      "set-member-inserted",
+      "[n] children/*[2]; [t] \"내의\" (grammar:article); [n] children/*[1]"
     ],
     [
       "Action",

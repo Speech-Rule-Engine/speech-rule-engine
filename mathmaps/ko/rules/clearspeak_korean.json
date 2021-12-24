@@ -115,6 +115,14 @@
     ],
     [
       "Precondition",
+      "set-member-inserted",
+      "default",
+      "self::infixop",
+      "content/*[1][@role=\"set extended\"]",
+      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+    ],
+    [
+      "Precondition",
       "simple-member-set",
       "default",
       "self::infixop",
@@ -126,7 +134,7 @@
       "default",
       "self::infixop",
       "count(./children/*)=2",
-      "text()=\"∋\" or text()=\"∍\"" 
+      "text()=\"∋\" or text()=\"∍\""
     ],
     [
       "Precondition",
