@@ -118,7 +118,6 @@
       "simple-member-set",
       "default",
       "self::infixop",
-      "count(./children/*)=2",
       "text()=\"∈\" or text()=\"∊\""
     ],
     [

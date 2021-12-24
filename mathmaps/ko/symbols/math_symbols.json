@@ -1520,7 +1520,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "마이너스"
+        "default": "빼기"
       }
     },
     "key": "2212"

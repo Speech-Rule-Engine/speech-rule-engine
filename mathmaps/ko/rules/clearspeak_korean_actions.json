@@ -557,7 +557,7 @@
     [
       "Action",
       "fences-metric",
-      "[p] (pause:short); [n] children/*[1] (pause: short)"
+      "[p] (pause:short); [t] \"메트릭\" (span:.); [n] children/*[1] (pause: short)"
     ],
     [
       "Action",
