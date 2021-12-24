@@ -123,7 +123,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "5 분의 삼"
+        "default": "5 분의 3"
       }
     },
     "key": "2157"
@@ -132,7 +132,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "5 분의 사"
+        "default": "5 분의 4"
       }
     },
     "key": "2158"
@@ -168,7 +168,7 @@
     "category": "No",
     "mappings": {
       "default": {
-        "default": "8 분의 삼"
+        "default": "8 분의 3"
       }
     },
     "key": "215C"
