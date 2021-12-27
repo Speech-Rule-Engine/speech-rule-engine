@@ -30,7 +30,7 @@ jobs:
 
     strategy:
       matrix:
-        block: [ ko/clearspeak, ko/mathspeak ]
+        block: [ ko/clearspeak, ko/others ]
     needs: setup
     runs-on: ubuntu-latest
     name: SRE jests tests for ${{ matrix.block }}
