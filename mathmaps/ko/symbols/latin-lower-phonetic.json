@@ -22,7 +22,7 @@
     "key": "0127",
     "mappings": {
       "default": {
-        "default": "획을 그은 a치"
+        "default": "획을 그은 h"
       }
     }
   },
@@ -112,7 +112,7 @@
     "key": "0247",
     "mappings": {
       "default": {
-        "default": "획을 그은 이"
+        "default": "획을 그은 e"
       }
     }
   },
@@ -184,7 +184,7 @@
     "key": "02A2",
     "mappings": {
       "default": {
-        "default": "거꾸로된 획이 있는 라틴 문자 성문 파열음"
+        "default": "반전된 획이 있는 라틴 문자 성문 파열음"
       }
     }
   },
@@ -301,7 +301,7 @@
     "key": "0185",
     "mappings": {
       "default": {
-        "default": "톤 식스"
+        "default": "톤 6"
       }
     }
   },
@@ -400,7 +400,7 @@
     "key": "01A8",
     "mappings": {
       "default": {
-        "default": "톤 투"
+        "default": "톤 2"
       }
     }
   },
@@ -445,7 +445,7 @@
     "key": "01B4",
     "mappings": {
       "default": {
-        "default": "뿔이 있는 왕;"
+        "default": "뿔이 있는 y"
       }
     }
   },
@@ -589,7 +589,7 @@
     "key": "01DD",
     "mappings": {
       "default": {
-        "default": "거꾸로된 e"
+        "default": "반전된 e"
       }
     }
   },
@@ -715,7 +715,7 @@
     "key": "0250",
     "mappings": {
       "default": {
-        "default": "거꾸로된 a"
+        "default": "반전된 a"
       }
     }
   },
@@ -733,7 +733,7 @@
     "key": "0252",
     "mappings": {
       "default": {
-        "default": "거꾸로된 알파"
+        "default": "반전된 알파"
       }
     }
   },
@@ -886,7 +886,7 @@
     "key": "0265",
     "mappings": {
       "default": {
-        "default": "거꾸로된 a치"
+        "default": "반전된 h"
       }
     }
   },
@@ -895,7 +895,7 @@
     "key": "0266",
     "mappings": {
       "default": {
-        "default": "후크가 있는 a치"
+        "default": "후크가 있는 h"
       }
     }
   },
@@ -949,7 +949,7 @@
     "key": "026F",
     "mappings": {
       "default": {
-        "default": "거꾸로된 m"
+        "default": "반전된 m"
       }
     }
   },
@@ -958,7 +958,7 @@
     "key": "0270",
     "mappings": {
       "default": {
-        "default": "긴 다리가 있는 거꾸로된 m"
+        "default": "긴 다리가 있는 반전된 m"
       }
     }
   },
@@ -1021,7 +1021,7 @@
     "key": "0279",
     "mappings": {
       "default": {
-        "default": "거꾸로된 r"
+        "default": "반전된 r"
       }
     }
   },
@@ -1030,7 +1030,7 @@
     "key": "027A",
     "mappings": {
       "default": {
-        "default": "긴 다리가 있는 거꾸로된 r"
+        "default": "긴 다리가 있는 반전된 r"
       }
     }
   },
@@ -1039,7 +1039,7 @@
     "key": "027B",
     "mappings": {
       "default": {
-        "default": "후크가 있는 거꾸로된 r"
+        "default": "후크가 있는 반전된 r"
       }
     }
   },
@@ -1120,7 +1120,7 @@
     "key": "0287",
     "mappings": {
       "default": {
-        "default": "거꾸로된 t"
+        "default": "반전된 t"
       }
     }
   },
@@ -1165,7 +1165,7 @@
     "key": "028C",
     "mappings": {
       "default": {
-        "default": "거꾸로된 v"
+        "default": "반전된 v"
       }
     }
   },
@@ -1174,7 +1174,7 @@
     "key": "028D",
     "mappings": {
       "default": {
-        "default": "거꾸로된 w"
+        "default": "반전된 w"
       }
     }
   },
@@ -1183,7 +1183,7 @@
     "key": "028E",
     "mappings": {
       "default": {
-        "default": "거꾸로된 y"
+        "default": "반전된 y"
       }
     }
   },
@@ -1255,7 +1255,7 @@
     "key": "029E",
     "mappings": {
       "default": {
-        "default": "거꾸로된 k"
+        "default": "반전된 k"
       }
     }
   },
@@ -1363,7 +1363,7 @@
     "key": "02AE",
     "mappings": {
       "default": {
-        "default": "낚시후크가 있는 거꾸로된 h"
+        "default": "낚시후크가 있는 반전된 h"
       }
     }
   },
@@ -1372,7 +1372,7 @@
     "key": "02AF",
     "mappings": {
       "default": {
-        "default": "낚시후크와 꼬리가 있는 거꾸로된 h"
+        "default": "낚시후크와 꼬리가 있는 반전된 h"
       }
     }
   },
@@ -1381,7 +1381,7 @@
     "key": "1D02",
     "mappings": {
       "default": {
-        "default": "거꾸로된 ae"
+        "default": "반전된 ae"
       }
     }
   },
@@ -1390,7 +1390,7 @@
     "key": "1D08",
     "mappings": {
       "default": {
-        "default": "거꾸로된 열린 e"
+        "default": "반전된 열린 e"
       }
     }
   },
@@ -1399,7 +1399,7 @@
     "key": "1D09",
     "mappings": {
       "default": {
-        "default": "거꾸로된 i"
+        "default": "반전된 i"
       }
     }
   },
@@ -1426,7 +1426,7 @@
     "key": "1D14",
     "mappings": {
       "default": {
-        "default": "거꾸로된 oe"
+        "default": "반전된 oe"
       }
     }
   },
@@ -1471,7 +1471,7 @@
     "key": "1D1F",
     "mappings": {
       "default": {
-        "default": "옆으로 누운 거꾸로된 m"
+        "default": "옆으로 누운 반전된 m"
       }
     }
   },
@@ -1606,7 +1606,7 @@
     "key": "1D77",
     "mappings": {
       "default": {
-        "default": "거꾸로된 g"
+        "default": "반전된 g"
       }
     }
   },

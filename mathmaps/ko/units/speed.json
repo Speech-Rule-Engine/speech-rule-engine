@@ -33,6 +33,6 @@
       }
     },
   "key": "kmh",
-  "names": ["kmh", "kilometers per hour"]
+  "names": ["kmh", "kph", "kilometers per hour"]
 }
 ]

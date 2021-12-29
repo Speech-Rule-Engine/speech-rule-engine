@@ -1518,7 +1518,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "거꾸로된 이중 프라임 따옴표"
+        "default": "반전된 이중 프라임 따옴표"
       }
     },
     "key": "301D"

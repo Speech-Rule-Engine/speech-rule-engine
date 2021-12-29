@@ -27,7 +27,7 @@ import {Numbers, NUMBERS as NUMB} from '../messages';
  * @param num The number to translate.
  * @return The string representation of that number.
  */
-function hundredsToWords_(num: number): string {
+function thousandsToWords_(num: number): string {
   let n = num % 10000;
   let str = '';
   str += NUMBERS.ones[Math.floor(n / 1000)] ?
@@ -56,7 +56,7 @@ function numberToWords(num: number): string {
   while (num > 0) {
     let hundreds = num % 10000;
     if (hundreds) {
-      str = hundredsToWords_(num % 10000) +
+      str = thousandsToWords_(num % 10000) +
           (pos ? NUMBERS.large[pos] + NUMBERS.numSep : '') + str;
     }
     num = Math.floor(num / 10000);
@@ -87,7 +87,8 @@ function numberToOrdinal(num: number, _plural: boolean): string {
 function wordOrdinal(num: number): string {
   let ordinal = numberToWords(num);
   num %= 100; let label = numberToWords(num);
-  if (!label || label === NUMBERS.zero) return ordinal;
+  if (!label || !num) return ordinal;
+  
   let tens = NUMBERS.tens[10 + Math.floor(num / 10)];
   let ones = NUMBERS.ones[10 + Math.floor(num % 10)];
   if (num === 20) tens = '스무';

@@ -4,10 +4,10 @@
     "key": "01D5",
     "mappings": {
       "default": {
-        "default": "두 점 위에 선이 위에 있는 대문자 유"
+        "default": "두 점 위에 선이 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "두 점 위에 선이 위에 있는 대문자 유"
+        "default": "두 점 위에 선이 있는 대문자 U"
       }
     }
   },
@@ -16,10 +16,10 @@
     "key": "01D7",
     "mappings": {
       "default": {
-        "default": "두 점 위에 양음 부호가 위에 있는 대문자 유"
+        "default": "두 점 위에 양음 부호가 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "두 점 위에 양음 부호가 위에 있는 대문자 유"
+        "default": "두 점 위에 양음 부호가 있는 대문자 U"
       }
     }
   },
@@ -28,10 +28,10 @@
     "key": "01D9",
     "mappings": {
       "default": {
-        "default": "두 점 위에 반대 곡절 부호가 위에 있는 대문자 유"
+        "default": "두 점 위에 반대 곡절 부호가 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "두 점 위에 반대 곡절 부호가 위에 있는 대문자 유"
+        "default": "두 점 위에 반대 곡절 부호가 있는 대문자 U"
       }
     }
   },
@@ -40,10 +40,10 @@
     "key": "01DB",
     "mappings": {
       "default": {
-        "default": "두 점 위에 억음 부호가 위에 있는 대문자 유"
+        "default": "두 점 위에 억음 부호가 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "두 점 위에 억음 부호가 위에 있는 대문자 유"
+        "default": "두 점 위에 억음 부호가 있는 대문자 U"
       }
     }
   },
@@ -52,10 +52,10 @@
     "key": "01DE",
     "mappings": {
       "default": {
-        "default": "두 점 위에 선이 위에 있는 대문자 에이"
+        "default": "두 점 위에 선이 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "두 점 위에 선이 위에 있는 대문자 에이"
+        "default": "두 점 위에 선이 있는 대문자 A"
       }
     }
   },
@@ -64,10 +64,10 @@
     "key": "01E0",
     "mappings": {
       "default": {
-        "default": "한 점 위에 선이 위에 있는 대문자 에이"
+        "default": "한 점 위에 선이 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "한 점 위에 선이 위에 있는 대문자 에이"
+        "default": "한 점 위에 선이 있는 대문자 A"
       }
     }
   },
@@ -76,10 +76,10 @@
     "key": "01EC",
     "mappings": {
       "default": {
-        "default": "오고넥과 위에 선이 있는 대문자 오"
+        "default": "오고넥과 위에 선이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "오고넥과 위에 선이 있는 대문자 오"
+        "default": "오고넥과 위에 선이 있는 대문자 O"
       }
     }
   },
@@ -88,10 +88,10 @@
     "key": "01FA",
     "mappings": {
       "default": {
-        "default": "링 위에 양음 부호가 위에 있는 대문자 에이"
+        "default": "링 위에 양음 부호가 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "링 위에 양음 부호가 위에 있는 대문자 에이"
+        "default": "링 위에 양음 부호가 있는 대문자 A"
       }
     }
   },
@@ -100,10 +100,10 @@
     "key": "022A",
     "mappings": {
       "default": {
-        "default": "두 점 위에 선이 위에 있는 대문자 오"
+        "default": "두 점 위에 선이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "두 점 위에 선이 위에 있는 대문자 오"
+        "default": "두 점 위에 선이 있는 대문자 O"
       }
     }
   },
@@ -112,10 +112,10 @@
     "key": "022C",
     "mappings": {
       "default": {
-        "default": "물결표 위에 선이 위에 있는 대문자 오"
+        "default": "물결표 위에 선이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "물결표 위에 선이 위에 있는 대문자 오"
+        "default": "물결표 위에 선이 있는 대문자 O"
       }
     }
   },
@@ -124,10 +124,10 @@
     "key": "0230",
     "mappings": {
       "default": {
-        "default": "한 점 위에 선이 위에 있는 대문자 오"
+        "default": "한 점 위에 선이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "한 점 위에 선이 위에 있는 대문자 오"
+        "default": "한 점 위에 선이 있는 대문자 O"
       }
     }
   },
@@ -136,10 +136,10 @@
     "key": "1E08",
     "mappings": {
       "default": {
-        "default": "세디유 위에 양음 부호가 있는 대문자 씨"
+        "default": "세디유 위에 양음 부호가 있는 대문자 C"
       },
       "mathspeak": {
-        "default": "세디유 위에 양음 부호가 있는 대문자 씨"
+        "default": "세디유 위에 양음 부호가 있는 대문자 C"
       }
     }
   },
@@ -148,10 +148,10 @@
     "key": "1E14",
     "mappings": {
       "default": {
-        "default": "선 위에 억음 부호가 위에 있는 대문자 이"
+        "default": "선 위에 억음 부호가 있는 대문자 E"
       },
       "mathspeak": {
-        "default": "선 위에 억음 부호가 위에 있는 대문자 이"
+        "default": "선 위에 억음 부호가 있는 대문자 E"
       }
     }
   },
@@ -160,10 +160,10 @@
     "key": "1E16",
     "mappings": {
       "default": {
-        "default": "선 위에 양음 부호가 위에 있는 대문자 이"
+        "default": "선 위에 양음 부호가 있는 대문자 E"
       },
       "mathspeak": {
-        "default": "선 위에 양음 부호가 위에 있는 대문자 이"
+        "default": "선 위에 양음 부호가 있는 대문자 E"
       }
     }
   },
@@ -172,10 +172,10 @@
     "key": "1E1C",
     "mappings": {
       "default": {
-        "default": "세디유 위에 단음 부호가 있는 대문자 이"
+        "default": "세디유 위에 단음 부호가 있는 대문자 E"
       },
       "mathspeak": {
-        "default": "세디유 위에 단음 부호가 있는 대문자 이"
+        "default": "세디유 위에 단음 부호가 있는 대문자 E"
       }
     }
   },
@@ -184,10 +184,10 @@
     "key": "1E2E",
     "mappings": {
       "default": {
-        "default": "두 점 위에 양음 부호가 위에 있는 대문자 아이"
+        "default": "두 점 위에 양음 부호가 있는 대문자 I"
       },
       "mathspeak": {
-        "default": "두 점 위에 양음 부호가 위에 있는 대문자 아이"
+        "default": "두 점 위에 양음 부호가 있는 대문자 I"
       }
     }
   },
@@ -196,10 +196,10 @@
     "key": "1E38",
     "mappings": {
       "default": {
-        "default": "아래점과 위에 선이 있는 대문자 엘"
+        "default": "아래점과 위에 선이 있는 대문자 L"
       },
       "mathspeak": {
-        "default": "아래점과 위에 선이 있는 대문자 엘"
+        "default": "아래점과 위에 선이 있는 대문자 L"
       }
     }
   },
@@ -208,10 +208,10 @@
     "key": "1E4C",
     "mappings": {
       "default": {
-        "default": "물결표 위에 양음 부호가 위에 있는 대문자 오"
+        "default": "물결표 위에 양음 부호가 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "물결표 위에 양음 부호가 위에 있는 대문자 오"
+        "default": "물결표 위에 양음 부호가 있는 대문자 O"
       }
     }
   },
@@ -220,10 +220,10 @@
     "key": "1E4E",
     "mappings": {
       "default": {
-        "default": "물결표 위에 두 점이 위에 있는 대문자 오"
+        "default": "물결표 위에 두 점이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "물결표 위에 두 점이 위에 있는 대문자 오"
+        "default": "물결표 위에 두 점이 있는 대문자 O"
       }
     }
   },
@@ -232,10 +232,10 @@
     "key": "1E50",
     "mappings": {
       "default": {
-        "default": "선 위에 억음 부호가 위에 있는 대문자 오"
+        "default": "선 위에 억음 부호가 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "선 위에 억음 부호가 위에 있는 대문자 오"
+        "default": "선 위에 억음 부호가 있는 대문자 O"
       }
     }
   },
@@ -244,10 +244,10 @@
     "key": "1E52",
     "mappings": {
       "default": {
-        "default": "선 위에 양음 부호가 위에 있는 대문자 오"
+        "default": "선 위에 양음 부호가 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "선 위에 양음 부호가 위에 있는 대문자 오"
+        "default": "선 위에 양음 부호가 있는 대문자 O"
       }
     }
   },
@@ -256,10 +256,10 @@
     "key": "1E5C",
     "mappings": {
       "default": {
-        "default": "아래점과 위에 선이 있는 대문자 알"
+        "default": "아래점과 위에 선이 있는 대문자 R"
       },
       "mathspeak": {
-        "default": "아래점과 위에 선이 있는 대문자 알"
+        "default": "아래점과 위에 선이 있는 대문자 R"
       }
     }
   },
@@ -268,10 +268,10 @@
     "key": "1E64",
     "mappings": {
       "default": {
-        "default": "양음 부호 위에 점이 위에 있는 대문자 에스"
+        "default": "양음 부호 위에 점이 있는 대문자 S"
       },
       "mathspeak": {
-        "default": "양음 부호 위에 점이 위에 있는 대문자 에스"
+        "default": "양음 부호 위에 점이 있는 대문자 S"
       }
     }
   },
@@ -280,10 +280,10 @@
     "key": "1E66",
     "mappings": {
       "default": {
-        "default": "반대 곡절 부호 위에 점이 위에 있는 대문자 에스"
+        "default": "반대 곡절 부호 위에 점이 있는 대문자 S"
       },
       "mathspeak": {
-        "default": "반대 곡절 부호 위에 점이 위에 있는 대문자 에스"
+        "default": "반대 곡절 부호 위에 점이 있는 대문자 S"
       }
     }
   },
@@ -292,10 +292,10 @@
     "key": "1E68",
     "mappings": {
       "default": {
-        "default": "아래점과 위에 점이 있는 대문자 에스"
+        "default": "아래점과 위에 점이 있는 대문자 S"
       },
       "mathspeak": {
-        "default": "아래점과 위에 점이 있는 대문자 에스"
+        "default": "아래점과 위에 점이 있는 대문자 S"
       }
     }
   },
@@ -304,10 +304,10 @@
     "key": "1E78",
     "mappings": {
       "default": {
-        "default": "물결표 위에 양음 부호가 위에 있는 대문자 유"
+        "default": "물결표 위에 양음 부호가 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "물결표 위에 양음 부호가 위에 있는 대문자 유"
+        "default": "물결표 위에 양음 부호가 있는 대문자 U"
       }
     }
   },
@@ -316,10 +316,10 @@
     "key": "1E7A",
     "mappings": {
       "default": {
-        "default": "선 위에 두 점이 위에 있는 대문자 유"
+        "default": "선 위에 두 점이 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "선 위에 두 점이 위에 있는 대문자 유"
+        "default": "선 위에 두 점이 있는 대문자 U"
       }
     }
   },
@@ -328,10 +328,10 @@
     "key": "1EA4",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 양음 부호가 있는 대문자 에이"
+        "default": "곡절 부호와 양음 부호가 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "곡절 부호와 양음 부호가 있는 대문자 에이"
+        "default": "곡절 부호와 양음 부호가 있는 대문자 A"
       }
     }
   },
@@ -340,10 +340,10 @@
     "key": "1EA6",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 억음 부호가 있는 대문자 에이"
+        "default": "곡절 부호와 억음 부호가 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "곡절 부호와 억음 부호가 있는 대문자 에이"
+        "default": "곡절 부호와 억음 부호가 있는 대문자 A"
       }
     }
   },
@@ -352,10 +352,10 @@
     "key": "1EA8",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 후크가 위에 있는 대문자 에이"
+        "default": "곡절 부호와 후크가 위에 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "곡절 부호와 후크가 위에 있는 대문자 에이"
+        "default": "곡절 부호와 후크가 위에 있는 대문자 A"
       }
     }
   },
@@ -364,10 +364,10 @@
     "key": "1EAA",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 물결표가 있는 대문자 에이"
+        "default": "곡절 부호와 물결표가 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "곡절 부호와 물결표가 있는 대문자 에이"
+        "default": "곡절 부호와 물결표가 있는 대문자 A"
       }
     }
   },
@@ -376,10 +376,10 @@
     "key": "1EAC",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 아래점이 있는 대문자 에이"
+        "default": "곡절 부호와 아래점이 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "곡절 부호와 아래점이 있는 대문자 에이"
+        "default": "곡절 부호와 아래점이 있는 대문자 A"
       }
     }
   },
@@ -388,10 +388,10 @@
     "key": "1EAE",
     "mappings": {
       "default": {
-        "default": "단음 부호와 양음 부호가 있는 대문자 에이"
+        "default": "단음 부호와 양음 부호가 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "단음 부호와 양음 부호가 있는 대문자 에이"
+        "default": "단음 부호와 양음 부호가 있는 대문자 A"
       }
     }
   },
@@ -400,10 +400,10 @@
     "key": "1EB0",
     "mappings": {
       "default": {
-        "default": "단음 부호와 억음 부호가 있는 대문자 에이"
+        "default": "단음 부호와 억음 부호가 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "단음 부호와 억음 부호가 있는 대문자 에이"
+        "default": "단음 부호와 억음 부호가 있는 대문자 A"
       }
     }
   },
@@ -412,10 +412,10 @@
     "key": "1EB2",
     "mappings": {
       "default": {
-        "default": "단음 부호 위에 후크가 있는 대문자 에이"
+        "default": "단음 부호 위에 후크가 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "단음 부호 위에 후크가 있는 대문자 에이"
+        "default": "단음 부호 위에 후크가 있는 대문자 A"
       }
     }
   },
@@ -424,10 +424,10 @@
     "key": "1EB4",
     "mappings": {
       "default": {
-        "default": "단음 부호와 물결표가 있는 대문자 에이"
+        "default": "단음 부호와 물결표가 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "단음 부호와 물결표가 있는 대문자 에이"
+        "default": "단음 부호와 물결표가 있는 대문자 A"
       }
     }
   },
@@ -436,10 +436,10 @@
     "key": "1EB6",
     "mappings": {
       "default": {
-        "default": "단음 부호와 아래점이 있는 대문자 에이"
+        "default": "단음 부호와 아래점이 있는 대문자 A"
       },
       "mathspeak": {
-        "default": "단음 부호와 아래점이 있는 대문자 에이"
+        "default": "단음 부호와 아래점이 있는 대문자 A"
       }
     }
   },
@@ -448,10 +448,10 @@
     "key": "1EBE",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 양음 부호가 있는 대문자 이"
+        "default": "곡절 부호와 양음 부호가 있는 대문자 E"
       },
       "mathspeak": {
-        "default": "곡절 부호와 양음 부호가 있는 대문자 이"
+        "default": "곡절 부호와 양음 부호가 있는 대문자 E"
       }
     }
   },
@@ -460,10 +460,10 @@
     "key": "1EC0",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 억음 부호가 있는 대문자 이"
+        "default": "곡절 부호와 억음 부호가 있는 대문자 E"
       },
       "mathspeak": {
-        "default": "곡절 부호와 억음 부호가 있는 대문자 이"
+        "default": "곡절 부호와 억음 부호가 있는 대문자 E"
       }
     }
   },
@@ -472,10 +472,10 @@
     "key": "1EC2",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 후크가 위에 있는 대문자 이"
+        "default": "곡절 부호와 후크가 위에 있는 대문자 E"
       },
       "mathspeak": {
-        "default": "곡절 부호와 후크가 위에 있는 대문자 이"
+        "default": "곡절 부호와 후크가 위에 있는 대문자 E"
       }
     }
   },
@@ -484,10 +484,10 @@
     "key": "1EC4",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 물결표가 있는 대문자 이"
+        "default": "곡절 부호와 물결표가 있는 대문자 E"
       },
       "mathspeak": {
-        "default": "곡절 부호와 물결표가 있는 대문자 이"
+        "default": "곡절 부호와 물결표가 있는 대문자 E"
       }
     }
   },
@@ -496,10 +496,10 @@
     "key": "1EC6",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 아래점이 있는 대문자 이"
+        "default": "곡절 부호와 아래점이 있는 대문자 E"
       },
       "mathspeak": {
-        "default": "곡절 부호와 아래점이 있는 대문자 이"
+        "default": "곡절 부호와 아래점이 있는 대문자 E"
       }
     }
   },
@@ -508,10 +508,10 @@
     "key": "1ED0",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 양음 부호가 있는 대문자 오"
+        "default": "곡절 부호와 양음 부호가 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "곡절 부호와 양음 부호가 있는 대문자 오"
+        "default": "곡절 부호와 양음 부호가 있는 대문자 O"
       }
     }
   },
@@ -520,10 +520,10 @@
     "key": "1ED2",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 억음 부호가 있는 대문자 오"
+        "default": "곡절 부호와 억음 부호가 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "곡절 부호와 억음 부호가 있는 대문자 오"
+        "default": "곡절 부호와 억음 부호가 있는 대문자 O"
       }
     }
   },
@@ -532,10 +532,10 @@
     "key": "1ED4",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 후크가 위에 있는 대문자 오"
+        "default": "곡절 부호와 후크가 위에 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "곡절 부호와 후크가 위에 있는 대문자 오"
+        "default": "곡절 부호와 후크가 위에 있는 대문자 O"
       }
     }
   },
@@ -544,10 +544,10 @@
     "key": "1ED6",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 물결표가 있는 대문자 오"
+        "default": "곡절 부호와 물결표가 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "곡절 부호와 물결표가 있는 대문자 오"
+        "default": "곡절 부호와 물결표가 있는 대문자 O"
       }
     }
   },
@@ -556,10 +556,10 @@
     "key": "1ED8",
     "mappings": {
       "default": {
-        "default": "곡절 부호와 아래점이 있는 대문자 오"
+        "default": "곡절 부호와 아래점이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "곡절 부호와 아래점이 있는 대문자 오"
+        "default": "곡절 부호와 아래점이 있는 대문자 O"
       }
     }
   },
@@ -568,10 +568,10 @@
     "key": "1EDA",
     "mappings": {
       "default": {
-        "default": "양음 부호와 프라임이 있는 대문자 오"
+        "default": "양음 부호와 프라임이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "양음 부호와 프라임이 있는 대문자 오"
+        "default": "양음 부호와 프라임이 있는 대문자 O"
       }
     }
   },
@@ -580,10 +580,10 @@
     "key": "1EDC",
     "mappings": {
       "default": {
-        "default": "억음 부호와 프라임이 있는 대문자 오"
+        "default": "억음 부호와 프라임이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "억음 부호와 프라임이 있는 대문자 오"
+        "default": "억음 부호와 프라임이 있는 대문자 O"
       }
     }
   },
@@ -592,10 +592,10 @@
     "key": "1EDE",
     "mappings": {
       "default": {
-        "default": "후크 위에 프라임이 있는 대문자 오"
+        "default": "후크 위에 프라임이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "후크 위에 프라임이 있는 대문자 오"
+        "default": "후크 위에 프라임이 있는 대문자 O"
       }
     }
   },
@@ -604,10 +604,10 @@
     "key": "1EE0",
     "mappings": {
       "default": {
-        "default": "물결표와 프라임이 있는 대문자 오"
+        "default": "물결표와 프라임이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "물결표와 프라임이 있는 대문자 오"
+        "default": "물결표와 프라임이 있는 대문자 O"
       }
     }
   },
@@ -616,10 +616,10 @@
     "key": "1EE2",
     "mappings": {
       "default": {
-        "default": "아래점과 프라임이 있는 대문자 오"
+        "default": "아래점과 프라임이 있는 대문자 O"
       },
       "mathspeak": {
-        "default": "아래점과 프라임이 있는 대문자 오"
+        "default": "아래점과 프라임이 있는 대문자 O"
       }
     }
   },
@@ -628,10 +628,10 @@
     "key": "1EE8",
     "mappings": {
       "default": {
-        "default": "양음 부호와 프라임이 있는 대문자 유"
+        "default": "양음 부호와 프라임이 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "양음 부호와 프라임이 있는 대문자 유"
+        "default": "양음 부호와 프라임이 있는 대문자 U"
       }
     }
   },
@@ -640,10 +640,10 @@
     "key": "1EEA",
     "mappings": {
       "default": {
-        "default": "억음 부호와 프라임이 있는 대문자 유"
+        "default": "억음 부호와 프라임이 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "억음 부호와 프라임이 있는 대문자 유"
+        "default": "억음 부호와 프라임이 있는 대문자 U"
       }
     }
   },
@@ -652,10 +652,10 @@
     "key": "1EEC",
     "mappings": {
       "default": {
-        "default": "후크 위에 프라임이 있는 대문자 유"
+        "default": "후크 위에 프라임이 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "후크 위에 프라임이 있는 대문자 유"
+        "default": "후크 위에 프라임이 있는 대문자 U"
       }
     }
   },
@@ -664,10 +664,10 @@
     "key": "1EEE",
     "mappings": {
       "default": {
-        "default": "물결표와 프라임이 있는 대문자 유"
+        "default": "물결표와 프라임이 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "물결표와 프라임이 있는 대문자 유"
+        "default": "물결표와 프라임이 있는 대문자 U"
       }
     }
   },
@@ -676,10 +676,10 @@
     "key": "1EF0",
     "mappings": {
       "default": {
-        "default": "아래점과 프라임이 있는 대문자 유"
+        "default": "아래점과 프라임이 있는 대문자 U"
       },
       "mathspeak": {
-        "default": "아래점과 프라임이 있는 대문자 유"
+        "default": "아래점과 프라임이 있는 대문자 U"
       }
     }
   }

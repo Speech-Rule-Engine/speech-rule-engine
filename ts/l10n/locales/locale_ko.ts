@@ -40,6 +40,9 @@ function create(): Locale {
   let loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.FUNCTIONS.plural = function(unit: string) { return unit };
+  loc.FUNCTIONS.si = (prefix: string, unit: string) => {
+    return prefix + unit;
+  };
   loc.FUNCTIONS.combineRootIndex = function(index: string, postfix: string) {
     return index + postfix;
   };
@@ -72,23 +75,6 @@ function create(): Locale {
 
     return (temp !== undefined && final) ? temp : name;
   }
-  /*
-  loc.CORRECTIONS.postposition = (name: string) => {
-    if (name === '같다') name = '는';
-    let temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
-    if (temp !== undefined) {
-      return Grammar.getInstance().getParameter('final') ? temp : name;
-    }
 
-    let char = name.slice(-1);
-    let value = (char.charCodeAt(0) - 44032) % 28;
-    
-    final = (value > 0) ? true : false;
-    if (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) final = true;
-    Grammar.getInstance().setParameter('final', final);
-    return name;
-  }
-  */
-  
   return loc;
 }

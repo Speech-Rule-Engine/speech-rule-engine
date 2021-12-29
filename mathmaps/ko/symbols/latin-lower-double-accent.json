@@ -4,7 +4,7 @@
     "key": "01D6",
     "mappings": {
       "default": {
-        "default": "두 점 위에 선이 위에 있는 u"
+        "default": "두 점 위에 선이 있는 u"
       }
     }
   },
@@ -13,7 +13,7 @@
     "key": "01D8",
     "mappings": {
       "default": {
-        "default": "두 점 위에 양음 부호가 위에 있는 u"
+        "default": "두 점 위에 양음 부호가 있는 u"
       }
     }
   },
@@ -22,7 +22,7 @@
     "key": "01DA",
     "mappings": {
       "default": {
-        "default": "두 점 위에 반대 곡절 부호가 위에 있는 u"
+        "default": "두 점 위에 반대 곡절 부호가 있는 u"
       }
     }
   },
@@ -31,7 +31,7 @@
     "key": "01DC",
     "mappings": {
       "default": {
-        "default": "두 점 위에 억음 부호가 위에 있는 u"
+        "default": "두 점 위에 억음 부호가 있는 u"
       }
     }
   },
@@ -40,7 +40,7 @@
     "key": "01DF",
     "mappings": {
       "default": {
-        "default": "두 점 위에 선이 위에 있는 a"
+        "default": "두 점 위에 선이 있는 a"
       }
     }
   },
@@ -49,7 +49,7 @@
     "key": "01E1",
     "mappings": {
       "default": {
-        "default": "한 점 위에 선이 위에 있는 a"
+        "default": "한 점 위에 선이 있는 a"
       }
     }
   },
@@ -67,7 +67,7 @@
     "key": "01FB",
     "mappings": {
       "default": {
-        "default": "링 위에 양음 부호가 위에 있는 a"
+        "default": "링 위에 양음 부호가 있는 a"
       }
     }
   },
@@ -76,7 +76,7 @@
     "key": "022B",
     "mappings": {
       "default": {
-        "default": "두 점 위에 선이 위에 있는 o"
+        "default": "두 점 위에 선이 있는 o"
       }
     }
   },
@@ -85,7 +85,7 @@
     "key": "022D",
     "mappings": {
       "default": {
-        "default": "물결표 위에 선이 위에 있는 o"
+        "default": "물결표 위에 선이 있는 o"
       }
     }
   },
@@ -94,7 +94,7 @@
     "key": "0231",
     "mappings": {
       "default": {
-        "default": "한 점 위에 선이 위에 있는 o"
+        "default": "한 점 위에 선이 있는 o"
       }
     }
   },
@@ -112,7 +112,7 @@
     "key": "1E15",
     "mappings": {
       "default": {
-        "default": "선 위에 억음 부호가 위에 있는 e"
+        "default": "선 위에 억음 부호가 있는 e"
       }
     }
   },
@@ -121,7 +121,7 @@
     "key": "1E17",
     "mappings": {
       "default": {
-        "default": "선 위에 양음 부호가 위에 있는 e"
+        "default": "선 위에 양음 부호가 있는 e"
       }
     }
   },
@@ -139,7 +139,7 @@
     "key": "1E2F",
     "mappings": {
       "default": {
-        "default": "두 점 위에 양음 부호가 위에 있는 i"
+        "default": "두 점 위에 양음 부호가 있는 i"
       }
     }
   },
@@ -157,7 +157,7 @@
     "key": "1E4D",
     "mappings": {
       "default": {
-        "default": "물결표 위에 양음 부호가 위에 있는 o"
+        "default": "물결표 위에 양음 부호가 있는 o"
       }
     }
   },
@@ -166,7 +166,7 @@
     "key": "1E4F",
     "mappings": {
       "default": {
-        "default": "물결표 위에 두 점이 위에 있는 o"
+        "default": "물결표 위에 두 점이 있는 o"
       }
     }
   },
@@ -175,7 +175,7 @@
     "key": "1E51",
     "mappings": {
       "default": {
-        "default": "선 위에 억음 부호가 위에 있는 o"
+        "default": "선 위에 억음 부호가 있는 o"
       }
     }
   },
@@ -184,7 +184,7 @@
     "key": "1E53",
     "mappings": {
       "default": {
-        "default": "선 위에 양음 부호가 위에 있는 o"
+        "default": "선 위에 양음 부호가 있는 o"
       }
     }
   },
@@ -202,7 +202,7 @@
     "key": "1E65",
     "mappings": {
       "default": {
-        "default": "양음 부호 위에 점이 위에 있는 s"
+        "default": "양음 부호 위에 점이 있는 s"
       }
     }
   },
@@ -211,7 +211,7 @@
     "key": "1E67",
     "mappings": {
       "default": {
-        "default": "반대 곡절 부호 위에 점이 위에 있는 s"
+        "default": "반대 곡절 부호 위에 점이 있는 s"
       }
     }
   },
@@ -220,7 +220,7 @@
     "key": "1E69",
     "mappings": {
       "default": {
-        "default": "아래점과 위에 점이 있는 s"
+        "default": "아래와 위에 점이 있는 s"
       }
     }
   },
@@ -229,7 +229,7 @@
     "key": "1E79",
     "mappings": {
       "default": {
-        "default": "물결표 위에 양음 부호가 위에 있는 u"
+        "default": "물결표 위에 양음 부호가 있는 u"
       }
     }
   },
@@ -238,7 +238,7 @@
     "key": "1E7B",
     "mappings": {
       "default": {
-        "default": "선 위에 두 점이 위에 있는 u"
+        "default": "선 위에 두 점이 있는 u"
       }
     }
   },
