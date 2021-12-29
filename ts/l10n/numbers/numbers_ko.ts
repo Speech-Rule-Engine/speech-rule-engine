@@ -31,15 +31,13 @@ function hundredsToWords_(num: number): string {
   let n = num % 10000;
   let str = '';
   str += NUMBERS.ones[Math.floor(n / 1000)] ?
-      NUMBERS.ones[Math.floor(n / 1000)] + '천' : '';
+      (Math.floor(n / 1000) === 1 ? '천' : NUMBERS.ones[Math.floor(n / 1000)] + '천') : '';
   n = n % 1000;
   if (n) {
     str += NUMBERS.ones[Math.floor(n / 100)] ?
-      NUMBERS.ones[Math.floor(n / 100)] + '백' : '';
+      (Math.floor(n / 100) === 1 ? '백' : NUMBERS.ones[Math.floor(n / 100)] + '백') : '';
     n = n % 100;
-    str += NUMBERS.ones[n] ||
-        NUMBERS.tens[Math.floor(n / 10)] +
-            (n % 10 ? NUMBERS.ones[n % 10] : '');
+    str += NUMBERS.tens[Math.floor(n / 10)] + (n % 10 ? NUMBERS.ones[n % 10] : '');
   }
   return str;
 }
@@ -51,12 +49,8 @@ function hundredsToWords_(num: number): string {
  * @return The string representation of that number.
  */
 function numberToWords(num: number): string {
-  if (num === 0) {
-    return NUMBERS.zero;
-  }
-  if (num >= Math.pow(10, 36)) {
-    return num.toString();
-  }
+  if (num === 0) return NUMBERS.zero;
+  if (num >= Math.pow(10, 36)) return num.toString();
   let pos = 0;
   let str = '';
   while (num > 0) {
@@ -93,7 +87,7 @@ function numberToOrdinal(num: number, _plural: boolean): string {
 function wordOrdinal(num: number): string {
   let ordinal = numberToWords(num);
   num %= 100; let label = numberToWords(num);
-  if (!label) return ordinal;
+  if (!label || label === NUMBERS.zero) return ordinal;
   let tens = NUMBERS.tens[10 + Math.floor(num / 10)];
   let ones = NUMBERS.ones[10 + Math.floor(num % 10)];
   if (num === 20) tens = '스무';
