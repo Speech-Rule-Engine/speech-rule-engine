@@ -64,13 +64,11 @@ function create(): Locale {
    */
   loc.CORRECTIONS.postposition = (name: string) => {
     if (['같다', '는', '와', '를', '로'].includes(name)) return name;
-    
     const char = name.slice(-1);
-    
     const value = (char.charCodeAt(0) - 44032) % 28;
+    
     let final = (value > 0) ? true : false;
     if (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) final = true;
-    
     Grammar.getInstance().setParameter('final', final);
     return name;
   }

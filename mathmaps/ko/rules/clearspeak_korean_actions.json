@@ -282,12 +282,12 @@
     [
       "Action",
       "function-prefix-as-exp",
-      "[n] children/*[2]; [t] \"의\" (pause:short); [n] children/*[1] (pause:short)"
+      "[n] children/*[1]; [t] \"의\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
       "function-prefix-subscript-as-exp",
-      "[n] children/*[2]; [t] \"의\" (pause:short); [n] children/*[1] (pause:short)"
+      "[n] children/*[1]; [t] \"의\" (pause:short); [n] children/*[2] (pause:short)"
     ],
     [
       "Action",
@@ -1262,12 +1262,12 @@
     [
       "Action",
       "cancel-over",
-      "[n] children/*[1]/children/*[1]; [t] \"소거된\"; [n] children/*[2]"
+      "[n] children/*[1]/children/*[1] (grammar:postposition); [t] \"를\" (grammar:article); [n] children/*[2] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"소거\""
     ],
     [
       "Action",
       "cancel-under",
-      "[n] children/*[2]/children/*[1]; [t] \"소거된\"; [n] children/*[1]"
+      "[n] children/*[2]/children/*[1] (grammar:postposition); [t] \"를\" (grammar:article); [n] children/*[1] (grammar:postposition); [t] \"로\" (grammar:article); [t] \"소거\""
     ],
     [
       "Action",
