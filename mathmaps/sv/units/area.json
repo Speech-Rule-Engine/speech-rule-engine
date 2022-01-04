@@ -14,7 +14,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "square",
+        "plural": "square"
       }
     }
   },
@@ -113,7 +114,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hectare",
+        "plural": "hectares"
       }
     }
   }

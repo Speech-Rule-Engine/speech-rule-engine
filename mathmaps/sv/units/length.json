@@ -109,7 +109,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "furlong",
+        "plural": "furlongs"
       }
     }
   },
@@ -121,7 +122,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nautical mile",
+        "plural": "nautical miles"
       }
     }
   },

@@ -24,7 +24,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "second",
+        "plural": "seconds"
       }
     }
   },
@@ -37,7 +38,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minute",
+        "plural": "minutes"
       }
     }
   },
@@ -49,7 +51,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "degree",
+        "plural": "degrees"
       }
     }
   },
@@ -62,7 +65,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hour",
+        "plural": "hours"
       }
     }
   }

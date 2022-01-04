@@ -10,7 +10,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bit",
+        "plural": "bits"
       }
     }
   },
@@ -23,7 +24,8 @@
     "si": true,
     "mappings": {
       "default": {
-        "default": ""
+        "default": "byte",
+        "plural": "bytes"
       }
     }
   },
@@ -35,7 +37,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kilobyte",
+        "plural": "kilobytes"
       }
     }
   }

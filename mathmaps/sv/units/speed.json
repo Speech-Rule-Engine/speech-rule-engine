@@ -11,7 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "knot",
+        "plural": "knots"
       }
     }
   },
@@ -36,7 +37,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "revolutions per minute",
+        "plural": "revolutions per minutes"
       }
     }
   },
@@ -48,7 +50,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kilometers per hour",
+        "plural": "kilometers per hours"
       }
     }
   }

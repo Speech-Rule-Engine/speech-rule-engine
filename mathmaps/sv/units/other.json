@@ -13,7 +13,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dozen",
+        "plural": "dozen"
       }
     }
   }

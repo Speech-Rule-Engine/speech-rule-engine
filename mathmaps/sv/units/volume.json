@@ -11,7 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "cubic",
+        "plural": "cubic"
       }
     }
   },
@@ -194,7 +195,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "cubic centimeter",
+        "plural": "cubic centimeters"
       }
     }
   },
