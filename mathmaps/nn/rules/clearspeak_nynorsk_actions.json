@@ -292,7 +292,7 @@
     [
       "Action",
       "superscript-simple-function",
-      "[t] \"med eksponent\" (pause:short); [n] children/*[1]"
+      "[n] children/*[1]; [t] \"med eksponent\" (pause:short); [n] children/*[1]"
     ],
     [
       "Action",
@@ -622,12 +622,12 @@
     [
       "Action",
       "root",
-      "[t] \"rota av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[n] children/*[1] (grammar:ordinal); [t] \"rota av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
       "root-nested",
-      "[p] (pause:short); [t] \"rota av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
+      "[p] (pause:short); [n] children/*[1] (grammar:ordinal); [t] \"rota av\"; [n] children/*[2] (pause:short, grammar:!EndRoot)"
     ],
     [
       "Action",
