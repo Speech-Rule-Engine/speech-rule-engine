@@ -1,0 +1,89 @@
+{
+  "kind": "numbers",
+  "locale": "sv",
+  "messages": {
+    "zero": "",
+    "ones": [
+      "",
+      "ett",
+      "två",
+      "tre",
+      "fyra",
+      "fem",
+      "sex",
+      "sju",
+      "åtta",
+      "nio",
+      "tio",
+      "elva",
+      "tolv",
+      "tretton",
+      "fjorton",
+      "femton",
+      "sexton",
+      "sjutton",
+      "arton",
+      "nitton"
+    ],
+    "tens": [
+      "",
+      "",
+      "tjugo",
+      "trettio",
+      "fyrtio",
+      "femtio",
+      "sextio",
+      "sjuttio",
+      "åttio",
+      "nittio"
+    ],
+    "large": [
+      "",
+      "tusen",
+      "miljon",
+      "miljard",
+      "biljon",
+      "biljard",
+      "triljon",
+      "triljard",
+      "kvadriljon",
+      "kvadriljard",
+      "kvintiljon",
+      "kvintiljard"
+    ],
+    "vulgarSep": " ",
+    "numSep": "",
+    "hundreds": [
+      "hundra",
+      "tvåhundra",
+      "trehundra",
+      "fyrahundra",
+      "femhundra",
+      "sexhundra",
+      "sjuhundra",
+      "åttahundra",
+      "niohundra"
+    ],
+    "twenties": {
+      "21": "tjugoett",
+      "22": "tjugotvå",
+      "23": "tjugotre",
+      "24": "tjugofyra",
+      "25": "tjugofem",
+      "26": "tjugosex",
+      "27": "tjugosju",
+      "28": "tjugoåtta",
+      "29": "tjugonio"
+    },
+    "thirties": {
+      "31": "trettioett"
+    },
+    "rest": {
+      "101": "hundraett",
+      "2000": "tvåtusen",
+      "2000000": "två miljoner",
+      "2000000000": "två miljarder",
+      " ": ""
+    }
+  }
+}
