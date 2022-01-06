@@ -68,19 +68,11 @@ function get_<T>(name: string): Processor<T> {
  */
 export function process<T>(name: string, expr: string): T {
   const processor = get_(name);
-  return processor.processor(expr) as T;
-}
-
-/**
- * Processes an expression with the given processor.
- *
- * @param name The name of the processor.
- * @param expr The expression to process.
- * @returns The data structure resulting from the processing the expression.
- */
-export function processOnly<T>(name: string, expr: string): T {
-  const processor = get_(name);
-  return processor.process(expr) as T;
+  try {
+    return processor.processor(expr) as T;
+  } catch (_e) {
+    throw new SREError('Processing error for expression ' + expr);
+  }
 }
 
 /**
@@ -106,10 +98,14 @@ export function print<T>(name: string, data: T): string {
  */
 export function output(name: string, expr: string): string {
   const processor = get_(name);
-  const data = processor.processor(expr);
-  return Engine.getInstance().pprint
-    ? processor.pprint(data)
-    : processor.print(data);
+  try {
+    const data = processor.processor(expr);
+    return Engine.getInstance().pprint
+      ? processor.pprint(data)
+      : processor.print(data);
+  } catch (_e) {
+    throw new SREError('Processing error for expression ' + expr);
+  }
 }
 
 /**
