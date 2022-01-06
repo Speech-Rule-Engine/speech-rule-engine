@@ -31,7 +31,7 @@ import * as DomUtil from './dom_util';
 import Engine, { SREError } from './engine';
 import * as EngineConst from '../common/engine_const';
 import { KeyCode } from './event_util';
-import { Processor, KeyProcessor } from './processors';
+import { Processor, KeyProcessor } from './processor';
 import * as XpathUtil from './xpath_util';
 
 const PROCESSORS = new Map();
