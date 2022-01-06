@@ -121,10 +121,10 @@
       "Omega"
     ],
     "capPrefix": {
-      "default": "Large character"
+      "default": "stort"
     },
     "smallPrefix": {
-      "default": "Small character"
+      "default": ""
     },
     "digitPrefix": {
       "default": ""

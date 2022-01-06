@@ -259,7 +259,7 @@
     "key": "2060",
     "mappings": {
       "default": {
-        "default": "Word Joiner"
+        "default": "Wortverbinding"
       }
     }
   },
@@ -276,7 +276,7 @@
     "key": "2062",
     "mappings": {
       "default": {
-        "default": " "
+        "default": "mal"
       }
     },
     "category": "Cf"
@@ -285,7 +285,7 @@
     "key": "2063",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "Komma"
       }
     },
     "category": "Cf"
@@ -295,7 +295,7 @@
     "key": "2064",
     "mappings": {
       "default": {
-        "default": "Unsichtbares Plus"
+        "default": "plus"
       }
     }
   },
