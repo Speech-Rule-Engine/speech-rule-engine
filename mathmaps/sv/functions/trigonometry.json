@@ -85,7 +85,10 @@
     "mappings": {
       "default": {
         "default": "arcus cosinus"
-      }
+      },
+     "clearspeak": {
+       "Trig_TrigInverse": "cosinus invers"
+     }
     }
   },
   {
@@ -97,6 +100,9 @@
     "mappings": {
       "default": {
         "default": "arcus cotangens"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "cotangens invers"
       }
     }
   },
@@ -109,6 +115,9 @@
     "mappings": {
       "default": {
         "default": "arcus cosecans"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "cosecans invers"
       }
     }
   },
@@ -121,6 +130,9 @@
     "mappings": {
       "default": {
         "default": "arcus secans"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "secans invers"
       }
     }
   },
@@ -133,6 +145,9 @@
     "mappings": {
       "default": {
         "default": "arcus sinus"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "sinus invers"
       }
     }
   },
@@ -145,6 +160,9 @@
     "mappings": {
       "default": {
         "default": "arcus tangens"
+      },
+      "clearspeak": {
+        "Trig_TrigInverse": "tangens invers"
       }
     }
   }
