@@ -52,7 +52,7 @@ export function set<T>(processor: Processor<T>) {
  * @returns The processor.
  */
 function get_<T>(name: string): Processor<T> {
-  const processor = PROCESSORS.get(name.toLowerCase());
+  const processor = PROCESSORS.get(name);
   if (!processor) {
     throw new SREError('Unknown processor ' + name);
   }
@@ -273,7 +273,7 @@ set(
 
 set(
   new Processor('walker', {
-    processor: function (expr) {
+    processor: function (expr: string) {
       const generator = SpeechGeneratorFactory.generator('Node');
       Processor.LocalState.speechGenerator = generator;
       generator.setOptions({
@@ -307,7 +307,7 @@ set(
 // TODO: This one should probably return the now highlighted node.
 set(
   new KeyProcessor('move', {
-    processor: function (direction) {
+    processor: function (direction: string) {
       if (!Processor.LocalState.walker) {
         return null;
       }
@@ -321,7 +321,7 @@ set(
 
 set(
   new Processor('number', {
-    processor: function (numb) {
+    processor: function (numb: string) {
       const num = parseInt(numb, 10);
       return isNaN(num) ? '' : LOCALE.NUMBERS.numberToWords(num);
     }
@@ -330,9 +330,28 @@ set(
 
 set(
   new Processor('ordinal', {
-    processor: function (numb) {
+    processor: function (numb: string) {
       const num = parseInt(numb, 10);
-      return isNaN(num) ? '' : LOCALE.NUMBERS.numberToOrdinal(num, false);
+      return isNaN(num) ? '' : LOCALE.NUMBERS.wordOrdinal(num);
+    }
+  })
+);
+
+set(
+  new Processor('simpleOrdinal', {
+    processor: function (numb: string) {
+      const num = parseInt(numb, 10);
+      return isNaN(num) ? '' : LOCALE.NUMBERS.simpleOrdinal(num);
+    }
+  })
+);
+
+set(
+  new Processor('vulgar', {
+    processor: function (numb: string) {
+      const [en, den] = numb.split('/').map(x => parseInt(x, 10));
+      return isNaN(en) || isNaN(den) ? '' :
+        process('speech', `<mfrac><mn>${en}</mn><mn>${den}</mn></mfrac>`);
     }
   })
 );

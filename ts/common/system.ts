@@ -164,6 +164,27 @@ export function ordinal(expr: string): string {
 }
 
 /**
+ * Translates a number into a simple ordinal for the current locale.
+ *
+ * @param expr The number
+ * @return The simple ordinal of the number.
+ */
+export function simpleOrdinal(expr: string): string {
+  return processString('simpleOrdinal', expr);
+}
+
+/**
+ * Translates a vulgar fraction into its word representation for the current
+ * locale.
+ *
+ * @param expr The number with divisor slash.
+ * @return The vulgar fraction in words.
+ */
+export function vulgar(expr: string): string {
+  return processString('vulgar', expr);
+}
+
+/**
  * Processes an input string with the given processor.
  *
  * @param processor The name of the processor to call.
