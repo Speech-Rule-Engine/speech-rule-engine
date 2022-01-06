@@ -1,13 +1,13 @@
 [
   {
-    "locale": "de"
+    "locale": "sv"
   },
   {
     "category": "Zs",
     "key": "0020",
     "mappings": {
       "default": {
-        "default": "Leerzeichen"
+        "default": ""
       }
     }
   },
@@ -24,7 +24,7 @@
     "key": "00AD",
     "mappings": {
       "default": {
-        "default": "weicher Trennstrich"
+        "default": "mjukt bindestreck"
       }
     },
     "category": "Cf"
@@ -34,7 +34,7 @@
     "key": "2000",
     "mappings": {
       "default": {
-        "default": "En Quad"
+        "default": ""
       }
     }
   },
@@ -43,18 +43,18 @@
     "key": "2001",
     "mappings": {
       "default": {
-        "default": "Em Quad"
+        "default": ""
       }
     }
   },
   {
-    "category": "Zs",
     "key": "2002",
     "mappings": {
       "default": {
-        "default": "En Space"
+        "default": ""
       }
-    }
+    },
+    "category": "Zs"
   },
   {
     "key": "2003",
@@ -66,49 +66,49 @@
     "category": "Zs"
   },
   {
-    "category": "Zs",
     "key": "2004",
     "mappings": {
       "default": {
-        "default": "Raum für drei Per-Em"
+        "default": ""
       }
-    }
+    },
+    "category": "Zs"
   },
   {
-    "category": "Zs",
     "key": "2005",
     "mappings": {
       "default": {
-        "default": "Raum für vier pro Em"
+        "default": ""
       }
-    }
+    },
+    "category": "Zs"
   },
   {
     "category": "Zs",
     "key": "2006",
     "mappings": {
       "default": {
-        "default": "Six-Per-Em Space"
+        "default": ""
       }
     }
   },
   {
-    "category": "Zs",
     "key": "2007",
     "mappings": {
       "default": {
-        "default": "Raum darstellen"
+        "default": ""
       }
-    }
+    },
+    "category": "Zs"
   },
   {
-    "category": "Zs",
     "key": "2008",
     "mappings": {
       "default": {
-        "default": "Interpunktionsraum"
+        "default": ""
       }
-    }
+    },
+    "category": "Zs"
   },
   {
     "key": "2009",
@@ -138,47 +138,47 @@
     "category": "Cf"
   },
   {
-    "category": "Cf",
     "key": "200C",
     "mappings": {
       "default": {
-        "default": "Nullbreite ohne Joiner"
+        "default": "zero width non joiner"
       }
-    }
+    },
+    "category": "Cf"
   },
   {
-    "category": "Cf",
     "key": "200D",
     "mappings": {
       "default": {
-        "default": "Zero Width Joiner"
+        "default": "zero width joiner"
       }
-    }
+    },
+    "category": "Cf"
   },
   {
-    "category": "Cf",
     "key": "200E",
     "mappings": {
       "default": {
-        "default": "Markierung von links nach rechts"
+        "default": "vänster till höger tecken"
       }
-    }
+    },
+    "category": "Cf"
   },
   {
-    "category": "Cf",
     "key": "200F",
     "mappings": {
       "default": {
-        "default": "Markierung von rechts nach links"
+        "default": "höger till vänster tecken"
       }
-    }
+    },
+    "category": "Cf"
   },
   {
     "category": "Zl",
     "key": "2028",
     "mappings": {
       "default": {
-        "default": "Trennzeichen"
+        "default": ""
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "2029",
     "mappings": {
       "default": {
-        "default": "Absatztrennzeichen"
+        "default": ""
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "202A",
     "mappings": {
       "default": {
-        "default": "Einbetten von links nach rechts"
+        "default": ""
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "202B",
     "mappings": {
       "default": {
-        "default": "Einbetten von rechts nach links"
+        "default": ""
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "202C",
     "mappings": {
       "default": {
-        "default": "Pop Richtungsformatierung"
+        "default": ""
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "202D",
     "mappings": {
       "default": {
-        "default": "Von links nach rechts überschreiben"
+        "default": ""
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "202E",
     "mappings": {
       "default": {
-        "default": "Von rechts nach links überschreiben"
+        "default": ""
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "202F",
     "mappings": {
       "default": {
-        "default": "Schmaler No-Break-Bereich"
+        "default": ""
       }
     }
   },
@@ -255,19 +255,19 @@
     "category": "Zs"
   },
   {
-    "category": "Cf",
     "key": "2060",
     "mappings": {
       "default": {
-        "default": "Wortverbinding"
+        "default": ""
       }
-    }
+    },
+    "category": "Cf"
   },
   {
     "key": "2061",
     "mappings": {
       "default": {
-        "default": "von"
+        "default": "av"
       }
     },
     "category": "Cf"
@@ -276,7 +276,7 @@
     "key": "2062",
     "mappings": {
       "default": {
-        "default": "mal"
+        "default": "gånger"
       }
     },
     "category": "Cf"
@@ -285,7 +285,7 @@
     "key": "2063",
     "mappings": {
       "default": {
-        "default": "Komma"
+        "default": ""
       }
     },
     "category": "Cf"
@@ -304,7 +304,7 @@
     "key": "206A",
     "mappings": {
       "default": {
-        "default": "Symmetrisches Austauschen verhindern"
+        "default": ""
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "206B",
     "mappings": {
       "default": {
-        "default": "Aktivieren Sie das symmetrische Austauschen"
+        "default": ""
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "206E",
     "mappings": {
       "default": {
-        "default": "Nationale Ziffernformen"
+        "default": ""
       }
     }
   },
@@ -331,25 +331,25 @@
     "key": "206F",
     "mappings": {
       "default": {
-        "default": "Nominale Ziffernformen"
+        "default": ""
       }
     }
   },
   {
-    "category": "Cf",
     "key": "FEFF",
     "mappings": {
       "default": {
-        "default": "Nullbreite Leerzeichen"
+        "default": ""
       }
-    }
+    },
+    "category": "Cf"
   },
   {
     "category": "Cf",
     "key": "FFF9",
     "mappings": {
       "default": {
-        "default": "Interlinearer Anmerkungsanker"
+        "default": ""
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "FFFA",
     "mappings": {
       "default": {
-        "default": "Separator für interlineare Anmerkungen"
+        "default": ""
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "FFFB",
     "mappings": {
       "default": {
-        "default": "Interlinear Annotation Terminator"
+        "default": ""
       }
     }
   }

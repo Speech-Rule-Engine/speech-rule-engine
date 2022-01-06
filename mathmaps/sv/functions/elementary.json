@@ -1,0 +1,254 @@
+[
+  {
+    "locale": "sv"
+  },
+  {
+    "key": "log",
+    "mappings": {
+      "default": {
+        "default": "logaritmen"
+      }
+    },
+    "category": "Logarithm",
+    "names": [
+      "log"
+    ]
+  },
+  {
+    "key": "ln",
+    "mappings": {
+      "default": {
+        "default": "naturliga logaritmen"
+      },
+     "clearspeak": {
+       "default": "l n",
+       "Log_LnAsNaturalLog": "naturliga logaritmen"
+     }
+    },
+    "category": "Logarithm",
+    "names": [
+      "ln"
+    ]
+  },
+  {
+    "key": "lg",
+    "category": "Logarithm",
+    "names": [
+      "lg"
+    ],
+    "mappings": {
+      "default": {
+        "default": "tiologaritmen"
+      }
+    }
+  },
+  {
+    "key": "exp",
+    "category": "Elementary",
+    "names": [
+      "exp",
+      "expt"
+    ],
+    "mappings": {
+      "default": {
+        "default": "exponentiell"
+      }
+    }
+  },
+  {
+    "key": "gcd",
+    "category": "Elementary",
+    "names": [
+      "gcd"
+    ],
+    "mappings": {
+      "default": {
+        "default": "största gemensamma nämnare"
+      }
+    }
+  },
+  {
+    "key": "lcm",
+    "category": "Elementary",
+    "names": [
+      "lcm"
+    ],
+    "mappings": {
+      "default": {
+        "default": "minsta gemensamma multipel"
+      }
+    }
+  },
+  {
+    "key": "arg",
+    "category": "Complex",
+    "names": [
+      "arg"
+    ],
+    "mappings": {
+      "default": {
+        "default": "argument"
+      }
+    }
+  },
+  {
+    "key": "im",
+    "category": "Complex",
+    "names": [
+      "im"
+    ],
+    "mappings": {
+      "default": {
+        "default": "imaginär del"
+      }
+    }
+  },
+  {
+    "key": "re",
+    "category": "Complex",
+    "names": [
+      "re"
+    ],
+    "mappings": {
+      "default": {
+        "default": "reell del"
+      }
+    }
+  },
+  {
+    "key": "inf",
+    "category": "Limits",
+    "names": [
+      "inf"
+    ],
+    "mappings": {
+      "default": {
+        "default": "infimum"
+      }
+    }
+  },
+  {
+    "key": "lim",
+    "mappings": {
+      "default": {
+        "default": "gränsvärde"
+      }
+    },
+    "category": "Limits",
+    "names": [
+      "lim"
+    ]
+  },
+  {
+    "key": "liminf",
+    "category": "Limits",
+    "names": [
+      "lim inf",
+      "liminf"
+    ],
+    "mappings": {
+      "default": {
+        "default": "nedre gränsvärde"
+      }
+    }
+  },
+  {
+    "key": "limsup",
+    "category": "Limits",
+    "names": [
+      "lim sup",
+      "limsup"
+    ],
+    "mappings": {
+      "default": {
+        "default": "övre gränsvärde"
+      }
+    }
+  },
+  {
+    "key": "max",
+    "category": "Limits",
+    "names": [
+      "max"
+    ],
+    "mappings": {
+      "default": {
+        "default": "maximum"
+      }
+    }
+  },
+  {
+    "key": "min",
+    "category": "Limits",
+    "names": [
+      "min"
+    ],
+    "mappings": {
+      "default": {
+        "default": "minimum"
+      }
+    }
+  },
+  {
+    "key": "sup",
+    "category": "Limits",
+    "names": [
+      "sup"
+    ],
+    "mappings": {
+      "default": {
+        "default": "supremum"
+      }
+    }
+  },
+  {
+    "key": "injlim",
+    "category": "Limits",
+    "names": [
+      "injlim",
+      "inj lim"
+    ],
+    "mappings": {
+      "default": {
+        "default": "kolimes"
+      }
+    }
+  },
+  {
+    "key": "projlim",
+    "category": "Limits",
+    "names": [
+      "projlim",
+      "proj lim"
+    ],
+    "mappings": {
+      "default": {
+        "default": "inverterat gränsvärde"
+      }
+    }
+  },
+  {
+    "key": "mod",
+    "category": "Elementary",
+    "names": [
+      "mod"
+    ],
+    "mappings": {
+      "default": {
+        "default": "modulo"
+      }
+    }
+  },
+  {
+    "key": "Pr",
+    "category": "Probability",
+    "names": [
+      "Pr"
+    ],
+    "mappings": {
+      "default": {
+        "default": "sannolikhet"
+      }
+    }
+  }
+]

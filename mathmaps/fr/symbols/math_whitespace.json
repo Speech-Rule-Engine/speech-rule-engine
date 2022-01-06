@@ -276,7 +276,7 @@
     "key": "2062",
     "mappings": {
       "default": {
-        "default": " "
+        "default": "multiplié par"
       }
     },
     "category": "Cf"
@@ -285,7 +285,7 @@
     "key": "2063",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "virgule"
       }
     },
     "category": "Cf"
@@ -295,7 +295,7 @@
     "key": "2064",
     "mappings": {
       "default": {
-        "default": "plus invisible"
+        "default": "plus"
       }
     }
   },

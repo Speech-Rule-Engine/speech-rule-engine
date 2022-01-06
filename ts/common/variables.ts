@@ -37,6 +37,7 @@ export class Variables {
     'it',
     'nb',
     'nn',
+    'sv',
     'nemeth'
   ];
 

@@ -285,7 +285,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "separator",
+        "default": "comma",
         "alternative": "invisible separator"
       }
     },

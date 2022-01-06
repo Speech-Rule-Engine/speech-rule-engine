@@ -336,7 +336,7 @@ set(
   new Processor('ordinal', {
     processor: function (numb) {
       const num = parseInt(numb, 10);
-      return isNaN(num) ? '' : LOCALE.NUMBERS.numberToOrdinal(num, false);
+      return isNaN(num) ? '' : LOCALE.NUMBERS.wordOrdinal(num);
     }
   })
 );
