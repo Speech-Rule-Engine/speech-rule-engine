@@ -132,8 +132,13 @@ export class Grammar {
       return Grammar.translateUnit_(text);
     }
     const engine = Engine.getInstance();
-    const result = engine.evaluator(text, engine.dynamicCstr);
-    return result === null ? text : result;
+    let result = engine.evaluator(text, engine.dynamicCstr);
+    result = result === null ? text : result;
+    // TODO: Consider a more general approach to grammatical adjustments here.
+    if (Grammar.getInstance().getParameter('plural')) {
+      result = LOCALE.FUNCTIONS.plural(result);
+    }
+    return result;
   }
 
   /**
