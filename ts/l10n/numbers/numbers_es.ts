@@ -142,18 +142,18 @@ function numberToOrdinal(num: number, _plural: boolean): string {
 }
 
 /**
- * Creates a simple ordinal string from a number.
+ * Creates a numeric ordinal string from a number.
  *
  * @param num The number to be converted.
  * @returns The ordinal string.
  */
-function simpleOrdinal(num: number): string {
+function numericOrdinal(num: number): string {
   const gender = Grammar.getInstance().getParameter('gender') as string;
   return num.toString() + (gender === 'f' ? 'a' : 'o');
 }
 
 const NUMBERS: Numbers = NUMB();
-NUMBERS.simpleOrdinal = simpleOrdinal;
+NUMBERS.numericOrdinal = numericOrdinal;
 NUMBERS.numberToWords = numberToWords;
 NUMBERS.numberToOrdinal = numberToOrdinal;
 

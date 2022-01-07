@@ -164,13 +164,13 @@ export function ordinal(expr: string): string {
 }
 
 /**
- * Translates a number into a simple ordinal for the current locale.
+ * Translates a number into a numeric ordinal for the current locale.
  *
  * @param expr The number
- * @returns The simple ordinal of the number.
+ * @returns The numeric ordinal of the number.
  */
-export function simpleOrdinal(expr: string): string {
-  return processString('simpleOrdinal', expr);
+export function numericOrdinal(expr: string): string {
+  return processString('numericOrdinal', expr);
 }
 
 /**

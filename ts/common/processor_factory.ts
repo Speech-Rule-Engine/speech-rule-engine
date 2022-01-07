@@ -338,10 +338,10 @@ set(
 );
 
 set(
-  new Processor('simpleOrdinal', {
+  new Processor('numericOrdinal', {
     processor: function (numb: string) {
       const num = parseInt(numb, 10);
-      return isNaN(num) ? '' : LOCALE.NUMBERS.simpleOrdinal(num);
+      return isNaN(num) ? '' : LOCALE.NUMBERS.numericOrdinal(num);
     }
   })
 );

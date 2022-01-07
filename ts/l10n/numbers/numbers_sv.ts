@@ -137,12 +137,12 @@ function wordOrdinal(num: number): string {
 }
 
 /**
- * Creates a simple ordinal string from a number.
+ * Creates a numeric ordinal string from a number.
  *
  * @param num The number to be converted.
  * @returns The ordinal string.
  */
-function simpleOrdinal(num: number): string {
+function numericOrdinal(num: number): string {
   const str = num.toString();
   if (str.match(/11$|12$/)) {
     return str + ':e';
@@ -152,7 +152,7 @@ function simpleOrdinal(num: number): string {
 
 const NUMBERS: Numbers = NUMB();
 NUMBERS.wordOrdinal = wordOrdinal;
-NUMBERS.simpleOrdinal = simpleOrdinal;
+NUMBERS.numericOrdinal = numericOrdinal;
 NUMBERS.numberToWords = numberToWords;
 NUMBERS.numberToOrdinal = numberToOrdinal;
 

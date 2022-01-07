@@ -86,7 +86,7 @@ export interface Numbers {
 
   // Constructor methods
   wordOrdinal: tr.Transformer;
-  simpleOrdinal: tr.Transformer;
+  numericOrdinal: tr.Transformer;
   numberToWords: tr.Transformer;
   numberToOrdinal: tr.GrammarCase;
 
@@ -106,7 +106,7 @@ export function NUMBERS(): Numbers {
     special: {},
 
     wordOrdinal: tr.identityTransformer,
-    simpleOrdinal: tr.identityTransformer,
+    numericOrdinal: tr.identityTransformer,
     numberToWords: tr.identityTransformer,
     numberToOrdinal: tr.pluralCase,
     vulgarSep: ' ',

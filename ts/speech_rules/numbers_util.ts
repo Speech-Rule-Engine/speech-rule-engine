@@ -34,7 +34,7 @@ import { convertVulgarFraction } from '../l10n/transformers';
 export function ordinalCounter(_node: Node, context: string): () => string {
   let counter = 0;
   return function () {
-    return LOCALE.NUMBERS.simpleOrdinal(++counter) + ' ' + context;
+    return LOCALE.NUMBERS.numericOrdinal(++counter) + ' ' + context;
   };
 }
 
@@ -102,5 +102,5 @@ export function vulgarFraction(node: Element): string | Span[] {
  */
 export function ordinalPosition(node: Node): string {
   const children = DomUtil.toArray(node.parentNode.childNodes);
-  return LOCALE.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
+  return LOCALE.NUMBERS.numericOrdinal(children.indexOf(node) + 1).toString();
 }

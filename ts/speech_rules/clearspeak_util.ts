@@ -435,7 +435,7 @@ export function ordinalExponent(node: Element): string {
     return node.textContent;
   }
   return num > 10
-    ? LOCALE.NUMBERS.simpleOrdinal(num)
+    ? LOCALE.NUMBERS.numericOrdinal(num)
     : LOCALE.NUMBERS.wordOrdinal(num);
 }
 

@@ -105,12 +105,17 @@ that this will overwrite the existing file.
 #### Methods for computing textual representations of numbers
 
 These methods take a non-negative integer (either as string or number) as input
-an return the number as text in the currently active locale.
+an return the number as text in the currently active locale. For the `vulgar`
+method a vulgar fraction can be provided as a string of two slash separated
+numbers, e.g., `"1/2"`.
 
-| Method | Return Value |
-| ---- | ---- |
-| `number(input)` | The number as text. |
-| `ordinal(input)` | The word ordinal. |
+| Method                  | Return Value                              |
+|-------------------------|-------------------------------------------|
+| `number(input)`         | The number as text.                       |
+| `ordinal(input)`        | The word ordinal.                         |
+| `numericOrdinal(input)` | The numeric ordinal.                      |
+| `vulgar(input)`         | Word representation of a vulgar fraction. |
+|                         |                                           |
 
 #### Methods for querying and controlling the engine behaviour:
 
@@ -313,6 +318,8 @@ The following is a list of command line options for the speech rule engine.
 | | |
 | -N | --number | Translate number to words. |
 | -O | --ordinal | Translate number to word ordinal. |
+| -S | --numeric | Translate number to numeric ordinal. |
+| -F | --vulgar | Translate vulgar fraction to words. Provide vulgar fraction as slash seperated numbers. |
 | -C | --subiso | Subcategory of the locale given with -c. |
 | | |
 | | |
@@ -332,16 +339,23 @@ Clone from github and install dependencies either by running:
 
      npm install
 
-Or install them manually. SRE depends on the following libraries:
+Or install them manually. SRE depends on the following libraries to run:
 
+     commander
      xmldom-sre
      wicked-good-xpath
-     commander
 
-This will build the single JavaScript modules, webpack the bundle file in
-`lib/sre.js` as well as assemble the locale files in `lib/mathmaps`. For more
-details on the build process as well as how to use different bundlers see the
-[developers documentation below](#developers-documentation).
+In addition SRE depends on a number of libraries for development, in particular
+[TypeScript](https://www.typescriptlang.org/) and
+[webpack](https://webpack.js.org/) as well as a number of plugins and libraries
+to ensure source code hygiene. These are too numerous to list here and are best
+viewed in the `devDependencies` section of the `package.json` file.
+
+Running `npm install` will build the single JavaScript modules, webpack the
+bundle file in `lib/sre.js` as well as assemble the locale files in
+`lib/mathmaps`. For more details on the build process as well as how to use
+different bundlers see the [developers documentation
+below](#developers-documentation).
 
 ### Run interactively ############
 
@@ -350,7 +364,7 @@ loading JavaScript modules directly. For the generation of speech make sure to
 set the `SRE_JSON_PATH` environment variable to the folder where your locale
 files reside. For example, set
 
-    export SRE_JSON_PATH ./lib/mathmaps
+    export SRE_JSON_PATH=./lib/mathmaps
 
 before in the shell before running node in the `speech-rule-engine` directory.
 You can then load the individual modules simply with node's `require`:
@@ -370,9 +384,9 @@ Browser Library
 ---------------
 
 SRE can be used as a browser ready library giving you the option of loading it
-in a browser and use its full functionality on your webesites. Since version 4
-SRE the same bundle file works both in node and in a browser.  Simply include
-the file ``sre.js`` in your website in a script tag
+in a browser and use its full functionality on your webesites. Since SRE version
+4, the same bundle file works both in node and in a browser.  Simply include the
+file ``sre.js`` in your website in a script tag
 
 ``` html
 <script src="[URL]/sre.js"></script>
@@ -390,7 +404,7 @@ For example the configuration element
 ``` html
 <script type="text/x-sre-config">
 {
-"json": "https://cdn.jsdelivr.net/gh/zorkow/speech-rule-engine@develop/src/mathmaps",
+"json": "https://cdn.jsdelivr.net/gh/zorkow/speech-rule-engine@develop/mathmaps/",
 "xpath": "https://cdn.jsdelivr.net/gh/google/wicked-good-xpath@master/dist/wgxpath.install.js",
 "domain": "mathspeak",
 "style": "sbrief"
@@ -443,6 +457,17 @@ var SREfeature = {
 # Developers Documentation
 
 
+Since v4 SRE is distributed with the transpiled `.js` files via the npm
+package. These can be directly included into your respective projects.  To
+control the location of the locale mappings, set the `SRE_JSON_PATH` environment
+variable to the folder where your locale files reside. For example, set
+
+    export SRE_JSON_PATH=./lib/mathmaps
+
+For more controlled integration or development fork or clone the repository from
+github.
+
+
 Building
 --------
 
@@ -455,8 +480,8 @@ By default the build process consists of three steps:
 Locales are created from the sources in `mathmaps` by combining the topically
 split `.json` files into a single, minimized `.json` file, one for each
 language. Note, that for ease of development JSON minimization is done via an
-intermediate step to generate `.min` files, which is handles in the `Makefile` and ensures that only update
-files have to be minimized.
+intermediate step to generate `.min` files, which is handles in the `Makefile`
+and ensures that only newly altered files have to be minimized.
 
 While the entire build is best cleaned with `make clean`, this does not clean
 the `.min` files. These should be cleaned with `make clean_min`.
@@ -473,7 +498,7 @@ be created using the `mjConfig` goal for webpack
 
     npx webpack
 
-then generates a build specific for [MathJax](https://mathjax.org) in ``mathjax_sre.js``.
+that generates a build specific for [MathJax](https://mathjax.org) in ``mathjax_sre.js``.
 SRE can then be configured locally on webpages as described above.
 
 
@@ -496,8 +521,10 @@ submodules are
 Using Bundlers
 --------------
 
-By default SRE works with webpack. But you can use a number of other bundlers to build.
-Note, that for all bundlers the JSON locale files need to be build as usual.
+By default SRE works with webpack. But you can use a number of other bundlers to
+build.  Note, that for all bundlers the JSON locale files need to be build as
+usual. Depending on the version of SRE you are using some of the alternative
+bundlers might already be in the `devDependencies`.
 
 ### WebPack
 
@@ -548,7 +575,7 @@ export default [
 ];
 ```
 
-The resulting file in `./lib/sre.js` works us usual for both browser and node.
+The resulting file in `./lib/sre.js` works as usual for both browser and node.
 
 _Note, that in the Browser version there is currently an issue with Unicode
 Braille Spaces that are being garbled._

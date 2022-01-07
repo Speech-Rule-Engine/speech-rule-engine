@@ -314,8 +314,8 @@ export class Cli {
         () => processor('ordinal'),
         'ordinal'
       )
-      .option('-S, --simple>', 'Translate number to simple ordinal.', () =>
-        processor('simpleOrdinal')
+      .option('-S, --numeric', 'Translate number to numeric ordinal.', () =>
+        processor('numericOrdinal')
       )
       .option(
         '-F, --vulgar',
