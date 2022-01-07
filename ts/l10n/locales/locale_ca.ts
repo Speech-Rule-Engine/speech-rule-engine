@@ -58,7 +58,40 @@ function create(): Locale {
   (loc.FUNCTIONS.combineRootIndex = combinePostfixIndex),
     (loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c);
   loc.FUNCTIONS.fontRegexp = (font) => RegExp('^' + font + ' ');
-  loc.FUNCTIONS.si = (prefix: string, unit: string) => {
+  (loc.FUNCTIONS.plural = (unit: string) => {
+    if (/.*os$/.test(unit)) {
+      return unit + 'sos';
+    }
+    if (/.*s$/.test(unit)) {
+      return unit + 'os';
+    }
+    if (/.*ga$/.test(unit)) {
+      return unit.slice(0, -2) + 'gues';
+    }
+    if (/.*ça$/.test(unit)) {
+      return unit.slice(0, -2) + 'ces';
+    }
+    if (/.*ca$/.test(unit)) {
+      return unit.slice(0, -2) + 'ques';
+    }
+    if (/.*ja$/.test(unit)) {
+      return unit.slice(0, -2) + 'ges';
+    }
+    if (/.*qua$/.test(unit)) {
+      return unit.slice(0, -3) + 'qües';
+    }
+    if (/.*a$/.test(unit)) {
+      return unit.slice(0, -1) + 'es';
+    }
+    if (/.*(e|i)$/.test(unit)) {
+      return unit + 'ns';
+    }
+    if (/.*í$/.test(unit)) {
+      return unit.slice(0, -1) + 'ins';
+    }
+    // Note some stressed vowels are missing.
+    return unit + 's';
+  }),  loc.FUNCTIONS.si = (prefix: string, unit: string) => {
     if (unit.match(/^metre/)) {
       prefix = prefix.replace(/a$/, 'à').replace(/o$/, 'ò').replace(/i$/, 'í');
     }
