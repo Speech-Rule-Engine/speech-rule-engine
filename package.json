@@ -73,7 +73,6 @@
     "bin/",
     "js/"
   ],
-  "main": "lin/sre.js",
   "source": "ts/index.ts",
   "browser": "lib/sre.js"
 }
