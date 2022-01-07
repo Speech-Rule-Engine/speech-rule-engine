@@ -65,89 +65,34 @@ export const DISPLAYTAGS: string[] = ['MROOT', 'MSQRT'];
  */
 export const directSpeechKeys: string[] = ['aria-label', 'exact-speech', 'alt'];
 
-/**
- * Merges keys of objects into an array.
- *
- * @param args Optional objects.
- * @returns Array of all keys of the objects.
- */
-export function objectsToKeys(...args: { [key: string]: string }[]): string[] {
-  const keys: string[] = [];
-  return keys.concat(...args.map(Object.keys));
-}
+// /**
+//  * Merges keys of objects into an array.
+//  *
+//  * @param args Optional objects.
+//  * @returns Array of all keys of the objects.
+//  */
+// export function objectsToKeys(...args: { [key: string]: string }[]): string[] {
+//   const keys: string[] = [];
+//   return keys.concat(...args.map(Object.keys));
+// }
 
-/**
- * Merges values of objects into an array.
- *
- * @param args Optional objects.
- * @returns Array of all values of the objects.
- */
-export function objectsToValues(
-  ...args: { [key: string]: string }[]
-): string[] {
-  const result: string[] = [];
-  args.forEach((obj: { [key: string]: string }) => {
-    for (const key in obj) {
-      result.push(obj[key]);
-    }
-  });
-  return result;
-}
-
-/**
- * Transforms a unicode character into numeric representation. Returns null if
- * the input string is not a valid unicode character.
- *
- * @param unicode Character.
- * @returns The decimal representation if it exists.
- */
-export function unicodeToNumber(unicode: string): number | null {
-  if (!unicode || unicode.length > 2) {
-    return null;
-  }
-  // Treating surrogate pairs.
-  if (unicode.length === 2) {
-    const hi = unicode.charCodeAt(0);
-    const low = unicode.charCodeAt(1);
-    if (0xd800 <= hi && hi <= 0xdbff && !isNaN(low)) {
-      return (hi - 0xd800) * 0x400 + (low - 0xdc00) + 0x10000;
-    }
-    return null;
-  }
-  return unicode.charCodeAt(0);
-}
-
-// TODO: Refactor with similar function in MathSimpleStore.
-/**
- * Transforms a numberic representation of a unicode character into its
- * corresponding string.
- *
- * @param num Unicode point.
- * @returns The string representation.
- */
-export function numberToUnicode(num: number): string {
-  return String.fromCodePoint(num);
-}
-
-/**
- * Splits a unicode string into array of characters. In particular deals
- * properly with surrogate pairs.
- *
- * @param str The string to split.
- * @returns List of single characters.
- */
-export function splitUnicode(str: string): string[] {
-  const split = str.split('');
-  const result = [];
-  for (let i = 0, chr; (chr = split[i]); i++) {
-    if ('\uD800' <= chr && chr <= '\uDBFF' && split[i + 1]) {
-      result.push(chr + split[++i]);
-    } else {
-      result.push(chr);
-    }
-  }
-  return result;
-}
+// /**
+//  * Merges values of objects into an array.
+//  *
+//  * @param args Optional objects.
+//  * @returns Array of all values of the objects.
+//  */
+// export function objectsToValues(
+//   ...args: { [key: string]: string }[]
+// ): string[] {
+//   const result: string[] = [];
+//   args.forEach((obj: { [key: string]: string }) => {
+//     for (const key in obj) {
+//       result.push(obj[key]);
+//     }
+//   });
+//   return result;
+// }
 
 /**
  * Checks if an element is a node with a math tag.

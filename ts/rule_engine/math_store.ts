@@ -21,8 +21,6 @@
 
 import { AuditoryDescription } from '../audio/auditory_description';
 import * as BaseUtil from '../common/base_util';
-// TODO: This should not really load the locale constructor.
-import { en } from '../l10n/locales/locale_en';
 import { LOCALE } from '../l10n/locale';
 import { activate } from '../semantic_tree/semantic_annotations';
 import { BaseRuleStore, RulesJson } from './base_rule_store';
@@ -257,6 +255,12 @@ export class MathStore extends BaseRuleStore {
     this.addRule(newRule);
   }
 
+  static regexp = {
+    NUMBER: '((\\d{1,3})(?=(,| ))((,| )\\d{3})*(\\.\\d+)?)|^\\d*\\.\\d+|^\\d+',
+    DECIMAL_MARK: '\\.',
+    DIGIT_GROUP: ','
+  }
+
   /**
    * Matches a number with respect to locale. If it discovers it is a number in
    * English writing, it will attempt to translate it.
@@ -266,7 +270,7 @@ export class MathStore extends BaseRuleStore {
    */
   private matchNumber_(str: string): { number: string; length: number } | null {
     const locNum = str.match(new RegExp('^' + LOCALE.MESSAGES.regexp.NUMBER));
-    const enNum = str.match(new RegExp('^' + en().MESSAGES.regexp.NUMBER));
+    const enNum = str.match(new RegExp('^' + MathStore.regexp.NUMBER));
     if (!locNum && !enNum) {
       return null;
     }
@@ -276,9 +280,9 @@ export class MathStore extends BaseRuleStore {
       return locNum ? { number: locNum[0], length: locNum[0].length } : null;
     }
     const num = enNum[0]
-      .replace(new RegExp(en().MESSAGES.regexp.DIGIT_GROUP, 'g'), 'X')
+      .replace(new RegExp(MathStore.regexp.DIGIT_GROUP, 'g'), 'X')
       .replace(
-        new RegExp(en().MESSAGES.regexp.DECIMAL_MARK, 'g'),
+        new RegExp(MathStore.regexp.DECIMAL_MARK, 'g'),
         LOCALE.MESSAGES.regexp.DECIMAL_MARK
       )
       .replace(/X/g, LOCALE.MESSAGES.regexp.DIGIT_GROUP.replace(/\\/g, ''));

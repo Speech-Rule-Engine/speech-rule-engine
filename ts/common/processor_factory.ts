@@ -31,7 +31,7 @@ import * as DomUtil from './dom_util';
 import Engine, { SREError } from './engine';
 import * as EngineConst from '../common/engine_const';
 import { KeyCode } from './event_util';
-import { Processor, KeyProcessor } from './processors';
+import { Processor, KeyProcessor } from './processor';
 import * as XpathUtil from './xpath_util';
 
 const PROCESSORS = new Map();
@@ -52,7 +52,7 @@ export function set<T>(processor: Processor<T>) {
  * @returns The processor.
  */
 function get_<T>(name: string): Processor<T> {
-  const processor = PROCESSORS.get(name.toLowerCase());
+  const processor = PROCESSORS.get(name);
   if (!processor) {
     throw new SREError('Unknown processor ' + name);
   }
@@ -68,19 +68,11 @@ function get_<T>(name: string): Processor<T> {
  */
 export function process<T>(name: string, expr: string): T {
   const processor = get_(name);
-  return processor.processor(expr) as T;
-}
-
-/**
- * Processes an expression with the given processor.
- *
- * @param name The name of the processor.
- * @param expr The expression to process.
- * @returns The data structure resulting from the processing the expression.
- */
-export function processOnly<T>(name: string, expr: string): T {
-  const processor = get_(name);
-  return processor.process(expr) as T;
+  try {
+    return processor.processor(expr) as T;
+  } catch (_e) {
+    throw new SREError('Processing error for expression ' + expr);
+  }
 }
 
 /**
@@ -106,10 +98,14 @@ export function print<T>(name: string, data: T): string {
  */
 export function output(name: string, expr: string): string {
   const processor = get_(name);
-  const data = processor.processor(expr);
-  return Engine.getInstance().pprint
-    ? processor.pprint(data)
-    : processor.print(data);
+  try {
+    const data = processor.processor(expr);
+    return Engine.getInstance().pprint
+      ? processor.pprint(data)
+      : processor.print(data);
+  } catch (_e) {
+    throw new SREError('Processing error for expression ' + expr);
+  }
 }
 
 /**
@@ -277,7 +273,7 @@ set(
 
 set(
   new Processor('walker', {
-    processor: function (expr) {
+    processor: function (expr: string) {
       const generator = SpeechGeneratorFactory.generator('Node');
       Processor.LocalState.speechGenerator = generator;
       generator.setOptions({
@@ -311,7 +307,7 @@ set(
 // TODO: This one should probably return the now highlighted node.
 set(
   new KeyProcessor('move', {
-    processor: function (direction) {
+    processor: function (direction: string) {
       if (!Processor.LocalState.walker) {
         return null;
       }
@@ -325,7 +321,7 @@ set(
 
 set(
   new Processor('number', {
-    processor: function (numb) {
+    processor: function (numb: string) {
       const num = parseInt(numb, 10);
       return isNaN(num) ? '' : LOCALE.NUMBERS.numberToWords(num);
     }
@@ -334,9 +330,28 @@ set(
 
 set(
   new Processor('ordinal', {
-    processor: function (numb) {
+    processor: function (numb: string) {
       const num = parseInt(numb, 10);
       return isNaN(num) ? '' : LOCALE.NUMBERS.wordOrdinal(num);
+    }
+  })
+);
+
+set(
+  new Processor('simpleOrdinal', {
+    processor: function (numb: string) {
+      const num = parseInt(numb, 10);
+      return isNaN(num) ? '' : LOCALE.NUMBERS.simpleOrdinal(num);
+    }
+  })
+);
+
+set(
+  new Processor('vulgar', {
+    processor: function (numb: string) {
+      const [en, den] = numb.split('/').map(x => parseInt(x, 10));
+      return isNaN(en) || isNaN(den) ? '' :
+        process('speech', `<mfrac><mn>${en}</mn><mn>${den}</mn></mfrac>`);
     }
   })
 );
