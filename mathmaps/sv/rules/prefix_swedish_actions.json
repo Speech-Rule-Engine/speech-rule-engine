@@ -1,0 +1,118 @@
+{
+  "modality": "prefix",
+  "domain": "default",
+  "locale": "sv",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "numerator",
+      "[t] \"Täljare\" (pause:200)"
+    ],
+    [
+      "Action",
+      "denominator",
+      "[t] \"Nämnare\" (pause:200)"
+    ],
+    [
+      "Action",
+      "base",
+      "[t] \"Bas\" (pause:200)"
+    ],
+    [
+      "Action",
+      "exponent",
+      "[t] \"Exponent\" (pause:200)"
+    ],
+    [
+      "Action",
+      "subscript",
+      "[t] \"Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "overscript",
+      "[t] \"Överskrift\" (pause:200)"
+    ],
+    [
+      "Action",
+      "underscript",
+      "[t] \"Underskrift\" (pause:200)"
+    ],
+    [
+      "Action",
+      "radicand",
+      "[t] \"Radikand\" (pause:200)"
+    ],
+    [
+      "Action",
+      "index",
+      "[t] \"Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub",
+      "[t] \"Vänster Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub-counted",
+      "[t] CSFordinalPosition; [t] \"Vänstra Indexet\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper",
+      "[t] \"Vänster Exponent\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper-counted",
+      "[t] CSFordinalPosition; [t] \"Vänstra Exponenten\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub",
+      "[t] \"Höger Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub-counted",
+      "[t] CSFordinalPosition; [t] \"Högra Indexet\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper",
+      "[t] \"Höger Exponent\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper-counted",
+      "[t] CSFordinalPosition; [t] \"Högra Exponenten\" (pause:200)"
+    ],
+    [
+      "Action",
+      "choice",
+      "[t] \"Valmängd\" (pause:200)"
+    ],
+    [
+      "Action",
+      "select",
+      "[t] \"Urvalsmängd\" (pause:200)"
+    ],
+    [
+      "Action",
+      "row",
+      "[t] CSFordinalPosition; [t] \"Rad\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell",
+      "[n] ../..; [t] CSFordinalPosition; [t] \"Kolumn\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple",
+      "[t] CSFordinalPosition; [t] \"Kolumn\" (pause:200)"
+    ]
+  ]
+}
