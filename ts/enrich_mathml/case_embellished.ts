@@ -157,13 +157,16 @@ export class CaseEmbellished extends AbstractEnrichCase {
 
   /**
    * Checks if the node is fenced, including vectors, matrices etc.
+   *
    * @param node A semantic node.
    * @returns True if the node is a fenced elementd type.
    */
   private fencedElement(node: SemanticNode) {
-    return node.type === SemanticType.FENCED ||
+    return (
+      node.type === SemanticType.FENCED ||
       node.type === SemanticType.MATRIX ||
-      node.type === SemanticType.VECTOR;
+      node.type === SemanticType.VECTOR
+    );
   }
 
   /**

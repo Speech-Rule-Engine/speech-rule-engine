@@ -29,7 +29,7 @@ import { Numbers, NUMBERS as NUMB } from '../messages';
 function hundredsToWords_(num: number): string {
   let n = num % 1000;
   let str = '';
-  let hundreds = Math.floor(n / 100);
+  const hundreds = Math.floor(n / 100);
   str += NUMBERS.ones[hundreds]
     ? (hundreds === 1 ? '' : NUMBERS.ones[hundreds] + NUMBERS.numSep) + 'hundra'
     : '';
@@ -67,8 +67,9 @@ function numberToWords(num: number): string {
       // Case 2: hundreds === 1 and pos > 1, space, no translate
       // Case 3: space and translate
       str =
-        ((pos && hundreds === 1) ? '' :
-          hundredsToWords_(num % 1000) + (pos > 1 ? ' ' : '')) +
+        (pos && hundreds === 1
+          ? ''
+          : hundredsToWords_(num % 1000) + (pos > 1 ? ' ' : '')) +
         (pos ? NUMBERS.large[pos] + ' ' : '') +
         str;
     }
@@ -146,7 +147,7 @@ function simpleOrdinal(num: number): string {
   if (str.match(/11$|12$/)) {
     return str + ':e';
   }
-  return str + ((str.match(/1$|2$/)) ? ':a' : ':e');
+  return str + (str.match(/1$|2$/) ? ':a' : ':e');
 }
 
 const NUMBERS: Numbers = NUMB();

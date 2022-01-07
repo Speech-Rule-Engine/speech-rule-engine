@@ -91,12 +91,16 @@ function create(): Locale {
     }
     // Note some stressed vowels are missing.
     return unit + 's';
-  }),  loc.FUNCTIONS.si = (prefix: string, unit: string) => {
-    if (unit.match(/^metre/)) {
-      prefix = prefix.replace(/a$/, 'à').replace(/o$/, 'ò').replace(/i$/, 'í');
-    }
-    return prefix + unit;
-  };
+  }),
+    (loc.FUNCTIONS.si = (prefix: string, unit: string) => {
+      if (unit.match(/^metre/)) {
+        prefix = prefix
+          .replace(/a$/, 'à')
+          .replace(/o$/, 'ò')
+          .replace(/i$/, 'í');
+      }
+      return prefix + unit;
+    });
 
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;
 

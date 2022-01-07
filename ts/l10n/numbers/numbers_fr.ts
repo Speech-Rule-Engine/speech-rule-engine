@@ -75,7 +75,9 @@ function numberToWords(num: number): string {
     return num.toString();
   }
   if (NUMBERS.special['tens-' + Engine.getInstance().subiso]) {
-    NUMBERS.tens = NUMBERS.special['tens-' + Engine.getInstance().subiso] as string[];
+    NUMBERS.tens = NUMBERS.special[
+      'tens-' + Engine.getInstance().subiso
+    ] as string[];
   }
   let pos = 0;
   let str = '';

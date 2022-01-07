@@ -260,30 +260,22 @@ export class Cli {
         set('rate'),
         '100'
       )
-      .option(
-        '-p, --speech',
-        'Generate speech output (default).',
-        () => processor('speech')
+      .option('-p, --speech', 'Generate speech output (default).', () =>
+        processor('speech')
       )
       .option(
         '-a, --audit',
         'Generate auditory descriptions (JSON format).',
         () => processor('description')
       )
-      .option(
-        '-j, --json',
-        'Generate JSON of semantic tree.',
-        () => processor('json')
+      .option('-j, --json', 'Generate JSON of semantic tree.', () =>
+        processor('json')
       )
-      .option(
-        '-x, --xml',
-        'Generate XML of semantic tree.',
-        () => processor('semantic')
+      .option('-x, --xml', 'Generate XML of semantic tree.', () =>
+        processor('semantic')
       )
-      .option(
-        '-m, --mathml',
-        'Generate enriched MathML.',
-        () => processor('enriched')
+      .option('-m, --mathml', 'Generate enriched MathML.', () =>
+        processor('enriched')
       )
       .option(
         '-g, --generate <depth>',
@@ -313,18 +305,17 @@ export class Cli {
         'Supplementary country code (or similar) for the given locale.',
         set('subiso')
       )
-      .option('-N, --number', 'Translate number to word.',
-              () => processor('number'))
+      .option('-N, --number', 'Translate number to word.', () =>
+        processor('number')
+      )
       .option(
         '-O, --ordinal',
         'Translate number to ordinal.',
         () => processor('ordinal'),
         'ordinal'
       )
-      .option(
-        '-S, --simple>',
-        'Translate number to simple ordinal.',
-        () => processor('simpleOrdinal')
+      .option('-S, --simple>', 'Translate number to simple ordinal.', () =>
+        processor('simpleOrdinal')
       )
       .option(
         '-F, --vulgar',

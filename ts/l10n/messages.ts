@@ -255,6 +255,9 @@ export interface SubIso {
   all: string[];
 }
 
+/**
+ * @returns An empty subiso specification.
+ */
 export function SUBISO(): SubIso {
   return {
     default: '',

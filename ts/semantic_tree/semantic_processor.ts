@@ -760,7 +760,7 @@ export default class SemanticProcessor {
     if (node.role !== SemanticRole.UNKNOWN) {
       return;
     }
-    const content = [...node.textContent].filter(x => x.match(/[^\s]/));
+    const content = [...node.textContent].filter((x) => x.match(/[^\s]/));
     const meaning = content.map(SemanticAttr.lookupMeaning);
     if (
       meaning.every(function (x) {

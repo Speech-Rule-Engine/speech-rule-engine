@@ -138,10 +138,7 @@ interface Convertible {
  * @returns If convertible denominator and enumerator are set.
  *    Otherwise only the text content is given.
  */
-export function convertVulgarFraction(
-  node: Element,
-  over = ''
-): Convertible {
+export function convertVulgarFraction(node: Element, over = ''): Convertible {
   if (
     !node.childNodes ||
     !node.childNodes[0] ||

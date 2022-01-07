@@ -53,6 +53,6 @@ function create(): Locale {
     default: '',
     current: '',
     all: ['', 'alt']
-  }
+  };
   return loc;
 }

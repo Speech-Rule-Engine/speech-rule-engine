@@ -66,7 +66,7 @@ function create(): Locale {
     default: 'fr',
     current: 'fr',
     all: ['fr', 'be', 'ch']
-  }
+  };
 
   return loc;
 }

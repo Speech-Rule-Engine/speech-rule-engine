@@ -259,7 +259,7 @@ export class MathStore extends BaseRuleStore {
     NUMBER: '((\\d{1,3})(?=(,| ))((,| )\\d{3})*(\\.\\d+)?)|^\\d*\\.\\d+|^\\d+',
     DECIMAL_MARK: '\\.',
     DIGIT_GROUP: ','
-  }
+  };
 
   /**
    * Matches a number with respect to locale. If it discovers it is a number in

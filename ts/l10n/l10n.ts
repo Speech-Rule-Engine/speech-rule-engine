@@ -71,6 +71,7 @@ export function setLocale() {
 
 /**
  * Sets the current subiso code if one exists.
+ *
  * @param msg The current locale message structure.
  */
 function setSubiso(msg: Locale) {

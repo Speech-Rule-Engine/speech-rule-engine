@@ -80,11 +80,10 @@ export function createLocale(): Locale {
      */
     CORRECTIONS: {},
 
-   /**
-    * Supplementary iso country codes or similar country specific speech,
-    * numbers, etc.
-    */
+    /**
+     * Supplementary iso country codes or similar country specific speech,
+     * numbers, etc.
+     */
     SUBISO: SUBISO()
-
   };
 }

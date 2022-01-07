@@ -147,7 +147,7 @@ export function toEnriched(expr: string): Element {
  * Translates a number into its word form for the current locale.
  *
  * @param expr The number
- * @return The word form of the number.
+ * @returns The word form of the number.
  */
 export function number(expr: string): string {
   return processString('number', expr);
@@ -157,7 +157,7 @@ export function number(expr: string): string {
  * Translates a number into its word ordinal for the current locale.
  *
  * @param expr The number
- * @return The word ordinal of the number.
+ * @returns The word ordinal of the number.
  */
 export function ordinal(expr: string): string {
   return processString('ordinal', expr);
@@ -167,7 +167,7 @@ export function ordinal(expr: string): string {
  * Translates a number into a simple ordinal for the current locale.
  *
  * @param expr The number
- * @return The simple ordinal of the number.
+ * @returns The simple ordinal of the number.
  */
 export function simpleOrdinal(expr: string): string {
   return processString('simpleOrdinal', expr);
@@ -178,7 +178,7 @@ export function simpleOrdinal(expr: string): string {
  * locale.
  *
  * @param expr The number with divisor slash.
- * @return The vulgar fraction in words.
+ * @returns The vulgar fraction in words.
  */
 export function vulgar(expr: string): string {
   return processString('vulgar', expr);

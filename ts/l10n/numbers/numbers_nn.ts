@@ -194,7 +194,7 @@ function hundredsToWordsGe_(num: number, ordinal = false): string {
     if (ordinal) {
       const ord = NUMBERS.special.smallOrdinals[n];
       if (ord) {
-        return str += ord;
+        return (str += ord);
       }
     }
     ones = NUMBERS.ones[n];
@@ -256,8 +256,9 @@ function numberToWordsGe(num: number, ordinal = false): string {
  * @returns The string representation of that number.
  */
 function numberToWords(num: number, ordinal = false): string {
-  const word = Engine.getInstance().subiso === 'alt' ?
-    numberToWordsGe(num, ordinal) :
-    numberToWordsRo(num, ordinal);
+  const word =
+    Engine.getInstance().subiso === 'alt'
+      ? numberToWordsGe(num, ordinal)
+      : numberToWordsRo(num, ordinal);
   return word;
 }

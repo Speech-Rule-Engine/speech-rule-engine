@@ -349,9 +349,10 @@ set(
 set(
   new Processor('vulgar', {
     processor: function (numb: string) {
-      const [en, den] = numb.split('/').map(x => parseInt(x, 10));
-      return isNaN(en) || isNaN(den) ? '' :
-        process('speech', `<mfrac><mn>${en}</mn><mn>${den}</mn></mfrac>`);
+      const [en, den] = numb.split('/').map((x) => parseInt(x, 10));
+      return isNaN(en) || isNaN(den)
+        ? ''
+        : process('speech', `<mfrac><mn>${en}</mn><mn>${den}</mn></mfrac>`);
     }
   })
 );
