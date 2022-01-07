@@ -2,7 +2,7 @@
   "kind": "numbers",
   "locale": "sv",
   "messages": {
-    "zero": "",
+    "zero": "nul",
     "ones": [
       "",
       "ett",
