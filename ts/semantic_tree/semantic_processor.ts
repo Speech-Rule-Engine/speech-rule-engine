@@ -750,6 +750,7 @@ export default class SemanticProcessor {
     };
   }
 
+  // TODO: Make this a postprocessor, once locales are loaded.
   /**
    * Compute the role of a number if it does not have one already.
    *
@@ -759,7 +760,7 @@ export default class SemanticProcessor {
     if (node.role !== SemanticRole.UNKNOWN) {
       return;
     }
-    const content = SemanticUtil.splitUnicode(node.textContent);
+    const content = [...node.textContent].filter(x => x.match(/[^\s]/));
     const meaning = content.map(SemanticAttr.lookupMeaning);
     if (
       meaning.every(function (x) {
@@ -798,7 +799,7 @@ export default class SemanticProcessor {
     if (node.font !== SemanticFont.UNKNOWN) {
       return;
     }
-    const content = SemanticUtil.splitUnicode(node.textContent);
+    const content = [...node.textContent];
     const meaning = content.map(SemanticAttr.lookupMeaning);
     const singleFont = meaning.reduce(function (prev, curr) {
       if (

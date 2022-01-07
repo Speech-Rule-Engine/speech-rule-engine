@@ -47,7 +47,6 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as SemanticUtil from './semantic_util';
 import {
   SemanticMeaning,
   SemanticRole,
@@ -150,7 +149,7 @@ const generalPunctuations: string[] = [
   '＼'
 ];
 const colons: string[] = ['︓', ':', '：', '﹕'];
-const invisibleComma_: string = SemanticUtil.numberToUnicode(0x2063);
+const invisibleComma_: string = String.fromCodePoint(0x2063);
 const commas: string[] = ['，', '﹐', ',', invisibleComma_];
 const ellipses: string[] = ['…', '⋮', '⋯', '⋰', '⋱', '︙'];
 const fullStops: string[] = ['.', '﹒', '．'];
@@ -286,11 +285,11 @@ const topBottomPairs: { [key: string]: string } = {
   '\ufe47': '﹈'
 };
 
-const leftFences: string[] = SemanticUtil.objectsToKeys(openClosePairs);
-const rightFences: string[] = SemanticUtil.objectsToValues(openClosePairs);
+const leftFences: string[] = Object.keys(openClosePairs);
+const rightFences: string[] = Object.values(openClosePairs);
 rightFences.push('〟');
-const topFences: string[] = SemanticUtil.objectsToKeys(topBottomPairs);
-const bottomFences: string[] = SemanticUtil.objectsToValues(topBottomPairs);
+const topFences: string[] = Object.keys(topBottomPairs);
+const bottomFences: string[] = Object.values(topBottomPairs);
 
 const neutralFences: string[] = [
   '|',
@@ -1593,7 +1592,7 @@ const additions: string[] = [
 /**
  * Invisible operator for plus.
  */
-const invisiblePlus_: string = SemanticUtil.numberToUnicode(0x2064);
+const invisiblePlus_: string = String.fromCodePoint(0x2064);
 additions.push(invisiblePlus_);
 
 const multiplications: string[] = [
@@ -1625,7 +1624,7 @@ const multiplications: string[] = [
 /**
  * Invisible operator for multiplication.
  */
-const invisibleTimes_: string = SemanticUtil.numberToUnicode(0x2062);
+const invisibleTimes_: string = String.fromCodePoint(0x2062);
 multiplications.push(invisibleTimes_);
 
 const subtractions: string[] = [
@@ -1656,7 +1655,7 @@ const divisions: string[] = ['/', '÷', '⁄', '∕', '⊘', '⟌', '⦼', '⨸'
 /**
  * Invisible operator for function application.
  */
-const functionApplication_: string = SemanticUtil.numberToUnicode(0x2061);
+const functionApplication_: string = String.fromCodePoint(0x2061);
 
 // Relation symbols
 const equalities: string[] = [

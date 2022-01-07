@@ -141,7 +141,7 @@ SemanticHeuristics.add(
       return;
     }
     // TODO: Combine with lines in numberRole_/exprFont_?
-    const content = SemanticUtil.splitUnicode(node.textContent);
+    const content = [...node.textContent];
     const meaning = content.map(SemanticAttr.lookupMeaning);
     const singleRole = meaning.reduce(function (prev, curr) {
       if (

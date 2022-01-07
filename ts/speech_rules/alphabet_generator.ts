@@ -25,7 +25,6 @@ import { localeFontCombiner } from '../l10n/locale_util';
 import { Combiner, Transformer } from '../l10n/transformers';
 import * as MathCompoundStore from '../rule_engine/math_compound_store';
 import { UnicodeJson } from '../rule_engine/math_simple_store';
-import * as SemanticUtil from '../semantic_tree/semantic_util';
 
 /**
  * Enumerator for Unicode fonts. These match the font elements in sre.Messages
@@ -122,7 +121,7 @@ export function generate(locale: string) {
   for (let i = 0, int; (int = intervals[i]); i++) {
     const keys = makeInterval(int.interval, int.subst);
     const letters = keys.map(function (x) {
-      return SemanticUtil.numberToUnicode(parseInt(x, 16));
+      return String.fromCodePoint(parseInt(x, 16));
     });
     if ('offset' in int) {
       numberRules(keys, letters, int.font, int.category, int.offset || 0);
