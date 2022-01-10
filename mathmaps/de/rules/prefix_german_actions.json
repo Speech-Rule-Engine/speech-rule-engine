@@ -1,0 +1,118 @@
+{
+  "modality": "prefix",
+  "locale": "de",
+  "domain": "default",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "numerator",
+      "[t] \"Zähler\" (pause:200)"
+    ],
+    [
+      "Action",
+      "denominator",
+      "[t] \"Nenner\" (pause:200)"
+    ],
+    [
+      "Action",
+      "base",
+      "[t] \"Basis\" (pause:200)"
+    ],
+    [
+      "Action",
+      "exponent",
+      "[t] \"Exponent\" (pause:200)"
+    ],
+    [
+      "Action",
+      "subscript",
+      "[t] \"Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "overscript",
+      "[t] \"Oberer Grenzwert\" (pause:200)"
+    ],
+    [
+      "Action",
+      "underscript",
+      "[t] \"Unterer Grenzwert\" (pause:200)"
+    ],
+    [
+      "Action",
+      "radicand",
+      "[t] \"Radikand\" (pause:200)"
+    ],
+    [
+      "Action",
+      "index",
+      "[t] \"Wurzelexponent\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub",
+      "[t] \"linker unterer Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsub-counted",
+      "[t] CSFordinalPosition; [t] \"linker unterer Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper",
+      "[t] \"linker oberer Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "leftsuper-counted",
+      "[t] CSFordinalPosition; [t] \"linker oberer Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub",
+      "[t] \"rechter unterer Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsub-counted",
+      "[t] CSFordinalPosition; [t] \"rechter unterer Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper",
+      "[t] \"rechter oberer Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "rightsuper-counted",
+      "[t] CSFordinalPosition; [t] \"rechter oberer Index\" (pause:200)"
+    ],
+    [
+      "Action",
+      "choice",
+      "[t] \"Grundgesamtheit\" (pause:200)"
+    ],
+    [
+      "Action",
+      "select",
+      "[t] \"Stichprobengröße\" (pause:200)"
+    ],
+    [
+      "Action",
+      "row",
+      "[t] CSFordinalPosition; [t] \"Zeile\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell",
+      "[n] ../..; [t] CSFordinalPosition; [t] \"Spalte\" (pause:200)"
+    ],
+    [
+      "Action",
+      "cell-simple",
+      "[t] CSFordinalPosition; [t] \"Spalte\" (pause:200)"
+    ]
+  ]
+}

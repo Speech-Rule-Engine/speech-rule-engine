@@ -1,0 +1,66 @@
+{
+  "kind": "numbers",
+  "locale": "ca",
+  "messages": {
+    "zero": "zero",
+    "ones": [
+      "",
+      "un",
+      "dos",
+      "tres",
+      "quatre",
+      "cinc",
+      "sis",
+      "set",
+      "vuit",
+      "nou",
+      "deu",
+      "onze",
+      "dotze",
+      "tretze",
+      "catorze",
+      "quinze",
+      "setze",
+      "disset",
+      "divuit",
+      "dinou"
+    ],
+    "tens": [
+      "",
+      "",
+      "vint",
+      "trenta",
+      "quaranta",
+      "cinquanta",
+      "seixanta",
+      "setanta",
+      "vuitanta",
+      "noranta"
+    ],
+    "large": [
+      "",
+      "mil",
+      "milió",
+      "bilió",
+      "trilió",
+      "quadrilió",
+      "quintilió"
+    ],
+    "vulgarSep": " ",
+    "numSep": " ",
+    "special": {
+      "onesOrdinals": [
+        "primera",
+        "segona",
+        "tercera",
+        "quarta",
+        "cinquena",
+        "sisena",
+        "setena",
+        "vuitena",
+        "novena",
+        "desena"
+      ]
+    }
+  }
+}

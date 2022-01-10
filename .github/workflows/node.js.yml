@@ -16,18 +16,21 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Setup Speech Rule Engine
-        run: npm ci; npm run build --if-present; npm run pretest
+        run: npm ci
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
           name: sre-library
-          path: lib
+          path: |
+                lib
+                js
+                package.json
           
   test:
 
     strategy:
       matrix:
-        block: [base, walker, semantic, en, de, fr, es, it, hi/clearspeak, hi/mathspeak, hi/others, hi/symbols, nemeth]
+        block: [base, walker, semantic, en, ca, de, fr, es, it, hi, nb, nn, nemeth, sv]
     needs: setup
     runs-on: ubuntu-latest
     name: SRE jests tests for ${{ matrix.block }}
@@ -37,11 +40,11 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: sre-library
-          path: lib
       - name: Set up tests
         run: |
           sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
           git submodule update --init --recursive
-          cd sre-tests; sudo chmod -R 777 .; npm ci
+          npm ci --ignore-scripts
+          cd sre-tests; ln -s .. speech-rule-engine; npm ci; sudo chmod -R 777 .;
       - name: Run tests for ${{ matrix.block }}
         run: npm run actionTest js/json/${{ matrix.block }}

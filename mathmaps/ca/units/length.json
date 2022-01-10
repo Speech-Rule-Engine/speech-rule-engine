@@ -1,0 +1,144 @@
+[
+  {
+    "locale": "ca"
+  },
+  {
+    "key": "ft",
+    "category": "length",
+    "names": [
+      "ft",
+      "ft."
+    ],
+    "mappings": {
+      "default": {
+        "default": "peu",
+        "plural": "peus"
+      }
+    }
+  },
+  {
+    "key": "in",
+    "category": "length",
+    "names": [
+      "in",
+      "in."
+    ],
+    "mappings": {
+      "default": {
+        "default": "polzada",
+        "plural": "polzades"
+      }
+    }
+  },
+  {
+    "key": "mi",
+    "category": "length",
+    "names": [
+      "mi",
+      "mi."
+    ],
+    "mappings": {
+      "default": {
+        "default": "milla",
+        "plural": "milles"
+      }
+    }
+  },
+  {
+    "key": "yd",
+    "category": "length",
+    "names": [
+      "yd",
+      "yd."
+    ],
+    "mappings": {
+      "default": {
+        "default": "iarda",
+        "plural": "iardes"
+      }
+    }
+  },
+  {
+    "key": "link",
+    "category": "length",
+    "names": [
+      "li",
+      "li."
+    ],
+    "mappings": {
+      "default": {
+        "default": "link",
+        "plural": "links"
+      }
+    }
+  },
+  {
+    "key": "rod",
+    "category": "length",
+    "names": [
+      "rd",
+      "rd."
+    ],
+    "mappings": {
+      "default": {
+        "default": "rod",
+        "plural": "rods"
+      }
+    }
+  },
+  {
+    "key": "chain",
+    "category": "length",
+    "names": [
+      "ch",
+      "ch."
+    ],
+    "mappings": {
+      "default": {
+        "default": "cadena",
+        "plural": "cadenes"
+      }
+    }
+  },
+  {
+    "key": "furlong",
+    "category": "length",
+    "names": [
+      "fur",
+      "fur."
+    ],
+    "mappings": {
+      "default": {
+        "default": "furlong",
+        "plural": "furlongs"
+      }
+    }
+  },
+  {
+    "key": "n.m.",
+    "category": "length",
+    "names": [
+      "n.m."
+    ],
+    "mappings": {
+      "default": {
+        "default": "milla nàutica",
+        "plural": "milles nàutiques"
+      }
+    }
+  },
+  {
+    "key": "m",
+    "category": "length",
+    "names": [
+      "m"
+    ],
+    "si": true,
+    "mappings": {
+      "default": {
+        "default": "metre",
+        "plural": "metres"
+      }
+    }
+  }
+]

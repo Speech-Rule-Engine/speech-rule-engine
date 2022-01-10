@@ -1,6 +1,6 @@
 {
   "name": "speech-rule-engine",
-  "version": "3.3.3",
+  "version": "4.0.0",
   "description": "A standalone speech rule engine for XML structures, based on the original engine from ChromeVox.",
   "directories": {
     "test": "tests"
@@ -9,10 +9,16 @@
     "sre": "bin/sre"
   },
   "scripts": {
+    "format": "prettier --check ts/",
+    "format-fix": "prettier --write ts/",
+    "lint": "eslint ts/ --ext .ts,.tsx",
+    "lint-fix": "eslint ts/ --ext .ts,.tsx --fix",
     "test": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npm run test",
-    "pretest": "make test_compile",
-    "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; npx jest",
-    "prepublishOnly": "make clean; make publish",
+    "docs": "npx typedoc --entryPointStrategy ts/",
+    "pretest": "git submodule update --remote --merge; npm run compile; cd sre-tests; ln -s .. speech-rule-engine; npm install",
+    "compile": "npx tsc",
+    "actionTest": "cd sre-tests; export SRE_JSON_PATH=../lib/mathmaps; node --expose-gc ./node_modules/.bin/jest ",
+    "prepublish": "make clean; make publish; npx tsc; npx webpack",
     "build": "make all"
   },
   "maintainers": [
@@ -34,23 +40,39 @@
   ],
   "homepage": "https://github.com/zorkow/speech-rule-engine",
   "dependencies": {
-    "commander": ">=7.0.0",
-    "wicked-good-xpath": "^1.3.0",
-    "xmldom-sre": "^0.1.31"
+    "commander": "8.3.0",
+    "wicked-good-xpath": "1.3.0",
+    "xmldom-sre": "0.1.31"
   },
   "devDependencies": {
-    "closure-linter-wrapper": ">=1.1.0",
-    "google-closure-compiler": ">=20190618.0.0",
-    "google-closure-library": "^20200517.0.0",
-    "jsdoc": ">=3.6.2",
-    "json-minify": ">=1.0.0"
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "circular-dependency-plugin": "^5.2.2",
+    "esbuild": "^0.14.6",
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jsdoc": "^37.4.0",
+    "json-minify": "1.0.0",
+    "prettier": "^2.5.1",
+    "rollup": "^2.61.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "terser-webpack-plugin": "5.3.0",
+    "ts-loader": "9.2.6",
+    "typedoc": "^0.22.10",
+    "typescript": "4.5.4",
+    "webpack": "5.65.0",
+    "webpack-cli": "^4.9.1"
   },
   "files": [
     "index.js",
     "LICENSE",
     "README.md",
     "lib/",
-    "bin/"
+    "bin/",
+    "js/"
   ],
-  "main": "index.js"
+  "source": "ts/index.ts",
+  "browser": "lib/sre.js"
 }

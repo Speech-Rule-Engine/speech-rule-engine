@@ -1,0 +1,8 @@
+{
+  "locale": "nb",
+  "domain": "mathspeak",
+  "modality": "speech",
+  "inherits": "base",
+  "rules": [
+  ]
+}

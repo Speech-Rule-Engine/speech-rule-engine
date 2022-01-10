@@ -1,0 +1,145 @@
+{
+  "locale": "de",
+  "domain": "mathspeak",
+  "modality": "speech",
+  "inherits": "base",
+  "rules": [
+    [
+      "Ignore",
+      "vulgar-fraction"
+    ],
+    [
+      "Precondition",
+      "font-number",
+      "default",
+      "self::number[@font!=\"normal\"]",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Precondition",
+      "font-double-struck",
+      "default",
+      "self::*[@font=\"double-struck\"]",
+      "name(self::*)!=\"number\"",
+      "string-length(text())=1",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Precondition",
+      "font-number-double-struck",
+      "default",
+      "self::number[@font=\"double-struck\"]",
+      "string-length(text())=1",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Precondition",
+      "double-overscore",
+      "default",
+      "self::overscore",
+      "children/*[2][@role=\"overaccent\"]",
+      "name(children/*[1])=\"overscore\"",
+      "children/*[1]/children/*[2][@role=\"overaccent\"]"
+    ],
+    [
+      "Precondition",
+      "double-overscore-brief",
+      "brief",
+      "self::overscore",
+      "children/*[2][@role=\"overaccent\"]",
+      "name(children/*[1])=\"overscore\"",
+      "children/*[1]/children/*[2][@role=\"overaccent\"]"
+    ],
+    [
+      "Specialized",
+      "double-overscore-brief",
+      "brief",
+      "sbrief"
+    ],
+    [
+      "Precondition",
+      "double-underscore",
+      "default",
+      "self::underscore",
+      "children/*[2][@role=\"underaccent\"]",
+      "name(children/*[1])=\"underscore\"",
+      "children/*[1]/children/*[2][@role=\"underaccent\"]"
+    ],
+    [
+      "Precondition",
+      "double-underscore-brief",
+      "brief",
+      "self::underscore",
+      "children/*[2][@role=\"underaccent\"]",
+      "name(children/*[1])=\"underscore\"",
+      "children/*[1]/children/*[2][@role=\"underaccent\"]"
+    ],
+    [
+      "Specialized",
+      "double-underscore-brief",
+      "brief",
+      "sbrief"
+    ],
+    [
+      "Precondition",
+      "overbar",
+      "default",
+      "self::overscore",
+      "contains(@role,\"letter\")",
+      "children/*[2][@role=\"overaccent\"]",
+      "children/*[2][contains(@annotation, \"accent:bar\")]"
+    ],
+    [
+      "Precondition",
+      "underbar",
+      "default",
+      "self::underscore",
+      "contains(@role,\"letter\")",
+      "children/*[2][@role=\"underaccent\"]",
+      "children/*[2][contains(@annotation, \"accent:bar\")]"
+    ],
+    [
+      "Precondition",
+      "overtilde",
+      "default",
+      "self::overscore",
+      "children/*[2][@role=\"overaccent\"]",
+      "contains(@role,\"letter\")",
+      "children/*[2][contains(@annotation, \"accent:tilde\")]"
+    ],
+    [
+      "Precondition",
+      "undertilde",
+      "default",
+      "self::underscore",
+      "contains(@role,\"letter\")",
+      "children/*[2][@role=\"underaccent\"]",
+      "children/*[2][contains(@annotation, \"accent:tilde\")]"
+    ],
+    [
+      "Alias",
+      "overbar",
+      "self::enclose",
+      "@role=\"top\""
+    ],
+    [
+      "Alias",
+      "underbar",
+      "self::enclose",
+      "@role=\"bottom\""
+    ],
+    [
+      "Precondition",
+      "binomial-brief",
+      "brief",
+      "self::vector",
+      "@role=\"binomial\""
+    ],
+    [
+      "Precondition",
+      "cases-brief",
+      "brief",
+      "self::cases"
+    ]
+  ]
+}

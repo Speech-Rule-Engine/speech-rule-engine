@@ -1,0 +1,15 @@
+{
+  "domain": "mathspeak",
+  "locale": "hi",
+  "modality": "speech",
+  "inherits": "base",
+  "rules": [
+    [
+      "Rule",
+      "protected",
+      "default",
+      "[t] text()",
+      "self::number[contains(@grammar, \"protected\")]"
+    ]
+  ]
+}

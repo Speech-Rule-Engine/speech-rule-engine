@@ -1,0 +1,57 @@
+{
+  "kind": "numbers",
+  "locale": "sv",
+  "messages": {
+    "zero": "nul",
+    "ones": [
+      "",
+      "ett",
+      "två",
+      "tre",
+      "fyra",
+      "fem",
+      "sex",
+      "sju",
+      "åtta",
+      "nio",
+      "tio",
+      "elva",
+      "tolv",
+      "tretton",
+      "fjorton",
+      "femton",
+      "sexton",
+      "sjutton",
+      "arton",
+      "nitton"
+    ],
+    "tens": [
+      "",
+      "",
+      "tjugo",
+      "trettio",
+      "fyrtio",
+      "femtio",
+      "sextio",
+      "sjuttio",
+      "åttio",
+      "nittio"
+    ],
+    "large": [
+      "",
+      "tusen",
+      "miljon",
+      "miljard",
+      "biljon",
+      "biljard",
+      "triljon",
+      "triljard",
+      "kvadriljon",
+      "kvadriljard",
+      "kvintiljon",
+      "kvintiljard"
+    ],
+    "vulgarSep": " ",
+    "numSep": ""
+  }
+}

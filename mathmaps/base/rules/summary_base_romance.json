@@ -1,0 +1,69 @@
+{
+  "modality": "summary",
+  "locale": "romance",
+  "kind": "abstract",
+  "inherits": "base",
+  "rules": [
+    [
+      "Precondition",
+      "collapsed-masculine",
+      "default.default",
+      "self::*[@grammar]",
+      "contains(@grammar, \"gender:m\")",
+      "contains(@grammar, \"collapsed\")"
+    ],
+    [
+      "Specialized",
+      "collapsed-masculine",
+      "default.default",
+      "mathspeak.brief"
+    ],
+    [
+      "Specialized",
+      "collapsed-masculine",
+      "default.default",
+      "mathspeak.sbrief"
+    ],
+    [
+      "Precondition",
+      "collapsed-feminine",
+      "default.default",
+      "self::*[@grammar]",
+      "contains(@grammar, \"gender:f\")",
+      "contains(@grammar, \"collapsed\")"
+    ],
+    [
+      "Specialized",
+      "collapsed-feminine",
+      "default.default",
+      "mathspeak.brief"
+    ],
+    [
+      "Specialized",
+      "collapsed-feminine",
+      "default.default",
+      "mathspeak.sbrief"
+    ],
+    [
+      "Rule",
+      "no-collapsed",
+      "default.default",
+      "[t] \"\"",
+      "self::*[@grammar]",
+      "contains(@grammar, \"gender\")",
+      "not(contains(@grammar, \"collapsed\"))"
+    ],
+    [
+      "SpecializedRule",
+      "no-collapsed",
+      "default.default",
+      "mathspeak.brief"
+    ],
+    [
+      "SpecializedRule",
+      "no-collapsed",
+      "default.default",
+      "mathspeak.sbrief"
+    ]
+  ]
+}

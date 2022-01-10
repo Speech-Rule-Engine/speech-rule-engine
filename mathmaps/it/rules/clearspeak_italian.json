@@ -1,0 +1,39 @@
+{
+  "locale": "it",
+  "domain": "clearspeak",
+  "modality": "speech",
+  "inherits": "romance",
+  "rules": [
+    [
+      "Precondition",
+      "function-prefix-det",
+      "default",
+      "self::appl",
+      "@role=\"prefix function\"",
+      "children/*[1][text()=\"det\"]"
+    ],
+    [
+      "Precondition",
+      "fraction-per",
+      "Fraction_Per",
+      "self::fraction",
+      "contains(children/*[1]/@annotation, \"clearspeak:unit\")",
+      "contains(children/*[2]/@annotation, \"clearspeak:unit\")"
+    ],
+    [
+      "Precondition",
+      "squared-masculine",
+      "default",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")"
+    ],
+    [
+      "Precondition",
+      "squared-feminine",
+      "default",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")",
+      "parent::*/parent::*[@role=\"simple function\"]"
+    ]
+  ]
+}

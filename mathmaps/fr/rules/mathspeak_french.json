@@ -1,0 +1,32 @@
+{
+  "locale": "fr",
+  "modality": "speech",
+  "domain": "mathspeak",
+  "inherits": "romance",
+  "rules": [
+    [
+      "Ignore",
+      "subscript-simple",
+      "default"
+    ],
+    [
+      "Ignore",
+      "prime-subscript-simple",
+      "default"
+    ],
+    [
+      "Precondition",
+      "overbar-enclose",
+      "default",
+      "self::enclose",
+      "@role=\"top\""
+    ],
+    [
+      "Precondition",
+      "underbar-enclose",
+      "default",
+      "self::enclose",
+      "@role=\"bottom\""
+    ]
+  ]
+}

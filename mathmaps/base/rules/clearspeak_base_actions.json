@@ -1,0 +1,453 @@
+{
+  "domain": "clearspeak",
+  "locale": "base",
+  "modality": "speech",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "punctuation-lr",
+      "[p] (pause:short); [n] text() (pause:short)"
+    ],
+    [
+      "Action",
+      "punctuation",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "punctuation-l",
+      "[p] (pause:short); [n] text()"
+    ],
+    [
+      "Action",
+      "punctuation-r",
+      "[n] text() (pause:short)"
+    ],
+    [
+      "Action",
+      "prime",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "degrees",
+      "[m] children/* (grammar:degree)"
+    ],
+    [
+      "Action",
+      "feet",
+      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate:plural)"
+    ],
+    [
+      "Action",
+      "foot",
+      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate)"
+    ],
+    [
+      "Action",
+      "inches",
+      "[n] children/*[1]; [t] \"in\" (grammar:annotation=\"unit\":translate:plural)"
+    ],
+    [
+      "Action",
+      "inch",
+      "[n] children/*[1]; [t] \"in\" (grammar:annotation=\"unit\":translate)"
+    ],
+    [
+      "Action",
+      "minutes",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
+    ],
+    [
+      "Action",
+      "minute",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
+    ],
+    [
+      "Action",
+      "seconds",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
+    ],
+    [
+      "Action",
+      "second",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
+    ],
+    [
+      "Action",
+      "degrees-angle",
+      "[t] text() (grammar:annotation=\"unit\":translate:plural, pause:short)"
+    ],
+    [
+      "Action",
+      "degree-angle",
+      "[t] text() (grammar:annotation=\"unit\":translate, pause:short)"
+    ],
+    [
+      "Action",
+      "minutes-angle",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
+    ],
+    [
+      "Action",
+      "minute-angle",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
+    ],
+    [
+      "Action",
+      "seconds-angle",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate:plural)"
+    ],
+    [
+      "Action",
+      "second-angle",
+      "[n] children/*[1]; [t] children/*[2]/text() (grammar:annotation=\"unit\":translate)"
+    ],
+    [
+      "Action",
+      "feet-length",
+      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate:plural, pause:short)"
+    ],
+    [
+      "Action",
+      "foot-length",
+      "[n] children/*[1]; [t] \"ft\" (grammar:annotation=\"unit\":translate, pause:short)"
+    ],
+    [
+      "Action",
+      "inches-length",
+      "[n] children/*[1]; ; [t] \"in\" (grammar:annotation=\"unit\":translate:plural, pause:short)"
+    ],
+    [
+      "Action",
+      "inch-length",
+      "[n] children/*[1]; ; [t] \"in\" (grammar:annotation=\"unit\":translate, pause:short)"
+    ],
+    [
+      "Action",
+      "punctuated",
+      "[m] children/*"
+    ],
+    [
+      "Action",
+      "function",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "binary-operation",
+      "[n] . (grammar:impliedTimes, pause:short)"
+    ],
+    [
+      "Action",
+      "function-ln-natlog",
+      "[n] . (grammar:NatLog)"
+    ],
+    [
+      "Action",
+      "function-ln-natlog-pause",
+      "[n] . (grammar:NatLog, pause:short)"
+    ],
+    [
+      "Action",
+      "function-no-inverse",
+      "[n] . (grammar:functions_none)"
+    ],
+    [
+      "Action",
+      "paren-simple",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "paren-simple-exp",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "paren-simple-nested-func",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "paren-simple-nested-func-no-bracket",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "fences-open-close",
+      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
+    ],
+    [
+      "Action",
+      "paren-simple-nested-func-default",
+      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
+    ],
+    [
+      "Action",
+      "paren-simple-nested-func-none",
+      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
+    ],
+    [
+      "Action",
+      "fence-silent",
+      "[p] (pause:short); [n] children/*[1] (pause:short)"
+    ],
+    [
+      "Action",
+      "fences-open-close-none",
+      "[p] (pause:short); [n] content/*[1] (grammar:spokenFence, pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (grammar:spokenFence, pause:short)"
+    ],
+    [
+      "Action",
+      "fence-nesting",
+      "[n] text() (grammar:insertNesting=CSFnestingDepth)"
+    ],
+    [
+      "Action",
+      "fence-no-nesting",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "interval-open-inf-lr",
+      ""
+    ],
+    [
+      "Action",
+      "paren-nested-embellished-funcs",
+      "[p] (pause:short); [n] content/*[1] (pause:short); [n] children/*[1] (pause:short); [n] content/*[2] (pause:short)"
+    ],
+    [
+      "Action",
+      "set-collection-silentbracket",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "prefix",
+      "[m] content/* (grammar:prefix); [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "postfix",
+      "[n] children/*[1]; [m] content/* (grammar:postfix)"
+    ],
+    [
+      "Action",
+      "binary-operation-default",
+      "[m] children/* (sepFunc:CTFcontentIterator)"
+    ],
+    [
+      "Action",
+      "binary-operation-moreimpliedtimes",
+      "[m] children/* (sepFunc:CTFcontentIterator)"
+    ],
+    [
+      "Action",
+      "binary-operation-pause",
+      "[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator)"
+    ],
+    [
+      "Action",
+      "binary-operation-pause-r",
+      "[m] children/* (sepFunc:CTFcontentIterator, pause:short)"
+    ],
+    [
+      "Action",
+      "binary-operation-pause-lr",
+      "[p] (pause:short); [m] children/* (sepFunc:CTFcontentIterator, pause:short)"
+    ],
+    [
+      "Action",
+      "implicit-times",
+      "[p] (pause:short)"
+    ],
+    [
+      "Action",
+      "implicit-times-default",
+      ""
+    ],
+    [
+      "Action",
+      "implicit-times-simple",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "implicit-times-moreimpliedtimes",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "implicit-times-none",
+      ""
+    ],
+    [
+      "Action",
+      "binary-operation-simple",
+      "[m] children/* (rate:\"0.5\", pause:short)"
+    ],
+    [
+      "Action",
+      "simple-in-fraction",
+      "[n] . (rate:\"0.5\", grammar:inFrac)"
+    ],
+    [
+      "Action",
+      "relseq",
+      "[m] children/* (sepFunc:CTFcontentIterator)"
+    ],
+    [
+      "Action",
+      "multrel",
+      "[m] children/* (sepFunc:CTFcontentIterator)"
+    ],
+    [
+      "Action",
+      "natural-numbers-super",
+      "[t] \"n\" (join:\"-\",grammar:translate); [n] children/*[2] (grammar:numbers2alpha)"
+    ],
+    [
+      "Action",
+      "integers-super",
+      "[t] \"z\" (join:\"-\",grammar:translate); [n] children/*[2] (grammar:numbers2alpha)"
+    ],
+    [
+      "Action",
+      "rational-numbers-super",
+      "[t] \"q\" (join:\"-\",grammar:translate); [n] children/*[2] (grammar:numbers2alpha)"
+    ],
+    [
+      "Action",
+      "real-numbers-super",
+      "[t] \"r\" (join:\"-\",grammar:translate); [n] children/*[2] (grammar:numbers2alpha)"
+    ],
+    [
+      "Action",
+      "complex-numbers-super",
+      "[t] \"c\" (join:\"-\",grammar:translate); [n] children/*[2] (grammar:numbers2alpha)"
+    ],
+    [
+      "Action",
+      "matrix-row-simple",
+      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")"
+    ],
+    [
+      "Action",
+      "matrix-row-simple-silentcolnum",
+      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")"
+    ],
+    [
+      "Action",
+      "line-simple",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "matrix-cell",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "lines-summary-none",
+      "[n] . (grammar:layoutSummary)"
+    ],
+    [
+      "Action",
+      "cases-summary-none",
+      "[n] . (grammar:layoutSummary)"
+    ],
+    [
+      "Action",
+      "line",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "row-medium",
+      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"medium\")"
+    ],
+    [
+      "Action",
+      "row-long",
+      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"long\")"
+    ],
+    [
+      "Action",
+      "row-short",
+      "[m] children/* (sepFunc:CTFpauseSeparator, separator:\"short\")"
+    ],
+    [
+      "Action",
+      "lines-none",
+      "[p] (pause:short); [m] children/* (sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
+    ],
+    [
+      "Action",
+      "overscript-accent",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "number",
+      "[n] text()"
+    ],
+    [
+      "Action",
+      "number-with-spaces",
+      "[m] CQFspaceoutNumber (grammar:!spaceout:number)"
+    ],
+    [
+      "Action",
+      "tensor-base",
+      "[n] children/*[2]; [n] children/*[3]; [n] children/*[1]; [n] children/*[4]; [n] children/*[5]"
+    ],
+    [
+      "Action",
+      "empty-index",
+      "[p] (pause:medium)"
+    ],
+    [
+      "Action",
+      "combinatorics",
+      "[n] children/*[2] (grammar:combinatorics); [n] children/*[1]; [n] children/*[4] (grammar:combinatorics)"
+    ],
+    [
+      "Action",
+      "unit-singular",
+      "[t] text() (grammar:annotation=\"unit\":translate)"
+    ],
+    [
+      "Action",
+      "unit-plural",
+      "[t] text() (grammar:annotation=\"unit\":translate:plural)"
+    ],
+    [
+      "Action",
+      "unit-combine",
+      "[m] children/*"
+    ],
+    [
+      "Action",
+      "unit-combine-singular",
+      "[n] children/*[1]; [n] children/*[2] (grammar:singular); [m] children/*[position()>2]"
+    ],
+    [
+      "Action",
+      "currency",
+      "[m] children/*[position()>1]; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "currency-position",
+      "[m] children/*"
+    ],
+    [
+      "Action",
+      "currency-prefix",
+      "[n] children/*[last()]; [m] children/*[position()<last()]"
+    ]
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "locale": "de",
+  "domain": "clearspeak",
+  "modality": "speech",
+  "inherits": "base",
+  "rules": [
+    [
+      "Precondition",
+      "font-number",
+      "default",
+      "self::number[@font!=\"normal\"]",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Precondition",
+      "font-double-struck",
+      "default",
+      "self::*[@font=\"double-struck\"]",
+      "name(self::*)!=\"number\"",
+      "string-length(text())=1",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Specialized",
+      "font-double-struck",
+      "default",
+      "Caps_SayCaps"
+    ],
+    [
+      "Precondition",
+      "font-number-double-struck",
+      "default",
+      "self::number[@font=\"double-struck\"]",
+      "string-length(text())=1",
+      "not(contains(@grammar, \"ignoreFont\"))"
+    ],
+    [
+      "Precondition",
+      "function-article",
+      "default",
+      "self::function",
+      "@role=\"prefix function\"",
+      "contains(@grammar, \"addArticle\")"
+    ],
+    [
+      "Precondition",
+      "function-article-fem",
+      "default",
+      "self::function",
+      "@role=\"prefix function\"",
+      "contains(@grammar, \"addArticle\")",
+      "text()=\"det\" or text()=\"dim\" or text()=\"tr\""
+    ],
+    [
+      "Precondition",
+      "superscript-ordinal-prefixop",
+      "default",
+      "self::superscript",
+      "name(children/*[2])=\"prefixop\"",
+      "children/*[2][@role=\"negative\"]",
+      "name(children/*[2]/children/*[1])=\"number\"",
+      "children/*[2]/children/*[1][@role=\"integer\"]"
+    ],
+    [
+      "Precondition",
+      "superscript-non-ordinal",
+      "Exponent_OrdinalPower",
+      "self::superscript",
+      "children/*[2][@role=\"negative\"]",
+      "name(children/*[2]/children/*[1])=\"number\"",
+      "children/*[2]/children/*[1][@role=\"integer\"]"
+    ],
+    [
+      "Precondition",
+      "superscript-simple-power",
+      "Exponent_OrdinalPower",
+      "self::superscript",
+      "not(descendant::superscript)"
+    ],
+    [
+      "Precondition",
+      "superscript-simple-power-end",
+      "Exponent_OrdinalPower",
+      "self::superscript",
+      "not(descendant::superscript)",
+      "not(following-sibling::*)"
+    ],
+    [
+      "Alias",
+      "superscript-simple-power",
+      "self::superscript",
+      "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
+      "name(children/superscript/children/*[1])=\"number\"",
+      "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
+    ],
+    [
+      "Alias",
+      "superscript-simple-power",
+      "self::superscript",
+      "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
+      "name(children/superscript/children/*[1])=\"fraction\"",
+      "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
+    ],
+    [
+      "Alias",
+      "superscript-simple-power",
+      "self::superscript",
+      "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
+      "name(children/superscript/children/*[1])=\"identifier\""
+    ],
+    [
+      "Alias",
+      "superscript-simple-power",
+      "self::superscript",
+      "children/*[2][@role=\"implicit\"]",
+      "count(children/*[2]/children/*)=2",
+      "contains(children/*[2]/children/*[1]/@annotation, \"simple\")",
+      "name(children/*[2]/children/*[2])=\"superscript\"",
+      "(name(children/*[2]/children/*[2]/children/*[1])=\"number\" and contains(children/*[2]/children/*[2]/children/*[1]/@annotation, \"clearspeak:simple\")) or name(children/*[2]/children/*[2]/children/*[1])=\"identifier\"",
+      "children/*[2]/children/*[2]/children/*[2][text()=\"2\"] or children/*[2]/children/*[2]/children/*[2][text()=\"3\"]"
+    ],
+    [
+      "Precondition",
+      "superscript-ordinal-power",
+      "Exponent_OrdinalPower",
+      "self::superscript",
+      "name(children/*[2])=\"number\"",
+      "children/*[2][@role=\"integer\"]"
+    ],
+    [
+      "Alias",
+      "superscript-ordinal-power",
+      "self::superscript",
+      "name(children/*[2])=\"identifier\"",
+      "children/*[2][@role=\"latinletter\" or @role=\"greekletter\" or @role=\"otherletter\"]"
+    ],
+    [
+      "Precondition",
+      "superscript-simple-function-ordinal",
+      "Exponent_OrdinalPower",
+      "self::superscript",
+      "name(children/*[1])=\"identifier\"",
+      "children/*[1][@role=\"simple function\"]",
+      "children/*[2][@role!=\"prime\"]",
+      "not(contains(@grammar, \"functions_none\"))"
+    ],
+    [
+      "Precondition",
+      "exponent-zero",
+      "default",
+      "self::number",
+      "@role=\"integer\"",
+      "contains(@grammar, \"ordinal\")",
+      "text()=\"0\""
+    ],
+    [
+      "Precondition",
+      "superscript-simple-exp",
+      "Exponent_Exponent",
+      "self::superscript",
+      "not(descendant::superscript)"
+    ],
+    [
+      "Precondition",
+      "superscript-simple-exp-end",
+      "Exponent_Exponent",
+      "self::superscript",
+      "not(descendant::superscript)",
+      "not(following-sibling::*)"
+    ],
+    [
+      "Alias",
+      "superscript-simple-exp",
+      "self::superscript",
+      "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
+      "name(children/superscript/children/*[1])=\"number\"",
+      "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
+    ],
+    [
+      "Alias",
+      "superscript-simple-exp",
+      "self::superscript",
+      "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
+      "name(children/superscript/children/*[1])=\"fraction\"",
+      "contains(children/superscript/children/*[1]/@annotation, \"clearspeak:simple\")"
+    ],
+    [
+      "Alias",
+      "superscript-simple-exp",
+      "self::superscript",
+      "children/superscript/children/*[2][text()=\"2\"] or children/superscript/children/*[2][text()=\"3\"]",
+      "name(children/superscript/children/*[1])=\"identifier\""
+    ],
+    [
+      "Alias",
+      "superscript-simple-exp",
+      "self::superscript",
+      "children/*[2][@role=\"implicit\"]",
+      "count(children/*[2]/children/*)=2",
+      "contains(children/*[2]/children/*[1]/@annotation, \"simple\")",
+      "name(children/*[2]/children/*[2])=\"superscript\"",
+      "(name(children/*[2]/children/*[2]/children/*[1])=\"number\" and contains(children/*[2]/children/*[2]/children/*[1]/@annotation, \"clearspeak:simple\")) or name(children/*[2]/children/*[2]/children/*[1])=\"identifier\"",
+      "children/*[2]/children/*[2]/children/*[2][text()=\"2\"] or children/*[2]/children/*[2]/children/*[2][text()=\"3\"]"
+    ],
+    [
+      "Precondition",
+      "element",
+      "default",
+      "self::infixop[contains(@role, \"element\")]"
+    ],
+    [
+      "Precondition",
+      "set-prefix-operators-masculine",
+      "default",
+      "self::*",
+      "contains(@grammar,\"prefix\")",
+      "descendant-or-self::*/text()=\"∩\"",
+      "self::*",
+      "self::*",
+      "self::*"
+    ],
+    [
+      "Precondition",
+      "set-prefix-operators-feminine",
+      "default",
+      "self::*",
+      "contains(@grammar,\"prefix\")",
+      "descendant-or-self::*/text()=\"∪\"",
+      "self::*",
+      "self::*",
+      "self::*"
+    ]
+  ]
+}

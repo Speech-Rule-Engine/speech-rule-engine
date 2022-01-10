@@ -11,3 +11,5 @@ src/closure-library
 *.aux
 *.log
 node_modules/
+js/
+*.min

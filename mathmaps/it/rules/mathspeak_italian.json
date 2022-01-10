@@ -1,0 +1,27 @@
+{
+  "domain": "mathspeak",
+  "locale": "it",
+  "modality": "speech",
+  "inherits": "romance",
+  "rules": [
+    [
+      "Ignore",
+      "vulgar-fraction"
+    ],
+    [
+      "Precondition",
+      "squared-masculine",
+      "default",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")"
+    ],
+    [
+      "Precondition",
+      "squared-feminine",
+      "default",
+      "self::number[text()=2]",
+      "contains(@grammar, \"squared\")",
+      "parent::*/parent::*[@role=\"simple function\"]"
+    ]
+  ]
+}
