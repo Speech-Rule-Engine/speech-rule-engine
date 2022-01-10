@@ -14,18 +14,14 @@
 // limitations under the License.
 
 /**
- * @fileoverview Highlighter for native MathML implementations that fully
+ * @file Highlighter for native MathML implementations that fully
  * support CSS.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {CssHighlighter} from './css_highlighter';
-
+import { CssHighlighter } from './css_highlighter';
 
 export class MmlCssHighlighter extends CssHighlighter {
-
   /**
    * @override
    */
@@ -34,15 +30,14 @@ export class MmlCssHighlighter extends CssHighlighter {
     this.mactionName = 'maction';
   }
 
-
   /**
    * @override
    */
   public getMactionNodes(node: HTMLElement) {
     return Array.from(
-      node.getElementsByTagName(this.mactionName)) as HTMLElement[];
+      node.getElementsByTagName(this.mactionName)
+    ) as HTMLElement[];
   }
-
 
   /**
    * @override
@@ -50,5 +45,4 @@ export class MmlCssHighlighter extends CssHighlighter {
   public isMactionNode(node: HTMLElement) {
     return node.tagName === this.mactionName;
   }
-
 }

@@ -1,0 +1,14 @@
+[
+  {
+    "locale": "nn"
+  },
+  {
+    "key": "0394",
+    "category": "Lu",
+    "mappings": {
+      "default": {
+        "default": "triangel"
+      }
+    }
+  }
+]

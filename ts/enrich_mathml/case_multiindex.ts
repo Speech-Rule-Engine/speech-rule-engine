@@ -14,22 +14,20 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract class for cases of multiindex structures.
- *
+ * @file Abstract class for cases of multiindex structures.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {Sexp} from '../semantic_tree/semantic_skeleton';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { Sexp } from '../semantic_tree/semantic_skeleton';
 
-import {AbstractEnrichCase} from './abstract_enrich_case';
+import { AbstractEnrichCase } from './abstract_enrich_case';
 import * as EnrichMathml from './enrich_mathml';
-
+import { setAttributes, Attribute } from './enrich_attr';
 
 export abstract class CaseMultiindex extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
@@ -38,35 +36,37 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
   /**
    * Treats the index nodes of a multiscript tensor, possibly collapsing dummy
    * punctuations.
+   *
    * @param index The index node of a tensor.
-   * @return If the index node was a
+   * @returns If the index node was a
    *     dummy punctuation, i.e. consisted of more than one index, a list of
    *     strings for the collapsed structure is returned, otherwise the node id.
    */
   public static multiscriptIndex(index: SemanticNode): Sexp {
-    if (index.type === SemanticType.PUNCTUATED &&
-        index.contentNodes[0].role === SemanticRole.DUMMY) {
+    if (
+      index.type === SemanticType.PUNCTUATED &&
+      index.contentNodes[0].role === SemanticRole.DUMMY
+    ) {
       return EnrichMathml.collapsePunctuated(index);
     }
     EnrichMathml.walkTree(index);
     return index.id;
   }
 
-
   /**
    * Creates a None node.
+   *
    * @param semantic An empty semantic node.
-   * @return The corresponding MathML <None/> node.
+   * @returns The corresponding MathML <None/> node.
    */
   private static createNone_(semantic: SemanticNode): Element {
-    let newNode = DomUtil.createElement('none');
+    const newNode = DomUtil.createElement('none');
     if (semantic) {
-      EnrichMathml.setAttributes(newNode, semantic);
+      setAttributes(newNode, semantic);
     }
-    newNode.setAttribute(EnrichMathml.Attribute.ADDED, 'true');
+    newNode.setAttribute(Attribute.ADDED, 'true');
     return newNode;
   }
-
 
   /**
    * @override
@@ -76,30 +76,38 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
     this.mml = semantic.mathmlTree;
   }
 
-
   /**
    * Completes the mmultiscript by adding missing None nodes and sorting out the
    * right order of children.
+   *
    * @param rightIndices The ids of the leaf
    *     nodes of the right indices.
    * @param leftIndices The ids of the leaf
    *     nodes of the left indices.
    */
   protected completeMultiscript(rightIndices: Sexp, leftIndices: Sexp) {
-    let children = DomUtil.toArray(this.mml.childNodes).slice(1);
+    const children = DomUtil.toArray(this.mml.childNodes).slice(1);
     let childCounter = 0;
-    let completeIndices = (indices: number[]) => {
-      for (let i = 0, index: number; index = indices[i]; i++) {
-        let child = children[childCounter];
-        if (!child || index !==
-              parseInt(EnrichMathml.getInnerNode(child).getAttribute(
-                EnrichMathml.Attribute.ID))) {
-          let query = this.semantic.querySelectorAll(x => x.id === index);
+    const completeIndices = (indices: number[]) => {
+      for (let i = 0, index: number; (index = indices[i]); i++) {
+        const child = children[childCounter];
+        if (
+          !child ||
+          index !==
+            parseInt(
+              EnrichMathml.getInnerNode(child).getAttribute(Attribute.ID)
+            )
+        ) {
+          const query = this.semantic.querySelectorAll((x) => x.id === index);
           this.mml.insertBefore(
-              CaseMultiindex.createNone_(query[0]), child || null);
+            CaseMultiindex.createNone_(query[0]),
+            child || null
+          );
         } else {
           EnrichMathml.getInnerNode(child).setAttribute(
-            EnrichMathml.Attribute.PARENT, this.semantic.id.toString());
+            Attribute.PARENT,
+            this.semantic.id.toString()
+          );
           childCounter++;
         }
       }
@@ -107,15 +115,18 @@ export abstract class CaseMultiindex extends AbstractEnrichCase {
     // right sub and superscripts
     completeIndices(rightIndices as number[]);
     // mprescripts
-    if (children[childCounter] &&
-        DomUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS') {
+    if (
+      children[childCounter] &&
+      DomUtil.tagName(children[childCounter]) !== 'MPRESCRIPTS'
+    ) {
       this.mml.insertBefore(
-          children[childCounter], DomUtil.createElement('mprescripts'));
+        children[childCounter],
+        DomUtil.createElement('mprescripts')
+      );
     } else {
       childCounter++;
     }
     // left sub and superscripts
     completeIndices(leftIndices as number[]);
   }
-
 }

@@ -14,25 +14,20 @@
 // limitations under the License.
 
 /**
- * @fileoverview Direct speech generator that simply picks up the speech
+ * @file Direct speech generator that simply picks up the speech
  *     attribute if it exists.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as WalkerUtil from '../walker/walker_util';
 
-import {AbstractSpeechGenerator} from './abstract_speech_generator';
-
+import { AbstractSpeechGenerator } from './abstract_speech_generator';
 
 export class DirectSpeechGenerator extends AbstractSpeechGenerator {
-
   /**
    * @override
    */
   public getSpeech(node: Element, _xml: Element) {
     return WalkerUtil.getAttribute(node, this.modality);
   }
-
 }

@@ -14,136 +14,121 @@
 // limitations under the License.
 
 /**
- * @fileoverview A factory for rendering speech output depending on the selected
+ * @file A factory for rendering speech output depending on the selected
  *     markup.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import Engine from '../common/engine';
+import * as EngineConst from '../common/engine_const';
+import { AcssRenderer } from './acss_renderer';
+import { AudioRenderer } from './audio_renderer';
+import { AuditoryDescription } from './auditory_description';
+import { LayoutRenderer } from './layout_renderer';
+import { PunctuationRenderer } from './punctuation_renderer';
+import { SableRenderer } from './sable_renderer';
+import { Span } from './span';
+import { SsmlRenderer } from './ssml_renderer';
+import { SsmlStepRenderer } from './ssml_step_renderer';
+import { StringRenderer } from './string_renderer';
+import { XmlRenderer } from './xml_renderer';
 
-import {Engine, EngineConst} from '../common/engine';
-import {AcssRenderer} from './acss_renderer';
-import {AudioRenderer} from './audio_renderer';
-import {AuditoryDescription} from './auditory_description';
-import {LayoutRenderer} from './layout_renderer';
-import {PunctuationRenderer} from './punctuation_renderer';
-import {SableRenderer} from './sable_renderer';
-import {Span} from './span';
-import {SsmlRenderer} from './ssml_renderer';
-import {SsmlStepRenderer} from './ssml_step_renderer';
-import {StringRenderer} from './string_renderer';
-import {XmlRenderer} from './xml_renderer';
+const xmlInstance = new SsmlRenderer();
+const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
+  [EngineConst.Markup.NONE, new StringRenderer()],
+  [EngineConst.Markup.PUNCTUATION, new PunctuationRenderer()],
+  [EngineConst.Markup.LAYOUT, new LayoutRenderer()],
+  [EngineConst.Markup.ACSS, new AcssRenderer()],
+  [EngineConst.Markup.SABLE, new SableRenderer()],
+  [EngineConst.Markup.VOICEXML, xmlInstance],
+  [EngineConst.Markup.SSML, xmlInstance],
+  [EngineConst.Markup.SSML_STEP, new SsmlStepRenderer()]
+]);
 
-
-// TODO (TS): Factory has same interface as AudioRenderer. Not sure how to tell
-//            it typescript!
-namespace AuralRendering {
-
-  const xmlInstance = new SsmlRenderer();
-  const renderers: Map<EngineConst.Markup, AudioRenderer> = new Map([
-    [EngineConst.Markup.NONE, new StringRenderer()],
-    [EngineConst.Markup.PUNCTUATION, new PunctuationRenderer()],
-    [EngineConst.Markup.LAYOUT, new LayoutRenderer()],
-    [EngineConst.Markup.ACSS, new AcssRenderer()],
-    [EngineConst.Markup.SABLE, new SableRenderer()],
-    [EngineConst.Markup.VOICEXML, xmlInstance],
-    [EngineConst.Markup.SSML, xmlInstance],
-    [EngineConst.Markup.SSML_STEP, new SsmlStepRenderer()],
-  ]);
-
-
-  /**
-   * @override
-   */
-  export function setSeparator(sep: string) {
-    let renderer = renderers.get(Engine.getInstance().markup);
-    if (renderer) {
-      renderer.setSeparator(sep);
-    }
+/**
+ * @override
+ */
+export function setSeparator(sep: string) {
+  const renderer = renderers.get(Engine.getInstance().markup);
+  if (renderer) {
+    renderer.setSeparator(sep);
   }
-
-
-  /**
-   * @override
-   */
-  export function getSeparator() {
-    let renderer = renderers.get(Engine.getInstance().markup);
-    return renderer ? renderer.getSeparator() : '';
-  }
-
-
-  /**
-   * @override
-   */
-  export function markup(descrs: AuditoryDescription[]) {
-    let renderer = renderers.get(Engine.getInstance().markup);
-    if (!renderer) {
-      return '';
-    }
-    return renderer.markup(descrs);
-  }
-
-
-  /**
-   * @override
-   */
-  export function merge(strs: (Span|string)[]) {
-    // TODO (TS): Ensure that these are all spans!
-    let span = strs.map(s => {
-      return (typeof s === 'string') ? new Span(s, {}) : s;
-    });
-    let renderer = renderers.get(Engine.getInstance().markup);
-    if (!renderer) {
-      return strs.join();
-    }
-    return renderer.merge(span);
-  }
-
-
-  /**
-   * @override
-   */
-  export function finalize(str: string) {
-    let renderer = renderers.get(Engine.getInstance().markup);
-    if (!renderer) {
-      return str;
-    }
-    return renderer.finalize(str);
-  }
-
-
-  /**
-   * @override
-   */
-  export function error(key: string) {
-    let renderer = renderers.get(Engine.getInstance().markup);
-    if (!renderer) {
-      return '';
-    }
-    return renderer.error(key);
-  }
-
-
-  /**
-   * Registers a new renderer.
-   * @param type The markup type.
-   * @param renderer The audio renderer.
-   */
-  export function registerRenderer(type: EngineConst.Markup,
-                                   renderer: AudioRenderer) {
-    renderers.set(type, renderer);
-  }
-
-
-  /**
-   * Checks if the current renderer is of a given type.
-   * @return True if it is an instance of the given type.
-   */
-  export function isXml(): boolean {
-    return renderers.get(Engine.getInstance().markup) instanceof XmlRenderer;
-  }
-
 }
 
+/**
+ * @override
+ */
+export function getSeparator() {
+  const renderer = renderers.get(Engine.getInstance().markup);
+  return renderer ? renderer.getSeparator() : '';
+}
 
-export default AuralRendering;
+/**
+ * @override
+ */
+export function markup(descrs: AuditoryDescription[]) {
+  const renderer = renderers.get(Engine.getInstance().markup);
+  if (!renderer) {
+    return '';
+  }
+  return renderer.markup(descrs);
+}
+
+/**
+ * @override
+ */
+export function merge(strs: (Span | string)[]) {
+  // TODO (TS): Ensure that these are all spans!
+  const span = strs.map((s) => {
+    return typeof s === 'string' ? new Span(s, {}) : s;
+  });
+  const renderer = renderers.get(Engine.getInstance().markup);
+  if (!renderer) {
+    return strs.join();
+  }
+  return renderer.merge(span);
+}
+
+/**
+ * @override
+ */
+export function finalize(str: string) {
+  const renderer = renderers.get(Engine.getInstance().markup);
+  if (!renderer) {
+    return str;
+  }
+  return renderer.finalize(str);
+}
+
+/**
+ * @override
+ */
+export function error(key: string) {
+  const renderer = renderers.get(Engine.getInstance().markup);
+  if (!renderer) {
+    return '';
+  }
+  return renderer.error(key);
+}
+
+/**
+ * Registers a new renderer.
+ *
+ * @param type The markup type.
+ * @param renderer The audio renderer.
+ */
+export function registerRenderer(
+  type: EngineConst.Markup,
+  renderer: AudioRenderer
+) {
+  renderers.set(type, renderer);
+}
+
+/**
+ * Checks if the current renderer is of a given type.
+ *
+ * @returns True if it is an instance of the given type.
+ */
+export function isXml(): boolean {
+  return renderers.get(Engine.getInstance().markup) instanceof XmlRenderer;
+}

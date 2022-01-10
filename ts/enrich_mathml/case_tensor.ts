@@ -14,60 +14,62 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with tensor elements.
- *
+ * @file Specialist computations to deal with tensor elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticSkeleton} from '../semantic_tree/semantic_skeleton';
+import { SemanticType } from '../semantic_tree/semantic_meaning';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton';
 
-import {CaseMultiindex} from './case_multiindex';
+import { CaseMultiindex } from './case_multiindex';
 import * as EnrichMathml from './enrich_mathml';
-
+import { setAttributes, Attribute } from './enrich_attr';
 
 export class CaseTensor extends CaseMultiindex {
-
   /**
    * Applicability test of the case.
+   *
    * @param semantic The semantic node.
-   * @return True if case is applicable.
+   * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
     return !!semantic.mathmlTree && semantic.type === SemanticType.TENSOR;
   }
 
-
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);
   }
 
-
   /**
    * @override
    */
   public getMathml() {
-    EnrichMathml.walkTree((this.semantic.childNodes[0] as SemanticNode));
-    let lsub = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
-    let lsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[2]);
-    let rsub = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[3]);
-    let rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[4]);
-    EnrichMathml.setAttributes(this.mml, this.semantic);
-    let collapsed = [
-      this.semantic.id, this.semantic.childNodes[0].id, lsub, lsup, rsub, rsup
+    EnrichMathml.walkTree(this.semantic.childNodes[0] as SemanticNode);
+    const lsub = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
+    const lsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[2]);
+    const rsub = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[3]);
+    const rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[4]);
+    setAttributes(this.mml, this.semantic);
+    const collapsed = [
+      this.semantic.id,
+      this.semantic.childNodes[0].id,
+      lsub,
+      lsup,
+      rsub,
+      rsup
     ];
     EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
-    let childIds = SemanticSkeleton.collapsedLeafs(lsub, lsup, rsub, rsup);
+    const childIds = SemanticSkeleton.collapsedLeafs(lsub, lsup, rsub, rsup);
     childIds.unshift(this.semantic.childNodes[0].id);
-    this.mml.setAttribute(EnrichMathml.Attribute.CHILDREN, childIds.join(','));
+    this.mml.setAttribute(Attribute.CHILDREN, childIds.join(','));
     this.completeMultiscript(
-        SemanticSkeleton.interleaveIds(rsub, rsup),
-        SemanticSkeleton.interleaveIds(lsub, lsup));
+      SemanticSkeleton.interleaveIds(rsub, rsup),
+      SemanticSkeleton.interleaveIds(lsub, lsup)
+    );
     return this.mml;
   }
 }

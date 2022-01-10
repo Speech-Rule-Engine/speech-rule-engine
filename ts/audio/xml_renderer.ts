@@ -14,22 +14,20 @@
 // limitations under the License.
 
 /**
- * @fileoverview An abstract class for audio renderer with XML markup.
- *
+ * @file An abstract class for audio renderer with XML markup.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {EngineConst, SREError} from '../common/engine';
+import { SREError } from '../common/engine';
+import * as EngineConst from '../common/engine_const';
 import * as AudioUtil from './audio_util';
-import {AuditoryDescription} from './auditory_description';
-import {MarkupRenderer} from './markup_renderer';
-
+import { AuditoryDescription } from './auditory_description';
+import { MarkupRenderer } from './markup_renderer';
 
 export abstract class XmlRenderer extends MarkupRenderer {
-
   /**
    * Computes the closing tag for a personality property.
+   *
    * @param tag The tagname.
    */
   public abstract closeTag(tag: EngineConst.personalityProps): void;
@@ -41,21 +39,21 @@ export abstract class XmlRenderer extends MarkupRenderer {
   public markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
     this.setScaleFunction(-2, 2, -100, 100, 2);
-    let markup = AudioUtil.personalityMarkup(descrs);
-    let result = [];
-    let currentOpen: EngineConst.personalityProps[] = [];
-    for (let i = 0, descr: AudioUtil.Markup; descr = markup[i]; i++) {
+    const markup = AudioUtil.personalityMarkup(descrs);
+    const result = [];
+    const currentOpen: EngineConst.personalityProps[] = [];
+    for (let i = 0, descr: AudioUtil.Markup; (descr = markup[i]); i++) {
       if (descr.span) {
         result.push(this.merge(descr.span));
         continue;
       }
       if (AudioUtil.isPauseElement(descr)) {
-        result.push(this.pause((descr as {pause: number})));
+        result.push(this.pause(descr as { pause: number }));
         continue;
       }
       if (descr.close.length) {
         for (let j = 0; j < descr.close.length; j++) {
-          let last = currentOpen.pop();
+          const last = currentOpen.pop();
           if (descr.close.indexOf(last) === -1) {
             throw new SREError('Unknown closing markup element: ' + last);
           }
@@ -63,13 +61,16 @@ export abstract class XmlRenderer extends MarkupRenderer {
         }
       }
       if (descr.open.length) {
-        let open = AudioUtil.sortClose(descr.open.slice(), markup.slice(i + 1));
-        open.forEach(o => {
-              result.push(this.prosodyElement(o, descr[o]));
-            currentOpen.push(o);
+        const open = AudioUtil.sortClose(
+          descr.open.slice(),
+          markup.slice(i + 1)
+        );
+        open.forEach((o) => {
+          result.push(this.prosodyElement(o, descr[o]));
+          currentOpen.push(o);
         });
       }
     }
-    return result.join(' ');  // this.merge(result);
+    return result.join(' '); // this.merge(result);
   }
 }

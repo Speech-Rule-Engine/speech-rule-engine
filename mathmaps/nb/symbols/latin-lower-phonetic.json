@@ -1,0 +1,1895 @@
+[
+  {
+    "locale": "nb"
+  },
+  {
+    "key": "00F8",
+    "mappings": {
+      "default": {
+        "default": "ø"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "0111",
+    "mappings": {
+      "default": {
+        "default": "d med gjennomstreking"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "0127",
+    "mappings": {
+      "default": {
+        "default": "h med gjennomstreking"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "0142",
+    "mappings": {
+      "default": {
+        "default": "l med gjennomstreking"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "0167",
+    "mappings": {
+      "default": {
+        "default": "t med gjennomstreking"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "0180",
+    "mappings": {
+      "default": {
+        "default": "b med gjennomstreking"
+      }
+    }
+  },
+  {
+    "key": "019B",
+    "mappings": {
+      "default": {
+        "default": "lambda med gjennomstreking"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "01B6",
+    "mappings": {
+      "default": {
+        "default": "z med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01BE",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav omvendt  glottal lukkelyd med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E5",
+    "mappings": {
+      "default": {
+        "default": "g med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01FF",
+    "mappings": {
+      "default": {
+        "default": "ø med akutt aksent"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "023C",
+    "mappings": {
+      "default": {
+        "default": "c med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0247",
+    "mappings": {
+      "default": {
+        "default": "e med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0249",
+    "mappings": {
+      "default": {
+        "default": "j med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "024D",
+    "mappings": {
+      "default": {
+        "default": "r med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "024F",
+    "mappings": {
+      "default": {
+        "default": "y med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "025F",
+    "mappings": {
+      "default": {
+        "default": "j uten prikk med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0268",
+    "mappings": {
+      "default": {
+        "default": "l med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0284",
+    "mappings": {
+      "default": {
+        "default": "j uten prikk med gjennomstreking og krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A1",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav glottal lukkelyd med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A2",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav snudd glottal lukkelyd med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D13",
+    "mappings": {
+      "default": {
+        "default": "liggende ø"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D7C",
+    "mappings": {
+      "default": {
+        "default": "iota med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D7D",
+    "mappings": {
+      "default": {
+        "default": "p med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D7F",
+    "mappings": {
+      "default": {
+        "default": "ypsilon med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1E9C",
+    "mappings": {
+      "default": {
+        "default": "lang s med diagonal gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1E9D",
+    "mappings": {
+      "default": {
+        "default": "lang s med høy gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "018D",
+    "mappings": {
+      "default": {
+        "default": "omvendt delta"
+      }
+    }
+  },
+  {
+    "key": "1E9B",
+    "mappings": {
+      "default": {
+        "default": "lang s med prikk over"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "1E9F",
+    "mappings": {
+      "default": {
+        "default": "delta"
+      }
+    }
+  },
+  {
+    "key": "0138",
+    "mappings": {
+      "default": {
+        "default": "kra"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "017F",
+    "mappings": {
+      "default": {
+        "default": "lang s"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0183",
+    "mappings": {
+      "default": {
+        "default": "b med strek over"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0185",
+    "mappings": {
+      "default": {
+        "default": "tone seks"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0188",
+    "mappings": {
+      "default": {
+        "default": "c med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "018C",
+    "mappings": {
+      "default": {
+        "default": "d med strek over"
+      }
+    }
+  },
+  {
+    "key": "0192",
+    "mappings": {
+      "default": {
+        "default": "f med krok"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "0195",
+    "mappings": {
+      "default": {
+        "default": "hv"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0199",
+    "mappings": {
+      "default": {
+        "default": "k med krok"
+      }
+    }
+  },
+  {
+    "key": "019A",
+    "mappings": {
+      "default": {
+        "default": "l med strek"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "019E",
+    "mappings": {
+      "default": {
+        "default": "n med langt høyrebein"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01A1",
+    "mappings": {
+      "default": {
+        "default": "o med horn"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01A3",
+    "mappings": {
+      "default": {
+        "default": "oi"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01A5",
+    "mappings": {
+      "default": {
+        "default": "p med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01A8",
+    "mappings": {
+      "default": {
+        "default": "tone to"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01AA",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav omvendt esh-løkke"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01AB",
+    "mappings": {
+      "default": {
+        "default": "t med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01AD",
+    "mappings": {
+      "default": {
+        "default": "t med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01B0",
+    "mappings": {
+      "default": {
+        "default": "u med horn"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01B4",
+    "mappings": {
+      "default": {
+        "default": "y med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01B9",
+    "mappings": {
+      "default": {
+        "default": "omvendt ezh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01BA",
+    "mappings": {
+      "default": {
+        "default": "ezh med hale"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01BD",
+    "mappings": {
+      "default": {
+        "default": "tone fem"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01BF",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav wynn"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01C6",
+    "mappings": {
+      "default": {
+        "default": "dz med karon"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01C9",
+    "mappings": {
+      "default": {
+        "default": "lj"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01CC",
+    "mappings": {
+      "default": {
+        "default": "nj"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01E3",
+    "mappings": {
+      "default": {
+        "default": "æ med makron"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01EF",
+    "mappings": {
+      "default": {
+        "default": "ezh med karon"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01F3",
+    "mappings": {
+      "default": {
+        "default": "dz med karon"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "021D",
+    "mappings": {
+      "default": {
+        "default": "yogh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "026E",
+    "mappings": {
+      "default": {
+        "default": "lezh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0292",
+    "mappings": {
+      "default": {
+        "default": "ezh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0293",
+    "mappings": {
+      "default": {
+        "default": "ezh med krøll"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A4",
+    "mappings": {
+      "default": {
+        "default": "dezh digraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01DD",
+    "mappings": {
+      "default": {
+        "default": "snudd e"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "01FD",
+    "mappings": {
+      "default": {
+        "default": "æ med akutt aksent"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0221",
+    "mappings": {
+      "default": {
+        "default": "d med krøll"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0223",
+    "mappings": {
+      "default": {
+        "default": "ou"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0225",
+    "mappings": {
+      "default": {
+        "default": "z med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0234",
+    "mappings": {
+      "default": {
+        "default": "l med krøll"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0235",
+    "mappings": {
+      "default": {
+        "default": "n med krøll"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0236",
+    "mappings": {
+      "default": {
+        "default": "t med krøll"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0238",
+    "mappings": {
+      "default": {
+        "default": "db digraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0239",
+    "mappings": {
+      "default": {
+        "default": "qp digraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "023F",
+    "mappings": {
+      "default": {
+        "default": "s med nedoverhale"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0240",
+    "mappings": {
+      "default": {
+        "default": "z med nedoverhale"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0242",
+    "mappings": {
+      "default": {
+        "default": "glottal lukkelyd"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "024B",
+    "mappings": {
+      "default": {
+        "default": "q med krokhale"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0250",
+    "mappings": {
+      "default": {
+        "default": "snudd a"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0251",
+    "mappings": {
+      "default": {
+        "default": "alfa"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0252",
+    "mappings": {
+      "default": {
+        "default": "snudd alfa"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0253",
+    "mappings": {
+      "default": {
+        "default": "b med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0254",
+    "mappings": {
+      "default": {
+        "default": "åpen o"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0255",
+    "mappings": {
+      "default": {
+        "default": "c med krøll"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0256",
+    "mappings": {
+      "default": {
+        "default": "d med hale"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0257",
+    "mappings": {
+      "default": {
+        "default": "d med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0258",
+    "mappings": {
+      "default": {
+        "default": "omvendt e"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0259",
+    "mappings": {
+      "default": {
+        "default": "schwa"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "025A",
+    "mappings": {
+      "default": {
+        "default": "schwa med krok"
+      }
+    }
+  },
+  {
+    "key": "025B",
+    "mappings": {
+      "default": {
+        "default": "åpen e"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Ll",
+    "key": "025C",
+    "mappings": {
+      "default": {
+        "default": "omvendt åpen e"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "025D",
+    "mappings": {
+      "default": {
+        "default": "omvendt åpen e med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "025E",
+    "mappings": {
+      "default": {
+        "default": "lukket omvendt åpen e"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0260",
+    "mappings": {
+      "default": {
+        "default": "g med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0261",
+    "mappings": {
+      "default": {
+        "default": "skript g"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0263",
+    "mappings": {
+      "default": {
+        "default": "gamma"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0264",
+    "mappings": {
+      "default": {
+        "default": "bukkehorn"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0265",
+    "mappings": {
+      "default": {
+        "default": "snudd h"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0266",
+    "mappings": {
+      "default": {
+        "default": "h med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0267",
+    "mappings": {
+      "default": {
+        "default": "heng med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0269",
+    "mappings": {
+      "default": {
+        "default": "iota"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "026B",
+    "mappings": {
+      "default": {
+        "default": "l med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "026C",
+    "mappings": {
+      "default": {
+        "default": "l med belte"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "026D",
+    "mappings": {
+      "default": {
+        "default": "l med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "026F",
+    "mappings": {
+      "default": {
+        "default": "snudd m"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0270",
+    "mappings": {
+      "default": {
+        "default": "snudd m med langt bein"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0271",
+    "mappings": {
+      "default": {
+        "default": "m med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0272",
+    "mappings": {
+      "default": {
+        "default": "n med venstrekrok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0273",
+    "mappings": {
+      "default": {
+        "default": "n med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0275",
+    "mappings": {
+      "default": {
+        "default": "o med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0277",
+    "mappings": {
+      "default": {
+        "default": "lukket omega"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0278",
+    "mappings": {
+      "default": {
+        "default": "pi"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0279",
+    "mappings": {
+      "default": {
+        "default": "snudd r"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027A",
+    "mappings": {
+      "default": {
+        "default": "snudd r med langt bein"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027B",
+    "mappings": {
+      "default": {
+        "default": "snudd r med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027C",
+    "mappings": {
+      "default": {
+        "default": "r med langt bein"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027D",
+    "mappings": {
+      "default": {
+        "default": "r med hale"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027E",
+    "mappings": {
+      "default": {
+        "default": "r med fiskekrok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "027F",
+    "mappings": {
+      "default": {
+        "default": "omvendt r med fiskekrok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0282",
+    "mappings": {
+      "default": {
+        "default": "s med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0283",
+    "mappings": {
+      "default": {
+        "default": "esh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0285",
+    "mappings": {
+      "default": {
+        "default": "krøket omvendt esh"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0286",
+    "mappings": {
+      "default": {
+        "default": "esh med krøll"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0287",
+    "mappings": {
+      "default": {
+        "default": "snudd t"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0288",
+    "mappings": {
+      "default": {
+        "default": "t med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0289",
+    "mappings": {
+      "default": {
+        "default": "u med gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "028A",
+    "mappings": {
+      "default": {
+        "default": "ypsilon"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "028B",
+    "mappings": {
+      "default": {
+        "default": "v med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "028C",
+    "mappings": {
+      "default": {
+        "default": "snudd v"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "028D",
+    "mappings": {
+      "default": {
+        "default": "snudd w"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "028E",
+    "mappings": {
+      "default": {
+        "default": "snudd y"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0290",
+    "mappings": {
+      "default": {
+        "default": "z med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0291",
+    "mappings": {
+      "default": {
+        "default": "z med krøll"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0295",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav faryngal stemt frikativ"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0296",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav omvendt glottal lukkelyd"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0297",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav strukket c"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "0298",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav bilabialt klikk"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "029A",
+    "mappings": {
+      "default": {
+        "default": "lukket åpen e"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "029E",
+    "mappings": {
+      "default": {
+        "default": "snudd k"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A0",
+    "mappings": {
+      "default": {
+        "default": "q med krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A3",
+    "mappings": {
+      "default": {
+        "default": "dz digraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A5",
+    "mappings": {
+      "default": {
+        "default": "dz digraf med krøll"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A6",
+    "mappings": {
+      "default": {
+        "default": "ts digraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A7",
+    "mappings": {
+      "default": {
+        "default": "tesh digraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A8",
+    "mappings": {
+      "default": {
+        "default": "tc digraf med krøll"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02A9",
+    "mappings": {
+      "default": {
+        "default": "feng digraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AA",
+    "mappings": {
+      "default": {
+        "default": "ls digraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AB",
+    "mappings": {
+      "default": {
+        "default": "lz digraf"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AC",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AD",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AE",
+    "mappings": {
+      "default": {
+        "default": "snudd h med fiskekrok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "02AF",
+    "mappings": {
+      "default": {
+        "default": "snudd h med fiskekrok og hale"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D02",
+    "mappings": {
+      "default": {
+        "default": "snudd æ"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D08",
+    "mappings": {
+      "default": {
+        "default": "snudd åpen e"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D09",
+    "mappings": {
+      "default": {
+        "default": "snudd i"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D11",
+    "mappings": {
+      "default": {
+        "default": "liggende o"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D12",
+    "mappings": {
+      "default": {
+        "default": "liggende åpen o"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D14",
+    "mappings": {
+      "default": {
+        "default": "snudd oe"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D16",
+    "mappings": {
+      "default": {
+        "default": "øverste halvdel av o"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D17",
+    "mappings": {
+      "default": {
+        "default": "nederste halvdel av o"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D1D",
+    "mappings": {
+      "default": {
+        "default": "liggende u"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D1E",
+    "mappings": {
+      "default": {
+        "default": "liggende u med tøddel"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D1F",
+    "mappings": {
+      "default": {
+        "default": "liggende snudd m"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D24",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav stemt laryngal spirant"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D25",
+    "mappings": {
+      "default": {
+        "default": "latinsk bokstav ain"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6B",
+    "mappings": {
+      "default": {
+        "default": "ue"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6C",
+    "mappings": {
+      "default": {
+        "default": "b med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6D",
+    "mappings": {
+      "default": {
+        "default": "d med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6E",
+    "mappings": {
+      "default": {
+        "default": "f med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D6F",
+    "mappings": {
+      "default": {
+        "default": "m med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D70",
+    "mappings": {
+      "default": {
+        "default": "n med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D71",
+    "mappings": {
+      "default": {
+        "default": "p med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D72",
+    "mappings": {
+      "default": {
+        "default": "r med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D73",
+    "mappings": {
+      "default": {
+        "default": "r med fiskekrok og tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D74",
+    "mappings": {
+      "default": {
+        "default": "s med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D75",
+    "mappings": {
+      "default": {
+        "default": "t med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D76",
+    "mappings": {
+      "default": {
+        "default": "z med tilde i midten"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D77",
+    "mappings": {
+      "default": {
+        "default": "snudd g"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D79",
+    "mappings": {
+      "default": {
+        "default": "insulær g"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D7A",
+    "mappings": {
+      "default": {
+        "default": "th med skrå gjennomstreking"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D80",
+    "mappings": {
+      "default": {
+        "default": "b med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D81",
+    "mappings": {
+      "default": {
+        "default": "d med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D82",
+    "mappings": {
+      "default": {
+        "default": "f med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D83",
+    "mappings": {
+      "default": {
+        "default": "g med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D84",
+    "mappings": {
+      "default": {
+        "default": "k med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D85",
+    "mappings": {
+      "default": {
+        "default": "l med palata krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D86",
+    "mappings": {
+      "default": {
+        "default": "m med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D87",
+    "mappings": {
+      "default": {
+        "default": "n med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D88",
+    "mappings": {
+      "default": {
+        "default": "p med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D89",
+    "mappings": {
+      "default": {
+        "default": "r med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8A",
+    "mappings": {
+      "default": {
+        "default": "s med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8B",
+    "mappings": {
+      "default": {
+        "default": "esh med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8C",
+    "mappings": {
+      "default": {
+        "default": "v med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8D",
+    "mappings": {
+      "default": {
+        "default": "x med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8E",
+    "mappings": {
+      "default": {
+        "default": "z med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D8F",
+    "mappings": {
+      "default": {
+        "default": "a med palatal krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D90",
+    "mappings": {
+      "default": {
+        "default": "alfa med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D91",
+    "mappings": {
+      "default": {
+        "default": "d med krok og hale"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D92",
+    "mappings": {
+      "default": {
+        "default": "e med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D93",
+    "mappings": {
+      "default": {
+        "default": "åpen e me retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D94",
+    "mappings": {
+      "default": {
+        "default": "omvendt åpen e med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D95",
+    "mappings": {
+      "default": {
+        "default": "schwa med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D96",
+    "mappings": {
+      "default": {
+        "default": "i med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D97",
+    "mappings": {
+      "default": {
+        "default": "åpen o med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D98",
+    "mappings": {
+      "default": {
+        "default": "esh med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D99",
+    "mappings": {
+      "default": {
+        "default": "u med retrofleks krok"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D9A",
+    "mappings": {
+      "default": {
+        "default": "ezh med retrofleks krok"
+      }
+    }
+  },
+  {
+    "key": "0149",
+    "mappings": {
+      "default": {
+        "default": "n med apostrof foran"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "key": "014B",
+    "mappings": {
+      "default": {
+        "default": "eng"
+      }
+    },
+    "category": "Ll"
+  }
+]

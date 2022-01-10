@@ -18,77 +18,70 @@
 //
 
 /**
- * @fileoverview Interface for generalised trie nodes.
- *
+ * @file Interface for generalised trie nodes.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 export interface TrieNode {
-
   /**
    * The kind of node.
    */
   kind: TrieNodeKind;
 
-
   /**
-   * @return The constraint the node represents.
+   * @returns The constraint the node represents.
    */
   getConstraint(): string;
 
-
   /**
-   * @return The kind of trie node.
+   * @returns The kind of trie node.
    */
   getKind(): TrieNodeKind;
 
-
   /**
    * @param object The object.
-   * @return The static method which tests the constraint.
+   * @returns The static method which tests the constraint.
    */
   applyTest(object: any): boolean;
 
-
   /**
    * Adds a child to this node.
+   *
    * @param node A new child node for this node.
-   * @return The old node if one was replaced.
+   * @returns The old node if one was replaced.
    */
-  addChild(node: TrieNode): TrieNode|null;
-
+  addChild(node: TrieNode): TrieNode | null;
 
   /**
    * Get the child registered in the node for the given constraint.
+   *
    * @param constraint The constraint string.
-   * @return The child node if it exists.
+   * @returns The child node if it exists.
    */
-  getChild(constraint: string): TrieNode|null;
-
+  getChild(constraint: string): TrieNode | null;
 
   /**
    * Get a list of children of the node.
-   * @return The children of the node.
+   *
+   * @returns The children of the node.
    */
   getChildren(): TrieNode[];
 
-
   /**
    * Select children of the node by applying the constraint test.
+   *
    * @param object The object to which to apply the test.
-   * @return The child node if it exists.
+   * @returns The child node if it exists.
    */
   findChildren(object: any): TrieNode[];
 
-
   /**
    * Remove the child registered in the node for the given constraint.
+   *
    * @param constraint The constraint string.
    */
   removeChild(constraint: string): void;
 }
-
 
 export enum TrieNodeKind {
   ROOT = 'root',

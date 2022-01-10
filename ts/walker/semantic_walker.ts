@@ -14,19 +14,16 @@
 // limitations under the License.
 
 /**
- * @fileoverview A semantic walker.
- *
+ * @file A semantic walker.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Highlighter} from '../highlighter/highlighter';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SpeechGenerator} from '../speech_generator/speech_generator';
-import {AbstractWalker} from './abstract_walker';
-import {Focus} from './focus';
-import {Levels} from './levels';
-
+import { Highlighter } from '../highlighter/highlighter';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
+import { SpeechGenerator } from '../speech_generator/speech_generator';
+import { AbstractWalker } from './abstract_walker';
+import { Focus } from './focus';
+import { Levels } from './levels';
 
 export class SemanticWalker extends AbstractWalker<Focus> {
   /**
@@ -38,49 +35,49 @@ export class SemanticWalker extends AbstractWalker<Focus> {
    * @override
    */
   constructor(
-      public node: Element, public generator: SpeechGenerator,
-      public highlighter: Highlighter, xml: string) {
+    public node: Element,
+    public generator: SpeechGenerator,
+    public highlighter: Highlighter,
+    xml: string
+  ) {
     super(node, generator, highlighter, xml);
 
     this.restoreState();
   }
 
-
   /**
    * @override
    */
   public initLevels(): Levels<Focus> {
-    let levels = new Levels();
+    const levels = new Levels();
     levels.push([this.getFocus()]);
     return levels as Levels<Focus>;
   }
-
 
   /**
    * @override
    */
   public up() {
     super.up();
-    let parent = this.previousLevel();
+    const parent = this.previousLevel();
     if (!parent) {
       return null;
     }
     this.levels.pop();
-    let found = this.levels.find(function(focus) {
-      return focus.getSemanticNodes().some(function(node) {
+    const found = this.levels.find(function (focus) {
+      return focus.getSemanticNodes().some(function (node) {
         return node.id.toString() === parent;
       });
     });
     return found;
   }
 
-
   /**
    * @override
    */
   public down() {
     super.down();
-    let children = this.nextLevel();
+    const children = this.nextLevel();
     if (children.length === 0) {
       return null;
     }
@@ -88,11 +85,15 @@ export class SemanticWalker extends AbstractWalker<Focus> {
     return children[0];
   }
 
-
   /**
    * @override
    */
-  public combineContentChildren(type: SemanticType, role: SemanticRole, content: string[], children: string[]): Focus[] {
+  public combineContentChildren(
+    type: SemanticType,
+    role: SemanticRole,
+    content: string[],
+    children: string[]
+  ): Focus[] {
     switch (type) {
       case SemanticType.RELSEQ:
       case SemanticType.INFIXOP:
@@ -105,8 +106,9 @@ export class SemanticWalker extends AbstractWalker<Focus> {
       case SemanticType.MATRIX:
       case SemanticType.VECTOR:
       case SemanticType.FENCED:
-        return [this.focusFromId(
-            children[0], [content[0], children[0], content[1]])];
+        return [
+          this.focusFromId(children[0], [content[0], children[0], content[1]])
+        ];
       case SemanticType.CASES:
         return [this.focusFromId(children[0], [content[0], children[0]])];
       case SemanticType.PUNCTUATED:
@@ -117,8 +119,7 @@ export class SemanticWalker extends AbstractWalker<Focus> {
         if (children.length === content.length) {
           return content.map(this.singletonFocus.bind(this));
         }
-        let focusList = this.combinePunctuations(children, content, [], []);
-        return focusList;
+        return this.combinePunctuations(children, content, [], []);
       case SemanticType.APPL:
         return [
           this.focusFromId(children[0], [children[0], content[0]]),
@@ -126,30 +127,34 @@ export class SemanticWalker extends AbstractWalker<Focus> {
         ];
       case SemanticType.ROOT:
         return [
-          this.singletonFocus(children[1]), this.singletonFocus(children[0])
+          this.singletonFocus(children[1]),
+          this.singletonFocus(children[0])
         ];
       default:
         return children.map(this.singletonFocus.bind(this));
     }
   }
 
-
   /**
    * Makes a focus list from children of a punctuated element.
+   *
    * @param children Child node ids.
    * @param content Content node ids.
    * @param prepunct List of prefix punctuations.
    * @param acc Result accumulator.
-   * @return The list of focuses with paired nodes.
+   * @returns The list of focuses with paired nodes.
    */
   public combinePunctuations(
-      children: string[], content: string[], prepunct: string[],
-      acc: Focus[]): Focus[] {
+    children: string[],
+    content: string[],
+    prepunct: string[],
+    acc: Focus[]
+  ): Focus[] {
     if (children.length === 0) {
       return acc;
     }
-    let child = children.shift();
-    let cont = content.shift();
+    const child = children.shift();
+    const cont = content.shift();
     // Case first child element is punctuation.
     // We have a prefix punctuation.
     if (child === cont) {
@@ -171,12 +176,12 @@ export class SemanticWalker extends AbstractWalker<Focus> {
     }
   }
 
-
   /**
    * Makes pairwise focus structures from two lists.
+   *
    * @param children Child nodes of length n.
    * @param content Content nodes of length n - 1.
-   * @return The list of focuses with paired nodes.
+   * @returns The list of focuses with paired nodes.
    */
   public makePairList(children: string[], content: string[]): Focus[] {
     if (children.length === 0) {
@@ -185,51 +190,47 @@ export class SemanticWalker extends AbstractWalker<Focus> {
     if (children.length === 1) {
       return [this.singletonFocus(children[0])];
     }
-    let result = [this.singletonFocus(children.shift())];
+    const result = [this.singletonFocus(children.shift())];
     for (let i = 0, l = children.length; i < l; i++) {
       result.push(this.focusFromId(children[i], [content[i], children[i]]));
     }
     return result;
   }
 
-
   /**
    * @override
    */
   public left() {
     super.left();
-    let index = this.levels.indexOf(this.getFocus());
+    const index = this.levels.indexOf(this.getFocus());
     if (index === null) {
       return null;
     }
-    let ids = this.levels.get(index - 1);
+    const ids = this.levels.get(index - 1);
     return ids ? ids : null;
   }
-
 
   /**
    * @override
    */
   public right() {
     super.right();
-    let index = this.levels.indexOf(this.getFocus());
+    const index = this.levels.indexOf(this.getFocus());
     if (index === null) {
       return null;
     }
-    let ids = this.levels.get(index + 1);
+    const ids = this.levels.get(index + 1);
     return ids ? ids : null;
   }
-
 
   /**
    * @override
    */
   public findFocusOnLevel(id: number) {
-    let focus = this.levels.find(x => {
-      let pid = x.getSemanticPrimary().id;
+    const focus = this.levels.find((x) => {
+      const pid = x.getSemanticPrimary().id;
       return pid === id;
     });
     return focus;
   }
 }
-

@@ -14,15 +14,23 @@
 // limitations under the License.
 
 /**
- * @fileoverview Basic message file for l10n.
- *
+ * @file Basic message file for l10n.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Alphabets, ALPHABETS, Functions, FUNCTIONS,
-        Messages, MESSAGES, Numbers, NUMBERS} from './messages';
+import {
+  Alphabets,
+  ALPHABETS,
+  Functions,
+  FUNCTIONS,
+  Messages,
+  MESSAGES,
+  Numbers,
+  NUMBERS,
+  SubIso,
+  SUBISO
+} from './messages';
 import * as tr from './transformers';
-
 
 // One (or more) flat message object per rule set.
 export interface Locale {
@@ -30,45 +38,52 @@ export interface Locale {
   MESSAGES: Messages;
   ALPHABETS: Alphabets;
   NUMBERS: Numbers;
-  COMBINERS?: {[key: string]: tr.Combiner};
-  CORRECTIONS?: {[key: string]: Function};
+  COMBINERS?: { [key: string]: tr.Combiner };
+  CORRECTIONS?: { [key: string]: (a: string) => string };
+  SUBISO: SubIso;
 }
 
 export const LOCALE: Locale = createLocale();
 
+/**
+ * @returns Creates a locale structure.
+ */
 export function createLocale(): Locale {
   return {
+    /**
+     * Localisable parse functions
+     */
+    FUNCTIONS: FUNCTIONS(),
 
-  /**
-   * Localisable parse functions
-   */
-  FUNCTIONS: FUNCTIONS(),
+    /**
+     * The messages content.
+     */
+    MESSAGES: MESSAGES(),
 
-  /**
-   * The messages content.
-   */
-  MESSAGES: MESSAGES(),
+    /**
+     * The Alphabets content.
+     */
+    ALPHABETS: ALPHABETS(),
 
-  /**
-   * The Alphabets content.
-   */
-  ALPHABETS: ALPHABETS(),
+    /**
+     * Localisable number computation.
+     */
+    NUMBERS: NUMBERS(),
 
-  /**
-   * Localisable number computation.
-   */
-  NUMBERS: NUMBERS(),
+    /**
+     * Combiners that can be reference in Messages.
+     */
+    COMBINERS: {},
 
-  /**
-   * Combiners that can be reference in Messages.
-   */
-  COMBINERS: {},
+    /**
+     * Grammatical corrections for this locale.
+     */
+    CORRECTIONS: {},
 
-  /**
-   * Grammatical corrections for this locale.
-   */
-  CORRECTIONS: {}
-
+    /**
+     * Supplementary iso country codes or similar country specific speech,
+     * numbers, etc.
+     */
+    SUBISO: SUBISO()
   };
-
 }

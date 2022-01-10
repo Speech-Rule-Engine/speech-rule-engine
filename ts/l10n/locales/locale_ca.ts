@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Catalan message file.
- *
+ * @file Catalan message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -23,20 +22,21 @@
 // This work was sponsored by
 //
 
-import {createLocale, Locale} from '../locale';
-import {combinePostfixIndex} from '../locale_util';
+import { createLocale, Locale } from '../locale';
+import { combinePostfixIndex } from '../locale_util';
 import NUMBERS from '../numbers/numbers_ca';
-import {Combiners} from '../transformers';
+import { Combiners } from '../transformers';
 
-
-let sansserifCombiner = function(letter: string, font: string, cap: string) {
+const sansserifCombiner = function (letter: string, font: string, cap: string) {
   letter = 'sans serif ' + (cap ? cap + ' ' + letter : letter);
   return font ? letter + ' ' + font : letter;
 };
 
-
 let locale: Locale = null;
 
+/**
+ * @returns The Catalan locale.
+ */
 export function ca(): Locale {
   if (!locale) {
     locale = create();
@@ -45,23 +45,62 @@ export function ca(): Locale {
   return locale;
 }
 
+/**
+ * @returns The Catalan locale.
+ */
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
 
   loc.COMBINERS['sansserif'] = sansserifCombiner;
 
-  loc.FUNCTIONS.fracNestDepth = _node => false;
-  loc.FUNCTIONS.radicalNestDepth = _count => '';
-  loc.FUNCTIONS.combineRootIndex = combinePostfixIndex,
-  loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c;
-  loc.FUNCTIONS.fontRegexp = font => RegExp('^' + font + ' ');
-  loc.FUNCTIONS.si = (prefix: string, unit: string) => {
-    if (unit.match(/^metre/)) {
-      prefix = prefix.replace(/a$/, 'à').replace(/o$/, 'ò').replace(/i$/, 'í');
+  loc.FUNCTIONS.fracNestDepth = (_node) => false;
+  (loc.FUNCTIONS.combineRootIndex = combinePostfixIndex),
+    (loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c);
+  loc.FUNCTIONS.fontRegexp = (font) => RegExp('^' + font + ' ');
+  (loc.FUNCTIONS.plural = (unit: string) => {
+    if (/.*os$/.test(unit)) {
+      return unit + 'sos';
     }
-    return prefix + unit;
-  };
+    if (/.*s$/.test(unit)) {
+      return unit + 'os';
+    }
+    if (/.*ga$/.test(unit)) {
+      return unit.slice(0, -2) + 'gues';
+    }
+    if (/.*ça$/.test(unit)) {
+      return unit.slice(0, -2) + 'ces';
+    }
+    if (/.*ca$/.test(unit)) {
+      return unit.slice(0, -2) + 'ques';
+    }
+    if (/.*ja$/.test(unit)) {
+      return unit.slice(0, -2) + 'ges';
+    }
+    if (/.*qua$/.test(unit)) {
+      return unit.slice(0, -3) + 'qües';
+    }
+    if (/.*a$/.test(unit)) {
+      return unit.slice(0, -1) + 'es';
+    }
+    if (/.*(e|i)$/.test(unit)) {
+      return unit + 'ns';
+    }
+    if (/.*í$/.test(unit)) {
+      return unit.slice(0, -1) + 'ins';
+    }
+    // Note some stressed vowels are missing.
+    return unit + 's';
+  }),
+    (loc.FUNCTIONS.si = (prefix: string, unit: string) => {
+      if (unit.match(/^metre/)) {
+        prefix = prefix
+          .replace(/a$/, 'à')
+          .replace(/o$/, 'ò')
+          .replace(/i$/, 'í');
+      }
+      return prefix + unit;
+    });
 
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;
 

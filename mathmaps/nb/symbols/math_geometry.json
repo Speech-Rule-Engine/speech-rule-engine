@@ -1,0 +1,2669 @@
+[
+  {
+    "locale": "nb"
+  },
+  {
+    "key": "2500",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett horisontal"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2501",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet horisontal"
+      }
+    }
+  },
+  {
+    "key": "2502",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett vertikal"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2503",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet vertikal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2504",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett trippelstrek horisontal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2505",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet trippelstrek horisontal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2506",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett trippelstrek vertikal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2507",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet trippelstrek vertikal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2508",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett kvadruppelstrek horisontal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2509",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet kvadruppelstrek horisontal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "250A",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett kvadruppelstrek vertikal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "250B",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet kvadruppelstrek vertikal"
+      }
+    }
+  },
+  {
+    "key": "250C",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett ned og høyre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "250D",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned lett og høyre fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "250E",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned fet og høyre lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "250F",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet ned og høyre"
+      }
+    }
+  },
+  {
+    "key": "2510",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett ned og venstre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2511",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned lett og venstre fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2512",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned fet og venstre lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2513",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet ned og venstre"
+      }
+    }
+  },
+  {
+    "key": "2514",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett opp og høyre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2515",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp lett og høyre fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2516",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp fet og høyre lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2517",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet opp og høyre"
+      }
+    }
+  },
+  {
+    "key": "2518",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett opp og venstre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2519",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp lett og venstre fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "251A",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp fet og venstre lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "251B",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet opp og venstre"
+      }
+    }
+  },
+  {
+    "key": "251C",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett vertikal og høyre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "251D",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal lett og høyre fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "251E",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp fet og høyre ned lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "251F",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned fet og høyre opp lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2520",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal fet og høyre lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2521",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned lett og høyre opp fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2522",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp lett og høyre ned fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2523",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet vertikal og høyre"
+      }
+    }
+  },
+  {
+    "key": "2524",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett vertikal og venstre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2525",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal lett og venstre fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2526",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp fet og venstre ned lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2527",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned fet og venstre opp lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2528",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal fet og venstre lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2529",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned lett og venstre opp fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "252A",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp lett og venstre ned fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "252B",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet vertikal og venstre"
+      }
+    }
+  },
+  {
+    "key": "252C",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett ned og horisontal"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "252D",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger venstre fet og høyre ned lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "252E",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger høyre fet og venstre ned lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "252F",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned lett og horisontal fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2530",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned fet og horisontal lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2531",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger høyre lett og venstre ned fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2532",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger venstre lett og høyre ned fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2533",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet ned og horisontal"
+      }
+    }
+  },
+  {
+    "key": "2534",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett opp og horisontal"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2535",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger venstre fet og høyre opp lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2536",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger høyre fet og venstre opp lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2537",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp lett og horisontal fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2538",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp fet og horisontal lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2539",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger høyre lett og venstre opp fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "253A",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger venstre lett og høyre opp fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "253B",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet opp og horisontal"
+      }
+    }
+  },
+  {
+    "key": "253C",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett vertikal og horisontal"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "253D",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger venstre fet og høyre vertikal lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "253E",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger høyre fet og venstre vertikal lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "253F",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal lett og horisontal fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2540",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp fet og ned horisontal lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2541",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned fet og opp horisontal lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2542",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal fet og horisontal lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2543",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger venstre opp fet og høyre ned lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2544",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger høyre opp fet og venstre ned lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2545",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger venstre ned fet og høyre opp lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2546",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger høyre ned fet og venstre opp lett"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2547",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned lett og opp horisontal fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2548",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp lett og ned horisontal fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2549",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger høyre lett og venstre vertikal fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "254A",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger venstre lett og høyre vertikal fet"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "254B",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet vertikal og horisontal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "254C",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett dobbelstrek horisontal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "254D",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet dobbelstrek horisontal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "254E",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett dobbelstrek vertikal"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "254F",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet dobbelstrek vertikal"
+      }
+    }
+  },
+  {
+    "key": "2550",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel horisontal"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2551",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel vertikal"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2552",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned singel og høyre dobbel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2553",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned dobbel og høyre singel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2554",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel ned og høyre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2555",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned singel og venstre dobbel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2556",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned dobbel og venstre singel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2557",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel ned og venstre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2558",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp singel og høyre dobbel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2559",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp dobbel og høyre singel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "255A",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel opp og høyre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "255B",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp singel og venstre dobbel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "255C",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp dobbel og venstre singel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "255D",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel opp og venstre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "255E",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal singel og høyre dobbel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "255F",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal dobbel og høyre singel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2560",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel vertikal og høyre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2561",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal singel og venstre dobbel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2562",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal dobbel og venstre singel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2563",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel vertikal og venstre"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2564",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned singel og horisontal dobbel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2565",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger ned dobbel og horisontal singel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2566",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel ned og horisontal"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2567",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp singel og horisontal dobbel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2568",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger opp dobbel og horisontal singel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2569",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel opp og horisontal"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "256A",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal singel og horisontal dobbel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "256B",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger vertikal dobbel og horisontal singel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "256C",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger dobbel vertikal og horisontal"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "256D",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett bue ned og høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "256E",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett bue ned og venstre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "256F",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett bue opp og venstre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2570",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett bue opp og høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2571",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett diagonal øvre høyre til nedre venstre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2572",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett diagonal øvre venstre til nedre høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2573",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett diagonal cross"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2574",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett venstre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2575",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett opp"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2576",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2577",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett ned"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2578",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet venstre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2579",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet opp"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "257A",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "257B",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet ned"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "257C",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett venstre og fet høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "257D",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger lett opp og fet ned"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "257E",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet venstre og lett høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "257F",
+    "mappings": {
+      "default": {
+        "default": "bokstegninger fet opp og lett ned"
+      }
+    }
+  },
+  {
+    "key": "2580",
+    "mappings": {
+      "default": {
+        "default": "øvre halv blokk"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2581",
+    "mappings": {
+      "default": {
+        "default": "nedre en åttendedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2582",
+    "mappings": {
+      "default": {
+        "default": "nedre en fjerdedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2583",
+    "mappings": {
+      "default": {
+        "default": "nedre tre åttendedels blokk"
+      }
+    }
+  },
+  {
+    "key": "2584",
+    "mappings": {
+      "default": {
+        "default": "nedre halv blokk"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2585",
+    "mappings": {
+      "default": {
+        "default": "nedre fem åttendedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2586",
+    "mappings": {
+      "default": {
+        "default": "nedre tre fjerdedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2587",
+    "mappings": {
+      "default": {
+        "default": "nedre sju åttendedels blokk"
+      }
+    }
+  },
+  {
+    "key": "2588",
+    "mappings": {
+      "default": {
+        "default": "full blokk"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2589",
+    "mappings": {
+      "default": {
+        "default": "venstre sju åttendedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "258A",
+    "mappings": {
+      "default": {
+        "default": "venstre tre fjerdedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "258B",
+    "mappings": {
+      "default": {
+        "default": "venstre fem åttendedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "258C",
+    "mappings": {
+      "default": {
+        "default": "venstre halv blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "258D",
+    "mappings": {
+      "default": {
+        "default": "venstre tre åttendedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "258E",
+    "mappings": {
+      "default": {
+        "default": "venstre en fjerdedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "258F",
+    "mappings": {
+      "default": {
+        "default": "venstre en åttendedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2590",
+    "mappings": {
+      "default": {
+        "default": "høyre halv blokk"
+      }
+    }
+  },
+  {
+    "key": "2591",
+    "mappings": {
+      "default": {
+        "default": "lett skygge"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2592",
+    "mappings": {
+      "default": {
+        "default": "medium skygge"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2593",
+    "mappings": {
+      "default": {
+        "default": "mørk skygge"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2594",
+    "mappings": {
+      "default": {
+        "default": "øvre en åttendedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2595",
+    "mappings": {
+      "default": {
+        "default": "høyre en åttendedels blokk"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2596",
+    "mappings": {
+      "default": {
+        "default": "kvadrant nedre venstre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2597",
+    "mappings": {
+      "default": {
+        "default": "kvadrant nedre høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2598",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øvre venstre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2599",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øvre venstre og nedre venstre og nedre høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "259A",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øvre venstre og nedre høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "259B",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øvre venstre og øvre høyre og nedre venstre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "259C",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øvre venstre og øvre høyre og nedre høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "259D",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øvre høyre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "259E",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øvre høyre og nedre venstre"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "259F",
+    "mappings": {
+      "default": {
+        "default": "kvadrant øvre høyre og nedre venstre og nedre høyre"
+      }
+    }
+  },
+  {
+    "key": "25A0",
+    "mappings": {
+      "default": {
+        "default": "svart kvadrat"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25A1",
+    "mappings": {
+      "default": {
+        "default": "hvitt kvadrat"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "25A2",
+    "mappings": {
+      "default": {
+        "default": "hvitt kvadrat med avrunda hjørner"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25A3",
+    "mappings": {
+      "default": {
+        "default": "hvitt kvadrat med svart lite kvadrat"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25A4",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med horisontalt fyll"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25A5",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med vertikalt fyll"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25A6",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med ortogonal kryssmønster fill"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25A7",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med øvre venstre til nedre høyre fill"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25A8",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med øvre høyre til nedre venstre fill"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25A9",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med diagonal kryssmønster fill"
+      }
+    }
+  },
+  {
+    "key": "25AA",
+    "mappings": {
+      "default": {
+        "default": "svart lite kvadrat"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25AB",
+    "mappings": {
+      "default": {
+        "default": "hvit lite kvadrat"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "25AC",
+    "mappings": {
+      "default": {
+        "default": "svart rektangel"
+      }
+    }
+  },
+  {
+    "key": "25AD",
+    "mappings": {
+      "default": {
+        "default": "hvit rektangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25AE",
+    "mappings": {
+      "default": {
+        "default": "svart vertikal rektangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25AF",
+    "mappings": {
+      "default": {
+        "default": "hvit vertikal rektangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "25B0",
+    "mappings": {
+      "default": {
+        "default": "svart parallelogram"
+      }
+    }
+  },
+  {
+    "key": "25B1",
+    "mappings": {
+      "default": {
+        "default": "hvitt parallelogram"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25B2",
+    "mappings": {
+      "default": {
+        "default": "svart oppover-vendt triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25B3",
+    "mappings": {
+      "default": {
+        "default": "hvitt oppover-vendt triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25B4",
+    "mappings": {
+      "default": {
+        "default": "svart oppover-vendt triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25B5",
+    "mappings": {
+      "default": {
+        "default": "hvitt oppover-vendt triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25B6",
+    "mappings": {
+      "default": {
+        "default": "svart høyre-vendt triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25B7",
+    "mappings": {
+      "default": {
+        "default": "hvitt høyre-vendt triangel"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "25B8",
+    "mappings": {
+      "default": {
+        "default": "svart høyre-vendt triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25B9",
+    "mappings": {
+      "default": {
+        "default": "høyre-vendt triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "25BA",
+    "mappings": {
+      "default": {
+        "default": "svart høyre-vendt peker"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25BB",
+    "mappings": {
+      "default": {
+        "default": "hvit høyre-vendt peker"
+      }
+    }
+  },
+  {
+    "key": "25BC",
+    "mappings": {
+      "default": {
+        "default": "svart nedover-vendt triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25BD",
+    "mappings": {
+      "default": {
+        "default": "hvit nedover-vendt triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25BE",
+    "mappings": {
+      "default": {
+        "default": "svart nedover-vendt lite triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25BF",
+    "mappings": {
+      "default": {
+        "default": "hvit nedover-vendt lite triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25C0",
+    "mappings": {
+      "default": {
+        "default": "svart venstre pointing triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25C1",
+    "mappings": {
+      "default": {
+        "default": "hvit venstre pointing triangel"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "25C2",
+    "mappings": {
+      "default": {
+        "default": "svart venstre pointing lite triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25C3",
+    "mappings": {
+      "default": {
+        "default": "hvit venstre pointing lite triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25C4",
+    "mappings": {
+      "default": {
+        "default": "svart venstre pointing pointer"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25C5",
+    "mappings": {
+      "default": {
+        "default": "hvit venstre pointing pointer"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25C6",
+    "mappings": {
+      "default": {
+        "default": "svart diamant"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25C7",
+    "mappings": {
+      "default": {
+        "default": "hvit diamant"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25C8",
+    "mappings": {
+      "default": {
+        "default": "hvit diamant med svart liten diamant"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25C9",
+    "mappings": {
+      "default": {
+        "default": "fiskeøye"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25CA",
+    "mappings": {
+      "default": {
+        "default": "ruter"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25CB",
+    "mappings": {
+      "default": {
+        "default": "hvit sirkel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25CC",
+    "mappings": {
+      "default": {
+        "default": "sirkel med prikker"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25CD",
+    "mappings": {
+      "default": {
+        "default": "sirkel med vertikalt fyll"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25CE",
+    "mappings": {
+      "default": {
+        "default": "blink"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25CF",
+    "mappings": {
+      "default": {
+        "default": "svart sirkel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25D0",
+    "mappings": {
+      "default": {
+        "default": "sirkel med venstre halvdel svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25D1",
+    "mappings": {
+      "default": {
+        "default": "sirkel med høyre halvdel svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25D2",
+    "mappings": {
+      "default": {
+        "default": "sirkel med nedre halvdel svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25D3",
+    "mappings": {
+      "default": {
+        "default": "sirkel med øvre halvdel svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25D4",
+    "mappings": {
+      "default": {
+        "default": "sirkel med øvre høyre kvadrant svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25D5",
+    "mappings": {
+      "default": {
+        "default": "sirkel med all but øvre venstre kvadrant svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25D6",
+    "mappings": {
+      "default": {
+        "default": "venstre halvdel svart sirkel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25D7",
+    "mappings": {
+      "default": {
+        "default": "høyre halvdel svart sirkel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25D8",
+    "mappings": {
+      "default": {
+        "default": "omvendt prikk"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25D9",
+    "mappings": {
+      "default": {
+        "default": "omvendt hvit sirkel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25DA",
+    "mappings": {
+      "default": {
+        "default": "øvre halvdel omvendt hvit sirkel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25DB",
+    "mappings": {
+      "default": {
+        "default": "nedre halvdel omvendt hvit sirkel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25DC",
+    "mappings": {
+      "default": {
+        "default": "øvre venstre kvadrant sirkulær bue"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25DD",
+    "mappings": {
+      "default": {
+        "default": "øvre høyre kvadrant sirkulær bue"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25DE",
+    "mappings": {
+      "default": {
+        "default": "nedre høyre kvadrant sirkulær bue"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25DF",
+    "mappings": {
+      "default": {
+        "default": "nedre venstre kvadrant sirkulær bue"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25E0",
+    "mappings": {
+      "default": {
+        "default": "øvre halvdel sirkel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25E1",
+    "mappings": {
+      "default": {
+        "default": "nedre halvdel sirkel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25E2",
+    "mappings": {
+      "default": {
+        "default": "svart nedre høyre triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25E3",
+    "mappings": {
+      "default": {
+        "default": "svart nedre venstre triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25E4",
+    "mappings": {
+      "default": {
+        "default": "svart øvre venstre triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25E5",
+    "mappings": {
+      "default": {
+        "default": "svart øvre høyre triangel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25E6",
+    "mappings": {
+      "default": {
+        "default": "hvitt prikk"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25E7",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med venstre halvdel svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25E8",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med høyre halvdel svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25E9",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med øvre venstre diagonal halv svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25EA",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med nedre høyre diagonal halv svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25EB",
+    "mappings": {
+      "default": {
+        "default": "hvitt kvadrat med vertikal linje som deler i to"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25EC",
+    "mappings": {
+      "default": {
+        "default": "hvit oppover-vendt triangel med prikk"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25ED",
+    "mappings": {
+      "default": {
+        "default": "oppover-vendt triangel med venstre halvdel svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25EE",
+    "mappings": {
+      "default": {
+        "default": "oppover-vendt triangel med høyre halvdel svart"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "25EF",
+    "mappings": {
+      "default": {
+        "default": "stor sirkel"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "25F0",
+    "mappings": {
+      "default": {
+        "default": "hvitt kvadrat med øvre venstre kvadrant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25F1",
+    "mappings": {
+      "default": {
+        "default": "hvitt kvadrat med nedre venstre kvadrant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25F2",
+    "mappings": {
+      "default": {
+        "default": "hvitt kvadrat med nedre høyre kvadrant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25F3",
+    "mappings": {
+      "default": {
+        "default": "hvitt kvadrat med øvre høyre kvadrant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25F4",
+    "mappings": {
+      "default": {
+        "default": "hvit sirkel med øvre venstre kvadrant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25F5",
+    "mappings": {
+      "default": {
+        "default": "hvit sirkel med nedre venstre kvadrant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25F6",
+    "mappings": {
+      "default": {
+        "default": "hvit sirkel med nedre høyre kvadrant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "25F7",
+    "mappings": {
+      "default": {
+        "default": "hvit sirkel med øvre høyre kvadrant"
+      }
+    }
+  },
+  {
+    "key": "25F8",
+    "mappings": {
+      "default": {
+        "default": "øvre venstre triangel"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "25F9",
+    "mappings": {
+      "default": {
+        "default": "øvre høyre triangel"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "25FA",
+    "mappings": {
+      "default": {
+        "default": "nedre venstre triangel"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "25FB",
+    "mappings": {
+      "default": {
+        "default": "hvit medium kvadrat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "25FC",
+    "mappings": {
+      "default": {
+        "default": "svart medium kvadrat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "25FD",
+    "mappings": {
+      "default": {
+        "default": "hvit medium lite kvadrat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "25FE",
+    "mappings": {
+      "default": {
+        "default": "svart medium lite kvadrat"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "25FF",
+    "mappings": {
+      "default": {
+        "default": "nedre høyre triangel"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "So",
+    "key": "2B12",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med top halv svart"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B13",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med bunn halv svart"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B14",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med øvre høyre diagonal halv svart"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B15",
+    "mappings": {
+      "default": {
+        "default": "kvadrat med nedre venstre diagonal halv svart"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B16",
+    "mappings": {
+      "default": {
+        "default": "diamant med venstre halvdel svart"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B17",
+    "mappings": {
+      "default": {
+        "default": "diamant med høyre halvdel svart"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B18",
+    "mappings": {
+      "default": {
+        "default": "diamant med top halv svart"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B19",
+    "mappings": {
+      "default": {
+        "default": "diamant med bunn halv svart"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B1A",
+    "mappings": {
+      "default": {
+        "default": "prikkted kvadrat"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B1B",
+    "mappings": {
+      "default": {
+        "default": "svart stor kvadrat"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B1C",
+    "mappings": {
+      "default": {
+        "default": "hvit stor kvadrat"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B1D",
+    "mappings": {
+      "default": {
+        "default": "svart veldig lite kvadrat"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B1E",
+    "mappings": {
+      "default": {
+        "default": "hvit veldig lite kvadrat"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B1F",
+    "mappings": {
+      "default": {
+        "default": "svart pentagon"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B20",
+    "mappings": {
+      "default": {
+        "default": "hvit pentagon"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B21",
+    "mappings": {
+      "default": {
+        "default": "hvit heksagon"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B22",
+    "mappings": {
+      "default": {
+        "default": "svart heksagon"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B23",
+    "mappings": {
+      "default": {
+        "default": "horisontal svart heksagon"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B24",
+    "mappings": {
+      "default": {
+        "default": "svart stor sirkel"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B25",
+    "mappings": {
+      "default": {
+        "default": "svart medium diamant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B26",
+    "mappings": {
+      "default": {
+        "default": "hvit medium diamant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B27",
+    "mappings": {
+      "default": {
+        "default": "svart medium ruter"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B28",
+    "mappings": {
+      "default": {
+        "default": "hvit medium ruter"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B29",
+    "mappings": {
+      "default": {
+        "default": "svart liten diamant"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B2A",
+    "mappings": {
+      "default": {
+        "default": "svart liten ruter"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B2B",
+    "mappings": {
+      "default": {
+        "default": "hvit liten ruter"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B2C",
+    "mappings": {
+      "default": {
+        "default": "svart horisontal ellipse"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B2D",
+    "mappings": {
+      "default": {
+        "default": "hvit horisontal ellipse"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B2E",
+    "mappings": {
+      "default": {
+        "default": "svart vertikal ellipse"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B2F",
+    "mappings": {
+      "default": {
+        "default": "hvit vertikal ellipse"
+      }
+    }
+  },
+  {
+    "key": "2B50",
+    "mappings": {
+      "default": {
+        "default": "hvit medium stjerne"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2B51",
+    "mappings": {
+      "default": {
+        "default": "svart liten stjerne"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "key": "2B52",
+    "mappings": {
+      "default": {
+        "default": "hvit liten stjerne"
+      }
+    },
+    "category": "So"
+  },
+  {
+    "category": "So",
+    "key": "2B53",
+    "mappings": {
+      "default": {
+        "default": "svart høyre-vendt pentagon"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B54",
+    "mappings": {
+      "default": {
+        "default": "hvit høyre-vendt pentagon"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B55",
+    "mappings": {
+      "default": {
+        "default": "fet stor sirkel"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B56",
+    "mappings": {
+      "default": {
+        "default": "fet oval med oval inside"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B57",
+    "mappings": {
+      "default": {
+        "default": "fet sirkel med sirkel inside"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B58",
+    "mappings": {
+      "default": {
+        "default": "fet sirkel"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "2B59",
+    "mappings": {
+      "default": {
+        "default": "fet innsirkla saltire"
+      }
+    }
+  }
+]

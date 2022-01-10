@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Spanish message file.
- *
+ * @file Spanish message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -23,20 +22,21 @@
 // This work was sponsored by TextHelp
 //
 
-import {createLocale, Locale} from '../locale';
-import {combinePostfixIndex} from '../locale_util';
+import { createLocale, Locale } from '../locale';
+import { combinePostfixIndex } from '../locale_util';
 import NUMBERS from '../numbers/numbers_es';
-import {Combiners} from '../transformers';
+import { Combiners } from '../transformers';
 
-
-let sansserifCombiner = function(letter: string, font: string, cap: string) {
+const sansserifCombiner = function (letter: string, font: string, cap: string) {
   letter = 'sans serif ' + (cap ? cap + ' ' + letter : letter);
   return font ? letter + ' ' + font : letter;
 };
 
-
 let locale: Locale = null;
 
+/**
+ * @returns The Spanish locale.
+ */
 export function es(): Locale {
   if (!locale) {
     locale = create();
@@ -45,18 +45,20 @@ export function es(): Locale {
   return locale;
 }
 
+/**
+ * @returns The Spanish locale.
+ */
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
 
   loc.COMBINERS['sansserif'] = sansserifCombiner;
 
-  loc.FUNCTIONS.fracNestDepth = _node => false;
-  loc.FUNCTIONS.radicalNestDepth = _count => '';
-  loc.FUNCTIONS.combineRootIndex = combinePostfixIndex,
-  loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c;
-  loc.FUNCTIONS.fontRegexp = font => RegExp('^' + font + ' ');
-  loc.FUNCTIONS.plural = (unit: string) => {
+  loc.FUNCTIONS.fracNestDepth = (_node) => false;
+  (loc.FUNCTIONS.combineRootIndex = combinePostfixIndex),
+    (loc.FUNCTIONS.combineNestedRadical = (a, _b, c) => a + c);
+  loc.FUNCTIONS.fontRegexp = (font) => RegExp('^' + font + ' ');
+  (loc.FUNCTIONS.plural = (unit: string) => {
     if (/.*(a|e|i|o|u)$/.test(unit)) {
       return unit + 's';
     }
@@ -73,16 +75,18 @@ function create(): Locale {
       return unit.slice(0, -2) + 'ones';
     }
     return unit + 'es';
-  },
-  loc.FUNCTIONS.si = (prefix: string, unit: string) => {
-    if (unit.match(/^metro/)) {
-      prefix = prefix.replace(/a$/, 'á').replace(/o$/, 'ó').replace(/i$/, 'í');
-    }
-    return prefix + unit;
-  };
+  }),
+    (loc.FUNCTIONS.si = (prefix: string, unit: string) => {
+      if (unit.match(/^metro/)) {
+        prefix = prefix
+          .replace(/a$/, 'á')
+          .replace(/o$/, 'ó')
+          .replace(/i$/, 'í');
+      }
+      return prefix + unit;
+    });
 
   loc.ALPHABETS.combiner = Combiners.prefixCombiner;
 
   return loc;
-};
-
+}

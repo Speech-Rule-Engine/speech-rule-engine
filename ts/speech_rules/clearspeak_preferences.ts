@@ -14,98 +14,109 @@
 // limitations under the License.
 
 /**
- * @fileoverview Handling of Clearspeak preferences.
+ * @file Handling of Clearspeak preferences.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import {Engine, EngineConst} from '../common/engine';
-import {DynamicCstr} from '../rule_engine/dynamic_cstr';
-import {Axis, AxisMap, AxisProperties, DefaultComparator, DynamicCstrParser,
-        DynamicProperties} from '../rule_engine/dynamic_cstr';
-import {MathCompoundStore} from '../rule_engine/math_simple_store';
-import {SpeechRuleEngine} from '../rule_engine/speech_rule_engine';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-
+import Engine from '../common/engine';
+import * as EngineConst from '../common/engine_const';
+import { DynamicCstr } from '../rule_engine/dynamic_cstr';
+import {
+  Axis,
+  AxisMap,
+  AxisProperties,
+  DefaultComparator,
+  DynamicCstrParser,
+  DynamicProperties
+} from '../rule_engine/dynamic_cstr';
+import * as MathCompoundStore from '../rule_engine/math_compound_store';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
 export class ClearspeakPreferences extends DynamicCstr {
-
-  private static AUTO: string = 'Auto';
-
+  private static AUTO = 'Auto';
 
   /**
    * Exports the Clearspeak comparator with default settings.
-   * @return The clearspeak comparator.
+   *
+   * @returns The clearspeak comparator.
    */
   public static comparator(): Comparator {
     return new Comparator(
-        Engine.getInstance().dynamicCstr,
-        DynamicProperties.createProp(
-            [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE]],
-            [DynamicCstr.DEFAULT_VALUES[Axis.MODALITY]],
-            [DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN]],
-            [DynamicCstr.DEFAULT_VALUES[Axis.STYLE]]));
+      Engine.getInstance().dynamicCstr,
+      DynamicProperties.createProp(
+        [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE]],
+        [DynamicCstr.DEFAULT_VALUES[Axis.MODALITY]],
+        [DynamicCstr.DEFAULT_VALUES[Axis.DOMAIN]],
+        [DynamicCstr.DEFAULT_VALUES[Axis.STYLE]]
+      )
+    );
   }
-
 
   /**
    * Parse the preferences from a string of the form:
    * preference1_setting1:preference2_setting2:....:preferenceN_settingN
+   *
    * @param pref The preference string.
-   * @return The preference settings.
+   * @returns The preference settings.
    */
   public static fromPreference(pref: string): AxisMap {
-    let pairs = pref.split(':');
-    let preferences: AxisMap = {};
-    let properties = PREFERENCES.getProperties();
-    let validKeys = Object.keys(properties);
-    for (let i = 0, key; key = pairs[i]; i++) {
-      let pair = key.split('_');
+    const pairs = pref.split(':');
+    const preferences: AxisMap = {};
+    const properties = PREFERENCES.getProperties();
+    const validKeys = Object.keys(properties);
+    for (let i = 0, key; (key = pairs[i]); i++) {
+      const pair = key.split('_');
       if (validKeys.indexOf(pair[0]) === -1) {
         continue;
       }
-      let value = pair[1];
-      if (value && value !== ClearspeakPreferences.AUTO &&
-          properties[(pair[0] as Axis)].indexOf(value) !==
-              -1) {
+      const value = pair[1];
+      if (
+        value &&
+        value !== ClearspeakPreferences.AUTO &&
+        properties[pair[0] as Axis].indexOf(value) !== -1
+      ) {
         preferences[pair[0]] = pair[1];
       }
     }
     return preferences;
   }
 
-
   /**
    * Creates a style string from a set of preference mappings, by joining them
    * via underscore and colon in the form:
    * preference1_setting1:preference2_setting2:....:preferenceN_settingN
+   *
    * @param pref A preference mapping.
-   * @return A style string created from the preferences.
+   * @returns A style string created from the preferences.
    */
   public static toPreference(pref: AxisMap): string {
-    let keys = Object.keys(pref);
-    let str = [];
+    const keys = Object.keys(pref);
+    const str = [];
     for (let i = 0; i < keys.length; i++) {
       str.push(keys[i] + '_' + pref[keys[i]]);
     }
     return str.length ? str.join(':') : DynamicCstr.DEFAULT_VALUE;
   }
 
-
   /**
    * Computes the clearspeak preferences per locale and caches them.
+   *
    * @param opt_dynamic Optionally a tree structure with the dynamic
    *     constraints.
-   * @return Mapping of locale to preferences.
+   * @returns Mapping of locale to preferences.
    */
-  public static getLocalePreferences(opt_dynamic?: Object):
-     {[key: string]: AxisProperties} {
-    let dynamic = opt_dynamic ||
-        MathCompoundStore.enumerate(
-            SpeechRuleEngine.getInstance().enumerate());
+  public static getLocalePreferences(opt_dynamic?: {
+    [key: string]: AxisProperties;
+  }): {
+    [key: string]: AxisProperties;
+  } {
+    const dynamic =
+      opt_dynamic ||
+      MathCompoundStore.enumerate(SpeechRuleEngine.getInstance().enumerate());
     return ClearspeakPreferences.getLocalePreferences_(dynamic);
   }
-
 
   // TODO: The following should be done in MathJax in the future!
   // TODO (TS): Import the mathjax types, get rid of any.
@@ -113,32 +124,26 @@ export class ClearspeakPreferences extends DynamicCstr {
   /**
    * Computes a selection of clearspeak preferences for the MathJax context menu
    * wrt. currently focused subexpression.
+   *
    * @param item A Math Item.
    * @param locale The current locale.
-   * @return The menu settings for a new radio button
+   * @returns The menu settings for a new radio button
    *    sub menu.
    */
   // TODO (TS): item should get MathJax type MathItem
   public static smartPreferences(item: any, locale: string): AxisMap[] {
-    let prefs = ClearspeakPreferences.getLocalePreferences();
-    let loc = prefs[locale];
+    const prefs = ClearspeakPreferences.getLocalePreferences();
+    const loc = prefs[locale];
     if (!loc) {
       return [];
     }
-    let explorer = item['explorers'];
-    if (!explorer) {
-      return [{
-        type: 'radio',
-        content: 'Standard',
-        id: 'clearspeak-default',
-        variable: 'speechRules'
-      }];
-    }
-    let smart = ClearspeakPreferences.relevantPreferences(
-        explorer.walker.getFocus().getSemanticPrimary());
+    const explorer = item['explorers']['speech'];
+    const smart = ClearspeakPreferences.relevantPreferences(
+      explorer.walker.getFocus().getSemanticPrimary()
+    );
     // var smart = 'Bar'; // TODO: Lookup the right preference.
-    let previous = EngineConst.DOMAIN_TO_STYLES['clearspeak'];
-    let items = [
+    const previous = EngineConst.DOMAIN_TO_STYLES['clearspeak'];
+    const items = [
       {
         type: 'radio',
         content: 'No Preferences',
@@ -151,92 +156,102 @@ export class ClearspeakPreferences extends DynamicCstr {
         id: 'clearspeak-' + previous,
         variable: 'speechRules'
       },
-      {type: 'rule'}, {type: 'label', content: 'Preferences for ' + smart},
-      {type: 'rule'}
+      { type: 'rule' },
+      { type: 'label', content: 'Preferences for ' + smart },
+      { type: 'rule' }
     ];
-    return items.concat(loc[smart].map(function(x) {
-      let pair = x.split('_');
-      return {
-        type: 'radio',
-        content: pair[1],
-        id: 'clearspeak-' +
+    return items.concat(
+      loc[smart].map(function (x) {
+        const pair = x.split('_');
+        return {
+          type: 'radio',
+          content: pair[1],
+          id:
+            'clearspeak-' +
             ClearspeakPreferences.addPreference(previous, pair[0], pair[1]),
-        variable: 'speechRules'
-      };
-    }));
+          variable: 'speechRules'
+        };
+      })
+    );
   }
-
 
   /**
    * Computes a clearspeak preference that should be changed given the type of
    * the node.
+   *
    * @param node A semantic node.
-   * @return The preference that fits the node's type and role.
+   * @returns The preference that fits the node's type and role.
    */
   public static relevantPreferences(node: SemanticNode): string {
-    let roles = SEMANTIC_MAPPING_[node.type];
+    const roles = SEMANTIC_MAPPING_[node.type];
     if (!roles) {
       return 'ImpliedTimes';
     }
     return roles[node.role] || roles[''] || 'ImpliedTimes';
   }
 
-
   /**
    * Look up the setting of a preference in a preference settings sting.
+   *
    * @param prefs Preference settings.
    * @param kind The preference to look up.
-   * @return The setting of that preference. If it does not exist,
+   * @returns The setting of that preference. If it does not exist,
    *     returns Auto.
    */
   public static findPreference(prefs: string, kind: string): string {
     if (prefs === 'default') {
       return ClearspeakPreferences.AUTO;
     }
-    let parsed = ClearspeakPreferences.fromPreference(prefs);
+    const parsed = ClearspeakPreferences.fromPreference(prefs);
     return parsed[kind] || ClearspeakPreferences.AUTO;
   }
 
-
   /**
    * Adds or updates a value in a preference settings.
+   *
    * @param prefs Preference settings.
    * @param kind New preference name.
    * @param value New preference value.
-   * @return The updated preference settings.
+   * @returns The updated preference settings.
    */
   public static addPreference(
-      prefs: string, kind: string, value: string): string {
+    prefs: string,
+    kind: string,
+    value: string
+  ): string {
     if (prefs === 'default') {
       return kind + '_' + value;
     }
-    let parsed = ClearspeakPreferences.fromPreference(prefs);
+    const parsed = ClearspeakPreferences.fromPreference(prefs);
     parsed[kind] = value;
     return ClearspeakPreferences.toPreference(parsed);
   }
 
-
   /**
    * Computes the clearspeak preferences per locale and caches them.
+   *
    * @param dynamic Optionally a tree structure with the dynamic
    *     constraints.
-   * @return Mapping of locale to preferences.
+   * @returns Mapping of locale to preferences.
    */
-  private static getLocalePreferences_(dynamic: any):
-      {[key: string]: AxisProperties} {
-    let result: {[key: string]: AxisProperties} = {};
-    for (let locale in dynamic) {
-      if (!dynamic[locale]['speech'] ||
-          !dynamic[locale]['speech']['clearspeak']) {
+  private static getLocalePreferences_(dynamic: any): {
+    [key: string]: AxisProperties;
+  } {
+    const result: { [key: string]: AxisProperties } = {};
+    for (const locale in dynamic) {
+      if (
+        !dynamic[locale]['speech'] ||
+        !dynamic[locale]['speech']['clearspeak']
+      ) {
         continue;
       }
-      let locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
-      let prefs: AxisProperties = result[locale] = {};
-      for (let axis in PREFERENCES.getProperties()) {
-        let allSty = PREFERENCES.getProperties()[axis];
-        let values = [axis + '_Auto'];
+      const locPrefs = Object.keys(dynamic[locale]['speech']['clearspeak']);
+      const prefs: AxisProperties = (result[locale] = {});
+      for (const axis in PREFERENCES.getProperties()) {
+        const allSty = PREFERENCES.getProperties()[axis];
+        const values = [axis + '_Auto'];
         if (allSty) {
-          for (let sty of allSty) {
+          for (const sty of allSty) {
             if (locPrefs.indexOf(axis + '_' + sty) !== -1) {
               values.push(axis + '_' + sty);
             }
@@ -252,34 +267,31 @@ export class ClearspeakPreferences extends DynamicCstr {
    * @param cstr The constraint mapping.
    * @param preference The preference.
    */
-  constructor(cstr: AxisMap, public preference: {[key: string]: string}) {
+  constructor(cstr: AxisMap, public preference: { [key: string]: string }) {
     super(cstr);
   }
-
 
   /**
    * @override
    */
   public equal(cstr: ClearspeakPreferences) {
-    let top = super.equal(cstr);
+    const top = super.equal(cstr);
     if (!top) {
       return false;
     }
-    let keys = Object.keys(this.preference);
-    let preference = cstr.preference;
+    const keys = Object.keys(this.preference);
+    const preference = cstr.preference;
     if (keys.length !== Object.keys(preference).length) {
       return false;
     }
-    for (let i = 0, key; key = keys[i]; i++) {
+    for (let i = 0, key; (key = keys[i]); i++) {
       if (this.preference[key] !== preference[key]) {
         return false;
       }
     }
     return true;
   }
-
 }
-
 
 const PREFERENCES = new DynamicProperties({
   AbsoluteValue: ['Auto', 'AbsEnd', 'Cardinality', 'Determinant'],
@@ -290,33 +302,62 @@ const PREFERENCES = new DynamicProperties({
   Ellipses: ['Auto', 'AndSoOn'],
   Enclosed: ['Auto', 'EndEnclose'],
   Exponent: [
-    'Auto', 'AfterPower', 'Ordinal', 'OrdinalPower',
+    'Auto',
+    'AfterPower',
+    'Ordinal',
+    'OrdinalPower',
     // The following are German
     'Exponent'
   ],
   Fraction: [
-    'Auto', 'EndFrac', 'FracOver', 'General', 'GeneralEndFrac', 'Ordinal',
-    'Over', 'OverEndFrac', 'Per'
+    'Auto',
+    'EndFrac',
+    'FracOver',
+    'General',
+    'GeneralEndFrac',
+    'Ordinal',
+    'Over',
+    'OverEndFrac',
+    'Per'
   ],
   Functions: [
-    'Auto', 'None',
+    'Auto',
+    'None',
     // Reciprocal is French
     'Reciprocal'
   ],
   ImpliedTimes: ['Auto', 'MoreImpliedTimes', 'None'],
   Log: ['Auto', 'LnAsNaturalLog'],
   Matrix: [
-    'Auto', 'Combinatoric', 'EndMatrix', 'EndVector', 'SilentColNum',
-    'SpeakColNum', 'Vector'
+    'Auto',
+    'Combinatoric',
+    'EndMatrix',
+    'EndVector',
+    'SilentColNum',
+    'SpeakColNum',
+    'Vector'
   ],
-  MultiLineLabel:
-      ['Auto', 'Case', 'Constraint', 'Equation', 'Line', 'None', 'Row', 'Step'],
+  MultiLineLabel: [
+    'Auto',
+    'Case',
+    'Constraint',
+    'Equation',
+    'Line',
+    'None',
+    'Row',
+    'Step'
+  ],
   MultiLineOverview: ['Auto', 'None'],
   MultiLinePausesBetweenColumns: ['Auto', 'Long', 'Short'],
   MultsymbolDot: ['Auto', 'Dot'],
   MultsymbolX: ['Auto', 'By', 'Cross'],
   Paren: [
-    'Auto', 'CoordPoint', 'Interval', 'Silent', 'Speak', 'SpeakNestingLevel'
+    'Auto',
+    'CoordPoint',
+    'Interval',
+    'Silent',
+    'Speak',
+    'SpeakNestingLevel'
   ],
   Prime: ['Auto', 'Angle', 'Length'],
   Roots: ['Auto', 'PosNegSqRoot', 'PosNegSqRootEnd', 'RootEnd'],
@@ -324,16 +365,16 @@ const PREFERENCES = new DynamicProperties({
   Sets: ['Auto', 'SilentBracket', 'woAll'],
   TriangleSymbol: ['Auto', 'Delta'],
   Trig: [
-    'Auto', 'ArcTrig', 'TrigInverse',
+    'Auto',
+    'ArcTrig',
+    'TrigInverse',
     // Reciprocal French
     'Reciprocal'
   ],
   VerticalLine: ['Auto', 'Divides', 'Given', 'SuchThat']
 });
 
-
 export class Comparator extends DefaultComparator {
-
   /**
    * @override
    */
@@ -345,10 +386,9 @@ export class Comparator extends DefaultComparator {
    */
   constructor(cstr: DynamicCstr, props: DynamicProperties) {
     super(cstr, props);
-    this.preference = (cstr instanceof ClearspeakPreferences) ?
-      cstr.preference : {};
+    this.preference =
+      cstr instanceof ClearspeakPreferences ? cstr.preference : {};
   }
-
 
   /**
    * @override
@@ -360,8 +400,8 @@ export class Comparator extends DefaultComparator {
     if (cstr.getComponents()[Axis.STYLE] === 'default') {
       return true;
     }
-    let keys = Object.keys(cstr.preference);
-    for (let i = 0, key; key = keys[i]; i++) {
+    const keys = Object.keys(cstr.preference);
+    for (let i = 0, key; (key = keys[i]); i++) {
       if (this.preference[key] !== cstr.preference[key]) {
         return false;
       }
@@ -369,17 +409,16 @@ export class Comparator extends DefaultComparator {
     return true;
   }
 
-
   /**
    * @override
    */
   public compare(cstr1: DynamicCstr, cstr2: DynamicCstr) {
-    let top = super.compare(cstr1, cstr2);
+    const top = super.compare(cstr1, cstr2);
     if (top !== 0) {
-      return top as 0|1|-1;
+      return top as 0 | 1 | -1;
     }
-    let pref1 = (cstr1 instanceof ClearspeakPreferences);
-    let pref2 = (cstr2 instanceof ClearspeakPreferences);
+    const pref1 = cstr1 instanceof ClearspeakPreferences;
+    const pref2 = cstr2 instanceof ClearspeakPreferences;
     if (!pref1 && pref2) {
       return 1;
     }
@@ -389,15 +428,17 @@ export class Comparator extends DefaultComparator {
     if (!pref1 && !pref2) {
       return 0;
     }
-    let length1 = Object.keys((cstr1 as ClearspeakPreferences).preference).length;
-    let length2 = Object.keys((cstr2 as ClearspeakPreferences).preference).length;
+    const length1 = Object.keys(
+      (cstr1 as ClearspeakPreferences).preference
+    ).length;
+    const length2 = Object.keys(
+      (cstr2 as ClearspeakPreferences).preference
+    ).length;
     return length1 > length2 ? -1 : length1 < length2 ? 1 : 0;
   }
 }
 
-
 export class Parser extends DynamicCstrParser {
-
   /**
    * @override
    */
@@ -405,54 +446,53 @@ export class Parser extends DynamicCstrParser {
     super([Axis.LOCALE, Axis.MODALITY, Axis.DOMAIN, Axis.STYLE]);
   }
 
-
   /**
    * @override
    */
   public parse(str: string) {
-    let initial = super.parse(str);
+    const initial = super.parse(str);
     let style = initial.getValue(Axis.STYLE);
-    let locale = initial.getValue(Axis.LOCALE);
-    let modality = initial.getValue(Axis.MODALITY);
+    const locale = initial.getValue(Axis.LOCALE);
+    const modality = initial.getValue(Axis.MODALITY);
     let pref = {};
     if (style !== DynamicCstr.DEFAULT_VALUE) {
       pref = this.fromPreference(style);
       style = this.toPreference(pref);
     }
     return new ClearspeakPreferences(
-        {
-          'locale': locale,
-          'modality': modality,
-          'domain': 'clearspeak',
-          'style': style
-        },
-        pref);
+      {
+        locale: locale,
+        modality: modality,
+        domain: 'clearspeak',
+        style: style
+      },
+      pref
+    );
   }
-
 
   /**
    * Parse the preferences from a string of the form:
    * preference1_setting1:preference2_setting2:....:preferenceN_settingN
+   *
    * @param pref The preference string.
-   * @return The preference settings.
+   * @returns The preference settings.
    */
-  public fromPreference(pref: string): {[key: string]: string} {
+  public fromPreference(pref: string): { [key: string]: string } {
     return ClearspeakPreferences.fromPreference(pref);
   }
-
 
   /**
    * Creates a style string from a set of preference mappings, by joining them
    * via underscore and colon in the form:
    * preference1_setting1:preference2_setting2:....:preferenceN_settingN
+   *
    * @param pref A preference mapping.
-   * @return A style string created from the preferences.
+   * @returns A style string created from the preferences.
    */
-  public toPreference(pref: {[key: string]: string}): string {
+  public toPreference(pref: { [key: string]: string }): string {
     return ClearspeakPreferences.toPreference(pref);
   }
 }
-
 
 /**
  * Mapping from preferences to semantic values.
@@ -460,111 +500,48 @@ export class Parser extends DynamicCstrParser {
 // TODO (TS): Replace with a Map to partial meaning elements.
 const REVERSE_MAPPING: string[][] = [
   [
-    'AbsoluteValue', SemanticType.FENCED,
-    SemanticRole.NEUTRAL, SemanticRole.METRIC
+    'AbsoluteValue',
+    SemanticType.FENCED,
+    SemanticRole.NEUTRAL,
+    SemanticRole.METRIC
   ],
-  [
-    'Bar', SemanticType.OVERSCORE,
-    SemanticRole.OVERACCENT
-  ],  // more
-  [
-    'Caps', SemanticType.IDENTIFIER,
-    SemanticRole.LATINLETTER
-  ],  // more
-  [
-    'CombinationPermutation', SemanticType.APPL,
-    SemanticRole.UNKNOWN
-  ],  // more
-  [
-    'Ellipses', SemanticType.PUNCTUATION,
-    SemanticRole.ELLIPSIS
-  ],
+  ['Bar', SemanticType.OVERSCORE, SemanticRole.OVERACCENT], // more
+  ['Caps', SemanticType.IDENTIFIER, SemanticRole.LATINLETTER], // more
+  ['CombinationPermutation', SemanticType.APPL, SemanticRole.UNKNOWN], // more
+  ['Ellipses', SemanticType.PUNCTUATION, SemanticRole.ELLIPSIS],
   ['Exponent', SemanticType.SUPERSCRIPT, ''],
   ['Fraction', SemanticType.FRACTION, ''],
   ['Functions', SemanticType.APPL, SemanticRole.SIMPLEFUNC],
-  [
-    'ImpliedTimes', SemanticType.OPERATOR,
-    SemanticRole.IMPLICIT
-  ],
-  [
-    'Log', SemanticType.APPL,
-    SemanticRole.PREFIXFUNC
-  ],                                         // specific
-  ['Matrix', SemanticType.MATRIX, ''],  // multiple
-  ['Matrix', SemanticType.VECTOR, ''],  // multiple
-  [
-    'MultiLineLabel', SemanticType.MULTILINE,
-    SemanticRole.LABEL
-  ],  // more, multiple (table)
-  [
-    'MultiLineOverview', SemanticType.MULTILINE,
-    SemanticRole.TABLE
-  ],  // more, multiple (table)
-  [
-    'MultiLinePausesBetweenColumns', SemanticType.MULTILINE,
-    SemanticRole.TABLE
-  ],  // more, multiple (table)
-  [
-    'MultiLineLabel', SemanticType.TABLE,
-    SemanticRole.LABEL
-  ],  // more, multiple (table)
-  [
-    'MultiLineOverview', SemanticType.TABLE,
-    SemanticRole.TABLE
-  ],  // more, multiple (table)
-  [
-    'MultiLinePausesBetweenColumns', SemanticType.TABLE,
-    SemanticRole.TABLE
-  ],  // more, multiple (table)
-  [
-    'MultiLineLabel', SemanticType.CASES,
-    SemanticRole.LABEL
-  ],  // more, multiple (table)
-  [
-    'MultiLineOverview', SemanticType.CASES,
-    SemanticRole.TABLE
-  ],  // more, multiple (table)
-  [
-    'MultiLinePausesBetweenColumns', SemanticType.CASES,
-    SemanticRole.TABLE
-  ],  // more, multiple (table)
-  [
-    'MultsymbolDot', SemanticType.OPERATOR,
-    SemanticRole.MULTIPLICATION
-  ],  // multiple?
-  [
-    'MultsymbolX', SemanticType.OPERATOR,
-    SemanticRole.MULTIPLICATION
-  ],  // multiple?
+  ['ImpliedTimes', SemanticType.OPERATOR, SemanticRole.IMPLICIT],
+  ['Log', SemanticType.APPL, SemanticRole.PREFIXFUNC], // specific
+  ['Matrix', SemanticType.MATRIX, ''], // multiple
+  ['Matrix', SemanticType.VECTOR, ''], // multiple
+  ['MultiLineLabel', SemanticType.MULTILINE, SemanticRole.LABEL], // more, multiple (table)
+  ['MultiLineOverview', SemanticType.MULTILINE, SemanticRole.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', SemanticType.MULTILINE, SemanticRole.TABLE], // more, multiple (table)
+  ['MultiLineLabel', SemanticType.TABLE, SemanticRole.LABEL], // more, multiple (table)
+  ['MultiLineOverview', SemanticType.TABLE, SemanticRole.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', SemanticType.TABLE, SemanticRole.TABLE], // more, multiple (table)
+  ['MultiLineLabel', SemanticType.CASES, SemanticRole.LABEL], // more, multiple (table)
+  ['MultiLineOverview', SemanticType.CASES, SemanticRole.TABLE], // more, multiple (table)
+  ['MultiLinePausesBetweenColumns', SemanticType.CASES, SemanticRole.TABLE], // more, multiple (table)
+  ['MultsymbolDot', SemanticType.OPERATOR, SemanticRole.MULTIPLICATION], // multiple?
+  ['MultsymbolX', SemanticType.OPERATOR, SemanticRole.MULTIPLICATION], // multiple?
   ['Paren', SemanticType.FENCED, SemanticRole.LEFTRIGHT],
   ['Prime', SemanticType.SUPERSCRIPT, SemanticRole.PRIME],
-  ['Roots', SemanticType.ROOT, ''],  // multiple (sqrt)
-  ['Roots', SemanticType.SQRT, ''],  // multiple (sqrt)
-  [
-    'SetMemberSymbol', SemanticType.RELATION,
-    SemanticRole.ELEMENT
-  ],
-  [
-    'Sets', SemanticType.FENCED,
-    SemanticRole.SETEXT
-  ],  // multiple
-  [
-    'TriangleSymbol', SemanticType.IDENTIFIER,
-    SemanticRole.GREEKLETTER
-  ],  // ????
-  [
-    'Trig', SemanticType.APPL,
-    SemanticRole.PREFIXFUNC
-  ],  // specific
+  ['Roots', SemanticType.ROOT, ''], // multiple (sqrt)
+  ['Roots', SemanticType.SQRT, ''], // multiple (sqrt)
+  ['SetMemberSymbol', SemanticType.RELATION, SemanticRole.ELEMENT],
+  ['Sets', SemanticType.FENCED, SemanticRole.SETEXT], // multiple
+  ['TriangleSymbol', SemanticType.IDENTIFIER, SemanticRole.GREEKLETTER], // ????
+  ['Trig', SemanticType.APPL, SemanticRole.PREFIXFUNC], // specific
   ['VerticalLine', SemanticType.PUNCTUATED, SemanticRole.VBAR]
 ];
 
-
-const SEMANTIC_MAPPING_: {[key: string]: AxisMap} = function() {
-  let result: {[key: string]: AxisMap} = {};
-  for (let i = 0, triple; triple = REVERSE_MAPPING[i];
-       i++) {
-    let pref = triple[0];
+const SEMANTIC_MAPPING_: { [key: string]: AxisMap } = (function () {
+  const result: { [key: string]: AxisMap } = {};
+  for (let i = 0, triple; (triple = REVERSE_MAPPING[i]); i++) {
+    const pref = triple[0];
     let role = result[triple[1]];
     if (!role) {
       role = {};
@@ -573,12 +550,11 @@ const SEMANTIC_MAPPING_: {[key: string]: AxisMap} = function() {
     role[triple[2]] = pref;
   }
   return result;
-}();
-
+})();
 
 /**
  * Add new comparator and parser.
  */
 Engine.getInstance().comparators['clearspeak'] =
-    ClearspeakPreferences.comparator;
+  ClearspeakPreferences.comparator;
 Engine.getInstance().parsers['clearspeak'] = new Parser();

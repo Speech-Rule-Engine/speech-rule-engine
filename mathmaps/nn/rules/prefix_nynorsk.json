@@ -1,0 +1,7 @@
+{
+  "inherits": "base",
+  "locale": "nn",
+  "domain": "default",
+  "modality": "prefix",
+  "rules": []
+}

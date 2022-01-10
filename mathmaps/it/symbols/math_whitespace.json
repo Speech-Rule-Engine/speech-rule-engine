@@ -285,7 +285,7 @@
     "key": "2063",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "virgola"
       }
     },
     "category": "Cf"
@@ -295,7 +295,7 @@
     "key": "2064",
     "mappings": {
       "default": {
-        "default": "più invisibile"
+        "default": "più"
       }
     }
   },

@@ -15,34 +15,31 @@
 // limitations under the License.
 
 /**
- * @fileoverview Dummy file to pull together all the speech generators.
- *
+ * @file Dummy file to pull together all the speech generators.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AdhocSpeechGenerator} from './adhoc_speech_generator';
-import {ColorGenerator} from './color_generator';
-import {DirectSpeechGenerator} from './direct_speech_generator';
-import {DummySpeechGenerator} from './dummy_speech_generator';
-import {NodeSpeechGenerator} from './node_speech_generator';
-import {SpeechGenerator} from './speech_generator';
-import {SummarySpeechGenerator} from './summary_speech_generator';
-import {TreeSpeechGenerator} from './tree_speech_generator';
-
+import { AdhocSpeechGenerator } from './adhoc_speech_generator';
+import { ColorGenerator } from './color_generator';
+import { DirectSpeechGenerator } from './direct_speech_generator';
+import { DummySpeechGenerator } from './dummy_speech_generator';
+import { NodeSpeechGenerator } from './node_speech_generator';
+import { SpeechGenerator } from './speech_generator';
+import { SummarySpeechGenerator } from './summary_speech_generator';
+import { TreeSpeechGenerator } from './tree_speech_generator';
 
 /**
  * Produces a speech generator that corresponds to the given type.
+ *
  * @param type The type of speech generator.
- * @return The newly generated speech generator.
+ * @returns The newly generated speech generator.
  */
 export function generator(type: string): SpeechGenerator {
-  let constructor = generatorMapping_[type] || generatorMapping_.Direct;
+  const constructor = generatorMapping_[type] || generatorMapping_.Direct;
   return constructor();
 }
 
-
-export const generatorMapping_: {[key: string]: () => SpeechGenerator} = {
+export const generatorMapping_: { [key: string]: () => SpeechGenerator } = {
   Adhoc: () => new AdhocSpeechGenerator(),
   Color: () => new ColorGenerator(),
   Direct: () => new DirectSpeechGenerator(),

@@ -14,17 +14,13 @@
 // limitations under the License.
 
 /**
- * @fileoverview Class highlighting CSS elements.
- *
+ * @file Class highlighting CSS elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AbstractHighlighter, Highlight} from './abstract_highlighter';
-
+import { AbstractHighlighter, Highlight } from './abstract_highlighter';
 
 export class CssHighlighter extends AbstractHighlighter {
-
   /**
    * @override
    */
@@ -33,22 +29,20 @@ export class CssHighlighter extends AbstractHighlighter {
     this.mactionName = 'mjx-maction';
   }
 
-
   /**
    * @override
    */
   public highlightNode(node: HTMLElement) {
-    let info = {
+    const info = {
       node: node,
       background: node.style.backgroundColor,
       foreground: node.style.color
     };
-    let color = this.colorString();
+    const color = this.colorString();
     node.style.backgroundColor = color.background;
     node.style.color = color.foreground;
     return info;
   }
-
 
   /**
    * @override

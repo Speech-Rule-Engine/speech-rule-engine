@@ -271,17 +271,17 @@
     [
       "Action",
       "abstr-punctuated",
-      "[t] \"llista separa per\"; [n] content/*[1]; [t] \"de longitud\"; [t] count(children/*) - count(content/*)"
+      "[t] \"llista separada per\"; [n] content/*[1] (grammar:plural); [t] \"de longitud\"; [t] count(children/*) - count(content/*)"
     ],
     [
       "Action",
       "abstr-punctuated-brief",
-      "[t] \"llista separa per\"; [n] content/*[1]"
+      "[t] \"llista separada per\"; [n] content/*[1] (grammar:plural)"
     ],
     [
       "Action",
       "abstr-punctuated-var",
-      "[t] \"llista separa per\"; [n] content/*[1]; [t] \"de longitud variable\""
+      "[t] \"llista separada per\"; [n] content/*[1]  (grammar:plural); [t] \"de longitud variable\""
     ],
     [
       "Action",

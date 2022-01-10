@@ -14,20 +14,18 @@
 // limitations under the License.
 
 /**
- * @fileoverview Spans are container elements for strings with attributes. They
+ * @file Spans are container elements for strings with attributes. They
  *     can be merged whenever all attributes coincide.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 export class Span {
-
   /**
-   * @param string The textual content of the span.
+   * @param speech The textual content of the span.
    * @param attributes Annotations for the textual content.
    */
-  constructor(public speech: string,
-              public attributes: {[key: string]: string}) { }
-
+  constructor(
+    public speech: string,
+    public attributes: { [key: string]: string }
+  ) {}
 }

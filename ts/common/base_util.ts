@@ -14,30 +14,31 @@
 // limitations under the License.
 
 /**
- * @fileoverview A collection of basic JavaScript utility functions.
+ * @file A collection of basic JavaScript utility functions.
+ *    Those are independent of any other module.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 /**
  * Removes all empty strings from an array of strings.
+ *
  * @param strs An array of strings.
- * @return The cleaned array.
+ * @returns The cleaned array.
  */
 export function removeEmpty(strs: string[]): string[] {
-  return strs.filter(str => str);
+  return strs.filter((str) => str);
 }
-
 
 /**
  * Interleaves two lists, starting with the first. If either list is longer, it
  * will be appended at the end.
+ *
  * @param list1 The first list.
  * @param list2 The second list.
- * @return The combined list.
+ * @returns The combined list.
  */
 export function interleaveLists(list1: any[], list2: any[]): any[] {
-  let result = [];
+  const result = [];
   while (list1.length || list2.length) {
     list1.length && result.push(list1.shift());
     list2.length && result.push(list2.shift());
@@ -45,12 +46,12 @@ export function interleaveLists(list1: any[], list2: any[]): any[] {
   return result;
 }
 
-
 /**
  * Computes the difference of two arrays.
+ *
  * @param a An array.
  * @param b Another array.
- * @return Difference of a and b, i.e. a-b.
+ * @returns Difference of a and b, i.e. a-b.
  */
 export function setdifference(a: any[], b: any[]): any[] {
   if (!a) {
@@ -59,30 +60,20 @@ export function setdifference(a: any[], b: any[]): any[] {
   if (!b) {
     return a;
   }
-  return a.filter(x => b.indexOf(x) < 0);
+  return a.filter((x) => b.indexOf(x) < 0);
 }
-
 
 /**
  * Computes the union of two arrays (not in a strictly set theoretical sense
  * as all duplicate elements in either array still remain as duplicates!).
+ *
  * @param a An array.
  * @param b Another array.
- * @return Union of a and b.
+ * @returns Union of a and b.
  */
 export function union(a: any[], b: any[]): any[] {
   if (!a || !b) {
     return a || b || [];
   }
   return a.concat(setdifference(b, a));
-}
-
-
-/**
- * Corrects pathnames to have trailing slashes.
- * @param path The original path.
- * @return The path that has definitely a trailing slash.
- */
-export function makePath(path: string): string {
-  return path.match('/$') ? path : path + '/';
 }

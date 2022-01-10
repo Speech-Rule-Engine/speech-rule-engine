@@ -14,21 +14,17 @@
 // limitations under the License.
 
 /**
- * @fileoverview A simple audio renderer that interprets pauses of varying
+ * @file A simple audio renderer that interprets pauses of varying
  *     length as punctuation.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {EngineConst} from '../common/engine';
-import {AbstractAudioRenderer} from './abstract_audio_renderer';
+import * as EngineConst from '../common/engine_const';
+import { AbstractAudioRenderer } from './abstract_audio_renderer';
 import * as AudioUtil from './audio_util';
-import {AuditoryDescription} from './auditory_description';
-
+import { AuditoryDescription } from './auditory_description';
 
 export class PunctuationRenderer extends AbstractAudioRenderer {
-
   /**
    * Alpha values for pauses.
    */
@@ -42,18 +38,21 @@ export class PunctuationRenderer extends AbstractAudioRenderer {
    * @override
    */
   public markup(descrs: AuditoryDescription[]) {
-    let markup = AudioUtil.personalityMarkup(descrs);
+    const markup = AudioUtil.personalityMarkup(descrs);
     let str = '';
     let pause = null;
     let span = false;
-    for (let i = 0, descr; descr = markup[i]; i++) {
+    for (let i = 0, descr; (descr = markup[i]); i++) {
       if (AudioUtil.isMarkupElement(descr)) {
         continue;
       }
       if (AudioUtil.isPauseElement(descr)) {
         if (span) {
           pause = AudioUtil.mergePause(
-              pause, (descr as {pause: number}), Math.max);
+            pause,
+            descr as { pause: number },
+            Math.max
+          );
         }
         continue;
       }
@@ -67,11 +66,11 @@ export class PunctuationRenderer extends AbstractAudioRenderer {
     return str;
   }
 
-
   /**
    * Transforms numeric pauses into alpha versions.
+   *
    * @param pause The pause length.
-   * @return The alpha equivalent.
+   * @returns The alpha equivalent.
    */
   public pause(pause: AudioUtil.PauseValue): string {
     let newPause;

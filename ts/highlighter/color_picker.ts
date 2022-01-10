@@ -14,12 +14,10 @@
 // limitations under the License.
 
 /**
- * @fileoverview Very simple color picker class. Currently it only holds the
+ * @file Very simple color picker class. Currently it only holds the
  * rgba values for background highlighting.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-
 
 interface NamedColor {
   color: string;
@@ -42,43 +40,47 @@ export interface StringColor {
 
 export type Color = ChannelColor | NamedColor;
 
-const namedColors: {[key: string]: ChannelColor} = {
-  red: {red: 255, green: 0, blue: 0},
-  green: {red: 0, green: 255, blue: 0},
-  blue: {red: 0, green: 0, blue: 255},
-  yellow: {red: 255, green: 255, blue: 0},
-  cyan: {red: 0, green: 255, blue: 255},
-  magenta: {red: 255, green: 0, blue: 255},
-  white: {red: 255, green: 255, blue: 255},
-  black: {red: 0, green: 0, blue: 0}
+const namedColors: { [key: string]: ChannelColor } = {
+  red: { red: 255, green: 0, blue: 0 },
+  green: { red: 0, green: 255, blue: 0 },
+  blue: { red: 0, green: 0, blue: 255 },
+  yellow: { red: 255, green: 255, blue: 0 },
+  cyan: { red: 0, green: 255, blue: 255 },
+  magenta: { red: 255, green: 0, blue: 255 },
+  white: { red: 255, green: 255, blue: 255 },
+  black: { red: 0, green: 0, blue: 0 }
 };
-
 
 /**
  * Turns a color definition a channel color definition. Augments it if
  * necessary.
+ *
  * @param color The definition.
  * @param deflt The default color if color does not exist.
- * @return The augmented color definition.
+ * @returns The augmented color definition.
  */
 function getChannelColor(color: Color, deflt: string): ChannelColor {
-  let col = color || {color: deflt};
-  let channel = col.hasOwnProperty('color') ? namedColors[(col as NamedColor).color] : col;
+  const col = color || { color: deflt };
+  let channel = Object.prototype.hasOwnProperty.call(col, 'color')
+    ? namedColors[(col as NamedColor).color]
+    : col;
   if (!channel) {
     channel = namedColors[deflt];
   }
-  channel.alpha = col.hasOwnProperty('alpha') ? col.alpha : 1.;
-  return normalizeColor((channel as ChannelColor));
+  channel.alpha = Object.prototype.hasOwnProperty.call(col, 'alpha')
+    ? col.alpha
+    : 1;
+  return normalizeColor(channel as ChannelColor);
 }
-
 
 /**
  * Normalizes the color channels, i.e., rgb in [0,255] and alpha in [0,1].
+ *
  * @param color The color definition.
- * @return The normalized color definition.
+ * @returns The normalized color definition.
  */
 function normalizeColor(color: ChannelColor): ChannelColor {
-  let normalizeCol = (col: number) => {
+  const normalizeCol = (col: number) => {
     col = Math.max(col, 0);
     col = Math.min(255, col);
     return Math.round(col);
@@ -91,19 +93,16 @@ function normalizeColor(color: ChannelColor): ChannelColor {
   return color;
 }
 
-
 export class ColorPicker {
   /**
    * The default background color if a none existing color is provided.
    */
-  private static DEFAULT_BACKGROUND_: string = 'blue';
-
+  private static DEFAULT_BACKGROUND_ = 'blue';
 
   /**
    * The default color if a none existing color is provided.
    */
-  private static DEFAULT_FOREGROUND_: string = 'black';
-
+  private static DEFAULT_FOREGROUND_ = 'black';
 
   /**
    * The foreground color in RGBa.
@@ -117,35 +116,48 @@ export class ColorPicker {
 
   /**
    * Turns a decimal number into a two digit hex string.
-   * @param number The decimal.
-   * @return The hex string.
+   *
+   * @param num The decimal.
+   * @returns The hex string.
    */
   private static toHex(num: number): string {
-    let hex = num.toString(16);
+    const hex = num.toString(16);
     return hex.length === 1 ? '0' + hex : hex;
   }
 
   /**
    * @param background The background color definition.
-   * @param opt_foreground The optional foreground color
-   *      definition.
+   * @param foreground The optional foreground color definition.
    */
   constructor(background: Color, foreground?: Color) {
     this.foreground = getChannelColor(
-      foreground, ColorPicker.DEFAULT_FOREGROUND_);
+      foreground,
+      ColorPicker.DEFAULT_FOREGROUND_
+    );
     this.background = getChannelColor(
-        background, ColorPicker.DEFAULT_BACKGROUND_);
+      background,
+      ColorPicker.DEFAULT_BACKGROUND_
+    );
   }
-
 
   /**
    * RGBa version of the colors.
-   * @return The color in RGBa format.
+   *
+   * @returns The color in RGBa format.
    */
   public rgba(): StringColor {
-    let rgba = function(col: ChannelColor) {
-      return 'rgba(' + col.red + ',' + col.green + ',' + col.blue + ',' +
-          col.alpha + ')';
+    const rgba = function (col: ChannelColor) {
+      return (
+        'rgba(' +
+        col.red +
+        ',' +
+        col.green +
+        ',' +
+        col.blue +
+        ',' +
+        col.alpha +
+        ')'
+      );
     };
     return {
       background: rgba(this.background),
@@ -153,13 +165,13 @@ export class ColorPicker {
     };
   }
 
-
   /**
    * RGB version of the colors.
-   * @return The color in Rgb format.
+   *
+   * @returns The color in Rgb format.
    */
   public rgb(): StringColor {
-    let rgb = function(col: ChannelColor) {
+    const rgb = function (col: ChannelColor) {
       return 'rgb(' + col.red + ',' + col.green + ',' + col.blue + ')';
     };
     return {
@@ -170,15 +182,19 @@ export class ColorPicker {
     };
   }
 
-
   /**
    * HEX version of the colors.
-   * @return The color in Hex format.
+   *
+   * @returns The color in Hex format.
    */
   public hex(): StringColor {
-    let hex = function(col: ChannelColor) {
-      return '#' + ColorPicker.toHex(col.red) + ColorPicker.toHex(col.green) +
-          ColorPicker.toHex(col.blue);
+    const hex = function (col: ChannelColor) {
+      return (
+        '#' +
+        ColorPicker.toHex(col.red) +
+        ColorPicker.toHex(col.green) +
+        ColorPicker.toHex(col.blue)
+      );
     };
     return {
       background: hex(this.background),
@@ -187,25 +203,29 @@ export class ColorPicker {
       alphafore: this.foreground.alpha.toString()
     };
   }
-
 }
-
 
 /**
  * Transforms a HSL triple into an rgb value triple.
+ *
  * @param h The hue.
  * @param s The saturation.
  * @param l The luminosity.
- * @return The rgb value triple.
+ * @returns The rgb value triple.
  */
-function hsl2rgb(h: number, s: number, l: number):
-{red: number, green: number, blue: number} {
+function hsl2rgb(
+  h: number,
+  s: number,
+  l: number
+): { red: number; green: number; blue: number } {
   s = s > 1 ? s / 100 : s;
   l = l > 1 ? l / 100 : l;
-  let c = (1 - Math.abs(2 * l - 1)) * s;
-  let x = c * (1 - Math.abs(h / 60 % 2 - 1));
-  let m = l - c / 2;
-  let r = 0, g = 0, b = 0;
+  const c = (1 - Math.abs(2 * l - 1)) * s;
+  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+  const m = l - c / 2;
+  let r = 0,
+    g = 0,
+    b = 0;
   if (0 <= h && h < 60) {
     [r, g, b] = [c, x, 0];
   } else if (60 <= h && h < 120) {
@@ -219,17 +239,23 @@ function hsl2rgb(h: number, s: number, l: number):
   } else if (300 <= h && h < 360) {
     [r, g, b] = [c, 0, x];
   }
-  return {red: r + m, green: g + m, blue: b + m};
+  return { red: r + m, green: g + m, blue: b + m };
 }
-
 
 /**
  * Translates an rgb value triple into an RGB values (0..255).
+ *
  * @param rgb The rgb values.
- * @return The RGB triple.
+ * @param rgb.red The red value.
+ * @param rgb.green The green value.
+ * @param rgb.blue The blue vaue.
+ * @returns The RGB triple.
  */
-function rgb2RGB(rgb: {red: number, green: number, blue: number}):
-{red: number, green: number, blue: number} {
+function rgb2RGB(rgb: { red: number; green: number; blue: number }): {
+  red: number;
+  green: number;
+  blue: number;
+} {
   return {
     red: Math.round(255 * rgb.red),
     green: Math.round(255 * rgb.green),
@@ -237,23 +263,21 @@ function rgb2RGB(rgb: {red: number, green: number, blue: number}):
   };
 }
 
-
 /**
  * Transoforms RGB value triple into the hex values attribute.
+ *
  * @param col The RGB triple.
- * @return The rgb attribute entry.
+ * @returns The rgb attribute entry.
  */
-function RGB2hex(col: {[key: string]: number}): string {
+function RGB2hex(col: { [key: string]: number }): string {
   return 'rgb(' + col.red + ',' + col.green + ',' + col.blue + ')';
 }
-
 
 // Auxiliary methods for HSL.
 //
 // TODO: Rewrite into ChannelColor_ format.
 //
 export class ContrastPicker {
-
   /**
    * Hue value.
    */
@@ -276,13 +300,12 @@ export class ContrastPicker {
 
   /**
    * Generates the current color as rgb color in hex code.
-   * @return The rgb color attribute.
+   *
+   * @returns The rgb color attribute.
    */
   public generate(): string {
-    return RGB2hex(rgb2RGB(
-      hsl2rgb(this.hue, this.sat, this.light)));
+    return RGB2hex(rgb2RGB(hsl2rgb(this.hue, this.sat, this.light)));
   }
-
 
   /**
    * Increments the hue value of the current color.

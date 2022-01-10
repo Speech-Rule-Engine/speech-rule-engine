@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Rule store for braille rules.
+ * @file Rule store for braille rules.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -22,16 +22,14 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-
-import {SemanticAnnotations} from '../semantic_tree/semantic_annotations';
-import {MathStore} from './math_store';
-
+import { AuditoryDescription } from '../audio/auditory_description';
+import { activate } from '../semantic_tree/semantic_annotations';
+import { MathStore } from './math_store';
 
 /**
  * Braille rule store.
  */
 export class BrailleStore extends MathStore {
-
   /**
    * @override
    */
@@ -40,27 +38,26 @@ export class BrailleStore extends MathStore {
   /**
    * @override
    */
-  public customTranscriptions = {'\u22ca': '⠈⠡⠳'};
+  public customTranscriptions = { '\u22ca': '⠈⠡⠳' };
 
   /**
    * @override
    */
   public evaluateString(str: string) {
-    let descs = [];
-    let text = Array.from(str);
+    const descs: AuditoryDescription[] = [];
+    const text = Array.from(str);
     for (let i = 0; i < text.length; i++) {
       descs.push(this.evaluateCharacter(text[i]));
     }
     return descs;
   }
 
-
   /**
    * @override
    */
   public annotations() {
-    for (let i = 0, annotator; annotator = this.annotators[i]; i++) {
-      SemanticAnnotations.activate(this.locale, annotator);
+    for (let i = 0, annotator; (annotator = this.annotators[i]); i++) {
+      activate(this.locale, annotator);
     }
   }
 }
