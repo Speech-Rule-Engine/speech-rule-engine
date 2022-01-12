@@ -23,91 +23,84 @@
       "set-member-parent",
       "default",
       "self::infixop",
-      "content/*[1][@role=\"set extended\"]",
-      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+      "content/*[1][@role=\"element\"]",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-member-member-parent",
       "SetMemberSymbol_Member",
       "self::infixop",
-      "content/*[1][@role=\"set extended\"]",
-      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+      "content/*[1][@role=\"element\"]",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-member-element-parent",
       "SetMemberSymbol_Element",
       "self::infixop",
-      "content/*[1][@role=\"set extended\"]",
-      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+      "content/*[1][@role=\"element\"]",
+      "contains(@annotation, \"set:intensional\")"
+    ],
+    [
+      "Precondition",
+      "set-member-in-parent",
+      "SetMemberSymbol_In",
+      "self::infixop",
+      "content/*[1][@role=\"element\"]",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-member-belongs-parent",
       "SetMemberSymbol_Belongs",
       "self::infixop",
-      "content/*[1][@role=\"set extended\"]",
-      "content/*[1][text()=\"∈\"] or content/*[1][text()=\"∊\"]"
+      "content/*[1][@role=\"element\"]",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-not-member-parent",
       "default",
       "self::infixop",
-      "content/*[1][@role=\"set extended\"]",
-      "content/*[1][text()=\"∉\"]"
+      "content/*[1][@role=\"nonelement\"]",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-not-member-member-parent",
       "SetMemberSymbol_Member",
       "self::infixop",
-      "content/*[1][@role=\"set extended\"]",
-      "content/*[1][text()=\"∉\"]"
+      "content/*[1][@role=\"nonelement\"]",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-not-member-element-parent",
       "SetMemberSymbol_Element",
       "self::infixop",
-      "content/*[1][@role=\"set extended\"]",
-      "content/*[1][text()=\"∉\"]"
+      "content/*[1][@role=\"nonelement\"]",
+      "contains(@annotation, \"set:intensional\")"
+    ],
+    [
+      "Precondition",
+      "set-not-member-in-parent",
+      "SetMemberSymbol_In",
+      "self::infixop",
+      "content/*[1][@role=\"nonelement\"]",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "set-not-member-belongs-parent",
       "SetMemberSymbol_Belongs",
       "self::infixop",
-      "content/*[1][@role=\"set extended\"]",
-      "content/*[1][text()=\"∉\"]"
+      "content/*[1][@role=\"nonelement\"]",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
-      "Precondition",
-      "unit-square",
-      "default",
-      "self::superscript[@role=\"unit\"]",
-      "children/*[2][text()=2]",
-      "name(children/*[1])=\"identifier\"",
-      "children/*[1][@category=\"unit:length\"]"
-    ],
-    [
-      "Precondition",
-      "unit-cubic",
-      "default",
-      "self::superscript[@role=\"unit\"]",
-      "children/*[2][text()=3]",
-      "name(children/*[1])=\"identifier\"",
-      "children/*[1][@category=\"unit:length\"]"
-    ],
-    [
-      "Precondition",
-      "unit-quad",
-      "default",
-      "self::superscript[@role=\"unit\"]",
-      "children/*[2][text()=4]",
-      "name(children/*[1])=\"identifier\"",
-      "children/*[1][@category=\"unit:length\"]"
+      "Ignore",
+      "interval-open-inf-lr"
     ],
     [
       "Precondition",
@@ -175,14 +168,15 @@
       "default",
       "self::relseq",
       "count(./children/*)=2",
-      "text()=\"<\" or text()=\">\" or text()=\"≤\" or text()=\"≥\" or text()=\"⊂\" or text()=\"⇐\" or text()=\"⇒\" or text()=\"⇔\""
+      "text()=\"<\" or text()=\">\" or text()=\"≤\" or text()=\"≥\""
     ],
     [
       "Precondition",
       "simple-member-set",
       "default",
       "self::infixop",
-      "text()=\"∈\" or text()=\"∊\""
+      "count(./children/*)=2",
+      "@role=\"element\""
     ],
     [
       "Precondition",
@@ -198,7 +192,7 @@
       "default",
       "self::infixop",
       "count(./children/*)=2",
-      "text()=\"∉\""
+      "@role=\"nonelement\""
     ],
     [
       "Precondition",

@@ -6,7 +6,7 @@
       "START": "시작",
       "FRAC_V": "분수",
       "FRAC_B": "분수",
-  	  "FRAC_S": "분수",
+      "FRAC_S": "분수",
       "END": "끝",
       "FRAC_OVER": "분의",
       "TWICE": "이",
@@ -29,7 +29,8 @@
       "UNDER": "상단",
       "UNDERSCRIPT": "하단첨자",
       "OVER": "하단",
-      "OVERSCRIPT": "상단첨자"
+      "OVERSCRIPT": "상단첨자",
+      "ENDSCRIPTS": "첨자끝"
     },
     "MSroots": {
       "2": "제곱근",
@@ -64,12 +65,18 @@
       "sub": "아래첨자",
       "circled": "원문자",
       "parenthesized": "괄호문자",
-      "period": ["마침표", "postfixCombiner"],
+      "period": [
+        "마침표",
+        "postfixCombiner"
+      ],
       "negative-circled": "검은 원문자",
       "double-circled": "겹원문자",
       "circled-sans-serif": "고딕 원문자",
       "negative-circled-sans-serif": "검은 고딕 원문자",
-      "comma": ["콤마", "postfixCombiner"],
+      "comma": [
+        "콤마",
+        "postfixCombiner"
+      ],
       "squared": "사각문자",
       "negative-squared": "검은 사각문자"
     },
@@ -82,7 +89,7 @@
       "inequality": "부등식",
       "element": "원소",
       "arrow": "화살표",
-      "determinant": "행렬식", 
+      "determinant": "행렬식",
       "rowvector": "행 벡터",
       "binomial": "이항계수",
       "squarematrix": "정방행렬",

@@ -288,7 +288,7 @@
     "category": "Cf",
     "mappings": {
       "default": {
-        "default": "나눗셈", 
+        "default": "콤마", 
         "alternative": "보이지 않는 구분 기호"
       }
     },

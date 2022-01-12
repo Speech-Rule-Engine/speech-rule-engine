@@ -7,7 +7,7 @@
     [
       "Action",
       "collapsed",
-      "[t] \"여닫기\"; [n] . (engine:modality=summary,grammar:collapsed)"
+      "[t] \"여닫기\"; [n] . (engine:modality=summary, grammar:collapsed)"
     ],
     [
       "Action",
@@ -26,16 +26,6 @@
     ],
     [
       "Action",
-      "font-identifier-short",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
-      "font-identifier",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
-    ],
-    [
-      "Action",
       "german-font",
       "[t] \"프락투어\"; [n] . (grammar:ignoreFont=@font)"
     ],
@@ -47,7 +37,7 @@
     [
       "Action",
       "mixed-number",
-      "[n] children/*[1] (grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[2];"
+      "[n] children/*[1] (grammar:postposition); [t] \"와\" (grammar:article); [n] children/*[2]"
     ],
     [
       "Action",
@@ -102,7 +92,7 @@
     [
       "Action",
       "subtraction",
-      "[m] children/* (separator:\"빼기\");"
+      "[m] children/* (separator:\"빼기\")"
     ],
     [
       "Action",
@@ -172,22 +162,22 @@
     [
       "Action",
       "continued-fraction-outer",
-      "[t] \"연속분수\"; [n] children/*[2];[t] \"분의\"; [n] children/*[1]"
+      "[t] \"연속분수\"; [n] children/*[2]; [t] \"분의\"; [n] children/*[1]"
     ],
     [
       "Action",
       "continued-fraction-outer-brief",
-      "[t] \"연분수\"; [n] children/*[2];[t] \"분의\"; [n] children/*[1]"
+      "[t] \"연분수\"; [n] children/*[2]; [t] \"분의\"; [n] children/*[1]"
     ],
     [
       "Action",
       "continued-fraction-inner",
-      "[t] \"분수시작\"; [n] children/*[2];[t] \"분의\"; [n] children/*[1]"
+      "[t] \"분수시작\"; [n] children/*[2]; [t] \"분의\"; [n] children/*[1]"
     ],
     [
       "Action",
       "continued-fraction-inner-brief",
-      "[t] \"분수시작\"; [n] children/*[2];[t] \"분의\"; [n] children/*[1]"
+      "[t] \"분수시작\"; [n] children/*[2]; [t] \"분의\"; [n] children/*[1]"
     ],
     [
       "Action",
@@ -241,43 +231,13 @@
     ],
     [
       "Action",
-      "limboth",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]"
-    ],
-    [
-      "Action",
-      "limlower",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];"
-    ],
-    [
-      "Action",
-      "limupper",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2];"
-    ],
-    [
-      "Action",
-      "limboth-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2];[t] CSFoverscript; [n] children/*[3]; [t] \"첨자끝\""
-    ],
-    [
-      "Action",
-      "limlower-end",
-      "[n] children/*[1]; [t] CSFunderscript; [n] children/*[2]; [t] \"첨자끝\""
-    ],
-    [
-      "Action",
-      "limupper-end",
-      "[n] children/*[1]; [t] CSFoverscript; [n] children/*[2]; [t] \"첨자끝\""
-    ],
-    [
-      "Action",
       "integral",
-      "[n] children/*[1]; [t] \"아래첨자\"; [n] children/*[2];[t] \"위첨자\"; [n] children/*[3]; [t] \"기준\";"
+      "[n] children/*[1]; [t] \"아래첨자\"; [n] children/*[2];[t] \"위첨자\"; [n] children/*[3]; [t] \"기준\""
     ],
     [
       "Action",
       "integral-brief",
-      "[n] children/*[1]; [t] \"아래\"; [n] children/*[2];[t] \"위\"; [n] children/*[3]; [t] \"기준\";"
+      "[n] children/*[1]; [t] \"아래\"; [n] children/*[2];[t] \"위\"; [n] children/*[3]; [t] \"기준\""
     ],
     [
       "Action",
@@ -303,21 +263,6 @@
       "Action",
       "prime",
       "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "double-prime",
-      "[t] \"더블 프라임\""
-    ],
-    [
-      "Action",
-      "triple-prime",
-      "[t] \"트리플 프라임\""
-    ],
-    [
-      "Action",
-      "quadruple-prime",
-      "[t] \"쿼드 프라임\""
     ],
     [
       "Action",
@@ -392,32 +337,32 @@
     [
       "Action",
       "matrix",
-      "[t] count(children/*);  [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬시작\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"행 \"); [t] \"행렬끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬시작\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"행 \"); [t] \"행렬끝\""
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] count(children/*);  [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"행 \"); [t] \"행렬끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"행 \"); [t] \"행렬끝\""
     ],
     [
       "Action",
       "matrix-row",
-      "[m] children/* (ctxtFunc:CTFwordCounter,context:\"열\", pause: 200)"
+      "[m] children/* (ctxtFunc:CTFwordCounter,context:\"열\", pause:200)"
     ],
     [
       "Action",
       "row-with-label",
-      "[t] \"꼬리표시작\"; [n] content/*[1]; [t] \"꼬리표끝\" (pause: 200); [m] children/* (ctxtFunc:CTFwordCounter,context:\"열\")"
+      "[t] \"꼬리표시작\"; [n] content/*[1]; [t] \"꼬리표끝\" (pause:200); [m] children/* (ctxtFunc:CTFwordCounter, context:\"열\")"
     ],
     [
       "Action",
       "row-with-label-brief",
-      "[t] \"꼬리표\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFwordCounter,context:\"열\")"
+      "[t] \"꼬리표\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFwordCounter, context:\"열\")"
     ],
     [
       "Action",
       "row-with-text-label",
-      "[t] \"꼬리표\"; [t] CSFRemoveParens;[m] children/* (ctxtFunc:CTFwordCounter,context:\"열\")"
+      "[t] \"꼬리표\"; [t] CSFRemoveParens;[m] children/* (ctxtFunc:CTFwordCounter, context:\"열\")"
     ],
     [
       "Action",
@@ -427,37 +372,37 @@
     [
       "Action",
       "empty-cell",
-      "[t] \"빈 칸\" (pause: 300)"
+      "[t] \"빈 칸\" (pause:300)"
     ],
     [
       "Action",
       "determinant",
-      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"행 \"); [t] \"행렬식끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"행 \"); [t] \"행렬식끝\""
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"행 \"); [t] \"행렬식끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"행 \"); [t] \"행렬식끝\""
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"행 \"); [t] \"행렬식끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식시작\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"행 \"); [t] \"행렬식끝\""
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"행\",grammar:simpleDet); [t] \"행렬식끝\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의\"; [t] \"행렬식\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"행\", grammar:simpleDet); [t] \"행렬식끝\""
     ],
     [
       "Action",
       "layout",
-      "[t] \"배열시작\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"행 \"); [t] \"배열끝\""
+      "[t] \"배열시작\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"행 \"); [t] \"배열끝\""
     ],
     [
       "Action",
       "layout-sbrief",
-      "[t] \"배열\"; [m] children/* (ctxtFunc:CTFwordCounter,context:\"행 \"); [t] \"배열끝\""
+      "[t] \"배열\"; [m] children/* (ctxtFunc:CTFwordCounter, context:\"행 \"); [t] \"배열끝\""
     ],
     [
       "Action",
@@ -472,22 +417,22 @@
     [
       "Action",
       "cases",
-      "[t] \"배열시작\"; [t] \"확장된\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFwordCounter,context:\"행 \"); [t] \"배열끝\""
+      "[t] \"배열시작\"; [t] \"확장된\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFwordCounter, context:\"행 \"); [t] \"배열끝\""
     ],
     [
       "Action",
       "cases-sbrief",
-      "[t] \"배열\"; [t] \"큰\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFwordCounter,context:\"행 \"); [t] \"배열끝\""
+      "[t] \"배열\"; [t] \"큰\"; [n] content/*[1];[m] children/* (ctxtFunc:CTFwordCounter, context:\"행 \"); [t] \"배열끝\""
     ],
     [
       "Action",
       "line-with-label",
-      "[t] \"꼬리표시작\"; [n] content/*[1]; [t] \"꼬리표끝\" (pause: 200); [m] children/*"
+      "[t] \"꼬리표시작\"; [n] content/*[1]; [t] \"꼬리표끝\" (pause:200); [m] children/*"
     ],
     [
       "Action",
       "line-with-label-brief",
-      "[t] \"꼬리표\"; [n] content/*[1] (pause: 200); [m] children/*"
+      "[t] \"꼬리표\"; [n] content/*[1] (pause:200); [m] children/*"
     ],
     [
       "Action",
@@ -502,12 +447,12 @@
     [
       "Action",
       "empty-line-with-label",
-      "[t] \"꼬리표시작\"; [n] content/*[1]; [t] \"꼬리표끝\" (pause: 200); [t] \"빈 칸\""
+      "[t] \"꼬리표시작\"; [n] content/*[1]; [t] \"꼬리표끝\" (pause:200); [t] \"빈 칸\""
     ],
     [
       "Action",
       "empty-line-with-label-brief",
-      "[t] \"꼬리표\"; [n] content/*[1] (pause: 200); [t] \"빈 칸\""
+      "[t] \"꼬리표\"; [n] content/*[1] (pause:200); [t] \"빈 칸\""
     ],
     [
       "Action",
@@ -567,7 +512,7 @@
     [
       "Action",
       "axiom",
-      "[t] \"공리\"; [m] children/*[1];"
+      "[t] \"공리\"; [m] children/*[1]"
     ],
     [
       "Action",

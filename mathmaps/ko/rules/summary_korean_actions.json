@@ -286,7 +286,7 @@
     [
       "Action",
       "abstr-matrix",
-      "[t] count(children/*);  [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의 행렬\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열의 행렬\""
     ],
     [
       "Action",
@@ -341,7 +341,7 @@
     [
       "Action",
       "abstr-relation",
-      "[t] @role (grammar:localRole);"
+      "[t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -376,12 +376,12 @@
     [
       "Action",
       "abstr-table",
-      "[t] count(children/*); [t] \"행\";[t] count(children/*[1]/children/*); [t] \"열로 이루어진 표\""
+      "[t] count(children/*); [t] \"행\"; [t] count(children/*[1]/children/*); [t] \"열로 이루어진 표\""
     ],
     [
       "Action",
       "abstr-line",
-      "[t] \"이 다음과 같은\"; [t] @role (grammar:localRole);"
+      "[t] \"이 다음과 같은\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -391,7 +391,7 @@
     [
       "Action",
       "abstr-cell",
-      "[t] \"이 다음과 같은\"; [t] @role (grammar:localRole);"
+      "[t] \"이 다음과 같은\"; [t] @role (grammar:localRole)"
     ]
   ]
 }

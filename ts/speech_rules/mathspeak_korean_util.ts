@@ -14,7 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for mathspeak rules.
+ * @file Utility functions for mathspeak rules.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -24,21 +24,21 @@
 
 import * as MathspeakUtil from './mathspeak_util';
 import {LOCALE} from '../l10n/locale';
-import XpathUtil from '../common/xpath_util';
+import * as XpathUtil from '../common/xpath_util';
 
 
-namespace MathspeakKoreanUtil {
 
 /**
  * Computes disambiguations for nested fractions.
+ * 
  * @param node The fraction node.
  * @param expr The disambiguating expression.
  * @param opt_end Optional end expression.
- * @return The disambiguating string.
+ * @returns The disambiguating string.
  */
 export function nestedFraction( node: Element, expr: string, opt_end?: string): string {
-  let depth = MathspeakUtil.fractionNestingDepth(node);
-  let annotation = Array.apply(null, Array(depth)).map((_x: string) => expr);
+  const depth = MathspeakUtil.fractionNestingDepth(node);
+  const annotation = Array.apply(null, Array(depth)).map((_x: string) => expr);
   if (opt_end) {
     annotation.unshift(opt_end);
   }
@@ -47,8 +47,9 @@ export function nestedFraction( node: Element, expr: string, opt_end?: string): 
 
 /**
  * Opening string for fractions in Mathspeak verbose mode.
+ * 
  * @param node The fraction node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingFractionVerbose(node: Element): string {
   return nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_V);
@@ -57,8 +58,9 @@ export function openingFractionVerbose(node: Element): string {
 
 /**
  * Closing string for fractions in Mathspeak verbose mode.
+ * 
  * @param node The fraction node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingFractionVerbose(node: Element): string {
   return nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_V);
@@ -67,8 +69,9 @@ export function closingFractionVerbose(node: Element): string {
 
 /**
  * Opening string for fractions in Mathspeak brief mode.
+ * 
  * @param node The fraction node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingFractionBrief(node: Element): string {
   return nestedFraction(node, LOCALE.MESSAGES.MS.START, LOCALE.MESSAGES.MS.FRAC_B);
@@ -77,8 +80,9 @@ export function openingFractionBrief(node: Element): string {
 
 /**
  * Closing string for fractions in Mathspeak brief mode.
+ * 
  * @param node The fraction node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingFractionBrief(node: Element): string {
   return nestedFraction(node, LOCALE.MESSAGES.MS.END, LOCALE.MESSAGES.MS.FRAC_B);
@@ -87,11 +91,12 @@ export function closingFractionBrief(node: Element): string {
 
 /**
  * Opening string for fractions in Mathspeak superbrief mode.
+ * 
  * @param node The fraction node.
- * @return The opening string.
+ * @returns The opening string.
  */
- export function openingFractionSbrief(node: Element): string {
-  let depth = MathspeakUtil.fractionNestingDepth(node);
+export function openingFractionSbrief(node: Element): string {
+  const depth = MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
     return LOCALE.MESSAGES.MS.FRAC_S;
   }
@@ -103,11 +108,12 @@ export function closingFractionBrief(node: Element): string {
 
 /**
  * Closing string for fractions in Mathspeak superbrief mode.
+ * 
  * @param node The fraction node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingFractionSbrief(node: Element): string {
-  let depth = MathspeakUtil.fractionNestingDepth(node);
+  const depth = MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
     return LOCALE.MESSAGES.MS.ENDFRAC;
   }
@@ -119,11 +125,12 @@ export function closingFractionSbrief(node: Element): string {
 
 /**
  * Middle string for fractions in Mathspeak superbrief mode.
+ * 
  * @param node The fraction node.
- * @return The middle string.
+ * @returns The middle string.
  */
 export function overFractionSbrief(node: Element): string {
-  let depth = MathspeakUtil.fractionNestingDepth(node);
+  const depth = MathspeakUtil.fractionNestingDepth(node);
   if (depth === 1) {
     return LOCALE.MESSAGES.MS.FRAC_OVER;
   }
@@ -136,11 +143,12 @@ export function overFractionSbrief(node: Element): string {
 /**
  * Query function that checks if we have a simple index in the sense that
  * every cell only contains single letters or numbers.
+ * 
  * @param node The root node.
- * @return List containing input node if true.
+ * @returns List containing input node if true.
  */
 export function isSimpleIndex(node: Element): Element[] {
-  let index = XpathUtil.evalXPath('children/*[1]', node)[0].toString().match(/[^>⁢>]+<\/[^>]*>/g);
+  const index = XpathUtil.evalXPath('children/*[1]', node)[0].toString().match(/[^>⁢>]+<\/[^>]*>/g);
 
   return (index.length === 1) ? [node] : [];
 }
@@ -149,15 +157,16 @@ export function isSimpleIndex(node: Element): Element[] {
 /**
  * Nested string for radicals in Mathspeak mode putting together the nesting
  * depth with a pre/postfix string that depends on the speech style.
+ * 
  * @param node The radical node.
  * @param prefix A prefix string.
  * @param postfix A postfix string.
- * @return The opening string.
+ * @returns The opening string.
  */
-export function nestedRadical(
-    node: Element, prefix: string, postfix: string): string {
-  let depth = MathspeakUtil.radicalNestingDepth(node);
-  if (depth === 1) { return postfix; }
+export function nestedRadical(node: Element, prefix: string, postfix: string): string {
+  const depth = MathspeakUtil.radicalNestingDepth(node);
+  if (depth === 1) return postfix;
+
   return LOCALE.FUNCTIONS.combineNestedRadical(
       LOCALE.FUNCTIONS.radicalNestDepth(depth - 1), prefix, postfix);
 }
@@ -165,8 +174,9 @@ export function nestedRadical(
 
 /**
  * Opening string for radicals in Mathspeak verbose mode.
+ * 
  * @param node The radical node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingRadicalVerbose(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.STARTROOT);
@@ -175,8 +185,9 @@ export function openingRadicalVerbose(node: Element): string {
 
 /**
  * Closing string for radicals in Mathspeak verbose mode.
+ * 
  * @param node The radical node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingRadicalVerbose(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.NESTED, LOCALE.MESSAGES.MS.ENDROOT);
@@ -185,8 +196,9 @@ export function closingRadicalVerbose(node: Element): string {
 
 /**
  * Opening string for radicals in Mathspeak brief mode.
+ * 
  * @param node The radical node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingRadicalBrief(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.STARTROOT);
@@ -195,8 +207,9 @@ export function openingRadicalBrief(node: Element): string {
 
 /**
  * Closing string for radicals in Mathspeak brief mode.
+ * 
  * @param node The radical node.
- * @return The closing string.
+ * @returns The closing string.
  */
 export function closingRadicalBrief(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ENDROOT);
@@ -204,8 +217,9 @@ export function closingRadicalBrief(node: Element): string {
 
 /**
  * Opening string for radicals in Mathspeak superbrief mode.
+ * 
  * @param node The radical node.
- * @return The opening string.
+ * @returns The opening string.
  */
 export function openingRadicalSbrief(node: Element): string {
   return nestedRadical(node, LOCALE.MESSAGES.MS.NEST_ROOT, LOCALE.MESSAGES.MS.ROOT);
@@ -214,31 +228,34 @@ export function openingRadicalSbrief(node: Element): string {
 
 /**
  * A string indexing the root.
+ * 
  * @param node The radical node.
- * @return The localised indexing string.
+ * @returns The localised indexing string.
  */
 export function getRootIndex(node: Element): string {
-  let content = XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
+  const content = XpathUtil.evalXPath('children/*[1]', node)[0].textContent.trim();
   return LOCALE.MESSAGES.MSroots[content] || content + "제곱근";
 }
 
 
 /**
  * Indexing string for radicals in Mathspeak mode putting together.
+ * 
  * @param node The radical node.
  * @param postfix A postfix string.
- * @return The indexing string.
+ * @returns The indexing string.
  */
 export function indexRadical(node: Element, postfix: string): string {
-  let index = getRootIndex(node);
+  const index = getRootIndex(node);
   return index ? index : postfix;
 }
 
 
 /**
  * Non-simple indexing string for radicals in Mathspeak verbose mode.
+ * 
  * @param node The radical node.
- * @return The indexing string.
+ * @returns The indexing string.
  */
 export function indexRadicalVerbose(node: Element): string {
   return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX);
@@ -247,8 +264,9 @@ export function indexRadicalVerbose(node: Element): string {
 
 /**
  * Non-simple indexing string for radicals in Mathspeak brief mode.
+ * 
  * @param node The radical node.
- * @return The indexing string.
+ * @returns The indexing string.
  */
 export function indexRadicalBrief(node: Element): string {
   return indexRadical(node, LOCALE.MESSAGES.MS.ROOTINDEX);
@@ -257,8 +275,9 @@ export function indexRadicalBrief(node: Element): string {
 
 /**
  * Non-simple indexing string for radicals in Mathspeak superbrief mode.
+ * 
  * @param node The radical node.
- * @return The indexing string.
+ * @returns The indexing string.
  */
 export function indexRadicalSbrief(node: Element): string {
   return indexRadical(node, LOCALE.MESSAGES.MS.INDEX);
@@ -267,37 +286,40 @@ export function indexRadicalSbrief(node: Element): string {
 
 /**
  * String function to turn a child position into an ordinal.
+ * 
  * @param node The node for the string function.
- * @return The ordinal string corresponding to the child position of
+ * @returns The ordinal string corresponding to the child position of
  *     the node.
  */
 export function ordinalConversion(node: Element): string {
-  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+  const children = XpathUtil.evalXPath('children/*', node) as Element[];
   return LOCALE.NUMBERS.wordOrdinal(children.length);
 }
 
 
 /**
  * String function to convert a child position into an ordinal.
+ * 
  * @param node The node for the string function.
- * @return The ordinal string corresponding to the child position of
+ * @returns The ordinal string corresponding to the child position of
  *     the node.
  */
 export function decreasedOrdinalConversion(node: Element): string {
-  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+  const children = XpathUtil.evalXPath('children/*', node) as Element[];
   return LOCALE.NUMBERS.wordOrdinal(children.length - 1);
 }
 
 
 /**
  * String function to convert a child position into an ordinal.
+ * 
  * @param node The node for the string function.
- * @return The ordinal string corresponding to the child position of
+ * @returns The ordinal string corresponding to the child position of
  *     the node.
  */
 export function listOrdinalConversion(node: Element): string {
-  let children = XpathUtil.evalXPath('children/*', node) as Element[];
-  let content = XpathUtil.evalXPath('content/*', node) as Element[];
+  const children = XpathUtil.evalXPath('children/*', node) as Element[];
+  const content = XpathUtil.evalXPath('content/*', node) as Element[];
   return LOCALE.NUMBERS.wordOrdinal(children.length - content.length);
 }
 
@@ -305,13 +327,14 @@ export function listOrdinalConversion(node: Element): string {
 /**
  * Query function to check if the child depth of the current node
  * is above a certain standard value.
+ * 
  * @param node The root node.
- * @return List containing input node if true.
+ * @returns List containing input node if true.
  */
 export function checkDepth(node: Element): Element[] {
   // additional option to check the number of roles.
-  let roleList: string[] = [];
-  let depth = getDepthValue(node, roleList);
+  const roleList: string[] = [];
+  const depth = getDepthValue(node, roleList);
   // TODO: determine the standard value.
   return (depth > 3) ? [] : [node];
 }
@@ -321,29 +344,25 @@ export function checkDepth(node: Element): Element[] {
 /**
  * DFS function to calculate the child depth of the current node
  * and determine the number of roles.
+ * 
  * @param node The root node.
  * @param roleList The list of role.
- * @return The child depth.
+ * @returns The child depth.
  */
 export function getDepthValue(node: Element, roleList: string[]): number {
-  let role = node.getAttribute('role');
-  var index = roleList.indexOf(role) > -1;
+  const role = node.getAttribute('role');
+  const index = roleList.indexOf(role) > -1;
   if (!index) {
     roleList.push(role);
   }
-  let children = XpathUtil.evalXPath('children/*', node) as Element[];
+  const children = XpathUtil.evalXPath('children/*', node) as Element[];
   let max = 0, cur = 0;
-  if(children.length){
-    children.forEach(function (x) {
-      cur = getDepthValue(x, roleList);
+  if (children.length) {
+    children.forEach(child => {
+      cur = getDepthValue(child, roleList);
       cur > max ? max = cur : max;
     });
-    return 1 + max;
+    return (max + 1);
   }
   return 0;
 }
-//TODO: use as a custom function if needed.
-
-}
-
-export default MathspeakKoreanUtil;

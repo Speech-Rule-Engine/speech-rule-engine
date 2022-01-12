@@ -14,18 +14,17 @@
 // limitations under the License.
 
 /**
- * @fileoverview Translating numbers into Korean.
+ * @file Translating numbers into Korean.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Numbers, NUMBERS as NUMB} from '../messages';
+import { Numbers, NUMBERS as NUMB } from '../messages';
 
 
 /**
  * Translates a number of up to twelve digits into a string representation.
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @returns The string representation of that number.
  */
 function thousandsToWords_(num: number): string {
   let n = num % 10000;
@@ -46,7 +45,7 @@ function thousandsToWords_(num: number): string {
 /**
  * Translates a number of up to twelve digits into a string representation.
  * @param num The number to translate.
- * @return The string representation of that number.
+ * @returns The string representation of that number.
  */
 function numberToWords(num: number): string {
   if (num === 0) return NUMBERS.zero;
@@ -54,9 +53,10 @@ function numberToWords(num: number): string {
   let pos = 0;
   let str = '';
   while (num > 0) {
-    let hundreds = num % 10000;
-    if (hundreds) {
-      str = thousandsToWords_(num % 10000) +
+    const thousands = num % 10000;
+    if (thousands) {
+      str =
+      thousandsToWords_(num % 10000) +
           (pos ? NUMBERS.large[pos] + NUMBERS.numSep : '') + str;
     }
     num = Math.floor(num / 10000);
@@ -71,7 +71,7 @@ function numberToWords(num: number): string {
  * its ordinal.
  * @param num The number to translate.
  * @param plural A flag indicating if the ordinal is in plural.
- * @return The ordinal of the number as string.
+ * @returns The ordinal of the number as string.
  */
 function numberToOrdinal(num: number, _plural: boolean): string {
   if (num === 1) return '첫번째';
@@ -82,32 +82,31 @@ function numberToOrdinal(num: number, _plural: boolean): string {
 /**
  * Creates a word ordinal string from a number.
  * @param num The number to be converted.
- * @return The ordinal string.
+ * @returns The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let ordinal = numberToWords(num);
-  num %= 100; let label = numberToWords(num);
+  const ordinal = numberToWords(num);
+  num %= 100; const label = numberToWords(num);
   if (!label || !num) return ordinal;
   
-  let tens = NUMBERS.tens[10 + Math.floor(num / 10)];
-  let ones = NUMBERS.ones[10 + Math.floor(num % 10)];
-  if (num === 20) tens = '스무';
+  const tens = (num === 20) ? '스무' : NUMBERS.tens[10 + Math.floor(num / 10)];
+  const ones = NUMBERS.ones[10 + Math.floor(num % 10)];
   return ordinal.slice(0, -label.length) + tens + ones;
 }
 
 
 /**
- * Creates a simple ordinal string from a number.
+ * Creates a numeric ordinal string from a number.
  * @param num The number to be converted.
- * @return The ordinal string.
+ * @returns The ordinal string.
  */
-function simpleOrdinal(num: number): string {
+function numericOrdinal(num: number): string {
   return numberToOrdinal(num, false);
 }
 
 const NUMBERS: Numbers = NUMB();
 NUMBERS.wordOrdinal = wordOrdinal;
-NUMBERS.simpleOrdinal = simpleOrdinal;
+NUMBERS.numericOrdinal = numericOrdinal;
 NUMBERS.numberToWords = numberToWords;
 NUMBERS.numberToOrdinal = numberToOrdinal;
 

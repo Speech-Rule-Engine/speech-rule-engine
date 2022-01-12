@@ -14,20 +14,23 @@
 // limitations under the License.
 
 /**
- * @fileoverview Korean message file.
- *
+ * @file Korean message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
 
-import {Grammar} from '../../rule_engine/grammar';
-import {createLocale, Locale} from '../locale';
+import { Grammar } from '../../rule_engine/grammar';
+import { createLocale, Locale } from '../locale';
+import { nestingToString } from '../locale_util';
 import NUMBERS from '../numbers/numbers_ko';
 import * as tr from '../transformers';
 
 
 let locale: Locale = null;
 
+/**
+ * @returns The Korean locale.
+ */
 export function ko(): Locale {
   if (!locale) {
     locale = create();
@@ -36,9 +39,13 @@ export function ko(): Locale {
   return locale;
 }
 
+/**
+ * @returns The Korean locale.
+ */
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
+  loc.FUNCTIONS.radicalNestDepth = nestingToString;
   loc.FUNCTIONS.plural = function(unit: string) { return unit };
   loc.FUNCTIONS.si = (prefix: string, unit: string) => {
     return prefix + unit;
@@ -58,9 +65,9 @@ function create(): Locale {
   loc.CORRECTIONS.postposition = (name: string) => {
     if (['같다', '는', '와', '를', '로'].includes(name)) return name;
     
-    let char = name.slice(-1);
+    const char = name.slice(-1);
     
-    let value = (char.charCodeAt(0) - 44032) % 28;
+    const value = (char.charCodeAt(0) - 44032) % 28;
     let final = (value > 0) ? true : false;
     if (char.match(/[r,l,n,m,1,3,6,7,8,0]/i)) final = true;
     
@@ -68,10 +75,10 @@ function create(): Locale {
     return name;
   }
   loc.CORRECTIONS.article = (name: string) => {
-    let final = Grammar.getInstance().getParameter('final');
+    const final = Grammar.getInstance().getParameter('final');
     
     if (name === '같다') name = '는';
-    let temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
+    const temp = {'는': '은', '와': '과', '를': '을', '로': '으로'}[name];
 
     return (temp !== undefined && final) ? temp : name;
   }

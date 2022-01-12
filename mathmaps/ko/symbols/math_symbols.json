@@ -1400,11 +1400,7 @@
         "default": "다음의 원소이다"
       },
       "clearspeak": {
-        "default": "다음의 원소이다", 
-        "SetMemberSymbol_Member": "다음의 구성원이다",
-        "SetMemberSymbol_Element": "다음의 원소이다",
-        "SetMemberSymbol_In": "다음의 안에 있다", 
-        "SetMemberSymbol_Belongs": "다음에 속해 있다"
+        "default": "다음의 원소이다"
       }
     },
     "key": "2208"
@@ -1416,11 +1412,7 @@
         "default": "다음의 원소가 아니다"
       },
       "clearspeak": {
-        "default": "다음의 원소가 아니다", 
-        "SetMemberSymbol_Member": "다음의 구성원이 아니다",
-        "SetMemberSymbol_Element": "다음의 원소가 아니다",
-        "SetMemberSymbol_In": "다음의 안에 없다", 
-        "SetMemberSymbol_Belongs": "다음에 속해 있지 않다"
+        "default": "다음의 원소가 아니다"
       }
     },
     "key": "2209"
@@ -1432,11 +1424,7 @@
         "default": "다음의 원소이다"
       },
       "clearspeak": {
-        "default": "다음의 원소이다.", 
-        "SetMemberSymbol_Member": "다음의 구성원이다.",
-        "SetMemberSymbol_Element": "다음의 원소이다.",
-        "SetMemberSymbol_In": "다음의 안에 있다", 
-        "SetMemberSymbol_Belongs": "다음에 속해 있다"
+        "default": "다음의 원소이다."
       }
     },
     "key": "220A"
@@ -3742,7 +3730,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "가로선 끝에 세로 막대가 있는 작은 원소 기호"
+        "default": "가로선 끝에 세로 막대가 있는 원소 기호"
       }
     },
     "key": "22F4"
@@ -3769,7 +3757,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "윗줄이 있는 작은 원소 기호"
+        "default": "윗줄이 있는 원소 기호"
       }
     },
     "key": "22F7"
@@ -3814,7 +3802,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "가로선 끝에 세로 막대가 있는 작은 포함 기호"
+        "default": "가로선 끝에 세로 막대가 있는 포함 기호"
       }
     },
     "key": "22FC"
@@ -3832,7 +3820,7 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "윗줄이 있는 작은 포함 기호"
+        "default": "윗줄이 있는 포함 기호"
       }
     },
     "key": "22FE"

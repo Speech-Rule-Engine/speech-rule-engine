@@ -15,7 +15,7 @@
       }
     },
   "key": "mph",
-  "names": ["mph", "miles per hour"]
+  "names": ["mph", "mile per hour"]
 },
 {"category": "speed",
   "mappings": {
@@ -24,7 +24,7 @@
       }
     },
   "key": "rpm",
-  "names": ["rpm", "revolutions per minute"]
+  "names": ["rpm", "revolution per minute"]
 },
 {"category": "speed",
   "mappings": {
@@ -33,6 +33,6 @@
       }
     },
   "key": "kmh",
-  "names": ["kmh", "kph", "kilometers per hour"]
+  "names": ["kmh", "kph", "kilometer per hour"]
 }
 ]
