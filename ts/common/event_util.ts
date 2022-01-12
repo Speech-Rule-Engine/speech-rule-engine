@@ -14,11 +14,9 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for events.
- *
+ * @file Utility functions for events.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
-
 
 /**
  * Key codes.
@@ -27,10 +25,10 @@ export enum KeyCode {
   ENTER = 13,
   ESC = 27,
   SPACE = 32,
-  PAGE_UP = 33,    // also NUM_NORTH_EAST
-  PAGE_DOWN = 34,  // also NUM_SOUTH_EAST
-  END = 35,        // also NUM_SOUTH_WEST
-  HOME = 36,       // also NUM_NORTH_WEST
+  PAGE_UP = 33, // also NUM_NORTH_EAST
+  PAGE_DOWN = 34, // also NUM_SOUTH_EAST
+  END = 35, // also NUM_SOUTH_WEST
+  HOME = 36, // also NUM_NORTH_WEST
   LEFT = 37,
   UP = 38,
   RIGHT = 39,
@@ -78,7 +76,6 @@ export enum KeyCode {
   Y = 89,
   Z = 90
 }
-
 
 /**
  * Key codes to move names.
@@ -137,7 +134,6 @@ export const Move = new Map([
   [90, 'Z']
 ]);
 
-
 /**
  * Constants for event names.
  */
@@ -165,19 +161,19 @@ export enum EventType {
   TOUCHCANCEL = 'touchcancel'
 }
 
-
 export class Event {
-
   /**
    * The type of events.
+   *
    * @param src The target element of the event.
    * @param type The event type.
    * @param callback The event handler function.
    */
-  constructor(public src: Node, public type: EventType,
-              public callback: EventListener) {
-  }
-
+  constructor(
+    public src: Node,
+    public type: EventType,
+    public callback: EventListener
+  ) {}
 
   /**
    * Registers the event listener with its source element.
@@ -185,7 +181,6 @@ export class Event {
   public add() {
     this.src.addEventListener(this.type, this.callback);
   }
-
 
   /**
    * Removes the event listener from the source element.

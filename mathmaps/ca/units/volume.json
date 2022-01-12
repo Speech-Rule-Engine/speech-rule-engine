@@ -1,0 +1,217 @@
+[
+  {
+    "locale": "ca"
+  },
+  {
+    "key": "cu",
+    "category": "volume",
+    "names": [
+      "cu",
+      "cu."
+    ],
+    "mappings": {
+      "default": {
+        "default": "cúbic",
+        "plural": "cúbics"
+      }
+    }
+  },
+  {
+    "key": "cu inch",
+    "category": "volume",
+    "names": [
+      "cu in",
+      "cu. in."
+    ],
+    "mappings": {
+      "default": {
+        "default": "polzada cúbica",
+        "plural": "plozades cúbiques"
+      }
+    }
+  },
+  {
+    "key": "cu ft",
+    "category": "volume",
+    "names": [
+      "cu ft",
+      "cu. ft."
+    ],
+    "mappings": {
+      "default": {
+        "default": "peu cúbic",
+        "plural": "peus cúbics"
+      }
+    }
+  },
+  {
+    "key": "cu yd",
+    "category": "volume",
+    "names": [
+      "cu yd",
+      "cu. yd."
+    ],
+    "mappings": {
+      "default": {
+        "default": "iarda cúbica",
+        "plural": "iardes cúbiques"
+      }
+    }
+  },
+  {
+    "key": "bbl",
+    "category": "volume",
+    "names": [
+      "bbl.",
+      "bbl"
+    ],
+    "mappings": {
+      "default": {
+        "default": "barril",
+        "plural": "barrils"
+      }
+    }
+  },
+  {
+    "key": "fl. oz.",
+    "category": "volume",
+    "names": [
+      "fl. oz.",
+      "fl oz"
+    ],
+    "mappings": {
+      "default": {
+        "default": "unça líquida",
+        "plural": "unces líquides"
+      }
+    }
+  },
+  {
+    "key": "gal",
+    "category": "volume",
+    "names": [
+      "gal",
+      "gal."
+    ],
+    "mappings": {
+      "default": {
+        "default": "galó",
+        "plural": "galons"
+      }
+    }
+  },
+  {
+    "key": "pt",
+    "category": "volume",
+    "names": [
+      "pt",
+      "pt."
+    ],
+    "mappings": {
+      "default": {
+        "default": "pinta",
+        "plural": "pintes"
+      }
+    }
+  },
+  {
+    "key": "qt",
+    "category": "volume",
+    "names": [
+      "qt",
+      "qt."
+    ],
+    "mappings": {
+      "default": {
+        "default": "quart",
+        "plural": "quarts"
+      }
+    }
+  },
+  {
+    "key": "fluid dram",
+    "category": "volume",
+    "names": [
+      "fl dr",
+      "fl. dr."
+    ],
+    "mappings": {
+      "default": {
+        "default": "dracma líquida",
+        "plural": "dracmes líquides"
+      }
+    }
+  },
+  {
+    "key": "tbsp",
+    "category": "volume",
+    "names": [
+      "tbsp",
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
+    ],
+    "mappings": {
+      "default": {
+        "default": "cullerada",
+        "plural": "cullerades"
+      }
+    }
+  },
+  {
+    "key": "tsp",
+    "category": "volume",
+    "names": [
+      "tsp",
+      "tsp."
+    ],
+    "mappings": {
+      "default": {
+        "default": "culleradeta",
+        "plural": "culleradetes"
+      }
+    }
+  },
+  {
+    "key": "cup",
+    "category": "volume",
+    "names": [
+      "cp",
+      "cp."
+    ],
+    "mappings": {
+      "default": {
+        "default": "tassa",
+        "plural": "tasses"
+      }
+    }
+  },
+  {
+    "key": "cc",
+    "category": "volume",
+    "names": [
+      "cc",
+      "ccm"
+    ],
+    "mappings": {
+      "default": {
+        "default": "centímetre cúbic",
+        "plural": "centímetres cúbics"
+      }
+    }
+  },
+  {
+    "key": "l",
+    "category": "volume",
+    "names": [
+      "l"
+    ],
+    "si": true,
+    "mappings": {
+      "default": {
+        "default": "litre",
+        "plural": "litres"
+      }
+    }
+  }
+]

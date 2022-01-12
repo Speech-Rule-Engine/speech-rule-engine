@@ -14,40 +14,32 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract speech generator for classes that work on the rebuilt
+ * @file Abstract speech generator for classes that work on the rebuilt
  *     semantic tree.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import * as System from '../common/system';
-import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
-import {AxisMap} from '../rule_engine/dynamic_cstr';
-import {RebuildStree} from '../walker/rebuild_stree';
-import {SpeechGenerator} from './speech_generator';
+import { setup as EngineSetup } from '../common/engine_setup';
+import * as EnrichAttr from '../enrich_mathml/enrich_attr';
+import { AxisMap } from '../rule_engine/dynamic_cstr';
+import { RebuildStree } from '../walker/rebuild_stree';
+import { SpeechGenerator } from './speech_generator';
 import * as SpeechGeneratorUtil from './speech_generator_util';
 
-
 export abstract class AbstractSpeechGenerator implements SpeechGenerator {
-
   /**
    * @override
    */
-  public modality: EnrichMathml.Attribute = EnrichMathml.addPrefix('speech');
-
+  public modality: EnrichAttr.Attribute = EnrichAttr.addPrefix('speech');
 
   private rebuilt_: RebuildStree = null;
 
-
-  private options_: {[key: string]: string} = {};
-
+  private options_: { [key: string]: string } = {};
 
   /**
    * @override
    */
   public abstract getSpeech(node: Element, xml: Element): string;
-
 
   /**
    * @override
@@ -56,7 +48,6 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     return this.rebuilt_;
   }
 
-
   /**
    * @override
    */
@@ -64,16 +55,13 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     this.rebuilt_ = rebuilt;
   }
 
-
   /**
    * @override
    */
   public setOptions(options: AxisMap) {
     this.options_ = options || {};
-    this.modality =
-        EnrichMathml.addPrefix(this.options_.modality || 'speech');
+    this.modality = EnrichAttr.addPrefix(this.options_.modality || 'speech');
   }
-
 
   /**
    * @override
@@ -82,31 +70,24 @@ export abstract class AbstractSpeechGenerator implements SpeechGenerator {
     return this.options_;
   }
 
-
   /**
    * @override
    */
   public start() {}
-
 
   /**
    * @override
    */
   public end() {}
 
-
   /**
-   * Generates speech string for a sub tree of the xml element.
-   * @param node The target element of the event.
-   * @param xml The base xml element belonging to node.
-   * @return The generated speech string.
+   * @override
    */
   public generateSpeech(_node: Node, xml: Element): string {
     if (!this.rebuilt_) {
       this.rebuilt_ = new RebuildStree(xml);
     }
-    System.setupEngine(this.options_);
+    EngineSetup(this.options_);
     return SpeechGeneratorUtil.computeMarkup(this.getRebuilt().xml);
   }
-
 }

@@ -14,17 +14,13 @@
 // limitations under the License.
 
 /**
- * @fileoverview Class highlighting CSS elements.
- *
+ * @file Class highlighting CSS elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {CssHighlighter} from './css_highlighter';
-
+import { CssHighlighter } from './css_highlighter';
 
 export class ChtmlHighlighter extends CssHighlighter {
-
   /**
    * @override
    */
@@ -39,12 +35,12 @@ export class ChtmlHighlighter extends CssHighlighter {
     return node.tagName.toUpperCase() === this.mactionName.toUpperCase();
   }
 
-
   /**
    * @override
    */
   public getMactionNodes(node: HTMLElement) {
     return Array.from(
-        node.getElementsByTagName(this.mactionName)) as HTMLElement[];
+      node.getElementsByTagName(this.mactionName)
+    ) as HTMLElement[];
   }
 }

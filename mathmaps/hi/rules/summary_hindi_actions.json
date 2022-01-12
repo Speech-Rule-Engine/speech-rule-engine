@@ -141,7 +141,7 @@
     [
       "Action",
       "abstr-infixop-var",
-      "[t] \"चल तादात के अवयवों के साथ\"; [t] @role (grammar:localRole); "
+      "[t] \"चल तादात के अवयवों के साथ\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -301,7 +301,7 @@
     [
       "Action",
       "abstr-relation-seq",
-      "[t] count(./children/*); [t] \"अवयव\";  [t] \"के साथ\"; [t] @role (grammar:localRole); [t] \"अनुक्रम\""
+      "[t] count(./children/*); [t] \"अवयव\"; [t] \"के साथ\"; [t] @role (grammar:localRole); [t] \"अनुक्रम\""
     ],
     [
       "Action",

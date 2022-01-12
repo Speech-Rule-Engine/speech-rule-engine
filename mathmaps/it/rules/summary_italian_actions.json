@@ -121,7 +121,7 @@
     [
       "Action",
       "abstr-root-nested",
-      "[t] \"radicale doppio di indice\";  [n] children/*[1] (engine:modality=speech); [n] . (grammar:gender=\"m\")"
+      "[t] \"radicale doppio di indice\"; [n] children/*[1] (engine:modality=speech); [n] . (grammar:gender=\"m\")"
     ],
     [
       "Action",

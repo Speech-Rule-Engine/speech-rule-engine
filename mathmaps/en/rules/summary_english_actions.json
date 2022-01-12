@@ -181,7 +181,7 @@
     [
       "Action",
       "abstr-vector",
-      "[t] count(./children/*) ; [t] \"dimensional vector\""
+      "[t] count(./children/*); [t] \"dimensional vector\""
     ],
     [
       "Action",
@@ -241,7 +241,7 @@
     [
       "Action",
       "abstr-matrix",
-      "[t] count(children/*);  [t] \"by\";[t] count(children/*[1]/children/*); [t] \"matrix\""
+      "[t] count(children/*); [t] \"by\"; [t] count(children/*[1]/children/*); [t] \"matrix\""
     ],
     [
       "Action",
@@ -256,7 +256,7 @@
     [
       "Action",
       "abstr-cases",
-      "[t] \"case statement\";[t] \"with\"; [t] count(children/*); [t] \"cases\""
+      "[t] \"case statement\"; [t] \"with\"; [t] count(children/*); [t] \"cases\""
     ],
     [
       "Action",
@@ -281,7 +281,7 @@
     [
       "Action",
       "abstr-punctuated-var",
-      "[n] content/*[1]; [t] \"separated list\";[t] \"of variable length\""
+      "[n] content/*[1]; [t] \"separated list\"; [t] \"of variable length\""
     ],
     [
       "Action",
@@ -296,7 +296,7 @@
     [
       "Action",
       "abstr-relation",
-      "[t] @role (grammar:localRole);"
+      "[t] @role (grammar:localRole)"
     ],
     [
       "Action",
@@ -331,22 +331,22 @@
     [
       "Action",
       "abstr-table",
-      "[t] \"table with\"; [t] count(children/*); [t] \"rows and\";[t] count(children/*[1]/children/*); [t] \"columns\""
+      "[t] \"table with\"; [t] count(children/*); [t] \"rows and\"; [t] count(children/*[1]/children/*); [t] \"columns\""
     ],
     [
       "Action",
       "abstr-line",
-      "[t] \"in\"; [t] @role (grammar:localRole);"
+      "[t] \"in\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-row",
-      "[t] \"in\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"with\";[t] count(children/*); [t] \"columns\""
+      "[t] \"in\"; [t] @role (grammar:localRole); [t] count(preceding-sibling::..); [t] \"with\"; [t] count(children/*); [t] \"columns\""
     ],
     [
       "Action",
       "abstr-cell",
-      "[t] \"in\"; [t] @role (grammar:localRole);"
+      "[t] \"in\"; [t] @role (grammar:localRole)"
     ]
   ]
 }

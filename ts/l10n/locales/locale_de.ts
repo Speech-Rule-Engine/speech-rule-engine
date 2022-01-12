@@ -14,8 +14,7 @@
 // limitations under the License.
 
 /**
- * @fileoverview German message file.
- *
+ * @file German message file.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
@@ -23,34 +22,43 @@
 // This work was sponsored by ETH Zurich
 //
 
-import {Grammar} from '../../rule_engine/grammar';
-import {localFont} from '../locale_util';
-import {createLocale, Locale} from '../locale';
+import { Grammar } from '../../rule_engine/grammar';
+import { localFont } from '../locale_util';
+import { createLocale, Locale } from '../locale';
 import NUMBERS from '../numbers/numbers_de';
 
-let germanPrefixCombiner = function(letter: string, font: string, cap: string) {
+const germanPrefixCombiner = function (
+  letter: string,
+  font: string,
+  cap: string
+) {
   if (cap === 's') {
-    font = font.split(' ')
-               .map(function(x) {
-                 return x.replace(/s$/, '');
-               })
-               .join(' ');
+    font = font
+      .split(' ')
+      .map(function (x) {
+        return x.replace(/s$/, '');
+      })
+      .join(' ');
     cap = '';
   }
   letter = cap ? cap + ' ' + letter : letter;
   return font ? font + ' ' + letter : letter;
 };
 
-
-let germanPostfixCombiner = function(
-  letter: string, font: string, cap: string) {
+const germanPostfixCombiner = function (
+  letter: string,
+  font: string,
+  cap: string
+) {
   letter = !cap || cap === 's' ? letter : cap + ' ' + letter;
   return font ? letter + ' ' + font : letter;
 };
 
-
 let locale: Locale = null;
 
+/**
+ * @returns The German locale.
+ */
 export function de(): Locale {
   if (!locale) {
     locale = create();
@@ -59,8 +67,11 @@ export function de(): Locale {
   return locale;
 }
 
+/**
+ * @returns The German locale.
+ */
 function create(): Locale {
-  let loc = createLocale();
+  const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.COMBINERS['germanPostfix'] = germanPostfixCombiner;
   loc.ALPHABETS.combiner = germanPrefixCombiner;
@@ -68,17 +79,18 @@ function create(): Locale {
     return x > 1 ? loc.NUMBERS.numberToWords(x) + 'fach' : '';
   };
   loc.FUNCTIONS.combineRootIndex = (postfix: string, index: string) => {
-    let root = index ? index + 'wurzel' : '';
+    const root = index ? index + 'wurzel' : '';
     return postfix.replace('Wurzel', root);
   };
   loc.FUNCTIONS.combineNestedRadical = (a: string, b: string, c: string) => {
     a = c.match(/exponent$/) ? a + 'r' : a;
-    let count = (b ? b + ' ' : '') + a;
+    const count = (b ? b + ' ' : '') + a;
     return c.match(/ /) ? c.replace(/ /, ' ' + count + ' ') : count + ' ' + c;
   };
-  loc.FUNCTIONS.fontRegexp = function(font: string) {
-    font = font.split(' ')
-      .map(function(x) {
+  loc.FUNCTIONS.fontRegexp = function (font: string) {
+    font = font
+      .split(' ')
+      .map(function (x) {
         return x.replace(/s$/, '(|s)');
       })
       .join(' ');
@@ -86,26 +98,25 @@ function create(): Locale {
   };
   loc.CORRECTIONS.correctOne = (num: string) => num.replace(/^eins$/, 'ein');
   loc.CORRECTIONS.localFontNumber = (font: string) => {
-    let realFont = localFont(font);
-    return realFont.split(' ')
-      .map(function(x) {
+    const realFont = localFont(font);
+    return realFont
+      .split(' ')
+      .map(function (x) {
         return x.replace(/s$/, '');
       })
       .join(' ');
   };
   loc.CORRECTIONS.lowercase = (name: string) => name.toLowerCase();
   loc.CORRECTIONS.article = (name: string) => {
-    let decl = Grammar.getInstance().getParameter('case');
-    let plural = Grammar.getInstance().getParameter('plural');
+    const decl = Grammar.getInstance().getParameter('case');
+    const plural = Grammar.getInstance().getParameter('plural');
     if (decl === 'dative') {
-      return {'der': 'dem',
-              'die': (plural ? 'den' : 'der'),
-              'das': 'dem'}[name];
+      return { der: 'dem', die: plural ? 'den' : 'der', das: 'dem' }[name];
     }
     return name;
   };
   loc.CORRECTIONS.masculine = (name: string) => {
-    let decl = Grammar.getInstance().getParameter('case');
+    const decl = Grammar.getInstance().getParameter('case');
     if (decl === 'dative') {
       return name + 'n';
     }

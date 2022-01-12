@@ -1,0 +1,438 @@
+{
+  "locale": "nb",
+  "domain": "mathspeak",
+  "modality": "speech",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "collapsed",
+      "[t] \"kollapset\"; [n] . (engine:modality=summary, grammar:collapsed)"
+    ],
+    [
+      "Action",
+      "blank-cell-empty",
+      "[t] \"tom\""
+    ],
+    [
+      "Action",
+      "blank-line-empty",
+      "[t] \"tom\""
+    ],
+    [
+      "Action",
+      "font",
+      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "mixed-number",
+      "[n] children/*[1]; [t] \"og\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "number-with-chars",
+      "[t] \"nummer\"; [m] CQFspaceoutNumber (grammar:protected)"
+    ],
+    [
+      "Action",
+      "number-with-chars-brief",
+      "[t] \"num\"; [m] CQFspaceoutNumber (grammar:protected)"
+    ],
+    [
+      "Action",
+      "number-as-upper-word",
+      "[t] \"ord stor\"; [t] CSFspaceoutText"
+    ],
+    [
+      "Action",
+      "number-baseline",
+      "[t] \"grunnlinje\"; [n] . (grammar:baseline)"
+    ],
+    [
+      "Action",
+      "number-baseline-brief",
+      "[t] \"grunn\"; [n] . (grammar:baseline)"
+    ],
+    [
+      "Action",
+      "number-baseline-font",
+      "[t] \"grunnlinje\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "number-baseline-font-brief",
+      "[t] \"basis\"; [t] @font; [n] . (grammar:ignoreFont=@font)"
+    ],
+    [
+      "Action",
+      "negative-number",
+      "[t] \"negativ\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "negative",
+      "[t] \"minus\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "division",
+      "[n] children/*[1]; [t] \"delt på\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "subtraction",
+      "[m] children/* (separator:\"minus\")"
+    ],
+    [
+      "Action",
+      "fences-neutral",
+      "[t] \"StartAbsoluttVerdi\"; [n] children/*[1]; [t] \"StoppAbsoluttVerdi\""
+    ],
+    [
+      "Action",
+      "fences-neutral-sbrief",
+      "[t] \"AbsoluttVerdi\"; [n] children/*[1]; [t] \"StoppAbsoluttVerdi\""
+    ],
+    [
+      "Action",
+      "fences-metric",
+      "[t] \"StartMetrisk\"; [n] children/*[1]; [t] \"StoppMetrisk\""
+    ],
+    [
+      "Action",
+      "fences-metric-sbrief",
+      "[t] \"Metrisk\"; [n] children/*[1]; [t] \"StoppMetrisk\""
+    ],
+    [
+      "Action",
+      "empty-set",
+      "[t] \"tomt sett\""
+    ],
+    [
+      "Action",
+      "fences-set",
+      "[t] \"StartSett\"; [n] children/*[1]; [t] \"StoppSett\""
+    ],
+    [
+      "Action",
+      "fences-set-sbrief",
+      "[t] \"Sett\"; [n] children/*[1]; [t] \"StoppSett\""
+    ],
+    [
+      "Action",
+      "factorial",
+      "[t] \"faktorisk\""
+    ],
+    [
+      "Action",
+      "minus",
+      "[t] \"minus\""
+    ],
+    [
+      "Action",
+      "continued-fraction-outer",
+      "[t] \"KontinuerligBrøk\"; [n] children/*[1]; [t] \"Over\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "continued-fraction-outer-brief",
+      "[t] \"KontinuerligBrøk\"; [n] children/*[1]; [t] \"Over\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "continued-fraction-inner",
+      "[t] \"StartBrøk\"; [n] children/*[1]; [t] \"Over\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "continued-fraction-inner-brief",
+      "[t] \"StartBrøk\"; [n] children/*[1]; [t] \"Over\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "continued-fraction-inner-sbrief",
+      "[t] \"Brøk\"; [n] children/*[1]; [t] \"Over\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "integral",
+      "[n] children/*[1]; [t] \"subskript\"; [n] children/*[2]; [t] \"superskript\"; [n] children/*[3]; [t] \"grunnlinje\""
+    ],
+    [
+      "Action",
+      "integral-brief",
+      "[n] children/*[1]; [t] \"sub\"; [n] children/*[2]; [t] \"super\"; [n] children/*[3]; [t] \"grunn\""
+    ],
+    [
+      "Action",
+      "square",
+      "[n] children/*[1]; [t] \"i andre potens\""
+    ],
+    [
+      "Action",
+      "cube",
+      "[n] children/*[1]; [t] \"i tredje potens\""
+    ],
+    [
+      "Action",
+      "prime",
+      "[n] children/*[1]; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "counted-prime",
+      "[t] count(children/*) (grammar:numbers2alpha); [t] \"prim\""
+    ],
+    [
+      "Action",
+      "counted-prime-multichar",
+      "[t] string-length(text()) (grammar:numbers2alpha); [t] \"prim\""
+    ],
+    [
+      "Action",
+      "overscore",
+      "[t] \"ModifiserOver\"; [n] children/*[1]; [t] \"Med\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "overscore-brief",
+      "[t] \"ModOver\"; [n] children/*[1]; [t] \"Med\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "double-overscore",
+      "[t] \"ModifiserOver Over\"; [n] children/*[1]; [t] \"Med\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "double-overscore-brief",
+      "[t] \"ModOver Over\"; [n] children/*[1]; [t] \"Med\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "underscore",
+      "[t] \"ModifiserUnder\"; [n] children/*[1]; [t] \"Med\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "underscore-brief",
+      "[t] \"ModUnder\"; [n] children/*[1]; [t] \"Med\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "double-underscore",
+      "[t] \"ModifiserUnder Under\"; [n] children/*[1]; [t] \"Med\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "double-underscore-brief",
+      "[t] \"ModUnder Under\"; [n] children/*[1]; [t] \"Med\"; [n] children/*[2]"
+    ],
+    [
+      "Action",
+      "overbar",
+      "[n] children/*[1]; [t] \"overstrek\""
+    ],
+    [
+      "Action",
+      "underbar",
+      "[n] children/*[1]; [t] \"understrek\""
+    ],
+    [
+      "Action",
+      "overtilde",
+      "[n] children/*[1]; [t] \"overtilde\""
+    ],
+    [
+      "Action",
+      "undertilde",
+      "[n] children/*[1]; [t] \"undertilde\""
+    ],
+    [
+      "Action",
+      "matrix",
+      "[t] \"Start\"; [t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Matrise\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppMatrise\""
+    ],
+    [
+      "Action",
+      "matrix-sbrief",
+      "[t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Matrise\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppMatrise\""
+    ],
+    [
+      "Action",
+      "matrix-row",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"Kolonne\", pause:200)"
+    ],
+    [
+      "Action",
+      "row-with-label",
+      "[t] \"med etikett\"; [n] content/*[1]; [t] \"StoppEtikett\" (pause:200); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Kolonne\")"
+    ],
+    [
+      "Action",
+      "row-with-label-brief",
+      "[t] \"Etikett\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Kolonne\")"
+    ],
+    [
+      "Action",
+      "row-with-text-label",
+      "[t] \"Etikett\"; [t] CSFRemoveParens; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Kolonne\")"
+    ],
+    [
+      "Action",
+      "empty-row",
+      "[t] \"Tom\""
+    ],
+    [
+      "Action",
+      "empty-cell",
+      "[t] \"Tom\" (pause:300)"
+    ],
+    [
+      "Action",
+      "determinant",
+      "[t] \"Start\"; [t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppDeterminant\""
+    ],
+    [
+      "Action",
+      "determinant-sbrief",
+      "[t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppDeterminant\""
+    ],
+    [
+      "Action",
+      "determinant-simple",
+      "[t] \"Start\"; [t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad\", grammar:simpleDet); [t] \"StoppDeterminant\""
+    ],
+    [
+      "Action",
+      "determinant-simple-sbrief",
+      "[t] count(children/*); [t] \"Med\"; [t] count(children/*[1]/children/*); [t] \"Determinant\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad\", grammar:simpleDet); [t] \"StoppDeterminant\""
+    ],
+    [
+      "Action",
+      "layout",
+      "[t] \"StartOppsett\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppOppsett\""
+    ],
+    [
+      "Action",
+      "layout-sbrief",
+      "[t] \"Oppsett\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppOppsett\""
+    ],
+    [
+      "Action",
+      "binomial",
+      "[t] \"StartBinomialEllerMatrise\"; [n] children/*[1]/children/*[1]; [t] \"Velg\"; [n] children/*[2]/children/*[1]; [t] \"StoppBinomialEllerMatrise\""
+    ],
+    [
+      "Action",
+      "binomial-sbrief",
+      "[t] \"BinomialEllerMatrise\"; [n] children/*[1]/children/*[1]; [t] \"Velg\"; [n] children/*[2]/children/*[1]; [t] \"StoppBinomialEllerMatrise\""
+    ],
+    [
+      "Action",
+      "cases",
+      "[t] \"StartOppsett\"; [t] \"Forstørret\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Row \"); [t] \"StoppOppsett\""
+    ],
+    [
+      "Action",
+      "cases-sbrief",
+      "[t] \"Oppsett\"; [t] \"Forstørret\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"Rad \"); [t] \"StoppOppsett\""
+    ],
+    [
+      "Action",
+      "line-with-label",
+      "[t] \"med Etikett\"; [n] content/*[1]; [t] \"StoppEtikett\" (pause:200); [m] children/*"
+    ],
+    [
+      "Action",
+      "line-with-label-brief",
+      "[t] \"Etikett\"; [n] content/*[1] (pause:200); [m] children/*"
+    ],
+    [
+      "Action",
+      "line-with-text-label",
+      "[t] \"Etikett\"; [t] CSFRemoveParens; [m] children/*"
+    ],
+    [
+      "Action",
+      "empty-line",
+      "[t] \"Tom\""
+    ],
+    [
+      "Action",
+      "empty-line-with-label",
+      "[t] \"med Etikett\"; [n] content/*[1]; [t] \"StoppEtikett\" (pause:200); [t] \"Tom\""
+    ],
+    [
+      "Action",
+      "empty-line-with-label-brief",
+      "[t] \"Etikett\"; [n] content/*[1] (pause:200); [t] \"Tom\""
+    ],
+    [
+      "Action",
+      "enclose",
+      "[t] \"StartOmslutting\"; [t] @role (grammar:localEnclose); [n] children/*[1]; [t] \"StoppOmslutting\""
+    ],
+    [
+      "Action",
+      "leftbar",
+      "[t] \"vertikal strek\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "rightbar",
+      "[n] children/*[1]; [t] \"vertikal strek\""
+    ],
+    [
+      "Action",
+      "crossout",
+      "[t] \"Utkryssing\"; [n] children/*[1]; [t] \"StoppUtkryssing\""
+    ],
+    [
+      "Action",
+      "cancel",
+      "[t] \"Utkryssing\"; [n] children/*[1]/children/*[1]; [t] \"Med\"; [n] children/*[2]; [t] \"StoppUtkryssing\""
+    ],
+    [
+      "Action",
+      "cancel-reverse",
+      "[t] \"Utkryssing\"; [n] children/*[2]/children/*[1]; [t] \"Med\"; [n] children/*[1]; [t] \"StoppUtkryssing\""
+    ],
+    [
+      "Action",
+      "multi-inference",
+      "[t] \"slutningsregel\"; [m] content/*; [t] \"med konklusjon\"; [n] children/*[1]; [t] \"og\"; [t] count(children/*[2]/children/*); [t] \"premisser\""
+    ],
+    [
+      "Action",
+      "inference",
+      "[t] \"slutningsregel\"; [m] content/*; [t] \"med konklusjon\"; [n] children/*[1]; [t] \"og\"; [t] count(children/*[2]/children/*); [t] \"premiss\""
+    ],
+    [
+      "Action",
+      "premise",
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"premiss \")"
+    ],
+    [
+      "Action",
+      "conclusion",
+      "[n] children/*[1]"
+    ],
+    [
+      "Action",
+      "label",
+      "[t] \"etikett\"; [n] children/*[1]"
+    ],
+    [
+      "Action",
+      "axiom",
+      "[t] \"aksiom\"; [m] children/*[1]"
+    ],
+    [
+      "Action",
+      "empty-axiom",
+      "[t] \"tomt aksiom\""
+    ]
+  ]
+}

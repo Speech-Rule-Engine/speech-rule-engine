@@ -14,20 +14,20 @@
 // limitations under the License.
 
 /**
- * @fileoverview Setup for browser integration of speech rule engine.
- *
+ * @file Setup for browser integration of speech rule engine.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {EngineConst} from './engine';
+import * as EngineConst from '../common/engine_const';
 import * as System from './system';
-
 
 /**
  * Default setup of the Engine.
  */
-System.setupEngine(
-    {mode: EngineConst.Mode.HTTP, domain: 'mathspeak', style: 'default'});
+System.setupEngine({
+  mode: EngineConst.Mode.HTTP,
+  domain: 'mathspeak',
+  style: 'default'
+});
 
-export let SRE = System;
+export const SRE = System;

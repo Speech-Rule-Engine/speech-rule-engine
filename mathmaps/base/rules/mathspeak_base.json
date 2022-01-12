@@ -97,9 +97,8 @@
       "@font!=\"normal\""
     ],
     [
-      "Precondition",
-      "font-identifier-short",
-      "default",
+      "Alias",
+      "font",
       "self::identifier",
       "string-length(text())=1",
       "@font",
@@ -109,9 +108,8 @@
       "@role!=\"unit\""
     ],
     [
-      "Precondition",
-      "font-identifier",
-      "default",
+      "Alias",
+      "font",
       "self::identifier",
       "string-length(text())=1",
       "@font",
@@ -629,7 +627,9 @@
       "Alias",
       "limlower-end",
       "self::underscore",
-      "@role=\"limit function\""
+      "@role=\"limit function\"",
+      "name(../..)=\"underscore\" or name(../..)=\"overscore\"",
+      "following-sibling::*[@role!=\"underaccent\" and @role!=\"overaccent\"]"
     ],
     [
       "Alias",

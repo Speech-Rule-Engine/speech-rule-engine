@@ -14,34 +14,30 @@
 // limitations under the License.
 
 /**
- * @fileoverview An audio CSS renderer with prosody markup mainly aimed at Emacs
+ * @file An audio CSS renderer with prosody markup mainly aimed at Emacs
  *     speak.
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {EngineConst} from '../common/engine';
+import * as EngineConst from '../common/engine_const';
 import * as EventUtil from '../common/event_util';
 import * as AudioUtil from './audio_util';
-import {AuditoryDescription} from './auditory_description';
-import {MarkupRenderer} from './markup_renderer';
-
+import { AuditoryDescription } from './auditory_description';
+import { MarkupRenderer } from './markup_renderer';
 
 export class AcssRenderer extends MarkupRenderer {
-
   /**
    * @override
    */
   public markup(descrs: AuditoryDescription[]) {
     // TODO: Include personality range computations.
     this.setScaleFunction(-2, 2, 0, 10, 0);
-    let markup = AudioUtil.personalityMarkup(descrs);
-    let result = [];
-    let currentPers: AudioUtil.Tags = {open: []};
+    const markup = AudioUtil.personalityMarkup(descrs);
+    const result = [];
+    const currentPers: AudioUtil.Tags = { open: [] };
     let pause = null;
     let isString = false;
-    for (let i = 0, descr; descr = markup[i]; i++) {
+    for (let i = 0, descr; (descr = markup[i]); i++) {
       if (AudioUtil.isMarkupElement(descr)) {
         AudioUtil.mergeMarkup(currentPers, descr);
         continue;
@@ -49,14 +45,15 @@ export class AcssRenderer extends MarkupRenderer {
       if (AudioUtil.isPauseElement(descr)) {
         if (isString) {
           // TODO: (MS 2.3) Sort out this type and the merge function!
-          pause =
-              (AudioUtil.mergePause(
-                   pause, (descr as {pause: number}), Math.max) as
-               {pause: number});
+          pause = AudioUtil.mergePause(
+            pause,
+            descr as { pause: number },
+            Math.max
+          ) as { pause: number };
         }
         continue;
       }
-      let str = '"' + this.merge(descr.span) + '"';
+      const str = '"' + this.merge(descr.span) + '"';
       // var str = '"' + descr.span.join(this.getSeparator()) + '"';
       // var str = '"' + descr.string.join(this.getSeparator()) + '"';
       isString = true;
@@ -64,12 +61,11 @@ export class AcssRenderer extends MarkupRenderer {
         result.push(this.pause(pause));
         pause = null;
       }
-      let prosody = this.prosody_(currentPers);
+      const prosody = this.prosody_(currentPers);
       result.push(prosody ? '(text (' + prosody + ') ' + str + ')' : str);
     }
     return '(exp ' + result.join(' ') + ')';
   }
-
 
   /**
    * @override
@@ -77,7 +73,6 @@ export class AcssRenderer extends MarkupRenderer {
   public error(key: number) {
     return '(error "' + EventUtil.Move.get(key) + '")';
   }
-
 
   /**
    * @override
@@ -95,33 +90,32 @@ export class AcssRenderer extends MarkupRenderer {
     return '(value . ' + value + ')';
   }
 
-
   /**
    * @override
    */
   public pause(pause: AudioUtil.Pause) {
-    return '(pause . ' +
-        this.pauseValue(
-        pause[EngineConst.personalityProps.PAUSE] as string) + ')';
+    return (
+      '(pause . ' +
+      this.pauseValue(pause[EngineConst.personalityProps.PAUSE] as string) +
+      ')'
+    );
   }
-
 
   /**
    * Transforms a prosody element into an S-expression.
+   *
    * @param pros The prosody element.
-   * @return The S-expression.
+   * @returns The S-expression.
    */
   private prosody_(pros: AudioUtil.Tags): string {
-    let keys: EngineConst.personalityProps[] = pros.open;
-    let result = [];
-    for (let i = 0, key; key = keys[i]; i++) {
+    const keys: EngineConst.personalityProps[] = pros.open;
+    const result = [];
+    for (let i = 0, key; (key = keys[i]); i++) {
       result.push(this.prosodyElement(key, pros[key]));
     }
     return result.join(' ');
   }
-
 }
-
 
 /**
  * @override

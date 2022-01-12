@@ -1,0 +1,352 @@
+{
+  "locale": "sv",
+  "modality": "summary",
+  "kind": "actions",
+  "rules": [
+    [
+      "Action",
+      "abstr-identifier-long",
+      "[t] \"lång identifierare\""
+    ],
+    [
+      "Action",
+      "abstr-identifier",
+      "[t] \"identifierare\""
+    ],
+    [
+      "Action",
+      "abstr-number-long",
+      "[t] \"långt nummer\""
+    ],
+    [
+      "Action",
+      "abstr-number",
+      "[t] \"nummer\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number-long",
+      "[t] \"långt blandat nummer\""
+    ],
+    [
+      "Action",
+      "abstr-mixed-number",
+      "[t] \"blandat nummer\""
+    ],
+    [
+      "Action",
+      "abstr-text",
+      "[t] \"text\""
+    ],
+    [
+      "Action",
+      "abstr-function",
+      "[t] \"funktionsuttryck\""
+    ],
+    [
+      "Action",
+      "abstr-function-brief",
+      "[t] \"funktion\""
+    ],
+    [
+      "Action",
+      "abstr-lim",
+      "[t] \"gränsfunktion\""
+    ],
+    [
+      "Action",
+      "abstr-lim-brief",
+      "[t] \"gränsfunktion\""
+    ],
+    [
+      "Action",
+      "abstr-fraction",
+      "[t] \"bråk\""
+    ],
+    [
+      "Action",
+      "abstr-fraction-brief",
+      "[t] \"bråk\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction",
+      "[t] \"förlängt bråk\""
+    ],
+    [
+      "Action",
+      "abstr-continued-fraction-brief",
+      "[t] \"förlängt bråk\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt",
+      "[t] \"kvadratrot\""
+    ],
+    [
+      "Action",
+      "abstr-sqrt-nested",
+      "[t] \"nästlad kvadratrot\""
+    ],
+    [
+      "Action",
+      "abstr-root-end",
+      "[t] \"rot med index\"; [n] children/*[1] (engine:modality=speech); [t] \"slutindex\""
+    ],
+    [
+      "Action",
+      "abstr-root",
+      "[t] \"rot med index\"; [n] children/*[1] (engine:modality=speech)"
+    ],
+    [
+      "Action",
+      "abstr-root-brief",
+      "[t] \"rot\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested-end",
+      "[t] \"nästlad rot med index\"; [n] children/*[1] (engine:modality=speech); [t] \"slutindex\""
+    ],
+    [
+      "Action",
+      "abstr-root-nested",
+      "[t] \"nästlad rot med index\"; [n] children/*[1] (engine:modality=speech)"
+    ],
+    [
+      "Action",
+      "abstr-root-nested-brief",
+      "[t] \"nästlat rot\""
+    ],
+    [
+      "Action",
+      "abstr-superscript",
+      "[t] \"potens\""
+    ],
+    [
+      "Action",
+      "abstr-subscript",
+      "[t] \"uttryck med index\""
+    ],
+    [
+      "Action",
+      "abstr-subsup",
+      "[t] \"potens med index\""
+    ],
+    [
+      "Action",
+      "abstr-infixop",
+      "[t] @role (grammar:localRole); [t] \"med\"; [t] count(./children/*); [t] \"element\""
+    ],
+    [
+      "Action",
+      "abstr-infixop-var",
+      "[t] @role (grammar:localRole); [t] \"med varierande antal element\""
+    ],
+    [
+      "Action",
+      "abstr-infixop-brief",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-addition",
+      "[t] \"Summa med\"; [t] count(./children/*); [t] \"summander\""
+    ],
+    [
+      "Action",
+      "abstr-addition-brief",
+      "[t] \"summa\""
+    ],
+    [
+      "Action",
+      "abstr-addition-var",
+      "[t] \"summa med varierande antal summander\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication",
+      "[t] \"produkt med\"; [t] count(./children/*); [t] \"faktorer\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-brief",
+      "[t] \"produkt\""
+    ],
+    [
+      "Action",
+      "abstr-multiplication-var",
+      "[t] \"produkt med varierande antal faktorer\""
+    ],
+    [
+      "Action",
+      "abstr-vector",
+      "[t] count(./children/*) (join:\"\"); [t] \"dimensionell vektor\""
+    ],
+    [
+      "Action",
+      "abstr-vector-brief",
+      "[t] \"vektor\""
+    ],
+    [
+      "Action",
+      "abstr-vector-var",
+      "[t] \"n-dimensionell vektor\""
+    ],
+    [
+      "Action",
+      "abstr-binomial",
+      "[t] \"binom\""
+    ],
+    [
+      "Action",
+      "abstr-determinant",
+      "[t] count(./children/*) (join:\"\"); [t] \"dimensionell determinant\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-brief",
+      "[t] \"determinant\""
+    ],
+    [
+      "Action",
+      "abstr-determinant-var",
+      "[t] \"n-dimensionell determinant\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix",
+      "[t] count(./children/*) (join:\"\"); [t] \"dimensionell kvadratisk matris\""
+    ],
+    [
+      "Action",
+      "abstr-squarematrix-brief",
+      "[t] \"kvadratisk matris\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector",
+      "[t] count(./children/row/children/*) (join:\"\"); [t] \"dimensionell radvektor\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-brief",
+      "[t] \"rad vektor\""
+    ],
+    [
+      "Action",
+      "abstr-rowvector-var",
+      "[t] \"n-dimensionell rad vektor\""
+    ],
+    [
+      "Action",
+      "abstr-matrix",
+      "[t] count(children/*); [t] \"gånger\"; [t] count(children/*[1]/children/*); [t] \"matris\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-brief",
+      "[t] \"matris\""
+    ],
+    [
+      "Action",
+      "abstr-matrix-var",
+      "[t] \"n gånger m-dimensionell matris\""
+    ],
+    [
+      "Action",
+      "abstr-cases",
+      "[t] \"case-sats\"; [t] \"med\"; [t] count(children/*); [t] \"case\""
+    ],
+    [
+      "Action",
+      "abstr-cases-brief",
+      "[t] \"case-sats\""
+    ],
+    [
+      "Action",
+      "abstr-cases-var",
+      "[t] \"case-sats med varierande antal case\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated",
+      "[n] content/*[1] (join:\"\"); [t] \"separerad lista\"; [t] \"med längden\"; [t] count(children/*) - count(content/*)"
+    ],
+    [
+      "Action",
+      "abstr-punctuated-brief",
+      "[t] %1(join:\"\"); [t] \"separerad lista\""
+    ],
+    [
+      "Action",
+      "abstr-punctuated-var",
+      "[n] content/*[1] (join:\"\"); [t] \"separerad lista\"; [t] \"med varierande längd\""
+    ],
+    [
+      "Action",
+      "abstr-bigop",
+      "[n] content/*[1]"
+    ],
+    [
+      "Action",
+      "abstr-integral",
+      "[t] \"integral\""
+    ],
+    [
+      "Action",
+      "abstr-relation",
+      "[t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-relation-seq",
+      "[t] @role (join:\"\", grammar:localRole); [t] \"sekvens\"; [t] \"med\"; [t] count(./children/*); [t] \"element\""
+    ],
+    [
+      "Action",
+      "abstr-relation-seq-brief",
+      "[t] @role (join:\"\", grammar:localRole); [t] \"sekvens\""
+    ],
+    [
+      "Action",
+      "abstr-relation-var",
+      "[t] @role (join:\"\", grammar:localRole); [t] \"sekvens\"; [t] \"med varierande antal element\""
+    ],
+    [
+      "Action",
+      "abstr-multirel",
+      "[t] \"sambandssekvens\"; [t] \"med\"; [t] count(./children/*); [t] \"element\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-brief",
+      "[t] \"sambandssekvens\""
+    ],
+    [
+      "Action",
+      "abstr-multirel-var",
+      "[t] \"sambandssekvens med varierande antal element\""
+    ],
+    [
+      "Action",
+      "abstr-table",
+      "[t] \"tabell med\"; [t] count(children/*); [t] \"rader och\"; [t] count(children/*[1]/children/*); [t] \"kolumner\""
+    ],
+    [
+      "Action",
+      "abstr-line",
+      "[t] \"i\"; [t] @role (grammar:localRole)"
+    ],
+    [
+      "Action",
+      "abstr-row",
+      "[t] \"i\"; [t] @role (grammar:localRole); [t] count(preceding-sibling::..); [t] \"med\"; [t] count(children/*); [t] \"kolumner\""
+    ],
+    [
+      "Action",
+      "abstr-cell",
+      "[t] \"i\"; [t] @role (grammar:localRole)"
+    ]
+  ]
+}

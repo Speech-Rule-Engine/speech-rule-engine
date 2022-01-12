@@ -22,6 +22,16 @@
     ],
     [
       "Ignore",
+      "fraction-sbrief"
+    ],
+    [
+      "SpecializedRule",
+      "fraction-brief",
+      "brief",
+      "sbrief"
+    ],
+    [
+      "Ignore",
       "unit"
     ],
     [

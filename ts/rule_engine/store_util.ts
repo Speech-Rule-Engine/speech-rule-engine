@@ -15,30 +15,33 @@
 // limitations under the License.
 
 /**
- * @fileoverview General utility functions for rule stores.
+ * @file General utility functions for rule stores.
  * @author sorge@google.com (Volker Sorge)
  */
-import {AuditoryDescription} from '../audio/auditory_description';
-import XpathUtil from '../common/xpath_util';
-import {SpeechRuleEngine} from './speech_rule_engine';
-
+import { AuditoryDescription } from '../audio/auditory_description';
+import * as XpathUtil from '../common/xpath_util';
+import Engine from '../common/engine';
 
 /**
  * Count list of nodes and concatenate this with the context string.
  * Returns a closure with a local state.
+ *
  * @param nodes A node array.
  * @param context A context string.
- * @return A function returning a string.
+ * @returns A function returning a string.
  */
-export function nodeCounter(nodes: Node[], context: string|null): () => string {
+export function nodeCounter(
+  nodes: Node[],
+  context: string | null
+): () => string {
   // Local state.
-  let localLength = nodes.length;
+  const localLength = nodes.length;
   let localCounter = 0;
   let localContext = context;
   if (!context) {
     localContext = '';
   }
-  return function() {
+  return function () {
     if (localCounter < localLength) {
       localCounter += 1;
     }
@@ -46,52 +49,62 @@ export function nodeCounter(nodes: Node[], context: string|null): () => string {
   };
 }
 
-
 /**
  * Returns a separating pause element.
- * @param nodes A node array.
+ *
+ * @param _nodes A node array.
  * @param context A pause value string.
- * @return A closure that
+ * @returns A closure that
  *     returns a personality description of a single pause.
  */
-export function pauseSeparator(_nodes: Node[], context: string): () =>
-    AuditoryDescription[] {
-  let numeral = parseFloat(context);
-  let value = isNaN(numeral) ? context : numeral;
-  return function() {
-    return [AuditoryDescription.create(
-        {text: '', personality: {pause: value as string}})];
+export function pauseSeparator(
+  _nodes: Node[],
+  context: string
+): () => AuditoryDescription[] {
+  const numeral = parseFloat(context);
+  const value = isNaN(numeral) ? context : numeral;
+  return function () {
+    return [
+      AuditoryDescription.create({
+        text: '',
+        personality: { pause: value as string }
+      })
+    ];
     // TODO (TS): This cast to string is wrong and should be fixed.
   };
 }
 
-
 /**
  * Iterates over the list of content nodes of the parent of the given nodes.
+ *
  * @param nodes A node array.
  * @param context A context string.
- * @return A closure that returns
+ * @returns A closure that returns
  *     the content of the next content node. Returns only context string if list
  *     is exhausted.
  */
-export function contentIterator(nodes: Element[], context: string): () =>
-    AuditoryDescription[] {
+export function contentIterator(
+  nodes: Element[],
+  context: string
+): () => AuditoryDescription[] {
   let contentNodes: Element[];
   if (nodes.length > 0) {
-    contentNodes =
-        XpathUtil.evalXPath('../../content/*', nodes[0]) as Element[];
+    contentNodes = XpathUtil.evalXPath(
+      '../../content/*',
+      nodes[0]
+    ) as Element[];
   } else {
     contentNodes = [];
   }
-  return function() {
-    let content = contentNodes.shift();
-    let contextDescr = context ?
-        [AuditoryDescription.create({text: context}, {translate: true})] :
-        [];
+  return function () {
+    const content = contentNodes.shift();
+    const contextDescr = context
+      ? [AuditoryDescription.create({ text: context }, { translate: true })]
+      : [];
     if (!content) {
       return contextDescr;
     }
-    let descrs = SpeechRuleEngine.getInstance().evaluateNode(content);
+    const descrs = Engine.evaluateNode(content);
     return contextDescr.concat(descrs);
   };
 }

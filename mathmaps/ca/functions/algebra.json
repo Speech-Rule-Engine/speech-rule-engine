@@ -1,0 +1,82 @@
+[
+  {
+    "locale": "ca"
+  },
+  {
+    "locale": "ca"
+  },
+  {
+    "key": "deg",
+    "category": "Algebra",
+    "names": [
+      "deg"
+    ],
+    "mappings": {
+      "default": {
+        "default": "graus"
+      }
+    }
+  },
+  {
+    "key": "det",
+    "category": "Algebra",
+    "names": [
+      "det"
+    ],
+    "mappings": {
+      "default": {
+        "default": "determinant"
+      }
+    }
+  },
+  {
+    "key": "dim",
+    "category": "Algebra",
+    "names": [
+      "dim"
+    ],
+    "mappings": {
+      "default": {
+        "default": "dimensió"
+      }
+    }
+  },
+  {
+    "key": "hom",
+    "category": "Algebra",
+    "names": [
+      "hom",
+      "Hom"
+    ],
+    "mappings": {
+      "default": {
+        "default": "homomorfisme"
+      }
+    }
+  },
+  {
+    "key": "ker",
+    "category": "Algebra",
+    "names": [
+      "ker"
+    ],
+    "mappings": {
+      "default": {
+        "default": "nucli"
+      }
+    }
+  },
+  {
+    "key": "Tr",
+    "category": "Algebra",
+    "names": [
+      "Tr",
+      "tr"
+    ],
+    "mappings": {
+      "default": {
+        "default": "traça"
+      }
+    }
+  }
+]

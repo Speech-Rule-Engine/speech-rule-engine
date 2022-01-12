@@ -14,40 +14,41 @@
 // limitations under the License.
 
 /**
- * @fileoverview Class for SABLE rendering of descriptions.
- *
+ * @file Class for SABLE rendering of descriptions.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {EngineConst} from '../common/engine';
-import {Pause} from './audio_util';
-import {XmlRenderer} from './xml_renderer';
-
+import * as EngineConst from '../common/engine_const';
+import { Pause } from './audio_util';
+import { XmlRenderer } from './xml_renderer';
 
 export class SableRenderer extends XmlRenderer {
-
   /**
    * @override
    */
   public finalize(str: string) {
-    return '<?xml version="1.0"?>' +
-        '<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN"' +
-        ' "Sable.v0_2.dtd" []><SABLE>' + this.getSeparator() + str +
-        this.getSeparator() + '</SABLE>';
+    return (
+      '<?xml version="1.0"?>' +
+      '<!DOCTYPE SABLE PUBLIC "-//SABLE//DTD SABLE speech mark up//EN"' +
+      ' "Sable.v0_2.dtd" []><SABLE>' +
+      this.getSeparator() +
+      str +
+      this.getSeparator() +
+      '</SABLE>'
+    );
   }
-
 
   /**
    * @override
    */
   public pause(pause: Pause) {
-    return '<BREAK ' +
+    return (
+      '<BREAK ' +
       'MSEC="' +
       this.pauseValue(pause[EngineConst.personalityProps.PAUSE] as string) +
-      '"/>';
+      '"/>'
+    );
   }
-
 
   /**
    * @override
@@ -67,12 +68,10 @@ export class SableRenderer extends XmlRenderer {
     }
   }
 
-
   /**
    * @override
    */
   public closeTag(tag: string) {
     return '</' + tag.toUpperCase() + '>';
   }
-
 }

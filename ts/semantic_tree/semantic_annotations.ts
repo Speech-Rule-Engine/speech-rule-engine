@@ -14,66 +14,57 @@
 // limitations under the License.
 
 /**
- * @fileoverview Annotates semantic trees.
- *
+ * @file Annotates semantic trees.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { SemanticAnnotator, SemanticVisitor } from './semantic_annotator';
+import { SemanticNode } from './semantic_node';
 
-import {SemanticAnnotator, SemanticVisitor} from './semantic_annotator';
-import {SemanticNode} from './semantic_node';
+export const annotators: Map<string, SemanticAnnotator> = new Map();
 
+export const visitors: Map<string, SemanticVisitor> = new Map();
 
-export namespace SemanticAnnotations {
+/**
+ * Registers an annotator.
+ *
+ * @param annotator The annotator.
+ */
+export function register(annotator: SemanticAnnotator | SemanticVisitor) {
+  const name = annotator.domain + ':' + annotator.name;
+  annotator instanceof SemanticAnnotator
+    ? annotators.set(name, annotator)
+    : visitors.set(name, annotator);
+}
 
-  // TODO (TS): Replace this with maps. Exported for tests only.
-  export let annotators: {[key: string]: SemanticAnnotator} = {};
-
-  export let visitors: {[key: string]: SemanticVisitor} = {};
-
-
-  /**
-   * Registers an annotator.
-   * @param annotator The annotator.
-   */
-  export function register(annotator: SemanticAnnotator|SemanticVisitor) {
-    let name = annotator.domain + ':' + annotator.name;
-    (annotator instanceof SemanticAnnotator ? annotators :
-                                              visitors)[name] = annotator;
+/**
+ * Activates a particular annotator.
+ *
+ * @param domain The domain.
+ * @param name The name of the annotator.
+ */
+export function activate(domain: string, name: string) {
+  const key = domain + ':' + name;
+  const annotator = annotators.get(key) || visitors.get(key);
+  if (annotator) {
+    annotator.active = true;
   }
+}
 
-
-  /**
-   * Activates a particular annotator.
-   * @param domain The domain.
-   * @param name The name of the annotator.
-   */
-  export function activate(domain: string, name: string) {
-    let key = domain + ':' + name;
-    let annotator = annotators[key] || visitors[key];
-    if (annotator) {
-      annotator.active = true;
+/**
+ * Annotates the given semantic node recursively.
+ *
+ * @param node The semantic node to annotate.
+ */
+export function annotate(node: SemanticNode) {
+  for (const annotator of annotators.values()) {
+    if (annotator.active) {
+      annotator.annotate(node);
     }
   }
-
-
-  /**
-   * Annotates the given semantic node recursively.
-   * @param node The semantic node to annotate.
-   */
-  export function annotate(node: SemanticNode) {
-    for (let key of Object.keys(annotators)) {
-      let annotator = annotators[key];
-      if (annotator.active) {
-        annotators[key].annotate(node);
-      }
-    }
-    for (let name of Object.keys(visitors)) {
-      let visitor = visitors[name];
-      if (visitor.active) {
-        visitors[name].visit(
-            node, Object.assign({}, visitors[name].def));
-      }
+  for (const visitor of visitors.values()) {
+    if (visitor.active) {
+      visitor.visit(node, Object.assign({}, visitor.def));
     }
   }
 }

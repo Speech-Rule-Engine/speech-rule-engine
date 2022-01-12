@@ -14,35 +14,39 @@
 // limitations under the License.
 
 /**
- * @fileoverview An abstract class for audio renderer with prosody markup.
- *
+ * @file An abstract class for audio renderer with prosody markup.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AbstractAudioRenderer} from './abstract_audio_renderer';
-import {Pause} from './audio_util';
-
+import * as EngineConst from '../common/engine_const';
+import { AbstractAudioRenderer } from './abstract_audio_renderer';
+import { Pause } from './audio_util';
 
 export abstract class MarkupRenderer extends AbstractAudioRenderer {
+  /**
+   * Properties to be ignored by a markup renderer.
+   */
+  protected ignoreElements: string[] = [EngineConst.personalityProps.LAYOUT];
 
   /**
    *  A scale function.
    */
-  private scaleFunction: ((p1: number) => number) = null;
+  private scaleFunction: (p1: number) => number = null;
 
   /**
    * Translates a pause into its corresponding markup.
+   *
    * @param pause A pause element.
-   * @return The markup for the pause.
+   * @returns The markup for the pause.
    */
   public abstract pause(pause: Pause): void;
 
   /**
    * Transforms a prosody key value pair into a markup element.
+   *
    * @param key The prosody name.
    * @param value The prosody value.
-   * @return The markup element.
+   * @returns The markup element.
    */
   public abstract prosodyElement(key: string, value: number): void;
 
@@ -56,27 +60,44 @@ export abstract class MarkupRenderer extends AbstractAudioRenderer {
    * @param b Upper boundary of source interval.
    * @param c Lower boundary of target interval.
    * @param d Upper boundary of target interval.
-   * @param opt_decimals Number of digits after the decimal point.
+   * @param decimals Number of digits after the decimal point.
    */
   public setScaleFunction(
-      a: number, b: number, c: number, d: number, decimals: number = 0) {
-    this.scaleFunction = x => {
-      let delta = (x - a) / (b - a);
-      let num = c * (1 - delta) + d * delta;
+    a: number,
+    b: number,
+    c: number,
+    d: number,
+    decimals = 0
+  ) {
+    this.scaleFunction = (x) => {
+      const delta = (x - a) / (b - a);
+      const num = c * (1 - delta) + d * delta;
       /// TODO (TS): Avoid all that casting!
-      return +(Math.round(((num + 'e+' + decimals) as any) as number) +
-        'e-' + decimals);
+      return +(
+        Math.round((num + 'e+' + decimals) as any as number) +
+        'e-' +
+        decimals
+      );
     };
   }
 
-
   /**
    * Applies the current scale function that can be set by the previous method.
+   *
    * @param value The value to be scaled.
-   * @return The scaled value.
+   * @returns The scaled value.
    */
   public applyScaleFunction(value: number): number {
     return this.scaleFunction ? this.scaleFunction(value) : value;
   }
 
+  /**
+   * Check if a given property is to be ignore by a markup renderer.
+   *
+   * @param key The property key.
+   * @returns True if the element is to be ignored.
+   */
+  protected ignoreElement(key: string) {
+    return this.ignoreElements.indexOf(key) !== -1;
+  }
 }

@@ -29,7 +29,8 @@
       "UNDER": "Unter",
       "UNDERSCRIPT": "Unterschrift",
       "OVER": "Über",
-      "OVERSCRIPT": "Überschrift"
+      "OVERSCRIPT": "Überschrift",
+      "ENDSCRIPTS": ""
     },
     "MSroots": {
       "2": "Quadrat",

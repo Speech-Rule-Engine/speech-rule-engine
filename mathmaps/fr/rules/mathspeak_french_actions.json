@@ -7,7 +7,7 @@
     [
       "Action",
       "collapsed",
-      "[n] . (engine:modality=summary,grammar:collapsed)"
+      "[n] . (engine:modality=summary, grammar:collapsed)"
     ],
     [
       "Action",
@@ -26,18 +26,8 @@
     ],
     [
       "Action",
-      "font-identifier-short",
-      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont);"
-    ],
-    [
-      "Action",
-      "font-identifier",
-      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
-    ],
-    [
-      "Action",
       "mixed-number",
-      "[n] children/*[1]; [t] \"et\"; [n] children/*[2]; "
+      "[n] children/*[1]; [t] \"et\"; [n] children/*[2]"
     ],
     [
       "Action",
@@ -87,7 +77,7 @@
     [
       "Action",
       "subtraction",
-      "[m] children/* (separator:\"moins\");"
+      "[m] children/* (separator:\"moins\")"
     ],
     [
       "Action",
@@ -102,7 +92,12 @@
     [
       "Action",
       "fences-metric",
-      "[n] content/*[1]; [n] children/*[1]; [n] content/*[2]"
+      "[t] \"début métrique\"; [n] children/*[1]; [t] \"fin métrique\""
+    ],
+    [
+      "Action",
+      "fences-metric-sbrief",
+      "[t] \"métrique\"; [n] children/*[1]; [t] \"fin métrique\""
     ],
     [
       "Action",
@@ -132,47 +127,47 @@
     [
       "Action",
       "continued-fraction-outer",
-      "[t] \"fraction continue\"; [n] children/*[1];[t] \"sur\"; [n] children/*[2]"
+      "[t] \"fraction continue\"; [n] children/*[1]; [t] \"sur\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-outer-brief",
-      "[t] \"frac continue\"; [n] children/*[1];[t] \"sur\"; [n] children/*[2]"
+      "[t] \"frac continue\"; [n] children/*[1]; [t] \"sur\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner",
-      "[t] \"début fraction\"; [n] children/*[1];[t] \"sur\"; [n] children/*[2]"
+      "[t] \"début fraction\"; [n] children/*[1]; [t] \"sur\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner-brief",
-      "[t] \"début frac\"; [n] children/*[1];[t] \"sur\"; [n] children/*[2]"
+      "[t] \"début frac\"; [n] children/*[1]; [t] \"sur\"; [n] children/*[2]"
     ],
     [
       "Action",
       "continued-fraction-inner-sbrief",
-      "[t] \"frac\"; [n] children/*[1];[t] \"sur\"; [n] children/*[2]"
+      "[t] \"frac\"; [n] children/*[1]; [t] \"sur\"; [n] children/*[2]"
     ],
     [
       "Action",
       "limboth",
-      "[n] children/*[1]; [t] \"début\"; [t] CSFunderscript; [n] children/*[2];[t] \"début\"; [t] CSFoverscript; [n] children/*[3]"
+      "[n] children/*[1]; [t] \"début\"; [t] CSFunderscript; [n] children/*[2]; [t] \"début\"; [t] CSFoverscript; [n] children/*[3]"
     ],
     [
       "Action",
       "limlower",
-      "[n] children/*[1]; [t] \"début\"; [t] CSFunderscript; [n] children/*[2];"
+      "[n] children/*[1]; [t] \"début\"; [t] CSFunderscript; [n] children/*[2]"
     ],
     [
       "Action",
       "limupper",
-      "[n] children/*[1]; [t] \"début\"; [t] CSFoverscript; [n] children/*[2];"
+      "[n] children/*[1]; [t] \"début\"; [t] CSFoverscript; [n] children/*[2]"
     ],
     [
       "Action",
       "limboth-end",
-      "[n] children/*[1]; [t] \"début\"; [t] CSFunderscript; [n] children/*[2];[t] \"début\"; [t] CSFoverscript; [n] children/*[3]; [t] \"fin scripts\""
+      "[n] children/*[1]; [t] \"début\"; [t] CSFunderscript; [n] children/*[2]; [t] \"début\"; [t] CSFoverscript; [n] children/*[3]; [t] \"fin scripts\""
     ],
     [
       "Action",
@@ -187,12 +182,12 @@
     [
       "Action",
       "integral",
-      "[n] children/*[1]; [t] \"indice inférieur\"; [n] children/*[2];[t] \"indice supérieur\"; [n] children/*[3]; [t] \"position de base\";"
+      "[n] children/*[1]; [t] \"indice inférieur\"; [n] children/*[2]; [t] \"indice supérieur\"; [n] children/*[3]; [t] \"position de base\""
     ],
     [
       "Action",
       "integral-brief",
-      "[n] children/*[1]; [t] \"inf\"; [n] children/*[2];[t] \"sup\"; [n] children/*[3]; [t] \"position de base\";"
+      "[n] children/*[1]; [t] \"inf\"; [n] children/*[2]; [t] \"sup\"; [n] children/*[3]; [t] \"position de base\""
     ],
     [
       "Action",
@@ -213,21 +208,6 @@
       "Action",
       "prime",
       "[n] children/*[1]; [n] children/*[2]"
-    ],
-    [
-      "Action",
-      "double-prime",
-      "[t] \"double prime\""
-    ],
-    [
-      "Action",
-      "triple-prime",
-      "[t] \"triple prime\""
-    ],
-    [
-      "Action",
-      "quadruple-prime",
-      "[t] \"quadruple prime\""
     ],
     [
       "Action",
@@ -262,32 +242,32 @@
     [
       "Action",
       "matrix",
-      "[t] \"début matrice\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin matrice\""
+      "[t] \"début matrice\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée \"); [t] \"fin matrice\""
     ],
     [
       "Action",
       "matrix-sbrief",
-      "[t] \"matrice\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin matrice\""
+      "[t] \"matrice\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée \"); [t] \"fin matrice\""
     ],
     [
       "Action",
       "matrix-row",
-      "[m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\", pause: 200)"
+      "[m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonne\", pause:200)"
     ],
     [
       "Action",
       "row-with-label",
-      "[t] \"avec étiquette\"; [n] content/*[1]; [t] \"fin étiquette\" (pause: 200); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\")"
+      "[t] \"avec étiquette\"; [n] content/*[1]; [t] \"fin étiquette\" (pause:200); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonne\")"
     ],
     [
       "Action",
       "row-with-label-brief",
-      "[t] \"étiquette\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\")"
+      "[t] \"étiquette\"; [n] content/*[1]; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonne\")"
     ],
     [
       "Action",
       "row-with-text-label",
-      "[t] \"étiquette\"; [t] CSFRemoveParens;[m] children/* (ctxtFunc:CTFordinalCounter,context:\"colonne\")"
+      "[t] \"étiquette\"; [t] CSFRemoveParens; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"colonne\")"
     ],
     [
       "Action",
@@ -297,67 +277,67 @@
     [
       "Action",
       "empty-cell",
-      "[t] \"vide\" (pause: 300)"
+      "[t] \"vide\" (pause:300)"
     ],
     [
       "Action",
       "determinant",
-      "[t] \"début déterminant\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [t] \"\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin déterminant\""
+      "[t] \"début déterminant\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [t] \"\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée \"); [t] \"fin déterminant\""
     ],
     [
       "Action",
       "determinant-sbrief",
-      "[t] \"déterminant\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin déterminant\""
+      "[t] \"déterminant\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée \"); [t] \"fin déterminant\""
     ],
     [
       "Action",
       "determinant-simple",
-      "[t] \"début déterminant\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée\",grammar:simpleDet); [t] \"fin déterminant\""
+      "[t] \"début déterminant\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée\", grammar:simpleDet); [t] \"fin déterminant\""
     ],
     [
       "Action",
       "determinant-simple-sbrief",
-      "[t] \"déterminant\"; [t] count(children/*);  [t] \"par\";[t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée\",grammar:simpleDet); [t] \"fin déterminant\""
+      "[t] \"déterminant\"; [t] count(children/*); [t] \"par\"; [t] count(children/*[1]/children/*); [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée\", grammar:simpleDet); [t] \"fin déterminant\""
     ],
     [
       "Action",
       "layout",
-      "[t] \"début tableau\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\""
+      "[t] \"début tableau\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée \"); [t] \"fin tableau\""
     ],
     [
       "Action",
       "layout-sbrief",
-      "[t] \"tableau\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\""
+      "[t] \"tableau\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée \"); [t] \"fin tableau\""
     ],
     [
       "Action",
       "binomial",
-      "[t] \"début binomiale\"; [n] children/*[2]/children/*[1]; [t] \"parmi\"; [n] children/*[1]/children/*[1];  [t] \"fin binomiale\""
+      "[t] \"début binomiale\"; [n] children/*[2]/children/*[1]; [t] \"parmi\"; [n] children/*[1]/children/*[1]; [t] \"fin binomiale\""
     ],
     [
       "Action",
       "binomial-sbrief",
-      "[t] \"binomiale\"; [n] children/*[1]/children/*[1]; [t] \"parmi\"; [n] children/*[2]/children/*[1];  [t] \"fin binomiale\""
+      "[t] \"binomiale\"; [n] children/*[1]/children/*[1]; [t] \"parmi\"; [n] children/*[2]/children/*[1]; [t] \"fin binomiale\""
     ],
     [
       "Action",
       "cases",
-      "[t] \"début tableau\"; [n] content/*[1]; [t] \"élargie\";[m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\""
+      "[t] \"début tableau\"; [n] content/*[1]; [t] \"élargie\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée \"); [t] \"fin tableau\""
     ],
     [
       "Action",
       "cases-sbrief",
-      "[t] \"tableau\"; [n] content/*[1]; [t] \"élargie\"; [m] children/* (ctxtFunc:CTFordinalCounter,context:\"rangée \"); [t] \"fin tableau\""
+      "[t] \"tableau\"; [n] content/*[1]; [t] \"élargie\"; [m] children/* (ctxtFunc:CTFordinalCounter, context:\"rangée \"); [t] \"fin tableau\""
     ],
     [
       "Action",
       "line-with-label",
-      "[t] \"avec etiquette\"; [n] content/*[1]; [t] \"fin etiquette\" (pause: 200); [m] children/*"
+      "[t] \"avec etiquette\"; [n] content/*[1]; [t] \"fin etiquette\" (pause:200); [m] children/*"
     ],
     [
       "Action",
       "line-with-label-brief",
-      "[t] \"etiquette\"; [n] content/*[1] (pause: 200); [m] children/*"
+      "[t] \"etiquette\"; [n] content/*[1] (pause:200); [m] children/*"
     ],
     [
       "Action",
@@ -372,12 +352,12 @@
     [
       "Action",
       "empty-line-with-label",
-      "[t] \"avec etiquette\"; [n] content/*[1]; [t] \"fin etiquette\" (pause: 200); [t] \"vide\""
+      "[t] \"avec etiquette\"; [n] content/*[1]; [t] \"fin etiquette\" (pause:200); [t] \"vide\""
     ],
     [
       "Action",
       "empty-line-with-label-brief",
-      "[t] \"etiquette\"; [n] content/*[1] (pause: 200); [t] \"vide\""
+      "[t] \"etiquette\"; [n] content/*[1] (pause:200); [t] \"vide\""
     ],
     [
       "Action",

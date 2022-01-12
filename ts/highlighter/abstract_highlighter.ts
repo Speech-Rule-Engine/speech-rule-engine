@@ -14,17 +14,14 @@
 // limitations under the License.
 
 /**
- * @fileoverview Abstract class implementing highlighters.
- *
+ * @file Abstract class implementing highlighters.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import XpathUtil from '../common/xpath_util';
-import * as EnrichMathml from '../enrich_mathml/enrich_mathml';
-import {ColorPicker, StringColor} from './color_picker';
-import {Highlighter} from './highlighter';
-
+import * as XpathUtil from '../common/xpath_util';
+import { addPrefix, Attribute } from '../enrich_mathml/enrich_attr';
+import { ColorPicker, StringColor } from './color_picker';
+import { Highlighter } from './highlighter';
 
 /**
  * Highlight information consisting of node, opacity, fore and background color.
@@ -40,11 +37,10 @@ export interface Highlight {
 }
 
 export abstract class AbstractHighlighter implements Highlighter {
-
   /**
    * The Attribute for marking highlighted nodes.
    */
-  protected static ATTR: string = 'sre-highlight';
+  protected static ATTR = 'sre-highlight';
 
   /**
    * The color picker.
@@ -54,25 +50,24 @@ export abstract class AbstractHighlighter implements Highlighter {
   /**
    * The maction name/class for a highlighter.
    */
-  protected mactionName: string = '';
+  protected mactionName = '';
 
   /**
    * List of currently highlighted nodes and their original background color.
    */
   private currentHighlights: Highlight[][] = [];
 
-
   /**
    * Highlights a single node.
    *
    * @param node The node to be highlighted.
-   * @return The old node information.
+   * @returns The old node information.
    */
   protected abstract highlightNode(node: HTMLElement): Highlight;
 
-
   /**
    * Unhighlights a single node.
+   *
    * @param highlight The highlight info for the node to be unhighlighted.
    */
   protected abstract unhighlightNode(highlight: Highlight): void;
@@ -83,29 +78,28 @@ export abstract class AbstractHighlighter implements Highlighter {
   public highlight(nodes: HTMLElement[]) {
     this.currentHighlights.push(
       nodes.map((node) => {
-        let info = this.highlightNode(node);
+        const info = this.highlightNode(node);
         this.setHighlighted(node);
         return info;
-      }));
+      })
+    );
   }
-
 
   /**
    * @override
    */
   public highlightAll(node: HTMLElement) {
-    let mactions = this.getMactionNodes(node);
-    for (let i = 0, maction; maction = mactions[i]; i++) {
+    const mactions = this.getMactionNodes(node);
+    for (let i = 0, maction; (maction = mactions[i]); i++) {
       this.highlight([maction]);
     }
   }
-
 
   /**
    * @override
    */
   public unhighlight() {
-    let nodes = this.currentHighlights.pop();
+    const nodes = this.currentHighlights.pop();
     if (!nodes) {
       return;
     }
@@ -117,7 +111,6 @@ export abstract class AbstractHighlighter implements Highlighter {
     });
   }
 
-
   /**
    * @override
    */
@@ -127,7 +120,6 @@ export abstract class AbstractHighlighter implements Highlighter {
     }
   }
 
-
   /**
    * @override
    */
@@ -135,117 +127,117 @@ export abstract class AbstractHighlighter implements Highlighter {
     this.color = color;
   }
 
-
   /**
-   * Turns the current color into a string representation.
-   * @return The color string, by default as rgba.
+   * @override
    */
-  protected colorString(): StringColor {
+  public colorString(): StringColor {
     return this.color.rgba();
   }
-
 
   /**
    * @override
    */
-  public addEvents(node: HTMLElement, events: {[key: string]: EventListener}) {
-    let mactions = this.getMactionNodes(node);
-    for (let i = 0, maction; maction = mactions[i]; i++) {
-      for (let event in events) {
+  public addEvents(
+    node: HTMLElement,
+    events: { [key: string]: EventListener }
+  ) {
+    const mactions = this.getMactionNodes(node);
+    for (let i = 0, maction; (maction = mactions[i]); i++) {
+      for (const event in events) {
         maction.addEventListener(event, events[event]);
       }
     }
   }
 
-
   /**
    * Returns the maction sub nodes of a given node.
+   *
    * @param node The root node.
-   * @return The list of maction sub nodes.
+   * @returns The list of maction sub nodes.
    */
   public getMactionNodes(node: HTMLElement): HTMLElement[] {
     return Array.from(
-      node.getElementsByClassName(this.mactionName)) as HTMLElement[];
+      node.getElementsByClassName(this.mactionName)
+    ) as HTMLElement[];
   }
-
 
   /**
    * @override
    */
   public isMactionNode(node: Element): boolean {
-    let className = node.className || node.getAttribute('class');
+    const className = node.className || node.getAttribute('class');
     return className ? !!className.match(new RegExp(this.mactionName)) : false;
   }
 
-
   /**
    * Check if a node is already highlighted.
+   *
    * @param node The node.
-   * @return True if already highlighted.
+   * @returns True if already highlighted.
    */
   public isHighlighted(node: HTMLElement): boolean {
     return node.hasAttribute(AbstractHighlighter.ATTR);
   }
 
-
   /**
    * Sets the indicator attribute that node is already highlighted.
+   *
    * @param node The node.
    */
   public setHighlighted(node: HTMLElement) {
     node.setAttribute(AbstractHighlighter.ATTR, 'true');
   }
 
-
   /**
    * Removes the indicator attribute that node is already highlighted.
+   *
    * @param node The node.
    */
   public unsetHighlighted(node: HTMLElement) {
     node.removeAttribute(AbstractHighlighter.ATTR);
   }
 
-
   /**
    * Tree colorization method for all sub-expressions.
+   *
    * @param node The node.
    */
   public colorizeAll(node: HTMLElement) {
-    let allNodes = XpathUtil.evalXPath(
-        `.//*[@${EnrichMathml.Attribute.ID}]`, node);
+    const allNodes = XpathUtil.evalXPath(`.//*[@${Attribute.ID}]`, node);
     allNodes.forEach((x: Element) => this.colorize(x as HTMLElement));
   }
 
   /**
    * Removes tree colorization.
+   *
    * @param node The node.
    */
   public uncolorizeAll(node: HTMLElement) {
-    let allNodes = XpathUtil.evalXPath(
-        `.//*[@${EnrichMathml.Attribute.ID}]`, node);
-    allNodes.forEach(x => this.uncolorize(x as HTMLElement));
+    const allNodes = XpathUtil.evalXPath(`.//*[@${Attribute.ID}]`, node);
+    allNodes.forEach((x) => this.uncolorize(x as HTMLElement));
   }
 
   /**
    * Tree colors a single node.
+   *
    * @param node The node.
    */
   // TODO: Generalise this to use the highlighter method and background.
   public colorize(node: HTMLElement) {
-    let fore = EnrichMathml.addPrefix('foreground');
+    const fore = addPrefix('foreground');
     if (node.hasAttribute(fore)) {
       node.setAttribute(fore + '-old', node.style.color);
       node.style.color = node.getAttribute(fore);
     }
   }
 
-
   /**
    * Removes tree coloring from a single node.
+   *
    * @param node The node.
    */
   public uncolorize(node: HTMLElement) {
-    let fore = EnrichMathml.addPrefix('foreground') + '-old';
+    const fore = addPrefix('foreground') + '-old';
     if (node.hasAttribute(fore)) {
       node.style.color = node.getAttribute(fore);
     }

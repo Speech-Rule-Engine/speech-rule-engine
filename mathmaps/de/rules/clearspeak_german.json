@@ -204,6 +204,12 @@
     ],
     [
       "Precondition",
+      "element",
+      "default",
+      "self::infixop[contains(@role, \"element\")]"
+    ],
+    [
+      "Precondition",
       "set-prefix-operators-masculine",
       "default",
       "self::*",

@@ -1,0 +1,2741 @@
+[
+  {
+    "locale": "nn"
+  },
+  {
+    "key": "2190",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2191",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "oppoverpil"
+      }
+    }
+  },
+  {
+    "key": "2192",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2193",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "2194",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstre-høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2195",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "opp-nedpil"
+      }
+    }
+  },
+  {
+    "key": "2196",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "oppover til venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2197",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "oppover til høgre-pil"
+      }
+    }
+  },
+  {
+    "key": "2198",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "nedover til høgre-pil"
+      }
+    }
+  },
+  {
+    "key": "2199",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "nedover til venstre-pil"
+      }
+    }
+  },
+  {
+    "key": "219A",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med strek"
+      }
+    }
+  },
+  {
+    "key": "219B",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med strek"
+      }
+    }
+  },
+  {
+    "key": "219C",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstre bølgepil"
+      }
+    }
+  },
+  {
+    "key": "219D",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgre bølgepil"
+      }
+    }
+  },
+  {
+    "key": "219E",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "tohoda venstrepil"
+      }
+    }
+  },
+  {
+    "key": "219F",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "tohoda oppoverpil"
+      }
+    }
+  },
+  {
+    "key": "21A0",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda høgrepil"
+      }
+    }
+  },
+  {
+    "key": "21A1",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "tohoda nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "21A2",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med hale"
+      }
+    }
+  },
+  {
+    "key": "21A3",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med hale"
+      }
+    }
+  },
+  {
+    "key": "21A4",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstrepil frå strek"
+      }
+    }
+  },
+  {
+    "key": "21A5",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "oppoverpil frå strek"
+      }
+    }
+  },
+  {
+    "key": "21A6",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil frå strek"
+      }
+    }
+  },
+  {
+    "key": "21A7",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "nedoverpil frå strek"
+      }
+    }
+  },
+  {
+    "key": "21A8",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "opp-nedpil med basis"
+      }
+    }
+  },
+  {
+    "key": "21A9",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med krok"
+      }
+    }
+  },
+  {
+    "key": "21AA",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med krok"
+      }
+    }
+  },
+  {
+    "key": "21AB",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med løkke"
+      }
+    }
+  },
+  {
+    "key": "21AC",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med løkke"
+      }
+    }
+  },
+  {
+    "key": "21AD",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstre-høgre bølgepil"
+      }
+    }
+  },
+  {
+    "key": "21AE",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstre-høgrepil med strek"
+      }
+    }
+  },
+  {
+    "key": "21AF",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "sikksakk nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "21B0",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "oppoverpil som bauger til venstre"
+      }
+    }
+  },
+  {
+    "key": "21B1",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "oppoverpil som bauger til høgre"
+      }
+    }
+  },
+  {
+    "key": "21B2",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "nedoverpil som bauger til venstre"
+      }
+    }
+  },
+  {
+    "key": "21B3",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "nedoverpil som bauger til høgre"
+      }
+    }
+  },
+  {
+    "key": "21B4",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med hjørne nedover"
+      }
+    }
+  },
+  {
+    "key": "21B5",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "nedoverpil med venstrehjørne"
+      }
+    }
+  },
+  {
+    "key": "21B6",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "topphalvsirkelpil mot klokka"
+      }
+    }
+  },
+  {
+    "key": "21B7",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "topphalvsirkelpil med klokka"
+      }
+    }
+  },
+  {
+    "key": "21B8",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstrepil oppver til lang strek"
+      }
+    }
+  },
+  {
+    "key": "21B9",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstepil til strek over høgrepil til strek"
+      }
+    }
+  },
+  {
+    "key": "21BA",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "open sirkelpil mot klokka"
+      }
+    }
+  },
+  {
+    "key": "21BB",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "open sirkelpil med klokka"
+      }
+    }
+  },
+  {
+    "key": "21C4",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil over venstrepil"
+      }
+    }
+  },
+  {
+    "key": "21C5",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "oppoverpil til venstre for nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "21C6",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstrepil over høgrepil"
+      }
+    }
+  },
+  {
+    "key": "21C7",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstre parpiler"
+      }
+    }
+  },
+  {
+    "key": "21C8",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "parpiler oppover"
+      }
+    }
+  },
+  {
+    "key": "21C9",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgre parpiler"
+      }
+    }
+  },
+  {
+    "key": "21CA",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "parpiler nedover"
+      }
+    }
+  },
+  {
+    "key": "21CD",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstre dobbelpilar med strek"
+      }
+    }
+  },
+  {
+    "key": "21CE",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstre-høgre dobbeltpil med strek"
+      }
+    }
+  },
+  {
+    "key": "21CF",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgre dobbeltpil med strek"
+      }
+    }
+  },
+  {
+    "key": "21D0",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstre dobbeltpil"
+      }
+    }
+  },
+  {
+    "key": "21D1",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "dobbeltpil oppover"
+      }
+    }
+  },
+  {
+    "key": "21D2",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "dobbeltpil mot høgre"
+      }
+    }
+  },
+  {
+    "key": "21D3",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "dobbeltpil nedover"
+      }
+    }
+  },
+  {
+    "key": "21D4",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstre-høgre dobbeltpil"
+      }
+    }
+  },
+  {
+    "key": "21D5",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "opp-ned dobbeltpil"
+      }
+    }
+  },
+  {
+    "key": "21D6",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "dobbeltpil opp mot venstre"
+      }
+    }
+  },
+  {
+    "key": "21D7",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "dobbeltpil opp mot høgre"
+      }
+    }
+  },
+  {
+    "key": "21D8",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "dobbeltpil ned mot høgre"
+      }
+    }
+  },
+  {
+    "key": "21D9",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "dobbeltpil ned mot venstre"
+      }
+    }
+  },
+  {
+    "key": "21DA",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "trippelpil mot venstre"
+      }
+    }
+  },
+  {
+    "key": "21DB",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "trippelpil mot høgre"
+      }
+    }
+  },
+  {
+    "key": "21DC",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "krusepil mot venstre"
+      }
+    }
+  },
+  {
+    "key": "21DD",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "krusepil mot høgre"
+      }
+    }
+  },
+  {
+    "key": "21DE",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "oppoverpil med dobbeltstrek"
+      }
+    }
+  },
+  {
+    "key": "21DF",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "nedoverpil med dobbeltstrek"
+      }
+    }
+  },
+  {
+    "key": "21E0",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "stipla venstrepil"
+      }
+    }
+  },
+  {
+    "key": "21E1",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "stipla oppoverpil"
+      }
+    }
+  },
+  {
+    "key": "21E2",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "stipla høgrepil"
+      }
+    }
+  },
+  {
+    "key": "21E3",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "stipla nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "21E4",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstrepil mot strek"
+      }
+    }
+  },
+  {
+    "key": "21E5",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil mot strek"
+      }
+    }
+  },
+  {
+    "key": "21E6",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit venstrepil"
+      }
+    }
+  },
+  {
+    "key": "21E7",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit oppoverpil"
+      }
+    }
+  },
+  {
+    "key": "21E8",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit høgrepil"
+      }
+    }
+  },
+  {
+    "key": "21E9",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "21EA",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit oppoverpil frå strek"
+      }
+    }
+  },
+  {
+    "key": "21EB",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit oppoverpil på pidestall"
+      }
+    }
+  },
+  {
+    "key": "21EC",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit oppoverpil på pidestall med horisontal strek"
+      }
+    }
+  },
+  {
+    "key": "21ED",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit oppoverpil på pidestall med vertikal strek"
+      }
+    }
+  },
+  {
+    "key": "21EE",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit dobbeltpil oppover"
+      }
+    }
+  },
+  {
+    "key": "21EF",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit dobbeltpil oppover på pidestall"
+      }
+    }
+  },
+  {
+    "key": "21F0",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit høgrepil frå vegg"
+      }
+    }
+  },
+  {
+    "key": "21F1",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "nord-vest-pil til hjørne"
+      }
+    }
+  },
+  {
+    "key": "21F2",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "sør-aust-pil til hjørne"
+      }
+    }
+  },
+  {
+    "key": "21F3",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit oppover-nedover-pil"
+      }
+    }
+  },
+  {
+    "key": "21F4",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med liten sirkel"
+      }
+    }
+  },
+  {
+    "key": "21F5",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nedoverpil til venstre for oppoverpil"
+      }
+    }
+  },
+  {
+    "key": "21F6",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tre høgrepilar"
+      }
+    }
+  },
+  {
+    "key": "21F7",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "21F8",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "21F9",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstre-høgrepil med dobbel vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "21FA",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med dobbel vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "21FB",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med dobbel vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "21FC",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstre-høgrepil med dobbel vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "21FD",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med opent pilhode"
+      }
+    }
+  },
+  {
+    "key": "21FE",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med opent pilhode"
+      }
+    }
+  },
+  {
+    "key": "21FF",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstre-høgrepil med opent pilhode"
+      }
+    }
+  },
+  {
+    "key": "2301",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "elektrisk pil"
+      }
+    }
+  },
+  {
+    "key": "2303",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "pilhode opp"
+      }
+    }
+  },
+  {
+    "key": "2304",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "pilhode ned"
+      }
+    }
+  },
+  {
+    "key": "2324",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "pilhode opp mellom to horisontale streker"
+      }
+    }
+  },
+  {
+    "key": "238B",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "brutt sirkel med nord-vestpil"
+      }
+    }
+  },
+  {
+    "key": "2794",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "feit bredhoda høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2798",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "feit nedoverpil til høgre"
+      }
+    }
+  },
+  {
+    "key": "2799",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "feit høgrepil"
+      }
+    }
+  },
+  {
+    "key": "279A",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kraftig pil på skrå mot høgre"
+      }
+    }
+  },
+  {
+    "key": "279B",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "spisshoda høgrepil"
+      }
+    }
+  },
+  {
+    "key": "279C",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kraftig rundhoda høgrepil"
+      }
+    }
+  },
+  {
+    "key": "279D",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "triangelhoda høgrepil"
+      }
+    }
+  },
+  {
+    "key": "279E",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kraftig triangelhoda høgrepil"
+      }
+    }
+  },
+  {
+    "key": "279F",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "stipla triangelhoda høgrepil"
+      }
+    }
+  },
+  {
+    "key": "27A0",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "stipla kraftig triangelhoda høgrepil"
+      }
+    }
+  },
+  {
+    "key": "27A1",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart høgrepil"
+      }
+    }
+  },
+  {
+    "key": "27A2",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "3D-høgrepilhode med lys overside"
+      }
+    }
+  },
+  {
+    "key": "27A3",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "3D-høgrepilhode med lys underside"
+      }
+    }
+  },
+  {
+    "key": "27A4",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart høgrepilhode"
+      }
+    }
+  },
+  {
+    "key": "27A5",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart kraftig høgrepil som svinger nedover"
+      }
+    }
+  },
+  {
+    "key": "27A6",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart kraftig høgrepil som svinger oppover"
+      }
+    }
+  },
+  {
+    "key": "27A7",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "klemt svart høgrepil"
+      }
+    }
+  },
+  {
+    "key": "27A8",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "konkav kraftig spisshoda høgrepil"
+      }
+    }
+  },
+  {
+    "key": "27A9",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit høgrepil med skygge til høgre"
+      }
+    }
+  },
+  {
+    "key": "27AA",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit høgrepil med skygge til venstre"
+      }
+    }
+  },
+  {
+    "key": "27AB",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit høgrepil bakovervippet med skygge"
+      }
+    }
+  },
+  {
+    "key": "27AC",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit høgrepil fråmovervippet med skygge"
+      }
+    }
+  },
+  {
+    "key": "27AD",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit kraftig høgrepil med skygge nede til høgre"
+      }
+    }
+  },
+  {
+    "key": "27AE",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit kraftig høgrepil med skygge oppe til høgre"
+      }
+    }
+  },
+  {
+    "key": "27AF",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "innhuka kvit høgrepil med skygge nede til høgre"
+      }
+    }
+  },
+  {
+    "key": "27B1",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "innhuka kvit høgrepil med skygge oppe til høgre"
+      }
+    }
+  },
+  {
+    "key": "27B2",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kraftig kvit høgrepil i sirkel"
+      }
+    }
+  },
+  {
+    "key": "27B3",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit høgrepil med fjær"
+      }
+    }
+  },
+  {
+    "key": "27B4",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil ned mot høgre med fjær"
+      }
+    }
+  },
+  {
+    "key": "27B5",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med fjær"
+      }
+    }
+  },
+  {
+    "key": "27B6",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil opp mot høgre med fjær"
+      }
+    }
+  },
+  {
+    "key": "27B7",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kraftig høgrepil ned mot høgre med fjær"
+      }
+    }
+  },
+  {
+    "key": "27B8",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kraftig høgrepil med fjær"
+      }
+    }
+  },
+  {
+    "key": "27B9",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kraftig høgrepil opp mot høgre med fjær"
+      }
+    }
+  },
+  {
+    "key": "27BA",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "dråpeformet høgrepil"
+      }
+    }
+  },
+  {
+    "key": "27BB",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kraftig klubbeformet høgrepil"
+      }
+    }
+  },
+  {
+    "key": "27BC",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med splittet hale"
+      }
+    }
+  },
+  {
+    "key": "27BD",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kraftig høgrepil med splittet hale"
+      }
+    }
+  },
+  {
+    "key": "27BE",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "open omriss-høgrepil"
+      }
+    }
+  },
+  {
+    "key": "27F0",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "kvadruppel oppoverpil"
+      }
+    }
+  },
+  {
+    "key": "27F1",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "kvadruppel nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "27F2",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "open sirkelpil mot klokka"
+      }
+    }
+  },
+  {
+    "key": "27F3",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "open sirkelpil med klokka"
+      }
+    }
+  },
+  {
+    "key": "27F4",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil gjennom sirkel med plussteikn"
+      }
+    }
+  },
+  {
+    "key": "27F5",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang venstrepil"
+      }
+    }
+  },
+  {
+    "key": "27F6",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang høgrepil"
+      }
+    }
+  },
+  {
+    "key": "27F7",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang venstre-høgrepil"
+      }
+    }
+  },
+  {
+    "key": "27F8",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang venstrepil med to strek i halen"
+      }
+    }
+  },
+  {
+    "key": "27F9",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang høgrepil med to strek i halen"
+      }
+    }
+  },
+  {
+    "key": "27FA",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang venstre-høgrepil med to strek i halen"
+      }
+    }
+  },
+  {
+    "key": "27FB",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang venstrepil frå strek"
+      }
+    }
+  },
+  {
+    "key": "27FC",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang høgrepil frå strek"
+      }
+    }
+  },
+  {
+    "key": "27FD",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang venstrepil med to strek i halen frå strek"
+      }
+    }
+  },
+  {
+    "key": "27FE",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang høgrepil med to strek i halen frå strek"
+      }
+    }
+  },
+  {
+    "key": "27FF",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang krusepil mot høgre"
+      }
+    }
+  },
+  {
+    "key": "2900",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda høgrepil med vertikal strek"
+      }
+    }
+  },
+  {
+    "key": "2901",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda høgrepil med dobbel vertikal strek"
+      }
+    }
+  },
+  {
+    "key": "2902",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "dobbel venstrepil med vertikal strek"
+      }
+    }
+  },
+  {
+    "key": "2903",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "dobbel høgrepil med vertikal strek"
+      }
+    }
+  },
+  {
+    "key": "2904",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "dobbel venstre-høgrepil med vertikal strek"
+      }
+    }
+  },
+  {
+    "key": "2905",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda høgrepil frå strek"
+      }
+    }
+  },
+  {
+    "key": "2906",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "dobbel venstrepil frå strek"
+      }
+    }
+  },
+  {
+    "key": "2907",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "dobbel høgrepil frå strek"
+      }
+    }
+  },
+  {
+    "key": "2908",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "pil ned med horisontal strek"
+      }
+    }
+  },
+  {
+    "key": "2909",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "oppoverpil med horisontal strek"
+      }
+    }
+  },
+  {
+    "key": "290A",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "trippel oppoverpil"
+      }
+    }
+  },
+  {
+    "key": "290B",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "trippel nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "290C",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "to-stipla venstrepil"
+      }
+    }
+  },
+  {
+    "key": "290D",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "to-stipla høgrepil"
+      }
+    }
+  },
+  {
+    "key": "290E",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tre-stipla venstrepil"
+      }
+    }
+  },
+  {
+    "key": "290F",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tre-stipla høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2910",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda trepunktspil mot høgre"
+      }
+    }
+  },
+  {
+    "key": "2911",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med punkter"
+      }
+    }
+  },
+  {
+    "key": "2912",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "oppoverpil til strek"
+      }
+    }
+  },
+  {
+    "key": "2913",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nedoverpil til strek"
+      }
+    }
+  },
+  {
+    "key": "2914",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med hale med vertikal strek"
+      }
+    }
+  },
+  {
+    "key": "2915",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med hale med dobbel vertikal strek"
+      }
+    }
+  },
+  {
+    "key": "2916",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda høgrepil med hale"
+      }
+    }
+  },
+  {
+    "key": "2917",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda høgrepil med hale med vertikal strek"
+      }
+    }
+  },
+  {
+    "key": "2918",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda høgrepil med hale med dobbel vertikal strek"
+      }
+    }
+  },
+  {
+    "key": "2919",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepilhale"
+      }
+    }
+  },
+  {
+    "key": "291A",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepilhale"
+      }
+    }
+  },
+  {
+    "key": "291B",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "dobbel venstrepilhale"
+      }
+    }
+  },
+  {
+    "key": "291C",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "dobbel høgrepilhale"
+      }
+    }
+  },
+  {
+    "key": "291D",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil mot svart diamant"
+      }
+    }
+  },
+  {
+    "key": "291E",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil mot svart diamant"
+      }
+    }
+  },
+  {
+    "key": "291F",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil frå strek til svart diamant"
+      }
+    }
+  },
+  {
+    "key": "2920",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil frå strek til sort diamant"
+      }
+    }
+  },
+  {
+    "key": "2921",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nord-vest og sør-austpil"
+      }
+    }
+  },
+  {
+    "key": "2922",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nord-aust og sør-vestpil"
+      }
+    }
+  },
+  {
+    "key": "2923",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nord-vestpil med krok"
+      }
+    }
+  },
+  {
+    "key": "2924",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nord-austpil med krok"
+      }
+    }
+  },
+  {
+    "key": "2925",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "sør-austpil med krok"
+      }
+    }
+  },
+  {
+    "key": "2926",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "sør-vestpil med krok"
+      }
+    }
+  },
+  {
+    "key": "2927",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nord-vestpil og nord-austpil"
+      }
+    }
+  },
+  {
+    "key": "2928",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nord-austpil og sør-austpil"
+      }
+    }
+  },
+  {
+    "key": "2929",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "sør-austpil og sør-vestpil"
+      }
+    }
+  },
+  {
+    "key": "292A",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "sør-vestpil og nord-vestpil"
+      }
+    }
+  },
+  {
+    "key": "292D",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "sør-austpil som krysser nord-austpil"
+      }
+    }
+  },
+  {
+    "key": "292E",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nord-austpil som krysser sør-austpil"
+      }
+    }
+  },
+  {
+    "key": "292F",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "synkende diagonal som krysser nord-austpil"
+      }
+    }
+  },
+  {
+    "key": "2930",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "stigende diagonal som krysser sør-austpil"
+      }
+    }
+  },
+  {
+    "key": "2931",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nord-austpil som krysser nord-vestpil"
+      }
+    }
+  },
+  {
+    "key": "2932",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nord-vestpil som krysser nord-austpil"
+      }
+    }
+  },
+  {
+    "key": "2933",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "bølgepil som peikar rett mot høgre"
+      }
+    }
+  },
+  {
+    "key": "2934",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "pil som peikar til høgre og deretter svinger opp"
+      }
+    }
+  },
+  {
+    "key": "2935",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "pil som peikar til høgre og deretter svinger ned"
+      }
+    }
+  },
+  {
+    "key": "2936",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "pil som peikar nedover og deretter svinger til venstre"
+      }
+    }
+  },
+  {
+    "key": "2937",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "pil som peikar nedover og deretter svinger til høgre"
+      }
+    }
+  },
+  {
+    "key": "2938",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "buet pil med klokka"
+      }
+    }
+  },
+  {
+    "key": "2939",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "buet pil mot klokka"
+      }
+    }
+  },
+  {
+    "key": "293A",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "topp-buet pil mot klokka"
+      }
+    }
+  },
+  {
+    "key": "293B",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "botn-buet pil mot klokka"
+      }
+    }
+  },
+  {
+    "key": "293C",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "topp-buet pil med klokka med minusteikn"
+      }
+    }
+  },
+  {
+    "key": "293D",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "topp-buet pil mot klokka med plussteikn"
+      }
+    }
+  },
+  {
+    "key": "293E",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "halvsirkelpil som peikar nedover mot høgre med klokka"
+      }
+    }
+  },
+  {
+    "key": "293F",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "halvsirkelpil som peikar ned mot venstre mot klokka"
+      }
+    }
+  },
+  {
+    "key": "2940",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lukka sirkelpil mot klokka"
+      }
+    }
+  },
+  {
+    "key": "2941",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lukka sirkelpil med klokka"
+      }
+    }
+  },
+  {
+    "key": "2942",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil over kort venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2943",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil over kort høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2944",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "kort høgrepil over venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2945",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med plussteikn under"
+      }
+    }
+  },
+  {
+    "key": "2946",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med plussteikn under"
+      }
+    }
+  },
+  {
+    "key": "2947",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil gjennom x"
+      }
+    }
+  },
+  {
+    "key": "2948",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil gjennom liten sirkel"
+      }
+    }
+  },
+  {
+    "key": "2949",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda oppoverpil frå liten sirkel"
+      }
+    }
+  },
+  {
+    "key": "2970",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgre dobbelpil med rundt hode"
+      }
+    }
+  },
+  {
+    "key": "2971",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "er-lik-teikn over høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2972",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tilde over høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2973",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil over tilde"
+      }
+    }
+  },
+  {
+    "key": "2974",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil over tilde"
+      }
+    }
+  },
+  {
+    "key": "2975",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgre pil over omtrent-lik-teikn"
+      }
+    }
+  },
+  {
+    "key": "2976",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "mindre enn over venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2977",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil gjennom mindre enn"
+      }
+    }
+  },
+  {
+    "key": "2978",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "større enn over høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2979",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "delsett over høgrepil"
+      }
+    }
+  },
+  {
+    "key": "297A",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil gjennom delsett"
+      }
+    }
+  },
+  {
+    "key": "297B",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "supersett over venstrepil"
+      }
+    }
+  },
+  {
+    "key": "29B3",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tomt sett med høgrepil over"
+      }
+    }
+  },
+  {
+    "key": "29B4",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tomt sett med venstrepil over"
+      }
+    }
+  },
+  {
+    "key": "29BD",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "oppoverpil gjennom sirkel"
+      }
+    }
+  },
+  {
+    "key": "29EA",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "svart diamant med nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "29EC",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "kvit sirkel med nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "29ED",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "svart sirkel med nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "2A17",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "integral med venstrepil med krok"
+      }
+    }
+  },
+  {
+    "key": "2B00",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit nord-austpil"
+      }
+    }
+  },
+  {
+    "key": "2B01",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit nord-vestpil"
+      }
+    }
+  },
+  {
+    "key": "2B02",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit sør-austpil"
+      }
+    }
+  },
+  {
+    "key": "2B03",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit sør-vestpil"
+      }
+    }
+  },
+  {
+    "key": "2B04",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvit venstre-høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2B05",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2B06",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart oppoverpil"
+      }
+    }
+  },
+  {
+    "key": "2B07",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart nedoverpil"
+      }
+    }
+  },
+  {
+    "key": "2B08",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart nord-austpil"
+      }
+    }
+  },
+  {
+    "key": "2B09",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart nord-vestpil"
+      }
+    }
+  },
+  {
+    "key": "2B0A",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart sør-austpil"
+      }
+    }
+  },
+  {
+    "key": "2B0B",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart sør-vestpil"
+      }
+    }
+  },
+  {
+    "key": "2B0C",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart venstre-høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2B0D",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "svart opp-nedpil"
+      }
+    }
+  },
+  {
+    "key": "2B0E",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med spissen nedover"
+      }
+    }
+  },
+  {
+    "key": "2B0F",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med spissen oppover"
+      }
+    }
+  },
+  {
+    "key": "2B10",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med spissen nedover"
+      }
+    }
+  },
+  {
+    "key": "2B11",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med spissen oppover"
+      }
+    }
+  },
+  {
+    "key": "2B30",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med liten sirkel"
+      }
+    }
+  },
+  {
+    "key": "2B31",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tre venstrepilar"
+      }
+    }
+  },
+  {
+    "key": "2B32",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil gjennom sirkel med plussteikn"
+      }
+    }
+  },
+  {
+    "key": "2B33",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "lang krusepil mot venstre"
+      }
+    }
+  },
+  {
+    "key": "2B34",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda venstrepil med vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "2B35",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda venstrepil med dobbel vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "2B36",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda venstrepil frå strek"
+      }
+    }
+  },
+  {
+    "key": "2B37",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda tre-stipla venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2B38",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med prikker"
+      }
+    }
+  },
+  {
+    "key": "2B39",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med hale med vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "2B3A",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med hale med dobbel vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "2B3B",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda venstrepil med hale"
+      }
+    }
+  },
+  {
+    "key": "2B3C",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda venstrepil med hale med vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "2B3D",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tohoda venstrepil med hale med dobbel vertikalstrek"
+      }
+    }
+  },
+  {
+    "key": "2B3E",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil gjennom x"
+      }
+    }
+  },
+  {
+    "key": "2B3F",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "bølgepil som peikar rett mot venstre"
+      }
+    }
+  },
+  {
+    "key": "2B40",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "er-lik-teikn over venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2B41",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tilde over venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2B42",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil over omvendt nesten-lik-teikn"
+      }
+    }
+  },
+  {
+    "key": "2B43",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil gjennom større enn"
+      }
+    }
+  },
+  {
+    "key": "2B44",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil gjennom supersett"
+      }
+    }
+  },
+  {
+    "key": "2B45",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvadruppel venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2B46",
+    "category": "So",
+    "mappings": {
+      "default": {
+        "default": "kvadruppel høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2B47",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tilde over høgrepil"
+      }
+    }
+  },
+  {
+    "key": "2B48",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil over omvendt nesten-lik-teikn"
+      }
+    }
+  },
+  {
+    "key": "2B49",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "tilde over venstrepil"
+      }
+    }
+  },
+  {
+    "key": "2B4A",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil over nesten-lik-teikn"
+      }
+    }
+  },
+  {
+    "key": "2B4B",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil over omvendt tilde"
+      }
+    }
+  },
+  {
+    "key": "2B4C",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil over omvendt tilde"
+      }
+    }
+  },
+  {
+    "key": "FFE9",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "venstrepil med halv bredde"
+      }
+    }
+  },
+  {
+    "key": "FFEA",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "oppoverpil med halv bredde"
+      }
+    }
+  },
+  {
+    "key": "FFEB",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "høgrepil med halv bredde"
+      }
+    }
+  },
+  {
+    "key": "FFEC",
+    "category": "Sm",
+    "mappings": {
+      "default": {
+        "default": "nedoverpil med halv bredde"
+      }
+    }
+  }
+]

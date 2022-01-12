@@ -29,7 +29,8 @@
       "UNDER": "निचे",
       "UNDERSCRIPT": "निम्नांक",
       "OVER": "ऊपर",
-      "OVERSCRIPT": "उर्ध्व लिपि"
+      "OVERSCRIPT": "उर्ध्व लिपि",
+      "ENDSCRIPTS": "लिपि समाप्त"
     },
     "MSroots": {},
     "font": {

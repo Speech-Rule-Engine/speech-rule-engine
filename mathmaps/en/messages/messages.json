@@ -29,7 +29,8 @@
       "UNDER": "Under",
       "UNDERSCRIPT": "Underscript",
       "OVER": "Over",
-      "OVERSCRIPT": "Overscript"
+      "OVERSCRIPT": "Overscript",
+      "ENDSCRIPTS": "Endscripts"
     },
     "MSroots": {},
     "font": {

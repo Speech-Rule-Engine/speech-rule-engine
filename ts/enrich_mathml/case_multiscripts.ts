@@ -14,75 +14,76 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with multiscripts elements.
- *
+ * @file Specialist computations to deal with multiscripts elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {SemanticSkeleton} from '../semantic_tree/semantic_skeleton';
-import {CaseMultiindex} from './case_multiindex';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { SemanticSkeleton } from '../semantic_tree/semantic_skeleton';
+import { CaseMultiindex } from './case_multiindex';
 import * as EnrichMathml from './enrich_mathml';
-
+import { setAttributes, Attribute } from './enrich_attr';
 
 export class CaseMultiscripts extends CaseMultiindex {
-
   /**
    * Applicability test of the case.
+   *
    * @param semantic The semantic node.
-   * @return True if case is applicable.
+   * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
     if (!semantic.mathmlTree) {
       return false;
     }
-    let mmlTag = DomUtil.tagName(semantic.mathmlTree);
-    return mmlTag === 'MMULTISCRIPTS' &&
-        (semantic.type === SemanticType.SUPERSCRIPT ||
-         semantic.type === SemanticType.SUBSCRIPT);
+    const mmlTag = DomUtil.tagName(semantic.mathmlTree);
+    return (
+      mmlTag === 'MMULTISCRIPTS' &&
+      (semantic.type === SemanticType.SUPERSCRIPT ||
+        semantic.type === SemanticType.SUBSCRIPT)
+    );
   }
-
 
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);
   }
 
-
   /**
    * @override
    */
   public getMathml() {
-    EnrichMathml.setAttributes(this.mml, this.semantic);
+    setAttributes(this.mml, this.semantic);
     let baseSem, rsup, rsub;
-    if (this.semantic.childNodes[0] &&
-        this.semantic.childNodes[0].role === SemanticRole.SUBSUP) {
-      let ignore = this.semantic.childNodes[0];
+    if (
+      this.semantic.childNodes[0] &&
+      this.semantic.childNodes[0].role === SemanticRole.SUBSUP
+    ) {
+      const ignore = this.semantic.childNodes[0];
       baseSem = ignore.childNodes[0];
       rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
       rsub = CaseMultiindex.multiscriptIndex(ignore.childNodes[1]);
-      let collapsed = [this.semantic.id, [ignore.id, baseSem.id, rsub], rsup];
+      const collapsed = [this.semantic.id, [ignore.id, baseSem.id, rsub], rsup];
       EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
-      this.mml.setAttribute(EnrichMathml.Attribute.TYPE, ignore.role);
-      this.completeMultiscript(
-         SemanticSkeleton.interleaveIds(rsub, rsup), []);
+      this.mml.setAttribute(Attribute.TYPE, ignore.role);
+      this.completeMultiscript(SemanticSkeleton.interleaveIds(rsub, rsup), []);
     } else {
       baseSem = this.semantic.childNodes[0];
       rsup = CaseMultiindex.multiscriptIndex(this.semantic.childNodes[1]);
-      let collapsed = [this.semantic.id, baseSem.id, rsup];
+      const collapsed = [this.semantic.id, baseSem.id, rsup];
       EnrichMathml.addCollapsedAttribute(this.mml, collapsed);
     }
-    let childIds = SemanticSkeleton.collapsedLeafs(rsub || [], rsup);
-    let base = EnrichMathml.walkTree((baseSem as SemanticNode));
+    const childIds = SemanticSkeleton.collapsedLeafs(rsub || [], rsup);
+    const base = EnrichMathml.walkTree(baseSem as SemanticNode);
     EnrichMathml.getInnerNode(base).setAttribute(
-        EnrichMathml.Attribute.PARENT, this.semantic.id.toString());
+      Attribute.PARENT,
+      this.semantic.id.toString()
+    );
     childIds.unshift(baseSem.id);
-    this.mml.setAttribute(EnrichMathml.Attribute.CHILDREN, childIds.join(','));
+    this.mml.setAttribute(Attribute.CHILDREN, childIds.join(','));
     return this.mml;
   }
 }

@@ -18,32 +18,32 @@
 //
 
 /**
- * @fileoverview Factory for trie nodes and concrete classes of trie nodes.
- *
+ * @file Factory for trie nodes and concrete classes of trie nodes.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
 import * as DomUtil from '../common/dom_util';
-import XpathUtil from '../common/xpath_util';
-import {Grammar} from '../rule_engine/grammar';
-import {MathCompoundStore} from '../rule_engine/math_simple_store';
-import {SpeechRuleContext} from '../rule_engine/speech_rule_context';
-import {AbstractTrieNode} from './abstract_trie_node';
-import {StaticTrieNode} from './abstract_trie_node';
-import {TrieNode, TrieNodeKind} from './trie_node';
-
+import * as XpathUtil from '../common/xpath_util';
+import { Grammar } from '../rule_engine/grammar';
+import * as MathCompoundStore from '../rule_engine/math_compound_store';
+import { SpeechRuleContext } from '../rule_engine/speech_rule_context';
+import { AbstractTrieNode } from './abstract_trie_node';
+import { StaticTrieNode } from './abstract_trie_node';
+import { TrieNode, TrieNodeKind } from './trie_node';
 
 /**
  * Generates a trie node of a given kind in the given rule store.
+ *
  * @param kind The kind of trie nodes.
  * @param constraint The constraint the trie node is generated for.
  * @param context A function context.
- * @return The newly generated trie node.
+ * @returns The newly generated trie node.
  */
 export function getNode(
-  kind: TrieNodeKind, constraint: string, context: SpeechRuleContext):
-     TrieNode|null {
+  kind: TrieNodeKind,
+  constraint: string,
+  context: SpeechRuleContext
+): TrieNode | null {
   switch (kind) {
     case TrieNodeKind.ROOT:
       return new RootTrieNode();
@@ -58,9 +58,7 @@ export function getNode(
   }
 }
 
-
 export class RootTrieNode extends AbstractTrieNode<Node> {
-
   /**
    * Creates the root node for the trie.
    */
@@ -68,22 +66,19 @@ export class RootTrieNode extends AbstractTrieNode<Node> {
     super('', () => true);
     this.kind = TrieNodeKind.ROOT;
   }
-
 }
 
-
 export class DynamicTrieNode extends AbstractTrieNode<string> {
-
   /**
    * @param constraint The constraint the node represents.
    */
   constructor(constraint: string) {
-    super(constraint, axis => axis === constraint);
+    super(constraint, (axis) => axis === constraint);
     this.kind = TrieNodeKind.DYNAMIC;
   }
 }
 
-let comparator: {[operator: string]: ((x: number, y: number) => boolean)} = {
+const comparator: { [operator: string]: (x: number, y: number) => boolean } = {
   '=': (x: number, y: number) => x === y,
   '!=': (x: number, y: number) => x !== y,
   '<': (x: number, y: number) => x < y,
@@ -94,103 +89,110 @@ let comparator: {[operator: string]: ((x: number, y: number) => boolean)} = {
 
 /**
  * Generates more refined tests depending on the type of static constraint.
+ *
  * @param constraint A static constraint.
- * @return An efficient test function in lieu of the
+ * @returns An efficient test function in lieu of the
  *    xpath expression.
  */
 // TODO (TS): Improve methods by testing for Element type.
-export function constraintTest_(constraint: string): ((p1: Node) => boolean)|
-    null {
+export function constraintTest_(
+  constraint: string
+): ((p1: Node) => boolean) | null {
   // @self::*
   if (constraint.match(/^self::\*$/)) {
-    return (_node => true);
+    return (_node) => true;
   }
   // @self::tagname
   if (constraint.match(/^self::\w+$/)) {
     const tag = constraint.slice(6).toUpperCase();
-    return ((node: Element) => node.tagName && DomUtil.tagName(node) === tag);
+    return (node: Element) => node.tagName && DomUtil.tagName(node) === tag;
   }
   // @self::namespace:tagname
   if (constraint.match(/^self::\w+:\w+$/)) {
-    let inter = constraint.split(':');
-    let namespace = XpathUtil.resolveNameSpace(inter[2]);
+    const inter = constraint.split(':');
+    const namespace = XpathUtil.resolveNameSpace(inter[2]);
     if (!namespace) {
       return null;
     }
-    let tag = inter[3].toUpperCase();
-    return ((node: Element) =>
-      node.localName && node.localName.toUpperCase() === tag &&
-      node.namespaceURI === namespace);
+    const tag = inter[3].toUpperCase();
+    return (node: Element) =>
+      node.localName &&
+      node.localName.toUpperCase() === tag &&
+      node.namespaceURI === namespace;
   }
   // @attr
   if (constraint.match(/^@\w+$/)) {
-    let attr = constraint.slice(1);
-    return ((node: Element) =>
-      node.hasAttribute && node.hasAttribute(attr));
+    const attr = constraint.slice(1);
+    return (node: Element) => node.hasAttribute && node.hasAttribute(attr);
   }
   // @attr="value"
   if (constraint.match(/^@\w+="[\w\d ]+"$/)) {
-    let split = constraint.split('=');
-    let attr = split[0].slice(1);
-    let value = split[1].slice(1, -1);
-    return ((node: Element) =>
-      node.hasAttribute && node.hasAttribute(attr) &&
-      node.getAttribute(attr) === value);
+    const split = constraint.split('=');
+    const attr = split[0].slice(1);
+    const value = split[1].slice(1, -1);
+    return (node: Element) =>
+      node.hasAttribute &&
+      node.hasAttribute(attr) &&
+      node.getAttribute(attr) === value;
   }
   // @attr!="value"
   if (constraint.match(/^@\w+!="[\w\d ]+"$/)) {
-    let split = constraint.split('!=');
-    let attr = split[0].slice(1);
-    let value = split[1].slice(1, -1);
-    return ((node: Element) =>
-      !node.hasAttribute || !node.hasAttribute(attr) ||
-      node.getAttribute(attr) !== value);
+    const split = constraint.split('!=');
+    const attr = split[0].slice(1);
+    const value = split[1].slice(1, -1);
+    return (node: Element) =>
+      !node.hasAttribute ||
+      !node.hasAttribute(attr) ||
+      node.getAttribute(attr) !== value;
   }
   // contains(@grammar, "something")
   if (constraint.match(/^contains\(\s*@grammar\s*,\s*"[\w\d ]+"\s*\)$/)) {
-    let split = constraint.split('"');
-    let value = split[1];
-    return ((_node: Element) =>
-      !!Grammar.getInstance().getParameter(value));
+    const split = constraint.split('"');
+    const value = split[1];
+    return (_node: Element) => !!Grammar.getInstance().getParameter(value);
   }
   // not(contains(@grammar, "something"))
-  if (constraint.match(
-          /^not\(\s*contains\(\s*@grammar\s*,\s*"[\w\d ]+"\s*\)\s*\)$/)) {
-    let split = constraint.split('"');
-    let value = split[1];
-    return ((_node: Element) =>
-      !Grammar.getInstance().getParameter(value));
+  if (
+    constraint.match(
+      /^not\(\s*contains\(\s*@grammar\s*,\s*"[\w\d ]+"\s*\)\s*\)$/
+    )
+  ) {
+    const split = constraint.split('"');
+    const value = split[1];
+    return (_node: Element) => !Grammar.getInstance().getParameter(value);
   }
   // name(../..)="something"
   if (constraint.match(/^name\(\.\.\/\.\.\)="\w+"$/)) {
-    let split = constraint.split('"');
-    let tag = split[1].toUpperCase();
-    return ((node: Element) =>
+    const split = constraint.split('"');
+    const tag = split[1].toUpperCase();
+    return (node: Element) =>
       (node.parentNode?.parentNode as Element)?.tagName &&
-      DomUtil.tagName(node.parentNode.parentNode as Element) === tag);
+      DomUtil.tagName(node.parentNode.parentNode as Element) === tag;
   }
   // count(preceding-sibling::*)=n
   if (constraint.match(/^count\(preceding-sibling::\*\)=\d+$/)) {
-    let split = constraint.split('=');
-    let num = parseInt(split[1], 10);
-    return ((node: Element) =>
-      node.parentNode?.childNodes[num] === node);
+    const split = constraint.split('=');
+    const num = parseInt(split[1], 10);
+    return (node: Element) => node.parentNode?.childNodes[num] === node;
   }
   // category constraint
   // xpath[@constraint!?="xy"]
-  if (constraint.match(/^.+\[@category!?=\".+\"\]$/)) {
-    let [, query, equality, category] =
-        constraint.match(/^(.+)\[@category(!?=)\"(.+)\"\]$/);
-    let unit = category.match(/^unit:(.+)$/);
+  if (constraint.match(/^.+\[@category!?=".+"\]$/)) {
+    let [, query, equality, category] = constraint.match(
+      /^(.+)\[@category(!?=)"(.+)"\]$/
+    );
+    const unit = category.match(/^unit:(.+)$/);
     let add = '';
     if (unit) {
       category = unit[1];
       add = ':unit';
     }
     return (node: Element) => {
-      let xpath = XpathUtil.evalXPath(query, node)[0];
+      const xpath = XpathUtil.evalXPath(query, node)[0];
       if (xpath) {
-        let result = MathCompoundStore.lookupCategory(xpath.textContent + add);
+        const result = MathCompoundStore.lookupCategory(
+          xpath.textContent + add
+        );
         return equality === '=' ? result === category : result !== category;
       }
       return false;
@@ -199,12 +201,13 @@ export function constraintTest_(constraint: string): ((p1: Node) => boolean)|
   // string-length adapted for unicode.
   // string-length(xpath)!?=<>\d
   if (constraint.match(/^string-length\(.+\)\W+\d+/)) {
-    let [, select, comp, count] =
-      constraint.match(/^string-length\((.+)\)(\W+)(\d+)/);
-    let func = comparator[comp] || comparator['='];
-    let numb = parseInt(count, 10);
+    const [, select, comp, count] = constraint.match(
+      /^string-length\((.+)\)(\W+)(\d+)/
+    );
+    const func = comparator[comp] || comparator['='];
+    const numb = parseInt(count, 10);
     return (node: Element) => {
-      let xpath = XpathUtil.evalXPath(select, node)[0];
+      const xpath = XpathUtil.evalXPath(select, node)[0];
       if (!xpath) {
         return false;
       }
@@ -218,9 +221,7 @@ export function constraintTest_(constraint: string): ((p1: Node) => boolean)|
   return null;
 }
 
-
 export class QueryTrieNode extends StaticTrieNode {
-
   /**
    * @param constraint The constraint the node represents.
    * @param context The rule context.
@@ -230,20 +231,17 @@ export class QueryTrieNode extends StaticTrieNode {
     this.kind = TrieNodeKind.QUERY;
   }
 
-
   /**
    * @override
    */
   public applyTest(object: Node) {
-    return this.test ?
-        this.test(object) :
-        this.context.applyQuery(object, this.constraint) === object;
+    return this.test
+      ? this.test(object)
+      : this.context.applyQuery(object, this.constraint) === object;
   }
 }
 
-
 export class BooleanTrieNode extends StaticTrieNode {
-
   /**
    * @param constraint The constraint the node represents.
    * @param context The rule context.
@@ -256,9 +254,9 @@ export class BooleanTrieNode extends StaticTrieNode {
   /**
    * @override
    */
-  public applyTest(object: Node ) {
-    return this.test ? this.test(object) :
-      this.context.applyConstraint(object, this.constraint);
+  public applyTest(object: Node) {
+    return this.test
+      ? this.test(object)
+      : this.context.applyConstraint(object, this.constraint);
   }
-
 }

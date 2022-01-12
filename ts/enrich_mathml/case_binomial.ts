@@ -14,20 +14,18 @@
 // limitations under the License.
 
 /**
- * @fileoverview Specialist computations to deal with line elements.
- *
+ * @file Specialist computations to deal with line elements.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
 import * as DomUtil from '../common/dom_util';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-import {SemanticNode} from '../semantic_tree/semantic_node';
-import {AbstractEnrichCase} from './abstract_enrich_case';
-import * as EnrichMathml from './enrich_mathml';
-
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
+import { SemanticNode } from '../semantic_tree/semantic_node';
+import { AbstractEnrichCase } from './abstract_enrich_case';
+import { walkTree } from './enrich_mathml';
+import { setAttributes, Attribute } from './enrich_attr';
 
 export class CaseBinomial extends AbstractEnrichCase {
-
   /**
    * The actual mml tree.
    */
@@ -35,24 +33,25 @@ export class CaseBinomial extends AbstractEnrichCase {
 
   /**
    * Applicability test of the case.
+   *
    * @param semantic The semantic node.
-   * @return True if case is applicable.
+   * @returns True if case is applicable.
    */
   public static test(semantic: SemanticNode): boolean {
-    return !semantic.mathmlTree && semantic.type === SemanticType.LINE &&
-        semantic.role === SemanticRole.BINOMIAL;
+    return (
+      !semantic.mathmlTree &&
+      semantic.type === SemanticType.LINE &&
+      semantic.role === SemanticRole.BINOMIAL
+    );
   }
-
 
   /**
    * @override
-   * @final
    */
   constructor(semantic: SemanticNode) {
     super(semantic);
     this.mml = semantic.mathmlTree;
   }
-
 
   /**
    * @override
@@ -61,17 +60,17 @@ export class CaseBinomial extends AbstractEnrichCase {
     if (!this.semantic.childNodes.length) {
       return this.mml;
     }
-    let child = this.semantic.childNodes[0];
-    this.mml = EnrichMathml.walkTree((child as SemanticNode));
+    const child = this.semantic.childNodes[0];
+    this.mml = walkTree(child as SemanticNode);
     // Adds a redundant mrow to include the line information.
-    if (this.mml.hasAttribute(EnrichMathml.Attribute.TYPE)) {
-      let mrow = DomUtil.createElement('mrow');
-      mrow.setAttribute(EnrichMathml.Attribute.ADDED, 'true');
+    if (this.mml.hasAttribute(Attribute.TYPE)) {
+      const mrow = DomUtil.createElement('mrow');
+      mrow.setAttribute(Attribute.ADDED, 'true');
       DomUtil.replaceNode(this.mml, mrow);
       mrow.appendChild(this.mml);
       this.mml = mrow;
     }
-    EnrichMathml.setAttributes(this.mml, this.semantic);
+    setAttributes(this.mml, this.semantic);
     return this.mml;
   }
 }

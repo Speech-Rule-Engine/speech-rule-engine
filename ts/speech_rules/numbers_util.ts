@@ -14,150 +14,93 @@
 // limitations under the License.
 
 /**
- * @fileoverview Utility functions for translating numbers.
+ * @file Utility functions for translating numbers.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {Span} from '../audio/span';
+import { Span } from '../audio/span';
 import * as DomUtil from '../common/dom_util';
-import {LOCALE} from '../l10n/locale';
-import {SemanticRole, SemanticType} from '../semantic_tree/semantic_attr';
-
+import { LOCALE } from '../l10n/locale';
+import { convertVulgarFraction } from '../l10n/transformers';
 
 // Number transformation
 /**
  * Simple counter function for counting ordinals.
- * @param node The node for the context function.
+ *
+ * @param _node The node for the context function.
  * @param context The context string.
- * @return The context function returning ordinals.
+ * @returns The context function returning ordinals.
  */
 export function ordinalCounter(_node: Node, context: string): () => string {
   let counter = 0;
-  return function() {
-    return LOCALE.NUMBERS.simpleOrdinal(++counter) + ' ' + context;
+  return function () {
+    return LOCALE.NUMBERS.numericOrdinal(++counter) + ' ' + context;
   };
 }
 
-
 /**
  * Simple counter function for counting ordinals.
- * @param node The node for the context function.
+ *
+ * @param _node The node for the context function.
  * @param context The context string.
- * @return The context function returning ordinals.
+ * @returns The context function returning ordinals.
  */
 export function wordCounter(_node: Element, context: string): () => string {
   let counter = 0;
-  return function() {
+  return function () {
     return LOCALE.NUMBERS.numberToOrdinal(++counter, false) + ' ' + context;
   };
 }
 
-
-interface Convertible {
-  convertible: boolean;
-  content?: string;
-  denominator?: number;
-  enumerator?: number;
-}
-
-
-/**
- * Checks if a fraction is a convertible vulgar fraction. In this case it
- * translates enumerator and the denominator.
- * @param node Fraction node to be translated.
- * @return {{convertible: boolean,
- *           content: string} | {convertible: boolean,
- *           denominator: number,
- *           enumerator: number}} If convertible denominator and
- *     enumerator are set. Otherwise only the text content is given.
- */
-export function convertVulgarFraction_(node: Element): Convertible {
-  // TODO (TS): Optional chaining.
-  if (!node.childNodes || !node.childNodes[0] ||
-      !node.childNodes[0].childNodes ||
-      node.childNodes[0].childNodes.length < 2 ||
-     (node.childNodes[0].childNodes[0] as Element).tagName !==
-          SemanticType.NUMBER ||
-      (node.childNodes[0].childNodes[0] as Element).getAttribute('role') !==
-          SemanticRole.INTEGER ||
-      (node.childNodes[0].childNodes[1] as Element).tagName !==
-          SemanticType.NUMBER ||
-      (node.childNodes[0].childNodes[1] as Element).getAttribute('role') !==
-       SemanticRole.INTEGER
-     ) {
-    return {convertible: false, content: node.textContent};
-  }
-  let denStr = node.childNodes[0].childNodes[1].textContent;
-  let enumStr = node.childNodes[0].childNodes[0].textContent;
-  let denominator = Number(denStr);
-  let enumerator = Number(enumStr);
-  if (isNaN(denominator) || isNaN(enumerator)) {
-    return {
-      convertible: false,
-      content: enumStr + ' ' + LOCALE.MESSAGES.MS.FRAC_OVER + ' ' + denStr
-    };
-  }
-  return {convertible: true, enumerator: enumerator, denominator: denominator};
-}
-
-
 /**
  * Converts a vulgar fraction into string representation of enumerator and
  * denominator as ordinal.
+ *
  * @param node Fraction node to be translated.
- * @return The string representation if it is a valid
+ * @returns The string representation if it is a valid
  *     vulgar fraction.
  */
-export function vulgarFraction(node: Element): string|Span[] {
-  let conversion = convertVulgarFraction_(node);
-  if (conversion.convertible && conversion.enumerator &&
-      conversion.denominator) {
+export function vulgarFraction(node: Element): string | Span[] {
+  const conversion = convertVulgarFraction(node, LOCALE.MESSAGES.MS.FRAC_OVER);
+  if (
+    conversion.convertible &&
+    conversion.enumerator &&
+    conversion.denominator
+  ) {
     return [
       new Span(LOCALE.NUMBERS.numberToWords(conversion.enumerator), {
-        extid: (node.childNodes[0].childNodes[0] as Element).getAttribute('extid'),
+        extid: (node.childNodes[0].childNodes[0] as Element).getAttribute(
+          'extid'
+        ),
         separator: ''
       }),
-      new Span(LOCALE.NUMBERS.vulgarSep, {separator: ''}),
+      new Span(LOCALE.NUMBERS.vulgarSep, { separator: '' }),
       new Span(
-          LOCALE.NUMBERS.numberToOrdinal(
-              conversion.denominator, conversion.enumerator !== 1),
-        {extid: (node.childNodes[0].childNodes[1] as Element).getAttribute('extid')})
+        LOCALE.NUMBERS.numberToOrdinal(
+          conversion.denominator,
+          conversion.enumerator !== 1
+        ),
+        {
+          extid: (node.childNodes[0].childNodes[1] as Element).getAttribute(
+            'extid'
+          )
+        }
+      )
     ];
   }
-  return [new Span(
-      conversion.content || '', {extid: node.getAttribute('extid')})];
+  return [
+    new Span(conversion.content || '', { extid: node.getAttribute('extid') })
+  ];
 }
-
-
-/**
- * Checks if a vulgar fraction is small enough to be convertible to string in
- * MathSpeak, i.e. enumerator in [1..9] and denominator in [1..99].
- * @param node Fraction node to be tested.
- * @param enumer Enumerator maximum.
- * @param denom Denominator maximum.
- * @return True if it is a valid, small enough fraction.
- */
-export function vulgarFractionSmall(
-    node: Element, enumer: number, denom: number): boolean {
-  let conversion = convertVulgarFraction_(node);
-  if (conversion.convertible) {
-    let enumerator = conversion.enumerator;
-    let denominator = conversion.denominator;
-    return enumerator > 0 && enumerator < enumer && denominator > 0 &&
-        denominator < denom;
-  }
-  return false;
-}
-
 
 /**
  * String function to turn a child position into an ordinal.
+ *
  * @param node The node for the string function.
- * @return The ordinal string corresponding to the child position of
+ * @returns The ordinal string corresponding to the child position of
  *     the node.
  */
 export function ordinalPosition(node: Node): string {
-  let children = DomUtil.toArray(node.parentNode.childNodes);
-  return LOCALE.NUMBERS.simpleOrdinal(children.indexOf(node) + 1).toString();
+  const children = DomUtil.toArray(node.parentNode.childNodes);
+  return LOCALE.NUMBERS.numericOrdinal(children.indexOf(node) + 1).toString();
 }

@@ -64,21 +64,21 @@
       "Precondition",
       "element",
       "default",
-      "self::infixop[@role=\"element\"]"
+      "self::infixop[contains(@role, \"element\")]"
     ],
     [
       "Precondition",
       "element-in-set",
       "default",
-      "self::infixop[@role=\"element\"]",
-      "contains(@grammar, \"setext\")"
+      "self::infixop[contains(@role, \"element\")]",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",
       "element-in-set-woall",
       "Sets_woAll",
-      "self::infixop[@role=\"element\"]",
-      "contains(@grammar, \"setext\")"
+      "self::infixop[contains(@role, \"element\")]",
+      "contains(@annotation, \"set:intensional\")"
     ],
     [
       "Precondition",

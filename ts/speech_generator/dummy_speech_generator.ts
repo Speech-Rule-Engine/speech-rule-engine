@@ -14,19 +14,14 @@
 // limitations under the License.
 
 /**
- * @fileoverview Dummy speech generator that rebuilds the semantic tree and
+ * @file Dummy speech generator that rebuilds the semantic tree and
  *     connects mactions, but always returns the empty speech string.
- *
- *
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-
-import {AbstractSpeechGenerator} from './abstract_speech_generator';
-
+import { AbstractSpeechGenerator } from './abstract_speech_generator';
 
 export class DummySpeechGenerator extends AbstractSpeechGenerator {
-
   /**
    * @override
    */

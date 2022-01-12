@@ -14,15 +14,42 @@
 // limitations under the License.
 
 /**
- * @fileoverview Procedure for special case in semantic enrichment of MathML.
+ * @file Procedure for special case in semantic enrichment of MathML.
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
+import { SemanticNode } from '../semantic_tree/semantic_node';
 
 export interface EnrichCase {
   /**
    * Retrieves the MathML node that is the result of the computation.
-   * @return The enriched MathML node.
+   *
+   * @returns The enriched MathML node.
    */
   getMathml(): Element;
 }
+
+export interface Case {
+  test: (p1: SemanticNode) => boolean;
+  constr: (p1: SemanticNode) => EnrichCase;
+}
+
+/**
+ * Returns the embellished case analysis.
+ *
+ * @param node The semantic node.
+ * @returns The case analysis.
+ */
+export function getCase(node: SemanticNode): EnrichCase {
+  for (let i = 0, enrich; (enrich = factory[i]); i++) {
+    if (enrich.test(node)) {
+      return enrich.constr(node);
+    }
+  }
+  return null;
+}
+
+/**
+ * The cases of the factory can provide.
+ */
+export const factory: Case[] = [];

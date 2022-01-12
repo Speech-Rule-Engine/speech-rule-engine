@@ -181,7 +181,7 @@
     [
       "Action",
       "abstr-vector",
-      "[t] count(./children/*) ; [t] \"dimensionaler Vektor\""
+      "[t] count(./children/*); [t] \"dimensionaler Vektor\""
     ],
     [
       "Action",
@@ -241,7 +241,7 @@
     [
       "Action",
       "abstr-matrix",
-      "[t] count(children/*);  [t] \"mal\";[t] count(children/*[1]/children/*); [t] \"Matrize\""
+      "[t] count(children/*); [t] \"mal\"; [t] count(children/*[1]/children/*); [t] \"Matrize\""
     ],
     [
       "Action",
@@ -256,7 +256,7 @@
     [
       "Action",
       "abstr-cases",
-      "[t] \"Fallunterscheidung\";[t] \"mit\"; [t] count(children/*); [t] \"Fällen\""
+      "[t] \"Fallunterscheidung\"; [t] \"mit\"; [t] count(children/*); [t] \"Fällen\""
     ],
     [
       "Action",
@@ -276,12 +276,12 @@
     [
       "Action",
       "abstr-punctuated-brief",
-      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste\";"
+      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste\""
     ],
     [
       "Action",
       "abstr-punctuated-var",
-      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste\";[t] \"veränderlicher Länge\""
+      "[t] \"mit\"; [n] content/*[1]; [t] \"getrennte Liste\"; [t] \"veränderlicher Länge\""
     ],
     [
       "Action",
@@ -296,22 +296,22 @@
     [
       "Action",
       "abstr-relation",
-      "[t] @role (grammar:localRole);"
+      "[t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-relation-seq",
-      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\"; [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\""
+      "[t] @role (join:\"\", grammar:localRole); [t] \"ssequenz\"; [t] \"mit\"; [t] count(./children/*); [t] \"Elementen\""
     ],
     [
       "Action",
       "abstr-relation-seq-brief",
-      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\""
+      "[t] @role (join:\"\", grammar:localRole); [t] \"ssequenz\""
     ],
     [
       "Action",
       "abstr-relation-var",
-      "[t] @role (grammar:localRole, join:\"\"); [t] \"ssequenz\";[t] \"mit veränderlicher Anzahl an Elementen\""
+      "[t] @role (join:\"\", grammar:localRole); [t] \"ssequenz\"; [t] \"mit veränderlicher Anzahl an Elementen\""
     ],
     [
       "Action",
@@ -331,22 +331,22 @@
     [
       "Action",
       "abstr-table",
-      "[t] \"Tabelle mit\"; [t] count(children/*); [t] \"Zeilen und\";[t] count(children/*[1]/children/*); [t] \"Spalten\""
+      "[t] \"Tabelle mit\"; [t] count(children/*); [t] \"Zeilen und\"; [t] count(children/*[1]/children/*); [t] \"Spalten\""
     ],
     [
       "Action",
       "abstr-line",
-      "[t] \"in\"; [t] @role (grammar:localRole);"
+      "[t] \"in\"; [t] @role (grammar:localRole)"
     ],
     [
       "Action",
       "abstr-row",
-      "[t] \"in\"; [t] @role (grammar:localRole);[t] count(preceding-sibling::..); [t] \"mit\";[t] count(children/*); [t] \"Spalten\""
+      "[t] \"in\"; [t] @role (grammar:localRole); [t] count(preceding-sibling::..); [t] \"mit\"; [t] count(children/*); [t] \"Spalten\""
     ],
     [
       "Action",
       "abstr-cell",
-      "[t] \"in\"; [t] @role (grammar:localRole);"
+      "[t] \"in\"; [t] @role (grammar:localRole)"
     ]
   ]
 }
