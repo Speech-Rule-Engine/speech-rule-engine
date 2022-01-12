@@ -130,6 +130,15 @@
     ],
     [
       "Precondition",
+      "unit-quad",
+      "default",
+      "self::superscript[@role=\"unit\"]",
+      "children/*[2][text()=4]",
+      "name(children/*[1])=\"identifier\"",
+      "children/*[1][@category=\"unit:length\"]"
+    ],
+    [
+      "Precondition",
       "vbar-divides",
       "default",
       "self::punctuated",
