@@ -1410,7 +1410,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "속이 비어있는 절반 대괄호 열고"
+        "default": "속이 빈 절반 대괄호 열고"
       }
     },
     "key": "300E"
@@ -1419,7 +1419,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "속이 비어있는 절반 대괄호 닫고"
+        "default": "속이 빈 절반 대괄호 닫고"
       }
     },
     "key": "300F"
@@ -1464,7 +1464,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "속이 비어있는 오목렌즈 모양 괄호 열고"
+        "default": "속이 빈 오목렌즈 모양 괄호 열고"
       }
     },
     "key": "3016"
@@ -1473,7 +1473,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "속이 비어있는 오목렌즈 모양 괄호 닫고"
+        "default": "속이 빈 오목렌즈 모양 괄호 닫고"
       }
     },
     "key": "3017"
@@ -1482,7 +1482,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "속이 비어있는 거북이 모양 대괄호 열고"
+        "default": "속이 빈 거북이 모양 대괄호 열고"
       }
     },
     "key": "3018"
@@ -1491,7 +1491,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "속이 비어있는 거북이 모양 대괄호 닫고"
+        "default": "속이 빈 거북이 모양 대괄호 닫고"
       }
     },
     "key": "3019"
@@ -1500,7 +1500,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "속이 비어있는 대괄호 열고"
+        "default": "속이 빈 대괄호 열고"
       }
     },
     "key": "301A"
@@ -1509,7 +1509,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "속이 비어있는 대괄호 닫고"
+        "default": "속이 빈 대괄호 닫고"
       }
     },
     "key": "301B"
@@ -1571,7 +1571,7 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "시계 방향으로 회전한 속이 비어있는 오목렌즈 모양의 괄호의 발표 형식"
+        "default": "시계 방향으로 회전한 속이 빈 오목렌즈 모양의 괄호의 발표 형식"
       }
     },
     "key": "FE17"
@@ -1580,7 +1580,7 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "반시계 방향으로 회전한 속이 비어있는 오목렌즈 모양의 괄호의 발표 형식"
+        "default": "반시계 방향으로 회전한 속이 빈 오목렌즈 모양의 괄호의 발표 형식"
       }
     },
     "key": "FE18"
@@ -1923,11 +1923,11 @@
     "category": "Ps",
     "mappings": {
       "default": {
-        "default": "전각 속이 비어있는 괄호 열고"
+        "default": "전각 속이 빈 괄호 열고"
       },
       "mathspeak": {
-        "brief": "전각 속이 비어있는 괄호 열고",
-        "sbrief": "전각 속이 비어있는 괄호 열고"
+        "brief": "전각 속이 빈 괄호 열고",
+        "sbrief": "전각 속이 빈 괄호 열고"
       }
     },
     "key": "FF5F"
@@ -1936,11 +1936,11 @@
     "category": "Pe",
     "mappings": {
       "default": {
-        "default": "전각 속이 비어있는 괄호 닫고"
+        "default": "전각 속이 빈 괄호 닫고"
       },
       "mathspeak": {
-        "brief": "전각 속이 비어있는 쪽 괄호",
-        "sbrief": "전각 속이 비어있는 괄호 닫고"
+        "brief": "전각 속이 빈 쪽 괄호",
+        "sbrief": "전각 속이 빈 괄호 닫고"
       }
     },
     "key": "FF60"

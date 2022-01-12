@@ -1173,10 +1173,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "촉이 비어잇는 왼쪽 화살표"
+        "default": "촉이 빈 왼쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "촉이 비어잇는 왼쪽 화살표"
+        "sbrief": "촉이 빈 왼쪽 화살표"
       }
     },
     "key": "21FD"
@@ -1185,10 +1185,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "촉이 비어잇는 오른쪽 화살표"
+        "default": "촉이 빈 오른쪽 화살표"
       },
       "mathspeak": {
-        "sbrief": "촉이 비어잇는 오른쪽 화살표"
+        "sbrief": "촉이 빈 오른쪽 화살표"
       }
     },
     "key": "21FE"
@@ -1197,10 +1197,10 @@
     "category": "Sm",
     "mappings": {
       "default": {
-        "default": "촉이 비어잇는 좌우 화살표"
+        "default": "촉이 빈 좌우 화살표"
       },
       "mathspeak": {
-        "sbrief": "촉이 비어잇는 좌우 화살표"
+        "sbrief": "촉이 빈 좌우 화살표"
       }
     },
     "key": "21FF"
