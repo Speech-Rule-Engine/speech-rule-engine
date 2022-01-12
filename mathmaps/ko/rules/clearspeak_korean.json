@@ -103,6 +103,26 @@
       "interval-open-inf-lr"
     ],
     [
+      "Ignore",
+      "natural-numbers-super"
+    ],
+    [
+      "Ignore",
+      "integers-super"
+    ],
+    [
+      "Ignore",
+      "rational-numbers-super"
+    ],
+    [
+      "Ignore",
+      "real-numbers-super"
+    ],
+    [
+      "Ignore",
+      "complex-numbers-super"
+    ],
+    [
       "Precondition",
       "quad",
       "default",

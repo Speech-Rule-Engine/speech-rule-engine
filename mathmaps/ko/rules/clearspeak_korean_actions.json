@@ -791,6 +791,31 @@
     ],
     [
       "Action",
+      "natural-numbers-super",
+      "[n] children/*[2] (grammar:numbers2alpha); [t] \"차원 자연수 집합\""
+    ],
+    [
+      "Action",
+      "integers-super",
+      "[n] children/*[2] (grammar:numbers2alpha); [t] \"차원 정수 집합\""
+    ],
+    [
+      "Action",
+      "rational-numbers-super",
+      "[n] children/*[2] (grammar:numbers2alpha); [t] \"차원 유리수 집합\""
+    ],
+    [
+      "Action",
+      "real-numbers-super",
+      "[n] children/*[2] (grammar:numbers2alpha); [t] \"차원 실수 집합\""
+    ],
+    [
+      "Action",
+      "complex-numbers-super",
+      "[n] children/*[2] (grammar:numbers2alpha); [t] \"차원 복소수 집합\""
+    ],
+    [
+      "Action",
       "natural-numbers-with-zero",
       "[t] \"영을 포함한 자연수 집합\" (span:.)"
     ],
