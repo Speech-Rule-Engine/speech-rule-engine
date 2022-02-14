@@ -60,6 +60,7 @@ export default class Engine {
    * String feature vector.
    */
   public static STRING_FEATURES: string[] = [
+    'delay',
     'markup',
     'style',
     'domain',
@@ -96,6 +97,8 @@ export default class Engine {
    * The mode in which the engine is running (sync, async, http).
    */
   public mode: EngineConst.Mode = EngineConst.Mode.SYNC;
+
+  public delay: boolean = false;
 
   /**
    * Maps domains to comparators.
