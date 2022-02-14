@@ -18,21 +18,21 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as AuralRendering from '../audio/aural_rendering';
-import * as Enrich from '../enrich_mathml/enrich';
-import * as HighlighterFactory from '../highlighter/highlighter_factory';
-import { LOCALE } from '../l10n/locale';
-import * as Semantic from '../semantic_tree/semantic';
-import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory';
-import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util';
-import * as WalkerFactory from '../walker/walker_factory';
-import * as WalkerUtil from '../walker/walker_util';
-import * as DomUtil from './dom_util';
-import Engine, { SREError } from './engine';
-import * as EngineConst from '../common/engine_const';
-import { KeyCode } from './event_util';
-import { Processor, KeyProcessor } from './processor';
-import * as XpathUtil from './xpath_util';
+import * as AuralRendering from '../audio/aural_rendering.js';
+import * as Enrich from '../enrich_mathml/enrich.js';
+import * as HighlighterFactory from '../highlighter/highlighter_factory.js';
+import { LOCALE } from '../l10n/locale.js';
+import * as Semantic from '../semantic_tree/semantic.js';
+import * as SpeechGeneratorFactory from '../speech_generator/speech_generator_factory.js';
+import * as SpeechGeneratorUtil from '../speech_generator/speech_generator_util.js';
+import * as WalkerFactory from '../walker/walker_factory.js';
+import * as WalkerUtil from '../walker/walker_util.js';
+import * as DomUtil from './dom_util.js';
+import Engine, { SREError } from './engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import { KeyCode } from './event_util.js';
+import { Processor, KeyProcessor } from './processor.js';
+import * as XpathUtil from './xpath_util.js';
 
 const PROCESSORS = new Map();
 

@@ -18,10 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { setdifference } from '../common/base_util';
-import * as EngineConst from '../common/engine_const';
-import { AuditoryDescription } from './auditory_description';
-import { Span } from './span';
+import { setdifference } from '../common/base_util.js';
+import * as EngineConst from '../common/engine_const.js';
+import { AuditoryDescription } from './auditory_description.js';
+import { Span } from './span.js';
 
 export interface Tags {
   open?: EngineConst.personalityProps[];

@@ -22,11 +22,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import Engine from '../common/engine';
-import * as LocaleUtil from '../l10n/locale_util';
-import { LOCALE } from '../l10n/locale';
-import { DynamicCstr } from './dynamic_cstr';
+import * as DomUtil from '../common/dom_util.js';
+import Engine from '../common/engine.js';
+import * as LocaleUtil from '../l10n/locale_util.js';
+import { LOCALE } from '../l10n/locale.js';
+import { DynamicCstr } from './dynamic_cstr.js';
 
 type Value = boolean | string;
 

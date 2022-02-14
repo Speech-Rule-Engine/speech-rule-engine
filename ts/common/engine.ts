@@ -19,11 +19,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as Dcstr from '../rule_engine/dynamic_cstr';
-import * as EngineConst from './engine_const';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as Dcstr from '../rule_engine/dynamic_cstr.js';
+import * as EngineConst from './engine_const.js';
 
-import { Debugger } from './debugger';
+import { Debugger } from './debugger.js';
 
 declare const SREfeature: { [key: string]: any };
 

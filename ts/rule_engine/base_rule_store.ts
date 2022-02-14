@@ -22,18 +22,18 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
+import { AuditoryDescription } from '../audio/auditory_description.js';
 import {
   Axis,
   AxisOrder,
   DynamicCstr,
   DynamicCstrParser
 } from './dynamic_cstr';
-import { Action, Precondition, SpeechRule } from './speech_rule';
-import { SpeechRuleContext } from './speech_rule_context';
-import { SpeechRuleEvaluator } from './speech_rule_evaluator';
-import { SpeechRuleFunction } from './speech_rule_functions';
-import { SpeechRuleStore } from './speech_rule_store';
+import { Action, Precondition, SpeechRule } from './speech_rule.js';
+import { SpeechRuleContext } from './speech_rule_context.js';
+import { SpeechRuleEvaluator } from './speech_rule_evaluator.js';
+import { SpeechRuleFunction } from './speech_rule_functions.js';
+import { SpeechRuleStore } from './speech_rule_store.js';
 
 export abstract class BaseRuleStore
   implements SpeechRuleEvaluator, SpeechRuleStore

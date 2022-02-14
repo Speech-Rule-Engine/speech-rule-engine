@@ -22,9 +22,9 @@
 // This work was sponsored by BTAA (Big Ten Academic Alliance).
 //
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import { activate } from '../semantic_tree/semantic_annotations';
-import { MathStore } from './math_store';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { activate } from '../semantic_tree/semantic_annotations.js';
+import { MathStore } from './math_store.js';
 
 /**
  * Braille rule store.

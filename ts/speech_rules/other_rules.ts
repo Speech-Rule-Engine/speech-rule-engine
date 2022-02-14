@@ -18,13 +18,13 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import { SpeechRuleStore } from '../rule_engine/speech_rule_store';
-import * as StoreUtil from '../rule_engine/store_util';
+import { SpeechRuleStore } from '../rule_engine/speech_rule_store.js';
+import * as StoreUtil from '../rule_engine/store_util.js';
 
-import * as MathspeakUtil from './mathspeak_util';
-import * as NemethUtil from './nemeth_util';
-import * as NumbersUtil from './numbers_util';
-import * as SpeechRules from './speech_rules';
+import * as MathspeakUtil from './mathspeak_util.js';
+import * as NemethUtil from './nemeth_util.js';
+import * as NumbersUtil from './numbers_util.js';
+import * as SpeechRules from './speech_rules.js';
 
 /**
  * Adds the custom functions for the prefix rules.

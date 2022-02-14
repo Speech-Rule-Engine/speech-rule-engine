@@ -18,18 +18,18 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { CaseBinomial } from './case_binomial';
-import { CaseDoubleScript } from './case_double_script';
-import { CaseEmbellished } from './case_embellished';
-import { CaseLimit } from './case_limit';
-import { CaseLine } from './case_line';
-import { CaseMultiscripts } from './case_multiscripts';
-import { CaseProof } from './case_proof';
-import { CaseTable } from './case_table';
-import { CaseTensor } from './case_tensor';
-import { CaseText } from './case_text';
-import { factory } from './enrich_case';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { CaseBinomial } from './case_binomial.js';
+import { CaseDoubleScript } from './case_double_script.js';
+import { CaseEmbellished } from './case_embellished.js';
+import { CaseLimit } from './case_limit.js';
+import { CaseLine } from './case_line.js';
+import { CaseMultiscripts } from './case_multiscripts.js';
+import { CaseProof } from './case_proof.js';
+import { CaseTable } from './case_table.js';
+import { CaseTensor } from './case_tensor.js';
+import { CaseText } from './case_text.js';
+import { factory } from './enrich_case.js';
 
 /**
  * The cases of the factory can provide.

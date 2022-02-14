@@ -18,10 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Span } from '../audio/span';
-import * as DomUtil from '../common/dom_util';
-import { LOCALE } from '../l10n/locale';
-import { convertVulgarFraction } from '../l10n/transformers';
+import { Span } from '../audio/span.js';
+import * as DomUtil from '../common/dom_util.js';
+import { LOCALE } from '../l10n/locale.js';
+import { convertVulgarFraction } from '../l10n/transformers.js';
 
 // Number transformation
 /**

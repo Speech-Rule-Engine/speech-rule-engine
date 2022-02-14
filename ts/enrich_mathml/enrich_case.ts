@@ -18,7 +18,7 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticNode } from '../semantic_tree/semantic_node';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
 
 export interface EnrichCase {
   /**

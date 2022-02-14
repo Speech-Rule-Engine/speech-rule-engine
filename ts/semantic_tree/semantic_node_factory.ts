@@ -21,10 +21,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { SemanticFont, SemanticType } from './semantic_meaning';
-import { SemanticDefault } from './semantic_default';
-import { SemanticNodeCollator } from './semantic_default';
-import { SemanticNode } from './semantic_node';
+import { SemanticFont, SemanticType } from './semantic_meaning.js';
+import { SemanticDefault } from './semantic_default.js';
+import { SemanticNodeCollator } from './semantic_default.js';
+import { SemanticNode } from './semantic_node.js';
 
 export class SemanticNodeFactory {
   /**

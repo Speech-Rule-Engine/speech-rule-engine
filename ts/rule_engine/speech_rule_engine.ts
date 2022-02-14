@@ -29,26 +29,26 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import { Span } from '../audio/span';
-import { Debugger } from '../common/debugger';
-import * as DomUtil from '../common/dom_util';
-import Engine from '../common/engine';
-import * as EngineConst from '../common/engine_const';
-import { xpath, evalXPath } from '../common/xpath_util';
-import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences';
-import * as SpeechRules from '../speech_rules/speech_rules';
-import * as SpeechRuleStores from '../speech_rules/speech_rule_stores';
-import { BaseRuleStore } from './base_rule_store';
-import { RulesJson } from './base_rule_store';
-import { BrailleStore } from './braille_store';
-import { Axis, AxisMap, DynamicCstr } from './dynamic_cstr';
-import { Grammar, State as GrammarState } from './grammar';
-import { MathStore } from './math_store';
-import { ActionType, SpeechRule } from './speech_rule';
-import { SpeechRuleContext } from './speech_rule_context';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import { Span } from '../audio/span.js';
+import { Debugger } from '../common/debugger.js';
+import * as DomUtil from '../common/dom_util.js';
+import Engine from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import { xpath, evalXPath } from '../common/xpath_util.js';
+import { ClearspeakPreferences } from '../speech_rules/clearspeak_preferences.js';
+import * as SpeechRules from '../speech_rules/speech_rules.js';
+import * as SpeechRuleStores from '../speech_rules/speech_rule_stores.js';
+import { BaseRuleStore } from './base_rule_store.js';
+import { RulesJson } from './base_rule_store.js';
+import { BrailleStore } from './braille_store.js';
+import { Axis, AxisMap, DynamicCstr } from './dynamic_cstr.js';
+import { Grammar, State as GrammarState } from './grammar.js';
+import { MathStore } from './math_store.js';
+import { ActionType, SpeechRule } from './speech_rule.js';
+import { SpeechRuleContext } from './speech_rule_context.js';
 
-import { Trie } from '../indexing/trie';
+import { Trie } from '../indexing/trie.js';
 
 export class SpeechRuleEngine {
   // TODO (TS): Keeping this as a singleton for the time being.

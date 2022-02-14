@@ -30,7 +30,7 @@ import {
   SubIso,
   SUBISO
 } from './messages';
-import * as tr from './transformers';
+import * as tr from './transformers.js';
 
 // One (or more) flat message object per rule set.
 export interface Locale {

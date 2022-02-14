@@ -22,10 +22,10 @@
 // This work was sponsored by TextHelp
 //
 
-import { combinePostfixIndex, nestingToString } from '../locale_util';
-import { createLocale, Locale } from '../locale';
-import NUMBERS from '../numbers/numbers_it';
-import { Combiners } from '../transformers';
+import { combinePostfixIndex, nestingToString } from '../locale_util.js';
+import { createLocale, Locale } from '../locale.js';
+import NUMBERS from '../numbers/numbers_it.js';
+import { Combiners } from '../transformers.js';
 
 const italianPostfixCombiner = function (
   letter: string,

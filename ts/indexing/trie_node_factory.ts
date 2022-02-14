@@ -22,14 +22,14 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import * as XpathUtil from '../common/xpath_util';
-import { Grammar } from '../rule_engine/grammar';
-import * as MathCompoundStore from '../rule_engine/math_compound_store';
-import { SpeechRuleContext } from '../rule_engine/speech_rule_context';
-import { AbstractTrieNode } from './abstract_trie_node';
-import { StaticTrieNode } from './abstract_trie_node';
-import { TrieNode, TrieNodeKind } from './trie_node';
+import * as DomUtil from '../common/dom_util.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { Grammar } from '../rule_engine/grammar.js';
+import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
+import { SpeechRuleContext } from '../rule_engine/speech_rule_context.js';
+import { AbstractTrieNode } from './abstract_trie_node.js';
+import { StaticTrieNode } from './abstract_trie_node.js';
+import { TrieNode, TrieNodeKind } from './trie_node.js';
 
 /**
  * Generates a trie node of a given kind in the given rule store.

@@ -21,9 +21,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import Engine from '../common/engine';
-import { locales } from '../l10n/l10n';
+import { Debugger } from '../common/debugger.js';
+import Engine from '../common/engine.js';
+import { locales } from '../l10n/l10n.js';
 import {
   MathSimpleStore,
   SiJson,
@@ -31,7 +31,7 @@ import {
   SimpleRule,
   UnicodeJson
 } from './math_simple_store';
-import { Axis, DynamicCstr } from './dynamic_cstr';
+import { Axis, DynamicCstr } from './dynamic_cstr.js';
 
 /**
  * The locale for the store.

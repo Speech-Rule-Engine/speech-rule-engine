@@ -7,9 +7,14 @@ let config = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules|src/,
+        test: /\.m?js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        },
+        exclude: /node_modules|src/
       }
     ],
   },
@@ -18,7 +23,7 @@ let config = {
     maxAssetSize: 350000
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: [ '.js' ],
   },
   node: {
     __dirname: false
@@ -50,7 +55,7 @@ let config = {
 };
 
 let sreConfig = Object.assign({}, config, {
-  entry: path.resolve(__dirname, 'ts/index.ts'),
+  entry: path.resolve(__dirname, './js/index.js'),
   // devtool: false,
   // target: 'web',
   output: {
@@ -63,7 +68,7 @@ let sreConfig = Object.assign({}, config, {
 });
 
 let mjConfig = Object.assign({}, config, {
-  entry: path.resolve(__dirname, 'ts/common/mathjax.ts'),
+  entry: path.resolve(__dirname, 'js/common/mathjax.js'),
   // devtool: false,
   target: 'web',
   output: {

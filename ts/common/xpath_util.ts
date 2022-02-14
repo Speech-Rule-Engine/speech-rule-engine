@@ -22,9 +22,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import Engine from './engine';
-import * as EngineConst from '../common/engine_const';
-import SystemExternal from './system_external';
+import Engine from './engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import SystemExternal from './system_external.js';
 
 /**
  * Returns whether or not xpath is supported.

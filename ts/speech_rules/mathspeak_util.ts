@@ -18,21 +18,21 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as BaseUtil from '../common/base_util';
-import * as DomUtil from '../common/dom_util';
-import SystemExternal from '../common/system_external';
-import * as XpathUtil from '../common/xpath_util';
-import { LOCALE } from '../l10n/locale';
+import * as BaseUtil from '../common/base_util.js';
+import * as DomUtil from '../common/dom_util.js';
+import SystemExternal from '../common/system_external.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { LOCALE } from '../l10n/locale.js';
 
-import { SpeechRuleStore } from '../rule_engine/speech_rule_store';
-import * as Semantic from '../semantic_tree/semantic';
+import { SpeechRuleStore } from '../rule_engine/speech_rule_store.js';
+import * as Semantic from '../semantic_tree/semantic.js';
 import {
   SemanticFont,
   SemanticRole,
   SemanticType
 } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import SemanticProcessor from '../semantic_tree/semantic_processor';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import SemanticProcessor from '../semantic_tree/semantic_processor.js';
 
 // import * as NumbersUtil from './numbers_util';
 

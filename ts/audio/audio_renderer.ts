@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { KeyCode } from '../common/event_util';
-import { AuditoryDescription } from './auditory_description';
-import { Span } from './span';
+import { KeyCode } from '../common/event_util.js';
+import { AuditoryDescription } from './auditory_description.js';
+import { Span } from './span.js';
 
 export interface AudioRenderer {
   /**

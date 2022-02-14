@@ -19,10 +19,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as EngineConst from '../common/engine_const';
-import { AbstractAudioRenderer } from './abstract_audio_renderer';
-import * as AudioUtil from './audio_util';
-import { AuditoryDescription } from './auditory_description';
+import * as EngineConst from '../common/engine_const.js';
+import { AbstractAudioRenderer } from './abstract_audio_renderer.js';
+import * as AudioUtil from './audio_util.js';
+import { AuditoryDescription } from './auditory_description.js';
 
 export class PunctuationRenderer extends AbstractAudioRenderer {
   /**

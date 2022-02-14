@@ -19,10 +19,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as SemanticAttr from './semantic_attr';
-import { SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import { getEmbellishedInner } from './semantic_util';
+import * as SemanticAttr from './semantic_attr.js';
+import { SemanticRole, SemanticType } from './semantic_meaning.js';
+import { SemanticNode } from './semantic_node.js';
+import { getEmbellishedInner } from './semantic_util.js';
 
 /**
  * Checks if a node is of the given type.

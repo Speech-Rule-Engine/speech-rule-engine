@@ -21,18 +21,18 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as BrowserUtil from '../common/browser_util';
-import Engine, { EnginePromise } from '../common/engine';
-import * as EngineConst from '../common/engine_const';
-import * as FileUtil from '../common/file_util';
-import SystemExternal from '../common/system_external';
-import { RulesJson } from '../rule_engine/base_rule_store';
-import * as MathCompoundStore from '../rule_engine/math_compound_store';
-import { SiJson, UnicodeJson } from '../rule_engine/math_simple_store';
-import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
+import * as BrowserUtil from '../common/browser_util.js';
+import Engine, { EnginePromise } from '../common/engine.js';
+import * as EngineConst from '../common/engine_const.js';
+import * as FileUtil from '../common/file_util.js';
+import SystemExternal from '../common/system_external.js';
+import { RulesJson } from '../rule_engine/base_rule_store.js';
+import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
+import { SiJson, UnicodeJson } from '../rule_engine/math_simple_store.js';
+import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine.js';
 
-import { completeLocale } from '../l10n/l10n';
-import * as AlphabetGenerator from './alphabet_generator';
+import { completeLocale } from '../l10n/l10n.js';
+import * as AlphabetGenerator from './alphabet_generator.js';
 
 declare type MathMapType = UnicodeJson[] | [SiJson] | RulesJson;
 

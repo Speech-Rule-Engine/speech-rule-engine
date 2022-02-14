@@ -22,9 +22,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import { SpeechRule } from '../rule_engine/speech_rule';
-import { TrieNode, TrieNodeKind } from './trie_node';
+import { Debugger } from '../common/debugger.js';
+import { SpeechRule } from '../rule_engine/speech_rule.js';
+import { TrieNode, TrieNodeKind } from './trie_node.js';
 
 export class AbstractTrieNode<T> implements TrieNode {
   /**

@@ -20,8 +20,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AbstractSpeechGenerator } from './abstract_speech_generator';
-import * as SpeechGeneratorUtil from './speech_generator_util';
+import { AbstractSpeechGenerator } from './abstract_speech_generator.js';
+import * as SpeechGeneratorUtil from './speech_generator_util.js';
 
 export class SummarySpeechGenerator extends AbstractSpeechGenerator {
   /**

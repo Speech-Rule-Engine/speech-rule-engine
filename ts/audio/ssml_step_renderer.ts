@@ -18,9 +18,9 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from './auditory_description';
-import { Span } from './span';
-import { SsmlRenderer } from './ssml_renderer';
+import { AuditoryDescription } from './auditory_description.js';
+import { Span } from './span.js';
+import { SsmlRenderer } from './ssml_renderer.js';
 
 export class SsmlStepRenderer extends SsmlRenderer {
   private static CHARACTER_ATTR = 'character';

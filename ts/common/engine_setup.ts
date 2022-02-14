@@ -18,12 +18,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as L10n from '../l10n/l10n';
-import * as MathMap from '../speech_rules/math_map';
-import * as BrowserUtil from './browser_util';
-import Engine, { EnginePromise } from './engine';
-import * as FileUtil from './file_util';
-import SystemExternal from './system_external';
+import * as L10n from '../l10n/l10n.js';
+import * as MathMap from '../speech_rules/math_map.js';
+import * as BrowserUtil from './browser_util.js';
+import Engine, { EnginePromise } from './engine.js';
+import * as FileUtil from './file_util.js';
+import SystemExternal from './system_external.js';
 
 // Engine setup method.
 /**

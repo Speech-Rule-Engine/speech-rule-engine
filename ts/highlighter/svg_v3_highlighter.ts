@@ -18,11 +18,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import * as XpathUtil from '../common/xpath_util';
-import { AbstractHighlighter, Highlight } from './abstract_highlighter';
-import { ColorPicker } from './color_picker';
-import { SvgHighlighter } from './svg_highlighter';
+import * as DomUtil from '../common/dom_util.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { AbstractHighlighter, Highlight } from './abstract_highlighter.js';
+import { ColorPicker } from './color_picker.js';
+import { SvgHighlighter } from './svg_highlighter.js';
 
 export class SvgV3Highlighter extends SvgHighlighter {
   /**

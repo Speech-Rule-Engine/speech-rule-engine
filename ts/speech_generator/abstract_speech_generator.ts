@@ -19,12 +19,12 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { setup as EngineSetup } from '../common/engine_setup';
-import * as EnrichAttr from '../enrich_mathml/enrich_attr';
-import { AxisMap } from '../rule_engine/dynamic_cstr';
-import { RebuildStree } from '../walker/rebuild_stree';
-import { SpeechGenerator } from './speech_generator';
-import * as SpeechGeneratorUtil from './speech_generator_util';
+import { setup as EngineSetup } from '../common/engine_setup.js';
+import * as EnrichAttr from '../enrich_mathml/enrich_attr.js';
+import { AxisMap } from '../rule_engine/dynamic_cstr.js';
+import { RebuildStree } from '../walker/rebuild_stree.js';
+import { SpeechGenerator } from './speech_generator.js';
+import * as SpeechGeneratorUtil from './speech_generator_util.js';
 
 export abstract class AbstractSpeechGenerator implements SpeechGenerator {
   /**

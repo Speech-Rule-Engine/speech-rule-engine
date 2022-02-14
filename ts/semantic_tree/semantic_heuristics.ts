@@ -20,19 +20,19 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import Engine from '../common/engine';
-import * as SemanticAttr from './semantic_attr';
-import * as SemanticHeuristics from './semantic_heuristic_factory';
+import { Debugger } from '../common/debugger.js';
+import Engine from '../common/engine.js';
+import * as SemanticAttr from './semantic_attr.js';
+import * as SemanticHeuristics from './semantic_heuristic_factory.js';
 import {
   SemanticTreeHeuristic,
   SemanticMultiHeuristic
 } from './semantic_heuristic';
-import { SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticNode } from './semantic_node';
-import * as SemanticPred from './semantic_pred';
-import SemanticProcessor from './semantic_processor';
-import * as SemanticUtil from './semantic_util';
+import { SemanticRole, SemanticType } from './semantic_meaning.js';
+import { SemanticNode } from './semantic_node.js';
+import * as SemanticPred from './semantic_pred.js';
+import SemanticProcessor from './semantic_processor.js';
+import * as SemanticUtil from './semantic_util.js';
 
 /**
  * Recursively combines implicit nodes as much as possible for the given root

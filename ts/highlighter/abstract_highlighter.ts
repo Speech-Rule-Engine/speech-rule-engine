@@ -18,10 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as XpathUtil from '../common/xpath_util';
-import { addPrefix, Attribute } from '../enrich_mathml/enrich_attr';
-import { ColorPicker, StringColor } from './color_picker';
-import { Highlighter } from './highlighter';
+import * as XpathUtil from '../common/xpath_util.js';
+import { addPrefix, Attribute } from '../enrich_mathml/enrich_attr.js';
+import { ColorPicker, StringColor } from './color_picker.js';
+import { Highlighter } from './highlighter.js';
 
 /**
  * Highlight information consisting of node, opacity, fore and background color.

@@ -18,8 +18,8 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import SystemExternal from './system_external';
-import { xpath } from './xpath_util';
+import SystemExternal from './system_external.js';
+import { xpath } from './xpath_util.js';
 
 /**
  * Predicate to check for MS Internet Explorer but not Edge.

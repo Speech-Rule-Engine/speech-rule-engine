@@ -22,7 +22,7 @@
 // This work was sponsored by TextHelp
 //
 
-import * as MathspeakUtil from './mathspeak_util';
+import * as MathspeakUtil from './mathspeak_util.js';
 
 /**
  * Computes baseline prefix in verbose mode.

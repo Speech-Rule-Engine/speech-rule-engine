@@ -20,11 +20,11 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Attribute } from '../enrich_mathml/enrich_attr';
-import * as WalkerUtil from '../walker/walker_util';
+import { Attribute } from '../enrich_mathml/enrich_attr.js';
+import * as WalkerUtil from '../walker/walker_util.js';
 
-import { AbstractSpeechGenerator } from './abstract_speech_generator';
-import * as SpeechGeneratorUtil from './speech_generator_util';
+import { AbstractSpeechGenerator } from './abstract_speech_generator.js';
+import * as SpeechGeneratorUtil from './speech_generator_util.js';
 
 export class TreeSpeechGenerator extends AbstractSpeechGenerator {
   /**

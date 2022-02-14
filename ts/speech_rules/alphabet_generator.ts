@@ -18,13 +18,13 @@
  *     Unicode mappings.
  */
 
-import Engine from '../common/engine';
-import * as L10n from '../l10n/l10n';
-import { LOCALE } from '../l10n/locale';
-import { localeFontCombiner } from '../l10n/locale_util';
-import { Combiner, Transformer } from '../l10n/transformers';
-import * as MathCompoundStore from '../rule_engine/math_compound_store';
-import { UnicodeJson } from '../rule_engine/math_simple_store';
+import Engine from '../common/engine.js';
+import * as L10n from '../l10n/l10n.js';
+import { LOCALE } from '../l10n/locale.js';
+import { localeFontCombiner } from '../l10n/locale_util.js';
+import { Combiner, Transformer } from '../l10n/transformers.js';
+import * as MathCompoundStore from '../rule_engine/math_compound_store.js';
+import { UnicodeJson } from '../rule_engine/math_simple_store.js';
 
 /**
  * Enumerator for Unicode fonts. These match the font elements in sre.Messages

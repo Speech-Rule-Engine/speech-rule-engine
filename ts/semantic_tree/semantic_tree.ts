@@ -24,18 +24,18 @@
  * @author sorge@google.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import SystemExternal from '../common/system_external';
+import * as DomUtil from '../common/dom_util.js';
+import SystemExternal from '../common/system_external.js';
 
-import { annotate } from './semantic_annotations';
-import { SemanticVisitor } from './semantic_annotator';
-import { SemanticRole, SemanticType } from './semantic_meaning';
-import { SemanticMeaningCollator } from './semantic_default';
-import { SemanticMathml } from './semantic_mathml';
-import { SemanticNode } from './semantic_node';
-import { SemanticParser } from './semantic_parser';
-import * as SemanticPred from './semantic_pred';
-import './semantic_heuristics';
+import { annotate } from './semantic_annotations.js';
+import { SemanticVisitor } from './semantic_annotator.js';
+import { SemanticRole, SemanticType } from './semantic_meaning.js';
+import { SemanticMeaningCollator } from './semantic_default.js';
+import { SemanticMathml } from './semantic_mathml.js';
+import { SemanticNode } from './semantic_node.js';
+import { SemanticParser } from './semantic_parser.js';
+import * as SemanticPred from './semantic_pred.js';
+import './semantic_heuristics.js';
 
 export class SemanticTree {
   /**

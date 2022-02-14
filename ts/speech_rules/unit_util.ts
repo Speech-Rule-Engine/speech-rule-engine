@@ -18,10 +18,10 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { AuditoryDescription } from '../audio/auditory_description';
-import * as XpathUtil from '../common/xpath_util';
-import { LOCALE } from '../l10n/locale';
-import { SemanticType } from '../semantic_tree/semantic_meaning';
+import { AuditoryDescription } from '../audio/auditory_description.js';
+import * as XpathUtil from '../common/xpath_util.js';
+import { LOCALE } from '../l10n/locale.js';
+import { SemanticType } from '../semantic_tree/semantic_meaning.js';
 
 /**
  * Iterates over the list of content nodes of a multiplication of units and

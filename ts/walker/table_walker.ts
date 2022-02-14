@@ -18,16 +18,16 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import * as DomUtil from '../common/dom_util';
-import { KeyCode } from '../common/event_util';
-import { Highlighter } from '../highlighter/highlighter';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { SpeechGenerator } from '../speech_generator/speech_generator';
+import * as DomUtil from '../common/dom_util.js';
+import { KeyCode } from '../common/event_util.js';
+import { Highlighter } from '../highlighter/highlighter.js';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SpeechGenerator } from '../speech_generator/speech_generator.js';
 
-import { Focus } from './focus';
-import { SyntaxWalker } from './syntax_walker';
-import { WalkerMoves } from './walker';
+import { Focus } from './focus.js';
+import { SyntaxWalker } from './syntax_walker.js';
+import { WalkerMoves } from './walker.js';
 
 export class TableWalker extends SyntaxWalker {
   public static ELIGIBLE_CELL_ROLES: SemanticRole[];

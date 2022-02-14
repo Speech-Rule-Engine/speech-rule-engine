@@ -18,12 +18,12 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
-import * as StoreUtil from '../rule_engine/store_util';
-import * as MathspeakFrenchUtil from './mathspeak_french_util';
-import * as MathspeakUtil from './mathspeak_util';
-import * as NumbersUtil from './numbers_util';
-import * as SpeechRules from './speech_rules';
-import * as UnitUtil from './unit_util';
+import * as StoreUtil from '../rule_engine/store_util.js';
+import * as MathspeakFrenchUtil from './mathspeak_french_util.js';
+import * as MathspeakUtil from './mathspeak_util.js';
+import * as NumbersUtil from './numbers_util.js';
+import * as SpeechRules from './speech_rules.js';
+import * as UnitUtil from './unit_util.js';
 
 /**
  * Adds the custom functions for the mathspeak rules.

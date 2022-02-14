@@ -21,19 +21,19 @@
  * @author volker.sorge@gmail.com (Volker Sorge)
  */
 
-import { Debugger } from '../common/debugger';
-import * as DomUtil from '../common/dom_util';
-import Engine from '../common/engine';
-import * as SemanticAttr from '../semantic_tree/semantic_attr';
-import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning';
-import * as SemanticHeuristics from '../semantic_tree/semantic_heuristic_factory';
-import { SemanticNode } from '../semantic_tree/semantic_node';
-import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton';
-import { SemanticTree } from '../semantic_tree/semantic_tree';
-import * as SemanticUtil from '../semantic_tree/semantic_util';
+import { Debugger } from '../common/debugger.js';
+import * as DomUtil from '../common/dom_util.js';
+import Engine from '../common/engine.js';
+import * as SemanticAttr from '../semantic_tree/semantic_attr.js';
+import { SemanticRole, SemanticType } from '../semantic_tree/semantic_meaning.js';
+import * as SemanticHeuristics from '../semantic_tree/semantic_heuristic_factory.js';
+import { SemanticNode } from '../semantic_tree/semantic_node.js';
+import { SemanticSkeleton, Sexp } from '../semantic_tree/semantic_skeleton.js';
+import { SemanticTree } from '../semantic_tree/semantic_tree.js';
+import * as SemanticUtil from '../semantic_tree/semantic_util.js';
 
-import * as EnrichAttr from './enrich_attr';
-import { getCase } from './enrich_case';
+import * as EnrichAttr from './enrich_attr.js';
+import { getCase } from './enrich_case.js';
 
 /**
  * Object containing settings for the semantic enrichment.
