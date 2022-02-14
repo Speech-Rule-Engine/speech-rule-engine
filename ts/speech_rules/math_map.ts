@@ -96,6 +96,15 @@ function loadMethod() {
   if (Engine.getInstance().customLoader) {
     return Engine.getInstance().customLoader;
   }
+  return standardLoader();
+}
+
+
+/**
+ * @returns The standard load method for the given mode. This is exported as
+ * fall back method.
+ */
+export function standardLoader() {
   switch (Engine.getInstance().mode) {
     case EngineConst.Mode.ASYNC:
       return loadFile;
