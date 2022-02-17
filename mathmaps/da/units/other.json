@@ -1,0 +1,20 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "doz",
+    "category": "other",
+    "names": [
+      "doz",
+      "doz.",
+      "dz",
+      "dz."
+    ],
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  }
+]

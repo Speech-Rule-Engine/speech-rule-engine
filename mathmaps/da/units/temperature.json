@@ -1,0 +1,48 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "F",
+    "mappings": {
+      "default": {
+        "default": "farad",
+        "plural": "farad"
+      }
+    },
+    "category": "temperature",
+    "names": [
+      "F",
+      "F.",
+      "°F"
+    ]
+  },
+  {
+    "key": "C",
+    "mappings": {
+      "default": {
+        "default": "coulomb",
+        "plural": "coulombs"
+      }
+    },
+    "category": "temperature",
+    "names": [
+      "C",
+      "°C"
+    ]
+  },
+  {
+    "key": "K",
+    "mappings": {
+      "default": {
+        "default": "kelvin",
+        "plural": "kelvin"
+      }
+    },
+    "category": "temperature",
+    "names": [
+      "K",
+      "°K"
+    ]
+  }
+]

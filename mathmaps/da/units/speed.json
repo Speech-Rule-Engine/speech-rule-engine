@@ -1,0 +1,55 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "kt",
+    "category": "speed",
+    "names": [
+      "kt",
+      "kt."
+    ],
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "mph",
+    "mappings": {
+      "default": {
+        "default": "mil i timen",
+        "plural": "mil i timen"
+      }
+    },
+    "category": "speed",
+    "names": [
+      "mph"
+    ]
+  },
+  {
+    "key": "rpm",
+    "category": "speed",
+    "names": [
+      "rpm"
+    ],
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "kmh",
+    "category": "speed",
+    "names": [
+      "kmh"
+    ],
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  }
+]
