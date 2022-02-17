@@ -6,7 +6,7 @@
     "key": "2135",
     "mappings": {
       "default": {
-        "default": "alef"
+        "default": "første transfinitte kardinaltal"
       }
     },
     "category": "Lo"
@@ -15,7 +15,7 @@
     "key": "2136",
     "mappings": {
       "default": {
-        "default": "bet "
+        "default": "andet transfinitte kardinaltal"
       }
     },
     "category": "Lo"
@@ -24,7 +24,7 @@
     "key": "2137",
     "mappings": {
       "default": {
-        "default": "gimel"
+        "default": "tredje transfinitte kardinaltal"
       }
     },
     "category": "Lo"
@@ -33,7 +33,7 @@
     "key": "2138",
     "mappings": {
       "default": {
-        "default": "dalet (hebraisk bogstav"
+        "default": "fjerde transfinitte kardinaltal"
       }
     },
     "category": "Lo"

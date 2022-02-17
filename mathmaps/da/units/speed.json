@@ -11,7 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "knob",
+        "plural": "knob"
       }
     }
   },
@@ -36,7 +37,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omdrejninger pr. minut",
+        "plural": "omdrejning pr. minut"
       }
     }
   },
@@ -48,7 +50,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kilometer i timen",
+        "plural": "kilometer i timen"
       }
     }
   }

@@ -14,7 +14,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s",
+        "plural": "kvadrat"
       }
     }
   },
@@ -113,7 +114,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s",
+        "plural": "hektarer"
       }
     }
   }

@@ -6,7 +6,7 @@
     "key": "log",
     "mappings": {
       "default": {
-        "default": "logaritme af"
+        "default": "logaritme"
       }
     },
     "category": "Logarithm",
@@ -18,7 +18,7 @@
     "key": "ln",
     "mappings": {
       "default": {
-        "default": "naturlig logaritme af"
+        "default": "naturlig logaritme"
       }
     },
     "category": "Logarithm",
@@ -34,7 +34,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "10tals-logaritme"
       }
     }
   },
@@ -47,7 +47,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "eksponentiel"
       }
     }
   },
@@ -59,7 +59,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "største fælles divisor"
       }
     }
   },
@@ -71,7 +71,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mindste fælles multiplum"
       }
     }
   },
@@ -83,7 +83,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "argument"
       }
     }
   },
@@ -95,7 +95,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "imaginær del"
       }
     }
   },
@@ -107,7 +107,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "reel del"
       }
     }
   },
@@ -119,7 +119,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "infimum"
       }
     }
   },
@@ -127,7 +127,7 @@
     "key": "lim",
     "mappings": {
       "default": {
-        "default": "grænseværdien af"
+        "default": "grænseværdi"
       }
     },
     "category": "Limits",
@@ -144,7 +144,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "limes inferior"
       }
     }
   },
@@ -157,7 +157,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "limes superior"
       }
     }
   },
@@ -169,7 +169,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "maksimum"
       }
     }
   },
@@ -181,7 +181,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minimum"
       }
     }
   },
@@ -193,7 +193,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "supremum"
       }
     }
   },
@@ -206,7 +206,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kolimes"
       }
     }
   },
@@ -219,7 +219,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "projektiv grænseværdi"
       }
     }
   },
@@ -231,7 +231,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "modulo"
       }
     }
   },
@@ -243,7 +243,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sandsynlighed"
       }
     }
   }

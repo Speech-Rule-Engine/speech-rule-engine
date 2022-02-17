@@ -6,7 +6,7 @@
     "key": "2190",
     "mappings": {
       "default": {
-        "default": "pil mod venstre"
+        "default": "venstrevendt pil"
       }
     },
     "category": "Sm"
@@ -15,7 +15,7 @@
     "key": "2191",
     "mappings": {
       "default": {
-        "default": "pil op"
+        "default": "opadvendt pil"
       }
     },
     "category": "Sm"
@@ -24,7 +24,7 @@
     "key": "2192",
     "mappings": {
       "default": {
-        "default": "pil mod højre"
+        "default": "højrevendt pil"
       }
     },
     "category": "Sm"
@@ -33,7 +33,7 @@
     "key": "2193",
     "mappings": {
       "default": {
-        "default": "pil ned"
+        "default": "nedadvendt pil"
       }
     },
     "category": "Sm"
@@ -42,7 +42,7 @@
     "key": "2194",
     "mappings": {
       "default": {
-        "default": "venstre og højre pil"
+        "default": "venstre-højre-pil"
       }
     },
     "category": "Sm"
@@ -51,7 +51,7 @@
     "key": "2195",
     "mappings": {
       "default": {
-        "default": "op og ned pil"
+        "default": "op- og nedadvendt pil"
       }
     },
     "category": "So"
@@ -60,7 +60,7 @@
     "key": "2196",
     "mappings": {
       "default": {
-        "default": "nord vest pil"
+        "default": "op- og venstrevendt pil"
       }
     },
     "category": "So"
@@ -69,7 +69,7 @@
     "key": "2197",
     "mappings": {
       "default": {
-        "default": "nord øst pil"
+        "default": "op- og højrevendt pil"
       }
     },
     "category": "So"
@@ -78,7 +78,7 @@
     "key": "2198",
     "mappings": {
       "default": {
-        "default": "syd øst pil"
+        "default": "ned- og højrevendt pil"
       }
     },
     "category": "So"
@@ -87,7 +87,7 @@
     "key": "2199",
     "mappings": {
       "default": {
-        "default": "syd vest pil"
+        "default": "ned- og venstrevendt pil"
       }
     },
     "category": "So"
@@ -96,7 +96,7 @@
     "key": "219A",
     "mappings": {
       "default": {
-        "default": "pil mod venstre overstreget"
+        "default": "venstrevendt pil med en streg igennem"
       }
     },
     "category": "Sm"
@@ -105,7 +105,7 @@
     "key": "219B",
     "mappings": {
       "default": {
-        "default": "pil mod højre overstreget"
+        "default": "højrevendt pil med streg igennem"
       }
     },
     "category": "Sm"
@@ -114,7 +114,7 @@
     "key": "219C",
     "mappings": {
       "default": {
-        "default": "bølgepil mod venstre"
+        "default": "venstrevendt bølgepil"
       }
     },
     "category": "So"
@@ -123,7 +123,7 @@
     "key": "219D",
     "mappings": {
       "default": {
-        "default": "bølgepil mod højre"
+        "default": "højrevendt bølgepil"
       }
     },
     "category": "So"
@@ -132,7 +132,7 @@
     "key": "219E",
     "mappings": {
       "default": {
-        "default": "dobbelthovedet pil mod venstre"
+        "default": "venstrevendt pil med to hoveder"
       }
     },
     "category": "So"
@@ -141,7 +141,7 @@
     "key": "219F",
     "mappings": {
       "default": {
-        "default": "dobbelthovedet pil op"
+        "default": "opadvendt pil med to hoveder"
       }
     },
     "category": "So"
@@ -150,7 +150,7 @@
     "key": "21A0",
     "mappings": {
       "default": {
-        "default": "dobbelthovedet pil mod højre"
+        "default": "højrevendt pil med to hoveder"
       }
     },
     "category": "Sm"
@@ -159,7 +159,7 @@
     "key": "21A1",
     "mappings": {
       "default": {
-        "default": "dobbelthovedet pil ned"
+        "default": "nedadvendt pil med to hoveder"
       }
     },
     "category": "So"
@@ -168,7 +168,7 @@
     "key": "21A2",
     "mappings": {
       "default": {
-        "default": "venstre pil med hale"
+        "default": "venstrevendt pil med pileende"
       }
     },
     "category": "So"
@@ -177,7 +177,7 @@
     "key": "21A3",
     "mappings": {
       "default": {
-        "default": "højre pil med hale"
+        "default": "højrevendt pil med pileende"
       }
     },
     "category": "Sm"
@@ -186,7 +186,7 @@
     "key": "21A4",
     "mappings": {
       "default": {
-        "default": "venstre pil fra en bar"
+        "default": "venstrevendt pil, der udløber fra en streg"
       }
     },
     "category": "So"
@@ -195,7 +195,7 @@
     "key": "21A5",
     "mappings": {
       "default": {
-        "default": "pil op fra en bar"
+        "default": "opadvendt pil, der udløber fra en streg"
       }
     },
     "category": "So"
@@ -204,7 +204,7 @@
     "key": "21A6",
     "mappings": {
       "default": {
-        "default": "højre pil fra en bar"
+        "default": "højrevendt pil, der udløber fra en streg"
       }
     },
     "category": "Sm"
@@ -213,7 +213,7 @@
     "key": "21A7",
     "mappings": {
       "default": {
-        "default": "pil ned fra en bar"
+        "default": "nedadvendt pil, der udløber fra en streg"
       }
     },
     "category": "So"
@@ -222,7 +222,7 @@
     "key": "21A8",
     "mappings": {
       "default": {
-        "default": "op ned pil med base"
+        "default": "op- og nedadvendt pil med base"
       }
     },
     "category": "So"
@@ -231,7 +231,7 @@
     "key": "21A9",
     "mappings": {
       "default": {
-        "default": "venstre pil med krog"
+        "default": "venstrevendt pil med krog"
       }
     },
     "category": "So"
@@ -240,7 +240,7 @@
     "key": "21AA",
     "mappings": {
       "default": {
-        "default": "højre pil med krog"
+        "default": "højrevendt pil med krog"
       }
     },
     "category": "So"
@@ -249,7 +249,7 @@
     "key": "21AB",
     "mappings": {
       "default": {
-        "default": "venstre pil med løkke"
+        "default": "venstrevendt pil med løkke"
       }
     },
     "category": "So"
@@ -258,7 +258,7 @@
     "key": "21AC",
     "mappings": {
       "default": {
-        "default": "højre pil med løkke"
+        "default": "højrevendt pil med løkke"
       }
     },
     "category": "So"
@@ -267,7 +267,7 @@
     "key": "21AD",
     "mappings": {
       "default": {
-        "default": "venstre højre bølge pil"
+        "default": "venstre- og højrevendt bølgepil"
       }
     },
     "category": "So"
@@ -276,7 +276,7 @@
     "key": "21AE",
     "mappings": {
       "default": {
-        "default": "venstre højre pil overstreget"
+        "default": "venstre- og højrevendt pil med en streg igennem"
       }
     },
     "category": "Sm"
@@ -285,7 +285,7 @@
     "key": "21AF",
     "mappings": {
       "default": {
-        "default": "sik sak pil ned"
+        "default": "nedadvendt zigzag-pil"
       }
     },
     "category": "So"
@@ -294,7 +294,7 @@
     "key": "21B0",
     "mappings": {
       "default": {
-        "default": "pil op med tip mod venstre"
+        "default": "opadvendt pil med spids mod venstre"
       }
     },
     "category": "So"
@@ -303,7 +303,7 @@
     "key": "21B1",
     "mappings": {
       "default": {
-        "default": "pil op med tip mod højre"
+        "default": "opadvendt pil med spids mod højre"
       }
     },
     "category": "So"
@@ -312,7 +312,7 @@
     "key": "21B2",
     "mappings": {
       "default": {
-        "default": "pil ned med tip mod venstre"
+        "default": "nedadvendt pil med spids mod venstre"
       }
     },
     "category": "So"
@@ -321,7 +321,7 @@
     "key": "21B3",
     "mappings": {
       "default": {
-        "default": "pil ned med tip mod højre"
+        "default": "nedadvendt pil med spids mod højre"
       }
     },
     "category": "So"
@@ -330,7 +330,7 @@
     "key": "21B4",
     "mappings": {
       "default": {
-        "default": "højre pil med hjørne nedad"
+        "default": "højrevendt pil med hjørne nedad"
       }
     },
     "category": "So"
@@ -339,7 +339,7 @@
     "key": "21B5",
     "mappings": {
       "default": {
-        "default": "pil ned med hjørne mod venstre"
+        "default": "nedadvendt pil med hjørne mod venstre"
       }
     },
     "category": "So"
@@ -348,7 +348,7 @@
     "key": "21B6",
     "mappings": {
       "default": {
-        "default": "halv cirkel pil mod uret"
+        "default": "halvcirkelpil med buen øverst, der løber med uret"
       }
     },
     "category": "So"
@@ -357,7 +357,7 @@
     "key": "21B7",
     "mappings": {
       "default": {
-        "default": "halv cirkel pil med uret"
+        "default": "halvcirkelpil med buen øverst, der løber med uret"
       }
     },
     "category": "So"
@@ -366,7 +366,7 @@
     "key": "21B8",
     "mappings": {
       "default": {
-        "default": "nordvest pil mod lang bar"
+        "default": "op- og venstrevendt pil mod en lang streg"
       }
     },
     "category": "So"
@@ -375,7 +375,7 @@
     "key": "21B9",
     "mappings": {
       "default": {
-        "default": "venstre pil mod bre over højre pil mod bar"
+        "default": "venstrevendt pil mod en streg over en højrevendt pil mod en streg"
       }
     },
     "category": "So"
@@ -384,7 +384,7 @@
     "key": "21BA",
     "mappings": {
       "default": {
-        "default": "cirkel pil mod uret"
+        "default": "åben cirkelpil, der løber mod uret"
       }
     },
     "category": "So"
@@ -393,7 +393,7 @@
     "key": "21BB",
     "mappings": {
       "default": {
-        "default": "cikel pil med uret"
+        "default": "åben cirkelpil, der løber med uret"
       }
     },
     "category": "So"
@@ -402,7 +402,7 @@
     "key": "21C4",
     "mappings": {
       "default": {
-        "default": "højre pil over venstre pil"
+        "default": "højrevendt pil over en venstrevendt pil"
       }
     },
     "category": "So"
@@ -411,7 +411,7 @@
     "key": "21C5",
     "mappings": {
       "default": {
-        "default": "pil op til højre for pil ned"
+        "default": "opadvendt pil til venstre for en nedadvendt pil"
       }
     },
     "category": "So"
@@ -420,7 +420,7 @@
     "key": "21C6",
     "mappings": {
       "default": {
-        "default": "venstre pil over højre pil"
+        "default": "venstrevendt pil over en højrevendt pil"
       }
     },
     "category": "So"
@@ -429,7 +429,7 @@
     "key": "21C7",
     "mappings": {
       "default": {
-        "default": "to venstre pile"
+        "default": "et par venstrevendte pile"
       }
     },
     "category": "So"
@@ -438,7 +438,7 @@
     "key": "21C8",
     "mappings": {
       "default": {
-        "default": "to pile op"
+        "default": "et par opadvendte pile"
       }
     },
     "category": "So"
@@ -447,7 +447,7 @@
     "key": "21C9",
     "mappings": {
       "default": {
-        "default": "to højre pile"
+        "default": "et par højrevendte pile"
       }
     },
     "category": "So"
@@ -456,7 +456,7 @@
     "key": "21CA",
     "mappings": {
       "default": {
-        "default": "to pile ned"
+        "default": "et par nedadvendte pile"
       }
     },
     "category": "So"
@@ -465,7 +465,7 @@
     "key": "21CD",
     "mappings": {
       "default": {
-        "default": "venstre implikations pil overstreget"
+        "default": "venstrevendt implikationspil med en streg igennem"
       }
     },
     "category": "So"
@@ -474,7 +474,7 @@
     "key": "21CE",
     "mappings": {
       "default": {
-        "default": "bi implikations pil overstreget"
+        "default": "venstre- og højrevendt implikationspil med en streg igennem"
       }
     },
     "category": "Sm"
@@ -483,7 +483,7 @@
     "key": "21CF",
     "mappings": {
       "default": {
-        "default": "højre implikations pil overstreget"
+        "default": "højrevendt implikationspil med en streg igennem"
       }
     },
     "category": "Sm"
@@ -492,7 +492,7 @@
     "key": "21D0",
     "mappings": {
       "default": {
-        "default": "implikations pil mod venstre"
+        "default": "venstrevendt implikationspil"
       }
     },
     "category": "So"
@@ -501,7 +501,7 @@
     "key": "21D1",
     "mappings": {
       "default": {
-        "default": "implikations pil op"
+        "default": "opadvendt implikationspil"
       }
     },
     "category": "So"
@@ -510,7 +510,7 @@
     "key": "21D2",
     "mappings": {
       "default": {
-        "default": "implikations pil mod højre"
+        "default": "højrevendt implikationspil"
       }
     },
     "category": "Sm"
@@ -519,7 +519,7 @@
     "key": "21D3",
     "mappings": {
       "default": {
-        "default": "implikations pil ned"
+        "default": "nedadvendt implikationspil"
       }
     },
     "category": "So"
@@ -528,7 +528,7 @@
     "key": "21D4",
     "mappings": {
       "default": {
-        "default": "bi implikations pil"
+        "default": "venstre- og højrevendt implikationspil"
       }
     },
     "category": "Sm"
@@ -537,7 +537,7 @@
     "key": "21D5",
     "mappings": {
       "default": {
-        "default": "op og ned biimplikations pil"
+        "default": "op- og nedadvendt implikationspil"
       }
     },
     "category": "So"
@@ -546,7 +546,7 @@
     "key": "21D6",
     "mappings": {
       "default": {
-        "default": "nord vest implikations pil"
+        "default": "op- og venstrevendt implikationspil"
       }
     },
     "category": "So"
@@ -555,7 +555,7 @@
     "key": "21D7",
     "mappings": {
       "default": {
-        "default": "nord øst implikations pil"
+        "default": "op- og højrevendt implikationspil"
       }
     },
     "category": "So"
@@ -564,7 +564,7 @@
     "key": "21D8",
     "mappings": {
       "default": {
-        "default": "syd øst implikations pil"
+        "default": "ned- og højrevendt implikationspil"
       }
     },
     "category": "So"
@@ -573,7 +573,7 @@
     "key": "21D9",
     "mappings": {
       "default": {
-        "default": "syd vest implikations pil"
+        "default": "ned- og venstrevendt implikationspil"
       }
     },
     "category": "So"
@@ -582,7 +582,7 @@
     "key": "21DA",
     "mappings": {
       "default": {
-        "default": "trippel pil mod venstre"
+        "default": "venstrerettet tredobbelt pil"
       }
     },
     "category": "So"
@@ -591,7 +591,7 @@
     "key": "21DB",
     "mappings": {
       "default": {
-        "default": "trippel pil mod højre"
+        "default": "højrevendt tredobbelt pil"
       }
     },
     "category": "So"
@@ -600,7 +600,7 @@
     "key": "21DC",
     "mappings": {
       "default": {
-        "default": "venstre squiggle pil"
+        "default": "venstrevendt krusedullepil"
       }
     },
     "category": "So"
@@ -609,7 +609,7 @@
     "key": "21DD",
     "mappings": {
       "default": {
-        "default": "højre squiggle pil"
+        "default": "højrevendt krusedullepil"
       }
     },
     "category": "So"
@@ -618,7 +618,7 @@
     "key": "21DE",
     "mappings": {
       "default": {
-        "default": "pil op dobbelt overstreget"
+        "default": "opadvendt pil med to streger igennem"
       }
     },
     "category": "So"
@@ -627,7 +627,7 @@
     "key": "21DF",
     "mappings": {
       "default": {
-        "default": "pil ned dobbelt overstreget"
+        "default": "nedadvendt pil med to streger igennem"
       }
     },
     "category": "So"
@@ -636,7 +636,7 @@
     "key": "21E0",
     "mappings": {
       "default": {
-        "default": "stiplet venstre pil"
+        "default": "venstrevendt stiplet pil"
       }
     },
     "category": "So"
@@ -645,7 +645,7 @@
     "key": "21E1",
     "mappings": {
       "default": {
-        "default": "stiplet pil op"
+        "default": "opadvendt stiplet pil"
       }
     },
     "category": "So"
@@ -654,7 +654,7 @@
     "key": "21E2",
     "mappings": {
       "default": {
-        "default": "stiplet højre pil"
+        "default": "højrevendt stiplet pil"
       }
     },
     "category": "So"
@@ -663,7 +663,7 @@
     "key": "21E3",
     "mappings": {
       "default": {
-        "default": "stiplet pil ned"
+        "default": "nedadvendt stiplet pil"
       }
     },
     "category": "So"
@@ -672,7 +672,7 @@
     "key": "21E4",
     "mappings": {
       "default": {
-        "default": "venstre pil mod en bar"
+        "default": "venstrevendt pil mod streg"
       }
     },
     "category": "So"
@@ -681,7 +681,7 @@
     "key": "21E5",
     "mappings": {
       "default": {
-        "default": "højre pil mod en bar"
+        "default": "højrevendt pil mod streg"
       }
     },
     "category": "So"
@@ -690,7 +690,7 @@
     "key": "21E6",
     "mappings": {
       "default": {
-        "default": "fed pil mod venstre"
+        "default": "hvid venstrevendt pil"
       }
     },
     "category": "So"
@@ -699,7 +699,7 @@
     "key": "21E7",
     "mappings": {
       "default": {
-        "default": "fed pil op"
+        "default": "hvid opadvendt pil"
       }
     },
     "category": "So"
@@ -708,7 +708,7 @@
     "key": "21E8",
     "mappings": {
       "default": {
-        "default": "fed pil mod højre"
+        "default": "hvid højrevendt pil"
       }
     },
     "category": "So"
@@ -717,7 +717,7 @@
     "key": "21E9",
     "mappings": {
       "default": {
-        "default": "fed pil ned"
+        "default": "hvid nedadvendt pil"
       }
     },
     "category": "So"
@@ -726,7 +726,7 @@
     "key": "21EA",
     "mappings": {
       "default": {
-        "default": "fed pil op fra en bar"
+        "default": "hvid opadvendt pil, der udløber fra en streg"
       }
     },
     "category": "So"
@@ -736,7 +736,7 @@
     "key": "21EB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid opadvendt pil på en sokkel"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "21EC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid opadvendt pil på en sokkel med en vandret streg"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "21ED",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid opadvendt pil på en sokkel med en lodret streg"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "21EE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid opadvendt implikationspil"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "21EF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid opadvendt implikationspil på en sokkel"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "21F0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid højrevendt pil fra en væg"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "21F1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nordvestvendt pil mod hjørne"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "21F2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sydøstvendt pil mod hjørne"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "21F3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedadvendt hvid pil"
       }
     }
   },
@@ -817,7 +817,7 @@
     "key": "21F4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med lille cirkel"
       }
     }
   },
@@ -825,7 +825,7 @@
     "key": "21F5",
     "mappings": {
       "default": {
-        "default": "pil op til højre for pil ned"
+        "default": "nedadvendt pil til venstre for en opadvendt pil"
       }
     },
     "category": "Sm"
@@ -835,7 +835,7 @@
     "key": "21F6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre højrevendte pile"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "21F7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med en lodret streg igennem"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "21F8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med en lodret streg igennem"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "21F9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre- og højrevendt pil med en lodret streg igennem"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "21FA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med to lodrette streger igennem"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "21FB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med to lodrette streger igennem"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "21FC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre- og højrevendt pil med en dobbelt streg igennem"
       }
     }
   },
@@ -897,7 +897,7 @@
     "key": "21FD",
     "mappings": {
       "default": {
-        "default": "venstre pil med åbent hoved"
+        "default": "venstrevendt pil med åbent hoved"
       }
     },
     "category": "Sm"
@@ -906,7 +906,7 @@
     "key": "21FE",
     "mappings": {
       "default": {
-        "default": "højre pil med åbent hoved"
+        "default": "højrevendt pil med åbent hoved"
       }
     },
     "category": "Sm"
@@ -915,7 +915,7 @@
     "key": "21FF",
     "mappings": {
       "default": {
-        "default": "højre venstre pil med åbent hoved"
+        "default": "højre- og venstrevendt pil med åbent hoved"
       }
     },
     "category": "Sm"
@@ -925,7 +925,7 @@
     "key": "2301",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "elektrisk pil"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "2303",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opadvendt pilehoved"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "2304",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedadvendt pilehoved"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "2324",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opadvendt pilehoved mellem to vandrette streger"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "238B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "cirkel brudt af nordvestvendt pil"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "2794",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk højrevendt pil med bredt hoved"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "2798",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk pil nedadvendt mod højre"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "2799",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk højrevendt pil"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "279A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk pil opadvendt mod højre"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "279B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forstrakt højrevendt pil"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "key": "279C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk højrevendt pil med rund spids"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "279D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med trekantet hoved"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "key": "279E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk højrevendt pil med trekantet hoved"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "279F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stiplet højrevendt pil med trekantet hoved"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "key": "27A0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk, stiplet højrevendt pil med trekantet hoved"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "27A1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort højrevendt pil"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "27A2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "3d højrevendt pilehoved med lys top"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "27A3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "3d højrevendt pilehoved med lys bund"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "key": "27A4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort højrevendt pilehoved"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "key": "27A5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk, sort, nedadbuet og højrevendt pil"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "27A6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk, sort, opadbuet og højrevendt pil"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "27A7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "squat sort højrevendt pil"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "27A8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk, indbuet, spids, sort højrevendt pil"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "key": "27A9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid højrevendt pil, der er skyggelagt mod højre"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "key": "27AA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid højrevendt pil, der er skyggelagt mod venstre"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "27AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid højrevendt pil, der er skyggelagt bagudvippet"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "key": "27AC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid højrevendt pil, der er skyggelagt forudvippet"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "27AD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk, hvid højrevendt pil, der er skyggelagt nederst og til højre"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "27AE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk, hvid højrevendt pil, der er skyggelagt øverst og til højre"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "27AF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt hvid pil med hak, der er skyggelagt nederst og til højre"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "27B1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt hvid pil med hak, der er skyggelagt øverst og til højre"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "27B2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk, hvid højrevendt pil i en cirkel"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "key": "27B3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid højrevendt pil med fjer"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "27B4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort pil med fjer nedadvendt mod højre"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "key": "27B5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort højrevendt pil med fjer"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "key": "27B6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort pil med fjer opadvendt mod højre"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "key": "27B7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk sort pil med fjer nedadvendt mod højre"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "key": "27B8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk sort højrevendt pil med fjer"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "key": "27B9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk sort højrevendt pil med fjer"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "key": "27BA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med tåreformede modhager"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "key": "27BB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk højrevendt pil med tåreformet skaft"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "27BC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med kileformet pileende"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "key": "27BD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk højrevendt pil med kileformet pileende"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "key": "27BE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med åbent omrids"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "key": "27F0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opadvendt firdobbelt pil"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "key": "27F1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedadvendt firdobbelt pil"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "key": "27F2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "cirkelpil med mellemrum, der løber mod uret"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "key": "27F3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "cirkelpil med mellemrum, der løber med uret"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "key": "27F4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med et plustegn i en cirkel"
       }
     }
   },
@@ -1365,7 +1365,7 @@
     "key": "27F5",
     "mappings": {
       "default": {
-        "default": "lang pil mod venstre"
+        "default": "lang venstrevendt pil"
       }
     },
     "category": "Sm"
@@ -1374,7 +1374,7 @@
     "key": "27F6",
     "mappings": {
       "default": {
-        "default": "lang pil mod højre"
+        "default": "lang højrevendt pil"
       }
     },
     "category": "Sm"
@@ -1383,7 +1383,7 @@
     "key": "27F7",
     "mappings": {
       "default": {
-        "default": "lang venstre højre pil"
+        "default": "lang venstre- og højrevendt pil"
       }
     },
     "category": "Sm"
@@ -1392,7 +1392,7 @@
     "key": "27F8",
     "mappings": {
       "default": {
-        "default": "lang implikations pil mod venstre"
+        "default": "lang venstrevendt implikationspil"
       }
     },
     "category": "Sm"
@@ -1401,7 +1401,7 @@
     "key": "27F9",
     "mappings": {
       "default": {
-        "default": "lang implikations pil mod højre"
+        "default": "lang højrevendt implikationspil"
       }
     },
     "category": "Sm"
@@ -1410,7 +1410,7 @@
     "key": "27FA",
     "mappings": {
       "default": {
-        "default": "lang venstre højre bi implikations pil"
+        "default": "lang venstre- og højrevendt implikationspil"
       }
     },
     "category": "Sm"
@@ -1420,7 +1420,7 @@
     "key": "27FB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang venstrerettet pil, der udløber fra en streg"
       }
     }
   },
@@ -1428,7 +1428,7 @@
     "key": "27FC",
     "mappings": {
       "default": {
-        "default": "lang pil bod højre fra en bar"
+        "default": "lang højrevendt pil, der udløber fra en streg"
       }
     },
     "category": "Sm"
@@ -1438,7 +1438,7 @@
     "key": "27FD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang venstrevendt implikationspil, der udløber fra en streg"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "key": "27FE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang højrevendt implikationspil, der udløber fra en streg"
       }
     }
   },
@@ -1455,7 +1455,7 @@
     "key": "27FF",
     "mappings": {
       "default": {
-        "default": "lang zik zak pil mod højre"
+        "default": "lang højrevendt krusedullepil"
       }
     },
     "category": "Sm"
@@ -1465,7 +1465,7 @@
     "key": "2900",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med to hoveder og en lodret streg igennem"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "key": "2901",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med to hoveder og en lodret streg igennem"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "key": "2902",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt implikationspil med en lodret streg igennem"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "key": "2903",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt implikationspil med en lodret streg igennem"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "key": "2904",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre- og højrevendt implikationspil med en lodret streg igennem"
       }
     }
   },
@@ -1509,7 +1509,7 @@
     "key": "2905",
     "mappings": {
       "default": {
-        "default": "to hovedet pil mod højre fra en bar"
+        "default": "højrevendt pil med to hoveder, der udløber fra en streg"
       }
     },
     "category": "Sm"
@@ -1519,7 +1519,7 @@
     "key": "2906",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt implikationspil, der udløber fra en streg"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "key": "2907",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt implikationspil, der udløber fra en streg"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "key": "2908",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedadvendt pil med en vandret streg igennem"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "2909",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opadvendt pil med en vandret streg igennem"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "key": "290A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opadvendt tredobbelt pil"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "key": "290B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedadvendt tredobbelt pil"
       }
     }
   },
@@ -1572,7 +1572,7 @@
     "key": "290C",
     "mappings": {
       "default": {
-        "default": "pil mod venstre stiplet en enkelt gang"
+        "default": "venstrevendt pil med to prikker"
       }
     },
     "category": "Sm"
@@ -1581,7 +1581,7 @@
     "key": "290D",
     "mappings": {
       "default": {
-        "default": "pil mod højre stiplet en enkelt gang"
+        "default": "højrevendt pil med to prikker"
       }
     },
     "category": "Sm"
@@ -1590,7 +1590,7 @@
     "key": "290E",
     "mappings": {
       "default": {
-        "default": "pil mod venstre stiplet to gange"
+        "default": "venstrevendt pil med tre korte streger"
       }
     },
     "category": "Sm"
@@ -1599,7 +1599,7 @@
     "key": "290F",
     "mappings": {
       "default": {
-        "default": "pil mod højre stiplet to gange"
+        "default": "højrevendt pil med tre korte streger"
       }
     },
     "category": "Sm"
@@ -1608,7 +1608,7 @@
     "key": "2910",
     "mappings": {
       "default": {
-        "default": "stiplet højre pil med to hoveder og med hale"
+        "default": "højrevendt pil med to hoveder og tre korte streger"
       }
     },
     "category": "Sm"
@@ -1617,7 +1617,7 @@
     "key": "2911",
     "mappings": {
       "default": {
-        "default": "højre pil med prikket streg"
+        "default": "højrevendt pil med stiplet stængel"
       }
     },
     "category": "Sm"
@@ -1626,7 +1626,7 @@
     "key": "2912",
     "mappings": {
       "default": {
-        "default": "pil op mod bar"
+        "default": "opadvendt pil mod streg"
       }
     },
     "category": "Sm"
@@ -1635,7 +1635,7 @@
     "key": "2913",
     "mappings": {
       "default": {
-        "default": "pil ned mod bar"
+        "default": "nedadvendt pil mod streg"
       }
     },
     "category": "Sm"
@@ -1645,7 +1645,7 @@
     "key": "2914",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med pileende og en lodret streg igennem"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "key": "2915",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med pileende og to lodrette streger igennem"
       }
     }
   },
@@ -1662,7 +1662,7 @@
     "key": "2916",
     "mappings": {
       "default": {
-        "default": "højre to hovedet pil med hale"
+        "default": "højrevendt pil med to hoveder og pileende"
       }
     },
     "category": "Sm"
@@ -1672,7 +1672,7 @@
     "key": "2917",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med to hoveder, pileende og to lodrette streger igennem"
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "key": "2918",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med to hoveder, pileende og to lodrette streger igennem"
       }
     }
   },
@@ -1689,7 +1689,7 @@
     "key": "2919",
     "mappings": {
       "default": {
-        "default": "hale af venstre pil"
+        "default": "venstrevendt pil med pileende"
       }
     },
     "category": "Sm"
@@ -1699,7 +1699,7 @@
     "key": "291A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med pileende"
       }
     }
   },
@@ -1707,7 +1707,7 @@
     "key": "291B",
     "mappings": {
       "default": {
-        "default": "hale af venstre pil med dobbelt hale"
+        "default": "venstrevendt pil med dobbelt pileende"
       }
     },
     "category": "Sm"
@@ -1716,7 +1716,7 @@
     "key": "291C",
     "mappings": {
       "default": {
-        "default": "hale af højre pil med dobbelt hale"
+        "default": "højrevendt pil med dobbelt pileende"
       }
     },
     "category": "Sm"
@@ -1725,7 +1725,7 @@
     "key": "291D",
     "mappings": {
       "default": {
-        "default": "venstre pil mod sort diamant"
+        "default": "venstrevendt pil mod sort rombe"
       }
     },
     "category": "Sm"
@@ -1734,7 +1734,7 @@
     "key": "291E",
     "mappings": {
       "default": {
-        "default": "højre pil mod sort diamant"
+        "default": "højrevendt pil mod sort rombe"
       }
     },
     "category": "Sm"
@@ -1743,7 +1743,7 @@
     "key": "291F",
     "mappings": {
       "default": {
-        "default": "venstre pil fra en bar mod sort diamant"
+        "default": "venstrevendt pil, der udløber fra en streg mod en sort rombe"
       }
     },
     "category": "Sm"
@@ -1752,7 +1752,7 @@
     "key": "2920",
     "mappings": {
       "default": {
-        "default": "højre pil fra en bar mod sort diamant"
+        "default": "højrevendt pil, der udløber fra en streg mod en sort rombe"
       }
     },
     "category": "Sm"
@@ -1762,7 +1762,7 @@
     "key": "2921",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nordvest- og sydøstvendt pil"
       }
     }
   },
@@ -1771,7 +1771,7 @@
     "key": "2922",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nordøst- og sydvestvendt pil"
       }
     }
   },
@@ -1779,7 +1779,7 @@
     "key": "2923",
     "mappings": {
       "default": {
-        "default": "nord vest pil med krog"
+        "default": "nordvestvendt pil med krog"
       }
     },
     "category": "Sm"
@@ -1788,7 +1788,7 @@
     "key": "2924",
     "mappings": {
       "default": {
-        "default": "nord øst pil med krog"
+        "default": "nordøstvendt pil med krog"
       }
     },
     "category": "Sm"
@@ -1797,7 +1797,7 @@
     "key": "2925",
     "mappings": {
       "default": {
-        "default": "syd øst pil med krog"
+        "default": "sydøstvendt pil med krog"
       }
     },
     "category": "Sm"
@@ -1806,7 +1806,7 @@
     "key": "2926",
     "mappings": {
       "default": {
-        "default": "syd vest pil med krog"
+        "default": "sydvestvendt pil med krog"
       }
     },
     "category": "Sm"
@@ -1815,7 +1815,7 @@
     "key": "2927",
     "mappings": {
       "default": {
-        "default": "nord vest pil og nord øst pil"
+        "default": "nordvestvendt pil og nordøstvendt pil"
       }
     },
     "category": "Sm"
@@ -1824,7 +1824,7 @@
     "key": "2928",
     "mappings": {
       "default": {
-        "default": "nord øst pil og syd øst pil"
+        "default": "nordøstvendt pil og sydøstvendt pil"
       }
     },
     "category": "Sm"
@@ -1833,7 +1833,7 @@
     "key": "2929",
     "mappings": {
       "default": {
-        "default": "syd øst pil og syd vest pil"
+        "default": "sydøstvendt pil og sydvestvendt pil"
       }
     },
     "category": "Sm"
@@ -1842,7 +1842,7 @@
     "key": "292A",
     "mappings": {
       "default": {
-        "default": "syd vest pil og nord vest pil"
+        "default": "sydvestvendt pil og nordvestvendt pil"
       }
     },
     "category": "Sm"
@@ -1852,7 +1852,7 @@
     "key": "292D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sydvestvendt pil på tværs af en nordøstvendt pil"
       }
     }
   },
@@ -1861,7 +1861,7 @@
     "key": "292E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nordøstvendt pil på tværs af en sydøstvendt pil"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "key": "292F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "faldende diagonal på tværs af en nordøstvendt pil"
       }
     }
   },
@@ -1879,7 +1879,7 @@
     "key": "2930",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stigende diagonal på tværs af en sydøstvendt pil"
       }
     }
   },
@@ -1888,7 +1888,7 @@
     "key": "2931",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nordøstvendt pil på tværs af en nordvestvendt pil"
       }
     }
   },
@@ -1897,7 +1897,7 @@
     "key": "2932",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nordvestvendt pil på tværs af en nordøstvendt pil"
       }
     }
   },
@@ -1905,7 +1905,7 @@
     "key": "2933",
     "mappings": {
       "default": {
-        "default": "bølge pil pegende direkte mod højre"
+        "default": "bølgepil, der peger direkte mod højre"
       }
     },
     "category": "Sm"
@@ -1915,7 +1915,7 @@
     "key": "2934",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil, der peger mod højre og så svinger opad"
       }
     }
   },
@@ -1923,7 +1923,7 @@
     "key": "2935",
     "mappings": {
       "default": {
-        "default": "pil mod højre der bøjer af nedad"
+        "default": "pil, der peger mod højre og så svinger nedad"
       }
     },
     "category": "Sm"
@@ -1932,7 +1932,7 @@
     "key": "2936",
     "mappings": {
       "default": {
-        "default": "pil nedad der bøjer af mod venstre"
+        "default": "pil, der peger nedad og så svinger til venstre"
       }
     },
     "category": "Sm"
@@ -1941,7 +1941,7 @@
     "key": "2937",
     "mappings": {
       "default": {
-        "default": "pil nedad der bøjer af mod højre"
+        "default": "pil, der peger nedad og så svinger mod højre"
       }
     },
     "category": "Sm"
@@ -1950,7 +1950,7 @@
     "key": "2938",
     "mappings": {
       "default": {
-        "default": "højre halvcirkel pil med uret"
+        "default": "højrebuet pil, der løber med uret"
       }
     },
     "category": "Sm"
@@ -1959,7 +1959,7 @@
     "key": "2939",
     "mappings": {
       "default": {
-        "default": "venstre halvcirkel pil mod uret"
+        "default": "venstrebuet pil, der løber mod uret"
       }
     },
     "category": "Sm"
@@ -1969,7 +1969,7 @@
     "key": "293A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil med topbue mod uret"
       }
     }
   },
@@ -1978,7 +1978,7 @@
     "key": "293B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pil med bundbue mod uret"
       }
     }
   },
@@ -1986,7 +1986,7 @@
     "key": "293C",
     "mappings": {
       "default": {
-        "default": "øvre halvcirkel pil med uret med plus"
+        "default": "pil med topbue, der løber med uret, oven over et minustegn"
       }
     },
     "category": "Sm"
@@ -1995,7 +1995,7 @@
     "key": "293D",
     "mappings": {
       "default": {
-        "default": "øvre halvcirkel pil mod uret med plus"
+        "default": "pil med topbue, der løber mod uret, oven over et plustegn"
       }
     },
     "category": "Sm"
@@ -2005,7 +2005,7 @@
     "key": "293E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "halvrund pil, der løber med uret nedad mod højre"
       }
     }
   },
@@ -2014,7 +2014,7 @@
     "key": "293F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "halvrund pil, der løber mod uret nedad mod venstre"
       }
     }
   },
@@ -2023,7 +2023,7 @@
     "key": "2940",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukket cirkelpil, der løber mod uret"
       }
     }
   },
@@ -2032,7 +2032,7 @@
     "key": "2941",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukket cirkelpil, der løber med uret"
       }
     }
   },
@@ -2041,7 +2041,7 @@
     "key": "2942",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil oven over en kort venstrevendt pil"
       }
     }
   },
@@ -2050,7 +2050,7 @@
     "key": "2943",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil oven over en kort højrevendt pil"
       }
     }
   },
@@ -2059,7 +2059,7 @@
     "key": "2944",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kort højrevendt pil oven over en venstrevendt pil"
       }
     }
   },
@@ -2067,7 +2067,7 @@
     "key": "2945",
     "mappings": {
       "default": {
-        "default": "højre pil med plus under"
+        "default": "højrevendt pil med et plustegn nedenunder"
       }
     },
     "category": "Sm"
@@ -2077,7 +2077,7 @@
     "key": "2946",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med et plustegn nedenunder"
       }
     }
   },
@@ -2086,7 +2086,7 @@
     "key": "2947",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil gennem et x"
       }
     }
   },
@@ -2094,7 +2094,7 @@
     "key": "2948",
     "mappings": {
       "default": {
-        "default": "venstre højre pil gennem en cirkel"
+        "default": "venstrevendt pil gennem en lille cirkel"
       }
     },
     "category": "Sm"
@@ -2103,7 +2103,7 @@
     "key": "2949",
     "mappings": {
       "default": {
-        "default": "pil op med to hoveder og fra en cirkel"
+        "default": "opadvendt pil med to hoveder, der udløber fra en lille cirkel"
       }
     },
     "category": "Sm"
@@ -2112,7 +2112,7 @@
     "key": "2970",
     "mappings": {
       "default": {
-        "default": "rund medfører"
+        "default": "højrevendt implikationspil med afrundet hoved"
       }
     },
     "category": "Sm"
@@ -2121,7 +2121,7 @@
     "key": "2971",
     "mappings": {
       "default": {
-        "default": "højre pil med ligeheds tegn over"
+        "default": "lighedstegn oven over en højrevendt pil"
       }
     },
     "category": "Sm"
@@ -2130,7 +2130,7 @@
     "key": "2972",
     "mappings": {
       "default": {
-        "default": "højre pil med tilde over"
+        "default": "tilde oven over en højrevendt pil"
       }
     },
     "category": "Sm"
@@ -2139,7 +2139,7 @@
     "key": "2973",
     "mappings": {
       "default": {
-        "default": "venstre pil over over tilde"
+        "default": "venstrevendt pil oven over en tilde"
       }
     },
     "category": "Sm"
@@ -2148,7 +2148,7 @@
     "key": "2974",
     "mappings": {
       "default": {
-        "default": "højre pil over tilde"
+        "default": "højrevendt pil oven over en tilde"
       }
     },
     "category": "Sm"
@@ -2157,7 +2157,7 @@
     "key": "2975",
     "mappings": {
       "default": {
-        "default": "højre pil med næsten lig med tegn under"
+        "default": "højrevendt pil oven over et omtrent ens-tegn"
       }
     },
     "category": "Sm"
@@ -2166,7 +2166,7 @@
     "key": "2976",
     "mappings": {
       "default": {
-        "default": "mindre end lig med ventre pil under"
+        "default": "mindre end-tegn oven over en venstrevendt pil"
       }
     },
     "category": "Sm"
@@ -2176,7 +2176,7 @@
     "key": "2977",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil gennem et mindre end-tegn"
       }
     }
   },
@@ -2184,7 +2184,7 @@
     "key": "2978",
     "mappings": {
       "default": {
-        "default": "større end lig med højre pil under"
+        "default": "større end-tegn oven over en højrevendt pil"
       }
     },
     "category": "Sm"
@@ -2193,7 +2193,7 @@
     "key": "2979",
     "mappings": {
       "default": {
-        "default": "delmængde af med højre pil under"
+        "default": "delmængdetegn oven over en højrevendt pil"
       }
     },
     "category": "Sm"
@@ -2203,7 +2203,7 @@
     "key": "297A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil gennem et delmængdetegn"
       }
     }
   },
@@ -2211,7 +2211,7 @@
     "key": "297B",
     "mappings": {
       "default": {
-        "default": "indeholder som delmængde med venstre pil under"
+        "default": "delmængdetegn oven over en venstrevendt pil"
       }
     },
     "category": "Sm"
@@ -2220,7 +2220,7 @@
     "key": "29B3",
     "mappings": {
       "default": {
-        "default": "tom mængde med højre pil over"
+        "default": "tom mængde-tegn med højrevendt pil ovenover"
       }
     },
     "category": "Sm"
@@ -2229,7 +2229,7 @@
     "key": "29B4",
     "mappings": {
       "default": {
-        "default": "tom mængde med venstre pil over"
+        "default": "tom mængde-tegn med venstrevendt pil ovenover"
       }
     },
     "category": "Sm"
@@ -2239,7 +2239,7 @@
     "key": "29BD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opadvendt pil gennem en cirkel"
       }
     }
   },
@@ -2248,7 +2248,7 @@
     "key": "29EA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort rombe med nedadvendt pil"
       }
     }
   },
@@ -2257,7 +2257,7 @@
     "key": "29EC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid cirkel med nedadvendt pil"
       }
     }
   },
@@ -2266,7 +2266,7 @@
     "key": "29ED",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort cirkel med nedadvendt pil"
       }
     }
   },
@@ -2274,7 +2274,7 @@
     "key": "2A17",
     "mappings": {
       "default": {
-        "default": "integraltegn med venstre pil med krog"
+        "default": "integraltegn med venstrevendt pil med krog"
       }
     },
     "category": "Sm"
@@ -2284,7 +2284,7 @@
     "key": "2B00",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nordøstvendt hvid pil"
       }
     }
   },
@@ -2293,7 +2293,7 @@
     "key": "2B01",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nordvestvendt hvid pil"
       }
     }
   },
@@ -2302,7 +2302,7 @@
     "key": "2B02",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sydøstvendt hvid pil"
       }
     }
   },
@@ -2311,7 +2311,7 @@
     "key": "2B03",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sydvestvendt hvid pil"
       }
     }
   },
@@ -2320,7 +2320,7 @@
     "key": "2B04",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre- og højrevendt hvid pil"
       }
     }
   },
@@ -2329,7 +2329,7 @@
     "key": "2B05",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt sort pil"
       }
     }
   },
@@ -2338,7 +2338,7 @@
     "key": "2B06",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opadvendt sort pil"
       }
     }
   },
@@ -2347,7 +2347,7 @@
     "key": "2B07",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedadvendt sort pil"
       }
     }
   },
@@ -2356,7 +2356,7 @@
     "key": "2B08",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nordøstvendt sort pil"
       }
     }
   },
@@ -2365,7 +2365,7 @@
     "key": "2B09",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nordvestvendt sort pil"
       }
     }
   },
@@ -2374,7 +2374,7 @@
     "key": "2B0A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sydøstvendt sort pil"
       }
     }
   },
@@ -2383,7 +2383,7 @@
     "key": "2B0B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sydvestvendt sort pil"
       }
     }
   },
@@ -2392,7 +2392,7 @@
     "key": "2B0C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre- og højrevendt sort pil"
       }
     }
   },
@@ -2401,7 +2401,7 @@
     "key": "2B0D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "op- og nedadvendt sort pil"
       }
     }
   },
@@ -2410,7 +2410,7 @@
     "key": "2B0E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med spidsen nedad"
       }
     }
   },
@@ -2419,7 +2419,7 @@
     "key": "2B0F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil med spidsen opad"
       }
     }
   },
@@ -2428,7 +2428,7 @@
     "key": "2B10",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med spidsen nedad"
       }
     }
   },
@@ -2437,7 +2437,7 @@
     "key": "2B11",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med spidsen opad"
       }
     }
   },
@@ -2446,7 +2446,7 @@
     "key": "2B30",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med lille cirkel"
       }
     }
   },
@@ -2455,7 +2455,7 @@
     "key": "2B31",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre venstrerettede pile"
       }
     }
   },
@@ -2464,7 +2464,7 @@
     "key": "2B32",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med et plustegn i en cirkel"
       }
     }
   },
@@ -2473,7 +2473,7 @@
     "key": "2B33",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lang venstrevendt krusedullepil"
       }
     }
   },
@@ -2482,7 +2482,7 @@
     "key": "2B34",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med to hoveder og en lodret streg igennem"
       }
     }
   },
@@ -2491,7 +2491,7 @@
     "key": "2B35",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med to hoveder og to streger igennem"
       }
     }
   },
@@ -2500,7 +2500,7 @@
     "key": "2B36",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med to hoveder udgående fra en streg"
       }
     }
   },
@@ -2509,7 +2509,7 @@
     "key": "2B37",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med to hoveder og tre prikker"
       }
     }
   },
@@ -2518,7 +2518,7 @@
     "key": "2B38",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med stiplet stængel"
       }
     }
   },
@@ -2527,7 +2527,7 @@
     "key": "2B39",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med pileende og en lodret streg igennem"
       }
     }
   },
@@ -2536,7 +2536,7 @@
     "key": "2B3A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med pileende og to lodrette streger igennem"
       }
     }
   },
@@ -2545,7 +2545,7 @@
     "key": "2B3B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med to hoveder og pileende"
       }
     }
   },
@@ -2554,7 +2554,7 @@
     "key": "2B3C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med to hoveder, pileende og en lodret streg igennem"
       }
     }
   },
@@ -2563,7 +2563,7 @@
     "key": "2B3D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil med to hoveder, pileende og to streger igennem"
       }
     }
   },
@@ -2572,7 +2572,7 @@
     "key": "2B3E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil gennem et x"
       }
     }
   },
@@ -2581,7 +2581,7 @@
     "key": "2B3F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "bølgepil, der peger direkter mod venstre"
       }
     }
   },
@@ -2590,7 +2590,7 @@
     "key": "2B40",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lighedstegn oven over en venstrevendt pil"
       }
     }
   },
@@ -2599,7 +2599,7 @@
     "key": "2B41",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt tilde oven over en venstrevendt pil"
       }
     }
   },
@@ -2608,7 +2608,7 @@
     "key": "2B42",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil oven over et omvendt omtrent ens-tegn"
       }
     }
   },
@@ -2617,7 +2617,7 @@
     "key": "2B43",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil gennem et større end-tegn"
       }
     }
   },
@@ -2626,7 +2626,7 @@
     "key": "2B44",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil gennem et delmængde-tegn"
       }
     }
   },
@@ -2635,7 +2635,7 @@
     "key": "2B45",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt firdobbelt pil"
       }
     }
   },
@@ -2644,7 +2644,7 @@
     "key": "2B46",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt firdobbelt pil"
       }
     }
   },
@@ -2653,7 +2653,7 @@
     "key": "2B47",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt tilde oven over en højrevendt pil"
       }
     }
   },
@@ -2662,7 +2662,7 @@
     "key": "2B48",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil oven over et omvendt omtrent ens-tegn"
       }
     }
   },
@@ -2671,7 +2671,7 @@
     "key": "2B49",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tilde oven over en venstrevendt pil"
       }
     }
   },
@@ -2680,7 +2680,7 @@
     "key": "2B4A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil oven over et omtrent ens-tegn"
       }
     }
   },
@@ -2689,7 +2689,7 @@
     "key": "2B4B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil oven over en omvendt tilde"
       }
     }
   },
@@ -2698,7 +2698,7 @@
     "key": "2B4C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil oven over en omvendt tilde"
       }
     }
   },
@@ -2707,7 +2707,7 @@
     "key": "FFE9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstrevendt pil i halv bredde"
       }
     }
   },
@@ -2716,7 +2716,7 @@
     "key": "FFEA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opadvendt pil i halv bredde"
       }
     }
   },
@@ -2725,7 +2725,7 @@
     "key": "FFEB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højrevendt pil i halv bredde"
       }
     }
   },
@@ -2734,7 +2734,7 @@
     "key": "FFEC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedadvendt pil i halv bredde"
       }
     }
   }

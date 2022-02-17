@@ -7,7 +7,7 @@
     "key": "0020",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellemrum"
       }
     }
   },
@@ -15,7 +15,7 @@
     "key": "00A0",
     "mappings": {
       "default": {
-        "default": " "
+        "default": "hårdt mellemrum"
       }
     },
     "category": "Zs"
@@ -24,7 +24,7 @@
     "key": "00AD",
     "mappings": {
       "default": {
-        "default": "soft hyphen"
+        "default": "blød bindestreg"
       }
     },
     "category": "Cf"
@@ -34,7 +34,7 @@
     "key": "2000",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en quad"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "2001",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "em quad"
       }
     }
   },
@@ -51,7 +51,7 @@
     "key": "2002",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kort mellemrum"
       }
     },
     "category": "Zs"
@@ -60,7 +60,7 @@
     "key": "2003",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "langt mellemrum"
       }
     },
     "category": "Zs"
@@ -69,7 +69,7 @@
     "key": "2004",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre pr. langt mellemrum"
       }
     },
     "category": "Zs"
@@ -78,7 +78,7 @@
     "key": "2005",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fire pr. langt mellemrum"
       }
     },
     "category": "Zs"
@@ -88,7 +88,7 @@
     "key": "2006",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "seks pr. langt mellemrum"
       }
     }
   },
@@ -96,7 +96,7 @@
     "key": "2007",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "numerisk mellemrum"
       }
     },
     "category": "Zs"
@@ -105,7 +105,7 @@
     "key": "2008",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tegnsætningsmellemrum"
       }
     },
     "category": "Zs"
@@ -114,7 +114,7 @@
     "key": "2009",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyndt mellemrum"
       }
     },
     "category": "Zs"
@@ -123,7 +123,7 @@
     "key": "200A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hairspace"
       }
     },
     "category": "Zs"
@@ -132,7 +132,7 @@
     "key": "200B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "breddeløs plads"
       }
     },
     "category": "Cf"
@@ -141,7 +141,7 @@
     "key": "200C",
     "mappings": {
       "default": {
-        "default": "zero width non joiner"
+        "default": "valgfrit mellemrum uden bredde"
       }
     },
     "category": "Cf"
@@ -150,7 +150,7 @@
     "key": "200D",
     "mappings": {
       "default": {
-        "default": "zero width joiner"
+        "default": "hårdt mellemrum uden bredde"
       }
     },
     "category": "Cf"
@@ -178,7 +178,7 @@
     "key": "2028",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "linjeseparator"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "2029",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "afsnitsseparator"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "202A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integrering fra venstre mod højre"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "202B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "integrering fra højre mod venstre"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "202C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "pop directional formatting"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "202D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "left-to-right override"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "202E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "right-to-left override"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "202F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snævert hårdt mellemrum"
       }
     }
   },
@@ -249,7 +249,7 @@
     "key": "205F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellemstort matematisk mellemrum"
       }
     },
     "category": "Zs"
@@ -258,7 +258,7 @@
     "key": "2060",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ordskærm"
       }
     },
     "category": "Cf"
@@ -285,7 +285,7 @@
     "key": "2063",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "separator"
       }
     },
     "category": "Cf"
@@ -295,7 +295,7 @@
     "key": "2064",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "plustegn"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "206A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inhibit symmetric swapping"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "206B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "activate symmetric swapping"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "206E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "national digit shapes"
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "206F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nominal digit shapes"
       }
     }
   },
@@ -339,7 +339,7 @@
     "key": "FEFF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "zero width no break space"
       }
     },
     "category": "Cf"
@@ -349,7 +349,7 @@
     "key": "FFF9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interlinear annotation anchor"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "FFFA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interlinear annotation separator"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "FFFB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interlinear annotation terminator"
       }
     }
   }

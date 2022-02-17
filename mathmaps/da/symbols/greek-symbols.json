@@ -6,7 +6,7 @@
     "key": "03D0",
     "mappings": {
       "default": {
-        "default": "græsk beta"
+        "default": "beta"
       }
     },
     "category": "Ll"
@@ -15,7 +15,7 @@
     "key": "03D7",
     "mappings": {
       "default": {
-        "default": "variant kai"
+        "default": "kai"
       }
     },
     "category": "Ll"
@@ -24,7 +24,7 @@
     "key": "03F6",
     "mappings": {
       "default": {
-        "default": "reversed epsilon"
+        "default": "omvendt epsilon"
       }
     },
     "category": "Sm"
@@ -34,7 +34,7 @@
     "key": "1D7CA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digamma med store fede bogstaver"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "1D7CB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digamma med fed skrift"
       }
     }
   }

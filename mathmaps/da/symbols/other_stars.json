@@ -7,7 +7,7 @@
     "key": "23E8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "decimal eksponentsymbol"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "26AA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid cirkel"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "26AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort cirkel"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "2705",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvidt flueben"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2714",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftigt flueben"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "2715",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multiplikations-x"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "2716",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kraftigt multiplikations-x"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "2718",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tykt afstemningskryds"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "271B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "åbent midterkryds"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "271C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tykt åbent midterkryds"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "2721",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "davidsstjerne"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "2722",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dråbeformet stjerne med fire takker"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "2723",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ballonstjerne med fire takker"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "2724",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk ballonstjerne med fire takker"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "2725",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stjerne med fire klørformede takker"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "2726",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort firetakket stjerne"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2727",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid firetakket stjerne"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "2728",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gnister"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "2729",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid stjerne med kontur"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "272A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid stjerne i cirkel"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "272B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort stjerne med åben midte"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "272C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid stjerne med sort midte"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "272D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kontur af sort stjerne"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "272E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk kontur af sort stjerne"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "272F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "møllestjerne"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "2730",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid stjerne med skyggevirkning"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "2731",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tung stjerne"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "2732",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med åben midte"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "2733",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stjerne med otte takker"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "2734",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort stjerne med otte takker"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "2735",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "møllestjerne med otte takker"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "2739",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort stjerne med tolv takker"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "273A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stjerne med seksten takker"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "273B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dråbeformet stjerne"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "273C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dråbeformet stjerne med takker og åben midte"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "273E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort-hvid blomst med seks kronblade"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "273F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort blomst"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "2740",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid blomst"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "2741",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort blomsteromrids med otte kronblade"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "2742",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "cirkel med stjerne med otte spidser og åben midte"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "2743",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk dråbeformet møllestjerne"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "2744",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snefnug"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "2745",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tæt trebladet snefnug"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "2746",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tykt sildebenssnefnug"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "2747",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gnist"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "2748",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk gnist"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "2749",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ballonstjerne"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "274A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dråbeformet stjerne med otte propeller"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "274B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyk dråbeformet stjerne med otte propeller"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "274C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kryds"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "274D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid cirkel med skyggevirkning"
       }
     }
   }

@@ -24,7 +24,7 @@
     "key": "005B",
     "mappings": {
       "default": {
-        "default": "venstre kantet parantes"
+        "default": "kantet venstreparentes"
       }
     },
     "category": "Ps"
@@ -33,7 +33,7 @@
     "key": "005D",
     "mappings": {
       "default": {
-        "default": "højre kantet parantes"
+        "default": "kantet højreparentes"
       }
     },
     "category": "Pe"
@@ -61,7 +61,7 @@
     "key": "2045",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre kantet parentes med vinge"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2046",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre kantet parentes med vinge"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "239B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre parentes med øvre krog"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "239C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forlængelse af venstre parentes"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "239D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre parentes med nedre krog"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "239E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre parentes med øvre krog"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "239F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre parentes med forlængelse"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "23A0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre parentes med nedre krog"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "23A1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre kantet parentes med øvre hjørne"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "23A2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forlængelse af venstre kantet parentes"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "23A3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre kantet parentes med nedre hjørne"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "23A4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre kantet parentes med øvre hjørne"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "23A5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forlængelse af højre kantet parentes"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "23A6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre kantet parentes med nedre hjørne"
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "23A7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre klammeparentes med øvre krog"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "23A8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre klammeparentes med mellemstykke"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "23A9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre klammeparentes med nedre krog"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "23AA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forlængelse af klammeparentes"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "23AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre klammeparentes med øvre krog"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "23AC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre klammeparentes med mellemstykke"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "23AD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre klammeparentes med nedre krog"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "23AE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forlængelse af integraltegn"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "23AF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "forlængelse af vandret streg"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "23B2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "summering øverst"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "23B3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "summering nederst"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "23B6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nederste kantet parentes oven over øverste kantet beslag"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "23B7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "radikalsymbol nederst"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "23B8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre lodret linje"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "23B9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre lodret linje"
       }
     }
   },
@@ -556,7 +556,7 @@
     "key": "2768",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellemstort venstreparentesornament"
       }
     }
   },
@@ -565,7 +565,7 @@
     "key": "2769",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellemstort højreparentesornament"
       }
     }
   },
@@ -574,7 +574,7 @@
     "key": "276A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellemstort fladt venstreparentesornament"
       }
     }
   },
@@ -583,7 +583,7 @@
     "key": "276B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellemstort fladt højreparentesornament"
       }
     }
   },
@@ -592,7 +592,7 @@
     "key": "276C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellemstort vinkelparentesornament, der peger mod venstre"
       }
     }
   },
@@ -601,7 +601,7 @@
     "key": "276D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellemstort vinkelparentesornament, der peger mod højre"
       }
     }
   },
@@ -610,7 +610,7 @@
     "key": "276E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tykt spørgsmålstegnornament, der peger mod venstre"
       }
     }
   },
@@ -619,7 +619,7 @@
     "key": "276F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tykt spørgsmålstegnornament, der peger mod højre"
       }
     }
   },
@@ -628,7 +628,7 @@
     "key": "2770",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tykt vinkelparentesornament, der peger mod venstre"
       }
     }
   },
@@ -637,7 +637,7 @@
     "key": "2771",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tykt vinkelparentesornament, der peger mod højre"
       }
     }
   },
@@ -646,7 +646,7 @@
     "key": "2772",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lyst skildpaddeskjoldformet venstreparentesornament"
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "2773",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lyst skildpaddeskjoldformet højreparentesornament"
       }
     }
   },
@@ -664,7 +664,7 @@
     "key": "2774",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellemstort venstreparentesornament"
       }
     }
   },
@@ -673,7 +673,7 @@
     "key": "2775",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellemstort højreparentesornament"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "2983",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre hvid klammeparentes"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "2984",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre hvid klammeparentes"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "2987",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstreparentes med Z-notation"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "2988",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højreparentes med Z-notation"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "2997",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort skildpaddeskjoldformet venstreparentestegn"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "2998",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort skildpaddeskjoldformet højreparentestegn"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "29D8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre lodret bølgelinje"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "29D9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre lodret bølgelinje"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "29FC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "buet vinkelparentes, der peger mod venstre"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "key": "29FD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "buet vinkelparentes, der peger mod højre"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "2E22",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øverste halvdel af venstre kantet parentes"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "key": "2E23",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "øverste halvdel af højre kantet parentes"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "2E24",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nederste halvdel af venstre kantet parentes"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "2E25",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nederste halvdel af højre kantet parentes"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "2E26",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "Delmængdesymbol mod venstre"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "key": "2E27",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "U-parentes mod højre"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "key": "2E28",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelt parentes mod venstre"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "2E29",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dobbelt parentes mod højre"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "3008",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre vinkelparentes"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "3009",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre vinkelparentes"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "300C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kantet venstreparentes"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "key": "300D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kantet højreparentes"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "300E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid kantet venstreparentes"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "300F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid kantet højreparentes"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "3010",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort linseformet venstreparentes"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "3011",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sort linseformet højreparentes"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "3016",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid linseformet venstreparentes"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "key": "3017",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid linseformet højreparentes"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "key": "3018",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid skildpaddeskjoldformet venstreparentes"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "key": "3019",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid skildpaddeskjoldformet højreparentes"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "key": "301D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt dobbelt primtegn/anførselstegn"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "301F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lavt dobbelt primtegn/anførselstegn"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "key": "FD3E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "udsmykket venstreparentes"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "key": "FD3F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "udsmykket højreparentes"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "key": "FE17",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret hvid linseformet venstreparentes"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "key": "FE18",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret hvid linseformet højreparentes"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "key": "FE39",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret skildpaddeskjoldformet venstreparentes"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "key": "FE3A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret skildpaddeskjoldformet højreparentes"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "key": "FE3B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret sort linseformet venstreparentes"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "key": "FE3C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret sort linseformet højreparentes"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "key": "FE3D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret venstre dobbelt vinkelparentes"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "key": "FE3E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret højre dobbelt vinkelparentes"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "key": "FE41",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret kantet venstreparentes"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "key": "FE42",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret kantet højreparentes"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "key": "FE43",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret, hvid kantet venstreparentes"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "key": "FE44",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret, hvid kantet højreparentes"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "key": "FE47",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret venstreparentes"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "key": "FE48",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "præsentationsform for lodret højreparentes"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "key": "FE59",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lille venstreparentes"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "FE5A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lille højreparentes"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "key": "FE5B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lille venstre klammeparentes"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "key": "FE5C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lille højre klammeparentes"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "key": "FE5D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lille skildpaddeskjoldformet venstreparentes"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "FE5E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lille skildpaddeskjoldformet højreparentes"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "key": "FF08",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre parentes i fuld bredde"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "key": "FF09",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre parentes i fuld bredde"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "key": "FF3B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kantet venstreparentes i fuld bredde"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "key": "FF3D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre kantet parentes i fuld bredde"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "key": "FF5B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "venstre klammeparentes i fuld bredde"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "key": "FF5D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "højre klammeparentes i fuld bredde"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "key": "FF5F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid venstre parentes i fuld bredde"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "key": "FF60",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hvid højre parentes i fuld bredde"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "key": "FF62",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kantet venstreparentes i halv bredde"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "key": "FF63",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kantet højreparentes i halv bredde"
       }
     }
   }

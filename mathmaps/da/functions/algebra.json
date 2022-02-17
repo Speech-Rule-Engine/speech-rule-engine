@@ -13,7 +13,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "grad"
       }
     }
   },
@@ -25,7 +25,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "determinant"
       }
     }
   },
@@ -37,7 +37,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dimension"
       }
     }
   },
@@ -50,7 +50,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "homomorfi"
       }
     }
   },
@@ -62,7 +62,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kerne"
       }
     }
   },
@@ -75,7 +75,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "spor"
       }
     }
   }

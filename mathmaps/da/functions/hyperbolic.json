@@ -6,7 +6,7 @@
     "key": "cosh",
     "mappings": {
       "default": {
-        "default": "cosinus hyperbolsk"
+        "default": "hyperbolsk cosinus"
       }
     },
     "category": "Hyperbolic",
@@ -18,7 +18,7 @@
     "key": "coth",
     "mappings": {
       "default": {
-        "default": "co-tangent hyperbolsk"
+        "default": "hyperbolsk cotangens"
       }
     },
     "category": "Hyperbolic",
@@ -30,7 +30,7 @@
     "key": "csch",
     "mappings": {
       "default": {
-        "default": "co-sekant hyperbolsk"
+        "default": "hyperbolsk cosecans"
       }
     },
     "category": "Hyperbolic",
@@ -42,7 +42,7 @@
     "key": "sech",
     "mappings": {
       "default": {
-        "default": "sekant hyperbolsk"
+        "default": "hyperbolsk sekans"
       }
     },
     "category": "Hyperbolic",
@@ -54,7 +54,7 @@
     "key": "sinh",
     "mappings": {
       "default": {
-        "default": "sinus hyperbolsk "
+        "default": "sinus hyperbolsk"
       }
     },
     "category": "Hyperbolic",
@@ -66,7 +66,7 @@
     "key": "tanh",
     "mappings": {
       "default": {
-        "default": "tangens hyperbolsk"
+        "default": "hyperbolsk tangens"
       }
     },
     "category": "Hyperbolic",
@@ -83,7 +83,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "area cosinus hyperbolsk"
       }
     }
   },
@@ -96,7 +96,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "area cotangens hyperbolsk"
       }
     }
   },
@@ -109,7 +109,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "area cosecans hyperbolsk"
       }
     }
   },
@@ -122,7 +122,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "area secans hyperbolsk"
       }
     }
   },
@@ -135,7 +135,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "area sinus hyperbolsk"
       }
     }
   },
@@ -148,7 +148,7 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "area tangens hyperbolsk"
       }
     }
   }

@@ -24,7 +24,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sekund",
+        "plural": "sekunder"
       }
     }
   },
@@ -37,7 +38,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "minut",
+        "plural": "minutter"
       }
     }
   },
@@ -49,7 +51,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "grad",
+        "plural": "grader"
       }
     }
   },
@@ -62,7 +65,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "time",
+        "plural": "timer"
       }
     }
   }

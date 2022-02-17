@@ -26,7 +26,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kilowatttime",
+        "plural": "kilowatttimer"
       }
     }
   },
@@ -48,8 +49,8 @@
     "key": "N",
     "mappings": {
       "default": {
-        "default": "newton",
-        "plural": "newton"
+        "default": "Newton",
+        "plural": "Newton"
       }
     },
     "category": "energy",
@@ -95,7 +96,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ohm",
+        "plural": "ohm"
       }
     }
   },

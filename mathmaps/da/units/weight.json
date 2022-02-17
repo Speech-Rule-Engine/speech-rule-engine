@@ -53,7 +53,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stone",
+        "plural": "stone"
       }
     }
   },
@@ -66,7 +67,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "quarter",
+        "plural": "quarters"
       }
     }
   },
@@ -74,7 +76,8 @@
     "key": "cwt",
     "mappings": {
       "default": {
-        "default": "hundredweight"
+        "default": "hektokilogram",
+        "plural": "hektokilogram"
       }
     },
     "category": "weight",
@@ -92,7 +95,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "long ton",
+        "plural": "long ton"
       }
     }
   },
@@ -100,8 +104,8 @@
     "key": "gr",
     "mappings": {
       "default": {
-        "default": "grain",
-        "plural": "grains"
+        "default": "gram",
+        "plural": "gram"
       }
     },
     "category": "weight",
@@ -131,7 +135,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mikrogram",
+        "plural": "mikrogram"
       }
     }
   },
@@ -140,7 +145,7 @@
     "mappings": {
       "default": {
         "default": "ton",
-        "plural": "tons"
+        "plural": "ton"
       }
     },
     "category": "weight",

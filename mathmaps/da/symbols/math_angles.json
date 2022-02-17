@@ -15,7 +15,7 @@
     "key": "237C",
     "mappings": {
       "default": {
-        "default": "ret vinkel med zik zak pil på lorette vinkel ben"
+        "default": "ret vinkel med nedadgående zigzag-pil"
       }
     },
     "category": "Sm"
@@ -24,7 +24,7 @@
     "key": "27C0",
     "mappings": {
       "default": {
-        "default": "tre dimensionel vinkel"
+        "default": "tredimensionel vinkel"
       }
     },
     "category": "Sm"
@@ -34,7 +34,7 @@
     "key": "299B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "målt vinkel med åbning til venstre"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "299C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ret vinkel med firkant"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "299E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vinkel med s indvendigt"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "299F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "spids vinkel"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "29A0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sfærisk vinkel med åbning til venstre"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "29A1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sfærisk vinkel med åbning opad"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "29A2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt vinkel"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "29A3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt vinkel"
       }
     }
   },
@@ -114,7 +114,7 @@
     "key": "29A4",
     "mappings": {
       "default": {
-        "default": "vinkel med understregning"
+        "default": "vinkel med streg nedenunder"
       }
     },
     "category": "Sm"
@@ -123,7 +123,7 @@
     "key": "29A5",
     "mappings": {
       "default": {
-        "default": "omvendt vinkel med understregning"
+        "default": "omvendt vinkel med streg nedenunder"
       }
     },
     "category": "Sm"
@@ -132,7 +132,7 @@
     "key": "29A6",
     "mappings": {
       "default": {
-        "default": "stump vinkel der åbner opad"
+        "default": "skæv vinkel med åbningen opad"
       }
     },
     "category": "Sm"
@@ -141,7 +141,7 @@
     "key": "29A7",
     "mappings": {
       "default": {
-        "default": "stump vinkel der åbner nedad"
+        "default": "skæv vinkel med åbningen nedad"
       }
     },
     "category": "Sm"
@@ -150,7 +150,7 @@
     "key": "29A8",
     "mappings": {
       "default": {
-        "default": "målt vinkel med åben arm der ender i en pil der peger op og til højre"
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger opad mod højre"
       }
     },
     "category": "Sm"
@@ -159,7 +159,7 @@
     "key": "29A9",
     "mappings": {
       "default": {
-        "default": "målt vinkel med åben arm der ender i en pil der peger op og til venstre"
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger opad mod venstre"
       }
     },
     "category": "Sm"
@@ -168,7 +168,7 @@
     "key": "29AA",
     "mappings": {
       "default": {
-        "default": "målt vinkel med åben arm der ender i en pil der peger ned og til højre"
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger nedad mod højre"
       }
     },
     "category": "Sm"
@@ -177,7 +177,7 @@
     "key": "29AB",
     "mappings": {
       "default": {
-        "default": "målt vinkel med åben arm der ender i en pil der peger ned og til venstre"
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger nedad mod venstre"
       }
     },
     "category": "Sm"
@@ -186,7 +186,7 @@
     "key": "29AC",
     "mappings": {
       "default": {
-        "default": "målt vinkel med åben arm der ender i en pil der peger til højre og op"
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod højre og opad"
       }
     },
     "category": "Sm"
@@ -195,7 +195,7 @@
     "key": "29AD",
     "mappings": {
       "default": {
-        "default": "målt vinkel med åben arm der ender i en pil der peger til venstre og op"
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod venstre og opad"
       }
     },
     "category": "Sm"
@@ -204,7 +204,7 @@
     "key": "29AE",
     "mappings": {
       "default": {
-        "default": "målt vinkel med åben arm der ender i en pil der peger til højre og ned"
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod højre og nedad"
       }
     },
     "category": "Sm"
@@ -213,7 +213,7 @@
     "key": "29AF",
     "mappings": {
       "default": {
-        "default": "målt vinkel med åben arm der ender i en pil der peger til venstre og ned"
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod venstre og nedad"
       }
     },
     "category": "Sm"

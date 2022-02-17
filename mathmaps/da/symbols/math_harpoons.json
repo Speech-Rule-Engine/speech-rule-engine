@@ -115,7 +115,7 @@
     "key": "294C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opadvendt spids højre- og nedadvendt spids venstrevendt harpun"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "294D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "opadvendt spids venstre- og nedadvendt spids højrevendt harpun"
       }
     }
   },

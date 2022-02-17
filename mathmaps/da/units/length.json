@@ -20,8 +20,8 @@
     "key": "in",
     "mappings": {
       "default": {
-        "default": "inch",
-        "plural": "inches"
+        "default": "tomme",
+        "plural": "tommer"
       }
     },
     "category": "length",
@@ -35,7 +35,7 @@
     "mappings": {
       "default": {
         "default": "mil",
-        "plural": "mile"
+        "plural": "mil"
       }
     },
     "category": "length",
@@ -109,7 +109,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "furlong",
+        "plural": "furlong"
       }
     }
   },
@@ -121,7 +122,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sømil",
+        "plural": "sømil"
       }
     }
   },

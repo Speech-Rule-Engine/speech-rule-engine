@@ -41,7 +41,8 @@
     "key": "¥",
     "mappings": {
       "default": {
-        "default": "yen"
+        "default": "yen",
+        "plural": "yen"
       }
     },
     "category": "currency",
@@ -69,7 +70,8 @@
     "key": "₡",
     "mappings": {
       "default": {
-        "default": "colons"
+        "default": "colons",
+        "plural": "colonss"
       }
     },
     "category": "currency",
@@ -82,7 +84,8 @@
     "key": "₢",
     "mappings": {
       "default": {
-        "default": "cruzeiro"
+        "default": "cruzeiro",
+        "plural": "cruzeiro"
       }
     },
     "category": "currency",
@@ -95,7 +98,7 @@
     "mappings": {
       "default": {
         "default": "franc",
-        "plural": "francs"
+        "plural": "franc"
       }
     },
     "category": "currency",
@@ -107,7 +110,8 @@
     "key": "₤",
     "mappings": {
       "default": {
-        "default": "lira"
+        "default": "lire",
+        "plural": "lire"
       }
     },
     "category": "currency",
@@ -119,7 +123,8 @@
     "key": "₥",
     "mappings": {
       "default": {
-        "default": "mills"
+        "default": "mills",
+        "plural": "millss"
       }
     },
     "category": "currency",
@@ -131,7 +136,8 @@
     "key": "₦",
     "mappings": {
       "default": {
-        "default": "naira"
+        "default": "naira",
+        "plural": "naira"
       }
     },
     "category": "currency",
@@ -144,7 +150,8 @@
     "key": "₧",
     "mappings": {
       "default": {
-        "default": "peseta"
+        "default": "peseta",
+        "plural": "peseta"
       }
     },
     "category": "currency",
@@ -156,7 +163,8 @@
     "key": "₨",
     "mappings": {
       "default": {
-        "default": "rupees"
+        "default": "rupees",
+        "plural": "rupeess"
       }
     },
     "category": "currency",
@@ -173,7 +181,8 @@
     "key": "₩",
     "mappings": {
       "default": {
-        "default": "won"
+        "default": "won",
+        "plural": "won"
       }
     },
     "category": "currency",
@@ -187,8 +196,8 @@
     "key": "₪",
     "mappings": {
       "default": {
-        "default": "sheqel",
-        "plural": "sheqels"
+        "default": "shekel",
+        "plural": "shekel"
       }
     },
     "category": "currency",
@@ -200,7 +209,8 @@
     "key": "₫",
     "mappings": {
       "default": {
-        "default": "dong"
+        "default": "dong",
+        "plural": "dong"
       }
     },
     "category": "currency",
@@ -212,7 +222,8 @@
     "key": "₭",
     "mappings": {
       "default": {
-        "default": "kip"
+        "default": "kip",
+        "plural": "kip"
       }
     },
     "category": "currency",
@@ -224,7 +235,8 @@
     "key": "₮",
     "mappings": {
       "default": {
-        "default": "tugrik"
+        "default": "tugrik",
+        "plural": "tugrik"
       }
     },
     "category": "currency",
@@ -236,7 +248,8 @@
     "key": "₯",
     "mappings": {
       "default": {
-        "default": "drachma"
+        "default": "drakme",
+        "plural": "drakmer"
       }
     },
     "category": "currency",
@@ -248,7 +261,8 @@
     "key": "₰",
     "mappings": {
       "default": {
-        "default": "tyske pennies"
+        "default": "tyske pennies",
+        "plural": "tyske pennies"
       }
     },
     "category": "currency",
@@ -260,7 +274,8 @@
     "key": "₱",
     "mappings": {
       "default": {
-        "default": "pesos"
+        "default": "pesos",
+        "plural": "pesoss"
       }
     },
     "category": "currency",
@@ -272,7 +287,8 @@
     "key": "₲",
     "mappings": {
       "default": {
-        "default": "guaranis"
+        "default": "guaranis",
+        "plural": "guaranis"
       }
     },
     "category": "currency",
@@ -284,7 +300,8 @@
     "key": "₳",
     "mappings": {
       "default": {
-        "default": "australs"
+        "default": "australs",
+        "plural": "australss"
       }
     },
     "category": "currency",
@@ -296,7 +313,8 @@
     "key": "₴",
     "mappings": {
       "default": {
-        "default": "hryvnias"
+        "default": "hryvnias",
+        "plural": "hryvniass"
       }
     },
     "category": "currency",
@@ -309,7 +327,8 @@
     "key": "₵",
     "mappings": {
       "default": {
-        "default": "cedis"
+        "default": "cedi",
+        "plural": "cedi"
       }
     },
     "category": "currency",
@@ -322,7 +341,8 @@
     "key": "元",
     "mappings": {
       "default": {
-        "default": "yuan"
+        "default": "yuan",
+        "plural": "yuan"
       }
     },
     "category": "currency",

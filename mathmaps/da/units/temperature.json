@@ -6,8 +6,8 @@
     "key": "F",
     "mappings": {
       "default": {
-        "default": "farad",
-        "plural": "farad"
+        "default": "Fahrenheit",
+        "plural": "Fahrenheit"
       }
     },
     "category": "temperature",
@@ -21,8 +21,8 @@
     "key": "C",
     "mappings": {
       "default": {
-        "default": "coulomb",
-        "plural": "coulombs"
+        "default": "Celsius",
+        "plural": "Celsius"
       }
     },
     "category": "temperature",
@@ -35,8 +35,8 @@
     "key": "K",
     "mappings": {
       "default": {
-        "default": "kelvin",
-        "plural": "kelvin"
+        "default": "Kelvin",
+        "plural": "Kelvin"
       }
     },
     "category": "temperature",

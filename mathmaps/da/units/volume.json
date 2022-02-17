@@ -11,7 +11,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kubik",
+        "plural": "kubik"
       }
     }
   },
@@ -90,7 +91,7 @@
     "mappings": {
       "default": {
         "default": "gallon",
-        "plural": "galloner"
+        "plural": "gallons"
       }
     },
     "category": "volume",
@@ -145,8 +146,8 @@
     "key": "tbsp",
     "mappings": {
       "default": {
-        "default": "ske",
-        "plural": "skeer"
+        "default": "spiseske",
+        "plural": "spiseskeer"
       }
     },
     "category": "volume",
@@ -161,8 +162,8 @@
     "key": "tsp",
     "mappings": {
       "default": {
-        "default": "te ske",
-        "plural": "te skeer"
+        "default": "teske",
+        "plural": "teskeer"
       }
     },
     "category": "volume",
@@ -194,7 +195,8 @@
     ],
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kubikcentimeter",
+        "plural": "kubikcentimeter"
       }
     }
   },

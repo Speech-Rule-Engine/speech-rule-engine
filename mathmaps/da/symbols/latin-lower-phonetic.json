@@ -6,7 +6,7 @@
     "key": "00F8",
     "mappings": {
       "default": {
-        "default": "ø"
+        "default": "o med streg igennem"
       }
     },
     "category": "Ll"
@@ -15,7 +15,7 @@
     "key": "0111",
     "mappings": {
       "default": {
-        "default": "d med streg"
+        "default": "d med streg igennem"
       }
     },
     "category": "Ll"
@@ -24,7 +24,7 @@
     "key": "0127",
     "mappings": {
       "default": {
-        "default": "h med streg"
+        "default": "h med streg igennem"
       }
     },
     "category": "Ll"
@@ -33,7 +33,7 @@
     "key": "0142",
     "mappings": {
       "default": {
-        "default": "l med streg"
+        "default": "l med streg igennem"
       }
     },
     "category": "Ll"
@@ -42,7 +42,7 @@
     "key": "0167",
     "mappings": {
       "default": {
-        "default": "t med streg"
+        "default": "t med streg igennem"
       }
     },
     "category": "Ll"
@@ -52,7 +52,7 @@
     "key": "0180",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "b med streg igennem"
       }
     }
   },
@@ -60,7 +60,7 @@
     "key": "019B",
     "mappings": {
       "default": {
-        "default": "lambda med streg"
+        "default": "lambda med streg igennem"
       }
     },
     "category": "Ll"
@@ -70,7 +70,7 @@
     "key": "01B6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med streg igennem"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "01BE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med omvendt glottalt lukke og streg igennem"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "01E5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "g med streg igennem"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "01FF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med streg igennem og accent aigu"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "023C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "c med streg igennem"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "0247",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med streg igennem"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "0249",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "j med streg igennem"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "024D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med streg igennem"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "024F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "y med streg igennem"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "025F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prikløst j med streg igennem"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "0268",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med streg igennem"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "0284",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prikløst j med med streg igennem og krog"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "02A1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med glottalt lukke og streg igennem"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "02A2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med omvendt glottalt lukke og streg igennem"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "1D13",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sidelænst o med streg igennem"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "1D7C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "iota med streg igennem"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "1D7D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "p med streg igennem"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "1D7F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ypsilon med streg igennem"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "1E9C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "langt s med diagonal streg igennem"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "1E9D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "langt s med streg igennem højt oppe"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "018D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "drejet delta"
       }
     }
   },
@@ -258,7 +258,7 @@
     "key": "1E9B",
     "mappings": {
       "default": {
-        "default": "langt s med prik over"
+        "default": "langt s med prik ovenover"
       }
     },
     "category": "Ll"
@@ -268,7 +268,7 @@
     "key": "1E9F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "delta"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "017F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "langt s"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "0183",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "b med streg øverst"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "0185",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tone seks"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "0188",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "c med krog"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "018C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med streg øverst"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "0195",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hv"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "0199",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "k med krog"
       }
     }
   },
@@ -357,7 +357,7 @@
     "key": "019A",
     "mappings": {
       "default": {
-        "default": "lmed bar"
+        "default": "l med streg"
       }
     },
     "category": "Ll"
@@ -367,7 +367,7 @@
     "key": "019E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med langt højre ben"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "01A1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med horn"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "01A3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "oi"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "01A5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "p med krog"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "01A8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tone to"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "01AA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med omvendt esh-løkke"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "01AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med palatal krog"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "01AD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med krog"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "01B0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med horn"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "01B4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "y med krog"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "01B9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh omvendt"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "01BA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh med hale"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "01BD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tone fem"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "01BF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "det latinske bogstav wynn"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "01C6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dz med háček"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "01C9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lj"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "01CC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nj"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "01E3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ae med macron"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "01EF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh med háček"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "01F3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "dz"
       }
     }
   },
@@ -547,7 +547,7 @@
     "key": "021D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "yogh"
       }
     }
   },
@@ -556,7 +556,7 @@
     "key": "026E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lezh"
       }
     }
   },
@@ -565,7 +565,7 @@
     "key": "0292",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh"
       }
     }
   },
@@ -574,7 +574,7 @@
     "key": "0293",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh med krølle"
       }
     }
   },
@@ -583,7 +583,7 @@
     "key": "02A4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen dezh"
       }
     }
   },
@@ -592,7 +592,7 @@
     "key": "01DD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt e"
       }
     }
   },
@@ -601,7 +601,7 @@
     "key": "01FD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ae med accent aigu"
       }
     }
   },
@@ -610,7 +610,7 @@
     "key": "0221",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med krølle"
       }
     }
   },
@@ -619,7 +619,7 @@
     "key": "0223",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ou"
       }
     }
   },
@@ -628,7 +628,7 @@
     "key": "0225",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med krog"
       }
     }
   },
@@ -637,7 +637,7 @@
     "key": "0234",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med krølle"
       }
     }
   },
@@ -646,7 +646,7 @@
     "key": "0235",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med krølle"
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "0236",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med krølle"
       }
     }
   },
@@ -664,7 +664,7 @@
     "key": "0238",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen db"
       }
     }
   },
@@ -673,7 +673,7 @@
     "key": "0239",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen qp"
       }
     }
   },
@@ -682,7 +682,7 @@
     "key": "023F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s med kurvet hale"
       }
     }
   },
@@ -691,7 +691,7 @@
     "key": "0240",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med kurvet hale"
       }
     }
   },
@@ -700,7 +700,7 @@
     "key": "0242",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "glottalt lukke"
       }
     }
   },
@@ -709,7 +709,7 @@
     "key": "024B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "q med kroget hale"
       }
     }
   },
@@ -718,7 +718,7 @@
     "key": "0250",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt a"
       }
     }
   },
@@ -727,7 +727,7 @@
     "key": "0251",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "alfa"
       }
     }
   },
@@ -736,7 +736,7 @@
     "key": "0252",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt alfa"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "0253",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "b med krog"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "0254",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "åbent o"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "0255",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "c med krølle"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "0256",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med hale"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "0257",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med krog"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "0258",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt e"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "0259",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "schwa"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "025A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "schwa med krog"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "025C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt åbent e"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "025D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt åbent e med krog"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "025E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukket omvendt åbent e"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0260",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "g med krog"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0261",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "håndskrevet g"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "0263",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gamma"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "0264",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vædderhorn"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "0265",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt h"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "0266",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "h med krog"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0267",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "heng med krog"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0269",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "iota"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "026B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med tilde i midten"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "026C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med bælte"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "026D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med retrofleks krog"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "026F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt m"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "0270",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt m med langt ben"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0271",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "m med krog"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "0272",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med krog til venstre"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "0273",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med retrofleks krog"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "0275",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med vandret streg igennem"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "0277",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukket omega"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "key": "0278",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fi"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "0279",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt r"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "key": "027A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt r med langt ben"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "027B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt r med krog"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "key": "027C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med langt ben"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "027D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med hale"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "027E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med krog"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "027F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt r med krog"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "key": "0282",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s med krog"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "key": "0283",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "esh"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "0285",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "squat omvendt esh"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "0286",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "esh med krølle"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "0287",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt t"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "key": "0288",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med retrofleks krog"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "key": "0289",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med vandret streg igennem"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "028A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ypsilon"
       }
     }
   },
@@ -1159,7 +1159,7 @@
     "key": "028B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "v med krog"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "028C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt v"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "028D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt w"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "028E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt y"
       }
     }
   },
@@ -1195,7 +1195,7 @@
     "key": "0290",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med retrofleks krog"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "0291",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med krølle"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "key": "0295",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med stemt faryngealt frikativ"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "0296",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med omvendt glottal lukning"
       }
     }
   },
@@ -1231,7 +1231,7 @@
     "key": "0297",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med strakt c"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "key": "0298",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med bilabialt klik"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "key": "029A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "lukket åbent e"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "key": "029E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt k"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "key": "02A0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "q med krog"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "key": "02A3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen dz"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "key": "02A5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen dz med krølle"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "02A6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen ts"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "key": "02A7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen tesh"
       }
     }
   },
@@ -1312,7 +1312,7 @@
     "key": "02A8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen tc med krølle"
       }
     }
   },
@@ -1321,7 +1321,7 @@
     "key": "02A9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen feng"
       }
     }
   },
@@ -1330,7 +1330,7 @@
     "key": "02AA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen ls"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "key": "02AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "digrafen lz"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "key": "02AC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med bilabial konsonant"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "key": "02AD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med bidental konsonant"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "key": "02AE",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt h med krog"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "key": "02AF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt h med krog og hale"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "key": "1D02",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt ae"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "key": "1D08",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt åbent e"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "key": "1D09",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt i"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "key": "1D11",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sidelænst o"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "key": "1D12",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sidelænst åbent o"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "key": "1D14",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt oe"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "key": "1D16",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "den øverste halvdel af et o"
       }
     }
   },
@@ -1447,7 +1447,7 @@
     "key": "1D17",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "den nederste halvdel af et o"
       }
     }
   },
@@ -1456,7 +1456,7 @@
     "key": "1D1D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sidelænst u"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "key": "1D1E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sidelænst u med tréma"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "key": "1D1F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sidelæns drejet m"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "key": "1D24",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "latinsk bogstav med stemt laryngalt frikativ"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "key": "1D25",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "det latinske bogstav ain"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "key": "1D6B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ue"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "1D6C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "b med tilde i midten"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "key": "1D6D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med tilde i midten"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "key": "1D6E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "f med tilde i midten"
       }
     }
   },
@@ -1537,7 +1537,7 @@
     "key": "1D6F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "m med tilde i midten"
       }
     }
   },
@@ -1546,7 +1546,7 @@
     "key": "1D70",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med tilde i midten"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "key": "1D71",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "p med tilde i midten"
       }
     }
   },
@@ -1564,7 +1564,7 @@
     "key": "1D72",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med tilde i midten"
       }
     }
   },
@@ -1573,7 +1573,7 @@
     "key": "1D73",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med krog og tilde i midten"
       }
     }
   },
@@ -1582,7 +1582,7 @@
     "key": "1D74",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s med tilde i midten"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "key": "1D75",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "t med tilde i midten"
       }
     }
   },
@@ -1600,7 +1600,7 @@
     "key": "1D76",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med tilde i midten"
       }
     }
   },
@@ -1609,7 +1609,7 @@
     "key": "1D77",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vendt g"
       }
     }
   },
@@ -1618,7 +1618,7 @@
     "key": "1D79",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "insulært g"
       }
     }
   },
@@ -1627,7 +1627,7 @@
     "key": "1D7A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "th med gennemstregning"
       }
     }
   },
@@ -1636,7 +1636,7 @@
     "key": "1D80",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "p med palatal krog"
       }
     }
   },
@@ -1645,7 +1645,7 @@
     "key": "1D81",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med palatal krog"
       }
     }
   },
@@ -1654,7 +1654,7 @@
     "key": "1D82",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "f med palatal krog"
       }
     }
   },
@@ -1663,7 +1663,7 @@
     "key": "1D83",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "g med palatal krog"
       }
     }
   },
@@ -1672,7 +1672,7 @@
     "key": "1D84",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "k med palatal krog"
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "key": "1D85",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l med palatal krog"
       }
     }
   },
@@ -1690,7 +1690,7 @@
     "key": "1D86",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "m med palatal krog"
       }
     }
   },
@@ -1699,7 +1699,7 @@
     "key": "1D87",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "n med palatal krog"
       }
     }
   },
@@ -1708,7 +1708,7 @@
     "key": "1D88",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "p med palatal krog"
       }
     }
   },
@@ -1717,7 +1717,7 @@
     "key": "1D89",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "r med palatal krog"
       }
     }
   },
@@ -1726,7 +1726,7 @@
     "key": "1D8A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "s med palatal krog"
       }
     }
   },
@@ -1735,7 +1735,7 @@
     "key": "1D8B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "esh med palatal krog"
       }
     }
   },
@@ -1744,7 +1744,7 @@
     "key": "1D8C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "v med palatal krog"
       }
     }
   },
@@ -1753,7 +1753,7 @@
     "key": "1D8D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "x med palatal krog"
       }
     }
   },
@@ -1762,7 +1762,7 @@
     "key": "1D8E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "z med palatal krog"
       }
     }
   },
@@ -1771,7 +1771,7 @@
     "key": "1D8F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a med retrofleks krog"
       }
     }
   },
@@ -1780,7 +1780,7 @@
     "key": "1D90",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "alfa med retrofleks krog"
       }
     }
   },
@@ -1789,7 +1789,7 @@
     "key": "1D91",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "d med krog og hale"
       }
     }
   },
@@ -1798,7 +1798,7 @@
     "key": "1D92",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "e med retrofleks krog"
       }
     }
   },
@@ -1807,7 +1807,7 @@
     "key": "1D93",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "åbent e med retrofleks krog"
       }
     }
   },
@@ -1816,7 +1816,7 @@
     "key": "1D94",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvendt åbent e med retrofleks krog"
       }
     }
   },
@@ -1825,7 +1825,7 @@
     "key": "1D95",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "schwa med retrofleks krog"
       }
     }
   },
@@ -1834,7 +1834,7 @@
     "key": "1D96",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "i med retrofleks krog"
       }
     }
   },
@@ -1843,7 +1843,7 @@
     "key": "1D97",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "åbent o med retrofleks krog"
       }
     }
   },
@@ -1852,7 +1852,7 @@
     "key": "1D98",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "esh med retrofleks krog"
       }
     }
   },
@@ -1861,7 +1861,7 @@
     "key": "1D99",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u med retrofleks krog"
       }
     }
   },
@@ -1870,7 +1870,7 @@
     "key": "1D9A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ezh med retrofleks krog"
       }
     }
   },

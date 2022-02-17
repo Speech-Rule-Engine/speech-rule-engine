@@ -6,7 +6,7 @@
     "key": "00B2",
     "mappings": {
       "default": {
-        "default": "hævet to tal"
+        "default": "i anden"
       }
     },
     "category": "No"
@@ -15,7 +15,7 @@
     "key": "00B3",
     "mappings": {
       "default": {
-        "default": "hævet tre tal"
+        "default": "opløftet i tredje potens"
       }
     },
     "category": "No"
@@ -52,7 +52,7 @@
     "key": "2150",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en syvendedel"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2151",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en niendedel"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2152",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en tiendedel"
       }
     }
   },
@@ -78,7 +78,7 @@
     "key": "2153",
     "mappings": {
       "default": {
-        "default": "en trediedel"
+        "default": "en tredjedel"
       }
     },
     "category": "No"
@@ -87,7 +87,7 @@
     "key": "2154",
     "mappings": {
       "default": {
-        "default": "to trediedele"
+        "default": "to tredjedele"
       }
     },
     "category": "No"
@@ -187,7 +187,7 @@
     "key": "215F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tæller et"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2189",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ingen tredjedele"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "3248",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ti i en cirkel på en sort firkant"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "3249",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tyve i en cirkel på en sort firkant"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "324A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tredive i en cirkel på en sort firkant"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "324B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fyrre i en cirkel på en sort firkant"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "324C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "halvtreds i en cirkel på en sort firkant"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "324D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tres i en cirkel på en sort firkant"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "324E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "halvfjerds i en cirkel på en sort firkant"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "324F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "firs i en cirkel på en sort firkant"
       }
     }
   }
