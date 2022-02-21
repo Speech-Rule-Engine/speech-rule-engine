@@ -281,7 +281,7 @@
     [
       "Action",
       "abstr-punctuated-var",
-      "[t] \"llista separada per\"; [n] content/*[1]  (grammar:plural); [t] \"de longitud variable\""
+      "[t] \"llista separada per\"; [n] content/*[1] (grammar:plural); [t] \"de longitud variable\""
     ],
     [
       "Action",
