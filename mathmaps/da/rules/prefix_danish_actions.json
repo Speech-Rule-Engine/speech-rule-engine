@@ -7,112 +7,112 @@
     [
       "Action",
       "numerator",
-      "[t] \"Numerator\" (pause:200)"
+      "[t] \"Tæller\" (pause:200)"
     ],
     [
       "Action",
       "denominator",
-      "[t] \"Denominator\" (pause:200)"
+      "[t] \"Nævner\" (pause:200)"
     ],
     [
       "Action",
       "base",
-      "[t] \"Base\" (pause:200)"
+      "[t] \"Grundtal\" (pause:200)"
     ],
     [
       "Action",
       "exponent",
-      "[t] \"Exponent\" (pause:200)"
+      "[t] \"Eksponent\" (pause:200)"
     ],
     [
       "Action",
       "subscript",
-      "[t] \"Subscript\" (pause:200)"
+      "[t] \"Sænket\" (pause:200)"
     ],
     [
       "Action",
       "overscript",
-      "[t] \"Overscript\" (pause:200)"
+      "[t] \"Overtekst\" (pause:200)"
     ],
     [
       "Action",
       "underscript",
-      "[t] \"Underscript\" (pause:200)"
+      "[t] \"Undertekst\" (pause:200)"
     ],
     [
       "Action",
       "radicand",
-      "[t] \"Radicand\" (pause:200)"
+      "[t] \"Radikand\" (pause:200)"
     ],
     [
       "Action",
       "index",
-      "[t] \"Index\" (pause:200)"
+      "[t] \"Rodeksponent\" (pause:200)"
     ],
     [
       "Action",
       "leftsub",
-      "[t] \"Left Subscript\" (pause:200)"
+      "[t] \"Venstre Sænket\" (pause:200)"
     ],
     [
       "Action",
       "leftsub-counted",
-      "[t] CSFordinalPosition; [t] \"Left Subscript\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"Venstre Sænket\" (pause:200)"
     ],
     [
       "Action",
       "leftsuper",
-      "[t] \"Left Superscript\" (pause:200)"
+      "[t] \"Venstre Hævet\" (pause:200)"
     ],
     [
       "Action",
       "leftsuper-counted",
-      "[t] CSFordinalPosition; [t] \"Left Superscript\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"Venstre Hævet\" (pause:200)"
     ],
     [
       "Action",
       "rightsub",
-      "[t] \"Right Subscript\" (pause:200)"
+      "[t] \"Højre Sænket\" (pause:200)"
     ],
     [
       "Action",
       "rightsub-counted",
-      "[t] CSFordinalPosition; [t] \"Right Subscript\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"Højre Sænket\" (pause:200)"
     ],
     [
       "Action",
       "rightsuper",
-      "[t] \"Right Superscript\" (pause:200)"
+      "[t] \"Højre Hævet\" (pause:200)"
     ],
     [
       "Action",
       "rightsuper-counted",
-      "[t] CSFordinalPosition; [t] \"Right Superscript\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"Højre Sænket\" (pause:200)"
     ],
     [
       "Action",
       "choice",
-      "[t] \"Choice Quantity\" (pause:200)"
+      "[t] \"Puljemændge\" (pause:200)"
     ],
     [
       "Action",
       "select",
-      "[t] \"Selection Quantity\" (pause:200)"
+      "[t] \"Valgmængde\" (pause:200)"
     ],
     [
       "Action",
       "row",
-      "[t] CSFordinalPosition; [t] \"Row\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"Række\" (pause:200)"
     ],
     [
       "Action",
       "cell",
-      "[n] ../..; [t] CSFordinalPosition; [t] \"Column\" (pause:200)"
+      "[n] ../..; [t] CSFordinalPosition; [t] \"Kolonne\" (pause:200)"
     ],
     [
       "Action",
       "cell-simple",
-      "[t] CSFordinalPosition; [t] \"Column\" (pause:200)"
+      "[t] CSFordinalPosition; [t] \"Kolonne\" (pause:200)"
     ]
   ]
 }
