@@ -80,10 +80,12 @@
     "special": {
       "smallOrdinals": [
         "nulte", "første", "anden", "tredje", "fjerde", "femte", "sjette",
-        "syvende", "ottende", "niende", "tiende", "ellevte", "tolvte"
+        "syvende", "ottende", "niende", "tiende", "ellevte", "tolvte",
+        "trettende", "fjortende", "femtende", "sekstende", "syttende",
+        "attende", "nittende"
       ],
       "tensOrdinals": [
-        "tyvende", "tredvte", "fyrretyvende", "halvtredsindstyvende", "tresindstyvende", "halvfjerdsende", "firsindstyvende", "halvfemsindstyvende"
+        "", "", "tyvende", "tredvte", "fyrretyvende", "halvtredsindstyvende", "tresindstyvende", "halvfjerdsende", "firsindstyvende", "halvfemsindstyvende"
       ],
       "endOrdinal": "de"
     }
