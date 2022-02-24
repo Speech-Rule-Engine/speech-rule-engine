@@ -216,21 +216,6 @@
     ],
     [
       "Action",
-      "root-simple",
-      "[t] CSFindexRadicalVerbose; [t] CSFopenRadicalVerbose; [n] children/*[2]; [t] CSFcloseRadicalVerbose"
-    ],
-    [
-      "Action",
-      "root-simple-brief",
-      "[t] CSFindexRadicalBrief; [t] CSFopenRadicalBrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
-      "root-simple-sbrief",
-      "[t] CSFindexRadicalSbrief; [t] CSFopenRadicalSbrief; [n] children/*[2]; [t] CSFcloseRadicalBrief"
-    ],
-    [
-      "Action",
       "integral",
       "[n] children/*[1]; [t] \"아래첨자\"; [n] children/*[2];[t] \"위첨자\"; [n] children/*[3]; [t] \"기준\""
     ],
