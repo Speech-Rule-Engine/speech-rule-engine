@@ -30,7 +30,7 @@ jobs:
 
     strategy:
       matrix:
-        block: [ko]
+        block: [base, walker, semantic, en, ca, de, fr, es, it, hi, ko, nb, nn, nemeth, sv]
     needs: setup
     runs-on: ubuntu-latest
     name: SRE jests tests for ${{ matrix.block }}
