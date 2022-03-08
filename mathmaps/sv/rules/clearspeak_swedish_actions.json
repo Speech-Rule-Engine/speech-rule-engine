@@ -797,7 +797,7 @@
     [
       "Action",
       "matrix-row-vector-simple",
-      "[t] count(children/*); [t] \"gånger\"; [t] count(children/*[1]/children/*); [t] \"radmatrisen\" (pause:long); [t] %3  pause:long)"
+      "[t] count(children/*); [t] \"gånger\"; [t] count(children/*[1]/children/*); [t] \"radmatrisen\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",

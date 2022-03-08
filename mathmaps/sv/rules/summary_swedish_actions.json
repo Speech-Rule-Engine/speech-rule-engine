@@ -276,7 +276,7 @@
     [
       "Action",
       "abstr-punctuated-brief",
-      "[t] %1(join:\"\"); [t] \"separerad lista\""
+      "[n] content/*[1] (join:\"\"); [t] \"separerad lista\""
     ],
     [
       "Action",
