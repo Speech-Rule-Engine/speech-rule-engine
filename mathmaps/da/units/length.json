@@ -1,0 +1,144 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "ft",
+    "mappings": {
+      "default": {
+        "default": "fod",
+        "plural": "fod"
+      }
+    },
+    "category": "length",
+    "names": [
+      "ft",
+      "ft."
+    ]
+  },
+  {
+    "key": "in",
+    "mappings": {
+      "default": {
+        "default": "tomme",
+        "plural": "tommer"
+      }
+    },
+    "category": "length",
+    "names": [
+      "in",
+      "in."
+    ]
+  },
+  {
+    "key": "mi",
+    "mappings": {
+      "default": {
+        "default": "mil",
+        "plural": "mil"
+      }
+    },
+    "category": "length",
+    "names": [
+      "mi",
+      "mi."
+    ]
+  },
+  {
+    "key": "yd",
+    "mappings": {
+      "default": {
+        "default": "yard",
+        "plural": "yards"
+      }
+    },
+    "category": "length",
+    "names": [
+      "yd",
+      "yd."
+    ]
+  },
+  {
+    "key": "li",
+    "mappings": {
+      "default": {
+        "default": "link",
+        "plural": "links"
+      }
+    },
+    "category": "length",
+    "names": [
+      "li",
+      "li."
+    ]
+  },
+  {
+    "key": "rd",
+    "mappings": {
+      "default": {
+        "default": "rod",
+        "plural": "rods"
+      }
+    },
+    "category": "length",
+    "names": [
+      "rd",
+      "rd."
+    ]
+  },
+  {
+    "key": "ch",
+    "mappings": {
+      "default": {
+        "default": "chain",
+        "plural": "chains"
+      }
+    },
+    "category": "length",
+    "names": [
+      "ch",
+      "ch."
+    ]
+  },
+  {
+    "key": "furlong",
+    "category": "length",
+    "names": [
+      "fur",
+      "fur."
+    ],
+    "mappings": {
+      "default": {
+        "default": "furlong",
+        "plural": "furlong"
+      }
+    }
+  },
+  {
+    "key": "n.m.",
+    "category": "length",
+    "names": [
+      "n.m."
+    ],
+    "mappings": {
+      "default": {
+        "default": "sømil",
+        "plural": "sømil"
+      }
+    }
+  },
+  {
+    "key": "m",
+    "mappings": {
+      "default": {
+        "default": "meter",
+        "plural": "meter"
+      }
+    },
+    "category": "length",
+    "names": [
+      "m"
+    ],
+    "si": true
+  }
+]

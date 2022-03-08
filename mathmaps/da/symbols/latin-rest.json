@@ -1,0 +1,536 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "210E",
+    "mappings": {
+      "default": {
+        "default": "h med kursiv"
+      }
+    },
+    "category": "Ll"
+  },
+  {
+    "category": "Mn",
+    "key": "0363",
+    "mappings": {
+      "default": {
+        "default": "kombinerende a"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0364",
+    "mappings": {
+      "default": {
+        "default": "kombinerende e"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0365",
+    "mappings": {
+      "default": {
+        "default": "kombinerende i"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0366",
+    "mappings": {
+      "default": {
+        "default": "kombinerende o"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0367",
+    "mappings": {
+      "default": {
+        "default": "kombinerende u"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0368",
+    "mappings": {
+      "default": {
+        "default": "kombinerende c"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "0369",
+    "mappings": {
+      "default": {
+        "default": "kombinerende d"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036A",
+    "mappings": {
+      "default": {
+        "default": "kombinerende h"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036B",
+    "mappings": {
+      "default": {
+        "default": "kombinerende m"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036C",
+    "mappings": {
+      "default": {
+        "default": "kombinerende r"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036D",
+    "mappings": {
+      "default": {
+        "default": "kombinerende t"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036E",
+    "mappings": {
+      "default": {
+        "default": "kombinerende v"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "036F",
+    "mappings": {
+      "default": {
+        "default": "kombinerende x"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D62",
+    "mappings": {
+      "default": {
+        "default": "i med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D63",
+    "mappings": {
+      "default": {
+        "default": "r med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D64",
+    "mappings": {
+      "default": {
+        "default": "u med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D65",
+    "mappings": {
+      "default": {
+        "default": "v med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DCA",
+    "mappings": {
+      "default": {
+        "default": "kombinerende r nedenunder"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD3",
+    "mappings": {
+      "default": {
+        "default": "kombinerende, fladt åbent a ovenover"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD4",
+    "mappings": {
+      "default": {
+        "default": "kombinerende ae"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD5",
+    "mappings": {
+      "default": {
+        "default": "kombinerende ao"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD6",
+    "mappings": {
+      "default": {
+        "default": "kombinerende av"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD7",
+    "mappings": {
+      "default": {
+        "default": "kombinerende c med cedille"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD8",
+    "mappings": {
+      "default": {
+        "default": "kombinerende insulært d"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DD9",
+    "mappings": {
+      "default": {
+        "default": "kombinerende eth"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDA",
+    "mappings": {
+      "default": {
+        "default": "kombinerende g"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDB",
+    "mappings": {
+      "default": {
+        "default": "kombinerende lille g"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDC",
+    "mappings": {
+      "default": {
+        "default": "kombinerende k"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDD",
+    "mappings": {
+      "default": {
+        "default": "kombinerende l"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDE",
+    "mappings": {
+      "default": {
+        "default": "kombinerende lille l"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DDF",
+    "mappings": {
+      "default": {
+        "default": "kombinerende lille m"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE0",
+    "mappings": {
+      "default": {
+        "default": "kombinerende n"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE1",
+    "mappings": {
+      "default": {
+        "default": "kombinerende lille n"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE2",
+    "mappings": {
+      "default": {
+        "default": "kombinerende lille r"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE3",
+    "mappings": {
+      "default": {
+        "default": "kombinerende r med rotunda"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE4",
+    "mappings": {
+      "default": {
+        "default": "kombinerende s"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE5",
+    "mappings": {
+      "default": {
+        "default": "kombinerende langt s"
+      }
+    }
+  },
+  {
+    "category": "Mn",
+    "key": "1DE6",
+    "mappings": {
+      "default": {
+        "default": "kombinerende z"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2071",
+    "mappings": {
+      "default": {
+        "default": "i med hævet skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "207F",
+    "mappings": {
+      "default": {
+        "default": "n med hævet skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2090",
+    "mappings": {
+      "default": {
+        "default": "a med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2091",
+    "mappings": {
+      "default": {
+        "default": "e med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2092",
+    "mappings": {
+      "default": {
+        "default": "o med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2093",
+    "mappings": {
+      "default": {
+        "default": "x med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2094",
+    "mappings": {
+      "default": {
+        "default": "schwa med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2095",
+    "mappings": {
+      "default": {
+        "default": "h med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2096",
+    "mappings": {
+      "default": {
+        "default": "k med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2097",
+    "mappings": {
+      "default": {
+        "default": "l med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2098",
+    "mappings": {
+      "default": {
+        "default": "m med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2099",
+    "mappings": {
+      "default": {
+        "default": "n med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209A",
+    "mappings": {
+      "default": {
+        "default": "p med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209B",
+    "mappings": {
+      "default": {
+        "default": "s med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "209C",
+    "mappings": {
+      "default": {
+        "default": "t med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "2C7C",
+    "mappings": {
+      "default": {
+        "default": "j med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12A",
+    "mappings": {
+      "default": {
+        "default": "stort S i skjoldparentes"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12B",
+    "mappings": {
+      "default": {
+        "default": "stort C med kursiv i en cirkel"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F12C",
+    "mappings": {
+      "default": {
+        "default": "stort R med kursiv i en cirkel"
+      }
+    }
+  },
+  {
+    "category": "So",
+    "key": "1F18A",
+    "mappings": {
+      "default": {
+        "default": "overstreget stort P i en firkant"
+      }
+    }
+  }
+]

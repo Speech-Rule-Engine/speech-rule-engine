@@ -30,6 +30,7 @@ export class Variables {
   public static readonly LOCALES: string[] = [
     'en',
     'ca',
+    'da',
     'de',
     'fr',
     'es',

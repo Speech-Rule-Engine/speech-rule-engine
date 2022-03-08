@@ -1,0 +1,122 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "locale": "da"
+  },
+  {
+    "key": "sq",
+    "category": "other",
+    "names": [
+      "sq",
+      "sq."
+    ],
+    "mappings": {
+      "default": {
+        "default": "s",
+        "plural": "kvadrat"
+      }
+    }
+  },
+  {
+    "key": "sq in",
+    "mappings": {
+      "default": {
+        "default": "kvadrat inch",
+        "plural": "kvadrat inches"
+      }
+    },
+    "category": "area",
+    "names": [
+      "sq in",
+      "sq. in.",
+      "sq inch",
+      "sq. inch"
+    ]
+  },
+  {
+    "key": "sq rd",
+    "category": "area",
+    "names": [
+      "sq rd",
+      "sq. rd."
+    ],
+    "mappings": {
+      "default": {
+        "default": ""
+      }
+    }
+  },
+  {
+    "key": "sq ft",
+    "mappings": {
+      "default": {
+        "default": "kvadrat fod",
+        "plural": "kvadrat fod"
+      }
+    },
+    "category": "area",
+    "names": [
+      "sq ft",
+      "sq. ft."
+    ]
+  },
+  {
+    "key": "sq yd",
+    "mappings": {
+      "default": {
+        "default": "kvadrat yard",
+        "plural": "kvadrat yards"
+      }
+    },
+    "category": "area",
+    "names": [
+      "sq yd",
+      "sq. yd."
+    ]
+  },
+  {
+    "key": "sq mi",
+    "mappings": {
+      "default": {
+        "default": "kvadrat mil",
+        "plural": "kvadrat mile"
+      }
+    },
+    "category": "area",
+    "names": [
+      "sq mi",
+      "sq. mi."
+    ]
+  },
+  {
+    "key": "ac",
+    "mappings": {
+      "default": {
+        "default": "ager",
+        "plural": "agre"
+      }
+    },
+    "category": "area",
+    "names": [
+      "ac",
+      "ac.",
+      "acr",
+      "acr."
+    ]
+  },
+  {
+    "key": "ha",
+    "category": "area",
+    "names": [
+      "ha"
+    ],
+    "mappings": {
+      "default": {
+        "default": "s",
+        "plural": "hektarer"
+      }
+    }
+  }
+]

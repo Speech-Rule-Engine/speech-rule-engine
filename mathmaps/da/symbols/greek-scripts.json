@@ -1,0 +1,113 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "category": "Ll",
+    "key": "1D26",
+    "mappings": {
+      "default": {
+        "default": "gamma med små bogstaver"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D27",
+    "mappings": {
+      "default": {
+        "default": "lambda med små bogstaver"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D28",
+    "mappings": {
+      "default": {
+        "default": "pi med små bogstaver"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D29",
+    "mappings": {
+      "default": {
+        "default": "rho med små bogstaver"
+      }
+    }
+  },
+  {
+    "category": "Ll",
+    "key": "1D2A",
+    "mappings": {
+      "default": {
+        "default": "psi med små bogstaver"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D5E",
+    "mappings": {
+      "default": {
+        "default": "gamma med hævet skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D60",
+    "mappings": {
+      "default": {
+        "default": "phi med hævet skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D66",
+    "mappings": {
+      "default": {
+        "default": "beta med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D67",
+    "mappings": {
+      "default": {
+        "default": "gamma med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D68",
+    "mappings": {
+      "default": {
+        "default": "rho med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D69",
+    "mappings": {
+      "default": {
+        "default": "phi med sænket skrift"
+      }
+    }
+  },
+  {
+    "category": "Lm",
+    "key": "1D6A",
+    "mappings": {
+      "default": {
+        "default": "chi med sænket skrift"
+      }
+    }
+  }
+]

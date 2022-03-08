@@ -292,7 +292,7 @@
     [
       "Action",
       "superscript-simple-function",
-      "[n] children/*[1]; [t] \"med eksponent\" (pause:short); [n] children/*[1]"
+      "[n] children/*[1]; [t] \"med eksponent\" (pause:short); [n] children/*[2]"
     ],
     [
       "Action",

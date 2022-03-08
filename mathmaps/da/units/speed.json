@@ -1,0 +1,58 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "kt",
+    "category": "speed",
+    "names": [
+      "kt",
+      "kt."
+    ],
+    "mappings": {
+      "default": {
+        "default": "knob",
+        "plural": "knob"
+      }
+    }
+  },
+  {
+    "key": "mph",
+    "mappings": {
+      "default": {
+        "default": "mil i timen",
+        "plural": "mil i timen"
+      }
+    },
+    "category": "speed",
+    "names": [
+      "mph"
+    ]
+  },
+  {
+    "key": "rpm",
+    "category": "speed",
+    "names": [
+      "rpm"
+    ],
+    "mappings": {
+      "default": {
+        "default": "omdrejninger pr. minut",
+        "plural": "omdrejning pr. minut"
+      }
+    }
+  },
+  {
+    "key": "kmh",
+    "category": "speed",
+    "names": [
+      "kmh"
+    ],
+    "mappings": {
+      "default": {
+        "default": "kilometer i timen",
+        "plural": "kilometer i timen"
+      }
+    }
+  }
+]

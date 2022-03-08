@@ -1,0 +1,45 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "b",
+    "category": "memory",
+    "names": [
+      "b"
+    ],
+    "mappings": {
+      "default": {
+        "default": "bit",
+        "plural": "bit"
+      }
+    }
+  },
+  {
+    "key": "B",
+    "category": "memory",
+    "names": [
+      "B"
+    ],
+    "si": true,
+    "mappings": {
+      "default": {
+        "default": "byte",
+        "plural": "byte"
+      }
+    }
+  },
+  {
+    "key": "KB",
+    "category": "memory",
+    "names": [
+      "KB"
+    ],
+    "mappings": {
+      "default": {
+        "default": "kilobyte",
+        "plural": "kilobyte"
+      }
+    }
+  }
+]

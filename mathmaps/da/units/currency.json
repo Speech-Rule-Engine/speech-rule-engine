@@ -1,0 +1,353 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "locale": "da"
+  },
+  {
+    "key": "$",
+    "mappings": {
+      "default": {
+        "default": "dollar",
+        "plural": "dollars"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "$",
+      "💲",
+      "＄",
+      "﹩",
+      "USD"
+    ]
+  },
+  {
+    "key": "£",
+    "mappings": {
+      "default": {
+        "default": "pund",
+        "plural": "pund"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "£",
+      "￡",
+      "GBP"
+    ]
+  },
+  {
+    "key": "¥",
+    "mappings": {
+      "default": {
+        "default": "yen",
+        "plural": "yen"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "¥",
+      "￥",
+      "JPY"
+    ]
+  },
+  {
+    "key": "€",
+    "mappings": {
+      "default": {
+        "default": "euro",
+        "plural": "euro"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "€",
+      "EUR"
+    ]
+  },
+  {
+    "key": "₡",
+    "mappings": {
+      "default": {
+        "default": "colons",
+        "plural": "colonss"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₡",
+      "CRC"
+    ]
+  },
+  {
+    "key": "₢",
+    "mappings": {
+      "default": {
+        "default": "cruzeiro",
+        "plural": "cruzeiro"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₢"
+    ]
+  },
+  {
+    "key": "₣",
+    "mappings": {
+      "default": {
+        "default": "franc",
+        "plural": "franc"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₣"
+    ]
+  },
+  {
+    "key": "₤",
+    "mappings": {
+      "default": {
+        "default": "lire",
+        "plural": "lire"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₤"
+    ]
+  },
+  {
+    "key": "₥",
+    "mappings": {
+      "default": {
+        "default": "mills",
+        "plural": "millss"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₥"
+    ]
+  },
+  {
+    "key": "₦",
+    "mappings": {
+      "default": {
+        "default": "naira",
+        "plural": "naira"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₦",
+      "NGN"
+    ]
+  },
+  {
+    "key": "₧",
+    "mappings": {
+      "default": {
+        "default": "peseta",
+        "plural": "peseta"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₧"
+    ]
+  },
+  {
+    "key": "₨",
+    "mappings": {
+      "default": {
+        "default": "rupees",
+        "plural": "rupeess"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₨",
+      "₹",
+      "INR",
+      "NPR",
+      "PKR",
+      "LKR"
+    ]
+  },
+  {
+    "key": "₩",
+    "mappings": {
+      "default": {
+        "default": "won",
+        "plural": "won"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₩",
+      "￦",
+      "KRW"
+    ]
+  },
+  {
+    "key": "₪",
+    "mappings": {
+      "default": {
+        "default": "shekel",
+        "plural": "shekel"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₪"
+    ]
+  },
+  {
+    "key": "₫",
+    "mappings": {
+      "default": {
+        "default": "dong",
+        "plural": "dong"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₫"
+    ]
+  },
+  {
+    "key": "₭",
+    "mappings": {
+      "default": {
+        "default": "kip",
+        "plural": "kip"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₭"
+    ]
+  },
+  {
+    "key": "₮",
+    "mappings": {
+      "default": {
+        "default": "tugrik",
+        "plural": "tugrik"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₮"
+    ]
+  },
+  {
+    "key": "₯",
+    "mappings": {
+      "default": {
+        "default": "drakme",
+        "plural": "drakmer"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₯"
+    ]
+  },
+  {
+    "key": "₰",
+    "mappings": {
+      "default": {
+        "default": "tyske pennies",
+        "plural": "tyske pennies"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₰"
+    ]
+  },
+  {
+    "key": "₱",
+    "mappings": {
+      "default": {
+        "default": "pesos",
+        "plural": "pesoss"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₱"
+    ]
+  },
+  {
+    "key": "₲",
+    "mappings": {
+      "default": {
+        "default": "guaranis",
+        "plural": "guaranis"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₲"
+    ]
+  },
+  {
+    "key": "₳",
+    "mappings": {
+      "default": {
+        "default": "australs",
+        "plural": "australss"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₳"
+    ]
+  },
+  {
+    "key": "₴",
+    "mappings": {
+      "default": {
+        "default": "hryvnias",
+        "plural": "hryvniass"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₴",
+      "UAH"
+    ]
+  },
+  {
+    "key": "₵",
+    "mappings": {
+      "default": {
+        "default": "cedi",
+        "plural": "cedi"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "₵",
+      "GHS"
+    ]
+  },
+  {
+    "key": "元",
+    "mappings": {
+      "default": {
+        "default": "yuan",
+        "plural": "yuan"
+      }
+    },
+    "category": "currency",
+    "names": [
+      "元"
+    ]
+  }
+]

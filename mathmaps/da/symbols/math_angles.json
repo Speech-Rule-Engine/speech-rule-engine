@@ -1,0 +1,221 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "22BE",
+    "mappings": {
+      "default": {
+        "default": "ret vinkel med bue"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "237C",
+    "mappings": {
+      "default": {
+        "default": "ret vinkel med nedadgående zigzag-pil"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "27C0",
+    "mappings": {
+      "default": {
+        "default": "tredimensionel vinkel"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "299B",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åbning til venstre"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "299C",
+    "mappings": {
+      "default": {
+        "default": "ret vinkel med firkant"
+      }
+    }
+  },
+  {
+    "key": "299D",
+    "mappings": {
+      "default": {
+        "default": "målt ret vinkel med prik"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "category": "Sm",
+    "key": "299E",
+    "mappings": {
+      "default": {
+        "default": "vinkel med s indvendigt"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "299F",
+    "mappings": {
+      "default": {
+        "default": "spids vinkel"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A0",
+    "mappings": {
+      "default": {
+        "default": "sfærisk vinkel med åbning til venstre"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A1",
+    "mappings": {
+      "default": {
+        "default": "sfærisk vinkel med åbning opad"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A2",
+    "mappings": {
+      "default": {
+        "default": "vendt vinkel"
+      }
+    }
+  },
+  {
+    "category": "Sm",
+    "key": "29A3",
+    "mappings": {
+      "default": {
+        "default": "omvendt vinkel"
+      }
+    }
+  },
+  {
+    "key": "29A4",
+    "mappings": {
+      "default": {
+        "default": "vinkel med streg nedenunder"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29A5",
+    "mappings": {
+      "default": {
+        "default": "omvendt vinkel med streg nedenunder"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29A6",
+    "mappings": {
+      "default": {
+        "default": "skæv vinkel med åbningen opad"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29A7",
+    "mappings": {
+      "default": {
+        "default": "skæv vinkel med åbningen nedad"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29A8",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger opad mod højre"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29A9",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger opad mod venstre"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29AA",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger nedad mod højre"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29AB",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger nedad mod venstre"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29AC",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod højre og opad"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29AD",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod venstre og opad"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29AE",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod højre og nedad"
+      }
+    },
+    "category": "Sm"
+  },
+  {
+    "key": "29AF",
+    "mappings": {
+      "default": {
+        "default": "målt vinkel med åben arm, som ender i en pil, der peger mod venstre og nedad"
+      }
+    },
+    "category": "Sm"
+  }
+]

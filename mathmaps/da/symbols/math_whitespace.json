@@ -1,0 +1,374 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "category": "Zs",
+    "key": "0020",
+    "mappings": {
+      "default": {
+        "default": "mellemrum"
+      }
+    }
+  },
+  {
+    "key": "00A0",
+    "mappings": {
+      "default": {
+        "default": "hårdt mellemrum"
+      }
+    },
+    "category": "Zs"
+  },
+  {
+    "key": "00AD",
+    "mappings": {
+      "default": {
+        "default": "blød bindestreg"
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "category": "Zs",
+    "key": "2000",
+    "mappings": {
+      "default": {
+        "default": "en quad"
+      }
+    }
+  },
+  {
+    "category": "Zs",
+    "key": "2001",
+    "mappings": {
+      "default": {
+        "default": "em quad"
+      }
+    }
+  },
+  {
+    "key": "2002",
+    "mappings": {
+      "default": {
+        "default": "kort mellemrum"
+      }
+    },
+    "category": "Zs"
+  },
+  {
+    "key": "2003",
+    "mappings": {
+      "default": {
+        "default": "langt mellemrum"
+      }
+    },
+    "category": "Zs"
+  },
+  {
+    "key": "2004",
+    "mappings": {
+      "default": {
+        "default": "tre pr. langt mellemrum"
+      }
+    },
+    "category": "Zs"
+  },
+  {
+    "key": "2005",
+    "mappings": {
+      "default": {
+        "default": "fire pr. langt mellemrum"
+      }
+    },
+    "category": "Zs"
+  },
+  {
+    "category": "Zs",
+    "key": "2006",
+    "mappings": {
+      "default": {
+        "default": "seks pr. langt mellemrum"
+      }
+    }
+  },
+  {
+    "key": "2007",
+    "mappings": {
+      "default": {
+        "default": "numerisk mellemrum"
+      }
+    },
+    "category": "Zs"
+  },
+  {
+    "key": "2008",
+    "mappings": {
+      "default": {
+        "default": "tegnsætningsmellemrum"
+      }
+    },
+    "category": "Zs"
+  },
+  {
+    "key": "2009",
+    "mappings": {
+      "default": {
+        "default": "tyndt mellemrum"
+      }
+    },
+    "category": "Zs"
+  },
+  {
+    "key": "200A",
+    "mappings": {
+      "default": {
+        "default": "hairspace"
+      }
+    },
+    "category": "Zs"
+  },
+  {
+    "key": "200B",
+    "mappings": {
+      "default": {
+        "default": "breddeløs plads"
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "key": "200C",
+    "mappings": {
+      "default": {
+        "default": "valgfrit mellemrum uden bredde"
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "key": "200D",
+    "mappings": {
+      "default": {
+        "default": "hårdt mellemrum uden bredde"
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "key": "200E",
+    "mappings": {
+      "default": {
+        "default": "venstre to højre mark"
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "key": "200F",
+    "mappings": {
+      "default": {
+        "default": "højre to venstre mark"
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "category": "Zl",
+    "key": "2028",
+    "mappings": {
+      "default": {
+        "default": "linjeseparator"
+      }
+    }
+  },
+  {
+    "category": "Zp",
+    "key": "2029",
+    "mappings": {
+      "default": {
+        "default": "afsnitsseparator"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "202A",
+    "mappings": {
+      "default": {
+        "default": "integrering fra venstre mod højre"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "202B",
+    "mappings": {
+      "default": {
+        "default": "integrering fra højre mod venstre"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "202C",
+    "mappings": {
+      "default": {
+        "default": "pop directional formatting"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "202D",
+    "mappings": {
+      "default": {
+        "default": "left-to-right override"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "202E",
+    "mappings": {
+      "default": {
+        "default": "right-to-left override"
+      }
+    }
+  },
+  {
+    "category": "Zs",
+    "key": "202F",
+    "mappings": {
+      "default": {
+        "default": "snævert hårdt mellemrum"
+      }
+    }
+  },
+  {
+    "key": "205F",
+    "mappings": {
+      "default": {
+        "default": "mellemstort matematisk mellemrum"
+      }
+    },
+    "category": "Zs"
+  },
+  {
+    "key": "2060",
+    "mappings": {
+      "default": {
+        "default": "ordskærm"
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "key": "2061",
+    "mappings": {
+      "default": {
+        "default": "af"
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "key": "2062",
+    "mappings": {
+      "default": {
+        "default": " "
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "key": "2063",
+    "mappings": {
+      "default": {
+        "default": "separator"
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "category": "Cf",
+    "key": "2064",
+    "mappings": {
+      "default": {
+        "default": "plustegn"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "206A",
+    "mappings": {
+      "default": {
+        "default": "inhibit symmetric swapping"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "206B",
+    "mappings": {
+      "default": {
+        "default": "activate symmetric swapping"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "206E",
+    "mappings": {
+      "default": {
+        "default": "national digit shapes"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "206F",
+    "mappings": {
+      "default": {
+        "default": "nominal digit shapes"
+      }
+    }
+  },
+  {
+    "key": "FEFF",
+    "mappings": {
+      "default": {
+        "default": "zero width no break space"
+      }
+    },
+    "category": "Cf"
+  },
+  {
+    "category": "Cf",
+    "key": "FFF9",
+    "mappings": {
+      "default": {
+        "default": "interlinear annotation anchor"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "FFFA",
+    "mappings": {
+      "default": {
+        "default": "interlinear annotation separator"
+      }
+    }
+  },
+  {
+    "category": "Cf",
+    "key": "FFFB",
+    "mappings": {
+      "default": {
+        "default": "interlinear annotation terminator"
+      }
+    }
+  }
+]

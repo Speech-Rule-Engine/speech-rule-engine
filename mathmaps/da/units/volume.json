@@ -1,0 +1,217 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "cu",
+    "category": "volume",
+    "names": [
+      "cu",
+      "cu."
+    ],
+    "mappings": {
+      "default": {
+        "default": "kubik",
+        "plural": "kubik"
+      }
+    }
+  },
+  {
+    "key": "cu in",
+    "mappings": {
+      "default": {
+        "default": "kubik inch",
+        "plural": "kubik inches"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "cu in",
+      "cu. in."
+    ]
+  },
+  {
+    "key": "cu ft",
+    "mappings": {
+      "default": {
+        "default": "kubik fod",
+        "plural": "kubik fod"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "cu ft",
+      "cu. ft."
+    ]
+  },
+  {
+    "key": "cu yd",
+    "mappings": {
+      "default": {
+        "default": "kubik yard",
+        "plural": "kubik yards"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "cu yd",
+      "cu. yd."
+    ]
+  },
+  {
+    "key": "bbl",
+    "mappings": {
+      "default": {
+        "default": "tønde",
+        "plural": "tønder"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "bbl.",
+      "bbl"
+    ]
+  },
+  {
+    "key": "fl oz",
+    "mappings": {
+      "default": {
+        "default": "fluid ounce",
+        "plural": "fluid ounces"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "fl. oz.",
+      "fl oz"
+    ]
+  },
+  {
+    "key": "gal",
+    "mappings": {
+      "default": {
+        "default": "gallon",
+        "plural": "gallons"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "gal",
+      "gal."
+    ]
+  },
+  {
+    "key": "pt",
+    "mappings": {
+      "default": {
+        "default": "pint",
+        "plural": "pints"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "pt",
+      "pt."
+    ]
+  },
+  {
+    "key": "qt",
+    "mappings": {
+      "default": {
+        "default": "quart",
+        "plural": "quarts"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "qt",
+      "qt."
+    ]
+  },
+  {
+    "key": "fl dr",
+    "mappings": {
+      "default": {
+        "default": "fluid dram",
+        "plural": "fluid drams"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "fl dr",
+      "fl. dr."
+    ]
+  },
+  {
+    "key": "tbsp",
+    "mappings": {
+      "default": {
+        "default": "spiseske",
+        "plural": "spiseskeer"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "tbsp",
+      "tbsp.",
+      "Tbsp",
+      "Tbsp."
+    ]
+  },
+  {
+    "key": "tsp",
+    "mappings": {
+      "default": {
+        "default": "teske",
+        "plural": "teskeer"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "tsp",
+      "tsp."
+    ]
+  },
+  {
+    "key": "cp",
+    "mappings": {
+      "default": {
+        "default": "kop",
+        "plural": "kopper"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "cp",
+      "cp."
+    ]
+  },
+  {
+    "key": "cc",
+    "category": "volume",
+    "names": [
+      "cc",
+      "ccm"
+    ],
+    "mappings": {
+      "default": {
+        "default": "kubikcentimeter",
+        "plural": "kubikcentimeter"
+      }
+    }
+  },
+  {
+    "key": "l",
+    "mappings": {
+      "default": {
+        "default": "liter",
+        "plural": "liter"
+      }
+    },
+    "category": "volume",
+    "names": [
+      "l"
+    ],
+    "si": true
+  }
+]

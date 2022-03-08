@@ -1,0 +1,48 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "F",
+    "mappings": {
+      "default": {
+        "default": "Fahrenheit",
+        "plural": "Fahrenheit"
+      }
+    },
+    "category": "temperature",
+    "names": [
+      "F",
+      "F.",
+      "°F"
+    ]
+  },
+  {
+    "key": "C",
+    "mappings": {
+      "default": {
+        "default": "Celsius",
+        "plural": "Celsius"
+      }
+    },
+    "category": "temperature",
+    "names": [
+      "C",
+      "°C"
+    ]
+  },
+  {
+    "key": "K",
+    "mappings": {
+      "default": {
+        "default": "Kelvin",
+        "plural": "Kelvin"
+      }
+    },
+    "category": "temperature",
+    "names": [
+      "K",
+      "°K"
+    ]
+  }
+]

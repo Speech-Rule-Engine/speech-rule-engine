@@ -1,0 +1,73 @@
+[
+  {
+    "locale": "da"
+  },
+  {
+    "key": "s",
+    "mappings": {
+      "default": {
+        "default": "sekund",
+        "plural": "sekunder"
+      }
+    },
+    "category": "time",
+    "names": [
+      "s"
+    ],
+    "si": true
+  },
+  {
+    "key": "″",
+    "category": "time",
+    "names": [
+      "″"
+    ],
+    "mappings": {
+      "default": {
+        "default": "sekund",
+        "plural": "sekunder"
+      }
+    }
+  },
+  {
+    "key": "min",
+    "category": "time",
+    "names": [
+      "min",
+      "′"
+    ],
+    "mappings": {
+      "default": {
+        "default": "minut",
+        "plural": "minutter"
+      }
+    }
+  },
+  {
+    "key": "°",
+    "category": "time",
+    "names": [
+      "°"
+    ],
+    "mappings": {
+      "default": {
+        "default": "grad",
+        "plural": "grader"
+      }
+    }
+  },
+  {
+    "key": "h",
+    "category": "time",
+    "names": [
+      "h",
+      "hr"
+    ],
+    "mappings": {
+      "default": {
+        "default": "time",
+        "plural": "timer"
+      }
+    }
+  }
+]
