@@ -43,6 +43,10 @@ function create(): Locale {
   const loc = createLocale();
   loc.NUMBERS = NUMBERS;
   loc.FUNCTIONS.radicalNestDepth = nestingToString;
+  loc.FUNCTIONS.fontRegexp = (font) => {
+    return (font === loc.ALPHABETS.capPrefix['default']) ?
+      RegExp('^' + font + ' ') : RegExp(' ' + font + '$');
+  }
   loc.ALPHABETS.combiner = tr.Combiners.postfixCombiner;
   loc.ALPHABETS.digitTrans.default = NUMBERS.numberToWords;
   return loc;

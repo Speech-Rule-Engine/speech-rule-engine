@@ -22,7 +22,7 @@
     [
       "Action",
       "font",
-      "[t] @font (grammar:localFont); [n] . (grammar:ignoreFont=@font)"
+      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
     ],
     [
       "Action",
