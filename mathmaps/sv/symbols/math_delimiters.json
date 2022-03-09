@@ -1276,7 +1276,7 @@
     "key": "301D",
     "mappings": {
       "default": {
-        "default": "omvänt dubbelt primtecken"
+        "default": "omvänt dubbelt prim"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "301F",
     "mappings": {
       "default": {
-        "default": "lågt dubbelt primtecken"
+        "default": "lågt dubbelt prim"
       }
     }
   },

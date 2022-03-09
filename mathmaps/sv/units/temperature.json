@@ -21,8 +21,8 @@
     "key": "C",
     "mappings": {
       "default": {
-        "default": "coulomb",
-        "plural": "coulomb"
+        "default": "celsius",
+        "plural": "celsius"
       }
     },
     "category": "temperature",

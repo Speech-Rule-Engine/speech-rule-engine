@@ -1122,12 +1122,12 @@
     [
       "Action",
       "unit-square",
-      "[t] \"kvadrat\"; [n] children/*[1]"
+      "[t] \"kvadrat\" (join:\"\"); [n] children/*[1]"
     ],
     [
       "Action",
       "unit-cubic",
-      "[t] \"kubik\"; [n] children/*[1]"
+      "[t] \"kubik\" (join:\"\"); [n] children/*[1]"
     ],
     [
       "Action",

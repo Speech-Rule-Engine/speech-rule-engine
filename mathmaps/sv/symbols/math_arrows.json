@@ -1357,7 +1357,7 @@
     "key": "27F4",
     "mappings": {
       "default": {
-        "default": "högerpil med plustecken i cirkel"
+        "default": "högerpil med plus i cirkel"
       }
     }
   },
@@ -2077,7 +2077,7 @@
     "key": "2946",
     "mappings": {
       "default": {
-        "default": "vänsterpil med plustecken nedanför"
+        "default": "vänsterpil med plus nedanför"
       }
     }
   },
@@ -2464,7 +2464,7 @@
     "key": "2B32",
     "mappings": {
       "default": {
-        "default": "vänsterpil med plustecken i cirkel"
+        "default": "vänsterpil med plus i cirkel"
       }
     }
   },

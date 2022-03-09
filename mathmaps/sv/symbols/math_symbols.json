@@ -78,7 +78,7 @@
     "key": "002B",
     "mappings": {
       "default": {
-        "default": "plustecken"
+        "default": "plus"
       }
     },
     "category": "Sm"
@@ -96,7 +96,7 @@
     "key": "002D",
     "mappings": {
       "default": {
-        "default": "minustecken"
+        "default": "minus"
       }
     },
     "category": "Pd"
@@ -402,7 +402,7 @@
     "key": "00B6",
     "mappings": {
       "default": {
-        "default": "stycketecken (alinea"
+        "default": "stycketecken"
       }
     },
     "category": "Po"
@@ -484,7 +484,7 @@
     "key": "02B9",
     "mappings": {
       "default": {
-        "default": "primtecken"
+        "default": "prim"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "02BA",
     "mappings": {
       "default": {
-        "default": "dubbla primtecken"
+        "default": "dubbla prim"
       }
     }
   },
@@ -762,7 +762,7 @@
     "key": "2030",
     "mappings": {
       "default": {
-        "default": "promilletecken"
+        "default": "promille"
       }
     },
     "category": "Po"
@@ -826,7 +826,7 @@
     "key": "2037",
     "mappings": {
       "default": {
-        "default": "omvänt trippelt primtecken"
+        "default": "omvänt trippelt prim"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "203B",
     "mappings": {
       "default": {
-        "default": "nottecken"
+        "default": "not"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "2052",
     "mappings": {
       "default": {
-        "default": "kommersiellt minustecken"
+        "default": "kommersiellt minus"
       }
     }
   },
@@ -1086,7 +1086,7 @@
     "key": "2057",
     "mappings": {
       "default": {
-        "default": "kvadrupla primtecken"
+        "default": "kvadrupla prim"
       }
     },
     "category": "Po"
@@ -1159,7 +1159,7 @@
     "key": "207A",
     "mappings": {
       "default": {
-        "default": "upphöjt plustecken"
+        "default": "upphöjt plus"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "207B",
     "mappings": {
       "default": {
-        "default": "upphöjt minustecken"
+        "default": "upphöjt minus"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "208A",
     "mappings": {
       "default": {
-        "default": "nedsänkt plustecken"
+        "default": "nedsänkt plus"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "key": "208B",
     "mappings": {
       "default": {
-        "default": "nedsänkt minustecken"
+        "default": "nedsänkt minus"
       }
     }
   },
@@ -1437,7 +1437,7 @@
     "key": "2212",
     "mappings": {
       "default": {
-        "default": "minustecken"
+        "default": "minus"
       }
     },
     "category": "Sm"
@@ -1653,7 +1653,7 @@
     "key": "222A",
     "mappings": {
       "default": {
-        "default": "uniontecken"
+        "default": "union"
       }
     },
     "category": "Sm"
@@ -1662,7 +1662,7 @@
     "key": "222B",
     "mappings": {
       "default": {
-        "default": "integraltecken"
+        "default": "integral"
       }
     },
     "category": "Sm"
@@ -1734,7 +1734,7 @@
     "key": "2233",
     "mappings": {
       "default": {
-        "default": "integraltecken med bågformad pil moturs"
+        "default": "integral med bågformad pil moturs"
       }
     },
     "category": "Sm"
@@ -1770,7 +1770,7 @@
     "key": "2237",
     "mappings": {
       "default": {
-        "default": "proportionstecken"
+        "default": "proportions"
       }
     },
     "category": "Sm"
@@ -1869,7 +1869,7 @@
     "key": "2242",
     "mappings": {
       "default": {
-        "default": "minustecken och tilde"
+        "default": "minus och tilde"
       }
     },
     "category": "Sm"
@@ -2535,7 +2535,7 @@
     "key": "228C",
     "mappings": {
       "default": {
-        "default": "multimängdtecken"
+        "default": "multimängd"
       }
     },
     "category": "Sm"
@@ -2553,7 +2553,7 @@
     "key": "228E",
     "mappings": {
       "default": {
-        "default": "multimängduniontecken"
+        "default": "multimängdunion"
       }
     },
     "category": "Sm"
@@ -3661,7 +3661,7 @@
     "key": "2795",
     "mappings": {
       "default": {
-        "default": "fetmarkerat plustecken"
+        "default": "fetmarkerat plus"
       }
     }
   },
@@ -3670,7 +3670,7 @@
     "key": "2796",
     "mappings": {
       "default": {
-        "default": "fetmarkerat minustecken"
+        "default": "fetmarkerat minus"
       }
     }
   },
@@ -3679,7 +3679,7 @@
     "key": "2797",
     "mappings": {
       "default": {
-        "default": "fetmarkerat divisionstecken"
+        "default": "fetmarkerat divisions"
       }
     }
   },
@@ -4660,7 +4660,7 @@
     "key": "29FA",
     "mappings": {
       "default": {
-        "default": "dubbelt plustecken"
+        "default": "dubbelt plus"
       }
     }
   },
@@ -4669,7 +4669,7 @@
     "key": "29FB",
     "mappings": {
       "default": {
-        "default": "trippla plustecken"
+        "default": "trippla plus"
       }
     }
   },
@@ -4678,7 +4678,7 @@
     "key": "29FE",
     "mappings": {
       "default": {
-        "default": "litet plustecken"
+        "default": "litet plus"
       }
     }
   },
@@ -4687,7 +4687,7 @@
     "key": "29FF",
     "mappings": {
       "default": {
-        "default": "litet minustecken"
+        "default": "litet minus"
       }
     }
   },
@@ -4705,7 +4705,7 @@
     "key": "2A01",
     "mappings": {
       "default": {
-        "default": "n-ställig plustecken i cirkel"
+        "default": "n-ställig plus i cirkel"
       }
     }
   },
@@ -4714,7 +4714,7 @@
     "key": "2A02",
     "mappings": {
       "default": {
-        "default": "n-ställig multiplikationstecken i cirkel"
+        "default": "n-ställig multiplikations i cirkel"
       }
     }
   },
@@ -4723,7 +4723,7 @@
     "key": "2A03",
     "mappings": {
       "default": {
-        "default": "n-ställig punkt i uniontecken"
+        "default": "n-ställig punkt i union"
       }
     }
   },
@@ -4732,7 +4732,7 @@
     "key": "2A04",
     "mappings": {
       "default": {
-        "default": "n-ställig unionoperator med plustecken"
+        "default": "n-ställig unionoperator med plus"
       }
     }
   },
@@ -4741,7 +4741,7 @@
     "key": "2A05",
     "mappings": {
       "default": {
-        "default": "n-ställig kvadrat snittecken"
+        "default": "n-ställig kvadrat snit"
       }
     }
   },
@@ -4750,7 +4750,7 @@
     "key": "2A06",
     "mappings": {
       "default": {
-        "default": "n-ställig kvadrat uniontecken"
+        "default": "n-ställig kvadrat union"
       }
     }
   },
@@ -4777,7 +4777,7 @@
     "key": "2A09",
     "mappings": {
       "default": {
-        "default": "n-ställig multiplikationstecken"
+        "default": "n-ställig multiplikations"
       }
     }
   },
@@ -4786,7 +4786,7 @@
     "key": "2A0A",
     "mappings": {
       "default": {
-        "default": "modulo två i summationstecken"
+        "default": "modulo två i summations"
       }
     }
   },
@@ -4795,7 +4795,7 @@
     "key": "2A0B",
     "mappings": {
       "default": {
-        "default": "summationstecken med integraltecken"
+        "default": "summations med integral"
       }
     }
   },
@@ -4822,7 +4822,7 @@
     "key": "2A0E",
     "mappings": {
       "default": {
-        "default": "integraltecken med dubbelstreck"
+        "default": "integral med dubbelstreck"
       }
     }
   },
@@ -4831,7 +4831,7 @@
     "key": "2A0F",
     "mappings": {
       "default": {
-        "default": "integralgenomsnittstecken med snedstreck"
+        "default": "integralgenomsnitts med snedstreck"
       }
     }
   },
@@ -4903,7 +4903,7 @@
     "key": "2A18",
     "mappings": {
       "default": {
-        "default": "integraltecken med multiplikationstecken"
+        "default": "integral med multiplikationstecken"
       }
     }
   },
@@ -4912,7 +4912,7 @@
     "key": "2A19",
     "mappings": {
       "default": {
-        "default": "integraltecken med snittecken"
+        "default": "integral med snit"
       }
     }
   },
@@ -4921,7 +4921,7 @@
     "key": "2A1A",
     "mappings": {
       "default": {
-        "default": "integraltecken med uniontecken"
+        "default": "integral med union"
       }
     }
   },
@@ -4930,7 +4930,7 @@
     "key": "2A1B",
     "mappings": {
       "default": {
-        "default": "integraltecken med överstreck"
+        "default": "integral med överstreck"
       }
     }
   },
@@ -4939,7 +4939,7 @@
     "key": "2A1C",
     "mappings": {
       "default": {
-        "default": "integraltecken med understreck"
+        "default": "integral med understreck"
       }
     }
   },
@@ -4992,7 +4992,7 @@
     "key": "2A22",
     "mappings": {
       "default": {
-        "default": "plustecken med ring över"
+        "default": "plus med ring över"
       }
     },
     "category": "Sm"
@@ -5001,7 +5001,7 @@
     "key": "2A23",
     "mappings": {
       "default": {
-        "default": "plustecken med cirkumflex accent över"
+        "default": "plus med cirkumflex accent över"
       }
     },
     "category": "Sm"
@@ -5019,7 +5019,7 @@
     "key": "2A25",
     "mappings": {
       "default": {
-        "default": "plustecken med punkt under"
+        "default": "plus med punkt under"
       }
     },
     "category": "Sm"
@@ -5037,7 +5037,7 @@
     "key": "2A27",
     "mappings": {
       "default": {
-        "default": "plustecken med index två"
+        "default": "plus med index två"
       }
     },
     "category": "Sm"
@@ -5047,7 +5047,7 @@
     "key": "2A28",
     "mappings": {
       "default": {
-        "default": "plustecken med svart triangel"
+        "default": "plus med svart triangel"
       }
     }
   },
@@ -5055,7 +5055,7 @@
     "key": "2A29",
     "mappings": {
       "default": {
-        "default": "minustecken med komma över"
+        "default": "minus med komma över"
       }
     },
     "category": "Sm"
@@ -5064,7 +5064,7 @@
     "key": "2A2A",
     "mappings": {
       "default": {
-        "default": "minustecken med punkt under"
+        "default": "minus med punkt under"
       }
     },
     "category": "Sm"
@@ -5074,7 +5074,7 @@
     "key": "2A2B",
     "mappings": {
       "default": {
-        "default": "minustecken med fallande punkter"
+        "default": "minus med fallande punkter"
       }
     }
   },
@@ -5083,7 +5083,7 @@
     "key": "2A2C",
     "mappings": {
       "default": {
-        "default": "minustecken med stigande prickar"
+        "default": "minus med stigande prickar"
       }
     }
   },
@@ -5091,7 +5091,7 @@
     "key": "2A2D",
     "mappings": {
       "default": {
-        "default": "plustecken i vänster halvcirkel"
+        "default": "plus i vänster halvcirkel"
       }
     },
     "category": "Sm"
@@ -5100,7 +5100,7 @@
     "key": "2A2E",
     "mappings": {
       "default": {
-        "default": "plustecken i höger halvcirkel"
+        "default": "plus i höger halvcirkel"
       }
     },
     "category": "Sm"
@@ -5199,7 +5199,7 @@
     "key": "2A39",
     "mappings": {
       "default": {
-        "default": "plustecken i triangel"
+        "default": "plus i triangel"
       }
     },
     "category": "Sm"
@@ -5208,7 +5208,7 @@
     "key": "2A3A",
     "mappings": {
       "default": {
-        "default": "minustecken i triangel"
+        "default": "minus i triangel"
       }
     },
     "category": "Sm"
@@ -5253,7 +5253,7 @@
     "key": "2A3F",
     "mappings": {
       "default": {
-        "default": "sammanslagnings- eller koprodukttecken"
+        "default": "sammanslagnings- eller koprodukt"
       }
     },
     "category": "Sm"
@@ -5272,7 +5272,7 @@
     "key": "2A41",
     "mappings": {
       "default": {
-        "default": "union- med minustecken"
+        "default": "union- med minus"
       }
     }
   },
@@ -5389,7 +5389,7 @@
     "key": "2A4E",
     "mappings": {
       "default": {
-        "default": "dubbla kvadratiska snitttecken"
+        "default": "dubbla kvadratiska snitt"
       }
     }
   },
@@ -5398,7 +5398,7 @@
     "key": "2A4F",
     "mappings": {
       "default": {
-        "default": "dubbla kvadratiska unionstecken"
+        "default": "dubbla kvadratiska unions"
       }
     }
   },
@@ -5659,7 +5659,7 @@
     "key": "2A6C",
     "mappings": {
       "default": {
-        "default": "minustecken mellan ekvivalensrelationstecken"
+        "default": "minus mellan ekvivalensrelations"
       }
     }
   },
@@ -5884,7 +5884,7 @@
     "key": "2A85",
     "mappings": {
       "default": {
-        "default": "mindre än- eller approximationstecken"
+        "default": "mindre än- eller approximative"
       }
     }
   },
@@ -5893,7 +5893,7 @@
     "key": "2A86",
     "mappings": {
       "default": {
-        "default": "större än- eller approximationstecken"
+        "default": "större än- eller approximative"
       }
     }
   },
@@ -6334,7 +6334,7 @@
     "key": "2AB7",
     "mappings": {
       "default": {
-        "default": "föregångartecken ovanför approximationstecken"
+        "default": "föregångartecken ovanför approximative"
       }
     }
   },
@@ -6343,7 +6343,7 @@
     "key": "2AB8",
     "mappings": {
       "default": {
-        "default": "efterföljartecken ovanför approximationstecken"
+        "default": "efterföljartecken ovanför approximative"
       }
     }
   },
@@ -6405,7 +6405,7 @@
     "key": "2ABF",
     "mappings": {
       "default": {
-        "default": "delmängd med plustecken under"
+        "default": "delmängd med plus under"
       }
     },
     "category": "Sm"
@@ -6414,7 +6414,7 @@
     "key": "2AC0",
     "mappings": {
       "default": {
-        "default": "delmängd med plustecken under"
+        "default": "delmängd med plus under"
       }
     },
     "category": "Sm"
@@ -6496,7 +6496,7 @@
     "key": "2AC9",
     "mappings": {
       "default": {
-        "default": "delmängdstecken ovanför approximationstecken"
+        "default": "delmängd ovanför approximative"
       }
     }
   },
@@ -6505,7 +6505,7 @@
     "key": "2ACA",
     "mappings": {
       "default": {
-        "default": "övermängdstecken ovanför approximationstecken"
+        "default": "övermängd ovanför approximative"
       }
     }
   },
@@ -6514,7 +6514,7 @@
     "key": "2ACB",
     "mappings": {
       "default": {
-        "default": "delmängdstecken ovanför olikhetstecken"
+        "default": "delmängd ovanför olikhet"
       }
     }
   },
@@ -6523,7 +6523,7 @@
     "key": "2ACC",
     "mappings": {
       "default": {
-        "default": "övermängdstecken ovanför olikhetstecken"
+        "default": "övermängd ovanför olikhet"
       }
     }
   },
@@ -7270,7 +7270,7 @@
     "key": "FE62",
     "mappings": {
       "default": {
-        "default": "litet plustecken"
+        "default": "litet plus"
       }
     }
   },
@@ -7279,7 +7279,7 @@
     "key": "FE63",
     "mappings": {
       "default": {
-        "default": "litet minustecken i form av bindestreck"
+        "default": "litet minus i form av bindestreck"
       }
     }
   },
@@ -7387,7 +7387,7 @@
     "key": "FF05",
     "mappings": {
       "default": {
-        "default": "procenttecken"
+        "default": "procent"
       }
     }
   },
@@ -7423,7 +7423,7 @@
     "key": "FF0B",
     "mappings": {
       "default": {
-        "default": "plustecken"
+        "default": "plus"
       }
     }
   },

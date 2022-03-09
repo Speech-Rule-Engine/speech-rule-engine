@@ -6,7 +6,7 @@
     "key": "00B2",
     "mappings": {
       "default": {
-        "default": "exponent två"
+        "default": "kvadrat"
       },
       "clearspeak": {
         "Exponent_Exponent": "exponent två",
@@ -19,7 +19,7 @@
     "key": "00B3",
     "mappings": {
       "default": {
-        "default": "exponent tre"
+        "default": "kubik"
       },
       "clearspeak": {
         "Exponent_Exponent": "till exponenten tre",

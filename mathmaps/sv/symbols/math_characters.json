@@ -25,7 +25,7 @@
     "key": "213C",
     "mappings": {
       "default": {
-        "default": "pi med dubbelkontur"
+        "default": "pi med dubbelstreck"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "213D",
     "mappings": {
       "default": {
-        "default": "gamma med dubbelkontur"
+        "default": "gamma med dubbelstreck"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "213E",
     "mappings": {
       "default": {
-        "default": "stort Gamma med dubbelkontur"
+        "default": "stort Gamma med dubbelstreck"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "213F",
     "mappings": {
       "default": {
-        "default": "stort Pi med dubbelkontur"
+        "default": "stort Pi med dubbelstreck"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2140",
     "mappings": {
       "default": {
-        "default": "summatecken med dubbelkontur"
+        "default": "summatecken med dubbelstreck"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "2149",
     "mappings": {
       "default": {
-        "default": "kursivt j med dubbelkontur"
+        "default": "kursivt j med dubbelstreck"
       }
     }
   },
