@@ -16,7 +16,7 @@
     "key": "2501",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad horisontell ram"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "2503",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad vertikal ram"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "2504",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn trippelstreckad horisontell ram"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "2505",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad trippelstreckad horisontell ram"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2506",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn trippelstreckad vertikal ram"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2507",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad trippelstreckad vertikal ram"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "2508",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn kvadrupelstreckad horisontell ram"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "2509",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad kvadrupelstreckad horisontell ram"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "250A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn kvadrupelstreckad vertikal ram"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "250B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad kvadrupelstreckad vertikal ram"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "250D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram nedåt och fetmarkerad åt höger"
       }
     }
   },
@@ -133,7 +133,7 @@
     "key": "250E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram nedåt och tunn åt höger"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "250F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram nedåt och åt höger"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "2511",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram nedåt och fetmarkerad åt vänster"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "2512",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram nedåt och tunn åt vänster"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "2513",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram nedåt och åt vänster"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2515",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram uppåt och fetmarkerad åt höger"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "2516",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och tunn åt höger"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "2517",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och åt höger"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "2519",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram uppåt och fetmarkerad åt vänster"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "251A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och tunn åt vänster"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "251B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och åt vänster"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "251D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn vertikal ram och fetmarkerad åt höger"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "251E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och tunn åt höger och nedåt"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "251F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram nedåt och tunn höger och uppåt"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "2520",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad vertikal ram och tunn åt höger"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "2521",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram nedåt och fetmarkerad åt höger och uppåt"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "2522",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram uppåt och fetmarkerad åt höger och nedåt"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "2523",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad vertikal ram och åt höger"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "2525",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn vertikal ram och fetmarkerad åt vänster"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "2526",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och tunn nedåt och åt vänster"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "2527",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram nedåt och tunn uppåt och åt vänster"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "2528",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vertikal tjock ram och tunn åt vänster"
       }
     }
   },
@@ -376,7 +376,7 @@
     "key": "2529",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram nedåt och fetmarkerad åt vänster och uppåt"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "252A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram uppåt och fetmarkerad åt vänster och nedåt"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "252B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram vertikalt och åt vänster"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "252D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram åt vänster och tunn åt höger och nedåt"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "252E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram åt höger och tunn nedåt och åt vänster"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "252F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram nedåt och fetmarkerad horisontellt"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "2530",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram nedåt och tunn horisontellt"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "2531",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram åt höger och fetmarkerad åt vänster och nedåt"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "2532",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram åt vänster och fetmarkerad åt höger och nedåt"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "2533",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram nedåt och horisontellt"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "2535",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram åt vänster och tunn åt höger och uppåt"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "2536",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram åt höger och tunn uppåt och åt vänster"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "2537",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram uppåt och fetmarkerad horisontellt"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "2538",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och tunn horisontellt"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "2539",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram åt höger och fetmarkerad åt vänster och uppåt"
       }
     }
   },
@@ -529,7 +529,7 @@
     "key": "253A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram åt vänster och fetmarkerad åt höger och uppåt"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "253B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och horisontellt"
       }
     }
   },
@@ -556,7 +556,7 @@
     "key": "253D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram åt vänster och tunn åt höger och vertikalt"
       }
     }
   },
@@ -565,7 +565,7 @@
     "key": "253E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram åt höger och tunn åt vänster och vertikalt"
       }
     }
   },
@@ -574,7 +574,7 @@
     "key": "253F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn vertikal ram och fetmarkerad horisontellt"
       }
     }
   },
@@ -583,7 +583,7 @@
     "key": "2540",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och tunn horisontellt och nedåt"
       }
     }
   },
@@ -592,7 +592,7 @@
     "key": "2541",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram neråt och tunn uppåt och horisontellt"
       }
     }
   },
@@ -601,7 +601,7 @@
     "key": "2542",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad vertikal ram och tunn horisontellt"
       }
     }
   },
@@ -610,7 +610,7 @@
     "key": "2543",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och åt vänster och tunn åt höger och nedåt"
       }
     }
   },
@@ -619,7 +619,7 @@
     "key": "2544",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och åt höger och tunn nedåt och åt vänster"
       }
     }
   },
@@ -628,7 +628,7 @@
     "key": "2545",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram åt vänster och nedåt och tunn åt höger och uppåt"
       }
     }
   },
@@ -637,7 +637,7 @@
     "key": "2546",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram åt höger nedåt och tunn uppåt och åt vänster"
       }
     }
   },
@@ -646,7 +646,7 @@
     "key": "2547",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram nedåt och fetmarkerad uppåt horisontellt"
       }
     }
   },
@@ -655,7 +655,7 @@
     "key": "2548",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram uppåt och fetmarkerad nedåt horisontellt"
       }
     }
   },
@@ -664,7 +664,7 @@
     "key": "2549",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram åt höger och fetmarkerad åt vänster vertikalt"
       }
     }
   },
@@ -673,7 +673,7 @@
     "key": "254A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram åt vänster och fetmarkerad åt höger vertikalt"
       }
     }
   },
@@ -682,7 +682,7 @@
     "key": "254B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ram fetmarkerad vertikalt och horisontellt"
       }
     }
   },
@@ -691,7 +691,7 @@
     "key": "254C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn dubbelstreckad horisontell ram"
       }
     }
   },
@@ -700,7 +700,7 @@
     "key": "254D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad dubbelstreckad horisontell ram"
       }
     }
   },
@@ -709,7 +709,7 @@
     "key": "254E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn dubbelstreckad vertikal ram"
       }
     }
   },
@@ -718,7 +718,7 @@
     "key": "254F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad dubbelstreckad vertikal ram"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "256D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ram med tunn båge nedåt och åt höger"
       }
     }
   },
@@ -997,7 +997,7 @@
     "key": "256E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ram med tunn båge nedåt och åt vänster"
       }
     }
   },
@@ -1006,7 +1006,7 @@
     "key": "256F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ram med tunn båge uppåt och åt vänster"
       }
     }
   },
@@ -1015,7 +1015,7 @@
     "key": "2570",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ram med tunn båge uppåt och åt höger"
       }
     }
   },
@@ -1024,7 +1024,7 @@
     "key": "2571",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn diagonal ram från höger upptill till vänster nertill"
       }
     }
   },
@@ -1033,7 +1033,7 @@
     "key": "2572",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn diagonal ram från vänster upptill till höger nertill"
       }
     }
   },
@@ -1042,7 +1042,7 @@
     "key": "2573",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ram med tunt diagonalt kryss"
       }
     }
   },
@@ -1051,7 +1051,7 @@
     "key": "2574",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram åt vänster"
       }
     }
   },
@@ -1060,7 +1060,7 @@
     "key": "2575",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram uppåt"
       }
     }
   },
@@ -1069,7 +1069,7 @@
     "key": "2576",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram åt höger"
       }
     }
   },
@@ -1078,7 +1078,7 @@
     "key": "2577",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram nedåt"
       }
     }
   },
@@ -1087,7 +1087,7 @@
     "key": "2578",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tjock ram åt vänster"
       }
     }
   },
@@ -1096,7 +1096,7 @@
     "key": "2579",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt"
       }
     }
   },
@@ -1105,7 +1105,7 @@
     "key": "257A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tjcok ram åt höger"
       }
     }
   },
@@ -1114,7 +1114,7 @@
     "key": "257B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram nedåt"
       }
     }
   },
@@ -1123,7 +1123,7 @@
     "key": "257C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram åt vänster och fetmarkerad åt höger"
       }
     }
   },
@@ -1132,7 +1132,7 @@
     "key": "257D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunn ram uppåt och fetmarkerad nedåt"
       }
     }
   },
@@ -1141,7 +1141,7 @@
     "key": "257E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram åt vänster och tunn åt höger"
       }
     }
   },
@@ -1150,7 +1150,7 @@
     "key": "257F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad ram uppåt och tunn nedåt"
       }
     }
   },
@@ -1168,7 +1168,7 @@
     "key": "2581",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre åttondelsblock"
       }
     }
   },
@@ -1177,7 +1177,7 @@
     "key": "2582",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre fjärdedelsblock"
       }
     }
   },
@@ -1186,7 +1186,7 @@
     "key": "2583",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre tre åttondelars block"
       }
     }
   },
@@ -1204,7 +1204,7 @@
     "key": "2585",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre fem åttondelars block"
       }
     }
   },
@@ -1213,7 +1213,7 @@
     "key": "2586",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre tre fjärdedelars block"
       }
     }
   },
@@ -1222,7 +1222,7 @@
     "key": "2587",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedre sju åttondelars block"
       }
     }
   },
@@ -1240,7 +1240,7 @@
     "key": "2589",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sju åttondelars block åt vänster"
       }
     }
   },
@@ -1249,7 +1249,7 @@
     "key": "258A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre fjärdedelars block åt vänster"
       }
     }
   },
@@ -1258,7 +1258,7 @@
     "key": "258B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fem åttondelars block åt vänster"
       }
     }
   },
@@ -1267,7 +1267,7 @@
     "key": "258C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "halft block åt vänster"
       }
     }
   },
@@ -1276,7 +1276,7 @@
     "key": "258D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre åttondelars block åt vänster"
       }
     }
   },
@@ -1285,7 +1285,7 @@
     "key": "258E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fjärdedelsblock åt vänster"
       }
     }
   },
@@ -1294,7 +1294,7 @@
     "key": "258F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "åttondelsblock åt vänster"
       }
     }
   },
@@ -1303,7 +1303,7 @@
     "key": "2590",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "halvt block åt höger"
       }
     }
   },
@@ -1339,7 +1339,7 @@
     "key": "2594",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "övre åttondelsblock"
       }
     }
   },
@@ -1348,7 +1348,7 @@
     "key": "2595",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "åttondelsblock åt höger"
       }
     }
   },
@@ -1357,7 +1357,7 @@
     "key": "2596",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant nedåt åt vänster"
       }
     }
   },
@@ -1366,7 +1366,7 @@
     "key": "2597",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant nedåt åt höger"
       }
     }
   },
@@ -1375,7 +1375,7 @@
     "key": "2598",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant uppåt åt vänster"
       }
     }
   },
@@ -1384,7 +1384,7 @@
     "key": "2599",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant uppåt åt vänster och nedåt åt vänster och nedåt åt höger"
       }
     }
   },
@@ -1393,7 +1393,7 @@
     "key": "259A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant uppåt åt vänster och nedåt åt höger"
       }
     }
   },
@@ -1402,7 +1402,7 @@
     "key": "259B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant uppåt åt vänster och uppåt åt höger och nedåt åt vänster"
       }
     }
   },
@@ -1411,7 +1411,7 @@
     "key": "259C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant uppåt åt vänster och uppåt åt höger och nedåt åt höger"
       }
     }
   },
@@ -1420,7 +1420,7 @@
     "key": "259D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant uppåt åt höger"
       }
     }
   },
@@ -1429,7 +1429,7 @@
     "key": "259E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant uppåt åt höger nedåt åt vänster"
       }
     }
   },
@@ -1438,7 +1438,7 @@
     "key": "259F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrant uppåt åt höger och nedåt åt vänster och nedåt åt höger"
       }
     }
   },
@@ -1465,7 +1465,7 @@
     "key": "25A2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit kvadrat med rundade hörn"
       }
     }
   },
@@ -1474,7 +1474,7 @@
     "key": "25A3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit kvadrat i liten svart kvadrat"
       }
     }
   },
@@ -1483,7 +1483,7 @@
     "key": "25A4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med horisontell ifyllning"
       }
     }
   },
@@ -1492,7 +1492,7 @@
     "key": "25A5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med vertikal ifyllning"
       }
     }
   },
@@ -1501,7 +1501,7 @@
     "key": "25A6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med ortogonal skuggfyllning"
       }
     }
   },
@@ -1510,7 +1510,7 @@
     "key": "25A7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med ifyllning uppåt åt vänster och nedåt åt höger"
       }
     }
   },
@@ -1519,7 +1519,7 @@
     "key": "25A8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med ifyllning uppåt åt höger och nedåt åt vänster"
       }
     }
   },
@@ -1528,7 +1528,7 @@
     "key": "25A9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med diagonal skuggfyllning"
       }
     }
   },
@@ -1555,7 +1555,7 @@
     "key": "25AC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart rektangel"
       }
     }
   },
@@ -1591,7 +1591,7 @@
     "key": "25B0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart parallellogram"
       }
     }
   },
@@ -1681,7 +1681,7 @@
     "key": "25BA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart pekare åt höger"
       }
     }
   },
@@ -1690,7 +1690,7 @@
     "key": "25BB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit pekare åt höger"
       }
     }
   },
@@ -1698,7 +1698,7 @@
     "key": "25BC",
     "mappings": {
       "default": {
-        "default": "svart triangel med spetsen neråt"
+        "default": "svart triangel med spetsen nedåt"
       }
     },
     "category": "So"
@@ -1707,7 +1707,7 @@
     "key": "25BD",
     "mappings": {
       "default": {
-        "default": "vit triangel med spetsen neråt"
+        "default": "vit triangel med spetsen nedåt"
       }
     },
     "category": "So"
@@ -1716,7 +1716,7 @@
     "key": "25BE",
     "mappings": {
       "default": {
-        "default": "svart triangel med spetsen neråt"
+        "default": "svart triangel med spetsen nedåt"
       }
     },
     "category": "So"
@@ -1725,7 +1725,7 @@
     "key": "25BF",
     "mappings": {
       "default": {
-        "default": "vit triangel med spetsen neråt"
+        "default": "vit triangel med spetsen nedåt"
       }
     },
     "category": "So"
@@ -1860,7 +1860,7 @@
     "key": "25CE",
     "mappings": {
       "default": {
-        "default": "bullseye"
+        "default": "mitt-i-prick"
       }
     },
     "category": "So"
@@ -2040,7 +2040,7 @@
     "key": "25E2",
     "mappings": {
       "default": {
-        "default": "svart triangel neråt höger"
+        "default": "svart triangel nedåt höger"
       }
     },
     "category": "So"
@@ -2049,7 +2049,7 @@
     "key": "25E3",
     "mappings": {
       "default": {
-        "default": "svart triangel neråt vänster"
+        "default": "svart triangel nedåt vänster"
       }
     },
     "category": "So"
@@ -2167,7 +2167,7 @@
     "key": "25F0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit kvadrat med övre vänster kvadrant"
       }
     }
   },
@@ -2176,7 +2176,7 @@
     "key": "25F1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit kvadrat med nedre vänster kvadrant"
       }
     }
   },
@@ -2185,7 +2185,7 @@
     "key": "25F2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit kvadrat med nedre höger kvadrant"
       }
     }
   },
@@ -2194,7 +2194,7 @@
     "key": "25F3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit kvadrat med övre höger kvadrant"
       }
     }
   },
@@ -2203,7 +2203,7 @@
     "key": "25F4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit cirkel med övre vänster kvadrant"
       }
     }
   },
@@ -2212,7 +2212,7 @@
     "key": "25F5",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit cirkel med nedre vänster kvadrant"
       }
     }
   },
@@ -2221,7 +2221,7 @@
     "key": "25F6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit cirkel med nedre höger kvadrant"
       }
     }
   },
@@ -2230,7 +2230,7 @@
     "key": "25F7",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit cirkel med övre höger kvadrant"
       }
     }
   },
@@ -2311,7 +2311,7 @@
     "key": "2B12",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med svart övre halva"
       }
     }
   },
@@ -2320,7 +2320,7 @@
     "key": "2B13",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med svart undre halva"
       }
     }
   },
@@ -2329,7 +2329,7 @@
     "key": "2B14",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med svart övre diagonal halva"
       }
     }
   },
@@ -2338,7 +2338,7 @@
     "key": "2B15",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kvadrat med svart nedre vänster diagonal halva"
       }
     }
   },
@@ -2347,7 +2347,7 @@
     "key": "2B16",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diamant med svart vänster halva"
       }
     }
   },
@@ -2356,7 +2356,7 @@
     "key": "2B17",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diamant med svart höger halva"
       }
     }
   },
@@ -2365,7 +2365,7 @@
     "key": "2B18",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diamant med svart övre halva"
       }
     }
   },
@@ -2374,7 +2374,7 @@
     "key": "2B19",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "diamant med svart undre halva"
       }
     }
   },
@@ -2383,7 +2383,7 @@
     "key": "2B1A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "prickad kvadrat"
       }
     }
   },
@@ -2392,7 +2392,7 @@
     "key": "2B1B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor svart kvadrat"
       }
     }
   },
@@ -2401,7 +2401,7 @@
     "key": "2B1C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor vid kvadrat"
       }
     }
   },
@@ -2410,7 +2410,7 @@
     "key": "2B1D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mycket liten svart kvadrat"
       }
     }
   },
@@ -2419,7 +2419,7 @@
     "key": "2B1E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mycket liten vit kvadrat"
       }
     }
   },
@@ -2428,7 +2428,7 @@
     "key": "2B1F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart femhörning"
       }
     }
   },
@@ -2437,7 +2437,7 @@
     "key": "2B20",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit femhörning"
       }
     }
   },
@@ -2446,7 +2446,7 @@
     "key": "2B21",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit sexhörning"
       }
     }
   },
@@ -2455,7 +2455,7 @@
     "key": "2B22",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart sexhörning"
       }
     }
   },
@@ -2464,7 +2464,7 @@
     "key": "2B23",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "horisontell svart sexhörning"
       }
     }
   },
@@ -2473,7 +2473,7 @@
     "key": "2B24",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stor svart cirkel"
       }
     }
   },
@@ -2482,7 +2482,7 @@
     "key": "2B25",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart medelstor diamant"
       }
     }
   },
@@ -2491,7 +2491,7 @@
     "key": "2B26",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit medelstor diamant"
       }
     }
   },
@@ -2500,7 +2500,7 @@
     "key": "2B27",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart medelstor romb"
       }
     }
   },
@@ -2509,7 +2509,7 @@
     "key": "2B28",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit medelstor romb"
       }
     }
   },
@@ -2518,7 +2518,7 @@
     "key": "2B29",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart liten diamant"
       }
     }
   },
@@ -2527,7 +2527,7 @@
     "key": "2B2A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart liten romb"
       }
     }
   },
@@ -2536,7 +2536,7 @@
     "key": "2B2B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit liten romb"
       }
     }
   },
@@ -2545,7 +2545,7 @@
     "key": "2B2C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart horisontell ellips"
       }
     }
   },
@@ -2554,7 +2554,7 @@
     "key": "2B2D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit horisontell ellips"
       }
     }
   },
@@ -2563,7 +2563,7 @@
     "key": "2B2E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart vertikal ellips"
       }
     }
   },
@@ -2572,7 +2572,7 @@
     "key": "2B2F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit vertikal ellips"
       }
     }
   },
@@ -2608,7 +2608,7 @@
     "key": "2B53",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart femhörning som pekar åt höger"
       }
     }
   },
@@ -2617,7 +2617,7 @@
     "key": "2B54",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit femhörning som pekar åt höger"
       }
     }
   },
@@ -2626,7 +2626,7 @@
     "key": "2B55",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad stor cirkel"
       }
     }
   },
@@ -2635,7 +2635,7 @@
     "key": "2B56",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad oval med oval inuti"
       }
     }
   },
@@ -2644,7 +2644,7 @@
     "key": "2B57",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad cirkel med cirkel inuti"
       }
     }
   },
@@ -2653,7 +2653,7 @@
     "key": "2B58",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad cirkel"
       }
     }
   },
@@ -2662,7 +2662,7 @@
     "key": "2B59",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerat krysskors i cirkel"
       }
     }
   }

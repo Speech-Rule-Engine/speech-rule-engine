@@ -322,7 +322,7 @@
     "key": "0114",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort E med brevis"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "012C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort I med brevis"
       }
     }
   },
@@ -538,7 +538,7 @@
     "key": "014E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort O med brevis"
       }
     }
   },
@@ -745,7 +745,7 @@
     "key": "01CD",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort A med hake"
       }
     }
   },
@@ -754,7 +754,7 @@
     "key": "01CF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort I med hake"
       }
     }
   },
@@ -763,7 +763,7 @@
     "key": "01D1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort O med hake"
       }
     }
   },
@@ -772,7 +772,7 @@
     "key": "01D3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort U med hake"
       }
     }
   },
@@ -781,7 +781,7 @@
     "key": "01E6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort G med hake"
       }
     }
   },
@@ -790,7 +790,7 @@
     "key": "01E8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort K med hake"
       }
     }
   },
@@ -799,7 +799,7 @@
     "key": "01EA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort O med svans"
       }
     }
   },
@@ -808,7 +808,7 @@
     "key": "01F4",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort G med akut accent"
       }
     }
   },
@@ -817,7 +817,7 @@
     "key": "01F8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort N med grav accent"
       }
     }
   },
@@ -826,7 +826,7 @@
     "key": "0200",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort A med dubbel grav accent"
       }
     }
   },
@@ -835,7 +835,7 @@
     "key": "0202",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort A med omvänd brevis"
       }
     }
   },
@@ -844,7 +844,7 @@
     "key": "0204",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort E med dubbel grav accent"
       }
     }
   },
@@ -853,7 +853,7 @@
     "key": "0206",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort E med omvänd brevis"
       }
     }
   },
@@ -862,7 +862,7 @@
     "key": "0208",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort I med dubbel grav accent"
       }
     }
   },
@@ -871,7 +871,7 @@
     "key": "020A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort I med omvänd brevis"
       }
     }
   },
@@ -880,7 +880,7 @@
     "key": "020C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort O med dubbel grav accent"
       }
     }
   },
@@ -889,7 +889,7 @@
     "key": "020E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort O med omvänd brevis"
       }
     }
   },
@@ -898,7 +898,7 @@
     "key": "0210",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort R med dubbel grav accent"
       }
     }
   },
@@ -907,7 +907,7 @@
     "key": "0212",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort R med omvänd brevis"
       }
     }
   },
@@ -916,7 +916,7 @@
     "key": "0214",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort U med dubbel grav accent"
       }
     }
   },
@@ -925,7 +925,7 @@
     "key": "0216",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort U med omvänd brevis"
       }
     }
   },
@@ -934,7 +934,7 @@
     "key": "0218",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort S med komma under"
       }
     }
   },
@@ -943,7 +943,7 @@
     "key": "021A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort T med komma under"
       }
     }
   },
@@ -952,7 +952,7 @@
     "key": "021E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort H med hake"
       }
     }
   },
@@ -961,7 +961,7 @@
     "key": "0226",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort A med punkt över"
       }
     }
   },
@@ -970,7 +970,7 @@
     "key": "0228",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort E med cedilj"
       }
     }
   },
@@ -979,7 +979,7 @@
     "key": "022E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort O med punkt över"
       }
     }
   },
@@ -988,7 +988,7 @@
     "key": "0232",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "stort Y med streck ovanför"
       }
     }
   },

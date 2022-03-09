@@ -20,10 +20,10 @@
       "default": {
         "default": "naturliga logaritmen"
       },
-     "clearspeak": {
-       "default": "l n",
-       "Log_LnAsNaturalLog": "naturliga logaritmen"
-     }
+      "clearspeak": {
+        "default": "l n",
+        "Log_LnAsNaturalLog": "naturliga logaritmen"
+      }
     },
     "category": "Logarithm",
     "names": [

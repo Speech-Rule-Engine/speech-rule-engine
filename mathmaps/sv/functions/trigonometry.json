@@ -86,9 +86,9 @@
       "default": {
         "default": "arcus cosinus"
       },
-     "clearspeak": {
-       "Trig_TrigInverse": "cosinus invers"
-     }
+      "clearspeak": {
+        "Trig_TrigInverse": "cosinus invers"
+      }
     }
   },
   {

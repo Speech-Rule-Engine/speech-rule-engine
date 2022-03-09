@@ -115,7 +115,7 @@
     "key": "294C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tagg uppåt höger tagg neråt vänster harpun"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "294D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tagg uppåt vänster tagg neråt höger harpun"
       }
     }
   },

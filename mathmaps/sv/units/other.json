@@ -13,8 +13,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "dozen",
-        "plural": "dozen"
+        "default": "dussin",
+        "plural": "dussin"
       }
     }
   }

@@ -7,7 +7,7 @@
     "key": "1D26",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten versal Gamma"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "1D27",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten versal Lambda"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "1D28",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten versal Pi"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "1D29",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten versal Rho"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "1D2A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "liten versal Psi"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "1D5E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "upphöjt gamma"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "1D60",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "upphöjt fi"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "1D66",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt beta"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "1D67",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt gamma"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "1D68",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt rho"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "1D69",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt fi"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "1D6A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nedsänkt chi"
       }
     }
   }

@@ -122,8 +122,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "nautical mile",
-        "plural": "nautical miles"
+        "default": "nautisk mil",
+        "plural": "nautiska mil"
       }
     }
   },
