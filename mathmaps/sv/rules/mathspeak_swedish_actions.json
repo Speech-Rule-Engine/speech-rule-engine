@@ -26,6 +26,11 @@
     ],
     [
       "Action",
+      "font-double-struck",
+      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
+    ],
+    [
+      "Action",
       "mixed-number",
       "[n] children/*[1]; [t] \"och\"; [n] children/*[2]"
     ],
@@ -128,6 +133,11 @@
       "Action",
       "minus",
       "[t] \"minus\""
+    ],
+    [
+      "Action",
+      "vulgar-fraction",
+      "[t] CSFvulgarFraction (grammar:correctOne)"
     ],
     [
       "Action",

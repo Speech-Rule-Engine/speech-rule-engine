@@ -16,6 +16,11 @@
     ],
     [
       "Action",
+      "font-double-struck",
+      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
+    ],
+    [
+      "Action",
       "ellipsis",
       "[t] \"och så vidare\""
     ],
@@ -497,7 +502,7 @@
     [
       "Action",
       "vulgar-fraction",
-      "[t] CSFvulgarFraction"
+      "[t] CSFvulgarFraction (grammar:correctOne)"
     ],
     [
       "Action",
