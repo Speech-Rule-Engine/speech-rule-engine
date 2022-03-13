@@ -947,6 +947,11 @@
     [
       "Action",
       "integral",
+      "[n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:short); [n] children/*[3] (pause:short)"
+    ],
+    [
+      "Action",
+      "integral-novar",
       "[n] children/*[1]; [t] \"का फलन\"; [n] children/*[2] (pause:short)"
     ],
     [
