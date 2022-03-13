@@ -922,6 +922,11 @@
     [
       "Action",
       "integral",
+      "[t] \"le\"; [n] children/*[1]; [t] \"de\"; [n] children/*[2] (pause:short); [n] children/*[3] (pause:short)"
+    ],
+    [
+      "Action",
+      "integral-novar",
       "[t] \"le\"; [n] children/*[1]; [t] \"de\"; [n] children/*[2] (pause:short)"
     ],
     [

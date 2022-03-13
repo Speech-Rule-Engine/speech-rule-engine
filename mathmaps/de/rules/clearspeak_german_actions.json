@@ -957,6 +957,11 @@
     [
       "Action",
       "integral",
+      "[t] \"das\"; [n] children/*[1]; [t] \"über\"; [n] children/*[2] (pause:short); [n] children/*[3] (pause:short)"
+    ],
+    [
+      "Action",
+      "integral-novar",
       "[t] \"das\"; [n] children/*[1]; [t] \"über\"; [n] children/*[2] (pause:short)"
     ],
     [
