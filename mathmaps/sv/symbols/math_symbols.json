@@ -24,7 +24,7 @@
     "key": "0023",
     "mappings": {
       "default": {
-        "default": "numeriskt tecken"
+        "default": "nummertecken"
       }
     },
     "category": "Po"
@@ -150,7 +150,7 @@
     "key": "003D",
     "mappings": {
       "default": {
-        "default": "lika med"
+        "default": "är lika med"
       }
     },
     "category": "Sm"
@@ -204,7 +204,7 @@
     "key": "005F",
     "mappings": {
       "default": {
-        "default": "streck under"
+        "default": "streck"
       }
     },
     "category": "Pc"
@@ -303,7 +303,7 @@
     "key": "00A8",
     "mappings": {
       "default": {
-        "default": "trema"
+        "default": "två punkter"
       }
     },
     "category": "Sk"
@@ -411,7 +411,7 @@
     "key": "00B7",
     "mappings": {
       "default": {
-        "default": "mellanpunkt"
+        "default": "halvhög punkt"
       }
     },
     "category": "Po"
@@ -1878,7 +1878,7 @@
     "key": "2243",
     "mappings": {
       "default": {
-        "default": "asymptotically lika med"
+        "default": "är asymptotically lika med"
       }
     },
     "category": "Sm"
@@ -1887,7 +1887,7 @@
     "key": "2244",
     "mappings": {
       "default": {
-        "default": "inte asymptotically lika med"
+        "default": "är inte asymptotically lika med"
       }
     },
     "category": "Sm"
@@ -1896,7 +1896,7 @@
     "key": "2245",
     "mappings": {
       "default": {
-        "default": "approximativt lika med"
+        "default": "är approximativt lika med"
       }
     },
     "category": "Sm"
@@ -1905,7 +1905,7 @@
     "key": "2246",
     "mappings": {
       "default": {
-        "default": "approximativt men inte faktiskt lika med"
+        "default": "är approximativt men inte faktiskt lika med"
       }
     },
     "category": "Sm"
@@ -1914,7 +1914,7 @@
     "key": "2247",
     "mappings": {
       "default": {
-        "default": "varken approximativt eller fakiskt lika med"
+        "default": "är varken approximativt eller fakiskt lika med"
       }
     },
     "category": "Sm"
@@ -1923,7 +1923,7 @@
     "key": "2248",
     "mappings": {
       "default": {
-        "default": "nästan lika med"
+        "default": "är nästan lika med"
       }
     },
     "category": "Sm"
@@ -1932,7 +1932,7 @@
     "key": "2249",
     "mappings": {
       "default": {
-        "default": "inte nästan lika med"
+        "default": "är inte nästan lika med"
       }
     },
     "category": "Sm"
@@ -1941,7 +1941,7 @@
     "key": "224A",
     "mappings": {
       "default": {
-        "default": "nästan lika eller lika med"
+        "default": "är nästan lika eller lika med"
       }
     },
     "category": "Sm"
@@ -1959,7 +1959,7 @@
     "key": "224C",
     "mappings": {
       "default": {
-        "default": "alla lika med"
+        "default": "är alla lika med"
       }
     },
     "category": "Sm"
@@ -1977,7 +1977,7 @@
     "key": "224E",
     "mappings": {
       "default": {
-        "default": "geometriskt lika med"
+        "default": "är geometriskt lika med"
       }
     },
     "category": "Sm"
@@ -2004,7 +2004,7 @@
     "key": "2251",
     "mappings": {
       "default": {
-        "default": "geometriskt lika med"
+        "default": "är geometriskt lika med"
       }
     },
     "category": "Sm"
@@ -2013,7 +2013,7 @@
     "key": "2252",
     "mappings": {
       "default": {
-        "default": "uppskattningsvis lika med eller i likhet med"
+        "default": "är uppskattningsvis lika med eller i likhet med"
       }
     },
     "category": "Sm"
@@ -2022,7 +2022,7 @@
     "key": "2253",
     "mappings": {
       "default": {
-        "default": "i likhet med eller uppskattningsvis lika med"
+        "default": "är i likhet med eller uppskattningsvis lika med"
       }
     },
     "category": "Sm"
@@ -2031,7 +2031,7 @@
     "key": "2254",
     "mappings": {
       "default": {
-        "default": "kolon lika med"
+        "default": "är kolon lika med"
       }
     },
     "category": "Sm"
@@ -2040,7 +2040,7 @@
     "key": "2255",
     "mappings": {
       "default": {
-        "default": "lika med kolon"
+        "default": "är lika med kolon"
       }
     },
     "category": "Sm"
@@ -2049,7 +2049,7 @@
     "key": "2256",
     "mappings": {
       "default": {
-        "default": "ring i lika med"
+        "default": "är ring i lika med"
       }
     },
     "category": "Sm"

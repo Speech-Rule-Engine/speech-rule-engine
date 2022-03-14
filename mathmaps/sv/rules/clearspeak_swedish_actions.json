@@ -352,7 +352,7 @@
     [
       "Action",
       "exponent",
-      "[n] text() (join:\"-\"); [t] \"te\""
+      "[n] text()"
     ],
     [
       "Action",
@@ -932,7 +932,7 @@
     [
       "Action",
       "lines-equations",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Equation-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Ekvation-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
@@ -1027,12 +1027,12 @@
     [
       "Action",
       "decimal-period",
-      "[t] \"decimalbråk\"; [n] children/*[1] (grammar:spaceout); [t] \"komma följt av upprepande siffra\"; [n] children/*[3]/children/*[1] (grammar:spaceout)"
+      "[t] \"decimalbråk\"; [n] children/*[1] (grammar:spaceout); [t] \"komma följt av upprepande siffror\"; [n] children/*[3]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
       "decimal-period-float",
-      "[t] \"decimalbråk\"; [n] children/*[1] (grammar:spaceout); [t] \"följt av upprepande siffra\"; [n] children/*[2]/children/*[1] (grammar:spaceout)"
+      "[t] \"decimalbråk\"; [n] children/*[1] (grammar:spaceout); [t] \"följt av upprepande siffror\"; [n] children/*[2]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
@@ -1162,22 +1162,22 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"horisontellt sträck\""
+      "[n] children/*[1]; [t] \"horisontellt streck\""
     ],
     [
       "Action",
       "underbar",
-      "[n] children/*[1]; [t] \"över horisontellt sträck\""
+      "[n] children/*[1]; [t] \"över horisontellt streck\""
     ],
     [
       "Action",
       "leftbar",
-      "[t] \"vertikalt sträck\"; [n] children/*[1]"
+      "[t] \"vertikalt streck\"; [n] children/*[1]"
     ],
     [
       "Action",
       "rightbar",
-      "[n] children/*[1]; [t] \"vertikalt sträck\""
+      "[n] children/*[1]; [t] \"vertikalt streck\""
     ],
     [
       "Action",
