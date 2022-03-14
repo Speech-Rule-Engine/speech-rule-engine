@@ -2590,6 +2590,13 @@
     ],
     [
       "Precondition",
+      "integral-novar",
+      "default",
+      "self::integral",
+      "name(children/*[3])=\"empty\""
+    ],
+    [
+      "Precondition",
       "overscript",
       "default",
       "self::overscore"
