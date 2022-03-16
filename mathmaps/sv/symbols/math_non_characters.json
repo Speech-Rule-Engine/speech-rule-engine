@@ -16,7 +16,7 @@
     "key": "2114",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "l b stapel"
       }
     }
   },
@@ -42,7 +42,7 @@
     "key": "211E",
     "mappings": {
       "default": {
-        "default": "prescription take"
+        "default": "dubbelförhållandetecken"
       }
     },
     "category": "So"
@@ -52,7 +52,7 @@
     "key": "211F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svar"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "2120",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tjänstemärke"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2121",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "telefonsymbol"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "2123",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "versikel"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "212E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "uppskattad"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "2139",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "informationskälla"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "213A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "roterat stort Q"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "213B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "faxsymbol"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "2141",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vridet stort G i sans serif"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2142",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vridet stort L i sans serif"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "2143",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvänt stort L i sans serif"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "2144",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vridet stort Y i sans serif"
       }
     }
   }

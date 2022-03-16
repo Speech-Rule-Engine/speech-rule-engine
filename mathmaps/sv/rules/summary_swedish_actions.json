@@ -181,7 +181,7 @@
     [
       "Action",
       "abstr-vector",
-      "[t] count(./children/*) (join:\"\"); [t] \"dimensionell vektor\""
+      "[t] count(./children/*) (join:\"-\"); [t] \"dimensionell vektor\""
     ],
     [
       "Action",
@@ -201,7 +201,7 @@
     [
       "Action",
       "abstr-determinant",
-      "[t] count(./children/*) (join:\"\"); [t] \"dimensionell determinant\""
+      "[t] count(./children/*) (join:\"-\"); [t] \"dimensionell determinant\""
     ],
     [
       "Action",
@@ -216,7 +216,7 @@
     [
       "Action",
       "abstr-squarematrix",
-      "[t] count(./children/*) (join:\"\"); [t] \"dimensionell kvadratisk matris\""
+      "[t] count(./children/*) (join:\"-\"); [t] \"dimensionell kvadratisk matris\""
     ],
     [
       "Action",
@@ -226,17 +226,17 @@
     [
       "Action",
       "abstr-rowvector",
-      "[t] count(./children/row/children/*) (join:\"\"); [t] \"dimensionell radvektor\""
+      "[t] count(./children/row/children/*) (join:\"-\"); [t] \"dimensionell radvektor\""
     ],
     [
       "Action",
       "abstr-rowvector-brief",
-      "[t] \"rad vektor\""
+      "[t] \"radvektor\""
     ],
     [
       "Action",
       "abstr-rowvector-var",
-      "[t] \"n-dimensionell rad vektor\""
+      "[t] \"n-dimensionell radvektor\""
     ],
     [
       "Action",
@@ -276,7 +276,7 @@
     [
       "Action",
       "abstr-punctuated-brief",
-      "[t] %1(join:\"\"); [t] \"separerad lista\""
+      "[n] content/*[1] (join:\"\"); [t] \"separerad lista\""
     ],
     [
       "Action",

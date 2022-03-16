@@ -7,7 +7,7 @@
     "key": "01D6",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u trema med streck ovanför"
       }
     }
   },
@@ -16,7 +16,7 @@
     "key": "01D8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u trema med akut accent"
       }
     }
   },
@@ -25,7 +25,7 @@
     "key": "01DA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u trema med hake"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "01DC",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u trema med grav accent"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "01DF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "u trema med streck ovanför"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "01E1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a punkt med streck ovanför"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "01ED",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o med hake och streck ovanför"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "01FB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "a ring med akut accent ovanför"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "022B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o trema med streck ovanför"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "022D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o tilde med streck ovanför"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "0231",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "o punkt med streck ovanför"
       }
     }
   },

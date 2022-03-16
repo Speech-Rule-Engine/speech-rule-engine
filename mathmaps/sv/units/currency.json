@@ -67,8 +67,8 @@
     "key": "₡",
     "mappings": {
       "default": {
-        "default": "colons",
-        "plural": "colons"
+        "default": "colón",
+        "plural": "colón"
       }
     },
     "category": "currency",
@@ -120,8 +120,8 @@
     "key": "₥",
     "mappings": {
       "default": {
-        "default": "mills",
-        "plural": "mills"
+        "default": "mill",
+        "plural": "mill"
       }
     },
     "category": "currency",
@@ -148,7 +148,7 @@
     "mappings": {
       "default": {
         "default": "peseta",
-        "plural": "peseta"
+        "plural": "pesetas"
       }
     },
     "category": "currency",
@@ -193,8 +193,8 @@
     "key": "₪",
     "mappings": {
       "default": {
-        "default": "sheqel",
-        "plural": "sheqels"
+        "default": "shekel",
+        "plural": "shekel"
       }
     },
     "category": "currency",
@@ -245,8 +245,8 @@
     "key": "₯",
     "mappings": {
       "default": {
-        "default": "drachma",
-        "plural": "drachma"
+        "default": "drakma",
+        "plural": "drakmer"
       }
     },
     "category": "currency",
@@ -271,7 +271,7 @@
     "key": "₱",
     "mappings": {
       "default": {
-        "default": "pesos",
+        "default": "peso",
         "plural": "pesos"
       }
     },
@@ -284,8 +284,8 @@
     "key": "₲",
     "mappings": {
       "default": {
-        "default": "guaranis",
-        "plural": "guaranis"
+        "default": "guarani",
+        "plural": "guarani"
       }
     },
     "category": "currency",
@@ -297,8 +297,8 @@
     "key": "₳",
     "mappings": {
       "default": {
-        "default": "australs",
-        "plural": "australs"
+        "default": "austral",
+        "plural": "austral"
       }
     },
     "category": "currency",
@@ -310,8 +310,8 @@
     "key": "₴",
     "mappings": {
       "default": {
-        "default": "hryvnias",
-        "plural": "hryvnias"
+        "default": "hryvnia",
+        "plural": "hryvnia"
       }
     },
     "category": "currency",
@@ -324,8 +324,8 @@
     "key": "₵",
     "mappings": {
       "default": {
-        "default": "cedis",
-        "plural": "cedis"
+        "default": "cedi",
+        "plural": "cedi"
       }
     },
     "category": "currency",

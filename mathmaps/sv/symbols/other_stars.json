@@ -7,7 +7,7 @@
     "key": "23E8",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "10-exponent"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "26AA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit cirkel"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "26AB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart cirkel"
       }
     }
   },
@@ -52,7 +52,7 @@
     "key": "2705",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit bock"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "2714",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad bock"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "2715",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "multiplikations-x"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "2716",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerat multiplikations-x"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "2718",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerat valsedelskryss"
       }
     }
   },
@@ -115,7 +115,7 @@
     "key": "271B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kors med ihålig mittpunkt"
       }
     }
   },
@@ -124,7 +124,7 @@
     "key": "271C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerat kors med ihålig mittpunkt"
       }
     }
   },
@@ -142,7 +142,7 @@
     "key": "2721",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "davidsstjärna"
       }
     }
   },
@@ -151,7 +151,7 @@
     "key": "2722",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med fyra tårkanter"
       }
     }
   },
@@ -160,7 +160,7 @@
     "key": "2723",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med fyra ballongkanter"
       }
     }
   },
@@ -169,7 +169,7 @@
     "key": "2724",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad asterisk med fyra ballongkanter"
       }
     }
   },
@@ -178,7 +178,7 @@
     "key": "2725",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med fyrklöverkanter"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "2726",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart stjärna med fyra spetsar"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "2727",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit stjärna med fyra spetsar"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "2728",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gnistor"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "2729",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit stjärna med betonad kontur"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "272A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit inringad stjärna"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "272B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart stjärna med ihålig mittpunkt"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "272C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vit stjärna med svart mittpunkt"
       }
     }
   },
@@ -250,7 +250,7 @@
     "key": "272D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart stjärna med kontur"
       }
     }
   },
@@ -259,7 +259,7 @@
     "key": "272E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad svart stjärna med kontur"
       }
     }
   },
@@ -268,7 +268,7 @@
     "key": "272F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vindsnurreformad stjärna"
       }
     }
   },
@@ -277,7 +277,7 @@
     "key": "2730",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skuggad vit stjärna"
       }
     }
   },
@@ -286,7 +286,7 @@
     "key": "2731",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad asterisk"
       }
     }
   },
@@ -295,7 +295,7 @@
     "key": "2732",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med ihålig mittpunkt"
       }
     }
   },
@@ -304,7 +304,7 @@
     "key": "2733",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med åtta kanter"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "2734",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart stjärna med åtta spetsar"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "2735",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vindsnurreformad stjärna med åtta spetsar"
       }
     }
   },
@@ -340,7 +340,7 @@
     "key": "2739",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart stjärna med tolv spetsar"
       }
     }
   },
@@ -349,7 +349,7 @@
     "key": "273A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med sexton spetsar"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "273B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med tårkanter"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "273C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med tårkanter och ihålig mittpunkt"
       }
     }
   },
@@ -385,7 +385,7 @@
     "key": "273E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "blomhuvud med sex svartvita kronblad"
       }
     }
   },
@@ -394,7 +394,7 @@
     "key": "273F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "svart blomhuvud"
       }
     }
   },
@@ -403,7 +403,7 @@
     "key": "2740",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vitt blomhuvud"
       }
     }
   },
@@ -412,7 +412,7 @@
     "key": "2741",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "blomhuvud med åtta kronblad med kontur"
       }
     }
   },
@@ -421,7 +421,7 @@
     "key": "2742",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inringad stjärna med åtta spetsar och ihålig mittpunkt"
       }
     }
   },
@@ -430,7 +430,7 @@
     "key": "2743",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad vindsnurreformad asterisk med tårkanter"
       }
     }
   },
@@ -439,7 +439,7 @@
     "key": "2744",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "snöflinga"
       }
     }
   },
@@ -448,7 +448,7 @@
     "key": "2745",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tät trebladig snöflinga"
       }
     }
   },
@@ -457,7 +457,7 @@
     "key": "2746",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad flinga med sparre"
       }
     }
   },
@@ -466,7 +466,7 @@
     "key": "2747",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "gnista"
       }
     }
   },
@@ -475,7 +475,7 @@
     "key": "2748",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad gnista"
       }
     }
   },
@@ -484,7 +484,7 @@
     "key": "2749",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "asterisk med ballongkant"
       }
     }
   },
@@ -493,7 +493,7 @@
     "key": "274A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "propellerformad asterisk med åtta tårkanter"
       }
     }
   },
@@ -502,7 +502,7 @@
     "key": "274B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fetmarkerad propellerformad asterisk med åtta tårkanter"
       }
     }
   },
@@ -511,7 +511,7 @@
     "key": "274C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "kryss"
       }
     }
   },
@@ -520,7 +520,7 @@
     "key": "274D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skuggad vit cirkel"
       }
     }
   }

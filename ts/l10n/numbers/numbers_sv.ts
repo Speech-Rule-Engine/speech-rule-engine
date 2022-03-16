@@ -50,7 +50,7 @@ function hundredsToWords_(num: number): string {
  * @param num The number to translate.
  * @returns The string representation of that number.
  */
-function numberToWords(num: number): string {
+function numberToWords(num: number, ordinal: boolean = false): string {
   if (num === 0) {
     return NUMBERS.zero;
   }
@@ -66,11 +66,13 @@ function numberToWords(num: number): string {
       // Case 1: hundreds === 1 and pos = 1, no space, no translate
       // Case 2: hundreds === 1 and pos > 1, space, no translate
       // Case 3: space and translate
+      const large = NUMBERS.large[pos];
+      const plural = (hundreds > 1 && pos > 1 && !ordinal) ? 'er' : '';
       str =
-        (pos && hundreds === 1
+        (pos === 1 && hundreds === 1
           ? ''
-          : hundredsToWords_(num % 1000) + (pos > 1 ? ' ' : '')) +
-        (pos ? NUMBERS.large[pos] + ' ' : '') +
+          : (pos > 1 && hundreds === 1 ? 'en' : hundredsToWords_(num % 1000)) + (pos > 1 ? ' ' : '')) +
+        (pos ? large + plural + (pos > 1 ? ' ' : '') : '') +
         str;
     }
     num = Math.floor(num / 1000);
@@ -94,7 +96,8 @@ function numberToOrdinal(num: number, plural: boolean): string {
   if (num === 2) {
     return plural ? 'halva' : 'halv';
   }
-  const ordinal = wordOrdinal(num);
+  let ordinal = wordOrdinal(num);
+  ordinal = ordinal.match(/de$/) ? ordinal.replace(/de$/, '') : ordinal;
   return ordinal + (plural ? 'delar' : 'del');
 }
 
@@ -105,8 +108,10 @@ function numberToOrdinal(num: number, plural: boolean): string {
  * @returns The ordinal string.
  */
 function wordOrdinal(num: number): string {
-  let ordinal = numberToWords(num);
-  if (ordinal.match(/ett$/)) {
+  let ordinal = numberToWords(num, true);
+  if (ordinal.match(/^noll$/)) {
+    ordinal = 'nollte';
+  } else if (ordinal.match(/ett$/)) {
     ordinal = ordinal.replace(/ett$/, 'första');
   } else if (ordinal.match(/två$/)) {
     ordinal = ordinal.replace(/två$/, 'andra');
@@ -130,6 +135,10 @@ function wordOrdinal(num: number): string {
     ordinal = ordinal.replace(/elva$/, 'elfte');
   } else if (ordinal.match(/tolv$/)) {
     ordinal = ordinal.replace(/tolv$/, 'tolfte');
+  } else if (ordinal.match(/tusen$/)) {
+    ordinal = ordinal.replace(/tusen$/, 'tusonde');
+  } else if (ordinal.match(/jard$/) || ordinal.match(/jon$/)) {
+    ordinal = ordinal + 'te';
   } else {
     ordinal = ordinal + 'de';
   }

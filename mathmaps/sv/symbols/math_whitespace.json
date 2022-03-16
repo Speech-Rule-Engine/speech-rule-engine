@@ -7,7 +7,7 @@
     "key": "0020",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "blanksteg"
       }
     }
   },
@@ -34,7 +34,7 @@
     "key": "2000",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en quad"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "2001",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "em quad"
       }
     }
   },
@@ -51,7 +51,7 @@
     "key": "2002",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "en-mellanslag"
       }
     },
     "category": "Zs"
@@ -60,7 +60,7 @@
     "key": "2003",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "em-mellanslag"
       }
     },
     "category": "Zs"
@@ -69,7 +69,7 @@
     "key": "2004",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tre per em-mellanslag"
       }
     },
     "category": "Zs"
@@ -78,7 +78,7 @@
     "key": "2005",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "fyra per em-mellanslag"
       }
     },
     "category": "Zs"
@@ -88,7 +88,7 @@
     "key": "2006",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sex per em-mellanslag"
       }
     }
   },
@@ -96,7 +96,7 @@
     "key": "2007",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "numeriskt blanksteg"
       }
     },
     "category": "Zs"
@@ -105,7 +105,7 @@
     "key": "2008",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "punktblanksteg"
       }
     },
     "category": "Zs"
@@ -114,7 +114,7 @@
     "key": "2009",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "tunt blanksteg"
       }
     },
     "category": "Zs"
@@ -123,7 +123,7 @@
     "key": "200A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hårtunt blanksteg"
       }
     },
     "category": "Zs"
@@ -132,7 +132,7 @@
     "key": "200B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "blanksteg utan bredd"
       }
     },
     "category": "Cf"
@@ -141,7 +141,7 @@
     "key": "200C",
     "mappings": {
       "default": {
-        "default": "zero width non joiner"
+        "default": "noll bredd utan sammanslagning"
       }
     },
     "category": "Cf"
@@ -150,7 +150,7 @@
     "key": "200D",
     "mappings": {
       "default": {
-        "default": "zero width joiner"
+        "default": "sammanslagning utan bredd"
       }
     },
     "category": "Cf"
@@ -178,7 +178,7 @@
     "key": "2028",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "linjeavskiljare"
       }
     }
   },
@@ -187,7 +187,7 @@
     "key": "2029",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "paragrafavskiljare"
       }
     }
   },
@@ -196,7 +196,7 @@
     "key": "202A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inbäddning vänster till höger"
       }
     }
   },
@@ -205,7 +205,7 @@
     "key": "202B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "inbäddning höger till vänster"
       }
     }
   },
@@ -214,7 +214,7 @@
     "key": "202C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "begränsad riktningsformatering"
       }
     }
   },
@@ -223,7 +223,7 @@
     "key": "202D",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skriv över vänster till höger"
       }
     }
   },
@@ -232,7 +232,7 @@
     "key": "202E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "skriv över höger till vänster"
       }
     }
   },
@@ -241,7 +241,7 @@
     "key": "202F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "smalt blanksteg utan radbrytning"
       }
     }
   },
@@ -249,7 +249,7 @@
     "key": "205F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "medelstort matematiskt blanksteg"
       }
     },
     "category": "Zs"
@@ -258,7 +258,7 @@
     "key": "2060",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "ordsammansättningstecken"
       }
     },
     "category": "Cf"
@@ -285,7 +285,7 @@
     "key": "2063",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "avskiljare"
       }
     },
     "category": "Cf"
@@ -304,7 +304,7 @@
     "key": "206A",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "hindra symmetriskt byte"
       }
     }
   },
@@ -313,7 +313,7 @@
     "key": "206B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "aktivera symmetriskt byte"
       }
     }
   },
@@ -322,7 +322,7 @@
     "key": "206E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nationella sifferformer"
       }
     }
   },
@@ -331,7 +331,7 @@
     "key": "206F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "nominella sifferformer"
       }
     }
   },
@@ -339,7 +339,7 @@
     "key": "FEFF",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "mellanslag utan bredd och radbrytning"
       }
     },
     "category": "Cf"
@@ -349,7 +349,7 @@
     "key": "FFF9",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interlinjärt tecken för början på annotering"
       }
     }
   },
@@ -358,7 +358,7 @@
     "key": "FFFA",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interlinjärt tecken för avskiljning av annotering"
       }
     }
   },
@@ -367,7 +367,7 @@
     "key": "FFFB",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "interlinjärt tecken för slut på annotering"
       }
     }
   }

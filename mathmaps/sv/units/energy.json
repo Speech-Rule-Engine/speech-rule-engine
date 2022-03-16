@@ -26,8 +26,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "kilowatt hour",
-        "plural": "kilowatt hours"
+        "default": "kilowattimme",
+        "plural": "kilowattimmar"
       }
     }
   },
@@ -97,7 +97,7 @@
     "mappings": {
       "default": {
         "default": "ohm",
-        "plural": "ohms"
+        "plural": "ohm"
       }
     }
   },

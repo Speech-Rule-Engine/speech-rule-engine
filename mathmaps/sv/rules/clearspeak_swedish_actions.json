@@ -16,6 +16,11 @@
     ],
     [
       "Action",
+      "font-double-struck",
+      "[n] . (grammar:ignoreFont=@font); [t] @font (grammar:localFont)"
+    ],
+    [
+      "Action",
       "ellipsis",
       "[t] \"och så vidare\""
     ],
@@ -347,7 +352,7 @@
     [
       "Action",
       "exponent",
-      "[n] text() (join:\"-\"); [t] \"te\""
+      "[n] text()"
     ],
     [
       "Action",
@@ -497,7 +502,7 @@
     [
       "Action",
       "vulgar-fraction",
-      "[t] CSFvulgarFraction"
+      "[t] CSFvulgarFraction (grammar:correctOne)"
     ],
     [
       "Action",
@@ -797,7 +802,7 @@
     [
       "Action",
       "matrix-row-vector-simple",
-      "[t] count(children/*); [t] \"gånger\"; [t] count(children/*[1]/children/*); [t] \"radmatrisen\" (pause:long); [t] %3  pause:long)"
+      "[t] count(children/*); [t] \"gånger\"; [t] count(children/*[1]/children/*); [t] \"radmatrisen\" (pause:long); [m] children/*[1]/children/* (sepFunc:CTFpauseSeparator, separator:\"short\", pause:long, grammar:simpleDet)"
     ],
     [
       "Action",
@@ -927,7 +932,7 @@
     [
       "Action",
       "lines-equations",
-      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Equation-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
+      "[p] (pause:short); [m] children/* (ctxtFunc:CTFnodeCounter, context:\"Ekvation-:\", sepFunc:CTFpauseSeparator, separator:\"long\", pause:long)"
     ],
     [
       "Action",
@@ -1022,12 +1027,12 @@
     [
       "Action",
       "decimal-period",
-      "[t] \"decimalbråk\"; [n] children/*[1] (grammar:spaceout); [t] \"komma följt av upprepande siffra\"; [n] children/*[3]/children/*[1] (grammar:spaceout)"
+      "[t] \"decimalbråk\"; [n] children/*[1] (grammar:spaceout); [t] \"komma följt av upprepande siffror\"; [n] children/*[3]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
       "decimal-period-float",
-      "[t] \"decimalbråk\"; [n] children/*[1] (grammar:spaceout); [t] \"följt av upprepande siffra\"; [n] children/*[2]/children/*[1] (grammar:spaceout)"
+      "[t] \"decimalbråk\"; [n] children/*[1] (grammar:spaceout); [t] \"följt av upprepande siffror\"; [n] children/*[2]/children/*[1] (grammar:spaceout)"
     ],
     [
       "Action",
@@ -1122,12 +1127,12 @@
     [
       "Action",
       "unit-square",
-      "[t] \"kvadrat\"; [n] children/*[1]"
+      "[t] \"kvadrat\" (join:\"\"); [n] children/*[1]"
     ],
     [
       "Action",
       "unit-cubic",
-      "[t] \"kubik\"; [n] children/*[1]"
+      "[t] \"kubik\" (join:\"\"); [n] children/*[1]"
     ],
     [
       "Action",
@@ -1157,22 +1162,22 @@
     [
       "Action",
       "overbar",
-      "[n] children/*[1]; [t] \"horisontellt sträck\""
+      "[n] children/*[1]; [t] \"horisontellt streck\""
     ],
     [
       "Action",
       "underbar",
-      "[n] children/*[1]; [t] \"över horisontellt sträck\""
+      "[n] children/*[1]; [t] \"över horisontellt streck\""
     ],
     [
       "Action",
       "leftbar",
-      "[t] \"vertikalt sträck\"; [n] children/*[1]"
+      "[t] \"vertikalt streck\"; [n] children/*[1]"
     ],
     [
       "Action",
       "rightbar",
-      "[n] children/*[1]; [t] \"vertikalt sträck\""
+      "[n] children/*[1]; [t] \"vertikalt streck\""
     ],
     [
       "Action",

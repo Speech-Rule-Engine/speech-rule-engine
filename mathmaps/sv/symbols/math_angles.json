@@ -34,7 +34,7 @@
     "key": "299B",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "uppmätt vinkel med öppning åt vänster"
       }
     }
   },
@@ -43,7 +43,7 @@
     "key": "299C",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "rät vinkel med fyrkant"
       }
     }
   },
@@ -61,7 +61,7 @@
     "key": "299E",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vinkel med s inuti"
       }
     }
   },
@@ -70,7 +70,7 @@
     "key": "299F",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "spetsig vinkel"
       }
     }
   },
@@ -79,7 +79,7 @@
     "key": "29A0",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sfärisk vinkel med öppning åt vänster"
       }
     }
   },
@@ -88,7 +88,7 @@
     "key": "29A1",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "sfärisk vinkel med öppning uppåt"
       }
     }
   },
@@ -97,7 +97,7 @@
     "key": "29A2",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "vriden vinkel"
       }
     }
   },
@@ -106,7 +106,7 @@
     "key": "29A3",
     "mappings": {
       "default": {
-        "default": ""
+        "default": "omvänd vinkel"
       }
     }
   },

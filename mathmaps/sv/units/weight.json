@@ -95,8 +95,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "long ton",
-        "plural": "long tons"
+        "default": "engelskt ton",
+        "plural": "engelska ton"
       }
     }
   },
@@ -135,8 +135,8 @@
     ],
     "mappings": {
       "default": {
-        "default": "microgram",
-        "plural": "micrograms"
+        "default": "mikrogram",
+        "plural": "mikrogram"
       }
     }
   },
