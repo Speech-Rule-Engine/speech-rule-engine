@@ -13,6 +13,10 @@ let config = {
       }
     ],
   },
+  performance: {
+    maxEntrypointSize: 350000,
+    maxAssetSize: 350000
+  },
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ],
   },

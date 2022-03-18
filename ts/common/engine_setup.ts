@@ -72,6 +72,10 @@ export async function setup(feature: { [key: string]: boolean | string }) {
   setupBrowsers(engine);
   L10n.setLocale();
   engine.setDynamicCstr();
+  if (engine.delay) {
+    engine.delay = false;
+    return EnginePromise.get();
+  }
   return MathMap.init().then(() => {
     MathMap.loadLocale();
     return EnginePromise.get();

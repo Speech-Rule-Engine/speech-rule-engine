@@ -28,6 +28,7 @@ import * as FileUtil from './file_util';
 import * as ProcessorFactory from './processor_factory';
 import SystemExternal from './system_external';
 import { Variables } from './variables';
+import { standardLoader } from '../speech_rules/math_map';
 
 /**
  * Version number.
@@ -81,6 +82,12 @@ export function engineSetup(): { [key: string]: boolean | string } {
 export function engineReady(): Promise<any> {
   return EnginePromise.getall();
 }
+
+/**
+ * Export of the standard locale loader for use in client functions.
+ */
+export const localeLoader = standardLoader;
+
 
 // Naming convention:
 // Input is either an XML expression as a string or from a file.
