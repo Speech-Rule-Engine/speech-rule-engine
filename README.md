@@ -125,7 +125,7 @@ numbers, e.g., `"1/2"`.
 | `engineReady()` | Returns a promise that resolves as soon as the engine is ready for processing (i.e., all necessary rule files have been loaded and the engine is done updating). **This is important in asynchronous settings.** |
 | `setupEngine(options)` | Takes an [options feature vector](#options) to parameterise the Speech Rule Engine. Returns a promise that resolves as soon as the engine is ready for processing. |
 | `engineSetup()` | Returns the current setup of the engine as an  [options feature vector](#options). |
-
+| `localeLoader()` | SRE's standard method for loading locales, depending on SRE's mode. For more detail see [discussion on custom loading methods](#custom-loading-method). |
 
 #### Methods for navigating math expressions:
 
@@ -135,7 +135,7 @@ exposed via the command line interface.
 
 | Method | Return Value |
 | ---- | ---- |
-| `walk(input)` | Speech string for the MathML. |
+| `walk(mathml)` | Speech string for the math expression. |
 | `move(keycode)` | Speech string after the move. Keycodes are numerical strings representing cursor keys, space, enter, etc. |
 
 For more information on keybindings for the walker see here [this dedicated
@@ -171,7 +171,7 @@ a more detailed overview of `locale, domain, style` combinations, use the
 #### Options for enriched MathML output
 
 Enriched MathML output is markup that embeds the internal semantic structure SRE
-uses into a modified represnentation of the original MathML. To get an idea of
+uses into a modified representation of the original MathML. To get an idea of
 the semantic tree, take a look at [its
 visualisation](https://zorkow.github.io/semantic-tree-visualiser/visualise.html).
 
@@ -189,23 +189,26 @@ given in decreasing order of interestingness.
 
 | Option | Value |
 | ---- | ---- |
-| *json* | URL where to pull the json speech rule files from. |
-| *xpath* | URL where to pull an xpath library from. This is important for environments not supporting xpath, e.g., IE or Edge. |
+| *json* | URL from where to pull the locale files, i.e., json files containing speech rule definitions. |
+| *xpath* | URL where to pull an xpath library from. This is important for environments not supporting xpath, e.g., IE or former versions of Edge. |
 | *rate* | Base value for speech rate in ```ssml_step``` markup |
 | *strict* | Boolean flag indicating if only a directly matching rule should be used. I.e., no default rules are used in case a rule is not available for a particular domain, style, etc. Default is ```false```. |
 | *mode* | The running mode for SRE: ```sync```, ```async```, ```http``` |
 | | By default SRE in node is in `async`, in browser in `http`, and on CLI in `sync` mode. |
 | *custom* | Provide a custom method for locale loading. See below for more informaton. |
+| *delay* | Delays loading of base locales. See below for more information. Default is ```false```. |
+
 
 ### Custom Loading Method ####
 
 SRE loads its locales and rule sets via loading methods specific for the
 particular environment and mode. I.e., it loads json files from the file system
-in node or via XML HTTP requests in the browser. These methods can be customised
-via passing a new method to the engine via the feature vector. A loader method
-takes the locale string as input and return a promise that resolves to the
-string containing the JSON structure of the locale file once loading is
-successfully completed. In other words it should be of type
+in node or via XML HTTP requests in the browser using the `localLoader` method
+that is exposed in the API. These methods can be customised via passing a new
+method to the engine via the feature vector. A loader method takes the locale
+string as input and returns a promise that resolves to the string containing the
+JSON structure of the locale file once loading is successfully completed. In
+other words it should be of type
 
 ``` typescript
 (locale: string) => Promise<string>
@@ -231,6 +234,27 @@ sre.setupEngine({
   }
 });
 ```
+
+For setting a custom loader when using SRE a browser see [the relevant
+discussion in that section](#custom-loading-methods).
+
+
+### Delaying Locale Loading ###
+
+In standard setup SRE loads its base locale files (currently these are
+`base.json` together with `en.json` as fallback rules) on
+initialisation. Setting `delay` to `true`, suppresses this behaviour and the
+base locale is loaded on first explicit call to `setupEngine`, only. 
+
+This can be useful in case the custom load method can only be provided later or
+the `json` path is constructed programmatically by a client application. It is
+also helpful if some locales are webpacked into a distribution and need to be
+loaded with a custom method.
+
+Note, that using `delay` means that locale loading can and has to be handled by
+the developer explicitly. In particular, it implies that English is not
+necessarily loaded as fallback locale.
+
 
 Standalone Tool
 ---------------
@@ -479,7 +503,7 @@ By default the build process consists of three steps:
 
 Locales are created from the sources in `mathmaps` by combining the topically
 split `.json` files into a single, minimized `.json` file, one for each
-language. Note, that for ease of development JSON minimization is done via an
+language. Note, that for ease of development JSON minimisation is done via an
 intermediate step to generate `.min` files, which is handles in the `Makefile`
 and ensures that only newly altered files have to be minimized.
 
