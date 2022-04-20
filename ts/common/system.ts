@@ -408,9 +408,9 @@ export const localePath = FileUtil.localePath;
 
 // Check here for custom method!
 if (SystemExternal.documentSupported) {
-  setupEngine({ mode: EngineConst.Mode.HTTP });
+  setupEngine({ mode: EngineConst.Mode.HTTP, delay: true });
 } else {
-  setupEngine({ mode: EngineConst.Mode.SYNC }).then(() =>
+  setupEngine({ mode: EngineConst.Mode.SYNC, delay: true }).then(() =>
     setupEngine({ mode: EngineConst.Mode.ASYNC })
   );
 }

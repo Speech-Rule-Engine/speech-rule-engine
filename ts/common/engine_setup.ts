@@ -73,6 +73,10 @@ export async function setup(feature: { [key: string]: boolean | string }) {
   L10n.setLocale();
   engine.setDynamicCstr();
   if (engine.delay) {
+    // We add a break in the execution flow.
+    EnginePromise.promises['delay'] = new Promise((res, _rej) => {
+      setTimeout(() => {res('');}, 10)
+    });
     engine.delay = false;
     return EnginePromise.get();
   }
