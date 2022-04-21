@@ -72,12 +72,13 @@ export async function setup(feature: { [key: string]: boolean | string }) {
   setupBrowsers(engine);
   L10n.setLocale();
   engine.setDynamicCstr();
-  if (engine.delay) {
-    // We add a break in the execution flow.
-    EnginePromise.promises['delay'] = new Promise((res, _rej) => {
-      setTimeout(() => {res('');}, 10)
+  // We add a break in the execution flow so custom loaders can set up.
+  if (engine.init) {
+    EnginePromise.promises['init'] = new Promise((res, _rej) => {
+      setTimeout(() => {
+        res('init');}, 10)
     });
-    engine.delay = false;
+    engine.init = false;
     return EnginePromise.get();
   }
   return MathMap.init().then(() => {

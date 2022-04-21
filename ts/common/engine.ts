@@ -98,7 +98,7 @@ export default class Engine {
    */
   public mode: EngineConst.Mode = EngineConst.Mode.SYNC;
 
-  public delay: boolean = false;
+  public init: boolean = true;
 
   /**
    * Maps domains to comparators.
@@ -379,6 +379,6 @@ export class EnginePromise {
    * @returns All promises combined into one.
    */
   public static getall() {
-    return Promise.allSettled(Object.values(EnginePromise.promises));
+    return Promise.all(Object.values(EnginePromise.promises));
   }
 }
