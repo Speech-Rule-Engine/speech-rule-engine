@@ -58,17 +58,23 @@ const addSymbols: { [key: string]: (p1: MathMapType) => any } = {
 let _init = false;
 
 /**
- * Init method for the mathmaps. Loads the base locale when called for the
- * first time.
+ * Loads a new locale if necessary. Initialises mathmaps if necessary, by
+ * loading the base locale when called for the first time.
  *
- * @returns Promise that resolves once base is loaded.
+ * @param locale The locale to be loaded. Defaults to current locale of the
+ *     engine.
+ *
+ * @returns Promise that resolves once locale is loaded.
  */
-export function init() {
+export async function loadLocale(locale = Engine.getInstance().locale) {
   if (!_init) {
-    loadLocale('base');
+    _loadLocale('base');
     _init = true;
   }
-  return EnginePromise.promises['base'];
+  return EnginePromise.promises['base'].then(() => {
+    _loadLocale(locale);
+    return EnginePromise.promises[locale];
+  });
 }
 
 /**
@@ -77,7 +83,7 @@ export function init() {
  * @param locale The locale to be loaded. Defaults to current locale of the
  *     engine.
  */
-export function loadLocale(locale = Engine.getInstance().locale) {
+function _loadLocale(locale = Engine.getInstance().locale) {
   if (!EnginePromise.loaded[locale]) {
     EnginePromise.loaded[locale] = [false, false];
     retrieveMaps(locale);
