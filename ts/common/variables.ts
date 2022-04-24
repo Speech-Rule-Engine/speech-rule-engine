@@ -43,6 +43,23 @@ export class Variables {
   ];
 
   /**
+   * Ensures a locale exists. If the given locale does not exist, it returns the
+   * default instead.
+   *
+   * @param loc The locale in question.
+   * @param def A default locale.
+   * @return The existing locale. The default is returned if `loc` does not
+   *      exist. There is no further check on `def`, however!
+   */
+  public static ensureLocale(loc: string, def: string): string {
+    if (Variables.LOCALES.indexOf(loc) === -1) {
+      console.error('Locale ' + loc + ' does not exist! Using en instead.');
+      return def;
+    }
+    return loc;
+  }
+
+  /**
    * MathJax version. This is useful for paths depending on MathJax
    * distribution.
    */

@@ -18,6 +18,7 @@
  * @author v.sorge@mathjax.org (Volker Sorge)
  */
 
+import { DynamicCstr } from '../rule_engine/dynamic_cstr';
 import { SpeechRuleStore } from '../rule_engine/speech_rule_store';
 import * as StoreUtil from '../rule_engine/store_util';
 
@@ -56,7 +57,8 @@ export function OtherRules() {
  */
 export function BrailleRules() {
   // Basic Nemeth
-  SpeechRules.addStore('nemeth.braille.default', 'en.speech.mathspeak', {
+  SpeechRules.addStore(
+    'nemeth.braille.default', DynamicCstr.BASE_LOCALE + '.speech.mathspeak', {
     CSFopenFraction: NemethUtil.openingFraction,
     CSFcloseFraction: NemethUtil.closingFraction,
     CSFoverFraction: NemethUtil.overFraction,

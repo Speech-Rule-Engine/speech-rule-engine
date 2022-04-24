@@ -24,6 +24,7 @@ import * as Dcstr from '../rule_engine/dynamic_cstr';
 import * as EngineConst from './engine_const';
 
 import { Debugger } from './debugger';
+import { Variables } from './variables';
 
 declare const SREfeature: { [key: string]: any };
 
@@ -118,7 +119,15 @@ export default class Engine {
   /**
    * The default locale.
    */
-  public defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+  public _defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+
+  public set defaultLocale(loc: string) {
+    this._defaultLocale = Variables.ensureLocale(loc, this._defaultLocale);
+  }
+
+  public get defaultLocale() {
+    return this._defaultLocale;
+  }
 
   /**
    * Current locale.

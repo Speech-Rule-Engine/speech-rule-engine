@@ -27,6 +27,7 @@ import * as EngineConst from '../common/engine_const';
 import * as FileUtil from '../common/file_util';
 import SystemExternal from '../common/system_external';
 import { RulesJson } from '../rule_engine/base_rule_store';
+import { DynamicCstr } from '../rule_engine/dynamic_cstr';
 import * as MathCompoundStore from '../rule_engine/math_compound_store';
 import { SiJson, UnicodeJson } from '../rule_engine/math_simple_store';
 import { SpeechRuleEngine } from '../rule_engine/speech_rule_engine';
@@ -68,10 +69,10 @@ let _init = false;
  */
 export async function loadLocale(locale = Engine.getInstance().locale) {
   if (!_init) {
-    _loadLocale('base');
+    _loadLocale(DynamicCstr.BASE_LOCALE);
     _init = true;
   }
-  return EnginePromise.promises['base'].then(async () => {
+  return EnginePromise.promises[DynamicCstr.BASE_LOCALE].then(async () => {
     let defLoc = Engine.getInstance().defaultLocale;
     if (defLoc) {
       _loadLocale(defLoc)
