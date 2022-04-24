@@ -71,7 +71,15 @@ export async function loadLocale(locale = Engine.getInstance().locale) {
     _loadLocale('base');
     _init = true;
   }
-  return EnginePromise.promises['base'].then(() => {
+  return EnginePromise.promises['base'].then(async () => {
+    let defLoc = Engine.getInstance().defaultLocale;
+    if (defLoc) {
+      _loadLocale(defLoc)
+      return EnginePromise.promises[defLoc].then(async () => {
+        _loadLocale(locale);
+        return EnginePromise.promises[locale];
+      });
+    }
     _loadLocale(locale);
     return EnginePromise.promises[locale];
   });
@@ -140,7 +148,7 @@ export function retrieveFiles(locale: string) {
       (_err: string) => {
         EnginePromise.loaded[locale] = [true, false];
         console.error(`Unable to load locale: ${locale}`);
-        Engine.getInstance().locale = 'en';
+        Engine.getInstance().locale = Engine.getInstance().defaultLocale;
         res(locale);
       }
     );

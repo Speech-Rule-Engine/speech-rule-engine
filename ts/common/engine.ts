@@ -60,12 +60,12 @@ export default class Engine {
    * String feature vector.
    */
   public static STRING_FEATURES: string[] = [
-    'delay',
     'markup',
     'style',
     'domain',
     'speech',
     'walker',
+    'defaultLocale',
     'locale',
     'modality',
     'rate',
@@ -116,9 +116,14 @@ export default class Engine {
   public style = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.STYLE];
 
   /**
+   * The default locale.
+   */
+  public defaultLocale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+
+  /**
    * Current locale.
    */
-  public locale = Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE];
+  public locale = this.defaultLocale;
 
   /**
    * Current subiso for the locale.
@@ -245,6 +250,9 @@ export default class Engine {
    *    parameters.
    */
   public setDynamicCstr(opt_dynamic?: Dcstr.AxisMap) {
+    if (this.defaultLocale) {
+      Dcstr.DynamicCstr.DEFAULT_VALUES[Dcstr.Axis.LOCALE] = this.defaultLocale;
+    }
     if (opt_dynamic) {
       const keys = Object.keys(opt_dynamic);
       for (let i = 0; i < keys.length; i++) {

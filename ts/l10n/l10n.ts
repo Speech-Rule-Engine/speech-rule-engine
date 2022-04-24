@@ -94,9 +94,10 @@ export function getLocale(): Locale {
   const locale = Engine.getInstance().locale;
   if (Variables.LOCALES.indexOf(locale) === -1) {
     console.error('Locale ' + locale + ' does not exist! Using en instead.');
-    Engine.getInstance().locale = 'en';
+    Engine.getInstance().locale = Engine.getInstance().defaultLocale;
   }
-  return (locales[Engine.getInstance().locale] || locales['en'])();
+  return (locales[Engine.getInstance().locale] ||
+    locales[Engine.getInstance().defaultLocale])();
 }
 
 /**
