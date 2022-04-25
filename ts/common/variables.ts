@@ -22,7 +22,7 @@ export class Variables {
   /**
    * SRE version.
    */
-  public static readonly VERSION: string = '4.0.2';
+  public static readonly VERSION: string = '4.0.3';
 
   /**
    * List of locales to load.
@@ -63,7 +63,7 @@ export class Variables {
    * MathJax version. This is useful for paths depending on MathJax
    * distribution.
    */
-  public static readonly mathjaxVersion: string = '3.0.0';
+  public static readonly mathjaxVersion: string = '3.2.1';
 
   /**
    * The URL for SRE resources.
