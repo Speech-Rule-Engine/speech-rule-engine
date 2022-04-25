@@ -31,8 +31,7 @@ import * as UnitUtil from './unit_util';
  */
 export function MathspeakRules() {
   // Basic English
-  SpeechRules.addStore(
-    DynamicCstr.BASE_LOCALE + '.speech.mathspeak', '', {
+  SpeechRules.addStore(DynamicCstr.BASE_LOCALE + '.speech.mathspeak', '', {
     CQFspaceoutNumber: MathspeakUtil.spaceoutNumber,
 
     CQFspaceoutIdentifier: MathspeakUtil.spaceoutIdentifier,
@@ -101,20 +100,26 @@ export function MathspeakRules() {
 
   // Spanish
   SpeechRules.addStore(
-    'es.speech.mathspeak', DynamicCstr.BASE_LOCALE + '.speech.mathspeak', {
-    CTFunitMultipliers: UnitUtil.unitMultipliers,
-    CQFoneLeft: UnitUtil.oneLeft
-  });
+    'es.speech.mathspeak',
+    DynamicCstr.BASE_LOCALE + '.speech.mathspeak',
+    {
+      CTFunitMultipliers: UnitUtil.unitMultipliers,
+      CQFoneLeft: UnitUtil.oneLeft
+    }
+  );
 
   // French
   SpeechRules.addStore(
-    'fr.speech.mathspeak', DynamicCstr.BASE_LOCALE + '.speech.mathspeak', {
-    CSFbaselineVerbose: MathspeakFrenchUtil.baselineVerbose,
-    CSFbaselineBrief: MathspeakFrenchUtil.baselineBrief,
-    // Tensor specific:
-    CSFleftsuperscriptVerbose: MathspeakFrenchUtil.leftSuperscriptVerbose,
-    CSFleftsubscriptVerbose: MathspeakFrenchUtil.leftSubscriptVerbose,
-    CSFleftsuperscriptBrief: MathspeakFrenchUtil.leftSuperscriptBrief,
-    CSFleftsubscriptBrief: MathspeakFrenchUtil.leftSubscriptBrief
-  });
+    'fr.speech.mathspeak',
+    DynamicCstr.BASE_LOCALE + '.speech.mathspeak',
+    {
+      CSFbaselineVerbose: MathspeakFrenchUtil.baselineVerbose,
+      CSFbaselineBrief: MathspeakFrenchUtil.baselineBrief,
+      // Tensor specific:
+      CSFleftsuperscriptVerbose: MathspeakFrenchUtil.leftSuperscriptVerbose,
+      CSFleftsubscriptVerbose: MathspeakFrenchUtil.leftSubscriptVerbose,
+      CSFleftsuperscriptBrief: MathspeakFrenchUtil.leftSuperscriptBrief,
+      CSFleftsubscriptBrief: MathspeakFrenchUtil.leftSubscriptBrief
+    }
+  );
 }

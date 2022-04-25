@@ -31,8 +31,7 @@ import * as SpeechRules from './speech_rules';
  */
 export function ClearspeakRules() {
   // Basic English
-  SpeechRules.addStore(
-    DynamicCstr.BASE_LOCALE + '.speech.clearspeak', '', {
+  SpeechRules.addStore(DynamicCstr.BASE_LOCALE + '.speech.clearspeak', '', {
     CTFpauseSeparator: StoreUtil.pauseSeparator,
     CTFnodeCounter: ClearspeakUtil.nodeCounter,
     CTFcontentIterator: StoreUtil.contentIterator,

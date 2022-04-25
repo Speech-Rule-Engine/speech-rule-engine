@@ -76,7 +76,8 @@ export async function setup(feature: { [key: string]: boolean | string }) {
   if (engine.init) {
     EnginePromise.promises['init'] = new Promise((res, _rej) => {
       setTimeout(() => {
-        res('init');}, 10)
+        res('init');
+      }, 10);
     });
     engine.init = false;
     return EnginePromise.get();

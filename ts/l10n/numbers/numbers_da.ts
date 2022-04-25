@@ -38,6 +38,7 @@ function onePrefix_(num: string, mill = false): string {
  * Translates a number of up to twelve digits into a string representation.
  *
  * @param num The number to translate.
+ * @param ordinal Are we computing an ordinal?
  * @returns The string representation of that number.
  */
 function hundredsToWords_(num: number, ordinal = false): string {
@@ -52,9 +53,9 @@ function hundredsToWords_(num: number, ordinal = false): string {
     if (ones) {
       str += ones;
     } else {
-      const tens = ordinal ?
-        NUMBERS.special.tensOrdinals[Math.floor(n / 10)] :
-        NUMBERS.tens[Math.floor(n / 10)];
+      const tens = ordinal
+        ? NUMBERS.special.tensOrdinals[Math.floor(n / 10)]
+        : NUMBERS.tens[Math.floor(n / 10)];
       ones = NUMBERS.ones[n % 10];
       str += ones ? onePrefix_(ones) + 'og' + tens : tens;
     }
@@ -66,6 +67,7 @@ function hundredsToWords_(num: number, ordinal = false): string {
  * Translates a number of up to twelve digits into a string representation.
  *
  * @param num The number to translate.
+ * @param ordinal Are we computing an ordinal? 
  * @returns The string representation of that number.
  */
 function numberToWords(num: number, ordinal = false): string {
@@ -84,14 +86,17 @@ function numberToWords(num: number, ordinal = false): string {
       if (pos) {
         const large = NUMBERS.large[pos];
         // If this is million or above take care of the plural.
-        const plural =
-          hundreds > 1 ? 'er' : '';
-        str = onePrefix_(hund, pos <= 1) + ' ' + large + plural +
-          (str ? ' og ' : '') + str;
+        const plural = hundreds > 1 ? 'er' : '';
+        str =
+          onePrefix_(hund, pos <= 1) +
+          ' ' +
+          large +
+          plural +
+          (str ? ' og ' : '') +
+          str;
       } else {
         str = onePrefix_(hund) + str;
       }
-
     }
     num = Math.floor(num / 1000);
     pos++;

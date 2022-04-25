@@ -99,7 +99,7 @@ export default class Engine {
    */
   public mode: EngineConst.Mode = EngineConst.Mode.SYNC;
 
-  public init: boolean = true;
+  public init = true;
 
   /**
    * Maps domains to comparators.

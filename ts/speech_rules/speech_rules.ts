@@ -67,9 +67,7 @@ export function getStore(
     funcStore.get(
       [DynamicCstr.DEFAULT_VALUES[Axis.LOCALE], modality, domain].join('.')
     ) ||
-    funcStore.get(
-      [DynamicCstr.BASE_LOCALE, modality, domain].join('.')
-    ) ||
+    funcStore.get([DynamicCstr.BASE_LOCALE, modality, domain].join('.')) ||
     {}
   );
 }

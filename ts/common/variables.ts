@@ -48,7 +48,7 @@ export class Variables {
    *
    * @param loc The locale in question.
    * @param def A default locale.
-   * @return The existing locale. The default is returned if `loc` does not
+   * @returns The existing locale. The default is returned if `loc` does not
    *      exist. There is no further check on `def`, however!
    */
   public static ensureLocale(loc: string, def: string): string {

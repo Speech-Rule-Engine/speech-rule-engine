@@ -64,7 +64,6 @@ let _init = false;
  *
  * @param locale The locale to be loaded. Defaults to current locale of the
  *     engine.
- *
  * @returns Promise that resolves once locale is loaded.
  */
 export async function loadLocale(locale = Engine.getInstance().locale) {
@@ -73,9 +72,9 @@ export async function loadLocale(locale = Engine.getInstance().locale) {
     _init = true;
   }
   return EnginePromise.promises[DynamicCstr.BASE_LOCALE].then(async () => {
-    let defLoc = Engine.getInstance().defaultLocale;
+    const defLoc = Engine.getInstance().defaultLocale;
     if (defLoc) {
-      _loadLocale(defLoc)
+      _loadLocale(defLoc);
       return EnginePromise.promises[defLoc].then(async () => {
         _loadLocale(locale);
         return EnginePromise.promises[locale];
@@ -113,7 +112,6 @@ function loadMethod() {
   }
   return standardLoader();
 }
-
 
 /**
  * @returns The standard load method for the given mode. This is exported as

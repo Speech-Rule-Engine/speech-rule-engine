@@ -92,7 +92,9 @@ function setSubiso(msg: Locale) {
  */
 export function getLocale(): Locale {
   const locale = Variables.ensureLocale(
-    Engine.getInstance().locale, Engine.getInstance().defaultLocale);
+    Engine.getInstance().locale,
+    Engine.getInstance().defaultLocale
+  );
   Engine.getInstance().locale = locale;
   return locales[locale]();
 }

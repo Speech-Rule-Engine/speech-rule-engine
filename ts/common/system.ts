@@ -88,7 +88,6 @@ export async function engineReady(): Promise<any> {
  */
 export const localeLoader = standardLoader;
 
-
 // Naming convention:
 // Input is either an XML expression as a string or from a file.
 // Output:
@@ -408,8 +407,7 @@ export const localePath = FileUtil.localePath;
 
 // Check here for custom method!
 if (SystemExternal.documentSupported) {
-  setupEngine({ mode: EngineConst.Mode.HTTP }).then(() =>
-    setupEngine({}));
+  setupEngine({ mode: EngineConst.Mode.HTTP }).then(() => setupEngine({}));
 } else {
   setupEngine({ mode: EngineConst.Mode.SYNC }).then(() =>
     setupEngine({ mode: EngineConst.Mode.ASYNC })

@@ -48,9 +48,10 @@ function hundredsToWords_(num: number): string {
  * Translates a number of up to twelve digits into a string representation.
  *
  * @param num The number to translate.
+ * @param ordinal Are we computing an ordinal?
  * @returns The string representation of that number.
  */
-function numberToWords(num: number, ordinal: boolean = false): string {
+function numberToWords(num: number, ordinal = false): string {
   if (num === 0) {
     return NUMBERS.zero;
   }
@@ -67,11 +68,12 @@ function numberToWords(num: number, ordinal: boolean = false): string {
       // Case 2: hundreds === 1 and pos > 1, space, no translate
       // Case 3: space and translate
       const large = NUMBERS.large[pos];
-      const plural = (hundreds > 1 && pos > 1 && !ordinal) ? 'er' : '';
+      const plural = hundreds > 1 && pos > 1 && !ordinal ? 'er' : '';
       str =
         (pos === 1 && hundreds === 1
           ? ''
-          : (pos > 1 && hundreds === 1 ? 'en' : hundredsToWords_(num % 1000)) + (pos > 1 ? ' ' : '')) +
+          : (pos > 1 && hundreds === 1 ? 'en' : hundredsToWords_(num % 1000)) +
+            (pos > 1 ? ' ' : '')) +
         (pos ? large + plural + (pos > 1 ? ' ' : '') : '') +
         str;
     }
